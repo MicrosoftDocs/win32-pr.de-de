@@ -1,11 +1,11 @@
 ---
-title: ATTRIBUT "ACS-Max-Token-Bucket-Per-Flow"
-description: Das Attribut ACS-Max-Token-Bucket-Per-Flow ist nur für die interne Verwendung vorgesehen.
+title: ACS-Max-Token-Bucket-per-Flow-Attribut
+description: Das ACS-Max-Token-Bucket-Per-Flow-Attribut ist nur zur internen Verwendung.
 ms.assetid: 2c269bda-7b0d-4ef4-8c67-9f5e7c52e3ae
 ms.tgt_platform: multiple
 keywords:
-- ACS-Max-Token-Bucket-Per-Flow-Attribut-AD-Schema
-- aCSMaxTokenBucketPerFlow-Attribut AD-Schema
+- ACS-Max-Token-Bucket-Per-Flow AD Schema
+- AD-Schema des aCSMaxTokenBucketPerFlow-Attributs
 topic_type:
 - apiref
 api_name:
@@ -21,21 +21,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117838306"
 ---
-# <a name="acs-max-token-bucket-per-flow-attribute"></a>ATTRIBUT "ACS-Max-Token-Bucket-Per-Flow"
+# <a name="acs-max-token-bucket-per-flow-attribute"></a>ACS-Max-Token-Bucket-per-Flow-Attribut
 
-Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendung vorgesehen. Basierend auf RFC2210.
+Das **ACS-Max-Token-Bucket-Per-Flow-Attribut** ist nur zur internen Verwendung. Basierend auf RFC2210.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-Max-Token-Bucket-Per-Flow        |
+| CN                | ACS-Max-Token-Bucket-per-Flow        |
 | Ldap-Anzeigename | aCSMaxTokenBucketPerFlow             |
 | Size              | 8 Bytes                              |
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1313              |
-| System-ID-GUID    | 81f6e0df-3b90-11d2-90cc-00c04fd91ab1 |
+| System-Id-Guid    | 81f6e0df-3b90-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -57,10 +57,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -78,10 +78,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -99,10 +99,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -120,10 +120,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -141,10 +141,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -162,10 +162,10 @@ Das **Attribut ACS-Max-Token-Bucket-Per-Flow** ist nur für die interne Verwendu
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |

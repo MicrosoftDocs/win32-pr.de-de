@@ -1,7 +1,7 @@
 ---
-description: Übergibt einen Schlüsselwert mit allen zugeordneten Daten, die vom Modul für die Inhalts Entschlüsselung für das angegebene Schlüsselsystem benötigt werden.
+description: Übergibt einen Schlüsselwert an alle zugeordneten Daten, die vom Content Decryption Module für das angegebene Schlüsselsystem benötigt werden.
 ms.assetid: 29e66037-5f18-4724-b6f2-d85555e6af69
-title: 'IMF mediakeysession:: Update-Methode'
+title: WFMediaKeySession::Update-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 15bc06523f0cf9a7dc433381dd596cea89608ce7
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 12c9877990ed9601ccf6b2911504b720088fa956dc76d6db9b97bac518db2d49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106366375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118062979"
 ---
-# <a name="imfmediakeysessionupdate-method"></a>IMF mediakeysession:: Update-Methode
+# <a name="imfmediakeysessionupdate-method"></a>WFMediaKeySession::Update-Methode
 
-Übergibt einen Schlüsselwert mit allen zugeordneten Daten, die vom Modul für die Inhalts Entschlüsselung für das angegebene Schlüsselsystem benötigt werden.
+Übergibt einen Schlüsselwert an alle zugeordneten Daten, die vom Content Decryption Module für das angegebene Schlüsselsystem benötigt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT Update(
 *key* 
 </dt> <dd></dd> <dt>
 
-*betrieben* 
+*Cb* 
 </dt> <dd>
 
-Die Anzahl in Bytes des *Schlüssels*.
+Die Anzahl des *Schlüssels* in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF mediakeysession**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeysession)
+[**WFMEDIAKeySession**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeysession)
 </dt> </dl>
 
  

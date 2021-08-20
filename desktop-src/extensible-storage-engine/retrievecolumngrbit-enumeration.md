@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: retrievecolumngrbit-Enumeration'
-title: Retrievecolumngrbit-Enumeration
+description: Weitere Informationen finden Sie unter RetrieveColumnGrbit-Enumeration.
+title: RetrieveColumnGrbit-Enumeration
 TOCTitle: RetrieveColumnGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.retrievecolumngrbit(v=EXCHG.10)
@@ -38,21 +38,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a223a288b8ad2d2e976be3bb9f2f524f78b9a8fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bd59f610b2ff1423b82539c61eff3d9d770a03d6f8291a1bae53b372fff318f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890668"
 ---
-# <a name="retrievecolumngrbit-enumeration"></a>Retrievecolumngrbit-Enumeration
+# <a name="retrievecolumngrbit-enumeration"></a>RetrieveColumnGrbit-Enumeration
 
-Optionen für jetretrievecolumgen.
+Optionen für JetRetrieveColumn.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,40 +87,40 @@ public enum RetrieveColumnGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Retrievecopy</td>
-<td>Dieses Flag bewirkt, dass die Spalte "abrufen" den geänderten Wert anstelle des ursprünglichen Werts abruft. Wenn der Wert nicht geändert wurde, wird der ursprüngliche Wert abgerufen. Auf diese Weise kann ein Wert, der noch nicht eingefügt oder aktualisiert wurde, beim Einfügen oder Aktualisieren eines Datensatzes abgerufen werden.</td>
+<td>RetrieveCopy</td>
+<td>Dieses Flag bewirkt, dass die Abrufspalte den geänderten Wert anstelle des ursprünglichen Werts abruft. Wenn der Wert nicht geändert wurde, wird der ursprüngliche Wert abgerufen. Auf diese Weise kann ein Wert, der noch nicht eingefügt oder aktualisiert wurde, während des Einfügens oder Aktualisierens eines Datensatzes abgerufen werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Retrievefromindex"</td>
-<td>Diese Option wird verwendet, um nach Möglichkeit Spaltenwerte aus dem Index abzurufen, ohne auf den Datensatz zuzugreifen. Auf diese Weise kann das unnötige Laden von Datensätzen vermieden werden, wenn benötigte Daten aus Indexeinträgen selbst verfügbar sind.</td>
+<td>RetrieveFromIndex</td>
+<td>Diese Option wird verwendet, um Spaltenwerte möglichst ohne Zugriff auf den Datensatz aus dem Index abzurufen. Auf diese Weise kann unnötiges Laden von Datensätzen vermieden werden, wenn die benötigten Daten über Indexeinträge selbst verfügbar sind.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Retrievefromprimarybookmark</td>
-<td>Diese Option wird zum Abrufen von Spaltenwerten aus dem Index-Lesezeichen verwendet und unterscheidet sich möglicherweise vom Indexwert, wenn eine Spalte sowohl im primären Index als auch im aktuellen Index angezeigt wird. Diese Option sollte nicht angegeben werden, wenn der aktuelle Index der gruppierte Index oder der primäre Index ist. Dieses Bit kann nicht festgelegt werden, wenn "retrievefromindex" ebenfalls festgelegt ist.</td>
+<td>RetrieveFromPrimaryBookmark</td>
+<td>Diese Option wird verwendet, um Spaltenwerte aus dem Index-Lesezeichen abzurufen, und kann sich vom Indexwert unterscheiden, wenn eine Spalte sowohl im primären als auch im aktuellen Index angezeigt wird. Diese Option sollte nicht angegeben werden, wenn der aktuelle Index der gruppierte oder primäre Index ist. Dieses Bit kann nicht festgelegt werden, wenn retrieveFromIndex ebenfalls festgelegt ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Retrievetag</td>
-<td>Diese Option wird verwendet, um die Sequenznummer eines mehrwertigen Spaltenwerts in JET_RETINFO. itagsequence abzurufen. Das Abrufen der Sequenznummer kann ein kostspieliger Vorgang sein und sollte nur bei Bedarf ausgeführt werden.</td>
+<td>RetrieveTag</td>
+<td>Diese Option wird verwendet, um die Sequenznummer eines mehrwertigen Spaltenwerts in JET_RETINFO.itagSequence abzurufen. Das Abrufen der Sequenznummer kann ein kostspieliger Vorgang sein und sollte nur bei Bedarf erfolgen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Abrufen von evenull</td>
-<td>Diese Option wird verwendet, um NULL-Werte für mehrwertige Spalten abzurufen. Wenn diese Option nicht angegeben ist, werden NULL-Werte für mehrwertige Spalten automatisch übersprungen.</td>
+<td>RetrieveNull</td>
+<td>Diese Option wird verwendet, um wertewertige Spalten-NULL-Werte abzurufen. Wenn diese Option nicht angegeben wird, werden die NULL-Werte der mehrwertigen Spalte automatisch übersprungen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Retrieveignoredefault</td>
-<td>Diese Option wirkt sich nur auf mehrwertige Spalten aus und bewirkt, dass ein NULL-Wert zurückgegeben wird, wenn die angeforderte Sequenznummer 1 ist und für die Spalte im Datensatz keine Werte festgelegt sind.</td>
+<td>RetrieveIgnoreDefault</td>
+<td>Diese Option wirkt sich nur auf mehrwertige Spalten aus und bewirkt, dass ein NULL-Wert zurückgegeben wird, wenn die angeforderte Sequenznummer 1 ist und keine festgelegten Werte für die Spalte im Datensatz enthalten sind.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

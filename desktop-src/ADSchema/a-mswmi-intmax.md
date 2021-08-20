@@ -1,11 +1,11 @@
 ---
 title: ms-WMI-intMax-Attribut
-description: Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
+description: Der Höchstwert für ein WMI-Parameterobjekt mit 32-Bit-Ganzzahl.
 ms.assetid: d1ac3efc-fce3-42d2-98ec-ca0f7e6fcb4e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-WMI-intMax-Attributs
-- AD-Schema des msWMI-IntMax-Attributs
+- MS-WMI-intMax-Attribut-AD-Schema
+- MSWMI-IntMax-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117837553"
 ---
 # <a name="ms-wmi-intmax-attribute"></a>ms-WMI-intMax-Attribut
 
-Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
+Der Höchstwert für ein WMI-Parameterobjekt mit 32-Bit-Ganzzahl.
 
 
 
@@ -35,7 +35,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator           |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1629              |
-| System-Id-Guid    | fb920c2c-f294-4426-8ac1-d24b42aa2bce |
+| System-ID-GUID    | fb920c2c-f294-4426-8ac1-d24b42aa2bce |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -57,7 +57,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Is-Single-Valued       | True         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -78,7 +78,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Is-Single-Valued       | True         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -99,7 +99,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Is-Single-Valued       | True         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -120,7 +120,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist einwertig       | True         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -141,7 +141,7 @@ Der Höchstwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist einwertig       | True         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |

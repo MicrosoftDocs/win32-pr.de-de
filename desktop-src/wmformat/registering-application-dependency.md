@@ -22,7 +22,7 @@ Wenn Sie Ihre Anwendung registrieren, können Sie eine von zwei Abhängigkeitseb
 
 Um Ihre Anwendung zu registrieren, müssen Sie einen Wert in der Registrierung festlegen, der Ihre Anwendung identifiziert. Der festzulegende Registrierungswert hängt von der Komponente ab, von der Ihre Anwendung abhängig ist. Sie können auch zwei zusätzliche Werte pro Abhängigkeit festlegen, um zusätzliche Informationen zu Ihrer Anwendung bereitzustellen.
 
-Die folgenden Registrierungswerte werden verwendet, um abhängigkeiten von der Windows Media Format SDK-Runtime zu registrieren:
+Die folgenden Registrierungswerte werden verwendet, um abhängigkeiten von der Windows Media Format SDK Runtime zu registrieren:
 
 -   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup REF \\ \\ *\_ TYPE* \\ App, "*APP*", "*APP \_ STRING*"
 -   HKEY \_ CLASSES ROOT Software Microsoft \_ \\ \\ \\ WindowsMedia Setup REF \\ \\ *\_ TYPE* \\ Descriptor, "*APP*", "*REF \_ DESCRIPTOR*"
@@ -50,7 +50,7 @@ Deskriptor Ihrer Anwendung. Diese Zeichenfolge kann in Nachrichten verwendet wer
 
 *\_REF-DESKRIPTOR*
 
-Beschreibung, wie Ihre Anwendung die Komponente verwendet. Dieser Wert kann maximal 256 Zeichen enthalten.
+Beschreibung der Verwendung der Komponente durch Ihre Anwendung. Dieser Wert kann maximal 256 Zeichen enthalten.
 
 *\_WMP-VERSION*
 
@@ -58,7 +58,7 @@ Die Version von Windows Media Player für Ihre Anwendung erforderlich.
 
 *\_WMF-VERSION*
 
-Version des für Ihre Anwendung erforderlichen Windows Media Format SDK.
+Version des Windows Media Format SDK, die für Ihre Anwendung erforderlich ist.
 
 Die folgenden drei Beispielregistrierungswerte veranschaulichen, wie die Werte für Ihre Anwendung konfiguriert werden:
 

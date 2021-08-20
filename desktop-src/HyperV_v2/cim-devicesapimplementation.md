@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und einem logischen Gerät dar, von dem es implementiert wird.
+description: Stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und einem logischen Gerät dar, das diesen implementiert.
 ms.assetid: 40c8111a-d439-4c0f-805e-9c10d7182eb4
-title: CIM_DeviceSAPImplementation-Klasse (Hyper-V-Verwaltung)
+title: CIM_DeviceSAPImplementation -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e32676077cccd5c7e17fa551e904079f457b8d01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d801f0ce1ecc6b30ff9ae5481047cbacf9fa3e20f2713a4cf39b723c5fa904ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812817"
 ---
-# <a name="cim_devicesapimplementation-class-hyper-v-management"></a>CIM_DeviceSAPImplementation-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_devicesapimplementation-class-hyper-v-management"></a>CIM_DeviceSAPImplementation -Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und einem logischen Gerät dar, von dem es implementiert wird.
+Stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und einem logischen Gerät dar, das diesen implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,17 +39,17 @@ class CIM_DeviceSAPImplementation : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ devicesapimplementation** " verfügt über diese Typen von Membern:
+Die **CIM \_ DeviceSAPImplementation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ devicesapimplementation** " verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse DeviceSAPImplementation** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -58,23 +58,23 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
 Das logische Gerät.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Das vom logischen Gerät implementierte SAP.
@@ -90,7 +90,7 @@ Das vom logischen Gerät implementierte SAP.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Das vom logischen Gerät implementierte SAP.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

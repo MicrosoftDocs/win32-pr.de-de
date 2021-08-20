@@ -16,12 +16,12 @@ ms.locfileid: "117824689"
 -   [Arbeiten mit Videoframes](working-with-video-frames.md)
 -   [Arbeiten mit Codecs](working-with-codecs.md)
 -   [Multimediastreaming](multimedia-streaming.md)
--   [Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
+-   [Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 -   [Steuern von Filterdiagrammen mit C](controlling-filter-graphs-using-c.md)
 -   [Veraltete Schnittstellen](deprecated-interfaces.md)
 -   [AVI-Dateiformat](avi-file-format.md)
--   [Unterstützung für ÄNDERUNG DES DVD-Windows](dvd-region-change-support-in-windows.md)
--   [Spin-Down-Timeout für DVD-Laufwerk](dvd-drive-spin-down-timeout.md)
+-   [Unterstützung von DVD-Regionsänderungen in Windows](dvd-region-change-support-in-windows.md)
+-   [Timeout beim Herunterfahren des DVD-Laufwerks](dvd-drive-spin-down-timeout.md)
 -   [Registrieren von MPEG2-Codecs](registering-mpeg2-codecs.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen

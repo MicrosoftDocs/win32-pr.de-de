@@ -1,7 +1,7 @@
 ---
-description: Die getpropertytext-Funktion gibt einen Zeiger auf den Eigenschafts Text zurück.
+description: Die GetPropertyText-Funktion gibt einen Zeiger auf den Eigenschaftstext zurück.
 ms.assetid: 1bcbdbb8-4ec5-4cea-a1c6-4a1f37476f50
-title: Getpropertytext-Funktion (Netmon. h)
+title: GetPropertyText-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 10dbabf32840d2ae5f965687a6261b8bec27a1a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b92bf854dd4a3e678a4eb5524bd47412f012da87a007e960498d11d4bff91ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117982054"
 ---
-# <a name="getpropertytext-function"></a>Getpropertytext-Funktion
+# <a name="getpropertytext-function"></a>GetPropertyText-Funktion
 
-Die **getpropertytext** -Funktion gibt einen Zeiger auf den Eigenschafts Text zurück.
+Die **GetPropertyText-Funktion** gibt einen Zeiger auf den Eigenschaftstext zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,43 +42,43 @@ LPSTR WINAPI GetPropertyText(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
 Handle für den Frame.
 
 </dd> <dt>
 
-*lppi* \[ in\]
+*lpPI* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine Eigenschaften Instanz.
+Zeiger auf eine Eigenschafteninstanz.
 
 </dd> <dt>
 
-*szBuffer* \[ in\]
+*szBuffer* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Zeichenfolge der Eigenschaften Text.
+Zeiger auf die Eigenschaftentextzeichenfolge.
 
 </dd> <dt>
 
-*BufferSize* \[ in\]
+*BufferSize* \[ In\]
 </dt> <dd>
 
-Größe des Textzeichen folgen Puffers.
+Größe des Textzeichenfolgenpuffers.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den Eigenschaften Text.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den Eigenschaftentext.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **getpropertytext** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **GetPropertyText-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

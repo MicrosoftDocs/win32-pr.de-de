@@ -1,9 +1,9 @@
 ---
-title: Applicationmenu. recentitems (Eigenschaft)
-description: Stellt einen Container für das Steuerelement "zuletzt verwendete Elemente" im Anwendungsmenü dar.
+title: ApplicationMenu.RecentItems (Eigenschaft)
+description: Stellt einen Container für das Steuerelement Zuletzt verwendete Elemente im Anwendungsmenü dar.
 ms.assetid: 26ed38b6-17de-423f-a113-ccbaf3780a91
 keywords:
-- Applicationmenu. recentitems-Eigenschaften Fenster (Menüband)
+- ApplicationMenu.RecentItems-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 473ab6436eabd7fcbbbfb533a8ae4afc07098c81
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 415c7d05c29bf44a13d60062c1623cc18d9ba081550afaec8b98a7c6e23a1cb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117656495"
 ---
-# <a name="applicationmenurecentitems-property"></a>Applicationmenu. recentitems (Eigenschaft)
+# <a name="applicationmenurecentitems-property"></a>ApplicationMenu.RecentItems (Eigenschaft)
 
-Stellt einen Container für das Steuerelement " [zuletzt verwendete Elemente](windowsribbon-controls-recentitems.md) " im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
+Stellt einen Container für das [Steuerelement Zuletzt verwendete Elemente](windowsribbon-controls-recentitems.md) im [Anwendungsmenü dar.](windowsribbon-controls-applicationmenu.md)
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ApplicationMenu.RecentItems
@@ -46,19 +46,19 @@ Stellt einen Container für das Steuerelement " [zuletzt verwendete Elemente](wi
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>type</th>
+<th>attribute</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
-<td>xs: positiveingeteger oder xs: String<br/></td>
+<td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das-Element einem <a href="windowsribbon-element-command.md"><strong>Befehl</strong></a>zu.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs: positiveingeteger oder xs: String)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f (einschließlich). <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -69,9 +69,9 @@ Stellt einen Container für das Steuerelement " [zuletzt verwendete Elemente](wi
 
 
 
-| Element                                                             | BESCHREIBUNG                                    |
+| Element                                                             | Beschreibung                                    |
 |---------------------------------------------------------------------|------------------------------------------------|
-| [**"Recentitems"**](windowsribbon-element-recentitems.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
+| [**RecentItems**](windowsribbon-element-recentitems.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -81,23 +81,23 @@ Stellt einen Container für das Steuerelement " [zuletzt verwendete Elemente](wi
 
 | Element                                                                     |
 |-----------------------------------------------------------------------------|
-| [**Applicationmenu**](windowsribbon-element-applicationmenu.md)<br/> |
+| [**ApplicationMenu**](windowsribbon-element-applicationmenu.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**applicationmenu**](windowsribbon-element-applicationmenu.md) -Element auftreten.
+Kann für jedes [**ApplicationMenu-Element nur einmal**](windowsribbon-element-applicationmenu.md) auftreten.
 
-Das Steuerelement zuletzt verwendete [Elemente](windowsribbon-controls-recentitems.md) zeigt die Liste der zuletzt verwendeten Elemente (MRU) der Menüband-Anwendung an.
+Das [Steuerelement Zuletzt verwendete Elemente](windowsribbon-controls-recentitems.md) zeigt die Liste der zuletzt verwendeten Elemente (MRU) der Menübandanwendung an.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das Steuerelement " [zuletzt verwendete Elemente](windowsribbon-controls-recentitems.md) " veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das Steuerelement [Zuletzt verwendete Elemente](windowsribbon-controls-recentitems.md) veranschaulicht.
 
-Das folgende Beispiel zeigt eine Deklaration eines [**recentitems**](windowsribbon-element-recentitems.md) -Befehls.
+Das folgende Beispiel zeigt eine [**RecentItems-Befehlsdeklaration.**](windowsribbon-element-recentitems.md)
 
 
 ```XML
@@ -109,7 +109,7 @@ Das folgende Beispiel zeigt eine Deklaration eines [**recentitems**](windowsribb
 
 
 
-Das folgende Beispiel zeigt die zugehörige **applicationmenu. recentitems** -und die [**recentitems**](windowsribbon-element-recentitems.md) -Steuerelement Deklaration.
+Das folgende Beispiel zeigt die zugeordnete **Deklaration der Steuerelemente ApplicationMenu.RecentItems** [**und RecentItems.**](windowsribbon-element-recentitems.md)
 
 
 ```XML
@@ -127,8 +127,8 @@ Das folgende Beispiel zeigt die zugehörige **applicationmenu. recentitems** -un
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -139,7 +139,7 @@ Das folgende Beispiel zeigt die zugehörige **applicationmenu. recentitems** -un
 [Anwendungsmenü-Steuerelement](windowsribbon-controls-applicationmenu.md)
 </dt> <dt>
 
-[Steuerelement für letzte Elemente](windowsribbon-controls-recentitems.md)
+[Steuerelement "Zuletzt enthaltene Elemente"](windowsribbon-controls-recentitems.md)
 </dt> </dl>
 
  

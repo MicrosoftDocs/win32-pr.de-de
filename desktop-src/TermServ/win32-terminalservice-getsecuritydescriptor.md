@@ -4,8 +4,8 @@ description: 'GetSecurityDescriptor-Methode der Win32_Service -Klasse (Remotedes
 ms.assetid: 9898091A-5BE2-42A0-BF81-13AB74696ACB
 ms.tgt_platform: multiple
 keywords:
-- Scripting Windows-Verwaltungsinstrumentation , Sicherheit
-- Sicherheit Windows-Verwaltungsinstrumentation , Skripterstellung
+- Skripterstellung Windows Verwaltungsinstrumentation , Sicherheit
+- Sicherheit Windows Verwaltungsinstrumentation , Skripterstellung
 - GetSecurityDescriptor-Remotedesktopdienste
 - GetSecurityDescriptor-Methode Remotedesktopdienste , Win32_Service-Klasse
 - Win32_Service klasse Remotedesktopdienste , GetSecurityDescriptor-Methode
@@ -19,12 +19,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea5b8a9b945048f947aa273e1ccc1f4514469681
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 13be26eb2f0c68f61cbe97ab61cd9ce2a00ab351f9a797dfe6b1ae92db7a8bc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117940422"
 ---
 # <a name="getsecuritydescriptor-method-of-the-win32_service-class-remote-desktop-services"></a>GetSecurityDescriptor-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
@@ -187,7 +187,7 @@ Der Dienst verfügt über keinen Ausführungsthread.
 **18**
 </dt> <dd>
 
-Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
+Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -201,7 +201,7 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Dienstname weist ungültige Zeichen auf.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
@@ -233,15 +233,15 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine SACL [*(System Access Control List).*](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Lists](/windows/desktop/SecAuthZ/access-control-lists).
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine DACL (Discretionary [*Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine Systemzugriffssteuerungsliste (SACL). [](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Listen.](/windows/desktop/SecAuthZ/access-control-lists)
 
-Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge.](/windows/desktop/WmiSdk/executing-privileged-operations)
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Privilege Constants**](/windows/desktop/WmiSdk/privilege-constants) und [Executing Privileged Operations](/windows/desktop/WmiSdk/executing-privileged-operations).
 
 ## <a name="examples"></a>Beispiele
 
-Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, "Sicherheit" zu verwenden und als Administrator auszuführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls kann Ihr Code einen Berechtigungsfehler auslösen.
+Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, dass Sie "Sicherheit" verwenden und als Administrator ausführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls löst Ihr Code möglicherweise einen Berechtigungsfehler aus.
 
 
 ```VB
@@ -251,7 +251,7 @@ Set objWMIService = GetObject("winmgmts:" _
 
 
 
-Achten Sie in VB.NET auf "EnablePrivileges = True", und führen Sie die Anwendung als Administrator aus.
+Ebenso müssen Sie in VB.NET "EnablePrivileges = True" festlegen und die Anwendung als Administrator ausführen.
 
 
 ```VB
@@ -265,21 +265,21 @@ Scope.Options.EnablePrivileges = True
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**\_Win32-Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**Win32-Dienst \_**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
 [**Win32 \_ TerminalService**](win32-terminalservice.md)

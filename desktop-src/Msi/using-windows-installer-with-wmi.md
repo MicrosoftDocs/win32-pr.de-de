@@ -17,7 +17,7 @@ Der Windows Installer-Anbieter ermöglicht Windows Management Instrumentation (W
 
 Der [Windows Installer-Anbieter](/previous-versions/windows/desktop/msiprov/windows-installer-provider) ist eine optionale Windows Komponente. Die optionale Installation des Windows Installer-Anbieters stellt abwärtskompatibel sicher, gibt jedoch keine zukünftige Verfügbarkeit des Anbieters an. Weitere Informationen zur Verfügbarkeit des Windows Installer-Anbieters finden Sie unter Betriebssystemverfügbarkeit von [WMI-Komponenten](../wmisdk/operating-system-availability-of-wmi-components.md) in der [WMI-Dokumentation (Windows Management Instrumentation).](../wmisdk/wmi-start-page.md)
 
-Die aktuelle Beschreibung dieses WMI-Anbieters finden Sie unter Windows [Installer Provider](/previous-versions/windows/desktop/msiprov/windows-installer-provider) in der [WMI-Hauptdokumentation (Windows Management Instrumentation).](../wmisdk/wmi-start-page.md) Eine Liste der WMI-Klassen, die vom Windows-Installer unterstützt werden, finden Sie unter [Installierte Anwendungsklassen.](/previous-versions//aa390887(v=vs.85))
+Die aktuelle Beschreibung dieses WMI-Anbieters finden Sie unter Windows [Installer Provider](/previous-versions/windows/desktop/msiprov/windows-installer-provider) in der [WMI-Hauptdokumentation (Windows Management Instrumentation).](../wmisdk/wmi-start-page.md) Eine Liste der WMI-Klassen, die vom Windows Installer unterstützt werden, finden Sie unter [Installed Applications Classes](/previous-versions//aa390887(v=vs.85)).
 
  
 

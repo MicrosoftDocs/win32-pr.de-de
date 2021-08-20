@@ -1,12 +1,12 @@
 ---
-title: Getlogeventname-Methode der Win32_TSGatewayServerSettings-Klasse
-description: Gibt den Protokoll Ereignis Namen für den angegebenen Protokoll Ereignis Index zurück.
+title: GetLogEventName-Methode der Win32_TSGatewayServerSettings Klasse
+description: Gibt den Protokollereignisnamen für den angegebenen Protokollereignisindex zurück.
 ms.assetid: ca31ef8e-ab84-4132-a6d2-232b1e69230a
 ms.tgt_platform: multiple
 keywords:
-- Getlogeventname-Methode Remotedesktopdienste
-- Getlogeventname-Methode Remotedesktopdienste, Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, getlogeventname-Methode
+- GetLogEventName-Remotedesktopdienste
+- GetLogEventName-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , GetLogEventName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e9c608b7a12d3de48d75ecd5651df94d0267fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2da065826045de51b94a1f4c5dec58a78f52d761d6b694017332d9d6558cb273
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130617"
 ---
-# <a name="getlogeventname-method-of-the-win32_tsgatewayserversettings-class"></a>Getlogeventname-Methode der Win32- \_ Klasse "tgatewayserversettings"
+# <a name="getlogeventname-method-of-the-win32_tsgatewayserversettings-class"></a>GetLogEventName-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-Gibt den Protokoll Ereignis Namen für den angegebenen Protokoll Ereignis Index zurück.
+Gibt den Protokollereignisnamen für den angegebenen Protokollereignisindex zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,34 +44,34 @@ uint32 GetLogEventName(
 
 <dl> <dt>
 
-*Eventindex* \[ in\]
+*EventIndex* \[ In\]
 </dt> <dd>
 
-Der Index des Protokoll Ereignisses. Der Wert muss zwischen 0 (null) und dem Wert der **maxlogevents** -Eigenschaft liegen.
+Index des Protokollereignis. Der Wert muss zwischen 0 (null) und dem Wert der **MaxLogEvents-Eigenschaft** liegen.
 
 </dd> <dt>
 
-*EventName* \[ vorgenommen\]
+*EventName* \[ out\]
 </dt> <dd>
 
-Der Name des angegebenen Ereignisses. In der folgenden Liste werden die möglichen Werte angezeigt.
+Name des angegebenen Ereignisses. In der folgenden Liste werden die möglichen Werte angezeigt.
 
 <dt>
 
 <span id="LogChannelDisconnect"></span><span id="logchanneldisconnect"></span><span id="LOGCHANNELDISCONNECT"></span>
 
-<span id="LogChannelDisconnect"></span><span id="logchanneldisconnect"></span><span id="LOGCHANNELDISCONNECT"></span>**Logchanneldisconnect**
+<span id="LogChannelDisconnect"></span><span id="logchanneldisconnect"></span><span id="LOGCHANNELDISCONNECT"></span>**LogChannelDisconnect**
 
 
 </dt> <dd>
 
-Der Benutzer hat die Verbindungen mit der Ressource erfolgreich getrennt.
+Der Benutzer hat die Verbindung mit der Ressource erfolgreich getrennt.
 
 </dd> <dt>
 
 <span id="LogFailureChannelConnect"></span><span id="logfailurechannelconnect"></span><span id="LOGFAILURECHANNELCONNECT"></span>
 
-<span id="LogFailureChannelConnect"></span><span id="logfailurechannelconnect"></span><span id="LOGFAILURECHANNELCONNECT"></span>**Logfailurechannelconnect**
+<span id="LogFailureChannelConnect"></span><span id="logfailurechannelconnect"></span><span id="LOGFAILURECHANNELCONNECT"></span>**LogFailureChannelConnect**
 
 
 </dt> <dd>
@@ -82,68 +82,68 @@ Der Benutzer konnte keine Verbindung mit der Ressource herstellen.
 
 <span id="LogFailureConnectionAuthorizationCheck"></span><span id="logfailureconnectionauthorizationcheck"></span><span id="LOGFAILURECONNECTIONAUTHORIZATIONCHECK"></span>
 
-<span id="LogFailureConnectionAuthorizationCheck"></span><span id="logfailureconnectionauthorizationcheck"></span><span id="LOGFAILURECONNECTIONAUTHORIZATIONCHECK"></span>**Logfailureconnectionauthorizationcheck**
+<span id="LogFailureConnectionAuthorizationCheck"></span><span id="logfailureconnectionauthorizationcheck"></span><span id="LOGFAILURECONNECTIONAUTHORIZATIONCHECK"></span>**LogFailureConnectionAuthorizationCheck**
 
 
 </dt> <dd>
 
-Fehler bei der Verbindungs Autorisierung des Benutzers
+Fehler bei der Verbindungsautorisierung durch den Benutzer.
 
 </dd> <dt>
 
 <span id="LogFailureResourceAuthorizationCheck"></span><span id="logfailureresourceauthorizationcheck"></span><span id="LOGFAILURERESOURCEAUTHORIZATIONCHECK"></span>
 
-<span id="LogFailureResourceAuthorizationCheck"></span><span id="logfailureresourceauthorizationcheck"></span><span id="LOGFAILURERESOURCEAUTHORIZATIONCHECK"></span>**Logfailureresourceauthorizationcheck**
+<span id="LogFailureResourceAuthorizationCheck"></span><span id="logfailureresourceauthorizationcheck"></span><span id="LOGFAILURERESOURCEAUTHORIZATIONCHECK"></span>**LogFailureResourceAuthorizationCheck**
 
 
 </dt> <dd>
 
-Fehler beim Autorisieren der Ressource.
+Fehler bei der Ressourcenautorisierung durch den Benutzer.
 
 </dd> <dt>
 
 <span id="LogSuccessfulChannelConnect"></span><span id="logsuccessfulchannelconnect"></span><span id="LOGSUCCESSFULCHANNELCONNECT"></span>
 
-<span id="LogSuccessfulChannelConnect"></span><span id="logsuccessfulchannelconnect"></span><span id="LOGSUCCESSFULCHANNELCONNECT"></span>**Logsuccess-channelconnect**
+<span id="LogSuccessfulChannelConnect"></span><span id="logsuccessfulchannelconnect"></span><span id="LOGSUCCESSFULCHANNELCONNECT"></span>**LogSuccessfulChannelConnect**
 
 
 </dt> <dd>
 
-Der Benutzer hat erfolgreich eine Verbindung mit der Ressource hergestellt.
+Der Benutzer hat erfolgreich eine Verbindung mit der Ressource erstellt.
 
 </dd> <dt>
 
 <span id="LogSuccessfulConnectionAuthorizationCheck"></span><span id="logsuccessfulconnectionauthorizationcheck"></span><span id="LOGSUCCESSFULCONNECTIONAUTHORIZATIONCHECK"></span>
 
-<span id="LogSuccessfulConnectionAuthorizationCheck"></span><span id="logsuccessfulconnectionauthorizationcheck"></span><span id="LOGSUCCESSFULCONNECTIONAUTHORIZATIONCHECK"></span>**Logsuccess fulconnectionauthorizationcheck**
+<span id="LogSuccessfulConnectionAuthorizationCheck"></span><span id="logsuccessfulconnectionauthorizationcheck"></span><span id="LOGSUCCESSFULCONNECTIONAUTHORIZATIONCHECK"></span>**LogSuccessfulConnectionAuthorizationCheck**
 
 
 </dt> <dd>
 
-Der Benutzer hat die Verbindungs Autorisierung erfolgreich abgeschlossen.
+Der Benutzer hat die Verbindungsautorisierung erfolgreich bestanden.
 
 </dd> <dt>
 
 <span id="LogSuccessfulResourceAuthorizationCheck"></span><span id="logsuccessfulresourceauthorizationcheck"></span><span id="LOGSUCCESSFULRESOURCEAUTHORIZATIONCHECK"></span>
 
-<span id="LogSuccessfulResourceAuthorizationCheck"></span><span id="logsuccessfulresourceauthorizationcheck"></span><span id="LOGSUCCESSFULRESOURCEAUTHORIZATIONCHECK"></span>**Logsuccess fulresourceauthorizationcheck**
+<span id="LogSuccessfulResourceAuthorizationCheck"></span><span id="logsuccessfulresourceauthorizationcheck"></span><span id="LOGSUCCESSFULRESOURCEAUTHORIZATIONCHECK"></span>**LogSuccessfulResourceAuthorizationCheck**
 
 
 </dt> <dd>
 
-Der Benutzer hat die Ressourcen Autorisierung erfolgreich abgeschlossen.
+Der Benutzer hat die Ressourcenautorisierung erfolgreich bestanden.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -153,8 +153,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -163,13 +163,13 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> <dt>
 
-[**Enablelogevent**](enablelogevent-win32-tsgatewayserversettings.md)
+[**EnableLogEvent**](enablelogevent-win32-tsgatewayserversettings.md)
 </dt> <dt>
 
-[**Islogeventaktivierte**](islogeventenabled-win32-tsgatewayserversettings.md)
+[**IsLogEventEnabled**](islogeventenabled-win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

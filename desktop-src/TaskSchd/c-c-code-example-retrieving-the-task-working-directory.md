@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel zum Abrufen des Aufgaben Arbeitsverzeichnisses
-description: Dieses Beispiel ruft das Arbeitsverzeichnis ab, das einer Aufgabe zugeordnet ist, und zeigt den Pfad zum Arbeitsverzeichnis auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen des Aufgabenarbeitsverzeichnisses
+description: In diesem Beispiel wird das Arbeitsverzeichnis abgerufen, das einer Aufgabe zugeordnet ist, und der Pfad zum Arbeitsverzeichnis wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 46dfd996-6d5f-4a77-87a9-daf1909e1509
 keywords:
-- Arbeitsverzeichnis Taskplaner wird abgerufen
-- Abrufen von Task Eigenschaften Taskplaner, Arbeitsverzeichnis
+- Abrufen von Arbeitsverzeichnis-Taskplaner
+- Abrufen von Taskeigenschaften Taskplaner , Arbeitsverzeichnis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e44d29de7df9307ee40f3d10d9dd28f87f89d8a3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 73858e7994bc4cfe91676131b9f0770d306390b6ae3d0f2cb9c5b36ee134d4a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117943902"
 ---
-# <a name="cc-code-example-retrieving-the-task-working-directory"></a>C/C++-Code Beispiel: Abrufen des Aufgaben Arbeitsverzeichnisses
+# <a name="cc-code-example-retrieving-the-task-working-directory"></a>C/C++-Codebeispiel: Abrufen des Aufgabenarbeitsverzeichnisses
 
-Dieses Beispiel ruft das Arbeitsverzeichnis ab, das einer Aufgabe zugeordnet ist, und zeigt den Pfad zum Arbeitsverzeichnis auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird das Arbeitsverzeichnis abgerufen, das einer Aufgabe zugeordnet ist, und der Pfad zum Arbeitsverzeichnis wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -119,12 +119,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

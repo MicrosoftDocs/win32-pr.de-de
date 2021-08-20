@@ -1,21 +1,21 @@
 ---
-description: Wird an ein Fenster gesendet, das der Benutzer verschiebt. Durch die Verarbeitung dieser Nachricht kann eine Anwendung die Position des Zieh Rechtecks überwachen und ggf. ihre Position ändern.
+description: Wird an ein Fenster gesendet, das der Benutzer bewegt. Durch die Verarbeitung dieser Nachricht kann eine Anwendung die Position des Ziehrechtecks überwachen und bei Bedarf seine Position ändern.
 ms.assetid: f56a36c1-dbaa-438a-9e52-d12697a9dac9
-title: WM_MOVING Meldung (Winuser. h)
+title: WM_MOVING Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5847189d64601ec999321920ead716fbdf22e2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 45c27a985d8f048cc5e1b73f021b1bcf48c4f2ecf6fac435c85ea40aa8f6fc93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118030782"
 ---
-# <a name="wm_moving-message"></a>WM-Verschiebungs \_ Meldung
+# <a name="wm_moving-message"></a>WM \_ MOVING-Nachricht
 
-Wird an ein Fenster gesendet, das der Benutzer verschiebt. Durch die Verarbeitung dieser Nachricht kann eine Anwendung die Position des Zieh Rechtecks überwachen und ggf. ihre Position ändern.
+Wird an ein Fenster gesendet, das der Benutzer bewegt. Durch die Verarbeitung dieser Nachricht kann eine Anwendung die Position des Ziehrechtecks überwachen und bei Bedarf seine Position ändern.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -38,7 +38,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur mit der aktuellen Position des Fensters in Bildschirm Koordinaten. Um die Position des Zieh Rechtecks zu ändern, muss eine Anwendung die Elemente dieser Struktur ändern.
+Ein Zeiger auf eine [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) mit der aktuellen Position des Fensters in Bildschirmkoordinaten. Um die Position des Ziehrechtecks zu ändern, muss eine Anwendung die Elemente dieser Struktur ändern.
 
 </dd> </dl>
 
@@ -46,7 +46,7 @@ Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur 
 
 Typ: **LRESULT**
 
-Eine Anwendung sollte **true** zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte **TRUE** zurückgeben, wenn sie diese Nachricht verarbeitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Eine Anwendung sollte **true** zurückgeben, wenn Sie diese Nachricht verarbeite
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -64,16 +64,16 @@ Eine Anwendung sollte **true** zurückgeben, wenn Sie diese Nachricht verarbeite
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ verschieben**](wm-move.md)
+[**WM \_ MOVE**](wm-move.md)
 </dt> <dt>
 
-[**WM- \_ Größe**](wm-sizing.md)
+[**GRÖßE DER WM \_**](wm-sizing.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

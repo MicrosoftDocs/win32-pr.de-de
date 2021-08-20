@@ -1,7 +1,7 @@
 ---
-description: Die get \_ size-Methode gibt die aktuelle Ausgabegröße und den Stretch-Modus zurück.
+description: Die Get \_ Size-Methode gibt die aktuelle Ausgabegröße und den stretch-Modus zurück.
 ms.assetid: 61c0e439-26ce-45fc-986a-0ffc17056a55
-title: 'Iresize:: get_Size-Methode (qedit. h)'
+title: IResize::get_Size-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: b9fe4971fd9ede0f695fe06a4102da8243e7c720
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 747ca8d7fd839321a9dbf4403c503652b932403e49bb964ae6148da2f49c5ac5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818211"
 ---
-# <a name="iresizeget_size-method"></a>Iresize:: get \_ size-Methode
+# <a name="iresizeget_size-method"></a>IResize::get \_ Size-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `get_Size` Methode gibt die aktuelle Ausgabegröße und den Stretch-Modus zurück.
+Die `get_Size` -Methode gibt die aktuelle Ausgabegröße und den stretch-Modus zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,42 +47,42 @@ HRESULT get_Size(
 
 <dl> <dt>
 
-*piheight* \[ vorgenommen\]
+*piHeight* \[ out\]
 </dt> <dd>
 
-Empfängt die Höhe des Videos in Pixel.
+Empfängt die Videohöhe in Pixel.
 
 </dd> <dt>
 
-*piwidth* \[ vorgenommen\]
+*piWidth* \[ out\]
 </dt> <dd>
 
-Empfängt die Video Breite in Pixel.
+Empfängt die Videobreite in Pixel.
 
 </dd> <dt>
 
-*PFLAG* \[ vorgenommen\]
+*pFlag* \[ out\]
 </dt> <dd>
 
-Empfängt ein Flag, das den streckungs Modus angibt. Informationen zu möglichen Werten finden Sie unter [**Größenänderung für Flags**](resize-flags.md) .
+Empfängt ein Flag, das den Streckungsmodus an gibt. Mögliche [**Werte finden Sie unter Größenflags**](resize-flags.md) ändern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der Ausgabetyp nicht festgelegt wurde, sollte der Filter Standardwerte zurückgeben. Diese Werte können zur Entwurfszeit willkürlich ausgewählt werden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -92,9 +92,9 @@ Wenn der Ausgabetyp nicht festgelegt wurde, sollte der Filter Standardwerte zur�
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | DirectX 9,0 oder höher<br/>                                                         |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | DirectX 9.0 oder höher<br/>                                                         |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -102,10 +102,10 @@ Wenn der Ausgabetyp nicht festgelegt wurde, sollte der Filter Standardwerte zur�
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Iresize-Schnittstelle**](iresize.md)
+[**IResize-Schnittstelle**](iresize.md)
 </dt> </dl>
 
  

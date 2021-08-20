@@ -1,11 +1,11 @@
 ---
 title: Proxy-Addresses-Attribut
-description: Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfänger Objekt in einem fremden e-Mail-System erkannt wird. Proxy Adressen sind für alle Empfänger Objekte erforderlich, z. b. benutzerdefinierte Empfänger und Verteilerlisten.
+description: Eine Proxyadresse ist die Adresse, mit der ein Microsoft Exchange Server Empfängerobjekt in einem Fremd-E-Mail-System erkannt wird. Proxyadressen sind für alle Empfängerobjekte erforderlich, z. B. benutzerdefinierte Empfänger und Verteilerlisten.
 ms.assetid: 7bb299d8-e67a-4062-91a3-b579fd71d5c9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Proxy-Addresses-Attribut
-- Proxyadressen-Attribut AD-Schema
+- Proxy-Addresses AD-Attributschema
+- proxyAddresses-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a03542cef9bca48dbba1585e3837056b53673f34
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4333995a30eef76626fba8965eef4ec8e8083e4699b449fd9da69492080b5750
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836844"
 ---
 # <a name="proxy-addresses-attribute"></a>Proxy-Addresses-Attribut
 
-Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfänger Objekt in einem fremden e-Mail-System erkannt wird. Proxy Adressen sind für alle Empfänger Objekte erforderlich, z. b. benutzerdefinierte Empfänger und Verteilerlisten.
+Eine Proxyadresse ist die Adresse, mit der ein Microsoft Exchange Server Empfängerobjekt in einem Fremd-E-Mail-System erkannt wird. Proxyadressen sind für alle Empfängerobjekte erforderlich, z. B. benutzerdefinierte Empfänger und Verteilerlisten.
 
 
 
 | Eingabe | Wert |
 |-------------------|------------------------------------------------------------------------------------------------------|
 | CN                | Proxy-Addresses                                                                                      |
-| LDAP-Display-Name | proxyAddresses                                                                                       |
+| Ldap-Anzeigename | proxyAddresses                                                                                       |
 | Size              | \-                                                                                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                                                                     |
-| Aktualisierungshäufigkeit  | Wird durch eine DLL erstellt, die bei der Installation des Adress Typs mit dem Address-Type Directory-Objekt bereitgestellt wird. |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                                                     |
+| Updatehäufigkeit  | Wird von einer DLL erstellt, die mit dem Address-Type Verzeichnisobjekt bereitgestellt wird, wenn der Adresstyp installiert wird. |
 | Attribute-Id      | 1.2.840.113556.1.2.210                                                                               |
 | System-ID-GUID    | bf967a06-0de6-11d0-a285-00aa003049e2                                                                 |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                                          |
@@ -43,7 +43,7 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,12 +57,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -71,19 +71,19 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -99,12 +99,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -120,12 +120,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -141,12 +141,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -162,12 +162,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |
@@ -183,12 +183,12 @@ Eine Proxy Adresse ist die Adresse, mit der ein Microsoft Exchange Server-Empfä
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x800f                          |
+| MAPI-Id                | 0x800F                          |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | False                           |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1123                            |
 | Search-Flags           | 0x00000005                      |

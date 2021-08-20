@@ -1,23 +1,23 @@
 ---
-description: Verwendet protected Extensible Authentication Protocol mit Microsoft Challenge Handshake Authentication Protocol, Version 2, mit WPA2-Enterprise.
+description: Verwendet protected Extensible Authentication Protocol mit Microsoft Challenge Handshake Authentication Protocol Version 2 mit WPA2-Enterprise.
 ms.assetid: fcbc74a6-1990-45a0-af2e-1c343a84497a
 title: beispiel für WPA2-Enterprise mit PEAP-MSCHAPv2 Profil
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd05ac34992244eedae08f9c76becd5b2c95564e
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 5b746cd39826ed5aacb07118f2d989ebc97a380579b28a742a5732f0f4e86078
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117983937"
 ---
 # <a name="wpa2-enterprise-with-peap-mschapv2-profile-sample"></a>beispiel für WPA2-Enterprise mit PEAP-MSCHAPv2 Profil
 
 Dieses Beispielprofil verwendet das Protected Extensible Authentication-Protokoll mit Microsoft Challenge Handshake Authentication Protocol Version 2 (PEAP-MSCHAPv2) mit **/** _*UserName*-Kennwort,_ um sich beim Netzwerk zu authentifizieren. Der Benutzer wird aufgefordert, Anmeldeinformationen einzugeben.
 
-Dieses Beispiel ist für die Verwendung Wi-Fi Protected Access 2-Sicherheit konfiguriert, die im Enterprise-Modus (WPA2-Enterprise) ausgeführt wird. Der WPA2-Enterprise Sicherheitstyp verwendet 802.1X für den Authentifizierungsaustausch mit dem Back-End. Der AES-Verschlüsselungstyp (Advanced Encryption Standard) wird für die Verschlüsselung verwendet.
+Dieses Beispiel ist so konfiguriert, dass Wi-Fi Protected Access 2-Sicherheit verwendet wird, die im Enterprise Modus (WPA2-Enterprise) ausgeführt wird. Der WPA2-Enterprise Sicherheitstyp verwendet 802.1X für den Authentifizierungsaustausch mit dem Back-End. Der AES-Verschlüsselungstyp (Advanced Encryption Standard) wird für die Verschlüsselung verwendet.
 
-**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>

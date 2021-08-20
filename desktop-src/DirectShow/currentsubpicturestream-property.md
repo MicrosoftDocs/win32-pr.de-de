@@ -47,7 +47,7 @@ Diese Eigenschaft ist Lese-/Schreibzugriff ohne Standardwert. Rufen Sie vor dem 
 
 Wenn Sie diese Eigenschaft festlegen, wird die [**SubpictureOn-Eigenschaft**](subpictureon-property.md) auf **True** umgeschaltet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

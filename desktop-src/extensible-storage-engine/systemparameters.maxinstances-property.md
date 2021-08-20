@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der System Parameters. maxinstance-Eigenschaft.
-title: System Parameters. maxinstance (Eigenschaft)
+description: Weitere Informationen finden Sie unter SystemParameters.MaxInstances-Eigenschaft.
+title: SystemParameters.MaxInstances-Eigenschaft
 TOCTitle: 'MaxInstances property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.MaxInstances
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.maxinstances(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a2ae939cdec5332d1a5c422511a33bc8c214d466
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a553300056ec5fe647a3a7ce01c4c2287d3c20602437a8cb1872da15345b4f4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117702329"
 ---
-# <a name="systemparametersmaxinstances-property"></a>System Parameters. maxinstance (Eigenschaft)
+# <a name="systemparametersmaxinstances-property"></a>SystemParameters.MaxInstances-Eigenschaft
 
-Ruft die maximale Anzahl von Instanzen ab, die erstellt werden können, oder legt Sie fest.
+Ruft die maximale Anzahl von Instanzen ab, die erstellt werden können, oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static int MaxInstances { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

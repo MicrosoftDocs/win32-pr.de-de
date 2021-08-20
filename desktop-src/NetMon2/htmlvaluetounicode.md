@@ -1,7 +1,7 @@
 ---
-description: Die htmlvaluetounicode-Funktion konvertiert eine HTML CP- \_ UTF8-Zeichenfolge in eine Unicode-Zeichenfolge.
+description: Die HTMLValueToUnicode-Funktion konvertiert eine \_ UTF8-HTML-CP-Zeichenfolge in eine Unicode-Zeichenfolge.
 ms.assetid: d175476e-9c84-48b8-9c89-00255b7cb638
-title: Htmlvaluetounicode-Funktion (Netmon. h)
+title: HTMLValueToUnicode-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 8ef5f4a2b49139ce1ab5366dac3f6c141425653e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39b7c05a20e07f406f4036659008ad68a40d25ecc6bca3f0600d121cf6557a32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117981386"
 ---
-# <a name="htmlvaluetounicode-function"></a>Htmlvaluetounicode-Funktion
+# <a name="htmlvaluetounicode-function"></a>HTMLValueToUnicode-Funktion
 
-Die **htmlvaluetounicode** -Funktion konvertiert eine HTML CP- \_ UTF8-Zeichenfolge in eine Unicode-Zeichenfolge.
+Die **HTMLValueToUnicode-Funktion** konvertiert eine \_ UTF8-HTML-CP-Zeichenfolge in eine Unicode-Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,15 +42,15 @@ WCHAR* HTMLValueToUnicode(
 *pValue* \[ in, out\]
 </dt> <dd>
 
-Bei Eingabe ein Zeiger auf die HTML-Zeichenfolge, die von mcsvc bereitgestellt wird.
+Bei der Eingabe ein Zeiger auf die html-Zeichenfolge, die von MCSVC bereitgestellt wird.
 
-Bei Ausgabe, Zeiger auf die konvertierte Unicode-Zeichenfolge.
+Bei der Ausgabe zeigert auf die konvertierte Unicode-Zeichenfolge.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt die Unicode-Entsprechung der Zeichenfolge zurück.
+Die Funktion gibt die Unicode-Entsprechung der Zeichenfolge zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Die-Funktion gibt die Unicode-Entsprechung der Zeichenfolge zurück.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

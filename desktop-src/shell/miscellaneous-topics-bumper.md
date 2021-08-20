@@ -9,18 +9,18 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: bb143dd393c20b504b50a68366c34aea1767cb17
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7c86f138c1c3c555e71c47a7daa3c9f1fcb157068db7719c0382b3d10b7cf5d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117677988"
 ---
 # <a name="legacy-shell-topics"></a>Legacy-Shellthemen
 
 Diese Features gehören zu älteren Versionen der Windows Shell. Einige dieser Features sind möglicherweise nicht mehr vorhanden oder werden nicht mehr unterstützt.
 
--   [Erstellen von Briefcase-Abgleichern](../lwef/briefcase-reconcilers.md)
+-   [Erstellen von Briefcase-Abstimmungen](../lwef/briefcase-reconcilers.md)
 -   [Behandeln von Onlinehilfen](handling-online-help.md)
 -   [Verwalten von Druckern](print.md)
 -   [Erstellen von Internetverknüpfungen](../lwef/internet-shortcuts.md)

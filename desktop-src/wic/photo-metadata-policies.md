@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält die fotometadatenrichtlinien für Systemeigenschaften.
+description: Dieser Abschnitt enthält die Fotometadaten-Policen für Systemeigenschaften.
 ms.assetid: ac71889b-94e5-4135-abd4-5d96690e41ea
-title: Fotometadatenrichtlinien
+title: Richtlinien für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c057880840aa0fcda15e605892c4082e6b01a665
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b024d496821ad642b8c8f3257814d697b6ee15889939877f8a1e8fcf2f8f1000
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118032017"
 ---
-# <a name="photo-metadata-policies"></a>Fotometadatenrichtlinien
+# <a name="photo-metadata-policies"></a>Richtlinien für Fotometadaten
 
-Dieser Abschnitt enthält die fotometadatenrichtlinien für Systemeigenschaften.
+Dieser Abschnitt enthält die Fotometadaten-Policen für Systemeigenschaften.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,10 +21,10 @@ Dieser Abschnitt enthält die fotometadatenrichtlinien für Systemeigenschaften.
 
 | Thema                                       | Beschreibung                                                                               |
 |---------------------------------------------|-------------------------------------------------------------------------------------------|
-| [System](system.md)<br/>             | Dieser Abschnitt enthält die fotometadatenrichtlinien für System Eigenschaften.<br/>       |
-| [System. GPS](system-gps.md)<br/>     | Dieser Abschnitt enthält die fotometadatenrichtlinien für System. GPS-Eigenschaften.<br/>   |
-| [System. Image](system-image.md)<br/> | Dieser Abschnitt enthält die fotometadatenrichtlinien für System. Image-Eigenschaften.<br/> |
-| [System. Photo](system-photo.md)<br/> | Dieser Abschnitt enthält die fotometadatenrichtlinien für System. Photo-Eigenschaften.<br/> |
+| [System](system.md)<br/>             | Dieser Abschnitt enthält die Fotometadatenrichtlinien für Systemeigenschaften.<br/>       |
+| [System.GPS](system-gps.md)<br/>     | Dieser Abschnitt enthält die Fotometadatenrichtlinien für System.GPS-Eigenschaften.<br/>   |
+| [System.Image](system-image.md)<br/> | Dieser Abschnitt enthält die Fotometadatenrichtlinien für System.Image-Eigenschaften.<br/> |
+| [System.Photo](system-photo.md)<br/> | Dieser Abschnitt enthält die Fotometadatenrichtlinien für System.Photo-Eigenschaften.<br/> |
 
 
 

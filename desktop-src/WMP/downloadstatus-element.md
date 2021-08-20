@@ -1,9 +1,9 @@
 ---
-title: Downloadstatus-Element (msfeeds. h)
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Downloadstatus-Element (msfeeds. h)
+title: DownloadStatus-Element (Msfeeds.h)
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | DownloadStatus-Element (Msfeeds.h)
 ms.assetid: 08d9719a-390d-454a-935e-27812c0f3599
 keywords:
-- Download Status-Element Fenster Media Player
+- DownloadStatus-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 431da810a9591d891fca914a9ecb6d3146a651d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f445152e6df2aaffbd3a508942fd4f86838e28671737995c069fac51bc3b0f21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935758"
 ---
-# <a name="downloadstatus-element"></a>Downloadstatus-Element
+# <a name="downloadstatus-element"></a>DownloadStatus-Element
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **Downloadstatus** -Element gibt eine URL an, die der Windows-Media Player als Link anzeigt, damit Benutzer den Download Status anzeigen können.
+Das **DownloadStatus-Element** gibt eine URL an, Windows Media Player als Link angezeigt wird, damit Benutzer den Downloadstatus anzeigen können.
 
 ``` syntax
 <DownloadStatus
@@ -40,14 +40,14 @@ Das **Downloadstatus** -Element gibt eine URL an, die der Windows-Media Player a
 
 <dl> <dt>
 
-<span id="URL"></span><span id="url"></span>Urne
+<span id="URL"></span><span id="url"></span>Url
 </dt> <dd>
 
-Die URL für die Webseite, die im Online Store angezeigt wird, um den Download Status für den Benutzer anzuzeigen.
+URL für die Webseite, die im Onlineshop angezeigt wird, um dem Benutzer den Downloadstatus anzuzeigen.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -62,7 +62,7 @@ Die URL für die Webseite, die im Online Store angezeigt wird, um den Download S
 
 ## <a name="remarks"></a>Bemerkungen
 
-Windows Media Player zeigt Benutzern eine Meldung an, wenn ein Download ausgeführt wird. Wenn die aktuellen aktiven Dienste eine Download Status-URL definieren, kann der Benutzer auf den Meldungs Text klicken. Wenn der Benutzer auf die Meldung klickt, navigiert der Spieler zu der URL, die vom **Downloadstatus** -Element angegeben wird, sodass der aktuelle aktive Speicher Details zu den zurzeit ausgeführten Downloads bereitstellen kann.
+Windows Media Player zeigt benutzern eine Meldung an, wenn ein Download läuft. Wenn die aktuellen aktiven Dienste eine Downloadstatus-URL definieren, kann der Benutzer auf den Meldungstext klicken. Wenn der Benutzer auf die Nachricht klickt, navigiert der Player zu der URL, die durch das **DownloadStatus-Element** angegeben wird, damit der aktuelle aktive Store Details zu downloads in Bearbeitung bereitstellen kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Windows Media Player zeigt Benutzern eine Meldung an, wenn ein Download ausgefü
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
 | Version<br/> | Windows Media Player 10 oder höher<br/>                                          |
-| Header<br/>  | <dl> <dt>Msfeeds. h</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msfeeds.h</dt> </dl> |
 
 
 
@@ -79,13 +79,13 @@ Windows Media Player zeigt Benutzern eine Meldung an, wenn ein Download ausgefü
 
 <dl> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Online Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
  

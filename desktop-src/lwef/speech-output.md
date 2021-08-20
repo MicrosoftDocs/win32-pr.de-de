@@ -13,17 +13,17 @@ ms.locfileid: "117882538"
 ---
 # <a name="speech-output"></a>Sprachausgabe
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Genau wie die Spracheingabe ist die Sprachausgabe eine vertraute und natürliche Form der Kommunikation, sodass sie auch eine geeignete Ergänzung in einer zeichenbasierten Schnittstelle ist. Die Sprachausgabe hat jedoch auch ihre Mängel. In einigen Umgebungen ist die Sprachausgabe möglicherweise nicht bevorzugt oder hörbar. Darüber hinaus ist Sprache an sich unsichtbar und hat keine permanente Ausgabe, da sie stark auf kurzfristigen Arbeitsspeicher angewiesen ist. Diese Faktoren schränken die Kapazität und Geschwindigkeit für die Verarbeitung großer Informationsmengen ein. Auf ähnliche Weise kann die Sprachausgabe auch die Benutzereingabe unterbrechen, insbesondere wenn Sprache die Eingabemethode ist. Sprach-Engines haben in der Regel wenig Unterstützung, die es dem Benutzer ermöglicht, zu unterbrechen, wenn Sprache oder andere Audiodaten den Ausgabekanal haben.
+Wie die Spracheingabe ist die Sprachausgabe eine vertraute und natürliche Kommunikationsform, sodass sie auch eine geeignete Ergänzung in einer zeichenbasierten Schnittstelle ist. Die Sprachausgabe weist jedoch auch ihre Genauigkeiten auf. In einigen Umgebungen ist die Sprachausgabe möglicherweise nicht bevorzugt oder hörbar. Darüber hinaus ist Sprache an sich unsichtbar und hat keine persistente Ausgabe, die stark vom kurzfristigen Arbeitsspeicher abhängig ist. Diese Faktoren beschränken seine Kapazität und Geschwindigkeit für die Verarbeitung großer Mengen von Informationen. Ebenso kann die Sprachausgabe auch die Benutzereingabe unterbrechen, insbesondere dann, wenn Sprache die Eingabemethode ist. Sprach-Engines verfügen im Allgemeinen über wenig Unterstützung, die es dem Benutzer ermöglicht, zu unterbrechen, wenn Sprache oder andere Audiodaten den Ausgabekanal aufweisen.
 
-Vermeiden Sie daher die Verwendung von Sprache als exklusive Form der Ausgabe. Da Microsoft Agent Jedoch Zeichen als Teil der Windows-Schnittstelle präsentiert, bietet er gegenüber Umgebungen mit ausschließlicher Spracherkennung mehrere Vorteile. Zeichen können mit anderen Eingabe- und Ausgabeformen kombiniert werden, um Optionen und Aktionen sichtbar zu machen, wodurch eine effektivere Schnittstelle als eine ausschließlich visuelle oder sprachbasierte Schnittstelle ermöglicht wird.
+Vermeiden Sie daher die Verwendung von Sprache als exklusive Form der Ausgabe. Da der Microsoft-Agent jedoch Zeichen als Teil der Windows-Schnittstelle darstellt, bietet er gegenüber Sprachumgebungen mehrere Vorteile. Zeichen können mit anderen Eingabe- und Ausgabeformen kombiniert werden, um Optionen und Aktionen sichtbar zu machen, was eine effektivere Schnittstelle als eine ausschließlich visuelle oder sprachbasierte Schnittstelle ermöglicht.
 
-Um die Sprachausgabe sichtbarer zu machen, bietet Microsoft Agent außerdem die Möglichkeit, ein Zeichen mit einem Wortsprechblasenstil im Stil eines Worts im Stil eines Sprechblasenformats zu erstellen. Mit anderen Einstellungen können Sie bestimmen, wie Text im Balloon angezeigt wird und wann der Balloon entfernt wird. Sie können auch bestimmen, welche Schriftart verwendet werden soll. Obwohl Sie die Wörtersprechblasenattribute eines Zeichens festlegen können, beachten Sie, dass der Benutzer diese Einstellungen überschreiben kann.
+Um die Sprachausgabe sichtbarer zu machen, bietet Der Microsoft-Agent außerdem die Möglichkeit, ein Zeichen mit einem Wortsprechblasen im Stil eines Sprechblasens zu erstellen. Mit anderen Einstellungen können Sie bestimmen, wie Text in der Sprechblase angezeigt wird und wann die Sprechblase entfernt wird. Sie können auch bestimmen, welche Schriftart verwendet werden soll. Obwohl Sie die Wörtersprechblasenattribute eines Zeichens festlegen können, beachten Sie, dass der Benutzer diese Einstellungen überschreiben kann.
 
--   [Seien Sie effizient und natürlich](be-efficient-and-natural.md)
--   [Verwenden von Active Voice](use-the-active-voice.md)
--   [Verwenden der richtigen zeitlichen Steuerung und Hervorhebung](use-appropriate-timing-and-emphasis.md)
+-   [Effizient und natürlich sein](be-efficient-and-natural.md)
+-   [Verwenden der aktiven Stimme](use-the-active-voice.md)
+-   [Verwenden der geeigneten Zeitlichen Steuerung und Hervorhebung](use-appropriate-timing-and-emphasis.md)
 
  
 

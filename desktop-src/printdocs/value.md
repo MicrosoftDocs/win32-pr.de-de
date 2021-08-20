@@ -4,12 +4,12 @@ ms.assetid: 933528f6-8f34-4509-887c-c7c223c79367
 title: Wert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 272bee4d7a5f88899f83e439d8e1630b4026713d
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 739ce465408d1cd1447de5aeac2e314e879f48f69f13735855e628c8901c2c52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117685861"
 ---
 # <a name="value"></a>Wert
 
@@ -29,7 +29,7 @@ In der folgenden Tabelle sind die XML-Attribute aufgeführt, die für dieses Ele
 
 | XML-Attribut       | Details                                                                                                                                                                          |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| xsi:type<br/> | Gibt den Datentyp von Value an, bei dem es sich um einen der folgenden XSD-definierten Typen handelt: string, integer, decimal, QName. Wenn der Datentyp fehlt, ist der Standarddatentyp string.<br/> |
+| xsi:type<br/> | Gibt den Datentyp von Value an, der einer der folgenden XSD-definierten Typen sein muss: string, integer, decimal, QName. Wenn der Datentyp fehlt, ist der Standarddatentyp string.<br/> |
 
 
 
@@ -62,7 +62,7 @@ Wertelemente, die im ScoredProperty-Element angezeigt werden, verfügen möglich
 Ein Value-Element kann innerhalb eines Property- oder ScoredProperty-Elements angezeigt werden. Der Zweck des Value-Elements besteht in der Darstellung eines Werts als XML-Standarddatentyp. Der Datentyp wird als XML-Attribut des Value-Elements xsi:type angegeben. Beachten Sie, dass nicht alle XSD-definierten oder XML-definierten Typen unterstützt werden. Eine Liste der unterstützten Typen finden Sie unter [Zusammenfassung der Elementtypen](summary-of-element-types.md). Ein Value-Element kann nur Zeicheninhalte enthalten. Nichts anderes kann als Inhalt in einem Value-Element angezeigt werden.
 
 > [!Note]  
-> Einige Vom Druckschema definierte Property- und ScoredProperty-Elemente enthalten kein Value-Element, da ihr Zweck einfach die über- und untergeordneten Eigenschaften sein soll. Sie sollten solchen Eigenschaften wie diesen, Eigenschaften, die kein Value-Element enthalten, kein Value-Element hinzufügen.
+> Einige Vom Druckschema definierte Property- und ScoredProperty-Elemente enthalten kein Value-Element, da ihr Zweck einfach die über- und untergeordneten Eigenschaften sein soll. Sie sollten diesen Eigenschaften, die kein Value-Element enthalten, kein Value-Element hinzufügen.
 
  
 

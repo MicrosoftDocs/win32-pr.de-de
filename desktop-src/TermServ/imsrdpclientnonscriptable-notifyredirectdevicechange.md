@@ -1,20 +1,20 @@
 ---
-title: Imsrdpclientnonscriptable notifyredirectdevicechange-Methode
-description: Benachrichtigt das Geräte Umleitungs Modul des Remotedesktop ActiveX-Steuer Elements, dass eine Geräte Änderung auf dem System aufgetreten ist. Diese Methode übergibt WM \_ devicechange-Benachrichtigungen an das-Steuerelement.
+title: IMsRdpClientNonScriptable NotifyRedirectDeviceChange-Methode
+description: Benachrichtigt das Geräteumleitungsmodul des Remotedesktop ActiveX, dass eine Geräteänderung auf dem System aufgetreten ist. Diese Methode übergibt WM \_ DEVICECHANGE-Benachrichtigungen an das Steuerelement.
 ms.assetid: 36323831-06e0-4e47-8a6c-06367119298f
 ms.tgt_platform: multiple
 keywords:
-- Notifyredirectdevicechange-Methode Remotedesktopdienste
-- Notifyredirectdevicechange-Methode Remotedesktopdienste, imsrdpclientnonscriptable-Schnittstelle
-- Imsrdpclientnonscriptable-Schnittstelle Remotedesktopdienste, notifyredirectdevicechange-Methode
-- Notifyredirectdevicechange-Methode Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste, notifyredirectdevicechange-Methode
-- Notifyredirectdevicechange-Methode Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste, notifyredirectdevicechange-Methode
-- Notifyredirectdevicechange-Methode Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste, notifyredirectdevicechange-Methode
-- Notifyredirectdevicechange-Methode Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste, notifyredirectdevicechange-Methode
+- NotifyRedirectDeviceChange-Remotedesktopdienste
+- NotifyRedirectDeviceChange-Methode Remotedesktopdienste , IMsRdpClientNonScriptable-Schnittstelle
+- IMsRdpClientNonScriptable-Schnittstelle Remotedesktopdienste , NotifyRedirectDeviceChange-Methode
+- NotifyRedirectDeviceChange-Methode Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , NotifyRedirectDeviceChange-Methode
+- NotifyRedirectDeviceChange-Methode Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , NotifyRedirectDeviceChange-Methode
+- NotifyRedirectDeviceChange-Methode Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , NotifyRedirectDeviceChange-Methode
+- NotifyRedirectDeviceChange-Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , NotifyRedirectDeviceChange-Methode
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7357fcb5e31eeeb0de5791425b8d9fada4365ab8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 37986a218f672f5ace6d81b6496b958547e70a95f8ddea91bf6a130eb05b1ed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130077"
 ---
-# <a name="imsrdpclientnonscriptablenotifyredirectdevicechange-method"></a>Imsrdpclientnonscriptable:: notifyredirectdevicechange-Methode
+# <a name="imsrdpclientnonscriptablenotifyredirectdevicechange-method"></a>IMsRdpClientNonScriptable::NotifyRedirectDeviceChange-Methode
 
-Benachrichtigt das Geräte Umleitungs Modul des Remotedesktop ActiveX-Steuer Elements, dass eine Geräte Änderung auf dem System aufgetreten ist. Diese Methode übergibt [**WM \_ devicechange**](/windows/desktop/DevIO/wm-devicechange) -Benachrichtigungen an das-Steuerelement.
+Benachrichtigt das Geräteumleitungsmodul des Remotedesktop ActiveX, dass eine Geräteänderung auf dem System aufgetreten ist. Diese Methode übergibt [**WM \_ DEVICECHANGE-Benachrichtigungen**](/windows/desktop/DevIO/wm-devicechange) an das Steuerelement.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,38 +56,38 @@ HRESULT NotifyRedirectDeviceChange(
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Gibt das Geräte Ereignis an. Dieser Parameter kann einen der folgenden Werte annehmen.
+Gibt das Geräteereignis an. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 <dt>
 
 <span id="DBT_CONFIGCHANGECANCELED"></span><span id="dbt_configchangecanceled"></span>
 
-<span id="DBT_CONFIGCHANGECANCELED"></span><span id="dbt_configchangecanceled"></span>**DBT \_ configchangeabgeb Rochen**
+<span id="DBT_CONFIGCHANGECANCELED"></span><span id="dbt_configchangecanceled"></span>**DBT \_ CONFIGCHANGECANCELED**
 
 
 </dt> <dd>
 
-Eine Anforderung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) wurde abgebrochen.
+Eine Anforderung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) wurde abgebrochen.
 
 </dd> <dt>
 
 <span id="DBT_CONFIGCHANGED"></span><span id="dbt_configchanged"></span>
 
-<span id="DBT_CONFIGCHANGED"></span><span id="dbt_configchanged"></span>**DBT- \_ ConfigChanged**
+<span id="DBT_CONFIGCHANGED"></span><span id="dbt_configchanged"></span>**DBT \_ CONFIGCHANGED**
 
 
 </dt> <dd>
 
-Die aktuelle Konfiguration wurde aufgrund eines Andocken oder Abdocken geändert.
+Die aktuelle Konfiguration wurde aufgrund eines Andocks oder Abdockens geändert.
 
 </dd> <dt>
 
 <span id="DBT_CUSTOMEVENT"></span><span id="dbt_customevent"></span>
 
-<span id="DBT_CUSTOMEVENT"></span><span id="dbt_customevent"></span>**DBT \_ CustomEvent**
+<span id="DBT_CUSTOMEVENT"></span><span id="dbt_customevent"></span>**DBT \_ CUSTOMEVENT**
 
 
 </dt> <dd>
@@ -98,7 +98,7 @@ Ein benutzerdefiniertes Ereignis ist aufgetreten.
 
 <span id="DBT_DEVICEARRIVAL"></span><span id="dbt_devicearrival"></span>
 
-<span id="DBT_DEVICEARRIVAL"></span><span id="dbt_devicearrival"></span>**DBT \_ devicearrival**
+<span id="DBT_DEVICEARRIVAL"></span><span id="dbt_devicearrival"></span>**DBT \_ DEVICEARRARRARR**
 
 
 </dt> <dd>
@@ -109,18 +109,18 @@ Ein Gerät wurde eingefügt und ist jetzt verfügbar.
 
 <span id="DBT_DEVICEQUERYREMOVE"></span><span id="dbt_devicequeryremove"></span>
 
-<span id="DBT_DEVICEQUERYREMOVE"></span><span id="dbt_devicequeryremove"></span>**DBT \_ DeviceQueryRemove**
+<span id="DBT_DEVICEQUERYREMOVE"></span><span id="dbt_devicequeryremove"></span>**DBT \_ DEVICEQUERYREMOVE**
 
 
 </dt> <dd>
 
-Die Berechtigung zum Entfernen eines Geräts wird angefordert. Jede Anwendung kann diese Anforderung verweigern und das Entfernen abbrechen.
+Die Berechtigung zum Entfernen eines Geräts wird angefordert. Jede Anwendung kann diese Anforderung verweigern und die Entfernung abbrechen.
 
 </dd> <dt>
 
 <span id="DBT_DEVICEQUERYREMOVEFAILED"></span><span id="dbt_devicequeryremovefailed"></span>
 
-<span id="DBT_DEVICEQUERYREMOVEFAILED"></span><span id="dbt_devicequeryremovefailed"></span>**DBT \_ devicequeryremovefailed**
+<span id="DBT_DEVICEQUERYREMOVEFAILED"></span><span id="dbt_devicequeryremovefailed"></span>**DBT \_ DEVICEQUERYREMOVEFAILED**
 
 
 </dt> <dd>
@@ -131,7 +131,7 @@ Eine Anforderung zum Entfernen eines Geräts wurde abgebrochen.
 
 <span id="DBT_DEVICEREMOVECOMPLETE"></span><span id="dbt_deviceremovecomplete"></span>
 
-<span id="DBT_DEVICEREMOVECOMPLETE"></span><span id="dbt_deviceremovecomplete"></span>**DBT \_ deviceremovecomplete**
+<span id="DBT_DEVICEREMOVECOMPLETE"></span><span id="dbt_deviceremovecomplete"></span>**DBT \_ DEVICEREMOVECOMPLETE**
 
 
 </dt> <dd>
@@ -142,29 +142,29 @@ Ein Gerät wurde entfernt.
 
 <span id="DBT_DEVICEREMOVEPENDING"></span><span id="dbt_deviceremovepending"></span>
 
-<span id="DBT_DEVICEREMOVEPENDING"></span><span id="dbt_deviceremovepending"></span>**DBT \_ deviceremovepending**
+<span id="DBT_DEVICEREMOVEPENDING"></span><span id="dbt_deviceremovepending"></span>**DBT \_ DEVICEREMOVEPENDING**
 
 
 </dt> <dd>
 
-Ein Gerät wird gerade entfernt. Das Entfernen kann nicht verweigert werden.
+Ein Gerät wird entfernt. Das Entfernen kann nicht verweigert werden.
 
 </dd> <dt>
 
 <span id="DBT_DEVICETYPESPECIFIC"></span><span id="dbt_devicetypespecific"></span>
 
-<span id="DBT_DEVICETYPESPECIFIC"></span><span id="dbt_devicetypespecific"></span>**DBT-Geräte- \_ /richtlinientypespecific**
+<span id="DBT_DEVICETYPESPECIFIC"></span><span id="dbt_devicetypespecific"></span>**DBT \_ DEVICETYPESPECIFIC**
 
 
 </dt> <dd>
 
-Ein Geräte spezifisches Ereignis ist aufgetreten.
+Ein gerätespezifisches Ereignis ist aufgetreten.
 
 </dd> <dt>
 
 <span id="DBT_DEVNODES_CHANGED"></span><span id="dbt_devnodes_changed"></span>
 
-<span id="DBT_DEVNODES_CHANGED"></span><span id="dbt_devnodes_changed"></span>**DBT- \_ Devnodes \_ geändert**
+<span id="DBT_DEVNODES_CHANGED"></span><span id="dbt_devnodes_changed"></span>**DBT \_ DEVNODES \_ GEÄNDERT**
 
 
 </dt> <dd>
@@ -175,40 +175,40 @@ Ein Gerät wurde dem System hinzugefügt oder daraus entfernt.
 
 <span id="DBT_QUERYCHANGECONFIG"></span><span id="dbt_querychangeconfig"></span>
 
-<span id="DBT_QUERYCHANGECONFIG"></span><span id="dbt_querychangeconfig"></span>**DBT \_ querychangeconfig**
+<span id="DBT_QUERYCHANGECONFIG"></span><span id="dbt_querychangeconfig"></span>**DBT \_ QUERYCHANGECONFIG**
 
 
 </dt> <dd>
 
-Die Berechtigung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) wird angefordert.
+Die Berechtigung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) wird angefordert.
 
 </dd> <dt>
 
 <span id="DBT_USERDEFINED"></span><span id="dbt_userdefined"></span>
 
-<span id="DBT_USERDEFINED"></span><span id="dbt_userdefined"></span>**DBT \_ UserDefined**
+<span id="DBT_USERDEFINED"></span><span id="dbt_userdefined"></span>**DBT \_ USERDEFINED**
 
 
 </dt> <dd>
 
-Die Bedeutung dieser Meldung ist Benutzer definiert.
+Die Bedeutung dieser Nachricht ist benutzerdefiniert.
 
 </dd> </dl> </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine-Struktur, die ereignisspezifische Daten enthält. Das Format hängt vom Wert des *wParam* -Parameters ab. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Ereignissen. Weitere Informationen finden Sie unter [Geräte Ereignis Typen](/windows/desktop/DevIO/device-event-types).
+Zeiger auf eine -Struktur, die ereignisspezifische Daten enthält. Das Format hängt vom Wert des *wParam-Parameters* ab. Weitere Informationen finden Sie in der Dokumentation zu jedem Ereignis. Weitere Informationen finden Sie unter [Geräteereignistypen.](/windows/desktop/DevIO/device-event-types)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Containeranwendung, die das dynamische Hinzufügen oder Entfernen von Geräten zulässt, sollte die [**WM \_ devicechange**](/windows/desktop/DevIO/wm-devicechange) -Nachricht im Fenster der obersten Ebene verarbeiten und die Nachricht mithilfe der **notifyredirectdevicechange** -Methode an das Steuerelement weiterleiten. Ein Beispiel für eine dynamische Geräte Änderung ist, wenn ein umgeleitetes Laufwerk hinzugefügt oder entfernt wird, während das System ausgeführt wird.
+Eine Containeranwendung, die das dynamische Addition oder Entfernen von Geräten zulässt, sollte die [**WM \_ DEVICECHANGE-Nachricht**](/windows/desktop/DevIO/wm-devicechange) im Fenster der obersten Ebene verarbeiten und die Nachricht mithilfe der **NotifyRedirectDeviceChange-Methode** an das Steuerelement weiterleiten. Ein Beispiel für eine dynamische Geräteänderung ist, wenn ein umgeleitetes Laufwerk hinzugefügt oder entfernt wird, während das System ausgeführt wird.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -222,7 +222,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                               |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>       |
-| IID<br/>                      | IID \_ imsrdpclientnonscriptable ist als 2f079c4c-87b2-4afd-97ab-20cdb43038ae definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientNonScriptable ist als 2f079c4c-87b2-4afd-97ab-20cdb43038ae definiert.<br/> |
 
 
 
@@ -242,7 +242,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> </dl>
 
  

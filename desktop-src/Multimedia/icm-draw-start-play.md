@@ -1,9 +1,9 @@
 ---
-title: ICM_DRAW_START_PLAY Meldung (VFW. h)
-description: Die ICM \_ Draw \_ -Wiedergabe Meldung "Start" \_ stellt die Start-und Endzeit eines Wiedergabe Vorgangs für einen renderingtreiber bereit. Sie können diese Nachricht explizit oder mithilfe des icdrawstartplay-Makros senden.
+title: ICM_DRAW_START_PLAY (Vfw.h)
+description: Die ICM DRAW START PLAY-Meldung gibt die Start- und Endzeiten eines Wiedergabevorgang \_ \_ für einen \_ Renderingtreiber an. Sie können diese Nachricht explizit oder mithilfe des ICDrawStartPlay-Makros senden.
 ms.assetid: 27c4c06e-6510-43dc-a754-fe44144796f5
 keywords:
-- ICM_DRAW_START_PLAY-Nachricht (Multimedia)
+- ICM_DRAW_START_PLAY von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eefea0f6344fb598fac1f0413bba5c377c5914e6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 57caf05182f01ef1e6aec6939946a23ca0acf6f3f82ec29be04ec7e3a49cb782
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117987235"
 ---
-# <a name="icm_draw_start_play-message"></a>ICM \_ Draw \_ - \_ Wiedergabe Nachricht starten
+# <a name="icm_draw_start_play-message"></a>\_ICM DRAW \_ START \_ PLAY-Meldung
 
-Die **ICM \_ Draw \_ \_** -Wiedergabe Meldung "Start" stellt die Start-und Endzeit eines Wiedergabe Vorgangs für einen renderingtreiber bereit. Sie können diese Nachricht explizit oder mithilfe des [**icdrawstartplay**](/windows/desktop/api/Vfw/nf-vfw-icdrawstartplay) -Makros senden.
+Die **ICM DRAW START \_ \_ \_ PLAY-Meldung** gibt die Start- und Endzeiten eines Wiedergabevorgang für einen Renderingtreiber an. Sie können diese Nachricht explizit oder mithilfe des [**ICDrawStartPlay-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdrawstartplay) senden.
 
 
 ```C++
@@ -38,14 +38,14 @@ lParam = (DWORD_PTR) lTo;
 
 <dl> <dt>
 
-<span id="lFrom"></span><span id="lfrom"></span><span id="LFROM"></span>*lfrom*
+<span id="lFrom"></span><span id="lfrom"></span><span id="LFROM"></span>*lFrom*
 </dt> <dd>
 
 Startzeit.
 
 </dd> <dt>
 
-<span id="lTo"></span><span id="lto"></span><span id="LTO"></span>*lTo*
+<span id="lTo"></span><span id="lto"></span><span id="LTO"></span>*Lto*
 </dt> <dd>
 
 Endzeit.
@@ -56,13 +56,13 @@ Endzeit.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht geht vor allen Frame Daten vor, die an den renderingtreiber gesendet werden.
+Diese Meldung geht allen Framedaten voraus, die an den Renderingtreiber gesendet werden.
 
-Einheiten für *lfrom* und *LTO* werden mit der [**ICM \_ Draw \_ Begin**](icm-draw-begin.md) -Meldung angegeben. Bei Videodaten ist dies normalerweise eine Frame Nummer. Weitere Informationen zur Wiedergabe Rate finden Sie unter den **dwtrate** -und **dwscale** -Membern der [**icdrawbegin**](/windows/desktop/api/Vfw/ns-vfw-icdrawbegin) -Struktur.
+Einheiten für *lFrom und* *lTo* werden mit der folgenden DRAW [**\_ BEGIN ICM \_ angegeben.**](icm-draw-begin.md) Bei Videodaten ist dies normalerweise eine Framenummer. Weitere Informationen zur Wiedergaberate finden Sie unter **den dwRate-** und **dwScale-Membern** der [**ICDRAWBEGIN-Struktur.**](/windows/desktop/api/Vfw/ns-vfw-icdrawbegin)
 
-Wenn die Endzeit kleiner als die Startzeit ist, wird die Wiedergabe Richtung umgekehrt.
+Wenn die Endzeit kleiner als die Startzeit ist, wird die Wiedergaberichtung umgekehrt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Wenn die Endzeit kleiner als die Startzeit ist, wird die Wiedergabe Richtung umg
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Wenn die Endzeit kleiner als die Startzeit ist, wird die Wiedergabe Richtung umg
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

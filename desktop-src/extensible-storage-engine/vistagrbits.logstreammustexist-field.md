@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im Feld "vistagrbits. logstreammustexist".
-title: Vistagrbits. logstreammustexist-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaGrbits.LogStreamMustExist-Feld'
+title: VistaGrbits.LogStreamMustExist-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: LogStreamMustExist field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.LogStreamMustExist
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistagrbits.logstreammustexist(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4006d5fa8780c5da61a85b94cefe183dfbec3ab2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12a676d9d5adc88ca8b95e54c3ec988f26aaef8bbffd8141339e068517547b92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117701418"
 ---
-# <a name="vistagrbitslogstreammustexist-field"></a>Vistagrbits. logstreammustexist-Feld
+# <a name="vistagrbitslogstreammustexist-field"></a>VistaGrbits.LogStreamMustExist-Feld
 
-Transaktionsprotokolle müssen im Protokoll Dateiverzeichnis vorhanden sein (d. h., ein neuer Stream kann nicht automatisch gestartet werden).
+Transaktionsprotokolle müssen im Protokolldateiverzeichnis vorhanden sein (d. h., ein neuer Stream kann nicht automatisch gestartet werden).
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,10 +55,10 @@ public const InitGrbit LogStreamMustExist
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistagrbits-Klasse](./vistagrbits-class.md)
+[VistaGrbits-Klasse](./vistagrbits-class.md)
 
-[Vistagrbits-Member](./vistagrbits-members.md)
+[VistaGrbits-Member](./vistagrbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

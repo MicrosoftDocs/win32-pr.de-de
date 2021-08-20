@@ -1,6 +1,6 @@
 ---
 title: Informationen zur Netzwerkverwaltung
-description: Mit den Netzwerkverwaltungsfunktionen können Sie Netzwerkfreigaben wie Windows Explorer und mit dem Befehl Net verwalten. Sie können Benutzerkonten auch im Rahmen des Benutzer-Managers verwalten.
+description: Mit den Netzwerkverwaltungsfunktionen können Sie Netzwerkfreigaben wie im Windows und mit dem Net-Befehl verwalten. Sie können Benutzerkonten auch wie Benutzer-Manager verwalten.
 ms.assetid: c1c5fba2-95f5-4d47-81ce-0701009d86d3
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,11 +13,11 @@ ms.locfileid: "117797400"
 ---
 # <a name="about-network-management"></a>Informationen zur Netzwerkverwaltung
 
-Mit den Netzwerkverwaltungsfunktionen können Sie Netzwerkfreigaben wie Windows Explorer und mit dem Befehl Net verwalten. Sie können Benutzerkonten auch im Rahmen des Benutzer-Managers verwalten.
+Mit den Netzwerkverwaltungsfunktionen können Sie Netzwerkfreigaben wie im Windows und mit dem Net-Befehl verwalten. Sie können Benutzerkonten auch wie Benutzer-Manager verwalten.
 
 Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Netzwerkverwaltungsfunktionengruppen](network-management-function-groups.md)
+-   [Netzwerkverwaltungsfunktionsgruppen](network-management-function-groups.md)
 -   [Sicherheitsanforderungen für die Netzwerkverwaltungsfunktionen](security-requirements-for-the-network-management-functions.md)
 -   [Zuordnen von ADSI-Schnittstellen zu den Netzwerkverwaltungsfunktionen](mapping-adsi-interfaces-to-the-network-management-functions.md)
 -   [Netzwerkverwaltungsdaten](network-management-data.md)

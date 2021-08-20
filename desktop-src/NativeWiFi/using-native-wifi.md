@@ -1,59 +1,59 @@
 ---
-description: In diesem Abschnitt werden die Prozeduren und Programmiertechniken beschrieben, die mit nativem WiFi Es umfasst grundlegende systemeigene WiFi-Programmiertechniken, wie z. b. das Native WiFi-API-Beispiel, sowie erweiterte Techniken, die für erfahrene nativewifi-Entwickler nützlich sind
+description: In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit nativem Wlan verwendet werden. Es umfasst grundlegende Native Wifi-Programmiertechniken wie das Native Wifi-API-Beispiel sowie erweiterte Techniken, die für erfahrene NativeWifi-Entwickler nützlich sind.
 ms.assetid: ba5d0672-ba56-454c-a3f7-987060b3bc3a
-title: Verwenden von nativem WiFi
+title: Verwenden von nativem WLAN
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d290f392df0dcb43696e4a274297b7c35030f5e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79f9398370058c44c964b2c1536b9435de9d8b2e4d939593781f492b2b058245
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117984690"
 ---
-# <a name="using-native-wifi"></a>Verwenden von nativem WiFi
+# <a name="using-native-wifi"></a>Verwenden von nativem WLAN
 
-In diesem Abschnitt werden die Prozeduren und Programmiertechniken beschrieben, die mit nativem WiFi Es umfasst grundlegende systemeigene WiFi-Programmiertechniken, wie z. b. das [native WiFi-API-Beispiel](native-wifi-api-sample.md), sowie erweiterte Techniken, die für erfahrene nativewifi-Entwickler nützlich sind
+In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit nativem Wlan verwendet werden. Es enthält grundlegende Native Wifi-Programmiertechniken, z. B. [das Native Wifi-API-Beispiel,](native-wifi-api-sample.md)sowie erweiterte Techniken, die für erfahrene NativeWifi-Entwickler nützlich sind.
 
-Die folgenden Themen sind in diesem Abschnitt aufgeführt:
+Die folgenden Themen finden Sie in diesem Abschnitt:
 
--   [APIs für drahtlose Benutzeroberflächen](wireless-user-interface-apis.md)
+-   [Drahtlose Benutzeroberfläche-APIs](wireless-user-interface-apis.md)
 -   [Verwenden der Wi-Fi Direct-Funktionen](using-the-wi-fi-direct-api.md)
--   [Verwenden der Freigabe von gehosteten Netzwerken und Internet Verbindungen](using-hosted-network-and-internet-connection-sharing.md)
--   [Native WiFi-API-Beispiel](native-wifi-api-sample.md)
--   [Beispiel für drahtlos gehostete Netzwerke](wireless-hosted-network-sample.md)
--   [Beispiele für kabelgebundene profile](wired-profile-samples.md)
--   [Beispiele für Funk profile](wireless-profile-samples.md)
+-   [Verwenden der Freigabe von gehosteten Netzwerken und Internetverbindung](using-hosted-network-and-internet-connection-sharing.md)
+-   [Beispiel für die Native Wifi-API](native-wifi-api-sample.md)
+-   [Beispiel für drahtlos gehostetes Netzwerk](wireless-hosted-network-sample.md)
+-   [Beispiele für kabelgebundene Profile](wired-profile-samples.md)
+-   [Beispiele für Funkprofile](wireless-profile-samples.md)
 
-Das Thema [APIs für drahtlose Benutzeroberflächen](wireless-user-interface-apis.md) zeigt Code, der zum Starten von Benutzeroberflächen für die drahtlose Netzwerkverwaltung verwendet wird.
+Das Thema [Wireless Benutzeroberfläche-APIs](wireless-user-interface-apis.md) enthält Code, der zum Starten von Benutzeroberflächen für die Drahtlose Netzwerkverwaltung verwendet wird.
 
-Mit dem Thema [Wi-Fi Direct Functions](using-the-wi-fi-direct-api.md) -Artikel werden die Wi-Fi Direct-Funktionen aufgelistet und erläutert, wie die-Funktionen verwendet werden.
+Im Thema [Using the Wi-Fi Direct functions (Verwenden der Wi-Fi Direct-Funktionen)](using-the-wi-fi-direct-api.md) werden die Wi-Fi Direct-Funktionen aufgelistet, und es wird erläutert, wie die Funktionen verwendet werden.
 
-Im Thema [Verwenden von gehosteten Netzwerk-und Internet Verbindungs](using-hosted-network-and-internet-connection-sharing.md) Freigaben wird erläutert, wie das drahtlos gehostete Netzwerk und die gemeinsame Nutzung der Internetverbindung (Internet Connection Sharing
+Im Thema [Using Hosted Network and Internet Connection Sharing (Freigeben von gehosteten Netzwerken und Internetverbindung)](using-hosted-network-and-internet-connection-sharing.md) wird die Verwendung des drahtlosen gehosteten Netzwerks und der Freigabe von Internetverbindung (ICS) erläutert.
 
-Das Microsoft Windows Software Development Kit (SDK) enthält zwei Codebeispiele, die die Verwendung der nativen WiFi-API veranschaulichen. Außerdem sind Beispiel Profile verfügbar, die die Verwendung verschiedener nativer WLAN-Profil Schemas veranschaulichen.
+Das Microsoft Windows Software Development Kit (SDK) enthält zwei Codebeispiele, die die Verwendung der Native Wifi-API veranschaulichen. Darüber hinaus sind Beispielprofile verfügbar, die die Verwendung verschiedener Native Wifi-Profilschemas veranschaulichen.
 
-In den folgenden Themen finden Sie weitere Informationen zu den Beispielen:
+Die folgenden Themen enthalten weitere Informationen zu den Beispielen:
 
--   [Native WiFi-API-Beispiel](native-wifi-api-sample.md)
--   [Beispiel für drahtlos gehostete Netzwerke](wireless-hosted-network-sample.md)
--   [Beispiele für kabelgebundene profile](wired-profile-samples.md)
--   [Beispiele für Funk profile](wireless-profile-samples.md)
+-   [Beispiel für die Native Wifi-API](native-wifi-api-sample.md)
+-   [Beispiel für drahtlos gehostetes Netzwerk](wireless-hosted-network-sample.md)
+-   [Beispiele für kabelgebundene Profile](wired-profile-samples.md)
+-   [Beispiele für Funkprofile](wireless-profile-samples.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Natives WiFi](portal.md)
+[Natives WLAN](portal.md)
 </dt> <dt>
 
-[Problembehandlung bei drahtlosen Windows Vista 802,11-Verbindungen](/previous-versions/windows/it-pro/windows-vista/cc766215(v=ws.10))
+[Problembehandlung bei Windows Vista 802.11-Drahtlosverbindungen](/previous-versions/windows/it-pro/windows-vista/cc766215(v=ws.10))
 </dt> <dt>
 
 [Neues in nativem WiFi](what-s-new-in-native-wifi.md)
 </dt> <dt>
 
-[Windows Vista-drahtlos-SDK-Forum](https://social.msdn.microsoft.com/Forums/b6bbd8f0-a921-480f-9b4b-845336462bc0/welcome-to-the-windows-vista-wireless-sdk-forum)
+[Windows Vista Wireless SDK-Forum](https://social.msdn.microsoft.com/Forums/b6bbd8f0-a921-480f-9b4b-845336462bc0/welcome-to-the-windows-vista-wireless-sdk-forum)
 </dt> </dl>
 
  

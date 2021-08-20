@@ -1,26 +1,26 @@
 ---
-description: Ein Anforderer erstellt ein Sicherungs Komponenten Dokument zu Beginn der Sicherung.
+description: Ein Anforderer erstellt zu Beginn der Ausführung einer Sicherung ein Sicherungskomponentendokument.
 ms.assetid: 5e40e45d-6afa-401a-a6b4-7bec460cb9ec
-title: Arbeiten mit dem Dokument mit den Sicherungs Komponenten
+title: Arbeiten mit dem Sicherungskomponentendokument
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d5d3c97696b85d589501f6d3af0b6c7d0e6d47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a401bb38634cae0f00659f618979012d28327070e8d1e23e9b85cc598300636
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117937354"
 ---
-# <a name="working-with-the-backup-components-document"></a>Arbeiten mit dem Dokument mit den Sicherungs Komponenten
+# <a name="working-with-the-backup-components-document"></a>Arbeiten mit dem Sicherungskomponentendokument
 
-Ein Anforderer erstellt ein Sicherungs Komponenten Dokument zu Beginn der Sicherung. Das Dokument enthält zunächst nur eine Beschreibung des Status des Sicherungs Vorgangs. Während der Wiederherstellung sollte das Dokument Anweisungen dazu bereitstellen, wie ein Anforderer mit dem Kopieren von Dateien auf den Datenträger fortfahren soll. Im Verlauf des Wiederherstellungs Vorgangs wird das Dokument mit den Sicherungs Komponenten geändert, das den Status dieses Vorgangs enthält.
+Ein Anforderer erstellt zu Beginn der Ausführung einer Sicherung ein Sicherungskomponentendokument. Das Dokument enthält anfänglich nur eine Beschreibung des Zustands des Sicherungsvorgangs. Während der Wiederherstellung sollte das Dokument Anweisungen dazu enthalten, wie ein Anforderer beim Kopieren von Dateien zurück auf den Datenträger vorgehen soll. Im Verlauf des Wiederherstellungsvorgangs wird das Sicherungskomponentendokument geändert und enthält den Status dieses Vorgangs.
 
-Im Gegensatz zum schreibgeschützten Writer-Metadatendokument gibt es ein Fenster, in dem das Dokument mit den Sicherungs Komponenten von Anforderern und Writern geändert werden kann. Das Dokument kann bis zur Generierung eines [*BackupComplete*](vssgloss-b.md) -oder [*BackupShutdown*](vssgloss-b.md) -Ereignisses während Sicherungs Vorgängen und bis zu einem [*postrestore*](vssgloss-p.md) -Ereignis während der Wiederherstellung aktualisiert werden.
+Im Gegensatz zum Schreibmetadatendokument, das schreibgeschützt ist, gibt es ein Fenster, in dem das Sicherungskomponentendokument sowohl von Anfordernden als auch von Writern geändert werden kann. Das Dokument kann aktualisiert werden, bis während Sicherungsvorgängen ein [*BackupComplete-*](vssgloss-b.md) oder [*BackupShutdown-Ereignis*](vssgloss-b.md) und während der Wiederherstellung ein [*PostRestore-Ereignis*](vssgloss-p.md) erstellt wird.
 
-Um das Dokument mit den Sicherungs Komponenten eines Anforderers zu verwenden, ist ein Verständnis der folgenden Themen erforderlich:
+Um das Sicherungskomponentendokument eines Anforderers verwenden zu können, müssen Sie die folgenden Themen verstehen:
 
--   [Lebenszyklus von Sicherungs Komponenten Dokumenten](backup-components-document-life-cycle.md)
--   [Dokumentinhalte der Sicherungs Komponenten](backup-components-document-contents.md)
+-   [Sicherungskomponenten – Dokumentlebenszyklus](backup-components-document-life-cycle.md)
+-   [Inhalt des Sicherungskomponentendokuments](backup-components-document-contents.md)
 
  
 

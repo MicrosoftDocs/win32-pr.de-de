@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_RECSIZE. cbdatacompressed-Eigenschaft.
-title: JET_RECSIZE. cbdatacompressed-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE.cbDataCompressed-Eigenschaft'
+title: JET_RECSIZE.cbDataCompressed -Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cbDataCompressed property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cbDataCompressed
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.cbdatacompressed(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 747c2f00077f6a9d13de059f742bacc9a7936d04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 469ddbd32965e551923b50f63662eb34835837d416eaa534d02af416d6c3c5f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117893351"
 ---
-# <a name="jet_recsizecbdatacompressed-property"></a>JET_RECSIZE. cbdatacompressed-Eigenschaft
+# <a name="jet_recsizecbdatacompressed-property"></a>JET_RECSIZE.cbDataCompressed-Eigenschaft
 
-Ruft die komprimierte Größe der Benutzerdaten im Datensatz ab. Dies ist das gleiche wie bei [cbData](./jet-recsize.cbdata-property.md) , wenn keine systeminternen langen Werte komprimiert werden.
+Ruft die komprimierte Größe der Benutzerdaten im Datensatz ab. Dies ist identisch mit [cbData,](./jet-recsize.cbdata-property.md) wenn keine systeminternen Long-Werte komprimiert sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public long cbDataCompressed { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE Mitglieder](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

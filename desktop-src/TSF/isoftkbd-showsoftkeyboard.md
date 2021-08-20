@@ -1,11 +1,11 @@
 ---
-title: ISOFT kbd ShowSoft Keyboard-Methode (Software-DC. h)
-description: Die isoftkbd showsoftkeyboard-Methode zeigt eine weiche Tastatur an.
+title: ISoftKbd ShowSoftKeyboard-Methode (Softkbdc.h)
+description: Die ShowSoftKeyboard-Methode ISoftKbd zeigt eine soft-Tastatur an.
 ms.assetid: 7e24bef1-accb-40f6-a549-fb676abf9971
 keywords:
-- ShowSoft Keyboard-Methode, Text Dienste-Framework
-- ShowSoft Keyboard-Methode, Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services Framework, ShowSoft Keyboard-Methode
+- ShowSoftKeyboard-Methode Textdienstframework
+- ShowSoftKeyboard-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , ShowSoftKeyboard-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b319e7782a19571cf827175566e1af056c34cd4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6cd0e7addcbb58f1cf383d59a5536b3e0737df2dee189bc728fd3084fd35f34f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952425"
 ---
-# <a name="isoftkbdshowsoftkeyboard-method"></a>ISOFT kbd:: ShowSoft Keyboard-Methode
+# <a name="isoftkbdshowsoftkeyboard-method"></a>ISoftKbd::ShowSoftKeyboard-Methode
 
-Die **isoftkbd:: showsoftkeyboard** -Methode zeigt eine weiche Tastatur an.
+Die **ISoftKbd::ShowSoftKeyboard-Methode** zeigt eine soft-Tastatur an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT ShowSoftKeyboard(
 
 <dl> <dt>
 
-*IShow* \[ in\]
+*iShow* \[ In\]
 </dt> <dd>
 
-Eine ganze Zahl, die den Typ der anzuzeigenden Bildschirmtastatur angibt.
+Ganze Zahl, die den Typ der anzuzeigende Softtastatur angibt.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                | BESCHREIBUNG                           |
+| Wert                                                                                | Beschreibung                           |
 |--------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl> | Die Methode war erfolgreich.<br/> |
 
@@ -71,9 +71,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -82,7 +82,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> </dl>
 
  

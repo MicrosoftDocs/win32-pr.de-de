@@ -1,5 +1,5 @@
 ---
-description: Signalisiert, dass die Pufferung von Daten durch eine Medienquelle beendet wurde.
+description: Signalisiert, dass eine Medienquelle die Pufferung von Daten beendet hat.
 ms.assetid: 11b1290d-d462-4aa0-a358-b3f6447c99d8
 title: MEBufferingStopped-Ereignis (Mfobjects.h)
 ms.topic: reference
@@ -13,19 +13,19 @@ ms.locfileid: "117878082"
 ---
 # <a name="mebufferingstopped-event"></a>MEBufferingStopped-Ereignis
 
-Signalisiert, dass die Pufferung von Daten durch eine Medienquelle beendet wurde.
+Signalisiert, dass eine Medienquelle die Pufferung von Daten beendet hat.
 
-Eine Medienquelle sendet dies, wenn die Pufferung von Daten nach dem Senden des [MEBufferingStarted-Ereignisses](mebufferingstarted.md) beendet wird.
+Eine Medienquelle sendet diese, wenn die Pufferung von Daten nach dem Senden des [MEBufferingStarted-Ereignisses beendet](mebufferingstarted.md) wird.
 
-Bytestreams, die die [**INTERFACESByteStreamBuffering-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreambuffering) implementieren, senden auch dieses Ereignis.
+Bytestreams, die die [**BEYBYTEStreamBuffering-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreambuffering) implementieren, senden ebenfalls dieses Ereignis.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
 | VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
@@ -33,7 +33,7 @@ Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfob
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Mediensitzung dieses Ereignis empfängt, startet sie die Präsentationsuhr neu. Die Mediensitzung leitet das Ereignis auch an die Anwendung weiter.
+Wenn die Mediensitzung dieses Ereignis empfängt, wird die Präsentationsuhr neu gestartet. Die Mediensitzung gibt das Ereignis auch an die Anwendung weiter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,13 +41,13 @@ Wenn die Mediensitzung dieses Ereignis empfängt, startet sie die Präsentations
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

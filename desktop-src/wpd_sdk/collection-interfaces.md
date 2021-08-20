@@ -17,7 +17,7 @@ Die folgenden Schnittstellen werden verwendet, um Gruppen von Werten verschieden
 
 
 
-| Schnittstelle                                                                            | Beschreibung                                                            |
+| Schnittstelle                                                                            | BESCHREIBUNG                                                            |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | [**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md)                 | Enthält eine Auflistung von **PROPERTYKEY-Werten.**                          |
 | [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md) | Enthält eine Auflistung von **PROPVARIANT-Werten** desselben VARTYPE.      |

@@ -3,57 +3,57 @@ title: Auswählen einer Codierungsmethode
 description: Auswählen einer Codierungsmethode
 ms.assetid: 095245a6-39eb-4228-86ac-ade94dde3695
 keywords:
-- Profile, auswählen von Codierungs Methoden
-- Profile, Codierungs Methoden
-- Codecs, auswählen von Codierungs Methoden
-- Codecs, Codierungs Methoden
-- Profile, auswählen von Codierungs Methoden
-- Codecs, auswählen von Codierungs Methoden
+- Profile,Auswählen von Codierungsmethoden
+- Profile,Codierungsmethoden
+- Codecs,Auswählen von Codierungsmethoden
+- Codecs,Codierungsmethoden
+- Profile,Auswählen von Codierungsmethoden
+- Codecs,Auswählen von Codierungsmethoden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f54c5bd099e5aaf8b3a735594c8b87a335fc2594
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a87a780798885e86b515a8d111797af304a58f13c962ecab7f7862dfb1790411
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117656130"
 ---
 # <a name="choosing-an-encoding-method"></a>Auswählen einer Codierungsmethode
 
-Einige Codecs, wie der Windows Media Video 9-Codec, unterstützen mehrere Codierungs Methoden. Die Codierungsmethode, die Sie für einen Stream auswählen, hängt davon ab, wie der Stream übermittelt werden soll. In der folgenden Tabelle wird beschrieben, wann die verschiedenen Codierungs Methoden verwendet werden.
+Einige Codecs wie der Windows Media Video 9-Codec unterstützen mehrere Codierungsmethoden. Die Codierungsmethode, die Sie für einen Stream auswählen, hängt davon ab, wie der Stream übermittelt werden soll. In der folgenden Tabelle wird beschrieben, wann die verschiedenen Codierungsmethoden verwendet werden.
 
 
 
-| Codiermethode                | BESCHREIBUNG                                                                                                                                                                                       |
+| Codiermethode                | Beschreibung                                                                                                                                                                                       |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-Pass-Konstante Bitrate (CBR) | Die einzige Option für Live Streaming. Codiert in eine vorhersagbare Bitrate und bietet die niedrigste Qualität aller Codierungs Methoden.                                                                    |
-| 2-Pass-CBR                     | Verwenden Sie für Dateien, die über ein Netzwerk an einen Client Leser gestreamt werden, aber nicht von einer Live Quelle übertragen werden. Codiert in eine vorhersagbare Bitrate, aber mit besserer Qualität als 1-Pass-CBR. |
-| 1-Pass-Variable Bitrate (VBR) | Verwenden Sie, wenn Sie die Qualität der codierten Ausgabe angeben müssen. Bietet die konsistente Qualität aller Codierungs Methoden. Wird nur für lokale Dateien oder zum Herunterladen verwendet.                        |
-| 2-Pass-VBR – nicht eingeschränkt     | Verwenden Sie, wenn Sie eine Bandbreite angeben müssen, aber Schwankungen in Bezug auf die angegebene Bandbreite sind zulässig. Für lokale Dateien oder nur herunterladen.                                                    |
-| 2-Pass-VBR – eingeschränkt       | Verwenden Sie unter denselben Bedingungen wie nicht eingeschränkt, aber wenn Sie eine maximale momentane Bitrate angeben müssen. Für lokale Dateien oder nur herunterladen.                                                |
+| 1-Pass Constant Bit Rate (CBR) | Die einzige Option für Livestreaming. Codiert in eine vorhersagbare Bitrate und bietet die niedrigste Qualität aller Codierungsmethoden.                                                                    |
+| 2-Pass-CBR                     | Wird für Dateien verwendet, die über ein Netzwerk an einen Clientleser gestreamt werden, aber nicht von einer Livequelle übertragen werden. Codiert in eine vorhersagbare Bitrate, jedoch mit einer besseren Qualität als 1-Pass-CBR. |
+| Variable Bitrate mit 1 Durchgang (VBR) | Verwenden Sie , wenn Sie die Qualität der codierten Ausgabe angeben müssen. Bietet die konsistenteste Qualität aller Codierungsmethoden. Verwenden Sie nur für lokale Dateien oder zum Herunterladen.                        |
+| 2-Pass-VBR – nicht trainiert     | Verwenden Sie , wenn Sie eine Bandbreite angeben müssen, aber Schwankungen um die angegebene Bandbreite sind akzeptabel. Nur für lokale Dateien oder downloads.                                                    |
+| 2-Pass-VBR – eingeschränkt       | Verwenden Sie unter den gleichen Umständen wie ungeniert, aber wenn Sie eine maximale momentäre Bitrate angeben müssen. Nur für lokale Dateien oder downloads.                                                |
 
 
 
- 
+ 
 
-In der folgenden Tabelle werden die Codierungs Methoden aufgelistet, die von den Codecs unterstützt werden, die mit dem Windows Media-Format SDK ausgeliefert werden.
+In der folgenden Tabelle sind die Codierungsmethoden aufgeführt, die von den Codecs unterstützt werden, die im Windows Media Format SDK enthalten sind.
 
 
 
-| Codec                                  | CBR | 2-Pass-CBR | VBR | 2-Pass-VBR |
+| Codec                                  | Cbr | 2-Pass-CBR | Vbr | 2-Pass-VBR |
 |----------------------------------------|-----|------------|-----|------------|
 | Windows Media Video 9                  | X   | X          | X   | X          |
-| Windows Media Audio 9 und höher        | X   | X          | X   | X          |
-| Windows Media Video 9-Bildschirm           | X   |            | X   |            |
-| Windows Media Audio 9-Stimme            | X   |            |     |            |
-| Windows Media Audio Professional       | X   | X          | X   | X          |
-| Verlust von Windows Media Audio Verlust           |     |            | X   |            |
-| Windows Media Video 9-Image und höher  | X   |            | X   |            |
-| Erweiterte profile Windows Media Video 9 | X   | X          | X   | X          |
+| Windows Medienaudio 9 und höher        | X   | X          | X   | X          |
+| Windows Media Video 9 Screen           | X   |            | X   |            |
+| Windows Media Audio 9 Voice            | X   |            |     |            |
+| Windows Medienaudio Professional       | X   | X          | X   | X          |
+| Windows Medienaudio verlustfrei           |     |            | X   |            |
+| Windows Medienvideo 9 – Bild und höher  | X   |            | X   |            |
+| Windows Media Video 9 Advanced Profile | X   | X          | X   | X          |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -65,15 +65,15 @@ In der folgenden Tabelle werden die Codierungs Methoden aufgelistet, die von den
 [**Codierung mit konstanter Bitrate (CBR)**](constant-bit-rate--cbr--encoding.md)
 </dt> <dt>
 
-[**Zwei-Pass-Codierung**](two-pass-encoding.md)
+[**Codierung mit zwei Durchgangen**](two-pass-encoding.md)
 </dt> <dt>
 
-[**Codierung der Variablen Bitrate (VBR)**](variable-bit-rate--vbr--encoding.md)
+[**VBR-Codierung (Variable Bit Rate)**](variable-bit-rate--vbr--encoding.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

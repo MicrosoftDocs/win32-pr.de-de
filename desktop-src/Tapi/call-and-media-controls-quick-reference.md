@@ -1,36 +1,36 @@
 ---
-description: In der folgenden Tabelle sind die COM-Schnittstellen der TAPI-Version 3 nach Kategorie nach Wichtigkeit aufgelistet.
+description: In der folgenden Tabelle sind DIE TAPI-COM-Schnittstellen der Version 3 nach Kategorie nach Wichtigkeit aufgelistet.
 ms.assetid: fafb6d6e-934e-4942-8b90-dacb7ba09752
-title: Kurzübersicht über Aufrufe und mediensteuer Elemente
+title: Kurzübersicht über Aufruf- und Mediensteuerelemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97ed3105612205d6d516b8d0c5e4f0a7bf9719b3
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 9985f88997e454a05838f0dec499d9036fb114e3e89ea543619c8359d1a03d8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106361123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117948262"
 ---
-# <a name="call-and-media-controls-quick-reference"></a>Kurzübersicht über Aufrufe und mediensteuer Elemente
+# <a name="call-and-media-controls-quick-reference"></a>Kurzübersicht über Aufruf- und Mediensteuerelemente
 
-\[ Die [ipconf-MSP-Schnittstellen](ipconf-msp-interfaces.md) sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Die [IPConf-MSP-Schnittstellen](ipconf-msp-interfaces.md) sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-In der folgenden Tabelle sind die COM-Schnittstellen der TAPI-Version 3 nach Kategorie nach Wichtigkeit aufgelistet. Die Schnittstellen sind gemäß der fünf grundlegenden Aufruf Steuerungs Objekte von TAPI 3 gruppiert: TAPI, Address, Terminal, Anruf und callhub. Verbleibende Schnittstellen sind gemäß den Schnittstellen für die automatische aufrufsverteilung (ACD) gruppiert, die die Callcenter-Funktionalität bereitstellen. Enumeratorschnittstellen und eigenständige Objekte.
+In der folgenden Tabelle sind DIE TAPI-COM-Schnittstellen der Version 3 nach Kategorie nach Wichtigkeit aufgelistet. Die Schnittstellen werden nach den fünf grundlegenden Objekt der TAPI 3-Aufrufsteuerung gruppiert: TAPI, Address, Terminal, Call und CallHub. Verbleibende Schnittstellen werden nach ACD-Schnittstellen (Automatic Call Distribution) gruppiert, die Callcenterfunktionen bereitstellen. Enumeratorschnittstellen und eigenständige Objekte.
 
 
 
-| Schnittstellen Gruppierungen                                          | BESCHREIBUNG                                                                                                                                                                                                                                                 |
+| Schnittstellengruppierungen                                          | Beschreibung                                                                                                                                                                                                                                                 |
 |--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [TAPI-Objekt Schnittstellen](tapi-object-interfaces.md)         | Das TAPI-Objekt ist das Hauptobjekt für TAPI 3.                                                                                                                                                                                                              |
-| [Adress Objekt Schnittstellen](address-object-interfaces.md)   | Das Address-Objekt stellt eine Entität dar, die Aufrufe ausführen oder empfangen kann. Die zugeordneten Schnittstellen und Methoden ermöglichen es einer Anwendung, Informationen über die Adresse zu erhalten und festzulegen, z. b. ob Sie die Unterstützung für Aufrufer                             |
-| [Terminal Objekt Schnittstellen](terminal-object-interfaces.md) | Das Terminal Objekt stellt die Senke oder Quelle am Beendigungs-oder Ursprungs Punkt eines Aufrufes dar. Mithilfe der zugeordneten Schnittstellen und Methoden kann eine Anwendung Informationen über das Terminal erhalten und festlegen, z. b., ob Sie zurzeit verwendet wird. |
-| [Objekt Schnittstellen abrufen](call-object-interfaces.md)         | Das callsobjekt stellt einen-Rückruf dar und wird erstellt, wenn ein-Rückruf vorhanden ist. Die zugeordneten Schnittstellen und Methoden abrufen und legen Informationen über den-Befehl fest, z. b. den aktuellen aufrufzustand.                                                           |
-| [Telefon Objekt Schnittstellen](phone-object-interfaces.md)       | Das Telefon Objekt ist die Entität, die das eigentliche Telefongerät und alle seine Steuerelemente darstellt.                                                                                                                                                             |
-| [Ipconf-MSP-Schnittstellen](ipconf-msp-interfaces.md)           | Der IP-Konferenz-MSP implementiert verschiedene Schnittstellen für Teilnehmer Steuerelemente, die für das calltobjekt verfügbar gemacht werden.                                                                                                                                          |
-| [Callhub-Objekt Schnittstellen](callhub-object-interfaces.md)   | Das callhub-Objekt stellt eine Drittanbieter Ansicht eines aufgerufenen von mehreren Parteien dar. Die zugeordneten Schnittstellen und Methoden abrufen und legen Informationen über den-Befehl fest, z. b. ob der callhub aktiv ist.                                                          |
+| [TAPI-Objektschnittstellen](tapi-object-interfaces.md)         | Das TAPI-Objekt ist das Hauptobjekt für TAPI 3.                                                                                                                                                                                                              |
+| [Adressobjektschnittstellen](address-object-interfaces.md)   | Das Address-Objekt stellt eine Entität dar, die Aufrufe vornehmen oder empfangen kann. Die zugeordneten Schnittstellen und Methoden ermöglichen einer Anwendung das Abrufen und Festlegen von Informationen zur Adresse, z. B. ob sie über Aufrufer-ID-Unterstützung verfügt.                             |
+| [Terminalobjektschnittstellen](terminal-object-interfaces.md) | Das Terminalobjekt stellt die Senke oder Quelle am Beendigungs- oder Ursprungspunkt eines Aufrufs dar. Die zugeordneten Schnittstellen und Methoden ermöglichen einer Anwendung das Abrufen und Festlegen von Informationen über das Terminal, z. B. ob es derzeit verwendet wird. |
+| [Aufrufen von Objektschnittstellen](call-object-interfaces.md)         | Das Call-Objekt stellt einen Aufruf dar und wird erstellt, wenn ein Aufruf eintritt. Die zugeordneten Schnittstellen und Methoden rufen Informationen zum Aufruf ab, z. B. den aktuellen Aufrufzustand, und legen sie fest.                                                           |
+| [Telefon Objektschnittstellen](phone-object-interfaces.md)       | Das Telefon-Objekt ist die Entität, die das tatsächliche Telefongerät und alle zugehörigen Steuerelemente darstellt.                                                                                                                                                             |
+| [IPConf-MSP-Schnittstellen](ipconf-msp-interfaces.md)           | Der IP-Konferenz-MSP implementiert mehrere Schnittstellen für die Teilnehmersteuerung, die für das Aufrufobjekt verfügbar gemacht werden.                                                                                                                                          |
+| [CallHub-Objektschnittstellen](callhub-object-interfaces.md)   | Das CallHub-Objekt stellt eine Drittanbieteransicht eines Mehrparteienaufrufs dar. Die zugeordneten Schnittstellen und Methoden rufen Informationen zum Aufruf ab und legen diese fest, z. B. ob der Aufrufhub aktiv ist.                                                          |
 | [Enumeratorschnittstellen](enumerator-interfaces.md)           | COM-Standard-Enumeratorschnittstellen.                                                                                                                                                                                                                         |
-| [Ereignis Schnittstellen](./event-interfaces.md)            | Die Ereignis Schnittstellen werden auch mit ihren Objekt-oder Funktions Gruppierungen angezeigt.                                                                                                                                                                                |
-| [Eigenständige Objekte](stand-alone-objects.md)               | Die eigenständigen TAPI 3-Objekte stellen Schnittstellen und Methoden für Vorgänge wie z. b. die unterstützte Telefonie oder Ereignis Behandlung bereit.                                                                                                                    |
+| [Ereignisschnittstellen](./event-interfaces.md)            | Die Ereignisschnittstellen werden auch mit ihren Objekt- oder Funktionsgruppierungen angezeigt.                                                                                                                                                                                |
+| [Eigenständige Objekte](stand-alone-objects.md)               | Die verschiedenen eigenständigen TAPI 3-Objekte stellen Schnittstellen und Methoden für Vorgänge wie die unterstützte Telefonie oder Ereignisbehandlung bereit.                                                                                                                    |
 
 
 

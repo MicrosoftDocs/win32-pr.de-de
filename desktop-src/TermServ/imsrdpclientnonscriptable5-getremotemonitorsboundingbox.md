@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientNonScriptable5 getremotemonitorsboundingbox-Eigenschaft
-description: Gibt das Begrenzungs Rechteck des Remote Monitors an.
+title: IMsRdpClientNonScriptable5 GetRemoteMonitorsBoundingBox-Eigenschaft
+description: Gibt das umgrenzende Rechteck des Remotemonitors an.
 ms.assetid: 4A8794F7-1DB4-4415-8538-6B2A365B22D3
 ms.tgt_platform: multiple
 keywords:
-- Getremotemonitorsboundingbox-Eigenschaft Remotedesktopdienste
-- Getremotemonitorsboundingbox-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, getremotemonitorsboundingbox-Eigenschaft
+- GetRemoteMonitorsBoundingBox-Eigenschaft Remotedesktopdienste
+- GetRemoteMonitorsBoundingBox-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , GetRemoteMonitorsBoundingBox-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f67192b78c734359fc6113969eb5eb410e1bf3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a47b308bf95389dcf043e87565be365ec69ecc34500ac187ee11a679349f18ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129888"
 ---
-# <a name="imsrdpclientnonscriptable5getremotemonitorsboundingbox-property"></a>IMsRdpClientNonScriptable5:: getremotemonitorsboundingbox-Eigenschaft
+# <a name="imsrdpclientnonscriptable5getremotemonitorsboundingbox-property"></a>IMsRdpClientNonScriptable5::GetRemoteMonitorsBoundingBox-Eigenschaft
 
-Gibt das Begrenzungs Rechteck des Remote Monitors an.
+Gibt das umgrenzende Rechteck des Remotemonitors an.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -55,9 +55,9 @@ Empfängt den rechten Rand des Rechtecks.
 
 Empfängt den unteren Rand des Rechtecks.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Koordinaten befinden sich in den virtuellen Bildschirm Koordinaten, die relativ zur oberen linken Ecke des primären Monitors sind. Wenn dies nicht der primäre Monitor ist, können einige oder alle dieser Werte negativ sein.
+Alle Koordinaten befinden sich in virtuellen Bildschirmkoordinaten, die relativ zur oberen linken Ecke des primären Monitors sind. Wenn dies nicht der primäre Monitor ist, können einige oder alle diese Werte negativ sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Alle Koordinaten befinden sich in den virtuellen Bildschirm Koordinaten, die rel
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
-| IID<br/>                      | IID \_ IMsRdpClientNonScriptable5 ist als 4f 6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
+| IID<br/>                      | \_IID-IMsRdpClientNonScriptable5 ist als 4f6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
 
 
 

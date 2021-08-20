@@ -64,7 +64,7 @@ Wenn die **WM \_ CANCELMODE-Nachricht** gesendet wird, bricht die [**DefWindowPr
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

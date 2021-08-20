@@ -13,13 +13,13 @@ ms.locfileid: "117842702"
 ---
 # <a name="representing-functionality"></a>Darstellen von Funktionen
 
-Funktionale Objekte sind vorhanden, um Featurefunktionen eines Geräts zu identifizieren oder logisch zu gruppieren. Beispielsweise kann eine Anwendung sehen, dass ein Gerät SMS unterstützt, indem sie nach dem Funktionsobjekt SMS sucht. Auf ähnliche Weise kann die Anwendung erkennen, dass ein Gerät über Kamerafunktionen verfügt, indem sie nach dem Funktionalen Objekt Still Image Capture sucht.
+Funktionale Objekte sind vorhanden, um Funktionsfunktionen eines Geräts zu identifizieren oder logisch zu gruppieren. Eine Anwendung kann z. B. erkennen, dass ein Gerät SMS unterstützt, indem es nach dem funktionalen SMS-Objekt sucht. Auf ähnliche Weise kann die Anwendung sehen, dass ein Gerät über Kamerafunktionen verfügt, indem nach dem Funktionsobjekt Still Image Capture gesucht wird.
 
-Diese flexible Objektdarstellung ermöglicht eine einfache Unterstützung für Geräte mit Funktionen mit mehreren Funktionen. Treiber können einfach alle funktionalen Objekte verfügbar machen, die ihr Gerät darstellen. Dies ist präziser als die Verwendung herkömmlicher Geräteklassen. Die Objektdarstellung hilft auch dabei, überlappende funktionale Teile zu isolieren. Einige Telefone können z. B. zwei Kameras oder vier Speicher haben.
+Diese flexible Objektdarstellung ermöglicht eine einfache Unterstützung für Geräte mit Funktionen mit mehreren Funktionen. Treiber können einfach alle funktionalen Objekte verfügbar machen, die ihr Gerät darstellen. Dies ist präziser als die Verwendung herkömmlicher Geräteklassen. Die Objektdarstellung hilft auch dabei, überlappende funktionale Teile zu isolieren. Einige Smartphones verfügen beispielsweise über zwei Kameras oder vier Speicher.
 
-Im Windows 7 erweitern Dienste funktionale Objekte, indem sie umfangreiche Abfragen von Funktionen und eine abstrakte Gruppierung von Inhalten bereitstellen. Anwendungen können Dienste verwenden, um Gerätefunktionen zu entdecken und effizienter mit Inhalten zu interagieren. Beispielsweise kann eine Anwendung sehen, dass ein Gerät die Funktionen zur Synchronisierung von Kontakten unterstützt, indem nach einem Contacts-Dienstobjekt gesucht wird, und alle Kontakte als untergeordnete Objekte des Dienstobjekts finden, ohne die Speicherhierarchie rekursiv durchsuchen zu müssen.
+Im Windows 7-Betriebssystem erweitern Dienste funktionale Objekte, indem sie umfangreiche Abfragen von Funktionen und eine abstrakte Gruppierung von Inhalten bereitstellen. Anwendungen können Dienste verwenden, um Gerätefunktionen zu ermitteln und effizienter mit Inhalten zu interagieren. Beispielsweise kann eine Anwendung sehen, dass ein Gerät die Funktionen zur Synchronisierung von Kontakten unterstützt, indem es nach einem Contacts-Dienstobjekt sucht und alle Kontakte als untergeordnete Objekte des Dienstobjekts finden kann, ohne die Speicherhierarchie rekursiv durchsuchen zu müssen.
 
-Mit Diensten können Anwendungen auch benutzerdefiniertes Verhalten auf einem Gerät erkennen und aufrufen.
+Dienste ermöglichen es Anwendungen auch, benutzerdefiniertes Verhalten auf einem Gerät zu ermitteln und aufzurufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,5 +1,5 @@
 ---
-description: In diesem Thema werden die 10- und 16-Bit-YUV-Formate beschrieben, die für die Erfassung, Verarbeitung und Anzeige von Videos im Betriebssystem Microsoft Windows empfohlen werden.
+description: In diesem Thema werden die 10- und 16-Bit-YUV-Formate beschrieben, die für die Erfassung, Verarbeitung und Anzeige von Videos im Microsoft Windows-Betriebssystem empfohlen werden.
 ms.assetid: fcaaaa6f-f886-4f6e-9c3c-e513ccc90d37
 title: 10-Bit- und 16-Bit-YUV-Videoformate
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118065730"
 ---
 # <a name="10-bit-and-16-bit-yuv-video-formats"></a>10-Bit- und 16-Bit-YUV-Videoformate
 
-In diesem Thema werden die 10- und 16-Bit-YUV-Formate beschrieben, die für die Erfassung, Verarbeitung und Anzeige von Videos im Betriebssystem Microsoft Windows empfohlen werden.
+In diesem Thema werden die 10- und 16-Bit-YUV-Formate beschrieben, die für die Erfassung, Verarbeitung und Anzeige von Videos im Microsoft Windows-Betriebssystem empfohlen werden.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -28,7 +28,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="overview"></a>Übersicht
 
-Diese Formate verwenden eine Feste-Punkt-Darstellung sowohl für den Lumakanal als auch für die Luntekanäle (C'b und C'r). Beispielwerte sind skalierte 8-Bit-Werte mit einem Skalierungsfaktor von 2^(n − 8), wobei n entweder 10 oder 16 gemäß den Abschnitten 7.7-7.8 und 7.11-7.12 von SMPTE 274M ist. Genauigkeitskonvertierungen können mit einfachen Bitverschiebungen ausgeführt werden. Wenn der Weißpunkt eines 8-Bit-Formats beispielsweise 235 ist, hat das entsprechende 10-Bit-Format einen weißen Punkt bei 940 (235 × 4).
+Diese Formate verwenden eine Feste-Punkt-Darstellung sowohl für den Lumakanal als auch für die Luntekanäle (C'b und C'r). Beispielwerte sind skalierte 8-Bit-Werte mit einem Skalierungsfaktor von 2^(n − 8), wobei n entweder 10 oder 16 gemäß den Abschnitten 7.7-7.8 und 7.11-7.12 von SMPTE 274M ist. Genauigkeitskonvertierungen können mit einfachen Bitverschiebungen ausgeführt werden. Wenn der weißer Punkt eines 8-Bit-Formats beispielsweise 235 ist, hat das entsprechende 10-Bit-Format einen Weißen Punkt bei 940 (235 × 4).
 
 Die hier beschriebenen 16-Bit-Darstellungen verwenden Little-Endian-WORD-Werte für jeden Kanal.  Die 10-Bit-Formate verwenden auch 16 Bits für jeden Kanal, wobei die niedrigsten 6 Bits auf 0 festgelegt sind, wie im folgenden Diagramm dargestellt.
 
@@ -53,7 +53,7 @@ Die FOURCC-Codes für die hier beschriebenen Formate verwenden die folgende Konv
 
     
 
-    | Stichprobenentnahme für Diessins | FOURCC-Codebuchstabe |
+    | Sampling von Stichproben | FOURCC-Codebuchstabe |
     |-----------------|--------------------|
     | 4:4:4           | '4'                |
     | 4:2:2           | '2'                |
@@ -70,7 +70,7 @@ Mit diesem Schema wurden die folgenden FOURCC-Codes definiert. Derzeit wurden ke
 
 
 
-| FOURCC | BESCHREIBUNG            |
+| FOURCC | Beschreibung            |
 |--------|------------------------|
 | P016   | Planar, 4:2:0, 16-Bit. |
 | P010   | Planar, 4:2:0, 10-Bit. |
@@ -128,7 +128,7 @@ Diese beiden Formate sind die bevorzugten 4:2:2 planaren Pixelformate für YUV-D
 
 In diesen beiden gepackten Formaten wird jedes Pixelpaar als Array von vier WORD-Formaten gespeichert, wie in der folgenden Abbildung dargestellt.
 
-![Diagramm mit y216- und y210-Pixellayout](images/6f68aeeb-18ca-48ee-82c4-5b79d5510e9f.gif)
+![Diagramm, das das y216- und y210-Pixellayout zeigt.](images/6f68aeeb-18ca-48ee-82c4-5b79d5510e9f.gif)
 
 Das erste **WORD** im Array enthält das erste Y-Beispiel im Paar, das zweite **WORD** enthält das U-Beispiel, das dritte **WORD** enthält das zweite Y-Beispiel und das vierte **WORD** enthält das V-Beispiel.
 
@@ -150,7 +150,7 @@ Bits 0-9 enthalten das U-Beispiel, Bits 10-19 enthalten das Y-Beispiel, Bits 20-
 
 Dieses Format ist eine gepackte 16-Bit-Darstellung, die 16 Bits Alpha enthält. Jedes Pixel wird wie in der folgenden Abbildung dargestellt als **DWORD-Paar** codiert.
 
-![Diagramm, das das y416-Pixel-Layout zeigt.](images/c928523a-25d3-4712-9aec-5b492b51435f.gif)
+![Diagramm, das das Layout mit y416 Pixeln zeigt.](images/c928523a-25d3-4712-9aec-5b492b51435f.gif)
 
 Bits 0-15 enthalten das U-Beispiel, Bits 16-31 enthalten das Y-Beispiel, Bits 32-47 enthalten das V-Beispiel und Bits 48-63 den Alphawert.
 
@@ -162,7 +162,7 @@ In der folgenden Tabelle sind die bevorzugten YUV-Formate aufgeführt, einschlie
 
 
 
-| Format | Sampling von Samplings | Gepackt oder planar | Bits pro Kanal |
+| Format | Sampling von Luftproben | Gepackt oder planar | Bits pro Kanal |
 |--------|-----------------|------------------|------------------|
 | AYUV   | 4:4:4           | Verpackt           | 8                |
 | Y410   | 4:4:4           | Verpackt           | 10               |
