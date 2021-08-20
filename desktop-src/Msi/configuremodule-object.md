@@ -1,7 +1,7 @@
 ---
-description: Das "Konfigurationsmodul"-Objekt ist eine vom Client implementierte Schnittstelle.
+description: Das ConfigureModule-Objekt ist eine schnittstelle, die vom Client implementiert wird.
 ms.assetid: f6240837-7685-4bfe-8a2f-b4428014702a
-title: Konfigurationsmodul-Objekt (Mergemod. h)
+title: ConfigureModule-Objekt (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,43 +14,43 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 0c99f8932d1d3c0e7ba7d7df5e14fc0738e8b81c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7685ce1f1c9c7d8f519395c578000375742eea49dd169085e99c582e14c35a29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118143711"
 ---
-# <a name="configuremodule-object"></a>"Konfiguriermodule"-Objekt
+# <a name="configuremodule-object"></a>ConfigureModule-Objekt
 
-Das " **Konfigurationsmodul** "-Objekt ist eine vom Client implementierte Schnittstelle. Mergemod.dllruft Methoden auf der **imsmkonfigurremodule** -Schnittstelle auf, um anzufordern, dass das Client Tool Konfigurationsinformationen bereitstellt. Das Modul wird auf der Grundlage der Client Antworten auf Aufrufe dieser Schnittstelle konfiguriert.
+Das **ConfigureModule-Objekt** ist eine schnittstelle, die vom Client implementiert wird. Mergemod.dllruft Methoden auf der **IMsmConfigureModule-Schnittstelle** auf, um anzufordern, dass das Clienttool Konfigurationsinformationen bereitstellt. Das Modul wird basierend auf den Antworten des Clients auf Aufrufe dieser Schnittstelle konfiguriert.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **Konfigurationsmodul** " verfügt über diese Typen von Membern:
+Das **ConfigureModule-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Das Objekt " **konfigurierungsmodul** " verfügt über diese Methoden.
+Das **ConfigureModule-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                        |
+| Methode                                                           | Beschreibung                                                                        |
 |:-----------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| [**Provideintegerdata**](configuremodule-provideintegerdata.md) | Wird von Mergemod.dll aufgerufen, um ganze Zahlen zu erhalten, die zum Konfigurieren des Moduls verwendet werden.<br/> |
-| [**Provide TextData**](configuremodule-providetextdata.md)       | Wird von Mergemod.dll aufgerufen, um Text zu erhalten, der zum Konfigurieren des Moduls verwendet wird.<br/>     |
+| [**ProvideIntegerData**](configuremodule-provideintegerdata.md) | Wird von Mergemod.dll aufgerufen, um ganze Zahlen abzurufen, die zum Konfigurieren des Moduls verwendet werden.<br/> |
+| [**ProvideTextData**](configuremodule-providetextdata.md)       | Wird von Mergemod.dll aufgerufen, um Text abzurufen, der zum Konfigurieren des Moduls verwendet wird.<br/>     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="c"></a>C++
 
-Schnittstelle **imsmkonfiguriermodule: IDispatch**
+schnittstelle **IMsmConfigureModule : IDispatch**
 
 ### <a name="interface-id"></a>Schnittstellen-ID
 
@@ -58,7 +58,7 @@ Schnittstelle **imsmkonfiguriermodule: IDispatch**
 
 | Konstante                     | Wert                                  |
 |------------------------------|----------------------------------------|
-| **IID \_ imsmkonfiguriterremodule** | {AC013209-18A7-4851-8A21-2353443D70A0} |
+| **\_IID-IMsmConfigureModule** | {AC013209-18A7-4851-8A21-2353443D70A0} |
 
 
 
@@ -70,8 +70,8 @@ Schnittstelle **imsmkonfiguriermodule: IDispatch**
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 2,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 2.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

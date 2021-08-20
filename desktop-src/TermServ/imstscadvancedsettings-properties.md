@@ -1,36 +1,36 @@
 ---
-title: Imstscadvancedsettings-Eigenschaften
-description: Die imstscadvancedsettings-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IMsTscAdvancedSettings-Eigenschaften
+description: Die IMsTscAdvancedSettings-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: D0BAD14F-91E2-4314-92E6-E4E9EE53F35C
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 041416ae3bf1f9b60c1472c87d6d65dc03ded9dc
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: c24102bddf35484a0849d3bd73804ab611632f0e41a581742a79c51644ac6a1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129682"
 ---
-# <a name="imstscadvancedsettings-properties"></a>Imstscadvancedsettings-Eigenschaften
+# <a name="imstscadvancedsettings-properties"></a>IMsTscAdvancedSettings-Eigenschaften
 
-Die [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IMsTscAdvancedSettings-Schnittstelle**](imstscadvancedsettings-interface.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**allowbackgroundinput (Eigenschaft)**](imstscadvancedsettings-allowbackgroundinput.md)
--   [**Bitmapperistenz (Eigenschaft)**](imstscadvancedsettings-bitmapperistence.md)
--   [**Eigenschaft komprimieren**](imstscadvancedsettings-compress.md)
--   [**Containerhandledfullscreen-Eigenschaft**](imstscadvancedsettings-containerhandledfullscreen.md)
--   [**Disablerdpdr (Eigenschaft)**](imstscadvancedsettings-disablerdpdr.md)
--   [**IconFile (Eigenschaft)**](imstscadvancedsettings-iconfile.md)
--   [**IconIndex (Eigenschaft)**](imstscadvancedsettings-iconindex.md)
--   [**Keyboardlayoutstr (Eigenschaft)**](imstscadvancedsettings-keyboardlayoutstr.md)
--   [**Plugindlls (Eigenschaft)**](imstscadvancedsettings-plugindlls.md)
+-   [**allowBackgroundInput-Eigenschaft**](imstscadvancedsettings-allowbackgroundinput.md)
+-   [**BitmapPeristence-Eigenschaft**](imstscadvancedsettings-bitmapperistence.md)
+-   [**Compress-Eigenschaft**](imstscadvancedsettings-compress.md)
+-   [**ContainerHandledFullScreen-Eigenschaft**](imstscadvancedsettings-containerhandledfullscreen.md)
+-   [**DisableRdpdr-Eigenschaft**](imstscadvancedsettings-disablerdpdr.md)
+-   [**IconFile-Eigenschaft**](imstscadvancedsettings-iconfile.md)
+-   [**IconIndex-Eigenschaft**](imstscadvancedsettings-iconindex.md)
+-   [**KeyBoardLayoutStr-Eigenschaft**](imstscadvancedsettings-keyboardlayoutstr.md)
+-   [**PluginDlls(Eigenschaft)**](imstscadvancedsettings-plugindlls.md)
 
- 
+ 
 
- 
+ 
 
 
 

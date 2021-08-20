@@ -1,27 +1,27 @@
 ---
-description: Wenn Sie eine INF-Datei für eine Setup Anwendung erstellen, sollten Sie auch auf das INF-Dateiformat verweisen, das unter Allgemeine Richtlinien für INF-Dateien und INF-Datei Abschnitte und Direktiven des Microsoft Windows 2000 Driver Development Kit dokumentiert ist.
+description: Beim Erstellen einer INF-Datei für eine Setupanwendung sollten Sie auch das INF-Dateiformat lesen, das in den Abschnitten Allgemeine Richtlinien für INF-Dateien und INF-Dateien und Anweisungen des Microsoft Windows 2000 Driver Development Kit dokumentiert ist.
 ms.assetid: f9df95bb-345d-4a70-a27e-0b1bc2a27ada
 title: Erstellen einer INF-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73807f919a016f414a248f47e53f27d5b079bb33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3745dc16a14f603de780b15d708fbb4542ea4503052aeb2b7edb3486c5b5fc51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117966368"
 ---
 # <a name="authoring-an-inf-file"></a>Erstellen einer INF-Datei
 
-Wenn Sie eine INF-Datei für eine Setup Anwendung erstellen, sollten Sie auch auf das INF-Dateiformat verweisen, das unter *Allgemeine Richtlinien für INF-Dateien* und *INF-Datei Abschnitte und Direktiven* des Microsoft Windows 2000 Driver Development Kit dokumentiert ist.
+Beim Erstellen einer INF-Datei für eine Setupanwendung sollten Sie auch das INF-Dateiformat lesen, das in den Abschnitten Allgemeine Richtlinien für *INF-Dateien* und *INF-Dateien* und Anweisungen des Microsoft Windows 2000 Driver Development Kit dokumentiert ist.
 
-Wenn Sie die INF-Dateien für eine Setup Anwendung erstellen, befolgen Sie die folgenden Regeln.
+Beachten Sie beim Erstellen von INF-Dateien für eine Setupanwendung die folgenden Regeln.
 
--   Ein **Versions** Abschnitt ist in jeder INF-Datei erforderlich.
--   Abschnitte müssen mit dem Abschnittsnamen beginnen, der von eckigen Klammern () eingeschlossen wird \[ \] .
--   Die Namen der Abschnitte **DestinationDirs**, **SourceDisksFiles**, **SourceDisksNames**, **Strings** und **Version** müssen mit dem Typ des Abschnitts identisch sein. Verwenden Sie beispielsweise \[ DestinationDirs \] . Autoren können die Namen anderer Abschnitts Typen angeben.
--   Die Namen der Abschnitte " **SourceDisksNames** " und " **SourceDisksFiles** " können mit einem plattformspezifischen Suffix angehängt werden. Verwenden Sie z. b. zum Anzeigen eines Intel-spezifischen **SourceDisksNames** -Abschnitts " \[ SourceDisksNames. x86" \] . Wenn die Setup Funktionen plattformspezifische **SourceDisksNames** -und **SourceDisksFiles** -Abschnitte finden, die mit der Plattform des Benutzers übereinstimmen, verwenden die Funktionen die plattformspezifischen Abschnitte. Andernfalls verwenden die Setup Funktionen die nicht-suffixt-Abschnitte " **SourceDisksNames** " und " **SourceDisksFiles** ". Mit den Setup Funktionen kann das System des Benutzers Programm gesteuert bestimmt werden. Weitere Informationen finden Sie im [Abschnitt INF SourceDisksNames und SourceDisksFiles](inf-sourcedisksnames-and-sourcedisksfiles-sections-example.md).
--   Werte können mithilfe der Form%*strKey*% als ersetzbare Zeichenfolge ausgedrückt werden. Verwenden Sie%%, um ein%-Zeichen in der Zeichenfolge zu verwenden. Der ' strKey ' muss in einem **String** -Abschnitt der INF-Datei definiert werden.
+-   In **jeder** INF-Datei ist ein Abschnitt Version erforderlich.
+-   Abschnitte müssen mit dem Abschnittsnamen beginnen, der in eckige Klammern () eingeschlossen \[ \] ist.
+-   Die Namen **der Abschnitte DestinationDirs,** **SourceDisksFiles,** **SourceDisksNames,** **Strings** und **Version** müssen mit dem Abschnittstyp identisch sein. Verwenden Sie beispielsweise \[ DestinationDirs. \] Autoren können die Namen anderer Arten von Abschnitten angeben.
+-   Namen der **Abschnitte SourceDisksNames** und **SourceDisksFiles** können mit einem plattformspezifischen Suffix angefügt werden. Um beispielsweise einen Intel-spezifischen **SourceDisksNames-Abschnitt** zu zeigen, verwenden \[ Sie SourceDisksNames.x86 \] . Wenn die Setupfunktionen plattformspezifische **SourceDisksNames-** und **SourceDisksFiles-Abschnitte** finden, die mit der Plattform des Benutzers übereinstimmen, verwenden die Funktionen die plattformspezifischen Abschnitte. Andernfalls verwenden die Setupfunktionen die Abschnitte **SourceDisksNames** und **SourceDisksFiles** ohne Suffix. Die Setupfunktionen können programmgesteuert das System des Benutzers bestimmen. Weitere Informationen finden [Sie in den Abschnitten INF SourceDisksNames und SourceDisksFiles – Beispiel.](inf-sourcedisksnames-and-sourcedisksfiles-sections-example.md)
+-   Werte können als ersetzbare Zeichenfolgen ausgedrückt werden, indem die Form % strkey %*verwendet wird.* Um ein %-Zeichen in der Zeichenfolge zu verwenden, verwenden Sie %%. Der Strkey muss in  einem Zeichenfolgenabschnitt der INF-Datei definiert werden.
 
  
 

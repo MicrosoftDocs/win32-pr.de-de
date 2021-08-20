@@ -1,31 +1,31 @@
 ---
-title: Erstellen von SPNs für einen RpcNs-Dienst
-description: Im folgenden Codebeispiel werden die Dienst Prinzipal Namen (SPNs) für einen RPC-Dienst verfasst, der über einen Eintrag im rpcservices-Container im-Verzeichnis verfügt. Ein RPC-Dienst verwendet die rpcnsbindingexport-Funktion, um den rpcservices-Eintrag zu erstellen.
+title: Verfassen von SPNs für einen RpcNs-Dienst
+description: Im folgenden Codebeispiel werden die Dienstprinzipalnamen (SERVICE Principal Names, SPNs) für einen RPC-Dienst erstellt, der über einen Eintrag im RpcServices-Container im Verzeichnis verfügt. Ein RPC-Dienst verwendet die RpcNsBindingExport-Funktion, um seinen RpcServices-Eintrag zu erstellen.
 ms.assetid: 4fd585b3-3f9b-4f7f-bc1b-22879587a590
 ms.tgt_platform: multiple
 keywords:
-- Erstellen von SPNs für eine RpcNs-Dienst Anzeige
+- Verfassen von SPNs für ein RPCNs-Dienst-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb65b377b5bdd041c5a34b05262f7e62f43801c5
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 3d3e8d0140c7bbc8dfa9b9232c0cce32a11813a348a619a1cf0fc80c15b194fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118022257"
 ---
-# <a name="composing-spns-for-an-rpcns-service"></a>Erstellen von SPNs für einen RpcNs-Dienst
+# <a name="composing-spns-for-an-rpcns-service"></a>Verfassen von SPNs für einen RpcNs-Dienst
 
-Im folgenden Codebeispiel werden die Dienst Prinzipal Namen (SPNs) für einen RPC-Dienst verfasst, der über einen Eintrag im rpcservices-Container im-Verzeichnis verfügt. Ein RPC-Dienst verwendet die [**rpcnsbindingexport**](/windows/desktop/api/rpcnsi/nf-rpcnsi-rpcnsbindingexporta) -Funktion, um den rpcservices-Eintrag zu erstellen.
+Im folgenden Codebeispiel werden die Dienstprinzipalnamen (SERVICE Principal Names, SPNs) für einen RPC-Dienst erstellt, der über einen Eintrag im RpcServices-Container im Verzeichnis verfügt. Ein RPC-Dienst verwendet die [**RpcNsBindingExport-Funktion,**](/windows/desktop/api/rpcnsi/nf-rpcnsi-rpcnsbindingexporta) um seinen RpcServices-Eintrag zu erstellen.
 
-Ein RPC-Dienst verwendet dieses Codebeispiel, um den SPN oder SPNs zu erstellen, die eine Instanz des Dienstanbieter identifizieren. Der Dienst verwendet diese Routine, um die folgenden Aufgaben auszuführen:
+Ein RPC-Dienst verwendet dieses Codebeispiel, um den SPN oder die SPNs zu erstellen, die eine Instanz des Diensts identifizieren. Der Dienst verwendet diese Routine, um die folgenden Aufgaben auszuführen:
 
--   , Um die SPNs im Verzeichnis zu registrieren oder die Registrierung aufzuheben, wenn der Dienst installiert oder entfernt wird. Weitere Informationen und ein Codebeispiel finden Sie unter [Registrieren der SPNs für einen Dienst](registering-the-spns-for-a-service.md).
--   Registrieren Sie sich beim Start des Dienstanbieter beim RPC-Authentifizierungsdienst. Weitere Informationen finden Sie unter [gegenseitige Authentifizierung in RPC-Anwendungen](mutual-authentication-in-rpc-applications.md).
+-   Zum Registrieren oder Aufheben der Registrierung der SPNs im Verzeichnis, wenn der Dienst installiert oder entfernt wird. Weitere Informationen und ein Codebeispiel finden Sie unter [Registrieren der SPNs für einen Dienst.](registering-the-spns-for-a-service.md)
+-   Registrieren Sie sich selbst beim RPC-Authentifizierungsdienst, wenn der Dienst gestartet wird. Weitere Informationen finden Sie unter [Gegenseitige Authentifizierung in RPC-Anwendungen.](mutual-authentication-in-rpc-applications.md)
 
-In diesem Codebeispiel wird der Distinguished Name des rpcservices-Eintrags des Diensts verwendet, um den SPN zu verfassen. Bevor Sie diesen Code aufrufen, rufen Sie die [**rpcnsbindingexport**](/windows/desktop/api/rpcnsi/nf-rpcnsi-rpcnsbindingexporta) -Funktion auf, um den rpcservices-Eintrag des Diensts zu erstellen.
+In diesem Codebeispiel wird der Distinguished Name des RpcServices-Eintrags des Diensts verwendet, um den SPN zu erstellen. Rufen Sie vor dem Aufrufen dieses Codes die [**RpcNsBindingExport-Funktion**](/windows/desktop/api/rpcnsi/nf-rpcnsi-rpcnsbindingexporta) auf, um den RpcServices-Eintrag des Diensts zu erstellen.
 
-In diesem Codebeispiel wird die [**dsgetspn**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsgetspna) -Funktion aufgerufen, um einen SPN zu erstellen. Der SPN besteht aus dem Dienst Klassennamen und dem Distinguished Name des Dienst-rpcservices-Eintrags.
+Dieses Codebeispiel ruft die [**DsGetSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsgetspna) auf, um einen SPN zu erstellen. Der SPN besteht aus dem Dienstklassennamen und dem Distinguished Name des RpcServices-Eintrags des Diensts.
 
 
 ```C++
@@ -111,6 +111,6 @@ HRESULT SpnCompose(LPTSTR pszServiceName,
 
 
 
- 
+ 
 
- 
+ 

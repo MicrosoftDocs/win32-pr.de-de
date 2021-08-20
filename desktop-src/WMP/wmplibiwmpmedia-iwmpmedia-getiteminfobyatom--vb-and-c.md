@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia getiteminfobyatom-Methode
-description: Die getiteminfobyatom-Methode gibt den Wert des Attributs mit der angegebenen Indexnummer zurück.
+title: IWMPMedia getItemInfoByAtom-Methode
+description: Die getItemInfoByAtom-Methode gibt den Wert des Attributs mit der angegebenen Indexnummer zurück.
 ms.assetid: d9a4b737-add1-4bbd-8e03-e58f45d65a62
 keywords:
-- getiteminfobyatom-Methode, Windows Media Player
-- getiteminfobyatom-Methode, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, getiteminfobyatom-Methode
+- getItemInfoByAtom-Methode Windows Media Player
+- getItemInfoByAtom-Methode Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , getItemInfoByAtom-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb37243960360120fbfe508a39db31e37728ac39
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 72a8820618b39418aa7be82faeef15a372e0e0f90c0db025e99c55be49d8c13e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118115694"
 ---
-# <a name="iwmpmediagetiteminfobyatom-method"></a>Iwmpmedia:: getiteminfobyatom-Methode
+# <a name="iwmpmediagetiteminfobyatom-method"></a>IWMPMedia::getItemInfoByAtom-Methode
 
-Die **getiteminfobyatom** -Methode gibt den Wert des Attributs mit der angegebenen Indexnummer zurück.
+Die **getItemInfoByAtom-Methode** gibt den Wert des Attributs mit der angegebenen Indexnummer zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,24 +53,24 @@ Implements IWMPMedia.getItemInfoByAtom
 
 <dl> <dt>
 
-*latom* \[ in\]
+*lAtom* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der den Index angibt, an dem das angeforderte Attribut innerhalb des Satzes verfügbarer Attribute liegt.
+Eine **System.Int32-Datei,** die den Index angibt, an dem sich das angeforderte Attribut innerhalb des Satzes verfügbarer Attribute befindet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. String** -Wert, der dem Wert des-Attributs entspricht.
+Eine **System.String,** die der Wert des Attributs ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, um Metadaten für ein bestimmtes Medien Element mithilfe einer Attribut Indexnummer abzurufen. Die **AttributeCount** -Eigenschaft kann verwendet werden, um die Anzahl der für das Medien Element verfügbaren Attribute zu bestimmen.
+Diese Methode kann verwendet werden, um Metadaten für ein bestimmtes Medienelement mithilfe einer Attributindexnummer abzurufen. Die **attributeCount-Eigenschaft** kann verwendet werden, um die Anzahl der für das Medienelement verfügbaren Attribute zu bestimmen.
 
-Die **getmediaatom** -Methode der **iwmpmediacollection** -Schnittstelle kann auch verwendet werden, um den Index eines bestimmten Attributs abzurufen. Diese Technik ist im Allgemeinen effizienter als die **getiteminfo** -Methode oder die **getItemInfoByType** -Methode bei der Arbeit mit großen Wiedergabelisten.
+Die **getMediaAtom-Methode** der **IWMPMediaCollection-Schnittstelle** kann auch verwendet werden, um den Index eines bestimmten Attributs abzurufen. Diese Technik ist im Allgemeinen effizienter als die **getItemInfo-** oder **getItemInfoByType-Methoden** bei der Arbeit mit großen Wiedergabelisten.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -88,22 +88,22 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. AttributeCount (VB und c#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
+[**IWMPMedia.attributeCount (VB und C#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. getiteminfo (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
+[**IWMPMedia.getItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. Einstellungs Verzeichnis (VB und c#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
+[**IWMPMedia.setItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia3. getItemInfoByType (VB und c#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
+[**IWMPMedia3.getItemInfoByType (VB und C#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection. getmediaatom (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-getmediaatom--vb-and-c.md)
+[**IWMPMediaCollection.getMediaAtom (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-getmediaatom--vb-and-c.md)
 </dt> </dl>
 
  

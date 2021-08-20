@@ -1,39 +1,39 @@
 ---
-title: Portieren von Code im msingle-Modus
-description: OpenGL hat keine Entsprechung für den msingle-, Single Matrix-Modus.
+title: Portieren von MSINGLE-Moduscode
+description: OpenGL verfügt nicht über ein Äquivalent für den Einzelmatrixmodus MSINGLE.
 ms.assetid: 7de933b8-150c-432d-89ee-5f5799ad8443
 keywords:
-- IRIS GL Porting, msingle Mode
-- Portieren von IRIS GL, msingle Mode
-- Portieren auf OpenGL von IRIS GL, msingle Mode
-- OpenGL-Portierung von IRIS GL, msingle Mode
-- Msingle-Modus
-- IRIS GL portieren, Einzel Matrix Modus
-- Portieren von IRIS GL, Einzel Matrix Modus
-- Portieren auf OpenGL von IRIS GL, Single Matrix Mode
-- OpenGL-Portierung von IRIS GL, Einzel Matrix Modus
-- Einzel Matrix Modus
+- IRIS GL-Portierung, MSINGLE-Modus
+- Portieren von IRIS GL, MSINGLE-Modus
+- Portieren von IRIS GL im MSINGLE-Modus zu OpenGL
+- OpenGL-Portierung über IRIS GL, MSINGLE-Modus
+- MSINGLE-Modus
+- IRIS GL-Portierung, Einzelmatrixmodus
+- Portieren aus IRIS GL, Einzelmatrixmodus
+- Portieren von IRIS GL im Einzelmatrixmodus zu OpenGL
+- OpenGL-Portierung über IRIS GL, Einzelmatrixmodus
+- Einzelmatrixmodus
 - Double-Matrix-Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b8c62f93fa8e027dd1c91ca0bd40bc8e6ffaf9f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 83716cead9134ba7823f4206fb6479d323bd35bddee480e9353a7ceb9aad38ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132389"
 ---
-# <a name="porting-msingle-mode-code"></a>Portieren von Code im msingle-Modus
+# <a name="porting-msingle-mode-code"></a>Portieren von MSINGLE-Moduscode
 
-OpenGL hat keine Entsprechung für den **msingle**-, Single Matrix-Modus. Obwohl die Verwendung dieses Modus davon abgeraten hat, ist dies der Standardwert für Iris GL. Wenn Ihr IRIS GL-Programm den Einzel Matrix Modus verwendet, müssen Sie es so umschreiben, dass nur der Double-Matrix-Modus verwendet wird. OpenGL befindet sich immer im Double-Matrix-Modus und ist anfänglich im GL \_ Modelview-Modus.
+OpenGL verfügt über kein Äquivalent für **MSINGLE**, Einzelmatrixmodus. Obwohl von der Verwendung dieses Modus abgeraten wurde, ist dies die Standardeinstellung für IRIS GL. Wenn Ihr IRIS GL-Programm den Einzelmatrixmodus verwendet, müssen Sie ihn so umschreiben, dass nur der Modus mit doppelter Matrix verwendet wird. OpenGL befindet sich immer im Doppelmatrixmodus und befindet sich zunächst im GL \_ MODELVIEW-Modus.
 
-Der größte IRIS GL-Code im msingle-Modus sieht wie folgt aus:
+Der großteil IRIS GL-Code im MSINGLE-Modus sieht wie hier aus:
 
 ``` syntax
 projectionmatrix();
 ```
 
-Dabei ist *ProjectionMatrix* einer der folgenden **: Ortho**, **ortho2**, **Perspective** oder **Window**. Um auf OpenGL zu portieren, ersetzen Sie die " **msingle** -Mode *ProjectionMatrix* "-Funktion durch:
+dabei *ist projectionmatrix* eines der: **ortho,** **ortho2,** **perspective** oder **window**. Ersetzen Sie zum Portieren zu OpenGL die **MSINGLE** -mode *projectionmatrix-Funktion* durch:
 
 
 ```C++
@@ -49,9 +49,9 @@ glLoadMatrix( identity matrix );
 
 
 
- 
+ 
 
- 
+ 
 
 
 

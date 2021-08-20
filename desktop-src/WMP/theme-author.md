@@ -1,9 +1,9 @@
 ---
-title: Design. Author
-description: Das Attribut "Author" gibt den Namen des Autors der Skin an oder ruft ihn ab.
+title: THEME.author
+description: Das author-Attribut gibt den Namen des Erstellers der Skin an oder ruft den Namen ab.
 ms.assetid: 05d91024-38ea-4327-8ee1-a9242a13fd73
 keywords:
-- Design. Author Windows Media Player
+- THEME.author Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed6930ea13994fc860f614766663983d46167eb0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf88ce6cdb19aa2c3c1dd1868ffb2981ea57ff8eaaa4a30b57066fb0f4a4d510
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118117882"
 ---
-# <a name="themeauthor"></a>Design. Author
+# <a name="themeauthor"></a>THEME.author
 
-Das Attribut " **Author** " gibt den Namen des Autors der Skin an oder ruft ihn ab.
+Das **author-Attribut** gibt den Namen des Erstellers der Skin an oder ruft den Namen ab.
 
 ``` syntax
 theme.author
@@ -29,7 +29,7 @@ theme.author
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff ohne Standardwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> <dt>
 
-[**Design. authorversion**](theme-authorversion.md)
+[**THEME.authorVersion**](theme-authorversion.md)
 </dt> </dl>
 
  

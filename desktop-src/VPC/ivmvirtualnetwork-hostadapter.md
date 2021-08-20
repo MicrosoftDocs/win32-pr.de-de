@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualnetwork-hostanapter-Eigenschaft (vpccominterfaces. h)
-description: Der Name des Adapters, mit dem das virtuelle Netzwerk verbunden ist.
+title: IVMVirtualNetwork HostAdapter-Eigenschaft (VPCCOMInterfaces.h)
+description: Name des Adapters, mit dem das virtuelle Netzwerk verbunden ist.
 ms.assetid: 7ee074d2-13ba-42db-84db-ecfd22576a9a
 keywords:
-- Host Host Eigenschaft Virtual PC
-- Host Host Eigenschaft Virtual PC, ivmvirtualnetwork-Schnittstelle
-- Ivmvirtualnetwork Interface Virtual PC, Host-apter (Eigenschaft)
+- HostAdapter-Eigenschaft Virtueller PC
+- HostAdapter-Eigenschaft Virtueller PC, IVMVirtualNetwork-Schnittstelle
+- IVMVirtualNetwork-Schnittstelle Virtueller PC, HostAdapter-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0485303c2328a85c70779f16652121729546f3ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 72db5d8349572b2bd3549c2ee54d20e994bdfe8aed6ba0fbe31875e04f6942f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118122680"
 ---
-# <a name="ivmvirtualnetworkhostadapter-property"></a>Ivmvirtualnetwork:: hostapter (Eigenschaft)
+# <a name="ivmvirtualnetworkhostadapter-property"></a>IVMVirtualNetwork::HostAdapter (Eigenschaft)
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Namen des Adapters ab, mit dem das virtuelle Netzwerk verbunden ist.
 
@@ -45,7 +45,7 @@ HRESULT get_HostAdapter(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name des Host Adapters, mit dem das virtuelle Netzwerk verbunden ist.
+Der Name des Hostadapters, mit dem das virtuelle Netzwerk verbunden ist.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,19 +54,19 @@ Der Name des Host Adapters, mit dem das virtuelle Netzwerk verbunden ist.
 | Name/Wert                                                                                                                                                            | Bedeutung                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                               | Der Vorgang wurde durchgeführt.<br/>                                                                                                                              |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                 | Der-Parameter ist **null**.<br/>                                                                                                                                 |
-| <dl> <dt>VM \_ E- \_ Adapter \_ nicht \_ gefunden</dt> <dt>0xa0040700</dt> </dl> | Der Host-Ethernet-Adapter, mit dem dieses virtuelle Netzwerk verbunden war, ist nicht mehr verfügbar. Der hostethernet-Adapter wurde möglicherweise entfernt oder deaktiviert.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>         | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                          |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>                 | Der Parameter ist **NULL.**<br/>                                                                                                                                 |
+| <dl> <dt>VM \_ E \_ ADAPTER \_ NOT \_ FOUND</dt> <dt>0xA0040700</dt> </dl> | Der Ethernet-Hostadapter, mit dem dieses virtuelle Netzwerk verbunden war, ist nicht mehr verfügbar. Der Ethernet-Hostadapter wurde möglicherweise entfernt oder deaktiviert.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>         | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dem virtuellen Netzwerkadapter kann ein virtuelles Netzwerk mit externen Netzwerken kommunizieren. Normalerweise ist ein Adapter pro Ethernet-Adapter auf dem Host Computer installiert. Nehmen wir beispielsweise an, dass ein Host Computer über einen Adapter mit der Bezeichnung "10/100 ENET" verfügt. Wenn Sie eine virtuelle NIC mit dem Netzwerk verbinden möchten, das mit "10/100 ENET" verbunden ist, legen Sie **die Eigenschaft "** Network Host" des virtuellen Netzwerks auf "10/100 ENET" fest, und verbinden Sie die virtuelle NIC mit diesem virtuellen Netzwerk.
+Der virtuelle Netzwerkadapter ermöglicht es einem virtuellen Netzwerk, mit externen Netzwerken zu sprechen. Normalerweise ist auf dem Hostcomputer ein Adapter pro Ethernet-Adapter installiert. Angenommen, ein Hostcomputer hat einen Adapter mit der Bezeichnung "10/100 ENET". Um eine virtuelle NIC mit dem Netzwerk zu verbinden, das an "10/100 ENET" angefügt ist, legen Sie die Eigenschaft **Netzwerkhostadapter** des virtuellen Netzwerks auf "10/100 ENET" fest, und verbinden Sie die virtuelle NIC mit diesem virtuellen Netzwerk.
 
-Wenn die **Hostadapter** -Eigenschaft auf eine leere Zeichenfolge ("") festgelegt ist, wird der virtuelle NIC-Adapter mit dem Netzwerk "Internal Network" oder "Shared Networking (NAT)" verbunden. Virtuelle NICs, die an das Netzwerk "internes Netzwerk" angefügt werden, haben keinen Zugriff auf externe Netzwerke auf dem System Host. Die virtuellen NICs, die mit diesem virtuellen Netzwerk verbunden sind, können jedoch immer noch miteinander kommunizieren.
+Wenn die **HostAdapter-Eigenschaft** auf eine leere Zeichenfolge ("") festgelegt ist, ist der virtuelle NIC-Adapter mit dem Netzwerk "Internal Network" oder "Shared Networking (NAT)" verbunden. Virtuelle NICs, die an das Netzwerk "Internes Netzwerk" angefügt sind, haben keinen Zugriff auf externe Netzwerke auf dem Systemhost. Die virtuellen NICs, die an dieses virtuelle Netzwerk angefügt sind, können jedoch weiterhin miteinander kommunizieren.
 
-Auf die gesamte Liste der Adapter kann über die [**ivmhostinfo:: NetworkAdapters**](ivmhostinfo-networkadapters.md) -Eigenschaft zugegriffen werden.
+Auf die vollständige Liste der Adapter kann über die [**IVMHostInfo::NetworkAdapters-Eigenschaft zugegriffen**](ivmhostinfo-networkadapters.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,12 +74,12 @@ Auf die gesamte Liste der Adapter kann über die [**ivmhostinfo:: NetworkAdapter
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualnetwork ist als 431cb7a1-2469-4563-b94e-38b987adca63 definiert.<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualNetwork ist als 431cb7a1-2469-4563-b94e-38b987adca63 definiert.<br/>          |
 
 
 
@@ -87,7 +87,7 @@ Auf die gesamte Liste der Adapter kann über die [**ivmhostinfo:: NetworkAdapter
 
 <dl> <dt>
 
-[**Ivmvirtualnetwork**](ivmvirtualnetwork.md)
+[**IVMVirtualNetwork**](ivmvirtualnetwork.md)
 </dt> </dl>
 
  

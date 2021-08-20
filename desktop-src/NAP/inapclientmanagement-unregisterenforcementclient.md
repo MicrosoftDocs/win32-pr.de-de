@@ -1,11 +1,11 @@
 ---
-title: Inapclientmanagement unregisterenforcementclient-Methode (napmanagement. h)
-description: Hebt die Registrierung eines Erzwingungs Clients beim NAP-System auf.
+title: INapClientManagement UnregisterEnforcementClient-Methode (NapManagement.h)
+description: Aufheben der Registrierung eines Erzwingungsclients beim NAP-System.
 ms.assetid: 549683de-7f2c-4da6-9616-862e0e99d21f
 keywords:
-- Unregisterenforcementclient-Methode NAP
-- Unregisterenforcementclient-Methode NAP, inapclientmanagement-Schnittstelle
-- Inapclientmanagement Interface NAP, unregisterenforcementclient-Methode
+- UnregisterEnforcementClient-Methode NAP
+- UnregisterEnforcementClient-Methode NAP, INapClientManagement-Schnittstelle
+- INapClientManagement-Schnittstelle NAP, UnregisterEnforcementClient-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea318cf632ac00d54451b11428907c88159809df
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e0298b55a5552f2a3ce7a40e048874076729f7e506475c8626de9e9e343da3b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134552"
 ---
-# <a name="inapclientmanagementunregisterenforcementclient-method"></a>Inapclientmanagement:: unregisterenforcementclient-Methode
+# <a name="inapclientmanagementunregisterenforcementclient-method"></a>INapClientManagement::UnregisterEnforcementClient-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Durch die **unregisterenforcementclient** -Methode wird die Registrierung eines Erzwingungs Clients beim NAP-System aufgehoben.
+Mit **der UnregisterEnforcementClient-Methode** wird die Registrierung eines Erzwingungsclients beim NAP-System aufgehoben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,25 +47,25 @@ HRESULT UnregisterEnforcementClient(
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
-Ein [**enforcemententityid**](nap-datatypes.md) -Wert, der den Erzwingungs Client für die Aufhebung der Registrierung identifiziert.
+Ein [**EnforcementEntityId-Wert,**](nap-datatypes.md) der den erzwingungsclient identifiziert, der die Registrierung aufheben soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
+Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                                    |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Vorgang erfolgreich.<br/>                                               |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl>      | Berechtigungs Fehler, Zugriff verweigert.<br/>                                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>       | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/>             |
-| <dl> <dt>**NAP \_ E \_ trotzdem \_ gebunden**</dt> </dl> | Die Registrierung des Erzwingungs Clients konnte nicht aufgehoben werden, und bleibt unverändert.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>      | Berechtigungsfehler, Zugriff verweigert.<br/>                                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>       | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/>             |
+| <dl> <dt>**NAP \_ E \_ NOCH \_ GEBUNDEN**</dt> </dl> | Die Registrierung des Erzwingungsclients konnte nicht aufgehoben werden und bleibt gebunden.<br/> |
 
 
 
@@ -77,10 +77,10 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
@@ -89,7 +89,7 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 <dl> <dt>
 
-[**Inapclientmanagement**](inapclientmanagement.md)
+[**INapClientManagement**](inapclientmanagement.md)
 </dt> </dl>
 
  

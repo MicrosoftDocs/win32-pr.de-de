@@ -1,12 +1,12 @@
 ---
-title: CancelPatch-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Bricht einen Auftrag zur Bereitstellung von Softwareupdates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+title: CancelPatch-Methode der Win32_RDMSVirtualDesktopCollection Klasse
+description: Bricht einen Softwareupdatebereitstellungsauftrag für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 ms.assetid: fb0d6831-5c69-4017-b725-1a5038ad69f5
 ms.tgt_platform: multiple
 keywords:
-- CancelPatch-Methode Remotedesktopdienste
+- CancelPatch-Remotedesktopdienste
 - CancelPatch-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection Klasse Remotedesktopdienste , CancelPatch-Methode
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , CancelPatch-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "118131329"
 ---
 # <a name="cancelpatch-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>CancelPatch-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Bricht einen Auftrag zur Bereitstellung von Softwareupdates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+Bricht einen Softwareupdatebereitstellungsauftrag für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,13 +53,13 @@ Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
 | MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

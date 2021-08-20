@@ -1,28 +1,28 @@
 ---
-title: Schlüssel zum Beenden der Erfassung
-description: Schlüssel zum Beenden der Erfassung
+title: Schlüsselenderfassung
+description: Schlüsselenderfassung
 ms.assetid: 932ed4ee-0928-41f7-a242-8b7435313647
 keywords:
 - WM_CAP_GET_SEQUENCE_SETUP Meldung
-- capcapturegetsetup-Makro
-- Captuprojektms-Struktur
+- capCaptureGetSetup-Makro
+- CAPTUREPARMS-Struktur
 - WM_CAP_SET_SEQUENCE_SETUP Meldung
-- capcapturesetsetup-Makro
+- capCaptureSetSetup-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a91d6ee7d07ed36c11cce7e888c9a9710f403cf9
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6b5764f6b1853e1b161501f3c8df22ff0b7387649c517a28e7e36e7a094f35b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140050"
 ---
-# <a name="keys-ending-capture"></a>Schlüssel zum Beenden der Erfassung
+# <a name="keys-ending-capture"></a>Schlüsselenderfassung
 
-Sie können es Benutzern ermöglichen, eine Erfassungs Sitzung abzubrechen, indem Sie eine Tastenkombination oder Tastenkombination aus der Tastatur drücken, oder indem Sie die Rechte oder die linke Maustaste drücken. Wenn der Benutzer eine echt Zeit Erfassungs Sitzung abbricht, wird der Inhalt der Erfassungs Datei verworfen. Wenn der Benutzer eine Schritt-Frame-Erfassungs Sitzung abbricht, wird der Inhalt der Erfassungs Datei bis zum Zeitpunkt der Abbruch Erfassung gespeichert.
+Sie können dem Benutzer erlauben, eine Aufzeichnungssitzung abzubricht, indem Sie eine Tastenkombination über die Tastatur drücken oder die rechte oder linke Maustaste drücken. Wenn der Benutzer eine Echtzeiterfassungssitzung abbricht, wird der Inhalt der Aufzeichnungsdatei verworfen. Wenn der Benutzer eine Schrittframe-Aufzeichnungssitzung abbricht, wird der Inhalt der Erfassungsdatei bis zum Abbruch der Erfassung gespeichert.
 
-Sie können die Einstellungen für das Abbrechen einer Erfassungs Sitzung abrufen, indem Sie die " [**WM \_ Cap \_ get \_ Sequence \_**](wm-cap-get-sequence-setup.md) "-Setup Nachricht (oder das " [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) "-Makro) verwenden. Die aktuelle Tastatureingabe-Einstellung wird im **vkeyabort** -Member der [**captumamams**](/windows/win32/api/vfw/ns-vfw-captureparms) -Struktur gespeichert. die aktuellen Mauseinstellungen werden in den Elementen **fabortleftmouse** und **faborzghtmouse** gespeichert. Sie können eine neue Tastenkombination oder Tastenkombination festlegen, indem Sie die Kombination aus Keycode oder Keycode (wie in einer Tastenkombination STRG oder UMSCHALT) als Wert von **vkeyabort** angeben oder die linke oder Rechte Maustaste als Abbruch Taste festlegen, indem Sie den **fabortleftmouse** -Member oder den **faborzghtmouse** -Member angeben. Nachdem Sie diese Member festgelegt haben, senden Sie die aktualisierte **captuadapms** -Struktur mithilfe der " [**WM \_ Cap \_ Set \_ Sequence \_**](wm-cap-set-sequence-setup.md) "-Setup Nachricht (oder dem " [**capcapturesetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) "-Makro) an das Aufzeichnungs Fenster. Der Standardwert von **vkeyabort** ist "VK \_ Escape". Sie müssen die [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) -Funktion aufrufen, bevor Sie eine Tastenkombination angeben, mit der eine Aufzeichnungs Sitzung abgebrochen werden kann. Die Standardwerte von **fabortleftmouse** und **faborseleghtmouse** sind **true**.
+Sie können die Einstellungen zum Abbrechen einer Aufzeichnungssitzung mithilfe der [**WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-get-sequence-setup.md) (oder des [**CapCaptureGetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) abrufen. Die aktuelle Tastatureingabeeinstellung wird im **vKeyAbort-Member** der [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) gespeichert. die aktuellen Mauseinstellungen werden in den **Membern fAbortLeftMouse** und **fAbortRightMouse** gespeichert. Sie können eine neue Tastenkombination oder Tastenkombination festlegen, indem Sie die Tastencode- oder Keycodekombination (wie bei einer Tastenkombination mit STRG- oder UMSCHALTTASTE) als Wert von **vKeyAbort** oder die linke oder rechte Maustaste als Abbruchtaste festlegen, indem Sie den Member **fAbortLeftMouse** oder **fAbortRightMouse** angeben. Nachdem Sie diese Member festgelegt haben, senden Sie die aktualisierte **CAPTUREPARMS-Struktur** mithilfe der [**WM CAP SET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-set-sequence-setup.md) (oder des [**CapCaptureSetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) an das Erfassungsfenster. Der Standardwert von **vKeyAbort** ist VK \_ ESCAPE. Sie müssen die [RegisterHotKey-Funktion](/windows/win32/api/winuser/nf-winuser-registerhotkey) aufrufen, bevor Sie eine Tastatureingabe angeben, die eine Aufzeichnungssitzung abbrechen kann. Die Standardwerte von **fAbortLeftMouse** und **fAbortRightMouse** sind **TRUE.**
 
- 
+ 
 
- 
+ 

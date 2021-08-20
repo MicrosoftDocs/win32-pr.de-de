@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows8Grbits Members'
-title: Windows8Grbits-Member (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Grbits-Member'
+title: Windows8Grbits-Member (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: Windows8Grbits members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Windows8.Windows8Grbits
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8grbits_members(v=EXCHG.10)
 ms:contentKeyID: 55104467
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 3a035212968b131f8c4b95d901246363105393af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bac56c275db625dce39f40c5deca6c4b15f9083b81eb3678b81bc8d8c185c567
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104562273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118069194"
 ---
 # <a name="windows8grbits-members"></a>Windows8Grbits-Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-System Parameter, die in Windows 8 eingeführt wurden.
+Systemparameter, die in Windows 8 eingeführt wurden.
 
-Der [Windows8Grbits](./windows8grbits-class.md) -Typ macht die folgenden Member verfügbar.
+Der [Windows8Grbits-Typ](./windows8grbits-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="fields"></a>Felder
 
@@ -30,29 +30,29 @@ Der [Windows8Grbits](./windows8grbits-class.md) -Typ macht die folgenden Member 
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn335502(v=exchg.10).md">Indexdotnetguid</a></td>
-<td>Durch die Angabe dieses Flags wird die GUID-Sortierreihenfolge in .NET Framework Standard geändert.</td>
+<td><a href="dn335502(v=exchg.10).md">IndexDotNetGuid</a></td>
+<td>Wenn Sie dieses Flag angeben, wird die GUID-Sortierreihenfolge in .NET Framework Standard geändert.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn335397(v=exchg.10).md">Keepdbattachedatendofrecovery</a></td>
-<td>Ermöglicht das Anfügen der Datenbank am Ende der Wiederherstellung (für einen schnelleren Übergang in den Status "wird ausgeführt").</td>
+<td><a href="dn335397(v=exchg.10).md">KeepDbAttachedAtEndOfRecovery</a></td>
+<td>Ermöglicht es der Datenbank, am Ende der Wiederherstellung angefügt zu bleiben (für einen schnelleren Übergang in den Ausführungszustand).</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn335500(v=exchg.10).md">Purgecacheonattach</a></td>
-<td>Datenbankseiten beim Anfügen Löschen.</td>
+<td><a href="dn335500(v=exchg.10).md">PurgeCacheOnAttach</a></td>
+<td>Bereinigen Sie Datenbankseiten beim Anfügen.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn335394(v=exchg.10).md">Ttdotnetguid</a></td>
-<td>Mit dieser Option wird angefordert, dass die temporäre Tabelle Spalten vom Typ JET_coltypGUID entsprechend .NET Framework GUID-Sortierreihenfolge sortiert.</td>
+<td><a href="dn335394(v=exchg.10).md">TTDotNetGuid</a></td>
+<td>Diese Option fordert an, dass die spalten des Typs der temporären Tabelle gemäß .NET Framework GUID-Sortierreihenfolge JET_coltypGUID.</td>
 </tr>
 </tbody>
 </table>
@@ -62,8 +62,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Grbits-Klasse](./windows8grbits-class.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

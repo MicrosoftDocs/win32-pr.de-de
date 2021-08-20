@@ -1,9 +1,9 @@
 ---
 title: Player.settings
-description: Die settings-Eigenschaft ruft das Einstellungen-Objekt ab.
+description: Die Einstellungseigenschaft ruft das Einstellungen ab.
 ms.assetid: 9edd7d27-893a-4a32-8aaf-5efec6c50903
 keywords:
-- Player.settings Windows Media Player
+- Player.settings-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118337964"
 ---
 # <a name="playersettings"></a>Player.settings
 
-Die **settings-Eigenschaft** ruft das Einstellungen-Objekt ab.
+Die **Einstellungseigenschaft** ruft das Einstellungen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ Die **settings-Eigenschaft** ruft das Einstellungen-Objekt ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein schreibgeschütztes Einstellungen-Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes Einstellungen Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Diese Eigenschaft ist ein schreibgeschütztes Einstellungen-Objekt.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

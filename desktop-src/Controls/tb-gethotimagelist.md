@@ -1,9 +1,9 @@
 ---
-title: TB_GETHOTIMAGELIST Meldung (kommstrg. h)
-description: Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Hot-Schaltflächen anzuzeigen.
+title: TB_GETHOTIMAGELIST (Commctrl.h)
+description: Ruft die Bildliste ab, die ein Symbolleisten-Steuerelement zum Anzeigen von Schaltflächen verwendet.
 ms.assetid: 63054449-2768-459c-933c-781d31bdcc15
 keywords:
-- Windows-Steuerelemente für TB_GETHOTIMAGELIST Meldung
+- TB_GETHOTIMAGELIST von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e19c1f3989b0d749a9c663d00b5fb7b54d67fc0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f69d1c77377553ae19a008f80e692e3c87487bc9874593d5f3d1e692658c4ad7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168513"
 ---
-# <a name="tb_gethotimagelist-message"></a>TB- \_ gethotimagelist-Meldung
+# <a name="tb_gethotimagelist-message"></a>TB \_ GETHOTIMAGELIST-Nachricht
 
-Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Hot-Schaltflächen anzuzeigen.
+Ruft die Bildliste ab, die ein Symbolleisten-Steuerelement zum Anzeigen von Schaltflächen verwendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Hot-Schaltfl�
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, die das-Steuerelement verwendet, um Hot-Schaltflächen anzuzeigen, oder **null** , wenn keine Liste mit den heißen Bildern festgelegt
+Gibt das Handle für die Bildliste zurück, die das Steuerelement zum Anzeigen von Hot-Schaltflächen verwendet, oder **NULL,** wenn keine Liste mit heißen Bildern festgelegt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schaltfläche ist heiß, wenn sich der Cursor darüber befindet. Für Symbolleisten-Steuerelemente muss der [**tbstyle- \_ Flat**](toolbar-control-and-button-styles.md) -oder [**tbstyle- \_ Listen**](toolbar-control-and-button-styles.md) Stil für heiße Elemente verwendet werden.
+Eine Schaltfläche ist heiß, wenn sich der Cursor darüber befindet. Symbolleisten-Steuerelemente müssen über den [**TBSTYLE \_ FLAT-**](toolbar-control-and-button-styles.md) oder [**TBSTYLE \_ LIST-Stil verfügen,**](toolbar-control-and-button-styles.md) um heiße Elemente zu enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Eine Schaltfläche ist heiß, wenn sich der Cursor darüber befindet. Für Symbo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

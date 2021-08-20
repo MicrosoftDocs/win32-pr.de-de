@@ -1,31 +1,31 @@
 ---
-title: Itspubplugin-Methoden
-description: Die itspubplugin-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: ItsPubPlugin-Methoden
+description: Die ItsPubPlugin-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: F62784D1-0563-43A1-AD1E-825EAD1D39E8
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 09a8fcb71f59e4d7f05992dd918521fa980b07d9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5223eb479e7f09f077def0ae45c266537b68ab898e9620b62269dd577fcdc1fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118128710"
 ---
-# <a name="itspubplugin-methods"></a>Itspubplugin-Methoden
+# <a name="itspubplugin-methods"></a>ItsPubPlugin-Methoden
 
-Die [**itspubplugin**](/windows/desktop/api/tspubplugincom/nn-tspubplugincom-itspubplugin) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ItsPubPlugin-Schnittstelle**](/windows/desktop/api/tspubplugincom/nn-tspubplugincom-itspubplugin) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Getcachelastupdatetime-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-getcachelastupdatetime)
+-   [**GetCacheLastUpdateTime-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-getcachelastupdatetime)
 -   [**GetResource-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-getresource)
--   [**Getresourcelist-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-getresourcelist)
+-   [**GetResourceList-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-getresourcelist)
 -   [**ResolveResource-Methode**](/windows/desktop/api/tspubplugincom/nf-tspubplugincom-itspubplugin-resolveresource)
 
- 
+ 
 
- 
+ 
 
 
 

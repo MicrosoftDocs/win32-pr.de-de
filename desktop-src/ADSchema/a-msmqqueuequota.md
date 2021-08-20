@@ -1,11 +1,11 @@
 ---
 title: MSMQ-Queue-Quota-Attribut
-description: Ein Nachrichten Kontingent der Warteschlange.
+description: Ein Nachrichtenkontingent der Warteschlange.
 ms.assetid: 45a9d6f0-5cd7-414d-97c5-18a7e41a5062
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "MSMQ-Queue-Quota"
-- AD-Schema des msmqqueuequota-Attributs
+- AD-Schema des MSMQ-Queue-Quota-Attributs
+- mSMQQueueQuota-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a70e2719b6bfe738a0bc6646716582e9dcc72fe7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7b5bc07af65fceec89d9bb6e911f250333b7ee5972cee7586002a9331acf51a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118013830"
 ---
 # <a name="msmq-queue-quota-attribute"></a>MSMQ-Queue-Quota-Attribut
 
-Ein Nachrichten Kontingent der Warteschlange.
+Ein Nachrichtenkontingent der Warteschlange.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | MSMQ-Queue-Quota                     |
-| LDAP-Display-Name | msmqqueuequota                       |
+| Ldap-Anzeigename | mSMQQueueQuota                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.962               |
-| System-ID-GUID    | 3b6b8e12-d57l-11d1-90A2-00c04f d91ab1 |
+| System-ID-GUID    | 3f6b8e12-d57f-11d1-90a2-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Ein Nachrichten Kontingent der Warteschlange.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | True                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | True                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | True                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | True                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Ein Nachrichten Kontingent der Warteschlange.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | True                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | True                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 

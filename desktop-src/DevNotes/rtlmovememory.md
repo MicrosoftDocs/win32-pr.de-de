@@ -1,7 +1,7 @@
 ---
-description: Kopiert den Inhalt eines Quell Speicherblocks in einen Zielspeicher Block und unterstützt überlappende Quell-und Zielspeicher Blöcke.
+description: Kopiert den Inhalt eines Quellspeicherblocks in einen Zielspeicherblock und unterstützt überlappende Quell- und Zielspeicherblöcke.
 ms.assetid: D374F14D-24C7-4771-AD40-3AC37E7A2D2F
-title: Rtlmuvememory-Funktion (WDM. h)
+title: RtlMoveMemory-Funktion (Wdm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: 65f8c8490224213e0bef27fab5239a21eca24344
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bf4366633de321e27f6d3cdc0396fcdce81b0dac30b0d09a4c2c4675706d939e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118161662"
 ---
-# <a name="rtlmovememory-function"></a>Rtlmuvememory-Funktion
+# <a name="rtlmovememory-function"></a>RtlMoveMemory-Funktion
 
-Kopiert den Inhalt eines Quell Speicherblocks in einen Zielspeicher Block und unterstützt überlappende Quell-und Zielspeicher Blöcke.
+Kopiert den Inhalt eines Quellspeicherblocks in einen Zielspeicherblock und unterstützt überlappende Quell- und Zielspeicherblöcke.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ VOID RtlMoveMemory(
 
 <dl> <dt>
 
-*Ziel* \[ vorgenommen\]
+*Ziel* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den Zielspeicher Block, in den die Bytes kopiert werden sollen.
+Ein Zeiger auf den Zielspeicherblock, in den die Bytes kopiert werden.
 
 </dd> <dt>
 
-*Quelle* \[ in\]
+*Quelle* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Quell Speicherblock, aus dem die Bytes kopiert werden sollen.
+Ein Zeiger auf den Quellspeicherblock, aus dem die Bytes kopiert werden.
 
 </dd> <dt>
 
-*Länge* \[ in\]
+*Länge* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Bytes, die aus der Quelle in das Ziel kopiert werden sollen.
+Die Anzahl der Bytes, die aus der Quelle in das Ziel kopiert werden.
 
 </dd> </dl>
 
@@ -68,11 +68,11 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Der Quell Speicherblock, der durch *Quelle* und *Länge* definiert wird, kann den Zielspeicher Block überlappen, der durch das *Ziel* und die *Länge* definiert wird.
+Der Quellspeicherblock, der durch *Quelle* und *Länge* definiert wird, kann den Zielspeicherblock überlappen, der durch *Destination* und Length *definiert wird.*
 
-Die [**rtlcopymemory**](/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlcopymemory) -Routine läuft schneller als **rtlmuvememory**, aber **rtlcopymemory** erfordert, dass sich die Quell-und Zielspeicher Blöcke nicht überlappen.
+Die [**RtlCopyMemory-Routine**](/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlcopymemory) wird schneller als **RtlMoveMemory** ausgeführt, **aber RtlCopyMemory** erfordert, dass sich die Quell- und Zielspeicherblöcke nicht überschneiden.
 
-Aufrufer von **rtlmuvememory** können in beliebiger unql ausgeführt werden, wenn sich die Quell-und Zielspeicher Blöcke im nicht auslagerenden System Arbeitsspeicher befinden. Andernfalls muss der Aufrufer auf der Ebene "iriql <= APC" ausgeführt werden \_ .
+Aufrufer von **RtlMoveMemory** können in jedem IRQL ausgeführt werden, wenn sich die Quell- und Zielspeicherblöcke im nicht auspageierten Systemspeicher befinden. Andernfalls muss der Aufrufer unter IRQL <= APC LEVEL \_ ausgeführt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Aufrufer von **rtlmuvememory** können in beliebiger unql ausgeführt werden, we
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                    |
 | Zielplattform<br/>          | <dl> <dt>[Universell](https://msdn.microsoft.com/Library/Windows/Hardware/EB2264A4-BAE8-446B-B9A5-19893936DDCA)</dt> </dl> |
-| Header<br/>                   | <dl> <dt>WDM. h (Include WDM. h, ntddk. h oder ntifs. h)</dt> </dl>                   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdll. lib</dt> </dl>                                                    |
+| Header<br/>                   | <dl> <dt>Wdm.h (einschließlich Wdm.h, Ntddk.h oder Ntifs.h)</dt> </dl>                   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdll.lib</dt> </dl>                                                    |
 | DLL<br/>                      | <dl> <dt>Ntdll.dll</dt> </dl>                                                    |
 
 
@@ -93,7 +93,7 @@ Aufrufer von **rtlmuvememory** können in beliebiger unql ausgeführt werden, we
 
 <dl> <dt>
 
-[**Rtlcopymemory**](/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlcopymemory)
+[**RtlCopyMemory**](/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlcopymemory)
 </dt> </dl>
 
  

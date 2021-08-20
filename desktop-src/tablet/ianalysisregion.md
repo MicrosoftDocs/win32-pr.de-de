@@ -1,7 +1,7 @@
 ---
 description: Macht Methoden und Eigenschaften für einen Bereich verfügbar, der einen Bereich eines Dokuments darstellt.
 ms.assetid: ee823a9e-a144-4394-847e-abf390fb839a
-title: Ianalysisregion-Schnittstelle (iacom. h)
+title: IAnalysisRegion-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,68 +13,68 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: c9c5e7653790e193c03b1cf4e0c489ea39c3eec3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8dc5b0af5746328ead68be3896148b7a4ddf79d6844a6d4ae976b2f29592d6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118045064"
 ---
-# <a name="ianalysisregion-interface"></a>Ianalysisregion-Schnittstelle
+# <a name="ianalysisregion-interface"></a>IAnalysisRegion-Schnittstelle
 
 Macht Methoden und Eigenschaften für einen Bereich verfügbar, der einen Bereich eines Dokuments darstellt.
 
 ## <a name="members"></a>Member
 
-Die **ianalysisregion** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ianalysisregion** verfügt auch über die folgenden Typen von Membern:
+Die **IAnalysisRegion-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IAnalysisRegion** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ianalysisregion** -Schnittstelle verfügt über diese Methoden.
+Die **IAnalysisRegion-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                                                                                    |
+| Methode                                                           | Beschreibung                                                                                                                                    |
 |:-----------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Klon**](ianalysisregion-clone.md)                           | Erstellt eine Kopie von **ianalysisregion**.<br/>                                                                                          |
-| [**Excluderectangle**](ianalysisregion-excluderectangle.md)     | Schränkt den Bereich von **ianalysisregion** auf den Teil des Bereichs ein, der das angegebene Rechteck nicht überschneidet.<br/>           |
-| [**Excluderegion**](ianalysisregion-excluderegion.md)           | Schränkt den Bereich von **ianalysisregion** auf den Teil des Bereichs ein, der den angegebenen **ianalysisregion** nicht überschneidet.<br/> |
-| [**GetBounds**](ianalysisregion-getbounds.md)                   | Ruft das umgebende Rechteck von **ianalysisregion** ab.<br/>                                                                        |
-| [**GetRegionScans**](ianalysisregion-getregionscans.md)         | Ruft ein Array von Rechtecke ab, das den Bereich von **ianalysisregion** definiert.<br/>                                                  |
-| [**Intersectrechteck**](ianalysisregion-intersectrectangle.md) | Schränkt den Bereich dieses **ianalysisregion** auf den Bereich ein, der durch die Schnittmenge mit dem angegebenen Rechteck erstellt wurde.<br/>                |
-| [**Intersectregion**](ianalysisregion-intersectregion.md)       | Schränkt den Bereich von **ianalysisregion** auf den Bereich ein, der durch die Schnittmenge mit der angegebenen **ianalysisregion** erstellt wurde.<br/>       |
-| [**Intersecin**](ianalysisregion-intersectswith.md)         | Bestimmt, ob sich der Bereich des **ianalysisregion** mit dem angegebenen Rechteck überschneidet.<br/>                                     |
-| [**IsEmpty**](ianalysisregion-isempty.md)                       | Ruft einen Wert ab, der angibt, ob **ianalysisregion** einen leeren Bereich darstellt.<br/>                                            |
-| [**IsInfinite**](ianalysisregion-isinfinite.md)                 | Ruft einen Wert ab, der angibt, ob **ianalysisregion** einen unendlichen Bereich darstellt.<br/>                                         |
-| [**MakeEmpty**](ianalysisregion-makeempty.md)                   | Reduziert den **ianalysisregion** -Element, um einen leeren Bereich darzustellen.<br/>                                                                         |
-| [**MakeInfinite**](ianalysisregion-makeinfinite.md)             | Erweitert **ianalysisregion** , um einen unendlichen Bereich darzustellen.<br/>                                                                      |
-| [**Unionrechteck**](ianalysisregion-unionrectangle.md)         | Erweitert den Bereich dieses **ianalysisregion** auf den Bereich, der durch die zugehörige Union mit dem angegebenen Rechteck erstellt wurde.<br/>                         |
-| [**Unionregion**](ianalysisregion-unionregion.md)               | Erweitert den Bereich dieses **ianalysisregion** auf den Bereich, der von seiner Union mit dem angegebenen **ianalysisregion** erstellt wurde.<br/>               |
+| [**Klon**](ianalysisregion-clone.md)                           | Erstellt eine Kopie der **IAnalysisRegion**.<br/>                                                                                          |
+| [**ExcludeRectangle**](ianalysisregion-excluderectangle.md)     | Schränkt den Bereich von **IAnalysisRegion** auf den Teil des Bereichs ein, der das angegebene Rechteck nicht schneidet.<br/>           |
+| [**ExcludeRegion**](ianalysisregion-excluderegion.md)           | Schränkt den Bereich von **IAnalysisRegion** auf den Teil des Bereichs ein, der die angegebene **IAnalysisRegion nicht überschneidet.**<br/> |
+| [**GetBounds**](ianalysisregion-getbounds.md)                   | Ruft das umgebundene Rechteck der **IAnalysisRegion ab.**<br/>                                                                        |
+| [**GetRegionScans**](ianalysisregion-getregionscans.md)         | Ruft ein Array von Rechtecke ab, das den Bereich der **IAnalysisRegion definiert.**<br/>                                                  |
+| [**IntersectRectangle**](ianalysisregion-intersectrectangle.md) | Schränkt den Bereich dieser **IAnalysisRegion** auf den Bereich ein, der durch seine Schnittmenge mit dem angegebenen Rechteck erstellt wird.<br/>                |
+| [**IntersectRegion**](ianalysisregion-intersectregion.md)       | Schränkt den Bereich von **IAnalysisRegion** auf den Bereich ein, der durch seine Schnittmenge mit der angegebenen **IAnalysisRegion erstellt wird.**<br/>       |
+| [**IntersectsWith**](ianalysisregion-intersectswith.md)         | Bestimmt, ob sich der Bereich von **IAnalysisRegion** mit dem angegebenen Rechteck überschneidet.<br/>                                     |
+| [**IsEmpty**](ianalysisregion-isempty.md)                       | Ruft einen Wert ab, der angibt, ob **IAnalysisRegion einen** leeren Bereich darstellt.<br/>                                            |
+| [**IsInfinite**](ianalysisregion-isinfinite.md)                 | Ruft einen Wert ab, der angibt, ob **IAnalysisRegion einen** unendlichen Bereich darstellt.<br/>                                         |
+| [**MakeEmpty**](ianalysisregion-makeempty.md)                   | Reduziert **IAnalysisRegion, um** einen leeren Bereich zu darstellen.<br/>                                                                         |
+| [**MakeInfinite**](ianalysisregion-makeinfinite.md)             | Erweitert **IAnalysisRegion, um** einen unendlichen Bereich zu darstellen.<br/>                                                                      |
+| [**UnionRectangle**](ianalysisregion-unionrectangle.md)         | Erweitert den Bereich dieser **IAnalysisRegion** auf den Bereich, der durch seine Vereinigung mit dem angegebenen Rechteck erstellt wurde.<br/>                         |
+| [**UnionRegion**](ianalysisregion-unionregion.md)               | Erweitert den Bereich dieser **IAnalysisRegion** auf den Bereich, der durch seine Vereinigung mit der angegebenen **IAnalysisRegion erstellt wurde.**<br/>               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle stellt einen Bereich dar, der aus rechteckigen Bereichen erstellt wird. Der [**iinkanalyzer**](iinkanalyzer.md) gibt die Koordinaten eines Bereichs innerhalb des Koordinaten Bereichs zurück, in dem er Strich Daten empfängt, oder interpretiert ihn.
+Diese Schnittstelle stellt einen Bereich dar, der aus rechteckigen Bereichen erstellt wird. Der [**IInkAnalyzer gibt**](iinkanalyzer.md) die Koordinaten eines Bereichs innerhalb des Koordinatenraums zurück, in dem er Strichdaten empfängt, oder interpretiert diese.
 
-Verwenden Sie die [**ianalysisregion:: GetBounds-Methode**](ianalysisregion-getbounds.md) oder die [**ianalysisregion:: GetRegionScans-Methode**](ianalysisregion-getregionscans.md), um die aktuellen Begrenzungen von **ianalysisregion** zu erhalten.
+Um die aktuellen Grenzen von **IAnalysisRegion** zu erhalten, verwenden Sie [**die IAnalysisRegion::GetBounds-Methode**](ianalysisregion-getbounds.md) oder [**die IAnalysisRegion::GetRegionScans-Methode.**](ianalysisregion-getregionscans.md)
 
-Verwenden Sie die folgenden Methoden, um den Bereich einer vorhandenen **ianalysisregion** zu ändern.
+Verwenden Sie die folgenden Methoden, um den Bereich einer vorhandenen **IAnalysisRegion** zu ändern.
 
--   [**Ianalysisregion:: excluderectangle**](ianalysisregion-excluderectangle.md)
--   [**Ianalysisregion:: excluderegion-Methode**](ianalysisregion-excluderegion.md)
--   [**Ianalysisregion:: intersectrechteck-Methode**](ianalysisregion-intersectrectangle.md)
--   [**Ianalysisregion:: intersectregion-Methode**](ianalysisregion-intersectregion.md)
--   [**Ianalysisregion:: MakeEmpty-Methode**](ianalysisregion-makeempty.md)
--   [**Ianalysisregion:: MakeInfinite-Methode**](ianalysisregion-makeinfinite.md)
--   [**Ianalysisregion:: unionrechteck-Methode**](ianalysisregion-unionrectangle.md)
--   [**Ianalysisregion:: unionregion-Methode**](ianalysisregion-unionregion.md)
+-   [**IAnalysisRegion::ExcludeRectangle**](ianalysisregion-excluderectangle.md)
+-   [**IAnalysisRegion::ExcludeRegion-Methode**](ianalysisregion-excluderegion.md)
+-   [**IAnalysisRegion::IntersectRectangle-Methode**](ianalysisregion-intersectrectangle.md)
+-   [**IAnalysisRegion::IntersectRegion-Methode**](ianalysisregion-intersectregion.md)
+-   [**IAnalysisRegion::MakeEmpty-Methode**](ianalysisregion-makeempty.md)
+-   [**IAnalysisRegion::MakeInfinite-Methode**](ianalysisregion-makeinfinite.md)
+-   [**IAnalysisRegion::UnionRectangle-Methode**](ianalysisregion-unionrectangle.md)
+-   [**IAnalysisRegion::UnionRegion-Methode**](ianalysisregion-unionregion.md)
 
-Diese Schnittstelle entspricht der Klasse System. Windows. Ink. AnalysisCore. AnalysisRegionBase in der .NET Framework.
+Diese Schnittstelle entspricht dem System. Windows. Ink.AnalysisCore.AnalysisRegionBase-Klasse im .NET Framework.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,9 +82,9 @@ Diese Schnittstelle entspricht der Klasse System. Windows. Ink. AnalysisCore. An
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -93,10 +93,10 @@ Diese Schnittstelle entspricht der Klasse System. Windows. Ink. AnalysisCore. An
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

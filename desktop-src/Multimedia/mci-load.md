@@ -1,9 +1,9 @@
 ---
-title: MCI_LOAD Befehl (MMSYSTEM. h)
-description: Der Befehl MCI \_ Load lädt eine Datei. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+title: MCI_LOAD Befehl (Mmsystem.h)
+description: Der MCI \_ LOAD-Befehl lädt eine Datei. Digitale Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: 0f48afa0-e845-4de5-8433-15bbf4eae683
 keywords:
-- MCI_LOAD Befehl Windows-Multimedia
+- MCI_LOAD Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb00ebe9dc9107c4673fc323fcb7719a89beffd4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e318e79bf24e51fec69f97a0dcb56395cb1a8917a31105deae062a865169b778
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138538"
 ---
-# <a name="mci_load-command"></a>Befehl "MCI \_ Load"
+# <a name="mci_load-command"></a>MCI \_ LOAD-Befehl
 
-Der Befehl MCI \_ Load lädt eine Datei. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+Der MCI \_ LOAD-Befehl lädt eine Datei. Digitale Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,56 +43,56 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder, für Digital Video-Geräte, MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder, für Digital Video-Geräte, MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpLoad"></span><span id="lpload"></span><span id="LPLOAD"></span>*lpload*
+<span id="lpLoad"></span><span id="lpload"></span><span id="LPLOAD"></span>*lpLoad*
 </dt> <dd>
 
-Zeiger auf eine Struktur des [**MCI- \_ Lade- \_ Parametern**](mci-load-parms.md) . (Geräte mit zusätzlichen Parametern können diese Struktur durch eine gerätespezifische Struktur ersetzen. Für Digital Video-Geräte zeigt der **lpload** -Parameter auf eine [**MCI \_ DGV \_ \_**](/previous-versions//dd743391(v=vs.85)) -Struktur zum Laden von Daten.)
+Zeiger auf eine [**MCI \_ LOAD \_ PARMS-Struktur.**](mci-load-parms.md) (Geräte mit zusätzlichen Parametern können diese Struktur durch eine gerätespezifische Struktur ersetzen. Bei Digitalvideogeräten verweist der **lpLoad-Parameter** auf eine [**MCI \_ DGV \_ LOAD \_ PARMS-Struktur.)**](/previous-versions//dd743391(v=vs.85))
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende zusätzliche Flag gilt für alle Geräte, die die MCI-Auslastung unterstützen \_ :
-
-<dl> <dt>
-
-<span id="MCI_LOAD_FILE"></span><span id="mci_load_file"></span>MCI- \_ Auslastungs \_ Datei
-</dt> <dd>
-
-Der **lpFileName** -Member der durch *lpload* identifizierten Struktur enthält eine Adresse eines Puffers, der den Dateinamen enthält.
-
-</dd> </dl>
-
-Das folgende zusätzliche Flag wird mit dem **Überlagerungs** Gerätetyp verwendet:
+Das folgende zusätzliche Flag gilt für alle Geräte, die MCI \_ LOAD unterstützen:
 
 <dl> <dt>
 
-<span id="MCI_OVLY_RECT"></span><span id="mci_ovly_rect"></span>MCI \_ OVLY \_ Rect
+<span id="MCI_LOAD_FILE"></span><span id="mci_load_file"></span>\_ \_ MCI-LADEDATEI
 </dt> <dd>
 
-Der **RC** -Member der durch *lpload* identifizierten Struktur enthält ein gültiges Anzeige Rechteck, das den Bereich des zu aktualisierenden Video Puffers angibt.
+Der **lpfilename-Member** der durch *lpLoad* identifizierten Struktur enthält eine Adresse eines Puffers, der den Dateinamen enthält.
 
 </dd> </dl>
 
-Bei Video Überlagerungs Geräten verweist der *lpload* -Parameter auf eine MCI-Struktur für das [**\_ OVLY- \_ Laden von \_ para**](mci-ovly-load-parms.md) Metern.
+Das folgende zusätzliche Flag wird mit dem **Überlagerungsgerätetyp** verwendet:
+
+<dl> <dt>
+
+<span id="MCI_OVLY_RECT"></span><span id="mci_ovly_rect"></span>MCI \_ OVLY \_ RECT
+</dt> <dd>
+
+Der **rc-Member** der von *lpLoad* identifizierten Struktur enthält ein gültiges Anzeigerechteck, das den Bereich des zu aktualisierenden Videopuffers identifiziert.
+
+</dd> </dl>
+
+Bei Videoüberlagerungsgeräten zeigt der *lpLoad-Parameter* auf eine [**MCI \_ OVLY \_ LOAD \_ PARMS-Struktur.**](mci-ovly-load-parms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,7 +102,7 @@ Bei Video Überlagerungs Geräten verweist der *lpload* -Parameter auf eine MCI-
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -110,7 +110,7 @@ Bei Video Überlagerungs Geräten verweist der *lpload* -Parameter auf eine MCI-
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

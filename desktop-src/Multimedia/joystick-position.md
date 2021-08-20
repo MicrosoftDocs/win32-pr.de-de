@@ -1,25 +1,25 @@
 ---
-title: Joystick Position
-description: Joystick Position
+title: Position des Schalters
+description: Position des Schalters
 ms.assetid: db0d1125-e39f-445b-bd65-373633cad578
 keywords:
-- Joysticks, Position
-- Joysticks, Schaltflächen
+- schalter, position
+- Schalter, Schaltflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bcdc187cfba244bb2b8c28c37e3677593f99870
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 81e5664166d20f9195a33d03534f792a4262b291bc3db34194fd05e06681563a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104209120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140304"
 ---
-# <a name="joystick-position"></a>Joystick Position
+# <a name="joystick-position"></a>Position des Schalters
 
-Sie können einen Joystick mithilfe der [**joygetpos**](/windows/win32/api/joystickapi/nf-joystickapi-joygetpos) -Funktion nach Positions-und Schaltflächen Informationen Abfragen. Beispielsweise kann eine Anwendung den Joystick nach Baseline-Positions Werten Abfragen. Das Eigenschaften Blatt der Joystick-Systemsteuerung verwendet dieses Verfahren beim Kalibrieren des Joysticks.
+Sie können mithilfe der funktiongetPos eine Abfrage nach Positions- und [**Schaltflächeninformationen**](/windows/win32/api/joystickapi/nf-joystickapi-joygetpos) ausführen. Beispielsweise kann eine Anwendung die Baselinepositionswerte abfragen. Das Eigenschaftenblatt "Systemsteuerung" verwendet diese Technik beim Kalibrieren der Folie.
 
-Mithilfe der Funktion " [**joygetposex**](/windows/win32/api/joystickapi/nf-joystickapi-joygetposex) " können Sie auch einen Joystick oder ein anderes Gerät Abfragen, das über erweiterte Funktionen verfügt.
+Sie können auch ein Gerät oder ein anderes Gerät abfragen, das über erweiterte Funktionen verfügt, indem Sie die [**Funktion "getPosEx"**](/windows/win32/api/joystickapi/nf-joystickapi-joygetposex) verwenden.
 
- 
+ 
 
- 
+ 

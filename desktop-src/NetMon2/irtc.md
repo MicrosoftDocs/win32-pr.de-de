@@ -1,7 +1,7 @@
 ---
-description: Die untc-Schnittstelle stellt die Methoden bereit, mit denen die NPP mit dem Netzwerk verbunden, Netzwerk Datenverkehr erfasst, Statistiken abgerufen und die Netzwerkverbindung vom Netzwerk getrennt wird.
+description: Die IRTC-Schnittstelle stellt die Methoden bereit, die verwendet werden, um die NPP mit dem Netzwerk zu verbinden, Netzwerkdatenverkehr zu erfassen, Statistiken abzurufen und das NPP aus dem Netzwerk zu trennen.
 ms.assetid: 9252a9ba-2c3e-40b9-b8de-84ef5d4831a7
-title: Untc-Schnittstelle (Netmon. h)
+title: IRTC-Schnittstelle (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,43 +14,43 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: c937d7d9233b1df063a7cf4a12e57e909145b8c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f330892da5844305d4d1f3ffa3aee0bf6e9ef50fb2a1cd951c332e2b17eb3b12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132929"
 ---
-# <a name="irtc-interface"></a>Untc-Schnittstelle
+# <a name="irtc-interface"></a>IRTC-Schnittstelle
 
-Die **untc** -Schnittstelle stellt die Methoden bereit, mit denen die NPP mit dem Netzwerk verbunden, Netzwerk Datenverkehr erfasst, Statistiken abgerufen und die Netzwerkverbindung vom Netzwerk getrennt wird. Bei " **untc** " wird eine Schnittstelle zu lokalen Einstiegspunkten abgerufen, die zum Einbinden der echt Zeiterfassung notwendig sind. Diese Schnittstelle enthält eine Methode, die einen Rückruf an den NPP übergibt.
+Die **IRTC-Schnittstelle** stellt die Methoden bereit, die verwendet werden, um die NPP mit dem Netzwerk zu verbinden, Netzwerkdatenverkehr zu erfassen, Statistiken abzurufen und das NPP aus dem Netzwerk zu trennen. **IRTC** ruft eine Schnittstelle zu rein lokalen Einstiegspunkten ab, die für die Echtzeiterfassung erforderlich sind. Diese Schnittstelle enthält eine Methode, die einen Rückruf an das NPP übergibt.
 
 ## <a name="members"></a>Member
 
-Die Schnittstelle " **iritc** " erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Außerdem gibt** es die folgenden Arten von Membern:
+Die **IRTC-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IRTC** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die Schnittstelle " **iritc** " verfügt über diese Methoden.
+Die **IRTC-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                              | BESCHREIBUNG                                                                                                                                             |
+| Methode                                                              | Beschreibung                                                                                                                                             |
 |:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Konfigurieren**](irtc-configure.md)                                 | Legt den-, Muster Übereinstimmungs-und Puffergröße der Erfassung fest.<br/>                                                                             |
-| [**Verbinden**](irtc-connect.md)                                     | Verbindet den NPP mit dem Netzwerk.<br/>                                                                                                             |
+| [**Konfigurieren**](irtc-configure.md)                                 | Legt den Trigger, die Musterübersprechung und die Puffergröße der Erfassung fest.<br/>                                                                             |
+| [**Verbinden**](irtc-connect.md)                                     | Verbindet das NPP mit dem Netzwerk.<br/>                                                                                                             |
 | [**Trennen**](irtc-disconnect.md)                               | Trennt die NPP vom Netzwerk.<br/>                                                                                                        |
-| [**Getcontrolstate**](irtc-getcontrolstate.md)                     | Ruft den Zustand der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wurde.<br/>                      |
-| [**Getconversation ationstatistics**](irtc-getconversationstatistics.md) | Ruft [*Sitzungs*](s.md) -und [*Stations Informationen*](s.md) für die aktuelle Erfassung ab.<br/> |
-| [**Gettotalstatistics**](irtc-gettotalstatistics.md)               | Extrahiert Zeit, Puffer, Treiber und andere Netzwerk Statistiken aus der aktuell laufenden Erfassung.<br/>                                              |
+| [**GetControlState**](irtc-getcontrolstate.md)                     | Ruft den Zustand der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.<br/>                      |
+| [**GetConversationStatistics**](irtc-getconversationstatistics.md) | Ruft [*Sitzungs-*](s.md) und [*Stationsinformationen*](s.md) für die aktuelle Erfassung ab.<br/> |
+| [**GetTotalStatistics**](irtc-gettotalstatistics.md)               | Extrahiert Zeit-, Puffer-, Treiber- und andere Netzwerkstatistiken aus der aktuell ausgeführten Erfassung.<br/>                                              |
 | [**Anhalten**](irtc-pause.md)                                         | Beendet vorübergehend die aktuelle Erfassung.<br/>                                                                                                       |
-| [**Querystations**](irtc-querystations.md)                         | Ruft eine Liste aller Computer in einem Subnetz ab, die Netzwerkmonitor zum Erfassen von Netzwerkdaten verwenden.<br/>                                        |
+| [**QueryStations**](irtc-querystations.md)                         | Ruft eine Liste aller Computer in einem Subnetz ab, die Netzwerkmonitor zum Erfassen von Netzwerkdaten verwenden.<br/>                                        |
 | [**QueryStatus**](irtc-querystatus.md)                             | Ruft den Status des NPP ab.<br/>                                                                                                             |
 | [**Fortsetzen**](irtc-resume.md)                                       | Startet eine angehaltene Erfassung neu.<br/>                                                                                                                   |
-| [**Start**](irtc-start.md)                                         | Startet eine Aufzeichnung.<br/>                                                                                                                            |
-| [**Stop**](irtc-stop.md)                                           | Hält die aktuelle Erfassung an.<br/>                                                                                                                   |
+| [**Starten**](irtc-start.md)                                         | Startet eine Erfassung.<br/>                                                                                                                            |
+| [**Stoppen**](irtc-stop.md)                                           | Beendet die aktuelle Erfassung.<br/>                                                                                                                   |
 
 
 
@@ -64,7 +64,7 @@ Die Schnittstelle " **iritc** " verfügt über diese Methoden.
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 

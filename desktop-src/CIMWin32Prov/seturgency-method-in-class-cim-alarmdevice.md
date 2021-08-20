@@ -1,8 +1,8 @@
 ---
-description: Mit der SetUrgency-Methode wird die gewünschte Dringlichkeits Stufe für einen Alarm festgelegt.
+description: Die SetEncy-Methode legt die gewünschte Notfallstufe für einen Alarm fest.
 ms.assetid: ac2e7fda-1317-440a-adbd-1ef0844d124c
 ms.tgt_platform: multiple
-title: Die-Methode der CIM_AlarmDevice-Klasse.
+title: SetEncy-Methode der CIM_AlarmDevice-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 35918677e210ac2fe7ac4798a04db9dc628f5fa1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9557ad9e65b33e1ed8889ef1fd013b2d9f5426f8e819fe56608cb6846ea8669f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118172634"
 ---
-# <a name="seturgency-method-of-the-cim_alarmdevice-class"></a>Die Methode "tarturgency" der CIM \_ alarmdevice-Klasse
+# <a name="seturgency-method-of-the-cim_alarmdevice-class"></a>SetEncy-Methode der CIM \_ AlarmDevice-Klasse
 
-Mit der **SetUrgency** -Methode wird die gewünschte Dringlichkeits Stufe für einen Alarm festgelegt.
+Die **SetEncy-Methode** legt die gewünschte Notfallstufe für einen Alarm fest.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ uint32 SetUrgency(
 
 <dl> <dt>
 
-*RequestedUrgency* \[ in\]
+*Requested Vererzung* \[ In\]
 </dt> <dd>
 
-Relative Häufigkeit, mit der der Alarm blinkt, vibriert oder akustische Töne ausgibt. Die folgenden Werte stammen aus der Eigenschaft **Dringlichkeit** in [**CIM \_ alarmdevice**](cim-alarmdevice.md).
+Relative Häufigkeit, mit der der Alarm blinkt, vibriert oder akustische Töne ausgibt. Die folgenden Werte stammen aus der **Eigenschaft "Urgenty"** in [**CIM \_ AlarmDevice**](cim-alarmdevice.md).
 
 <dt>
 
@@ -99,19 +99,19 @@ Kritisch.
 6
 </dt> <dd>
 
-Nicht BEHEB barer.
+Unrecoverable.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn die angeforderte Dringlichkeits Ebene nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn die angeforderte Notfallstufe nicht unterstützt wird, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,8 +121,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -131,10 +131,10 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[CIM- \_ alarmdevice](seturgency-method-in-class-cim-alarmdevice.md)
+[CIM \_ AlarmDevice](seturgency-method-in-class-cim-alarmdevice.md)
 </dt> <dt>
 
-[**CIM- \_ alarmdevice**](cim-alarmdevice.md)
+[**CIM \_ AlarmDevice**](cim-alarmdevice.md)
 </dt> </dl>
 
  

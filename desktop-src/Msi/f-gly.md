@@ -1,19 +1,19 @@
 ---
-description: Erfahren Sie Windows Installer Konzepte, die mit dem Buchstaben F beginnen, z. B. Feature und vollständige Benutzeroberfläche.
+description: Erfahren Sie Windows Installer-Konzepte, die mit dem Buchstaben F beginnen, z. B. Feature und vollständige Benutzeroberfläche.
 ms.assetid: b6623bd8-bc83-4d84-bc82-eb4051e10260
 title: F (Windows Installer)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 374e70a6fa89369f9677eaabec8b98bf48e1c851
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: aaab81a284aa8de395ebe2a1886a9b1cb8f91dc4401d25cce5472714d984df65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112010693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142919"
 ---
 # <a name="f-windows-installer"></a>F (Windows Installer)
 
-[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) [S](s-gly.md) [T](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
+[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) [S](s-gly.md) T [](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
 
 <dl> <dt>
 

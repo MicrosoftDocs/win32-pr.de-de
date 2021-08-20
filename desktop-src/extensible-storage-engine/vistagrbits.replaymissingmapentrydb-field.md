@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im Feld "vistagrbits. replaymissingmapentrydb".
-title: Vistagrbits. replaymissingmapentrydb-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaGrbits.ReplayMissingMapEntryDB-Feld'
+title: VistaGrbits.ReplayMissingMapEntryDB-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: ReplayMissingMapEntryDB field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.ReplayMissingMapEntryDB
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistagrbits.replaymissingmapentrydb(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 646681c82919452416c5711f944b08b647639850
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa5cb525b29aee62a684ec6e16d0c5271f03ce4d52e7e49f0fb3ac26e1690d80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118070018"
 ---
-# <a name="vistagrbitsreplaymissingmapentrydb-field"></a>Vistagrbits. replaymissingmapentrydb-Feld
+# <a name="vistagrbitsreplaymissingmapentrydb-field"></a>VistaGrbits.ReplayMissingMapEntryDB-Feld
 
-Fehlender Daten Bank Zuordnungs Eintrag ist standardmäßig derselbe Speicherort.
+Fehlender Datenbankzuordnungseintrag wird standardmäßig auf denselben Speicherort festgelegt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,10 +55,10 @@ public const InitGrbit ReplayMissingMapEntryDB
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistagrbits-Klasse](./vistagrbits-class.md)
+[VistaGrbits-Klasse](./vistagrbits-class.md)
 
-[Vistagrbits-Member](./vistagrbits-members.md)
+[VistaGrbits-Member](./vistagrbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

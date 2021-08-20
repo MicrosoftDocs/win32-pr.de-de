@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentforcedetachnotallowedexception-Klasse'
-title: Esentforcedetachnotallowedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentForceDetachNotAllowedException-Klasse'
+title: EsentForceDetachNotAllowedException-Klasse
 TOCTitle: EsentForceDetachNotAllowedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentForceDetachNotAllowedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentforcedetachnotallowedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 28a1987b82c4233302bbd3c2e8ffc928f4b55ec4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9178f0aca962e72575c6a66ad26f5c73a601b47615ecd74cc6d5653fcd2412c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118081591"
 ---
-# <a name="esentforcedetachnotallowedexception-class"></a>Esentforcedetachnotallowedexception-Klasse
+# <a name="esentforcedetachnotallowedexception-class"></a>EsentForceDetachNotAllowedException-Klasse
 
-Basisklasse für JET_err. Forcedetachnotallowed-Ausnahmen.
+Basisklasse für JET_err. ForceDetachNotAllowed-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentforcedetachnotallowedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentForceDetachNotAllowedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentforcedetachnotallowedexception-Elemente](./esentforcedetachnotallowedexception-members.md)
+[EsentForceDetachNotAllowedException-Member](./esentforcedetachnotallowedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,25 +1,25 @@
 ---
-description: Die Funktion "deateprocess" ermöglicht einem Debugger, einen Prozess zu starten und zu debuggen.
+description: Mit der CreateProcess-Funktion kann ein Debugger einen Prozess starten und debuggen.
 ms.assetid: 7056e181-9bc5-4530-a7b8-d5ff1e345eef
-title: Verarbeitungsfunktionen für das Debuggen
+title: Prozessfunktionen für das Debuggen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d31378a4115acfdd5a4a1836199b7387adeb6e3f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f6dec70de05e9b77cd3ff0b2ee8cd01c90ded2987f7ba1cacc3530f040344915
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162631"
 ---
-# <a name="process-functions-for-debugging"></a>Verarbeitungsfunktionen für das Debuggen
+# <a name="process-functions-for-debugging"></a>Prozessfunktionen für das Debuggen
 
-Die Funktion " [**deateprocess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) " ermöglicht einem Debugger, einen Prozess zu starten und zu debuggen. Der *fdwcreate* -Parameter von " **kreateprocess** " wird verwendet, um den Typ des Debugvorgangs anzugeben. Wenn das \_ debugprozessflag für den-Parameter angegeben wird, debuggt ein Debugger den neuen Prozess und alle Nachfolger des Prozesses, vorausgesetzt, dass die Nachfolger ohne das \_ debugprozessflag erstellt werden.
+Mit [**der CreateProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) kann ein Debugger einen Prozess starten und debuggen. Der *fdwCreate-Parameter* von **CreateProcess** wird verwendet, um den Typ des Debugvorgang anzugeben. Wenn das DEBUG PROCESS-Flag für den -Parameter angegeben ist, debuggt ein Debugger den neuen Prozess und alle Nachfolger des Prozesses, vorausgesetzt, die Nachfolger werden ohne das \_ DEBUG \_ PROCESS-Flag erstellt.
 
-Wenn der \_ Debugprozess und das Debuggen \_ nur \_ diese \_ prozessflags für " *f" erstellt* werden, debuggt der Debugger den neuen Prozess, aber keinen seiner Nachfolger.
+Wenn die Flags DEBUG PROCESS und DEBUG ONLY THIS PROCESS für \_ \_ \_ \_ *fdwCreate* angegeben sind, debuggt ein Debugger den neuen Prozess, aber keinen seiner Nachfolger.
 
-Ein Debugger kann eine andere Debuggen, indem er einen Prozess mit dem \_ debugprozessflag erstellt. Der neue Prozess (der Debugger, der debuggt wird) muss dann einen Prozess mit dem \_ debugprozessflag erstellen.
+Ein Debugger kann einen anderen debuggen, indem er einen Prozess mit dem DEBUG \_ PROCESS-Flag erstellt. Der neue Prozess (der Debugger, der debuggt wird) muss dann einen Prozess mit dem DEBUG \_ PROCESS-Flag erstellen.
 
-Die [**OpenProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess) -Funktion ermöglicht einem Debugger das Abrufen des Bezeichners eines vorhandenen Prozesses. (Die [**DebugActiveProcess**](/windows/win32/api/debugapi/nf-debugapi-debugactiveprocess) -Funktion verwendet diesen Bezeichner, um den Debugger an den Prozess anzufügen.) In der Regel öffnen debuggger einen Prozess mit den \_ \_ Schreib-und Prozess-VM-Schreib Flags der Prozess-VM \_ \_ . Die Verwendung dieser Flags ermöglicht dem Debugger das Lesen und Schreiben in den virtuellen Arbeitsspeicher des Prozesses mithilfe der Funktionen " [**leseprocessmemory**](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) " und " [**schreiteprocessmemory**](/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory) ". Weitere Informationen finden Sie unter [**Prozesse und Threads**](../procthread/processes-and-threads.md).
+Mit [**der OpenProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess) kann ein Debugger den Bezeichner eines vorhandenen Prozesses abrufen. (Die [**DebugActiveProcess-Funktion**](/windows/win32/api/debugapi/nf-debugapi-debugactiveprocess) verwendet diesen Bezeichner, um den Debugger an den Prozess anfügen.) In der Regel öffnen Debugger einen Prozess mit den Flags PROCESS \_ VM READ und PROCESS VM \_ \_ \_ WRITE. Mithilfe dieser Flags kann der Debugger mithilfe der [**Funktionen ReadProcessMemory**](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) und [**WriteProcessMemory**](/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory) aus dem virtuellen Arbeitsspeicher des Prozesses lesen und in diesen schreiben. Weitere Informationen finden Sie unter [**Prozesse und Threads**](../procthread/processes-and-threads.md).
 
  
 

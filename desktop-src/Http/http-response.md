@@ -1,6 +1,6 @@
 ---
-title: HTTP_RESPONSE (http. h)
-description: Die Version der HTTP- \_ Antwort Struktur ist abhängig von der Version der Anforderungs Warteschlange, die der HTTP-Server-API Version 1,0-Anforderungs Warteschlange verwendet wird. Dies ist eine HTTP- \_ Anforderung \_ v1-Struktur. Http-Server-API Version 2,0 Anforderungs Warteschlange Dies ist eine HTTP- \_ Anforderung \_ v2-Struktur.
+title: HTTP_RESPONSE (Http.h)
+description: 'Die Version der HTTP \_ RESPONSE-Struktur hängt von der Version der Anforderungswarteschlange ab, die wie folgt verwendet wird: HTTP Server API Version 1.0 request queue (Http-Anforderungswarteschlange Version 1.0). Dies ist eine HTTP \_ REQUEST \_ V1-Struktur. HTTP-Server-API Version 2.0 Anforderungswarteschlange Dies ist eine HTTP \_ REQUEST \_ V2-Struktur.'
 ms.assetid: F94646C0-7293-4543-842B-F08D8C7E2247
 keywords:
 - HTTP_RESPONSE
@@ -8,21 +8,21 @@ keywords:
 - PHTTP_RESPONSE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a8445021aa61b94ae83a55937b1db5ca4e3c577
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a1dea22be8727307a403d17ff383228187ead294128b4c0f0b05b8c0e84301b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117996316"
 ---
-# <a name="http_response"></a>HTTP- \_ Antwort
+# <a name="http_response"></a>\_HTTP-ANTWORT
 
-Die Version der **http- \_ Antwort** Struktur ist abhängig von der Version der Anforderungs Warteschlange, die wie folgt verwendet wird:
+Die Version der **HTTP \_ RESPONSE-Struktur** hängt von der Version der Anforderungswarteschlange ab, die wie folgt verwendet wird:
 
--   Http Server-API, Version 1,0, Anforderungs Warteschlange: Dies ist eine [**http- \_ Anforderung \_ v1**](/windows/desktop/api/Http/ns-http-http_request_v1) -Struktur.
--   Http-Server-API, Version 2,0, Anforderungs Warteschlange: Dies ist eine [**http \_ Request \_ v2**](/windows/desktop/api/Http/ns-http-http_request_v2) -Struktur.
+-   HTTP Server API Version 1.0 request queue (Anforderungswarteschlange der HTTP-Server-API Version 1.0): Dies ist eine [**HTTP \_ REQUEST \_ V1-Struktur.**](/windows/desktop/api/Http/ns-http-http_request_v1)
+-   HTTP Server API Version 2.0 request queue (Anforderungswarteschlange für HTTP-Server-API Version 2.0): Dies ist eine [**HTTP \_ REQUEST \_ V2-Struktur.**](/windows/desktop/api/Http/ns-http-http_request_v2)
 
-Verwenden Sie [**http- \_ Anforderungen \_ v1**](/windows/desktop/api/Http/ns-http-http_request_v1) und [**http \_ Request \_ v2**](/windows/desktop/api/Http/ns-http-http_request_v2) nicht direkt in Ihrem Code. bei Verwendung der **http- \_ Antwort** wird stattdessen sichergestellt, dass die richtige Version der Struktur basierend auf der Version der Anforderungs Warteschlange verwendet wird.
+Verwenden Sie [**HTTP \_ REQUEST \_ V1**](/windows/desktop/api/Http/ns-http-http_request_v1) und [**HTTP REQUEST \_ \_ V2**](/windows/desktop/api/Http/ns-http-http_request_v2) nicht direkt in Ihrem Code. Die Verwendung von **HTTP \_ RESPONSE** stellt stattdessen sicher, dass die richtige Version der Struktur basierend auf der Version der Anforderungswarteschlange verwendet wird.
 
 
 ```C++
@@ -35,24 +35,24 @@ typedef HTTP_RESPONSE* PHTTP_RESPONSE;
 
 <dl> <dt>
 
-**HTTP- \_ Antwort**
+**\_HTTP-ANTWORT**
 </dt> <dd>
 
-Die Anforderung erfolgte aus einer v1-Anforderungs Warteschlange.
+Die Anforderung stammte aus einer v1-Anforderungswarteschlange.
 
 </dd> <dt>
 
-**HTTP- \_ Antwort**
+**\_HTTP-ANTWORT**
 </dt> <dd>
 
-Die Anforderung erfolgte aus einer v2-Anforderungs Warteschlange.
+Die Anforderung stammte aus einer v2-Anforderungswarteschlange.
 
 </dd> <dt>
 
-**Phttp- \_ Antwort**
+**\_PHTTP-ANTWORT**
 </dt> <dd>
 
-Zeiger auf eine **http- \_ Antwort** Struktur.
+Zeiger auf eine **HTTP \_ RESPONSE-Struktur.**
 
 </dd> </dl>
 
@@ -62,9 +62,9 @@ Zeiger auf eine **http- \_ Antwort** Struktur.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Http. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Http.h</dt> </dl> |
 
 
 

@@ -13,41 +13,41 @@ ms.locfileid: "118104022"
 ---
 # <a name="structure-of-com-error-codes"></a>Struktur von COM-Fehlercodes
 
-Die folgende Abbildung zeigt das Format eines [**HRESULT**](/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a) (oder SCODE). die Zahlen zeigen Bitpositionen an:
+Die folgende Abbildung zeigt das Format eines [**HRESULT**](/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a) (oder SCODE). Die Zahlen geben Bitpositionen an:
 
-![Zeigt das Format von "H RESULT" oder "S CODE" mit Zahlen an, die Bitpositionen angeben.](images/a5a947d1-7b5a-4474-afed-2a1c58fe2421.png)
+![Zeigt das Format eines "H RESULT" oder "S CODE" mit Zahlen an, die Bitpositionen angeben.](images/a5a947d1-7b5a-4474-afed-2a1c58fe2421.png)
 
-Das hochwertige Bit im **HRESULT** oder SCODE gibt an, ob der Rückgabewert Erfolg oder Fehler darstellt. Wenn der Wert auf 0 ,SEVERITY SUCCESS" festgelegt \_ ist, gibt der Wert erfolg an. Wenn 1, SEVERITY ERROR, festgelegt \_ ist, wird ein Fehler angezeigt.
+Das high-order-Bit im **HRESULT oder** SCODE gibt an, ob der Rückgabewert erfolg oder fehler ist. Wenn der Wert auf 0 (SCHWEREGRAD ERFOLGREICH) festgelegt \_ ist, gibt der Wert erfolg an. Wenn der Wert auf 1, SEVERITY ERROR, festgelegt \_ ist, wird ein Fehler angezeigt.
 
 Die Bits R, C, N und r sind reserviert.
 
-Das Feld "Facility" gibt den Systemdienst an, der für den Fehler verantwortlich ist. Microsoft ordnet neue Einrichtungscodes zu, sobald sie erforderlich werden. Die meisten SCODEs- und **HRESULT-Werte** legen das Gebäudefeld auf FACILITY \_ ITF fest, was auf einen Schnittstellenmethodenfehler hinweist.
+Das Feld facility gibt den Systemdienst an, der für den Fehler verantwortlich ist. Microsoft ordnet neue Einrichtungscodes zu, wenn sie erforderlich werden. Die meisten SCODEs- und **HRESULT-Werte** legen das Facility-Feld auf FACILITY \_ ITF fest, was auf einen Schnittstellenmethodefehler hinweist.
 
-Allgemeine Einrichtungsfelder werden in der folgenden Tabelle beschrieben.
+Allgemeine Felder für Gebäude werden in der folgenden Tabelle beschrieben.
 
 
 
-| Feld "Facility"                | Wert        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                              |
+| Facility Field                | Wert        | Beschreibung                                                                                                                                                                                                                                                                                                              |
 |-------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | FACILITY \_ DISPATCH<br/> | 2<br/> | Für **IDispatch-Schnittstellenfehler** mit später Bindung. <br/>                                                                                                                                                                                                                                                             |
-| FACILITY \_ ITF<br/>      | 4<br/> | Für die meisten Statuscodes, die von Schnittstellenmethoden zurückgegeben werden. Die tatsächliche Bedeutung des Fehlers wird von der -Schnittstelle definiert. Das heißt, zwei **HRESULT-s** mit genau demselben 32-Bit-Wert, der von zwei verschiedenen Schnittstellen zurückgegeben wird, können unterschiedliche Bedeutungen haben. <br/>                                                       |
-| FACILITY \_ NULL<br/>     | 0<br/> | Für allgemein anwendbare allgemeine Statuscodes wie Z.B. S \_ OK. <br/>                                                                                                                                                                                                                                                    |
+| FACILITY \_ ITF<br/>      | 4<br/> | Für die meisten Statuscodes, die von Schnittstellenmethoden zurückgegeben werden. Die tatsächliche Bedeutung des Fehlers wird von der -Schnittstelle definiert. Das bedeutet, dass **zwei HRESULT-Werte** mit genau demselben 32-Bit-Wert, der von zwei verschiedenen Schnittstellen zurückgegeben wird, unterschiedliche Bedeutungen haben können. <br/>                                                       |
+| FACILITY \_ NULL<br/>     | 0<br/> | Für allgemein anwendbare allgemeine Statuscodes wie S \_ OK. <br/>                                                                                                                                                                                                                                                    |
 | FACILITY \_ RPC<br/>      | 1<br/> | Für Statuscodes, die von Remoteprozeduraufrufen zurückgegeben werden. <br/>                                                                                                                                                                                                                                                       |
-| FACILITY \_ STORAGE<br/>  | 3<br/> | Für Statuscodes, die von [**IStorage-**](/windows/desktop/api/objidl/nn-objidl-istorage) oder [**IStream-Methodenaufrufen**](/windows/desktop/api/objidl/nn-objidl-istream) im Zusammenhang mit strukturiertem Speicher zurückgegeben werden. Statuscodes, deren Codewert (niedrigere 16 Bits) im Bereich der MS-DOS-Fehlercodes liegt (d.h. kleiner als 256), haben die gleiche Bedeutung wie der entsprechende MS-DOS-Fehler. <br/> |
-| FACILITY \_ WIN32<br/>    | 7<br/> | Wird verwendet, um eine Möglichkeit zur Behandlung von Fehlercodes von Funktionen in der Windows-API als **HRESULT** bereitzustellen. Fehlercodes in 16-Bit-OLE, die doppelte Systemfehlercodes enthalten, wurden ebenfalls in FACILITY \_ WIN32 geändert. <br/>                                                                                                 |
-| FACILITY \_ WINDOWS<br/>  | 8<br/> | Wird für zusätzliche Fehlercodes von von Microsoft definierten Schnittstellen verwendet.<br/>                                                                                                                                                                                                                                            |
+| FACILITY \_ STORAGE<br/>  | 3<br/> | Für Statuscodes, die von [**IStorage- oder**](/windows/desktop/api/objidl/nn-objidl-istorage) [**IStream-Methodenaufrufen**](/windows/desktop/api/objidl/nn-objidl-istream) im Zusammenhang mit strukturiertem Speicher zurückgegeben werden. Statuscodes, deren Codewert (unter 16 Bits) im Bereich von MS-DOS-Fehlercodes (also kleiner als 256) liegt, haben die gleiche Bedeutung wie der entsprechende MS-DOS-Fehler. <br/> |
+| FACILITY \_ WIN32<br/>    | 7<br/> | Wird verwendet, um fehlercodes von Funktionen in der Windows-API als **HRESULT zu behandeln.** Fehlercodes in 16-Bit-OLE, die Systemfehlercodes dupliziert haben, wurden ebenfalls in FACILITY \_ WIN32 geändert. <br/>                                                                                                 |
+| \_EINRICHTUNGSFENSTER<br/>  | 8<br/> | Wird für zusätzliche Fehlercodes von von Microsoft definierten Schnittstellen verwendet.<br/>                                                                                                                                                                                                                                            |
 
 
 
  
 
-Das Codefeld ist eine eindeutige Zahl, die zugewiesen wird, um den Fehler oder die Warnung darzustellen.
+Das Codefeld ist eine eindeutige Zahl, die zugewiesen wird, um den Fehler oder die Warnung zu darstellen.
 
-Gemäß der Konvention weisen **HRESULT-Werte** in der Regel Namen im folgenden Format auf: *Facility* \_ *Severity* \_ *Reason*.
+Standardmäßig haben **HRESULT-Werte** im Allgemeinen Namen im folgenden Format: *Facility* \_ *Severity* \_ *Reason*.
 
-*Die Einrichtung* ist entweder der Name der Einrichtung oder ein anderer Unterscheidungsbezeichner. *Der Schweregrad* ist ein einzelner Buchstabe, S oder E, der angibt, ob der Funktionsaufruf erfolgreich war (S) oder einen Fehler erzeugt hat (E); und *Reason* ist ein Bezeichner, der die Bedeutung des Codes beschreibt. Der Statuscode STG \_ E \_ FILENOTFOUND gibt beispielsweise an, dass ein speicherbezogener Fehler aufgetreten ist. Insbesondere ist keine angeforderte Datei vorhanden. Statuscodes aus FACILITY \_ NULL enthalten das *Facility-Präfix* \_ nicht.
+*Die Einrichtung* ist entweder der Name der Einrichtung oder ein anderer eindeutiger Bezeichner. *Der Schweregrad* ist ein einzelner Buchstabe (S oder E), der angibt, ob der Funktionsaufruf erfolgreich war (S) oder einen Fehler (E) erzeugt hat. und *Reason* ist ein Bezeichner, der die Bedeutung des Codes beschreibt. Der Statuscode STG E FILENOTFOUND gibt beispielsweise an, dass ein speicherbezogener Fehler aufgetreten ist. Insbesondere ist keine angeforderte \_ \_ Datei vorhanden. Statuscodes aus FACILITY \_ NULL geben das Präfix *Facility* \_ aus.
 
-Fehlercodes werden im Kontext einer Schnittstellenimplementierungen definiert. Nach der Definition können Erfolgscodes nicht mehr geändert oder neue Erfolgscodes hinzugefügt werden. Es können jedoch neue Fehlercodes geschrieben werden. Microsoft behält sich das Recht vor, neue Fehlercodes (aber keine Erfolgscodes) für die in FACILITY ITF oder in neuen Einrichtungen beschriebenen Schnittstellen zu \_ definieren.
+Fehlercodes werden im Kontext einer Schnittstellenimplementierung definiert. Nach der Definition können Erfolgscodes nicht mehr geändert oder neue Erfolgscodes hinzugefügt werden. Es können jedoch neue Fehlercodes geschrieben werden. Microsoft behält sich das Recht vor, neue Fehlercodes (aber keine Erfolgscodes) für die in FACILITY ITF oder in neuen Einrichtungen beschriebenen \_ Schnittstellen zu definieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: LVM_SETTOOLTIPS Meldung (kommstrg. h)
-description: Legt das QuickInfo-Steuerelement fest, das vom Listenansicht-Steuerelement zum Anzeigen von Quick Infos verwendet wird. Sie können diese Nachricht explizit senden oder das ListView \_ SetToolTips-Makro verwenden.
+title: LVM_SETTOOLTIPS Nachricht (Commctrl.h)
+description: Legt das QuickInfo-Steuerelement fest, das vom Listenansicht-Steuerelement zum Anzeigen von QuickInfos verwendet wird. Sie können diese Nachricht explizit senden oder das ListView \_ SetToolTips-Makro verwenden.
 ms.assetid: 5b4335a4-e9f0-4b13-b00b-516af3b60bf1
 keywords:
-- Windows-Steuerelemente für LVM_SETTOOLTIPS Meldung
+- LVM_SETTOOLTIPS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ff749c24a35cf73de2d75b8a3b516197b57aac4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7bf2256d94630b8e792fd1f148864f3588b27e73ea5781eb0bdcd24bf9571507
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118170396"
 ---
-# <a name="lvm_settooltips-message"></a>LVM- \_ SetToolTips-Meldung
+# <a name="lvm_settooltips-message"></a>LVM \_ SETTOOLTIPS-Nachricht
 
-Legt das QuickInfo-Steuerelement fest, das vom Listenansicht-Steuerelement zum Anzeigen von Quick Infos verwendet wird. Sie können diese Nachricht explizit senden oder das [**ListView \_ SetToolTips**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settooltips) -Makro verwenden.
+Legt das QuickInfo-Steuerelement fest, das vom Listenansicht-Steuerelement zum Anzeigen von QuickInfos verwendet wird. Sie können diese Nachricht explizit senden oder das [**ListView \_ SetToolTips-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settooltips) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das vorherige QuickInfo-Steuerelement zurück.
+Gibt das Handle zum vorherigen QuickInfo-Steuerelement zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt das Handle für das vorherige QuickInfo-Steuerelement zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt das Handle für das vorherige QuickInfo-Steuerelement zurück.
 
 <dl> <dt>
 
-[**LVM \_ gettooltips**](lvm-gettooltips.md)
+[**LVM \_ GETTOOLTIPS**](lvm-gettooltips.md)
 </dt> </dl>
 
  

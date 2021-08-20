@@ -1,10 +1,10 @@
 ---
-title: organizationalstatus-Attribut
-description: Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person häufig in einer Organisation referenziert wird.
+title: organizationalStatus-Attribut
+description: Der Attributtyp organizationalStatus gibt eine Kategorie an, mit der in einer Organisation häufig auf eine Person verwiesen wird.
 ms.assetid: 1fed7a48-26dc-4d5c-9373-7872e76fc7a7
 ms.tgt_platform: multiple
 keywords:
-- organizationalstatus-Attribut AD-Schema
+- ORGANIZATIONALSTATUS-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d5f07c6d6a74b105f12cc2da055be26a56c3f72
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7bb0d4a5bf8fa712b76f2dc6381d3024dd1784d55608eb5326f80fb9189ff023
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118012412"
 ---
-# <a name="organizationalstatus-attribute"></a>organizationalstatus-Attribut
+# <a name="organizationalstatus-attribute"></a>organizationalStatus-Attribut
 
-Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person häufig in einer Organisation referenziert wird.
+Der Attributtyp organizationalStatus gibt eine Kategorie an, mit der in einer Organisation häufig auf eine Person verwiesen wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | organizationalstatus                        |
-| LDAP-Display-Name | organizationalstatus                        |
+| CN                | organizationalStatus                        |
+| Ldap-Anzeigename | organizationalStatus                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.45                  |
 | System-ID-GUID    | 28596019-7349-4d2f-adff-5a629961f942        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -41,13 +41,13 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -55,11 +55,11 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 1            |
 | Range-Upper            | 256          |
 | Search-Flags           | 0x00000000   |
@@ -76,11 +76,11 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 1            |
 | Range-Upper            | 256          |
 | Search-Flags           | 0x00000000   |
@@ -97,11 +97,11 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 1            |
 | Range-Upper            | 256          |
 | Search-Flags           | 0x00000000   |
@@ -118,11 +118,11 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 1            |
 | Range-Upper            | 256          |
 | Search-Flags           | 0x00000000   |
@@ -139,11 +139,11 @@ Der organizationalstatus-Attributtyp gibt eine Kategorie an, in der eine Person 
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 1            |
 | Range-Upper            | 256          |
 | Search-Flags           | 0x00000000   |

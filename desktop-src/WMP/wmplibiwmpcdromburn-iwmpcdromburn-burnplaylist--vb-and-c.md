@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn burnwiedergabe (Eigenschaft)
-description: Die burnwiedergabe-Eigenschaft ruft die aktuelle Wiedergabeliste ab, die auf die CD brennen soll.
+title: IWMPC über die burnPlaylist-Eigenschaft "burnPlaylist"
+description: Die burnPlaylist-Eigenschaft ruft die aktuelle Wiedergabeliste ab, die auf die CD geschrieben werden soll.
 ms.assetid: 973032de-7249-4ccd-9909-ccc888f4490f
 keywords:
-- burnwiedergabe-Eigenschaften Fenster Media Player
-- burnwiedergabe-Eigenschaft, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, burnwiedergabe (Eigenschaft)
+- burnPlaylist-Eigenschaft Windows Media Player
+- burnPlaylist-Eigenschaft Windows Media Player , IWMPCakuSer-Schnittstelle
+- IWMPC über die Schnittstelle Windows Media Player , burnPlaylist-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cae095696b9c106926fb7f363430574b2eb87cea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 186996632a5b25c89019f9bbb692d9804ae33130650d4b0a29c0cb51e30d0792
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116593"
 ---
-# <a name="iwmpcdromburnburnplaylist-property"></a>Iwmpcdromburn:: burnwiedergabe (Eigenschaft)
+# <a name="iwmpcdromburnburnplaylist-property"></a>IWMPC über die Eigenschaft"::burnPlaylist"
 
-Die **burnwiedergabe** -Eigenschaft ruft die aktuelle Wiedergabeliste ab, die auf die CD brennen soll.
+Die **burnPlaylist-Eigenschaft** ruft die aktuelle Wiedergabeliste ab, die auf die CD geschrieben werden soll.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ Public ReadOnly Property burnPlaylist As IWMPPlaylist
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die **WMPLib. iwmpwiedergabe** -Schnittstelle der zu brennenden Wiedergabeliste.
+Die **WMPLib.IWMPPlaylist-Schnittstelle** der Wiedergabeliste, die zusammengestellt werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,10 +67,10 @@ Die **WMPLib. iwmpwiedergabe** -Schnittstelle der zu brennenden Wiedergabeliste.
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCorpora Überl-Schnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

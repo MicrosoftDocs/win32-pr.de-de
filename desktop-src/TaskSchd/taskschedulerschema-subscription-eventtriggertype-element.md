@@ -36,7 +36,7 @@ Das **Subscription-Element** wird vom komplexen [**eventTriggerType-Typ**](tasks
 
 
 
-| Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                                   |
+| Element                                                                       | Abgeleitet von                                                                 | Beschreibung                                                                   |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/> |
 
@@ -59,7 +59,7 @@ Für die C++-Entwicklung wird das Ereignisabonnement durch die [**IEventTrigger:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

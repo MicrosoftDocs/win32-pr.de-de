@@ -21,7 +21,7 @@ Die Remotedesktopprotokoll-Anbieter-API kann verwendet werden, um ein Protokoll 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Remotedesktopprotokoll-Anbieterenumerationen](custom-remote-protocol-enumerations.md)
+-   [Remotedesktopprotokoll Anbieterenumerationen](custom-remote-protocol-enumerations.md)
 -   [Remotedesktopprotokoll-Anbieterschnittstellen](custom-remote-protocol-interfaces.md)
 -   [Remotedesktopprotokoll Anbieterstrukturen](custom-remote-protocol-structures.md)
 -   [Remotedesktopprotokoll Anbieter-Unions](custom-remote-protocol-unions.md)
@@ -33,7 +33,7 @@ Die Remotedesktopprotokoll-Anbieter-API kann verwendet werden, um ein Protokoll 
 [Erstellen eines Remotedesktopprotokoll-Anbieters](creating-a-custom-remote-protocol.md)
 </dt> <dt>
 
-[Benutzerdefinierte Remotedesktop Protokolle](custom-remote-desktop-protocols.md)
+[Benutzerdefinierte Remotedesktop-Protokolle](custom-remote-desktop-protocols.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientAdvancedSettings8 clientprotocolspec (Eigenschaft)
-description: Gibt das Remote Desktop Protokoll an, das zwischen dem Client und dem Server verwendet wird.
+title: IMsRdpClientAdvancedSettings8 ClientProtocolSpec-Eigenschaft
+description: Gibt das Remotedesktopprotokoll an, das zwischen dem Client und dem Server verwendet wird.
 ms.assetid: DD607D54-CAEA-43EE-94EB-F983AEA0CC1E
 ms.tgt_platform: multiple
 keywords:
-- Clientprotocolspec-Eigenschaft Remotedesktopdienste
-- Clientprotocolspec-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, clientprotocolspec-Eigenschaft
+- ClientProtocolSpec-Eigenschaft Remotedesktopdienste
+- ClientProtocolSpec-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , ClientProtocolSpec-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41e603f7587435b3701ec0511587286e1a38bcc0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc7e0cc7b45e457a2e0300e5e59ac1780a4ac4cd9ef023f10b6a73986a960574
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130131"
 ---
-# <a name="imsrdpclientadvancedsettings8clientprotocolspec-property"></a>IMsRdpClientAdvancedSettings8:: clientprotocolspec (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings8clientprotocolspec-property"></a>IMsRdpClientAdvancedSettings8::ClientProtocolSpec-Eigenschaft
 
-Gibt das Remote Desktop Protokoll an, das zwischen dem Client und dem Server verwendet wird.
+Gibt das Remotedesktopprotokoll an, das zwischen dem Client und dem Server verwendet wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_ClientProtocolSpec(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Wert der [**clientspec**](clientspec.md) -Enumeration, der das Remote Desktop Protokoll angibt, das zwischen dem Client und dem Server verwendet wird.
+Ein Wert der [**ClientSpec-Enumeration,**](clientspec.md) der das zwischen client und server verwendete Remotedesktopprotokoll angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Ein Wert der [**clientspec**](clientspec.md) -Enumeration, der das Remote Deskto
 
 <dl> <dt>
 
-[**Clientspec**](clientspec.md)
+[**ClientSpec**](clientspec.md)
 </dt> <dt>
 
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)

@@ -3,7 +3,7 @@ title: PLAYLIST.columnOrder
 description: Das columnOrder-Attribut gibt die Reihenfolge der Wiedergabelistenspalten an oder ruft sie ab.
 ms.assetid: 91a2e15b-1993-4666-98ef-b893df2b570c
 keywords:
-- PLAYLIST.columnOrder Windows Media Player
+- PLAYLIST.columnOrder-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -29,7 +29,7 @@ Das **columnOrder-Attribut** gibt die Reihenfolge der Wiedergabelistenspalten an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die eine durch Semikolons getrennte Liste von Playlist-Spaltenindizes angibt. Der Standardwert ist "0;1;2;3". Führende und nachfolgende Semikolons und Leerzeichen dürfen nicht vorhanden sein.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die eine durch Semikolons getrennte Liste von Playlist-Spaltenindizes angibt. Der Standardwert ist "0;1;2;3". Führende und nachstellende Semikolons und Leerzeichen sollten nicht vorhanden sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die eine dur
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

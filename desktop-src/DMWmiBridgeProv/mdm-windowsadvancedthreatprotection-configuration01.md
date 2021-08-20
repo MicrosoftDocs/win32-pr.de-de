@@ -1,6 +1,6 @@
 ---
 title: MDM_WindowsAdvancedThreatProtection_Configuration01-Klasse
-description: Die MDM \_ windowsadvancedfixprotection \_ Configuration01-Klasse wird verwendet, um die Konfiguration von Windows Defender Advanced Threat Protection-Endpunkten (wdatp) zu bestimmen.
+description: Die \_ MDM-Klasse WindowsAdvancedThreatProtection \_ Configuration01 wird verwendet, um die Konfiguration von Windows Defender Advanced Threat Protection-Endpunkten (WDATP) zu bestimmen.
 ms.assetid: b4b2ff02-3836-4044-b8fa-d3405f433d8c
 keywords:
 - MDM_WindowsAdvancedThreatProtection_Configuration01-Klasse
@@ -19,18 +19,18 @@ api_type:
 - DllExport
 api_location:
 - Mofs\DMWmiBridgeProv.dll
-ms.openlocfilehash: c6cd6689a66735790c381ac307a443c08464a379
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6bcf9cb641151b282bb1bfc594eb9762e00e11101d8f9fbd865b2712bab5f8a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118164216"
 ---
-# <a name="mdm_windowsadvancedthreatprotection_configuration01-class"></a>MDM \_ windowsadvancedo Protection \_ Configuration01-Klasse
+# <a name="mdm_windowsadvancedthreatprotection_configuration01-class"></a>\_MDM-Klasse "WindowsAdvancedThreatProtection \_ Configuration01"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ windowsadvancedfixprotection \_ Configuration01** -Klasse wird verwendet, um die Konfiguration von Windows Defender Advanced Threat Protection-Endpunkten (wdatp) zu bestimmen.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ Configuration01** wird verwendet, um die Konfiguration von Windows Defender Advanced Threat Protection-Endpunkten (WDATP) zu bestimmen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -50,20 +50,20 @@ class MDM_WindowsAdvancedThreatProtection_Configuration01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ windowsadvancedo Protection \_ Configuration01** -Klasse verfügt über diese Typen von Membern:
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ Configuration01** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ windowsadvancedbedrohlich Protection \_ Configuration01** -Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ Configuration01** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Gruppen**
+**GroupIds**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -76,32 +76,32 @@ TBD
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Configuration".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "Configuration".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/WindowsAdvancedThreatProtection".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/WindowsAdvancedThreatProtection".
 
 </dd> <dt>
 
@@ -116,7 +116,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Telemetryreportingfrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#configuration-telemetryreportingfrequency)
+[TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#configuration-telemetryreportingfrequency)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -133,11 +133,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
@@ -145,7 +145,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

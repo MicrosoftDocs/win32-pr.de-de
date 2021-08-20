@@ -1,30 +1,30 @@
 ---
-title: Imstscax connectingtext-Eigenschaft
-description: Gibt den Text an, der im-Steuerelement zentriert angezeigt wird, während das Steuerelement eine Verbindung herstellt.
+title: IMsTscAx ConnectingText (Eigenschaft)
+description: Gibt den Text an, der zentriert im -Steuerelement angezeigt wird, während das Steuerelement eine Verbindung verbindet.
 ms.assetid: 9bc82074-988f-491b-80e3-00c3f7ba437a
 ms.tgt_platform: multiple
 keywords:
-- Connectingtext-Eigenschaft Remotedesktopdienste
-- Connectingtext-Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
-- Connectingtext-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, connectingtext-Eigenschaft
+- Eigenschafteneigenschaft "ConnectingText Remotedesktopdienste
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
+- ConnectingText-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , ConnectingText-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 433da7d159f1fe5bf44114a0b76ed9b4d807046f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7342e47658e77d9fb29ef03ab1995e5263c78a8e31d2f020852e5fa10864a031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129672"
 ---
-# <a name="imstscaxconnectingtext-property"></a>Imstscax:: connectingtext-Eigenschaft
+# <a name="imstscaxconnectingtext-property"></a>IMsTscAx::ConnectingText (Eigenschaft)
 
-Gibt den Text an, der im-Steuerelement zentriert angezeigt wird, während das Steuerelement eine Verbindung herstellt.
+Gibt den Text an, der zentriert im -Steuerelement angezeigt wird, während das Steuerelement eine Verbindung verbindet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -94,25 +94,25 @@ HRESULT get_ConnectingText(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Anzeige Text.
+Der neue Anzeigetext.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
 Gibt ein **HRESULT** ungleich 0 (null) zurück, wenn ein Fehler auftritt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Beispiel für den Verbindungs Text lautet "Verbindung mit Server wird hergestellt...".
+Ein Beispiel für den Verbindungstext ist "Herstellen einer Verbindung mit dem Server...".
 
-Das Festlegen der **connectingtext** -Eigenschaft ist optional. Wenn Sie nicht festgelegt ist, wird das Steuerelement leer angezeigt, bevor eine Verbindung hergestellt wird.
+Das Festlegen der **ConnectingText-Eigenschaft** ist optional. Wenn es nicht festgelegt ist, wird das Steuerelement leer angezeigt, bevor eine Verbindung hergestellt wird.
 
-Diese Eigenschaft kann nur festgelegt werden, wenn sich das Steuerelement nicht im verbundenen Zustand befindet. Es wird ein Fehler zurückgegeben, wenn er aufgerufen wird **, wenn das \_** Steuerelement verbunden ist. Sie können überprüfen, ob das Steuerelement verbunden ist, indem Sie auf Verbindungs Ereignisse in [**imstscaxevents**](imstscaxevents-interface.md) reagieren oder die [**verbundene**](imstscax-connected.md) Eigenschaft untersuchen.
+Diese Eigenschaft kann nur festgelegt werden, wenn sich das Steuerelement nicht im verbundenen Zustand befindet. Sie gibt **E \_ FAIL zurück,** wenn sie aufgerufen wird, wenn das Steuerelement verbunden ist. Sie können überprüfen, ob das Steuerelement verbunden ist, indem Sie auf Verbindungsereignisse in [**IMsTscAxEvents**](imstscaxevents-interface.md) reagieren oder die [**Connected-Eigenschaft**](imstscax-connected.md) untersuchen.
 
-Die Eigenschaften Methode **get \_ connectingtext** ordnet den für den Puffer erforderlichen Arbeitsspeicher zu, auf den der *pconnectingtext* -Parameter verweist. Beim Aufrufen von C/C++-Anwendungen muss der Arbeitsspeicher durch einen Aufruf der [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) -Funktion freigegeben werden. Dies ist für Visual Basic-und Skript Clients nicht erforderlich.
+Die **Get \_ ConnectingText-Eigenschaftsmethode** weist den erforderlichen Arbeitsspeicher für den Puffer zu, auf den der *pConnectingText-Parameter* zeigt. Beim Aufrufen von C/C++-Anwendungen muss der Arbeitsspeicher mit einem Aufruf der [**SysFreeString-Funktion frei**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) werden. Dies ist für Clients mit Visual Basic Skripterstellung nicht erforderlich.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -124,7 +124,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -132,7 +132,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -159,7 +159,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

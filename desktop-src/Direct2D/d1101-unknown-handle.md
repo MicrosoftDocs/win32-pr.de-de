@@ -1,9 +1,9 @@
 ---
-title: D1101 unbekanntes handle
+title: D1101 Unbekanntes Handle
 ms.assetid: ae40058a-ea17-4262-87dc-0ce852c16c2a
-description: Eine Schnittstelle, die nicht von dieser DLL zugewiesen wurde, wurde an Sie übermittelt.
+description: Eine Schnittstelle, die nicht von dieser DLL zugeordnet wurde, wurde an sie übergeben.
 keywords:
-- D1101 unbekanntes handle Direct2D
+- D1101 Unbekanntes Handle Direct2D
 topic_type:
 - apiref
 api_name:
@@ -13,25 +13,25 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2a87491a02d3dea992f8dd767ad34cf83b2cbf40
-ms.sourcegitcommit: 80ee822f6ebcbcc8f60042e0d14a39ef6989c731
+ms.openlocfilehash: 37e84b9e5117732784267374ad9e6618e60d3b4020a6d23863b069b3b8233aa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "106368703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118161001"
 ---
-# <a name="d1101-unknown-handle"></a>D1101: Unbekanntes handle
+# <a name="d1101-unknown-handle"></a>D1101: Unbekanntes Handle
 
-Eine Schnitt \[ *Stelle* \] , die von dieser DLL nicht zugeordnet wurde, wurde an Sie übermittelt.
+Eine \[ *Schnittstellenschnittstelle,* die \] nicht von dieser DLL zugeordnet wurde, wurde an sie übergeben.
 
 ## <a name="placeholders"></a>Platzhalter
 
 <dl> <dt>
 
-<span id="interface"></span><span id="INTERFACE"></span>*berfläche*
+<span id="interface"></span><span id="INTERFACE"></span>*Schnittstelle*
 </dt> <dd>
 
-Die Adresse der-Schnittstelle.
+Die Adresse der Schnittstelle.
 
 </dd> </dl> 
 
@@ -42,7 +42,7 @@ Die Adresse der-Schnittstelle.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Ungültige Ressourcenverwendung. Die Ressource, die außerhalb von Direct2D erstellt wurde, wird mit einer Direct2D-Factory verwendet, oder die auf einer Factory erstellten Ressourcen wurden mit einer Ressource verwendet, die von einer anderen Factory erstellt wurde.
+Ungültige Ressourcenverwendung. Die außerhalb von Direct2D erstellte Ressource wird mit einer Direct2D-Factory verwendet, oder die in einer Factory erstellten Ressourcen wurden mit einer Ressource verwendet, die von einer anderen Factory erstellt wurde.
 
  
 

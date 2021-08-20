@@ -2,52 +2,52 @@
 description: SNMP-Textkonventionen werden CIM-definierten Typen zugeordnet.
 ms.assetid: 73bb6c22-0a68-4a4b-8de2-8326ec67a059
 ms.tgt_platform: multiple
-title: Text Konvention-Makro
+title: TEXTUAL-CONVENTION-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 329508ce3d124c0b3954675b3142aeb33c402923
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 316463282549180b7c0781ea19d36818e1636bb9f061b78c51420694cfc4890c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118107604"
 ---
-# <a name="textual-convention-macro"></a>Text Konvention-Makro
+# <a name="textual-convention-macro"></a>TEXTUAL-CONVENTION-Makro
 
 SNMP-Textkonventionen werden CIM-definierten Typen zugeordnet.
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
-Die folgenden Zuordnungsregeln gelten für die SNMP-Textkonventionen:
+Die folgenden Zuordnungsregeln gelten für SNMP-Textkonventionen:
 
--   Die benannte Typdefinition in der Syntax Klausel ordnet der CIM-Eigenschaften **qualifiziererobjektsyntax \_** wörtlich zu.
--   Verwenden Sie die folgende Tabelle, um Textkonventionen zuzuordnen, wenn sich die Syntax Klausel explizit auf eine Text Konvention eines SNMPv2C-Text Konvention-Makros bezieht, oder auf eine implizite Text Konvention verweist. Der Standardwert ist immer **null**.
+-   Die Definition des benannten Typs in der SYNTAX-Klausel ordnet der **CIM-Eigenschaftenqualifiziererobjektsyntax \_** ausführlich zu.
+-   Verwenden Sie die folgende Tabelle, um Textkonventionen zuzuordnen, wenn die SYNTAX-Klausel explizit auf eine Textkonvention eines SNMPv2C TEXTUAL-CONVENTION-Makros oder auf eine implizite Textkonvention verweist. Der Standardwert ist immer **NULL.**
 
 
 
-| Text Konvention | CIM-Variant-Typ | CIM Qualifizierer                                                                                                                                                        |
+| Textkonvention | CIM-Variantentyp | CIM-Qualifizierer                                                                                                                                                        |
 |--------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateAndTime        | **VT \_ BSTR**     | **Text \_ Konvention**: DateAndTime<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: DateAndTime<br/> **CimType**: Zeichenfolge<br/>       |
-| Display String      | **VT \_ BSTR**     | **Text \_ Konvention**: Display String<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: Display String<br/> **CimType**: Zeichenfolge<br/>   |
-| MacAddress         | **VT \_ BSTR**     | **Text \_ Konvention**: MACAddress<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: MACAddress<br/> **CimType**: Zeichenfolge<br/>         |
-| Physaddress        | **VT \_ BSTR**     | **Text \_ Konvention**: physaddress<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: physaddress<br/> **CimType**: Zeichenfolge<br/>       |
-| Snmpudpaddress     | **VT \_ BSTR**     | **Text \_ Konvention**: snmpudpaddress<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: snmpudpaddress<br/> **CimType**: Zeichenfolge<br/> |
-| Snmposiaddress     | **VT \_ BSTR**     | **Text \_ Konvention**: snmposiaddress<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: snmposiaddress<br/> **CimType**: Zeichenfolge<br/> |
-| Snmpipxaddress     | **VT \_ BSTR**     | **Text \_ Konvention**: snmpipxaddress<br/> **Codierung**: octetstring<br/> **Objekt \_ Syntax**: snmpipxaddress<br/> **CimType**: Zeichenfolge<br/> |
+| DateAndTime        | **VT \_ BSTR**     | **textual \_ convention**: DateAndTime<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** DateAndTime<br/> **cimtype:** string<br/>       |
+| Displaystring      | **VT \_ BSTR**     | **textual \_ convention**: Displaystring<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** Displaystring<br/> **cimtype:** string<br/>   |
+| MacAddress         | **VT \_ BSTR**     | **\_ Textkonvention:** MacAddress<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** MacAddress<br/> **cimtype:** string<br/>         |
+| PhysAddress        | **VT \_ BSTR**     | **textual \_ convention**: PhysAddress<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** PhysAddress<br/> **cimtype:** string<br/>       |
+| SnmpUDPAddress     | **VT \_ BSTR**     | **textual \_ convention**: SnmpUDPAddress<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** SnmpUDPAddress<br/> **cimtype:** string<br/> |
+| SnmpOSIAddress     | **VT \_ BSTR**     | **textual \_ convention**: SnmpOSIAddress<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** SnmpOSIAddress<br/> **cimtype:** string<br/> |
+| SnmpIPXAddress     | **VT \_ BSTR**     | **textual \_ convention**: SnmpIPXAddress<br/> **encoding**: OCTETSTRING<br/> **\_ Objektsyntax:** SnmpIPXAddress<br/> **cimtype:** string<br/> |
 
 
 
  
 
--   Der CIM-definierte Variant-Typ und die CIM-Eigenschafts Qualifizierer **Text \_ Konvention**, **Codierung**, **Objekt \_ Syntax** und **CimType** -Zuordnung unter Verwendung des zugrunde liegenden primitiven Typs.
--   Die Display-Hint-Klausel des SNMPv2C-Text Konvention-Makros wird dem CIM-Eigenschaften qualifiziereranzeige- **\_ Hinweis** wörtlich zugeordnet. Dieser Qualifizierer wird nicht generiert, wenn kein Textkonventionen-Makro vorhanden ist oder das Makro keine Display-Hint-Klausel enthält.
+-   Der CIM-definierte Variantestyp und die CIM-Eigenschaftsqualifizierer **textual \_ convention**, **encoding**, **object \_ syntax** und **cimtype** map unter Verwendung des zugrunde liegenden primitiven Typs.
+-   Die DISPLAY-HINT-Klausel des SNMPv2C TEXTUAL-CONVENTION-Makros wird dem **\_ ANZEIGEhinweis** des CIM-Eigenschaftsqualifizierers ausführlich zugeordnet. Dieser Qualifizierer wird nicht generiert, wenn kein TEXTUAL-CONVENTION-Makro vorhanden ist oder das Makro keine DISPLAY-HINT-Klausel enthält.
 
 ## <a name="example-code"></a>Beispielcode
 
-Im folgenden Beispiel wird eine SNMPv1-Text Konvention beschrieben.
+Im folgenden Beispiel wird eine SNMPv1-Textkonvention beschrieben.
 
 ``` syntax
 myNamedType ::= DISPLAYSTRING (SIZE (0..127))
@@ -59,7 +59,7 @@ STATUS MANDATORY
 DESCRIPTION ""
 ```
 
-Dieses Beispiel generiert die folgenden CIM-Qualifizierer.
+In diesem Beispiel werden die folgenden CIM-Qualifizierer generiert.
 
 ``` syntax
 object_syntax("myNamedType"),
@@ -68,7 +68,7 @@ encoding("OCTETSTRING"),
 variable_length("0..127")
 ```
 
-Im folgenden Beispiel wird eine SNMPv2-Text Konvention beschrieben.
+Im folgenden Beispiel wird eine SNMPv2-Textkonvention beschrieben.
 
 ``` syntax
 myDisplaystring ::= TEXTUAL-CONVENTION
@@ -84,7 +84,7 @@ STATUS current
 DESCRIPTION ""
 ```
 
-Dieses Beispiel generiert die folgenden CIM-Qualifizierer.
+In diesem Beispiel werden die folgenden CIM-Qualifizierer generiert.
 
 ``` syntax
 object_syntax("myDisplaystring"),

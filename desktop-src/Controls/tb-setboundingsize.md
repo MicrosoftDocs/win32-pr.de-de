@@ -1,9 +1,9 @@
 ---
-title: TB_SETBOUNDINGSIZE Meldung (kommstrg. h)
-description: Legt die Begrenzungs Größe für ein mehrspaltige Symbolleisten-Steuerelement fest.
+title: TB_SETBOUNDINGSIZE Nachricht (Commctrl.h)
+description: Legt die Begrenzungsgröße für ein symbolleistenbasiertes Steuerelement mit mehreren Spalten fest.
 ms.assetid: f406d9e3-1c40-4317-8cf1-51706f4c6adf
 keywords:
-- Windows-Steuerelemente für TB_SETBOUNDINGSIZE Meldung
+- TB_SETBOUNDINGSIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 419595da16148f7382da5053d3187e9cce9e00a0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7d409769e08e489d922dbdc2361779953555000dca784a6f7b977bbbcd3a5e65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167743"
 ---
-# <a name="tb_setboundingsize-message"></a>TB \_ setboundingsize-Meldung
+# <a name="tb_setboundingsize-message"></a>TB \_ SETBOUNDINGSIZE-Nachricht
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird möglicherweise in zukünftigen Versionen von Windows nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird in zukünftigen Versionen von Windows möglicherweise nicht mehr unterstützt.\]
 
-Legt die Begrenzungs Größe für ein mehrspaltige Symbolleisten-Steuerelement fest.
+Legt die Begrenzungsgröße für ein symbolleistenbasiertes Steuerelement mit mehreren Spalten fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Größen**](/previous-versions//dd145106(v=vs.85)) Struktur, deren **CY** -Member die umgebende Höhe enthält. Der **CX** -Member (die Breite) wird ignoriert.
+Zeiger auf eine [**SIZE-Struktur,**](/previous-versions//dd145106(v=vs.85)) deren **Cy-Member** die umgebende Höhe enthält. Der **cx-Member** (die Breite) wird ignoriert.
 
 </dd> </dl>
 
@@ -51,11 +51,11 @@ Der Rückgabewert wird nicht verwendet.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Begrenzungs Größe steuert, wie Schaltflächen in Spalten angeordnet sind. Wenn das Symbolleisten-Steuerelement nicht über das Format [**tbstyle \_ Ex \_ MultiColumn**](toolbar-extended-styles.md) verfügt, hat diese Nachricht keine Auswirkung.
+Die Begrenzungsgröße steuert, wie Schaltflächen in Spalten organisiert werden. Wenn das Symbolleistensteuerelement nicht über den [**TBSTYLE \_ EX \_ MULTICOLUMN-Stil**](toolbar-extended-styles.md) verfügt, hat diese Meldung keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Die Begrenzungs Größe steuert, wie Schaltflächen in Spalten angeordnet sind. 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

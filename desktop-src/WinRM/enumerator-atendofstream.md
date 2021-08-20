@@ -1,12 +1,12 @@
 ---
-title: Enumerator. atendovstream-Eigenschaft (WSManDisp. h)
-description: Ruft einen booleschen Wert ab, der angibt, ob in der Auflistung weitere Elemente vorhanden sind.
+title: Enumerator.AtEndOfStream-Eigenschaft (WSManDisp.h)
+description: Ruft einen booleschen Wert ab, der angibt, ob die Auflistung weitere Elemente enthält.
 ms.assetid: 5e80674a-7889-4753-b0dd-4d7b44eba00a
 ms.tgt_platform: multiple
 keywords:
-- Atendotstream-Eigenschaft Windows-Remoteverwaltung
-- Atendobstream-Eigenschaft Windows-Remoteverwaltung, Enumeratorobjekt
-- EnumeratorobjektWindows-Remoteverwaltung, atendobstream-Eigenschaft
+- AtEndOfStream-Eigenschaft Windows Remoteverwaltung
+- AtEndOfStream-Eigenschaft Windows Remoteverwaltung , Enumeratorobjekt
+- Enumeratorobjekt Windows Remoteverwaltung , AtEndOfStream-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 023798f6c868e434218dd1a4dbdf1928bf4526a0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b1077837f82d650b57dfea0316ef15094b18749eefdb6957e62e6afd92cfe672
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118113201"
 ---
-# <a name="enumeratoratendofstream-property"></a>Enumerator. atendovstream (Eigenschaft)
+# <a name="enumeratoratendofstream-property"></a>Enumerator.AtEndOfStream-Eigenschaft
 
-Ruft einen booleschen Wert ab, der angibt, ob in der Auflistung weitere Elemente vorhanden sind.
+Ruft einen booleschen Wert ab, der angibt, ob die Auflistung weitere Elemente enthält.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,33 +45,33 @@ Enumerator.AtEndOfStream As BOOLEAN
 
 <span id="True"></span><span id="true"></span><span id="TRUE"></span>
 
-<span id="True"></span><span id="true"></span><span id="TRUE"></span>**Fall**
+<span id="True"></span><span id="true"></span><span id="TRUE"></span>**STIMMT**
 
 
 </dt> <dd>
 
-Es sind keine weiteren Elemente in der Auflistung.
+In der Auflistung sind keine Elemente mehr enthalten.
 
 </dd> <dt>
 
 <span id="False"></span><span id="false"></span><span id="FALSE"></span>
 
-<span id="False"></span><span id="false"></span><span id="FALSE"></span>**Alarm**
+<span id="False"></span><span id="false"></span><span id="FALSE"></span>**FALSE**
 
 
 </dt> <dd>
 
-Es sind weitere Elemente verfügbar.
+Weitere Elemente sind verfügbar.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie das [**Enumeratorobjekt**](enumerator.md) freigeben, nachdem Sie alle benötigten Daten erhalten haben, werden alle ausstehenden enumerationsanforderungen entfernt. Weitere Informationen finden Sie unter [auflisten oder Auflisten aller Instanzen einer Ressource](enumerating-or-listing-all-instances-of-a-resource.md).
+Wenn Sie das [**Enumeratorobjekt**](enumerator.md) frei geben, nachdem Sie alle erforderlichen Daten abgerufen haben, werden alle ausstehenden Enumerationsanforderungen entfernt. Weitere Informationen finden Sie unter Auflisten oder Auflisten aller Instanzen [einer Ressource.](enumerating-or-listing-all-instances-of-a-resource.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Beispiel werden Betriebssystem Instanzen aufgelistet. Beachten Sie, dass die Freigabe des Enumerationsobjekt alle ausstehenden enumerationsanforderungen bereinigt. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das WinRM. cmd-Tool.
+Im folgenden VBScript-Beispiel werden Betriebssysteminstanzen aufzählt. Beachten Sie, dass durch die Freiung des Enumerationsobjekts alle ausstehenden Enumerationsanforderungen bereinigt werden. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das WinRM.cmd-Tool.
 
 
 ```VB
@@ -115,9 +115,9 @@ End Sub
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
