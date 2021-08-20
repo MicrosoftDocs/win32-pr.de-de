@@ -1,5 +1,5 @@
 ---
-description: Stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Benutzer Hinweis Qualifizierer dar.
+description: Stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Qualifizierer für Benutzerhinweise dar.
 ms.assetid: 857af3d6-aa7b-429a-a056-72573232f72c
 title: Qualifiziererobjekt
 ms.topic: reference
@@ -13,55 +13,55 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 3b1740e064cac53f93d9c81603477a1230c7fd7a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 546a4ea5fea67dc386d789f80437fddf7d08c886f9255e6cd09378f2d5bf7e23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117975726"
 ---
 # <a name="qualifier-object"></a>Qualifiziererobjekt
 
-\[Das **qualifiziererobjekt** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace, indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikat Richtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinien Informationen in der Zertifikat Richtlinien Erweiterung sind.\]
+\[Das **Qualifiziererobjekt** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates,**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikatrichtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinieninformationen in der Zertifikatrichtlinienerweiterung sind.\]
 
-Das **qualifiziererobjekt** stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Benutzer Hinweis Qualifizierer dar.
+Das **Qualifier-Objekt** stellt einen CPS-Zeiger (Certification Practice Statement) oder einen Benutzerhinweisqualifizierer dar.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Das **qualifiziererobjekt** wird verwendet, um die folgenden Aufgaben auszuführen:
+Das **Qualifiziererobjekt** wird verwendet, um die folgenden Aufgaben auszuführen:
 
--   Ruft den Objekt Bezeichner des Qualifizierers ab.
--   Rufen Sie die Uniform Resource Identifier (URI) ab, die auf eine von der Zertifizierungsstelle ( [*Certification Authority*](../secgloss/c-gly.md) , ca) veröffentlichte CPS verweist.
--   Ruft den Namen der dem Qualifizierer zugeordneten Organisation ab.
--   Rufen Sie den Namen und den Inhalt einer Benutzer Benachrichtigung ab.
+-   Ruft den Objektbezeichner des Qualifizierers ab.
+-   Rufen Sie den Uniform Resource Identifier (URI) ab, der auf einen von der [*Zertifizierungsstelle*](../secgloss/c-gly.md) veröffentlichten CPS verweist.
+-   Rufen Sie den Namen der Organisation ab, die dem Qualifizierer zugeordnet ist.
+-   Rufen Sie den Namen und den Inhalt eines Benutzerhinweises ab.
 
 ## <a name="members"></a>Member
 
-Das **qualifiziererobjekt** verfügt über diese Typen von Membern:
+Das **Qualifiziererobjekt** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **qualifiziererobjekt** verfügt über diese Eigenschaften.
+Das **Qualifiziererobjekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                          | Zugriffstyp          | BESCHREIBUNG                                                                                                                         |
+| Eigenschaft                                                          | Zugriffstyp          | Beschreibung                                                                                                                         |
 |:------------------------------------------------------------------|:---------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| [**Cpspointer**](qualifier-cpspointer.md)<br/>             | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den URI enthält, der auf ein von der Zertifizierungsstelle veröffentlichtes CPS verweist.<br/>                                       |
-| [**Explizertext**](qualifier-explicittext.md)<br/>         | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den Inhalt der Benutzer Benachrichtigung enthält. Diese Eigenschaft ist möglicherweise leer.<br/>                             |
-| [**Benachrichtifür Notierungen**](qualifier-noticenumbers.md)<br/>       | Schreibgeschützt<br/> | Ruft ein **noticenumbers** -Objekt ab, das die Auflistung der Benutzer Hinweis Nummern enthält. Diese Eigenschaft ist möglicherweise leer.<br/>    |
-| [**OID**](qualifier-oid.md)<br/>                           | Schreibgeschützt<br/> | Ruft ein [**OID**](oid.md) -Objekt ab, das den Qualifizierer identifiziert. Dies ist die Standard Eigenschaft.<br/>                      |
-| [**OrganizationName**](qualifier-organizationname.md)<br/> | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den Namen der dem Qualifizierer zugeordneten Organisation enthält. Diese Eigenschaft ist möglicherweise leer.<br/> |
+| [**CPSPointer**](qualifier-cpspointer.md)<br/>             | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den URI enthält, der auf einen von der Zertifizierungsstelle veröffentlichten CPS verweist.<br/>                                       |
+| [**ExplicitText**](qualifier-explicittext.md)<br/>         | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den Inhalt des Benutzerhinweises enthält. Diese Eigenschaft ist möglicherweise leer.<br/>                             |
+| [**NoticeNumbers**](qualifier-noticenumbers.md)<br/>       | Schreibgeschützt<br/> | Ruft ein **NoticeNumbers-Objekt** ab, das die Auflistung von Benutzerhinweisnummern enthält. Diese Eigenschaft ist möglicherweise leer.<br/>    |
+| [**Oid**](qualifier-oid.md)<br/>                           | Schreibgeschützt<br/> | Ruft ein [**OID-Objekt**](oid.md) ab, das den Qualifizierer identifiziert. Dies ist die Standardeigenschaft.<br/>                      |
+| [**OrganizationName**](qualifier-organizationname.md)<br/> | Schreibgeschützt<br/> | Ruft eine Zeichenfolge ab, die den Namen der Organisation enthält, die dem Qualifizierer zugeordnet ist. Diese Eigenschaft ist möglicherweise leer.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **qualifiziererobjekt** kann nicht erstellt werden.
+Das **Qualifiziererobjekt** kann nicht erstellt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Das **qualifiziererobjekt** kann nicht erstellt werden.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

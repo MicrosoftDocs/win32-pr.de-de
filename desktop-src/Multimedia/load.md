@@ -1,9 +1,9 @@
 ---
-title: Befehl "Laden"
-description: Der Load-Befehl lädt eine Datei in einem gerätespezifischen Format. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+title: Befehl "load"
+description: Der Befehl load lädt eine Datei in einem gerätespezifischen Format. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: ae7bfe92-7957-4756-a408-e3ab60dd9aa4
 keywords:
-- Befehl "Laden" Windows Multimedia
+- Load-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b199a6d3aea8a2697217eb75176c24b2b0bc2e2a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c66822de727ea45e93839c710dae19739cba8adaac8b571846c1fa23ef0083c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139355"
 ---
-# <a name="load-command"></a>Befehl "Laden"
+# <a name="load-command"></a>Befehl "load"
 
-Der Load-Befehl lädt eine Datei in einem gerätespezifischen Format. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+Der Befehl load lädt eine Datei in einem gerätespezifischen Format. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,38 +39,38 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszFilePos"></span><span id="lpszfilepos"></span><span id="LPSZFILEPOS"></span>*lpszfilepos*
+<span id="lpszFilePos"></span><span id="lpszfilepos"></span><span id="LPSZFILEPOS"></span>*lpszFilePos*
 </dt> <dd>
 
-Der zu ladende Pfad und Dateiname. Bei Video Überlagerungs Geräten kann dies auch ein Ziel Rechteck für die Daten enthalten. Geben Sie zum Angeben eines Ziel Rechtecks "at" gefolgt von **x1 y1 x2 Y2** an, wobei **x1 y1** die obere linke Ecke des Rechtecks angeben und **x2 Y2** die Breite und Höhe angeben. Das Rechteck ist relativ zum Video Puffer Ursprung.
+Pfad und Dateiname, der geladen werden soll. Bei Videoüberlagerungsgeräten kann dies auch ein Zielrechteck für die Daten enthalten. Um ein Zielrechteck anzugeben, geben Sie "at" gefolgt von **X1 Y1 X2 Y2** an, wobei **X1 Y1** die obere linke Ecke des Rechtecks und **X2 Y2** die Breite und Höhe angeben. Das Rechteck ist relativ zum Ursprung des Videopuffers.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für Digitalvideogeräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das "vidboard"-Gerät sendet eine Benachrichtigungs Meldung, wenn der Ladevorgang abgeschlossen ist.
+Das Gerät "vidboard" sendet eine Benachrichtigung, wenn das Laden abgeschlossen ist.
 
 ## <a name="examples"></a>Beispiele
 
-Mit dem folgenden Befehl wird eine Datei in das "vidboard"-Gerät geladen.
+Der folgende Befehl lädt eine Datei in das Gerät "vidboard".
 
 ``` syntax
 load vidboard c:\vid\fish.vid notify
@@ -91,10 +91,10 @@ load vidboard c:\vid\fish.vid notify
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> </dl>
 
  

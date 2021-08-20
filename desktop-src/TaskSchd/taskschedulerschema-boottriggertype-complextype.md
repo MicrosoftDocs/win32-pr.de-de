@@ -46,7 +46,7 @@ Definiert das untergeordnete Element und Sequenzierungsinformationen für das [*
 
 
 
-| Element                                                            | type     | BESCHREIBUNG                                                                                 |
+| Element                                                            | Typ     | Beschreibung                                                                                 |
 |--------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------|
 | [**Verzögern**](taskschedulerschema-delay-boottriggertype-element.md) | duration | Die Zeitspanne zwischen dem Start des Systems und dem Auslösen des Triggers. <br/> |
 
@@ -67,7 +67,7 @@ Zusätzlich zum hier definierten untergeordneten Element verwendet das [**BootTr
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,27 +1,27 @@
 ---
-title: Installieren benutzerdefinierter e/a-Prozeduren
-description: Installieren benutzerdefinierter e/a-Prozeduren
+title: Installieren von benutzerdefinierten E/A-Prozeduren
+description: Installieren von benutzerdefinierten E/A-Prozeduren
 ms.assetid: 7b26a062-fa52-4de3-b8c8-b9f9167068fc
 keywords:
-- Multimedia-Datei-e/a, benutzerdefinierte Verfahren
-- Datei-e/a, benutzerdefinierte Prozeduren
-- Eingabe und Ausgabe (e/a), benutzerdefinierte Prozeduren
-- E/a (Eingabe und Ausgabe), benutzerdefinierte Prozeduren
-- Installieren benutzerdefinierter e/a-Prozeduren
-- benutzerdefinierte e/a
-- mmioinstallioproc-Funktion
+- Multimediadatei-E/A, benutzerdefinierte Prozeduren
+- Datei-E/A, benutzerdefinierte Prozeduren
+- Eingabe und Ausgabe (E/A), benutzerdefinierte Prozeduren
+- E/A (Eingabe und Ausgabe), benutzerdefinierte Prozeduren
+- Installieren von benutzerdefinierten E/A-Prozeduren
+- Benutzerdefinierte E/A
+- mmioInstallIOProc-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1574b7076e7344fa8e800ef1f18ad13fcfd3f3af
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4ec92542efe80c24e1e620983d78b4b9a6c246ff003934a1ace1cae159fbd1da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140464"
 ---
-# <a name="installing-custom-io-procedures"></a>Installieren benutzerdefinierter e/a-Prozeduren
+# <a name="installing-custom-io-procedures"></a>Installieren von benutzerdefinierten E/A-Prozeduren
 
-Zum Installieren einer e/a-Prozedur, die dem zugeordnet ist. Dateinamenerweiterung des Bogens, verwenden Sie die [**mmioinstallioproc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioinstallioproc) -Funktion wie folgt:
+So installieren Sie eine E/A-Prozedur, die zugeordnet ist. Verwenden Sie die Arc-Dateinamenerweiterung wie folgt mit der [**mmioInstallIOProc-Funktion:**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioinstallioproc)
 
 
 ```C++
@@ -31,16 +31,16 @@ mmioInstallIOProc (mmioFOURCC('A', 'R', 'C', ' '),
 
 
 
-Wenn Sie eine e/a-Prozedur mit [**mmioinstallioproc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioinstallioproc)installieren, bleibt die Prozedur installiert, bis Sie Sie entfernen. Die e/a-Prozedur wird für jede Datei verwendet, die Sie öffnen, solange die Datei über die entsprechende Dateierweiterung verfügt.
+Wenn Sie eine E/A-Prozedur mit [**mmioInstallIOProc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioinstallioproc)installieren, bleibt die Prozedur installiert, bis Sie sie entfernen. Die E/A-Prozedur wird für jede Datei verwendet, die Sie öffnen, solange die Datei über die entsprechende Dateinamenerweiterung verfügt.
 
-Sie können auch eine e/a-Prozedur vorübergehend mithilfe der [**mmioopen**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioopen) -Funktion installieren. In diesem Fall wird die e/a-Prozedur nur mit einer Datei verwendet, die mit **mmioopen** geöffnet wurde, und wird entfernt, wenn die Datei mit der [**mmioclose**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioclose) -Funktion geschlossen wird. Verwenden Sie zum Angeben einer e/a-Prozedur, wenn Sie eine Datei mit **mmioopen** öffnen, den *lpmmioinfo* -Parameter wie folgt, um auf eine [**mmioinfo**](/previous-versions//dd757322(v=vs.85)) -Struktur zu verweisen:
+Sie können eine E/A-Prozedur auch vorübergehend installieren, indem Sie die [**mmioOpen-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioopen) verwenden. In diesem Fall wird die E/A-Prozedur nur mit einer Datei verwendet, die mit **mmioOpen** geöffnet wurde, und wird entfernt, wenn die Datei mithilfe der [**mmioClose-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioclose) geschlossen wird. Um beim Öffnen einer Datei mit **mmioOpen** eine E/A-Prozedur anzugeben, verwenden Sie den *lpmmioinfo-Parameter,* um wie folgt auf eine [**MMIOINFO-Struktur**](/previous-versions//dd757322(v=vs.85)) zu verweisen:
 
-1.  Legen Sie den **fccioproc** -Member auf **null** fest.
-2.  Legen Sie den **pioproc** -Member auf die Prozedur Instanz-Adresse des e/a-Verfahrens fest.
-3.  Legen Sie alle anderen Mitglieder auf 0 (null) fest (es sei denn, Sie öffnen eine Speicherdatei oder lesen oder schreiben direkt in den Datei-e/a-Puffer).
+1.  Legen Sie den **fccIOProc-Member** auf **NULL** fest.
+2.  Legen Sie den **pIOProc-Member** auf die Prozedurinstanzadresse der E/A-Prozedur fest.
+3.  Legen Sie alle anderen Member auf 0 fest (es sei denn, Sie öffnen eine Speicherdatei oder lesen oder schreiben direkt in den Datei-E/A-Puffer).
 
-Entfernen Sie alle e/a-Prozeduren, die Sie installiert haben, bevor Sie die Anwendung beenden.
+Stellen Sie sicher, dass Sie alle E/A-Prozeduren entfernen, die Sie installiert haben, bevor Sie Ihre Anwendung beenden.
 
- 
+ 
 
- 
+ 

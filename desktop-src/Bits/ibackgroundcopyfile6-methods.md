@@ -1,29 +1,29 @@
 ---
 title: IBackgroundCopyFile6-Methoden
-description: Die IBackgroundCopyFile6-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IBackgroundCopyFile6-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 589EC0DA-95B1-4E5D-84C8-B273D838B0CB
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94ec4a2faecca1cb71a7659e652715911fb03b5d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f7474a08a4d4427c9264abe65de9b7bad4357210e484b52b636a0234f90599cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118173532"
 ---
 # <a name="ibackgroundcopyfile6-methods"></a>IBackgroundCopyFile6-Methoden
 
-Die [**IBackgroundCopyFile6**](/windows/desktop/api/bits10_1/nn-bits10_1-ibackgroundcopyfile6) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IBackgroundCopyFile6-Schnittstelle**](/windows/desktop/api/bits10_1/nn-bits10_1-ibackgroundcopyfile6) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                           | BESCHREIBUNG                                                                   |
+| Thema                                                                                           | Beschreibung                                                                   |
 |-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [**Updatedownloadposition-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-updatedownloadposition)<br/> | Gibt eine Position an, an der das Herunterladen fehlender Daten aus priorisiert wird <br/> |
-| [**Requestfileranges-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-requestfileranges)<br/>           | Fügt einen neuen Satz von Datei Bereichen hinzu, die für den Download priorisiert werden sollen. <br/>     |
-| [**Getfilledfileranges-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-getfilledfileranges)<br/>       | Gibt den Satz von Datei Bereichen zurück, die heruntergeladen wurden.<br/>          |
+| [**UpdateDownloadPosition-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-updatedownloadposition)<br/> | Gibt eine Position an, von der das Herunterladen fehlender Daten priorisiert werden soll. <br/> |
+| [**RequestFileRanges-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-requestfileranges)<br/>           | Fügt einen neuen Satz von Dateibereichen hinzu, die für den Download priorisiert werden sollen. <br/>     |
+| [**GetFilledFileRanges-Methode**](/windows/desktop/api/Bits10_1/nf-bits10_1-ibackgroundcopyfile6-getfilledfileranges)<br/>       | Gibt den Satz von Dateibereichen zurück, die heruntergeladen wurden.<br/>          |
 
 
 

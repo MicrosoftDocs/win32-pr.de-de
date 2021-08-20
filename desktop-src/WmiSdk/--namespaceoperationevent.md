@@ -43,7 +43,7 @@ class __NamespaceOperationEvent : __Event
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ NamespaceOperationEvent-Klasse** verfügt über die folgenden Membertypen:
+Die **\_ \_ NamespaceOperationEvent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -53,16 +53,16 @@ Die **\_ \_ NamespaceOperationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**\_SICHERHEITSDESKRIPTOR**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint8 array**
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
@@ -79,7 +79,7 @@ Namespace, der vom Ereignis betroffen ist. Bei Erstellungsereignissen ist dies d
 
 </dd> <dt>
 
-**ZEIT \_ ERSTELLT**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint64**
@@ -88,7 +88,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Coordinated Universal Times) angegeben. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Coordinated Universal Times) vor. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
@@ -96,7 +96,7 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 
 ## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ NamespaceOperationEvent-Klasse** wird von Event [**\_ \_ abgeleitet.**](--event.md)
+Die **\_ \_ NamespaceOperationEvent-Klasse** wird von [**\_ \_ Event**](--event.md)abgeleitet.
 
 Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen einer der folgenden Klassen, die von dieser Klasse abgeleitet werden:
 
@@ -118,7 +118,7 @@ Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen einer der 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -128,7 +128,7 @@ Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen einer der 
 [WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[Bestimmen des Zu empfangenden Ereignistyps](determining-the-type-of-event-to-receive.md)
+[Bestimmen des Typs des zu empfangenden Ereignisses](determining-the-type-of-event-to-receive.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Undvtaskplugin-Beendigungs Methode
+title: IRDVTaskPlugin Terminate-Methode
 description: Wird aufgerufen, wenn der Task-Agent heruntergefahren wird.
 ms.assetid: b693a318-1da7-4207-8046-a62b7ccca471
 ms.tgt_platform: multiple
 keywords:
-- Beendigungs Methode Remotedesktopdienste
-- Methode Remotedesktopdienste beenden, Schnittstelle "iridvtaskplugin"
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste, Methode beenden
+- Terminate-Methode Remotedesktopdienste
+- Terminate-Methode Remotedesktopdienste , IRDVTaskPlugin-Schnittstelle
+- IRDVTaskPlugin-Schnittstelle Remotedesktopdienste , Terminate-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 178f0a7c054169d972acb6b60a9cc80578fd13e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ccfcb1a59f0db6d29881d139d16bd08308a40df2c1233beab66b0b4814caa84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129267"
 ---
-# <a name="irdvtaskpluginterminate-method"></a>Undvtaskplugin:: End-Methode
+# <a name="irdvtaskpluginterminate-method"></a>IRDVTaskPlugin::Terminate-Methode
 
 Wird aufgerufen, wenn der Task-Agent heruntergefahren wird.
 
@@ -42,16 +42,16 @@ HRESULT Terminate(
 
 <dl> <dt>
 
-*Personalabteilung* \[ in\]
+*hr* \[ In\]
 </dt> <dd>
 
-Gibt an, ob das Herunterfahren auf ein normales Herunterfahren oder einen Fehler zurückzuführen ist. Wenn das Herunterfahren normal ist, enthält dies **S \_ OK**. Andernfalls enthält Sie einen **HRESULT** -Fehlercode.
+Gibt an, ob das Herunterfahren auf ein normales Herunterfahren oder einen Fehler zurückzuführen ist. Wenn das Herunterfahren normal ist, enthält **dies S \_ OK**. Andernfalls enthält  sie einen HRESULT-Fehlercode.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**"Undvtaskplugin"**](irdvtaskplugin.md)
+[**IRDVTaskPlugin**](irdvtaskplugin.md)
 </dt> </dl>
 
  

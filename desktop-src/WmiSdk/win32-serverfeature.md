@@ -1,5 +1,5 @@
 ---
-description: Die Win32 ServerFeature-Klasse stellt die Funktionen dar, die auf einem Computer installiert \_ sind, auf dem Windows Server ausgeführt wird.
+description: Die Win32 ServerFeature-Klasse stellt die Funktionen dar, die auf einem Computer mit Windows \_ Server installiert sind.
 ms.assetid: fe3bb95c-7f69-47b5-9c3d-771cdc3ed9ca
 ms.tgt_platform: multiple
 title: Win32_ServerFeature-Klasse
@@ -44,7 +44,7 @@ class Win32_ServerFeature
 };
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **Win32 \_ ServerFeature-Klasse** verfügt über die folgenden Membertypen:
 
@@ -246,7 +246,7 @@ TFTP-Client
 
 60
 
-[Wechseldatenträger Storage-Manager](/windows)
+[Wechselmedien Storage-Manager](/windows)
 
 61
 
@@ -614,7 +614,7 @@ LPD-Druckdienst
 
 [Server für verteilte Scanvorgänge](/windows)<br/>
 
-Webserver (IIS) – Rollendienste (2)
+Webserver (IIS): Rollendienste (2)
 
 Wert
 
@@ -638,7 +638,7 @@ Standarddokument
 
 144
 
-Verzeichnis durchsuchen
+Verzeichnissuche
 
 145
 
@@ -766,7 +766,7 @@ IIS-Verwaltungskonsole
 
 176
 
-IIS-Verwaltungsskripts und -Tools
+IIS-Verwaltungsskripts und -tools
 
 177
 
@@ -940,7 +940,7 @@ Name
 
 250
 
-[Autorisierungsprotokoll für Hostanmeldeinformationen](/windows)
+[Host Credential Authorization Protocol](/windows)
 
 UDDI-Dienste – Rollendienste (11)
 
@@ -1264,7 +1264,7 @@ Active Directory-Verwaltungscenter<br/>
 
 337
 
-[Remotedesktopverbindung Brokertools](/windows)<br/>
+[Remotedesktopverbindung Broker-Tools](/windows)<br/>
 
 410
 
@@ -1300,7 +1300,7 @@ Active Directory-Verwaltungscenter<br/>
 
 476
 
-[Remotedesktop Licensing Diagnoser Tools](/windows)
+[Remotedesktop Lizenzierungsdiagnosetools](/windows)
 
 479
 
@@ -1428,7 +1428,7 @@ Name
 
 408
 
-[Benutzeroberfläche Management Console](/windows)
+[Benutzeroberfläche-Verwaltungskonsole](/windows)
 
 449
 
@@ -1516,7 +1516,7 @@ Name
 
 482
 
-[Speicherdienste](/windows)
+[Storage Dienstleistungen](/windows)
 
 484
 
@@ -1556,7 +1556,7 @@ ID-Nummer des übergeordneten Serverfeatures. Diese Eigenschaft ist 0, wenn das 
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Serverfeatures finden Sie unter [Windows Server 2008 Server-Manager Technical Overview (Technische Übersicht über Server 2008).](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753319(v=ws.10))
+Weitere Informationen zu Serverfeatures finden Sie in der [technischen Übersicht über Windows Server 2008 Server-Manager.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753319(v=ws.10))
 
 Unternehmen, die keine Verwaltungssoftware verwenden, die Serverfeatures meldet, z. B. System Center Operations Manager mit installierten Management Packs, können diese Informationen abrufen, indem sie die **Win32 \_ ServerFeature-Klasse** abfragen.
 
@@ -2341,14 +2341,14 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Share_and_Storage_Management_Tool"></span><span id="share_and_storage_management_tool"></span><span id="SHARE_AND_STORAGE_MANAGEMENT_TOOL"></span>Freigabe- und Storage Verwaltungstool
+<span id="Share_and_Storage_Management_Tool"></span><span id="share_and_storage_management_tool"></span><span id="SHARE_AND_STORAGE_MANAGEMENT_TOOL"></span>Freigabe- und Storage-Verwaltungstool
 </dt> <dd>
 
 hinzugefügt
 
 </dd> <dt>
 
-<span id="Remote_Access_Management_Tools"></span><span id="remote_access_management_tools"></span><span id="REMOTE_ACCESS_MANAGEMENT_TOOLS"></span>Tools für die Remotezugriffsverwaltung
+<span id="Remote_Access_Management_Tools"></span><span id="remote_access_management_tools"></span><span id="REMOTE_ACCESS_MANAGEMENT_TOOLS"></span>Remotezugriffsverwaltungstools
 </dt> <dd>
 
 hinzugefügt
@@ -2362,7 +2362,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Remote_Access_GUI_and_Command-Line_Tools"></span><span id="remote_access_gui_and_command-line_tools"></span><span id="REMOTE_ACCESS_GUI_AND_COMMAND-LINE_TOOLS"></span>Remotezugriffs-GUI und Command-Line Tools
+<span id="Remote_Access_GUI_and_Command-Line_Tools"></span><span id="remote_access_gui_and_command-line_tools"></span><span id="REMOTE_ACCESS_GUI_AND_COMMAND-LINE_TOOLS"></span>Remotezugriffs-GUI und Command-Line-Tools
 </dt> <dd>
 
 hinzugefügt
@@ -2411,7 +2411,7 @@ Nicht mehr unterstützt
 
 </dd> <dt>
 
-<span id="Ink_Support"></span><span id="ink_support"></span><span id="INK_SUPPORT"></span>Ink-Unterstützung
+<span id="Ink_Support"></span><span id="ink_support"></span><span id="INK_SUPPORT"></span>Unterstützung für Ink-Daten
 </dt> <dd>
 
 Nicht mehr unterstützt
@@ -2481,28 +2481,28 @@ Nicht mehr unterstützt
 
 </dd> <dt>
 
-<span id="WoW64_for_Input_Method_Editor"></span><span id="wow64_for_input_method_editor"></span><span id="WOW64_FOR_INPUT_METHOD_EDITOR"></span>WoW64 für den Eingabemethode-Editor
+<span id="WoW64_for_Input_Method_Editor"></span><span id="wow64_for_input_method_editor"></span><span id="WOW64_FOR_INPUT_METHOD_EDITOR"></span>WoW64 für den Eingabemethoden-Editor
 </dt> <dd>
 
 Nicht mehr unterstützt
 
 </dd> <dt>
 
-<span id="WoW64_for_Subsystem_for_UNIX-based_Applications"></span><span id="wow64_for_subsystem_for_unix-based_applications"></span><span id="WOW64_FOR_SUBSYSTEM_FOR_UNIX-BASED_APPLICATIONS"></span>WoW64 für Subsystem für UNIX-basierte Anwendungen
+<span id="WoW64_for_Subsystem_for_UNIX-based_Applications"></span><span id="wow64_for_subsystem_for_unix-based_applications"></span><span id="WOW64_FOR_SUBSYSTEM_FOR_UNIX-BASED_APPLICATIONS"></span>WoW64 für das Subsystem für UNIX-basierte Anwendungen
 </dt> <dd>
 
 Nicht mehr unterstützt
 
 </dd> <dt>
 
-<span id="Desktop_Experience"></span><span id="desktop_experience"></span><span id="DESKTOP_EXPERIENCE"></span>Desktoperfahrung
+<span id="Desktop_Experience"></span><span id="desktop_experience"></span><span id="DESKTOP_EXPERIENCE"></span>Desktopdarstellung
 </dt> <dd>
 
 hinzugefügt
 
 </dd> <dt>
 
-<span id="Server_Graphical_Shell"></span><span id="server_graphical_shell"></span><span id="SERVER_GRAPHICAL_SHELL"></span>Grafische Servershell
+<span id="Server_Graphical_Shell"></span><span id="server_graphical_shell"></span><span id="SERVER_GRAPHICAL_SHELL"></span>Grafische Shell des Servers
 </dt> <dd>
 
 hinzugefügt
@@ -2530,7 +2530,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="User_Interface_Management_Console"></span><span id="user_interface_management_console"></span><span id="USER_INTERFACE_MANAGEMENT_CONSOLE"></span>Benutzeroberfläche Management Console
+<span id="User_Interface_Management_Console"></span><span id="user_interface_management_console"></span><span id="USER_INTERFACE_MANAGEMENT_CONSOLE"></span>Benutzeroberfläche-Verwaltungskonsole
 </dt> <dd>
 
 hinzugefügt
@@ -2565,7 +2565,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Windows_PowerShell_Desired_State_Configuration_Service"></span><span id="windows_powershell_desired_state_configuration_service"></span><span id="WINDOWS_POWERSHELL_DESIRED_STATE_CONFIGURATION_SERVICE"></span>Windows PowerShell Desired State Configuration Service
+<span id="Windows_PowerShell_Desired_State_Configuration_Service"></span><span id="windows_powershell_desired_state_configuration_service"></span><span id="WINDOWS_POWERSHELL_DESIRED_STATE_CONFIGURATION_SERVICE"></span>Windows PowerShell Desired State Configuration-Dienst
 </dt> <dd>
 
 hinzugefügt
@@ -2593,7 +2593,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Message_Queuing__MSMQ__Activation"></span><span id="message_queuing__msmq__activation"></span><span id="MESSAGE_QUEUING__MSMQ__ACTIVATION"></span>Message Queuing (MSMQ)-Aktivierung
+<span id="Message_Queuing__MSMQ__Activation"></span><span id="message_queuing__msmq__activation"></span><span id="MESSAGE_QUEUING__MSMQ__ACTIVATION"></span>aktivierung von Message Queuing (MSMQ)
 </dt> <dd></dd> <dt>
 
 <span id="Named_Pipe_Activation"></span><span id="named_pipe_activation"></span><span id="NAMED_PIPE_ACTIVATION"></span>Named Pipe-Aktivierung
@@ -2652,7 +2652,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Failover_Cluster_Management_Tools"></span><span id="failover_cluster_management_tools"></span><span id="FAILOVER_CLUSTER_MANAGEMENT_TOOLS"></span>Failovercluster-Verwaltungstools
+<span id="Failover_Cluster_Management_Tools"></span><span id="failover_cluster_management_tools"></span><span id="FAILOVER_CLUSTER_MANAGEMENT_TOOLS"></span>Failoverclusterverwaltungstools
 </dt> <dd>
 
 hinzugefügt
@@ -2666,7 +2666,7 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="Application_Initialization"></span><span id="application_initialization"></span><span id="APPLICATION_INITIALIZATION"></span>Anwendungsin initialisierung
+<span id="Application_Initialization"></span><span id="application_initialization"></span><span id="APPLICATION_INITIALIZATION"></span>Anwendungsinitialisierung
 </dt> <dd>
 
 hinzugefügt
@@ -2800,7 +2800,7 @@ Nicht mehr unterstützt
 
 </dd> <dt>
 
-<span id="Removable_Storage_Manager"></span><span id="removable_storage_manager"></span><span id="REMOVABLE_STORAGE_MANAGER"></span>Wechseldatenträger Storage Manager
+<span id="Removable_Storage_Manager"></span><span id="removable_storage_manager"></span><span id="REMOVABLE_STORAGE_MANAGER"></span>Wechseldatenträger Storage-Manager
 </dt> <dd>
 
 Nicht mehr unterstützt
@@ -3069,14 +3069,14 @@ hinzugefügt
 
 </dd> <dt>
 
-<span id="WoW64_for_Input_Method_Editor"></span><span id="wow64_for_input_method_editor"></span><span id="WOW64_FOR_INPUT_METHOD_EDITOR"></span>WoW64 für den Eingabemethoden-Editor
+<span id="WoW64_for_Input_Method_Editor"></span><span id="wow64_for_input_method_editor"></span><span id="WOW64_FOR_INPUT_METHOD_EDITOR"></span>WoW64 für den Eingabemethode-Editor
 </dt> <dd>
 
 hinzugefügt
 
 </dd> <dt>
 
-<span id="WoW64_for_Subsystem_for_UNIX-based_Applications"></span><span id="wow64_for_subsystem_for_unix-based_applications"></span><span id="WOW64_FOR_SUBSYSTEM_FOR_UNIX-BASED_APPLICATIONS"></span>WoW64 für das Subsystem für UNIX-basierte Anwendungen
+<span id="WoW64_for_Subsystem_for_UNIX-based_Applications"></span><span id="wow64_for_subsystem_for_unix-based_applications"></span><span id="WOW64_FOR_SUBSYSTEM_FOR_UNIX-BASED_APPLICATIONS"></span>WoW64 für Subsystem für UNIX-basierte Anwendungen
 </dt> <dd>
 
 hinzugefügt
@@ -3093,46 +3093,46 @@ hinzugefügt
 <span id="Print_and_Document_Services_name_change"></span><span id="print_and_document_services_name_change"></span><span id="PRINT_AND_DOCUMENT_SERVICES_NAME_CHANGE"></span>Druck- und Dokumentdienste Namensänderung
 </dt> <dd>
 
-benannte Druckdienste für dieses Release
+benannten Druckdienste für diese Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Services_name_change"></span><span id="remote_desktop_services_name_change"></span><span id="REMOTE_DESKTOP_SERVICES_NAME_CHANGE"></span>Remotedesktopdienste Namensänderung
+<span id="Remote_Desktop_Services_name_change"></span><span id="remote_desktop_services_name_change"></span><span id="REMOTE_DESKTOP_SERVICES_NAME_CHANGE"></span>Remotedesktopdienste namensänderung
 </dt> <dd>
 
 benannte Terminaldienste in dieser Version
 
 </dd> <dt>
 
-<span id=".NET_Framework_3.5.1_Features_name_change"></span><span id=".net_framework_3.5.1_features_name_change"></span><span id=".NET_FRAMEWORK_3.5.1_FEATURES_NAME_CHANGE"></span>.NET Framework 3.5.1 Namensänderung der Features
+<span id=".NET_Framework_3.5.1_Features_name_change"></span><span id=".net_framework_3.5.1_features_name_change"></span><span id=".NET_FRAMEWORK_3.5.1_FEATURES_NAME_CHANGE"></span>.NET Framework 3.5.1 Änderung des Namens von Features
 </dt> <dd>
 
 Benannte .NET Framework 3.0-Features in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Session_Host_name_change"></span><span id="remote_desktop_session_host_name_change"></span><span id="REMOTE_DESKTOP_SESSION_HOST_NAME_CHANGE"></span>Remotedesktop-Sitzungshost Namensänderung
+<span id="Remote_Desktop_Session_Host_name_change"></span><span id="remote_desktop_session_host_name_change"></span><span id="REMOTE_DESKTOP_SESSION_HOST_NAME_CHANGE"></span>Remotedesktop-Sitzungshost namensänderung
 </dt> <dd>
 
 Benannter Terminalserver in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Licensing_name_change"></span><span id="remote_desktop_licensing_name_change"></span><span id="REMOTE_DESKTOP_LICENSING_NAME_CHANGE"></span>Änderung des Lizenzierungsnamens Remotedesktop
+<span id="Remote_Desktop_Licensing_name_change"></span><span id="remote_desktop_licensing_name_change"></span><span id="REMOTE_DESKTOP_LICENSING_NAME_CHANGE"></span>Remotedesktop Namensänderung der Lizenzierung
 </dt> <dd>
 
 Benannte TS-Lizenzierung in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Gateway_name_change"></span><span id="remote_desktop_gateway_name_change"></span><span id="REMOTE_DESKTOP_GATEWAY_NAME_CHANGE"></span>Änderung des Gatewaynamens Remotedesktop
+<span id="Remote_Desktop_Gateway_name_change"></span><span id="remote_desktop_gateway_name_change"></span><span id="REMOTE_DESKTOP_GATEWAY_NAME_CHANGE"></span>Remotedesktop gateway name change (Ändern des Gatewaynamens)
 </dt> <dd>
 
-Benanntes TS-Gateway in dieser Version
+Benanntes TS Gateway in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Connection_Broker_name_change"></span><span id="remote_desktop_connection_broker_name_change"></span><span id="REMOTE_DESKTOP_CONNECTION_BROKER_NAME_CHANGE"></span>Remotedesktopverbindung Ändern des Brokernamens
+<span id="Remote_Desktop_Connection_Broker_name_change"></span><span id="remote_desktop_connection_broker_name_change"></span><span id="REMOTE_DESKTOP_CONNECTION_BROKER_NAME_CHANGE"></span>Remotedesktopverbindung broker name change
 </dt> <dd>
 
 Benannter TS-Sitzungsbroker in dieser Version
@@ -3142,11 +3142,11 @@ Benannter TS-Sitzungsbroker in dieser Version
 <span id="Remote_Desktop_Web_Access_name_change"></span><span id="remote_desktop_web_access_name_change"></span><span id="REMOTE_DESKTOP_WEB_ACCESS_NAME_CHANGE"></span>Remotedesktop Webzugriff Namensänderung
 </dt> <dd>
 
-Benannte TS-Webzugriff in dieser Version
+Benannte TS Webzugriff in dieser Version
 
 </dd> <dt>
 
-<span id=".NET_Framework_3.5.1_name_change"></span><span id=".net_framework_3.5.1_name_change"></span><span id=".NET_FRAMEWORK_3.5.1_NAME_CHANGE"></span>.NET Framework Namensänderung in 3.5.1
+<span id=".NET_Framework_3.5.1_name_change"></span><span id=".net_framework_3.5.1_name_change"></span><span id=".NET_FRAMEWORK_3.5.1_NAME_CHANGE"></span>.NET Framework 3.5.1-Namensänderung
 </dt> <dd>
 
 (220) Benannte Net FX 3.0-Features in dieser Version
@@ -3155,56 +3155,56 @@ Benannte TS-Webzugriff in dieser Version
 
 </dd> <dt>
 
-<span id="AD_DS_Tools_name_change"></span><span id="ad_ds_tools_name_change"></span><span id="AD_DS_TOOLS_NAME_CHANGE"></span>Namensänderung für AD DS Tools
+<span id="AD_DS_Tools_name_change"></span><span id="ad_ds_tools_name_change"></span><span id="AD_DS_TOOLS_NAME_CHANGE"></span>AD DS Namensänderung der Tools
 </dt> <dd>
 
-Benannte Active Directory Domain Services Tools in dieser Version
+Named Active Directory Domain Services Tools in dieser Version
 
 </dd> <dt>
 
-<span id="AD_LDS_Snap-Ins_and_Command-Line_Tools_name_change"></span><span id="ad_lds_snap-ins_and_command-line_tools_name_change"></span><span id="AD_LDS_SNAP-INS_AND_COMMAND-LINE_TOOLS_NAME_CHANGE"></span>Namensänderung für AD LDS Snap-Ins und Command-Line Tools
+<span id="AD_LDS_Snap-Ins_and_Command-Line_Tools_name_change"></span><span id="ad_lds_snap-ins_and_command-line_tools_name_change"></span><span id="AD_LDS_SNAP-INS_AND_COMMAND-LINE_TOOLS_NAME_CHANGE"></span>AD LDS Snap-Ins und Command-Line Tools ändern sich
 </dt> <dd>
 
-Benannte Active Directory Lightweight Directory Services Tools in dieser Version
+Named Active Directory Lightweight Directory Services Tools in dieser Version
 
 </dd> <dt>
 
-<span id="Print_and_Document_Services_Tools_name_change"></span><span id="print_and_document_services_tools_name_change"></span><span id="PRINT_AND_DOCUMENT_SERVICES_TOOLS_NAME_CHANGE"></span>Namensänderung für Druck- und Dokumentdienste Tools
+<span id="Print_and_Document_Services_Tools_name_change"></span><span id="print_and_document_services_tools_name_change"></span><span id="PRINT_AND_DOCUMENT_SERVICES_TOOLS_NAME_CHANGE"></span>Druck- und Dokumentdienste Namensänderung der Tools
 </dt> <dd>
 
 Benannte Druckdiensttools in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Services_Tools_name_change"></span><span id="remote_desktop_services_tools_name_change"></span><span id="REMOTE_DESKTOP_SERVICES_TOOLS_NAME_CHANGE"></span>Namensänderung für Remotedesktopdienste Tools
+<span id="Remote_Desktop_Services_Tools_name_change"></span><span id="remote_desktop_services_tools_name_change"></span><span id="REMOTE_DESKTOP_SERVICES_TOOLS_NAME_CHANGE"></span>Remotedesktopdienste Namensänderung der Tools
 </dt> <dd>
 
 Benannte Terminaldienstetools in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Session_Host_Tools_name_change"></span><span id="remote_desktop_session_host_tools_name_change"></span><span id="REMOTE_DESKTOP_SESSION_HOST_TOOLS_NAME_CHANGE"></span>Namensänderung für Remotedesktop-Sitzungshost Tools
+<span id="Remote_Desktop_Session_Host_Tools_name_change"></span><span id="remote_desktop_session_host_tools_name_change"></span><span id="REMOTE_DESKTOP_SESSION_HOST_TOOLS_NAME_CHANGE"></span>Remotedesktop-Sitzungshost Namensänderung der Tools
 </dt> <dd>
 
 Benannte Terminalservertools in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Gateway_Tools_name_change"></span><span id="remote_desktop_gateway_tools_name_change"></span><span id="REMOTE_DESKTOP_GATEWAY_TOOLS_NAME_CHANGE"></span>Namensänderung für Remotedesktop Gatewaytools
+<span id="Remote_Desktop_Gateway_Tools_name_change"></span><span id="remote_desktop_gateway_tools_name_change"></span><span id="REMOTE_DESKTOP_GATEWAY_TOOLS_NAME_CHANGE"></span>Remotedesktop des Namens der Gatewaytools
 </dt> <dd>
 
 Benannte TS-Gatewaytools in dieser Version
 
 </dd> <dt>
 
-<span id="Remote_Desktop_Licensing_Tools_name_change"></span><span id="remote_desktop_licensing_tools_name_change"></span><span id="REMOTE_DESKTOP_LICENSING_TOOLS_NAME_CHANGE"></span>Namensänderung der Remotedesktop Licensing Tools
+<span id="Remote_Desktop_Licensing_Tools_name_change"></span><span id="remote_desktop_licensing_tools_name_change"></span><span id="REMOTE_DESKTOP_LICENSING_TOOLS_NAME_CHANGE"></span>Remotedesktop Namensänderung der Lizenzierungstools
 </dt> <dd>
 
 Benannte TS-Lizenzierungstools in dieser Version
 
 </dd> <dt>
 
-<span id="AD_DS_Snap-Ins_and_Command-Line_Tools_name_change"></span><span id="ad_ds_snap-ins_and_command-line_tools_name_change"></span><span id="AD_DS_SNAP-INS_AND_COMMAND-LINE_TOOLS_NAME_CHANGE"></span>Namensänderung für AD DS Snap-Ins und Command-Line Tools
+<span id="AD_DS_Snap-Ins_and_Command-Line_Tools_name_change"></span><span id="ad_ds_snap-ins_and_command-line_tools_name_change"></span><span id="AD_DS_SNAP-INS_AND_COMMAND-LINE_TOOLS_NAME_CHANGE"></span>AD DS Snap-Ins und Command-Line-Tools
 </dt> <dd>
 
 Active Directory-Domänencontroller-Tools
@@ -3213,7 +3213,7 @@ Active Directory-Domänencontroller-Tools
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Skript zeigt die Namen aller Serverfeatures auf dem Computer mit dem Namen "FABRIKAM" an. Beachten Sie, dass auf dem Zielcomputer Windows Server 2008 oder höher ausgeführt werden muss.
+Das folgende Skript zeigt die Namen aller Serverfunktionen auf dem Computer mit dem Namen "FABRIKAM" an. Beachten Sie, dass auf dem Zielcomputer Windows Serverbetriebssystem 2008 oder höher ausgeführt werden muss.
 
 
 ```VB

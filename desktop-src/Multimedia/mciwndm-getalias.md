@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETALIAS Meldung (VFW. h)
-description: Die mciwndm \_ getalias-Nachricht Ruft den Alias ab, mit dem ein MCI-Gerät oder eine MCI-Datei mit der mciSendString-Funktion geöffnet wird. Sie können diese Nachricht explizit oder mithilfe des Makros mciwndgetalias senden.
+title: MCIWNDM_GETALIAS Meldung (Vfw.h)
+description: Die MCIWNDM \_ GETALIAS-Nachricht ruft den Alias ab, der zum Öffnen eines MCI-Geräts oder einer MCI-Datei mit der mciSendString-Funktion verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetAlias-Makros senden.
 ms.assetid: 37131b89-275c-4ab6-9278-0e08c42471bd
 keywords:
-- MCIWNDM_GETALIAS-Nachricht (Multimedia)
+- MCIWNDM_GETALIAS nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e971c50b9abc450387ac29f9a7331bfdca5c38c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 857ea90205b5204cd7c4af19f27a420684e59543717b2689f178d97cd5a600de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137751"
 ---
-# <a name="mciwndm_getalias-message"></a>Mciwndm \_ getalias-Nachricht
+# <a name="mciwndm_getalias-message"></a>MCIWNDM \_ GETALIAS-Nachricht
 
-Die **mciwndm \_ getalias** -Nachricht Ruft den Alias ab, mit dem ein MCI-Gerät oder eine MCI-Datei mit der [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion geöffnet wird. Sie können diese Nachricht explizit oder mithilfe des Makros [**mciwndgetalias**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias) senden.
+Die **MCIWNDM \_ GETALIAS-Nachricht** ruft den Alias ab, der zum Öffnen eines MCI-Geräts oder einer MCI-Datei mit der [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetAlias-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias) senden.
 
 
 ```C++
@@ -46,7 +46,7 @@ Gibt den Gerätealias zurück.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -57,7 +57,7 @@ Gibt den Gerätealias zurück.
 [**mciSendString**](/previous-versions//dd757161(v=vs.85))
 </dt> <dt>
 
-[**Mciwndgetalias**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias)
+[**MCIWndGetAlias**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias)
 </dt> </dl>
 
  

@@ -14,16 +14,16 @@ ms.locfileid: "118320302"
 ---
 # <a name="accessing-snmp-devices"></a>Zugreifen auf SNMP-Geräte
 
-Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Clientanwendungen den Zugriff auf SNMP-Informationen über WMI. Der [SNMP-Anbieter](snmp-provider.md) fungiert als Gateway für Systeme und Geräte, die SNMP für die Verwaltung verwenden. Nur auf dem Verwaltungs- oder Überwachungscomputer muss WMI ausgeführt werden, da von jedem SNMP-fähigen Gerät gelesen werden kann.
+Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Clientanwendungen den Zugriff auf SNMP-Informationen über WMI. Der [SNMP-Anbieter](snmp-provider.md) fungiert als Gateway für Systeme und Geräte, die SNMP für die Verwaltung verwenden. Nur auf dem Verwaltungs- oder Überwachungscomputer muss WMI ausgeführt werden, da er von jedem SNMP-fähigen Gerät lesen kann.
 
 > [!Note]  
 > Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
-MiB-Objektvariablen (SNMP Management Information Base) können gelesen und in diese geschrieben werden, und SNMP-Traps können automatisch WMI-Ereignissen zugeordnet werden, die für beliebige Erstellungs-, Lösch- oder Aktualisierungsvorgänge für Daten außerhalb der MIB-definierten Traps definiert werden können. Dieses Feature von WMI fungiert als Erweiterung der SNMP-Standardfunktionen. Weitere Informationen finden Sie unter [Überwachen von Ereignissen.](monitoring-events.md)
+Objektvariablen der SNMP Management Information Base (MIB) können aus gelesen und in diese geschrieben werden, und SNMP-Traps können automatisch WMI-Ereignissen zugeordnet werden, die für beliebige Erstellungs-, Lösch- oder Aktualisierungsvorgänge für Daten außerhalb der MIB-definierten Traps definiert werden können. Dieses Feature von WMI fungiert als Erweiterung der SNMP-Standardfunktionen. Weitere Informationen finden Sie unter [Überwachen von Ereignissen.](monitoring-events.md)
 
-Die in den folgenden Themen beschriebenen Tools sind für die Verwendung durch skriptgesteuerte Windows C/C++-Programmierer konzipiert. Es wird empfohlen, mit WMI, SNMPv1 und SNMPv2C vertraut zu sein und mit netzwerk- und netzwerkverwaltungskonzepte vertraut zu sein.
+Die in den folgenden Themen beschriebenen Tools sind für die Verwendung durch Windows-Skripterstellung und C/C++-Programmierer konzipiert. Es wird empfohlen, sich mit WMI, SNMPv1 und SNMPv2C vertraut zu machen und sich mit Netzwerk- und Netzwerkverwaltungskonzepten vertraut zu machen.
 
 Weitere Informationen zur Verwendung von WMI mit SNMP finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 

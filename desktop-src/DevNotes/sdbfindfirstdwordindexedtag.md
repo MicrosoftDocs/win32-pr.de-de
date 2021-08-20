@@ -1,7 +1,7 @@
 ---
 description: Sucht den ersten DWORD-Datensatz im angegebenen Index, der die angegebenen Kriterien erfüllt.
 ms.assetid: 81302f84-497d-4fef-b348-eee2a53284c7
-title: Sdbfindfirstdwordindexedtag-Funktion
+title: SdbFindFirstDWORDIndexedTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 4f3c9290f98fb24d856561114bc654da0315c5a7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 40f54dfc109ec2f7f4807d57052b9c4e1f99d5b629e8028be2931d9b42081f43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118161571"
 ---
-# <a name="sdbfindfirstdwordindexedtag-function"></a>Sdbfindfirstdwordindexedtag-Funktion
+# <a name="sdbfindfirstdwordindexedtag-function"></a>SdbFindFirstDWORDIndexedTag-Funktion
 
-Sucht den ersten **DWORD** -Datensatz im angegebenen Index, der die angegebenen Kriterien erfüllt.
+Sucht den ersten **DWORD-Datensatz** im angegebenen Index, der die angegebenen Kriterien erfüllt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,44 +43,44 @@ TAGID WINAPI SdbFindFirstDWORDIndexedTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*TDas* \[ in\]
+*tWhich* \[ In\]
 </dt> <dd>
 
-Der Indextyp. Eine Liste der Werte finden Sie unter [**Tag**](tag.md) .
+Der Indextyp. Eine Liste der Werte finden Sie unter [**TAG.**](tag.md)
 
 </dd> <dt>
 
-*TKey* \[ in\]
+*tKey* \[ In\]
 </dt> <dd>
 
 Der Schlüsseltyp.
 
 </dd> <dt>
 
-*dwname* \[ in\]
+*dwName* \[ In\]
 </dt> <dd>
 
-Der Name der Daten, die gesucht werden sollen. Dieser Wert wird in einen Schlüssel konvertiert.
+Der Name der zu findenden Daten. Dieser Wert wird in einen Schlüssel konvertiert.
 
 </dd> <dt>
 
-*pfindinfo* \[ vorgenommen\]
+*pFindInfo* \[ out\]
 </dt> <dd>
 
-Eine [**Find \_ Info**](find-info.md) -Struktur, die den Datensatz empfängt.
+Eine [**FIND \_ INFO-Struktur,**](find-info.md) die den Datensatz empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **TagID** der ersten Entsprechung oder des **Tags \_ null** , wenn keine Entsprechung gefunden wird.
+Die **TAGID** der ersten Übereinstimmung oder **TAG \_ NULL,** wenn keine Übereinstimmung gefunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Die **TagID** der ersten Entsprechung oder des **Tags \_ null** , wenn keine Ent
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -98,7 +98,7 @@ Die **TagID** der ersten Entsprechung oder des **Tags \_ null** , wenn keine Ent
 
 <dl> <dt>
 
-[**Sdbfindfirsttag**](sdbfindfirsttag.md)
+[**SdbFindFirstTag**](sdbfindfirsttag.md)
 </dt> </dl>
 
  

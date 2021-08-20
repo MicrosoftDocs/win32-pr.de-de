@@ -1,12 +1,12 @@
 ---
-title: Setspecifiedlicenseserverlist-Methode der Win32_TerminalServiceSetting-Klasse
-description: Aktualisiert die Liste der angegebenen Lizenzserver, wobei alle vorhandenen angegebenen Lizenzserver ersetzt werden.
+title: SetSpecifiedLicenseServerList-Methode der Win32_TerminalServiceSetting-Klasse
+description: Aktualisiert die Liste der angegebenen Lizenzserver und ersetzt dabei alle vorhandenen angegebenen Lizenzserver.
 ms.assetid: afd7ca11-9db5-4cf3-9706-3c6984789ecd
 ms.tgt_platform: multiple
 keywords:
-- Setspecifiedlicenseserverlist-Methode Remotedesktopdienste
-- Setspecifiedlicenseserverlist-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, setspecifiedlicenseserverlist-Methode
+- SetSpecifiedLicenseServerList-Methode Remotedesktopdienste
+- SetSpecifiedLicenseServerList-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting Klasse Remotedesktopdienste , SetSpecifiedLicenseServerList-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d10fde34e490f26c287e63dcddae3c62761670bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7591f26bb2678d6feefc69b46cc4380299347f7c59755b0721f329023e6f92bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127377"
 ---
-# <a name="setspecifiedlicenseserverlist-method-of-the-win32_terminalservicesetting-class"></a>Setspecifiedlicenseserverlist-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="setspecifiedlicenseserverlist-method-of-the-win32_terminalservicesetting-class"></a>SetSpecifiedLicenseServerList-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Aktualisiert die Liste der angegebenen Lizenzserver, wobei alle vorhandenen angegebenen Lizenzserver ersetzt werden.
+Aktualisiert die Liste der angegebenen Lizenzserver und ersetzt dabei alle vorhandenen angegebenen Lizenzserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 SetSpecifiedLicenseServerList(
 
 <dl> <dt>
 
-*Spezifiedlslist* \[ in\]
+*SpecifiedLSList* \[ In\]
 </dt> <dd>
 
-Ein Zeichen folgen Array, das die neue Liste der angegebenen Lizenzserver enthält.
+Ein Zeichenfolgenarray, das die neue Liste der angegebenen Lizenzserver enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -72,19 +72,19 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> <dt>
 
-[**Addlstospecifiedlicenseserverlist**](addlstospecifiedlicenseserverlist-win32-terminalservicesetting.md)
+[**AddLSToSpecifiedLicenseServerList**](addlstospecifiedlicenseserverlist-win32-terminalservicesetting.md)
 </dt> <dt>
 
-[**Getspecifiedlicenseserverlist**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md)
+[**GetSpecifiedLicenseServerList**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md)
 </dt> <dt>
 
-[**Emptyspecifiedlicenseserverlist**](emptyspecifiedlicenseserverlist-win32-terminalservicesetting.md)
+[**EmptySpecifiedLicenseServerList**](emptyspecifiedlicenseserverlist-win32-terminalservicesetting.md)
 </dt> <dt>
 
-[**Removelsfromspecifiedlicenseserverlist**](removelsfromspecifiedlicenseserverlist-win32-terminalservicesetting.md)
+[**RemoveLSFromSpecifiedLicenseServerList**](removelsfromspecifiedlicenseserverlist-win32-terminalservicesetting.md)
 </dt> </dl>
 
  

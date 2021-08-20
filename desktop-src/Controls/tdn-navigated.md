@@ -1,9 +1,9 @@
 ---
-title: TDN_NAVIGATED Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Aufgaben Dialogfeld gesendet, wenn eine Navigation aufgetreten ist. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_NAVIGATED Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Aufgabendialogfeld gesendet, wenn die Navigation erfolgt ist. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: e7668ab3-3a11-4bf4-8cb4-067d3204fb3f
 keywords:
-- Windows-Steuerelemente für TDN_NAVIGATED Benachrichtigungs
+- TDN_NAVIGATED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c9d8e9244889d7e55aad2b89f8ca4bb1c0bb1a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ee3daa29fa0f85db2dfb2a5991e0db9c9dba46938e69ad8d16153a97d400284
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118166893"
 ---
-# <a name="tdn_navigated-notification-code"></a>TDN- \_ Navigations Benachrichtigungs Code
+# <a name="tdn_navigated-notification-code"></a>TDN \_ NAVIGATED-Benachrichtigungscode
 
-Wird von einem Aufgaben Dialogfeld gesendet, wenn eine Navigation aufgetreten ist. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird von einem Aufgabendialogfeld gesendet, wenn die Navigation erfolgt ist. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode registriert werden**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) kann.
 
 
 ```C++
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

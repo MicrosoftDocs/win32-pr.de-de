@@ -120,7 +120,7 @@ Ein Attribut zum Speichern von Binärdaten.
 | Link-ID                | \-                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                         |
 | System-Only            | False                                                                                                                      |
-| Ist einwertig       | False                                                                                                                      |
+| Is-Single-Valued       | False                                                                                                                      |
 | Ist indiziert             | False                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                               |
@@ -141,7 +141,7 @@ Ein Attribut zum Speichern von Binärdaten.
 | Link-ID                | \-                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                         |
 | System-Only            | False                                                                                                                      |
-| Ist einwertig       | False                                                                                                                      |
+| Is-Single-Valued       | False                                                                                                                      |
 | Ist indiziert             | False                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                               |

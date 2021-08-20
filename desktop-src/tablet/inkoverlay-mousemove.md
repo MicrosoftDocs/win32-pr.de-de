@@ -100,7 +100,7 @@ Diese Ereignismethode wird in den \_ Dispatch-Only-Schnittstellen IInkCollectorE
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

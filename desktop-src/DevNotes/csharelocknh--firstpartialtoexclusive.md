@@ -1,7 +1,7 @@
 ---
-description: Ändert eine partielle Sperre in eine exklusive Sperre.
+description: Ändert eine Teilsperre in eine exklusive Sperre.
 ms.assetid: 4999b539-620e-4fb3-b8d4-92767da1225f
-title: 'Csharelocknh:: firstpartialdeexclusive-Methode'
+title: CShareLockNH::FirstPartialToExclusive-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: 65931cb4747c829a0386c7cc76a1ce7e64d41d60
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e56ce4b784d808c073d16e9833a89b27f24a264b35ea3cadc4d84f5b503970ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162401"
 ---
-# <a name="csharelocknhfirstpartialtoexclusive-method"></a>Csharelocknh:: firstpartialdeexclusive-Methode
+# <a name="csharelocknhfirstpartialtoexclusive-method"></a>CShareLockNH::FirstPartialToExclusive-Methode
 
-Ändert eine partielle Sperre in eine exklusive Sperre.
+Ändert eine Teilsperre in eine exklusive Sperre.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,9 +41,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

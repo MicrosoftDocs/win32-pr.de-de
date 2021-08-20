@@ -1,7 +1,7 @@
 ---
-description: Ruft Hilfsfunktionen für die IDispatch-Schnittstelle auf.
+description: Ruft hilfsfunktionen für die IDispatch-Schnittstelle auf.
 ms.assetid: ccef47af-d9dd-48c3-93d3-ee997dacf7a8
-title: Invokeidispatch-Funktion
+title: InvokeIDispatch-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkObj.dll
 - InkObj.dll.dll
-ms.openlocfilehash: e4989e3ec23a1ffa97ba317831143ecf0920ef9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9708ebc5675d918c959be132d16037ac4e128650280b8243dcfe5c48834b602b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118041870"
 ---
-# <a name="invokeidispatch-function"></a>Invokeidispatch-Funktion
+# <a name="invokeidispatch-function"></a>InvokeIDispatch-Funktion
 
-Ruft Hilfsfunktionen für die IDispatch-Schnittstelle auf.
+Ruft hilfsfunktionen für die IDispatch-Schnittstelle auf.
 
-Diese Funktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Funktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,43 +45,43 @@ HRESULT WINAPI InvokeIDispatch(
 
 <dl> <dt>
 
-*pdispatch* 
+*pDispatch* 
 </dt> <dd>
 
 Die Instanz der IDispatch-Schnittstelle.
 
 </dd> <dt>
 
-*DISPID* 
+*Dispid* 
 </dt> <dd>
 
-Die Methode, die Eigenschaft oder das Argument, das übergeben werden soll.
+Die methode, die Eigenschaft oder das Argument, die übergeben werden soll.
 
 </dd> <dt>
 
 *pDisp* 
 </dt> <dd>
 
-Die Parameter, die übergeben werden sollen.
+Die parameter, die übergeben werden.
 
 </dd> <dt>
 
-*pVarResult* \[ vorgenommen\]
+*pVarResult* \[ out\]
 </dt> <dd>
 
-Eine-Struktur, die die abgerufenen Werte empfängt.
+Eine -Struktur, die die abgerufenen Werte empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, enthalten mögliche Rückgabecodes die in der folgenden Tabelle aufgeführten Werte, sind jedoch nicht darauf beschränkt.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn dies fehlschlägt, enthalten mögliche Rückgabecodes die in der folgenden Tabelle gezeigten Werte, sind aber nicht darauf beschränkt.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------|
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der Wert für *pdispatch* ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der Wert für *pDispatch* ist ungültig.<br/> |
 
 
 
@@ -93,7 +93,7 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl> |
 

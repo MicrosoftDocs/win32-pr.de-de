@@ -60,7 +60,7 @@ Definiert eine Liste lokalisierter Zeichenfolgen, auf die Sie in Ihrem Manifest 
 
 
 
-| Element                                                              | type | BESCHREIBUNG                            |
+| Element                                                              | Typ | Beschreibung                            |
 |----------------------------------------------------------------------|------|----------------------------------------|
 | [**Schnur**](eventmanifestschema-string-stringtabletype-element.md) |      | Definiert eine lokalisierte Zeichenfolge.<br/> |
 
@@ -70,7 +70,7 @@ Definiert eine Liste lokalisierter Zeichenfolgen, auf die Sie in Ihrem Manifest 
 
 
 
-| Name       | type   | BESCHREIBUNG                                                                                                              |
+| Name       | Typ   | BESCHREIBUNG                                                                                                              |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------|
 | id         | Zeichenfolge | Ein Bezeichner, der die Zeichenfolge innerhalb der Zeichenfolgentabelle eindeutig identifiziert. Beispiel: "Printer.Connection".<br/> |
 | stringType | Zeichenfolge | Wird nicht verwendet.<br/>                                                                                                     |

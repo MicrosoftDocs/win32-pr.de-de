@@ -1,9 +1,9 @@
 ---
-title: SBN_SIMPLEMODECHANGE Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem StatusBar-Steuerelement gesendet, wenn sich der einfache Modus aufgrund einer einfachen SB- \_ Nachricht ändert. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: SBN_SIMPLEMODECHANGE Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Statusleisten-Steuerelement gesendet, wenn sich der einfache Modus aufgrund einer SB \_ SIMPLE-Nachricht ändert. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b2df8feb-5028-4488-a99b-4ceff5b48a92
 keywords:
-- Windows-Steuerelemente für SBN_SIMPLEMODECHANGE Benachrichtigungs
+- SBN_SIMPLEMODECHANGE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b998f0c39ecb00322bf5a423f99b3231338283f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 813158c851e628a60a081a4a3eef90abb2eceac1a64fd81c33a75375229681da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118408856"
 ---
-# <a name="sbn_simplemodechange-notification-code"></a>SBN \_ simplemodechange-Benachrichtigungs Code
+# <a name="sbn_simplemodechange-notification-code"></a>SBN \_ SIMPLEMODECHANGE-Benachrichtigungscode
 
-Wird von einem StatusBar-Steuerelement gesendet, wenn sich der einfache Modus aufgrund einer [**\_ einfachen SB**](sb-simple.md) -Nachricht ändert. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Statusleisten-Steuerelement gesendet, wenn sich der einfache Modus aufgrund einer [**SB \_ SIMPLE-Nachricht**](sb-simple.md) ändert. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ SBN_SIMPLEMODECHANGE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Der Rückgabewert wird von der Statusleiste ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetexternalrestore-function"></a>JetExternalRestore-Funktion
 
-Die **JetExternalRestore-Funktion** stellt eine externe Sicherung wieder her, die mit den externen Sicherungs-APIs erstellt wurde, und gibt einen Bereich von Protokolldateinummern an, die während des Wiederherstellungsprozesses wiedergegeben werden. Dies wird als harte Wiederherstellung bezeichnet, die ähnlich wie die von der JetInit-Funktion durchgeführte wie die weiche [Wiederherstellung ist.](./jetinit-function.md)
+Die **JetExternalRestore-Funktion** stellt eine externe Sicherung wieder her, die mit den externen Sicherungs-APIs erstellt wurde, und gibt einen Bereich von Protokolldateinummern an, die während des Wiederherstellungsvorgangs wiedergegeben werden. Dies wird als harte Wiederherstellung bezeichnet, die ähnlich wie die von der JetInit-Funktion durchgeführte wie die weiche [Wiederherstellung ist.](./jetinit-function.md)
 
 ```cpp
 JET_ERR JET_API JetExternalRestore(
@@ -109,7 +109,7 @@ Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetExternalRestore</strong>und so weiter geschehen, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch beide nicht angegeben sein.</p></td>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetExternalRestore</strong>und so weiter geschehen, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben sind oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch beide nicht angegeben sein.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDatabaseCorrupted</p></td>
@@ -137,11 +137,11 @@ Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errBadRestoreTargetInstance</p></td>
-<td><p>Der <em>angegebene szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
+<td><p>Der <em>angegebene szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Die Datenbank-Engine kann keine externe Wiederherstellung oder harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
+<td><p>Die Datenbank-Engine kann keine externe Wiederherstellung oder harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ Verwenden Sie dieses Flussdiagramm, um zu verstehen, wie die Pfade funktionieren
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>

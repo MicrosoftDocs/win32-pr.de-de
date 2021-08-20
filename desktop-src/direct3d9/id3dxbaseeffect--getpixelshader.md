@@ -1,7 +1,7 @@
 ---
-description: Ruft einen PixelShader ab.
+description: Ruft einen Pixel-Shader ab.
 ms.assetid: 173a20a5-dda0-493f-a161-2dc2881e71f2
-title: 'ID3DXBaseEffect:: getpixelshader-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetPixelShader-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: e555bac2e20ebab1cb0aec3d313cab8ad05e833e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bb948510e2b54582169db5cfdfe4e4f43bf2d931de895cbb06f7f3f3cd1cafce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118094114"
 ---
-# <a name="id3dxbaseeffectgetpixelshader-method"></a>ID3DXBaseEffect:: getpixelshader-Methode
+# <a name="id3dxbaseeffectgetpixelshader-method"></a>ID3DXBaseEffect::GetPixelShader-Methode
 
-Ruft einen PixelShader ab.
+Ruft einen Pixel-Shader ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetPixelShader(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*pppshader* \[ vorgenommen\]
+*ppPShader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DPIXELSHADER9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dpixelshader9)\***
 
-Gibt ein Pixel-Shader-Objekt zurück. Siehe [**IDirect3DPixelShader9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dpixelshader9) -Objekt.
+Gibt ein Pixel-Shaderobjekt zurück. Siehe [**IDirect3DPixelShader9-Objekt.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dpixelshader9)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Gibt ein Pixel-Shader-Objekt zurück. Siehe [**IDirect3DPixelShader9**](/windows
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

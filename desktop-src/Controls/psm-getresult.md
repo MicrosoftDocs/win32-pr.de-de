@@ -1,9 +1,9 @@
 ---
-title: PSM_GETRESULT Meldung (prsht. h)
-description: Wird von nicht modalen Eigenschaften Blättern zum Abrufen der Informationen verwendet, die von PropertySheet an modale Eigenschaften Blätter zurückgegeben werden. Sie können diese Nachricht explizit senden oder das propsheet \_ GetResult-Makro verwenden.
+title: PSM_GETRESULT-Nachricht (Prsht.h)
+description: Wird von moduslosen Eigenschaftenblättern verwendet, um die informationen abzurufen, die von PropertySheet an modale Eigenschaftenblätter zurückgegeben werden. Sie können diese Nachricht explizit senden oder das PropSheet \_ GetResult-Makro verwenden.
 ms.assetid: e0f609ea-5d7e-4c17-ade1-3c1051c5a5bf
 keywords:
-- Windows-Steuerelemente für PSM_GETRESULT Meldung
+- PSM_GETRESULT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d41609f625cbd3938fa78e9a2f91ab70168ecc29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4acc8fed8cdaa1f4282c3ed066ad44f68221330fa9e79b0719db8bba1bca37f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169806"
 ---
-# <a name="psm_getresult-message"></a>PSM \_ GetResult-Nachricht
+# <a name="psm_getresult-message"></a>PSM \_ GETRESULT-Nachricht
 
-Wird von nicht modalen Eigenschaften Blättern zum Abrufen der Informationen verwendet, die von [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta)an modale Eigenschaften Blätter zurückgegeben werden. Sie können diese Nachricht explizit senden oder das [**propsheet \_ GetResult**](/windows/desktop/api/Prsht/nf-prsht-propsheet_getresult) -Makro verwenden.
+Wird von moduslosen Eigenschaftenblättern verwendet, um die Informationen abzurufen, die von [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta)an modale Eigenschaftenblätter zurückgegeben werden. Sie können diese Nachricht explizit senden oder das [**PropSheet \_ GetResult-Makro**](/windows/desktop/api/Prsht/nf-prsht-propsheet_getresult) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,31 +45,31 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen positiven Wert zurück, wenn erfolgreich, andernfalls-1. Die folgenden Rückgabewerte haben eine besondere Bedeutung.
+Gibt bei Erfolg einen positiven Wert zurück, andernfalls -1. Die folgenden Rückgabewerte haben eine besondere Bedeutung.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                                                                                                                                 |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ID \_ psrebootsystem**</dt> </dl>   | Eine Seite hat eine [**PSM- \_ rebootsystemmeldung**](psm-rebootsystem.md) an das Eigenschaften Blatt gesendet. Der Computer muss neu gestartet werden, damit die Änderungen des Benutzers wirksam werden.<br/> |
-| <dl> <dt>**ID \_ psrestartwindows**</dt> </dl> | Eine Seite hat eine [**PSM- \_ restartwindows**](psm-restartwindows.md) -Meldung an das Eigenschaften Blatt gesendet. Windows muss neu gestartet werden, damit die Änderungen des Benutzers wirksam werden.<br/>  |
+| <dl> <dt>**ID \_ PSREBOOTSYSTEM**</dt> </dl>   | Eine Seite hat eine [**PSM \_ REBOOTSYSTEM-Nachricht**](psm-rebootsystem.md) an das Eigenschaftenblatt gesendet. Der Computer muss neu gestartet werden, damit die Änderungen des Benutzers wirksam werden.<br/> |
+| <dl> <dt>**ID \_ PSRESTARTWINDOWS**</dt> </dl> | Eine Seite hat eine [**PSM \_ RESTARTWINDOWS-Nachricht**](psm-restartwindows.md) an das Eigenschaftenblatt gesendet. Windows müssen neu gestartet werden, damit die Änderungen des Benutzers wirksam werden.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)auf.
+Rufen [**Sie GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)auf, um erweiterte Fehlerinformationen abzurufen.
 
-Der Rückgabewert für diese Nachricht ist identisch mit dem, was [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) für ein modales Eigenschaften Blatt zurückgibt.
+Der Rückgabewert für diese Nachricht ist identisch mit dem, was [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) für ein modales Eigenschaftenblatt zurückgibt.
 
-[Version 5,80.](common-control-versions.md) Der Rückgabewert [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) enthält unterschiedliche Informationen für modale und nicht modale Eigenschaften Blätter. In einigen Fällen benötigen nicht modale Eigenschaften Blätter möglicherweise die Informationen, die Sie von **PropertySheet** erhalten haben, wenn Sie Modal waren. Insbesondere müssen Sie möglicherweise wissen, ob ID \_ psrebootsystem oder ID \_ psrestartwindows zurückgegeben worden wäre.
+[Version 5.80.](common-control-versions.md) Der [**PropertySheet-Rückgabewert**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) enthält unterschiedliche Informationen für modale und moduslose Eigenschaftenblätter. In einigen Fällen benötigen moduslose Eigenschaftenblätter möglicherweise die Informationen, die sie von **PropertySheet** erhalten hätten, wenn sie modal waren. Insbesondere müssen sie möglicherweise wissen, ob id \_ PSREBOOTSYSTEM oder ID \_ PSRESTARTWINDOWS zurückgegeben worden wäre.
 
-Für ein nicht modalem Eigenschaften Blatt sollte die Nachrichten Schleife [**PSM \_ IsDialogMessage**](psm-isdialogmessage.md) verwenden, um Nachrichten an das Eigenschaften Blatt zu übergeben, und [**PSM \_ getcurrentpagehwnd**](psm-getcurrentpagehwnd.md) , um zu bestimmen, wann das Dialogfeld zerstört werden soll. Wenn der Benutzer auf die Schaltfläche **OK** oder **Abbrechen** klickt, gibt **PSM \_ getcurrentpagehwnd** den Wert **null** zurück. Sie können dann den Wert abrufen, den ein modales Eigenschaften Blatt von [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) erhalten hätte, indem Sie eine **PSM \_ GetResult** -Nachricht senden.
+Bei einem moduslosen Eigenschaftenblatt sollte Ihre Nachrichtenschleife [**PSM \_ ISDIALOGMESSAGE**](psm-isdialogmessage.md) verwenden, um Nachrichten an das Eigenschaftenblattdialogfeld zu übergeben, und [**PSM \_ GETCURRENTPAGEHWND,**](psm-getcurrentpagehwnd.md) um zu bestimmen, wann das Dialogfeld zerstört werden soll. Wenn der Benutzer auf die Schaltfläche **OK** oder **Abbrechen** klickt, gibt **PSM \_ GETCURRENTPAGEHWND** **NULL** zurück. Sie können dann den Wert abrufen, den ein modales Eigenschaftenblatt von [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) erhalten hätte, indem Sie eine **PSM \_ GETRESULT-Nachricht** senden.
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> Diese Meldung wird nicht unterstützt, wenn Sie den Stil des Assistenten Für Dies verwenden [**\_ (PSH-DIALOGFELDWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -79,9 +79,9 @@ Für ein nicht modalem Eigenschaften Blatt sollte die Nachrichten Schleife [**PS
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

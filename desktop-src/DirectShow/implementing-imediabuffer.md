@@ -1,25 +1,25 @@
 ---
-description: Implementieren von imediabuffer
+description: Implementieren von IMediaBuffer
 ms.assetid: bde7cef8-f43e-4a11-8b77-fed5585d390a
-title: Implementieren von imediabuffer
+title: Implementieren von IMediaBuffer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e3425b3f612667a0b6577de385d59362bd8dafd0
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 5033fcf18812f2a31e175c05b0d4d8eeee18484d0cc20e640ae30f9390a68f76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154118"
 ---
-# <a name="implementing-imediabuffer"></a>Implementieren von imediabuffer
+# <a name="implementing-imediabuffer"></a>Implementieren von IMediaBuffer
 
-Im DMO-Standard Streamingmodell werden Puffer über die [**imediabuffer**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediabuffer) -Schnittstelle verwaltet. Der DMO-Client ist für die Implementierung eines Objekts verantwortlich, das diese Schnittstelle verfügbar macht. Die **imediabuffer** -Schnittstelle verfügt über drei Methoden:
+Im Standard-DMO Streamingmodell werden Puffer über die [**IMediaBuffer-Schnittstelle**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediabuffer) verwaltet. Der Client des DMO ist für die Implementierung eines Objekts verantwortlich, das diese Schnittstelle verfügbar macht. Die **IMediaBuffer-Schnittstelle** verfügt über drei Methoden:
 
--   **Getbufferandlength** gibt die Adresse des Puffers (d. h. den tatsächlichen Speicherblock, der die Daten enthält) und die Größe der gültigen Daten im Puffer zurück.
--   **Getmaxlength** gibt die Größe des Puffers zurück.
+-   **GetBufferAndLength** gibt die Adresse des Puffers (d. h. den tatsächlichen Speicherblock, der die Daten enthält) und die Größe aller gültigen Daten im Puffer zurück.
+-   **GetMaxLength** gibt die Größe des Puffers zurück.
 -   **SetLength** gibt die Länge der gültigen Daten im Puffer an.
 
-Für die direkte Verarbeitung ist die **imediabuffer** -Schnittstelle nicht erforderlich. Der folgende Code zeigt eine minimale Implementierung von **imediabuffer**:
+Die direkte Verarbeitung erfordert nicht die **IMediaBuffer-Schnittstelle.** Der folgende Code zeigt eine minimale Implementierung von **IMediaBuffer:**
 
 
 ```C++
@@ -173,7 +173,7 @@ public:
 
 <dl> <dt>
 
-[Direktes Hosting eines DMO](directly-hosting-a-dmo.md)
+[Direktes Hosten eines DMO](directly-hosting-a-dmo.md)
 </dt> </dl>
 
  

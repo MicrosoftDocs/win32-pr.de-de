@@ -1,69 +1,69 @@
 ---
-description: Parallele Installationen, auch geschmierte Installationen genannt, sind eine veraltete Funktion der Windows Installer.
+description: Gleichzeitige Installationen, auch als geschachtelte Installationen bezeichnet, sind ein veraltetes Feature des Windows Installers.
 ms.assetid: 579ae4ee-47a0-440e-81ca-ea8bf60c5349
-title: Parallele Installationen
+title: Gleichzeitige Installationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d89f2ef4af062c8151935fefab471603f79d7633
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09264df8c47c08f7d1512b46d65572d3572d5190f960254c8ed13182dd668657
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118144407"
 ---
-# <a name="concurrent-installations"></a>Parallele Installationen
+# <a name="concurrent-installations"></a>Gleichzeitige Installationen
 
-Parallele Installationen, auch geschmierte Installationen genannt, sind eine veraltete Funktion der Windows Installer. Anwendungen, die mit gleichzeitigen Installationen installiert werden, können letztendlich fehlschlagen, da Sie für Kunden schwierig zu bedienen sind. Verwenden Sie keine gleichzeitigen Installationen, um Produkte zu installieren, die für die Öffentlichkeit freigegeben werden sollen. Gleichzeitige Installationen können bei der Installation von Anwendungen, die nicht für die öffentliche Freigabe vorgesehen sind, eine eingeschränkte Anwendbarkeit in kontrollierten Unternehmensumgebungen haben. Die Dokumentation zur parallelen Installation wird für Paket Ersteller bereitgestellt, die parallele Installationen mit Anwendungen verwenden möchten, die nicht für die öffentliche Verteilung vorgesehen sind.
+Gleichzeitige Installationen, auch als geschachtelte Installationen bezeichnet, sind ein veraltetes Feature des Windows Installers. Anwendungen, die mit gleichzeitigen Installationen installiert werden, können schließlich fehlschlagen, da sie für Kunden schwierig zu bedienen sind. Verwenden Sie keine gleichzeitigen Installationen, um Produkte zu installieren, die für die Veröffentlichung in der Öffentlichkeit vorgesehen sind. Gleichzeitige Installationen können in kontrollierten Unternehmensumgebungen eingeschränkt anwendbar sein, wenn sie zum Installieren von Anwendungen verwendet werden, die nicht für die öffentliche Veröffentlichung vorgesehen sind. Die Dokumentation zu gleichzeitigen Installationen wird für Paketautoren bereitgestellt, die gleichzeitige Installationen mit Anwendungen verwenden möchten, die nicht für die öffentliche Verteilung vorgesehen sind.
 
-Bei einer Aktion zur gleichzeitigen Installation wird während einer aktuell ausgeführten Installation ein weiteres Windows Installer Paket installiert. Eine parallele Installation wird einem Paket hinzugefügt, indem eine parallele Installations Aktion in der [Tabelle "CustomAction](customaction-table.md) " und die benutzerdefinierte Aktion in den Sequenz Tabellen geplant wird. Das Zielfeld der CustomAction-Tabelle enthält eine Zeichenfolge der öffentlichen Eigenschafts Einstellungen, die von der gleichzeitigen Installation verwendet werden. Das Feld "Source" der Tabelle "CustomAction" identifiziert das gleichzeitige Paket. Bei einer Aktion zur gleichzeitigen Installation kann eine Anwendung, die vom Installationspaket der aktuellen Anwendung installiert wurde, nur erneut installiert oder entfernt werden.
+Eine gleichzeitige Installationsaktion installiert während einer aktuell ausgeführten Installation ein weiteres Windows Installer-Pakets. Eine gleichzeitige Installation wird einem Paket hinzugefügt, indem eine parallele Installationsaktion in der [Tabelle CustomAction](customaction-table.md) erstellt und diese benutzerdefinierte Aktion in den Sequenztabellen geplant wird. Das Feld Target der Tabelle CustomAction enthält eine Zeichenfolge mit öffentlichen Eigenschafteneinstellungen, die von der gleichzeitigen Installation verwendet werden. Das Feld Quelle der Tabelle CustomAction identifiziert das gleichzeitige Paket. Eine gleichzeitige Installationsaktion kann nur eine Anwendung neu installieren oder entfernen, die vom Installationspaket der aktuellen Anwendung installiert wurde.
 
-Der Typ der gleichzeitigen Installation wird im type-Feld der CustomAction-Tabelle angegeben. Abhängig vom benutzerdefinierten Aktionstyp kann sich das Paket für die parallele Anwendung in einem unter Speicher des Haupt Pakets befinden, als Datei an einem Speicherort, der durch eine Eigenschaft angegeben wird, oder als angekündigte Anwendung auf dem Computer des Benutzers. Die folgenden Typen von benutzerdefinierten Aktionen führen eine parallele Installation durch.
+Der Typ der gleichzeitigen Installationsaktion wird im Feld Typ der Tabelle CustomAction angegeben. Abhängig vom benutzerdefinierten Aktionstyp kann sich das Paket für die gleichzeitige Anwendung in einer Unterspeicherung des Hauptpakets, als Datei an einem durch eine Eigenschaft angegebenen Speicherort oder als angekündigte Anwendung auf dem Computer des Benutzers befinden. Die folgenden Arten von benutzerdefinierten Aktionen führen eine gleichzeitige Installation durch.
 
 
 
-| Benutzerdefinierter Aktionstyp                                 | BESCHREIBUNG                                                                     |
+| Benutzerdefinierter Aktionstyp                                 | Beschreibung                                                                     |
 |----------------------------------------------------|---------------------------------------------------------------------------------|
-| [Benutzerdefinierter Aktionstyp 7](custom-action-type-7.md)   | Parallele Installation eines Produkts im Installationspaket.      |
-| [Benutzerdefinierter Aktionstyp 23](custom-action-type-23.md) | Gleichzeitige Installation eines Installer-Pakets innerhalb der aktuellen Quell Struktur. |
-| [Benutzerdefinierter Aktionstyp 39](custom-action-type-39.md) | Gleichzeitige Installation eines angekündigten Installer-Pakets.                     |
+| [Benutzerdefinierter Aktionstyp 7](custom-action-type-7.md)   | Gleichzeitige Installation eines Produkts im Installationspaket.      |
+| [Benutzerdefinierter Aktionstyp 23](custom-action-type-23.md) | Gleichzeitige Installation eines Installationspakets innerhalb der aktuellen Quellstruktur. |
+| [Benutzerdefinierter Aktionstyp 39](custom-action-type-39.md) | Gleichzeitige Installation eines angekündigten Installationspakets.                     |
 
 
 
  
 
-Bei einer gleichzeitigen Installation werden die gleichen Einstellungen für die Benutzeroberfläche und die Protokollierung wie bei der Haupt Installation durch
+Eine gleichzeitige Installation verwendet die gleiche Benutzeroberfläche und die gleichen Protokollierungseinstellungen wie die Hauptinstallation.
 
-Gleichzeitige Installations Aktionen sollten zwischen der Aktion [installinitialisieren](installinitialize-action.md) und der Aktion [InstallFinalize](installfinalize-action.md) der Aktions Sequenz der Haupt Installation durchgesetzt werden. Bei einem Rollback der Haupt Installation führt das Installationsprogramm ein Rollback der gleichzeitigen Installation aus. Die Verwendung der [verzögerten Ausführung](deferred-execution-custom-actions.md) mit gleichzeitigen Installations Aktionen ist nicht erforderlich, da das Installationsprogramm Rollback-Informationen aus den parallelen und Haupt Installationen kombiniert. Alle Änderungen werden bei einer Rollback-Installation rückgängig gemacht.
+Gleichzeitige Installationsaktionen sollten zwischen der [Aktion InstallInitialize](installinitialize-action.md) und der [InstallFinalize-Aktion](installfinalize-action.md) der Aktionssequenz der Hauptinstallation platziert werden. Beim Rollback der Hauptinstallation führt das Installationsprogramm dann auch ein Rollback für die gleichzeitige Installation aus. Die Verwendung der [verzögerten Ausführung](deferred-execution-custom-actions.md) mit gleichzeitigen Installationsaktionen ist nicht erforderlich, da das Installationsprogramm Rollbackinformationen von gleichzeitigen und Hauptinstallationen kombiniert. Alle Änderungen werden bei einer Rollbackinstallation rückgängig gemacht.
 
-Die Rückgabewerte für gleichzeitige Installations Aktionen sind identisch mit denen für andere benutzerdefinierte Aktionen. Siehe [Rückgabewerte für benutzerdefinierte Aktionen](custom-action-return-values.md).
+Die Rückgabewerte für gleichzeitige Installationsaktionen sind identisch mit denen für andere benutzerdefinierte Aktionen. Weitere Informationen finden Sie unter [Rückgabewerte für benutzerdefinierte Aktionen.](custom-action-return-values.md)
 
-Standard mäßige oder benutzerdefinierte Aktionen, die einen automatischen Neustart des Systems angeben oder den Neustart des Benutzers anfordern, können auch einen Neustart oder eine Anforderung von innerhalb einer gleichzeitigen Installation ausführen.
+Standardaktionen oder benutzerdefinierte Aktionen, die einen automatischen Neustart des Systems angeben oder den Benutzer zum Neustart auffordern, können auch einen Neustart oder eine Anforderung innerhalb einer gleichzeitigen Installation ausführen.
 
-Sobald der Installer eine parallele Installation startet, sperrt er alle anderen Installationen, bis die parallele Installation fertiggestellt ist und die Haupt Installation fortgesetzt wird. Das Installationsprogramm kann nur parallele Installationen als synchrone benutzerdefinierte Aktionen ausführen. Siehe [synchrone und asynchrone benutzerdefinierte Aktionen](synchronous-and-asynchronous-custom-actions.md). Die in [benutzerdefinierte Aktion Rückgabe Verarbeitungsoptionen](custom-action-return-processing-options.md) beschriebenen Optionsflags müssen auf None (+ 0) oder **msidbcustomaction typecontinue** (+ 64) festgelegt werden.
+Sobald das Installationsprogramm eine gleichzeitige Installation startet, sperrt es alle anderen Installationen, bis die gleichzeitige Installation abgeschlossen ist und bevor die Hauptinstallation fortgesetzt wird. Das Installationsprogramm kann gleichzeitige Installationen nur als synchrone benutzerdefinierte Aktionen ausführen. Weitere Informationen finden Sie unter [Synchrone und asynchrone benutzerdefinierte Aktionen.](synchronous-and-asynchronous-custom-actions.md) Die unter [Benutzerdefinierte Aktion Rückgabeverarbeitungsoptionen](custom-action-return-processing-options.md) beschriebenen Optionsflags müssen auf none (+0) oder **msidbCustomActionTypeContinue** (+64) festgelegt werden.
 
-Eine parallele Installations Aktion kann eine Anwendung installieren, die lokal ausgeführt, von der Quelle ausgeführt, neu installiert oder auf dieselbe Weise wie bei Verwendung von [**msiinstallproduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) für eine reguläre Installation entfernt werden soll. Um den Installationstyp anzugeben, übergeben Sie die [**ADDLOCAL**](addlocal.md)-, [**addsource**](addsource.md)-, [**neuinstall**](reinstall.md)-oder [**Remove**](remove.md) -Eigenschaft an die parallel Installation-Aktion.
+Eine gleichzeitige Installationsaktion kann eine Anwendung installieren, die lokal, von der Quelle ausgeführt, neu installiert oder auf die gleiche Weise wie bei der Verwendung von [**MsiInstallProduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) für eine reguläre Installation entfernt werden soll. Um den Installationstyp anzugeben, übergeben Sie entweder die Eigenschaft [**ADDLOCAL,**](addlocal.md) [**ADDSOURCE,**](addsource.md) [**REINSTALL**](reinstall.md)oder [**REMOVE**](remove.md) an die gleichzeitige Installationsaktion.
 
-Gleichzeitige Installations Aktionen können paarweise, eine Aktion, die für die Installation von verwendet wird, und die andere Aktion zum Entfernen der gleichzeitigen Installation erstellt werden. Der [benutzerdefinierte Aktionstyp 7](custom-action-type-7.md) oder der [benutzerdefinierte Aktionstyp 23](custom-action-type-23.md) wird normalerweise zur Installation von verwendet. Der [benutzerdefinierte Aktionstyp 39](custom-action-type-39.md) wird normalerweise verwendet, um die gleichzeitige Installation zu entfernen, wenn das übergeordnete Produkt deinstalliert wird. Der Datensatz für die benutzerdefinierte Aktion "entfernen" in der [Tabelle "CustomAction](customaction-table.md) " kann die Produktcode-GUID im Feld "Source" und "Remove = All" im Feld "target" aufweisen. Die zwei benutzerdefinierten Aktionen müssen in der Aktions Sequenz Tabelle mit sich gegenseitig ausschließenden Bedingungen erstellt werden. Beispielsweise kann die benutzerdefinierte Aktion, mit der das Produkt installiert wird, "nicht installiert" im Feld "Bedingung" aufweisen, und die benutzerdefinierte Aktion entfernt die parallele Installation kann "Remove =" All "im Feld" Bedingung "aufweisen.
+Gleichzeitige Installationsaktionen können in Paaren erstellt werden, eine Aktion, die für die Installation verwendet wird, und die andere Aktion, die zum Entfernen der gleichzeitigen Installation verwendet wird. Ein [benutzerdefinierter Aktionstyp 7](custom-action-type-7.md) oder [benutzerdefinierter Aktionstyp 23](custom-action-type-23.md) wird normalerweise für die Installation verwendet. Ein [benutzerdefinierter Aktionstyp 39](custom-action-type-39.md) wird normalerweise verwendet, um die gleichzeitige Installation zu entfernen, wenn das übergeordnete Produkt deinstalliert wird. Der Datensatz für die benutzerdefinierte Aktion zum Entfernen in der [Tabelle CustomAction](customaction-table.md) kann die Produktcode-GUID im Feld Quelle und "REMOVE=ALL" im Feld Ziel enthalten. Die beiden benutzerdefinierten Aktionen müssen in der Aktionssequenztabelle mit sich gegenseitig ausschließenden Bedingungen erstellt werden. Für die benutzerdefinierte Aktion, die das Produkt installiert, kann beispielsweise "NOT Installed" im Feld Bedingung enthalten sein, und die benutzerdefinierte Aktion entfernt die gleichzeitige Installation und kann REMOVE="ALL" im Feld Bedingung enthalten.
 
-Es gibt keine Methode zum Abfragen eines Pakets, um die Kosten zu beheben. Dies erschwert die Kosten für gleichzeitige Installationen. Der [Tabelle ReserveCost](reservecost-table.md) müssen Zeilen hinzugefügt werden, um die Ordner und die schlechtesten Kosten der Komponente anzugeben, die mit der gleichzeitigen Installation verknüpft ist.
+Es gibt keine Methode zum Abfragen der Kosten eines Pakets. Dies erschwert die Kosten für gleichzeitige Installationen. Zeilen müssen der [ReserveCost-Tabelle](reservecost-table.md) hinzugefügt werden, um die Ordner und im schlimmsten Fall die Kosten der Komponente anzugeben, die der gleichzeitigen Installation zugeordnet ist.
 
-Die einzige [benutzerdefinierte Aktion zur Rückgabe von Verarbeitungsoptionen](custom-action-return-processing-options.md) , die für gleichzeitige Installations Aktionen verfügbar sind, sind None (+ 0) oder **msidbcustomaction typecontinue** (+ 64).
+Die einzigen optionen für [die Rückgabeverarbeitung benutzerdefinierter Aktionen,](custom-action-return-processing-options.md) die mit gleichzeitigen Installationsaktionen verfügbar sind, sind none (+0) oder **msidbCustomActionTypeContinue** (+64).
 
-Beachten Sie, dass eine übergeordnete Installation das eigene Paket nicht als parallele Installations Aktion aufruft.
+Beachten Sie, dass eine übergeordnete Installation kein eigenes Paket als gleichzeitige Installationsaktion aufrufen kann.
 
-Beachten Sie Folgendes: Wenn bei einer Installation pro Computer versucht wird, eine parallele Installation pro Benutzer auszuführen, registriert das Installationsprogramm die übergeordnete Installation standardmäßig als Benutzer pro Benutzer. Dies kann bewirken, dass das Installationsprogramm die Anwendung fälschlicherweise entfernt, da das Installationsprogramm versucht, die Anwendung pro Computer zu deinstallieren, wenn Sie tatsächlich als Benutzer pro Benutzer registriert ist. Um den Zustand einer parallelen Installation zu erzwingen, um den Status der übergeordneten Installation zu überprüfen, geben Sie ALLUSERS = " \[ ALLUSERS \] " in die Ziel Spalte der [CustomAction-Tabelle](customaction-table.md)ein. In diesem Fall ist die parallele Installation pro Computer, wenn das übergeordnete Objekt pro Computer ist, und die gleichzeitige Installation erfolgt pro Benutzer, wenn das übergeordnete Element pro Benutzer ist.
+Beachten Sie Folgendes: Wenn bei einer Installation pro Computer versucht wird, eine gleichzeitige Installation pro Benutzer auszuführen, registriert das Installationsprogramm die übergeordnete Installation standardmäßig als benutzerspezifische Installation. Dies kann dazu führen, dass das Installationsprogramm die Anwendung falsch entfernt, da das Installationsprogramm versucht, die Anwendung pro Computer zu deinstallieren, wenn sie tatsächlich als pro Benutzer registriert ist. Um zu erzwingen, dass der Status einer gleichzeitigen Installation den Status der übergeordneten Installation nachverfolgt, geben Sie ALLUSERS=" \[ ALLUSERS \] " in die Target -Spalte der [CustomAction-Tabelle](customaction-table.md)ein. In diesem Fall erfolgt die gleichzeitige Installation pro Computer, wenn das übergeordnete Element pro Computer ist, und die gleichzeitige Installation pro Benutzer, wenn das übergeordnete Element pro Benutzer ist.
 
-Beim Erstellen gleichzeitiger Installationen sollten Entwickler die folgenden Warnungen beachten:
+Entwickler sollten beim Erstellen gleichzeitiger Installationen die folgenden Warnungen beachten.
 
--   Parallele Installationen können keine Komponenten gemeinsam verwenden.
--   Eine administrative Installation kann nicht gleichzeitig eine parallele Installation enthalten.
+-   Gleichzeitige Installationen können keine Komponenten gemeinsam nutzen.
+-   Eine Administratorinstallation darf keine gleichzeitige Installation enthalten.
 -   Das Patchen und Aktualisieren funktioniert möglicherweise nicht mit gleichzeitigen Installationen.
--   Das Installationsprogramm kann eine gleichzeitige Installation nicht ordnungsgemäß Kosten.
--   Integrierte progressbars können nicht mit gleichzeitigen Installationen verwendet werden.
+-   Das Installationsprogramm kostet eine gleichzeitige Installation möglicherweise nicht ordnungsgemäß.
+-   Integrierte ProgressBars können nicht mit gleichzeitigen Installationen verwendet werden.
 -   Ressourcen, die angekündigt werden sollen, können von der gleichzeitigen Installation nicht installiert werden.
--   Ein Paket, das eine parallele Installation einer Anwendung ausführt, sollte auch die gleichzeitige Anwendung deinstallieren, wenn das übergeordnete Produkt deinstalliert wird.
+-   Ein Paket, das eine gleichzeitige Installation einer Anwendung ausführt, sollte auch die gleichzeitige Anwendung deinstallieren, wenn das übergeordnete Produkt deinstalliert wird.
 
-Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der folgenden Bedingungs Anweisungen hinzu, um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird. Dadurch wird verhindert, dass das Paket jemals durch eine parallele Installations Aktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket von der Aktion " [RemoveExistingProducts](removeexistingproducts-action.md) " entfernt wird. Weitere Informationen finden Sie auch in der Eigenschaft " [**parametenoriginaldatabase**](parentoriginaldatabase.md) " und der Eigenschaft " [**parametcode**](parentproductcode.md) ".
+Um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird, fügen Sie der [LaunchCondition-Tabelle](launchcondition-table.md) eine der folgenden bedingten Anweisungen hinzu. Dadurch wird verhindert, dass das Paket jemals von einer gleichzeitigen Installationsaktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket durch die [RemoveExistingProducts-Aktion](removeexistingproducts-action.md) entfernt wird. Siehe auch die [**ParentOriginalDatabase-Eigenschaft**](parentoriginaldatabase.md) und die [**ParentProductCode-Eigenschaft.**](parentproductcode.md)
 
 ``` syntax
 "Not ParentProductCode"

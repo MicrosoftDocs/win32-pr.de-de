@@ -1,9 +1,9 @@
 ---
-title: Baseeapparameters Complex Type-Verbindungs Eigenschaften
-description: Definiert das Platzhalter Element für den Methodentyp und die Methoden spezifische Konfiguration.
+title: Komplexer BaseEapParameters-Typ– Verbindungseigenschaften
+description: Definiert das Platzhalterelement für die methodentyp- und methodenspezifische Konfiguration.
 ms.assetid: 510debce-545c-4ce1-965b-e4b2185b7983
 keywords:
-- Baseeapparameters komplexer Typ EAPHost
+- Komplexer BaseEapParameters-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f3bfb9f6c833900967525467202421cf94166405
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 4ae3abf23b19badb123f8eb49097c6b3e9d7ac6d26fc0132f34b84de5ac24c01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106353408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086954"
 ---
-# <a name="baseeapparameters-complex-type---connection-properties"></a>Baseeapparameters Complex Type-Verbindungs Eigenschaften
+# <a name="baseeapparameters-complex-type---connection-properties"></a>Komplexer BaseEapParameters-Typ– Verbindungseigenschaften
 
-Der komplexe Typ **baseeapparameters** definiert das Platzhalter Element für den Methodentyp und die Methoden spezifische Konfiguration.
+Der **komplexe BaseEapParameters-Typ** definiert das Platzhalterelement für den Methodentyp und die methodenspezifische Konfiguration.
 
 ``` syntax
 <xs:complexType name="BaseEapParameters">
@@ -45,15 +45,15 @@ Der komplexe Typ **baseeapparameters** definiert das Platzhalter Element für de
 
 
 
-| Element                                                                            | type    | BESCHREIBUNG                                     |
+| Element                                                                            | Typ    | Beschreibung                                     |
 |------------------------------------------------------------------------------------|---------|-------------------------------------------------|
-| [**type**](baseeapconnectionpropertiesv1schema-type-baseeapparameters-element.md) | integer | Eine beliebige Schema Instanz ist hier zulässig.<br/> |
+| [**Typ**](baseeapconnectionpropertiesv1schema-type-baseeapparameters-element.md) | integer | Hier ist jede Schemainstanz zulässig.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In **baseeapparameters** kann die-Methode die konstituierenden Elemente definieren. Die-Methode führt auch eine Schema Validierung für die Elemente in **baseeapparameters** aus.
+In **BaseEapParameters** kann die Methode die konstituierenden Elemente definieren. Die -Methode führt auch eine Schemavalidierung für die Elemente in **BaseEapParameters aus.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ In **baseeapparameters** kann die-Methode die konstituierenden Elemente definier
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -70,7 +70,7 @@ In **baseeapparameters** kann die-Methode die konstituierenden Elemente definier
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapconnectionpropertiesv1-Schema](baseeapconnectionpropertiesv1schema-schema.md)

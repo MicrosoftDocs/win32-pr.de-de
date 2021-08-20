@@ -1,88 +1,88 @@
 ---
 title: DNS-Konstanten
-description: Die folgenden Konstanten werden für DNS in der Host-Byte Reihenfolge definiert.
+description: Die folgenden Konstanten werden für DNS in Der Host-Byte-Reihenfolge definiert.
 ms.assetid: 95bc9193-7962-498a-9abd-c4718ac35f0f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64497e14d6c4ae11f4a6ed68200614aa4f602270
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 61da11c9d8f5af28e2152bad5fe9c7b5eb6eb7d83fdb7f94c11e8c2f3c04d9f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104038612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118164156"
 ---
 # <a name="dns-constants"></a>DNS-Konstanten
 
-Die folgenden Konstanten werden für DNS in der Host-Byte Reihenfolge definiert.
+Die folgenden Konstanten werden für DNS in Der Host-Byte-Reihenfolge definiert.
 
-## <a name="dns-record-types"></a>DNS-Daten Satz Typen
+## <a name="dns-record-types"></a>DNS-Eintragstypen
 
 
 
 | Konstante           | Wert            |
 |--------------------|------------------|
-| DNS- \_ Typ \_ A       | 0x0001           |
-| DNS- \_ Typ- \_ NS      | 0x0002           |
-| DNS- \_ Typ \_ MD      | 0x0003           |
-| DNS- \_ Typ- \_ MF      | 0x0004           |
-| DNS- \_ Typ \_ CNAME   | 0x0005           |
-| DNS- \_ Typ \_ SOA     | 0x0006           |
-| DNS- \_ Typ \_ MB      | 0x0007           |
-| DNS- \_ Typ- \_ mg      | 0x0008           |
-| DNS- \_ Typ \_ Mr      | 0x0009           |
-| DNS- \_ Typ \_ null    | 0x000a           |
-| DNS- \_ Typ- \_ Wert     | 0x000b           |
-| DNS- \_ Typ \_ ptr     | 0x000c           |
-| DNS- \_ Typ \_ hinfo   | 0x000d           |
-| DNS- \_ Typ \_ MINFO   | 0x000e           |
-| DNS- \_ Typ \_ MX      | 0x000f           |
-| DNS \_ - \_ Typtext    | 0x0010           |
-| DNS- \_ Typ- \_ RP      | 0x0011           |
-| DNS- \_ Typ \_ AFSDB   | 0x0012           |
-| DNS- \_ Typ \_ x25     | 0x0013           |
-| DNS- \_ Typ \_ ISDN    | 0x0014           |
-| DNS- \_ Typ \_ RT      | 0x0015           |
-| DNS- \_ Typ \_ NSAP    | 0x0016           |
-| DNS- \_ Typ \_ nsapptr | 0x0017           |
-| DNS- \_ Typ \_ sig     | 0x0018           |
-| DNS \_ - \_ Typschlüssel     | 0x0019           |
-| DNS- \_ Typ \_ px      | 0x001a           |
-| DNS-Typ-Gruppenrichtlinien Objekte \_ \_    | 0x001b           |
-| DNS- \_ Typ \_ AAAA    | 0x001c           |
-| DNS- \_ Typ \_ Loc     | 0x001d           |
-| DNS- \_ Typ \_ NXT     | 0x001e           |
-| DNS- \_ Typ- \_ Eid     | 0x001F           |
-| DNS- \_ Typ " \_ nimloc"  | 0x0020           |
-| DNS- \_ Typ \_ SRV     | 0x0021           |
-| DNS- \_ Typ \_ Atma    | 0x0022           |
-| DNS- \_ Typ ( \_ NAPTR)   | 0x0023           |
-| DNS- \_ Typ \_ Kx      | 0x0024           |
-| DNS \_ - \_ typzertifikat    | 0x0,025           |
-| DNS- \_ Typ \_ a6      | 0x0026           |
-| DNS- \_ Typ \_ DName   | 0x0027           |
-| DNS \_ - \_ typsenke    | 0x0028           |
-| DNS \_ - \_ typopt     | 0x0000           |
-| DNS- \_ Typ- \_ DS      | 0x002b           |
-| DNS- \_ Typ \_ RRSIG   | 0x002e           |
-| DNS- \_ Typ \_ nsec    | 0x002f           |
-| DNS- \_ Typ \_ DNSKEY  | 0x0030           |
-| DNS- \_ Typ \_ DHCID   | 0x0031           |
-| DNS- \_ Typ- \_ uinfo   | 0x0064           |
-| DNS- \_ Typ- \_ UID     | 0x0065           |
-| DNS- \_ Typ- \_ gid     | 0x0066           |
-| DNS- \_ Typ \_ nicht Spezifikation  | 0x0067           |
-| DNS- \_ Typ- \_ addrs   | 0x00f 8           |
-| DNS- \_ Typ \_ TKey    | 0x00f 9           |
-| DNS- \_ Typ \_ TSIG    | 0x00fa           |
-| DNS- \_ Typ \_ IXFR    | 0x00fb           |
-| DNS- \_ Typ \_ AXFR    | 0x00fc           |
-| DNS- \_ Typ \_ mailb   | 0x00fd           |
-| DNS- \_ Typ \_ Maila   | 0x00fe           |
-| DNS- \_ Typ \_ alle     | 0x00FF           |
-| DNS- \_ Typ \_ beliebig     | 0x00FF           |
-| DNS- \_ Typ \_ WINS    | 0xff01           |
-| DNS- \_ Typ \_ WINSR   | 0xff02           |
-| DNS- \_ Typ \_ nbstat  | DNS- \_ Typ \_ WINSR |
+| \_DNS-TYP \_ A       | 0x0001           |
+| \_ \_ DNS-TYP-NS      | 0x0002           |
+| \_DNS-TYP \_ MD      | 0x0003           |
+| \_ \_ DNS-TYP MF      | 0x0004           |
+| \_DNS-TYP \_ CNAME   | 0x0005           |
+| \_ \_ DNS-TYP-SOA     | 0x0006           |
+| \_DNS-TYP \_ MB      | 0x0007           |
+| \_DNS-TYP \_ MG      | 0x0008           |
+| \_DNS-TYP \_ MR      | 0x0009           |
+| \_DNS-TYP \_ NULL    | 0x000a           |
+| \_DNS-TYP \_ WKS     | 0x000b           |
+| \_ \_ DNS-TYP PTR     | 0x000c           |
+| \_DNS-TYP \_ HINFO   | 0x000d           |
+| \_DNS-TYP \_ MINFO   | 0x000e           |
+| \_DNS-TYP \_ MX      | 0x000f           |
+| \_ \_ DNS-TYPTEXT    | 0x0010           |
+| \_DNS-TYP \_ RP      | 0x0011           |
+| \_DNS-TYP \_ AFSDB   | 0x0012           |
+| \_DNS-TYP \_ X25     | 0x0013           |
+| \_ \_ DNS-TYP ISDN    | 0x0014           |
+| \_DNS-TYP \_ RT      | 0x0015           |
+| \_DNS-TYP \_ NSAP    | 0x0016           |
+| \_DNS-TYP \_ NSAPPTR | 0x0017           |
+| \_DNS-TYP \_ SIG     | 0x0018           |
+| \_ \_ DNS-TYPSCHLÜSSEL     | 0x0019           |
+| \_DNS-TYP \_ PX      | 0x001a           |
+| \_ \_ DNS-TYP-GPOS    | 0x001b           |
+| \_DNS-TYP \_ AAAA    | 0x001c           |
+| \_DNS-TYP \_ LOC     | 0x001d           |
+| \_DNS-TYP \_ NXT     | 0x001e           |
+| \_ \_ DNS-TYP EID     | 0x001f           |
+| \_DNS-TYP \_ NIMLOC  | 0x0020           |
+| \_DNS-TYP \_ SRV     | 0x0021           |
+| \_DNS-TYP \_ ATMA    | 0x0022           |
+| \_DNS-TYP \_ NAPTR   | 0x0023           |
+| \_ \_ DNS-TYP KX      | 0x0024           |
+| \_ \_ DNS-TYPZERTIFIKAT    | 0x0025           |
+| \_DNS-TYP \_ A6      | 0x0026           |
+| \_DNS-TYP \_ DNAME   | 0x0027           |
+| \_ \_ DNS-TYPSENKE    | 0x0028           |
+| DNS \_ TYPE \_ OPT     | 0x0029           |
+| \_DNS-TYP \_ DS      | 0x002B           |
+| \_DNS-TYP \_ RRSIG   | 0x002E           |
+| \_ \_ DNS-TYP NSEC    | 0x002F           |
+| \_DNS-TYP \_ DNSKEY  | 0x0030           |
+| \_DNS-TYP \_ DHCID   | 0x0031           |
+| \_DNS-TYP \_ UINFO   | 0x0064           |
+| \_ \_ DNS-TYP-UID     | 0x0065           |
+| \_DNS-TYP \_ GID     | 0x0066           |
+| \_DNS-TYP \_ UNSPEC  | 0x0067           |
+| \_ \_ DNS-TYP-ADDRS   | 0x00f8           |
+| \_DNS-TYP \_ TKEY    | 0x00f9           |
+| \_DNS-TYP \_ TSIG    | 0x00fa           |
+| \_DNS-TYP \_ IXFR    | 0x00fb           |
+| \_DNS-TYP \_ AXFR    | 0x00fc           |
+| \_DNS-TYP \_ MAILB   | 0x00fd           |
+| \_DNS-TYP \_ MAILA   | 0x00fe           |
+| DNS \_ TYPE \_ ALL     | 0x00ff           |
+| DNS \_ TYPE \_ ANY     | 0x00ff           |
+| \_DNS-TYP \_ WINS    | 0xff01           |
+| \_DNS-TYP \_ WINSR   | 0xff02           |
+| \_DNS-TYP \_ NBSTAT  | \_DNS-TYP \_ WINSR |
 
 
 
@@ -94,13 +94,13 @@ Die folgenden Konstanten werden für DNS in der Host-Byte Reihenfolge definiert.
 
 | Konstante             | Wert  |
 |----------------------|--------|
-| DNS- \_ Klasse \_ Internet | 0x0001 |
-| DNS- \_ Klasse ( \_ CSNET)    | 0x0002 |
-| DNS- \_ Klassen \_ Chaos    | 0x0003 |
-| DNS- \_ Klasse \_ hesiod   | 0x0004 |
-| DNS- \_ Klasse \_ None     | 0x00fe |
-| Alle DNS- \_ Klasse \_      | 0x00FF |
-| DNS- \_ Klasse \_ Any      | 0x00FF |
+| \_DNS-KLASSE \_ INTERNET | 0x0001 |
+| \_DNS-KLASSE \_ CSNET    | 0x0002 |
+| \_DNS-KLASSE \_ CHAOS    | 0x0003 |
+| \_DNS-KLASSE \_ HESIOD   | 0x0004 |
+| \_DNS-KLASSE \_ NONE     | 0x00fe |
+| \_DNS-KLASSE \_ ALL      | 0x00ff |
+| \_DNS-KLASSE \_ ANY      | 0x00ff |
 
 
 
@@ -112,43 +112,43 @@ Die folgenden Konstanten werden für DNS in der Host-Byte Reihenfolge definiert.
 
 | Konstante                    | Wert  |
 |-----------------------------|--------|
-| DNS- \_ Opcode- \_ Abfrage          | 0x0000 |
-| DNS- \_ Opcode ( \_ IQUERY)         | 0x0001 |
-| DNS- \_ Opcode- \_ Server \_ Status | 0x0002 |
-| Unbekannter DNS- \_ Opcode. \_        | 0x0003 |
-| DNS- \_ Opcode \_ Benachrichtigen         | 0x0004 |
-| DNS- \_ Opcode- \_ Update         | 0x0005 |
+| DNS \_ OPCODE \_ QUERY          | 0x0000 |
+| DNS \_ OPCODE \_ IQUERY         | 0x0001 |
+| DNS \_ OPCODE \_ SERVER \_ STATUS | 0x0002 |
+| DNS \_ OPCODE \_ UNKNOWN        | 0x0003 |
+| DNS \_ OPCODE \_ NOTIFY         | 0x0004 |
+| DNS \_ OPCODE \_ UPDATE         | 0x0005 |
 
 
 
  
 
-## <a name="dns-record-flags"></a>DNS-Datensatz-Flags
+## <a name="dns-record-flags"></a>DNS-Eintragsflags
 
-Die folgenden Flags verweisen auf den Abschnitt (RR) eines Ressourceneinsatzes innerhalb einer DNS-Nachricht:
+Die folgenden Flags beziehen sich auf den Abschnitt eines Ressourceneintrags (RR) innerhalb einer DNS-Nachricht:
 
 
 
 | Konstante           | Wert      | Bedeutung                         |
 |--------------------|------------|---------------------------------|
-| dnsrec- \_ Frage   | 0x00000000 | RR befindet sich im Abschnitt "Frage"   |
-| dnsrec- \_ Antwort     | 0x00000001 | RR befindet sich im Abschnitt "Antwort".     |
-| dnsrec- \_ Autorität  | 0x00000002 | RR befindet sich im Abschnitt "Authority".  |
-| dnsrec \_ zusätzlich | 0x00000003 | RR befindet sich im zusätzlichen Abschnitt |
+| \_DNSREC-FRAGE   | 0x00000000 | RR befindet sich im Frageabschnitt.   |
+| DNSREC \_ ANSWER     | 0x00000001 | RR befindet sich im Antwortabschnitt.     |
+| DNSREC \_ AUTHORITY  | 0x00000002 | RR befindet sich im Abschnitt "Autorität".  |
+| DNSREC \_ ADDITIONAL | 0x00000003 | RR befindet sich im zusätzlichen Abschnitt. |
 
 
 
  
 
-Die folgenden Flags verweisen auf einen RR-Abschnitt innerhalb einer DNS-Update Nachricht pro [RFC 2136](https://www.ietf.org/rfc/rfc2136.txt):
+Die folgenden Flags beziehen sich auf den Abschnitt einer RR innerhalb einer DNS-Updatemeldung gemäß [RFC 2136](https://www.ietf.org/rfc/rfc2136.txt):
 
 
 
 | Konstante       | Wert      | Bedeutung                           |
 |----------------|------------|-----------------------------------|
-| dnsrec- \_ Zone   | 0x00000000 | RR befindet sich im Abschnitt "Zone".         |
-| dnsrec \_ Prereq | 0x00000001 | RR befindet sich im Abschnitt "Voraussetzung" |
-| dnsrec- \_ Update | 0x00000002 | RR befindet sich im Abschnitt "Update".       |
+| DNSREC \_ ZONE   | 0x00000000 | RR befindet sich im Abschnitt "Zone".         |
+| DNSREC \_ PREREQ | 0x00000001 | RR befindet sich im Abschnitt "Voraussetzungen". |
+| DNSREC \_ UPDATE | 0x00000002 | RR befindet sich im Abschnitt "Update".       |
 
 
 
@@ -160,89 +160,89 @@ Die folgenden Flags schließen sich gegenseitig aus:
 
 | Konstante        | Wert      | Bedeutung                                                    |
 |-----------------|------------|------------------------------------------------------------|
-| dnsrec \_ Löschen  | 0x00000004 | Löschen eines RR-. Wird in Verbindung mit der dnsrec-Aktualisierung verwendet. \_       |
-| dnsrec- \_ Knoten | 0x00000004 | RR ist nicht vorhanden. Wird in Verbindung mit dnsrec \_ Prereq verwendet. |
+| DNSREC \_ DELETE  | 0x00000004 | Löscht eine RR. Wird in Verbindung mit DNSREC \_ UPDATE verwendet.       |
+| DNSREC \_ NOEXIST | 0x00000004 | RR ist nicht vorhanden. Wird in Verbindung mit DNSREC \_ PREREQ verwendet. |
 
 
 
  
 
-## <a name="dns-query-options"></a>DNS-Abfrage Optionen
+## <a name="dns-query-options"></a>DNS-Abfrageoptionen
 
 
 
 | Konstante                                | Wert      | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DNS- \_ Abfrage \_ Standard                    | 0x00000000 | Standard Abfrage.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| DNS- \_ Abfrage \_ Accept \_ truncated \_ Response | 0x00000001 | Gibt abgeschnittene Ergebnisse zurück. Der Versuch unter TCP wird nicht wiederholt.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| DNS \_ - \_ Abfrage \_ nur TCP verwenden \_              | 0x00000002 | Verwendet TCP nur für die Abfrage.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| DNS- \_ Abfrage \_ keine \_ Rekursion               | 0x00000004 | Weist den DNS-Server an, eine iterative Abfrage auszuführen (weist den DNS-Server insbesondere an, keine rekursive Auflösung zum Auflösen der Abfrage auszuführen).                                                                                                                                                                                                                                                                                                   |
-| DNS- \_ Abfrage \_ Umgehungs \_ Cache               | 0x00000008 | Umgeht den Konflikt [*Löser Cache für die Suche*](r-gly.md) .                                                                                                                                                                                                                                                                                                                                                                            |
-| DNS- \_ Abfrage \_ keine Wire- \_ \_ Abfrage             | 0x00000010 | Weist DNS an, nur eine Abfrage im lokalen Cache auszuführen. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt. Verwenden Sie für eine ähnliche Funktionalität **nur den DNS- \_ Abfrage \_ Cache \_**.<br/>                                                                                                                                                                                                                                      |
-| DNS- \_ Abfrage \_ kein \_ lokaler \_ Name             | 0x00000020 | Weist DNS an, den lokalen Namen zu ignorieren. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                    |
-| DNS \_ - \_ Abfrage \_ keine \_ Hostdatei             | 0x00000040 | Verhindert, dass die DNS-Abfrage die Hostdatei konsultiert. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                   |
-| DNS- \_ Abfrage \_ nicht \_ NetBT                   | 0x00000080 | Verhindert, dass die DNS-Abfrage NetBT zur Auflösung verwendet. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                  |
-| nur DNS- \_ Abfrage Netzwerk \_ \_                  | 0x00000100 | Weist DNS an, eine Abfrage nur mit dem Netzwerk auszuführen, wobei lokale Informationen umgangen werden. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                      |
-| DNS- \_ Abfrage \_ Rückgabe \_ Meldung             | 0x00000200 | Weist DNS an, die gesamte DNS-Antwortnachricht zurückzugeben. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                   |
-| \_ \_ nur Multicast für DNS-Abfragen \_             | 0x00000400 | Verhindert, dass die Abfrage DNS verwendet und nur eine lokale Link-Multicast-Namensauflösung (LLMNR) verwendet wird. **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                                                                                                  |
-| DNS- \_ Abfrage \_ kein \_ Multicast               | 0x00000800 |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| DNS \_ - \_ Abfrage \_ als voll qualifizierten Namen behandeln \_             | 0x00001000 | Verhindert, dass die DNS-Antwort Suffixe an den übermittelten Namen in einem namens Auflösungsprozess anfügt.                                                                                                                                                                                                                                                                                                                                                  |
-| DNS- \_ Abfrage \_ addrconfig                  | 0x00002000 | Nur Windows 7: senden Sie keine [**typabfragen**](/windows/win32/api/windns/ns-windns-dns_a_data) , wenn keine IPv4-Adressen für eine Schnittstelle verfügbar sind, und senden Sie keine [**AAAA**](/windows/win32/api/windns/ns-windns-dns_aaaa_data) -typabfragen, wenn keine IPv6-Adressen verfügbar sind.                                                                                                                                                                                                                                   |
-| \_Dual- \_ \_ addr für DNS-Abfrage                  | 0x00004000 | Nur Windows 7: Fragen Sie sowohl [**AAAA**](/windows/win32/api/windns/ns-windns-dns_aaaa_data) [**-als auch Typdaten**](/windows/win32/api/windns/ns-windns-dns_a_data) Sätze ab, und geben Sie jeweils Ergebnisse zurück. Die Ergebnisse für einen Typ-Daten Satz werden **dem** **AAAA** -Typ zugeordnet.                                                                                                                                                                                                                                                           |
-| \_ \_ Multicast Wartezeit für DNS-Abfragen \_             | 0x00020000 | Wartet auf ein vollständiges Timeout, um alle Antworten von der lokalen Verknüpfung zu erfassen. Wenn nicht festgelegt, besteht das Standardverhalten darin, mit der ersten Antwort zurückzugeben. **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                                              |
-| DNS- \_ Abfrage \_ Multicast- \_ Überprüfung           | 0x00040000 | Leitet einen Test mithilfe des Hostnamens des lokalen Computers um, um die namens Eindeutigkeit für die gleiche lokale Verknüpfung zu überprüfen. Sammelt alle Antworten, auch wenn normales LLMNR-Absender Verhalten nicht aktiviert ist. **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                  |
-| DNS- \_ Abfrage nicht \_ \_ Zurücksetzen von TTL- \_ \_ Werten    | 0x00100000 | Wenn diese Einstellung festgelegt ist und die Antwort mehrere Datensätze enthält, werden die Datensätze mit der Gültigkeitsdauer der Gültigkeitsdauer (TTL) für alle Datensätze gespeichert. Wenn diese Option festgelegt ist, wird "die Gültigkeitsdauer einzelner Datensätze nicht ändern" im zurückgegebenen Daten Satz Satz nicht geändert.                                                                                                                                                                               |
-| DNS- \_ Abfrage \_ deaktivierte \_ IDN- \_ Codierung      | 0x00200000 | Deaktiviert die Unterstützung der Unterstützung für internationale Domänen Namen (IDN) in den APIs [**DNSQuery**](/windows/desktop/api/Windns/nf-windns-dnsquery_a), [**dnsqueryex**](/windows/desktop/api/Windns/nf-windns-dnsqueryex), [**dnsmodifyrecordsinset**](/windows/desktop/api/Windns/nf-windns-dnsmodifyrecordsinset_a)und [**dnsreplacerecordset**](/windows/desktop/api/Windns/nf-windns-dnsreplacerecordseta) . Alle Punycode-Namen werden als ASCII behandelt und werden bei der Übertragung ASCII-codiert. Alle nicht-ASCII-Namen werden bei der Übertragung in UTF8 codiert. **Windows 8 oder höher:** Dieser Wert wird unterstützt.<br/> |
-| DNS-Abfrage-anfügende \_ \_ \_ mehrfach Bezeichnung          | 0x00800000 |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| \_reservierte DNS-Abfrage \_                    | "0xF0000000" | Reserviert.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| DNS \_ QUERY \_ STANDARD                    | 0x00000000 | Standardabfrage.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| DNS \_ QUERY \_ ACCEPT TRUNCATED RESPONSE (DNS-ABFRAGE \_ AKZEPTIERT ABGESCHNITTENE \_ ANTWORT) | 0x00000001 | Gibt abgeschnittene Ergebnisse zurück. Unter TCP wird kein Wiederholungsversuch ausgeführt.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| \_DNS-ABFRAGE \_ VERWENDET NUR \_ TCP \_              | 0x00000002 | Verwendet TCP nur für die Abfrage.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| \_ \_ DNS-ABFRAGE KEINE \_ REKURSION               | 0x00000004 | Leitet den DNS-Server an, eine iterative Abfrage auszuführen (insbesondere wird der DNS-Server dazu versingt, keine rekursive Auflösung auszuführen, um die Abfrage aufzulösen).                                                                                                                                                                                                                                                                                                   |
+| \_ \_ DNS-ABFRAGEUMGEHUNGSCACHE \_               | 0x00000008 | Umgeht den [*Konfliktlösercache*](r-gly.md) bei der Suche.                                                                                                                                                                                                                                                                                                                                                                            |
+| \_DNS-ABFRAGE \_ KEINE \_ \_ WIRE-ABFRAGE             | 0x00000010 | Leitet DNS an, eine Abfrage nur für den lokalen Cache auszuführen. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt. Verwenden Sie für ähnliche Funktionen **NUR DNS \_ QUERY \_ CACHE \_**.<br/>                                                                                                                                                                                                                                      |
+| \_DNS-ABFRAGE \_ KEIN LOKALER \_ \_ NAME             | 0x00000020 | Leitet DNS an, den lokalen Namen zu ignorieren. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                    |
+| DNS \_ QUERY \_ NO \_ HOSTS \_ FILE             | 0x00000040 | Verhindert, dass die DNS-Abfrage die HOSTS-Datei abfragt. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                   |
+| DNS \_ QUERY \_ NO \_ NETBT                   | 0x00000080 | Verhindert, dass die DNS-Abfrage NetBT für die Auflösung verwendet. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                  |
+| NUR \_ \_ DNS-ABFRAGEVERKABELUNG \_                  | 0x00000100 | Leitet DNS an, eine Abfrage nur über das Netzwerk auszuführen, und umgeht dabei lokale Informationen. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                      |
+| DNS \_ QUERY \_ RETURN \_ MESSAGE             | 0x00000200 | Leitet DNS an, die gesamte DNS-Antwortnachricht zurück zu geben. **Windows 2000 Server und Windows 2000 Professional:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                   |
+| NUR \_ \_ DNS-ABFRAGE -MULTICAST \_             | 0x00000400 | Verhindert, dass die Abfrage DNS verwendet, und verwendet nur die Multicastnamensauflösung (Local Link Multicast Name Resolution, LLMNR). **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                                                                                                  |
+| DNS \_ QUERY \_ NO MULTICAST (DNS-ABFRAGE \_ OHNE MULTICAST)               | 0x00000800 |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| DNS \_ QUERY TREAT AS \_ \_ \_ FQDN (DNS-ABFRAGE ALS FQDN BEHANDELN)             | 0x00001000 | Verhindert, dass die DNS-Antwort Suffixe an den übermittelten Namen in einem Namensauflösungsprozess anfügen kann.                                                                                                                                                                                                                                                                                                                                                  |
+| DNS \_ QUERY \_ ADDRCONFIG                  | 0x00002000 | Windows 7: Senden Sie [](/windows/win32/api/windns/ns-windns-dns_a_data) keine A-Typabfragen, wenn IPv4-Adressen auf einer Schnittstelle nicht verfügbar sind, und senden Sie keine Abfragen vom [**Typ AAAA,**](/windows/win32/api/windns/ns-windns-dns_aaaa_data) wenn keine IPv6-Adressen verfügbar sind.                                                                                                                                                                                                                                   |
+| DNS \_ QUERY \_ DUAL \_ ADDR                  | 0x00004000 | Windows 7: Abfragen von [**AAAA-**](/windows/win32/api/windns/ns-windns-dns_aaaa_data) und A-Typdatensätzen und Zurückgeben von Ergebnissen für jede. [](/windows/win32/api/windns/ns-windns-dns_a_data) Ergebnisse  für A-Typdatensätze werden dem **AAAA-Typ** zugeordnet.                                                                                                                                                                                                                                                           |
+| DNS \_ QUERY \_ MULTICAST \_ WAIT             | 0x00020000 | Wartet auf ein vollständiges Timeout, um alle Antworten vom lokalen Link zu erfassen. Wenn nicht festgelegt, ist das Standardverhalten, mit der ersten Antwort zurück zu geben. **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                                              |
+| DNS \_ QUERY \_ MULTICAST \_ VERIFY           | 0x00040000 | Leitet einen Test mithilfe des Hostnamens des lokalen Computers an, um die Eindeutigkeit des Namens auf demselben lokalen Link zu überprüfen. Erfasst alle Antworten, auch wenn das normale LLMNR-Absenderverhalten nicht aktiviert ist. **Windows Vista und Windows Server 2008 oder höher:** Dieser Wert wird unterstützt.<br/>                                                                                                                                                                                  |
+| \_ \_ DNS-ABFRAGE: \_ \_ TTL-WERTE NICHT \_ ZURÜCKSETZEN    | 0x00100000 | Wenn festgelegt und die Antwort mehrere Datensätze enthält, werden Datensätze mit der Tl gespeichert, die dem Mindestwert TTL aus allen Datensätzen entspricht. Wenn diese Option festgelegt ist, wird "TTL einzelner Datensätze nicht ändern" im zurückgegebenen Datensatz nicht geändert.                                                                                                                                                                               |
+| \_DNS-ABFRAGE \_ DEAKTIVIEREN DER \_ IDN-CODIERUNG \_      | 0x00200000 | Deaktiviert die Unterstützung der IDN-Codierung (International Domain Name) in den [**APIs DnsQuery,**](/windows/desktop/api/Windns/nf-windns-dnsquery_a) [**DnsQueryEx,**](/windows/desktop/api/Windns/nf-windns-dnsqueryex) [**DnsModifyRecordsInSet**](/windows/desktop/api/Windns/nf-windns-dnsmodifyrecordsinset_a)und [**DnsReplaceRecordSet.**](/windows/desktop/api/Windns/nf-windns-dnsreplacerecordseta) Alle Punycodenamen werden als ASCII behandelt und im Kabel ASCII codiert. Alle Nicht-ASCII-Namen werden in UTF8 codiert. **Windows 8 oder höher:** Dieser Wert wird unterstützt.<br/> |
+| DNS \_ QUERY \_ APPEND \_ MULTILABEL          | 0x00800000 |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| RESERVIERTE \_ \_ DNS-ABFRAGE                    | 0xf0000000 | Reserviert.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 
 
  
 
-## <a name="dns-update-options"></a>DNS-Aktualisierungs Optionen
+## <a name="dns-update-options"></a>DNS-Updateoptionen
 
 
 
 | Konstante                                 | Wert      | Bedeutung                                                                                                                                                       |
 |------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Standardeinstellung für die DNS- \_ Update \_ Sicherheit \_ \_      | 0x00000000 | Verwendet das in der Registrierung angegebene Standardverhalten für sichere dynamische DNS-Updates.                                                                |
-| DNS- \_ Update \_ Sicherheit deaktiviert \_               | 0x00000010 | Versucht nicht, dynamische Updates zu sichern.                                                                                                                      |
-| DNS- \_ Update \_ Sicherheit \_ für                | 0x00000020 | Versucht ein nicht sicheres dynamisches Update; Wenn Sie abgelehnt wird, versucht, das dynamische Update zu sichern                                                                               |
-| nur DNS- \_ Update \_ Sicherheit \_              | 0x00000100 | Versucht nur, dynamische Updates zu sichern.                                                                                                                         |
-| DNS- \_ Update \_ Cache- \_ Sicherheits \_ Kontext    | 0x00000200 | Speichert den Sicherheitskontext für die Verwendung in zukünftigen Transaktionen zwischen.                                                                                                   |
-| DNS- \_ Update \_ Test \_ use \_ local \_ sys \_ Acct | 0x00000400 | Verwendet die Anmelde Informationen des lokalen Computer Kontos.                                                                                                               |
-| DNS- \_ Update \_ Force-Sicherheit ( \_ \_ NGO)       | 0x00000800 | Verwendet keinen zwischengespeicherten Sicherheitskontext.                                                                                                                         |
-| DNS \_ - \_ Update \_ alle \_ Master \_ Server testen   | 0x00001000 | Sendet DNS-Updates an alle DNS-Server mit mehreren Mastern.                                                                                                            |
-| DNS- \_ Update- \_ \_ keine \_ Update \_ Adapter überspringen  | 0x00002000 | Aktualisieren Sie keine Adapter, bei denen dynamische DNS-Updates deaktiviert sind. **Windows 2000 Server mit SP2 oder höher:** Dieser Wert wird unterstützt.<br/>                 |
-| DNS- \_ Update- \_ Remote \_ Server              | 0x00004000 | Registrieren Sie CNAME-Einträge auf einem Remote Server zusätzlich zum lokalen DNS-Server. **Windows 2000 Server mit SP2 oder höher:** Dieser Wert wird unterstützt.<br/> |
-| DNS- \_ Update \_ reserviert                    | 0xFFFF0000 | Für die zukünftige Verwendung reserviert.                                                                                                                                      |
+| DNS \_ UPDATE \_ SECURITY \_ USE \_ DEFAULT      | 0x00000000 | Verwendet das Standardverhalten, das in der Registrierung angegeben ist, für sichere dynamische DNS-Updates.                                                                |
+| DNS \_ UPDATE \_ SECURITY \_ OFF               | 0x00000010 | Versucht nicht, dynamische Updates zu sichern.                                                                                                                      |
+| DNS \_ UPDATE \_ SECURITY \_ ON                | 0x00000020 | Versucht ein nicht sicheres dynamisches Update; Wenn dies abgelehnt wird, wird versucht, ein sicheres dynamisches Update zu erhalten.                                                                               |
+| NUR \_ \_ DNS-UPDATESICHERHEIT \_              | 0x00000100 | Versucht nur, dynamische Updates zu sichern.                                                                                                                         |
+| SICHERHEITSKONTEXT \_ DES \_ \_ DNS-UPDATECACHES \_    | 0x00000200 | Speichert den Sicherheitskontext für die Verwendung in zukünftigen Transaktionen zwischen.                                                                                                   |
+| DNS \_ UPDATE TEST USE LOCAL SYS ACCT (DNS-UPDATETEST: \_ \_ \_ \_ LOKALES SYS \_ ACCT VERWENDEN) | 0x00000400 | Verwendet Anmeldeinformationen des lokalen Computerkontos.                                                                                                               |
+| DNS \_ UPDATE \_ FORCE \_ SECURITY \_ NEGO       | 0x00000800 | Verwendet keinen zwischengespeicherten Sicherheitskontext.                                                                                                                         |
+| \_DNS-UPDATE \_ ALLE \_ \_ MASTERSERVER \_ AUSPROBIEREN   | 0x00001000 | Sendet DNS-Updates an alle Multimaster-DNS-Server.                                                                                                            |
+| DNS \_ UPDATE SKIP NO UPDATE \_ ADAPTERS (KEINE \_ \_ \_ UPDATEADAPTER ÜBERSPRINGEN)  | 0x00002000 | Aktualisieren Sie keine Adapter, bei denen dynamische DNS-Updates deaktiviert sind. **Windows 2000 Server mit SP2 oder höher:** Dieser Wert wird unterstützt.<br/>                 |
+| DNS \_ UPDATE \_ REMOTE \_ SERVER              | 0x00004000 | Registrieren Sie CNAME-Einträge auf einem Remoteserver zusätzlich zum lokalen DNS-Server. **Windows 2000 Server mit SP2 oder höher:** Dieser Wert wird unterstützt.<br/> |
+| \_DNS-UPDATE \_ RESERVIERT                    | 0xffff0000 | Für die zukünftige Verwendung reserviert.                                                                                                                                      |
 
 
 
  
 
-## <a name="dns-response-codes"></a>DNS-Antwort Codes
+## <a name="dns-response-codes"></a>DNS-Antwortcodes
 
 
 
 | Fehler                | Bedeutung                                        |
 |----------------------|------------------------------------------------|
-| DNS- \_ RCODE \_ noError  | Kein Fehler                                       |
-| DNS- \_ RCODE- \_ FORMERR  | Formatierungs Fehler                                   |
-| DNS- \_ RCODE- \_ SERVFAIL | Server Fehler                                 |
-| DNS- \_ RCODE- \_ nxdomäne | Namensfehler                                     |
-| DNS- \_ RCODE- \_ Benachrichtigung  | Nicht implementiert                                |
-| DNS- \_ RCODE wurde \_ verweigert.  | Verbindung verweigert                             |
-| DNS- \_ RCODE- \_ jdomäne | Der Domänen Name darf nicht vorhanden sein                   |
-| DNS- \_ RCODE- \_ yxrrset  | Der Ressourcen Daten Satz Satz (RR) darf nicht vorhanden sein.      |
-| DNS- \_ RCODE- \_ nxrrset  | Der RR-Satz ist nicht vorhanden.                          |
-| DNS- \_ RCODE- \_ notauth  | Für Zone nicht autorisierend                     |
-| DNS- \_ RCODE- \_ notzone  | Name nicht in Zone                               |
-| DNS- \_ RCODE- \_ badvers  | Ungültiger Erweiterungsmechanismus für die DNS-Version (EDNS) |
-| DNS- \_ RCODE \_ BadSig   | Ungültige Signatur.                                  |
-| DNS- \_ RCODE- \_ badkey   | Ungültige Taste                                        |
-| DNS- \_ RCODE- \_ badtime  | Ungültiger Zeitstempel                                  |
+| DNS \_ RCODE \_ NOERROR  | Kein Fehler                                       |
+| DNS \_ RCODE \_ FORMERR  | Formatfehler                                   |
+| DNS \_ RCODE \_ SERVFAIL | Serverfehler                                 |
+| DNS \_ RCODE \_ NXDOMAIN | Name error (Namesfehler)                                     |
+| DNS \_ RCODE \_ NOTIMPL  | Nicht implementiert                                |
+| DNS \_ RCODE \_ ABGELEHNT  | Verbindung verweigert                             |
+| DNS \_ RCODE \_ YXDOMAIN | Domänenname darf nicht vorhanden sein                   |
+| DNS \_ RCODE \_ YXRRSET  | Ressourcendatensatz (RR) darf nicht vorhanden sein      |
+| DNS \_ RCODE \_ NXRRSET  | RR-Satz ist nicht vorhanden                          |
+| DNS \_ RCODE \_ NOTAUTH  | Nicht autoritativ für Zone                     |
+| DNS \_ RCODE \_ NOTZONE  | Name nicht in Zone                               |
+| DNS \_ RCODE \_ BADVERS  | Fehlerhafter Erweiterungsmechanismus für DIE DNS-Version (EDNS) |
+| DNS \_ RCODE \_ BADSIG   | Fehlerhafte Signatur                                  |
+| DNS \_ RCODE \_ BADKEY   | Fehlerhafter Schlüssel                                        |
+| DNS \_ RCODE \_ BADTIME  | Fehlerhafter Zeitstempel                                  |
 
 
 

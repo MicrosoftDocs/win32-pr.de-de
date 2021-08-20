@@ -1,29 +1,29 @@
 ---
-title: Erstellen eines Dialog Felds zum Auswählen eines Filters
-description: Erstellen eines Dialog Felds zum Auswählen eines Filters
+title: Erstellen eines Dialogfelds zum Auswählen eines Filters
+description: Erstellen eines Dialogfelds zum Auswählen eines Filters
 ms.assetid: 4cbb9276-6ce6-4cf4-a000-2b4f9ac42b31
 keywords:
 - Audiokomprimierungs-Manager (ACM), Erstellen von Dialogfeldern
-- ACM (Audiokomprimierungs-Manager), Erstellen von Dialogfeldern
+- ACM (Audiokomprimierungs-Manager),Erstellen von Dialogfeldern
 - ACM-Beispiele, Erstellen von Dialogfeldern
 - Erstellen von Dialogfeldern
-- acmfilterchoose-Funktion
-- Audiokomprimierungs-Manager (ACM), auswählen von Filtern
-- ACM (Audiokomprimierungs-Manager), auswählen von Filtern
-- ACM-Beispiele, auswählen von Filtern
+- acmFilterChoose-Funktion
+- Audiokomprimierungs-Manager (ACM), Auswählen von Filtern
+- ACM (Audiokomprimierungs-Manager),Auswählen von Filtern
+- ACM-Beispiele, Auswählen von Filtern
 - Auswählen von Filtern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87225c1aebf2a06c738a1b48b03b94ed81bf6c2d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 70015f7e546337983725ae85c683acf5e9b75423e0de0734de4e1293480933ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118136604"
 ---
-# <a name="producing-a-dialog-box-for-selecting-a-filter"></a>Erstellen eines Dialog Felds zum Auswählen eines Filters
+# <a name="producing-a-dialog-box-for-selecting-a-filter"></a>Erstellen eines Dialogfelds zum Auswählen eines Filters
 
-Eine Anwendung kann es Benutzern ermöglichen, einen beliebigen Filter Vorgang auszuwählen und Sie auf Waveform-Audiodaten anzuwenden. Im folgenden Beispiel ordnet die Anwendung einen Puffer zum Speichern des Filters zu und verwendet dann die [**acmfilterchoose**](/windows/desktop/api/Msacm/nf-msacm-acmfilterchoose) -Funktion, um den Filter auszuwählen. Die Funktionen in diesem Beispiel müssen mit dem entsprechenden Filter oder Filtertag aufgerufen werden.
+Eine Anwendung kann Es Benutzern ermöglichen, einen beliebigen Filtervorgang auszuwählen und auf Waveform-Audiodaten anzuwenden. Im folgenden Beispiel ordnet die Anwendung einen Puffer für den Filter zu und verwendet dann die Funktion [**acmFilterChoose,**](/windows/desktop/api/Msacm/nf-msacm-acmfilterchoose) um den Filter auszuwählen. Die Funktionen in diesem Beispiel müssen mit dem entsprechenden Filter- oder Filtertag aufgerufen werden.
 
 
 ```C++
@@ -74,9 +74,9 @@ return (mmr);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

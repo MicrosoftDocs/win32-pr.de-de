@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen temporären Container im Kryptografiedienstanbieter (kryptografischen Service Provider, CSP) und lädt einen privaten Schlüssel aus dem Arbeitsspeicher in den Container.
+description: Erstellt einen temporären Container im Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) und lädt einen privaten Schlüssel aus dem Arbeitsspeicher in den Container.
 ms.assetid: 9388b49b-fad4-4499-a391-fe58ed672552
-title: Pvkprivatekeyacquirecontextfrommemory-Funktion
+title: PvkPrivateKeyAcquireContextFromMemory-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,24 +13,24 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: 1552d1e35845ffb7407d11d6e520b914ab805d50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f22e6135fbad3ed4919ec44620f5b1234f17b21c27b0a3048848d258adabbd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117975864"
 ---
-# <a name="pvkprivatekeyacquirecontextfrommemory-function"></a>Pvkprivatekeyacquirecontextfrommemory-Funktion
+# <a name="pvkprivatekeyacquirecontextfrommemory-function"></a>PvkPrivateKeyAcquireContextFromMemory-Funktion
 
 > [!IMPORTANT]
 > Diese API ist veraltet. Microsoft kann diese API in zukünftigen Versionen entfernen.
 
  
 
-Die **pvkprivatekeyacquirecontextfrommemory** -Funktion erstellt einen temporären Container im [*Kryptografiedienstanbieter (kryptografischen Service Provider*](../secgloss/c-gly.md) , CSP) und lädt einen [*privaten Schlüssel*](../secgloss/p-gly.md) aus dem Arbeitsspeicher in den Container.
+Die **PvkPrivateKeyAcquireContextFromMemory-Funktion** erstellt einen temporären Container im [*Kryptografiedienstanbieter (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) und lädt einen [*privaten Schlüssel*](../secgloss/p-gly.md) aus dem Arbeitsspeicher in den Container.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll herzustellen.
 
  
 
@@ -57,72 +57,72 @@ BOOL WINAPI PvkPrivateKeyAcquireContextFromMemory(
 
 <dl> <dt>
 
-*pwszprovname* \[ in\]
+*pwszProvName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des CSP enthält, dessen Typ in *dwprovtype* angefordert wird.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des CSP enthält, dessen Typ in *dwProvType* angefordert wird.
 
 </dd> <dt>
 
-*dwprovtype* \[ in\]
+*dwProvType* \[ In\]
 </dt> <dd>
 
-Ein **DWORD** -Wert für den CSP-Typ. Weitere Informationen zu CSP-Typen finden Sie unter [Typen von Kryptografieanbietern](cryptographic-provider-types.md).
+Ein **DWORD-Wert** für den CSP-Typ. Weitere Informationen zu CSP-Typen finden Sie unter [Kryptografieanbietertypen.](cryptographic-provider-types.md)
 
 </dd> <dt>
 
-*pbData* \[ in\]
+*pbData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, um die Kontext Daten zu empfangen. Der Aufrufer muss diese Ressource bereitstellen.
+Ein Zeiger auf einen Puffer, um die Kontextdaten zu empfangen. Der Aufrufer muss diese Ressource bereitstellen.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
-Ein **DWORD** -Wert, der die Größe des *pbData* -Puffers in Bytes angibt. Der Aufrufer muss diesen Wert angeben.
+Ein **DWORD-Wert,** der die Größe des *pbData-Puffers* in Bytes angibt. Der Aufrufer muss diesen Wert angeben.
 
 </dd> <dt>
 
-*hwndOwner* \[ in\]
+*hwndOwner* \[ In\]
 </dt> <dd>
 
-Wenn ein Kennwort zum Entschlüsseln der Kontext Daten erforderlich ist, auf die durch den *pbData* -Parameter verwiesen wird, ist dieser Parameter ein Handle für das übergeordnete Dialogfeld. Andernfalls ist der Wert **null**.
+Wenn zum Entschlüsseln der Kontextdaten, auf die der *pbData-Parameter* verweist, ein Kennwort erforderlich ist, ist dieser Parameter ein Handle für das übergeordnete Element des Dialogfelds. Andernfalls ist es **NULL.**
 
 </dd> <dt>
 
-*pwszkeyname* \[ in\]
+*pwszKeyName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des abzurufenden Schlüssels enthält.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des abzurufenden Schlüssels enthält.
 
 </dd> <dt>
 
-*pdwkeyspec* \[ in, out, optional\]
+*pdwKeySpec* \[ in, out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf einen **DWORD** -Wert, der den Typ des Schlüssels angibt. Mögliche Werte sind **bei \_ keyexchange** oder **bei \_ Signatur**.
+Ein Zeiger auf einen **DWORD-Wert,** der den Typ des Schlüssels angibt. Mögliche Werte sind **AT \_ KEYEXCHANGE** oder **AT \_ SIGNATURE.**
 
 </dd> <dt>
 
-*phcryptprov* \[ vorgenommen\]
+*phCryptProv* \[ out\]
 </dt> <dd>
 
 Ein Zeiger auf ein Handle für den CSP.
 
 </dd> <dt>
 
-*ppwsztmpcontainer* \[ vorgenommen\]
+*ppwszTmpContainer* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Zeigers auf eine NULL-terminierte Zeichenfolge für den temporären Container Namen. Die **pvkprivatekeyacquirecontextfrommemory** -Funktion stellt den Puffer für diese Zeichenfolge bereit und initialisiert sie. Beim Aufrufen von **pvkprivatekeyacquirecontextfrommemory** sollte die Adresse auf einen **null** -Wert zeigen.
+Die Adresse eines Zeigers auf eine auf NULL endende Zeichenfolge für den temporären Containernamen. Die **PvkPrivateKeyAcquireContextFromMemory-Funktion** stellt den Puffer für diese Zeichenfolge bereit und initialisiert sie. Beim Aufrufen von **PvkPrivateKeyAcquireContextFromMemory** sollte die Adresse auf einen **NULL-Wert** verweisen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt diese Funktion " **true**" zurück. Die **pvkprivatekeyacquirecontextfrommemory** -Funktion gibt **false** zurück, wenn Sie fehlschlägt.
+Bei Erfolg gibt diese Funktion **TRUE** zurück. Die **PvkPrivateKeyAcquireContextFromMemory-Funktion** gibt **FALSE** zurück, wenn sie fehlschlägt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -130,8 +130,8 @@ Bei Erfolg gibt diese Funktion " **true**" zurück. Die **pvkprivatekeyacquireco
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 

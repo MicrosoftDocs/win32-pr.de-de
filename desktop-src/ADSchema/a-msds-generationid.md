@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Generation-ID-Attribut
-description: Für Momentaufnahme der Momentaufnahme des virtuellen Computers fortsetzen. Dieses Attribut stellt die VM-Generations-ID dar.
+title: ms-DS-Generation-Id-Attribut
+description: Für die Erkennung des Fortsetzens von Momentaufnahmen virtueller Computer. Dieses Attribut stellt die VM-Generations-ID dar.
 ms.assetid: 48a454b7-b1dc-40d0-af10-d19c810f25a9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Generation-ID-Attribut
-- AD-Schema des msDS-generationid-Attributs
+- MS-DS-Generation-Id-Attribut AD-Schema
+- MSDS-GenerationId-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b20a61a8a542a6ce56e58d2bde75d6982703c0f8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: de77df7f808d9ddd45f217573f843f1260c258e9f17d10c65de8f472496c9a3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118426742"
 ---
-# <a name="ms-ds-generation-id-attribute"></a>ms-DS-Generation-ID-Attribut
+# <a name="ms-ds-generation-id-attribute"></a>ms-DS-Generation-Id-Attribut
 
-Für Momentaufnahme der Momentaufnahme des virtuellen Computers fortsetzen. Dieses Attribut stellt die VM-Generations-ID dar.
+Für die Erkennung des Fortsetzens von Momentaufnahmen virtueller Computer. Dieses Attribut stellt die VM-Generations-ID dar.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-Generations-ID                                   |
-| LDAP-Display-Name | MSDS-generationid                                     |
+| CN                | ms-DS-Generation-Id                                   |
+| Ldap-Anzeigename | msDS-GenerationId                                     |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2166                               |
-| System-ID-GUID    | 1e5d393d-8cb7-4b4l-840A-973b36cc09c3                  |
+| System-ID-GUID    | 1e5d393d-8cb7-4b4f-840a-973b36cc09c3                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -52,11 +52,11 @@ Für Momentaufnahme der Momentaufnahme des virtuellen Computers fortsetzen. Dies
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | Richtig                                      |
+| System-Only            | True                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 16                                        |
 | Range-Upper            | 16                                        |
 | Search-Flags           | 0x00000000                                |

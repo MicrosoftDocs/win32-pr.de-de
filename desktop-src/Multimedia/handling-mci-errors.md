@@ -6,18 +6,18 @@ keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab8412c74153d5ddfb03a3aff895f9f2e0e73798
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f8e2f3a9cc3e711db0d26f28c9ac7e3fd0a8c94eec96117a732f8024372bf9de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118141022"
 ---
 # <a name="handling-mci-errors"></a>Behandeln von MCI-Fehlern
 
-Sie sollten immer den Rückgabewert der Funktion [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) überprüfen. Wenn dies auf einen Fehler hinweist, können Sie [**mcigeterrorstring**](/previous-versions//dd757158(v=vs.85)) verwenden, um eine Textbeschreibung des Fehlers zu erhalten.
+Sie sollten immer den Rückgabewert der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) überprüfen. Wenn dies auf einen Fehler hinweist, können Sie [**mciGetErrorString**](/previous-versions//dd757158(v=vs.85)) verwenden, um eine Textbeschreibung des Fehlers abzurufen.
 
-Im folgenden Beispiel wird der von *dwError* angegebene MCI-Fehlercode an **mcigeterrorstring** übergeben. Anschließend wird die resultierende Textfehler Beschreibung mithilfe der [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) -Funktion angezeigt.
+Im folgenden Beispiel wird der von *dwError* angegebene MCI-Fehlercode an **mciGetErrorString** übergeben. Anschließend wird die resultierende Textfehlerbeschreibung mithilfe der [MessageBox-Funktion](/windows/win32/api/winuser/nf-winuser-messagebox) angezeigt.
 
 
 ```C++
@@ -45,10 +45,10 @@ void showError(DWORD dwError)
 
 
 > [!Note]  
-> Um einen [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Fehlerrückgabe Wert selbst zu interpretieren, maskieren Sie das höchst wertige Wort (das nieder wertige Wort enthält den Fehlercode). Wenn Sie den Fehlerrückgabe Wert an [**mcigeterrorstring**](/previous-versions//dd757158(v=vs.85))übergeben, müssen Sie jedoch den gesamten Double Word-Wert übergeben.
+> Um einen [**mciSendCommand-Fehlerrückgabewert**](/previous-versions//dd757160(v=vs.85)) selbst zu interpretieren, maskieren Sie das Wort in hoher Reihenfolge (das Wort mit niedriger Reihenfolge enthält den Fehlercode). Wenn Sie den Fehlerrückgabewert jedoch an [**mciGetErrorString**](/previous-versions//dd757158(v=vs.85))übergeben, müssen Sie den gesamten Doubleword-Wert übergeben.
 
- 
+ 
 
- 
+ 
 
- 
+ 

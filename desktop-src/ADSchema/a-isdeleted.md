@@ -1,11 +1,11 @@
 ---
 title: Is-Deleted-Attribut
-description: Wenn true, wurde dieses Objekt zum Löschen markiert und kann nicht instanziiert werden. Nachdem der Tombstone-Zeitraum abgelaufen ist, wird er aus dem System entfernt.
+description: True gibt an, dass dieses Objekt zum Löschen markiert wurde und nicht instanziiert werden kann. Nachdem der Tombstonezeitraum abgelaufen ist, wird er aus dem System entfernt.
 ms.assetid: 549b5161-5d2f-47d7-8192-4480334ef13d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Is-Deleted-Attribut
-- AD-Schema für isDeleted-Attribut
+- Is-Deleted AD-Attributschema
+- isDeleted-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66b30dec5ed139da60853324b82cc6e0f55fcc70
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a8b11498e1fd6af77f424698085175ad49220f1fc4696f15ef8eebfc0221db5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118176436"
 ---
 # <a name="is-deleted-attribute"></a>Is-Deleted-Attribut
 
-Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanziiert werden. Nachdem der Tombstone-Zeitraum abgelaufen ist, wird er aus dem System entfernt.
+**True** gibt an, dass dieses Objekt zum Löschen markiert wurde und nicht instanziiert werden kann. Nachdem der Tombstonezeitraum abgelaufen ist, wird er aus dem System entfernt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Is-Deleted                           |
-| LDAP-Display-Name | isDeleted                            |
+| Ldap-Anzeigename | isDeleted                            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Domänen Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.2.48                |
 | System-ID-GUID    | bf96798f-0de6-11d0-a285-00aa003049e2 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,12 +57,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
+| MAPI-Id                | 0x80C0                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | True                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,19 +71,19 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
+| MAPI-Id                | 0x80C0                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | True                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -99,12 +99,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x80C0                          |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -120,12 +120,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x80C0                          |
+| System-Only            | True                            |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -141,12 +141,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
+| MAPI-Id                | 0x80C0                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -162,12 +162,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
+| MAPI-Id                | 0x80C0                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -183,12 +183,12 @@ Wenn **true**, wurde dieses Objekt zum Löschen markiert und kann nicht instanzi
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x80c0                          |
+| MAPI-Id                | 0x80C0                          |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

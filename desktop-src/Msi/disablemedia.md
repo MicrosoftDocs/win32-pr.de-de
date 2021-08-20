@@ -1,37 +1,37 @@
 ---
-description: Wenn diese System Richtlinie pro Benutzer auf &\# 0034; 1&0034; festgelegt ist \# , können Benutzer und Administratoren, die eine Wartungs Installation eines Produkts ausführen, das Dialog Feld "Durchsuchen" nicht zum Durchsuchen von Medienquellen (z. b. CD-ROM) für die Quellen anderer installier barer Produkte verwenden.
+description: Wenn diese Benutzersystemrichtlinie auf &\# 0034;1&\# 0034; festgelegt ist, können Benutzer und Administratoren, die eine Wartungsinstallation eines Produkts ausführen, das Dialogfeld Durchsuchen nicht verwenden, um Medienquellen wie CD-ROM für die Quellen anderer installierbarer Produkte zu durchsuchen.
 ms.assetid: 275a6d43-ecf8-4146-82eb-3b42b25b9a80
-title: Disablemedia
+title: DisableMedia
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2ee50abf36225aa96e52332a53f0b2ab36f058c
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d2337a1698865b0b977e179021f6490e2fa651a8c4baa3a56e808d037926ad39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118143246"
 ---
-# <a name="disablemedia"></a>Disablemedia
+# <a name="disablemedia"></a>DisableMedia
 
-Wenn diese [System Richtlinie](system-policy.md) pro Benutzer auf "1" festgelegt ist, können Benutzer und Administratoren, die eine Wartungs Installation eines Produkts ausführen, das Dialog Feld "Durchsuchen" nicht zum Durchsuchen von Medienquellen (z. b. CD-ROM) für die Quellen anderer installier barer Produkte verwenden. Das Durchsuchen anderer Produkte wird verhindert, unabhängig davon, ob die Installation mit erweiterten Berechtigungen erfolgt. Der Benutzer kann das Produkt weiterhin von einem Medium aus neu installieren, wenn der Benutzer über eine ordnungsgemäß bezeichnete Medienquelle verfügt.
+Wenn diese [Systemrichtlinie](system-policy.md) pro Benutzer auf "1" festgelegt ist, werden Benutzer und Administratoren, die eine Wartungsinstallation eines Produkts ausführen, daran gehindert, das Dialogfeld Durchsuchen zum Durchsuchen von Medienquellen wie CD-ROM für die Quellen anderer installierbarer Produkte zu verwenden. Das Suchen nach anderen Produkten wird unabhängig davon verhindert, ob die Installation mit erhöhten Rechten erfolgt. Es ist weiterhin möglich, dass der Benutzer das Produkt über Medien neu installiert, wenn der Benutzer über eine ordnungsgemäß bezeichnete Medienquelle verfügt.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ Aktuelle \_** Richtlinien für Benutzer \\ **Software** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Policies** \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 
 **REG \_ DWORD**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die [**disablemedia**](-disablemedia.md) -Eigenschaft eine andere Auswirkung hat als die disablemedia-Richtlinie. Wenn Sie die System Richtlinie "disablemedia" festlegen, wird nur das Durchsuchen von Medienquellen deaktiviert. Durch Festlegen der **disablemedia** -Eigenschaft wird verhindert, dass das Installationsprogramm eine Medienquelle, z. b. eine CD-ROM, als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen aktiviert ist, kann ein Benutzer jedoch trotzdem eine Medienquelle durchsuchen.
+Beachten Sie, dass die [**DISABLEMEDIA-Eigenschaft**](-disablemedia.md) eine andere Auswirkung als die DisableMedia-Richtlinie hat. Wenn Sie die Systemrichtlinie DisableMedia festlegen, wird nur das Navigieren zu Medienquellen deaktiviert. Durch Festlegen der **DISABLEMEDIA-Eigenschaft** wird verhindert, dass das Installationsprogramm Medienquellen wie cd-ROM als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen jedoch aktiviert ist, kann ein Benutzer weiterhin zu einer Medienquelle navigieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Quellen Resilienz](source-resiliency.md)
+[Quellresilienz](source-resiliency.md)
 </dt> </dl>
 
  

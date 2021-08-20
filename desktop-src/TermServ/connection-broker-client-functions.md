@@ -23,7 +23,7 @@ Die Remotedesktopverbindung Broker-Client-API definiert die folgenden Funktionen
 [**CBCreateClientInstance**](cbcreateclientinstance.md)
 </dt> <dd>
 
-Erstellt eine Instanz des Remotedesktopverbindung Broker RPC-Clients.
+Erstellt eine Instanz des Remotedesktopverbindung Broker-RPC-Clients.
 
 </dd> </dl>
 

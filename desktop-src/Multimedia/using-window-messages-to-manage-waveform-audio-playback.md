@@ -1,48 +1,48 @@
 ---
-title: Verwenden von Fenster Meldungen zum Verwalten Waveform-Audio Wiedergabe
-description: Verwenden von Fenster Meldungen zum Verwalten Waveform-Audio Wiedergabe
+title: Verwenden von Fenstermeldungen zum Verwalten Waveform-Audio Wiedergabe
+description: Verwenden von Fenstermeldungen zum Verwalten Waveform-Audio Wiedergabe
 ms.assetid: 217968fd-4bb3-405d-a371-c129e29637ab
 keywords:
-- Wellenform-Audiodatei, Verwalten der Wiedergabe mit Meldungen
-- Waveform-Audioschnittstelle, Verwalten der Wiedergabe mit Nachrichten
-- Wiedergabe von Waveform-Audiodateien, Verwalten der Wiedergabe mit Nachrichten
-- Wellenform-Audiodaten, Meldungen
-- Waveform-Audioschnittstelle, Meldungen
-- Wiedergabe von Waveform-Audiodateien, Nachrichten
+- Waveformaudio,Verwalten der Wiedergabe mit Nachrichten
+- Waveform-Audio-Schnittstelle,Verwalten der Wiedergabe mit Nachrichten
+- Wiedergeben von Waveform-Audiodateien, Verwalten der Wiedergabe mit Nachrichten
+- Waveform-Audio, Nachrichten
+- Waveform-Audio-Schnittstelle, Nachrichten
+- Wiedergeben von Waveform-Audiodateien, Nachrichten
 - MM_WOM_CLOSE Meldung
 - MM_WOM_DONE Meldung
 - MM_WOM_OPEN Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce02794222274e10498e31e0f38939d930ef3745
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a31d8a88cb74953a1d38285a77b18ac25cd7495c3e29e71c5259551b5c2c3453
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135885"
 ---
-# <a name="using-window-messages-to-manage-waveform-audio-playback"></a>Verwenden von Fenster Meldungen zum Verwalten Waveform-Audio Wiedergabe
+# <a name="using-window-messages-to-manage-waveform-audio-playback"></a>Verwenden von Fenstermeldungen zum Verwalten Waveform-Audio Wiedergabe
 
-Die folgenden Meldungen können an eine Fenster Prozedur Funktion zum Verwalten der Waveform-Audiowiedergabe gesendet werden.
+Die folgenden Nachrichten können an eine Fensterprozedurfunktion zum Verwalten der Wiedergabe von Waveform-Audio gesendet werden.
 
 
 
 | `Message`                                | BESCHREIBUNG                                                                                                                |
 |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**MM \_ WOM \_ Schließen**](mm-wom-close.md) | Wird gesendet, wenn das Gerät mit der [**waveoutclose**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutclose) -Funktion geschlossen wird.                                 |
-| [**MM \_ WOM \_ abgeschlossen**](mm-wom-done.md)   | Wird gesendet, wenn der Gerätetreiber mit einem Datenblock fertig ist, der mithilfe der [**waveOutWrite**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutwrite) -Funktion gesendet wurde. |
-| [**MM \_ WOM \_ geöffnet**](mm-wom-open.md)   | Wird gesendet, wenn das Gerät mithilfe der [**WaveOutOpen**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen) -Funktion geöffnet wird.                                   |
+| [**MM \_ WOM \_ CLOSE**](mm-wom-close.md) | Wird gesendet, wenn das Gerät mithilfe der [**waveOutClose-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutclose) geschlossen wird.                                 |
+| [**MM \_ WOM \_ DONE**](mm-wom-done.md)   | Wird gesendet, wenn der Gerätetreiber mit einem Datenblock fertig ist, der mithilfe der [**waveOutWrite-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutwrite) gesendet wird. |
+| [**MM \_ WOM \_ OPEN**](mm-wom-open.md)   | Wird gesendet, wenn das Gerät mithilfe der [**waveOutOpen-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen) geöffnet wird.                                   |
 
 
 
- 
+ 
 
-Jedem dieser Nachrichten ist ein *wParam* -Parameter und ein *LPARAM* -Parameter zugeordnet. Der *wParam* -Parameter gibt immer ein Handle des geöffneten Waveform-Audiogeräts an. Bei der Meldung [**mm \_ WOM \_ done**](mm-wom-done.md) gibt *LPARAM* einen Zeiger auf eine [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur an, die den abgeschlossenen Datenblock identifiziert. Der *LPARAM* -Parameter wird nicht für die geöffneten Meldungen [**mm \_ WOM \_ Close**](mm-wom-close.md) und [**mm \_ WOM \_**](mm-wom-open.md) verwendet.
+Jeder dieser Nachrichten ist ein *wParam-* und *lParam-Parameter* zugeordnet. Der *wParam-Parameter* gibt immer ein Handle des geöffneten Waveform-Audiogeräts an. Für die [**MM \_ WOM \_ DONE-Nachricht**](mm-wom-done.md) gibt *lParam* einen Zeiger auf eine [**WAVEHDR-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) an, die den abgeschlossenen Datenblock identifiziert. Der *lParam-Parameter* wird für die [**MM \_ WOM \_ CLOSE-**](mm-wom-close.md) und [**MM \_ WOM \_ OPEN-Meldungen**](mm-wom-open.md) nicht verwendet.
 
-Die nützlichste Meldung ist wahrscheinlich mm \_ WOM \_ . Wenn diese Meldung signalisiert, dass die Wiedergabe eines Datenblocks beendet ist, können Sie den Datenblock bereinigen und freigeben. Wenn Sie Arbeitsspeicher nicht zuweisen oder Variablen initialisieren müssen, müssen Sie die \_ Nachrichten von mm WOM \_ Öffnen und mm \_ WOM \_ Schließen wahrscheinlich nicht verarbeiten.
+Die nützlichste Meldung ist wahrscheinlich MM \_ WOM \_ DONE. Wenn diese Meldung signalisiert, dass die Wiedergabe eines Datenblocks abgeschlossen ist, können Sie den Datenblock bereinigen und freigeben. Sofern Sie keinen Speicher belegen oder Variablen initialisieren müssen, müssen Sie die \_ MM WOM \_ OPEN- und MM \_ WOM CLOSE-Meldungen wahrscheinlich nicht \_ verarbeiten.
 
-Die Rückruffunktion für Waveform-Audioausgabegeräte wird von der Anwendung bereitgestellt. Weitere Informationen zu dieser Rückruffunktion finden Sie unter der [**waveoutproc**](/previous-versions//dd743869(v=vs.85)) -Funktion.
+Die Rückruffunktion für Waveform-Audio-Ausgabegeräte wird von der Anwendung bereitgestellt. Informationen zu dieser Rückruffunktion finden Sie in der [**waveOutProc-Funktion.**](/previous-versions//dd743869(v=vs.85))
 
- 
+ 
 
- 
+ 

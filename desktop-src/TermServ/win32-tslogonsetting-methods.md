@@ -1,29 +1,29 @@
 ---
-title: Win32_TSLogonSetting Methoden
-description: Die Win32- \_ Klasse "zlogonsetting" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSLogonSetting-Methoden
+description: Die Win32 \_ TSLogonSetting-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 433695D2-1F3B-4DEA-8707-6CCC2C9A6E7F
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe3409ff5b9f10968022b00551f842af0355be30
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5ed1570bb3a16e506682e42683789c1e866c23dd68a0c8932a2025ce44e217e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118348565"
 ---
-# <a name="win32_tslogonsetting-methods"></a>Win32- \_ Methoden zum Festlegen von Methoden
+# <a name="win32_tslogonsetting-methods"></a>Win32 \_ TSLogonSetting-Methoden
 
-Die Win32-Klasse " [**\_ zlogonsetting**](win32-tslogonsetting.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSLogonSetting-Klasse**](win32-tslogonsetting.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Explizlogon-Methode**](win32-tslogonsetting-explicitlogon.md)
--   [**Setpromptforpassword-Methode**](win32-tslogonsetting-setpromptforpassword.md)
+-   [**ExplicitLogon-Methode**](win32-tslogonsetting-explicitlogon.md)
+-   [**SetPromptForPassword-Methode**](win32-tslogonsetting-setpromptforpassword.md)
 
- 
+ 
 
- 
+ 
 
 
 

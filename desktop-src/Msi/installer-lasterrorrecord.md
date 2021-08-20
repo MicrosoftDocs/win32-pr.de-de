@@ -1,7 +1,7 @@
 ---
-description: Die lasterrorrecord-Methode des Installer-Objekts gibt ein Datensatz-Objekt zurück, das Fehler Parameter für den letzten Fehler der Funktion enthält, die den Fehler Daten Satz erzeugt hat.
+description: Die LastErrorRecord-Methode des Installer-Objekts gibt ein Record-Objekt zurück, das Fehlerparameter für den letzten Fehler der Funktion enthält, die den Fehlerdatensatz erzeugt hat.
 ms.assetid: 48fe46bc-6c10-4bd5-89bc-013e650a44e6
-title: Installer. lasterrorrecord-Methode
+title: Installer.LastErrorRecord-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: b368f30b04734b2d253a7d5f2aa64f0d61c930e0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb9dad1962cace623a4a52991d3650451a0a6d5f660aad88e46c4fe393ce4e4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142109"
 ---
-# <a name="installerlasterrorrecord-method"></a>Installer. lasterrorrecord-Methode
+# <a name="installerlasterrorrecord-method"></a>Installer.LastErrorRecord-Methode
 
-Die **lasterrorrecord** -Methode des [**Installer**](installer-object.md) -Objekts gibt ein [**Datensatz**](record-object.md) -Objekt zurück, das Fehler Parameter für den letzten Fehler der Funktion enthält, die den Fehler Daten Satz erzeugt hat.
+Die **LastErrorRecord-Methode** des [**Installer-Objekts**](installer-object.md) gibt ein [**Record-Objekt**](record-object.md) zurück, das Fehlerparameter für den letzten Fehler der Funktion enthält, die den Fehlerdatensatz erzeugt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,35 +41,35 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [**Datensatz**](record-object.md) -Objekt wird nach der Ausführung dieser Funktion einer Funktion zurückgesetzt, die einen Fehler Daten Satz generiert.
+Das [**Record-Objekt**](record-object.md) wird nach der Ausführung dieser Funktion einer Funktion zurückgesetzt, die einen Fehlerdatensatz generiert.
 
-Nur die folgenden vorgesehenen Funktionen generieren einen Fehler Daten Satz:
+Nur die folgenden festgelegten Funktionen generieren einen Fehlerdatensatz:
 
 -   [**OpenDatabase-Methode (Installer-Objekt)**](installer-opendatabase.md)
--   [**Einzusetzen**](database-commit.md)
--   [**OpenView –**](database-openview.md)
+-   [**Commit**](database-commit.md)
+-   [**Openview**](database-openview.md)
 -   [**Importieren**](database-import.md)
 -   [**Exportieren**](database-export.md)
--   [**Merge**](database-merge.md)
--   [**Gene Rate Transform**](database-generatetransform.md)
--   [**Applytransform**](database-applytransform.md)
--   [**Auszuführen**](view-execute.md)
+-   [**Zusammenführen**](database-merge.md)
+-   [**GenerateTransform**](database-generatetransform.md)
+-   [**ApplyTransform**](database-applytransform.md)
+-   [**Ausführen**](view-execute.md)
 -   [**Ändern**](view-modify.md)
 -   [**SetStream**](record-setstream.md)
 -   [**SummaryInformation**](database-summaryinformation.md)
--   [**SourcePath**](session-sourcepath.md)
+-   [**Sourcepath**](session-sourcepath.md)
 -   [**TargetPath**](session-targetpath.md)
--   [**Componentcurrentstate**](session-componentcurrentstate.md)
--   [**Componentrequeststate**](session-componentrequeststate.md)
--   [**Featurecurrentstate**](session-featurecurrentstate.md)
--   [**Featurerequeststate**](session-featurerequeststate.md)
--   [**Featurecost**](session-featurecost.md)
--   [**Featurevalidstates**](session-featurevalidstates.md)
--   [**Setinstalllevel**](session-setinstalllevel.md)
+-   [**ComponentCurrentState**](session-componentcurrentstate.md)
+-   [**ComponentRequestState**](session-componentrequeststate.md)
+-   [**FeatureCurrentState**](session-featurecurrentstate.md)
+-   [**FeatureRequestState**](session-featurerequeststate.md)
+-   [**FeatureCost**](session-featurecost.md)
+-   [**FeatureValidStates**](session-featurevalidstates.md)
+-   [**SetInstallLevel**](session-setinstalllevel.md)
 
-Das folgende Beispiel in VBScript verwendet einen [**OpenDatabase**](installer-opendatabase.md) -Befehl, um anzuzeigen, wie erweiterte Fehlerinformationen von einer der Methoden oder Eigenschaften abgerufen werden, die die **lasterrorrecord** -Methode unterstützen. Das Beispiel erstellt eine Fehlermeldung, wenn die **OpenDatabase** -Methode fehlschlägt. Das **Err** -Objekt wird verwendet, um zu bestimmen, ob ein Fehler aufgetreten ist.
+Im folgenden Beispiel in VBScript wird ein Aufruf von [**OpenDatabase**](installer-opendatabase.md) verwendet, um zu zeigen, wie erweiterte Fehlerinformationen von einer der Methoden oder Eigenschaften, die die **LastErrorRecord-Methode** unterstützen, erhalten werden. Im Beispiel wird eine Fehlermeldung erstellt, wenn bei der **OpenDatabase-Methode** ein Fehler auftritt. Das **Err-Objekt** wird verwendet, um zu bestimmen, ob ein Fehler aufgetreten ist.
 
 
 ```VB
@@ -109,9 +109,9 @@ End If
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

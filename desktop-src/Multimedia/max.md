@@ -1,9 +1,9 @@
 ---
-title: Maximales Makro (minwindef. h)
-description: Das Maximum-Makro vergleicht zwei Werte und gibt den größeren Wert zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
+title: max-Makro (Minwindef.h)
+description: Das Makro max vergleicht zwei Werte und gibt den größeren zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
 ms.assetid: 224d2ef7-6764-49c0-9782-51bfadbfb77f
 keywords:
-- Maximales Makro Windows Multimedia
+- max macro Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b484f2505958aca04745c63ca63a0dd131a51ed9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc592fcc588c14ee04c1f595c5b5bc95c860b2ab0b761906886010db478d5f1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138646"
 ---
 # <a name="max-macro"></a>max-Makro
 
-Das **Maximum** -Makro vergleicht zwei Werte und gibt den größeren Wert zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
+Das **Makro max** vergleicht zwei Werte und gibt den größeren zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,17 +51,17 @@ Gibt den ersten von zwei Werten an.
 *value2* 
 </dt> <dd>
 
-Gibt die zweite von zwei-Werten an.
+Gibt den zweiten von zwei Werten an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der größere der beiden angegebenen-Werte.
+Der Rückgabewert ist der größere der beiden angegebenen Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Maximum** -Makro wird wie folgt definiert:
+Das **Makro max** ist wie folgt definiert:
 
 
 ```C++
@@ -78,7 +78,7 @@ Das **Maximum** -Makro wird wie folgt definiert:
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Minwindef. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Minwindef.h</dt> </dl> |
 
 
 

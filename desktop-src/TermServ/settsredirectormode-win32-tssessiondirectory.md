@@ -1,12 +1,12 @@
 ---
-title: Settsredirectormode-Methode der Win32_TSSessionDirectory-Klasse
-description: Legt den Wert fest, mit dem angegeben wird, ob der Server als Remotedesktopdienste Redirector fungiert.
+title: SetTSRedirectorMode-Methode der Win32_TSSessionDirectory Klasse
+description: Legt den Wert fest, um anzugeben, ob der Server als Remotedesktopdienste fungieren soll.
 ms.assetid: abdb92df-1e49-4445-ba02-bb83fd1ca541
 ms.tgt_platform: multiple
 keywords:
-- Settsredirectormode-Methode Remotedesktopdienste
-- Settsredirectormode-Methode Remotedesktopdienste, Win32_TSSessionDirectory-Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, settsredirectormode-Methode
+- SetTSRedirectorMode-Remotedesktopdienste
+- SetTSRedirectorMode-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory klasse Remotedesktopdienste , SetTSRedirectorMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95e3195a83a32dca0c8e4a96de211a72a66a8f3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6350d4b9a4858991616d45eb2b1092fe406c59b55b11c494a7f19be53dbb60ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127276"
 ---
-# <a name="settsredirectormode-method-of-the-win32_tssessiondirectory-class"></a>Settsredirectormode-Methode der Win32- \_ Klasse "tssessiondirectory"
+# <a name="settsredirectormode-method-of-the-win32_tssessiondirectory-class"></a>SetTSRedirectorMode-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Legt den Wert fest, mit dem angegeben wird, ob der Server als Remotedesktopdienste Redirector fungiert.
+Legt den Wert fest, um anzugeben, ob der Server als Remotedesktopdienste fungieren soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ uint32 SetTSRedirectorMode(
 
 <dl> <dt>
 
-" *Sredirvalue* \[ " in\]
+*TSRedirValue* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt an, ob der Server als Remotedesktopdienste Redirector fungieren soll. Dies kann einer der folgenden Werte sein:
+Gibt an, ob der Server als Remotedesktopdienste fungieren soll. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
 0
 </dt> <dd>
 
-Der Server fungiert als Remotedesktopdienste Redirector.
+Der Server wird als Remotedesktopdienste fungieren.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Der Server fungiert nicht als Remotedesktopdienste Redirector.
+Der Server wird nicht als Remotedesktopdienste fungieren.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter. Die -Methode gibt einen Fehler zurück, wenn sich die Einstellung unter der Gruppenrichtliniensteuerung befindet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,8 +86,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                       |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -96,7 +96,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

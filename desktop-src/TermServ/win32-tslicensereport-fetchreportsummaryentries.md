@@ -1,6 +1,6 @@
 ---
 title: FetchReportSummaryEntries-Methode der Win32_TSLicenseReport-Klasse
-description: Ruft Zusammenfassungen Remotedesktopdienste Clientzugriffslizenzen pro Benutzer ab (RDS \ 160; Pro Benutzer-CALs) aus dem Bericht.
+description: Ruft Zusammenfassungen der Clientzugriffslizenzen für Remotedesktopdienste pro Benutzer ab (RDS \ 160; Pro Benutzer-CALs) aus dem Bericht.
 ms.assetid: 0312B787-83E9-42FC-B21B-904B804C5C94
 ms.tgt_platform: multiple
 keywords:
@@ -76,7 +76,7 @@ Dies ist keine statische Methode. Diese Methode muss von einem Benutzerlizenznut
 
 Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,7 +92,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

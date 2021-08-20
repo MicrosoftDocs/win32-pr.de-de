@@ -36,7 +36,7 @@ Das **Attachments-Element** wird vom komplexen [**SendEmailType-Typ**](tasksched
 
 
 
-| Element                                                                              | Abgeleitet von                                                           | BESCHREIBUNG                                                  |
+| Element                                                                              | Abgeleitet von                                                           | Beschreibung                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
 | [**SendEmail (actionGroup)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendEMailType**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine E-Mail sendet.<br/> |
 
@@ -46,7 +46,7 @@ Das **Attachments-Element** wird vom komplexen [**SendEmailType-Typ**](tasksched
 
 
 
-| Element                                                          | type                                                                    | BESCHREIBUNG                                                                                |
+| Element                                                          | Typ                                                                    | Beschreibung                                                                                |
 |------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | [**Datei**](taskschedulerschema-file-attachmentstype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Pfad zu einer Datei an, die als Anlage in einer E-Mail gesendet wird.<br/> |
 

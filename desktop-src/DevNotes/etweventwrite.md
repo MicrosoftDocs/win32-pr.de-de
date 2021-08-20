@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: etweventwrite-Funktion'
-title: Etweventwrite
+description: 'Weitere Informationen zu: EtwEventWrite-Funktion'
+title: EtwEventWrite
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_type:
 - HeaderDef
 api_location:
 - ntetw.h
-ms.openlocfilehash: 149f611dfb298749befca805509e05fa2dec497a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b8e06c2a0922038e37766f44c0b9fcd7c85bbb7fd4fa4bd0841192be9e4e9087
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162101"
 ---
-# <a name="etweventwrite-function"></a>Etweventwrite-Funktion
+# <a name="etweventwrite-function"></a>EtwEventWrite-Funktion
 
-[Die etweventwrite-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden.]
+[Die EtwEventWrite-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden.]
 
-Schreibt ein Basisereignis in eine Sitzung.
+Schreibt ein einfaches Ereignis in eine Sitzung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ EtwEventWrite(
 
 <dl> <dt>
 
-*Reghandle*
+*RegHandle*
 </dt> <dd>
 
-Reghandle für den Anbieter.
+RegHandle für den Anbieter.
 
 </dd> <dt>
 
-*EventDescriptor*
+*Eventdescriptor*
 </dt> <dd>
 
-Der Ereignis Deskriptor des Ereignisses, das protokolliert werden soll.
+Ereignisdeskriptor des zu protokollierende Ereignisses.
 
 </dd> <dt>
 
-*Userdatacount*
+*UserDataCount*
 </dt> <dd>
 
-Anzahl von Benutzerdaten Elementen.
+Anzahl der Benutzerdatenelemente.
 
 </dd> <dt>
 
 *UserData*
 </dt> <dd>
 
-Zeiger auf ein Array von Benutzerdaten Elementen.
+Zeiger auf ein Array von Benutzerdatenelementen.
 
 </dd> </dl>
 
@@ -75,15 +75,15 @@ Zeiger auf ein Array von Benutzerdaten Elementen.
 Ein Win32-Fehlercode.
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die etweventwrite-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden. Um die Kompatibilität Ihrer Anwendung aufrechtzuerhalten, ist es besser, stattdessen öffentliche Funktionen zu verwenden.
+Die EtwEventWrite-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden. Um die Kompatibilität Ihrer Anwendung aufrechtzuerhalten, ist es besser, stattdessen öffentliche Funktionen zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Zielplattform** | Windows |
-| **Header** | ntetw. h |
+| **Header** | ntetw.h |
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -92,5 +92,5 @@ Die etweventwrite-Funktion und die zurückgegebenen Strukturen sind intern für 
 [EventWrite](/windows/desktop/api/evntprov/nf-evntprov-eventwrite)
 </dt> <dt>
 
-[EventWrite-Ex](/windows/desktop/api/evntprov/nf-evntprov-eventwriteex)
+[EventWriteEx](/windows/desktop/api/evntprov/nf-evntprov-eventwriteex)
 </dt></dl>

@@ -1,9 +1,9 @@
 ---
-title: Readerscroll-Rückruffunktion
-description: Eine von der Anwendung definierte Rückruffunktion, die verwendet wird, wenn der Mauszeiger in den Teil des lesemodusfensters verschoben wird, der als aktiver scrollbereich deklariert wurde.
+title: ReaderScroll-Rückruffunktion
+description: Eine anwendungsdefinierte Rückruffunktion, die verwendet wird, wenn der Mauszeiger innerhalb des Teils des Readermodusfensters bewegt wird, der als aktiver Bildlaufbereich deklariert wurde.
 ms.assetid: b1feb661-e3bc-4fcd-9acf-ac000c3066bd
 keywords:
-- Windows-Steuerelemente für readerscroll-Rückruf Funktionen
+- ReaderScroll-Rückruffunktion Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0db5a80b84a30362e3bdbce45fe7485ad0dd6884
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 554530e556161b4128199cda0a1a9d791f4f0ed75e8915c311d8945445486ac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169110"
 ---
-# <a name="readerscroll-callback-function"></a>Readerscroll-Rückruffunktion
+# <a name="readerscroll-callback-function"></a>ReaderScroll-Rückruffunktion
 
-\[*Readerscroll* ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[*ReaderScroll* ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Eine von der Anwendung definierte Rückruffunktion, die verwendet wird, wenn der Mauszeiger in den Teil des lesemodusfensters verschoben wird, der als aktiver scrollbereich deklariert wurde.
+Eine anwendungsdefinierte Rückruffunktion, die verwendet wird, wenn der Mauszeiger innerhalb des Teils des Readermodusfensters bewegt wird, der als aktiver Bildlaufbereich deklariert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ BOOL CALLBACK ReaderScroll(
 
 <dl> <dt>
 
-*prmi* \[ in\]
+*prmi* \[ In\]
 </dt> <dd>
 
-Typ: **preadermodeinfo**
+Typ: **PREADERMODEINFO**
 
-Ein Zeiger auf die [**readermodumfo**](readermodeinfo.md) -Struktur, die an die [**doreadermode**](doreadermode.md) -Funktion weitergegeben wurde. Diese Struktur definiert das Fenster Lesemodus und den aktiven scrollbereich.
+Ein Zeiger auf die [**READERMODEINFO-Struktur,**](readermodeinfo.md) die an die [**DoReaderMode-Funktion**](doreadermode.md) übergeben wurde. Diese Struktur definiert das Readermodusfenster und den aktiven Bildlaufbereich.
 
 </dd> <dt>
 
-*DX* \[ in\]
+*dx* \[ in\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Abstand, der horizontal durchlaufen werden soll. Wenn das RMF \_ verticalonly-Flag in der [**readermodeinfo**](readermodeinfo.md) -Struktur festgelegt ist, ist dieser Wert immer 0.
+Der Abstand, in dem horizontal gescrollt werden soll. Wenn das RMF \_ VERTICALONLY-Flag in der [**READERMODEINFO-Struktur**](readermodeinfo.md) festgelegt ist, ist dieser Wert immer 0.
 
 </dd> <dt>
 
-*dy* \[ in\]
+*dy* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Abstand, der vertikal durchlaufen werden soll. Wenn das RMF- \_ Flag horizontalonly in der [**readermodeinfo**](readermodeinfo.md) -Struktur festgelegt ist, ist dieser Wert immer 0.
+Der Abstand, in dem vertikal gescrollt werden soll. Wenn das RMF \_ HORIZONTALONLY-Flag in der [**READERMODEINFO-Struktur**](readermodeinfo.md) festgelegt ist, ist dieser Wert immer 0.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 
-Diese Funktion sollte immer **true** zurückgeben.
+Diese Funktion sollte immer **TRUE** zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung eine Benachrichtigung von dieser Funktion empfängt, ist die Anwendung dafür verantwortlich, das Fenster des Lesemodus in der durch die *DX* -und *dy* -Parameter angegebenen Richtung zu scrollen.
+Wenn die Anwendung Benachrichtigungen von dieser Funktion empfängt, ist die Anwendung für das Scrollen des Readermodusfensters in die durch die *dx-* und *dy-Parameter* angegebene Richtung verantwortlich.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Implementierung dieser Funktion mithilfe einer benutzerdefinierten Funktion für den Bildlauf dargestellt.
+Im folgenden Beispiel wird eine Implementierung dieser Funktion mithilfe einer benutzerdefinierten Funktion zum Durchführen des Bildlaufs beschrieben.
 
 
 ```C++
@@ -108,8 +108,8 @@ ReaderScrollCallback(PREADERMODEINFO prmi, int dx, int dy)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista, Windows Vista \[ -Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, nur Windows \[ Vista-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>          |
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: IsSecureAccessAllowed-Methode der Win32_TSLicenseServer Klasse
-description: Ruft ab, ob ein Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) Clientzugriffslizenzen (RDS \ 160 Remotedesktopdienste anfordern darf. CALs) vom Remotedesktop Lizenzserver.
+description: Ruft ab, ob ein Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) client access licenses (RDS \ 160) Remotedesktopdienste Clientzugriffslizenzen anfordern darf. CALs) vom Remotedesktop Lizenzserver.
 ms.assetid: b9124808-79be-4b94-b12b-f093d5e8195a
 ms.tgt_platform: multiple
 keywords:
@@ -54,7 +54,7 @@ Name des RD-Sitzungshost Servers.
 *Zulässig* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der angibt, ob der RD-Sitzungshost-Server RDS-CALs vom Lizenzserver anfordern darf.
+Boolescher Wert, der angibt, ob der RD-Sitzungshost Server RDS-CALs vom Lizenzserver anfordern darf.
 
 </dd> </dl>
 
@@ -84,7 +84,7 @@ Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

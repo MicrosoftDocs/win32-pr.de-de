@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen zu Sitzungsmitgliedern
+description: Weitere Informationen finden Sie unter Sitzungsmitglieder.
 title: 'Sitzungsmember '
 TOCTitle: Session members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Session
@@ -16,10 +16,10 @@ ms.locfileid: "118071773"
 ---
 # <a name="session-members"></a>Sitzungsmember 
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Eine Klasse, die einen JET_SESID in einem verwerfbarem Objekt kapselt.
+Eine Klasse, die eine Klasse JET_SESID in einem verwerfbar-Objekt kapselt.
 
 Der [Sitzungstyp](./session-class.md) macht die folgenden Member verfügbar.
 
@@ -30,7 +30,7 @@ Der [Sitzungstyp](./session-class.md) macht die folgenden Member verfügbar.
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -52,7 +52,7 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -79,7 +79,7 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -91,7 +91,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn350553(v=exchg.10).md">Dispose()</a></td>
-<td>Verwerfen Sie dieses Objekt, und geben Sie die zugrunde liegende Esent-Ressource frei. (Geerbt von <a href="dn319890(v=exchg.10).md">EsentResource</a>.)</td>
+<td>Veräußern Sie dieses Objekt, und geben Sie die zugrunde liegende Esent-Ressource frei. (Geerbt von <a href="dn319890(v=exchg.10).md">EsentResource</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -131,7 +131,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="dn351165(v=exchg.10).md">ReleaseResource</a></td>
-<td>Gibt die zugrunde liegende JET_SESID frei. (Überschreibt <a href="dn350545(v=exchg.10).md">EsentResource.ReleaseResource()</a>.)</td>
+<td>Geben Sie die zugrunde liegende JET_SESID. (Überschreibt <a href="dn350545(v=exchg.10).md">EsentResource.ReleaseResource()</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -146,7 +146,7 @@ Oben
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn351129(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die aktuelle <a href="dn351164(v=exchg.10).md">Sitzung</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge zurück,</a> die die aktuelle <a href="dn351164(v=exchg.10).md">Sitzung darstellt.</a> (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -161,14 +161,14 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351178(v=exchg.10).md">Implicit(Sitzung zu JET_SESID)</a></td>
-<td>Impliziter Konvertierungsoperator von einer Sitzung in eine JET_SESID. Dadurch kann eine Sitzung mit APIs verwendet werden, die eine JET_SESID erwarten.</td>
+<td><a href="dn351178(v=exchg.10).md">Implicit(Session to JET_SESID)</a></td>
+<td>Impliziter Konvertierungsoperator von einer Sitzung in JET_SESID. Dadurch kann eine Sitzung mit APIs verwendet werden, die eine JET_SESID.</td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +176,7 @@ Oben
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

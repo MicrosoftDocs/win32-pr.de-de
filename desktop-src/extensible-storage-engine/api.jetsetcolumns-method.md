@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetsetcolumns-Methode.
-title: API. jetsetcolumns-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetSetColumns-Methode'
+title: Api.JetSetColumns-Methode
 TOCTitle: 'JetSetColumns method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetSetColumns(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_SETCOLUMN[],System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetsetcolumns(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 59d1d16a21996937357d0358625772a4b6712019
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0d84c982fe3a3e7834210741f5bd20cc52615197756653c743f5cd67d0b59dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084929"
 ---
-# <a name="apijetsetcolumns-method"></a>API. jetsetcolumns-Methode
+# <a name="apijetsetcolumns-method"></a>Api.JetSetColumns-Methode
 
-Ermöglicht einer Anwendung das Festlegen mehrerer Spaltenwerte in einem einzelnen Vorgang. Ein Array von [JET_SETCOLUMN](./jet-setcolumn-class.md) Strukturen wird verwendet, um den Satz von Spaltenwerten zu beschreiben, die festgelegt werden sollen, und um Eingabepuffer für jeden festzulegenden Spaltenwert zu beschreiben.
+Ermöglicht es einer Anwendung, mehrere Spaltenwerte in einem einzelnen Vorgang festzulegen. Ein Array von [JET_SETCOLUMN](./jet-setcolumn-class.md) Strukturen wird verwendet, um den Satz der festzulegenden Spaltenwerte und eingabepuffer für jeden festzulegenden Spaltenwert zu beschreiben.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,43 +72,43 @@ public static JET_wrn JetSetColumns(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der Cursor, für den die Spalten festgelegt werden sollen.
 
 <!-- end list -->
 
-  - SetColumns  
-    Sorte \[\]  
+  - Setcolumns  
+    Typ: \[\]  
     
-    Ein Array von [JET_SETCOLUMN](./jet-setcolumn-class.md) -Strukturen, die die festzulegenden Daten beschreiben.
+    Ein Array von [JET_SETCOLUMN](./jet-setcolumn-class.md) Strukturen, die die festzulegenden Daten beschreiben.
 
 <!-- end list -->
 
-  - NumColumns  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numColumns  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Anzahl der Einträge im SetColumns-Parameter.
+    Anzahl der Einträge im parameter setcolumns.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_wrn](./jet-wrn-enumeration.md)  
-Eine Warnung. Wenn für den letzten Spalten Satz eine Warnung angezeigt wird, wird diese Warnung von jetsetcolumns selbst zurückgegeben.  
+Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
+Eine Warnung. Wenn der letzte Spaltensatz eine Warnung enthält, wird diese Warnung von JetSetColumns selbst zurückgegeben.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

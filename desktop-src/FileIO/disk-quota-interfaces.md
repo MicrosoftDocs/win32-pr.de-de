@@ -1,29 +1,29 @@
 ---
-description: Mit Datenträger Kontingenten verwendete Schnittstellen.
+description: Schnittstellen, die mit Datenträgerkontingenten verwendet werden.
 ms.assetid: 422d93d9-f4aa-428d-94c1-fdf2dcf4c974
-title: Schnittstellen für Festplattenkontingente
+title: Datenträgerkontingentschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bbcd4240a6a5910942aad71c7ea080da40918a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37d7406425ccce59db6f5b2fd7eae0e33473215c0fda1e8ecd497169ad188c25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117997868"
 ---
-# <a name="disk-quota-interfaces"></a>Schnittstellen für Festplattenkontingente
+# <a name="disk-quota-interfaces"></a>Datenträgerkontingentschnittstellen
 
-Die folgenden Schnittstellen werden mit Datenträger Kontingenten verwendet.
+Die folgenden Schnittstellen werden mit Datenträgerkontingenten verwendet.
 
 
 
-| Schnittstelle                                          | BESCHREIBUNG                                                                                                    |
+| Schnittstelle                                          | Beschreibung                                                                                                    |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [**Idiskquotacontrol**](/windows/win32/api/dskquota/nn-dskquota-idiskquotacontrol)     | Steuert die Festplattenkontingent-Einrichtungen eines einzelnen NTFS-Dateisystem Volumes.<br/>                             |
-| [**Idiskquotaevents**](/windows/win32/api/dskquota/nn-dskquota-idiskquotaevents)       | Empfängt Kontingent bezogene Ereignis Benachrichtigungen.<br/>                                                         |
-| [**Idiskquotauser**](/windows/win32/api/dskquota/nn-dskquota-idiskquotauser)           | Stellt einen einzelnen Benutzer Kontingent Eintrag in der Volumekontingent-Informationsdatei dar.<br/>                          |
-| [**Idiskquotauserbatch**](/windows/win32/api/dskquota/nn-dskquota-idiskquotauserbatch) | Fügt einem Container, der in einem einzelnen-Befehl zur Aktualisierung übermittelt wird, mehrere Kontingent Benutzer Objekte hinzu.<br/> |
-| [**Ienumdiskquotauszer**](/windows/win32/api/dskquota/nn-dskquota-ienumdiskquotausers) | Listet Benutzer Kontingent Einträge auf dem Volume auf.<br/>                                                        |
+| [**IDiskQuotaControl**](/windows/win32/api/dskquota/nn-dskquota-idiskquotacontrol)     | Steuert die Datenträgerkontingente eines einzelnen NTFS-Dateisystemvolumes.<br/>                             |
+| [**IDiskQuotaEvents**](/windows/win32/api/dskquota/nn-dskquota-idiskquotaevents)       | Empfängt kontingentbezogene Ereignisbenachrichtigungen.<br/>                                                         |
+| [**IDiskQuotaUser**](/windows/win32/api/dskquota/nn-dskquota-idiskquotauser)           | Stellt einen einzelnen Benutzerkontingenteintrag in der Volumekontingentinformationsdatei dar.<br/>                          |
+| [**IDiskQuotaUserBatch**](/windows/win32/api/dskquota/nn-dskquota-idiskquotauserbatch) | Fügt einem Container mehrere Kontingentbenutzerobjekte hinzu, die dann in einem einzigen Aufruf zur Aktualisierung übermittelt werden.<br/> |
+| [**IEnumDiskQuotaUsers**](/windows/win32/api/dskquota/nn-dskquota-ienumdiskquotausers) | Listet Benutzerkontingenteinträge auf dem Volume auf.<br/>                                                        |
 
 
 

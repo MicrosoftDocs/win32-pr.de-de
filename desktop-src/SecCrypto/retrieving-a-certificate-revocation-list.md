@@ -1,19 +1,19 @@
 ---
-description: Veranschaulicht, wie eine Zertifikat Sperr Liste abgerufen wird.
+description: Veranschaulicht, wie eine Zertifikatsperrliste abgerufen wird.
 ms.assetid: b8fbffae-d968-453d-81f0-af9d60be5fa9
-title: Abrufen einer Zertifikat Sperr Liste
+title: Abrufen einer Zertifikatsperrliste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e9c7933ac5762c9367d7bdff150da011f789835
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7a301fd02b6a04c64a39471bdca03ff92f02d88f51f821af0c4b66a110300b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117975061"
 ---
-# <a name="retrieving-a-certificate-revocation-list"></a>Abrufen einer Zertifikat Sperr Liste
+# <a name="retrieving-a-certificate-revocation-list"></a>Abrufen einer Zertifikatsperrliste
 
-Eine [*Zertifizierungsstelle (Certification Authority*](../secgloss/c-gly.md) , ca) ist für die Veröffentlichung der [*Zertifikat Sperr Liste*](../secgloss/c-gly.md) (CRL) verantwortlich. Die aktuelle CRL kann mit der [**ICertAdmin2:: getcrl**](/windows/desktop/api/Certadm/nf-certadm-icertadmin-getcrl) -Methode abgerufen werden. In Fällen, in denen das Zertifikat einer Zertifizierungsstelle erneuert wurde, müssen Sie möglicherweise CRLs für die vorherigen Zertifizierungsstellen Zertifikate abrufen. Weitere Informationen zur Erneuerung der Zertifizierungsstelle finden Sie unter [Zertifizierungsstellen Erneuerung](certification-authority-renewal.md). Darüber hinaus kann eine Zertifizierungsstelle Delta-CRLs veröffentlichen. Verwenden Sie zum Abrufen von CRLs für erneuerte Zertifizierungsstellen Zertifikate oder Delta-CRLs entweder die [**ICertAdmin2:: getcaproperty**](/windows/desktop/api/Certadm/nf-certadm-icertadmin2-getcaproperty) -Methode oder die [**ICertRequest2:: getcaproperty**](/windows/desktop/api/Certcli/nf-certcli-icertrequest2-getcaproperty) -Methode.
+Eine [*Zertifizierungsstelle*](../secgloss/c-gly.md) ist für die Veröffentlichung ihrer [*Zertifikatsperrliste (Certificate Revocation List,*](../secgloss/c-gly.md) CRL) verantwortlich. Die aktuelle Zertifikatsperrliste kann mithilfe der [**ICertAdmin2::GetCRL-Methode**](/windows/desktop/api/Certadm/nf-certadm-icertadmin-getcrl) abgerufen werden. In Fällen, in denen das Zertifikat einer Zertifizierungsstelle erneuert wurde, müssen Sie möglicherweise CRLs für die vorherigen Zertifizierungsstellenzertifikate abrufen. Informationen zur Erneuerung von Zertifizierungsstellen finden Sie unter [Zertifizierungsstellenerneuerung.](certification-authority-renewal.md) Darüber hinaus kann eine Zertifizierungsstelle Delta-CRLs veröffentlichen. Um CRLs für erneuerte Zertifizierungsstellenzertifikate oder Delta-CRLs abzurufen, verwenden Sie entweder die Methoden [**ICertAdmin2::GetCAProperty**](/windows/desktop/api/Certadm/nf-certadm-icertadmin2-getcaproperty) oder [**ICertRequest2::GetCAProperty.**](/windows/desktop/api/Certcli/nf-certcli-icertrequest2-getcaproperty)
 
 Das folgende Beispiel zeigt das Abrufen der aktuellen CRL.
 
@@ -85,7 +85,7 @@ error:
 
 
 
-Das folgende Beispiel zeigt das Abrufen von Basis-und Delta-CRLs, einschließlich derjenigen für Zertifizierungsstellen Zertifikate, die erneuert wurden. Im Beispiel wird [**ICertAdmin2:: getcaproperty**](/windows/desktop/api/Certadm/nf-certadm-icertadmin2-getcaproperty)verwendet, obwohl [**ICertRequest2:: getcaproperty**](/windows/desktop/api/Certcli/nf-certcli-icertrequest2-getcaproperty) eine ähnliche Funktionalität bereitstellt.
+Das folgende Beispiel zeigt das Abrufen von Basis- und Delta-CRLs, einschließlich derjenigen für Zertifizierungsstellenzertifikate, die erneuert wurden. Im Beispiel wird [**ICertAdmin2::GetCAProperty**](/windows/desktop/api/Certadm/nf-certadm-icertadmin2-getcaproperty)verwendet, obwohl [**ICertRequest2::GetCAProperty**](/windows/desktop/api/Certcli/nf-certcli-icertrequest2-getcaproperty) eine ähnliche Funktionalität bietet.
 
 
 ```C++

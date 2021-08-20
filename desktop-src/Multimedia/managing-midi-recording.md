@@ -1,53 +1,53 @@
 ---
-title: Verwalten der MIDI-Aufzeichnung
-description: Verwalten der MIDI-Aufzeichnung
+title: Verwalten der TONS-Aufzeichnung
+description: Verwalten der TONS-Aufzeichnung
 ms.assetid: 48b2d815-72cf-4c96-8d93-247d2426b8f2
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), aufzeichnen
-- MIDI (Digital Interface Digital Interface), aufzeichnen
-- Aufzeichnen von MIDI-Audiodaten, verwalten
-- MIDI-Aufzeichnung
+- Instrument Digital Interface (KEYBOARD), Aufzeichnung
+- KEYBOARD (Keyboard Instrument Digital Interface), Aufzeichnung
+- Aufzeichnen von AUDIOdateien mit DER TON,Verwalten
+- RECORDING-Aufzeichnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0edfb81976e1f5333798c9705640e7676281968a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 29bf4ac85ad0cc9735a08bab3ee07d744eecb0d75308ee323ec93c1c69b1a9e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139061"
 ---
-# <a name="managing-midi-recording"></a>Verwalten der MIDI-Aufzeichnung
+# <a name="managing-midi-recording"></a>Verwalten der TONS-Aufzeichnung
 
-Nachdem Sie ein MIDI-Gerät geöffnet haben, können Sie damit beginnen, die Daten von MIDI aufzuzeichnen. Windows stellt die folgenden Funktionen zum Verwalten der MIDI-Aufzeichnung bereit.
+Nachdem Sie ein DANN-Gerät geöffnet haben, können Sie mit der Aufzeichnung von SOLLTEN-Daten beginnen. Windows stellt die folgenden Funktionen für die Verwaltung der TONT-Aufzeichnung zur Verfügung.
 
 
 
 | Wert                                      | Bedeutung                                                                                           |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**midiinaddbuffer**](/windows/win32/api/mmeapi/nf-mmeapi-midiinaddbuffer) | Sendet einen Puffer an den Gerätetreiber, damit er mit aufgezeichneten System exklusiven MIDI-Daten gefüllt werden kann. |
-| [**midiinreset**](/windows/win32/api/mmeapi/nf-mmeapi-midiinreset)         | Beendet die Aufzeichnung von MIDI und markiert alle ausstehenden Puffer als abgeschlossen.                                       |
-| [**midiinstart**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart)         | Startet die MIDI-Aufzeichnung und setzt den Zeitstempel auf NULL zurück.                                          |
-| [**midiinstop**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstop)           | Beendet die Aufzeichnung von MIDI.                                                                             |
+| [**bluInAddBuffer**](/windows/win32/api/mmeapi/nf-mmeapi-midiinaddbuffer) | Sendet einen Puffer an den Gerätetreiber, damit er mit aufgezeichneten system-exklusiven DABEI-Daten gefüllt werden kann. |
+| [**keyboardInReset**](/windows/win32/api/mmeapi/nf-mmeapi-midiinreset)         | Beendet die RECORDING-Aufzeichnung und markiert alle ausstehenden Puffer wie abgeschlossen.                                       |
+| [**durchstartenInStart**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart)         | Startet die RECORDING-Aufzeichnung und setzt den Zeitstempel auf 0 (null) zurück.                                          |
+| [**keyboardInStop**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstop)           | Beendet die STOPP-Aufzeichnung.                                                                             |
 
 
 
- 
+ 
 
-Verwenden Sie [**midiinaddbuffer**](/windows/win32/api/mmeapi/nf-mmeapi-midiinaddbuffer), um Puffer an den Gerätetreiber zum Aufzeichnen von System exklusiven Nachrichten zu senden. Die Anwendung wird benachrichtigt, wenn die Puffer mit System exklusiven aufgezeichneten Daten gefüllt werden. Weitere Informationen zu den Benachrichtigungs Techniken finden Sie unter [Verwalten von MIDI-Datenblöcken](managing-midi-data-blocks.md).
+Verwenden Sie zum Senden von Puffern an den Gerätetreiber zum Aufzeichnen von system-exklusiven Nachrichten [**die Datei "bluInAddBuffer".**](/windows/win32/api/mmeapi/nf-mmeapi-midiinaddbuffer) Die Anwendung wird benachrichtigt, wenn die Puffer mit vom System exklusiven aufgezeichneten Daten gefüllt werden. Weitere Informationen zu den Benachrichtigungstechniken finden Sie unter [Verwalten von NOTIFICATION-Datenblöcken.](managing-midi-data-blocks.md)
 
-Die [**midiinstart**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart) -Funktion beginnt den Aufzeichnungsprozess. Wenn Sie System exklusive Nachrichten aufzeichnen, senden Sie mindestens einen Puffer an den Treiber, bevor Sie die Aufzeichnung starten. Verwenden Sie zum Anhalten der Aufzeichnung [**midiinstop**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstop). Markieren Sie vor dem Schließen des Geräts mithilfe der [**midiinclose**](/windows/win32/api/mmeapi/nf-mmeapi-midiinclose) -Funktion alle ausstehenden Datenblöcke als durch den Aufruf von [**midiinreset**](/windows/win32/api/mmeapi/nf-mmeapi-midiinreset).
+Die [**funktion "formatInStart"**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart) startet den Aufzeichnungsprozess. Senden Sie beim Aufzeichnen von system exklusiven Nachrichten mindestens einen Puffer an den Treiber, bevor Sie mit der Aufzeichnung beginnen. Um die Aufzeichnung zu beenden, [**verwenden Sie "sollInStop".**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstop) Markieren Sie alle ausstehenden Datenblöcke vor dem Schließen des Geräts mithilfe der [**funktion "sollInClose"**](/windows/win32/api/mmeapi/nf-mmeapi-midiinclose) als abgeschlossen, indem Sie [**"mussInReset" aufrufen.**](/windows/win32/api/mmeapi/nf-mmeapi-midiinreset)
 
-Anwendungen, die Zeitstempel Daten benötigen, verwenden eine Rückruffunktion, um die Daten von MIDI zu empfangen. Wenn Ihre Zeit Steuerungsanforderungen nicht strikt sind, können Sie einen Fenster-oder Thread Rückruf verwenden. Es ist jedoch nicht möglich, einen Ereignis Rückruf zum Empfangen von MIDI-Daten zu verwenden.
+Anwendungen, die Zeitstempeldaten benötigen, verwenden eine Rückruffunktion, um DIE Daten zu empfangen. Wenn Ihre zeitlichen Anforderungen nicht streng sind, können Sie einen Fenster- oder Threadrückruf verwenden. Sie können jedoch keinen Ereignisrückruf verwenden, um DIE Daten zu empfangen.
 
-Zum Aufzeichnen von System exklusiven Nachrichten mit Anwendungen, die keine Streampuffer verwenden, müssen Sie den Gerätetreiber mit Puffern bereitstellen. Diese Puffer werden mithilfe einer [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur angegeben.
+Zum Aufzeichnen von system-exklusiven Nachrichten mit Anwendungen, die keine Streampuffer verwenden, müssen Sie den Gerätetreiber mit Puffern versorgen. Diese Puffer werden mithilfe einer [**FORMATHDR-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) angegeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufzeichnen von MIDI-Audiodateien](recording-midi-audio.md)
+[Aufzeichnen von TONS-Audio](recording-midi-audio.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

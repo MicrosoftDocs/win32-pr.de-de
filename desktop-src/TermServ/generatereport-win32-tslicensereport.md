@@ -1,12 +1,12 @@
 ---
-title: GenerateReport-Methode der Win32_TSLicenseReport-Klasse (GPMgmt. h)
-description: GenerateReport ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar.
+title: GenerateReport-Methode der Win32_TSLicenseReport-Klasse (Gpmgmt.h)
+description: GenerateReport ist ab Windows Server 2012 nicht mehr für die Verwendung verfügbar.
 ms.assetid: 2d3b16d6-52e8-491f-b6e5-419e9a21013b
 ms.tgt_platform: multiple
 keywords:
 - GenerateReport-Methode Remotedesktopdienste
-- GenerateReport-Methode Remotedesktopdienste, Win32_TSLicenseReport-Klasse
-- Win32_TSLicenseReport-Klasse Remotedesktopdienste, GenerateReport-Methode
+- GenerateReport-Methode Remotedesktopdienste , Win32_TSLicenseReport-Klasse
+- Win32_TSLicenseReport Klasse Remotedesktopdienste , GenerateReport-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,20 +17,20 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a5231c87d379decac8d4f6491042bff735c1ba2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a619da8130187a4ab5d39de390315dd99b3ee7a171005a4cf66e7bb5677ae87c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130779"
 ---
-# <a name="generatereport-method-of-the-win32_tslicensereport-class"></a>GenerateReport-Methode der Win32- \_ Klasse "zlicensereport"
+# <a name="generatereport-method-of-the-win32_tslicensereport-class"></a>GenerateReport-Methode der Win32 \_ TSLicenseReport-Klasse
 
-\[**GenerateReport** ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar. Verwenden Sie stattdessen [**generatereportex**](generatereportex-win32-tslicensereport.md).\]
+\[**GenerateReport** ist ab Windows Server 2012 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen [**GenerateReportEx.**](generatereportex-win32-tslicensereport.md)\]
 
 Diese Methode wird nicht unterstützt.
 
-**Windows Server 2008 R2 und Windows Server 2008:** Generiert einen aktuellen Bericht pro Benutzer-Lizenz Verwendung auf dem Remotedesktop-Lizenzserver.
+**Windows Server 2008 R2 und Windows Server 2008:** Generiert einen aktuellen Benutzerlizenznutzungsbericht auf dem Remotedesktop Lizenzserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,10 +49,10 @@ uint32 GenerateReport(
 
 <dl> <dt>
 
-*ScopeType* \[ in\]
+*ScopeType* \[ In\]
 </dt> <dd>
 
-Bereich des Lizenz Verwendungs Berichts. Die folgenden Werte sind möglich:
+Bereich des Lizenznutzungsberichts. Sie kann die folgenden Werte aufweisen.
 
 <dt>
 
@@ -66,7 +66,7 @@ Der Bericht wird für die gesamte Domäne generiert.
 2
 </dt> <dd>
 
-Der Bericht wird für die Organisationseinheit (OU) generiert, die im Parameter " *scopevalue* " angegeben ist.
+Der Bericht wird für die Organisationseinheit (OU) generiert, die im *ScopeValue-Parameter* angegeben ist.
 
 </dd> <dt>
 
@@ -77,14 +77,14 @@ Der Bericht wird für alle vertrauenswürdigen Domänen generiert.
 
 </dd> </dl> </dd> <dt>
 
- Bereich \[ in\]
+*ScopeValue* \[ In\]
 </dt> <dd>
 
-Wenn der *ScopeType* -Parameter 2 ist, gibt *ScopeType* die Organisationseinheit an, für die der Bericht generiert wird. Sie müssen *scopevalue* mit dem Format **OU =**_OUName1_*_, ou =_*_OUName2_*_._*.. angeben.
+Wenn der *ScopeType-Parameter* 2 ist, gibt *ScopeType* die Organisationseinheit an, für die der Bericht generiert wird. Sie müssen *ScopeValue* angeben, indem Sie das Format **OU=**_OUName1_*_,OU=_*_OUName2_...*_verwenden._*
 
 </dd> <dt>
 
-*Dateiname* \[ vorgenommen\]
+*FileName* \[ out\]
 </dt> <dd>
 
 Der Dateiname des generierten Berichts.
@@ -93,17 +93,17 @@ Der Dateiname des generierten Berichts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **WBEM \_ E \_ nicht \_ unterstützt** zurück.
+Gibt **WBEM \_ E NICHT UNTERSTÜTZT \_ \_ zurück.**
 
-**Windows Server 2008 R2 und Windows Server 2008:** Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+**Windows Server 2008 R2 und Windows Server 2008:** Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="remarks"></a>Bemerkungen
 
 Dies ist eine statische Methode.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,8 +116,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                                 |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                         |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| Header<br/>                   | <dl> <dt>GPMgmt. h</dt> </dl>       |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gpmgmt.h</dt> </dl>       |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -126,7 +126,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Datei- \_ /licensereport**](win32-tslicensereport.md)
+[**Win32 \_ TSLicenseReport**](win32-tslicensereport.md)
 </dt> </dl>
 
  

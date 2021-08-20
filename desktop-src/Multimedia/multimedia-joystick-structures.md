@@ -1,38 +1,38 @@
 ---
-title: Multimedia-Joystick-Strukturen
-description: Multimedia-Joystick-Strukturen
+title: Multimedia-Multimedia-Strukturen
+description: Multimedia-Multimedia-Strukturen
 ms.assetid: 75d85070-07ec-4555-ac11-67d76a7c682b
 keywords:
-- Windows Multimedia, Joystick-Strukturen
-- Multimedia, Joystick Strukturen
-- Multimedia-Eingabe, Joystick Strukturen
-- Joysticks, Strukturen
-- Verweis für Joysticks, Strukturen
-- Joystick Referenz, Strukturen
+- Windows Multimedia,-Strukturen
+- multimedia,multimedia-Strukturen
+- Multimediaeingabe, Strukturen
+- -Strukturen
+- Referenz für "Ns", Strukturen
+- verweis,structures
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e8cccfb6ec1266cdd05296eee836d2c5f9a8643
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 11c2f260bb17d39389f199e0ee4b64a54e1e4c7a29b3b25d29ad085b62bff4d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118136739"
 ---
-# <a name="multimedia-joystick-structures"></a>Multimedia-Joystick-Strukturen
+# <a name="multimedia-joystick-structures"></a>Multimedia-Multimedia-Strukturen
 
-Die folgenden Strukturen werden mit Multimedia-Joysticks verwendet.
+Die folgenden Strukturen werden mit Multimedia-3000-Medien verwendet.
 
--   [**JOYCAPS**](/windows/win32/api/joystickapi/ns-joystickapi-joycaps)
--   [**Joyinfo**](/windows/win32/api/joystickapi/ns-joystickapi-joyinfo)
--   [**Joyinfoex**](/windows/win32/api/joystickapi/ns-joystickapi-joyinfoex)
+-   [**CAPS**](/windows/win32/api/joystickapi/ns-joystickapi-joycaps)
+-   [**BESENKINFO**](/windows/win32/api/joystickapi/ns-joystickapi-joyinfo)
+-   [**VERERBUNGSINFOEX**](/windows/win32/api/joystickapi/ns-joystickapi-joyinfoex)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Joystick Referenz](joystick-reference.md)
+[Verweis auf Dies](joystick-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
