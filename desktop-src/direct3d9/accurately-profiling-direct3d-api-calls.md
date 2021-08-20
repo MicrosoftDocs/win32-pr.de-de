@@ -1,5 +1,5 @@
 ---
-description: Sobald Sie über eine funktionsfähige Microsoft Direct3D-Anwendung verfügen und ihre Leistung verbessern möchten, verwenden Sie in der Regel ein standardfertiges Profilerstellungstool oder eine benutzerdefinierte Messtechnik, um die Zeit zu messen, die zum Ausführen eines oder mehrere API-Aufrufe (Application Programming Interface) benötigt wird. Wenn Sie dies getan haben, aber Zeitsteuerungsergebnisse erhalten, die von einer Rendersequenz zur nächsten variieren, oder Sie Hypothesen erstellen, die die tatsächlichen Experimentergebnisse nicht unterstützen, können Ihnen die folgenden Informationen helfen, die Gründe zu verstehen.
+description: Sobald Sie über eine funktionierende Microsoft Direct3D-Anwendung verfügen und deren Leistung verbessern möchten, verwenden Sie in der Regel ein standardfertiges Profilerstellungstool oder eine benutzerdefinierte Messtechnik, um die Zeit zu messen, die zum Ausführen eines oder mehrere API-Aufrufe (Application Programming Interface) benötigt wird. Wenn Sie dies getan haben, aber Zeitsteuerungsergebnisse erhalten, die von einer Rendersequenz zur nächsten variieren, oder Sie Hypothesen erstellen, die die tatsächlichen Experimentergebnisse nicht unterstützen, können Ihnen die folgenden Informationen helfen, die Gründe zu verstehen.
 ms.assetid: f969be42-d541-4e8d-aec4-eb9508bcc7cf
 title: Exakte Profilerstellung für Direct3D-API-Aufrufe (Direct3D 9)
 ms.topic: article
@@ -14,12 +14,12 @@ ms.locfileid: "118097492"
 # <a name="accurately-profiling-direct3d-api-calls-direct3d-9"></a>Exakte Profilerstellung für Direct3D-API-Aufrufe (Direct3D 9)
 
 -   [Genaue Profilerstellung für Direct3D ist schwierig](#accurately-profiling-direct3d-is-difficult)
--   [Präzises Profil einer Direct3D-Rendersequenz](#how-to-accurately-profile-a-direct3d-render-sequence)
+-   [Genaues Profil einer Direct3D-Rendersequenz](#how-to-accurately-profile-a-direct3d-render-sequence)
 -   [Profilerstellung für Direct3D-Statusänderungen](#profiling-direct3d-state-changes)
 -   [Zusammenfassung](#summary)
 -   [Anhang](#appendix)
 
-Sobald Sie über eine funktionsfähige Microsoft Direct3D-Anwendung verfügen und ihre Leistung verbessern möchten, verwenden Sie in der Regel ein standardfertiges Profilerstellungstool oder eine benutzerdefinierte Messtechnik, um die Zeit zu messen, die zum Ausführen eines oder mehrere API-Aufrufe (Application Programming Interface) benötigt wird. Wenn Sie dies getan haben, aber Zeitsteuerungsergebnisse erhalten, die von einer Rendersequenz zur nächsten variieren, oder Sie Hypothesen erstellen, die die tatsächlichen Experimentergebnisse nicht unterstützen, können Ihnen die folgenden Informationen helfen, die Gründe zu verstehen.
+Sobald Sie über eine funktionierende Microsoft Direct3D-Anwendung verfügen und deren Leistung verbessern möchten, verwenden Sie in der Regel ein standardfertiges Profilerstellungstool oder eine benutzerdefinierte Messtechnik, um die Zeit zu messen, die zum Ausführen eines oder mehrere API-Aufrufe (Application Programming Interface) benötigt wird. Wenn Sie dies getan haben, aber Zeitsteuerungsergebnisse erhalten, die von einer Rendersequenz zur nächsten variieren, oder Sie Hypothesen erstellen, die die tatsächlichen Experimentergebnisse nicht unterstützen, können Ihnen die folgenden Informationen helfen, die Gründe zu verstehen.
 
 Die hier bereitgestellten Informationen basieren auf der Annahme, dass Sie über Kenntnisse und Erfahrung mit Folgenden verfügen:
 
@@ -45,7 +45,7 @@ Die Profilerstellung bietet Ihnen Antworten, die Ihnen beim Budgetieren der Leis
 -   Um 30 Frames pro Sekunde zu erreichen, können Sie diese API nicht mehr als 33.000 Mal pro Frame aufrufen.
 -   Sie können nur 3,3.3.000 Objekte pro Frame rendern (vorausgesetzt, 10 dieser API-Aufrufe für die Rendersequenz jedes Objekts).
 
-Anders ausgedrückt: Wenn Sie pro API-Aufruf genügend Zeit hatten, können Sie eine Budgetierungsfrage beantworten, z. B. die Anzahl von Primitiven, die interaktiv gerendert werden können. Die von einem Instrumentierungsprofiler zurückgegebenen Rohzahlen beantworten die Budgetierungsfragen jedoch nicht genau. Dies liegt daran, dass die Grafikpipeline komplexe Entwurfsprobleme hat, z. B. die Anzahl der Komponenten, die arbeiten müssen, die Anzahl der Prozessoren, die steuern, wie die Arbeit zwischen Komponenten fließt, und Optimierungsstrategien, die in der Laufzeit und in einem Treiber implementiert sind, die die Pipeline effizienter gestalten.
+Anders ausgedrückt: Wenn Sie pro API-Aufruf genügend Zeit hatten, können Sie eine Budgetierungsfrage beantworten, z. B. die Anzahl von Primitiven, die interaktiv gerendert werden können. Die von einem Instrumentierungsprofiler zurückgegebenen Rohzahlen beantworten die Budgetierungsfragen jedoch nicht genau. Dies liegt daran, dass die Grafikpipeline komplexe Entwurfsprobleme hat, z. B. die Anzahl der Komponenten, die arbeiten müssen, die Anzahl der Prozessoren, die steuern, wie die Arbeit zwischen Komponenten fließt, und Optimierungsstrategien, die in der Laufzeit und in einem Treiber implementiert werden, die die Pipeline effizienter gestalten.
 
 ### <a name="each-api-call-goes-through-several-components"></a>Jeder API-Aufruf durchläuft mehrere Komponenten.
 
@@ -63,11 +63,11 @@ Das folgende konzeptionelle Diagramm zeigt die verschiedenen Komponenten, durch 
 
 ![Diagramm der Grafikkomponenten, die API-Aufrufe durchgehen](images/microbenchmarkinstructionflow2.png)
 
-Die Anwendung ruft Direct3D auf, das die Szene steuert, Benutzerinteraktionen verarbeitet und bestimmt, wie das Rendering erfolgt. All diese Arbeit wird in der Rendersequenz angegeben, die mithilfe von Direct3D-API-Aufrufen an die Laufzeit gesendet wird. Die Rendersequenz ist virtuell hardwareunabhängig (d. h., die API-Aufrufe sind hardwareunabhängig, aber eine Anwendung hat Kenntnis darüber, welche Funktionen von einer Grafikkarte unterstützt werden).
+Die Anwendung ruft Direct3D auf, das die Szene steuert, Benutzerinteraktionen verarbeitet und bestimmt, wie das Rendering erfolgt. All diese Arbeit wird in der Rendersequenz angegeben, die mithilfe von Direct3D-API-Aufrufen an die Laufzeit gesendet wird. Die Rendersequenz ist praktisch hardwareunabhängig (d. h., die API-Aufrufe sind hardwareunabhängig, aber eine Anwendung hat Kenntnis darüber, welche Funktionen von einer Grafikkarte unterstützt werden).
 
-Die Runtime konvertiert diese Aufrufe in ein geräteunabhängiges Format. Die Runtime verarbeitet die gesamte Kommunikation zwischen der Anwendung und dem Treiber, sodass eine Anwendung auf mehr als einem kompatiblen Hardwareteil ausgeführt wird (abhängig von den erforderlichen Features). Beim Messen eines Funktionsaufrufs misst ein Instrumentierungsprofiler die Zeit, die er in einer Funktion verbracht hat, sowie die Zeit für die Rückgabe der Funktion. Eine Einschränkung eines Instrumentierungsprofilers ist, dass er weder die Zeit, die ein Treiber zum Senden der resultierenden Arbeit an die Grafikkarte benötigt, noch die Zeit für die Verarbeitung der Arbeit durch die Grafikkarte einbeinhaltet. Anders ausgedrückt: Ein Standardinstrumentierungsprofiler kann nicht die ganze Arbeit zuordnen, die jedem Funktionsaufruf zugeordnet ist.
+Die Runtime konvertiert diese Aufrufe in ein geräteunabhängiges Format. Die Runtime verarbeitet die gesamte Kommunikation zwischen der Anwendung und dem Treiber, sodass eine Anwendung auf mehr als einem kompatiblen Hardwareteil ausgeführt wird (abhängig von den erforderlichen Features). Beim Messen eines Funktionsaufrufs misst ein Instrumentierungsprofiler die Zeit, die er in einer Funktion verbracht hat, sowie die Zeit für die Rückgabe der Funktion. Eine Einschränkung eines Instrumentierungsprofilers besteht in der Zeit, die ein Treiber zum Senden der resultierenden Arbeit an die Grafikkarte benötigt, und nicht der Zeit, die die Grafikkarte für die Verarbeitung der Arbeit benötigt. Anders ausgedrückt: Ein Standardinstrumentierungsprofiler kann nicht die ganze Arbeit zuordnen, die jedem Funktionsaufruf zugeordnet ist.
 
-Der Softwaretreiber verwendet hardwarespezifisches Wissen über die Grafikkarte, um die geräteunabhängigen Befehle in eine Sequenz von Grafikkartenbefehlen zu konvertieren. Treiber können auch die Reihenfolge der Befehle optimieren, die an die Grafikkarte gesendet werden, damit das Rendern auf der Grafikkarte effizient erfolgt. Diese Optimierungen können zu Problemen bei der Profilerstellung führen, da die Menge der ausgeführten Arbeit anscheinend nicht so ist (Sie müssen möglicherweise die Optimierungen verstehen, um sie zu berücksichtigen). Der Treiber gibt die Steuerung in der Regel an die Laufzeit zurück, bevor die Verarbeitung aller Befehle durch die Grafikkarte abgeschlossen ist.
+Der Softwaretreiber verwendet hardwarespezifisches Wissen über die Grafikkarte, um die geräteunabhängigen Befehle in eine Sequenz von Grafikkartenbefehlen zu konvertieren. Treiber können auch die Reihenfolge der Befehle optimieren, die an die Grafikkarte gesendet werden, damit das Rendern auf der Grafikkarte effizient erfolgt. Diese Optimierungen können zu Profilerstellungsproblemen führen, da die Menge an Arbeit anscheinend nicht so ist( Sie müssen möglicherweise die Optimierungen verstehen, um sie zu berücksichtigen). Der Treiber gibt die Steuerung in der Regel an die Laufzeit zurück, bevor die Verarbeitung aller Befehle durch die Grafikkarte abgeschlossen ist.
 
 Die Grafikkarte führt den Großteil des Renderings aus, indem Daten aus den Scheitelpunkt- und Indexpuffern, Texturen, Renderzustandsinformationen und den Grafikbefehlen kombiniert werden. Wenn das Rendern der Grafikkarte abgeschlossen ist, ist die arbeit, die aus der Rendersequenz erstellt wurde, abgeschlossen.
 
@@ -81,11 +81,11 @@ Die Beziehung zwischen diesen Komponenten ist noch komplexer, da die Anwendung, 
 
 PC-Systeme verfügen über mindestens eine CPU und eine GPU, können aber über mehrere oder beides verfügen. Die CPUs befinden sich auf der Hauptplatine, und die GPUs befinden sich entweder auf der Hauptplatine oder auf der Grafikkarte. Die Geschwindigkeit der CPU wird durch einen Uhrchip auf der Hauptplatine bestimmt, und die Geschwindigkeit der GPU wird durch einen separaten Uhrchip bestimmt. Die CPU-Uhr steuert die Geschwindigkeit der Arbeit, die von der Anwendung, der Runtime und dem Treiber ausgeführt wird. Die Anwendung sendet Arbeit über die Runtime und den Treiber an die GPU.
 
-CPU und GPU werden in der Regel unabhängig voneinander mit unterschiedlichen Geschwindigkeiten ausgeführt. Die GPU kann auf die Arbeit reagieren, sobald die Arbeit verfügbar ist (vorausgesetzt, die GPU hat die Verarbeitung der vorherigen Arbeit abgeschlossen). Die GPU-Arbeit erfolgt parallel zur CPU-Arbeit, wie durch die gekrümmte Linie in der obigen Abbildung hervorgehoben. Ein Profiler misst im Allgemeinen die Leistung der CPU, nicht der GPU. Dies macht die Profilerstellung schwierig, da die von einem Instrumentierungsprofiler durchgeführten Messungen die CPU-Zeit, aber möglicherweise nicht die GPU-Zeit enthalten.
+CPU und GPU werden in der Regel unabhängig voneinander mit unterschiedlichen Geschwindigkeiten ausgeführt. Die GPU reagiert möglicherweise auf die Arbeit, sobald die Arbeit verfügbar ist (vorausgesetzt, die GPU hat die Verarbeitung der vorherigen Arbeit abgeschlossen). Die GPU-Arbeit erfolgt parallel zur CPU-Arbeit, wie durch die gekrümmte Linie in der obigen Abbildung hervorgehoben. Ein Profiler misst im Allgemeinen die Leistung der CPU, nicht der GPU. Dies macht die Profilerstellung schwierig, da die von einem Instrumentierungsprofiler durchgeführten Messungen die CPU-Zeit, aber möglicherweise nicht die GPU-Zeit enthalten.
 
 Der Zweck der GPU besteht in der Auslastung der Verarbeitung von der CPU zu einem Prozessor, der speziell für Grafikarbeiten entwickelt wurde. Auf modernen Grafikkarten ersetzt die GPU einen Großen Teil der Transformations- und Beleuchtungsarbeiten in der Pipeline von der CPU zur GPU. Dadurch wird die CPU-Workload erheblich reduziert, und es stehen mehr CPU-Zyklen für andere Verarbeitungen zur Verfügung. Um eine grafische Anwendung auf Spitzenleistung zu optimieren, müssen Sie die Leistung sowohl der CPU als auch der GPU messen und die Arbeit zwischen den beiden Prozessortypen ausgleichen.
 
-In diesem Dokument werden keine Themen behandelt, die sich auf das Messen der Leistung der GPU oder das Ausgleichen der Arbeit zwischen CPU und GPU bezieht. Wenn Sie die Leistung einer GPU (oder einer bestimmten Grafikkarte) besser verstehen möchten, besuchen Sie die Website des Anbieters, um weitere Informationen zur GPU-Leistung zu erhalten. Stattdessen konzentriert sich dieses Dokument auf die Arbeit der Runtime und des Treibers, indem die GPU-Arbeit auf einen vernachlässigbaren Betrag reduziert wird. Dies basiert zum Teil auf der Erfahrung, dass Anwendungen, bei denen Leistungsprobleme auftreten, in der Regel CPU-eingeschränkt sind.
+In diesem Dokument werden keine Themen behandelt, die sich auf das Messen der Leistung der GPU oder das Ausgleichen der Arbeit zwischen CPU und GPU bezieht. Wenn Sie die Leistung einer GPU (oder einer bestimmten Grafikkarte) besser verstehen möchten, besuchen Sie die Website des Anbieters, um weitere Informationen zur GPU-Leistung zu erhalten. Stattdessen konzentriert sich dieses Dokument auf die Arbeit, die von der Runtime und dem Treiber ausgeführt wird, indem die GPU-Arbeit auf einen vernachlässigbaren Betrag reduziert wird. Dies basiert zum Teil auf der Erfahrung, dass Anwendungen, bei denen Leistungsprobleme auftreten, in der Regel CPU-eingeschränkt sind.
 
 ### <a name="runtime-and-driver-optimizations-can-mask-api-measurements"></a>Laufzeit- und Treiberoptimierungen können API-Messungen maskieren
 
@@ -106,7 +106,7 @@ Die Laufzeit verfügt über eine integrierte Leistungsoptimierung, die die Messu
 
 Beispiel 1: Einfache Rendersequenz
 
-Wenn sie sich die Ergebnisse für die beiden Aufrufe in der Rendersequenz anzeigen, könnte ein Instrumentierungsprofiler Ähnliches zurückgeben:
+Wenn die Ergebnisse für die beiden Aufrufe in der Rendersequenz betrachtet werden, könnte ein Instrumentierungsprofiler Ähnliches zurückgeben:
 
 
 ```
@@ -122,26 +122,26 @@ Der Profiler gibt die Anzahl der CPU-Zyklen zurück, die zum Verarbeiten der mit
 
 Alle Aufrufe mit Ausnahme von [**IDirect3DDevice9::D rawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) [**DrawIndexedPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawindexedprimitive)oder [**Clear**](/windows/desktop/api) (z. B. [**SetTexture,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) [**SetVertexDeclaration**](/windows/desktop/api)und [**SetRenderState)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate)erzeugen eine Zustandsänderung. Jede Zustandsänderung legt den Pipelinezustand fest, der steuert, wie das Rendering erfolgt.
 
-Optimierungen in der Laufzeit und/oder im Treiber wurden entwickelt, um das Rendering zu beschleunigen, indem die erforderliche Arbeitsmenge reduziert wird. Im Folgenden finden Sie einige Optimierungen der Zustandsänderung, die möglicherweise zu Profildurchschnitten führen:
+Optimierungen in der Laufzeit und/oder im Treiber wurden entwickelt, um das Rendering zu beschleunigen, indem die erforderliche Arbeitsmenge reduziert wird. Im Folgenden finden Sie einige Optimierungen der Zustandsänderung, die möglicherweise zu profilverursachenden Durchschnittswerte führen:
 
--   Ein Treiber (oder die Runtime) könnte eine Zustandsänderung als lokalen Zustand speichern. Da der Treiber in einem "verzögerten" Algorithmus arbeiten könnte (arbeitsverzögerungsversetzt, bis es absolut notwendig ist), kann sich die Arbeit im Zusammenhang mit einigen Zustandsänderungen verzögern.
+-   Ein Treiber (oder die Runtime) könnte eine Zustandsänderung als lokalen Zustand speichern. Da der Treiber in einem "verzögerten" Algorithmus arbeiten könnte (die Verzögerung der Arbeit, bis sie absolut notwendig ist), kann sich die Arbeit im Zusammenhang mit einigen Zustandsänderungen verzögern.
 -   Die Runtime (oder ein Treiber) kann Zustandsänderungen durch Optimierung entfernen. Ein Beispiel hierfür ist das Entfernen einer redundanten Zustandsänderung, die die Beleuchtung deaktiviert, da die Beleuchtung zuvor deaktiviert wurde.
 
-Es gibt keine versäumte Möglichkeit, eine Rendersequenz zu betrachten und zu schließen, welche Zustandsänderungen ein dirty bit festlegen und die Arbeit zurückschlagen oder einfach durch Optimierung entfernt werden. Selbst wenn Sie optimierte Zustandsänderungen in der heutigen Laufzeit oder im Treiber identifizieren könnten, wird die Runtime oder der Treiber von morgen wahrscheinlich aktualisiert. Sie wissen auch nicht sofort, was der vorherige Zustand war. Daher ist es schwierig, redundante Zustandsänderungen zu identifizieren. Die einzige Möglichkeit, die Kosten einer Zustandsänderung zu überprüfen, besteht darin, die Rendersequenz zu messen, die die Zustandsänderungen enthält.
+Es gibt keine beschämendere Möglichkeit, eine Rendersequenz zu betrachten und zu schließen, welche Zustandsänderungen ein Dirty Bit festlegen und die Arbeit zurückschlagen oder einfach durch Optimierung entfernt werden. Auch wenn Sie optimierte Zustandsänderungen in der Laufzeit oder im Treiber von heute identifizieren könnten, wird die Runtime oder der Treiber von morgen wahrscheinlich aktualisiert. Sie wissen auch nicht ohne weiteres, was der vorherige Zustand war, daher ist es schwierig, redundante Zustandsänderungen zu identifizieren. Die einzige Möglichkeit, die Kosten einer Zustandsänderung zu überprüfen, besteht in der Messung der Rendersequenz, die die Zustandsänderungen enthält.
 
-Wie Sie sehen können, erschweren die Schwierigkeiten, die durch mehrere Prozessoren verursacht werden, befehle, die von mehr als einer Komponente verarbeitet werden, und die in die Komponenten integrierten Optimierungen die Profilerstellung schwierig vorherzusagen. Im nächsten Abschnitt werden diese Profilerstellungs-Herausforderungen behandelt. Es werden Direct3D-Beispielrenderingsequenzen mit den zugehörigen Messtechniken gezeigt. Mit diesem Wissen können Sie genaue, wiederholbare Messungen für einzelne Aufrufe generieren.
+Wie Sie sehen können, ist die Profilerstellung aufgrund der Schwierigkeiten, die durch mehrere Prozessoren, die Verarbeitung von Befehlen durch mehrere Komponenten und die in die Komponenten integrierten Optimierungen verursacht werden, schwierig vorherzusagen. Im nächsten Abschnitt wird jede dieser Herausforderungen bei der Profilerstellung behandelt. Es werden Direct3D-Beispielrenderingsequenzen mit den zugehörigen Messtechniken gezeigt. Mit diesem Wissen können Sie genaue, wiederholbare Messungen für einzelne Aufrufe generieren.
 
-## <a name="how-to-accurately-profile-a-direct3d-render-sequence"></a>Genaues Profilieren einer Direct3D-Rendersequenz
+## <a name="how-to-accurately-profile-a-direct3d-render-sequence"></a>Genaues Profil einer Direct3D-Rendersequenz
 
-Nachdem einige der Herausforderungen bei der Profilerstellung hervorgehoben wurden, werden in diesem Abschnitt Techniken gezeigt, mit denen Sie Profilmessungen generieren können, die für die Budgetierung verwendet werden können. Genaue, wiederholbare Profilerstellungsmessungen sind möglich, wenn Sie die Beziehung zwischen den von der CPU gesteuerten Komponenten verstehen und wie Leistungsoptimierungen vermieden werden, die von der Laufzeit und dem Treiber implementiert werden.
+Nachdem einige der Herausforderungen bei der Profilerstellung hervorgehoben wurden, werden in diesem Abschnitt Techniken erläutert, mit denen Sie Profilmessungen generieren können, die für die Budgetierung verwendet werden können. Genaue, wiederholbare Profilerstellungsmessungen sind möglich, wenn Sie die Beziehung zwischen den komponenten kennen, die von der CPU gesteuert werden, und wie Leistungsoptimierungen vermieden werden, die von der Laufzeit und dem Treiber implementiert werden.
 
 Zunächst müssen Sie in der Lage sein, die Ausführungszeit eines einzelnen API-Aufrufs genau zu messen.
 
-### <a name="pick-an-accurate-measurement-tool-like-queryperformancecounter"></a>Auswählen eines genauen Messungstools wie QueryPerformanceCounter
+### <a name="pick-an-accurate-measurement-tool-like-queryperformancecounter"></a>Wählen Sie ein Tool für genaue Messungen wie QueryPerformanceCounter aus.
 
-Das Microsoft Windows-Betriebssystem enthält einen Zeitgeber mit hoher Auflösung, der verwendet werden kann, um verstrichene Zeiten mit hoher Auflösung zu messen. Der aktuelle Wert eines solchen Timers kann mit [**queryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)zurückgegeben werden. Nach dem Aufrufen von **QueryPerformanceCounter** zum Zurückgeben von Start- und Beendigungswerten kann der Unterschied zwischen den beiden Werten mit **queryPerformanceCounter** in die tatsächlich verstrichene Zeit (in Sekunden) konvertiert werden.
+Das Microsoft Windows-Betriebssystem enthält einen hochauflösenden Timer, mit dem verstrichene Zeiten mit hoher Auflösung gemessen werden können. Der aktuelle Wert eines solchen Timers kann mit [**queryPerformanceCounter zurückgegeben werden.**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) Nach dem Aufruf **von QueryPerformanceCounter** zum Zurückgeben von Start- und Stoppwerten kann die Differenz zwischen den beiden Werten mithilfe von **QueryPerformanceCounter** in die tatsächlich verstrichene Zeit (in Sekunden) konvertiert werden.
 
-Die Verwendung von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) hat den Vorteil, dass es in Windows verfügbar und einfach zu verwenden ist. Umschlossen Sie die Aufrufe einfach mit einem **QueryPerformanceCounter-Aufruf,** und speichern Sie die Start- und Stoppwerte. Daher wird in diesem Dokument veranschaulicht, wie **Sie QueryPerformanceCounter** verwenden, um Die Ausführungszeiten zu profilieren, ähnlich wie ein Instrumentierungsprofiler dies messen würde. Hier sehen Sie ein Beispiel, das zeigt, wie **Sie QueryPerformanceCounter** in Ihren Quellcode einbetten:
+Die Verwendung von [**QueryPerformanceCounter hat**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) den Vorteil, dass sie in Windows und einfach zu verwenden ist. Umschließen Sie die Aufrufe einfach mit **einem QueryPerformanceCounter-Aufruf,** und speichern Sie die Start- und Stoppwerte. Aus diesem Grund wird in diesem Dokument veranschaulicht, wie **QueryPerformanceCounter** verwendet wird, um Die Ausführungszeiten zu profilieren, ähnlich wie ein Instrumentierungsprofiler es messen würde. Das folgende Beispiel zeigt, wie **Sie QueryPerformanceCounter** in Ihren Quellcode einbetten:
 
 
 ```
@@ -167,11 +167,11 @@ Die Verwendung von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/n
 
 Beispiel 2: Benutzerdefinierte Profilerstellungsimplementierung mit QPC
 
-start und stop sind zwei große ganze Zahlen, die die start- und stop-Werte enthalten, die vom Hochleistungstimer zurückgegeben werden. Beachten Sie, dass QueryPerformanceCounter(&start) direkt vor [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und QueryPerformanceCounter(&stop) direkt nach [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)aufgerufen wird. Nach dem Abrufen des Stoppwerts wird QueryPerformanceFrequency aufgerufen, um freq zurückzugeben. Dies ist die Häufigkeit des Zeitgebers mit hoher Auflösung. Angenommen, Sie erhalten in diesem hypothetischen Beispiel die folgenden Ergebnisse für start, stop und freq:
+start und stop sind zwei große ganze Zahlen, die die start- und stop-Werte enthalten, die vom Hochleistungs-Timer zurückgegeben werden. Beachten Sie, dass QueryPerformanceCounter(&start) aufgerufen wird, kurz bevor [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und QueryPerformanceCounter(&stop) direkt nach [**DrawPrimitive aufgerufen werden.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Nach dem Abrufen des Stop-Werts wird QueryPerformanceFrequency aufgerufen, um freq zurück zu geben. Dies ist die Häufigkeit des Zeiters mit hoher Auflösung. In diesem hypothetischen Beispiel wird angenommen, dass Sie die folgenden Ergebnisse für start, stop und freq erhalten:
 
 
 
-| Lokale Variable | Anzahl von Ticks |
+| Lokale Variable | Anzahl der Ticks |
 |----------------|-----------------|
 | start          | 1792998845094   |
 | stop           | 1792998845102   |
@@ -181,7 +181,7 @@ start und stop sind zwei große ganze Zahlen, die die start- und stop-Werte enth
 
  
 
-Sie können diese Werte wie folgt in die Anzahl der Zyklen konvertieren, die zum Ausführen der API-Aufrufe benötigt werden:
+Sie können diese Werte in die Anzahl der Zyklen konvertieren, die zum Ausführen der API-Aufrufe benötigt werden:
 
 
 ```
@@ -193,7 +193,7 @@ Sie können diese Werte wie folgt in die Anzahl der Zyklen konvertieren, die zum
 
 
 
-Anders ausgedrückt: Die Verarbeitung von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) auf diesem Computer mit 2 GHz dauert etwa 4568 Taktzyklen. Sie können diese Werte in die tatsächliche Zeit konvertieren, die zum Ausführen aller Aufrufe wie folgt gedauert hat:
+Anders ausgedrückt: Die Verarbeitung von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) auf diesem 2-GHz-Computer dauert ca. 4.568 Taktzyklen. Sie können diese Werte in die tatsächliche Zeit konvertieren, die zum Ausführen aller Aufrufe wie die folgenden gezeitiert hat:
 
 
 ```
@@ -203,47 +203,47 @@ Anders ausgedrückt: Die Verarbeitung von [**SetTexture**](/windows/win32/api/d3
 
 
 
-Die Verwendung von QueryPerformanceCounter erfordert, dass Sie Ihrer Rendersequenz Start- und Stoppmessungen hinzufügen und QueryPerformanceFrequency verwenden, um die Differenz (Anzahl von Ticks) in die Anzahl der CPU-Zyklen oder in die tatsächliche Zeit zu konvertieren. Die Identifizierung der Messtechnik ist ein guter Ausgangspunkt für die Entwicklung einer benutzerdefinierten Profilerstellungsimplementierung. Aber bevor Sie beginnen, Messungen vorzunehmen, müssen Sie wissen, wie Sie mit der Grafikkarte umgehen müssen.
+Die Verwendung von QueryPerformanceCounter erfordert, dass Sie Ihrer Rendersequenz Start- und Stoppmessungen hinzufügen und QueryPerformanceFrequency verwenden, um die Differenz (Anzahl von Ticks) in die Anzahl der CPU-Zyklen oder in die tatsächliche Zeit zu konvertieren. Das Identifizieren der Messtechnik ist ein guter Start für die Entwicklung einer benutzerdefinierten Profilerstellungsimplementierung. Aber bevor Sie losspringen und mit messungen beginnen, müssen Sie wissen, wie Sie mit der Grafikkarte umgehen.
 
 ### <a name="focus-on-cpu-measurements"></a>Fokus auf CPU-Messungen
 
-Wie bereits erwähnt, funktionieren die CPU und die GPU parallel, um die von den API-Aufrufen generierten Arbeiten zu verarbeiten. Eine reale Anwendung erfordert die Profilerstellung für beide Arten von Prozessoren, um herauszufinden, ob Ihre Anwendung cpu- oder GPU-eingeschränkt ist. Da die GPU-Leistung herstellerspezifisch ist, wäre es sehr schwierig, in diesem Dokument Ergebnisse zu erzeugen, die die Vielzahl der verfügbaren Grafikkarten abdecken.
+Wie bereits erwähnt, arbeiten die CPU und die GPU parallel, um die von den API-Aufrufen generierte Arbeit zu verarbeiten. Eine reale Anwendung erfordert die Profilerstellung für beide Prozessortypen, um herauszufinden, ob Ihre Anwendung cpu- oder GPU-eingeschränkt ist. Da die GPU-Leistung herstellerspezifisch ist, wäre es sehr schwierig, Ergebnisse in diesem Artikel zu erzeugen, die die Vielzahl der verfügbaren Grafikkarten abdecken.
 
-Stattdessen konzentriert sich dieses Dokument nur auf die Profilerstellung der von der CPU ausgeführten Arbeit mithilfe eines benutzerdefinierten Verfahrens zum Messen der Laufzeit- und Treiberarbeit. Die GPU-Arbeit wird auf einen nicht signifikanten Betrag reduziert, sodass die CPU-Ergebnisse sichtbarer sind. Ein Vorteil dieses Ansatzes besteht darin, dass diese Technik Ergebnisse im Anhang liefert, die Sie mit Ihren Messungen korrelieren können sollten. Um die für die Grafikkarte erforderliche Arbeit auf eine unwichtige Ebene zu reduzieren, reduzieren Sie die Renderingarbeit einfach so gering wie möglich. Dies kann erreicht werden, indem Zeichnen-Aufrufe zum Rendern eines einzelnen Dreiecks eingeschränkt werden, und kann weiter eingeschränkt werden, sodass jedes Dreieck nur ein Pixel enthält.
+Stattdessen konzentriert sich dieses Dokument nur auf die Profilerstellung der Von der CPU ausgeführten Arbeit mithilfe einer benutzerdefinierten Technik zum Messen der Laufzeit- und Treiberarbeit. Die GPU-Arbeit wird auf einen nicht signifikanten Betrag reduziert, sodass CPU-Ergebnisse besser sichtbar sind. Ein Vorteil dieses Ansatzes besteht im Ergebnis des Anhangs, dass Sie mit Ihren Messungen korrelieren können sollten. Um die für die Grafikkarte erforderliche Arbeit auf einen nicht signifikanten Wert zu reduzieren, reduzieren Sie einfach die Renderingarbeit auf das gering mögliche Maß. Dies kann erreicht werden, indem Zeichnen-Aufrufe eingeschränkt werden, um ein einzelnes Dreieck zu rendern, und kann weiter eingeschränkt werden, sodass jedes Dreieck nur ein Pixel enthält.
 
-Die Maßeinheit, die in diesem Dokument zum Messen der CPU-Arbeit verwendet wird, ist die Anzahl der CPU-Taktzyklen und nicht die tatsächliche Zeit. CPU-Taktzyklen haben den Vorteil, dass sie portierbarer (für ANWENDUNGEN mit CPU-Begrenzung) als die tatsächlich verstrichene Zeit auf Computern mit unterschiedlichen CPU-Geschwindigkeiten ist. Dies kann bei Bedarf problemlos in die tatsächliche Zeit konvertiert werden.
+Die Maßeinheit, die in diesem Artikel zum Messen der CPU-Arbeit verwendet wird, ist die Anzahl der CPU-Taktzyklen und nicht die tatsächliche Zeit. CPU-Uhrzyklen haben den Vorteil, dass sie portierbarer sind (für ANWENDUNGEN mit eingeschränkter CPU-Auslastung) als die tatsächliche verstrichene Zeit auf Computern mit unterschiedlicher CPU-Geschwindigkeit. Dies kann bei Bedarf problemlos in die tatsächliche Zeit konvertiert werden.
 
-Dieses Dokument behandelt keine Themen im Zusammenhang mit dem Lastenausgleich zwischen CPU und GPU. Beachten Sie, dass das Ziel dieses Whitepapers nicht darin besteht, die Gesamtleistung einer Anwendung zu messen, sondern ihnen zu zeigen, wie Sie die Zeit, die die Laufzeit und der Treiber zum Verarbeiten von API-Aufrufen benötigt, genau messen können. Mit diesen genauen Messungen können Sie die Budgetierung der CPU übernehmen, um bestimmte Leistungsszenarien zu verstehen.
+In diesem Dokument werden keine Themen behandelt, die sich auf den Lastenausgleich zwischen CPU und GPU bezieht. Denken Sie daran, dass das Ziel dieses Whitepapers nicht das Messen der Gesamtleistung einer Anwendung ist, sondern ihnen zu zeigen, wie Sie die Zeit, die die Laufzeit und der Treiber zum Verarbeiten von API-Aufrufen benötigt, genau messen können. Mit diesen genauen Messungen können Sie die CPU-Budgetierung durchführen, um bestimmte Leistungsszenarien zu verstehen.
 
 ### <a name="controlling-runtime-and-driver-optimizations"></a>Steuern von Laufzeit- und Treiberoptimierungen
 
-Mit einer identifizierten Messtechnik und einer Strategie zum Reduzieren der GPU-Arbeit besteht der nächste Schritt darin, die Laufzeit- und Treiberoptimierungen zu verstehen, die bei der Profilerstellung im Weg stehen.
+Wenn eine Messtechnik und eine Strategie zur Reduzierung der GPU-Arbeit erkannt werden, besteht der nächste Schritt im Verständnis der Laufzeit- und Treiberoptimierungen, die ihnen bei der Profilerstellung im Weg stehen.
 
-Die CPU-Arbeit kann in drei Buckets unterteilt werden: die Anwendungsarbeit, die Laufzeitarbeit und die Treiberarbeit. Ignorieren Sie die Anwendungsarbeit, da diese vom Programmierer gesteuert wird. Aus Sicht der Anwendung sind die Runtime und der Treiber wie Blackboxen, da die Anwendung keine Kontrolle darüber hat, was in ihnen implementiert ist. Der Schlüssel besteht darin, die Optimierungstechniken zu verstehen, die in der Laufzeit und im Treiber implementiert werden können. Wenn Sie diese Optimierungen nicht verstehen, ist es sehr einfach, auf der Grundlage der Profilmessungen zu der falschen Schlussfolgerung über den Arbeitsaufwand der CPU zu springen. Insbesondere gibt es zwei Themen, die sich auf etwas beziehen, das als Befehlspuffer bezeichnet wird, und was es tun kann, um die Profilerstellung zu verschleiern. Diese Themen sind:
+Die CPU-Arbeit kann in drei Buckets unterteilt werden: die Anwendungsarbeit, die Laufzeitarbeit und die Treiberarbeit. Ignorieren Sie die Anwendungsarbeit, da dies unter der Kontrolle des Programmierers liegt. Aus Sicht der Anwendung sind die Runtime und der Treiber wie Blackboxen, da die Anwendung keine Kontrolle darüber hat, was in ihnen implementiert ist. Der Schlüssel ist es, die Optimierungstechniken zu verstehen, die in der Runtime und im Treiber implementiert werden können. Wenn Sie diese Optimierungen nicht verstehen, ist es sehr einfach, auf der Grundlage der Profilmessungen zur falschen Schlussfolgerung zu springen, wie viel Arbeit die CPU macht. Insbesondere gibt es zwei Themen, die sich auf einen so genannten Befehlspuffer und darauf bezieht, was er tun kann, um die Profilerstellung zu verschleiern. Diese Themen sind:
 
 -   Laufzeitoptimierung mit dem Befehlspuffer. Der Befehlspuffer ist eine Laufzeitoptimierung, die die Auswirkungen eines Modusübergangs reduziert. Informationen zum Steuern der zeitlichen Steuerung des Modusübergangs finden Sie unter [Steuern des Befehlspuffers.](#controlling-the-command-buffer)
--   Negieren der Zeitsteuerungseffekte des Befehlspuffers. Die verstrichene Zeit eines Modusübergangs kann große Auswirkungen auf Profilerstellungsmessungen haben. Die Strategie hierfür besteht darin, [die Rendersequenz im Vergleich zum Modusübergang groß zu machen.](#make-the-render-sequence-large-compared-to-the-mode-transition)
+-   Negieren der Zeitsteuerungseffekte des Befehlspuffers. Die verstrichene Zeit eines Modusübergangs kann einen großen Einfluss auf Profilerstellungsmessungen haben. Die Strategie dafür ist, die Rendersequenz im Vergleich zum Modusübergang groß [zu machen.](#make-the-render-sequence-large-compared-to-the-mode-transition)
 
 ### <a name="controlling-the-command-buffer"></a>Steuern des Befehlspuffers
 
-Wenn eine Anwendung einen API-Aufruf vornimmt, konvertiert die Runtime den API-Aufruf in ein geräteunabhängiges Format (das wir einen Befehl aufrufen) und speichert ihn im Befehlspuffer. Der Befehlspuffer wird dem folgenden Diagramm hinzugefügt.
+Wenn eine Anwendung einen API-Aufruf aufruft, konvertiert die Runtime den API-Aufruf in ein geräteunabhängiges Format (das wir einen Befehl aufrufen) und speichert ihn im Befehlspuffer. Der Befehlspuffer wird dem folgenden Diagramm hinzugefügt.
 
 ![Diagramm der CPU-Komponenten, einschließlich eines Befehlspuffers](images/microbenchmarkcommandbuffer2.png)
 
-Jedes Mal, wenn die Anwendung einen weiteren API-Aufruf vornimmt, wiederholt die Laufzeit diese Sequenz und fügt dem Befehlspuffer einen weiteren Befehl hinzu. Zu einem bestimmten Zeitpunkt leert die Laufzeit den Puffer (die Befehle werden an den Treiber gesendet). In Windows XP führt das Leeren des Befehlspuffers zu einem Modusübergang, während das Betriebssystem von der Laufzeit (im Benutzermodus ausgeführt) zum Treiber (im Kernelmodus ausgeführt) wechselt, wie im folgenden Diagramm dargestellt.
+Bei jedem weiteren API-Aufruf durch die Anwendung wiederholt die Runtime diese Sequenz und fügt dem Befehlspuffer einen weiteren Befehl hinzu. Zu einem bestimmten Zeitpunkt leert die Laufzeit den Puffer (sendet die Befehle an den Treiber). In Windows XP führt das Leeren des Befehlspuffers zu einem Modusübergang, wenn das Betriebssystem von der Runtime (im Benutzermodus) zum Treiber wechselt (im Kernelmodus ausgeführt), wie im folgenden Diagramm dargestellt.
 
--   Benutzermodus: Der nicht privilegierte Prozessormodus, der Anwendungscode ausführt. Anwendungen im Benutzermodus können nur über Systemdienste auf Systemdaten zugreifen.
--   Kernelmodus: Der privilegierte Prozessormodus, in dem Windows-basierter Executive-Code ausgeführt wird. Ein Treiber oder Thread, der im Kernelmodus ausgeführt wird, hat Zugriff auf den gesamten Systemspeicher, direkten Zugriff auf Hardware und die CPU-Anweisungen zum Ausführen von E/A-Läufen mit der Hardware.
+-   Benutzermodus: Der nicht privilegierte Prozessormodus, in dem Anwendungscode ausgeführt wird. Anwendungen im Benutzermodus können nur über Systemdienste auf Systemdaten zugreifen.
+-   Kernelmodus: Der privilegierte Prozessormodus, in dem Windows-basierter Executive Code ausgeführt wird. Ein Treiber oder Thread, der im Kernelmodus ausgeführt wird, hat Zugriff auf den sämtlichen Systemspeicher, direkten Zugriff auf Hardware und die CPU-Anweisungen zum Ausführen von E/A mit der Hardware.
 
 ![Diagramm der Übergänge zwischen Benutzermodus und Kernelmodus](images/microbenchmarkcommandbuffer3.png)
 
-Der Übergang erfolgt jedes Mal, wenn die CPU vom Benutzer in den Kernelmodus wechselt (und umgekehrt), und die Anzahl der benötigten Zyklen ist im Vergleich zu einem einzelnen API-Aufruf groß. Wenn die Laufzeit jeden API-Aufruf an den Treiber gesendet hat, als er aufgerufen wurde, würde jeder API-Aufruf die Kosten eines Modusübergangs verursachen.
+Der Übergang erfolgt jedes Mal, wenn die CPU vom Benutzer in den Kernelmodus wechselt (und umgekehrt) und die Anzahl der benötigten Zyklen im Vergleich zu einem einzelnen API-Aufruf groß ist. Wenn die Runtime beim Aufrufen jeden API-Aufruf an den Treiber gesendet hat, entstehen für jeden API-Aufruf die Kosten für einen Modusübergang.
 
-Stattdessen ist der Befehlspuffer eine Laufzeitoptimierung, die entwickelt wurde, um die effektiven Kosten des Modusübergangs zu reduzieren. Der Befehl puffert viele Treiberbefehle in die Warteschlange, um einen Übergang im Einzelmodus vorzubereiten. Wenn die Laufzeit dem Befehlspuffer einen Befehl hinzufügt, wird die Steuerung an die Anwendung zurückgegeben. Ein Profiler kann nicht wissen, dass die Treiberbefehle wahrscheinlich noch nicht einmal an den Treiber gesendet wurden. Daher sind die zahlen, die von einem standardbasierten Instrumentierungsprofiler zurückgegeben werden, irreführend, da er die Laufzeitarbeit, aber nicht die zugehörige Treiberarbeit misst.
+Stattdessen ist der Befehlspuffer eine Laufzeitoptimierung, die die effektiven Kosten für den Modusübergang reduziert. Der Befehlspuffer reiht viele Treiberbefehle in die Warteschlange ein, um einen Übergang im Einzelmodus zu ermöglichen. Wenn die Runtime dem Befehlspuffer einen Befehl hinzufügt, wird die Steuerung an die Anwendung zurückgegeben. Ein Profiler kann nicht wissen, dass die Treiberbefehle wahrscheinlich noch nicht einmal an den Treiber gesendet wurden. Daher sind die von einem standardmäßigen Instrumentierungsprofiler zurückgegebenen Zahlen irreführend, da sie die Laufzeitarbeit, aber nicht die zugehörige Treiberarbeit misst.
 
 ### <a name="profile-results-without-a-mode-transition"></a>Profilergebnisse ohne Modusübergang
 
-Mithilfe der Rendersequenz aus Beispiel 2 finden Sie hier einige typische Zeitmessungsmessungen, die die Größe eines Modusübergangs veranschaulichen. Unter der Annahme, dass [**SetTexture-**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive-Aufrufe**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) keinen Modusübergang verursachen, könnte ein standardbasierter Instrumentierungsprofiler Ergebnisse ähnlich den folgenden zurückgeben:
+Unter Verwendung der Rendersequenz aus Beispiel 2 finden Sie hier einige typische Zeitsteuerungsmessungen, die das Ausmaß eines Modusübergangs veranschaulichen. Unter der Annahme, dass [**SetTexture-**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive-Aufrufe**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) keinen Modusübergang verursachen, könnte ein standardfähiger Instrumentierungsprofiler ergebnisse ähnlich den folgenden zurückgeben:
 
 
 ```
@@ -253,11 +253,11 @@ Number of cycles for DrawPrimitive        : 900
 
 
 
-Jede dieser Zahlen ist die Zeitspanne, die die Laufzeit benötigt, um diese Aufrufe dem Befehlspuffer hinzuzufügen. Da es keinen Modusübergang gibt, hat der Treiber noch keine Arbeit ausgeführt. Die Profilerergebnisse sind genau, messen jedoch nicht die gesamte Arbeit, die die Rendersequenz letztendlich dazu führt, dass die CPU ausgeführt wird.
+Jede dieser Zahlen ist die Zeit, die die Laufzeit benötigt, um diese Aufrufe dem Befehlspuffer hinzuzufügen. Da es keinen Modusübergang gibt, hat der Treiber noch keine Arbeit ausgeführt. Die Profilerergebnisse sind genau, messen jedoch nicht die ganze Arbeit, die die Rendersequenz letztendlich zur Ausführung der CPU führt.
 
-### <a name="profile-results-with-a-mode-transition"></a>Profilergebnisse mit einem Modusübergang
+### <a name="profile-results-with-a-mode-transition"></a>Profilieren von Ergebnissen mit einem Modusübergang
 
-Sehen Sie sich nun an, was für das gleiche Beispiel geschieht, wenn ein Modusübergang auftritt. Dieses Mal wird davon ausgegangen, dass [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) einen Modusübergang verursachen. Auch hier könnte ein Standardinstrumentierungsprofiler Ergebnisse ähnlich den folgenden zurückgeben:
+Sehen Sie sich nun an, was für dasselbe Beispiel geschieht, wenn ein Modusübergang eintritt. Gehen Sie dieses Mal davon [**aus, dass SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) einen Modusübergang verursachen. Auch hier könnte ein Standardinstrumentierungsprofiler ergebnisse ähnlich den folgenden zurückgeben:
 
 
 ```
@@ -267,9 +267,9 @@ Number of cycles for DrawPrimitive        : 946,900
 
 
 
-Die für [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) gemessene Zeit ist in etwa gleich, aber der drastische Anstieg der Zeit in [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) ist auf den Modusübergang zurückzuführen. Dies geschieht:
+Die für [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) gemessene Zeit ist ungefähr gleich, aber der drastische Anstieg der Zeit, die in [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) verbracht wird, ist auf den Modusübergang zurück. Dies geschieht:
 
-1.  Angenommen, der Befehlspuffer verfügt über Platz für einen Befehl, bevor die Rendersequenz gestartet wird.
+1.  Angenommen, der Befehlspuffer hat Platz für einen Befehl, bevor unsere Rendersequenz gestartet wird.
 2.  [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) wird in ein geräteunabhängiges Format konvertiert und dem Befehlspuffer hinzugefügt. In diesem Szenario füllt dieser Aufruf den Befehlspuffer aus.
 3.  Die Runtime versucht, [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) zum Befehlspuffer hinzuzufügen, kann dies jedoch nicht, da sie voll ist. Stattdessen leert die Laufzeit den Befehlspuffer. Dies führt zum Übergang des Kernelmodus. Angenommen, der Übergang dauert etwa 5.000 Zyklen. Diese Zeit trägt zur Zeit bei, die in **DrawPrimitive** aufgewendet wird.
 4.  Der Treiber verarbeitet dann die Arbeit, die allen Befehlen zugeordnet ist, die aus dem Befehlspuffer geleert wurden. Angenommen, die Treiberzeit zum Verarbeiten der Befehle, die den Befehlspuffer fast gefüllt haben, beträgt etwa 935.000 Zyklen. Angenommen, die mit [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) verknüpfte Treiberarbeit beträgt etwa 2750 Zyklen. Diese Zeit trägt zur Zeit bei, die in [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)aufgewendet wird.
@@ -385,7 +385,7 @@ Number of cycles for GetData              : 16,450
 Der Abfragemechanismus hat es uns ermöglicht, die Laufzeit und die zu messende Treiberarbeit zu steuern. Um diese Zahlen zu verstehen, geschieht folgendermaßen die Reaktion auf die einzelnen API-Aufrufe sowie die geschätzten Zeitangaben:
 
 1.  Beim ersten Aufruf wird der Befehlspuffer geleert, indem [**GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata) mit [**D3DGETDATA \_ FLUSH**](d3dgetdata-flush.md)aufgerufen wird. Wenn die GPU die Verarbeitung der gesamten Befehlspufferarbeit abgeschlossen hat, gibt **GetData** S \_ OK zurück, und die Schleife wird beendet, da sich die GPU im Leerlauf befindet.
-2.  Die Rendersequenz beginnt, indem [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) in ein geräteunabhängiges Format konvertiert und dem Befehlspuffer hinzugefügt wird. Angenommen, dies dauert etwa 100 Zyklen.
+2.  Die Rendersequenz beginnt mit der Konvertierung von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) in ein geräteunabhängiges Format und dem Hinzufügen zum Befehlspuffer. Angenommen, dies dauert etwa 100 Zyklen.
 3.  [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) wird konvertiert und dem Befehlspuffer hinzugefügt. Angenommen, dies dauert etwa 900 Zyklen.
 4.  [**Problem**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-issue) fügt dem Befehlspuffer einen Abfragemarker hinzu. Angenommen, dies dauert etwa 200 Zyklen.
 5.  [**GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata) bewirkt, dass der Befehlspuffer geleert wird, wodurch der Übergang des Kernelmodus erzwingt wird. Angenommen, dies dauert etwa 5.000 Zyklen.
@@ -411,7 +411,7 @@ driver work = 2964       + 3600          + 200   = 6450 cycles
 
 
 
-Der in Kombination mit QueryPerformanceCounter verwendete Abfragemechanismus misst die gesamte CPU-Arbeit. Dies erfolgt mit einer Kombination aus Abfragemarkern und Abfragestatusvergleichen. Abfragemarker zum Starten und Beenden, die dem Befehlspuffer hinzugefügt werden, werden verwendet, um zu steuern, wie viel Arbeit im Puffer erfolgt. Indem gewartet wird, bis der richtige Rückgabecode zurückgegeben wird, wird die Startmessung direkt vor dem Start einer sauberen Rendersequenz durchgeführt, und die Beendigungsmessung erfolgt unmittelbar nach Abschluss der Arbeit, die dem Inhalt des Befehlspuffers zugeordnet ist. Dies erfasst effektiv die CPU-Arbeit, die sowohl von der Laufzeit als auch vom Treiber ausgeführt wird.
+Der in Kombination mit QueryPerformanceCounter verwendete Abfragemechanismus misst die gesamte CPU-Arbeit. Dies erfolgt mit einer Kombination aus Abfragemarkern und Abfragestatusvergleichen. Abfragemarker zum Starten und Beenden, die dem Befehlspuffer hinzugefügt werden, werden verwendet, um zu steuern, wie viel Arbeit im Puffer liegt. Indem gewartet wird, bis der richtige Rückgabecode zurückgegeben wird, wird die Startmessung direkt vor dem Start einer sauberen Rendersequenz durchgeführt, und die Beendigungsmessung erfolgt unmittelbar nach Abschluss der Arbeit, die dem Inhalt des Befehlspuffers zugeordnet ist. Dies erfasst effektiv die CPU-Arbeit, die sowohl von der Laufzeit als auch vom Treiber ausgeführt wird.
 
 Nachdem Sie nun über den Befehlspuffer und seine Auswirkungen auf die Profilerstellung informiert sind, sollten Sie wissen, dass es einige andere Bedingungen gibt, die dazu führen können, dass die Laufzeit den Befehlspuffer leert. Sie müssen auf diese in Ihren Rendersequenzen achten. Einige dieser Bedingungen sind als Reaktion auf API-Aufrufe, andere als Reaktion auf Ressourcenänderungen in der Runtime. Eine der folgenden Bedingungen führt zu einem Modusübergang:
 
@@ -425,7 +425,7 @@ Nachdem Sie nun über den Befehlspuffer und seine Auswirkungen auf die Profilers
 
 Achten Sie darauf, dass Sie in Ihren Rendersequenzen auf diese Bedingungen achten. Jedes Mal, wenn ein Modusübergang hinzugefügt wird, werden Ihren Profilerstellungsmessungen 10.000 Arbeitszyklen des Treibers hinzugefügt. Darüber hinaus ist der Befehlspuffer nicht statisch dimensioniert. Die Laufzeit kann die Größe des Puffers als Reaktion auf den Arbeitsaufwand ändern, der von der Anwendung generiert wird. Dies ist eine weitere Optimierung, die von einer Rendersequenz abhängig ist.
 
-Achten Sie daher darauf, die Übergänge im Modus während der Profilerstellung zu steuern. Der Abfragemechanismus bietet eine stabile Methode zum Leeren des Befehlspuffers, sodass Sie die Zeitliche Steuerung des Modusübergangs sowie die Menge an Arbeit, die der Puffer enthält, steuern können. Allerdings kann auch diese Technik verbessert werden, indem die Modusübergangszeit reduziert wird, um sie in Bezug auf das gemessene Ergebnis unwichtig zu machen.
+Achten Sie daher darauf, die Übergänge im Modus während der Profilerstellung zu steuern. Der Abfragemechanismus bietet eine stabile Methode zum Leeren des Befehlspuffers, sodass Sie den Zeitlichen Ablauf des Modusübergangs sowie die Menge an Arbeit steuern können, die der Puffer enthält. Allerdings kann auch diese Technik verbessert werden, indem die Modusübergangszeit reduziert wird, um sie in Bezug auf das gemessene Ergebnis unwichtig zu machen.
 
 ### <a name="make-the-render-sequence-large-compared-to-the-mode-transition"></a>Rendersequenz im Vergleich zum Modusübergang groß machen
 
@@ -492,9 +492,9 @@ Die Verwendung von QueryPerformanceCounter misst jetzt 2.840 Ticks. Das Konverti
 
 Anders ausgedrückt: Auf diesem 2-GHz-Computer dauert es etwa 6,9 Millionen Zyklen, um die 1.500 Aufrufe in der Renderschleife zu verarbeiten. Von den 6,9 Millionen Zyklen beträgt die Zeit in den Modusübergängen ungefähr 10.000, sodass die Profilergebnisse jetzt fast vollständig die Arbeit messen, die [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)zugeordnet ist.
 
-Beachten Sie, dass das Codebeispiel ein Array von zwei Texturen erfordert. Um eine Laufzeitoptimierung zu vermeiden, die [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) entfernen würde, wenn bei jedem Aufgerufenen derselbe Texturzeiger festgelegt wird, verwenden Sie einfach ein Array aus zwei Texturen. Auf diese Weise ändert sich bei jedem Durchlauf der Schleife der Texturzeiger, und die gesamte Arbeit, die **SetTexture** zugeordnet ist, wird ausgeführt. Stellen Sie sicher, dass beide Texturen die gleiche Größe und das gleiche Format aufweisen, damit sich kein anderer Zustand ändert, wenn die Textur dies tut.
+Beachten Sie, dass das Codebeispiel ein Array von zwei Texturen erfordert. Um eine Laufzeitoptimierung zu vermeiden, die [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) entfernen würde, wenn bei jedem Aufgerufenen derselbe Texturzeiger festgelegt wird, verwenden Sie einfach ein Array aus zwei Texturen. Auf diese Weise ändert sich bei jedem Durchlauf der Schleife der Texturzeiger, und die gesamte Arbeit, die **SetTexture** zugeordnet ist, wird ausgeführt. Stellen Sie sicher, dass beide Texturen die gleiche Größe und das gleiche Format aufweisen, sodass sich kein anderer Zustand ändert, wenn die Textur dies tut.
 
-Sie verfügen nun über ein Verfahren für die Profilerstellung für Direct3D. Es basiert auf dem Leistungsindikator (QueryPerformanceCounter), um die Anzahl der Ticks zu erfassen, die die CPU zum Verarbeiten der Arbeit benötigt. Die Arbeit wird sorgfältig so gesteuert, dass sie die Laufzeit- und Treiberarbeit ist, die API-Aufrufen mithilfe des Abfragemechanismus zugeordnet ist. Eine Abfrage bietet zwei Steuerungshilfen: erstens, um den Befehlspuffer zu leeren, bevor die Rendersequenz gestartet wird, und zweitens, um nach Abschluss der GPU-Arbeit zurückzukehren.
+Sie verfügen nun über ein Verfahren für die Profilerstellung für Direct3D. Es basiert auf dem Leistungsindikator (QueryPerformanceCounter), um die Anzahl der Ticks zu erfassen, die die CPU zum Verarbeiten der Arbeit benötigt. Die Arbeit wird sorgfältig so gesteuert, dass sie die Laufzeit- und Treiberarbeit ist, die API-Aufrufen mithilfe des Abfragemechanismus zugeordnet ist. Eine Abfrage bietet zwei Steuerungshilfen: erstens, um den Befehlspuffer vor dem Start der Rendersequenz zu leeren, und zweitens, wenn die GPU-Arbeit abgeschlossen ist.
 
 Bisher hat dieses Dokument gezeigt, wie sie ein Profil für eine Rendersequenz erstellen. Jede Rendersequenz war recht einfach und enthält einen einzelnen [**DrawPrimitive-Aufruf**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) und einen [**SetTexture-Aufruf.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) Dies wurde durchgeführt, um sich auf den Befehlspuffer und die Verwendung des Abfragemechanismus zu konzentrieren, um ihn zu steuern. Hier ist eine kurze Zusammenfassung des Profils für eine beliebige Rendersequenz:
 
@@ -503,7 +503,7 @@ Bisher hat dieses Dokument gezeigt, wie sie ein Profil für eine Rendersequenz e
 -   Verwenden Sie den Abfragemechanismus, um den Befehlspuffer vor der Rendersequenz zu leeren. Dadurch wird sichergestellt, dass die Profilerstellung die richtige Menge an Laufzeit- und Treiberarbeit erfasst, die der Rendersequenz zugeordnet ist.
 -   Steuern Sie die Menge an Arbeit, die dem Befehlspuffer mit Abfrageereignismarkern hinzugefügt wird. Dieselbe Abfrage erkennt, wann die GPU ihre Arbeit abgeschlossen hat. Da die GPU-Arbeit trivial ist, entspricht dies praktisch dem Messen, wann die Arbeit des Treibers abgeschlossen ist.
 
-Alle diese Techniken werden zum Profilieren von Statusänderungen verwendet. Angenommen, Sie haben gelesen und verstanden, wie sie den Befehlspuffer steuern können, und haben die Baselinemessungen für [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)erfolgreich abgeschlossen. Nun können Sie Ihren Rendersequenzen Zustandsänderungen hinzufügen. Beim Hinzufügen von Zustandsänderungen zu einer Rendersequenz gibt es einige zusätzliche Herausforderungen bei der Profilerstellung. Wenn Sie ihren Rendersequenzen Zustandsänderungen hinzufügen möchten, fahren Sie mit dem nächsten Abschnitt fort.
+Alle diese Techniken werden zum Profilieren von Statusänderungen verwendet. Wenn Sie den Befehlspuffer gelesen und verstanden haben und die Baselinemessungen für [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)erfolgreich abgeschlossen haben, können Sie Ihren Rendersequenzen Zustandsänderungen hinzufügen. Beim Hinzufügen von Zustandsänderungen zu einer Rendersequenz gibt es einige zusätzliche Herausforderungen bei der Profilerstellung. Wenn Sie ihren Rendersequenzen Zustandsänderungen hinzufügen möchten, fahren Sie mit dem nächsten Abschnitt fort.
 
 ## <a name="profiling-direct3d-state-changes"></a>Profilerstellung für Direct3D-Statusänderungen
 
@@ -578,7 +578,7 @@ Die Division durch die Anzahl der Iterationen in der Schleife ergibt:
 
 
 
-Jede Iteration der Schleife enthält eine Zustandsänderung und einen Zeichnen-Aufruf. Subtrahieren des Ergebnisses der [**DrawPrimitive-Rendersequenz**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) verlässt:
+Jede Iteration der Schleife enthält eine Zustandsänderung und einen Zeichnen-Aufruf. Subtrahieren des Ergebnisses der [**DrawPrimitive-Rendersequenzblätter:**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)
 
 
 ```
@@ -589,9 +589,9 @@ Jede Iteration der Schleife enthält eine Zustandsänderung und einen Zeichnen-A
 
 Dies ist die durchschnittliche Anzahl von Zyklen, die [**dieser Rendersequenz SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) hinzugefügt werden soll. Dieses Verfahren kann auch auf andere Zustandsänderungen angewendet werden.
 
-Warum wird [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) als einfache Zustandsänderung bezeichnet? Da der zustandsbeschränkt ist, der festgelegt wird, sodass die Pipeline bei jeder Zustandsänderung die gleiche Arbeitsmenge übernimmt. Wenn Sie beide Texturen auf die gleiche Größe und das gleiche Format beschränken, wird für jeden **SetTexture-Aufruf** die gleiche Menge an Arbeit sichergestellt.
+Warum wird [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) als einfache Zustandsänderung bezeichnet? Da der zustandsbeschränkt ist, der festgelegt wird, sodass die Pipeline bei jeder Zustandsänderung die gleiche Arbeitsmenge übernimmt. Durch die Beschränkung beider Texturen auf die gleiche Größe und das gleiche Format wird für jeden **SetTexture-Aufruf** die gleiche Arbeitsmenge sichergestellt.
 
-### <a name="profiling-a-state-change-that-needs-to-be-toggled"></a>Profilerstellung für eine Zustandsänderung, die umschaltet werden muss
+### <a name="profiling-a-state-change-that-needs-to-be-toggled"></a>Profilerstellung für eine Zustandsänderung, die umschalten werden muss
 
 Es gibt andere Zustandsänderungen, die dazu führen, dass sich die Von der Grafikpipeline ausgeführte Arbeitsmenge für jede Iteration der Renderschleife ändert. Wenn z-Testing beispielsweise aktiviert ist, aktualisiert jede Pixelfarbe ein Renderziel erst, nachdem der z-Wert des neuen Pixels mit dem Z-Wert für das vorhandene Pixel getestet wurde. Wenn z-testing deaktiviert ist, wird dieser Pro-Pixel-Test nicht durchgeführt, und die Ausgabe wird viel schneller geschrieben. Durch das Aktivieren oder Deaktivieren des Z-Test-Zustands wird die Menge an Arbeit (von der CPU und der GPU) während des Renderings erheblich geändert.
 
@@ -599,7 +599,7 @@ Es gibt andere Zustandsänderungen, die dazu führen, dass sich die Von der Graf
 
 Beispielsweise muss die Profilerstellungsmethode wie folgt zweimal wiederholt werden:
 
-1.  Erstellen Sie zunächst eine Profilerstellung [**für die DrawPrimitive-Rendersequenz.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Nennen Sie dies die Baseline.
+1.  Erstellen Sie zunächst eine Profilerstellung für [**die DrawPrimitive-Rendersequenz.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Nennen Sie dies die Baseline.
 2.  Erstellen Sie ein Profil für eine zweite Rendersequenz, die die Zustandsänderung umschaltet. Die Rendersequenzschleife enthält:
     -   Eine Zustandsänderung, um den Zustand in eine "false"-Bedingung zu setzen.
     -   [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) genau wie die ursprüngliche Sequenz.
@@ -607,12 +607,12 @@ Beispielsweise muss die Profilerstellungsmethode wie folgt zweimal wiederholt we
     -   Eine zweite [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) um zu erzwingen, dass die zweite Zustandsänderung realisiert wird.
 3.  Suchen Sie den Unterschied zwischen den beiden Rendersequenzen. Dies wird wie folgt erreicht:
     -   Multiplizieren Sie die [**DrawPrimitive-Baselinesequenz**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) mit 2, da es zwei **DrawPrimitive-Aufrufe** in der neuen Sequenz gibt.
-    -   Subtrahieren Sie das Ergebnis der neuen Sequenz von der ursprünglichen Sequenz.
+    -   Subtrahiert das Ergebnis der neuen Sequenz von der ursprünglichen Sequenz.
     -   Dividieren Sie das Ergebnis durch 2, um die durchschnittlichen Kosten für die Statusänderung "false" und "true" zu erhalten.
 
-Bei der in der Rendersequenz verwendeten Schleifentechnik müssen die Kosten für das Ändern des Pipelinezustands gemessen werden, indem der Zustand für jede Iteration in der Rendersequenz von einer "true"-Bedingung in eine "false"-Bedingung und umgekehrt umgekniffen wird. Die Bedeutung von "true" und "false" ist hier nicht literal. Dies bedeutet lediglich, dass der Zustand in gegensätzliche Bedingungen festgelegt werden muss. Dies bewirkt, dass beide Zustandsänderungen während der Profilerstellung gemessen werden. Natürlich gilt weiterhin alles, was Sie über die Verwendung des Abfragemechanismus gelernt haben und die Rendersequenz in eine Schleife setzen, um die Kosten für den Modusübergang zu negieren.
+Bei der in der Rendersequenz verwendeten Schleifentechnik müssen die Kosten für das Ändern des Pipelinezustands gemessen werden, indem der Zustand für jede Iteration in der Rendersequenz von "true" in eine "false"-Bedingung und umgekehrt geändert wird. Die Bedeutung von "true" und "false" ist hier nicht literal. Dies bedeutet lediglich, dass der Zustand in gegensätzliche Bedingungen festgelegt werden muss. Dies bewirkt, dass beide Zustandsänderungen während der Profilerstellung gemessen werden. Natürlich gilt weiterhin alles, was Sie über die Verwendung des Abfragemechanismus gelernt haben und die Rendersequenz in eine Schleife setzen, um die Kosten für den Modusübergang zu negieren.
 
-Hier sehen Sie beispielsweise die Codesequenz zum Messen der Kosten für das Ein- oder Ausschalten von Z-Tests:
+Hier ist beispielsweise die Codesequenz zum Messen der Kosten für das Ein- oder Ausschalten von Z-Tests:
 
 
 ```
@@ -641,7 +641,7 @@ for(int i = 0; i < 1500; i++)
 
 Beispiel 5: Messen einer Änderung des Umbruchzustands
 
-Die -Schleife umschaltet den Zustand, indem zwei [**SetRenderState-Aufrufe ausgeführt**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) werden. Der erste **SetRenderState-Aufruf** deaktiviert z-testing, und der zweite **SetRenderState** aktiviert z-testing. Auf **jeden SetRenderState** folgt [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) sodass die der Zustandsänderung zugeordnete Arbeit vom Treiber verarbeitet wird, anstatt nur ein dirty bit im Treiber zu setzen.
+Die -Schleife umschaltet den Zustand, indem zwei [**SetRenderState-Aufrufe ausgeführt**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) werden. Der erste **SetRenderState-Aufruf** deaktiviert z-testing, und der zweite **SetRenderState** aktiviert z-testing. Jedem **SetRenderState** folgt [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) sodass die der Zustandsänderung zugeordnete Arbeit vom Treiber verarbeitet wird, anstatt nur ein dirty bit im Treiber zu setzen.
 
 Diese Zahlen sind für diese Rendersequenz sinnvoll:
 
@@ -677,7 +677,7 @@ Die Division durch die Anzahl der Iterationen in der Schleife ergibt:
 
 
 
-Jede Iteration der Schleife enthält zwei Zustandsänderungen und zwei Zeichnen-Aufrufe. Das Subtrahieren der Zeichnen-Aufrufe (bei 1100 Zyklen) verlässt:
+Jede Iteration der Schleife enthält zwei Zustandsänderungen und zwei Zeichnen-Aufrufe. Subtrahieren der Zeichnen-Aufrufe (bei 1.100 Zyklen) verlässt:
 
 
 ```
@@ -695,9 +695,9 @@ Dies ist die durchschnittliche Anzahl von Zyklen für beide Zustandsänderungen,
 
 
 
-Daher beträgt die durchschnittliche Anzahl von Zyklen zum Aktivieren oder Deaktivieren von Z-Tests 2.000 Zyklen. Es ist zu sehen, dass QueryPerformanceCounter z-enable in der Hälfte der Zeit und z-disable die Hälfte der Zeit misst. Diese Technik misst tatsächlich den Durchschnitt beider Zustandsänderungen. Anders ausgedrückt: Sie messen die Zeit zum Umschalten eines Zustands. Mit dieser Technik können Sie nicht wissen, ob die Aktivierungs- und Deaktivierungszeiten gleichwertig sind, da Sie den Durchschnitt beider Werte gemessen haben. Trotzdem ist dies eine sinnvolle Zahl, die beim Budgetieren eines Umbruchzustands als Anwendung verwendet werden muss, die diese Zustandsänderung verursacht. Dies kann nur durch Umbruch dieses Zustands möglich sein.
+Daher beträgt die durchschnittliche Anzahl von Zyklen zum Aktivieren oder Deaktivieren von Z-Tests 2.000 Zyklen. Es ist zu sehen, dass QueryPerformanceCounter z-enable in der Hälfte der Zeit und z-disable die Hälfte der Zeit misst. Diese Technik misst tatsächlich den Durchschnitt beider Zustandsänderungen. Anders ausgedrückt: Sie messen die Zeit zum Umschalten eines Zustands. Mit dieser Technik können Sie nicht wissen, ob die Aktivierungs- und Deaktivierungszeiten gleichwertig sind, da Sie den Durchschnitt beider Werte gemessen haben. Dennoch ist dies eine angemessene Zahl, die beim Budgetieren eines Umbruchzustands als Anwendung, die diese Zustandsänderung verursacht, verwendet werden muss. Dies kann nur durch Umbruch dieses Zustands möglich sein.
 
-Nun können Sie diese Techniken anwenden und ein Profil für alle von Ihnen erstellten Zustandsänderungen erstellen, richtig? Das trifft nicht vollständig zu. Sie müssen bei Optimierungen, die darauf ausgelegt sind, die Menge der zu erledigenden Arbeit zu reduzieren, weiterhin vorsichtig sein. Es gibt zwei Arten von Optimierungen, die Sie beim Entwerfen ihrer Rendersequenzen beachten sollten.
+Nun können Sie diese Techniken anwenden und ein Profil für alle von Ihnen erstellten Zustandsänderungen erstellen, richtig? Noch nicht ganz. Sie müssen bei Optimierungen, die darauf ausgelegt sind, die Menge an Arbeit zu reduzieren, die durchgeführt werden muss, trotzdem vorsichtig sein. Es gibt zwei Arten von Optimierungen, die Sie beim Entwerfen ihrer Rendersequenzen beachten sollten.
 
 ### <a name="watch-out-for-state-change-optimizations"></a>Achten Sie auf Zustandsänderungsoptimierungen.
 
@@ -732,7 +732,7 @@ for(int i = 0; i < 1500; i++)
 
 Der Z-Func-Zustand legt die Vergleichsebene beim Schreiben in den Z-Puffer fest (zwischen dem Z-Wert eines aktuellen Pixels mit dem Z-Wert eines Pixels im Tiefenpuffer). D3DCMP \_ deaktiviert nie den Z-Test-Vergleich, während D3DCMP ALWAYS den Vergleich so anschaltet, dass er bei jedem \_ Z-Test erfolgt.
 
-Die Profilerstellung einer dieser Zustandsänderungen in einer Rendersequenz mit [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) generiert ähnliche Ergebnisse wie die folgenden:
+Bei der Profilerstellung einer dieser Zustandsänderungen in einer Rendersequenz mit [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) werden ähnliche Ergebnisse generiert:
 
 
 
@@ -756,7 +756,7 @@ oder
 
  
 
-Wenn Sie jedoch sowohl für D3DRS ZENABLE als auch \_ für D3DRSUNKUNC ein Profil in der gleichen Rendersequenz erstellen, können Ergebnisse wie \_ die folgenden angezeigt werden:
+Wenn Sie jedoch sowohl ein Profil für D3DRS ZENABLE als auch \_ für D3DRS RENDERINGUNC in der gleichen Rendersequenz erstellen, können Ergebnisse wie \_ die folgenden angezeigt werden:
 
 
 
@@ -768,17 +768,17 @@ Wenn Sie jedoch sowohl für D3DRS ZENABLE als auch \_ für D3DRSUNKUNC ein Profi
 
  
 
-Sie können davon ausgehen, dass das Ergebnis die Summe von 2000- und 600-Zyklen (oder 2600) ist, da der Treiber alle Mitarbeit im Zusammenhang mit dem Festlegen beider Renderzustände verarbeite. Stattdessen beträgt der Durchschnitt 2.000 Zyklen.
+Sie könnten davon ausgehen, dass das Ergebnis die Summe von 2000- und 600-Zyklen (oder 2600) ist, da der Treiber alle Mitarbeit im Zusammenhang mit dem Festlegen beider Renderzustände verarbeite. Stattdessen beträgt der Durchschnitt 2.000 Zyklen.
 
-Dieses Ergebnis spiegelt eine Zustandsänderungsoptimierung wider, die in der Runtime, im Treiber oder in der GPU implementiert ist. In diesem Fall könnte der Treiber den ersten [**SetRenderState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) sehen und einen dirty-Zustand festlegen, der die Arbeit auf einen späteren Zeitpunkt verschieben würde. Wenn der Treiber den zweiten **SetRenderState** sieht, kann der gleiche dirty-Zustand redundant festgelegt werden, und die gleiche Arbeit würde erneut verschoben werden. Wenn [**DrawPrimitive aufgerufen**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) wird, wird die arbeit, die dem dirty-Zustand zugeordnet ist, schließlich verarbeitet. Der Treiber führt die Arbeit einmal aus, was bedeutet, dass die ersten beiden Zustandsänderungen vom Treiber effektiv konsolidiert werden. Ebenso werden die dritten und vierten Zustandsänderungen vom Treiber effektiv in einer einzelnen Zustandsänderung konsolidiert, wenn die zweite **DrawPrimitive** aufgerufen wird. Das Ergebnis ist, dass der Treiber und die GPU eine einzelne Zustandsänderung für jeden Zeichnen-Aufruf verarbeiten.
+Dieses Ergebnis spiegelt eine Zustandsänderungsoptimierung wider, die in der Runtime, im Treiber oder in der GPU implementiert ist. In diesem Fall könnte der Treiber den ersten [**SetRenderState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) sehen und einen dirty-Zustand festlegen, der die Arbeit auf einen späteren Zeitpunkt verschieben würde. Wenn der Treiber den zweiten **SetRenderState** sieht, könnte derselbe dirty-Zustand redundant festgelegt werden, und die gleiche Arbeit würde erneut verschoben werden. Wenn [**DrawPrimitive aufgerufen**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) wird, wird die arbeit, die dem dirty-Zustand zugeordnet ist, schließlich verarbeitet. Der Treiber führt die Arbeit einmal aus, was bedeutet, dass die ersten beiden Zustandsänderungen vom Treiber effektiv konsolidiert werden. Ebenso werden die dritten und vierten Zustandsänderungen vom Treiber effektiv in eine einzelne Zustandsänderung konsolidiert, wenn die zweite **DrawPrimitive** aufgerufen wird. Das Ergebnis ist, dass der Treiber und die GPU eine einzelne Zustandsänderung für jeden Zeichnen-Aufruf verarbeiten.
 
-Dies ist ein gutes Beispiel für eine sequenzabhängige Treiberoptimierung. Der Treiber hat die Arbeit zweimal verschoben, indem er einen dirty-Zustand eingestellt hat, und dann die Arbeit einmal ausgeführt, um den dirty-Zustand zu löschen. Dies ist ein gutes Beispiel für die Art der Effizienzverbesserung, die stattfinden kann, wenn Arbeit auf absolut erforderliche Zeit verschoben wird.
+Dies ist ein gutes Beispiel für eine sequenzabhängige Treiberoptimierung. Der Treiber hat die Arbeit zweimal verschoben, indem er einen dirty-Zustand eingestellt hat, und dann die Arbeit einmal ausgeführt, um den dirty-Zustand zu löschen. Dies ist ein gutes Beispiel für die Art der Effizienzverbesserung, die bei einer Verzögerung der Arbeit bis zur unbedingt erforderlichen Zeit stattfinden kann.
 
 Woher wissen Sie, welche Zustandsänderungen intern einen geänderten Zustand festlegen und daher die Arbeit auf einen späteren Zeitpunkt verschieben? Nur durch Testen von Rendersequenzen (oder Sprechen mit Treiberschreibern). Treiber werden regelmäßig aktualisiert und verbessert, damit die Liste der Optimierungen nicht statisch ist. Es gibt nur eine Möglichkeit, absolut zu wissen, was eine Zustandsänderung in einer bestimmten Rendersequenz auf einem bestimmten Hardwaresatz kostet. und das heißt, sie zu messen.
 
 ### <a name="watch-out-for-drawprimitive-optimizations"></a>Achten Sie auf DrawPrimitive-Optimierungen.
 
-Zusätzlich zu Zustandsänderungsoptimierungen versucht die Runtime, die Anzahl der Zeichnen-Aufrufe zu optimieren, die der Treiber verarbeiten muss. Betrachten Sie z. B. die folgenden Zurück-zeichnen-Aufrufe:
+Zusätzlich zu Zustandsänderungsoptimierungen versucht die Runtime, die Anzahl der Zeichnen-Aufrufe zu optimieren, die der Treiber verarbeiten muss. Betrachten Sie z. B. diese Zurück-zu-Zeichnen-Aufrufe:
 
 
 ```
@@ -790,7 +790,7 @@ DrawPrimitive(D3DPT_TRIANGLELIST, 9, 4); // Draw 4 primitives, vertices 9 - 20
 
 Beispiel 5a: Zwei Zeichnen-Aufrufe
 
-Diese Sequenz enthält zwei Draw-Aufrufe, die die Laufzeit in einem einzigen Aufruf konsolidiert, der den folgenden entspricht:
+Diese Sequenz enthält zwei Draw-Aufrufe, die die Laufzeit in einem einzigen Aufruf konsolidiert, der entspricht:
 
 
 ```
@@ -814,7 +814,7 @@ Entsprechend sind die richtigen Bedingungen für die Verkettung von zwei oder me
 2.  Jeder nachfolgende [**DrawIndexedPrimitive-Aufruf**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawindexedprimitive) muss sequenziell auf aufeinander folgende Indizes innerhalb des Indexpuffers verweisen.
 3.  Jeder nachfolgende [**DrawIndexedPrimitive-Aufruf**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawindexedprimitive) muss denselben Wert für BaseVertexIndex verwenden.
 
-Um eine Verkettung während der Profilerstellung zu verhindern, ändern Sie die Rendersequenz so, dass der primitive Typ keine Dreiecksliste ist, oder ändern Sie die Rendersequenz so, dass es keine Back-to-Back-Zeichnen-Aufrufe gibt, die aufeinander folgende Scheitelzeichen (oder Indizes) verwenden. Genauer gesagt verkettet die Runtime auch Zeichnen-Aufrufe, die die beiden folgenden Bedingungen erfüllen:
+Um eine Verkettung während der Profilerstellung zu verhindern, ändern Sie die Rendersequenz so, dass der primitive Typ keine Dreiecksliste ist, oder ändern Sie die Rendersequenz so, dass es keine Back-to-Back-Zeichnen-Aufrufe gibt, die aufeinander folgende Scheitelzeichen (oder Indizes) verwenden. Genauer gesagt verkettet die Runtime auch Zeichnen-Aufrufe, die beide der folgenden Bedingungen erfüllen:
 
 -   Wenn der vorherige Aufruf [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)ist, , wenn der nächste Zeichnen-Aufruf:
     -   verwendet eine Dreiecksliste, AND
@@ -839,7 +839,7 @@ Im Folgenden finden Sie ein feineres Beispiel für die Verkettung von Zeichnen-A
 
 Beispiel 5c: Eine Zustandsänderung und ein Draw-Aufruf
 
-Die Schleife durch iteriert 1.500 Dreiecke, setzt eine Textur und zeichnen jedes Dreieck. Diese Renderschleife benötigt etwa 2750 Zyklen für [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und 1100 Zyklen für [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) wie in den vorherigen Abschnitten gezeigt. Sie können intuitiv erwarten, dass das Verschieben von **SetTexture** außerhalb der Renderschleife die Arbeitsmenge des Treibers um 1500 \* 2750 Zyklen reduzieren sollte. Dies entspricht der Arbeitsmenge, die mit dem Aufruf von **SetTexture** um das 1500-fache verbunden ist. Der Codeausschnitt sieht wie folgt aus:
+Die Schleife durch iteriert 1.500 Dreiecke, setzt eine Textur und zeichnen jedes Dreieck. Diese Renderschleife benötigt ungefähr 2750 Zyklen für [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) und 1100 Zyklen für [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) wie in den vorherigen Abschnitten gezeigt. Sie können intuitiv erwarten, dass das Verschieben von **SetTexture** außerhalb der Renderschleife die Vom Treiber durchgeführte Arbeit um 1500 2750 Zyklen reduzieren sollte. Dies ist die Menge an Arbeit, die mit dem 1500-maligen Aufrufen von \* **SetTexture** verbunden ist. Der Codeausschnitt sieht wie im folgenden Beispiel aus:
 
 
 ```
@@ -855,7 +855,7 @@ Die Schleife durch iteriert 1.500 Dreiecke, setzt eine Textur und zeichnen jedes
 
 Beispiel 5d: Beispiel 5c mit der Zustandsänderung außerhalb der Schleife
 
-Das Verschieben von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) außerhalb der Renderschleife reduziert die Menge an Arbeit, die **SetTexture** zugeordnet ist, da sie einmal statt 1500 Mal aufgerufen wird. Ein weniger offensichtlicher sekundärer Effekt ist, dass die Arbeit für [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) ebenfalls von 1.500 aufrufen auf 1 Aufruf reduziert wird, da alle Bedingungen für die Verkettung von Draw-Aufrufen erfüllt sind. Wenn die Rendersequenz verarbeitet wird, verarbeitet die Runtime 1.500 Aufrufe in einem einzelnen Treiberaufruf. Durch das Verschieben dieser einen Codezeile wurde die Arbeitsmenge des Treibers erheblich reduziert:
+Durch [**das Verschieben von SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) außerhalb der Renderschleife wird die Menge an Arbeit reduziert, die **SetTexture** zugeordnet ist, da sie einmal statt 1500 Mal aufgerufen wird. Ein weniger offensichtlicher sekundärer Effekt ist, dass die Arbeit für [**DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) auch von 1.500 Aufrufen auf 1 Aufruf reduziert wird, da alle Bedingungen für die Verkettung von Zeichnen-Aufrufen erfüllt sind. Wenn die Rendersequenz verarbeitet wird, verarbeitet die Laufzeit 1.500 Aufrufe in einem einzigen Treiberaufruf. Durch das Verschieben dieser eine Codezeile wurde die Menge der Treiberarbeit erheblich reduziert:
 
 
 ```
@@ -872,45 +872,45 @@ driver  work = 1 SetTexture + 1 DrawPrimitive
 
 
 
-Diese Ergebnisse sind vollständig richtig, aber im Kontext der ursprünglichen Frage sehr irreführend. Die Optimierung des Zeichnen-Aufrufs hat dazu geführt, dass die Menge der Treiberarbeit erheblich reduziert wurde. Dies ist ein häufiges Problem bei der benutzerdefinierten Profilerstellung. Achten Sie beim Entfernen von Aufrufen aus einer Rendersequenz darauf, dass Sie die Verkettung von Zeichnen-Aufrufen vermeiden. Tatsächlich ist dieses Szenario ein leistungsfähiges Beispiel für die durch diese Laufzeitoptimierung mögliche Verbesserung der Treiberleistung.
+Diese Ergebnisse sind vollständig richtig, aber im Kontext der ursprünglichen Frage sehr irreführend. Die Optimierung des Zeichnen-Aufrufs hat dazu führte, dass die Menge der Treiberarbeit erheblich reduziert wurde. Dies ist ein häufiges Problem bei der benutzerdefinierten Profilerstellung. Wenn Sie Aufrufe aus einer Rendersequenz entfernen, achten Sie darauf, die Verkettung von Zeichnen-Aufrufen zu vermeiden. Tatsächlich ist dieses Szenario ein leistungsstarkes Beispiel für die Verbesserung der Treiberleistung, die durch diese Laufzeitoptimierung möglich ist.
 
-Sie wissen nun, wie Zustandsänderungen gemessen werden. Beginnen Sie mit der Profilerstellung für [**DrawPrimitive.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Fügen Sie dann jede zusätzliche Zustandsänderung der Sequenz hinzu (in einigen Fällen fügen Sie einen Aufruf hinzu, und fügen Sie in anderen Fällen zwei Aufrufe hinzu), und messen Sie den Unterschied zwischen den beiden Sequenzen. Sie können die Ergebnisse in Ticks, Zyklen oder Zeit konvertieren. Genau wie das Messen von Rendersequenzen mit QueryPerformanceCounter hängt das Messen einzelner Zustandsänderungen vom Abfragemechanismus ab, um den Befehlspuffer zu steuern und die Zustandsänderungen in eine Schleife zu versetzen, um die Auswirkungen der Modusübergänge zu minimieren. Dieses Verfahren misst die Kosten für das Umschalten eines Zustands, da der Profiler den Durchschnitt der Aktivierung und Deaktivierung des Zustands zurückgibt.
+Nun wissen Sie also, wie Zustandsänderungen gemessen werden. Beginnen Sie mit der [**Profilerstellung für DrawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive). Fügen Sie dann jede zusätzliche Zustandsänderung der Sequenz hinzu (in einigen Fällen wird ein Aufruf hinzugefügt, in anderen Fällen werden zwei Aufrufe hinzugefügt), und messen Sie die Differenz zwischen den beiden Sequenzen. Sie können die Ergebnisse in Ticks, Zyklen oder Zeit konvertieren. Genau wie das Messen von Rendersequenzen mit QueryPerformanceCounter basiert das Messen einzelner Zustandsänderungen auf dem Abfragemechanismus, um den Befehlspuffer zu steuern, und die Zustandsänderungen in eine Schleife zu setzen, um die Auswirkungen der Modusübergänge zu minimieren. Diese Technik misst die Kosten für das Um- und Ausschalten eines Zustands, da der Profiler den Durchschnitt für das Aktivieren und Deaktivieren des Zustands zurückgibt.
 
-Mit dieser Funktion können Sie mit dem Generieren beliebiger Renderingsequenzen beginnen und die zugehörige Laufzeit- und Treiberarbeit genau messen. Die Zahlen können dann verwendet werden, um Budgetfragen wie "wie viele weitere dieser Aufrufe" in der Rendersequenz zu beantworten, während weiterhin eine angemessene Framerate beibehalten wird, vorausgesetzt, dass die CPU-Auslastung begrenzt ist.
+Mit dieser Funktion können Sie beginnen, beliebige Renderingsequenzen zu generieren und die zugehörige Laufzeit und die Treiberarbeit genau zu messen. Die Zahlen können dann verwendet werden, um Budgetierungsfragen zu beantworten, z. B. "Wie viele weitere dieser Aufrufe" können in der Rendersequenz ausgeführt werden, während eine angemessene Framerate beibehalten wird, vorausgesetzt, die CPU-Auslastung ist begrenzt.
 
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Artikel wird veranschaulicht, wie Sie den Befehlspuffer steuern, sodass für einzelne Aufrufe ein genaues Profil erstellt werden kann. Die Profilerstellungsnummern können in Ticks, Zyklen oder absoluter Zeit generiert werden. Sie stellen den Umfang der Laufzeit- und Treiberarbeit dar, die jedem API-Aufruf zugeordnet ist.
+In diesem Artikel wird veranschaulicht, wie Sie den Befehlspuffer steuern, damit für einzelne Aufrufe ein genaues Profil erstellt werden kann. Die Profilerstellungsnummern können in Ticks, Zyklen oder absoluter Zeit generiert werden. Sie stellen den Umfang der Laufzeit- und Treiberarbeit dar, die jedem API-Aufruf zugeordnet ist.
 
-Beginnen Sie mit der Profilerstellung für einen Draw \* Primitive-Aufruf in einer Rendersequenz. Beachten Sie Folgendes:
+Erstellen Sie zunächst eine Profilerstellung für einen \* Zeichnen-Primitive-Aufruf in einer Rendersequenz. Beachten Sie Folgendes:
 
-1.  Verwenden Sie QueryPerformanceCounter, um die Anzahl der Ticks pro API-Aufruf zu messen. Verwenden Sie QueryPerformanceFrequency, um die Ergebnisse bei Bedarf in Zyklen oder Zeit zu konvertieren.
-2.  Verwenden Sie den Abfragemechanismus, um den Befehlspuffer vor dem Start zu leeren.
+1.  Verwenden Sie QueryPerformanceCounter, um die Anzahl von Ticks pro API-Aufruf zu messen. Verwenden Sie QueryPerformanceFrequency, um die Ergebnisse in Zyklen oder Zeit zu konvertieren, wenn Sie möchten.
+2.  Verwenden Sie den Abfragemechanismus, um den Befehlspuffer vor dem Starten zu leeren.
 3.  Schließen Sie die Rendersequenz in eine Schleife ein, um die Auswirkungen des Modusübergangs zu minimieren.
 4.  Verwenden Sie den Abfragemechanismus, um zu messen, wann die GPU ihre Arbeit abgeschlossen hat.
-5.  Achten Sie auf die Laufzeitverkettung, die einen erheblichen Einfluss auf den Arbeitsaufwand hat.
+5.  Achten Sie auf laufzeitkonkettete Verkettungen, die sich in erheblichem Umfang auf die Menge der ausgeführten Arbeit auswirken.
 
-Dadurch erhalten Sie eine Baselineleistung für [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) die zum Erstellen verwendet werden kann. Befolgen Sie die folgenden zusätzlichen Tipps, um ein Profil für eine Zustandsänderung zu erstellen:
+Dadurch erhalten Sie eine Baselineleistung für [**DrawPrimitive,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) aus der erstellt werden kann. Führen Sie die folgenden zusätzlichen Tipps aus, um ein Profil für eine Zustandsänderung zu erstellen:
 
-1.  Fügen Sie die Zustandsänderung einem bekannten Rendersequenzprofil der neuen Sequenz hinzu. Da die Tests in einer Schleife durchgeführt werden, muss der Zustand zweimal auf entgegengesetzte Werte festgelegt werden (z. B. aktivieren und deaktivieren).
+1.  Fügen Sie die Zustandsänderung einem bekannten Rendersequenzprofil für die neue Sequenz hinzu. Da die Tests in einer Schleife durchgeführt werden, muss der Zustand zweimal in entgegengesetzte Werte (z. B. Aktivieren und Deaktivieren) versetzt werden.
 2.  Vergleichen Sie den Unterschied in den Zykluszeiten zwischen den beiden Sequenzen.
-3.  Bei Zustandsänderungen, die die Pipeline erheblich ändern (z. B. [**SetTexture),**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)subtrahieren Sie den Unterschied zwischen den beiden Sequenzen, um die Zeit für die Zustandsänderung zu erhalten.
-4.  Subtrahieren Sie bei Zustandsänderungen, die die Pipeline erheblich ändern (und daher ein Umschalten von Zuständen wie [**SetRenderState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate)erfordern), den Unterschied zwischen den Rendersequenzen, und dividieren Sie durch 2. Dadurch wird die durchschnittliche Anzahl von Zyklen für jede Zustandsänderung generiert.
+3.  Bei Zustandsänderungen, die die Pipeline erheblich ändern (z. B. [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)), subtrahieren Sie die Differenz zwischen den beiden Sequenzen, um die Zeit für die Zustandsänderung zu erhalten.
+4.  Bei Zustandsänderungen, die die Pipeline erheblich ändern (und daher einen Umbruch von Zustände wie [**SetRenderState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate)erfordern), subtrahieren Sie den Unterschied zwischen den Rendersequenzen und dividieren sie durch 2. Dadurch wird die durchschnittliche Anzahl von Zyklen für jede Zustandsänderung generiert.
 
-Achten Sie jedoch auf Optimierungen, die unerwartete Ergebnisse bei der Profilerstellung verursachen. Zustandsänderungsoptimierungen können geänderte Zustände festlegen, wodurch Die Arbeit verzögert wird. Dies kann zu Profilergebnissen führen, die nicht so intuitiv wie erwartet sind. Verkettete Zeichnen-Aufrufe reduzieren die Arbeit des Treibers erheblich, was zu irreführenden Schlussfolgerungen führen kann. Sorgfältig geplante Rendersequenzen werden verwendet, um Zustandsänderungen und Zeichnen von Aufrufverkettungen zu verhindern. Der Trick besteht darin, zu verhindern, dass die Optimierungen während der Profilerstellung stattfinden, sodass es sich bei den generierten Zahlen um sinnvolle Budgetnummern handelt.
+Achten Sie jedoch auf Optimierungen, die bei der Profilerstellung zu unerwarteten Ergebnissen führen. Durch Zustandsänderungsoptimierungen können geänderte Zustände festgelegt werden, die dazu führt, dass Arbeit verzögert wird. Dies kann zu Profilergebnissen führen, die nicht so intuitiv wie erwartet sind. Zeichnen von Aufrufen, die verkettet sind, reduziert erheblich die Treiberarbeit, was zu irreführenden Schlussfolgerungen führen kann. Sorgfältig geplante Rendersequenzen werden verwendet, um Zustandsänderung zu verhindern und Aufrufverkettungen zu zeichnen. Der Trick besteht im Verhindern, dass die Optimierungen während der Profilerstellung stattfinden, sodass es sich bei den von Ihnen generierten Zahlen um sinnvolle Budgetierungszahlen handelt.
 
 > [!Note]  
-> Das Duplizieren dieser Profilerstellungsstrategie in einer Anwendung ohne den Abfragemechanismus ist schwieriger. Vor Direct3D 9 besteht die einzige vorhersagbare Möglichkeit zum Leeren des Befehlspuffers darin, eine aktive Oberfläche (z. B. ein Renderziel) zu sperren, um zu warten, bis sich die GPU im Leerlauf befindet. Dies liegt daran, dass das Sperren einer Oberfläche die Laufzeit zwingt, den Befehlspuffer zu leeren, falls der Puffer Renderingbefehle aufweist, die die Oberfläche aktualisieren sollten, bevor sie gesperrt wird, und auf den Abschluss der GPU warten müssen. Diese Technik ist funktionsfähig, obwohl sie die Verwendung des abfragemechanismus, der in Direct3D 9 eingeführt wurde, eher obtrusiv ist.
+> Das Duplizieren dieser Profilerstellungsstrategie in einer Anwendung ohne den Abfragemechanismus ist schwieriger. Vor Direct3D 9 ist die einzige vorhersagbare Möglichkeit zum Leeren des Befehlspuffers das Sperren einer aktiven Oberfläche (z. B. eines Renderziels), um zu warten, bis sich die GPU im Leerlauf befindet. Dies liegt daran, dass das Sperren einer Oberfläche die Laufzeit zwingt, den Befehlspuffer zu leeren, falls im Puffer Renderingbefehle enthalten sind, die die Oberfläche aktualisieren sollten, bevor sie gesperrt wird, zusätzlich zum Warten auf den Abschluss der GPU. Dieses Verfahren ist funktionsfähig, obwohl es aufdringlich ist, dass der in Direct3D 9 eingeführte Abfragemechanismus verwendet wird.
 
  
 
 ## <a name="appendix"></a>Anhang
 
-Die Zahlen in dieser Tabelle sind ein Bereich von Näherungen für die Menge der Laufzeit- und Treiberarbeit, die jeder dieser Zustandsänderungen zugeordnet ist. Die Näherungswerte basieren auf tatsächlichen Messungen an Treibern mithilfe der im Dokument gezeigten Techniken. Diese Zahlen wurden mithilfe der Direct3D 9-Runtime generiert und sind treiberabhängig.
+Die Zahlen in dieser Tabelle sind ein Bereich von Näherungszahlen für den Umfang der Laufzeit- und Treiberarbeit, die jeder dieser Zustandsänderungen zugeordnet sind. Die Näherungen basieren auf tatsächlichen Messungen, die mithilfe der im Dokument gezeigten Techniken an Treibern vorgenommen wurden. Diese Zahlen wurden mithilfe der Direct3D 9-Runtime generiert und sind treiberabhängig.
 
-Die Verfahren in diesem Artikel dienen zur Messung der Laufzeit- und Treiberarbeit. Im Allgemeinen ist es unpraktisch, Ergebnisse bereitzustellen, die der Leistung der CPU und gpu in jeder Anwendung entsprechen, da dies ein umfassendes Array von Rendersequenzen erfordern würde. Darüber hinaus ist es besonders schwierig, die Leistung der GPU zu messen, da sie stark von der Einrichtung des Zustands in der Pipeline vor der Rendersequenz abhängig ist. Beispielsweise wirkt sich die Aktivierung von Alphablending nur wenig auf die erforderliche CPU-Arbeitsauslastung aus, kann aber einen großen Einfluss auf die Menge an Arbeit haben, die von der GPU ausgeführt wird. Daher schränken die Verfahren in diesem Artikel die GPU-Arbeit auf die geringstmögliche Menge ein, indem sie die Menge der zu rendernden Daten begrenzen. Dies bedeutet, dass die Zahlen in der Tabelle am besten mit den Ergebnissen von Anwendungen übereinstimmen, die cpu-begrenzt sind (im Gegensatz zu einer Anwendung, die durch die GPU beschränkt ist).
+Die Techniken in diesem Artikel sind darauf ausgelegt, die Laufzeit und die Treiberarbeit zu messen. Im Allgemeinen ist es unpraktisch, Ergebnisse zu liefern, die mit der Leistung der CPU und gpu in jeder Anwendung übereinstimmen, da dies ein umfassendes Array von Rendersequenzen erfordern würde. Darüber hinaus ist es besonders schwierig, einen Vergleich der GPU-Leistung zu erstellen, da sie stark vom Zustandssetup in der Pipeline vor der Rendersequenz abhängig ist. Beispielsweise wirkt sich das Aktivieren von Alphablending nur wenig auf die erforderliche CPU-Arbeit aus, kann aber einen großen Einfluss auf die Von der GPU ausgeführte Arbeit haben. Daher schränken die Techniken in diesem Artikel die GPU-Arbeit auf das minimum mögliche Minimum ein, indem die Menge der zu renderierenden Daten beschränkt wird. Dies bedeutet, dass die Zahlen in der Tabelle am besten mit den Ergebnissen von Anwendungen übereinstimmen, die cpu-eingeschränkt sind (im Gegensatz zu einer Anwendung, die durch die GPU eingeschränkt ist).
 
-Es wird empfohlen, die vorgestellten Techniken zu verwenden, um die Szenarien und Konfigurationen abzudecken, die für Sie am wichtigsten sind. Die Werte in der Tabelle können zum Vergleichen mit den generierten Zahlen verwendet werden. Da jeder Treiber variiert, besteht die einzige Möglichkeit, die tatsächlich angezeigten Zahlen zu generieren, darin, Profilerstellungsergebnisse mit Ihren Szenarien zu generieren.
+Es wird empfohlen, die vorgestellten Techniken zu verwenden, um die für Sie wichtigsten Szenarien und Konfigurationen zu behandeln. Die Werte in der Tabelle können verwendet werden, um mit den von Ihnen generierten Zahlen zu vergleichen. Da jeder Treiber variiert, ist die einzige Möglichkeit, die tatsächlichen Zahlen zu generieren, das Generieren von Profilerstellungsergebnissen mithilfe Ihrer Szenarien.
 
 
 
@@ -936,7 +936,7 @@ Es wird empfohlen, die vorgestellten Techniken zu verwenden, um die Szenarien un
 | Ambient                              | 1150 - 4800              |
 | SetTexture                           | 2500 - 3100              |
 | SPECULARMATERIALSOURCE               | 900 - 4600               |
-| ICH BINDEDEMATERIALSOURCE               | 900 - 4500               |
+| TENSIVEMATERIALSOURCE               | 900 - 4500               |
 | SetMaterial                          | 1000 - 3700              |
 | ZENABLE                              | 700 - 3900               |
 | WRAP0                                | 1600 - 2700              |

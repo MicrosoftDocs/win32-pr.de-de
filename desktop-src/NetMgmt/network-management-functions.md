@@ -19,10 +19,10 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                   | BESCHREIBUNG                                                                                                                                                                                            |
+| Funktion                                   | Beschreibung                                                                                                                                                                                            |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetAlertR period**](/windows/desktop/api/Lmalert/nf-lmalert-netalertraise)     | Benachrichtigt alle registrierten Clients, dass ein bestimmtes Ereignis aufgetreten ist.                                                                                                                                  |
-| [**NetAlertRerklärex**](/windows/desktop/api/Lmalert/nf-lmalert-netalertraiseex) | Vereinfacht die Benachrichtigung registrierter Clients, dass ein bestimmtes Ereignis aufgetreten ist, da **NetAlertRerklär** im Gegensatz zu **NetAlertRandroEx** keine [**STD \_ ALERT-Struktur**](/windows/desktop/api/Lmalert/ns-lmalert-std_alert) erfordert. |
+| [**NetAlertRais**](/windows/desktop/api/Lmalert/nf-lmalert-netalertraise)     | Benachrichtigt alle registrierten Clients, dass ein bestimmtes Ereignis aufgetreten ist.                                                                                                                                  |
+| [**NetAlertR generationsex**](/windows/desktop/api/Lmalert/nf-lmalert-netalertraiseex) | Vereinfacht die Benachrichtigung registrierter Clients, dass ein bestimmtes Ereignis aufgetreten ist, da **netAlertR** dll im Gegensatz zu **NetAlertR dllEx** keine [**STD \_ ALERT-Struktur**](/windows/desktop/api/Lmalert/ns-lmalert-std_alert) erfordert. |
 
 
 
@@ -32,12 +32,12 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                                                               |
+| Funktion                                                 | Beschreibung                                                                                                               |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [**NetApiBufferAllocate**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferallocate)     | Weist Arbeitsspeicher aus dem Heap zu. Rufen Sie diese Funktion auf, wenn Sie Kompatibilität mit der **NetApiBufferFree-Funktion** benötigen. |
-| [**NetApiBufferFree**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferfree)             | Gibt von der **NetApiBufferAllocate-Funktion** und anderen Netzwerkverwaltungsfunktionen zugeordneten Arbeitsspeicher frei.                   |
-| [**NetApiBufferReallocate**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferreallocate) | Ändert die Größe eines Puffers, der durch einen Aufruf der **NetApiBufferAllocate-Funktion zugeordnet** wird.                                |
-| [**NetApiBufferSize**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibuffersize)             | Gibt die Größe eines Puffers in Bytes zurück, der durch einen Aufruf der **NetApiBufferAllocate-Funktion zugeordnet** wird.                     |
+| [**NetApiBufferAllocate**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferallocate)     | Belegt Arbeitsspeicher aus dem Heap. Rufen Sie diese Funktion auf, wenn Sie Kompatibilität mit der **NetApiBufferFree-Funktion** benötigen. |
+| [**NetApiBufferFree**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferfree)             | Gibt von der **NetApiBufferAllocate-Funktion** und anderen Netzwerkverwaltungsfunktionen belegten Arbeitsspeicher frei.                   |
+| [**NetApiBufferReallocate**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferreallocate) | Ändert die Größe eines Puffers, der durch einen Aufruf der **NetApiBufferAllocate-Funktion** zugeordnet wird.                                |
+| [**NetApiBufferSize**](/windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibuffersize)             | Gibt die Größe eines Puffers in Bytes zurück, der durch einen Aufruf der **NetApiBufferAllocate-Funktion** zugeordnet wird.                     |
 
 
 
@@ -47,9 +47,9 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                     |
+| Funktion                                                       | Beschreibung                                                                                                                                                                                                                                                     |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetFreeAadJoinInformation**](/windows/desktop/api/lmjoin/nf-lmjoin-netfreeaadjoininformation) | Gibt den für die angegebene [**DSREG \_ JOIN \_ INFO-Struktur**](/windows/desktop/api/lmjoin/ns-lmjoin-dsreg_join_info) zugeordneten Arbeitsspeicher frei, der Joininformationen für einen Mandanten enthält und den Sie durch Aufrufen der [**NetGetAadJoinInformation-Funktion abgerufen**](/windows/desktop/api/lmjoin/nf-lmjoin-netgetaadjoininformation) haben. |
+| [**NetFreeAadJoinInformation**](/windows/desktop/api/lmjoin/nf-lmjoin-netfreeaadjoininformation) | Gibt den für die angegebene [**DSREG \_ JOIN \_ INFO-Struktur**](/windows/desktop/api/lmjoin/ns-lmjoin-dsreg_join_info) belegten Arbeitsspeicher frei, der Joininformationen für einen Mandanten enthält und die Sie durch Aufrufen der [**NetGetAadJoinInformation-Funktion**](/windows/desktop/api/lmjoin/nf-lmjoin-netgetaadjoininformation) abgerufen haben. |
 | [**NetGetAadJoinInformation**](/windows/desktop/api/lmjoin/nf-lmjoin-netgetaadjoininformation)   | Ruft die Joininformationen für den angegebenen Mandanten ab. Diese Funktion untersucht die Joininformationen für Microsoft Azure Active Directory und das Arbeitskonto, das der aktuelle Benutzer hinzugefügt hat.                                                                     |
 
 
@@ -60,21 +60,21 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                                             | BESCHREIBUNG                                                                                                                                                                                                                                                             |
+| Funktion                                                                             | Beschreibung                                                                                                                                                                                                                                                             |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**NetAddAlternateComputerName**](/windows/desktop/api/Lmjoin/nf-lmjoin-netaddalternatecomputername)                   | Fügt einen alternativen Namen für den angegebenen Computer hinzu.                                                                                                                                                                                                                      |
-| [**NetCreateProvisioningPackage**](/windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount)                  | Hier wird ein Computerkonto für die spätere Verwendung in einem Offlinedomänen-Joinvorgang zur Verfügung stellen.                                                                                                                                                                                        |
-| [**NetEnumerateComputerNames**](/windows/desktop/api/Lmjoin/nf-lmjoin-netenumeratecomputernames)                       | Aufzählt Namen für den angegebenen Computer.                                                                                                                                                                                                                            |
-| [**NetGetJoinableOUs**](/windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoinableous)                                       | Ruft eine Liste der Organisationseinheiten (OUs) ab, in denen ein Computerkonto erstellt werden kann.                                                                                                                                                                              |
+| [**NetCreateProvisioningPackage**](/windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount)                  | Gibt ein Computerkonto für die spätere Verwendung in einem Offlinedomänen-Joinvorgang an.                                                                                                                                                                                        |
+| [**NetEnumerateComputerNames**](/windows/desktop/api/Lmjoin/nf-lmjoin-netenumeratecomputernames)                       | Listet Namen für den angegebenen Computer auf.                                                                                                                                                                                                                            |
+| [**NetGetJoinableOUs**](/windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoinableous)                                       | Ruft eine Liste von Organisationseinheiten (OUs) ab, in denen ein Computerkonto erstellt werden kann.                                                                                                                                                                              |
 | [**NetGetJoinInformation**](/windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoininformation)                               | Ruft Joinstatusinformationen für den angegebenen Computer ab.                                                                                                                                                                                                           |
 | [**NetJoinDomain**](/windows/desktop/api/Lmjoin/nf-lmjoin-netjoindomain)                                               | Verbindet einen Computer mit einer Arbeitsgruppe oder Domäne.                                                                                                                                                                                                                              |
-| [**NetProvisionComputerAccount**](/windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount)                   | Hier wird ein Computerkonto für die spätere Verwendung in einem Offlinedomänen-Joinvorgang zur Verfügung stellen.                                                                                                                                                                                       |
+| [**NetProvisionComputerAccount**](/windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount)                   | Gibt ein Computerkonto für die spätere Verwendung in einem Offlinedomänen-Joinvorgang an.                                                                                                                                                                                       |
 | [**NetRemoveAlternateComputerName**](/windows/desktop/api/Lmjoin/nf-lmjoin-netremovealternatecomputername)             | Entfernt einen alternativen Namen für den angegebenen Computer.                                                                                                                                                                                                                   |
 | [**NetRenameMachineInDomain**](/windows/desktop/api/Lmjoin/nf-lmjoin-netrenamemachineindomain)                         | Ändert den Namen eines Computers in einer Domäne.                                                                                                                                                                                                                             |
-| [**NetRequestOfflineDomainJoin**](/windows/desktop/api/Lmjoin/nf-lmjoin-netrequestofflinedomainjoin)                   | Wird lokal auf einem Computer ausgeführt, um ein Windows Betriebssystemimage zu ändern, das auf einem Volume bereitgestellt ist. Die Registrierung wird für das Image geladen, und die Bereitstellung von Blobdaten wird dort geschrieben, wo sie während der Abschlussphase eines Offlinedomänen-Joins abgerufen werden können.     |
-| [**NetRequestProvisioningPackageInstall**](/windows/desktop/api/Lmjoin/nf-lmjoin-netrequestprovisioningpackageinstall) | Wird lokal auf einem Computer ausgeführt, um ein Windows Betriebssystemimage zu ändern, das auf einem Volume bereitgestellt ist. Die Registrierung wird aus dem Image geladen, und die Daten des Bereitstellungspakets werden dort geschrieben, wo sie während der Abschlussphase eines Offlinedomänenbei join-Vorgangs abgerufen werden können. |
+| [**NetRequestOfflineDomainJoin**](/windows/desktop/api/Lmjoin/nf-lmjoin-netrequestofflinedomainjoin)                   | Wird lokal auf einem Computer ausgeführt, um ein Windows Betriebssystemimage zu ändern, das auf einem Volume eingebunden ist. Die Registrierung wird für das Image geladen, und die Bereitstellung von Blobdaten wird dort geschrieben, wo sie während der Abschlussphase eines Offlinedomänenbeitritts abgerufen werden können.     |
+| [**NetRequestProvisioningPackageInstall**](/windows/desktop/api/Lmjoin/nf-lmjoin-netrequestprovisioningpackageinstall) | Wird lokal auf einem Computer ausgeführt, um ein Windows Betriebssystemimage zu ändern, das auf einem Volume eingebunden ist. Die Registrierung wird aus dem Image geladen, und Bereitstellungspaketdaten werden dort geschrieben, wo sie während der Abschlussphase eines Offlinedomänenbeitritts abgerufen werden können. |
 | [**NetSetPrimaryComputerName**](/windows/desktop/api/Lmjoin/nf-lmjoin-netsetprimarycomputername)                       | Legt den Namen des primären Computers für den angegebenen Computer fest.                                                                                                                                                                                                              |
-| [**NetUnjoinDomain**](/windows/desktop/api/Lmjoin/nf-lmjoin-netunjoindomain)                                           | Enjoins a computer from a workgroup or a domain.                                                                                                                                                                                                                        |
+| [**NetUnjoinDomain**](/windows/desktop/api/Lmjoin/nf-lmjoin-netunjoindomain)                                           | Entpackt einen Computer aus einer Arbeitsgruppe oder einer Domäne.                                                                                                                                                                                                                        |
 | [**NetValidateName**](/windows/desktop/api/Lmjoin/nf-lmjoin-netvalidatename)                                           | Überprüft die Gültigkeit eines Computernamens, Arbeitsgruppennamens oder Domänennamens.                                                                                                                                                                                               |
 
 
@@ -85,7 +85,7 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                                                              |
+| Funktion                                                               | Beschreibung                                                                                                                              |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | [**NetGetAnyDCName**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgetanydcname)                             | Gibt den Namen eines beliebigen Domänencontrollers für eine Domäne zurück, die von einem angegebenen Server direkt als vertrauenswürdig eingestuft wird.                                   |
 | [**NetGetDCName**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgetdcname)                                   | Gibt den Namen des primären Domänencontrollers (PDC) für die angegebene Domäne zurück.                                                        |
@@ -100,17 +100,17 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                     | BESCHREIBUNG                                                                       |
+| Funktion                                     | Beschreibung                                                                       |
 |----------------------------------------------|-----------------------------------------------------------------------------------|
 | [**NetGroupAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadd)           | Erstellt eine globale Gruppe.                                                           |
 | [**NetGroupAddUser**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadduser)   | Fügt einer vorhandenen globalen Gruppe einen Benutzer hinzu.                                        |
-| [**NetGroupDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdel)           | Entfernt eine globale Gruppe, unabhängig davon, ob die Gruppe Mitglieder hat oder nicht.                  |
+| [**NetGroupDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdel)           | Entfernt eine globale Gruppe, unabhängig davon, ob die Gruppe Mitglieder hat.                  |
 | [**NetGroupDelUser**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdeluser)   | Entfernt einen Benutzernamen aus einer globalen Gruppe.                                        |
 | [**NetGroupEnum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupenum)         | Listet alle globalen Gruppen auf einem Server auf.                                              |
 | [**NetGroupGetInfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetinfo)   | Gibt Informationen zu einer bestimmten globalen Gruppe zurück.                              |
 | [**NetGroupGetUsers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetusers) | Listet alle Mitglieder einer bestimmten globalen Gruppe auf.                                   |
 | [**NetGroupSetInfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetinfo)   | Legt allgemeine Informationen zu einer globalen Gruppe fest.                                    |
-| [**NetGroupSetUsers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetusers) | Weist Einer neuen globalen Gruppe Mitglieder zu. ersetzt die Mitglieder einer vorhandenen Gruppe. |
+| [**NetGroupSetUsers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetusers) | Weist einer neuen globalen Gruppe Mitglieder zu. ersetzt die Mitglieder einer vorhandenen Gruppe. |
 
 
 
@@ -120,12 +120,12 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                   | BESCHREIBUNG                                                             |
+| Funktion                                                   | Beschreibung                                                             |
 |------------------------------------------------------------|-------------------------------------------------------------------------|
 | [**NetLocalGroupAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupadd)               | Erstellt eine lokale Gruppe.                                                  |
-| [**NetLocalGroupAddMembers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupaddmembers) | Fügt einer vorhandenen lokalen Gruppe mindestens einen Benutzer oder eine globale Gruppe hinzu.     |
+| [**NetLocalGroupAddMembers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupaddmembers) | Fügt einer vorhandenen lokalen Gruppe einen oder mehrere Benutzer oder globale Gruppen hinzu.     |
 | [**NetLocalGroupDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdel)               | Löscht eine lokale Gruppe und entfernt alle vorhandenen Mitglieder aus der Gruppe.    |
-| [**NetLocalGroupDelMembers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdelmembers) | Entfernt ein oder mehrere Mitglieder aus einer vorhandenen lokalen Gruppe.               |
+| [**NetLocalGroupDelMembers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdelmembers) | Entfernt mindestens ein Mitglied aus einer vorhandenen lokalen Gruppe.               |
 | [**NetLocalGroupEnum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupenum)             | Gibt Informationen zu jedem lokalen Gruppenkonto auf einem Server zurück.         |
 | [**NetLocalGroupGetInfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetinfo)       | Gibt Informationen zu einem bestimmten lokalen Gruppenkonto auf einem Server zurück. |
 | [**NetLocalGroupGetMembers**](/windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetmembers) | Listet alle Mitglieder einer angegebenen lokalen Gruppe auf.                           |
@@ -140,12 +140,12 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                               | BESCHREIBUNG                                                                     |
+| Funktion                                               | Beschreibung                                                                     |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|
 | [**NetMessageBufferSend**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagebuffersend)   | Sendet eine Nachricht an einen registrierten Nachrichtenalias.                                  |
 | [**NetMessageNameAdd**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameadd)         | Registriert einen Nachrichtenalias in der Meldungsnamentabelle.                            |
 | [**NetMessageNameDel**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamedel)         | Löscht einen Nachrichtenalias aus der Meldungsnamentabelle.                            |
-| [**NetMessageNameEnum**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameenum)       | Listet alle Nachrichtenaliase auf, die in der Meldungsnamentabelle gespeichert sind.                 |
+| [**NetMessageNameEnum**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameenum)       | Listet alle In der Meldungsnamentabelle gespeicherten Nachrichtenaliase auf.                 |
 | [**NetMessageNameGetInfo**](/windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamegetinfo) | Gibt Informationen zu einem bestimmten Nachrichtenalias in der Meldungsnamentabelle zurück. |
 
 
@@ -156,39 +156,39 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                | BESCHREIBUNG                                                          |
+| Funktion                                | Beschreibung                                                          |
 |-----------------------------------------|----------------------------------------------------------------------|
 | [**NetFileClose**](/windows/desktop/api/lmshare/nf-lmshare-netfileclose)     | Erzwingt das Schließen einer Ressource.                                          |
 | [**NetFileEnum**](/windows/desktop/api/lmshare/nf-lmshare-netfileenum)       | Gibt Informationen zu geöffneten Dateien auf einem Server zurück.                    |
-| [**NetFileGetInfo**](/windows/desktop/api/lmshare/nf-lmshare-netfilegetinfo) | Gibt Informationen zu einem bestimmten Öffnen einer Serverressource zurück. |
+| [**NetFileGetInfo**](/windows/desktop/api/lmshare/nf-lmshare-netfilegetinfo) | Gibt Informationen zu einer bestimmten Öffnung einer Serverressource zurück. |
 
 
 
  
 
-## <a name="remote-utility-functions"></a>Remotehilfsprogrammfunktionen
+## <a name="remote-utility-functions"></a>Remote-Hilfsprogrammfunktionen
 
 
 
-| Funktion                                                       | BESCHREIBUNG                                                                             |
+| Funktion                                                       | Beschreibung                                                                             |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [**NetRemoteComputerSupports**](/windows/desktop/api/Lmremutl/nf-lmremutl-netremotecomputersupports) | Fragt den Redirector ab, um die optionalen Features abzurufen, die von einem Remotesystem unterstützt werden. |
-| [**NetRemoteTOD**](/windows/desktop/api/Lmremutl/nf-lmremutl-netremotetod)                           | Ermöglicht Anwendungen den Zugriff auf die Tageszeitinformationen auf einem Remoteserver.          |
+| [**NetRemoteComputerSupports**](/windows/desktop/api/Lmremutl/nf-lmremutl-netremotecomputersupports) | Fragt den Redirector ab, um die optionalen Features abzurufen, die ein Remotesystem unterstützt. |
+| [**NetRemoteTOD**](/windows/desktop/api/Lmremutl/nf-lmremutl-netremotetod)                           | Ermöglicht Anwendungen den Zugriff auf die Informationen zur Tageszeit auf einem Remoteserver.          |
 
 
 
  
 
-## <a name="schedule-functions"></a>Schedule Functions
+## <a name="schedule-functions"></a>Zeitplanfunktionen
 
 
 
-| Funktion                                                                     | BESCHREIBUNG                                                      |
+| Funktion                                                                     | Beschreibung                                                      |
 |------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [**NetScheduleJobAdd**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobadd)                               | Übermittelt einen Auftrag zur Ausführung zu einem angegebenen zukünftigen Datum und einer bestimmten uhrzeit.        |
-| [**NetScheduleJobDel**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobdel)                               | Bricht eine Reihe von Aufträgen in der Warteschlange ab, die auf einem Computer ausgeführt werden sollen.             |
-| [**NetScheduleJobEnum**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobenum)                             | Listet die Aufträge auf, die sich auf einem angegebenen Computer in der Warteschlange befinden.                   |
-| [**NetScheduleJobGetInfo**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobgetinfo)                       | Gibt Informationen zu einem bestimmten Auftrag zurück, der sich auf einem Computer in der Warteschlange befindet. |
+| [**NetScheduleJobAdd**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobadd)                               | Übermittelt einen Auftrag, der zu einem bestimmten zukünftigen Datum und einer bestimmten Uhrzeit ausgeführt werden soll.        |
+| [**NetScheduleJobDel**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobdel)                               | Bricht einen Bereich von Aufträgen in der Warteschlange ab, die auf einem Computer ausgeführt werden.             |
+| [**NetScheduleJobEnum**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobenum)                             | Listet die Aufträge in der Warteschlange auf einem angegebenen Computer auf.                   |
+| [**NetScheduleJobGetInfo**](/windows/desktop/api/Lmat/nf-lmat-netschedulejobgetinfo)                       | Gibt Informationen zu einem bestimmten Auftrag zurück, der auf einem Computer in die Warteschlange gestellt wurde. |
 | [**GetNetScheduleAccountInformation**](/windows/desktop/api/AtAcct/nf-atacct-getnetscheduleaccountinformation) | Ruft den Namen des AT-Dienstkontos ab.                           |
 | [**SetNetScheduleAccountInformation**](/windows/desktop/api/AtAcct/nf-atacct-setnetscheduleaccountinformation) | Legt den Namen und das Kennwort des AT-Dienstkontos fest.                   |
 
@@ -200,10 +200,10 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                       | BESCHREIBUNG                                                                        |
+| Funktion                                       | Beschreibung                                                                        |
 |------------------------------------------------|------------------------------------------------------------------------------------|
 | [**NetServerDiskEnum**](/windows/desktop/api/Lmserver/nf-lmserver-netserverdiskenum) | Gibt eine Liste der lokalen Laufwerke auf einem Server zurück.                                   |
-| [**NetServerEnum**](/windows/desktop/api/Lmserver/nf-lmserver-netserverenum)         | Listet alle sichtbaren Server eines bestimmten Typs (oder Typen) in der angegebenen Domäne auf. |
+| [**NetServerEnum**](/windows/desktop/api/Lmserver/nf-lmserver-netserverenum)         | Listet alle sichtbaren Server eines bestimmten Typs (oder Typs) in der angegebenen Domäne auf. |
 | [**NetServerGetInfo**](/windows/desktop/api/Lmserver/nf-lmserver-netservergetinfo)   | Gibt Konfigurationsinformationen zu einem angegebenen Server zurück.                        |
 | [**NetServerSetInfo**](/windows/desktop/api/Lmserver/nf-lmserver-netserversetinfo)   | Legt die Betriebsparameter für einen Server fest.                                        |
 
@@ -215,14 +215,14 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                 |
+| Funktion                                                     | Beschreibung                                                                                                                                                                                                                                                                                                                 |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetServerComputerNameAdd**](/windows/desktop/api/Lmserver/nf-lmserver-netservercomputernameadd) | Bindet einen emulierten Servernamen an jedes der Transportprotokolle, für die ein Server aktiv ist. (Kombiniert die Funktionalität der [**NetServerTransportEnum-Funktion**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum) und der [**NetServerTransportAddEx-Funktion.)**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex)                                            |
-| [**NetServerComputerNameDel**](/windows/desktop/api/Lmserver/nf-lmserver-netservercomputernamedel) | Trennt jedes Netzwerktransportprotokoll von einem emulierten Servernamen, der durch einen vorherigen Aufruf der **NetServerComputerNameAdd-Funktion** festgelegt wurde.                                                                                                                                                                               |
-| [**NetServerTransportAdd**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportadd)       | Bindet den angegebenen Server an das Transportprotokoll. (Diese Funktion unterstützt nur die [**Informationsebene SERVER \_ TRANSPORT INFO \_ \_ 0.)**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_0)                                                                                                                                                |
-| [**NetServerTransportAddEx**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex)   | Bindet den angegebenen Server an das Transportprotokoll. (Diese erweiterte Funktion unterstützt die Informationsebenen [**SERVER \_ TRANSPORT INFO \_ \_ 1,**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_1) [**SERVER TRANSPORT INFO \_ \_ \_ 2**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_2)und [**SERVER TRANSPORT INFO \_ \_ \_ 3.)**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_3) |
+| [**NetServerComputerNameAdd**](/windows/desktop/api/Lmserver/nf-lmserver-netservercomputernameadd) | Bindet einen emulierten Servernamen an jedes der Transportprotokolle, in denen ein Server aktiv ist. (Kombiniert die Funktionen der [**NetServerTransportEnum-Funktion**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum) und der [**NetServerTransportAddEx-Funktion.)**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex)                                            |
+| [**NetServerComputerNameDel**](/windows/desktop/api/Lmserver/nf-lmserver-netservercomputernamedel) | Trennt jedes Netzwerktransportprotokoll von einem emulierten Servernamen, der durch einen vorherigen Aufruf der **NetServerComputerNameAdd-Funktion festgelegt** wurde.                                                                                                                                                                               |
+| [**NetServerTransportAdd**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportadd)       | Bindet den angegebenen Server an das Transportprotokoll. (Diese Funktion unterstützt nur die [**SERVER \_ TRANSPORT INFO \_ \_ 0-Informationsebene.)**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_0)                                                                                                                                                |
+| [**NetServerTransportAddEx**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex)   | Bindet den angegebenen Server an das Transportprotokoll. (Diese erweiterte Funktion unterstützt die [**Informationsebenen SERVER \_ TRANSPORT \_ INFO \_ 1,**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_1) [**SERVER TRANSPORT INFO \_ \_ \_ 2**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_2)und [**SERVER TRANSPORT INFO \_ \_ \_ 3.)**](/windows/desktop/api/Lmserver/ns-lmserver-server_transport_info_3) |
 | [**NetServerTransportDel**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportdel)       | Trennt das Transportprotokoll vom Server.                                                                                                                                                                                                                                                                         |
-| [**NetServerTransportEnum**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum)     | Listet die vom Server verwalteten Transportprotokolle auf.                                                                                                                                                                                                                                                                   |
+| [**NetServerTransportEnum**](/windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum)     | Enumeriert die vom Server verwalteten Transportprotokolle.                                                                                                                                                                                                                                                                   |
 | [**NetWkstaTransportEnum**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstatransportenum)       | Listet die Transportprotokolle auf, die vom Redirector verwaltet werden.                                                                                                                                                                                                                                                           |
 
 
@@ -233,7 +233,7 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                               | BESCHREIBUNG                                                                               |
+| Funktion                               | Beschreibung                                                                               |
 |----------------------------------------|-------------------------------------------------------------------------------------------|
 | [**NetUseAdd**](/windows/desktop/api/Lmuse/nf-lmuse-netuseadd)         | Erstellt eine Verbindung zwischen einem lokalen Computer und einem Server.                               |
 | [**NetUseDel**](/windows/desktop/api/Lmuse/nf-lmuse-netusedel)         | Beendet eine Verbindung mit einer freigegebenen Ressource.                                                   |
@@ -248,10 +248,10 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                               | BESCHREIBUNG                                                         |
+| Funktion                                               | Beschreibung                                                         |
 |--------------------------------------------------------|---------------------------------------------------------------------|
-| [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist eine Kennwort- und Berechtigungsebene zu.     |
-| [**NetUserChangePassword**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine angegebene Domäne. |
+| [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist ein Kennwort und eine Berechtigungsstufe zu.     |
+| [**NetUserChangePassword**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine bestimmte Domäne. |
 | [**NetUserDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel)                       | Löscht ein Benutzerkonto vom Server.                             |
 | [**NetUserEnum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum)                     | Listet alle Benutzerkonten auf einem Server auf.                                |
 | [**NetUserGetGroups**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups)           | Gibt eine Liste der globalen Gruppennamen zurück, zu denen ein Benutzer gehört.       |
@@ -268,9 +268,9 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                     | BESCHREIBUNG                                                                                                                                                                                             |
+| Funktion                                     | Beschreibung                                                                                                                                                                                             |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetUserModalsGet**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsget) | Gibt globale Informationen für alle Benutzer und globalen Gruppen in der Sicherheitsdatenbank zurück. Dabei handelt es sich um die SAM-Datenbank (Security Accounts Manager) oder im Fall von Domänencontrollern um Active Directory. |
+| [**NetUserModalsGet**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsget) | Gibt globale Informationen für alle Benutzer und globalen Gruppen in der Sicherheitsdatenbank zurück, bei denen es sich um die SAM-Datenbank (Security Accounts Manager) oder im Fall von Domänencontrollern um Active Directory handelt. |
 | [**NetUserModalsSet**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsset) | Legt globale Informationen für alle Benutzer und globalen Gruppen in der Sicherheitsdatenbank fest.                                                                                                                       |
 
 
@@ -281,24 +281,24 @@ Die Netzwerkverwaltungsfunktionen können wie folgt gruppiert werden.
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                                                                                                                                                     |
+| Funktion                                                               | Beschreibung                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetValidatePasswordPolicyFree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den Arbeitsspeicher frei, der von der [**NetValidatePasswordPolicy-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) für den *OutputArg-Parameter zugewiesen* wird.                                                                                      |
-| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Ermöglicht es einer Anwendung, die Kennwortkonformität für eine von der Anwendung bereitgestellte Kontodatenbank zu überprüfen und sicherzustellen, dass Kennwörter die Anforderungen an Komplexität, Altern, Mindestlänge und Verlaufswiederverwendung einer Kennwortrichtlinie erfüllen. |
+| [**NetValidatePasswordPolicyFree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den Arbeitsspeicher frei, den die [**NetValidatePasswordPolicy-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) für den *OutputArg-Parameter* zuweist.                                                                                      |
+| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Ermöglicht es einer Anwendung, die Kennwortkonformität für eine von der Anwendung bereitgestellte Kontodatenbank zu überprüfen und zu überprüfen, ob Kennwörter die Anforderungen an Komplexität, Fälligkeit, Mindestlänge und Verlaufswiederverwendung einer Kennwortrichtlinie erfüllen. |
 
 
 
  
 
-## <a name="workstation-and-workstation-user-functions"></a>Arbeitsstations- und Arbeitsstationsbenutzerfunktionen
+## <a name="workstation-and-workstation-user-functions"></a>Benutzerfunktionen für Arbeitsstationen und Arbeitsstationen
 
 
 
-| Funktion                                           | BESCHREIBUNG                                                                         |
+| Funktion                                           | Beschreibung                                                                         |
 |----------------------------------------------------|-------------------------------------------------------------------------------------|
 | [**NetWkstaGetInfo**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstagetinfo)         | Gibt Informationen zu den Konfigurationselementen für eine Arbeitsstation zurück.             |
 | [**NetWkstaSetInfo**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstasetinfo)         | Konfiguriert eine Arbeitsstation.                                                           |
-| [**NetWkstaUserEnum**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstauserenum)       | Listet Informationen zu allen Benutzern auf, die derzeit an der Arbeitsstation angemeldet sind.           |
+| [**NetWkstaUserEnum**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstauserenum)       | Listet Informationen zu allen Benutzern auf, die derzeit bei der Arbeitsstation angemeldet sind.           |
 | [**NetWkstaUserGetInfo**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausergetinfo) | Gibt Informationen zu einem derzeit angemeldeten Benutzer zurück.                             |
 | [**NetWkstaUserSetInfo**](/windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausersetinfo) | Legt die benutzerspezifischen Informationen für die Konfigurationselemente einer Arbeitsstation fest. |
 

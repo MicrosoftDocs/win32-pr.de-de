@@ -77,7 +77,7 @@ Weitere Informationen zum Aktivieren der Wiedergabe von DURCH DRM geschützten D
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -79,7 +79,7 @@ Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzuru
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -3,7 +3,7 @@ title: IDWriteGdiInterop1 GetFontSignature-Methoden (Dwrite \_ 3.h)
 description: Ruft eine Schriftartsignatur ab.
 ms.assetid: 83967afd-8309-74b7-da76-1caee04a4990
 keywords:
-- GetFontSignature-Methoden Direct Write
+- GetFontSignature-Methoden – Direkter Schreibzugriff
 topic_type:
 - apiref
 api_location:
@@ -27,10 +27,10 @@ Ruft eine Schriftartsignatur ab.
 
 
 
-| Methode                                                                                                 | BESCHREIBUNG                                                   |
+| Methode                                                                                                 | Beschreibung                                                   |
 |:-------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------|
 | [**GetFontSignature ( \* IDWriteFont, \* FONTSIGNATURE)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature))       | Liest die Schriftartsignatur aus der angegebenen Schriftart.<br/>      |
-| [**GetFontSignature ( \* IDWriteFontFace, \* FONTSIGNATURE)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature)) | Liest die Schriftsignatur aus der angegebenen Schriftart.<br/> |
+| [**GetFontSignature ( \* IDWriteFontFace, \* FONTSIGNATURE)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature)) | Liest die Schriftartsignatur aus dem angegebenen Schriftartgesicht.<br/> |
 
 
 
@@ -44,7 +44,7 @@ Ruft eine Schriftartsignatur ab.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

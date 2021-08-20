@@ -1,28 +1,28 @@
 ---
-description: Die selekabilität für Restore ermöglicht es dem Anforderer zu bestimmen, wann eine Komponente einzeln wieder hergestellt werden kann.
+description: Die Auswahlbarkeit für die Wiederherstellung ermöglicht dem Anfordernden zu bestimmen, wann eine Komponente einzeln wiederhergestellt werden kann.
 ms.assetid: 684dc50f-5d7b-4c95-85dd-77c320d65fff
-title: Arbeiten mit selekabilität für die Wiederherstellung und unter Komponenten
+title: Arbeiten mit Auswahlbarkeit für Wiederherstellungs- und Unterkomponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d988f4c4e029c7dd8623ad22fcaee7662d33e82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f1186c9517af8e7e7b914b9508e10a2b4c8d1961afdbf6d68c2dadcede58c4c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117937381"
 ---
-# <a name="working-with-selectability-for-restore-and-subcomponents"></a>Arbeiten mit selekabilität für die Wiederherstellung und unter Komponenten
+# <a name="working-with-selectability-for-restore-and-subcomponents"></a>Arbeiten mit Auswahlbarkeit für Wiederherstellungs- und Unterkomponenten
 
-Die selekabilität für Restore ermöglicht es dem Anforderer zu bestimmen, wann eine Komponente einzeln wieder hergestellt werden kann. Eine Komponente, die für die Sicherung enthalten ist, kann auf zwei Arten angezeigt werden:
+Die Auswahlbarkeit für die Wiederherstellung ermöglicht dem Anfordernden zu bestimmen, wann eine Komponente einzeln wiederhergestellt werden kann. Eine Komponente, die für die Sicherung eingeschlossen wurde, kann auf zwei Arten angezeigt werden:
 
--   Möglicherweise wurde eine Komponente [*explizit*](vssgloss-e.md) in die Sicherung eingeschlossen. Diese Komponenten verfügen über eine entsprechende [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Instanz im Sicherungs Komponenten Dokument. Diese Komponenten sind in einer Wiederherstellung mithilfe von [**IVssBackupComponents:: setselectedforrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)enthalten.
--   Möglicherweise wurde eine Komponente [*implizit*](vssgloss-i.md) in die Sicherung eingeschlossen. Diese Komponenten verfügen im Dokument mit den Sicherungs Komponenten nicht über eine entsprechende [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Instanz. Es ist jedoch immer eine **IVssComponent** -Instanz für eine Vorgänger Komponente im Dokument vorhanden. Diese Komponenten sind in einer Wiederherstellung mithilfe von [**IVssBackupComponents:: adressstoresubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)enthalten.
+-   Möglicherweise wurde eine Komponente explizit in [*die*](vssgloss-e.md) Sicherung eingeschlossen. Diese Komponenten verfügen über eine entsprechende [**IVssComponent-Instanz**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) im Dokument Sicherungskomponenten. Diese Komponenten sind in einer Wiederherstellung mithilfe von [**IVssBackupComponents::SetSelectedForRestore enthalten.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)
+-   Eine Komponente wurde möglicherweise implizit in [*die*](vssgloss-i.md) Sicherung eingeschlossen. Diese Komponenten verfügen nicht über eine entsprechende [**IVssComponent-Instanz**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) im Dokument Sicherungskomponenten. Es wird jedoch immer eine **IVssComponent-Instanz** für eine Vorgängerkomponente im Dokument geben. Diese Komponenten sind in einer Wiederherstellung mithilfe von [**IVssBackupComponents::AddRestoreSubcomponent enthalten.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent)
 
-Jede Komponente, die explizit in der Sicherung enthalten ist, kann für die Wiederherstellung einzeln ausgewählt werden, unabhängig davon, ob Sie den Wert für die selekmentwiederherstellung auswählen. Der Anforderer ruft [**IVssBackupComponents:: setselectedforrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)auf und übergibt die Writer-ID, den logischen Pfad und den Namen der jeweiligen Komponente. Komponenten, die implizit in die Sicherung eingeschlossen wurden, werden wieder hergestellt, wenn ein explizit enthaltener Vorgänger wieder hergestellt wird. Implizit enthaltene Komponenten können nur für die Wiederherstellung einzeln ausgewählt werden, wenn Sie für die Wiederherstellung als auswählbar markiert sind. Der Anforderer ruft zunächst **IVssBackupComponents:: setselectedforrestore** für die nächstgelegene explizit enthaltene Vorgänger Komponente auf und ruft dann [**IVssBackupComponents:: adressstoresubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent) auf der Vorgänger Komponente auf, um die implizit enthaltene Komponente für die Wiederherstellung auszuwählen. Nachdem dies abgeschlossen ist, wird nur die implizit ausgewählte Komponente wieder hergestellt. alle anderen Komponenten im Komponenten Satz werden nicht wieder hergestellt.
+Jede Komponente, die explizit in die Sicherung eingeschlossen wurde, kann immer einzeln für die Wiederherstellung ausgewählt werden, unabhängig von ihrem Auswählbarkeitswert für die Wiederherstellung. Die Anfordernde ruft [**IVssBackupComponents::SetSelectedForRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setselectedforrestore)auf und übergibt die Writer-ID, den logischen Pfad und den Namen der jeweiligen Komponente. Komponenten, die implizit in die Sicherung eingeschlossen wurden, werden wiederhergestellt, wenn ein explizit eingeschlossener Vorgänger wiederhergestellt wird. Implizit eingeschlossene Komponenten können nur dann einzeln für die Wiederherstellung ausgewählt werden, wenn sie als für die Wiederherstellung auswählbar markiert sind. Die anfordernde Seite ruft zuerst **IVssBackupComponents::SetSelectedForRestore** für die nächstgelegene explizit eingeschlossene Vorgängerkomponente auf und ruft dann [**IVssBackupComponents::AddRestoreSubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent) für die Vorgängerkomponente auf, um die implizit eingeschlossene Komponente für die Wiederherstellung auszuwählen. Danach wird nur die implizit ausgewählte Komponente wiederhergestellt. alle anderen Komponenten im Komponentensatz werden nicht wiederhergestellt.
 
-Anders als bei der Auswahl der Sicherungsfunktion für die Sicherung, die immer explizit festgelegt werden muss, wenn eine Komponente mit [**ivsskreateschreitermetadata:: addComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addcomponent)hinzugefügt wird, hat die Auswahlfunktion für Restore den Standardwert false, der überschrieben werden kann.
+Im Gegensatz zur Auswahl für die Sicherung, die immer explizit festgelegt werden muss, wenn eine Komponente mit [**IVssCreateWriterMetadata::AddComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addcomponent)hinzugefügt wird, hat die Auswählbarkeit für die Wiederherstellung den Standardwert false, der überschrieben werden kann.
 
-Da Komponenten der obersten Ebene (Komponenten mit einem leeren logischen Pfad) nur explizit in eine Sicherung eingeschlossen werden können, hat die Auswahl für die Wiederherstellung keine Bedeutung für diese Komponenten.
+Da Komponenten der obersten Ebene (Komponenten mit einem leeren logischen Pfad) nur explizit in eine Sicherung eingeschlossen werden können, hat die Auswahl der Wiederherstellung für diese Komponenten keine Bedeutung.
 
  
 

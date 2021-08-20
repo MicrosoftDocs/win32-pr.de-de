@@ -1,5 +1,5 @@
 ---
-description: Stellt den Zustand des PCI Express-Ports dar.
+description: Stellt den Status des PCI Express-Ports dar.
 ms.assetid: 15d670ee-940a-4737-b2cd-e89dd8a63a5c
 title: Msvm_PciExpress-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7534d09c9c0f3825ca462c342747caa17c8de9c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db30d367cbecd0e7b235000a35da26f5baaa07f1c05d0160a9b0bb23c7cfc2c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117811211"
 ---
-# <a name="msvm_pciexpress-class"></a>MSVM \_ PCIExpress-Klasse
+# <a name="msvm_pciexpress-class"></a>Msvm \_ PciExpress-Klasse
 
-Stellt den Zustand des PCI Express-Ports dar.
+Stellt den Status des PCI Express-Ports dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -43,52 +43,52 @@ class Msvm_PciExpress : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ PCIExpress** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ PciExpress-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ PCIExpress** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ PciExpress-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Gerätepfad**
+**DeviceInstancePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge mit dem geräteinstanzpfad zur Identifizierung des virtuellen PCI Express-Geräts.
+Eine Zeichenfolge, die den Geräteinstanzpfad enthält, der das virtuelle PCI Express-Gerät des Geräts identifiziert.
 
 </dd> <dt>
 
-**Functionnumber**
+**FunctionNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Funktions Nummer des virtuellen PCI Express-Geräts.
+Die Funktionsnummer des virtuellen PCI Express-Geräts.
 
 </dd> <dt>
 
 **LocationPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge mit dem Speicherort Pfad des Geräts, der das virtuelle PCI Express-Gerät identifiziert.
+Eine Zeichenfolge, die den Pfad des Gerätestandorts enthält, der das virtuelle PCI Express-Gerät des Geräts identifiziert.
 
 </dd> </dl>
 
@@ -98,10 +98,10 @@ Eine Zeichenfolge mit dem Speicherort Pfad des Geräts, der das virtuelle PCI Ex
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

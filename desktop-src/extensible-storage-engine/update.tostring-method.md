@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Update. destring-Methode.'
-title: Update. destring-Methode
+description: Weitere Informationen finden Sie unter Update.ToString-Methode.
+title: Update.ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Update.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.update.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fbe92fbf6210e7e6dee833eea50c2ff08b9df542
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e7d9faa17c254069d3f8ee41cf1138d29ea3f706fa2b8e73cfc8ebcc0d0cf21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890051"
 ---
-# <a name="updatetostring-method"></a>Update. destring-Methode
+# <a name="updatetostring-method"></a>Update.ToString-Methode
 
 Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die das aktuelle [Update](./update-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die das aktuelle [Update](./update-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die das aktuelle [Update](./update-class.md)darstellt.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Mitglieder aktualisieren](./update-members.md)
+[Aktualisieren von Membern](./update-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

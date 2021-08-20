@@ -1,38 +1,38 @@
 ---
-title: Intuitive Benutzer Darstellung
-description: Zum ersten Mal ermöglicht Windows 7 Entwicklern und Ihren Endbenutzern, ihre Computer zu steuern, indem Sie den Bildschirm berühren.
+title: Intuitive Benutzererfahrung
+description: Zum ersten Mal ermöglicht Windows 7 Entwicklern und ihren Endbenutzern, ihre Computer durch Berühren des Bildschirms zu steuern.
 ms.assetid: cf5be4d6-4284-43e3-86ba-293c4513b477
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76576883186a77c53256dad7f011b75a7e260ae2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 14157066225fcf0cbec6b3df5a263be606419eed1ce4fc799d07da6379035ced
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118032037"
 ---
-# <a name="intuitive-user-experience"></a>Intuitive Benutzer Darstellung
+# <a name="intuitive-user-experience"></a>Intuitive Benutzererfahrung
 
-Zum ersten Mal ermöglicht Windows 7 Entwicklern und Ihren Endbenutzern, ihre Computer zu steuern, indem Sie den Bildschirm berühren. Touch-und Multitouch-Features bieten eine natürliche, intuitive Möglichkeit für Benutzer, mit PCs zu interagieren. Die Entwicklerplattform umfasst Gesten-APIs auf hoher Ebene sowie touchnachrichten auf niedriger Ebene und Toucheingabe-APIs. Die Benutzeroberflächen Elemente der obersten Ebene, wie z. b. das *Startmenü* und die *Taskleiste*, haben größere Ziele als frühere Windows-Versionen, sodass Sie mit einem Finger anstelle der Maus einfacher ausgewählt werden können. Visuelles Feedback wird für tippen und Doppel tippen bereitgestellt. Windows Explorer und Windows Internet Explorer 8 sind sowohl Berührungs freundlich als auch mühelos in Windows 7-Anwendungen integriert.
+Zum ersten Mal ermöglicht Windows 7 Entwicklern und ihren Endbenutzern, ihre Computer durch Berühren des Bildschirms zu steuern. Touch- und Multi-Touch-Features bieten benutzern eine natürliche, intuitive Möglichkeit, mit PCs zu interagieren. Die Entwicklerplattform enthält Gesten-APIs auf hoher Ebene sowie Touchnachrichten und Toucheingabe-APIs auf niedriger Ebene. Die Benutzeroberflächenelemente der obersten Ebene, z. B. das *Startmenü* und die *Taskleiste,* haben größere Ziele als vorherige Windows-Releases, wodurch sie einfacher mit einem Finger anstelle einer Maus ausgewählt werden können. Visuelles Feedback wird zum Tippen und Doppeltippen bereitgestellt. Windows Explorer und Windows Internet Explorer 8 sind berührungsfreundliche und einfach in Windows 7-Anwendungen integriert.
 
-## <a name="multi-touch-gestures-and-manipulation-and-inertia-apis"></a>Multitouch-Gesten und Bearbeitungs-und Trägheits-APIs
+## <a name="multi-touch-gestures-and-manipulation-and-inertia-apis"></a>Multi-Touch-Gesten sowie Manipulations- und Trägheits-APIs
 
-Windows 7 bietet verbesserte Unterstützung für Finger Eingaben und Gesten und ermöglicht Entwicklern die schnelle und einfache Erstellung eindeutiger Anwendungsumgebungen, die über einfache Mauszeiger, klicken und ziehen hinausgehen. Die neuen Multitouch-APIs unterstützen umfangreiche Gesten, wie z. b. Schwenken, Zoomen und drehen. Alle Gesten stellen direktes visuelles Feedback bereit und interagieren mit zugrunde liegenden Inhalten auf natürliche und intuitive Weise. Beispielsweise zentriert eine Zoom Bewegung die Ansicht an der Position der Bewegung. Toucheingabe-APIs auf niedrigerer Ebene sind auch für benutzerdefinierte Gesten Definitionen und erweiterte touchantwortfunktionen verfügbar. Windows 7 bietet eine Entwicklungsplattform, die Entwicklern die Tools bietet, die Sie benötigen, um kreative Anwendungen für Multitouch-Eingabegeräte zu entwickeln, indem Benutzereingaben von Multitouch-Geräten verarbeitet und die Benutzeroberfläche verbessert wird. Das Ergebnis sind intuitiver Umgebungen, die Innovationen bei der PC-Interaktion ermöglichen.
+Windows 7 features improved touch and gesture support (Verbesserte Unterstützung von Touch- und Gestenfunktionen), mit denen Entwickler schnell und einfach einzigartige Anwendungserfahrungen erstellen können, die über einfaches Zeigen, Klicken und Ziehen mit der Maus hinausgehen. Die neuen Multi-Touch-APIs unterstützen umfangreiche Gesten wie Schwenken, Zoomen und Drehen. Alle Gesten bieten direktes visuelles Feedback und interagieren auf natürliche und intuitive Weise mit zugrunde liegenden Inhalten. Beispielsweise iert eine Zoomgeste die Ansicht an der Position der Geste. Toucheingabe-APIs auf niedrigerer Ebene sind auch für benutzerdefinierte Gestendefinitionen und erweiterte Touch-Response-Funktionen verfügbar. Windows 7 stellt eine Entwicklungsplattform bereit, die Entwicklern die Tools bietet, die sie benötigen, um kreative Anwendungen für Multi-Touch-Eingabegeräte zu entwickeln, indem Benutzereingaben von Multi-Touch-Geräten verarbeitet und die Benutzeroberfläche verbessert werden. Das Ergebnis sind intuitivere Umgebungen, die Innovationen bei der PC-Interaktion ermöglichen.
 
-Windows 7 bietet auch Platt Form Unterstützung für Objekt Bearbeitung und Trägheits Verarbeitung. Ein umfangreicher Satz von Bearbeitungsfunktionen ermöglicht es Ihnen, mehrere Objekte gleichzeitig und in sehr feiner Granularität zu Strecken, zu ändern oder zu drehen. Beispielsweise können mehrere digitale Fotos mithilfe von touchbasierten Gesten in einer einzelnen Sitzung abgeschnitten, verkleinert und gedreht werden.
+Windows 7 bietet auch Plattformunterstützung für die Objektbearbeitung und Trägheitsverarbeitung. Mit einem funktionsreichen Satz von Manipulationsfunktionen können Sie mehrere Objekte gleichzeitig und mit sehr feiner Granularität strecken, ihre Größe ändern oder sie drehen. Beispielsweise können mehrere digitale Fotos mithilfe von gestenbasierten Gesten in einer einzelnen Sitzung zugeschnitten, in der Größe geändert und gedreht werden.
 
-Windows 7 enthält Trägheits-APIs, die Trägheit beim Verschieben von Objekten simulieren und mit den Bearbeitungs-APIs Hand in Hand arbeiten. Beispielsweise können Sie in einer Foto Anwendung die Bearbeitungs-APIs verwenden, um Benutzern das Drehen, Ändern der Größe und das Verschieben von Fotos zu ermöglichen. Wenn ein Benutzer ein Foto "ein-/ausschalten" hat, stellen die Trägheit-APIs eine natürliche Interaktion dar und ermöglichen es, dass das Foto an die Ränder des Fensters der Anwendung angehalten wird. (Weitere Informationen finden Sie unter [Windows-Berührungs Programmier Handbuch](../wintouch/programming-guide.md) und Windows-Fingereingabe [: Entwickler Ressourcen](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch).
+Windows 7 enthält Trägheits-APIs, die Trägheit simulieren, wenn Objekte verschoben werden, und hand in Hand mit den Manipulations-APIs arbeiten. Beispielsweise können Sie in einer Fotoanwendung die Bearbeitungs-APIs verwenden, um Benutzern das Drehen, Ändern der Größe und Verschieben von Fotos zu ermöglichen. Wenn ein Benutzer ein Foto "wirf", bieten die Trägheits-APIs eine natürliche Interaktion und ermöglichen es dem Foto, an einen Stopp zu ziehen oder von den Rahmen des Fensters der Anwendung zu springen. (Siehe [Windows Touch-Programmierhandbuch](../wintouch/programming-guide.md) und [Windows Touch: Entwicklerressourcen](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch).)
 
-## <a name="single-finger-panning"></a>Single-Finger schwenken
+## <a name="single-finger-panning"></a>Single-Finger Panning
 
-In vielen gängigen Anwendungen sind Berührungs Features für die Navigation nützlicher als für die Textauswahl. Mit erweiterten Fingereingabe-APIs kann die Anwendung eines Entwicklers auswählen, dass das Schwenken statt ziehen aktiviert werden soll. Wenn Sie z. b. eine Anwendung erstellt haben, die Multi-Touch-Gesten für Benutzer verwendet, die Musik abspielen, können Sie diesen Benutzern einfach die Möglichkeit geben, einen Finger nach oben oder unten zu verschieben, um das Volume anzupassen, Titel zu ändern oder eine Datei herunterzuladen. Kein Bildlauf erforderlich.
+In vielen gängigen Anwendungen sind Touchfunktionen für die Navigation nützlicher als für die Textauswahl. Mit erweiterten Touch-APIs kann die Anwendung eines Entwicklers das Schwenken statt ziehen aktivieren. Wenn Sie beispielsweise eine Anwendung erstellt haben, die Multi-Touch-Gesten für Benutzer verwendet, die Musik spielen, können Sie diesen Benutzern erlauben, einfach einen Finger nach oben oder unten zu bewegen, um die Lautstärke anzupassen, Die Musik zu ändern oder eine Datei herunterzuladen. Es ist kein Bildlauf erforderlich.
 
-Windows 7 bietet für Entwickler, die an der Erstellung von Anwendungen für PCs der nächsten Generation interessiert sind, unendliche Möglichkeiten. Das beste daran ist, dass die Überprüfung auf Schiebe leisten und die Implementierung der Schwenk Semantik schwierig ist. Anwendungen erhalten außerdem einen umfassenderen Satz von Ereignissen und Feedback für die angepasste Steuerung von Gesten als in früheren Versionen von Windows. (Weitere Informationen finden Sie [unter Verbessern der Single-Finger schwenken](../wintouch/improving-the-single-finger-panning-experience.md).)
+Windows 7 bietet Entwicklern, die anwendungen für PCs der nächsten Generation erstellen möchten, endlose Möglichkeiten. Das Beste daran ist, dass die Überprüfung auf Scrollleisten und die Implementierung der Schwenksemantik schwierig ist. Anwendungen erhalten auch einen vielfältigeren Satz von Ereignissen und Feedback zur benutzerdefinierten Steuerung von Gesten als in früheren Versionen von Windows. (Siehe [Improving the Single-Finger Panning Experience](../wintouch/improving-the-single-finger-panning-experience.md).)
 
-## <a name="raw-touch-input-data"></a>Unformatierte Berührungs Eingabedaten
+## <a name="raw-touch-input-data"></a>Unformatierte Toucheingabedaten
 
-In Windows 7 werden neue Finger Eingaben durch Interaktionsmodelle aktiviert, die auf unter Eingaben auf niedrigerer Ebene zugreifen und angepasste Antworten auf Kombinationen von Berührungs Meldungen bereitstellen. Die Plattform unterstützt den Empfang von Rohdaten Touch-Eingabedaten für Szenarien wie Multitouch-Zeichnungs Anwendungen und benutzerdefinierte Gesten innerhalb einer Anwendung. Sie können die Platt Form Unterstützung für Touch verwenden oder eigene, Multitouch-Funktionen erstellen. (Siehe [WM \_ ](../wintouch/wm-touchdown.md)-Fingereingabe Nachricht.)
+In Windows 7 werden neue Toucheingaben durch Interaktionsmodelle ermöglicht, die auf Toucheingabenachrichten auf niedrigerer Ebene zugreifen und benutzerdefinierte Antworten auf Kombinationen von Touchnachrichten bereitstellen. Die Plattform unterstützt den Empfang von rohen Toucheingabedaten für Szenarien wie Multi-Touch-Zeichenanwendungen und benutzerdefinierte Gesten innerhalb einer Anwendung. Sie können die Plattformunterstützung für Touch-Touch verwenden oder Ihre eigenen ursprünglichen Multi-Touch-Erfahrungen erstellen. (Siehe [WM \_ TOUCH Message](../wintouch/wm-touchdown.md).)
 
- 
+ 
 
- 
+ 

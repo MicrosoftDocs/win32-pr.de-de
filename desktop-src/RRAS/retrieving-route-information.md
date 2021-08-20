@@ -1,27 +1,27 @@
 ---
 title: Abrufen von Routeninformationen
-description: Zum Abrufen von Routeninformationen vom Routing Tabellen-Manager werden drei Methoden verwendet.
+description: Es gibt drei Methoden zum Abrufen von Routeninformationen aus dem Routingtabellen-Manager.
 ms.assetid: 8c943b4e-5c1a-4db5-babf-5f7ef9e9fa6a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2eaeb3a1e3c7d90975e5233780e662bbcc7d3bd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 77431f25ff28f37c102a208079933c97052c9d3da69b51d15e392ba5f43db0bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117788143"
 ---
 # <a name="retrieving-route-information"></a>Abrufen von Routeninformationen
 
-Zum Abrufen von Routeninformationen vom Routing Tabellen-Manager werden drei Methoden verwendet.
+Es gibt drei Methoden zum Abrufen von Routeninformationen aus dem Routingtabellen-Manager.
 
--   Auflisten von Routen (beschrieben in Auflisten von [Routing Tabellen Einträgen](enumerating-routing-table-entries.md)).
--   Suchen nach bestimmten Routen (siehe suchen [bestimmter Informationen in der Routing Tabelle](finding-specific-information-in-the-routing-table.md)).
--   Geänderte Ziele werden abgerufen (siehe [empfangen der Benachrichtigung über Änderungen](receiving-notification-of-changes.md)).
+-   Aufzählen von Routen (beschrieben unter [Aufzählen von Routingtabelleneinträgen](enumerating-routing-table-entries.md)).
+-   Suchen nach bestimmten Routen (beschrieben unter [Suchen bestimmter Informationen in der Routingtabelle](finding-specific-information-in-the-routing-table.md)).
+-   Abrufen geänderter Ziele (beschrieben unter [Empfangen von Benachrichtigungen über Änderungen](receiving-notification-of-changes.md)).
 
- 
+ 
 
- 
+ 
 
 
 

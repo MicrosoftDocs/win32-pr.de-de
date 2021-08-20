@@ -22,7 +22,7 @@ FORMSOF (<generation_type>,<match_words>)
 
 
 
-Der Generierungstyp gibt an, wie Microsoft Windows Search die alternativen Wortformen auswählt. Der **WERT INFLECTIONAL** wählt alternative Inflection-Formen für die Übereinstimmungswörter aus. Wenn das Wort ein Verb ist, werden alternative Tenses verwendet. Wenn das Wort ein Nomen ist, werden die Singular-, Plural- und Possessivformen verwendet, um Übereinstimmungen zu erkennen.
+Der Generierungstyp gibt an, wie Microsoft Windows Search die alternativen Wortformen auswählt. Der **WERT INFLECTIONAL** wählt alternative Inflectionformen für die Übereinstimmungswörter aus. Wenn das Wort ein Verb ist, werden alternative Tenses verwendet. Wenn das Wort ein Nomen ist, werden die Singular-, Plural- und Possessivformen verwendet, um Übereinstimmungen zu erkennen.
 
 Der Wert \_ der Übereinstimmungswörter ist mindestens ein Wort, getrennt durch Kommas.
 

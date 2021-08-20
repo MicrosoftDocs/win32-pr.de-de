@@ -1,29 +1,29 @@
 ---
-description: Gibt die optimalen Beleuchtungsbedingungen für einen Video Medientyp an.
+description: Gibt die optimalen Beleuchtungsbedingungen für einen Videomedientyp an.
 ms.assetid: 697590e3-898e-4ac9-8390-7b0994b6e571
-title: MF_MT_VIDEO_LIGHTING-Attribut (mfapi. h)
+title: MF_MT_VIDEO_LIGHTING-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c29a3f344ed4a48da21185a7d221f1e399ac7ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f739c07a0c23d63c08fc33441871a004f284b7dbd0ad38b8b7cb15557b9b27ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876730"
 ---
-# <a name="mf_mt_video_lighting-attribute"></a>MF \_ MT- \_ Video- \_ Beleuchtungs Attribut
+# <a name="mf_mt_video_lighting-attribute"></a>MF \_ MT \_ VIDEO \_ LIGHTING-Attribut
 
-Gibt die optimalen Beleuchtungsbedingungen für einen Video Medientyp an.
+Gibt die optimalen Beleuchtungsbedingungen für einen Videomedientyp an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Member der [**mfvideolighting**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideolighting) -Enumeration.
+Der Wert dieses Attributs ist ein Member der [**MFVideoLighting-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideolighting)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -44,16 +44,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

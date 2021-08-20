@@ -90,7 +90,7 @@ Wenn *cObjects* gleich 1 ist, ruft diese Methode die [**CBasePropertyPage::OnCon
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

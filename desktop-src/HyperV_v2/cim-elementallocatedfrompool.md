@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der ein CIM \_ LogicalElement-Objekt eine Ressource darstellt, die von einem CIM- \_ resourcepool-Objekt zugeordnet wird.
+description: Stellt eine Zuordnung dar, in der ein CIM \_ LogicalElement-Objekt eine Ressource darstellt, die von einem CIM \_ ResourcePool-Objekt zugeordnet wird.
 ms.assetid: 5e3c95c5-1cbb-40de-b285-0bf9b34a5ca8
 title: CIM_ElementAllocatedFromPool-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5fc6d58f5ebf82013f38b39027e0cd02e0e3595a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa1eb526054c665366211ec4fe3a5abdb1a001bddc098fba2c867479f23b18a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812557"
 ---
-# <a name="cim_elementallocatedfrompool-class"></a>CIM- \_ elementzudepedfrompool-Klasse
+# <a name="cim_elementallocatedfrompool-class"></a>CIM \_ ElementAllocatedFromPool-Klasse
 
-Stellt eine Zuordnung dar, in der ein [**CIM \_ LogicalElement**](cim-logicalelement.md) -Objekt eine Ressource darstellt, die von einem [**CIM- \_ resourcepool**](cim-resourcepool.md) -Objekt zugeordnet wird.
+Stellt eine Zuordnung dar, in der ein [**CIM \_ LogicalElement-Objekt**](cim-logicalelement.md) eine Ressource darstellt, die von einem [**CIM \_ ResourcePool-Objekt**](cim-resourcepool.md) zugeordnet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,33 +39,33 @@ class CIM_ElementAllocatedFromPool : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ elementzudepedfrompool** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ElementAllocatedFromPool-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ elementzuzuedfrompool** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ElementAllocatedFromPool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ resourcepool**
+Datentyp: **CIM \_ ResourcePool**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Der Ressourcenpool.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalElement**
@@ -74,7 +74,7 @@ Datentyp: **CIM \_ LogicalElement**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Die zugeordnete Ressource.
@@ -89,8 +89,8 @@ Die zugeordnete Ressource.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Die zugeordnete Ressource.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

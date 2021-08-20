@@ -25,7 +25,7 @@ ms.locfileid: "117823160"
 ---
 # <a name="cbasepropertypagegetpageinfo-method"></a>CBasePropertyPage.GetPageInfo-Methode
 
-Die `GetPageInfo` -Methode ruft Informationen über die Eigenschaftenseite ab. Diese Methode implementiert die **IPropertyPage::GetPageInfo-Methode.**
+Die `GetPageInfo` -Methode ruft Informationen zur Eigenschaftenseite ab. Diese Methode implementiert die **IPropertyPage::GetPageInfo-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetPageInfo(
 *pPageInfo* 
 </dt> <dd>
 
-Zeiger auf eine vom Aufrufer zugeordnete **PROPPAGEINFO-Struktur.**
+Zeiger auf eine **proppageinfo-Struktur,** die dem Aufrufer zugeordnet ist.
 
 </dd> </dl>
 
@@ -71,11 +71,11 @@ Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

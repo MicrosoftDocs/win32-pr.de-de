@@ -36,6 +36,6 @@ Gibt die Größe von pBlob in Bytes an.
 
 Zeigt auf einen Bytepuffer.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)

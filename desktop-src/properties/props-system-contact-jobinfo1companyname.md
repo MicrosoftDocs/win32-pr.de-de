@@ -4,12 +4,12 @@ ms.assetid: d4f92294-3e86-4fb2-9f90-ba9ef394804c
 title: System.Contact.JobInfo1CompanyName
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c25b44a25ed56093550bfb95273ff8acc4d267d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a3ee69889fbd8975c5079ee81880971cbc7293753eac88d9f4dd9f685b16cd6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108101988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117684778"
 ---
 # <a name="systemcontactjobinfo1companyname"></a>System.Contact.JobInfo1CompanyName
 
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

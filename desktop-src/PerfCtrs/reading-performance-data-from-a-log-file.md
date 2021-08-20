@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel werden Daten, die in eine Protokolldatei geschrieben werden, im Beispiel Schreiben von Leistungsdaten in eine Protokolldatei gelesen.
+description: Im folgenden Beispiel werden Daten gelesen, die im Beispiel Writing Performance Data to a Log File (Schreiben von Leistungsdaten in eine Protokolldatei) in eine Protokolldatei geschrieben werden.
 ms.assetid: acec1506-473a-43c9-9b57-ad8c00e8f250
 title: Lesen von Leistungsdaten aus einer Protokolldatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43932dae6f4f3d486ad22df14954991594bd48b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 21d2d04e16e815811fd9917fa28e6fb7b1f4d2358c72a075b1ae0216c8bc4a89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117793579"
 ---
 # <a name="reading-performance-data-from-a-log-file"></a>Lesen von Leistungsdaten aus einer Protokolldatei
 
-Im folgenden Beispiel werden Daten, die in eine Protokolldatei geschrieben werden, im Beispiel [Schreiben von Leistungsdaten in eine Protokolldatei](writing-performance-data-to-a-log-file.md) gelesen. Er verwendet die [**pdhcollectquerydata**](/windows/desktop/api/Pdh/nf-pdh-pdhcollectquerydata) -Funktion, um die Daten aus der Protokolldatei abzurufen, und die [**pdhgetformattedcountervalue**](/windows/desktop/api/Pdh/nf-pdh-pdhgetformattedcountervalue) -Funktion, um die Daten für die Anzeige zu formatieren.
+Im folgenden Beispiel werden Daten gelesen, die im Beispiel Writing Performance Data to a Log File (Schreiben von Leistungsdaten in [eine Protokolldatei)](writing-performance-data-to-a-log-file.md) in eine Protokolldatei geschrieben werden. Sie verwendet die [**PdhCollectQueryData-Funktion,**](/windows/desktop/api/Pdh/nf-pdh-pdhcollectquerydata) um die Daten aus der Protokolldatei abzurufen, und die [**PdhGetFormattedCounterValue-Funktion,**](/windows/desktop/api/Pdh/nf-pdh-pdhgetformattedcountervalue) um die Daten für die Anzeige zu formatieren.
 
 
 ```C++

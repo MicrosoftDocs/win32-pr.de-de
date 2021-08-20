@@ -1,6 +1,6 @@
 ---
-title: D3DX11SaveTextureToFile-Funktion (D3DX11tex. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Beachten Sie anstelle dieser Funktion, dass Sie die directxtex-Bibliothek, capturetexture und savetoxxxfile (mit XXX ist WIC, DDS oder TGA) verwenden. Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele). Für das vereinfachte Szenario der Erstellung eines Screenshots aus einer renderzieltextur empfiehlt es sich, die directxtk-Bibliothek "saveddstexturedefile" oder "savewictexturedefile" zu verwenden. Speichert eine Textur in einer Datei.
+title: D3DX11SaveTextureToFile-Funktion (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die DirectXTex-Bibliothek CaptureTexture und dann SaveToXXXFile (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Für das vereinfachte Szenario der Erstellung eines Screenshots aus einer Renderzieltextur wird empfohlen, die DirectXTK-Bibliothek SaveDDSTextureToFile oder SaveWICTextureToFile zu verwenden. Speichern Sie eine Textur in einer Datei.
 ms.assetid: da161268-fb68-42dd-ba31-b090a993f369
 keywords:
 - D3DX11SaveTextureToFile-Funktion Direct3D 11
@@ -15,26 +15,26 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d87188c3e58a8bea36b1cffb675c229aed71677
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e74f73eaad167c7c813a8effe93b65ea7558514ae78ecc00926b420014f4a37a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118099262"
 ---
 # <a name="d3dx11savetexturetofile-function"></a>D3DX11SaveTextureToFile-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, empfiehlt es sich, dass Sie die [directxtex](https://github.com/Microsoft/DirectXTex) -Bibliothek **capturetexture** und **savetoxxxfile** verwenden (wobei xxx gleich WIC, DDS oder TGA ist). Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele). Für das vereinfachte Szenario der Erstellung eines Screenshots aus einer renderzieltextur empfiehlt es sich, die [directxtk](https://github.com/Microsoft/DirectXTK) -Bibliothek " **saveddstexturedefile** " oder " **savewictexturedefile**" zu verwenden.
+> Anstatt diese Funktion zu verwenden, wird empfohlen, die [DirectXTex-Bibliothek](https://github.com/Microsoft/DirectXTex) **CaptureTexture** und dann **SaveToXXXFile (wobei** XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Für das vereinfachte Szenario der Erstellung eines Screenshots aus einer Renderzieltextur wird empfohlen, die [DirectXTK-Bibliothek](https://github.com/Microsoft/DirectXTK) **SaveDDSTextureToFile** oder **SaveWICTextureToFile zu** verwenden.
 
  
 
-Speichert eine Textur in einer Datei.
+Speichern Sie eine Textur in einer Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +57,13 @@ HRESULT D3DX11SaveTextureToFile(
 *pContext* 
 </dt> <dd>
 
-Typ: **[ **Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
+Typ: **[ **ID3D11DeviceContext**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
 
-Ein Zeiger auf ein [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) -Objekt.
+Ein Zeiger auf ein [**ID3D11DeviceContext-Objekt.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)
 
 </dd> <dt>
 
-*psrctexture* \[ in\]
+*pSrcTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D11Resource**](/windows/desktop/api/D3D11/nn-d3d11-id3d11resource)\***
@@ -72,21 +72,21 @@ Zeiger auf die zu speichernde Textur. Siehe [**ID3D11Resource**](/windows/deskto
 
 </dd> <dt>
 
-*Destformat* \[ in\]
+*DestFormat* \[ In\]
 </dt> <dd>
 
-Type: **[ **Bibliothek d3dx11 \_ Image \_ file \_ Format**](d3dx11-image-file-format.md)**
+Typ: **[ **D3DX11 \_ IMAGE \_ FILE \_ FORMAT**](d3dx11-image-file-format.md)**
 
-Das Format, in dem die Textur gespeichert wird (siehe [**Bibliothek d3dx11 \_ Image \_ file \_ Format**](d3dx11-image-file-format.md)). Bibliothek d3dx11 \_ IFF \_ DDS ist das bevorzugte Format, da es die einzige Option ist, die alle Formate im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)unterstützt.
+Das Format, in dem die Textur gespeichert wird (siehe [**D3DX11 \_ IMAGE \_ FILE \_ FORMAT**](d3dx11-image-file-format.md)). D3DX11 \_ IFF \_ DDS ist das bevorzugte Format, da es die einzige Option ist, die alle Formate im [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)unterstützt.
 
 </dd> <dt>
 
-*pdestfile* \[ in\]
+*pDestFile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Name der Ziel Ausgabedatei, in der die Textur gespeichert wird. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
+Name der Zielausgabedatei, in der die Textur gespeichert wird. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
 
 </dd> </dl>
 
@@ -94,24 +94,24 @@ Der Name der Ziel Ausgabedatei, in der die Textur gespeichert wird. Wenn die Com
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind. Verwenden Sie den Rückgabewert, um festzustellen, ob *destformat* unterstützt wird.
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte. verwenden Sie den Rückgabewert, um festzustellen, ob *destFormat* unterstützt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D3DX11SaveTextureToFile** schreibt die zusätzliche [**DDS- \_ Header \_ DXT10**](/windows/desktop/direct3ddds/dds-header-dxt10) -Struktur nur bei Bedarf für die Eingabe Textur (z. b. weil die Eingabe Textur im Standard-RGB-Format (sRGB) vorliegt). Wenn **D3DX11SaveTextureToFile** die **DDS- \_ Header \_ DXT10** -Struktur ausgibt, wird der **dwfourcc** -Member der [**DDS- \_ Pixel Format**](/windows/desktop/direct3ddds/dds-pixelformat) -Struktur für die Textur auf **DX10** festgelegt, um die präscense des **DDS- \_ Headers \_ DXT10** Extended-Header anzugeben.
+**D3DX11SaveTextureToFile** schreibt die zusätzliche [**DDS \_ HEADER \_ DXT10-Struktur**](/windows/desktop/direct3ddds/dds-header-dxt10) nur bei Bedarf für die Eingabetextur (z. B. weil die Eingabetextur im STANDARD-RGB-Format (sRGB) vorliegt). Wenn **D3DX11SaveTextureToFile** die **DDS HEADER \_ \_ DXT10-Struktur** schreibt, wird der **dwFourCC-Member** der [**DDS \_ PIXELFORMAT-Struktur**](/windows/desktop/direct3ddds/dds-pixelformat) für die Textur auf **DX10** festgelegt, um die Präsense des erweiterten **Headers DDS \_ HEADER \_ DXT10** anzugeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX11tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

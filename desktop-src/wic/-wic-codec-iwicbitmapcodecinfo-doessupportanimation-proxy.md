@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die doessupportanimation-Methode.
+description: Proxyfunktion für die DoesSupportAnimation-Methode.
 ms.assetid: dd7ed856-14b5-4215-96da-8f5db19a7796
 title: IWICBitmapCodecInfo_DoesSupportAnimation_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 443a8ec7871af6161de2efbb6d4f21d65e5ae9d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb67ac0a55b37b680e3d16fac26bb0303a4c2d79bd63c74f162860f47d5a9318
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118034732"
 ---
-# <a name="iwicbitmapcodecinfo_doessupportanimation_proxy-function"></a>Iwicbitmapcodecinfo ( \_ doessupportanimation- \_ Proxy Funktion)
+# <a name="iwicbitmapcodecinfo_doessupportanimation_proxy-function"></a>IWICBitmapCodecInfo \_ \_ DoesSupportAnimation-Proxyfunktion
 
-Proxy Funktion für die [**doessupportanimation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-doessupportanimation) -Methode.
+Proxyfunktion für die [**DoesSupportAnimation-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-doessupportanimation)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT IWICBitmapCodecInfo_DoesSupportAnimation_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapcodecinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) \** _
+Typ: **[ **IWICBitmapCodecInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)\***
 
-Zeiger auf dieses [_ *iwicbitmapcodecinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) -Objekt.
+Zeiger auf dieses [**IWICBitmapCodecInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)
 
 </dd> <dt>
 
-*pfsupportanimation* \[ vorgenommen\]
+*pfSupportAnimation* \[ out\]
 </dt> <dd>
 
-Typ: **bool \** _
+Typ: **BOOL \***
 
-Ein Zeiger, der _ *true** empfängt, wenn der Codec Bilder mit Zeit Steuerungsinformationen unterstützt. andernfalls **false**.
+Ein Zeiger, der **TRUE** empfängt, wenn der Codec Bilder mit Zeitsteuerungsinformationen unterstützt. Andernfalls **FALSE**.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Ein Zeiger, der _ *true** empfängt, wenn der Codec Bilder mit Zeit Steuerungsin
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -73,9 +73,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

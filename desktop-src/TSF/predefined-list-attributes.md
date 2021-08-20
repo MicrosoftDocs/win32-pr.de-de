@@ -1,9 +1,9 @@
 ---
-title: Vordefinierte Listen Attribute ("tsatyd. h")
-description: Die folgenden Werte identifizieren Listen Attribute, die mit der ITF Context getappproperty-Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+title: Vordefinierte Listenattribute (TsAttrid.h)
+description: Die folgenden Werte identifizieren Listenattribute, die mit der ITfContext GetAppProperty-Methode ermittelt wurden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind enthalten.
 ms.assetid: 9a9e1912-51c0-40e0-9e3a-b84ea7077dbe
 keywords:
-- Vordefinierte Listen Attribute Text Dienst-Framework
+- Vordefinierte Listenattribute Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81ade2403e124b934c6872f39c01fc7fc1ea6f6b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4b1242a5483b00a67784486c4a53b6f312d5af6e60d1d3676f09d5f357f9081e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951875"
 ---
-# <a name="predefined-list-attributes"></a>Vordefinierte Listen Attribute
+# <a name="predefined-list-attributes"></a>Vordefinierte Listenattribute
 
-Die folgenden Werte identifizieren Listen Attribute, die mit der [ITF context:: getappproperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) -Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+Die folgenden Werte identifizieren Listenattribute, die mit der [ITfContext::GetAppProperty-Methode erhalten](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) wurden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind enthalten.
 
 ## <a name="properties"></a>Eigenschaften
 
 
 
-| Eigenschaft                          | BESCHREIBUNG                                                                                     |
+| Eigenschaft                          | Beschreibung                                                                                     |
 |-----------------------------------|-------------------------------------------------------------------------------------------------|
-| Liste der "Tsat-ID" \_                    | Nicht verwendet.                                                                                       |
-| "- \_ \_ Levelliste"        | Enthält die Index Ebene der Liste. 1 ist die äußerste Ebene, 2 ist die nächste Ebene usw. |
-| Der Typ der der- \_ Liste. \_              | Nicht verwendet.                                                                                       |
-| Der Typ "" der "der- \_ \_ Typ" \_      | Enthält einen Wert ungleich 0 (null), wenn die Liste eine arabische Zahlenliste ist, andernfalls NULL.               |
-| Aufzählungs Zeichen- \_ Aufzählungs Zeichen \_ \_      | Enthält einen Wert ungleich 0 (null), wenn die Liste eine Auflistungs Liste ist, andernfalls NULL.                      |
-| In der \_ Liste der \_ vom Typ "". \_ | Enthält einen Wert ungleich 0 (null), wenn die Liste eine durch klein geschriebene Liste ist oder andernfalls 0 (null) ist.            |
-| Der-Typ der der-Gruppe ist " \_ \_ \_ LowerRoman"  | Enthält einen Wert ungleich 0 (null), wenn die Liste eine klein geschriebene römische Ziffern Liste ist, andernfalls NULL.       |
-| Der Typ "der" \_ \_ \_ | Enthält einen Wert ungleich 0 (null), wenn es sich bei der Liste um eine schreibgeschützte Großbuchstaben oder andernfalls um NULL handelt.          |
-| Der-Typ der der-Klasse, \_ \_ \_ UpperRoman  | Enthält einen Wert ungleich 0 (null), wenn die Liste eine römische Zahlenliste in Großbuchstaben oder andernfalls NULL ist.      |
+| TSATTRID-Liste \_                    | Wird nicht verwendet.                                                                                       |
+| TSATTRID \_ List \_ LevelIndel        | Enthält die Indexebene der Liste. 1 ist die äußerste Ebene, 2 ist die nächste Ebene und so weiter. |
+| \_TSATTRID-Listentyp \_              | Wird nicht verwendet.                                                                                       |
+| TSATTRID-Listentyp \_ \_ \_ Arabisch      | Enthält einen Wert ungleich 0 (null), wenn die Liste eine arabische Zahlenliste oder andernfalls 0 (null) ist.               |
+| TSATTRID-Listentyp \_ \_ \_ Aufzählungszeichen      | Enthält einen Wert ungleich 0 (null), wenn die Liste eine Aufzählung oder andernfalls 0 (null) ist.                      |
+| \_TSATTRID-Listentyp \_ \_ LowerLetter | Enthält einen Wert ungleich 0 (null), wenn es sich bei der Liste um eine Liste mit Kleinbuchstaben oder andernfalls um 0 (null) handelt.            |
+| \_TSATTRID-Listentyp \_ Lower \_ Dateityp  | Enthält einen Wert ungleich 0 (null), wenn es sich bei der Liste um eine Kleinbuchstabe oder andernfalls um 0 (null) handelt.       |
+| TSATTRID-Listentyp \_ \_ \_ UpperLetter | Enthält einen Wert ungleich 0 (null), wenn die Liste eine Liste mit Großbuchstaben oder andernfalls 0 (null) ist.          |
+| TSATTRID-Listentyp \_ \_ Upper \_ Dateityp  | Enthält einen Wert ungleich 0 (null), wenn es sich bei der Liste um eine liste mit groß geschriebenen Zahlen handelt, andernfalls 0 (null).      |
 
 
 
@@ -53,8 +53,8 @@ Die folgenden Werte identifizieren Listen Attribute, die mit der [ITF context:: 
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                       |
-| Header<br/>                   | <dl> <dt>"Tsatphd. h"</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                       |
+| Header<br/>                   | <dl> <dt>TsAttrid.h</dt> </dl> |
 
 
 
@@ -62,7 +62,7 @@ Die folgenden Werte identifizieren Listen Attribute, die mit der [ITF context:: 
 
 <dl> <dt>
 
-[ITF context:: getappproperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty)
+[ITfContext::GetAppProperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty)
 </dt> </dl>
 
  

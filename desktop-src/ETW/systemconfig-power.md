@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_Power Klasse: Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'SystemConfig_Power Klasse: Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 7065b0b0-9a1d-4fce-a494-5762d5efb239
 title: SystemConfig_Power-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d7338faad8c313847ad7db7aaac5d4000abba5be
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 364a5a7261d8658937e063abed39d759a31352a77436cf58c02b9fa7c62cc3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814591"
 ---
 # <a name="systemconfig_power-class"></a>SystemConfig \_ Power Class
 
 Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,7 +74,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -90,7 +90,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(7)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -106,7 +106,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(8)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -138,7 +138,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-True gibt an, dass das System den Standbyzustand S2 unterstützt.
+True gibt an, dass das System den Ruhezustand S2 unterstützt.
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-True gibt an, dass das System den Standbyzustand S3 unterstützt.
+True gibt an, dass das System den Ruhezustand S3 unterstützt.
 
 </dd> <dt>
 
@@ -170,7 +170,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-True gibt an, dass das System den Standbyzustand S4 unterstützt.
+True gibt an, dass das System den Ruhezustand S4 unterstützt.
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-True gibt an, dass das System den Standbyzustand S5 unterstützt.
+True gibt an, dass das System den Ruhezustand S5 unterstützt.
 
 </dd> </dl>
 
@@ -194,10 +194,10 @@ True gibt an, dass das System den Standbyzustand S5 unterstützt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

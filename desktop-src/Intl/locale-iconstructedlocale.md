@@ -1,32 +1,32 @@
 ---
-description: Gebiets Schema- \_ iconstructedlocale-Konstante Beschreibung
+description: LOCALE \_ ICONSTRUCTEDLOCALE constant description
 ms.assetid: 5557ee1e-09bf-0d0b-8e73-df32d9a406dd
 title: LOCALE_ICONSTRUCTEDLOCALE
 ms.topic: article
 ms.date: 09/01/2020
-ms.openlocfilehash: 120c206a14030a182378977c9e68fb7dcd77200d
-ms.sourcegitcommit: 4af3e9ec3142ba499d20ed8b174c2b219c5eacd2
+ms.openlocfilehash: 26d54ce55393f54d56f521231e257a8b0692758f8e6c830a890d81c8f82e8422
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "106374062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117809638"
 ---
-# <a name="locale_iconstructedlocale"></a>Gebiets Schema \_ iconstructedlocale
+# <a name="locale_iconstructedlocale"></a>LOCALE \_ ICONSTRUCTEDLOCALE
 
-Bezeichner für die Anforderung, wenn das Gebiets Schema ein "konstruiertes" Gebiets Schema ist. Die Verwendung dieses LCTYPE ist nicht empfehlenswert.
+Bezeichner, der anfordern soll, wenn das Locale ein "konstruiertes" Locale ist. Von der Verwendung dieses LCTYPE wird abgeraten.
 
-Dadurch wird ein Gebiets Schema identifiziert, für das Windows viele nicht über umfassende Informationen verfügt und zur Laufzeit Informationen erstellen muss. In der Regel sind die von LOCALE_ICONSTRUCTEDLOCALE bereitgestellten Informationen eingeschränkt, da Windows so viele Daten bereitstellt, wie es für jedes Gebiets Schema verfügbar ist. Daher wird von der Verwendung dieses LCTYPE abgeraten.
+Dadurch wird ein Locale identifiziert, Windows viele nicht über vollständige Informationen verfügen und informationen zur Laufzeit "erstellen" müssen. In der Regel sind die von LOCALE_ICONSTRUCTEDLOCALE bereitgestellten Informationen eingeschränkt, da Windows so viele Daten wie für jedes Einzelne verfügbar sind. Daher wird davon abgeraten, diesen LCTYPE zu verwenden.
 
 
 | Wert | Bedeutung                 |
 |-------|-------------------------|
 | 0     | Nicht erstellt         |
-| 1     | Ist ein konstruiertes Gebiets Schema |
+| 1     | Ein konstruiertes Locale |
 
 
-Ein Beispiel wäre eine Anforderung für "de-US" oder Deutsch im USA. NLS verwendet die deutschen Sprach Daten, die gefunden werden können, und die USA Regions Daten, die gefunden werden können. 
+Ein Beispiel wäre eine Anforderung für "de-US" oder Deutsch in der USA. NLS verwendet die daten der deutschen Sprache, die es finden kann, und die USA Region, die es finden kann. 
 
-Dies ist möglicherweise nicht perfekt, da das System wahrscheinlich keine Informationen über den Namen USA in Deutsch hat. Wenn die Anwendung oder der Benutzer jedoch einen "de-US"-Kontext wünscht, sind die zurückgegebenen Daten die beste Verfügbarkeit. 
+Dies ist möglicherweise nicht perfekt, da das System z. B. wahrscheinlich keine Informationen über den Namen des USA auf Deutsch hat. Wenn die Anwendung oder der Benutzer jedoch einen "de-US"-Kontext wünschen, sind die zurückgegebenen Daten die besten verfügbaren. 
 
-Apps, die LOCALE_ICONSTRUCTEDLOCALE zum ablehnen von Gebiets Schemas verwenden und auf ein anderes Gebiets Schema zurückgreifen, haben in der Regel eine schlechtere Darstellung, wie z. b. die Landung von de-de oder en-US in diesem Beispiel. Keines der beiden Bereiche entspricht der ursprünglichen Anforderung für deutschsprachige Sprache mit einer USA Region.
+Apps, die LOCALE_ICONSTRUCTEDLOCALE verwenden, um Lokale abzulehnen und auf ein anderes Locale zurückfallen, haben in der Regel eine schlechtere Erfahrung, z. B. das Landen auf de-DE oder en-US in diesem Beispiel. Keiner dieser Sprachen liegt in der Nähe der ursprünglichen Anforderung für die deutsche Sprache mit einer USA Region.
 
