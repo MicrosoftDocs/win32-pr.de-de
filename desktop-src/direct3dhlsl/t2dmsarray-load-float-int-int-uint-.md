@@ -84,7 +84,7 @@ Typ:
 
 Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture2DMSArray-Objekt.**](sm5-object-texture2dmsarray.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,10 +1,10 @@
 ---
 title: Required-Categories-Attribut
-description: Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt (z. B. eine Anwendung) ausführen muss.
+description: Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt (z. B. eine Anwendung) für die Ausführung benötigt.
 ms.assetid: f0580e59-a7be-43c7-be41-38039b868157
 ms.tgt_platform: multiple
 keywords:
-- Required-Categories AD-Attributschema
+- Required-Categories AD-Schema
 - requiredCategories-Attribut AD-Schema
 topic_type:
 - apiref
@@ -23,7 +23,7 @@ ms.locfileid: "117836652"
 ---
 # <a name="required-categories-attribute"></a>Required-Categories-Attribut
 
-Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt (z. B. eine Anwendung) ausführen muss.
+Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt (z. B. eine Anwendung) für die Ausführung benötigt.
 
 
 
@@ -35,7 +35,7 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.321                                |
-| System-ID-GUID    | 7d6c0e93-7e20-11d0-afd6-00c04fd930c9                  |
+| System-Id-Guid    | 7d6c0e93-7e20-11d0-afd6-00c04fd930c9                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -57,10 +57,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Ist einwertig       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Is-Single-Valued       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |
@@ -78,10 +78,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Ist einwertig       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Is-Single-Valued       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |
@@ -99,10 +99,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Ist einwertig       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Is-Single-Valued       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |
@@ -120,10 +120,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Is-Single-Valued       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Ist einwertig       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |
@@ -141,10 +141,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Is-Single-Valued       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Ist einwertig       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |
@@ -162,10 +162,10 @@ Dieses Attribut enthält eine Liste der Komponentenkategorie-IDs, die ein Objekt
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | Falsch                                                        |
-| Is-Single-Valued       | Falsch                                                        |
-| Ist indiziert             | Richtig                                                         |
-| Im globalen Katalog      | Falsch                                                        |
+| System-Only            | False                                                        |
+| Ist einwertig       | False                                                        |
+| Ist indiziert             | True                                                         |
+| Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 16                                                           |
 | Range-Upper            | 16                                                           |

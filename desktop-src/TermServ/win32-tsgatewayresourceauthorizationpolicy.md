@@ -1,11 +1,11 @@
 ---
 title: Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-description: Beschreibt eine Remotedesktop Ressourcen Autorisierungs Richtlinie (RD \ 160; Rap). A RD \ 160; Rap wird verwendet, um zu entscheiden, ob ein Benutzer autorisiert ist, über Remotedesktop Gateway (RD-Gateway) eine Verbindung mit einer angegebenen Ressource herzustellen.
+description: Beschreibt eine Remotedesktop Ressourcenautorisierungsrichtlinie (RD \ 160; RAP). Rd \ 160; MIT WIRD entschieden, ob ein Benutzer berechtigt ist, eine Verbindung mit einer angegebenen Ressource über Remotedesktop Gateway (RD-Gateway) herzustellen.
 ms.assetid: 284a868d-7856-4a25-ba7b-b4beba8ffffc
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSGatewayResourceAuthorizationPolicy-Klasse Remotedesktopdienste
-- Win32_TSGatewayResourceAuthorizationPolicy Klasse Remotedesktopdienste, beschrieben
+- Win32_TSGatewayResourceAuthorizationPolicy der Remotedesktopdienste
+- Win32_TSGatewayResourceAuthorizationPolicy klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c262cb1ce3351c89dc5d7edf3b0d106116e83b7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9748ddc4feccd504d823025ea70877004417717d625c904ccae4445f05e6eb03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999820"
 ---
-# <a name="win32_tsgatewayresourceauthorizationpolicy-class"></a>Win32-Klasse "t- \_ gatewayresourceauthorizationpolicy"
+# <a name="win32_tsgatewayresourceauthorizationpolicy-class"></a>Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse
 
-Beschreibt eine Remotedesktop-Ressourcen Autorisierungs Richtlinie (RD-RAP). Eine RD-RAP wird verwendet, um zu entscheiden, ob ein Benutzer autorisiert ist, über Remotedesktop Gateway (RD-Gateway) eine Verbindung mit einer angegebenen Ressource herzustellen.
+Beschreibt eine Remotedesktop Ressourcenautorisierungsrichtlinie (RD RD RD). Ein RD-GATEWAY wird verwendet, um zu entscheiden, ob ein Benutzer berechtigt ist, eine Verbindung mit einer angegebenen Ressource über Remotedesktop Gateway (RD-Gateway) herzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,30 +54,30 @@ class Win32_TSGatewayResourceAuthorizationPolicy
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zgatewayresourceauthorizationpolicy** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zgatewayresourceauthorizationpolicy** " verfügt über diese Methoden.
+Die **Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                          | BESCHREIBUNG                                                                                                         |
+| Methode                                                                                          | Beschreibung                                                                                                         |
 |:------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**Addusergroupnames**](addusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)       | Fügt die angegebenen Benutzergruppen Namen den vorhandenen Benutzergruppen in der **usergroupnames** -Eigenschaft hinzu.<br/>      |
-| [**Stelle**](create-win32-tsgatewayresourceauthorizationpolicy.md)                             | Erstellt eine RD-RAP.<br/>                                                                                       |
-| [**Lösch**](delete-win32-tsgatewayresourceauthorizationpolicy.md)                             | Löscht die aktuelle RD-RAP.<br/>                                                                              |
-| [**Removeusergroupnames**](removeusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md) | Entfernt die angegebenen Benutzergruppen Namen aus den vorhandenen Benutzergruppen in der **usergroupnames** -Eigenschaft.<br/> |
-| [**SetDescription**](setdescription-win32-tsgatewayresourceauthorizationpolicy.md)             | Legt die **Description** -Eigenschaft für die RD-RAP fest.<br/>                                                        |
-| [**Abgeleitete**](setenabled-win32-tsgatewayresourceauthorizationpolicy.md)                     | Aktiviert oder deaktiviert die RD-RAP durch Festlegen der **aktivierten** Eigenschaft.<br/>                                      |
-| [**SetName**](setname-win32-tsgatewayresourceauthorizationpolicy.md)                           | Legt die **Name** -Eigenschaft für die RD-RAP fest.<br/>                                                               |
-| [**Setportnumbers**](setportnumbers-win32-tsgatewayresourceauthorizationpolicy.md)             | Legt die **portnumbers** -Eigenschaft für die RD-RAP fest.<br/>                                                        |
-| [**"Abtresourcegroup"**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md)         | Legt die Eigenschaften **resourcegrouptype** und **resourcegroupname** fest.<br/>                                     |
-| [**Setusergroupnames**](setusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)       | Legt die **usergroupnames** -Eigenschaft für die RD-RAP fest.<br/>                                                     |
-| [**Aktualisieren**](update-win32-tsgatewayresourceauthorizationpolicy.md)                             | Aktualisiert die aktuelle RD-RAP.<br/>                                                                              |
+| [**AddUserGroupNames**](addusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)       | Fügt den vorhandenen Benutzergruppen in der **UserGroupNames-Eigenschaft** die angegebenen Benutzergruppennamen hinzu.<br/>      |
+| [**Erstellen**](create-win32-tsgatewayresourceauthorizationpolicy.md)                             | Erstellt ein RD-RD-RD-SYSTEM.<br/>                                                                                       |
+| [**Löschen**](delete-win32-tsgatewayresourceauthorizationpolicy.md)                             | Löscht die aktuelle RD-RD-Löschung.<br/>                                                                              |
+| [**RemoveUserGroupNames**](removeusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md) | Entfernt die angegebenen Benutzergruppennamen aus den vorhandenen Benutzergruppen in der **UserGroupNames-Eigenschaft.**<br/> |
+| [**SetDescription**](setdescription-win32-tsgatewayresourceauthorizationpolicy.md)             | Legt die **Description-Eigenschaft** für RD-RD-10 fest.<br/>                                                        |
+| [**SetEnabled**](setenabled-win32-tsgatewayresourceauthorizationpolicy.md)                     | Aktiviert oder deaktiviert RD-RD-BENACHRICHTIGUNG durch Festlegen der **Enabled-Eigenschaft.**<br/>                                      |
+| [**SetName**](setname-win32-tsgatewayresourceauthorizationpolicy.md)                           | Legt die **Name-Eigenschaft** für RD-RD-10 fest.<br/>                                                               |
+| [**SetPortNumbers**](setportnumbers-win32-tsgatewayresourceauthorizationpolicy.md)             | Legt die **PortNumbers-Eigenschaft** für RD-RD-RD-30 fest.<br/>                                                        |
+| [**SetResourceGroup**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md)         | Legt die **Eigenschaften ResourceGroupType** und **ResourceGroupName** fest.<br/>                                     |
+| [**SetUserGroupNames**](setusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)       | Legt die **UserGroupNames-Eigenschaft** für RD-RD-BENUTZERNAMEN fest.<br/>                                                     |
+| [**Aktualisieren**](update-win32-tsgatewayresourceauthorizationpolicy.md)                             | Aktualisiert das aktuelle RD-RD-RD-UPDATE.<br/>                                                                              |
 
 
 
@@ -85,40 +85,40 @@ Die Win32-Klasse " **\_ zgatewayresourceauthorizationpolicy** " verfügt über d
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t- **\_ gatewayresourceauthorizationpolicy** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibung der RD-RAP. Diese Eigenschaft wird mit der [**setDescription**](setdescription-win32-tsgatewayresourceauthorizationpolicy.md) -Methode geändert.
+Beschreibung des RD-RD-WARNs. Diese Eigenschaft wird mit der [**SetDescription-Methode**](setdescription-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 </dd> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob diese RD-RAP aktiviert ist. Diese Eigenschaft wird [**mit der Methode**](setenabled-win32-tsgatewayresourceauthorizationpolicy.md) "" der Methode "*" geändert.
+Gibt an, ob dieses RD-RD-WARE aktiviert ist. Diese Eigenschaft wird mit der [**SetEnabled-Methode**](setenabled-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -127,77 +127,77 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Name der RD-RAP. Diese Eigenschaft wird mit der [**SetName**](setname-win32-tsgatewayresourceauthorizationpolicy.md) -Methode geändert.
+Name des RD-RD-3D- Diese Eigenschaft wird mit der [**SetName-Methode**](setname-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 </dd> <dt>
 
-**Portnummern**
+**PortNumbers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Liste von durch Semikolons getrennten Portnummern, die für diese Richtlinie zulässig sind. Um eine beliebige Portnummer zuzulassen, legen Sie " \* " fest.
+Liste der durch Semikolons getrennten Portnummern, die für diese Richtlinie zulässig sind. Um eine beliebige Portnummer zu ermöglichen, legen Sie " \* " fest.
 
 </dd> <dt>
 
-**Protocolnames**
+**ProtocolNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Liste von durch Semikolons getrennten Protokollnamen, die für diese Richtlinie aktiviert sind. Namen müssen mit der Rückgabe der [**getprotocolname**](getprotocolname-win32-tsgatewayserversettings.md) -Methode der Win32-Klasse " [**\_ tgatewayserversettings**](win32-tsgatewayserversettings.md) " identisch sein.
+Liste der durch Semikolons getrennten Protokollnamen, die für diese Richtlinie aktiviert sind. Die Namen müssen mit der Rückgabe der [**GetProtocolName-Methode**](getprotocolname-win32-tsgatewayserversettings.md) der [**Win32 \_ TSGatewayServerSettings-Klasse**](win32-tsgatewayserversettings.md) übereinstimmen.
 
 </dd> <dt>
 
 **ResourceGroupName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ressourcengruppenname Diese Eigenschaft wird [**mit der Methode**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md) "" der Methode "*" geändert.
+Ressourcengruppenname Diese Eigenschaft wird mit der [**SetResourceGroup-Methode**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 </dd> <dt>
 
-**Resourcegrouptype**
+**ResourceGroupType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert den Typ der Ressourcengruppe. Diese Eigenschaft wird [**mit der Methode**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md) "" der Methode "*" geändert.
+Identifiziert den Typ der Ressourcengruppe. Diese Eigenschaft wird mit der [**SetResourceGroup-Methode**](setresourcegroup-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 <dt>
 
-Sorgte
+"RG"
 </dt> <dd>
 
 Ressourcengruppe
 
 </dd> <dt>
 
-Gewöhnt
+"CG"
 </dt> <dd>
 
-Computer Gruppe, wie in Active Directory Domain Services gespeichert.
+Computergruppe, wie in Active Directory Domain Services.
 
 </dd> <dt>
 
-Allen
+"ALL"
 </dt> <dd>
 
 Alle Ressourcen.
@@ -206,24 +206,24 @@ Alle Ressourcen.
 
 </dd> <dt>
 
-**Usergroupnames**
+**UserGroupNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Durch Semikolons getrennte Liste von Benutzergruppen Namen. Wenn der Benutzer zu einer dieser Benutzergruppen gehört, wird der Zugriff zugelassen. Diese Eigenschaft wird mit den Methoden [**setusergroupnames**](setusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md), [**addusergroupnames**](addusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)und [**removeusergroupnames**](removeusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
+Durch Semikolons getrennte Liste von Benutzergruppennamen. Wenn der Benutzer zu einer dieser Benutzergruppen gehört, wird der Zugriff zugelassen. Diese Eigenschaft wird mit den [**Methoden SetUserGroupNames,**](setusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md) [**AddUserGroupNames**](addusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md)und [**RemoveUserGroupNames**](removeusergroupnames-win32-tsgatewayresourceauthorizationpolicy.md) geändert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -233,32 +233,32 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-"- \_ gatewayconnection"**](win32-tsgatewayconnection.md)
+[**Win32 \_ TSGatewayConnection**](win32-tsgatewayconnection.md)
 </dt> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> <dt>
 
-[**Win32-"t- \_ gatewayloadbalancer"**](win32-tsgatewayloadbalancer.md)
+[**Win32 \_ TSGatewayLoadBalancer**](win32-tsgatewayloadbalancer.md)
 </dt> <dt>
 
-[**Win32-"t- \_ gatewayradiusserver"**](win32-tsgatewayradiusserver.md)
+[**Win32 \_ TSGatewayRADIUSServer**](win32-tsgatewayradiusserver.md)
 </dt> <dt>
 
-[**Win32-Datei " \_ zgatewayresourcegroup"**](win32-tsgatewayresourcegroup.md)
+[**Win32 \_ TSGatewayResourceGroup**](win32-tsgatewayresourcegroup.md)
 </dt> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

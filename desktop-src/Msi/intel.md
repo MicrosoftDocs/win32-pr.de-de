@@ -13,7 +13,7 @@ ms.locfileid: "119013238"
 ---
 # <a name="intel-property"></a>Intel-Eigenschaft
 
-Die **Intel-Eigenschaft** wird vom Windows Installer auf die numerische Prozessorebene festgelegt, wenn auf einem Intel-Prozessor ausgeführt wird. Die Werte sind identisch mit dem *Feld wProcessorLevel* der [**SYSTEM \_ INFO-Struktur.**](/windows/win32/api/sysinfoapi/ns-sysinfoapi-system_info) Bei ausführung auf einem x64-Prozessor legt der Windows Installer die **Intel-Eigenschaft** so fest, dass sie den vom x64-Computer emulierten x86-Prozessor widerspiegelt, wie vom Betriebssystem gemeldet.
+Die **Intel-Eigenschaft** wird vom Windows Installer auf die numerische Prozessorebene festgelegt, wenn auf einem Intel-Prozessor ausgeführt wird. Die Werte sind identisch mit dem *Feld wProcessorLevel* der [**SYSTEM \_ INFO-Struktur.**](/windows/win32/api/sysinfoapi/ns-sysinfoapi-system_info) Bei Ausführung auf einem x64-Prozessor legt der Windows Installer die **Intel-Eigenschaft** so fest, dass sie den vom x64-Computer emulierten x86-Prozessor widerspiegelt, wie vom Betriebssystem gemeldet.
 
 ## <a name="requirements"></a>Anforderungen
 

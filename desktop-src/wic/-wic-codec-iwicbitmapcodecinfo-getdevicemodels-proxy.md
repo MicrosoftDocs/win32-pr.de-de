@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118711986"
 ---
-# <a name="iwicbitmapcodecinfo_getdevicemodels_proxy-function"></a>IWICBitmapCodecInfo \_ GetDeviceModels-Proxyfunktion \_
+# <a name="iwicbitmapcodecinfo_getdevicemodels_proxy-function"></a>Proxyfunktion "IWICBitmapCodecInfo \_ GetDeviceModels" \_
 
 Proxyfunktion für die [**GetDeviceModels-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-getdevicemodels)
 
@@ -43,7 +43,7 @@ HRESULT IWICBitmapCodecInfo_GetDeviceModels_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapCodecInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)\***
@@ -66,7 +66,7 @@ Die Größe des Gerätemodellpuffers.
 
 Typ: **WCHAR \***
 
-Ein Zeiger, der eine durch Trennzeichen getrennte Liste von Gerätemodellnamen empfängt, die dem Codec zugeordnet sind.
+Ein Zeiger, der eine durch Kommas getrennte Liste von Gerätemodellnamen empfängt, die dem Codec zugeordnet sind.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Ein Zeiger, der eine durch Trennzeichen getrennte Liste von Gerätemodellnamen e
 
 Typ: **UINT \***
 
-Die tatsächliche Puffergröße, die zum Abrufen aller Gerätemodellnamen erforderlich ist.
+Die tatsächliche Puffergröße, die zum Abrufen aller Gerätemodellnamen benötigt wird.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Die tatsächliche Puffergröße, die zum Abrufen aller Gerätemodellnamen erford
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 

@@ -1,5 +1,5 @@
 ---
-description: Richtet einen &\# 0034; Teil&\# 0034; Beziehung zwischen einem System und einem beliebigen verwalteten System Element ein, von dem es zusammengesetzt wird.
+description: Richtet eine &\# 0034;Teil von&0034; beziehung zwischen einem System und jedem verwalteten Systemelement ein, aus dem es \# besteht.
 ms.assetid: 6BF72E36-9B6C-4853-A553-DDAF65991C86
 title: Msvm_SystemComponent-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ee150793143b549c90d280eef287ee6a5afb66b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 538deaff8e0edf3d1467c4447a3d25ced18987e4f81bc8d14a056848313c8526
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949682"
 ---
-# <a name="msvm_systemcomponent-class"></a>MSVM \_ SystemComponent-Klasse
+# <a name="msvm_systemcomponent-class"></a>Msvm \_ SystemComponent-Klasse
 
-Richtet einen "Teil" der Beziehung zwischen einem System und einem beliebigen verwalteten System Element ein, von dem es zusammengesetzt wird.
+Richtet eine "Teil von"-Beziehung zwischen einem System und jedem verwalteten Systemelement ein, aus dem es besteht.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,26 +41,26 @@ class Msvm_SystemComponent : CIM_SystemComponent
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ SystemComponent** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SystemComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ SystemComponent** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SystemComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ System**](/windows/desktop/CIMWin32Prov/cim-system)**
+Datentyp: **[ **\_ CIM-System**](/windows/desktop/CIMWin32Prov/cim-system)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das übergeordnete Element in der Zuordnung. Diese Eigenschaft wird von [**CIM \_ SystemComponent**](/windows/desktop/CIMWin32Prov/cim-systemcomponent)geerbt.
+Das übergeordnete Element in der Zuordnung. Diese Eigenschaft wird von [**CIM \_ SystemComponent geerbt.**](/windows/desktop/CIMWin32Prov/cim-systemcomponent)
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Datentyp: **[ **CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das untergeordnete-Element in der Zuordnung. Diese Eigenschaft wird von [**CIM \_ SystemComponent**](/windows/desktop/CIMWin32Prov/cim-systemcomponent)geerbt.
+Das untergeordnete Element in der Zuordnung. Diese Eigenschaft wird von [**CIM \_ SystemComponent geerbt.**](/windows/desktop/CIMWin32Prov/cim-systemcomponent)
 
 </dd> </dl>
 
@@ -83,10 +83,10 @@ Das untergeordnete-Element in der Zuordnung. Diese Eigenschaft wird von [**CIM \
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

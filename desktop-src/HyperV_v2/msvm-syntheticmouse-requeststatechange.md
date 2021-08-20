@@ -1,7 +1,7 @@
 ---
-description: 'RequestStateChange-Methode der Msvm_SyntheticMouse-Klasse: Fordert eine Zustandsänderung an.'
+description: RequestStateChange-Methode der Msvm_SyntheticMouse - Fordert eine Zustandsänderung an.
 ms.assetid: 6c29dc19-0e5a-48cc-ae4a-f7cf127678b2
-title: RequestStateChange-Methode der Msvm_SyntheticMouse-Klasse
+title: RequestStateChange-Methode der Msvm_SyntheticMouse Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 427dc0176856389f2eab2ae0c002c522f81048f4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1f153714df25829896f3fbc839f28c8150784d8724a115ca39b1040230478137
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949692"
 ---
 # <a name="requeststatechange-method-of-the-msvm_syntheticmouse-class"></a>RequestStateChange-Methode der Msvm \_ SyntheticMouse-Klasse
 
@@ -85,14 +85,14 @@ Der für das Element angeforderte Zustand. Diese Informationen werden in die Req
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückstellen** (8)
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Stille** (9)
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -157,7 +157,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -167,7 +167,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

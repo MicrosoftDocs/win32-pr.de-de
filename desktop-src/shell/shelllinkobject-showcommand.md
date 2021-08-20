@@ -1,7 +1,7 @@
 ---
-description: Ruft den anfänglichen Anzeige Zustand (Größen, minimiert oder maximiert) des Befehls des links ab oder legt ihn fest.
+description: Ruft den anfänglichen Anzeigezustand (Größe, Minimiert oder Maximierung) des Linkbefehls ab oder legt diesen fest.
 ms.assetid: 139c6924-f554-4fde-9ed0-bc117bafbb16
-title: Shelllinkobject. showcommand-Eigenschaft (Shldisp. h)
+title: ShellLinkObject.ShowCommand-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 9bacdf98a24d749b5128bc286f06e99299aef437
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b655be140a6c54902ef9c0f47babafeeaf7b3dc2cb7cd3b1eadb97808f7da82c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995166"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968379"
 ---
-# <a name="shelllinkobjectshowcommand-property"></a>Shelllinkobject. showcommand (Eigenschaft)
+# <a name="shelllinkobjectshowcommand-property"></a>ShellLinkObject.ShowCommand (Eigenschaft)
 
-Ruft den anfänglichen Anzeige Zustand (Größen, minimiert oder maximiert) des Befehls des links ab oder legt ihn fest.
+Ruft den anfänglichen Anzeigezustand (Größe, Minimiert oder Maximierung) des Linkbefehls ab oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,7 +38,7 @@ ShellLinkObject.ShowCommand(intShowCommand) = iShowCommand
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-der Anzeige Zustand des Links. Mögliche Werte:
+Der Anzeigezustand des Links. Mögliche Werte:
 
 <dt>
 
@@ -49,7 +49,7 @@ der Anzeige Zustand des Links. Mögliche Werte:
 
 </dt> <dd>
 
-Aktiviert und zeigt ein Fenster an. Wenn das Fenster minimiert oder maximiert ist, stellt das System die ursprüngliche Größe und Position wieder her.
+Aktiviert ein Fenster und zeigt es an. Wenn das Fenster minimiert oder maximiert ist, stellt das System es auf seine ursprüngliche Größe und Position wieder zurück.
 
 </dd> <dt>
 
@@ -79,7 +79,7 @@ Aktiviert das Fenster und zeigt es als maximiertes Fenster an.
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -120,7 +120,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -202,17 +202,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

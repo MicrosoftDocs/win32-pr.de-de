@@ -1,25 +1,25 @@
 ---
-title: Dynamische Authentifizierungs Konfiguration
-description: Anwendungen können Authentifizierungs Konfigurationen für eine URL-Gruppe oder Server Sitzung jederzeit ändern.
+title: Dynamische Authentifizierungskonfiguration
+description: Anwendungen können Authentifizierungskonfigurationen in einer URL-Gruppe oder Serversitzung jederzeit ändern.
 ms.assetid: 8a5cc119-0427-487d-a155-74c14e2104d4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84c68daf04d870d4aa50596397f4f021ac1729af
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0fda33e150826ed7d84ac45c4ab0771136991aa9aeb2766d5d395a65da270775
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014838"
 ---
-# <a name="dynamic-authentication-configuration"></a>Dynamische Authentifizierungs Konfiguration
+# <a name="dynamic-authentication-configuration"></a>Dynamische Authentifizierungskonfiguration
 
-Standardmäßig führt die HTTP-Server-API keine Authentifizierung aus, es sei denn, Sie wird von der Anwendung ausdrücklich aktiviert. Anwendungen können Authentifizierungs Konfigurationen für eine URL-Gruppe oder Server Sitzung jederzeit ändern. Änderungen an der Authentifizierungs Konfiguration wirken sich nicht auf Anforderungen aus, die bereits authentifiziert sind oder an die Anwendung gesendet werden.
+Standardmäßig führt die HTTP-Server-API keine Authentifizierung durch, es sei denn, die Anwendung aktiviert sie ausdrücklich. Anwendungen können Authentifizierungskonfigurationen in einer URL-Gruppe oder Serversitzung jederzeit ändern. Änderungen an der Authentifizierungskonfiguration wirken sich nicht auf Anforderungen aus, die bereits authentifiziert oder an die Anwendung gesendet werden.
 
-Für Authentifizierungs Schemas, in denen mehrere Schlag runden erforderlich sind, löscht die HTTP-Server-API den Authentifizierungs Hand Shake, wenn das aktuelle Schema aufgrund von Konfigurationsänderungen von der Anwendung nicht mehr unterstützt wird. Wenn die Anwendung z. b. das Aushandeln und Deaktivieren von NTLM ermöglicht und die HTTP-Server-API den zwischengeschalteten Authentifizierungs Handshake für NTLM hat, wird der Handshake für NTLM verworfen, und die Anforderung wird an die Anwendung übermittelt. Die Anwendung sendet eine 401-Authentifizierungs Aufforderung mit den neuen Authentifizierungs Typen, die im WWW-Authenticate-Header angegeben werden.
+Bei Authentifizierungsschemas, bei denen mehrere Handshake-Runden erforderlich sind, löscht die HTTP-Server-API den Authentifizierungshandshake, wenn das aktuelle Schema aufgrund von Konfigurationsänderungen von der Anwendung nicht mehr unterstützt wird. Wenn die Anwendung beispielsweise Negotiate aktiviert und NTLM deaktiviert und sich die HTTP-Server-API im Zwischenauthentifizierungshandshake für NTLM befindet, wird der Handshake für NTLM verworfen, und die Anforderung wird an die Anwendung übergeben. Die Anwendung sendet eine 401-Authentifizierungsaufforderung mit den neuen Authentifizierungstypen, die im WWW-Authenticate-Header angegeben sind.
 
- 
+ 
 
- 
+ 
 
 
 

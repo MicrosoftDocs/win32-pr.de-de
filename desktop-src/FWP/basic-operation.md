@@ -1,65 +1,65 @@
 ---
 title: WFP-Vorgang
-description: Die Windows-Filter Plattform (WFP) führt ihre Aufgaben durch die Integration der folgenden grundlegenden Entitäts Ebenen, Filter, Shims und Callouts durch.
+description: Windows Die Filterplattform (WFP) führt ihre Aufgaben aus, indem die folgenden grundlegenden Entitäten Layer, Filters, Shims und Callouts integriert werden.
 ms.assetid: bf88ace7-1160-434b-9be0-3f9db6aa2e87
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44e7a7d38bd0de5b1f549e2187c414644bf68442
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8254ed468b856392477a643ce13f2b609245031f7363865b8c93ccfda64ba9fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015388"
 ---
 # <a name="wfp-operation"></a>WFP-Vorgang
 
-Die Windows-Filter Plattform (WFP) führt ihre Aufgaben durch die Integration der folgenden grundlegenden Entitäten durch: *Ebenen*, *Filter*, *Shims* und *Legenden.*
+Windows Die Filterplattform (WFP) führt ihre Aufgaben aus, indem die folgenden grundlegenden Entitäten integriert werden: *Ebenen,* *Filter,* *Shims* und *Callouts*.
 
 ## <a name="layers"></a>Ebenen
 
-Eine *Ebene* ist ein Container, der von der Filter-Engine verwaltet wird, deren Funktion das Organisieren von Filtern in Sets vorsieht. Eine Ebene ist kein Modul im Netzwerk Stapel. Jede Ebene verfügt über ein Schema, das den Typ der Filter definiert, die dieser hinzugefügt werden können. Weitere Informationen finden Sie [unter Filterbedingungen, die auf jeder Filter Ebene verfügbar sind](filtering-conditions-available-at-each-filtering-layer.md) .
+Eine *Ebene ist* ein Container, der von der Filter-Engine verwaltet wird, deren Funktion das Organisieren von Filtern in Sätzen ist. Eine Ebene ist kein Modul im Netzwerkstapel. Jede Ebene verfügt über ein Schema, das den Typ der Filter definiert, die ihr hinzugefügt werden können. Weitere [Informationen finden Sie unter Verfügbare Filterbedingungen auf](filtering-conditions-available-at-each-filtering-layer.md) jeder Filterebene.
 
-Ebenen können Unterebenen enthalten, um widersprüchliche Filteranforderungen zu verwalten, z. b. "Blockieren von TCP-Ports über 1024" und "Open Port 1080". Die Regeln zum Verwalten von Filter Konflikten werden durch [Filter-Schiedsgerichtsbarkeit](filter-arbitration.md)bestimmt.
+Ebenen können Unterebenen enthalten, um in Konflikt stehende Filteranforderungen zu verwalten, z. B. "TCP-Ports über 1024 blockieren" und "Port 1080 öffnen". Die Regeln für die Verwaltung von Filterkonflikten werden durch [Filterschlichtung bestimmt.](filter-arbitration.md)
 
-WFP enthält eine Reihe [integrierter Unterebenen](management-filtering-sublayer-identifiers.md). Jede Ebene erbt alle integrierten Unterebenen. Benutzer können auch eigene untergeordnete Ebenen hinzufügen.
+WFP enthält eine Reihe [integrierter Unterebenen.](management-filtering-sublayer-identifiers.md) Jede Ebene erbt alle integrierten Unterebenen. Benutzer können auch eigene Unterebenen hinzufügen.
 
-Die Liste der Filter-Engine-Schichten finden Sie im Referenz Abschnitt [**Filtern von ebenenbezeichern**](management-filtering-layer-identifiers-.md).
+Die Liste der Filter-Engine-Ebenen finden Sie im Referenzabschnitt [**Thema Filtern von Ebenenbezeichnern.**](management-filtering-layer-identifiers-.md)
 
 ## <a name="filters"></a>Filter
 
-Ein *Filter* ist eine Regel, die mit eingehenden oder ausgehenden Paketen übereinstimmt. Die Regel teilt der Filter-Engine mit, was mit dem Paket zu tun ist, einschließlich des aufrufungsmoduls für eine Tiefe Paket-oder Datenstrom Untersuchung. Ein Filter kann z. b. "Blockieren von Datenverkehr mit einem TCP-Port größer als 1024" oder "Aufrufe an IDs für nicht gesicherten Datenverkehr" angeben.
+Ein *Filter* ist eine Regel, die mit eingehenden oder ausgehenden Paketen übereinstimmen. Die Regel teilt der Filter-Engine mit, was mit dem Paket zu tun ist, einschließlich des Aufrufs eines Calloutmoduls für die tiefe Paket- oder Streamüberprüfung. Ein Filter kann z. B. "Datenverkehr mit einem TCP-Port über 1024 blockieren" oder "Call out to IDS for all traffic that is not secured" (Aufruf an IDS für sämtlichen Datenverkehr, der nicht gesichert ist) angeben.
 
-Ein Filter für die Start Zeit ist ein Filter, der zum Zeitpunkt der Startzeit erzwungen wird, sobald der TCP/IP-stapeltreiber (tcpip.sys) gestartet wird. Ein Start Zeitfilter ist deaktiviert, wenn BFE gestartet wird. Ein Filter wird als Start Zeit gekennzeichnet, indem das Flag "Boottime" für das [**fwpm- \_ \_ \_ filterflag**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_filter0) festgelegt wird, wenn [**FwpmFilterAdd0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmfilteradd0) aufgerufen wird.
+Ein Startzeitfilter ist ein Filter, der zur Startzeit erzwungen wird, sobald der TCP/IP-Stapeltreiber (tcpip.sys) gestartet wird. Ein Startzeitfilter wird deaktiviert, wenn BFE gestartet wird. Ein Filter wird als Startzeit gekennzeichnet, indem das [**FWPM \_ FILTER \_ FLAG \_ BOOTTIME-Flag**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_filter0) beim [**Aufrufen von FwpmFilterAdd0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmfilteradd0) aktiviert wird.
 
-Ein Lauf Zeitfilter ist ein Filter, der nach dem Start von BFE erzwungen wird. Ein Lauf Zeitfilter kann abhängig von der Art der Erstellung statisch, dynamisch oder permanent sein. Weitere Informationen zu den verschiedenen Typen von Lauf Zeit Filtern und deren Lebensdauer finden Sie unter [Objekt Verwaltung](object-management.md) .
+Ein Laufzeitfilter ist ein Filter, der nach dem Start von BFE erzwungen wird. Ein Laufzeitfilter kann je nach Art der Erstellten statisch, dynamisch oder persistent sein. Weitere [Informationen zu den](object-management.md) verschiedenen Typen von Laufzeitfiltern und deren Lebensdauer finden Sie unter Objektverwaltung.
 
 ## <a name="shims"></a>Shims
 
-Ein *Shim* ist eine Kernelmoduskomponente, die Filter Entscheidungen durch die Klassifizierung der Filter-Engine-Ebenen ermöglicht. Jedes Shim klassifiziert eine oder mehrere Ebenen. Beispielsweise klassifiziert das transportebenenmodul-Shim die eingehende Transportschicht, die ausgehende Transportschicht und die ALE Connect-und Receive-Accept Ebenen für das erste Paket eines Flows.
+Ein *Shim ist* eine Komponente im Kernelmodus, die Filterentscheidungen trifft, indem er anhand der Filter-Engine-Ebenen klassifiziert wird. Jeder Shim wird für eine oder mehrere Ebenen klassifiziert. Der Shim transport layer module klassifiziert z. B. für das erste Paket eines Datenflusses die Eingangstransportebene, die Ausgehende Transportebene und die ALE Verbinden- und Receive-Accept-Schichten.
 
-Da Pakete, Streams und Ereignisse den Netzwerk Stapel durchlaufen, analysieren die Shims diese, um die klassifizierbaren Bedingungen und Werte zu extrahieren, und dann die Filter-Engine aufzurufen, um Sie anhand der Filter in einer bestimmten Ebene auszuwerten. Die Filter-Engine kann eine oder mehrere Legenden als Teil der Klassifizierung aufrufen. Die Shims führen das eigentliche Löschen von Paketen, Streams und Ereignissen basierend auf dem Ergebnis der Klassifizierung durch, die von der Filter-Engine ausgeführt wird.
+Während Pakete, Datenströme und Ereignisse den Netzwerkstapel durchlaufen, analysieren die Shims sie, um die durchklassifizierbaren Bedingungen und Werte zu extrahieren, und rufen dann die Filter-Engine auf, um sie anhand der Filter in einer bestimmten Ebene zu bewerten. Die Filter-Engine kann im Rahmen der Klassifizierung eine oder mehrere Aufrufe aufrufen. Die Shims führen das tatsächliche Löschen von Paketen, Streams und Ereignissen basierend auf dem Ergebnis der Klassifizierung durch, die von der Filter-Engine ausgeführt wird.
 
 ## <a name="callouts"></a>Aufrufe
 
-Eine Legende ist eine Reihe von Funktionen *,* die von einem Treiber verfügbar gemacht und für die spezielle Filterung verwendet werden. Sie werden verwendet, um die Pakete zu analysieren und zu manipulieren, wie z. b. Viren Überprüfung, Überprüfung auf ungeeignete Inhalte durch die Überprüfung auf ungeeignete Inhalte, Paketdaten Analyse für Überwachungstools. Einige Legenden, wie z. b. der Network Address Translation (NAT)-Treiber, sind in das Betriebssystem integriert. Andere, wie z. b. eine HTTP-Steuerelement Legende oder das Angriffs Erkennungs System (ID), können von unabhängigen Softwareanbietern (ISVs) bereitgestellt werden. Die Legenden Funktionen werden von der Filter-Engine aufgerufen, wenn ein entsprechender Legenden Filter auf einer bestimmten Ebene übereinstimmt.
+Eine *Rückruffunktion ist* eine Reihe von Funktionen, die von einem Treiber verfügbar gemacht und für spezielle Filterung verwendet werden. Sie werden verwendet, um die Pakete zu analysieren und zu manipulieren, z. B. Virenscan, Überprüfung der Jugendschutz auf ungeeigneten Inhalt, Paketdatenanalyse für Überwachungstools. Einige Aufrufe, z. B. der NAT-Treiber (Network Address Translation), sind in das Betriebssystem integriert. Andere, wie z. B. eine HTTP-Jugendschutz-Callout oder die IDS-Rückrufe (Intrusion Detection System), können von unabhängigen Softwareherstellern (INDEPENDENT Software Vendors, ISVs) bereitgestellt werden. Die Calloutfunktionen werden von der Filter-Engine aufgerufen, wenn ein entsprechender Aufruffilter auf einer bestimmten Ebene übereinstimmen.
 
-Callouts können in jeder der Kernel Modus-WFP-Ebenen registriert werden. Callouts können eine Aktion ("blockieren", "zulassen") zurückgeben und beim Durchführen der streamüberprüfung "verzögern", "Weitere Daten benötigen", "Verbindung löschen") und den eingehenden und ausgehenden Netzwerk Datenverkehr ändern und sichern.
+Callouts können auf allen WFP-Ebenen im Kernelmodus registriert werden. Rückrufe können eine Aktion ("Blockieren", "Zulassen" und bei der Streamüberprüfung "Zurückstellen", "Weitere Daten benötigen", "Verbindung ablegen") zurückgeben und eingehenden und ausgehenden Netzwerkdatenverkehr ändern und schützen.
 
-Sobald eine Legende bei der Filter-Engine registriert ist, kann Sie zu verarbeitende Netzwerk Datenverkehr empfangen. Der Datenverkehr kann abhängig von der Ebene Pakete, Streams oder Ereignisse sein. Eine Anwendung oder ein Firewall-Agent bewirkt, dass Datenverkehr an eine Legende übermittelt wird, indem ein Filter hinzugefügt wird, dessen Aktion "Legenden" ist und dessen Legenden-ID der Bezeichner der Legende ist. Callouts können das Filtermodul anweisen, "Block" oder "zulassen" an das Shim zurückzugeben. Aufrufe können auch "Continue" zurückgeben, damit andere Filter das Paket verarbeiten können.
+Sobald eine Rückrufliste bei der Filter-Engine registriert wurde, kann sie zu verarbeitenden Netzwerkdatenverkehr empfangen. Der Datenverkehr kann je nach Ebene Pakete, Streams oder Ereignisse sein. Eine Anwendung oder ein Firewall-Agent bewirkt, dass Datenverkehr an eine Rückrufliste übergeben wird, indem ein Filter hinzugefügt wird, dessen Aktion "Callout" ist und dessen Aufruf-ID der Bezeichner dieser Rückrufliste ist. Durch Aufrufe kann die Filter-Engine angewiesen werden, "Block" oder "Permit" an den Shim zurück zu geben. Rückrufe können auch "Continue" zurückgeben, damit andere Filter das Paket verarbeiten können.
 
-Mehrere Aufrufe können von einem Legenden Treiber verfügbar gemacht werden.
+Mehrere Aufrufe können von einem Callouttreiber verfügbar gemacht werden.
 
-Eine Legende muss hinzugefügt werden (mit [**FwpmCalloutAdd0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutadd0)) und (mit [fwpscallumgiester](/windows-hardware/drivers/ddi/_netvista/)) registriert werden, bevor Sie verwendet werden kann. Vor der Erstellung von Filtern, die auf die Legende verweisen, ist ein Aufruf von **FwpmCalloutAdd0** erforderlich. Ein Aufruf von fwpscallmysqgiester ist erforderlich, bevor WFP die Legende aufrufen kann, wenn die Legenden Filter abgeglichen werden. Standardmäßig werden Filter, die auf Aufrufe verweisen, die hinzugefügt, aber noch nicht bei der Filter-Engine registriert wurden, als "Block Filter" behandelt. Die Reihenfolge, in der **FwpmCalloutAdd0** und fwpscallumgisteraufgerufen werden, spielt keine Rolle. Eine permanente Legende muss nur einmal hinzugefügt werden und muss jedes Mal registriert werden, wenn der Treiber, der die Legende implementiert, gestartet wird (z. b. nach einem Neustart).
+Eine Aufrufe müssen hinzugefügt (mit [**FwpmCalloutAdd0)**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutadd0)und registriert (mit [FwpsCalloutRegister)](/windows-hardware/drivers/ddi/_netvista/)werden, bevor sie verwendet werden kann. Vor der Erstellung von Filtern, die auf die Rückrufe verweisen, ist ein Aufruf von **FwpmCalloutAdd0** erforderlich. Ein Aufruf von FwpsCalloutRegister ist erforderlich, bevor WFP die Aufrufe aufrufen kann, wenn die Aufruffilter übereinstimmen. Standardmäßig werden Filter, die auf Aufrufe verweisen, die hinzugefügt, aber noch nicht bei der Filter-Engine registriert wurden, als "Blockieren"-Filter behandelt. Die Reihenfolge des Aufrufs **von FwpmCalloutAdd0** und FwpsCalloutRegister spielt keine Rolle. Eine persistente Rückrufe muss nur einmal hinzugefügt werden und muss jedes Mal registriert werden, wenn der Treiber, der die Callout implementiert, gestartet wird (z. B. nach einem Neustart).
 
 ## <a name="classification"></a>Klassifizierung
 
-Klassifizierung ist der Prozess, bei dem Filter auf den Netzwerk Datenverkehr (Paket, Stream oder Ereignis) angewendet werden, um das Ergebnis "zulassen" oder "blockieren" für diesen Datenverkehr zu ermitteln. Bei einem Paket, einem Stream oder einem Ereignis gibt es einen Klassifizierungs aufruppe pro Schicht.
+Klassifizierung ist der Prozess der Anwendung von Filtern auf Netzwerkdatenverkehr (Paket, Stream oder Ereignis), um das Ergebnis von "Zulassen" oder "Blockieren" für diesen Datenverkehr zu bestimmen. Für ein Paket, einen Stream oder ein Ereignis gibt es einen Klassifizierungsaufruf pro Ebene.
 
-Während der Klassifizierung werden die Eigenschaften (z. b. Quelladresse) des Pakets, Streams oder Ereignisses mit Filterbedingungen verglichen, die für Filter auf der Ebene festgelegt sind, auf der die Klassifizierung aufgerufen wird. Wenn Übereinstimmungen gefunden werden, wird der [Filter-Schiedsgerichts](filter-arbitration.md) ungsalgorithmus verwendet, um das Ergebnis des Klassifizierungs Vorgangs zu bestimmen.
+Während der Klassifizierung werden die Eigenschaften (z. B. die Quelladresse) des Pakets, Streams oder Ereignisses mit Filterbedingungen verglichen, die für Filter auf der Ebene festgelegt werden, auf der die Klassifizierung aufgerufen wird. Wenn Übereinstimmungen gefunden werden, wird der [Filter-Vermittlungsalgorithmus](filter-arbitration.md) verwendet, um das Ergebnis des Klassifizierungsprozesses zu bestimmen.
 
-Eine Klassifizierungs Anforderung wird von einem Shim ausgelöst.
+Eine Klassifizierungsanforderung wird durch einen Shim ausgelöst.
 
-Klassifizierungs Aktionen können wie folgt lauten:
+Klassifizierungsaktionen können eine der beiden aktionen sein:
 
 -   Zulassen
 -   Blockieren
@@ -67,38 +67,38 @@ Klassifizierungs Aktionen können wie folgt lauten:
     -   Zulassen
     -   Blockieren
     -   Weiter
-    -   Wickeln
+    -   Verschieben
     -   Weitere Daten benötigen
-    -   Verbindung löschen
+    -   Verbindung verdringen
 
 ## <a name="wfp-operation"></a>WFP-Vorgang
 
-Sobald der TCP/IP-stapeltreiber (tcpip.sys) gestartet wird, erzwingt die kernelmodusfilter-Engine die Sicherheitsrichtlinie des Systems über Start Zeitfilter, sobald der TCP/IP-stapeltreiber () gestartet wird.
+Sobald der TCP/IP-Stapeltreiber (tcpip.sys) gestartet wird, erzwingt die Kernelmodus-Filter-Engine zur Startzeit die Sicherheitsrichtlinie des Systems durch Startzeitfilter.
 
-Nachdem die Basis Filter-Engine (BFE) im Benutzermodus gestartet wurde, werden der Plattform persistente Filter hinzugefügt, die Start Zeitfilter sind deaktiviert, und Benachrichtigungen werden an die Legenden Treiber gesendet, die mithilfe von [FwpmBfeStateSubscribeChanges0](/windows-hardware/drivers/ddi/fwpmk/nf-fwpmk-fwpmbfestatesubscribechanges0)abonniert wurden. Die Benachrichtigungen werden unmittelbar nach Abschluss der Initialisierung von BFE versendet. Die Plattform ist nun bereit für die Registrierung und das Hinzufügen von Lauf Zeit Objekten.
+Sobald die Basisfilterungs-Engine (Base Filtering Engine, BFE) im Benutzermodus gestartet wird, werden der Plattform persistente Filter hinzugefügt, Startzeitfilter deaktiviert, und Benachrichtigungen werden an die Callouttreiber gesendet, die [mit FwpmBfeStateSubscribeChanges0 abonniert haben.](/windows-hardware/drivers/ddi/fwpmk/nf-fwpmk-fwpmbfestatesubscribechanges0) Die Benachrichtigungen werden unmittelbar nach Abschluss der BFE-Initialisierung gesendet. Die Plattform ist jetzt bereit für die Registrierung von Rückrufen und das Hinzugefügt von Laufzeitobjekten.
 
-Die Umstellung von der Start Zeit auf persistente Filter kann auf einem langsamen Computer mehrere Sekunden oder sogar länger dauern. Er ist atomarisch. Wenn ein Anbieter also sowohl über einen Startzeit als auch über einen persistenten Filter verfügt, wird nie ein Fenster angezeigt, wenn keines der beiden Optionen wirksam ist.
+Der Übergang von der Startzeit zu permanenten Filtern kann auf einem langsamen Computer mehrere Sekunden oder sogar länger dauern. Dies ist atomar. Wenn ein Anbieter sowohl über einen Startzeit- als auch über einen permanenten Filter verfügt, wird es also nie ein Fenster geben, wenn keines von beiden wirksam ist.
 
-Nach dem Start von BFE können Lauf Zeitfilter durch Firewall-Agents oder durch benutzerdefinierte Firewalllösungen hinzugefügt werden. BFE verarbeitet diese Filter und sendet Sie zur Erzwingung an die entsprechende Filter-Engine-Schicht. BFE akzeptiert auch Authentifizierungs Einstellungen und sendet diese Einstellungen an die IPSec-Schlüssel für die Schlüssel Erstellung (IKE/AuthIP). Weitere Informationen finden Sie unter [IPSec-Konfiguration](ipsec-configuration.md) .
+Nach dem Start von BFE können Laufzeitfilter von Firewall-Agents oder von benutzerdefinierten Firewalllösungen hinzugefügt werden. BFE verarbeitet diese Filter und sendet sie zur Erzwingung an die entsprechende Filtermodulebene. BFE akzeptiert auch Authentifizierungseinstellungen und sendet diese Einstellungen an die IPsec-Schlüsselmodulen (IKE/AuthIP). Weitere [Informationen finden Sie unter IPsec-Konfiguration.](ipsec-configuration.md)
 
-Filter und Authentifizierungs Einstellungen können jederzeit über die RPC-Schnittstelle, die von den BFE verfügbar gemacht wird, im System hinzugefügt, entfernt oder geändert werden. Unterebenen und Legenden Module können ebenfalls hinzugefügt oder entfernt werden.
+Filter und Authentifizierungseinstellungen können jederzeit über die VOM BFE verfügbar gemachte RPC-Schnittstelle im System hinzugefügt, entfernt oder geändert werden. Untergeordnete Ebenen und Calloutmodule können ebenfalls hinzugefügt oder entfernt werden.
 
 Datenfluss:
 
-1.  Ein Paket wird in den Netzwerk Stapel integriert.
-2.  Der Netzwerk Stapel findet und Ruft einen Shim auf.
+1.  Ein Paket wird in den Netzwerkstapel übertragen.
+2.  Der Netzwerkstapel sucht einen Shim und ruft ihn auf.
 3.  Der Shim ruft den Klassifizierungsprozess auf einer bestimmten Ebene auf.
-4.  Während der Klassifizierung werden Filter abgeglichen, und die resultierende Aktion wird durchgeführt. (Siehe [Filter-Schiedsgerichtsbarkeit](filter-arbitration.md).)
-5.  Wenn beim Klassifizierungsprozess alle Legenden Filter abgeglichen werden, werden die entsprechenden Legenden aufgerufen.
-6.  Der Shim agiert bei der abschließenden Filter Entscheidung (z. b. beim Ablegen des Pakets).
+4.  Während der Klassifizierung werden Filter übereinstimmen, und die resultierende Aktion wird ergriffen. (Weitere Informationen [finden Sie unter Filtern von Vermittlungen.)](filter-arbitration.md)
+5.  Wenn während des Klassifizierungsprozesses Eine Übereinstimmung mit Rückruffiltern vor sich geht, werden die entsprechenden Aufrufe aufgerufen.
+6.  Der Shim bezieht sich auf die endgültige Filterungsentscheidung (z. B. das Ablegen des Pakets).
 
 Der ausgehende Datenfluss folgt einem ähnlichen Muster.
 
-In den folgenden Themen wird der WFP-Vorgang ausführlicher beschrieben.
+In den folgenden Themen wird der Betrieb des WFP weiter beschrieben.
 
--   [TCP-paketflows](tcp-packet-flows.md)
--   [UDP-paketflows](udp-packet-flows.md)
--   [Filterung Filtern](filter-arbitration.md)
+-   [TCP-Paketflüsse](tcp-packet-flows.md)
+-   [UDP-Paketflüsse](udp-packet-flows.md)
+-   [Filtern der Vermittlung](filter-arbitration.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -107,9 +107,9 @@ In den folgenden Themen wird der WFP-Vorgang ausführlicher beschrieben.
 [Objektmodell](object-model.md)
 </dt> <dt>
 
-[Objekt Verwaltung](object-management.md)
+[Objektverwaltung](object-management.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

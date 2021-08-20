@@ -28,7 +28,7 @@ Der [EsentIndexTuplesNonUniqueOnlyException-Typ](./esentindextuplesnonuniqueonly
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -78,7 +78,7 @@ Der [EsentIndexTuplesNonUniqueOnlyException-Typ](./esentindextuplesnonuniqueonly
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

@@ -18,7 +18,7 @@ ms.locfileid: "118341247"
 ---
 # <a name="creating-the-region-file"></a>Erstellen der Regionsdatei
 
-Sie möchten eine Regionsdatei erstellen, die anzeigt, welche Bereiche auf Tippen reagieren. Sie können einfach die Basisebenen jedes Elements auf eine neue Ebene kopieren und diese entsprechend den Farbnummern farbig gestalten, die Sie in der Skindefinitionsdatei verwenden werden. Stellen Sie sicher, dass die Bilder, die Sie auf dieser Ebene erstellen, solide sind und keine Auswirkungen angewendet werden. Wahrscheinlich möchten Sie die Farbnummern für jedes Bild notieren. Sie können die Farbnummern aus der Farbwähler erhalten. Sie möchten die RGB-Zahlen verwenden, bei denen es sich um drei Dezimalzahlen handelt. Jede Zahl liegt zwischen 0 und 255. Ein durchgezogenes Rot wäre beispielsweise 255, 0, 0.
+Sie möchten eine Regionsdatei erstellen, die anzeigt, welche Bereiche auf Tippen reagieren. Sie können einfach die Basisebenen jedes Elements auf eine neue Ebene kopieren und diese entsprechend den Farbnummern farbig gestalten, die Sie in der Skindefinitionsdatei verwenden werden. Stellen Sie sicher, dass die Bilder, die Sie auf dieser Ebene erstellen, solide sind und keine Auswirkungen angewendet werden. Wahrscheinlich möchten Sie die Farbnummern für jedes Bild notieren. Sie können die Farbnummern aus der Farbwähler "Phototon" abrufen. Sie möchten die RGB-Zahlen verwenden, bei denen es sich um drei Dezimalzahlen handelt. Jede Zahl liegt zwischen 0 und 255. Ein durchgezogenes Rot wäre beispielsweise 255, 0, 0.
 
 > [!Note]  
 > Regionsdateien werden in Windows Media Player 10 Mobile-Skins nicht verwendet, da Schaltflächentypen in Windows Media Player 10 Mobile oder höher nicht unterstützt werden.

@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld "ausführen" für den Benutzer an. Diese Methode hat denselben Effekt wie das Klicken auf das Startmenü und das Auswählen von ausführen.
+description: Zeigt dem Benutzer das Dialogfeld Ausführen an. Diese Methode hat die gleiche Wirkung wie das Klicken auf Startmenü Und wählen Sie Ausführen aus.
 ms.assetid: bb984777-e09f-41e6-8359-51c5291654f7
-title: Shell. filerun-Methode (Shldisp. h)
+title: Shell.FileRun-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ebccf11ea21fdd4ceba2563a6110c1eb2494947b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a4e67e6b3182a9eccde301b0ebb51c7cd679d7b67b6f787c10d814f242431bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968599"
 ---
-# <a name="shellfilerun-method"></a>Shell. filerun-Methode
+# <a name="shellfilerun-method"></a>Shell.FileRun-Methode
 
-Zeigt das Dialogfeld " **Ausführen** " für den Benutzer an. Diese Methode hat denselben Effekt wie das Klicken auf das **Startmenü** und das Auswählen von **Ausführen**.
+Zeigt dem **Benutzer das** Dialogfeld Ausführen an. Diese Methode hat die gleiche Wirkung wie das Klicken auf das **Startmenü** und das Auswählen **von Ausführen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die Verwendung von **filerun** . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Das folgende Beispiel zeigt **die Verwendung von FileRun.** Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -75,7 +75,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -109,17 +109,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

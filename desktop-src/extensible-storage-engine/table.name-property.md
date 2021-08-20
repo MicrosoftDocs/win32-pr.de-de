@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Table.Name-Eigenschaft'
+description: 'Weitere Informationen zu: Table.Name-Eigenschaft'
 title: Table.Name-Eigenschaft
 TOCTitle: 'Name property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Table.Name
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1cfc1141b64b968040a11d4a367cd809fb34e4fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca5879d75fd3128d6af92ec583d34f3539b2d3278038a71deb604078d87976aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978390"
 ---
 # <a name="tablename-property"></a>Table.Name-Eigenschaft
 
 Ruft den Namen dieser Tabelle ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public string Name { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Table-Klasse](./table-class.md)
 
-[Tabellen Mitglieder](./table-members.md)
+[Tabellenmember](./table-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

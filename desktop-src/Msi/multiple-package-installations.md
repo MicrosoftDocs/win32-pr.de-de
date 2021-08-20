@@ -13,13 +13,13 @@ ms.locfileid: "118943411"
 ---
 # <a name="multiple-package-installations"></a>Multiple-Package Installationen
 
-Windows Das Installationsprogramm kann mehrere Pakete mithilfe der [*Transaktionsverarbeitung*](t-gly.md)installieren. Diese Funktion ist ab Windows Installer 4.5 verfügbar. Das Installationsprogramm installiert alle Pakete, die zu einer Transaktion mit mehreren Paketen gehören, oder keines der Pakete. Wenn alle Pakete in der Transaktion nicht erfolgreich installiert werden können oder der Benutzer die Installation abbricht, kann der Windows Installer ein Rollback der Änderungen durchführen und den ursprünglichen Zustand des Computers wiederherstellen.
+Windows Das Installationsprogramm kann mehrere Pakete mithilfe der [*Transaktionsverarbeitung installieren.*](t-gly.md) Diese Funktion ist ab Windows Installer 4.5 verfügbar. Das Installationsprogramm installiert alle Pakete, die zu einer Transaktion mit mehreren Paketen oder keinem der Pakete gehören. Wenn nicht alle Pakete in der Transaktion erfolgreich installiert werden können oder der Benutzer die Installation abbricht, kann der Windows Installer ein Rollback der Änderungen ausführen und den ursprünglichen Zustand des Computers wiederherstellen.
 
-Ein Installationspaket mit mehreren Paketen kann eine [MsiEmbeddedChainer-Tabelle](msiembeddedchainer-table.md) enthalten, die auf eine benutzerdefinierte Funktion verweist, die die Funktionen [**MsiBeginTransaction,**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona) [**MsiJoinTransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)und [**MsiEndTransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction) verwendet.
+Ein Installationspaket mit mehreren Paketen kann eine [MsiEmbeddedChainer-Tabelle](msiembeddedchainer-table.md) enthalten, die auf eine benutzerdefinierte Funktion verweist, die die [**Funktionen MsiBeginTransaction,**](/windows/desktop/api/Msi/nf-msi-msibegintransactiona) [**MsiJoinTransaction**](/windows/desktop/api/Msi/nf-msi-msijointransaction)und [**MsiEndTransaction**](/windows/desktop/api/Msi/nf-msi-msiendtransaction) verwendet.
 
-Die [Tabelle MsiPackageCertificate](msipackagecertificate-table.md) listet digitale Signaturzertifikate auf, mit denen die Identität der Installationspakete überprüft wird, die eine Installation mit mehreren Paketen durchführen. Sie können diese Tabelle verwenden, um zu reduzieren, wie oft bei der Installation mehrerer Pakete eine Eingabeaufforderung für die Benutzerkontensteuerung (User [*Account Control,*](u-gly.md) UAC) angezeigt wird, die eine Antwort durch einen Administrator erfordert.
+In [der Tabelle MsiPackageCertificate](msipackagecertificate-table.md) sind digitale Signaturzertifikate aufgeführt, mit denen die Identität der Installationspakete überprüft wird, die eine Installation mit mehreren Paketen ausführen. Sie können diese Tabelle verwenden, um zu reduzieren, wie oft ihre Installation mit mehreren Paketen eine Eingabeaufforderung zur Benutzerkontensteuerung (User [*Account Control,*](u-gly.md) UAC) anzeigt, die eine Antwort eines Administrators erfordert.
 
-Die folgenden Windows Installer-Funktionen können Änderungen am Computer des Benutzers vornehmen, wenn der Windows Installer Anwendungen installiert, repariert, aktualisiert oder entfernt. Ab Windows Installer 4.5 kann das Installationsprogramm ein Rollback der Änderungen durchführen, die von diesen Funktionen während der [*Transaktionsverarbeitung*](t-gly.md) einer Installation mit mehreren Paketen vorgenommen wurden:
+Die folgenden Windows Installer-Funktionen können Änderungen am Computer des Benutzers vornehmen, wenn der Windows Installer Anwendungen installiert, repariert, aktualisiert oder entfernt. Ab Windows Installer 4.5 kann das Installationsprogramm ein Rollback für [](t-gly.md) Änderungen ausführen, die von diesen Funktionen während der Transaktionsverarbeitung einer Installation mit mehreren Paketen vorgenommen wurden:
 
 <dl>
 
@@ -42,11 +42,11 @@ Die folgenden Windows Installer-Funktionen können Änderungen am Computer des B
 [**MsiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)  
 </dl>
 
-Es gibt eine Ausnahme, wenn der Windows Installer ein Paket erkennt, das zu einer Installation mit mehreren Paketen gehört, die eine [ForceReboot-](forcereboot-action.md) oder [ScheduleReboot-Aktion](schedulereboot-action.md) enthält. In diesem Fall installiert Windows Installer nicht nur dieses Paket. Andere Pakete, die zur Installation mehrerer Pakete gehören und keine ForceReboot- oder ScheduleReboot-Aktion enthalten, können installiert werden.
+Es gibt eine Ausnahme, wenn der Windows Installer auf ein Paket stößt, das zu einer Installation mit mehreren Paketen gehört, die eine [ForceReboot-](forcereboot-action.md) oder [ScheduleReboot-Aktion](schedulereboot-action.md) enthält. In diesem Fall installiert Windows Installer nicht nur dieses Paket. Andere Pakete, die zur Installation mehrerer Pakete gehören und keine ForceReboot- oder ScheduleReboot-Aktion enthalten, können installiert werden.
 
-**[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)**[*Transaktionsverarbeitung*](t-gly.md) von Installationen mit mehreren Paketen Windows Installer wird nicht unterstützt. Diese Versionen des Windows Installers können kein Rollback für die Installation mehrerer Pakete als einzelne Transaktion durchführen.
+**[Windows Installer 4.0 und](not-supported-in-windows-installer-4-0.md)früher: **[*Die*](t-gly.md) Transaktionsverarbeitung mehrerer Pakete Windows Installer-Installationen wird nicht unterstützt. Diese Versionen des Windows Installers können kein Rollback für die Installation mehrerer Pakete als einzelne Transaktion ausführen.
 
-**Windows Server 2008 R2 mit aktivierter [Remotedesktopdienste-Rolle:](../termserv/terminal-services-portal.md)** Wird nicht unterstützt. Bei einer Installation mehrerer Pakete mithilfe der [MsiEmbeddedChainer-Tabelle](msiembeddedchainer-table.md) tritt ein Fehler auf, wenn die [Remotedesktopdienste-Rolle](../termserv/terminal-services-portal.md) aktiviert ist.
+**Windows Server 2008 R2 mit [aktivierter Remotedesktopdienste-Rolle:](../termserv/terminal-services-portal.md)** Nicht unterstützt. Eine Installation mehrerer Pakete mithilfe der [MsiEmbeddedChainer-Tabelle](msiembeddedchainer-table.md) schlägt fehl, wenn [die](../termserv/terminal-services-portal.md) Remotedesktopdienste aktiviert ist.
 
  
 

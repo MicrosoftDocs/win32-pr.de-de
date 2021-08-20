@@ -1,5 +1,5 @@
 ---
-description: Die Abstraktion eines Ports oder Verbindungs Punkts eines Geräts.
+description: Die Abstraktion eines Ports oder Verbindungspunkts eines Geräts.
 ms.assetid: ee725c64-587b-4e5f-9b1c-7a58902b0631
 title: CIM_LogicalPort-Klasse
 ms.topic: reference
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: eeed69e9669048377340cb0ca21e7a2e89f4baff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f226b2fe162047c724b6bd2795a3c2c8a5800347c0c1af1ffdaf97855f0893a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812027"
 ---
-# <a name="cim_logicalport-class"></a>CIM \_ logicalport-Klasse
+# <a name="cim_logicalport-class"></a>CIM \_ LogicalPort-Klasse
 
-Die Abstraktion eines Ports oder Verbindungs Punkts eines Geräts.
+Die Abstraktion eines Ports oder Verbindungspunkts eines Geräts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,58 +47,58 @@ class CIM_LogicalPort : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ logicalport** -Klasse verfügt über diese Typen von Membern:
+Die **KLASSE CIM \_ LogicalPort** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ logicalport** -Klasse verfügt über diese Eigenschaften.
+Die **KLASSE CIM \_ LogicalPort** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**MAXSPEED**
+**MaxSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), **Punit** ("Bit/Sekunde")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Die maximale Bandbreite des Ports (in Bits pro Sekunde).
+Die maximale Bandbreite des Ports in Bits pro Sekunde.
 
 </dd> <dt>
 
-**Otherporttype**
+**OtherPortType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ logicalport**".**PortType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ LogicalPort**.**PortType**")
 </dt> </dl>
 
-Beschreibt den Modultyp, wenn " **portType** " auf " **other** " ("1") festgelegt ist.
+Beschreibt den Typ des Moduls, wenn **PortType** auf **Other** ("1") festgelegt ist.
 
 </dd> <dt>
 
-**PortType**
+**Porttype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ networkport**](cim-networkport.md)".**Othernetworkporttype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ NetworkPort**](cim-networkport.md).**OtherNetworkPortType**")
 </dt> </dl>
 
 Der Porttyp.
@@ -128,14 +128,14 @@ Der Porttyp.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (3.. 15999)
+**DMTF Reserved** (3..15999)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (16000.65535)
+**Anbieter reserviert** (16000..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -145,45 +145,45 @@ Der Porttyp.
 **RequestedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ logicalport**".**Geschwindigkeit**"), **Punit** (" Bit/Sekunde ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ LogicalPort**.**Speed**"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Die angeforderte Bandbreite des Ports (in Bits pro Sekunde). Die tatsächliche Bandbreite wird in der Eigenschaft **Geschwindigkeit** gemeldet.
+Die angeforderte Bandbreite des Ports in Bits pro Sekunde. Die tatsächliche Bandbreite wird in der **Eigenschaft Geschwindigkeit** gemeldet.
 
 </dd> <dt>
 
 **Geschwindigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), **Punit** ("Bit/Sekunde")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Die Bandbreite des Ports (in Bits pro Sekunde).
+Die Bandbreite des Ports in Bits pro Sekunde.
 
 </dd> <dt>
 
-**Einsatz Einschränkung**
+**UsageRestriction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Port auf einen Front-End-oder Back-End-Port beschränkt ist.
+Gibt an, ob der Port auf einen Front-End- oder Back-End-Port beschränkt ist.
 
 <dt>
 
@@ -226,7 +226,7 @@ Gibt an, ob der Port auf einen Front-End-oder Back-End-Port beschränkt ist.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

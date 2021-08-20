@@ -1,7 +1,7 @@
 ---
-description: Entfernt eine Netzwerk-oder URL-Quelle.
+description: Entfernt ein Netzwerk oder eine URL-Quelle.
 ms.assetid: 76c7cc6c-740f-40e0-8385-024dcc82b79e
-title: Patch. sourcelistclearsource-Methode
+title: Patch.SourceListClearSource-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 7a85afc4eb85a4269284a49809c399dbb65b4894
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 75ffcf17329dfd3c8cc4a048035162658f9ccc0f5264805bb0ef8403082805a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118942270"
 ---
-# <a name="patchsourcelistclearsource-method"></a>Patch. sourcelistclearsource-Methode
+# <a name="patchsourcelistclearsource-method"></a>Patch.SourceListClearSource-Methode
 
-Die **sourcelistclearsource** -Methode entfernt eine Netzwerk-oder URL-Quelle. Diese Methode ruft [**msisourcelistclearsource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)auf.
+Die **SourceListClearSource-Methode** entfernt ein Netzwerk oder eine URL-Quelle. Diese Methode ruft [**MsiSourceListClearSource auf.**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ Patch.SourceListClearSource(
 
 <dl> <dt>
 
-*Type* 
+*Typ* 
 </dt> <dd>
 
-Der Typ der Quelle, die entfernt werden soll.
+Typ der zu entfernenden Quelle.
 
 <dl><span id="MSISOURCETYPE_NETWORK"></span><span id="msisourcetype_network"></span><dt>
 
-**msisourcetype- \_ Netzwerk**
+**MSISOURCETYPE \_ NETWORK**
 </dt><span id="MSISOURCETYPE_URL"></span><span id="msisourcetype_url"></span><dt>
 
-**msisourcetype- \_ URL**
+**MSISOURCETYPE-URL \_**
 </dt> </dl> </dd> <dt>
 
-*SourcePath* 
+*Sourcepath* 
 </dt> <dd>
 
-Der Pfad zur Quelle, die entfernt werden soll.
+Pfad zur zu entfernenden Quelle.
 
 </dd> </dl>
 
@@ -70,9 +70,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ iPatch ist definiert als 000c10a1-0000-0000-C000-000000000046<br/>                                                                                                                                                                                                            |
+| IID<br/>     | IID IPatch ist als \_ 000C10A1-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                                            |
 
 
 
@@ -83,10 +83,10 @@ Diese Methode gibt keinen Wert zurück.
 [**Patch**](patch-object.md)
 </dt> <dt>
 
-[**Msisourcelistclearsource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)
+[**MsiSourceListClearSource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

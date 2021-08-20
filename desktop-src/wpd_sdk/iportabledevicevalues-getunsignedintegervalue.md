@@ -1,7 +1,7 @@
 ---
-description: Die getunsignedintegervalue-Methode ruft einen Ulong-Wert (Type VT UI4) ab, der \_ von einem Schlüssel angegeben wird.
+description: Die GetUnsignedIntegerValue-Methode ruft einen ULONG-Wert (Typ VT UI4) ab, \_ der durch einen Schlüssel angegeben wird.
 ms.assetid: 167163fa-6583-4e6b-b801-3a441a95644b
-title: 'Iportabledevicevalues:: getunsignedintegervalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetUnsignedIntegerValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 5c7deb0b6ebfdb8feb90248f9d8e1cdf68411d9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eeb418d3d0aa42675f3d5766f2a8d08e1ad2377bbaa4a2a07f4ba96524d3dec9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026838"
 ---
-# <a name="iportabledevicevaluesgetunsignedintegervalue-method"></a>Iportabledevicevalues:: getunsignedintegervalue-Methode
+# <a name="iportabledevicevaluesgetunsignedintegervalue-method"></a>IPortableDeviceValues::GetUnsignedIntegerValue-Methode
 
-Die **getunsignedintegervalue** -Methode ruft einen **ulong** -Wert (Type VT UI4) ab, der \_ von einem Schlüssel angegeben wird.
+Die **GetUnsignedIntegerValue-Methode** ruft einen **ULONG-Wert** (Typ VT UI4) ab, \_ der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetUnsignedIntegerValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **ulong** -Wert.
+Zeiger auf den abgerufenen **ULONG-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                          |
 |------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                     |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **ulong** -Typ.<br/>  |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/> |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist kein **ULONG-Typ.**<br/>  |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/> |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von unterstützten Dienstereignissen.](retrieving-supported-events.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,25 +81,25 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unters
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportableendvicevalues:: Server Value**](iportabledevicevalues-setunsignedintegervalue.md)
+[**IPortableDeviceValues::SetUnsignedIntegerValue**](iportabledevicevalues-setunsignedintegervalue.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md)
+[Abrufen unterstützter Dienstereignisse](retrieving-supported-events.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Methoden](retrieving-supported-methods.md)
+[Abrufen unterstützter Dienstmethoden](retrieving-supported-methods.md)
 </dt> <dt>
 
 [Abrufen der von einem Gerät unterstützten Renderingfunktionen](retrieving-the-rendering-capabilities-supported-by-a-device.md)

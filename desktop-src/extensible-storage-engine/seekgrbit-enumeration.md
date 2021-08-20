@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter SeekGrbit-Enumeration.
+description: 'Weitere Informationen zu: SeekGrbit-Enumeration'
 title: SeekGrbit-Enumeration
 TOCTitle: SeekGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.SeekGrbit
@@ -81,27 +81,27 @@ public enum SeekGrbit
 <tr class="odd">
 <td></td>
 <td>SeekEQ</td>
-<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Anfang des Indexes am nächsten ist, der genau mit dem Suchschlüssel entspricht.</td>
+<td>Der Cursor wird am Indexeintrag positioniert, der am nächsten am Anfang des Indexes liegt und genau mit dem Suchschlüssel übereinstimmt.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>SeekLT</td>
-<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Ende des Indexes am nächsten liegt, der kleiner als ein Indexeintrag ist, der genau mit den Suchkriterien übereinstimmen würde.</td>
+<td>Der Cursor wird am Indexeintrag positioniert, der dem Indexende am nächsten liegt und kleiner als ein Indexeintrag ist, der genau den Suchkriterien entsprechen würde.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>SeekLE</td>
-<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Ende des Indexes am nächsten liegt, der kleiner oder gleich einem Indexeintrag ist, der genau den Suchkriterien entspricht.</td>
+<td>Der Cursor wird am Indexeintrag positioniert, der dem Indexende am nächsten liegt und kleiner oder gleich einem Indexeintrag ist, der genau den Suchkriterien entsprechen würde.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>SeekGE</td>
-<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Indexanfang am nächsten liegt, der größer oder gleich einem Indexeintrag ist, der genau mit den Suchkriterien übereinstimmen würde.</td>
+<td>Der Cursor wird am Indexeintrag positioniert, der dem Indexanfang am nächsten ist, der größer oder gleich einem Indexeintrag ist, der genau den Suchkriterien entsprechen würde.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>SeekGT</td>
-<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Indexanfang am nächsten liegt, der größer als ein Indexeintrag ist, der genau den Suchkriterien entspricht.</td>
+<td>Der Cursor wird am Indexeintrag positioniert, der dem Indexanfang am nächsten liegt und größer als ein Indexeintrag ist, der genau den Suchkriterien entsprechen würde.</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -112,7 +112,7 @@ public enum SeekGrbit
 </table>
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

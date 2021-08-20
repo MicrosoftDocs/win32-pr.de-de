@@ -1,21 +1,21 @@
 ---
-description: Die "WM \_ palettechanged"-Meldung wird an alle Fenster der obersten Ebene und überlappende Fenster gesendet, nachdem das Fenster mit dem Tastaturfokus seine logische Palette erreicht hat und dadurch die Systempalette geändert wurde.
+description: Die WM PALETTECHANGED-Nachricht wird an alle Fenster der obersten Ebene gesendet und überlappen, nachdem das Fenster mit dem Tastaturfokus seine logische Palette erkannt und dadurch die \_ Systempalette geändert hat.
 ms.assetid: 2eed568b-1a16-47d2-ae26-3f1dec35e893
-title: WM_PALETTECHANGED Meldung (Winuser. h)
+title: WM_PALETTECHANGED (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5a02bffe5206c7550cce2ec62203f3dbea2d246
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb706452e357f2e322b1f4e2618f0fd59c5c4d9a6606c07d18fae7c3b346323e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977920"
 ---
-# <a name="wm_palettechanged-message"></a>WM \_ palettechanged-Meldung
+# <a name="wm_palettechanged-message"></a>WM \_ PALETTECHANGED-Nachricht
 
-Die " **WM \_ palettechanged** "-Meldung wird an alle Fenster der obersten Ebene und überlappende Fenster gesendet, nachdem das Fenster mit dem Tastaturfokus seine logische Palette erreicht hat und dadurch die Systempalette geändert wurde. Diese Meldung ermöglicht ein Fenster, das eine Farbpalette verwendet, aber nicht den Tastaturfokus hat, um seine logische Palette zu erkennen und den Client Bereich zu aktualisieren.
+Die **WM \_ PALETTECHANGED-Nachricht** wird an alle Fenster der obersten Ebene gesendet und überlappen, nachdem das Fenster mit dem Tastaturfokus seine logische Palette erkannt und dadurch die Systempalette geändert hat. Diese Meldung ermöglicht einem Fenster, das eine Farbpalette verwendet, aber nicht über den Tastaturfokus verfügt, um seine logische Palette zu realisieren und seinen Clientbereich zu aktualisieren.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -36,7 +36,7 @@ LRESULT CALLBACK WindowProc(
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Fenster, das bewirkt hat, dass die Systempalette geändert wurde.
+Ein Handle für das Fenster, durch das sich die Systempalette geändert hat.
 
 </dd> <dt>
 
@@ -47,13 +47,13 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht muss an alle Fenster der obersten Ebene und überlappende Fenster gesendet werden, einschließlich derjenigen, die die Systempalette geändert hat. Wenn ein untergeordnetes Fenster eine Farbpalette verwendet, muss diese Meldung ebenfalls an Sie weitergegeben werden.
+Diese Meldung muss an alle Fenster der obersten Ebene und überlappende Fenster gesendet werden, einschließlich des Fensters, das die Systempalette geändert hat. Wenn untergeordnete Fenster eine Farbpalette verwenden, muss diese Meldung auch an sie übergeben werden.
 
-Um das Erstellen einer Endlosschleife zu vermeiden, darf ein Fenster, das diese Nachricht empfängt, seine Palette nicht erkennen, es sei denn, es wird festgelegt, dass *wParam* kein eigenes Fenster Handle enthält.
+Um zu vermeiden, dass eine Endlosschleife erstellt wird, darf ein Fenster, das diese Nachricht empfängt, seine Palette nicht erkennen, es sei denn, es bestimmt, dass *wParam* kein eigenes Fensterhandli enthält.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -61,24 +61,24 @@ Um das Erstellen einer Endlosschleife zu vermeiden, darf ein Fenster, das diese 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Übersicht über Farben](colors.md)
 </dt> <dt>
 
-[Farb Meldungen](color-messages.md)
+[Farbmeldungen](color-messages.md)
 </dt> <dt>
 
-[**WM- \_ paletteischanging**](wm-paletteischanging.md)
+[**WM \_ PALETTEISCHANGING**](wm-paletteischanging.md)
 </dt> <dt>
 
-[**WM \_ querynewpalette**](wm-querynewpalette.md)
+[**WM \_ QUERYNEWPALETTE**](wm-querynewpalette.md)
 </dt> </dl>
 
  

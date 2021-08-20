@@ -1,11 +1,11 @@
 ---
-title: Ivmkeyboard typekeysequence-Methode (vpccominterfaces. h)
-description: Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die eingegeben werden.
+title: IVMKeyboard TypeKeySequence-Methode (VPCCOMInterfaces.h)
+description: Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die typiert werden.
 ms.assetid: ba4d4e43-cb2e-49ae-940d-2e81286d3473
 keywords:
-- Typekeysequence-Methode Virtual PC
-- Typekeysequence-Methode Virtual PC, ivmkeyboard-Schnittstelle
-- Ivmkeyboard Interface Virtual PC, typekeysequence-Methode
+- 'TypeKeySequence-Methode : Virtueller PC'
+- TypeKeySequence-Methode Virtual PC, IVMKeyboard-Schnittstelle
+- IVMKeyboard-Schnittstelle Virtueller PC, TypeKeySequence-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c34bd96077c1d28aad196ee0d6b11de122725d68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 565d31d04a31f72ea25b3477fb91d53d252f6173eec8bc2f40133db38eeb1619
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998860"
 ---
-# <a name="ivmkeyboardtypekeysequence-method"></a>Ivmkeyboard:: typekeysequence-Methode
+# <a name="ivmkeyboardtypekeysequence-method"></a>IVMKeyboard::TypeKeySequence-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die eingegeben werden.
+Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die typiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT TypeKeySequence(
 
 <dl> <dt>
 
-*keysequence* \[ in\]
+*keySequence* \[ In\]
 </dt> <dd>
 
-Die durch Trennzeichen getrennte Sequenz von Schlüsselcodes, die eingegeben werden sollen.
+Die durch Trennzeichen getrennte Sequenz von Schlüsselcodes, die typiert werden sollen.
 
 </dd> </dl>
 
@@ -60,21 +60,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                                                |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                                   |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>                                      |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>      | Die angegebene Zeichenfolge ist leer oder enthält einen ungültigen Schlüsselcode.<br/> |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                               |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>                                      |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>      | Die angegebene Zeichenfolge ist leer oder enthält einen ungültigen Schlüsselcode.<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schlüssel Sequenz Zeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüssel Bezeichnerzeichen, die verwendet werden, um die Tastenkombination und die releasesequenz einer Standardtastatur des US-amerikanischen 101-Schlüssels zu simulieren.
+Eine Tastensequenzzeichenfolge ist ein durch Trennzeichen getrennter Satz von Schlüsselbezeichnern, die verwendet werden, um die Tastenkombination und die Freigabesequenz einer STANDARDTASTATUR (U.S. 101) zu simulieren.
 
-Wenn ein Schlüssel Bezeichner in der Zeichenfolge ohne einen vorangehenden Modifizierer angezeigt wird, wird ein mit Schlüsseln gedrückter Code an die Sitzung der virtuellen Maschine gesendet, gefolgt von dem zugehörigen Schlüsselcode. Schlüsselmodifizierer können verwendet werden, um dieses Verhalten zu ändern.
+Wenn ein Schlüsselbezeichner in der Zeichenfolge ohne vorangehenden Modifizierer angezeigt wird, wird ein per Taste gedrückter Code an die Sitzung des virtuellen Computers gesendet, unmittelbar gefolgt von dem entsprechenden, von der Taste freigegebenen Code. Schlüsselmodifizierer können verwendet werden, um dieses Verhalten zu ändern.
 
-Der Down-Modifizierer sendet z. b. den Schlüssel gesteuerten Code für den folgenden Schlüssel Bezeichner, ohne den Schlüssel freigegebenen Code zu senden. Dies ist nützlich zum Simulieren von STRG-, alt-und Umschalttaste, wenn Sie gedrückt werden, während andere Schlüssel gesendet werden. Um den Schlüssel freizugeben, muss er erneut in die Schlüssel Zeichenfolge eingefügt werden, zusammen mit einem vorangehenden Modifizierer.
+Der DOWN-Modifizierer sendet z. B. den gedrückten Code für den folgenden Schlüsselbezeichner, ohne den code freigelassenen Schlüssel zu senden. Dies ist nützlich, um STRG-, ALT- und UMSCHALTTASTEn zu simulieren, wenn sie gedrückt gehalten werden, während andere Tasten gesendet werden. Um den Schlüssel frei zu geben, muss er zusammen mit einem vorangehenden UP-Modifizierer erneut in die Schlüsselzeichenfolge eingeschlossen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,12 +82,12 @@ Der Down-Modifizierer sendet z. b. den Schlüssel gesteuerten Code für den folg
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmkeyboard ist als 00695b2e-c5ad-4d6e-B1ab-336ed121f 8c4 definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMKeyboard ist als 00695f2e-c5ad-4d6e-b1ab-336ed121f8c4 definiert.<br/>                |
 
 
 
@@ -95,7 +95,7 @@ Der Down-Modifizierer sendet z. b. den Schlüssel gesteuerten Code für den folg
 
 <dl> <dt>
 
-[**Ivmkeyboard**](ivmkeyboard.md)
+[**IVMKeyboard**](ivmkeyboard.md)
 </dt> <dt>
 
 [Schlüsselsequenzen](key-sequences.md)

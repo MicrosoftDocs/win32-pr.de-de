@@ -47,7 +47,7 @@ Das **Connection-Element** wird durch das [**Connections-Element**](eapconnectio
 
 
 
-| Element                                                                 | type   | BESCHREIBUNG                                                                                                             |
+| Element                                                                 | Typ   | Beschreibung                                                                                                             |
 |-------------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------------------------------------|
 | [**Eap**](baseeapconnectionpropertiesv1schema-eap-element.md)          |        | Identifiziert das EAP-Konfigurationselement.<br/>                                                                    |
 | [**Name**](eapconnectionpropertiesv1schema-name-connection-element.md) | Zeichenfolge | Erfasst den Namen der zu definierenden Verbindung und hilft dabei, mehrere Verbindungen zu identifizieren. <br/> |
@@ -65,7 +65,7 @@ Das **Connection-Element** wird durch das [**Connections-Element**](eapconnectio
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

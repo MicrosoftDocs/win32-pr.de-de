@@ -1,5 +1,5 @@
 ---
-title: baseeapmethodconfig Schema Complex Types
+title: Komplexe Baseeapmethodconfig-Schematypen
 description: Erfahren Sie mehr über das Baseeapmethodconfig-Schema. Dieses Schema definiert den komplexen BaseEapMethodConfig-Typ.
 ms.assetid: dd3361db-f54c-4879-b656-414d9cbaf1f2
 ms.topic: article
@@ -16,9 +16,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118498702"
 ---
-# <a name="baseeapmethodconfig-schema-complex-types"></a>baseeapmethodconfig Schema Complex Types
+# <a name="baseeapmethodconfig-schema-complex-types"></a>Komplexe Baseeapmethodconfig-Schematypen
 
-Das [baseeapmethodconfig-Schema](baseeapmethodconfigschema-schema.md) definiert den folgenden komplexen Typ.
+Das [Baseeapmethodconfig-Schema](baseeapmethodconfigschema-schema.md) definiert den folgenden komplexen Typ.
 
 -   [**BaseEapMethodConfig**](baseeapmethodconfigschema-baseeapmethodconfig-complextype.md)
 

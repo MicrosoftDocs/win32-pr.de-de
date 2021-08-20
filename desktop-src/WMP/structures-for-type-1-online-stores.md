@@ -1,39 +1,39 @@
 ---
-title: Strukturen für Typ 1-Online Speicher
-description: Strukturen für Typ 1-Online Speicher
+title: Strukturen für Onlineshops vom Typ 1
+description: Strukturen für Onlineshops vom Typ 1
 ms.assetid: e1aff1a3-cf24-4292-afcd-92e77b178a3a
 keywords:
-- Windows Media Player Online Stores, Strukturen
-- Online Stores, Strukturen
-- Typ 1 Online Stores, Strukturen
-- Strukturen, Typ 1 Online Stores
+- Windows Media Player,Strukturen
+- Onlineshops, Strukturen
+- Typ 1 Onlineshops,Strukturen
+- Strukturen,Typ 1 Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7142e2cae2f0056361e3ef86ce3451b6e17575cf
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 00dcbe823dae0037175edcf875d9d049f815080b40bcd33b5e34800e49052263
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118832102"
 ---
-# <a name="structures-for-type-1-online-stores"></a>Strukturen für Typ 1-Online Speicher
+# <a name="structures-for-type-1-online-stores"></a>Strukturen für Onlineshops vom Typ 1
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Die folgende Struktur ist für Type 1 Online Stores mit C++-Code verfügbar.
+Die folgende Struktur ist für Onlineshops vom Typ 1 mit C++-Code verfügbar.
 
 
 
-| Struktur                                    | BESCHREIBUNG                                 |
+| Struktur                                    | Beschreibung                                 |
 |----------------------------------------------|---------------------------------------------|
-| [Wmpcontextmenuinfo](/previous-versions/windows/desktop/api/contentpartner/ns-contentpartner-wmpcontextmenuinfo) | Enthält Daten über einen Kontextmenü Befehl. |
+| [WMPContextMenuInfo](/previous-versions/windows/desktop/api/contentpartner/ns-contentpartner-wmpcontextmenuinfo) | Enthält Daten zu einem Kontextmenübefehl. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Die folgende Struktur ist für Type 1 Online Stores mit C++-Code verfügbar.
 [**Referenz für Typ 1-Onlineshops**](reference-for-type-1-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

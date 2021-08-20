@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentDatabaseAlreadyUpgradedException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseAlreadyUpgradedException-Klasse'
 title: EsentDatabaseAlreadyUpgradedException-Klasse
 TOCTitle: EsentDatabaseAlreadyUpgradedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDatabaseAlreadyUpgradedException

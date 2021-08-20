@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectMatrixVariable GetMatrixArray-Methode (D3dx11effect.h)
-description: Abrufen eines Arrays von Matrizen.
+description: Hier erhalten Sie ein Array von Matrizen.
 ms.assetid: a7598687-a11c-41ad-9fb6-2c16d12f5edc
 keywords:
 - GetMatrixArray-Methode Direct3D 11
-- GetMatrixArray-Methode Direct3D 11 , ID3DX11EffectMatrixVariable-Schnittstelle
+- GetMatrixArray-Methode Direct3D 11, ID3DX11EffectMatrixVariable-Schnittstelle
 - ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11 , GetMatrixArray-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "119046208"
 ---
 # <a name="id3dx11effectmatrixvariablegetmatrixarray-method"></a>ID3DX11EffectMatrixVariable::GetMatrixArray-Methode
 
-Abrufen eines Arrays von Matrizen.
+Hier erhalten Sie ein Array von Matrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Ein Zeiger auf das erste Element der ersten Matrix in einem Array von Matrizen.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Offset (in Anzahl von Matrizen) zwischen dem Anfang des Arrays und der ersten zurückgegebenen Matrix.
+Der Offset (in Der Anzahl der Matrizen) zwischen dem Anfang des Arrays und der ersten zurückgegebenen Matrix.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -92,11 +92,11 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

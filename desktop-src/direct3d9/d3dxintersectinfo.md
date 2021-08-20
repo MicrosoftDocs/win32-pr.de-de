@@ -1,5 +1,5 @@
 ---
-description: 'D3DXINTERSECTINFO-Struktur: Beschreibt eine Strahldreieck-Schnittmenge.'
+description: 'D3DXINTERSECTINFO-Struktur: Beschreibt eine Schnittmenge eines Strahldreiecks.'
 ms.assetid: b6f50fc0-2c8a-4efa-a144-bd0851f8b0ca
 title: D3DXINTERSECTINFO-Struktur (D3dx9mesh.h)
 ms.topic: reference
@@ -60,7 +60,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
+Baryzentrierte Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Barycentric-Koordinate innerhalb des Dreiecks, in dem sich der Strahl überschneidet.
+Baryzentrierte Koordinate innerhalb des Dreiecks, an dem sich der Strahl schneidet.
 
 </dd> <dt>
 
@@ -82,13 +82,13 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Abstand entlang des Strahls, in dem die Schnittmenge aufgetreten ist.
+Abstand entlang des Strahls, an dem die Schnittmenge aufgetreten ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkt des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

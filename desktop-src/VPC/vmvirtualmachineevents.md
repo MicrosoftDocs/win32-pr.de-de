@@ -1,9 +1,9 @@
 ---
-title: Vmvirtualmachineevents-Enumeration (vpccominterfaces. h)
+title: VMVirtualMachineEvents-Enumeration (VPCCOMInterfaces.h)
 description: Gibt die VM-Ereignisse an.
 ms.assetid: 158bdada-6fd3-488c-9ff1-e04df9a79127
 keywords:
-- Vmvirtualmachineevents-Enumeration virtueller PC
+- VMVirtualMachineEvents-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de1e1d8f4d89c28f63886444537fb9d894fc42e4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5079aee6752c260cd6bab9ee9022d22fd891eb6adf36ad0ec4d1c9987b6ff508
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998340"
 ---
-# <a name="vmvirtualmachineevents-enumeration"></a>Vmvirtualmachineevents-Enumeration
+# <a name="vmvirtualmachineevents-enumeration"></a>VMVirtualMachineEvents-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt die Ereignisse des virtuellen Computers (Virtual Machine, VM) an.
+Gibt die Ereignisse des virtuellen Computers (VM) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,87 +53,87 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmVirtualMachineEvent_StateChanged"></span><span id="vmvirtualmachineevent_statechanged"></span><span id="VMVIRTUALMACHINEEVENT_STATECHANGED"></span>**vmvirtualmachineevent \_ StateChanged**
+<span id="vmVirtualMachineEvent_StateChanged"></span><span id="vmvirtualmachineevent_statechanged"></span><span id="VMVIRTUALMACHINEEVENT_STATECHANGED"></span>**vmVirtualMachineEvent \_ StateChanged**
 </dt> <dd>
 
-Der Status eines virtuellen Computers wurde geändert.
+Der Status eines virtuellen Computers hat sich geändert.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_RequestShutdown"></span><span id="vmvirtualmachineevent_requestshutdown"></span><span id="VMVIRTUALMACHINEEVENT_REQUESTSHUTDOWN"></span>**vmvirtualmachineevent \_ requestshutdown**
+<span id="vmVirtualMachineEvent_RequestShutdown"></span><span id="vmvirtualmachineevent_requestshutdown"></span><span id="VMVIRTUALMACHINEEVENT_REQUESTSHUTDOWN"></span>**vmVirtualMachineEvent \_ RequestShutdown**
 </dt> <dd>
 
 Ein Herunterfahren wurde angefordert.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_Reset"></span><span id="vmvirtualmachineevent_reset"></span><span id="VMVIRTUALMACHINEEVENT_RESET"></span>**vmvirtualmachineevent \_ Reset**
+<span id="vmVirtualMachineEvent_Reset"></span><span id="vmvirtualmachineevent_reset"></span><span id="VMVIRTUALMACHINEEVENT_RESET"></span>**vmVirtualMachineEvent \_ Reset**
 </dt> <dd>
 
 Ein virtueller Computer wurde zurückgesetzt.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_TripleFault"></span><span id="vmvirtualmachineevent_triplefault"></span><span id="VMVIRTUALMACHINEEVENT_TRIPLEFAULT"></span>**vmvirtualmachineevent-Auswert \_ Fehler**
+<span id="vmVirtualMachineEvent_TripleFault"></span><span id="vmvirtualmachineevent_triplefault"></span><span id="VMVIRTUALMACHINEEVENT_TRIPLEFAULT"></span>**vmVirtualMachineEvent \_ TripleFault**
 </dt> <dd>
 
-Ein virtueller Computer hat einen dreifachen Fehler verursacht.
+Ein virtueller Computer ist dreimal fehlerhaft.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_HeartbeatStopped"></span><span id="vmvirtualmachineevent_heartbeatstopped"></span><span id="VMVIRTUALMACHINEEVENT_HEARTBEATSTOPPED"></span>**tabeatbeendete vmvirtualmachineevent \_**
+<span id="vmVirtualMachineEvent_HeartbeatStopped"></span><span id="vmvirtualmachineevent_heartbeatstopped"></span><span id="VMVIRTUALMACHINEEVENT_HEARTBEATSTOPPED"></span>**vmVirtualMachineEvent \_ HeartbeatStopped**
 </dt> <dd>
 
-Der Takt einer VM wurde beendet. Dies weist normalerweise darauf hin, dass das Gast Betriebssystem abgestürzt ist.
+Der Heartbeat eines virtuellen Computers wurde beendet. Dies deutet in der Regel darauf hin, dass das Gastbetriebssystem abgestürzt ist.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_ConfigurationChanged"></span><span id="vmvirtualmachineevent_configurationchanged"></span><span id="VMVIRTUALMACHINEEVENT_CONFIGURATIONCHANGED"></span>**vmvirtualmachineevent \_ configurationchanged**
+<span id="vmVirtualMachineEvent_ConfigurationChanged"></span><span id="vmvirtualmachineevent_configurationchanged"></span><span id="VMVIRTUALMACHINEEVENT_CONFIGURATIONCHANGED"></span>**vmVirtualMachineEvent \_ ConfigurationChanged**
 </dt> <dd>
 
 Ein Wert in der Konfiguration für diesen virtuellen Computer wurde geändert.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_EnhancedVideoModeChanged"></span><span id="vmvirtualmachineevent_enhancedvideomodechanged"></span><span id="VMVIRTUALMACHINEEVENT_ENHANCEDVIDEOMODECHANGED"></span>**vmvirtualmachineevent \_ enhancedvideomode Changed**
+<span id="vmVirtualMachineEvent_EnhancedVideoModeChanged"></span><span id="vmvirtualmachineevent_enhancedvideomodechanged"></span><span id="VMVIRTUALMACHINEEVENT_ENHANCEDVIDEOMODECHANGED"></span>**vmVirtualMachineEvent \_ EnhancedVideoModeChanged**
 </dt> <dd>
 
-Der Videomodus eines virtuellen Computers wurde geändert.
+Der Videomodus eines virtuellen Computers hat sich geändert.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_AdditionsUninstalled"></span><span id="vmvirtualmachineevent_additionsuninstalled"></span><span id="VMVIRTUALMACHINEEVENT_ADDITIONSUNINSTALLED"></span>**vmvirtualmachineevent \_ additionsuninstalliert**
+<span id="vmVirtualMachineEvent_AdditionsUninstalled"></span><span id="vmvirtualmachineevent_additionsuninstalled"></span><span id="VMVIRTUALMACHINEEVENT_ADDITIONSUNINSTALLED"></span>**vmVirtualMachineEvent \_ AdditionsUninstalled**
 </dt> <dd>
 
-Integrations Komponenten wurden auf der VM deinstalliert.
+Integrationskomponenten wurden von der VM deinstalliert.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_AdditionsAvailable"></span><span id="vmvirtualmachineevent_additionsavailable"></span><span id="VMVIRTUALMACHINEEVENT_ADDITIONSAVAILABLE"></span>**vmvirtualmachineevent \_ additionsavailable**
+<span id="vmVirtualMachineEvent_AdditionsAvailable"></span><span id="vmvirtualmachineevent_additionsavailable"></span><span id="VMVIRTUALMACHINEEVENT_ADDITIONSAVAILABLE"></span>**vmVirtualMachineEvent \_ AdditionsAvailable**
 </dt> <dd>
 
-Integration ist im Gast Betriebssystem verfügbar.
+Die Integration ist im Gastbetriebssystem verfügbar.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_GuestShutdown"></span><span id="vmvirtualmachineevent_guestshutdown"></span><span id="VMVIRTUALMACHINEEVENT_GUESTSHUTDOWN"></span>**vmvirtualmachineevent \_ guestshutdown**
+<span id="vmVirtualMachineEvent_GuestShutdown"></span><span id="vmvirtualmachineevent_guestshutdown"></span><span id="VMVIRTUALMACHINEEVENT_GUESTSHUTDOWN"></span>**vmVirtualMachineEvent \_ GuestShutdown**
 </dt> <dd>
 
-Ein Gast Betriebssystem wird heruntergefahren.
+Ein Gastbetriebssystem wird heruntergefahren.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_GuestLogoff"></span><span id="vmvirtualmachineevent_guestlogoff"></span><span id="VMVIRTUALMACHINEEVENT_GUESTLOGOFF"></span>**vmvirtualmachineevent \_ guestlogoff**
+<span id="vmVirtualMachineEvent_GuestLogoff"></span><span id="vmvirtualmachineevent_guestlogoff"></span><span id="VMVIRTUALMACHINEEVENT_GUESTLOGOFF"></span>**vmVirtualMachineEvent \_ GuestLogoff**
 </dt> <dd>
 
-Ein Benutzer hat sich vom Gast Betriebssystem abgemeldet.
+Ein Benutzer hat sich vom Gastbetriebssystem abgemelgt.
 
 </dd> <dt>
 
-<span id="vmVirtualMachineEvent_DiskOutOfSpace"></span><span id="vmvirtualmachineevent_diskoutofspace"></span><span id="VMVIRTUALMACHINEEVENT_DISKOUTOFSPACE"></span>**vmvirtualmachineevent \_ diskouesleerraum**
+<span id="vmVirtualMachineEvent_DiskOutOfSpace"></span><span id="vmvirtualmachineevent_diskoutofspace"></span><span id="VMVIRTUALMACHINEEVENT_DISKOUTOFSPACE"></span>**vmVirtualMachineEvent \_ DiskOutOfSpace**
 </dt> <dd>
 
-Für den virtuellen Computer ist wenig Speicherplatz auf dem Datenträger erforderlich.
+Auf einem datenträger, der für den virtuellen Computer erforderlich ist, ist wenig Speicherplatz verfügbar.
 
 </dd> </dl>
 
@@ -143,19 +143,19 @@ Für den virtuellen Computer ist wenig Speicherplatz auf dem Datenträger erford
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

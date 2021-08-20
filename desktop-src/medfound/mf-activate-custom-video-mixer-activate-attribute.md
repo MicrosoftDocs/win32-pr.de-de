@@ -1,34 +1,34 @@
 ---
-description: Gibt ein Aktivierungs Objekt an, das einen benutzerdefinierten Videomixer für die EVR-Medien Senke (Enhanced Video Renderer) erstellt.
+description: Gibt ein Aktivierungsobjekt an, das einen benutzerdefinierten Videomixer für die EVR-Mediensenke (Enhanced Video Renderer) erstellt.
 ms.assetid: 60484f87-7588-4b52-93aa-ef8fad66d971
-title: MF_ACTIVATE_CUSTOM_VIDEO_MIXER_ACTIVATE-Attribut (mspdl. h)
+title: MF_ACTIVATE_CUSTOM_VIDEO_MIXER_ACTIVATE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d6268f3630b013235f3d365e0b8ab0578c9dd3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1966efe66efaba56c0206a9f6fac59aba30a1aea9d47100c4ce19a30af96a863
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877297"
 ---
-# <a name="mf_activate_custom_video_mixer_activate-attribute"></a>MF-Attribut zum Aktivieren des \_ \_ benutzerdefinierten \_ Video \_ Mischers \_ aktivieren
+# <a name="mf_activate_custom_video_mixer_activate-attribute"></a>MF \_ ACTIVATE CUSTOM VIDEO MIXER \_ \_ \_ \_ ACTIVATE-Attribut
 
-Gibt ein Aktivierungs Objekt an, das einen benutzerdefinierten Videomixer für die EVR-Medien Senke (Enhanced Video Renderer) erstellt.
+Gibt ein Aktivierungsobjekt an, das einen benutzerdefinierten Videomixer für die EVR-Mediensenke (Enhanced Video Renderer) erstellt.
 
 ## <a name="data-type"></a>Datentyp
 
-**IUnknown \** _
+**IUnknown\***
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den EVR mithilfe eines Aktivierungs Objekts erstellen, können Sie dieses Attribut verwenden, um einen benutzerdefinierten Videomixer auf dem EVR festzulegen. Verwenden Sie dieses Attribut wie folgt:
+Wenn Sie die EVR über ein Aktivierungsobjekt erstellen, können Sie mit diesem Attribut einen benutzerdefinierten Videomixer für die EVR festlegen. Verwenden Sie dieses Attribut wie folgt:
 
-1.  Rufen Sie die [_ *mfkreatevideorendereractivation* *](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) -Funktion auf, um ein Aktivierungs Objekt für den EVR zu erstellen. Die-Funktion gibt einen Zeiger auf die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle zurück.
-2.  Legen Sie dieses Attribut für den [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger fest, indem Sie [**imfattributes:: setunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)aufrufen. Der Wert des-Attributs ist ein Zeiger auf ein vom Aufrufer implementiertes Aktivierungs Objekt. Das Aktivierungs Objekt des Aufrufers muss die **imfaktivate** -Schnittstelle verfügbar machen.
+1.  Rufen Sie die [**Funktion MFCreateVideoRendererActivate auf,**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) um ein Aktivierungsobjekt für die EVR zu erstellen. Die -Funktion gibt einen Zeiger auf die [**BERACTIVate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) zurück.
+2.  Legen Sie dieses Attribut auf dem [**ZEIGER FÜR DIE AKTION**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) fest, indem Sie DURCH AUFRUFEN VON [**ATTRIBUTEs::SetUnknown aufrufen.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown) Der Wert des Attributs ist ein Zeiger auf ein Aktivierungsobjekt, das vom Aufrufer implementiert wird. Das Aktivierungsobjekt des Aufrufers muss die **BERACTIVate-Schnittstelle verfügbar** machen.
 
-Wenn Sie dieses Attribut festlegen, ruft der EVR [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf, um den benutzerdefinierten Video Mischungs Wert zu erstellen. Der Video-Mixer muss die [**IMF Transform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle verfügbar machen.
+Wenn Sie dieses Attribut festlegen, ruft der EVR [**DEN BENUTZERDEFINIERTEN Aktivieren::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf, um den benutzerdefinierten Videomixer zu erstellen. Der Videomixer muss die [**BENUTZEROBERFLÄCHETransform-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) verfügbar machen.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,9 +36,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -46,22 +46,22 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Erweiterte Videorenderer-Attribute](enhanced-video-renderer-attributes.md)
+[Erweiterte Videorendererattribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: getunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
+[**ATTRIBUTEs::GetUnknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
 </dt> <dt>
 
-[**Imfattributes:: *-Known**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
+[**ATTRIBUTEs::SetUnknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
 </dt> <dt>
 
-[**Imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
+[**ACTIVate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
 </dt> <dt>
 
-[Aktivierungs Objekte](activation-objects.md)
+[Aktivierungsobjekte](activation-objects.md)
 </dt> </dl>
 
  

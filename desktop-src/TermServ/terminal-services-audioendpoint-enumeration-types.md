@@ -1,46 +1,46 @@
 ---
-title: Remotedesktopdienste audioendpoint-Enumerationstypen
-description: Die folgenden Enumerationstypen werden mit der audioendpoint-API verwendet.
+title: Remotedesktopdienste AudioEndpoint-Enumerationstypen
+description: Die folgenden Enumerationstypen werden mit der AudioEndpoint-API verwendet.
 ms.assetid: a9fc7245-c045-460c-b725-85b18e1a22d4
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cbef853912cc25c74eb4dfa47b59c5775cec8ab
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7912108b7afec2da499314bf2be0a557138a039231d9fe9a1c59a1c130d52f82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000080"
 ---
-# <a name="remote-desktop-services-audioendpoint-enumeration-types"></a>Remotedesktopdienste audioendpoint-Enumerationstypen
+# <a name="remote-desktop-services-audioendpoint-enumeration-types"></a>Remotedesktopdienste AudioEndpoint-Enumerationstypen
 
-Die folgenden Enumerationstypen werden mit der audioendpoint-API verwendet.
+Die folgenden Enumerationstypen werden mit der AudioEndpoint-API verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**AE- \_ Positions \_ Flags**](/windows/desktop/api/Audioengineendpoint/ne-audioengineendpoint-ae_position_flags)
+[**\_ \_ AE-POSITIONSFLAGS**](/windows/desktop/api/Audioengineendpoint/ne-audioengineendpoint-ae_position_flags)
 </dt> <dd>
 
-Definiert Konstanten für die AE-Struktur der [**\_ aktuellen \_ Position**](/windows/desktop/api/Audioengineendpoint/ns-audioengineendpoint-ae_current_position) . Diese Konstanten beschreiben den Grad der Gültigkeit der aktuellen Position.
+Definiert Konstanten für die [**AE \_ CURRENT \_ POSITION-Struktur.**](/windows/desktop/api/Audioengineendpoint/ns-audioengineendpoint-ae_current_position) Diese Konstanten beschreiben den Gültigkeitsgrad der aktuellen Position.
 
 </dd> <dt>
 
-[**APO \_ - \_ pufferflags**](/windows/desktop/api/Audioapotypes/ne-audioapotypes-apo_buffer_flags)
+[**\_ \_ APO-PUFFERFLAGS**](/windows/desktop/api/Audioapotypes/ne-audioapotypes-apo_buffer_flags)
 </dt> <dd>
 
-Definiert die puffervalidierungsflags für die Struktur der [**APO- \_ Verbindungs \_ Eigenschaften**](/windows/desktop/api/Audioapotypes/ns-audioapotypes-apo_connection_property) , die den einzelnen "eine"-
+Definiert die Puffervalidierungsflags für die [**APO \_ CONNECTION \_ PROPERTY-Struktur,**](/windows/desktop/api/Audioapotypes/ns-audioapotypes-apo_connection_property) die jeder APO-Verbindung zugeordnet ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Remotedesktopdienste audioendpoint-API ist für die Verwendung in Remotedesktop Szenarien vorgesehen. Es handelt sich nicht um Client Anwendungen.
+Die Remotedesktopdienste AudioEndpoint-API ist für die Verwendung in Remotedesktop Verwendet. Dies gilt nicht für Clientanwendungen.
 
- 
+ 
 
- 
+ 
 
 
 

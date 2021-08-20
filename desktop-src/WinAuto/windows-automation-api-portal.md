@@ -1,22 +1,22 @@
 ---
-title: Übersicht über die Windows Automation-API
-description: Microsoft Windows bietet zwei API-Spezifikationen für die Benutzeroberflächen-Barrierefreiheit und Softwaretest Automatisierung Microsoft Active Accessibility und Microsoft UI Automation.
+title: Windows Übersicht über die Automatisierungs-API
+description: Microsoft Windows bietet zwei API-Spezifikationen für Barrierefreiheit der Benutzeroberfläche und Softwaretestautomatisierung Microsoft Active Accessibility und Microsoft Benutzeroberflächenautomatisierung.
 ms.assetid: 73acc580-9573-40ea-8727-b0e7292b2a4c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ac67c5311d0d936e45235c527ebb15c238ba808
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a52bfe64ca5aab5817defc5d97a543eacd1a09c4a01dac4c36b27eee1c7e5cb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118823461"
 ---
-# <a name="windows-accessibility-api-overview"></a>Übersicht über die Barrierefreiheit von Windows
+# <a name="windows-accessibility-api-overview"></a>Windows übersicht über Barrierefreiheits-API
 
-Dieser Abschnitt enthält allgemeine Übersichten und eine ausführliche API-Referenz für die Microsoft Windows Automation-API 3,0, die die Windows-Implementierung der Microsoft [UI Automation Specification](./uiauto-specandcommunitypromise.md)und Microsoft Active Accessibility (Legacy-Feature, das in Windows 95 als Plattform-Add-in eingeführt wurde) enthält.
+Dieser Abschnitt enthält allgemeine Übersichten und eine ausführliche API-Referenz für microsoft Windows Automation API 3.0, die die Windows Implementierung der Microsoft [Benutzeroberflächenautomatisierung Specification](./uiauto-specandcommunitypromise.md)und Microsoft Active Accessibility (legacy feature introduced in Windows 95 as a platform add-in) enthält.
 
-Wir beschreiben die Ähnlichkeiten und Unterschiede zwischen Microsoft Active Accessibility und der Benutzeroberflächen Automatisierung, den Komponenten und Features, die die Zusammenarbeit der beiden Technologien ermöglichen, und bieten Richtlinien für die Auswahl der Technologie, die für Ihr spezielles Szenario implementiert werden soll.
+Wir beschreiben die Ähnlichkeiten und Unterschiede zwischen Microsoft Active Accessibility und Benutzeroberflächenautomatisierung, die Komponenten und Features, die es den beiden Technologien ermöglichen, zusammenzuarbeiten, und stellen Richtlinien für die Auswahl der Technologie bereit, die für Ihr spezifisches Szenario implementiert werden soll.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Benutzeroberflächenautomatisierungs-Community Promise](./uiauto-specandcommunitypromise.md)
+[Benutzeroberflächenautomatisierung Community Promise](./uiauto-specandcommunitypromise.md)

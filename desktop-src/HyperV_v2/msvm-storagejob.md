@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Speicher Vorgangs Auftrag dar, der vom Microsoft Hyper-V Abbild Verwaltungsdienst erstellt wurde.
+description: Stellt einen Speichervorgangsauftrag dar, der vom Microsoft Hyper-V Image Management Service erstellt wurde.
 ms.assetid: a1517c1f-7fb6-4203-a5ec-2ecdfcbc4e8c
 title: Msvm_StorageJob-Klasse
 ms.topic: reference
@@ -58,18 +58,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3014cb9a8201d7baceaf39bb760b17c33844abeb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 740f5ab4df3e26c408aa94c607073f497c1458fa66a67958736945887dffd1ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950129"
 ---
-# <a name="msvm_storagejob-class"></a>MSVM \_ storagejob-Klasse
+# <a name="msvm_storagejob-class"></a>Msvm \_ StorageJob-Klasse
 
-Stellt einen Speicher Vorgangs Auftrag dar, der vom Microsoft Hyper-V Abbild Verwaltungsdienst erstellt wurde.
+Stellt einen Speichervorgangsauftrag dar, der vom Microsoft Hyper-V Image Management Service erstellt wurde.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -126,23 +126,23 @@ class Msvm_StorageJob : CIM_ConcreteJob
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ storagejob** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ StorageJob-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ storagejob** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ StorageJob-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                |
 |:-----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetError**](msvm-storagejob-geterror.md)                     | Ruft den Fehler ab, der den Grund für den Fehler des Auftrags beschreibt.<br/>                                                                                                                                                                                                                                               |
-| [**Geterrorex**](geterrorex-msvm-storagejob.md)                 | Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**MSVM- \_ Fehler**](msvm-error.md) Instanz zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder der Auftrag von einem Client beendet wurde, werden mindestens eine **MSVM- \_ Fehler** Instanz zurückgegeben.<br/> |
-| **Killjob**                                                      | Diese Methode wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                   |
-| [**RequestStateChange**](msvm-storagejob-requeststatechange.md) | Fordert eine Statusänderung an.<br/>                                                                                                                                                                                                                                                                                        |
+| [**GetError**](msvm-storagejob-geterror.md)                     | Ruft den Fehler ab, der den Grund für den Auftragsfehler beschreibt.<br/>                                                                                                                                                                                                                                               |
+| [**GetErrorEx**](geterrorex-msvm-storagejob.md)                 | Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**\_ Msvm-Fehlerinstanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **\_ Msvm-Fehlerinstanz** zurückgegeben.<br/> |
+| **KillJob**                                                      | Diese Methode wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                   |
+| [**RequestStateChange**](msvm-storagejob-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/>                                                                                                                                                                                                                                                                                        |
 
 
 
@@ -150,14 +150,14 @@ Die **MSVM \_ storagejob** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ storagejob** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ StorageJob-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Abbrechbar**
+**Unkündbarem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -170,241 +170,241 @@ Gibt an, ob der Auftrag abgebrochen werden kann. Der Wert dieser Eigenschaft gar
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Untergeordnet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bei einem Fehler des asynchronen Vorgangs enthält diese Eigenschaft den vollständigen Pfad des untergeordneten Elements der VHD, die von diesem Vorgang betroffen ist.
+Bei einem Fehler des asynchronen Vorgangs enthält diese Eigenschaft den vollständigen Pfad des untergeordneten Objekts der VHD, die von diesem Vorgang betroffen ist.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Deleteoncompletion**
+**DeleteOnCompletion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Auftrag nach Abschluss des Vorgangs automatisch gelöscht werden soll. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Gibt an, ob der Auftrag nach Abschluss automatisch gelöscht werden soll. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Verweilzeit**
+**ElapsedTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeitspanne, für die der Auftrag ausgeführt wurde. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Die Zeitdauer, die der Auftrag ausgeführt wurde. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **ErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Hersteller spezifischer Fehlercode. Der Wert muss auf 0 (null) festgelegt werden, wenn der Auftrag ohne Fehler abgeschlossen wurde. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Ein anbieterspezifischer Fehlercode. Der Wert muss auf 0 (null) festgelegt werden, wenn der Auftrag ohne Fehler abgeschlossen wurde. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die die Hersteller Fehlerbeschreibung enthält. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine Zeichenfolge, die die Herstellerfehlerbeschreibung enthält. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **ErrorSummaryDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ Auftrag**](cim-job.md)".**ErrorCode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Auftrag**](cim-job.md).**ErrorCode**")
 </dt> </dl>
 
-Eine zusammenfassende Beschreibung des Fehlers, falls vorhanden. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine zusammenfassende Beschreibung des Fehlers( falls vorhanden). Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Dieses Attribut drückt den Zustand dieses Elements aus, aber nicht notwendigerweise dessen unter Komponenten. Mögliche Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionsfähig ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 festgelegt.
+Die aktuelle Integrität des Elements. Dieses Attribut drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionslos ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Jobcompletionstatus Code**
+**JobCompletionStatusCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **UINT32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der **HRESULT** -Code, der den Abschluss Status für den asynchronen Vorgang beschreibt.
+Der **HRESULT-Code,** der den Abschlussstatus für den asynchronen Vorgang beschreibt.
 
 </dd> <dt>
 
-**Jobruntimes**
+**JobRunTimes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie oft der Auftrag ausgeführt werden soll. Der Wert 1 gibt an, dass der Auftrag nicht wiederholt wird, während ein Wert ungleich NULL einen Grenzwert für die Häufigkeit angibt, mit der der Auftrag wiederholt wird. NULL gibt an, dass es keine Beschränkung gibt, wie oft der Auftrag verarbeitet werden kann. er wird jedoch entweder beendet, nachdem die **untilzeit** erreicht wurde, oder der Auftrag wird manuell beendet. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Gibt an, wie oft der Auftrag ausgeführt werden soll. Der Wert 1 gibt an, dass der Auftrag nicht wiederholt wird, während jeder Wert ungleich 0 (null) einen Grenzwert für die Anzahl der Wiederholungen des Auftrags angibt. 0 (null) gibt an, dass es keine Beschränkung gibt, wie oft der Auftrag verarbeitet werden kann. Er wird jedoch entweder beendet, nachdem **UntilTime** erreicht wurde oder der Auftrag manuell beendet wurde. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **JobState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Betriebszustand eines Auftrags. Sie kann auch die Übergänge zwischen diesen Zuständen angeben, z. b. 6 (wird heruntergefahren) und 3 (wird gestartet). Diese Eigenschaft wird von [**CIM " \_ concretejob**](/previous-versions//cc136808(v=vs.85))" geerbt.
+Der Betriebszustand eines Auftrags. Sie kann auch Übergänge zwischen diesen Zuständen angeben, z. B. 6 (Herunterfahren) und 3 (Wird gestartet). Diese Eigenschaft wird von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))geerbt.
 
 
 
 | Wert                                                                                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="New"></span><span id="new"></span><span id="NEW"></span><dl> <dt>**Neu**</dt> <dt>2</dt> </dl>                                                               | Der Auftrag wurde nie gestartet.<br/>                                                                                                                                                                                                         |
-| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Ab**</dt> <dt>3</dt> </dl>                                           | Der Auftrag wechselt von den Zuständen "neu", "angehalten" oder "Dienst" in den Status "wird ausgeführt".<br/>                                                                                                                                            |
-| <span id="Running"></span><span id="running"></span><span id="RUNNING"></span><dl> <dt>**Ausführen**</dt> von <dt>4</dt> </dl>                                               | Der Auftrag wird ausgeführt.<br/>                                                                                                                                                                                                                     |
-| <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span><dl> <dt></dt> Angehalten <dt>5</dt> </dl>                                       | Der Auftrag wurde angehalten, kann jedoch nahtlos neu gestartet werden.<br/>                                                                                                                                                                       |
-| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>**Herunter**</dt> fahren <dt>6</dt> </dl>                       | Der Auftrag wechselt in den Zustand "abgeschlossen", "beendet" oder "abgebrochen".<br/>                                                                                                                                                                    |
+| <span id="New"></span><span id="new"></span><span id="NEW"></span><dl> <dt>**Neu**</dt> <dt>2</dt> </dl>                                                               | Der Auftrag wurde noch nie gestartet.<br/>                                                                                                                                                                                                         |
+| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Ab**</dt> <dt>3</dt> </dl>                                           | Der Auftrag wechselt vom Status "Neu", "Angehalten" oder "Dienst" in den Status "Wird ausgeführt".<br/>                                                                                                                                            |
+| <span id="Running"></span><span id="running"></span><span id="RUNNING"></span><dl> <dt>**Ausführen von**</dt> <dt>4</dt> </dl>                                               | Der Auftrag wird ausgeführt.<br/>                                                                                                                                                                                                                     |
+| <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span><dl> <dt>**Angehalten 5**</dt> <dt></dt> </dl>                                       | Der Auftrag wird beendet, kann aber nahtlos neu gestartet werden.<br/>                                                                                                                                                                       |
+| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>**Herunterfahren**</dt> <dt>6</dt> </dl>                       | Der Auftrag wechselt in den Zustand "Abgeschlossen", "Beendet" oder "Beendet".<br/>                                                                                                                                                                    |
 | <span id="Completed"></span><span id="completed"></span><span id="COMPLETED"></span><dl> <dt>**Abgeschlossen**</dt> <dt>7</dt> </dl>                                       | Der Auftrag wurde normal abgeschlossen.<br/>                                                                                                                                                                                                         |
-| <span id="Terminated"></span><span id="terminated"></span><span id="TERMINATED"></span><dl> <dt>**Beendet**</dt> <dt>8</dt> </dl>                                   | Der Auftrag wurde mit dem Status "beenden" beendet Change Request. Der Auftrag und alle zugrunde liegenden Prozesse werden beendet und können nur als neuer Auftrag neu gestartet werden. Die Anforderung, dass der Auftrag nur dann neu gestartet werden soll, wenn ein neuer Auftrag ein Auftrags spezifischer Auftrag ist.<br/> |
-| <span id="Killed"></span><span id="killed"></span><span id="KILLED"></span><dl> <dt></dt> <dt>9</dt> abgebrochen </dl>                                                   | Der Auftrag wurde mit dem Status "Kill" beendet Change Request. Zugrunde liegende Prozesse können weiterhin ausgeführt werden, und es ist möglicherweise ein Cleanup erforderlich, um Ressourcen freizugeben.<br/>                                                                            |
-| <span id="Exception"></span><span id="exception"></span><span id="EXCEPTION"></span><dl> <dt>**Ausnahme**</dt> <dt>10</dt> </dl>                                      | Der Auftrag befindet sich in einem nicht ordnungsgemäßen Zustand, der möglicherweise auf eine Fehlerbedingung hinweist. Der tatsächliche Status des Auftrags ist möglicherweise über auftragsspezifische Objekte verfügbar.<br/>                                                                           |
-| <span id="Service"></span><span id="service"></span><span id="SERVICE"></span><dl> <dt>**Dienst**</dt> <dt>11</dt> </dl>                                              | Der Auftrag befindet sich in einem herstellerspezifischen Zustand, der die Problem Ermittlung oder-Lösung oder beides unterstützt.<br/>                                                                                                                                          |
-| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>12 32767</dt> </dl>                | Reserviert.<br/>                                                                                                                                                                                                                               |
-| <span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span><dl> <dt> **Anbieter reserviert**</dt> <dt>32768 65535</dt> </dl> | Reserviert.<br/>                                                                                                                                                                                                                               |
+| <span id="Terminated"></span><span id="terminated"></span><span id="TERMINATED"></span><dl> <dt>**Beendet 8**</dt> <dt></dt> </dl>                                   | Der Auftrag wurde durch eine Änderungsanforderung des Status "Terminate" beendet. Der Auftrag und alle zugrunde liegenden Prozesse werden beendet und können nur als neuer Auftrag neu gestartet werden. Die Anforderung, dass der Auftrag nur als neuer Auftrag neu gestartet werden muss, ist auftragsspezifisch.<br/> |
+| <span id="Killed"></span><span id="killed"></span><span id="KILLED"></span><dl> <dt>**9 wurde gelöscht**</dt> <dt></dt> </dl>                                                   | Der Auftrag wurde durch eine Statusänderungsanforderung "Kill" beendet. Zugrunde liegende Prozesse werden möglicherweise noch ausgeführt, und möglicherweise ist eine Bereinigung erforderlich, um Ressourcen frei zu machen.<br/>                                                                            |
+| <span id="Exception"></span><span id="exception"></span><span id="EXCEPTION"></span><dl> <dt>**Ausnahme**</dt> <dt>10</dt> </dl>                                      | Der Auftrag befindet sich in einem ungewöhnlichen Zustand, der auf einen Fehlerzustand hindeuten kann. Der tatsächliche Status des Auftrags kann über auftragsspezifische Objekte verfügbar sein.<br/>                                                                           |
+| <span id="Service"></span><span id="service"></span><span id="SERVICE"></span><dl> <dt>**Dienst**</dt> <dt>11</dt> </dl>                                              | Der Auftrag befindet sich in einem anbieterspezifischen Zustand, der die Problemermittlung, -lösung oder beides unterstützt.<br/>                                                                                                                                          |
+| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF Reserved**</dt> <dt>12 32767</dt> </dl>                | Reserviert.<br/>                                                                                                                                                                                                                               |
+| <span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span><dl> <dt> **Reservierter Anbieter**</dt> <dt>32768 65535</dt> </dl> | Reserviert.<br/>                                                                                                                                                                                                                               |
 
 
 
@@ -415,26 +415,26 @@ Der Betriebszustand eines Auftrags. Sie kann auch die Übergänge zwischen diese
 **Auftragsstatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Auftragsstatus darstellt. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine Zeichenfolge, die den Auftragsstatus darstellt. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **JobType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des asynchronen Vorgangs, der von dieser **MSVM \_ storagejob**-Instanz nachverfolgt wird.
+Der Typ des asynchronen Vorgangs, der von dieser Instanz von **Msvm \_ StorageJob** nachverfolgt wird.
 
 <dt>
 
@@ -452,29 +452,29 @@ Der Typ des asynchronen Vorgangs, der von dieser **MSVM \_ storagejob**-Instanz 
 
 </dt> <dd>
 
-Erstellen eines Images virtueller Festplatten (VHD).
+Erstellen eines VHD-Images (Virtuelle Festplatte).
 
 </dd> <dt>
 
 <span id="Floppy_Creation"></span><span id="floppy_creation"></span><span id="FLOPPY_CREATION"></span>
 
-<span id="Floppy_Creation"></span><span id="floppy_creation"></span><span id="FLOPPY_CREATION"></span>**Disketten Erstellung** (2)
+<span id="Floppy_Creation"></span><span id="floppy_creation"></span><span id="FLOPPY_CREATION"></span>Floppy Creation (2) **(Diskettenerstellung** (2))
 
 
 </dt> <dd>
 
-Erstellen eines virtuellen Disketten Images (VFD).
+Erstellen eines virtuellen Diskettenimages (VFD).
 
 </dd> <dt>
 
 <span id="Compaction"></span><span id="compaction"></span><span id="COMPACTION"></span>
 
-<span id="Compaction"></span><span id="compaction"></span><span id="COMPACTION"></span>**Compaction** (3)
+<span id="Compaction"></span><span id="compaction"></span><span id="COMPACTION"></span>**Komprimierung** (3)
 
 
 </dt> <dd>
 
-Komprimieren der Größe eines VHD-Abbilds.
+Komprimieren der Größe eines VHD-Images.
 
 </dd> <dt>
 
@@ -485,13 +485,13 @@ Komprimieren der Größe eines VHD-Abbilds.
 
 </dt> <dd>
 
-Erweitern der Größe eines VHD-Abbilds.
+Erweitern der Größe eines VHD-Images.
 
 </dd> <dt>
 
 <span id="Merging"></span><span id="merging"></span><span id="MERGING"></span>
 
-<span id="Merging"></span><span id="merging"></span><span id="MERGING"></span>Wird zusammen **geführt (5** )
+<span id="Merging"></span><span id="merging"></span><span id="MERGING"></span>**Zusammenführen** (5)
 
 
 </dt> <dd>
@@ -507,13 +507,13 @@ Zusammenführen mehrerer VHD-Images zu einem einzelnen Image.
 
 </dt> <dd>
 
-Der Typ eines virtuellen Festplatten Abbilds wird umgerechnet.
+Konvertieren des Typs eines virtuellen Festplattenimages.
 
 </dd> <dt>
 
 <span id="Loopback_Mount"></span><span id="loopback_mount"></span><span id="LOOPBACK_MOUNT"></span>
 
-<span id="Loopback_Mount"></span><span id="loopback_mount"></span><span id="LOOPBACK_MOUNT"></span>**Loopback einbinden** (7)
+<span id="Loopback_Mount"></span><span id="loopback_mount"></span><span id="LOOPBACK_MOUNT"></span>**Loopback-Bereitstellung** (7)
 
 
 </dt> <dd>
@@ -524,41 +524,41 @@ Einbinden der virtuellen Festplatte auf der übergeordneten Partition
 
 <span id="Get_VHD_Info"></span><span id="get_vhd_info"></span><span id="GET_VHD_INFO"></span>
 
-<span id="Get_VHD_Info"></span><span id="get_vhd_info"></span><span id="GET_VHD_INFO"></span>**VHD-Informationen erhalten** (8)
+<span id="Get_VHD_Info"></span><span id="get_vhd_info"></span><span id="GET_VHD_INFO"></span>**Abrufen von VHD-Informationen** (8)
 
 
 </dt> <dd>
 
-Einbinden der VHD auf dem Verwaltungs Betriebssystem.
+Einbinden der VHD im Verwaltungsbetriebssystem.
 
 </dd> <dt>
 
 <span id="Validate_VHD_Image"></span><span id="validate_vhd_image"></span><span id="VALIDATE_VHD_IMAGE"></span>
 
-<span id="Validate_VHD_Image"></span><span id="validate_vhd_image"></span><span id="VALIDATE_VHD_IMAGE"></span>**VHD-Abbild** überprüfen (9)
+<span id="Validate_VHD_Image"></span><span id="validate_vhd_image"></span><span id="VALIDATE_VHD_IMAGE"></span>Überprüfen des **VHD-Images** (9)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Localorutctime**
+**LocalOrUtcTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die in den Eigenschaften **runstartinterval** und **UntilTime** dargestellten Uhrzeiten Ortszeit oder UTC-Zeiten darstellen. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Gibt an, ob die in den Eigenschaften **RunStartInterval** und **UntilTime** dargestellten Uhrzeiten lokale Zeiten oder UTC-Zeiten darstellen. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 <dl> <dt>
 
 <span id="Local_Time"></span><span id="local_time"></span><span id="LOCAL_TIME"></span>**Ortszeit** (1)
 </dt> <dt>
 
-<span id="UTC_Time_"></span><span id="utc_time_"></span><span id="UTC_TIME_"></span>**UTC-Zeit** (2)
+<span id="UTC_Time_"></span><span id="utc_time_"></span><span id="UTC_TIME_"></span>**UTC-Zeit** (2 )
 </dt> </dl>
 
 </dd> <dt>
@@ -566,85 +566,85 @@ Gibt an, ob die in den Eigenschaften **runstartinterval** und **UntilTime** darg
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Bezeichnung, mit der das-Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die Bezeichnung, mit der das Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **Benachrichtigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Benutzer, der nach Abschluss oder Fehler des Auftrags benachrichtigt wird. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Der Benutzer, der bei Auftragsabschluss oder -fehler benachrichtigt wird. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Otherherstellyaction**
+**OtherRecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die die Wiederherstellungs Aktion beschreibt, wenn die **Wiederherstellungs Action** -Eigenschaft der-Instanz 1 (Sonstiges) ist. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine Zeichenfolge, die die Wiederherstellungsaktion beschreibt, wenn die **RecoveryAction-Eigenschaft** der Instanz 1 (Sonstige) ist. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **Besitzer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Benutzer, der den Auftrag übermittelt hat. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Der Benutzer, der den Auftrag übermittelt hat. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **Parent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -657,79 +657,79 @@ Bei einem Fehler des asynchronen Vorgangs enthält diese Eigenschaft den Dateipf
 **PercentComplete**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **MinValue** (0), **MaxValue** (100), **Units** ("Prozent")
+Qualifizierer: **MinValue** ( 0 ), **MaxValue** ( 100 ), **Einheiten** ( "Percent" )
 </dt> </dl>
 
-Der Abschluss Prozentsatz des Auftrags. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Der Abschlussprozentsatz des Auftrags. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der Eigenschaft **detailedstatus** verwendet werden, um einen hohen und detaillierten Integritäts Status des Elements und seiner unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um einen hohen und detaillierten Integritätsstatus des Elements und seiner Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **Priority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Wichtigkeit der Ausführung eines Auftrags. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Die Wichtigkeit der Ausführung eines Auftrags. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
-**Wiederherstellbarkeits Aktion**
+**RecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Wiederherstellungs Aktion, die für einen Auftrag ausgeführt werden soll, der nicht erfolgreich ausgeführt wurde. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Beschreibt die Wiederherstellungsaktion, die für einen Auftrag ausgeführt werden soll, der nicht erfolgreich ausgeführt wurde. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 <dl> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** (0)
 </dt> <dt>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 </dt> <dt>
 
-<span id="Do_Not_Continue"></span><span id="do_not_continue"></span><span id="DO_NOT_CONTINUE"></span>**Nicht fortsetzen** (2)
+<span id="Do_Not_Continue"></span><span id="do_not_continue"></span><span id="DO_NOT_CONTINUE"></span>**Nicht fortfahren** (2)
 </dt> <dt>
 
-<span id="Continue_With_Next_Job"></span><span id="continue_with_next_job"></span><span id="CONTINUE_WITH_NEXT_JOB"></span>**Fortfahren mit dem nächsten Auftrag** (3)
+<span id="Continue_With_Next_Job"></span><span id="continue_with_next_job"></span><span id="CONTINUE_WITH_NEXT_JOB"></span>**Mit nächstem Auftrag fortfahren** (3)
 </dt> <dt>
 
 <span id="Re-run_Job"></span><span id="re-run_job"></span><span id="RE-RUN_JOB"></span>**Auftrag erneut ausführen** (4)
 </dt> <dt>
 
-<span id="Run_Recovery_Job_"></span><span id="run_recovery_job_"></span><span id="RUN_RECOVERY_JOB_"></span>**Wiederherstellungsauftrag ausführen** (5)
+<span id="Run_Recovery_Job_"></span><span id="run_recovery_job_"></span><span id="RUN_RECOVERY_JOB_"></span>**Wiederherstellungsauftrag ausführen** (5 )
 </dt> </dl>
 
 </dd> <dt>
 
-**Runday**
+**RunDay**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -738,22 +738,22 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **MinValue** (-31), **MaxValue** (31)
+Qualifizierer: **MinValue** ( -31 ), **MaxValue** ( 31 )
 </dt> </dl>
 
-Der Tag des Monats, an dem der Auftrag verarbeitet werden soll. Abhängig vom Wert von **rundayosweek** gibt es unterschiedliche Interpretationen für diese Eigenschaft.
+Der Tag des Monats, an dem der Auftrag verarbeitet werden soll. Abhängig vom Wert von **RunDayOfWeek** gibt es unterschiedliche Interpretationen für diese Eigenschaft.
 
-Wenn **rundayosweek** den Wert 0 hat und **runday** positiv ist, definiert **runday** den Tag des Monats, an dem der Auftrag verarbeitet wird. Wenn **rundayosweek** beispielsweise 0 und **runday** 12 ist, wird der Auftrag am 12 <sup>.</sup> Tag des Monats verarbeitet.
+Wenn **RunDayOfWeek** 0 und **RunDay** positiv ist, definiert **RunDay** den Tag des Monats, an dem der Auftrag verarbeitet wird. Wenn **RunDayOfWeek** beispielsweise 0 und **RunDay** 12 ist, wird der Auftrag am 12. Tag des Monats verarbeitet.<sup></sup>
 
-Wenn **rundayosweek** 0 und **runday** negativ ist, definiert **runday** die Anzahl von Tagen vor dem letzten Tag des Monats, an dem der Auftrag verarbeitet wird.  1 gibt den letzten Tag des Monats an, 2 gibt einen Tag vor dem letzten Tag des Monats an usw. Wenn **rundayosweek** beispielsweise 0 und **runday** 1 ist, wird der Auftrag am letzten Tag des Monats verarbeitet.
+Wenn **RunDayOfWeek** 0 und **RunDay** negativ ist, definiert **RunDay** die Anzahl der Tage vor dem letzten Tag des Monats, an dem der Auftrag verarbeitet wird.  1 gibt den letzten Tag des Monats an, 2 gibt einen Tag vor dem letzten Tag des Monats an usw. Wenn **RunDayOfWeek** beispielsweise 0 und **RunDay** 1 ist, wird der Auftrag am letzten Tag des Monats verarbeitet.
 
-Wenn **rundayofweek** nicht 0 ist, ist **rundayofweek** der Wochentag, an dem der Auftrag im Verhältnis zum **runday** verarbeitet wird. Wenn **runday** beispielsweise 15 und **rundayosweek** 7 (+ Samstag) ist, wird der Auftrag am ersten Samstag am oder nach <sup>dem 15.</sup> Tag des Monats verarbeitet. Wenn **runday** den Wert 20 hat und **rundayosweek** 7 (Samstag) ist, wird der Auftrag am ersten Samstag am oder vor <sup>dem 20.</sup> Tag des Monats verarbeitet. Wenn **runday** 1 und **rundayosweek** 1 (Sonntag) ist, wird der Auftrag am letzten Sonntag des Monats verarbeitet.
+Wenn **RunDayOfWeek** nicht 0 ist, ist **RunDayOfWeek** der Tag der Woche, an dem der Auftrag verarbeitet wird, relativ zu **RunDay**. Wenn **RunDay** beispielsweise 15 und **RunDayOfWeek** 7 (+Samstag) ist, wird der Auftrag am ersten Samstag am oder nach dem 15. Tag des Monats verarbeitet.<sup></sup> Wenn **RunDay** 20 und **RunDayOfWeek** 7 (Samstag) ist, wird der Auftrag am ersten Samstag am oder vor dem 20. Tag des Monats verarbeitet.<sup></sup> Wenn **RunDay** 1 und **RunDayOfWeek** 1 (Sonntag) ist, wird der Auftrag am letzten Sonntag des Monats verarbeitet.
 
-Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
-**Rundayof-Woche**
+**RunDayOfWeek**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -762,32 +762,32 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine positive oder negative ganze Zahl, die zusammen mit **runday** zum Angeben des Wochentags oder Monats, an dem der Auftrag verarbeitet wird, verwendet wird. Weitere Informationen finden Sie in der Beschreibung der **runday** -Eigenschaft. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine positive oder negative ganze Zahl, die in Verbindung mit **RunDay** verwendet wird, um den Tag der Woche oder des Monats anzugeben, an dem der Auftrag verarbeitet wird. Weitere Informationen finden Sie in der Beschreibung der **RunDay-Eigenschaft.** Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 <dl> <dt>
 
-<span id="-Saturday"></span><span id="-saturday"></span><span id="-SATURDAY"></span>**-Samstag** (7)
+<span id="-Saturday"></span><span id="-saturday"></span><span id="-SATURDAY"></span>**-Saturday** ( 7)
 </dt> <dt>
 
-<span id="-Friday"></span><span id="-friday"></span><span id="-FRIDAY"></span>**-Freitag** (6)
+<span id="-Friday"></span><span id="-friday"></span><span id="-FRIDAY"></span>**-Friday** ( 6)
 </dt> <dt>
 
-<span id="-Thursday"></span><span id="-thursday"></span><span id="-THURSDAY"></span>**-Donnerstag** (5)
+<span id="-Thursday"></span><span id="-thursday"></span><span id="-THURSDAY"></span>**-Thursday** ( 5)
 </dt> <dt>
 
-<span id="-Wednesday"></span><span id="-wednesday"></span><span id="-WEDNESDAY"></span>**-Mittwoch** (4)
+<span id="-Wednesday"></span><span id="-wednesday"></span><span id="-WEDNESDAY"></span>**-Wednesday** ( 4)
 </dt> <dt>
 
-<span id="-Tuesday"></span><span id="-tuesday"></span><span id="-TUESDAY"></span>**-Dienstag** (3)
+<span id="-Tuesday"></span><span id="-tuesday"></span><span id="-TUESDAY"></span>**-Tuesday** ( 3)
 </dt> <dt>
 
-<span id="-Monday"></span><span id="-monday"></span><span id="-MONDAY"></span>**-Montag** (2)
+<span id="-Monday"></span><span id="-monday"></span><span id="-MONDAY"></span>**-Monday** ( 2)
 </dt> <dt>
 
-<span id="-Sunday"></span><span id="-sunday"></span><span id="-SUNDAY"></span>**-Sonntag** (1)
+<span id="-Sunday"></span><span id="-sunday"></span><span id="-SUNDAY"></span>**-Sunday** ( 1)
 </dt> <dt>
 
-<span id="ExactDayOfMonth"></span><span id="exactdayofmonth"></span><span id="EXACTDAYOFMONTH"></span>**Exactdayosmonth** (0)
+<span id="ExactDayOfMonth"></span><span id="exactdayofmonth"></span><span id="EXACTDAYOFMONTH"></span>**ExactDayOfMonth** (0)
 </dt> <dt>
 
 <span id="Sunday"></span><span id="sunday"></span><span id="SUNDAY"></span>**Sonntag** (1)
@@ -808,21 +808,21 @@ Eine positive oder negative ganze Zahl, die zusammen mit **runday** zum Angeben 
 <span id="Friday"></span><span id="friday"></span><span id="FRIDAY"></span>**Freitag** (6)
 </dt> <dt>
 
-<span id="Saturday_"></span><span id="saturday_"></span><span id="SATURDAY_"></span>**Samstag** (7)
+<span id="Saturday_"></span><span id="saturday_"></span><span id="SATURDAY_"></span>**Samstag** (7 )
 </dt> </dl>
 
 </dd> <dt>
 
-**Runmonth**
+**RunMonth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Monat, in dem der Auftrag verarbeitet werden soll. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Der Monat, in dem der Auftrag verarbeitet werden soll. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 <dl> <dt>
 
@@ -859,54 +859,54 @@ Der Monat, in dem der Auftrag verarbeitet werden soll. Diese Eigenschaft wird vo
 <span id="November"></span><span id="november"></span><span id="NOVEMBER"></span>**November** (10)
 </dt> <dt>
 
-<span id="December_"></span><span id="december_"></span><span id="DECEMBER_"></span>**Dezember** (11)
+<span id="December_"></span><span id="december_"></span><span id="DECEMBER_"></span>**Dezember** (11 )
 </dt> </dl>
 
 </dd> <dt>
 
-**Runstartinterval**
+**RunStartInterval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Zeitintervall nach Mitternacht, zu dem der Auftrag verarbeitet werden soll. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Das Zeitintervall nach Mitternacht, in dem der Auftrag verarbeitet werden soll. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
-**Scheduledstarttime**
+**ScheduledStartTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **StartTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Auftrag gestartet wurde. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Die Zeit, zu der der Auftrag begonnen hat. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -916,74 +916,74 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CI
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Timebeforeremoval**
+**TimeBeforeRemoval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeitspanne (in Minuten), die der Auftrag nach Abschluss der Ausführung aufbewahrt wird, entweder erfolgreich oder Fehler in dieser Ausführung. Der Auftrag muss für einige Zeit vorhanden sein, unabhängig vom Wert der **deleteoncompletion** -Eigenschaft. Der Standardwert beträgt fünf Minuten. Diese Eigenschaft wird von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))geerbt und ist immer auf 00000000000500.000000:000 festgelegt.
+Die Zeitspanne in Minuten, in der der Auftrag nach Abschluss der Ausführung beibehalten wird, entweder erfolgreich oder fehlgeschlagen. Der Auftrag muss unabhängig vom Wert der **DeleteOnCompletion-Eigenschaft** für einen bestimmten Zeitraum bestehen bleiben. Der Standardwert beträgt fünf Minuten. Diese Eigenschaft wird von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))geerbt und immer auf 000000000000500.000000:000 festgelegt.
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Status der virtuellen Maschine zuletzt geändert wurde. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der Zeitpunkt, zu dem der Zustand des virtuellen Computers zuletzt geändert wurde. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Timesub;**
+**TimeSubmitted**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Auftrag übermittelt wurde. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Die Zeit, zu der der Auftrag übermittelt wurde. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **UntilTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Auftrag ungültig ist oder angehalten werden soll. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Der Zeitpunkt, zu dem der Auftrag ungültig ist oder beendet werden soll. Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ storagejob** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ StorageJob-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -991,10 +991,10 @@ Der Zugriff auf die **MSVM \_ storagejob** -Klasse kann durch die UAC-Filterung 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -1003,13 +1003,13 @@ Der Zugriff auf die **MSVM \_ storagejob** -Klasse kann durch die UAC-Filterung 
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](cim-concretejob.md)
+[**CIM \_ ConcreteJob**](cim-concretejob.md)
 </dt> <dt>
 
-[**CIM- \_ concretejob**](/previous-versions//cc136808(v=vs.85))
+[**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))
 </dt> <dt>
 
-[Speicher Klassen](storage-classes.md)
+[Storage Klassen](storage-classes.md)
 </dt> </dl>
 
  

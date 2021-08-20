@@ -111,7 +111,7 @@ S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

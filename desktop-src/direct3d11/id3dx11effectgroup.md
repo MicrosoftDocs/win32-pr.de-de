@@ -1,6 +1,6 @@
 ---
 title: ID3DX11EffectGroup-Schnittstelle (D3dx11effect.h)
-description: Die ID3DX11EffectGroup-Schnittstelle greift auf eine Effect-Gruppe zu. Die Lebensdauer eines ID3DX11EffectGroup-Objekts entspricht der Lebensdauer des übergeordneten ID3DX11Effect-Objekts.
+description: Die ID3DX11EffectGroup-Schnittstelle greifen auf eine Effect-Gruppe zu. Die Lebensdauer eines ID3DX11EffectGroup-Objekts entspricht der Lebensdauer des übergeordneten ID3DX11Effect-Objekts.
 ms.assetid: f5a35c47-0bac-4559-bd6c-5e8bc7699e10
 keywords:
 - ID3DX11EffectGroup-Schnittstelle Direct3D 11
@@ -25,7 +25,7 @@ ms.locfileid: "119046228"
 ---
 # <a name="id3dx11effectgroup-interface"></a>ID3DX11EffectGroup-Schnittstelle
 
-Die **ID3DX11EffectGroup-Schnittstelle** greift auf eine Effect-Gruppe zu.
+Die **ID3DX11EffectGroup-Schnittstelle** greifen auf eine Effect-Gruppe zu.
 
 Die Lebensdauer eines **ID3DX11EffectGroup-Objekts** entspricht der Lebensdauer des übergeordneten [**ID3DX11Effect-Objekts.**](id3dx11effect.md)
 
@@ -37,14 +37,14 @@ Die **ID3DX11EffectGroup-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                   |
+| Methode                                                                  | Beschreibung                                                   |
 |:------------------------------------------------------------------------|:--------------------------------------------------------------|
-| [**GetAnnotationByIndex**](id3dx11effectgroup-getannotationbyindex.md) | Abrufen einer Anmerkung nach Index.<br/>                        |
-| [**GetAnnotationByName**](id3dx11effectgroup-getannotationbyname.md)   | Abrufen einer Anmerkung anhand des Namens.<br/>                         |
+| [**GetAnnotationByIndex**](id3dx11effectgroup-getannotationbyindex.md) | Sie erhalten eine Anmerkung nach Index.<br/>                        |
+| [**GetAnnotationByName**](id3dx11effectgroup-getannotationbyname.md)   | Erhalten Sie eine Anmerkung nach Namen.<br/>                         |
 | [**GetDesc**](id3dx11effectgroup-getdesc.md)                           | Ruft eine Gruppenbeschreibung ab.<br/>                          |
-| [**GetTechniqueByIndex**](id3dx11effectgroup-gettechniquebyindex.md)   | Abrufen einer Technik nach Index.<br/>                          |
-| [**GetTechniqueByName**](id3dx11effectgroup-gettechniquebyname.md)     | Abrufen einer Technik anhand des Namens.<br/>                           |
-| [**IsValid**](id3dx11effectgroup-isvalid.md)                           | Testen Sie einen Effekt, um festzustellen, ob er eine gültige Syntax enthält.<br/> |
+| [**GetTechniqueByIndex**](id3dx11effectgroup-gettechniquebyindex.md)   | Hier erhalten Sie eine Technik nach Index.<br/>                          |
+| [**GetTechniqueByName**](id3dx11effectgroup-gettechniquebyname.md)     | Hier erhalten Sie eine Technik nach Namen.<br/>                           |
+| [**IsValid**](id3dx11effectgroup-isvalid.md)                           | Testen Sie einen Effekt, um zu überprüfen, ob er eine gültige Syntax enthält.<br/> |
 
 
 
@@ -52,10 +52,10 @@ Die **ID3DX11EffectGroup-Schnittstelle** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine **ID3DX11EffectGroup-Schnittstelle** abzurufen, rufen Sie eine Methode wie [**ID3DX11Effect::GetGroupByName**](id3dx11effect-getgroupbyname.md)auf.
+Um eine **ID3DX11EffectGroup-Schnittstelle zu** erhalten, rufen Sie eine Methode wie [**ID3DX11Effect::GetGroupByName auf.**](id3dx11effect-getgroupbyname.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -66,11 +66,11 @@ Um eine **ID3DX11EffectGroup-Schnittstelle** abzurufen, rufen Sie eine Methode w
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

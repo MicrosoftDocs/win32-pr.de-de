@@ -1,9 +1,9 @@
 ---
-title: Attribut ignorieren
-description: Das Attribut \ Ignore \ gibt an, dass ein in einer Struktur oder Union enthaltener Zeiger und das vom Zeiger festgestellte Objekt nicht übertragen werden. Das Attribut \ Ignore \ ist auf Zeiger Elemente von Strukturen oder Unions beschränkt.
+title: ignore-Attribut
+description: Das Attribut \ignore\ gibt an, dass ein zeiger, der in einer Struktur oder Union enthalten ist, und das vom Zeiger angegebene Objekt nicht übertragen wird. Das Attribut \ignore\ ist auf Zeigermitglieder von Strukturen oder Unions beschränkt.
 ms.assetid: 9c2fc71a-4fac-4a59-95f5-2121067b326f
 keywords:
-- Attribut-Mittel l ignorieren
+- IGNORE-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e82b9525dd6de316087db8fdfd55181118d3adc6
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8c6b7a1e70804bc3c9c277f3d46ac6a8ad20fc0f98b370f93fe9fd09b0b1bb99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013858"
 ---
-# <a name="ignore-attribute"></a>Attribut ignorieren
+# <a name="ignore-attribute"></a>ignore-Attribut
 
-Das **\[ Ignore \]** -Attribut gibt an, dass ein in einer Struktur oder Union enthaltener Zeiger und das vom Zeiger festgestellte Objekt nicht übertragen werden. Das **\[ Ignore \]** -Attribut ist auf Zeiger Elemente von Strukturen oder Unions beschränkt.
+Das **\[ \] ignore-Attribut** gibt an, dass ein zeiger, der in einer Struktur oder Union enthalten ist, und das durch den Zeiger angegebene Objekt nicht übertragen wird. Das **\[ ignore-Attribut \]** ist auf Zeigermitglieder von Strukturen oder Unions beschränkt.
 
 ``` syntax
 [ignore] pointer-member-type pointer-name;
@@ -31,25 +31,25 @@ Das **\[ Ignore \]** -Attribut gibt an, dass ein in einer Struktur oder Union en
 
 <dl> <dt>
 
-*Pointer-Member-Type* 
+*pointer-member-type* 
 </dt> <dd>
 
-Gibt den Typ des Zeiger Elements der Struktur oder Union an.
+Gibt den Typ des Zeiger-Members der Struktur oder Union an.
 
 </dd> <dt>
 
-*Zeiger Name* 
+*Zeigername* 
 </dt> <dd>
 
-Gibt den Namen des Zeiger Elements an, das beim Marshalling ignoriert werden soll.
+Gibt den Namen des Zeigermitglieds an, das während des Marshallings ignoriert werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert eines Strukturmembers mit dem **\[ Ignore \]** -Attribut ist am Ziel nicht definiert. Ein **\[** [**in**](in.md) - **\]** Parameter ist nicht auf dem Remote Computer definiert. Ein **\[** [**out**](out-idl.md) - **\]** Parameter ist nicht auf dem lokalen Computer definiert.
+Der Wert eines Strukturmitglieds mit dem **\[ \] ignore-Attribut** ist am Ziel nicht definiert. Ein **\[** [](in.md) **\]** in-Parameter ist auf dem Remotecomputer nicht definiert. Ein **\[** [](out-idl.md) **\]** out-Parameter ist auf dem lokalen Computer nicht definiert.
 
-Mit dem Attribut " **\[ Ignore \]** " können Sie die Übertragung von Daten verhindern. Dies ist in Situationen hilfreich, z. b. in einer doppelt verknüpften Liste. Das folgende Beispiel enthält eine doppelt verknüpfte Liste, die das datenaliasing einführt:
+Mit **\[ dem \] Ignore-Attribut** können Sie die Übertragung von Daten verhindern. Dies ist in Situationen nützlich, z. B. in einer doppelt verknüpften Liste. Das folgende Beispiel enthält eine doppelt verknüpfte Liste, die das Datenaliasing einfing:
 
 ``` syntax
 /* IDL file */ 
@@ -77,9 +77,9 @@ p->previous = q->next = NULL;
 remote_op(p);
 ```
 
-Aliasing tritt im vorangehenden Beispiel auf, weil derselbe Speicherbereich von zwei verschiedenen Zeigern in der Funktion **p** und **p->Next->Previous** verfügbar ist.
+Aliasing tritt im vorherigen Beispiel auf, da der gleiche Speicherbereich über zwei verschiedene Zeiger in der Funktion **p** und **p->** der nächsten >verfügbar ist.
 
-Beachten Sie, dass **\[ Ignore \]** nicht als Type-Attribut verwendet werden kann.
+Beachten Sie, **\[ dass ignore \]** nicht als Typattribut verwendet werden kann.
 
 ## <a name="examples"></a>Beispiele
 
@@ -96,30 +96,30 @@ typedef struct _DBL_LINK_NODE_TYPE
 
 <dl> <dt>
 
-[Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
+[Array- Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
 </dt> <dt>
 
-[**Mikro**](arrays-1.md)
+[**Arrays**](arrays-1.md)
 </dt> <dt>
 
 [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers)
 </dt> <dt>
 
-[**in**](in.md)
+[**In**](in.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
-[**ptr**](ptr.md)
+[**Ptr**](ptr.md)
 </dt> <dt>
 
 [**ref**](ref.md)
 </dt> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

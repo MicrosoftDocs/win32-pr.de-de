@@ -1,6 +1,6 @@
 ---
 title: Cliententwicklung mitHilfe von Kontexthandles
-description: Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht im Übergeben an den Server bei jedem Aufruf einer Remoteprozedur durch den Client.
+description: Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht in der Übergeben dieses An den Server bei jedem Aufruf einer Remoteprozedur durch den Client.
 ms.assetid: fcbdfb1e-4f1e-4d22-9a3e-cf5a29d300d0
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118931841"
 ---
 # <a name="client-development-using-context-handles"></a>Cliententwicklung mitHilfe von Kontexthandles
 
-Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht im Übergeben an den Server bei jedem Aufruf einer Remoteprozedur durch den Client. Die Clientanwendung muss nicht auf den Inhalt des Handle zugreifen. Es sollte nicht versucht werden, die Kontexthandhanddaten in irgendeiner Weise zu ändern. Die Remoteverfahren, die der Client aufruft, führen alle erforderlichen Vorgänge im Kontext des Servers aus.
+Die einzige Verwendung eines Clientprogramms für ein Kontexthand handle besteht in der Übergeben dieses An den Server bei jedem Aufruf einer Remoteprozedur durch den Client. Die Clientanwendung muss nicht auf den Inhalt des Handle zugreifen. Es sollte nicht versucht werden, die Kontexthand handle-Daten in irgendeiner Weise zu ändern. Die Remoteverfahren, die der Client aufruft, führen alle erforderlichen Vorgänge im Kontext des Servers aus.
 
 Vor dem Anfordern eines Kontexthandpunkts von einem Server müssen Clients eine Bindung mit dem Server herstellen. Der Client kann ein automatisches, implizites oder explizites Bindungshand handle verwenden. Mit einem gültigen Bindungshand handle kann der Client eine Remoteprozedur auf dem Server aufrufen, die entweder ein geöffnetes Kontexthand handle (nicht **NULL)** zurückgibt oder eines über einen **\[ out-Parameter \]** in der Parameterliste der Remoteprozedur übergibt.
 
@@ -49,7 +49,7 @@ if (status)
 
 
 
-Die Clientanwendung in diesem Beispiel verwendet eine Prozedur namens RemoteRead, um eine Datendatei auf dem Server zu lesen, bis ein Dateiende vorgelegen hat. Anschließend wird die Datei durch Aufrufen von RemoteClose geschlossen. Das Kontexthandles wird als Parameter in den Funktionen RemoteRead und RemoteClose wie im folgenden Beispiel angezeigt:
+Die Clientanwendung in diesem Beispiel verwendet eine Prozedur namens RemoteRead, um eine Datendatei auf dem Server zu lesen, bis ein Dateiende vorgelegen hat. Anschließend wird die Datei durch Aufrufen von RemoteClose geschlossen. Das Kontexthandles wird als Parameter in den Funktionen RemoteRead und RemoteClose angezeigt:
 
 
 ```C++

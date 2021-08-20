@@ -1,9 +1,9 @@
 ---
-title: Button. uptooltip
-description: Das uptooltip-Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der Schaltfläche befindet und sich die Schaltfläche im Zustand "
+title: BUTTON.upToolTip
+description: Das upToolTip-Attribut gibt den QuickInfo-Text an oder ruft diesen ab, der angezeigt wird, wenn sich der Mauszeiger über button befindet und sich BUTTON im Auf-Zustand befindet.
 ms.assetid: 632248e8-1583-4b49-b06b-7f094e43387d
 keywords:
-- Button. uptooltip-Fenster Media Player
+- BUTTON.upToolTip-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 074106cac238e7e8e718dd7654b8dc4771052205
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 482553400348951139b2faa8a3c8bbd6b240e4b476c7ddaacfb4f354f8df8379
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997840"
 ---
-# <a name="buttonuptooltip"></a>Button. uptooltip
+# <a name="buttonuptooltip"></a>BUTTON.upToolTip
 
-Das **uptooltip** -Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der **Schaltfläche** befindet und sich die **Schaltfläche** im Zustand "
+Das **upToolTip-Attribut** gibt den QuickInfo-Text an oder ruft  diesen ab, der angezeigt wird, wenn sich der Mauszeiger über button befindet und sich **BUTTON** im Auf-Zustand befindet.
 
 ``` syntax
         elementID.upToolTip
@@ -29,9 +29,9 @@ Das **uptooltip** -Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der ang
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "" (leere Zeichenfolge) und einer maximalen Länge von 1024 Zeichen.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff mit dem Standardwert "" (leere Zeichenfolge) und einer maximalen Länge von 1.024 Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
@@ -41,7 +41,7 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,10 +49,10 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> <dt>
 
-[**Schaltfläche. nach unten**](button-down.md)
+[**BUTTON.down**](button-down.md)
 </dt> </dl>
 
  

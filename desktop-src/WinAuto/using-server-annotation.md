@@ -1,69 +1,69 @@
 ---
-title: Verwenden der Server Anmerkung
-description: Dieses Thema enthält Informationen zum Verwenden der Server Anmerkung zum Angeben eines Rückruf Objekts.
+title: Verwenden der Serveranmerkung
+description: Dieses Thema enthält Informationen zur Verwendung der Serveranmerkung zum Angeben eines Rückrufobjekts.
 ms.assetid: eeeebddc-2752-4d8f-b4fa-38ce156acc08
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb545cd4dd016901d69f67d5ab5cab15dda08875
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 65b2955d49431b502c8587484208321bc1ab1bc0c8201fabf466b60b68f548a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118823904"
 ---
-# <a name="using-server-annotation"></a>Verwenden der Server Anmerkung
+# <a name="using-server-annotation"></a>Verwenden der Serveranmerkung
 
-Dieses Thema enthält Informationen zum Verwenden der Server Anmerkung zum Angeben eines Rückruf Objekts.
+Dieses Thema enthält Informationen zur Verwendung der Serveranmerkung zum Angeben eines Rückrufobjekts.
 
-**So überschreiben Sie eine Eigenschaft, die ein Rückruf Objekt angibt**
+**So überschreiben Sie eine Eigenschaft, die ein Rückrufobjekt angibt**
 
-1.  Abrufen eines [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstellen Zeigers auf das barrierefreie Element, das mit Anmerkungen versehen werden soll.
-2.  Ruft [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für das barrierefreie Element auf, um einen [**iaccidentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) -Schnittstellen Zeiger zu erhalten.
-3.  Rufen Sie [**iaccidentity:: getidentitystring ()**](/windows/desktop/api/Oleacc/nf-oleacc-iaccidentity-getidentitystring) für den [**iaccidentity**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) -Schnittstellen Zeiger auf, um eine Zeichenfolge abzurufen, die das barrierefreie Element eindeutig identifiziert, das mit Anmerkungen versehen werden soll.
-4.  Verwenden Sie [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) oder [**cokreateinstanceex**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstanceex) zum Erstellen des [**IAccPropServices**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropservices) -Objekts.
-5.  Erstellen Sie ein Component Object Model (com)-Objekt, das [**IAccPropServer**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropserver)implementiert.
-6.  Rufen Sie [**IAccPropServices:: SetPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-setpropserver)auf, und übergeben Sie dabei die Identitäts Zeichenfolge, eine GUID, die die zu über schreibende Eigenschaft angibt, und einen Zeiger auf das [**IAccPropServer**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropserver) -Rückruf Objekt.
-7.  Freigeben von Schnittstellen Zeigern und freiem Arbeitsspeicher.
+1.  Rufen Sie einen [**IAccessible-Schnittstellenzeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) auf das barrierefreie Element ab, das mit Anmerkungen versehen werden soll.
+2.  Rufen Sie [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für das barrierefreie Element auf, um einen [**IAccIdentity-Schnittstellenzeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) abzurufen.
+3.  Rufen Sie [**IAccIdentity::GetIdentityString()**](/windows/desktop/api/Oleacc/nf-oleacc-iaccidentity-getidentitystring) für den [**IAccIdentity-Schnittstellenzeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccidentity) auf, um eine Zeichenfolge abzurufen, die das barrierefreie Element eindeutig identifiziert, das mit Anmerkungen versehen werden soll.
+4.  Verwenden Sie [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) oder [**CoCreateInstanceEx,**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstanceex) um das [**IAccPropServices-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropservices) zu erstellen.
+5.  Erstellen Sie ein Component Object Model -Objekt (COM), das [**IAccPropServer**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropserver)implementiert.
+6.  Rufen Sie [**IAccPropServices::SetPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-setpropserver)auf, und übergeben Sie die Identitätszeichenfolge, eine GUID, die die zu überschreibende Eigenschaft angibt, und einen Zeiger auf das [**IAccPropServer-Rückrufobjekt.**](/windows/desktop/api/oleacc/nn-oleacc-iaccpropserver)
+7.  Gibt Schnittstellenzeiger frei und gibt Arbeitsspeicher frei.
 
-Wenn ein Client die-Eigenschaft des barrierefreien Elements anfordert, wird das Rückruf Objekt aufgerufen, und der Wert wird an den Client zurückgegeben.
+Wenn ein Client die -Eigenschaft des barrierefreien Elements anfordert, wird das Rückrufobjekt aufgerufen und gibt den Wert an den Client zurück.
 
-Wie beim Angeben eines Werts können Server Entwickler alternativ die [**IAccPropServices:: composehwndidentitystring**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-composehwndidentitystring) -Methode verwenden, um eine Identitäts Zeichenfolge abzurufen. oder Sie können die [**IAccPropServices:: Server**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-sethwndpropserver) -Methode verwenden und die Parameter " *HWND*", " *idobject*" und " *idchild* " anstelle einer Identitäts Zeichenfolge angeben.
+Wie bei der Angabe eines Werts können Serverentwickler alternativ die [**IAccPropServices::ComposeHwndIdentityString-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-composehwndidentitystring) verwenden, um eine Identitätszeichenfolge abzurufen. oder sie können die [**IAccPropServices::SetHwndPropServer-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-sethwndpropserver) verwenden und die Parameter *hwnd,* *idObject* oder *idChild* anstelle einer Identitätszeichenfolge angeben.
 
-Bei Verwendung von [**SetPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-setpropserver) oder [**SetHwndPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-sethwndpropserver) für ein Container Objekt können Server Entwickler optional festlegen, dass die über schreibenden Informationen auch auf alle untergeordneten Elemente dieses Containers angewendet werden sollen.
+Bei Verwendung von [**SetPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-setpropserver) oder [**SetHwndPropServer**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-sethwndpropserver) für ein Containerobjekt können Serverentwickler optional angeben, dass die überschreibenden Informationen auch für alle untergeordneten Elementelemente dieses Containers gelten sollen.
 
-Server können die Anmerkung jederzeit mithilfe von [**IAccPropServices:: Clear-**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-clearprops)Eigenschaften explizit löschen. Dies ist in der Regel nicht erforderlich, da der Anmerkung-Dienst Anmerkung-Informationen automatisch bereinigt und freigibt, wenn das barrierefreie Element, das mit Anmerkungen versehen wird, nicht mehr angezeigt wird.
+Server können die Anmerkung jederzeit explizit löschen, indem [**sie IAccPropServices::ClearProps verwenden.**](/windows/desktop/api/Oleacc/nf-oleacc-iaccpropservices-clearprops) Dies ist in der Regel nicht erforderlich, da der Anmerkungsdienst automatisch Anmerkungsinformationen bereinigt und freigibt, wenn das barrierefreie Element, das kommentiert wird, nicht mehr angezeigt wird.
 
-Im folgenden finden Sie eine Liste der Eigenschaften, die mit dieser Prozedur kommentiert werden können.
+Im Folgenden finden Sie eine Liste der Eigenschaften, die mithilfe dieser Prozedur kommentiert werden können.
 
-## <a name="properties-supported-when-specifying-a-callback"></a>Unterstützte Eigenschaften beim Angeben eines Rückrufs
+## <a name="properties-supported-when-specifying-a-callback"></a>Eigenschaften, die beim Angeben eines Rückrufs unterstützt werden
 
-Beim Angeben eines Rückrufs können die folgenden Eigenschaften mit Anmerkungen versehen werden. Zurzeit können diese Eigenschaften nicht direkt mit Anmerkungen versehen werden, indem ein-Wert angegeben wird.
+Beim Angeben eines Rückrufs können die folgenden Eigenschaften mit Anmerkungen versehen werden. Derzeit können diese Eigenschaften nicht direkt durch Angabe eines Werts kommentiert werden.
 
 
 
-| Eigenschaft                      | type                                                             |
+| Eigenschaft                      | Typ                                                             |
 |-------------------------------|------------------------------------------------------------------|
-| Name des PROPID- \_ ACC \_             | VT \_ BSTR                                                         |
-| Beschreibung des PROPID- \_ ACC \_      | VT \_ BSTR                                                         |
-| PROPID- \_ Rolle "ACC" \_             | VT \_ I4                                                           |
-| Status des PROPID- \_ ACC \_            | VT \_ I4                                                           |
-| PROPID \_ - \_ Hilfe zum ACC             | VT \_ BSTR                                                         |
-| PROPID \_ ACC \_ KeyboardShortcut | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ NAME             | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ DESCRIPTION      | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ ROLE             | VT \_ I4                                                           |
+| PROPID \_ ACC \_ STATE            | VT \_ I4                                                           |
+| PROPID \_ ACC \_ HELP             | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ KEYBOARDSHORTCUT | VT \_ BSTR                                                         |
 | PROPID \_ ACC \_ DEFAULTACTION    | VT \_ BSTR                                                         |
-| PROPID- \_ ACC ( \_ ValueMap)         | VT \_ BSTR                                                         |
-| PROPID- \_ ACC- \_ rolemap          | VT \_ BSTR                                                         |
-| PROPID- \_ ACC- \_ statemap         | VT \_ BSTR                                                         |
-| PROPID- \_ ACC- \_ Fokus            | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ Auswahl        | VT \_ -Verteilung<br/> VT \_ I4<br/> VT \_ unbekannt<br/> |
-| PROPID- \_ ACC über \_ geordnetes Element           | VT \_ -Verteilung                                                     |
-| PROPID-ACC-Navigations- \_ \_ \_ up          | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID-ACC-Navigationsbereich \_ \_ \_        | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ NAV \_ Links        | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID-ACC-Navigations \_ \_ \_ Recht       | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ NAV- \_ Prev        | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ NAV \_ als nächstes        | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ NAV ( \_ FirstChild)  | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
-| PROPID- \_ ACC- \_ NAV- \_ LastChild   | VT \_ -Verteilung<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ VALUEMAP         | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ ROLEMAP          | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ STATEMAP         | VT \_ BSTR                                                         |
+| PROPID \_ ACC \_ FOCUS            | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ SELECTION        | VT \_ DISPATCH<br/> VT \_ I4<br/> VT \_ UNKNOWN<br/> |
+| PROPID \_ ACC \_ PARENT           | VT \_ DISPATCH                                                     |
+| PROPID \_ ACC \_ NAV \_ UP          | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ DOWN        | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ LEFT        | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ RIGHT       | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ PREV        | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ NEXT        | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ FIRSTCHILD  | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
+| PROPID \_ ACC \_ NAV \_ LASTCHILD   | VT \_ DISPATCH<br/> VT \_ I4<br/>                        |
 
 
 

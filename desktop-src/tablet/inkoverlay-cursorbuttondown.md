@@ -1,19 +1,19 @@
 ---
-description: 'InkOverlay.CursorButtonDown-Ereignis: Tritt auf, wenn die InkCollector-Klasse eine Cursorschaltfläche erkennt, die nicht aktiv ist.'
+description: 'InkOverlay.CursorButtonDown-Ereignis: Tritt auf, wenn die InkCollector-Klasse eine schaltfläche erkennt, die heruntergefahren ist.'
 ms.assetid: 993b84a3-a5ac-4b00-bfb4-26ca1c9727c6
 title: InkOverlay.CursorButtonDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fcae13afb67be0312959939e0793d89d99c841ba
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e73edfd6c8d9901a1eab0adf13c3c5439ef5716d1489ddb30e008079304d44b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967099"
 ---
 # <a name="inkoverlaycursorbuttondown-event"></a>InkOverlay.CursorButtonDown-Ereignis
 
-Tritt ein, wenn die [**InkCollector-Klasse**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die nicht aktiv ist.
+Tritt ein, wenn [**die InkCollector-Klasse**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die nicht mehr angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ void CursorButtonDown(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**CursorButtonDown-Ereignis**](inkcollector-cursorbuttondown.md) generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**CursorButtonDown-Ereignis generiert**](inkcollector-cursorbuttondown.md) hat.
 
 </dd> <dt>
 
@@ -49,21 +49,21 @@ Die Schaltfläche, die gedrückt wurde.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schaltfläche auf einer Stiftspitze ist nach unten geschaltet, wenn der Benutzer den Stift auf den Digitizer heruntersenkt und mit der Ablaufverfolgung eines Strichs beginnt. Eine Schaltfläche an einem Fass ist nach dem Drücken der Schaltfläche nicht mehr zu haben.
+Eine Schaltfläche auf einer Stiftspitze ist nach unten, wenn der Benutzer den Stift auf den Digitizer heruntersendt und mit der Ablaufverfolgung eines Strichs beginnt. Wenn die Schaltfläche gedrückt wird, ist eine Schaltfläche auf einer Knopffläche nicht mehr zu sehen.
 
-Wenn Sie die rechte Maustaste drücken, erhalten Sie tatsächlich zwei [**CursorButtonDown-Ereignisse:**](inkcollector-cursorbuttondown.md) eines für die gedrückte rechte Schaltfläche und eines für die gedrückte linke Schaltfläche.
+Wenn Sie die rechte Maustaste drücken, erhalten Sie tatsächlich zwei [**CursorButtonDown-Ereignisse**](inkcollector-cursorbuttondown.md) : eines für die gedrückte rechte Schaltfläche und eines für die linke Schaltfläche.
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICECursorButtonDown definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICECursorButtonDown definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

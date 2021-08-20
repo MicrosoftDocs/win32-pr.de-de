@@ -1,64 +1,64 @@
 ---
-title: Erstellen von Schnittstellen-UUIDs
-description: Erstellen von Universal Unique Identifier (UUIDs) der Schnittstelle und Verwenden von uuidgen.
+title: Generieren von Schnittstellen-UUIDs
+description: Generieren von UUIDs (Universal Unique Identifiers) der Schnittstelle und Verwenden von Uuidgen.
 ms.assetid: a973b7f9-71c5-46a0-aa0c-51f150560dbc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 68c5f727ed3e37139d4da50f84c3929bff333156
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 70c21ead6161a79d000d2741a49c4fb61ff23b3a8a3340db2eb26a7805424df5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118929547"
 ---
-# <a name="generating-interface-uuids"></a>Erstellen von Schnittstellen-UUIDs
+# <a name="generating-interface-uuids"></a>Generieren von Schnittstellen-UUIDs
 
-Dieser Abschnitt enthält Informationen zu universellen eindeutigen Bezeichnerzeichen (UUIDs) und zum uuidgen-Hilfsprogramm in den folgenden Themen:
+Dieser Abschnitt enthält Informationen zu UUIDs (Universal Unique Identifiers) und dem Uuidgen-Hilfsprogramm in den folgenden Themen:
 
 -   [Was ist eine UUID?](#what-is-a-uuid)
--   [Verwenden von uuidgen](#using-uuidgen)
+-   [Verwenden von Uuidgen](#using-uuidgen)
 
 ## <a name="what-is-a-uuid"></a>Was ist eine UUID?
 
-Alle Schnittstellen müssen in einem Netzwerk eindeutig identifiziert werden, damit Sie von Clients gefunden werden können. In kleinen Netzwerken kann der Name der Schnittstelle allein ausreichen, um Sie zu identifizieren. Dies ist jedoch in großen Netzwerken in der Regel nicht möglich. Daher weisen Entwickler in der Regel jeder Schnittstelle einen universellen eindeutigen Bezeichner (UUID, austauschbar mit dem Begriff GUID oder einen global eindeutigen Bezeichner) zu. Eine UUID ist eine Zeichenfolge, die eine Reihe von hexadezimalen Ziffern enthält. Jede Schnittstelle hat eine andere UUID. Weitere Informationen finden Sie unter [Zeichenfolge UUID](string-uuid.md).
+Alle Schnittstellen müssen in einem Netzwerk eindeutig identifiziert werden, damit Clients sie finden können. In kleinen Netzwerken kann der Name der Schnittstelle allein ausreichen, um sie zu identifizieren. Dies ist jedoch in großen Netzwerken in der Regel nicht möglich. Daher weisen Entwickler jeder Schnittstelle in der Regel einen UUID (Universal Unique Identifier) zu, der mit dem Begriff GUID oder Globally Unique Identifier austauschbar ist. Eine UUID ist eine Zeichenfolge, die einen Satz von Hexadezimalziffern enthält. Jede Schnittstelle verfügt über eine andere UUID. Weitere Informationen finden Sie unter [String UUID](string-uuid.md).
 
-Die Textdarstellung einer UUID ist eine Zeichenfolge, die aus 8 hexadezimalen Ziffern gefolgt von einem Bindestrich gefolgt von drei durch Trennzeichen getrennten Gruppen von vier hexadezimalen Ziffern gefolgt von einem Bindestrich gefolgt von 12 hexadezimal Ziffern besteht. Das folgende Beispiel ist eine gültige UUID-Zeichenfolge:
+Die Textdarstellung einer UUID ist eine Zeichenfolge, die aus acht Hexadezimalziffern gefolgt von einem Bindestrich gefolgt von drei durch Bindestriche getrennten Gruppen mit vier Hexadezimalziffern gefolgt von einem Bindestrich gefolgt von 12 Hexadezimalziffern besteht. Das folgende Beispiel ist eine gültige UUID-Zeichenfolge:
 
 ba209999-0c6c-11d2-97cf-00c04f8eea45
 
-Leere UUIDs werden als NULL UUIDs anstelle von **null** UUIDs bezeichnet. Der Begriff Nil gibt alles an, das NULL, leer, leer oder nicht initialisiert ist. Eine leere Zeichenfolge, ein leerer Datenbankdaten Satz oder eine nicht initialisierte UUID sind Beispiele für Nil-Werte.
+Leere UUIDs werden anstelle von NULL-UUIDs als NULL-UUIDs bezeichnet.  Der Begriff nil gibt alles an, was null, leer, leer oder nicht initialisiert ist. Eine leere Zeichenfolge, ein leerer Datenbankdatensatz oder eine nicht initialisierte UUID sind Beispiele für NULL-Werte.
 
 > [!Note]  
-> Der Wert **null** ist der spezifische Wert 0 (null). Sie wird häufig in der C-und C++-Programmierung zusammen mit Zeigern verwendet. Nil ist ein allgemeinerer Begriff als **null**. Nicht initialisierte UUIDs der Objektschnittstelle sollten immer als NULL-UUIDs und nicht als **null** -UUIDs bezeichnet werden.
+> Der Wert **NULL ist** der spezifische Wert 0 (null). Er wird häufig in C- und C++-Programmierung in Verbindung mit Zeigern verwendet. Nil ist ein allgemeinerer Begriff als **NULL.** Nicht initialisierte Objektschnittstellen-UUIDs sollten immer als NULL-UUIDs und nicht als NULL-UUIDs bezeichnet werden. 
 
- 
+ 
 
-## <a name="using-uuidgen"></a>Verwenden von uuidgen
+## <a name="using-uuidgen"></a>Verwenden von Uuidgen
 
-Microsoft stellt ein hilfsprogrammprogramm mit dem Namen uuidgen zum Generieren der UUIDs zur Verfügung. Das Hilfsprogramm uuidgen generiert die UUID im IDL-Dateiformat oder im C-sprach Format.
+Microsoft stellt ein Hilfsprogramm namens Uuidgen zur Verfügung, um Ihre UUIDs zu generieren. Das Uuidgen-Hilfsprogramm generiert die UUID im IDL-Dateiformat oder C-Sprachformat.
 
-Wenn Sie das Hilfsprogramm uuidgen von der Befehlszeile ausführen, können Sie die folgenden Befehls Schalter verwenden.
+Wenn Sie das Uuidgen-Hilfsprogramm über die Befehlszeile ausführen, können Sie die folgenden Befehlsschalter verwenden.
 
 
 
-| Uuidgen-Switch           | BESCHREIBUNG                                                                |
+| Uuidgen-Schalter           | BESCHREIBUNG                                                                |
 |--------------------------|----------------------------------------------------------------------------|
-| **/I**                   | Gibt UUID an eine IDL-Schnittstellen Vorlage aus.                                 |
+| **/I**                   | Gibt UUID in eine IDL-Schnittstellenvorlage aus.                                 |
 | **/s**                   | Gibt UUID als initialisierte C-Struktur aus.                                |
-| **/o** < *Dateiname*> | Leitet die Ausgabe in eine Datei um. wird unmittelbar nach dem **/o** -Schalter angegeben. |
-| **/n** < *Zahl*>   | Gibt die Anzahl der zu generierenden UUIDs an.                                 |
-| **/v**                   | Zeigt Versionsinformationen zu uuidgen an.                                |
-| **/h** oder **?**          | Zeigt die Zusammenfassung der Befehls Option an.                                           |
+| **/o** < *Dateiname*> | Leitet die Ausgabe an eine Datei um. wird unmittelbar nach dem **Schalter /o** angegeben. |
+| **/n** < *number*>   | Gibt die Anzahl der zu generierenden UUIDs an.                                 |
+| **/v**                   | Zeigt Versionsinformationen zu Uuidgen an.                                |
+| **/h** oder **?**          | Zeigt eine Zusammenfassung der Befehlsoption an.                                           |
 
 
 
- 
+ 
 
-In der Regel verwenden Sie das Hilfsprogramm uuidgen, wie im folgenden Beispiel gezeigt.
+In der Regel verwenden Sie das Hilfsprogramm Uuidgen, wie im folgenden Beispiel gezeigt.
 
-**"uuidgen-i-omyapp. idl**
+**uuidgen -i -oMyApp.idl**
 
-Dieser Befehl generiert eine UUID und speichert Sie in einer Mittel l-Datei, die Sie als Vorlage verwenden können. Wenn der vorherige Befehl ausgeführt wird, ähnelt der Inhalt von "MyApp. idl" folgendem:
+Dieser Befehl generiert eine UUID und speichert sie in einer MIDL-Datei, die Sie als Vorlage verwenden können. Wenn der vorherige Befehl ausgeführt wird, sieht der Inhalt von MyApp.idl etwa wie folgt aus:
 
 ``` syntax
 [
@@ -71,11 +71,11 @@ interface INTERFACENAME
 }
 ```
 
-Der nächste Schritt besteht darin, den Platzhalter Namen "interfakename" durch den tatsächlichen Namen der Schnittstelle zu ersetzen.
+Der nächste Schritt besteht im Ersetzen des Platzhalternamens INTERFACENAME durch den tatsächlichen Namen Ihrer Schnittstelle.
 
- 
+ 
 
- 
+ 
 
 
 

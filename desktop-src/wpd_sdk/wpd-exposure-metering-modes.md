@@ -92,7 +92,7 @@ Gibt den Messungsmodus des Geräts an. Diese Enumeration wird von der [WPD STILL
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -13,18 +13,18 @@ ms.locfileid: "117871846"
 ---
 # <a name="networking-in-media-foundation"></a>Netzwerk in Media Foundation
 
-Anwendungen, die auf Media Foundation, können Medienquellen über ein Netzwerk wieder geben. Für die Anwendung ähnelt der Prozess der Wiedergabe aus einer lokalen Datei.
+Anwendungen, die auf Media Foundation basieren, können Medienquellen über ein Netzwerk wiedergeben. Für die Anwendung ähnelt der Prozess der Wiedergabe aus einer lokalen Datei.
 
 
 
-| Thema                                                                                      | BESCHREIBUNG                                                                                                                             |
+| Thema                                                                                      | Beschreibung                                                                                                                             |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| [Netzwerkquellenfeatures](network-source-features.md)                                     | Beschreibt die von der Netzwerkquelle unterstützten Funktionen und die zugehörigen Konfigurationsoptionen.                                        |
-| [Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)                 | Stellt Informationen zur Verwendung des Proxylocatorobjekts zur Verfügung, das den Proxy bestimmt, der beim Herstellen einer Verbindung mit einem Server verwendet werden soll.                 |
-| [Netzwerkquellenauthentifizierung](network-source-authentication.md)                         | Stellt Informationen zur Verwendung der Authentifizierungskomponenten wie dem Anmeldeinformationscache und dem Anmeldeinformations-Manager zur Verfügung.                 |
-| [How to Get Events from the Network Source](how-to-get-events-from-the-network-source.md) | Enthält Informationen zum Abrufen Media Foundation Während des Öffnens einer Verbindung und vor dem Erstellen der Netzwerkquelle. |
-| [Unterstützte Protokolle](supported-protocols.md)                                             | Beschreibt die Protokolle, die von der Netzwerkquelle unterstützt werden. Stellt außerdem Informationen zum Protokollrolloververfahren zur Verfügung.     |
-| [Clientprotokollierung](client-logging.md)                                                       | Beschreibt die Clientprotokollierungsfelder, die die Anwendung konfigurieren kann, und wie sie Netzwerkstatistiken abrufen kann.                      |
+| [Netzwerkquellfeatures](network-source-features.md)                                     | Beschreibt die von der Netzwerkquelle unterstützten Features und die zugehörigen Konfigurationsoptionen.                                        |
+| [Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)                 | Stellt Informationen zur Verwendung des Proxylocatorobjekts bereit, das den Proxy bestimmt, der beim Herstellen einer Verbindung mit einem Server verwendet werden soll.                 |
+| [Netzwerkquellauthentifizierung](network-source-authentication.md)                         | Stellt Informationen zur Verwendung der Authentifizierungskomponenten bereit, z. B. den Anmeldeinformationscache und den Anmeldeinformations-Manager.                 |
+| [Abrufen von Ereignissen aus der Netzwerkquelle](how-to-get-events-from-the-network-source.md) | Stellt Informationen zum Abrufen von Media Foundation Ereignissen während des Öffnens einer Verbindung und vor der Erstellung der Netzwerkquelle bereit. |
+| [Unterstützte Protokolle](supported-protocols.md)                                             | Beschreibt die Protokolle, die von der Netzwerkquelle unterstützt werden. Stellt außerdem Informationen über die Protokollrolloverprozedur bereit.     |
+| [Clientprotokollierung](client-logging.md)                                                       | Beschreibt die Felder für die Clientprotokollierung, die von der Anwendung konfiguriert werden können, und wie Netzwerkstatistiken abgerufen werden können.                      |
 
 
 
@@ -34,7 +34,7 @@ Anwendungen, die auf Media Foundation, können Medienquellen über ein Netzwerk 
 
 <dl> <dt>
 
-[Media Foundation-Programmierhandbuch](media-foundation-programming-guide.md)
+[Media Foundation Programmierhandbuch](media-foundation-programming-guide.md)
 </dt> <dt>
 
 [Medienquellen](media-sources.md)

@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie das Dialogfeld "Datei in Verwendung" angepasst wird, um zusätzliche Informationen und Optionen für Dateien anzuzeigen, die zurzeit in der Anwendung geöffnet sind.
+description: Veranschaulicht, wie das Dialogfeld "Datei wird verwendet" angepasst wird, um zusätzliche Informationen und Optionen für Dateien anzuzeigen, die derzeit in der Anwendung geöffnet sind.
 title: Datei wird verwendet (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 223e0addf201f3526654a17346963b4639e0d215
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27e0a216aed33d7b0295303539c6f46e489b4c4cba37fa7aedf0a7f2eddd7b60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104345928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968799"
 ---
 # <a name="file-is-in-use-sample"></a>Datei wird verwendet (Beispiel)
 
-Veranschaulicht, wie das Dialogfeld " **Datei in Verwendung** " angepasst wird, um zusätzliche Informationen und Optionen für Dateien anzuzeigen, die zurzeit in der Anwendung geöffnet sind.
+Veranschaulicht, wie das Dialogfeld **"Datei wird verwendet"** angepasst wird, um zusätzliche Informationen und Optionen für Dateien anzuzeigen, die derzeit in der Anwendung geöffnet sind.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |
@@ -40,38 +40,38 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in dersample.docx Datei "iatleisinuse", \_ die im Beispiel enthalten ist.
+Weitere Anforderungen finden Sie unter IFileIsInUse \_sample.docx im Beispiel enthaltene Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Beispiel für "fleisinuse"](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/fileisinuse) |
+| GitHub  | [FileIsInUse-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/fileisinuse) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel über das Eingabe Aufforderungs Fenster:
+So erstellen Sie das Beispiel über das Eingabeaufforderungsfenster:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis " **fleisinuse** ".
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis FileIsInUse.**
 2.  Geben Sie `msbuild FileIsInUse.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **FilesInUse** . Der vollständige Standard Installationspfad lautet beispielsweise `C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\WinUI\Shell\AppPlatform\FileIsInUse` .
-2.  Doppelklicken Sie auf das Symbol für die Datei "Datei" "" ", um das Projekt in Visual Studio zu öffnen.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis FilesInUse.** Der vollständige Standardinstallationspfad ist beispielsweise `C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\WinUI\Shell\AppPlatform\FileIsInUse` .
+2.  Doppelklicken Sie auf das Symbol für die Datei FileIsInUseSample.sln, um das Projekt in Visual Studio.
     > [!Note]  
-    > Die Dateinamenerweiterung. sln wird unter den Standardordner Einstellungen nicht angezeigt. In dieser Situation kann Sie durch das eindeutige Symbol oder durch die Typbeschreibung "Microsoft Visual Studio Lösung" identifiziert werden.
+    > Die Dateierweiterung SLN wird unter den Standardordnereinstellungen nicht angezeigt. In diesem Fall kann es durch sein eindeutiges Symbol oder durch seine Typbeschreibung identifiziert werden, "Microsoft Visual Studio Lösung".
 
      
 
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mit dem Eingabe Aufforderungs Fenster oder Windows-Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie an der Eingabeaufforderung ein, `FileIsInUseSample.exe` oder Doppelklicken Sie in Windows-Explorer auf das Symbol für FileIsInUseSample.exe.
+1.  Navigieren Sie zum Verzeichnis, das die neue ausführbare Datei enthält, indem Sie das Eingabeaufforderungsfenster oder den Windows verwenden.
+2.  Geben Sie an der Eingabeaufforderung ein, oder doppelklicken Sie im Windows Explorer auf das Symbol `FileIsInUseSample.exe` für FileIsInUseSample.exe.
 
-Ausführliche Informationen zu diesem Codebeispiel finden Sie in der Datei "ifleisinusesample.docx", \_ die im Beispiel enthalten ist.
+Ausführliche Informationen zu diesem Codebeispiel finden Sie unter IFileIsInUsesample.docx \_ im Beispiel enthaltene Datei.
 
  
 

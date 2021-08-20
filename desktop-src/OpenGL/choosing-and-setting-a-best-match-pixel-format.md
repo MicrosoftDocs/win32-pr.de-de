@@ -1,31 +1,31 @@
 ---
-title: Auswählen und Festlegen eines Best-Match Pixel Formats
-description: In diesem Thema wird erläutert, wie Sie einen Gerätekontext mit einem Pixel Format vergleichen.
+title: Auswählen und Festlegen eines Best-Match Pixelformats
+description: In diesem Thema wird das Verfahren zum Abgleichen eines Gerätekontexts mit einem Pixelformat erläutert.
 ms.assetid: 7b974fb5-e34d-4781-858c-572c4e7754bc
 keywords:
-- OpenGL unter Windows, Pixel
-- Best-Match-Pixel Format OpenGL
+- OpenGL auf Windows,Pixel
+- Best Match-Pixelformat OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 143800a9c43d8c8a7779bb5e6cd119c6737f8129
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 258364e18ff38cb67edd1315f261a55a91f58fe940b026e1fcb7b63ed2e12eac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063300"
 ---
-# <a name="choosing-and-setting-a-best-match-pixel-format"></a>Auswählen und Festlegen eines Best-Match Pixel Formats
+# <a name="choosing-and-setting-a-best-match-pixel-format"></a>Auswählen und Festlegen eines Best-Match Pixelformats
 
-In diesem Thema wird erläutert, wie Sie einen Gerätekontext mit einem Pixel Format vergleichen.
+In diesem Thema wird das Verfahren zum Abgleichen eines Gerätekontexts mit einem Pixelformat erläutert.
 
-**So erhalten Sie die beste Entsprechung eines Geräte Kontexts mit einem Pixel Format**
+**So erhalten Sie die beste Übereinstimmung eines Gerätekontexts mit einem Pixelformat**
 
-1.  Geben Sie das gewünschte Pixel Format in einer [**pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) -Struktur an.
-2.  Wählen Sie " [**Choice Pixel Format**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)" aus.
+1.  Geben Sie das gewünschte Pixelformat in einer [**PIXELFORMATDESCRIPTOR-Struktur**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) an.
+2.  Rufen Sie [**ChoosePixelFormat auf.**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)
 
-    Die **choosepixelformat** -Funktion gibt einen Pixel Format Index zurück, den Sie dann an [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat) übergeben können, um die beste Pixel Format Übereinstimmung im aktuellen Pixel Format des Geräte Kontexts festzulegen.
+    Die **ChoosePixelFormat-Funktion** gibt einen Index im Pixelformat zurück, den Sie dann an [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat) übergeben können, um die beste Übereinstimmung mit dem Pixelformat als aktuelles Pixelformat des Gerätekontexts zu erzielen.
 
-Im folgenden Codebeispiel wird gezeigt, wie die obigen Schritte ausgeführt werden.
+Das folgende Codebeispiel zeigt, wie Sie die oben genannten Schritte ausführen.
 
 
 ```C++
@@ -61,9 +61,9 @@ SetPixelFormat(hdc, iPixelFormat, &pfd);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

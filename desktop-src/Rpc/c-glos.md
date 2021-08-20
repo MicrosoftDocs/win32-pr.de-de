@@ -14,7 +14,7 @@ ms.locfileid: "118932284"
 ---
 # <a name="c-rpc"></a>C (RPC)
 
-[A](a-glos.md) [B](b-glos.md) C [D](d-glos.md) [E](e-glos.md) [F](f-glos.md) G H [I](i-glos.md) J K [L](l-glos.md) [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) [T](t-glos.md) [U](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
+[A](a-glos.md) [B](b-glos.md) C [D](d-glos.md) [E](e-glos.md) F [G](f-glos.md) H [I](i-glos.md) J K [L](l-glos.md) [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) T [U](t-glos.md) [](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
 
 <dl> <dt>
 
@@ -28,32 +28,32 @@ Name-Service-Anbieter für die Distributed Computing-Umgebung der Open Software 
 <span id="_rpc_client_stub_glos"></span><span id="_RPC_CLIENT_STUB_GLOS"></span>**Clientstub**
 </dt> <dd>
 
-MIDL-generierter C-Sprachquellcode. Sie enthält alle Funktionen, die für die Clientanwendung erforderlich sind, um Remoteprozeduraufrufe mithilfe des Modells eines herkömmlichen Funktionsaufrufs in einer eigenständigen Anwendung durchzuführen. Der Clientstub ist für das Marshallen von Eingabeparametern und das Aufheben des Marshallings von Ausgabeparametern zuständig. Siehe auch [*Serverstub*](s-glos.md), [*Proxystub*](p-glos.md).
+MIDL-generierter C-Sprach-Quellcode. Sie enthält alle Funktionen, die die Clientanwendung benötigt, um Remoteprozeduraufrufe mit dem Modell eines herkömmlichen Funktionsaufrufs in einer eigenständigen Anwendung auszuführen. Der Clientstub ist für das Marshallen von Eingabeparametern und das Unmarshaling von Ausgabeparametern verantwortlich. Siehe auch [*Serverstub,*](s-glos.md) [*Proxystub.*](p-glos.md)
 
 </dd> <dt>
 
-<span id="_rpc_conformant_array_glos"></span><span id="_RPC_CONFORMANT_ARRAY_GLOS"></span>**konformes Array**
+<span id="_rpc_conformant_array_glos"></span><span id="_RPC_CONFORMANT_ARRAY_GLOS"></span>**Konformes Array**
 </dt> <dd>
 
-Array, dessen Größe zur Laufzeit durch einen anderen Parameter, ein anderes Strukturfeld oder einen anderen Ausdruck bestimmt wird.
+Array, dessen Größe zur Laufzeit von einem anderen Parameter, Strukturfeld oder Ausdruck bestimmt wird.
 
 </dd> <dt>
 
-<span id="_rpc_connection_oriented_glos"></span><span id="_RPC_CONNECTION_ORIENTED_GLOS"></span>**verbindungsorientiert**
+<span id="_rpc_connection_oriented_glos"></span><span id="_RPC_CONNECTION_ORIENTED_GLOS"></span>**Verbindungsorientiert**
 </dt> <dd>
 
-Kommunikationsprotokoll oder -transport, das eine virtuelle Verbindung bereitstellt, über die Datenpakete in der gleichen Reihenfolge empfangen werden, in der sie übertragen wurden. Wenn die Verbindung zwischen Computern fehlschlägt, wird die Anwendung benachrichtigt. [*TCP*](t-glos.md) und [*SPX*](s-glos.md) sind Beispiele für verbindungsorientierte Protokolle. Siehe auch [*Datagramm*](d-glos.md).
+Kommunikationsprotokoll oder Transport, das eine virtuelle Verbindung bietet, über die Datenpakete in der reihenfolge empfangen werden, in der sie übertragen wurden. Wenn die Verbindung zwischen Computern fehlschlägt, wird die Anwendung benachrichtigt. [*TCP*](t-glos.md) und [*SPX sind*](s-glos.md) Beispiele für verbindungsorientierte Protokolle. Siehe auch [*Datagramm*](d-glos.md).
 
 </dd> <dt>
 
 <span id="_rpc_connectionless_glos"></span><span id="_RPC_CONNECTIONLESS_GLOS"></span>**Verbindungsloses**
 </dt> <dd>
 
-Weitere Informationen finden Sie [*unter Datagramm*](d-glos.md).
+Weitere Informationen [*finden Sie unter Datagramm*](d-glos.md).
 
 </dd> <dt>
 
-<span id="_rpc_context_rundown_glos"></span><span id="_RPC_CONTEXT_RUNDOWN_GLOS"></span>**Kontext-Rundown**
+<span id="_rpc_context_rundown_glos"></span><span id="_RPC_CONTEXT_RUNDOWN_GLOS"></span>**Kontext rundown**
 </dt> <dd>
 
 Serverbenachrichtigung, die sich aus einer unerwarteten Beendigung der Bindung zwischen Client- und Serveranwendungen ergibt.

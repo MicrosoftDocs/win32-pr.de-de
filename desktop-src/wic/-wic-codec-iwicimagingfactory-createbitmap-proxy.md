@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118965199"
 ---
-# <a name="iwicimagingfactory_createbitmap_proxy-function"></a>IWICImagingFactory-Funktion \_ \_ "CreateBitmap-Proxy"
+# <a name="iwicimagingfactory_createbitmap_proxy-function"></a>IWICImagingFactory \_ \_ CreateBitmap-Proxyfunktion
 
 Proxyfunktion für die [**CreateBitmap-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmap)
 
@@ -84,7 +84,7 @@ Das Pixelformat der neuen Bitmap.
 
 Typ: **[ **WICBitmapCreateCacheOption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapcreatecacheoption)**
 
-Die Optionen für die Cacheerstellung der neuen Bitmap.
+Die Cacheerstellungsoptionen der neuen Bitmap.
 
 </dd> <dt>
 
@@ -101,7 +101,7 @@ Ein Zeiger, der einen Zeiger auf die neue Bitmap empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -111,7 +111,7 @@ Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegebe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 

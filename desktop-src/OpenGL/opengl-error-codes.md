@@ -1,5 +1,5 @@
 ---
-title: OpenGL-Fehler Codes
+title: OpenGL-Fehlercodes
 description: OpenGL enthält die folgenden Fehlercodes.
 ms.assetid: d798b677-d86d-454d-ac46-26afd82563a5
 keywords:
@@ -13,14 +13,14 @@ keywords:
 - GL_OUT_OF_MEMORY-Fehlercode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39fea57642bde4ba6df88bf913984bd27f619d95
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a78b00bfcbe20d9e91c3d6419db376cdbe8698c1ac158df66d02353dd6bdfbed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118936941"
 ---
-# <a name="opengl-error-codes"></a>OpenGL-Fehler Codes
+# <a name="opengl-error-codes"></a>OpenGL-Fehlercodes
 
 OpenGL enthält die folgenden Fehlercodes.
 
@@ -28,20 +28,20 @@ OpenGL enthält die folgenden Fehlercodes.
 
 | Fehlercode             | BESCHREIBUNG                                 |
 |------------------------|---------------------------------------------|
-| GL \_ ungültige Aufzählung. \_      | Das **GLenum** -Argument liegt außerhalb des zulässigen Bereichs.           |
-| \_Ungültiger GL- \_ Wert     | Das numerische Argument liegt außerhalb des zulässigen Bereichs.              |
-| \_ungültiger \_ Vorgang | Der Vorgang ist im aktuellen Zustand unzulässig.         |
-| GL- \_ Stapel \_ Überlauf    | Die Funktion würde zu einem Stapelüberlauf führen.      |
-| GL. \_ Stapel \_ Unterlauf   | Die Funktion führt zu einem Stapel Unterlauf.     |
-| \_nicht genügend \_ Arbeits \_ Speicher für GL    | Nicht genügend Arbeitsspeicher zum Ausführen der Funktion übrig. |
+| GL \_ INVALID \_ ENUM      | **GLenum-Argument** liegt nicht im Bereich.           |
+| GL \_ UNGÜLTIGER \_ WERT     | Numerisches Argument liegt nicht im Bereich.              |
+| UNGÜLTIGER \_ \_ GL-VORGANG | Der Vorgang ist im aktuellen Zustand ungültig.         |
+| GL \_ STACK \_ OVERFLOW    | Die Funktion würde einen Stapelüberlauf verursachen.      |
+| GL \_ STACK \_ UNDERFLOW   | Die Funktion würde einen Stapel unterlauf verursachen.     |
+| GL \_ OUT \_ OF \_ MEMORY    | Nicht genügend Arbeitsspeicher zum Ausführen der Funktion vorhanden. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

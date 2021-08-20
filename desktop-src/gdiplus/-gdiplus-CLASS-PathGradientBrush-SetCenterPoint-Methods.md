@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die setcenterpoint-Methoden der PathGradientBrush-Klasse aufgelistet. Eine vollständige Liste der Methoden für die PathGradientBrush-Klasse finden Sie unter PathGradientBrush-Methoden.
+description: In diesem Thema werden die SetCenterPoint-Methoden der PathGradientBrush-Klasse aufgelistet. Eine vollständige Liste der Methoden für die PathGradientBrush-Klasse finden Sie unter PathGradientBrush-Methoden.
 ms.assetid: 41765887-b1de-4259-95af-a1ef8c84d01a
-title: PathGradientBrush. setcenterpoint-Methoden (gdipluspath. h)
+title: PathGradientBrush.SetCenterPoint-Methoden (Gdipluspath.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: a810f8fc9579ed12f24a25477859826eecc32998
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9f335735e60f1b7ef767a2827c3cd1461e4fef52650bf976295ad2e9492bb27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104996514"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977840"
 ---
-# <a name="pathgradientbrushsetcenterpoint-methods"></a>PathGradientBrush. setcenterpoint-Methoden
+# <a name="pathgradientbrushsetcenterpoint-methods"></a>PathGradientBrush.SetCenterPoint-Methoden
 
-In diesem Thema werden die setcenterpoint-Methoden der [**PathGradientBrush**](/windows/win32/api/gdipluspath/nl-gdipluspath-pathgradientbrush) -Klasse aufgelistet. Eine vollständige Liste der Methoden für die **PathGradientBrush** -Klasse finden Sie unter [PathGradientBrush-Methoden](-gdiplus-class-pathgradientbrush-methods.md).
+In diesem Thema werden die SetCenterPoint-Methoden der [**PathGradientBrush-Klasse**](/windows/win32/api/gdipluspath/nl-gdipluspath-pathgradientbrush) aufgelistet. Eine vollständige Liste der Methoden für die **PathGradientBrush-Klasse** finden Sie unter [PathGradientBrush-Methoden.](-gdiplus-class-pathgradientbrush-methods.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,18 +21,18 @@ In diesem Thema werden die setcenterpoint-Methoden der [**PathGradientBrush**](/
 
 | Methode                                                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                    |
 |:-------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Setcenterpoint (Punkt&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-setcenterpoint(inconstpoint_))   | Die [**PathGradientBrush:: setcenterpoint**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-setcenterpoint(inconstpoint_)) -Methode legt den Mittelpunkt dieses Pfad Farbverlaufs Pinsels fest. Standardmäßig befindet sich der Mittelpunkt in der Mitte des Begrenzungs Pfades des Pinsels, aber Sie können den Mittelpunkt auf eine beliebige Position innerhalb oder außerhalb des Pfads festlegen.<br/>  |
-| [**Setcenterpoint (PointF-&)**](/previous-versions//ms535095(v=vs.85)) | Die [**PathGradientBrush:: setcenterpoint**](/previous-versions//ms535095(v=vs.85)) -Methode legt den Mittelpunkt dieses Pfad Farbverlaufs Pinsels fest. Standardmäßig befindet sich der Mittelpunkt in der Mitte des Begrenzungs Pfades des Pinsels, aber Sie können den Mittelpunkt auf eine beliebige Position innerhalb oder außerhalb des Pfads festlegen.<br/> |
+| [**SetCenterPoint(Point&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-setcenterpoint(inconstpoint_))   | Die [**PathGradientBrush::SetCenterPoint-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-setcenterpoint(inconstpoint_)) legt den Mittelpunkt dieses Pfadfarbverlaufspinsels fest. Standardmäßig befindet sich der Mittelpunkt im Schwerpunkt des Begrenzungspfads des Pinsels. Sie können den Mittelpunkt jedoch auf eine beliebige Position innerhalb oder außerhalb des Pfads festlegen.<br/>  |
+| [**SetCenterPoint(PointF&)**](/previous-versions//ms535095(v=vs.85)) | Die [**PathGradientBrush::SetCenterPoint-Methode**](/previous-versions//ms535095(v=vs.85)) legt den Mittelpunkt dieses Pfadfarbverlaufspinsels fest. Standardmäßig befindet sich der Mittelpunkt im Schwerpunkt des Begrenzungspfads des Pinsels. Sie können den Mittelpunkt jedoch auf eine beliebige Position innerhalb oder außerhalb des Pfads festlegen.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipluspath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdipluspath.h</dt> </dl> |
 
 
 

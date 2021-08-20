@@ -22,7 +22,7 @@ ms.locfileid: "118938733"
 ---
 # <a name="filteraddobject-function"></a>FilterAddObject-Funktion
 
-Die **FilterAddObject-Funktion** fügt einem [*Anzeigefilter*](d.md)ein einzelnes -Objekt hinzu.
+Die **FilterAddObject-Funktion** fügt einem [*Anzeigefilter*](d.md)ein einzelnes Objekt hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -91,7 +91,7 @@ Die **FilterAddObject-Funktion** wird jedes Mal aufgerufen, wenn dem Anzeigefilt
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

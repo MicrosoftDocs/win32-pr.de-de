@@ -1,6 +1,6 @@
 ---
 title: HttpCalculatorWithSslPolicyServiceExample
-description: Sehen Sie sich ein Windows Web Services API (WWSAPI) C++-Beispiel für einen HTTP-Rechner mit SSL-Richtliniendienst an.
+description: Überprüfen Sie ein C++-Beispiel Windows Web Services API (WWSAPI) eines HTTP-Rechners mit SSL-Richtliniendienst.
 ms.assetid: 5b3fc119-10c2-444b-91d3-415ad36a65ab
 keywords:
 - HttpCalculatorWithSslPolicyServiceExample Native-Web-Services
@@ -17,7 +17,7 @@ ms.locfileid: "117841554"
 ---
 # <a name="httpcalculatorwithsslpolicyserviceexample"></a>HttpCalculatorWithSslPolicyServiceExample
 
-In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwenden. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern unter Verwendung des basisbasierten Schemas angegeben wird.
+In diesem Beispiel wird gezeigt, wie Sie einen Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwenden. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern mithilfe des basisbasierten Schemas bereitgestellt wird.
 
 -   [HttpCalculatorWithSslPolicyService.cpp](#httpcalculatorwithsslpolicyservicecpp)
 -   [CalculatorServiceWithPolicy.wsdl](#calculatorservicewithpolicywsdl)

@@ -18,7 +18,7 @@ ms.locfileid: "118512996"
 ---
 # <a name="variables"></a>Variablen
 
-HLSL-Variablen ähneln Variablen, die in der Programmiersprache C definiert sind. Ähnlich wie bei C weisen Variablen einige Namenseinschränkungen auf, weisen Bereichseigenschaften auf, die davon abhängen, wo sie deklariert werden, und können Benutzermetadaten an sie anfügen. Wie bei C gibt es mehrere Standarddatentypen. Im Gegensatz zu C gibt es auch zusätzliche Datentypen, die von HLSL definiert werden, um die Leistung von Vektoren mit vier Komponenten zu maximieren, die Matrixmathematik verwenden, um mit 3D-Grafikdaten zu arbeiten.
+HLSL-Variablen ähneln Variablen, die in der Programmiersprache C definiert sind. Ähnlich wie bei C gelten für Variablen einige Namenseinschränkungen, Bereichseigenschaften, die davon abhängen, wo sie deklariert sind, und können Benutzermetadaten angefügt werden. Wie C gibt es mehrere Standarddatentypen. Im Gegensatz zu C gibt es auch zusätzliche Datentypen, die von HLSL definiert werden, um die Leistung von 4-Komponenten-Vektoren zu maximieren, die Matrixmatrizen verwenden, um 3D-Grafikdaten zu verarbeiten.
 
 -   [Variablensyntax](dx-graphics-hlsl-variable-syntax.md)
 -   [Datentypen](dx-graphics-hlsl-data-types.md)

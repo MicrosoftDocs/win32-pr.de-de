@@ -1,9 +1,9 @@
 ---
 title: LVN_GETINFOTIP Benachrichtigungscode (Commctrl.h)
-description: Wird von einem großen Listenansicht-Listenansicht-Steuerelement gesendet, das den erweiterten Stil LVS \_ EX \_ INFOTIP auflistet.
+description: Wird von einem großen Symbolansichts-Listenansicht-Steuerelement gesendet, das den \_ \_ erweiterten LVS EX INFOTIP-Stil auflistet.
 ms.assetid: 62be5087-7e49-4722-a63a-1768e030af48
 keywords:
-- LVN_GETINFOTIP Benachrichtigungscode Windows Steuerelementen
+- LVN_GETINFOTIP Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "117830441"
 ---
 # <a name="lvn_getinfotip-notification-code"></a>LVN \_ GETINFOTIP-Benachrichtigungscode
 
-Wird von einem großen Listenansicht-Listenansicht-Steuerelement gesendet, das den erweiterten [**Stil LVS \_ EX \_ INFOTIP**](extended-list-view-styles.md) auflistet. Dieser Benachrichtigungscode wird gesendet, wenn das Listenansicht-Steuerelement zusätzliche Textinformationen an fordert, die in einer QuickInfo angezeigt werden sollen. Er wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird von einem großen Symbolansichts-Listenansicht-Steuerelement gesendet, das den [**erweiterten LVS \_ EX \_ INFOTIP-Stil**](extended-list-view-styles.md) auflistet. Dieser Benachrichtigungscode wird gesendet, wenn das Listenansicht-Steuerelement zusätzliche Textinformationen anfordert, die in einer QuickInfo angezeigt werden sollen. Sie wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -53,7 +53,7 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungscode wird nur von Listenansichtssteuerelementen gesendet, die den [**erweiterten STIL LVS \_ EX \_ INFOTIP**](extended-list-view-styles.md) haben. Der LVN \_ GETINFOTIP-Benachrichtigungscode wird nur für Unteritem 0 gesendet.
+Dieser Benachrichtigungscode wird nur von Listenansichtssteuerelementen gesendet, die den [**erweiterten LVS \_ EX \_ INFOTIP-Stil**](extended-list-view-styles.md) aufweisen. Der \_ LVN-GETINFOTIP-Benachrichtigungscode wird nur für Unteritem 0 gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Dieser Benachrichtigungscode wird nur von Listenansichtssteuerelementen gesendet
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **LVN \_ GETINFOTIPW** (Unicode) und **LVN \_ GETINFOTIPA** (ANSI)<br/>             |

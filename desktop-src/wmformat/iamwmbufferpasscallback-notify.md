@@ -80,7 +80,7 @@ Es wird kein bestimmter Rückgabewert angegeben. Der aufrufende Pin ignoriert da
 
 Mit dieser Methode kann eine Anwendung Informationen im Medienpuffer untersuchen und darauf reagieren, bevor der Pufferinhalt verarbeitet wird. Die Anwendung ist dafür verantwortlich, den Medientyp auf dem Pin zu kennen. Diese Informationen können abgerufen werden, indem zuerst die Streaminformationen aus dem Profil abgerufen und dann die [**IConfigAsfWriter2::StreamNumFromPin-Methode**](iconfigasfwriter2-streamnumfrompin.md) aufgerufen wird, um zu bestimmen, welcher Pin den einzelnen Datenströmen zugeordnet ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

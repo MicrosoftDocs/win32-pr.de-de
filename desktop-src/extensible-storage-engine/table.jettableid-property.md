@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Table. jettableid-Eigenschaft.
-title: Table. jettableid-Eigenschaft
+description: 'Weitere Informationen zu: Table.JetTableid-Eigenschaft'
+title: Table.JetTableid-Eigenschaft
 TOCTitle: 'JetTableid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Table.JetTableid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.table.jettableid(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2ce73433d22613a8ebaba5b491d34b8fe9b398d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f694b8c7d1a1e574b0ef993cd20c600051ba45993fc20501fac3d3da5253d06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978450"
 ---
-# <a name="tablejettableid-property"></a>Table. jettableid-Eigenschaft
+# <a name="tablejettableid-property"></a>Table.JetTableid-Eigenschaft
 
-Ruft den JET_TABLEID ab, der in dieser Tabelle enthalten ist.
+Ruft die JET_TABLEID ab, die diese Tabelle enthält.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public JET_TABLEID JetTableid { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Table-Klasse](./table-class.md)
 
-[Tabellen Mitglieder](./table-members.md)
+[Tabellenmember](./table-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

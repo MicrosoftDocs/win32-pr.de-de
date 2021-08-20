@@ -1,31 +1,31 @@
 ---
-description: Medevicestreamcreated ist ein erweiterter Medien Ereignistyp, der vom Geräte-MFT mit einem meunknown-Medienereignis generiert wurde.
+description: MEDeviceStreamCreated ist ein erweiterter Medienereignistyp, der mit einem MEUnknown-Medienereignis vom Geräte-MFT generiert wird.
 ms.assetid: 8aaa6908-0f2e-4a73-9362-69f42b74f495
-title: Mede vicestreamcreated-Ereignis (MF Transform. h)
+title: MEDeviceStreamCreated-Ereignis (mftransform.h)
 ms.topic: article
 ms.date: 08/31/2018
-ms.openlocfilehash: 632ebc305473cd596656a21f562be25d53c2bace
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99e13dae5db9d680909a435d5520f6b07d7d4b6c11782c340b72fcdd0eddc53a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878067"
 ---
-# <a name="medevicestreamcreated-event"></a>Mede vicestreamcreated-Ereignis
+# <a name="medevicestreamcreated-event"></a>MEDeviceStreamCreated-Ereignis
 
-Medevicestreamcreated ist ein erweiterter Medien Ereignistyp, der vom Geräte-MFT mit einem meunknown-Medienereignis generiert wurde.
+MEDeviceStreamCreated ist ein erweiterter Medienereignistyp, der mit einem MEUnknown-Medienereignis vom Geräte-MFT generiert wird.
 
-Dieser erweiterte Medien Ereignistyp hat keine Nutzlast.  Ein entsprechendes HRESULT sollte über die [**imfmediaevent:: GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) -Methode bereitgestellt werden.
-
-
+Dieser Ereignistyp für erweiterte Medien hat keine Nutzlast.  Das entsprechende HRESULT sollte über die [**METHODE VONMEDIAEVENT::GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) bereitgestellt werden.
 
 
-## <a name="remarks"></a>Bemerkungen
 
-Dieses erweiterte Medienereignis muss von der MFT des Geräts als Teil der Medientyp Auswahl im Ausgabestream der DMFT gesendet werden.  Wenn setoutputstreamstate auf der imfdevicetransform-Schnittstelle aufgerufen wird, ist die DMFT für das signalisieren der Änderung in den erforderlichen eingabestreamzuständen mit dem [metransforminputstreamstatechanged](/windows-hardware/drivers/stream/metransforminputstreamstatechanged) -Medienereignis verantwortlich. Wenn die eingabestreamstatusänderung von der Pipeline mit dem Aufrufs von "endputstreamstate" der DMFT bestätigt wurde, ist die DMFT dafür zuständig, die interne Zustands Konfiguration abzuschließen und den Ereignis Typ " **medevicestreamcreated** Extended Media" zu erhöhen.
 
-Wenn dieser erweiterte Medien Ereignistyp nicht ausgelöst wird, stellt der geräteregistrierungs-Manager keine Eingabe Frames für die DMFT bereit.
-Der Extended Media-Ereignistyp muss auch als Attribut von IMF Media Event festgelegt werden, der Ausgabestream-ID unter Verwendung des **MF_EVENT_MFT_INPUT_STREAM_ID** -Attributs.
+## <a name="remarks"></a>Hinweise
+
+Dieses erweiterte Medienereignis muss vom Geräte-MFT als Teil der Medientypauswahl im Ausgabestream des DMFT gesendet werden.  Wenn SetOutputStreamState für die SCHNITTSTELLE "SIGNALSDeviceTransform" aufgerufen wird, ist der DMFT dafür verantwortlich, die Änderung der erforderlichen Eingabestreamzustände mit dem [METransformInputStreamStateChanged-Medienereignis](/windows-hardware/drivers/stream/metransforminputstreamstatechanged) zu signalisieren. Wenn die Änderung des Eingabedatenstromzustands von der Pipeline mit dem Aufruf von SetInputStreamState des DMFT bestätigt wurde, ist der DMFT dafür verantwortlich, die interne Zustandskonfiguration abzuschließen und den Ereignistyp **MEDeviceStreamCreated** für erweiterte Medien auszugeben.
+
+Wenn dieser Ereignistyp für erweiterte Medien nicht ausgelöst wird, übermittelt der Gerätetransformations-Manager keine Eingabeframes an den DMFT.
+Der Ereignistyp "Erweiterte Medien" muss auch als Attribut des ATTRIBUTSMEDIAEVENT festgelegt werden, die Ausgabestream-ID mithilfe des **MF_EVENT_MFT_INPUT_STREAM_ID** Attributs.
 
 ```cpp
 IMFMediaEvent* pMediaEvent = nullptr;
@@ -60,9 +60,9 @@ return hr;
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>mftransform.h</dt> </dl> |
 
 
 
@@ -70,10 +70,10 @@ return hr;
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Streamingaudiorenderer](streaming-audio-renderer.md)
+[StreamingAudiorenderer](streaming-audio-renderer.md)
 </dt> </dl>
 
  

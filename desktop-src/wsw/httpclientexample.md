@@ -1,6 +1,6 @@
 ---
 title: HttpClientExample
-description: Überprüfen Sie ein HTTP-Clientbeispiel, das die Windows-Webdienst-API (WWSAPI) verwendet. Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten sendet.
+description: Überprüfen Sie ein HTTP-Clientbeispiel, in dem die Windows Web Services-API (WWSAPI) verwendet wird. Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten sendet.
 ms.assetid: e32a35f7-df01-4d6d-966c-6cf079b1b3a7
 keywords:
 - HttpClientExample Native-Web-Services
@@ -8,12 +8,12 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 180a1a0b40b2f4614ddd21caff7dc4595b8aac97
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f023f3b3cfb0a342536ca9508757774dd17742e582972cf8ab16f0dd2d4ad075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026458"
 ---
 # <a name="httpclientexample"></a>HttpClientExample
 

@@ -1,31 +1,31 @@
 ---
 title: Erstellen eines Clients
-description: Das Erstellen eines Clients für Webdienste wird in wwsapi durch die Dienstmodell-API und das WsUtil.exe Tool erheblich vereinfacht.
+description: Das Erstellen eines Clients für Webdienste wird in WWSAPI durch die Dienstmodell-API und das WsUtil.exe erheblich vereinfacht.
 ms.assetid: 09f489e8-958d-4bc5-a232-aa59bd75333a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 606a68f574a9ad79d15f3ddd48247f93a5414250
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 50ca04ef5fbbeef76cd32a0b6523391deb19957479cd5f332715972f3b5bfbc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026558"
 ---
 # <a name="creating-a-client"></a>Erstellen eines Clients
 
-Das Erstellen eines Clients für Webdienste wird in wwsapi durch die [Dienstmodell](service-model-layer-overview.md) -API und das [WsUtil.exe](wsutil-compiler-tool.md) Tool erheblich vereinfacht. Das Dienstmodell stellt eine API zur Verfügung, die es dem Client ermöglicht, [Nachrichten](message.md) über einen [Kanal](channel.md) als C-Methodenaufrufe zu senden und zu empfangen. Das Tool "wsutil" generiert Header und Hilfsprogramme zum Implementieren des Clients. Diese Header enthalten die Typen und Funktionsprototypen für C-Funktionen, die die Dienste darstellen, die vom Zielweb Dienst angeboten werden. Die Hilfsprogramme werden zum Erstellen des Dienst Proxys verwendet, der die Bindungs Informationen und die [Endpunkt Adresse](endpoint-address.md) für den Dienst enthält.
+Das Erstellen eines Clients für Webdienste wird in [](service-model-layer-overview.md) WWSAPI durch die Dienstmodell-API und dasWsUtil.exe[erheblich](wsutil-compiler-tool.md) vereinfacht. Das Dienstmodell stellt eine API bereit, mit der [](channel.md) der Client Nachrichten über einen Kanal senden und [empfangen](message.md) kann, wenn die C-Methode aufruft. Das WsUtil-Tool generiert Header und Hilfsprogramm für die Implementierung des Clients. Diese Header enthalten die Typen und Funktionsprototypen für C-Funktionen, die die vom Zielwebdienst angebotenen Dienste darstellen. Die Hilfsdienste werden verwendet, um den Dienstproxy zu erstellen, der die Bindungsinformationen und die [Endpunktadresse für](endpoint-address.md) den Dienst enthält.
 
-## <a name="using-wsutil-to-generate-headers-and-helpers"></a>Verwenden von wsutil zum Generieren von Headern und Hilfsprogrammen
+## <a name="using-wsutil-to-generate-headers-and-helpers"></a>Verwenden von WsUtil zum Generieren von Headern und Hilfsdateien
 
-Um die Header und Hilfsprogramme zu generieren, öffnet und liest wsutil die Metadatendateien für den Ziel Dienst – WSDL-und XSD-Dateien – und konvertiert sie in Header. Daher ist es erforderlich, die Metadatendateien für den Ziel Dienst vorab abzurufen, z. b. mithilfe von Svcutil, einem Teil der Windows Communication Foundation. Aus Sicherheitsgründen ist es zwingend erforderlich, dass die Kopien dieser Dateien vertrauenswürdig sind. (Weitere Informationen finden Sie im Abschnitt "Sicherheit" des Themas " [wsutil Compiler Tool](wsutil-compiler-tool.md) ".)
+Zum Generieren der Header und Hilfselemente öffnet WsUtil die Metadatendateien für den Zieldienst ( wsdl- und xsd-Dateien) und liest sie in Header. Daher ist es erforderlich, die Metadatendateien für den Zieldienst im Voraus abzurufen, z. B. mithilfe von SvcUtil, einem Teil der Windows Communication Foundation. Aus Sicherheitsgründen ist es zwingend erforderlich, dass Ihre Kopien dieser Dateien vertrauenswürdig sind. (Weitere Informationen finden Sie im Abschnitt "Sicherheit" des [Themas WsUtil Compiler Tool.)](wsutil-compiler-tool.md)
 
-Verwenden Sie zum Ausführen von wsutil die folgende Befehlszeilen Syntax, wenn sich die WSDL-und XSD-Dateien für den Dienst in Ihrem eigenen Verzeichnis befinden: `WsUtil.exe *.wsdl *.xsd` . Alternativ können Sie die Dateien nach vollständigem Namen angeben.
+Verwenden Sie zum Ausführen von WsUtil die folgende Befehlszeilensyntax, wenn sich die WSDL- und XSD-Dateien für den Dienst in ihrem eigenen Verzeichnis befinden: `WsUtil.exe *.wsdl *.xsd` . Alternativ können Sie die Dateien mit dem vollständigen Namen angeben.
 
-Wsutil generiert im Allgemeinen zwei Dateien für jede Metadatendatei: einen Header und eine C-Datei. Fügen Sie dem Codierungs Projekt diese Dateien hinzu, und verwenden \# Sie include-Anweisungen, um Sie in den Code für den Client einzufügen. (Die XSD-Dateien stellen Typen dar, und die WSDL-Dateien stellen Vorgänge dar.)
+WsUtil generiert in der Regel zwei Dateien für jede Metadatendatei: einen Header und eine C-Datei. Fügen Sie diese Dateien Ihrem Codierungsprojekt hinzu, und verwenden Sie \# include-Anweisungen, um sie in den Code für Ihren Client ein beispielen zu lassen. (Die XSD-Dateien stellen Typen dar, und die WSDL-Dateien stellen Vorgänge dar.)
 
-## <a name="creating-the-service-proxy"></a>Erstellen des Dienst Proxys
+## <a name="creating-the-service-proxy"></a>Erstellen des Dienstproxys
 
-Der von wsutil generierte Header enthält eine Hilfsroutine zum Erstellen des Dienst Proxys mit der erforderlichen Bindung. Diese Routine ist im Abschnitt "Richtlinien Hilfsroutinen" der generierten Header Datei enthalten. Beispielsweise enthält die generierte Kopfzeile für den Rechner Dienst, der im [httpcalculatorclientexample](httpcalculatorclientexample.md) -Beispiel veranschaulicht wird, den folgenden Funktionsprototyp.
+Der von WsUtil generierte Header enthält eine Hilfsroutine zum Erstellen des Dienstproxys mit der erforderlichen Bindung. Diese Routine ist im Abschnitt "Richtlinien-Hilfsroutinen" der generierten Headerdatei enthalten. Beispielsweise enthält der generierte Header für den Rechnerdienst, der im [Beispiel httpcalculatorclientexample](httpcalculatorclientexample.md) veranschaulicht wird, den folgenden Funktionsprototyp.
 
 
 ```
@@ -39,7 +39,7 @@ HRESULT BasicHttpBinding_ICalculator_CreateServiceProxy(
 
 
 
-Integrieren Sie dieses Hilfsprogramm in Ihren Code, und übergeben Sie ein [WS- \_ Dienst \_ Proxy](ws-service-proxy.md) handle, um das Handle für den erstellten Dienst Proxy zu empfangen. Im einfachsten Szenario, in dem nur ein Dienst Proxy Handle und ein Fehler Objekt an die Funktion übermittelt werden, sieht der-Befehl wie folgt aus.
+Integrieren Sie dieses Hilfsdienst in Ihren Code, und übergeben Sie ein [WS \_ SERVICE \_ PROXY-Handle,](ws-service-proxy.md) um das Handle an den erstellten Dienstproxy zu empfangen. Im einfachsten Szenario, in dem nur ein Dienstproxyhand handle und ein Fehlerobjekt an die Funktion übergeben werden, sieht der Aufruf wie folgt aus.
 
 
 ```C++
@@ -53,11 +53,11 @@ hr = BasicHttpBinding_ICalculator_CreateServiceProxy(
 
 
 
-Um den Adress Teil des Dienst Proxys zu erstellen, rufen Sie [**wsopenserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wsopenserviceproxy) mit einem Handle für den Dienst Proxy und einen Zeiger auf eine [**WS- \_ Endpunkt \_ Adresse**](/windows/desktop/api/WebServices/ns-webservices-ws_endpoint_address) mit der Adresse des Dienst Endpunkts auf, mit der Sie eine Verbindung herstellen möchten.
+Um den Adressteil des Dienstproxys zu erstellen, rufen Sie [**WsOpenServiceProxy**](/windows/desktop/api/WebServices/nf-webservices-wsopenserviceproxy) mit einem Handle für den Dienstproxy und einem Zeiger auf eine [**\_ WS-ENDPUNKTADRESSE \_**](/windows/desktop/api/WebServices/ns-webservices-ws_endpoint_address) auf, die die Dienstendpunktadresse enthält, mit der Sie eine Verbindung herstellen möchten.
 
 ## <a name="implementing-the-client-with-function-prototypes"></a>Implementieren des Clients mit Funktionsprototypen
 
-Die aus den WSDL-Dateien des Diensts generierten Header enthalten auch C-Funktionsprototypen, die die vom Webdienst verfügbaren Dienste darstellen und die für die erforderliche Bindung spezifisch sind. Beispielsweise enthält ein Header, der für den in httpcalculatorserviceexample dargestellten Rechner Dienst generiert wird, den folgenden Prototyp für den Multiplikations Vorgang dieses dienstanders.
+Die headers, die aus den WSDL-Dienstdateien generiert werden, enthalten auch C-Funktionsprototypen, die die vom Webdienst verfügbaren und für die erforderliche Bindung spezifischen Dienste darstellen. Beispielsweise enthält ein Header, der für den in HttpCalculatorServiceExample dargestellten Rechnerdienst generiert wird, den folgenden Prototyp für den Multiplikationsvorgang dieses Diensts.
 
 ``` syntax
 HRESULT BasicHttpBinding_ICalculator_Multiply(
@@ -72,11 +72,11 @@ HRESULT BasicHttpBinding_ICalculator_Multiply(
     __in_opt WS_ERROR* _error);
 ```
 
-Sie können die Prototypen kopieren und als Vorlagen verwenden, um die Funktionsaufrufe in Ihrem Client zu codieren. in jedem Fall übergeben Sie das Handle an den Dienst Proxy. Wenn Sie mit dem Dienst Proxy fertig sind, wenden Sie sich an [**wscloseserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wscloseserviceproxy).
+Sie können die Prototypen kopieren und als Vorlagen zum Codieren der Funktionsaufrufe in Ihrem Client verwenden, indem Sie in jedem Fall das Handle an den Dienstproxy übergeben. Wenn Sie mit dem Dienstproxy fertig sind, rufen [**Sie WsCloseServiceProxy auf.**](/windows/desktop/api/WebServices/nf-webservices-wscloseserviceproxy)
 
- 
+ 
 
- 
+ 
 
 
 

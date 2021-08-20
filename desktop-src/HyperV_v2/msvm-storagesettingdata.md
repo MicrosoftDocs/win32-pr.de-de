@@ -1,5 +1,5 @@
 ---
-description: Stellt die Speicher spezifischen Einstellungen für ein virtuelles System dar.
+description: Stellt die speicherspezifischen Einstellungen für ein virtuelles System dar.
 ms.assetid: 0b3fcd78-7e9a-4a94-ad18-0ca72b3cfd73
 title: Msvm_StorageSettingData-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: db061d048ce45a4d6fa076a5b0367e794cdf16e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 315eb41b5c445d7ce8856f79054e9a227b2a62fc0986419172e519fc65a9ac31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950109"
 ---
-# <a name="msvm_storagesettingdata-class"></a>MSVM \_ storagesettingdata-Klasse
+# <a name="msvm_storagesettingdata-class"></a>Msvm \_ StorageSettingData-Klasse
 
-Stellt die Speicher spezifischen Einstellungen für ein virtuelles System dar.
+Stellt die speicherspezifischen Einstellungen für ein virtuelles System dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -43,43 +43,43 @@ class Msvm_StorageSettingData : Msvm_SystemComponentSettingData
 
 ## <a name="members"></a>Member
 
-Die Klasse " **MSVM \_ storagesettingdata** " enthält diese Typen von Membern:
+Die **Msvm \_ StorageSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ storagesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ StorageSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Disableinterruptbatching**
+**DisableInterruptBatching**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Unterbrechung der Batch Verarbeitung deaktiviert werden soll.
+Gibt an, ob die Interruptbatchverarbeitung deaktiviert werden soll.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifysystemcomponentsettings**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) -Methode der WMI-Klasse " [**\_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) " geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifySystemComponentSettings-Methode**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) der Wmi [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Threadfactperchannel**
+**ThreadCountPerChannel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Threads pro Speicherkanal für die Verarbeitung von e/a.
+Die Anzahl der Threads pro Speicherkanal, um E/A zu verarbeiten.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifysystemcomponentsettings**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifySystemComponentSettings-Methode**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 <dt>
 
@@ -101,7 +101,7 @@ Standardverhalten
 
 </dt> <dd>
 
-Geringe Anzahl von Threads pro Speicherkanal.
+Niedrige Anzahl von Threads pro Speicherkanal.
 
 </dd> <dt>
 
@@ -123,24 +123,24 @@ Mittlere Anzahl von Threads pro Speicherkanal.
 
 </dt> <dd>
 
-Hohe Anzahl von Threads pro Speicherkanal.
+Eine hohe Anzahl von Threads pro Speicherkanal.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Virtualprocessorsperchannel**
+**VirtualProcessorsPerChannel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Prozessoren pro Speicherkanal. Die Anzahl der zu öffnenden Kanäle wird durch angegeben (Anzahl der logischen Prozessoren auf dem Host/**virtualprocessorsperchannel**).
+Die Anzahl der Prozessoren pro Speicherkanal. Die Anzahl der zu öffnenden Kanäle wird von angegeben (Anzahl der logischen Prozessoren auf dem **Host/VirtualProcessorsPerChannel**).
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifysystemcomponentsettings**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifySystemComponentSettings-Methode**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> </dl>
 
@@ -150,10 +150,10 @@ Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -162,7 +162,7 @@ Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilf
 
 <dl> <dt>
 
-[**MSVM \_ systemcomponentsettingdata**](msvm-systemcomponentsettingdata.md)
+[**Msvm \_ SystemComponentSettingData**](msvm-systemcomponentsettingdata.md)
 </dt> </dl>
 
  

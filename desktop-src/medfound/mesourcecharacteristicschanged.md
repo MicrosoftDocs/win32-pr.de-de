@@ -1,5 +1,5 @@
 ---
-description: Wird von einer Medienquelle ausgelöst, wenn sich die Merkmale der Quellen ändern.
+description: Wird von einer Medienquelle ausgelöst, wenn sich die Eigenschaften der Quellen ändern.
 ms.assetid: df7bb9a3-5949-4a4a-8835-c5b1d01b5cb3
 title: MESourceCharacteristicsChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
@@ -13,15 +13,15 @@ ms.locfileid: "117877368"
 ---
 # <a name="mesourcecharacteristicschanged-event"></a>MESourceCharacteristicsChanged-Ereignis
 
-Wird von einer Medienquelle ausgelöst, wenn sich die Merkmale der Quelle ändern.
+Wird von einer Medienquelle ausgelöst, wenn sich die Eigenschaften der Quelle ändern.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
 | VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
@@ -33,9 +33,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| attribute                                                                                                   | BESCHREIBUNG                                                          |
+| attribute                                                                                                   | Beschreibung                                                          |
 |-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| [**MERKMALE \_ DER MF-EREIGNISQUELLE \_ \_**](mf-event-source-characteristics-attribute.md)<br/>          | Neue Merkmale der Medienquelle.<br/> <br/>      |
+| [**MERKMALE DER \_ \_ MF-EREIGNISQUELLE \_**](mf-event-source-characteristics-attribute.md)<br/>          | Neue Merkmale der Medienquelle.<br/> <br/>      |
 | [**\_ \_ MF-EREIGNISQUELLENMERKMALE \_ \_ ALT**](mf-event-source-characteristics-old-attribute.md)<br/> | Vorherige Merkmale der Medienquelle.<br/> <br/> |
 
 
@@ -46,17 +46,17 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
+[**VERSIERTMediaSource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
 </dt> <dt>
 
 [Media Foundation Ereignisse](media-foundation-events.md)

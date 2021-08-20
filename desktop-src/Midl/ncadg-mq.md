@@ -1,9 +1,9 @@
 ---
 title: ncadg_mq-Attribut
-description: Das ncadg \_ MQ-Schlüsselwort identifiziert Microsoft Message Queuing Services (MSMQ) als Transportprotokoll für den Endpunkt. Dieses Protokoll ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+description: Das Schlüsselwort ncadg \_ mq identifiziert Microsoft Message Queuing Services (MSMQ) als Transportprotokoll für den Endpunkt. Dieses Protokoll ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 ms.assetid: 7472fc47-c1f0-4578-8aef-b655505e0563
 keywords:
-- ncadg_mq Attribut-Mittel l
+- ncadg_mq-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0acc433b55ba9f3c6d8919bef9b8db470bc0f5a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 0164211a267760a533d8d164a76387dbbcfba8a0aad8e4ac6ecaf20ed770708a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067020"
 ---
-# <a name="ncadg_mq-attribute"></a>ncadg \_ MQ-Attribut
+# <a name="ncadg_mq-attribute"></a>ncadg \_ mq-Attribut
 
-Das **ncadg \_ MQ** -Schlüsselwort identifiziert Microsoft Message Queuing Services (MSMQ) als Transportprotokoll für den Endpunkt. Dieses Protokoll ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+Das Schlüsselwort **ncadg \_ mq** identifiziert Microsoft Message Queuing Services (MSMQ) als Transportprotokoll für den Endpunkt. Dieses Protokoll ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 
 ``` syntax
 endpoint("ncadg_mq:server-name")
@@ -34,24 +34,24 @@ endpoint("ncadg_mq:server-name")
 *Servername* 
 </dt> <dd>
 
-Gibt den Namen des Servers oder Hosts an. Der Name ist eine Zeichenfolge und kann ein voll qualifizierter Domänen Name sein.
+Gibt den Namen des Servers oder Hosts an. Der Name ist eine Zeichenfolge und kann ein vollqualifizierter Domänenname sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um das **ncadg \_ MQ** -Transportprotokoll verwenden zu können, müssen die MSMQ-Komponenten vollständig installiert sein, und die Client-und Serversysteme müssen über die MQ-Protokolle erreichbar sein.
+Um das **ncadg \_ mq-Transportprotokoll** verwenden zu können, müssen die MSMQ-Komponenten vollständig installiert sein, und die Client- und Serversysteme müssen über die MQ-Protokolle erreichbar sein.
 
-Das **ncadg \_ MQ** -Protokoll unterstützt keine dynamischen Endpunkte oder [**Broadcast**](broadcast.md) Aufrufe. Wie bei anderen datagrammprotokollen unterstützt **ncadg \_ MQ** keine Rückrufe. alle Funktionen, die das [**Rückruf**](callback.md) Attribut verwenden, schlagen fehl.
+Das **ncadg \_ mq-Protokoll** unterstützt keine dynamischen Endpunkte oder [**Broadcastaufrufe.**](broadcast.md) Wie bei anderen Datagrammprotokollen unterstützt **ncadg \_ mq** keine Rückrufe. Alle Funktionen, die das [**Rückrufattribut**](callback.md) verwenden, schlagen fehl.
 
 > [!Note]  
 > Diese Protokollfamilie wird in Windows XP nicht unterstützt.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-Die Syntax des Message-Queue-Protokolls wird unabhängig von der IDL-Spezifikation definiert. Der mittlerer l-Compiler führt einige Syntax Überprüfungen durch, garantiert jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Fehler werden möglicherweise zur Laufzeit gemeldet, nicht während der Kompilierung.
+Die Syntax des Nachrichtenwarteschlangenprotokolls wird unabhängig von der IDL-Spezifikation definiert. Der MIDL-Compiler führt eine Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehler können zur Laufzeit und nicht während der Kompilierung gemeldet werden.
 
 ``` syntax
 [
@@ -69,16 +69,16 @@ interface iface
 
 <dl> <dt>
 
-[**aus**](broadcast.md)
+[**Sendung**](broadcast.md)
 </dt> <dt>
 
 [**Rückruf**](callback.md)
 </dt> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [**Nachricht**](message.md)
@@ -87,9 +87,9 @@ interface iface
 [RPC-Message Queuing](/windows/desktop/Rpc/rpc-message-queuing)
 </dt> <dt>
 
-[Zeichen folgen Bindung](/windows/desktop/Rpc/string-binding)
+[Zeichenfolgenbindung](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

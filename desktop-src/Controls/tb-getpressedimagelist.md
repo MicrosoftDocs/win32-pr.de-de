@@ -1,9 +1,9 @@
 ---
-title: TB_GETPRESSEDIMAGELIST-Nachricht (Commctrl.h)
-description: Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
+title: TB_GETPRESSEDIMAGELIST (Commctrl.h)
+description: Ruft die Bildliste ab, die ein Symbolleisten-Steuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
 ms.assetid: 116d4212-48ea-4b00-a752-21e5e1f10e36
 keywords:
-- TB_GETPRESSEDIMAGELIST Windows-Steuerelementen
+- TB_GETPRESSEDIMAGELIST von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117829661"
 ---
 # <a name="tb_getpressedimagelist-message"></a>TB \_ GETPRESSEDIMAGELIST-Nachricht
 
-Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
+Ruft die Bildliste ab, die ein Symbolleisten-Steuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, oder **NULL,** wenn keine Bildliste festgelegt ist.
+Gibt das Handle für die Bildliste zurück oder **NULL,** wenn keine Bildliste festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Gibt das Handle für die Bildliste zurück, oder **NULL,** wenn keine Bildliste 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

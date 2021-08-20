@@ -1,9 +1,9 @@
 ---
-title: Userplayzählweekday-Attribut
-description: Das userplayzählweekday-Attribut gibt an, wie oft das Element an Montag, Dienstag, Mittwoch, Donnerstag oder Freitag wiedergegeben wurde.
+title: UserPlaycountWeekday-Attribut
+description: Das UserPlaycountWeekday-Attribut gibt an, wie oft das Element an einem Montag, Dienstag, Mittwoch, Donnerstag oder Freitag wiedergegeben wurde.
 ms.assetid: bab55c4f-391e-4087-b99b-e1f57b88e024
 keywords:
-- Userplayzählweekday-Attribut, Windows Media Player
+- UserPlaycountWeekday-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,29 +12,29 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0be6750a2001e34b20b470108ec20aa602ba37c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 928e558827367c8a2784bf036269958fc32134bf3ab9bef08c03c6756eea706e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118830926"
 ---
-# <a name="userplaycountweekday-attribute"></a>Userplayzählweekday-Attribut
+# <a name="userplaycountweekday-attribute"></a>UserPlaycountWeekday-Attribut
 
-Das **userplayzählweekday** -Attribut gibt an, wie oft das Element an Montag, Dienstag, Mittwoch, Donnerstag oder Freitag wiedergegeben wurde.
+Das **UserPlaycountWeekday-Attribut** gibt an, wie oft das Element an einem Montag, Dienstag, Mittwoch, Donnerstag oder Freitag wiedergegeben wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,7 +42,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -50,7 +50,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

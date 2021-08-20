@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem System und einem Ressourcenpool dar, bei dem es sich um eine Komponente des Systems handelt.
+description: Stellt eine Zuordnung zwischen einem System und einem Ressourcenpool dar, der eine Komponente des Systems ist.
 ms.assetid: 0ac60dbd-0498-4978-b2d6-f4c9926a83a8
 title: CIM_HostedResourcePool-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: dbb6d523b533d6e8b2f5bc1e21de93962cfd860f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7029e3eaebc879d5b635ffe70cd8f6d7888ff580247d992f6794f20c35db7045
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014578"
 ---
-# <a name="cim_hostedresourcepool-class"></a>CIM- \_ Klasse "hustedresourcepool"
+# <a name="cim_hostedresourcepool-class"></a>CIM \_ HostedResourcePool-Klasse
 
-Stellt eine Zuordnung zwischen einem System und einem Ressourcenpool dar, bei dem es sich um eine Komponente des Systems handelt.
+Stellt eine Zuordnung zwischen einem System und einem Ressourcenpool dar, der eine Komponente des Systems ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ class CIM_HostedResourcePool : CIM_SystemComponent
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ hustedresourcepool** " verfügt über diese Typen von Membern:
+Die **CIM \_ HostedResourcePool-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ hustedresourcepool** " verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse HostedResourcePool** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ System**
+Datentyp: **\_ CIM-System**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Das übergeordnete System in der Zuordnung.
@@ -68,16 +68,16 @@ Das übergeordnete System in der Zuordnung.
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ resourcepool**
+Datentyp: **CIM \_ ResourcePool**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Der Ressourcenpool, bei dem es sich um eine Komponente des Systems handelt.
+Der Ressourcenpool, der eine Komponente des Systems ist.
 
 </dd> </dl>
 
@@ -89,17 +89,17 @@ Der Ressourcenpool, bei dem es sich um eine Komponente des Systems handelt.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SystemComponent**](cim-systemcomponent.md)
+[**CIM \_ SystemComponent**](cim-systemcomponent.md)
 </dt> </dl>
 
  

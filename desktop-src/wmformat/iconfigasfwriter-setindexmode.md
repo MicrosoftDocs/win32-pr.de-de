@@ -56,7 +56,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler a
 
 Standardmäßig erstellt WM [ASF Writer](wm-asf-writer-filter.md) temporal indizierte ASF-Dateien. Die Indizierung wird ausgeführt, wenn das Diagramm beendet wird. Sie können dieses Verhalten deaktivieren, wenn Sie eine eigene framebasierte Indizierung als Nachbearbeitungsschritt durchführen möchten. Um eine frameindizierte Datei zu erstellen, rufen **Sie SetIndexMode**(FALSE) auf, erstellen Sie die Datei, und verwenden Sie dann die methoden Windows Media Format SDK direkt, um einen framebasierten Index für die Datei zu erstellen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

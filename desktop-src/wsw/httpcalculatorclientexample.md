@@ -1,6 +1,6 @@
 ---
 title: HttpCalculatorClientExample
-description: In diesem Beispiel wird gezeigt, wie der Dienstproxy für die Kommunikation mit einem HTTP-basierten Rechnerdienst verwendet wird.
+description: In diesem Beispiel wird gezeigt, wie der Dienstproxy verwendet wird, um mit einem HTTP-basierten Rechnerdienst zu kommunizieren.
 ms.assetid: dd97613d-3bb7-427c-a292-220d1efed96c
 keywords:
 - HttpCalculatorClientExample-Webdienste für Windows
@@ -17,7 +17,7 @@ ms.locfileid: "117841730"
 ---
 # <a name="httpcalculatorclientexample"></a>HttpCalculatorClientExample
 
-In diesem Beispiel wird gezeigt, wie der Dienstproxy für die Kommunikation mit einem HTTP-basierten Rechnerdienst verwendet wird.
+In diesem Beispiel wird gezeigt, wie der Dienstproxy verwendet wird, um mit einem HTTP-basierten Rechnerdienst zu kommunizieren.
 
 -   [HttpCalculatorClient.cpp](#httpcalculatorclientcpp)
 -   [CalculatorService.wsdl](#calculatorservicewsdl)

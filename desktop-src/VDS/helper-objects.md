@@ -1,61 +1,61 @@
 ---
-description: 'VDS bietet zwei Hilfsobjekte: das-Enumerationsobjekt und das Async-Objekt. In diesem Thema werden die einzelnen Objekte beschrieben und Links zu Beispielen für die Funktionsweise von Aufrufern von Aufrufern bereitstellt.'
+description: 'VDS stellt zwei Hilfsobjekte bereit: das Enumerationsobjekt und das asynchrone Objekt. Dieses Thema beschreibt jedes dieser Objekte und enthält Links zu Beispielen für die Arbeit von Aufrufern mit den einzelnen Objekten.'
 ms.assetid: 0f809c71-a3bd-4c62-8086-9651ea1a3400
 title: Hilfsobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac5193003abd10d9fa2c311b250272d9ad5847a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98464c31548309b50e21b2b8e3e20a867efe7ca647d7a9879efd0ef346e6a147
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999480"
 ---
 # <a name="helper-objects"></a>Hilfsobjekte
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-VDS bietet zwei Hilfsobjekte: das-Enumerationsobjekt und das Async-Objekt. In diesem Thema werden die einzelnen Objekte beschrieben und Links zu Beispielen für die Funktionsweise von Aufrufern von Aufrufern bereitstellt.
+VDS stellt zwei Hilfsobjekte bereit: das Enumerationsobjekt und das asynchrone Objekt. Dieses Thema beschreibt jedes dieser Objekte und enthält Links zu Beispielen für die Arbeit von Aufrufern mit den einzelnen Objekten.
 
 ## <a name="enumeration-object"></a>Enumerationsobjekt
 
-Ein Enumerationsobjekt listet einen Satz von VDS-Objekten eines bestimmten Typs auf. Bei Objekten kann es sich um Anbieter, Subsysteme, Controller, LUNs, LUN-plexes, Laufwerke, Festplatten Pakete, Datenträger, Volumes oder Volumeplexes handeln. Aufrufer können einen Zeiger auf ein bestimmtes Objekt erhalten, indem Sie das gewünschte Objekt aus der-Enumeration auswählen, das von der entsprechenden-Methode zurückgegeben wird. Ein Codebeispiel finden Sie unter [Arbeiten mit enumerationsobjekten](working-with-enumeration-objects.md).
+Ein Enumerationsobjekt listet einen Satz von VDS-Objekten eines bestimmten Typs auf. Objekte können Anbieter, Subsysteme, Controller, LUNs, LUN-Plexes, Laufwerke, Datenträgerpakete, Datenträger, Volumes oder Volumeplexes sein. Aufrufer können einen Zeiger auf ein bestimmtes Objekt abrufen, indem sie das gewünschte Objekt aus der Enumeration auswählen, die von der entsprechenden Methode zurückgegeben wird. Ein Codebeispiel finden Sie unter [Arbeiten mit Enumerationsobjekten.](working-with-enumeration-objects.md)
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet. 
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
 | type                                              | Element                                  |
 |---------------------------------------------------|------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ienumvdsobject**](/windows/desktop/api/Vds/nn-vds-ienumvdsobject) |
-| Zugehörige Enumerationen                           | Keine.                                    |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IEnumVdsObject**](/windows/desktop/api/Vds/nn-vds-ienumvdsobject) |
+| Zugeordnete Enumerationen                           | Keine.                                    |
 | Zugeordnete Strukturen                             | Keine.                                    |
 
 
 
  
 
-## <a name="async-object"></a>Async-Objekt
+## <a name="async-object"></a>Asynchrones Objekt
 
-Asynchrone Vorgänge werden von einem Async-Objekt verwaltet. Methoden, die asynchrone Vorgänge initiieren, geben einen Zeiger auf eine [**ivdsasync**](/windows/desktop/api/Vds/nn-vds-ivdsasync) -Schnittstelle zurück, die es dem Aufrufer ermöglicht, den Status des asynchronen Vorgangs abzubrechen, zu warten und abzufragen.
+Ein asynchrones Objekt verwaltet asynchrone Vorgänge. Methoden, die asynchrone Vorgänge initiieren, geben einen Zeiger auf eine [**IVdsAsync-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdsasync) zurück, wodurch der Aufrufer den Status des asynchronen Vorgangs abbrechen, warten und abfragen kann.
 
-VDS-Vorgänge mit langer Ausführungszeit werden in der Regel asynchron implementiert. Die Softwareanbieter Programme Basic und Dynamic implementieren asynchrone Methoden konsistent für Volume-, Partitions-und Datenträger Vorgänge. Hardware Anbieter implementieren optional asynchrone Methoden, die asynchron in Beziehung stehen. Unabhängig davon, wie der Anbieter die-Methode implementiert, muss der Vorgang einen Zeiger auf eine [**ivdsasync**](/windows/desktop/api/Vds/nn-vds-ivdsasync) -Schnittstelle an den Aufrufer zurückgeben. Ein Codebeispiel finden Sie unter [Verwalten von asynchronen Vorgängen](managing-asynchronous-operations.md).
+VDS-Vorgänge mit langer Ausführungslaufzeit werden in der Regel asynchron implementiert. Die grundlegenden und dynamischen Softwareanbieterprogramme implementieren asynchrone Methoden konsistent für Volume-, Partitions- und Datenträgervorgänge. Hardwareanbieter implementieren optional asynchron bezogene Methoden asynchron. Unabhängig davon, wie der Anbieter die -Methode implementiert, muss der Vorgang einen Zeiger auf eine [**IVdsAsync-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdsasync) an den Aufrufer zurückgeben. Ein Codebeispiel finden Sie unter [Verwalten von asynchronen Vorgängen.](managing-asynchronous-operations.md)
 
-Zu den asynchronen Vorgängen gehören:
+Asynchrone Vorgänge umfassen Folgendes:
 
 -   Erstellen einer LUN, eines Volumes oder einer Partition.
 -   Formatieren eines Volumes oder einer Partition.
--   Hinzufügen oder Entfernen einer LUN oder eines volumeplex.
--   Aufteilen eines volumeplex.
+-   Hinzufügen oder Entfernen einer LUN oder volume plex.
+-   Breaking a volume plex (Breaking a Volume Plex).
 -   Erweitern oder Verkleinern einer LUN oder eines Volumes.
 -   Wiederherstellen einer LUN oder eines Volumes.
 -   Bereinigen eines Datenträgers.
 -   Ersetzen eines Datenträgers.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet. 
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
 | type                                              | Element                        |
 |---------------------------------------------------|--------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ivdsasync**](/windows/desktop/api/Vds/nn-vds-ivdsasync) |
-| Zugehörige Enumerationen                           | Keine.                          |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IVdsAsync**](/windows/desktop/api/Vds/nn-vds-ivdsasync) |
+| Zugeordnete Enumerationen                           | Keine.                          |
 | Zugeordnete Strukturen                             | Keine.                          |
 
 
@@ -69,13 +69,13 @@ In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Stru
 [VDS-Objektmodell](vds-object-model.md)
 </dt> <dt>
 
-[**Ivdsasync**](/windows/desktop/api/Vds/nn-vds-ivdsasync)
+[**IVdsAsync**](/windows/desktop/api/Vds/nn-vds-ivdsasync)
 </dt> <dt>
 
-[Arbeiten mit enumerationsobjekten](working-with-enumeration-objects.md)
+[Arbeiten mit Enumerationsobjekten](working-with-enumeration-objects.md)
 </dt> <dt>
 
-[Verwalten von asynchronen Vorgängen](managing-asynchronous-operations.md)
+[Verwalten asynchroner Vorgänge](managing-asynchronous-operations.md)
 </dt> </dl>
 
  

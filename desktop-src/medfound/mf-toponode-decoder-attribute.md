@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob ein zugrunde liegendes Topologieknotenobjekt ein Decoder ist.
 ms.assetid: b6d576dc-b12f-49bf-b938-db2c629df400
-title: MF_TOPONODE_DECODER-Attribut (Mfidl.h)
+title: MF_TOPONODE_DECODER -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 8f8946e9de4131ce62a7ab76119b4a409cea03b1d05000a5c28c3cbab4bdcf3d
@@ -43,7 +43,7 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -53,7 +53,7 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 [**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEAttributes::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
 [**TOPOLOGYNode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)

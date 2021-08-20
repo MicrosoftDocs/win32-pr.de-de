@@ -1,7 +1,7 @@
 ---
-description: Fügt einem benutzerdefinierten Erkennungs Knoten Strich Daten für einen einzelnen Strich hinzu.
+description: Fügt einem benutzerdefinierten Recognizer-Knoten Strichdaten für einen einzelnen Strich hinzu.
 ms.assetid: ab43c9f8-15fe-49db-b9d1-57d34b95d99f
-title: 'Iinkanalyzer:: addstrokedecustomerkenzer-Methode (iacom. h)'
+title: IInkAnalyzer::AddStrokeToCustomRecognizer-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: c04b60acd2f40b5ed3960c9932ce066b337d81cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a3ce58f462053b48e6cecdc7eb276a1e162f88b0e7de373648a537b3b712cf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967329"
 ---
-# <a name="iinkanalyzeraddstroketocustomrecognizer-method"></a>Iinkanalyzer:: addstrokedecustomerkenzer-Methode
+# <a name="iinkanalyzeraddstroketocustomrecognizer-method"></a>IInkAnalyzer::AddStrokeToCustomRecognizer-Methode
 
-Fügt einem benutzerdefinierten Erkennungs Knoten Strich Daten für einen einzelnen Strich hinzu.
+Fügt einem benutzerdefinierten Recognizer-Knoten Strichdaten für einen einzelnen Strich hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,81 +45,81 @@ HRESULT AddStrokeToCustomRecognizer(
 
 <dl> <dt>
 
-*ulstrokeid* \[ in\]
+*ulStrokeId* \[ In\]
 </dt> <dd>
 
-Der Bezeichner für den hinzu zufügenden Strich.
+Der Bezeichner für den hinzuzufügenden Strich.
 
 </dd> <dt>
 
-*ulstrokepacketdatacount* \[ in\]
+*ulStrokePacketDataCount* \[ In\]
 </dt> <dd>
 
 Die Anzahl der Pakete im Strich.
 
 </dd> <dt>
 
-*plstrokepacketdata* \[ in\]
+*plStrokePacketData* \[ In\]
 </dt> <dd>
 
 Ein Array, das die Paketdaten für den Strich enthält.
 
 </dd> <dt>
 
-*ulstrokepacketdescriptioncount* \[ in\]
+*ulStrokePacketDescriptionCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Paket Eigenschaften in jedem Paket.
+Die Anzahl der Paketeigenschaften in jedem Paket.
 
 </dd> <dt>
 
-*pstrokepacketdescriptionguids* \[ in\]
+*pStrokePacketDescriptionGuids* \[ In\]
 </dt> <dd>
 
-Ein Array, das die Paket Eigenschaften Bezeichner enthält.
+Ein Array, das die Paketeigenschaftsbezeichner enthält.
 
 </dd> <dt>
 
-*pcustomerkenzer* \[ in\]
+*pCustomRecognizer* \[ In\]
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) des Typs **customerkenzer** , dem der Strich hinzugefügt werden soll.
+Der [**IContextNode vom**](icontextnode.md) Typ **CustomRecognizer,** dem der Strich hinzugefügt werden soll.
 
 </dd> <dt>
 
-*ppcontextnodestrokeaddto* \[ vorgenommen\]
+*ppContextNodeStrokeAddedTo* \[ out\]
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) , dem die Ink-Analyse den Strich hinzugefügt hat.
+Der [**IContextNode,**](icontextnode.md) dem das Ink Analyzer den Strich hinzugefügt hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speichermangel zu vermeiden, müssen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppcontextnozerstörkeaddto* abrufen, wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppContextNodeStrokeAddedTo* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Wenn *ppcontextnodestrokeaddedto* **null** ist, gibt es an, dass der Aufrufer nicht an dem Rückgabewert der-Methode interessiert ist.
+Wenn *ppContextNodeStrokeAddedTo* **NULL ist,** gibt dies an, dass der Aufrufer nicht am Rückgabewert der Methode interessiert ist.
 
-[**Iinkanalyzer**](iinkanalyzer.md) fügt den Strich einem [**icontextnode**](icontextnode.md) des Typs **customerkenzer** hinzu (siehe [Kontext Knoten Typen](context-node-types.md)). Dieser Knoten befindet sich in der unter Knoten Sammlung des Stamm Knotens (Weitere Informationen finden Sie unter [**iinkanalyzer:: GetRootNode-Methode**](iinkanalyzer-getrootnode.md) und [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md) -Methoden).
+[**IInkAnalyzer fügt**](iinkanalyzer.md) den Strich einem [**IContextNode**](icontextnode.md) vom Typ **CustomRecognizer** hinzu (siehe [Kontextknotentypen](context-node-types.md)). Dieser Knoten befindet sich in der Unterknotensammlung des Stammknotens (siehe [**IInkAnalyzer::GetRootNode-Methode**](iinkanalyzer-getrootnode.md) und [**IContextNode::GetSubNodes-Methoden).**](icontextnode-getsubnodes.md)
 
-[**Iinkanalyzer**](iinkanalyzer.md) weist den Kultur Bezeichner des aktiven Eingabe Threads dem Strich zu und fügt den Strich dem ersten Knoten **UnclassifiedInk** unter dem Knoten **customerkenzer** hinzu. Wenn kein **unclassimeedink** -Knoten vorhanden ist, wird er erstellt. Wenn das [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) -Element, das dem **customerkenzer** -Knoten zugeordnet ist, den Kultur Bezeichner nicht unterstützt, setzt **iinkanalyzer** die Analyse fort und generiert eine [**ianalysiswarning**](ianalysiswarning.md) -Warnung. Diese Warnung weist einen [**AnalysisWarningCode**](/windows/desktop/tablet/analysiswarningcode) -Wert von **AnalysisWarningCode \_ LanguageIdNotRespected** auf.
+Der [**IInkAnalyzer**](iinkanalyzer.md) weist dem Strich den Kulturbezeichner des aktiven Eingabethreads zu und fügt den Strich dem ersten **UnclassifiedInk-Knoten** unter dem **CustomRecognizer-Knoten** hinzu. Wenn kein **Knoten UnclassifiedInk vorhanden** ist, wird er erstellt. Wenn der dem **CustomRecognizer-Knoten** zugeordnete [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) den Kulturbezeichner nicht unterstützt, setzt **der IInkAnalyzer** die Analyse fort und generiert eine [**IAnalysisWarning-Warnung.**](ianalysiswarning.md) Diese Warnung hat den [**AnalysisWarningCode-Wert**](/windows/desktop/tablet/analysiswarningcode) **AnalysisWarningCode \_ LanguageIdNotRespected.**
 
-*plstrokepacketdata* enthält Paketdaten für alle Punkte im Strich. *pstrokepacketdescriptionguids* enthält die global eindeutigen Bezeichner (GUIDs), die die Typen der Paketdaten beschreiben, die für jeden Punkt in jedem Strich enthalten sind. Eine umfassende Liste der verfügbaren Paket Eigenschaften finden Sie unter [packetpropertyguids-Konstanten](packetpropertyguids-constants.md).
+*plStrokePacketData enthält* Paketdaten für alle Punkte im Strich. *pStrokePacketDescriptionGuids* enthält die GUIDs (Globally Unique Identifiers), die die Typen von Paketdaten beschreiben, die für jeden Punkt in jedem Strich enthalten sind. Eine vollständige Liste der verfügbaren Paketeigenschaften finden Sie unter [PacketPropertyGuids-Konstanten.](packetpropertyguids-constants.md)
 
-Mit dieser Methode wird der geänderte Bereich in die Gesamtmenge des aktuellen Werts des Bereichs und das umgebende Feld des hinzugefügten Strichs erweitert.
+Diese Methode erweitert den verfeckten Bereich auf die Vereinigung des aktuellen Werts des Region und des Begrenzungsfelds des hinzugefügten Strichs.
 
-Der [**iinkanalyzer**](iinkanalyzer.md) gibt unter den folgenden Umständen ein **HRESULT** von **E \_ invalidArg** zurück.
+Der [**IInkAnalyzer gibt**](iinkanalyzer.md) unter den folgenden Umständen **ein HRESULT** von E **\_ INVALIDARG** zurück.
 
--   Der [**iinkanalyzer**](iinkanalyzer.md) enthält bereits einen Strich mit dem gleichen Bezeichner wie der hinzu zufügende Strich.
--   Der *pcustomerkenzer* -Parameter enthält einen benutzerdefinierten Erkennungs Knoten, der mit einem anderen [**iinkanalyzer**](iinkanalyzer.md) -Objekt verknüpft ist.
--   Der *pcustomerkenzer* -Parameter enthält einen [**icontextnode**](icontextnode.md) , der nicht vom Typ " **customerkenzer**" ist.
+-   Der [**IInkAnalyzer enthält**](iinkanalyzer.md) bereits einen Strich mit demselben Bezeichner wie der Strich, der hinzugefügt werden soll.
+-   Der *pCustomRecognizer-Parameter* enthält einen benutzerdefinierten Recognizer-Knoten, der einem anderen [**IInkAnalyzer-Objekt zugeordnet**](iinkanalyzer.md) ist.
+-   Der *pCustomRecognizer-Parameter* enthält einen [**IContextNode,**](icontextnode.md) der nicht vom **Typ CustomRecognizer ist.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,9 +127,9 @@ Der [**iinkanalyzer**](iinkanalyzer.md) gibt unter den folgenden Umständen ein 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -138,19 +138,19 @@ Der [**iinkanalyzer**](iinkanalyzer.md) gibt unter den folgenden Umständen ein 
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[Kontext Knoten Typen](context-node-types.md)
+[Kontextknotentypen](context-node-types.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokestocustomerkenzer-Methode**](iinkanalyzer-addstrokestocustomrecognizer.md)
+[**IInkAnalyzer::AddStrokesToCustomRecognizer-Methode**](iinkanalyzer-addstrokestocustomrecognizer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: kreatecustomerkenzer-Methode**](iinkanalyzer-createcustomrecognizer.md)
+[**IInkAnalyzer::CreateCustomRecognizer-Methode**](iinkanalyzer-createcustomrecognizer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

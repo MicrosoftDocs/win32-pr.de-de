@@ -1,7 +1,7 @@
 ---
 description: Initialisiert eine Farbe mit den angegebenen Werten für Rot, Grün und Blau.
 ms.assetid: 832a4a78-c166-4e45-a907-57730da1c2c8
-title: D3DCOLOR_XRGB Makro (D3d9types.h)
+title: D3DCOLOR_XRGB-Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -44,21 +44,21 @@ D3DCOLOR D3DCOLOR_XRGB(
 *r* 
 </dt> <dd>
 
-Rote Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Rote Komponente der Farbe. Dieser Wert muss im Bereich von 0 bis 255 liegen.
 
 </dd> <dt>
 
 *g* 
 </dt> <dd>
 
-Grüne Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Grüne Komponente der Farbe. Dieser Wert muss im Bereich von 0 bis 255 liegen.
 
 </dd> <dt>
 
 *b* 
 </dt> <dd>
 
-Blaue Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Blaue Komponente der Farbe. Dieser Wert muss im Bereich von 0 bis 255 liegen.
 
 </dd> </dl>
 
@@ -76,7 +76,7 @@ Gibt den [**D3DCOLOR-Wert**](d3dcolor.md) zurück, der den angegebenen RGB-Werte
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

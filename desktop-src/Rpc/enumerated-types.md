@@ -1,6 +1,6 @@
 ---
-title: Enumerated Types (RPC) (Aufzählen von Typen (RPC))
-description: Die Enum-Deklaration wird nicht wie von einigen DCE-Compilern in \define-Anweisungen übersetzt, sondern als C-Enum-Deklaration in der generierten Headerdatei reproduziert.
+title: Enumerationstypen (RPC)
+description: Die Enumerationsdeklaration wird nicht wie von einigen DCE-Compilern in \define-Anweisungen übersetzt, sondern als Enumerationsdeklaration in C-Sprache in der generierten Headerdatei reproduziert.
 ms.assetid: dc38d3a2-cc6a-467f-a497-2a7abec07573
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118930397"
 ---
-# <a name="enumerated-types-rpc"></a>Enumerated Types (RPC) (Aufzählen von Typen (RPC))
+# <a name="enumerated-types-rpc"></a>Enumerationstypen (RPC)
 
-Die [**Enum-Deklaration**](/windows/desktop/Midl/enum) wird **\#** nicht wie von einigen DCE-Compilern in define-Anweisungen übersetzt, sondern als C-Enum-Deklaration in der generierten Headerdatei reproduziert. 
+Die [**Enumerationsdeklaration**](/windows/desktop/Midl/enum) wird nicht wie von einigen DCE-Compilern in **\# define-Anweisungen** übersetzt, sondern als Enumerationsdeklaration in C-Sprache in der **generierten** Headerdatei reproduziert.
 
  
 
