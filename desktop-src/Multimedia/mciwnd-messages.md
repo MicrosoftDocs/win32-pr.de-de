@@ -1,93 +1,93 @@
 ---
-title: Mciwnd-Meldungen
-description: Mciwnd-Meldungen
+title: MCIWnd-Nachrichten
+description: MCIWnd-Nachrichten
 ms.assetid: 03352b8f-7483-483f-a2bc-af323ab3b9e6
 keywords:
-- MCI (Media Control Interface), mciwnd-Meldungen
-- Mciwnd-Fenster Klasse, Meldungen
-- Mciwnd-Fenster, Meldungen
-- Mciwnd-Referenz, Meldungen
-- Mciwnd-Meldungen
+- MCI (Media Control Interface), MCIWnd-Nachrichten
+- MCIWnd-Fensterklasse,Messages
+- MCIWnd-Fenster, Meldungen
+- MCIWnd-Referenz,Meldungen
+- MCIWnd-Nachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fad9bb2d1e1dc44aab6d30e2c66a9dffbaf5a9f9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a9b18ec2f70e508a912e23809eb0bef8f14011b517b74cba1322cfd84b24a6c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783390"
 ---
-# <a name="mciwnd-messages"></a>Mciwnd-Meldungen
+# <a name="mciwnd-messages"></a>MCIWnd-Nachrichten
 
-Die folgenden Meldungen werden mit mciwnd verwendet.
+Die folgenden Meldungen werden mit MCIWnd verwendet.
 
--   [**mciwndm \_ kann \_ config**](mciwndm-can-config.md)
--   [**mciwndm \_ kann \_ auswerfen**](mciwndm-can-eject.md)
--   [**mciwndm kann wiedergegeben werden \_ \_**](mciwndm-can-play.md)
--   [**mciwndm \_ kann \_ aufzeichnen**](mciwndm-can-record.md)
--   [**mciwndm \_ kann \_ Speichern**](mciwndm-can-save.md)
--   [**mciwndm \_ kann \_ Fenster**](mciwndm-can-window.md)
--   [**mciwndm- \_ changestyles**](mciwndm-changestyles.md)
--   [**mciwndm- \_ eject**](mciwndm-eject.md)
--   [**mciwndm \_ getactivetimer**](mciwndm-getactivetimer.md)
--   [**mciwndm \_ getalias**](mciwndm-getalias.md)
--   [**mciwndm \_ get \_ dest**](mciwndm-get-dest.md)
--   [**mciwndm \_ getdevice**](mciwndm-getdevice.md)
--   [**mciwndm \_ getde viceid**](mciwndm-getdeviceid.md)
--   [**mciwndm \_ GetEnd**](mciwndm-getend.md)
--   [**mciwndm \_ getError**](mciwndm-geterror.md)
--   [**mciwndm \_ GetFileName**](mciwndm-getfilename.md)
--   [**mciwndm \_ getinactivetimer**](mciwndm-getinactivetimer.md)
--   [**mciwndm \_ GetLength**](mciwndm-getlength.md)
--   [**mciwndm \_ getMode**](mciwndm-getmode.md)
--   [**mciwndm \_ getpalette**](mciwndm-getpalette.md)
--   [**mciwndm \_ GetPosition**](mciwndm-getposition.md)
--   [**mciwndm \_ getrepeat**](mciwndm-getrepeat.md)
--   [**mciwndm- \_ get- \_ Quelle**](mciwndm-get-source.md)
--   [**mciwndm \_ getspeed**](mciwndm-getspeed.md)
--   [**mciwndm \_ GETSTART**](mciwndm-getstart.md)
--   [**mciwndm \_ getStyles**](mciwndm-getstyles.md)
--   [**mciwndm \_ getTimeFormat**](mciwndm-gettimeformat.md)
--   [**mciwndm \_ getvolume**](mciwndm-getvolume.md)
--   [**mciwndm \_ getzoom**](mciwndm-getzoom.md)
--   [**mciwndm \_ neu**](mciwndm-new.md)
--   [**mciwndm \_ notifyerror**](mciwndm-notifyerror.md)
--   [**mciwndm \_ notifymedia**](mciwndm-notifymedia.md)
--   [**mciwndm \_ notifymode**](mciwndm-notifymode.md)
--   [**mciwndm- \_ notifypos**](mciwndm-notifypos.md)
--   [**mciwndm \_ notifiysize**](mciwndm-notifysize.md)
--   [**mciwndm \_ geöffnet**](mciwndm-open.md)
--   [**mciwndm \_ openinterface**](mciwndm-openinterface.md)
--   [**mciwndm \_ playfrom**](mciwndm-playfrom.md)
--   [**mciwndm- \_ playreverse**](mciwndm-playreverse.md)
--   [**mciwndm- \_ playto**](mciwndm-playto.md)
--   [**mciwndm \_ Put \_ dest**](mciwndm-put-dest.md)
--   [**mciwndm \_ Put- \_ Quelle**](mciwndm-put-source.md)
--   [**mciwndm \_ umsetzen**](mciwndm-realize.md)
--   [**mciwndm- \_ returnstring**](mciwndm-returnstring.md)
--   [**mciwndm \_ sendstring**](mciwndm-sendstring.md)
--   [**"mciwndm \_ "**](mciwndm-setactivetimer.md)
--   [**mciwndm- \_ abteilactivetimer**](mciwndm-setinactivetimer.md)
--   [**"mciwndm \_ "**](mciwndm-setowner.md)
--   [**mciwndm- \_ SetPalette**](mciwndm-setpalette.md)
--   [**mciwndm- \_ tretrepeat**](mciwndm-setrepeat.md)
--   [**mciwndm- \_ setSpeed**](mciwndm-setspeed.md)
--   [**mciwndm \_ settimeformat**](mciwndm-settimeformat.md)
--   [**mciwndm- \_ SETTIMER**](mciwndm-settimers.md)
--   [**mciwndm- \_ SetVolume**](mciwndm-setvolume.md)
--   [**mciwndm- \_ setzoom**](mciwndm-setzoom.md)
--   [**mciwndm \_ validatemedia**](mciwndm-validatemedia.md)
+-   [**MCIWNDM \_ CAN \_ CONFIG**](mciwndm-can-config.md)
+-   [**MCIWNDM \_ KANN \_ AUSWERFEN**](mciwndm-can-eject.md)
+-   [**MCIWNDM \_ KANN WIEDER SPIELEN \_**](mciwndm-can-play.md)
+-   [**MCIWNDM KANN \_ \_ AUFZEICHNEN**](mciwndm-can-record.md)
+-   [**MCIWNDM \_ KANN SPEICHERN \_**](mciwndm-can-save.md)
+-   [**MCIWNDM KANN \_ FENSTER \_ ANZEIGEN**](mciwndm-can-window.md)
+-   [**MCIWNDM \_ CHANGESTYLES**](mciwndm-changestyles.md)
+-   [**MCIWNDM \_ EJECT**](mciwndm-eject.md)
+-   [**MCIWNDM \_ GETACTIVETIMER**](mciwndm-getactivetimer.md)
+-   [**MCIWNDM \_ GETALIAS**](mciwndm-getalias.md)
+-   [**MCIWNDM \_ GET \_ DEST**](mciwndm-get-dest.md)
+-   [**MCIWNDM \_ GETDEVICE**](mciwndm-getdevice.md)
+-   [**MCIWNDM \_ GETDEVICEID**](mciwndm-getdeviceid.md)
+-   [**MCIWNDM \_ GETEND**](mciwndm-getend.md)
+-   [**MCIWNDM \_ GETERROR**](mciwndm-geterror.md)
+-   [**MCIWNDM \_ GETFILENAME**](mciwndm-getfilename.md)
+-   [**MCIWNDM \_ GETINACTIVETIMER**](mciwndm-getinactivetimer.md)
+-   [**MCIWNDM \_ GETLENGTH**](mciwndm-getlength.md)
+-   [**MCIWNDM \_ GETMODE**](mciwndm-getmode.md)
+-   [**MCIWNDM \_ GETPALETTE**](mciwndm-getpalette.md)
+-   [**MCIWNDM \_ GETPOSITION**](mciwndm-getposition.md)
+-   [**MCIWNDM \_ GETREPEAT**](mciwndm-getrepeat.md)
+-   [**MCIWNDM \_ GET \_ SOURCE**](mciwndm-get-source.md)
+-   [**MCIWNDM \_ GETSPEED**](mciwndm-getspeed.md)
+-   [**MCIWNDM \_ GETSTART**](mciwndm-getstart.md)
+-   [**MCIWNDM \_ GETSTYLES**](mciwndm-getstyles.md)
+-   [**MCIWNDM \_ GETTIMEFORMAT**](mciwndm-gettimeformat.md)
+-   [**MCIWNDM \_ GETVOLUME**](mciwndm-getvolume.md)
+-   [**MCIWNDM \_ GETZOOM**](mciwndm-getzoom.md)
+-   [**MCIWNDM \_ NEU**](mciwndm-new.md)
+-   [**MCIWNDM \_ NOTIFYERROR**](mciwndm-notifyerror.md)
+-   [**MCIWNDM \_ NOTIFYMEDIA**](mciwndm-notifymedia.md)
+-   [**MCIWNDM \_ NOTIFYMODE**](mciwndm-notifymode.md)
+-   [**MCIWNDM \_ NOTIFYPOS**](mciwndm-notifypos.md)
+-   [**MCIWNDM \_ NOTIFYSIZE**](mciwndm-notifysize.md)
+-   [**MCIWNDM \_ OPEN**](mciwndm-open.md)
+-   [**MCIWNDM \_ OPENINTERFACE**](mciwndm-openinterface.md)
+-   [**MCIWNDM \_ PLAYFROM**](mciwndm-playfrom.md)
+-   [**MCIWNDM \_ PLAYREVERSE**](mciwndm-playreverse.md)
+-   [**MCIWNDM \_ PLAYTO**](mciwndm-playto.md)
+-   [**MCIWNDM \_ PUT \_ DEST**](mciwndm-put-dest.md)
+-   [**MCIWNDM \_ PUT \_ SOURCE**](mciwndm-put-source.md)
+-   [**MCIWNDM \_ REALIZE**](mciwndm-realize.md)
+-   [**MCIWNDM \_ RETURNSTRING**](mciwndm-returnstring.md)
+-   [**MCIWNDM \_ SENDSTRING**](mciwndm-sendstring.md)
+-   [**MCIWNDM \_ SETACTIVETIMER**](mciwndm-setactivetimer.md)
+-   [**MCIWNDM \_ SETINACTIVETIMER**](mciwndm-setinactivetimer.md)
+-   [**MCIWNDM \_ SEFÜHRUNG**](mciwndm-setowner.md)
+-   [**MCIWNDM \_ SETPALETTE**](mciwndm-setpalette.md)
+-   [**MCIWNDM \_ SETREPEAT**](mciwndm-setrepeat.md)
+-   [**MCIWNDM \_ SETSPEED**](mciwndm-setspeed.md)
+-   [**MCIWNDM \_ SETTIMEFORMAT**](mciwndm-settimeformat.md)
+-   [**MCIWNDM \_ SETTIMERS**](mciwndm-settimers.md)
+-   [**MCIWNDM \_ SETVOLUME**](mciwndm-setvolume.md)
+-   [**MCIWNDM \_ SETZOOM**](mciwndm-setzoom.md)
+-   [**MCIWNDM \_ VALIDATEMEDIA**](mciwndm-validatemedia.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Mciwnd-Referenz](mciwnd-reference.md)
+[MCIWnd-Referenz](mciwnd-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

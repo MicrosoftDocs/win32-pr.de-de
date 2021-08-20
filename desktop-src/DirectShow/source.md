@@ -1,37 +1,37 @@
 ---
-description: '`Source`'
+description: Quelle
 ms.assetid: 5ed90dc2-419e-40d4-adb4-164166254cd0
-title: '`Source`'
+title: Quelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1edd85c773c1fa8b8b0dedfd3d8af34e1ba19c8a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 43555cd7a6d0646912dddf1da287e94f6070c93e154cbf3d27029865ff21daaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075710"
 ---
-# <a name="source"></a>`Source`
+# <a name="source"></a>Quelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Das Quell Objekt stellt einen Quellclip in der Zeitachse dar. Um dieses Objekt zu erstellen, rufen Sie die [**iamtimeline:: erkreateemptynode**](iamtimeline-createemptynode.md) -Methode auf.
+Das Quellobjekt stellt einen Quellclip in der Zeitachse dar. Rufen Sie zum Erstellen dieses Objekts die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) auf.
 
-Das Quell Objekt macht die folgenden Schnittstellen verfügbar:
+Das Quellobjekt macht die folgenden Schnittstellen verfügbar:
 
--   [**Iamtimelineeffectable**](iamtimelineeffectable.md)
--   [**Iamtimelineobj**](iamtimelineobj.md)
--   [**Iamtimelinesrc**](iamtimelinesrc.md)
--   [**Iamtimelinesplicustom**](iamtimelinesplittable.md)
+-   [**IAMTimelineEffectable**](iamtimelineeffectable.md)
+-   [**IAMTimelineObj**](iamtimelineobj.md)
+-   [**IAMTimelineSrc**](iamtimelinesrc.md)
+-   [**IAMTimelineSplittable**](iamtimelinesplittable.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Das Zeitachsen Modell](the-timeline-model.md)
+[Das Zeitachsenmodell](the-timeline-model.md)
 </dt> <dt>
 
 [Arbeiten mit Quellen](working-with-sources.md)

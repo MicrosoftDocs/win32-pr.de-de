@@ -65,7 +65,7 @@ Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

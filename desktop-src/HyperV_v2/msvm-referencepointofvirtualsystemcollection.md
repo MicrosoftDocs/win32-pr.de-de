@@ -1,5 +1,5 @@
 ---
-description: Ordnet die MSVM \_ referencepointcollection den entsprechenden MSVM \_ virtualsystemcollection-Objekten zu.
+description: Ordnet die Msvm \_ ReferencePointCollection den entsprechenden Msvm \_ VirtualSystemCollection-Objekten zu.
 ms.assetid: 847f1f46-364f-4c91-b9e8-4740d3da1947
 title: Msvm_ReferencePointOfVirtualSystemCollection-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0919b8666915817d8475908b0305e90ea39e60f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4dfa8e8ab6c0d46f020116d4b9e9d0c1ea07b2e67d334896462950b371d368c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789600"
 ---
-# <a name="msvm_referencepointofvirtualsystemcollection-class"></a>MSVM \_ referencepoinpofvirtualsystemcollection-Klasse
+# <a name="msvm_referencepointofvirtualsystemcollection-class"></a>Msvm \_ ReferencePointOfVirtualSystemCollection-Klasse
 
-Ordnet die [**MSVM \_ referencepointcollection**](msvm-referencepointcollection.md) den entsprechenden [**MSVM \_ virtualsystemcollection**](msvm-virtualsystemcollection.md) -Objekten zu.
+Ordnet die [**Msvm \_ ReferencePointCollection**](msvm-referencepointcollection.md) den entsprechenden [**Msvm \_ VirtualSystemCollection-Objekten**](msvm-virtualsystemcollection.md) zu.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,17 +41,17 @@ class Msvm_ReferencePointOfVirtualSystemCollection : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ referencepointofvirtualsystemcollection** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ReferencePointOfVirtualSystemCollection-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ referencepoinpofvirtualsystemcollection** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ReferencePointOfVirtualSystemCollection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ CollectionOfMSEs**
@@ -60,26 +60,26 @@ Datentyp: **CIM \_ CollectionOfMSEs**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) , das das unabhängige Objekt in dieser Zuordnung darstellt.
+Eine [**\_ CIM-CollectionOfMSEs,**](cim-collectionofmses.md) die das unabhängige Objekt in dieser Zuordnung darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_** -Auflistung
+Datentyp: **\_ CIM-Sammlung**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
 </dt> </dl>
 
-Eine [**CIM \_**](cim-collection.md) -Auflistung, die das Objekt darstellt, das von dem **Vorgänger** abhängig ist.
+Eine [**\_ CIM-Auflistung,**](cim-collection.md) die das Objekt darstellt, das von der **-Klasse abhängig ist.**
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Eine [**CIM \_**](cim-collection.md) -Auflistung, die das Objekt darstellt, das 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -101,7 +101,7 @@ Eine [**CIM \_**](cim-collection.md) -Auflistung, die das Objekt darstellt, das 
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

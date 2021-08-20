@@ -1,53 +1,53 @@
 ---
-title: Zusammenfassung der Maps-und MIDI-Meldungen
-description: Zusammenfassung der Maps-und MIDI-Meldungen
+title: Zusammenfassung der Karten und MELDUNGEN
+description: Zusammenfassung der Karten und MELDUNGEN
 ms.assetid: cd0ec7b0-2ba1-4e75-b85c-f5b95ac9dfeb
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), MIDI-Mapper
-- MIDI (Digital Instrumentation Digital Interface), MIDI-Mapper
-- MIDI-Mapper, Kanal Zuordnung
-- MIDI-Mapper, patchmaps
-- MIDI-Mapper, Schlüssel Zuordnungen
-- Kanal Zuordnung
-- patchzuordnungen
-- Schlüssel Zuordnungen
+- Instruments Instrument Digital Interface (INSTRUMENTS), MAPPer
+- INSTRUMENTS (Digitale Schnittstelle des Instrumentierers), MAPPER
+- MAPPer, Kanalzuordnung
+- MAPPer, Patch maps
+- MAPPer, Schlüsselzuordnungen
+- Kanalzuordnung
+- Patch maps (Patchzuordnungen)
+- Schlüsselzuordnungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ddd962f848343ea493204d494943a99eedcc56a5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a89c23d6326e19cb5680906155d5ee2e8dbcc32735fabd8625658410ef4ddfa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781850"
 ---
-# <a name="summary-of-maps-and-midi-messages"></a>Zusammenfassung der Maps-und MIDI-Meldungen
+# <a name="summary-of-maps-and-midi-messages"></a>Zusammenfassung der Karten und MELDUNGEN
 
-Im folgenden finden Sie die Status Bytes für MIDI-Nachrichten und die Zuordnungs Typen, die jede Nachricht beeinflussen.
+Im Folgenden sind die Statusbytes für DIE MELDUNGEN und die Zuordnungstypen angegeben, die sich auf jede Nachricht auswirken.
 
 
 
-| Status von MIDI | BESCHREIBUNG               | Kartentypen                |
+| STATUS VON STATUS | Beschreibung               | Kartentypen                |
 |-------------|---------------------------|--------------------------|
-| 0x80-0x8F   | Notiz aus                  | Kanal Zuordnungen, Schlüssel Zuordnungen   |
-| 0x90-0x9F   | Hinweis zu                    | Kanal Zuordnungen, Schlüssel Zuordnungen   |
-| 0xa0-0xaf   | Polyonic-Schlüssel-afterberührungs | Kanal Zuordnungen, Schlüssel Zuordnungen   |
-| 0xb0-0xBF   | Steuerelement Änderung            | Kanal Zuordnungen, patchmaps |
-| 0xc0-0xCF   | Programmänderung            | Kanal Zuordnungen, patchmaps |
-| 0xd0-0xDF   | Kanal-afterberührungs        | Kanal Zuordnungen             |
-| 0xe0-0xEF   | Änderung der ebenumkurve         | Kanal Zuordnungen             |
-| 0xF 0-0xFF   | System                    | Nicht zugeordnet               |
+| 0x80-0x8F   | Hinweis deaktiviert                  | Kanalzuordnungen, Schlüsselzuordnungen   |
+| 0x90-0x9F   | Hinweis zu                    | Kanalzuordnungen, Schlüsselzuordnungen   |
+| 0xA0-0xAF   | Polyphone-key aftertouch | Kanalzuordnungen, Schlüsselzuordnungen   |
+| 0xB0-0xBF   | Steuern der Änderung            | Kanalzuordnungen, Patch maps |
+| 0xC0-0xCF   | Programmänderung            | Kanalzuordnungen, Patch maps |
+| 0xD0-0xDF   | Channel aftertouch        | Kanalzuordnungen             |
+| 0xE0-0xEF   | Tonhöhenänderung         | Kanalzuordnungen             |
+| 0xF0-0xFF   | System                    | Nicht zugeordnet               |
 
 
 
- 
+ 
 
--   Die hochwertigen vier Bits stellen den Statuswert dar. Die nieder wertigen vier Bits stellen die Kanalinformationen dar.
--   Patchmaps wirken sich nur auf Controller 7 (Haupt Volume) aus.
--   System Meldungen werden an alle Geräte gesendet, die in einer Kanal Zuordnung aufgeführt sind.
+-   Die vier Bits mit hoher Ordnung stellen den Statuswert dar. Die vier Bits mit niedriger Reihenfolge stellen die Kanalinformationen dar.
+-   Patch Maps wirken sich nur auf Controller 7 (Hauptvolume) aus.
+-   Systemmeldungen werden an alle Geräte gesendet, die in einer Kanalzuordnung aufgeführt sind.
 
- 
+ 
 
- 
+ 
 
 
 

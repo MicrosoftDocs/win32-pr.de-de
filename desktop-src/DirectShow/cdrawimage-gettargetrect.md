@@ -1,7 +1,7 @@
 ---
-description: Die gettargetrect-Methode ruft das aktuelle Ziel Rechteck ab.
+description: Die GetTargetRect-Methode ruft das aktuelle Zielrechteck ab.
 ms.assetid: b6542b06-af36-4666-b6fa-d9fa3c6c7044
-title: Cdrawimage. gettargetrect-Methode (winutil. h)
+title: CDrawImage.GetTargetRect-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 547dd12117cec95ad1cb0159667a8dd72a95a6e5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ba520b0bb48ed60ba2a9c48165eb83959107ecd777bdecc8bce12e7672d221e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076410"
 ---
-# <a name="cdrawimagegettargetrect-method"></a>Cdrawimage. gettargetrect-Methode
+# <a name="cdrawimagegettargetrect-method"></a>CDrawImage.GetTargetRect-Methode
 
-Die- `GetTargetRect` Methode ruft das aktuelle Ziel Rechteck ab.
+Die `GetTargetRect` -Methode ruft das aktuelle Zielrechteck ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void GetTargetRect(
 
 <dl> <dt>
 
-*ptargetrect* 
+*pTargetRect* 
 </dt> <dd>
 
-Ein Zeiger auf eine **Rect** -Struktur, die das Ziel Rechteck empfängt.
+Zeiger auf eine **RECT-Struktur,** die das Zielrechteck empfängt.
 
 </dd> </dl>
 
@@ -53,14 +53,14 @@ Ein Zeiger auf eine **Rect** -Struktur, die das Ziel Rechteck empfängt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

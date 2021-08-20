@@ -39,7 +39,7 @@ Definiert eine Liste von Eingabetypen.
 
 
 
-| Element                                                                | type                                                           | BESCHREIBUNG                       |
+| Element                                                                | Typ                                                           | Beschreibung                       |
 |------------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------|
 | [**inType**](eventmanifestschema-intype-inputtypelisttype-element.md) | [**InputType**](eventmanifestschema-inputtype-complextype.md) | Definiert einen Eingabetyp.<br/> |
 

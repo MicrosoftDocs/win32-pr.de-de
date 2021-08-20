@@ -4,75 +4,75 @@ ms.assetid: a3a8b549-51bc-48eb-9215-04c7311e03a3
 title: VDS-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9979cd4416b5305c61f6275612422b1f4cfe43a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e9fa0c6196e1085de3a5433750b890e2ad3bc42f4a86022587f02157521eacf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125693"
 ---
 # <a name="vds-constants"></a>VDS-Konstanten
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage Verwaltungs-API. [](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
 VDS-Konstanten werden wie folgt kategorisiert:
 
--   [Objekt Status Konstanten](#object-status-constants)
--   [Automatisierungs Hinweise-Konstanten](#automagic-hints-constants)
--   [Sonstige Konstanten](#miscellaneous-constants)
+-   [Objektstatuskonst constants](#object-status-constants)
+-   [Automagic Hints-Konstanten](#automagic-hints-constants)
+-   [Verschiedene Konstanten](#miscellaneous-constants)
 
-### <a name="object-status-constants"></a>Objekt Status Konstanten
+### <a name="object-status-constants"></a>Objektstatuskonst constants
 
 
 
 | Konstante           | Wert |
 |--------------------|-------|
-| \_Unbekannter Status    | 0     |
-| Status \_ Online     | 1     |
-| Status \_ nicht \_ bereit | 2     |
-| Status " \_ kein \_ Medium"  | 3     |
-| Status \_ Offline    | 4     |
-| Status \_ Fehler     | 5     |
-| Status \_ fehlt    | 6     |
+| STATUS \_ UNKNOWN    | 0     |
+| STATUS \_ ONLINE     | 1     |
+| STATUS \_ NICHT \_ BEREIT | 2     |
+| STATUS \_ KEINE \_ MEDIEN  | 3     |
+| STATUS \_ OFFLINE    | 4     |
+| STATUS \_ FAILED     | 5     |
+| STATUS \_ FEHLT    | 6     |
 
 
 
  
 
-### <a name="automagic-hints-constants"></a>Automatisierungs Hinweise-Konstanten
+### <a name="automagic-hints-constants"></a>Automagic Hints-Konstanten
 
 
 
 | Konstante                               | Wert   |
 |----------------------------------------|---------|
-| VDS- \_ Hinweis " \_ mustlyreads"                 | 0x0002l |
-| VDS- \_ Hinweis \_ optimizeforsequentialreads  | 0x0004l |
-| VDS- \_ Hinweis \_ optimizeforsequentialschreib Vorgänge | 0x0008l |
-| VDS-Hinweis neu zuordnen \_ \_                | 0x0020l |
-| VDS- \_ Hinweis " \_ Write-Through cachingenabled"  | 0x0040l |
-| VDS- \_ Hinweis \_ hardwarechecksumenabled     | 0x0080l |
-| VDS- \_ Hinweis ist \_ isyankable                  | 0x0100l |
+| \_VDS-HINWEIS \_ GRÖßTENTEILSREADS                 | 0x0002L |
+| VDS \_ HINT \_ OPTIMIZEFORSEQUENTIALREADS  | 0x0004L |
+| VDS \_ HINT \_ OPTIMIZEFORSEQUENTIALWRITES | 0x0008L |
+| VDS \_ HINT \_ REMAPENABLED                | 0x0020L |
+| SCHREIBZUGRIFF AUF \_ \_ VDS-HINWEISTHROUGHCACHINGENABLED  | 0x0040L |
+| VDS \_ HINT \_ HARDWARECHECKSUMENABLED     | 0x0080L |
+| \_VDS-HINWEIS \_ ISYANKABLE                  | 0x0100L |
 
 
 
  
 
-### <a name="miscellaneous-constants"></a>Sonstige Konstanten
+### <a name="miscellaneous-constants"></a>Verschiedene Konstanten
 
 
 
 | Konstante                     | Wert      |
 |------------------------------|------------|
-| VDS-Neuerstellung \_ \_ Priorität \_ Min.  | 0x0001l    |
-| \_VDS- \_ LUN- \_ Informationen   | 1          |
-| maximale \_ Länge des Computer namens \_    | 15         |
-| maximale \_ Länge von ProviderName \_    | 200        |
-| maximale \_ Länge der Versions Zeichenfolge \_   | 16         |
-| Laufwerk \_ Buchstaben- \_ Prop          | –        |
-| maximale \_ Größe des FS- \_ namens \_          | 8          |
-| Ungültiger \_ IDX-Member. \_         | 0xFFFFFFFF |
-| Länge des GPT- \_ Partitions \_ namens \_ | 36         |
-| Maximaler \_ Pfad                    | 260        |
+| VDS \_ REBUILD \_ PRIORITY \_ MIN  | 0x0001L    |
+| VER \_ \_ VDS-LUN-INFORMATIONEN \_   | 1          |
+| MAXIMALE \_ \_ COMPUTERNAME-LÄNGE    | 15         |
+| MAX \_ PROVIDERNAME \_ LENGTH    | 200        |
+| MAX \_ VERSIONSTRING \_ LENGTH   | 16         |
+| LAUFWERKBUCHSTABEN \_ \_ PROP          | Nicht zutreffend        |
+| MAX. \_ \_ FS-NAMENSGRÖßE \_          | 8          |
+| UNGÜLTIGE \_ \_ MEMBER-IDX         | 0xFFFFFFFF |
+| LÄNGE DES \_ \_ GPT-PARTITIONSNAMENS \_ | 36         |
+| MAX \_ PATH                    | 260        |
 
 
 

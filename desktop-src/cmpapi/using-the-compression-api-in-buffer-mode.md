@@ -1,27 +1,27 @@
 ---
-description: Die folgenden Beispiele veranschaulichen die Verwendung der Komprimierungs-API im Puffer Modus.
+description: Die folgenden Beispiele veranschaulichen die Verwendung der Komprimierungs-API im Puffermodus.
 ms.assetid: 0A062E5D-E5FA-4098-B76E-E136FC74D853
-title: Verwenden der Komprimierungs-API im Puffer Modus
+title: Verwenden der Komprimierungs-API im Puffermodus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 676a5bea1ea4fa673bbf9a8fc2caf9fe84d9bc1e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 79a63b8a7dabc7b61c85abb192f855f094a6e271a99997b9e98b849614d53527
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048938"
 ---
-# <a name="using-the-compression-api-in-buffer-mode"></a>Verwenden der Komprimierungs-API im Puffer Modus
+# <a name="using-the-compression-api-in-buffer-mode"></a>Verwenden der Komprimierungs-API im Puffermodus
 
-Die folgenden Beispiele veranschaulichen die Verwendung der Komprimierungs-API im Puffer Modus. Der Puffer Modus wurde zur einfachen Verwendung entwickelt und teilt den Eingabepuffer automatisch in Blöcke einer Größe, die für den ausgewählten Komprimierungs Algorithmus geeignet ist. Der Puffer Modus formatiert und speichert automatisch die nicht komprimierte Puffergröße im komprimierten Puffer, wo Sie für den Dekompressor verfügbar ist. Die Größe des komprimierten Puffers wird nicht automatisch gespeichert, und die Anwendung muss dies für die Komprimierung speichern. Fügen Sie beim Aufrufen von [**createcompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**createdecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor) das Flag zum **Komprimieren von \_ RAW** nicht ein, wenn Sie die Komprimierungs-API im Puffer Modus verwenden möchten.
+Die folgenden Beispiele veranschaulichen die Verwendung der Komprimierungs-API im Puffermodus. Der Puffermodus wurde zur Vereinfachung entwickelt und teilt den Eingabepuffer automatisch in Blöcke einer Größe auf, die für den ausgewählten Komprimierungsalgorithmus geeignet ist. Der Puffermodus formatiert und speichert die größe des nicht komprimierten Puffers automatisch im komprimierten Puffer, wo er für den Dekomprimierer verfügbar ist. Die Größe des komprimierten Puffers wird nicht automatisch gespeichert, und die Anwendung muss diesen für die Dekomprimierung speichern. Schließen Sie das **COMPRESS \_ RAW-Flag** nicht ein, wenn [**Sie CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**CreateDecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor) aufrufen, wenn Sie die Komprimierungs-API im Puffermodus verwenden möchten.
 
-Der Puffer Modus wird in den meisten Fällen empfohlen. Weitere Informationen zur Verwendung des Block Modus finden [Sie unter Verwenden der Komprimierungs-API im Block Modus](using-the-compression-api-in-block-mode.md) .
+Der Puffermodus wird in den meisten Fällen empfohlen. Weitere Informationen zur Verwendung des Blockmodus finden Sie unter [Verwenden der Komprimierungs-API im Blockmodus.](using-the-compression-api-in-block-mode.md)
 
-Anwendungen, die den Puffer-oder Block Modus verwenden, können beim Aufrufen von [**createcompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**createdecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)eine benutzerdefinierte Speicher Belegungs Routine angeben. Ein Beispiel für eine einfache, angepasste Zuordnungs Routine finden Sie im Abschnitt [Verwenden des Komprimierungs-API im Block Modus](using-the-compression-api-in-block-mode.md) .
+Anwendungen, die den Puffer- oder Blockmodus verwenden, können beim Aufrufen von [**CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**CreateDecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)eine benutzerdefinierte Speicherbelegungsroutine angeben. Ein Beispiel für eine einfache benutzerdefinierte Zuordnungsroutine finden Sie im Abschnitt [Verwenden der Komprimierungs-API im Blockmodus.](using-the-compression-api-in-block-mode.md)
 
-**Windows 8 und Windows Server 2012:** Wenn Sie den folgenden Beispielcode verwenden möchten, müssen Sie Windows 8 oder Windows Server 2012 ausführen und über "compressapi. h" und "cabinet.dll" und einen Link zu "CAB. lib" verfügen.
+**Windows 8 und Windows Server 2012:** Um den folgenden Beispielcode verwenden zu können, müssen Sie Windows 8 oder Windows Server 2012 ausführen und "compressapi.h" und "cabinet.dll" haben und mit "Cabinet.lib" verknüpfen.
 
-Der folgende Code Ausschnitt veranschaulicht die Dateikomprimierung mit dem Xpress-Komprimierungs Algorithmus und die Huffman-Codierung mithilfe der Komprimierungs-API im Puffer Modus. Die Anwendung akzeptiert eine Datei, komprimiert ihren Inhalt und generiert eine komprimierte Datei. Zuerst Ruft die Anwendung mit dem **Komprimierungs \_ Algorithmus \_ Xpress \_ Huff** [**einen Kompressor auf**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) , um einen Kompressor zu generieren. Anschließend wird [**Compress**](/windows/desktop/api/compressapi/nf-compressapi-compress)aufgerufen, wobei *compressedbuffersize* auf 0 festgelegt ist, um die erforderliche Größe des komprimierten Puffers abzufragen. Er ordnet einen Ausgabepuffer dem *compressedbuffersize* -Wert zu. Die Anwendung ruft ein zweites Mal **eine Komprimierung** auf, um die tatsächliche Komprimierung auszuführen. Schließlich schreibt die Anwendung die komprimierten Daten in die Ausgabedatei.
+Der folgende Codeausschnitt veranschaulicht die Dateikomprimierung mit dem XPRESS-Komprimierungsalgorithmus und der Huffman-Codierung mithilfe der Komprimierungs-API im Puffermodus. Die Anwendung akzeptiert eine Datei, komprimiert ihren Inhalt und generiert eine komprimierte Datei. Zuerst ruft die Anwendung [**CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) mit **COMPRESS ALGORITHM \_ \_ XPRESS \_ HUFF** auf, um eine Generierung zu generieren. Anschließend ruft sie [**Compress**](/windows/desktop/api/compressapi/nf-compressapi-compress)auf, wobei *CompressedBufferSize* auf 0 festgelegt ist, um die erforderliche Größe des komprimierten Puffers abzufragen. Sie ordnet dem *CompressedBufferSize-Wert* einen Ausgabepuffer zu. Die Anwendung ruft **Compress** ein zweites Mal auf, um die tatsächliche Komprimierung durchzuführen. Schließlich schreibt die Anwendung die komprimierten Daten in die Ausgabedatei.
 
 
 ```C++
@@ -237,7 +237,7 @@ done:
 
 
 
-Der folgende Code Ausschnitt veranschaulicht die Datei Dekomprimierung mithilfe der Komprimierungs-API im Puffer Modus.
+Der folgende Codeausschnitt veranschaulicht die Dateidekomprimierung mithilfe der Komprimierungs-API im Puffermodus.
 
 
 ```C++

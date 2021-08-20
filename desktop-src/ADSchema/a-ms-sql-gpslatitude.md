@@ -1,11 +1,11 @@
 ---
-title: MS-SQL-gpslatitude-Attribut
-description: Das MS-SQL-gpslatitude-Attribut wird derzeit nicht verwendet.
+title: MS-SQL-GPSL attribut
+description: Das MS-SQL-GPSL attribut wird derzeit nicht verwendet.
 ms.assetid: 08f17252-7d06-4491-aa39-d9de017158fa
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-SQL-gpslatitude-Attributs
-- AD-Schema des MS-SQL-gpslatitude-Attributs
+- AD-Schema SQL MS-SQL-GPSL attribut
+- AD-Schema des mS-SQL-GPSL attribut
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d41ae4010c2cce93d6128cae6d9a7055f234b20
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 965309cb004d62fce093ce5efdfdaa70c255cb2c2fc2179affd58ed96fec33af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119299800"
 ---
-# <a name="ms-sql-gpslatitude-attribute"></a>MS-SQL-gpslatitude-Attribut
+# <a name="ms-sql-gpslatitude-attribute"></a>MS-SQL-GPSL attribut
 
-Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
+Das **MS-SQL-GPSL attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-SQL-gpslatitude                          |
-| LDAP-Display-Name | MS-SQL-gpslatitude                          |
+| CN                | MS-SQL-GPSL übertragen                          |
+| Ldap-Anzeigename | mS-SQL-GPSL zu                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1385                     |
-| System-ID-GUID    | b222ba0e-ccee-11d2-9993-0000f87a57d4        |
+| System-Id-Guid    | b222ba0e-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -70,7 +70,7 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -99,11 +99,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -120,11 +120,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -141,11 +141,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -162,11 +162,11 @@ Das **MS-SQL-gpslatitude** -Attribut wird derzeit nicht verwendet.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |

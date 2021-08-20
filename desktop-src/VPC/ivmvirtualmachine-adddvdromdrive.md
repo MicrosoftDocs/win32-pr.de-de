@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachine AddDVDROMDrive-Methode (vpccominterfaces. h)
-description: Fügt ein neues CD-oder DVD-Laufwerk zum virtuellen Computer hinzu.
+title: IVMVirtualMachine AddDVUMADrive-Methode (VPCCOMInterfaces.h)
+description: Fügt dem virtuellen Computer ein neues CD- oder DVD-Laufwerk hinzu.
 ms.assetid: d39f2728-6146-42ed-b67f-6586566a7209
 keywords:
-- AddDVDROMDrive-Methode Virtual PC
-- AddDVDROMDrive-Methode Virtual PC, ivmvirtualmachine-Schnittstelle
-- Ivmvirtualmachine Interface Virtual PC, AddDVDROMDrive-Methode
+- AddDVFÜDrive-Methode Virtueller PC
+- AddDVFÜDrive-Methode Virtueller PC, IVMVirtualMachine-Schnittstelle
+- IVMVirtualMachine-Schnittstelle Virtueller PC, AddDVUMADrive-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7acbe70f6b338b3490c12ab67bcdfdc997d90a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63a875af50d38270b898c17f2848a4e4b33fe79a4b17d9ab7b6be58cdcfcf92f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118123230"
 ---
-# <a name="ivmvirtualmachineadddvdromdrive-method"></a>Ivmvirtualmachine:: AddDVDROMDrive-Methode
+# <a name="ivmvirtualmachineadddvdromdrive-method"></a>IVMVirtualMachine::AddDVUMADrive-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Fügt ein neues CD-oder DVD-Laufwerk zum virtuellen Computer hinzu.
+Fügt dem virtuellen Computer ein neues CD- oder DVD-Laufwerk hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT AddDVDROMDrive(
 
 <dl> <dt>
 
-*Busnummer* \[ in\]
+*busNumber* \[ In\]
 </dt> <dd>
 
 Der Bus, an den das Laufwerk angefügt wird.
@@ -64,7 +64,7 @@ Der Bus, an den das Laufwerk angefügt wird.
 
 </dd> <dt>
 
-*devicengegen ber* \[ in\]
+*deviceNumber* \[ In\]
 </dt> <dd>
 
 Das Gerät, an das das Laufwerk angefügt wird.
@@ -73,8 +73,8 @@ Das Gerät, an das das Laufwerk angefügt wird.
 
 | Wert                                                                        | Bedeutung                                                                |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Das Laufwerk wird an das erste Gerät auf dem Bus angefügt.<br/>  |
-| <dl> <dt>1</dt> </dl> | Das Laufwerk wird mit dem zweiten Gerät auf dem Bus verbunden.<br/> |
+| <dl> <dt>0</dt> </dl> | Das Laufwerk wird an das erste Gerät im Bus angefügt.<br/>  |
+| <dl> <dt>1</dt> </dl> | Das Laufwerk wird an das zweite Gerät im Bus angefügt.<br/> |
 
 
 
@@ -82,10 +82,10 @@ Das Gerät, an das das Laufwerk angefügt wird.
 
 </dd> <dt>
 
-*dvddrive* \[ Out, retval\]
+*dvdDrive* \[ out, retval\]
 </dt> <dd>
 
-Ein [**ivmdvddrive**](ivmdvddrive.md) -Objekt.
+Ein [**IVMDVDDrive-Objekt.**](ivmdvddrive.md)
 
 </dd> </dl>
 
@@ -95,24 +95,24 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                               | BESCHREIBUNG                                                    |
+| Rückgabecode/-wert                                                                                                                                                               | Beschreibung                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                     | Der Vorgang wurde durchgeführt.<br/>                       |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                       | Der Parameter " *dvddrive* " ist **null**.<br/>               |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                    | Ein Parameter ist nicht gültig.<br/>                           |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>               | Die Konfiguration ist unbekannt.<br/>                       |
-| <dl> <dt>**VM \_ E- \_ VM wird \_ ausgeführt \_ oder \_**</dt> <dt>0xa004020b</dt> gespeichert </dl>    | Der virtuelle Computer befindet sich im Zustand "wird ausgeführt" oder "gespeichert".<br/> |
-| <dl> <dt>**VM \_ E \_ Drive \_ Bus \_ loc \_ \_ verwendet**</dt> <dt>0xa00400503</dt> </dl> | Der angegebene Busspeicherort wird verwendet.<br/>               |
-| <dl> <dt>**VM \_ E \_ Laufwerk \_ ungültige**</dt> <dt>0xa0040502</dt> </dl>            | Das angegebene Laufwerk ist ungültig.<br/>                   |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                   |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                       | Der *dvdDrive-Parameter* ist **NULL.**<br/>               |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                    | Ein Parameter ist nicht gültig.<br/>                           |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>               | Die Konfiguration ist unbekannt.<br/>                       |
+| <dl> <dt>**VM \_ E \_ \_ VM, DIE \_ AUSGEFÜHRT WIRD ODER \_ 0XA004020B**</dt> <dt></dt> </dl>    | Der virtuelle Computer befindet sich in einem ausgeführten oder gespeicherten Zustand.<br/> |
+| <dl> <dt>**VM \_ E \_ DRIVE \_ BUS \_ LOC IN USE \_ \_ 0XA00400503**</dt> <dt></dt> </dl> | Der angegebene Busstandort wird verwendet.<br/>               |
+| <dl> <dt>**VM \_ E \_ DRIVE \_ INVALID**</dt> <dt>0xA0040502</dt> </dl>            | Das angegebene Laufwerk ist ungültig.<br/>                   |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können einem beendeten virtuellen Computer nur ein neues CD-oder DVD-Laufwerk hinzufügen.
+Sie können einem beendeten virtuellen Computer nur ein neues CD- oder DVD-Laufwerk hinzufügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,12 +120,12 @@ Sie können einem beendeten virtuellen Computer nur ein neues CD-oder DVD-Laufwe
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 
@@ -133,7 +133,7 @@ Sie können einem beendeten virtuellen Computer nur ein neues CD-oder DVD-Laufwe
 
 <dl> <dt>
 
-[**Ivmvirtualmachine**](ivmvirtualmachine.md)
+[**IVMVirtualMachine**](ivmvirtualmachine.md)
 </dt> </dl>
 
  

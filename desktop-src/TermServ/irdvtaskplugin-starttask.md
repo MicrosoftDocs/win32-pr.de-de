@@ -1,12 +1,12 @@
 ---
-title: "\"Undvtaskplugin\"-Starttask-Methode"
-description: Wird aufgerufen, um den Aktualisierungs Task auf dem virtuellen Computer zu starten.
+title: IRDVTaskPlugin StartTask-Methode
+description: Wird aufgerufen, um die Updateaufgabe auf dem virtuellen Computer zu starten.
 ms.assetid: c1e9f18b-1e83-4a29-8646-8adde94e8c14
 ms.tgt_platform: multiple
 keywords:
-- Starttask-Methode Remotedesktopdienste
-- Starttask-Methode Remotedesktopdienste, undvtaskplugin-Schnittstelle
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste, Starttask-Methode
+- StartTask-Remotedesktopdienste
+- StartTask-Remotedesktopdienste , IRDVTaskPlugin-Schnittstelle
+- IRDVTaskPlugin-Schnittstelle Remotedesktopdienste , StartTask-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 51c499549378700a90d8fc78d075bc07c1f874cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e0bb9104ee1bbd3f0f6c2e8cc04b691205f2e40cb2221b79b5e9f251492a3a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129257"
 ---
-# <a name="irdvtaskpluginstarttask-method"></a>Undvtaskplugin:: Starttask-Methode
+# <a name="irdvtaskpluginstarttask-method"></a>IRDVTaskPlugin::StartTask-Methode
 
-Wird aufgerufen, um den Aktualisierungs Task auf dem virtuellen Computer zu starten.
+Wird aufgerufen, um die Updateaufgabe auf dem virtuellen Computer zu starten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ HRESULT StartTask(
 
 <dl> <dt>
 
-*Bezeichnung* \[ in\]
+*Bezeichnung* \[ In\]
 </dt> <dd>
 
-Die Bezeichnung für den Task. Dies ist die Bezeichnung, die in der [**ScheduleTask**](irdvtaskpluginnotifysink-scheduletask.md) -Methode an den Auslöse-Agent übergeben wurde.
+Die Bezeichnung für den Task. Dies ist die Bezeichnung, die in der ScheduleTask-Methode an den [**Trigger-Agent übergeben**](irdvtaskpluginnotifysink-scheduletask.md) wurde.
 
 </dd> <dt>
 
-*Bezeichner* \[ in\]
+*Bezeichner* \[ In\]
 </dt> <dd>
 
-Der Bezeichner des Tasks. Dies ist der Bezeichner, der in der [**ScheduleTask**](irdvtaskpluginnotifysink-scheduletask.md) -Methode an den Auslöse-Agent übergeben wurde.
+Der Bezeichner des Tasks. Dies ist der Bezeichner, der in der ScheduleTask-Methode an den [**Trigger-Agent übergeben**](irdvtaskpluginnotifysink-scheduletask.md) wurde.
 
 </dd> <dt>
 
-*Kontext* \[ in\]
+*Kontext* \[ In\]
 </dt> <dd>
 
-Optionale Daten für den Task. Dies sind die Daten, die in der [**ScheduleTask**](irdvtaskpluginnotifysink-scheduletask.md) -Methode an den Auslöse-Agent übergeben wurden.
+Optionale Daten für den Task. Dies sind die Daten, die in der ScheduleTask-Methode an den [**Trigger-Agent übergeben**](irdvtaskpluginnotifysink-scheduletask.md) wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**"Undvtaskplugin"**](irdvtaskplugin.md)
+[**IRDVTaskPlugin**](irdvtaskplugin.md)
 </dt> </dl>
 
  

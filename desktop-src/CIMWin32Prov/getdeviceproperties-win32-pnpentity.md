@@ -1,8 +1,8 @@
 ---
-description: Ruft die angegebenen Eigenschaften dieses Plug & Play Geräts ab.
+description: Ruft die angegebenen Eigenschaften dieses Plug & Play ab.
 ms.assetid: 63327a4f-7d4a-4041-b58d-7a852ba08d5b
 ms.tgt_platform: multiple
-title: Getdeviceproperties-Methode der Win32_PnPEntity-Klasse
+title: GetDeviceProperties-Methode der Win32_PnPEntity Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 6aa9f6cad17fe48617b5bf7d28ba19d6f5370834
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 855c3c0644d8c7b5c5300c8d12d5a6f98073a4511f8d0d65f4058da7fb9d0f24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077510"
 ---
-# <a name="getdeviceproperties-method-of-the-win32_pnpentity-class"></a>Getdeviceproperties-Methode der Win32 \_ pnptity-Klasse
+# <a name="getdeviceproperties-method-of-the-win32_pnpentity-class"></a>GetDeviceProperties-Methode der Win32 \_ PnPEntity-Klasse
 
-Ruft die angegebenen Eigenschaften dieses Plug & Play Geräts ab.
+Ruft die angegebenen Eigenschaften dieses Plug & Play ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ Uint32 GetDeviceProperties(
 
 <dl> <dt>
 
-*devicepropertykeys* \[ in, optional\]
+*devicePropertyKeys* \[ in, optional\]
 </dt> <dd>
 
-Die zurück zugebende Eigenschaften.
+Die zurück zu gebenden Eigenschaften.
 
 </dd> <dt>
 
-*deviceproperties* \[ vorgenommen\]
+*deviceProperties* \[ out\]
 </dt> <dd>
 
-Die angeforderten Eigenschaften in den entsprechenden Untertypen der [**Win32- \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md) abstract-Klasse.
+Die angeforderten Eigenschaften in den entsprechenden Untertypen der [**abstrakten Win32 \_ PnPDeviceProperty-Klasse.**](win32-pnpdeviceproperty.md)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -73,7 +73,7 @@ Die angeforderten Eigenschaften in den entsprechenden Untertypen der [**Win32- \
 
 <dl> <dt>
 
-[**Win32- \_ pnptity**](win32-pnpentity.md)
+[**Win32 \_ PnPEntity**](win32-pnpentity.md)
 </dt> </dl>
 
  

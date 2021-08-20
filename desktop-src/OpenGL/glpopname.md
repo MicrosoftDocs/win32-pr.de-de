@@ -1,9 +1,9 @@
 ---
-title: glpopname-Funktion (GL. h)
-description: Die Funktionen "glpushname" und "glpopname" schieben den namens Stapel per Push und Pop. | glpopname-Funktion (GL. h)
+title: glPopName-Funktion (Gl.h)
+description: Die Funktionen glPushName und glPopName pushen und poppen den Namenstapel. | glPopName-Funktion (Gl.h)
 ms.assetid: ee741188-b275-4839-a89d-4d988c547d07
 keywords:
-- glpopname-Funktion OpenGL
+- glPopName-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 830c4937b30cca64de3063b42ad16dd3adc87c89
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fe30aa09d401fc8ef35a3671e02a898776af26111ae0f8e31cd1f6ad3bff70b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290170"
 ---
-# <a name="glpopname-function"></a>glpopname-Funktion
+# <a name="glpopname-function"></a>glPopName-Funktion
 
-Die Funktionen " [**glpushname**](glpushname.md) " und " **glpopname** " schieben den namens Stapel per Push und Pop.
+Die [**Funktionen glPushName**](glpushname.md) und **glPopName** pushen und poppen den Namenstapel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,28 +44,28 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL. \_ Stapel \_ Unterlauf**</dt> </dl>   | Die Funktion wurde aufgerufen, während der aktuelle Matrix Stapel nur eine einzelne Matrix enthielt.<br/>                                     |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ STACK \_ UNDERFLOW**</dt> </dl>   | Die Funktion wurde aufgerufen, während der aktuelle Matrixstapel nur eine einzelne Matrix enthielt.<br/>                                     |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**glpushname**](glpushname.md) -Funktion bewirkt, dass der Name auf dem namens Stapel abgelegt wird, der anfänglich leer ist. Die Funktion " **glpopname** " holt einen Namen vom oberen Rand des Stapels ab. Der namens Stapel wird im Auswahlmodus verwendet, damit Sätze von renderingbefehlen eindeutig identifiziert werden können. Sie besteht aus einer geordneten Menge von Ganzzahlen ohne Vorzeichen.
+Die [**glPushName-Funktion**](glpushname.md) bewirkt, dass name auf den Namenstapel pusht wird, der anfänglich leer ist. Die **glPopName-Funktion** popt einen Namen aus dem Stapel. Der Namensstapel wird im Auswahlmodus verwendet, um eine eindeutige Bezeichnung von Sätzen von Renderingbefehlen zu ermöglichen. Sie besteht aus einem geordneten Satz von ganzen Zahlen ohne Vorzeichen.
 
-Der namens Stapel ist immer leer, während der Rendermodus nicht die GL Select-Option ist \_ . Aufrufe von [**glpushname**](glpushname.md) oder **glpopname** , während der Rendermodus nicht gl SELECT ist, \_ werden ignoriert.
+Der Namensstapel ist immer leer, während der Rendermodus nicht GL \_ SELECT ist. Aufrufe [**von glPushName oder**](glpushname.md) **glPopName,** während der Rendermodus nicht GL \_ SELECT ist, werden ignoriert.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushname**](glpushname.md) und **glpopname** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glPushName**](glpushname.md) und **glPopName ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument "GL \_ Name \_ Stack- \_ Tiefe"
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ NAME \_ STACK \_ DEPTH
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Max \_ Name Stack- \_ \_ Tiefe
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MAX NAME STACK \_ \_ \_ DEPTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushname**
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -91,16 +91,16 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushname**
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glinitnames**](glinitnames.md)
+[**glInitNames**](glinitnames.md)
 </dt> <dt>
 
-[**glloadname**](glloadname.md)
+[**glLoadName**](glloadname.md)
 </dt> <dt>
 
-[**glrendermode**](glrendermode.md)
+[**glRenderMode**](glrendermode.md)
 </dt> <dt>
 
-[**glselectbuffer**](glselectbuffer.md)
+[**glSelectBuffer**](glselectbuffer.md)
 </dt> </dl>
 
  

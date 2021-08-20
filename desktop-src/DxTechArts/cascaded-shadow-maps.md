@@ -21,9 +21,9 @@ Kaskadierte Schattenkarten (Cascaded Shadow Maps, CSMs) sind die beste Möglichk
 -   identifiziert und behebt einige der häufigen Fallstricke im Zusammenhang mit dem Hinzufügen von Filterung zu CSMs. Und
 -   zeigt, wie CSMs Direct3D 10 bis Direct3D 11-Hardware zuordnen.
 
-Den in diesem Artikel verwendeten Code finden Sie im DirectX Software Development Kit (SDK) in den Beispielen CascadedShadowMaps11 und VarianceShadows11. Dieser Artikel wird sich als nützlich erweisen, nachdem die im technischen Artikel Common [Techniques to Improve Shadow Depth Karten](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)(Allgemeine Techniken zur Verbesserung der Schattentiefe) beschriebenen Verfahren implementiert wurden.
+Den in diesem Artikel verwendeten Code finden Sie im DirectX Software Development Kit (SDK) in den Beispielen CascadedShadowMaps11 und VarianceShadows11. Dieser Artikel wird sich als nützlich erweisen, nachdem die im technischen Artikel Common [Techniques to Improve Shadow Depth Karten](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)beschriebenen Verfahren implementiert wurden.
 
-## <a name="cascaded-shadow-maps-and-perspective-aliasing"></a>Kaskadierte Karten und Perspektivenaliasing
+## <a name="cascaded-shadow-maps-and-perspective-aliasing"></a>Kaskadiertes Karten und Perspektivaliasing
 
 Das Perspektivaliasing in einer Schattenkarte ist eines der schwierigsten Zu lösenden Probleme. Im technischen Artikel Common Techniques to Improve Shadow Depth Karten(Allgemeine Techniken zur Verbesserung der Schattentiefe) wird das Perspektivaliasing beschrieben, und es werden einige Ansätze zur Lösung des Problems identifiziert. In der Praxis sind CSMs in der Regel die beste Lösung und werden häufig in modernen Spielen eingesetzt.
 
@@ -35,7 +35,7 @@ Die Grundidee von CSMs besteht in der Partitionierung des Frustums in mehrere Fr
 
 ![Schattenkartenabdeckung](images/shadow-map-coverage.png)
 
-In Abbildung 1 wird die Qualität (von links nach rechts) von der höchsten zur niedrigsten angezeigt. Die Reihe von Rastern, die Schattenkarten mit einem Ansichtsfrustum (invertierter Kegel in Rot) darstellen, zeigt, wie die Pixelabdeckung mit unterschiedlichen Auflösungsschattenkarten beeinflusst wird. Schatten haben die höchste Qualität (weiße Pixel), wenn ein Verhältnis von 1:1 Pixeln im hellen Raum zu Texeln in der Schattenkarte besteht. Das Perspektivaliasing erfolgt in Form von großen, blockigen Texturzuordnungen (linkes Bild), wenn zu viele Pixel demselben Schattentextel zuordnen. Wenn die Schattenkarte zu groß ist, wird sie unter Stichproben entnommen. In diesem Fall werden Texel übersprungen, shing artifacts eingeführt, und die Leistung wird beeinträchtigt.
+In Abbildung 1 wird die Qualität (von links nach rechts) von der höchsten zur niedrigsten angezeigt. Die Reihe von Rastern, die Schattenkarten mit einem Ansichtsfrustum (invertierter Kegel in Rot) darstellen, zeigt, wie die Pixelabdeckung mit unterschiedlichen Auflösungsschattenkarten beeinflusst wird. Schatten haben die höchste Qualität (weiße Pixel), wenn ein Verhältnis von 1:1 Pixeln im hellen Raum zu Texeln in der Schattenkarte besteht. Das Perspektivaliasing erfolgt in Form von großen, blockigen Texturzuordnungen (linkes Bild), wenn zu viele Pixel demselben Schattentextel zuordnen. Wenn die Schattenkarte zu groß ist, wird sie unter Stichproben entnommen. In diesem Fall werden Texel übersprungen, schrumpfende Artefakte eingeführt, und die Leistung wird beeinträchtigt.
 
 **Abbildung 2: CSM-Schattenqualität**
 
@@ -51,7 +51,7 @@ FÜR CSMs sind die folgenden Schritte pro Frame erforderlich.
 4.  Rendern Sie die Szene.
 
     1.  Binden Sie die Schattenkarten, und rendern Sie sie.
-    2.  Der Vertex-Shader führt Folgendes aus:
+    2.  Der Vertex-Shader führt folgende Schritte aus:
 
         -   Berechnet Texturkoordinaten für jedes helle Subfrustum (es sei denn, die benötigte Texturkoordinate wird im Pixel-Shader berechnet).
         -   Transformiert und leuchtet den Scheitelpunkt und so weiter.
@@ -60,30 +60,30 @@ FÜR CSMs sind die folgenden Schritte pro Frame erforderlich.
 
         -   Bestimmt die richtige Schattenkarte.
         -   Transformiert bei Bedarf die Texturkoordinaten.
-        -   Stichproben der Kaskadierung.
+        -   Beispiele für die Kaskadierung.
         -   Leuchtet das Pixel.
 
 ## <a name="partitioning-the-frustum"></a>Partitionieren des Frustums
 
 Das Partitionieren des Frustums ist das Erstellen von Subfrusta. Eine Technik zum Aufteilen des Frustums besteht in der Berechnung von Intervallen von null bis 100 Prozent in Z-Richtung. Jedes Intervall stellt dann eine nahe Ebene und eine Fernebene als Prozentsatz der Z-Achse dar.
 
-**Abbildung 3: Partitionierte Frustums anzeigen**
+**Abbildung 3. Willkürlich partitionierte Frustums anzeigen**
 
-![Frustums beliebig partitioniert anzeigen](images/view-frustums-partitioned-arbitrarily.png)
+![Frustums willkürlich partitioniert anzeigen](images/view-frustums-partitioned-arbitrarily.png)
 
-In der Praxis führt die Neuberechnung der Frustumteilungen pro Frame dazu, dass Schattenränder schrumpfen. Die allgemein akzeptierte Vorgehensweise besteht in der Verwendung einer statischen Gruppe von kaskadierten Intervallen pro Szenario. In diesem Szenario wird das Intervall entlang der Z-Achse verwendet, um ein Subfrustum zu beschreiben, das beim Partitionieren des Frustums auftritt. Die Bestimmung der richtigen Größenintervalle für eine bestimmte Szene hängt von mehreren Faktoren ab.
+In der Praxis führt die Neuberechnung der Frustumteilungen pro Frame dazu, dass Schattenränder schrumpfen. Die allgemein akzeptierte Vorgehensweise besteht in der Verwendung eines statischen Intervalls für kaskadierte Intervalle pro Szenario. In diesem Szenario wird das Intervall entlang der Z-Achse verwendet, um ein Subfrustum zu beschreiben, das beim Partitionieren des Frustums auftritt. Die Bestimmung der richtigen Größenintervalle für eine bestimmte Szene hängt von mehreren Faktoren ab.
 
 ### <a name="orientation-of-the-scene-geometry"></a>Ausrichtung der Szenengeometrie
 
 In Bezug auf die Szenengeometrie wirkt sich die Kameraausrichtung auf die Auswahl des kaskadierten Intervalls aus. Eine Kamera in der Nähe des Bodens, z. B. eine Bodenkamera in einem Footballspiel, hat beispielsweise einen anderen statischen Satz kaskadender Intervalle als eine Kamera am Himmel.
 
-Abbildung 4 zeigt einige verschiedene Kameras und ihre jeweiligen Partitionen. Wenn der Z-Bereich der Szene sehr groß ist, sind mehr Teilungsebenen erforderlich. Wenn sich das Auge beispielsweise in der Nähe der Bodenebene befindet, aber entfernte Objekte immer noch sichtbar sind, können mehrere Kaskaden erforderlich sein. Es ist ebenfalls nützlich, das Frustum so zu unterteilen, dass sich mehr Aufteilungen am Auge befinden (wobei sich perspektivische Aliasing am schnellsten ändert). Wenn der größte Teil der Geometrie in einen kleinen Abschnitt (z. B. eine Overheadansicht oder ein Flugsimulator) des Ansichtsfrustums eingeteilt ist, sind weniger Kaskaden erforderlich.
+Abbildung 4 zeigt einige verschiedene Kameras und ihre jeweiligen Partitionen. Wenn der Z-Bereich der Szene sehr groß ist, sind mehr Teilungsebenen erforderlich. Wenn sich das Auge beispielsweise in der Nähe der Bodenebene befindet, aber entfernte Objekte immer noch sichtbar sind, können mehrere Kaskaden erforderlich sein. Es ist ebenfalls nützlich, das Frustum so zu unterteilen, dass sich mehr Aufteilungen am Auge befinden (wobei sich perspektivische Aliasing am schnellsten ändert). Wenn der größte Teil der Geometrie in einen kleinen Abschnitt (z. B. eine Overheadansicht oder ein Flugsimulator) des Ansichtsfrustums eingeteilt wird, sind weniger Kaskaden erforderlich.
 
 **Abbildung 4. Verschiedene Konfigurationen erfordern unterschiedliche Frustumteilungen.**
 
 ![Verschiedene Konfigurationen erfordern unterschiedliche Frustumteilungen.](images/different-configurations-require-different-frustum-splits.png)
 
-(Links) Wenn geometry einen hohen dynamischen Bereich in Z auf hat, sind viele Kaskaden erforderlich. (Mitte) Wenn die Geometrie in Z über einen niedrigen dynamischen Bereich verfügt, gibt es wenig Vorteile von mehreren Frustums. (Rechts) Nur drei Partitionen sind erforderlich, wenn der dynamische Bereich mittel ist.
+(Links) Wenn geometry einen hohen dynamischen Bereich in Z auf hat, sind viele Kaskaden erforderlich. (Mitte) Wenn die Geometrie einen niedrigen dynamischen Bereich in Z auf hat, gibt es wenig Vorteile von mehreren Frustums. (Rechts) Nur drei Partitionen sind erforderlich, wenn der dynamische Bereich mittel ist.
 
 ### <a name="orientation-of-the-light-and-the-camera"></a>Ausrichtung des Lichts und der Kamera
 
@@ -97,7 +97,7 @@ Viele CSM-Implementierungen verwenden Frusta mit fester Größe. Der Pixel-Shade
 
 ## <a name="calculating-a-view-frustum-bound"></a>Berechnen einer View-Frustum Gebundenen
 
-Sobald die Frustumintervalle ausgewählt sind, wird der Subfrusta mit einem von zwei Erstellt: an die Szene passen und an kaskadierende Daten passen.
+Nachdem die Frustumintervalle ausgewählt wurden, wird der Subfrusta mit einem von zwei Erstellt: an die Szene passen und kaskadierend.
 
 ### <a name="fit-to-scene"></a>An Szene passen
 
@@ -107,27 +107,27 @@ Alle Frustas können mit der gleichen Nahebene erstellt werden. Dadurch wird ein
 
 Alternativ kann frusta mit dem tatsächlichen Partitionsintervall erstellt werden, das als Nah- und Fernebene verwendet wird. Dies führt zu einer engeren Anpassung, wird aber im Falle eines Frusts an die Szene angepasst. In den CascadedShadowMaps11-Beispielen wird diese Technik als kaskadierend bezeichnet.
 
-Diese beiden Methoden sind in Abbildung 6 dargestellt. Durch die Anpassung an kaskadierte Verschwendung wird weniger Auflösung verschwendet. Das Problem bei der Anpassung an kaskadierende Daten ist, dass die orthografische Projektion basierend auf der Ausrichtung des Ansichtsfrustums wächst und verkleinert wird. Die Anpassung an die Szenentechnik padt die orthografische Projektion um die maximale Größe des Ansichtsfrustums und entfernt die Artefakte, die angezeigt werden, wenn die Kamera bewegt wird. [Common Techniques to Improve Shadow Depth Karten](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) adressiert die Artefakte, die angezeigt werden, wenn sich das Licht im Abschnitt "Moving the light in texel sized increments" (Bewegen des Lichts in Texelschritten) bewegt.
+Diese beiden Methoden sind in Abbildung 6 dargestellt. Die Anpassung an kaskadierend verschwendet weniger Auflösung. Das Problem bei der Anpassung an kaskadierende Daten ist, dass die orthografische Projektion basierend auf der Ausrichtung des Ansichtsfrustums wächst und verkleinert wird. Die Anpassung an die Szenentechnik padt die orthografische Projektion um die maximale Größe des Ansichtsfrustums und entfernt die Artefakte, die angezeigt werden, wenn die Kamera bewegt wird. [Common Techniques to Improve Shadow Depth Karten](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) adressiert die Artefakte, die angezeigt werden, wenn sich das Licht im Abschnitt "Moving the light in texel sized increments" (Bewegen des Lichts in Texel-Schritten) bewegt.
 
-**Abbildung 6: An Szene anpassen im Vergleich zu "An Kaskading anpassen"**
+**Abbildung 6. An Szene anpassen und an Kaskadierung passen**
 
-![An Szene anpassen und an Kaskadation anpassen](images/fit-to-scene-vs-fit-to-cascade.png)
+![An Szene anpassen im Vergleich zur Anpassung an Kaskadierung](images/fit-to-scene-vs-fit-to-cascade.png)
 
 ## <a name="render-the-shadow-map"></a>Rendern der Schattenkarte
 
-Im Beispiel CascadedShadowMaps11 werden die Schattenzuordnungen in einem großen Puffer gerendert. Dies liegt daran, dass PCF auf Texturarrays ein Direct3D 10.1-Feature ist. Für jede Kaskadierende wird ein Viewport erstellt, der den Abschnitt des Tiefenpuffers abdeckt, der dieser Kaskadierende entspricht. Ein NULL-Pixel-Shader wird gebunden, da nur die Tiefe benötigt wird. Schließlich werden der richtige Viewport und die Schattenmatrix für jede Kaskadation festgelegt, da die Tiefenzuordnungen einzeln in den Hauptschattenpuffer gerendert werden.
+Im Beispiel CascadedShadowMaps11 werden die Schattenkarten in einem großen Puffer gerendert. Dies liegt daran, dass pcf für Texturarrays ein Direct3D 10.1-Feature ist. Für jede Kaskadierung wird ein Viewport erstellt, der den Abschnitt des Tiefenpuffers abdeckt, der dieser Kaskadierung entspricht. Ein NULL-Pixel-Shader ist gebunden, da nur die Tiefe benötigt wird. Schließlich werden der richtige Viewport und die richtige Schattenmatrix für jede Kaskadierung festgelegt, wenn die Tiefenzuordnungen nacheinander im Hauptschattenpuffer gerendert werden.
 
 ## <a name="render-the-scene"></a>Rendern der Szene
 
-Der Puffer, der die Schatten enthält, ist jetzt an den Pixelshader gebunden. Es gibt zwei Methoden zum Auswählen der kaskadierenden , die im CascadedShadowMaps11-Beispiel implementiert ist. Diese beiden Methoden werden mit Shadercode erläutert.
+Der Puffer, der die Schatten enthält, ist jetzt an den Pixel-Shader gebunden. Es gibt zwei Methoden zum Auswählen der kaskadierten Kaskadierung, die im CascadedShadowMaps11-Beispiel implementiert ist. Diese beiden Methoden werden mit Shadercode erläutert.
 
 ### <a name="interval-based-cascade-selection"></a>Interval-Based Cascade Selection
 
-**Abbildung 7. Intervallbasierte Kaskadenzauswahl**
+**Abbildung 7: Intervallbasierte Kaskadierungsauswahl**
 
-![Intervallbasierte Kaskadenzauswahl](images/interval-based-cascade-selection.jpg)
+![Intervallbasierte Kaskadierungsauswahl](images/interval-based-cascade-selection.jpg)
 
-Bei der intervallbasierten Auswahl (Abbildung 7) berechnet der Vertex-Shader die Position im Weltraum des Scheitelpunkts.
+Bei der intervallbasierten Auswahl (Abbildung 7) berechnet der Vertex-Shader die Position im Raum des Scheitelpunkts.
 
 
 ```C++
@@ -136,7 +136,7 @@ Output.vDepth = mul( Input.vPosition, m_mWorldView ).z;
 
 
 
-Der Pixelshader empfängt die interpolierte Tiefe.
+Der Pixel-Shader empfängt die interpolierte Tiefe.
 
 
 ```C++
@@ -145,7 +145,7 @@ fCurrentPixelDepth = Input.vDepth;
 
 
 
-Bei der intervallbasierten kaskadierenden Auswahl werden ein Vektorvergleich und ein Punktprodukt verwendet, um die richtige Kaktusen zu bestimmen. Das CASCADE \_ COUNT FLAG gibt die Anzahl der \_ Kaskaden an. Die \_ m fCascadeFrustumsEyeSpaceDepths-Daten \_ schränken die Sicht-Frustumpartitionen ein. Nach dem Vergleich enthält fComparison den Wert 1, wobei das aktuelle Pixel größer als die Barriere ist, und einen Wert von 0, wenn die aktuelle Kaskadierung kleiner ist. Ein Punktprodukt summiert diese Werte in einem Arrayindex.
+Bei der intervallbasierten Kaskadierungsauswahl werden ein Vektorvergleich und ein Punktprodukt verwendet, um die richtige Matrix zu bestimmen. Das CASCADE \_ COUNT FLAG gibt die Anzahl der \_ Kaskaden an. Die m \_ fCascadeFrustumsEyeSpaceDepths-Daten schränken \_ die Frustumpartitionen der Ansicht ein. Nach dem Vergleich enthält fComparison den Wert 1, wobei das aktuelle Pixel größer als die Barriere ist, und den Wert 0, wenn die aktuelle Kaskadierung kleiner ist. Ein Punktprodukt summiert diese Werte in einen Arrayindex.
 
 
 ```C++
@@ -164,7 +164,7 @@ Bei der intervallbasierten kaskadierenden Auswahl werden ein Vektorvergleich und
 
 
 
-Nachdem die kaskadierte ausgewählt wurde, muss die Texturkoordinate in die richtige Kaskadierte transformiert werden.
+Nachdem die Kaskadierung ausgewählt wurde, muss die Texturkoordinate in die richtige Kaskadierung transformiert werden.
 
 
 ```C++
@@ -173,71 +173,71 @@ vShadowTexCoord = mul( InterpolatedPosition, m_mShadow[iCascadeIndex] );
 
 
 
-Diese Texturkoordinate wird dann verwendet, um die Textur mit der X-Koordinate und der Y-Koordinate abzutasten. Die Z-Koordinate wird für den abschließenden Tiefenvergleich verwendet.
+Diese Texturkoordinate wird dann verwendet, um die Textur mit der X-Koordinate und der Y-Koordinate zu beproben. Die Z-Koordinate wird für den abschließenden Tiefenvergleich verwendet.
 
 ### <a name="map-based-cascade-selection"></a>Map-Based Cascade Selection
 
-Kartenbasierte Auswahl (Abbildung 8) testet an den vier Seiten der Kaskaden, um die engste Karte zu finden, die das spezifische Pixel abdeckt. Anstatt die Position im Weltraum zu berechnen, berechnet der Vertex-Shader die Ansichtsraumposition für jede Kaskadierung. Der Pixel-Shader durchläuft die Kaskadierungen, um die Texturkoordinaten so zu skalieren und zu verschieben, dass sie die aktuelle Kaskadierung indizieren. Die Texturkoordinate wird dann anhand der Texturgrenzen getestet. Wenn die X- und Y-Werte der Texturkoordinate in eine Kaskadate fallen, werden sie zum Abtasten der Textur verwendet. Die Z-Koordinate wird für den abschließenden Tiefenvergleich verwendet.
+Die kartenbasierte Auswahl (Abbildung 8) testet an den vier Seiten der Kaskaden, um die dichteste Karte zu finden, die das spezifische Pixel abdeckt. Anstatt die Position im Raum zu berechnen, berechnet der Vertex-Shader die Position des Ansichtsraums für jede Kaskadierung. Der Pixel-Shader durch iteriert die Kaskaden, um die Texturkoordinaten so zu skalieren und zu verschieben, dass sie die aktuelle Kaskadierung indizieren. Die Texturkoordinate wird dann an den Texturgrenze getestet. Wenn die X- und Y-Werte der Texturkoordinate in eine Kaskadierung fallen, werden sie verwendet, um die Textur zu beproben. Die Z-Koordinate wird für den abschließenden Tiefenvergleich verwendet.
 
-**Abbildung 8. Kartenbasierte Kaskadiertenauswahl**
+**Abbildung 8. Kartenbasierte Kaskadierungsauswahl**
 
-![Kartenbasierte Kaskadiertenauswahl](images/map-based-cascade-selection.jpg)
+![Kartenbasierte Kaskadierungsauswahl](images/map-based-cascade-selection.jpg)
 
-### <a name="interval-based-selection-vs-map-based-selection"></a>Interval-Based Auswahl im Vergleich zu Map-Based Auswahl
+### <a name="interval-based-selection-vs-map-based-selection"></a>Interval-Based auswahl im Vergleich zu Map-Based Auswahl
 
-Die intervallbasierte Auswahl ist etwas schneller als die kartenbasierte Auswahl, da die Kaskadenzauswahl direkt erfolgen kann. Die kartenbasierte Auswahl muss die Texturkoordinate mit den kaskadierten Begrenzungen überschneiden.
+Die intervallbasierte Auswahl ist etwas schneller als die kartenbasierte Auswahl, da die kaskadierte Auswahl direkt erfolgen kann. Die kartenbasierte Auswahl muss die Texturkoordinate mit den kaskadierten Begrenzungen überschneiden.
 
-Die kartenbasierte Auswahl verwendet die Kaskadation effizienter, wenn Schattenkarten nicht perfekt ausgerichtet sind (siehe Abbildung 8).
+Bei der kartenbasierten Auswahl wird die Kaskadierung effizienter verwendet, wenn Schattenkarten nicht perfekt ausgerichtet sind (siehe Abbildung 8).
 
-## <a name="blend-between-cascades"></a>Überblenden zwischen Kaskaden
+## <a name="blend-between-cascades"></a>Überblenden zwischen Kaskadieren
 
-VSMs (weiter unten in diesem Artikel erläutert) und Filtertechniken wie PCF können mit CSMs mit niedriger Auflösung verwendet werden, um soft shadows zu erzeugen. Leider führt dies zu einer sichtbaren Naht (Abbildung 9) zwischen kaskadierten Schichten, da die Auflösung nicht übereinstimmt. Die Lösung besteht darin, ein Band zwischen Schattenkarten zu erstellen, in dem der Schattentest für beide Kaskaden ausgeführt wird. Der Shader interpoliert dann linear zwischen den beiden Werten basierend auf der Position des Pixels im Blendband. Die Beispiele CascadedShadowMaps11 und VarianceShadows11 bieten einen GUI-Schieberegler, der verwendet werden kann, um dieses Weichzeichnerband zu vergrößern und zu verringern. Der Shader führt einen dynamischen Branch aus, sodass die überwiegende Mehrheit der Pixel nur aus der aktuellen Kaskadierung gelesen wird.
+VSMs (weiter oben in diesem Artikel beschrieben) und Filtertechniken wie PCF können mit CSMs mit niedriger Auflösung verwendet werden, um weiche Schatten zu erzeugen. Leider führt dies zu einer sichtbaren Naht (Abbildung 9) zwischen kaskadierten Ebenen, da die Auflösung nicht übereinstimmen kann. Die Lösung besteht in der Erstellung eines Bands zwischen Schattenkarten, in dem der Schattentest für beide Kaskaden ausgeführt wird. Der Shader interpoliert dann linear zwischen den beiden Werten basierend auf der Pixelposition im Blend-Band. Die Beispiele CascadedShadowMaps11 und VarianceShadows11 bieten einen GUI-Schieberegler, der verwendet werden kann, um dieses weicheres Band zu erhöhen und zu verringern. Der Shader führt einen dynamischen Branch aus, sodass der Großteil der Pixel nur aus der aktuellen Kaskadierung gelesen wird.
 
-**Abbildung 9: Kaskadierten Nahten**
+**Abbildung 9: Kaskadierte Naht**
 
-![Kaskadierten Nahten](images/cascade-seams.jpg)
+![Kaskadierte Naht](images/cascade-seams.jpg)
 
-(Links) Eine sichtbare Naht kann angezeigt werden, wenn kaskadiert überlappen. (Rechts) Wenn die Kaskaden zwischen gemischt werden, tritt keine Naht auf.
+(Links) Eine sichtbare Naht kann dort angezeigt werden, wo kaskadierte Überlappungen überlappen. (Rechts) Wenn die Kaskaden überblendet werden, tritt keine Naht auf.
 
-## <a name="filtering-shadow-maps"></a>Filtern von Schatten Karten
+## <a name="filtering-shadow-maps"></a>Filtern von Karten
 
 ### <a name="pcf"></a>Pcf
 
-Das Filtern gewöhnlicher Schattenzuordnungen erzeugt keine weichen, unscharfen Schatten. Die Filterhardware verschwommen die Tiefenwerte und vergleicht diese unscharfen Werte dann mit dem Texel des Lichtraums. Der harte Rand, der sich aus dem Bestanden/Fehlschlagen-Test ergibt, ist weiterhin vorhanden. Unscharfe Schattenzuordnungen dienen nur dazu, die harte Kante fälschlicherweise zu verschieben. PCF ermöglicht das Filtern nach Schattenkarten. Die allgemeine Idee von PCF besteht darin, einen Prozentsatz des Pixels im Schatten basierend auf der Anzahl der Untersamples zu berechnen, die den Tiefentest über die Gesamtzahl der Untersamples bestehen.
+Das Filtern von normalen Schattenkarten erzeugt keine weichen, unscharfen Schatten. Die Filterhardware verwischt die Tiefenwerte und vergleicht diese unscharfen Werte dann mit dem hellen Raum-Texel. Die harte Kante, die sich aus dem Bestanden/Fehler-Test ergibt, ist weiterhin vorhanden. Das Unschärfen von Schattenkarten dient nur dazu, die harte Kante fälschlicherweise zu verschieben. PCF ermöglicht das Filtern nach Schattenkarten. Die allgemeine Idee von PCF besteht in der Berechnung eines Prozentsatzes des Pixels im Schatten basierend auf der Anzahl von Unterbeispielen, die den Tiefentest über die Gesamtzahl der Unterbeispiele bestehen.
 
-Direct3D 10- und Direct3D 11-Hardware kann PCF ausführen. Die Eingabe für einen PCF-Sampler besteht aus der Texturkoordinate und einem Vergleichstiefewert. Der Einfachheit halber wird PCF mit einem Filter mit vier Tippen erläutert. Der Textur-Sampler liest die Textur viermal, ähnlich wie ein Standardfilter. Das zurückgegebene Ergebnis ist jedoch ein Prozentsatz der Pixel, die den Tiefentest bestanden haben. Abbildung 10 zeigt, wie ein Pixel, das einen der vier Tiefentests besteht, 25 Prozent im Schatten ist. Der tatsächliche zurückgegebene Wert ist eine lineare Interpolation, die auf den Teiltexelkoordinaten der Texturlesezeichen basiert, um einen reibungslosen Farbverlauf zu erzeugen. Ohne diese lineare Interpolation kann die PCF mit vier Tippen nur fünf Werte zurückgeben: { 0,0, 0,25, 0,5, 0,75, 1,0 }.
+Direct3D 10- und Direct3D 11-Hardware kann PCF ausführen. Die Eingabe für einen PCF-Sampler besteht aus der Texturkoordinate und einem Vergleichstiefenwert. Der Einfachheit halber wird die PCF mit einem Vier-Tipp-Filter erläutert. Der Texturs sampler liest die Textur viermal, ähnlich wie bei einem Standardfilter. Das zurückgegebene Ergebnis ist jedoch ein Prozentsatz der Pixel, die den Tiefentest bestanden haben. Abbildung 10 zeigt, wie ein Pixel, das einen der vier Tiefentests besteht, 25 Prozent im Schatten ist. Der zurückgegebene tatsächliche Wert ist eine lineare Interpolation, die auf den Subtexelkoordinaten der Texturlesewerte basiert, um einen reibungslosen Farbverlauf zu erzeugen. Ohne diese lineare Interpolation kann die PCF mit vier Tippen nur fünf Werte zurückgeben: { 0,0, 0,25, 0,5, 0,75, 1,0 }.
 
-**Abbildung 10. PCF-gefiltertes Bild, wobei 25 Prozent des ausgewählten Pixels abgedeckt sind**
+**Abbildung 10. PcF-gefiltertes Bild mit 25 Prozent des ausgewählten Pixels**
 
-![gefiltertes Pcf-Bild, wobei 25 Prozent des ausgewählten Pixels abgedeckt sind](images/pcf-filtered-image.png)
+![PCF-gefiltertes Bild, mit 25 Prozent des ausgewählten Pixels abgedeckt](images/pcf-filtered-image.png)
 
-Es ist auch möglich, PCF ohne Hardwareunterstützung zu verwenden oder PCF auf größere Kernels zu erweitern. Einige Techniken können sogar mit einem gewichteten Kernel entnommen werden. Erstellen Sie hierzu einen Kernel (z. B. einen Gaußer) für ein N × N-Raster. Die Gewichtungen müssen bis zu 1 addiert werden. Die Textur wird dann N2-mal entnommen. Jede Stichprobe wird anhand der entsprechenden Gewichtungen im Kernel skaliert. Im CascadedShadowMaps11-Beispiel wird dieser Ansatz verwendet.
+Es ist auch möglich, PCF ohne Hardwareunterstützung zu verwenden oder PCF auf größere Kernels zu erweitern. Bei einigen Techniken wird sogar ein Beispiel mit einem gewichteten Kernel verwendet. Erstellen Sie hierzu einen Kernel (z. B. gaußisch) für ein N-× N-Raster. Die Gewichtungen müssen bis zu 1 addieren. Die Textur wird dann N2-mal entnommen. Jedes Beispiel wird durch die entsprechenden Gewichtungen im Kernel skaliert. Im CascadedShadowMaps11-Beispiel wird dieser Ansatz verwendet.
 
 ### <a name="depth-bias"></a>Tiefenausrichtung
 
-Tiefenvoreingenommenheit wird noch wichtiger, wenn große PCF-Kernel verwendet werden. Es ist nur gültig, die Lichtraumtiefe eines Pixels mit dem Pixel zu vergleichen, dem es in der Tiefenkarte zugeordnet ist. Die Nachbarn des Tiefenzuordnungs-Texels verweisen auf eine andere Position. Diese Tiefe ist wahrscheinlich ähnlich, kann aber je nach Szene sehr unterschiedlich sein. Abbildung 11 zeigt die Artefakte, die auftreten. Eine einzelne Tiefe wird mit drei benachbarten Texeln in der Schattenkarte verglichen. Einer der Tiefentests schlägt fälschlicherweise fehl, da seine Tiefe nicht mit der berechneten Lichtraumtiefe der aktuellen Geometrie korreliert. Die empfohlene Lösung für dieses Problem ist die Verwendung eines größeren Offsets. Zu groß eines Offsets kann jedoch zu Peter Panning führen. Das Berechnen einer engen Nahebene und einer fernen Ebene trägt dazu bei, die Auswirkungen der Verwendung eines Offsets zu reduzieren.
+Tiefenvoreingenommenheit wird noch wichtiger, wenn große PCF-Kernel verwendet werden. Es ist nur gültig, die Lichtraumtiefe eines Pixels mit dem Pixel zu vergleichen, dem es in der Tiefenzuordnung zu zuordnen ist. Die Nachbarn des Tiefenzuordnungs-Texels verweisen auf eine andere Position. Diese Tiefe ist wahrscheinlich ähnlich, kann aber je nach Szene sehr unterschiedlich sein. Abbildung 11 zeigt die Artefakte, die auftreten. Eine einzelne Tiefe wird mit drei benachbarten Texeln in der Schattenkarte verglichen. Einer der Tiefentests schlägt fälschlicherweise fehl, da seine Tiefe nicht mit der berechneten Lichtraumtiefe der aktuellen Geometrie korreliert. Die empfohlene Lösung für dieses Problem ist die Verwendung eines größeren Offsets. Ein zu großer Offset kann jedoch zu Peter Panning führen. Die Berechnung einer engen Nah- und Fernebene trägt dazu bei, die Auswirkungen der Verwendung eines Offsets zu reduzieren.
 
 **Abbildung 11. Fehlerhaftes Selbstschatten**
 
-![fehlerhaftes Selbstschatten](images/erroneous-self-shadowing.png)
+![Fehlerhaftes Selbstschatten](images/erroneous-self-shadowing.png)
 
-Das fehlerhafte Selbstschatten ergibt sich aus dem Vergleich von Pixeln in der Lichtraumtiefe mit den Texel in der Schattenkarte, die nicht korrelieren. Die Tiefe im lichten Raum korreliert mit Schatten-Texel 2 in der Tiefenkarte. Texel 1 ist größer als die Lichtraumtiefe, während 2 gleich und 3 kleiner ist. Die Texel 2 und 3 bestehen den Tiefentest, während Texel 1 fehlschlägt.
+Die fehlerhafte Selbstschattenung ergibt sich aus dem Vergleich von Pixeln in der Lichtraumtiefe mit den Texeln in der Schattenkarte, die nicht korrelieren. Die Tiefe im lichten Raum korreliert mit schattenbasiertem Texel 2 in der Tiefenkarte. Texel 1 ist größer als die Lichtraumtiefe, während 2 gleich und 3 kleiner ist. Texel 2 und 3 bestehen den Tiefentest, während Texel 1 fehlschlägt.
 
-### <a name="calculating-a-per-texel-depth-bias-with-ddx-and-ddy-for-large-pcfs"></a>Berechnen einer Per-Texel Tiefenabweichung mit DDX und DDY für große PCFs
+### <a name="calculating-a-per-texel-depth-bias-with-ddx-and-ddy-for-large-pcfs"></a>Berechnen eines Per-Texel Tiefenvoreingenommenheit mit DDX und DDY für große PCFs
 
-Das Berechnen einer Tiefenabweichung pro Texel mit **ddx** und **ddy** für große PCFs ist eine Technik, die die richtige Tiefenabweichung für das angrenzende Schattenkarten-Texel berechnet – vorausgesetzt, die Oberfläche ist planar.
+Die Berechnung eines Tiefenvoreingenommenheit pro Texel mit **ddx** und **ddy** für große PCFs ist eine Technik, die den richtigen Tiefenvoreingenommenheit für das angrenzende Schattenkarten-Texel berechnet , vorausgesetzt, die Oberfläche ist planar.
 
-Diese Technik passt die Vergleichstiefe mithilfe der abgeleiteten Informationen auf eine Ebene an. Da diese Technik rechenintensiv ist, sollte sie nur verwendet werden, wenn eine GPU über Rechenzyklen verfügt, die ersparen muss. Wenn sehr große Kernel verwendet werden, ist dies möglicherweise die einzige Technik, mit der Artefakte mit Selbstschatten entfernt werden können, ohne dass Peter Panning verursacht wird.
+Diese Technik passt die Vergleichstiefe mithilfe der abgeleiteten Informationen an eine Ebene an. Da diese Technik rechenintensiv ist, sollte sie nur verwendet werden, wenn eine GPU Computezyklen sparen muss. Wenn sehr große Kernel verwendet werden, ist dies möglicherweise die einzige Technik, die funktioniert, um Selbstschattenartefakte zu entfernen, ohne Peter Panning zu verursachen.
 
-Abbildung 12 zeigt das Problem. Die Tiefe im Lichtbereich ist für das einzige Texel bekannt, das verglichen wird. Die Lichtraumtiefe, die den benachbarten Texel in der Tiefenkarte entspricht, ist unbekannt.
+Abbildung 12 zeigt das Problem. Die Tiefe im lichten Raum ist für den einen Texel bekannt, der verglichen wird. Die lichten Raumtiefen, die den benachbarten Texeln in der Tiefenkarte entsprechen, sind unbekannt.
 
-**Abbildung 12. Szenen- und Tiefenzuordnung**
+**Abbildung 12. Szenen- und Tiefenkarte**
 
 ![Szenen- und Tiefenkarte](images/scene-and-depth-map.png)
 
-Die gerenderte Szene wird auf der linken Seite angezeigt, und die Tiefenkarte mit einem Beispiel-Texelblock wird rechts angezeigt. Das Texel für den Augenraum ist dem Pixel mit der Bezeichnung D in der Mitte des Blocks zu erkennen. Dieser Vergleich ist genau. Die richtige Tiefe im Augenbereich, die mit den Pixeln korreliert, in denen nachbar D unbekannt ist. Die Zuordnung der benachbarten Texel zurück zum Augenraum ist nur möglich, wenn angenommen wird, dass das Pixel das gleiche Dreieck wie D betrifft.
+Die gerenderte Szene wird auf der linken Seite angezeigt, und die Tiefenkarte mit einem Beispiel-Texelblock wird rechts angezeigt. Das Texel für den Augenraum ist dem Pixel mit der Bezeichnung D in der Mitte des Blocks zu erkennen. Dieser Vergleich ist genau. Die richtige Tiefe im Augenbereich, die mit den Pixeln korreliert, die Nachbar D unbekannt ist. Die Zuordnung der benachbarten Texel zurück zum Augenraum ist nur möglich, wenn angenommen wird, dass das Pixel das gleiche Dreieck wie D betrifft.
 
-Die Tiefe ist für das Texel bekannt, das mit der Lichtraumposition korreliert. Die Tiefe ist für die benachbarten Texel in der Tiefenzuordnung unbekannt.
+Die Tiefe ist für den Texel bekannt, der mit der Lichtraumposition korreliert. Die Tiefe ist für die benachbarten Texel in der Tiefenzuordnung unbekannt.
 
 Auf hoher Ebene verwendet diese Technik die **DDX-** und ddy-HLSL-Vorgänge, um die Ableitung der Lichtraumposition zu finden.  Dies ist nichttrivial, da die ableitungsvorgänge den Farbverlauf der Lichtraumtiefe in Bezug auf den Bildschirmraum zurückgeben. Um dies in einen Farbverlauf der Lichtraumtiefe in Bezug auf den lichten Raum zu konvertieren, muss eine Konvertierungsmatrix berechnet werden.
 
@@ -261,7 +261,7 @@ Im ersten Schritt wird die Ableitung der Position des Lichtansichtsraums berechn
 
 
 
-GpUs der Direct3D 11-Klasse berechnen diese Ableitungen, indem sie 2 × 2 Vierfachpixel parallel ausführen und die Texturkoordinaten vom Nachbarn in X für **ddx** und vom Nachbarn in Y für **ddy** subtrahieren. Diese beiden Ableitungen machen die Zeilen einer 2 × 2 Matrix aus. In der aktuellen Form könnte diese Matrix verwendet werden, um benachbarte Pixel im Bildschirmbereich in Lichtraumvergrößerungen zu konvertieren. Die Umkehrung dieser Matrix ist jedoch erforderlich. Eine Matrix, die benachbarte Pixel mit hellem Raum in Bildschirmbereichsvergrößerungen transformiert, ist erforderlich.
+Direct3D 11-Klassen-GPUs berechnen diese Ableitungen, indem sie 2 × 2 Vierfachpixel parallel ausführen und die Texturkoordinaten vom Nachbarn in X für **DDX** und vom Nachbarn in Y für **ddy** subtrahieren. Diese beiden Ableitungen machen die Zeilen einer 2-× 2-Matrix aus. In der aktuellen Form könnte diese Matrix verwendet werden, um benachbarte Pixel im Bildschirmbereich in Lichtraumvergrößerungen zu konvertieren. Die Umkehrung dieser Matrix ist jedoch erforderlich. Eine Matrix, die benachbarte Pixel mit hellem Raum in Bildschirmbereichsvergrößerungen transformiert, ist erforderlich.
 
 
 ```C++
@@ -351,7 +351,7 @@ PCF-Kernelindex außerhalb einer kaskadierten Partition, wenn der Schattenpuffer
 
 ## <a name="variance-shadow-maps"></a>Variance Shadow Karten
 
-VSMs (weitere Informationen finden Sie unter [Varianzschattenkarten](https://portal.acm.org/citation.cfm?doid=1111411.1111440) von Donnelly und Lau ? ) ermöglichen die direkte Filterung von Schattenkarten. Bei verwendung von VSMs kann die ganze Leistung der Texturfilterhardware genutzt werden. Trilineare und anisotrope Filterung (Abbildung 15) können verwendet werden. Darüber hinaus können VSMs durch Konvolution direkt unscharf werden. VSMs haben einige Nachteile. Zwei Kanäle mit Tiefendaten müssen gespeichert werden (Tiefe und Tiefe quadratisch). Wenn sich Schatten überlappen, kommt es häufig zu Lichtverurstung. Sie funktionieren jedoch gut mit niedrigeren Auflösungen und können mit CSMs kombiniert werden.
+VSMs (weitere Informationen finden Sie unter [Varianzschattenkarten](https://portal.acm.org/citation.cfm?doid=1111411.1111440) von Donnelly und Lau ? ) ermöglichen die direkte Filterung von Schattenkarten. Bei verwendung von VSMs kann die ganze Leistung der Texturfilterhardware genutzt werden. Trilineare und anisotrope Filterung (Abbildung 15) können verwendet werden. Darüber hinaus können VSMs durch Konvolution direkt unscharf werden. VSMs haben einige Nachteile. Zwei Kanäle mit Tiefendaten müssen gespeichert werden (Tiefe und Tiefe quadratisch). Wenn sich Schatten überlappen, kommt es häufig zu Lichtverendigungen. Sie funktionieren jedoch gut mit niedrigeren Auflösungen und können mit CSMs kombiniert werden.
 
 **Abbildung 15. Anisotrope Filterung**
 
@@ -359,7 +359,7 @@ VSMs (weitere Informationen finden Sie unter [Varianzschattenkarten](https://por
 
 ### <a name="algorithm-details"></a>Algorithmusdetails
 
-VSMs rendern die Tiefe und die Tiefe quadratisch in eine Zwei-Kanal-Schattenkarte. Diese Zweikanal-Schattenkarte kann dann unscharf und wie eine normale Textur gefiltert werden. Der Algorithmus verwendet dann die Ungleichheit von Tschebyschev im Pixel-Shader, um den Bruchteil des Pixelbereichs zu schätzen, der den Tiefentest bestanden würde.
+VSMs rendern die Tiefe und die Tiefe quadratisch in eine Zwei-Kanal-Schattenkarte. Diese zweikanalige Schattenkarte kann dann unscharf und wie eine normale Textur gefiltert werden. Der Algorithmus verwendet dann die Ungleichheit von Tschebyschev im Pixel-Shader, um den Bruchteil des Pixelbereichs zu schätzen, der den Tiefentest bestanden würde.
 
 Der Pixel-Shader ruft die Tiefen- und Tiefen-Quadratwerte ab.
 
@@ -410,7 +410,7 @@ Der größte Nachteil von VSMs ist die leichte Beeinträchtigung (Abbildung 16).
 
 **Abbildung 16. VSM Light-Glühbirnen**
 
-![vsm light light 2016](images/vsm-light-bleeding.png)
+![Vsm Light-Glühbirnen](images/vsm-light-bleeding.png)
 
 Eine Teillösung für das Problem besteht in der Auslösung von fPercentLit. Dies wirkt sich auf die Weichheit aus, was zu Artefakten führen kann, bei denen die Tiefenunterschiede gering sind. Manchmal gibt es einen magischen Wert, der das Problem entschärft.
 
@@ -421,7 +421,7 @@ fPercentLit = pow( p_max, MAGIC_NUMBER );
 
 
 
-Eine Alternative zum Erhöhen des prozentzeptativen Lichts für eine Energie besteht in der Vermeidung von Konfigurationen, bei denen sich Schatten überlappen. Selbst bei stark optimierten Schattenkonfigurationen gelten mehrere Einschränkungen für Licht, Kamera und Geometrie. Lichtentspricht wird auch durch die Verwendung von Texturen mit höherer Auflösung gehärtet.
+Eine Alternative zum Erhöhen des Prozentlichts für eine Stromversorgung besteht in der Vermeidung von Konfigurationen, bei denen sich Schatten überlappen. Selbst bei stark optimierten Schattenkonfigurationen gelten mehrere Einschränkungen für Licht, Kamera und Geometrie. Die lichte Beleuchtung wird auch durch die Verwendung von Texturen mit höherer Auflösung ge mindert.
 
 Mehrschichtige Varianzschattenkarten (Layered Variance Shadow Maps, LVSMs) lösen das Problem auf Kosten des Frustums in Schichten, die dem Licht durchlässig sind. Die Anzahl der erforderlichen Zuordnungen wäre sehr groß, wenn auch CSMs verwendet werden.
 
@@ -439,7 +439,7 @@ Die Verwendung von Farbverläufen mit CSMs kann eine Naht entlang der Grenze zwi
 
 ![Naht an kaskadierenden Rahmen aufgrund einer anisotropen Filterung mit abweichender Flusssteuerung](images/seams-on-cascade-borders-due-to-anisotropic.jpg)
 
-Dieses Problem wird gelöst, indem die Ableitungen auf der Position im Lichtansichtsraum berechnen. Die Raumkoordinate der Lichtansicht ist nicht spezifisch für die ausgewählte Kaskadierung. Die berechneten Ableitungen können durch den Skalierungsteil der Projektionstexturmatrix auf die richtige Mipmapebene skaliert werden.
+Dieses Problem wird durch Berechnen der Ableitungen an der Position im Lichtansichtsbereich gelöst. Die Lichtansicht-Raumkoordinate ist nicht spezifisch für die ausgewählte Kaskadate. Die berechneten Ableitungen können vom Skalierungsteil der Projektionstexturmatrix auf die richtige Mipmapebene skaliert werden.
 
 
 ```C++
@@ -456,21 +456,21 @@ Dieses Problem wird gelöst, indem die Ableitungen auf der Position im Lichtansi
 
 ## <a name="vsms-compared-to-standard-shadows-with-pcf"></a>VSMs im Vergleich zu Standardschatten mit PCF
 
-Sowohl VSMs als auch PCF versuchen, den Bruchteil des Pixelbereichs zu ungefähren, der den Tiefentest bestehen würde. VSMs arbeiten mit Filterhardware und können mit trennbaren Kerneln unscharf sein. Trennbare Konvolutionskernel sind erheblich kostengünstiger zu implementieren als ein vollständiger Kernel. Darüber hinaus vergleichen VSMs eine Lichtraumtiefe mit einem Wert in der Lichtraum-Tiefenkarte. Dies bedeutet, dass VSMs nicht die gleichen Offsetprobleme wie PCF haben. Technisch gesehen sind VSMs Stichprobentiefe über einen größeren Bereich und durchführen eine statistische Analyse. Dies ist weniger präzise als pcf. In der Praxis führen VSMs eine sehr gute Mischung durch, was dazu führt, dass weniger Offset erforderlich ist. Wie oben beschrieben, ist der Nachteil von VSMs die leichte Beeinträchtigung.
+Sowohl VSMs als auch PCF versuchen, den Bruchteil des Pixelbereichs anzunähern, der den Tiefentest bestehen würde. VSMs arbeiten mit Filterhardware und können mit trennbaren Kerneln weich gemacht werden. Trennbare Konvolutionskernel sind erheblich kostengünstiger zu implementieren als ein vollständiger Kernel. Darüber hinaus vergleichen VSMs eine Lichtraumtiefe mit einem Wert in der Lichtraum-Tiefenkarte. Dies bedeutet, dass VSMs nicht die gleichen Offsetprobleme wie PCF haben. Technisch gesehen führen VSMs die Stichprobentiefe über einen größeren Bereich aus und führen eine statistische Analyse durch. Dies ist weniger präzise als PCF. In der Praxis leisten VSMs eine sehr gute Vermischung, was dazu führt, dass weniger Offset erforderlich ist. Wie oben beschrieben, ist der Nachteil von VSMs ein leichter Nachteil.
 
-VSMs und PCF stellen einen Vergleich zwischen GPU-Computeleistung und GPU-Texturbandbreite dar. VsMs erfordern mehr mathematische Berechnungen, um die Varianz zu berechnen. PCF erfordert mehr Texturspeicherbandbreite. Große PCF-Kernel können durch die Texturbandbreite schnell zu Engpässen führen. Da die GPU-Berechnungsleistung schneller wächst als die GPU-Bandbreite, werden VSMs immer praktischer für die beiden Algorithmen. VSMs sehen auch besser aus, wenn Schattenkarten mit geringerer Auflösung aufgrund von Mischung und Filterung verwendet werden.
+VSMs und PCF stellen einen Ausgleich zwischen GPU-Computeleistung und GPU-Texturbandbreite dar. VSMs erfordern mehr Mathematisches, um die Varianz zu berechnen. PCF erfordert mehr Texturspeicherbandbreite. Große PCF-Kernel können schnell durch Texturbandbreite eng werden. Da die GPU-Rechenleistung schneller wächst als die GPU-Bandbreite, werden VSMs für die beiden Algorithmen immer praktischer. VSMs sehen aufgrund von Blending und Filterung auch mit Schattenzuordnungen mit niedrigerer Auflösung besser aus.
 
 ## <a name="summary"></a>Zusammenfassung
 
-CSMs bieten eine Lösung für das Problem des Perspektivaliasings. Es gibt mehrere mögliche Konfigurationen, um die benötigte visuelle Genauigkeit für einen Titel zu erhalten. PCF und VSMs werden häufig verwendet und sollten mit CSMs kombiniert werden, um Aliasing zu reduzieren.
+CSMs bieten eine Lösung für das Problem mit dem Perspektivenaliasing. Es gibt mehrere mögliche Konfigurationen, um die erforderliche visuelle Genauigkeit für einen Titel zu erhalten. PCF und VSMs werden häufig verwendet und sollten mit CSMs kombiniert werden, um aliasing zu reduzieren.
 
 ## <a name="references"></a>Referenzen
 
-Donnelly, W. und Lauungen, A. [Variance shadow maps](https://portal.acm.org/citation.cfm?doid=1111411.1111440). In SI3D '06: Proceedings of the 2006 symposium on Interactive 3D graphics and games. 2006. S. 161–165. New York, NY, USA: ACM Press.
+Donnelly, W. und Laufüge, A. [Varianzschattenzuordnungen](https://portal.acm.org/citation.cfm?doid=1111411.1111440). In SI3D '06: Proceedings of the 2006 symposium on Interactive 3D graphics and games. 2006. S. 161–165. New York, NY, USA: ACM Press.
 
-Laution, Andrew und Mc Wiege, Michael. [Mehrschichtige Varianzschattenkarten](https://portal.acm.org/citation.cfm?id=1375714.1375739&coll=GUIDE&dl=GUIDE&CFID=45360327&CFTOKEN=34578992). Proceedings of graphics interface 2008, May 28-30, 2008, Graphics Interface 2008, Canada.
+Lauizzen, Andrew und Mc Csv, Michael. [Überlagerungsvarianzschattenzuordnungen.](https://portal.acm.org/citation.cfm?id=1375714.1375739&coll=GUIDE&dl=GUIDE&CFID=45360327&CFTOKEN=34578992) Proceedings of graphics interface 2008, 28-30, 2008, London, Canada.
 
-Igkeit, Woflgang F. Abschnitt 4. Kaskadierte Schatten Karten. ShaderX5 , Erweiterte Renderingtechniken, Beim Rendern F. Beim Shader, Ed. Charles River Media, Boston, Bostons. 2006. S. 197–206.
+Soll, Woflgang F. Abschnitt 4. Cascaded Shadow Karten. ShaderX5 , Advanced Rendering Techniques,Stufen F. Soll, Ed. Charles River Media, Boston, Boston. 2006. S. 197–206.
 
  
 

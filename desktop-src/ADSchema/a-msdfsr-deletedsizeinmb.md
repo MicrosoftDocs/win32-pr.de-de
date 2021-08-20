@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-deletedsizeinmb-Attribut
+title: ms-DFSR-DeletedSizeInMb-Attribut
 description: Größe des gelöschten Verzeichnisses in Megabyte.
 ms.assetid: 6869b6d3-190d-4503-aa3b-e2629b950fb7
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-deletedsizeinmb-Attribut AD-Schema
-- "\"msdfsr-deletedsizeinmb\"-Attribut AD-Schema"
+- AD-Schema des ms-DFSR-DeletedSizeInMb-Attributs
+- AD-Schema des msDFSR-DeletedSizeInMb-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 817c2b23a6a770f9aafe4fb86e80327e1cea375c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ae8f80bde43a27c6d61676b394310133e73bdd29cdd695fadddcb3c621fc6448
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119298810"
 ---
-# <a name="ms-dfsr-deletedsizeinmb-attribute"></a>MS-DFSR-deletedsizeinmb-Attribut
+# <a name="ms-dfsr-deletedsizeinmb-attribute"></a>ms-DFSR-DeletedSizeInMb-Attribut
 
 Größe des gelöschten Verzeichnisses in Megabyte.
 
@@ -29,13 +29,13 @@ Größe des gelöschten Verzeichnisses in Megabyte.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-deletedsizeinmb              |
-| LDAP-Display-Name | msdfsr-deletedsizeinmb               |
+| CN                | ms-DFSR-DeletedSizeInMb              |
+| Ldap-Anzeigename | msDFSR-DeletedSizeInMb               |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.27           |
-| System-ID-GUID    | 53ed9ad1-9975-41b4-83b5-0c061a12553a |
+| System-Id-Guid    | 53ed9ad1-9975-41f4-83f5-0c061a12553a |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -54,16 +54,16 @@ Größe des gelöschten Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Größe des gelöschten Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Größe des gelöschten Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Is-Single-Valued       | True                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 

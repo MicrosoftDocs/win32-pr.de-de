@@ -4,8 +4,8 @@ description: Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 ms.assetid: 9051666f-539c-4339-8652-3ebdab1af301
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Remote-Storage-GUID-Attribut
-- remoteStorageGUID-Attribut-AD-Schema
+- REMOTE-STORAGE-GUID-Attribut AD-Schema
+- remoteStorageGUID-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.809                      |
-| System-ID-GUID    | 2a39c5b0-8960-11d1-aebc-0000f80367c1        |
+| System-Id-Guid    | 2a39c5b0-8960-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Ist einwertig       | True                                                                           |
+| Is-Single-Valued       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |
@@ -79,7 +79,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Ist einwertig       | True                                                                           |
+| Is-Single-Valued       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |
@@ -100,7 +100,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Ist einwertig       | True                                                                           |
+| Is-Single-Valued       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |
@@ -121,7 +121,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Is-Single-Valued       | True                                                                           |
+| Ist einwertig       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |
@@ -142,7 +142,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Is-Single-Valued       | True                                                                           |
+| Ist einwertig       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |
@@ -163,7 +163,7 @@ Dieses Attribut enthält die GUID für ein Remotespeicherobjekt.
 | Link-ID                | \-                                                                             |
 | MAPI-Id                | \-                                                                             |
 | System-Only            | False                                                                          |
-| Is-Single-Valued       | True                                                                           |
+| Ist einwertig       | True                                                                           |
 | Ist indiziert             | False                                                                          |
 | Im globalen Katalog      | False                                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                   |

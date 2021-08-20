@@ -1,70 +1,70 @@
 ---
-description: Anwendungen können einen Aktivierungs Kontext verwalten, indem Sie die Aktivierungs Kontextfunktionen direkt aufrufen.
+description: Anwendungen können einen Aktivierungskontext verwalten, indem sie die Aktivierungskontextfunktionen direkt aufrufen.
 ms.assetid: 606147a8-435d-43d4-8fb5-79d2d1a8d870
-title: Verwenden der Aktivierungs Kontext-API
+title: Verwenden der Aktivierungskontext-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62b3aec5b7840e70e8fae93575e65c2f06668936
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5c2f3d1c1a6b6202619b9e39df6ee4dc60b9134ebefa9cfe7dea4db9a344bd7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073300"
 ---
-# <a name="using-the-activation-context-api"></a>Verwenden der Aktivierungs Kontext-API
+# <a name="using-the-activation-context-api"></a>Verwenden der Aktivierungskontext-API
 
-Anwendungen können einen [Aktivierungs Kontext](activation-contexts.md) verwalten, indem Sie die Aktivierungs Kontextfunktionen direkt aufrufen. Aktivierungs Kontexte sind Datenstrukturen im Arbeitsspeicher. Das System kann die Informationen im Aktivierungs Kontext verwenden, um eine Anwendung so umzuleiten, dass Sie eine bestimmte dll-Version, com-Objektinstanz oder eine benutzerdefinierte Fensterversion lädt. Weitere Informationen finden Sie unter [Aktivierungs Kontext Referenz](activation-context-reference.md).
+Anwendungen können einen [Aktivierungskontext](activation-contexts.md) verwalten, indem sie die Aktivierungskontextfunktionen direkt aufrufen. Aktivierungskontexte sind Datenstrukturen im Arbeitsspeicher. Das System kann die Informationen im Aktivierungskontext verwenden, um eine Anwendung umzuleiten, um eine bestimmte DLL-Version, EINE COM-Objektinstanz oder eine benutzerdefinierte Fensterversion zu laden. Weitere Informationen finden Sie unter [Referenz zum Aktivierungskontext.](activation-context-reference.md)
 
-Die API (Application Programming Interface) kann verwendet werden, um den Aktivierungs Kontext zu verwalten und Versions benannte Objekte mit [Manifesten](manifests.md)zu erstellen. Die folgenden beiden Szenarien veranschaulichen, wie eine Anwendung einen Aktivierungs Kontext verwalten kann, indem die Aktivierungs Kontextfunktionen direkt aufgerufen werden. In den meisten Fällen wird der Aktivierungs Kontext jedoch vom System verwaltet. Anwendungsentwickler und Assemblyanbieter müssen häufig keine Aufrufe an den Stapel vornehmen, um den Aktivierungs Kontext zu verwalten.
+Die Anwendungsprogrammierschnittstelle (APPLICATION PROGRAMMING Interface, API) kann verwendet werden, um den [Aktivierungskontext](manifests.md)zu verwalten und Versionsobjekte mit Manifesten zu erstellen. Die folgenden beiden Szenarien veranschaulichen, wie eine Anwendung einen Aktivierungskontext verwalten kann, indem sie die Aktivierungskontextfunktionen direkt aufruft. In den meisten Fällen wird der Aktivierungskontext jedoch vom System verwaltet. Anwendungsentwickler und Assemblyanbieter müssen den Stapel häufig nicht aufrufen, um den Aktivierungskontext zu verwalten.
 
--   Prozesse und Anwendungen, die Dereferenzierungs-oder Dispatch-Ebenen implementieren.
+-   Prozesse und Anwendungen, die Dekonstruktions- oder Verteilungsebenen implementieren.
 
-    Beispielsweise ein Benutzer, der Aktivierungs Kontexte in der Ereignisschleife verwaltet. Jedes Mal, wenn auf das Fenster zugegriffen wird, z. b. durch Bewegen des Mauszeigers über das Fenster, wird [**activateactctx**](/windows/desktop/api/Winbase/nf-winbase-activateactctx) aufgerufen, das den aktuellen Aktivierungs Kontext für die Ressource aktiviert, wie im folgenden Code Fragment dargestellt.
+    Beispielsweise ein Benutzer, der Aktivierungskontexte in der Ereignisschleife verwaltet. Bei jedem Zugriff auf das Fenster, z. B. durch Bewegen des Mauszeigers über das Fenster, wird [**ActivateActCtx**](/windows/desktop/api/Winbase/nf-winbase-activateactctx) aufgerufen, wodurch der aktuelle Aktivierungskontext für die Ressource aktiviert wird, wie im folgenden Codefragment gezeigt.
 
-    <dl> Handle von hactctx;  
-    "Kreatewindow ();"  
+    <dl> HANDLE hActCtx;  
+    CreateWindow();  
     ...  
-    Getcurrentactctx (&ActCtx);  
+    GetCurrentActCtx(&ActCtx);  
     ...  
-    Releaseactctx (&ActCtx);  
+    ReleaseActCtx(&ActCtx);  
     </dl>
 
-    Im folgenden Code Fragment werden die entsprechenden Aktivierungs Kontexte von der API-Funktion aktiviert, bevor [**callwindowproc**](/windows/win32/api/winuser/nf-winuser-callwindowproca)aufgerufen wird. Wenn **callwindowproc** aufgerufen wird, wird dieser Kontext verwendet, um eine Nachricht an Windows zu übergeben. Wenn alle Ressourcen Vorgänge abgeschlossen sind, deaktiviert die Funktion den Kontext.
+    Im folgenden Codefragment aktiviert die API-Funktion die entsprechenden Aktivierungskontexte, bevor [**CallWindowProc**](/windows/win32/api/winuser/nf-winuser-callwindowproca)aufgerufen wird. Wenn **CallWindowProc** aufgerufen wird, wird dieser Kontext verwendet, um eine Nachricht an Windows zu übergeben. Wenn alle Ressourcenvorgänge abgeschlossen sind, deaktiviert die Funktion den Kontext.
 
-    <dl> ULONG \_ ptr ulpcookie;  
-    Handle von hactctx;  
-    if (activateactctx (hactctx, &ulpcookie))  
+    <dl> ULONG \_ PTR ulpCookie;  
+    HANDLE hActCtx;  
+    if(ActivateActCtx(hActCtx, &ulpCookie))  
     {  
     ...  
-    Callwindowproc (...);  
+    CallWindowProc(...);  
     ...  
-    Deactivateactctx (0, ulpcookie);  
+    DeactivateActCtx(0, ulpCookie);  
     }  
     </dl>
 
--   Delegatschutzschicht.
+-   Delegator-Verteilungsebene.
 
-    Dieses Szenario gilt für Manager, die mehrere Entitäten mit einer gemeinsamen API-Schicht verwalten, z. b. Treiber-Manager. Obwohl es noch nicht implementiert wurde, wäre dies ein Beispiel für den ODBC-Treiber.
+    Dieses Szenario gilt für Manager, die mehrere Entitäten mit einer gemeinsamen API-Ebene verwalten, z. B. einem Treiber-Manager. Obwohl es noch nicht implementiert wurde, wäre ein Beispiel dafür der ODBC-Treiber.
 
-    In diesem Szenario kann die mittlere Ebene Assemblybindungen verarbeiten. Um den Versions spezifischen Bindungs Treiber zu erhalten, müssen die Verleger ein Manifest bereitstellen und Abhängigkeiten für bestimmte Komponenten in diesem Manifest angeben. Die Basisanwendung bindet nicht dynamisch an die-Komponenten. zur Laufzeit verwaltet der Treiber-Manager die Aufrufe. Wenn der ODBC-Treiber auf der Grundlage der Verbindungs Zeichenfolge aufgerufen wird, wird der entsprechende Treiber geladen. Anschließend wird der Aktivierungs Kontext mithilfe der Informationen in der Assembly Manifest-Datei erstellt.
+    In diesem Szenario kann die mittlere Ebene Assemblybindungen verarbeiten. Um den versionsspezifischen Bindungstreiber abzurufen, müssen Herausgeber ein Manifest bereitstellen und Abhängigkeiten von bestimmten Komponenten in diesem Manifest angeben. Die Basisanwendung wird nicht dynamisch an die Komponenten gebunden. Zur Laufzeit verwaltet der Treiber-Manager die Aufrufe. Wenn der ODBC-Treiber basierend auf der Verbindungszeichenfolge aufgerufen wird, lädt er den entsprechenden Treiber. Anschließend wird der Aktivierungskontext mithilfe der Informationen in der Assemblymanifestdatei erstellt.
 
-    Ohne das Manifest ist die Standardaktion für den Treiber die Verwendung desselben Kontexts, der von der Anwendung angegeben wird – in diesem Beispiel Version 2 von msvcrt. Da ein Manifest vorhanden ist, wird ein separater Aktivierungs Kontext eingerichtet. Wenn der ODBC-Treiber ausgeführt wird, wird er an Version 1 der msvcrt-Assembly gebunden.
+    Ohne das Manifest besteht die Standardaktion für den Treiber darin, denselben Kontext zu verwenden, der von der Anwendung angegeben wird – in diesem Beispiel Version 2 von MSVCRT. Da ein Manifest vorhanden ist, wird ein separater Aktivierungskontext eingerichtet. Wenn der ODBC-Treiber ausgeführt wird, wird er an Version 1 der MSVCRT-Assembly gebunden.
 
-    Jedes Mal, wenn der Treiber-Manager die Dispatch-Schicht aufruft – beispielsweise, um den nächsten Satz von Daten zu erhalten – verwendet er die entsprechenden Assemblys basierend auf dem Aktivierungs Kontext. Dies wird im folgenden Code Fragment veranschaulicht.
+    Jedes Mal, wenn der Treiber-Manager die Verteilungsebene aufruft, z. B. um den nächsten Satz von Daten abzurufen, verwendet er die entsprechenden Assemblys basierend auf dem Aktivierungskontext. Dies wird im folgenden Codefragment veranschaulicht.
 
-    <dl> Handle von hactctx;  
-    ULONG \_ ptr ulpcookie;  
-    ActCtx actctxdecreate = {...};  
-    hactctx = kreateactctx (&actctxdecreate);  
+    <dl> HANDLE hActCtx;  
+    ULONG \_ PTR ulpCookie;  
+    ACTCTX ActCtxToCreate = {...};  
+    hActCtx = CreateActCtx(&ActCtxToCreate);  
     ...;  
-    if (activateactctx (hactctx, &ulpcookie))  
+    if (ActivateActCtx(hActCtx, &ulpCookie))  
     {  
     ...  
-    ConnectDB (...);  
-    Deactivateactctx (0, ulpcookie);  
+    ConnectDb(...);  
+    DeactivateActCtx(0, ulpCookie);  
     }  
     ...  
-    Releaseactctx (hactctx);  
+    ReleaseActCtx(hActCtx);  
     </dl>
 
  

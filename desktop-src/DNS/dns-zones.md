@@ -1,25 +1,25 @@
 ---
 title: DNS-Zonen
-description: Eine DNS-Zone ist ein Satz von Dateien oder Datensätzen (genauer, eine Datenbank von Ressourcen Daten Satz Einträgen), der einem Teil des hierarchischen DNS-Namespace entspricht.
+description: Eine DNS-Zone ist ein Satz von Dateien oder Einträgen (genauer gesagt eine Datenbank mit Ressourceneintragseinträgen), die einem Teil des hierarchischen DNS-Namespace entsprechen.
 ms.assetid: fc24bcd0-854d-4452-9c81-f344b52c7b4e
 keywords:
-- DNS-DNS-Zonen
+- DNS Zones DNS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba8914e699e00cbbc2e699c2b36d40c8d00b87c1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f3d6644fa8a2a4c4ac3b3c9b1973ccc8823cc6b51a304e6d9ddc4756f0fe69e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163748"
 ---
 # <a name="dns-zones"></a>DNS-Zonen
 
-Eine DNS-Zone ist ein Satz von Dateien oder Datensätzen (genauer, eine Datenbank von Ressourcen Daten Satz Einträgen), der einem Teil des hierarchischen DNS-Namespace entspricht. DNS-Zonen werden verwendet, um zu definieren, welche DNS-Server für die Auflösung von namens Auflösungs Abfragen für einen bestimmten Abschnitt der DNS-Hierarchie verantwortlich sind (autoritative). DNS-Zonen unterscheiden sich in der folgenden Art von der Domänen Struktur: Zonen können aus mindestens einer DNS-Domäne bestehen. Eine Zone in der Gadgets.widgets.Microsoft.com-Domänen Struktur kann für die Gadgets-und Widgets-Domänen autorisierend sein. Anders ausgedrückt: Es ist nicht erforderlich, dass DNS-Zonen eine eins-zu-eins-Beziehung mit DNS-Domänen aufweisen.
+Eine DNS-Zone ist ein Satz von Dateien oder Einträgen (genauer gesagt eine Datenbank mit Ressourceneintragseinträgen), die einem Teil des hierarchischen DNS-Namespace entsprechen. DNS-Zonen werden verwendet, um zu delineieren, welche DNS-Server (autoritativ) für das Auflösen von Namensauflösungsabfragen für einen bestimmten Abschnitt der DNS-Hierarchie verantwortlich sind. DNS-Zonen unterscheiden sich wie folgt von der Domänenstruktur: Zonen können aus einer oder mehreren DNS-Domänen bestehen. Eine Zone in der gadgets.widgets.microsoft.com Domänenstruktur kann autoritativ für die Domänen der Widgets und Widgets sein. Anders ausgedrückt: Dns-Zonen müssen nicht über eine 1:1-Beziehung mit DNS-Domänen verfügen.
 
- 
+ 
 
- 
+ 
 
 
 

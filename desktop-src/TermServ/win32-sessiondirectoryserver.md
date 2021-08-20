@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionDirectoryServer-Klasse
-description: Stellt Eigenschaften zum Anzeigen der Eigenschaften eines Remotedesktopverbindung Broker-Servers (RD-Verbindungsbroker) bereit.
+description: Stellt Eigenschaften zum Anzeigen der Eigenschaften eines Remotedesktopverbindung Broker-Servers (RD-Verbindungsbroker) zur Seite.
 ms.assetid: 73017b71-eff9-4ef6-aba0-71ddb969491f
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionDirectoryServer-Klasse Remotedesktopdienste
-- Win32_SessionDirectoryServer Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionDirectoryServer-Remotedesktopdienste
+- Win32_SessionDirectoryServer klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,19 +24,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9e96efb19e4db56e582cd44d05f3e9865e5282c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 702b56a9cf8aee2ab38ad9d6b3a0f2d270b2128ea46934cc1beb720c77400d07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127070"
 ---
-# <a name="win32_sessiondirectoryserver-class"></a>Win32 \_ sessiondirectoryserver-Klasse
+# <a name="win32_sessiondirectoryserver-class"></a>Win32 \_ SessionDirectoryServer-Klasse
 
-Stellt Eigenschaften zum Anzeigen der Eigenschaften eines Remotedesktopverbindung Broker-Servers (RD-Verbindungsbroker) bereit.
+Stellt Eigenschaften zum Anzeigen der Eigenschaften eines Remotedesktopverbindung Broker-Servers (RD-Verbindungsbroker) zur Seite.
 
 > [!Note]  
-> In Windows Server 2008 R2 wurde der Name des Terminal Dienste-Sitzungs Brokers (TS-Sitzungs Broker) in "RD-Verbindungsbroker" geändert. Diese Eigenschaften gelten für alle unterstützten Betriebssysteme, sofern nicht anders angegeben.
+> In Windows Server 2008 R2 wurde der Name von Terminal Services Session Broker (TS Session Broker) in RD-Verbindungsbroker geändert. Diese Eigenschaften gelten für alle unterstützten Betriebssysteme, sofern nicht anders angegeben.
 
  
 
@@ -59,85 +59,85 @@ class Win32_SessionDirectoryServer
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ sessiondirectoryserver** " verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionDirectoryServer-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ sessiondirectoryserver** " verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionDirectoryServer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ClusterName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Farm, in der der Server enthalten ist.
+Name der Farm, die den Server enthält.
 
 </dd> <dt>
 
-**Loadindicator**
+**LoadIndicator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine relative Zahl, die die RD-Sitzungshost Serverlast darstellt, wenn der standardmäßige Lasten Ausgleichs Algorithmus verwendet wird. Der *loadindicator* -Eigenschafts Wert basiert auf der Anzahl der Sitzungen, der Anzahl ausstehender Umleitungs Anforderungen und dem Server Gewichtungswert.
+Eine relative Zahl, die die RD-Sitzungshost Serverauslastung darstellt, wenn der Standardalgorithmus für den Lastenausgleich verwendet wird. Der *LoadIndicator-Eigenschaftswert* basiert auf der Anzahl der Sitzungen, der Anzahl ausstehender Umleitungsanforderungen und dem Servergewichtungswert.
 
 </dd> <dt>
 
-**Anzahl von Sitzungen**
+**NumberOfSessions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Sitzungen auf dem RD-Verbindungsbroker Server.
+Anzahl der Sitzungen auf dem RD-Verbindungsbrokerserver.
 
 </dd> <dt>
 
-**Numloydredir**
+**NumPendRedir**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der ausstehenden Umleitungs Anforderungen.
+Anzahl ausstehender Umleitungsanforderungen.
 
 </dd> <dt>
 
 **ServerIPAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die IP-Adresse des RD-Verbindungsbroker Servers. Wenn der Server sowohl für IPv4-als auch für IPv6-Adressen konfiguriert ist, enthält dieser die IPv4-Adresse.
+IP-Adresse des RD-Verbindungsbrokerservers. Wenn der Server sowohl für IPv4- als auch für IPv6-Adressen konfiguriert ist, enthält dieser die IPv4-Adresse.
 
 </dd> <dt>
 
 **ServerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -146,55 +146,55 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des RD-Verbindungsbroker Servers.
+Name des RD-Verbindungsbrokerservers.
 
 </dd> <dt>
 
-**Serverweight**
+**ServerWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Server Gewichtungswert, der beim Lastenausgleich verwendet wird.
+Servergewichtungswert, der beim Lastenausgleich verwendet wird.
 
 </dd> <dt>
 
-**Singlesessionmode**
+**SingleSessionMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Einstellung für den einzelsitzungmodus des RD-Verbindungsbroker Servers.
+Einstellung für den Einzelsitzungsmodus des RD-Verbindungsbrokerservers.
 
 <dt>
 
 0
 </dt> <dd>
 
-Die Farm befindet sich nicht im Einzel Sitzungs Modus.
+Die Farm befindet sich nicht im Einzelsitzungsmodus.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Die Farm in befindet sich im Einzel Sitzungs Modus.
+Die Farm in befindet sich im Einzelsitzungsmodus.
 
 </dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -205,7 +205,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 
@@ -214,10 +214,10 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ sessiondirectoriycluster**](win32-sessiondirectorycluster.md)
+[**Win32 \_ SessionDirectoryCluster**](win32-sessiondirectorycluster.md)
 </dt> <dt>
 
-[**Win32 \_ sessiondirectoriysession**](win32-sessiondirectorysession.md)
+[**Win32 \_ SessionDirectorySession**](win32-sessiondirectorysession.md)
 </dt> </dl>
 
  

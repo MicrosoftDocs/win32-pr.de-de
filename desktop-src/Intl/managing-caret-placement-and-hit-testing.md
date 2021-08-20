@@ -1,62 +1,62 @@
 ---
-description: Komplexe Skriptsprachen werden von scriptshape in Cluster unterteilt. Die Neuanordnen von Zeichen erfolgt immer innerhalb von Cluster Grenzen. Es ist garantiert, dass die Cluster selbst in der Richtung der Lesefolge fortgeführt werden.
+description: Komplexe Skriptsprachen werden von ScriptShape in Cluster unterbrochen. Die Neuanordnung von Zeichen erfolgt immer innerhalb von Clustergrenzen. Die Cluster selbst bewegen sich garantiert in richtung der Leserichtung.
 ms.assetid: 50b4b643-af96-4a6f-80f9-27a71ce16b0e
-title: Verwalten der Platzierung von Caretzeichen und Treffer Tests
+title: Verwalten von Caretplatzierung und Treffertests
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 60396a668c89f7392b28adde0bb123060bf50348
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02e1c6d3b9dbd54f3df2b458a3f7473d1021dceafd6772730b8482b06c4e1c4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788400"
 ---
-# <a name="managing-caret-placement-and-hit-testing"></a>Verwalten der Platzierung von Caretzeichen und Treffer Tests
+# <a name="managing-caret-placement-and-hit-testing"></a>Verwalten von Caretplatzierung und Treffertests
 
-Komplexe Skriptsprachen werden von [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)in [Cluster](uniscribe-glossary.md) unterteilt. Die Neuanordnen von Zeichen erfolgt immer innerhalb von Cluster Grenzen. Es ist garantiert, dass die Cluster selbst in der Richtung der Lesefolge fortgeführt werden.
+Komplexe Skriptsprachen werden von ScriptShape [in](uniscribe-glossary.md) [**Cluster unterbrochen.**](/windows/desktop/api/Usp10/nf-usp10-scriptshape) Die Neuanordnung von Zeichen erfolgt immer innerhalb von Clustergrenzen. Die Cluster selbst bewegen sich garantiert in richtung der Leserichtung.
 
-Cluster Informationen im Array logischer Cluster werden verwendet, um die Breite eines Clusters von Symbolen gleichmäßig auf die logischen Zeichen zu verteilen, die Sie darstellen. Beispielsweise ist das Symbol "Lam Alef" in vier Bereiche unterteilt:
+Clusterinformationen im logischen Clusterarray werden verwendet, um die Breite eines Clusters von Glyphen gleichmäßig auf die logischen Zeichen zu teilen, die sie darstellen. Beispielsweise ist das Lam-Alef-Glyph in vier Bereiche unterteilt:
 
--   Die führende Hälfte der Lam.
--   Die nachfolgende Hälfte des Lam.
--   Die führende Hälfte von Alef.
--   Die nachfolgende Hälfte der Alef.
+-   Die führende Hälfte von lam.
+-   Die nachende Hälfte des lam.
+-   Die führende Hälfte des Alef.
+-   Die nachende Hälfte des Alef.
 
-Konventionen für die Platzierung von Caretzeichen innerhalb von Clustern sind vom Skript abhängig. Wenn für das Arabische Skript die Position der Einfügemarke zwischen einem Basiszeichen und der zugehörigen Markierung festgelegt ist, wird die Einfügemarke in der Mitte des Basis Zeichens angezeigt. Für das thailändische Skript kann die Einfügemarke nicht innerhalb eines Clusters positioniert werden. Wenn der Benutzer also die Einfügemarke verschiebt, muss sich die Anwendung hinter allen Symbolen befinden, aus denen der Cluster besteht.
+Konventionen für die Ein caret-Platzierung in Clustern hängen vom Skript ab. Wenn für das arabische Skript die Position des Caretzeichens zwischen einem Basiszeichen und dessen Kombinationsmarkierung festgelegt ist, wird das Caretzeichen in der Mitte des Basiszeichens angezeigt. Für das thailändisch-Skript kann die Ein caret nicht innerhalb eines Clusters positioniert werden. Wenn der Benutzer das Caret-Caret-Strich-Strich-5-Strich-1-Strich-1-Strich-1-0-4-0-1600-000-000-000-000-000-4000-30
 
-Die Funktionen [**scriptxycp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) und [**scriptcptox**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) übersetzen zwischen Caretzeichen (in Code Punkt Offsets) und x-Positionen (in Pixel). Die **scriptxtoicp** -Funktion kennt die Positions Konventionen der Einfügemarke der einzelnen Skripts:
+Die [**ScriptXtoCP-**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) und [**ScriptCPtoX-Funktionen**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) übersetzen zwischen Caretpositionen (in Codepunktoffsets) und x-Positionen (in Pixeln). Die **ScriptXtoCP-Funktion** verfügt über Kenntnisse der Positionskonventionen der Caretstellen der einzelnen Skripts:
 
--   Für indische und Thai werden Einfügepositionen an Cluster Grenzen ausgerichtet.
--   Bei Arabisch werden Caretzeichen mit Clustern interpoliert.
--   Bei Hebräisch werden in Versionen vor Usp10.dll, Version 1,420, Einfügepositionen mit Clustern interpoliert. Beginnend mit Usp10.dll, Version 1,420, werden Einfügepositionen an Cluster Grenzen ausgerichtet.
+-   Für Indien und Thai werden Caretpositionen an Clustergrenzen positioniert.
+-   Für Arabisch werden Caretpositionen mit Clustern interpoliert.
+-   Für Hebräisch werden in Versionen vor Usp10.dll Version 1.420 Caretpositionen mit Clustern interpoliert. Ab Usp10.dll Version 1.420 werden Caretpositionen an Clustergrenzen ausrichten.
 
-[**Scriptxtcp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) und [**scriptcptox**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) funktionieren nur innerhalb von Ausführungen. Die Funktionen erfordern, dass bestimmte Parameter aus früheren uniscrietaufrufen stammen, wie in der folgenden Tabelle dargestellt.
+[**Sowohl ScriptXtoCP als**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) auch [**ScriptCPtoX**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) funktionieren nur innerhalb von Ausführungen. Die Funktionen erfordern, dass bestimmte Parameter aus früheren Uniscribe-Aufrufen stammen, wie in der folgenden Tabelle gezeigt.
 
 
 
-| Parameter                                        | `Source`                                                 |
+| Parameter                                        | Quelle                                                 |
 |--------------------------------------------------|--------------------------------------------------------|
-| *PSA*                                            | Wie von [**scriptitemize**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize)zurückgegeben. |
-| *cglyphspwlogclust*<br/> *psva*<br/> | Wie von [**scriptshape**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)zurückgegeben.     |
-| *piadvance*                                      | Wie von [**scriptplace**](/windows/desktop/api/Usp10/nf-usp10-scriptplace)zurückgegeben.     |
+| *Psa*                                            | Wie von [**ScriptItemize zurückgegeben.**](/windows/desktop/api/Usp10/nf-usp10-scriptitemize) |
+| *cGlyphspwLogClust*<br/> *psva*<br/> | Wie von [**ScriptShape zurückgegeben.**](/windows/desktop/api/Usp10/nf-usp10-scriptshape)     |
+| *piAdvance*                                      | Wie von [**ScriptPlace zurückgegeben.**](/windows/desktop/api/Usp10/nf-usp10-scriptplace)     |
 
 
 
  
 
-Die Anwendung muss den Testlauf einrichten, in dem eine bestimmte Einfügemarke oder x-Position vor dem übergeben der Informationen an [**scriptcptox**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) oder [**scriptxtocp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp)liegt. Wenn die Anwendung die breiten Informationen nicht speichert, kann Sie nach dem Anzeigen der einzelnen Testlauf die Treffer Tests und die Platzierung der Einfügemarke durchführen. Als Alternative kann die Anwendung genug Informationen zwischenspeichern, um Treffer Tests und einfügeplatzierung in der aktuellen Zeile zu erreichen, ohne dass der Absatz verarbeitet werden muss.
+Die Anwendung muss die Ausführung einrichten, in der sich ein angegebener Caretoffset oder eine x-Position befindet, bevor die Informationen an [**ScriptCPtoX**](/windows/desktop/api/Usp10/nf-usp10-scriptcptox) oder [**ScriptXtoCP übergeben werden.**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) Wenn die Anwendung die Breiteninformationen nicht speichern kann, kann sie treffertests und die Ein caretplatzierung durchführen, nachdem die einzelnen Ausführungen angezeigt wurden. Alternativ kann die Anwendung genügend Informationen zwischenspeichern, um Treffertests und die Platzierung von Caretstrichen in der aktuellen Zeile zu durchführen, ohne dass der Absatz erneut verarbeitet werden muss.
 
-[**Scriptxescp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) gibt einen nachfolgenden Edge-Wert zurück, sodass die Anwendung die Seite des Zeichens oder Clusters kennt, auf die der Benutzer geklickt hat. Der Wert ist entweder 0 oder die Breite des Zeichens oder Clusters in Code Punkten. Die zurückgegebene Zeichenposition ist die Position des Zeichens, auf das der Benutzer geklickt hat. Weitere Informationen finden Sie unter Anzeigen der Einfügemarke [in bidirektionalen](displaying-the-caret-in-bidirectional-strings.md)Zeichen folgen.
+[**ScriptXtoCP gibt**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) einen nachstellenden Edgewert zurück, damit die Anwendung die Seite des Zeichens oder Clusters kennt, auf das der Benutzer geklickt hat. Der Wert ist entweder 0 oder die Breite des Zeichens oder Clusters in Codepunkten. Die zurückgegebene Zeichenposition ist die Position des Zeichens, auf das der Benutzer geklickt hat. Weitere Informationen finden Sie unter [Anzeigen des Caret-Zeichens in bidirektionalen Zeichenfolgen.](displaying-the-caret-in-bidirectional-strings.md)
 
-Für Sprachen wie z. b. Thai, bei denen der Benutzer die Einfügemarke nicht in einem Cluster platzieren will, legt [**scriptxdecp**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) das Flag der nachfolgenden Seite auf 0 oder die Cluster Breite fest. Für Sprachen, wie z. b. Arabisch, für die der Benutzer die Bearbeitung innerhalb eines Clusters erwartet, legt **scriptxescp** das Flag für die nachfolgende Seite auf 0 oder auf 1 fest.
+Für Sprachen wie Thailändisch, für die der Benutzer das Caretzeichen konventionsell nicht in einem Cluster platzieren möchte, legt [**ScriptXtoCP**](/windows/desktop/api/Usp10/nf-usp10-scriptxtocp) das flag der nachden Seite auf 0 oder auf die Clusterbreite fest. Für Sprachen wie Arabisch, für die der Benutzer erwartet, dass sie innerhalb eines Clusters bearbeitet werden können, legt **ScriptXtoCP** das Nachseitenflag auf 0 oder 1 fest.
 
-Damit die Anwendung bei der Verarbeitung der Pfeiltasten gültige Speicherorte für die Einfügemarke festlegt, stellt uniscriinformationen zu gültigen Einfügepositionen im **fcharstoppmember** in den von [**scriptbreak**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak)zurückgegebenen logischen Attributen bereit. " **True** " wird für die meisten Zeichen und " **false** " für Austausch Zeichen in Skripts wie "Thai" zurückgegeben. Die Anwendung sollte den **fneedscaretinfo** -Wert in der [**Skript \_ Eigenschaften**](/windows/desktop/api/Usp10/ns-usp10-script_properties) Struktur für ein Element überprüfen, um festzustellen, ob es erforderlich ist, **scriptbreak** aufzurufen, um nach gültigen Einfügepositionen zu suchen. Wenn der **fneedscaretinfo** -Wert " **false**" lautet, sind alle Code Punkte gültige Einfügemarke.
+Uniscribe stellt Informationen zu gültigen Caretpositionen im **fCharStop-Member** in den logischen Attributen zur Verfügung, die von ScriptBreak zurückgegeben werden, um die Anwendung beim Einrichten gültiger Positionen für das Caretzeichen bei der Verarbeitung der Pfeiltasten zu [**unterstützen.**](/windows/desktop/api/Usp10/nf-usp10-scriptbreak) **TRUE** wird für die meisten Zeichen und **FALSE für** Interclusterzeichen in Skripts wie Thai zurückgegeben. Die Anwendung sollte den **fNeedsCaretInfo-Wert** in der [**SCRIPT \_ PROPERTIES-Struktur**](/windows/desktop/api/Usp10/ns-usp10-script_properties) für ein Element überprüfen, um zu überprüfen, ob **scriptBreak** zum Überprüfen auf gültige Caretpositionen erforderlich ist. Wenn der **fNeedsCaretInfo-Wert** **FALSE ist,** sind alle Codepunkte gültige Caretpositionen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von uniscri](using-uniscribe.md)
+[Verwenden von Uniscribe](using-uniscribe.md)
 </dt> </dl>
 
  

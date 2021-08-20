@@ -1,9 +1,9 @@
 ---
 title: Einfacher QNameList-Typ
-description: Definiert eine Liste qualifizierter Namen.
+description: Definiert eine Liste der qualifizierten Namen.
 ms.assetid: 727d87a0-82f5-44fa-a841-4c2445f78063
 keywords:
-- QNameList simple type EventLog
+- Einfacher QNameList-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118343548"
 ---
 # <a name="qnamelist-simple-type"></a>Einfacher QNameList-Typ
 
-Definiert eine Liste qualifizierter Namen.
+Definiert eine Liste der qualifizierten Namen.
 
 ``` syntax
 <xs:simpleType name="QNameList">
@@ -38,7 +38,7 @@ Definiert eine Liste qualifizierter Namen.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

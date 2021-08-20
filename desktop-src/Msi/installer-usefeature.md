@@ -1,7 +1,7 @@
 ---
-description: Die usefeature-Methode des Installer-Objekts erhöht den Verwendungs Zähler für eine bestimmte Funktion und gibt den Installationsstatus für diese Funktion zurück. Diese Methode sollte verwendet werden, um anzugeben, dass die Absicht einer Anwendung ist, eine Funktion zu verwenden.
+description: Die UseFeature-Methode des Installer-Objekts erhöht die Nutzungsanzahl für ein bestimmtes Feature und gibt den Installationsstatus für dieses Feature zurück. Diese Methode sollte verwendet werden, um die Absicht einer Anwendung anzugeben, ein Feature zu verwenden.
 ms.assetid: c9ea812c-2f95-4ba4-ad8e-b96f7fc14bb1
-title: Installer. usefeature-Methode
+title: Installer.UseFeature-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 355e7f4e64a5cb69ffc0371473cb0db1ac6313a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b320ce72271bb7ee90ac85a376b103d868e6f740a2e853daf58bb478dc79ad6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142155"
 ---
-# <a name="installerusefeature-method"></a>Installer. usefeature-Methode
+# <a name="installerusefeature-method"></a>Installer.UseFeature-Methode
 
-Die **usefeature** -Methode des [**Installer**](installer-object.md) -Objekts erhöht den Verwendungs Zähler für eine bestimmte Funktion und gibt den Installationsstatus für diese Funktion zurück. Diese Methode sollte verwendet werden, um anzugeben, dass die Absicht einer Anwendung ist, eine Funktion zu verwenden.
+Die **UseFeature-Methode** des [**Installer-Objekts**](installer-object.md) erhöht die Nutzungsanzahl für ein bestimmtes Feature und gibt den Installationsstatus für dieses Feature zurück. Diese Methode sollte verwendet werden, um die Absicht einer Anwendung anzugeben, ein Feature zu verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,14 +51,14 @@ Gibt den Produktcode des Produkts an.
 *Feature* 
 </dt> <dd>
 
-Identifiziert die zu verwendende Funktion.
+Identifiziert das zu verwendende Feature.
 
 </dd> <dt>
 
 *InstallMode* 
 </dt> <dd>
 
-Dieser Parameter muss " *msiinstallmudenoerkennungs*" lauten.
+Dieser Parameter muss *msiInstallModeNoDetection* sein.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ Dieser Parameter muss " *msiinstallmudenoerkennungs*" lauten.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **usefeature** -Methode sollte nur für Funktionen verwendet werden, die bekanntermaßen veröffentlicht werden. Die Anwendung sollte den Status der Funktion ermitteln, indem Sie entweder die [**featurestate**](installer-featurestate.md) -Eigenschaft oder die [**Features**](installer-features.md) -Eigenschaft oder deren API-Entsprechungen aufrufen.
+Die **UseFeature-Methode** sollte nur für Features verwendet werden, von der bekannt ist, dass sie veröffentlicht werden. Die Anwendung sollte den Status des Features ermitteln, indem sie entweder die [**FeatureState-Eigenschaft**](installer-featurestate.md) oder [**die Features-Eigenschaft**](installer-features.md) oder ihre API-Entsprechungen aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Die **usefeature** -Methode sollte nur für Funktionen verwendet werden, die bek
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
@@ -86,7 +86,7 @@ Die **usefeature** -Methode sollte nur für Funktionen verwendet werden, die bek
 
 <dl> <dt>
 
-[**Msiusefeatureex**](/windows/desktop/api/Msi/nf-msi-msiusefeatureexa)
+[**MsiUseFeatureEx**](/windows/desktop/api/Msi/nf-msi-msiusefeatureexa)
 </dt> </dl>
 
  

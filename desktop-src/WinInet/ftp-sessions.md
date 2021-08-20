@@ -1,6 +1,6 @@
 ---
 title: FTP-Sitzungen
-description: WinINet ermöglicht Anwendungen das Navigieren und Bearbeiten von Verzeichnissen und Dateien auf einem FTP-Server. Da CERN-Proxys FTP nicht unterstützen, müssen Anwendungen, die ausschließlich einen CERN-Proxy verwenden, die InternetOpenUrl-Funktion verwenden.
+description: Mit WinINet können Anwendungen in Verzeichnissen und Dateien auf einem FTP-Server navigieren und diese bearbeiten. Da CERN-Proxys FTP nicht unterstützen, müssen Anwendungen, die ausschließlich einen CERN-Proxy verwenden, die InternetOpenUrl-Funktion verwenden.
 ms.assetid: 23763672-765f-4bbc-95c9-c28775e91f3d
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118113973"
 ---
 # <a name="ftp-sessions"></a>FTP-Sitzungen
 
-WinINet ermöglicht Anwendungen das Navigieren und Bearbeiten von Verzeichnissen und Dateien auf einem FTP-Server. Da CERN-Proxys FTP nicht unterstützen, müssen Anwendungen, die ausschließlich einen CERN-Proxy verwenden, die [**InternetOpenUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwenden. Weitere Informationen zur Verwendung von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)finden Sie unter Direktes Zugreifen [auf URLs.](handling-uniform-resource-locators.md)
+Mit WinINet können Anwendungen in Verzeichnissen und Dateien auf einem FTP-Server navigieren und diese bearbeiten. Da CERN-Proxys FTP nicht unterstützen, müssen Anwendungen, die ausschließlich einen CERN-Proxy verwenden, die [**InternetOpenUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwenden. Weitere Informationen zur Verwendung von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)finden Sie unter Direkter Zugriff [auf URLs.](handling-uniform-resource-locators.md)
 
 Um eine FTP-Sitzung zu starten, verwenden [**Sie InternetConnect,**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) um das Sitzungshand handle zu erstellen.
 
@@ -31,7 +31,7 @@ Verwenden Sie [**die FtpCreateDirectory-Funktion,**](/windows/desktop/api/Winine
 
 Um Dateien oder Verzeichnisse umzubenennen, kann die Anwendung [**FtpRenameFile aufrufen.**](/windows/desktop/api/Wininet/nf-wininet-ftprenamefilea) Diese Funktion ersetzt den ursprünglichen Namen durch den neuen Namen, der an die Funktion übergeben wird. Der Name der Datei oder des Verzeichnisses kann relativ zum aktuellen Verzeichnis oder ein vollqualifizierter Name sein.
 
-Zum Hochladen oder Platzieren von Dateien auf einem FTP-Server kann die Anwendung entweder [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) oder [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) (zusammen [**mit InternetWriteFile) verwenden.**](/windows/desktop/api/Wininet/nf-wininet-internetwritefile) [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) kann verwendet werden, wenn die Datei bereits lokal vorhanden ist, während [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) und [**InternetWriteFile**](/windows/desktop/api/Wininet/nf-wininet-internetwritefile) verwendet werden können, wenn Daten in eine Datei auf dem FTP-Server geschrieben werden müssen.
+Zum Hochladen oder Platzieren von Dateien auf einem FTP-Server kann die Anwendung entweder [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) oder [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) (zusammen mit [**InternetWriteFile) verwenden.**](/windows/desktop/api/Wininet/nf-wininet-internetwritefile) [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) kann verwendet werden, wenn die Datei bereits lokal vorhanden ist, während [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) und [**InternetWriteFile**](/windows/desktop/api/Wininet/nf-wininet-internetwritefile) verwendet werden können, wenn Daten in eine Datei auf dem FTP-Server geschrieben werden müssen.
 
 Zum Herunterladen oder Herunterladen von Dateien kann die Anwendung entweder [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) oder [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) (mit [**InternetReadFile) verwenden.**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) wird verwendet, um eine Datei von einem FTP-Server abzurufen und lokal zu speichern, während [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) und [**InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) verwendet werden können, um zu steuern, wohin die heruntergeladenen Informationen gehen (z. B. kann die Anwendung die Informationen in einem Bearbeitungsfeld anzeigen).
 
@@ -39,7 +39,7 @@ Löschen Sie Dateien auf einem FTP-Server mithilfe der [**FtpDeleteFile-Funktion
 
 ## <a name="ftp-function-handles"></a>FTP-Funktionshandles
 
-Damit die FTP-Funktionen ordnungsgemäß funktionieren, benötigen sie bestimmte [**HINTERNET-Handles.**](appendix-a-hinternet-handles.md) Diese Handles müssen in einer bestimmten Reihenfolge erstellt werden, beginnend mit dem von InternetOpen erstellten [**Stammhandles.**](/windows/desktop/api/Wininet/nf-wininet-internetopena) [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) kann dann ein FTP-Sitzungshand handle erstellen.
+Damit die FTP-Funktionen ordnungsgemäß funktionieren, benötigen sie bestimmte [**HINTERNET-Handles.**](appendix-a-hinternet-handles.md) Diese Handles müssen in einer bestimmten Reihenfolge erstellt werden, beginnend mit dem Von [**InternetOpen erstellten Stammhandles.**](/windows/desktop/api/Wininet/nf-wininet-internetopena) [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) kann dann ein FTP-Sitzungshand handle erstellen.
 
 Das folgende Diagramm zeigt die Funktionen, die vom FTP-Sitzungshand handle abhängig sind, das von [**InternetConnect zurückgegeben wird.**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) Die schattierten Felder stellen Funktionen dar, die [**HINTERNET-Handles**](appendix-a-hinternet-handles.md) zurückgeben, während die einfachen Felder Funktionen darstellen, die das HINTERNET-Handle verwenden, das von der Funktion erstellt wurde, von der sie abhängen.
 
@@ -53,11 +53,11 @@ Weitere Informationen finden Sie unter [HINTERNET Handles](appendix-a-hinternet-
 
 ## <a name="using-the-wininet-functions-for-ftp-sessions"></a>Verwenden der WinINet-Funktionen für FTP-Sitzungen
 
-Die folgenden Funktionen werden während FTP-Sitzungen verwendet. Diese Funktionen werden von CERN-Proxys nicht erkannt. Anwendungen, die über CERN-Proxys funktionieren müssen, sollten [**InternetOpenUrl verwenden**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) und direkt auf die Ressourcen zugreifen. Weitere Informationen zum direkten Zugriff auf Ressourcen finden Sie unter [Direkter Zugriff auf URLs.](handling-uniform-resource-locators.md)
+Die folgenden Funktionen werden während FTP-Sitzungen verwendet. Diese Funktionen werden von CERN-Proxys nicht erkannt. Anwendungen, die über CERN-Proxys funktionieren müssen, sollten [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwenden und direkt auf die Ressourcen zugreifen. Weitere Informationen zum direkten Zugriff auf Ressourcen finden Sie unter [Direkter Zugriff auf URLs.](handling-uniform-resource-locators.md)
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                                                                                                    |
+| Funktion                                                 | Beschreibung                                                                                                                                                    |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**FtpCreateDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya)         | Erstellt ein neues Verzeichnis auf dem Server. Diese Funktion erfordert ein handle, das von [**InternetConnect erstellt wird.**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)                                  |
 | [**FtpDeleteFile**](/windows/desktop/api/Wininet/nf-wininet-ftpdeletefilea)                   | Löscht eine Datei vom Server. Diese Funktion erfordert ein handle, das von [**InternetConnect erstellt wird.**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)                                         |
@@ -81,7 +81,7 @@ Die Anwendung richtet eine FTP-Sitzung ein, indem [**sie InternetConnect für**]
 
 Die Werte INTERNET \_ DEFAULT FTP PORT und INTERNET INVALID PORT NUMBER können für die \_ \_ \_ \_ \_ Portnummer verwendet werden. INTERNET \_ DEFAULT FTP PORT verwendet den \_ \_ FTP-Standardport, der Diensttyp muss jedoch weiterhin festgelegt werden. INTERNET \_ INVALID PORT NUMBER verwendet den Standardwert für den \_ \_ angegebenen Diensttyp.
 
-Die Werte für Benutzername und Kennwort können auf NULL festgelegt **werden.** Wenn beide Werte auf **NULL** festgelegt sind, verwendet [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) "anonymous" für den Benutzernamen und die E-Mail-Adresse des Benutzers für das Kennwort. Wenn nur das Kennwort auf **NULL festgelegt** ist, wird der an [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) übergebene Benutzername für den Benutzernamen und eine leere Zeichenfolge für das Kennwort verwendet. Wenn keiner der Werte **NULL ist,** werden der Benutzername und das Kennwort für [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet.
+Die Werte für Benutzername und Kennwort können auf NULL **festgelegt werden.** Wenn beide Werte auf **NULL** festgelegt sind, verwendet [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) "anonymous" für den Benutzernamen und die E-Mail-Adresse des Benutzers für das Kennwort. Wenn nur das Kennwort auf **NULL festgelegt** ist, wird der an [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) übergebene Benutzername für den Benutzernamen und eine leere Zeichenfolge für das Kennwort verwendet. Wenn keiner der Werte **NULL ist,** werden der Benutzername und das Kennwort für [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet.
 
 ### <a name="enumerating-directories"></a>Aufzählen von Verzeichnissen
 
@@ -91,7 +91,7 @@ Um zu ermitteln, ob die von [**FtpFindFirstFile**](/windows/desktop/api/Wininet/
 
 Wenn die Anwendung Änderungen auf dem FTP-Server vornimmt oder sich der FTP-Server häufig ändert, sollten die [FLAGs INTERNET \_ FLAG NO \_ CACHE \_ \_ WRITE](api-flags.md) und [INTERNET FLAG \_ \_ RELOAD](api-flags.md) in [**FtpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)festgelegt werden. Diese Flags stellen sicher, dass die vom FTP-Server abgerufenen Verzeichnisinformationen aktuell sind.
 
-Nachdem die Anwendung die Verzeichnisenumeration abgeschlossen hat, muss die Anwendung [**internetCloseHandle**](/windows/desktop/api/Wininet/nf-wininet-internetclosehandle) für das von [**FtpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)erstellte Handle aufrufen. Bis dieses Handle geschlossen ist, kann die Anwendung [**ftpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) für das von [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)erstellte Sitzungshandle nicht erneut aufrufen. Wenn [**ftpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) auf dem gleichen Sitzungshandle aufgerufen wird, bevor der vorherige Aufruf derselben Funktion geschlossen wird, schlägt die Funktion fehl und gibt [ERROR FTP TRANSFER IN \_ \_ \_ \_ PROGRESS](wininet-errors.md)zurück.
+Nachdem die Anwendung die Verzeichnisenumeration abgeschlossen hat, muss die Anwendung [**internetCloseHandle**](/windows/desktop/api/Wininet/nf-wininet-internetclosehandle) für das von [**FtpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea)erstellte Handle aufrufen. Bis dieses Handle geschlossen ist, kann die Anwendung [**ftpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) für das von [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)erstellte Sitzungshandle nicht erneut aufrufen. Wenn ein Aufruf von [**FtpFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) auf demselben Sitzungshandle erfolgt, bevor der vorherige Aufruf derselben Funktion geschlossen wird, schlägt die Funktion fehl und gibt [ERROR FTP TRANSFER IN \_ \_ \_ \_ PROGRESS](wininet-errors.md)zurück.
 
 Im folgenden Beispiel wird der Inhalt eines FTP-Verzeichnisses in ein Listenfeld-Steuerelement auflistet. Der *hConnection-Parameter* ist ein Handle, das von der [**InternetConnect-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) zurückgegeben wird, nachdem eine FTP-Sitzung eingerichtet wurde. Beispielquellcode für die InternetErrorOut-Funktion, auf die in diesem Beispiel verwiesen wird, finden Sie im Thema [Behandeln von Fehlern.](appendix-c-handling-errors.md)
 
@@ -237,7 +237,7 @@ ChangeFtpDirError:
 
 WinINet bietet die Möglichkeit, Verzeichnisse auf einem FTP-Server zu erstellen und zu entfernen, für den die Anwendung über die erforderlichen Berechtigungen verfügt. Wenn sich die Anwendung bei einem Server mit einem bestimmten Benutzernamen und Kennwort anmelden muss, können die Werte beim Erstellen des FTP-Sitzungshandle in [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet werden.
 
-Die [**FtpCreateDirectory-Funktion**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya) verwendet ein gültiges FTP-Sitzungshandle und eine **auf NULL** endende Zeichenfolge, die entweder einen vollqualifizierten Pfad oder einen Namen relativ zum aktuellen Verzeichnis enthält und ein Verzeichnis auf dem FTP-Server erstellt.
+Die [**FtpCreateDirectory-Funktion**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya) verwendet ein gültiges FTP-Sitzungshandle und eine **mit NULL** endende Zeichenfolge, die entweder einen vollqualifizierten Pfad oder einen Namen relativ zum aktuellen Verzeichnis enthält und ein Verzeichnis auf dem FTP-Server erstellt.
 
 Das folgende Beispiel zeigt zwei separate Aufrufe von [**FtpCreateDirectory**](/windows/desktop/api/Wininet/nf-wininet-ftpcreatedirectorya). In beiden Beispielen ist hFtpSession das Sitzungshandle, das von der [**InternetConnect-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) erstellt wurde, und das Stammverzeichnis ist das aktuelle Verzeichnis.
 
@@ -249,7 +249,7 @@ FtpCreateDirectory( hFtpSession, "test" );
 FtpCreateDirectory( hFtpSession, "\\test\\example" );
 ```
 
-Die [**FtpRemoveDirectory-Funktion**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya) verwendet ein Sitzungshandle und eine **mit NULL** endende Zeichenfolge, die entweder einen vollqualifizierten Pfad oder einen Namen relativ zum aktuellen Verzeichnis enthält und dieses Verzeichnis vom FTP-Server entfernt.
+Die [**FtpRemoveDirectory-Funktion**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya) verwendet ein Sitzungshandle und eine **auf NULL** endende Zeichenfolge, die entweder einen vollqualifizierten Pfad oder einen Namen relativ zum aktuellen Verzeichnis enthält und dieses Verzeichnis vom FTP-Server entfernt.
 
 Das folgende Beispiel zeigt zwei Beispielaufrufe von [**FtpRemoveDirectory.**](/windows/desktop/api/Wininet/nf-wininet-ftpremovedirectorya) Bei beiden Aufrufen ist hFtpSession das Sitzungshandle, das von der [**InternetConnect-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) erstellt wurde, und das Stammverzeichnis ist das aktuelle Verzeichnis. Das Stammverzeichnis enthält das Verzeichnis "test" und im Verzeichnis "test" das Verzeichnis "example".
 
@@ -356,7 +356,7 @@ Wenn die URL der Datei verfügbar ist, kann die Anwendung [**InternetOpenUrl**](
 
 Wenn die Anwendung ein FTP-Sitzungshandle für den Server mit [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta)eingerichtet hat, kann die Anwendung [**FtpOpenFile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) mit dem vorhandenen Dateinamen und mit einem neuen Namen für die lokal gespeicherte Datei aufrufen. Die Anwendung kann dann [**InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) verwenden, um die Datei herunterzuladen. Dies ermöglicht der Anwendung eine strengere Kontrolle über den Download und behält die Verbindung mit dem FTP-Server bei, sodass weitere Befehle ausgeführt werden können.
 
-Wenn die Anwendung keine strenge Kontrolle über den Download benötigt, kann die Anwendung [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) mit dem FTP-Sitzungshandle, dem Remotedateinamen und dem lokalen Dateinamen verwenden, um die Datei abzurufen. [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) führt die gesamte Buchhaltung und den Mehraufwand aus, die mit dem Lesen einer Datei von einem FTP-Server und dem lokalen Speichern verbunden sind.
+Wenn die Anwendung keine strenge Kontrolle über den Download benötigt, kann die Anwendung [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) mit dem FTP-Sitzungshandle, dem Remotedateinamen und dem lokalen Dateinamen verwenden, um die Datei abzurufen. [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) führt die gesamte Buchhaltung und den Mehraufwand aus, der mit dem Lesen einer Datei von einem FTP-Server und dem lokalen Speichern verbunden ist.
 
 Im folgenden Beispiel wird eine Datei von einem FTP-Server abgerufen und lokal gespeichert. Der Name der Datei auf dem FTP-Server stammt aus dem Bearbeitungsfeld im übergeordneten Dialogfeld, dessen IDC im *nFtpFileNameId-Parameter* übergeben wird, und der lokale Name, unter dem die Datei gespeichert wird, stammt aus dem Bearbeitungsfeld, dessen IDC im *nLocalFileNameId-Parameter* übergeben wird. Das *hConnection-Handle* wurde von [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) nach dem Einrichten einer FTP-Sitzung erstellt.
 

@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird die Arbeitsstation mithilfe der Lock Workstation-Funktion gesperrt. Das System zeigt das Dialogfeld Arbeitsstation sperren an. Der Dialogfeld Text besagt, dass die Arbeitsstation verwendet wird und vom Benutzer gesperrt wurde.
+description: Im folgenden Beispiel wird die Arbeitsstation mithilfe der LockWorkStation-Funktion gesperrt. Das System zeigt das Dialogfeld Arbeitsstation sperren an. Der Text des Dialogfelds besagt, dass die Arbeitsstation verwendet wird und vom Benutzer gesperrt wurde.
 ms.assetid: 7cbf9a0a-dfab-42e6-9a71-bb240121f59f
-title: Vorgehensweise beim Sperren der Arbeitsstation
+title: Sperren der Arbeitsstation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa6c198816613a13914c44a5a51f5317e2019f92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b349a3e41cf7a8059cb24fc0c3ade66d179777e70fbd84bd21cac3d46502f1cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117963807"
 ---
-# <a name="how-to-lock-the-workstation"></a>Vorgehensweise beim Sperren der Arbeitsstation
+# <a name="how-to-lock-the-workstation"></a>Sperren der Arbeitsstation
 
-Im folgenden Beispiel wird die Arbeitsstation mithilfe der [**Lock Workstation**](/windows/desktop/api/Winuser/nf-winuser-lockworkstation) -Funktion gesperrt. Das System zeigt das Dialogfeld **Arbeitsstation sperren** an. Der Dialogfeld Text besagt, dass die Arbeitsstation verwendet wird und vom Benutzer gesperrt wurde.
+Im folgenden Beispiel wird die Arbeitsstation mithilfe der [**LockWorkStation-Funktion**](/windows/desktop/api/Winuser/nf-winuser-lockworkstation) gesperrt. Das System zeigt das Dialogfeld **Arbeitsstation sperren** an. Der Text des Dialogfelds besagt, dass die Arbeitsstation verwendet wird und vom Benutzer gesperrt wurde.
 
 
 ```C++
@@ -33,9 +33,9 @@ void main()
 
 
 
-Überprüfen Sie, ob das Fenster sichtbar ist, um zu bestimmen, ob die Arbeitsstation gesperrt ist.
+Um zu bestimmen, ob die Arbeitsstation gesperrt ist, testen Sie, ob das Fenster sichtbar ist.
 
-Die Arbeitsstation kann vom Benutzer oder einem Administrator entsperrt werden. Drücken Sie zum Entsperren des Systems STRG + ALT + ENTF, und melden Sie sich an. Um bei der Anmeldung des Benutzers eine Benachrichtigung zu erhalten, verwenden Sie die [**wzregistersessionnotification**](/windows/win32/api/wtsapi32/nf-wtsapi32-wtsregistersessionnotification) -Funktion, um sich für den Empfang von [**WM- \_ \_ Änderungs**](../termserv/wm-wtssession-change.md) Nachrichten zu registrieren. Wenn diese Meldung empfangen wird, überprüfen Sie, ob der *wParam* -Parameter gleich der WTS- \_ Sitzungs \_ Sperre ist.
+Die Arbeitsstation kann vom Benutzer oder einem Administrator entsperrt werden. Drücken Sie STRG+ALT+ENTF, und melden Sie sich an, um das System zu entsperren. Um Benachrichtigungen zu erhalten, wenn sich der Benutzer anmeldet, verwenden Sie die [**WTSRegisterSessionNotification-Funktion,**](/windows/win32/api/wtsapi32/nf-wtsapi32-wtsregistersessionnotification) um sich für den Empfang von [**WM \_ WTSSESSION \_ CHANGE-Meldungen**](../termserv/wm-wtssession-change.md) zu registrieren. Wenn diese Meldung empfangen wird, überprüfen Sie, ob der *wParam-Parameter* gleich WTS \_ SESSION LOCK \_ ist.
 
  
 

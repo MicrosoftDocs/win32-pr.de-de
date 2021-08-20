@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromrip-stoprip-Methode
-description: Die stoprip-Methode hält den CD-einreißen-Prozess an.
+title: IWMPCiererRip stopRip-Methode
+description: Die stopRip-Methode beendet den CD-Vorgang.
 ms.assetid: c2565d0d-1203-4bd3-9d43-58e971e6ec88
 keywords:
-- stoprip-Methoden Fenster Media Player
-- stoprip-Methode, Windows Media Player, iwmpcdromrip-Schnittstelle
-- Iwmpcdromrip-Schnittstelle, Windows Media Player, stoprip-Methode
+- stopRip-Windows Media Player
+- stopRip-Methode Windows Media Player , IWMPCiererRip-Schnittstelle
+- IWMPCiererRip-Schnittstelle Windows Media Player , stopRip-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff8c45eacf497faac4f89fc37334a17d881db085
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de46c684c102442fca8e9e8b70de86aae524f92a754818e1b83d05068c1a01f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116083"
 ---
-# <a name="iwmpcdromripstoprip-method"></a>Iwmpcdromrip:: stoprip-Methode
+# <a name="iwmpcdromripstoprip-method"></a>IWMPCiererRip::stopRip-Methode
 
-Die **stoprip** -Methode hält den CD-einreißen-Prozess an.
+Die **stopRip-Methode** beendet den CD-Vorgang.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,13 +69,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iwmpcdromrip-Schnittstelle (VB und c#)**](iwmpcdromrip--vb-and-c.md)
+[**IWMPCiererRip-Schnittstelle (VB und C#)**](iwmpcdromrip--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromrip. startrip**](wmplibiwmpcdromrip-iwmpcdromrip-startrip--vb-and-c.md)
+[**IWMPCiererRip.startRip**](wmplibiwmpcdromrip-iwmpcdromrip-startrip--vb-and-c.md)
 </dt> <dt>
 
-[**Ripping einer CD**](ripping-a-cd.md)
+[**Erstellen einer CD**](ripping-a-cd.md)
 </dt> </dl>
 
  

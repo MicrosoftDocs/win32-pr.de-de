@@ -1,7 +1,7 @@
 ---
-description: Die getdialogsize-Funktion Ruft die Größe eines Ressourcen Dialogfelds ab.
+description: Die GetDialogSize-Funktion ruft die Größe eines Ressourcendialogfelds ab.
 ms.assetid: b6c42f96-0381-493a-9503-f3bd4c6a8e1e
-title: Getdialogsize-Funktion (wxutil. h)
+title: GetDialogSize-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 34eff1882306c85446f7cc7708efea3b17fcf7e3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f1f2631e169549895a1f74ce571b2abfeeee8cd77ac7cb3c4dfc5aa6913a6d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564950"
 ---
-# <a name="getdialogsize-function"></a>Getdialogsize-Funktion
+# <a name="getdialogsize-function"></a>GetDialogSize-Funktion
 
-Die **getdialogsize** -Funktion Ruft die Größe eines Ressourcen Dialogfelds ab.
+Die **GetDialogSize-Funktion** ruft die Größe eines Ressourcendialogfelds ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,40 +48,40 @@ BOOL WINAPI GetDialogSize(
 *iResourceID* 
 </dt> <dd>
 
-Der Ressourcen Bezeichner des Dialog Felds.
+Ressourcenbezeichner des Dialogfelds.
 
 </dd> <dt>
 
-*pdlgproc* 
+*pDlgProc* 
 </dt> <dd>
 
-Zeiger auf die Dialogfeld Prozedur.
+Zeiger auf die Dialogfeldprozedur.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der Wert, der in der "WM \_ InitDialog"-Meldung übergeben wird, die nach der Erstellung an das temporäre Dialogfeld gesendet wurde.
+Der Wert, der in der WM INITDIALOG-Nachricht übergeben wird, die direkt nach derEntarbeitung an das temporäre \_ Dialogfeld gesendet wird.
 
 </dd> <dt>
 
 *pResult* 
 </dt> <dd>
 
-Ein Zeiger auf eine **Größen** Struktur, die die Abmessungen des Dialog Felds in Bildschirm Pixel empfängt.
+Zeiger auf eine **SIZE-Struktur,** die die Dimensionen des Dialogfelds in Bildschirmpixeln empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Dialogfeld Ressource gefunden wurde, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die Dialogfeldressource gefunden wurde, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eigenschaften Seiten können diese Funktion verwenden, um die tatsächliche Anzeige Größe zurückzugeben, die Sie benötigen. Die meisten Eigenschaften Seiten sind Dialogfelder und verfügen daher über Dialogfeld Vorlagen, die in Ressourcen Dateien gespeichert werden. Vorlagen verwenden Dialogfeld Einheiten, die nicht direkt auf Bildschirm Pixel zugeordnet werden. Allerdings muss die [**GetPageInfo**](cbasepropertypage-getpageinfo.md) -Funktion einer Eigenschaften Seite die tatsächliche Anzeige Größe in Pixel zurückgeben. Die Eigenschaften Seite kann aufrufen `GetDialogSize` , um die Anzeige Größe zu berechnen.
+Eigenschaftenseiten können mit dieser Funktion die tatsächliche Anzeigegröße zurückgeben, die sie benötigen. Die meisten Eigenschaftenseiten sind Dialogfelder und verfügen daher über Dialogfeldvorlagen, die in Ressourcendateien gespeichert sind. Vorlagen verwenden Dialogfeldeinheiten, die nicht direkt den Bildschirmpixeln zuordnen. Die [**GetPageInfo-Funktion**](cbasepropertypage-getpageinfo.md) einer Eigenschaftenseite muss jedoch die tatsächliche Anzeigegröße in Pixel zurückgeben. Die Eigenschaftenseite kann `GetDialogSize` aufrufen, um die Anzeigegröße zu berechnen.
 
-Diese Funktion erstellt eine temporäre Instanz des Dialog Felds. Um zu vermeiden, dass das Dialogfeld auf dem Bildschirm angezeigt wird, sollte die Dialogfeld Vorlage in der Ressourcen Datei nicht über eine Eigenschaft vom Typ "WS Visible" verfügen \_ .
+Diese Funktion erstellt eine temporäre Instanz des Dialogfelds. Um zu vermeiden, dass das Dialogfeld auf dem Bildschirm angezeigt wird, sollte die Dialogfeldvorlage in der Ressourcendatei keine WS \_ VISIBLE-Eigenschaft haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Diese Funktion erstellt eine temporäre Instanz des Dialog Felds. Um zu vermeide
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Diese Funktion erstellt eine temporäre Instanz des Dialog Felds. Um zu vermeide
 
 <dl> <dt>
 
-[Hilfsfunktionen für Eigenschaften Seiten](property-page-helper-functions.md)
+[Hilfsfunktionen für Eigenschaftenseiten](property-page-helper-functions.md)
 </dt> </dl>
 
  

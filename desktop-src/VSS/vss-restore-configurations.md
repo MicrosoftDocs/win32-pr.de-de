@@ -1,5 +1,5 @@
 ---
-description: Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn während der Wiederherstellung Schwierigkeiten auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
+description: Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn probleme während der Wiederherstellung auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
 ms.assetid: 2cb963a8-7077-4419-96d8-cba0fd011e4f
 title: VSS-Wiederherstellungskonfigurationen
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118344199"
 ---
 # <a name="vss-restore-configurations"></a>VSS-Wiederherstellungskonfigurationen
 
-Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn während der Wiederherstellung Schwierigkeiten auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
+Die Dateiwiederherstellung auf einem ausgeführten System kann problematisch sein. Es ist wichtig, dass ausgeführte Anwendungen (Writer) angeben, was zu tun ist, wenn probleme während der Wiederherstellung auftreten, z. B. wenn die wiederhergestellte Datei derzeit verwendet wird.
 
-In VSS haben Writer zwei sich ergänzende Möglichkeiten zum Verwalten von Wiederherstellungen: Wiederherstellungsmethoden [*und*](vssgloss-r.md) [*Wiederherstellungsziele.*](vssgloss-r.md)
+Unter VSS verfügen Writer über zwei sich ergänzende Methoden zum Verwalten von Wiederherstellungen:[*Wiederherstellungsmethoden*](vssgloss-r.md) und [*Wiederherstellungsziele.*](vssgloss-r.md)
 
-Darüber hinaus können Anfordernde Dateien an zuvor nicht angegebenen Speicherorten wiederherstellen und Writer benachrichtigen (siehe [**IVssBackupComponents::AddNewTarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)).
+Darüber hinaus können Anforderer Dateien an zuvor nicht angegebenen Speicherorten wiederherstellen und Writer benachrichtigen (siehe [**IVssBackupComponents::AddNewTarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)).
 
-Die Wiederherstellungsmethode (auch das ursprüngliche Wiederherstellungsziel aufrufen) wird von einem Writer zum Zeitpunkt der Sicherung angegeben und legt eine writerweite Definition der Methode fest, die verwendet werden soll, um alle Komponenten in der Zukunft wiederherzustellen. Alle Dateien und Komponenten, die von einem Writer verwaltet werden, verwenden dieselbe Wiederherstellungsmethode.
+Die Wiederherstellungsmethode (auch das ursprüngliche Wiederherstellungsziel aufrufen) wird von einem Writer zu einem Sicherungszeitpunkt angegeben und legt eine writerweite Definition der Methode fest, die in Zukunft zum Wiederherstellen aller komponenten verwendet werden soll. Alle Dateien und Komponenten, die von einem Writer verwaltet werden, verwenden dieselbe Wiederherstellungsmethode.
 
-Mit Wiederherstellungszielen können Writer ändern, wie bestimmte Komponenten zur Wiederherstellungszeit wiederhergestellt werden sollen. Im Gegensatz zu Wiederherstellungsmethoden werden Wiederherstellungsziele für einen Komponentensatz definiert.
+Mit Wiederherstellungszielen können Writer ändern, wie bestimmte Komponenten zum Zeitpunkt der Wiederherstellung wiederhergestellt werden sollen. Im Gegensatz zu Wiederherstellungsmethoden werden Wiederherstellungsziele für einen Komponentensatz definiert.
 
 Eine ausführliche Erläuterung der Verwendung von Wiederherstellungsmethoden und Wiederherstellungszielen finden Sie in den unten aufgeführten Themen:
 
@@ -30,7 +30,7 @@ Eine ausführliche Erläuterung der Verwendung von Wiederherstellungsmethoden un
 -   [Festlegen von VSS-Wiederherstellungszielen](setting-vss-restore-targets.md)
 -   [Festlegen von VSS-Wiederherstellungsoptionen](setting-vss-restore-options.md)
 
-(Informationen zu Wiederherstellungen, die diese Mechanismen nicht verwenden, finden Sie unter [Wiederherstellungen ohne Writer-Beteiligung.)](restores-without-writer-participation.md)
+(Informationen zu Wiederherstellungen, die diese Mechanismen nicht verwenden, finden Sie unter [Wiederherstellungen ohne Schreibteilnahme.)](restores-without-writer-participation.md)
 
  
 

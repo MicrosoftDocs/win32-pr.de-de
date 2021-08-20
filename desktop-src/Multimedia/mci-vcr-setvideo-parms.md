@@ -1,9 +1,9 @@
 ---
-title: MCI_VCR_SETVIDEO_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI \_ VCR- \_ setvideo \_ -Parameter enthält Parameter für den MCI \_ setvideo-Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_SETVIDEO_PARMS -Struktur (Vcr.h)
+description: Die MCI VCR SETVIDEO PARMS-Struktur enthält Parameter für den \_ \_ \_ \_ MCI-Befehl SETVIDEO für Video cassette-Aufzeichnungen.
 ms.assetid: d14b2c9f-6068-4902-8db6-fc081bcd01c0
 keywords:
-- MCI_VCR_SETVIDEO_PARMS Struktur Windows Multimedia
+- MCI_VCR_SETVIDEO_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 050e6452b3952a9d15515de01c2ca94a87af2f29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cf260804a6e993ba133ca450a51802a0f43db3aa3d0e557ba684b8a86bcfb7dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784130"
 ---
-# <a name="mci_vcr_setvideo_parms-structure"></a>Struktur von MCI \_ VCR- \_ setvideo- \_ Parametern
+# <a name="mci_vcr_setvideo_parms-structure"></a>MCI \_ VCR \_ SETVIDEO \_ PARMS-Struktur
 
-Die Struktur der **MCI \_ VCR- \_ setvideo \_** -Parameter enthält Parameter für den [**MCI \_ setvideo**](mci-setvideo.md) -Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ SETVIDEO \_ PARMS-Struktur** enthält Parameter für den [**\_ MCI-Befehl SETVIDEO**](mci-setvideo.md) für Video cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ typedef struct tagMCI_VCR_SETVIDEO_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwtrack**
+**dwTrack**
 </dt> <dd>
 
-Betroffener Titel.
+Betroffene Spur.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Typ der Eingabe-oder überwachten Eingabe.
+Typ der Eingabe oder überwachten Eingabe.
 
 </dd> <dt>
 
-**dwnumber**
+**dwNumber**
 </dt> <dd>
 
-Die für zu verwendende Video Eingabe (des Typs, der im **dwto** -Member angegeben ist).
+Zu verwendende Videoeingabe (des im **dwTo-Member** angegebenen Typs).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -91,13 +91,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ setvideo**](mci-setvideo.md)
+[**MCI \_ SETVIDEO**](mci-setvideo.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

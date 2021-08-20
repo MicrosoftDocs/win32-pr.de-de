@@ -1,76 +1,76 @@
 ---
-title: Beispielanwendungen (Peer Infrastructure)
-description: Die folgenden Beispielanwendungen sind im Windows XP-Peer-SDK enthalten.
+title: Beispielanwendungen (Peerinfrastruktur)
+description: Die folgenden Beispielanwendungen sind im WINDOWS XP Peer SDK enthalten.
 ms.assetid: 26c45360-f232-4e29-90b5-44ccacb5a9c3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c15e2bf3162151a4cbf18547fdfe482c7ea77fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3999012d8c5abd04e2e3e5b1c90aade37dc0ce514893a3bf9fb04b0141509eab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119287810"
 ---
-# <a name="sample-applications-peer-infrastructure"></a>Beispielanwendungen (Peer Infrastructure)
+# <a name="sample-applications-peer-infrastructure"></a>Beispielanwendungen (Peerinfrastruktur)
 
-Die folgenden Beispielanwendungen sind im Windows XP-Peer-SDK enthalten. Die Beispiele helfen Ihnen bei der Entwicklung eigener Peer Anwendungen mithilfe der Peer Infrastruktur.
+Die folgenden Beispielanwendungen sind im WINDOWS XP Peer SDK enthalten. Die Beispiele können Sie bei der Entwicklung eigener Peeranwendungen mithilfe der Peerinfrastruktur unterstützen.
 
--   [Graph-Chat](#graph-chat)
--   [Gruppen Chat](#group-chat)
--   [Gruppen Browser](#group-browser)
+-   [Graph Chat](#graph-chat)
+-   [Gruppenchat](#group-chat)
+-   [Gruppenbrowser](#group-browser)
 
-## <a name="graph-chat"></a>Graph-Chat
+## <a name="graph-chat"></a>Graph Chat
 
-Die Beispielanwendung Graph Chat ist eine einfache Chat-Anwendung, die die Verwendung der Peer-graphingapis und des PNRP-Namespace Anbieters (Peer Name Resolution Protocol) mit der Winsock 2-API veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
+Die Graph Chat-Beispielanwendung ist eine einfache Chatanwendung, die die Verwendung der Peer Graphing-APIs und des PNRP-Namespaceanbieters (Peer Name Resolution Protocol) mit der Winsock 2-API veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
 
--   Erstellen eines Diagramms
--   Herstellen einer Verbindung mit einem vorhandenen Diagramm
+-   Erstellen eines Graphen
+-   Herstellen einer Verbindung mit einem vorhandenen Graphen
 -   Trennen der Verbindung mit einem vorhandenen Diagramm
--   Auflisten von Peer Entitäten
+-   Aufzählen von Peerentitäten
 -   Hinzufügen von Datensätzen zum Diagramm
--   Verwenden von direkten Verbindungen mit einem Diagramm
--   Verwenden der Benachrichtigungs-und Ereignis Infrastruktur mit Diagrammen
+-   Verwenden direkter Verbindungen mit einem Graphen
+-   Verwenden der Benachrichtigungs- und Ereignisinfrastruktur mit Diagrammen
 -   Registrieren von Namen mit PNRP
 -   Auflösen von Namen mit PNRP
--   Aufheben der Registrierung von Namen bei PNRP
+-   Aufheben der Registrierung von Namen mit PNRP
 
-## <a name="group-chat"></a>Gruppen Chat
+## <a name="group-chat"></a>Gruppenchat
 
-Die Gruppenchat-Beispielanwendung ist eine einfache Chat-Anwendung, die die Verwendung der Peer Gruppierung und der Identitäts-Manager-APIs veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
+Die Beispielanwendung "Gruppenchat" ist eine einfache Chatanwendung, die die Verwendung der Peer grouping- und Identity Manager-APIs veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
 
 -   Erstellen einer Identität
 -   Erstellen und Abrufen von Identitätsinformationen
--   Auflisten von Identitäten
--   Auflisten von Gruppen, die einer Identität zugeordnet sind
+-   Aufzählen von Identitäten
+-   Aufzählen von Gruppen, die einer Identität zugeordnet sind
 -   Erstellen einer Gruppe
 -   Erstellen von Einladungen für eine Gruppe
 -   Herstellen einer Verbindung mit einer vorhandenen Gruppe
--   Trennen der Verbindung zu einer vorhandenen Gruppe
--   Extrahieren von Informationen aus den Gruppen Eigenschaften
--   Verwenden von direkten Verbindungen mit einer Gruppe
+-   Trennen der Verbindung mit einer vorhandenen Gruppe
+-   Extrahieren von Informationen aus den Gruppeneigenschaften
+-   Verwenden direkter Verbindungen mit einer Gruppe
 -   Verwenden der Enumerationsfunktionen innerhalb einer Gruppe
--   Auflisten von Gruppenmitgliedern
+-   Aufzählen von Gruppenmitgliedern
 -   Hinzufügen von Datensätzen zu einer Gruppe
--   Verwenden der Benachrichtigungs-und Ereignis Infrastruktur mit Gruppen
+-   Verwenden der Benachrichtigungs- und Ereignisinfrastruktur mit Gruppen
 
-## <a name="group-browser"></a>Gruppen Browser
+## <a name="group-browser"></a>Gruppenbrowser
 
-Die Beispielanwendung für den Gruppen Browser ist ein einfaches Peer Gruppen Verwaltungs Tool, das die Verwendung der Peer Gruppierung und der Identitäts-Manager-APIs veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
+Die Beispielanwendung "Gruppenbrowser" ist ein einfaches Peergruppenverwaltungstool, das die Verwendung der Peer grouping- und Identity Manager-APIs veranschaulicht. Die Anwendung veranschaulicht die folgenden Aufgaben:
 
--   Auflisten von PNRP-Clouds
--   Auflisten von Identitäten
--   Auflisten von Gruppen, die einer Identität zugeordnet sind
+-   Aufzählen von PNRP-Clouds
+-   Aufzählen von Identitäten
+-   Aufzählen von Gruppen, die einer Identität zugeordnet sind
 -   Erstellen und Löschen von Identitäten
--   Erstellen einer Gruppe und Zuordnen einer Gruppe zu einer Identität
--   Erstellen einer Einladung und Speichern der Einladung
--   Öffnen einer Einladung und deren Verwendung zum beitreten zu einer Gruppe
--   Löschen von Identitäts-und Gruppenmitgliedschaften
+-   Erstellen einer Gruppe und Zuordnen zu einer Identität
+-   Erstellen und Speichern einer Einladung
+-   Öffnen einer Einladung und Verwenden dieser Einladung zum Beitreten zu einer Gruppe
+-   Löschen einer Identität und Gruppenmitgliedschaft
 -   Herstellen einer Verbindung mit einer vorhandenen Gruppe
--   Trennen der Verbindung zu einer vorhandenen Gruppe
--   Extrahieren von Informationen aus Gruppen Eigenschaften
+-   Trennen der Verbindung mit einer vorhandenen Gruppe
+-   Extrahieren von Informationen aus Gruppeneigenschaften
 -   Verwenden der Enumerationsfunktionen innerhalb einer Gruppe
--   Auflisten von Gruppenmitgliedern
--   Verwenden der Benachrichtigungs-und Ereignis Infrastruktur mit Gruppen
+-   Aufzählen von Gruppenmitgliedern
+-   Verwenden der Benachrichtigungs- und Ereignisinfrastruktur mit Gruppen
 
  
 

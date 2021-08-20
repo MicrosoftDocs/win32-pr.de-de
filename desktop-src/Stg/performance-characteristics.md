@@ -1,31 +1,31 @@
 ---
 title: Leistungsmerkmale
-description: Ein Aufrufen der com-Verbund Datei Implementierung der IPropertySetStorage-Schnittstelle zum Erstellen eines Eigenschafts Satzes bewirkt, dass entweder ein Stream oder ein Speicher durch einen IStorage-Erstellungs-oder IStorage-Vorgang erstellt wird.
+description: Ein Aufruf der COM-Verbunddateiimplementierung der IPropertySetStorage-Schnittstelle zum Erstellen eines Eigenschaftensets bewirkt, dass entweder ein Stream oder Speicher durch einen Aufruf von IStorage CreateStream oder IStorage CreateStorage erstellt wird.
 ms.assetid: 7773e649-19a4-4df2-84ed-027d73283140
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8597862602a367ed93a3d6e5e0bcac76035c337a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2ac11200b021cae1ea1d60438b57530f0dbc8c02ea3d26b5622ab859a99224aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117960830"
 ---
 # <a name="performance-characteristics"></a>Leistungsmerkmale
 
-Ein Aufrufen der com-Verbund Datei Implementierung der [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle zum Erstellen eines Eigenschafts Satzes bewirkt, dass entweder ein Stream oder ein Speicher durch einen [**IStorage:: foratestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) -oder [**IStorage:: anatestorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstorage)-Anforderungstyp erstellt wird. Ein Standardeigenschaften Satz wird im Arbeitsspeicher erstellt, aber nicht auf den Datenträger geleert. Wenn ein [**IPropertyStorage:: Write-Multiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple)-Befehl aufgerufen wird, wird dieser innerhalb des Puffers verarbeitet.
+Ein Aufruf der COM-Verbunddateiimplementierung der [**IPropertySetStorage-Schnittstelle**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) zum Erstellen eines Eigenschaftensets bewirkt, dass entweder ein Stream oder Speicher durch einen Aufruf von [**IStorage::CreateStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) oder [**IStorage::CreateStorage**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstorage)erstellt wird. Ein Standardeigenschaftssatz wird im Arbeitsspeicher erstellt, aber nicht auf den Datenträger geleert. Wenn [**IPropertyStorage::WriteMultiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple)aufruft, wird es innerhalb des Puffers betrieben.
 
-Wenn ein Eigenschaften Satz geöffnet ist, wird [IStorage:: OpenStream](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) oder [IStorage:: OpenStorage](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) verwendet. Der gesamte Eigenschaften Satz-Stream wird in zusammenhängenden Speicher gelesen. [**IPropertyStorage:: ReadMultiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-readmultiple) -Vorgänge werden dann ausgeführt, indem der Speicherpuffer gelesen wird. Daher ist der erste Zugriff in Bezug auf die zeitaufwendig (aufgrund von Datenträger Lesevorgängen). nachfolgende Zugriffe sind jedoch sehr effizient. Schreibvorgänge können etwas teurer sein, da SetSize-Vorgänge für den zugrunde liegenden Stream möglicherweise erforderlich sind, um sicherzustellen, dass der Speicherplatz verfügbar ist, wenn Daten hinzugefügt werden.
+Wenn ein Eigenschaftensatz geöffnet wird, [wird IStorage::OpenStream](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) oder [IStorage::OpenStorage](/windows/desktop/api/Objidl/nf-objidl-istorage-openstorage) verwendet. Der gesamte Eigenschaftensatzstream wird in den zusammenhängenden Speicher gelesen. [**IPropertyStorage::ReadMultiple-Vorgänge**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-readmultiple) arbeiten dann durch Lesen des Speicherpuffers. Daher ist der erste Zugriff zeitintensiv (aufgrund von Datenträgerlesezugriffen), aber nachfolgende Zugriffe sind sehr effizient. Schreibvorgänge können etwas teurer sein, da SetSize-Vorgänge für den zugrunde liegenden Stream möglicherweise erforderlich sind, um zu gewährleisten, dass Speicherplatz verfügbar ist, wenn Daten hinzugefügt werden.
 
-Es wird nicht sichergestellt, ob [**IPropertyStorage:: Write-Multiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple) Updates leert. Im Allgemeinen sollte der Client davon ausgehen, dass **IPropertyStorage:: schreitemultiple** nur den im Arbeitsspeicher Puffer aktualisiert. Zum leeren von Daten muss [**IPropertyStorage:: Commit**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-commit) oder [**IUnknown:: Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) (letzte Version) aufgerufen werden.
+Es wird nicht garantiert, ob [**IPropertyStorage::WriteMultiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple) Updates leert. Im Allgemeinen sollte der Client davon ausgehen, dass **IPropertyStorage::WriteMultiple** nur den im Arbeitsspeicherpuffer aktualisiert. Zum Leeren von Daten sollten [**IPropertyStorage::Commit**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-commit) oder [**IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) (letzte Version) aufgerufen werden.
 
-Dieser Entwurf bedeutet, dass " [**schreitemultiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple) " erfolgreich sein kann, aber die Daten nicht wirklich dauerhaft geschrieben werden.
+Dieser Entwurf bedeutet, [**dass WriteMultiple**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writemultiple) zwar erfolgreich ist, die Daten aber nicht dauerhaft geschrieben werden.
 
 > [!Note]  
-> Diese Größe des Eigenschaften Satz-Streams darf 256 KB nicht überschreiten.
+> Diese Größe des Eigenschaftensatzstreams darf 256.000 Bytes nicht überschreiten.
 
- 
+ 
 
- 
+ 
 
- 
+ 

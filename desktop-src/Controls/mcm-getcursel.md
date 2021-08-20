@@ -1,9 +1,9 @@
 ---
-title: MCM_GETCURSEL Meldung (kommstrg. h)
-description: Ruft das aktuell ausgewählte Datum ab. Sie können diese Nachricht explizit oder mit dem monthcal \_ getcurrsel-Makro senden.
+title: MCM_GETCURSEL Meldung (Commctrl.h)
+description: Ruft das aktuell ausgewählte Datum ab. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetCurSel-Makros senden.
 ms.assetid: d4edc9ed-7c92-4ec8-bfa1-8ae597826b3f
 keywords:
-- Windows-Steuerelemente für MCM_GETCURSEL Meldung
+- MCM_GETCURSEL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7dece95c65e900119c7043c0d5eda22bf473e6c6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b40ed6797cd7f40eb68e40a9eac90eb250badd461011e5490c0f4c8473571bb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118170207"
 ---
-# <a name="mcm_getcursel-message"></a>MCM \_ getcurrsel-Meldung
+# <a name="mcm_getcursel-message"></a>MCM \_ GETCURSEL-Nachricht
 
-Ruft das aktuell ausgewählte Datum ab. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getcurrsel**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcursel) -Makro senden.
+Ruft das aktuell ausgewählte Datum ab. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetCurSel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcursel) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft das aktuell ausgewählte Datum ab. Sie können diese Nachricht explizit ode
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die aktuell ausgewählten Datumsinformationen empfängt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **null** sein.
+Zeiger auf eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die aktuell ausgewählten Datumsinformationen empfängt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Meldung schlägt immer fehl, wenn Sie auf die Steuerelemente für Monatskalender angewendet wird, die auf den [**MCS- \_ MultiSelect**](month-calendar-control-styles.md) -Stil
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben. Diese Meldung schlägt immer fehl, wenn sie auf Monatskalendersteuerelemente angewendet wird, die auf den [**MCS \_ MULTISELECT-Stil**](month-calendar-control-styles.md) festgelegt sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Me
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

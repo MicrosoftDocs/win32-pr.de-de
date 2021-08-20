@@ -4,7 +4,7 @@ description: Legt den Rasterizerzustand fest.
 ms.assetid: b2cd93fb-77bb-4a39-b686-7b8f683c9172
 keywords:
 - SetRasterizerState-Methode Direct3D 11
-- SetRasterizerState-Methode Direct3D 11 , ID3DX11EffectRasterizerVariable-Schnittstelle
+- SetRasterizerState-Methode Direct3D 11, ID3DX11EffectRasterizerVariable-Schnittstelle
 - ID3DX11EffectRasterizerVariable-Schnittstelle Direct3D 11 , SetRasterizerState-Methode
 topic_type:
 - apiref
@@ -49,7 +49,7 @@ HRESULT SetRasterizerState(
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Index in ein Array von Rasterizerschnittstellen. Wenn nur eine Rasterizerschnittstelle vorhanden ist, verwenden Sie 0.
+Indizieren sie in ein Array von Rasterizerschnittstellen. Wenn nur eine Rasterizerschnittstelle verfügbar ist, verwenden Sie 0.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -82,11 +82,11 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

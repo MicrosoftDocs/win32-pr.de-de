@@ -1,5 +1,5 @@
 ---
-description: Erläutert, wie die Darstellung des mathematischen Eingabesteuerelements geändert wird.
+description: Erläutert, wie die Darstellung des mathematischen Eingabesteuerfelds geändert wird.
 ms.assetid: 922562be-4d5b-45b6-ad0b-49176f893c8e
 title: Anpassen der Steuerung für mathematische Eingaben
 ms.topic: article
@@ -13,17 +13,17 @@ ms.locfileid: "118045641"
 ---
 # <a name="customizing-the-math-input-control"></a>Anpassen der Steuerung für mathematische Eingaben
 
-Es ist möglich, das Aussehen und Gefühl des mathematischen Eingabesteuerelements so zu ändern, dass es besser für Ihre Anwendung geeignet ist. In diesem Thema werden die verschiedenen Möglichkeiten erläutert, wie Entwickler das mathematische Eingabesteuerelement anpassen können.
+Es ist möglich, das Aussehen und Aussehen des mathematischen Eingabesteuerfelds so zu ändern, dass es besser für Ihre Anwendung geeignet ist. In diesem Thema werden die verschiedenen Möglichkeiten erläutert, wie Entwickler das steuerelement für mathematische Eingaben anpassen können.
 
 Die folgenden Anpassungen sind möglich:
 
 -   [Ändern der angezeigten Schaltflächen](#changing-the-displayed-buttons)
--   [Ändern der Beschriftung des Steuerelements](#changing-the-control-caption)
+-   [Ändern der Steuerelementbeschriftung](#changing-the-control-caption)
 -   [Ändern der Größe des Vorschaubereichs des Steuerelements](#changing-the-controls-preview-area-size)
 
 ## <a name="changing-the-displayed-buttons"></a>Ändern der angezeigten Schaltflächen
 
-Sie können die Schaltflächen ändern, die im mathematischen Eingabesteuerelement angezeigt werden, sodass das Steuerelement über erweiterte Funktionen verfügt oder auf dem Bildschirm kleiner angezeigt wird. Wenn Sie den erweiterten Schaltflächensatz aktivieren, werden die Schaltflächen **Wiederholen** und **Rückgängig** angezeigt. Der folgende Code zeigt, wie Sie den erweiterten Schaltflächensatz aktivieren.
+Sie können die Schaltflächen ändern, die auf dem mathematischen Eingabesteuerfeld angezeigt werden, sodass das Steuerelement über erweiterte Funktionen verfügt oder kleiner auf dem Bildschirm angezeigt wird. Wenn Sie den erweiterten Schaltflächensatz aktivieren, werden die **Schaltflächen Wiederholen** und **Rückgängig** angezeigt. Der folgende Code zeigt, wie Sie den erweiterten Schaltflächensatz aktivieren.
 
 
 ```
@@ -55,15 +55,15 @@ Sie können die Schaltflächen ändern, die im mathematischen Eingabesteuereleme
 
 Die folgende Abbildung zeigt das Steuerelement mit dem erweiterten Satz von Schaltflächen.
 
-![Mathematisches Eingabesteuerelement mit einem erweiterten Satz von Schaltflächen](images/mic.png)
+![Mathematisches Eingabesteuerfeld mit einem erweiterten Satz von Schaltflächen](images/mic.png)
 
 Die folgende Abbildung zeigt das Steuerelement ohne den erweiterten Satz von Schaltflächen.
 
-![Mathematisches Eingabesteuerelement ohne erweiterten Satz von Schaltflächen](images/mic-no-extended.png)
+![Mathematisches Eingabesteuerfeld ohne erweiterten Satz von Schaltflächen](images/mic-no-extended.png)
 
-## <a name="changing-the-control-caption"></a>Ändern der Beschriftung des Steuerelements
+## <a name="changing-the-control-caption"></a>Ändern der Steuerelementbeschriftung
 
-Sie können die Beschriftung des Steuerelements für die mathematische Eingabe ändern, um die Beschriftung im Fenster des mathematischen Eingabesteuerelements festzulegen. Der folgende Code zeigt, wie die Beschriftung festgelegt wird.
+Sie können die Beschriftung des Steuerelements für die mathematische Eingabe ändern, um die Beschriftung im Fenster des Matheeingabe-Steuerelements zu festlegen. Der folgende Code zeigt, wie die Beschriftung festgelegt wird.
 
 
 ```
@@ -79,13 +79,13 @@ Sie können die Beschriftung des Steuerelements für die mathematische Eingabe �
 
 
 
-Die folgende Abbildung zeigt das Steuerelement, nachdem die Beschriftung festgelegt wurde.
+Die folgende Abbildung zeigt das -Steuerelement, nachdem die Beschriftung festgelegt wurde.
 
-![Mathematisches Eingabesteuerelement mit einem Beschriftungssatz](images/mic-caption.png)
+![Mathematisches Eingabesteuerfeld mit einem Beschriftungssatz](images/mic-caption.png)
 
 ## <a name="changing-the-controls-preview-area-size"></a>Ändern der Größe des Vorschaubereichs des Steuerelements
 
-Sie können das mathematische Eingabesteuerelement so anpassen, dass das Steuerelement die Größe des Vorschaubereichs explizit festlegt. Dadurch wird ein größerer Bereich erstellt, in dem die mathematischen Formeln angezeigt werden. Der folgende Code zeigt, wie Sie die Größe des Vorschaubereichs festlegen.
+Sie können das mathematische Eingabesteuerfeld so anpassen, dass das Steuerelement die Größe des Vorschaubereichs explizit fest legt. Dadurch wird ein größerer Bereich erstellt, in dem die mathematischen Formeln angezeigt werden. Der folgende Code zeigt, wie sie die Größe des Vorschaubereichs festlegen.
 
 
 ```
@@ -102,7 +102,7 @@ Sie können das mathematische Eingabesteuerelement so anpassen, dass das Steuere
 
 Die folgenden Abbildungen zeigen ein Steuerelement mit unterschiedlich großen Vorschaubereichen.
 
-![Mathematisches Eingabesteuerelement mit der Standardvorschaubereichsgröße](images/mic.png)![Mathematisches Eingabesteuerelement mit einem größeren Vorschaubereich](images/mic-big-preview.png)
+![Mathematisches Eingabesteuerfeld mit der Standardvorschaubereichsgröße](images/mic.png)![Mathematisches Eingabesteuerfeld mit einem größeren Vorschaubereich](images/mic-big-preview.png)
 
  
 

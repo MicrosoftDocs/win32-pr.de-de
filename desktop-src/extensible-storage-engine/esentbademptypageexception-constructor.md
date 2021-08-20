@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentbademptypageexception-Konstruktor'
-title: Esentbademptypageexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBadEmptyPageException-Konstruktor'
+title: EsentBadEmptyPageException-Konstruktor
 TOCTitle: 'EsentBadEmptyPageException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadEmptyPageException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbademptypageexception.esentbademptypageexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 339940c777c571b8766a93f60f3486170769efcc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1720a11ac294fdf10a6cc70be8a1d941f6530da7409907d78dcad7a63f4c131
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785980"
 ---
-# <a name="esentbademptypageexception-constructor"></a>Esentbademptypageexception-Konstruktor
+# <a name="esentbademptypageexception-constructor"></a>EsentBadEmptyPageException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbademptypageexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadEmptyPageException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBadEmptyPageException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbademptypageexception-Klasse](./esentbademptypageexception-class.md)
+[EsentBadEmptyPageException-Klasse](./esentbademptypageexception-class.md)
 
-[Esentbademptypageexception-Member](./esentbademptypageexception-members.md)
+[EsentBadEmptyPageException-Member](./esentbademptypageexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

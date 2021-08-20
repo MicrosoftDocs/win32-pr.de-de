@@ -1,7 +1,7 @@
 ---
-description: Die DirectShow-Basisklassen stellen Hilfsfunktionen zum Verarbeiten der am- \_ \_ Medientyp Struktur bereit.
+description: Die DirectShow-Basisklassen stellen Hilfsfunktionen für die Behandlung der AM \_ MEDIA \_ TYPE-Struktur bereit.
 ms.assetid: 4dbea5b4-bf78-4253-be48-d81b77be6e77
-title: Medientyp Funktionen (mtype. h)
+title: Medientypfunktionen (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,39 +16,39 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a39fe9a9599a1d85c14a226106f5c8d7080b721f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ef47b944d5d445f57779f99cb8517a773a7efba19ae3f2133f896fcba7b86548
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118153158"
 ---
-# <a name="media-type-functions"></a>Medientyp Funktionen
+# <a name="media-type-functions"></a>Medientypfunktionen
 
-Die DirectShow-Basisklassen stellen Hilfsfunktionen zum Verarbeiten der [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur bereit.
+Die DirectShow-Basisklassen stellen Hilfsfunktionen für die Behandlung der [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) bereit.
 
-Die **am \_ \_ Medientyp** -Struktur enthält einen Zeiger (den **pbformat** -Member) zu einem anderen Speicherblock, der als *Format Block* bezeichnet wird. Wenn Sie mit dieser Struktur arbeiten, müssen Sie daher vorsichtig bei der Speicher Belegung sein, um Speicher Verluste zu vermeiden.
+Die **AM \_ MEDIA \_ TYPE-Struktur** enthält einen Zeiger (den **pbFormat-Member)** auf einen anderen Speicherblock, der als *Formatblock* bezeichnet wird. Wenn Sie mit dieser Struktur arbeiten, müssen Sie daher bei der Speicherbelegung vorsichtig sein, um Speicherverluste zu vermeiden.
 
-Die folgenden Funktionen weisen Speicher zu:
+Die folgenden Funktionen weisen Arbeitsspeicher zu:
 
--   Mit " **kreatemediatype** " wird eine neue **am- \_ \_ Medientyp** Struktur und der Format Block zugeordnet.
--   **Copymediatype** kopiert in eine vorhandene **\_ \_ Medientyp** Struktur, aber weist den Format Block zu.
--   " **Tinateaudiomediatype** " Initialisiert eine vorhandene **am- \_ \_ Medientyp** Struktur und weist optional den Format Block zu.
+-   **CreateMediaType** ordnet eine neue **AM \_ MEDIA \_ TYPE-Struktur** und den Formatblock zu.
+-   **CopyMediaType** kopiert in eine vorhandene **AM \_ MEDIA \_ TYPE-Struktur,** weist jedoch den Formatblock zu.
+-   **CreateAudioMediaType** initialisiert eine vorhandene **AM \_ MEDIA \_ TYPE-Struktur** und ordnet optional den Formatblock zu.
 
-Die folgenden Funktionen können Arbeitsspeicher freigeben:
+Die folgenden Funktionen stellen Arbeitsspeicher frei:
 
--   " **Freimediatype** " gibt den Format Block frei.
--   **Deletemediatype** gibt eine **am \_ \_ Medientyp** -Struktur frei, einschließlich des Format Blocks.
+-   **FreeMediaType** gibt den Formatblock frei.
+-   **DeleteMediaType** gibt eine **AM \_ MEDIA \_ TYPE-Struktur** einschließlich des Formatblocks frei.
 
 
 
-| Funktion                                             | BESCHREIBUNG                                                                                                 |
+| Funktion                                             | Beschreibung                                                                                                 |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [**Copymediatype**](copymediatype.md)               | Kopiert eine Aufgabe zugewiesene **am \_ \_ Medientyp** Struktur.                                                      |
-| [**"Kreateaudiomediatype"**](createaudiomediatype.md) | Initialisiert eine Medientyp Struktur, wenn eine Wave-Format-Struktur angegeben ist.                                           |
-| [**"Kreatemediatype"**](createmediatype.md)           | Ordnet eine **am- \_ \_ Medientyp** Struktur zu und initialisiert sie aus einer vorhandenen **am- \_ \_ Medientyp** Struktur. |
-| [**Deletemediatype**](deletemediatype.md)           | Löscht eine Aufgabe zugewiesene **am \_ \_ Medientyp** Struktur.                                                     |
-| [**Freimediatype**](freemediatype.md)               | Gibt eine Aufgaben zugewiesene **am \_ \_ Medientyp** -Struktur aus dem Arbeitsspeicher frei.                                           |
+| [**CopyMediaType**](copymediatype.md)               | Kopiert eine vom Task zugeordnete **AM \_ MEDIA \_ TYPE-Struktur.**                                                      |
+| [**CreateAudioMediaType**](createaudiomediatype.md) | Initialisiert eine Medientypstruktur mit einer Wellenformatstruktur.                                           |
+| [**CreateMediaType**](createmediatype.md)           | Ordnet eine **AM MEDIA \_ \_ TYPE-Struktur** aus einer vorhandenen **AM MEDIA \_ \_ TYPE-Struktur** zu und initialisiert sie. |
+| [**DeleteMediaType**](deletemediatype.md)           | Löscht eine vom Task zugeordnete **AM \_ MEDIA \_ TYPE-Struktur.**                                                     |
+| [**FreeMediaType**](freemediatype.md)               | Gibt eine taskbezogene **AM \_ MEDIA \_ TYPE-Struktur** aus dem Arbeitsspeicher frei.                                           |
 
 
 
@@ -60,8 +60,8 @@ Die folgenden Funktionen können Arbeitsspeicher freigeben:
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

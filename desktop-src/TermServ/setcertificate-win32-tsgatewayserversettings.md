@@ -1,12 +1,12 @@
 ---
 title: SetCertificate-Methode der Win32_TSGatewayServerSettings-Klasse
-description: Legt den Zertifikat Hash für die HTTPS-Bindung an Port 443 in IIS fest.
+description: Legt den Zertifikathash für die HTTPS-Bindung an Port 443 in IIS fest.
 ms.assetid: b5f794bc-17b1-401a-92d8-c9bbe5d0d05f
 ms.tgt_platform: multiple
 keywords:
 - SetCertificate-Methode Remotedesktopdienste
-- SetCertificate-Methode Remotedesktopdienste, Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, SetCertificate-Methode
+- SetCertificate-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings Klasse Remotedesktopdienste , SetCertificate-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b1da7e3abcca671b0c8bf70461c77d56e68cf68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54b11f87e3cdc8c5c211f67e03a067690ddeac5ab3bc342794e1e97a8f339117
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127475"
 ---
-# <a name="setcertificate-method-of-the-win32_tsgatewayserversettings-class"></a>SetCertificate-Methode der Win32-Klasse "t- \_ gatewayserversettings"
+# <a name="setcertificate-method-of-the-win32_tsgatewayserversettings-class"></a>SetCertificate-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-Legt den Zertifikat Hash für die HTTPS-Bindung an Port 443 in IIS fest.
+Legt den Zertifikathash für die HTTPS-Bindung an Port 443 in IIS fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ uint32 SetCertificate(
 
 <dl> <dt>
 
-*CertHash* \[ in\]
+*CertHash* \[ In\]
 </dt> <dd>
 
-Typ: **Uint8 \[ \]**
+Typ: **uint8 \[ \]**
 
-Der neue Zertifikat Hash.
+Der neue Zertifikathash.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem der Zertifikat Hash mit dieser Methode festgelegt wurde, müssen Sie die [**configure**](configure-win32-tsgatewayserversettings.md) -Methode zum Ausführen des Konfigurations Vorgangs abrufen.
+Nachdem der Zertifikathash mit dieser Methode festgelegt wurde, müssen Sie die [**Configure-Methode**](configure-win32-tsgatewayserversettings.md) aufrufen, um den Konfigurationsprozess abzuschließen.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                        |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -84,7 +84,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

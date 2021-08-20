@@ -1,132 +1,132 @@
 ---
 title: Fensterrahmen
-description: Die meisten Programme sollten Standardfenster Rahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen verbirgt. Sie sollten Glas strategisch für ein einfacheres, helleres aussehen in Erwägung gezogen werden.
+description: Die meisten Programme sollten Standardfensterrahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen ausblendet. Erwägen Sie die strategische Verwendung von Glass für ein einfacheres, leichteres, zusammenhängenderes Aussehen.
 ms.assetid: 6613e07a-2466-4283-88a9-02f2a3fea079
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 40aa58ab48c032519f55afa7c269be6452956912
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: dee701f7aad12e348a89034010de1f44134e9d3e
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104552831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812257"
 ---
 # <a name="window-frames"></a>Fensterrahmen
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Die meisten Programme sollten Standardfenster Rahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen verbirgt. Sie sollten Glas strategisch für ein einfacheres, helleres aussehen in Erwägung gezogen werden.
+Die meisten Programme sollten Standardfensterrahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen ausblendet. Erwägen Sie die strategische Verwendung von Glass für ein einfacheres, leichteres, zusammenhängenderes Aussehen.
 
-Mit einem Fensterrahmen können Benutzer ein Fenster bearbeiten und den Titel und das Symbol anzeigen, um dessen Inhalte zu identifizieren.
+Mit einem Fensterrahmen können Benutzer ein Fenster bearbeiten und den Titel und das Symbol anzeigen, um dessen Inhalt zu identifizieren.
 
-![Screenshot des Fensterrahmens um das Editor Fenster ](images/win-window-frames-image1.png)
+![Screenshot des Fensterrahmens um das Editorfenster ](images/win-window-frames-image1.png)
 
 Ein typischer Fensterrahmen.
 
-**Hinweis:** Richtlinien für die [Fensterverwaltung](win-window-mgt.md) und das [Branding](exper-branding.md) werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien zur [Fensterverwaltung](win-window-mgt.md) und zum [Branding](exper-branding.md) werden in separaten Artikeln vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="glass-window-frames"></a>Glasfenster Rahmen
+### <a name="glass-window-frames"></a>Glass window frames (Fensterrahmen für Die Brille)
 
-Die Glasfenster Rahmen sind ein neuer Aspekt der Microsoft Windows-Ästhetik, der sowohl ansprechend als auch leicht zu sein ist. Diese Durchschnitt stellen ermöglichen Windows ein offenes, weniger eindringliches Erscheinungsbild, das es Benutzern ermöglicht, sich auf Inhalte und Funktionen zu konzentrieren und nicht auf die Schnittstelle, die
+Die Fensterrahmen sind ein beeindruckender neuer Aspekt der Microsoft-Windows, die sowohl ansprechend als auch einfach sein möchten. Diese durchscheinenden Frames bieten Fenstern eine offene, weniger indringliche Darstellung, die es Benutzern ermöglicht, sich auf Inhalte und Funktionen zu konzentrieren, anstatt auf die Schnittstelle, die sie umgibt.
 
-![Screenshot des Glasrahmens um den Rechner ](images/win-window-frames-image2.png)
+![Screenshot des Glassframes um den Rechner ](images/win-window-frames-image2.png)
 
-Glasfenster Rahmen.
+Fensterrahmen für Die Brille.
 
-Sie können Glas in kleinen Regionen in einem Fenster, das den Fensterrahmen berührt, strategisch strategisch verwenden. Diese Bereiche scheinen Teil des Fensterrahmens zu sein, auch wenn Sie technisch gesehen Teil des Client Bereichs des Fensters sind.
+Sie können Glass in kleinen Regionen innerhalb eines Fensters, das den Fensterrahmen berührt, strategisch verwenden. Solche Bereiche scheinen Teil des Fensterrahmens zu sein, obwohl sie technisch gesehen Teil des Clientbereichs des Fensters sind.
 
-![Screenshot des Fensters mit der durchlässigen Kante ](images/win-window-frames-image3.png)
+![Screenshot des Fensters mit durchscheinender Kante ](images/win-window-frames-image3.png)
 
-In diesem Beispiel wird Glas im Client Bereich verwendet, um einen Teil des Frames zu sehen.
+In diesem Beispiel wird glass im Clientbereich verwendet, damit es wie ein Teil des Rahmens aussieht.
 
-### <a name="hidden-frames"></a>Verborgene Frames
+### <a name="hidden-frames"></a>Ausgeblendete Frames
 
-Manchmal ist der beste Fensterrahmen überhaupt kein Frame. Dies ist häufig der Fall für das [primäre Fenster](glossary.md) von immersiven [Vollbild](glossary.md) -Anwendungen, die nicht zusammen mit anderen Programmen verwendet werden, wie z. b. Medien Player, Spiele und Kiosk Anwendungen.
+Manchmal ist der beste Fensterrahmen überhaupt kein Frame. Dies ist häufig der Fall für das [primäre Fenster](glossary.md) von immersiven [Vollbildanwendungen,](glossary.md) die nicht in Verbindung mit anderen Programmen wie Medienplayern, Spielen und Kioskanwendungen verwendet werden.
 
-Inhalts Betrachter profitieren häufig von der Option, Inhalte voll Bildschirm anzuzeigen. Beispiele hierfür sind Windows Internet Explorer, Windows Live Photo Gallery, Windows Movie Maker HD, Microsoft PowerPoint und Microsoft Word.
+Inhalts-Viewer profitieren häufig von der Option zum Anzeigen von Inhalten im Vollbildmodus. Beispiele hierfür sind Windows Internet Explorer, Windows Live Fotogalerie, Windows Movie Maker HD, Microsoft PowerPoint und Microsoft Word.
 
-![Screenshot von Media Player in der Vollbildansicht ](images/win-window-frames-image4.png)
+![Screenshot des Medienplayers in der Vollbildansicht ](images/win-window-frames-image4.png)
 
-In diesem Beispiel kann der Inhalt des Windows-Media Player voll Bildschirms angezeigt werden.
+In diesem Beispiel können Windows Media Player ihren Inhalt im Vollbildmodus anzeigen.
 
 ### <a name="custom-frames"></a>Benutzerdefinierte Frames
 
-Die meisten Windows-Anwendungen sollten die Standardfenster Rahmen verwenden. Bei immersiven, eigenständigen, eigenständigen Anwendungen wie spielen und Kiosk Anwendungen kann es jedoch sinnvoll sein, benutzerdefinierte Frames für alle Fenster zu verwenden, die nicht voll Bildschirm angezeigt werden. Die Motivation für die Verwendung von benutzerdefinierten Frames sollte darin bestehen, die allgemeine Darstellung zu einem einzigartigen Verhalten zu machen, nicht nur für [Branding](exper-branding.md).
+Die meisten Windows Anwendungen sollten die Standardfensterrahmen verwenden. Für immersive, vollbildige, eigenständige Anwendungen wie Spiele und Kioskanwendungen kann es jedoch sinnvoll sein, benutzerdefinierte Frames für alle Fenster zu verwenden, die nicht im Vollbildmodus angezeigt werden. Der Beweggrund für die Verwendung benutzerdefinierter Frames sollte darin sein, der Gesamterfahrung ein einzigartiges Gefühl zu geben, nicht nur für [das Branding.](exper-branding.md)
 
-![Abbildung von Durcheinander und Frame des zusammen gewürelten Bilds ](images/win-window-frames-image5.png)
+![Abbildung von Verrenkungsbild und Rahmen ](images/win-window-frames-image5.png)
 
-Benutzerdefinierte Frames eignen sich für immersive, voll Bild-und eigenständige Anwendungen, wie z. b. Spiele.
+Benutzerdefinierte Frames eignen sich für immersive, eigenständige Vollbildanwendungen wie Spiele.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="window-frames"></a>Fensterrahmen
 
--   Standardfenster Rahmen verwenden.
-    -   **Ausnahme:** Um immersive Vollbild-, eigenständige Anwendungen zu einem einzigartigen Gefühl zu machen:
-        -   Sie sollten den Fensterrahmen des [primären Fensters](glossary.md)ausblenden.
-        -   Verwenden Sie benutzerdefinierte Frames für ein [sekundäres Fenster](glossary.md).
-        -   Wenn ein benutzerdefinierter Frame geeignet ist, wählen Sie einen Entwurf aus, der einfach ist und nicht zu viel Aufmerksamkeit auf sich selbst zeichnet.
+-   Verwenden Sie Standardfensterrahmen.
+    -   **Ausnahme:** Um immersiven Vollbild-, eigenständigen Anwendungen ein einzigartiges Gefühl zu geben:
+        -   Erwägen Sie, den Fensterrahmen des [primären Fensters](glossary.md)zu verbergen.
+        -   Erwägen Sie die Verwendung von benutzerdefinierten Frames für [das sekundäre Fenster.](glossary.md)
+        -   Wenn ein benutzerdefinierter Rahmen geeignet ist, wählen Sie ein Design aus, das einfach ist und nicht zu viel Aufmerksamkeit auf sich selbst richtet.
 
             **Falsch:**
 
-            ![Screenshot des abfragende Frames ](images/win-window-frames-image6.png)
+            ![Screenshot des ablenkenden Frames ](images/win-window-frames-image6.png)
 
-            In diesem Beispiel zeichnet der benutzerdefinierte Frame eine zu große Aufmerksamkeit auf sich selbst.
--   Fügen Sie einem Fensterrahmen keine Steuerelemente hinzu. Fügen Sie die Steuerelemente stattdessen in das Fenster ein.
+            In diesem Beispiel geht der benutzerdefinierte Frame zu sehr auf sich selbst ein.
+-   Fügen Sie keinem Fensterrahmen keine Steuerelemente hinzu. Legen Sie stattdessen die Steuerelemente in das Fenster ein.
 
     **Falsch:**
 
-    ![Screenshot des Steuer Elements im Fensterrahmen ](images/win-window-frames-image7.png)
+    ![Screenshot des Steuerelements im Fensterrahmen ](images/win-window-frames-image7.png)
 
     **Richtig:**
 
-    ![Screenshot des Steuer Elements im Client Bereich ](images/win-window-frames-image8.png)
+    ![Screenshot des Steuerelements im Clientbereich ](images/win-window-frames-image8.png)
 
-    Im richtigen Beispiel befindet sich das Steuerelement innerhalb des Client Bereichs anstelle des Fensterrahmens.
+    Im richtigen Beispiel befindet sich das Steuerelement im Clientbereich anstelle des Fensterrahmens.
 
 ### <a name="full-screen-mode"></a>Vollbildmodus
 
--   Für Programme, die einen optionalen Vollbildmodus aufweisen, um den Vollbildmodus zu aktivieren:
-    -   Sie haben einen modalen Vollbild-Befehl in der Menüleiste oder in der Symbolleiste. Wenn der Benutzer auf den Befehl klickt, wird der Befehl im ausgewählten Zustand angezeigt.
+-   Für Programme, die über einen optionalen Vollbildmodus verfügen, um den Vollbildmodus zu aktivieren:
+    -   Verwenden Sie einen modalen Vollbildbefehl in der Menüleiste oder Symbolleiste. Wenn der Benutzer auf den Befehl klickt, zeigen Sie den Befehl im ausgewählten Zustand an.
 
-        ![Screenshot des Fensters mit dem Menü Element "Vollbild" ](images/win-window-frames-image9.png)
+        ![Screenshot des Fensters mit Vollbildmenüelement ](images/win-window-frames-image9.png)
 
-        In diesem Beispiel wird der Vollbild-Befehl zusammen mit der Standard-Tastenkombination angezeigt.
+        In diesem Beispiel wird der Vollbildbefehl zusammen mit der standardverknüpfungstaste gezeigt.
 
--   Verwenden Sie F11 für die Tastenkombination für den Vollbildmodus.
--   Wenn eine Symbolleiste und der Vollbildmodus häufig verwendet werden, haben Sie auch eine Grafik Symbolleisten-Schaltfläche mit einer Vollbild-QuickInfo.
+-   Verwenden Sie F11 für die Vollbildtaste.
+-   Wenn eine Symbolleiste vorhanden ist und der Vollbildmodus häufig verwendet wird, verfügen Sie auch über eine grafische Symbolleistenschaltfläche mit einer QuickInfo für den Vollbildmodus.
 
-    ![Screenshot der Schaltflächen zum Vollbildmodus und zum Zurücksetzen ](images/win-window-frames-image10.png)
+    ![Screenshot des Vollbilds und Zurücksetzen von Schaltflächen ](images/win-window-frames-image10.png)
 
-    Beispiele für Vollbild-Symbolleisten-Schaltflächen.
+    Beispiele für Vollbild-Symbolleistenschaltflächen.
 
--   So kehren Sie den Vollbildmodus wieder her:
-    -   Sie haben einen modalen Vollbild-Befehl in der Menüleiste oder in der Symbolleiste. Wenn der Benutzer auf den Befehl klickt, zeigen Sie den Befehl im Zustand "gelöscht" an.
-    -   Verwenden Sie F11 für die Tastenkombination für den Vollbildmodus. Wenn die Zuordnung nicht bereits erfolgt ist, kann ESC auch zu diesem Zweck verwendet werden.
+-   So kehren Sie aus dem Vollbildmodus zurück:
+    -   Verwenden Sie einen modalen Vollbildbefehl in der Menüleiste oder Symbolleiste. Wenn der Benutzer auf den Befehl klickt, wird der Befehl im gelöschten Zustand angezeigt.
+    -   Verwenden Sie F11 für die Vollbildtaste. Wenn es nicht bereits zugewiesen ist, kann esc auch für diesen Zweck verwendet werden.
 
 ### <a name="glass"></a>Glas
 
-Standard Fensterrahmen verwenden in Windows automatisch Glas, Sie können jedoch auch Glas in Regionen verwenden, die den Fensterrahmen berühren.
+Standardfensterrahmen verwenden glass automatisch in Windows, aber Sie können auch Glass in Regionen verwenden, die den Fensterrahmen berühren.
 
--   **Es empfiehlt sich, Glas strategisch in kleinen Regionen zu verwenden, die den Fensterrahmen ohne Text berühren.** Dies kann einem Programm ein einfacheres, helleres aussehen ermöglichen, indem die Region als Teil des Frames angezeigt wird.
--   ![Screenshot des Fensters mit der durchlässigen Kante ](images/win-window-frames-image3.png)
--   In diesem Beispiel konzentriert sich die Aufmerksamkeit des Benutzers auf den Inhalt und nicht auf die Steuerelemente.
--   **Verwenden Sie kein Glas in Situationen, in denen ein einfacher Fenster Hintergrund attraktiver oder leichter zu verwenden wäre.**
+-   **Erwägen Sie die strategische Verwendung von Glass in kleinen Regionen, die den Fensterrahmen ohne Text berühren.** Auf diese Weise kann ein Programm ein einfacheres, leichteres und zusammenhängenderes Aussehen erhalten, indem der Bereich als Teil des Frames angezeigt wird.
+-   ![Screenshot des Fensters mit durchscheinender Kante ](images/win-window-frames-image3.png)
+-   In diesem Beispiel konzentriert glass die Aufmerksamkeit des Benutzers auf den Inhalt und nicht auf die Steuerelemente.
+-   **Verwenden Sie keine Brille in Situationen, in denen ein Einfacher Fensterhintergrund ansprechender oder einfacher zu verwenden wäre.**
 
 **Richtig:**
 
 ![Screenshot des Fensters mit vier Grafiken und Bezeichnungen ](images/win-window-frames-image11.png)
 
-In diesem Beispiel wird Glas verwendet, um dem Alt + Tab-Fenster ein schlankes aussehen zu geben. Glas funktioniert für dieses Fenster, weil es aus Grafiken und einer einzelnen, starken Text Bezeichnung besteht.
+In diesem Beispiel wird glass verwendet, um dem Alt+TAB-Fenster ein einfaches Aussehen zu verleihen. Glass funktioniert für dieses Fenster, da es aus Grafiken und einer einzelnen, starken Textbezeichnung besteht.
 
 **Falsch:**
 
 ![Screenshot des Fensters mit zwölf Grafiken ](images/win-window-frames-image12.png)
 
-In diesem falschen Beispiel ist die Verwendung von Glas ablenkend. Ein einfacher Hintergrund ist eine bessere Wahl.
+In diesem falschen Beispiel ist die Verwendung von Glass ablenkend. Ein Einfacher Fensterhintergrund wäre eine bessere Wahl.
 
  
 

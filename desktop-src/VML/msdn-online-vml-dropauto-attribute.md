@@ -1,26 +1,26 @@
 ---
-title: VML-dropauto-Attribut
-description: VML-dropauto-Attribut
+title: VML-DropAuto-Attribut
+description: VML-DropAuto-Attribut
 ms.assetid: 63b55090-1fe5-4442-84f5-9da2a9c494d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0850ce5bb03ae689871e28ad21acc45dacac401a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b37c8b37f7daab69631e857f65bbf8bac326b2e3ecba40d1ab83fcab8688712c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118124810"
 ---
-# <a name="vml-dropauto-attribute"></a>VML-dropauto-Attribut
+# <a name="vml-dropauto-attribute"></a>VML-DropAuto-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Legende einen automatischen Löschvorgang hat. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob der Aufruf automatisch abfällt. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,7 +28,7 @@ Bestimmt, ob die Legende einen automatischen Löschvorgang hat. Lese-/Schreibzug
 
 **Tagsyntax**
 
-<o: *Element* dropauto = " *Expression* " >
+<o: *element* dropauto=" *ausdruck* ">
 
 **Anmerkungen**
 
@@ -36,6 +36,6 @@ Der Standardwert ist **False**.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

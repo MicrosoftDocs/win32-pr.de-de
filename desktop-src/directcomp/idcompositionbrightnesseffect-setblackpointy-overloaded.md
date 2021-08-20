@@ -1,9 +1,9 @@
 ---
-title: idcompositionbrightnesseffect setblackpointy-Methode (Dcomp. h)
+title: idcompositionbrightnesseffect SetBlackPointY-Methoden (Dcomp.h)
 description: Legt den y-Wert des schwarzen Punkts fest.
 ms.assetid: 8d0aa548-90ad-4025-2e7a-8e5b07134665
 keywords:
-- Setblackpointy-Methoden directcomposition
+- SetBlackPointY-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 5be06e735a53de9bf56c8ee484cdcff8d568cadf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1b557dd0aed2e2224d9f692e60bb07479409d80e04f8e9397d6bd4070fd6869
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118088713"
 ---
-# <a name="idcompositionbrightnesseffectsetblackpointy-methods"></a>idcompositionbrightnesseffect:: setblackpointy-Methoden
+# <a name="idcompositionbrightnesseffectsetblackpointy-methods"></a>idcompositionbrightnesseffect::SetBlackPointY-Methoden
 
 Legt den y-Wert des schwarzen Punkts fest.
 
@@ -27,10 +27,10 @@ Legt den y-Wert des schwarzen Punkts fest.
 
 
 
-| Methode                                                                                               | BESCHREIBUNG                                     |
+| Methode                                                                                               | Beschreibung                                     |
 |:-----------------------------------------------------------------------------------------------------|:------------------------------------------------|
-| [**Setblackpointy**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setblackpointy(float))                               | Legt den y-Wert des schwarzen Punkts fest.<br/> |
-| [**Setblackpointy (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setblackpointy(idcompositionanimation)) | Legt den y-Wert des schwarzen Punkts fest.<br/> |
+| [**SetBlackPointY**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setblackpointy(float))                               | Legt den y-Wert des schwarzen Punkts fest.<br/> |
+| [**SetBlackPointY (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setblackpointy(idcompositionanimation)) | Legt den y-Wert des schwarzen Punkts fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den y-Wert des schwarzen Punkts fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den y-Wert des schwarzen Punkts fest.
 
 <dl> <dt>
 
-[**idcompositionbrightnesserffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
+[**idcompositionbrightnesseffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
 </dt> </dl>
 
 �

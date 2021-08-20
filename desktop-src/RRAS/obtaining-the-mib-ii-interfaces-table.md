@@ -1,22 +1,22 @@
 ---
-title: Abrufen der MIB II-Schnittstellen Tabelle
-description: Im folgenden Code wird mpradminmibentryget zum Abrufen der MIB II-Schnittstellen-Tabelle vom lokalen Computer verwendet.
+title: Abrufen der MIB II-Schnittstellentabelle
+description: Im folgenden Code wird MprAdminMIBEntryGet verwendet, um die MIB II-Schnittstellentabelle vom lokalen Computer zu erhalten.
 ms.assetid: 76152cd8-f285-42b3-8ee5-bbab1d14b99f
 keywords:
 - MIB, Abrufen der Schnittstellen
 - Abrufen der MIB-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05eb1bb10822ce7dc770e58c5aed36167340a9be
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d7f1fba73882ba81c17aeaf560b134358c9593e579babb6cf4d26dda8d968037
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074020"
 ---
-# <a name="obtaining-the-mib-ii-interfaces-table"></a>Abrufen der MIB II-Schnittstellen Tabelle
+# <a name="obtaining-the-mib-ii-interfaces-table"></a>Abrufen der MIB II-Schnittstellentabelle
 
-Im folgenden Code wird [**mpradminmibentryget**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget) zum Abrufen der MIB II-Schnittstellen-Tabelle vom lokalen Computer verwendet.
+Im folgenden Code wird [**MprAdminMIBEntryGet**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget) verwendet, um die MIB II-Schnittstellentabelle vom lokalen Computer zu erhalten.
 
 
 ```C++
@@ -116,15 +116,15 @@ int __cdecl main(){
 
 <dl> <dt>
 
-[**nicht transparente MIB- \_ \_ Informationen**](/windows/desktop/api/iprtrmib/ns-iprtrmib-mib_opaque_info)
+[**\_OPAKE \_ MIB-INFORMATIONEN**](/windows/desktop/api/iprtrmib/ns-iprtrmib-mib_opaque_info)
 </dt> <dt>
 
-[**nicht transparente MIB- \_ \_ Abfrage**](/windows/desktop/api/iprtrmib/ns-iprtrmib-mib_opaque_query)
+[**\_OPAKE \_ MIB-ABFRAGE**](/windows/desktop/api/iprtrmib/ns-iprtrmib-mib_opaque_query)
 </dt> <dt>
 
-[**Mpradminmibentryget**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget)
+[**MprAdminMIBEntryGet**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

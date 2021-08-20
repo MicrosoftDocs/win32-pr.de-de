@@ -4,60 +4,60 @@ ms.assetid: aa4be499-625d-4dbd-828c-4a55ff2dba2c
 title: Verwenden von VDS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c648c5cc2507c4819f98367c367099248a0e723f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6406e938a8fb49314511047bb038ec94a5af9151f5c077ad1fb14984e74474f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125866"
 ---
 # <a name="using-vds"></a>Verwenden von VDS
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-VDS bietet eine Schnittstelle für die Skripterstellung und GUI-Entwicklung, die die Aktivitäten vereinfachen kann, die von einem Windows Server-Administrator ausgeführt werden, der einen heterogenen Satz von Speichersystemen verwaltet und Daten über verschiedene Hardware Konfigurationen hinweg migriert. Wenn Sie mit den in der VDS-Entwicklung verwendeten Objekten nicht vertraut sind, lesen Sie das [VDS-Objektmodell](vds-object-model.md).
+VDS stellt eine Schnittstelle für die Skripterstellung und GUI-Entwicklung bereit, die die Aktivitäten vereinfachen kann, die von einem Windows-Serveradministrator ausgeführt werden, der einen heterogenen Satz von Speichersystemen verwaltet und Daten im Laufe der Zeit über verschiedene Hardwarekonfigurationen migriert. Wenn Sie mit den Objekten, die in der VDS-Entwicklung verwendet werden, nicht vertraut sind, finden Sie weitere Informationen unter [VDS-Objektmodell.](vds-object-model.md)
 
 Einige Punkte, bevor Sie beginnen:
 
--   Während VDS einen Softwareanbieter enthält, müssen Sie einen Hardware Anbieter und die zugehörige Hardware separat erwerben, um die Hardware Anbieter Vorgänge nutzen zu können. Installationsanweisungen finden Sie in der Dokumentation, die vom Hardwarehersteller bereitgestellt wird.
--   Für einige Vorgänge sind NTFS-formatierte Volumes erforderlich. Wenn Sie z. b. ein Volume in einem vorhandenen Verzeichnis einbinden, muss das Volume, das das Verzeichnis enthält, mit NTFS formatiert sein. Dieser Vorgang wird von anderen Dateisystemen nicht unterstützt. Informationen zu Vorgängen, die NTFS erfordern, finden Sie auf der Seite jeder Methode in der [VDS-Referenz](vds-reference.md).
+-   VdS umfasst zwar einen Softwareanbieter, Sie müssen jedoch einen Hardwareanbieter und die zugehörige Hardware separat erwerben, um die Hardwareanbietervorgänge nutzen zu können. Installationsanweisungen finden Sie in der Dokumentation des Hardwareherstellers.
+-   Einige Vorgänge erfordern NTFS-formatierte Volumes. Wenn Sie beispielsweise ein Volume in einem vorhandenen Verzeichnis einbinden, muss das Volume, das das Verzeichnis enthält, mit NTFS formatiert werden. Andere Dateisysteme unterstützen diesen Vorgang nicht. Informationen zu Vorgängen, die NTFS erfordern, finden Sie auf jeder Methodenseite in [der VDS-Referenz.](vds-reference.md)
 
 ## <a name="programming-languages"></a>Programmiersprachen
 
-Verwenden Sie jede beliebige Programmiersprache, die für die Entwicklung mit com geeignet ist, z. b. die Programmiersprache C oder C++.
+Verwenden Sie eine beliebige Programmiersprache, die für die Entwicklung mit COM geeignet ist, z. B. C oder C++.
 
 ## <a name="security"></a>Sicherheit
 
-Die Windows-Firewall ist standardmäßig aktiviert. Dies kann dazu führen, dass die Authentifizierung für Rückruf Schnittstellen fehlschlägt, z. b. [**ivdsadvisesink**](/windows/desktop/api/Vds/nn-vds-ivdsadvisesink), die Remote ausgeführt werden können. Wenn die Windows-Firewall auf dem Client oder auf dem Server aktiviert ist, müssen Sie die Remotevolumeverwaltung der Registerkarte **Ausnahmen** in der Windows-Firewall hinzufügen.
+Windows Die Firewall ist standardmäßig aktiviert. Dies kann dazu führen, dass die Authentifizierung für Rückrufschnittstellen wie [**IVdsAdviseSink**](/windows/desktop/api/Vds/nn-vds-ivdsadvisesink)fehlschlägt, die remote ausgeführt werden können. Wenn Windows Firewall auf dem Client oder dem Server aktiviert ist, müssen Sie die Remotevolumeverwaltung zur Registerkarte **Ausnahmen** in Windows Firewall hinzufügen.
 
-**Windows Server 2003:** Wenn in Windows Server 2003 mit Service Pack 2 (SP2) und Windows Server 2003 mit Service Pack 1 (SP1) die Windows-Firewall auf dem Client oder auf dem Server aktiviert ist und der Server für die Verwendung der NTLM-Authentifizierung konfiguriert ist, müssen Sie die folgenden Einstellungen der Registerkarte **Ausnahmen** in der Windows-Firewall für den entsprechenden Computer hinzufügen.
+**Windows Server 2003:** Wenn Windows Server 2003 mit Service Pack 2 (SP2) und Windows Server 2003 mit Service Pack 1 (SP1) Windows Firewall entweder auf dem Client oder dem Server aktiviert ist und der Server für die Verwendung der NTLM-Authentifizierung konfiguriert ist, müssen Sie die folgenden Einstellungen auf der Registerkarte **Ausnahmen** in Windows Firewall für den entsprechenden Computer hinzufügen.
 
-| Computer                 | Ausnahmen Einstellungen                                                                 |
+| Computer                 | Ausnahmeneinstellungen                                                                 |
 |--------------------------|-------------------------------------------------------------------------------------|
-| Client Computer (lokal)  | Dmremote.exe<br/> Mmc.exe<br/> Vdsldr.exe<br/> TCP 135<br/> |
-| Server Computer (Remote) | Dmadmin.exe<br/> Vds.exe<br/> TCP 135<br/>                        |
+| Clientcomputer (lokal)  | Dmremote.exe<br/> Mmc.exe<br/> Vdsldr.exe<br/> TCP 135<br/> |
+| Servercomputer (Remote) | Dmadmin.exe<br/> Vds.exe<br/> TCP 135<br/>                        |
 
 
 
  
 
-Beachten Sie, dass die Windows-Firewall bis Windows Server 2003 mit SP1 standardmäßig nicht aktiviert ist.
+Beachten Sie, dass Windows Firewall erst Windows Server 2003 mit SP1 standardmäßig aktiviert ist.
 
-Eine Anwendung, die VDS verwendet, muss unter dem Konto "Backup Operator" oder "Administratoren" ausgeführt werden. Ohne die entsprechenden Berechtigungen kann eine Anwendung ein Service Loader-Objekt erstellen, aber das Objekt lädt keine VDS. Stattdessen wird ein Fehler zurückgegeben, der angibt, dass der Zugriff auf VDS verweigert wird.
+Eine Anwendung, die VDS verwendet, muss unter dem Gruppenkonto "Sicherungsoperator" oder "Administratoren" ausgeführt werden. Ohne die entsprechenden Berechtigungen kann eine Anwendung ein Dienstladeprogrammobjekt erstellen, aber das Objekt lädt VDS nicht. Stattdessen wird ein Fehler zurückgegeben, der angibt, dass der Zugriff auf VDS verweigert wird.
 
-Wenn das Netzwerk die NTLM-Authentifizierung verwendet, sollte der Client Computer den anonymen Zugriff zulassen. In diesem Fall ist der anonyme Zugriff standardmäßig aktiviert, wenn auf dem Client Computer ein Windows Server-Betriebssystem ausgeführt wird. Wenn ein Windows-Client Betriebssystem ausgeführt wird, muss der anonyme Zugriff mithilfe von Dcomcnfg.exe aktiviert werden.
+Wenn das Netzwerk die NTLM-Authentifizierung verwendet, sollte der Clientcomputer anonymen Zugriff zulassen. In diesem Fall ist der anonyme Zugriff standardmäßig aktiviert, wenn auf dem Clientcomputer ein Windows Server-Betriebssystem ausgeführt wird. Wenn ein Windows Clientbetriebssystem ausgeführt wird, muss der anonyme Zugriff über Dcomcnfg.exe aktiviert werden.
 
-## <a name="configuration-and-query-operations"></a>Konfigurations-und Abfrage Vorgänge
+## <a name="configuration-and-query-operations"></a>Konfigurations- und Abfragevorgänge
 
-Konfigurations-und Abfrage Vorgänge werden durch den relevantesten Computer, Anbieter, Subsystem oder Paket definiert. Abfragen durchlaufen nur einen Anbieter oder eine Ebene der Bindungs Hierarchie. Zum Erstellen einer vollständigen Ansicht muss der Aufrufer jede Ebene über-und Abfragen. Die folgende Liste enthält Beispiele:
+Konfigurations- und Abfragevorgänge werden vom relevantesten Computer, Anbieter, Subsystem oder Paket erfasst. Abfragen durchlaufen nur einen Anbieter oder eine Ebene der Bindungshierarchie. Um eine vollständige Ansicht zu erstellen, muss der Aufrufer jede Ebene abfragen. Die folgende Liste enthält Beispiele:
 
--   Zum Anzeigen aller Datenträger auf einem Computer müssen Aufrufer alle Softwareanbieter für die Datenträger Abfragen, die von diesen Anbietern beansprucht werden.
--   Um zu ermitteln, welche Datenträger zu einem Software gestapelten Volume beitragen, bestimmen Aufrufer zuerst die Beitragenden plexes und Fragen dann die Datenträger Blöcke für die einzelnen Plex ab.
--   Um alle Laufwerke anzuzeigen, die an ein bestimmtes Subsystem angefügt sind, müssen Aufrufer das Subsystem Abfragen.
--   Um alle LUNs anzuzeigen, die von einem bestimmten Subsystem verfügbar gemacht werden, müssen Aufrufer das Subsystem Abfragen.
--   Um den gesamten Speicher in einem SAN oder Cluster anzuzeigen, müssen Aufrufer jeden Computer nach allen Hardwareanbietern Abfragen, jeden Anbieter nach allen Subsystemen Abfragen und dann jedes Subsystem Abfragen.
+-   Um alle Datenträger auf einem Computer anzuzeigen, müssen Aufrufer alle Softwareanbieter nach den Datenträgern abfragen, die von diesen Anbietern beansprucht werden.
+-   Um zu bestimmen, welche Datenträger zu einem mit Software gestapelten Volume beitragen, bestimmen Aufrufer zunächst die mitwirkenden Plexes und fragen dann die Datenträger-Erweiterungen für jedes Plex ab.
+-   Um alle Laufwerke anzuzeigen, die an ein bestimmtes Subsystem angefügt sind, müssen Aufrufer das Subsystem abfragen.
+-   Um alle LUNs anzuzeigen, die von einem bestimmten Subsystem verfügbar gemacht werden, müssen Aufrufer das Subsystem abfragen.
+-   Um den gesamten Speicher in einem SAN oder Cluster anzuzeigen, müssen Aufrufer jeden Computer nach allen Hardwareanbietern abfragen, jeden Anbieter für alle Subsysteme abfragen und dann jedes Subsystem abfragen.
 
-Obwohl jede einzelne Abfrage keine Duplikate zurückgibt, können wiederholte Abfragen über mehrere Computer oder über Anbieter hinweg Duplikate anhäufen. Aufrufer müssen alle Filter implementieren. Beachten Sie auch, dass San-Verwaltungs Anwendungen die Active Directory oder ein Repository zum Beibehalten von Konfigurationsinformationen verwenden können. Es ist möglicherweise nicht erforderlich, jeden Computer abzufragen.
+Während jede einzelne Abfrage keine Duplikate zurückgibt, können wiederholte Abfragen computer- oder anbieterübergreifend Duplikate sammeln. Aufrufer müssen filtering implementieren. Beachten Sie auch, dass SAN-Verwaltungsanwendungen Active Directory oder ein Repository verwenden können, um Konfigurationsinformationen dauerhaft zu speichern. Es ist möglicherweise nicht erforderlich, jeden Computer abzufragen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

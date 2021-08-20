@@ -1,37 +1,37 @@
 ---
-description: Mehrere Consumer, z. b. der aktive Skript Ereignisconsumer oder der Befehlszeilen-Ereignisconsumer, verfügen über Zeichen folgen Eigenschaften mit dem Vorlagen Qualifizierer.
+description: Mehrere Consumer, z. B. der Active Script-Ereignis-Consumer oder der Befehlszeilenereignis-Consumer, verfügen über Zeichenfolgeneigenschaften mit dem Vorlagenqualifizierer.
 ms.assetid: d734c226-e160-4834-a5e8-62390905dfde
 ms.tgt_platform: multiple
-title: Verwenden von Standard mäßigen Zeichen folgen Vorlagen
+title: Verwenden von Standardzeichenfolgenvorlagen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffc95f4b2b9b9f22e993d1de9cc8b35915918643
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c60a28730b890a5e922489a47b5b382b545cd6712d61cb976e96b549039ef7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049938"
 ---
-# <a name="using-standard-string-templates"></a>Verwenden von Standard mäßigen Zeichen folgen Vorlagen
+# <a name="using-standard-string-templates"></a>Verwenden von Standardzeichenfolgenvorlagen
 
-Mehrere Consumer, z. b. der aktive Skript Ereignisconsumer oder der Befehlszeilen-Ereignisconsumer, verfügen über Zeichen folgen Eigenschaften mit dem **Vorlagen** Qualifizierer. Diese Eigenschaften verwenden standardmäßige Zeichen folgen Vorlagen, um eine Zeichenfolge zu erstellen, die teilweise von der consumerinstanz und teilweise von einem Ereignis konfiguriert wird. Die Struktur einer Standard Zeichen folgen Vorlage ähnelt der Spezifikation der Microsoft Windows-Umgebungsvariablen.
+Mehrere Consumer, z. B. der Active Script-Ereignis-Consumer oder  der Befehlszeilenereignis-Consumer, verfügen über Zeichenfolgeneigenschaften mit dem Vorlagenqualifizierer. Diese Eigenschaften verwenden Standardzeichenfolgenvorlagen, um eine Zeichenfolge zu erstellen, die teilweise von der Consumerinstanz und teilweise von einem Ereignis konfiguriert wird. Die Struktur einer Standardzeichenfolgenvorlage ähnelt der Spezifikation der Umgebungsvariablen microsoft Windows.
 
-In der folgenden Liste sind einige Beispiele für die Vorlagen Sprache aufgeführt:
+Die folgende Liste enthält einige Beispiele für die Vorlagensprache:
 
--   Die Zeichenfolge "Text hier" erzeugt immer die Zeichenfolge "Text hier".
--   "% Cpuausnutzung%" erzeugt immer den Wert der **cpunutzungseigenschaft** des übermittelten Ereignisses. Wenn die Eigenschaft keine Zeichenfolge ist, wird Sie in eine Zeichenfolge konvertiert. Beispiel: "90" oder "true".
--   "Die CPU-Auslastung dieses Prozessors ist zu diesem Zeitpunkt% cpuausnutzung%." bettet den Wert der **cpunutzungseigenschaft** des Ereignisses in die Zeichenfolge ein und erzeugt so etwa Folgendes: "die CPU-Auslastung dieses Prozessors ist 90.
--   "% TargetInstance. cpuauslastungs%" Ruft den Wert der **cpunutzungseigenschaft** in der eingebetteten Instanz der **TargetInstance** -Eigenschaft ab.
--   "%%" erzeugt ein einzelnes%-Zeichen.
--   Wenn es sich bei der abgerufenen Eigenschaft um ein Array handelt, wird das gesamte Array im folgenden Format erstellt: "(1, 5, 10, 1024)". Wenn nur ein-Element im-Array vorhanden ist, werden die Klammern ausgelassen. Wenn keine Elemente im Array vorhanden sind, wird "()" erstellt.
--   Wenn eine Eigenschaft ein eingebettetes Objekt ist, wird die MOF-Darstellung des Objekts erstellt (ähnlich der Methode [**IWbemClassObject:: getobjecttext**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getobjecttext) ).
--   Wenn eine Eigenschaft eines eingebetteten Arrays von-Objekten angefordert wird, wird diese als Eigenschaft mit einem Array Wert behandelt. Beispiel:% MyEvents. TargetInstance. driverletter% kann "(" C: "," D: ")" ("C:", "D:") "(" C: "," D: ")" ergeben
+-   Die Zeichenfolge "Some text here" erzeugt immer die Zeichenfolge "Some text here".
+-   "%CPUUtilization%" erzeugt immer den Wert der **CPUUtilization-Eigenschaft** des ereignisses, das übermittelt wird. Wenn die Eigenschaft keine Zeichenfolge ist, wird sie in eine Zeichenfolge konvertiert. Beispiel: "90" oder "TRUE".
+-   "Die CPU-Auslastung dieses Prozessors ist zu diesem Zeitpunkt %CPUUtilization%", bettet den Wert der **CPUUtilization-Eigenschaft** des Ereignisses in die Zeichenfolge ein und erzeugt etwa "Die CPU-Auslastung dieses Prozessors beträgt zu diesem Zeitpunkt 90".
+-   "%TargetInstance.CPUUtilization%" ruft den Wert der **CPUUtilization-Eigenschaft** in der eingebetteten Instanz der **TargetInstance-Eigenschaft** ab.
+-   "%%" erzeugt ein einzelnes % -Zeichen.
+-   Wenn die abgerufene Eigenschaft ein Array ist, wird das gesamte Array im folgenden Format erstellt: "(1,5,10,1024)". Wenn nur ein Element im Array vorhanden ist, werden die Klammern ausgelassen. Wenn im Array keine Elemente vorhanden sind, wird "()" erstellt.
+-   Wenn eine Eigenschaft ein eingebettetes Objekt ist, wird die MOF-Darstellung des Objekts erstellt (ähnlich der [**IWbemClassObject::GetObjectText-Methode).**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getobjecttext)
+-   Wenn eine Eigenschaft eines eingebetteten Arrays von -Objekten angefordert wird, wird sie als Eigenschaft mit einem Arraywert behandelt. Beispiel: %MyEvents.TargetInstance.DriverLetter% könnte "("C:","D:")" erzeugen, wenn MyEvents ein Array eingebetteter Instanzänderungsereignisse ist.
 
 ## <a name="string-literals"></a>Zeichenfolgenliterale
 
-Alles in einem Paar von Anführungszeichen wird als Zeichenfolgenliteralzeichen betrachtet und nicht ersetzt.
+Alles innerhalb eines Paars von Anführungszeichen gilt als Zeichenfolgenliteral und wird nicht ersetzt.
 
-Das folgende Beispiel zeigt die Zeichenfolge, die der Compiler für "CPU-Auslastung ist% cpuausnutzung%" anzeigt.
+Das folgende Beispiel zeigt die Zeichenfolge, die der Compiler für "CPU-Auslastung ist %CPUUtilization%" erkennt.
 
 ``` syntax
 CPU utilization is %CPUUtilization%
@@ -43,13 +43,13 @@ Diese Zeichenfolge erzeugt die folgende Ausgabe.
 CPU utilization is 90
 ```
 
-Andererseits wird die Zeichenfolge "CPU-Auslastung ( \\ % cpuausnutzung%") \\ wie folgt vom Compiler erkannt.
+Auf der anderen Seite wird die Zeichenfolge "CPU-Auslastung ist \\ "%CPUUtilization% \\ "" vom Compiler wie folgt angezeigt.
 
 ``` syntax
 CPU utilization is "%CPUUtilization%"
 ```
 
-Diese Zeichenfolge erzeugt die folgende Ausgabe ohne Variablen Ersetzung.
+Diese Zeichenfolge erzeugt die folgende Ausgabe ohne Variablenersetzung.
 
 ``` syntax
 CPU utilization is "%CPUUtilization%"
@@ -59,7 +59,7 @@ CPU utilization is "%CPUUtilization%"
 
 <dl> <dt>
 
-[Überwachen von und reagieren auf Ereignisse mit Standard Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
+[Überwachen und Reagieren auf Ereignisse mit Standard-Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die "Write-Bitmapbits"-Methode ruft einen Video Frame zum angegebenen Zeitpunkt der Medien ab und schreibt ihn in eine Datei. Der Videoframe weist immer das 24-Bit-RGB-Format auf.
+description: Die WriteBitmapBits-Methode ruft einen Videoframe zur angegebenen Medienzeit ab und schreibt ihn in eine Datei. Der Videoframe hat immer das 24-Bit-RGB-Format.
 ms.assetid: 8b21f37b-553d-4de2-8725-c94c29fa3a1a
-title: 'Imediadet:: Beschreib tebitmapbits-Methode (qedit. h)'
+title: IMediaDet::WriteBitmapBits-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 79bf54f136cc2ab9db1208ad6c2b4e5cb12bd950
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fc2a967f5b0e99c50317e9dc226a4b345c6790a8ce2b6e5d42eb50dfdc3b105b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154155"
 ---
-# <a name="imediadetwritebitmapbits-method"></a>Imediadet:: schreitebitmapbits-Methode
+# <a name="imediadetwritebitmapbits-method"></a>IMediaDet::WriteBitmapBits-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `WriteBitmapBits` -Methode ruft einen Videoframe zum angegebenen Zeitpunkt der Medien ab und schreibt ihn in eine Datei. Der Videoframe weist immer das 24-Bit-RGB-Format auf.
+Die `WriteBitmapBits` -Methode ruft einen Videoframe zur angegebenen Medienzeit ab und schreibt ihn in eine Datei. Der Videoframe hat immer das 24-Bit-RGB-Format.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,10 +48,10 @@ HRESULT WriteBitmapBits(
 
 <dl> <dt>
 
-*Streamtime* 
+*StreamTime* 
 </dt> <dd>
 
-Der Zeitpunkt, zu dem der Videoframe abgerufen werden soll.
+Zeitpunkt, zu dem der Videoframe abgerufen werden soll.
 
 </dd> <dt>
 
@@ -72,42 +72,42 @@ Höhe des Bilds in Pixel.
 *Filename* 
 </dt> <dd>
 
-Der Pfad der Datei, in der die Bitmap gespeichert werden soll. Wenn die Datei bereits vorhanden ist, wird Sie von dieser Methode überschrieben.
+Pfad der Datei, in der die Bitmap gespeichert werden soll. Wenn die Datei bereits vorhanden ist, wird sie von dieser Methode überschrieben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück. Andernfalls wird ein **HRESULT** -Wert zurückgegeben, der die Ursache des Fehlers angibt. Folgende Fehlercodes sind möglich:
+Gibt "S \_ OK it successful" zurück. Andernfalls gibt einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt. Mögliche Fehlercodes:
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                                                       |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ nointerface**</dt> </dl>           | Der [**Sample Grabber**](sample-grabber-filter.md) -Filter konnte dem Diagramm nicht hinzugefügt werden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                  | Fehler.<br/>                                                                               |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>           | Nicht genügend Arbeitsspeicher.<br/>                                                                   |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>            | Unerwarteter Fehler.<br/>                                                                      |
-| <dl> <dt>**STG \_ E \_ AccessDenied**</dt> </dl>     | Datei kann nicht überschrieben werden.<br/>                                                                 |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl> | Ungültiger Medientyp.<br/>                                                                    |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>           | Der Filter [**Sample Grabber konnte dem**](sample-grabber-filter.md) Diagramm nicht hinzugefügt werden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                  | Fehler.<br/>                                                                               |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>           | Nicht genügend Arbeitsspeicher.<br/>                                                                   |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>            | Unerwarteter Fehler.<br/>                                                                      |
+| <dl> <dt>**STG \_ E \_ ACCESSDENIED**</dt> </dl>     | Datei kann nicht überschrieben werden.<br/>                                                                 |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl> | Ungültiger Medientyp.<br/>                                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und stream fest, indem Sie [**IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream aufrufen.**](imediadet-put-currentstream.md)
 
-Mit dieser Methode wird der Medien Detektor in den bitmapingmodus versetzt. Nachdem diese Methode aufgerufen wurde, funktionieren die verschiedenen Datenstrom Informationsmethoden in **imediadet** nicht, es sei denn, Sie erstellen eine neue Instanz des Medien Detektors.
+Diese Methode versetzt die Medienerkennung in den Bitmap-Greifmodus. Sobald diese Methode aufgerufen wurde, funktionieren die verschiedenen Streaminformationsmethoden in **IMediaDet** nicht mehr, es sei denn, Sie erstellen eine neue Instanz der Medienerkennung.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -117,8 +117,8 @@ Mit dieser Methode wird der Medien Detektor in den bitmapingmodus versetzt. Nach
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -126,10 +126,10 @@ Mit dieser Methode wird der Medien Detektor in den bitmapingmodus versetzt. Nach
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

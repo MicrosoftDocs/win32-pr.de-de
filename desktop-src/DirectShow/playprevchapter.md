@@ -1,24 +1,24 @@
 ---
-description: Das playprevchapter-Ereignis wird gesendet, wenn der Befehl playprevchapter aktiviert oder deaktiviert wurde.
+description: Das PlayPrevChapter-Ereignis wird gesendet, wenn der Befehl PlayPrevChapter aktiviert oder deaktiviert wurde.
 ms.assetid: bf44bd7e-cfeb-456e-a2e9-3068859d0055
-title: Playprevchapter
+title: PlayPrevChapter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14b4625ea7f7ad11a682403d7a4c34f1135b0b5e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3e99d6565a2c22ecf56302e9ce8c75f830419e3e961e18fda98b390b51ddfb43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564020"
 ---
-# <a name="playprevchapter"></a>Playprevchapter
+# <a name="playprevchapter"></a>PlayPrevChapter
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das `PlayPrevChapter` Ereignis wird gesendet, wenn der `PlayPrevChapter` Befehl aktiviert oder deaktiviert wurde.
+Das `PlayPrevChapter` Ereignis wird gesendet, wenn der Befehl aktiviert `PlayPrevChapter` oder deaktiviert wurde.
 
 ``` syntax
 PlayPrevChapter(bEnabled)
@@ -28,7 +28,7 @@ PlayPrevChapter(bEnabled)
 
 <dl> <dt>
 
-<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*benabled*
+<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
 Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.

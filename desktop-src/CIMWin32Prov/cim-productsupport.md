@@ -1,5 +1,5 @@
 ---
-description: Die CIM ProductSupport-Klasse stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für \_ das Produkt erhalten wird.
+description: Die CIM \_ ProductSupport-Klasse stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für das Produkt erhalten wird.
 ms.assetid: 61c62556-0cf3-438c-b9c7-152505bf7ed6
 ms.tgt_platform: multiple
 title: CIM_ProductSupport-Klasse
@@ -25,14 +25,14 @@ ms.locfileid: "118421447"
 ---
 # <a name="cim_productsupport-class"></a>CIM \_ ProductSupport-Klasse
 
-Die **CIM \_ ProductSupport-Klasse** stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für das Produkt erhalten wird. Für ein Produkt stehen verschiedene Supporttypen zur Verfügung. das gleiche Supportobjekt kann Unterstützung für mehrere Produkte bereitstellen.
+Die **CIM \_ ProductSupport-Klasse** stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für das Produkt erhalten wird. Für ein Produkt stehen verschiedene Arten von Support zur Verfügung. dasselbe Unterstützungsobjekt kann Unterstützung für mehrere Produkte bereitstellen.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ class CIM_ProductSupport
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ProductSupport-Klasse** verfügt über diese Membertypen:
+Die **CIM \_ ProductSupport-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -70,7 +70,7 @@ Verweis auf das Produkt.
 
 </dd> <dt>
 
-**Unterstützung**
+**Support**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ SupportAccess**
@@ -79,7 +79,7 @@ Datentyp: **CIM \_ SupportAccess**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf den Produktsupport.
+Referenz zur Produktunterstützung.
 
 </dd> </dl>
 
@@ -87,7 +87,7 @@ Verweis auf den Produktsupport.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasesnotfromsamesnapshotexception-Konstruktor'
-title: Esentdatabasesnotfromsamesnapshotexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabasesNotFromSameSnapshotException-Konstruktor'
+title: EsentDatabasesNotFromSameSnapshotException-Konstruktor
 TOCTitle: 'EsentDatabasesNotFromSameSnapshotException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabasesNotFromSameSnapshotException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasesnotfromsamesnapshotexception.esentdatabasesnotfromsamesnapshotexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 53d32ff9ee6cc16e3098e293b5990f90c0b9d8c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1500a5e3dd8f9ef6be09f15040f3ab058f1d4aa010f832214ec38236ae02b95e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785060"
 ---
-# <a name="esentdatabasesnotfromsamesnapshotexception-constructor"></a>Esentdatabasesnotfromsamesnapshotexception-Konstruktor
+# <a name="esentdatabasesnotfromsamesnapshotexception-constructor"></a>EsentDatabasesNotFromSameSnapshotException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasesnotfromsamesnapshotexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabasesNotFromSameSnapshotException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabasesNotFromSameSnapshotException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasesnotfromsamesnapshotexception-Klasse](./esentdatabasesnotfromsamesnapshotexception-class.md)
+[EsentDatabasesNotFromSameSnapshotException-Klasse](./esentdatabasesnotfromsamesnapshotexception-class.md)
 
-[Esentdatabasesnotfromsamesnapshotexception-Member](./esentdatabasesnotfromsamesnapshotexception-members.md)
+[EsentDatabasesNotFromSameSnapshotException-Member](./esentdatabasesnotfromsamesnapshotexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

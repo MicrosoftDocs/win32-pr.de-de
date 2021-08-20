@@ -1,47 +1,47 @@
 ---
-title: Serialisiertes Eigenschaften Satz Format für strukturierte Speicherung
-description: Persistente Eigenschaften Sätze stellen eine Option zum Speichern von Daten in Dateisystem Entitäten bereit. Es wird empfohlen, Sie zu erstellen und zu verwalten, indem Sie die IPropertySetStorage-Schnittstelle und die IPropertyStorage-Schnittstelle verwenden, die unter Eigenschaften und Eigenschaften Sätze beschrieben werden.
+title: Structured Storage Serialized Property Set Format
+description: Persistente Eigenschaftensätze bieten eine Option zum Speichern von Daten in Dateisystementitäten. Es wird empfohlen, zum Erstellen und Verwalten die Schnittstellen IPropertySetStorage und IPropertyStorage zu verwenden, die unter Eigenschaften und Eigenschaftensätze beschrieben sind.
 ms.assetid: f22abe40-535f-4178-9460-59bbe26ff178
 keywords:
-- Strukturierter Speicherplatz Halter-STG, Grundlagen, serialisiertes Eigenschaften Satz Format
+- Structured Storage Strctd Stg , Grundlagen, serialisiertes Eigenschaftensatzformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ea03d5ccab337897be801840080e83a6fa86880
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5acbc5300c04b4fe5a9b2a9ce2610eefc8608b3921ef52968a7165c4362ff7cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117959774"
 ---
-# <a name="structured-storage-serialized-property-set-format"></a>Serialisiertes Eigenschaften Satz Format für strukturierte Speicherung
+# <a name="structured-storage-serialized-property-set-format"></a>Structured Storage Serialized Property Set Format
 
-Persistente Eigenschaften Sätze stellen eine Option zum Speichern von Daten in Dateisystem Entitäten bereit. Es wird empfohlen, Sie zu erstellen und zu verwalten, indem Sie die [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle und die [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) -Schnittstelle verwenden, die unter [Eigenschaften und Eigenschaften Sätze](properties-and-property-sets.md)beschrieben werden.
+Persistente Eigenschaftensätze bieten eine Option zum Speichern von Daten in Dateisystementitäten. Es wird empfohlen, zum Erstellen und Verwalten die [**Schnittstellen IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) und [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) zu verwenden, die unter Eigenschaften und [Eigenschaftensätze beschrieben sind.](properties-and-property-sets.md)
 
-Eigenschafts Sätze bestehen aus einem markierten Abschnitt von Werten, wobei der Abschnitt eindeutig durch einen Format Bezeichner (fmtid) identifiziert wird. Jede Eigenschaft besteht aus einem Eigenschaften Bezeichner und einem Typindikator, der einen Wert darstellt. Jeder in einem Eigenschaften Satz gespeicherte Wert verfügt über einen eindeutigen Eigenschaften Bezeichner, der die Eigenschaft unterscheidet. Der Typindikator beschreibt die Darstellung der Daten im-Wert.
+Eigenschaftensätze bestehen aus einem markierten Abschnitt von Werten, bei dem der Abschnitt eindeutig durch einen Formatbezeichner (FMTID) identifiziert wird. Jede Eigenschaft besteht aus einem Eigenschaftenbezeichner und einem Typindikator, der einen Wert darstellt. Jeder in einem Eigenschaftensatz gespeicherte Wert verfügt über einen eindeutigen Eigenschaftenbezeichner, der die Eigenschaft unterscheidet. Der Typindikator beschreibt die Darstellung der Daten im Wert.
 
-Wenn Sie die [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle und die [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) -Schnittstelle verwenden, müssen Sie die Format Struktur der serialisierten com-Eigenschaften Menge nicht verarbeiten. Weitere Informationen finden Sie in den aufgelisteten Themen:
+Wenn Sie die [**Schnittstellen IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) und [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) verwenden, müssen Sie die Formatstruktur für serialisierte COM-Eigenschaften nicht verarbeiten. Weitere Informationen finden Sie in den folgenden Themen:
 
-Alle Datenelemente in einem Eigenschaften Satz werden in der Intel-Darstellung gespeichert (d. h. in Little-Endian-Byte Reihenfolge).
+Alle Datenelemente innerhalb eines Eigenschaftensets werden in intel-Darstellung (d. h. in Little-Endian-Byte-Reihenfolge) gespeichert.
 
-COM definiert ein serialisiertes Standarddatenformat für Eigenschaften Sätze. Wenn das serialisierte Format und nicht die Schnittstellen verarbeitet werden, haben Eigenschafts Sätze die folgenden Eigenschaften:
+COM definiert ein standardmäßiges serialisiertes Datenformat für Eigenschaftensätze. Bei der Verarbeitung des serialisierten Formats und nicht mit den Schnittstellen haben Eigenschaftensätze die folgenden Merkmale:
 
--   Mit Eigenschafts Sätzen können unterschiedliche Anwendungen ihre eigenen unabhängigen Eigenschaften Sätze erstellen, die für die Anwendung bereitgestellt werden.
--   Eigenschaften Sätze können in einer einzelnen [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Instanz oder in einer [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Instanz gespeichert werden, die mehrere Datenströme enthält. Eigenschaften Sätze sind einfach ein anderer Datentyp, der in vielen verschiedenen Formen eines Speicher internen oder Speicher internen Speichers gespeichert werden kann. Weitere Informationen und empfohlene Konventionen zum Erstellen des Zeichen folgen namens für das Speicher Objekt finden Sie unter [Benennungs Konventionen für Speicher Objekte](storage-object-naming-conventions.md).
--   Mit Eigenschafts Sätzen kann ein Wörterbuch mit anzeigen Amen eingeschlossen werden, die den Inhalt beschreiben. Eine Reihe von Konventionen für die Auswahl von Eigenschaften Namen wird empfohlen. Weitere Informationen zu diesem optionalen Wörterbuch finden Sie unter [reservierte Eigenschaften](reserved-property-identifiers.md)Bezeichner, einschließlich der Eigen [schafts-ID 0](/windows/desktop/Stg/reserved-property-identifiers).
+-   Eigenschaftensätze ermöglichen es verschiedenen Anwendungen, eigene unabhängige Eigenschaftensätze für die Anwendung zu erstellen.
+-   Eigenschaftssätze können in einer einzelnen [**IStream-Instanz**](/windows/desktop/api/Objidl/nn-objidl-istream) oder in einer [**IStorage-Instanz**](/windows/desktop/api/Objidl/nn-objidl-istorage) gespeichert werden, die mehrere Streams enthält. Eigenschaftssätze sind einfach ein anderer Datentyp, der in vielen verschiedenen Formen eines In-Memory- oder On-Disk-Speichers gespeichert werden kann. Weitere Informationen und empfohlene Konventionen zum Erstellen des Zeichenfolgennamens für das Speicherobjekt finden Sie unter [Storage-Namenskonventionen.](storage-object-naming-conventions.md)
+-   Eigenschaftensätze ermöglichen das Hinzufügen eines Wörterbuchs mit Anzeigenamen, die den Inhalt beschreiben. Es wird eine Reihe von Konventionen für die Auswahl von Eigenschaftsnamen empfohlen. Weitere Informationen zu diesem optionalen Wörterbuch finden Sie unter [Reserved Property Identifiers](reserved-property-identifiers.md), einschließlich [Eigenschaften-ID 0](/windows/desktop/Stg/reserved-property-identifiers).
 
-Der Eigenschafts Satz-Stream ist in drei Hauptbestandteile unterteilt:
+Der Eigenschaftensatzstream ist in drei Hauptteile unterteilt:
 
 -   Header
--   FormatID/Offset-paar
--   Abschnitt, der die tatsächlichen Eigenschaften Satz Werte enthält
+-   FORMATID-/Offsetpaar
+-   Abschnitt mit den tatsächlichen Eigenschaftssatzwerten
 
-Die Gesamtlänge des Eigenschaften Satz-Streams muss kleiner oder gleich 256 KB sein. Die folgenden Abschnitte, die [Eigenschaften Satz Kopfzeile](property-set-header.md), das [Format-ID/Offset-paar](format-identifier-offset-pair.md)und den [Abschnitt](section.md) (einschließlich der Eigenschaften Bezeichner [/Offset-Paare](property-identifiers-offset-pairs.md)) mit unterstützenden Themen beschreiben die einzelnen Komponenten, die das Eigenschafts Satz-Daten Format bilden.
+Die Gesamtlänge des Eigenschaftensatzstreams muss kleiner oder gleich 256.000 sein. In den folgenden Abschnitten, [Property Set Header](property-set-header.md), Format [Identifier/Offset Pair](format-identifier-offset-pair.md)und [Section](section.md) (einschließlich [Eigenschaftenbezeichner/Offsetpaare)](property-identifiers-offset-pairs.md)mit unterstützenden Themen, werden die einzelnen Komponenten beschrieben, aus denen das Eigenschaftensatz-Datenformat erstellt wird.
 
 > [!Note]  
-> In früheren Versionen dieses Dokuments wurden Erweiterungen zum Eigenschaften Satz-Stream mit mehr als einem zulässigen Abschnitt beschrieben, aber das wurde überarbeitet, um einen Abschnitt im Eigenschaftenstream bereitzustellen. Die einzige Ausnahme sind [die documentsummaryinformation-und UserDefined-Eigenschaften Sätze](the-documentsummaryinformation-and-userdefined-property-sets.md).
+> In früheren Versionen dieses Dokuments wurden Erweiterungen des Eigenschaftssatzstreams beschrieben, in denen mehr als ein Abschnitt zulässig ist. Dieser Abschnitt wurde jedoch überarbeitet, um einen Abschnitt im Eigenschaftenstream zur Verfügung zu stellen. Die einzige Ausnahme sind [Die DocumentSummaryInformation- und UserDefined-Eigenschaftensätze.](the-documentsummaryinformation-and-userdefined-property-sets.md)
 
- 
+ 
 
- 
+ 
 
- 
+ 
