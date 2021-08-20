@@ -1,25 +1,25 @@
 ---
-description: Jede Ereignis Quelle muss Nachrichten Dateien registrieren, die Beschreibungs Zeichenfolgen für jeden Ereignis Bezeichner, jede Ereignis Kategorie und jeden Parameter enthalten.
+description: Jede Ereignisquelle sollte Nachrichtendateien registrieren, die Beschreibungszeichenfolgen für jeden Ereignisbezeichner, jede Ereigniskategorie und jeden Parameter enthalten.
 ms.assetid: 0c251a45-1414-4855-a6f5-86ebdfab2693
-title: Nachrichten Dateien
+title: Nachrichtendateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb20d5919c75f06bfd7b6db9b47216566ab6ac8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44de0c91a098ab1b916a73d99a02d0d31a8b5b7690936322166e65baef4bd13c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951409"
 ---
-# <a name="message-files"></a>Nachrichten Dateien
+# <a name="message-files"></a>Nachrichtendateien
 
-Jede [Ereignis Quelle](event-sources.md) muss Nachrichten Dateien registrieren, die Beschreibungs Zeichenfolgen für jeden [Ereignis Bezeichner](event-identifiers.md), jede [Ereignis Kategorie](event-categories.md)und jeden [Parameter](event-identifiers.md)enthalten. Registrieren Sie diese Dateien in den Registrierungs Werten **EventMessageFile**, **categorymessagefile** und **ParameterMessageFile** für die Ereignis Quelle.
+Jede [Ereignisquelle](event-sources.md) sollte Nachrichtendateien registrieren, die Beschreibungszeichenfolgen für jeden [Ereignisbezeichner,](event-identifiers.md)die [Ereigniskategorie](event-categories.md)und den [Parameter](event-identifiers.md)enthalten. Registrieren Sie diese Dateien in den Registrierungswerten **EventMessageFile,** **CategoryMessageFile** und **ParameterMessageFile** für die Ereignisquelle.
 
-Sie können eine Nachrichtendatei erstellen, die Beschreibungen für die Ereignis Bezeichner, Kategorien und Parameter enthält, oder Sie können drei separate Nachrichten Dateien erstellen. Die Nachrichten-IDs für alle Nachrichten sollten eindeutig sein, unabhängig davon, ob Sie die Nachrichten in einer Datei oder in drei Dateien angeben. Mehrere Anwendungen können dieselbe Nachrichtendatei gemeinsam verwenden. Weitere Informationen zu Nachrichten Dateien finden Sie unter [**Message Compiler**](/windows/desktop/WES/message-compiler--mc-exe-). Ausführliche Informationen zur Syntax einer Nachrichtendatei finden Sie unter [Nachrichten Text Dateien](message-text-files.md).
+Sie können eine Nachrichtendatei erstellen, die Beschreibungen für die Ereignisbezeichner, Kategorien und Parameter enthält, oder drei separate Nachrichtendateien erstellen. Die Nachrichtenbezeichner für alle Nachrichten sollten eindeutig sein, unabhängig davon, ob Sie die Nachrichten in einer oder drei Dateien angeben. Mehrere Anwendungen können dieselbe Nachrichtendatei gemeinsam nutzen. Weitere Informationen zu Nachrichtendateien finden Sie unter [**Nachrichtencompiler.**](/windows/desktop/WES/message-compiler--mc-exe-) Ausführliche Informationen zur Syntax einer Nachrichtendatei finden Sie unter [Nachrichtentextdateien.](message-text-files.md)
 
-## <a name="example-message-file"></a>Beispiel Nachrichtendatei
+## <a name="example-message-file"></a>Beispielmeldungsdatei
 
-Im folgenden finden Sie eine Beispiel Nachrichtendatei.
+Im Folgenden wird eine Beispielmeldungsdatei angezeigt.
 
 ``` syntax
 ; /* --------------------------------------------------------
@@ -125,14 +125,14 @@ drive%0
 .
 ```
 
-Die Anwendung [für die Ereignis](event-identifiers.md) Anzeige kann das folgende Verfahren verwenden, um Zugriff auf die Meldungs Zeichenfolgen in der Nachrichten-DLL zu erhalten.
+Die Anwendung für die Ereignisanzeige kann das folgende Verfahren verwenden, um Zugriff auf die [Nachrichtenzeichenfolgen](event-identifiers.md) in der Nachrichten-DLL zu erhalten.
 
-**Abrufen von Beschreibungs Zeichenfolgen**
+**So rufen Sie Beschreibungszeichenfolgen ab**
 
-1.  Ruft die [**RegOpenKey**](/windows/desktop/api/winreg/nf-winreg-regopenkeya) -Funktion auf, um die Ereignis Quelle zu öffnen.
-2.  Rufen Sie die [**RegQueryValueEx**](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) -Funktion auf, um den Inhalt des **EventMessageFile** -Werts für die Ereignis Quelle zu erhalten. Dies ist der Name der Nachrichten-dll.
-3.  Aufrufen der [**LoadLibraryEx**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) -Funktion zum Laden der von Schritt 2 festgelegten Nachrichten-dll.
-4.  Rufen Sie die [**FormatMessage**](/windows/desktop/api/winbase/nf-winbase-formatmessage) -Funktion mit der Nachrichten-ID auf, um die Beschreibung aus der dll zu erhalten. (Beachten Sie, dass die Nachrichten-IDs in definiert sind. H-Datei, die vom Nachrichten Compiler generiert wurde.) Die **FormatMessage** -Funktion ersetzt die Einfügezeichenfolgen mit den Argument Werten, die Sie übergeben, ersetzt jedoch nicht die Parameter Einfügezeichenfolgen. vor der Anzeige der Zeichenfolge müssen Sie die Parameter Einfügezeichenfolgen selbst ersetzen.
+1.  Rufen Sie die [**RegOpenKey-Funktion**](/windows/desktop/api/winreg/nf-winreg-regopenkeya) auf, um die Ereignisquelle zu öffnen.
+2.  Rufen Sie die [**RegQueryValueEx-Funktion**](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) auf, um den Inhalt des **EventMessageFile-Werts** für die Ereignisquelle abzurufen. Dies ist der Name der Nachrichten-DLL.
+3.  Rufen Sie die [**LoadLibraryEx-Funktion**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) auf, um die in Schritt 2 festgelegte Nachrichten-DLL zu laden.
+4.  Rufen Sie die [**FormatMessage-Funktion**](/windows/desktop/api/winbase/nf-winbase-formatmessage) mit dem Nachrichtenbezeichner auf, um die Beschreibung aus der DLL abzurufen. (Beachten Sie, dass die Nachrichtenbezeichner in definiert sind. Vom Nachrichtencompiler generierte H-Datei.) Die **FormatMessage-Funktion** ersetzt die Einfügezeichenfolgen mithilfe der übergebenen Argumentwerte, aber nicht die Parametereinfügungszeichenfolgen. Sie müssen die Parametereinfügungszeichenfolgen selbst ersetzen, bevor Sie die Zeichenfolge anzeigen.
 
  
 

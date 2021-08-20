@@ -1,7 +1,7 @@
 ---
-description: Die \_ Member-Variable m ppagesite gibt einen Ressourcen Bezeichner für eine Zeichenfolge an, die den Dialog Titel enthält. Diese Variable wird in der Konstruktormethode initialisiert.
+description: Die m \_ pPageSite-Membervariable gibt einen Ressourcenbezeichner für eine Zeichenfolge an, die den Dialogtitel enthält. Diese Variable wird in der Konstruktormethode initialisiert.
 ms.assetid: 34eb04ac-cde6-45bb-a339-e4d38e3d5940
-title: 'Cbasepropertypage:: m_TitleId Member (cprop. h)'
+title: CBasePropertyPage::m_TitleId Member (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e31ba10d04b7a3929ad77449a5e704da13d05bfd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e4a4e301b120d431066ad0d0b2ad3dd0fe806d86453c67424e91cee6da5b26e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954999"
 ---
-# <a name="cbasepropertypagem_titleid-member"></a>Cbasepropertypage:: m \_ TitleId-Member
+# <a name="cbasepropertypagem_titleid-member"></a>CBasePropertyPage::m \_ TitleId-Member
 
-Die Member-Variable **m \_ ppagesite** gibt einen Ressourcen Bezeichner für eine Zeichenfolge an, die den Dialog Titel enthält. Diese Variable wird in der Konstruktormethode initialisiert.
+Die **m \_ pPageSite-Membervariable** gibt einen Ressourcenbezeichner für eine Zeichenfolge an, die den Dialogtitel enthält. Diese Variable wird in der Konstruktormethode initialisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ int m_TitleId;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ int m_TitleId;
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

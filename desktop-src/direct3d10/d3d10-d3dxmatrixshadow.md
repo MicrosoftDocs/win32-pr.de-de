@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixShadow-Funktion (D3DX10Math.h): Erstellt eine Matrix, die die Geometrie in eine Ebene flach macht.'
+description: 'D3DXMatrixShadow-Funktion (D3DX10Math.h): Erstellt eine Matrix, die die Geometrie in eine Ebene vereinfacht.'
 ms.assetid: 83c9e7d6-fc6c-48e7-bbf2-6aa10868351d
 title: D3DXMatrixShadow-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d3a5bff99552a4c5d65267c390c25a2892d3d32f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1e9a831eae416986dc4111e9928ffe9c2b09119fb4595119174d745aedbb6ac2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118809892"
 ---
 # <a name="d3dxmatrixshadow-function-d3dx10mathh"></a>D3DXMatrixShadow-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die die Geometrie in eine Ebene flach macht.
+Erstellt eine Matrix, die die Geometrie in eine Ebene verflachen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,11 +73,11 @@ Zeiger auf die [**D3DXPLANE-Quelle.**](d3d10-d3dxplane.md)
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die die Geometrie in eine Ebene flacht.
+Zeiger auf eine D3DXMATRIX-Struktur, die die Geometrie in eine Ebene vereinfacht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **D3DXMatrixShadow-Funktion** flacht die Geometrie in eine Ebene, als würde sie einen Schatten von einem Licht werfen.
+Die **D3DXMatrixShadow-Funktion** vereinfacht die Geometrie in eine Ebene, als ob ein Schatten aus einem Licht werfen würde.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixShadow-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -97,20 +97,20 @@ P.d * L.x      P.d * L.y      P.d * L.z      P.d * L.w + d
 
 
 
-Wenn die w-Komponente des Lichts 0 ist, stellt der Strahl vom Ursprung zum Licht ein direktionales Licht dar. Wenn es 1 ist, ist das Licht ein Punktlicht.
+Wenn die w-Komponente des Lichts 0 ist, stellt der Strahl vom Ursprung zum Licht ein gerichtetes Licht dar. Wenn es 1 ist, ist das Licht ein Punktlicht.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

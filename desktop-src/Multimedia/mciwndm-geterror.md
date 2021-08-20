@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETERROR Meldung (VFW. h)
-description: Die mciwndm \_ getError-Nachricht Ruft den letzten gefundenen MCI-Fehler ab. Sie können diese Nachricht explizit oder mit dem mciwndgeterror-Makro senden.
+title: MCIWNDM_GETERROR (Vfw.h)
+description: Die MCIWNDM \_ GETERROR-Meldung ruft den letzten gefundenen MCI-Fehler ab. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetError-Makros senden.
 ms.assetid: f110a9b3-5b05-4bf0-85d1-b49ce7396222
 keywords:
-- MCIWNDM_GETERROR-Nachricht (Multimedia)
+- MCIWNDM_GETERROR-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c2977bb079351824b48da21f4ba3cc2dc5afe7e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b748aec6cf686ecf47baf8deae621514e620971f5e1da667f8e4f0aae708ab80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137721"
 ---
-# <a name="mciwndm_geterror-message"></a>Mciwndm \_ getError-Meldung
+# <a name="mciwndm_geterror-message"></a>MCIWNDM \_ GETERROR-Meldung
 
-Die **mciwndm \_ getError** -Nachricht Ruft den letzten gefundenen MCI-Fehler ab. Sie können diese Nachricht explizit oder mit dem [**mciwndgeterror**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror) -Makro senden.
+Die **MCIWNDM \_ GETERROR-Meldung** ruft den letzten gefundenen MCI-Fehler ab. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetError-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) lp;
 
 <dl> <dt>
 
-<span id="len"></span><span id="LEN"></span>*Nest*
+<span id="len"></span><span id="LEN"></span>*Len*
 </dt> <dd>
 
-Größe (in Bytes) des Fehler Puffers.
+Größe des Fehlerpuffers in Bytes.
 
 </dd> <dt>
 
-<span id="lp"></span><span id="LP"></span>*LP*
+<span id="lp"></span><span id="LP"></span>*Lp*
 </dt> <dd>
 
-Zeiger auf einen Anwendungs definierten Puffer, der zum Zurückgeben der Fehler Zeichenfolge verwendet wird.
+Zeiger auf einen anwendungsdefinierten Puffer, der zum Zurückgeben der Fehlerzeichenfolge verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den ganzzahligen Fehlerwert zurück, wenn erfolgreich.
+Gibt bei Erfolg den ganzzahligen Fehlerwert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die *LP* ein gültiger Zeiger ist, wird eine mit NULL beendete Zeichenfolge, die dem Fehler entspricht, im Puffer zurückgegeben. Wenn die Fehler Zeichenfolge länger als der Puffer ist, wird Sie von mciwnd abgeschnitten.
+Wenn *lp* ein gültiger Zeiger ist, wird eine auf NULL beendete Zeichenfolge, die dem Fehler entspricht, im Puffer zurückgegeben. Wenn die Fehlerzeichenfolge länger als der Puffer ist, wird sie von MCIWnd abgeschnitten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Wenn die *LP* ein gültiger Zeiger ist, wird eine mit NULL beendete Zeichenfolge
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Wenn die *LP* ein gültiger Zeiger ist, wird eine mit NULL beendete Zeichenfolge
 
 <dl> <dt>
 
-[**Mciwndgeterror**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror)
+[**MCIWndGetError**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror)
 </dt> </dl>
 
  

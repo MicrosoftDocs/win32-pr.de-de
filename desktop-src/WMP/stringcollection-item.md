@@ -1,11 +1,11 @@
 ---
-title: StringCollection. Item-Methode
+title: StringCollection.item-Methode
 description: Die Item-Methode ruft die Zeichenfolge am angegebenen Index ab.
 ms.assetid: 5f6afff2-3ecc-4b28-8c67-f859f5440d4f
 keywords:
-- Element-Methoden Fenster Media Player
-- Element-Methode, Windows Media Player, StringCollection-Klasse
-- StringCollection-Klasse, Windows Media Player, Element-Methode
+- Item-Windows Media Player
+- item-Windows Media Player , StringCollection-Klasse
+- StringCollection-Klasse Windows Media Player , Item-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4244ad194ff3426dab81baddc0b7188214e0360
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1a7ab868a1b8814b3ea67d0c37988e492ed2576758d7e8e68a7dbfa997c16b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118832313"
 ---
-# <a name="stringcollectionitem-method"></a>StringCollection. Item-Methode
+# <a name="stringcollectionitem-method"></a>StringCollection.item-Methode
 
-Die **Item** -Methode ruft die Zeichenfolge am angegebenen Index ab.
+Die **Item-Methode** ruft die Zeichenfolge am angegebenen Index ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ strRetVal = StringCollection.item(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Die **Zahl** (**Long**), die den Index enthält.
+**Number** (**long**), die den Index enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichenfolge** zurück.
+Diese Methode gibt eine **Zeichenfolge zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **StringCollection** -Objekt wird verwendet, um den Satz von Werten abzurufen, die für ein Attribut verfügbar sind. Beispielsweise *mediacollection*. die **getAttributeStringCollection** -Methode kann verwendet werden, um ein **StringCollection** -Objekt abzurufen, das alle Werte für das Genre-Attribut im audiomedientyp darstellt. Die **Item** -Eigenschaft kann dann zum Durchlaufen aller möglichen Werte für das Genre-Attribut verwendet werden.
+Das **StringCollection-Objekt** wird verwendet, um den Satz von Werten abzurufen, die für ein Attribut verfügbar sind. Beispiel: *MediaCollection*. **Die getAttributeStringCollection-Methode** kann verwendet werden, um ein **StringCollection-Objekt** abzurufen, das alle Werte für das Genre-Attribut innerhalb des Audio-Medientyps darstellt. Die **Item-Eigenschaft** kann dann verwendet werden, um alle möglichen Werte für das Genre-Attribut zu iterieren.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -74,13 +74,13 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 <dl> <dt>
 
-[**Mediacollection. getAttributeStringCollection**](mediacollection-getattributestringcollection.md)
+[**MediaCollection.getAttributeStringCollection**](mediacollection-getattributestringcollection.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> <dt>
 
 [**StringCollection-Objekt**](stringcollection-object.md)

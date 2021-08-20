@@ -1,7 +1,7 @@
 ---
 description: Die Set-Methode legt den Medientyp von einem anderen Medientyp fest.
 ms.assetid: b3cf65c2-48db-4ee0-9a74-c1652f017eed
-title: Cmediatype. Set-Methode (mtype. h)-mtype [REF]-Parameter
+title: CMediaType.Set-Methode (Mtype.h) – mtype [ref]-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e8fd9145ee33dbe4b589b34833836466efa62ada
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 350e88cefa7c0f5f6946218d220fcad4a118cf53e203a68eeb9f75c0d0eace1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156063"
 ---
-# <a name="cmediatypeset-method-mtypeh"></a>Cmediatype. Set-Methode (mtype. h)
+# <a name="cmediatypeset-method-mtypeh"></a>CMediaType.Set-Methode (Mtype.h)
 
-Die- `Set` Methode legt den Medientyp von einem anderen Medientyp fest.
+Die `Set` -Methode legt den Medientyp von einem anderen Medientyp fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,18 +42,18 @@ HRESULT Set(
 
 <dl> <dt>
 
-*mtype* \[ atur\]
+*mtype* \[ Ref\]
 </dt> <dd>
 
-Verweis auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur.
+Verweis auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" oder "E \_ outo" zurück.
+Gibt S \_ OK oder E \_ OUTOFMEMORY zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode kopiert den gesamten Medientyp aus *mtype*.
 
@@ -63,8 +63,8 @@ Diese Methode kopiert den gesamten Medientyp aus *mtype*.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode kopiert den gesamten Medientyp aus *mtype*.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

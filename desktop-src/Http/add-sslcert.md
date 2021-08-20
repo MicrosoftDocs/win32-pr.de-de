@@ -12,12 +12,12 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 309050be35748f39eefc8b40b8e590f8f6889fde
-ms.sourcegitcommit: 07ba02719c9779e082b108ae74f9699fb0236c34
+ms.openlocfilehash: 721931bfa05a96ca47fd69f643a02076201bb5f93eff003afa83714f2d14b519
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108644192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950949"
 ---
 # <a name="add-sslcert"></a>add sslcert
 
@@ -118,7 +118,7 @@ Listet die Zertifikataussteller auf, die als vertrauenswürdig eingestuft werden
 <span id="_sslctlstorename__string"></span><span id="_SSLCTLSTORENAME__STRING"></span>**\[sslctlstorename=string\]**
 </dt> <dd>
 
-Gibt den Speichernamen unter LOCAL \_ MACHINE an, auf dem SslCtlIdentifier gespeichert ist.
+Gibt den Speichernamen unter LOCAL MACHINE an, in dem \_ SslCtlIdentifier gespeichert ist.
 
 </dd> <dt>
 

@@ -1,25 +1,25 @@
 ---
 description: Dieses Thema ist Schritt 5 des Tutorials Audio-/Videowiedergabe in DirectShow.
 ms.assetid: 9d7a40e0-4327-4ca3-b430-2be02f80c16f
-title: 'Schritt 5: Hinzufügen von Video Funktionen'
+title: 'Schritt 5: Hinzufügen von Videofunktionen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 71f5ccf1ae3ca24a705506bc41620ac53a13d7e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 968c35916f90f226305eb987058d14cc7891d250961e2b8a41a1756ec3794b1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951779"
 ---
-# <a name="step-5-add-video-functionality"></a>Schritt 5: Hinzufügen von Video Funktionen
+# <a name="step-5-add-video-functionality"></a>Schritt 5: Hinzufügen von Videofunktionen
 
-Dieses Thema ist Schritt 5 des Tutorials [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md). Der gesamte Code wird im Thema [DirectShow-Wiedergabe Beispiel](directshow-playback-example.md)dargestellt.
+Dieses Thema ist Schritt 5 des Tutorials [Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md). Der vollständige Code wird im Thema [DirectShow Playback Example (DirectShow-Wiedergabebeispiel)](directshow-playback-example.md)gezeigt.
 
-Um sicherzustellen, dass das Video ordnungsgemäß angezeigt wird, muss die Anwendung wie folgt auf die Nachrichten [**WM \_ Paint**](../gdi/wm-paint.md), [**WM \_ size**](../winmsg/wm-size.md)und [**WM \_ Display Change**](../gdi/wm-displaychange.md) Antworten.
+Um sicherzustellen, dass das Video ordnungsgemäß angezeigt wird, muss die Anwendung wie folgt auf [**WM \_ PAINT-,**](../gdi/wm-paint.md) [**WM \_ SIZE-**](../winmsg/wm-size.md)und [**WM \_ DISPLAYCHANGE-Meldungen**](../gdi/wm-displaychange.md) reagieren.
 
-### <a name="handle-wm_paint-messages"></a>Behandeln von WM-Zeichnungs \_ Meldungen
+### <a name="handle-wm_paint-messages"></a>Behandeln von WM \_ PAINT-Nachrichten
 
-Wenn die Anwendung eine [**WM- \_**](../gdi/wm-paint.md) Zeichnungs Nachricht empfängt, muss der Videorenderer möglicherweise den letzten Videorahmen neu zeichnen. Für den " [**Enhanced Video Renderer**](enhanced-video-renderer-filter.md) "-Filter (EVR), nennen Sie [**imfvideodisplaycontrol:: repaintvideo**](/windows/win32/api/evr/nf-evr-imfvideodisplaycontrol-repaintvideo).
+Wenn die Anwendung eine [**WM \_ PAINT-Nachricht**](../gdi/wm-paint.md) empfängt, muss der Videorenderer möglicherweise den letzten Videoframe neu zeichnen. Rufen Sie für den Filter [**Enhanced Video Renderer**](enhanced-video-renderer-filter.md) (EVR) [**DEN AUFRUF VONVIDEODisplayControl::RepaintVideo**](/windows/win32/api/evr/nf-evr-imfvideodisplaycontrol-repaintvideo)auf.
 
 
 ```C++
@@ -38,7 +38,7 @@ HRESULT CEVR::Repaint(HWND hwnd, HDC hdc)
 
 
 
-Für den [Video Mischungs-Renderer Filter 9](video-mixing-renderer-filter-9.md) (VMR-9), nennen Sie [**IVMRWindowlessControl9:: repaintvideo**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-repaintvideo).
+Rufen Sie für den [Video Mixing Renderer Filter 9](video-mixing-renderer-filter-9.md) (VMR-9) [**IVMRWindowlessControl9::RepaintVideo**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-repaintvideo)auf.
 
 
 ```C++
@@ -57,7 +57,7 @@ HRESULT CVMR9::Repaint(HWND hwnd, HDC hdc)
 
 
 
-Nennen Sie für den [Video Mischungs-Renderer Filter 7](video-mixing-renderer-filter-7.md) (VMR-7) [**ivmrwindowlesscontrol:: repaintvideo**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-repaintvideo).
+Rufen Sie für den [Video Mixing Renderer Filter 7](video-mixing-renderer-filter-7.md) (VMR-7) [**IVMRWindowlessControl::RepaintVideo**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-repaintvideo)auf.
 
 
 ```C++
@@ -76,9 +76,9 @@ HRESULT CVMR7::Repaint(HWND hwnd, HDC hdc)
 
 
 
-### <a name="handle-wm_size-messages"></a>Behandeln von WM- \_ Größen Meldungen
+### <a name="handle-wm_size-messages"></a>Verarbeiten von WM \_ SIZE-Nachrichten
 
-Wenn sich die Größe des Videofensters ändert, Benachrichtigen Sie den Videorenderer, die Größe des Videos zu ändern. Nennen Sie für den EVR [**imfvideodisplaycontrol:: setvideoposition**](/windows/win32/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition).
+Wenn sich die Größe des Videofensters ändert, benachrichtigen Sie den Videorenderer, um die Größe des Videos zu ändern. Rufen Sie für die EVR [**DEN AUFRUF VONVIDEODisplayControl::SetVideoPosition auf.**](/windows/win32/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition)
 
 
 ```C++
@@ -105,7 +105,7 @@ HRESULT CEVR::UpdateVideoWindow(HWND hwnd, const LPRECT prc)
 
 
 
-Für VMR-9 wird [**IVMRWindowlessControl9:: setvideoposition**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition)aufgerufen.
+Rufen Sie für DIE VMR-9 [**IVMRWindowlessControl9::SetVideoPosition auf.**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-setvideoposition)
 
 
 ```C++
@@ -132,7 +132,7 @@ HRESULT CVMR9::UpdateVideoWindow(HWND hwnd, const LPRECT prc)
 
 
 
-Nennen Sie für VMR-7 [**ivmrwindowlesscontrol:: setvideoposition**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition).
+Rufen Sie für VMR-7 [**IVMRWindowlessControl::SetVideoPosition auf.**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-setvideoposition)
 
 
 ```C++
@@ -158,9 +158,9 @@ HRESULT CVMR7::UpdateVideoWindow(HWND hwnd, const LPRECT prc)
 
 
 
-### <a name="handle-wm_displaychange-messages"></a>Behandeln von WM \_ Display Change-Nachrichten
+### <a name="handle-wm_displaychange-messages"></a>Behandeln von \_ WM-DISPLAYCHANGE-Meldungen
 
-Wenn der Anzeigemodus geändert wird, müssen Sie den VMR-9-oder VMR-7-Filter benachrichtigen. Nennen Sie für VMR-9 [**IVMRWindowlessControl9::D isplaymodechanged**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-displaymodechanged).
+Wenn sich der Anzeigemodus ändert, müssen Sie den Filter VMR-9 oder VMR-7 benachrichtigen. Rufen Sie für VMR-9 [**IVMRWindowlessControl9::D isplayModeChanged auf.**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrwindowlesscontrol9-displaymodechanged)
 
 
 ```C++
@@ -179,7 +179,7 @@ HRESULT CVMR9::DisplayModeChanged()
 
 
 
-Nennen Sie für VMR-7 [**ivmrwindowlesscontrol::D isplaymodechanged**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-displaymodechanged).
+Rufen Sie für VMR-7 [**IVMRWindowlessControl::D isplayModeChanged auf.**](/windows/desktop/api/Strmif/nf-strmif-ivmrwindowlesscontrol-displaymodechanged)
 
 
 ```C++
@@ -198,24 +198,24 @@ HRESULT CVMR7::DisplayModeChanged()
 
 
 
-Der EVR muss nicht benachrichtigt werden, wenn der Anzeigemodus geändert wird.
+Die EVR muss nicht benachrichtigt werden, wenn sich der Anzeigemodus ändert.
 
-Weiter: [Schritt 6: Behandeln von Diagramm Ereignissen](step-6--handle-graph-events.md).
+Weiter: [Schritt 6: Behandeln Graph Ereignisse](step-6--handle-graph-events.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md)
+[Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> <dt>
 
-[Beispiel zur DirectShow-Wiedergabe](directshow-playback-example.md)
+[Beispiel für DirectShow-Wiedergabe](directshow-playback-example.md)
 </dt> <dt>
 
-[Verwenden des DirectShow-EVR-Filters](../medfound/using-the-directshow-evr-filter.md)
+[Verwenden des DirectShow EVR-Filters](../medfound/using-the-directshow-evr-filter.md)
 </dt> <dt>
 
-[Verwenden des Video Mischungs Renderers](using-the-video-mixing-renderer.md)
+[Verwenden des Videomischungsrenderers](using-the-video-mixing-renderer.md)
 </dt> </dl>
 
  

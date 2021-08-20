@@ -1,37 +1,37 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie ein XPS-Dokument signieren.
+description: In diesem Thema wird das Signieren eines XPS-Dokuments beschrieben.
 ms.assetid: fbe64aed-6b07-49de-910c-18be68cb65a2
 title: Signieren eines Dokuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a4ad07323a26d21f9010c3fd54c708880b90173
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef544b2c34af19282d697676d22903948355d23e18e1c646df691c720052cc4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033878"
 ---
 # <a name="sign-a-document"></a>Signieren eines Dokuments
 
-In diesem Thema wird beschrieben, wie Sie ein XPS-Dokument signieren.
+In diesem Thema wird das Signieren eines XPS-Dokuments beschrieben.
 
-Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Common Digital Signature Programming Tasks](basic-digital-signature-programming-tasks.md).
+Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss unter [Common Digital Signature Programming Tasks](basic-digital-signature-programming-tasks.md).
 
-Zum Signieren eines XPS-Dokuments laden Sie es zunächst in einen Signatur-Manager, wie unter [Initialisieren des Signatur-Managers](initialize-the-signature-manager.md)beschrieben.
+Um ein XPS-Dokument zu signieren, laden Sie es zunächst in einen Signatur-Manager, wie unter [Initialisieren des Signatur-Managers beschrieben.](initialize-the-signature-manager.md)
 
 So signieren Sie ein Dokument, das in einen Signatur-Manager geladen wurde:
 
-1.  Instanziieren Sie eine [**ixpssigningoptions**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssigningoptions) -Schnittstelle.
-2.  Legen Sie die Signatur Richtlinie fest.
-3.  Legen Sie die Signatur Methode fest. URI-Zeichen folgen Konstanten der Signatur Methode sind in "cryptxml. h" definiert. Weitere Informationen zu gültigen Signatur Methoden Werten finden Sie unter [**ixpssigningoptions:: setsignaturemethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturemethod).
-4.  Legen Sie die Digest-Methode fest. URI-Zeichenfolge Konstanten der Digest-Methode sind in "cryptxml. h" definiert. Informationen zu gültigen Digest-Methoden Werten finden Sie unter [**ixpssigningoptions:: setdigestmethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setdigestmethod).
-5.  Laden Sie das Zertifikat wie unter [Laden eines Zertifikats aus einer Datei](load-a-certificate-from-a-file.md)beschrieben.
-6.  Vergewissern Sie sich, dass das Zertifikat die Signatur Methode unterstützt, wie unter [überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt](verify-a-certificate-supports-a-signature-method.md).
-7.  Überprüfen Sie, ob die Digest-Methode vom System unterstützt wird, wie unter [überprüfen, ob das System eine Digest-Methode unterstützt](verify-a-certificate-supports-a-digest-method.md).
-8.  Betten Sie ggf. die Zertifikate der Zertifikats Vertrauenskette in das XPS-Dokument ein, wie unter [Einbetten von Zertifikat Ketten in einem Dokument](embedding-certificate-trust-chains-in-a-document.md)beschrieben.
+1.  Instanziieren Sie eine [**IXpsSigningOptions-Schnittstelle.**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssigningoptions)
+2.  Legen Sie die Signaturrichtlinie fest.
+3.  Legen Sie die Signaturmethode fest. URI-Zeichenfolgenkonst constants der Signaturmethode werden in cryptxml.h definiert. Weitere Informationen zu gültigen Signaturmethodenwerten finden Sie unter [**IXpsSigningOptions::SetSignatureMethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturemethod).
+4.  Legen Sie die Digestmethode fest. URI-Zeichenfolgenkonst constants der Digestmethode werden in "cryptxml.h" definiert. Informationen zu gültigen Digestmethodenwerten finden Sie unter [**IXpsSigningOptions::SetDigestMethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setdigestmethod).
+5.  Laden Sie das Zertifikat wie unter [Laden eines Zertifikats aus einer Datei beschrieben.](load-a-certificate-from-a-file.md)
+6.  Stellen Sie sicher, dass das Zertifikat die Signaturmethode unterstützt, wie unter Überprüfen, ob ein [Zertifikat eine Signaturmethode unterstützt beschrieben wird.](verify-a-certificate-supports-a-signature-method.md)
+7.  Stellen Sie sicher, dass die Digestmethode vom System unterstützt wird, wie unter [Überprüfen, ob das System eine Digestmethode unterstützt.](verify-a-certificate-supports-a-digest-method.md)
+8.  Betten Sie bei Bedarf die Zertifikate der Zertifikatvertrauenskette in das XPS-Dokument ein, wie unter Einbetten von [Zertifikatketten in ein Dokument beschrieben.](embedding-certificate-trust-chains-in-a-document.md)
 9.  Signieren Sie das XPS-Dokument.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die vorangehenden Schritte in einem Programm verwendet werden.
+Das folgende Codebeispiel veranschaulicht die Verwendung der vorherigen Schritte in einem Programm.
 
 
 ```C++
@@ -120,46 +120,46 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die vorangehenden Schritte i
 **Next Steps**
 </dt> <dt>
 
-[Hinzufügen einer Signatur Anforderung zu einem XPS-Dokument](add-a-signature-request-to-a-document.md)
+[Hinzufügen einer Signaturanforderung zu einem XPS-Dokument](add-a-signature-request-to-a-document.md)
 </dt> <dt>
 
-[Überprüfen von Dokument Signaturen](verify-document-signatures.md)
+[Überprüfen von Dokumentsignaturen](verify-document-signatures.md)
 </dt> <dt>
 
-**In diesem Abschnitt verwendet**
+**Wird in diesem Abschnitt verwendet**
 </dt> <dt>
 
-[**Certfreecertififeecontext**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext)
+[**CertFreeCertificateContext**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext)
 </dt> <dt>
 
-[**Ixpssignaturemanager**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturemanager)
+[**IXpsSignatureManager**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssignaturemanager)
 </dt> <dt>
 
-[**Ixpssignaturemanager:: kreatesigningoptions**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-createsigningoptions)
+[**IXpsSignatureManager::CreateSigningOptions**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-createsigningoptions)
 </dt> <dt>
 
-[**Ixpssignaturemanager:: Sign**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-sign)
+[**IXpsSignatureManager::Sign**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssignaturemanager-sign)
 </dt> <dt>
 
-[**Ixpssigningoptions**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssigningoptions)
+[**IXpsSigningOptions**](/windows/desktop/api/xpsdigitalsignature/nn-xpsdigitalsignature-ixpssigningoptions)
 </dt> <dt>
 
-[**Ixpssigningoptions:: setdigestmethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setdigestmethod)
+[**IXpsSigningOptions::SetDigestMethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setdigestmethod)
 </dt> <dt>
 
-[**Ixpssigningoptions:: setpolicy**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setpolicy)
+[**IXpsSigningOptions::SetPolicy**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setpolicy)
 </dt> <dt>
 
-[**Ixpssigningoptions:: setsignaturemethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturemethod)
+[**IXpsSigningOptions::SetSignatureMethod**](/windows/desktop/api/xpsdigitalsignature/nf-xpsdigitalsignature-ixpssigningoptions-setsignaturemethod)
 </dt> <dt>
 
-[**XPS- \_ Signatur \_ Richtlinie**](/windows/win32/api/xpsdigitalsignature/ne-xpsdigitalsignature-xps_sign_policy)
+[**\_ \_ XPS-SIGN-RICHTLINIE**](/windows/win32/api/xpsdigitalsignature/ne-xpsdigitalsignature-xps_sign_policy)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Kryptografieapi](/windows/desktop/SecCrypto/cryptography-portal)
+[Kryptografie-API](/windows/desktop/SecCrypto/cryptography-portal)
 </dt> <dt>
 
 [Kryptografiefunktionen](/windows/desktop/SecCrypto/cryptography-functions)
@@ -168,19 +168,19 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die vorangehenden Schritte i
 [Laden eines Zertifikats aus einer Datei](load-a-certificate-from-a-file.md)
 </dt> <dt>
 
-[Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt](verify-a-certificate-supports-a-signature-method.md)
+[Überprüfen, ob ein Zertifikat eine Signaturmethode unterstützt](verify-a-certificate-supports-a-signature-method.md)
 </dt> <dt>
 
-[Überprüfen, ob das System eine Digest-Methode unterstützt](verify-a-certificate-supports-a-digest-method.md)
+[Überprüfen, ob das System eine Digestmethode unterstützt](verify-a-certificate-supports-a-digest-method.md)
 </dt> <dt>
 
-[Einbinden von Zertifikat Ketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
+[Einbetten von Zertifikatketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
 </dt> <dt>
 
-[XPS-Fehler bei der digitalen Signatur-API](xps-digital-signatures-errors.md)
+[XPS Digital Signature-API-Fehler](xps-digital-signatures-errors.md)
 </dt> <dt>
 
-[XPS-Dokument Fehler](xps-document-errors.md)
+[XPS-Dokumentfehler](xps-document-errors.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

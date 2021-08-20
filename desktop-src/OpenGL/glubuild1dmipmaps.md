@@ -1,6 +1,6 @@
 ---
-title: gluBuild1DMipmaps-Funktion (glu. h)
-description: Die gluBuild1DMipmaps-Funktion erstellt 1-D-Mipmaps.
+title: gluBuild1DMipmaps-Funktion (Glu.h)
+description: Die gluBuild1DMipmaps-Funktion erstellt 1D-Mipmaps.
 ms.assetid: 52ed924f-7a72-4458-b1b8-8e5d3021f60a
 keywords:
 - gluBuild1DMipmaps-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 089357488c7eae18e26258018473e9008fb29d24
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c2b76a37fa7088835ad0238065b0647ff0beb973c1c3ffa1b892f6e0958d97a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119489690"
 ---
 # <a name="glubuild1dmipmaps-function"></a>gluBuild1DMipmaps-Funktion
 
-Die **gluBuild1DMipmaps** -Funktion erstellt 1-D-Mipmaps.
+Die **gluBuild1DMipmaps-Funktion** erstellt 1D-Mipmaps.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ void WINAPI gluBuild1DMipmaps(
 *Ziel* 
 </dt> <dd>
 
-Die Ziel Textur. Muss "GL \_ Texture \_ 1D" lauten.
+Die Zieltextur. Muss GL \_ TEXTURE \_ 1D sein.
 
 </dd> <dt>
 
@@ -62,21 +62,21 @@ Die Anzahl der Farbkomponenten in der Textur. Muss 1, 2, 3 oder 4 sein.
 *width* 
 </dt> <dd>
 
-Die Breite des Textur Bilds.
+Die Breite des Texturbilds.
 
 </dd> <dt>
 
 *format* 
 </dt> <dd>
 
-Das Format der Pixeldaten. Die folgenden Werte sind gültig: GL \_ Color \_ Index, GL \_ red, GL \_ Green, GL \_ Blue, GL \_ Alpha, GL \_ RGB, GL \_ RGBA, GL \_ BGR \_ ext, GL \_ BGRA \_ ext, GL \_ Luminance oder GL \_ Luminance \_ alpha.
+Das Format der Pixeldaten. Die folgenden Werte sind gültig: GL \_ COLOR \_ INDEX, GL \_ RED, GL \_ \_ GREEN, GL BLUE, GL \_ ALPHA, GL \_ RGB, \_ GL RGBA, GL \_ BGR \_ EXT, GL \_ BGRA \_ EXT, GL \_ LUMINANCE oder GL \_ LUMINANCE \_ ALPHA.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Datentyp für *Daten*. Die folgenden Werte sind gültig: GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ Bitmap, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int oder GL \_ float.
+Der Datentyp für *die Daten*. Die folgenden Werte sind gültig: GL \_ UNSIGNED \_ BYTE, GL \_ BYTE, GL \_ BITMAP, GL \_ UNSIGNED \_ SHORT, GL \_ SHORT, GL \_ UNSIGNED \_ INT, GL \_ INT oder GL \_ FLOAT.
 
 </dd> <dt>
 
@@ -91,13 +91,13 @@ Ein Zeiger auf die Bilddaten im Arbeitsspeicher.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gluBuild1DMipmaps** -Funktion Ruft das Eingabebild ab und generiert alle MipMap-Bilder (mit " [**gluscaleimage**](gluscaleimage.md)"), sodass das Eingabebild als ein mipzugeordnetes Textur Bild verwendet werden kann. Die [**glTexImage1D**](glteximage1d.md) -Funktion wird dann aufgerufen, um die einzelnen Bilder zu laden. Wenn die Breite des Eingabe Bilds keine Potenz von zwei ist, wird das Bild auf die nächste Potenz von zwei skaliert, bevor die Mipmaps generiert werden.
+Die **Funktion gluBuild1DMipmaps** ruft das Eingabebild ab und generiert alle Mipmapbilder (mithilfe [**von gluScaleImage),**](gluscaleimage.md)sodass das Eingabebild als mipmappeniertes Texturbild verwendet werden kann. Die [**glTexImage1D-Funktion**](glteximage1d.md) wird dann aufgerufen, um jedes der Bilder zu laden. Wenn die Breite des Eingabebilds keine Zweierstärke ist, wird das Bild auf die nächste Zweierstärke skaliert, bevor die Mipmaps generiert werden.
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Andernfalls wird ein glu-Fehlercode zurückgegeben (siehe [**gluerrorstring**](gluerrorstring.md)).
+Der Rückgabewert 0 (null) gibt den Erfolg an. Andernfalls wird ein GLU-Fehlercode zurückgegeben (siehe [**gluErrorString**](gluerrorstring.md)).
 
-Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie unter **glTexImage1D**. Eine Beschreibung der zulässigen Werte für den *Typparameter* finden Sie unter [**gldrawpixels**](gldrawpixels.md).
+Eine Beschreibung der zulässigen Werte für den *Formatparameter* finden Sie unter **glTexImage1D**. Eine Beschreibung der zulässigen Werte für den *Typparameter* finden Sie unter [**glDrawPixels**](gldrawpixels.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,8 +107,8 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -117,7 +117,7 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 
 <dl> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -126,7 +126,7 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)
 </dt> <dt>
 
-[**gluscaleimage**](gluscaleimage.md)
+[**gluScaleImage**](gluscaleimage.md)
 </dt> </dl>
 
  

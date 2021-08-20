@@ -1,38 +1,38 @@
 ---
-description: In diesem Thema werden die drawbezitors-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawBeziers-Methoden der Graphics-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: af91f612-7e65-4a36-8449-32410d275b00
-title: Graphics. drawbezigs-Methoden (gdipl-Grafik. h)
+title: Graphics.DrawBeziers-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 399b487036f1a76c4a69e0af156d5cddbec5a0c1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ca924f8011e48672267a788d3dee627b0aa8c6911fbba304864ccf666adbed5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104996611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037428"
 ---
-# <a name="graphicsdrawbeziers-methods"></a>Graphics. drawbezizer-Methoden
+# <a name="graphicsdrawbeziers-methods"></a>Graphics.DrawBeziers-Methoden
 
-In diesem Thema werden die drawbezitors-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawBeziers-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgelistet. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                          | BESCHREIBUNG                                                                                                                                                               |
+| Methode                                                                                                          | Beschreibung                                                                                                                                                               |
 |:----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Drawbezizer (Stift \* , Punkt \* , int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawbeziers(inconstpen_inconstpoint_inint))   | Mit der [**Grafik::D rawbeziers**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawbeziers(inconstpen_inconstpoint_inint)) -Methode wird eine Sequenz verbundener Bézier-Splines gezeichnet.<br/>  |
-| [**Drawbezizer (Stift \* , PointF \* , int)**](/previous-versions//ms536147(v=vs.85)) | Mit der [**Grafik::D rawbeziers**](/previous-versions//ms536147(v=vs.85)) -Methode wird eine Sequenz verbundener Bézier-Splines gezeichnet.<br/> |
+| [**DrawBeziers(Pen \* , Point , \* INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawbeziers(inconstpen_inconstpoint_inint))   | Die [**Graphics::D rawBeziers-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawbeziers(inconstpen_inconstpoint_inint)) zeichnet eine Sequenz verbundener Bézier-Splines.<br/>  |
+| [**DrawBeziers(Pen \* , PointF \* , INT)**](/previous-versions//ms536147(v=vs.85)) | Die [**Graphics::D rawBeziers-Methode**](/previous-versions//ms536147(v=vs.85)) zeichnet eine Sequenz verbundener Bézier-Splines.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

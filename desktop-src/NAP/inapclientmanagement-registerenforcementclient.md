@@ -1,11 +1,11 @@
 ---
-title: Inapclientmanagement registerenforcementclient-Methode (napmanagement. h)
-description: Registriert einen Erzwingungs Client beim NAP-System.
+title: INapClientManagement RegisterEnforcementClient-Methode (NapManagement.h)
+description: Registriert einen Erzwingungsclient beim NAP-System.
 ms.assetid: 26ea45ea-a366-4162-91dc-06bcd0261c56
 keywords:
-- Registerenforcementclient-Methode NAP
-- Registerenforcementclient-Methode NAP, inapclientmanagement-Schnittstelle
-- Inapclientmanagement Interface NAP, registerenforcementclient-Methode
+- RegisterEnforcementClient-Methode NAP
+- RegisterEnforcementClient-Methode NAP, INapClientManagement-Schnittstelle
+- INapClientManagement-Schnittstelle NAP, RegisterEnforcementClient-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc8ed4b5fe5a97d60b764341f21f25628c3c3434
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e22deffb8f144e8f7176bd78fb18978228a26251be5591df61a322e5da17d3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134562"
 ---
-# <a name="inapclientmanagementregisterenforcementclient-method"></a>Inapclientmanagement:: registerenforcementclient-Methode
+# <a name="inapclientmanagementregisterenforcementclient-method"></a>INapClientManagement::RegisterEnforcementClient-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Mit der **registerenforcementclient** -Methode wird ein Erzwingungs Client beim NAP-System registriert.
+Die **RegisterEnforcementClient-Methode** registriert einen Erzwingungsclient beim NAP-System.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,25 +47,25 @@ HRESULT RegisterEnforcementClient(
 
 <dl> <dt>
 
-*Enforcer* \[ in\]
+*Enforcer* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**napcomponentregistrationinfo**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) -Datenstruktur, die die dem Erzwingungs Client zugeordneten Registrierungsinformationen enthält.
+Ein Zeiger auf eine [**NapComponentRegistrationInfo-Datenstruktur,**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) die die Registrierungsinformationen enthält, die dem Erzwingungsclient zugeordnet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
+Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                                                       |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Vorgang erfolgreich.<br/>                                                  |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl>         | Berechtigungs Fehler, Zugriff verweigert.<br/>                                      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>          | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/>                |
-| <dl> <dt>**in \_ \_ Konflikt stehende \_ ID für NAP**</dt> </dl> | Ein Erzwingungs-Agent mit dem angegebenen Bezeichner ist bereits registriert.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>         | Berechtigungsfehler, Zugriff verweigert.<br/>                                      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/>                |
+| <dl> <dt>**\_ \_ NAP-E-KONFLIKT-ID \_**</dt> </dl> | Ein Erzwingungs-Agent, der den angegebenen Bezeichner verwendet, ist bereits registriert.<br/> |
 
 
 
@@ -77,10 +77,10 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
@@ -89,7 +89,7 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 <dl> <dt>
 
-[**Inapclientmanagement**](inapclientmanagement.md)
+[**INapClientManagement**](inapclientmanagement.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft ggf. den Transaktions-oder Transaktions Proxy ab, der dem aktuellen Kontext zugeordnet ist.
+description: Ruft den Transaktions- oder Transaktionsproxy ab, der dem aktuellen Kontext zugeordnet ist(sofern diese dem Kontext zugeordnet ist).
 ms.assetid: 2f85f395-3ec5-4c5a-a6db-c902cb8f8486
-title: 'Icontexttransaktioninfo:: fetchtransaction-Methode'
+title: IContextTransactionInfo::FetchTransaction-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 0e753974f93539f051465f13a1ea92d7e0e3bfa1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6d673483118feb02ec2f1172640b9972d883505f48bc1fd8d8803844b963b02b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991060"
 ---
-# <a name="icontexttransactioninfofetchtransaction-method"></a>Icontexttransaktioninfo:: fetchtransaction-Methode
+# <a name="icontexttransactioninfofetchtransaction-method"></a>IContextTransactionInfo::FetchTransaction-Methode
 
-Ruft ggf. den Transaktions-oder Transaktions Proxy ab, der dem aktuellen Kontext zugeordnet ist.
+Ruft den Transaktions- oder Transaktionsproxy ab, der dem aktuellen Kontext zugeordnet ist(sofern diese dem Kontext zugeordnet ist).
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,16 +38,16 @@ HRESULT FetchTransaction(
 
 <dl> <dt>
 
-*Punk* \[ Out, retval\]
+*pUnk* \[ out, retval\]
 </dt> <dd>
 
-Der Transaktions-oder Transaktions Proxy, der dem aktuellen Kontext zugeordnet ist. andernfalls **null**.
+Der Transaktions- oder Transaktionsproxy, der dem aktuellen Kontext zugeordnet ist. andernfalls **NULL.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memory, e \_ unerwartet und S OK zurückgeben \_ .
+Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED und S OK \_ zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,8 +55,8 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memor
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/> |
 
 
 
@@ -64,7 +64,7 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memor
 
 <dl> <dt>
 
-[**Icontexttransaktioninfo**](icontexttransactioninfo.md)
+[**IContextTransactionInfo**](icontexttransactioninfo.md)
 </dt> </dl>
 
  

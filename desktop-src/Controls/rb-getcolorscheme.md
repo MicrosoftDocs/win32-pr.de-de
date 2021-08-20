@@ -1,9 +1,9 @@
 ---
-title: RB_GETCOLORSCHEME Meldung (kommstrg. h)
-description: Ruft die Farbschema Informationen aus dem Grund leisten-Steuerelement ab.
+title: RB_GETCOLORSCHEME Meldung (Commctrl.h)
+description: Ruft die Farbschemainformationen aus dem Steuerelement für die Neuleiste ab.
 ms.assetid: 01f81c4b-bbc9-43ae-a1f5-1e289c6fa278
 keywords:
-- Windows-Steuerelemente für RB_GETCOLORSCHEME Meldung
+- RB_GETCOLORSCHEME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a3d154fd14b93127aa22148f2882f70018225cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b918b46d1077c0074584be2d609d486097cc2e40f7a5c62a03db914fce58e320
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169620"
 ---
-# <a name="rb_getcolorscheme-message"></a>RB \_ getcolorscheme-Meldung
+# <a name="rb_getcolorscheme-message"></a>RB \_ GETCOLORSCHEME-Nachricht
 
-Ruft die Farbschema Informationen aus dem Grund leisten-Steuerelement ab.
+Ruft die Farbschemainformationen aus dem Steuerelement für die Neuleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft die Farbschema Informationen aus dem Grund leisten-Steuerelement ab.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**ColorScheme**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur, die die Farbschema Informationen empfängt. Sie müssen den **dwSize** -Member dieser Struktur auf **sizeof**(ColorScheme) festlegen, bevor Sie diese Nachricht senden.
+Zeiger auf eine [**COLORSCHEME-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) die die Farbschemainformationen empfängt. Sie müssen den **dwSize-Member** dieser Struktur auf **sizeof**(COLORSCHEME) festlegen, bevor Sie diese Nachricht senden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 <dl> <dt>
 
-[**RB \_ SetColorScheme**](rb-setcolorscheme.md)
+[**RB \_ SETCOLORSCHEME**](rb-setcolorscheme.md)
 </dt> </dl>
 
  

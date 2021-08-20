@@ -1,9 +1,9 @@
 ---
-title: HDM_SETFOCUSEDITEM Meldung (kommstrg. h)
-description: Legt den Fokus auf ein angegebenes Element in einem Header Steuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe des Headers \_ setfocuseditem-Makro.
+title: HDM_SETFOCUSEDITEM (Commctrl.h)
+description: Legt den Fokus auf ein angegebenes Element in einem Headersteuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe des \_ Header-Makros SetFocusedItem.
 ms.assetid: 20a321ce-4420-4239-b34d-9e7f24a89fc3
 keywords:
-- Windows-Steuerelemente für HDM_SETFOCUSEDITEM Meldung
+- HDM_SETFOCUSEDITEM meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fd416744478248760f4e2c9f94a362db5a8d327
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ea853cf625473bee608111eddf877eb09457ee5c2ac6089542b5add0a212195
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118171075"
 ---
-# <a name="hdm_setfocuseditem-message"></a>HDM- \_ setfocuseditem-Meldung
+# <a name="hdm_setfocuseditem-message"></a>HDM \_ SETFOCUSEDITEM-Nachricht
 
-Legt den Fokus auf ein angegebenes Element in einem Header Steuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe des [**Headers \_ setfocuseditem**](/windows/desktop/api/Commctrl/nf-commctrl-header_setfocuseditem) -Makro.
+Legt den Fokus auf ein angegebenes Element in einem Headersteuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ Header-Makros SetFocusedItem.**](/windows/desktop/api/Commctrl/nf-commctrl-header_setfocuseditem)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
 *wParam* 
-</dt> <dd>Nicht verwendet. Muss Null sein.</dd> <dt>
+</dt> <dd>Wird nicht verwendet. Muss Null sein.</dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
 Der Index des Elements.
@@ -41,7 +41,7 @@ Der Index des Elements.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 <dl> <dt>
 
-[Informationen über Header Steuerelemente](header-controls.md)
+[Informationen zu Headersteuerelementen](header-controls.md)
 </dt> </dl>
 
  

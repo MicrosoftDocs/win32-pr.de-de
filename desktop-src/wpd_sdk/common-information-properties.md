@@ -26,13 +26,13 @@ Windows Portable Geräte unterstützen die folgenden allgemeinen Informationseig
 
 
 
-| Eigenschaft                                      | VarType        | BESCHREIBUNG                                                                                              |
+| Eigenschaft                                      | VarType        | Beschreibung                                                                                              |
 |-----------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------|
-| **WPD \_ – ALLGEMEINE INFORMATIONEN \_ \_ HINWEISE**           | **VT \_ LPWSTR** | Bei Terminen, Aufgaben und ähnlichen Objekten enthält diese Eigenschaft alle Hinweise für das gegebene Objekt.     |
+| **\_WPD – ALLGEMEINE \_ \_ INFORMATIONSHINWEISE**           | **VT \_ LPWSTR** | Für Termine, Aufgaben und ähnliche Objekte enthält diese Eigenschaft alle Hinweise für das angegebene Objekt.     |
 | **WPD \_ COMMON \_ INFORMATION \_ SUBJECT**         | **VT \_ LPWSTR** | Ein -Wert, der das Betrefffeld dieses Objekts angibt.                                                 |
-| **WPD \_ COMMON \_ INFORMATION \_ BODY \_ TEXT**      | **VT \_ LPWSTR** | Diese Eigenschaft enthält den Text eines Objekts im Klartext- oder HTML-Format.                          |
+| **WPD \_ COMMON \_ INFORMATION \_ BODY \_ TEXT**      | **VT \_ LPWSTR** | Diese Eigenschaft enthält den Textkörper eines Objekts im Klartext- oder HTML-Format.                          |
 | **WPD \_ COMMON \_ INFORMATION \_ PRIORITY**        | **VT \_ UI4**    | Ein -Wert, der die Priorität dieses Objekts angibt. 0 gibt die höchste Priorität an.                    |
-| **WPD \_ COMMON \_ INFORMATION \_ START \_ DATETIME** | **VT \_ DATE**   | Ein -Wert, der das Datum/die Uhrzeit angibt, zu der ein Termin, eine Aufgabe oder ein ähnliches Objekt gestartet werden soll. |
+| **WPD \_ COMMON \_ INFORMATION \_ START \_ DATETIME** | **VT \_ DATE**   | Ein -Wert, der das Datum/die Uhrzeit des Starts eines Termins, einer Aufgabe oder eines ähnlichen Objekts angibt. |
 | **WPD \_ COMMON \_ INFORMATION \_ END \_ DATETIME**   | **VT \_ DATE**   | Ein -Wert, der das Datum/die Uhrzeit angibt, zu der ein Termin, eine Aufgabe oder ein ähnliches Objekt beendet werden soll.   |
 
 
@@ -49,7 +49,7 @@ Windows Portable Geräte unterstützen die folgenden allgemeinen Informationseig
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_VIDEOFORMAT Meldung (VFW. h)
-description: Die "WM \_ Cap \_ Set Videoformat"- \_ Meldung legt das Format der aufgezeichneten Videodaten fest. Sie können diese Nachricht explizit oder mithilfe des capsetvideoformat-Makros senden.
+title: WM_CAP_SET_VIDEOFORMAT Meldung (Vfw.h)
+description: Die \_ WM CAP \_ SET \_ VIDEOFORMAT-Nachricht legt das Format der erfassten Videodaten fest. Sie können diese Nachricht explizit oder mithilfe des CapSetVideoFormat-Makros senden.
 ms.assetid: 4f9cf90d-7ccb-4fc7-aad5-3d7e082526be
 keywords:
-- WM_CAP_SET_VIDEOFORMAT-Nachricht (Multimedia)
+- WM_CAP_SET_VIDEOFORMAT Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ba6154ec1532bd83f482eb81a0e286795aa3341
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c543f613fedf54518579829d6825bd20dc4738ae03cb77f0996f8a58a123cb76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135015"
 ---
-# <a name="wm_cap_set_videoformat-message"></a>WM- \_ Cap- \_ Set- \_ videoformatmeldung
+# <a name="wm_cap_set_videoformat-message"></a>WM \_ CAP \_ SET \_ VIDEOFORMAT-Meldung
 
-Die " **WM \_ Cap \_ Set \_ Videoformat** "-Meldung legt das Format der aufgezeichneten Videodaten fest. Sie können diese Nachricht explizit oder mithilfe des [**capsetvideoformat**](/windows/desktop/api/Vfw/nf-vfw-capsetvideoformat) -Makros senden.
+Die **WM CAP SET \_ \_ \_ VIDEOFORMAT-Nachricht** legt das Format der erfassten Videodaten fest. Sie können diese Nachricht explizit oder mithilfe des [**CapSetVideoFormat-Makros**](/windows/desktop/api/Vfw/nf-vfw-capsetvideoformat) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (psVideoFormat);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) der Struktur, auf die von **s** verwiesen wird.
+Größe der Struktur in Bytes, auf die von **s** verwiesen wird.
 
 </dd> <dt>
 
-<span id="psVideoFormat"></span><span id="psvideoformat"></span><span id="PSVIDEOFORMAT"></span>*psvideoformat*
+<span id="psVideoFormat"></span><span id="psvideoformat"></span><span id="PSVIDEOFORMAT"></span>*psVideoFormat*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur.
+Zeiger auf eine [**BITMAPINFO-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da Videoformate gerätespezifisch sind, sollten Anwendungen den Rückgabewert dieser Funktion überprüfen, um festzustellen, ob das Format vom Treiber akzeptiert wird.
+Da Videoformate gerätespezifisch sind, sollten Anwendungen den Rückgabewert dieser Funktion überprüfen, um zu ermitteln, ob das Format vom Treiber akzeptiert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Da Videoformate gerätespezifisch sind, sollten Anwendungen den Rückgabewert di
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ Da Videoformate gerätespezifisch sind, sollten Anwendungen den Rückgabewert di
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

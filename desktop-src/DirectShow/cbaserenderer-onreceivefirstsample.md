@@ -1,7 +1,7 @@
 ---
-description: Die onreceivefirstsample-Methode wird aufgerufen, wenn der Filter eine Stichprobe empfängt, während Sie angehalten wird.
+description: Die OnReceiveFirstSample-Methode wird aufgerufen, wenn der Filter eine Stichprobe empfängt, während er angehalten wurde.
 ms.assetid: 5bd481bf-a62d-4d3c-b875-b94298d12730
-title: Cbaserderderer. onreceivefirstsample-Methode (renbase. h)
+title: CBaseRenderer.OnReceiveFirstSample-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2368b0e2abda3bcdd08872d730f8b9902dad43ac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 882a356f47aa146ec8ba1b06d7af43235c8213334c0d82d0a241c590654bf2a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157700"
 ---
-# <a name="cbaserendereronreceivefirstsample-method"></a>Cbaserderderer. onreceivefirstsample-Methode
+# <a name="cbaserendereronreceivefirstsample-method"></a>CBaseRenderer.OnReceiveFirstSample-Methode
 
-Die- `OnReceiveFirstSample` Methode wird aufgerufen, wenn der Filter eine Stichprobe empfängt, während Sie angehalten wird.
+Die `OnReceiveFirstSample` -Methode wird aufgerufen, wenn der Filter ein Beispiel empfängt, während er angehalten wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual void OnReceiveFirstSample(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasa
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserdenderer:: Receive**](cbaserenderer-receive.md) -Methode ruft diese Methode auf. Es wird keine Aktion in der Basisklasse durchführt, aber die abgeleitete Klasse kann Sie überschreiben. Diese Methode ist hauptsächlich für Videorenderer vorgesehen. Wenn ein Videorenderer angehalten wird, wird das erste Beispiel in der Regel als Bild angezeigt.
+Die [**CBaseRenderer::Receive-Methode**](cbaserenderer-receive.md) ruft diese Methode auf. In der Basisklasse wird nichts verwendet, aber die abgeleitete Klasse kann sie überschreiben. Diese Methode ist in erster Linie für Videorenderer vorgesehen. Wenn ein Videorenderer angehalten wird, zeigt er in der Regel das erste Beispiel als Stillbild an.
 
-Wenn Sie das Diagramm im angehaltenen Zustand suchen, wird auch diese Methode aufgerufen.
+Das Suchen des Graphen während des Anhaltens führt auch dazu, dass diese Methode aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Wenn Sie das Diagramm im angehaltenen Zustand suchen, wird auch diese Methode au
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Wenn Sie das Diagramm im angehaltenen Zustand suchen, wird auch diese Methode au
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

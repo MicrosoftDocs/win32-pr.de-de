@@ -1,26 +1,26 @@
 ---
-title: Verwenden der WaveFormatEx-Struktur
-description: Verwenden der WaveFormatEx-Struktur
+title: Verwenden der WAVEFORMATEX-Struktur
+description: Verwenden der WAVEFORMATEX-Struktur
 ms.assetid: 9b668e1e-cb5f-4065-802b-23974925eacf
 keywords:
-- Wellenform-Audiostruktur, WaveFormatEx-Struktur
-- hilfsaudiostruktur, WaveFormatEx-Struktur
-- WaveFormatEx-Struktur
+- Waveform-Audio, WAVEFORMATEX-Struktur
+- Hilfsaudio, WAVEFORMATEX-Struktur
+- WAVEFORMATEX-Struktur
 - PCM-Audiodaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1534cf660c2f2423dc526c3d29f8eca06878fc0c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4a3831d9760580f294573a4bc1bec3aef1d42cf345b2d714a897b22940a89a0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118136054"
 ---
-# <a name="using-the-waveformatex-structure"></a>Verwenden der WaveFormatEx-Struktur
+# <a name="using-the-waveformatex-structure"></a>Verwenden der WAVEFORMATEX-Struktur
 
-Verwenden Sie für PCM-Audiodaten, die nicht mehr als zwei Kanäle und 8-Bit-oder 16-Bit-Beispiele aufweisen, die [**WaveFormatEx**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) -Struktur, um das Datenformat anzugeben.
+Verwenden Sie für PCM-Audiodaten auf nicht mehr als zwei Kanälen und mit 8-Bit- oder 16-Bit-Stichproben die [**WAVEFORMATEX-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) um das Datenformat anzugeben.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine **WaveFormatEx** -Struktur für 11,025 Kilohertz (kHz) 8-Bit Mono und für 44,1 kHz 16-Bit-Stereo einrichten. Nach dem Einrichten von **WaveFormatEx** Ruft das Beispiel die isformatsupported-Funktion auf, um zu überprüfen, ob das PCM Wellenform-Ausgabegerät das-Format unterstützt. Der Quellcode für isformatsupported wird in einem Beispiel unter Bestimmen der [nicht standardmäßigen Format Unterstützung](determining-nonstandard-format-support.md)gezeigt.
+Das folgende Beispiel zeigt, wie Sie eine **WAVEFORMATEX-Struktur** für 8-Bit-Mono mit 11,025 Kilohertz (kHz) und für 16-Bit-Stereo mit 44,1 kHz einrichten. Nach dem Einrichten **von WAVEFORMATEX** ruft das Beispiel die IsFormatSupported-Funktion auf, um zu überprüfen, ob das PCM Waveform-Ausgabegerät das Format unterstützt. Der Quellcode für IsFormatSupported wird in einem Beispiel unter [Determining Nonstandard Format Support (Bestimmen der Nichtstandardformatunterstützung) gezeigt.](determining-nonstandard-format-support.md)
 
 
 ```C++
@@ -83,6 +83,6 @@ else
 
 
 
- 
+ 
 
- 
+ 

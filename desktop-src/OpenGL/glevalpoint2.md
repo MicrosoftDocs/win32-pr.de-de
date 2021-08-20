@@ -1,6 +1,6 @@
 ---
-title: glEvalPoint2-Funktion (GL. h)
-description: Die glEvalPoint1-Funktion und die glEvalPoint2-Funktion generieren und evaluieren einen einzelnen Punkt in einem Mesh. | glEvalPoint2-Funktion (GL. h)
+title: glEvalPoint2-Funktion (Gl.h)
+description: Die Funktionen glEvalPoint1 und glEvalPoint2 generieren und werten einen einzelnen Punkt in einem Gitternetz aus. | glEvalPoint2-Funktion (Gl.h)
 ms.assetid: babae9c7-84a8-4a7e-b6f9-97c4e8bd42fe
 keywords:
 - glEvalPoint2-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fafe728249f988462b0929873bbb195fed1e7c9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6f0c188ec5f3e8171b8035e58b235bc0c5942e221d6d85a6dd4e5a8ff1786c80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675560"
 ---
 # <a name="glevalpoint2-function"></a>glEvalPoint2-Funktion
 
-Die [**glEvalPoint1**](glevalpoint.md) -Funktion und die **glEvalPoint2** -Funktion generieren und evaluieren einen einzelnen Punkt in einem Mesh.
+Die Funktionen [**glEvalPoint1**](glevalpoint.md) und **glEvalPoint2** generieren und werten einen einzelnen Punkt in einem Gitternetz aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ void glEvalPoint2(
 *i* 
 </dt> <dd>
 
-Der ganzzahlige Wert für die Raster Domänen Variable *i*.
+Der ganzzahlige Wert für die Rasterdomänenvariable *i*.
 
 </dd> <dt>
 
-*IStGH* 
+*j* 
 </dt> <dd>
 
-Der ganzzahlige Wert für die Raster Domänen Variable *j* .
+Der ganzzahlige Wert für die Rasterdomänenvariable *j* .
 
 </dd> </dl>
 
@@ -59,39 +59,39 @@ Der ganzzahlige Wert für die Raster Domänen Variable *j* .
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktionen [**glmapgrid**](glmapgrid-functions.md) und [**glevalmesh**](glevalmesh-functions.md) werden zusammen verwendet, um eine Reihe von Zuordnungs Domänen Werten, die gleichmäßig verteilt sind, effizient zu generieren und auszuwerten. Mithilfe von **glevalpoint** können Sie einen einzelnen Raster Punkt im gleichen Raster Bereich auswerten, der von **glevalmesh** durchlaufen wird. Das Aufrufen von [**glEvalPoint1**](glevalpoint.md) entspricht dem Aufrufen von.
+Die Funktionen [**glMapGrid**](glmapgrid-functions.md) und [**glEvalMesh**](glevalmesh-functions.md) werden zusammen verwendet, um eine Reihe von gleichmäßigen Zuordnungsdomänenwerten effizient zu generieren und auszuwerten. Sie können **glEvalPoint** verwenden, um einen einzelnen Rasterpunkt im gleichen Rasterbereich auszuwerten, der von **glEvalMesh** durchlaufen wird. Das Aufrufen von [**glEvalPoint1**](glevalpoint.md) entspricht dem Aufrufen von .
 
-**glEvalCoord1** (*i* *) u*  + 1);
+**glEvalCoord1** (*i* ?*u*  + *u* 1 );
 
 where
 
-? *u* = (*u* 2 *u* 1)/*n*
+? *u* = (*u* 2 *u* 1 )/*n*
 
-und *n*, *u* 1 und *u* 2 sind die Argumente der neuesten **glMapGrid1** -Funktion. Eine absolute numerische Anforderung besteht darin, dass bei *i*  =  *n* der Wert, der von berechnet wird (*i* ?*u* + U1) ist genau *u* 2.
+und *n*, *u* 1 und *u* 2 sind die Argumente für die neueste **glMapGrid1-Funktion.** Die einzige absolute numerische Anforderung besteht darin, dass bei *i*  =  *n* der Wert aus berechnet wird (*i* ?*u* + u1 ) ist genau *u* 2 .
 
-Im zweidimensionalen Fall, **glEvalPoint2**, Let
+Im zweidimensionalen Fall **glEvalPoint2**, let
 
-? *u* = (*u* 2 *u* 1)/*n*
+? *u* = (*u* 2 *u* 1 )/*n*
 
-? *v* = (*v* 2 *v* 1)/*m*
+? *v* = (*v* 2 *v* 1 *)/m*
 
-dabei *sind n*, *u* 1, *u* 2, *m*, *v* 1 und *v* 2 die Argumente der neuesten **glMapGrid2** -Funktion. Die **glEvalPoint2** -Funktion entspricht dem Aufrufen von.
+wobei *n*, *u* 1, *u* 2 , *m*, *v* 1 und *v* 2 die Argumente für die neueste **glMapGrid2-Funktion** sind. Dann entspricht die **glEvalPoint2-Funktion** dem Aufrufen von .
 
-**glEvalCoord2** (*i* *) u*  +  1, *j* ?*v*  +  *v* 1);
+**glEvalCoord2** (*i* ?*u*  +  *u* 1 , *j* ?*v*  +  *v* 1 );
 
-Die einzigen absoluten numerischen Anforderungen sind, dass bei *i* = *n* der Wert, der von berechnet wird (*i* ?*u*  +  1) ist genau U2, und wenn *j*  =  *m* ist, dann wird der von (j?) berechnete Wert (*j* ?*v*  +  *v* 1) ist genau *v* 2.
+Die einzigen absoluten numerischen Anforderungen sind folgende: Wenn *ich* = *n* habe, dann der Wert, der aus berechnet wurde (*i* ?*u*  +  *u* 1 ) ist genau u2, und wenn *j*  =  *m*, dann wird der Wert berechnet aus (*j* ?*v*  +  *v* 1 ) ist genau *v* 2 .
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glEvalPoint1**](glevalpoint.md) und **glEvalPoint2** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ zuordnung1 \_ Raster \_ Domäne
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ MAP1 \_ GRID \_ DOMAIN
 
-**glget** mit Argument GL \_ map2 \_ Raster \_ Domäne
+**glGet** mit argument GL \_ MAP2 \_ GRID \_ DOMAIN
 
-**glget** mit Argument GL \_ zuordnung1 \_ Raster \_ Segmente
+**glGet** mit dem Argument GL \_ MAP1 \_ GRID \_ SEGMENTS
 
-**glget** mit Argument GL \_ map2 \_ Raster \_ Segmente
+**glGet** mit dem Argument GL \_ MAP2 \_ GRID \_ SEGMENTS
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glEvalPoint1
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -111,13 +111,13 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glEvalPoint1
 
 <dl> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[**glevalmesh**](glevalmesh-functions.md)
+[**glEvalMesh**](glevalmesh-functions.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
 [**glMap1**](glmap1.md)
@@ -126,7 +126,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glEvalPoint1
 [**glMap2**](glmap2.md)
 </dt> <dt>
 
-[**glmapgrid**](glmapgrid-functions.md)
+[**glMapGrid**](glmapgrid-functions.md)
 </dt> </dl>
 
  

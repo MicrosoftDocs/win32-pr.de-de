@@ -108,7 +108,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Range-Upper            | 64                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000011                                                    |
-| In verwendete Klassen        | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
 
 
 
@@ -121,7 +121,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | True                                                                                                    |
-| Ist einwertig       | True                                                                                                    |
+| Is-Single-Valued       | True                                                                                                    |
 | Ist indiziert             | False                                                                                                   |
 | Im globalen Katalog      | False                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -129,7 +129,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Range-Upper            | 64                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000011                                                                                              |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
 
 
 
@@ -142,7 +142,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | True                                                                                                    |
-| Ist einwertig       | True                                                                                                    |
+| Is-Single-Valued       | True                                                                                                    |
 | Ist indiziert             | False                                                                                                   |
 | Im globalen Katalog      | False                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -150,7 +150,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Range-Upper            | 64                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000011                                                                                              |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
 
 
 
@@ -163,7 +163,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | True                                                                                                    |
-| Ist einwertig       | True                                                                                                    |
+| Is-Single-Valued       | True                                                                                                    |
 | Ist indiziert             | False                                                                                                   |
 | Im globalen Katalog      | False                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -171,7 +171,7 @@ Wird während der Umbenennung der Domäne verwendet. Dieser Wert kann nicht mitH
 | Range-Upper            | 64                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000011                                                                                              |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Ref-übergreifender Container**](c-crossrefcontainer.md)<br/> |
 
 
 

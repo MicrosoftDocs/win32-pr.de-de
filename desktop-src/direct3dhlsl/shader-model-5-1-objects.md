@@ -4,12 +4,12 @@ description: Die folgenden Objekte wurden dem Shadermodell 5.1 hinzugefügt.
 ms.assetid: 2958618D-54C6-4860-9910-B45AAB73CCFD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 376ce272e789501e21f5866be37f56daf31bc829
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 1f253c9d6a82e5a464e55761625ba8f88dd7953e3f293fc142a69019a3889830
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111825717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671631"
 ---
 # <a name="shader-model-51-objects"></a>Shadermodell 5.1-Objekte
 

@@ -1,5 +1,5 @@
 ---
-description: Stellt den konfigurierten Status der Komponente der Gast Dienst Schnittstelle dar.
+description: Stellt den konfigurierten Zustand der Gastdienstschnittstellenkomponente dar.
 ms.assetid: 82B58459-9819-4F51-BEE5-AB57E444CF55
 title: Msvm_GuestServiceInterfaceComponentSettingData-Klasse
 ms.topic: reference
@@ -34,16 +34,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0ada39e4428040cf7e6732232ce789f7d837c9c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e1171e5f303d5b122f0d2202978415206a26e94c15e69f09af73b811c33dcb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118147806"
 ---
-# <a name="msvm_guestserviceinterfacecomponentsettingdata-class"></a>MSVM- \_ guestserviceinterfacetten componentsettingdata-Klasse
+# <a name="msvm_guestserviceinterfacecomponentsettingdata-class"></a>Msvm \_ GuestServiceInterfaceComponentSettingData-Klasse
 
-Stellt den konfigurierten Status der Komponente der Gast Dienst Schnittstelle dar. Diese Klasse wird von der [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) -Klasse abgeleitet.
+Stellt den konfigurierten Zustand der Gastdienstschnittstellenkomponente dar. Diese Klasse wird von der [**\_ CIM-Klasse ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) ableiten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -79,72 +79,72 @@ class Msvm_GuestServiceInterfaceComponentSettingData : CIM_ResourceAllocationSet
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ guestserviceinterfacecomponentsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ GuestServiceInterfaceComponentSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ guestserviceinterfacecomponentsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ GuestServiceInterfaceComponentSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Adresse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Adresse der Ressource. Beispielsweise die Mac-Adresse eines Ethernet-Ports.
+Die Adresse der Ressource. Beispiel: die MAC-Adresse eines Ethernet-Ports.
 
 </dd> <dt>
 
-**Zuordnung von Einheiten**
+**AllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt die Zuordnungs Einheiten an, die von den Reservierungs-und Limit-Eigenschaften verwendet werden. Wenn z. b. ResourceType = Processor ist, kann zugcationunits auf MHz festgelegt werden. Wenn ResourceType = Memory, kann ' zugcationunits ' auf ' MB ' festgelegt werden.
+Diese Eigenschaft gibt die Zuordnungseinheiten an, die von den Eigenschaften Reservierung und Limit verwendet werden. Wenn beispielsweise ResourceType=Processor, kann AllocationUnits auf MHz festgelegt werden. Wenn ResourceType=Memory, kann AllocationUnits auf MB festgelegt werden.
 
 </dd> <dt>
 
-**Automaticallocation**
+**AutomaticAllocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt an, ob die Ressource automatisch zugewiesen wird. Wenn z. b. auf true festgelegt ist, wird diese Ressource zugeordnet, wenn das verarbeitende virtuelle Computersystem eingeschaltet ist. Der Wert false gibt an, dass die Ressource explizit zugewiesen werden muss. Die Einstellung kann z. b. ein Wechselmedium (d. h. Rom oder Disketten) darstellen, bei dem die Medien bei der Stromversorgung nicht vorhanden sind. Ein expliziter Vorgang ist erforderlich, um die Ressource zuzuordnen.
+Diese Eigenschaft gibt an, ob die Ressource automatisch zugeordnet wird. Wenn sie beispielsweise auf TRUE festgelegt ist, wird diese Ressource zugeordnet, wenn das systemaufwändige virtuelle Computer eingeschaltet ist. Der Wert false gibt an, dass die Ressource explizit zugeordnet werden muss. Die Einstellung kann z. B. Wechselmedien (d. h. Zung oder Diskette) darstellen, bei denen das Medium bei der Energieversorgung nicht vorhanden ist. Zum Zuordnen der Ressource ist ein expliziter Vorgang erforderlich.
 
 </dd> <dt>
 
-**Automaticdeallocation**
+**AutomaticDeallocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt an, ob die Zuordnung der Ressource automatisch aufgehoben wird. Wenn z. b. auf true festgelegt ist, wird die Zuordnung dieser Ressource aufgehoben, wenn das verarbeitende virtuelle Computer ausgeschaltet ist. Wenn false festgelegt ist, bleibt die Ressource reserviert, und die Zuordnung muss explizit aufgehoben werden.
+Diese Eigenschaft gibt an, ob die Ressourcenzuordnung automatisch entfernt wird. Wenn sie z. B. auf TRUE festgelegt ist, wird die Ressourcenzuordnung bei ausgeschalteten virtuellen Computersystemen wieder eingestellt. Wenn false festgelegt ist, bleibt die Ressource zugeordnet und muss explizit wieder zugeordnet werden.
 
 </dd> <dt>
 
 **Connection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -154,27 +154,27 @@ Das, mit dem diese Ressource verbunden ist. Beispielsweise ein benanntes Netzwer
 
 </dd> <dt>
 
-**Consumersichtbarkeit**
+**ConsumerVisibility**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Benutzer Sichtbarkeit der zugeordneten Ressource.
+Beschreibt die Sichtbarkeit des Consumers für die zugeordnete Ressource.
 
 
 
 | Wert                                                                                                                                                                                                                                                                  | Bedeutung                                                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dl> <dt>**Unbekannter**</dt> Wert <dt>0</dt> </dl>                                            | Unbekannt<br/>                                                                                                                                                                                                                                         |
-| <span id="Passed-Through"></span><span id="passed-through"></span><span id="PASSED-THROUGH"></span><dl> <dt>**Durchlaufen**</dt> <dt>2</dt> </dl>                | Die zugrunde liegende-oder-Host Ressource wird verwendet und an den Consumer übermittelt, möglicherweise mithilfe der Partitionierung. In der Eigenschaft "Eigenschaft" muss mindestens ein Element vorhanden sein.<br/>                                                                        |
-| <span id="Virtualized"></span><span id="virtualized"></span><span id="VIRTUALIZED"></span><dl> <dt>**Virtualisiert**</dt> <dt>3</dt> </dl>                            | Die Ressource ist virtualisiert und darf nicht direkt einer zugrunde liegenden/Host Ressource zugeordnet werden. Einige Implementierungen unterstützen möglicherweise eine bestimmte Zuweisung für virtualisierte Ressourcen. in diesem Fall werden die Host Ressourcen mithilfe der DeviceID-Eigenschaft verfügbar gemacht.<br/> |
-| <span id="Not_represented"></span><span id="not_represented"></span><span id="NOT_REPRESENTED"></span><dl> <dt>**Nicht dargestellt**</dt> <dt>4</dt> </dl>            | Eine Darstellung der Ressource ist nicht im Kontext des ressourcenconsumers vorhanden.<br/>                                                                                                                                                     |
-| <span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>..</dt> </dl>                   |                                                                                                                                                                                                                                                             |
-| <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span><dl> <dt>**Hersteller reserviert**</dt> <dt>32767.65535</dt> </dl> |                                                                                                                                                                                                                                                             |
+| <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dl> <dt>**Unbekannt**</dt> <dt>0</dt> </dl>                                            | Unbekannt<br/>                                                                                                                                                                                                                                         |
+| <span id="Passed-Through"></span><span id="passed-through"></span><span id="PASSED-THROUGH"></span><dl> <dt>**Übergebene Durch übergebene**</dt> <dt>2</dt> </dl>                | Die zugrunde liegende - oder -Hostressource wird verwendet und an den Consumer übergeben, möglicherweise mithilfe der Partitionierung. In der DeviceID-Eigenschaft muss mindestens ein Element vorhanden sein.<br/>                                                                        |
+| <span id="Virtualized"></span><span id="virtualized"></span><span id="VIRTUALIZED"></span><dl> <dt>**Virtualisiert**</dt> <dt>3</dt> </dl>                            | Die Ressource wird virtualisiert und ist möglicherweise nicht direkt einer zugrunde liegenden/Hostressource zuordnen. Einige Implementierungen unterstützen möglicherweise eine bestimmte Zuweisung für virtualisierte Ressourcen. In diesem Fall werden die Hostressourcen mithilfe der DeviceID-Eigenschaft verfügbar gemacht.<br/> |
+| <span id="Not_represented"></span><span id="not_represented"></span><span id="NOT_REPRESENTED"></span><dl> <dt>**Nicht dargestellt**</dt> <dt>4</dt> </dl>            | Eine Darstellung der Ressource ist im Kontext des Ressourcenverbraucher nicht vorhanden.<br/>                                                                                                                                                     |
+| <span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**RESERVIERTE**</dt> <dt>DMTF-Datei.</dt> </dl>                   |                                                                                                                                                                                                                                                             |
+| <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span><dl> <dt>**Anbieter reserviert**</dt> <dt>32767..65535</dt> </dl> |                                                                                                                                                                                                                                                             |
 
 
 
@@ -182,21 +182,21 @@ Beschreibt die Benutzer Sichtbarkeit der zugeordneten Ressource.
 
 </dd> <dt>
 
-**Defaultenabledstatepolicy**
+**DefaultEnabledStatePolicy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status der Gast Kommunikationsdienste standardmäßig.
+Der aktivierte und deaktivierte Zustände von Gastkommunikationsdiensten standardmäßig.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyresourcesettings**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyResourceSettings-Methode**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 > [!Note]  
-> In Windows 10 hinzugefügt.
+> Hinzugefügt in Windows 10.
 
  
 
@@ -221,28 +221,28 @@ Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilf
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Anzeige Name für diese Instanz von SettingData. Außerdem kann der Anzeige Name als Index Eigenschaft für eine Suche oder Abfrage verwendet werden. (Hinweis: der Name muss innerhalb eines Namespace nicht eindeutig sein.)
+Der Anzeigename für diese Instanz von SettingData. Darüber hinaus kann der Anzeigename als Indexeigenschaft für eine Suche oder Abfrage verwendet werden. (Hinweis: Der Name muss innerhalb eines Namespaces nicht eindeutig sein.)
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status eines Elements.
+Der aktivierte und deaktivierte Zustände eines Elements.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mit der [**modifyvirtualsystemresources**](/previous-versions/windows/desktop/virtual/modifyvirtualsystemresources-msvm-virtualsystemmanagementservice) -Methode (oder mit [**modifyresourcesettings**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) in Windows 10 oder höher) der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyVirtualSystemResources-Methode**](/previous-versions/windows/desktop/virtual/modifyvirtualsystemresources-msvm-virtualsystemmanagementservice) (oder [**ModifyResourceSettings**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) in Windows 10 oder höher) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) geändert werden kann.
 
 Gültige Werte sind:
 
@@ -264,23 +264,23 @@ Gültige Werte sind:
 
 </dd> <dt>
 
-**"Hustresource"**
+**HostResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft macht eine bestimmte Zuweisung zu Host-oder zugrunde liegenden Ressourcen verfügbar. Die eingebetteten Instanzen dürfen nur Schlüsseleigenschaften enthalten und als Objekt Pfade behandelt werden. Wenn die virtuelle Ressource möglicherweise für eine Reihe von zugrunde liegenden Ressourcen geplant ist, sollte diese Eigenschaft **null** bleiben. In diesem Fall können die Zuordnungen devicezugedfrompool oder resourcezucationfrompool verwendet werden, um den Pool von Host Ressourcen zu ermitteln, auf dem diese virtuelle Ressource möglicherweise geplant ist. Wenn eine bestimmte Zuweisung verwendet wird, werden alle zugrunde liegenden Ressourcen, die von dieser virtuellen Ressource verwendet werden, in diesem Array aufgeführt. In der Regel enthält das Array ein Element. für Aggregat Zuordnungen, z. b. mehrere Prozessoren, können jedoch mehrere Host Ressourcen angegeben werden.
+Diese Eigenschaft macht eine bestimmte Zuweisung zum Hosten oder zu zugrunde liegenden Ressourcen verfügbar. Die eingebetteten Instanzen dürfen nur Schlüsseleigenschaften enthalten und als Objektpfade behandelt werden. Wenn die virtuelle Ressource für eine Reihe von zugrunde liegenden Ressourcen geplant werden kann, sollte diese Eigenschaft **NULL bleiben.** In diesem Fall können die Zuordnungen DeviceAllocatedFromPool oder ResourceAllocationFromPool verwendet werden, um den Pool von Hostressourcen zu bestimmen, für den diese virtuelle Ressource geplant werden kann. Wenn eine bestimmte Zuweisung verwendet wird, müssen alle zugrunde liegenden Ressourcen, die von dieser virtuellen Ressource verwendet werden, in diesem Array aufgeführt werden. In der Regel enthält das Array ein Element. Für Aggregatzuordnungen, z. B. mehrere Prozessoren, können jedoch mehrere Hostressourcen angegeben werden.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -289,33 +289,33 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Im Gültigkeitsbereich des instanziierten Namespaces identifiziert InstanceId verdeckt und identifiziert eine Instanz dieser Klasse eindeutig. Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert von InstanceId mit dem folgenden "bevorzugten" Algorithmus erstellt werden: *OrgId*:*localId* , bei der *OrgId* und *localId* durch einen Doppelpunkt (:)) getrennt sind und *OrgId* einen urheberrechtlich geschützten, mit einem Wert gekennzeichneten oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäfts Entität ist, die die InstanceId erstellt oder definiert, oder bei der es sich um eine registrierte, von einer anerkannten globalen Autorität zugewiesene ID handelt. (Diese Anforderung ähnelt dem Schema *Name* \_ *ClassName* -Struktur von Schema Klassennamen.) Außerdem darf *OrgId* keinen Doppelpunkt (:) enthalten, um die Eindeutigkeit sicherzustellen. Wenn dieser Algorithmus verwendet wird, muss der erste Doppelpunkt, der in InstanceId angezeigt wird, zwischen *OrgId* und *localId* angezeigt werden. *LocalId* wird von der Geschäfts Entität ausgewählt und sollte nicht wieder verwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceId nicht in allen instanceids wieder verwendet wird, die von diesem oder anderen Anbietern für den Namespace dieser Instanz erstellt werden. Für von DMTF definierte Instanzen muss der "bevorzugte" Algorithmus verwendet werden, wenn die *OrgId* auf CIM festgelegt ist.
+Im Gültigkeitsbereich des instanziierenden Namespace identifiziert InstanceID eine Instanz dieser Klasse undurchsichtig und eindeutig. Um die Eindeutigkeit innerhalb des NameSpace sicherzustellen, sollte der Wert von InstanceID mit dem folgenden "bevorzugten" Algorithmus erstellt *werden: OrgID*:*LocalID,* wobei *OrgID* und *LocalID* durch einen Doppelpunkt (:)) getrennt sind und *wobei OrgID* einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäftseinheit ist, die die InstanceID erstellt oder definiert oder eine registrierte ID ist, die der Geschäftseinheit von einer anerkannten globalen Autorität zugewiesen wurde. (Diese Anforderung ähnelt *schemaName.* \_ *ClassName-Struktur* von Schemaklassennamen.) Um die Eindeutigkeit sicherzustellen, darf *OrgID* außerdem keinen Doppelpunkt (:). Bei Verwendung dieses Algorithmus muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen *OrgID* und *LocalID angezeigt werden.* *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceID nicht für InstanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erzeugt werden. Für DMTF-definierte Instanzen muss der "bevorzugte" Algorithmus verwendet werden, und die *OrgID muss* auf CIM festgelegt sein.
 
 </dd> <dt>
 
 **Begrenzung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt die obere Grenze oder die maximale Menge an Ressourcen an, die für diese Zuweisung gewährt wird. Beispielsweise kann ein System, das die Speicher Auslagerung unterstützt, das Festlegen des Limits einer Speicher Belegung unterhalb der virtualmenge unterstützen, wodurch das Paging für diese Zuweisung erzwungen wird.
+Diese Eigenschaft gibt die Obergrenze oder die maximale Menge an Ressourcen an, die für diese Zuordnung gewährt werden. Beispielsweise kann ein System, das Speicher paging unterstützt, das Festlegen des Grenzwerts für eine Speicherzuweisung unterhalb des VirtualQuantity-Grenzwerts unterstützen, wodurch die Auslagerung für diese Zuordnung erzwungen wird.
 
 </dd> <dt>
 
-**Mappingbehavior**
+**MappingBehavior**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie diese Ressource den zugrunde liegenden Ressourcen zugeordnet wird. Wenn das "custresource"-Array Einträge enthält, gibt diese Eigenschaft an, wie die Ressource diesen spezifischen Ressourcen zugeordnet wird.
+Gibt an, wie diese Ressource zugrunde liegenden Ressourcen zu ordnet. Wenn das HostResource-Array Einträge enthält, spiegelt diese Eigenschaft wider, wie die Ressource diesen spezifischen Ressourcen entspricht.
 
 <dl> <dt>
 
@@ -325,27 +325,27 @@ Gibt an, wie diese Ressource den zugrunde liegenden Ressourcen zugeordnet wird. 
 <span id="Not_Supported"></span><span id="not_supported"></span><span id="NOT_SUPPORTED"></span>**Nicht unterstützt** (1)
 </dt> <dt>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dediziert** (2)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (2)
 </dt> <dt>
 
-<span id="Soft_Affinity"></span><span id="soft_affinity"></span><span id="SOFT_AFFINITY"></span>**Weiche Affinität** (3)
+<span id="Soft_Affinity"></span><span id="soft_affinity"></span><span id="SOFT_AFFINITY"></span>**Soft Affinity** (3)
 </dt> <dt>
 
-<span id="Hard_Affinity"></span><span id="hard_affinity"></span><span id="HARD_AFFINITY"></span>**Harte Affinität** (4)
+<span id="Hard_Affinity"></span><span id="hard_affinity"></span><span id="HARD_AFFINITY"></span>**Hard Affinity** (4)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Hersteller reserviert** (32767.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32767..65535)
 </dt> </dl>
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -358,78 +358,78 @@ Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter W
 **Parent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das übergeordnete Element der Ressource. Beispielsweise ein Controller für die aktuelle Zuordnung.
+Das übergeordnete Element der Ressource. Beispiel: ein Controller für die aktuelle Zuordnung.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt an, von welchem resourcepool die Ressource derzeit zugeordnet ist, oder welcher resourcepool die Ressource bei der Zuordnung zugewiesen wird.
+Diese Eigenschaft gibt an, aus welchem ResourcePool die Ressource derzeit zugeordnet ist oder von welchem ResourcePool die Ressource zugeordnet wird, wenn die Zuordnung erfolgt.
 
 </dd> <dt>
 
 **Reservierung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt die Menge der Ressourcen an, die für diese Zuordnung garantiert verfügbar sind. Auf dem System, das eine Überbelegung von Ressourcen unterstützt, wird dieser Wert in der Regel für die Zugangskontrolle verwendet, um zu verhindern, dass eine Zuordnung akzeptiert wird, wodurch Ressourcenmangel verhindert wird.
+Diese Eigenschaft gibt die Menge der Ressource an, die für diese Zuordnung garantiert verfügbar ist. Auf einem System, das eine überzubelegung von Ressourcen unterstützt, wird dieser Wert in der Regel für die Zugangssteuerung verwendet, um zu verhindern, dass eine Zuordnung akzeptiert wird, wodurch eine Ressourcenaufbelegung verhindert wird.
 
 </dd> <dt>
 
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die einen Implementierungs spezifischen Untertyp für diese Ressource beschreibt. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden.
+Eine Zeichenfolge, die einen implementierungsspezifischen Untertyp für diese Ressource beschreibt. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
+Der Ressourcentyp, den diese Zuordnungseinstellung darstellt.
 
 <dl> <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 </dt> <dt>
 
-<span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>**Computer System** (2)
+<span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>**Computersystem** (2)
 </dt> <dt>
 
 <span id="Processor"></span><span id="processor"></span><span id="PROCESSOR"></span>**Prozessor** (3)
 </dt> <dt>
 
-<span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>Arbeits **Speicher** (4)
+<span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>**Arbeitsspeicher** (4)
 </dt> <dt>
 
 <span id="IDE_Controller"></span><span id="ide_controller"></span><span id="IDE_CONTROLLER"></span>**IDE-Controller** (5)
@@ -438,10 +438,10 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 <span id="Parallel_SCSI_HBA"></span><span id="parallel_scsi_hba"></span><span id="PARALLEL_SCSI_HBA"></span>**Paralleler SCSI-HBA** (6)
 </dt> <dt>
 
-<span id="FC_HBA"></span><span id="fc_hba"></span>**FC-HBA** (7)
+<span id="FC_HBA"></span><span id="fc_hba"></span>**FC HBA** (7)
 </dt> <dt>
 
-<span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>**iSCSI-HBA** (8)
+<span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>**iSCSI HBA** (8)
 </dt> <dt>
 
 <span id="IB_HCA"></span><span id="ib_hca"></span>**IB HCA** (9)
@@ -450,13 +450,13 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 <span id="Ethernet_Adapter"></span><span id="ethernet_adapter"></span><span id="ETHERNET_ADAPTER"></span>**Ethernet-Adapter** (10)
 </dt> <dt>
 
-<span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>**Anderer Netzwerk Adapter** (11)
+<span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>**Anderer Netzwerkadapter** (11)
 </dt> <dt>
 
-<span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>E **/a-Slot** (12)
+<span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>**E/A-Slot** (12)
 </dt> <dt>
 
-<span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>E **/a-Gerät** (13)
+<span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>**E/A-Gerät** (13)
 </dt> <dt>
 
 <span id="Floppy_Drive"></span><span id="floppy_drive"></span><span id="FLOPPY_DRIVE"></span>**Diskettenlaufwerk** (14)
@@ -468,10 +468,10 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 <span id="DVD_drive"></span><span id="dvd_drive"></span><span id="DVD_DRIVE"></span>**DVD-Laufwerk** (16)
 </dt> <dt>
 
-<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Seriellen Anschluss** (17)
+<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Serieller** Anschluss (17)
 </dt> <dt>
 
-<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler Anschluss** (18)
+<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler** Port (18)
 </dt> <dt>
 
 <span id="USB_Controller"></span><span id="usb_controller"></span><span id="USB_CONTROLLER"></span>**USB-Controller** (19)
@@ -480,10 +480,10 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 <span id="Graphics_controller"></span><span id="graphics_controller"></span><span id="GRAPHICS_CONTROLLER"></span>**Grafikcontroller** (20)
 </dt> <dt>
 
-<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Speicher** Block (21)
+<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Storage Extent** (21)
 </dt> <dt>
 
-<span id="Disk"></span><span id="disk"></span><span id="DISK"></span>Daten **Träger (22** )
+<span id="Disk"></span><span id="disk"></span><span id="DISK"></span>**Datenträger** (22)
 </dt> <dt>
 
 <span id="Tape"></span><span id="tape"></span><span id="TAPE"></span>**Band** (23)
@@ -492,25 +492,25 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 <span id="Other_storage_device"></span><span id="other_storage_device"></span><span id="OTHER_STORAGE_DEVICE"></span>**Anderes Speichergerät** (24)
 </dt> <dt>
 
-<span id="Firewire_Controller"></span><span id="firewire_controller"></span><span id="FIREWIRE_CONTROLLER"></span>**Firewire-Controller** (25)
+<span id="Firewire_Controller"></span><span id="firewire_controller"></span><span id="FIREWIRE_CONTROLLER"></span>**Firewire Controller** (25)
 </dt> <dt>
 
-<span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>**Partitionier Bare Einheit** (26)
+<span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>**Partitionierbare Einheit** (26)
 </dt> <dt>
 
-<span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>**Partitionier bare Basiseinheit** (27)
+<span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>**Partitionierbare Basiseinheit** (27)
 </dt> <dt>
 
-<span id="Power_Supply"></span><span id="power_supply"></span><span id="POWER_SUPPLY"></span>**Netzteil** (28)
+<span id="Power_Supply"></span><span id="power_supply"></span><span id="POWER_SUPPLY"></span>**Stromversorgung** (28)
 </dt> <dt>
 
-<span id="Cooling_Device"></span><span id="cooling_device"></span><span id="COOLING_DEVICE"></span>**Kühl Gerät** (29)
+<span id="Cooling_Device"></span><span id="cooling_device"></span><span id="COOLING_DEVICE"></span>**Kühlgerät** (29)
 </dt> <dt>
 
-<span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserved** (.)
 </dt> <dt>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Hersteller reserviert** (32767.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32767..65535)
 </dt> </dl>
 
 </dd> <dt>
@@ -518,26 +518,26 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt.
 **VirtualQuantity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt die Menge der Ressourcen an, die dem Consumer vorgelegt werden. Wenn beispielsweise ResourceType = Processor ist, würde diese Eigenschaft die Anzahl der diskreten Prozessoren widerspiegeln, die dem virtuellen Computersystem präsentiert werden. Wenn ResourceType = Arbeitsspeicher vorhanden ist, kann diese Eigenschaft die Anzahl der MB widerspiegeln, die dem virtuellen Computersystem gemeldet wurden.
+Diese Eigenschaft gibt die Menge der Ressourcen an, die dem Consumer präsentiert werden. Wenn beispielsweise ResourceType=Processor verwendet wird, spiegelt diese Eigenschaft die Anzahl der diskreten Prozessoren wider, die dem virtuellen Computersystem präsentiert werden. Wenn ResourceType=Memory, könnte diese Eigenschaft die Anzahl von MB widerspiegeln, die an das virtuelle Computersystem gemeldet werden.
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft gibt eine relative Priorität für diese Zuordnung in Bezug auf andere Zuordnungen desselben resourcepools an. Diese Eigenschaft hat keine Maßeinheit und ist nur im Vergleich zu anderen Zuordnungen relevant, die für dieselben Host Ressourcen konkurrieren.
+Diese Eigenschaft gibt eine relative Priorität für diese Zuordnung in Bezug auf andere Zuordnungen aus demselben ResourcePool an. Diese Eigenschaft verfügt über keine Maßeinheit und ist nur relevant im Vergleich zu anderen Zuordnungen, die um die gleichen Hostressourcen konkurrieren.
 
 </dd> </dl>
 
@@ -547,10 +547,10 @@ Diese Eigenschaft gibt eine relative Priorität für diese Zuordnung in Bezug au
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -559,10 +559,10 @@ Diese Eigenschaft gibt eine relative Priorität für diese Zuordnung in Bezug au
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> <dt>
 
-[**CIM \_ resourcezubesettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
+[**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 </dt> </dl>
 
  

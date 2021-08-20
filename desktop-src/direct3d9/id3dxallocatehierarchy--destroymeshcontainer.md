@@ -1,7 +1,7 @@
 ---
-description: Fordert die Aufhebung der Zuordnung eines Mesh-Container Objekts an.
+description: Fordert die Freigabe eines Meshcontainerobjekts an.
 ms.assetid: 7a976ba8-6972-4857-b0a9-4ea7a88dc8ac
-title: ID3DXAllocateHierarchy::D estroymeshcontainer-Methode (D3dx9anim. h)
+title: ID3DXAllocateHierarchy::D estmultiMeshContainer-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6114c78cefd7415fb11fc30587fa2dc628fb4466
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8c24b4dee9490c55644ceab4670cda1109dcc4e1cfde65c661bbe9b3fbc64f01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118094610"
 ---
-# <a name="id3dxallocatehierarchydestroymeshcontainer-method"></a>ID3DXAllocateHierarchy::D estroymeshcontainer-Methode
+# <a name="id3dxallocatehierarchydestroymeshcontainer-method"></a>ID3DXAllocateHierarchy::D esthydrMeshContainer-Methode
 
-Fordert die Aufhebung der Zuordnung eines Mesh-Container Objekts an.
+Fordert die Freigabe eines Meshcontainerobjekts an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT DestroyMeshContainer(
 
 <dl> <dt>
 
-*pmeshcontainerautofree* \[ in\]
+*pMeshContainerToFree* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESHCONTAINER**](d3dxmeshcontainer.md)**
 
-Zeiger auf das Mesh-Container Objekt, dessen Zuordnung aufgehoben werden soll.
+Zeiger auf das Gittermodellcontainerobjekt, für das die Zuordnung freigegeben werden soll.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf das Mesh-Container Objekt, dessen Zuordnung aufgehoben werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die Methode, um eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückzugeben, da dies dazu führt, dass [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) ebenfalls fehlschlägt, und gibt den Fehler zurück.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückzugeben, da dies dazu führt, dass [**auch D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt, und den Fehler zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

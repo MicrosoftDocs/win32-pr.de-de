@@ -1,48 +1,48 @@
 ---
-description: Die Verwaltungsfunktionen für die Netzwerkfreigabe können wie folgt gruppiert werden.
+description: Die Funktionen für die Netzwerkfreigabeverwaltung können wie folgt gruppiert werden.
 ms.assetid: 07251c93-b397-470d-a3e4-55288ece1fc9
-title: Funktionen für die Netzwerkfreigabe Verwaltung
+title: Verwaltungsfunktionen für Netzwerkfreigaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1676e42b707154971c88ff9bae2fa404114384b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9edc51e9b50fc0f8374293893a037e040bd056fd653076241286f55b0f4aae2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676570"
 ---
-# <a name="network-share-management-functions"></a>Funktionen für die Netzwerkfreigabe Verwaltung
+# <a name="network-share-management-functions"></a>Verwaltungsfunktionen für Netzwerkfreigaben
 
-Die Verwaltungsfunktionen für die Netzwerkfreigabe können wie folgt gruppiert werden.
+Die Funktionen für die Netzwerkfreigabeverwaltung können wie folgt gruppiert werden.
 
-## <a name="netfile-functions"></a>Netfile-Funktionen
+## <a name="netfile-functions"></a>NetFile-Funktionen
 
 <dl>
 
-[**Netfileclose**](/windows/desktop/api/Lmshare/nf-lmshare-netfileclose)  
-[**Netfileaufumum**](/windows/desktop/api/Lmshare/nf-lmshare-netfileenum)  
-[**Netfilegetinfo**](/windows/desktop/api/Lmshare/nf-lmshare-netfilegetinfo)  
+[**NetFileClose**](/windows/desktop/api/Lmshare/nf-lmshare-netfileclose)  
+[**NetFileEnum**](/windows/desktop/api/Lmshare/nf-lmshare-netfileenum)  
+[**NetFileGetInfo**](/windows/desktop/api/Lmshare/nf-lmshare-netfilegetinfo)  
 </dl>
 
-## <a name="session-functions"></a>Sitzungs Funktionen
+## <a name="session-functions"></a>Sitzungsfunktionen
 
 <dl>
 
-[**"Netzessiondel"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel)  
-[**"Netzessionaufumum"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessionenum)  
-[**"Netzessiongetinfo"**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiongetinfo)  
+[**NetSessionDel**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiondel)  
+[**NetSessionEnum**](/windows/desktop/api/Lmshare/nf-lmshare-netsessionenum)  
+[**NetSessionGetInfo**](/windows/desktop/api/Lmshare/nf-lmshare-netsessiongetinfo)  
 </dl>
 
-## <a name="network-share-functions"></a>Netzwerkfreigabe Funktionen
+## <a name="network-share-functions"></a>Netzwerkfreigabefunktionen
 
 <dl>
 
-[**Netconnectionenum**](/windows/desktop/api/Lmshare/nf-lmshare-netconnectionenum)  
+[**NetConnectionEnum**](/windows/desktop/api/Lmshare/nf-lmshare-netconnectionenum)  
 [**NetShareAdd**](/windows/desktop/api/Lmshare/nf-lmshare-netshareadd)  
-[**Netsharecheck**](/windows/desktop/api/Lmshare/nf-lmshare-netsharecheck)  
-[**Netsharedel**](/windows/desktop/api/Lmshare/nf-lmshare-netsharedel)  
-[**Netsharedelta Ex**](/windows/desktop/api/Lmshare/nf-lmshare-netsharedelex)  
-[**Netshareaufumum**](/windows/desktop/api/Lmshare/nf-lmshare-netshareenum)  
+[**NetShareCheck**](/windows/desktop/api/Lmshare/nf-lmshare-netsharecheck)  
+[**NetShareDel**](/windows/desktop/api/Lmshare/nf-lmshare-netsharedel)  
+[**NetShareDelEx**](/windows/desktop/api/Lmshare/nf-lmshare-netsharedelex)  
+[**NetShareEnum**](/windows/desktop/api/Lmshare/nf-lmshare-netshareenum)  
 [**NetShareGetInfo**](/windows/desktop/api/Lmshare/nf-lmshare-netsharegetinfo)  
 [**NetShareSetInfo**](/windows/desktop/api/Lmshare/nf-lmshare-netsharesetinfo)  
 </dl>
@@ -51,7 +51,7 @@ Die Verwaltungsfunktionen für die Netzwerkfreigabe können wie folgt gruppiert 
 
 <dl>
 
-[**Netstatisticsget**](/windows/desktop/api/Lmstats/nf-lmstats-netstatisticsget)  
+[**NetStatisticsGet**](/windows/desktop/api/Lmstats/nf-lmstats-netstatisticsget)  
 </dl>
 
  

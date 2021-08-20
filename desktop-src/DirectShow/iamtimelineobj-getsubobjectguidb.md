@@ -1,7 +1,7 @@
 ---
-description: 'Die getsubobjectguidb-Methode ruft die GUID des untergeordneten Objekts ab, das diesem Zeitachsen Objekt zugeordnet ist. Diese Methode entspricht iamtimelineobj:: getsubobjectguid, empfängt aber einen BSTR-Wert.'
+description: Die GetSubObjectGUIDB-Methode ruft die GUID des Unterobjekts ab, das diesem Zeitachsenobjekt zugeordnet ist. Diese Methode entspricht IAMTimelineObj::GetSubObjectGUID, empfängt jedoch einen BSTR-Wert.
 ms.assetid: 693cafda-78c8-4ba4-90d7-23fedcd1fc52
-title: 'Iamtimelineobj:: getsubobjectguidb-Methode (qedit. h)'
+title: IAMTimelineObj::GetSubObjectGUIDB-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 903c6638eececd635af2facd964adabe26f0c106
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 79cf7c6a0b3f162f3f3baee2a46cfc0c2c2b61271b19e57549c73b4faa0594bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155381"
 ---
-# <a name="iamtimelineobjgetsubobjectguidb-method"></a>Iamtimelineobj:: getsubobjectguidb-Methode
+# <a name="iamtimelineobjgetsubobjectguidb-method"></a>IAMTimelineObj::GetSubObjectGUIDB-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `GetSubObjectGUIDB` Methode ruft die GUID des untergeordneten Objekts ab, das diesem Zeitachsen Objekt zugeordnet ist. Diese Methode entspricht [**iamtimelineobj:: getsubobjectguid**](iamtimelineobj-getsubobjectguid.md), empfängt aber einen **BSTR** -Wert.
+Die `GetSubObjectGUIDB` -Methode ruft die GUID des Unterobjekts ab, das diesem Zeitachsenobjekt zugeordnet ist. Diese Methode entspricht [**IAMTimelineObj::GetSubObjectGUID,**](iamtimelineobj-getsubobjectguid.md)empfängt jedoch einen **BSTR-Wert.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT GetSubObjectGUIDB(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt eine Zeichenfolge, die die untergeordnete GUID darstellt.
+Empfängt eine Zeichenfolge, die die Unterobjekt-GUID darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString** aufzurufen, um den Arbeitsspeicher freizugeben.
+Die -Methode ordnet Arbeitsspeicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString aufrufen,** um den Arbeitsspeicher frei zu machen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFr
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFr
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -5,7 +5,7 @@ ms.assetid: abb6218f-def2-4a38-964f-3f0ee6c6f917
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des RID-Available-Pool-Attributs
-- rIDAvailablePool-Attribut AD-Schema
+- AD-Schema des rIDAvailablePool-Attributs
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.370               |
-| System-ID-GUID    | 66171888-8f3c-11d0-afda-00c04fd930c9 |
+| System-Id-Guid    | 66171888-8f3c-11d0-afda-00c04fd930c9 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -58,7 +58,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist einwertig       | True                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -79,7 +79,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist einwertig       | True                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -100,7 +100,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist einwertig       | True                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -121,7 +121,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Is-Single-Valued       | True                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -142,7 +142,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Is-Single-Valued       | True                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -163,7 +163,7 @@ Der Speicherplatz, aus dem RID-Pools zugeordnet werden.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Is-Single-Valued       | True                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
