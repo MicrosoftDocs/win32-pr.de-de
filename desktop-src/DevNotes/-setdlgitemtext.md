@@ -22,9 +22,9 @@ ms.locfileid: "117828011"
 ---
 # <a name="_setdlgitemtext-function"></a>\_SetDlgItemText-Funktion
 
-\[Diese Funktion ist ein Wrapper für die **SetDlgItemText-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SetDlgItemText** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **SetDlgItemText-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SetDlgItemText direkt** aufrufen.\]
 
-Legt den Titel oder Text eines Steuerelements in einem Dialogfeld fest. Siehe [**SetDlgItemText.**](/windows/win32/api/winuser/nf-winuser-setdlgitemtexta)
+Legt den Titel oder Text eines Steuerelements in einem Dialogfeld fest. Siehe [**SetDlgItemText**](/windows/win32/api/winuser/nf-winuser-setdlgitemtexta).
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ BOOL _SetDlgItemText(
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

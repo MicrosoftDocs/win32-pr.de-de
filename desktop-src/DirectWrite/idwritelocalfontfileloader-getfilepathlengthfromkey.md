@@ -1,10 +1,10 @@
 ---
 title: IDWriteLocalFontFileLoader GetFilePathLengthFromKey-Methode
-description: Erhält die Länge des absoluten Dateipfads aus dem Verweisschlüssel der Schriftartdatei.
+description: Ruft die Länge des absoluten Dateipfads aus dem Referenzschlüssel der Schriftartdatei ab.
 ms.assetid: bdd84d75-5a7a-448a-a52c-0f5997ab07b9
 keywords:
 - GetFilePathLengthFromKey-Methode Direct Write
-- GetFilePathLengthFromKey-Methode Direct Write, IDWriteLocalFontFileLoader-Schnittstelle
+- GetFilePathLengthFromKey-Methode Direct Write , IDWriteLocalFontFileLoader-Schnittstelle
 - IDWriteLocalFontFileLoader-Schnittstelle Direct Write , GetFilePathLengthFromKey-Methode
 topic_type:
 - apiref
@@ -25,7 +25,7 @@ ms.locfileid: "117816351"
 ---
 # <a name="idwritelocalfontfileloadergetfilepathlengthfromkey-method"></a>IDWriteLocalFontFileLoader::GetFilePathLengthFromKey-Methode
 
-Erhält die Länge des absoluten Dateipfads aus dem Verweisschlüssel der Schriftartdatei.
+Ruft die Länge des absoluten Dateipfads aus dem Referenzschlüssel der Schriftartdatei ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT GetFilePathLengthFromKey(
 
 Typ: **const \* void**
 
-Der Verweisschlüssel der Schriftartdatei, der die lokale Schriftartdatei innerhalb des Bereichs des verwendeten Schriftartladefelds eindeutig identifiziert.
+Verweisschlüssel für Schriftartdateien, der die lokale Schriftartdatei innerhalb des Bereichs des verwendeten Schriftartladeprogramm eindeutig identifiziert.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Der Verweisschlüssel der Schriftartdatei, der die lokale Schriftartdatei innerh
 
 Typ: **UINT32**
 
-Größe des Verweisschlüssels der Schriftartdatei in Bytes.
+Größe des Schriftartdatei-Referenzschlüssels in Bytes.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Größe des Verweisschlüssels der Schriftartdatei in Bytes.
 
 Typ: **UINT32 \***
 
-Länge der Dateipfadzeichenfolge, ohne das beendete **NULL-Zeichen.**
+Länge der Dateipfadzeichenfolge ohne das beendete **NULL-Zeichen.**
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Länge der Dateipfadzeichenfolge, ohne das beendete **NULL-Zeichen.**
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,7 +88,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

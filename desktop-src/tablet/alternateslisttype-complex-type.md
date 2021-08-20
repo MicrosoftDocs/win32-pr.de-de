@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der die Liste der Erkennungs alternativen Typen für ein Ink-Wort enthält.
+description: Definiert den Typ, der die Liste der Erkennungswechsel für ein Ink-Wort enthält.
 ms.assetid: 3e9e2af3-b8a1-4ef0-ab04-b4b44255d5c3
-title: AlternatesListType Complex Type
+title: 'AlternatesListType : Komplexer Typ'
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118967799"
 ---
-# <a name="alternateslisttype-complex-type"></a>AlternatesListType Complex Type
+# <a name="alternateslisttype-complex-type"></a>AlternatesListType : Komplexer Typ
 
-Definiert den Typ, der die Liste der Erkennungs alternativen Typen für ein Ink-Wort enthält.
+Definiert den Typ, der die Liste der Erkennungswechsel für ein Ink-Wort enthält.
 
 ``` syntax
 <xs:complexType name="AlternatesListType" />

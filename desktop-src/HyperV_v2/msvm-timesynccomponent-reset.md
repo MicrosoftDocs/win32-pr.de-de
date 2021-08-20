@@ -1,5 +1,5 @@
 ---
-description: Reset-Methode der Msvm_TimeSyncComponent - Fordert eine Zurücksetzung an.
+description: 'Reset-Methode der Msvm_TimeSyncComponent Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: fb0ce09b-0d14-4de8-b2e5-4d86169b261b
 title: Reset-Methode der Msvm_TimeSyncComponent Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: d93f548030c2248b30eab7a3585a3c270311aa42
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ff61059be4172d96af4ee154b305e7d03d3acb44d23f801225841774fd5067c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117810633"
 ---
 # <a name="reset-method-of-the-msvm_timesynccomponent-class"></a>Reset-Methode der Msvm \_ TimeSyncComponent-Klasse
 
@@ -53,7 +53,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

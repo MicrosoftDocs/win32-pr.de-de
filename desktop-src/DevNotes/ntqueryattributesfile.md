@@ -22,7 +22,7 @@ ms.locfileid: "117826806"
 ---
 # <a name="ntqueryattributesfile-function"></a>NtQueryAttributesFile-Funktion
 
-\[Diese Funktion kann ohne weitere Ankündigung geändert oder aus Windows entfernt werden.\]
+\[Diese Funktion kann ohne weitere Ankündigung geändert oder Windows entfernt werden.\]
 
 Ruft grundlegende Attribute für das angegebene Dateiobjekt ab.
 
@@ -45,14 +45,14 @@ NTSTATUS NtQueryAttributesFile(
 *ObjectAttributes* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [OBJECT \_ ATTRIBUTES-Struktur,](https://msdn.microsoft.com/library/aa491657.aspx) die die Attribute anweist, die für das Dateiobjekt verwendet werden sollen.
+Ein Zeiger auf eine [OBJECT \_ ATTRIBUTES-Struktur,](https://msdn.microsoft.com/library/aa491657.aspx) die die Für das Dateiobjekt zu verwendenden Attribute liefert.
 
 </dd> <dt>
 
 *FileInformation* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [FILE \_ BASIC \_ INFORMATION-Struktur](https://msdn.microsoft.com/library/aa491634.aspx) zum Empfangen der zurückgegebenen Dateiattributinformationen.
+Ein Zeiger auf eine [FILE \_ BASIC \_ INFORMATION-Struktur,](https://msdn.microsoft.com/library/aa491634.aspx) um die zurückgegebenen Dateiattributinformationen zu empfangen.
 
 </dd> </dl>
 
@@ -60,11 +60,11 @@ Ein Zeiger auf eine [FILE \_ BASIC \_ INFORMATION-Struktur](https://msdn.microso
 
 Gibt einen NTSTATUS- oder Fehlercode zurück.
 
-Die Formulare und die Bedeutung von NTSTATUS-Fehlercodes sind in der im WDK verfügbaren Headerdatei "Ntstatus.h" aufgeführt und in der WDK-Dokumentation beschrieben.
+Die Formulare und die Bedeutung von NTSTATUS-Fehlercodes sind in der im WDK verfügbaren Ntstatus.h-Headerdatei aufgeführt und in der WDK-Dokumentation beschrieben.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Headerdatei zugeordnet. Die zugeordnete Importbibliothek Ntdll.lib ist im WDK verfügbar. Sie können auch die [**Funktionen LoadLibrary**](-loadlibrary.md) und [**GetProcAddress**](-getprocaddress-.md) verwenden, um dynamisch mit Ntdll.dll zu verknüpfen.
+Dieser Funktion ist keine Headerdatei zugeordnet. Die zugeordnete Importbibliothek Ntdll.lib ist im WDK verfügbar. Sie können auch die [**Funktionen LoadLibrary**](-loadlibrary.md) und [**GetProcAddress**](-getprocaddress-.md) verwenden, um dynamisch eine Verknüpfung mit Ntdll.dll.
 
 ## <a name="requirements"></a>Anforderungen
 

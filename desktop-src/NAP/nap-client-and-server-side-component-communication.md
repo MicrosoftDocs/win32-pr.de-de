@@ -22,7 +22,7 @@ Die NAP-Agent-Komponente kann mit der NAP-Verwaltungsserverkomponente über den 
 
 1.  Der NAP-Agent übergibt SSoH an den NAP EC.
 2.  Der NAP EC übergibt SSoH an den NAP ES.
-3.  Der NAP ES übergibt SSoH an den Netzwerkrichtlinienserver-Dienst (NETWORK Policy Server, NPS).
+3.  Der NAP ES übergibt SSoH an den Netzwerkrichtlinienserver-Dienst (NPS).
 4.  Der NPS-Dienst übergibt SSoH an den NAP-Verwaltungsserver.
 
 Ein SHA kann mit dem entsprechenden SHV über den folgenden Prozess kommunizieren:
@@ -48,9 +48,9 @@ Der SHV kann mit dem entsprechenden SHA über den folgenden Prozess kommuniziere
 
 1.  Der SHV übergibt seine SoHR an den NAP-Verwaltungsserver.
 2.  Der NAP-Verwaltungsserver übergibt das SoHR an den NPS-Dienst.
-3.  Der NPS-Dienst übergibt das in SSoHR enthaltene SoHR an den NAP ES.
+3.  Der NPS-Dienst übergibt den in SSoHR enthaltenen SoHR an den NAP ES.
 4.  Der NAP ES übergibt den SoHR an den NAP EC.
-5.  Der NAP EC übergibt den SoHR an den NAP-Agent.
+5.  Der NAP EC übergibt das SoHR an den NAP-Agent.
 6.  Der NAP-Agent übergibt das SoHR an den SHA.
 
 Die folgende Abbildung zeigt den Kommunikationsprozess zwischen serverseitigen NAP-Komponenten und NAP-Clientkomponenten.

@@ -13,10 +13,10 @@ ms.locfileid: "118346624"
 ---
 # <a name="vml-fill-element"></a>VML Fill-Element
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
@@ -26,7 +26,7 @@ Die folgenden Attribute ändern eine Füllung.
 
 
 
-| attribute                                                          | BESCHREIBUNG                                            |
+| attribute                                                          | Beschreibung                                            |
 |--------------------------------------------------------------------|--------------------------------------------------------|
 | [AlignShape](msdn-online-vml-alignshape-attribute.md)             | Bestimmt, ob ein Bild an einer Form ausgerichtet wird.   |
 | [ALTHRef](althref-attribute--fill--vml.md)                        | Gibt einen alternativen Verweis für ein Bild an.         |
@@ -58,7 +58,7 @@ Die folgenden Attribute ändern eine Füllung.
 
 **Anmerkungen**
 
-Dieses Element muss innerhalb eines [Shape-Elements](shape-element--vml.md) definiert werden.
+Dieses Element muss innerhalb eines [Shape-Elements definiert](shape-element--vml.md) werden.
 
 Der folgende Code zeigt eine einfache Farbverlaufsfüllung für eine Form.
 

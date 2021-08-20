@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromcollection getbydrivespecifier-Methode
-description: Die getbydrivespecifier-Methode gibt eine iwmpcdrom-Schnittstelle zurück, die einem bestimmten Laufwerk Buchstaben zugeordnet ist.
+title: IWMPCcollection getByDriveSpecifier-Methode
+description: Die getByDriveSpecifier-Methode gibt eine IWMPCome-Schnittstelle zurück, die einem bestimmten Laufwerkbuchstaben zugeordnet ist.
 ms.assetid: 4a550eb1-a37e-43fd-9e08-801c4fd64e68
 keywords:
-- getbydrivespecifier-Methode, Windows Media Player
-- getbydrivespecifier-Methode, Windows Media Player, iwmpcdromcollection-Schnittstelle
-- Iwmpcdromcollection-Schnittstelle, Windows Media Player, getbydrivespecifier-Methode
+- getByDriveSpecifier-Windows Media Player
+- getByDriveSpecifier-Methode Windows Media Player , IWMPCcollection-Schnittstelle
+- IWMPCcollection-Schnittstelle Windows Media Player , getByDriveSpecifier-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe771fc893d4bf43b82dc825a2d33724926e8151
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9937694234fe7e46fe9b98d83357da19abf18f8d14e83794587f6f2050b0019b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116218"
 ---
-# <a name="iwmpcdromcollectiongetbydrivespecifier-method"></a>Iwmpcdromcollection:: getbydrivespecifier-Methode
+# <a name="iwmpcdromcollectiongetbydrivespecifier-method"></a>IWMPCcollection::getByDriveSpecifier-Methode
 
-Die **getbydrivespecifier** -Methode gibt eine **iwmpcdrom** -Schnittstelle zurück, die einem bestimmten Laufwerk Buchstaben zugeordnet ist.
+Die **getByDriveSpecifier-Methode** gibt eine **IWMPCome-Schnittstelle zurück,** die einem bestimmten Laufwerkbuchstaben zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,26 +53,26 @@ Implements IWMPCdromCollection.getByDriveSpecifier
 
 <dl> <dt>
 
-*bstraudrivespecifier* \[ in\]
+*bstrDriveSpecifier* \[ In\]
 </dt> <dd>
 
-Eine **System. String** , bei der es sich um den Laufwerk Buchstaben handelt, gefolgt von einem Doppelpunkt (":").
+Eine **System.String,** bei der es sich um den Laufwerkbuchstaben gefolgt von einem Doppelpunkt (":") handelt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpcdrom** -Schnittstelle.
+Eine **WMPLib.IWMPCface-Schnittstelle.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Laufwerk Buchstaben müssen in der Form *x*: angegeben werden, wobei *x* den Laufwerk Buchstaben darstellt.
+Laufwerkbuchstaben müssen in der Form *X*: angegeben werden, wobei *X* den Laufwerkbuchstaben darstellt.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **getbydrivespecifier** verwendet, um die **iwmpcdrom** -Schnittstelle zu erhalten, die einem Laufwerk Buchstaben entspricht, der vom Benutzer in einem Textfeld bereitgestellt wird. Die **iwmpcdrom. Auswerfen** -Methode wird dann aufgerufen, um das angegebene Laufwerk zu ewerfen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **getByDriveSpecifier** verwendet, um die **IWMPCifier-Schnittstelle** zu erhalten, die einem Laufwerkbuchstaben entspricht, der vom Benutzer in einem Textfeld bereitgestellt wird. Die **IWMPC festplatten.eject-Methode** wird dann aufgerufen, um das angegebene Laufwerk auswerfen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -125,19 +125,19 @@ drive.eject()
 
 <dl> <dt>
 
-[**Iwmpcdrom-Schnittstelle (VB und c#)**](iwmpcdrom--vb-and-c.md)
+[**IWMPCwertschnittstelle (VB und C#)**](iwmpcdrom--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdrom. eject (VB und c#)**](wmplibiwmpcdrom-iwmpcdrom-eject--vb-and-c.md)
+[**IWMPC datenträger.eject (VB und C#)**](wmplibiwmpcdrom-iwmpcdrom-eject--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle (VB und c#)**](iwmpcdromcollection--vb-and-c.md)
+[**IWMPCcollection-Schnittstelle (VB und C#)**](iwmpcdromcollection--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

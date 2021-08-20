@@ -48,7 +48,7 @@ Die **INapComponentConfig-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                          | BESCHREIBUNG                                                                          |
+| Methode                                                                          | Beschreibung                                                                          |
 |:--------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
 | [**INapComponentConfig::GetConfig**](inapcomponentconfig-getconfig.md)         | Ruft die SHV-Komponentenkonfiguration ab.<br/>                                |
 | [**INapComponentConfig::InvokeUI**](inapcomponentconfig-invokeui.md)           | Startet die benutzerdefinierte Benutzeroberfläche für eine SHV-Komponente.<br/>              |
@@ -76,7 +76,7 @@ Diese Schnittstelle sollte nicht von System health agents (SHAs) oder Quarantän
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

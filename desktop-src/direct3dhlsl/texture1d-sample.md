@@ -27,7 +27,7 @@ Probieren Sie eine [**Texture1D aus.**](sm5-object-texture1d.md)
 
 
 
-| Methode                                                                       | BESCHREIBUNG                                                                                                                                  |
+| Methode                                                                       | Beschreibung                                                                                                                                  |
 |:-----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Sample(S,float,int)**](dx-graphics-hlsl-to-sample.md)                    | Probieren Sie eine Textur aus.<br/>                                                                                                                |
 | [**Sample(S,float,int,float)**](t1d-sample-s-float-int-float-.md)           | Stichproben einer Textur mit einem optionalen Wert zum Zusammenschnaufen von LOD-Werten (Sample Level of Detail).<br/>                                         |
@@ -39,7 +39,7 @@ Probieren Sie eine [**Texture1D aus.**](sm5-object-texture1d.md)
 
 Weitere Informationen finden Sie unter [Texture-Object](dx-graphics-hlsl-to-type.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

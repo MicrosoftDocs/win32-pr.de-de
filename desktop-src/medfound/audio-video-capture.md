@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation verwenden, um Audio- und Videoaufnahmen durchzuführen.
+description: In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation zum Durchführen von Audio- und Videoaufnahmen verwenden.
 ms.assetid: 3d8de05b-3cf3-4f9f-98b9-65873592152a
 title: Audio-/Videoaufzeichnung
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117880895"
 ---
 # <a name="audiovideo-capture"></a>Audio-/Videoaufzeichnung
 
-In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation verwenden, um Audio- und Videoaufnahmen durchzuführen.
+In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation zum Durchführen von Audio- und Videoaufnahmen verwenden.
 
 -   [Audio-/Videoaufnahme in Media Foundation](audio-video-capture-in-media-foundation.md)
 -   Videoaufnahme

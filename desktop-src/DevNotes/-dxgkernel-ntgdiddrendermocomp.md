@@ -1,5 +1,5 @@
 ---
-description: Teilt dem Treiber mit, welche Makroblocks gerendert werden sollen, indem die Oberflächen mit den Makroblocks, die Offsets auf jeder Oberfläche, auf der die Makroblocks vorhanden sind, und die Größe der makroblock-Daten angegeben werden, die gerendert werden sollen.
+description: Weist den Treiber an, welche Makroblocks gerendert werden sollen, indem er die Oberflächen mit den Makroblocks, die Offsets auf jeder Oberfläche, auf der die Makroblocks vorhanden sind, und die Größe der zu rendernden Makroblockdaten angibt.
 ms.assetid: c49d9dfa-a3db-4572-a474-72c7d4e80940
 title: NtGdiDdRenderMoComp-Funktion (Ntgdi.h)
 ms.topic: reference
@@ -25,9 +25,9 @@ ms.locfileid: "117827971"
 ---
 # <a name="ntgdiddrendermocomp-function"></a>NtGdiDdRenderMoComp-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Teilt dem Treiber mit, welche Makroblocks gerendert werden sollen, indem die Oberflächen mit den Makroblocks, die Offsets auf jeder Oberfläche, auf der die Makroblocks vorhanden sind, und die Größe der makroblock-Daten angegeben werden, die gerendert werden sollen.
+Weist den Treiber an, welche Makroblocks gerendert werden sollen, indem er die Oberflächen mit den Makroblocks, die Offsets auf jeder Oberfläche, auf der die Makroblocks vorhanden sind, und die Größe der zu rendernden Makroblockdaten angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,13 +61,13 @@ Zeiger auf eine [**\_ DD-RENDERMOCOMPDATA-Struktur,**](/windows/win32/api/ddrawi
 
 ## <a name="return-value"></a>Rückgabewert
 
-**NtGdiDdRenderMoComp gibt** einen der folgenden Rückrufcodes zurück.
+**NtGdiDdRenderMoComp** gibt einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_DDHAL-TREIBER \_ BEHANDELT**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
 | <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
@@ -90,11 +90,11 @@ Weitere Informationen finden Sie im Microsoft DirectX Video Acceleration Driver 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

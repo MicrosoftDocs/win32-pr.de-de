@@ -1,6 +1,6 @@
 ---
 title: WMI-Klassen für die Systemwiederherstellung
-description: Die folgenden WMI-Klassen werden mit system restore verwendet.
+description: Die folgenden WMI-Klassen werden mit der Systemwiederherstellung verwendet.
 ms.assetid: ce8ca949-690a-420a-ad45-0692bf3b81c9
 keywords:
 - Systemwiederherstellung, Referenz, WMI-Klassen
@@ -15,14 +15,14 @@ ms.locfileid: "117857233"
 ---
 # <a name="system-restore-wmi-classes"></a>WMI-Klassen für die Systemwiederherstellung
 
-Die folgenden WMI-Klassen werden mit system restore verwendet.
+Die folgenden WMI-Klassen werden mit der Systemwiederherstellung verwendet.
 
 
 
 | WMI-Klasse                                          | Beschreibung                                                                                                                                |
 |----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**SystemRestore**](systemrestore.md)             | Stellt Methoden zum Deaktivieren und Aktivieren der Überwachung, zum Auflisten verfügbarer Wiederherstellungspunkte und zum Initiieren einer Wiederherstellung auf dem lokalen System bereit.    |
-| [**SystemRestoreConfig**](systemrestoreconfig.md) | Stellt Eigenschaften zum Steuern der Häufigkeit der geplanten Wiederherstellungspunkterstellung und des speicherplatzverbrauchten Speicherplatzes auf den einzelnen Laufwerken bereit. |
+| [**SystemRestore**](systemrestore.md)             | Stellt Methoden zum Deaktivieren und Aktivieren der Überwachung, auflisten verfügbarer Wiederherstellungspunkte und Initiieren einer Wiederherstellung auf dem lokalen System bereit.    |
+| [**SystemRestoreConfig**](systemrestoreconfig.md) | Stellt Eigenschaften zum Steuern der Häufigkeit der geplanten Wiederherstellungspunkterstellung und des auf jedem Laufwerk verbrauchten Speicherplatzes zur Verfügung. |
 
 
 

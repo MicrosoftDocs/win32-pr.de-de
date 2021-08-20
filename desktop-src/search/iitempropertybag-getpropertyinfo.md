@@ -1,5 +1,5 @@
 ---
-description: Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften in der Eigenschaftentüte erforderlich sind. Die IItemPropertyBag-Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+description: Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften im Eigenschaftenbehälter erforderlich sind. Die IItemPropertyBag-Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 ms.assetid: 1667b67d-9dd2-48a6-81dd-c8b06834cef0
 title: IItemPropertyBag::GetPropertyInfo-Methode
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "117863089"
 ---
 # <a name="iitempropertybaggetpropertyinfo-method"></a>IItemPropertyBag::GetPropertyInfo-Methode
 
-Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften in der Eigenschaftentüte erforderlich sind. Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften im Eigenschaftenbehälter erforderlich sind. Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Der nullbasierte Index der ersten Eigenschaft, für die Informationen angeforder
 *cProperties* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Eigenschaften, für die Informationen erhalten werden. Dieses Argument gibt die Anzahl der Arrayelemente in *pPropBag an.*
+Die Anzahl der Eigenschaften, für die Informationen abzurufen sind. Dieses Argument gibt die Anzahl der Arrayelemente in *pPropBag an.*
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Andernfalls wird 
 
 Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) und die folgenden APIs zu verwenden: die [**ISearchProtocolUI-,**](-search-isearchprotocolui.md) [**IItemPreviewerExt-**](-search-iitempreviewerext.md) und [**ISearchItem-Schnittstelle,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPreviewerExt**](-search-iitempreviewerext.md) und [**ISearchItem,**](-search-isearchitem.md) [**linkinfo**](-search-linkinfo.md) und [**ITEMPROP**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) sowie die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,7 +91,7 @@ Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

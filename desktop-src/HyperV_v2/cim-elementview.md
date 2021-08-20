@@ -1,5 +1,5 @@
 ---
-description: Stellt die Zuordnung zwischen einer Ansicht und einer-Instanz dar, die die normalisierte Ansicht einer verwalteten Ressource darstellt.
+description: Stellt eine Ansicht und eine Zuordnung zwischen einer Sicht und einer -Instanz dar, die die normalisierte Ansicht einer verwalteten Ressource darstellt.
 ms.assetid: 9c6eb3d5-7366-4954-9e64-12f889c64114
 title: CIM_ElementView-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: b6ffc0e4b69667800b1880cae1a992a207cc95a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06a627668fd8a7b9550f92c65918a85448ec1f23ba1d92630379ec205660f58d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812176"
 ---
-# <a name="cim_elementview-class"></a>CIM- \_ elementview-Klasse
+# <a name="cim_elementview-class"></a>CIM \_ ElementView-Klasse
 
-Stellt die Zuordnung zwischen einer Ansicht und einer-Instanz dar, die die normalisierte Ansicht einer verwalteten Ressource darstellt.
+Stellt eine Ansicht und eine Zuordnung zwischen einer Sicht und einer -Instanz dar, die die normalisierte Ansicht einer verwalteten Ressource darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_ElementView : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ elementview** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ElementView-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ elementview** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-ElementView-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Die-Instanz, die die normalisierte Ansicht der verwalteten Ressource darstellt.
+Die -Instanz, die die normalisierte Ansicht der verwalteten Ressource darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Ansicht**
+Datentyp: **\_ CIM-Ansicht**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig")
 </dt> </dl>
 
-Die Ansicht, die eine denormalisierte oder Aggregat Ansicht der verwalteten Ressource darstellt.
+Die Sicht, die eine denormierte oder aggregierte Ansicht der verwalteten Ressource darstellt.
 
 </dd> </dl>
 
@@ -87,10 +87,10 @@ Die Ansicht, die eine denormalisierte oder Aggregat Ansicht der verwalteten Ress
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Die Ansicht, die eine denormalisierte oder Aggregat Ansicht der verwalteten Ress
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

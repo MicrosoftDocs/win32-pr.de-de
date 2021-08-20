@@ -1,9 +1,9 @@
 ---
-title: Text. ToolTip
-description: Das ToolTip-Attribut gibt den QuickInfo-Text für das Text Steuerelement an oder ruft ihn ab.
+title: TEXT.toolTip
+description: Das ToolTip-Attribut gibt den QuickInfo-Text für das Textsteuerfeld an oder ruft den Text ab.
 ms.assetid: 3e275607-e7ff-4424-8310-c628ede22629
 keywords:
-- Text. QuickInfo-Fenster Media Player
+- TEXT.toolTip-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b064f2abefd07ec65a82069196b1012561699b62
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 726337ffb31b86d4eaa3a20a1d922fc622110b647fe9be747e8ae239c4548276
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118831819"
 ---
-# <a name="texttooltip"></a>Text. ToolTip
+# <a name="texttooltip"></a>TEXT.toolTip
 
-Das **ToolTip** -Attribut gibt den QuickInfo-Text für das Text Steuerelement an oder ruft ihn ab.
+Das **ToolTip-Attribut** gibt den QuickInfo-Text für das Textsteuerfeld an oder ruft den Text ab.
 
 ``` syntax
         elementID.toolTip
@@ -29,15 +29,15 @@ Das **ToolTip** -Attribut gibt den QuickInfo-Text für das Text Steuerelement an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einer maximalen Länge von 1024 Zeichen. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge mit einer maximalen Länge von 1.024 Zeichen. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut nicht angegeben wird und der Text im **value** -Attribut im Text Steuerelement abgeschnitten wird, oder wenn **WordWrap** auf true festgelegt ist, wird in der QuickInfo der vollständige Text des **value** -Attributs angezeigt.
+Wenn dieses Attribut nicht angegeben ist  und der Text im Value-Attribut im Text-Steuerelement abgeschnitten wird oder **wordWrap** auf TRUE  festgelegt ist, zeigt die QuickInfo den vollständigen Text des Wertattributs an.
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein [Beispiel, das](text-value.md) veranschaulicht, wie die Attribute des TEXT-Elements verwendet werden, finden Sie im **Value-Attribut.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -53,13 +53,13 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. Value**](text-value.md)
+[**TEXT.value**](text-value.md)
 </dt> <dt>
 
-[**Text. WordWrap**](text-wordwrap.md)
+[**TEXT.wordWrap**](text-wordwrap.md)
 </dt> </dl>
 
  

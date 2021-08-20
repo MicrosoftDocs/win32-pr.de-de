@@ -1,5 +1,5 @@
 ---
-description: Die Startadresse des Kontakts.
+description: Die Home-Adresse des Kontakts.
 ms.assetid: c187317a-5636-4542-a97d-e9cc80e9aaa9
 title: System.Contact.HomeAddress
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118729898"
 ---
 # <a name="systemcontacthomeaddress"></a>System.Contact.HomeAddress
 
-Die Startadresse des Kontakts.
+Die Home-Adresse des Kontakts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

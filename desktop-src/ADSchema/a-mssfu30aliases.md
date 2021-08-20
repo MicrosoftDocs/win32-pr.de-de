@@ -64,7 +64,7 @@ Enthält einen Teil der NIS-E-Mail-Zuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Device**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
 
 
 
@@ -85,7 +85,7 @@ Enthält einen Teil der NIS-E-Mail-Zuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Device**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
 
 
 
@@ -106,7 +106,7 @@ Enthält einen Teil der NIS-E-Mail-Zuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Device**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
 
 
 
@@ -127,7 +127,7 @@ Enthält einen Teil der NIS-E-Mail-Zuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Device**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
 
 
 

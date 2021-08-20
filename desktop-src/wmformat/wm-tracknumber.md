@@ -35,7 +35,7 @@ g \_ wszWMTrackNumber
 
 Viele vorhandene Anwendungen schreiben den Wert für **WM/TrackNumber** als **DWORD.** Wenn Sie eine Anwendung erstellen, die Dateien aus unbekannten Quellen wiedergibt, sollten Sie Code zur Handhabung von Zeichenfolgen- und **DWORD-Werten** verwenden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

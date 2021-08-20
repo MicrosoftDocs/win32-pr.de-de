@@ -1,5 +1,5 @@
 ---
-description: Ruft einen Zeiger auf den Pool der freigegebenen Parameter ab.
+description: Ruft einen Zeiger auf den Pool mit freigegebenen Parametern ab.
 ms.assetid: 1e999fd5-76ef-43fa-8a77-ae6f2821f46d
 title: ID3DXEffect::GetPool-Methode (D3DX9Effect.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118521226"
 ---
 # <a name="id3dxeffectgetpool-method"></a>ID3DXEffect::GetPool-Methode
 
-Ruft einen Zeiger auf den Pool der freigegebenen Parameter ab.
+Ruft einen Zeiger auf den Pool mit freigegebenen Parametern ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Diese Methode gibt immer den Wert S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Pools enthalten gemeinsame Parameter zwischen Effekten. Weitere Informationen finden Sie unter [Klonen und Freigeben (Direct3D 9).](cloning-and-sharing.md)
+Pools enthalten freigegebene Parameter zwischen Effekten. Weitere Informationen [finden Sie unter Klonen und Freigeben (Direct3D 9).](cloning-and-sharing.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Pools enthalten gemeinsame Parameter zwischen Effekten. Weitere Informationen fi
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

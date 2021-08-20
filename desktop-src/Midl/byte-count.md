@@ -1,9 +1,9 @@
 ---
 title: byte_count-Attribut
-description: Das Attribut \ Byte \_ count \ ACF ist ein Parameter Attribut, das eine Größe (in Bytes) mit dem durch den Zeiger gekennzeichneten Speicherbereich verknüpft.
+description: Das Attribut \byte count\ ACF ist ein Parameterattribut, das eine Größe in Bytes dem durch den Zeiger angegebenen \_ Arbeitsspeicherbereich zugibt.
 ms.assetid: 7e146888-fe7c-461c-8615-70da1e3b12cd
 keywords:
-- byte_count Attribut-Mittel l
+- byte_count MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d82d34a60ea736d10c8ec5ee8a001370c6b64c6
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ffd42e27be4768fc0817aa76bb366429e236b3a82c45d081a05485b8520a23a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117807823"
 ---
-# <a name="byte_count-attribute"></a>Byte \_ Anzahl Attribut
+# <a name="byte_count-attribute"></a>\_Byteanzahlattribut
 
-Das ACF-Attribut **\[ Byte \_ Count \]** ist ein Parameter Attribut, das eine Größe (in Bytes) mit dem durch den Zeiger gekennzeichneten Speicherbereich verknüpft.
+Das **\[ Byteanzahl-ACF-Attribut \_ \]** ist ein Parameterattribut, das eine Größe in Bytes dem durch den Zeiger angegebenen Arbeitsspeicherbereich zugibt.
 
 ``` syntax
 [ function-attribute-list ] function-name(
@@ -33,52 +33,52 @@ Das ACF-Attribut **\[ Byte \_ Count \]** ist ein Parameter Attribut, das eine Gr
 
 <dl> <dt>
 
-*Function-Attribute-List* 
+*function-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr ACF-Funktions Attribute an.
+Gibt null oder mehr ACF-Funktionsattribute an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion an, die in der IDL-Datei definiert ist. Der Funktionsname ist erforderlich.
 
 </dd> <dt>
 
-*Length-Variable-Name* 
+*length-variable-name* 
 </dt> <dd>
 
-Gibt den Namen des [**\[ \] reinen Parameters an,**](in.md)der die Größe (in Bytes) des Speicherbereichs angibt, auf den durch *Parameter Name* verwiesen wird.
+Gibt den Namen des [**\[ parameters \] in**](in.md)-only an, der die Größe des Arbeitsspeicherbereichs in Bytes angibt, auf den der *Parametername verweist.*
 
 </dd> <dt>
 
-*Parameter Name* 
+*Parametername* 
 </dt> <dd>
 
-Gibt den Namen des reinen Zeiger Parameters an [**\[ , \]**](out-idl.md)der in der IDL-Datei definiert ist.
+Gibt den Namen des out-only-Zeigerparameters [**\[ \]**](out-idl.md)an, der in der IDL-Datei definiert ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\[ Byte \_ Anzahl \]** der ACF-Attribute stellt eine Microsoft-Erweiterung für DCE-IDL dar. Daher ist dieses Attribut nicht verfügbar, wenn Sie den Mittelwert-Compilerschalter [**/OSF**](-osf.md)verwenden.
+Die **\[ Byteanzahl des \_ ACF-Attributs \]** stellt eine Microsoft-Erweiterung für DCE-IDL dar. Daher ist dieses Attribut nicht verfügbar, wenn Sie den MIDL-Compilerschalter [**/osf verwenden.**](-osf.md)
 
 > [!Note]  
-> Das **\[ Byte Count \]** -Attribut wird in der NDR64-Syntax nicht mehr unterstützt, da die für alle [**\[ out \]**](out-idl.md) -Parameter erforderliche Größe nicht zu schätzen ist.
+> Das **\[ Byteanzahlattribut \]** wird in der NDR64-Syntax aufgrund der Schwierigkeiten bei der Schätzung der erforderlichen Größe für alle out-Parameter [**\[ nicht mehr \]**](out-idl.md) unterstützt.
 
- 
+ 
 
-Der Arbeitsspeicher, auf den der Zeiger Parameter verweist, ist zusammenhängend und wird nicht von den Client-stubden zugewiesen oder freigegeben. Mit dieser Funktion des **\[ Byte \_ Count \]** -Attributs können Sie einen persistenten Pufferbereich im Client Speicher erstellen, der bei mehr als einem Remote Prozedur Abruf wieder verwendet werden kann.
+Der Arbeitsspeicher, auf den der Zeigerparameter verweist, ist zusammenhängend und wird von den Clientstubs nicht zugeordnet oder frei. Mit diesem Feature des **\[ \_ \] Byteanzahlattributs** können Sie einen persistenten Pufferbereich im Clientspeicher erstellen, der bei mehr als einem Aufruf der Remoteprozedur wiederverwendet werden kann.
 
-Durch die Möglichkeit, die Speicher Belegung für den Client-Stub zu deaktivieren, können Sie die Anwendung auf Effizienz optimieren. Beispielsweise kann das **\[ Byte \_ Count \]** -Attribut von Dienstanbieter Funktionen verwendet werden, die Microsoft RPC verwenden. Wenn eine Benutzeranwendung die Dienstanbieter-API aufruft und einen Zeiger an einen Puffer sendet, kann der Dienstanbieter den Puffer Zeiger an die Remote Funktion übergeben. Der Dienstanbieter kann den Puffer bei mehreren Remote aufrufen wieder verwenden, ohne den Benutzer zu zwingen, den Speicherbereich neu zuzuordnen.
+Durch die Möglichkeit, die Speicherzuweisung des Clientstubs zu deaktivieren, können Sie die Anwendung auf Effizienz optimieren. Beispielsweise kann das **\[ \_ Byteanzahlattribut \]** von Dienstanbieterfunktionen verwendet werden, die Microsoft RPC verwenden. Wenn eine Benutzeranwendung die Dienstanbieter-API aufruft und einen Zeiger auf einen Puffer sendet, kann der Dienstanbieter den Pufferzeiger an die Remotefunktion übergeben. Der Dienstanbieter kann den Puffer bei mehreren Remoteaufrufen wiederverwenden, ohne dass der Benutzer gezwungen wird, den Arbeitsspeicherbereich neu zu verwenden.
 
-Der Arbeitsspeicher Bereich kann komplexe Datenstrukturen enthalten, die aus mehreren Zeigern bestehen. Da der Speicherbereich zusammenhängend ist, muss die Anwendung nicht mehrere Aufrufe durchführen, um jeden Zeiger und jede Struktur einzeln freizugeben. Stattdessen kann der Speicherbereich mit einem Rückruf der Speicher Belegung oder der kostenlosen Routine zugeordnet oder freigegeben werden.
+Der Speicherbereich kann komplexe Datenstrukturen enthalten, die aus mehreren Zeigern bestehen. Da der Speicherbereich zusammenhängend ist, muss die Anwendung nicht mehrere Aufrufe zur individuellen Freistellung jedes Zeigers und jeder Struktur tätigen. Stattdessen kann der Speicherbereich mit einem Aufruf der Speicherzuweisung oder der freien Routine reserviert oder frei werden.
 
-Bei dem Puffer muss es sich um einen reinen [**\[ out \]**](out-idl.md)-Parameter handeln, während die Pufferlänge in [**\[ \] Byte einen reinen**](in.md)Parameter aufweisen muss.
+Der Puffer muss ein [**\[ \]**](out-idl.md)out-only-Parameter sein, während die Pufferlänge in Bytes ein [**\[ in \]**](in.md)-only-Parameter sein muss.
 
-Geben Sie einen Puffer an, der groß genug ist, um alle [**\[ out \]**](out-idl.md) -Parameter zu enthalten. Verwenden Sie wegen ausgeblendeter Auffüll Zeichen anstelle von exakten Anzahlen eine Überschätzung. Beispielsweise werden 4-Byte-Zeiger auf eine 4-Byte-Ausrichtung auf 32-Bit-Plattformen und 8-Byte-Zeiger auf eine 8-Byte-Grenze auf 64-Bit-Plattformen gemarshallt. Daher muss die Ausrichtungs Auffüllung, die die stubvorgänge ausführen, im Speicherplatz für den Puffer berücksichtigt werden. Außerdem können die während der Kompilierung der C-Sprache verwendeten Verpackungs Ebenen variieren. Verwenden Sie einen Byte Zählerwert, der zusätzliche Komprimierungs Bytes für den während der Kompilierung in der C-Sprache verwendeten Verpackungs Grad berücksichtigt. Ein sicheres Verfahren, das sowohl 32-Bit-als auch 64-Bit-Plattformen abdeckt, besteht darin, dass jedes Objekt, das in den großen Speicherblock geht, an einer Adresse beginnt, die ein Vielfaches von 8 ist.
+Geben Sie einen Puffer an, der groß genug ist, um alle [**\[ out-Parameter zu \]**](out-idl.md) enthalten. Verwenden Sie aufgrund der ausgeblendeten Auf padding Überschätzungen anstelle der genauen Anzahl. Beispielsweise werden 4-Byte-Zeiger an einer 4-Byte-ausgerichteten Grenze auf 32-Bit-Plattformen und 8-Byte-Zeigern auf einer 8-Byte-Grenze auf 64-Bit-Plattformen nichtmarshaliert. Daher muss die Ausrichtungsauf padding, die die Stubs ausführen, im Pufferbereich berücksichtigt werden. Darüber hinaus können die während der C-Sprachkompilierung verwendeten Packebenen variieren. Verwenden Sie einen Byteanzahlwert, der zusätzliche Packbytes für die Packebene, die während der C-Sprachkompilierung verwendet wird, eingerechnet. Eine sichere Methode, die sowohl 32-Bit-Plattformen als auch 64-Bit-Plattformen abdeckt, besteht in der Annahme, dass jedes Objekt, das in den großen Speicherblock geht, an einer Adresse beginnt, die ein Vielfaches von 8 ist.
 
 ## <a name="examples"></a>Beispiele
 
@@ -95,27 +95,27 @@ proc1([byte_count(length)] pMyStruct);
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
 [**in**](in.md)
 </dt> <dt>
 
-[**Länge \_ ist**](length-is.md)
+[**length \_ ist**](length-is.md)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
-[**Größe \_ :**](size-is.md)
+[**size \_ ist**](size-is.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

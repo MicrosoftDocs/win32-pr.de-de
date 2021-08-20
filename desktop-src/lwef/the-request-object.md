@@ -1,21 +1,21 @@
 ---
-title: Das Anforderungs Objekt.
-description: Das Anforderungs Objekt.
+title: Das Anforderungsobjekt
+description: Das Anforderungsobjekt
 ms.assetid: d8b37164-6855-48c0-bcf8-a86c0f8b3a59
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a50d554a5799af9a434b456113d7c826d2a0aa2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1d2bc9ecf65403ca6dbb471c81a65b105bcc5b69701760a73f8fbc8a5684a9b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117882393"
 ---
-# <a name="the-request-object"></a>Das Anforderungs Objekt.
+# <a name="the-request-object"></a>Das Anforderungsobjekt
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Der Server verarbeitet einige Methoden asynchron. Dadurch kann der Anwendungscode fortgesetzt werden, während die Methode abgeschlossen wird. Wenn eine Client Anwendung eine dieser Methoden aufruft, erstellt und gibt das-Steuerelement ein [**Request**](/windows/desktop/lwef/the-request-object) -Objekt für die Anforderung zurück. Sie können das **Request** -Objekt verwenden, um den Status der Methode zu verfolgen, indem Sie der-Methode eine Objekt Variable zuweisen. Deklarieren Sie in Visual Basic zuerst eine Objekt Variable:
+Der Server verarbeitet einige Methoden asynchron. Dadurch kann Ihr Anwendungscode fortgesetzt werden, während die -Methode abgeschlossen wird. Wenn eine Clientanwendung eine dieser Methoden aufruft, erstellt das Steuerelement ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) für die Anforderung und gibt es zurück. Mit dem **Request-Objekt** können Sie den Status der Methode nachverfolgen, indem Sie der -Methode eine Objektvariable zuweisen. Deklarieren Visual Basic zunächst eine Objektvariable:
 
 
 ```
@@ -24,7 +24,7 @@ Der Server verarbeitet einige Methoden asynchron. Dadurch kann der Anwendungscod
 
 
 
-In VBScript schließen Sie den Variablentyp nicht in die Deklaration ein:
+In VBScript fügen Sie den Variablentyp nicht in Ihre Deklaration ein:
 
 
 ```
@@ -33,7 +33,7 @@ In VBScript schließen Sie den Variablentyp nicht in die Deklaration ein:
 
 
 
-Und verwenden die Set-Anweisung von Visual Basic, um die Variable dem Methoden aufzurufen:
+Verwenden Sie Visual Basic Set-Anweisung von , um die Variable dem Methodenaufruf zu zuweisen:
 
 
 ```
@@ -42,9 +42,9 @@ Und verwenden die Set-Anweisung von Visual Basic, um die Variable dem Methoden a
 
 
 
-Dadurch wird ein Verweis auf das [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt hinzugefügt. Das **Anforderungs** Objekt wird zerstört, wenn keine weiteren Verweise darauf vorhanden sind. Wo Sie das **Anforderungs** Objekt deklarieren und wie Sie es verwenden, legt seine Lebensdauer fest. Wenn das Objekt in einer Unterroutine oder Funktion als lokal deklariert ist, wird es zerstört, wenn es den Gültigkeitsbereich verlässt. Das heißt, wenn die Unterroutine oder Funktion beendet wird. Wenn das Objekt global deklariert ist, wird es erst zerstört, wenn das Programm beendet wird oder ein neuer Wert (oder ein als "leer" festgelegter Wert) dem Objekt zugewiesen wird.
+Dadurch wird ein Verweis auf das [**Request-Objekt**](/windows/desktop/lwef/the-request-object) addiert. Das **Request-Objekt** wird zerstört, wenn keine Verweise mehr darauf verfügbar sind. Wo Sie das **Request-Objekt deklarieren** und wie Sie es verwenden, bestimmt seine Lebensdauer. Wenn das Objekt für eine Unterroutine oder Funktion als lokal deklariert wird, wird es zerstört, wenn es den Gültigkeitsbereich übergeht. Das heißt, wenn die Unterroutine oder Funktion beendet wird. Wenn das Objekt global deklariert wird, wird es erst zerstört, wenn das Programm beendet wird oder dem -Objekt ein neuer Wert (oder ein wert, der auf "empty" festgelegt ist) zugewiesen wird.
 
-Das [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt bietet verschiedene Eigenschaften, die Sie Abfragen können. Die [**Status**](status-property.md) -Eigenschaft gibt beispielsweise den aktuellen Status der Anforderung zurück. Sie können diese Eigenschaft verwenden, um den Status Ihrer Anforderung zu überprüfen:
+Das [**Request-Objekt**](/windows/desktop/lwef/the-request-object) stellt mehrere Eigenschaften zur Verfügung, die Sie abfragen können. Beispielsweise gibt die [**Status -Eigenschaft**](status-property.md) den aktuellen Status der Anforderung zurück. Sie können diese Eigenschaft verwenden, um den Status Ihrer Anforderung zu überprüfen:
 
 
 ```
@@ -63,7 +63,7 @@ Das [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt bietet v
 
 
 
-Die [**Status**](status-property.md) -Eigenschaft gibt den Status eines [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekts als Long Integer-Wert zurück.
+Die [**Status-Eigenschaft**](status-property.md) gibt den Status eines [**Request-Objekts**](/windows/desktop/lwef/the-request-object) als Long-Ganzzahlwert zurück.
 
 
 
@@ -72,21 +72,21 @@ Die [**Status**](status-property.md) -Eigenschaft gibt den Status eines [**Anfor
 | 0      | Die Anforderung wurde erfolgreich abgeschlossen.                   |
 | 1      | Fehler bei der Anforderung.                                   |
 | 2      | Ausstehende Anforderung (in der Warteschlange, aber nicht abgeschlossen). |
-| 3      | Die Anforderung wurde unterbrochen.                              |
-| 4      | Die Anforderung wird ausgeführt.                              |
+| 3      | Anforderung unterbrochen.                              |
+| 4      | Die Anforderung wird in Bearbeitung.                              |
 
 
 
- 
+ 
 
-Das [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt enthält außerdem einen Long Integer-Wert in der [**Number**](https://www.bing.com/search?q=**Number**) -Eigenschaft, der den Fehler oder die Ursache des [**Status**](status-property.md) Codes zurückgibt. Wenn kein Wert ist, ist dieser Wert 0 (null). Die [**Description**](description-property.md) -Eigenschaft enthält einen Zeichen folgen Wert, der der Fehlernummer entspricht. Wenn die Zeichenfolge nicht vorhanden ist, enthält die **Beschreibung** "Anwendungs-oder Objekt definierter Fehler".
+Das [**Request-Objekt**](/windows/desktop/lwef/the-request-object) enthält auch einen ganzzahligen Long-Wert in der [**Number-Eigenschaft,**](https://www.bing.com/search?q=**Number**) der den Fehler oder die Ursache des [**Statuscodes zurückgibt.**](status-property.md) Wenn keines der Fall ist, ist dieser Wert 0 (null). Die [**Description-Eigenschaft**](description-property.md) enthält einen Zeichenfolgenwert, der der Fehlernummer entspricht. Wenn die Zeichenfolge nicht vorhanden ist, enthält **Die Beschreibung** "Anwendungsdefinierter oder objektdefinierter Fehler".
 
-Informationen zu den Werten und der von der [**Number**](https://www.bing.com/search?q=**Number**) -Eigenschaft zurückgegebenen Bedeutung finden Sie unter [Error Codes](microsoft-agent-error-codes.md).
+Die von der Number-Eigenschaft [**zurückgegebenen**](https://www.bing.com/search?q=**Number**) Werte und Bedeutungen finden Sie unter [Fehlercodes](microsoft-agent-error-codes.md).
 
-Der Server platziert Animations Anforderungen in der Warteschlange des angegebenen Zeichens. Dadurch kann der Server die Animation in einem separaten Thread wiedergeben, und der Code der Anwendung kann fortgesetzt werden, während Animationen wiedergegeben werden. Wenn Sie einen [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt Verweis erstellen, benachrichtigt der Server Sie automatisch, wenn eine Animations Anforderung durch das [**requeststart**](https://www.bing.com/search?q=**RequestStart**) -Ereignis und das [**requestcomplete**](https://www.bing.com/search?q=**RequestComplete**) -Ereignis gestartet oder abgeschlossen wurde. Da Methoden, die **Anforderungs** Objekte zurückgeben, asynchron sind und während des Gültigkeits Bereichs der aufrufenden Funktion möglicherweise nicht vervollständigt werden, deklarieren Sie den Verweis auf das **Anforderungs** Objekt Global.
+Der Server platziert Animationsanforderungen in der Warteschlange des angegebenen Zeichens. Dadurch kann der Server die Animation in einem separaten Thread wieder geben, und der Code Ihrer Anwendung kann fortgesetzt werden, während Animationen wieder verwendet werden. Wenn Sie [](/windows/desktop/lwef/the-request-object) einen Request-Objektverweis erstellen, benachrichtigt Sie der Server automatisch, wenn eine Animationsanforderung über die [**Ereignisse RequestStart**](https://www.bing.com/search?q=**RequestStart**) und [**RequestComplete**](https://www.bing.com/search?q=**RequestComplete**) gestartet oder abgeschlossen wurde. Da Methoden, die **Anforderungsobjekte** zurückgeben, asynchron sind und während des Bereichs der aufrufenden Funktion möglicherweise nicht abgeschlossen werden, deklarieren Sie Ihren Verweis auf das **Request-Objekt** global.
 
-Die folgenden Methoden können verwendet werden, um ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurückzugeben: [**gestureat**](gestureat-method.md), [**Get**](get-method.md), [**Hide**](hide-method.md), [**Interrupt**](interrupt-method.md), [**Load**](load-method.md), [**muveto**](moveto-method.md), [**Play**](play-method.md), [**Show**](show-method.md), [**Speak**](speak-method.md)und [**Wait**](https://www.bing.com/search?q=**Wait**).
+Die folgenden Methoden können zum Zurückgeben eines [**Request-Objekts**](/windows/desktop/lwef/the-request-object) verwendet werden: [**GestureAt**](gestureat-method.md), [**Get**](get-method.md), [**Hide**](hide-method.md), [**Interrupt**](interrupt-method.md), [**Load**](load-method.md), [**MoveTo**](moveto-method.md), [**Play**](play-method.md), [**Show**](show-method.md), [**Speak**](speak-method.md)und [**Wait**](https://www.bing.com/search?q=**Wait**).
 
- 
+ 
 
- 
+ 

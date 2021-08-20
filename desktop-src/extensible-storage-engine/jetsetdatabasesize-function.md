@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetsetdatabasesize-Funktion'
-title: Jetsetdatabasesize-Funktion
+description: 'Weitere Informationen zu: JetSetDatabaseSize-Funktion'
+title: JetSetDatabaseSize-Funktion
 TOCTitle: JetSetDatabaseSize Function
 ms:assetid: 4a87bf43-c8f7-4966-9f1f-68c16d1cb558
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269242(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cd450a0afed0256b0b80d97a278dccf99418a900
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6759508e42b380f0c1987c2f69b422baf4025d58b0de3c503fdae6d55c15df09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118071955"
 ---
-# <a name="jetsetdatabasesize-function"></a>Jetsetdatabasesize-Funktion
+# <a name="jetsetdatabasesize-function"></a>JetSetDatabaseSize-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetsetdatabasesize-function"></a>Jetsetdatabasesize-Funktion
+## <a name="jetsetdatabasesize-function"></a>JetSetDatabaseSize-Funktion
 
-Die **jetsetdatabasesize** -Funktion legt die Größe einer nicht geöffneten Datenbankdatei fest.
+Die **JetSetDatabaseSize-Funktion** legt die Größe einer ungeöffneten Datenbankdatei fest.
 
 ```cpp
     JET_ERR JET_API JetSetDatabaseSize(
@@ -47,25 +47,25 @@ Die **jetsetdatabasesize** -Funktion legt die Größe einer nicht geöffneten Da
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Identifiziert den Daten Bank Sitzungs Kontext, der für den API-Befehl verwendet werden soll.
+Identifiziert den Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*szdatabasename*
+*szDatabaseName*
 
-Identifiziert den Namen der Datenbankdatei, deren Größe geändert werden soll.
+Gibt den Namen der Datenbankdatei an, deren Größe geändert werden soll.
 
-*Verbrauchsgüter*
+*Cpg*
 
 Gibt die gewünschte Größe der Datenbank in Seiten an.
 
-*pcpgreal*
+*pcpgReal*
 
-Zeiger auf eine Zahl, die die Größe der Datenbank in Seiten nach dem API-Befehl empfängt. Wenn der API-Befehl nicht erfolgreich war, ist der Inhalt von *pcpgreal* nicht definiert.
+Zeiger auf eine Zahl, die die Größe der Datenbank in Seiten nach dem API-Aufruf empfängt. Wenn der API-Aufruf nicht erfolgreich war, ist der Inhalt von *pcpgReal* nicht definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -86,15 +86,15 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 <tr class="even">
 <td><p>JET_errDatabaseInconsistent<br />
 JET_errDatabaseDirtyShutdown</p></td>
-<td><p>JET_errDatabaseInconsistent und JET_errDatabaseDirtyShutdown haben denselben numerischen Wert. Die Datenbank, deren Größe angepasst werden soll, muss sich in einem sauberen Herunterfahren befinden, das als einheitlicher Zustand bezeichnet wird. Eine inkonsistente Datenbank ist nicht beschädigt, erfordert jedoch, dass Protokolldateien wiedergegeben werden.</p></td>
+<td><p>JET_errDatabaseInconsistent und JET_errDatabaseDirtyShutdown sind derselbe numerische Wert. Die Datenbank, deren Größe angepasst werden soll, muss sich in einem sauberen Herunterfahren befinden, das als konsistenter Zustand bezeichnet wird. Eine inkonsistente Datenbank ist nicht beschädigt, erfordert jedoch, dass Protokolldateien wiedergegeben werden.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errDatabaseInvalidPath</p></td>
-<td><p><em>szdatabasename</em> darf keine leere Zeichenfolge sein, die nicht NULL ist.</p></td>
+<td><p><em>szDatabaseName</em> darf keine leere Zeichenfolge ungleich NULL sein.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDiskFull</p></td>
-<td><p>Auf dem Volume ist nicht genügend freier Speicherplatz vorhanden, um die Vergrößerung auszuführen. <strong>Jetsetdatabasesize</strong> kann auch eine Vielzahl von Datei bezogenen Fehlern zurückgeben, einschließlich, aber nicht beschränkt auf:</p>
+<td><p>Es ist nicht genügend freier Speicherplatz auf dem Volume vorhanden, um den Zuwachsvorgang auszuführen. <strong>JetSetDatabaseSize</strong> kann auch viele dateibezogene Fehler zurückgeben, einschließlich, aber nicht beschränkt auf:</p>
 <ul>
 <li><p>JET_errDiskIO</p></li>
 <li><p>JET_errFileNotFound</p></li>
@@ -105,27 +105,27 @@ JET_errDatabaseDirtyShutdown</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Dieser Fehler kann zurückgegeben werden, wenn <em>Verbrauchsgüter</em> die minimale Datenbankgröße erreicht. Die aktuelle minimale Datenbankgröße beträgt 256 Seiten.</p></td>
+<td><p>Einer der Gründe, warum dieser Fehler zurückgegeben werden kann, ist, wenn <em>cpg</em> die minimale Datenbankgröße erfüllt. Die aktuelle Minimale Datenbankgröße beträgt 256 Seiten.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errOutOfMemory</p></td>
-<td><p>Das System verfügt nicht über genügend Arbeitsspeicher Ressourcen.</p></td>
+<td><p>Die Arbeitsspeicherressourcen des Systems sind gering.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Wenn **jetsetdatabasesize** aufgerufen wird, bevor große Datenmengen eingefügt werden, wird die Datenbankdatei in einem Vorgang vergrößert. Dadurch wird die Wahrscheinlichkeit verringert, dass die Datenbankdatei auf Dateisystem Ebene fragmentiert wird. Außerdem wird die Häufigkeit reduziert, mit der die Datenbankdatei vergrößert werden muss. Wenn Sie die Datenbankdatei einmal vergrößern, kann Sie schneller sein, als Sie mehrmals anwachsen.
+Wenn **JetSetDatabaseSize** vor dem Einfügen großer Datenmengen aufgerufen wird, wird die Datenbankdatei in einem Vorgang vergrößert. Dies verringert die Wahrscheinlichkeit, dass die Datenbankdatei auf Dateisystemebene fragmentiert wird, und die Anzahl der Erweiterungen der Datenbankdatei. Das einmalige Anwachsen der Datenbankdatei kann schneller sein, als sie mehrmals zu erhöhen.
 
-Derzeit wird nur die Vergrößerung der Datei unterstützt. Um eine Datei zu verkleinern, verwenden Sie die Defragmentierungs Funktion des Programms esentutl.exe Hilfsprogramms.
+Derzeit wird nur das Anwachsen der Datei unterstützt. Um eine Datei zu verkleinern, verwenden Sie das Defragmentierungsfeature des Hilfsprogramms esentutl.exe.
 
-Wenn *Verbrauchsgüter* kleiner als die aktuelle Größe der Datenbank ist, wird der Vorgang ignoriert. Wenn *Verbrauchsgüter* kleiner ist als die minimale Datenbankgröße (derzeit 256 Seiten), wird JET_errInvalidParameter zurückgegeben.
+Wenn *cpg* kleiner als die aktuelle Größe der Datenbank ist, wird der Vorgang ignoriert. Wenn *cpg* kleiner als die minimale Datenbankgröße (derzeit 256 Seiten) ist, wird JET_errInvalidParameter zurückgegeben.
 
-Informationen zum Festlegen der Größe einer Datenbank, die geöffnet wird, finden Sie unter [jetgrowdatabase](./jetgrowdatabase-function.md).
+Informationen zum Festlegen der Größe einer geöffneten Datenbank finden Sie unter [JetGrowDatabase.](./jetgrowdatabase-function.md)
 
-Die Dateigröße entspricht möglicherweise nicht der Anzahl der Seiten, die in *pcpgreal* zurückgegeben werden. Es gibt zwei weitere reservierte Seiten, die möglicherweise nicht in *pcpgreal* gezählt werden.
+Die Dateigröße stimmt möglicherweise nicht mit der Anzahl der seiten überein, die in *pcpgReal* zurückgegeben werden. Es gibt zwei zusätzliche reservierte Seiten, die in *pcpgReal* möglicherweise nicht gezählt werden.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -145,19 +145,19 @@ Die Dateigröße entspricht möglicherweise nicht der Anzahl der Seiten, die in 
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetsetdatabasesizew</strong> (Unicode) und <strong>jetsetdatabasesizea</strong> (ANSI).</p></td>
+<td><p>Wird als <strong>JetSetDatabaseSizeW</strong> (Unicode) und <strong>JetSetDatabaseSizeA</strong> (ANSI) implementiert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -171,4 +171,4 @@ Die Dateigröße entspricht möglicherweise nicht der Anzahl der Seiten, die in 
 [JET_TABLEID](./jet-tableid.md)  
 [JET_OBJECTINFO](./jet-objectinfo-structure.md)  
 [JET_OBJECTLIST](./jet-objectlist-structure.md)  
-[Jetgrowdatabase](./jetgrowdatabase-function.md)
+[JetGrowDatabase](./jetgrowdatabase-function.md)

@@ -34,7 +34,7 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 2.5.4.50                                |
-| System-ID-GUID    | 8f888726-f80a-44d7-b1ee-cb9df21392c8    |
+| System-Id-Guid    | 8f888726-f80a-44d7-b1ee-cb9df21392c8    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,10 +55,10 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | Falsch                                                         |
-| Ist einwertig       | Falsch                                                         |
-| Ist indiziert             | Falsch                                                         |
-| Im globalen Katalog      | Falsch                                                         |
+| System-Only            | False                                                         |
+| Is-Single-Valued       | False                                                         |
+| Ist indiziert             | False                                                         |
+| Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
@@ -76,10 +76,10 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | Falsch                                                         |
-| Ist einwertig       | Falsch                                                         |
-| Ist indiziert             | Falsch                                                         |
-| Im globalen Katalog      | Falsch                                                         |
+| System-Only            | False                                                         |
+| Is-Single-Valued       | False                                                         |
+| Ist indiziert             | False                                                         |
+| Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
@@ -97,10 +97,10 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | Falsch                                                         |
-| Ist einwertig       | Falsch                                                         |
-| Ist indiziert             | Falsch                                                         |
-| Im globalen Katalog      | Falsch                                                         |
+| System-Only            | False                                                         |
+| Is-Single-Valued       | False                                                         |
+| Ist indiziert             | False                                                         |
+| Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
@@ -118,10 +118,10 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | Falsch                                                         |
-| Ist einwertig       | Falsch                                                         |
-| Ist indiziert             | Falsch                                                         |
-| Im globalen Katalog      | Falsch                                                         |
+| System-Only            | False                                                         |
+| Ist einwertig       | False                                                         |
+| Ist indiziert             | False                                                         |
+| Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
@@ -139,10 +139,10 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNam
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | Falsch                                                         |
-| Ist einwertig       | Falsch                                                         |
-| Ist indiziert             | Falsch                                                         |
-| Im globalen Katalog      | Falsch                                                         |
+| System-Only            | False                                                         |
+| Ist einwertig       | False                                                         |
+| Ist indiziert             | False                                                         |
+| Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |

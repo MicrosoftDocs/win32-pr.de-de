@@ -35,7 +35,7 @@ g \_ wszWMMediaIsRepeat
 
 Dieses Attribut wird für Fernsehsendungen verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

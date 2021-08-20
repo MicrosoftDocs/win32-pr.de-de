@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows8Param-Klasse'
-title: Windows8Param-Klasse (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Param-Klasse'
+title: Windows8Param-Klasse (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: Windows8Param class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows8.Windows8Param
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8param(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 40ed9aa466fcdbe8d935cb4bb7da442f3c15aded
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f573d8f89432312ddb4301877d6f6b460cc7875715809ba0fd4d6dee7b0f07bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118068975"
 ---
 # <a name="windows8param-class"></a>Windows8Param-Klasse
 
-System Parameter, die in Windows 8 eingeführt wurden.
+Systemparameter, die in Windows 8 eingeführt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Windows8. Windows8Param  
+  Microsoft.Isam.Esent.Interop.Windows8.Windows8Param  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,8 +62,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Param-Member](./windows8param-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

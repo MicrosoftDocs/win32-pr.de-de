@@ -1,6 +1,6 @@
 ---
 title: WavePrefixCountBits-Funktion
-description: Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
+description: Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes auf TRUE festgelegt sind, wobei indizes kleiner als die aktuelle Lane sind.
 ms.assetid: AEC9AFD7-6478-4397-B531-73990D30AA48
 keywords:
 - WavePrefixCountBits-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118504676"
 ---
 # <a name="waveprefixcountbits-function"></a>WavePrefixCountBits-Funktion
 
-Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
+Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes auf TRUE festgelegt sind, wobei indizes kleiner als die aktuelle Lane sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +48,11 @@ Die angegebenen booleschen Variablen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Summe aller angegebenen booleschen Variablen, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
+Die Summe aller angegebenen booleschen Variablen, die für alle aktiven Lanes mit Indizes kleiner als die aktuelle Lane auf TRUE festgelegt sind.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
+Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -60,7 +60,7 @@ Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Code beschreibt, wie ein komprimierter Schreibzugriff in einen geordneten Stream implementiert wird, wobei die Anzahl der pro Lane geschriebenen Elemente entweder 1 oder 0 beträgt.
+Der folgende Code beschreibt, wie ein komprimierter Schreibvorgang in einen geordneten Stream implementiert wird, bei dem die Anzahl der pro Lane geschriebenen Elemente entweder 1 oder 0 beträgt.
 
 ``` syntax
 bool bDoesThisLaneHaveAnAppendItem = <expr>;
@@ -80,7 +80,7 @@ appendOffset += laneAppendOffset; // and add in the offset for this lane
 buffer[appendOffset] = myData; // write to the offset location for this lane
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

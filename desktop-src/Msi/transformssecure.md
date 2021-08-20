@@ -1,25 +1,25 @@
 ---
-description: Wenn die transformssecure-Eigenschaft auf 1 festgelegt wird, wird dem Installer mitgeteilt, dass Transformationen lokal auf dem Computer des Benutzers an einem Speicherort zwischengespeichert werden, an dem der Benutzer keinen Schreibzugriff hat.
+description: Durch Festlegen der TRANSFORMSSECURE-Eigenschaft auf 1 wird das Installationsprogramm darüber informiert, dass Transformationen lokal auf dem Computer des Benutzers an einem Speicherort zwischengespeichert werden sollen, an dem der Benutzer keinen Schreibzugriff hat.
 ms.assetid: 414025c3-7b83-42c7-9954-7393fba06061
-title: Transformssecure (Eigenschaft)
+title: TRANSFORMSSECURE-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5b7a30ab5e94fb646e2e8960b60fd97dc35557c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7af3432b8f895d4d9f5d0fe643ef8106e01e28ad64fb2db177e968fbc13d88de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118141633"
 ---
-# <a name="transformssecure-property"></a>Transformssecure (Eigenschaft)
+# <a name="transformssecure-property"></a>TRANSFORMSSECURE-Eigenschaft
 
-Wenn die **transformssecure** -Eigenschaft auf 1 festgelegt wird, wird dem Installer mitgeteilt, dass Transformationen lokal auf dem Computer des Benutzers an einem Speicherort zwischengespeichert werden, an dem der Benutzer keinen Schreibzugriff hat. Das Festlegen dieser Eigenschaft entspricht dem Festlegen der [transformssecure-Richtlinie](transformssecure-policy.md) , mit der Ausnahme, dass der Bereich anders ist. Das Festlegen der transformssecure-Richtlinie gilt für alle Pakete, die von einem bestimmten Benutzer installiert wurden. Das Festlegen der **transformssecure** -Eigenschaft gilt unabhängig vom Benutzer für das Paket.
+Durch Festlegen der **TRANSFORMSSECURE-Eigenschaft** auf 1 wird das Installationsprogramm darüber informiert, dass Transformationen lokal auf dem Computer des Benutzers an einem Speicherort zwischengespeichert werden sollen, an dem der Benutzer keinen Schreibzugriff hat. Das Festlegen dieser Eigenschaft entspricht dem Festlegen der [Richtlinie TransformsSecure,](transformssecure-policy.md) mit der Ausnahme, dass der Bereich unterschiedlich ist. Das Festlegen der TransformsSecure-Richtlinie gilt für alle Pakete, die von einem bestimmten Benutzer installiert werden. Das Festlegen der **TRANSFORMSSECURE-Eigenschaft** gilt für das Paket, unabhängig vom Benutzer.
 
-Der Zweck dieser Eigenschaft ist die Bereitstellung von sicherem Transformations Speicher mit Reisenden Benutzern von Windows 2000. Wenn diese Eigenschaft festgelegt ist, kann bei einer [Wartungs Installation](maintenance-installation.md) nur die Transformation aus dem angegebenen Pfad verwendet werden. Wenn der Pfad nicht verfügbar ist, tritt bei der Wartungs Installation ein Fehler auf. Eine Quelle für jede sichere Transformation muss sich daher am Speicherort der Quelle des Installationspakets befinden. Wenn das Installationsprogramm feststellt, dass die Transformation auf dem lokalen Computer fehlt, kann die Transformation aus dieser Quelle wieder hergestellt werden.
+Der Zweck dieser Eigenschaft ist die Bereitstellung eines sicheren Transformierungsspeichers für reisende Benutzer von Windows 2000. Wenn diese Eigenschaft festgelegt ist, kann eine [Wartungsinstallation](maintenance-installation.md) nur die Transformation aus dem angegebenen Pfad verwenden. Wenn der Pfad nicht verfügbar ist, schlägt die Installation der Wartung fehl. Daher muss sich eine Quelle für jede sichere Transformation am Speicherort der Quelle des Installationspakets befinden. Wenn das Installationsprogramm dann feststellt, dass die Transformation auf dem lokalen Computer fehlt, kann es die Transformation aus dieser Quelle wiederherstellen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Installer interpretiert die [**transformsatsource**](transformsatsource.md) -Eigenschaft so, dass Sie mit der **transformssecure** -Eigenschaft identisch ist.
+Windows Das Installationsprogramm interpretiert die [**TRANSFORMSATSOURCE-Eigenschaft**](transformsatsource.md) so, dass sie mit der **TRANSFORMSSECURE-Eigenschaft** identisch ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -27,7 +27,7 @@ Windows Installer interpretiert die [**transformsatsource**](transformsatsource.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zu den Windows Service [Pack-Mindestanforderungen,](windows-installer-portal.md) die für eine Windows Installer-Version erforderlich sind, finden Sie unter Run-Time Anforderungen für Windows Installer.<br/> |
 
 
 
@@ -38,7 +38,7 @@ Windows Installer interpretiert die [**transformsatsource**](transformsatsource.
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[Daten Bank Transformationen](database-transforms.md)
+[Datenbanktransformationen](database-transforms.md)
 </dt> </dl>
 
  

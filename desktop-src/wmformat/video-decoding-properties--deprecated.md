@@ -1,9 +1,9 @@
 ---
-title: Videodecodierungseigenschaften (camerauicontrol. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Videodecodierungseigenschaften (camerauicontrol. h)
+title: Eigenschaften der Videodecodierung (Camerauicontrol.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Eigenschaften der Videodecodierung (Camerauicontrol.h)
 ms.assetid: fa72a593-bb16-40a8-a510-db8b000bfd95
 keywords:
-- Video Decodierungs Eigenschaften Windows Media-Format
+- Videodecodierungseigenschaften – Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0cbc12006fd1253418689dfdbebeaed5cab44d3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4566e5e125c74d12344658785f78acb800a006c20b9d3a478b93f0f6c4579fe1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117653403"
 ---
-# <a name="video-decoding-properties"></a>Videodecodierungseigenschaften
+# <a name="video-decoding-properties"></a>Eigenschaften der Videodecodierung
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Camerauicontrol. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Camerauicontrol.h</dt> </dl> |
 
 
 

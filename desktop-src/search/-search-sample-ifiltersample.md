@@ -25,7 +25,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="requirements"></a>Anforderungen
 
-| Product (Produkt)     | Produktversion          |
+| Produkt     | Produktversion          |
 |-------------|--------------------------|
 | Windows     | Windows 7, 8.1 oder 10    |
 | Windows SDK | 7.0 oder höher           |
@@ -43,7 +43,7 @@ Dieses Beispiel ist an folgendem Speicherort verfügbar.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-1. Öffnen Sie Windows Explorer, und  navigieren Sie zum FilterBase-Projektverzeichnis.
+1. Öffnen Sie Windows Explorer, und navigieren Sie zum **Projektverzeichnis FilterBase.**
 2. Doppelklicken Sie auf das Symbol für die Datei FilterBase.sln, um das Projekt in Visual Studio zu öffnen.
 
     > [!NOTE]  

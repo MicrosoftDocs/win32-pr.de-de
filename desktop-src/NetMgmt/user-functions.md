@@ -1,6 +1,6 @@
 ---
 title: Benutzerfunktionen
-description: Die Benutzerfunktionen für die Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder bei Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
+description: Die Benutzerfunktionen der Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder im Fall von Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
 ms.assetid: cf0e5102-3924-46c0-8124-0aa04e95f48d
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,14 +13,14 @@ ms.locfileid: "117796816"
 ---
 # <a name="user-functions"></a>Benutzerfunktionen
 
-Die Benutzerfunktionen für die Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder bei Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
+Die Benutzerfunktionen der Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder im Fall von Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
 
 
 
-| Funktion                                               | BESCHREIBUNG                                                         |
+| Funktion                                               | Beschreibung                                                         |
 |--------------------------------------------------------|---------------------------------------------------------------------|
-| [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist ein Kennwort und eine Berechtigungsstufe zu.     |
-| [**NetUserChangePassword**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine bestimmte Domäne. |
+| [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist eine Kennwort- und Berechtigungsebene zu.     |
+| [**NetUserChangePassword**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine angegebene Domäne. |
 | [**NetUserDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel)                       | Löscht ein Benutzerkonto vom Server.                             |
 | [**NetUserEnum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum)                     | Listet alle Benutzerkonten auf einem Server auf.                                |
 | [**NetUserGetGroups**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups)           | Gibt eine Liste der globalen Gruppennamen zurück, zu denen ein Benutzer gehört.       |
@@ -33,11 +33,11 @@ Die Benutzerfunktionen für die Netzwerkverwaltung steuern das Konto eines Benut
 
  
 
-Jeder Benutzer oder jede Anwendung, der bzw. die auf Netzwerkressourcen zugreift, muss über ein Konto in der Sicherheitsdatenbank verfügen. Die Verzeichnisdienste verwenden dieses Konto, um zu überprüfen, ob der Benutzer oder die Anwendung über die Berechtigung zum Herstellen einer Verbindung mit einer Ressource verfügt. Wenn ein Benutzer oder eine Anwendung Zugriff auf eine Ressource anfordert, sucht das Windows Sicherheitssystem nach einem entsprechenden Benutzerkonto oder Gruppenkonto, um den Zugriff zuzulassen.
+Jeder Benutzer oder jede Anwendung, der bzw. die auf Netzwerkressourcen zutritt, muss über ein Konto in der Sicherheitsdatenbank verfügen. Die Verzeichnisdienste verwenden dieses Konto, um zu überprüfen, ob der Benutzer oder die Anwendung über die Berechtigung zum Herstellen einer Verbindung mit einer Ressource verfügt. Wenn ein Benutzer oder eine Anwendung Zugriff auf eine Ressource an fordert, sucht das Windows Sicherheitssystem nach einem geeigneten Benutzerkonto oder Gruppenkonto, um den Zugriff zu ermöglichen.
 
-Nachdem Sie ein Benutzerkonto durch Aufrufen der [**NetUserDel-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel) entfernt haben, kann der Benutzer nur mithilfe des Gastkontos auf den Server zugreifen.
+Nachdem Sie ein Benutzerkonto durch Aufrufen der [**NetUserDel-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel) entfernt haben, kann der Benutzer nur noch über das Gastkonto auf den Server zugreifen.
 
-Da das Kennwort eines Benutzers vertraulich ist, wird es nicht von der [**NetUserEnum-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum) oder der [**NetUserGetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo) zurückgegeben. Das Kennwort wird anfänglich zugewiesen, wenn Sie [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)aufrufen.
+Da das Kennwort eines Benutzers vertraulich ist, wird es nicht von der [**NetUserEnum-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum) oder der [**NetUserGetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo) zurückgegeben. Das Kennwort wird anfänglich zugewiesen, wenn Sie [**NetUserAdd aufrufen.**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)
 
 Benutzerkontoinformationen sind auf den folgenden Ebenen verfügbar:
 
@@ -76,16 +76,16 @@ Mit den folgenden Funktionen können Anwendungen die Kennwortkonformität überp
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                                |
+| Funktion                                                               | Beschreibung                                                                                                |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**NetValidatePasswordPolicyFree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den von der [**NetValidatePasswordPolicy-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) belegten Arbeitsspeicher frei. |
-| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Überprüft, ob Kennwörter anforderungen an Komplexität, Fälligkeit, Mindestlänge und Verlaufswiederverwendung erfüllen.            |
+| [**NetValidatePasswordPolicyFree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den von der [**NetValidatePasswordPolicy-Funktion zugeordneten Arbeitsspeicher**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) frei. |
+| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Überprüft, ob Kennwörter die Anforderungen an Komplexität, Altern, Mindestlänge und Verlaufswiederverwendung erfüllen.            |
 
 
 
  
 
-Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte ADSI-Methoden (Active Directory Service Interface) aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Benutzerfunktionen der Netzwerkverwaltung erreichen können. Weitere Informationen finden Sie unter [**IADsUser**](/windows/desktop/api/iads/nn-iads-iadsuser) und [**IADsComputer**](/windows/desktop/api/iads/nn-iads-iadscomputer).
+Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte ADSI-Methoden (Active Directory Service Interface) aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Benutzerfunktionen für die Netzwerkverwaltung erreichen können. Weitere Informationen finden Sie unter [**IADsUser**](/windows/desktop/api/iads/nn-iads-iadsuser) und [**IADsComputer**](/windows/desktop/api/iads/nn-iads-iadscomputer).
 
  
 

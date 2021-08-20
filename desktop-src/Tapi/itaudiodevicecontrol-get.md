@@ -1,21 +1,21 @@
 ---
-description: Die Get-Methode ruft den Wert einer angegebenen audiogeräteeigenschaft ab.
+description: Die Get-Methode ruft den Wert einer bestimmten Audiogeräteeigenschaft ab.
 ms.assetid: 34cb3f3e-be4a-49e0-bf7d-6915906e2368
-title: 'Itaudiodevicecontrol:: Get-Methode (ipmsp. h)'
+title: ITAudioDeviceControl::Get-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4311dc18291fcfbbe533dbe17042e6ba19c1122
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2877b48eab2ecab6259a034c9d74f4c32b9fae9233f5ceb0a0a409f43add014
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118865784"
 ---
-# <a name="itaudiodevicecontrolget-method"></a>Itaudiodevicecontrol:: Get-Methode
+# <a name="itaudiodevicecontrolget-method"></a>ITAudioDeviceControl::Get-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Get** -Methode ruft den Wert einer angegebenen [**audiogeräteeigenschaft**](audiodeviceproperty.md)ab.
+Die **Get-Methode** ruft den Wert einer angegebenen [**Audiogeräteeigenschaft ab.**](audiodeviceproperty.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,24 +32,24 @@ HRESULT get_Call(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**audiodeviceproperty**](audiodeviceproperty.md) -Enumeration.
+Member der [**AudioDeviceProperty-Enumerator.**](audiodeviceproperty.md)
 
 </dd> <dt>
 
-*plvalue* \[ vorgenommen\]
+*plValue* \[ out\]
 </dt> <dd>
 
-Der Wert der input- *Eigenschaft*.
+Wert der *Eingabeeigenschaft*.
 
 </dd> <dt>
 
-*plflags* \[ vorgenommen\]
+*plFlags* \[ out\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der- *Eigenschafts* Wert gesteuert wird.
+Der Wert der [**TAPIControlFlags-Aufenumerierung,**](tapicontrolflags.md) der angibt, wie der *Eigenschaftswert* gesteuert wird.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
@@ -74,9 +74,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
@@ -85,13 +85,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itaudiodebug econtrol**](itaudiodevicecontrol.md)
+[**ITAudioDeviceControl**](itaudiodevicecontrol.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Audiodeviceproperty**](audiodeviceproperty.md)
+[**AudioDeviceProperty**](audiodeviceproperty.md)
 </dt> </dl>
 
  

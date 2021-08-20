@@ -15,16 +15,16 @@ ms.locfileid: "117795841"
 
 Die folgende Abbildung zeigt die Beziehung zwischen [Experten-](experts.md) und [Parseranwendungen](parsers.md) und anderen Komponenten der Netzwerkmonitor Architektur.
 
-![Beziehung zwischen Experten- und Parseranwendungen](images/nm-arch1.png)
+![Die Beziehung zwischen Experten- und Parseranwendungen](images/nm-arch1.png)
 
-Der Netzwerkdatenverkehr wird als einzelne Frames vom NDIS-Treiber erfasst. Der Netzwerkmonitor-Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerkpaketanbieter (Network Packet Provider, NPP) weiter, der die Daten erfasst und in mindestens einer Erfassungsdateien platziert. Der NPP ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die [**IDelaydC-Schnittstelle**](idelaydc.md) verwendet, um eine verzögerte Erfassung durchzuführen.
+Der Netzwerkdatenverkehr wird als einzelne Frames vom NDIS-Treiber erfasst. Der Netzwerkmonitor-Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerkpaketanbieter (Network Packet Provider, NPP) weiter, der die Daten erfasst und in einer oder mehrere Erfassungsdateien platziert. Der NPP ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die [**IDelaydC-Schnittstelle**](idelaydc.md) verwendet, um eine verzögerte Erfassung durchzuführen.
 
 > [!Note]  
 > Der NPP wird für verzögerte und Echtzeiterfassungen verwendet. Für Echtzeiterfassungen wird die [**IRTC-Schnittstelle**](irtc.md) verwendet.
 
  
 
-Wenn die Netzwerkframes in der Erfassungsdatei gespeichert sind und auf die Datei zugegriffen werden kann, können Experten und Parser die Netzwerkmonitor-Benutzeroberfläche und die Netzwerkmonitor-Funktionen verwenden, die in Nmapi.dll bereitgestellt werden, um die Daten zu analysieren. Auf Erfassungsdateien kann erst zugegriffen werden, wenn die Erfassung abgeschlossen ist.
+Wenn die Netzwerkframes in der Erfassungsdatei gespeichert werden und auf die Datei zugegriffen werden kann, können Experten und Parser die Netzwerkmonitor-Benutzeroberfläche und die Netzwerkmonitor-Funktionen verwenden, die in Nmapi.dll bereitgestellt werden, um die Daten zu analysieren. Auf Erfassungsdateien kann erst zugegriffen werden, wenn die Erfassung abgeschlossen ist.
 
  
 

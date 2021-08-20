@@ -1,15 +1,15 @@
 ---
 title: Funktionen (WCS)
-description: In den folgenden Themen sind WCS-Funktionen nach Kategorie organisiert. Dadurch können Sie Funktionen durchsuchen, die verwandte Verwendungen in einem einzelnen Thema aufweisen. Die Funktionsverweisseiten werden in alphabetischer Reihenfolge angeordnet.
+description: In den folgenden Themen sind WCS-Funktionen nach Kategorie organisiert. Auf diese Weise können Sie Funktionen durchsuchen, die verwandte Verwendungen in einem einzelnen Thema haben. Die Funktionsverweisseiten sind in alphabetischer Reihenfolge angeordnet.
 ms.assetid: aba45dbd-6fc2-4788-87f0-043579fa53f9
 keywords:
-- Windows Color System (WCS), Funktionen
-- WCS (Windows Color System), Funktionen
-- Bildfarbverwaltung, Funktionen
-- Farbverwaltung, Funktionen
+- Windows Farbsystem (WCS), Funktionen
+- WCS (Windows Color System), Functions
+- Bildfarbverwaltung,Funktionen
+- Farbverwaltung,Funktionen
 - Farben, Funktionen
 - WCS-Referenz, Funktionen
-- Referenz für WCS,Functions
+- Referenz für WCS, Functions
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
@@ -22,7 +22,7 @@ ms.locfileid: "117851946"
 ---
 # <a name="wcs-functions"></a>WCS-Funktionen
 
-In den folgenden Themen sind WCS-Funktionen nach Kategorie organisiert. Dadurch können Sie Funktionen durchsuchen, die verwandte Verwendungen in einem einzelnen Thema aufweisen. Die Funktionsverweisseiten werden in alphabetischer Reihenfolge angeordnet.
+In den folgenden Themen sind WCS-Funktionen nach Kategorie organisiert. Auf diese Weise können Sie Funktionen durchsuchen, die verwandte Verwendungen in einem einzelnen Thema haben. Die Funktionsverweisseiten sind in alphabetischer Reihenfolge angeordnet.
 
 Die Funktionen sind wie folgt gruppiert:
 

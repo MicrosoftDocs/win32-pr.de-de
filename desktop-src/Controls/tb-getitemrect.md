@@ -1,9 +1,9 @@
 ---
-title: TB_GETITEMRECT (Commctrl.h)
-description: Ruft das umgebundene Rechteck einer Schaltfläche in einer Symbolleiste ab.
+title: TB_GETITEMRECT Nachricht (Commctrl.h)
+description: Ruft das umgrenzende Rechteck einer Schaltfläche in einer Symbolleiste ab.
 ms.assetid: 42c2c86e-0002-4029-be6a-fdfdf405b78c
 keywords:
-- TB_GETITEMRECT von Windows Steuerelementen
+- TB_GETITEMRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117829705"
 ---
 # <a name="tb_getitemrect-message"></a>TB \_ GETITEMRECT-Nachricht
 
-Ruft das umgebundene Rechteck einer Schaltfläche in einer Symbolleiste ab.
+Ruft das umgrenzende Rechteck einer Schaltfläche in einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Ruft das umgebundene Rechteck einer Schaltfläche in einer Symbolleiste ab.
 *wParam* 
 </dt> <dd>
 
-Nullbasierter Index der Schaltfläche, für die Informationen abgerufen werden.
+Nullbasierter Index der Schaltfläche, für die Informationen abgerufen werden sollen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Clientkoordinaten des umgebundenen Rechtecks empfängt.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Clientkoordinaten des umgrenzenden Rechtecks empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Meldung ruft das umgebundene Rechteck für Schaltflächen, deren Zustand auf den [**TBSTATE \_ HIDDEN-Wert**](toolbar-button-states.md) festgelegt ist, nicht ab.
+Diese Meldung ruft nicht das umgrenzende Rechteck für Schaltflächen ab, deren Status auf den [**TBSTATE \_ HIDDEN-Wert**](toolbar-button-states.md) festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Diese Meldung ruft das umgebundene Rechteck für Schaltflächen, deren Zustand a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

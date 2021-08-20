@@ -3,8 +3,8 @@ title: PlaylistArray.item-Methode
 description: Die Item-Methode ruft die Wiedergabeliste am angegebenen Index ab.
 ms.assetid: cc851695-f9a2-4594-8bd3-3555c18bfa10
 keywords:
-- Item-Windows Media Player
-- item-Windows Media Player , PlaylistArray-Klasse
+- item-Methode Windows Media Player
+- item-Methode Windows Media Player , PlaylistArray-Klasse
 - PlaylistArray-Klasse Windows Media Player , Item-Methode
 topic_type:
 - apiref
@@ -45,7 +45,7 @@ retVal = PlaylistArray.item(
 *Index* \[ In\]
 </dt> <dd>
 
-**Number** (**long**), die den Index der wiedergabeliste enthält, die abgerufen werden soll.
+**Zahl** (**long**), die den Index der abzurufenden Wiedergabeliste enthält.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Diese Methode gibt ein **Playlist-Objekt** zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 

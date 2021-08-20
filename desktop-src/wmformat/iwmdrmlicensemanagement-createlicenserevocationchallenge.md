@@ -1,11 +1,11 @@
 ---
-title: IWMDRMLicenseManagement CreateLicenseRevocationChallenge-Methode (Wmdrmsdk.h)
-description: Die CreateLicenseRevocationChallenge-Methode generiert eine Lizenzsperrungsaufforderung.
+title: IWMDRMLicenseManagement CreateLicenseRevocationCrelige-Methode (Wmdrmsdk.h)
+description: Die CreateLicenseRevocationCantenge-Methode generiert eine Lizenzsperrungs-Challenge.
 ms.assetid: 31fcf7a7-1af8-4474-abac-eddb1070975b
 keywords:
-- CreateLicenseRevocationChallenge-Methode windows Media Format
-- CreateLicenseRevocationChallenge-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
-- IWMDRMLicenseManagement-Schnittstelle windows Media Format , CreateLicenseRevocationChallenge-Methode
+- CreateLicenseRevocationCrelige-Methode windows Media Format
+- CreateLicenseRevocationChallenge-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , CreateLicenseRevocationCrelige-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "117846953"
 ---
 # <a name="iwmdrmlicensemanagementcreatelicenserevocationchallenge-method"></a>IWMDRMLicenseManagement::CreateLicenseRevocationChallenge-Methode
 
-Die **CreateLicenseRevocationChallenge-Methode** generiert eine Lizenzsperrungsaufforderung.
+Die **CreateLicenseRevocationCantenge-Methode** generiert eine Lizenzsperrungs-Challenge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ HRESULT CreateLicenseRevocationChallenge(
 *pbMachineID* \[ In\]
 </dt> <dd>
 
-Vom Benutzer angegebener Computerbezeichner. Dieser Wert wird zum Abfragen einer Lizenz auf dem Server verwendet und muss dem vom Lizenzserver verwendeten Format entsprechen.
+Bezeichner des vom Benutzer angegebenen Computers. Dieser Wert wird zum Abfragen einer Lizenz auf dem Server verwendet und muss dem format entsprechen, das der Lizenzserver verwendet.
 
 </dd> <dt>
 
@@ -64,28 +64,28 @@ Größe des Computerbezeichners in Bytes.
 *pbChallenge* \[ In\]
 </dt> <dd>
 
-Benutzerdefinierte Abfragedaten. Diese Daten werden zusätzlich zum Computerbezeichner verwendet, um den Lizenzserver nach lizenzen abzufragen, die widerrufen werden sollen.
+Vom Benutzer angegebene Herausforderungsdaten. Diese Daten werden zusätzlich zur Computer-ID verwendet, um den Lizenzserver nach widerrufenen Lizenzen zu fragen.
 
 </dd> <dt>
 
 *cbChallenge* \[ In\]
 </dt> <dd>
 
-Größe der Abfragedaten in Bytes.
+Größe der Herausforderungsdaten in Bytes.
 
 </dd> <dt>
 
-*ppbChallengeOutput* \[ out\]
+*ppbCppegeOutput* \[ out\]
 </dt> <dd>
 
-Adresse eines Zeigers, der die Adresse der Abfrageausgabe empfängt. Bei diesem Puffer handelt es sich um die Daten, die an den Lizenzsperrdienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie **CoTaskMemFree** aufrufen.
+Adresse eines Zeigers, der die Adresse der Ausgabe der Herausforderung empfängt. Dieser Puffer ist die Daten, die an den Lizenzsperrdienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher durch Aufrufen von **CoTaskMemFree frei geben.**
 
 </dd> <dt>
 
-*pwChallengeOutput* \[ out\]
+*beiChallengeOutput* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Größe der ausgabedaten der zugeordneten Abfrage in Bytes empfängt.
+Adresse einer Variablen, die die Größe der zugeordneten Ausgabedaten der Herausforderung in Bytes empfängt.
 
 </dd> </dl>
 
@@ -117,7 +117,7 @@ Keine.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

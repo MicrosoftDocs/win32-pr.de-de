@@ -113,7 +113,7 @@ public static void JetSetCurrentIndex4(
     
     Sequenznummer des mehrwertigen Spaltenwerts, der verwendet wird, um den Cursor auf dem neuen Index zu positionieren. Dieser Parameter wird nur in Verbindung mit [NoMove](./setcurrentindexgrbit-enumeration.md)verwendet. Wenn dieser Parameter nicht vorhanden ist oder auf 0 (null) festgelegt ist, wird davon ausgegangen, dass sein Wert 1 ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

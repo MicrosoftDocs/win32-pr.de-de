@@ -299,21 +299,21 @@ Eine Einheit von Ink, die von einer Recognizer interpretiert wird. Für westeskl
 <span id="tablet.tablet_glossary_recognizer"></span><span id="TABLET.TABLET_GLOSSARY_RECOGNIZER"></span>**Erkennungsmodul**
 </dt> <dd>
 
-Ein Softwaremodul, das Komponenten einer Sprache oder Gruppe verwandter Sprachen oder eine Klasse verwandter Objekte wie Notizen, Systemgesten und geometrische Formen erkennt und verarbeitet.
+Ein Softwaremodul, das Komponenten einer Sprache oder Gruppe verwandter Sprachen erkennt und verarbeitet, oder eine Klasse verwandter Objekte, z. B. Noten, Systemgesten und geometrische Formen.
 
 </dd> <dt>
 
-<span id="tablet.tablet_glossary_recognizer_context"></span><span id="TABLET.TABLET_GLOSSARY_RECOGNIZER_CONTEXT"></span>**Erkennungskontext**
+<span id="tablet.tablet_glossary_recognizer_context"></span><span id="TABLET.TABLET_GLOSSARY_RECOGNIZER_CONTEXT"></span>**Kontext der Wiedererkennung**
 </dt> <dd>
 
-Anwendungsspezifische Informationen, die die Erkennung verwendet, um Diekerkennung durchzuführen.
+Anwendungsspezifische Informationen, die von der Erkennung verwendet werden, um die Ink-Erkennung durchzuführen.
 
 </dd> <dt>
 
 <span id="tablet.tablet_glossary_sketch_ink_object"></span><span id="TABLET.TABLET_GLOSSARY_SKETCH_INK_OBJECT"></span>**Sketch-Ink-Objekt**
 </dt> <dd>
 
-Ein OLE-Objekt, das die Ink darstellt, die als Zeichnung anstelle eines Worts interpretiert wird.
+Ein OLE-Objekt, das die Ink darstellt, die als Zeichnung und nicht als Wort interpretiert wird.
 
 </dd> <dt>
 
@@ -327,14 +327,14 @@ Eine Wortliste, die alle häufig geschriebenen Wörter in einer Sprache enthält
 <span id="tablet.tablet_glossary_system_gesture"></span><span id="TABLET.TABLET_GLOSSARY_SYSTEM_GESTURE"></span>**Systemgeste**
 </dt> <dd>
 
-Ein Stift, der einer herkömmlichen Mausnachricht entspricht, z. B. Linksklick oder Doppelklick.
+Ein Stift, der einer herkömmlichen Mausnachricht entspricht, z. B. Ein Linkklick oder Doppelklick.
 
 </dd> <dt>
 
 <span id="tablet.tablet_glossary_tablet_pc_managed_library"></span><span id="TABLET.TABLET_GLOSSARY_TABLET_PC_MANAGED_LIBRARY"></span>**Verwaltete Tablet PC-Bibliothek**
 </dt> <dd>
 
-Eine Reihe von verwalteten Objekten, die die Microsoft .NET Framework erweitern, um Unterstützung für die Eingabe und Ausgabe von Handschrift auf Tablet-PCs und den Datenaustausch mit anderen Computern bereitzustellen.
+Eine Gruppe verwalteter Objekte, die die Microsoft .NET Framework erweitert, um Unterstützung für die Eingabe und Ausgabe von Handschrift auf Tablet-PCs und den Datenaustausch mit anderen Computern zu bieten.
 
 </dd> <dt>
 
@@ -348,11 +348,11 @@ Ein OLE-Objekt, das Ink darstellt, das als Wort interpretiert wird.
 <span id="tablet.tablet_glossary_user_dictionary"></span><span id="TABLET.TABLET_GLOSSARY_USER_DICTIONARY"></span>**Benutzerwörterbuch**
 </dt> <dd>
 
-Eine Wortliste, die Wörter enthält, die dem Wörterbuch von Benutzern hinzugefügt wurden.
+Eine Wortliste, die Wörter enthält, die benutzern zum Wörterbuch hinzugefügt wurden.
 
 </dd> <dt>
 
-<span id="tablet.tablet_glossary_word_list"></span><span id="TABLET.TABLET_GLOSSARY_WORD_LIST"></span>**Wortliste**
+<span id="tablet.tablet_glossary_word_list"></span><span id="TABLET.TABLET_GLOSSARY_WORD_LIST"></span>**word list**
 </dt> <dd>
 
 Eine Datei, die eine Auflistung von Wörtern enthält, aus denen ein Anwendungswörterbuch besteht.

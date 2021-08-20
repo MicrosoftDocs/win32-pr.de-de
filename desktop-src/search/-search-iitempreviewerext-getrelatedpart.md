@@ -1,5 +1,5 @@
 ---
-description: Ruft einen verwandten Textteil zum Einbetten in den MHTML-Ausgabestream ab.
+description: Ruft einen verknüpften Textteil zum Einbetten in den MHTML-Ausgabestream ab.
 ms.assetid: 7810568b-5fb7-4814-aa9f-d7ae805c97e1
 title: IItemPreviewerExt::GetRelatedPart-Methode
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "117863973"
 ---
 # <a name="iitempreviewerextgetrelatedpart-method"></a>IItemPreviewerExt::GetRelatedPart-Methode
 
-Ruft einen verwandten Textteil zum Einbetten in den MHTML-Ausgabestream ab.
+Ruft einen verknüpften Textteil zum Einbetten in den MHTML-Ausgabestream ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT GetRelatedPart(
 
 Typ: **DWORD**
 
-Der Kontextbezeichner für den Vorgang. Überschreiben Sie **den dwContext-Standardwert,** um den Kontextbezeichner auf einen Wert Ihrer Wahl zu setzen.
+Der Kontextbezeichner für den Vorgang. Überschreiben Sie den **dwContext-Standardwert,** um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen.
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Ein Zeiger auf die -Eigenschaft des verknüpften Inhalts als Unicode-Zeichenfolg
 
 Typ: **DWORD**
 
-Ein ganzzahliger Wert ohne Vorzeichen, der den nullbasierten Index des verknüpften Textteiles enthält.
+Ein ganzzahliger Wert ohne Vorzeichen, der den nullbasierten Index des verknüpften Textteils enthält.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Ein ganzzahliger Wert ohne Vorzeichen, der den nullbasierten Index des verknüpf
 
 Typ: **[ **LINKINFO**](-search-linkinfo.md)\***
 
-Empfängt einen Zeiger auf die [**LINKINFO-Struktur,**](-search-linkinfo.md) in der die Methode Informationen zur Transaktion zurückgibt. *pInfo* darf kein **NULL-Zeiger** sein.
+Empfängt einen Zeiger auf die [**LINKINFO-Struktur,**](-search-linkinfo.md) in der die Methode Informationen über die Transaktion zurückgibt. *pInfo* darf kein **NULL-Zeiger** sein.
 
 </dd> </dl>
 
@@ -81,13 +81,13 @@ Empfängt einen Zeiger auf die [**LINKINFO-Struktur,**](-search-linkinfo.md) in 
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 Die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die [**Schnittstellen ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,7 +101,7 @@ Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -3,8 +3,8 @@ title: IWMDRMLicenseManagement RestoreLicenses-Methode (Wmdrmsdk.h)
 description: Die RestoreLicenses-Methode stellt Lizenzen aus einer Lizenzsicherung wieder her, die durch Aufrufen der BackupLicenses-Methode erstellt wurde.
 ms.assetid: 83e4b748-0f69-4a9e-b531-047c9a2be1fe
 keywords:
-- 'RestoreLicenses-Methode : Windows Media Format'
-- RestoreLicenses-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- RestoreLicenses-Methode windows Media Format
+- RestoreLicenses-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
 - IWMDRMLicenseManagement-Schnittstelle windows Media Format , RestoreLicenses-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "117846938"
 ---
 # <a name="iwmdrmlicensemanagementrestorelicenses-method"></a>IWMDRMLicenseManagement::RestoreLicenses-Methode
 
-Die **RestoreLicenses-Methode** stellt Lizenzen aus einer Lizenzsicherung wieder her, die durch Aufrufen der [**BackupLicenses-Methode erstellt**](iwmdrmlicensemanagement-backuplicenses.md) wurde.
+Die **RestoreLicenses-Methode** stellt Lizenzen aus einer Lizenzsicherung wieder her, die durch Aufrufen der [**BackupLicenses-Methode**](iwmdrmlicensemanagement-backuplicenses.md) erstellt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ HRESULT RestoreLicenses(
 *bstrBackupDirectory* \[ In\]
 </dt> <dd>
 
-UNC-Pfad des Speicherorts, von dem die Lizenzen wiederhergestellt werden.
+UNC-Pfad des Standorts, von dem aus die Lizenzen wiederhergestellt werden.
 
 </dd> <dt>
 
 *dwFlags* \[ In\]
 </dt> <dd>
 
-Flags, die die zu verwendenden Wiederherstellungsoptionen angeben. Das einzige derzeit unterstützte Flag ist WMDRM RESTORE INDIVIDUALIZE, das die -Methode so konfiguriert, dass die Individualisierung im Rahmen der Wiederherstellung bei Bedarf \_ \_ durchzuführen ist.
+Flags, die die zu verwendenden Wiederherstellungsoptionen angeben. Das einzige derzeit unterstützte Flag ist WMDRM \_ RESTORE \_ INDIVIDUALIZE, das die -Methode so konfiguriert, dass die Individualisierung bei Bedarf als Teil der Wiederherstellung ausgeführt wird.
 
 </dd> <dt>
 
 *ppunkCancelationCookie* \[ out\]
 </dt> <dd>
 
-Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubricht, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode aufgerufen**](iwmdrmeventgenerator-cancelasyncoperation.md) wird.
+Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubrechen, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode**](iwmdrmeventgenerator-cancelasyncoperation.md) aufgerufen wird.
 
 </dd> </dl>
 
@@ -82,11 +82,11 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird asynchron ausgeführt. Sie wird unmittelbar nach dem Aufgerufenen zurückgegeben und generiert dann eine Reihe von **MEWMDRMLicenseRestoreProgress-Ereignissen** gefolgt von einem **MEWMDRMLicenseRestoreCompleted-Ereignis,** wenn die Verarbeitung abgeschlossen ist. Der Wert der einzelnen **MEWMDRMLicenseRestoreProgress-Ereignisse,** die durch aufrufen von **DURCHSCHMediaEvent::GetValue** erhalten werden, ist ein **IUnknown-Zeiger.** Sie können die **QueryInterface-Methode** der abgerufenen **IUnknown-Schnittstelle** aufrufen, um eine Instanz der [**IWMDRMLicenseBackupRestoreStatus-Schnittstelle**](iwmdrmlicensebackuprestorestatus.md) abzurufen.
+Diese Methode wird asynchron ausgeführt. Sie gibt sofort nach dem Aufruf zurück und generiert dann eine Reihe von **MEWMDRMLicenseRestoreProgress-Ereignissen,** gefolgt von einem **MEWMDRMLicenseRestoreCompleted-Ereignis,** wenn die Verarbeitung abgeschlossen ist. Der Wert jedes **MEWMDRMLicenseRestoreProgress-Ereignisses,** das durch Aufrufen von **"POINTERMediaEvent::GetValue"** abgerufen wird, ist ein **IUnknown-Zeiger.** Sie können die **QueryInterface-Methode** der abgerufenen **IUnknown-Schnittstelle** aufrufen, um eine Instanz der [**IWMDRMLicenseBackupRestoreStatus-Schnittstelle**](iwmdrmlicensebackuprestorestatus.md) abzurufen.
 
-Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation-Ereignismodells.](using-the-media-foundation-model.md)
+Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation Ereignismodells.](using-the-media-foundation-model.md)
 
-Die Sicherung kann vom lokalen Computer oder von einem anderen Computer aus erstellt werden.
+Die Sicherung kann vom lokalen Computer oder von einem anderen Computer stammen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,7 +99,7 @@ Die Sicherung kann vom lokalen Computer oder von einem anderen Computer aus erst
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

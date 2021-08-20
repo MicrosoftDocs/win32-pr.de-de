@@ -39,7 +39,7 @@ ms.locfileid: "118328934"
 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Microsoft setzt das hilfsprogramm Windows Mail als veraltet ein und deaktiviert die API CoStartOutlookExpress. Die anderen E-Mail-APIs wurden als veraltet markiert und werden in einer späteren Windows Version entfernt. Die öffentlich dokumentierten APIs, die nicht als veraltet oder veraltet gekennzeichnet sind, funktionieren jedoch weiterhin in Windows 7. Binärdateien verbleiben auf den Systemen der Benutzer und sind weiterhin über die APIs zugänglich, insbesondere in den oben genannten Fällen. Darüber hinaus verbleiben die E-Mail-Dateien (EML) und Nachrichtendateien (.nws) der Benutzer im System.
 
@@ -49,9 +49,9 @@ Das Entfernen von Windows Mail führt zu folgendem Ergebnis:
 
 -   Alle Einstiegspunkte für Windows E-Mail und Kontakte (z. B. Startmenü, vom Benutzer erstellte Verknüpfungen, Start -> Ausführen usw.) werden entfernt oder deaktiviert. Einige davon werden vollständig entfernt, andere schlagen fehl, wenn sie versuchen, den Start zu starten.
 -   Alle DLLs werden im Feld versendet.
--   Öffentlich dokumentierte APIs funktionieren weiterhin wie in Windows Vista.
+-   Öffentlich dokumentierte APIs funktionieren weiterhin wie in Windows Vista
 -   Alle APIs, die versuchen, die Hauptbrowserbenutzeroberfläche zu starten, wurden geändert, um einen automatischen Fehler zu erstellen. Die Funktion gibt erfolglos zurück, zeigt dem Benutzer jedoch nicht die Benutzeroberfläche an. APIs, die andere Dialogfelder aufrufen (z.B. der Spooler oder das Dialogfeld Konten), zeigen diese Benutzeroberfläche weiterhin an.
--   Protokollhandler (mailto, ldap, news, s ldap, nntp) werden nicht Windows Mail oder Kontakten zugeordnet. Beim Versuch, diese zu starten, wird kunden ein Fehlerdialogfeld angezeigt, in dem sie auf den Speicherort verweisen, an dem sie diese Zuordnungen auf ein anderes Programm festlegen können.
+-   Protokollhandler (mailto, ldap, news, s ldap, nntp) werden nicht Windows Mail oder Contacts zugeordnet. Beim Versuch, diese zu starten, wird kunden ein Fehlerdialogfeld angezeigt, in dem sie auf den Speicherort verweisen, an dem sie diese Zuordnungen auf ein anderes Programm festlegen können.
 -   Dateizuordnungen (.eml, .nws, .contact, .group, .wab, .p7c, .vfc) sind fehlerhaft oder deaktiviert. Wenn Sie versuchen, eine Datei mit diesen Erweiterungen zu öffnen, erhalten Kunden ein Dialogfeld, in dem sie anderen installierten Apps, die sie verwenden können, und sie auf eine Webseite verweisen, die Lösungen anbietet.
 -   Alle Benutzerdateien (z. B. Kontaktdateien oder Nachrichten) verbleiben im Upgradeszenario auf dem System.
 -   Der Ordner "Kontakte" ist standardmäßig ausgeblendet, sodass kunden ihn nicht sehen.
@@ -73,7 +73,7 @@ Entwerfen Sie keinen Code, der die Windows-API für die E-Mail-Benutzeroberfläc
 ## <a name="compatibility-performance-reliability-and-usability-testing"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits- und Benutzerfreundlichkeitstests
 
 -   Führen Sie Ihre Anwendung in einer Windows 7-Umgebung aus, um sicherzustellen, dass die Anwendung nicht versucht, die UI-API aufzurufen.
--   Alternativ können Sie das Application Compatibility Toolkit (ACT) mithilfe der Windows Compatibility Evaluator (WCE) ausführen, um mögliche Probleme zu ermitteln, die durch die Veraltung dieser Funktionalität entstehen können.
+-   Alternativ können Sie das Application Compatibility Toolkit (ACT) mithilfe der Windows Compatibility Evaluator (WCE) ausführen, um mögliche Probleme aufgrund der Veraltung dieser Funktionalität zu ermitteln.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 

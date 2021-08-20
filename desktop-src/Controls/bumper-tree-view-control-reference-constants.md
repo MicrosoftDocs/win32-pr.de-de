@@ -1,6 +1,6 @@
 ---
-title: Strukturansichtskonst constants
-description: Strukturansichtskonst constants
+title: Strukturansichtskonstanten
+description: Strukturansichtskonstanten
 ms.assetid: b9f36b7f-52f0-4de2-8c10-d3b8c6f8828e
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118414410"
 ---
-# <a name="tree-view-constants"></a>Strukturansichtskonst constants
+# <a name="tree-view-constants"></a>Strukturansichtskonstanten
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Erweiterte Stile des Strukturansicht-Steuerelements](tree-view-control-window-extended-styles.md)
 -   [Elementzustände des Strukturansicht-Steuerelements](tree-view-control-item-states.md)
--   [Fensterstile des Strukturansicht-Steuerelements](tree-view-control-window-styles.md)
+-   [Strukturansicht-Steuerelementfensterstile](tree-view-control-window-styles.md)
 
  
 

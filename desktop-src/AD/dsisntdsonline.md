@@ -1,6 +1,6 @@
 ---
 title: DsIsNTDSOnline-Funktion (Ntdsbcli.h)
-description: Bestimmt, Active Directory Domain Services auf dem angegebenen Server online sind.
+description: Bestimmt, ob Active Directory Domain Services auf dem angegebenen Server online sind.
 ms.assetid: 8f46e4d8-6d05-402c-a5b4-291fd2d6609b
 ms.tgt_platform: multiple
 keywords:
@@ -26,9 +26,9 @@ ms.locfileid: "118430022"
 ---
 # <a name="dsisntdsonline-function"></a>DsIsNTDSOnline-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Ab Windows Vista verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **DsIsNTDSOnline-Funktion** bestimmt, Active Directory Domain Services auf dem angegebenen Server online sind.
+Die **DsIsNTDSOnline-Funktion** bestimmt, ob Active Directory Domain Services auf dem angegebenen Server online sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,38 +49,38 @@ HRESULT DsIsNTDSOnline(
 *szServerName* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des zu testden Servers enthält. Vorangehende schräge Schrägstriche sind optional. Der Server muss derselbe Computer sein, von dem diese Funktion aufgerufen wird. Der Servername darf keine Unterstriche \_ () enthalten. Ein Beispiel für einen Servernamen ist \\ \\ "server1".
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des zu testden Servers enthält. Die vorangehenden umgekehrten Schrägstriche sind optional. Der Server muss derselbe Computer sein, von dem diese Funktion aufgerufen wird. Der Servername darf keinen Unterstrich \_ () enthalten. Ein Beispiel für einen Servernamen ist \\ \\ "server1".
 
 </dd> <dt>
 
 *pfNTDSOnline* \[ out\]
 </dt> <dd>
 
-Zeiger auf **den BOOL-Wert,** der das Ergebnis empfängt. Empfängt **TRUE,** wenn der Verzeichnisdienst online ist, oder **FALSE,** wenn der Verzeichnisdienst offline ist.
+Zeiger auf den **BOOL-Wert,** der das Ergebnis empfängt. Empfängt **TRUE,** wenn der Verzeichnisdienst online ist, oder **FALSE,** wenn der Verzeichnisdienst offline ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Fehlercode. In der folgenden Liste sind mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, oder andernfalls ein Fehlercode. In der folgenden Liste sind mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**FEHLER \_ BEIM \_ ZUGRIFF VERWEIGERT**
+**FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Mit [**der DsSetAuthIdentity-Funktion**](dssetauthidentity.md) können die Anmeldeinformationen festgelegt werden, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**hrCouldNotConnect**
+**hrConnectNotConnect**
 </dt> <dd>
 
-Der Server in *szServerName* kann nicht gefunden werden, ist kein Domänencontroller, oder *szServerName* ist nicht ordnungsgemäß formatiert. Dieser Wert wird in Ntdsbmsg.h definiert.
+Der Server in *szServerName* wurde nicht gefunden, ist kein Domänencontroller, oder *szServerName* ist nicht ordnungsgemäß formatiert. Dieser Wert ist in Ntdsbmsg.h definiert.
 
 </dd> <dt>
 
-**RPC \_ S \_ INVALID \_ BINDING**
+**\_RPC S \_ UNGÜLTIGE \_ BINDUNG**
 </dt> <dd>
 
 Die [**DsIsNTDSOnline-Funktion**](dsisntdsonline.md) wird remote aufgerufen, oder der Server in *szServerName* ist kein Domänencontroller.
@@ -89,9 +89,9 @@ Die [**DsIsNTDSOnline-Funktion**](dsisntdsonline.md) wird remote aufgerufen, ode
 
 ## <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Funktion auf, bevor Sie eine der Verzeichnissicherungs- oder -wiederherstellungsfunktionen aufrufen. Das Verzeichnis muss online sein, um eine Sicherung durchzuführen. Das Verzeichnis muss offline sein, um eine Wiederherstellung durchzuführen.
+Rufen Sie diese Funktion auf, bevor Sie eine der Verzeichnissicherungs- oder -wiederherstellungsfunktionen aufrufen. Das Verzeichnis muss online sein, um eine Sicherung durchführen zu können. Das Verzeichnis muss offline sein, um eine Wiederherstellung durchzuführen.
 
-Diese Funktion kann nur von einem Domänencontroller aufgerufen werden, bei dem es sich auch um den in *szServerName angegebenen Zielserver handelt.* Diese Funktion kann nicht remote aufgerufen werden.
+Diese Funktion kann nur von einem Domänencontroller aufgerufen werden, der auch der in *szServerName* angegebene Zielserver ist. Diese Funktion kann nicht remote aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,7 +108,7 @@ Diese Funktion kann nur von einem Domänencontroller aufgerufen werden, bei dem 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

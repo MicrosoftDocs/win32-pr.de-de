@@ -35,7 +35,7 @@ g \_ wszWMVideoClosedCaptioning
 
 Dieses Attribut wird für Fernsehsendungen und andere Videoinhalte verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

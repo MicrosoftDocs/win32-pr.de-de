@@ -32,7 +32,7 @@ Wenn der Stift für die Handschrift verwendet wird, können die Striche des Benu
 
 Ein Beispiel für die Eingabe von Ink.
 
-Die Windows programme sind bereits stiftfreundlicher, da ein Stift anstelle einer Maus verwendet werden kann, der Stift für die wichtigsten Aufgaben und Interaktionen reibungslos funktioniert und das Programm auf Gesten reagiert. Ein Programm wird handschriftlich, wenn es bei der Eingabe von handschriftlichem Text hilft. Ein Programm wird ink aktiviert, wenn es Ink direkt verarbeiten kann, anstatt dass Stiftstriche in Text oder entsprechende Mausbewegungen übersetzt werden müssen. Auf diese Weise können Benutzer Kommentare in frei strömenden, hochwertigen digitalen Freidruck schreiben, zeichnen und hinzufügen. Das Sammeln von Ink-Daten ist anders als das Sammeln von Mausereignissen, da Ink eine höhere Auflösung und eine höhere Abtastrate erfordert und auch bei Druck und Neigung zu Nuancen beigeraten werden kann. Informationen zum Erstellen von handschriftfreundlichen und ink-fähigen Programmen finden Sie unter [Integrieren von Ink-](/previous-versions/windows/desktop/ms700674(v=vs.85)) und [Texteingaben mithilfe des Stifts](/previous-versions/windows/desktop/ms695501(v=vs.85)).
+Die Windows sind bereits stiftfreundlicher, da ein Stift anstelle einer Maus verwendet werden kann, der Stift für die wichtigsten Aufgaben und Interaktionen reibungslos funktioniert und das Programm auf Gesten reagiert. Ein Programm wird handschriftlich, wenn es bei der Eingabe von handschriftlichem Text hilft. Ein Programm wird ink aktiviert, wenn es Ink direkt verarbeiten kann, anstatt dass Stiftstriche in Text oder entsprechende Mausbewegungen übersetzt werden müssen. Auf diese Weise können Benutzer Kommentare in frei strömenden, hochwertigen digitalen Freidruck schreiben, zeichnen und hinzufügen. Das Sammeln von Ink-Daten ist anders als das Sammeln von Mausereignissen, da Ink eine höhere Auflösung und eine höhere Abtastrate erfordert und auch bei Druck und Neigung zu Nuancen beigeraten werden kann. Informationen zum Erstellen von handschriftfreundlichen und ink-fähigen Programmen finden Sie unter [Integrieren von Ink-](/previous-versions/windows/desktop/ms700674(v=vs.85)) und [Texteingaben mithilfe des Stifts](/previous-versions/windows/desktop/ms695501(v=vs.85)).
 
 Beim Positionieren eines Stifts ist ein Cursor weniger notwendig, da die Spitze sich selbst darstellt. Für die Zielunterstützung stellt Windows einen kleinen Stiftcursor zur Verfügung, der die aktuelle Stiftposition angibt. Im Gegensatz zum ersetzten Mauszeiger wird der Stiftcursor nur benötigt, wenn sich der Stift in der Nähe der Anzeige befindet, sodass er nach einigen Sekunden Inaktivität verschwindet, um eine nicht strukturierte Ansicht der Informationen zu ermöglichen.
 
@@ -180,68 +180,68 @@ In diesem Beispiel wird die Eingabebenutzeroberfläche auf 150 Prozent vergröß
 
 1.  1. Sorgen Sie dafür Windows dass Ihre Programme über eine gute Stifterfahrung verfügen! Benutzer sollten in der Lage sein, die wichtigsten Aufgaben Ihres Programms effizient mithilfe eines Stifts auszuführen (zumindest die Aufgaben, die keine große Menge an Eingaben oder ausführliche Pixelbearbeitungen umfassen).
 2.  2. Erwägen Sie das Hinzufügen von Unterstützung für das Schreiben, Zeichnen und Hinzufügen von Kommentaren direkt mithilfe von Ink in den relevantesten Szenarien.
-3.  3. Um ein direktes und ansprechendes Erlebnis zu schaffen, lassen Sie Gesten sofort wirksam werden, halten Sie Kontaktpunkte während der gesamten Geste reibungslos unter dem Stift des Benutzers, und weisen Sie die Auswirkung der Gestenzuordnung direkt auf die Bewegung des Benutzers auf.
-4.  4. Um ein natürliches und intuitives Erlebnis zu schaffen, unterstützen Sie entsprechende Standardgesten und weisen ihnen ihre Standardbekenntnisse zu. Verwenden Sie benutzerdefinierte Gesten für Interaktionen, die für Ihr Programm eindeutig sind.
+3.  3. Um eine direkte und ansprechende Benutzeroberfläche zu erstellen, werden Gesten sofort wirksam, Kontaktpunkte bleiben während der gesamten Geste reibungslos unter dem Stift des Benutzers, und die Gesten werden direkt der Bewegung des Benutzers angezeigt.
+4.  4. Um ein natürliches und intuitives Erlebnis zu schaffen, unterstützen Sie entsprechende Standardgesten und weisen ihnen ihre Standardbe bedeutung zu. Verwenden Sie benutzerdefinierte Gesten für Interaktionen, die für Ihr Programm eindeutig sind.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="control-usage"></a>Steuern der Nutzung
 
 -   **Verwenden Sie lieber allgemeine Steuerelemente.** Die gängigsten Steuerelemente sind so konzipiert, dass sie eine gute Stifterfahrung unterstützen.
--   **Eingeschränkte Steuerelemente bevorzugen.** Verwenden Sie nach Möglichkeit eingeschränkte Steuerelemente wie Listen und Schieberegler anstelle von uneingeschränkten Steuerelementen wie Textfeldern, um die Notwendigkeit von Texteingaben zu reduzieren.
--   **Geben Sie entsprechende Standardwerte an.** Wählen Sie standardmäßig die sicherste Option (um daten- oder systemzugriffsverlust zu verhindern) und die sicherste Option aus. Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Option aus, um unnötige Interaktionen zu vermeiden.
--   **Geben Sie die automatische Textvervollständigung an.** Geben Sie eine Liste der wahrscheinlichsten oder letzten Eingabewerte an, um die Texteingabe wesentlich zu vereinfachen.
--   **Wenn für wichtige Aufgaben, die mehrfache Auswahl verwenden, normalerweise eine Standard-Mehrfachauswahlliste verwendet wird, stellen Sie stattdessen eine Option zur Verwendung einer Kontrollkästchenliste bereit.**
--   **Berücksichtigen Sie Systemmetriken.** Verwenden Sie Systemmetriken für alle Größen, die keine hardwire-Größen sind. Bei Bedarf können Benutzer die Systemmetriken oder DPI ändern, um ihre Anforderungen zu erfüllen. Behandeln Sie dies jedoch als letzte Möglichkeit, da Benutzer normalerweise keine Systemeinstellungen anpassen müssen, um die Benutzeroberfläche nutzbar zu machen.
+-   **Bevorzugen Sie eingeschränkte Steuerelemente.** Verwenden Sie nach Möglichkeit eingeschränkte Steuerelemente wie Listen und Schieberegler anstelle von nicht eingeschränkten Steuerelementen wie Textfeldern, um die Notwendigkeit von Texteingaben zu reduzieren.
+-   **Geben Sie die entsprechenden Standardwerte an.** Wählen Sie standardmäßig die sicherste Option (um Datenverlust oder Systemzugriff zu verhindern) und die sicherste Option aus. Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Option aus, um unnötige Interaktionen zu vermeiden.
+-   **Geben Sie die automatische Vervollständigung von Text an.** Geben Sie eine Liste der wahrscheinlichsten oder kürzlich eingegebenen Werte an, um die Texteingabe erheblich zu vereinfachen.
+-   **Wenn für wichtige Aufgaben, die mehrfache Auswahl verwenden, normalerweise eine Standardliste mit Mehrfachauswahl verwendet wird, stellen Sie stattdessen eine Option zur Verwendung einer Kontrollkästchenliste zur Verfügung.**
+-   **Systemmetriken werden beachtet.** Verwenden Sie Systemmetriken für alle Größen, die keine Hardwiregrößen haben. Bei Bedarf können Benutzer die Systemmetriken oder dpi ändern, um ihre Anforderungen zu erfüllen. Behandeln Sie dies jedoch als letzten Ausweg, da Benutzer die Systemeinstellungen normalerweise nicht anpassen müssen, um die Benutzeroberfläche nutzbar zu machen.
 
-![Screenshot von Menüs mit normaler und großer Größe ](images/inter-pen-image8.png)
+![Screenshot von Menüs mit normaler und großer Größengröße ](images/inter-pen-image8.png)
 
 In diesem Beispiel wurde die Systemmetrik für die Menühöhe geändert.
 
-### <a name="control-sizing-layout-and-spacing"></a>Größen-, Layout- und Abstandssteuerelement
+### <a name="control-sizing-layout-and-spacing"></a>Steuern von Größe, Layout und Abstand
 
--   **Verwenden Sie für allgemeine Steuerelemente die empfohlenen Steuerelementgrößen.** Diese sind groß genug für eine gute Stifterfahrung, mit Ausnahme von Drehsteuerelementen (die nicht mit einem Stift verwendet werden können, aber redundant sind).
--   **Wählen Sie ein Layout aus, das Steuerelemente in der Nähe des Orts platziert, an dem sie höchstwahrscheinlich verwendet werden.** Halten Sie Aufgabeninteraktionen möglichst in einem kleinen Bereich. Vermeiden Sie Handbewegungen mit langer Entfernung, insbesondere bei häufigen Aufgaben und bei Ziehvorgängen.
--   **Verwenden Sie den empfohlenen Abstand.** Der empfohlene Abstand ist stiftfreundlicher.
--   **Interaktive Steuerelemente sollten entweder berührend sein oder vorzugsweise mindestens 5 Pixel (3 DLUs) Platz dazwischen haben.** Dies verhindert Verwirrung, wenn Benutzer außerhalb des vorgesehenen Ziels tippen.
--   **Erwägen Sie, mehr als den empfohlenen vertikalen Abstand innerhalb von Gruppen von Steuerelementen** wie Befehlslinks, Kontrollkästchen und Optionsfeldern sowie zwischen den Gruppen hinzuzufügen. Auf diese Weise können sie einfacher voneinander unterschieden werden.
+-   **Verwenden Sie für allgemeine Steuerelemente die empfohlenen Steuerelementgrößen.** Diese sind groß genug für eine gute Stifterfahrung, mit Ausnahme von Drehungssteuerelementen (die nicht mit einem Stift, aber redundant sind) nutzbar sind.
+-   **Wählen Sie ein Layout aus, das Steuerelemente in der Nähe des Orts platziert, an dem sie am wahrscheinlichsten verwendet werden.** Halten Sie Aufgabeninteraktionen nach Möglichkeit in einem kleinen Bereich. Vermeiden Sie Handbewegungen mit langer Entfernung, insbesondere bei häufigen Aufgaben und bei Ziehbewegungen.
+-   **Verwenden Sie den empfohlenen Abstand.** Der empfohlene Abstand ist stiftnutzerfreundlich.
+-   **Interaktive Steuerelemente sollten entweder berührend sein oder vorzugsweise mindestens 5 Pixel (3 DLUs) Abstand zwischen ihnen haben.** Dies verhindert Verwirrung, wenn Benutzer außerhalb des vorgesehenen Ziels tippen.
+-   **Fügen Sie in Gruppen** von Steuerelementen, z. B. Befehlslinks, Kontrollkästchen und Optionsfeldern, sowie zwischen den Gruppen mehr als den empfohlenen vertikalen Abstand hinzu. Dies erleichtert die Unterscheidung.
 
 ### <a name="interaction"></a>Interaktion
 
--   **Aktivieren Sie für Programme, die für die Annahme von Handschrift entwickelt wurden, standard freihand.** Die Standardeingabe ermöglicht Benutzern die Eingabe von Ink, indem sie einfach mit dem Schreiben beginnen, ohne tippen, einen Befehl geben oder etwas Besonderes tun zu müssen. Dies ermöglicht die natürlichste Erfahrung mit einem Stift. Behandeln Sie Stifteingaben in Textfeldern für Programme, die keine Handschrift akzeptieren, als Auswahl.
--   **Benutzern das Zoomen der Benutzeroberfläche** für Inhalte erlauben, wenn Ihr Programm Über Aufgaben verfügt, die eine Textbearbeitung erfordern. Erwägen Sie, automatisch auf 150 Prozent zu zoomen, wenn ein Stift verwendet wird.
--   **Da Gesten auswendig gelernt werden, weisen Sie ihnen Bedeutungen zu, die programmübergreifend konsistent sind.** Geben Sie Gesten mit fester Semantik keine unterschiedlichen Bedeutungen. Verwenden Sie stattdessen eine entsprechende programmspezifische Geste.
+-   **Aktivieren Sie für Programme, die für die Annahme von Handschrift konzipiert sind, die Standard-Inking-Funktion.** Mit der Standardeingabe können Benutzer Ink eingeben, indem sie einfach mit dem Schreiben beginnen, ohne tippen, einen Befehl ausführen oder etwas Besonderes tun zu müssen. Dadurch wird die natürlichste Erfahrung mit einem Stift ermöglicht. Bei Programmen, die nicht zum Akzeptieren von Handschrift entwickelt wurden, behandeln Sie Stifteingaben in Textfeldern als Auswahl.
+-   **Benutzern das Zoomen der Inhaltsbenutzeroberfläche ermöglichen,** wenn Ihr Programm Über aufgaben verfügt, die die Bearbeitung von Text erfordern. Erwägen Sie, automatisch auf 150 Prozent zu zoomen, wenn ein Stift verwendet wird.
+-   **Da Gesten auswendig sind, weisen Sie ihnen Bedeutungen zu, die programmübergreifend konsistent sind.** Geben Sie Gesten mit fester Semantik keine unterschiedlichen Bedeutungen. Verwenden Sie stattdessen eine entsprechende programmspezifische Geste.
 
 ### <a name="handedness"></a>Händigkeit
 
--   **Wenn ein Fenster kontextabhängig ist, zeigen Sie es immer in der Nähe des Objekts an, von dem aus es gestartet wurde.** Platzieren Sie es aus dem Weg, sodass das Quellobjekt nicht durch das Fenster abgedeckt wird.
-    -   Wenn sie mit der Maus angezeigt wird, platzieren Sie nach Möglichkeit den Offset des kontextbezogenen Fensters nach unten und rechts.
+-   **Wenn ein Fenster kontextbezogen ist, wird es immer in der Nähe des Objekts angezeigt, von dem es gestartet wurde.** Platzieren Sie sie im Weg, damit das Quellobjekt nicht durch das Fenster abgedeckt wird.
+    -   Wenn sie mit der Maus angezeigt wird, platzieren Sie nach Möglichkeit den Kontextfensteroffset nach unten und rechts.
 
-        ![Abbildung des kontextbezogenen Fensters, das rechts vom Objekt platziert wird ](images/inter-pen-image9.png)
+        ![Abbildung des kontextbezogenen Fensters, das rechts vom Objekt platziert wurde ](images/inter-pen-image9.png)
 
-        Zeigt Kontextfenster in der Nähe des Objekts an, von dem aus es gestartet wurde.
+        Kontextfenster in der Nähe des Objekts anzeigen, aus dem es gestartet wurde.
 
-    -   Wenn sie mit einem Stift angezeigt wird, platzieren Sie das kontextbezogene Fenster nach Möglichkeit so, dass es nicht von der Hand des Benutzers abgedeckt wird. Zeigen Sie für rechtshändige Benutzer auf der linken Seite an. Andernfalls wird auf der rechten Seite angezeigt.
+    -   Wenn es mithilfe eines Stifts angezeigt wird, platzieren Sie nach Möglichkeit das Kontextfenster, damit es nicht von der Hand des Benutzers abgedeckt wird. Für rechtshändige Benutzer wird auf der linken Seite angezeigt. andernfalls rechts angezeigt.
 
-        ![Abbildung des kontextbezogenen Fensters, das links vom Objekt platziert wird ](images/inter-pen-image10.png)
+        ![Abbildung des kontextbezogenen Fensters links vom Objekt ](images/inter-pen-image10.png)
 
-        Wenn Sie einen Stift verwenden, zeigen Sie auch Kontextfenster an, damit sie nicht von der Hand des Benutzers abgedeckt werden.
+        Wenn Sie einen Stift verwenden, zeigen Sie auch kontextbezogene Fenster an, damit sie nicht von der Hand des Benutzers abgedeckt werden.
 
--   **Entwickler:** Mit der [GetMessageExtraInfo-API](../tablet/system-events-and-mouse-messages.md) können Sie zwischen Maus- und Stiftereignissen unterscheiden. Sie können die [Handkraft](/previous-versions/ms819495(v=msdn.10)) des Benutzers mithilfe der [SystemParametersInfo-API](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) mit SPI \_ GETMENUDROPALIGNMENT ermitteln.
+-   **Entwickler:** Sie können mithilfe der [GetMessageExtraInfo-API](../tablet/system-events-and-mouse-messages.md) zwischen Mausereignissen und Stiftereignissen unterscheiden. Sie können die Übergabe des Benutzers [mithilfe](/previous-versions/ms819495(v=msdn.10)) der [SystemParametersInfo-API](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) mit SPI \_ GETMENUDROPALIGNMENT bestimmen.
 
 ### <a name="forgiveness"></a>Vergebung
 
--   **Geben Sie einen Rückgängig-Befehl an.** Im Idealfall sollten Sie für alle Befehle rückgängig machen, aber Ihr Programm kann einige Befehle enthalten, deren Auswirkungen nicht rückgängig machen können.
--   **Geben Sie ein gutes Feedback mit dem Mauszeiger.** Geben Sie deutlich an, wenn sich der Stift über einem klickbaren Ziel befindet. Dieses Feedback ist eine hervorragende Möglichkeit, um eine versehentliche Manipulation zu verhindern.
--   **Geben Sie nach Möglichkeit ein gutes Feedback zum Stiftabzweigen, aber ergreifen Sie keine Maßnahmen, bis Sie einen Move oder Stift nach oben ausführen.** Auf diese Weise können Benutzer Fehler korrigieren, bevor sie sie machen.
--   **Ermöglichen Sie es Benutzern, Fehler nach Möglichkeit einfach zu beheben.** Wenn eine Aktion beim Stift-Up wirksam wird, können Benutzer Fehler korrigieren, indem sie gleiten, während der Stift immer noch ausgeschaltet ist.
+-   **Geben Sie einen Befehl zum Rückgängig machen an.** Im Idealfall sollten Sie rückgängig machen für alle Befehle bereitstellen, aber Ihr Programm verfügt möglicherweise über einige Befehle, deren Auswirkungen nicht rückgängig gemacht werden können.
+-   **Stellen Sie ein gutes Hoverfeedback zur Verfügung.** Geben Sie eindeutig an, wann sich der Stift über einem klickbaren Ziel befindet. Ein solches Feedback ist eine hervorragende Möglichkeit, um versehentliche Manipulationen zu verhindern.
+-   **Wenn dies praktisch ist, geben Sie ein gutes Feedback, aber ergreifen Sie erst dann Maßnahmen, wenn Sie sich bewegen oder nach oben bewegen.** Auf diese Weise können Benutzer Fehler korrigieren, bevor sie sie machen.
+-   **Ermöglichen Sie es Benutzern nach Möglichkeit, Fehler einfach zu korrigieren.** Wenn eine Aktion beim Auffüllen wirksam wird, können Benutzer Fehler beheben, indem sie gleiten, während der Stift noch unten ist.
 
 ## <a name="documentation"></a>Dokumentation
 
-Beim Verweisen auf Stifteingaben:
+Beim Verweisen auf die Stifteingabe:
 
--   Beziehen Sie sich auf ein stiftförmiges Stifteingabegerät als Stift. Verwenden Sie bei der ersten Erwähnung den Tablettstift.
--   Verweisen Sie auf die Schaltfläche auf der Seite eines Stifts als Stiftschaltfläche, nicht auf die Schaltfläche mit dem Stift.
--   Verweisen Sie allgemein auf Tastatur, Maus, Trackball, Stift oder Finger als Eingabegerät.
--   Verwenden Sie tippen (und doppelklicken Sie darauf), anstatt zu klicken, wenn Sie Prozeduren dokumentieren, die für die Verwendung eines Stifts spezifisch sind. Tippen bedeutet, den Bildschirm zu drücken und dann vor einer Wartezeit zu heben. Sie kann verwendet werden, um einen Mausklick zu generieren. Verwenden Sie für Interaktionen, die den Stift nicht enthalten, weiterhin Click.
+-   Verweisen Sie auf ein stiftförmiges Stifteingabegerät als Stift. Verwenden Sie bei der ersten Erwähnung den Tablettstift.
+-   Verweisen Sie auf die Schaltfläche auf der Seite eines Stifts als Stiftschaltfläche, nicht auf die Schaltfläche mit dem Knopf.
+-   Verweisen Sie generisch auf Tastatur, Maus, Trackball, Stift oder Finger als Eingabegerät.
+-   Verwenden Sie tippen (und doppelt tippen), anstatt zu klicken, wenn Sie prozedurspezifische Prozeduren für die Verwendung eines Stifts dokumentieren. Tippen bedeutet, den Bildschirm zu drücken und dann vor einer Haltezeit zu heben. Sie kann verwendet werden, um einen Mausklick zu generieren. Verwenden Sie für Interaktionen, bei denen der Stift nicht verwendet wird, weiterhin Klick.
 

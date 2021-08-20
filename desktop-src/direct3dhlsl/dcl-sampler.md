@@ -1,6 +1,6 @@
 ---
-title: dcl_sampler (sm4 – asm)
-description: dcl \_ sampler (sm4 – asm)
+title: dcl_sampler (sm4 - asm)
+description: dcl \_ sampler (sm4 - asm)
 ms.assetid: 285a47fa-2d47-4ba9-90b9-3f4c61d5dce1
 ms.topic: reference
 ms.date: 05/31/2018
@@ -16,7 +16,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118515539"
 ---
-# <a name="dcl_sampler-sm4---asm"></a>dcl \_ sampler (sm4 – asm)
+# <a name="dcl_sampler-sm4---asm"></a>dcl \_ sampler (sm4 - asm)
 
 Deklariert ein Samplerregister.
 
@@ -39,7 +39,7 @@ Deklariert ein Samplerregister.
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -49,26 +49,26 @@ Deklariert ein Samplerregister.
 </tr>
 <tr class="even">
 <td><span id="mode"></span><span id="MODE"></span><em>Modus</em><br/></td>
-<td>[in] Ein Samplermodus, der einschränkt, welche Samplerzustände (in den Membern von <a href="/windows/desktop/api/d3d10/ns-d3d10-d3d10_sampler_desc"><strong>D3D10_SAMPLER_DESC</strong></a>aufgeführt) berücksichtigt werden. Die Modi und Zustände sind in der folgenden Tabelle aufgeführt.<br/> 
+<td>[in] Ein Samplermodus, der einschränkt, welche Samplerzustände (in den Membern D3D10_SAMPLER_DESC <a href="/windows/desktop/api/d3d10/ns-d3d10-d3d10_sampler_desc"><strong>aufgeführt)</strong></a>werden. Die Modi und Zustände sind in der folgenden Tabelle aufgeführt.<br/> 
 <table>
 <thead>
 <tr class="header">
 <th>Mode</th>
-<th>Samplerzustände berücksichtigt</th>
+<th>"Sampler States Honored" (Zustände von Samplern)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>default</td>
-<td><em>Filter</em> (darf nicht die werte _COMPARISON oder _TEXT), <em>AddressU/V/W,</em> <em>MinLOD/MaxLOD,</em> <em>MipLODBias,</em> <em>MaxAnisotropy,</em> <em>BorderColor[4]</em></td>
+<td><em>Filter</em> (verwendet nicht die werte _COMPARISON oder _TEXT), <em>AddressU/V/W,</em> <em>MinLOD/MaxLOD,</em> <em>MipLODBias,</em> <em>MaxAnisotropy,</em> <em>BorderColor[4]</em></td>
 </tr>
 <tr class="even">
 <td>Vergleich</td>
-<td><em>Filter,</em> <em>ComparisonFunction,</em> <em>AddressU/V/W,</em> <em>MinLOD, MaxLOD,</em> <em>MipLODBias,</em> <em>MaxAnisotropy,</em> <em>BorderColor[4]</em></td>
+<td><em>Filter</em>, <em>ComparisonFunction</em>, <em>AddressU/V/W</em>, <em>MinLOD, MaxLOD</em>, <em>MipLODBias</em>, <em>MaxAnisotropy</em>, <em>BorderColor[4]</em></td>
 </tr>
 <tr class="odd">
 <td>Mono</td>
-<td><em>Filter</em> (muss einer der _TEXT-Werte sein), <em>MonoFilterWidth,</em> <em>MonoFilterHeight</em> (diese beiden Zustände sind der globale Gerätestatus), <em>MinLOD,</em> <em>MipLODBias,</em> <em>MaxAnisotropy</em></td>
+<td><em>Filter</em> (muss einer der _TEXT-Werte sein), <em>MonoFilterWidth</em>, <em>MonoFilterHeight</em> (diese beiden Zustände sind globaler Gerätestatus), <em>MinLOD,</em> <em>MipLODBias,</em> <em>MaxAnisotropy</em></td>
 </tr>
 </tbody>
 </table>
@@ -82,13 +82,13 @@ Deklariert ein Samplerregister.
 
  
 
-Der Modus schränkt die Beispielanweisungen ein, die verwendet werden können. In dieser Tabelle sind die Texturenobjektmethoden aufgeführt, die für jeden Modus unterstützt werden.
+Der Modus schränkt die Beispielanweisungen ein, die verwendet werden können. In dieser Tabelle sind die Texturobjektmethoden aufgeführt, die für jeden Modus unterstützt werden.
 
 
 
-| Ein Sampler, der in diesem Modus ausgeführt wird | Kann diese Texture-Object Methoden verwenden                                                                                                           |
+| Ein Sampler, der in diesem Modus ausgeführt wird | Kann diese methoden Texture-Object verwenden                                                                                                           |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| default                          | [Beispiel,](dx-graphics-hlsl-to-sample.md) [SampleLevel,](dx-graphics-hlsl-to-samplelevel.md) [SampleGrad](dx-graphics-hlsl-to-samplegrad.md) |
+| default                          | [Beispiel](dx-graphics-hlsl-to-sample.md), [SampleLevel](dx-graphics-hlsl-to-samplelevel.md), [SampleGrad](dx-graphics-hlsl-to-samplegrad.md) |
 | Vergleich                       | [SampleCmp](dx-graphics-hlsl-to-samplecmp.md), [SampleCmpLevelZero](dx-graphics-hlsl-to-samplecmplevelzero.md)                               |
 | Mono                             | [SampleLevel](dx-graphics-hlsl-to-samplelevel.md)                                                                                             |
 
@@ -102,15 +102,15 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
 | Vertexshader | Geometrie-Shader | Pixelshader |
 |---------------|-----------------|--------------|
-| x             | x               | x\*          |
+| x             | x               | X\*          |
 
 
 
  
 
-\* – Die Verwendung eines Samplers im Mono-Modus wird nur in einem Pixel-Shader unterstützt.
+\* – Die Verwendung eines Samplers im Monomodus wird nur in einem Pixel-Shader unterstützt.
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -123,7 +123,7 @@ dcl_sampler s3, default
 
 
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -131,12 +131,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -146,7 +146,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

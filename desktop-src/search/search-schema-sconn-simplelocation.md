@@ -1,5 +1,5 @@
 ---
-description: Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystembasiert oder protokollhandlerbasiert sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
+description: Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystem- oder protokollhandlerbasierte Connectors sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
 ms.assetid: 04ffc178-0a76-4870-a075-a2ecd31937a1
 title: simpleLocation-Element (Search Connector Schema)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117862461"
 ---
 # <a name="simplelocation-element-search-connector-schema"></a>simpleLocation-Element (Search Connector Schema)
 
-Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystembasiert oder protokollhandlerbasiert sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
+Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystem- oder protokollhandlerbasierte Connectors sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,8 +45,8 @@ Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die d
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente                                                                                                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) | [simpleLocation url-Element (Connectorschema suchen)](search-schema-sconn-url.md)                                                                                                                                                                                                                                |
-|                                                                                                                  | serialisiert: Dieses Element enthält den Base64-codierten ShellLink, der auf den im -Element definierten Speicherort <url> zeigt. Windows 7 erstellt den ShellLink aus dem Wert des <url> Elements und aktualisiert dieses Feld beim ersten Laden dieser Bibliothek ordnungsgemäß, sodass es vom Autor leer gelassen werden sollte. |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) | [simpleLocation url-Element (Search Connector Schema)](search-schema-sconn-url.md)                                                                                                                                                                                                                                |
+|                                                                                                                  | serialisiert: Dieses Element enthält den Base64-codierten ShellLink, der auf den im -Element definierten <url> Speicherortzeigt. Windows 7 erstellt shellLink aus dem Wert des -Elements und aktualisiert dieses Feld beim ersten Laden dieser Bibliothek ordnungsgemäß, sodass es vom Autor leer <url> gelassen werden sollte. |
 
 
 
@@ -54,7 +54,7 @@ Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die d
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element kann anstelle von verwendet <locationProvider> werden, wenn sich der Speicherort im Dateisystem befindet oder der Connector ein bekannter Protokollhandler (z.B. mapi:) ist. Wenn <simpleLocation> vorhanden ist, DARF KEIN -Element vorhanden <locationProvider> sein. Verwenden Sie für Suchconnectors für Webdienstanbieter stattdessen das [<locationProvider>](search-schema-sconn-locationprovider.md) -Element.
+Dieses Element kann anstelle von verwendet werden, wenn sich der Speicherort im Dateisystem befindet oder der Connector ein bekannter Protokollhandler <locationProvider> ist (z.B. mapi:). Wenn <simpleLocation> vorhanden ist, DARF KEIN -Element <locationProvider> vorhanden sein. Verwenden Sie für Connectors für die Webdienstanbietersuche stattdessen [<locationProvider>](search-schema-sconn-locationprovider.md) das -Element.
 
 ## <a name="examples"></a>Beispiele
 

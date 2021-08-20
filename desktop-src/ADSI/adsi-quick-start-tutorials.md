@@ -20,7 +20,7 @@ Die Schnellstarttutorials für Active Directory-Dienstschnittstellen (ACTIVE Dir
 
 -   [Einrichten Ihrer Entwicklungsumgebung](setting-up-your-development-environment.md)
 -   [Zugreifen auf Active Directory mithilfe von Visual Basic](accessing-active-directory-using-visual-basic.md)
--   [TUTORIAL zur ADSI-Skripterstellung](adsi-scripting-tutorial.md)
+-   [ADSI-Skripttutorial](adsi-scripting-tutorial.md)
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentIndexHasPrimaryException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentIndexHasPrimaryException-Klasse'
 title: EsentIndexHasPrimaryException-Klasse
 TOCTitle: EsentIndexHasPrimaryException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentIndexHasPrimaryException
@@ -68,7 +68,7 @@ public sealed class EsentIndexHasPrimaryException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

@@ -1,39 +1,39 @@
 ---
-title: Vorgehensweise beim Verzerren eines Objekts
+title: Verzerren eines Objekts
 description: Zeigt, wie ein Objekt verzerrt wird.
 ms.assetid: bdc12ca3-eb0d-49ab-8ef7-f42f24fef7ff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 691062e64d4255b1e2f7711b5ff700d72fd90063
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 849c292221a8b4503cdfd122e08b6f1b2521043b44732c33d851a86693853f2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118003499"
 ---
-# <a name="how-to-skew-an-object"></a>Vorgehensweise beim Verzerren eines Objekts
+# <a name="how-to-skew-an-object"></a>Verzerren eines Objekts
 
-Um ein Objekt zu neigen (oder zu scheren), bedeutet dies, dass ein Objekt um einen angegebenen Winkel von der x-Achse, der y-Achse oder beidem verzerrt werden soll. Wenn Sie beispielsweise ein Quadrat neigen, wird es zu einem Parallelogramm.
+Zum Verzerren (oder Verzerren) eines Objekts bedeutet, dass ein Objekt um einen angegebenen Winkel von der x-Achse, der y-Achse oder beidem verzerrt wird. Wenn Sie beispielsweise ein Quadrat neigen, wird es zu einem Parallelogramm.
 
-Die [**Matrix3x2F:: schräw**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-skew) -Methode nimmt 3 Parameter an:
+Die [**Matrix3x2F::Skew-Methode**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-skew) nimmt drei Parameter an:
 
--   *AngleX*: der Neigungswinkel der x-Achse, der in Grad gegen den Uhrzeigersinn von der y-Achse aus gemessen wird.
--   *AngleY*: der Neigungswinkel der y-Achse, der in Grad im Uhrzeigersinn von der x-Achse aus gemessen wird.
--   *CenterPoint*: der Punkt, an dem die Schiefe ausgeführt wird.
+-   *angleX:* Der Neigungswinkel der x-Achse, der von der y-Achse in Grad gegen den Uhrzeigersinn gemessen wird.
+-   *angleY:* Der y-Achsenschiefewinkel, der von der x-Achse im Uhrzeigersinn in Grad gemessen wird.
+-   *centerPoint:* Der Punkt, an dem die Schiefe ausgeführt wird.
 
-Um die Auswirkung einer Neigungs Transformation vorherzusagen, sollten Sie Bedenken, dass *AngleX* der Neigungswinkel in Grad gegen den Uhrzeigersinn von der y-Achse aus gemessen wird. Wenn *AngleX* z. b. auf 30 festgelegt ist, wird das Objekt 30 Grad gegen den Uhrzeigersinn entlang der y-Achse um den Mittel *Punkt* gedreht. In der folgenden Abbildung wird eine eckige eckige Abweichung von 30 Grad in der oberen linken Ecke des Quadrats gezeigt.
+Um die Auswirkung einer Schiefetransformation vorherzusagen, berücksichtigen Sie, dass *angleX* der Schiefewinkel ist, der in Grad gegen den Uhrzeigersinn von der y-Achse gemessen wird. Wenn *angleX* beispielsweise auf 30 festgelegt ist, verschieft das Objekt 30 Grad gegen den Uhrzeigersinn entlang der y-Achse um *centerPoint.* Die folgende Abbildung zeigt eine horizontale Quadratschiefe um 30 Grad um die linke obere Ecke des Quadrats.
 
-![Abbildung einer quadratischen Verzerrung von 30 Grad gegen den Uhrzeigersinn von der y-Achse](images/skewx.png)
+![Abbildung einer quadratischen Schiefe um 30 Grad gegen den Uhrzeigersinn von der y-Achse](images/skewx.png)
 
-Ebenso ist *AngleY* ein Neigungswinkel, der in Grad im Uhrzeigersinn von der x-Achse aus gemessen wird. Wenn *AngleY* z. b. auf 30 festgelegt ist, wird das Objekt 30 Grad im Uhrzeigersinn entlang der x-Achse um den Mittel *Punkt* gerengt. In der folgenden Abbildung wird eine quadratische Breite von 30 Grad in der oberen linken Ecke des Quadrats gezeigt.
+Ebenso ist *angleY* ein Neigungswinkel, der im Uhrzeigersinn von der X-Achse in Grad gemessen wird. Wenn *angleY* beispielsweise auf 30 festgelegt ist, verschieft das Objekt 30 Grad im Uhrzeigersinn entlang der x-Achse um *den CenterPoint*. Die folgende Abbildung zeigt eine vertikale Quadratschiefe um 30 Grad um die obere linke Ecke des Quadrats.
 
-![Abbildung einer quadratischen Verzerrung um 30 Grad im Uhrzeigersinn von der x-Achse](images/skewy.png)
+![Abbildung einer quadratischen Schiefe um 30 Grad im Uhrzeigersinn von der x-Achse](images/skewy.png)
 
-Wenn Sie " *AngleX* " und " *AngleY* " auf 30 Grad festgelegt haben und der Mittel *Punkt* auf die linke obere Ecke des Quadrats festgelegt ist, wird das folgende schräge Quadrat angezeigt (durch ein Vollformat dargestellt). Beachten Sie, dass das rechteckige Quadrat 30 Grad gegen den Uhrzeigersinn von der y-Achse und 30 Grad im Uhrzeigersinn von der x-Achse aus verzerrt wird.
+Wenn Sie sowohl *angleX* als auch *angleY* auf 30 Grad und *centerPoint* auf die obere linke Ecke des Quadrats festlegen, sehen Sie das folgende schiefe Quadrat (durchgezogen umrandet). Beachten Sie, dass das schiefe Quadrat um 30 Grad gegen den Uhrzeigersinn von der y-Achse und 30 Grad im Uhrzeigersinn von der X-Achse verzerrt wird.
 
-![Abbildung einer quadratischen Verzerrung von 30 Grad gegen den Uhrzeigersinn von der y-Achse und 30 Grad im Uhrzeigersinn von der x-Achse](images/skewxy.png)
+![Abbildung einer quadratischen Schiefe um 30 Grad gegen den Uhrzeigersinn von der y-Achse und 30 Grad im Uhrzeigersinn von der x-Achse](images/skewxy.png)
 
-Im folgenden Codebeispiel wird die Quadrat-45 Grad horizontal um die obere linke Ecke des Quadrats bündig ausgerichtet.
+Im folgenden Codebeispiel wird das Quadrat um 45 Grad horizontal um die obere linke Ecke des Quadrats verzerrt.
 
 
 ```C++
@@ -65,9 +65,9 @@ Im folgenden Codebeispiel wird die Quadrat-45 Grad horizontal um die obere linke
 
 
 
-In der folgenden Abbildung wird gezeigt, wie sich die Schiefe-Transformation auf das Quadrat auswirkt, wobei das ursprüngliche Quadrat ein gepunkteter Umriss und das schiefe Objekt (Parallelogram) ein voll Bild Umriss ist. Beachten Sie, dass der Neigungswinkel von der y-Achse aus 45 Grad gegen den Uhrzeigersinn liegt.
+Die folgende Abbildung zeigt die Auswirkung der Anwendung der Verschiebungstransformation auf das Quadrat, wobei das ursprüngliche Quadrat eine gepunktete Kontur und das verzerrte Objekt (Parallelogramm) ein solider Umriss ist. Beachten Sie, dass der Neigungswinkel 45 Grad gegen den Uhrzeigersinn von der y-Achse entfernt ist.
 
-![Abbildung eines quadratischen verzerrt 45 Grad gegen den Uhrzeigersinn von der y-Achse](images/skew-ovw.png)
+![Abbildung einer quadratischen Schiefe um 45 Grad gegen den Uhrzeigersinn von der y-Achse](images/skew-ovw.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -79,6 +79,6 @@ In der folgenden Abbildung wird gezeigt, wie sich die Schiefe-Transformation auf
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

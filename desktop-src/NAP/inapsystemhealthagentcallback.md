@@ -25,15 +25,15 @@ ms.locfileid: "117799148"
 # <a name="inapsystemhealthagentcallback-interface"></a>INapSystemHealthAgentCallback-Schnittstelle
 
 > [!Note]  
-> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **INapSystemHealthAgentCallback-Schnittstelle** stellt Rückrufmethoden bereit, die vom System deklariert und vom SHA-Writer implementiert werden, damit NapAgent mit dem SHA kommunizieren kann.
+Die **INapSystemHealthAgentCallback-Schnittstelle** stellt Rückrufmethoden bereit, die vom System deklariert und vom SHA-Writer implementiert werden, damit napAgent mit dem SHA kommunizieren kann.
 
 ## <a name="members"></a>Member
 
-Die **INapSystemHealthAgentCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapSystemHealthAgentCallback** verfügt auch über diese Membertypen:
+Die **INapSystemHealthAgentCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapSystemHealthAgentCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -43,14 +43,14 @@ Die **INapSystemHealthAgentCallback-Schnittstelle** verfügt über diese Methode
 
 
 
-| Methode                                                                                                                                           | BESCHREIBUNG                                                                                                          |
+| Methode                                                                                                                                           | Beschreibung                                                                                                          |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
 | [**INapSystemHealthAgentCallback::CompareSoHRequests**](inapsystemhealthagentcallback-comparesohrequests-method.md)                             | Wird vom SHA zum Vergleichen der SoHs verwendet.<br/>                                                                      |
 | [**INapSystemHealthAgentCallback::GetFixupInfo**](inapsystemhealthagentcallback-getfixupinfo-method.md)                                         | Wird vom NapAgent aufgerufen, um den Zustand des SHA zu bestimmen.<br/>                                                 |
-| [**INapSystemHealthAgentCallback::GetSoHRequest**](inapsystemhealthagentcallback-getsohrequest-method.md)                                       | Wird vom NapAgent aufgerufen, um die SoH-Anforderung des SHA abfragt.<br/>                                                    |
-| [**INapSystemHealthAgentCallback::NotifyOrphanedSoHRequest**](inapsystemhealthagentcallback-notifyorphanedsohrequest-method.md)                 | Wird aufgerufen, wenn eine SoH-Anforderung vom SHA abgefragt wurde, aber die Antwort nie zurückkam.<br/>                      |
-| [**INapSystemHealthAgentCallback::NotifySystemIsolationStateChange**](inapsystemhealthagentcallback-notifysystemisolationstatechange-method.md) | Wird vom NapAgent aufgerufen, um anzugeben, dass sich der Isolationsstatus des Systems oder die Endzeit der Probe geändert hat.<br/> |
-| [**INapSystemHealthAgentCallback::P rocessSoHResponse**](inapsystemhealthagentcallback-processsohresponse-method.md)                             | Wird aufgerufen, wenn der NapAgent eine SoH-Antwort empfängt, die für diesen Integritäts-Agent bestimmt ist.<br/>                         |
+| [**INapSystemHealthAgentCallback::GetSoHRequest**](inapsystemhealthagentcallback-getsohrequest-method.md)                                       | Wird vom NapAgent aufgerufen, um die SoH-Anforderung des SHA abzufragen.<br/>                                                    |
+| [**INapSystemHealthAgentCallback::NotifyOrphanedSoHRequest**](inapsystemhealthagentcallback-notifyorphanedsohrequest-method.md)                 | Wird aufgerufen, wenn eine SoH-Anforderung vom SHA abgefragt wurde, die Antwort jedoch nie zurückgelangt wurde.<br/>                      |
+| [**INapSystemHealthAgentCallback::NotifySystemIsolationStateChange**](inapsystemhealthagentcallback-notifysystemisolationstatechange-method.md) | Wird vom NapAgent aufgerufen, um anzugeben, dass sich der Systemisolationsstatus oder die Testendzeit geändert haben.<br/> |
+| [**INapSystemHealthAgentCallback::P rocessSoHResponse**](inapsystemhealthagentcallback-processsohresponse-method.md)                             | Wird aufgerufen, wenn napAgent eine SoH-Antwort empfängt, die für diesen Integritäts-Agent bestimmt ist.<br/>                         |
 
 
 
@@ -62,14 +62,14 @@ Die **INapSystemHealthAgentCallback-Schnittstelle** verfügt über diese Methode
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
 | Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

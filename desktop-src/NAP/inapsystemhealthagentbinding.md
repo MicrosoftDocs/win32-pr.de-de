@@ -29,7 +29,7 @@ ms.locfileid: "117799185"
 
  
 
-**INapSystemHealthAgentBinding** stellt Methoden zur Kommunikation mit napAgent durch die SHAs zur Auswahl.
+**INapSystemHealthAgentBinding** stellt Methoden zur Kommunikation mit NapAgent durch die SHAs zur Auswahl.
 
 > [!Note]  
 > [**INapSystemHealthAgentBinding2**](inapsystemhealthagentbinding2.md) erbt alle Methoden dieser Schnittstelle und sollte stattdessen verwendet werden.
@@ -48,7 +48,7 @@ Die **INapSystemHealthAgentBinding-Schnittstelle** verfügt über diese Methoden
 
 
 
-| Methode                                                                                                                     | BESCHREIBUNG                                                                                        |
+| Methode                                                                                                                     | Beschreibung                                                                                        |
 |:---------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
 | [**INapSystemHealthAgentBinding::FlushCache**](inapsystemhealthagentbinding-flushcache-method.md)                         | Wird von einem SHA aufgerufen, um seinen SoH-Cache zu leeren.<br/>                                                |
 | [**INapSystemHealthAgentBinding::GetSystemIsolationInfo**](inapsystemhealthagentbinding-getsystemisolationinfo-method.md) | Wird von SHAs aufgerufen, um den Isolationsstatus des Systems zu bestimmen.<br/>                                 |
@@ -78,7 +78,7 @@ Alle APIs in dieser Schnittstelle geben **RPC \_ E \_ DISCONNECTED** zurück, we
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -180,7 +180,7 @@ Gesamtanzahl der Bytes verwalteter Objekte.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

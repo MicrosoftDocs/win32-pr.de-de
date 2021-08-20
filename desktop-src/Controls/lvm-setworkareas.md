@@ -1,9 +1,9 @@
 ---
-title: LVM_SETWORKAREAS (Commctrl.h)
-description: Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das \_ ListView-Makro SetWorkAreas verwenden.
+title: LVM_SETWORKAREAS-Nachricht (Commctrl.h)
+description: Legt die Arbeitsbereiche in einem Listenansichtssteuerelement fest. Sie können diese Nachricht explizit senden oder das ListView \_ SetWorkAreas-Makro verwenden.
 ms.assetid: 87ac192d-f481-43ac-b8a5-c754cf33e487
 keywords:
-- LVM_SETWORKAREAS meldungssteuerelemente Windows
+- LVM_SETWORKAREAS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117830661"
 ---
 # <a name="lvm_setworkareas-message"></a>LVM \_ SETWORKAREAS-Meldung
 
-Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das [**\_ ListView-Makro SetWorkAreas**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setworkareas) verwenden.
+Legt die Arbeitsbereiche in einem Listenansichtssteuerelement fest. Sie können diese Nachricht explizit senden oder das [**ListView \_ SetWorkAreas-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setworkareas) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können 
 *wParam* 
 </dt> <dd>
 
-Die Anzahl der Strukturen im Array bei *lprc*. Die maximale Anzahl zulässiger Arbeitsbereiche wird durch den LV \_ MAX \_ WORKAREAS-Wert definiert.
+Die Anzahl der Strukturen im Array bei *lprc*. Die maximal zulässige Anzahl von Arbeitsbereichen wird durch den LV \_ MAX \_ WORKAREAS-Wert definiert.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf ein Array von [**RECT-Strukturen,**](/previous-versions//dd162897(v=vs.85)) die die neuen Arbeitsbereiche des Listenansicht-Steuerelements enthalten. Werte in diesen Strukturen befinden sich in Clientkoordinaten. Wenn dieser Parameter **NULL ist,** wird der Arbeitsbereich auf den Clientbereich des Steuerelements festgelegt. *wParam* gibt die Anzahl der Strukturen in diesem Array an.
+Zeiger auf ein Array von [**RECT-Strukturen,**](/previous-versions//dd162897(v=vs.85)) die die neuen Arbeitsbereiche des Listenansicht-Steuerelements enthalten. Werte in diesen Strukturen befinden sich in Clientkoordinaten. Wenn dieser Parameter **NULL** ist, wird der Arbeitsbereich auf den Clientbereich des Steuerelements festgelegt. *wParam* gibt die Anzahl der Strukturen in diesem Array an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Meldung wird nicht verwendet.
+Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Der Rückgabewert für diese Meldung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Verwenden List-View-Steuerelementen](using-list-view-controls.md)
+[Verwenden von List-View-Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

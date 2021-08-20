@@ -1,6 +1,6 @@
 ---
 title: Einfache Typen
-description: Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ anhand seines Namens angibt.
+description: Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ durch seinen Namen angibt.
 ms.assetid: 77c293a1-70c4-4825-bb2e-de36e01d3abb
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118925160"
 ---
 # <a name="simple-types"></a>Einfache Typen
 
-Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ anhand seines Namens angibt. Dies schließt alle numerischen Typen und einige andere spezielle IDL-Typen ein. Die Liste sieht wie folgt aus:
+Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ durch seinen Namen angibt. Dies schließt alle numerischen Typen und einige andere spezielle IDL-Typen ein. Die Liste lautet wie folgt:
 
 ``` syntax
 FC_BYTE,                    // 0x01
@@ -35,7 +35,7 @@ FC_INT3264,                 // 0xb8
 FC_UINT3264,                // 0xb9
 ```
 
-Die Typen SMALL, WCHAR, HYPER, ERROR \_ STATUS \_ T und \_ \_ INT3264 sind intrinsische MIDL-Funktionen mit speziellen RPC-Interpretationen. Die Typen INT und \_ \_ INT32 werden FC \_ LONG zugeordnet, unsigned INT und \_ \_ unsigned INT32 werden FC \_ ULONG, \_ \_ INT64 und \_ \_ unsigned INT64 FC HYPER \_ zugeordnet.
+Die Typen SMALL, WCHAR, HYPER, ERROR \_ STATUS \_ T und \_ \_ INT3264 sind intrinsische MIDL-Typen mit speziellen RPC-Interpretationen. Die Typen INT und \_ \_ INT32 werden FC \_ LONG, unsigned INT und unsigned \_ \_ INT32 zugeordnet, um FC \_ ULONG, \_ \_ INT64 und unsigned \_ \_ INT64 \_ FC HYPER zugeordnet zu werden.
 
 Die \_ \_ Typen INT128, FLOAT128 und FLOAT80 werden nicht unterstützt.
 

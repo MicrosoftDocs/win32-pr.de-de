@@ -16,15 +16,15 @@ ms.locfileid: "118429900"
 ---
 # <a name="dynamic-auxiliary-classes"></a>Dynamische Hilfsklassen
 
-Ähnlich wie strukturelle und abstrakte Objektklassen werden Hilfsklassen durch ein [**classSchema-Objekt**](/windows/desktop/ADSchema/c-classschema) im Active Directory-Schema definiert. Weitere Informationen finden Sie unter [Strukturelle, Abstrakte und Hilfsklassen.](structural-abstract-and-auxiliary-classes.md) Diese Schemadefinition gibt verschiedene Merkmale der -Klasse an, einschließlich der Attribute, die der -Klasse zugeordnet sind.
+Ähnlich wie strukturelle und abstrakte Objektklassen werden Hilfsklassen durch ein [**classSchema-Objekt**](/windows/desktop/ADSchema/c-classschema) im Active Directory-Schema definiert. Weitere Informationen finden Sie unter [Strukturelle, abstrakte und Hilfsklassen](structural-abstract-and-auxiliary-classes.md). Diese Schemadefinition gibt verschiedene Merkmale der -Klasse an, einschließlich der der Klasse zugeordneten Attribute.
 
-Im Gegensatz zu strukturellen Klassen können Sie eine Instanz einer Hilfsklasse nicht wie mit einer strukturellen Klasse erstellen. Stattdessen verwenden Sie eine Hilfsklasse, um die Liste der Attribute zu erweitern, die einer anderen Struktur-, Abstrakten- oder Hilfsobjektklasse zugeordnet sind.
+Im Gegensatz zu strukturellen Klassen können Sie keine Instanz einer Hilfsklasse wie mit einer strukturellen Klasse erstellen. Stattdessen verwenden Sie eine Hilfsklasse, um die Liste der Attribute zu erweitern, die einer anderen strukturellen, abstrakten oder Hilfsobjektklasse zugeordnet ist.
 
-In der ersten Version von Windows 2000 Active Directory Domain Services Unterstützung für das statische Verknüpfen von Hilfsklassen mit der [**classSchema-Definition**](/windows/desktop/ADSchema/c-classschema) einer anderen Objektklasse bereitgestellt. Wenn auf diese Weise eine Hilfsklasse verwendet wird, unterstützt jede Instanz der Objektklasse die Attribute der Hilfsklasse.
+In der ersten Version von Windows 2000 bot Active Directory Domain Services Unterstützung für das statische Verknüpfen von Hilfsklassen mit der [**classSchema-Definition**](/windows/desktop/ADSchema/c-classschema) einer anderen Objektklasse. Wenn eine Hilfsklasse auf diese Weise verwendet wird, unterstützt jede Instanz der Objektklasse die Attribute der Hilfsklasse.
 
-**Windows 2000 Server und früher:** Active Directory Domain Services bietet keine Unterstützung für das dynamische Verknüpfen von Hilfsklassen mit einzelnen Objekten und nicht nur mit ganzen Klassen von Objekten. Darüber hinaus können zusätzliche Klassen, die an eine Objektinstanz angefügt wurden, nicht später aus der -Instanz entfernt werden.
+**Windows 2000 Server und früher:** Active Directory Domain Services bietet keine Unterstützung für das dynamische Verknüpfen von Hilfsklassen mit einzelnen Objekten und nicht nur mit ganzen Klassen von Objekten. Darüber hinaus können Hilfsklassen, die an eine Objektinstanz angefügt wurden, anschließend nicht aus der Instanz entfernt werden.
 
-**Windows Server 2003:** Dynamische Hilfsklassen werden unterstützt, wenn alle Domänencontroller in der Gesamtstruktur Windows Server 2003 ausgeführt werden und der Gesamtstrukturfunktionsmodus Windows Server 2003 lautet.
+**Windows Server 2003:** Dynamische Hilfsklassen werden unterstützt, wenn alle Domänencontroller in der Gesamtstruktur Windows Server 2003 ausgeführt werden und der Gesamtstrukturfunktionsmodus Windows Server 2003 ist.
 
 Weitere Informationen zu Hilfsklassen finden Sie unter:
 
@@ -33,7 +33,7 @@ Weitere Informationen zu Hilfsklassen finden Sie unter:
 -   [Bestimmen der klassen, die einer Objektinstanz zugeordnet sind](determining-the-classes-associated-with-an-object-instance.md)
 -   [Hinzufügen einer Hilfsklasse zu einer Objektinstanz](adding-an-auxiliary-class-to-an-object-instance.md)
 
-Weitere Informationen zu Gesamtstrukturfunktionsebenen finden Sie unter "Heraufstufen von Active Directory-Domänen- und -Gesamtstrukturfunktionsebenen" im Hilfe- und Support-Knowledge Base unter [https://support/microsoft.com/kb/322692\#4](https://support.microsoft.com/kb/322692) .
+Weitere Informationen zu Gesamtstrukturfunktionsebenen finden Sie unter "How to raise Active Directory domain and forest functional levels" (Erhöhen von Active Directory-Domänen- und -Gesamtstrukturfunktionsebenen) im Hilfe- und Knowledge Base [https://support/microsoft.com/kb/322692\#4](https://support.microsoft.com/kb/322692) unter .
 
  
 

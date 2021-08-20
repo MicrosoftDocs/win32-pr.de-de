@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientShell2 msrdpworkspace (Eigenschaft)
-description: Ruft einen Zeiger auf die imsrdpworkspace-Schnittstelle ab, die zum Verwalten von RemoteApp-und Desktopverbindung Anmelde Informationen und Verbindungen verwendet wird.
+title: IMsRdpClientShell2 MsRdpWorkspace-Eigenschaft
+description: Ruft einen Zeiger auf die IMsRdpWorkspace-Schnittstelle ab, die zum Verwalten RemoteApp- und Desktopverbindung Anmeldeinformationen und Verbindungen verwendet wird.
 ms.assetid: 5d505ce0-18cf-4e38-b1b8-026303f7069b
 ms.tgt_platform: multiple
 keywords:
-- Msrdpworkspace-Eigenschaft Remotedesktopdienste
-- Msrdpworkspace-Eigenschaft Remotedesktopdienste, IMsRdpClientShell2-Schnittstelle
-- IMsRdpClientShell2 Interface Remotedesktopdienste, msrdpworkspace (Eigenschaft)
+- MsRdpWorkspace-Eigenschaft Remotedesktopdienste
+- MsRdpWorkspace-Eigenschaft Remotedesktopdienste , IMsRdpClientShell2-Schnittstelle
+- IMsRdpClientShell2-Schnittstelle Remotedesktopdienste , MsRdpWorkspace-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91eadd3f1b422e3da96d5bcd3a5178a2a0b0eb52
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6470f51ccae2efb6dc3d44a7b0a2a0310ad4230861d7d86262f34fd312fcfc5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118854434"
 ---
-# <a name="imsrdpclientshell2msrdpworkspace-property"></a>IMsRdpClientShell2:: msrdpworkspace (Eigenschaft)
+# <a name="imsrdpclientshell2msrdpworkspace-property"></a>IMsRdpClientShell2::MsRdpWorkspace-Eigenschaft
 
-Ruft einen Zeiger auf die [**imsrdpworkspace**](imsrdpworkspace.md) -Schnittstelle ab, die zum Verwalten von RemoteApp-und Desktopverbindung Anmelde Informationen und Verbindungen verwendet wird.
+Ruft einen Zeiger auf die [**IMsRdpWorkspace-Schnittstelle**](imsrdpworkspace.md) ab, die zum Verwalten RemoteApp- und Desktopverbindung Anmeldeinformationen und Verbindungen verwendet wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,11 +44,11 @@ HRESULT get_MsRdpWorkspace(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse eines Zeigers auf die [**imsrdpworkspace**](imsrdpworkspace.md) -Schnittstelle.
+Die Adresse eines Zeigers auf die [**IMsRdpWorkspace-Schnittstelle.**](imsrdpworkspace.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**imsrdpworkspace**](imsrdpworkspace.md) -Schnittstelle wird nicht als benutzerdefinierte Schnittstelle verfügbar gemacht. Der Zugriff ist nur über [IDispatch](/windows/desktop/com/exposing-methods-through-idispatch) -Methoden möglich.
+Die [**IMsRdpWorkspace-Schnittstelle**](imsrdpworkspace.md) wird nicht als benutzerdefinierte Schnittstelle verfügbar gemacht. Der Zugriff ist nur über [IDispatch-Methoden](/windows/desktop/com/exposing-methods-through-idispatch) möglich.
 
 ## <a name="requirements"></a>Anforderungen
 

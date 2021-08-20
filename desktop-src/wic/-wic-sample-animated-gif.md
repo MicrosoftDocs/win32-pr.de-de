@@ -46,9 +46,9 @@ So erstellen Sie das Beispiel mithilfe einer Eingabeaufforderung.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Laden Sie nach dem Start der Anwendung eine Bilddatei mithilfe des Befehls **Öffnen** im **Menü Datei.** Die Fenstersyntisierung wird unterstützt.
+Laden Sie nach dem Start der Anwendung eine Bilddatei mithilfe des Befehls **Öffnen** im **Menü Datei.** Die Größenver ändern des Fensters wird unterstützt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Microsoft Windows Imaging Codec](-wic-lh.md)
 

@@ -19,13 +19,13 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1Sepia.
 
 -   [Beispielbild](#example-image)
 -   [Beispielcode](#sample-code)
--   [Effect-Eigenschaften](#effect-properties)
+-   [Effekteigenschaften](#effect-properties)
 -   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-![Beispiel für die Auswirkungsausgabe](images/sepia-effect.png)
+![Beispiel für die Effektausgabe](images/sepia-effect.png)
 
 ## <a name="sample-code"></a>Beispielcode
 
@@ -49,7 +49,7 @@ m_d2dContext->EndDraw();
 
 ## <a name="effect-properties"></a>Effect-Eigenschaften
 
-Die Eigenschaften für den Sepia-Effekt werden durch die [**\_ SEPIA \_ PROP-Enumeration D2D1**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_sepia_prop) definiert.
+Die Eigenschaften für den Sepia-Effekt werden durch die [**D2D1 \_ SEPIA \_ PROP-Enumeration**](/windows/desktop/api/d2d1effects_2/ne-d2d1effects_2-d2d1_sepia_prop) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

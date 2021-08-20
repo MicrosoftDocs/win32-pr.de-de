@@ -13,9 +13,9 @@ ms.locfileid: "117784706"
 ---
 # <a name="appcontainer-isolation"></a>AppContainer-Isolation
 
-Isolation ist das Hauptziel einer AppContainer-Ausführungsumgebung. Durch die Isolierung einer Anwendung von nicht neded Resources und anderen Anwendungen werden Die Möglichkeiten für böswillige Manipulationen minimiert. Das Gewähren des Zugriffs auf der Grundlage der geringsten Rechte verhindert, dass Anwendungen und Benutzer über ihre Rechte hinaus auf Ressourcen zugreifen. Die Steuerung des Zugriffs auf Ressourcen schützt den Prozess, das Gerät und das Netzwerk.
+Isolation ist das Hauptziel einer AppContainer-Ausführungsumgebung. Durch die Isolierung einer Anwendung von nicht neded Resources und anderen Anwendungen werden Möglichkeiten für böswillige Manipulationen minimiert. Das Gewähren des Zugriffs auf der Grundlage der geringsten Rechte verhindert, dass Anwendungen und Benutzer über ihre Rechte hinaus auf Ressourcen zugreifen. Die Steuerung des Zugriffs auf Ressourcen schützt den Prozess, das Gerät und das Netzwerk.
 
-Die meisten Sicherheitsrisiken in Windows mit der Anwendung beginnen. Einige gängige Beispiele sind das Ausbrechen einer Anwendung aus dem Browser oder das Senden eines fehlerhaften Dokuments an Internet Explorer sowie die Ausnutzung von Plug-Ins wie Flash. Wenn diese Anwendungen in einem AppContainer isoliert werden können, desto sicherer sind das Gerät und die Ressourcen. Auch wenn das Sicherheitsrisiko in einer App ausgenutzt wird, kann die App nicht auf Ressourcen zugreifen, die über die dem AppContainer gewährten Ressourcen hinausgehen. Böswillige Apps können den Rest des Computers nicht übernehmen.
+Die meisten Sicherheitsrisiken in Windows mit der Anwendung beginnen. Einige gängige Beispiele sind das Ausbrechen eines Browsers durch eine Anwendung oder das Senden eines fehlerhaften Dokuments an Internet Explorer sowie die Ausnutzung von Plug-Ins wie Flash. Wenn diese Anwendungen in einem AppContainer isoliert werden können, desto sicherer sind das Gerät und die Ressourcen. Selbst wenn das Sicherheitsrisiko in einer App ausgenutzt wird, kann die App nicht auf Ressourcen zugreifen, die über die dem AppContainer gewährten Ressourcen hinausgehen. Böswillige Apps können den Rest des Computers nicht übernehmen.
 
 ## <a name="credential-isolation"></a>Isolation von Anmeldeinformationen
 
@@ -23,7 +23,7 @@ Durch die Verwaltung von Identität und Anmeldeinformationen verhindert AppConta
 
 ## <a name="device-isolation"></a>Geräteisolation
 
-Durch das Isolieren der Anwendung von Geräteressourcen wie passiven Sensoren (Kamera, Mikrofon, GPS) und Geldpumpen (3G/4G, Telefonwahl) verhindert die AppContainer-Umgebung, dass die Anwendung das Gerät böswillig ausnutzen kann. Diese Ressourcen werden standardmäßig blockiert und können bei Bedarf Zugriff erhalten. In einigen Fällen werden diese Ressourcen weiter durch "Broker" geschützt. Einige Ressourcen, z. B. Tastatur und Maus, sind für appContainer und die residente Anwendung immer verfügbar.
+Durch das Isolieren der Anwendung von Geräteressourcen wie passiven Sensoren (Kamera, Mikrofon, GPS) und Geldpumpen (3G/4G, Telefonwahl) verhindert die AppContainer-Umgebung, dass die Anwendung das Gerät böswillig ausnutzen kann. Diese Ressourcen werden standardmäßig blockiert und können bei Bedarf Zugriff erhalten. In einigen Fällen werden diese Ressourcen weiter durch "Broker" geschützt. Einige Ressourcen, z. B. Tastatur und Maus, sind für die AppContainer- und die residente Anwendung immer verfügbar.
 
 ## <a name="file-isolation"></a>Dateiisolation
 
@@ -31,11 +31,11 @@ Durch die Steuerung des Datei- und Registrierungszugriffs verhindert die AppCont
 
 ## <a name="network-isolation"></a>Netzwerkisolation
 
-Durch das Isolieren der Anwendung von Netzwerkressourcen, die über die speziell zugeordneten Ressourcen hinausgehen, verhindert AppContainer, dass die Anwendung ihre Umgebung mit "Kapselung" schützt und Netzwerkressourcen böswillig ausnutzt. Differenzierter Zugriff kann für Internetzugriff, Intranetzugriff und als Server gewährt werden.
+Durch das Isolieren der Anwendung von Netzwerkressourcen, die über die speziell zugeordneten Ressourcen hinausgehen, verhindert AppContainer, dass die Anwendung ihre Umgebung "austappt" und Netzwerkressourcen böswillig ausnutzt. Differenzierter Zugriff kann für Internetzugriff, Intranetzugriff und als Server gewährt werden.
 
 ## <a name="process-isolation"></a>Prozessisolation
 
-Durch die Sandbox der Anwendungskernelobjekte verhindert die AppContainer-Umgebung, dass die Anwendung andere Anwendungsprozesse beeinflusst oder beeinflusst. Dadurch wird verhindert, dass eine ordnungsgemäß enthaltene Anwendung im Falle einer Ausnahme andere Prozesse beschädigt.
+Durch die Sandbox der Anwendungskernelobjekte verhindert die AppContainer-Umgebung, dass die Anwendung andere Anwendungsprozesse beeinflusst oder beeinflusst. Dadurch wird verhindert, dass eine ordnungsgemäß enthaltene Anwendung andere Prozesse im Falle einer Ausnahme beschädigt.
 
 ## <a name="window-isolation"></a>Fensterisolation
 

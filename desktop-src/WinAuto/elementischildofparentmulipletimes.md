@@ -17,11 +17,11 @@ ms.locfileid: "118829549"
 
 AccParent des Elements ist ( {0} ), aber das ursprüngliche Element ist ein untergeordnetes {1} Element.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Wenn [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent) für das Zielelement aufgerufen wird, meldet es mehrmals, dass es ein untergeordnetes Element desselben übergeordneten Elements ist.
 

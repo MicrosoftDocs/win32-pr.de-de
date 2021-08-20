@@ -22,28 +22,28 @@ ms.locfileid: "118508676"
 ---
 # <a name="texture1darray"></a>Texture1DArray
 
-Texture1DArray-Typ ([wie er in Shader Model 4](dx-graphics-hlsl-to-type.md)vorhanden ist) plus Ressourcenvariablen. Dieses Texturobjekt unterstützt zusätzlich zu den Methoden in Shader Model 4 die folgenden Methoden.
+Texture1DArray-Typ ([wie in Shadermodell 4 vorhanden)](dx-graphics-hlsl-to-type.md)plus Ressourcenvariablen. Dieses Texturobjekt unterstützt zusätzlich zu den Methoden in Shader Model 4 die folgenden Methoden.
 
 
 
-| Methode                                                                       | BESCHREIBUNG                                                                                |
+| Methode                                                                       | Beschreibung                                                                                |
 |------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | [**GetDimensions**](sm5-object-texture1darray-getdimensions.md)             | Ruft die Ressourcendimensionen ab.                                                              |
 | [**Laden**](texture1darray-load.md)                                          | Liest Texturdaten.                                                                        |
 | [**Mips. Operator\[\]\[\]**](sm5-object-texture1darray-mipsoperatorindex.md) | Ruft eine schreibgeschützte Ressourcenvariable ab.                                                        |
 | [**Operator\[\]**](sm5-object-texture1darray-operatorindex.md)              | Ruft eine schreibgeschützte Ressourcenvariable ab.                                                        |
-| [**Beispiel**](texture1darray-sample.md)                                      | Stichproben einer Textur.                                                                         |
-| [**SampleBias**](texture1darray-samplebias.md)                              | Samples a texture, after applying the bias value to the mipmap level.                      |
-| [**SampleCmp**](texture1darray-samplecmp.md)                                | Samples a texture, using a comparison value to reject samples. (Stichproben werden mithilfe eines Vergleichswerts abgewiesen.)                             |
-| [**SampleCmpLevelZero**](texture1darray-samplecmplevelzero.md)              | Stichproben einer Textur (nur Mipmap-Ebene 0) mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.       |
-| [**SampleGrad**](texture1darray-samplegrad.md)                              | Samples a texture using a gradient to influence the way the sample location is calculated. (Stichprobenentnahme einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen.) |
-| [**SampleLevel**](texture1darray-samplelevel.md)                            | Stichproben einer Textur auf der angegebenen Mipmapebene.                                           |
+| [**Beispiel**](texture1darray-sample.md)                                      | Probieren Sie eine Textur aus.                                                                         |
+| [**SampleBias**](texture1darray-samplebias.md)                              | Stichproben einer Textur, nachdem der Biaswert auf die Mipmapebene angewendet wurde.                      |
+| [**SampleCmp**](texture1darray-samplecmp.md)                                | Stichproben einer Textur mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.                             |
+| [**SampleCmpLevelZero**](texture1darray-samplecmplevelzero.md)              | Probieren Sie eine Textur (nur Mipmapebene 0) mithilfe eines Vergleichswerts aus, um Stichproben abzulehnen.       |
+| [**SampleGrad**](texture1darray-samplegrad.md)                              | Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird. |
+| [**SampleLevel**](texture1darray-samplelevel.md)                            | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.                                           |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
@@ -51,7 +51,7 @@ Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
@@ -61,7 +61,7 @@ Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -69,11 +69,11 @@ Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[Shadermodell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
  

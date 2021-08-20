@@ -1,11 +1,11 @@
 ---
-title: Attribut "Print-Rate-Unit"
-description: Vom Treiber bereitgestellte Druck Raten Einheit.
+title: Print-Rate-Unit-Attribut
+description: Vom Treiber bereitgestellte Druckrateneinheit.
 ms.assetid: a7229f8b-4d7d-45f1-af5b-39a6f79b48a1
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "Druck Rate"
-- AD-Schema des printrateunit-Attributs
+- Print-Rate-Unit-Attribut AD-Schema
+- printRateUnit-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc93ec89e4207037269733677a083bc2e965668f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 250485411ab3a963ff2403e264e1cff4ed331b57f8aff4966581e171a9b9bfd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118011742"
 ---
-# <a name="print-rate-unit-attribute"></a>Attribut "Print-Rate-Unit"
+# <a name="print-rate-unit-attribute"></a>Print-Rate-Unit-Attribut
 
-Vom Treiber bereitgestellte Druck Raten Einheit.
+Vom Treiber bereitgestellte Druckrateneinheit.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Druck Raten Einheit                             |
-| LDAP-Display-Name | printRateUnit                               |
+| CN                | Druckrate-Einheit                             |
+| Ldap-Anzeigename | printRateUnit                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.286                      |
 | System-ID-GUID    | ba305f78-47e3-11d0-a1a6-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
-| Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| Im globalen Katalog      | True                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
-| Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| Im globalen Katalog      | True                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
-| Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| Im globalen Katalog      | True                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
-| Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| Im globalen Katalog      | True                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Vom Treiber bereitgestellte Druck Raten Einheit.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
-| Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| Im globalen Katalog      | True                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

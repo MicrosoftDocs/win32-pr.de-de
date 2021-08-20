@@ -1,7 +1,7 @@
 ---
 description: Obwohl Wörter und linguistische Regeln sich erheblich unterscheiden, gibt es einige Überlegungen, z. B. Zahlen, Datumsangaben und Zeiten, die über alle Wörterbrechen hinweg konsistent behandelt werden.
 ms.assetid: 62545566-f0ba-4876-93da-e6c2b9c23484
-title: Oberflächenformnormalisierung
+title: Normalisierung von Oberflächenformularen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 7f96ce5c90075c49608ad386b64514e4d003e5b5b4c6fc582441fd7e110d1921
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117862434"
 ---
-# <a name="surface-form-normalization"></a>Oberflächenformnormalisierung
+# <a name="surface-form-normalization"></a>Normalisierung von Oberflächenformularen
 
 Obwohl Wörter und linguistische Regeln sich erheblich unterscheiden, gibt es einige Überlegungen, z. B. Zahlen, Datumsangaben und Zeiten, die über alle Wörterbrechen hinweg konsistent behandelt werden. In diesem Thema werden Normalisierungsüberlegungen beschrieben, die sich möglicherweise auf die Implementierung der Wörterumbruch-Funktion auswirken.
 
@@ -34,7 +34,7 @@ Die folgende Tabelle zeigt, wie die Behandlung von Bindestrichen als Worttrennze
 |-----------------------------|----------------------|
 | Datenbank                   | -Datenbank, -Datenbank |
 | Data-Base                   | -Datenbank, -Datenbank |
-| Datenbank                    | Datenbank, Datenbank  |
+| Datenbank                    | Data Base, Datenbank  |
 
 
 
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt, wie die Behandlung von Bindestrichen als Worttrennze
 
 ## <a name="possessives"></a>Possessives
 
-Possessives sind Variationen in einem Nomen, die den Besitz angeben. Englische Possessive werden durch Anfügen eines Apostrophs (') oder eines Apostrophs und eines s (s) an ein Wort dargestellt. Um beispielsweise den Besitz anzugeben, wird das Wort "Mary" als "Marys" dargestellt. Die Wörterpause generiert zur Abfragezeit sowohl das Apostroph als auch das Apostroph. Abfragen für "Mary" sollten sowohl mit "Mary" als auch mit "Mary's" übereinstimmen.
+Possessives sind Variationen in einem Nomen, die den Besitz angeben. Englische Possessive werden durch Anfügen eines Apostrophs (') oder eines Apostrophs und eines s (s) an ein Wort dargestellt. Um beispielsweise den Besitz anzugeben, wird das Wort "Mary" als "Mary" dargestellt. Die Wörterpause generiert zur Abfragezeit sowohl das Apostroph als auch das Apostroph. Abfragen für "Mary" sollten sowohl mit "Mary" als auch mit "Mary's" übereinstimmen.
 
 ## <a name="diacritics"></a>Diakritische Zeichen
 
@@ -50,9 +50,9 @@ Diakritische Zeichen sind Markierungen, die einem Buchstaben oder Phonem hinzuge
 
 ## <a name="clitics"></a>Clitics
 
-Eine Clitic ist ein unstressiertes Wort, das nicht allein stehen kann und an ein heftbares Wort angefügt wird, um eine einzelne Einheit zu bilden. Clitics können nicht einfach als morphologisch, syntaktisch oder ungespähnt klassifiziert werden. Clitics gibt es in zwei Typen: *proklidische* und *enklidische*. Proklidische Zeichen fügen sich an den Anfang eines Worts an. Enclitics fügen sich selbst an das Ende eines Worts an.
+Eine Clitic ist ein unstressiertes Wort, das nicht allein stehen kann und an ein wortvergningbares Wort angefügt wird, um eine einzelne Einheit zu bilden. Clitics können nicht einfach als morphologisch, syntaktisch oder ungespähnt klassifiziert werden. Clitics gibt es in zwei Typen: *proklidische* und *enklidische*. Proklidische Zeichen fügen sich an den Anfang eines Worts an. Enclitics fügen sich selbst an das Ende eines Worts an.
 
-Clitics sind in Sprachen wie Spanisch schwieriger zu analysieren. Ein spanischer Verb kann je nach Angespann viele Oberflächenformen generieren. Es muss zwischen dem Entfernen der Clitic während der Indexerstellung und dem Generieren der Oberflächenformulare durch Diemung zur Abfragezeit berücksichtigt werden. Das Entfernen von Clitics in Fällen, in denen die Ungutigkeit der clitic composition mehrdeutig ist, kann zu unvorhersehbaren Ergebnissen führen. Das Generieren einer großen Anzahl von Oberflächenformen für ein Wort erhöht die Größe des Volltextindexes und kann die Abfrageleistung verlangsamen. Es wird empfohlen, dass der Stemmer nur eine kleine Anzahl von Oberflächenformen generiert.
+Clitics sind in Sprachen wie Spanisch schwieriger zu analysieren. Ein spanischer Verb kann je nach Angespann viele Oberflächenformen generieren. Es muss zwischen dem Entfernen der Clitic während der Indexerstellung und dem Generieren der Oberflächenformulare durch Diemung zur Abfragezeit berücksichtigt werden. Das Entfernen von Clitics in Fällen, in denen die Hemmung der clitic composition mehrdeutig ist, kann zu unvorhersehbaren Ergebnissen führen. Das Generieren einer großen Anzahl von Oberflächenformen für ein Wort erhöht die Größe des Volltextindexes und kann die Abfrageleistung verlangsamen. Es wird empfohlen, dass der Stammstamm nur eine kleine Anzahl von Oberflächenformen generiert.
 
  
 

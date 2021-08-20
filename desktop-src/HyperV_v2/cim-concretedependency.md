@@ -1,5 +1,5 @@
 ---
-description: Stellt eine generische Zuordnung dar, in der ein verwaltetes Element von einem anderen abhängig ist. CIM- \_ Unterklassen-CIM- \_ Abhängigkeit, um eine konkrete Klassen Version der CIM-Abhängigkeit bereitzustellen \_ .
+description: Stellt eine generische Zuordnung dar, in der ein verwaltetes Element von einem anderen abhängig ist. CIM \_ ConcreteDependency unterteilt \_ CIM-Abhängigkeiten, um eine konkrete Klassenversion der \_ CIM-Abhängigkeit bereitzustellen.
 ms.assetid: c0e1527d-d350-410d-9b5f-c9d4dedf7393
 title: CIM_ConcreteDependency-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 253f57b1fd29c3844f0e87d488974ced7bec98bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2c0e21ff96e33ddcaf1f5b06fe74f0bf223583dbb84f830dcf027235831da35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813276"
 ---
-# <a name="cim_concretedependency-class"></a>CIM- \_ Klasse "concretedepeng
+# <a name="cim_concretedependency-class"></a>CIM \_ ConcreteDependency-Klasse
 
-Stellt eine generische Zuordnung dar, in der ein verwaltetes Element von einem anderen abhängig ist. **CIM \_ Konkrete Unterklassen** - [**CIM- \_ Abhängigkeit**](cim-dependency.md) , um eine konkrete Klassen Version der **CIM- \_ Abhängigkeit** bereitzustellen.
+Stellt eine generische Zuordnung dar, in der ein verwaltetes Element von einem anderen abhängig ist. **CIM \_ ConcreteDependency-Unterklassen** [**\_ CIM-Abhängigkeit,**](cim-dependency.md) um eine konkrete Klassenversion von **\_ CIM-Abhängigkeit** bereitzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,42 +39,42 @@ class CIM_ConcreteDependency : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ concretedependenz** " verfügt über diese Typen von Membern:
+Die **CIM \_ ConcreteDependency-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ concretedepen"** verfügt über diese Eigenschaften.
+Die **CIM \_ ConcreteDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Das unabhängige Objekt in der Zuordnung.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Das abhängige Objekt in der Zuordnung.
@@ -89,8 +89,8 @@ Das abhängige Objekt in der Zuordnung.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Das abhängige Objekt in der Zuordnung.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

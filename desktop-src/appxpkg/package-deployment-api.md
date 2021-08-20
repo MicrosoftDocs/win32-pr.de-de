@@ -1,6 +1,6 @@
 ---
 title: Paketbereitstellungs-API
-description: Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows-App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
+description: Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
 ms.assetid: E2D408E1-6048-4D15-8BF4-69FF6ACF7BD2
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118814056"
 ---
 # <a name="package-deployment-api"></a>Paketbereitstellungs-API
 
-Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows-App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
+Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
 
 ## <a name="windows-runtime-reference"></a>Windows-Runtime-Referenz
 

@@ -1,5 +1,5 @@
 ---
-description: Bewirkt, dass eine oder mehrere Eigenschaften im Eigenschaftenbehälter gespeichert werden. Die IItemPropertyBag-Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+description: Bewirkt, dass eine oder mehrere Eigenschaften in der Eigenschaftentüte gespeichert werden. Die IItemPropertyBag-Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 ms.assetid: 35491fbc-fb1c-4bad-86e8-9f19856ed7cb
 title: IItemPropertyBag::Write-Methode
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "117863109"
 ---
 # <a name="iitempropertybagwrite-method"></a>IItemPropertyBag::Write-Methode
 
-Bewirkt, dass eine oder mehrere Eigenschaften im Eigenschaftenbehälter gespeichert werden. Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Bewirkt, dass eine oder mehrere Eigenschaften in der Eigenschaftentüte gespeichert werden. Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ HRESULT Write(
 *cProperties* \[ In\]
 </dt> <dd>
 
-Die Anzahl der zu speichernde Eigenschaften. Dieses Argument gibt die Anzahl der Elemente in den Arrays bei *pPropBag* und *pvarValue* an.
+Die Anzahl der zu speichernden Eigenschaften. Dieses Argument gibt die Anzahl der Elemente in den Arrays unter *pPropBag* und *pvarValue an.*
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf ein Array von [**ITEMPROP-Strukturen,**](/windows/desktop/api/subsmgr
 *pvarValue* \[ In\]
 </dt> <dd>
 
-Zeiger auf  eine VARIANT-Eigenschaft, deren Typ vom Datentyp der darin enthaltenen Eigenschafteninformationen abhängt.
+Zeiger auf eine **VARIANT-Datei,** deren Typ vom Datentyp der enthaltenen Eigenschaftsinformationen abhängt.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Andernfalls wird 
 
 Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPreviewerExt**](-search-iitempreviewerext.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) sowie die [**LINKTYPE-Enumeration.**](-search-linktype.md)
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) und die folgenden APIs zu verwenden: die [**ISearchProtocolUI-,**](-search-isearchprotocolui.md) [**IItemPreviewerExt-**](-search-iitempreviewerext.md) und [**ISearchItem-Schnittstelle,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

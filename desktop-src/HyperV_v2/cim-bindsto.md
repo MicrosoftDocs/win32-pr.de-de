@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, bei der ein CIM \_ serviceaccesspoint-Objekt Protokoll Dienste von einem CIM \_ protocolendpoint-Objekt anfordert.
+description: Stellt eine Zuordnung dar, bei der ein CIM \_ ServiceAccessPoint-Objekt Protokolldienste von einem CIM \_ ProtocolEndpoint-Objekt anfängt.
 ms.assetid: d1ef774d-f0e0-43e7-8a9d-63c2fad5ca4a
 title: CIM_BindsTo-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ae32bd10d1e7d1944519fe8fb039453989c165fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0b2dc2f767ad409cece300fc33ecde0e6a0d2f55ce659ea9d77fe332f3529a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813421"
 ---
-# <a name="cim_bindsto-class"></a>CIM \_ bindsto-Klasse
+# <a name="cim_bindsto-class"></a>CIM \_ BindsTo-Klasse
 
-Stellt eine Zuordnung dar, bei der ein [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md) -Objekt Protokoll Dienste von einem [**CIM \_ protocolendpoint**](cim-protocolendpoint.md) -Objekt anfordert.
+Stellt eine Zuordnung dar, bei [**der ein CIM \_ ServiceAccessPoint-Objekt**](cim-serviceaccesspoint.md) Protokolldienste von einem [**CIM \_ ProtocolEndpoint-Objekt anfängt.**](cim-protocolendpoint.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_BindsTo : CIM_SAPSAPDependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ bindsto** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ BindsTo-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ bindsto** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ BindsTo-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ protocolendpoint**
+Datentyp: **CIM \_ ProtocolEndpoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Der Endpunkt auf niedrigerer Ebene, auf den der Dienst Zugriffspunkt zugreift.
+Der Endpunkt der unteren Ebene, auf den vom Dienstzugriffspunkt zugegriffen wird.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Der Zugriffspunkt oder Protokoll Endpunkt, der vom Endpunkt auf niedrigerer Ebene abhängig ist.
+Der Zugriffspunkt oder Protokollendpunkt, der vom Endpunkt der unteren Ebene abhängig ist.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Der Zugriffspunkt oder Protokoll Endpunkt, der vom Endpunkt auf niedrigerer Eben
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Der Zugriffspunkt oder Protokoll Endpunkt, der vom Endpunkt auf niedrigerer Eben
 
 <dl> <dt>
 
-[**CIM \_ sapsapabhängigkeit**](cim-sapsapdependency.md)
+[**CIM \_ SAPSAPDependency**](cim-sapsapdependency.md)
 </dt> </dl>
 
  

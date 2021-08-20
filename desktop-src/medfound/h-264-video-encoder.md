@@ -1,5 +1,5 @@
 ---
-description: 'Der Microsoft Media Foundation H.264-Videoencoder ist eine Media Foundation Transformation, die die folgenden H.264-Profile unterstützt:'
+description: 'Der Microsoft Media Foundation H.264-Videoencoder ist eine Media Foundation-Transformation, die die folgenden H.264-Profile unterstützt:'
 ms.assetid: 4d4c768f-b76a-40ca-8736-2f592a4f4cc4
 title: H.264 Video Encoder
 ms.topic: reference
@@ -13,20 +13,20 @@ ms.locfileid: "117879094"
 ---
 # <a name="h264-video-encoder"></a>H.264 Video Encoder
 
-Der Microsoft Media Foundation H.264-Videoencoder ist eine [Media Foundation Transformation,](media-foundation-transforms.md) die die folgenden H.264-Profile unterstützt:
+Der Microsoft Media Foundation H.264-Videoencoder ist eine [Media Foundation-Transformation,](media-foundation-transforms.md) die die folgenden H.264-Profile unterstützt:
 
 -   Baselineprofil
 -   Profil: Main
--   Hochprofil (erfordert Windows 8)
+-   Hohes Profil (erfordert Windows 8)
 
 Der H.264-Videoencoder macht die folgenden Schnittstellen verfügbar:
 
 -   [**ICodecAPI**](/windows/win32/api/strmif/nn-strmif-icodecapi)
--   [**VORRÜBERSETZUNGTransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
+-   [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
 
 ## <a name="input-types"></a>Eingabetypen
 
-Der Eingabemedientyp muss einen der folgenden Untertypen haben:
+Der Eingabemedientyp muss einen der folgenden Untertypen aufweisen:
 
 -   **MFVideoFormat_I420**
 -   **MFVideoFormat_IYUV**
@@ -34,9 +34,9 @@ Der Eingabemedientyp muss einen der folgenden Untertypen haben:
 -   **MFVideoFormat_YUY2**
 -   **MFVideoFormat_YV12**
 
-Weitere Informationen zu diesen Untertypen finden Sie unter [Video Subtype GUIDs](video-subtype-guids.md).
+Weitere Informationen zu diesen Untertypen finden Sie unter [Video-Untertyp-GUIDs.](video-subtype-guids.md)
 
-Der Ausgabetyp muss vor dem Eingabetyp festgelegt werden. Bis der Ausgabetyp festgelegt ist, gibt die [**METHODE DERTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) des **Encoders** MF_E_TRANSFORM_TYPE_NOT_SET.
+Der Ausgabetyp muss vor dem Eingabetyp festgelegt werden. Bis der Ausgabetyp festgelegt ist, gibt die [**ENTRANSTRANSFORM::SetInputType-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) des Encoders **MF_E_TRANSFORM_TYPE_NOT_SET** zurück.
 
 ## <a name="output-types"></a>Ausgabetypen
 
@@ -56,17 +56,17 @@ Legen Sie die folgenden Attribute für den Ausgabemedientyp fest.
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="mf-mt-major-type-attribute.md"><strong>MF_MT_MAJOR_TYPE</strong></a></td>
-<td>Haupttyp. Muss <strong>MFMediaType_Video.</strong></td>
+<td>Haupttyp. Muss <strong>MFMediaType_Video</strong>sein.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-subtype-attribute.md"><strong>MF_MT_SUBTYPE</strong></a></td>
-<td>Videountertyp. Muss <strong>MFVideoFormat_H264.</strong></td>
+<td>Videountertyp. Muss <strong>MFVideoFormat_H264</strong>sein.</td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-avg-bitrate-attribute.md"><strong>MF_MT_AVG_BITRATE</strong></a></td>
@@ -95,11 +95,11 @@ Legen Sie die folgenden Attribute für den Ausgabemedientyp fest.
 </tr>
 <tr class="even">
 <td><a href="mf-mt-mpeg2-level-attribute.md"><strong>MF_MT_MPEG2_LEVEL</strong></a></td>
-<td>Optional. Gibt die H.264-Codierungsebene an.<br/> Der Standardwert ist –1, was angibt, dass der Encoder die Codierungsebene auswählt.<br/> Es wird empfohlen, die Ebene nicht im Medientyp zu setzen und dem Encoder die Auswahl der Ebene zu erlauben. Der Encoder kann die richtige Ebene für einen bestimmten Videostream ableiten und dabei die Formateinschränkungen und die Merkmale des Videos berücksichtigen. Weitere Informationen zu Profil- und Leveleinschränkungen finden Sie im Anhang A von ITU-T H.264.<br/></td>
+<td>Optional. Gibt die H.264-Codierungsebene an.<br/> Der Standardwert ist –1 und gibt an, dass der Encoder die Codierungsebene auswählt.<br/> Es wird empfohlen, die Ebene im Medientyp nicht festzulegen und dem Encoder das Auswählen der Ebene zu erlauben. Der Encoder kann die richtige Ebene für einen bestimmten Videostream ableiten, wobei die Formateinschränkungen und die Merkmale des Videos berücksichtigt werden. Weitere Informationen zu Profil- und Ebeneneinschränkungen finden Sie in Anhang A von ITU-T H.264.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-pixel-aspect-ratio-attribute.md"><strong>MF_MT_PIXEL_ASPECT_RATIO</strong></a></td>
-<td>Optional. Gibt das Pixel-Seitenverhältnis an. Der Standardwert ist 1:1.</td>
+<td>Optional. Gibt das Pixelseitenverhältnis an. Der Standardwert ist 1:1.</td>
 </tr>
 </tbody>
 </table>
@@ -108,22 +108,22 @@ Legen Sie die folgenden Attribute für den Ausgabemedientyp fest.
 
  
 
-Nachdem der Ausgabetyp festgelegt wurde, aktualisiert der [](mf-mt-mpeg-sequence-header-attribute.md) Videoencoder den Typ durch Hinzufügen des MF_MT_MPEG_SEQUENCE_HEADER Attributs. Dieses Attribut enthält den Sequenzheader.
+Nachdem der Ausgabetyp festgelegt wurde, aktualisiert der Videoencoder den Typ, indem er das [**attribut MF_MT_MPEG_SEQUENCE_HEADER**](mf-mt-mpeg-sequence-header-attribute.md) hinzufügt. Dieses Attribut enthält den Sequenzheader.
 
-## <a name="codec-properties"></a>Codec-Eigenschaften
+## <a name="codec-properties"></a>Codeceigenschaften
 
 Der H.264-Encoder implementiert die [**ICodecAPI-Schnittstelle**](/windows/win32/api/strmif/nn-strmif-icodecapi) zum Festlegen von Codierungsparametern. Sie unterstützt die folgenden Eigenschaften.
 
-Informationen zu den Codecanforderungen für die HCK-Encoderzertifizierung finden Sie weiter unten im **Abschnitt Zertifizierter Hardwareencoder.**
+Die Codecanforderungen für die HCK-Encoderzertifizierung finden Sie weiter unten im Abschnitt **Zertifizierter Hardwareencoder.**
 
 Die folgenden Eigenschaften werden in Windows 7 unterstützt.
 
 
 
-| Eigenschaft                                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Eigenschaft                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CODECAPI_AVEncCommonRateControlMode**](../directshow/avenccommonratecontrolmode-property.md) | Legt den Geschwindigkeitssteuerungsmodus fest. Siehe Hinweise. Der Standardmodus ist die constrained variable bit rate (VBR).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| [**CODECAPI_AVEncCommonQuality**](../directshow/avenccommonquality-property.md)                 | Legt die Qualitätsstufe fest. Diese Eigenschaft gilt, wenn der Modus für die Ratesteuerung eine qualitätsbasierte VBR **(eAVEncCommonRateControlMode_Quality) ist.** Der gültige Bereich liegt zwischen 1 und 100. Der Standardwert ist 70. <br/> Legen Sie zum Festlegen dieses Parameters die -Eigenschaft fest, bevor [**Sie DIETRANSFORM::SetOutputType aufrufen.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) <br/> Legen Sie zum Festlegen dieses Parameters in Windows 7 die -Eigenschaft fest, bevor [**Sie DIETRANSFORM::SetOutputType aufrufen.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) Der Encoder ignoriert Änderungen, nachdem der Ausgabetyp festgelegt wurde. <br/> In Windows 8 kann diese Eigenschaft jederzeit während der Codierung festgelegt werden. Änderungen werden ab dem nächsten Eingaberahmen angewendet. <br/> Intern konvertiert der Encoder diese Eigenschaft in einen [AVEncVideoEncodeQP-Wert.](codecapi-avencvideoencodeqp.md) <br/> |
+| [**CODECAPI_AVEncCommonRateControlMode**](../directshow/avenccommonratecontrolmode-property.md) | Legt den Ratensteuerungsmodus fest. Siehe Hinweise. Der Standardmodus ist eine nicht eingeschränkte variable Bitrate (VBR).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| [**CODECAPI_AVEncCommonQuality**](../directshow/avenccommonquality-property.md)                 | Legt die Qualitätsstufe fest. Diese Eigenschaft gilt, wenn der Ratensteuerungsmodus qualitätsbasierte VBR **(eAVEncCommonRateControlMode_Quality**) ist. Der gültige Bereich ist 1 bis 100. Der Standardwert ist 70. <br/> Um diesen Parameter festzulegen, legen Sie die -Eigenschaft fest, bevor Sie [**ÜBERTRANSFORM::SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype)aufrufen. <br/> Um diesen Parameter in Windows 7 festzulegen, legen Sie die -Eigenschaft fest, bevor Sie [**DENTRANSFORM::SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype)aufrufen. Der Encoder ignoriert Änderungen, nachdem der Ausgabetyp festgelegt wurde. <br/> In Windows 8 kann diese Eigenschaft jederzeit während der Codierung festgelegt werden. Änderungen werden ab dem nächsten Eingaberahmen angewendet. <br/> Intern konvertiert der Encoder diese Eigenschaft in einen [AVEncVideoEncodeQP-Wert.](codecapi-avencvideoencodeqp.md) <br/> |
 
 
 
@@ -141,7 +141,7 @@ Die folgenden Eigenschaften erfordern Windows 8.
 <thead>
 <tr class="header">
 <th>Eigenschaft</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -150,39 +150,39 @@ Die folgenden Eigenschaften erfordern Windows 8.
 <td>Legt den adaptiven Codierungsmodus fest. Der H.264-Encoder unterstützt die folgenden Modi in Windows 8:
 <ul>
 <li><strong>eAVEncAdaptiveMode_None</strong>. Keine adaptive Codierung. (Standardeinstellung)</li>
-<li><strong>eAVEncAdaptiveMode_FrameRate</strong>. Adaptives Ändern der Bildfrequenz.</li>
+<li><strong>eAVEncAdaptiveMode_FrameRate</strong>. Ändern Sie die Bildfrequenz adaptive.</li>
 </ul>
 <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/DirectShow/avenccommonbuffersize-property">CODECAPI_AVEncCommonBufferSize</a></td>
-<td>Legt die Puffergröße für die CBR-Codierung (Constant Bit Rate) in Bytes fest.<br/> Der gültige Bereich ist [1 ... 2, bis 1]. <br/> Erfordert Windows 8. <br/></td>
+<td>Legt die Puffergröße für die CBR-Codierung (Constant Bit Rate) in Bytes fest.<br/> Der gültige Bereich ist [1 ... 2präsent–1]. <br/> Erfordert Windows 8. <br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/DirectShow/avenccommonmaxbitrate-property">CODECAPI_AVEncCommonMaxBitRate</a></td>
-<td>Bei eingeschränkter VBR-Codierung gibt die Rate an, mit der der Bucket mit Datenverlust &quot; in Bits pro Sekunde &quot; geleert wird. Diese Eigenschaft gilt, wenn <strong></strong>der Geschwindigkeitssteuerungsmodus eAVEncCommonRateControlMode_PeakConstrainedVBR. <br/> Der gültige Bereich ist [1 ... 2, bis 1]. <br/></td>
+<td>Gibt für die eingeschränkte VBR-Codierung die Rate an, mit der der &quot; kompensierte Bucket &quot; in Bits pro Sekunde entladen wird. Diese Eigenschaft gilt, wenn der Ratensteuerungsmodus <strong>eAVEncCommonRateControlMode_PeakConstrainedVBR</strong>ist. <br/> Der gültige Bereich ist [1 ... 2präsent–1]. <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/DirectShow/avenccommonmeanbitrate-property">CODECAPI_AVEncCommonMeanBitRate</a></td>
-<td>Legt die durchschnittliche Bitrate für den codierten Bitstream in Bits pro Sekunde fest. Diese Eigenschaft wird ignoriert, wenn der Geschwindigkeitssteuerungsmodus <strong>eAVEncCommonRateControlMode_Quality.</strong> <br/> Der gültige Bereich ist [1 ... 2, bis 1]. <br/> Im CBR- und im ungeschützten VBR-Modus bestimmt die durchschnittliche Bitrate die endgültige Größe der Datei. Im CBR-Modus ist die durchschnittliche Bitrate auch die Rate, mit der komprimierte Bits aus dem leaky-Bucket entleert werden. (Weitere Informationen finden Sie unter &quot; &quot; The <a href="the-leaky-bucket-buffer-model.md">Leaky Bucket Buffer Model</a>.) <br/> In Windows 7 wird die durchschnittliche Bitrate durch das attribut MF_MT_AVG_BITRATE <a href="mf-mt-avg-bitrate-attribute.md">für</a> den Medientyp angegeben. <br/> In Windows 8 können Sie die durchschnittliche Bitrate entweder mithilfe des attributs <a href="mf-mt-avg-bitrate-attribute.md">MF_MT_AVG_BITRATE</a> oder der CODECAPI_AVEncCommonMeanBitRate <a href="/windows/desktop/DirectShow/avenccommonmeanbitrate-property">festlegen.</a> Wenn beides festgelegt ist, CODECAPI_AVEncCommonMeanBitRate außer Kraft. In Windows 8 können Sie die durchschnittliche Bitrate während der Codierung festlegen. Wenn sich die Bitrate ändert, verwendet der Encoder adaptive Codierung.<br/></td>
+<td>Legt die durchschnittliche Bitrate für den codierten Bitstream in Bits pro Sekunde fest. Diese Eigenschaft wird ignoriert, wenn der Ratensteuerungsmodus <strong>eAVEncCommonRateControlMode_Quality</strong>ist. <br/> Der gültige Bereich ist [1 ... 2präsent–1]. <br/> In CBR- und uneingeschränkten VBR-Modi bestimmt die durchschnittliche Bitrate die endgültige Größe der Datei. Im CBR-Modus ist die durchschnittliche Bitrate auch die Rate, mit der komprimierte Bits aus dem bucket leaky entladen &quot; werden. &quot; (Weitere Informationen finden Sie unter <a href="the-leaky-bucket-buffer-model.md">The Leaky Bucket Buffer Model</a>.) <br/> In Windows 7 wird die durchschnittliche Bitrate vom <a href="mf-mt-avg-bitrate-attribute.md">MF_MT_AVG_BITRATE-Attribut</a> für den Medientyp angegeben. <br/> In Windows 8 können Sie die durchschnittliche Bitrate entweder mit dem <a href="mf-mt-avg-bitrate-attribute.md">MF_MT_AVG_BITRATE-Attribut</a> oder der <a href="/windows/desktop/DirectShow/avenccommonmeanbitrate-property">CODECAPI_AVEncCommonMeanBitRate-Eigenschaft</a> festlegen. Wenn beide festgelegt sind, CODECAPI_AVEncCommonMeanBitRate außer Kraft gesetzt. In Windows 8 können Sie die durchschnittliche Bitrate während der Codierung festlegen. Wenn sich die Bitrate ändert, verwendet der Encoder adaptive Codierung.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/DirectShow/avenccommonqualityvsspeed-property">CODECAPI_AVEncCommonQualityVsSpeed</a></td>
-<td>Legt den Kompromiss zwischen Qualität und Geschwindigkeit fest. Gültiger Bereich:
+<td>Legt den Qualitäts-/Geschwindigkeits-Kompromiss fest. Gültiger Bereich:
 <ul>
 <li>0–33: Geringe Komplexität</li>
 <li>34–66: Mittlere Komplexität (Standard)</li>
 <li>67–100: Hohe Komplexität</li>
 </ul>
-<br/> Dieser Wert wirkt sich darauf aus, wie der Encoder verschiedene Codierungsvorgänge ausführt, z. B. bewegungsausgleich. Bei höheren Komplexitätsgraden wird der Encoder langsamer ausgeführt, erzeugt aber eine bessere Qualität mit der gleichen Bitrate.<br/></td>
+<br/> Dieser Wert wirkt sich darauf aus, wie der Encoder verschiedene Codierungsvorgänge ausführt, z. B. die Bewegungskompensierung. Bei höheren Komplexitätsgraden wird der Encoder langsamer ausgeführt, erzeugt aber eine bessere Qualität mit der gleichen Bitrate.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="codecapi-avench264cabacenable.md">CODECAPI_AVEncH264CABACEnable</a></td>
-<td>Aktiviert oder deaktiviert CABAC (context-adaptive binary arithmetic coding) für H.264-Entropiecodierung. Der Standardwert ist <strong>VARIANT_FALSE.</strong> <br/> CABAC wird nicht für das Baselineprofil verwendet.<br/></td>
+<td>Aktiviert oder deaktiviert CABAC (kontext adaptive binäre arithmetische Codierung) für die H.264-Entropiecodierung. Der Standardwert ist <strong>VARIANT_FALSE</strong>. <br/> CABAC wird nicht für Baselineprofile verwendet.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="codecapi-avench264spsid.md">CODECAPI_AVEncH264SPSID</a></td>
-<td>Legt den Wert der <strong>seq_parameter_set_id</strong> in der SPS-NAL-Einheit des H.264-Bitstreams fest. <br/></td>
+<td>Legt den Wert von <strong>seq_parameter_set_id</strong> in der SPS-NAL-Einheit des H.264-Bitstreams fest. <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/DirectShow/avencmpvdefaultbpicturecount-property">CODECAPI_AVEncMPVDefaultBPictureCount</a></td>
@@ -192,11 +192,11 @@ Die folgenden Eigenschaften erfordern Windows 8.
 <li>1: Verwenden Sie einen B-Frame.</li>
 <li>2: Verwenden Sie zwei B-Frames.</li>
 </ul>
-Legen Sie zum Festlegen dieses Parameters die -Eigenschaft fest, bevor <a href="/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype"><strong>Sie DIETRANSFORM::SetOutputType aufrufen.</strong></a> <br/> Für Baselineprofil ist die Anzahl der B-Frames immer 0 (null). Der Encoder überschreibt Werte ungleich 0 (null).<br/> Wenn diese Eigenschaft für andere H.264-Profile ungleich 0 (null) ist, ist das Codierungsmuster IBBPBBP, wobei die maximale Anzahl aufeinanderfolgender B-Frames gleich <a href="/windows/desktop/DirectShow/avencmpvdefaultbpicturecount-property">CODECAPI_AVEncMPVDefaultBPictureCount.</a> <br/></td>
+Um diesen Parameter festzulegen, legen Sie die -Eigenschaft fest, bevor Sie <a href="/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype"><strong>ÜBERTRANSFORM::SetOutputType</strong></a>aufrufen. <br/> Für Baselineprofil ist die Anzahl von B-Frames immer 0 (null). Der Encoder überschreibt Werte ungleich 0 (null).<br/> Wenn diese Eigenschaft für andere H.264-Profile ungleich 0 (null) ist, lautet das Codierungsmuster IBBPBBP, wobei die maximale Anzahl aufeinanderfolgender B-Frames <a href="/windows/desktop/DirectShow/avencmpvdefaultbpicturecount-property">gleich CODECAPI_AVEncMPVDefaultBPictureCount</a>ist. <br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/DirectShow/avencmpvgopsize-property">CODECAPI_AVEncMPVGOPSize</a></td>
-<td>Legt die Anzahl der Bilder von einem GOP-Header auf den nächsten fest, einschließlich des führenden Ankers, aber nicht des folgenden. <br/> Der gültige Bereich ist [0 ... 2, bis 1]. Bei 0 (null) wählt der Encoder die GOP-Größe aus. Der Standardwert ist 0 (null). <br/></td>
+<td>Legt die Anzahl der Bilder von einem GOP-Header auf den nächsten fest, einschließlich des führenden Ankers, aber nicht des folgenden. <br/> Der gültige Bereich ist [0 ... 2präsent–1]. Bei 0 (null) wählt der Encoder die GOP-Größe aus. Der Standardwert ist 0 (null). <br/></td>
 </tr>
 <tr class="even">
 <td><a href="codecapi-avencnumworkerthreads.md">CODECAPI_AVEncNumWorkerThreads</a></td>
@@ -208,19 +208,19 @@ Legen Sie zum Festlegen dieses Parameters die -Eigenschaft fest, bevor <a href="
 </tr>
 <tr class="even">
 <td><a href="codecapi-avencvideoencodeqp.md">CODECAPI_AVEncVideoEncodeQP</a></td>
-<td>Gültiger Bereich: 16–51. Der Standardwert ist 24. <br/> Diese Eigenschaft gilt, wenn <strong></strong>der Geschwindigkeitssteuerungsmodus eAVEncCommonRateControlMode_Quality. <br/> Diese Eigenschaft konfiguriert die gleiche Codierungseinstellung wie <a href="/windows/desktop/DirectShow/avenccommonquality-property"><strong>AVEncCommonQuality</strong></a>. <a href="codecapi-avencvideoencodeqp.md">AvEncVideoEncodeQP</a> ermöglicht es der Anwendung jedoch, den Wert von QP direkt anzugeben. Wenn beide Eigenschaften festgelegt sind, überschreibt AVEncVideoEncodeQP. <br/> Der Standardwert 24 entspricht dem Standardwert 70 für die <a href="/windows/desktop/DirectShow/avenccommonquality-property"><strong>EINSTELLUNG AVEncCommonQuality.</strong></a><br/></td>
+<td>Gültiger Bereich: 16–51. Der Standardwert ist 24. <br/> Diese Eigenschaft gilt, wenn der Ratensteuerungsmodus <strong>eAVEncCommonRateControlMode_Quality</strong>ist. <br/> Diese Eigenschaft konfiguriert die gleiche Codierungseinstellung wie <a href="/windows/desktop/DirectShow/avenccommonquality-property"><strong>AVEncCommonQuality.</strong></a> <a href="codecapi-avencvideoencodeqp.md">AvEncVideoEncodeQP</a> ermöglicht der Anwendung jedoch, den Wert von QP direkt anzugeben. Wenn beide Eigenschaften festgelegt sind, überschreibt AVEncVideoEncodeQP. <br/> Der Standardwert 24 entspricht dem Standardwert 70 für die <a href="/windows/desktop/DirectShow/avenccommonquality-property"><strong>EINSTELLUNG AVEncCommonQuality.</strong></a><br/></td>
 </tr>
 <tr class="odd">
 <td><a href="codecapi-avencvideoforcekeyframe.md">CODECAPI_AVEncVideoForceKeyFrame</a></td>
-<td>Erzwingt, dass der Encoder den nächsten Frame als Keyframe codiert.<br/></td>
+<td>Erzwingt, dass der Encoder den nächsten Frame als Keyframe codt.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="codecapi-avencvideominqp.md">CODECAPI_AVEncVideoMinQP</a></td>
-<td>Gültiger Bereich: 0 bis 51. Der Standardwert ist 0. <br/> Diese Eigenschaft gilt für alle Rate Control-Modi. Der Encoder sollte keinen QP-Wert erzeugen, der niedriger als der von der CODECAPI_AVEncVideoMinQP <a href="codecapi-avencvideominqp.md">ist.</a><br/></td>
+<td>Gültiger Bereich: 0 bis 51. Der Standardwert ist 0. <br/> Diese Eigenschaft gilt für alle Ratensteuerungsmodi. Der Encoder sollte keinen QP-Wert erzeugen, der niedriger ist als der von der <a href="codecapi-avencvideominqp.md">CODECAPI_AVEncVideoMinQP-Eigenschaft</a> angegebene Wert.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="codecapi-avlowlatencymode.md">CODECAPI_AVLowLatencyMode</a></td>
-<td>Aktiviert oder deaktiviert den Modus mit niedriger Latenz. Weitere &quot; Informationen finden Sie im Abschnitt &quot; "Hinweise" unter Multithreading.<br/></td>
+<td>Aktiviert oder deaktiviert den Modus mit niedriger Latenz. Weitere Informationen finden Sie &quot; unter Multithreading &quot; im Abschnitt "Hinweise".<br/></td>
 </tr>
 </tbody>
 </table>
@@ -231,16 +231,16 @@ Legen Sie zum Festlegen dieses Parameters die -Eigenschaft fest, bevor <a href="
 
 ## <a name="remarks"></a>Hinweise
 
-Der Encoder unterstützt die folgenden Geschwindigkeitskontrollmodi.
+Der Encoder unterstützt die folgenden Ratensteuerungsmodi.
 
 
 
-| Mode                                  | Konstante                                            | BESCHREIBUNG                                                                                                                                                                                                                                         |
+| Mode                                  | Konstante                                            | Beschreibung                                                                                                                                                                                                                                         |
 |---------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Konstante Bitrate (CBR)               | **eAVEncCommonRateControlMode_CBR**                | Der Encoder versucht, eine konstante Bitrate zu erreichen, indem er ein "leaky bucket"-Modell verwendet. Die Zielbitrate wird durch die [eigenschaft](../directshow/avenccommonmeanbitrate-property.md) CODECAPI_AVEncCommonMeanBitRate angegeben. <br/> Erfordert Windows 8. <br/> |
-| Eingeschränkte Variable Bitrate (VBR)   | **eAVEncCommonRateControlMode_PeakConstrainedVBR** | Der Encoder verwendet ein "leaky bucket"-Modell mit einer Spitzenbitrate. Die Leerlaufrate für den Bucket mit Datenlecks wird durch [die](../directshow/avenccommonmaxbitrate-property.md) CODECAPI_AVEncCommonMaxBitRate angegeben. <br/> Erfordert Windows 8. <br/>     |
-| Qualitätsbasierte variable Bitrate (VBR) | **eAVEncCommonRateControlMode_Quality**            | Der Encoder versucht, eine konstante Qualitätsstufe zu erreichen, die von der [**AVEncCommonQuality-Eigenschaft angegeben**](../directshow/avenccommonquality-property.md) wird.                                                                                                           |
-| Unconstrained VBR                     | **eAVEncCommonRateControlMode_UnconstrainedVBR**   | Der Encoder versucht, die Zielbitrate zu erreichen, die vom MF_MT_AVG_BITRATE [**attribut**](mf-mt-avg-bitrate-attribute.md) im Ausgabemedientyp angegeben wird. Dies ist der Standardmodus.                                                              |
+| Konstante Bitrate (CBR)               | **eAVEncCommonRateControlMode_CBR**                | Der Encoder versucht, eine konstante Bitrate zu erreichen, indem er ein "leaky bucket"-Modell verwendet. Die Zielbitrate wird von der [CODECAPI_AVEncCommonMeanBitRate](../directshow/avenccommonmeanbitrate-property.md) -Eigenschaft angegeben. <br/> Erfordert Windows 8. <br/> |
+| Eingeschränkte variable Bitrate (VBR)   | **eAVEncCommonRateControlMode_PeakConstrainedVBR** | Der Encoder verwendet ein "leaky bucket"-Modell mit einer Spitzenbitrate. Die Entleerungsrate für den Bucket "Leaky" wird durch die [CODECAPI_AVEncCommonMaxBitRate](../directshow/avenccommonmaxbitrate-property.md) -Eigenschaft angegeben. <br/> Erfordert Windows 8. <br/>     |
+| Qualitätsbasierte variable Bitrate (VBR) | **eAVEncCommonRateControlMode_Quality**            | Der Encoder versucht, eine konstante Qualitätsstufe zu erreichen, die von der [**AVEncCommonQuality-Eigenschaft**](../directshow/avenccommonquality-property.md) angegeben wird.                                                                                                           |
+| Nicht eingeschränkte VBR                     | **eAVEncCommonRateControlMode_UnconstrainedVBR**   | Der Encoder versucht, die Vom [**MF_MT_AVG_BITRATE-Attribut**](mf-mt-avg-bitrate-attribute.md) im Ausgabemedientyp angegebene Zielbitrate zu erreichen. Dies ist der Standardmodus.                                                              |
 
 
 
@@ -263,12 +263,12 @@ In Windows 8 legt der Encoder die folgenden Attribute für die Ausgabebeispiele 
 
 In Windows 8 unterstützt der Encoder zwei Codierungsmodi:
 
--   **Slicecodierung.** In diesem Modus werden Slices parallel codiert. Jeder Slice wird in einem anderen Thread codiert. Dieser Modus hat eine geringe Latenz, da ein einzelnes Bild parallel codiert wird. Dieser Ansatz wird jedoch nicht skaliert, wenn die Anzahl der Kerne zunimmt, da die Anzahl der Slices durch die Anzahl der Makroblockzeilen im Eingabebild gebunden ist.
+-   **Slicecodierung.** In diesem Modus werden Slices parallel codiert. Jeder Slice wird in einem anderen Thread codiert. Dieser Modus weist eine geringe Latenz auf, da ein einzelnes Bild parallel codiert wird. Dieser Ansatz wird jedoch nicht skaliert, wenn die Anzahl der Kerne zunimmt, da die Anzahl der Slices durch die Anzahl der Makroblockzeilen im Eingabebild begrenzt wird.
 -   **Multiframe-Codierung.** In diesem Modus akzeptiert der Encoder mehrere Frames von Eingaben und codiert sie parallel. Dieser Modus wird in einer Umgebung mit mehreren Kernen besser skaliert, führt jedoch zu mehr Latenz.
 
-Der Encoder verwendet standardmäßig Slicecodierung, um die Latenz zu minimieren. Um die Multiframecodierung zu aktivieren, legen Sie die [eigenschaft CODECAPI_AVLowLatencyMode](codecapi-avlowlatencymode.md) auf **VARIANT_FALSE.**
+Der Encoder verwendet standardmäßig die Slicecodierung, um die Latenz zu minimieren. Um die Multiframecodierung zu aktivieren, legen Sie die [eigenschaft CODECAPI_AVLowLatencyMode](codecapi-avlowlatencymode.md) auf **VARIANT_FALSE.**
 
-Um die Anzahl der vom Encoder verwendeten Arbeitsthreads zu festlegen, legen Sie [die](codecapi-avencnumworkerthreads.md) CODECAPI_AVEncNumWorkerThreads fest.
+Legen Sie zum Festlegen der Anzahl von Arbeitsthreads, die vom Encoder verwendet werden, die [CODECAPI_AVEncNumWorkerThreads](codecapi-avencnumworkerthreads.md) fest.
 
 In Windows 7 verwendet der Encoder immer die Slicecodierung.
 
@@ -290,7 +290,7 @@ Die folgenden Windows 8 und Windows 8.1 **ICodecAPI-Eigenschaften** sind erforde
 -   [CODECAPI_AVEncVideoEncodeQP](codecapi-avencvideoencodeqp.md)
 -   [CODECAPI_AVEncVideoForceKeyFrame](codecapi-avencvideoforcekeyframe.md)
 
-Die folgenden Windows 8.1 **ICodecAPI-Eigenschaften** sind optional, werden jedoch bei Unterstützung in HCK getestet.
+Die folgenden Windows 8.1 **ICodecAPI-Eigenschaften** sind optional, werden jedoch in HCK getestet, falls unterstützt.
 
 -   [CODECAPI_AVEncVideoMinQP](codecapi-avencvideominqp.md)
 -   [CODECAPI_AVEncVideoLTRBufferControl](codecapi-avencvideoltrbuffercontrol.md)
@@ -327,7 +327,7 @@ Die folgenden **ICodecAPI-Eigenschaften** sind optional. Sie werden nicht in HCK
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

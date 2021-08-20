@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentDiskIOException-Konstruktor'
+description: 'Weitere Informationen zu: EsentDiskIOException-Konstruktor'
 title: EsentDiskIOException-Konstruktor
 TOCTitle: 'EsentDiskIOException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDiskIOException.#ctor

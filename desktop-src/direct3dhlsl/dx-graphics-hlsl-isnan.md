@@ -38,7 +38,7 @@ Bestimmt, ob der angegebene Wert NAN oder QNAN ist.
 
 
 
-| Element                                                   | Beschreibung                            |
+| Element                                                   | BESCHREIBUNG                            |
 |--------------------------------------------------------|----------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
@@ -48,7 +48,7 @@ Bestimmt, ob der angegebene Wert NAN oder QNAN ist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert der gleichen Größe wie die Eingabe zurück, bei dem der Wert auf **True** festgelegt ist, wenn der *x-Parameter* NAN oder QNAN ist. Andernfalls **FALSE.**
+Gibt einen Wert derselben Größe wie die Eingabe zurück, wobei ein Wert auf **True** festgelegt ist, wenn der *x-Parameter* NAN oder QNAN ist. Andernfalls **FALSE.**
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -63,7 +63,7 @@ Gibt einen Wert der gleichen Größe wie die Eingabe zurück, bei dem der Wert a
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -71,8 +71,8 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                 |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 

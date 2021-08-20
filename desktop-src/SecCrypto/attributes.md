@@ -13,9 +13,9 @@ ms.locfileid: "117773181"
 ---
 # <a name="attributes-object"></a>Attributes-Objekt
 
-\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**CryptographicAttributeObjectCollection-Klasse**](/dotnet/api/system.security.cryptography.cryptographicattributeobjectcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**CryptographicAttributeObjectCollection-Klasse**](/dotnet/api/system.security.cryptography.cryptographicattributeobjectcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Das **Attributes-Objekt** stellt eine Auflistung von [**Attribute-Objekten**](attribute.md) dar. Jedes [**Attributobjekt**](attribute.md) stellt ein einzelnes Attribut einer Nachricht dar.
+Das **Attributes-Objekt** stellt eine Auflistung von [**Attribute-Objekten**](attribute.md) dar. Jedes [**Attribute-Objekt**](attribute.md) stellt ein einzelnes Attribut einer Nachricht dar.
 
 ## <a name="when-to-use"></a>Verwendung
 
@@ -24,12 +24,12 @@ Das **Attributes-Objekt** wird verwendet, um die folgenden Aufgaben auszuführen
 -   Hinzufügen oder Entfernen eines bestimmten [**Attribute-Objekts**](attribute.md) aus der Auflistung.
 -   Löschen Sie die Auflistung.
 -   Ruft die Anzahl der Attribute in der Auflistung ab.
--   Rufen Sie ein [**bestimmtes Attributobjekt**](attribute.md) aus der Auflistung ab.
--   Durchlaufen sie die Auflistung.
+-   Ruft ein bestimmtes [**Attribute-Objekt**](attribute.md) aus der Auflistung ab.
+-   Iterieren Sie die Auflistung.
 
 ## <a name="members"></a>Member
 
-Das **Attributes-Objekt** verfügt über diese Typen von Membern:
+Das **Attributes-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -40,10 +40,10 @@ Das **Attributes-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                              | BESCHREIBUNG                                                                       |
+| Methode                              | Beschreibung                                                                       |
 |:------------------------------------|:----------------------------------------------------------------------------------|
 | [**Hinzufügen**](attributes-add.md)       | Fügt der Auflistung ein [**Attribute-Objekt**](attribute.md) hinzu.<br/>       |
-| [**Klar**](attributes-clear.md)   | Löscht alle [**Attribute-Objekte**](attribute.md) aus der Auflistung.<br/> |
+| [**Klar**](attributes-clear.md)   | Entfernt alle [**Attribute-Objekte**](attribute.md) aus der Auflistung.<br/> |
 | [**Entfernen**](attributes-remove.md) | Entfernt ein [**Attribute-Objekt**](attribute.md) aus der Auflistung.<br/>  |
 
 
@@ -56,11 +56,11 @@ Das **Attributes-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                           | Zugriffstyp          | BESCHREIBUNG                                                                                                                                                                                                                     |
+| Eigenschaft                                           | Zugriffstyp          | Beschreibung                                                                                                                                                                                                                     |
 |:---------------------------------------------------|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**\_NewEnum**](attributes-newenum.md)<br/> | Schreibgeschützt<br/> | Ruft eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für ein Objekt ab, das zum Aufzählen der Auflistung verwendet werden kann. Diese Eigenschaft wird in Visual Basic Scripting Edition (VBScript) ausgeblendet.<br/> |
 | [**Anzahl**](attributes-count.md)<br/>       | Schreibgeschützt<br/> | Ruft die Anzahl der [**Attribute-Objekte**](attribute.md) in der Auflistung ab.<br/>                                                                                                                                    |
-| [**Element**](attributes-item.md)<br/>         | Schreibgeschützt<br/> | Ruft das [**Attributobjekt**](attribute.md) ab, das das indizierte Attribut darstellt. Dies ist die Standardeigenschaft.<br/>                                                                                             |
+| [**Element**](attributes-item.md)<br/>         | Schreibgeschützt<br/> | Ruft das [**Attribute-Objekt**](attribute.md) ab, das das indizierte Attribut darstellt. Dies ist die Standardeigenschaft.<br/>                                                                                             |
 
 
 

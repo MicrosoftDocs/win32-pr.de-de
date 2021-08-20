@@ -92,7 +92,7 @@ Ansicht der Daten, die als decodierten IPX-Adresswert ausgedrückt werden.
 **VinesIPRawAddress**
 </dt> <dd>
 
-Ansicht der Daten, die als Unformatierung der Vines-IP-Adresse ausgedrückt werden.
+Ansicht der Daten als unformatiert ausgedrückte Vines-IP-Adresse.
 
 </dd> <dt>
 

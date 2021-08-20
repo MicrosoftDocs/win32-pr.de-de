@@ -1,6 +1,6 @@
 ---
 title: INapEnforcementClientConnection SetSoHRequest-Methode (NapEnforcementClient.h)
-description: Legt die SoH-Anforderung fest.
+description: Legt die SoH-Request fest.
 ms.assetid: 87dbb982-a337-4644-a2fe-970bfdd6c140
 keywords:
 - SetSoHRequest-Methode NAP
@@ -26,7 +26,7 @@ ms.locfileid: "117799634"
 # <a name="inapenforcementclientconnectionsetsohrequest-method"></a>INapEnforcementClientConnection::SetSoHRequest-Methode
 
 > [!Note]  
-> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
@@ -50,13 +50,13 @@ HRESULT SetSoHRequest(
 *sohRequest* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine eindeutige [**NetworkSoHRequest-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-networksoh) bei der es sich um ein nicht transparentes Datenblob für den Erzwingenden handelt.
+Ein Zeiger auf eine eindeutige [**NetworkSoHRequest-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-networksoh) bei der es sich um ein nicht transparentes Datenblob für den Erzwinger handelt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
@@ -72,7 +72,7 @@ Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies wird vom NapAgent festgelegt und von Erzwingenden abgefragt, die über die Leitung gesendet werden sollen.
+Dies wird vom NapAgent festgelegt und von Erzwingern abgefragt, die über das Netzwerk gesendet werden.
 
 Ein SoH-Paket mit einer Länge von 0 Byte ist ungültig.
 
@@ -82,7 +82,7 @@ Ein SoH-Paket mit einer Länge von 0 Byte ist ungültig.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
 | Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
@@ -90,7 +90,7 @@ Ein SoH-Paket mit einer Länge von 0 Byte ist ungültig.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

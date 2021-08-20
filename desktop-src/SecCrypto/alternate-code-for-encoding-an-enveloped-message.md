@@ -1,5 +1,5 @@
 ---
-description: Im folgenden Beispiel wird ein alternativer Prozess zum Codieren einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als innerer Inhalt für eine umhumschlagte Nachricht verwendet wird. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
+description: Im folgenden Beispiel wird ein alternativer Prozess zum Codieren einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als innerer Inhalt für eine umhumschlagte Nachricht verwendet wird. Als Vorbereitung für die Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
 ms.assetid: ba174e3c-bc2f-48bd-a1bf-fec491dc0ce3
 title: Alternativer Code zum Codieren einer umschlagten Nachricht
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117773694"
 ---
 # <a name="alternate-code-for-encoding-an-enveloped-message"></a>Alternativer Code zum Codieren einer umschlagten Nachricht
 
-Im folgenden Beispiel wird ein alternativer Prozess zum Codieren [](../secgloss/i-gly.md) einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als innerer Inhalt für eine umhumschlagte Nachricht verwendet wird. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
+Im folgenden Beispiel wird ein alternativer Prozess zum Codieren einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als [*innerer*](../secgloss/i-gly.md) Inhalt für eine umhumschlagte Nachricht verwendet wird. Als Vorbereitung für die Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
 
 Dieses Beispiel veranschaulicht die folgenden CryptoAPI-Funktionen:
 

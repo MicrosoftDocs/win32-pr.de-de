@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten der DTN_DATETIMECHANGE-Benachrichtigung
+title: Verarbeiten der DTN_DATETIMECHANGE benachrichtigung
 description: In diesem Thema wird veranschaulicht, wie Sie Benachrichtigungen über Vom Benutzer vorgenommene Änderungen am DTP-Steuerelement (Datums- und Uhrzeitauswahl) verarbeiten.
 ms.assetid: AE029962-E9D3-47BC-A24F-312B54137F18
 ms.topic: article

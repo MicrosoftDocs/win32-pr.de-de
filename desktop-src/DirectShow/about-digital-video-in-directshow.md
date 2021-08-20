@@ -13,13 +13,13 @@ ms.locfileid: "118664812"
 ---
 # <a name="about-digital-video-in-directshow"></a>Informationen zu digitalen Videos in DirectShow
 
-Digitales Video (DV) kann von einer DV-Kamera erfasst, in einer Datei auf dem Computer des Benutzers oder auf Band mithilfe eines Videobandrecorders (VTR) gespeichert werden. Daher umfassen die Vorgänge, die eine Anwendung für einen DV-Datenstrom ausführen kann, Folgendes:
+Digitales Video (DV) kann von einer DV-Kamera erfasst, in einer Datei auf dem Computer des Benutzers gespeichert oder mithilfe eines Videobandrecorders (VTR) auf Band gespeichert werden. Daher umfassen die Vorgänge, die eine Anwendung für einen DV-Datenstrom ausführen kann, Folgendes:
 
--   Erfassen sie Livevideos von einer DV-Kamera.
+-   Erfassen Sie Livevideos von einer DV-Kamera.
 -   Übertragen Sie DV-Daten vom VTR-Band an den Computer.
 -   Übertragen Sie DV-Daten vom Computer an den VTR.
 -   Liest DV-Daten aus einer Datei.
--   Schreiben von DV-Daten in eine Datei.
+-   Schreiben sie DV-Daten in eine Datei.
 -   Rendern Der Audio- und Videodatenstrom wird in einem DV-Stream gerendert.
 
 DirectShow bietet die folgenden DV-Filter:
