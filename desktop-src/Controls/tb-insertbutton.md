@@ -1,9 +1,9 @@
 ---
-title: TB_INSERTBUTTON Meldung (kommstrg. h)
+title: TB_INSERTBUTTON Meldung (Commctrl.h)
 description: Fügt eine Schaltfläche in eine Symbolleiste ein.
 ms.assetid: 6be27817-5d86-4649-bd63-173845197763
 keywords:
-- Windows-Steuerelemente für TB_INSERTBUTTON Meldung
+- TB_INSERTBUTTON Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e08eed328a99d4a8927a7e09084bf122f2e4e84
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 909a4e039450e001757cd054cf27a15d24af392d6a55841c2857e2312252145c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829651"
 ---
-# <a name="tb_insertbutton-message"></a>TB \_ InsertButton-Meldung
+# <a name="tb_insertbutton-message"></a>TB \_ INSERTBUTTON-Nachricht
 
 Fügt eine Schaltfläche in eine Symbolleiste ein.
 
@@ -34,20 +34,20 @@ Fügt eine Schaltfläche in eine Symbolleiste ein.
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index einer Schaltfläche. Die Meldung fügt die Schaltfläche "neu" auf der linken Seite dieser Schaltfläche ein.
+Nullbasierter Index einer Schaltfläche. Die Meldung fügt die neue Schaltfläche links neben dieser Schaltfläche ein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Struktur, die Informationen über die einzufügende Schaltfläche enthält.
+Zeiger auf eine [**TBBUTTON-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) die Informationen über die einzufügende Schaltfläche enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Insertbuttonw** (Unicode) und **TB \_ insertbuttona** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ INSERTBUTTONW** (Unicode) und **TB \_ INSERTBUTTONA** (ANSI)<br/>           |
 
 
 

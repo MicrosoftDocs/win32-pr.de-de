@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvstreamingfilemissingexception-Klasse'
-title: Esentslvstreamingfilemissingexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentSLVStreamingFileMissingException-Klasse'
+title: EsentSLVStreamingFileMissingException-Klasse
 TOCTitle: EsentSLVStreamingFileMissingException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSLVStreamingFileMissingException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvstreamingfilemissingexception(v=EXCHG.10)
@@ -24,27 +24,27 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 25aaa970028a205941df1cdb05d06987570eb996
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e08af955eb1977700b46d409c335503423fa97375006479c7073aaa6dfdb3f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118078771"
 ---
-# <a name="esentslvstreamingfilemissingexception-class"></a>Esentslvstreamingfilemissingexception-Klasse
+# <a name="esentslvstreamingfilemissingexception-class"></a>EsentSLVStreamingFileMissingException-Klasse
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentslvstreamingfilemissingexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSLVStreamingFileMissingException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,8 +68,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvstreamingfilemissingexception-Elemente](./esentslvstreamingfilemissingexception-members.md)
+[EsentSLVStreamingFileMissingException-Member](./esentslvstreamingfilemissingexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

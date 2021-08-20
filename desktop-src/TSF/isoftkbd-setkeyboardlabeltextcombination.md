@@ -1,11 +1,11 @@
 ---
-title: Icdkbd setkeyboardlabeltextcombination-Methode (Software-DC. h)
-description: Mit der isoftkbd setkeyboardlabeltextcombination-Methode wird eine Kombination aus Bezeichnung und Text festgelegt, mit der eine weiche Tastatur beschrieben wird.
+title: ISoftKbd SetKeyboardLabelTextCombination-Methode (Softkbdc.h)
+description: Die ISoftKbd SetKeyboardLabelTextCombination-Methode legt eine Kombination aus Bezeichnung und Text fest, die zum Beschreiben einer soft-Tastatur verwendet wird.
 ms.assetid: fe054eae-1a44-41ad-9a44-bc0b46df7c7b
 keywords:
-- Setkeyboardlabeltextcombination-Methode, Text Dienste-Framework
-- Setkeyboardlabeltextcombination-Methode, Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services-Framework, setkeyboardlabeltextcombination-Methode
+- SetKeyboardLabelTextCombination-Methode Textdienstframework
+- SetKeyboardLabelTextCombination-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , SetKeyboardLabelTextCombination-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e0f98dad124455625f0da3ada1a717c692437398
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 39b01d4335e52bf20aca1b5cd59b5bc1dd926f6c4752f2b0f421e613d48b2f94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952555"
 ---
-# <a name="isoftkbdsetkeyboardlabeltextcombination-method"></a>Icdkbd:: setkeyboardlabeltextcombination-Methode
+# <a name="isoftkbdsetkeyboardlabeltextcombination-method"></a>ISoftKbd::SetKeyboardLabelTextCombination-Methode
 
-Die **isoftkbd:: setkeyboardlabeltextcombination** -Methode legt eine Kombination aus Bezeichnung und Text fest, mit der eine weiche Tastatur beschrieben wird.
+Die **ISoftKbd::SetKeyboardLabelTextCombination-Methode** legt eine Kombination aus Bezeichnung und Text fest, die zum Beschreiben einer soft-Tastatur verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT SetKeyboardLabelTextCombination(
 
 <dl> <dt>
 
-*nmodifierkombination* \[ in\]
+*nModifierCombination* \[ In\]
 </dt> <dd>
 
-Eine Kombination aus Bezeichnung und Text, mit der die weiche Tastatur beschrieben wird.
+Kombination aus Bezeichnung und Text, die zum Beschreiben der soft-Tastatur verwendet wird.
 
 </dd> </dl>
 
@@ -55,10 +55,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                        | BESCHREIBUNG                                                 |
+| Wert                                                                                        | Beschreibung                                                 |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>                       |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *nmodifiercombination* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *nModifierCombination-Parameter* ist ungültig.<br/> |
 
 
 
@@ -72,9 +72,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -83,10 +83,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**Icdkbd:: setkeyboardlabeltext**](isoftkbd-setkeyboardlabeltext.md)
+[**ISoftKbd::SetKeyboardLabelText**](isoftkbd-setkeyboardlabeltext.md)
 </dt> </dl>
 
  

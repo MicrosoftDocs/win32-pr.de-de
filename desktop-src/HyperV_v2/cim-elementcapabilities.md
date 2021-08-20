@@ -16,14 +16,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7c705d0bb4743d4919ca840f51b3324510558078
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5b5aad32feac6ef1daba5f9139764d5964467dbfbfb2119c0ec01b6bfe4257b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812314"
 ---
-# <a name="cim_elementcapabilities-class"></a>CIM \_ elementfunktionalitäten-Klasse
+# <a name="cim_elementcapabilities-class"></a>\_CIM-Klasse "ElementCapabilities"
 
 Stellt eine Zuordnung zwischen einem verwalteten Element und seinen Funktionen dar.
 
@@ -41,20 +41,20 @@ class CIM_ElementCapabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ elementfunktionsklasse** verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse ElementCapabilities** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ elementfunktionalitäten** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse ElementCapabilities** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Capabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Funktionen**
+Datentyp: **\_ CIM-Funktionen**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -63,20 +63,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die dem verwalteten Element zugeordneten Funktionen.
+Die funktionen, die dem verwalteten Element zugeordnet sind.
 
 </dd> <dt>
 
 **Characteristics**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Reihe von beschreibenden Informationen zu den Funktionen.
+Eine Reihe beschreibender Informationen zu den Funktionen.
 
 <dt>
 
@@ -96,24 +96,24 @@ Eine Reihe von beschreibenden Informationen zu den Funktionen.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**"Managedelement"**
+**ManagedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -135,7 +135,7 @@ Das verwaltete Element.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

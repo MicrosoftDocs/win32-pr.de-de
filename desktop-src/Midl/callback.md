@@ -1,9 +1,9 @@
 ---
-title: Rückruf Attribut
-description: Das Attribut \ Callback \ deklariert eine statische Rückruffunktion, die auf der Clientseite der verteilten Anwendung vorhanden ist. Rückruf Funktionen bieten dem Server die Möglichkeit, Code auf dem Client auszuführen.
+title: Rückrufattribut
+description: Das Attribut \callback\ deklariert eine statische Rückruffunktion, die auf der Clientseite der verteilten Anwendung vorhanden ist. Rückruffunktionen bieten dem Server die Möglichkeit, Code auf dem Client auszuführen.
 ms.assetid: c78947ae-614c-4f33-9ab7-1231e5031f80
 keywords:
-- Rückruf Attribut-Mittel l
+- Rückrufattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 379aa3cbef4df872f8b133017b1b06a6c73e8181
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e77eb93a78553ccbc95b1671dc215012eeccc56b0bff8ea23e47f68aaf51e10b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117807336"
 ---
-# <a name="callback-attribute"></a>Rückruf Attribut
+# <a name="callback-attribute"></a>Rückrufattribut
 
-Das **\[ Callback \]** -Attribut deklariert eine statische Rückruffunktion, die auf der Clientseite der verteilten Anwendung vorhanden ist. Rückruf Funktionen bieten dem Server die Möglichkeit, Code auf dem Client auszuführen.
+Das **\[ \] Rückrufattribut** deklariert eine statische Rückruffunktion, die auf der Clientseite der verteilten Anwendung vorhanden ist. Rückruffunktionen bieten dem Server die Möglichkeit, Code auf dem Client auszuführen.
 
 ``` syntax
 [callback [ , function-attr-list] ] type-specifier [ptr-declarator] function-name(
@@ -33,63 +33,63 @@ Das **\[ Callback \]** -Attribut deklariert eine statische Rückruffunktion, die
 
 <dl> <dt>
 
-*Function-attr-List* 
+*function-attr-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die Funktion gelten. Gültige Funktions Attribute sind **\[** [**local**](local.md), **\]** das Zeiger Attribut **\[** [**ref**](ref.md) **\]** , **\[** [**Unique**](unique.md) **\]** oder **\[** [**ptr**](ptr.md) **\]** und die Verwendungs Attribute **\[** [**Zeichenfolge**](string.md) **\]** , **\[** [**ignorieren**](ignore.md) **\]** und **\[** [**Kontext \_ handle**](context-handle.md) **\]** . Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für die Funktion gelten. Gültige Funktionsattribute sind **\[** [**lokal;**](local.md) **\]** das Zeigerattribut **\[** [**ref**](ref.md), **\]** **\[** [**eindeutig**](unique.md)oder **\]** **\[** [**ptr;**](ptr.md)und die **\]** Verwendungsattribute **\[** [**Zeichenfolge**](string.md), **\]** **\[** [**ignorieren**](ignore.md)und **\]** **\[** [**\_ Kontexthandle**](context-handle.md) **\]** . Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
 *Typspezifizierer* 
 </dt> <dd>
 
-Gibt einen [ \_ Basistyp](midl-base-types.md), eine [**Struktur**](struct.md), eine [**Union**](union.md), einen [**Enumeration**](enum.md) -Typ oder einen Typbezeichner an. Eine optionale Speicher Spezifikation kann dem *Typspezifizierer* vorangestellt werden.
+Gibt einen [ \_ Basistyp,](midl-base-types.md) [**eine Struktur,**](struct.md) [**einen Union-,**](union.md) [**Enumerations-**](enum.md) oder Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer* vorangestellt werden.
 
 </dd> <dt>
 
-*PTR-Deklarator* 
+*ptr-declarator* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Zeiger Deklaratoren an. Ein zeigerdeklarator ist derselbe wie der in C verwendete zeigerdeklarator. Sie wird aus dem Kenn \* Zeichner, den Modifizierern, z. b. **weit**, und dem Qualifizierer " [**Konstanten**](const.md)" erstellt.
+Gibt null oder mehr Zeigerdeklaratoren an. Ein Zeigerdeklarator entspricht dem in C verwendeten Zeigerdeklarator. sie wird aus dem \* Bezeichner, Modifizierern wie **far** und dem Qualifizierer [**const**](const.md)erstellt.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Remote Prozedur an.
+Gibt den Namen der Remoteprozedur an.
 
 </dd> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr direktionale Attribute, Feld Attribute, Verwendungs Attribute und Zeiger Attribute an, die für den angegebenen Parametertyp geeignet sind. Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr direktionale Attribute, Feldattribute, Verwendungsattribute und Zeigerattribute an, die für den angegebenen Parametertyp geeignet sind. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
 *Deklarator* 
 </dt> <dd>
 
-Gibt einen Standard-C-Deklarator an, z. b. Bezeichner, Zeiger Deklaratoren und Array Deklaratoren. Weitere Informationen finden Sie unter [Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md), [**Arrays**](arrays-1.md)und [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers). Der Parameter-Name-Bezeichner ist optional.
+Gibt einen C-Standarddeklarator an, z. B. Bezeichner, Zeigerdeklaratoren und Arraydeklaratoren. Weitere Informationen finden Sie unter [Array- und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md), [**Arrays**](arrays-1.md)und [Arrays und Zeiger.](/windows/desktop/Rpc/arrays-and-pointers) Der Parameternamenbezeichner ist optional.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\[ Rückruf \]** Funktion ist hilfreich, wenn der Server Informationen vom Client abrufen muss. , Wenn Server Anwendungen unter Windows 3 unterstützt werden. *x*, der Server kann eine Remote Prozedur auf Windows 3 abrufen. *x* -Server, um die benötigten Informationen zu erhalten. Die Rückruffunktion erreicht denselben Zweck und ermöglicht dem Server, Informationen im Kontext des ursprünglichen Aufrufs abzufragen.
+Die **\[ Rückruffunktion \]** ist nützlich, wenn der Server Informationen vom Client abrufen muss. Wenn Serveranwendungen auf Windows 3 unterstützt wurden. *x*, könnte der Server eine Remoteprozedur auf der Windows 3 aufrufen. *x* Server, um die erforderlichen Informationen abzurufen. Die Rückruffunktion erfüllt denselben Zweck und ermöglicht es dem Server, den Client im Kontext des ursprünglichen Aufrufs nach Informationen abzufragen.
 
-Rückrufe sind Sonderfälle von Remote aufrufen, die als Teil eines einzelnen Threads ausgeführt werden. Ein Rückruf wird im Kontext eines Remote Aufrufs ausgegeben. Alle Remote Prozeduren, die als Teil derselben Schnittstelle wie die statische Rückruffunktion definiert sind, können die Rückruffunktion aufzurufen.
+Rückrufe sind Sonderfälle von Remoteaufrufen, die als Teil eines einzelnen Threads ausgeführt werden. Ein Rückruf wird im Kontext eines Remoteaufrufs ausgegeben. Jede Remoteprozedur, die als Teil derselben Schnittstelle wie die statische Rückruffunktion definiert ist, kann die Rückruffunktion aufrufen.
 
-Beachten Sie, dass die Verwendung von \[ Callback bei der \] Multithreadprogrammierung nicht empfohlen wird. Als Single Thread-Programmierfunktion ist Sie nicht für die Unterstützung der Sicherheitsanforderungen, die eine Multithreadumgebung bereitstellt, bereit.
+Es ist wichtig zu beachten, dass die Verwendung des Rückrufs bei der \[ \] Multithreadprogrammierung nicht empfohlen wird. Als Singlethread-Programmierfunktion ist sie nicht für die Unterstützung der Sicherheitsanforderungen einer Multithreadumgebung ausgestattet.
 
-Die **rpccancelthread** -Funktion kann nicht zum Abbrechen eines Aufrufs verwendet werden, der möglicherweise einen statischen Rückruf versendet. Wenn ein bestimmter Remote Prozedur Aufrufs nie zu einem Rückruf führt, kann er abgebrochen werden. Andernfalls kann ein-Rückruf nur abgebrochen werden, wenn sichergestellt werden kann, dass kein Rückruf für ihn ausgegeben wurde.
+Die **RpcCancelThread-Funktion** kann nicht verwendet werden, um einen Aufruf abzubrechen, der einen statischen Rückruf senden kann. Wenn ein bestimmter Remoteprozeduraufruf nie zu einem Rückruf führt, kann er abgebrochen werden. Andernfalls kann ein Aufruf nur abgebrochen werden, wenn sichergestellt werden kann, dass kein Rückruf für ihn ausgegeben wurde.
 
-Nur die Verbindungs orientierten und lokalen Protokoll Sequenzen unterstützen das Rückruf Attribut. Die Größe der \[ out \] -Daten für Rückrufe über die lokale Protokoll Sequenz ist auf 150 Bytes beschränkt. Wenn eine RPC-Schnittstelle eine verbindungslose (Datagram) Protokoll Sequenz verwendet, schlagen Aufrufe von Prozeduren mit dem Rückruf Attribut fehl.
+Nur die verbindungsorientierten und lokalen Protokollsequenzen unterstützen das Rückrufattribut. Die Größe der \[ \] ausgehenden Daten für Rückrufe über die lokale Protokollsequenz ist auf 150 Bytes beschränkt. Wenn eine RPC-Schnittstelle eine verbindungslose Protokollsequenz (Datagramm) verwendet, schlagen Aufrufe von Prozeduren mit dem Rückrufattribut fehl.
 
-Handles können nicht als Parameter in Rückruf Funktionen verwendet werden. Da Rückrufe immer im Kontext eines-Aufrufes ausgeführt werden, wird das Bindungs handle, das vom Client für den Aufruf des Servers verwendet wird, auch als Bindungs Handle vom Server zum Client verwendet.
+Handles können nicht als Parameter in Rückruffunktionen verwendet werden. Da Rückrufe immer im Kontext eines Aufrufs ausgeführt werden, wird das Bindungshandle, das vom Client zum Aufrufen des Servers verwendet wird, auch als Bindungshandle vom Server an den Client verwendet.
 
-Rückrufe können in beliebiger Tiefe verschachtelt werden.
+Rückrufe können in beliebige Tiefe geschachtelt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -101,28 +101,28 @@ Rückrufe können in beliebiger Tiefe verschachtelt werden.
 
 <dl> <dt>
 
-[**Mikro**](arrays-1.md)
+[**Arrays**](arrays-1.md)
 </dt> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
 [**const**](const.md)
 </dt> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**\_Kontexthandle**](context-handle.md)
 </dt> <dt>
 
-[**Enumeration**](enum.md)
+[**Enum**](enum.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**lassen**](ignore.md)
+[**Ignorieren**](ignore.md)
 </dt> <dt>
 
-[**nah**](local.md)
+[**lokal**](local.md)
 </dt> <dt>
 
 [**/osf**](-osf.md)
@@ -131,24 +131,24 @@ Rückrufe können in beliebiger Tiefe verschachtelt werden.
 [**ref**](ref.md)
 </dt> <dt>
 
-[**ptr**](ptr.md)
+[**Ptr**](ptr.md)
 </dt> <dt>
 
-[**Zeichenfolge**](string.md)
+[**Schnur**](string.md)
 </dt> <dt>
 
-[**struct**](struct.md)
+[**Struktur**](struct.md)
 </dt> <dt>
 
 [**Union**](union.md)
 </dt> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> <dt>
 
-[**Rpccancelthread**](/windows/desktop/api/rpcdce/nf-rpcdce-rpccancelthread)
+[**RpcCancelThread**](/windows/desktop/api/rpcdce/nf-rpcdce-rpccancelthread)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

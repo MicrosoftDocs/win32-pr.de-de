@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents onhardplefault-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass ein virtueller Computer einen dreifachen Fehler verursacht hat.
+title: IVMVirtualMachineEvents OnTripleFault-Methode (VPCCOMInterfaces.h)
+description: Empfängt eine Benachrichtigung, dass ein virtueller Computer dreifach fehlerhaft ist.
 ms.assetid: a17b1a05-3058-48ba-a196-7e9563f3e1c0
 keywords:
-- Onseriplefault-Methode virtueller PC
-- Onseriplefault-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, onseriplefault-Methode
+- 'OnTripleFault-Methode : Virtueller PC'
+- OnTripleFault-Methode Virtual PC, IVMVirtualMachineEvents-Schnittstelle
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnTripleFault-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48d635b9009ecadecb7aed4a921a9c609ef69505
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d9328ceff18256621a590bf0f235aca8ff12b142e4cdedf389d9d270bfde9bad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118122690"
 ---
-# <a name="ivmvirtualmachineeventsontriplefault-method"></a>Ivmvirtualmachineevents:: onhardplefault-Methode
+# <a name="ivmvirtualmachineeventsontriplefault-method"></a>IVMVirtualMachineEvents::OnTripleFault-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass ein virtueller Computer einen dreifachen Fehler verursacht hat.
+Empfängt eine Benachrichtigung, dass ein virtueller Computer dreifach fehlerhaft ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn ein virtueller Computer einen dreifachen Fehler aufweist. Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das vmvirtualmachineevent-Ereignis vom Typ "vmvirtualmachineevent" zu erhalten, das \_ von [**ivmvirtualmachine**](ivmvirtualmachine.md)
+Diese Methode wird aufgerufen, wenn ein virtueller Computer dreifach fehlerhaft ist. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um eine Benachrichtigung über das TripleFault-Ereignis vmVirtualMachineEvent zu erhalten, das von \_ [**IVMVirtualMachine stammt.**](ivmvirtualmachine.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,12 +56,12 @@ Diese Methode wird aufgerufen, wenn ein virtueller Computer einen dreifachen Feh
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -69,7 +69,7 @@ Diese Methode wird aufgerufen, wenn ein virtueller Computer einen dreifachen Feh
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Gibt die AES DXVA-Verschlüsselung für DXVA-decoderer an.
+description: Gibt die AES DXVA-Verschlüsselung für DXVA-Decoder an.
 ms.assetid: 8E270C97-E073-40D3-8D33-7BBFE1833940
-title: MFPROTECTION_GRAPHICS_TRANSFER_AES_ENCRYPTION-Attribut (mspdl. h)
+title: MFPROTECTION_GRAPHICS_TRANSFER_AES_ENCRYPTION -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a528dca0b81ed179cc2d5898c7e2bc2a7f64283a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f45b2bd63bb37225e04dc856c495c562f167148d64c8779e2b6237d19777f0af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117872484"
 ---
-# <a name="mfprotection_graphics_transfer_aes_encryption-attribute"></a>\_ \_ \_ AES- \_ Verschlüsselungs Attribut für die MF Protection-Grafik Übertragung
+# <a name="mfprotection_graphics_transfer_aes_encryption-attribute"></a>MFPROTECTION \_ GRAPHICS \_ TRANSFER \_ AES \_ ENCRYPTION-Attribut
 
-Gibt die AES DXVA-Verschlüsselung für DXVA-decoderer an.
+Gibt die AES DXVA-Verschlüsselung für DXVA-Decoder an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Gibt die AES DXVA-Verschlüsselung für DXVA-decoderer an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ UWP-apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ UWP-apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur UWP-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur UWP-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -35,10 +35,10 @@ Gibt die AES DXVA-Verschlüsselung für DXVA-decoderer an.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

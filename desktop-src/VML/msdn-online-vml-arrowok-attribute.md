@@ -1,50 +1,50 @@
 ---
-title: VML-arrowok-Attribut
-description: VML-arrowok-Attribut
+title: VML-PfeilOK-Attribut
+description: VML-PfeilOK-Attribut
 ms.assetid: 19b23544-4a72-4273-b48a-6aee39addcf6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8807b802370f81ddd084df8a171f95e8496c7ff0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ac95b8fa7068f55246263e6622527a8ecec17d3351c284a0810cd77b085784aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118124969"
 ---
-# <a name="vml-arrowok-attribute"></a>VML-arrowok-Attribut
+# <a name="vml-arrowok-attribute"></a>VML-PfeilOK-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob Pfeilspitzen angezeigt werden. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob Pfeilspitzen angezeigt werden. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* arrowok = " *Expression* " >
+<v: *element* arrowok="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . arrowok = "*Ausdruck*"
+*element* .arrowok="*expression*"
 
-*Ausdruck* = *Element*. arrowok
+*expression* = *Element*.arrowok
 
 **Anmerkungen**
 
-Wenn der Wert **false** ist, weist der Pfad keine Pfeilspitzen auf. Der Standardwert ist **False**. Dieses Attribut überschreibt alle anderen Pfeilspitze-Attribute im Parent-oder **Stroke** -Element.
+False **gibt an,** dass der Pfad keine Pfeilspitzen hat. Der Standardwert ist **False**. Dieses Attribut überschreibt alle anderen Pfeilspitzenattribute im übergeordneten element oder **Stroke-Element.**
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Pfad weist keine Pfeilspitze auf.
+Der Pfad hat keine Pfeilspitze.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Der Pfad weist keine Pfeilspitze auf.
 
 
 
- 
+ 
 
- 
+ 

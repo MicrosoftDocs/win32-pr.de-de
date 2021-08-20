@@ -1,8 +1,8 @@
 ---
-description: Die Cancel-Methode des Swap-Objekts bricht alle ausstehenden asynchronen Vorgänge ab, die dieser Objekt Senke zugeordnet sind.
+description: Die Cancel-Methode des SWbemSink-Objekts bricht alle ausstehenden asynchronen Vorgänge ab, die dieser Objektsenke zugeordnet sind.
 ms.assetid: dbe1eb24-5d9d-407a-b7c6-c58ec6891d7a
 ms.tgt_platform: multiple
-title: 'Iswbemsink:: Cancel-Methode (wbemdisp. h)'
+title: ISWbemSink::Cancel-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 37bb44e8c34aa3cd7f9d491656461097e5a2bb5a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fe2d8e8c0c5663adee0d6545e32f63cb5e8334269be99192122a2a66ac83159
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118107858"
 ---
-# <a name="iswbemsinkcancel-method"></a>Iswbemsink:: Cancel-Methode
+# <a name="iswbemsinkcancel-method"></a>ISWbemSink::Cancel-Methode
 
-Die **Cancel** -Methode des [**Swap**](swbemsink.md) -Objekts bricht alle ausstehenden asynchronen Vorgänge ab, die dieser Objekt Senke zugeordnet sind.
+Die **Cancel-Methode** des [**SWbemSink-Objekts bricht**](swbemsink.md) alle ausstehenden asynchronen Vorgänge ab, die dieser Objektsenke zugeordnet sind.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,50 +47,50 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **Cancel** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der folgenden Fehlercodes enthalten.
+Nach Abschluss der **Cancel-Methode** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der folgenden Fehlercodes enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** : 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> <dt>
 
-**wbemErrTransportFailure** -2147749909 (0x80041015)
+**wbemErrTransportFailure** – 2147749909 (0x80041015)
 </dt> <dd>
 
-Netzwerkfehler. der normale Betrieb wird verhindert.
+Netzwerkfehler, der den normalen Betrieb verhindert.
 
 </dd> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle oder der angegebene Benutzername und das Kennwort sind ungültig oder sind zum Herstellen der Verbindung autorisiert.
+Der aktuelle oder angegebene Benutzername und das Kennwort sind nicht gültig oder autorisiert, um die Verbindung herzustellen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist nicht möglich, nur einen asynchronen-Befehl abzubrechen. Wenn mehrere asynchrone Aufrufe ausstehen, die diese Objekt Senke verwenden, bricht diese Methode alle asynchronen Aufrufe mithilfe dieser Objekt Senke ab. Asynchrone Aufrufe, die anderen Objekt senken zugeordnet sind, bleiben unverändert.
+Sie können nicht nur einen asynchronen Aufruf abbrechen. Wenn mehrere asynchrone Aufrufe ausstehen, die diese Objektsenke verwenden, bricht diese Methode alle asynchronen Aufrufe mithilfe dieser Objektsenke ab. Asynchrone Aufrufe, die anderen Objektsenken zugeordnet sind, bleiben unverändert.
 
-Diese Senke kann **nichts** zugewiesen werden, um einen asynchronen Vorgang abzubrechen. Sie müssen die **Cancel** -Methode aufzurufen, damit WMI den Vorgang abbricht und die zugeordneten Ressourcen freigibt. Dies ist sehr wichtig bei langwierigen asynchronen Vorgängen wie z. b. Abfragen oder Vorgängen, die nicht vollständig ausgeführt werden, wie z. b. [**ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md).
+Sie können diese Senke nothing **nicht zuweisen,** um einen asynchronen Vorgang abzubricht. Sie müssen die **Cancel-Methode aufrufen,** damit WMI den Vorgang beendet und die zugeordneten Ressourcen frei gibt. Dies ist bei längeren asynchronen Vorgängen wie Abfragen oder Vorgängen, die nie abgeschlossen werden, sehr wichtig, z. B. [**ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md).
 
 > [!Note]  
-> Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, verwenden Sie die semisynchrone oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke zur Verfügung zu stellen. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken zu beseitigen, verwenden Sie die semisynchrone oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 
-Im folgenden Beispiel wird gezeigt, wie ein asynchroner-Befehl abgebrochen wird.
+Das folgende Beispiel zeigt, wie Sie einen asynchronen Aufruf abbrechen.
 
 
 ```VB
@@ -108,11 +108,11 @@ set objwbemsink= Nothing
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Wbemdisp. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wbemdisp.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-senbemsink<br/>                                                             |
-| IID<br/>                      | IID \_ iswbemsink<br/>                                                              |
+| CLSID<br/>                    | CLSID \_ SWbemSink<br/>                                                             |
+| IID<br/>                      | IID \_ ISWbemSink<br/>                                                              |
 
 
 
@@ -120,7 +120,7 @@ set objwbemsink= Nothing
 
 <dl> <dt>
 
-[**Swap-Senke**](swbemsink.md)
+[**SWbemSink**](swbemsink.md)
 </dt> </dl>
 
  

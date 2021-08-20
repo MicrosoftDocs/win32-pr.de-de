@@ -1,9 +1,9 @@
 ---
-title: Video. Windows less
-description: Mit dem Fenster "Windows less" wird ein Wert angegeben oder abgerufen, der angibt, ob das Video Steuerelement Fenster-oder fensterlose Fenster enthält. Das heißt, ob das gesamte Rechteck des Steuer Elements jederzeit sichtbar ist oder abgeschnitten werden kann.
+title: VIDEO.windowless
+description: Das fensterlose Attribut gibt einen Wert an, der angibt, ob das Video-Steuerelement fensterlos oder fensterlos ist, oder ruft einen Wert ab. Das heißt, ob das gesamte Rechteck des Steuerelements jederzeit sichtbar ist oder abgeschnitten werden kann.
 ms.assetid: d59e6baf-374b-48f6-b99f-35a83af7feb6
 keywords:
-- Video. fensterlose Windows-Media Player
+- VIDEO.windowless Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3a17d905d2ba8c11254476337d656890469b2b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c98aefde5aab9837f220ccb7df254e6a592e0d5e9d41de43291b2ab73e287321
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117931740"
 ---
-# <a name="videowindowless"></a>Video. Windows less
+# <a name="videowindowless"></a>VIDEO.windowless
 
-Mit dem **Fenster "Windows less** " wird ein Wert angegeben oder abgerufen, der angibt, ob das Video Steuerelement Fenster-oder fensterlose Fenster enthält. Das heißt, ob das gesamte Rechteck des Steuer Elements jederzeit sichtbar ist oder abgeschnitten werden kann. Kann nur zur Entwurfszeit festgelegt werden.
+Das **fensterlose** Attribut gibt einen Wert an, der angibt, ob das Video-Steuerelement fensterlos oder fensterlos ist, oder ruft einen Wert ab. Das heißt, ob das gesamte Rechteck des Steuerelements jederzeit sichtbar ist oder abgeschnitten werden kann. Kann nur zur Entwurfszeit festgelegt werden.
 
 ``` syntax
         elementID.windowless
@@ -29,24 +29,24 @@ Mit dem **Fenster "Windows less** " wird ein Wert angegeben oder abgerufen, der 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert, der zur Entwurfszeit angegeben wird, und anschließend schreibgeschützt.
+Dieses Attribut ist ein **boolescher Wert,** der zur Entwurfszeit angegeben und danach schreibgeschützt ist.
 
 
 
 | Wert | BESCHREIBUNG                              |
 |-------|------------------------------------------|
-| true  | Das Video Steuerelement ist fensterloser.        |
-| false | Standard. Das Video Steuerelement wird angezeigt. |
+| true  | Das Videosteuerelement ist fensterlos.        |
+| false | Standard. Das Videosteuerelement wird eingeblendet. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein nicht rechteckiges Videofenster gewünscht ist oder wenn Sie einen Teil des Videofensters mit einem Bild abdecken möchten, muss dieses Attribut auf true festgelegt werden. Dadurch wird eine gewisse Leistung erzielt, um das erforderliche Clipping durchzuführen.
+Wenn ein nicht rechteckiges Videofenster gewünscht ist oder Sie einen Teil des Videofensters mit einem Bild abdecken möchten, muss dieses Attribut auf TRUE festgelegt werden. Dadurch wird die Leistung für die erforderlichen Ausschneidefunktionen geerkt.
 
-Die Video Wiedergabe ist für die nicht geklickte Wiedergabe optimiert. In diesem Fall wird das **fensterlose** Attribut auf false festgelegt, und das gesamte Video Rechteck wird immer angezeigt. Alle Bilder, die das Videofenster abdecken, werden ignoriert, und das Videofenster hat die oberste z-Reihenfolge.
+Die Videowiedergabe ist für die nicht angepasste Wiedergabe optimiert. In diesem Fall wird das **Attribut ohne Fenster** auf FALSE festgelegt, und das gesamte Videorechteck wird immer angezeigt. Alle Bilder, die das Videofenster abdecken, werden ignoriert, und das Videofenster weist die höchste Z-Reihenfolge auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Die Video Wiedergabe ist für die nicht geklickte Wiedergabe optimiert. In diese
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -62,7 +62,7 @@ Die Video Wiedergabe ist für die nicht geklickte Wiedergabe optimiert. In diese
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

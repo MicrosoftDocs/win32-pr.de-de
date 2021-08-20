@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DMS:: Operator-Funktion'
-description: Ruft einen Wert aus der Ressource an dem Speicherort ab, der im Beispiel Index 0 angegeben ist.
+title: Texture2DMS::Operator-Funktion
+description: Ruft einen Wert aus der Ressource an dem am Beispielindex 0 angegebenen Speicherort ab.
 ms.assetid: 80380D3F-1E71-4C43-A17B-F94F6E5215B1
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6ae7976e6871dc2547ed5c372e1551e5bf0ca148
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 67b10ee5c6a089fa78b75dab10dd90cae8fe2f417172df1936e4c1c4104a2b53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104976960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117905237"
 ---
-# <a name="texture2dmsoperator--function"></a>Texture2DMS:: Operator-Funktion
+# <a name="texture2dmsoperator--function"></a>Texture2DMS::Operator-Funktion
 
-Ruft einen Wert aus der Ressource an dem Speicherort ab, der im Beispiel Index 0 angegeben ist.
+Ruft einen Wert aus der Ressource an dem am Beispielindex 0 angegebenen Speicherort ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,12 +36,12 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Enthält die (x, y)-Koordinaten.
+Die Indexposition. Enthält die Koordinaten (x, y).
 
 </dd> </dl>
 
@@ -49,17 +49,17 @@ Die Indexposition. Enthält die (x, y)-Koordinaten.
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zum Auswählen eines bestimmten Beispiels finden Sie im [**Beispiel. \[Operator \] . \[ \]**](sm5-object-texture2dms-sampleoperatorindex.md)
+Informationen zum Auswählen eines bestimmten Beispiels finden Sie unter [**Beispiel. \[ \] Operator \[ \]**](sm5-object-texture2dms-sampleoperatorindex.md).
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -67,14 +67,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Texture2DMS](sm5-object-texture2dms.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

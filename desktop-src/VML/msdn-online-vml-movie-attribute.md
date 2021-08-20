@@ -4,23 +4,23 @@ description: VML Movie-Attribut
 ms.assetid: 027ec13a-071f-46f1-892f-294cc7885023
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d82c1f7d6b2cd77b7828ea86f3f1a1e008950652
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 64eaadee7f0fed7876e1c369d7eeac7568be3b81bcca96c822548e7a5fae796e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118124432"
 ---
 # <a name="vml-movie-attribute"></a>VML Movie-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert einen Zeiger auf ein Filmbild. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert einen Zeiger auf ein Filmbild. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Definiert einen Zeiger auf ein Filmbild. Lese-/Schreibzugriff. **Vgnumber**.
 
 **Tagsyntax**
 
-<v: *Element* o:Movie = " *Expression* " >
+<v: *Element* o:movie=" *Ausdruck* ">
 
 **Anmerkungen**
 
-Speichert einen Macintosh-Datenblock, der einen Zeiger auf einen Zeiger auf die Filmdaten enthält.
+Speichert einen Macintosh-Datenblock, der einen Zeiger auf einen Zeiger auf Filmdaten enthält.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

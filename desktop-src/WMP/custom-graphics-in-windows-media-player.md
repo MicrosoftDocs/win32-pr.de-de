@@ -3,15 +3,15 @@ title: Benutzerdefinierte Grafiken in Windows Media Player
 description: Benutzerdefinierte Grafiken in Windows Media Player
 ms.assetid: 1a4b9cfc-a0d0-41b7-a8c1-31c28415a49b
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, benutzerdefinierte Grafiken
+- Windows Medienmetadatei-Wiedergabelisten, benutzerdefinierte Grafiken
 - Wiedergabelisten, benutzerdefinierte Grafiken
 - Metadatei-Wiedergabelisten, benutzerdefinierte Grafiken
-- Windows Media Metadatei-Wiedergabelisten, Grafiken
+- Windows Medienmetadatei-Wiedergabelisten, Grafiken
 - Wiedergabelisten, Grafiken
 - Metadatei-Wiedergabelisten, Grafiken
-- benutzerdefinierte Grafiken
+- Benutzerdefinierte Grafiken
 - Windows Media Player, benutzerdefinierte Grafiken
-- Windows-Media Player, Grafiken
+- Windows Media Player, Grafiken
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -19,26 +19,26 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c21b2cacbcc9f29985e3ea1d181fa2f814b51bdc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6d79b151333508a1f042a4d09713404df6bdc97ef6118e74cfe4cc17e6b56a62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117936325"
 ---
 # <a name="custom-graphics-in-windows-media-player"></a>Benutzerdefinierte Grafiken in Windows Media Player
 
-Mithilfe der Skripterstellung für Windows Media-Metadateien können Sie Windows-Media Player Grafikelemente hinzufügen, wenn der Stream abgespielt wird. Es gibt einen grundlegenden Typ von Grafiken, den Sie hinzufügen können.
+Mit Windows Media-Metadateiskripts können Sie Grafikelemente zu Windows Media Player hinzufügen, während der Stream wiedergegeben wird. Es gibt einen einfachen Grafiktyp, den Sie hinzufügen können.
 
 
 
-| type   | BESCHREIBUNG                                                                                                                                                                                                                        |
+| Typ   | Beschreibung                                                                                                                                                                                                                        |
 |--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Flagge | Mit dem **Banner** -Element können Sie ein Banner (32 Pixel hoch um 194 Pixel breit) in Windows Media Player am unteren Rand des Videoanzeige Bereichs platzieren. Sie können dann ein untergeordnetes-Element verwenden, um dem Banner einen Hyperlink hinzuzufügen. |
+| Banner | Mit dem **BANNER-Element** können Sie ein Bannerbild (32 x 194 Pixel breit) auf Windows Media Player am unteren Rand des Videoanzeigebereichs platzieren. Sie können dann ein untergeordnetes Element verwenden, um dem Banner einen Link hinzuzufügen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -50,15 +50,15 @@ Mithilfe der Skripterstellung für Windows Media-Metadateien können Sie Windows
 [**Ändern der Anzeige**](modifying-the-display.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Media Metafile Guide**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

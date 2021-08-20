@@ -1,7 +1,7 @@
 ---
-description: Fügt das angegebene mediensegment an imfsourcebuffer an.
+description: Fügt das angegebene Mediensegment an den APPENDSourceBuffer an.
 ms.assetid: 824fa23d-57d9-411a-af8a-fb65dca124b2
-title: 'IMF sourceBuffer:: Append-Methode'
+title: APPENDSourceBuffer::Append-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 00c9b6a0af2e48482311a8a0e1bc39dc4ce951aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef0e42f942a7d7e4477f52e152ef0f745f6a12b5812cba1a9bb1b0d95679ae7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118062847"
 ---
-# <a name="imfsourcebufferappend-method"></a>IMF sourceBuffer:: Append-Methode
+# <a name="imfsourcebufferappend-method"></a>APPENDSourceBuffer::Append-Methode
 
-Fügt das angegebene mediensegment an [**imfsourcebuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)an.
+Fügt das angegebene Mediensegment an [**den APPENDSourceBuffer an.**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT Append(
 
 <dl> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Die anzufügende Mediendaten.
+Die zu anfügenden Mediendaten.
 
 </dd> <dt>
 
-*len* \[ in\]
+*len* \[ In\]
 </dt> <dd>
 
-Die Länge der in *pData* gespeicherten Mediendaten.
+Die Länge der in *pData gespeicherten Mediendaten.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF sourceBuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
+[**VERERBungsquelle**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
 </dt> </dl>
 
  

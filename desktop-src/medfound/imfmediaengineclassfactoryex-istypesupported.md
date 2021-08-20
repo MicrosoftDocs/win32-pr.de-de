@@ -1,7 +1,7 @@
 ---
 description: Ruft einen Wert ab, der angibt, ob das angegebene Schlüsselsystem den angegebenen Medientyp unterstützt.
 ms.assetid: 6f4f50db-e491-46c2-a8b2-1b8e51033b5b
-title: 'IMF mediaengineclassfactoryex:: istypesupportiert-Methode'
+title: ANDROMediaEngineClassFactoryEx::IsTypeSupported-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 92bf3d64d36c043e9e33b897294ff74a3fda0445
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 588a7fdc02fb59a9dc156f9f141b210d36e4cef131bf353d6c98d9c055392a28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118062999"
 ---
-# <a name="imfmediaengineclassfactoryexistypesupported-method"></a>IMF mediaengineclassfactoryex:: istypesupportiert-Methode
+# <a name="imfmediaengineclassfactoryexistypesupported-method"></a>ANDROMediaEngineClassFactoryEx::IsTypeSupported-Methode
 
 Ruft einen Wert ab, der angibt, ob das angegebene Schlüsselsystem den angegebenen Medientyp unterstützt.
 
@@ -44,27 +44,27 @@ HRESULT IsTypeSupported(
 *type* 
 </dt> <dd>
 
-Der MIME-Typ, für den Unterstützung überprüft werden soll
+Der MIME-Typ, auf den die Unterstützung überprüft werden soll.
 
 </dd> <dt>
 
-*Keysystem* 
+*keySystem* 
 </dt> <dd>
 
-Das Schlüsselsystem, für das die Unterstützung überprüft wird.
+Das Schlüsselsystem, für das die Unterstützung überprüft werden soll.
 
 </dd> <dt>
 
-*isSupported* 
+*Issupported* 
 </dt> <dd>
 
-**true** , wenn der Typ von *Keysystem* unterstützt wird. andernfalls **false.**
+**TRUE,** wenn der Typ von *keySystem* unterstützt wird; andernfalls **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -82,7 +82,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF mediaengineclassfacrenyex**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediaengineclassfactoryex)
+[**ADRMediaEngineClassFactoryEx**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediaengineclassfactoryex)
 </dt> </dl>
 
  

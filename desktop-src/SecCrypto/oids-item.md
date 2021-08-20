@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Oid-Objekt aus der Auflistung ab. Dies ist die Standard Eigenschaft.
+description: Ruft ein OID-Objekt aus der Auflistung ab. Dies ist die Standardeigenschaft.
 ms.assetid: af0de567-e520-411d-850d-fbdbcb2ace69
-title: OIDs. Item (Eigenschaft)
+title: OIDs.Item-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: dfdf65f013c5e5e1a031c03c19af9d08b8fc72c1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 94d4cad88ab0a41d9293407166993ec7d967d6c1caeca13a6fe6ea84005cbb2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117979526"
 ---
-# <a name="oidsitem-property"></a>OIDs. Item (Eigenschaft)
+# <a name="oidsitem-property"></a>OIDs.Item-Eigenschaft
 
-\[Die **Item** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**OidCollection-Klasse**](/dotnet/api/system.security.cryptography.oidcollection?view=netcore-3.1) im [**System. Security. Cryptography**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[Die **Item-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**OidCollection-Klasse**](/dotnet/api/system.security.cryptography.oidcollection?view=netcore-3.1) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **Item** -Eigenschaft ruft ein [**OID**](oid.md) -Objekt aus der Auflistung ab. Dies ist die Standard Eigenschaft.
+Die **Item-Eigenschaft** ruft ein [**OID-Objekt**](oid.md) aus der Auflistung ab. Dies ist die Standardeigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ OIDs.Item( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**OID**](oid.md) -Objekt am angegebenen Index oder das **OID** -Objekt mit dem angegebenen gepunkteten Wert.
+Das [**OID-Objekt**](oid.md) am angegebenen Index oder das **OID-Objekt** mit dem angegebenen gepunkteten Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Das [**OID**](oid.md) -Objekt am angegebenen Index oder das **OID** -Objekt mit 
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

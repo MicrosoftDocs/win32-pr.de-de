@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents onrequestshutdown-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass eine Anforderung zum Herunterfahren durchgeführt wurde.
+title: IVMVirtualMachineEvents OnRequestShutdown-Methode (VPCCOMInterfaces.h)
+description: Empfängt eine Benachrichtigung, dass eine Anforderung zum Herunterfahren gestellt wurde.
 ms.assetid: e04131fd-5ca7-4392-9725-ba62b905324a
 keywords:
-- Onrequestshutdown-Methode virtueller PC
-- Onrequestshutdown-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, onrequestshutdown-Methode
+- 'OnRequestShutdown-Methode: Virtueller PC'
+- 'OnRequestShutdown-Methode: Virtueller PC, IVMVirtualMachineEvents-Schnittstelle'
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnRequestShutdown-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94dce60a7dfdb5ed5dce714e8b8eafcbd9558b95
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 929c9a293e760a12ace62766cbd7a0c016980fc2399cdde494402a272d90fe0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118123170"
 ---
-# <a name="ivmvirtualmachineeventsonrequestshutdown-method"></a>Ivmvirtualmachineevents:: onrequestshutdown-Methode
+# <a name="ivmvirtualmachineeventsonrequestshutdown-method"></a>IVMVirtualMachineEvents::OnRequestShutdown-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass eine Anforderung zum Herunterfahren durchgeführt wurde.
+Empfängt eine Benachrichtigung, dass eine Anforderung zum Herunterfahren gestellt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird immer dann aufgerufen, wenn die Sitzung des virtuellen Computers gerade heruntergefahren wird. Das Client Programm muss diese Schnittstellen Methode implementieren, um eine Benachrichtigung über das " **vmvirtualmachineevent \_ requestshutdown** "-Ereignis zu erhalten, das von [**ivmvirtualmachine**](ivmvirtualmachine.md)stammt.
+Diese Methode wird immer dann aufgerufen, wenn die Sitzung des virtuellen Computers heruntergefahren wird. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um eine Benachrichtigung über das **Ereignis vmVirtualMachineEvent \_ RequestShutdown** zu erhalten, das von [**IVMVirtualMachine stammt.**](ivmvirtualmachine.md)
 
-Diese Ereignis Benachrichtigung wird nur gesendet, wenn die Sitzung der virtuellen Computer gerade heruntergefahren wird. Die Routinen zum Herunterfahren des Betriebssystems, wie z. b. [**ivmguestos:: Shutdown**](ivmguestos-shutdown.md), lösen dieses Ereignis nicht direkt aus, es sei denn, Sie versuchen auch, ein Software ausschalten der virtuellen Hardware auszuführen.
+Diese Ereignisbenachrichtigung wird nur gesendet, wenn die Sitzung der virtuellen Computer gerade heruntergefahren wird. Routinen zum Herunterfahren des Betriebssystems, z. B. [**IVMGuestOS::Shutdown,**](ivmguestos-shutdown.md)führen dieses Ereignis nur dann direkt aus, wenn sie versuchen, eine Softwareabschaltung der virtuellen Hardware durchzuführen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,12 +58,12 @@ Diese Ereignis Benachrichtigung wird nur gesendet, wenn die Sitzung der virtuell
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -71,7 +71,7 @@ Diese Ereignis Benachrichtigung wird nur gesendet, wenn die Sitzung der virtuell
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

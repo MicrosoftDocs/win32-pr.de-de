@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo processorspeed-Eigenschaft (vpccominterfaces. h)
-description: Geschwindigkeit des Host Prozessors in Megahertz (MHz) oder Gigahertz (GHz).
+title: IVMHostInfo ProcessorSpeed-Eigenschaft (VPCCOMInterfaces.h)
+description: Geschwindigkeit des Hostprozessors in Megahertz (MHz) oder Gigahertz (GHz).
 ms.assetid: 2d5e3f2e-8e81-4527-bd7f-52bf5b1f56ef
 keywords:
-- Processorspeed-Eigenschaft virtueller PC
-- Processorspeed-Eigenschaft Virtual PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, processorspeed (Eigenschaft)
+- ProcessorSpeed-Eigenschaft Virtueller PC
+- ProcessorSpeed-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC, ProcessorSpeed-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28fc890392db5f61a7819fa1d4b4a11d2b3de312
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b4257e62b98c595fc9bd5e1580c585eb1a469d4f833ec32c6c8c7a13caf64bf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118123732"
 ---
-# <a name="ivmhostinfoprocessorspeed-property"></a>Ivmhostinfo::P rocess orspeed-Eigenschaft
+# <a name="ivmhostinfoprocessorspeed-property"></a>IVMHostInfo::P rocessorSpeed-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Geschwindigkeit des Host Prozessors in Megahertz (MHz) oder Gigahertz (GHz) ab.
+Ruft die Geschwindigkeit des Hostprozessors in Megahertz (MHz) oder Gigahertz (GHz) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -54,8 +54,8 @@ Die Prozessorgeschwindigkeit in Megahertz oder Gigahertz.
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ Die Prozessorgeschwindigkeit in Megahertz oder Gigahertz.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
@@ -78,7 +78,7 @@ Die Prozessorgeschwindigkeit in Megahertz oder Gigahertz.
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

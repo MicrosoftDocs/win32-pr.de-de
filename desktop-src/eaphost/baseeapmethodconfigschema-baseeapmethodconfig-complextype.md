@@ -1,9 +1,9 @@
 ---
-title: Komplexer baseeapmethodconfig-Typ
-description: Erfahren Sie mehr über den komplexen Basistyp baseeapmethodconfig. Dieser Typ ist ein Platzhalter Element für die Methoden Konfiguration.
+title: Komplexer BaseEapMethodConfig-Typ
+description: Erfahren Sie mehr über den komplexen BaseEapMethodConfig-Typ. Dieser Typ ist ein Platzhalterelement für die Methodenkonfiguration.
 ms.assetid: 9aafd6ad-2342-4882-99d3-2f2e6c3d67b5
 keywords:
-- Komplexer baseeapmethodconfig-Typ EAPHost
+- Komplexer BaseEapMethodConfig-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ac7d628b554696fffd254a45b9b1021d68e2a55e
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 8decb1746391c1337440eb475a8a8face3f8b7466b73015db48e3991841a3c43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086775"
 ---
-# <a name="baseeapmethodconfig-complex-type"></a>Komplexer baseeapmethodconfig-Typ
+# <a name="baseeapmethodconfig-complex-type"></a>Komplexer BaseEapMethodConfig-Typ
 
-Der komplexe **Basistyp baseeapmethodconfig** ist ein Platzhalter Element für die Methoden Konfiguration.
+Der **komplexe BaseEapMethodConfig-Typ** ist ein Platzhalterelement für die Methodenkonfiguration.
 
 ``` syntax
 <xs:complexType name="BaseEapMethodConfig">
@@ -38,18 +38,18 @@ Der komplexe **Basistyp baseeapmethodconfig** ist ein Platzhalter Element für d
 </xs:complexType>
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die EAP-Methode führt eine Schema Validierung für den Inhalt des **baseeapmethodconfig** -Elements aus.
+Die EAP-Methode führt eine Schemaüberprüfung für den Inhalt des **BaseEapMethodConfig-Elements** durch.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -57,7 +57,7 @@ Die EAP-Methode führt eine Schema Validierung für den Inhalt des **baseeapmeth
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapmethodconfig-Schema](baseeapmethodconfigschema-schema.md)

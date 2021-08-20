@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrecordnotfoundexception-Klasse'
-title: Esentrecordnotfoundexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentRecordNotFoundException-Klasse'
+title: EsentRecordNotFoundException-Klasse
 TOCTitle: EsentRecordNotFoundException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentRecordNotFoundException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrecordnotfoundexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c013bda1ba0592b2137e4bc428ccf4bc195fc6ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90a68ca73d129840a14fa0d0ff8c7863497a5cee0ac0ed3d3c3692083172d90b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118079333"
 ---
-# <a name="esentrecordnotfoundexception-class"></a>Esentrecordnotfoundexception-Klasse
+# <a name="esentrecordnotfoundexception-class"></a>EsentRecordNotFoundException-Klasse
 
-Basisklasse für JET_err. Recordnotfound-Ausnahmen.
+Basisklasse für JET_err. RecordNotFound-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentrecordnotfoundexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentRecordNotFoundException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrecordnotfoundexception-Elemente](./esentrecordnotfoundexception-members.md)
+[EsentRecordNotFoundException-Member](./esentrecordnotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

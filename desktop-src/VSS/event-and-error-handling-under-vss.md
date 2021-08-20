@@ -1,23 +1,23 @@
 ---
-description: 'VSS bietet einen klar definierten Fehler Behandlungs Mechanismus, mit dem Entwickler und Administratoren das System verwalten und Fehler behandeln können:'
+description: 'VSS bietet einen klar definierten Fehlerbehandlungsmechanismus, mit dem Entwickler und Administratoren das System verwalten und Fehler behandeln können:'
 ms.assetid: 6377d937-5739-45f5-9195-5d18be4069ce
-title: Ereignis-und Fehlerbehandlung unter VSS
+title: Ereignis- und Fehlerbehandlung unter VSS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7f6f1220d9d150fd0d03f7ffeff4dbdd1f6256f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 431974532a8b24fd83fbeec62d3c593842b7fd1cede0b22c58f33f891b6b1359
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351102"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118122112"
 ---
-# <a name="event-and-error-handling-under-vss"></a>Ereignis-und Fehlerbehandlung unter VSS
+# <a name="event-and-error-handling-under-vss"></a>Ereignis- und Fehlerbehandlung unter VSS
 
-VSS bietet einen klar definierten Fehler Behandlungs Mechanismus, mit dem Entwickler und Administratoren das System verwalten und Fehler behandeln können:
+VSS bietet einen klar definierten Fehlerbehandlungsmechanismus, mit dem Entwickler und Administratoren das System verwalten und Fehler behandeln können:
 
--   [Ermitteln des Writer-Status](determining-writer-status.md)
--   [VSS-Fehler Protokollierung](vss-error-logging.md)
--   [Writer-Fehler und-Vetos](writer-errors-and-vetoes.md)
+-   [Bestimmen des Writerstatus](determining-writer-status.md)
+-   [VSS-Fehlerprotokollierung](vss-error-logging.md)
+-   [Schreibfehler und -fehler](writer-errors-and-vetoes.md)
 -   [Abbrechen von VSS-Vorgängen](aborting-vss-operations.md)
 -   [Behandeln von BackupShutdown-Ereignissen](handling-backupshutdown-events.md)
 

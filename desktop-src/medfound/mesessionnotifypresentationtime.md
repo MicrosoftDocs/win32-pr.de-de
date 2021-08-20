@@ -1,29 +1,29 @@
 ---
-description: Wird von der Medien Sitzung ausgelöst, wenn eine neue Präsentation gestartet wird. Dieses Ereignis zeigt an, wann die Präsentation gestartet wird und der Offset zwischen der Präsentationszeit und der Quell Zeit liegt.
+description: Wird von der Mediensitzung ausgelöst, wenn eine neue Präsentation gestartet wird. Dieses Ereignis gibt an, wann die Präsentation beginnt und der Offset zwischen der Präsentationszeit und der Quellzeit.
 ms.assetid: 67c7d5f3-ffaf-4359-a59c-bb26b992b6cd
-title: Mesessionnotifypresentationtime-Ereignis (mfobjects. h)
+title: MESessionNotifyPresentationTime-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7b0cd8811d98094ab58ddcf844ec73e1470d120
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d10c1b1e443bd2c6a56a926d5355de5606bf2f2e25618269f8d4ed735538d92f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118061764"
 ---
-# <a name="mesessionnotifypresentationtime-event"></a>Mesessionnotifypresentationtime-Ereignis
+# <a name="mesessionnotifypresentationtime-event"></a>MESessionNotifyPresentationTime-Ereignis
 
-Wird von der Medien Sitzung ausgelöst, wenn eine neue Präsentation gestartet wird. Dieses Ereignis zeigt an, wann die Präsentation gestartet wird und der Offset zwischen der Präsentationszeit und der Quell Zeit liegt.
+Wird von der Mediensitzung ausgelöst, wenn eine neue Präsentation gestartet wird. Dieses Ereignis gibt an, wann die Präsentation beginnt und der Offset zwischen der Präsentationszeit und der Quellzeit.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,11 +33,11 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                                                                   | BESCHREIBUNG                                                                                                     |
+| attribute                                                                                                                   | Beschreibung                                                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [**\_ \_ Start \_ Präsentations \_ Zeit für MF-Ereignis**](mf-event-start-presentation-time-attribute.md)<br/>                       | Startzeit der Präsentation.<br/> <br/>                                                      |
-| [**Zeit Offset der MF- \_ Ereignis \_ Präsentation \_ \_**](mf-event-presentation-time-offset-attribute.md)<br/>                     | Offset zwischen der Präsentationszeit und den Zeitstempeln der Medienquelle.<br/> <br/>                 |
-| [**\_ \_ \_ \_ Zeitpunkt der Ausgabe Präsentation des MF-Ereignisses \_ bei der \_ Ausgabe**](mf-event-start-presentation-time-at-output-attribute.md)<br/> | Präsentationszeit, in der die Medien senken das erste Beispiel der neuen Topologie Rendering.<br/> <br/> |
+| [**PRÄSENTATIONSZEIT FÜR \_ \_ MF-EREIGNISSTART \_ \_**](mf-event-start-presentation-time-attribute.md)<br/>                       | Startzeit für die Präsentation.<br/> <br/>                                                      |
+| [**\_ \_ \_ MF-EREIGNISPRÄSENTATIONSZEITOFFSET \_**](mf-event-presentation-time-offset-attribute.md)<br/>                     | Offset zwischen der Präsentationszeit und den Zeitstempeln der Medienquelle.<br/> <br/>                 |
+| [**PRÄSENTATIONSZEIT FÜR \_ MF-EREIGNISSTART \_ \_ BEI \_ \_ \_ AUSGABE**](mf-event-start-presentation-time-at-output-attribute.md)<br/> | Präsentationszeit, zu der die Mediensenken das erste Beispiel der neuen Topologie rendern.<br/> <br/> |
 
 
 
@@ -47,9 +47,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -57,10 +57,10 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 <dl> <dt>
 
-[**Imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
+[**BESENTMediaSession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

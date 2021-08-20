@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, wenn dem System ein neuer Tablettstift hinzugefügt wird.
+description: Tritt ein, wenn dem System ein neuer Stift hinzugefügt wird.
 ms.assetid: bd0f0d2a-c0d9-48fc-bc90-f63f038639f3
-title: 'Itableteventsink:: Cursor New-Methode'
+title: ITabletEventSink::CursorNew-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 31db152eb15d6f980234dc556e277691d3f14959
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 989c61d7f9ae4ce6b4f3136887d087605c61eff759bac7664a84388d2b509b63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857139"
 ---
-# <a name="itableteventsinkcursornew-method"></a>Itableteventsink:: Cursor New-Methode
+# <a name="itableteventsinkcursornew-method"></a>ITabletEventSink::CursorNew-Methode
 
-Tritt auf, wenn dem System ein neuer Tablettstift hinzugefügt wird.
+Tritt ein, wenn dem System ein neuer Stift hinzugefügt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ HRESULT CursorNew(
 
 <dl> <dt>
 
-*TCID* \[ in\]
+*tcid* \[ In\]
 </dt> <dd>
 
 Der Bezeichner des Tablet-Kontexts, in dem der neue Tablettstift hinzugefügt wurde.
 
 </dd> <dt>
 
-*zid* 
+*Cid* 
 </dt> <dd>
 
-Der Bezeichner des neuen tablettstiftobjekts.
+Der Bezeichner des neuen Stiftobjekts.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -76,7 +76,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -86,7 +86,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itableteventsink-Schnittstelle**](itableteventsink.md)
+[**ITabletEventSink-Schnittstelle**](itableteventsink.md)
 </dt> </dl>
 
  

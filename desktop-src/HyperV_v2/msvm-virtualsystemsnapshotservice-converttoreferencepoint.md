@@ -1,7 +1,7 @@
 ---
-description: Konvertieren einer vorhandenen Momentaufnahme eines virtuellen Systems in einen Referenzpunkt Die Momentaufnahme wird als Nebeneffekt gelöscht. Nur Wiederherstellungs Momentaufnahmen können in Verweis Punkte konvertiert werden.
+description: Konvertieren sie eine vorhandene Momentaufnahme des virtuellen Systems in einen Referenzpunkt. Die Momentaufnahme wird als Nebeneffekt gelöscht. Nur Wiederherstellungsmomentaufnahmen können in Verweispunkte konvertiert werden.
 ms.assetid: c634d749-e18f-4a11-a574-2aee705c0722
-title: Converttoreferencepoint-Methode der Msvm_VirtualSystemSnapshotService-Klasse
+title: ConvertToReferencePoint-Methode der Msvm_VirtualSystemSnapshotService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 18eecc1677abaec5893b3749b4ee82f757cbe93e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ae910dee449af4c47afa80622f0f4d431631e05b5e01fd419241bccd7b12548
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117993886"
 ---
-# <a name="converttoreferencepoint-method-of-the-msvm_virtualsystemsnapshotservice-class"></a>Converttoreferencepoint-Methode der MSVM \_ virtualsystemsnapshotservice-Klasse
+# <a name="converttoreferencepoint-method-of-the-msvm_virtualsystemsnapshotservice-class"></a>ConvertToReferencePoint-Methode der Msvm \_ VirtualSystemSnapshotService-Klasse
 
-Konvertieren einer vorhandenen Momentaufnahme eines virtuellen Systems in einen Referenzpunkt Die Momentaufnahme wird als Nebeneffekt gelöscht. Nur Wiederherstellungs Momentaufnahmen können in Verweis Punkte konvertiert werden.
+Konvertieren sie eine vorhandene Momentaufnahme des virtuellen Systems in einen Referenzpunkt. Die Momentaufnahme wird als Nebeneffekt gelöscht. Nur Wiederherstellungsmomentaufnahmen können in Verweispunkte konvertiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ uint32 ConvertToReferencePoint(
 
 <dl> <dt>
 
-*Affectedsnapshot* \[ in\]
+*AffectedSnapshot* \[ In\]
 </dt> <dd>
 
-Verweis auf die betroffene virtuelle System Momentaufnahme.
+Verweis auf die betroffene Momentaufnahme des virtuellen Systems.
 
 </dd> <dt>
 
-*Referencepointsettings* \[ in\]
+*ReferencePointSettings* \[ In\]
 </dt> <dd>
 
-Parameter Einstellungen.
+Parametereinstellungen.
 
 </dd> <dt>
 
-*Resultingreferencepoint* \[ in, out\]
+*ResultingReferencePoint* \[ in, out\]
 </dt> <dd>
 
-Resultierender virtueller System-Referenzpunkt
+Resultierender Referenzpunkt des virtuellen Systems
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden.
@@ -72,7 +72,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegebe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird einer der folgenden Werte zurückgegeben:
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen der folgenden Werte zurück:
 
 <dl> <dt>
 
@@ -82,7 +82,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird einer der folgenden Werte zur
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -91,22 +91,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -115,10 +115,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -127,7 +127,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemsnapshotservice**](msvm-virtualsystemsnapshotservice.md)
+[**Msvm \_ VirtualSystemSnapshotService**](msvm-virtualsystemsnapshotservice.md)
 </dt> </dl>
 
  

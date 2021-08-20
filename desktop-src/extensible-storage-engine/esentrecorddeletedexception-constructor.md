@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrecorddeletedexception-Konstruktor'
-title: Esentrecorddeletedexception-Konstruktor
+description: Weitere Informationen zum EsentRecordDeletedException-Konstruktor
+title: EsentRecordDeletedException-Konstruktor
 TOCTitle: 'EsentRecordDeletedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRecordDeletedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrecorddeletedexception.esentrecorddeletedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d22225c8926568663e8a9f1cffc40713a470d952
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58e26acbf8365a265b1c8ff05dafe4283ecaa1b8f4c819cea1e415750b2b51d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118079684"
 ---
-# <a name="esentrecorddeletedexception-constructor"></a>Esentrecorddeletedexception-Konstruktor
+# <a name="esentrecorddeletedexception-constructor"></a>EsentRecordDeletedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrecorddeletedexception-Klasse.
+Initialisiert eine neue Instanz der EsentRecordDeletedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentRecordDeletedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrecorddeletedexception-Klasse](./esentrecorddeletedexception-class.md)
+[EsentRecordDeletedException-Klasse](./esentrecorddeletedexception-class.md)
 
-[Esentrecorddeletedexception-Elemente](./esentrecorddeletedexception-members.md)
+[EsentRecordDeletedException-Member](./esentrecorddeletedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

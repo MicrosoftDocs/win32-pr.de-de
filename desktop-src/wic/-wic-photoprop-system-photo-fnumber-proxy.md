@@ -1,23 +1,23 @@
 ---
-description: Der Eigenschafts Proxy für die fotometadatenrichtlinie "System. Photo. f Number".
+description: Der Eigenschaftenproxy für die System.Photo.FNumber-Fotometadatenrichtlinie.
 ms.assetid: dadd506f-016d-45b0-abc3-724e3723b243
-title: System. Photo. f Number-Proxy
+title: System.Photo.FNumber-Proxy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0df6f5a3f0854c6cb2084384057a6676b006b1ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94390b57f8ce20398178950b0be56ff23b737523712b2e2aaa25aa35f43267cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117667357"
 ---
-# <a name="systemphotofnumber-proxy"></a>System. Photo. f Number-Proxy
+# <a name="systemphotofnumber-proxy"></a>System.Photo.FNumber-Proxy
 
-Der Eigenschafts Proxy für die fotometadatenrichtlinie "System. Photo. f Number".
+Der Eigenschaftenproxy für die System.Photo.FNumber-Fotometadatenrichtlinie.
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
-Der Eigenschafts Proxy gibt ein rationelles paar a durch das [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Element "uhval" zurück.
+Der Eigenschaftenproxy gibt ein rationales Paar a über das [PROPVARIANT-Element](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) "hmVal" zurück.
 
 ### <a name="containers"></a>Container
 
@@ -27,23 +27,23 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI8
 
-### <a name="denominator"></a>Vorzuschlagen
+### <a name="denominator"></a>Nenner
 
-Highpart des uhval.
+HighPart des "hmVal".
 
 ### <a name="numerator"></a>Zähler
 
-LowPart des uhval.
+LowPart des "hmVal".
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. f Number](../properties/props-system-photo-fnumber.md)
+[System.Photo.FNumber](../properties/props-system-photo-fnumber.md)
 </dt> </dl>
 
  

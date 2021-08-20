@@ -3,7 +3,7 @@ title: SplitButton-Element
 description: Stellt ein Standardmäßiges Split Button-Steuerelement dar.
 ms.assetid: dece1100-ed04-49a3-a16d-3c5d5e7a2225
 keywords:
-- SplitButton-Element Im Windows-Menüband
+- SplitButton-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cf03d85dd0402548d02f107dafb209b68c13bb72
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 53445bc3f57f8a861800f9edcd95d8af2ecfbd54f4055cf8787695dab1f25cb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850772"
 ---
 # <a name="splitbutton-element"></a>SplitButton-Element
 
 Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls-splitbutton.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <SplitButton
@@ -48,7 +48,7 @@ Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -109,7 +109,7 @@ Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) **SplitButton-** oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
@@ -117,7 +117,7 @@ Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element
 
 [**DropDownGallery**](windowsribbon-element-dropdowngallery.md) und [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) sind keine gültigen untergeordneten Elemente von [**DropDownButton,**](windowsribbon-element-dropdownbutton.md) wenn **DropDownButton** ein Nachfolger von [**ApplicationMenu ist.**](windowsribbon-element-applicationmenu.md)
 
-[**SplitButton.MenuGroups muss**](windowsribbon-element-splitbutton-menugroups.md) einmal auftreten, wenn folgende Elemente nicht als untergeordnete Elemente von **SplitButton vorhanden sind:**
+[**SplitButton.MenuGroups**](windowsribbon-element-splitbutton-menugroups.md) muss einmal auftreten, wenn folgende Elemente nicht als untergeordnete Elemente von **SplitButton vorhanden sind:**
 
 -   [**Schaltfläche**](windowsribbon-element-button.md)
 -   [**Checkbox**](windowsribbon-element-checkbox.md)
@@ -216,7 +216,7 @@ In diesem Codeabschnitt werden die **SplitButton-Steuerelementdeklarationen** ge
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

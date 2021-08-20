@@ -1,7 +1,7 @@
 ---
-description: Wird für Szenarien verwendet, die vor der Windows-Anmeldung die 802.1 x-Authentifizierung erfordern.
+description: Wird für Szenarien verwendet, die vor Windows Anmeldung eine 802.1X-Authentifizierung erfordern.
 ms.assetid: 76c8d416-3912-41b1-ac9d-3e6e86a76ceb
-title: Beispiel für Einzel Sign-On Profil
+title: Beispiel für ein einzelnes Sign-On Profil
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 077ed95095150e81ad9a3d7412d1940dcb1b33e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f89f7e9c39123cd7bf55c8bc48ff69d007d150c086714c82c37619c477dd25b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797955"
 ---
-# <a name="single-sign-on-profile-sample"></a>Beispiel für Einzel Sign-On Profil
+# <a name="single-sign-on-profile-sample"></a>Beispiel für ein einzelnes Sign-On Profil
 
-Das Profil Beispiel für Single Sign-on (SSO) kann für Szenarien verwendet werden, für die vor der Windows-Anmeldung die 802.1 x-Authentifizierung erforderlich ist.
+Das Profilbeispiel für einmaliges Anmelden (Single Sign-On, SSO) kann für Szenarien verwendet werden, die vor Windows Anmeldung eine 802.1X-Authentifizierung erfordern.
 
-Dieses Beispiel ist für die Verwendung Wi-Fi geschützten Zugriffs 2-Sicherheit konfiguriert, die im Unternehmens Modus (WPA2-Enterprise) ausgeführt wird. Das Protected Extensible Authentication-Protokoll mit Microsoft Challenge Handshake Authentication Protocol Version 2 (Peer-MSCHAPv2) wird für die Netzwerk Authentifizierung verwendet. Die Windows-Anmelde Informationen werden für die PEAP-MSCHAPv2 Authentifizierung verwendet.
+Dieses Beispiel ist so konfiguriert, dass Wi-Fi Protected Access 2-Sicherheit verwendet wird, die im Enterprise Modus (WPA2-Enterprise) ausgeführt wird. Protected Extensible Authentication Protocol with Microsoft Challenge Handshake Authentication Protocol Version 2 (PEAP-MSCHAPv2) wird für die Netzwerkauthentifizierung verwendet. Die Windows Anmeldeinformationen werden für PEAP-MSCHAPv2 Authentifizierung verwendet.
 
-Obwohl dieses Beispiel für die Verwendung von WPA2-Enterprise und ETAP-MSCHAPv2 konfiguriert ist, können SSO-Profile mit anderen Sicherheits-und Authentifizierungs Typen konfiguriert werden.
+Während dieses Beispiel für die Verwendung von WPA2-Enterprise und PEAP-MSCHAPv2 konfiguriert ist, können SSO-Profile mit anderen Sicherheits- und Authentifizierungstypen konfiguriert werden.
 
-**Windows 7 und Windows Server 2008 R2 mit installiertem drahtlosen LAN-Dienst:** Änderungen werden unter Windows 7 und Windows Server 2008 R2 implementiert, und der drahtlose LAN-Dienst wird installiert, um die Leistung des drahtlos Netzwerks zu optimieren. Die Standardeinstellung für [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) , wenn dieses Element nicht in einem Drahtlos LAN-Profil festgelegt ist, hat sich geändert. Die Standardeinstellung wird unter Windows 7 und Windows Server 2008 R2 in "false" geändert, wobei der drahtlose LAN-Dienst installiert ist. Die Standardeinstellung ist auf Windows Server 2008 und Windows Vista auf "true" festgelegt. Weitere Informationen finden Sie in der Beschreibung des Schema Elements " [**autoswitch**](wlan-profileschema-autoswitch-wlanprofile-element.md) ".
+**Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst:** Änderungen werden auf Windows 7 und Windows Server 2008 R2 mit installiertem Wlan-Dienst implementiert, um die Leistung von Drahtlosnetzwerken zu optimieren. Die Standardeinstellung für [**autoSwitch,**](wlan-profileschema-autoswitch-wlanprofile-element.md) wenn dieses Element nicht in einem WLAN-Profil festgelegt ist, wurde geändert. Die Standardeinstellung wird auf Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst in "false" geändert. Die Standardeinstellung war "true" auf Windows Server 2008 und Windows Vista. Weitere Informationen finden Sie in der [**AutoSwitch-Schemaelementbeschreibung.**](wlan-profileschema-autoswitch-wlanprofile-element.md)
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Der untergeordnete [**Name**](wlan-profileschema-name-wlanprofile-element.md) des [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Elements wird ignoriert. Der Name des Profils, wie er im Profil Speicher gespeichert ist, wird vom untergeordneten [**Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Elements abgeleitet. Die untergeordneten Elemente [**cacheuserdata**](onexschema-cacheuserdata-onex-element.md), [**maxauthfailure**](onexschema-maxauthfailures-onex-element.md), [**authmode**](onexschema-authmode-onex-element.md)und [**SingleSignOn**](onexschema-singlesignon-onex-element.md) des [**Onex**](onexschema-onex-element.md) -Elements werden nicht unterstützt und sollten vor der Verwendung aus dem Profil entfernt werden.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet. Die untergeordneten Elemente [**cacheUserData,**](onexschema-cacheuserdata-onex-element.md) [**maxAuthFailures,**](onexschema-maxauthfailures-onex-element.md) [**authMode**](onexschema-authmode-onex-element.md)und [**singleSignOn**](onexschema-singlesignon-onex-element.md) des [**OneX-Elements**](onexschema-onex-element.md) werden nicht unterstützt und sollten vor der Verwendung aus dem Profil entfernt werden.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>
@@ -99,7 +99,7 @@ Obwohl dieses Beispiel für die Verwendung von WPA2-Enterprise und ETAP-MSCHAPv2
 
 <dl> <dt>
 
-[Beispiele für Funk profile](wireless-profile-samples.md)
+[Beispiele für Funkprofile](wireless-profile-samples.md)
 </dt> </dl>
 
  

@@ -4,23 +4,23 @@ description: VML-Z-Index-Attribut
 ms.assetid: 54a2c556-e40e-462e-a621-ec07911d5261
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc358719f3fa15fa40293e40eef924bd248286c3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 07100b2ecdbda792ea3f7d5550759430539b95b86c5ef76ded2f9238785b1151
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118123770"
 ---
 # <a name="vml-z-index-attribute"></a>VML-Z-Index-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt die Anzeigereihenfolge von überlappenden Formen. Lese-/Schreibzugriff. **Zeichenfolge**.
+Bestimmt die Anzeige reihenfolge überlappender Formen. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
@@ -28,36 +28,36 @@ Bestimmt die Anzeigereihenfolge von überlappenden Formen. Lese-/Schreibzugriff.
 
 **Tagsyntax**
 
-<v: *Element* Style = "z-Index: *Expression* " >
+<v: *element* style="z-index: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. ZIndex = "*Ausdruck*"
+*element* .style.zindex="*expression*"
 
-*Ausdruck* = *Element*. Style. ZIndex
+*expression* = *Element*.style.zindex
 
 **Anmerkungen**
 
-Das **z-Index-** Attribut ähnelt dem standardmäßigen HTML **-z-Index-** Attribut für Stile.
+Das **Z-Index-Attribut** ähnelt dem STANDARDMÄßIGEN **HTML-Z-Index-Attribut** für Stile.
 
 Mögliche Werte:
 
 
 
-| Wert | BESCHREIBUNG                                                                                                                                                                                            |
+| Wert | Beschreibung                                                                                                                                                                                            |
 |-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auto  | Die Reihenfolge, in der die Formen auf der HTML-Seite angezeigt werden, wird von unten nach oben verwendet.                                                                                                                         |
-| order | Eine Zahl, die die Stapel Rangfolge darstellt. Eine Form mit einer höheren Zahl wird so angezeigt, als ob Sie sich überlappen (im "Vordergrund") einer Form mit einer niedrigeren Zahl. Negative Zahlen können verwendet werden. |
+| Automatisch  | Die Reihenfolge, in der die Formen auf der HTML-Seite angezeigt werden, wird von unten nach oben verwendet.                                                                                                                         |
+| order | Eine Zahl, die die Stapelreihenfolge darstellt. Eine Form mit einer höheren Zahl wird so angezeigt, als ob sie eine Form mit einer niedrigeren Zahl überschnappt (vorn). Negative Zahlen können verwendet werden. |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die rote Form wird in "Front" der blauen Form angezeigt, da Sie einen höheren z-Index aufweist.
+Die rote Form wird im "Front" der blauen Form angezeigt, da sie über einen höheren Z-Index verfügt.
 
 
 ```HTML
@@ -71,8 +71,8 @@ Die rote Form wird in "Front" der blauen Form angezeigt, da Sie einen höheren z
 
 
 
-[Beispiel für den Z-Index-Attribut](/previous-versions/ms530275(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für das Z-Index-Attribut](/previous-versions/ms530275(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

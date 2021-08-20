@@ -3,7 +3,7 @@ title: LVM_SETUNICODEFORMAT Meldung (Commctrl.h)
 description: 'LVM_SETUNICODEFORMAT Meldung: Legt das Unicode-Zeichenformatflag für das Steuerelement fest.'
 ms.assetid: e332ae88-821f-4341-a98d-59d8a01a126f
 keywords:
-- LVM_SETUNICODEFORMAT Meldung Windows-Steuerelemente
+- LVM_SETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb0f700cd057bc77eddc699404f37b19a6cc9c39
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1ec9830cd2f5e0ee43c4ed2cd331b15e59727643c03c4841f0e043078de85802
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108120148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830681"
 ---
 # <a name="lvm_setunicodeformat-message"></a>LVM \_ SETUNICODEFORMAT-Nachricht
 
@@ -43,7 +43,7 @@ Bestimmt den Zeichensatz, der vom -Steuerelement verwendet wird. Wenn dieser Wer
 
 Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
@@ -51,15 +51,15 @@ Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ SETUNI
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

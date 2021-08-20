@@ -1,9 +1,9 @@
 ---
-title: EAP-Element (Verbindungs Eigenschaften)
-description: Erfahren Sie mehr über das EAP-Element. Dieses Element erfasst den ausgewählten Methodentyp und die Methoden spezifische Konfiguration. | EAP-Element (Verbindungs Eigenschaften)
+title: Eap-Element (Verbindungseigenschaften)
+description: Erfahren Sie mehr über das Eap-Element. Dieses Element erfasst den ausgewählten Methodentyp und die methodenspezifische Konfiguration. | Eap-Element (Verbindungseigenschaften)
 ms.assetid: 4e9f3869-257e-4b03-93f6-2eec94eaacee
 keywords:
-- EAP-Element EAPHost
+- Eap-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c39812d00ecf9a1183eb81fc03b09b146d751f0e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7750bdb9a5f3c2d6c187b0f765eeb9d7ad88c015403719c16d0b683637b10027
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106357185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086944"
 ---
-# <a name="eap-element-connection-properties"></a>EAP-Element (Verbindungs Eigenschaften)
+# <a name="eap-element-connection-properties"></a>Eap-Element (Verbindungseigenschaften)
 
-Das **EAP** -Element erfasst den ausgewählten Methodentyp und die Methoden spezifische Konfiguration.
+Das **Eap-Element** erfasst den ausgewählten Methodentyp und die methodenspezifische Konfiguration.
 
 ``` syntax
 <xs:element name="Eap
@@ -33,18 +33,18 @@ Das **EAP** -Element erfasst den ausgewählten Methodentyp und die Methoden spez
  />
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Methode kann die konstituierenden Elemente innerhalb des **EAP** -Elements definieren. Die-Methode führt auch eine Schema Validierung für die Elemente in **EAP** aus.
+Die -Methode kann die konstituierenden Elemente innerhalb des **Eap-Elements** definieren. Die -Methode führt auch eine Schemavalidierung für die Elemente in **Eap** durch.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,7 +52,7 @@ Die-Methode kann die konstituierenden Elemente innerhalb des **EAP** -Elements d
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapconnectionpropertiesv1-Schema](baseeapconnectionpropertiesv1schema-schema.md)

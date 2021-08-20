@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Session. releaseresource-Methode'
-title: Session. releaseresource-Methode
+description: Weitere Informationen finden Sie unter Session.ReleaseResource-Methode.
+title: Session.ReleaseResource-Methode
 TOCTitle: 'ReleaseResource method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Session.ReleaseResource
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.session.releaseresource(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e1ed4392deaa285c4446f07205c0d7cc688b8940
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efd2152b16a9148d9a33df6cbfaa53a0f80234ab437315581d928ae56dda1402
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890658"
 ---
-# <a name="sessionreleaseresource-method"></a>Session. releaseresource-Methode
+# <a name="sessionreleaseresource-method"></a>Session.ReleaseResource-Methode
 
-Freigeben der zugrunde liegenden JET_SESID.
+Gibt die zugrunde liegende JET_SESID frei.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Me.ReleaseResource()
 protected override void ReleaseResource()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Sitzungsklasse](./session-class.md)
 
-[Sitzungs Mitglieder](./session-members.md)
+[Sitzungsmitglieder](./session-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

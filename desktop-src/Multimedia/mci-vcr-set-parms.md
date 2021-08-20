@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_SET_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Set- \_ Parameter enthält Parameter für den MCI- \_ Befehl Set für Video-Kassetten-Recorder.
+title: MCI_VCR_SET_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ SET \_ PARMS-Struktur enthält Parameter für den MCI \_ SET-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: f55515f5-14f6-47e4-8be2-4524975fc950
 keywords:
 - MCI_VCR_SET_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0066adf80446843fe5a3e1e3defbb2109484cbb6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9fe32f93500ae4c294bad372868e9f7818c672824611bcbc29c3315eb75a9742
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117802985"
 ---
-# <a name="mci_vcr_set_parms-structure"></a>Struktur der MCI- \_ VCR- \_ Set- \_ Parametern
+# <a name="mci_vcr_set_parms-structure"></a>MCI \_ VCR \_ SET \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Set \_** -Parameter enthält Parameter für den [**MCI-Befehl \_ Set**](mci-set.md) für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ SET \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SET-Befehl**](mci-set.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,114 +54,114 @@ typedef struct tagMCI_VCR_SET_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwtimeformat**
+**dwTimeFormat**
 </dt> <dd>
 
-Aktuelles Uhrzeit Format.
+Aktuelles Zeitformat.
 
 </dd> <dt>
 
-**dwaudiodatei**
+**dwAudio**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**dwtimemode**
+**dwTimeMode**
 </dt> <dd>
 
--Konstante, die die vom Gerät verwendete Zeit Steuerungs Quelle angibt. Bei der Zeit Steuerungs Quelle handelt es sich entweder um eine auf Videoband aufgezeichnete Zeit Leitzahl oder um die Leistungsindikatoren auf dem Gerät, die die videobandbewegung verstehen.
+Konstante, die die vom Gerät verwendete Zeitsteuerungsquelle angibt. Die Zeitsteuerungsquelle ist entweder ein Zeitcode, der auf videotape aufgezeichnet wurde, oder die Indikatoren auf dem Gerät, die videotape movement (Videobandbewegung) verstehen.
 
 </dd> <dt>
 
-**dwrecordformat**
+**dwRecordFormat**
 </dt> <dd>
 
 Aufzeichnungsrate.
 
 </dd> <dt>
 
-**dwcounter Format**
+**dwCounterFormat**
 </dt> <dd>
 
-Format eines neuen Leistungswert Werts.
+Format eines neuen Indikatorzeitwerts.
 
 </dd> <dt>
 
 **dwIndex**
 </dt> <dd>
 
-Inhalt der Bildschirm Anzeige.
+Inhalt der Anzeige auf dem Bildschirm.
 
 </dd> <dt>
 
-**dwtracking**
+**dwTracking**
 </dt> <dd>
 
-Beim Nachverfolgen der VCR-Wiedergabe Rate verwendete Geschwindigkeitsanpassung.
+Geschwindigkeitsanpassung, die beim Nachverfolgen der VCR-Wiedergaberate verwendet wird.
 
 </dd> <dt>
 
-**dwspeed**
+**dwSpeed**
 </dt> <dd>
 
-Wiedergabegeschwindigkeit, die vom Gerät als ganze Zahl verwendet wird. Die normale Wiedergabegeschwindigkeit ist 1000, doppelte Geschwindigkeit 2000 und halb Geschwindigkeit 500.
+Wiedergabegeschwindigkeit, die vom Gerät als ganze Zahl verwendet wird. Die normale Wiedergabegeschwindigkeit beträgt 1000, die doppelte Geschwindigkeit 2000 und die halbe Geschwindigkeit 500.
 
 </dd> <dt>
 
 **dwLength**
 </dt> <dd>
 
-Die Länge des Videobands, wenn die Länge vom Gerät nicht erkennbar ist.
+Videobandlänge, wenn die Länge vom Gerät nicht erkannt werden kann.
 
 </dd> <dt>
 
-**dwcounter**
+**dwCounter**
 </dt> <dd>
 
-Neuer Leistungswert.
+Neuer Indikatorwert.
 
 </dd> <dt>
 
-**dwclock**
+**dwClock**
 </dt> <dd>
 
 Neue Uhrzeit.
 
 </dd> <dt>
 
-**dwpaustitimeout**
+**dwPauseTimeout**
 </dt> <dd>
 
-Neuer Timeout Wert für den anhaltebefehl.
+Neuer Timeoutwert für den Befehl "pause".
 
 </dd> <dt>
 
-**dwprerollduration**
+**dwPrerollDuration**
 </dt> <dd>
 
-Die für die Stabilisierung der VCR-Ausgabe benötigte videobandlänge.
+Videotapelänge, die erforderlich ist, um die VCR-Ausgabe zu stabilieren.
 
 </dd> <dt>
 
-**dwpostrollduration**
+**dwPostrollDuration**
 </dt> <dd>
 
-Die für den VCR-Transport erforderliche Video Bandlänge, wenn ein [**MCI \_**](mci-stop.md) -Befehl zum Beenden oder ein [**MCI \_**](mci-pause.md) -anhaltebefehl ausgegeben wird.
+Videotapelänge, die erforderlich ist, um den VCR-Transport abzuleiten, wenn ein [**MCI \_ STOP-**](mci-stop.md) oder [**MCI \_ PAUSE-Befehl**](mci-pause.md) ausgegeben wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -171,7 +171,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -179,19 +179,19 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Pause**](mci-pause.md)
+[**MCI \_ PAUSE**](mci-pause.md)
 </dt> <dt>
 
-[**MCI- \_ Gruppe**](mci-set.md)
+[**MCI \_ SET**](mci-set.md)
 </dt> <dt>
 
-[**MCI- \_ Beendigung**](mci-stop.md)
+[**MCI \_ STOP**](mci-stop.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

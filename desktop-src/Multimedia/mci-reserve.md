@@ -1,9 +1,9 @@
 ---
-title: MCI_RESERVE Befehl (MMSYSTEM. h)
-description: Der Befehl MCI \_ Reserve ordnet dem Arbeitsbereich der Gerätetreiber Instanz zusammenhängenden Speicherplatz für die Verwendung bei der nachfolgenden Aufzeichnung zu. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: MCI_RESERVE Befehl (Mmsystem.h)
+description: Der MCI \_ RESERVE-Befehl ordnet dem Arbeitsbereich der Gerätetreiberinstanz zusammenhängenden Speicherplatz für die Verwendung mit nachfolgender Aufzeichnung zu. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: 01f0a377-0179-4b05-a642-af152a7a12ae
 keywords:
-- MCI_RESERVE Befehl Windows-Multimedia
+- MCI_RESERVE Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b89eb457b63012aa9ee5624efef95945258d42c8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f21570d37fba9bc0c9595715715a9291aedd30650081edfa5d50f7264cf16c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117803461"
 ---
-# <a name="mci_reserve-command"></a>MCI- \_ Reserve Befehl
+# <a name="mci_reserve-command"></a>MCI \_ RESERVE-Befehl
 
-Der Befehl MCI \_ Reserve ordnet dem Arbeitsbereich der Gerätetreiber Instanz zusammenhängenden Speicherplatz für die Verwendung bei der nachfolgenden Aufzeichnung zu. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Der MCI \_ RESERVE-Befehl ordnet dem Arbeitsbereich der Gerätetreiberinstanz zusammenhängenden Speicherplatz für die Verwendung mit nachfolgender Aufzeichnung zu. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,52 +43,52 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpReserve"></span><span id="lpreserve"></span><span id="LPRESERVE"></span>*lpreserve*
+<span id="lpReserve"></span><span id="lpreserve"></span><span id="LPRESERVE"></span>*lpReserve*
 </dt> <dd>
 
-Zeiger auf eine [**MCI- \_ DGV- \_ Reserve- \_ Parametern**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_reserve_parmsa) -Struktur.
+Zeiger auf eine [**MCI \_ DGV \_ RESERVE \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_reserve_parmsa)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Arbeitsbereich nicht gespeicherte Daten enthält, gehen diese Daten verloren. Wenn der Speicherplatz vor dem Aufzeichnen nicht reserviert ist, führt der [MCI- \_ Daten Satz](mci-record.md) Befehl eine implizite Reserve mit gerätespezifischen Standardparametern aus. Bei manchen Implementierungen ist Reserve nicht erforderlich und kann vom Gerätetreiber ignoriert werden. Durch das explizite reservieren von Speicherplatz können Sie besser steuern, wann die Verzögerung für die Datenträger Zuordnung erfolgt, wie viel Speicherplatz belegt wird und wo der Speicherplatz zugeordnet ist. Die Menge und der Speicherort des bereits für diese Geräte Instanz reservierten Speicherplatzes können durch das erneute ausstellen der MCI-Reserve geändert werden \_ . Der zugeordnete und noch nicht verwendete Speicherplatz wird nicht aufgehoben, bis aufgezeichnete Daten gespeichert werden oder bis die Gerätetreiber Instanz geschlossen ist.
+Wenn der Arbeitsbereich nicht gespeicherte Daten enthält, geht er verloren. Wenn vor der Aufzeichnung kein Speicherplatz reserviert wird, führt der [MCI \_ RECORD-Befehl](mci-record.md) eine implizite Reserve mit gerätespezifischen Standardparametern aus. Bei einigen Implementierungen ist die Reservierung nicht erforderlich und wird möglicherweise vom Gerätetreiber ignoriert. Durch das explizite Reservieren von Speicherplatz können Sie besser steuern, wann die Verzögerung für die Datenträgerzuordnung auftritt, wie viel Speicherplatz belegt wird und wo der Speicherplatz zugeordnet wird. Die Menge und der Speicherort des bereits für diese Geräteinstanz reservierten Speicherplatzes können durch erneute Ausgabe von MCI RESERVE geändert \_ werden. Der zugeordnete und noch nicht belegte Speicherplatz wird erst freigegeben, wenn aufgezeichnete Daten gespeichert oder die Gerätetreiberinstanz geschlossen wurde.
 
-Wenn das Video mit dem MCI- \_ Flag off des Befehls [MCI \_ setvideo](mci-setvideo.md) ausgeschaltet ist, enthält der reservierte Speicherplatz kein Video. Wenn Audiodaten mit dem MCI- \_ Flag off des Befehls [MCI \_ setaudioausgeschaltet](mci-setaudio.md) werden, umfasst der reservierte Speicherplatz keine Audiodaten. Wenn sowohl Audiodaten als auch Videos ausgeschaltet sind oder die angeforderte Größe 0 (null) ist, ist kein Speicherplatz reserviert, und der vorhandene reservierte Speicherplatz wird aufgehoben.
+Wenn video mit dem MCI \_ OFF-Flag des [MCI \_ SETVIDEO-Befehls](mci-setvideo.md) deaktiviert wird, enthält der reservierte Speicherplatz kein Video. Wenn audio mit dem MCI \_ OFF-Flag des [MCI \_ SETAUDIO-Befehls](mci-setaudio.md) deaktiviert wird, enthält der reservierte Speicherplatz keine Audiodaten. Wenn sowohl Audio als auch Video deaktiviert sind oder die angeforderte Größe 0 (null) ist, wird kein Speicherplatz reserviert, und die Zuordnung des vorhandenen reservierten Speicherplatzes wird freigegeben.
 
-Die folgenden zusätzlichen Flags gelten für Digital-Video-Geräte:
+Die folgenden zusätzlichen Flags gelten für Digitalvideogeräte:
 
 <dl> <dt>
 
-<span id="MCI_DGV_RESERVE_IN"></span><span id="mci_dgv_reserve_in"></span>MCI- \_ DGV- \_ Reserve \_ in
+<span id="MCI_DGV_RESERVE_IN"></span><span id="mci_dgv_reserve_in"></span>MCI \_ DGV \_ RESERVE \_ IN
 </dt> <dd>
 
-Der **lpstrinpath** -Member der durch *lpreserve* identifizierten Struktur enthält die Adresse eines Puffers, der den Speicherort einer temporären Datei enthält. Der Puffer enthält nur das Laufwerk und den Verzeichnispfad der Datei, die zum Speichern der aufgezeichneten Daten verwendet wird. der Dateiname wird vom Gerätetreiber angegeben. Diese temporäre Datei wird gelöscht, wenn die Geräte Instanz geschlossen wird, es sei denn, Sie wird explizit gespeichert. Wenn dieses Flag weggelassen wird, gibt der Gerätetreiber an, wo Speicherplatz zugeordnet ist.
+Der **lpstrPath-Member** der von *lpReserve* identifizierten Struktur enthält eine Adresse eines Puffers, der den Speicherort einer temporären Datei enthält. Der Puffer enthält nur das Laufwerk und den Verzeichnispfad der Datei, die zum Speichern aufgezeichneter Daten verwendet wird. Der Dateiname wird vom Gerätetreiber angegeben. Diese temporäre Datei wird gelöscht, wenn die Geräteinstanz geschlossen wird, es sei denn, sie wird explizit gespeichert. Wenn dieses Flag ausgelassen wird, gibt der Gerätetreiber an, wo Speicherplatz zugewiesen wird.
 
 </dd> <dt>
 
-<span id="MCI_DGV_RESERVE_SIZE"></span><span id="mci_dgv_reserve_size"></span>MCI- \_ DGV- \_ Reserve \_ Größe
+<span id="MCI_DGV_RESERVE_SIZE"></span><span id="mci_dgv_reserve_size"></span>MCI \_ DGV \_ RESERVE \_ SIZE
 </dt> <dd>
 
-Der **dwSize** -Member der durch *lpreserve* identifizierten Struktur gibt die ungefähre Menge an Speicherplatz an, die im Arbeitsbereich für die Aufzeichnung reserviert werden soll. Der Wert wird im aktuellen Zeitformat angegeben. Die Menge des Speicherplatzes wird aus der angeforderten Zeit geschätzt und aus dem Dateiformat und Video-und audioalgorithmus sowie Qualitätswerten. Wenn dieses Flag weggelassen wird, verwendet der Gerätetreiber möglicherweise einen Standardwert, den er definiert.
+Der **dwSize-Member** der von *lpReserve* identifizierten Struktur gibt den ungefähren Speicherplatz an, der im Arbeitsbereich für die Aufzeichnung reserviert werden soll. Der Wert wird im aktuellen Zeitformat angegeben. Der Speicherplatz auf dem Datenträger wird ab dem angeforderten Zeitpunkt geschätzt, ab dem Dateiformat, Video- und Audioalgorithmus sowie Qualitätswerte wirksam sind. Wenn dieses Flag ausgelassen wird, verwendet der Gerätetreiber möglicherweise einen von ihm definierten Standardwert.
 
 </dd> </dl>
 
@@ -100,7 +100,7 @@ Der **dwSize** -Member der durch *lpreserve* identifizierten Struktur gibt die u
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ Der **dwSize** -Member der durch *lpreserve* identifizierten Struktur gibt die u
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

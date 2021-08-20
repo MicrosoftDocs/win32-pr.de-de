@@ -1,31 +1,31 @@
 ---
-description: Der Systemadministrator kann Kontingente für bestimmte Benutzer auf einem Volume festlegen. Der Administrator kann auch Standard Kontingente für das Volume festlegen.
+description: Der Systemadministrator kann Kontingente für bestimmte Benutzer auf einem Volume festlegen. Der Administrator kann auch Standardkontingente für das Volume festlegen.
 ms.assetid: e8fa6a7b-f4b9-48af-9538-d41c12b7c3b6
-title: Verwaltung von Datenträger Kontingenten auf System Ebene
+title: Verwaltung von Datenträgerkontingenten auf Systemebene
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4987becce54b75f2bc06710dce85500813520f10
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2465d082ff93ee6a4ef02351e17e6b1214d005dc1d13be27f83db89e78c6bcdc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214766"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117996417"
 ---
-# <a name="system-level-administration-of-disk-quotas"></a>Verwaltung von Datenträger Kontingenten auf System Ebene
+# <a name="system-level-administration-of-disk-quotas"></a>Verwaltung von Datenträgerkontingenten auf Systemebene
 
-Der Systemadministrator kann Kontingente für bestimmte Benutzer auf einem Volume festlegen. Der Administrator kann auch Standard Kontingente für das Volume festlegen. Ein neuer Benutzer auf dem Volume erhält das Standard Kontingent, es sei denn, der Administrator hat ein speziell für diesen Benutzerspezifisches Kontingent festgelegt.
+Der Systemadministrator kann Kontingente für bestimmte Benutzer auf einem Volume festlegen. Der Administrator kann auch Standardkontingente für das Volume festlegen. Ein neuer Benutzer auf dem Volume erhält das Standardkontingent, es sei denn, der Administrator hat ein Kontingent speziell für diesen Benutzer eingerichtet.
 
-Der Administrator kann die Ebene der Kontingent Nachverfolgung und Erzwingung (oder Kontingent Status), die Standard Kontingent Limits und die Kontingent Informationen pro Benutzer Abfragen. Die Kontingent Informationen pro Benutzer enthalten die feste Kontingent Grenze, den Warnungs Schwellenwert und die Kontingent Nutzung des Benutzers. Der Administrator kann die Kontingent Erzwingung auch aktivieren oder deaktivieren.
+Der Administrator kann die Ebene der Kontingentnachverfolgung und -erzwingung (oder Kontingentzustände), die Standardkontingentgrenzen und die Benutzerkontingentinformationen abfragen. Die Kontingentinformationen pro Benutzer enthalten die harte Kontingentgrenze des Benutzers, den Warnungsschwellenwert und die Kontingentnutzung. Der Administrator kann auch die Kontingenterzwingung aktivieren oder deaktivieren.
 
-Es gibt drei Kontingent Zustände, wie in der folgenden Tabelle dargestellt.
+Es gibt drei Kontingentzustände, wie in der folgenden Tabelle gezeigt.
 
 
 
-| State          | BESCHREIBUNG                                                                                                                                                                              |
+| State          | Beschreibung                                                                                                                                                                              |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kontingent deaktiviert | Kontingent Nutzungsänderungen werden nicht nachverfolgt, die Kontingent Limits werden jedoch nicht entfernt. In diesem Zustand wird die Leistung von Datenträger Kontingenten nicht beeinträchtigt. Dies ist die Standardeinstellung.                         |
-| Kontingent nachverfolgt  | Kontingent Nutzungsänderungen werden nachverfolgt, aber Kontingent Limits werden nicht erzwungen. In diesem Zustand werden keine Kontingent Verletzungs Ereignisse generiert, und es sind keine Datei Vorgänge aufgrund von Datenträger Kontingent Verstößen fehlgeschlagen. |
-| Kontingent erzwungen | Kontingent Nutzungsänderungen werden nachverfolgt, und Kontingent Limits werden erzwungen.                                                                                                                           |
+| Kontingent deaktiviert | Änderungen der Kontingentnutzung werden nicht nachverfolgt, aber die Kontingentgrenzen werden nicht entfernt. In diesem Zustand wird die Leistung durch Datenträgerkontingente nicht beeinträchtigt. Dies ist die Standardeinstellung.                         |
+| Nachverfolgte Kontingente  | Änderungen der Kontingentnutzung werden nachverfolgt, aber Kontingentgrenzen werden nicht erzwungen. In diesem Zustand werden keine Kontingentverletzungsereignisse generiert, und dateivorgänge können aufgrund von Datenträgerkontingentverletzungen nicht fehlschlagen. |
+| Erzwungenes Kontingent | Änderungen der Kontingentnutzung werden nachverfolgt, und Kontingentgrenzen werden erzwungen.                                                                                                                           |
 
 
 

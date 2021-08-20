@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentspavailextcacheoudef-Exception-Konstruktor'
-title: Esentspavailextcacheoudef SyncException-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSPAvailExtCacheOutOfSyncException-Konstruktor'
+title: EsentSPAvailExtCacheOutOfSyncException-Konstruktor
 TOCTitle: 'EsentSPAvailExtCacheOutOfSyncException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSPAvailExtCacheOutOfSyncException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentspavailextcacheoutofsyncexception.esentspavailextcacheoutofsyncexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0641664a5c886097a5928e57daae33bd97797748
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0df3dc17fee943eaf6ac2f962f5d11f93bd04e9dcfab9166317fc6f8918a697
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118078428"
 ---
-# <a name="esentspavailextcacheoutofsyncexception-constructor"></a>Esentspavailextcacheoudef SyncException-Konstruktor
+# <a name="esentspavailextcacheoutofsyncexception-constructor"></a>EsentSPAvailExtCacheOutOfSyncException-Konstruktor
 
-Initialisiert eine neue Instanz der esentspavailextcacheouesspsyncexception-Klasse.
+Initialisiert eine neue Instanz der EsentSPAvailExtCacheOutOfSyncException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentSPAvailExtCacheOutOfSyncException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentspavailextcacheoudef SyncException-Klasse](./esentspavailextcacheoutofsyncexception-class.md)
+[EsentSPAvailExtCacheOutOfSyncException-Klasse](./esentspavailextcacheoutofsyncexception-class.md)
 
-[Esentspavailextcacheoudefsyncexception-Member](./esentspavailextcacheoutofsyncexception-members.md)
+[EsentSPAvailExtCacheOutOfSyncException-Member](./esentspavailextcacheoutofsyncexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

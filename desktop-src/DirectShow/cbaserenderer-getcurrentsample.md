@@ -1,7 +1,7 @@
 ---
-description: Die getcurrentsample-Methode ruft das aktuelle Beispiel ab.
+description: Die GetCurrentSample-Methode ruft das aktuelle Beispiel ab.
 ms.assetid: cfdc66e3-7d32-47b7-87f6-99dd9513c93b
-title: Cbaserderderer. getcurrentsample-Methode (renbase. h)
+title: CBaseRenderer.GetCurrentSample-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 48c42ff02b22d30138fcad7d1e8af5e57a391b99
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5ffe3cdf95d5ab248956e670c04572140fa4621fff5b0cb5183f9a7cbd9b837e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822721"
 ---
-# <a name="cbaserenderergetcurrentsample-method"></a>Cbaserderderer. getcurrentsample-Methode
+# <a name="cbaserenderergetcurrentsample-method"></a>CBaseRenderer.GetCurrentSample-Methode
 
-Die- `GetCurrentSample` Methode ruft das aktuelle Beispiel ab.
+Die `GetCurrentSample` -Methode ruft das aktuelle Beispiel ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels zurück, oder **null** , wenn keine Stichprobe verfügbar ist.
+Gibt einen Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels oder **NULL** zurück, wenn kein Beispiel verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode nicht **null** zurückgibt, ruft die Methode vor der Rückgabe die Methode " **adressf** " für den [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Zeiger auf. Der Aufrufer muss den Zeiger freigeben. (Implizit müssen Sie den Rückgabewert einer Variablen zuweisen, damit Sie Sie später freigeben können.)
+Sofern die Methode nicht **NULL** zurückgibt, ruft die Methode **AddRef** für den [**IMediaSample-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-imediasample) auf, bevor sie sie zurückgibt. Der Aufrufer muss den Zeiger freigeben. (ImPlizierend müssen Sie den Rückgabewert einer Variablen zuweisen, damit Sie ihn später freigeben können.)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Wenn die Methode nicht **null** zurückgibt, ruft die Methode vor der Rückgabe 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Wenn die Methode nicht **null** zurückgibt, ruft die Methode vor der Rückgabe 
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  
