@@ -65,13 +65,13 @@ Diese Methode gibt keinen Wert zurück.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (decimal 445) wird ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise wird die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800A01BD (Dezimalzahl 445) ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **NewFolder verwendet,** um den neuen Ordner C: \\ TestFolder zu erstellen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel wird **NewFolder** verwendet, um den neuen Ordner C: \\ TestFolder zu erstellen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
 JScript:
 

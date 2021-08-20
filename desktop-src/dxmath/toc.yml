@@ -327,7 +327,7 @@
             - name: Vektorfunktionen der DirectXMath-Bibliothek
               href: ovw-xnamath-reference-functions-vector.md
               items:
-                - name: Vektorarithmetische Funktionen
+                - name: Arithmetische Vektorfunktionen
                   href: ovw-xnamath-reference-functions-vector-arithmetic.md
                   items:
                     - name: XMVectorAbs
@@ -342,7 +342,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorclamp
                     - name: XMVectorDivide
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectordivide
-                    - name: XMVectorFloor
+                    - name: XMVectorAct
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorfloor
                     - name: XMVectorIsInfinite
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorisinfinite
@@ -434,7 +434,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorlessorequal
                     - name: XMVectorNearEqual
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectornearequal
-                - name: Komponentenbezogene Vektorfunktionen
+                - name: Komponentenweise Vektorfunktionen
                   href: ovw-xnamath-reference-functions-vector-component-wise.md
                   items:
                     - name: XMVectorInsert
@@ -459,7 +459,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorsplatw
                     - name: XMVectorSplatX
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorsplatx
-                    - name: XMVectorSplatY
+                    - name: XMVectorSplaty
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorsplaty
                     - name: XMVectorSplatZ
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorsplatz
@@ -488,7 +488,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorlerp
                     - name: XMVectorLerpV
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorlerpv
-                - name: Vektorinitialisierungsfunktionen
+                - name: Vektorin initialisierungsfunktionen
                   href: ovw-xnamath-reference-functions-vector-initialization.md
                   items:
                     - name: XMVectorFalseInt
@@ -525,7 +525,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectortrueint
                     - name: XMVectorZero
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvectorzero
-                - name: Transzendente Vektorfunktionen
+                - name: Transzendentale Vektorfunktionen
                   href: ovw-xnamath-reference-functions-vector-transcendental.md
                   items:
                     - name: XMVectorACos
@@ -585,7 +585,7 @@
             - name: 2D-Vektorfunktionen der DirectXMath-Bibliothek
               href: ovw-xnamath-reference-functions-vector2.md
               items:
-                - name: DirectXMath Library 2D vector comparison functions (2D-Vektorvergleichsfunktionen der DirectXMath-Bibliothek)
+                - name: 'DirectXMath Library: 2D-Vektorvergleichsfunktionen'
                   href: ovw-xnamath-reference-functions-vector2-comparison.md
                   items:
                     - name: XMVector2Equal
@@ -863,7 +863,7 @@
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvector4refract
                     - name: XMVector4RefractV
                       href: /windows/win32/api/directxmath/nf-directxmath-xmvector4refractv
-                - name: Transformationsfunktionen für 4D-Vektoren der DirectXMath-Bibliothek
+                - name: 4D-Vektortransformationsfunktionen der DirectXMath Library
                   href: ovw-xnamath-reference-functions-vector4-transformation.md
                   items:
                     - name: XMVector4Transform
@@ -900,7 +900,7 @@
                   href: /previous-versions/windows/desktop/legacy/hh855922(v=vs.85)
                 - name: 'Intersects(XMVECTOR, XMVECTOR, XMVECTOR, XMVECTOR, XMVECTOR, XMVECTOR)'
                   href: /previous-versions/windows/desktop/legacy/hh855933(v=vs.85)
-            - name: Hilfsprogrammfunktionen der DirectXMath-Bibliothek
+            - name: DirectXMath Library-Hilfsprogrammfunktionen
               href: ovw-xnamath-utilities.md
               items:
                 - name: XMComparisonAllFalse
@@ -921,7 +921,7 @@
                   href: /windows/win32/api/directxmath/nf-directxmath-xmfresnelterm
                 - name: XMVerifyCPUSupport
                   href: /windows/win32/api/directxmath/nf-directxmath-xmverifycpusupport
-            - name: Vektorzugriffsfunktionen der DirectXMath-Bibliothek
+            - name: Vektoraccessorfunktionen der DirectXMath-Bibliothek
               href: ovw-xnamath-reference-functions-accessors.md
               items:
                 - name: XMVectorGetByIndex
@@ -1494,14 +1494,14 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(constfloat)
                         - name: XMFLOAT3PK (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(constfloat)
-                        - name: 'XMFLOAT3PK (float, float, float)'
+                        - name: 'XMFLOAT3PK (float,float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(float_float_float)
                         - name: XMFLOAT3PK (uint32_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(uint32_t)
                     - name: XMFLOAT3PK-Operatoren
                       href: ovw-xmfloat3pk-operators.md
                       items:
-                        - name: operator uint32_t
+                        - name: Operator uint32_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-operatoruint32_t
                         - name: operator =
                           href: xmfloat3pk-operator-eq.md
@@ -1523,14 +1523,14 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3se-xmfloat3se(constfloat)
                         - name: XMFLOAT3SE (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3se-xmfloat3se(constfloat)
-                        - name: 'XMFLOAT3SE (float, float, float)'
+                        - name: 'XMFLOAT3SE (float,float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3se-xmfloat3se(float_float_float)
                         - name: XMFLOAT3SE (uint32_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3se-xmfloat3se(uint32_t)
                     - name: XMFLOAT3SE-Operatoren
                       href: ovw-xmfloat3se-operators.md
                       items:
-                        - name: operator uint32_t
+                        - name: Operator uint32_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmfloat3se-operatoruint32_t
                         - name: operator =
                           href: xmfloat3se-operator-eq.md
@@ -1552,7 +1552,7 @@
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat3x3-xmfloat3x3
                         - name: XMFLOAT3X3 (float)
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat3x3-xmfloat3x3(constfloat)
-                        - name: 'XMFLOAT3X3 (float,float,float,float,float,float,float,float,float)'
+                        - name: 'XMFLOAT3X3 (float,float,float,float,float,float,float,float,float,float,float,float)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat3x3-xmfloat3x3(float_float_float_float_float_float_float_float_float)
                     - name: XMFLOAT3X3-Operatoren
                       href: ovw-xmfloat3x3-operators.md
@@ -1617,7 +1617,7 @@
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4-xmfloat4(constfloat)
                         - name: XMFLOAT4 (float)
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4a-xmfloat4a(constfloat)
-                        - name: 'XMFLOAT4 (float, float, float, float)'
+                        - name: 'XMFLOAT4 (float,float,float,float)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4-xmfloat4(float_float_float_float)
                     - name: XMFLOAT4-Operatoren
                       href: ovw-xmfloat4-operators.md
@@ -1639,7 +1639,7 @@
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x3-xmfloat4x3
                         - name: XMFLOAT4X3 (float)
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x3-xmfloat4x3(constfloat)
-                        - name: 'XMFLOAT4X3 (float,float,float,float,float,float,float,float,float,float,float,float,float)'
+                        - name: 'XMFLOAT4X3 (float,float,float,float,float,float,float,float,float,float,float,float,float,float)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x3-xmfloat4x3(float_float_float_float_float_float_float_float_float_float_float_float)
                     - name: XMFLOAT4X3-Operatoren
                       href: ovw-xmfloat4x3-operators.md
@@ -1668,7 +1668,7 @@
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x4-xmfloat4x4
                         - name: XMFLOAT4X4 (float)
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x4-xmfloat4x4(constfloat)
-                        - name: 'XMFLOAT4X4 (float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)'
+                        - name: 'XMFLOAT4X4 (float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmfloat4x4-xmfloat4x4(float_float_float_float_float_float_float_float_float_float_float_float_float_float_float_float)
                     - name: XMFLOAT4X4-Operatoren
                       href: ovw-xmfloat4x4-operators.md
@@ -1697,7 +1697,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf2-xmhalf2(constfloat)
                         - name: XMHALF2 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf2-xmhalf2(constfloat)
-                        - name: 'XMHALF2 (float, float)'
+                        - name: 'XMHALF2 (float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf2-xmhalf2(float_float)
                         - name: XMHALF2 (HALF)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf2-xmhalf2(consthalf)
@@ -1721,7 +1721,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-xmhalf4(constfloat)
                         - name: XMHALF4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-xmhalf4(constfloat)
-                        - name: 'XMHALF4 (float,float,float,float)'
+                        - name: 'XMHALF4 (float, float, float, float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-xmhalf4(float_float_float_float)
                         - name: XMHALF4 (HALF)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-xmhalf4(consthalf)
@@ -1807,14 +1807,14 @@
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-xmmatrix(constfloat)
                         - name: 'XMMATRIX (float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-xmmatrix(float_float_float_float_float_float_float_float_float_float_float_float_float_float_float_float)
-                        - name: 'XMMATRIX (XMVECTOR,XMVECTOR,XMVECTOR,XMVECTOR)'
+                        - name: 'XMMATRIX (XMVECTOR, XMVECTOR, XMVECTOR, XMVECTOR)'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-xmmatrix(fxmvector_fxmvector_fxmvector_cxmvector)
                     - name: XMMATRIX-Operatoren
                       href: ovw-xmmatrix-operators.md
                       items:
                         - name: '*-Operator'
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-operator-mult
-                        - name: operator *=
+                        - name: Operator *=
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-operator-mult-assign
                         - name: operator =
                           href: /windows/win32/api/directxmath/nf-directxmath-xmmatrix-operator-assign
@@ -1838,7 +1838,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constfloat)
                         - name: XMSHORT2 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constfloat)
-                        - name: 'XMSHORT2 (float,float)'
+                        - name: 'XMSHORT2 (float, float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(float_float)
                         - name: XMSHORT2 (int16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constint16_t)
@@ -1862,7 +1862,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort4-xmshort4(constfloat)
                         - name: XMSHORT4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort4-xmshort4(constfloat)
-                        - name: 'XMSHORT4 (float,float,float,float)'
+                        - name: 'XMSHORT4 (float, float, float, float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort4-xmshort4(float_float_float_float)
                         - name: XMSHORT4 (int16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshort4-xmshort4(constfloat)
@@ -1886,7 +1886,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn2-xmshortn2(constfloat)
                         - name: XMSHORTN2 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn2-xmshortn2(constfloat)
-                        - name: 'XMSHORTN2 (float,float)'
+                        - name: 'XMSHORTN2 (float, float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn2-xmshortn2(float_float)
                         - name: XMSHORTN2 (int16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn2-xmshortn2(constfloat)
@@ -1910,7 +1910,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-xmshortn4(constfloat)
                         - name: XMSHORTN4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-xmshortn4(constfloat)
-                        - name: 'XMSHORTN4 (float,float,float,float)'
+                        - name: 'XMSHORTN4 (float, float, float, float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-xmshortn4(float_float_float_float)
                         - name: XMSHORTN4 (int16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-xmshortn4(constint16_t)
@@ -1934,7 +1934,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmu555-xmu555(constfloat_bool)
                         - name: 'XMU555 (float,bool)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmu555-xmu555(constfloat_bool)
-                        - name: 'XMU555 (float,float,float,bool)'
+                        - name: 'XMU555 (float, float, float, bool)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmu555-xmu555(float_float_float_bool)
                         - name: 'XMU555 (int8_t,bool)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmu555-xmu555(constuint8_t_bool)
@@ -1945,7 +1945,7 @@
                     - name: XMU555-Operatoren
                       href: ovw-xmu555-operators.md
                       items:
-                        - name: Operator uint16_t
+                        - name: operator uint16_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmu555-operatoruint16_t
                         - name: operator =
                           href: xmu555-operator-eq.md
@@ -2229,7 +2229,7 @@
                     - name: XMUNIBBLE4-Operatoren
                       href: ovw-xmunibble4-operators.md
                       items:
-                        - name: operator uint16_t
+                        - name: Operator uint16_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmunibble4-operatoruint16_t
                         - name: operator =
                           href: xmunibble4-operator-eq.md
@@ -2251,7 +2251,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2
                         - name: XMUSHORT2 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(constfloat)
-                        - name: 'XMUSHORT2 (float, float)'
+                        - name: 'XMUSHORT2 (float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(float_float)
                         - name: XMUSHORT2 (uint16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(constuint16_t)
@@ -2275,7 +2275,7 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constfloat)
                         - name: XMUSHORT4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constfloat)
-                        - name: 'XMUSHORT4 (float, float, float, float)'
+                        - name: 'XMUSHORT4 (float,float,float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(float_float_float_float)
                         - name: XMUSHORT4 (uint16_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constuint16_t)
@@ -2345,14 +2345,14 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdec4-xmxdec4(constfloat)
                         - name: XMXDEC4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdec4-xmxdec4(constfloat)
-                        - name: 'XMXDEC4 (float, float, float, float)'
+                        - name: 'XMXDEC4 (float,float,float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdec4-xmxdec4(float_float_float_float)
                         - name: XMXDEC4 (uint32_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdec4-xmxdec4(uint32_t)
                     - name: XMXDEC4-Operatoren
                       href: ovw-xmxdec4-operators.md
                       items:
-                        - name: operator uint32_t
+                        - name: Operator uint32_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdec4-operatoruint32_t
                         - name: operator =
                           href: xmxdec4-operator-eq.md
@@ -2374,14 +2374,14 @@
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdecn4-xmxdecn4(constfloat)
                         - name: XMXDECN4 (float)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdecn4-xmxdecn4(constfloat)
-                        - name: 'XMXDECN4 (float, float, float, float)'
+                        - name: 'XMXDECN4 (float,float,float,float)'
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdecn4-xmxdecn4(float_float_float_float)
                         - name: XMXDECN4 (uint32_t)
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdecn4-xmxdecn4(uint32_t)
                     - name: XMXDECN4-Operatoren
                       href: ovw-xmxdecn4-operators.md
                       items:
-                        - name: operator uint32_t
+                        - name: Operator uint32_t
                           href: /windows/win32/api/directxpackedvector/nf-directxpackedvector-xmxdecn4-operatoruint32_t
                         - name: operator =
                           href: xmxdecn4-operator-eq.md
@@ -2437,31 +2437,31 @@
                       items:
                         - name: 'CreateFromPoints (BoundingBox,size_t,XMFLOAT3,size_t)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-createfrompoints(boundingbox__size_t_constxmfloat3_size_t)
-                        - name: 'CreateFromPoints (BoundingBox, XMVECTOR,XMVECTOR)'
+                        - name: 'CreateFromPoints (BoundingBox, XMVECTOR, XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-createfrompoints
                     - name: Schneidet
                       href: boundingbox-intersects.md
                       items:
                         - name: Überschneiden (BoundingBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(constboundingbox_)
-                        - name: Überschneiden (BoundingFrustum)
+                        - name: Intersects (BoundingFrustum)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(constboundingfrustum_)
-                        - name: Überschneiden (BoundingOrientedBox)
+                        - name: Intersects (BoundingOrientedBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(constboundingorientedbox_)
-                        - name: Überschneiden (BoundingSphere)
+                        - name: Intersects (BoundingSphere)
                           href: /previous-versions/windows/desktop/legacy/hh437825(v=vs.85)
-                        - name: Überschneiden (XMVECTOR)
+                        - name: Intersects (XMVECTOR)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(fxmvector)
-                        - name: 'Schnitte (XMVECTOR,XMVECTOR,float)'
+                        - name: 'Intersects (XMVECTOR, XMVECTOR, float)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(fxmvector_fxmvector_float_)
-                        - name: 'Schnitte (XMVECTOR, XMVECTOR,XMVECTOR)'
+                        - name: 'Intersects (XMVECTOR,XMVECTOR,XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-intersects(fxmvector_fxmvector_fxmvector)
                     - name: Transformieren
                       href: boundingbox-transform.md
                       items:
-                        - name: 'Transformation (BoundingBox,float,XMVECTOR,XMVECTOR)'
+                        - name: 'Transform (BoundingBox,float,XMVECTOR,XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-transform(boundingbox__float_fxmvector_fxmvector)
-                        - name: 'Transformieren (BoundingBox, XMMATRIX)'
+                        - name: 'Transform (BoundingBox,XMMATRIX)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingbox-transform(boundingbox__float_fxmvector_fxmvector)
                     - name: ContainedBy
                       href: /windows/win32/api/DirectXCollision/nf-directxcollision-boundingbox-containedby
@@ -2483,20 +2483,20 @@
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum
                     - name: BoundingFrustum (BoundingFrustum)
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constboundingfrustum_)
-                    - name: 'BoundingFrustum (XMFLOAT3,XMFLOAT4,float,float,float,float,float,float,float)'
+                    - name: 'BoundingFrustum (XMFLOAT3,XMFLOAT4,float,float,float,float,float)'
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constxmfloat3__constxmfloat4__float_float_float_float_float_float)
                     - name: BoundingFrustum (XMMATRIX)
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(cxmmatrix)
                 - name: Felder
                   href: boundingfrustum-fields.md
                   items:
-                    - name: BottomS bottomS bottom
+                    - name: BottomSlope
                       href: boundingfrustum-bottomslope.md
                     - name: CORNER_COUNT
                       href: boundingfrustum-corner-count.md
                     - name: Far
                       href: boundingfrustum-far.md
-                    - name: LeftSlop
+                    - name: LeftSlope
                       href: boundingfrustum-leftslope.md
                     - name: Near
                       href: boundingfrustum-near.md
@@ -2504,9 +2504,9 @@
                       href: boundingfrustum-orientation.md
                     - name: Origin
                       href: boundingfrustum-origin.md
-                    - name: RightSlop
+                    - name: RightSlope
                       href: boundingfrustum-rightslope.md
-                    - name: TopSlop
+                    - name: TopSache
                       href: boundingfrustum-topslope.md
                 - name: Methoden
                   href: boundingfrustum-methods.md
@@ -2531,24 +2531,24 @@
                       items:
                         - name: Überschneiden (BoundingBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(constboundingbox_)
-                        - name: Überschneiden (BoundingFrustum)
+                        - name: Intersects (BoundingFrustum)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(constboundingfrustum_)
-                        - name: Überschneiden (BoundingOrientedBox)
+                        - name: Intersects (BoundingOrientedBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(constboundingorientedbox_)
-                        - name: Überschneiden (BoundingSphere)
+                        - name: Intersects (BoundingSphere)
                           href: /previous-versions/windows/desktop/legacy/hh855929(v=vs.85)
-                        - name: Überschneiden (XMVECTOR)
+                        - name: Intersects (XMVECTOR)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(fxmvector)
-                        - name: 'Schnitte (XMVECTOR,XMVECTOR,float)'
+                        - name: 'Intersects (XMVECTOR, XMVECTOR, float)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(fxmvector_fxmvector_float_)
-                        - name: 'Schnitte (XMVECTOR, XMVECTOR,XMVECTOR)'
+                        - name: 'Intersects (XMVECTOR,XMVECTOR,XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-intersects(fxmvector_fxmvector_fxmvector)
                     - name: Transformieren
                       href: boundingfrustum-transform.md
                       items:
-                        - name: 'Transformation (BoundingFrustum, float,XMVECTOR,XMVECTOR)'
+                        - name: 'Transform (BoundingFrustum,float,XMVECTOR,XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector)
-                        - name: 'Transformation (BoundingFrustum, XMMATRIX)'
+                        - name: 'Transform (BoundingFrustum,XMMATRIX)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector)
                     - name: ContainedBy
                       href: /windows/win32/api/DirectXCollision/nf-directxcollision-boundingbox-containedby
@@ -2606,17 +2606,17 @@
                       items:
                         - name: Überschneiden (BoundingBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingbox_)
-                        - name: Überschneiden (BoundingFrustum)
+                        - name: Intersects (BoundingFrustum)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingfrustum_)
-                        - name: Überschneiden (BoundingOrientedBox)
+                        - name: Intersects (BoundingOrientedBox)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingorientedbox_)
-                        - name: Überschneiden (BoundingSphere)
+                        - name: Intersects (BoundingSphere)
                           href: /previous-versions/windows/desktop/legacy/hh855930(v=vs.85)
-                        - name: Überschneiden (XMVECTOR)
+                        - name: Intersects (XMVECTOR)
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector)
-                        - name: 'Schnitte (XMVECTOR,XMVECTOR,float)'
+                        - name: 'Intersects (XMVECTOR, XMVECTOR, float)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_float_)
-                        - name: 'Schnitte (XMVECTOR, XMVECTOR,XMVECTOR)'
+                        - name: 'Intersects (XMVECTOR,XMVECTOR,XMVECTOR)'
                           href: /windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_fxmvector)
                     - name: Transformieren
                       href: boundingorientedbox-transform.md
@@ -2645,7 +2645,7 @@
                       href: /windows/win32/api/appmgmt/ns-appmgmt-appcategoryinfo
                     - name: DirectX.BoundingSphere (BoundingSphere)
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constboundingsphere_)
-                    - name: 'DirectX.BoundingSphere (XMFLOAT3,float)'
+                    - name: 'DirectX.BoundingSphere (XMFLOAT3, float)'
                       href: /windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constxmfloat3__float)
                 - name: Felder
                   href: boundingsphere-fields.md

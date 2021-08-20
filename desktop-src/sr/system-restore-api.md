@@ -1,6 +1,6 @@
 ---
 title: Systemwiederherstellungs-API
-description: Mit der Systemwiederherstellungs-API kann eine Anwendung Wiederherstellungspunkte verwalten. Es ist auch eine skriptfähige Schnittstelle über Windows Management Instrumentation (WMI) verfügbar.
+description: Mit der Systemwiederherstellungs-API kann eine Anwendung Wiederherstellungspunkte verwalten. Es ist auch eine skriptfähige Schnittstelle über die Windows Management Instrumentation (WMI) verfügbar.
 ms.assetid: e80fb930-8711-4347-b802-d55f780ee589
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118968029"
 ---
 # <a name="system-restore-api"></a>Systemwiederherstellungs-API
 
-Mit der Systemwiederherstellungs-API kann eine Anwendung Wiederherstellungspunkte verwalten. Es ist auch eine skriptfähige Schnittstelle über [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page) (WMI) verfügbar.
+Mit der Systemwiederherstellungs-API kann eine Anwendung Wiederherstellungspunkte verwalten. Es ist auch eine skriptfähige Schnittstelle über die Windows [Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page) (WMI) verfügbar.
 
 Weitere Informationen zur Systemwiederherstellungs-API finden Sie in den folgenden Themen:
 
@@ -21,7 +21,7 @@ Weitere Informationen zur Systemwiederherstellungs-API finden Sie in den folgend
 -   [Beschreibungstext des Wiederherstellungspunkts](restore-point-description-text.md)
 -   [Geschachtelte Aufrufe von SRSetRestorePoint](nested-calls-to-srsetrestorepoint.md)
 
-Weitere Informationen zu den WMI-Klassen für die Systemwiederherstellung finden Sie unter [Konfigurieren der Systemwiederherstellung.](configuring-system-restore.md)
+Weitere Informationen zu den WMI-Klassen für die Systemwiederherstellung finden Sie unter [Configuring System Restore](configuring-system-restore.md).
 
  
 

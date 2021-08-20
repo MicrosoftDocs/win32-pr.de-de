@@ -1,6 +1,6 @@
 ---
 title: gluPwlCurve-Funktion (Glu.h)
-description: Die gluPwlCurve-Funktion beschreibt eine stückweise lineare non-Uniform Rational B-Spline (NURBS)-Kürzungskurve.
+description: Die gluPwlCurve-Funktion beschreibt eine schrittweise lineare Non-Uniform Rational B-Spline (NURBS)-Kürzungskurve.
 ms.assetid: 3d08e7e8-dfdf-447c-9795-bd73299412b5
 keywords:
 - gluPwlCurve-Funktion OpenGL
@@ -23,7 +23,7 @@ ms.locfileid: "119061568"
 ---
 # <a name="glupwlcurve-function"></a>gluPwlCurve-Funktion
 
-Die **gluPwlCurve-Funktion** beschreibt eine stückweise lineare non-Uniform Rational B-Spline (NURBS)-Trimmingkurve.[](using-nurbs-curves-and-surfaces.md)
+Die **gluPwlCurve-Funktion** beschreibt eine schrittweise lineare non-Uniform Rational B-Spline [(NURBS](using-nurbs-curves-and-surfaces.md))-Kürzungskurve.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,7 +68,7 @@ Ein Array, das die Kurvenpunkte enthält.
 *Schritt* 
 </dt> <dd>
 
-Der Offset (eine Anzahl von Gleitkommawerten mit einzelner Genauigkeit) zwischen Punkten in der Kurve.
+Der Offset (eine Reihe von Gleitkommawerten mit einfacher Genauigkeit) zwischen Punkten in der Kurve.
 
 </dd> <dt>
 
@@ -85,9 +85,9 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **gluPwlCurve-Funktion** beschreibt eine stückweise lineare Kürzungskurve für eine NURBS-Oberfläche. Eine stückweise lineare Kurve besteht aus einer Liste von Koordinaten von Punkten im Parameterraum für die zu kürzede NURBS-Oberfläche. Diese Punkte sind mit Liniensegmenten verbunden, um eine Kurve zu bilden. Wenn die Kurve eine Näherung zu einer echten Kurve ist, sollten die Punkte nahe genug sein, damit der resultierende Pfad bei der in der Anwendung verwendeten Auflösung gekrümmt angezeigt wird.
+Die **gluPwlCurve-Funktion** beschreibt eine schrittweise lineare Kürzungskurve für eine NURBS-Oberfläche. Eine schrittweise lineare Kurve besteht aus einer Liste von Koordinaten von Punkten im Parameterbereich, die die NURBS-Oberfläche abschneiden soll. Diese Punkte sind mit Liniensegmenten verbunden, um eine Kurve zu bilden. Wenn es sich bei der Kurve um eine Annäherung an eine echte Kurve handelt, sollten die Punkte so nah sein, dass der resultierende Pfad mit der in der Anwendung verwendeten Auflösung gekrümmt angezeigt wird.
 
-Wenn *der Typ* GLU MAP1 TRIM 2 ist, wird eine Kurve im zweidimensionalen \_ \_ \_ Parameterraum (*u* und *v*) beschrieben. Wenn es sich um GLU MAP1 TRIM 3 handelt, wird eine Kurve im zweidimensionalen homogenen \_ \_ \_ Parameterraum (*u*, *v* und *w*) beschrieben. Weitere Informationen zum Kürzen von Kurven finden Sie unter [**gluBeginTrim**](glubegintrim.md).
+Wenn *der Typ* GLU \_ MAP1 TRIM \_ \_ 2 ist, wird eine Kurve im zweidimensionalen Parameterbereich *(u* und *v)* beschrieben. Wenn es sich um GLU \_ MAP1 \_ TRIM \_ 3 handelt, wird eine Kurve im zweidimensionalen homogenen Parameterraum (*u*, *v* und *w*) beschrieben. Weitere Informationen zum Kürzen von Kurven finden Sie unter [**gluBeginTrim**](glubegintrim.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,7 +103,7 @@ Wenn *der Typ* GLU MAP1 TRIM 2 ist, wird eine Kurve im zweidimensionalen \_ \_ \
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Telefon-Office-Sonstiges-Attribut
-description: Eine Liste alternativer Büro Telefonnummern.
+title: Telefon-Office-Other-Attribut
+description: Eine Liste alternativer Bürotelefonnummern.
 ms.assetid: 4688b9c1-d888-41af-a20e-50a9e82952a6
 ms.tgt_platform: multiple
 keywords:
-- "\"Telefon-Office-Sonstiges\"-Attribut AD-Schema"
-- Schema des othertelefonattributs AD
+- AD-Schema für Telefon-Office-Other-Attribute
+- otherTelephone-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e60fa680ea0181d38cbe5703464dff81e4e2ab49
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ccd4e297c56fd01cfe2864cc71728f1d1a16cac618e925848854c6cc0a07b1e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648100"
 ---
-# <a name="phone-office-other-attribute"></a>Telefon-Office-Sonstiges-Attribut
+# <a name="phone-office-other-attribute"></a>Telefon-Office-Other-Attribut
 
-Eine Liste alternativer Büro Telefonnummern.
+Eine Liste alternativer Bürotelefonnummern.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------|
-| CN                | Telefon-Office-Sonstiges                                                              |
-| LDAP-Display-Name | otherTelephone                                                                  |
+| CN                | Telefon-Office-Other                                                              |
+| Ldap-Anzeigename | otherTelephone                                                                  |
 | Size              | \-                                                                              |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                          |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt wird, und wenn die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                          |
+| Updatehäufigkeit  | Wenn der Benutzerdatensatz erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.2.18                                                           |
 | System-ID-GUID    | f0f8ffa5-1191-11d0-a060-00aa006c33ed                                            |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                     |
@@ -43,7 +43,7 @@ Eine Liste alternativer Büro Telefonnummern.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Eine Liste alternativer Büro Telefonnummern.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Eine Liste alternativer Büro Telefonnummern.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -98,12 +98,12 @@ Eine Liste alternativer Büro Telefonnummern.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -119,12 +119,12 @@ Eine Liste alternativer Büro Telefonnummern.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -140,12 +140,12 @@ Eine Liste alternativer Büro Telefonnummern.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -161,12 +161,12 @@ Eine Liste alternativer Büro Telefonnummern.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a1b                                                             |
+| MAPI-Id                | 0x3A1B                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Is-Single-Valued       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

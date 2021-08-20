@@ -30,7 +30,7 @@ Derzeit sind Aufgaben der einzige gültige Typ von Arbeitselement.
 <span id="_msb_working_directory_gly"></span><span id="_MSB_WORKING_DIRECTORY_GLY"></span>**Arbeitsverzeichnis**
 </dt> <dd>
 
-Das Verzeichnis, in dem Taskplaner mit der Ausführung der Aufgabe beginnt. Wenn kein Arbeitsverzeichnis angegeben ist, führt Taskplaner den Task im Verzeichnis %windir% \\ system32 aus.
+Das Verzeichnis, in dem Taskplaner beginnt, die Aufgabe auszuführen. Wenn kein Arbeitsverzeichnis angegeben ist, führt Taskplaner den Task im Verzeichnis %windir% \\ system32 aus.
 
 </dd> </dl>
 

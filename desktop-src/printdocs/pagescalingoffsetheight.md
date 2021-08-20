@@ -1,19 +1,19 @@
 ---
-description: Abrufen von Informationen zum PageScalingOffsetHeight-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
+description: Hier finden Sie Informationen zum PageScalingOffsetHeight-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: f6fa0421-a125-4ead-a540-d2f7327a26b6
 title: PageScalingOffsetHeight
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f02370d28716dd3a8840001959bb7d963307d2f
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 434dd3faf8f5d7fdc230738e33a3715217bbaeb0d0b3c74cb0d1545fb77cd1fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113548958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034118"
 ---
 # <a name="pagescalingoffsetheight"></a>PageScalingOffsetHeight
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt den Skalierungsoffset in der Richtung ImageableSizeHeight für die benutzerdefinierte Skalierung an.
 
@@ -36,7 +36,7 @@ Gibt den Skalierungsoffset in der Richtung ImageableSizeHeight für die benutzer
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageScalingOffsetHeight">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

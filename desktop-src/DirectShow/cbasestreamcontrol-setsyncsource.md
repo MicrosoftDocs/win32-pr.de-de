@@ -1,7 +1,7 @@
 ---
-description: Die setsyncsource-Methode benachrichtigt die Basisklasse der aktuellen verweisuhr.
+description: Die SetSyncSource-Methode benachrichtigt die Basisklasse über die aktuelle Verweisuhr.
 ms.assetid: 056385ac-682c-456e-9a5f-86490bd6e05f
-title: Cbasestreamcontrol. setsyncsource-Methode ("strinmctl. h")
+title: CBaseStreamControl.SetSyncSource-Methode (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 60832d1bf7ceca59089875f10579d52cf2cfec4e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b2b7fa5a4f627b33bbca1665e3d1ff2c5bc347cfa0e35adec37e0afffa81f198
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954779"
 ---
-# <a name="cbasestreamcontrolsetsyncsource-method"></a>Cbasestreamcontrol. setsyncsource-Methode
+# <a name="cbasestreamcontrolsetsyncsource-method"></a>CBaseStreamControl.SetSyncSource-Methode
 
-Die- `SetSyncSource` Methode benachrichtigt die Basisklasse der aktuellen verweisuhr.
+Die `SetSyncSource` -Methode benachrichtigt die Basisklasse über die aktuelle Verweisuhr.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetSyncSource(
 
 <dl> <dt>
 
-*präfemuhr* 
+*pRefClock* 
 </dt> <dd>
 
-Zeiger auf die [**IReferenceClock**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) -Schnittstelle der Referenzuhr.
+Zeiger auf die [**IReferenceClock-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ireferenceclock) der Verweisuhr.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf die [**IReferenceClock**](/windows/desktop/api/Strmif/nn-strmif-irefe
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Aufrufen Sie diese Methode in der [**imediafilter:: setsyncsource**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) -Methode des Filters. Die **cbasestreamcontrol** -Klasse verwendet die **IReferenceClock** -Schnittstelle, um sicherzustellen, dass die Stichproben nicht zu schnell verworfen werden.
+Rufen Sie diese Methode aus der [**IMediaFilter::SetSyncSource-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) des Filters auf. Die **CBaseStreamControl-Klasse** verwendet die **IReferenceClock-Schnittstelle,** um sicherzustellen, dass die Beispiele nicht zu schnell verworfen werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -78,8 +78,8 @@ STDMETHODIMP CMyFilter::SetSyncSource(IReferenceClock *pClock)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ STDMETHODIMP CMyFilter::SetSyncSource(IReferenceClock *pClock)
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

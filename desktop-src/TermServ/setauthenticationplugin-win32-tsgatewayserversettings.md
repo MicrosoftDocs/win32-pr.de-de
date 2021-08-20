@@ -4,9 +4,9 @@ description: Legt das aktuelle Authentifizierungs-Plug-In für den Remotedesktop
 ms.assetid: b79a5e7c-bf55-48f6-a6c0-5338e7eee2a1
 ms.tgt_platform: multiple
 keywords:
-- SetAuthenticationPlugin-Remotedesktopdienste
+- SetAuthenticationPlugin-Methode Remotedesktopdienste
 - SetAuthenticationPlugin-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , SetAuthenticationPlugin-Methode
+- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste , SetAuthenticationPlugin-Methode
 topic_type:
 - apiref
 api_name:
@@ -56,15 +56,15 @@ Der Name des neuen aktuellen Authentifizierungs-Plug-Ins.
 
 Typ: **uint32**
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="remarks"></a>Hinweise
 
 Sie müssen die [**RecycleRpcApplicationPools-Methode**](recyclerpcapplicationpools-win32-tsgatewayserversettings.md) aufrufen, damit das Authentifizierungs-Plug-In funktioniert.
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,13 +74,13 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                        |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
 | MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
 description: Anzahl der Elemente in der Liste.
 ms.assetid: 61ef047d-c7c7-4ec3-8853-7e2e6311fa36
-title: 'Cbaselist:: m_Count Member (wxlist. h)'
+title: CBaseList::m_Count-Member (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 346ab62e868bbe4574903a5974bc64b9b4a63007
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 54129fd4bb42f0388a875032b83933ffa59ba9ec0fc741952248c87259f20acf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652510"
 ---
-# <a name="cbaselistm_count-member"></a>Cbaselist:: m \_ count-Member
+# <a name="cbaselistm_count-member"></a>CBaseList::m \_ Count-Member
 
 Anzahl der Elemente in der Liste.
 
@@ -42,8 +42,8 @@ long m_Count;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ long m_Count;
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

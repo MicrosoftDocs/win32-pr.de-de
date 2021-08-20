@@ -1,7 +1,7 @@
 ---
-description: Speichert Informationen zu Freigegebenen Speicherabschnitten.
+description: Speichert Informationen zu Shared Memory-Abschnitten.
 ms.assetid: 73a650ee-110c-43f2-a5e2-783d52fd29ee
-title: SHAREDMEMORY_HEADER-Struktur
+title: SHAREDMEMORY_HEADER Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -21,7 +21,7 @@ ms.locfileid: "118966799"
 ---
 # <a name="sharedmemory_header-structure"></a>SHAREDMEMORY \_ HEADER-Struktur
 
-Speichert Informationen zu Freigegebenen Speicherabschnitten.
+Speichert Informationen zu Shared Memory-Abschnitten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Die Größe in Bytes, in der die Seriennummern von der Headerstruktur versetzt w
 **idxEvent**
 </dt> <dd>
 
-Der Ereignisindex. Dieser Wert wird mit aufeinander folgenden Ereignissen inkrementiert.
+Der Ereignisindex. Dieser Wert wird mit aufeinander folgenden Ereignissen erhöht.
 
 </dd> <dt>
 
@@ -107,21 +107,21 @@ Die [**SYSTEM \_ EVENT \_ DATA-Struktur,**](/windows/win32/api/tpcshrd/ns-tpcshr
 **cPackets**
 </dt> <dd>
 
-Die Anzahl der Pakete, die dem aktuellen Abschnitt für freigegebenen Speicher zugeordnet sind.
+Die Anzahl der Pakete, die dem aktuellen Shared Memory-Abschnitt zugeordnet sind.
 
 </dd> <dt>
 
 **cbPackets**
 </dt> <dd>
 
-Die Größe der Pakete in Bytes, die dem aktuellen Freigegebenen Speicherabschnitt zugeordnet sind.
+Die Größe der Pakete, die dem aktuellen Shared Memory-Abschnitt zugeordnet sind, in Bytes.
 
 </dd> <dt>
 
 **fSnsPresent**
 </dt> <dd>
 
-Ein Flag, das angibt, ob Seriennummern im aktuellen Freigegebenen Speicherabschnitt vorhanden sind.
+Ein Flag, das angibt, ob Seriennummern im aktuellen Shared Memory-Abschnitt vorhanden sind.
 
 </dd> </dl>
 
@@ -146,7 +146,7 @@ Die folgenden Werte werden für den **sysEvt-Member** definiert.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

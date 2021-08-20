@@ -59,7 +59,7 @@ protected override int Size { get; }
 
 Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

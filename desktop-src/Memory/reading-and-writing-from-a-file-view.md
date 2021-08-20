@@ -1,23 +1,23 @@
 ---
-description: Zum Lesen aus einer Dateiansicht müssen Sie den von der MapViewOfFile-Funktion zurückgegebenen Zeiger dereferenzieren, wie in den folgenden Beispielen gezeigt.
+description: Um aus einer Dateiansicht zu lesen, dereferenzieren Sie den zeiger, der von der MapViewOfFile-Funktion zurückgegeben wird, wie in den folgenden Beispielen gezeigt.
 ms.assetid: c2a3da09-d116-4c2c-9e6c-ec9e80c88b99
-title: Lesen und schreiben aus einer Dateiansicht
+title: Lesen und Schreiben aus einer Dateiansicht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d98ec50dc6cd8b0224f2ba33a17ba80c7b0fc658
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aee56f1d06e53bdfd6f7571e4ec296da0270ce0a7050b253b5900c4640d6df0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067680"
 ---
-# <a name="reading-and-writing-from-a-file-view"></a>Lesen und schreiben aus einer Dateiansicht
+# <a name="reading-and-writing-from-a-file-view"></a>Lesen und Schreiben aus einer Dateiansicht
 
-Zum Lesen aus einer Dateiansicht müssen Sie den von der [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) -Funktion zurückgegebenen Zeiger dereferenzieren, wie in den folgenden Beispielen gezeigt.
+Um aus einer Dateiansicht zu lesen, dereferenzieren Sie den zeiger, der von der [**MapViewOfFile-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) zurückgegeben wird, wie in den folgenden Beispielen gezeigt.
 
-Das Lesen aus oder schreiben in eine Dateiansicht einer anderen Datei als der Auslagerungs Datei kann eine **Ausnahme \_ in der \_ Seiten \_ Fehler** Ausnahme auslösen. Beispielsweise kann beim Zugriff auf eine zugeordnete Datei, die sich auf einem Remote Server befindet, eine Ausnahme generiert werden, wenn die Verbindung mit dem Server unterbrochen wird. Ausnahmen können auch auftreten, wenn ein vollständiger Datenträger, ein zugrunde liegender Gerätefehler oder ein Fehler bei der Speicher Belegung vorliegt. Beim Schreiben in eine Dateiansicht können Ausnahmen auch auftreten, da die Datei freigegeben ist und ein anderer Prozess einen Byte Bereich gesperrt hat. Um auf Ausnahmen aufgrund von Eingabe-und Ausgabe Fehlern zu schützen, sollten alle Versuche, auf Speicher Abbild Dateien zuzugreifen, in strukturierten Ausnahme Handlern umschließt werden. Wenn Sie in einem **\_ \_ Ausnahme Filter eine** **Ausnahme \_ in \_ Seiten \_ Fehler** erhalten, stellen Sie sicher, dass sich die Adresse innerhalb der Zuordnung befindet, auf die Sie zurzeit zugreifen. Wenn dies der Fall ist, führen Sie eine ordnungsgemäße Wiederherstellung durch Andernfalls wird die Ausnahme nicht behandelt.
+Das Lesen aus einer Dateiansicht oder das Schreiben in eine andere Datei als die Seitendatei kann zu einer **EXCEPTION \_ IN PAGE \_ \_ ERROR-Ausnahme** führen. Beispielsweise kann der Zugriff auf eine zugeordnete Datei, die sich auf einem Remoteserver befindet, eine Ausnahme generieren, wenn die Verbindung mit dem Server verloren geht. Ausnahmen können auch aufgrund eines vollständigen Datenträgers, eines zugrunde liegenden Gerätefehlers oder eines Speicherbelegungsfehlers auftreten. Beim Schreiben in eine Dateiansicht können Ausnahmen auch auftreten, weil die Datei freigegeben ist und ein anderer Prozess einen Bytebereich gesperrt hat. Um sich vor Ausnahmen aufgrund von Eingabe- und Ausgabefehlern (E/A) zu schützen, sollten alle Versuche, auf Speicherabzugsdateien zu zugreifen, in strukturierte Ausnahmehandler umschlossen werden. Wenn SIE **EXCEPTION IN PAGE \_ \_ \_ ERROR** in Ihrem Filter **\_ \_ außer** erhalten, stellen Sie sicher, dass sich die Adresse innerhalb der Zuordnung befindet, auf die Sie gerade zugreifen. Wenn dies der Fehler ist, stellen Sie die Wiederherstellung ordnungsgemäß wieder auf, oder führen Sie einen Fehler aus. Andernfalls behandeln Sie die Ausnahme nicht.
 
-Im folgenden Beispiel wird der von **MapViewOfFile** zurückgegebene Zeiger verwendet, um aus der Dateiansicht zu lesen:
+Im folgenden Beispiel wird der von **MapViewOfFile** zurückgegebene Zeiger zum Lesen aus der Dateiansicht verwendet:
 
 
 ```C++
@@ -55,7 +55,7 @@ Im folgenden Beispiel wird der von **MapViewOfFile** zurückgegebene Zeiger verw
 
 
 
-Die [**flushviewoffile**](/windows/win32/api/memoryapi/nf-memoryapi-flushviewoffile) -Funktion kopiert die angegebene Anzahl von Bytes der Dateiansicht in die physische Datei, ohne darauf zu warten, dass der zwischengespeicherte Schreibvorgang stattfindet:
+Die [**FlushViewOfFile-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-flushviewoffile) kopiert die angegebene Anzahl von Bytes der Dateiansicht in die physische Datei, ohne auf den Zwischenspeicherungsvorgang zu warten:
 
 
 ```C++
@@ -67,7 +67,7 @@ Die [**flushviewoffile**](/windows/win32/api/memoryapi/nf-memoryapi-flushviewoff
 
 
 
-Wenn Sie eine komprimierte Datei oder eine sparsespalte auf einer NTFS-Partition zuteilen, besteht bei einem Paging in einem Teil der Datei ein zusätzliches Potenzial für einen e/a-Fehler. In diesem Fall wird der von [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) zugeordnete Adressraum möglicherweise nicht durch den zugewiesenen Speicherplatz gesichert. Dies liegt daran, dass eine sparsedatei Regionen mit Nullen aufweisen kann, für die NTFS keinen Speicherplatz zuweist, und eine komprimierte Datei kann weniger Speicherplatz in Anspruch nehmen als die tatsächlich dargestellten Daten. Wenn Sie einen Teil einer Datei mit geringer Dichte oder komprimierte Datei lesen oder in diesen schreiben, die nicht durch Speicherplatz gesichert ist, kann das Betriebssystem versuchen, Speicherplatz zuzuweisen. Wenn der Datenträger voll ist, kann dies zu einer Ausnahme führen, die auf einen e/a-Fehler hinweist.
+Wenn Sie eine komprimierte Datei oder eine Sparsedatei auf einer NTFS-Partition zuordnen, besteht zusätzliches Potenzial für einen E/A-Fehler beim Paging in einem Teil der Datei. In diesem Fall wird der von [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) zugeordnete Adressraum möglicherweise nicht durch zugeordneten Speicherplatz auf dem Datenträger zurückgespiegelt. Dies liegt daran, dass eine Sparsedatei Bereiche mit Nullen haben kann, für die NTFS keinen Speicherplatz zuteilen kann, und eine komprimierte Datei kann weniger Speicherplatz als die tatsächlichen Daten, die sie darstellt, nutzen. Wenn Sie aus einem Teil einer Datei mit sparseer Oder komprimierter Datei lesen oder in diesen schreiben, der nicht durch Speicherplatz auf dem Datenträger bzw. nicht auf dem Datenträger gespeichert ist, versucht das Betriebssystem möglicherweise, Speicherplatz auf dem Datenträger zu reservieren. Wenn der Datenträger voll ist, kann dies zu einer Ausnahme führen, die auf einen E/A-Fehler hinweist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

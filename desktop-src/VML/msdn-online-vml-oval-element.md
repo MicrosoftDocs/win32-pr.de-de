@@ -1,30 +1,30 @@
 ---
-title: VML-Oval-Element
-description: VML-Oval-Element
+title: VML Oval-Element
+description: VML Oval-Element
 ms.assetid: 6c25f8a7-b8a5-4e6b-90ef-7f513f603b01
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2b79303a6300e7c7d04c17c143f97106a7cb356
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2b7550d10c2b7bbd6870c02e6bb9762d71663848804d6e059544da51e5335217
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655130"
 ---
-# <a name="vml-oval-element"></a>VML-Oval-Element
+# <a name="vml-oval-element"></a>VML Oval-Element
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Vordefinierte Oval-Form.
+Vordefinierte ovale Form.
 
 **Anmerkungen**
 
-Im folgenden finden Sie den minimalen Code, der für die Erstellung eines Oval benötigt wird.
+Im Folgenden finden Sie den minimalen Code, der zum Erstellen eines Ovals erforderlich ist.
 
 
 ```HTML
@@ -38,6 +38,6 @@ Im folgenden finden Sie den minimalen Code, der für die Erstellung eines Oval b
 
 
 
- 
+ 
 
- 
+ 

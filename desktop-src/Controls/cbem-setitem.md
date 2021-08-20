@@ -1,9 +1,9 @@
 ---
-title: CBEM_SETITEM Meldung (kommstrg. h)
+title: CBEM_SETITEM (Commctrl.h)
 description: Legt die Attribute für ein Element in einem ComboBoxEx-Steuerelement fest.
 ms.assetid: 752df8ea-fd5e-47fa-b729-d019bdde0904
 keywords:
-- Windows-Steuerelemente für CBEM_SETITEM Meldung
+- CBEM_SETITEM von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 50ae19287e3e30810b1d8c558be9b6153a86ab6b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b1010c090283a47404ee93ef5f3bc1cf2d5ffe71a646d6d734cb443152bdd64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119527930"
 ---
-# <a name="cbem_setitem-message"></a>CBEM-Element \_ Nachricht
+# <a name="cbem_setitem-message"></a>CBEM \_ SETITEM-Nachricht
 
 Legt die Attribute für ein Element in einem ComboBoxEx-Steuerelement fest.
 
@@ -37,13 +37,13 @@ Legt die Attribute für ein Element in einem ComboBoxEx-Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur, die die festzulegenden Element Informationen enthält. Wenn die Nachricht gesendet wird, muss der **Mask** -Member der Struktur festgelegt werden, um anzugeben, welche Attribute gültig sind, und der **iItem** -Member muss den NULL basierten Index des zu ändernden Elements angeben. Wenn Sie den **iItem** -Member auf-1 festlegen, wird das im Bearbeitungs Steuerelement angezeigte Element geändert.
+Ein Zeiger auf eine [**COMBOBOXEXITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) die die zu setzenden Elementinformationen enthält. Wenn die Nachricht gesendet wird, muss das **Maskenelement** der -Struktur so festgelegt werden, dass angegeben wird, welche Attribute gültig sind, und das **iItem-Element** muss den nullbasierten Index des zu ändernden Elements angeben. Durch Festlegen **des iItem-Elements** auf -1 wird das im Bearbeitungssteuerelement angezeigte Element geändert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,10 +51,10 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **CBEM \_** "CBEM" (Unicode) und " **CBEM \_** " (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **CBEM \_ SETITEMW** (Unicode) und **CBEM \_ SETITEMA** (ANSI)<br/>                 |
 
 
 

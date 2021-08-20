@@ -1,9 +1,9 @@
 ---
 title: KeyPress-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das KeyPress-Ereignis tritt auf, wenn eine Taste gedrückt und freigegeben wird. | KeyPress-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das KeyPress-Ereignis tritt auf, wenn eine Taste gedrückt und losgelassen wird. | KeyPress-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 73ecd6f9-1b58-4e28-ad1b-2d930a235e1d
 keywords:
-- Das KeyPress-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- KeyPress-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4a01e84b8f765d024c753d08211f3bb84e7f011
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 45b8022feacda910b28d68636c1abdcb2f6c1c9d3c2e799f762f25f5060b2b82
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618790"
 ---
 # <a name="keypress-event-of-the-axwindowsmediaplayer-object"></a>KeyPress-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das KeyPress-Ereignis tritt auf, wenn eine Taste gedrückt und freigegeben wird.
+Das KeyPress-Ereignis tritt auf, wenn eine Taste gedrückt und losgelassen wird.
 
 ``` syntax
 [C#]
@@ -41,21 +41,21 @@ Private Sub player_KeyPressEvent(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ KeyPressEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ KeyPressEvent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyPressEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyPressEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft      | BESCHREIBUNG                                                                        |
+| Eigenschaft      | Beschreibung                                                                        |
 |---------------|------------------------------------------------------------------------------------|
-| **nkeyascii** | System. Int16Specifies der numerische Standard-ANSI-Code für das Zeichen.<br/> |
+| **nKeyAscii** | System.Int16 Gibt den numerischen STANDARD-ANSI-Code für das Zeichen an.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis tritt auf, wenn die Tastatureingabe ein beliebiges druckbares Tastatur Zeichen ergibt, die STRG-Taste mit einem Zeichen aus dem Standard Alphabet oder einem von einigen Sonderzeichen und der Eingabe-oder RÜCKTASTE gedrückt wird.
+Dieses Ereignis tritt auf, wenn die Tastatureingabe zu einem druckbaren Tastaturzeichen führt, die STRG-TASTE in Kombination mit einem Zeichen aus dem Standardal alphabet oder einem von einigen sonderzeichen sowie die EINGABETASTE oder DIE RÜCKTASTE verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Dieses Ereignis tritt auf, wenn die Tastatureingabe ein beliebiges druckbares Ta
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,7 +73,7 @@ Dieses Ereignis tritt auf, wenn die Tastatureingabe ein beliebiges druckbares Ta
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

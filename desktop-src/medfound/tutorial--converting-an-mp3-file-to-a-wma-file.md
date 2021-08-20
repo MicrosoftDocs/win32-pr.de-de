@@ -13,13 +13,13 @@ ms.locfileid: "118972789"
 ---
 # <a name="tutorial-encoding-a-wma-file"></a>Tutorial: Codieren einer WMA-Datei
 
-In diesem Tutorial erfahren Sie, wie Sie mit der [Transcodierungs-API](transcode-api.md) eine Windows WMA-Datei (Media Audio) codieren.
+In diesem Tutorial wird gezeigt, wie Sie die [Transcodierungs-API verwenden,](transcode-api.md) um eine Windows WMA-Datei (Media Audio) zu codieren.
 
 In diesem Tutorial wird der größte Teil des Codes aus dem Tutorial Codieren einer [MP4-Datei](tutorial--encoding-an-mp4-file-.md)wiederverwendet, daher sollten Sie dieses Tutorial zuerst lesen. Der einzige Code, der sich unterscheidet, ist die Funktion `CreateTranscodeProfile` , die das Transcodierungsprofil erstellt.
 
 ## <a name="create-the-transcode-profile"></a>Erstellen des Transcodierungsprofils
 
-Ein *Transcodierungsprofil* beschreibt die Codierungsparameter und den Dateicontainer. Für WMA ist der Dateicontainer eine ASF-Datei (Advanced Streaming Format). Die ASF-Datei enthält einen Audiodatenstrom, der mit dem Medienaudioencoder Windows [**codiert wird.**](windowsmediaaudioencoder.md)
+Ein *Transcodierungsprofil* beschreibt die Codierungsparameter und den Dateicontainer. Für WMA ist der Dateicontainer eine ASF-Datei (Advanced Streaming Format). Die ASF-Datei enthält einen Audiostream, der mit dem Medienaudioencoder Windows [**codiert wird.**](windowsmediaaudioencoder.md)
 
 Erstellen Sie zum Erstellen der Transcodierungstopologie das Transcodierungsprofil, und geben Sie die Parameter für den Audiostream und den Container an. Erstellen Sie dann die Topologie, indem Sie die Eingabequelle, die Ausgabe-URL und das Transcodierungsprofil angeben.
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_RECSIZE.cbLongValueOverhead-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE.cbLongValueOverhead-Eigenschaft'
 title: JET_RECSIZE.cbLongValueOverhead-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cbLongValueOverhead property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cbLongValueOverhead
@@ -35,7 +35,7 @@ ms.locfileid: "119038788"
 ---
 # <a name="jet_recsizecblongvalueoverhead-property"></a>JET_RECSIZE.cbLongValueOverhead-Eigenschaft
 
-Ruft den Mehraufwand der Daten mit langen Werten ab.
+Ruft den Mehraufwand der Long-Value-Daten ab.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -62,12 +62,12 @@ public long cbLongValueOverhead { get; internal set; }
 
 Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 
 [JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[JET_RECSIZE-Member](./jet-recsize-members.md)
+[JET_RECSIZE Mitglieder](./jet-recsize-members.md)
 
 [Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

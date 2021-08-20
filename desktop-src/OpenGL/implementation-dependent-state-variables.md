@@ -3,7 +3,7 @@ title: Implementierungsabhängige Statusvariablen
 description: Implementierungsabhängige Statusvariablen
 ms.assetid: 6778b50c-a6ac-4106-9dd6-3a123c257687
 keywords:
-- Implementation-Dependent State Variables OpenGL
+- Implementation-Dependent Zustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -38,7 +38,7 @@ ms.locfileid: "119061458"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Anzahl von Benutzer-Clippingebenen                                           |
+| Beschreibung:     | Maximale Anzahl von Benutzerausschneideebenen                                           |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 6                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -51,7 +51,7 @@ ms.locfileid: "119061458"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Modellansichtsmatrixstapeltiefe                                             |
+| Beschreibung:     | Maximale Stapeltiefe für modelview-matrix                                             |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 32                                                                               |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -73,7 +73,7 @@ ms.locfileid: "119061458"
 
  
 
-</dd> <dt><span id="GL_MAX_TEXTURE_STACK_DEPTH"></span><span id="gl_max_texture_stack_depth"></span>GL \_ \_ MAX. \_ TEXTURSTAPELTIEFE \_</dt> <dd> 
+</dd> <dt><span id="GL_MAX_TEXTURE_STACK_DEPTH"></span><span id="gl_max_texture_stack_depth"></span>GL \_ MAX \_ TEXTURE \_ STACK \_ DEPTH</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -86,11 +86,11 @@ ms.locfileid: "119061458"
 
  
 
-</dd> <dt><span id="GL_SUBPIXEL_BITS"></span><span id="gl_subpixel_bits"></span>\_GL-SUBPIXELBITS \_</dt> <dd> 
+</dd> <dt><span id="GL_SUBPIXEL_BITS"></span><span id="gl_subpixel_bits"></span>GL \_ SUBPIXEL \_ BITS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Anzahl der Bits mit Subpixelgenauigkeit in *x* und *y*                              |
+| Beschreibung:     | Anzahl der Bits der Subpixelgenauigkeit in *x* und *y*                              |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 4                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -99,7 +99,7 @@ ms.locfileid: "119061458"
 
  
 
-</dd> <dt><span id="GL_MAX_TEXTURE_SIZE"></span><span id="gl_max_texture_size"></span>GL \_ \_ MAX. \_ TEXTURGRÖßE</dt> <dd> 
+</dd> <dt><span id="GL_MAX_TEXTURE_SIZE"></span><span id="gl_max_texture_size"></span>GL \_ MAX \_ TEXTURE \_ SIZE</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -129,7 +129,7 @@ ms.locfileid: "119061458"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Stapeltiefe für Auswahlname                                               |
+| Beschreibung:     | Maximale Stapeltiefe für Auswahlnamen                                               |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 64                                                                               |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -285,7 +285,7 @@ ms.locfileid: "119061458"
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Bereich (niedrig bis hoch) von Geradlinienbreiten mit Antialiasing                                 |
+| Beschreibung:     | Bereich (niedrig bis hoch) von Antialiasinglinienbreiten                                 |
 | Attributgruppe: |                                                                                |
 | Anfangswert:   | 1, 1                                                                           |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -294,11 +294,11 @@ ms.locfileid: "119061458"
 
  
 
-</dd> <dt><span id="GL_LINE_WIDTH_GRANULARITY"></span><span id="gl_line_width_granularity"></span>GL \_ \_ \_ LINIENBREITENGRANULARITÄT</dt> <dd> 
+</dd> <dt><span id="GL_LINE_WIDTH_GRANULARITY"></span><span id="gl_line_width_granularity"></span>GRANULARITÄT \_ DER \_ \_ GL-LINIENBREITE</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Granularität mit Gealiasenbreite                                             |
+| Beschreibung:     | Antialiased Line-Width-Granularität                                             |
 | Attributgruppe: |                                                                                |
 | Anfangswert:   |                                                                                |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |

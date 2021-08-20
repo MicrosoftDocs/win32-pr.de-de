@@ -1,5 +1,5 @@
 ---
-description: Die WiaAddDevice-Funktion ruft die Benutzeroberfläche des Scanner- und Kamerainstallations-Assistenten auf. Dies entspricht der Ausführung von &\# 0034;rundll32.exe sti \_ci.dll AddDevice&\# 0034; über die Eingabeaufforderung.
+description: Die WiaAddDevice-Funktion ruft die Benutzeroberfläche des Installations-Assistenten für Scanner und Kamera auf. Dies entspricht der Ausführung &\# 0034;rundll32.exe sti \_ci.dll AddDevice&\# 0034; über die Eingabeaufforderung.
 ms.assetid: 83a1e22c-d751-4c8e-8f39-ec987042c745
 title: WiaAddDevice-Funktion (Wia.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118965399"
 ---
 # <a name="wiaadddevice-function"></a>WiaAddDevice-Funktion
 
-Die **WiaAddDevice-Funktion** ruft die Benutzeroberfläche des Scanner- und Kamerainstallations-Assistenten auf. Dies entspricht der Ausführung von "rundll32.exe sti \_ci.dll AddDevice" über die Eingabeaufforderung.
+Die **WiaAddDevice-Funktion ruft** die Benutzeroberfläche des Installations-Assistenten für Scanner und Kamera auf. Dies entspricht der Ausführung von "rundll32.exe sti \_ci.dll AddDevice" über die Eingabeaufforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte mit Administratoranmeldeinformationen aufgerufen werden. Bei der Ausführung unter Benutzerkontensteuerung (USER Account Control, LUA) sollte der Prozess mit erhöhten Rechten ausgeführt werden.
+Diese Funktion sollte mit Administratoranmeldeinformationen aufgerufen werden. Bei der Ausführung unter Benutzerkontensteuerung (User Account Control, LUA) sollte der Prozess mit erhöhten Rechten ausgeführt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,14 +52,14 @@ Diese Funktion sollte mit Administratoranmeldeinformationen aufgerufen werden. B
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
 | Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: Fügt der Sammlung von Kontextverknüpfung des IContextNode-Objekts einen neuen IContextLink hinzu.
+description: Fügt der Auflistung von Kontextlinks des IContextNode-Objekts einen neuen IContextLink hinzu.
 ms.assetid: b7b9da10-3015-4976-bc4e-1a7f69b7c85b
 title: IContextNode::AddContextLink-Methode (IACom.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118967439"
 ---
 # <a name="icontextnodeaddcontextlink-method"></a>IContextNode::AddContextLink-Methode
 
-Fügt der Sammlung von Kontextverknüpfung des [**IContextNode-Objekts**](icontextnode.md) einen neuen [**IContextLink**](icontextlink.md) hinzu.
+Fügt der Auflistung von Kontextlinks des [**IContextNode-Objekts**](icontextnode.md) einen neuen [**IContextLink**](icontextlink.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT AddContextLink(
 *pDestinationNode* \[ In\]
 </dt> <dd>
 
-Der [**IContextNode-Zielknoten**](icontextnode.md) für den neuen [**IContextLink**](icontextlink.md).
+Der [**IContextNode-Ziel**](icontextnode.md) für den neuen [**IContextLink.**](icontextlink.md)
 
 </dd> <dt>
 
 *linkDirection* \[ In\]
 </dt> <dd>
 
-Die Richtung des zu erstellende [**IContextLink-Objekts.**](icontextlink.md)
+Die Richtung des [**zu erstellenden IContextLink-Objekts.**](icontextlink.md)
 
 </dd> <dt>
 
@@ -64,12 +64,12 @@ Ein Zeiger auf das neue [**IContextLink-Objekt.**](icontextlink.md)
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppContextLinkToAdd* auf, wenn Sie den Kontextknoten nicht mehr verwenden müssen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppContextLinkToAdd* auf, wenn Sie den Kontextknoten nicht mehr verwenden müssen.
 
  
 
@@ -88,7 +88,7 @@ Dieses [**IContextNode-Objekt**](icontextnode.md) ist der Quellknoten (siehe [**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

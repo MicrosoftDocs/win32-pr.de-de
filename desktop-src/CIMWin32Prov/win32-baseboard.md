@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Baseboard dar, das auch als "Motherboard" oder "System Board" bezeichnet wird.
+description: Stellt ein Baseboard dar, das auch als Hauptplatine oder Systemboard bezeichnet wird.
 ms.assetid: 04ac7522-8b99-4ffc-9f7d-d1225f55a862
 ms.tgt_platform: multiple
 title: Win32_BaseBoard-Klasse
@@ -44,16 +44,16 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c4287076a550e25bf74a160b191c777c25d9ab3b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ac22dc01864d74902c666529bd40344f65eacfb1ad2515552e1cd46fbf65b9e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119546515"
 ---
-# <a name="win32_baseboard-class"></a>Win32- \_ Baseboard-Klasse
+# <a name="win32_baseboard-class"></a>Win32 \_ BaseBoard-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für das **Win32- \_ Baseboard** stellt ein Baseboard dar, das auch als "Motherboard" oder "System Board" bezeichnet wird.
+Die **WMI-Klasse \_ Win32 BaseBoard** stellt ein Baseboard dar, das auch als Hauptplatine oder Systemboard bezeichnet wird. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -97,20 +97,20 @@ class Win32_BaseBoard : CIM_Card
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ Baseboard** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ BaseBoard-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32- \_ Baseboard** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ BaseBoard-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode           | BESCHREIBUNG                 |
+| Methode           | Beschreibung                 |
 |:-----------------|:----------------------------|
-| **Iskompatibel** | Nicht implementiert.<br/> |
+| **IsCompatible** | Nicht implementiert.<br/> |
 
 
 
@@ -118,61 +118,61 @@ Die **Win32- \_ Baseboard** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ Baseboard** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ BaseBoard-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts eine einzeilige Zeichenfolge.
+Kurze Beschreibung des -Objekts, eine einzeilenbasierte Zeichenfolge.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **ConfigOptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 12- \| Konfigurationsoptionen Zeichen folgen")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 12 \| Configuration Options Strings")
 </dt> </dl>
 
-Ein Array, das die Konfiguration der Springer und Switches auf dem Baseboard darstellt.
+Array, das die Konfiguration der Jumper und Switches darstellt, die sich auf dem Baseboard befinden.
 
-Beispiel: "JP2:1-2 Cache size is 256 k, 2-3 Cache size is 512K, SW1-1: Close to off on Board Video"
+Beispiel: "JP2: 1-2 Cache size is 256K, 2-3 Cache Size is 512K, SW1-1: Close to Disable On Board Video"
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -188,27 +188,27 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zoll")
 </dt> </dl>
 
-Die Tiefe des physischen Pakets in Zoll.
+Tiefe des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -226,124 +226,124 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zo
 
 Höhe des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
-**Hostingboard**
+**HostingBoard**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass es sich bei der Karte um eine Platine oder ein Baseboard in einem Chassis handelt.
+True **gibt an,** dass die Karte eine Hauptplatine oder ein Baseboard in einem Gehäuse ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Karte**](cim-card.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Karte geerbt.**](cim-card.md)
 
 </dd> <dt>
 
-**"Anappable"**
+**HotSwappable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Paket im laufenden Betrieb ausgetauscht werden kann. Ein physisches Paket kann mit einem ausgetauschten Element ersetzt werden, wenn es möglich ist, das Element durch ein physisch anderes, aber gleichwertiges Element zu ersetzen, während das enthaltende Paket darauf angewendet wird, während es aktiv ist. Beispielsweise ist ein Laufwerks Paket, das mithilfe von SCA-Connectors eingefügt wurde, wechselseitig austauschbar. Alle Pakete, die sich im laufenden Betrieb austauschen lassen, sind von Natur aus austauschbar und austauschbar.
+True **gibt an,** dass das Paket im heißen Tausch verwendet werden kann. Ein physisches Paket kann im Hot-Swap-Format ausgetauscht werden, wenn es möglich ist, das Element durch ein physisch anderes, aber äquivalentes Element zu ersetzen, während auf das enthaltende Paket die Energie angewendet wird, während es EIN ist. Ein Laufwerkspaket, das mit SCA-Connectors eingefügt wurde, ist beispielsweise wechselbar und kann im hot-Austausch verwendet werden. Alle Pakete, die im Hot-Swap-System ausgetauscht werden können, sind grundsätzlich austauschbar und austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
+Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **Modell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Der Name, mit dem das physische Element bekannt ist.
+Name, unter dem das physische Element bekannt ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann die Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Erfasst zusätzliche Daten, über die Informationen zu Asset-Tags hinaus, die verwendet werden können, um ein physisches Element zu identifizieren. Ein Beispiel hierfür sind Barcode-Daten, die einem Element zugeordnet sind, das auch über ein Bestands Kennzeichen verfügt. Beachten Sie Folgendes: Wenn nur Barcode Daten verfügbar und eindeutig sind oder als Element Schlüssel verwendet werden können, ist der Eigenschafts Wert **null** , und die Barcode Daten werden als Klassen Schlüssel in der Tag-Eigenschaft verwendet.
+Erfasst zusätzlich zu Denktaginformationen zusätzliche Daten, die zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel sind Balkencodedaten, die einem Element zugeordnet sind, das ebenfalls über ein Assettag verfügt. Beachten Sie, dass der Eigenschaftswert **NULL** und die Barcodedaten als Klassenschlüssel in der Tageigenschaft verwendet werden, wenn nur Balkencodedaten verfügbar und eindeutig sind oder als Elementschlüssel verwendet werden können.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -356,27 +356,27 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wurde, die für das Erstellen oder die Herstellung des physischen Elements verantwortlich ist
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements zuständig ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Poweredon**
+**PoweredOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das physische Element eingeschaltet ist.
+True **gibt an,** dass das physische Element eingeschaltet ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -389,77 +389,44 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 2 \| Product")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 2 \| Product")
 </dt> </dl>
 
-Die vom Hersteller definierte Baseboard-Teilenummer.
+Vom Hersteller definierte Basisboardteilnummer.
 
 </dd> <dt>
 
-**Ab**
+**Abnehmbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass ein Paket entfernt werden kann. Ein physisches Paket ist austauschbar, wenn es so konzipiert ist, dass es in den physischen Container übernommen wird, in dem es normalerweise gefunden wird, ohne dass die Funktion der gesamten Paket Erstellung beeinträchtigt wird. Ein Paket kann weiterhin entfernt werden, wenn die Stromversorgung zum Durchführen des Entfernens deaktiviert werden muss. Wenn die Stromversorgung aktiviert und das Paket entfernt werden kann, ist das-Element austauschbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise ist ein zusätzlicher Akku in einem Laptop austauschbar, ebenso wie ein Laufwerks Paket, das mithilfe von SCA-Connectors eingefügt wurde. Der letztere kann jedoch auch mit einem ausgetauschten Verhalten ausgetauscht werden. Die Anzeige eines Laptops kann nicht entfernt werden, und es handelt sich nicht um eine nicht redundante Netzteil. Das Entfernen dieser Komponenten wirkt sich auf die Funktion der Gesamt Verpackung aus oder ist aufgrund der engen Integration des Pakets nicht möglich.
+True **gibt an,** dass ein Paket wechselbar ist. Ein physisches Paket ist wechselbar, wenn es so konzipiert ist, dass es in den physischen Container aufgenommen und aus ihm herausgenommen wird, in dem es normalerweise gefunden wird, ohne die Funktion der Gesamtpaketierung zu beeinträchtigen. Ein Paket kann weiterhin wechselbar sein, wenn die Stromversorgung ausgeschaltet sein muss, um das Entfernen durchzuführen. Wenn die Stromversorgung EIN sein kann und das Paket entfernt werden kann, ist das Element wechselbar und kann ausgetauscht werden. Beispielsweise ist ein zusätzlicher Akku in einem Laptop wechselbar, ebenso wie ein Laufwerkspaket, das mit SCA-Anschlüssen eingefügt wird. Letzteres kann jedoch auch im Heißen getauscht werden. Die Anzeige eines Laptops ist weder wechselbar noch eine nicht redundante Stromversorgung. Das Entfernen dieser Komponenten wirkt sich auf die Funktion der Gesamtpaketierung aus oder ist aufgrund der engen Integration des Pakets nicht möglich.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
-**Replaceable**
+**Austauschbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass ein Paket ersetzt werden kann. Ein physisches Paket ist austauschbar, wenn es möglich ist, das Element durch ein physisch anderes zu ersetzen (FRU oder Upgrade). Beispielsweise ist für einige Computersysteme das Upgrade des Hauptprozessor-Chips auf eine höhere Bewertungsstufe möglich. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Ein weiteres Beispiel ist ein Stromversorgung-Paket, das auf gleitenden Schienen eingebunden ist. Alle Wechsel Pakete sind von Natur aus austauschbar.
+True **gibt an,** dass ein Paket ersetzt werden kann. Ein physisches Paket kann ersetzt werden, wenn es möglich ist, das Element durch ein physisch anderes zu ersetzen (FRU oder Upgrade). Einige Computersysteme ermöglichen z. B. das Upgrade des Hauptprozessorchips auf eine der höheren Taktwerte. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Ein weiteres Beispiel ist ein Stromversorgungspaket, das auf gleitende Schienen eingebaut ist. Alle Wechselpakete können grundsätzlich ersetzt werden.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
-
-</dd> <dt>
-
-**"Requirements mentsdescription"**
-</dt> <dd> <dl> <dt>
-
-Datentyp: **Zeichenfolge**
-</dt> <dt>
-
-Zugriffstyp: Schreibgeschützt
-</dt> <dt>
-
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ Karte**](cim-card.md).**Specialrequirements**")
-</dt> </dl>
-
-Frei Form Zeichenfolge, die beschreibt, wie diese Karte physisch von anderen Karten eindeutig ist. Die-Eigenschaft hat nur Bedeutung, wenn die entsprechende boolesche Eigenschaft **specialrequirements** auf **true** festgelegt ist.
-
-Diese Eigenschaft wird von der [**CIM- \_ Karte**](cim-card.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
-**Requirements-Daughterboard**
-</dt> <dd> <dl> <dt>
-
-Datentyp: **boolescher** Wert
-</dt> <dt>
-
-Zugriffstyp: Schreibgeschützt
-</dt> </dl>
-
-**True** gibt an, dass mindestens eine Daughterboard-oder eine Zusatzkarte erforderlich ist, um ordnungsgemäß zu funktionieren.
-
-Diese Eigenschaft wird von der [**CIM- \_ Karte**](cim-card.md)geerbt.
-
-</dd> <dt>
-
-**SerialNumber**
+**RequirementsDescription**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -468,12 +435,45 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Karte**](cim-card.md).**SpecialRequirements**")
 </dt> </dl>
 
-Vom Hersteller zugewiesene Nummer, mit der das physische Element identifiziert wird.
+Freiformzeichenfolge, die beschreibt, wie diese Karte physisch von anderen Karten eindeutig ist. Die -Eigenschaft hat nur dann eine Bedeutung, wenn die entsprechende boolesche **Eigenschaft SpecialRequirements** auf **TRUE festgelegt ist.**
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Karte geerbt.**](cim-card.md)
+
+</dd> <dt>
+
+**RequiresDaughterBoard**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **boolescher Wert**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> </dl>
+
+True **gibt an,** dass mindestens eine Bzw. eine Hilfskarte erforderlich ist, um ordnungsgemäß zu funktionieren.
+
+Diese Eigenschaft wird von der [**\_ CIM-Karte geerbt.**](cim-card.md)
+
+</dd> <dt>
+
+**Serialnumber**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **Zeichenfolge**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> <dt>
+
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+</dt> </dl>
+
+Vom Hersteller zugeordnete Nummer, die zum Identifizieren des physischen Elements verwendet wird.
+
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -486,16 +486,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Die Stock Keeping Unit-Nummer für das physische Element.
+Lagereinheitsnummer für das physische Element.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Slotlayout**
+**SlotLayout**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -504,27 +504,27 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die die slotposition, die typische Verwendung, die Einschränkungen, den individuellen Platz Abstand oder andere relevante Informationen für die Slots auf einer Karte beschreibt.
+Freiformzeichenfolge, die die Slotposition, typische Verwendung, Einschränkungen, einzelne Slotabstande oder andere relevante Informationen für die Slots auf einer Karte beschreibt.
 
-Diese Eigenschaft wird von der [**CIM- \_ Karte**](cim-card.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Karte geerbt.**](cim-card.md)
 
 </dd> <dt>
 
-**Specialrequirements**
+**SpecialRequirements**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ Karte**](cim-card.md).**"Requirements mentsdescription**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Karte**](cim-card.md).**RequirementsDescription**")
 </dt> </dl>
 
-Wenn der Wert **true** ist, ist diese Karte physisch eindeutig von anderen Karten desselben Typs und erfordert daher einen speziellen Slot. Beispielsweise erfordert eine doppelte Karte zwei Slots. Ein weiteres Beispiel ist, wo eine bestimmte Karte für dieselbe allgemeine Funktion verwendet werden kann wie andere Karten, erfordert jedoch einen sonderslot (z. b. Extra Long), während die anderen Karten in einem beliebigen verfügbaren Slot abgelegt werden können. Wenn diese Eigenschaft auf " **true**" festgelegt ist, sollte die zugehörige Eigenschaft "Requirements **mentsdescription**" die Art der Eindeutigkeit oder des Zwecks der Karte angeben.
+True **gibt an,** dass diese Karte physisch von anderen Karten desselben Typs eindeutig ist und daher einen speziellen Slot erfordert. Für eine Karte mit doppelter Breite sind z. B. zwei Slots erforderlich. Ein weiteres Beispiel ist, dass eine bestimmte Karte für dieselbe allgemeine Funktion wie andere Karten verwendet werden kann, aber einen speziellen Slot erfordert (z. B. extra long), während die anderen Karten in einem beliebigen verfügbaren Slot platziert werden können. Bei Festlegung auf **TRUE** sollte die entsprechende Eigenschaft **RequirementsDescription** die Art der Eindeutigkeit oder des Zwecks der Karte angeben.
 
-Diese Eigenschaft wird von der [**CIM- \_ Karte**](cim-card.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Karte geerbt.**](cim-card.md)
 
 </dd> <dt>
 
@@ -537,12 +537,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle derartigen Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -564,35 +564,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -606,28 +606,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -637,38 +637,38 @@ Wird **beendet ("wird angehalten** ")
 **Tag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Tag"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Tag"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-Eindeutiger Bezeichner des Baseboards des Systems.
+Eindeutiger Bezeichner des Basisboards des Systems.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
-Beispiel: "Base Board"
+Beispiel: "Basisboard"
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Version des physischen Elements.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -686,7 +686,7 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pf
 
 Gewichtung des physischen Pakets in Pfund.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -704,21 +704,21 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zo
 
 Breite des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalelement.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ Baseboard** -Klasse wird von der [**CIM- \_ Karte**](cim-card.md) abgeleitet, die von [**CIM \_ physicalpackage**](cim-physicalelement.md)abgeleitet ist.
+Die **Win32 \_ BaseBoard-Klasse** wird von [**CIM Card \_ abgeleitet,**](cim-card.md) die von [**CIM \_ PhysicalPackage abgeleitet ist.**](cim-physicalelement.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im Beispiel [List Computer Baseboard Properties](https://Gallery.TechNet.Microsoft.Com/932346d8-4a23-4dac-bdbd-01fc14d526f8) perl werden Informationen zum Computer-Baseboard zurückgegeben.
+Das [Perl-Beispiel List Computer Baseboard Properties](https://Gallery.TechNet.Microsoft.Com/932346d8-4a23-4dac-bdbd-01fc14d526f8) gibt Informationen zur Computerbasiskarte zurück.
 
-Das PowerShell-Beispiel " [List Computer Baseboard Properties](https://Gallery.TechNet.Microsoft.Com/359772a2-c70e-45e9-bdad-f79efe2420a9) " gibt Informationen zum Computer-Baseboard zurück.
+Das [PowerShell-Beispiel Zum Auflisten](https://Gallery.TechNet.Microsoft.Com/359772a2-c70e-45e9-bdad-f79efe2420a9) von Computerbasisablageeigenschaften gibt Informationen zur Computerbasiskarte zurück.
 
-Im folgenden VBScript-Beispiel werden auch Informationen zum Computer-Baseboard zurückgegeben.
+Im folgenden VBScript-Beispiel werden auch Informationen zur Computerbasisablage zurückgegeben.
 
 
 ```VB
@@ -772,7 +772,7 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -781,10 +781,10 @@ Next
 
 <dl> <dt>
 
-[**CIM- \_ Karte**](cim-card.md)
+[**\_CIM-Karte**](cim-card.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

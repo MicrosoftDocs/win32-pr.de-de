@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: jeum-Funktion'
-title: Jeto ssnapshotprepareingestance-Funktion
+description: 'Weitere Informationen finden Sie unter: JetOSSnapshotPrepareInstance-Funktion'
+title: JetOSSnapshotPrepareInstance-Funktion
 TOCTitle: JetOSSnapshotPrepareInstance Function
 ms:assetid: b4f06342-633f-47c6-be32-64ec058920fe
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294064(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8cc5179a55aabfa3324e3caab7005f4abe437a6d
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: bfd4fc15f3ea7d4f6275f0d4dd31ed96729715b6089397fff7ee73fc7d0c6e9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104394282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119614934"
 ---
-# <a name="jetossnapshotprepareinstance-function"></a>Jeto ssnapshotprepareingestance-Funktion
+# <a name="jetossnapshotprepareinstance-function"></a>JetOSSnapshotPrepareInstance-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetossnapshotprepareinstance-function"></a>Jeto ssnapshotprepareingestance-Funktion
+## <a name="jetossnapshotprepareinstance-function"></a>JetOSSnapshotPrepareInstance-Funktion
 
-Die **jedessnapshotprepareinstance** -Funktion wählt eine bestimmte Instanz aus, die Teil der Momentaufnahme Sitzung sein soll.
+Die **JetOSSnapshotPrepareInstance-Funktion** wählt eine bestimmte Instanz aus, die Teil der Momentaufnahmesitzung sein soll.
 
-**Windows Vista:** **jedessnapshotprepareinstance** wurde in Windows Vista eingeführt.
+**Windows Vista:** **JetOSSnapshotPrepareInstance** wurde in Windows Vista eingeführt.
 
 ```cpp
 JET_ERR JET_API JetOSSnapshotPrepareInstance(
@@ -46,21 +46,21 @@ JET_ERR JET_API JetOSSnapshotPrepareInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*snapid*
+*snapId*
 
-Der Bezeichner der Momentaufnahme Sitzung.
+Der Bezeichner der Momentaufnahmesitzung.
 
-*lichen*
+*Instanz*
 
-Die-Instanz, die für diesen-Befehl verwendet wird.
+Die -Instanz, die für diesen Aufruf verwendet wird.
 
 *grbit*
 
-Die Optionen für diesen-Befehl. Dieser Parameter ist für die zukünftige Verwendung reserviert. Der einzige gültige Wert ist 0 (null).
+Die Optionen für diesen Aufruf. Dieser Parameter ist für die zukünftige Verwendung reserviert. Der einzige gültige Wert ist 0 (null).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -80,33 +80,33 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Der Momentaufnahme-ID-Zeiger ist <strong>null</strong> , oder der <em>grbit</em> -Parameter ist ungültig.</p></td>
+<td><p>Der Momentaufnahme-ID-Zeiger <strong>ist NULL,</strong> oder der <em>grbit-Parameter</em> ist ungültig.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errOSSnapshotInvalidSequence</p></td>
-<td><p>Eine Momentaufnahme Sitzung wird bereits ausgeführt.</p></td>
+<td><p>Eine Momentaufnahmesitzung wird bereits erstellt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errOSSnapshotInvalidSnapId</p></td>
-<td><p>Der Bezeichner für die Momentaufnahme Sitzung ist ungültig.</p></td>
+<td><p>Der Bezeichner für die Momentaufnahmesitzung ist ungültig.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, ist die angegebene Instanz Teil der Momentaufnahme Sitzung.
+Wenn diese Funktion erfolgreich ist, ist die angegebene Instanz Teil der Momentaufnahmesitzung.
 
 Wenn diese Funktion fehlschlägt, erfolgt keine Änderung des Engine-Zustands.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Der reguläre API-Sequenz Aufruf lautet: [jedessnapshotprepare](./jetossnapshotprepare-function.md), optional gefolgt von einem oder mehreren Aufrufen von **jedessnapshotprepareinstance** und anschließendem [jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md). Nachdem das Einfrieren gestartet wurde, kann es mit [jeto ssnapshotthaw](./jetossnapshotthaw-function.md)beendet werden. Nach der Vorbereitung kann die Momentaufnahme Sitzung jederzeit mit [jedessnapshotabort](./jetossnapshotabort-function.md)beendet werden. Ereignisprotokoll Einträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
+Der normale API-Sequenzaufruf [ist: JetOSSnapshotPrepare](./jetossnapshotprepare-function.md), optional gefolgt von einem oder mehr Aufrufen von **JetOSSnapshotPrepareInstance**, gefolgt von [JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md). Nachdem der Einfrieren gestartet wurde, kann er mit [JetOSSnapshotThaw beendet werden.](./jetossnapshotthaw-function.md) Nach der Vorbereitung kann die Momentaufnahmesitzung mit [JetOSSnapshotAbort](./jetossnapshotabort-function.md)jederzeit plötzlich beendet werden. Ereignisprotokolleinträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
 
-Wenn **jedessnapshotprepareinstance** zwischen dem Start der Sitzung ([jedessnapshotprepare](./jetossnapshotprepare-function.md)) und dem Freeze-Moment ([jedessnapshotfreeze](./jetossnapshotfreeze-function.md)) nicht aufgerufen wird, werden alle derzeit in der Engine laufenden Instanzen fixiert und in die Momentaufnahme Sitzung aufgenommen. Dies geschieht aus zwei Gründen:
+Wenn **JetOSSnapshotPrepareInstance** zwischen dem Start der Sitzung ([JetOSSnapshotPrepare](./jetossnapshotprepare-function.md)) und dem Fix-Moment ([JetOSSnapshotFreeze)](./jetossnapshotfreeze-function.md)nicht aufgerufen wird, frieren alle ausgeführten Instanzen in der Engine ein und werden Teil der Momentaufnahmesitzung. Dies hat zwei Gründe:
 
-  - Der Code für Benutzer, die alle Instanzen wünschen, wird vereinfacht.
+  - Sie vereinfacht den Code für Benutzer, die alle Instanzen wünschen.
 
-  - Sie ermöglicht die Abwärtskompatibilität für die Aufrufer der Momentaufnahme-APIs.
+  - Sie ermöglicht Abwärtskompatibilität für die Aufrufer der Momentaufnahme-APIs.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -126,14 +126,14 @@ Wenn **jedessnapshotprepareinstance** zwischen dem Start der Sitzung ([jedessnap
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -142,11 +142,11 @@ Wenn **jedessnapshotprepareinstance** zwischen dem Start der Sitzung ([jedessnap
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Fehler Behandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)  
+[Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
-[Jejessnapshotabort](./jetossnapshotabort-function.md)  
-[Jeto ssnapshotend](./jetossnapshotend-function.md)  
-[Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)  
-[Jejessnapshotprepare](./jetossnapshotprepare-function.md)  
-[Jejessnapshotthaw](./jetossnapshotthaw-function.md)
+[JetOSSnapshotAbort](./jetossnapshotabort-function.md)  
+[JetOSSnapshotEnd](./jetossnapshotend-function.md)  
+[JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  
+[JetOSSnapshotPrepare](./jetossnapshotprepare-function.md)  
+[JetOSSnapshotThaw](./jetossnapshotthaw-function.md)

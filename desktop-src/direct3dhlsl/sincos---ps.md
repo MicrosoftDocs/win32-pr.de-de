@@ -1,6 +1,6 @@
 ---
-title: SinCos-PS
-description: Berechnet Sinus und Kosinus im Bogenmaße. | SinCos-PS
+title: sincos – ps
+description: Berechnet Sinus und Kosinus im Bogenmaß. | sincos – ps
 ms.assetid: 639237ea-1b7a-4959-9093-78f134c11863
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1e7ccdca91af206862384ae14cf25a85d0817814
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 95f61c3a1cfc15f699e0e637dce8d58b9517ffe58ef36e529ec297661bff6a3c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671570"
 ---
-# <a name="sincos---ps"></a>SinCos-PS
+# <a name="sincos---ps"></a>sincos – ps
 
-Berechnet Sinus und Kosinus im Bogenmaße.
+Berechnet Sinus und Kosinus im Bogenmaß.
 
 ## <a name="syntax"></a>Syntax
 
-### <a name="ps_2_0-and-ps_2_x"></a>PS \_ 2 \_ 0 und PS \_ 2 \_ x
+### <a name="ps_2_0-and-ps_2_x"></a>ps \_ 2 \_ 0 und ps \_ 2 \_ x
 
 
 
-| SinCos DST. Stuben|Teenie|XY}, src0. Stuben|Teenie|z|w}, Quelle1, Quelle2 |
+| sincos dst. {x\|y\|xy}, src0. {x\|y\|z\|w}, src1, src2 |
 |------------------------------------------------------|
 
 
@@ -35,15 +35,15 @@ Berechnet Sinus und Kosinus im Bogenmaße.
 
 Hierbei gilt:
 
--   DST ist das Ziel Register und muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein. Das Ziel Register muss genau eine der folgenden drei Masken aufweisen:. x \| . y \| . XY.
--   src0 ist ein Quell Register, das den Eingabe Winkel bereitstellt, der innerhalb von \[ -Pi, + Pi liegen muss \] . {x \| y \| z \| w} ist das erforderliche Replizieren von replizieren.
--   Quelle1 und Quelle2 sind Quell Register und müssen zwei unterschiedliche [Konstante float-Register](dx9-graphics-reference-asm-ps-registers-constant-float.md)s (c \# ) aufweisen. Die Werte von Quelle1 und Quelle2 müssen der der Makros [**D3DSINCOSCONST1**](/windows/desktop/direct3d9/d3dsincosconst1) bzw. [**D3DSINCOSCONST2**](/windows/desktop/direct3d9/d3dsincosconst2) sein.
+-   dst ist das Zielregister und muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein. Das Zielregister muss genau eine der folgenden drei Masken aufweisen: .x \| .y \| .xy.
+-   src0 ist ein Quellregister, das den Eingabewinkel bereitstellt, der innerhalb von \[ -pi, +pi sein \] muss. {x \| y \| z \| w} ist die erforderliche Replizieren-Swizzle.
+-   src1 und src2 sind Quellregister und müssen zwei verschiedene [Constant Float Register](dx9-graphics-reference-asm-ps-registers-constant-float.md)s (c) \# sein. Die Werte von src1 und src2 müssen die Werte der Makros [**D3DSINCOSCONST1**](/windows/desktop/direct3d9/d3dsincosconst1) bzw. [**D3DSINCOSCONST2**](/windows/desktop/direct3d9/d3dsincosconst2) sein.
 
-### <a name="ps_3_0"></a>PS \_ 3 \_ 0
+### <a name="ps_3_0"></a>ps \_ 3 \_ 0
 
 
 
-| SinCos DST. Stuben|Teenie|XY}, src0. Stuben|Teenie|z|Löw |
+| sincos dst. {x\|y\|xy}, src0. {x\|y\|z\|w} |
 |------------------------------------------|
 
 
@@ -52,28 +52,28 @@ Hierbei gilt:
 
 Hierbei gilt:
 
--   DST ist ein Ziel Register, das ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r) sein muss \# . Das Ziel Register muss genau eine der folgenden drei Masken aufweisen:. x \| . y \| . XY.
--   src0 ist ein Quell Register, das den Eingabe Winkel bereitstellt, der innerhalb von \[ -Pi, + Pi liegen muss \] . {x \| y \| z \| w} ist das erforderliche Replizieren von replizieren.
+-   dst ist ein Zielregister und muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein. Das Zielregister muss genau eine der folgenden drei Masken aufweisen: .x \| .y \| .xy.
+-   src0 ist ein Quellregister, das den Eingabewinkel bereitstellt, der innerhalb von \[ -pi, +pi sein \] muss. {x \| y \| z \| w} ist die erforderliche Replizieren-Swizzle.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| SinCos                |      |      |      |      | x    | x    | x     | x    | x     |
+| sincos                |      |      |      |      | x    | x    | x     | x    | x     |
 
 
 
  
 
-### <a name="ps_2_0-and-ps_2_x"></a>PS \_ 2 \_ 0 und PS \_ 2 \_ x
+### <a name="ps_2_0-and-ps_2_x"></a>ps \_ 2 \_ 0 und ps \_ 2 \_ x
 
-Für PS \_ 2 \_ 0 und PS \_ 2 \_ x kann SinCos mit dem Prädikat verwendet werden, jedoch mit einer Einschränkung für das ausweichende des [Prädikats](dx9-graphics-reference-asm-ps-registers-predicate.md) (p0): nur replizieren (. x \| . y \| . z \| . w) ist zulässig.
+Für ps \_ 2 \_ 0 und ps \_ 2 \_ x können Sincos mit Prädikation verwendet werden, aber mit einer Einschränkung für die Swizzle des [Prädikatregisters](dx9-graphics-reference-asm-ps-registers-predicate.md) (p0): Nur Replizieren von Swizzle (.x \| .y \| .z \| .w) ist zulässig.
 
-Für PS \_ 2 \_ 0 und PS \_ 2 \_ x funktioniert die-Anweisung wie folgt (V = der Skalarwert von src0 mit einem replizierten Swizzle):
+Für ps \_ 2 \_ 0 und ps \_ 2 \_ x funktioniert die Anweisung wie folgt (V = der Skalarwert von src0 mit einer Replizieren-Swizzle):
 
--   Wenn die Schreib Maske den Wert. x hat:
+-   Wenn die Schreibmaske .x ist:
     ```
     dest.x = cos(V)
     dest.y is undefined when the instruction completes
@@ -83,7 +83,7 @@ Für PS \_ 2 \_ 0 und PS \_ 2 \_ x funktioniert die-Anweisung wie folgt (V = der
 
     
 
--   Wenn die Schreib Maske ". y" lautet:
+-   Wenn die Schreibmaske .y ist:
     ```
     dest.x is undefined when the instruction completes
     dest.y = sin(V)
@@ -93,7 +93,7 @@ Für PS \_ 2 \_ 0 und PS \_ 2 \_ x funktioniert die-Anweisung wie folgt (V = der
 
     
 
--   Wenn die Schreib Maske. XY lautet:
+-   Wenn die Schreibmaske .xy ist:
     ```
     dest.x = cos(V)
     dest.y = sin(V)
@@ -103,13 +103,13 @@ Für PS \_ 2 \_ 0 und PS \_ 2 \_ x funktioniert die-Anweisung wie folgt (V = der
 
     
 
-### <a name="ps_3_0"></a>PS \_ 3 \_ 0
+### <a name="ps_3_0"></a>ps \_ 3 \_ 0
 
-Für PS \_ 3 \_ 0 kann SinCos mit Prädikat ohne Einschränkung verwendet werden. Siehe [Predicate Register](dx9-graphics-reference-asm-ps-registers-predicate.md).
+Für ps \_ 3 \_ 0 kann sincos ohne Einschränkung mit Prädikation verwendet werden. Weitere Informationen finden Sie unter [Prädikatregister.](dx9-graphics-reference-asm-ps-registers-predicate.md)
 
-Für PS \_ 3 \_ 0 funktioniert die-Anweisung wie folgt (V = der Skalarwert von src0 mit einem replizierten Swizzle):
+Für ps \_ 3 \_ 0 funktioniert die Anweisung wie folgt (V = der Skalarwert von src0 mit einem Replizieren von Swizzle):
 
--   Wenn die Schreib Maske den Wert. x hat:
+-   Wenn die Schreibmaske .x ist:
     ```
     dest.x = cos(V)
     dest.y is not touched by the instruction
@@ -119,7 +119,7 @@ Für PS \_ 3 \_ 0 funktioniert die-Anweisung wie folgt (V = der Skalarwert von s
 
     
 
--   Wenn die Schreib Maske ". y" lautet:
+-   Wenn die Schreibmaske .y ist:
     ```
     dest.x is not touched by the instruction
     dest.y = sin(V)
@@ -129,7 +129,7 @@ Für PS \_ 3 \_ 0 funktioniert die-Anweisung wie folgt (V = der Skalarwert von s
 
     
 
--   Wenn die Schreib Maske. XY lautet:
+-   Wenn die Schreibmaske .xy ist:
     ```
     dest.x = cos(V)
     dest.y = sin(V)
@@ -139,7 +139,7 @@ Für PS \_ 3 \_ 0 funktioniert die-Anweisung wie folgt (V = der Skalarwert von s
 
     
 
-Die Anwendung kann \[ \] mit dem folgenden shaderpseudocode einen beliebigen Winkel (im Bogenmaße) zum Range-Pi und PI zuordnen:
+Die Anwendung kann mithilfe des folgenden Shader-Pseudocodes einen beliebigen Winkel (im Bogenmaß) dem Bereich \[ "-pi" und "+pi" \] zuordnen:
 
 
 ```

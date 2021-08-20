@@ -3,58 +3,58 @@ title: Verwenden von Inverse Telecine
 description: Verwenden von Inverse Telecine
 ms.assetid: 7752d1ac-34b1-446a-a69c-29463c9e10f7
 keywords:
-- SDK für Windows Media-Format, Inverse Telecine
-- Windows Media-Format-SDK, telecine
-- Advanced Systems Format (ASF), Inverse Telecine
-- ASF (Advanced Systems Format), Inverse Telecine
-- Advanced Systems Format (ASF), telecine
-- ASF (Advanced Systems Format), telecine
-- Inverse Telecine
+- Windows Medienformat-SDK, umgekehrtes Telekopieren
+- Windows Medienformat-SDK, Telekopieren
+- Advanced Systems Format (ASF), umgekehrtes Telekop
+- ASF (Advanced Systems Format), umgekehrtes Telekop
+- Advanced Systems Format (ASF), telekop
+- ASF (Advanced Systems Format), Telekopieren
+- umgekehrte Telekope
 - Telecine
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b17d4f4e3ae34c2a9efcaa4fe8e5ce7256474404
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 7885caffea83460d73b1eca26dbfd94eb50d99ac4aa8589113875ffc4358c029
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "106341510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585320"
 ---
 # <a name="to-use-inverse-telecine"></a>Verwenden von Inverse Telecine
 
-Telecine ist der Prozess der Umstellung von Film, der über 24 Frames pro Sekunde verfügt, in Video, das 60 Felder (halbframes) pro Sekunde enthält. Bei diesem Prozess werden Bilder aus jedem Filmframe in mehreren Video Feldern abgelegt.
+Telearbeit ist der Prozess der Konvertierung von Film mit 24 Bildern pro Sekunde in Video mit 60 Feldern (halber Frames) pro Sekunde. Dieser Prozess fügt Bilder aus jedem Filmrahmen in mehrere Videofelder ein.
 
-Wenn Sie ein Video, das aus einem Film mithilfe von telecine erstellt wurde, Digital codieren, kann der Komprimierungs Vorgang Bewegungsartefakte und andere Beeinträchtigungen der Qualität verursachen. Um zu vermeiden, dass die Qualität der digitalen Ausgabe beeinträchtigt wird, unterstützt der Windows Media Video 9-Codec Inverse Telecine. Wenn Sie Inverse Telecine verwenden, rekonstruiert der Codec die ursprünglichen 24 Filmframes pro Sekunde aus dem Eingabe Video, bevor der Inhalt codiert wird.
+Wenn Sie ein Video digital codieren, das mithilfe von Telekop aus dem Film erstellt wurde, kann der Komprimierungsprozess Bewegungsartefakte und andere Qualitätsbeeinträchtigungen verursachen. Um die Qualität der digitalen Ausgabe nicht zu beeinträchtigen, unterstützt der Windows Media Video 9-Codec umgekehrte Telekope. Bei Verwendung von inversem Telekop rekonstruiert der Codec die ursprünglichen 24 Filmframes pro Sekunde aus dem Eingabevideo, bevor der Inhalt codiert wird.
 
-Um Inverse Telecine verwenden zu können, müssen Sie folgende Schritte ausführen:
+Um inverse Telekope verwenden zu können, müssen Sie:
 
 -   Verwenden Sie ein Profil mit einem Videostream, der auf 24 Frames pro Sekunde festgelegt ist.
--   Informieren Sie sich über die Feld Konfiguration des Eingangs Videos.
+-   Kennen Sie die Feldkonfiguration des Eingabevideos.
 
-Führen Sie die folgenden Schritte aus, um Inverse Telecine für eine Eingabe für den Writer zu verwenden.
+Führen Sie die folgenden Schritte aus, um inverse Telekope für eine Eingabe an den Writer zu verwenden.
 
-1.  Richten Sie den Writer wie gewohnt ein. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien](writing-asf-files.md).
-2.  Bevor Sie mit dem Schreiben von Beispielen beginnen, erhalten Sie einen Zeiger auf die [**IWMWriterAdvanced2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriteradvanced2) -Schnittstelle, indem Sie **iwmwriter:: QueryInterface** aufrufen.
-3.  Identifizieren Sie den zu rekonstruierenden Stream, indem Sie für die gewünschte Eingabe Nummer [**IWMWriterAdvanced2:: * tinputsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) aufrufen. Übergeben Sie g \_ wszdeinterlacemode als Einstellung und WM \_ DM \_ deinterlace \_ invertartelecine als Wert.
-4.  **Setinputsetting** wird erneut aufgerufen, um g \_ wszinitialpatternforinversetelecine festzulegen.
+1.  Richten Sie den Writer wie gewohnt ein. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien.](writing-asf-files.md)
+2.  Rufen Sie vor dem Schreiben von Beispielen einen Zeiger auf die [**IWMWriterAdvanced2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriteradvanced2) ab, indem **Sie IWMWriter::QueryInterface** aufrufen.
+3.  Identifizieren Sie den zu rekonstruierten Stream, indem [**Sie IWMWriterAdvanced2::SetInputSetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) für die gewünschte Eingabenummer aufrufen. Übergeben Sie g \_ wszDeinterlaceMode als Einstellung und WM \_ DM \_ DEINTERLACE \_ INVERSETELEEINANDER als Wert.
+4.  Rufen Sie **SetInputSetting** erneut auf, um g \_ wszInitialPatternForInverseTelequart festzulegen.
 5.  Schreiben Sie die Datei wie gewohnt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erweiterte Themen**](advanced-topics.md)
+[**Weiterführende Themen**](advanced-topics.md)
 </dt> <dt>
 
-[**Iwmwriter-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriter)
+[**IWMWriter-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriter)
 </dt> <dt>
 
 [**IWMWriterAdvanced2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriteradvanced2)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

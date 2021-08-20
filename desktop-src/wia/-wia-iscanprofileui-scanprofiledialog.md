@@ -52,13 +52,13 @@ Das Handle des übergeordneten Fensters, das das Dialogfeld besitzt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 Das Dialogfeld ist modal. Der Benutzer kann erst zum übergeordneten Fenster wechseln, wenn das Dialogfeld geschlossen wird.
 
-Die Werte des `<ProfileName>` -Elements und des `<WiaItem>` -Elements können im Dialogfeld geändert werden. Das `<Default>` Element kann hinzugefügt oder gelöscht werden. Im Dialogfeld können keine weiteren Änderungen am Scanprofil vorgenommen werden.
+Die Werte des Elements `<ProfileName>` und des Elements können im Dialogfeld geändert `<WiaItem>` werden. Das `<Default>` Element kann hinzugefügt oder gelöscht werden. Im Dialogfeld können keine weiteren Änderungen am Überprüfungsprofil vorgenommen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,21 +66,21 @@ Die Werte des `<ProfileName>` -Elements und des `<WiaItem>` -Elements können im
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
 | Header<br/>                   | <dl> <dt>Scanprofileui.h</dt> </dl>  |
 | Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**IScanProfileUI**](-wia-iscanprofileui.md)
 </dt> <dt>
 
-[Scanprofilschema](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

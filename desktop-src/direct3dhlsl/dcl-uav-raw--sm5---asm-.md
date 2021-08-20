@@ -1,6 +1,6 @@
 ---
-title: dcl_uav_raw (sm5 - asm)
-description: Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_raw (sm5 - asm)
+title: dcl_uav_raw (sm5 – asm)
+description: Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_raw (sm5 – asm)
 ms.assetid: D0F43FF8-FF1C-4E42-AF42-F528C98FD680
 ms.topic: reference
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118986690"
 ---
-# <a name="dcl_uav_raw-sm5---asm"></a>dcl \_ uav \_ raw (sm5 - asm)
+# <a name="dcl_uav_raw-sm5---asm"></a>dcl \_ uav \_ raw (sm5 – asm)
 
 Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader.
 
@@ -36,11 +36,11 @@ Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch
 
 ## <a name="remarks"></a>Hinweise
 
-*dstUAV* ist ein U-Register, das als Verweis auf eine UnorderedAccessView eines Puffers deklariert ist, wobei der Puffer als einfaches 1D-Array von nicht typisierten \# 32-Bit-Einträgen angezeigt wird.
+*dstUAV* ist ein \# u-Register, das als Verweis auf eine UnorderedAccessView eines Puffers deklariert ist, wobei der Puffer als einfaches 1D-Array von nicht typierten 32-Bit-Einträgen angezeigt wird.
 
-Vorgänge, die für den Arbeitsspeicher ausgeführt werden, interpretieren die Daten möglicherweise implizit so, als ob sie einen Typ haben.
+Vorgänge, die für den Arbeitsspeicher ausgeführt werden, interpretieren die Daten möglicherweise implizit als einen Typ.
 
-Das \_ glc-Flag bedeutet "global zusammenhängende". Das Fehlen von glc bedeutet, dass die UAV im Compute-Shader nur als "gruppenreigent" oder bei einem Aufruf eines Einzelnen Pixel-Shaders \_ als "lokal zusammenhängend" deklariert wird.
+Das \_ glc-Flag bedeutet "global stimmig". Das Fehlen von \_ glc bedeutet, dass der UAV im Compute-Shader nur als "gruppenkonshent" oder bei einem Aufruf eines Einzelnen Pixel-Shaders als "lokal stimmig" deklariert wird.
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -54,7 +54,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8 verfügbar ist.
 
 
 
@@ -66,7 +66,7 @@ Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anw
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
@@ -74,19 +74,19 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
  
 
 > [!Note]  
-> Diese Anweisung wird in cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützt.
+> Diese Anweisung wird in CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützt.
 
  
 
@@ -94,7 +94,7 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

@@ -38,7 +38,7 @@ Das **RunningTaskCollection-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                | BESCHREIBUNG                                                    |
+| Eigenschaft                                                | Beschreibung                                                    |
 |:--------------------------------------------------------|:---------------------------------------------------------------|
 | [**Anzahl**](runningtaskcollection-count.md)<br/> | Ruft die Anzahl der ausgeführten Aufgaben in der Auflistung ab.<br/> |
 | [**Element**](runningtaskcollection-item.md)<br/>   | Ruft die angegebene Aufgabe aus der Auflistung ab. <br/>       |
@@ -60,7 +60,7 @@ Das **RunningTaskCollection-Objekt** verfügt über diese Eigenschaften.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der instanceparameters. baseName-Eigenschaft.
-title: Instanceparameters. baseName-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: InstanceParameters.BaseName-Eigenschaft'
+title: InstanceParameters.BaseName (Eigenschaft)
 TOCTitle: 'BaseName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.BaseName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.basename(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2d7e36363a73dc19c324e1852f58346e0ad95b40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe441036dbd4ae4b6c861e17e73596ef194cd05f2ad7fa46eb5c8fd8f5d8dbcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112463"
 ---
-# <a name="instanceparametersbasename-property"></a>Instanceparameters. baseName-Eigenschaft
+# <a name="instanceparametersbasename-property"></a>InstanceParameters.BaseName (Eigenschaft)
 
-Ruft das drei Buchstabe-Präfix für viele der Dateien ab, die von der Datenbank-Engine verwendet werden, oder legt dieses fest. Beispielsweise wird die Prüf Punkt Datei als EDB bezeichnet. Standardmäßig chk, da EDB der Standardbasis Name ist.
+Ruft das Präfix mit drei Buchstaben ab, das für viele der von der Datenbank-Engine verwendeten Dateien verwendet wird, oder legt dieses fest. Die Prüfpunktdatei heißt beispielsweise EDB. CHK ist standardmäßig der Standardbasisname, da EDB der Standardbasisname ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string BaseName { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

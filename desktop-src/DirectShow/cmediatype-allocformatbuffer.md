@@ -1,7 +1,7 @@
 ---
-description: Die Methode "belegcformatbuffer" weist Speicher für den Format Block zu.
+description: Die AllocFormatBuffer-Methode weist Arbeitsspeicher für den Formatblock zu.
 ms.assetid: 5ff716c7-f9cf-4b1c-9d3a-62ab955c1392
-title: Cmediatype. zucformatbuffer-Methode (mtype. h)
+title: CMediaType.AllocFormatBuffer-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6a9314fd06734adcc367b7be34dc8d6d1b9d996
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2c53e739237f2d61a6c59c7fac96e1b97e6343fa6dd209bcf72700cefab7d599
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073984"
 ---
-# <a name="cmediatypeallocformatbuffer-method"></a>Cmediatype. zucformatbuffer-Methode
+# <a name="cmediatypeallocformatbuffer-method"></a>CMediaType.AllocFormatBuffer-Methode
 
-Die- `AllocFormatBuffer` Methode ordnet Speicher für den Format Block zu.
+Die `AllocFormatBuffer` -Methode weist Arbeitsspeicher für den Formatblock zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,19 +45,19 @@ BYTE* AllocFormatBuffer(
 *length* 
 </dt> <dd>
 
-Die für den Format Block erforderliche Größe (in Bytes).
+Erforderliche Größe für den Formatblock in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung einen Zeiger auf den neuen Block zurück. Andernfalls wird **null** zurückgegeben.
+Gibt bei Erfolg einen Zeiger auf den neuen Block zurück. Andernfalls gibt NULL **zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich einen neuen Format Block zugeordnet hat, gibt Sie den vorhandenen Format Block frei. Wenn die Zuordnung fehlschlägt, verlässt die Methode den vorhandenen Format Block.
+Wenn die Methode erfolgreich einen neuen Formatblock zuteilen kann, wird der vorhandene Formatblock frei. Wenn die Zuordnung fehlschlägt, verlässt die Methode den vorhandenen Formatblock.
 
-Die-Methode aktualisiert die Member **cbformat** und **pbformat** der **am \_ \_ Medientyp** -Struktur.
+Die -Methode aktualisiert **die CbFormat-** und **pbFormat-Member** der **AM MEDIA \_ \_ TYPE-Struktur.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Die-Methode aktualisiert die Member **cbformat** und **pbformat** der **am \_ \_
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Die-Methode aktualisiert die Member **cbformat** und **pbformat** der **am \_ \_
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

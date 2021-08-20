@@ -1,6 +1,6 @@
 ---
 title: MDM_Firewall_FirewallRules02_01-Klasse
-description: Die MDM- \_ Firewall \_ FirewallRules02 01- \_ Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+description: Die \_ \_ FIREWALL-Klasse MDM FirewallRules02 \_ 01 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
 ms.assetid: b09cbd98-152e-486c-acb5-4e1d83e5f8e2
 keywords:
 - MDM_Firewall_FirewallRules02_01-Klasse
@@ -20,18 +20,18 @@ api_type:
 - DllExport
 api_location:
 - DMWmiBridgeProv.dll
-ms.openlocfilehash: 494be18ece91e7a1776780542f988b80cb822e42
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6a0f1c4337f64b93ca043e9f7d4d744516b37f9e5b13a471aec56bae4602feb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077234"
 ---
-# <a name="mdm_firewall_firewallrules02_01-class"></a>MDM- \_ Firewall \_ FirewallRules02 01- \_ Klasse
+# <a name="mdm_firewall_firewallrules02_01-class"></a>MDM \_ Firewall \_ FirewallRules02 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Firewall \_ FirewallRules02 01- \_ Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+Die \_ \_ FIREWALL-Klasse MDM FirewallRules02 \_ 01 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -64,20 +64,20 @@ class MDM_Firewall_FirewallRules02_01
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Firewall \_ FirewallRules02 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ FirewallRules02 \_ 01-Klasse** mdm firewall weist diese Typen von Membern auf:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Firewall \_ FirewallRules02 \_ 01** verfügt über diese Eigenschaften.
+Die **\_ \_ FIREWALL-Klasse MDM FirewallRules02 \_ 01** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [Beschreibung](/windows/client-management/mdm/firewall-csp#description)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 [Richtung](/windows/client-management/mdm/firewall-csp#direction)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,10 +96,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Edgetraversal](/windows/client-management/mdm/firewall-csp#edgetraversal)
+[EdgeTraversal](/windows/client-management/mdm/firewall-csp#edgetraversal)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 [Aktiviert](/windows/client-management/mdm/firewall-csp#enabled)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -118,10 +118,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**FriendlyName**
+**Friendlyname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -131,10 +131,10 @@ TBD
 
 </dd> <dt>
 
-**Icmptypesandcodes**
+**IcmpTypesAndCodes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -147,21 +147,21 @@ TBD
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Interfaketypes](/windows/client-management/mdm/firewall-csp#interfacetypes)
+[InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -169,10 +169,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localaddressranges](/windows/client-management/mdm/firewall-csp#localaddressranges)
+[LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -180,10 +180,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localportranges](/windows/client-management/mdm/firewall-csp#localportranges)
+[LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -191,10 +191,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localuserauthorizedlist](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+[LocalUserAuthorizedList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -205,7 +205,7 @@ Zugriffstyp: Lesen/Schreiben
 [Name](/windows/client-management/mdm/firewall-csp#name)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -213,16 +213,16 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -249,10 +249,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Remoteaddressranges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
+[RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -260,10 +260,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Remoteportranges](/windows/client-management/mdm/firewall-csp#remoteportranges)
+[RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -274,7 +274,7 @@ Zugriffstyp: Lesen/Schreiben
 [Status](/windows/client-management/mdm/firewall-csp#status)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -288,10 +288,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

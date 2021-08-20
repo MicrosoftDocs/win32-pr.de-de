@@ -1,5 +1,5 @@
 ---
-title: SGN-vs
+title: sgn – vs
 description: Berechnet das Vorzeichen der Eingabe.
 ms.assetid: b03530d1-c621-483e-bd94-31abafeb2e6e
 ms.topic: reference
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8573ff7e33a127d7c30af1fe512fbd3da298d0eb
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 1a4994c807ff1df99016aad734edf71e5e1ce6efe59fd53a4fb9bb3ee91a4b25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671680"
 ---
-# <a name="sgn---vs"></a>SGN-vs
+# <a name="sgn---vs"></a>sgn – vs
 
 Berechnet das Vorzeichen der Eingabe.
 
@@ -24,31 +24,31 @@ Berechnet das Vorzeichen der Eingabe.
 
 
 
-| SGN DST, src0, Quelle1, Quelle2 |
+| sgn dst, src0, src1, src2 |
 |---------------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein temporäres Register, das Zwischenergebnisse enthält. Nach der Ausführung sind die Inhalte nicht definiert.
--   Quelle2 ist ein temporäres Register, das Zwischenergebnisse enthält. Nach der Ausführung sind die Inhalte nicht definiert.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein temporäres Register, das Zwischenergebnisse enthält. Nach der Ausführung sind die Inhalte nicht definiert.
+-   src2 ist ein temporäres Register, das Zwischenergebnisse enthält. Nach der Ausführung sind die Inhalte nicht definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| SGN                    |      | x    | x    | x     | x    | x     |
+| Sgn                    |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 Diese Anweisung funktioniert wie unten gezeigt.
 
@@ -68,18 +68,18 @@ for each component in src0
 
 
 
-Quelle1 und Quelle2 müssen unterschiedliche [temporäre Register](dx9-graphics-reference-asm-vs-registers-temporary.md)s aufweisen.
+src1 und src2 müssen unterschiedliche [temporäre Register](dx9-graphics-reference-asm-vs-registers-temporary.md)sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

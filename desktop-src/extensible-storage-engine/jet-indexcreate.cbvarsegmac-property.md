@@ -64,12 +64,12 @@ public int cbVarSegMac { get; set; }
 
 Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 
 [JET_INDEXCREATE-Klasse](./jet-indexcreate-class.md)
 
-[JET_INDEXCREATE Member](./jet-indexcreate-members.md)
+[JET_INDEXCREATE-Member](./jet-indexcreate-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

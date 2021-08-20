@@ -1,11 +1,11 @@
 ---
 title: MS-SQL-Memory-Attribut
-description: Die Menge des Arbeitsspeichers auf dem Computer.
+description: Die Arbeitsspeichermenge auf dem Computer.
 ms.assetid: 36d69b8a-669b-4488-a75e-3b0af7f9845a
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des MS-SQL-Memory-Attributs
-- AD-Schema des MS-SQL-Memory-Attributs
+- mS-SQL-Memory-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d7f6b96f2a591e05df8bf325b028172ef713dc5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4eaf8c2b7fc757c04b0d2afbb4bafab24d52ea0b24fcdff7d09eb2882f5cc5a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583383"
 ---
 # <a name="ms-sql-memory-attribute"></a>MS-SQL-Memory-Attribut
 
-Die Menge des Arbeitsspeichers auf dem Computer.
+Die Arbeitsspeichermenge auf dem Computer.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-SQL-Arbeitsspeicher                        |
-| LDAP-Display-Name | MS-SQL-Arbeitsspeicher                        |
+| CN                | MS-SQL-Memory                        |
+| Ldap-Anzeigename | mS-SQL-Memory                        |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | Beim Systemstart.                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | Beim Systemstart.                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1367              |
-| System-ID-GUID    | 5b5d448c-CCEE-11d2-9993-0000f 87a57d4 |
+| System-ID-GUID    | 5b5d448c-ccee-11d2-9993-0000f87a57d4 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -70,7 +70,7 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -100,10 +100,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -121,10 +121,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -142,10 +142,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -163,10 +163,10 @@ Die Menge des Arbeitsspeichers auf dem Computer.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |

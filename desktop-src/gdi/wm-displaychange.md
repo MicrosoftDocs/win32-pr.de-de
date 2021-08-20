@@ -65,7 +65,7 @@ Diese Meldung wird nur an Fenster der obersten Ebene gesendet. Für alle anderen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,65 +1,65 @@
 ---
-description: Benutzer können das automatische Debuggen konfigurieren, damit Sie bestimmen können, warum Ihr System oder eine Anwendung nicht mehr reagiert.
+description: Benutzer können das automatische Debuggen konfigurieren, um zu bestimmen, warum ihr System oder eine Anwendung nicht mehr reagiert.
 ms.assetid: c3c7aa98-c298-452c-b8d0-10a08b4d82a3
-title: Konfigurieren von automatischem Debugging
+title: Konfigurieren des automatischen Debuggens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2630784d678e08b67a93d00ec52d9bc67c949bc7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 990f2f52e6227e4b1a2cf92656794c90fb5d465915a5d888025d0f3b2c438630
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076504"
 ---
-# <a name="configuring-automatic-debugging"></a>Konfigurieren von automatischem Debugging
+# <a name="configuring-automatic-debugging"></a>Konfigurieren des automatischen Debuggens
 
-Benutzer können das automatische Debuggen konfigurieren, damit Sie bestimmen können, warum Ihr System oder eine Anwendung nicht mehr reagiert.
+Benutzer können das automatische Debuggen konfigurieren, um zu bestimmen, warum ihr System oder eine Anwendung nicht mehr reagiert.
 
-## <a name="configuring-automatic-debugging-for-system-crashes"></a>Konfigurieren des automatischen Debuggens für System Abstürze
+## <a name="configuring-automatic-debugging-for-system-crashes"></a>Konfigurieren des automatischen Debuggens für Systemabstürze
 
-Um den Zielcomputer so zu konfigurieren, dass eine Absturz Abbild Datei generiert wird, wenn das System nicht mehr reagiert, verwenden Sie die Systemanwendung in der **System** Steuerung. Klicken Sie auf **Erweiterte Systemeinstellungen**, wodurch das Dialogfeld **Systemeigenschaften** angezeigt wird. Klicken Sie in diesem Feld auf der Registerkarte **erweitert** auf **Einstellungen** unter **Start und Wiederherstellung**, und verwenden Sie dann die entsprechenden Wiederherstellungsoptionen. Alternativ können Sie Optionen für Absturz Abbilder mit dem folgenden Registrierungsschlüssel konfigurieren:
+Um den Zielcomputer so zu konfigurieren, dass eine Absturzabbilddatei generiert wird, wenn das System nicht mehr reagiert, verwenden Sie die **Systemanwendung** in Systemsteuerung. Klicken **Sie auf Erweiterte Systemeinstellungen,** um das Dialogfeld **Systemeigenschaften** anzuzeigen. Klicken Sie **in diesem** Feld  auf der Registerkarte Erweitert auf Einstellungen unter **Start** und Wiederherstellung, und verwenden Sie dann die entsprechenden Wiederherstellungsoptionen. Alternativ können Sie Absturzabbildoptionen mit dem folgenden Registrierungsschlüssel konfigurieren:
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **CrashControl**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet-Steuerelement** \\  \\ **CrashControl**
 
-Die Datei, die Sie angeben können, ist die Absturz Abbild Datei. Der Standardname ist "Memory. dmp". Sie können ein Absturz Abbild mit einem Kernel Modus-Debugger Debuggen, z. b. WinDbg oder KD. Weitere Informationen finden Sie in der Dokumentation, die im Debugger enthalten ist.
+Die Datei, die Sie angeben können, ist die Absturzabbilddatei. Der Standardname ist Memory.dmp. Sie können ein Absturzabbild mit einem Kernelmodusdebugger wie WinDbg oder KD debuggen. Weitere Informationen finden Sie in der Dokumentation, die im Debugger enthalten ist.
 
-## <a name="configuring-automatic-debugging-for-application-crashes"></a>Konfigurieren des automatischen Debuggens für Anwendungs Abstürze
+## <a name="configuring-automatic-debugging-for-application-crashes"></a>Konfigurieren des automatischen Debuggens für Anwendungsabstürze
 
-Wenn eine Anwendung nicht mehr reagiert (z. b. nach einer Zugriffsverletzung), ruft das System automatisch einen Debugger auf, der in der Registrierung für das mortem-Debugging angegeben ist. die Prozess-ID und das Ereignis handle werden an den Debugger übergeben, wenn die Befehlszeile ordnungsgemäß konfiguriert ist. Im folgenden Verfahren wird beschrieben, wie ein Debugger in der Registrierung angegeben wird.
+Wenn eine Anwendung nicht mehr reagiert (z. B. nach einer Zugriffsverletzung), ruft das System automatisch einen Debugger auf, der in der Registrierung für das postungstem-Debuggen angegeben ist. Die Prozess-ID und das Ereignishand handle werden an den Debugger übergeben, wenn die Befehlszeile ordnungsgemäß konfiguriert ist. Im folgenden Verfahren wird beschrieben, wie Sie einen Debugger in der Registrierung angeben.
 
-**So legen Sie einen Debugger als mortem-Debugger fest**
+**So legen Sie einen Debugger als postungtem-Debugger fest**
 
 1.  Wechseln Sie zum folgenden Registrierungsschlüssel:
 
-    **HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **AEDebug**
+    **HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **AeDebug**
 
-2.  Fügen Sie den **Debugger** -Wert hinzu, oder bearbeiten Sie ihn mithilfe einer reg \_ SZ-Zeichenfolge, die die Befehlszeile für den Debugger angibt.
+2.  Fügen Sie den Debuggerwert **hinzu, oder** bearbeiten Sie diesen mithilfe einer REG SZ-Zeichenfolge, die \_ die Befehlszeile für den Debugger angibt.
 
-    Die Zeichenfolge sollte den voll qualifizierten Pfad zur ausführbaren Debugger-Datei enthalten. Geben Sie die Prozess-ID und das Ereignis Handle mit den Parametern "% LD" an der Debugger-Befehlszeile an. Verschiedene-konstruktormodule verfügen möglicherweise über eine eigene Parameter Syntax zum Angeben dieser Werte. Wenn der Debugger aufgerufen wird, wird das erste "% LD" durch die Prozess-ID und das zweite "% LD" durch das Ereignis handle ersetzt.
+    Die Zeichenfolge sollte den vollqualifizierten Pfad zur ausführbaren Debuggerdatei enthalten. Geben Sie die Prozess-ID und das Ereignishand handle mit "%ld"-Parametern in der Debuggerbefehlszeile an. Verschiedene Debugger verfügen möglicherweise über eigene Parametersyntaxen zum Angeben dieser Werte. Wenn der Debugger aufgerufen wird, wird das erste "%ld" durch die Prozess-ID und das zweite "%ld" durch das Ereignishand handle ersetzt.
 
-    Der folgende Text ist ein Beispiel für das Einrichten von WinDBG als Debugger.
+    Der folgende Text ist ein Beispiel für das Einrichten von WinDbg als Debugger.
 
     ``` syntax
     "C:\debuggers\windbg.exe" -p %ld -e %ld -g
     ```
 
-3.  Wenn Sie möchten, dass der Debugger ohne Benutzerinteraktion aufgerufen wird, können Sie den **automatischen** Wert hinzufügen oder bearbeiten. verwenden Sie dazu eine reg \_ SZ-Zeichenfolge, die angibt, ob das System ein Dialogfeld für den Benutzer anzeigen soll, bevor der Debugger aufgerufen wird. Mit der Zeichenfolge "1" wird das Dialogfeld deaktiviert. mit der Zeichenfolge "0" wird das Dialogfeld aktiviert.
+3.  Wenn der Debugger ohne Benutzerinteraktion aufgerufen werden soll, fügen Sie den Auto-Wert hinzu oder bearbeiten ihn mithilfe einer REG SZ-Zeichenfolge, die angibt, ob dem Benutzer ein Dialogfeld angezeigt werden soll, bevor der Debugger aufgerufen  \_ wird. Die Zeichenfolge "1" deaktiviert das Dialogfeld. Die Zeichenfolge "0" aktiviert das Dialogfeld.
 
 ## <a name="excluding-an-application-from-automatic-debugging"></a>Ausschließen einer Anwendung vom automatischen Debuggen
 
-Im folgenden Verfahren wird beschrieben, wie eine Anwendung **aus dem automatischen** Debuggen ausgeschlossen wird, nachdem der automatische Wert unter dem Schlüssel " **AEDebug** " auf 1 festgelegt wurde.
+Im folgenden Verfahren wird beschrieben, wie Eine Anwendung vom automatischen Debuggen ausgeschlossen wird, nachdem der **Auto-Wert** unter dem **AeDebug-Schlüssel** auf 1 festgelegt wurde.
 
 **So schließen Sie eine Anwendung vom automatischen Debuggen aus**
 
 1.  Wechseln Sie zum folgenden Registrierungsschlüssel:
 
-    **HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **AEDebug**
+    **HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **AeDebug**
 
-2.  Fügen Sie einen reg \_ DWORD-Wert zum Unterschlüssel **autoexclusionlist** hinzu, wobei Name der Name der ausführbaren Datei und der Wert 1 ist. Standardmäßig wird der Desktopfenster-Manager (Dwm.exe) vom automatischen Debuggen ausgeschlossen, da andernfalls ein System Deadlock auftreten kann, wenn Dwm.exe nicht mehr reagiert (der Benutzer kann die vom Debugger angezeigte Schnittstelle nicht sehen, weil Dwm.exe nicht antwortet und Dwm.exe nicht beenden kann, weil er vom Debugger aufbewahrt wird).
+2.  Fügen Sie dem Unterschlüssel \_ **AutoExclusionList** einen REG DWORD-Wert hinzu, wobei der Name der Name der ausführbaren Datei und der Wert 1 ist. Standardmäßig wird Desktopfenster-Manager (Dwm.exe) vom automatischen Debuggen ausgeschlossen, da andernfalls ein System deadlock auftreten kann, wenn Dwm.exe nicht mehr reagiert (der Benutzer kann die vom Debugger angezeigte Schnittstelle nicht sehen, da Dwm.exe nicht reagiert, und Dwm.exe kann nicht beendet werden, da sie vom Debugger gehalten wird).
 
-    **Windows Server 2003 und Windows XP:** Der Unterschlüssel **autoexclusionlist** ist nicht verfügbar. Folglich ist es nicht möglich, eine Anwendung, einschließlich Dwm.exe, vom automatischen Debugging auszuschließen.
+    **Windows Server 2003 und Windows XP:** Der **Unterschlüssel AutoExclusionList** ist nicht verfügbar. Daher können Sie keine Anwendung, einschließlich Dwm.exe, vom automatischen Debuggen ausschließen.
 
-Die standardmäßigen **AEDebug** -Registrierungseinträge können wie folgt dargestellt werden:
+Die **standardmäßigen AeDebug-Registrierungseinträge** können wie folgt dargestellt werden:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -77,7 +77,7 @@ HKEY_LOCAL_MACHINE
 
 <dl> <dt>
 
-[Aktivieren des Postmortem-Debuggens mit WinDbg](/windows-hardware/drivers/debugger/enabling-postmortem-debugging)
+[Aktivieren des postungstem-Debuggens mit WinDbg](/windows-hardware/drivers/debugger/enabling-postmortem-debugging)
 </dt> </dl>
 
  

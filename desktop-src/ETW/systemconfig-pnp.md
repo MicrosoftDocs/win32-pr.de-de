@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für PNP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für PnP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 01e9a8bb-3f54-4e20-b4db-1b4bba745d4f
 title: SystemConfig_PnP-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2bd4cdbbec5c61f453a0ef6fae3fef0bd494edac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 082d9169bbd2ad30af6b2bc17600804f43ce7bbef5e52f15f7ac4c85b21f7b8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582200"
 ---
-# <a name="systemconfig_pnp-class"></a>SystemConfig- \_ PnP-Klasse
+# <a name="systemconfig_pnp-class"></a>\_SystemConfig-PnP-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für PNP-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für PnP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,124 +48,124 @@ class SystemConfig_PnP : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die " **SystemConfig \_ PnP** "-Klasse verfügt über diese Typen von Membern:
+Die **\_ SystemConfig-PnP-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die " **SystemConfig \_ PnP** "-Klasse verfügt über diese Eigenschaften.
+Die **\_ PnP-Klasse SystemConfig** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Deskriptionlength**
+**DescriptionLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Länge der devicedescription-Zeichenfolge in Zeichen.
+Länge der DeviceDescription-Zeichenfolge in Zeichen.
 
 </dd> <dt>
 
 **DeviceDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(5), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Die Beschreibung des PNP-Geräts.
+Beschreibung des PnP-Geräts.
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(4), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Identifiziert das PNP-Gerät.
+Identifiziert das PnP-Gerät.
 
 </dd> <dt>
 
-**FriendlyName**
+**Friendlyname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(6), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Der Name des PNP-Geräts, der in einer Benutzeroberfläche verwendet werden soll.
+Name des PnP-Geräts, das auf einer Benutzeroberfläche verwendet werden soll.
 
 </dd> <dt>
 
-**Friendlynamelength**
+**FriendlyNameLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
 Länge der FriendlyName-Zeichenfolge in Zeichen.
 
 </dd> <dt>
 
-**Idlength**
+**IDLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Länge in Zeichen der Zeichenfolge "enviceid".
+Länge der DeviceID-Zeichenfolge in Zeichen.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

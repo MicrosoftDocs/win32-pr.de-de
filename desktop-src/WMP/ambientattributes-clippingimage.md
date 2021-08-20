@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. clippingimage
-description: Das clippingimage-Attribut gibt den Bereich an, an den das Steuerelement abgeschnitten wird, oder ruft ihn ab.
+title: AmbientAttributes.clippingImage
+description: Das clippingImage-Attribut gibt den Bereich an oder ruft den Bereich ab, in dem das Steuerelement abgeschnitten werden soll.
 ms.assetid: e4b51d31-f9c7-4398-983d-95867a2cab45
 keywords:
-- Ambientattribute. clippingimage-Fenster Media Player
+- AmbientAttributes.clippingImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e05e05ca9c7c3efdf842ffd4297da6f9fee035d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 15302483143b17075b6a6164fcd05da80eb1c7c666a83c76a460408d70ac72e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055188"
 ---
-# <a name="ambientattributesclippingimage"></a>Ambientattribute. clippingimage
+# <a name="ambientattributesclippingimage"></a>AmbientAttributes.clippingImage
 
-Das **clippingimage** -Attribut gibt den Bereich an, an den das Steuerelement abgeschnitten wird, oder ruft ihn ab.
+Das **clippingImage-Attribut** gibt den Bereich an oder ruft den Bereich ab, in dem das Steuerelement abgeschnitten werden soll.
 
 ``` syntax
         elementID.clippingImage
@@ -29,21 +29,21 @@ Das **clippingimage** -Attribut gibt den Bereich an, an den das Steuerelement ab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen der Bilddatei angibt Er besitzt keinen Standardwert.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die den Namen der Bilddatei angibt. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **clippingimage** -Attribut unterstützt PNG-, JPG-, BMP-und GIF-Dateien (ohne animierte GIFs). Da es sich bei den JPGs um Verlust Verluste handelt, werden Sie daher nicht für das Abschneiden von Images empfohlen.
+Das **clippingImage-Attribut** unterstützt PNG-, JPG-, BMP- und GIF-Dateien (ohne animierte GIFs). Da JPGs verlustbeendend sind und daher unerwarteten Farbwechseln unterliegen, werden sie für das Ausschneiden von Bildern nicht empfohlen.
 
-Dieses Attribut ist nützlich, wenn Sie nur einen Teil des Steuerelement Bilds anzeigen möchten, nicht den gesamten rechteckigen Bereich. Das **clippingcolor** -Attribut gibt die Bereiche des clippingbilds an, die transparenten, nicht klickbaren Teilen des Steuer Elements entsprechen. Das Steuerelement kann daher eine beliebige Form aufweisen. Um optimale Ergebnisse zu erzielen, sollte das clippingbild die gleiche Größe wie das Steuerelement Bild aufweisen.
+Dieses Attribut ist nützlich, wenn Sie nur einen Teil des Steuerelementbilds und nicht den gesamten rechteckigen Bereich anzeigen möchten. Das **clippingColor-Attribut** gibt die Bereiche des Clippingbilds an, die transparenten, nicht klickbaren Teilen des Steuerelements entsprechen. Das Steuerelement kann daher eine beliebige Form haben. Um optimale Ergebnisse zu erzielen, sollte das Clippingbild die gleiche Größe wie das Steuerelementbild haben.
 
-Das **clippingimage** -Attribut wird von den Elementen " **Wiedergabeliste**", " **View**" und " **subview** " nicht unterstützt. Ein clippingbild funktioniert nicht mit dem **Video** Element, wenn es sich um ein *Video* handelt. **Windows less** ist auf false festgelegt, ebenso wie das **Effects** -Element bei *Effekten*. " **Fenster** " ist auf "true" festgelegt.
+Das **clippingImage-Attribut** wird von den **PLAYLIST-,** **VIEW-** und **SUBVIEW-Elementen nicht** unterstützt. Ein Clippingbild funktioniert nicht mit dem **VIDEO-Element,** wenn *VIDEO*. **windowless ist** auf FALSE festgelegt, und mit dem **EFFECTS-Element,** wenn *EFFECTS*. **windowed** ist auf TRUE festgelegt.
 
-Da die Verwendung von Clipping-Images zu Leistungseinbußen führt, sollten Sie nicht verwendet werden, wenn die Effizienz ein Problem ist.
+Da die Verwendung von Clippingbildern leistungssentspricht, sollten sie nicht verwendet werden, wenn effizienz ein Problem ist.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel zur Veranschaulichung der Verwendung dieses Attributs finden Sie unter [ButtonElement. mappingColor](buttonelement-mappingcolor.md) -Attribut.
+Im [ButtonELEMENT.mappingColor-Attribut](buttonelement-mappingcolor.md) finden Sie ein Beispiel, das die Verwendung dieses Attributs veranschaulicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Ein Beispiel zur Veranschaulichung der Verwendung dieses Attributs finden Sie un
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -62,7 +62,7 @@ Ein Beispiel zur Veranschaulichung der Verwendung dieses Attributs finden Sie un
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. clippingcolor**](ambientattributes-clippingcolor.md)
+[**AmbientAttributes.clippingColor**](ambientattributes-clippingcolor.md)
 </dt> </dl>
 
  

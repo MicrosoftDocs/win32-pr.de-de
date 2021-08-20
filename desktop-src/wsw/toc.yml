@@ -224,15 +224,15 @@
                   href: untypedserviceexample.md
                 - name: BlockingServiceExample
                   href: blockingserviceexample.md
-                - name: CallAbillenExample
+                - name: CallAbtaxinExample
                   href: callabandonexample.md
-                - name: AsmxProxyServiceSampleWithCustomProxy
+                - name: AsmxMultiServiceSampleWithCustomProxy
                   href: asmxterraservicesamplewithcustomproxy.md
                 - name: PolicyTemplateExample
                   href: policytemplateexample.md
                 - name: WcfPublicServiceSample
                   href: wcfpublicservicesample.md
-            - name: Beispiele für TCP-Kanalebene
+            - name: Beispiele für TCP-Kanalebenen
               href: tcp-channel-layer-examples.md
               items:
                 - name: AsyncStreamingTcpClientExample
@@ -266,7 +266,7 @@
                   href: streaminghttpclientexample.md
                 - name: StreamingHttpServerExample
                   href: streaminghttpserverexample.md
-            - name: Beispiele für die UDP-Kanalebene
+            - name: Beispiele für UDP-Kanalebenen
               href: udp-channel-layer-examples.md
               items:
                 - name: MulticastUdpClientExample
@@ -333,13 +333,13 @@
             - name: Beispiele für asynchrone Modelle
               href: async-model-examples.md
               items:
-                - name: Beispiel für eine asynchrone Funktion
+                - name: Beispiel für asynchrone Funktion
                   href: asyncmodelexample.md
                 - name: AsyncAdd3ExplicitExample
                   href: asyncadd3explicitexample.md
                 - name: AsyncAdd3ImplicitExample
                   href: asyncadd3implicitexample.md
-            - name: Beispiele für Die Sicherheitskanalebene
+            - name: Beispiele für Sicherheitskanalebenen
               href: security-channel-layer-examples.md
               items:
                 - name: HttpClientWithKerberosOverSslExample
@@ -378,7 +378,7 @@
     - name: Windows Webdienstreferenz
       href: windows-web-services-reference.md
       items:
-        - name: Windows Webdienst-Rückruffunktionen
+        - name: Windows Webdienstrückruffunktionen
           href: web-services-for-windows-callback-functions.md
           items:
             - name: WS_ABANDON_MESSAGE_CALLBACK
@@ -1087,7 +1087,7 @@
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendelement
             - name: WsWriteEndStartElement
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendstartelement
-            - name: WsWriteEnvevesEnd
+            - name: WsWriteEnvelopeEnd
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopeend
             - name: WsWriteEnvevesStart
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopestart

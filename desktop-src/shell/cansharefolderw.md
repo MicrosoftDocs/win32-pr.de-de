@@ -23,7 +23,7 @@ ms.locfileid: "119032868"
 ---
 # <a name="cansharefolderw-function"></a>CanShareFolderW-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Er kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows.\]
 
 Wird verwendet, um zu bestimmen, ob die Option **Diesen Ordner freigeben** in der Webansicht angezeigt werden soll.
 
@@ -55,14 +55,14 @@ Ein Zeiger auf eine Zeichenfolge, die den Pfad des zu testden Ordners angibt.
 
 Typ: **STDAPI**
 
-Rückgabewerte umfassen Folgendes.
+Die Rückgabewerte umfassen Folgendes.
 
 
 
-| Rückgabecode/-wert                                                                        | BESCHREIBUNG                                                                           |
+| Rückgabecode/-wert                                                                        | Beschreibung                                                                           |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>     | Der Pfad, auf den *pszPath* zeigt, gibt einen Ordner an, der freigegeben werden kann.<br/>    |
-| <dl> <dt>**S \_ FALSE**</dt> </dl>  | Der Pfad, auf den *pszPath* zeigt, gibt einen Ordner an, der nicht freigegeben werden kann.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>     | Der Pfad, auf den *pszPath zeigt,* gibt einen Ordner an, der freigegeben werden kann.<br/>    |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>  | Der Pfad, auf den *pszPath zeigt,* gibt einen Ordner an, der nicht freigegeben werden kann.<br/> |
 | <dl> <dt>HRESULT-Fehler</dt> </dl> | Es ist ein Fehler aufgetreten.<br/>                                                     |
 
 
@@ -71,7 +71,7 @@ Rückgabewerte umfassen Folgendes.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um es zu verwenden.
+Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary und**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) [**GetProcAddress verwenden,**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) um sie zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,14 +79,14 @@ Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary**](/w
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Ntshrui.dll</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **CanShareFolderW** (Unicode)<br/>                                               |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

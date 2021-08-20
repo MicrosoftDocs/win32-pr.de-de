@@ -1,9 +1,9 @@
 ---
-title: MMIOM_CLOSE (Mmsystem.h)
-description: Die MMIOM CLOSE-Nachricht wird von der mmioClose-Funktion an eine E/A-Prozedur gesendet, um an fordern, \_ dass eine Datei geschlossen wird.
+title: MMIOM_CLOSE Meldung (Mmsystem.h)
+description: Die MMIOM \_ CLOSE-Nachricht wird von der mmioClose-Funktion an eine E/A-Prozedur gesendet, um anzufordern, dass eine Datei geschlossen wird.
 ms.assetid: 9d0dad5b-fd0a-4948-a4cf-9d138e353c76
 keywords:
-- MMIOM_CLOSE von Windows Multimedia
+- MMIOM_CLOSE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119065390"
 ---
-# <a name="mmiom_close-message"></a>MMIOM \_ CLOSE-Meldung
+# <a name="mmiom_close-message"></a>MMIOM \_ CLOSE-Nachricht
 
-Die **MMIOM \_ CLOSE-Nachricht** wird von der [**mmioClose-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioclose) an eine E/A-Prozedur gesendet, um an fordern, dass eine Datei geschlossen wird.
+Die **MMIOM \_ CLOSE-Nachricht** wird von der [**mmioClose-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioclose) an eine E/A-Prozedur gesendet, um anzufordern, dass eine Datei geschlossen wird.
 
 
 ```C++
@@ -41,7 +41,7 @@ lParam2 = reserved
 <span id="lCloseFlags"></span><span id="lcloseflags"></span><span id="LCLOSEFLAGS"></span>*lCloseFlags*
 </dt> <dd>
 
-Flags, die im **wFlags-Parameter** von **mmioClose enthalten sind.**
+Flags, die im **wFlags-Parameter** von **mmioClose** enthalten sind.
 
 </dd> </dl>
 

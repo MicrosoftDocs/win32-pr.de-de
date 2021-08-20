@@ -1,7 +1,7 @@
 ---
-description: Die setconfiginfo-Methode gibt den igraphconfig-Zeiger und das-Ereignis zum Abbrechen an.
+description: Die SetConfigInfo-Methode gibt den IGraphConfig-Zeiger und das Stop-Ereignis an.
 ms.assetid: 938fe8be-5622-4954-9ba3-31fc68fbfa31
-title: Cdynamicoutputpin. setconfiginfo-Methode (amfilter. h)
+title: CDynamicOutputPin.SetConfigInfo-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b0c14342a629a38a878649ac59d8f1f814874f12
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 23b492eaf4b5f712a51132eefcceac12a772b17b8285d8c6edb1a6cec268b1c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074234"
 ---
-# <a name="cdynamicoutputpinsetconfiginfo-method"></a>Cdynamicoutputpin. setconfiginfo-Methode
+# <a name="cdynamicoutputpinsetconfiginfo-method"></a>CDynamicOutputPin.SetConfigInfo-Methode
 
-Die `SetConfigInfo` -Methode gibt den [**igraphconfig**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig) -Zeiger und das-Ereignis zum Abbrechen an.
+Die `SetConfigInfo` -Methode gibt den [**IGraphConfig-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig) und das Beendigungsereignis an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void SetConfigInfo(
 
 <dl> <dt>
 
-*pgraphconfig* 
+*pGraphConfig* 
 </dt> <dd>
 
-Ein Zeiger auf die [**igraphconfig**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig) -Schnittstelle oder **null**.
+Zeiger auf die [**IGraphConfig-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig) oder **NULL.**
 
 </dd> <dt>
 
-*hstopevent* 
+*hStopEvent* 
 </dt> <dd>
 
-Handle für ein Ereignis, das signalisiert wird, wenn der Filter beendet wird, oder **null**.
+Behandeln Sie ein Ereignis, das signalisiert wird, wenn der Filter beendet wird, oder **NULL**.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Handle für ein Ereignis, das signalisiert wird, wenn der Filter beendet wird, o
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter muss diese Methode aufzurufen, wenn er dem Filter Diagramm Beitritt. Der Filter Graph-Manager unterstützt **igraphconfig**. Erstellen Sie für den *hstopevent* -Parameter ein manuelles Zurücksetzungs Ereignis. Wenn der Filter das Filter Diagramm verlässt, muss diese Methode erneut mit **null** für beide Parameter aufgerufen werden.
+Der Filter muss diese Methode aufrufen, wenn er dem Filterdiagramm beitritt. Der Filtergraph-Manager unterstützt **IGraphConfig.** Erstellen Sie für den *Parameter hStopEvent* ein Ereignis für die manuelle Zurücksetzung. Wenn der Filter das Filterdiagramm verlässt, rufen Sie diese Methode für beide Parameter erneut mit **NULL** auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Der Filter muss diese Methode aufzurufen, wenn er dem Filter Diagramm Beitritt. 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Der Filter muss diese Methode aufzurufen, wenn er dem Filter Diagramm Beitritt. 
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

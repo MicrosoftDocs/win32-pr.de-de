@@ -39,7 +39,7 @@ Weitere Informationen finden Sie im Abschnitt [XML-Attribute.](xml-attributes.md
 
 ## <a name="element-information"></a>Elementinformationen
 
-In der folgenden Tabelle sind die Elemente, die diesem Element unter Umständen über- und unteren Elementen liegen können, die Elemente, die diesem Element unter umständen unter stehen, und alle Einschränkungen für das Element selbst aufgeführt.
+In der folgenden Tabelle sind die Elemente aufgeführt, die diesem Element unter Umständen über- oder unteren Elementen liegen, sowie alle Einschränkungen für das Element selbst.
 
 
 

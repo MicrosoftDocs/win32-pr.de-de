@@ -1,31 +1,31 @@
 ---
-description: Bitmaps sollten in einer Datei gespeichert werden, die das festgelegte Bitmapdateiformat verwendet, und mit der Erweiterung "drei Zeichen. bmp" einen Namen zugewiesen.
+description: Bitmaps sollten in einer Datei gespeichert werden, die das eingerichtete Bitmapdateiformat verwendet und einen Namen mit der aus drei Zeichen .bmp hat.
 ms.assetid: 44f19d14-4e0e-4512-8c86-6bd34ca4e87b
-title: Bitmapspeicher
+title: Bitmap-Storage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28046f6d78f5137d0dfc5b1396bbf76be318daa5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83688f240899ded49227264b716d8c5d1fb609aa747fc358184a78ad18c8d17f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038208"
 ---
-# <a name="bitmap-storage"></a>Bitmapspeicher
+# <a name="bitmap-storage"></a>Bitmap-Storage
 
-Bitmaps sollten in einer Datei gespeichert werden, die das festgelegte Bitmapdateiformat verwendet, und mit der Erweiterung "drei Zeichen. bmp" einen Namen zugewiesen. Das festgelegte Bitmapdateiformat besteht aus einer [**BITMAPFILEHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) -Struktur, gefolgt von einer [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85))-, [**BITMAPV4HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)-oder [**BITMAPV5HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header) -Struktur. Ein Array aus [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Strukturen (auch als Farbtabelle bezeichnet) folgt der Struktur der bitmapinformationsheader. Auf die Farbtabelle folgt ein zweites Array von Indizes in die Farbtabelle (die eigentlichen Bitmapdaten).
+Bitmaps sollten in einer Datei gespeichert werden, die das eingerichtete Bitmapdateiformat verwendet und einen Namen mit der aus drei Zeichen .bmp hat. Das eingerichtete Bitmapdateiformat besteht aus einer [**BITMAPFILEHEADER-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) gefolgt von einer [**BITMAPINFOHEADER-,**](/previous-versions//dd183376(v=vs.85)) [**BITMAPV4HEADER-**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)oder [**BITMAPV5HEADER-Struktur.**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header) Ein Array von [**RGBQUAD-Strukturen**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) (auch als Farbtabelle bezeichnet) folgt der Bitmapinformationsheaderstruktur. Auf die Farbtabelle folgt ein zweites Array von Indizes in der Farbtabelle (die tatsächlichen Bitmapdaten).
 
-Das Bitmapdateiformat ist in der folgenden Abbildung dargestellt.
+Das Bitmapdateiformat wird in der folgenden Abbildung dargestellt.
 
-![Diagramm des bitmapdateiformats, das BITMAPFILEHEADER, BITMAPINFOHEADER, rgbquad Array und Farb Index Array anzeigt](images/csbmp-02.png)
+![Diagramm des Bitmapdateiformats mit bitmapfileheader, bitmapinfoheader, rgbquad array und color-index array](images/csbmp-02.png)
 
-Die Elemente der [**BITMAPFILEHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) -Struktur identifizieren die Datei. Geben Sie die Größe der Datei in Bytes an. und geben den Offset vom ersten Byte in der Kopfzeile bis zum ersten Byte der Bitmapdaten an. Die Elemente der [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85))-, [**BITMAPV4HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)-oder [**BITMAPV5HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header) -Struktur geben die Breite und Höhe der Bitmap in Pixel an. das Farb Format (Anzahl von Farbebenen und Farbbits pro Pixel) des Anzeige Geräts, auf dem die Bitmap erstellt wurde. Gibt an, ob die Bitmapdaten vor dem Speicher und dem verwendeten Komprimierungstyp komprimiert wurden. die Anzahl der Bytes von Bitmapdaten. die Auflösung des Anzeige Geräts, auf dem die Bitmap erstellt wurde. und die Anzahl der in den Daten dargestellten Farben. Die [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Strukturen geben die RGB-Intensitätswerte für die einzelnen Farben in der Palette des Geräts an.
+Die Member der [**BITMAPFILEHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) identifizieren die Datei. geben Sie die Größe der Datei in Bytes an. und geben den Offset vom ersten Byte im Header bis zum ersten Byte der Bitmapdaten an. Die Member der [**BITMAPINFOHEADER-,**](/previous-versions//dd183376(v=vs.85)) [**BITMAPV4HEADER-**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)oder [**BITMAPV5HEADER-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header) geben die Breite und Höhe der Bitmap in Pixel an. das Farbformat (Anzahl der Farbebenen und Farbbits pro Pixel) des Anzeigegeräts, auf dem die Bitmap erstellt wurde; gibt an, ob die Bitmapdaten vor dem Speichern komprimiert wurden und welche Art von Komprimierung verwendet wurde; die Anzahl der Bytes von Bitmapdaten; die Auflösung des Anzeigegeräts, auf dem die Bitmap erstellt wurde; und die Anzahl der in den Daten dargestellten Farben. Die [**RGBQUAD-Strukturen**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) geben die RGB-Intensitätswerte für jede der Farben in der Gerätepalette an.
 
-Das Farb Index Array ordnet eine Farbe in Form eines Indexes einer [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Struktur zu, wobei jedes Pixel in einer Bitmap angezeigt wird. Daher entspricht die Anzahl der Bits im Farb Index Array der Anzahl der Pixel, die für die Indizierung der **rgbquad** -Strukturen benötigt wird. Beispielsweise verfügt eine "8x8 Black-and-White"-Bitmap über ein Farb Index Array von 8 \* 8 \* 1 = 64 Bits, da ein Bit erforderlich ist, um zwei Farben zu indizieren. Der in [Informationen zu Bitmaps](about-bitmaps.md)erwähnte Redbrick.bmp ist eine 32 x 32-Bitmap mit 16 Farben. das Farb Index Array ist 32 \* 32 \* 4 = 4096 Bits, da vier Bits den Wert 16 Farben haben.
+Das Farbindexarray ordnet eine Farbe in Form eines Indexes einer [**RGBQUAD-Struktur**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) mit jedem Pixel in einer Bitmap zu. Daher entspricht die Anzahl der Bits im Farbindexarray der Anzahl von Pixeln, die der Anzahl der Bits entspricht, die zum Indizieren der **RGBQUAD-Strukturen erforderlich** sind. Beispielsweise verfügt eine 8x8-Bitmap aus Schwarz und Weiß über ein Farbindexarray von 8 \* 8 \* 1 = 64 Bit, da ein Bit zum Indizieren von zwei Farben benötigt wird. Die Redbrick.bmp, die unter About Bitmaps (Informationen zu [Bitmaps)](about-bitmaps.md)erwähnt wird, ist eine 32x32-Bitmap mit 16 Farben. Sein Farbindexarray ist 32 \* 32 \* 4 = 4.096 Bits, da vier Bits 16 Farben indizieren.
 
-Zum Erstellen eines Farb Index Arrays für eine Top-Down-Bitmap beginnen Sie in der obersten Zeile in der Bitmap. Der Index von [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) für die Farbe des äußersten linken Pixels ist die erste *n* Bits im Farb Index Array (wobei *n* die Anzahl der Bits ist, die zum Angeben aller **rgbquad** -Strukturen benötigt werden). Die Farbe des nächsten Pixels auf der rechten Seite entspricht den nächsten *n* Bits im Array usw. Nachdem Sie das ganz rechts Pixel in der Linie erreicht haben, fahren Sie mit dem äußersten linken Pixel in der folgenden Zeile fort. Fahren Sie fort, bis die gesamte Bitmap abgeschlossen ist. Wenn es sich um eine untere Bitmap handelt, starten Sie in der unteren Zeile der Bitmap statt in der oberen Zeile, und fahren Sie von links nach rechts fort, und fahren Sie mit der obersten Zeile der Bitmap fort.
+Um ein Farbindexarray für eine Bitmap von oben nach unten zu erstellen, beginnen Sie mit der oberen Zeile in der Bitmap. Der Index des [**RGBQUAD**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) für die Farbe des linkssten Pixels ist die ersten *n* Bits im Farbindexarray (wobei *n* die Anzahl der Bits ist, die zum Angeben aller **RGBQUAD-Strukturen** erforderlich sind). Die Farbe des nächsten Pixels rechts ist die nächsten *n* Bits im Array usw. Nachdem Sie das Pixel ganz rechts in der Zeile erreicht haben, fahren Sie mit dem ganz links stehenden Pixel in der folgenden Zeile fort. Fahren Sie fort, bis Sie mit der gesamten Bitmap fertig sind. Wenn es sich um eine Bitmap von unten nach oben handelt, beginnen Sie in der unteren Zeile der Bitmap und nicht in der oberen Zeile, gehen sie immer noch von links nach rechts, und fahren Sie mit der oberen Zeile der Bitmap fort.
 
-In der folgenden hexadezimalen Ausgabe wird der Inhalt der Datei Redbrick.bmp angezeigt.
+Die folgende hexadezimale Ausgabe zeigt den Inhalt der Datei Redbrick.bmp.
 
 
 ```C++
@@ -73,16 +73,16 @@ In der folgenden hexadezimalen Ausgabe wird der Inhalt der Datei Redbrick.bmp an
 
 
 
-In der folgenden Tabelle werden die Daten Bytes angezeigt, die den Strukturen in einer Bitmapdatei zugeordnet sind.
+Die folgende Tabelle zeigt die Datenbytes, die den Strukturen in einer Bitmapdatei zugeordnet sind.
 
 
 
-| Struktur                                    | Entsprechende bytes |
+| Struktur                                    | Entsprechende Bytes |
 |----------------------------------------------|---------------------|
 | [**BITMAPFILEHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) | 0x00 0x0D           |
 | [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85)) | 0x0E 0x35           |
-| [**Rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Array             | 0x36 0x75           |
-| Farb Index Array                            | 0x76 0x275          |
+| [**RGBQUAD-Array**](/windows/win32/api/wingdi/ns-wingdi-rgbquad)             | 0x36 0x75           |
+| Farbindexarray                            | 0x76 0x275          |
 
 
 

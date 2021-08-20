@@ -4,7 +4,7 @@ description: Mögliche Gründe für die Behebung eines Wiegefehlers.
 ms.assetid: 29E875D7-97DA-4129-AB71-B261CD0E682A
 keywords:
 - MPRESOLVED_REASON enumeration legacy Windows Environment Features
-- PMPRESOLVED_REASON enumeration pointer Legacy Windows Environment Features
+- PMPRESOLVED_REASON-Enumerationszeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:

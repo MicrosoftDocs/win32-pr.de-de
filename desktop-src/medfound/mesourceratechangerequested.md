@@ -1,5 +1,5 @@
 ---
-description: Wird von einer Medienquelle ausgelöst, um eine neue Wiedergaberate an fordern. Die Anwendung sollte MIT DER ANGEFORDERTEN Rate DIERATEControl::SetRate aufrufen. Eine Medienquelle kann dieses Ereignis möglicherweise aus, wenn sie die Wiedergabe nicht mit der aktuellen Rate fortsetzen kann.
+description: Wird von einer Medienquelle ausgelöst, um eine neue Wiedergaberate anzufordern. Die Anwendung sollte ÜBERRATEControl::SetRate mit der angeforderten Rate aufrufen. Eine Medienquelle kann dieses Ereignis auslösen, wenn die Wiedergabe mit der aktuellen Rate nicht fortgesetzt werden kann.
 ms.assetid: 705e5a79-836b-417b-a7ed-c733572f6905
 title: MESourceRateChangeRequested-Ereignis (Mfobjects.h)
 ms.topic: reference
@@ -13,11 +13,11 @@ ms.locfileid: "118974129"
 ---
 # <a name="mesourceratechangerequested-event"></a>MESourceRateChangeRequested-Ereignis
 
-Wird von einer Medienquelle ausgelöst, um eine neue Wiedergaberate an fordern. Die Anwendung sollte [**MIT DER ANGEFORDERTEN Rate DIERATEControl::SetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) aufrufen. Eine Medienquelle kann dieses Ereignis möglicherweise aus, wenn sie die Wiedergabe nicht mit der aktuellen Rate fortsetzen kann.
+Wird von einer Medienquelle ausgelöst, um eine neue Wiedergaberate anzufordern. Die Anwendung sollte [**ÜBERRATEControl::SetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) mit der angeforderten Rate aufrufen. Eine Medienquelle kann dieses Ereignis auslösen, wenn die Wiedergabe mit der aktuellen Rate nicht fortgesetzt werden kann.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
@@ -35,7 +35,7 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | attribute                                                                    | BESCHREIBUNG                                                                       |
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [**\_MF-EREIGNIS \_ \_ VERANKERN**](mf-event-do-thinning-attribute.md)<br/> | Gibt an, ob die Medienquelle auch eine Schlankerung angibt.<br/> <br/> |
+| [**MF \_ EVENT \_ DO \_ THINNING**](mf-event-do-thinning-attribute.md)<br/> | Gibt an, ob die Medienquelle ebenfalls eine Ausschmalung anfordert.<br/> <br/> |
 
 
 
@@ -45,13 +45,13 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

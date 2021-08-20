@@ -1,9 +1,9 @@
 ---
-title: EM_GETMARGINS Meldung (Winuser. h)
-description: Ruft die Breite des linken und rechten Rands f체r ein Bearbeitungs Steuerelement ab.
+title: EM_GETMARGINS Meldung (Winuser.h)
+description: Ruft die Breite des linken und rechten Rands f체r ein Bearbeitungssteuerelement ab.
 ms.assetid: 2482354b-aae0-4abd-8287-65c423f30abb
 keywords:
-- Windows-Steuerelemente f체r EM_GETMARGINS Meldung
+- EM_GETMARGINS Windows-Steuerelemente f체r Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 239ad7e7888f5bceef60bf2719c3b67798b56220
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 33746bc44a7b1b0aadd11c573675fedd51e565a557da7601ebe35a4442ddc96c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119541070"
 ---
-# <a name="em_getmargins-message"></a>EM \_ getMargin-Nachricht
+# <a name="em_getmargins-message"></a>EM \_ GETMARGINS-Nachricht
 
-Ruft die Breite des linken und rechten Rands f체r ein Bearbeitungs Steuerelement ab.
+Ruft die Breite des linken und rechten Rands f체r ein Bearbeitungssteuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,11 +45,11 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>R체ckgabewert
 
-Gibt die Breite des linken Randes des loworts und die Breite des rechten Rands im HIWORD zur체ck.
+Gibt die Breite des linken Rands in LOWORD und die Breite des rechten Rands im HIWORD zur체ck.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Umfassende **Bearbeitung:** Die **EM \_ getMargin** -Meldung wird nicht unterst체tzt.
+**Rich Edit:** Die **EM \_ GETMARGINS-Nachricht** wird nicht unterst체tzt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Umfassende **Bearbeitung:** Die **EM \_ getMargin** -Meldung wird nicht unterst�
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterst체tzte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterst체tzte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschlie횩en)</dt> </dl> |
+| Unterst체tzte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterst체tzte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,7 +67,7 @@ Umfassende **Bearbeitung:** Die **EM \_ getMargin** -Meldung wird nicht unterst�
 
 <dl> <dt>
 
-[**EM- \_ setMargin**](em-setmargins.md)
+[**EM \_ SETMARGINS**](em-setmargins.md)
 </dt> </dl>
 
  

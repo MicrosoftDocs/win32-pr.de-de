@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 754b0e10c3882911c6e91fc2590c11739c3f7531
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 80d0bfdc324f55bd8b697dfd63f9c2cf5c847ca3e3c931842b886c00adbc6aac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119383450"
 ---
 # <a name="systemconfig_services-class"></a>SystemConfig \_ Services-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ class SystemConfig_Services : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ Services-Klasse** verfügt über folgende Typen von Membern:
+Die **SystemConfig \_ Services-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -118,7 +118,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (4), **StringTermination("NullTerminated")**, **Format("w")**
 </dt> </dl>
 
-Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität an, die der Dienst bietet.
+Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität, die der Dienst bereitstellt.
 
 </dd> <dt>
 
@@ -158,14 +158,14 @@ Identifiziert den Dienst.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

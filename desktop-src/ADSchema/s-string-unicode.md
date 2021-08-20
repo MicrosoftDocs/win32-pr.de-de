@@ -1,10 +1,10 @@
 ---
-title: String-Syntax (Unicode)
-description: Eine Unicode-Zeichenfolge, die Groß-und Kleinschreibung
+title: String(Unicode)-Syntax
+description: Eine Unicode-Zeichenfolge, bei der die Groß-/Kleinschreibung nicht beachtet wird.
 ms.assetid: 7061ac4a-c2f1-4c63-bdb2-8ec329f9dc5e
 ms.tgt_platform: multiple
 keywords:
-- Zeichen folgen-Syntax (Unicode) AD Schema
+- String(Unicode) syntax AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8474ef21d569ae7d8afa26e3ad1d08b95c8c719
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 65193e2bcfb80f2aeee9493d8da68c8ba29df76eb6406f97d00abb2f9ff76017
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580070"
 ---
-# <a name="stringunicode-syntax"></a>String-Syntax (Unicode)
+# <a name="stringunicode-syntax"></a>String(Unicode)-Syntax
 
-Eine Unicode-Zeichenfolge, die Groß-und Kleinschreibung
+Eine Unicode-Zeichenfolge, bei der die Groß-/Kleinschreibung nicht beachtet wird.
 
 
 
@@ -31,9 +31,9 @@ Eine Unicode-Zeichenfolge, die Groß-und Kleinschreibung
 | Name         | String(Unicode)                                                        |
 | Syntax-ID    | 2.5.5.12                                                               |
 | OM-ID        | 64                                                                     |
-| MAPI-Typ    | TString                                                                |
-| ADS-Typ     | Zeichenfolge des adstype- \_ Oktetts \_                                                 |
-| Varianttyp | VT \_ UI1 \| VT- \_ Array                                                   |
+| MAPI-Typ    | TSTRING                                                                |
+| ADS-Typ     | ADSTYPE \_ OCTET \_ STRING                                                 |
+| Variant-Typ | VT \_ UI1 \| VT \_ ARRAY                                                   |
 | SDS-Typ     | [System.String](/dotnet/api/system.string) |
 
 

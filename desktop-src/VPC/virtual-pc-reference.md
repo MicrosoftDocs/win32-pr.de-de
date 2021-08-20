@@ -1,27 +1,27 @@
 ---
-title: Windows Virtual PC-Referenz
+title: Windows Referenz zu virtuellen PCs
 ms.assetid: 86bf2bed-1b1f-4faa-8947-416fc787cfbc
-description: Weitere Informationen finden Sie in der Referenz zu Windows Virtual PC.
+description: Weitere Informationen finden Sie unter Referenz Windows virtuellen PCs.
 keywords:
-- Virtueller Computer für Windows Virtual PC, Referenz
+- Windows Virtual PC Virtual PC , Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cbb00c9b67605c4b8f5f4e06ef1a4710cbc6cfb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f0c0a21da9a43815f0abf47acdedf729d28dda0c9c0e3f367e082191d87599d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056438"
 ---
-# <a name="windows-virtual-pc-reference"></a>Windows Virtual PC-Referenz
+# <a name="windows-virtual-pc-reference"></a>Windows Referenz zu virtuellen PCs
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Folgendes wird von Windows Virtual PC unterstützt:
+Folgendes wird von einem virtuellen Windows unterstützt:
 
--   [Windows Virtual PC-Konstanten](windows-virtual-pc-constants.md)
--   [Windows Virtual PC-Enumerationen](virtual-pc-enumerations.md)
--   [Windows Virtual PC-Schnittstellen](virtual-pc-interfaces.md)
+-   [Windows Konstanten virtueller PCs](windows-virtual-pc-constants.md)
+-   [Windows Enumerationen virtueller PCs](virtual-pc-enumerations.md)
+-   [Windows Virtuelle PC-Schnittstellen](virtual-pc-interfaces.md)
 -   [Schlüsselsequenzen](key-sequences.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen

@@ -1,10 +1,10 @@
 ---
-title: Iwmplibrary (VB und C)-Schnittstelle (WMP. h)
-description: Stellt eine Bibliothek dar. Die iwmplibrary-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IWMPLibrary-Schnittstelle (VB und C) (Wmp.h)
+description: Stellt eine Bibliothek dar. Die IWMPLibrary-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 956b2da1-5f01-48d6-8faa-e360c225afda
 keywords:
-- Windows Media Player der iwmplibrary (VB und C)-Schnittstelle
-- Windows Media Player der iwmplibrary (VB und C), beschrieben
+- IWMPLibrary-Schnittstelle (VB und C) Windows Media Player
+- IWMPLibrary-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,35 +15,35 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9749d3a2363c3863180639f249d7261ec1b9694
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a418192e45363b6757d7360e779b8f8134677d8a321228d81fddd3d49501075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054828"
 ---
-# <a name="iwmplibrary-vb-and-c-interface"></a>Iwmplibrary (VB und c#)-Schnittstelle
+# <a name="iwmplibrary-vb-and-c-interface"></a>IWMPLibrary-Schnittstelle (VB und C#)
 
 Stellt eine Bibliothek dar.
 
-Die **iwmplibrary** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPLibrary-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **iwmplibrary (VB und c#)** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWMPLibrary-Schnittstelle (VB und C#)** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmplibrary (VB und c#)** -Schnittstelle verfügt über diese Methoden.
+Die **IWMPLibrary-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                     | BESCHREIBUNG                                                                                           |
+| Methode                                                                     | Beschreibung                                                                                           |
 |:---------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
-| [**isidentical**](wmplibiwmplibrary-iwmplibrary-isidentical--vb-and-c.md) | Gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.<br/> |
+| [**isIdentical**](wmplibiwmplibrary-iwmplibrary-isidentical--vb-and-c.md) | Gibt einen Wert zurück, der angibt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.<br/> |
 
 
 
@@ -51,27 +51,27 @@ Die **iwmplibrary (VB und c#)** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iwmplibrary (VB und c#)** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IWMPLibrary-Schnittstelle (VB und C#)** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                                      | Zugriffstyp          | BESCHREIBUNG                                                                   |
+| Eigenschaft                                                                                      | Zugriffstyp          | Beschreibung                                                                   |
 |:----------------------------------------------------------------------------------------------|:---------------------|:------------------------------------------------------------------------------|
-| [**mediacollection**](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)<br/> | Schreibgeschützt<br/> | Ruft eine **iwmpmediacollection** -Schnittstelle für die aktuelle Bibliothek ab.<br/> |
-| [**Benennen**](wmplibiwmplibrary-iwmplibrary-name--vb-and-c.md)<br/>                       | Schreibgeschützt<br/> | Ruft den anzeigen amen der aktuellen Bibliothek ab.<br/>                      |
-| [**Sorte**](wmplibiwmplibrary-iwmplibrary-type--vb-and-c.md)<br/>                       | Schreibgeschützt<br/> | Ruft einen Wert ab, der den Bibliothekstyp angibt.<br/>                      |
+| [**mediaCollection**](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)<br/> | Schreibgeschützt<br/> | Ruft eine **IWMPMediaCollection-Schnittstelle** für die aktuelle Bibliothek ab.<br/> |
+| [**Namen**](wmplibiwmplibrary-iwmplibrary-name--vb-and-c.md)<br/>                       | Schreibgeschützt<br/> | Ruft den Anzeigenamen der aktuellen Bibliothek ab.<br/>                      |
+| [**Typ**](wmplibiwmplibrary-iwmplibrary-type--vb-and-c.md)<br/>                       | Schreibgeschützt<br/> | Ruft einen Wert ab, der den Bibliothekstyp angibt.<br/>                      |
 
 
 
  
 
-Verwenden Sie die folgende Methode, um eine **iwmplibrary** -Schnittstelle zu erhalten.
+Abrufen einer **IWMPLibrary-Schnittstelle** mithilfe der folgenden Methode.
 
 
 
 | Object                                                   | Eigenschaft                                                         |
 |----------------------------------------------------------|------------------------------------------------------------------|
-| [Iwmplibraryservices](iwmplibraryservices--vb-and-c.md) | [**getlibrarybytype**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibraryservices-getlibrarybytype) |
+| [IWMPLibraryServices](iwmplibraryservices--vb-and-c.md) | [**getLibraryByType**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibraryservices-getlibrarybytype) |
 
 
 
@@ -83,7 +83,7 @@ Verwenden Sie die folgende Methode, um eine **iwmplibrary** -Schnittstelle zu er
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Verwenden Sie die folgende Methode, um eine **iwmplibrary** -Schnittstelle zu er
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmplibraryservices. getlibrarybytype (VB und c#)**](wmplibiwmplibraryservices-iwmplibraryservices-getlibrarybytype--vb-and-c.md)
+[**IWMPLibraryServices.getLibraryByType (VB und C#)**](wmplibiwmplibraryservices-iwmplibraryservices-getlibrarybytype--vb-and-c.md)
 </dt> </dl>
 
  

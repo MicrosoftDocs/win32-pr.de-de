@@ -1,9 +1,9 @@
 ---
-title: Albumartistsortor der-Attribut
-description: Das Attribut "albumartistsortor der" ist der Wert, der zum Sortieren der Spalte "Album-Artist" in der Bibliothek verwendet werden soll.
+title: AlbumArtistSortOrder-Attribut
+description: Das AlbumArtistSortOrder-Attribut ist der Wert, der zum Sortieren der Album-Interpretenspalte in der Bibliothek verwendet werden soll.
 ms.assetid: 5235728b-8d1c-4631-8125-c23648566841
 keywords:
-- "\"Albumartistsortor der\"-Attribut \"Windows Media Player\""
+- Attribut "AlbumArtistSortOrder Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d3bec4e67313ded718784051fb09762febd34d59
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d3c4e4a1520cd9c7e4a1404203ccd0a15dfbffce8937fe74f477876b3e34f09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055398"
 ---
-# <a name="albumartistsortorder-attribute"></a>Albumartistsortor der-Attribut
+# <a name="albumartistsortorder-attribute"></a>AlbumArtistSortOrder-Attribut
 
-Das Attribut " **albumartistsortor** der" ist der Wert, der zum Sortieren der Spalte " **Album-Artist** " in der Bibliothek verwendet werden soll.
+Das **AlbumArtistSortOrder-Attribut** ist der Wert, der zum Sortieren der **Album-Interpretenspalte** in der Bibliothek verwendet werden soll.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------|
-| Version<br/> | Nur Windows Media Player 9-Serie<br/> |
+| Version<br/> | Windows Media Player 9er Serie<br/> |
 
 
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXAssembleShader-Funktion: Stellen Sie einen Shader zusammen.'
+description: 'D3DXAssembleShader-Funktion: Stellt einen Shader zusammen.'
 ms.assetid: 24c3dcae-9397-4856-b072-0ae340157bf9
 title: D3DXAssembleShader-Funktion (D3DX9Shader.h)
 ms.topic: reference
@@ -64,12 +64,12 @@ Länge der Effektdaten in Bytes.
 
 </dd> <dt>
 
-*pDefine* \[ In\]
+*pDefdefine* \[ In\]
 </dt> <dd>
 
 Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein **optionales** null-terminiertes Array von [**D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann **NULL** sein.
+Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Ein **optionales** null-terminiertes Array von [**D3DXMACRO-Strukturen.**](d3dxm
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder beim Kompilieren aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Gibt einen Puffer zurück, der den erstellten Shader enthält. Dieser Puffer ent
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Liste von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **NULL** sein.
+Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann NULL **sein.**
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Gibt einen Puffer zurück, der eine Liste von Fehlern und Warnungen enthält, di
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -126,7 +126,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

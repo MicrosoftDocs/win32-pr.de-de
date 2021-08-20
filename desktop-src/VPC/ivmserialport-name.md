@@ -1,11 +1,11 @@
 ---
-title: Ivmserialport-Namenseigenschaft (vpccominterfaces. h)
-description: Der Name des seriellen Anschlusses.
+title: IVMSerialPort Name-Eigenschaft (VPCCOMInterfaces.h)
+description: Name des seriellen Anschlusses.
 ms.assetid: 4d3fe008-f089-4a1b-9c90-2e0b3ded58fa
 keywords:
-- Name-Eigenschaft virtueller PC
-- Name-Eigenschaft Virtual PC, ivmserialport-Schnittstelle
-- Ivmserialport Interface Virtual PC, Name-Eigenschaft
+- Name-Eigenschaft Virtueller PC
+- Name-Eigenschaft Virtual PC, IVMSerialPort-Schnittstelle
+- IVMSerialPort-Schnittstelle Virtueller PC, Name-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 540540e2af91647b9c77735a1c601ed62aecdbdc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1862d2fbbecc4cf1efee7b83eb34a1a776f9e3bcc7a1d4949ecb3e5d483dec04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119510366"
 ---
-# <a name="ivmserialportname-property"></a>Ivmserialport:: Name-Eigenschaft
+# <a name="ivmserialportname-property"></a>IVMSerialPort::Name -Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Namen des seriellen Anschlusses ab.
 
@@ -45,7 +45,7 @@ HRESULT get_Name(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name des seriellen Anschlusses. Beispiel: "COM1" for **vmserialport \_ hostport**, "C: \\SerialPort.txt" for **vmserialport \_ Textfile** oder " \\ \\ *Servername* \\ Pipe \\ *Pipename*" für **vmserialport \_ NamedPipe**.
+Der Name des seriellen Anschlusses. Beispiel: "COM1" für **vmSerialPort \_ HostPort,**"C: \\SerialPort.txt" für **vmSerialPort \_ TextFile** oder " \\ \\ *servername* \\ pipe \\ *pipename*" für **vmSerialPort \_ NamedPipe**.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,9 +54,9 @@ Der Name des seriellen Anschlusses. Beispiel: "COM1" for **vmserialport \_ hostp
 | Name/Wert                                                                                                                                                    | Bedeutung                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                            |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>                               |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>                               |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
 
 
 
@@ -66,12 +66,12 @@ Der Name des seriellen Anschlusses. Beispiel: "COM1" for **vmserialport \_ hostp
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmserialport ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMSerialPort ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
 
 
 
@@ -79,7 +79,7 @@ Der Name des seriellen Anschlusses. Beispiel: "COM1" for **vmserialport \_ hostp
 
 <dl> <dt>
 
-[**Ivmserialport**](ivmserialport.md)
+[**IVMSerialPort**](ivmserialport.md)
 </dt> </dl>
 
  

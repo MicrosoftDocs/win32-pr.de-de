@@ -1,6 +1,6 @@
 ---
 title: MDM_ClientCertificateInstall_Install03-Klasse
-description: Die MDM \_ clientcertifichaneinstall \_ Install03-Klasse ermöglicht es dem Unternehmen, die Installation von Client Zertifikaten festzulegen.
+description: Mit der Mdm \_ ClientCertificateInstall \_ Install03-Klasse kann das Unternehmen die Installation von Clientzertifikaten festlegen.
 ms.assetid: 0083e54c-e621-47da-a20d-17c8bbf7dd3a
 keywords:
 - MDM_ClientCertificateInstall_Install03-Klasse
@@ -17,21 +17,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04ac690808551e05d6ceba4f3c84bcaa521d4d01
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d013341f7afd20f71bc939617e551cb018dbeaa96d5f140b37de99ea79843f37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077334"
 ---
-# <a name="mdm_clientcertificateinstall_install03-class"></a>MDM \_ clientcertifi-einstall \_ Install03-Klasse
+# <a name="mdm_clientcertificateinstall_install03-class"></a>MDM \_ ClientCertificateInstall \_ Install03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ clientcertifichaneinstall \_ Install03** -Klasse ermöglicht es dem Unternehmen, die Installation von Client Zertifikaten festzulegen. Erforderlich für die SCEP-Zertifikat Registrierung. Übergeordneter Knoten zum Gruppieren der SCEP-Zertifikat Installations bezogenen Anforderung.
+Mit der **Mdm \_ ClientCertificateInstall \_ Install03-Klasse** kann das Unternehmen die Installation von Clientzertifikaten festlegen. Erforderlich für die SCEP-Zertifikatregistrierung. Übergeordneter Knoten zum Gruppieren der scep-Zertifikatinstallationsanforderung.
 
 > [!Note]  
-> Obwohl die untergeordneten Knoten unter "Install" Unterstützung zum Ersetzen von Befehlen haben, übernimmt das Gerät nach dem Senden des exec-Befehls die Werte, die beim Akzeptieren des exec-Befehls festgelegt werden. Der Server sollte nicht erwarten, dass die Änderung des Knoten Werts, nachdem der exec-Befehl akzeptiert wurde, sich auf die aktuell durch gehende Registrierung auswirkt. Der Server sollte den Status Knotenwert überprüfen und sicherstellen, dass sich das Gerät nicht in der unbekannten Phase befindet, bevor die untergeordneten Knotenwerte geändert werden.
+> Obwohl die untergeordneten Knoten unter Install Replace-Befehle unterstützen, akzeptiert das Gerät nach dem Senden des Exec-Befehls an das Gerät die Werte, die festgelegt werden, wenn der Exec-Befehl akzeptiert wird. Der Server sollte nicht erwarten, dass sich die Änderung des Knotenwerts nach dem Akzeptieren des Exec-Befehls auf die aktuelle Registrierung auswirkt. Der Server sollte den Statusknotenwert überprüfen und sicherstellen, dass sich das Gerät nicht in einer unbekannten Phase befindet, bevor er die Werte des untergeordneten Knotens ändert.
 
  
 
@@ -68,20 +68,20 @@ class MDM_ClientCertificateInstall_Install03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ clientcertifitoreinstall \_ Install03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ ClientCertificateInstall \_ Install03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MDM \_ clientcertifitoreinstall \_ Install03** -Klasse verfügt über diese Methoden.
+Die **MDM \_ ClientCertificateInstall \_ Install03-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                                                                   |
+| Methode                                                                      | Beschreibung                                                                   |
 |:----------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Registrierungsmethode**](mdm-clientcertificateinstall-install03-enrollmethod.md) | Erforderlich. Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierung zu starten.<br/> |
+| [**EnrollMethod**](mdm-clientcertificateinstall-install03-enrollmethod.md) | Erforderlich. Löst das Gerät aus, um die Zertifikatregistrierung zu starten.<br/> |
 
 
 
@@ -89,14 +89,14 @@ Die **MDM \_ clientcertifitoreinstall \_ Install03** -Klasse verfügt über dies
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ clientcertifiaseeinstall \_ Install03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ ClientCertificateInstall \_ Install03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Aadkeyidentifierlist](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-aadkeyidentifierlist)
+[AADKeyIdentifierList](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-aadkeyidentifierlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -104,10 +104,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Cathumbprint](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-cathumbprint)
+[CAThumbprint](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-cathumbprint)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -118,7 +118,7 @@ Zugriffstyp: Lesen/Schreiben
 [Übung](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-challenge)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -126,10 +126,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Container Name](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-pfxcertinstall-uniqueid-containername)
+[ContainerName](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-pfxcertinstall-uniqueid-containername)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -137,10 +137,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Customtextto showinprompt](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-customtexttoshowinprompt)
+[CustomTextToShowInPrompt](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-customtexttoshowinprompt)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -148,10 +148,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Ekumapping](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-ekumapping)
+[EKUMapping](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-ekumapping)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -159,10 +159,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[HashAlgorithm](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-hashalgorithm)
+[Hashalgorithm](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-hashalgorithm)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -173,18 +173,18 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Erforderlich für die SCEP-Zertifikat Registrierung. Übergeordneter Knoten zum Gruppieren der SCEP-Zertifikat Installations bezogenen Anforderung.
+Erforderlich für die SCEP-Zertifikatregistrierung. Übergeordneter Knoten zum Gruppieren der scep-Zertifikatinstallationsanforderung.
 
-Das Format ist "Node".
+Der Knoten Format ist .
 
 </dd> <dt>
 
@@ -199,7 +199,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Keyprotection](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-keyprotection)
+[KeyProtection](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-keyprotection)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -210,7 +210,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Endeinheits Zertifikaten der](/windows/client-management/mdm/clientcertificateinstall-csp)
+[KeyUsage](/windows/client-management/mdm/clientcertificateinstall-csp)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -221,21 +221,21 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Beschreibt den vollständigen Pfad zum übergeordneten Knoten.
 
-Die Zeichenfolge ist "./Vendor/MSFT/ClientCertificateInstall/PFXCertInstall/SCEP/*UniqueId*".
+Die Zeichenfolge lautet "./Vendor/MSFT/ClientCertificateInstall/PFXCertInstall/SCEP/*UniqueID".*
 
 </dd> <dt>
 
@@ -264,7 +264,7 @@ Zugriffstyp: Lesen/Schreiben
 [ServerURL](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-serverurl)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -272,10 +272,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Subjetalternativenames](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-subjectalternativenames)
+[SubjectAlternativeNames](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-subjectalternativenames)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -286,7 +286,7 @@ Zugriffstyp: Lesen/Schreiben
 [SubjectName](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-subjectname)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -294,10 +294,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[TemplateName](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-templatename)
+[Templatename](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-templatename)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -305,10 +305,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Validierungs Zeitraum](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-validperiod)
+[ValidPeriod](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-validperiod)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -316,7 +316,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Validperiodunits](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-validperiodunits)
+[ValidPeriodUnits](/windows/client-management/mdm/clientcertificateinstall-csp#clientcertificateinstall-scep-uniqueid-install-validperiodunits)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -333,10 +333,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -345,7 +345,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

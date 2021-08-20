@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob ein nicht farbiger Stil einen Unterstreichungsstil aufgibt.
+description: Gibt an, ob ein Nicht-Farbstil über einen Unterstreichungsstil verfügt.
 ms.assetid: 452dda6e-b12b-457c-9a01-c5363359c9f5
 title: FUlIMEStyle-Funktion
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118956099"
 ---
 # <a name="fulimestyle-function"></a>FUlIMEStyle-Funktion
 
-Gibt an, ob ein nicht farbiger Stil einen Unterstreichungsstil aufgibt.
+Gibt an, ob ein Nicht-Farbstil über einen Unterstreichungsstil verfügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ BOOL __cdecl FUlIMEStyle(
 *pimestyle* \[ In\]
 </dt> <dd>
 
-Eine VON [**DER PIMEStyleFromAttr-Funktion zurückgegebene**](pimestylefromattr.md) **IMESTYLE-Struktur.**
+Eine **IMESTYLE-Struktur,** die von der [**PIMEStyleFromAttr-Funktion zurückgegeben**](pimestylefromattr.md) wird.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müs
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

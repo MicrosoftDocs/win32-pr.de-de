@@ -43,7 +43,7 @@ Bestimmt den Text, der für ein [**Commands-Objekt**](/windows/desktop/lwef/the-
 
 ## <a name="remarks"></a>Hinweise
 
-Das Festlegen der [**Caption-Eigenschaft**](caption-property.md) für Ihre [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) definiert, wie sie im Popupmenü des Zeichens angezeigt wird, wenn die [**Visible-Eigenschaft**](visible-property.md) auf True festgelegt ist und Ihre Anwendung nicht der eingabeaktive Client ist. Um einen Zugriffsschlüssel (unlined mnemonic) für Die Beschriftung **anzugeben,** schließen Sie ein ampersand-Zeichen (&) vor diesem Zeichen ein.
+Das Festlegen der [**Caption-Eigenschaft**](caption-property.md) für Ihre [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) definiert, wie sie im Popupmenü des Zeichens angezeigt wird, wenn die [**Visible-Eigenschaft**](visible-property.md) auf True festgelegt ist und Ihre Anwendung nicht der eingabeaktive Client ist. Um einen Zugriffsschlüssel (unlined mnemonisch) für Die Beschriftung **anzugeben,** schließen Sie vor diesem Zeichen ein ampersand-Zeichen (&) ein.
 
 Wenn Sie Befehle für eine [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) definieren, die über eine [**Beschriftung**](caption-property.md)verfügt, definieren Sie in der Regel auch eine **Beschriftung** für die zugeordnete **Commands-Sammlung.**
 

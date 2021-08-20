@@ -1,7 +1,7 @@
 ---
 description: Identifiziert den Namen und die Anbieter-ID für ein Mobilfunknetz.
 ms.assetid: 007ecad9-23a3-4352-b3e2-c22d0f3f449d
-title: Provider-Element (dataroamingpartners)
+title: Provider (DataRoamingPartners)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,23 +11,23 @@ api_name:
 - Provider
 api_type:
 - Schema
-ms.openlocfilehash: b5b36c973bf44175b90e25fd2a141fed3624d8b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5ce12ddf15ad57071f2717e5801fbd05f8e2925ea474345f7c376bc2445cd02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119347160"
 ---
-# <a name="provider-dataroamingpartners-element"></a>Provider-Element (dataroamingpartners)
+# <a name="provider-dataroamingpartners-element"></a>Provider (DataRoamingPartners)-Element
 
-Das **Provider-Element (dataroamingpartners)** identifiziert den Namen und die Anbieter-ID für ein Mobilfunknetz.
+Das **Provider-Element (DataRoamingPartners)** identifiziert den Namen und die Anbieter-ID für ein Mobilfunknetz.
 
 Dieses Element verfügt über die folgenden untergeordneten Elemente.
 
 -   [**ProviderID**](schema-providerid-providertype-element.md)
 -   [**ProviderName**](schema-providername-providertype-element.md)
 
-Dieses Element kann im [**dataroamingpartners**](schema-dataroamingpartners-mbnprofile-element.md) -Element mehrmals definiert werden. Sie muss mindestens einmal definiert werden.
+Dieses Element kann mehrmals innerhalb des [**DataRoamingPartners-Elements definiert**](schema-dataroamingpartners-mbnprofile-element.md) werden. Sie muss mindestens einmal definiert werden.
 
 ``` syntax
 <xs:element name="Provider"
@@ -35,7 +35,7 @@ Dieses Element kann im [**dataroamingpartners**](schema-dataroamingpartners-mbnp
  />
 ```
 
-Das **Provider** -Element wird durch das [**dataroamingpartners**](schema-dataroamingpartners-mbnprofile-element.md) -Element definiert.
+Das **Provider-Element** wird durch das [**DataRoamingPartners-Element**](schema-dataroamingpartners-mbnprofile-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Das **Provider** -Element wird durch das [**dataroamingpartners**](schema-dataro
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
@@ -52,16 +52,16 @@ Das **Provider** -Element wird durch das [**dataroamingpartners**](schema-dataro
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**DataRoamingPartners**](schema-dataroamingpartners-mbnprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Dataroamingpartners (mbnprofile)**](schema-dataroamingpartners-mbnprofile-element.md)
+[**DataRoamingPartners (MBNProfile)**](schema-dataroamingpartners-mbnprofile-element.md)
 </dt> </dl>
 
  

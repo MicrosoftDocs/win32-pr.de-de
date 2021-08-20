@@ -1,9 +1,9 @@
 ---
-title: Extern. templatebingdisplayedinlocallibrary
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. templatebingdisplayedinlocallibrary
+title: External.templateBeingDisplayedInLocalLibrary
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.templateBeingDisplayedInLocalLibrary
 ms.assetid: a1399c20-804b-4413-be9d-bcf160d75d29
 keywords:
-- Externe. templatebingdisplayedinlocallibrary-Fenster Media Player
+- External.templateBeingDisplayedInLocalLibrary Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f1d9a93d870882a34014ea2d0d35f29b91f54d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8292e2527fe14ec00a2bf7169b4e2ea2ca4c8229672625712ed3ad3a10e421e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648270"
 ---
-# <a name="externaltemplatebeingdisplayedinlocallibrary"></a>Extern. templatebingdisplayedinlocallibrary
+# <a name="externaltemplatebeingdisplayedinlocallibrary"></a>External.templateBeingDisplayedInLocalLibrary
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **templatebeingdisplayedinlocallibrary** -Eigenschaft gibt an, ob der von der aktuellen Ermittlungs Seite dargestellte Feed im Strukturansicht-Steuerelement der lokalen Bibliothek angezeigt wird.
+Die **templateBeingDisplayedInLocalLibrary-Eigenschaft** gibt an, ob der von der aktuellen Ermittlungsseite dargestellte Feed im Strukturansichtssteuerelement der lokalen Bibliothek angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ window.external.templateBeingDisplayedInLocalLibrary
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert. **True** gibt an, dass der Feed im Strukturansicht-Steuerelement der lokalen Bibliothek angezeigt wird.
+Diese Eigenschaft ist ein **schreibgeschützter boolescher** Wert. **TRUE** gibt an, dass der Feed im Strukturansichtssteuerelement der lokalen Bibliothek angezeigt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Ermittlungs Seite, die einen Feed für eine dynamische Wiedergabeliste darstellt, kann eine Schaltfläche anzeigen, mit der der Benutzer den Feed in seiner lokalen Bibliothek speichern kann. Das Speichern des Feeds bedeutet in diesem Kontext, dass einige Metadaten auf dem Computer des Benutzers gespeichert werden, und der Feed wird unter dem Knoten " **Playlists** " im Strukturansicht-Steuerelement der lokalen Bibliothek aufgelistet. Das Skript auf der Ermittlungs Seite kann die Eigenschaft **templatebeingdisplayedinlocallibrary** überprüfen, um zu bestimmen, ob der Benutzer den Feed bereits in der lokalen Bibliothek gespeichert hat. Wenn der Benutzer den Feed bereits gespeichert hat, sollte auf der Ermittlungs Seite die Schaltfläche Speichern nicht angezeigt werden.
+Eine Ermittlungsseite, die einen Feed für eine dynamische Wiedergabeliste darstellt, kann eine Schaltfläche anzeigen, mit der der Benutzer den Feed in seiner lokalen Bibliothek "speichern" kann. Das Speichern des Feeds bedeutet in diesem Kontext, dass einige Metadaten auf dem Computer des Benutzers gespeichert werden und der Feed unter dem Knoten **Wiedergabelisten** im Strukturansichtssteuerelement der lokalen Bibliothek aufgeführt wird. Das Skript auf der Ermittlungsseite kann die **TemplateBeingDisplayedInLocalLibrary-Eigenschaft** überprüfen, um zu ermitteln, ob der Benutzer den Feed bereits in der lokalen Bibliothek gespeichert hat. Wenn der Benutzer den Feed bereits gespeichert hat, sollte auf der Ermittlungsseite nicht die Schaltfläche "Speichern" angezeigt werden.
 
-Eine Suchseite, die einen Radio Feed darstellt, sollte die Eigenschaft **templatebeingdisplayedinlocallibrary** aus demselben Grund überprüfen.
+Eine Ermittlungsseite, die einen Funkfeed darstellt, sollte die **TemplateBeingDisplayedInLocalLibrary-Eigenschaft** aus dem gleichen Grund überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Eine Suchseite, die einen Radio Feed darstellt, sollte die Eigenschaft **templat
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: Touch
-description: Alle Microsoft Windows-Anwendungen sollten eine hervorragende Toucherfahrung bieten. Und das Erstellen einer solchen Benutzeroberfläche ist einfacher als Sie denken.
+description: Alle Microsoft Windows-Anwendungen sollten eine hervorragende Toucherfahrung haben. Und das Erstellen einer solchen Erfahrung ist einfacher, als Sie denken.
 ms.assetid: a87d0726-1c57-4cf8-9e35-4e73a09ff1a3
 ms.topic: article
 ms.date: 10/20/2020
@@ -14,123 +14,123 @@ ms.locfileid: "119029675"
 # <a name="touch"></a>Touch
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Alle Microsoft Windows-Anwendungen sollten eine hervorragende Toucherfahrung bieten. Und das Erstellen einer solchen Benutzeroberfläche ist einfacher als Sie denken.
+Alle Microsoft Windows-Anwendungen sollten eine hervorragende Toucherfahrung haben. Und das Erstellen einer solchen Erfahrung ist einfacher, als Sie denken.
 
-Toucheingabe bezieht sich darauf, mit einem oder mehreren Fingern Eingaben über eine Geräteanzeige bereitzustellen und mit Windows und Apps zu interagieren. Eine touchoptimierte App verfügt über eine Benutzeroberfläche und ein Interaktionsmodell, die für die größeren, weniger präzisen Kontaktbereiche der Berührung, die verschiedenen Formfaktoren von Touchgeräten und die vielen Positionen und Klammern ausgelegt sind, die Benutzer bei der Verwendung eines Touchgeräts annehmen können.
+Toucheingabe bezieht sich auf die Verwendung eines oder mehrere Finger, um Eingaben über eine Geräteanzeige zu ermöglichen und mit Windows und Apps zu interagieren. Eine touchoptimierte App verfügt über ein Benutzeroberflächen- und Interaktionsmodell, das für die größeren, weniger präzisen Berührungsbereiche, die verschiedenen Formfaktoren von Touchgeräten und die vielen Positionen und Greifer ausgelegt ist, die Benutzer bei der Verwendung eines Touchgeräts übernehmen können.
 
-![Benutzer interagiert mit Tablet per Toucheingabe](images/inter_touch_image1.jpeg)
+![Benutzer interagiert mit Tablet mit touch](images/inter_touch_image1.jpeg)
 
-Jedes Eingabegerät hat seine Stärken. Die Tastatur eignet sich am besten für die Texteingabe und das Erteilen von Befehlen mit minimaler Handbewegung. Die Maus ist am besten geeignet, um effizient und präzise zu zeigen. Die Toucheingabe eignet sich am besten für objektmanipulation und einfache Befehle. Ein Stift eignet sich am besten für Freiformausdrücke, wie bei Handschrift und Zeichnung.
+Jedes Eingabegerät hat seine Stärken. Die Tastatur ist am besten für die Texteingabe und das Ausführen von Befehlen mit minimaler Handbewegung. Die Maus ist am besten für effizientes, präzises Zeigen. Touch ist am besten für die Objektbearbeitung und das Ausführen einfacher Befehle. Ein Stift ist am besten für Freiformausdruck, wie bei Handschrift und Zeichnung.
 
-Windows 8.1 ist für Reaktionsfähigkeit, Genauigkeit und Benutzerfreundlichkeit mit Toucheingabe optimiert, während herkömmliche Eingabemethoden (z. B. Maus, Stift und Tastatur) vollständig unterstützt werden. Die Geschwindigkeit, Genauigkeit und taktilen Feedbacks, die herkömmliche Eingabemodi bieten, sind für viele Benutzer vertraut und ansprechend und möglicherweise besser für bestimmte Interaktionsszenarien geeignet.
+Windows 8.1 ist für Reaktionsfähigkeit, Genauigkeit und Benutzerfreundlichkeit mit Toucheingabe optimiert und unterstützt gleichzeitig vollständig herkömmliche Eingabemethoden (z. B. Maus, Stift und Tastatur). Die Geschwindigkeit, Genauigkeit und taktiles Feedback, die herkömmliche Eingabemodi bieten, sind für viele Benutzer vertraut und ansprechend und möglicherweise besser für bestimmte Interaktionsszenarien geeignet.
 
-Richtlinien im Zusammenhang mit Maus, Stift und Barrierefreiheit finden Sie in separaten Themen.
+Richtlinien zu Maus, Stift und Barrierefreiheit finden Sie in separaten Themen.
 
 Wenn Sie über die Interaktionserfahrung für Ihre App nachdenken:
 
-Gehen Sie nicht davon aus, dass eine Benutzeroberfläche auch gut für die Fingereingabe funktioniert, wenn sie gut für eine Maus funktioniert. Obwohl eine gute Mausunterstützung ein Anfang ist, hat eine gute Toucherfahrung einige zusätzliche Anforderungen.
+Gehen Sie nicht davon aus, dass eine Benutzeroberfläche, die gut für eine Maus funktioniert, auch gut für touch funktioniert. Eine gute Mausunterstützung ist zwar ein Anfang, aber eine gute Toucherfahrung hat einige zusätzliche Anforderungen.
 
-Angenommen, eine Benutzeroberfläche funktioniert gut für einen Finger und funktioniert auch gut für einen Stift. Ihre App touchierbar zu machen, ist ein langer Weg, um auch eine gute Stiftunterstützung bereitzustellen. Der Hauptunterschied besteht darin, dass Finger eine bluntere Spitze haben, sodass sie größere Ziele benötigen.
+Gehen Sie davon aus, dass eine Benutzeroberfläche, die gut für einen Finger funktioniert, auch gut für einen Stift funktioniert. Ihre App berührbar zu machen, ist ein langer Weg, auch eine gute Stiftunterstützung zu bieten. Der Hauptunterschied ist, dass Finger eine bluntere Spitze haben, sodass sie größere Ziele benötigen.
 
-Mit Toucheingabe können Sie Objekte und die Benutzeroberfläche direkt bearbeiten, was eine schnellere, natürlichere und ansprechendere Erfahrung ermöglicht.
+Mit touch können Sie Objekte und die Benutzeroberfläche direkt bearbeiten, was eine schnellere, natürlichere und ansprechendere Erfahrung ermöglicht.
 
-## <a name="provide-a-great-touch-experience"></a>Bereitstellen einer hervorragenden Toucherfahrung
+## <a name="provide-a-great-touch-experience"></a>Bereitstellen einer großartigen Toucherfahrung
 
-Sie sollten sicherstellen, dass Benutzer wichtige und wichtige Aufgaben mithilfe von Toucheingaben effizient ausführen können. Bestimmte App-Funktionen, z. B. Text- oder Pixelbearbeitung, sind jedoch möglicherweise nicht für Toucheingaben geeignet und können für das am besten geeignete Eingabegerät reserviert werden.
+Sie sollten sicherstellen, dass Benutzer wichtige und wichtige Aufgaben effizient mit touch-Eingaben ausführen können. Bestimmte App-Funktionen wie Text- oder Pixelbearbeitung eignen sich jedoch möglicherweise nicht für Toucheingaben und können für das am besten geeignete Eingabegerät reserviert werden.
 
-Wenn Sie nicht über viel Erfahrung mit der Entwicklung von Touch-Apps verfügen, ist es am besten, mit diesen Informationen zu lernen. Holen Sie sich einen Touchcomputer, legen Sie Maus und Tastatur beiseite, und verwenden Sie nur Ihre Finger, um mit Ihrer App zu interagieren. Wenn Sie über ein Tablet verfügen, experimentieren Sie damit, es an verschiedenen Positionen zu halten, z. B. auf dem Runde, flach auf einem Tisch oder in den Arm, während Sie stehen. Versuchen Sie, es im Hochformat und im Querformat zu verwenden.
+Wenn Sie nicht viel Erfahrung mit der Entwicklung von Touch-Apps haben, ist es am besten, indem Sie lernen. Holen Sie sich einen Touch-fähigen Computer, legen Sie Maus und Tastatur beiseite, und verwenden Sie nur Ihre Finger, um mit Ihrer App zu interagieren. Wenn Sie über ein Tablet verfügen, experimentieren Sie damit, es an unterschiedlichen Positionen zu halten, z. B. auf Dem Runde, flach auf einem Tisch oder in den Arme, während Sie stehen. Versuchen Sie, es im Hochformat und im Querformat zu verwenden.
 
-Touchoptimierte Apps, die am besten mit touchbasierter Interaktion funktionieren, sind in der Regel:
+Touchoptimierte Apps, die am besten mit Touchinteraktion funktionieren, sind in der Regel:
 
 -   **Natürlich und intuitiv.** Interaktionen sind so konzipiert, dass sie der Interaktion von Benutzern mit Objekten in der realen Welt entsprechen.
--   **Weniger intrusiv.** Die Toucheingabe ist unbeaufsichtigt und daher deutlich weniger ablenkend als das Eingeben oder Klicken.
--   **Tragbar.** Touchgeräte sind kompakter, da viele Aufgaben ohne Tastatur, Maus, Stift oder Touchpad ausgeführt werden können. Sie sind auch flexibler, da keine Arbeitsoberfläche erforderlich ist.
--   **Direkt und ansprechend.** Durch Toucheingaben haben Sie das Gefühl, dass Sie Objekte direkt auf dem Bildschirm bearbeiten.
--   **Weniger genau.** Benutzer können Objekte im Vergleich zu einer Maus oder einem Stift nicht so genau mit Touch erreichen.
+-   **Weniger intrusiv.** Die Verwendung von Touch ist im Hintergrund und daher viel weniger störend als das Eingeben oder Klicken.
+-   **Tragbar.** Touchgeräte sind kompakter, da viele Aufgaben ohne Tastatur, Maus, Stift oder Touchpad durchgeführt werden können. Sie sind auch flexibler, da keine Arbeitsoberfläche erforderlich ist.
+-   **Direkt und ansprechend.** Durch die Touch-Touch-Touch-Verbindung haben Sie das Gefühl, objekte direkt auf dem Bildschirm zu bearbeiten.
+-   **Weniger genau.** Benutzer können Objekte im Vergleich zu einer Maus oder einem Stift nicht so genau als Ziel verwenden.
 
-Touch bietet ein natürliches, reales Interaktions-Gefühl. Direkte Bearbeitung und Animation vervollständigen diesen Eindruck, indem sie Objekten eine realistische, dynamische Bewegung und Feedback geben. Betrachten Sie beispielsweise ein Kartenspiel. Es ist nicht nur praktisch und einfach, Karten mit einem Finger zu ziehen, sondern die Erfahrung nimmt auch ein ansprechendes, reales Gefühl an, wenn Sie die Karten wie bei einem physischen Kartenstapel drehen können. Und wenn Sie versuchen, eine Karte zu verschieben, die nicht verschoben werden kann, ist es besser, die Karte zu verhindern, aber nicht zu verhindern, und sich wieder an Ort und Stelle zu bewegen, um eindeutig anzugeben, dass die Aktion erkannt wurde, aber nicht ausgeführt werden kann.
+Touch bietet ein natürliches, reales Interaktions-Gefühl. Direkte Manipulation und Animation vervollständigen diesen Eindruck, indem Sie Objekten eine realistische, dynamische Bewegung und Feedback geben. Betrachten Sie beispielsweise ein Kartenspiel. Es ist nicht nur praktisch und einfach, Karten mit einem Finger zu ziehen, sondern auch ein ansprechendes reales Gefühl, wenn Sie die Karten genau wie bei einem physischen Kartenspiel drehen und drehen können. Und wenn Sie versuchen, eine Karte zu verschieben, die nicht verschoben werden kann, ist es eine bessere Erfahrung, die Karte zu unterstützen, aber nicht die Bewegung zu verhindern, und sich wieder an Ort und Stelle zu setzen, wenn sie freigegeben wird, um eindeutig anzugeben, dass die Aktion erkannt wurde, aber nicht durchgeführt werden kann.
 
-Wenn Ihre App bereits gut entworfen wurde, ist es glücklicherweise einfach, eine großartige Toucherfahrung bereitzustellen. Zu diesem Zweck ein gut entworfenes Programm:
+Wenn Ihre App bereits gut entworfen wurde, ist es einfach, eine großartige Toucherfahrung zu bieten. Zu diesem Zweck ist ein gut entworfenes Programm:
 
--   **Stellt sicher,** dass die wichtigsten Aufgaben effizient mit einem Finger ausgeführt werden können (zumindest die Aufgaben, die nicht viel Eingabe oder detaillierte Pixelbearbeitung erfordern).
--   **Verwendet große Steuerelemente für die Toucheingabe.** Allgemeine Steuerelemente haben eine Mindestgröße von 23 x 23 Pixeln (13 x 13 DLUs), und die am häufigsten verwendeten Steuerelemente sind mindestens 40 x 40 Pixel (23x22 DLUs). Um nicht reagierende Verhaltensweisen zu vermeiden, sollten Benutzeroberflächenelemente über mindestens 5 Pixel (3 DLUs) Abstand zwischen ihnen verfügen. Stellen Sie für andere Steuerelemente sicher, dass sie über ein Klickziel von mindestens 23 x 23 Pixeln (13 x 13 DLU) verfügen, auch wenn ihre statische Darstellung viel kleiner ist. Weitere Informationen finden Sie unter Größen von Standardsteuerelements.
--   **Unterstützt Mauseingaben.** Die interaktiven Steuerelemente verfügen über klare, sichtbare Möglichkeiten. Objekte weisen Standardverhalten für die standardmäßigen Mausinteraktionen auf (einfaches und doppeltes Klicken mit der linken Maustaste, Rechtsklick, Ziehen und Bewegen des Mauszeigers).
+-   **Stellt sicher, dass die** wichtigsten Aufgaben effizient mit einem Finger ausgeführt werden können (zumindest die Aufgaben, die keine große Menge an Eingaben oder ausführliche Pixelbearbeitungen umfassen).
+-   **Verwendet große Steuerelemente für touch.** Allgemeine Steuerelemente haben eine Mindestgröße von 23 x 23 Pixel (13 x 13 DLUs), und die am häufigsten verwendeten Steuerelemente sind mindestens 40 x 40 Pixel (23 x 22 DLUs). Um nicht reagierende Verhalten zu vermeiden, sollten Benutzeroberflächenelemente mindestens 5 Pixel (3 DLUs) Platz zwischen ihnen haben. Stellen Sie bei anderen Steuerelementen sicher, dass sie ein Klickziel von mindestens 23 x 23 Pixel (13 x 13 DLU) haben, auch wenn ihre statische Darstellung viel kleiner ist. Weitere Informationen finden Sie unter Standard-Steuerelement-Größen.
+-   **Unterstützt Mauseingaben.** Die interaktiven Steuerelemente verfügen über klare, sichtbare Bezahlbarkeiten. Objekte haben Standardverhalten für die standardmäßigen Mausinteraktionen (einzelner und doppelter Linkklick, Rechtsklick, Ziehen und Zeigen).
 -   **Unterstützt Tastatureingaben.** Die App bietet Standardmäßige Tastenkombinationszuweisungen, insbesondere für Navigations- und Bearbeitungsbefehle, die auch über Touchgesten generiert werden können.
--   **Stellt die Barrierefreiheit sicher.** Verwendet Benutzeroberflächenautomatisierung oder Microsoft Active Accessibility (MSAA), um programmgesteuerten Zugriff auf die Benutzeroberfläche für Hilfstechnologien bereitzustellen. Die App reagiert entsprechend auf Änderungen an Ausrichtung, Design, Gebietsschema und Systemmetrik.
--   **Beseitigt unnötige Interaktionen.** Um Daten- oder Systemzugriffsverluste zu verhindern, verwenden Sie die sichersten und sichersten Standardwerte. Wenn Sicherheit und Sicherheit keine Faktoren sind, wählt die App die wahrscheinlichste oder bequemste Option aus.
--   **Stellt touch-Entsprechung für das Bewegen des Mauszeigers bereit.** Verlassen Sie sich nicht darauf, dass Sie mit dem Mauszeiger darauf zeigen, um eine Aktion auszuführen.
--   **Stellt sicher, dass Gesten sofort wirksam werden.** Halten Sie die Kontaktpunkte während der gestenweiten Geste unter den Fingern des Benutzers, was die Auswirkung der Gestenzuordnung direkt auf die Bewegung des Benutzers bereitstellt.
+-   **Stellt die Barrierefreiheit sicher.** Verwendet Benutzeroberflächenautomatisierung oder Microsoft Active Accessibility (MSAA), um programmgesteuerten Zugriff auf die Benutzeroberfläche für Hilfstechnologien zu ermöglichen. Die App reagiert entsprechend auf Änderungen an Ausrichtung, Design, Locale und Systemmetrik.
+-   **Beseitigt unnötige Interaktionen.** Verwenden Sie die sichersten und sichersten Standardwerte, um Datenverluste oder Systemzugriffe zu verhindern. Wenn Sicherheit und Sicherheit keine Faktoren sind, wählt die App die wahrscheinlichste oder bequemste Option aus.
+-   **Stellt eine Touch-Entsprechung für den Hover-Wert zur** Verlassen Sie sich nicht darauf, dass Sie mit dem Hover eine Aktion ausführen.
+-   **Stellt sicher, dass Gesten sofort wirksam werden.** Halten Sie die Kontaktpunkte während der gestenweiten Geste reibungslos unter den Fingern des Benutzers, was die Auswirkung der Gestenzuordnung direkt auf die Bewegung des Benutzers ausdrungen kann.
 -   **Verwendet nach Möglichkeit Standardgesten.** Benutzerdefinierte Gesten nur für Interaktionen, die für Ihre App eindeutig sind.
--   **Stellt sicher, dass unerwünschte oder destruktive Befehle umgekehrt oder korrigiert werden können.** Versehentliche Aktionen sind wahrscheinlicher, wenn Toucheingaben verwendet werden.
+-   **Stellt sicher, dass unerwünschte oder destruktive Befehle umgekehrt oder korrigiert werden können.** Versehentliche Aktionen sind wahrscheinlicher, wenn Touch verwendet wird.
 
 ## <a name="guidelines-for-touch-input"></a>Richtlinien für Toucheingaben
 
-Mit Toucheingabe kann Ihre Windows-App physische Gesten verwenden, um die direkte Bearbeitung von Benutzeroberflächenelementen zu emulieren.
+Mit touch kann Ihre Windows-App physische Gesten verwenden, um die direkte Bearbeitung von Benutzeroberflächenelementen zu emulieren.
 
-Berücksichtigen Sie diese bewährten Methoden beim Entwerfen Ihrer Touch-fähigen App:
+Berücksichtigen Sie beim Entwerfen Ihrer Touch-fähigen App die folgenden bewährten Methoden:
 
-**Reaktionsfähigkeit ist entscheidend für die Erstellung von Toucherfahrungen, die sich direkt und ansprechend anfühlen.** Um direkt zu sein, müssen Gesten sofort wirksam werden, und die Kontaktpunkte eines Objekts müssen während der gesamten Geste reibungslos unter den Fingern des Benutzers bleiben. Die Auswirkung der Toucheingabe sollte direkt der Bewegung des Benutzers zugeordnet werden. Wenn der Benutzer also beispielsweise seine Finger um 90 Grad dreht, sollte sich das Objekt ebenfalls um 90 Grad drehen. Jede Verzögerung, ungenaue Reaktion, Kontaktverlust oder ungenaue Ergebnisse zerstören die Wahrnehmung der direkten Manipulation und der Qualität.
+**Reaktionsfähigkeit ist wichtig, um Touch-Erfahrungen zu erstellen, die sich direkt und ansprechend anfühlen.** Um direkt zu sein, müssen Gesten sofort wirksam werden, und die Kontaktpunkte eines Objekts müssen während der gesamten Geste reibungslos unter den Fingern des Benutzers bleiben. Der Effekt der Toucheingabe sollte direkt der Bewegung des Benutzers folgen. Wenn der Benutzer z. B. die Finger um 90 Grad dreht, sollte sich das Objekt auch um 90 Grad drehen. Verzögerungen, abgesenkte Antworten, Kontaktverluste oder ungenaue Ergebnisse zerstören die Wahrnehmung der direkten Manipulation und der Qualität.
 
-**Konsistenz ist entscheidend für die Erstellung von Toucherfahrungen, die sich natürlich und intuitiv anfühlen.** Sobald Benutzer eine Standardgeste erlernen, erwarten sie, dass diese Geste für alle Apps die gleiche Wirkung hat. Um Verwirrung und Frust zu vermeiden, weisen Sie Standardgesten niemals nicht standardmäßige Bedeutungen zu. Verwenden Sie stattdessen benutzerdefinierte Gesten für Interaktionen, die für Ihr Programm eindeutig sind.
+**Konsistenz ist wichtig, um Touch-Erfahrungen zu erstellen, die sich natürlich und intuitiv anfühlen.** Sobald Benutzer eine Standardgeste erlernen, erwarten sie, dass diese Geste in allen Apps die gleiche Wirkung hat. Weisen Sie Standardgesten niemals nicht standardmäßige Bedeutungen zu, um Verwirrung und Frust zu vermeiden. Verwenden Sie stattdessen benutzerdefinierte Gesten für Interaktionen, die für Ihr Programm eindeutig sind.
 
-Als Nächstes beschreiben wir die Windows Touchsprache, aber bevor wir weitermachen, finden Sie hier eine kurze Liste der grundlegenden Toucheingabebegriffe.
+Als Nächstes beschreiben wir die Windows Touchsprache, aber bevor wir losgehen, finden Sie hier eine kurze Liste der grundlegenden Toucheingabebegriffe.
 
 -   **Geste**
 
-    Eine Geste ist die physische Aktion oder Bewegung, die auf dem Eingabegerät (Finger, Finger, Stift/Stift, Maus usw.) ausgeführt wird. Um beispielsweise einen Befehl zu starten, zu aktivieren oder aufzurufen, verwenden Sie einen einfachen Tippen mit dem Finger für ein Touch- oder Touchpadgerät (entspricht einem Linksklick mit einer Maus, einem Tippen mit einem Stift oder der EINGABETASTE auf einer Tastatur).
+    Eine Geste ist die physische Aktivität oder Bewegung, die auf dem Eingabegerät (Finger, Finger, Stift/Stift, Maus und so weiter) ausgeführt wird. Wenn Sie beispielsweise einen Befehl starten, aktivieren oder aufrufen möchten, tippen Sie mit einem einzigen Finger auf ein Toucheingabe- oder Touchpadgerät (entspricht einem Linksklick mit einer Maus, einem Tippen mit einem Stift oder der EINGABETASTE auf einer Tastatur).
 
 -   **Manipulation**
 
-    Eine Manipulation ist die sofortige Reaktion oder Reaktion in Echtzeit, die ein Objekt oder eine Benutzeroberfläche auf eine Geste hat. Beispielsweise führen sowohl die Schiebe- als auch die Wischgeste in der Regel dazu, dass sich ein Element oder eine Benutzeroberfläche in irgendeiner Weise bewegt.
+    Eine Manipulation ist die sofortige Echtzeitreaktion oder Reaktion eines Objekts oder einer Benutzeroberfläche auf eine Geste. Beispielsweise bewirken die Schiebe- und Wischgesten in der Regel, dass sich ein Element oder eine Benutzeroberfläche in irgendeiner Weise bewegt.
 
-    Das Endergebnis einer Bearbeitung, wie sie durch das -Objekt auf dem Bildschirm und in der Benutzeroberfläche manifestiert wird, ist die Interaktion.
+    Das Endergebnis einer Manipulation, wie sie durch das -Objekt auf dem Bildschirm und in der Benutzeroberfläche manifestiert wird, ist die Interaktion.
 
 -   **Interaktion**
 
-    Interaktionen hängen davon ab, wie eine Manipulation interpretiert wird, und von dem Befehl oder der Aktion, die bzw. die sich aus der Bearbeitung ergibt. Beispielsweise können Objekte mithilfe der Schiebe- und Wischgesten verschoben werden, aber die Ergebnisse unterscheiden sich, je nachdem, ob ein Entfernungsschwellenwert überschritten wird. Folie kann verwendet werden, um ein Objekt zu ziehen oder eine Ansicht zu schwenken, während Wischbewegung verwendet werden kann, um ein Element auszuwählen oder eine App-Leiste anzuzeigen.
+    Interaktionen hängen davon ab, wie eine Bearbeitung interpretiert wird und welchen Befehl oder welche Aktion sich aus der Bearbeitung ergibt. Objekte können z. B. mithilfe der Schiebe- und Wischgesten verschoben werden, aber die Ergebnisse unterscheiden sich je nachdem, ob ein Entfernungsschwellenwert überschritten wird. Eine Folie kann verwendet werden, um ein Objekt zu ziehen oder eine Ansicht zu schwenken, während sie zum Auswählen eines Elements oder Anzeigen einer App-Leiste verwendet werden kann.
 
 ### <a name="the-windows-touch-language"></a>Die Windows Touchsprache
 
-Windows bietet einen präzisen Satz von Touchinteraktionen, die im gesamten System verwendet werden. Wenn Sie diese Touchsprache konsistent anwenden, wird Ihre App mit dem vertraut, was Benutzer bereits wissen. Dies erhöht das Vertrauen der Benutzer, da Ihre App einfacher zu erlernen und zu verwenden ist. Weitere Informationen zur Implementierung von Touchsprachen finden Sie unter Gesten, Bearbeitungen und Interaktionen.
+Windows bietet einen präzisen Satz von Touchinteraktionen, die im gesamten System verwendet werden. Durch die durchgängige Anwendung dieser Touchsprache ist Ihre App mit dem vertraut, was Benutzer bereits wissen. Dies erhöht das Vertrauen der Benutzer, da Ihre App einfacher zu erlernen und zu verwenden ist. Weitere Informationen zur Implementierung der Touchsprache finden Sie unter Gesten, Manipulationen und Interaktionen.
 
 **Halten Sie gedrückt, um zu lernen.**
 
-Die Geste zum Drücken und Halten zeigt detaillierte Informationen oder Lernvisuals (z. B. eine QuickInfo oder ein Kontextmenü) an, ohne einen Commit für eine Aktion oder einen Befehl durchzuführen. Schwenken ist weiterhin möglich, wenn eine gleitende Geste gestartet wird, während das Visual angezeigt wird.
+Die Press and Hold-Geste zeigt detaillierte Informationen oder visuelle Elemente (z. B. eine QuickInfo oder ein Kontextmenü) an, ohne eine Aktion oder einen Befehl zu committen. Schwenken ist weiterhin möglich, wenn eine gleitende Geste gestartet wird, während das Visual angezeigt wird.
 
 > [!IMPORTANT]
-> Sie können für die Auswahl drücken und halten, wenn horizontales und vertikales Schwenken aktiviert ist.
+> In Fällen, in denen horizontales und vertikales Schwenken aktiviert ist, können Sie Drücken und Halten für die Auswahl verwenden.
 
  
 
-Eingangszustand: Ein oder zwei Finger in Kontakt mit dem Bildschirm.
+Einstiegszustand: Ein oder zwei Finger, die mit dem Bildschirm in Kontakt sind.
 
 Bewegung: Keine Bewegung.
 
 Beendigungszustand: Der letzte Finger nach oben beendet die Geste.
 
-Effekt: Zeigt weitere Informationen an.
+Auswirkung: Zeigen Sie weitere Informationen an.
 
-![Toucheingabe \- \- zum \-learn.png](images/inter-touch-image2.png)
+![Touch \- \- drücken, um \-learn.png](images/inter-touch-image2.png)
 
-Die Geste zum Drücken und Halten.
+Die Press-and-Hold-Geste.
 
 **Darauf zeigen (Hover)**
 
-Der Mauszeiger ist eine nützliche Interaktion, da Benutzer zusätzliche Informationen durch Tipps abrufen können, bevor sie eine Aktion initiieren. Wenn Sie sich diese Tipps ansehen, können Benutzer sich sicherer fühlen und Fehler reduzieren.
+Das Hovern ist eine nützliche Interaktion, da es Benutzern ermöglicht, zusätzliche Informationen über Tipps zu erhalten, bevor eine Aktion initiiert wird. Wenn Sie diese Tipps sehen, können Benutzer sich sicherer fühlen und Fehler reduzieren.
 
-Leider wird das Bewegen des Mauszeigers von Touchtechnologien nicht unterstützt, sodass Benutzer nicht mit dem Mauszeiger zeigen können, wenn sie einen Finger verwenden. Die einfache Lösung für dieses Problem besteht darin, den Mauszeiger vollständig zu nutzen, aber nur auf eine Weise, die nicht erforderlich ist, um eine Aktion auszuführen. In der Praxis bedeutet dies in der Regel, dass die Aktion auch durch Klicken ausgeführt werden kann, jedoch nicht unbedingt auf die gleiche Weise.
+Leider wird das Zeigen von Touchtechnologien nicht unterstützt, sodass Benutzer nicht mit dem Finger zeigen können. Die einfache Lösung für dieses Problem besteht in der vollständigen Nutzung des Hoverns, aber nur in einer Weise, die zum Ausführen einer Aktion nicht erforderlich ist. In der Praxis bedeutet dies in der Regel, dass die Aktion auch durch Klicken ausgeführt werden kann, aber nicht unbedingt auf die gleiche Weise.
 
-![Screenshot, der ein Beispiel für die Interaktion mit dem Mauszeiger neben einem Beispiel für die Klickaktion zeigt.](images/inter-touch-image13.png)
+![Screenshot, der ein Beispiel für die Hoverinteraktion neben einem Beispiel für die Klickaktion zeigt.](images/inter-touch-image13.png)
 
-In diesem Beispiel können Benutzer das heutige Datum anzeigen, indem sie entweder mit dem Mauszeiger zeigen oder darauf klicken.
+In diesem Beispiel können Benutzer das heutige Datum sehen, indem sie mit der Maustaste darauf klicken oder darauf klicken.
 
-**Tippen Sie auf die primäre Aktion.**
+**Tippen Für primäre Aktion tippen**
 
-Durch Tippen auf ein Element wird seine primäre Aktion aufgerufen, z. B. das Starten einer App oder das Ausführen eines Befehls.
+Durch Tippen auf ein Element wird die primäre Aktion aufgerufen, z. B. das Starten einer App oder das Ausführen eines Befehls.
 
-Eingangszustand: Ein Finger, der mit dem Bildschirm oder Touchpad in Kontakt ist und vor dem Zeitschwellenwert für eine Interaktion durch Drücken und Halten aufgehoben wurde.
+Einstiegszustand: Ein Finger, der mit dem Bildschirm oder Touchpad in Kontakt ist und vor dem Zeitschwellenwert für eine Press-and-Hold-Interaktion aufgehoben wird.
 
 Bewegung: Keine Bewegung.
 
@@ -138,85 +138,85 @@ Beendigungszustand: Der Finger nach oben beendet die Geste.
 
 Auswirkung: Starten Sie eine App, oder führen Sie einen Befehl aus.
 
-![Tippen \-primary.png \-](images/inter-touch-image3.png)
+![Tippen \- Sie auf \-primary.png](images/inter-touch-image3.png)
 
 Die Tippbewegung.
 
-**Schieben zum Schwenken**
+**Schieben in Schwenken**
 
-Die Folie wird hauptsächlich zum Schwenken von Interaktionen verwendet, kann aber auch zum Verschieben (wobei das Schwenken auf eine Richtung beschränkt ist) sowie zum Zeichnen oder Schreiben verwendet werden. Folie kann auch verwendet werden, um kleine, stark gepackte Elemente durch Bereinigung anzuzielen (indem der Finger über verwandte Objekte wie Optionsfelder gleitet).
+Folie wird hauptsächlich zum Schwenken von Interaktionen verwendet, kann aber auch zum Verschieben (wo schwenken auf eine Richtung beschränkt ist), zum Zeichnen oder zum Schreiben verwendet werden. Schieberegler können auch verwendet werden, um kleine, dichte gepackte Elemente durch Bereinigung (Gleiten des Fingers über verwandte Objekte wie Optionsfelder) als Ziel zu verwenden.
 
-Eingangszustand: Ein oder zwei Finger in Kontakt mit dem Bildschirm.
+Einstiegszustand: Ein oder zwei Finger, die mit dem Bildschirm in Kontakt sind.
 
-Bewegung: Ziehen Sie , wobei alle zusätzlichen Finger relativ zueinander an derselben Position verbleiben.
-
-Beendigungszustand: Der letzte Finger nach oben beendet die Geste.
-
-Effekt: Verschieben Sie das zugrunde liegende Objekt direkt und sofort, während sich die Finger bewegen. Achten Sie darauf, den Kontaktpunkt während der Geste unter dem Finger zu halten.
-
-![touch \-slide.png](images/inter-touch-image4.png)
-
-Die Schwenkbewegung.
-
-**Wischen zum Auswählen, Befehl und Verschieben**
-
-Verschiebt den Finger einen kurzen Abstand, senkrecht zur Schwenkrichtung (wobei das Schwenken auf eine Richtung beschränkt ist), wählt Objekte in einer Liste oder einem Raster aus. Zeigen Sie die App-Leiste mit relevanten Befehlen an, wenn Objekte ausgewählt werden.
-
-Eingangszustand: Mindestens ein Finger berührt den Bildschirm.
-
-Bewegung: Ziehen Sie einen kurzen Abstand, und heben Sie ihn an, bevor der Entfernungsschwellenwert für eine Bewegungsinteraktion auftritt.
+Bewegung: Ziehen Sie , während alle zusätzlichen Finger relativ zueinander an der gleichen Position bleiben.
 
 Beendigungszustand: Der letzte Finger nach oben beendet die Geste.
 
-Auswirkung: Das zugrunde liegende Objekt wird ausgewählt oder verschoben, oder die App-Leiste wird angezeigt. Achten Sie darauf, den Kontaktpunkt während der Geste unter dem Finger zu halten.
+Auswirkung: Verschieben Sie das zugrunde liegende Objekt direkt und sofort, wenn sich die Finger bewegen. Achten Sie darauf, den Kontaktpunkt während der gesamten Geste unter dem Finger zu halten.
+
+![Touch \-slide.png](images/inter-touch-image4.png)
+
+Die Schwenkgeste.
+
+**Wischen zum Auswählen, Befehlen und Verschieben**
+
+Verschiebt den Finger um einen kurzen Abstand zur Schwenkrichtung (wobei schwenken auf eine Richtung beschränkt ist), wählt Objekte in einer Liste oder einem Raster aus. Zeigen Sie die App-Leiste mit relevanten Befehlen an, wenn Objekte ausgewählt werden.
+
+Einstiegszustand: Ein oder mehrere Finger berühren den Bildschirm.
+
+Bewegung: Ziehen Sie eine kurze Entfernung, und heben Sie sie auf, bevor der Entfernungsschwellenwert für eine Bewegungsinteraktion auftritt.
+
+Beendigungszustand: Der letzte Finger nach oben beendet die Geste.
+
+Auswirkung: Das zugrunde liegende Objekt wird ausgewählt oder verschoben, oder die App-Leiste wird angezeigt. Achten Sie darauf, den Kontaktpunkt während der gesamten Geste unter dem Finger zu halten.
 
 ![d: \\ sdkenlistment \\ m \- ux design m \- \\ \- ux design images touch \- \\ \\ \-swipe.png](images/inter-touch-image5.png)
 
-Die Wischbewegung.
+Die Wischgeste.
 
 **Zusammendrücken/Aufziehen: Zoom**
 
-Die Gesten "Pinch" und "Stretch" werden für drei Arten von Interaktionen verwendet: optischer Zoom, Größenänderung und semantischer Zoom.
+Die Stift- und Streckgesten werden für drei Arten von Interaktionen verwendet: optischer Zoom, Größenvergrößerung und semantischer Zoom.
 
-Der optische Zoom passt die Vergrößerungsebene des gesamten Inhaltsbereichs an, um eine detailliertere Ansicht des Inhalts zu erhalten. Im Gegensatz dazu ist die Größenänderung eine Technik zum Anpassen der relativen Größe eines oder mehrerer Objekte innerhalb eines Inhaltsbereichs, ohne die Ansicht in den Inhaltsbereich zu ändern.
+Der optische Zoom passt die Vergrößerungsstufe des gesamten Inhaltsbereichs an, um eine detailliertere Ansicht des Inhalts zu erhalten. Im Gegensatz dazu ist die Größenvergrößerung ein Verfahren zum Anpassen der relativen Größe eines oder mehrere Objekte innerhalb eines Inhaltsbereichs, ohne die Ansicht in den Inhaltsbereich zu ändern.
 
-Der semantische Zoom ist eine touchoptimierte Technik zum Darstellen und Navigieren von strukturierten Daten oder Inhalten in einer einzelnen Ansicht (z. B. der Ordnerstruktur eines Computers, einer Bibliothek mit Dokumenten oder einem Fotoalben), ohne dass Steuerelemente zum Schwenken, Scrollen oder Strukturansicht erforderlich sind. Der semantische Zoom bietet zwei verschiedene Ansichten desselben Inhalts, indem Sie beim Vergrößern mehr Details und beim Verkleinern weniger Details anzeigen können.
+Semantischer Zoom ist ein touchoptimiertes Verfahren zum Präsentieren und Navigieren strukturierter Daten oder Inhalte innerhalb einer einzelnen Ansicht (z. B. die Ordnerstruktur eines Computers, eine Bibliothek von Dokumenten oder ein Fotoalb), ohne dass Steuerelemente für Schwenken, Scrollen oder Strukturansichten benötigt werden. Der semantische Zoom bietet zwei verschiedene Ansichten desselben Inhalts, da Sie beim Vergrößern mehr Details und beim Verkleinern weniger Details sehen können.
 
-Eingangszustand: Zwei Finger, die gleichzeitig mit dem Bildschirm in Kontakt treten.
+Einstiegszustand: Zwei Finger, die gleichzeitig mit dem Bildschirm in Kontakt sind.
 
-Bewegung: Finger bewegen sich auf einer Achse voneinander (Gestreckt) oder zusammen (Zusammendrücken).
+Bewegung: Finger bewegen sich entlang einer Achse voneinander ab (strecken) oder zusammen (zusammendringen).
 
 Beendigungszustand: Jeder Finger nach oben beendet die Geste.
 
-Effekt: Vergrößern oder verkleinern Sie das zugrunde liegende Objekt direkt und sofort, wenn sich die Finger auf der Achse trennen oder nähern. Achten Sie darauf, die Kontaktpunkte während der Geste unter dem Finger zu halten.
+Auswirkung: Zoomen Sie das zugrunde liegende Objekt direkt und direkt heraus, wenn sich die Finger trennen oder sich auf der Achse nähern. Achten Sie darauf, dass die Kontaktpunkte während der gesamten Geste unter dem Finger bleiben.
 
 ![Landing \-areazoom.png](images/inter-touch-image6.png)
 
 Die Zoomgeste.
 
-**Turn to rotate (Drehen aktivieren)**
+**Turn to rotate**
 
-Das Drehen mit zwei oder mehr Fingern bewirkt, dass ein Objekt gedreht wird. Drehen Sie das Gerät selbst, um den ganzen Bildschirm zu drehen.
+Wenn Sie mit zwei oder mehr Fingern drehen, wird ein Objekt gedreht. Drehen Sie das Gerät selbst, um den ganzen Bildschirm zu drehen.
 
-Eingangszustand: Zwei Finger, die gleichzeitig mit dem Bildschirm in Kontakt treten.
+Einstiegszustand: Zwei Finger, die gleichzeitig mit dem Bildschirm in Kontakt sind.
 
-Bewegung: Der eine oder beide Finger drehen sich um den anderen und bewegen sich senkrecht zur Linie zwischen ihnen.
+Bewegung: Ein oder beide Finger drehen sich um den anderen und bewegen sich senkrecht zur Linie zwischen ihnen.
 
 Beendigungszustand: Jeder Finger nach oben beendet die Geste.
 
-Effekt: Drehen Sie das zugrunde liegende Objekt in derselben Menge, in der sich die Finger gedreht haben. Achten Sie darauf, die Kontaktpunkte während der Geste unter dem Finger zu halten.
+Auswirkung: Drehen Sie das zugrunde liegende Objekt auf die gleiche Menge, in der sich die Finger gedreht haben. Achten Sie darauf, dass die Kontaktpunkte während der gesamten Geste unter dem Finger bleiben.
 
-![touch \-turn.png](images/inter-touch-image7.png)
+![Touch \-turn.png](images/inter-touch-image7.png)
 
 Die Drehbewegung.
 
-Die Drehung ist nur für bestimmte Objekttypen sinnvoll, sodass sie nicht einem System Windows Interaktion zugeordnet wird.
+Die Drehung ist nur für bestimmte Objekttypen sinnvoll, daher wird sie nicht einem System zugeordnet, Windows werden.
 
-Die Rotation wird häufig von verschiedenen Personen unterschiedlich durchgeführt. Einige Ziehen es vor, einen Finger um einen Pivotfinger zu drehen, während andere es vorziehen, beide Finger in einer kreisförmigen Bewegung zu drehen. Die meisten Benutzer verwenden eine Kombination der beiden, wobei ein Finger mehr bewegt als der andere. Während die gleichmäßige Drehung in einen beliebigen Winkel die beste Interaktion ist, empfiehlt es sich in vielen Kontexten, z. B. bei der Fotoanzeige, sich auf die nächste 90-Grad-Drehung zu setzen, sobald der Benutzer loslässt. Bei der Fotobearbeitung können Sie eine kleine Drehung verwenden, um das Foto zu begradigen.
+Die Rotation wird häufig von verschiedenen Personen unterschiedlich durchgeführt. Einige Personen ziehen es vor, einen Finger um einen Pivotfinger zu drehen, während andere es vorziehen, beide Finger in einer kreisförmigen Bewegung zu drehen. Die meisten Personen verwenden eine Kombination der beiden, bei der ein Finger mehr bewegt wird als der andere. Obwohl eine gleichmäßige Drehung zu einem beliebigen Winkel die beste Interaktion ist, ist es in vielen Kontexten, z. B. bei der Fotoanzeige, am besten, sich auf die nächste Drehung von 90 Grad zu setzen, sobald der Benutzer loslässt. Bei der Fotobearbeitung können Sie das Foto mit einer kleinen Drehung begradig machen.
 
 **Wischen vom Edge für App-Befehle**
 
-Wenn Sie den Finger kurz vom unteren oder oberen Rand des Bildschirms wischen, werden App-Befehle in einer App-Leiste angezeigt.
+Wenn Sie den Finger aus kurzer Entfernung vom unteren oder oberen Rand des Bildschirms wischen, werden App-Befehle in einer App-Leiste angezeigt.
 
 Einstiegszustand: Ein oder mehrere Finger berühren die Blende.
 
@@ -224,11 +224,11 @@ Bewegung: Ziehen Sie einen kurzen Abstand auf den Bildschirm, und heben Sie ihn 
 
 Beendigungszustand: Der letzte Finger nach oben beendet die Geste.
 
-Auswirkung: App-Leiste wird angezeigt.
+Auswirkung: Die App-Leiste wird angezeigt.
 
 ![touch \- swipe \- bottom \-edge.png](images/inter-touch-image8.png)
 
-![touch \- swipe \- side \-edge.png](images/inter-touch-image9.png)
+![Touch \- wischen \- \- seitlichedge.png](images/inter-touch-image9.png)
 
 Die Wischbewegung von der Kante.
 
@@ -236,13 +236,13 @@ Entwickler: Weitere Informationen finden Sie unter [**DIRECTMANIPULATION \_ CONF
 
 ### <a name="control-usage"></a>Steuern der Nutzung
 
-Hier stellen wir einige Richtlinien für die Optimierung von Steuerelementen für die Touchnutzung bereit.
+Hier stellen wir einige Richtlinien zum Optimieren von Steuerelementen für die Touchverwendung zur Verfügung.
 
--   **Verwenden sie allgemeine Steuerelemente.** Die gängigsten Steuerelemente sind so konzipiert, dass sie eine gute Toucherfahrung unterstützen.
--   **Wählen Sie benutzerdefinierte Steuerelemente aus, die die Toucheingabe unterstützen sollen.** Möglicherweise benötigen Sie benutzerdefinierte Steuerelemente, um die speziellen Funktionen Ihres Programms zu unterstützen. Wählen Sie benutzerdefinierte Steuerelemente aus, die:
-    -   Kann groß genug sein, um eine einfache Ausrichtung und Bearbeitung zu erreichen.
-    -   Wenn sie bearbeitet werden, bewegen und reagieren Sie auf die Art und Weise, wie sich reale Objekte bewegen und reagieren, z. B. durch Bewegung und Reibung.
-    -   Sie sind verzeihend, indem Sie es Benutzern ermöglichen, Fehler leicht zu korrigieren.
+-   **Verwenden Sie allgemeine Steuerelemente.** Die gängigsten Steuerelemente sind so konzipiert, dass sie eine gute Toucherfahrung unterstützen.
+-   **Wählen Sie benutzerdefinierte Steuerelemente aus, die für touch-Unterstützung konzipiert sind.** Möglicherweise benötigen Sie benutzerdefinierte Steuerelemente, um die speziellen Erfahrungen Ihres Programms zu unterstützen. Wählen Sie benutzerdefinierte Steuerelemente aus, die:
+    -   Kann groß genug dimensioniert werden, um eine einfache Ziel- und Bearbeitungsgröße zu haben.
+    -   Wenn sie bearbeitet werden, bewegen und reagieren Sie auf die Art und Weise, wie reale Objekte bewegt und reagieren, z. B. durch Bewegung und Spannungen.
+    -   Sie sind verzeihend, indem Sie es Benutzern ermöglichen, Fehler einfach zu korrigieren.
     -   Sie verzeihen ungenauigkeit durch Klicken und Ziehen. Objekte, die in der Nähe ihres Ziels gelöscht werden, sollten an der richtigen Stelle liegen.
     -   Erhalten Sie klares visuelles Feedback, wenn sich der Finger über dem Steuerelement befindet.
 -   **Verwenden Sie eingeschränkte Steuerelemente.** Eingeschränkte Steuerelemente wie Listen und Schieberegler können besser sein, wenn sie für die einfache Toucheingabe konzipiert sind, als schränkte Steuerelemente wie Textfelder, da sie den Bedarf an Texteingaben reduzieren.
@@ -395,7 +395,7 @@ Fügen Sie in Gruppen von Steuerelementen, z. B. Befehlslinks, Kontrollkästchen
 
 ![image](images/inter-touch-image28.png)
 
-In diesem Beispiel sind Windows 7 Taskleisten-Sprunglisten schwieriger, wenn sie mit touch angezeigt werden.
+In diesem Beispiel sind Windows 7 Taskleisten-Sprunglisten bei der Anzeige per Touch-Touch-Vorgang schwieriger.
 
 ### <a name="interaction"></a>Interaktion
 

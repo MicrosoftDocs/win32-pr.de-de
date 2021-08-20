@@ -1,5 +1,5 @@
 ---
-description: Postleitzahl der Geschäftsadresse.
+description: 'Geschäftsadresse: Postleitzahl des Kontakts.'
 ms.assetid: cd16aefc-e7ae-412c-8b53-6bea20e7096e
 title: System.Contact.BusinessAddressPostalCode
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118970719"
 ---
 # <a name="systemcontactbusinessaddresspostalcode"></a>System.Contact.BusinessAddressPostalCode
 
-Postleitzahl der Geschäftsadresse.
+Geschäftsadresse: Postleitzahl des Kontakts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

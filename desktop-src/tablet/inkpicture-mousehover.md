@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, wenn der Mauszeiger auf das InkPicture-Steuerelement zeigt.
+description: Tritt ein, wenn der Mauszeiger mit dem Mauszeiger auf das InkPicture-Steuerelement zeigen kann.
 ms.assetid: 95a03833-529e-4fca-b8df-ae7edefc8e5e
 title: InkPicture.MouseHover-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118967069"
 ---
 # <a name="inkpicturemousehover-event"></a>InkPicture.MouseHover-Ereignis
 
-Tritt ein, wenn der Mauszeiger auf das [InkPicture-Steuerelement](inkpicture-control-reference.md) zeigt.
+Tritt ein, wenn der Mauszeiger mit dem Mauszeiger auf das [InkPicture-Steuerelement](inkpicture-control-reference.md) zeigen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Diese Ereignismethode wird in der **\_ IInkPictureEvents-Schnittstelle** definie
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

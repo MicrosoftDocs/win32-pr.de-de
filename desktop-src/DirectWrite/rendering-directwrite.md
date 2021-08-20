@@ -1,27 +1,27 @@
 ---
-title: Rendern von DirectWrite
-description: Rendern von DirectWrite
+title: Rendering DirectWrite
+description: Rendering DirectWrite
 ms.assetid: e8099fac-b5d7-4fb1-b06d-a6e85da0d1dc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc7012bc4861a8befc9beb97c945dc0b03b4e761
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fa640b8963c427b9eaf1d17fd3e4691115a3965d477c5076deb1f5eb05a569db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070590"
 ---
-# <a name="rendering-directwrite"></a>Rendern von DirectWrite
+# <a name="rendering-directwrite"></a>Rendering DirectWrite
 
 ## <a name="rendering-options"></a>Renderingoptionen
 
-Text mit Formatierungen, die nur von einem [**idschreitetextformat**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) -Objekt beschrieben werden, kann mit [Direct2D](../direct2d/direct2d-portal.md)gerendert werden. es gibt jedoch noch einige weitere Optionen zum Rendern eines [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekts.
+Text mit Formatierung, der nur von einem [**IDWriteTextFormat-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextformat) beschrieben wird, kann mit [Direct2D](../direct2d/direct2d-portal.md)gerendert werden. Es gibt jedoch noch einige weitere Optionen zum Rendern eines [**IDWriteTextLayout-Objekts.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 
-Die durch ein [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekt beschriebene Zeichenfolge kann mithilfe der folgenden Methoden gerendert werden.
+Die von einem [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) beschriebene Zeichenfolge kann mit den unten angegebenen Methoden gerendert werden.
 
-## <a name="1-render-using-direct2d"></a>1. Rendering mithilfe von Direct2D
+## <a name="1-render-using-direct2d"></a>1. Rendern mit Direct2D
 
-Verwenden Sie zum Rendering eines [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekts mithilfe von Direct2D die [**ID2D1RenderTarget::D rawtextlayout**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) -Methode, wie im folgenden Code gezeigt.
+Um ein [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) mit Direct2D zu rendern, verwenden Sie die [**ID2D1RenderTarget::D rawTextLayout-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -35,11 +35,11 @@ pRT_->DrawTextLayout(
 
 
 
-Ausführlichere Informationen zum Zeichnen eines [**idwrite-Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) -Objekts mithilfe von [Direct2D](../direct2d/direct2d-portal.md)finden Sie unter [Getting Started with DirectWrite](getting-started-with-directwrite.md).
+Einen detaillierteren Einblick in das Zeichnen eines [**IDWriteTextLayout-Objekts**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) mit [Direct2D](../direct2d/direct2d-portal.md)finden Sie unter Erste Schritte [mit DirectWrite.](getting-started-with-directwrite.md)
 
-## <a name="2-render-using-a-custom-text-renderer"></a>2. renderverwendung eines benutzerdefinierten textrenderers.
+## <a name="2-render-using-a-custom-text-renderer"></a>2. Rendern mit einem benutzerdefinierten Textrenderer.
 
-Sie werden mit einem benutzerdefinierten Renderer mithilfe der [**idwrite-Textlayout::D RAW**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) -Methode gerengt, die eine von [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) abgeleitete Rückruf Schnittstelle als Argument annimmt, wie im folgenden Code gezeigt.
+Sie rendern mit einem benutzerdefinierten Renderer mithilfe der [**IDWriteTextLayout::D raw-Methode,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) die eine von [**IDWriteTextRenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) abgeleitete Rückrufschnittstelle als Argument verwendet, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -55,19 +55,19 @@ hr = pTextLayout_->Draw(
 
 
 
-Die [**idwrite-Textlayout::D RAW**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) -Methode ruft die Methoden des von Ihnen bereitgestellten benutzerdefinierten rendererrückrufs auf. Die [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun), [**drawunder Line**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline)-, [**drawinlineobject**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)-und [**drawstrikethrough**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) -Methoden führen die Zeichnungsfunktionen aus.
+Die [**IDWriteTextLayout::D raw-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) ruft die Methoden des von Ihnen zur Verfügung stellenden benutzerdefinierten Rendererrückrufs auf. Die [**DrawGlyphRun-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) [**DrawUnderline-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline) [**DrawInlineObject-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)und [**DrawStrikethrough-Methoden**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) führen die Zeichnungsfunktionen aus.
 
-[**Idwrite tetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) deklariert Methoden zum Zeichnen eines Symbols für das Ausführen, unterstreichen, durchgestrichen und von Inline Objekten. Es ist von der Anwendung bis zur Implementierung dieser Methoden. Wenn Sie einen benutzerdefinierten TextRenderer erstellen, kann die Anwendung beim Rendern von Text zusätzliche Effekte anwenden, z. b. ein benutzerdefiniertes Füll Zeichen Ein Beispiel für einen benutzerdefinierten TextRenderer ist im [DirectWrite-Hallo Welt Beispiel](/samples/browse/?redirectedfrom=MSDN-samples)enthalten.
+[**IDWriteTextRenderer deklariert**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) Methoden zum Zeichnen eines Glyphenlaufs, einer Unterstreichung, eines Durchstrichs und von Inlineobjekten. Diese Methoden müssen von der Anwendung implementiert werden. Durch das Erstellen eines benutzerdefinierten Textrenderers kann die Anwendung beim Rendern von Text zusätzliche Effekte anwenden, z. B. eine benutzerdefinierte Füllung oder Kontur. Ein benutzerdefinierter Beispieltextrenderer ist im Beispiel DirectWrite Hallo Welt [enthalten.](/samples/browse/?redirectedfrom=MSDN-samples)
 
-## <a name="3-render-cleartype-to-a-gdi-surface"></a>3. rendercleartype für eine GDI-Oberfläche.
+## <a name="3-render-cleartype-to-a-gdi-surface"></a>3. Rendern von ClearType auf eine GDI-Oberfläche.
 
-Das Rendering zu einer GDI-Oberfläche ist ein Beispiel für die Verwendung eines benutzerdefinierten textrenderers. Ein Teil der Arbeit wird jedoch in Form der [**idschreitebitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) -Schnittstelle für Sie ausgeführt.
+Das Rendern auf einer GDI-Oberfläche ist tatsächlich ein Beispiel für die Verwendung eines benutzerdefinierten Textrenderers. Ein Teil der Arbeit wird jedoch in Form der [**IDWriteBitmapRenderTarget-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) für Sie erledigt.
 
-Um diese Schnittstelle zu erstellen, verwenden Sie die [**idschreitegdiinterop:: deatebitmaprendertarget**](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createbitmaprendertarget) -Methode.
+Verwenden Sie zum Erstellen dieser Schnittstelle die [**IDWriteGdiInterop::CreateBitmapRenderTarget-Methode.**](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createbitmaprendertarget)
 
-Die [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) Methode Ihres benutzerdefinierten textrenderers Ruft die [**idschreitebitmaprendertarget::D rawglyphrun-**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) Methode auf, um die Symbole zu zeichnen. Das Rendering der unterstrichen, durchgestrichen und Inline Objekte muss von Ihrem benutzerdefinierten Renderer durchgeführt werden.
+Die [**DrawGlyphRun-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) Ihres benutzerdefinierten Textrenderers ruft die [**IDWriteBitmapRenderTarget::D rawGlyphRun-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) auf, um die Glyphen zu zeichnen. Das Rendern der Unterstreichungs-, Durchstreich- und Inlineobjekte muss von Ihrem benutzerdefinierten Renderer durchgeführt werden.
 
-Die [**idschreitebitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) -Schnittstelle wird in einen Gerätekontext (DC) im Arbeitsspeicher gerendert. Sie erhalten ein Handle für diesen Domänen Controller, indem Sie die [**idschreitebitmaprendertarget:: getmemorydc**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-getmemorydc) -Methode verwenden.
+Die [**IDWriteBitmapRenderTarget-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) wird in einem Gerätekontext (DC) im Arbeitsspeicher gerendert. Sie erhalten mithilfe der [**IDWriteBitmapRenderTarget::GetMemoryDC-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-getmemorydc) ein Handle für diesen DC.
 
 
 ```C++
@@ -76,12 +76,12 @@ memoryHdc = g_pBitmapRenderTarget->GetMemoryDC();
 
 
 
-Nachdem die Zeichnung ausgeführt wurde, muss der Speicher-DC des [**idschreitebitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) -Objekts auf die Ziel-GDI-Oberfläche kopiert werden.
+Nachdem die Zeichnung durchgeführt wurde, muss der Arbeitsspeicher-DC des [**IDWriteBitmapRenderTarget-Objekts**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) auf die GDI-Zieloberfläche kopiert werden.
 
 > [!Note]  
-> Sie haben auch die Möglichkeit, die Bitmap auf eine andere Art von Oberfläche zu übertragen, z. b. eine GDI+-Oberfläche.
+> Sie haben auch die Möglichkeit, die Bitmap auf eine andere Art von Oberfläche zu übertragen, z. B. GDI+ Oberfläche.
 
- 
+ 
 
 
 ```C++
@@ -99,20 +99,20 @@ BitBlt(
 
 
 > [!Note]  
-> Ihre APP ist dafür verantwortlich, alles im Fenster zu vereinigen. Dies schließt Text und Grafiken ein. Hierfür gibt es eine Leistungs Einbuße. Außerdem ist das Rendering an einen Speicher-DC keine GDI-Hardwarebeschleunigung.
+> Ihre App ist dafür verantwortlich, am Ende alles im Fenster zu rendern. Dies schließt Text und Grafiken ein. Dies hat eine Leistungsstrafe. Darüber hinaus wird das Rendern auf einem Speicherdomänencontroller nicht durch GDI-Hardware beschleunigt.
 
- 
+ 
 
-Eine ausführlichere Übersicht über die Interaktion mit GDI finden Sie unter Interoperabilität [mit GDI](interoperating-with-gdi.md).
+Eine ausführlichere Übersicht über die Interoperabilität mit GDI finden Sie unter [Interoperating with GDI (Interoperabilität mit GDI).](interoperating-with-gdi.md)
 
-## <a name="4-render-grayscale-text-transparently-to-a-gdi-surface-windows-8-and-later"></a>4. rendersie Graustufen Text transparent auf eine GDI-Oberfläche. (Windows 8 und höher)
+## <a name="4-render-grayscale-text-transparently-to-a-gdi-surface-windows-8-and-later"></a>4. Transparentes Rendern von Graustufentext auf einer GDI-Oberfläche. (Windows 8 und höher)
 
-Ab Windows 8 können Sie Graustufen Text transparent auf eine GDI-Oberfläche Renderen, um die Leistung zu verbessern. Zu diesem Zweck müssen Sie folgende Schritte ausführen:
+Ab Windows 8 können Sie Graustufentext transparent auf einer GDI-Oberfläche rendern, um eine bessere Leistung zu erzielen. Dazu müssen Sie:
 
-1.  Löschen Sie den Speicher-DC zu transparent.
-2.  Renderungs Text im Speicher-HDC mithilfe von Graustufen-Antialiasing (dwrite \_ Text \_ Antialias \_ Mode \_ Graustufen).
-3.  Verwenden Sie die Funktion [**AlphaBlend**](/windows/win32/api/wingdi/nf-wingdi-alphablend) , um den Speicher-HDC transparent auf dem endgültigen HDC des Ziels zu Renderern.
-4.  Wiederholen Sie den Vorgang so oft wie nötig (z. h. einmal pro Glyphe), und zwischen anderen Grafiken können direkt auf den Ziel-HDC gerendert [](/windows/win32/api/wingdi/nf-wingdi-alphablend) werden, ohne dass diese überschrieben werden.
+1.  Löschen Sie den Arbeitsspeicher-DC in transparent.
+2.  Rendern von Text im HDC-Arbeitsspeicher mit Graustufen-Antialiasing (DWRITE \_ TEXT \_ ANTIALIAS \_ MODE \_ GRAYSCALE).
+3.  Verwenden Sie [**die AlphaBlend-Funktion,**](/windows/win32/api/wingdi/nf-wingdi-alphablend) um den HDC des Arbeitsspeichers transparent über dem endgültigen HDC-Ziel zu rendern.
+4.  Wiederholen Sie sich so oft wie nötig (z. B. einmal pro Glyphenlauf), und dazwischen können andere Grafiken direkt auf dem endgültigen ZIEL-HDC gerendert werden, ohne von der [**AlphaBlend-Funktion überschrieben zu**](/windows/win32/api/wingdi/nf-wingdi-alphablend) werden.
 
 
 ```C++
@@ -147,18 +147,18 @@ AlphaBlend(
 
 <dl> <dt>
 
-[Rendering mithilfe von Direct2D](rendering-by-using-direct2d.md)
+[Rendern mit Direct2D](rendering-by-using-direct2d.md)
 </dt> <dt>
 
 [Rendern unter Verwendung eines benutzerdefinierten Textrenderers](how-to-implement-a-custom-text-renderer.md)
 </dt> <dt>
 
-[An eine GDI-Oberfläche Renderen](render-to-a-gdi-surface.md)
+[Rendern auf einer GDI-Oberfläche](render-to-a-gdi-surface.md)
 </dt> <dt>
 
 [Interoperabilität mit GDI](interoperating-with-gdi.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

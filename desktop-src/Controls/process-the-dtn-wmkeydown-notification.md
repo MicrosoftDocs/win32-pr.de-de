@@ -1,39 +1,39 @@
 ---
 title: Verarbeiten der DTN_WMKEYDOWN Benachrichtigung
-description: In diesem Thema wird veranschaulicht, wie eine Dtn- \_ wmKeyDown-Benachrichtigung verarbeitet wird. Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer Elements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruf Felder des Steuer Elements bereitstellen.
+description: In diesem Thema wird die Verarbeitung einer DTN \_ WMKEYDOWN-Benachrichtigung veranschaulicht. Durch die Behandlung dieses Benachrichtigungscodes kann der Besitzer des Steuerelements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruffelder des Steuerelements bereitstellen.
 ms.assetid: CD521C62-CF52-4FFF-A598-E5EBA34471FB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cec97ffc5853743c357081b974d155ee0e0977d1
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: fbef0804afb388f9cadad60b04bf93ce4730ef255476f0c7f216edfd24846a19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103858562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540350"
 ---
-# <a name="how-to-process-the-dtn_wmkeydown-notification"></a>Verarbeiten der Dtn- \_ wmKeyDown-Benachrichtigung
+# <a name="how-to-process-the-dtn_wmkeydown-notification"></a>Verarbeiten der \_ DTN-WMKEYDOWN-Benachrichtigung
 
-In diesem Thema wird veranschaulicht, wie eine [Dtn- \_ wmKeyDown](dtn-wmkeydown.md) -Benachrichtigung verarbeitet wird. Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer Elements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruf Felder des Steuer Elements bereitstellen.
+In diesem Thema wird die Verarbeitung einer [DTN \_ WMKEYDOWN-Benachrichtigung](dtn-wmkeydown.md) veranschaulicht. Durch die Behandlung dieses Benachrichtigungscodes kann der Besitzer des Steuerelements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruffelder des Steuerelements bereitstellen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Die Steuerelemente für Datums-und Zeitauswahl (DTP) senden die [Dtn- \_ wmKeyDown](dtn-wmkeydown.md) -Nachricht, um zu melden, dass der Benutzereingaben in einem Rückruf Feld eingegeben hat. Wenn Sie dieselben Tastatur Antworten emulieren möchten, die für Standard-DTP-Felder unterstützt werden, oder benutzerdefinierte Antworten bereitstellen, muss Ihre Anwendung Code enthalten, um diese Benachrichtigung zu verarbeiten.
+DTP-Steuerelemente (Datums- und Uhrzeitauswahl) senden die [DTN \_ WMKEYDOWN-Meldung,](dtn-wmkeydown.md) um zu melden, dass der Benutzer Eingaben in ein Rückruffeld eingegeben hat. Wenn Sie dieselben Tastaturantworten emulieren möchten, die für Standard-DTP-Felder unterstützt werden, oder benutzerdefinierte Antworten bereitstellen möchten, muss Ihre Anwendung Code enthalten, um diese Benachrichtigung zu verarbeiten.
 
-Das folgende C++-Codebeispiel ist eine Anwendungs definierte Funktion, die die [Dtn- \_ wmKeyDown](dtn-wmkeydown.md) -Benachrichtigung verarbeitet.
+Das folgende C++-Codebeispiel ist eine anwendungsdefinierte Funktion, die die [DTN \_ WMKEYDOWN-Benachrichtigung](dtn-wmkeydown.md) verarbeitet.
 
-**Sicherheitswarnung:** Die falsche Verwendung von **lstrincmp** kann die Sicherheit Ihrer Anwendung beeinträchtigen. Bevor Sie z. b. **lstrcmp** im folgenden Codebeispiel aufrufen, sollten Sie sicherstellen, dass die beiden Zeichen folgen mit Null enden. Überprüfen Sie die [Sicherheitsaspekte: Microsoft Windows](sec-comctls.md) -Steuerelemente, bevor Sie fortfahren.
+**Sicherheitswarnung:** Die **falsche Verwendung von lstrcmp** kann die Sicherheit Ihrer Anwendung gefährden. Vor dem Aufrufen von **lstrcmp** im folgenden Codebeispiel sollten Sie beispielsweise sicherstellen, dass die beiden Zeichenfolgen null-terminiert sind. Lesen Sie [sicherheitsaspekte: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
 
 
@@ -67,13 +67,13 @@ void WINAPI DoWMKeydown(
 
 <dl> <dt>
 
-[Verwenden von Steuerelementen für Datums-und Zeitauswahl](using-date-and-time-picker.md)
+[Verwenden von Steuerelementen für die Datums- und Uhrzeitauswahl](using-date-and-time-picker.md)
 </dt> <dt>
 
-[Steuerelement Verweis für Datums-und Zeitauswahl](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl-Steuerelementreferenz](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
 </dt> <dt>
 
-[Datums-und Zeitauswahl](date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl](date-and-time-picker-control-reference.md)
 </dt> </dl>
 
  

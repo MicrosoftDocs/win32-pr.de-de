@@ -1,9 +1,9 @@
 ---
-title: Extern. pluginrunning
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. pluginrunning
+title: External.pluginRunning
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.pluginRunning
 ms.assetid: 1e6e669c-1d11-44ab-99cb-a80b19ddcdc9
 keywords:
-- Externe. pluginrunning-Windows-Media Player
+- External.pluginRunning Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7e3ca893d2fe639a9f733bdfa2bf6b5c350e9ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee9c7d10db107f3f90acc25b9cd31136cd9af110b5eb9bffe34f331dc8b1b0ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648490"
 ---
-# <a name="externalpluginrunning"></a>Extern. pluginrunning
+# <a name="externalpluginrunning"></a>External.pluginRunning
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **pluginrunning** -Eigenschaft ruft einen Wert ab, der angibt, ob das Plug-in des Online Stores ausgeführt wird.
+Die **pluginRunning-Eigenschaft** ruft einen Wert ab, der angibt, ob das Plug-In des Onlineshops ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ window.external.pluginRunning
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert. **True** gibt an, dass das Plug-in ausgeführt wird.
+Diese Eigenschaft ist ein **schreibgeschützter boolescher** Wert. **TRUE** gibt an, dass das Plug-In ausgeführt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert. **True** gib
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

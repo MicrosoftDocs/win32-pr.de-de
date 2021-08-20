@@ -1,5 +1,5 @@
 ---
-description: Im Folgenden sind die ImageHlp-Funktionen dargestellt.
+description: Im Folgenden finden Sie die ImageHlp-Funktionen.
 ms.assetid: 926f412e-25ba-4f9c-a118-b5a1bc723379
 title: ImageHlp-Funktionen
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118957109"
 ---
 # <a name="imagehlp-functions"></a>ImageHlp-Funktionen
 
-Im Folgenden sind die ImageHlp-Funktionen dargestellt.
+Im Folgenden finden Sie die ImageHlp-Funktionen.
 
 ## <a name="image-access"></a>Imagezugriff
 
-Die Imagezugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Die Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
+Die Bildzugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Die Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
 
 <dl>
 

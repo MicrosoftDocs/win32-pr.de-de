@@ -1,66 +1,66 @@
 ---
-title: IPSec-Konfiguration
-description: Windows-Filter Plattform (WFP) ist die zugrunde liegende Plattform für die Windows-Firewall mit erweiterter Sicherheit.
+title: IPsec-Konfiguration
+description: Windows Die Filterplattform (WFP) ist die zugrunde liegende Plattform für Windows Firewall mit erweiterter Sicherheit.
 ms.assetid: d54b5caa-daea-4231-9909-7a8d388df661
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78af8e3d0a23713c0505082555fe260bc562dfa4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 34cf20fc8c95aafe3c387195b02468cec3ce884cc97287adde44a594305ee189
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069014"
 ---
-# <a name="ipsec-configuration"></a>IPSec-Konfiguration
+# <a name="ipsec-configuration"></a>IPsec-Konfiguration
 
-Windows-Filter Plattform (WFP) ist die zugrunde liegende Plattform für die Windows-Firewall mit erweiterter Sicherheit. WFP wird zum Konfigurieren von Netzwerk Filterungs Regeln verwendet, die Regeln zum Sichern des Netzwerk Datenverkehrs mit IPSec einschließen. Anwendungsentwickler können IPSec direkt mithilfe der WFP-API konfigurieren, um ein präziseeres Modell zum Filtern von Netzwerk Datenverkehr zu nutzen, als das über das MMC-Snap-in (Microsoft Management Console) für die Windows-Firewall mit erweiterter Sicherheit verfügbar gemachte Modell.
+Windows Die Filterplattform (WFP) ist die zugrunde liegende Plattform für Windows Firewall mit erweiterter Sicherheit. WFP wird verwendet, um Netzwerkfilterregeln zu konfigurieren, die Regeln zum Sichern des Netzwerkdatenverkehrs mit IPsec enthalten. Anwendungsentwickler können IPsec direkt mithilfe der WFP-API konfigurieren, um von einem präziseren Filtermodell für Netzwerkdatenverkehr zu profitieren, als das Modell, das über das MMC-Snap-In (Microsoft Management Console) für Windows Firewall mit erweiterter Sicherheit verfügbar gemacht wird.
 
-## <a name="what-is-ipsec"></a>Was ist IPSec?
+## <a name="what-is-ipsec"></a>Was ist IPsec?
 
-Internet Protokoll Sicherheit (Internet Protocol Security, IPSec) ist ein Satz von Sicherheitsprotokollen, die zum Übertragen von IP-Paketen über das Internet verwendet werden. IPSec ist für alle IPv6-Implementierungen obligatorisch und optional für IPv4.
+Internetprotokollsicherheit (Internet Protocol Security, IPsec) ist eine Reihe von Sicherheitsprotokollen, die zum vertraulichen Übertragen von IP-Paketen über das Internet verwendet werden. IPsec ist für alle IPv6-Implementierungen obligatorisch und optional für IPv4.
 
-Der gesicherte IP-Datenverkehr verfügt über zwei optionale IPSec-Header, die die Typen des kryptografischen Schutzes identifizieren, die auf das IP-Paket angewendet werden, und Informationen zum Decodieren des geschützten Pakets enthalten.
+Geschützter IP-Datenverkehr verfügt über zwei optionale IPsec-Header, die die Typen des kryptografischen Schutzes identifizieren, die auf das IP-Paket angewendet werden, und Informationen zum Decodieren des geschützten Pakets enthalten.
 
-Der Header "kapselnde Sicherheits Nutzlast (ESP)" wird für Datenschutz und Schutz gegen böswillige Änderungen verwendet, indem Authentifizierung und optionale Verschlüsselung durchgeführt werden. Sie kann für Datenverkehr verwendet werden, der NAT-Router (Netzwerk Adressübersetzung) durchläuft.
+Der ESP-Header (Encapsulating Security Payload) wird zum Schutz vor schädlichen Änderungen durch Authentifizierung und optionale Verschlüsselung verwendet. Sie kann für Datenverkehr verwendet werden, der NAT-Router (Network Address Translation) durchläuft.
 
-Der Authentifizierungs Header (AH) wird nur zum Schutz gegen böswillige Änderungen verwendet, indem eine Authentifizierung durchgeführt wird. Sie kann nicht für Datenverkehr verwendet werden, der NAT-Router durchläuft.
+Der Authentifizierungsheader (Authentication Header, AH) wird nur zum Schutz vor böswilligen Änderungen durch Ausführen der Authentifizierung verwendet. Sie kann nicht für Datenverkehr verwendet werden, der NAT-Router durchläuft.
 
-Weitere Informationen zu IPSec finden Sie unter:
+Weitere Informationen zu IPsec finden Sie unter:
 
 <dl>
 
-[Technische Referenz zu IPSec](/previous-versions/windows/it-pro/windows-server-2003/cc740240(v=ws.10))  
+[Technische Referenz zu IPsec](/previous-versions/windows/it-pro/windows-server-2003/cc740240(v=ws.10))  
 </dl>
 
 ## <a name="what-is-ike"></a>Was ist IKE?
 
-Internetschlüsselaustausch (IKE) ist ein Schlüsselaustausch Protokoll, das Teil des IPSec-Protokoll Satzes ist. IKE wird beim Einrichten einer sicheren Verbindung verwendet und erfüllt den sicheren Austausch von geheimen Schlüsseln und anderen Schutz bezogenen Parametern, ohne dass der Benutzer eingreifen muss.
+Internet Key Exchange (IKE) ist ein Schlüsselaustauschprotokoll, das Teil des IPsec-Protokollsatzes ist. IKE wird beim Einrichten einer sicheren Verbindung verwendet und führt den sicheren Austausch geheimer Schlüssel und anderer schutzbezogener Parameter ohne Eingreifen des Benutzers durch.
 
 Weitere Informationen zu IKE finden Sie unter:
 
 <dl>
 
-[Internetschlüsselaustausch](/previous-versions/windows/it-pro/windows-server-2003/cc784994(v=ws.10))  
+[Internetschlüssel-Exchange](/previous-versions/windows/it-pro/windows-server-2003/cc784994(v=ws.10))  
 </dl>
 
 ## <a name="what-is-authip"></a>Was ist AuthIP?
 
-Authentifiziertes Internetprotokoll (AuthIP) ist ein neues Schlüsselaustausch Protokoll, das IKE wie folgt erweitert.
+Authentifiziertes Internetprotokoll (AuthIP) ist ein neues Schlüsselaustauschprotokoll, das IKE wie folgt erweitert.
 
-<dl> Obwohl IKE nur Anmelde Informationen für die Computer Authentifizierung unterstützt, unterstützt auch AuthIP Folgendes:
+<dl> Während IKE nur Anmeldeinformationen für die Computerauthentifizierung unterstützt, unterstützt AuthIP auch:
 
--   Benutzer Anmelde Informationen: NTLM, Kerberos, Zertifikate.
--   NAP-Integritäts Zertifikate (Network Access Protection, Netzwerk Zugriffsschutz)
--   Anonyme Anmelde Informationen, die für die optionale Authentifizierung verwendet werden.
--   Kombination von Anmelde Informationen; beispielsweise eine Kombination aus Computer-und Benutzer-Kerberos-Anmelde Informationen.
+-   Benutzeranmeldeinformationen: NTLM, Kerberos, Zertifikate.
+-   NAP-Integritätszertifikate (Network Access Protection).
+-   Anonyme Anmeldeinformationen, die für die optionale Authentifizierung verwendet werden.
+-   Kombination von Anmeldeinformationen; Beispielsweise eine Kombination aus Computer- und Benutzer-Kerberos-Anmeldeinformationen.
 
   
-AuthIP verfügt über einen Authentifizierungs-Wiederholungs Mechanismus, mit dem alle konfigurierten Authentifizierungsmethoden überprüft werden, bevor die Verbindung fehlschlägt.  
-AuthIP kann mit Secure Sockets verwendet werden, um Anwendungs basierten IPSec-geschützten Datenverkehr zu implementieren. Sie bietet:
+AuthIP verfügt über einen Authentifizierungswiederholungsmechanismus, der alle konfigurierten Authentifizierungsmethoden überprüft, bevor die Verbindung unterbrochen wird.  
+AuthIP kann mit sicheren Sockets verwendet werden, um anwendungsbasierten IPsec-geschützten Datenverkehr zu implementieren. Sie bietet:
 
--   Pro-Socket-Authentifizierung und-Verschlüsselung. Weitere Informationen finden Sie unter [**wsasetsocketsecurity**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-wsasetsocketsecurity) .
--   Client Identitätswechsel. (IPSec nimmt die Identität des Sicherheits Kontexts an, unter dem der Socket erstellt wird.)
--   Überprüfung des eingehenden und ausgehenden Peer namens. Weitere Informationen finden Sie unter [**wsasetsocketetertargetname**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-wsasetsocketpeertargetname) .
+-   Socketbasierte Authentifizierung und Verschlüsselung. Weitere Informationen finden Sie unter [**WSASetSocketSecurity.**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-wsasetsocketsecurity)
+-   Clientidentitätswechsel. (IPsec nimmt die Identität des Sicherheitskontexts an, unter dem der Socket erstellt wird.)
+-   Eingehende und ausgehende Peernamenüberprüfung. Weitere Informationen finden Sie unter [**WSASetSocketPeerTargetName.**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-wsasetsocketpeertargetname)
 
   
 </dl>
@@ -72,47 +72,47 @@ Weitere Informationen zu AuthIP finden Sie unter:
 [AuthIP in Windows Vista](https://www.microsoft.com/technet/community/columns/cableguy/cg0806.mspx)  
 </dl>
 
-## <a name="what-is-an-ipsec-policy"></a>Was ist eine IPSec-Richtlinie?
+## <a name="what-is-an-ipsec-policy"></a>Was ist eine IPsec-Richtlinie?
 
-Eine IPSec-Richtlinie ist ein Satz von Regeln, die bestimmen, welcher Typ von IP-Datenverkehr mit IPSec gesichert werden muss und wie dieser Datenverkehr gesichert werden soll. Auf einem Computer ist jeweils nur eine IPSec-Richtlinie aktiv.
+Eine IPsec-Richtlinie ist ein Satz von Regeln, die bestimmen, welche Art von IP-Datenverkehr mithilfe von IPsec geschützt werden muss und wie dieser Datenverkehr geschützt werden soll. Auf einem Computer ist jeweils nur eine IPsec-Richtlinie aktiv.
 
-Wenn Sie mehr über die Implementierung von IPSec-Richtlinien erfahren möchten, öffnen Sie das MMC-Snap-in "lokale Sicherheitsrichtlinie" (secpol. msc), drücken Sie F1, um die Hilfe anzuzeigen, und wählen Sie dann erstellen und Verwenden von IPSec-Richtlinien im Inhaltsverzeichnis
+Um mehr über das Implementieren von IPsec-Richtlinien zu erfahren, öffnen Sie das MMC-Snap-In lokale Sicherheitsrichtlinie (secpol.msc), drücken Sie F1, um die Hilfe anzuzeigen, und wählen Sie dann im Inhaltsverzeichnis Erstellen und Verwenden von IPsec-Richtlinien aus.
 
-Weitere Informationen zu IPSec-Richtlinien finden Sie unter:
+Weitere Informationen zu IPsec-Richtlinien finden Sie unter:
 
 <dl>
 
-[Übersicht über IPSec-Richtlinien Konzepte](/previous-versions/windows/it-pro/windows-server-2003/cc776080(v=ws.10))  
-[Beschreibung einer IPSec-Richtlinie](/previous-versions/windows/it-pro/windows-server-2003/cc781593(v=ws.10))  
+[Übersicht über IPsec-Richtlinienkonzepte](/previous-versions/windows/it-pro/windows-server-2003/cc776080(v=ws.10))  
+[Beschreibung einer IPsec-Richtlinie](/previous-versions/windows/it-pro/windows-server-2003/cc781593(v=ws.10))  
 </dl>
 
-## <a name="how-to-use-wfp-to-configure-ipsec-policies"></a>Verwenden von WFP zum Konfigurieren von IPSec-Richtlinien
+## <a name="how-to-use-wfp-to-configure-ipsec-policies"></a>Verwenden von WFP zum Konfigurieren von IPsec-Richtlinien
 
-Die Microsoft-Implementierung von IPSec verwendet die Windows-Filter Plattform zum Einrichten von IPSec-Richtlinien. IPSec-Richtlinien werden implementiert, indem auf verschiedenen WFP-Ebenen Filter wie folgt hinzugefügt werden.
+Die Microsoft-Implementierung von IPsec verwendet Windows Filterplattform, um IPsec-Richtlinien einzurichten. IPsec-Richtlinien werden wie folgt implementiert, indem Filter auf verschiedenen WFP-Ebenen hinzugefügt werden.
 
--   Fügen Sie auf der swpm \_ \_ -Schicht IKEEXT \_ V {4 \| 6}-Schichten Filter hinzu, mit denen die von den Schlüssel für die Schlüssel Erstellung (IKE/AuthIP) während des Hauptmodus (mm) verwendeten Aushandlungs Richtlinien angegeben werden. Authentifizierungsmethoden und Kryptografiealgorithmen werden auf diesen Ebenen angegeben.
--   Auf der \_ Ebene der \_ IPSec \_ V {4 6} auf der swpm-Ebene \| fügen Sie Filter hinzu, mit denen die von den Schlüssel für die Schlüssel Erstellung verwendeten Aushandlungs Richtlinien während des Schnellmodus (qm) und des Modus für erweiterte Modi (EM) angegeben IPSec-Header (AH/ESP) und kryptografische Algorithmen werden auf diesen Ebenen angegeben.
+-   Fügen Sie auf den Ebenen FWPM \_ LAYER \_ IKEEXT \_ V{4 \| 6} Filter hinzu, die die von den Schlüsselerstellungsmodulen (IKE/AuthIP) während des Mm-Austauschs (Main Mode) verwendeten Aushandlungsrichtlinien angeben. Authentifizierungsmethoden und kryptografische Algorithmen werden auf diesen Ebenen angegeben.
+-   Fügen Sie auf der Ebene FWPM \_ LAYER \_ IPSEC \_ V{4 \| 6} Filter hinzu, die die von den Schlüsselerstellungsmodulen während des Austauschs von Quick Mode (QM) und Extended Mode (EM) verwendeten Aushandlungsrichtlinien angeben. IPsec-Header (AH/ESP) und kryptografische Algorithmen werden auf diesen Ebenen angegeben.
 
-    Eine Aushandlungs Richtlinie wird als Richtlinien Anbieter Kontext angegeben, der dem Filter zugeordnet ist. Das Schlüssel Bindungs Modul listet die Richtlinien Anbieter Kontexte basierend auf den Datenverkehrs Merkmalen auf und ruft die Richtlinie ab, die für die Sicherheitsaus Handlung verwendet werden soll.
+    Eine Aushandlungsrichtlinie wird als Richtlinienanbieterkontext angegeben, der dem Filter zugeordnet ist. Das Schlüsselmodul listet die Richtlinienanbieterkontexte basierend auf den Datenverkehrsmerkmalen auf und ruft die Richtlinie ab, die für die Sicherheitsaushandlung verwendet werden soll.
 
     > [!Note]  
-    > Die WFP-API kann verwendet werden, um die Sicherheits Zuordnungen (SAS) direkt anzugeben und damit die Aushandlungs Richtlinie des Schlüssel Bindungs Moduls zu ignorieren.
+    > Die WFP-API kann verwendet werden, um die Sicherheitszuordnungen (Security Associations, SAs) direkt anzugeben und daher die Aushandlungsrichtlinie des Schlüsselmoduls zu ignorieren.
 
-     
+     
 
--   Auf der fwpm \_ -Schicht für \_ eingehende \_ Transport \_ v {4 \| 6} und fwpm- \_ Schicht \_ ausgehende \_ Transport \_ v {4 \| 6} werden Filter hinzugefügt, die Legenden aufrufen und bestimmen, welcher Daten Verkehrsfluss gesichert werden soll.
--   Fügen Sie auf der Ebene des swpm \_ -Schicht-e \_ \_ \_ \_ -v \_ {4 \| 6} Filter hinzu, mit denen die Identitäts Filterung und die Richtlinie pro Anwendung implementiert werden.
+-   Fügen Sie auf den Ebenen FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V{4 \| 6} und FWPM \_ LAYER \_ OUTBOUND TRANSPORT \_ \_ V{4 \| 6} Filter hinzu, die Aufrufe aufrufen und bestimmen, welcher Datenverkehrsfluss geschützt werden soll.
+-   Fügen Sie auf den Ebenen FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V{4 \| 6} Filter hinzu, die Identitätsfilterung und anwendungsspezifische Richtlinien implementieren.
 
-Das folgende Diagramm veranschaulicht die Interaktion der verschiedenen WFP-Komponenten in Bezug auf den IPSec-Vorgang.![IPSec-Konfiguration mit Windows-Filter Plattform](images/ipsec-configuration.jpg)
+Das folgende Diagramm veranschaulicht die Interaktion der verschiedenen WFP-Komponenten in Bezug auf den IPsec-Vorgang.![ipsec-Konfiguration mithilfe der Windows-Filterplattform](images/ipsec-configuration.jpg)
 
-Nachdem IPsec konfiguriert wurde, wird es in WFP integriert und erweitert die WFP-Filterfunktionen, indem Informationen bereitgestellt werden, die als Filterbedingungen auf der Ebene der Autorisierungs Ebenen der Anwendungsschicht verwendet werden. IPSec stellt z. b. die Identität des Remote Benutzers und des Remote Computers bereit, die WFP auf den Ebenen "ALE Connect" und "Accept Authorization" verfügbar macht. Diese Informationen können für eine differenzierte Remote Identitäts Autorisierung durch eine WFP-basierte Firewall-Implementierung verwendet werden.
+Sobald IPsec konfiguriert ist, wird es in WFP integriert und erweitert die WFP-Filterfunktionen, indem Informationen zur Verwendung als Filterbedingungen auf den ALE-Autorisierungsebenen (Application Layer Enforcement) zur Verfügung gestellt werden. Beispielsweise stellt IPsec die Remotebenutzer- und Remotecomputeridentität bereit, die WFP auf der ALE Connect-Ebene verfügbar macht und Autorisierungsebenen akzeptiert. Diese Informationen können für eine differenzierte Remoteidentitätsautorisierung durch eine WFP-basierte Firewallimplementierungen verwendet werden.
 
-Im folgenden finden Sie eine Beispiel-Isolations Richtlinie, die mithilfe von IPSec implementiert werden kann:
+Im Folgenden finden Sie eine Beispielisolationsrichtlinie, die mit IPsec implementiert werden kann:
 
--   Die Ebene " \_ \_ IKEEXT V {4 6}" der Ebene "f" \_ \| – Kerberos-Authentifizierung.
--   \_Ebene der \_ IPSec \_ V {4 \| 6} Ebenen der WPM-Ebene – AH/SHA-1.
--   WPM \_ -Schicht \_ eingehender \_ Transport \_ v {4 \| 6} und ausgehender Transport der WPM- \_ Ebene \_ \_ \_ v {4 \| 6} Ebenen-Aushandlungs Ermittlung für den gesamten Netzwerk Datenverkehr.
--   Voll \_ \_ \_ \_ \_ \_ ständig authentifizierender v {4 \| 6}-Ebenen-IPSec für den gesamten Netzwerk Datenverkehr erforderlich.
+-   FWPM \_ LAYER \_ IKEEXT \_ V{4 \| 6}-Ebenen – Kerberos-Authentifizierung.
+-   FWPM \_ LAYER \_ IPSEC \_ V{4 \| 6}-Ebenen – AH/SHA-1.
+-   Ebenen FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V{4 \| 6} und FWPM \_ LAYER \_ OUTBOUND TRANSPORT \_ \_ V{4 \| 6} – Ermittlung der Aushandlung für den gesamten Netzwerkdatenverkehr.
+-   FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV ACCEPT \_ \_ V{4 \| 6}-Ebenen: IPsec ist für den gesamten Netzwerkdatenverkehr erforderlich.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -121,22 +121,22 @@ Im folgenden finden Sie eine Beispiel-Isolations Richtlinie, die mithilfe von IP
 **WFP-Ebenen**
 </dt> <dt>
 
-[**Filtern von ebenenbezeichgern**](management-filtering-layer-identifiers-.md)
+[**Filtern von Ebenenbezeichnern**](management-filtering-layer-identifiers-.md)
 </dt> <dt>
 
-[ALE Ebenen](ale-layers.md)
+[ALE-Ebenen](ale-layers.md)
 </dt> <dt>
 
-**Mit der WFP-API implementierte IPSec-Richtlinien Szenarien:**
+**Mit der WFP-API implementierte IPsec-Richtlinienszenarien:**
 </dt> <dt>
 
 [Transportmodus](regular-transport-mode.md)
 </dt> <dt>
 
-[Transport Modus für Aushandlungs Ermittlung](negotiation-discovery-transport-mode.md)
+[Transportmodus der Aushandlungsermittlung](negotiation-discovery-transport-mode.md)
 </dt> <dt>
 
-[Transport Modus für die Aushandlung von Aushandlungen im Begrenzungs Modus](negotiation-discovery-transport-mode-in-boundary-mode.md)
+[Transportmodus der Aushandlungsermittlung im Begrenzungsmodus](negotiation-discovery-transport-mode-in-boundary-mode.md)
 </dt> <dt>
 
 [Tunnel Modus](tunnel-mode.md)
@@ -145,21 +145,21 @@ Im folgenden finden Sie eine Beispiel-Isolations Richtlinie, die mithilfe von IP
 [Garantierte Verschlüsselung](guaranteed-encryption.md)
 </dt> <dt>
 
-[Remote Identitäts Autorisierung](remote-identity-authorization.md)
+[Remoteidentitätsautorisierung](remote-identity-authorization.md)
 </dt> <dt>
 
-[Manuelle IPSec-SAS](manual-ipsec-sas.md)
+[Manuelle IPsec-SAs](manual-ipsec-sas.md)
 </dt> <dt>
 
-[IKE-/AuthIP-Ausnahmen](ike-exemptions.md)
+[IKE/AuthIP-Ausnahmen](ike-exemptions.md)
 </dt> <dt>
 
-**IPSec-Lösungen:**
+**IPsec-Lösungen:**
 </dt> <dt>
 
-[Server-und Domänen Isolation](/previous-versions/windows/it-pro/windows-server-2003/cc776080(v=ws.10))
+[Server- und Domänenisolation](/previous-versions/windows/it-pro/windows-server-2003/cc776080(v=ws.10))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: Daysinterval-Element (dailyscheduletype)
+title: DaysInterval (dailyScheduleType) -Element
 description: Gibt das Intervall zwischen den Tagen im Zeitplan an.
 ms.assetid: 495ea1c0-37eb-4b12-8241-bfc6489e33ed
 keywords:
-- Daysinterval-Element Taskplaner
+- DaysInterval-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 97b50581aa4825b31983a234a5eb47ff7b7b7e06
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e35df4f102801f7d52faeb384f9a1113e00abbf034026d19b5b7b6e7b4c90ed7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621100"
 ---
-# <a name="daysinterval-dailyscheduletype-element"></a>Daysinterval-Element (dailyscheduletype)
+# <a name="daysinterval-dailyscheduletype-element"></a>DaysInterval (dailyScheduleType) -Element
 
 Gibt das Intervall zwischen den Tagen im Zeitplan an.
 
@@ -43,27 +43,27 @@ Gibt das Intervall zwischen den Tagen im Zeitplan an.
 </xs:element>
 ```
 
-Das-Element wird durch den komplexen Typ " [**dailyscheduletype**](taskschedulerschema-dailyscheduletype-complextype.md) " definiert.
+Das -Element wird durch den [**komplexen DailyScheduleType-Typ**](taskschedulerschema-dailyscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                | Abgeleitet von                                                                   | BESCHREIBUNG                            |
+| Element                                                                                | Abgeleitet von                                                                   | Beschreibung                            |
 |----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------|
-| [**Schedulebyday**](taskschedulerschema-schedulebyday-calendartriggertype-element.md) | [**dailyscheduletype**](taskschedulerschema-dailyscheduletype-complextype.md) | Gibt einen täglichen Zeitplan an.<br/> |
+| [**ScheduleByDay**](taskschedulerschema-schedulebyday-calendartriggertype-element.md) | [**dailyScheduleType**](taskschedulerschema-dailyscheduletype-complextype.md) | Gibt einen täglichen Zeitplan an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird das Tage Intervall für einen täglichen-Befehl von der [**Daily-Eigenschaft. daysinterval**](dailytrigger-daysinterval.md) angegeben.
+Bei der Skriptentwicklung wird das Tageintervall für einen täglichen Trigger von der [**DailyTrigger.DaysInterval-Eigenschaft**](dailytrigger-daysinterval.md) angegeben.
 
-Bei der C++-Entwicklung wird das Tage Intervall für einen täglichen-Befehl durch die [**idaily-Funktion::D aysinterval**](/windows/desktop/api/taskschd/nf-taskschd-idailytrigger-get_daysinterval) -Eigenschaft angegeben.
+Bei der C++-Entwicklung wird das Tageintervall für einen täglichen Trigger durch die [**IDailyTrigger::D aysInterval-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-idailytrigger-get_daysinterval) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen täglichen Kalender--Auslösers, der die Aufgabe täglich startet.
+Der folgende XML-Code definiert einen täglichen Kalendertrigger, der die Aufgabe jeden Tag startet.
 
 
 ```XML
@@ -78,7 +78,7 @@ Der folgende XML-Code definiert einen täglichen Kalender--Auslösers, der die A
 
 
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen täglichen Zeitplan angibt, finden Sie unter Beispiel für das [tägliche Beispiel (XML)](daily-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen täglichen Zeitplan angibt, finden Sie unter Beispiel für tägliche [Trigger (XML).](daily-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,8 +86,8 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen täglich
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -95,7 +95,7 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen täglich
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

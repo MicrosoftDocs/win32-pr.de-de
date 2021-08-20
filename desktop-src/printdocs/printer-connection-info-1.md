@@ -1,7 +1,7 @@
 ---
 description: Stellt Informationen zu einer Verbindung mit einem Drucker dar.
 ms.assetid: afac3f91-74eb-46f7-94b4-d37b2b8a32a4
-title: PRINTER_CONNECTION_INFO_1 Struktur (winspool. h)
+title: PRINTER_CONNECTION_INFO_1 -Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 04bfb5411a5602248bcd188d07dec8478462fd2f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9adbe18d3f75062a67440fd7f7586c4336323ff3035416f3ad9799f5e34a17e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033898"
 ---
-# <a name="printer_connection_info_1-structure"></a>Drucker \_ Verbindungs \_ Info \_ 1-Struktur
+# <a name="printer_connection_info_1-structure"></a>STRUKTUR \_ DER \_ \_ DRUCKERVERBINDUNGSINFORMATIONEN 1
 
 Stellt Informationen zu einer Verbindung mit einem Drucker dar.
 
@@ -49,8 +49,8 @@ Die folgenden Werte sind definiert:
 
 | Wert                                      | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fehler bei der Drucker \_ Verbindung \_ (0x00000020). | Wenn dieses Bitflag festgelegt ist, stimmt die Druckerverbindung nicht überein. Der Benutzer kann einen lokalen Druckertreiber als *pszdrivername* angeben und ihn verwenden, um das Rendering durchzuführen, anstatt den Treiber zu verwenden, der auf dem Server Drucker installiert ist, mit dem der Benutzer verbunden ist.<br/>                                                                                                                                                                                                                                    |
-| Drucker \_ Verbindung \_ keine \_ Benutzeroberfläche (0x00000040)   | Wenn dieses Bitflag festgelegt ist, kann dieser Befehl kein Dialogfeld anzeigen. Wenn ein Dialogfeld angezeigt werden muss, um einen Druckertreiber vom Server zu installieren, und dieses Bitflag festgelegt ist, wird der Druckertreiber nicht installiert, die Druckerverbindung wird nicht hinzugefügt, und der-Rückruf schlägt fehl.<br/> **Windows 7:** Wenn dieses Flag in Windows 7 und höheren Versionen von Windows festgelegt ist und der Benutzer im Modus mit erhöhten Rechten ausgeführt wird, wird das Dialogfeld vertrauenswürdig für **diesen Drucker?** nicht angezeigt.<br/> |
+| \_ \_ DRUCKERVERBINDUNGSKONFLIKT (0X00000020) | Wenn dieses Bitflag festgelegt ist, ist die Druckerverbindung nicht übereinstimmend. Der Benutzer kann einen lokalen Druckertreiber als *pszDriverName* angeben und für das Rendering verwenden, anstatt den Treiber zu verwenden, der auf dem Serverdrucker installiert ist, mit dem der Benutzer verbunden ist.<br/>                                                                                                                                                                                                                                    |
+| DRUCKERVERBINDUNG \_ \_ OHNE \_ BENUTZEROBERFLÄCHE (0x00000040)   | Wenn dieses Bitflag festgelegt ist, kann bei diesem Aufruf kein Dialogfeld angezeigt werden. Wenn ein Dialogfeld angezeigt werden muss, um einen Druckertreiber vom Server zu installieren, und dieses Bitflag festgelegt ist, wird der Druckertreiber nicht installiert, die Druckerverbindung wird nicht hinzugefügt, und der Aufruf ist nicht möglich.<br/> **Windows 7:** Wenn Windows 7 und höhere Versionen von Windows festgelegt ist und der Benutzer im Modus mit erhöhten Rechten ausgeführt wird, wird das Dialogfeld Vertrauenswürdiger **Drucker?** nicht angezeigt.<br/> |
 
 
 
@@ -58,7 +58,7 @@ Die folgenden Werte sind definiert:
 
 </dd> <dt>
 
-**pszdrivername**
+**pszDriverName**
 </dt> <dd>
 
 Ein Zeiger auf den Namen des Treibers.
@@ -71,20 +71,20 @@ Ein Zeiger auf den Namen des Treibers.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> </dl>
 
  

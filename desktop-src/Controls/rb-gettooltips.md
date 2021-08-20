@@ -1,9 +1,9 @@
 ---
-title: RB_GETTOOLTIPS Meldung (kommstrg. h)
-description: Ruft das Handle für ein QuickInfo-Steuerelement ab, das dem Grund leisten-Steuerelement zugeordnet ist.
+title: RB_GETTOOLTIPS (Commctrl.h)
+description: Ruft das Handle für ein beliebiges QuickInfo-Steuerelement ab, das dem Rebar-Steuerelement zugeordnet ist.
 ms.assetid: 87897b00-857f-4a8a-ae16-a48abf4c411d
 keywords:
-- Windows-Steuerelemente für RB_GETTOOLTIPS Meldung
+- RB_GETTOOLTIPS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 703b500e7009ca5f5cad46dc72d5deebeebca047
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 859934dcdec85d0b160f9076f2a77263a02a187ebf49f8ccbb4af20fc3e82d13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540060"
 ---
-# <a name="rb_gettooltips-message"></a>RB \_ gettooltips-Meldung
+# <a name="rb_gettooltips-message"></a>RB \_ GETTOOLTIPS-Nachricht
 
-Ruft das Handle für ein QuickInfo-Steuerelement ab, das dem Grund leisten-Steuerelement zugeordnet ist.
+Ruft das Handle für ein beliebiges QuickInfo-Steuerelement ab, das dem Rebar-Steuerelement zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Handle für ein QuickInfo-Steuerelement ab, das dem Grund leisten-Steue
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HWND** -Wert zurück, der das Handle für das QuickInfo-Steuerelement ist, das dem Grund leisten-Steuerelement zugeordnet ist
+Gibt einen **HWND-Wert** zurück, der das Handle für das QuickInfo-Steuerelement ist, das dem Rebar-Steuerelement zugeordnet ist, oder 0 (null), wenn dem Rebar-Steuerelement kein QuickInfo-Steuerelement zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen **HWND** -Wert zurück, der das Handle für das QuickInfo-Steuereleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

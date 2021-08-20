@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Api.SetColumn-Methode'
+description: Weitere Informationen finden Sie unter Api.SetColumn-Methode.
 title: Api.SetColumn-Methode
 TOCTitle: 'SetColumn method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.SetColumn
@@ -23,8 +23,8 @@ ms.locfileid: "118982940"
 ---
 # <a name="apisetcolumn-method"></a>Api.SetColumn-Methode
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -123,7 +123,7 @@ Geerbte Member enthalten
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

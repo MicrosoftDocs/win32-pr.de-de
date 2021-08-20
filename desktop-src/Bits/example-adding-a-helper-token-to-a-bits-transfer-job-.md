@@ -1,54 +1,54 @@
 ---
-title: Beispiel für das Hinzufügen eines hilfstokens zu einem Bits-Übertragungs Auftrag
-description: Sie können einen Background Intelligent Transfer Service Übertragungs Auftrag (Bits) mit einem zusätzlichen Sicherheits Token konfigurieren. Der Bits-Übertragungs Auftrag verwendet dieses Hilfstoken für die Authentifizierung und für den Zugriff auf Ressourcen.
+title: Beispiel zum Hinzufügen eines Hilfstokens zu einem BITS-Übertragungsauftrag
+description: Sie können einen auftragsbasierten Background Intelligent Transfer Service (BITS) mit einem zusätzlichen Sicherheitstoken konfigurieren. Der BITS-Übertragungsauftrag verwendet dieses Hilfstoken für die Authentifizierung und den Zugriff auf Ressourcen.
 ms.assetid: 08670c6d-e589-41be-842d-597f460d9c97
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dab12fe93ae54d91d02bef5e59e99d267571413e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c4adab6ca8cebeeca9b9883e89db28205dfdab1ea43e05c01fd119c14c26d374
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528820"
 ---
-# <a name="example-adding-a-helper-token-to-a-bits-transfer-job"></a>Beispiel: Hinzufügen eines Hilfsobjekts zu einem Bits-Übertragungs Auftrag
+# <a name="example-adding-a-helper-token-to-a-bits-transfer-job"></a>Beispiel: Hinzufügen eines Hilfstokens zu einem BITS-Übertragungsauftrag
 
-Sie können einen Background Intelligent Transfer Service Übertragungs Auftrag (Bits) mit einem zusätzlichen Sicherheits Token konfigurieren. Der Bits-Übertragungs Auftrag verwendet dieses Hilfstoken für die Authentifizierung und für den Zugriff auf Ressourcen.
+Sie können einen auftragsbasierten Background Intelligent Transfer Service (BITS) mit einem zusätzlichen Sicherheitstoken konfigurieren. Der BITS-Übertragungsauftrag verwendet dieses Hilfstoken für die Authentifizierung und den Zugriff auf Ressourcen.
 
-Weitere Informationen finden Sie unter [Helper Tokens für Bits-Übertragungs Aufträge](helper-tokens-for-bits-transfer-jobs.md).
+Weitere Informationen finden Sie unter [Hilfstoken für BITS-Übertragungsaufträge.](helper-tokens-for-bits-transfer-jobs.md)
 
-Mit der folgenden Prozedur wird ein Bits-Übertragungs Auftrag im Kontext des lokalen Benutzers erstellt, die Anmelde Informationen eines zweiten Benutzers abgerufen, ein Hilfsobjekt mit diesen Anmelde Informationen erstellt und dann das Hilfsobjekt für den Bits-Übertragungs Auftrag festgelegt.
+Das folgende Verfahren erstellt einen BITS-Übertragungsauftrag im Kontext des lokalen Benutzers, ruft Anmeldeinformationen eines zweiten Benutzers ab, erstellt ein Hilfstoken mit diesen Anmeldeinformationen und legt dann das Hilfstoken für den BITS-Übertragungsauftrag fest.
 
-In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: allgemeine Klassen](common-classes.md)definiert sind.
+In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: Allgemeine Klassen definiert sind.](common-classes.md)
 
-**So fügen Sie einem Bits-Übertragungs Auftrag ein Hilfsobjekt hinzu**
+**So fügen Sie einem BITS-Übertragungsauftrag ein Hilfstoken hinzu**
 
-1.  Initialisieren Sie com-Parameter, indem Sie die ccoinitializer-Funktion aufrufen. Weitere Informationen zur ccoinitializer-Funktion finden Sie unter [Beispiel: allgemeine Klassen](common-classes.md).
-2.  Einen Zeiger auf die [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstelle erhalten. In diesem Beispiel wird die [CComPtr-Klasse](/cpp/atl/reference/ccomptr-class?view=vs-2019) zum Verwalten von COM-Schnittstellen Zeigern verwendet.
-3.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity). Bits erfordert mindestens die Identitätswechsel Ebene des Identitäts Wechsels. Bits schlägt mit E \_ AccessDenied fehl, wenn die korrekte Identitätswechsel Ebene nicht festgelegt ist.
-4.  Rufen Sie einen Zeiger auf die [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle ab, und rufen Sie den anfänglichen Serverlocatorpunkt in Bits ab, indem Sie die [CoCreateInstance]( /windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufrufen.
-5.  Erstellen Sie einen Bits-Übertragungs Auftrag, indem Sie die [**ibackgroundcopymanager:: createjob**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) -Methode aufrufen.
-6.  Rufen Sie einen Zeiger auf die cnotifyinterface-Rückruf Schnittstelle ab, und rufen Sie die [**ibackgroundcopyjob:: setnotifyinterface**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface) -Methode auf, um Benachrichtigungen über auftragsbezogene Ereignisse zu empfangen. Weitere Informationen zu cnotifyinterface finden Sie unter [Beispiel: allgemeine Klassen](common-classes.md).
-7.  Aufrufen der [**ibackgroundcopyjob:: setnotifyflags**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) -Methode, um die Benachrichtigungs Typen festzulegen, die empfangen werden sollen. In diesem Beispiel werden die **\_ \_ \_ Fehlerflags** **BG \_ Notify \_ Job \_ übertragen** und BG notify Job festgelegt.
-8.  Rufen Sie einen Zeiger auf die [**ibitstokenoptions**](/windows/desktop/api/Bits4_0/nn-bits4_0-ibitstokenoptions) -Schnittstelle ab, indem Sie die **ibackgroundcopyjob:: QueryInterface** -Methode mit dem richtigen Schnittstellen Bezeichner aufrufen.
-9.  Versuchen Sie, den Benutzer des Hilfsobjekts anzumelden. Erstellen Sie ein Identitätswechsel handle, und rufen Sie die [LogonUser-Funktion]( /windows/win32/api/winbase/nf-winbase-logonusera) auf, um das Identitätswechsel handle aufzufüllen. Wenn der Vorgang erfolgreich ist, wird die Funktion "Identität [ateloggedonuser](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateloggedonuser)" aufgerufen. Wenn nicht erfolgreich, wird im Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufgerufen, um den Identitätswechsel des angemeldeten Benutzers zu beenden, ein Fehler wird ausgelöst, und das Handle ist geschlossen.
-10. Um die Identität des Tokens des angemeldeten Benutzers anzunehmen, müssen Sie die [**ibitstokenoptions:: abspertoken**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertoken) -Methode abrufen. Wenn diese Methode fehlschlägt, wird im Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufgerufen, um den Identitätswechsel des angemeldeten Benutzers zu beenden, ein Fehler wird ausgelöst, und das Handle ist geschlossen.
+1.  Initialisieren Sie COM-Parameter, indem Sie die CCoInitializer-Funktion aufrufen. Weitere Informationen zur CCoInitializer-Funktion finden Sie unter [Beispiel: Allgemeine Klassen](common-classes.md).
+2.  Sie erhalten einen Zeiger auf die [**IBackgroundCopyJob-Schnittstelle.**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) In diesem Beispiel wird die [CComPtr-Klasse verwendet,](/cpp/atl/reference/ccomptr-class?view=vs-2019) um COM-Schnittstellenzeiger zu verwalten.
+3.  Initialisieren Sie die COM-Prozesssicherheit, indem [Sie CoInitializeSecurity aufrufen.](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) BITS erfordert mindestens die IMPERSONATE-Ebene des Identitätswechsels. BITS schlägt mit E \_ ACCESSDENIED fehl, wenn die richtige Identitätswechselebene nicht festgelegt ist.
+4.  Rufen Sie einen Zeiger auf die [**IBackgroundCopyManager-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) ab, und rufen Sie den anfänglichen Locator auf BITS ab, indem Sie die [CoCreateInstance-Funktion]( /windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) aufrufen.
+5.  Erstellen Sie einen BITS-Übertragungsauftrag, indem Sie [**die IBackgroundCopyManager::CreateJob-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) aufrufen.
+6.  Rufen Sie einen Zeiger auf die CNotifyInterface-Rückrufschnittstelle ab, und rufen Sie die [**IBackgroundCopyJob::SetNotifyInterface-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface) auf, um Benachrichtigungen über auftragsbezogene Ereignisse zu empfangen. Weitere Informationen zu CNotifyInterface finden Sie unter [Beispiel: Allgemeine Klassen](common-classes.md).
+7.  Rufen Sie die [**IBackgroundCopyJob::SetNotifyFlags-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) auf, um die Typen der zu empfangenden Benachrichtigungen festlegen. In diesem Beispiel werden die **Flags BG \_ NOTIFY JOB \_ \_ TRANSFERD** und **BG NOTIFY JOB \_ \_ \_ ERROR** festgelegt.
+8.  Rufen Sie einen Zeiger auf die [**IBitsTokenOptions-Schnittstelle**](/windows/desktop/api/Bits4_0/nn-bits4_0-ibitstokenoptions) ab, indem Sie die **IBackgroundCopyJob::QueryInterface-Methode** mit dem richtigen Schnittstellenbezeichner aufrufen.
+9.  Versuchen Sie, den Benutzer des Hilfstokens zu anmelden. Erstellen Sie ein Identitätswechselhand handle, und rufen Sie die [LogonUser-Funktion auf,]( /windows/win32/api/winbase/nf-winbase-logonusera) um das Identitätswechselhand handle zu füllen. Wenn dies erfolgreich ist, rufen Sie [die ImpersonateLoggedOnUser-Funktion auf.](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateloggedonuser) Wenn dies nicht erfolgreich ist, ruft das Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) auf, um den Identitätswechsel des angemeldeten Benutzers zu beenden. Es wird ein Fehler ausgelöst, und das Handle wird geschlossen.
+10. Rufen Sie [**die IBitsTokenOptions::SetHelperToken-Methode**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertoken) auf, um die Identität des Tokens des angemeldeten Benutzers zu angenommen. Wenn diese Methode fehlschlägt, ruft das Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) auf, um den Identitätswechsel des angemeldeten Benutzers zu beenden. Es wird ein Fehler ausgelöst, und das Handle wird geschlossen.
     > [!Note]
     >
-    > In unterstützten Versionen von Windows vor Windows 10, Version 1607, muss der Besitzer des Auftrags über Administrator Anmelde Informationen verfügen, um die [**ibitstokenoptions::**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertoken) *-Methode aufzurufen.
+    > In unterstützten Versionen von Windows vor Windows 10, Version 1607, muss der Auftragsbesitzer über Administratoranmeldeinformationen verfügen, um die [**IBitsTokenOptions::SetHelperToken-Methode aufrufen**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertoken) zu können.
     >
-    > Ab Windows 10, Version 1607, können nicht-Administrator-Auftrags Besitzer nicht-Administrator-Hilfstoken für BITS-Aufträge festlegen, die Sie besitzen. Auftrags Besitzer müssen weiterhin über Administratorrechte verfügen, um Hilfstoken mit Administratorrechten festzulegen.
+    > Ab Windows 10 Version 1607 können Auftragsbesitzer ohne Administratorrechte Hilfstoken für BITS-Aufträge festlegen, die sie besitzen. Auftragsbesitzer müssen weiterhin über Administratoranmeldeinformationen verfügen, um Hilfstoken mit Administratorrechten festlegen zu können.
 
-     
+     
 
-11. Aufrufen der [**ibitstokenoptions:: tspertokenflags**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertokenflags) -Methode, um anzugeben, auf welche Ressourcen mithilfe des Sicherheits Kontexts des Hilfsobjekts zugegriffen werden soll.
-12. Nachdem der Identitätswechsel abgeschlossen ist, wird im Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufgerufen, um den Identitätswechsel des angemeldeten Benutzers zu beenden, und das Handle ist geschlossen.
-13. Fügen Sie dem Bits-Übertragungs Auftrag Dateien hinzu, indem Sie [**ibackgroundcopyjob:: AddFile**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-addfile)aufrufen.
-14. Nachdem die Datei hinzugefügt wurde, wenden Sie [**ibackgroundcopyjob:: Resume**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) an, um den Auftrag fortzusetzen.
-15. Richten Sie eine while-Schleife ein, um auf die beendenmeldung von der Rückruf Schnittstelle zu warten, während der Auftrag übertragen wird. Die while-Schleife verwendet die [GetTickCount](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) -Funktion, um die Anzahl der Millisekunden abzurufen, die seit Beginn der Übertragung des Auftrags verstrichen sind.
-16. Nachdem der Bits-Übertragungs Auftrag fertiggestellt wurde, entfernen Sie den Auftrag aus der Warteschlange, indem Sie [**ibackgroundcopyjob:: Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)aufrufen.
+11. Rufen Sie [**die IBitsTokenOptions::SetHelperTokenFlags-Methode**](/windows/desktop/api/Bits4_0/nf-bits4_0-ibitstokenoptions-sethelpertokenflags) auf, um mithilfe des Sicherheitskontexts des Hilfstokens anzugeben, auf welche Ressourcen sie zugreifen sollen.
+12. Nach Abschluss des Identitätswechsels ruft das Beispiel die [RevertToSelf-Funktion](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) auf, um den Identitätswechsel des angemeldeten Benutzers zu beenden, und das Handle wird geschlossen.
+13. Fügen Sie dem BITS-Übertragungsauftrag Dateien hinzu, indem [**Sie IBackgroundCopyJob::AddFile aufrufen.**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-addfile)
+14. Nachdem die Datei hinzugefügt wurde, rufen Sie [**IBackgroundCopyJob::Resume auf,**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) um den Auftrag wieder aufzunehmen.
+15. Richten Sie eine while-Schleife ein, um auf die Nachricht zum Beenden von der Rückrufschnittstelle zu warten, während der Auftrag übertragen wird. Die while-Schleife verwendet die [GetTickCount-Funktion,](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) um die Anzahl der Millisekunden abzurufen, die seit beginn der Übertragung des Auftrags verstrichen sind.
+16. Entfernen Sie den Auftrag nach Abschluss des BITS-Übertragungsauftrags aus der Warteschlange, indem Sie [**IBackgroundCopyJob::Complete aufrufen.**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)
 
-Im folgenden Codebeispiel wird ein Hilfsobjekt zu einem Bits-Übertragungs Auftrag hinzugefügt.
+Im folgenden Codebeispiel wird einem BITS-Übertragungsauftrag ein Hilfstoken hinzufügt.
 
 
 ```C++
@@ -270,15 +270,15 @@ void _cdecl _tmain(int argc, LPWSTR* argv)
 
 <dl> <dt>
 
-[Hilfstoken für Bits-Übertragungs Aufträge](helper-tokens-for-bits-transfer-jobs.md)
+[Hilfstoken für BITS-Übertragungsaufträge](helper-tokens-for-bits-transfer-jobs.md)
 </dt> <dt>
 
-[**Ibitstokenoptions**](/windows/desktop/api/Bits4_0/nn-bits4_0-ibitstokenoptions)
+[**IBitsTokenOptions**](/windows/desktop/api/Bits4_0/nn-bits4_0-ibitstokenoptions)
 </dt> <dt>
 
-[Beispiel: allgemeine Klassen](common-classes.md)
+[Beispiel: Allgemeine Klassen](common-classes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

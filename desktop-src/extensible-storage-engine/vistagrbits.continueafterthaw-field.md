@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: VistaGrbits.ContinueAfterThaw-Feld'
+description: Weitere Informationen finden Sie unter VistaGrbits.ContinueAfterThaw field (VistaGrbits.ContinueAfterThaw-Feld).
 title: VistaGrbits.ContinueAfterThaw-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: ContinueAfterThaw field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.ContinueAfterThaw
@@ -53,7 +53,7 @@ value = VistaGrbits.ContinueAfterThaw
 public const SnapshotPrepareGrbit ContinueAfterThaw
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

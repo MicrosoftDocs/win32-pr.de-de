@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d6343cec0573a97656368d66426ec9b46c7255e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44b034c5b91eb024bdbcde0b0d835ba12f0367bedc6dbd9c5c2d52dca1029f87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068540"
 ---
-# <a name="cim_virtualsystemmigrationservice-class"></a>CIM \_ virtualsystemmigrationservice-Klasse
+# <a name="cim_virtualsystemmigrationservice-class"></a>CIM \_ VirtualSystemMigrationService-Klasse
 
 Stellt einen Dienst dar, der die Migration virtueller Systeme zwischen Hostsystemen steuert. Diese Klasse überprüft auch, ob eine ausstehende Migration wahrscheinlich erfolgreich ist.
 
@@ -35,19 +35,19 @@ class CIM_VirtualSystemMigrationService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ virtualsystemmigrationservice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualSystemMigrationService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Methoden.
+Die **CIM \_ VirtualSystemMigrationService-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                     | BESCHREIBUNG                                                                                      |
+| Methode                                                                                                                     | Beschreibung                                                                                      |
 |:---------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
-| [**CheckVirtualSystemIsMigratableToHost**](cim-virtualsystemmigrationservice-checkvirtualsystemismigratabletohost.md)     | Überprüft, ob eine ausstehende Migration eines virtuellen Systems zu einem Host wahrscheinlich erfolgreich ist.<br/>   |
+| [**CheckVirtualSystemIsMigratableToHost**](cim-virtualsystemmigrationservice-checkvirtualsystemismigratabletohost.md)     | Überprüft, ob eine ausstehende Migration des virtuellen Systems zu einem Host wahrscheinlich erfolgreich ist.<br/>   |
 | [**CheckVirtualSystemIsMigratableToSystem**](cim-virtualsystemmigrationservice-checkvirtualsystemismigratabletosystem.md) | Überprüft, ob eine ausstehende Migration eines virtuellen Systems zu einem System wahrscheinlich erfolgreich ist.<br/> |
 | [**MigrateVirtualSystemToHost**](cim-virtualsystemmigrationservice-migratevirtualsystemtohost.md)                         | Migriert ein virtuelles System zu einem Zielhost.<br/>                                           |
 | [**MigrateVirtualSystemToSystem**](cim-virtualsystemmigrationservice-migratevirtualsystemtosystem.md)                     | Migriert ein virtuelles System zum Zielsystem.<br/>                                           |
@@ -64,8 +64,8 @@ Die **CIM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Method
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -74,7 +74,7 @@ Die **CIM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Method
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

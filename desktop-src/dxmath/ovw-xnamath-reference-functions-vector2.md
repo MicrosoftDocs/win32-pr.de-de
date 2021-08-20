@@ -22,8 +22,8 @@ Listet die von DirectXMath bereitgestellten 2D-Vektorfunktionen auf.
 | Thema                                                                                                                           | BESCHREIBUNG                                              |
 |---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | [DirectXMath Library 2D Vector Comparison Functions](ovw-xnamath-reference-functions-vector2-comparison.md)<br/>         | Listet die 2D-Vektorvergleichsfunktionen auf.<br/>     |
-| [Geometrische Funktionen der DirectXMath Library 2D Vector](ovw-xnamath-reference-functions-vector2-geometric.md)<br/>           | Listet die geometrischen 2D-Vektorfunktionen auf.<br/>      |
-| [DirectXMath Library 2D Vector Transformation Functions](ovw-xnamath-reference-functions-vector2-transformation.md)<br/> | Listet die 2D-Vektortransformationsfunktionen auf.<br/> |
+| [DirectXMath Library 2D Vector Geometric Functions](ovw-xnamath-reference-functions-vector2-geometric.md)<br/>           | Listet die geometrischen 2D-Vektorfunktionen auf.<br/>      |
+| [Transformationsfunktionen für 2D-Vektoren der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector2-transformation.md)<br/> | Listet die 2D-Vektortransformationsfunktionen auf.<br/> |
 
 
 

@@ -4,7 +4,7 @@ description: Die Adresse der Anmeldewebseite, die zum Authentifizieren eines Ben
 ms.assetid: d7a5e0d8-353e-416d-a9e0-11ef5072f9ff
 ms.tgt_platform: multiple
 keywords:
-- Eigenschafteneigenschaft "GatewayAuthLoginPage Remotedesktopdienste
+- GatewayAuthLoginPage-Remotedesktopdienste
 - GatewayAuthLoginPage-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings3-Schnittstelle
 - IMsRdpClientTransportSettings3-Schnittstelle Remotedesktopdienste , GatewayAuthLoginPage-Eigenschaft
 topic_type:
@@ -64,7 +64,7 @@ Die neue Adresse der Anmeldewebseite.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

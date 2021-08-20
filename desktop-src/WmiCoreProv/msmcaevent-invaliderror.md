@@ -1,5 +1,5 @@
 ---
-description: Gibt einen ungültigen MCA (Machine Check Architecture)-Fehler an. Ein ungültiger MCA-Fehler identifiziert ein Fehler Format, das nicht den Windows-Spezifikationen entspricht. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+description: Gibt einen ungültigen McA-Fehler (Machine Check Architecture) an. Ein ungültiger MCA-Fehler identifiziert ein Fehlerformat, das Windows Spezifikationen nicht entspricht. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
 ms.assetid: 476ea558-2e0e-480f-b4ba-8d73fdef3308
 title: MSMCAEvent_InvalidError-Klasse
 ms.topic: reference
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - Wmiprov.dll
-ms.openlocfilehash: abd12cfa7280a1b2f6a718b47b17d4ddf121cc25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a42ee7dfcc9864cdd4ca90ba7d66903407352e92224e5ded7a16ace4e053d37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821974"
 ---
-# <a name="msmcaevent_invaliderror-class"></a>Msmcaevent \_ invaliderror-Klasse
+# <a name="msmcaevent_invaliderror-class"></a>MSMCAEvent \_ InvalidError-Klasse
 
-Die **msmcaevent \_ invaliderror** -Klasse gibt einen ungültigen MCA (Machine Check Architecture)-Fehler an. Ein ungültiger MCA-Fehler identifiziert ein Fehler Format, das nicht den Windows-Spezifikationen entspricht. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+Die **MSMCAEvent \_ InvalidError-Klasse** weist auf einen ungültigen McA-Fehler (Machine Check Architecture) hin. Ein ungültiger MCA-Fehler identifiziert ein Fehlerformat, das Windows Spezifikationen nicht entspricht. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,33 +56,33 @@ class MSMCAEvent_InvalidError : WMIEvent
 
 ## <a name="members"></a>Member
 
-Die **msmcaevent \_ invaliderror** -Klasse verfügt über diese Typen von Membern:
+Die **MSMCAEvent \_ InvalidError-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **msmcaevent \_ invaliderror** -Klasse verfügt über diese Eigenschaften.
+Die **MSMCAEvent \_ InvalidError-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True**, wenn diese Instanz der-Klasse aktiv ist. andernfalls **false**.
+**TRUE**, wenn diese Instanz der -Klasse aktiv ist; Andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Additionalerrors**
+**AdditionalErrors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -92,37 +92,37 @@ Anzahl zusätzlicher Fehler im MCA-Datensatz.
 
 </dd> <dt>
 
-**CPU**
+**Cpu**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, dem dem ersten Prozessor die Zahl 0 zugewiesen ist, dem zweiten Prozessor die Zahl 1 zugewiesen wird usw.
+CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, in dem dem ersten Prozessor die Zahl 0, dem zweiten Prozessor die Zahl 1 usw. zugewiesen wird.
 
 </dd> <dt>
 
-**Errorschwere Grad**
+**ErrorSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Schweregrad des gemeldeten Fehlers.
+Schweregrad des gemeldeten Fehlers.
 
 
 
 | Wert                                                                                                | Bedeutung                |
 |------------------------------------------------------------------------------------------------------|------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Wiederherstellbar<br/> |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | FAT<br/>       |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | KORRIGIER barer<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Schwerwiegend<br/>       |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Korrigierbar<br/> |
 
 
 
@@ -133,7 +133,7 @@ Der Schweregrad des gemeldeten Fehlers.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -142,80 +142,80 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Eindeutiger Bezeichner dieser Instanz der Klasse.
+Eindeutiger Bezeichner dieser Instanz der -Klasse.
 
 </dd> <dt>
 
-**Logtoeventlog**
+**LogToEventlog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn 0 (null) ist, wird dieses Ereignis nicht im System Ereignisprotokoll protokolliert.
+Wenn 0 (null) ist, wird dieses Ereignis nicht im Systemereignisprotokoll protokolliert.
 
 </dd> <dt>
 
-**Rawrecord**
+**RawRecord**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Bytearray, das den unformatierten Fehler Daten Satz enthält, wie Windows von der System Abstraktion Layer (SAL) dargestellt wird. Die Anzahl der Elemente im Array wird durch die **size** -Eigenschaft angegeben.
+Bytearray, das den unformatierten Fehlerdatensatz enthält, der von der Systemabstraktionsschicht (SAL) Windows wird. Die Anzahl der Elemente im Array wird von der **Size-Eigenschaft** angegeben.
 
 </dd> <dt>
 
-**Datensatz**
+**Recordid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatz-ID des Fehler Datensatzes für diesen Fehler.
+Datensatzbezeichner des Fehlerdatensatzes für diesen Fehler.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Größe des unformatierten Fehler Datensatzes.
+Größe des unformatierten Fehlerdatensatzes.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ereignisprotokoll Meldung. Diese Meldungen entsprechen den Ereignisprotokoll-Nachrichten Codes, die zum Einfügen von Ereignisprotokoll Meldungen vom Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn ein Ereignis empfangen wird.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokoll-Nachrichtencodes, die vom Windows Ereignisprotokoll-Consumeranbieter beim Empfang eines der Ereignisse zum Einfügen von Ereignisprotokollmeldungen verwendet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **msmcaevent \_ invaliderror** -Klasse wird von [**wmievent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ InvalidError-Klasse** wird von [**WMIEvent**](wmievent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -224,9 +224,9 @@ Die **msmcaevent \_ invaliderror** -Klasse wird von [**wmievent**](wmievent.md)a
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmiprov.dll</dt> </dl> |
 
 

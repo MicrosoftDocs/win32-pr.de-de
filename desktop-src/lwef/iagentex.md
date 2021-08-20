@@ -13,9 +13,9 @@ ms.locfileid: "118976210"
 ---
 # <a name="iagentex"></a>IAgentEx
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-**IAgentEx** wird von der [**IAgent-Schnittstelle**](iagent.md) ableiten. Sie enthält alle **IAgent-Methoden** und bietet Zugriff auf zusätzliche Funktionen.
+**IAgentEx** wird von der [**IAgent-Schnittstelle**](iagent.md) abgeleitet. Sie enthält alle **IAgent-Methoden** und bietet Zugriff auf zusätzliche Funktionen.
 
 **Methoden in Vtable-Reihenfolge**
 
@@ -24,7 +24,7 @@ ms.locfileid: "118976210"
 | IAgentEx-Methoden                                                                   | BESCHREIBUNG                                              |
 |------------------------------------------------------------------------------------|----------------------------------------------------------|
 | [**ShowDefaultCharacterProperties**](iagentex--showdefaultcharacterproperties.md) | Zeigt die Standardzeicheneigenschaften an.               |
-| [**Getversion**](iagentex--getversion.md)                                         | Gibt die Versionsnummer für Microsoft Agent (Server) zurück. |
+| [**Getversion**](iagentex--getversion.md)                                         | Gibt die Versionsnummer für den Microsoft-Agent (Server) zurück. |
 
 
 
