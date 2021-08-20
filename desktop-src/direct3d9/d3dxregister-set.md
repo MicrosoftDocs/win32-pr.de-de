@@ -1,7 +1,7 @@
 ---
 description: Datentyp des Registers.
 ms.assetid: b54530d3-4267-4b41-9a16-59d400ef3e18
-title: D3DXREGISTER_SET -Enumeration (D3dx9shader.h)
+title: D3DXREGISTER_SET-Enumeration (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -53,7 +53,7 @@ Boolescher Wert.
 <span id="D3DXRS_INT4"></span><span id="d3dxrs_int4"></span>**D3DXRS \_ INT4**
 </dt> <dd>
 
-4D-ganzzahlige Zahl.
+4D-Ganzzahlzahl.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Das Register enthält 4D-Samplerdaten.
 <span id="D3DXRS_FORCE_DWORD"></span><span id="d3dxrs_force_dword"></span>**D3DXRS \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -88,7 +88,7 @@ Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. O
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

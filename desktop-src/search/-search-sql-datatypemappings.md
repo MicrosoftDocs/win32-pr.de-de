@@ -1,87 +1,87 @@
 ---
-description: In der folgenden Tabelle werden die Zuordnungen zwischen Variant-Datentypen und OLE DB-Datentypen aufgelistet.
+description: In der folgenden Tabelle sind die Zuordnungen zwischen varianten Datentypen und OLE DB Datentypen aufgeführt.
 ms.assetid: 213458bf-b847-4ced-8a92-686b4eee6d07
 title: Datentypzuordnungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9beae5a9ce1fbaafadfae54979d63c97310f57db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e25e909755c87b15526b97488285a0cf688e15dab64073fad603efc190f382b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462594"
 ---
 # <a name="data-type-mappings"></a>Datentypzuordnungen
 
-In der folgenden Tabelle werden die Zuordnungen zwischen Variant-Datentypen und OLE DB-Datentypen aufgelistet.
+In der folgenden Tabelle sind die Zuordnungen zwischen varianten Datentypen und OLE DB Datentypen aufgeführt.
 
 
 
 
 | Variant-Datentyp | OLE DB-Datentyp |
 |-------------------|------------------|
-| VT \_ bool          | DbType \_ bool     |
-| VT \_ BSTR          | DbType \_ BSTR     |
-| VT- \_ ByRef         | DbType- \_ ByRef    |
-| VT- \_ CY            | DbType- \_ CY       |
-| VT- \_ Datum          | DbType- \_ Datum     |
-| VT ( \_ dezimal)       | DbType \_ Decimal  |
-| VT \_ leer         | DbType ist \_ leer.    |
-| VT \_ FILETIME      | DbType \_ FILETIME |
-| VT- \_ GUID          | DbType- \_ GUID     |
-| VT \_ I1            | DbType \_ I1       |
-| VT \_ I2            | DbType- \_ I2       |
-| VT \_ I4            | DbType \_ I4       |
-| VT \_ I8            | DbType \_ I8       |
-| VT \_ null          | DbType \_ null     |
-| VT \_ R4            | DbType \_ R4       |
-| VT \_ R8            | DbType \_ UI8      |
-| VT- \_ Vektor        | DbType- \_ Vektor   |
-| VT \_ WSTR          | DbType \_ WSTR     |
+| VT \_ BOOL          | DBTYPE \_ BOOL     |
+| VT \_ BSTR          | DBTYPE \_ BSTR     |
+| VT \_ BYREF         | DBTYPE \_ BYREF    |
+| VT \_ CY            | DBTYPE \_ CY       |
+| VT \_ DATE          | DBTYPE \_ DATE     |
+| VT \_ DECIMAL       | DBTYPE \_ DECIMAL  |
+| VT \_ EMPTY         | DBTYPE \_ EMPTY    |
+| VT \_ FILETIME      | DBTYPE \_ FILETIME |
+| \_VT-GUID          | \_DBTYPE-GUID     |
+| VT \_ I1            | DBTYPE \_ I1       |
+| VT \_ I2            | DBTYPE \_ I2       |
+| VT \_ I4            | DBTYPE \_ I4       |
+| VT \_ I8            | DBTYPE \_ I8       |
+| VT \_ NULL          | DBTYPE \_ NULL     |
+| VT \_ R4            | DBTYPE \_ R4       |
+| VT \_ R8            | DBTYPE \_ UI8      |
+| VT \_ VECTOR        | DBTYPE \_ VECTOR   |
+| VT \_ WSTR          | DBTYPE \_ WSTR     |
 
 
 
  
 
-In der folgenden Tabelle werden die Zuordnungen zwischen XML-Datentypen und OLE DB-Datentypen aufgelistet.
+In der folgenden Tabelle sind die Zuordnungen zwischen XML-Datentypen und OLE DB Datentypen aufgeführt.
 
 
 
 | Variant-Datentyp | OLE DB-Datentyp |
 |-------------------|------------------|
-| BIN. Base64        | DbType- \_ Bytes    |
-| BIN. Dchen           | DbType \_ I8       |
-| BOOLEAN           | DbType \_ bool     |
-| CHAR              | DbType \_ Str      |
-| DATE              | DbType- \_ Datum     |
-| DATETIME          | DbType- \_ Datum     |
-| DateTime. TZ       | DbType- \_ Datum     |
-| Korrigiert. 14,4        | DbType \_ R4       |
-| GLEITKOMMAZAHL             | DbType \_ R8       |
-| I1                | DbType \_ I1       |
-| I2                | DbType- \_ I2       |
-| I4                | DbType \_ I4       |
-| I8                | DbType \_ I8       |
-| INT               | DbType \_ I8       |
-| LONG              | DbType \_ I4       |
-| NUMBER            | DbType \_ R8       |
-| R4                | DbType \_ R4       |
-| R8                | DbType \_ R8       |
-| STRING            | DbType \_ WSTR     |
-| TIME              | DbType \_ FILETIME |
-| Zeit. TZ           | DbType \_ FILETIME |
-| UI1               | DbType \_ UI2      |
-| UI2               | DbType \_ UI2      |
-| UI4               | DbType \_ UI4      |
-| UI8               | DbType \_ UI8      |
-| URI               | DbType \_ WSTR     |
-| UUID              | DbType- \_ GUID     |
+| BIN. BASE64        | DBTYPE \_ BYTES    |
+| BIN. Hex           | DBTYPE \_ I8       |
+| BOOLEAN           | DBTYPE \_ BOOL     |
+| CHAR              | DBTYPE \_ STR      |
+| DATE              | DBTYPE \_ DATE     |
+| DATETIME          | DBTYPE \_ DATE     |
+| Datetime. Tz       | DBTYPE \_ DATE     |
+| FIXED.14.4        | DBTYPE \_ R4       |
+| GLEITKOMMAZAHL             | DBTYPE \_ R8       |
+| I1                | DBTYPE \_ I1       |
+| I2                | DBTYPE \_ I2       |
+| I4                | DBTYPE \_ I4       |
+| I8                | DBTYPE \_ I8       |
+| INT               | DBTYPE \_ I8       |
+| LONG              | DBTYPE \_ I4       |
+| NUMBER            | DBTYPE \_ R8       |
+| R4                | DBTYPE \_ R4       |
+| R8                | DBTYPE \_ R8       |
+| STRING            | DBTYPE \_ WSTR     |
+| TIME              | DBTYPE \_ FILETIME |
+| Zeit. Tz           | DBTYPE \_ FILETIME |
+| UI1               | DBTYPE \_ UI2      |
+| Ui2               | DBTYPE \_ UI2      |
+| UI4               | DBTYPE \_ UI4      |
+| UI8               | DBTYPE \_ UI8      |
+| URI               | DBTYPE \_ WSTR     |
+| UUID              | \_DBTYPE-GUID     |
 
 
 
  
 
-Zeichen folgen Daten können in andere Datentypen umgewandelt werden. Weitere Informationen finden Sie unter umwandeln [des Datentyps einer Spalte](-search-sql-castingdatacolumntype.md).
+Sie können Zeichenfolgendaten in andere Datentypen umformen. Weitere Informationen finden Sie unter [Umwandlung des Datentyps einer Spalte.](-search-sql-castingdatacolumntype.md)
 
  
 

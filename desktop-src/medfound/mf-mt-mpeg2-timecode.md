@@ -1,19 +1,19 @@
 ---
-description: Gibt für einen Medientyp an, der einen MPEG-2-Transportdaten Strom (TS) beschreibt, gibt an, dass die Transport Pakete einen 4-Byte-Zeit Code enthalten.
+description: Für einen Medientyp, der einen MPEG-2-Transportstream (TS) beschreibt, gibt an, dass die Transportpakete einen 4-Byte-Zeitcode enthalten.
 ms.assetid: B172E7A8-5757-49B7-A784-FAFC7E904A4C
-title: MF_MT_MPEG2_TIMECODE-Attribut (mfapi. h)
+title: MF_MT_MPEG2_TIMECODE -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bc9db5d7b3c6e94f7845bec2bd98c569d1b1f9c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc7a4ce6868f783ed33c50acd5a8648297648481a58c74198b0dcadd1bd237bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118741764"
 ---
-# <a name="mf_mt_mpeg2_timecode-attribute"></a>MF \_ MT-Attribut "- \_ \_ Zeit Leitzahl"
+# <a name="mf_mt_mpeg2_timecode-attribute"></a>MF \_ MT \_ MPEG2 \_ TIMECODE-Attribut
 
-Gibt für einen Medientyp an, der einen MPEG-2-Transportdaten Strom (TS) beschreibt, gibt an, dass die Transport Pakete einen 4-Byte-Zeit Code enthalten.
+Für einen Medientyp, der einen MPEG-2-Transportstream (TS) beschreibt, gibt an, dass die Transportpakete einen 4-Byte-Zeitcode enthalten.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -23,8 +23,8 @@ Gibt für einen Medientyp an, der einen MPEG-2-Transportdaten Strom (TS) beschre
 
 | Wert                                                                                                | Bedeutung                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="0"></span><dl> <dt>**0**</dt> </dl> | Es wurde kein Zeit Code hinzugefügt.<br/>                                                                                                              |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Ein 4-Byte-Zeit Code wird zu Beginn jedes Transport Pakets hinzugefügt. Dieser Zeitaufwand wird für einige Digital TV-Standards benötigt.<br/> |
+| <span id="0"></span><dl> <dt>**0**</dt> </dl> | Es wird kein Zeitcode hinzugefügt.<br/>                                                                                                              |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Am Anfang jedes Transportpakets wird ein 4-Byte-Zeitcode hinzugefügt. Dieser Zeitcode ist für einige Standards für digitale Fernsehsendungen erforderlich.<br/> |
 
 
 
@@ -36,17 +36,17 @@ Gibt für einen Medientyp an, der einen MPEG-2-Transportdaten Strom (TS) beschre
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

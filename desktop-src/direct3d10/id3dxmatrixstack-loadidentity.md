@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::LoadIdentity-Methode (D3DX10.h): Lädt die Identität in der aktuellen Matrix.'
+description: 'ID3DXMATRIXStack::LoadIdentity-Methode (D3DX10.h): Lädt die Identität in die aktuelle Matrix.'
 ms.assetid: 324b49c2-3aca-4bbb-90f3-62f3ffb2fa45
 title: ID3DXMATRIXStack::LoadIdentity-Methode (D3DX10.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: f056a911b19c0ea18f5f728a6ce8c4403dd14587
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 26d52ca8bd8ebccf04a3f2e4f36e35a1ac4e5b2b74d8c0e0a79bd9b85568cfc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736059"
 ---
 # <a name="id3dxmatrixstackloadidentity-method-d3dx10h"></a>ID3DXMATRIXStack::LoadIdentity-Methode (D3DX10.h)
 
@@ -42,17 +42,17 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Identitätsmatrix ist eine Matrix, in der alle Koeffizienten 0,0 sind, mit Ausnahme der \[ 1,1 \] \[ 2,2 \] \[ 3,3 \] \[ 4,4-Koeffizienten, die auf \] 1,0 festgelegt sind. Die Identitätsmatrix ist besonders, da sie unverändert bleibt, wenn sie auf Scheitelzeichen angewendet wird. Die Identitätsmatrix wird als Ausgangspunkt für Matrizen verwendet, die Scheitelpunktwerte ändern, um Drehungen, Übersetzungen und alle anderen Transformationen zu erstellen, die durch eine 4x4-Matrix dargestellt werden können.
+Die Identitätsmatrix ist eine Matrix, in der alle Koeffizienten 0,0 sind, mit Ausnahme der \[ Koeffizienten 1,1 \] \[ 2,2 \] \[ 3,3 \] \[ 4,4, \] die auf 1,0 festgelegt sind. Die Identitätsmatrix ist besonders, da sie unverändert bleibt, wenn sie auf Scheitelpunkte angewendet wird. Die Identitätsmatrix wird als Ausgangspunkt für Matrizen verwendet, die Scheitelpunktwerte ändern, um Drehungen, Übersetzungen und andere Transformationen zu erstellen, die durch eine 4x4-Matrix dargestellt werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

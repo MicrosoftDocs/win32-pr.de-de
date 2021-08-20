@@ -1,29 +1,29 @@
 ---
-description: Gibt den Offset (in Bytes) vom Anfang der Datei "Advanced Systems Format (ASF)" bis zum Anfang des ersten Datenpakets an.
+description: Gibt den Offset in Bytes vom Anfang einer ASF-Datei (Advanced Systems Format) bis zum Anfang des ersten Datenpakets an.
 ms.assetid: 5145d952-19d9-4bf8-9046-0b5d28f5e641
-title: MF_PD_ASF_DATA_START_OFFSET-Attribut (wmcontainer. h)
+title: MF_PD_ASF_DATA_START_OFFSET -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 125ae1263467afe7e0aa9017e8049b13796538fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b848d83d32be7abc8c30cd41bf51959c25e4e784c1f5beab645a6ee5b0db381
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118741090"
 ---
-# <a name="mf_pd_asf_data_start_offset-attribute"></a>MF \_ PD-Attribut für das \_ \_ \_ Start Offset-Daten \_ Satz
+# <a name="mf_pd_asf_data_start_offset-attribute"></a>MF \_ PD \_ ASF DATA START \_ \_ \_ OFFSET-Attribut
 
-Gibt den Offset (in Bytes) vom Anfang der Datei "Advanced Systems Format (ASF)" bis zum Anfang des ersten Datenpakets an.
+Gibt den Offset in Bytes vom Anfang einer ASF-Datei (Advanced Systems Format) bis zum Anfang des ersten Datenpakets an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode generiert dieses Attribut aus den ASF-Metadaten.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) generiert dieses Attribut aus den ASF-Metadaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,32 +31,32 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
+[**ATTRIBUTEs::GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
+[**ATTRIBUTEs::SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM_INITMENUPOPUP (Winuser.h)
-description: 'WM_INITMENUPOPUP: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
+title: WM_INITMENUPOPUP Meldung (Winuser.h)
+description: 'WM_INITMENUPOPUP Meldung: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
 ms.assetid: 08ae1a78-5e68-488c-9b77-ee42044ca3ab
 keywords:
-- WM_INITMENUPOPUP von Nachrichtenmenüs und anderen Ressourcen
+- WM_INITMENUPOPUP Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117869599"
 ---
-# <a name="wm_initmenupopup-message"></a>WM \_ INITMENUPOPUP-Meldung
+# <a name="wm_initmenupopup-message"></a>WM \_ INITMENUPOPUP-Nachricht
 
 Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.
 
@@ -39,16 +39,16 @@ Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann e
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Dropdownmenü oder Untermenü.
+Ein Handle für das Dropdownmenü oder untermenü.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das Wort in niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
+Das Wort mit niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
 
-Das obere Wort gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE;** Andernfalls ist dies **FALSE.**
+Das Wort in hoher Reihenfolge gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE.** Andernfalls ist es **FALSE.**
 
 </dd> </dl>
 
@@ -68,7 +68,7 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

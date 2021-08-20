@@ -1,23 +1,23 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie eine nicht verbundene PIN für einen Filter finden. Das Auffinden einer nicht verbundenen PIN ist nützlich, wenn Sie Filter verbinden.
+description: In diesem Thema wird beschrieben, wie sie einen nicht verbundenen Pin in einem Filter finden. Das Suchen einer nicht verbundenen Stecknadel ist nützlich, wenn Sie Filter verbinden.
 ms.assetid: d0a906a8-bae4-43b3-8b02-ee5b97c9323d
-title: Suchen einer nicht verbundenen PIN für einen Filter
+title: Suchen einer nicht verbundenen Stecknadel in einem Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ee47b811c027161b70769cb04063d0e8214934a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7a76100622f0398c58eb10f2dda041ba074f4610efbd1c649d48199ea2c676eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401754"
 ---
-# <a name="find-an-unconnected-pin-on-a-filter"></a>Suchen einer nicht verbundenen PIN für einen Filter
+# <a name="find-an-unconnected-pin-on-a-filter"></a>Suchen einer nicht verbundenen Stecknadel in einem Filter
 
-In diesem Thema wird beschrieben, wie Sie eine nicht verbundene PIN für einen Filter finden. Das Auffinden einer nicht verbundenen PIN ist nützlich, wenn Sie Filter verbinden.
+In diesem Thema wird beschrieben, wie sie einen nicht verbundenen Pin in einem Filter finden. Das Suchen einer nicht verbundenen Stecknadel ist nützlich, wenn Sie Filter verbinden.
 
-In einem typischen Szenario für die DirectShow-Diagramm Entwicklung benötigen Sie eine nicht verbundene PIN, die einer bestimmten Pin-Richtung (Eingabe oder Ausgabe) entspricht. Wenn Sie z. b. zwei Filter verbinden, verbinden Sie eine Ausgabe-PIN von einem Filter mit einer Eingabe-PIN des anderen Filters. Beide Pins müssen nicht verbunden sein, bevor Sie eine Verbindung herstellen.
+In einem typischen DirectShow-Diagramm-Erstellen-Szenario benötigen Sie einen nicht verbundenen Pin, der einer bestimmten Pinrichtung (Eingabe oder Ausgabe) entspricht. Wenn Sie beispielsweise zwei Filter verbinden, verbinden Sie einen Ausgabepin von einem Filter mit einem Eingabepin aus dem anderen Filter. Beide Stecknadeln müssen nicht verbunden sein, bevor Sie sie verbinden.
 
-Zuerst wird eine Funktion benötigt, die testet, ob eine PIN mit einer anderen Pin verbunden ist. Diese Funktion Ruft die [**IPin:: connectedto**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto) -Methode auf, um zu überprüfen, ob die PIN mit einer anderen Pin verbunden ist.
+Zunächst benötigen wir eine Funktion, die testet, ob eine Stecknadel mit einem anderen Pin verbunden ist. Diese Funktion ruft die [**IPin::ConnectedTo-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto) auf, um zu testen, ob die Stecknadel mit einem anderen Pin verbunden ist.
 
 
 ```C++
@@ -48,11 +48,11 @@ HRESULT IsPinConnected(IPin *pPin, BOOL *pResult)
 
 
 > [!Note]  
-> In diesem Beispiel wird die Funktion " [saferelease](/windows/desktop/medfound/saferelease) " verwendet, um Schnittstellen Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion verwendet,](/windows/desktop/medfound/saferelease) um Schnittstellenzeigener frei zu geben.
 
  
 
-Als nächstes benötigen wir eine Funktion, die testet, ob eine PIN einer angegebenen Pin-Richtung entspricht. Diese Funktion Ruft die [**IPin:: querydirection**](/windows/desktop/api/Strmif/nf-strmif-ipin-querydirection) -Methode auf, um die PIN-Richtung zu erhalten.
+Als Nächstes benötigen wir eine Funktion, die testet, ob eine Stecknadel einer angegebenen Stecknadelrichtung entspricht. Diese Funktion ruft die [**IPin::QueryDirection-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-querydirection) auf, um die Pinrichtung zu erhalten.
 
 
 ```C++
@@ -71,7 +71,7 @@ HRESULT IsPinDirection(IPin *pPin, PIN_DIRECTION dir, BOOL *pResult)
 
 
 
-Die Next-Funktion entspricht einer PIN nach Kriterien (PIN-Richtung und Verbindungsstatus).
+Die nächste Funktion entspricht einem Pin nach beiden Kriterien (Pinrichtung und Verbindungsstatus).
 
 
 ```C++
@@ -102,7 +102,7 @@ HRESULT MatchPin(IPin *pPin, PIN_DIRECTION direction, BOOL bShouldBeConnected, B
 
 
 
-Die folgende Funktion verwendet die [**ienumpins**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) -Schnittstelle zum Durchlaufen der Pins für den Filter. Der Aufrufer gibt die gewünschte Pin-Richtung an. Für jede Pin Ruft die Funktion `MatchPin` auf, um zu überprüfen, ob die PIN eine Entsprechung ist. Wenn die Richtung übereinstimmt und die PIN nicht verbunden ist, gibt die Funktion einen Zeiger auf die passende PIN im *pppin* -Parameter zurück.
+Schließlich verwendet die folgende Funktion die [**IEnumPins-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) um die Stecknadeln im Filter zu schleifen. Der Aufrufer gibt die gewünschte Pinrichtung an. Für jeden Pin ruft die Funktion auf, `MatchPin` um zu testen, ob der Pin eine Übereinstimmung ist. Wenn die Richtung stimmt und die Verbindung des Pins nicht hergestellt ist, gibt die Funktion einen Zeiger auf den entsprechenden Pin im *ppPin-Parameter* zurück.
 
 
 ```C++
@@ -149,19 +149,19 @@ done:
 
 
 
-Ein Beispiel für die Verwendung dieser Funktion finden Sie unter Verbinden von [zwei Filtern](connect-two-filters.md).
+Ein Beispiel für die Verwendung dieser Funktion finden Sie unter [Verbinden Zwei Filter.](connect-two-filters.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Auflisten von Pins](enumerating-pins.md)
+[Aufzählen von Pins](enumerating-pins.md)
 </dt> <dt>
 
 [Allgemeine Graph-Building Techniken](general-graph-building-techniques.md)
 </dt> <dt>
 
-[**ICaptureGraphBuilder2:: findpin**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin)
+[**ICaptureGraphBuilder2::FindPin**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin)
 </dt> </dl>
 
  

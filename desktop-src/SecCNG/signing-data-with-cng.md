@@ -1,41 +1,41 @@
 ---
-description: Durch das Signieren von Daten werden die Daten nicht geschützt. Es überprüft nur die Integrität der Daten.
+description: Beim Signieren von Daten werden die Daten nicht geschützt. Es wird nur die Integrität der Daten überprüft.
 ms.assetid: 8f0ace5a-c8f9-4a45-8500-041a9f22637d
 title: Signieren von Daten mit CNG
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 658dd1c9a833cfb15b708a7f85013e3d9cacac9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64a05f6cf655421422945d375c9d54ec2b74ae24efe1640c0dc9f6efe9a3e45c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907151"
 ---
 # <a name="signing-data-with-cng"></a>Signieren von Daten mit CNG
 
-Durch das Signieren von Daten werden die Daten nicht geschützt. Es überprüft nur die Integrität der Daten. Der Absender Hashes diese Daten und signiert den Hash mithilfe eines privaten Schlüssels (verschlüsselt). Der beabsichtigte Empfänger führt die Überprüfung durch, indem er einen Hash der empfangenen Daten erstellt, die Signatur entschlüsselt, um den ursprünglichen Hash abzurufen, und die beiden Hashes vergleicht.
+Beim Signieren von Daten werden die Daten nicht geschützt. Es wird nur die Integrität der Daten überprüft. Der Absender hasht diese Daten und signiert (verschlüsselt) den Hash mithilfe eines privaten Schlüssels. Der vorgesehene Empfänger führt die Überprüfung durch, indem er einen Hash der empfangenen Daten erstellt, die Signatur entschlüsselt, um den ursprünglichen Hash zu erhalten, und die beiden Hashes vergleicht.
 
-Beim Signieren von Daten erstellt der Absender einen [*Hashwert*](/windows/desktop/SecGloss/h-gly) und signiert den Hash mithilfe eines privaten Schlüssels (verschlüsselt). Diese Signatur wird dann an die Daten angefügt und in einer Nachricht an einen Empfänger gesendet. Der Hash Algorithmus, der zum Erstellen der Signatur verwendet wurde, muss vom Empfänger im Voraus bekannt sein oder in der Nachricht identifiziert werden. Wie dies geschieht, ist das Nachrichtenprotokoll.
+Wenn Daten signiert sind, erstellt der Absender einen [*Hashwert*](/windows/desktop/SecGloss/h-gly) und signiert (verschlüsselt) den Hash mithilfe eines privaten Schlüssels. Diese Signatur wird dann an die Daten angefügt und in einer Nachricht an einen Empfänger gesendet. Der Hashalgorithmus, der zum Erstellen der Signatur verwendet wurde, muss dem Empfänger im Voraus bekannt sein oder in der Nachricht identifiziert werden. Dies erfolgt über das Nachrichtenprotokoll.
 
-Zum Überprüfen der Signatur extrahiert der Empfänger die Daten und die Signatur aus der Nachricht. Der Empfänger erstellt dann einen weiteren Hashwert aus den Daten, entschlüsselt den signierten Hash mithilfe des öffentlichen Schlüssels des Absenders und vergleicht die beiden Hashwerte. Wenn die Werte identisch sind, wurde die Signatur überprüft, und es wird davon ausgegangen, dass die Daten unverändert sind.
+Um die Signatur zu überprüfen, extrahiert der Empfänger die Daten und die Signatur aus der Nachricht. Der Empfänger erstellt dann einen weiteren Hashwert aus den Daten, entschlüsselt den signierten Hash mithilfe des öffentlichen Schlüssels des Absenders und vergleicht die beiden Hashwerte. Wenn die Werte identisch sind, wurde die Signatur überprüft, und es wird davon ausgegangen, dass die Daten unverändert sind.
 
-**So erstellen Sie eine Signatur mithilfe von CNG**
+**So erstellen Sie eine Signatur mit CNG**
 
-1.  Erstellen Sie einen Hashwert für die Daten mithilfe der CNG-Hash Funktionen. Weitere Informationen zum Erstellen eines Hashs finden Sie unter [Erstellen eines Hash mit CNG](creating-a-hash-with-cng.md).
-2.  Erstellen Sie einen asymmetrischen Schlüssel zum Signieren des Hashs. Sie können entweder einen persistenten Schlüssel mit den [CNG-Schlüsselspeicher Funktionen](cng-key-storage-functions.md) oder einen kurzlebigen Schlüssel mit den [kryptografischen CNG-Funktionen](cng-cryptographic-primitive-functions.md)erstellen.
-3.  Verwenden Sie entweder die [**ncryptsignhash**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptsignhash) -Funktion oder die [**BCryptSignHash**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsignhash) -Funktion, um den Hashwert zu signieren (zu verschlüsseln). Diese Funktion signiert den Hashwert mithilfe des asymmetrischen Schlüssels.
-4.  Kombinieren Sie die Daten und die Signatur in einer Nachricht, die an den beabsichtigten Empfänger gesendet werden kann.
+1.  Erstellen Sie mithilfe der CNG-Hashfunktionen einen Hashwert für die Daten. Weitere Informationen zum Erstellen eines Hashs finden Sie unter Creating a Hash With CNG ( [Erstellen eines Hashs mit CNG](creating-a-hash-with-cng.md)).
+2.  Erstellen Sie einen asymmetrischen Schlüssel zum Signieren des Hashs. Sie können entweder einen persistenten Schlüssel mit dem [CNG-Schlüssel Storage Functions](cng-key-storage-functions.md) oder einen kurzlebigen Schlüssel mit den kryptografischen primitiven [CNG-Funktionen erstellen.](cng-cryptographic-primitive-functions.md)
+3.  Verwenden Sie entweder [**die NCryptSignHash-**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptsignhash) oder [**die BCryptSignHash-Funktion,**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsignhash) um den Hashwert zu signieren (zu verschlüsseln). Diese Funktion signiert den Hashwert mithilfe des asymmetrischen Schlüssels.
+4.  Kombinieren Sie die Daten und die Signatur in einer Nachricht, die an den vorgesehenen Empfänger gesendet werden kann.
 
-**So überprüfen Sie eine Signatur mithilfe von CNG**
+**So überprüfen Sie eine Signatur mit CNG**
 
 1.  Extrahieren Sie die Daten und die Signatur aus der Nachricht.
-2.  Erstellen Sie einen Hashwert für die Daten mithilfe der CNG-Hash Funktionen. Der verwendete Hash Algorithmus muss derselbe Algorithmus sein, der zum Signieren des Hashwerts verwendet wurde.
-3.  Abrufen des öffentlichen Teils des asymmetrischen Schlüssel Paars, das zum Signieren des Hashs verwendet wurde. Wie Sie diesen Schlüssel erhalten, hängt davon ab, wie der Schlüssel erstellt und persistent gespeichert wurde. Wenn der Schlüssel mit den [CNG-Schlüsselspeicher Funktionen](cng-key-storage-functions.md)erstellt oder geladen wurde, verwenden Sie die [**ncryptopenkey**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenkey) -Funktion, um den persistenten Schlüssel zu laden. Wenn es sich bei dem Schlüssel um einen kurzlebigen Schlüssel handelt, muss er in einem Schlüsselblob gespeichert worden sein. Sie müssen dieses Schlüsselblob entweder an die Funktion [**BCryptImportKeyPair**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkeypair) oder an die [**ncryptimportkey**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptimportkey) -Funktion übergeben.
-4.  Übergeben Sie den neuen Hashwert, die Signatur und das Schlüssel handle entweder an die [**ncryptverifysignature**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptverifysignature) -oder die [**BCryptVerifySignature**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptverifysignature) -Funktion. Diese Funktionen führen die Überprüfung durch, indem Sie den öffentlichen Schlüssel verwenden, um die Signatur zu entschlüsseln und den entschlüsselten Hash mit dem in Schritt 2 berechneten Hash zu vergleichen. Die Funktion " **BCryptVerifySignature** " gibt den **Status " \_ erfolgreich** " zurück, wenn die Signatur mit dem Hash oder der **\_ ungültigen \_ Signatur** übereinstimmt, wenn die Signatur nicht mit dem Hash übereinstimmt Die **ncryptverifysignature** -Funktion gibt den **Status " \_ erfolgreich** " zurück, wenn die Signatur mit dem Hash übereinstimmt oder eine ungültige **\_ \_ Signatur** ergibt, wenn die Signatur nicht mit dem Hash übereinstimmt
+2.  Erstellen Sie mithilfe der CNG-Hashfunktionen einen Hashwert für die Daten. Der verwendete Hashalgorithmus muss derselbe Algorithmus sein, der zum Signieren des Hashs verwendet wurde.
+3.  Abrufen des öffentlichen Teils des asymmetrischen Schlüsselpaars, das zum Signieren des Hashs verwendet wurde. Wie Sie diesen Schlüssel abrufen, hängt davon ab, wie der Schlüssel erstellt und beibehalten wurde. Wenn der Schlüssel mit dem [CNG-Schlüssel Storage Functions](cng-key-storage-functions.md)erstellt oder geladen wurde, verwenden Sie die [**NCryptOpenKey-Funktion,**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenkey) um den persistenten Schlüssel zu laden. Wenn der Schlüssel ein kurzlebiger Schlüssel ist, muss er in einem SchlüsselBLOB gespeichert worden sein. Sie müssen dieses Schlüssel-BLOB entweder an die [**BCryptImportKeyPair- oder**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkeypair) [**die NCryptImportKey-Funktion**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptimportkey) übergeben.
+4.  Übergeben Sie den neuen Hashwert, die Signatur und das Schlüsselhand handle entweder an [**die NCryptVerifySignature-**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptverifysignature) oder die [**BCryptVerifySignature-Funktion.**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptverifysignature) Diese Funktionen führen die Überprüfung durch, indem sie den öffentlichen Schlüssel verwenden, um die Signatur zu entschlüsseln und den entschlüsselten Hash mit dem in Schritt 2 berechneten Hash zu vergleichen. Die **BCryptVerifySignature-Funktion** gibt **STATUS \_ SUCCESS** zurück, wenn die Signatur dem Hash entspricht, oder **STATUS INVALID \_ \_ SIGNATURE,** wenn die Signatur nicht dem Hash entspricht. Die **NCryptVerifySignature-Funktion** gibt **STATUS \_ SUCCESS** zurück, wenn die Signatur dem Hash entspricht, oder **NTE \_ BAD \_ SIGNATURE,** wenn die Signatur nicht dem Hash entspricht.
 
-## <a name="signing-and-verifying-data-example"></a>Beispiel für Signierung und Verifizierung
+## <a name="signing-and-verifying-data-example"></a>Beispiel für das Signieren und Überprüfen von Daten
 
-Im folgenden Beispiel wird gezeigt, wie die kryptografischen primitiven APIs verwendet werden, um Daten mit einem permanenten Schlüssel zu signieren und die Signatur mit einem kurzlebigen Schlüssel zu überprüfen.
+Das folgende Beispiel zeigt, wie Sie die kryptografischen primitiven APIs verwenden, um Daten mit einem persistenten Schlüssel zu signieren und die Signatur mit einem kurzlebigen Schlüssel zu überprüfen.
 
 
 ```C++

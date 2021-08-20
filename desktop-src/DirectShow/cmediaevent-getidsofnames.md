@@ -1,7 +1,7 @@
 ---
-description: 'Ordnet eine einzelne Element Funktion und einen optionalen Satz von Parametern einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern zu, der bei nachfolgenden Aufrufen der cmediaevent:: aufrufen-Member-Funktion verwendet werden kann.'
+description: Karten eine einzelne Memberfunktion und einen optionalen Satz von Parametern zu einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern, die bei nachfolgenden Aufrufen der CMediaEvent::Invoke-Memberfunktion verwendet werden können.
 ms.assetid: 04e607e6-0b68-4371-aacf-01af308a56a3
-title: Cmediaevent. GetIDsOfNames-Methode (ctlutil. h)
+title: CMediaEvent.GetIDsOfNames-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 191fa85264e4e7e22aa67f409db20cebd68f4319
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a638861bc6a01a615355f0fad05cddc00f31d3e659fc60c0be0246eb108583f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401873"
 ---
-# <a name="cmediaeventgetidsofnames-method"></a>Cmediaevent. GetIDsOfNames-Methode
+# <a name="cmediaeventgetidsofnames-method"></a>CMediaEvent.GetIDsOfNames-Methode
 
-Ordnet eine einzelne Element Funktion und einen optionalen Satz von Parametern einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern zu, der bei nachfolgenden Aufrufen der [**cmediaevent:: Aufrufen**](cmediaevent-invoke.md) -Member-Funktion verwendet werden kann.
+Karten eine einzelne Memberfunktion und einen optionalen Satz von Parametern zu einem entsprechenden Satz von ganzzahligen Dispatchbezeichnern, die bei nachfolgenden Aufrufen der [**CMediaEvent::Invoke-Memberfunktion**](cmediaevent-invoke.md) verwendet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,18 +49,18 @@ HRESULT GetIDsOfNames(
 *riid* 
 </dt> <dd>
 
-Verweis Bezeichner. Für die zukünftige Verwendung reserviert. Muss **null** sein.
+Verweisbezeichner. Für die zukünftige Verwendung reserviert. Muss **NULL** sein.
 
 </dd> <dt>
 
-*rgsznames* 
+*rgszNames* 
 </dt> <dd>
 
-Adresse eines Zeigers auf ein zugeordnetes Array von Namen, die zugeordnet werden sollen.
+Adresse eines Zeigers auf ein übergebenes Array von Namen, die zugeordnet werden sollen.
 
 </dd> <dt>
 
-*CNAMES* 
+*cNames* 
 </dt> <dd>
 
 Die Anzahl der zuzuordnenden Namen.
@@ -70,14 +70,14 @@ Die Anzahl der zuzuordnenden Namen.
 *lcid* 
 </dt> <dd>
 
-Der Gebiets Schema Kontext, in dem die Namen interpretiert werden sollen.
+Gebietsschemakontext, in dem die Namen interpretiert werden sollen.
 
 </dd> <dt>
 
 *rgdispid* 
 </dt> <dd>
 
-Zeiger auf ein Array, das vom Aufrufer zugeordnet wird. jedes Element von enthält eine ID, die einem der Namen entspricht, die im *rgsznames* -Array übergeben werden. Das erste Element stellt den Elementnamen dar. die nachfolgenden Elemente stellen jeden der Parameter des Members dar.
+Zeiger auf ein vom Aufrufer zugeordnetes Array, von dem jedes Element eine ID enthält, die einem der im *rgszNames-Array übergebenen Namen entspricht.* Das erste Element stellt den Elementnamen dar. die nachfolgenden Elemente stellen jeden Parameter des Members dar.
 
 </dd> </dl>
 
@@ -89,9 +89,9 @@ Gibt einen der folgenden Werte zurück.
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                                          |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**DISP \_ E \_ unbekannte \_ CLSID**</dt> </dl> | Die CLSID wurde nicht erkannt.<br/>                                                                                                             |
-| <dl> <dt>**DISP \_ E \_ unknownname**</dt> </dl>    | Mindestens ein Name ist nicht bekannt. Die zurückgegebenen DispIds enthalten \_ für jeden Eintrag, der einem unbekannten Namen entspricht, die DISPID unbekannt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>          | Nicht genügend Arbeitsspeicher.<br/>                                                                                                                            |
+| <dl> <dt>**DISP \_ E \_ UNKNOWN \_ CLSID**</dt> </dl> | Die CLSID wurde nicht erkannt.<br/>                                                                                                             |
+| <dl> <dt>**DISP \_ E \_ UNKNOWNNAME**</dt> </dl>    | Mindestens ein Name war nicht bekannt. Die zurückgegebenen DISPIDs enthalten DISPID UNKNOWN für jeden Eintrag, der \_ einem unbekannten Namen entspricht.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Nicht genügend Arbeitsspeicher.<br/>                                                                                                                            |
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg.<br/>                                                                                                                                  |
 
 
@@ -104,16 +104,16 @@ Gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediaevent-Klasse**](cmediaevent.md)
+[**CMediaEvent-Klasse**](cmediaevent.md)
 </dt> </dl>
 
  

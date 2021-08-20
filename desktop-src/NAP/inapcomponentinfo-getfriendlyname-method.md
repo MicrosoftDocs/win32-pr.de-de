@@ -1,11 +1,11 @@
 ---
-title: Inapcomponentinfo getfriendlyname-Methode (napcommon. h)
-description: Wird vom NAP-System verwendet, um den anzeigen Amen eines Integritäts Clients zu erhalten.
+title: INapComponentInfo GetFriendlyName-Methode (NapCommon.h)
+description: Wird vom NAP-System verwendet, um den Anzeigenamen eines Integritätsclients abzurufen.
 ms.assetid: 28614f06-a250-4f92-abf2-422675efd8a0
 keywords:
-- Getfriendlyname-Methode NAP
-- Getfriendlyname-Methode NAP, inapcomponentinfo-Schnittstelle
-- Inapcomponentinfo Interface NAP, getfriendlyname-Methode
+- GetFriendlyName-Methode NAP
+- GetFriendlyName-Methode NAP, INapComponentInfo-Schnittstelle
+- INapComponentInfo-Schnittstelle NAP , GetFriendlyName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3848f8fb8365f91bceb5a44c498578f04a1776b3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3236a9d4959c441816aa476993d95286b4ac1f710ccdb63325aba225bfabb106
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117799715"
 ---
-# <a name="inapcomponentinfogetfriendlyname-method"></a>Inapcomponentinfo:: getfriendlyname-Methode
+# <a name="inapcomponentinfogetfriendlyname-method"></a>INapComponentInfo::GetFriendlyName-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapcomponentinfo:: getfriendlyname** -Rückruf Methode wird vom NAP-System verwendet, um den anzeigen Amen eines Integritäts Clients zu erhalten.
+Die **Rückrufmethode INapComponentInfo::GetFriendlyName** wird vom NAP-System verwendet, um den Anzeigenamen eines Integritätsclients abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetFriendlyName(
 
 <dl> <dt>
 
-*FriendlyName* \[ vorgenommen\]
+*friendlyName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**MessageId**](nap-datatypes.md) , die die Ressourcen-ID des anzeigen Amens enthält.
+Ein Zeiger auf eine [**MessageId,**](nap-datatypes.md) die die Ressourcen-ID des Anzeigenamens enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen dieser Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück.
+Gibt basierend auf dem Ergebnis dieses Vorgangs einen dieser Fehlercodes zurück.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,21 +76,21 @@ Gibt einen dieser Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 
 </dt> <dt>
 
-[**Inapcomponentinfo**](inapcomponentinfo.md)
+[**INapComponentInfo**](inapcomponentinfo.md)
 </dt> </dl>
 
  

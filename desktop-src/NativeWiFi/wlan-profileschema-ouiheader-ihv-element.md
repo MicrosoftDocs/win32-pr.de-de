@@ -1,7 +1,7 @@
 ---
-description: Identifiziert den IHV.
+description: Identifiziert die IHV.
 ms.assetid: a99c231c-afd7-44e6-81af-3d49ffef8714
-title: Ouiheader (IHV)-Element
+title: OUIHeader-Element (IHV)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: a31feb123e31489c751b7844e06d5c344278778e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5293a6e69c1384922572764674cbadd9980702c49f8945518ff9b0c56beee2d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797920"
 ---
-# <a name="ouiheader-ihv-element"></a>Ouiheader (IHV)-Element
+# <a name="ouiheader-ihv-element"></a>OUIHeader-Element (IHV)
 
-Das ouiheader (IHV)-Element identifiziert den IHV.
+Das OUIHeader-Element (IHV) identifiziert die IHV.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="OUIHeader">
@@ -62,16 +62,16 @@ Das ouiheader (IHV)-Element identifiziert den IHV.
 </xs:element>
 ```
 
-Das-Element wird durch das [**IHV**](wlan-profileschema-ihv-wlanprofile-element.md) -Element definiert.
+Das -Element wird durch das [**IHV-Element**](wlan-profileschema-ihv-wlanprofile-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                   | type | BESCHREIBUNG                                                                                |
+| Element                                                   | type | Beschreibung                                                                                |
 |-----------------------------------------------------------|------|--------------------------------------------------------------------------------------------|
-| [**Ische**](wlan-profileschema-oui-ouiheader-element.md)   |      | Enthält eine hexbinär Datei mit 3 Bytes, die den IHV identifiziert.<br/>                            |
-| [**Sorte**](wlan-profileschema-type-ouiheader-element.md) |      | Enthält eine hexbinär Datei mit 1 Byte, die zur Unterscheidung von NICs durch denselben IHV verwendet wird.<br/> |
+| [**Oui**](wlan-profileschema-oui-ouiheader-element.md)   |      | Enthält eine hexadezimalbinäre 3-Byte-Datei, die die IHV identifiziert.<br/>                            |
+| [**Typ**](wlan-profileschema-type-ouiheader-element.md) |      | Enthält eine hexadezimalbinäre 1-Byte-Datei, die verwendet wird, um NICs durch dieselbe IHV zu unterscheiden.<br/> |
 
 
 
@@ -81,25 +81,25 @@ Das-Element wird durch das [**IHV**](wlan-profileschema-ihv-wlanprofile-element.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**IHV**](wlan-profileschema-ihv-wlanprofile-element.md)
+[**Ihv**](wlan-profileschema-ihv-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**IHV (wlanprofile)**](wlan-profileschema-ihv-wlanprofile-element.md)
+[**IHV (WLANProfile)**](wlan-profileschema-ihv-wlanprofile-element.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: 'Texture1DArray:: MIPS. Operator-Funktion'
-description: 'Gibt eine schreibgeschützte Ressourcen Variable zurück. | Texture1DArray:: MIPS. Operator-Funktion'
+title: Texture1DArray::mips. Operatorfunktion
+description: Gibt eine schreibgeschützte Ressourcenvariable zurück. | Texture1DArray::mips. Operatorfunktion
 ms.assetid: b8f2ef78-4b50-4051-a00f-5b81cd77d1e0
 keywords:
-- MIPS. Operator Function HLSL
+- Mips. Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cbe2d1116839cede8dda69f1b0b8cf9a049595e9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f1c4397f60c03968d7c8dba034865aa283a50e8d70b9836aaee86cb910d612ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117905321"
 ---
-# <a name="texture1darraymipsoperator----function"></a>Texture1DArray:: MIPS. Operator-Funktion
+# <a name="texture1darraymipsoperator----function"></a>Texture1DArray::mips. Operatorfunktion
 
-Gibt eine schreibgeschützte Ressourcen Variable zurück.
+Gibt eine schreibgeschützte Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,21 +37,21 @@ R mips.Operator[][](
 
 <dl> <dt>
 
-*mipslice* \[ in\]
+*mipSlice* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der MIP-Slice-Index.
+Der MIP-Sliceindex.
 
 </dd> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Array Slice an.
+Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Arrayslice an.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Ko
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="usage-example"></a>Verwendungsbeispiel
 
@@ -76,11 +76,11 @@ float4 f = tex.mips[mip][pos_x_and_array];
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -95,7 +95,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture1DArray](sm5-object-texture1darray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

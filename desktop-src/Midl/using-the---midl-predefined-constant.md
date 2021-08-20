@@ -1,28 +1,28 @@
 ---
 title: Verwenden der __midl vordefinierten Konstante
-description: Wenn der Mittell-Compiler die Eingabe-IDL-und ACF-Dateien verarbeitet, \_ \_ wird die mittlere-Version standardmäßig definiert und zur bedingten Kompilierung verwendet, um die Konsistenz im gesamten Build zu erzielen.
+description: Wenn der MIDL-Compiler die Eingabe-IDL- und ACF-Dateien verarbeitet, wird midl standardmäßig definiert und für die bedingte Kompilierung verwendet, um im gesamten Build Konsistenz \_ \_ zu erzielen.
 ms.assetid: ba9557f8-d398-4c87-993d-f4e545894cdd
 keywords:
-- Mittlerer l-compilermittell, Verwendung der _midl vordefinierten Konstante
-- _midl der vordefinierten Konstanten-Mittel l
+- MIDL-Compiler-MIDL mithilfe _midl vordefinierten Konstante
+- _midl VORDEFINIERTE MIDL-Konstante
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae49675b38dcc3cab2d3d41e4f48cd0637d78523
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 60fbc111ad07839d891f7bdffaf7ecaae83fbf277a0fc2c93fc483f526f9dda5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118382821"
 ---
-# <a name="using-the-__midl-predefined-constant"></a>Verwenden der \_ \_ vordefinierten-Konstante (Mitte)
+# <a name="using-the-__midl-predefined-constant"></a>Verwenden der \_ \_ vordefinierten midl-Konstante
 
-Wenn der Mittell-Compiler die Eingabe-IDL-und ACF-Dateien verarbeitet, \_ \_ wird die mittlere-Version standardmäßig definiert und zur bedingten Kompilierung verwendet, um die Konsistenz im gesamten Build zu erzielen. Dadurch wird die Verwendung von define-Anweisungen in den Header Dateien, wie z. b. " **Mittel l \_ Pass**", ausgeblendet und durch ein konsistentes Flag ersetzt. Der Wert der \_ \_ mittleren l-Konstante gibt die Compilerversion *Major. Minor* gemäß der Formel *Major* \* 100 + *Minor* an, z. b. mittlerer l-ver. bei 6.0. x ist die \_ \_ Mittel-l als 600 definiert.
+Wenn der MIDL-Compiler die Eingabe-IDL- und ACF-Dateien verarbeitet, wird midl standardmäßig definiert und für die bedingte Kompilierung verwendet, um im gesamten Build Konsistenz \_ \_ zu erzielen. Dadurch wird die Verwendung von define-Anweisungen in den Headerdateien, z. B. **MIDL \_ PASS,** in Phasen unterteilt und durch ein konsistentes Flag ersetzt. Der Wert der midl-Konstante gibt die Compilerversion major.minor gemäß der Formel \_ \_   \* Hauptversion 100 + *Nebenversion* an, z. B. MIDL ver. In 6.0.x ist \_ \_ midl als 600 definiert.
 
-Wenn Sie sich entscheiden, können Sie diese Standardeinstellung überschreiben, indem Sie Folgendes in der Befehlszeile angeben: **/U- \_ \_ Mittell**. Weitere Informationen finden Sie unter [**/U**](-u.md).
+Wenn Sie sich dafür entscheiden, können Sie diese Standardeinstellung überschreiben, indem Sie in der Befehlszeile Folgendes angeben: **/U \_ \_ midl**. Weitere Informationen finden Sie unter [**/U**](-u.md).
 
- 
+ 
 
- 
+ 
 
 
 

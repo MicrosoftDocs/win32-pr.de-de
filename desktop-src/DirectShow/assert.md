@@ -1,5 +1,5 @@
 ---
-description: Wertet einen Ausdruck aus und zeigt eine Diagnosemeldung an, wenn der Ausdruck FALSE ist. Wird in Einzelhandelsbuilds ignoriert.
+description: Wertet einen Ausdruck aus und zeigt eine Diagnosemeldung an, wenn der Ausdruck FALSE ist. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: 8c3815bb-3164-4066-a947-974e791af5cd
 title: ASSERT-Makro (Wxdebug.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "117824429"
 ---
 # <a name="assert-macro"></a>ASSERT-Makro
 
-Wertet einen Ausdruck aus und zeigt eine Diagnosemeldung an, wenn der Ausdruck **FALSE** ist. Wird in Einzelhandelsbuilds ignoriert.
+Wertet einen Ausdruck aus und zeigt eine Diagnosemeldung an, wenn der Ausdruck **FALSE ist.** Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,7 +73,7 @@ ASSERT(rtStartTime <= rtEndTime);
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

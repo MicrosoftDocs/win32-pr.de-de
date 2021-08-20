@@ -1,5 +1,5 @@
 ---
-description: Der Teil von Direct3D, der die Geometrie durch die Geometriepipeline der festen Funktion pusht, ist die Transformations-Engine.
+description: Der Teil von Direct3D, der Geometrie durch die Geometriepipeline der festen Funktion pusht, ist die Transformations-Engine.
 ms.assetid: ed52e32f-8fae-4e6f-b908-26e05ce940cc
 title: Transformationen (Direct3D 9)
 ms.topic: article
@@ -13,49 +13,49 @@ ms.locfileid: "118519702"
 ---
 # <a name="transforms-direct3d-9"></a>Transformationen (Direct3D 9)
 
-Der Teil von Direct3D, der die Geometrie durch die Geometriepipeline der festen Funktion pusht, ist die Transformations-Engine. Es sucht das Modell und den Viewer in der Welt, projektet Scheiteltices für die Anzeige auf dem Bildschirm und clipt Scheiteltices zum Viewport. Die Transformations-Engine führt auch Beleuchtungsberechnungen durch, um diffuse und specular-Komponenten an jedem Scheitelpunkt zu bestimmen.
+Der Teil von Direct3D, der Geometrie durch die Geometriepipeline der festen Funktion pusht, ist die Transformations-Engine. Es sucht das Modell und den Viewer auf der Ganzen Welt, projiziert Scheitelpunkte für die Anzeige auf dem Bildschirm und klammern Scheitelpunkte an den Viewport. Die Transformations-Engine führt auch Beleuchtungsberechnungen durch, um diffuse und speculare Komponenten an jedem Scheitelpunkt zu bestimmen.
 
-Die Geometriepipeline nimmt Scheitelungen als Eingabe an. Die Transformations-Engine wendet die Welt-, Ansichts- und Projektionstransformationen auf die Scheitelungen an, schneide das Ergebnis aus und übergibt alles an den Rasterizer.
+Die Geometriepipeline verwendet Scheitelpunkte als Eingabe. Die Transformations-Engine wendet die Welt-, Ansichts- und Projektionstransformationen auf die Scheitelpunkte an, klammert das Ergebnis ab und übergibt alles an den Rasterizer.
 
-Am Anfang der Pipeline werden die Scheitelungen eines Modells relativ zu einem lokalen Koordinatensystem deklariert. Dies ist ein lokaler Ursprung und eine Ausrichtung. Diese Ausrichtung von Koordinaten wird häufig als Modellraum bezeichnet, und einzelne Koordinaten werden als Modellkoordinaten bezeichnet.
+Am Anfang der Pipeline werden die Scheitelpunkte eines Modells relativ zu einem lokalen Koordinatensystem deklariert. Dies ist ein lokaler Ursprung und eine Ausrichtung. Diese Ausrichtung von Koordinaten wird häufig als Modellraum bezeichnet, und einzelne Koordinaten werden als Modellkoordinaten bezeichnet.
 
-In der ersten Phase der Geometriepipeline werden die Scheitelungen eines Modells aus dem lokalen Koordinatensystem in ein Koordinatensystem transformiert, das von allen Objekten in einer Szene verwendet wird. Der Prozess der Neuorganisation der Scheitelungen wird als Welttransformation bezeichnet. Diese neue Ausrichtung wird häufig als Weltraum bezeichnet, und jeder Scheitelpunkt im Weltraum wird mithilfe von Weltkoordinaten deklariert.
+Die erste Phase der Geometriepipeline transformiert die Scheitelpunkte eines Modells von ihrem lokalen Koordinatensystem in ein Koordinatensystem, das von allen Objekten in einer Szene verwendet wird. Der Prozess der neu ausgerichteten Scheitelpunkte wird als Welttransformation bezeichnet. Diese neue Ausrichtung wird häufig als Weltraum bezeichnet, und jeder Scheitelpunkt im Weltraum wird mithilfe von Weltkoordinaten deklariert.
 
-In der nächsten Phase sind die Scheitelungen, die Ihre 3D-Welt beschreiben, in Bezug auf eine Kamera ausgerichtet. Das heißt, Ihre Anwendung wählt einen Standpunkt für die Szene aus, und Raumkoordinaten werden verschoben und um die Kameraansicht gedreht, was den Raum in den Kameraraum umdreht. Dies ist die Ansichtstransformation.
+In der nächsten Phase sind die Scheitelpunkte, die Ihre 3D-Welt beschreiben, in Bezug auf eine Kamera ausgerichtet. Das heißt, Ihre Anwendung wählt einen Blickpunkt für die Szene aus, und Weltraumkoordinaten werden verschoben und um die Kameraansicht gedreht, wodurch der Weltraum in den Kameraraum umgewandelt wird. Dies ist die Ansichtstransformation.
 
-Die nächste Phase ist die Projektionstransformation. In diesem Teil der Pipeline werden Objekte in der Regel in Relation zu ihrer Entfernung vom Betrachter skaliert, um einer Szene die Schärfe der Tiefe zu geben. Close-Objekte werden so gemacht, dass sie größer als entfernte Objekte sind, und so weiter. Der Einfachheit halber bezieht sich diese Dokumentation auf den Raum, in dem Scheitelräume nach der Projektionstransformation als Projektionsraum vorhanden sind. Einige Grafikbücher verweisen möglicherweise auf Projektionsraum als postperspektiven homogenen Raum. Nicht alle Projektionstransformationen skalieren die Größe von Objekten in einer Szene. Eine Projektion wie diese wird manchmal als affine oder orthogonale Projektion bezeichnet.
+Die nächste Phase ist die Projektionstransformation. In diesem Teil der Pipeline werden Objekte in der Regel in Bezug auf ihre Entfernung vom Betrachter skaliert, um einer Szene die Tiefe zu verleihen. Close-Objekte werden so gestaltet, dass sie größer als entfernte Objekte sind usw. Der Einfachheit halber bezieht sich diese Dokumentation auf den Raum, in dem Scheitelpunkte nach der Projektionstransformation als Projektionsbereich vorhanden sind. Einige Grafikbücher bezeichnen projektionsraum möglicherweise als postperspektiven homogenen Raum. Nicht alle Projektionstransformationen skalieren die Größe von Objekten in einer Szene. Eine Projektion wie diese wird manchmal als affine oder orthogonale Projektion bezeichnet.
 
-Im letzten Teil der Pipeline werden alle Scheitelungen entfernt, die auf dem Bildschirm nicht sichtbar sind, sodass sich der Rasterizer nicht die Zeit nimmt, die Farben und Schattierung für etwas zu berechnen, das nie angezeigt wird. Dieser Prozess wird als Clipping bezeichnet. Nach dem Clipping werden die verbleibenden Scheitelungen gemäß den Viewportparametern skaliert und in Bildschirmkoordinaten konvertiert. Die resultierenden Scheitelungen, die beim Rastern der Szene auf dem Bildschirm angezeigt werden, sind im Bildschirmbereich vorhanden.
+Im letzten Teil der Pipeline werden alle Scheitelpunkte, die auf dem Bildschirm nicht sichtbar sind, entfernt, sodass der Rasterizer nicht die Zeit nimmt, die Farben und schattierung für etwas zu berechnen, das nie angezeigt wird. Dieser Prozess wird als Clipping bezeichnet. Nach dem Clipping werden die verbleibenden Scheitelpunkte entsprechend den Viewportparametern skaliert und in Bildschirmkoordinaten konvertiert. Die resultierenden Scheitelpunkte, die beim Rastern der Szene auf dem Bildschirm angezeigt werden, sind im Bildschirmbereich vorhanden.
 
-Transformationen werden verwendet, um die Objektgeometrie von einem Koordinatenraum in einen anderen zu konvertieren. Direct3D verwendet Matrizen, um 3D-Transformationen durchzuführen. In diesem Abschnitt wird erläutert, wie Matrizen 3D-Transformationen erstellen. Außerdem werden einige häufige Verwendungsmöglichkeiten für Transformationen beschrieben. Außerdem wird erläutert, wie Sie Matrizen kombinieren können, um eine einzelne Matrix zu erzeugen, die mehrere Transformationen umfasst.
+Transformationen werden verwendet, um Objektgeometrie von einem Koordinatenraum in einen anderen zu konvertieren. Direct3D verwendet Matrizen zum Ausführen von 3D-Transformationen. In diesem Abschnitt wird erläutert, wie Matrizen 3D-Transformationen erstellen, einige häufige Verwendungsmöglichkeiten für Transformationen beschrieben und wie Sie Matrizen kombinieren können, um eine einzelne Matrix zu erstellen, die mehrere Transformationen umfasst.
 
--   [World Transform (Direct3D 9):](world-transform.md) Konvertieren aus dem Modellraum in den Weltraum
--   [Ansichtstransformation (Direct3D 9):](view-transform.md) Konvertieren aus dem Raum in den Ansichtsraum
--   [Projektionstransformation (Direct3D 9):](projection-transform.md) Konvertieren vom Ansichtsraum in den Projektionsraum
+-   [World Transform (Direct3D 9):](world-transform.md) Konvertieren vom Modellraum in den Weltraum
+-   [Ansichtstransformation (Direct3D 9):](view-transform.md) Konvertieren vom Weltraum in den Ansichtsbereich
+-   [Projektionstransformation (Direct3D 9):](projection-transform.md) Konvertieren vom Ansichtsbereich in den Projektionsbereich
 
 ## <a name="matrix-transforms"></a>Matrixtransformationen
 
-In Anwendungen, die mit 3D-Grafiken arbeiten, können Sie geometrische Transformationen verwenden, um Folgendes zu tun:
+In Anwendungen, die mit 3D-Grafiken arbeiten, können Sie geometrische Transformationen für folgende Zwecke verwenden:
 
--   Geben Sie die Position eines Objekts relativ zu einem anderen Objekt an.
--   Drehen und Größe von Objekten.
--   Ändern von Ansichtspositionen, Wegbeschreibungen und Perspektiven.
+-   Ausdrücken der Position eines Objekts relativ zu einem anderen Objekt.
+-   Drehen und Dimensionieren von Objekten.
+-   Ändern von Anzeigepositionen, Wegbeschreibungen und Perspektiven.
 
-Sie können einen beliebigen Punkt (x,y,z) in einen anderen Punkt (x', y', z') transformieren, indem Sie eine 4x4-Matrix verwenden, wie in der folgenden Gleichung gezeigt.
+Sie können jeden Punkt (x,y,z) in einen anderen Punkt (x', y', z') transformieren, indem Sie eine 4x4-Matrix verwenden, wie in der folgenden Gleichung dargestellt.
 
-![Gleichung der Transformation eines beliebigen Punkts in einen anderen Punkt](images/matmult.png)
+![Gleichung zum Transformieren eines beliebigen Punkts in einen anderen Punkt](images/matmult.png)
 
 Führen Sie die folgenden Gleichungen für (x, y, z) und die Matrix aus, um den Punkt (x', y', z') zu erzeugen.
 
 ![Gleichungen für den neuen Punkt](images/matexpnd.png)
 
-Die gängigsten Transformationen sind Übersetzung, Drehung und Skalierung. Sie können die Matrizen, die diese Effekte erzeugen, zu einer einzelnen Matrix kombinieren, um mehrere Transformationen gleichzeitig zu berechnen. Beispielsweise können Sie eine einzelne Matrix erstellen, um eine Reihe von Punkten zu übersetzen und zu drehen.
+Die häufigsten Transformationen sind Übersetzung, Drehung und Skalierung. Sie können die Matrizen, die diese Effekte erzeugen, in einer einzelnen Matrix kombinieren, um mehrere Transformationen gleichzeitig zu berechnen. Beispielsweise können Sie eine einzelne Matrix erstellen, um eine Reihe von Punkten zu übersetzen und zu drehen.
 
-Matrizen werden in Zeilenspaltenreihen reihenfolge geschrieben. Eine Matrix, die Scheitelzeichen gleichmäßig entlang jeder Achse skaliert, die als einheitliche Skalierung bezeichnet wird, wird durch die folgende Matrix mit mathematischer Notation dargestellt.
+Matrizen werden in Zeilenspaltenreihenfolge geschrieben. Eine Matrix, die Scheitelpunkte gleichmäßig entlang jeder Achse skaliert, die als einheitliche Skalierung bezeichnet wird, wird durch die folgende Matrix mit mathematischer Notation dargestellt.
 
 ![Gleichung einer Matrix für einheitliche Skalierung](images/matrix.png)
 
-In C++ deklariert Direct3D Matrizen mithilfe der [**D3DMATRIX-Struktur als zweidimensionales**](d3dmatrix.md) Array. Das folgende Beispiel zeigt, wie eine **D3DMATRIX-Struktur** initialisiert wird, um als einheitliche Skalierungsmatrix zu fungieren.
+In C++ deklariert Direct3D Matrizen mithilfe der [**D3DMATRIX-Struktur**](d3dmatrix.md) als zweidimensionales Array. Das folgende Beispiel zeigt, wie eine **D3DMATRIX-Struktur** initialisiert wird, um als einheitliche Skalierungsmatrix zu fungieren.
 
 
 ```
@@ -77,7 +77,7 @@ Die folgende Gleichung übersetzt den Punkt (x, y, z) in einen neuen Punkt (x', 
 
 ![Gleichung einer Übersetzungsmatrix für einen neuen Punkt](images/transl8.png)
 
-Sie können manuell eine Übersetzungsmatrix in C++ erstellen. Das folgende Beispiel zeigt den Quellcode für eine Funktion, die eine Matrix zum Übersetzen von Scheitelungen erstellt.
+Sie können manuell eine Übersetzungsmatrix in C++ erstellen. Das folgende Beispiel zeigt den Quellcode für eine Funktion, die eine Matrix zum Übersetzen von Scheitelpunkten erstellt.
 
 
 ```
@@ -94,33 +94,33 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 
 
 
-Der Einfachheit halber stellt die D3DX-Hilfsprogrammbibliothek die [**D3DXMatrixTranslation-Funktion**](d3dxmatrixtranslation.md) zur Verfügung.
+Der Einfachheit halber stellt die D3DX-Hilfsprogrammbibliothek die [**D3DXMatrixTranslation-Funktion**](d3dxmatrixtranslation.md) bereit.
 
 ## <a name="scale"></a>Skalieren
 
-Die folgende Gleichung skaliert den Punkt (x, y, z) um beliebige Werte in der x-, y- und z-Richtung auf einen neuen Punkt (x', y', z').
+Die folgende Gleichung skaliert den Punkt (x, y, z) um beliebige Werte in den x-, y- und z-Richtungen auf einen neuen Punkt (x', y', z').
 
 ![Gleichung einer Skalierungsmatrix für einen neuen Punkt](images/matscale.png)
 
 ## <a name="rotate"></a>Rotate
 
-Die hier beschriebenen Transformationen gelten für linkshändige Koordinatensysteme und können sich daher von Transformationsmatrizen unterscheiden, die Sie an anderer Stelle gesehen haben.
+Die hier beschriebenen Transformationen gelten für linkshändige Koordinatensysteme und unterscheiden sich daher möglicherweise von Transformationsmatrizen, die Sie an anderer Stelle gesehen haben.
 
-Die folgende Gleichung dreht den Punkt (x, y, z) um die X-Achse und erzeugt einen neuen Punkt (x', y', z').
+Die folgende Gleichung dreht den Punkt (x, y, z) um die x-Achse und erzeugt einen neuen Punkt (x', y', z').
 
-![Gleichung einer X-Drehungsmatrix für einen neuen Punkt](images/matxrot.png)
+![Gleichung einer x-Drehungsmatrix für einen neuen Punkt](images/matxrot.png)
 
 Mit der folgenden Gleichung wird der Punkt um die y-Achse gedreht.
 
-![Gleichung einer y-Rotationsmatrix für einen neuen Punkt](images/matyrot.png)
+![Gleichung einer y-Drehungsmatrix für einen neuen Punkt](images/matyrot.png)
 
-Die folgende Gleichung dreht den Punkt um die Z-Achse.
+Mit der folgenden Gleichung wird der Punkt um die Z-Achse gedreht.
 
 ![Gleichung einer Z-Drehungsmatrix für einen neuen Punkt](images/matzrot.png)
 
-In diesen Beispielmatrizen steht der griechisch-Buchstabe theta für den Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entlang der Drehachse zum Ursprung hin betrachtet werden.
+In diesen Beispielmatrizen steht der griechisch-Buchstabe theta für den Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn die Drehachse zum Ursprung hin betrachtet wird.
 
-Verwenden Sie in einer C++-Anwendung die Funktionen [**D3DXMatrixRotationX,**](d3dxmatrixrotationx.md) [**D3DXMatrixRotationY**](d3dxmatrixrotationy.md)und [**D3DXMatrixRotationZ,**](d3dxmatrixrotationz.md) die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden, um Drehungsmatrizen zu erstellen. Im Folgenden finden Sie den Code für die **D3DXMatrixRotationX-Funktion.**
+Verwenden Sie in einer C++-Anwendung die Funktionen [**D3DXMatrixRotationX,**](d3dxmatrixrotationx.md) [**D3DXMatrixRotationY**](d3dxmatrixrotationy.md)und [**D3DXMatrixRotationZ,**](d3dxmatrixrotationz.md) die von der Hilfsprogrammbibliothek D3DX bereitgestellt werden, um Rotationsmatrizen zu erstellen. Im Folgenden ist der Code für die **D3DXMatrixRotationX-Funktion** enthalten.
 
 
 ```
@@ -146,25 +146,25 @@ D3DXMATRIX* WINAPI D3DXMatrixRotationX
 
 
 
-## <a name="concatenating-matrices"></a>Verkettung von Matrizen
+## <a name="concatenating-matrices"></a>Verketten von Matrizen
 
-Ein Vorteil der Verwendung von Matrizen ist, dass Sie die Auswirkungen von zwei oder mehr Matrizen kombinieren können, indem Sie sie multiplizieren. Dies bedeutet, dass Sie keine zwei Matrizen anwenden müssen, um ein Modell zu drehen und es dann an einen Speicherort zu übersetzen. Stattdessen multiplizieren Sie die Drehungs- und Übersetzungsmatrizen, um eine zusammengesetzte Matrix zu erstellen, die alle ihre Auswirkungen enthält. Dieser Prozess, der als Matrixkonkettung bezeichnet wird, kann mit der folgenden Gleichung geschrieben werden.
+Ein Vorteil der Verwendung von Matrizen besteht darin, dass Sie die Auswirkungen von zwei oder mehr Matrizen kombinieren können, indem Sie sie multiplizieren. Dies bedeutet, dass Sie keine zwei Matrizen anwenden müssen, um ein Modell zu drehen und es dann an einen Bestimmten Ort zu übersetzen. Stattdessen multiplizieren Sie die Drehungs- und Übersetzungsmatrizen, um eine zusammengesetzte Matrix zu erzeugen, die alle ihre Effekte enthält. Dieser Prozess, der als Matrixverkettung bezeichnet wird, kann mit der folgenden Gleichung geschrieben werden.
 
-![Gleichung der Matrixkonkettung](images/matrxcat.png)
+![Gleichung der Matrixverkettung](images/matrxcat.png)
 
-In dieser Gleichung ist C die zusammengesetzte Matrix, die erstellt wird, und M₁ bis Mn sind die einzelnen Matrizen. In den meisten Fällen werden nur zwei oder drei Matrizen verkettet, es gibt jedoch keine Beschränkung.
+In dieser Gleichung ist C die zusammengesetzte Matrix, die erstellt wird, und M₁ über Mn sind die einzelnen Matrizen. In den meisten Fällen werden nur zwei oder drei Matrizen verkettet, es gibt jedoch keinen Grenzwert.
 
-Verwenden Sie [**die D3DXMatrixMultiply-Funktion,**](d3dxmatrixmultiply.md) um die Matrixmultiplikation durchzuführen.
+Verwenden Sie die [**D3DXMatrixMultiply-Funktion,**](d3dxmatrixmultiply.md) um die Matrixmultiplikation durchzuführen.
 
-Die Reihenfolge, in der die Matrixmultiplikation ausgeführt wird, ist entscheidend. Die obige Formel spiegelt die Von-rechts-Regel der Matrixverkettung wider. Das heißt, die sichtbaren Auswirkungen der Matrizen, die Sie zum Erstellen einer zusammengesetzten Matrix verwenden, treten in der Reihenfolge von links nach rechts auf. Eine typische Weltmatrix wird im folgenden Beispiel gezeigt. Imagine, dass Sie die Weltmatrix für eine stereotypische Kastensauce erstellen. Wahrscheinlich möchten Sie die Y-Achse des Modellraums um seinen Mittelpunkt drehen und an einen anderen Ort in Ihrer Szene übersetzen. Um diesen Effekt zu erreichen, erstellen Sie zunächst eine Rotationsmatrix und multiplizieren sie dann mit einer Übersetzungsmatrix, wie in der folgenden Gleichung gezeigt.
+Die Reihenfolge, in der die Matrixmultiplikation ausgeführt wird, ist entscheidend. Die vorangehende Formel spiegelt die Regel der Matrixverkettung von links nach rechts wider. Das heißt, die sichtbaren Auswirkungen der Matrizen, die Sie zum Erstellen einer zusammengesetzten Matrix verwenden, treten in der Reihenfolge von links nach rechts auf. Eine typische Weltmatrix wird im folgenden Beispiel gezeigt. Imagine, dass Sie die Weltmatrix für eine stereotypische Untertasse erstellen. Wahrscheinlich möchten Sie die Untertasse um den Mittelpunkt drehen – die y-Achse des Modellraums – und sie an einen anderen Ort in Ihrer Szene übersetzen. Um diesen Effekt zu erzielen, erstellen Sie zunächst eine Drehungsmatrix und multiplizieren sie dann mit einer Übersetzungsmatrix, wie in der folgenden Gleichung dargestellt.
 
-![Drehungsgleichung basierend auf einer Rotationsmatrix und einer Übersetzungsmatrix](images/wrldexpl.png)
+![Spingleichung basierend auf einer Drehmatrix und einer Übersetzungsmatrix](images/wrldexpl.png)
 
-In dieser Formel ist R<sub>y</sub> eine Matrix für die Drehung um die y-Achse, und T<sub>w</sub> ist eine Übersetzung zu einer Position in Weltkoordinaten.
+In dieser Formel ist R<sub>y</sub> eine Matrix für die Drehung um die y-Achse, und T<sub>w</sub> ist eine Übersetzung in eine Position in Weltkoordinaten.
 
-Die Reihenfolge, in der Sie die Matrizen multiplizieren, ist wichtig, da die Matrixmultiplikation im Gegensatz zum Multiplizieren von zwei Skalarwerten nicht kommutativ ist. Das Multiplizieren der Matrizen in der entgegengesetzten Reihenfolge hat den visuellen Effekt, dass die 300000-n-Menschen in ihre Weltraumposition übersetzt und dann um den Ursprung der Welt gedreht werden.
+Die Reihenfolge, in der Sie die Matrizen multiplizieren, ist wichtig, da die Matrixmultiplizierung im Gegensatz zur Multiplikation von zwei Skalarwerten nicht kommutativ ist. Das Multiplizieren der Matrizen in umgekehrter Reihenfolge hat den visuellen Effekt, dass die Ziersauce in ihre Weltraumposition übersetzt und dann um den Ursprung der Welt gedreht wird.
 
-Unabhängig davon, welche Art von Matrix Sie erstellen, merken Sie sich die Regel von links nach rechts, um sicherzustellen, dass Sie die erwarteten Auswirkungen erzielen.
+Unabhängig davon, welche Art von Matrix Sie erstellen, denken Sie an die Regel von links nach rechts, um sicherzustellen, dass Sie die erwarteten Auswirkungen erzielen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

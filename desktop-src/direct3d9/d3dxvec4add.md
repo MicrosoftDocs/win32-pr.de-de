@@ -1,7 +1,7 @@
 ---
-description: Addiert zwei 4D-Vektoren.
+description: Fügt zwei 4D-Vektoren hinzu.
 ms.assetid: da807dc0-6a31-4315-a32d-a42062c22199
-title: D3DXVec4Add-Funktion (D3dx9math. h)
+title: D3DXVec4Add-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 62747cec15c4a9916dfb42572006cbb9fc908b3e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 75b25101044f3934006739f2454dd792eb5bc29d6ae6df5b9fd6b10e54c427a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118095280"
 ---
 # <a name="d3dxvec4add-function"></a>D3DXVec4Add-Funktion
 
-Addiert zwei 4D-Vektoren.
+Fügt zwei 4D-Vektoren hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXVECTOR4* D3DXVec4Add(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur.**](d3dxvector4.md)
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur.**](d3dxvector4.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Zeiger auf eine [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die die Summe der beiden Vektoren ist.
+Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die die Summe der beiden Vektoren darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec4Add** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec4Add-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Paramete
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

@@ -23,7 +23,7 @@ ms.locfileid: "118540290"
 ---
 # <a name="id3dx10meshgetattributetable-method"></a>ID3DX10Mesh::GetAttributeTable-Methode
 
-Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl der Einträge ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.
+Ruft entweder eine Attributtabelle für ein Gitternetz oder die Anzahl von Einträgen ab, die in einer Attributtabelle für ein Gitternetz gespeichert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT GetAttributeTable(
 
 Typ: **[ **D3DX10-ATTRIBUTBEREICH \_ \_**](d3dx10-attribute-range.md)\***
 
-Zeiger auf ein Array von D3DX10 \_ ATTRIBUTE \_ RANGE-Strukturen, das die Einträge in der Attributtabelle des Gitternetzes darstellt. Geben Sie **NULL** an, um den Wert für pAttribTableSize abzurufen.
+Zeiger auf ein Array von D3DX10 ATTRIBUTE RANGE-Strukturen, die die Einträge \_ in der \_ Attributtabelle des Gitters darstellen. Geben **Sie NULL** an, um den Wert für pAttribTableSize abzurufen.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Zeiger auf ein Array von D3DX10 \_ ATTRIBUTE \_ RANGE-Strukturen, das die Eintr�
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf die Anzahl der in pAttribTable gespeicherten Einträge oder auf einen Wert, der mit der Anzahl von Einträgen gefüllt werden soll, die in der Attributtabelle für das Gitternetz gespeichert sind.
+Zeiger auf die Anzahl der in pAttribTable gespeicherten Einträge oder auf einen Wert, der mit der Anzahl von Einträgen aufgefüllt werden soll, die in der Attributtabelle für das Gitternetz gespeichert sind.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf die Anzahl der in pAttribTable gespeicherten Einträge oder auf einen
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Attributtabelle wird verwendet, um Bereiche des Gitternetzes zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien usw. gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitternetzes auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner gezeichnet wird.
+Eine Attributtabelle wird verwendet, um Bereiche des Gitters zu identifizieren, die mit unterschiedlichen Texturen, Renderzuständen, Materialien und so weiter gezeichnet werden müssen. Darüber hinaus kann die Anwendung die Attributtabelle verwenden, um Teile eines Gitters auszublenden, indem beim Zeichnen des Rahmens kein angegebener Attributbezeichner gezeichnunget wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Eine Attributtabelle wird verwendet, um Bereiche des Gitternetzes zu identifizie
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

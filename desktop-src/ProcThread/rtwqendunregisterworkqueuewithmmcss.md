@@ -1,7 +1,7 @@
 ---
-description: Schließt eine asynchrone Anforderung zum Aufheben der Registrierung einer Arbeits Warteschlange bei einem Multimedia Class Scheduler Service-Task (MMCSS) ab.
+description: Schließt eine asynchrone Anforderung zum Aufheben der Registrierung einer Arbeitswarteschlange mit einer MMCSS-Aufgabe (Multimedia Class Scheduler Service) ab.
 ms.assetid: 0E8F9BF6-AC1E-4FC0-BFAE-F292C4859F1F
-title: Rtwqendunregisterworkqueuewithmmcss-Funktion
+title: RtwqEndUnregisterWorkQueueWithMMCSS-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - RTWorkQ.dll
-ms.openlocfilehash: b55386b2a018b0e311a1d4dbb2084b136d49c2f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 083f0ca787bb842850320b9dd1d320ef4d5b172ee0b6d9b117296e58b991bd0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117793400"
 ---
-# <a name="rtwqendunregisterworkqueuewithmmcss-function"></a>Rtwqendunregisterworkqueuewithmmcss-Funktion
+# <a name="rtwqendunregisterworkqueuewithmmcss-function"></a>RtwqEndUnregisterWorkQueueWithMMCSS-Funktion
 
-Schließt eine asynchrone Anforderung zum Aufheben der Registrierung einer Arbeits Warteschlange bei einem Multimedia Class Scheduler Service-Task (MMCSS) ab.
+Schließt eine asynchrone Anforderung zum Aufheben der Registrierung einer Arbeitswarteschlange mit einer MMCSS-Aufgabe (Multimedia Class Scheduler Service) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ HRESULT WINAPI RtwqEndUnregisterWorkQueueWithMMCSS(
 *pResult* 
 </dt> <dd>
 
-Zeiger auf die [**imfasynkresult**](/windows/win32/api/mfobjects/nn-mfobjects-imfasyncresult) -Schnittstelle. Übergeben Sie denselben Zeiger, den das Rückruf Objekt in der Methode " [**untwqasynccallback:: Aufrufen**](/windows/win32/api/rtworkq/nf-rtworkq-irtwqasynccallback-invoke) " erhalten hat.
+Zeiger auf die [**INTERFACESAsyncResult-Schnittstelle.**](/windows/win32/api/mfobjects/nn-mfobjects-imfasyncresult) Übergeben Sie den gleichen Zeiger, den Ihr Rückrufobjekt in der [**IRtwqAsyncCallback::Invoke-Methode**](/windows/win32/api/rtworkq/nf-rtworkq-irtwqasynccallback-invoke) empfangen hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,10 +56,10 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>None</dt> </dl>        |
-| Bibliothek<br/>                  | <dl> <dt>Rtworkq. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Keine</dt> </dl>        |
+| Bibliothek<br/>                  | <dl> <dt>Rtworkq.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RTWorkQ.dll</dt> </dl> |
 
 

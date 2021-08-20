@@ -1,5 +1,5 @@
 ---
-description: CryptXML bietet einen niedrigen Satz von nativen APIs, die die Erstellung und Überprüfung digitaler XML-Signaturen basierend auf der W3C-Empfehlung XML Signature Syntax and Processing (Second Edition) implementieren.
+description: CryptXML bietet eine reihe nativer APIs auf niedriger Ebene, die die Erstellung und Überprüfung digitaler XML-Signaturen basierend auf der W3C-Empfehlung XML-Signatursyntax und -verarbeitung (Zweite Edition) implementieren.
 ms.assetid: f0662a35-0c8c-4d9b-8a40-832df78c753f
 title: CryptXML
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "117767937"
 ---
 # <a name="cryptxml"></a>CryptXML
 
-CryptXML bietet einen niedrigen Satz von nativen APIs, die die Erstellung und Überprüfung digitaler XML-Signaturen basierend auf der W3C-Empfehlung XML Signature Syntax and Processing (Second Edition) implementieren. Entwickler müssen mit diesem Standard vertraut sein, um die APIs für digitale CryptXML-Signaturen effektiv verwenden zu können.
+CryptXML bietet eine reihe nativer APIs auf niedriger Ebene, die die Erstellung und Überprüfung digitaler XML-Signaturen basierend auf der W3C-Empfehlung XML-Signatursyntax und -verarbeitung (Zweite Edition) implementieren. Entwickler müssen mit diesem Standard vertraut sein, um die digitalen Signatur-APIs von CryptXML effektiv verwenden zu können.
 
 CryptXML enthält die folgenden Themen:
 
--   [Übersicht über digitale XML-Signaturen](xml-digital-signature-overview.md)
+-   [Übersicht über die digitale XML-Signatur](xml-digital-signature-overview.md)
 -   [API-Funktionalität für digitale XML-Signaturen](xml-digital-signature-api-functionality.md)
 -   [Kryptografische Algorithmen für digitale XML-Signaturen](xml-digital-signature-cryptographic-algorithms.md)
 -   [Kryptografische XML-Signaturerweiterungen](xml-digital-signature-cryptographic-extensions.md)
--   [Sicherheitsüberlegungen zu digitalen XML-Signaturen](xml-digital-signature-security-considerations.md)
+-   [Sicherheitsüberlegungen zur digitalen XML-Signatur](xml-digital-signature-security-considerations.md)
 
  
 

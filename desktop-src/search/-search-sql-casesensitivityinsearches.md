@@ -1,7 +1,7 @@
 ---
-description: Bei Microsoft Windows Search-Abfragen wird die Groß-/Kleinschreibung nicht beachtet.
+description: Bei Microsoft Windows-Suchabfragen wird die Kleinschreibung nicht beachtet.
 ms.assetid: 45a3305c-1cfe-4e11-a476-1a2a64f31de6
-title: Empfindlichkeit der Fall bei Suchvorgängen
+title: Sensitivität bei Suchvorgängen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 768edd161f1fa5f53b93c5a6e94ffa7e5040aa53cf0d5f3c57340ab466825ed7
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117863693"
 ---
-# <a name="case-sensitivity-in-searches"></a>Empfindlichkeit der Fall bei Suchvorgängen
+# <a name="case-sensitivity-in-searches"></a>Sensitivität bei Suchvorgängen
 
-Bei Microsoft Windows Search-Abfragen wird die Groß-/Kleinschreibung nicht beachtet. Dies schließt Abfrageschlüsselwörter (SELECT ist identisch mit Select, select und sELect) und Suchbegriffe ein. Wenn ein Bezeichner oder Literal Unicode-Zeichen mit Fallzuordnungssemantik verwendet, betrachtet die Suchmaschine alle Fälle als gleichwertig.
+Bei Microsoft Windows-Suchabfragen wird die Kleinschreibung nicht beachtet. Dies schließt Abfrageschlüsselwörter (SELECT ist identisch mit Select, Select und sELect) und Suchbegriffe ein. Wenn ein Bezeichner oder Literal Unicode-Zeichen mit Semantik für die Zuordnung von Fällen verwendet, betrachtet die Suchmaschine alle Fälle als gleichwertig.
 
  
 

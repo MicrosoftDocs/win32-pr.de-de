@@ -1,9 +1,9 @@
 ---
-title: TB_GETBUTTONTEXT (Commctrl.h)
+title: TB_GETBUTTONTEXT-Nachricht (Commctrl.h)
 description: Ruft den Anzeigetext einer Schaltfläche auf einer Symbolleiste ab.
 ms.assetid: 16dd7181-a404-4056-b084-05f49f5a4b14
 keywords:
-- TB_GETBUTTONTEXT meldungssteuerelemente Windows
+- TB_GETBUTTONTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -47,11 +47,11 @@ Zeiger auf einen Puffer, der den Schaltflächentext empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Länge der Zeichenfolge in Zeichen zurück, auf die *lParam zeigt.* Die Länge enthält nicht das beendende NULL-Zeichen. Wenn der Wert nicht erfolgreich ist, ist der Rückgabewert -1.
+Gibt die Länge der Zeichenfolge in Zeichen zurück, auf die *lParam* zeigt. Die Länge enthält nicht das abschließende NULL-Zeichen. Wenn der Wert nicht erfolgreich ist, lautet der Rückgabewert -1.
 
 ## <a name="remarks"></a>Hinweise
 
-**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit Ihres Programms gefährden. Diese Meldung bietet Ihnen keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Meldung verwenden, rufen Sie zuerst die Meldung auf, die **NULL** im *lParam* übergibt. Dadurch wird die Anzahl der zeichen zurückgegeben, mit Ausnahme von **NULL,** die erforderlich sind. Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Lesen Sie die [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
+**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit Ihres Programms beeinträchtigen. Diese Meldung bietet keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Nachricht verwenden, rufen Sie zuerst die Nachricht auf, die **NULL** in *lParam* übergibt. Dies gibt die Anzahl von Zeichen zurück, mit Ausnahme von **NULL,** die erforderlich sind. Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Lesen Sie die [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
 Die zurückgegebene Zeichenfolge entspricht dem Text, der derzeit von der Schaltfläche angezeigt wird.
 
@@ -61,14 +61,14 @@ Die zurückgegebene Zeichenfolge entspricht dem Text, der derzeit von der Schalt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **TB \_ GETBUTTONTEXTW** (Unicode) und **TB \_ GETBUTTONTEXTA** (ANSI)<br/>         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

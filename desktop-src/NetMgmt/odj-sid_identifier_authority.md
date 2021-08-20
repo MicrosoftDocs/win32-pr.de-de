@@ -5,14 +5,14 @@ ms.assetid: 88fe41f4-1c67-4290-ac21-fd43ff12d825
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: d9a80ed0717a279f39ac7a105a95807911232c82
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: 8d2ac3b8763026c0aea31214169ff8a0e2c6260086456c8c7c2431f69b13b2d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "104102526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796878"
 ---
-# <a name="sid_identifier_authority-structure"></a>SID_IDENTIFIER_AUTHORITY Struktur
+# <a name="sid_identifier_authority-structure"></a>SID_IDENTIFIER_AUTHORITY-Struktur
 
 Enthält eine SID-Bezeichnerautorität.
 
@@ -31,6 +31,6 @@ typedef struct _SID_IDENTIFIER_AUTHORITY
 
 Muss auf die sechs Bytes der SID-Bezeichnerautorität festgelegt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für Den Offlinedomänen join**](odj-idl.md)

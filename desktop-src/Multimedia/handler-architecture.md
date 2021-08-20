@@ -4,24 +4,24 @@ description: Handlerarchitektur
 ms.assetid: 93839b82-09cb-41af-ac0e-a8e9448bf04b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e2b02d0184d364ce438dc28f8219beea01c4868
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5c0da7846f31c94202d8d50ac0566c87ef5db085a0b9efb3f9250468346512db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118141093"
 ---
 # <a name="handler-architecture"></a>Handlerarchitektur
 
-Die interne Funktion eines Datei-oder streamhandlers wird vom Handler selbst definiert. Für eine Anwendung wird in der Regel ein Datei Handler als Modul zum Lesen und Schreiben von AVI-Dateien angezeigt. Entsprechend wird ein Datenstrom Handler als Modul angezeigt, um einen bestimmten Typ von Datenstrom zu lesen und zu schreiben. Die konsistente Stream-Schnittstelle macht die Quelle und das Ziel des Streams unwichtig für die Anwendung, die den Handler verwendet.
+Die interne Funktion eines Datei- oder Streamhandlers wird vom Handler selbst definiert. Für eine Anwendung wird ein Dateihandler in der Regel als Modul zum Lesen und Schreiben von AVI-Dateien angezeigt. Ebenso wird ein Streamhandler als Modul zum Lesen und Schreiben eines bestimmten Datenstromtyps angezeigt. Die konsistente Streamschnittstelle macht die Quelle und das Ziel des Streams für die Anwendung, die den Handler verwendet, unwichtig.
 
-Ein Datei Handler ermöglicht den Zugriff auf eine Datenquelle, die aus einem oder mehreren Datenströmen besteht. Datei Handler ermöglichen in der Regel den Zugriff auf Datenträger Dateien, die einen oder mehrere Datenströme enthalten, und die internen Funktionen des Datei Handler lesen und schreiben die Multimedia-Daten. Datei Handler können jedoch mit jeder beliebigen Datenquelle arbeiten, z. b. einem digitalen Übertragungskanal, der mehrere gemischte Datenströme enthält.
+Ein Dateihandler ermöglicht den Zugriff auf eine Datenquelle, die aus einem oder mehreren Datenströmen besteht. Dateihandler bieten in der Regel Zugriff auf Datenträgerdateien, die einen oder mehrere Datenströme enthalten, und die internen Funktionen des Dateihandlers lesen und schreiben die Multimediadaten. Dateihandler können jedoch mit jeder Datenquelle arbeiten, z. B. mit einem digitalen Übertragungskanal, der mehrere unbestimmte Datenströme enthält.
 
-Im Gegensatz dazu verarbeitet ein Datenstrom Handler einen Datentyp und wird als Datenstrom zu einer Anwendung angezeigt. Ein Datenstrom Handler kann Daten bereitstellen, die er herstellt, oder er kann Daten aus einer Datei oder einer externen Quelle abrufen. Die Daten werden in einem Format bereitstellt, das von der Anwendung verwendet werden kann.
+Im Gegensatz dazu verarbeitet ein Streamhandler einen Datentyp und wird als Datenstrom für eine Anwendung angezeigt. Ein Streamhandler kann Daten bereitstellen, die er herstellt, oder Daten aus einer Datei oder einer externen Quelle abrufen. Die Daten werden in einem Format bereitgestellt, das ihre Anwendung verwenden kann.
 
- 
+ 
 
- 
+ 
 
 
 

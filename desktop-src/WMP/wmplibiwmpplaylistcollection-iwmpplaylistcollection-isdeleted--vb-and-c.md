@@ -76,7 +76,7 @@ Ein **System.Boolean,** der angibt, ob die Wiedergabeliste gelöscht wurde.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

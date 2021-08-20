@@ -1,46 +1,46 @@
 ---
-description: Mit der Aktion "Delta Service" wird ein Dienst angehalten, und die Registrierung wird aus dem System entfernt. Durch diese Aktion wird die ServiceControl-Tabelle abgefragt.
+description: Die DeleteServices-Aktion beendet einen Dienst und entfernt seine Registrierung aus dem System. Diese Aktion fragt die ServiceControl-Tabelle ab.
 ms.assetid: c7976de9-65f4-4552-8f8c-e7a32ef4821d
-title: Delta Service-Aktion
+title: DeleteServices-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c5fc22bbb0c11cd546f1ffbb9f3ad98e06efae3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9bd00b9d077239402817bdf40dc10ee1de9bdbff4b52998742434933c3e9dd8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118379116"
 ---
-# <a name="deleteservices-action"></a>Delta Service-Aktion
+# <a name="deleteservices-action"></a>DeleteServices-Aktion
 
-Mit der Aktion "Delta Service" wird ein Dienst angehalten, und die Registrierung wird aus dem System entfernt. Durch diese Aktion wird die [ServiceControl-Tabelle](servicecontrol-table.md)abgefragt.
+Die DeleteServices-Aktion beendet einen Dienst und entfernt seine Registrierung aus dem System. Diese Aktion fragt die [ServiceControl-Tabelle ab.](servicecontrol-table.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Dienst Aktionen müssen in der folgenden Reihenfolge verwendet werden:
+Die Dienstaktionen müssen in der folgenden Reihenfolge verwendet werden:
 
-1.  [Stop Services](stopservices-action.md)
-2.  Delta Service Services
-3.  Folgende Aktionen sind möglich: " [InstallFiles](installfiles-action.md)", " [RemoveFiles](removefiles-action.md)", " [duplicatefiles](duplicatefiles-action.md)", " [muvefiles](movefiles-action.md)", " [PATCHFILES](patchfiles-action.md)" und " [RemoveDuplicateFiles](removeduplicatefiles-action.md) ".
-4.  [Installservices-Aktion](installservices-action.md)
-5.  [Startdienste](startservices-action.md)
+1.  [StopServices](stopservices-action.md)
+2.  DeleteServices
+3.  Eine der folgenden Aktionen: [InstallFiles](installfiles-action.md), [RemoveFiles](removefiles-action.md), [DuplicateFiles](duplicatefiles-action.md), [MoveFiles](movefiles-action.md), [PatchFiles](patchfiles-action.md)und [RemoveDuplicateFiles](removeduplicatefiles-action.md) Aktionen.
+4.  [InstallServices-Aktion](installservices-action.md)
+5.  [StartServices](startservices-action.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
-| \[1\] | Dienst Anzeige Name.      |
+| \[1\] | Anzeigename des Diensts.      |
 | \[2\] | Dienstname              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Aktion erfordert, dass der Benutzer ein Administrator ist oder über erweiterte Berechtigungen mit der Berechtigung zum Löschen von Diensten verfügt oder dass die Anwendung Teil einer verwalteten Installation ist.
+Diese Aktion erfordert, dass der Benutzer Administrator ist oder über erhöhte Berechtigungen mit der Berechtigung zum Löschen von Diensten verfügt oder dass die Anwendung Teil einer verwalteten Installation ist.
 
  
 

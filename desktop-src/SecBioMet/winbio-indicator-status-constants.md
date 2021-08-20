@@ -1,6 +1,6 @@
 ---
-title: WINBIO_INDICATOR_STATUS Konstanten (winbio \_ types. h)
-description: Legen Sie eine Indikator Ampel fest.
+title: WINBIO_INDICATOR_STATUS Konstanten (Winbio \_ types.h)
+description: Legen Sie ein Indikatorlicht fest.
 ms.assetid: 1e00ff9d-6693-4763-8ac3-b42d2a3e987d
 topic_type:
 - apiref
@@ -13,27 +13,27 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7693fbd2b9b37067738774d172f4bb482edb06e6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9fd05d279bd11eafda89eed436c94d6141e97ad0eb9d2fc426d5c89000f36414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910013"
 ---
-# <a name="winbio_indicator_status-constants"></a>Winbio- \_ Indikator \_ Status Konstanten
+# <a name="winbio_indicator_status-constants"></a>\_ \_ WINBIO-INDIKATORSTATUSkonst constants
 
-Die folgenden Werte können verwendet werden, um eine Indikator Ampel festzulegen. Standardmäßig haben Sensoren keine Beleuchtung, aber Anwendungen können diese Werte verwenden, um Indikator Leuchten zu aktivieren oder zu deaktivieren. Der **\_ \_ Statuswert des winbio-Sensors** bietet weitere Details zum Status eines Indikator Lichts, das sich in befindet. Weitere Informationen finden Sie in den folgenden Funktionen:
+Die folgenden Werte können verwendet werden, um ein Indikatorlicht zu setzen. Standardmäßig haben Sensoren kein Licht, aber Anwendungen können diese Werte verwenden, um Indikatorlichter zu aktivieren oder zu deaktivieren. Der **WINBIO \_ SENSOR \_ STATUS-Wert** enthält weitere Details zum Status einer Ein-/Aus-Indikatoranzeige. Weitere Informationen finden Sie in den folgenden Funktionen:
 
--   [**Sensoradaptersetindikatorstatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_set_indicator_status_fn)
--   [**Sensoradaptergetindikatorstatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_get_indicator_status_fn)
--   [**Sensoradapterquerystatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_query_status_fn)
+-   [**SensorAdapterSetIndicatorStatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_set_indicator_status_fn)
+-   [**SensorAdapterGetIndicatorStatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_get_indicator_status_fn)
+-   [**SensorAdapterQueryStatus**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_sensor_query_status_fn)
 
 
 
 | Konstante                                                                                                                                                                            | BESCHREIBUNG                                   |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------|
-| <span id="WINBIO_INDICATOR_ON"></span><span id="winbio_indicator_on"></span><dl> <dt>**winbio- \_ Indikator \_ für**</dt> </dl>    | Der Sensor Indikator Licht ist on.<br/>  |
-| <span id="WINBIO_INDICATOR_OFF"></span><span id="winbio_indicator_off"></span><dl> <dt>**winbio- \_ Indikator \_ aus**</dt> </dl> | Die Sensor Indikator Beleuchtung ist deaktiviert.<br/> |
+| <span id="WINBIO_INDICATOR_ON"></span><span id="winbio_indicator_on"></span><dl> <dt>**\_WINBIO-INDIKATOR \_ EIN**</dt> </dl>    | Das Sensoranzeigelicht ist ein.<br/>  |
+| <span id="WINBIO_INDICATOR_OFF"></span><span id="winbio_indicator_off"></span><dl> <dt>**\_WINBIO-INDIKATOR \_ DEAKTIVIERT**</dt> </dl> | Das Sensoranzeigelicht ist ausgeschaltet.<br/> |
 
 
 
@@ -43,17 +43,17 @@ Die folgenden Werte können verwendet werden, um eine Indikator Ampel festzulege
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonst constants](client-application-constants.md)
 </dt> </dl>
 
  

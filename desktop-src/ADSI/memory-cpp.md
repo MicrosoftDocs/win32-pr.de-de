@@ -1,6 +1,6 @@
 ---
 title: Speicher. Cpp
-description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die Speicherbelegung und -bereitstellung zeigt, in memory.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
+description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die Speicherzuordnung und -freilegung zeigt, in memory.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 ms.assetid: dc5b3559-02fc-45e8-bbd0-482e4e3a7f8a
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,17 +14,17 @@ ms.locfileid: "117839490"
 ---
 # <a name="memorycpp"></a>Speicher. Cpp
 
-In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die Speicherbelegung und -bereitstellung zeigt, in memory.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
+In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die Speicherzuordnung und -freilegung zeigt, in memory.cpp. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 
 
 
 | Element                | Beschreibung                                                           |
 |---------------------|-----------------------------------------------------------------------|
-| **AllocProvMem**    | Zuordnen des angegebenen Arbeitsspeichers.                                            |
+| **AllocProvMem**    | Weisen Sie den angegebenen Arbeitsspeicher zu.                                            |
 | **FreeProvMem**     | Freier Arbeitsspeicher angegeben.                                                |
 | **ReallocProvMem**  | Ordnen Sie zusammenhängenden Speicher zu.                                           |
-| **AllocProvStr**    | Zuordnen einer LPWSTR-Zeichenfolge.                                            |
-| **FreeProvStr**     | Gibt die Zeichenfolge frei, wenn sie noch nicht freigegeben wurde.                                     |
+| **AllocProvStr**    | Ordnen Sie eine LPWSTR-Zeichenfolge zu.                                            |
+| **FreeProvStr**     | Freie Zeichenfolge, wenn sie noch nicht frei ist.                                     |
 | **ReallocProvStr**  | Ordnen Sie zusammenhängenden Speicher zu.                                           |
 | **ProvAllocString** | Überprüft die Zeichenfolge und den ersten Parameter. Wenn OK, führt die Zuordnung aus. |
 

@@ -64,7 +64,7 @@ Gibt null oder mehr Attribute an, die unmittelbar nach der Attributauflistung au
 *param-list* 
 </dt> <dd>
 
-Gibt alle Parameter an, und speichern Sie den endgültigen, variierenden Parameter.
+Gibt alle Parameter an, und speichern Sie den letzten, variierenden Parameter.
 
 </dd> <dt>
 

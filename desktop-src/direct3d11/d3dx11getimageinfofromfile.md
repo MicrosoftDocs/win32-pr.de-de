@@ -1,6 +1,6 @@
 ---
 title: D3DX11GetImageInfoFromFile-Funktion (D3DX11tex.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die DirectXTex-Bibliothek GetMetadataFromXXXFile (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Ruft Informationen zu einer bestimmten Bilddatei ab.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die DirectXTex-Bibliothek GetMetadataFromXXXFile (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. Von D3DX 9 unterstützte TGA als gängiges Art Source-Format für Spiele). Ruft Informationen zu einer bestimmten Bilddatei ab.
 ms.assetid: 57768604-3672-49a0-8120-f09240b8fc98
 keywords:
 - D3DX11GetImageInfoFromFile-Funktion Direct3D 11
@@ -25,12 +25,12 @@ ms.locfileid: "118536074"
 # <a name="d3dx11getimageinfofromfile-function"></a>D3DX11GetImageInfoFromFile-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, wird empfohlen, die [DirectXTex-Bibliothek](https://github.com/Microsoft/DirectXTex) **GetMetadataFromXXXFile** zu verwenden (wobei XXX WIC, DDS oder TGA ist. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele).
+> Anstatt diese Funktion zu verwenden, empfiehlt es sich, die [DirectXTex-Bibliothek](https://github.com/Microsoft/DirectXTex) **GetMetadataFromXXXFile** (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. Von D3DX 9 unterstützte TGA als gängiges Art Source-Format für Spiele).
 
  
 
@@ -59,7 +59,7 @@ HRESULT D3DX11GetImageInfoFromFile(
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Dateiname des Bilds, zu dem Informationen abgerufen werden sollen. Wenn UNICODE oder \_ UNICODE definiert ist, ist dieser Parametertyp LPCWSTR, andernfalls LPCSTR.
+Dateiname des Bilds, zu dem Informationen abgerufen werden. Wenn UNICODE oder \_ UNICODE definiert sind, ist dieser Parametertyp LPCWSTR, andernfalls ist der Typ LPCSTR.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Dateiname des Bilds, zu dem Informationen abgerufen werden sollen. Wenn UNICODE 
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\***
 
-Optionale Threadpumpe, die zum asynchronen Laden der Informationen verwendet werden kann. Kann **NULL** sein. Siehe [**ID3DX11ThreadPump-Schnittstelle.**](id3dx11threadpump.md)
+Optionale Threadpump, die zum asynchronen Laden der Informationen verwendet werden kann. Kann NULL **sein.** Siehe [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md).
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Zeiger auf eine [**D3DX11-BILDINFORMATION, \_ \_**](d3dx11-image-info.md) die mi
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL** ist, muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann NULL **sein.** Wenn *pPump* nicht **NULL ist,** muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -94,7 +94,7 @@ Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
 
 ## <a name="remarks"></a>Hinweise
 
@@ -111,7 +111,7 @@ Diese Funktion unterstützt sowohl Unicode- als auch ANSI-Zeichenfolgen.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

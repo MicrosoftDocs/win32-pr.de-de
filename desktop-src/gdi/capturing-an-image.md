@@ -5,30 +5,30 @@ title: Erfassen eines Bilds
 ms.topic: article
 ms.date: 12/03/2020
 ms.custom: contperf-fy21q2
-ms.openlocfilehash: b6029ec18a39ea034ca22e4c3d6c2d1e659635cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 7516c125bd2f6953dcd91bbefee19d9ebe68c3fbbaf6ad2c029abb41d7b01542
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117888113"
 ---
 # <a name="capturing-an-image"></a>Erfassen eines Bilds
 
 Sie können eine Bitmap verwenden, um ein Bild zu erfassen, und Sie können das erfasste Bild im Arbeitsspeicher speichern, es an einer anderen Stelle im Fenster Ihrer Anwendung anzeigen oder es in einem anderen Fenster anzeigen.
 
-In einigen Fällen möchten Sie möglicherweise, dass Ihre Anwendung Images erfasst und nur vorübergehend speichert. Wenn Sie z. b. ein Bild skalieren oder vergrößern, das in einer Zeichnungsanwendung erstellt wurde, muss die Anwendung die normale Ansicht des Bilds temporär speichern und die Zoomansicht anzeigen. Wenn der Benutzer später die normale Ansicht auswählt, muss die Anwendung das Zoombild durch eine Kopie der normalen Ansicht ersetzen, die Sie vorübergehend gespeichert hat.
+In einigen Fällen kann es sein, dass Ihre Anwendung Bilder erfasst und nur vorübergehend speichern soll. Wenn Sie beispielsweise ein in einer Zeichnungsanwendung erstelltes Bild skalieren oder zoomen, muss die Anwendung vorübergehend die normale Ansicht des Bilds speichern und die vergrößerte Ansicht anzeigen. Wenn der Benutzer später die normale Ansicht auswählt, muss die Anwendung das vergrößerte Bild durch eine Kopie der normalen Ansicht ersetzen, die vorübergehend gespeichert wurde.
 
-Wenn Sie ein Abbild temporär speichern möchten, muss die Anwendung "" zum Erstellen eines [**DC aufrufen,**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatibledc) der mit dem aktuellen Fenster Controller kompatibel ist. Nachdem Sie einen kompatiblen DC erstellt haben, erstellen Sie eine Bitmap mit den entsprechenden Dimensionen, indem Sie die [**CreateCompatibleBitmap**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) -Funktion aufrufen und Sie dann in diesem Gerätekontext durch Aufrufen der [**SelectObject**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) -Funktion auswählen.
+Um ein Image vorübergehend zu speichern, muss Ihre Anwendung [**CreateCompatibleDC**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatibledc) aufrufen, um einen Domänencontroller zu erstellen, der mit dem aktuellen Fensterdomänencontroller kompatibel ist. Nachdem Sie einen kompatiblen Domänencontroller erstellt haben, erstellen Sie eine Bitmap mit den entsprechenden Dimensionen, indem Sie die [**CreateCompatibleBitmap-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatiblebitmap) aufrufen und diese dann in diesem Gerätekontext auswählen, indem Sie die [**SelectObject-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) aufrufen.
 
-Nachdem der kompatible Gerätekontext erstellt wurde und die entsprechende Bitmap darin ausgewählt wurde, können Sie das Abbild erfassen. Mit der [**BitBLT**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) -Funktion werden Bilder erfasst. Diese Funktion führt eine Bitblock Übertragung aus, d. h., Sie kopiert Daten aus einer Quell Bitmap in eine Ziel Bitmap. Die beiden Argumente für diese Funktion sind jedoch keine bitmaphandles. Stattdessen empfängt **BitBLT** Handles, die zwei Geräte Kontexte identifizieren, und kopiert die Bitmapdaten aus einer Bitmap, die in den Quell Domänen Controller ausgewählt ist, in eine Bitmap, die auf den Zieldomänen Controller ausgewählt ist. In diesem Fall ist der Ziel-DC der kompatible Domänen Controller. Wenn **BitBLT** die Übertragung abschließt, wurde das Image im Arbeitsspeicher gespeichert. Zum erneuten Anzeigen des Bilds müssen Sie **BitBLT** ein zweites Mal aufrufen und dabei den kompatiblen DC als Quell Domänen Controller und einen Windows-(oder Drucker-) DC als Ziel-DC angeben.
+Nachdem der kompatible Gerätekontext erstellt und die entsprechende Bitmap ausgewählt wurde, können Sie das Bild erfassen. Die [**BitBlt-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) erfasst Bilder. Diese Funktion führt eine Bitblockübertragung durch, d.&a; kopiert Daten aus einer Quellbitmap in eine Zielbitmap. Die beiden Argumente für diese Funktion sind jedoch keine Bitmaphandles. Stattdessen **empfängt BitBlt** Handles, die zwei Gerätekontexte identifizieren, und kopiert die Bitmapdaten aus einer ausgewählten Bitmap in den Quelldomänencontroller in eine in den Ziel-DC ausgewählte Bitmap. In diesem Fall ist der Ziel-DC der kompatible DC. Wenn **BitBlt** also die Übertragung abgeschlossen hat, wurde das Image im Arbeitsspeicher gespeichert. Um das Bild erneut anzuzeigen, rufen Sie **BitBlt** ein zweites Mal auf, und geben Sie dabei den kompatiblen Domänencontroller als Quell-DC und einen Fenster- (oder Drucker-) DC als Ziel-DC an.
 
 ## <a name="code-example"></a>Codebeispiel
 
-Dieser Abschnitt enthält ein Codebeispiel, in dem ein Bild des gesamten Desktops erfasst, auf die aktuelle Fenstergröße skaliert und dann in einer Datei gespeichert wird (und im Client Bereich angezeigt wird).
+Dieser Abschnitt enthält ein Codebeispiel, in dem ein Bild des gesamten Desktops erfasst, auf die aktuelle Fenstergröße herunterskaliert und dann in einer Datei gespeichert wird (und im Clientbereich angezeigt wird).
 
-Um das Codebeispiel zu testen, erstellen Sie zunächst ein neues Projekt in Visual Studio basierend auf der Projektvorlage für **Windows-Desktop Anwendungen** . Es ist wichtig, das neue Projekt zu benennen, `GDI_CapturingAnImage` damit das folgende Codebeispiel kompiliert wird (z. b. enthält das `GDI_CapturingAnImage.h` , das in Ihrem neuen Projekt vorhanden ist, wenn Sie es wie vorgeschlagen benennen).
+Um das Codebeispiel auszuprobieren, erstellen Sie zunächst ein neues Projekt in Visual Studio der Projektvorlage Windows **Desktopanwendung.** Es ist wichtig, das neue Projekt so zu benennen, dass das folgende Codelisting kompiliert wird (z. B. enthält es , das in Ihrem neuen Projekt vorhanden ist, wenn Sie es wie vorgeschlagen `GDI_CapturingAnImage` `GDI_CapturingAnImage.h` benennen).
 
-Öffnen `GDI_CapturingAnImage.cpp` Sie die Quell Code Datei im neuen Projekt, und ersetzen Sie Ihren Inhalt durch die unten aufgeführte Auflistung. Erstellen Sie die Anwendung dann, und führen Sie sie aus. Jedes Mal, wenn Sie die Größe des Fensters ändern, sehen Sie, dass der erfasste Screenshot im Client Bereich angezeigt wird.
+Öffnen Sie `GDI_CapturingAnImage.cpp` die Quellcodedatei in Ihrem neuen Projekt, und ersetzen Sie deren Inhalt durch die folgende Auflistung. Erstellen Sie die Anwendung dann, und führen Sie sie aus. Jedes Mal, wenn Sie die Größe des Fensters ändern, wird der erfasste Screenshot im Clientbereich angezeigt.
 
 ```cpp
 // GDI_CapturingAnImage.cpp : Defines the entry point for the application.

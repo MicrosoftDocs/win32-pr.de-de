@@ -1,6 +1,6 @@
 ---
 title: Query-Policy-Object-Attribut
-description: Verweis auf die für diesen Server geltende Standard-Query-Policy.
+description: Verweis auf die Query-Policy für diesen Server in Kraft.
 ms.assetid: 5a492305-ac57-4331-b96b-bdd8107d4a4d
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "117836780"
 ---
 # <a name="query-policy-object-attribute"></a>Query-Policy-Object-Attribut
 
-Verweis auf die für diesen Server geltende Standard-Query-Policy.
+Verweis auf die Query-Policy für diesen Server in Kraft.
 
 
 
@@ -35,7 +35,7 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.607                  |
-| System-ID-GUID    | e1aea403-cd5b-11d0-afff-0000f80367c1    |
+| System-Id-Guid    | e1aea403-cd5b-11d0-afff-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -58,10 +58,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Ist einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -79,10 +79,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Ist einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -100,10 +100,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Ist einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -121,10 +121,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Is-Single-Valued       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -142,10 +142,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Is-Single-Valued       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -163,10 +163,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Is-Single-Valued       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
@@ -184,10 +184,10 @@ Verweis auf die für diesen Server geltende Standard-Query-Policy.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | Falsch                                                                                                |
-| Is-Single-Valued       | Richtig                                                                                                 |
-| Ist indiziert             | Falsch                                                                                                |
-| Im globalen Katalog      | Falsch                                                                                                |
+| System-Only            | False                                                                                                |
+| Is-Single-Valued       | True                                                                                                 |
+| Ist indiziert             | False                                                                                                |
+| Im globalen Katalog      | False                                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |

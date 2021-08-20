@@ -1,7 +1,7 @@
 ---
-description: Die cimagesample-Klasse implementiert ein Medien Beispiel, das eine GDI-geräteunabhängige Bitmap (DIB) verwaltet.
+description: Die CImageSample-Klasse implementiert ein Medienbeispiel, das eine geräteunabhängige GDI-Bitmap (DIB) verwaltet.
 ms.assetid: 620ea791-458e-441e-8f0c-2184c44c742e
-title: Cimagesample-Klasse (winutil. h)
+title: CImageSample-Klasse (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,29 +16,29 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2235d50c952ce1b76e4a70eda0341f0fe3c4167c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: afd19b6aba7546ec420985adf6d58d3f7acc7546913ec8f1c168c80ad3b7ffda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402407"
 ---
-# <a name="cimagesample-class"></a>Cimagesample-Klasse
+# <a name="cimagesample-class"></a>CImageSample-Klasse
 
 ![cimagesample-Klassenhierarchie](images/wutil03.png)
 
-Die- `CImageSample` Klasse implementiert ein Medien Beispiel, das eine GDI-geräteunabhängige Bitmap (DIB) verwaltet. Diese Klasse wird von der [**cmediasample**](cmediasample.md) -Klasse abgeleitet. Es ist für die Verwendung mit der [**cimagezuordcator**](cimageallocator.md) -Klasse vorgesehen. Die **cimagezuordcator** -Klasse stellt eine Zuweisung bereit, die- `CImageSample` Objekte erstellt.
+Die `CImageSample` -Klasse implementiert ein Medienbeispiel, das eine geräteunabhängige GDI-Bitmap (DIB) verwaltet. Diese Klasse wird von der [**CMediaSample-Klasse**](cmediasample.md) abgeleitet. Sie ist für die Verwendung mit der [**CImageAllocator-Klasse**](cimageallocator.md) vorgesehen. Die **CImageAllocator-Klasse** stellt eine Zuweisung bereit, die `CImageSample` -Objekte erstellt.
 
 
 
-| Geschützte Member-Variablen                        | BESCHREIBUNG                                                       |
+| Geschützte Membervariablen                        | BESCHREIBUNG                                                       |
 |---------------------------------------------------|-------------------------------------------------------------------|
-| [**Mio. \_ dibdata**](cimagesample-m-dibdata.md)      | Enthält Informationen über das DIB, das von diesem-Objekt verwaltet wird.  |
-| [**m- \_ binit**](cimagesample-m-binit.md)          | Gibt an, ob das Objekt initialisiert wurde.                |
+| [**m \_ DibData**](cimagesample-m-dibdata.md)      | Enthält Informationen zum DIB, das von diesem Objekt verwaltet wird.  |
+| [**m \_ bInit**](cimagesample-m-binit.md)          | Gibt an, ob das Objekt initialisiert wurde.                |
 | Öffentliche Methoden                                    | BESCHREIBUNG                                                       |
-| [**Cimagesample**](cimagesample-cimagesample.md) | Konstruktormethode.                                               |
-| [**Getdibdata**](cimagesample-getdibdata.md)     | Ruft Informationen über das DIB ab, das von diesem-Objekt verwaltet wird. |
-| [**Setdibdata**](cimagesample-setdibdata.md)     | Legt Informationen über das DIB fest, das von diesem-Objekt verwaltet wird.      |
+| [**CImageSample**](cimagesample-cimagesample.md) | Konstruktormethode.                                               |
+| [**GetDIBData**](cimagesample-getdibdata.md)     | Ruft Informationen zum DIB ab, das von diesem Objekt verwaltet wird. |
+| [**SetDIBData**](cimagesample-setdibdata.md)     | Legt Informationen zum DIB fest, das von diesem Objekt verwaltet wird.      |
 
 
 
@@ -50,8 +50,8 @@ Die- `CImageSample` Klasse implementiert ein Medien Beispiel, das eine GDI-gerä
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

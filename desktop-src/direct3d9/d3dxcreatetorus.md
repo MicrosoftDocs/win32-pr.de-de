@@ -1,7 +1,7 @@
 ---
-description: Verwendet ein Links händiges Koordinatensystem zum Erstellen eines Netzes, das einen "Tor" enthält.
+description: Verwendet ein linkshändiges Koordinatensystem, um ein Gitternetz zu erstellen, das einen Torus enthält.
 ms.assetid: 68df7650-8a87-4762-8b57-5704c419b0d7
-title: D3DXCreateTorus-Funktion (D3dx9shape. h)
+title: D3DXCreateTorus-Funktion (D3dx9shape.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 384950ca1f00d0115135cf9ae36a2883ec5470e7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d1671641a5088535777cb78bf3773f4c1e56e1c3d35e70d345a39df2dad7bd83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526192"
 ---
 # <a name="d3dxcreatetorus-function"></a>D3DXCreateTorus-Funktion
 
-Verwendet ein Links händiges Koordinatensystem zum Erstellen eines Netzes, das einen "Tor" enthält.
+Verwendet ein linkshändiges Koordinatensystem, um ein Gitternetz zu erstellen, das einen Torus enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCreateTorus(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das dem erstellten Tor-Mesh zugeordnete Gerät darstellt.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das dem erstellten Torusgitternetz zugeordnet ist.
 
 </dd> <dt>
 
-*Innerradius* \[ in\]
+*InnerRadius* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Innerer Radius des "Tor". Der Wert muss größer oder gleich 0,0 f sein.
+Innerer Radius des Torus. Der Wert sollte größer oder gleich 0,0f sein.
 
 </dd> <dt>
 
-*Outerradius* \[ in\]
+*OuterRadius* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Äußerer Radius des "Tor". Der Wert muss größer oder gleich 0,0 f sein.
+Äußerer Radius des Torus. Der Wert sollte größer oder gleich 0,0f sein.
 
 </dd> <dt>
 
-*Seiten* \[ in\]
+*Seiten* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Seiten in einem Querschnitt. Der Wert muss größer oder gleich 3 sein.
+Anzahl der Seiten in einem Kreuzabschnitt. Der Wert muss größer oder gleich 3 sein.
 
 </dd> <dt>
 
-*Ringe* \[ in\]
+*Ringe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Ringen, die den Tor bilden. Der Wert muss größer oder gleich 3 sein.
+Anzahl der Ringe, die den Torus bilden. Der Wert muss größer oder gleich 3 sein.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf die Ausgabe Form, eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle.
+Adresse eines Zeigers auf die Ausgabeform, eine [**ID3DXMesh-Schnittstelle.**](id3dxmesh.md)
 
 </dd> <dt>
 
-*ppency* \[ vorgenommen\]
+*ppAdencyency* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle. Wenn die-Methode zurückgibt, wird dieser Parameter mit einem Array von drei DWORDs pro Gesicht gefüllt, die die drei Nachbarn für jedes Gesicht im Mesh angeben. **Null** kann angegeben werden.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) Wenn die Methode zurückgegeben wird, wird dieser Parameter mit einem Array von drei DWORDs pro Gesicht gefüllt, die die drei Nachbarn für jedes Gesicht im Netz angeben. **NULL** kann angegeben werden.
 
 </dd> </dl>
 
@@ -113,15 +113,15 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der erstellte ' Tor ' wird am Ursprung zentriert, und seine Achse ist an der z-Achse ausgerichtet. Der innere Radius des "Tor" ist der Radius des Kreuz Abschnitts (der kleinere Radius), und der äußere Radius des "Tor" ist der Radius der zentralen Lücke.
+Der erstellte Torus ist am Ursprung zentriert, und seine Achse wird an der Z-Achse ausgerichtet. Der innere Radius des Torus ist der Radius des Kreuzabschnitts (der kleinere Radius), und der äußere Radius des Torus ist der Radius der zentralen Lücke.
 
-Diese Funktion gibt ein Mesh zurück, das später zum Zeichnen oder manipulieren durch die Anwendung verwendet werden kann.
+Diese Funktion gibt ein Gitternetz zurück, das später zum Zeichnen oder Bearbeiten durch die Anwendung verwendet werden kann.
 
-Diese Funktion erstellt ein Mesh mit der D3DXMESH \_ Managed Creation-Option und [D3DFVF \_ XYZ \| D3DFVF \_ Normal](d3dfvf.md) flexibles Scheitelpunkt Format (FVF).
+Diese Funktion erstellt ein Netz mit der Erstellungsoption D3DXMESH \_ MANAGED und [D3DFVF \_ XYZ \| D3DFVF \_ NORMAL](d3dfvf.md) Flexible Vertex format (FVF).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,16 +129,16 @@ Diese Funktion erstellt ein Mesh mit der D3DXMESH \_ Managed Creation-Option und
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9shape. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>    |
+| Header<br/>  | <dl> <dt>D3dx9shape.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Formen Zeichnungsfunktionen](dx9-graphics-reference-d3dx-functions-shape.md)
+[Zeichnen von Formenfunktionen](dx9-graphics-reference-d3dx-functions-shape.md)
 </dt> </dl>
 
  

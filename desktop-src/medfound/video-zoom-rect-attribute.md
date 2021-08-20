@@ -1,42 +1,42 @@
 ---
-description: Gibt das Quell Rechteck für den Videomixer des erweiterten Videorenderer (EVR) an. Das Quell Rechteck ist der Teil des Video Rahmens, der vom Mixer an die Ziel Oberfläche blitet.
+description: Gibt das Quellrechteck für den Videomixer des erweiterten Videorenderers (EVR) an. Das Quellrechteck ist der Teil des Videoframes, der vom Mixer auf die Zieloberfläche eingeteilt wird.
 ms.assetid: 4364ff87-816e-4b64-b5e9-c53dd6c9bb33
-title: VIDEO_ZOOM_RECT-Attribut (EVR. h)
+title: VIDEO_ZOOM_RECT -Attribut (Evr.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dda4efca5beab844baf3b3f53074d6b3012e8621
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2e6ce19c808545d400f53b9c0091cdbcc20c8efbc13372ae5386e419d244143
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118737145"
 ---
-# <a name="video_zoom_rect-attribute"></a>Video \_ Zoom- \_ Rect-Attribut
+# <a name="video_zoom_rect-attribute"></a>VIDEO \_ ZOOM \_ RECT-Attribut
 
-Gibt das Quell Rechteck für den Videomixer des [erweiterten Videorenderer](enhanced-video-renderer.md) (EVR) an. Das Quell Rechteck ist der Teil des Video Rahmens, der vom Mixer an die Ziel Oberfläche blitet.
+Gibt das Quellrechteck für den Videomixer des [erweiterten Videorenderers](enhanced-video-renderer.md) (EVR) an. Das Quellrechteck ist der Teil des Videoframes, der vom Mixer auf die Zieloberfläche eingeteilt wird.
 
 ## <a name="data-type"></a>Datentyp
 
 Bytearray
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist eine [**MF videonormalizedrect**](/windows/desktop/api/evr/ns-evr-mfvideonormalizedrect) -Struktur.
+Der Wert dieses Attributs ist eine [**MFVideoNormalizedRect-Struktur.**](/windows/desktop/api/evr/ns-evr-mfvideonormalizedrect)
 
-Das Quell Rechteck wird relativ zu einem normalisierten Koordinatensystem definiert, in dem der gesamte Videorahmen ein Rechteck mit den Koordinaten {0, 0, 1, 1} einnimmt. Das Quell Rechteck muss in den Videoframe passen. die Koordinaten des Quell Rechtecks haben einen Bereich von (0... 1).
+Das Quellrechteck wird relativ zu einem normalisierten Koordinatensystem definiert, in dem der gesamte Videoframe ein Rechteck mit den Koordinaten {0, 0, 1, 1} einnimmt. Das Quellrechteck muss in den Videoframe passen. Die Koordinaten des Quellrechtecks haben einen Bereich von (0...1).
 
-Der Standard-EVR Presenter legt dieses Attribut auf dem Mixer fest. Gehen Sie folgendermaßen vor, um das-Attribut festzulegen:
+Die EVR-Standard-Moderatorin legt dieses Attribut auf dem Mixer fest. Gehen Sie wie folgt vor, um das Attribut zu festlegen:
 
-1.  Aufrufen von [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) auf dem Mixer, um den Attribut Speicher des Mischers abzurufen.
-2.  Aufrufen von [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob) , um das **Video Zoom- \_ \_ Rect** -Attribut auf dem Mixer festzulegen. Der Wert ist eine [**MF videonormalizedrect**](/windows/desktop/api/evr/ns-evr-mfvideonormalizedrect) -Struktur.
+1.  Rufen [**Sie IMTRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) im Mixer auf, um den Attributspeicher des Mixers zu erhalten.
+2.  Rufen [**Sie DIE ATTRIBUTE::SetBlob auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob) um das **VIDEO ZOOM \_ \_ RECT-Attribut** für den Mixer zu setzen. Der Wert ist eine [**MFVideoNormalizedRect-Struktur.**](/windows/desktop/api/evr/ns-evr-mfvideonormalizedrect)
 
-In einem benutzerdefinierten EVR Presenter können Sie dieses Attribut verwenden, um die [**imfvideodisplaycontrol:: setvideoposition**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition) -Methode zu implementieren. Weitere Informationen finden Sie unter [Quell-und Ziel Rechtecke](how-to-write-an-evr-presenter.md).
+In einem benutzerdefinierten EVR-Presenter können Sie dieses Attribut verwenden, um die [**METHODE DURCHZEIGERVideoDisplayControl::SetVideoPosition zu**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition) implementieren. Weitere Informationen finden Sie unter [Quell- und Zielrechtecke.](how-to-write-an-evr-presenter.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus strmiids.lib exportiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Quell Rechteck auf dem Mixer festgelegt.
+Im folgenden Beispiel wird das Quellrechteck für den Mixer definiert.
 
 
 ```C++
@@ -67,29 +67,29 @@ HRESULT SetMixerSourceRect(IMFTransform *pMixer, const MFVideoNormalizedRect& nr
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>EVR. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Evr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Erweiterte Videorenderer-Attribute](enhanced-video-renderer-attributes.md)
+[Erweiterte Videorendererattribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[Schreiben von EVR Presenter](how-to-write-an-evr-presenter.md)
+[Schreiben eines EVR-Presenters](how-to-write-an-evr-presenter.md)
 </dt> <dt>
 
-[**Imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEs::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**Imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEs::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> </dl>
 
  

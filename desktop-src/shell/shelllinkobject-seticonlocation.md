@@ -52,9 +52,9 @@ Der vollqualifizierte Pfad der Datei, die das Symbol enthält.
 *iIndex* \[ In\]
 </dt> <dd>
 
-Typ: **Ganze Zahl**
+Typ: **Integer**
 
-Der Index des Symbols in der von *sPath* angegebenen Datei.
+Der Index des Symbols in der durch *sPath angegebenen Datei.*
 
 </dd> </dl>
 

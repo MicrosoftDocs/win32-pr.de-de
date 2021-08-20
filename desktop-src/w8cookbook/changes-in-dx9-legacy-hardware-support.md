@@ -1,53 +1,53 @@
 ---
-title: Änderungen in DX9 Legacy Hardwareunterstützung
-description: Änderungen in DX9 Legacy Hardwareunterstützung
+title: Änderungen an der DX9-Legacyhardwareunterstützung
+description: Änderungen an der DX9-Legacyhardwareunterstützung
 ms.assetid: 25C7DFC7-58F4-4F6D-8D26-6DBA92424A0B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc1ae5c4b15a2019450cc5b209f34561d8ec672d
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 6bfd0b8bbb05161ffe14ff57cc5db97fe88a22bf6e64a495e2b43dd8240def82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "106341969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118211806"
 ---
-# <a name="changes-in-dx9-legacy-hardware-support"></a>Änderungen in DX9 Legacy Hardwareunterstützung
+# <a name="changes-in-dx9-legacy-hardware-support"></a>Änderungen an der DX9-Legacyhardwareunterstützung
 
 ## <a name="platform"></a>Plattform
 
 **Clients** – Windows 8 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Intel und AMD/ATI unterstützen Ihre DX9-Grafik Teile nicht mehr und aktualisieren die Treiber für diese Geräte nicht für Windows 8. Außerdem werden diese Geräte nicht in Box für Windows 8 behandelt. Die letzten Treiber für diese Geräte sind auf Wu und auf den Websites von OEM/IHV verfügbar. viele Datumsangaben von Vista, und viele dieser endgültigen Versions Treiber zeigen Probleme unter Windows 8 an. Außerdem hat NVIDIA vor kurzem festgestellt, dass Ihre DX9-(Vista und ältere) mobilen (Notebook-) Teile für Windows 8 nicht unterstützt werden. Sie unterstützen weiterhin Ihre Desktop-DX9-Teile.
+Intel und AMD/ATI unterstützen ihre DX9-Grafikteile nicht mehr und aktualisieren keine Treiber für diese Geräte für Windows 8. Darüber hinaus werden diese Geräte nicht im Feld für Windows 8. Die letzten Treiber für diese Geräte sind diejenigen, die auf WU und auf den Websites des OEM/IHV verfügbar sind. viele Datums- und Zielversionen von Vista, und viele dieser endgültigen Versionstreiber weisen Probleme Windows 8. Darüber hinaus hat nVidia kürzlich erklärt, dass sie ihre DX9-Teile (Vista und ältere) mobile (Notebook)-Teile für Windows 8. Sie unterstützen weiterhin ihre DX9-Desktopteile.
 
-Alle diese Treiber/Teil-Kombinationen finden Sie in der Internet Explorer 9-Software Fall Back Liste. Dies bedeutet, dass Internet Explorer 9 aus Leistungs-oder Stabilitätsgründen das Software Rendering auf diesen Geräten verwendet. Dies ist ein guter Hinweis darauf, dass die Verwendung von Windows Store-Apps für diese Treiber und Teile nicht zufriedenstellend ist.
+Alle diese Treiber-/Teilkombinationen befinden sich in der Internet Explorer 9-Softwarefallbackliste. Dies bedeutet, dass Internet Explorer 9 aus Leistungs- oder Stabilitätsgründen Softwarerendering auf diesen Geräten verwendet. Dies ist ein guter Hinweis darauf, dass die Erfahrung mit Windows Store-Apps für diese Treiber und Teile nicht zufriedenstellend ist.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Da es keine Unterstützung für diese Geräte gibt, werden viele Benutzer mit diesen Teilen auf dem Microsoft Basic-Anzeigetreiber ausgeführt. Dabei handelt es sich um eine auf Warp basierende WDDM 1,2-softwaregpu, die tatsächlich schneller ist als einige der Teile in dieser Klasse, z. b. die Intel GMA500-Serie). Es werden Aero-Glass und DWM unterstützt, und es können Windows Store-Apps ausgeführt werden.
+Da für diese Geräte keine unterstützungsbasierte Unterstützung verfügbar ist, werden viele Benutzer mit diesen Teilen auf dem Microsoft Basic-Anzeigetreiber ausgeführt. Dies ist eine WARP-basierte WDDM 1.2-Software-GPU und ist tatsächlich schneller als einige teile in dieser Klasse, z. B. die Intel GMA500-Serie). Es unterstützt Die-Glass-App und DWM und kann Windows Store ausführen.
 
-Es bestehen jedoch einige wichtige Einschränkungen:
+Es gelten jedoch einige wichtige Einschränkungen:
 
--   Es unterstützt nicht mehrere Monitore oder Projektionen.
--   Der Standbymodus wird nicht unterstützt, obwohl er Ruhe Zustands unterstützt.
--   Das Ändern der Bildschirmauflösung wird häufig nicht zugelassen.
+-   Mehrere Monitore oder Projektionen werden nicht unterstützt.
+-   Der Ruhezustand wird nicht unterstützt, aber der Ruhezustand wird unterstützt.
+-   Häufig ist es nicht möglich, die Bildschirmauflösung zu ändern.
 
 ## <a name="mitigation"></a>Minderung
 
-Wenn Sie nach dem Testen feststellen, dass die Benutzer Leistung nicht akzeptabel ist, können Sie Hardwareanforderungen für Ihre Produkte festlegen, die diese älteren DX9 Intel-und AMD-Komponenten ausschließen. Sie können auch eine Warnung für Ihre Kunden angeben, dass Sie für diese Teile möglicherweise nicht akzeptabel sind.
+Wenn Sie nach dem Testen feststellen, dass die Benutzeroberfläche nicht akzeptabel ist, können Sie Hardwareanforderungen für die Produkte festlegen, die diese älteren DX9 Intel- und AMD-Teile ausschließen. Sie können Ihre Kunden auch darauf aufmerksam machen, dass sie in diesen Teilen möglicherweise eine inakzeptable Erfahrung haben.
 
 ## <a name="tests"></a>Tests
 
-Bewerten Sie die Leistung und die Leistung auf diesen Geräten:
+Bewerten Sie die Leistung und Benutzererfahrung auf diesen Geräten:
 
--   Wie sieht die endgültige Treiber Version aus?
--   Wie sieht das auf msbdd aus?
+-   Wie sieht die Erfahrung mit der endgültigen verfügbaren Treiberversion aus?
+-   Wie sieht die Erfahrung auf dem MSBDD aus?
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die \_ Typstruktur der druckerbenachrichtigungsoptionen \_ \_ gibt den Satz von Druckern oder Auftrags Informationsfeldern an, die von einem Benachrichtigungs Objekt für Drucker Änderungen überwacht werden sollen. Ein aufzurufende "findfirstprinterchangenotifi"-Funktion gibt eine Drucker \_ Benachrichtigungs \_ Optionen-Struktur an, die ein Array von Optionen für die \_ \_ Typstrukturen der Drucker Benachrichtigung enthält \_ .
+description: Die \_ PRINTER NOTIFY \_ OPTIONS \_ TYPE-Struktur gibt die Gruppe von Drucker- oder Auftragsinformationsfeldern an, die von einem Druckeränderungsbenachrichtigungsobjekt überwacht werden sollen. Ein Aufruf der FindFirstPrinterChangeNotification-Funktion gibt eine PRINTER \_ NOTIFY \_ OPTIONS-Struktur an, die ein Array von \_ PRINTER NOTIFY OPTIONS \_ \_ TYPE-Strukturen enthält.
 ms.assetid: 1009f892-d3a8-4887-99b4-a35d1268eeb4
-title: PRINTER_NOTIFY_OPTIONS_TYPE Struktur (winspool. h)
+title: PRINTER_NOTIFY_OPTIONS_TYPE-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 4a82d0bc0481533a65fc90d32a992c51116b4595
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b593a502a668345cdd0206b4f1363cf160074b6c9aa26696427b5b42a0fbdc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118056277"
 ---
-# <a name="printer_notify_options_type-structure"></a>Drucker \_ Benachrichtigungs \_ Optionen \_ Typstruktur
+# <a name="printer_notify_options_type-structure"></a>\_STRUKTUR DES TYPS "DRUCKERBENACHRICHTIGUNGSOPTIONEN" \_ \_
 
-Die **\_ \_ \_ Typstruktur der druckerbenachrichtigungsoptionen** gibt den Satz von Druckern oder Auftrags Informationsfeldern an, die von einem Benachrichtigungs Objekt für Drucker Änderungen überwacht werden sollen.
+Die **PRINTER NOTIFY OPTIONS \_ \_ \_ TYPE-Struktur** gibt die Gruppe von Drucker- oder Auftragsinformationsfeldern an, die von einem Druckeränderungsbenachrichtigungsobjekt überwacht werden sollen.
 
-Ein aufzurufende " [**findfirstprinterchangenotifi"**](findfirstprinterchangenotification.md) -Funktion gibt eine [**Drucker \_ Benachrichtigungs \_ Optionen**](printer-notify-options.md) -Struktur an, die ein Array von Optionen für die **\_ \_ \_ Typstrukturen der Drucker Benachrichtigung** enthält.
+Ein Aufruf der [**FindFirstPrinterChangeNotification-Funktion**](findfirstprinterchangenotification.md) gibt eine [**PRINTER NOTIFY \_ \_ OPTIONS-Struktur**](printer-notify-options.md) an, die ein Array von **PRINTER NOTIFY OPTIONS \_ \_ \_ TYPE-Strukturen** enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ typedef struct _PRINTER_NOTIFY_OPTIONS_TYPE {
 
 <dl> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Der Typ, der überwacht werden soll. Dieser Member kann einen der folgenden Werte aufweisen.
+Der Typ, der überwacht werden soll. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                                                      | Bedeutung                                                                                                           |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| <span id="JOB_NOTIFY_TYPE"></span><span id="job_notify_type"></span><dl> <dt>**Auftrag \_ Benachrichtigen von \_ Typ**</dt> <dt>0x01</dt> </dl>             | Gibt an, dass die im **pfields** -Array angegebenen Felder Auftrags \_ Benachrichtigungs \_ Feld \_ \* Konstanten sind.<br/>     |
-| <span id="PRINTER_NOTIFY_TYPE"></span><span id="printer_notify_type"></span><dl> <dt>**Drucker \_ Benachrichtigen von \_ Typ**</dt> <dt>0x00</dt> </dl> | Gibt an, dass die im **pfields** -Array angegebenen Felder Drucker \_ Benachrichtigungs \_ Feld \_ \* Konstanten sind.<br/> |
+| <span id="JOB_NOTIFY_TYPE"></span><span id="job_notify_type"></span><dl> <dt>**JOB \_ NOTIFY \_ TYPE**</dt> <dt>0x01</dt> </dl>             | Gibt an, dass die im **pFields-Array angegebenen** Felder JOB \_ NOTIFY \_ \_ \* FIELD-Konstanten sind.<br/>     |
+| <span id="PRINTER_NOTIFY_TYPE"></span><span id="printer_notify_type"></span><dl> <dt>**DRUCKER \_ NOTIFY \_ TYPE**</dt> <dt>0x00</dt> </dl> | Gibt an, dass die im **pFields-Array angegebenen** Felder PRINTER \_ NOTIFY \_ \_ \* FIELD-Konstanten sind.<br/> |
 
 
 
@@ -64,7 +64,7 @@ Der Typ, der überwacht werden soll. Dieser Member kann einen der folgenden Wert
 
 </dd> <dt>
 
-**Reserved0**
+**Reserviert 0**
 </dt> <dd>
 
 Reserviert.
@@ -78,7 +78,7 @@ Reserviert.
 
 </dd> <dt>
 
-**"Reserved2"**
+**Reserviert 2**
 </dt> <dd>
 
 Reserviert.
@@ -88,14 +88,14 @@ Reserviert.
 **Count**
 </dt> <dd>
 
-Die Anzahl der Elemente im **pfields** -Array.
+Die Anzahl der Elemente im **pFields-Array.**
 
 </dd> <dt>
 
-**pfields**
+**pFields**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von-Werten. Jedes Element des Arrays gibt das gewünschte Feld für Aufträge oder Drucker Informationen an. Eine Liste der unterstützten Felder für Drucker und Auftrags Informationen finden Sie in der [**\_ \_ \_ Daten**](printer-notify-info-data.md) Struktur zum Benachrichtigen von Drucker Informationen.
+Ein Zeiger auf ein Array von Werten. Jedes Element des Arrays gibt ein gewünschtes Auftrags- oder Druckerinformationsfeld an. Eine Liste der unterstützten Drucker- und Auftragsinformationsfelder finden Sie in der Struktur [**PRINTER \_ NOTIFY INFO \_ \_ DATA.**](printer-notify-info-data.md)
 
 </dd> </dl>
 
@@ -107,27 +107,27 @@ Ein Zeiger auf ein Array von-Werten. Jedes Element des Arrays gibt das gewünsch
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Findfirstprinterchangenotifizierung**](findfirstprinterchangenotification.md)
+[**FindFirstPrinterChangeNotification**](findfirstprinterchangenotification.md)
 </dt> <dt>
 
-[**\_ \_ Info \_ Daten für Drucker Benachrichtigen**](printer-notify-info-data.md)
+[**INFODATEN \_ FÜR DRUCKERBENACHRICHTIGUNGEN \_ \_**](printer-notify-info-data.md)
 </dt> <dt>
 
-[**Drucker \_ Benachrichtigungs \_ Optionen**](printer-notify-options.md)
+[**\_OPTIONEN FÜR \_ DRUCKERBENACHRICHTIGUNGEN**](printer-notify-options.md)
 </dt> </dl>
 
  

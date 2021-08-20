@@ -3,7 +3,7 @@ title: IWMPStringCollection Item-Methode
 description: Die Item-Methode gibt die Zeichenfolge am angegebenen Index zurück.
 ms.assetid: 77546cb2-eda5-4bb8-97b9-55270461815f
 keywords:
-- Elementmethoden-Windows Media Player
+- Item-Methode Windows Media Player
 - Item-Methode Windows Media Player , IWMPStringCollection-Schnittstelle
 - IWMPStringCollection-Schnittstelle Windows Media Player , Item-Methode
 topic_type:
@@ -82,7 +82,7 @@ Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

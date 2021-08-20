@@ -3,7 +3,7 @@ title: WM/Zeitraum
 description: Das WM/Period-Attribut enthält den Zeitraum des Inhalts.
 ms.assetid: 16c9d862-8d38-40cc-ae04-178cdea1f750
 keywords:
-- WM/Period-Windows-Medienformat
+- WM/Zeitraumfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -29,7 +29,7 @@ g \_ wszWMPeriod
 
 ## <a name="data-type"></a>Datentyp
 
-**\_WMT-TYPZEICHENFOLGE \_**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="example"></a>Beispiel
 
@@ -37,13 +37,13 @@ g \_ wszWMPeriod
 
 | Dateityp | Beispielwert |
 |-----------|---------------|
-| Audio     | "Besendung"     |
+| Audio     | "100"     |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

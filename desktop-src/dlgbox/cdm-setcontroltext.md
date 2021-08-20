@@ -1,9 +1,9 @@
 ---
-title: CDM_SETCONTROLTEXT (Commdlg.h)
-description: Legt den Text für das angegebene Steuerelement im Dialogfeld Öffnen oder Speichern unter im Explorer-Stil fest.
+title: CDM_SETCONTROLTEXT Meldung (Commdlg.h)
+description: Legt den Text für das angegebene Steuerelement im Explorer-Stil im Dialogfeld Öffnen oder Speichern unter fest.
 ms.assetid: ff0e50b7-a14d-40d1-8576-f93a612f3aa3
 keywords:
-- CDM_SETCONTROLTEXT Meldungsdialogfelder
+- Dialogfelder für CDM_SETCONTROLTEXT Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89c82a9144717224871caecf44da352a4e01cac2
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 75071d465d01be024a97047a134c080226f252a1bd1ffcd41dbecd4f0d469cff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110550125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117721325"
 ---
-# <a name="cdm_setcontroltext-message"></a>CDM \_ SETCONTROLTEXT-Meldung
+# <a name="cdm_setcontroltext-message"></a>CDM \_ SETCONTROLTEXT-Nachricht
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
 
-Legt den Text für das angegebene  Steuerelement im Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** fest. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Legt den Text für das angegebene Steuerelement im Explorer-Stil im Dialogfeld **Öffnen** oder **Speichern unter** fest. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -74,11 +74,11 @@ void CommDlg_OpenSave_SetControlText(hwnd, wparam, lparam)
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (einschließlich Windows.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

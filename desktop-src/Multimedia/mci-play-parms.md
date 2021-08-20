@@ -1,6 +1,6 @@
 ---
-title: MCI_PLAY_PARMS-Struktur (mciapi. h)
-description: Die MCI-Wiedergabe-Parametern- \_ \_ Struktur enthält Positionsinformationen für den MCI \_ Play-Befehl.
+title: MCI_PLAY_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ PLAY \_ PARMS-Struktur enthält Positionierungsinformationen für den MCI \_ PLAY-Befehl.
 ms.assetid: f1bacf61-ec14-4391-b227-20b35c0bbbc3
 keywords:
 - MCI_PLAY_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f207737d4eb93e280355d0e5041b6e7bfc1b3048
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7bd45269cd74d15d2326bf4c6528d5778ef7a5a35e40dfd2a74134afafdbcb8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117803471"
 ---
-# <a name="mci_play_parms-structure"></a>MCI-Wiedergabe-Parametern- \_ \_ Struktur
+# <a name="mci_play_parms-structure"></a>MCI \_ PLAY \_ PARMS-Struktur
 
-Die **MCI- \_ Wiedergabe- \_ Parametern** -Struktur enthält Positionsinformationen für den [**MCI \_ Play**](mci-play.md) -Befehl.
+Die **MCI \_ PLAY \_ PARMS-Struktur** enthält Positionierungsinformationen für den [**MCI \_ PLAY-Befehl.**](mci-play.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Wiedergabe Position
+Position, aus der wiedergegeben werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position der Wiedergabe.
+Position, an der wiedergegeben werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,21 +75,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Play**](mci-play.md)
+[**MCI \_ PLAY**](mci-play.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

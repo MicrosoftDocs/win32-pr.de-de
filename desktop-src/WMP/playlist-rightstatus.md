@@ -21,7 +21,7 @@ ms.locfileid: "118336563"
 ---
 # <a name="playlistrightstatus"></a>PLAYLIST.rightStatus
 
-Das **rightStatus-Attribut** gibt den Statustext an, der rechts und unten im **PLAYLIST-Element** angezeigt wird, oder ruft diesen ab.
+Das **rightStatus-Attribut** gibt den Statustext an, der rechts und unten im PLAYLIST-Element angezeigt wird, oder **ruft diesen** ab.
 
 ``` syntax
         elementID.rightStatus
@@ -29,7 +29,7 @@ Das **rightStatus-Attribut** gibt den Statustext an, der rechts und unten im **P
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -39,12 +39,12 @@ Die folgenden Schlüsselwörter können verwendet werden.
 
 
 
-| Stichwort               | BESCHREIBUNG                                                                                                                                                                                                  |
+| Stichwort               | Beschreibung                                                                                                                                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | count                 | Anzahl der Elemente in der Wiedergabeliste.                                                                                                                                                                             |
 | Größe                  | Gesamtgröße der Wiedergabeliste.                                                                                                                                                                                  |
 | duration              | Gesamtdauer der Wiedergabeliste.                                                                                                                                                                              |
-| *Xxx*                 | Führt eine **getItemInfo** in der Wiedergabeliste aus, wobei *XXX* das zu empfangende Element ist.                                                                                                                                 |
+| *Xxx*                 | Führt eine **getItemInfo für** die Wiedergabeliste aus, bei der *XXX* das zu empfangende Element ist.                                                                                                                                 |
 | SelectedSize          | Gesamtgröße der ausgewählten Einträge in der Wiedergabeliste.                                                                                                                                                          |
 | SelectedCount         | Gesamtanzahl der ausgewählten Einträge in der Wiedergabeliste.                                                                                                                                                            |
 | SelectedDuration      | Gesamtdauer der ausgewählten Einträge in der Wiedergabeliste.                                                                                                                                                      |
@@ -52,7 +52,7 @@ Die folgenden Schlüsselwörter können verwendet werden.
 | CheckedDuration       | Gesamtdauer der überprüften Spuren in der Wiedergabeliste.                                                                                                                                                        |
 | CheckedSize           | Gesamtgröße der überprüften Spuren in der Wiedergabeliste.                                                                                                                                                            |
 | DurationString        | Zeigt Text an, der die Dauer als "Gesamtzeit" oder "Geschätzte Zeit" beschreibt, je nachdem, ob die Gesamtwerte bekannt sind. Auf diesen Text folgt "%duration%".                                       |
-| CheckedDurationString | Zeigt Text an, der die Dauer aller aktivierten Elemente in der Wiedergabeliste als "Gesamtzeit" oder "Geschätzte Zeit" beschreibt, je nachdem, ob die Gesamtwerte bekannt sind. Auf diesen Text folgt "%duration%". |
+| CheckedDurationString | Zeigt Text an, der die Dauer für alle überprüften Elemente in der Wiedergabeliste als "Gesamtzeit" oder "Geschätzte Zeit" beschreibt, je nachdem, ob die Gesamtwerte bekannt sind. Auf diesen Text folgt "%duration%". |
 
 
 
@@ -70,7 +70,7 @@ Der Wert "Gesamtzeit: %duration%" für eine Wiedergabeliste, die eine Gesamtdaue
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

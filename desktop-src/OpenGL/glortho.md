@@ -1,9 +1,9 @@
 ---
-title: glortho-Funktion (GL. h)
-description: Die glortho-Funktion multipliziert die aktuelle Matrix mit einer orthografischen Matrix.
+title: glOrtho-Funktion (Gl.h)
+description: Die glOrtho-Funktion multipliziert die aktuelle Matrix mit einer orthografischen Matrix.
 ms.assetid: 5c70819f-e9b6-49e2-add5-9f6e6aba26ee
 keywords:
-- glortho-Funktion OpenGL
+- glOrtho-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46abbb0edd2dfc7fc51aaf7fa6519dc5367b109c
-ms.sourcegitcommit: 7ef31bf778e76ce4196205d4c4c632fbdc649805
+ms.openlocfilehash: b1e06c1740e908c34652a6d39bc7a2334763199d222ff9d1dc00ae733803ada0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "104560255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117795223"
 ---
-# <a name="glortho-function"></a>glortho-Funktion
+# <a name="glortho-function"></a>glOrtho-Funktion
 
-Die **glortho** -Funktion multipliziert die aktuelle Matrix mit einer orthografischen Matrix.
+Die **glOrtho-Funktion** multipliziert die aktuelle Matrix mit einer orthografischen Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void WINAPI glOrtho(
 
 <dl> <dt>
 
-*linken* 
+*Links* 
 </dt> <dd>
 
 Die Koordinaten für die linke vertikale Clippingebene.
@@ -59,31 +59,31 @@ Die Koordinaten für die vertikale Clippingebene.
 
 </dd> <dt>
 
-*unten* 
+*Unteres* 
 </dt> <dd>
 
-Die Koordinaten für die untere horizontale Clippingebene.
+Die Koordinaten für die untere horizontale Ausschneideebene.
 
 </dd> <dt>
 
 *top* 
 </dt> <dd>
 
-Die Koordinaten für die oberen horizontalen clippingpläne.
+Die Koordinaten für die oberen horizontalen Ausschneidepläne.
 
 </dd> <dt>
 
-*znear* 
+*zNear* 
 </dt> <dd>
 
-Die Abstände zur näheren Ausschneide Ebene. Diese Distanz ist negativ, wenn sich die Ebene hinter dem Viewer befinden soll.
+Die Entfernungen zur näheren Abschneideebene der Tiefe. Dieser Abstand ist negativ, wenn sich die Ebene hinter dem Viewer befinden soll.
 
 </dd> <dt>
 
-*zfar* 
+*zFar* 
 </dt> <dd>
 
-Die Abstände zur weiteren tiefen Clippingebene. Diese Distanz ist negativ, wenn sich die Ebene hinter dem Viewer befinden soll.
+Die Entfernungen zur weiter entfernten Tiefenabschneideebene. Dieser Abstand ist negativ, wenn sich die Ebene hinter dem Viewer befinden soll.
 
 </dd> </dl>
 
@@ -93,39 +93,39 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glortho** -Funktion beschreibt eine perspektivische Matrix, die eine parallele Projektion erzeugt. Mit den Parametern (*left*, *Bottom*, *near*) und (*right*, *Top*, *near*) werden die Punkte auf der Near Clipping-Ebene angegeben, die der unteren linken und oberen rechten Ecke des Fensters zugeordnet sind, vorausgesetzt, das Auge befindet sich bei (0, 0,0). Der *Far* -Parameter gibt den Speicherort der weit entfernten Clippingebene an. *Znear* und *zfar* können entweder positiv oder negativ sein. Die entsprechende Matrix ist in der folgenden Abbildung dargestellt.
+Die **glOrtho-Funktion** beschreibt eine Perspektivenmatrix, die eine parallele Projektion erzeugt. Die Parameter (*links*, *unten*, *in der Nähe*) und (*rechts*, *oben*, in *der Nähe*) geben die Punkte auf der nähen Clippingebene an, die den unteren linken bzw. oberen rechten Ecken des Fensters zugeordnet sind, vorausgesetzt, das Auge befindet sich bei (0, 0, 0). Der *far-Parameter* gibt die Position der fernen Clippingebene an. Sowohl *zNear* als *auch zFar* können entweder positiv oder negativ sein. Die entsprechende Matrix ist in der folgenden Abbildung dargestellt.
 
-![Diagramm mit der Perspektiven Matrix, die von der Funktion "glortho" beschrieben wird.](images/ortho1.png)
+![Diagramm der perspektivenmatrix, die von der glOrtho-Funktion beschrieben wird.](images/ortho1.png)
 
 where
 
-![Gleichungen, die die Perspektiven Matrix beschreiben.](images/ortho2.png)
+![Gleichungen, die die Perspektivenmatrix beschreiben.](images/ortho2.png)
 
-Die aktuelle Matrix wird mit dieser Matrix multipliziert, wobei die aktuelle Matrix durch das Ergebnis ersetzt wird. Das heißt, wenn m die aktuelle Matrix und O die Ortho-Matrix ist, wird m durch m o ersetzt.
+Die aktuelle Matrix wird mit dieser Matrix multipliziert, wobei das Ergebnis die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und O die Orthomatrix ist, wird M durch M O ersetzt.
 
-Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und **glPopMatrix** , um den aktuellen Matrix Stapel zu speichern und wiederherzustellen. Verwenden Sie [**glMatrixMode**](glmatrixmode.md) , um die aktuelle Matrix festzulegen.
+Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und **glPopMatrix,** um den aktuellen Matrixstapel zu speichern und wiederherzustellen. Verwenden Sie [**glMatrixMode,**](glmatrixmode.md) um die aktuelle Matrix festzulegen.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glortho** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glOrtho** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
 
-**glget** mit dem Argument GL \_ Modelview \_ Matrix
+**glGet** mit argument GL \_ MODELVIEW \_ MATRIX
 
-**glget** mit dem Argument GL- \_ Projektions \_ Matrix
+**glGet** mit argument GL \_ PROJECTION \_ MATRIX
 
-**glget** mit Argument GL- \_ Textur \_ Matrix
+**glGet** mit argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,13 +135,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glortho*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -151,13 +151,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glortho*
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glfrustum**](glfrustum.md)
+[**glFrustum**](glfrustum.md)
 </dt> <dt>
 
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
 [**glPushMatrix**](glpushmatrix.md)

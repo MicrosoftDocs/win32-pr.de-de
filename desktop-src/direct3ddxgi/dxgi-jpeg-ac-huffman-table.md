@@ -64,7 +64,7 @@ Die Huffman-Codewerte in der Reihenfolge, in der die Codelänge erhöht wird.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

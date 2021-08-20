@@ -1,9 +1,9 @@
 ---
 title: comm_status-Attribut
-description: Das Attribut \ comm \_ Status \ ACF bewirkt, dass ein Fehlercode zurückgegeben wird, wenn während der Ausführung einer Funktion ein Kommunikationsfehler auftritt.
+description: Das Attribut \comm \_ status\ACF bewirkt, dass ein Fehlercode zurückgegeben wird, wenn während der Ausführung einer Funktion ein Kommunikationsfehler auftritt.
 ms.assetid: 3ea9ce62-8bd4-40fe-b838-bfebd52b5a15
 keywords:
-- comm_status Attribut-Mittel l
+- comm_status-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd4952d03a80dbbffb135043d024b0c0eb18966f
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 719f66d6849a21d67d9349a9e9fd728defb4a0663e4436701d06f20209f4d5b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384700"
 ---
-# <a name="comm_status-attribute"></a>comm- \_ Status Attribut
+# <a name="comm_status-attribute"></a>\_comm-Statusattribut
 
-Das **\[ \_ Status \]** -ACF-Attribut von comm bewirkt, dass ein Fehlercode zurückgegeben wird, wenn während der Ausführung einer Funktion ein Kommunikationsfehler auftritt.
+Das ACF-Attribut für **\[ den \_ Comm-Status \]** bewirkt, dass ein Fehlercode zurückgegeben wird, wenn während der Ausführung einer Funktion ein Kommunikationsfehler auftritt.
 
 ``` syntax
 [comm_status [ , ACF-function-attributes ] ] 
@@ -38,66 +38,66 @@ Das **\[ \_ Status \]** -ACF-Attribut von comm bewirkt, dass ein Fehlercode zur�
 
 <dl> <dt>
 
-*ACF-Function-Attribute* 
+*ACF-funktionsattribute* 
 </dt> <dd>
 
-Gibt NULL oder mehr ACF-Funktions Attribute an, wie z. b. den **\[ comm- \_ Status \]** und **\[** [**NoCode**](nocode.md) **\]** . Funktions Attribute werden in eckige Klammern eingeschlossen. NULL oder mehr Attribute können auf eine Funktion angewendet werden. Trennen Sie mehrere Funktions Attribute durch Kommas. Beachten Sie Folgendes: Wenn der Kommunikations **\[ \_ Status \]** als Funktions Attribut angezeigt wird, kann er nicht auch als Parameter Attribut angezeigt werden.
+Gibt null oder mehr ACF-Funktionsattribute an, z. B. **\[ comm \_ \] status** und **\[** [**nocode**](nocode.md) **\]** . Funktionsattribute werden in eckige Klammern eingeschlossen. Null oder mehr Attribute können auf eine Funktion angewendet werden. Trennen Sie mehrere Funktionsattribute durch Kommas. Beachten Sie, dass der Comm-Status nicht auch als Parameterattribut angezeigt werden kann, wenn der **\[ \_ Comm-Status \]** als Funktionsattribut angezeigt wird.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion an, wie in der IDL-Datei definiert.
 
 </dd> <dt>
 
-*ACF-Parameter-Attribute* 
+*ACF-parameter-attributes* 
 </dt> <dd>
 
-Gibt Attribute an, die auf einen Parameter angewendet werden. Beachten Sie, dass 0 (null), ein oder mehrere Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameter Attribute durch Kommas. Parameter Attribute werden in eckige Klammern eingeschlossen. IDL-Parameter Attribute, z. b. direktionale Attribute, sind in der ACF nicht zulässig. Beachten Sie Folgendes: Wenn der Kommunikations **\[ \_ Status \]** als Parameter Attribut angezeigt wird, kann er nicht auch als Funktions Attribut angezeigt werden.
+Gibt Attribute an, die auf einen Parameter angewendet werden. Beachten Sie, dass null, ein oder mehrere Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameterattribute durch Kommas. Parameterattribute werden in eckige Klammern eingeschlossen. IDL-Parameterattribute, z. B. richtungsale Attribute, sind in ACF nicht zulässig. Wenn **\[ der \_ Comm-Status \]** als Parameterattribut angezeigt wird, kann er nicht auch als Funktionsattribut angezeigt werden.
 
 </dd> <dt>
 
-*Parameter Name* 
+*Parametername* 
 </dt> <dd>
 
-Gibt den Parameter für die Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in derselben Reihenfolge angegeben werden. dabei wird derselbe Name verwendet, der in der IDL-Datei definiert ist.
+Gibt den Parameter für die Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in derselben Sequenz angegeben werden, wobei der gleiche Name wie in der IDL-Datei definiert wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ comm \_ - \] Status** Attribut kann entweder als Funktions Attribut oder als Parameter Attribut verwendet werden, es kann jedoch nur einmal pro Funktion angezeigt werden. Sie kann entweder auf die Funktion oder auf einen Parameter in jeder Funktion angewendet werden.
+Das **\[ \_ comm-Statusattribut \]** kann entweder als Funktionsattribut oder als Parameterattribut verwendet werden, kann aber nur einmal pro Funktion angezeigt werden. Sie kann entweder auf die Funktion oder auf einen Parameter in jeder Funktion angewendet werden.
 
-Das **\[ comm \_ - \] Status** Attribut kann nur auf Funktionen angewendet werden, die den [**Typfehler \_ Status \_ t**](error-status-t.md)zurückgeben. Wenn während der Ausführung der Funktion ein Kommunikationsfehler auftritt, wird ein Fehlercode zurückgegeben.
+Das **\[ \_ Comm-Statusattribut \]** kann nur auf Funktionen angewendet werden, die den [**\_ Typfehlerstatus \_ t**](error-status-t.md)zurückgeben. Wenn während der Ausführung der Funktion ein Kommunikationsfehler auftritt, wird ein Fehlercode zurückgegeben.
 
-Wenn der **\[ \_ Status \] "comm** " als Parameter Attribut verwendet wird, muss der Parameter in der IDL-Datei definiert werden, und er muss ein **\[** [**out**](out-idl.md) - **\]** Parameter vom Typ " [**Error \_ Status \_ t**](error-status-t.md)" sein. Wenn während der Ausführung der Funktion ein Kommunikationsfehler auftritt, wird der-Parameter auf den Fehlercode festgelegt. Wenn der Remote-Befehl erfolgreich abgeschlossen wurde, legt die Prozedur den Wert fest.
+Wenn **\[ comm \_ status \]** als Parameterattribut verwendet wird, muss der Parameter in der IDL-Datei definiert werden und ein **\[** [**Out-Parameter**](out-idl.md) **\]** vom Typ [**\_ Fehlerstatus \_ t**](error-status-t.md)sein. Wenn während der Ausführung der Funktion ein Kommunikationsfehler auftritt, wird der -Parameter auf den Fehlercode festgelegt. Wenn der Remoteaufruf erfolgreich abgeschlossen wurde, legt die Prozedur den Wert fest.
 
-Die Attribute " **\[ comm \_ \] Status** " und " **\[** [**Fehler \_ Status**](fault-status.md) " können **\]** in einer einzelnen Funktion, entweder als Funktions Attribute oder Parameter Attribute, angezeigt werden. Wenn beide Attribute Funktions Attribute sind oder wenn Sie auf denselben Parameter angewendet werden und kein Fehler auftritt, hat die Funktion oder der Parameter den Wert **Fehler \_ Status \_ OK**. Andernfalls enthält Sie den entsprechenden Statuswert für den **\[ comm \_ \]** -oder **\[ Fehler \_ Status \]** . Da die für den Kommunikations **\[ \_ Status \]** zurückgegebenen Werte sich von den für den **\[ Fehler \_ \] Status** zurückgegebenen Werten unterscheiden, werden die zurückgegebenen Werte leicht interpretiert.
+Es ist möglich, dass sowohl die Attribute **\[ comm \_ status \]** als auch **\[** [**fault \_ status**](fault-status.md) **\]** in einer einzelnen Funktion angezeigt werden, entweder als Funktionsattribute oder als Parameterattribute. Wenn beide Attribute Funktionsattribute sind oder für denselben Parameter gelten und kein Fehler auftritt, hat die Funktion oder der Parameter den Wert **\_ fehlerstatus \_ ok**. Andernfalls enthält sie den entsprechenden **\[ \_ Comm-Status \]** oder **\[ \_ \] Fehlerstatuswert.** Da sich die für **\[ comm \_ status \]** zurückgegebenen Werte von den für den **\[ \_ Fehlerstatus \]** zurückgegebenen Werten unterscheiden, werden die zurückgegebenen Werte sofort interpretiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
-[**Fehler \_ Status \_ t**](error-status-t.md)
+[**Fehlerstatus \_ \_ t**](error-status-t.md)
 </dt> <dt>
 
-[**Fehler \_ Status**](fault-status.md)
+[**\_Fehlerstatus**](fault-status.md)
 </dt> <dt>
 
-[**NoCode**](nocode.md)
+[**nocode**](nocode.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: D3DXSHDot-Funktion (D3dx9math.h) – Berechnet das Punktprodukt von zwei SH-Vektoren (PhericalIcalIcal, PhericalIcalIcal).
+description: 'D3DXSHDot-Funktion (D3dx9math.h): Berechnet das Punktprodukt von zwei Sphärischen Vektoren (SH).'
 ms.assetid: 71b7480d-ddac-4b02-bca7-d9318823d03e
 title: D3DXSHDot-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 87f88c7c7b80871a68084607cb99621199dfcc0a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d9c852bd93f839d371aa86886cd06769f79fe635986566ed592f8f5313ee8084
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731180"
 ---
 # <a name="d3dxshdot-function-d3dx9mathh"></a>D3DXSHDot-Funktion (D3dx9math.h)
 
-Berechnet das Punktprodukt von zwei SH-Vektoren (PhericalIcal).
+Berechnet das Punktprodukt von zwei sphärischen, farbigen Vektoren (SH).
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ FLOAT D3DXSHDot(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der Sh-Auswertung (PhericalIcalIcal). Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Die Reihenfolge der SH-Auswertung (SphericalLips). Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -75,9 +75,9 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m + l" gespeichert, wobei:
+Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
 -   l ist der Grad der Basisfunktion.
 -   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis l einschließlich.
@@ -86,7 +86,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

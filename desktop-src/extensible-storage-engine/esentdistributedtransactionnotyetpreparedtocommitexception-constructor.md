@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdistributedtransaktionnotyetprepareddecommitexception-Konstruktor'
-title: Esentdistributedtransaktionnotyetprepareddecommitexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDistributedTransactionNotYetPreparedToCommitException-Konstruktor'
+title: EsentDistributedTransactionNotYetPreparedToCommitException-Konstruktor
 TOCTitle: 'EsentDistributedTransactionNotYetPreparedToCommitException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDistributedTransactionNotYetPreparedToCommitException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdistributedtransactionnotyetpreparedtocommitexception.esentdistributedtransactionnotyetpreparedtocommitexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1e1a2a3c983c49f47ecb8115a6934f3e9716cefd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: afd446f4f7288c6f31e438d0370e25aedcd7d03a8935cdc572d77fb37a9cc2e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118497030"
 ---
-# <a name="esentdistributedtransactionnotyetpreparedtocommitexception-constructor"></a>Esentdistributedtransaktionnotyetprepareddecommitexception-Konstruktor
+# <a name="esentdistributedtransactionnotyetpreparedtocommitexception-constructor"></a>EsentDistributedTransactionNotYetPreparedToCommitException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdistributedtransaktionnotyetpreparedtrecommitexception-Klasse.
+Initialisiert eine neue Instanz der EsentDistributedTransactionNotYetPreparedToCommitException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDistributedTransactionNotYetPreparedToCommitException()
 public EsentDistributedTransactionNotYetPreparedToCommitException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdistributedtransaktionnotyetpreparedycommitexception-Klasse](./esentdistributedtransactionnotyetpreparedtocommitexception-class.md)
+[EsentDistributedTransactionNotYetPreparedToCommitException-Klasse](./esentdistributedtransactionnotyetpreparedtocommitexception-class.md)
 
-[Esentdistributedtransaktionnotyetpreparedtrecommitexception-Elemente](./esentdistributedtransactionnotyetpreparedtocommitexception-members.md)
+[EsentDistributedTransactionNotYetPreparedToCommitException-Member](./esentdistributedtransactionnotyetpreparedtocommitexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

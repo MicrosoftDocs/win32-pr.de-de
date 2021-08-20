@@ -1,19 +1,19 @@
 ---
-description: Registriert eine neue appbar und gibt die Nachrichten-ID an, die vom System zum Senden von Benachrichtigungs Meldungen verwendet werden soll. Diese Nachricht sollte von einer appbar gesendet werden, bevor andere appbar-Meldungen gesendet werden.
+description: Registriert eine neue App-Leiste und gibt den Nachrichtenbezeichner an, den das System zum Senden von Benachrichtigungsmeldungen verwenden soll. Eine App-Leiste sollte diese Nachricht senden, bevor andere AppBar-Nachrichten gesendet werden.
 ms.assetid: 1da9db13-6fdc-44b3-9985-de32d572675a
-title: ABM_NEW Meldung (shellapi. h)
+title: ABM_NEW (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fad11e6712d0afd0c1a5e9de07fd3d690800db13
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 400439e6808d40eb74c18fa4219109a0abca1973cdac4dcb9de5154384fd0071
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118460967"
 ---
-# <a name="abm_new-message"></a>\_Neue Nachricht ABM
+# <a name="abm_new-message"></a>ABM \_ NEW-Nachricht
 
-Registriert eine neue appbar und gibt die Nachrichten-ID an, die vom System zum Senden von Benachrichtigungs Meldungen verwendet werden soll. Diese Nachricht sollte von einer appbar gesendet werden, bevor andere appbar-Meldungen gesendet werden.
+Registriert eine neue App-Leiste und gibt den Nachrichtenbezeichner an, den das System zum Senden von Benachrichtigungsmeldungen verwenden soll. Eine App-Leiste sollte diese Nachricht senden, bevor andere AppBar-Nachrichten gesendet werden.
 
 
 ```C++
@@ -29,23 +29,23 @@ fRegistered = (BOOL) SHAppBarMessage(ABM_NEW, pabd);
 *pabd* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur, die das Fenster Handle und den Meldungs Bezeichner der neuen App-Leiste enthält. Sie müssen die Member **CBSIZE**, **HWND** und **ucallbackmessage** angeben, wenn diese Nachricht gesendet wird. alle anderen Member werden ignoriert.
+Ein Zeiger auf eine [**APPBARDATA-Struktur,**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) die das Fensterhand handle und den Meldungsbezeichner der neuen App-Leiste enthält. Sie müssen beim Senden **dieser Nachricht die Member cbSize,** **hWnd** und **uCallbackMessage** angeben. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, oder **false** , wenn ein Fehler auftritt oder die appbar bereits registriert ist.
+Gibt **TRUE zurück,** wenn erfolgreich, oder **FALSE,** wenn ein Fehler auftritt oder die App-Leiste bereits registriert ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

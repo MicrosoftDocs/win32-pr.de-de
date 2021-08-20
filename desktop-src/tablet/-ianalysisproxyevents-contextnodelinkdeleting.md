@@ -1,7 +1,7 @@
 ---
 description: Tritt ein, bevor IInkAnalyzer ein IContextLink-Objekt zwischen zwei IContextNode-Objekten löscht.
 ms.assetid: bc9716b8-8793-4886-aff4-d880024129a6
-title: _IAnalysisProxyEvents::ContextNodeLinkDeleting-Ereignis (IACom.h)
+title: _IAnalysisProxyEvents::ContextNodeLinkDeleting -Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "118452085"
 ---
 # <a name="_ianalysisproxyeventscontextnodelinkdeleting-event"></a>\_IAnalysisProxyEvents::ContextNodeLinkDeleting-Ereignis
 
-Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) ein [**IContextLink-Objekt**](icontextlink.md) zwischen zwei [**IContextNode-Objekten**](icontextnode.md) löscht.
+Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) ein [**IContextLink-Objekt**](icontextlink.md) zwischen zwei [**IContextNode-Objekten löscht.**](icontextnode.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ HRESULT ContextNodeLinkDeleting(
 *pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Der [**IInkAnalyzer,**](iinkanalyzer.md) der den Link löscht.
+[**IInkAnalyzer löscht**](iinkanalyzer.md) den Link.
 
 </dd> <dt>
 
@@ -56,13 +56,13 @@ Das zu löschende [**IContextLink-Objekt.**](icontextlink.md)
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der Freihandanalyse oder als Reaktion auf eine **IInkAnalyzer-Methode** auf, die einen [**IContextLink**](icontextlink.md) aus einem [**IContextNode**](icontextnode.md)entfernt.
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur bei behält, die mit der von [**IInkAnalyzer synchronisiert wird.**](iinkanalyzer.md) Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine **IInkAnalyzer-Methode** auf, die einen [**IContextLink**](icontextlink.md) aus einem [**IContextNode entfernt.**](icontextnode.md)
 
-Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnaly
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

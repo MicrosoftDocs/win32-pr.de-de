@@ -66,7 +66,7 @@ Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die M
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

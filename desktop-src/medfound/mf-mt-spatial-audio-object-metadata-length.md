@@ -1,27 +1,27 @@
 ---
-description: Ein-Wert, der die Größe des Datentyps für räumliche audiometadaten angibt, der vom Decoder ausgegeben wird.
+description: Ein -Wert, der die Größe des Objekttyps räumlicher Audiometadaten in Bytes angibt, die der Decoder ausgibt.
 ms.assetid: C133693D-A8D5-4520-B561-57BF11074257
-title: MF_MT_SPATIAL_AUDIO_OBJECT_METADATA_LENGTH-Attribut (mfapi. h)
+title: MF_MT_SPATIAL_AUDIO_OBJECT_METADATA_LENGTH -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2cd0b3cab788dbc724ab896d2cbfeb0d42f633f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 784e1b210b616f4c42c2c3d410a207adc9c8c8ccaf751432cb027a7cc30cf951
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876811"
 ---
-# <a name="mf_mt_spatial_audio_object_metadata_length-attribute"></a>MF \_ \_ \_ - \_ Objekt \_ metadatenlängen-Attribut für räumliche Audioobjekte \_
+# <a name="mf_mt_spatial_audio_object_metadata_length-attribute"></a>MF \_ MT SPATIAL AUDIO OBJECT METADATA \_ \_ \_ \_ \_ LENGTH-Attribut
 
-Ein-Wert, der die Größe des Datentyps für räumliche audiometadaten angibt, der vom Decoder ausgegeben wird.
+Ein -Wert, der die Größe des Objekttyps räumlicher Audiometadaten in Bytes angibt, die der Decoder ausgibt.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das metadatenblob mit dem angegebenen Format wird mithilfe der [**ispatialaudiometadatawriter**](/windows/win32/api/spatialaudiometadata/nn-spatialaudiometadata-ispatialaudiometadatawriter) -Schnittstelle geschrieben und mithilfe der [**ispatialaudiometadatareader**](/windows/win32/api/spatialaudiometadata/nn-spatialaudiometadata-ispatialaudiometadatareader) -Schnittstelle gelesen. Das metadatenblob ist für die Media Foundation Pipeline und die Komponenten nicht transparent. Das-Attribut wird auf den Typ des räumlichen audiomediums angewendet.
+Das Metadatenblob mit dem angegebenen Format wird mithilfe der [**ISpatialAudioMetadataWriter-Schnittstelle**](/windows/win32/api/spatialaudiometadata/nn-spatialaudiometadata-ispatialaudiometadatawriter) geschrieben und mithilfe der [**ISpatialAudioMetadataReader-Schnittstelle**](/windows/win32/api/spatialaudiometadata/nn-spatialaudiometadata-ispatialaudiometadatareader) gelesen. Das Metadatenblob ist für die Media Foundation Pipeline und die Komponenten nicht transparent. Das -Attribut wird auf den Medientyp räumlicher Audiodaten angewendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Das metadatenblob mit dem angegebenen Format wird mithilfe der [**ispatialaudiom
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

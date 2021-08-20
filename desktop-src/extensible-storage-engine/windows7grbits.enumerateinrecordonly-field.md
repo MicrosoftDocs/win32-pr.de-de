@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows7Grbits. enumerateingerecordonly-Feld'
-title: Windows7Grbits. enumeratinrecordonly-Feld (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: 'Weitere Informationen finden Sie unter: Feld "Windows7Grbits.EnumerateInRecordOnly"'
+title: Feld "Windows7Grbits.EnumerateInRecordOnly" (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: EnumerateInRecordOnly field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows7.Windows7Grbits.EnumerateInRecordOnly
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.windows7grbits.enumerateinrecordonly(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3ce1cc3a10890665b8bf8c5a58675f0901f1d3fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5cc804e34ae4c07093201ea5711ac99713cb98714ac6b2a0bb12a949512fda2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117700904"
 ---
-# <a name="windows7grbitsenumerateinrecordonly-field"></a>Windows7Grbits. enumerateingerecordonly-Feld
+# <a name="windows7grbitsenumerateinrecordonly-field"></a>Feld "Windows7Grbits.EnumerateInRecordOnly"
 
 Beim Aufzählen von Spaltenwerten werden nur Daten abgerufen, die im Datensatz vorhanden sind. Dies bedeutet, dass BLOB-Spalten nicht immer abgerufen werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = Windows7Grbits.EnumerateInRecordOnly
 public const EnumerateColumnsGrbit EnumerateInRecordOnly
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows7Grbits-Klasse](./windows7grbits-class.md)
 
 [Windows7Grbits-Member](./windows7grbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

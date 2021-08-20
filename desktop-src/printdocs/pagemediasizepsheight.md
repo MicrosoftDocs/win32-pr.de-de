@@ -1,21 +1,21 @@
 ---
-description: Hier finden Sie Informationen zum PageMediaSizePSHeight-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Abrufen von Informationen zum PageMediaSizePSHeight-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 857caf51-ccf6-415c-aab3-1fed50fa7b34
 title: PageMediaSizePSHeight
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b1e7a30935c27fadb5d6ebb8dfb8f377e05a5e3
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 53af9494fe895c16fd884e06991b3072f320261e6a47d5fd7f2f06e029bff2d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117868205"
 ---
 # <a name="pagemediasizepsheight"></a>PageMediaSizePSHeight
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Höhe der Seite parallel zur Ausrichtungsrichtung des Feeds an (Referenz PostScript [Printer Description File Format Specification](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
+Gibt die Höhe der Seite parallel zur Ausrichtungsrichtung des Feeds an (Referenz PostScript Spezifikation für das Format der [Druckerbeschreibungsdatei).](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -36,7 +36,7 @@ Gibt die Höhe der Seite parallel zur Ausrichtungsrichtung des Feeds an (Referen
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageMediaSizePSHeight">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[PostScript Spezifikation des Dateiformats der Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+[PostScript Spezifikation des Druckerbeschreibungsdateiformats](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 </dt> <dt>
 
 [Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)

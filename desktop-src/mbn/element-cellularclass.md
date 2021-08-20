@@ -1,22 +1,22 @@
 ---
-description: Cellularclass
+description: CellularClass
 MS-HAID: WWAN\_profile\_v4.element\_CellularClass
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Cellularclass
+title: CellularClass
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1953d07176262aba35f54cc80c9b712002cd857
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42eedf13be21ca641d4a5b23d572c62db3a1996821a497645a61904309d216fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745131"
 ---
-# <a name="span-idwwan_profile_v4element_cellularclassspancellularclass"></a><span id="WWAN_profile_v4.element_CellularClass"></span>Cellularclass
+# <a name="span-idwwan_profile_v4element_cellularclassspancellularclass"></a><span id="WWAN_profile_v4.element_CellularClass"></span>CellularClass
 
-Gibt an, dass dieses Profil nur aktiv ist, wenn die aktuelle Mobilfunk-Klasse das angegebene ist. Andernfalls ist das Profil nicht anwendbar und kann nicht verwendet werden, um einen PDP-Kontext (Packet Data Protocol) zu aktivieren.
+Gibt an, dass dieses Profil nur aktiv ist, wenn die aktuelle Mobilfunkklasse die angegebene ist. Andernfalls ist das Profil nicht anwendbar und kann nicht zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -54,14 +54,14 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="element-profileconditionedon.md">Profileconditionedon</a></td>
+<td><a href="element-profileconditionedon.md">ProfileConditionedOn</a></td>
 <td><p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p>
-<p>Dieses Element ist neu für v4. Sie ermöglicht es Ihnen, mehrere Profile anzugeben, die unterschiedlichen Bedingungen gelten, und damit das richtige Profil automatisch verwendet wird, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie ihn nicht angeben, gilt das Profil immer in Bezug auf die aufgeführten Bedingungen.</p></td>
+<p>Dieses Element ist neu für v4. Sie können mehrere Profile angeben, die unter verschiedenen Bedingungen gelten, und das richtige Profil automatisch verwenden, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie es nicht angeben, ist das Profil immer in Bezug auf die aufgeführten Bedingungen anwendbar.</p></td>
 </tr>
 </tbody>
 </table>

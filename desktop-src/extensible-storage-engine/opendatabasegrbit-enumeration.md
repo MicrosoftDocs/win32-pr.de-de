@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der opendatabasegrbit-Enumeration.
-title: Opendatabasegrbit-Enumeration
+description: Weitere Informationen finden Sie unter OpenDatabaseGrbit-Enumeration.
+title: OpenDatabaseGrbit-Enumeration
 TOCTitle: OpenDatabaseGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.OpenDatabaseGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.opendatabasegrbit(v=EXCHG.10)
@@ -30,21 +30,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d14fb779ec02137f6a4fce1cfdd92f46dedcb832
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2bfd131d448157b44e861de4d8c167a074a3c1cefb361c3dffe085793f40c224
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890752"
 ---
-# <a name="opendatabasegrbit-enumeration"></a>Opendatabasegrbit-Enumeration
+# <a name="opendatabasegrbit-enumeration"></a>OpenDatabaseGrbit-Enumeration
 
-Optionen für [jetopendatabase (JET_SESID, String, String, JET_DBID, opendatabasegrbit)](./api.jetopendatabase-method.md).
+Optionen für [JetOpenDatabase(JET_SESID, String, String, JET_DBID, OpenDatabaseGrbit)](./api.jetopendatabase-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,14 +85,14 @@ public enum OpenDatabaseGrbit
 <tr class="odd">
 <td></td>
 <td>Exklusiv</td>
-<td>Ermöglicht nur einer einzelnen Sitzung das Anfügen einer Datenbank. In der Regel können mehrere Sitzungen eine Datenbank öffnen.</td>
+<td>Ermöglicht nur einer einzelnen Sitzung das Anfügen einer Datenbank. Normalerweise können mehrere Sitzungen eine Datenbank öffnen.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

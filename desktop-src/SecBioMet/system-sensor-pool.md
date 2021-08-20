@@ -1,49 +1,49 @@
 ---
-title: System Sensor Pool
-description: Eine Auflistung von freigegeben-biometrischen Einheiten, die Zugriff auf die Windows-Authentifizierungsdienste bieten. Dieser Pool wird von Winlogon, UAC und einem beliebigen anderen Client verwendet, der einer bestimmten biometrischen Vorlage eine SID zuordnet.
+title: Systemsensorpool
+description: Eine Sammlung von biometrischen Einheiten, die den Zugriff auf Windows Authentifizierungsdienste ermöglichen. Dieser Pool wird von Winlogon, UAC und jedem anderen Client verwendet, der eine SID einer bestimmten biometrischen Vorlage zustimmt.
 ms.assetid: 308306a9-e12c-4ff6-92c3-a36667a5e548
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 729ae9487b91b57b2e9568817c92e44b4b7197f7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3c73a187c81812355d574b6c4fb867aad8f832c504f7ec79289879565cf73bcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911613"
 ---
-# <a name="system-sensor-pool"></a>System Sensor Pool
+# <a name="system-sensor-pool"></a>Systemsensorpool
 
-Der System Sensor Pool ist eine Sammlung von shardbaren biometrischen Einheiten, die Zugriff auf die Windows-Authentifizierungsdienste bieten. Dieser Pool wird von Winlogon, UAC und einem beliebigen anderen Client verwendet, der einer bestimmten biometrischen Vorlage eine SID zuordnet. Biometrische Einheiten im System Pool:
+Der Systemsensorpool ist eine Sammlung von biometrischen Einheiten, die den Zugriff auf Windows Authentifizierungsdienste ermöglichen. Dieser Pool wird von Winlogon, UAC und jedem anderen Client verwendet, der eine SID einer bestimmten biometrischen Vorlage zustimmt. Biometrische Einheiten im Systempool:
 
--   Kann von mehreren Client Anwendungen gemeinsam genutzt werden.
--   Sendet Ereignis Hinweise, die durch den Abschluss biometrischer Vorgänge generiert werden, nur an die Anwendung mit dem aktuellen Fenster Fokus.
--   Verwenden Sie Konto-SIDs zur Darstellung der Vorlagen Identitäten. Alle Vorlagen, die einem einzelnen Benutzerkonto zugeordnet sind, werden mit der diesem Konto zugewiesenen sid markiert.
--   Abhängig vom vertrauenswürdigen Vorlagen Speicher, der vom Windows-biometrischen Dienst bereitgestellt wird.
+-   Kann von mehreren Clientanwendungen gemeinsam genutzt werden.
+-   Senden Sie Ereignishinweise, die durch den Abschluss biometrischer Vorgänge generiert werden, nur an die Anwendung, die den aktuellen Fensterfokus besitzt.
+-   Verwenden Sie Konto-SIDs, um die Vorlagenidentitäten darzustellen. Alle Vorlagen, die einem einzelnen Benutzerkonto zugeordnet sind, werden mit der SID gekennzeichnet, die diesem Konto zugewiesen ist.
+-   Hängen Sie vom vertrauenswürdigen Vorlagenspeicher ab, der vom Windows Biometric Service bereitgestellt wird.
 
-Eine biometrische Einheit kann in den System Pool eingeschlossen werden, wenn dies der Fall sein kann:
+Eine biometrische Einheit kann in den Systempool aufgenommen werden, wenn dies der Folgende ist:
 
--   Konfiguriert für den Betrieb im Standardmodus und fungiert nur als biometrisches Erfassungsgerät.
--   Konfiguriert für den Betrieb im erweiterten Modus, aber über keinen integrierten Vorlagen Speicher verfügt. Das heißt, der Speicher Adapter und der von Microsoft bereitgestellte Vorlagen Speicher müssen verwendet werden.
--   Die Konfiguration für den erweiterten Modus umfasst den integrierten Vorlagen Speicher und kann die erforderlichen Hashwerte generieren.
+-   Konfiguriert für den Betrieb im Basic-Modus und fungiert nur als biometrisches Erfassungsgerät.
+-   Konfiguriert für den Betrieb im erweiterten Modus, verfügt aber über keinen integrierten Vorlagenspeicher. Das heißt, er muss den von Microsoft bereitgestellten Speicheradapter und Vorlagenspeicher verwenden.
+-   Konfiguriert für den Betrieb im erweiterten Modus, enthält integrierten Vorlagenspeicher und kann die erforderlichen Hashes generieren.
 
-Wenn ein neues Sensorgerät angeschlossen ist, erstellt der Windows-biometrische Dienst eine biometrische Einheit dafür und versucht, diese Einheit für die Verwendung durch den systemsensorpool zu konfigurieren. Wenn die Konfiguration nicht erfolgreich ist, wird die biometrische Einheit in den nicht zugewiesenen Sensor Pool eingefügt.
+Wenn ein neues Sensorgerät angeschlossen ist, erstellt der Windows Biometric Service eine biometrische Einheit dafür und versucht, diese Einheit für die Verwendung durch den Systemsensorpool zu konfigurieren. Wenn die Konfiguration nicht erfolgreich ist, wird die biometrische Einheit im nicht zugewiesenen Sensorpool platziert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Privater Sensor Pool](private-sensor-pool.md)
+[Privater Sensorpool](private-sensor-pool.md)
 </dt> <dt>
 
-[Sensor Pools](sensor-pools.md)
+[Sensorpools](sensor-pools.md)
 </dt> <dt>
 
-[System Pool Verhalten](system-pool-behavior.md)
+[Systempoolverhalten](system-pool-behavior.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

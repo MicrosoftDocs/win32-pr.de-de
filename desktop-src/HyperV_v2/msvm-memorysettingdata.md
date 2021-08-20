@@ -44,18 +44,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 47309fead7ee45936f34e1e4286ee94437823df7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8cde5351468a3fb4f90fee081168df30800ec33508e3429af4a5c1f3fa51286a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117811522"
 ---
-# <a name="msvm_memorysettingdata-class"></a>MSVM \_ memorysettingdata-Klasse
+# <a name="msvm_memorysettingdata-class"></a>Msvm \_ MemorySettingData-Klasse
 
 Stellt den konfigurierten Zustand des Arbeitsspeichers für einen virtuellen Computer dar.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,140 +99,140 @@ class Msvm_MemorySettingData : CIM_ResourceAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ memorysettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ MemorySettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ memorysettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ MemorySettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Adresse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Adresse der Ressource. Beispielsweise die Mac-Adresse eines Ethernet-Ports. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Adresse der Ressource. Beispielsweise die MAC-Adresse eines Ethernetports. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Addressonparent**
+**AddressOnParent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Adresse dieser Ressource im Kontext des übergeordneten Elements. Die über **geordneten** und **addressonparent** -Eigenschaften werden verwendet, um die Controller Beziehung sowie die Reihenfolge von Geräten auf einem Controller zu beschreiben. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Beschreibt die Adresse dieser Ressource im Kontext des übergeordneten Elements. Die Eigenschaften **Parent** und **AddressOnParent** werden verwendet, um die Controllerbeziehung sowie die Reihenfolge der Geräte auf einem Controller zu beschreiben. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Zuordnung von Einheiten**
+**AllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zuordnungs Einheiten, die von den **Reservierungs** -und **Limit** -Eigenschaften verwendet werden. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Zuordnungseinheiten, die von den Eigenschaften **Reservierung** und **Limit** verwendet werden. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Automaticallocation**
+**AutomaticAllocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Ressource automatisch zugewiesen wird. Wenn diese Eigenschaft beispielsweise auf " **true** " festgelegt ist und der verarbeitende virtuelle Computer eingeschaltet ist, wird diese Ressource zugewiesen. Der Wert **false** gibt an, dass die Ressource explizit zugewiesen werden muss. Die Einstellung kann z. b. ein Wechselmedium (z. b. eine CD-ROM oder eine Diskette) darstellen, bei dem das Medium beim Start nicht vorhanden ist. Ein expliziter Vorgang ist erforderlich, um die Ressource zuzuordnen. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, ob die Ressource automatisch zugeordnet wird. Wenn diese Eigenschaft beispielsweise auf **True** festgelegt ist und der verbrauchende virtuelle Computer eingeschaltet ist, wird diese Ressource zugeordnet. Der Wert **False** gibt an, dass die Ressource explizit zugeordnet werden muss. Die Einstellung kann z. B. Wechselmedien (z. B. eine CD-ROM oder eine Diskette) darstellen, bei denen das Medium beim Start nicht vorhanden ist. Zum Zuordnen der Ressource ist ein expliziter Vorgang erforderlich. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Automaticdeallocation**
+**AutomaticDeallocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Ressource automatisch zugewiesen wird. Wenn diese Eigenschaft beispielsweise auf " **true** " festgelegt ist und der verarbeitende virtuelle Computer eingeschaltet ist, wird diese Ressource zugewiesen. Wenn diese Eigenschaft **false** ist, muss die Ressource explizit zugewiesen werden. Die Einstellung kann z. b. ein Wechselmedium (z. b. eine CD-ROM oder eine Diskette) darstellen, bei dem das Medium beim Start nicht vorhanden ist. Ein expliziter Vorgang ist erforderlich, um die Ressource zuzuordnen. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, ob die Ressource automatisch zugeordnet wird. Wenn diese Eigenschaft beispielsweise auf **TRUE** festgelegt ist und der nutzende virtuelle Computer eingeschaltet ist, wird diese Ressource zugeordnet. Wenn diese Eigenschaft **False** ist, muss die Ressource explizit zugeordnet werden. Die Einstellung kann z. B. Wechselmedien (z. B. eine CD-ROM oder eine Diskette) darstellen, bei denen das Medium beim Start nicht vorhanden ist. Zum Zuordnen der Ressource ist ein expliziter Vorgang erforderlich. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Connection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Gerät, mit dem diese Ressource verbunden ist. Beispielsweise ein benanntes Netzwerk oder ein Switchport. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Das Gerät, mit dem diese Ressource verbunden ist. Beispielsweise ein benannter Netzwerk- oder Switchport. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Consumersichtbarkeit**
+**ConsumerVisibility**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Benutzer Sichtbarkeit der zugeordneten Ressource. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Beschreibt die Sichtbarkeit der Consumer für die zugeordnete Ressource. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DynamicMemoryEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -245,46 +245,46 @@ Gibt an, ob dynamischer Arbeitsspeicher für den virtuellen Computer aktiviert i
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**"Hustresource"**
+**HostResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das erste Element dieses Arrays enthält einen Verweis auf die zugrunde liegende Host Ressource, die zugewiesen werden soll. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt, aber nicht verwendet.
+Das erste Element dieses Arrays enthält einen Verweis auf die zugrunde liegende Hostressource, die zugewiesen werden soll. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt, aber nicht verwendet.
 
 </dd> <dt>
   
 **HugePagesEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Arbeitsspeicher durch 1-GB-Seiten unterstützt wird.
+Gibt an, ob der Arbeitsspeicher durch 1 GB Seiten gesichert wird oder nicht.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -293,144 +293,144 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Isvirtualisiert**
+**IsVirtualized**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob dieses Gerät virtualisiert oder durchlaufen wird. Wenn **false** festgelegt ist, wird die zugrunde liegende-oder-Host Ressource verwendet. In **der Eigenschaft** "Eigenschaft" sollte mindestens ein Element vorhanden sein. Wenn diese Einstellung auf " **true**" festgelegt ist, wird die Ressource virtualisiert und darf einer zugrunde liegenden/Host Ressource nicht direkt zugeordnet werden. Einige Implementierungen unterstützen möglicherweise eine bestimmte Zuweisung für virtualisierte Ressourcen. in diesem Fall werden die Host Ressourcen mithilfe der **DeviceID** -Eigenschaft verfügbar gemacht. Diese Eigenschaft ist immer auf " **true**" festgelegt.
+Gibt an, ob dieses Gerät virtualisiert oder übergeben wird. Wenn **false** festgelegt ist, wird die zugrunde liegende oder Hostressource verwendet. Mindestens ein Element sollte in der **DeviceID-Eigenschaft** vorhanden sein. Wenn **true** festgelegt ist, wird die Ressource virtualisiert und ist möglicherweise nicht direkt einer zugrunde liegenden/Hostressource zugeordnet. Einige Implementierungen unterstützen möglicherweise die spezifische Zuweisung für virtualisierte Ressourcen. In diesem Fall werden die Hostressourcen mithilfe der **DeviceID-Eigenschaft** verfügbar gemacht. Diese Eigenschaft ist immer auf **True** festgelegt.
 
 </dd> <dt>
 
 **Begrenzung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Arbeitsspeicher Menge, die vom virtuellen Computer genutzt werden kann. Für einen virtuellen Computer mit aktiviertem dynamischen Arbeitsspeicher ist dies die maximale Arbeitsspeicher Einstellung. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die maximale Arbeitsspeichermenge, die vom virtuellen Computer belegt werden kann. Für einen virtuellen Computer mit aktivierter dynamischem Arbeitsspeicher stellt dies die Einstellung für den maximalen Arbeitsspeicher dar. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Mappingbehavior**
+**MappingBehavior**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie diese Ressource den zugrunde liegenden Ressourcen zugeordnet wird. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, wie diese Ressource zugrunde liegenden Ressourcen zugeordnet wird. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Maxmemoryblockspernumanode**
+**MaxMemoryBlocksPerNumaNode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Arbeitsspeicher Menge, die innerhalb des virtuellen Computers beobachtet werden kann, wenn er zu einem einzelnen NUMA-Knoten gehört.
+Die maximale Arbeitsspeichermenge, die innerhalb des virtuellen Computers als zu einem einzelnen NUMA-Knoten gehörend beobachtet werden kann.
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter Wert nicht verfügbar ist und **ResourceType** den Wert "Other" hat. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn kein klar definierter Wert verfügbar ist und **ResourceType** den Wert "Other" hat. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Parent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das übergeordnete Element der Ressource. Beispielsweise ein Controller für die aktuelle Zuordnung. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Das übergeordnete Element der Ressource. Beispielsweise ein Controller für die aktuelle Zuordnung. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Bezeichner des Ressourcenpools, von dem diese Ressource zugewiesen wurde. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Der Bezeichner des Ressourcenpools, aus dem diese Ressource zugeordnet wurde. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Reservierung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Umfang des Arbeitsspeichers an, der für diesen virtuellen Computer garantiert verfügbar ist. Bei einem virtuellen Computer mit aktiviertem dynamischen Arbeitsspeicher stellt dies die Einstellung für den minimalen Arbeitsspeicher dar. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt die Arbeitsspeichermenge an, die für diesen virtuellen Computer garantiert verfügbar ist. Für einen virtuellen Computer mit aktivierter dynamischem Arbeitsspeicher stellt dies die Einstellung für den minimalen Arbeitsspeicher dar. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die einen Implementierungs spezifischen Untertyp für diese Ressource beschreibt. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Eine Zeichenfolge, die einen implementierungsspezifischen Untertyp für diese Ressource beschreibt. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Ressourcentyp, den diese Zuordnungs Einstellung darstellt. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt und ist immer auf 4 (Arbeitsspeicher) festgelegt.
+Der Typ der Ressource, die von dieser Zuordnungseinstellung dargestellt wird. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt und immer auf 4 (Arbeitsspeicher) festgelegt.
 
 </dd> <dt>
 
-**Sgxfähig**
+**SgxEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -439,100 +439,100 @@ Zugriffstyp: Schreibgeschützt
 Gibt an, ob SGX aktiviert ist.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Sgxsize**
+**SgxSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Menge des für die VM zuzuordnenden SGX-Speichers in MB.
+Die Menge an SGX-Arbeitsspeicher, die für den virtuellen Computer in MB zugeordnet werden soll.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Austauschen von Dateien**
+**SwapFilesInUse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn das Paging auf zweiter Ebene aktiv ist; andernfalls **false**.
+**True,** wenn paging der zweiten Ebene aktiv ist; Andernfalls **False.**
 
 </dd> <dt>
 
-**Targetmemorybuffer**
+**TargetMemoryBuffer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Definiert den zusätzlichen Arbeitsspeicher, der für einen virtuellen Computer zur Laufzeit reserviert werden soll, als Prozentsatz des gesamten Arbeitsspeichers, den der virtuelle Computer benötigt. Dies gilt nur für virtuelle Computer, auf denen dynamischer Arbeitsspeicher aktiviert ist.
+Definiert die Menge des zusätzlichen Arbeitsspeichers, der zur Laufzeit für einen virtuellen Computer reserviert werden soll, als Prozentsatz des Gesamtspeichers, den der virtuelle Computer voraussichtlich benötigt. Dies gilt nur für virtuelle Computer mit aktivierter dynamischer Arbeitsspeicher.
 
-Diese Eigenschaft kann im Bereich von 5 bis 2000 liegen.
+Diese Eigenschaft kann zwischen 5 und 2000 liegen.
 
 </dd> <dt>
 
 **VirtualQuantity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtgröße des Arbeitsspeichers auf dem virtuellen Computer, wie vom Gast Betriebssystem angezeigt. Bei einem virtuellen Computer mit aktiviertem dynamischen Arbeitsspeicher stellt dies den anfänglichen Arbeitsspeicher dar, der beim Start verfügbar ist. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Gesamtmenge des RAM auf dem virtuellen Computer, wie vom Gastbetriebssystem erkannt. Für einen virtuellen Computer mit aktivierter dynamischer Arbeitsspeicher ist dies der anfängliche Arbeitsspeicher, der beim Start verfügbar ist. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Virtualquantityunits**
+**VirtualQuantityUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Maßeinheit für diese Ressourcenzuweisung an. Der Wert dieser Eigenschaft muss ein gültiger Wert des Qualifizierers für programmgesteuerte Einheiten sein, wie in Anhang C. 1 von DSP0004 v 2.5 oder höher definiert. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt die Maßeinheit für diese Ressourcenzuordnung an. Der Wert dieser Eigenschaft muss ein rechtlicher Wert des Qualifizierers "Programmgesteuerte Einheiten" sein, wie in Anhang C.1 von DSP0004 V2.5 oder höher definiert. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Definiert den Wert für die Speicher Belegungs Gewichtung für jeden virtuellen Computer. Nachdem alle Reserven erreicht wurden, wird der verbleibende Arbeitsspeicher der Hostingplattform virtuellen Computern basierend auf ihren relativen Gewichtungen zugewiesen (sodass der von der Eigenschaft **Limit** angegebene Wert nicht überschritten wird). Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Definiert den Wert für die Speicherbelegungsgewichtung für jeden virtuellen Computer. Nachdem alle Reserven erreicht wurden, wird der verbleibende Arbeitsspeicher der Hostingplattform virtuellen Computern basierend auf deren relativen Gewichtungen zugeordnet (um den von der **Limit-Eigenschaft** angegebenen Wert nicht zu überschreiten). Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ memorysettingdata** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ MemorySettingData-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
@@ -596,25 +596,25 @@ if (WaitForResult($res) -ne 0)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> <dt>
 
-[**CIM \_ resourcezubesettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
+[**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 </dt> <dt>
 
-[Speicher Klassen](memory-classes.md)
+[Speicherklassen](memory-classes.md)
 </dt> </dl>
 
  

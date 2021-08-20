@@ -1,57 +1,57 @@
 ---
-description: Die IAzApplication-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAzApplication-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C969D653-9FEE-45B6-8DB1-4D778C836E9D
 title: IAzApplication-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fc8ffd17addcd2b8da01b4999a7c88f78dab8b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a18e75e8f95571039fcbfc9c653af29b2e99c4abcb7ee8e364d99193cde430ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913496"
 ---
 # <a name="iazapplication-methods"></a>IAzApplication-Methoden
 
-Die [**IAzApplication**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAzApplication-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Adddelegatedpolicyuser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyuser)
--   [**Adddelegatedpolicyusername-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyusername)
--   [**Addpolicyadministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyadministrator)
+-   [**AddDelegatedPolicyUser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyuser)
+-   [**AddDelegatedPolicyUserName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyusername)
+-   [**AddPolicyAdministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyadministrator)
 -   [**AddPolicyAdministratorName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyadministratorname)
--   [**Addpolicyreader-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyreader)
--   [**Addpolicyreadername-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyreadername)
--   [**Addpropertyitem-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpropertyitem)
--   [**Methode "kreateapplicationgroup"**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createapplicationgroup)
--   [**Kreateoperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createoperation)
--   [**Methode "kreaterole"**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createrole)
--   [**Methode "kreatescope"**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createscope)
+-   [**AddPolicyReader-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyreader)
+-   [**AddPolicyReaderName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpolicyreadername)
+-   [**AddPropertyItem-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-addpropertyitem)
+-   [**CreateApplicationGroup-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createapplicationgroup)
+-   [**CreateOperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createoperation)
+-   [**CreateRole-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createrole)
+-   [**CreateScope-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createscope)
 -   [**CreateTask-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-createtask)
--   [**Deleteapplicationgroup-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deleteapplicationgroup)
--   [**Deletedelegatedpolicyuser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletedelegatedpolicyuser)
--   [**Deletedelegatedpolicyusername-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletedelegatedpolicyusername)
--   [**Deleteoperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deleteoperation)
--   [**Deletepolicyadministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyadministrator)
+-   [**DeleteApplicationGroup-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deleteapplicationgroup)
+-   [**DeleteDelegatedPolicyUser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletedelegatedpolicyuser)
+-   [**DeleteDelegatedPolicyUserName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletedelegatedpolicyusername)
+-   [**DeleteOperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deleteoperation)
+-   [**DeletePolicyAdministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyadministrator)
 -   [**DeletePolicyAdministratorName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyadministratorname)
--   [**Deletepolicyreader-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyreader)
--   [**Deletepolicyreadername-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyreadername)
--   [**Deletepropertyitem-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepropertyitem)
+-   [**DeletePolicyReader-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyreader)
+-   [**DeletePolicyReaderName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepolicyreadername)
+-   [**DeletePropertyItem-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletepropertyitem)
 -   [**DeleteRole-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deleterole)
--   [**Delta-Cope-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletescope)
+-   [**DeleteScope-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletescope)
 -   [**DeleteTask-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-deletetask)
 -   [**GetProperty-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-getproperty)
 -   [**InitializeClientContextFromName-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromname)
--   [**InitializeClientContextFromStringSID-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromstringsid)
+-   [**InitializeClientContextFromStringSid-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromstringsid)
 -   [**InitializeClientContextFromToken-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-initializeclientcontextfromtoken)
--   [**Openapplicationgroup-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openapplicationgroup)
--   [**Openoperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openoperation)
--   [**Openrole-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openrole)
+-   [**OpenApplicationGroup-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openapplicationgroup)
+-   [**OpenOperation-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openoperation)
+-   [**OpenRole-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openrole)
 -   [**OpenScope-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-openscope)
--   [**Opentask-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-opentask)
+-   [**OpenTask-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-opentask)
 -   [**SetProperty-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-setproperty)
--   [**Methode übermitteln**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-submit)
+-   [**Submit-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-submit)
 
  
 

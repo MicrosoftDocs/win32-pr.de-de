@@ -1,9 +1,9 @@
 ---
 title: PLAYLIST.setColumnWidth
-description: Die setColumnWidth-Methode gibt die Spaltenbreite an und ändert den Größenänderungsmodus der Spalte in \0034; Behoben\ 0034;.
+description: Die setColumnWidth-Methode gibt die Spaltenbreite an und ändert den Größenänderungsmodus der Spalte in \ 0034. Behoben\ 0034;.
 ms.assetid: 6eebea0a-48f2-4300-b535-78744db6fea4
 keywords:
-- PLAYLIST.setColumnWidth Windows Media Player
+- PLAYLIST.setColumnWidth-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -35,14 +35,14 @@ Die **setColumnWidth-Methode** gibt die Spaltenbreite an und ändert den Größe
 <span id="column"></span><span id="COLUMN"></span>*Spalte*
 </dt> <dd>
 
-**Zahl** (**long**), die den Index der spalte angibt, die geändert wird.
+**Number** (**long**), die den Index der zu ändernden Spalte angibt.
 
 </dd> <dt>
 
 <span id="width"></span><span id="WIDTH"></span>*Breite*
 </dt> <dd>
 
-**Zahl** (**long**), die die neue Breite in Pixel angibt.
+**Number** (**long**), die die neue Breite in Pixel angibt.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

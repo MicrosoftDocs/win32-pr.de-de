@@ -55,11 +55,11 @@ BOOL  WINAPI  CreateDeltaB(
 
 *SetFlags*
 
-[in] Mindestens ein [DELTA_FLAG_TYPE](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) Werte, die zusätzlich zu den Standardflags die während des Erstellungsprozesses zu verwendenden Flags angeben.
+[in] Ein oder [](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) mehrere DELTA_FLAG_TYPE-Werte, die zusätzlich zu den Standardflags die während des Erstellungsprozesses zu verwendenden Flags angeben.
 
 *ResetFlags*
 
-[in] Mindestens ein [](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) DELTA_FLAG_TYPE-Werte, die die Standardflags angeben, die während des Erstellungsprozesses zurückgesetzt werden sollen.
+[in] Ein oder [](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) mehrere DELTA_FLAG_TYPE-Werte, die die Standardflags angeben, die während des Erstellungsprozesses zurückgesetzt werden sollen.
 
 *Quelle*
 
@@ -106,9 +106,9 @@ Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird
 |----------------|---------------------------------------------------------------------------------------|
 | Header | msdelta.h |
 | DLL | msdelta.dll |
-| Unicode | Nicht verfügbar |
+| Unicode | Nicht zutreffend |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [MSDelta](msdelta.md)
 

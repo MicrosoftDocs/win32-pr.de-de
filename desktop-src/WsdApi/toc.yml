@@ -4,60 +4,60 @@
     - name: Informationen zu Webdiensten auf Geräten
       href: about-web-services-for-devices.md
       items:
-        - name: Ermittlungs-und Metadatenaustausch-Nachrichten Muster
+        - name: Ermittlung und Metadaten Exchange Nachrichtenmustern
           href: discovery-and-metadata-exchange-message-patterns.md
           items:
-            - name: Hello-Nachricht
+            - name: Hello Message
               href: hello-message.md
-            - name: Testnachricht
+            - name: Testmeldung
               href: probe-message.md
-            - name: Probe Matches-Meldung
+            - name: ProbeMatches-Nachricht
               href: probematches-message.md
             - name: Meldung auflösen
               href: resolve-message.md
-            - name: Resolvematches-Nachricht
+            - name: ResolveMatches-Nachricht
               href: resolvematches-message.md
-            - name: Get-http-Anforderung und-Nachricht (Metadatenaustausch)
+            - name: Get (Metadata Exchange) HTTP Request and Message
               href: get--metadata-exchange--http-request-and-message.md
-            - name: GetResponse-Meldung (Metadatenaustausch)
+            - name: GetResponse(Metadata Exchange)-Nachricht
               href: getresponse--metadata-exchange--message.md
             - name: Bye-Nachricht
               href: bye-message.md
-        - name: WSDAPI-Spezifikation Konformität
+        - name: WSDAPI-Spezifikationskonformität
           href: wsdapi-specification-compliance.md
           items:
-            - name: Konformität der DPWS-Spezifikation
+            - name: DPWS-Spezifikationskonformität
               href: dpws-specification-compliance.md
-            - name: Konformität der WS-Discovery Spezifikation
+            - name: WS-Discovery Spezifikationskonformität
               href: ws-discovery-specification-compliance.md
-            - name: Konformität von WS-MetadataExchange und WS-Transfer Spezifikation
+            - name: WS-MetadataExchange und WS-Transfer Spezifikationskonformität
               href: ws-metadataexchange-and-ws-transfer-specification-compliance.md
-            - name: Zusätzliche WS-Discovery Funktionen
+            - name: Zusätzliche WS-Discovery Funktionalität
               href: additional-ws-discovery-functionality.md
-        - name: Xaddr-Validierungsregeln
+        - name: XAddr-Validierungsregeln
           href: xaddr-validation-rules.md
-        - name: Appsequence-Validierungsregeln
+        - name: AppSequence-Validierungsregeln
           href: appsequence-validation-rules.md
         - name: Übersicht über die WSDAPI-Schnittstellen
           href: overview-of-the-wsdapi-interfaces.md
     - name: Verwenden von Webdiensten auf Geräten
       href: using-web-services-on-devices.md
       items:
-        - name: WSD-Anwendungsentwicklung unter Windows
+        - name: WSD-Anwendungsentwicklung auf Windows
           href: wsd-application-development-on-windows.md
           items:
-            - name: WSDAPI-Entwicklungs Tools
+            - name: WSDAPI-Entwicklungstools
               href: wsdapi-development-tools.md
               items:
-                - name: Code-Generator für Webdienste auf Geräten
+                - name: Codegenerator für Webdienste auf Geräten
                   href: web-services-for-devices-code-generator.md
                   items:
-                    - name: Informationen zu wsdcodegen
+                    - name: Informationen zu WsdCodeGen
                       href: about-wsdcodegen.md
                       items:
-                        - name: Wsdcodegen-Konfigurationsdatei
+                        - name: WsdCodeGen-Konfigurationsdatei
                           href: wsdcodegen-configuration-file.md
-                    - name: Verwenden von wsdcodegen
+                    - name: Verwenden von WsdCodeGen
                       href: using-wsdcodegen.md
                 - name: Debugtools
                   href: debugging-tools.md
@@ -66,77 +66,77 @@
         - name: WSD-Geräteentwicklung
           href: wsd-device-development.md
           items:
-            - name: Empfehlungen zur Implementierung der WSD-Geräte
+            - name: WSD-Geräteimplementierungs-Empfehlungen
               href: wsd-device-implementation-recommendations.md
               items:
-                - name: Implementieren eines mehrfach vernetzten WSD-Geräts
+                - name: Implementieren eines mehrstufigen WSD-Geräts
                   href: implementing-a-multi-homed-wsd-device.md
-                - name: Verteilen von SOAP-Nachrichten
+                - name: Senden von SOAP-Nachrichten
                   href: dispatching-soap-messages.md
-                - name: Verwenden von IPv6-Link-Local-Adressen
+                - name: Verwenden von lokalen IPv6-Linkadressen
                   href: using-ipv6-link-local-addresses.md
                 - name: Verwenden von logischen und physischen Adressen
                   href: using-logical-and-physical-addresses.md
-        - name: WSDAPI-Handbuch zur Problembehandlung
+        - name: Handbuch zur WSDAPI-Problembehandlung
           href: wsdapi-troubleshooting-guide.md
           items:
-            - name: Ersten Schritte mit der WSDAPI-Problembehandlung
+            - name: Erste Schritte mit WSDAPI – Problembehandlung
               href: getting-started-with-wsdapi-troubleshooting.md
               items:
-                - name: Problembehandlung bei WSDAPI-Anwendungen mithilfe der gesteuerten Ermittlung
+                - name: Problembehandlung bei WSDAPI-Anwendungen mithilfe der gerichteten Ermittlung
                   href: troubleshooting-applications-using-directed-discovery.md
-                - name: Problembehandlung bei Funktions Ermittlungs Clients
+                - name: Problembehandlung bei Funktionsermittlungsclients
                   href: troubleshooting-function-discovery-clients.md
-                - name: Problembehandlung bei Personen in meiner Umgebung/Besprechungen
+                - name: Problembehandlung Personen in meiner Umgebung/Besprechungen in meiner Nähe
                   href: troubleshooting-people-near-me-meetings-near-me.md
-                - name: Problembehandlung beim Hinzufügen von Drucker
+                - name: Problembehandlung beim Assistenten zum Hinzufügen von Druckern
                   href: troubleshooting-the-add-printer-wizard.md
                 - name: Problembehandlung für den Netzwerk-Explorer
                   href: troubleshooting-the-network-explorer.md
                 - name: Problembehandlung beim Projektor-Assistenten
                   href: troubleshooting-the-projector-wizard.md
-                - name: Problembehandlung bei anderen WSDAPI-Anwendungen
+                - name: Problembehandlung für andere WSDAPI-Anwendungen
                   href: troubleshooting-wsdapi-applications.md
-            - name: WSDAPI-Diagnose Prozeduren
+            - name: WSDAPI-Diagnoseverfahren
               href: wsdapi-diagnostic-procedures.md
               items:
                 - name: Erfassen von WinHTTP-Protokollen
                   href: capturing-winhttp-logs.md
-                - name: Herunterladen von Netmon und Beispiel-DPWS-Filtern
+                - name: Herunterladen von Netmon- und DPWS-Beispielfiltern
                   href: downloading-netmon-and-sample-dpws-filters.md
-                - name: Aktivieren der WSDAPI-Ablauf Verfolgung
+                - name: Aktivieren der WSDAPI-Ablaufverfolgung
                   href: enabling-wsdapi-tracing.md
-                - name: Überprüfen der Adapter-und Firewalleinstellungen
+                - name: Überprüfen von Adapter- und Firewall-Einstellungen
                   href: inspecting-adapter-and-firewall-settings.md
-                - name: 'Überprüfen von Netzwerk Ablauf Verfolgungen für Anwendungen, die die gesteuerte Ermittlung verwenden'
+                - name: Untersuchen von Netzwerkverfolgungen für Anwendungen mithilfe der gerichteten Ermittlung
                   href: inspecting-network-traces-for-applications-using-directed-discovery.md
-                - name: Überprüfen von Netzwerk Ablauf Verfolgungen für http-Metadatenaustausch
+                - name: Überprüfen von Netzwerkverfolgungen für HTTP-Metadaten Exchange
                   href: inspecting-network-traces-for-http-metadata-exchange.md
-                - name: Überprüfen von Netzwerk Ablauf Verfolgungen für UDP-WS-Discovery
+                - name: Überprüfen von Netzwerkverfolgungen für UDP-WS-Discovery
                   href: inspecting-network-traces-for-udp-ws-discovery.md
-                - name: Verwenden eines generischen Hosts und Clients für den HTTP-Metadatenaustausch
+                - name: Verwenden eines generischen Hosts und Clients für HTTP-Exchange
                   href: using-a-generic-host-and-client-for-http-metadata-exchange.md
                 - name: Verwenden eines generischen Hosts und Clients für UDP-WS-Discovery
                   href: using-a-generic-host-and-client-for-udp-ws-discovery.md
-                - name: Verwenden der WinHTTP-Protokollierung zum Überprüfen von Daten
+                - name: Verwenden der WinHTTP-Protokollierung zum Überprüfen des Get-Datenverkehrs
                   href: using-winhttp-logging-to-verify-get-traffic.md
-                - name: Überprüfen von Multicast Datenverkehr mithilfe des WSD-Debugclients
+                - name: Verwenden des WSD-Debugclients zum Überprüfen des Multicastdatenverkehrs
                   href: using-wsddebug-client-to-verify-multicast-traffic.md
     - name: Referenz zu Webdiensten auf Geräten
       href: web-services-for-devices-reference.md
       items:
         - name: Konstanten für Webdienste auf Geräten
           href: web-services-for-devices-constants.md
-        - name: Webdienste auf Geräte Enumerationen
+        - name: Enumerationen von Webdiensten auf Geräten
           href: web-services-for-devices-enumerations.md
           items:
             - name: WSD_CONFIG_PARAM_TYPE
               href: /windows/win32/api/wsdbase/ne-wsdbase-wsd_config_param_type
             - name: WSD_PROTOCOL_TYPE
               href: /windows/win32/api/WsdTypes/ne-wsdtypes-wsd_protocol_type
-            - name: Wsdeventtype
+            - name: WSDEventType
               href: /windows/win32/api/Wsdtypes/ne-wsdtypes-wsdeventtype
-            - name: Wsdudpmessagetype
+            - name: WSDUdpMessageType
               href: /windows/win32/api/Wsdbase/ne-wsdbase-wsdudpmessagetype
         - name: Funktionen für Webdienste auf Geräten
           href: web-services-for-devices-functions.md
@@ -145,124 +145,124 @@
               href: /windows/desktop/api/wsdtypes/nc-wsdtypes-pwsd_soap_message_handler
             - name: WSD_STUB_FUNCTION
               href: /windows/desktop/api/wsdtypes/nc-wsdtypes-wsd_stub_function
-            - name: Wsdzuweisung-Datenspeicher
+            - name: WSDAllocateLinkedMemory
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdallocatelinkedmemory
-            - name: Wsdattachlinkedmemory
+            - name: WSDAttachLinkedMemory
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdattachlinkedmemory
-            - name: Wsdkreatedevicehost
+            - name: WSDCreateDeviceHost
               href: /windows/desktop/api/WsdHost/nf-wsdhost-wsdcreatedevicehost
             - name: WSDCreateDeviceHost2
               href: /windows/desktop/api/WsdHost/nf-wsdhost-wsdcreatedevicehost2
-            - name: Wsdkreatedevicehustadvanciert
+            - name: WSDCreateDeviceHostAdvanced
               href: /windows/desktop/api/WsdHost/nf-wsdhost-wsdcreatedevicehostadvanced
-            - name: Wsdkreatedeviceproxy
+            - name: WSDCreateDeviceProxy
               href: /windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy
             - name: WSDCreateDeviceProxy2
               href: /windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy2
-            - name: Wsdkreatedeviceproxyadvanced
+            - name: WSDCreateDeviceProxyAdvanced
               href: /windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxyadvanced
-            - name: Wsdkreatediscoveryprovider
+            - name: WSDCreateDiscoveryProvider
               href: /windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoveryprovider
             - name: WSDCreateDiscoveryProvider2
               href: /windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoveryprovider2
-            - name: Wsdkreatediscoverypublisher
+            - name: WSDCreateDiscoveryPublisher
               href: /windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoverypublisher
             - name: WSDCreateDiscoveryPublisher2
               href: /windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoverypublisher2
-            - name: Wsdkreatehttpaddress
+            - name: WSDCreateHttpAddress
               href: /windows/desktop/api/Wsdbase/nf-wsdbase-wsdcreatehttpaddress
-            - name: Wsdkreatehttpmessageparameters
+            - name: WSDCreateHttpMessageParameters
               href: /windows/desktop/api/Wsdbase/nf-wsdbase-wsdcreatehttpmessageparameters
-            - name: Wsdkreateoutboundattachment
+            - name: WSDCreateOutboundAttachment
               href: /windows/desktop/api/WsdAttachment/nf-wsdattachment-wsdcreateoutboundattachment
-            - name: Wsdkreateudpaddress
+            - name: WSDCreateUdpAddress
               href: /windows/desktop/api/Wsdbase/nf-wsdbase-wsdcreateudpaddress
-            - name: Wsdkreateudpmessageparameters
+            - name: WSDCreateUdpMessageParameters
               href: /windows/desktop/api/Wsdbase/nf-wsdbase-wsdcreateudpmessageparameters
-            - name: Wsddetachlinkedmemory
+            - name: WSDDetachLinkedMemory
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsddetachlinkedmemory
-            - name: Wsdfreelinkedmemory
+            - name: WSDFreeLinkedMemory
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdfreelinkedmemory
-            - name: Wsdgeneratefault
+            - name: WSDGenerateFault
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdgeneratefault
-            - name: Wsdgeneratefaultex
+            - name: WSDGenerateFaultEx
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdgeneratefaultex
-            - name: Wsdgetconfigurationoption
+            - name: WSDGetConfigurationOption
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdgetconfigurationoption
-            - name: Wsdsetconfigurationoption
+            - name: WSDSetConfigurationOption
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdsetconfigurationoption
-            - name: Wsduridecode
+            - name: WSDUriDecode
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsduridecode
-            - name: Wsduricocodieren
+            - name: WSDUriEncode
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsduriencode
-            - name: Wsdxmladdchild
+            - name: WSDXMLAddChild
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdxmladdchild
-            - name: Wsdxmladdsierend
+            - name: WSDXMLAddSibling
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdxmladdsibling
-            - name: Wsdxmlbuildanyforsingleelement
+            - name: WSDXMLBuildAnyForSingleElement
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdxmlbuildanyforsingleelement
-            - name: Wsdxmlcleanupelement
+            - name: WSDXMLCleanupElement
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdxmlcleanupelement
-            - name: Wsdxmlkreatecontext
+            - name: WSDXMLCreateContext
               href: /windows/desktop/api/wsdxml/nf-wsdxml-wsdxmlcreatecontext
-            - name: Wsdxmlgetnamefrombuiltinnamespace
+            - name: WSDXMLGetNameFromBuiltinNamespace
               href: /windows/desktop/api/wsdxml/nf-wsdxml-wsdxmlgetnamefrombuiltinnamespace
-            - name: Wsdxmlgetvaluefromany
+            - name: WSDXMLGetValueFromAny
               href: /windows/desktop/api/WsdUtil/nf-wsdutil-wsdxmlgetvaluefromany
-        - name: Webdienste auf Geräteschnittstellen
+        - name: Schnittstellen für Webdienste auf Geräten
           href: web-services-for-devices-interfaces.md
           items:
-            - name: Iwsdaddress
+            - name: IWSDAddress
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdaddress
               items:
                 - name: Deserialize-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdaddress-deserialize
                 - name: Serialize-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdaddress-serialize
-            - name: Iwsdasynccallback
+            - name: IWSDAsyncCallback
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdasynccallback
               items:
-                - name: Asyncoperationcomplete-Methode
+                - name: AsyncOperationComplete-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasynccallback-asyncoperationcomplete
-            - name: Iwsdasynkresult
+            - name: IWSDAsyncResult
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdasyncresult
               items:
                 - name: Abort-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-abort
-                - name: Getasyncstate-Methode
+                - name: GetAsyncState-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-getasyncstate
-                - name: Getendpointproxy-Methode
+                - name: GetEndpointProxy-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-getendpointproxy
                 - name: GetEvent-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-getevent
-                - name: Hasabgeschlossene-Methode
+                - name: HasCompleted-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-hascompleted
                 - name: SetCallback-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-setcallback
-                - name: Setwaithandle-Methode
+                - name: SetWaitHandle-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdasyncresult-setwaithandle
-            - name: Iwsdattaament
+            - name: IWSDAttachment
               href: /windows/desktop/api/wsdattachment/nn-wsdattachment-iwsdattachment
-            - name: Iwsddevicehost
+            - name: IWSDDeviceHost
               href: /windows/desktop/api/WsdHost/nn-wsdhost-iwsddevicehost
               items:
-                - name: Adddynamicservice-Methode
+                - name: AddDynamicService-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-adddynamicservice
                 - name: Init-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-init
-                - name: Registerporttype-Methode
+                - name: RegisterPortType-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-registerporttype
                 - name: RegisterService-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-registerservice
-                - name: Removedynamicservice-Methode
+                - name: RemoveDynamicService-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-removedynamicservice
-                - name: Retireservice-Methode
+                - name: RetireService-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-retireservice
                 - name: SetMetadata-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-setmetadata
-                - name: Setservicediscoverable-Methode
+                - name: SetServiceDiscoverable-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-setservicediscoverable
-                - name: Signalevent-Methode
+                - name: SignalEvent-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-signalevent
                 - name: Start-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-start
@@ -270,79 +270,79 @@
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-stop
                 - name: Terminate-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehost-terminate
-            - name: Iwsddevicehostnotify
+            - name: IWSDDeviceHostNotify
               href: /windows/desktop/api/WsdHost/nn-wsdhost-iwsddevicehostnotify
               items:
                 - name: GetService-Methode
                   href: /windows/desktop/api/WsdHost/nf-wsdhost-iwsddevicehostnotify-getservice
-            - name: Iwsddeviceproxy
+            - name: IWSDDeviceProxy
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsddeviceproxy
               items:
                 - name: BeginGetMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-begingetmetadata
-                - name: Endgetmetadata-Methode
+                - name: EndGetMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-endgetmetadata
-                - name: Getallmetadata-Methode
+                - name: GetAllMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getallmetadata
-                - name: Getendpointproxy-Methode
+                - name: GetEndpointProxy-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getendpointproxy
-                - name: Gethostmetadata-Methode
+                - name: GetHostMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-gethostmetadata
-                - name: Getserviceproxybyid-Methode
+                - name: GetServiceProxyById-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getserviceproxybyid
-                - name: Getserviceproxybytype-Methode
+                - name: GetServiceProxyByType-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getserviceproxybytype
-                - name: Getthisdevicemetadata-Methode
+                - name: GetThisDeviceMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getthisdevicemetadata
-                - name: Getthismodelmetadata-Methode
+                - name: GetThisModelMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-getthismodelmetadata
                 - name: Init-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsddeviceproxy-init
-            - name: Iwsdendpointproxy
+            - name: IWSDEndpointProxy
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdendpointproxy
               items:
-                - name: Abortasyncoperation-Methode
+                - name: AbortAsyncOperation-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-abortasyncoperation
                 - name: GetErrorInfo-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-geterrorinfo
-                - name: Getfaultinfo-Methode
+                - name: GetFaultInfo-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-getfaultinfo
-                - name: Processfault-Methode
+                - name: ProcessFault-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-processfault
-                - name: Sendonewayrequest-Methode
+                - name: SendOneWayRequest-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-sendonewayrequest
-                - name: Sendtwowayrequest-Methode
+                - name: SendTwoWayRequest-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-sendtwowayrequest
-                - name: Sendtwowayrequestasync-Methode
+                - name: SendTwoWayRequestAsync-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdendpointproxy-sendtwowayrequestasync
-            - name: Iwsdeventingstatus
+            - name: IWSDEventingStatus
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdeventingstatus
               items:
-                - name: Abonnemenend-Methode
+                - name: SubscriptionEnded-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdeventingstatus-subscriptionended
-                - name: Abonniert-Methode
+                - name: SubscriptionRenewed-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdeventingstatus-subscriptionrenewed
-                - name: Abonnemenrenewalfailed-Methode
+                - name: SubscriptionRenewalFailed-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdeventingstatus-subscriptionrenewalfailed
-            - name: Iwsdhttpaddress
+            - name: IWSDHttpAddress
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdhttpaddress
               items:
                 - name: GetPath-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpaddress-getpath
                 - name: GetSecure-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpaddress-getsecure
-                - name: Setpath-Methode
+                - name: SetPath-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpaddress-setpath
                 - name: SetSecure-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpaddress-setsecure
-            - name: Iwsdhttpauthparameters
+            - name: IWSDHttpAuthParameters
               href: /windows/desktop/api/wsdbase/nn-wsdbase-iwsdhttpauthparameters
               items:
-                - name: Getclientaccesstoken-Methode
+                - name: GetClientAccessToken-Methode
                   href: /windows/desktop/api/wsdbase/nf-wsdbase-iwsdhttpauthparameters-getclientaccesstoken
                 - name: GetAuthType-Methode
                   href: /windows/desktop/api/wsdbase/nf-wsdbase-iwsdhttpauthparameters-getauthtype
-            - name: Iwsdhttpmessageparameters
+            - name: IWSDHttpMessageParameters
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdhttpmessageparameters
               items:
                 - name: Clear-Methode
@@ -351,133 +351,133 @@
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-getcontext
                 - name: GetID-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-getid
-                - name: Getinboundhttpheaders-Methode
+                - name: GetInboundHttpHeaders-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-getinboundhttpheaders
-                - name: Getoutboundhttpheaders-Methode
+                - name: GetOutboundHttpHeaders-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-getoutboundhttpheaders
                 - name: SetContext-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-setcontext
-                - name: '* TID-Methode'
+                - name: SetID-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-setid
-                - name: '"Setup"-Methode'
+                - name: SetInboundHttpHeaders-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-setinboundhttpheaders
-                - name: Setoutboundhttpheaders-Methode
+                - name: SetOutboundHttpHeaders-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdhttpmessageparameters-setoutboundhttpheaders
-            - name: Iwsdinboundattachment
+            - name: IWSDInboundAttachment
               href: /windows/desktop/api/WsdAttachment/nn-wsdattachment-iwsdinboundattachment
               items:
                 - name: Close-Methode
                   href: /windows/desktop/api/WsdAttachment/nf-wsdattachment-iwsdinboundattachment-close
                 - name: Read-Methode
                   href: /windows/desktop/api/WsdAttachment/nf-wsdattachment-iwsdinboundattachment-read
-            - name: Iwsdiscoveredservice
+            - name: IWSDiscoveredService
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoveredservice
               items:
-                - name: Getendpointreferenzierungsmethode
+                - name: GetEndpointReference-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getendpointreference
-                - name: Getextendeddiscoxml-Methode
+                - name: GetExtendedDiscoXML-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getextendeddiscoxml
                 - name: GetInstanceId-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getinstanceid
-                - name: Getlocalinterfaceguid-Methode
+                - name: GetLocalInterfaceGUID-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getlocalinterfaceguid
-                - name: Getlocaltransportaddress-Methode
+                - name: GetLocalTransportAddress-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getlocaltransportaddress
                 - name: GetMetadataVersion-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getmetadataversion
-                - name: Getproberesolvetag-Methode
+                - name: GetProbeResolveTag-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getproberesolvetag
-                - name: Getremotetransportaddress-Methode
+                - name: GetRemoteTransportAddress-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getremotetransportaddress
-                - name: Getscopes-Methode
+                - name: GetScopes-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getscopes
                 - name: GetTypes-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-gettypes
-                - name: Getxaddrs-Methode
+                - name: GetXAddrs-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveredservice-getxaddrs
-            - name: Iwsdiscoveryprovider
+            - name: IWSDiscoveryProvider
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoveryprovider
               items:
                 - name: Attach-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-attach
                 - name: Detach-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-detach
-                - name: Getxmlcontext-Methode
+                - name: GetXMLContext-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-getxmlcontext
-                - name: Searchbyaddress-Methode
+                - name: SearchByAddress-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyaddress
-                - name: Searchbyid-Methode
+                - name: SearchById-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyid
-                - name: Searchbytype-Methode
+                - name: SearchByType-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbytype
-                - name: Setaddressfamily-Methode
+                - name: SetAddressFamily-Methode
                   href: /windows/desktop/api/wsddisco/nf-wsddisco-iwsdiscoveryprovider-setaddressfamily
-            - name: Iwsdiscoveryprovidernotify
+            - name: IWSDiscoveryProviderNotify
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoveryprovidernotify
               items:
                 - name: Methode hinzufügen
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovidernotify-add
                 - name: Remove-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovidernotify-remove
-                - name: Searchcomplete-Methode
+                - name: SearchComplete-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovidernotify-searchcomplete
                 - name: SearchFailed-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovidernotify-searchfailed
-            - name: Iwsdiscoverypublisher
+            - name: IWSDiscoveryPublisher
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoverypublisher
               items:
-                - name: Getxmlcontext-Methode
+                - name: GetXMLContext-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-getxmlcontext
-                - name: Matchprobe-Methode
+                - name: MatchProbe-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-matchprobe
-                - name: Matchprobeex-Methode
+                - name: MatchProbeEx-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-matchprobeex
-                - name: Matchresolve-Methode
+                - name: MatchResolve-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-matchresolve
-                - name: Matchresolveex-Methode
+                - name: MatchResolveEx-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-matchresolveex
                 - name: Publish-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-publish
-                - name: Publishex-Methode
+                - name: PublishEx-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-publishex
-                - name: Registernotificationsink-Methode
+                - name: RegisterNotificationSink-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-registernotificationsink
-                - name: Registerscopematchingrule-Methode
+                - name: RegisterScopeMatchingRule-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-registerscopematchingrule
-                - name: Setaddressfamily-Methode
+                - name: SetAddressFamily-Methode
                   href: /windows/desktop/api/wsddisco/nf-wsddisco-iwsdiscoverypublisher-setaddressfamily
-                - name: UNPUBLISH-Methode
+                - name: UnPublish-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-unpublish
-                - name: Unregisternotificationsink-Methode
+                - name: UnRegisterNotificationSink-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-unregisternotificationsink
-                - name: Unregisterscopematchingrule-Methode
+                - name: UnRegisterScopeMatchingRule-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublisher-unregisterscopematchingrule
-            - name: Iwsdiscoverypublishernotify
+            - name: IWSDiscoveryPublisherNotify
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoverypublishernotify
               items:
-                - name: Probehandler-Methode
+                - name: ProbeHandler-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublishernotify-probehandler
-                - name: Resolvehandler-Methode
+                - name: ResolveHandler-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoverypublishernotify-resolvehandler
-            - name: Iwsdmessageparameters
+            - name: IWSDMessageParameters
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdmessageparameters
               items:
                 - name: GetLocalAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdmessageparameters-getlocaladdress
-                - name: Getlowerparameters-Methode
+                - name: GetLowerParameters-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdmessageparameters-getlowerparameters
                 - name: GetRemoteAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdmessageparameters-getremoteaddress
-                - name: Setlocaladdress-Methode
+                - name: SetLocalAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdmessageparameters-setlocaladdress
-                - name: Methode "* tremoteaddress"
+                - name: SetRemoteAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdmessageparameters-setremoteaddress
             - name: IWSDMetadataExchange
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdmetadataexchange
               items:
                 - name: GetMetaData-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdmetadataexchange-getmetadata
-            - name: Iwsdoutboundattachment
+            - name: IWSDOutboundAttachment
               href: /windows/desktop/api/WsdAttachment/nn-wsdattachment-iwsdoutboundattachment
               items:
                 - name: Abort-Methode
@@ -486,139 +486,139 @@
                   href: /windows/desktop/api/WsdAttachment/nf-wsdattachment-iwsdoutboundattachment-close
                 - name: Write-Methode
                   href: /windows/desktop/api/WsdAttachment/nf-wsdattachment-iwsdoutboundattachment-write
-            - name: Iwsdscopematchingrule
+            - name: IWSDScopeMatchingRule
               href: /windows/desktop/api/WsdDisco/nn-wsddisco-iwsdscopematchingrule
               items:
-                - name: Getscoperule-Methode
+                - name: GetScopeRule-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdscopematchingrule-getscoperule
-                - name: Matchscopes-Methode
+                - name: MatchScopes-Methode
                   href: /windows/desktop/api/WsdDisco/nf-wsddisco-iwsdscopematchingrule-matchscopes
-            - name: Iwsdservicemess Aging
+            - name: IWSDServiceMessaging
               href: /windows/desktop/api/wsdhost/nn-wsdhost-iwsdservicemessaging
               items:
-                - name: Faultrequest-Methode
+                - name: FaultRequest-Methode
                   href: /windows/desktop/api/wsdhost/nf-wsdhost-iwsdservicemessaging-faultrequest
                 - name: SendResponse-Methode
                   href: /windows/desktop/api/wsdhost/nf-wsdhost-iwsdservicemessaging-sendresponse
-            - name: Iwsdserviceproxy
+            - name: IWSDServiceProxy
               href: /windows/desktop/api/WsdClient/nn-wsdclient-iwsdserviceproxy
               items:
                 - name: BeginGetMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-begingetmetadata
-                - name: Endgetmetadata-Methode
+                - name: EndGetMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-endgetmetadata
-                - name: Getendpointproxy-Methode
+                - name: GetEndpointProxy-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-getendpointproxy
-                - name: Getservicemetadata-Methode
+                - name: GetServiceMetadata-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-getservicemetadata
-                - name: '""-Methode'
+                - name: SetEventingStatusCallback-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-seteventingstatuscallback
-                - name: Abonniert-Methode
+                - name: SubscribeToOperation-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-subscribetooperation
-                - name: Nicht abonniert beoperation-Methode
+                - name: UnsubscribeToOperation-Methode
                   href: /windows/desktop/api/WsdClient/nf-wsdclient-iwsdserviceproxy-unsubscribetooperation
-            - name: Iwsdserviceproxyeventing
+            - name: IWSDServiceProxyEventing
               href: /windows/desktop/api/wsdclient/nn-wsdclient-iwsdserviceproxyeventing
               items:
-                - name: Begingetstatus-formultipleoperations-Methode
+                - name: BeginGetStatusForMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-begingetstatusformultipleoperations
-                - name: Beginerneumultipleoperations-Methode
+                - name: BeginRenewMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-beginrenewmultipleoperations
-                - name: Beginabonbetomultipleoperations-Methode
+                - name: BeginSubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-beginsubscribetomultipleoperations
-                - name: Beginunabonbetomultipleoperations-Methode
+                - name: BeginUnsubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-beginunsubscribetomultipleoperations
-                - name: Endgetstatus-formultipleoperations-Methode
+                - name: EndGetStatusForMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-endgetstatusformultipleoperations
-                - name: Umdrenewmultipleoperations-Methode
+                - name: EndRenewMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-endrenewmultipleoperations
-                - name: Endabonbetomultipleoperations-Methode
+                - name: EndSubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-endsubscribetomultipleoperations
-                - name: Endunabonbetomultipleoperations-Methode
+                - name: EndUnsubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-endunsubscribetomultipleoperations
-                - name: GetStatus-formultipleoperations-Methode
+                - name: GetStatusForMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-getstatusformultipleoperations
-                - name: Erneuermultipleoperations-Methode
+                - name: RenewMultipleOperations-Methode
                   href: /windows/desktop/api/Wsdclient/nf-wsdclient-iwsdserviceproxyeventing-renewmultipleoperations
-                - name: Index Operations-Methode
+                - name: SubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-subscribetomultipleoperations
-                - name: Unabonnebetomultipleoperations-Methode
+                - name: UnsubscribeToMultipleOperations-Methode
                   href: /windows/desktop/api/wsdclient/nf-wsdclient-iwsdserviceproxyeventing-unsubscribetomultipleoperations
-            - name: Iwsdsignatureproperty
+            - name: IWSDSignatureProperty
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdsignatureproperty
               items:
-                - name: Getkeyinfo-Methode
+                - name: GetKeyInfo-Methode
                   href: /previous-versions/windows/desktop/legacy/dd379728(v=vs.85)
                 - name: GetSignature-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsignatureproperty-getsignature
-                - name: Getsignetdinf ohash-Methode
+                - name: GetSignedInfoHash-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsignatureproperty-getsignedinfohash
-                - name: Ismessagesignaturetrusted-Methode
+                - name: IsMessageSignatureTrusted-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsignatureproperty-ismessagesignaturetrusted
                 - name: IsMessageSigned-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsignatureproperty-ismessagesigned
-            - name: Iwsdsslclientcertificate
+            - name: IWSDSSLClientCertificate
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdsslclientcertificate
               items:
-                - name: Getclientcertificate-Methode
+                - name: GetClientCertificate-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsslclientcertificate-getclientcertificate
-                - name: Getmappedaccesstoken-Methode
+                - name: GetMappedAccessToken-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdsslclientcertificate-getmappedaccesstoken
-            - name: Iwsdtransportaddress
+            - name: IWSDTransportAddress
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdtransportaddress
               items:
                 - name: GetPort-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdtransportaddress-getport
-                - name: Gettransportaddress-Methode
+                - name: GetTransportAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdtransportaddress-gettransportaddress
                 - name: GetTransportAddressEx-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdtransportaddress-gettransportaddressex
                 - name: SetPort-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdtransportaddress-setport
-                - name: Settransportaddress-Methode
+                - name: SetTransportAddress-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdtransportaddress-settransportaddress
-            - name: Iwsdudpaddress
+            - name: IWSDUdpAddress
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdudpaddress
               items:
-                - name: Getalias-Methode
+                - name: GetAlias-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-getalias
-                - name: Getexclusive-Methode
+                - name: GetExclusive-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-getexclusive
                 - name: GetMessageType-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-getmessagetype
-                - name: Getsockaddr-Methode
+                - name: GetSockaddr-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-getsockaddr
-                - name: Getttl-Methode
+                - name: GetTTL-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-getttl
-                - name: Methode "-talias"
+                - name: SetAlias-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-setalias
-                - name: Abtexclusive-Methode
+                - name: SetExclusive-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-setexclusive
-                - name: '""-Methode'
+                - name: SetMessageType-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-setmessagetype
-                - name: Setsockaddr-Methode
+                - name: SetSockaddr-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-setsockaddr
                 - name: SetTTL-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpaddress-setttl
-            - name: Iwsdudpmessageparameters
+            - name: IWSDUdpMessageParameters
               href: /windows/desktop/api/Wsdbase/nn-wsdbase-iwsdudpmessageparameters
               items:
-                - name: Getretransmitparameams-Methode
+                - name: GetRetransmitParams-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpmessageparameters-getretransmitparams
-                - name: Methode "-tretretransmitparameams"
+                - name: SetRetransmitParams-Methode
                   href: /windows/desktop/api/Wsdbase/nf-wsdbase-iwsdudpmessageparameters-setretransmitparams
-            - name: Iwsdxmlcontext
+            - name: IWSDXMLContext
               href: /windows/desktop/api/WsdXml/nn-wsdxml-iwsdxmlcontext
               items:
                 - name: AddNamespace-Methode
                   href: /windows/desktop/api/WsdXml/nf-wsdxml-iwsdxmlcontext-addnamespace
-                - name: Addnametonamespace-Methode
+                - name: AddNameToNamespace-Methode
                   href: /windows/desktop/api/WsdXml/nf-wsdxml-iwsdxmlcontext-addnametonamespace
-                - name: Setnamespaces-Methode
+                - name: SetNamespaces-Methode
                   href: /windows/desktop/api/WsdXml/nf-wsdxml-iwsdxmlcontext-setnamespaces
-                - name: Settypes-Methode
+                - name: SetTypes-Methode
                   href: /windows/desktop/api/WsdXml/nf-wsdxml-iwsdxmlcontext-settypes
-        - name: Strukturen für Webdienste auf Geräten
+        - name: Webdienste auf Gerätestrukturen
           href: web-services-for-devices-structures.md
           items:
             - name: REQUESTBODY_GetStatus
@@ -743,7 +743,7 @@
               href: /windows/win32/api/WsdTypes/ns-wsdtypes-wsd_unknown_lookup
             - name: WSD_URI_LIST
               href: /windows/win32/api/WsdTypes/ns-wsdtypes-wsd_uri_list
-            - name: Wsdudpretransmitparametriams
+            - name: WSDUdpRetransmitParams
               href: /windows/win32/api/Wsdbase/ns-wsdbase-wsdudpretransmitparams
             - name: WSDXML_ATTRIBUTE
               href: /windows/win32/api/WsdXmldom/ns-wsdxmldom-wsdxml_attribute
@@ -763,165 +763,165 @@
               href: /windows/win32/api/WsdXmldom/ns-wsdxmldom-wsdxml_text
             - name: WSDXML_TYPE
               href: /windows/win32/api/WsdXmldom/ns-wsdxmldom-wsdxml_type
-        - name: Wsdcodegen-Referenz
+        - name: WsdCodeGen-Referenz
           href: wsdcodegen-reference.md
           items:
-            - name: Wsdcodegen-Befehlszeilen Syntax
+            - name: WsdCodeGen-Befehlszeilensyntax
               href: wsdcodegen-command-line-syntax.md
-            - name: Wsdcodegen-Konfigurationsdatei-XML-Verweis
+            - name: XML-Referenz zur WsdCodeGen-Konfigurationsdatei
               href: wsdcodegen-configuration-file-xml-reference.md
               items:
                 - name: async
                   href: async.md
-                - name: automatisch statisch
+                - name: autoStatic
                   href: autostatic.md
-                - name: codeName
+                - name: Codename
                   href: codename.md
-                - name: deallokator
+                - name: Deallocator
                   href: deallocator.md
-                - name: enumerationvaluedeklarationen
+                - name: enumerationValueDeclarations
                   href: enumerationvaluedeclarations.md
-                - name: EventArg
+                - name: eventArg
                   href: eventarg.md
                 - name: events
                   href: events.md
-                - name: eventsourcebuilderdeklarationen
+                - name: eventSourceBuilderDeclarations
                   href: eventsourcebuilderdeclarations.md
-                - name: eventsourcebuilderimplementierungen
+                - name: eventSourceBuilderImplementations
                   href: eventsourcebuilderimplementations.md
-                - name: eventstubfunction
+                - name: eventStubFunction
                   href: eventstubfunction.md
-                - name: excludeimport
+                - name: excludeImport
                   href: excludeimport.md
-                - name: faultinfo
+                - name: faultInfo
                   href: faultinfo.md
                 - name: file
                   href: file.md
-                - name: functiondeklarationen
+                - name: functionDeclarations
                   href: functiondeclarations.md
                 - name: host
                   href: host.md
-                - name: hostbuilderdeclaration
+                - name: hostBuilderDeclaration
                   href: hostbuilderdeclaration.md
-                - name: hostbuilderimplementation
+                - name: hostBuilderImplementation
                   href: hostbuilderimplementation.md
-                - name: gehostet
+                - name: Gehostet
                   href: hosted.md
-                - name: hostedservice "
+                - name: hostedService
                   href: hostedservice.md
-                - name: hostmetadata
+                - name: hostMetadata
                   href: hostmetadata.md
-                - name: idlfunctiondeklarationen
+                - name: idlFunctionDeclarations
                   href: idlfunctiondeclarations.md
-                - name: importhint
+                - name: importHint
                   href: importhint.md
                 - name: include
                   href: include.md
                 - name: interface
                   href: interface.md
-                - name: Iunknowndeklarationen
+                - name: IUnknownDeclarations
                   href: iunknowndeclarations.md
-                - name: Iunknowndefinitions
+                - name: IUnknownDefinitions
                   href: iunknowndefinitions.md
-                - name: layernumber
+                - name: layerNumber
                   href: layernumber.md
-                - name: layerprefix
+                - name: layerPrefix
                   href: layerprefix.md
-                - name: literalinclude
+                - name: literalInclude
                   href: literalinclude.md
                 - name: location
                   href: location.md
                 - name: Makro
                   href: macro.md
-                - name: makroprefix
+                - name: macroPrefix
                   href: macroprefix.md
                 - name: Hersteller
                   href: manufacturer.md
-                - name: manufacturerls
+                - name: manufacturerLS
                   href: manufacturerls.md
-                - name: ManufacturerUrl
+                - name: manufacturerURL
                   href: manufacturerurl.md
-                - name: messagestructuredefinitions
+                - name: messageStructureDefinitions
                   href: messagestructuredefinitions.md
-                - name: messagetypedeklarationen
+                - name: messageTypeDeclarations
                   href: messagetypedeclarations.md
-                - name: messagetypedefinitions
+                - name: messageTypeDefinitions
                   href: messagetypedefinitions.md
                 - name: modelName
                   href: modelname.md
-                - name: modelnamels
+                - name: modelNameLS
                   href: modelnamels.md
-                - name: modelnumber
+                - name: modelNumber
                   href: modelnumber.md
-                - name: modelurl
+                - name: modelURL
                   href: modelurl.md
                 - name: name
                   href: name.md
                 - name: Namespace
                   href: namespace.md
-                - name: Namespacedeklarationen
+                - name: namespaceDeclarations
                   href: namespacedeclarations.md
-                - name: namespacedefinitions
+                - name: namespaceDefinitions
                   href: namespacedefinitions.md
-                - name: notificationinterface
+                - name: notificationInterface
                   href: notificationinterface.md
                 - name: operation
                   href: operation.md
-                - name: operationentzuordcator
+                - name: operationDeallocator
                   href: operationdeallocator.md
                 - name: path
                   href: path.md
-                - name: Pnpxcompatibleid
+                - name: PnPXCompatibleId
                   href: pnpxcompatibleid.md
-                - name: Pnpxde vicecategory
+                - name: PnPXDeviceCategory
                   href: pnpxdevicecategory.md
-                - name: Pnpxhardwareid
+                - name: PnPXHardwareId
                   href: pnpxhardwareid.md
-                - name: PortType
+                - name: Porttype
                   href: porttype.md
-                - name: porttypeer-Deklarationen
+                - name: portTypeDeclarations
                   href: porttypedeclarations.md
-                - name: porttypeer Definitionen
+                - name: portTypeDefinitions
                   href: porttypedefinitions.md
-                - name: preferredprefix
+                - name: preferredPrefix
                   href: preferredprefix.md
-                - name: presentationurl
+                - name: presentationURL
                   href: presentationurl.md
-                - name: proxybuilderdeklarationen
+                - name: proxyBuilderDeclarations
                   href: proxybuilderdeclarations.md
-                - name: proxybuilderimplementierungen
+                - name: proxyBuilderImplementations
                   href: proxybuilderimplementations.md
                 - name: proxyClass
                   href: proxyclass.md
-                - name: proxyfunctionimplementierungen
+                - name: proxyFunctionImplementations
                   href: proxyfunctionimplementations.md
-                - name: relationshipmetadata
+                - name: relationshipMetadata
                   href: relationshipmetadata.md
                 - name: relationshipMetadataDeclaration
                   href: relationshipmetadatadeclaration.md
                 - name: relationshipMetadataDefinition
                   href: relationshipmetadatadefinition.md
-                - name: Server Class
+                - name: serverClass
                   href: serverclass.md
                 - name: ServiceID
                   href: serviceid.md
-                - name: structdeklarationen
+                - name: structDeclarations
                   href: structdeclarations.md
-                - name: structdefinitions
+                - name: structDefinitions
                   href: structdefinitions.md
-                - name: stubdeklarationen
+                - name: stubDeclarations
                   href: stubdeclarations.md
-                - name: stubdefinitionen
+                - name: stubDefinitions
                   href: stubdefinitions.md
-                - name: stubfunction
+                - name: stubFunction
                   href: stubfunction.md
-                - name: '"abonnemenfunctiondeklarationen"'
+                - name: subscriptionFunctionDeclarations
                   href: subscriptionfunctiondeclarations.md
-                - name: '"abonnemenidlfunctiondeklarationen"'
+                - name: subscriptionIdlFunctionDeclarations
                   href: subscriptionidlfunctiondeclarations.md
-                - name: abonnemenproxyfunctionimplementierungen
+                - name: subscriptionProxyFunctionImplementations
                   href: subscriptionproxyfunctionimplementations.md
-                - name: thismodelmetadata
+                - name: thisModelMetadata
                   href: thismodelmetadata.md
                 - name: thisModelMetadataDeclaration
                   href: thismodelmetadatadeclaration.md
@@ -929,17 +929,17 @@
                   href: thismodelmetadatadefinition.md
                 - name: Typen
                   href: types.md
-                - name: typetable-Deklarationen
+                - name: typeTableDeclarations
                   href: typetabledeclarations.md
-                - name: typetabledefinitions
+                - name: typeTableDefinitions
                   href: typetabledefinitions.md
-                - name: TypeUri
+                - name: typeUri
                   href: typeuri.md
-                - name: wsdcodegen
+                - name: wsdCodeGen
                   href: wsdcodegen.md
-                - name: WSDL
+                - name: Wsdl
                   href: wsdl.md
                 - name: xsd
                   href: xsd.md
-            - name: WSDAPI-XML-Typ-Bytecodes
+            - name: WSDAPI-XML-Typbytecodes
               href: wsdapi-xml-type-bytecodes.md

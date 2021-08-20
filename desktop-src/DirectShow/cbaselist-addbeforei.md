@@ -76,7 +76,7 @@ Wenn *pos* **NULL** ist, fügt diese Methode das Element am Ende der Liste hinzu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

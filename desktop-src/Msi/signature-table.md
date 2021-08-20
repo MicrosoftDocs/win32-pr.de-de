@@ -149,7 +149,7 @@ Signaturtabelle
 
  
 
-In diesem Fall und auf Windows XP SP1 legt die [AppSearch-Aktion](appsearch-action.md) MSIDLL auf c: \\ windows system32msi.dll fest, da MSI.DLL eine sprachneutrale Datei \\ \\ ist. Wenn der Wert der Spalte Languages von 0 in 1033 geändert wird, kann die AppSearch-Aktion die übereinstimmende msi.dll nicht finden, und die MSIDLL-Eigenschaft ist nicht definiert.
+In diesem Fall und auf Windows XP SP1 legt die [AppSearch-Aktion](appsearch-action.md) MSIDLL auf c: windows system32msi.dll fest, da MSI.DLL eine sprachneutrale Datei \\ \\ \\ ist. Wenn der Wert der Spalte Languages von 0 in 1033 geändert wird, kann die AppSearch-Aktion die übereinstimmende msi.dll nicht finden, und die MSIDLL-Eigenschaft ist nicht definiert.
 
 Sie können die Signaturtabelle nicht verwenden, um Abfragen für Sprachen allein auszuführen. Um nach verschiedenen Sprachversionen einer Datei zu suchen, müssen Sie für jede Sprachversion über einen separaten Eintrag in der Signaturtabelle verfügen. Wenn in der Spalte Sprachen mehrere Sprachen angegeben sind, wird nach einer Datei gesucht, die alle diese Sprachen unterstützt.
 
@@ -187,7 +187,7 @@ Die Formel zum Berechnen der MinDate- und MaxDate-Feldwerte ist:
 
 ( (Jahr - 1980) \* 512 + Monat \* 32 + Tag ) \* 65536 + Stunden \* 2048 + Minuten \* 32 + Sekunden/2
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

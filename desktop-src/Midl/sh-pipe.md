@@ -1,8 +1,8 @@
 ---
 title: sh_pipe-Schlüsselwort
-description: Das Schlüsselwort "\ SH \_ Pipe \" gibt an, dass das Systemobjekt ein Handle für eine Pipe ist.
+description: Das Schlüsselwort \sh \_ pipe\ gibt an, dass das Systemobjekt ein Handle für eine Pipe ist.
 keywords:
-- sh_pipe-Schlüsselwort-Mittel l
+- sh_pipe MIDL-Schlüsselwort
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: 9f9deab2bf5a751d3b2d5956d4d33a1d5b347e18
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 15bee0e34525d83af10e5c42199116dc6080a6a7b7f4e2af3de565f62a9c6a5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "106369918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118383345"
 ---
-# <a name="sh_pipe-keyword"></a>SH \_ Pipe-Schlüsselwort
+# <a name="sh_pipe-keyword"></a>sh \_ pipe-Schlüsselwort
 
-Das **SH \_ Pipe** -Schlüsselwort gibt an, dass ein ein `system_handle` Handle für eine Pipe enthält.
+Das **Sh \_ Pipe-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für eine Pipe enthält.
 
 ``` syntax
 [system_handle(sh_pipe)]
@@ -32,11 +32,11 @@ Das **SH \_ Pipe** -Schlüsselwort gibt an, dass ein ein `system_handle` Handle 
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle**](system-handle.md) dokumentation enthält auch Details zur optionalen Verwendung des *Access Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **Spezifikationen der DuplicateHandle-Funktion.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut zu verwenden, muss das -Flag auf (oder höher) festgelegt werden, `system_handle` `-target` wenn `NT100` midl.exe.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,7 +56,7 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -66,11 +66,11 @@ interface MyInterface : IUnknown
 [Informationen zu Pipes](../ipc/about-pipes.md)
 </dt> <dt>
 
-[Datei Sicherheit und Zugriffsrechte](../fileio/file-security-and-access-rights.md)
+[Dateisicherheit und Zugriffsrechte](../fileio/file-security-and-access-rights.md)
 </dt> <dt>
 
-[Funktion "| **atepipe** "](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)
+[**CreatePipe-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)
 </dt> <dt>
 
-[" **Kreatenamedpipe** "-Funktion](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
+[**CreateNamedPipe-Funktion**](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 </dt> </dl>

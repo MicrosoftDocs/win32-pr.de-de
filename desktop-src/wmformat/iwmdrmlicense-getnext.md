@@ -3,8 +3,8 @@ title: IWMDRMLicense GetNext-Methode (Wmdrmsdk.h)
 description: Die GetNext-Methode lädt die Informationen zum nächsten Element in der Liste.
 ms.assetid: 5ef91751-2883-4a8e-9908-7a6dfe6d2af3
 keywords:
-- 'GetNext-Methode : Windows Media Format'
-- GetNext-Methode windows Media Format, IWMDRMLicense-Schnittstelle
+- GetNext-Methode windows Media Format
+- GetNext-Methode windows Media Format , IWMDRMLicense-Schnittstelle
 - IWMDRMLicense-Schnittstelle windows Media Format , GetNext-Methode
 topic_type:
 - apiref
@@ -49,8 +49,8 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ \_ DRM:NS: ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
-| <dl> <dt>**FEHLER: \_ \_ KEINE ELEMENTE \_ MEHR**</dt> </dl>      | In der Liste sind keine Elemente mehr vorhanden.<br/>          |
+| <dl> <dt>**NS \_ E \_ \_ DRM- WIES ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
+| <dl> <dt>**FEHLER: \_ KEINE \_ WEITEREN \_ ELEMENTE**</dt> </dl>      | In der Liste sind keine Elemente mehr vorhanden.<br/>          |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
@@ -59,7 +59,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Die Methoden der [**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md) stellen Daten zu einer einzelnen Lizenz gleichzeitig bereit. Das zugrunde liegende -Objekt enthält eine Liste mit mindestens einer Lizenz. Wenn Sie diese Methode aufrufen, verschiebt die Schnittstelle ihre internen Verweise auf die nächste Lizenz in der Liste.
+Die Methoden der [**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md) stellen Daten zu einer einzelnen Lizenz gleichzeitig bereit. Das zugrunde liegende -Objekt enthält eine Liste mit einer oder mehreren Lizenzen. Wenn Sie diese Methode aufrufen, verschiebt die Schnittstelle ihre internen Verweise auf die nächste Lizenz in der Liste.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Die Methoden der [**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md) stellen Dat
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

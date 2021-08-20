@@ -7,7 +7,7 @@ keywords:
 - Onlineshops,Erstellen eines ServiceInfo-Dokuments
 - Typ 1 Onlineshops,Erstellen eines ServiceInfo-Dokuments
 - 'Typ 2: Onlineshops,Erstellen eines ServiceInfo-Dokuments'
-- Windows Media Player,dynamisches Erstellen eines ServiceInfo-Dokuments
+- Windows Media Player Onlineshops,dynamisches Erstellen eines ServiceInfo-Dokuments
 - Onlineshops,dynamisches Erstellen eines ServiceInfo-Dokuments
 - Geben Sie 1 Onlineshops ein, und erstellen Sie dynamisch ein ServiceInfo-Dokument.
 - 'Typ 2: Onlineshops, dynamisches Erstellen eines ServiceInfo-Dokuments'
@@ -76,7 +76,7 @@ Im obigen Beispielcode wird ASP verwendet, um den Hostnamen vom Webserver abzuru
 [**Allgemeine Informationen zu Onlineshops vom Typ 1 und 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
-[**Navigation für Type 2 Online Stores**](navigation-for-type-2-online-stores.md)
+[**Navigation für Typ 2-Onlineshops**](navigation-for-type-2-online-stores.md)
 </dt> <dt>
 
 [**ServiceInfo-Dokument für eine Online-Store**](serviceinfo-document-for-a-type-1-online-store.md)

@@ -4,56 +4,56 @@ ms.assetid: 6e690d17-da17-452a-aa9a-9701a560856b
 title: Konfigurieren eines WMV-Encoders
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6324071257dd9d56e33d1dc6ece4886ee73661ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39001edd5901d09bc618fe92d251070d24633fb94812a9c2696b11866f3cb9cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117880544"
 ---
 # <a name="configuring-a-wmv-encoder"></a>Konfigurieren eines WMV-Encoders
 
-Um einen gültigen Ausgabetyp für einen Windows Media Video-Encoder (WMV) zu erstellen, müssen Sie über die folgenden Informationen verfügen:
+Um einen gültigen Ausgabetyp für einen Windows Media Video (WMV)-Encoder zu erstellen, müssen Sie über die folgenden Informationen verfügen:
 
--   Das Format des unkomprimierten Videos, das codiert werden soll.
--   Der Video Untertyp, der das codierte WMV-Format repmmert. Siehe [Video Untertyp-GUIDs](video-subtype-guids.md).
--   Die Ziel Bitrate für den codierten Stream.
--   Die Konfigurations Eigenschaften, die für den Encoder festgelegt werden sollen.
+-   Das Format des unkomprimierten Videos, das Sie codieren.
+-   Der Videountertyp, der das codierte WMV-Format wiederernennt. Weitere Informationen [finden Sie unter Video Subtype GUIDs](video-subtype-guids.md).
+-   Die Zielbitrate für den codierten Stream.
+-   Die Konfigurationseigenschaften, die für den Encoder festgelegt werden.
 
-Die Konfigurations Eigenschaften sind in der Dokumentation zu Windows Media Audio und Video Codec und DSP-APIs dokumentiert. Weitere Informationen finden Sie unter "Video Stream Properties" unter [Codierungs Eigenschaften](configuring-the-encoder.md).
+Die Konfigurationseigenschaften sind in der Dokumentation Windows Medienaudio- und Videocodec und DSP-APIs dokumentiert. Weitere Informationen finden Sie unter "Video Stream Properties" (Videostreameigenschaften) unter [Encoding Properties (Codierungseigenschaften).](configuring-the-encoder.md)
 
-Um einen gültigen Ausgabetyp für den Encoder zu erhalten, führen Sie die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um einen gültigen Ausgabetyp für den Encoder zu erhalten.
 
-1.  Verwenden Sie die Funktion [**mftenum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) oder [**mftenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) zum Erstellen einer Instanz des Encoders.
-2.  Fragen Sie den Encoder nach der **IPropertyStore** -Schnittstelle ab.
-3.  Verwenden Sie die **IPropertyStore** -Schnittstelle, um den Encoder zu konfigurieren.
-4.  Mit [**imftransform:: setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) wird der unkomprimierte Videotyp für den Encoder festgelegt.
-5.  Wenn Sie [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) aufrufen, wird die Liste mit den Komprimierungs Formaten des Encoders abgerufen. Der WMV-Encoder gibt keinen kompletten Medientyp aus dieser Methode zurück. In den Medientypen fehlen zwei Informationen:
+1.  Verwenden Sie [**die MFTEnum-**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) oder [**MFTEnumEx-Funktion,**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) um eine Instanz des Encoders zu erstellen.
+2.  Fragen Sie den Encoder nach der **IPropertyStore-Schnittstelle** ab.
+3.  Verwenden Sie die **IPropertyStore-Schnittstelle,** um den Encoder zu konfigurieren.
+4.  Rufen [**Sie DEN TYP DESTTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf, um den unkomprimierten Videotyp für den Encoder zu festlegen.
+5.  Rufen [**Sie DEN WERTTRANSFORM::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) auf, um die Liste der Komprimierungsformate vom Encoder zu erhalten. Die WMV-Encoder geben keinen vollständigen Medientyp von dieser Methode zurück. Den Medientypen fehlen zwei Informationen:
 
-    -   Die Ziel Bitrate.
+    -   Die Zielbitrate.
     -   Private Codec-Daten vom Encoder.
 
-    Bevor Sie den Ausgabetyp für den Encoder festlegen, müssen Sie beide Elemente zum Medientyp hinzufügen.
+    Bevor Sie den Ausgabetyp für den Encoder festlegen, müssen Sie beide Elemente dem Medientyp hinzufügen.
 
-6.  Um die Ziel Bitrate anzugeben, legen Sie das [**MF \_ MT \_ AVG- \_ Bitrate**](mf-mt-avg-bitrate-attribute.md) -Attribut für den Medientyp fest.
-7.  Fügen Sie die privaten Codec-Daten zum Medientyp hinzu, wie im nächsten Abschnitt erläutert.
-8.  Aufrufen von [**imftransform:: setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) , um den Medientyp für die Komprimierung für den Encoder festzulegen.
+6.  Um die Zielbitrate anzugeben, legen Sie das [**MF \_ MT \_ AVG \_ BITRATE-Attribut**](mf-mt-avg-bitrate-attribute.md) für den Medientyp fest.
+7.  Fügen Sie dem Medientyp die privaten Codecdaten hinzu, wie im nächsten Abschnitt erläutert.
+8.  Rufen [**Sie ZUM FESTLEGENTRANSFORM::SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) auf, um den Komprimierungsmedientyp für den Encoder festlegen.
 
 ### <a name="private-codec-data"></a>Private Codec-Daten
 
-Bei den privaten Codec-Daten handelt es sich um eine nicht transparente Datenstruktur, die Sie vom WMV-Encoder erhalten und zum Komprimierungstyp hinzufügen müssen, bevor Sie den Komprimierungstyp für den Encoder festlegen. Um die privaten Daten zu erhalten, müssen Sie die **iwmcodecprivatedata** -Schnittstelle verwenden, die im SDK für Windows Media-Format 11 dokumentiert ist.
+Die privaten Codecdaten sind eine nicht transparente Datenstruktur, die Sie vom WMV-Encoder erhalten und dem Komprimierungstyp hinzufügen müssen, bevor Sie den Komprimierungstyp für den Encoder festlegen. Um die privaten Daten zu erhalten, müssen Sie die **IWMCodecPrivateData-Schnittstelle** verwenden, die im Windows Media Format 11 SDK dokumentiert ist.
 
-Um private Codec-Daten zu erhalten, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um die Privaten Codec-Daten zu erhalten:
 
-1.  Wenn Sie [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) aufrufen, erhalten Sie einen Medientyp aus dem Encoder. (Dies ist Schritt 6 aus dem vorherigen Abschnitt.)
-2.  Geben Sie die Ziel Bitrate an, indem Sie das [**MF \_ MT \_ AVG \_ Bitrate**](mf-mt-avg-bitrate-attribute.md) -Attribut für den Medientyp festlegen.
-3.  Konvertieren Sie den Medientyp in eine [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur, indem Sie die Funktion [**mfinitammediatypfrommfmediatype**](/windows/desktop/api/mfapi/nf-mfapi-mfinitammediatypefrommfmediatype) aufrufen.
-4.  Fragen Sie den Encoder für die **iwmcodecprivatedata** -Schnittstelle ab.
-5.  Nennen Sie die **iwmcodecprivatedata:: setpartialoutputtype** -Methode, und übergeben Sie die konvertierte [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur.
-6.  Nennen Sie die **iwmcodecprivatedata:: getprivatedata** -Methode zweimal, einmal, um die Größe des Puffers für die privaten Daten abzurufen, und einmal, um die Daten in den Puffer zu kopieren.
-7.  Fügen Sie die privaten Daten dem Medientyp hinzu, indem Sie das [**MF \_ MT- \_ Benutzer \_ Daten**](mf-mt-user-data-attribute.md) Attribut für den Typ festlegen.
+1.  Rufen [**Sie DEN WERTTRANSFORM::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) auf, um einen Medientyp vom Encoder zu erhalten. (Dies ist Schritt 6 aus dem vorherigen Abschnitt.)
+2.  Geben Sie die Zielbitrate an, indem Sie das [**MF \_ MT \_ AVG \_ BITRATE-Attribut**](mf-mt-avg-bitrate-attribute.md) für den Medientyp festlegen.
+3.  Konvertieren Sie den Medientyp in eine [**DMO \_ MEDIA \_ TYPE-Struktur,**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) indem Sie die [**MFInitAMMediaTypeFromMFMediaType-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfinitammediatypefrommfmediatype) aufrufen.
+4.  Fragen Sie den Encoder für die **IWMCodecPrivateData-Schnittstelle** ab.
+5.  Rufen Sie **die IWMCodecPrivateData::SetPartialOutputType-Methode** auf, und übergeben Sie die konvertierte DMO [**MEDIA \_ \_ TYPE-Struktur.**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type)
+6.  Rufen Sie **die IWMCodecPrivateData::GetPrivateData-Methode** zweimal auf, einmal, um die Größe des Puffers für die privaten Daten zu erhalten, und einmal, um die Daten in den Puffer zu kopieren.
+7.  Fügen Sie dem Medientyp die privaten Daten hinzu, indem Sie das [**MF \_ MT USER \_ \_ DATA-Attribut**](mf-mt-user-data-attribute.md) für den Typ festlegen.
 
-Im folgenden erweiterten Beispiel wird gezeigt, wie ein WMV-Komprimierungs Format aus einem unkomprimierten Videotyp erstellt wird:
+Das folgende erweiterte Beispiel zeigt, wie Sie ein WMV-Komprimierungsformat aus einem nicht komprimierten Videotyp erstellen:
 
 
 ```C++
@@ -169,7 +169,7 @@ HRESULT GetEncodedVideoType(
 
 
 
-Die createvideoencoder-Funktion erstellt einen Video Encoder für einen angegebenen Video Untertyp, wie z. b. **MF-Format \_ WMV3**:
+Die CreateVideoEncoder-Funktion erstellt einen Videoencoder für einen angegebenen Videountertyp, z. B. **MFVideoFormat \_ WMV3:**
 
 
 ```C++
@@ -236,7 +236,7 @@ HRESULT CreateVideoEncoder(
 
 
 
-Die addprivatedata-Funktion fügt dem Komprimierungstyp die privaten Codec-Daten hinzu:
+Die AddPrivateData-Funktion fügt dem Komprimierungstyp die privaten Codecdaten hinzu:
 
 
 ```C++
@@ -318,7 +318,7 @@ HRESULT AddPrivateData(IMFTransform *pMFT, IMFMediaType *pTypeOut)
 
 
 
-Bei der copypropertystore-Funktion handelt es sich um eine Hilfsfunktion, die Eigenschaften aus einem Eigenschaften Speicher in einen anderen kopiert:
+Die CopyPropertyStore-Funktion ist eine Hilfsfunktion, die Eigenschaften aus einem Eigenschaftenspeicher in einen anderen kopiert:
 
 
 ```C++
@@ -371,7 +371,7 @@ HRESULT CopyPropertyStore(IPropertyStore *pSrc, IPropertyStore *pDest)
 
 <dl> <dt>
 
-[Instanziieren eines MFT-Encoders](instantiating-the-encoder-mft.md)
+[Instanziieren eines Encoder-MFT](instantiating-the-encoder-mft.md)
 </dt> <dt>
 
 [Windows Media Encoder](windows-media-encoders.md)

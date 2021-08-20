@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob das mobile Breitbandgerät automatisch eine Verbindung mit einem Netzwerk herstellt.
+description: Gibt an, ob das mobile Breitbandgerät automatisch eine Verbindung mit einem Netzwerk herstellen soll.
 ms.assetid: a2673ac7-6d70-4005-9ac4-cf670eba26ae
 title: AutoConnectOnInternet (MBNProfile)-Element
 ms.topic: reference
@@ -20,11 +20,11 @@ ms.locfileid: "117881475"
 ---
 # <a name="autoconnectoninternet-mbnprofile-element"></a>AutoConnectOnInternet (MBNProfile)-Element
 
-Das **AutoConnectOnInternet (MBNProfile)-Element** gibt an, ob das mobile Breitbandgerät automatisch eine Verbindung mit einem Netzwerk herstellt.
+Das **AutoConnectOnInternet-Element (MBNProfile)** gibt an, ob das mobile Breitbandgerät automatisch eine Verbindung mit einem Netzwerk herstellen soll.
 
-Wenn **false** festgelegt ist, wird die Logik für die automatische Verbindung des Mobilen Breitbanddiensts nicht verwendet, wenn eine andere Netzwerkkonnektivität für das System verfügbar ist. Wenn diese Einstellung auf **TRUE** festgelegt ist, versucht der Mobile Breitbanddienst basierend auf der einstellung für die automatische Verbindung, die im [**ConnectionMode-Element**](schema-connectionmode-mbnprofile-element.md) definiert ist, automatisch eine Verbindung zwischen dem Gerät und dem Netzwerk herzustellen.
+Wenn false festgelegt **ist,** wird die Logik für die automatische Verbindung des Mobile Broadband-Diensts nicht verwendet, wenn dem System eine andere Netzwerkverbindung zur Verfügung steht. Wenn diese Einstellung **auf TRUE** festgelegt ist, versucht der Mobile Breitbanddienst, das Gerät basierend auf der im [**ConnectionMode-Element**](schema-connectionmode-mbnprofile-element.md) definierten Einstellung für die automatische Verbindung automatisch mit dem Netzwerk zu verbinden.
 
-**Windows 8 und höher:** Dieses Element ist veraltet. Verwenden Sie stattdessen die [**WcmSetProperty-Methode,**](/windows/desktop/api/wcmapi/nf-wcmapi-wcmsetproperty) wobei der *Property-Parameter* auf **wcm \_ global property minimize \_ \_ \_ policy** festgelegt ist.
+**Windows 8 und höher:** Dieses Element ist veraltet. Verwenden Sie [**stattdessen die WcmSetProperty-Methode,**](/windows/desktop/api/wcmapi/nf-wcmapi-wcmsetproperty) bei der der *Property-Parameter* auf die Richtlinie zur Minimierung globaler **\_ wcm-Eigenschaften \_ \_ \_ festgelegt** ist.
 
 ``` syntax
 <xs:element name="AutoConnectOnInternet"
@@ -45,7 +45,7 @@ Das **AutoConnectOnInternet-Element** wird durch das [**MBNProfile-Element**](sc
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNLIST. columnidcbmax-Eigenschaft'
-title: JET_COLUMNLIST. columnidcbmax (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNLIST.columnidcbMax-Eigenschaft'
+title: JET_COLUMNLIST.columnidcbMax-Eigenschaft
 TOCTitle: 'columnidcbMax property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNLIST.columnidcbMax
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columnlist.columnidcbmax(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 956b0ec5dd51a56e7acc752339cc98aea1a76e1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d35d5c2f63e3c2cf3d1c017d52e2ceb310a75106fb3e41df610f5d072b44471d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487019"
 ---
-# <a name="jet_columnlistcolumnidcbmax-property"></a>JET_COLUMNLIST. columnidcbmax (Eigenschaft)
+# <a name="jet_columnlistcolumnidcbmax-property"></a>JET_COLUMNLIST.columnidcbMax-Eigenschaft
 
-Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der die maximale Länge der Spalte gespeichert wird.
+Ruft die columnid der Spalte in der temporären Tabelle ab, in der die maximale Länge der Spalte gespeichert wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_COLUMNID columnidcbMax { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNLIST-Klasse](./jet-columnlist-class.md)
 
-[Mitglieder JET_COLUMNLIST](./jet-columnlist-members.md)
+[JET_COLUMNLIST Member](./jet-columnlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
