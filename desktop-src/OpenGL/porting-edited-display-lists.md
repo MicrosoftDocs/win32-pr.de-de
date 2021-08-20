@@ -1,25 +1,25 @@
 ---
-title: Portieren von bearbeiteten anzeigen Listen
-description: Obwohl Sie keine OpenGL-Anzeigelisten bearbeiten können, können Sie ähnliche Ergebnisse erzielen, indem Sie die Anzeigelisten Schachteln und dann neue Versionen der Unterlisten zerstören und erstellen.
+title: Portieren bearbeiteter Anzeigelisten
+description: Obwohl Sie OpenGL-Anzeigelisten nicht bearbeiten können, können Sie ähnliche Ergebnisse erzielen, indem Sie Anzeigelisten schachteln und dann neue Versionen der Unterlisten zerstören und erstellen.
 ms.assetid: b7f7ffed-c3de-43d4-bff2-f244faa3a27a
 keywords:
-- IRIS GL portieren, Anzeigen von Listen
-- Portieren von IRIS GL, Anzeigen von Listen
-- Portieren auf OpenGL von IRIS GL, Anzeigen von Listen
-- OpenGL-Portierung von IRIS GL, Anzeigen von Listen
-- Anzeigen von Listen, Portieren von IRIS GL
+- IRIS GL-Portierung, Anzeigelisten
+- Portieren von IRIS GL, Anzeigelisten
+- Portieren von IRIS GL zu OpenGL, Anzeigen von Listen
+- OpenGL-Portierung von IRIS GL, Anzeigelisten
+- Anzeigelisten,Portieren von IRIS GL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5555c850d4695ba3732b61c0a41b7aedd8af0a9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13f1630b0560091482d47f85e038d908dcfab202ae772c4d35dc388324b46075
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119485580"
 ---
-# <a name="porting-edited-display-lists"></a>Portieren von bearbeiteten anzeigen Listen
+# <a name="porting-edited-display-lists"></a>Portieren bearbeiteter Anzeigelisten
 
-Obwohl Sie keine OpenGL-Anzeigelisten bearbeiten können, können Sie ähnliche Ergebnisse erzielen, indem Sie die Anzeigelisten Schachteln und dann neue Versionen der Unterlisten zerstören und erstellen. Beispiel:
+Obwohl Sie OpenGL-Anzeigelisten nicht bearbeiten können, können Sie ähnliche Ergebnisse erzielen, indem Sie Anzeigelisten schachteln und dann neue Versionen der Unterlisten zerstören und erstellen. Beispiel:
 
 ``` syntax
 glNewList (1, GL_COMPILE); 
@@ -44,9 +44,9 @@ glNewList(2, GL_COPILE);
 glEndList;
 ```
 
- 
+ 
 
- 
+ 
 
 
 

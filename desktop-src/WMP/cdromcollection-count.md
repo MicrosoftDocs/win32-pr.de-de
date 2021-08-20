@@ -1,9 +1,9 @@
 ---
-title: Cdromcollection. Count
-description: Die Count-Eigenschaft ruft die Anzahl der verfügbaren CD-und DVD-Laufwerke im System ab.
+title: Ccollection.count
+description: Die count-Eigenschaft ruft die Anzahl der verfügbaren CD- und DVD-Laufwerke auf dem System ab.
 ms.assetid: 98d24713-6a55-409f-af9a-fc941ad6d8f5
 keywords:
-- Cdromcollection. count-Windows-Media Player
+- Ccollection.count-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf7150ca31caaf68fa51ae42fded223d24a8e59f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0db279f746640d09fac8b3852773afc27330fc9ca48d59a1470de7d42709e60f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864100"
 ---
-# <a name="cdromcollectioncount"></a>Cdromcollection. Count
+# <a name="cdromcollectioncount"></a>Ccollection.count
 
-Die **count** -Eigenschaft ruft die Anzahl der verfügbaren CD-und DVD-Laufwerke im System ab.
+Die **count-Eigenschaft** ruft die Anzahl der verfügbaren CD- und DVD-Laufwerke auf dem System ab.
 
 ``` syntax
 player.cdromCollection.count
@@ -32,19 +32,19 @@ player.cdromCollection.count
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-DVD-ROM-Laufwerke werden genau wie CD-Laufwerke gezählt. Das Windows Media Player-Steuerelement unterstützt jedoch nur DVD-Funktionen für Windows XP oder höhere Betriebssysteme. In der Regel können DVD-Laufwerke CD-Medien wiedergeben, während CD-Laufwerke keine DVD-Medien abspielen können.
+DVD-ROM-Laufwerke werden genau wie CD-Laufwerke gezählt. Das steuerelement Windows Media Player unterstützt jedoch nur DVD-Funktionen für Windows XP-Betriebssysteme oder höher. In der Regel können DVD-Laufwerke CD-Medien wieder geben, CD-Laufwerke jedoch keine DVD-Medien wieder.
 
-**Windows Media Player 10 Mobile:** Diese Methode gibt immer 0 (null) zurück.
+**Windows Media Player 10 Mobile:** Diese Methode gibt immer 0 zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *cdromcollection* verwendet. **Anzahl, um** die Anzahl der CD-und DVD-Laufwerke anzuzeigen, die auf dem Computer des Benutzers verfügbar sind. Das Player-Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript *Ccollection verwendet.* **count,** um die Anzahl der auf dem Computer des Benutzers verfügbaren CD- und DVD-Laufwerke anzuzeigen. Das Player-Objekt wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -66,7 +66,7 @@ alert(displayString);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/>                               |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/>                               |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -75,13 +75,13 @@ alert(displayString);
 
 <dl> <dt>
 
-[**Cdromcollection-Objekt**](cdromcollection-object.md)
+[**Ccollection-Objekt**](cdromcollection-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

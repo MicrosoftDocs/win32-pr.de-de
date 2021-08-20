@@ -1,7 +1,7 @@
 ---
-description: Die setcutsonly-Methode gibt an, ob der Übergang als Ausschneiden gerendert wird. Wenn dies der Fall ist, tritt der Übergang sofort am Ausschneide Punkt auf. Wenn eine Umstellung lange dauert, können Sie Sie als eine Ausschneide-und Geschwindigkeits Vorschau anzeigen.
+description: Die SetCutsOnly-Methode gibt an, ob der Übergang als Schnitt gerendert wird. Wenn dies der Fall ist, erfolgt der Übergang sofort am Schnittpunkt. Wenn das Rendern eines Übergangs sehr lange dauert, sollten Sie eine Vorschau als Vorschauversion für die Umstellung auf die Geschwindigkeit anzeigen.
 ms.assetid: 9ccff624-e37b-422e-9cb2-c472e6c8b2bb
-title: 'Iamtimelinetrans:: setcutsonly-Methode (qedit. h)'
+title: IAMTimelineTrans::SetCutsOnly-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 6b2944d652bffac5bf3bfa72a1e2372f734645bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b008e0aef31548dcba71f3b2a2940009c0cd0c71786bd9bd733c206c1d68ee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154726"
 ---
-# <a name="iamtimelinetranssetcutsonly-method"></a>Iamtimelinetrans:: setcutsonly-Methode
+# <a name="iamtimelinetranssetcutsonly-method"></a>IAMTimelineTrans::SetCutsOnly-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `SetCutsOnly` Methode gibt an, ob der Übergang als Ausschneiden gerendert wird. Wenn dies der Fall ist, tritt der Übergang sofort am Ausschneide Punkt auf. Wenn eine Umstellung lange dauert, können Sie Sie als eine Ausschneide-und Geschwindigkeits Vorschau anzeigen.
+Die `SetCutsOnly` -Methode gibt an, ob der Übergang als Schnitt gerendert wird. Wenn dies der Fall ist, erfolgt der Übergang sofort am Schnittpunkt. Wenn das Rendern eines Übergangs sehr lange dauert, sollten Sie eine Vorschau als Vorschauversion für die Umstellung auf die Geschwindigkeit anzeigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,25 +48,25 @@ HRESULT SetCutsOnly(
 *Val* 
 </dt> <dd>
 
-Gibt an, ob der Übergang als Ausschneide gereinigen werden soll. **True** gibt an, dass der Übergang als sofortige Ausschneide gerendert wird. **False** gibt an, dass der Übergang über seine normale Dauer gerendert wird.
+Gibt an, ob der Übergang als Schnitt gerendert werden soll. True **gibt an,** dass der Übergang als sofortiger Schnitt gerendert wird. False **gibt an,** dass der Übergang über die normale Dauer gerendert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Rendern eines Übergangs als Ausschneiden ist nicht kompatibel mit dem Austauschen der Eingaben. (Weitere Informationen finden Sie unter [**iamtimelinetrans:: sswapinputs**](iamtimelinetrans-setswapinputs.md).) Wenn Sie `SetCutsOnly` mit dem Wert **true** aufzurufen, wird die Einstellung "Setting- **wapinputs** " vorübergehend überschrieben. Die Einstellung nur für die Kürzung ist für die Vorschau vorgesehen. Daher hat diese Einschränkung keinen Einfluss auf die Dateiausgabe – vergessen Sie nicht, `SetCutsOnly` mit dem Wert **false** aufzurufen, bevor Sie die Datei schreiben.
+Das Rendern eines Übergangs als Schnitt ist nicht kompatibel mit dem Austauschen der Eingaben. (Siehe [**IAMTimelineTrans::SetSwapInputs**](iamtimelinetrans-setswapinputs.md).) Wenn Sie mit `SetCutsOnly` dem Wert **TRUE** aufrufen, wird die Einstellung **SetSwapInputs vorübergehend** überschrieben. Die Einstellung "Nur Kürzungen" ist jedoch für die Vorschau vorgesehen, daher wirkt sich diese Einschränkung nicht auf die Dateiausgabe aus. Denken Sie daran, vor dem Schreiben der Datei mit dem Wert `SetCutsOnly` **FALSE** auf aufrufen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Das Rendern eines Übergangs als Ausschneiden ist nicht kompatibel mit dem Austa
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Das Rendern eines Übergangs als Ausschneiden ist nicht kompatibel mit dem Austa
 
 <dl> <dt>
 
-[**Iamtimelinetrans-Schnittstelle**](iamtimelinetrans.md)
+[**IAMTimelineTrans-Schnittstelle**](iamtimelinetrans.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

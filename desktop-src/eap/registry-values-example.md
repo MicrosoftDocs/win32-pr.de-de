@@ -1,59 +1,59 @@
 ---
-title: Beispiel für Registrierungs Werte
-description: Das folgende Beispiel zeigt mögliche Daten für einige der Registrierungs Werte für das Authentifizierungsprotokoll.
+title: Beispiel für Registrierungswerte
+description: Das folgende Beispiel zeigt mögliche Daten für einige der Registrierungswerte des Authentifizierungsprotokolls.
 ms.assetid: 07772af0-db56-4cc6-ad72-cf79d3813883
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bcbc3d4ca10a3e9298177a5eea240d0d34ade04
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: b8a8bc87ef728d2524f9e7f21ad6ff69f1dd58ccee8d4836d8a2ceef4c676e00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104038400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118087011"
 ---
-# <a name="registry-values-example"></a>Beispiel für Registrierungs Werte
+# <a name="registry-values-example"></a>Beispiel für Registrierungswerte
 
-Das folgende Beispiel zeigt mögliche Daten für einige der Registrierungs Werte für das Authentifizierungsprotokoll.
+Das folgende Beispiel zeigt mögliche Daten für einige der Registrierungswerte des Authentifizierungsprotokolls.
 
 ```
 HKEY_LOCAL_MACHINE
-   System
-      CurrentControlSet
-         Services
-            Rasman
-               PPP
-                  EAP
-                     40
-                        Path
-                        FriendlyName
-                        ConfigUIPath
-                        IdentityPath
-                        InteractiveUIPath
-                        RequireConfigUI
-                        ConfigCLSID
-                        StandaloneSupported
+   System
+      CurrentControlSet
+         Services
+            Rasman
+               PPP
+                  EAP
+                     40
+                        Path
+                        FriendlyName
+                        ConfigUIPath
+                        IdentityPath
+                        InteractiveUIPath
+                        RequireConfigUI
+                        ConfigCLSID
+                        StandaloneSupported
 ```
 
 
 
 | Schlüsselname            | Datentyp        | Wert                                  |
 |---------------------|-----------------|----------------------------------------|
-| Pfad                | REG \_ Expand \_ SZ | % Systemroot% \\ system32 \\sample.dll     |
-| FriendlyName        | REG- \_ SZ         | EAP-Beispiel Protokoll                    |
-| Configuipath        | REG \_ Expand \_ SZ | % Systemroot% \\ system32 \\sample.dll     |
-| Identitypath        | REG \_ Expand \_ SZ | % Systemroot% \\ system32 \\sample.dll     |
-| Interactiveuipath   | REG \_ Expand \_ SZ | % Systemroot% \\ system32 \\sample.dll     |
-| Requirements configui     | REG \_ DWORD      | 1                                      |
-| Configclsid         | REG- \_ SZ         | {0000031a-0000-0000-C000-000000000046} |
-| Standalonesupportiert | REG \_ DWORD      | 1                                      |
+| Pfad                | REG \_ EXPAND \_ SZ | %SystemRoot% \\ system32 \\sample.dll     |
+| FriendlyName        | REG \_ SZ         | EAP-Beispielprotokoll                    |
+| ConfigUIPath        | REG \_ EXPAND \_ SZ | %SystemRoot% \\ system32 \\sample.dll     |
+| IdentityPath        | REG \_ EXPAND \_ SZ | %SystemRoot% \\ system32 \\sample.dll     |
+| InteractiveUIPath   | REG \_ EXPAND \_ SZ | %SystemRoot% \\ system32 \\sample.dll     |
+| RequireConfigUI     | REG \_ DWORD      | 1                                      |
+| ConfigCLSID         | REG \_ SZ         | {0000031A-0000-0000-C000-000000000046} |
+| StandaloneSupported | REG \_ DWORD      | 1                                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

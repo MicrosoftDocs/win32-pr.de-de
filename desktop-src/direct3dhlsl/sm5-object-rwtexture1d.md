@@ -26,7 +26,7 @@ Eine Lese-/Schreibressource.
 
 
 
-| Methode                                                        | BESCHREIBUNG                   |
+| Methode                                                        | Beschreibung                   |
 |---------------------------------------------------------------|-------------------------------|
 | [**GetDimensions**](sm5-object-rwtexture1d-getdimensions.md) | Ruft die Ressourcendimensionen ab. |
 | [**Laden**](rwtexture1d-load.md)                              | Liest Texturdaten.           |
@@ -64,7 +64,7 @@ Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
@@ -74,7 +74,7 @@ Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -82,7 +82,7 @@ Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

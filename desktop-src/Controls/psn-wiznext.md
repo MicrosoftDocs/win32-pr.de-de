@@ -1,9 +1,9 @@
 ---
-title: PSN_WIZNEXT Benachrichtigungs Code (prsht. h)
-description: Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche weiter in einem Assistenten geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: PSN_WIZNEXT Benachrichtigungscode (Prsht.h)
+description: Benachrichtigt eine Seite, dass der Benutzer in einem Assistenten auf die Schaltfläche Weiter geklickt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: ff5be154-f2d1-403d-8f22-8f6cacfb66b1
 keywords:
-- Windows-Steuerelemente für PSN_WIZNEXT Benachrichtigungs
+- PSN_WIZNEXT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 145591b725548ffc4175541fd37db8f285533590
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dead2de1e21631b2b8e13cb54e3ee45d5d3bc29f2234380c31ec134c3790eae7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169630"
 ---
-# <a name="psn_wiznext-notification-code"></a>PSN- \_ weiter-Benachrichtigungs Code
+# <a name="psn_wiznext-notification-code"></a>PSN \_ WIZNEXT-Benachrichtigungscode
 
-Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche **weiter** in einem Assistenten geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt eine Seite, dass der Benutzer in einem Assistenten auf die **Schaltfläche** Weiter geklickt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ PSN_WIZNEXT
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, die Informationen über den Benachrichtigungs Code enthält. Diese Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur als ersten Member, **HDR**. Der **hwndfrom** -Member dieser **NMHDR** -Struktur enthält das Handle für das Eigenschaften Blatt. Der **LPARAM** -Member der **pshnotify** -Struktur enthält keine Informationen.
+Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) die Informationen zum Benachrichtigungscode enthält. Diese Struktur enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als ersten Member, **hdr**. Der **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt. Das **lParam-Member** der **PSHNOTIFY-Struktur** enthält keine Informationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, um zuzulassen, dass der Assistent zur nächsten Seite wechselt. Gibt-1 zurück, um zu verhindern, dass der Assistent Seiten ändert. Um eine bestimmte Seite anzuzeigen, geben Sie den Ressourcen Bezeichner des Dialog Felds zurück. Wenn das Dialogfeld mit dem kennflag " [**PSP \_ dlgindirect**](/windows/desktop/api/Prsht/ns-prsht-propsheetpagea_v2) " angegeben wurde, gibt diese Benachrichtigung den Zeiger auf die Dialogfeld Vorlage zurück.
+Geben Sie 0 zurück, damit der Assistent zur nächsten Seite wechseln kann. Geben Sie -1 zurück, um zu verhindern, dass der Assistent Seiten ändert. Um eine bestimmte Seite anzuzeigen, geben Sie ihren Dialogressourcenbezeichner zurück. Wenn der Dialog mit dem [**\_ PSP-DLGINDIRECT-Flag**](/windows/desktop/api/Prsht/ns-prsht-propsheetpagea_v2) angegeben wurde, gibt diese Benachrichtigung den Zeiger auf die Dialogvorlage zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Rückgabewert festzulegen, muss die Dialogfeld Prozedur für die Seite die [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion mit dem **DWL-Wert \_ msgresult** aufrufen und **true** zurückgeben. Beispiel:
+Zum Festlegen des Rückgabewerts muss die Dialogfeldprozedur für die Seite die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) mit dem **DWL \_ MSGRESULT-Wert** aufrufen und **TRUE zurückgeben.** Beispiel:
 
 ``` syntax
 case PSN_WIZNEXT :
@@ -63,36 +63,36 @@ case PSN_WIZBACK :
 ```
 
 > [!Note]  
-> Das Eigenschaften Blatt bearbeitet die Liste der Seiten, wenn der \_ Benachrichtigungs Code "PSN witznext" gesendet wird. Sie können Seiten als Reaktion auf diese Benachrichtigungs Codes hinzufügen, einfügen oder entfernen, aber es muss besonders darauf geachtet werden, dass Seiten vor der aktuellen Seite eingefügt oder entfernt werden.
+> Das Eigenschaftenblatt wird die Liste der Seiten bearbeiten, wenn der PSN \_ WIZNEXT-Benachrichtigungscode gesendet wird. Sie können Seiten als Reaktion auf diese Benachrichtigungscodes hinzufügen, einfügen oder entfernen. Beim Einfügen oder Entfernen von Seiten vor der aktuellen Seite ist jedoch besondere Vorsicht zu nehmen.
 
  
 
-Wenn Sie Seiten vor der aktuellen Seite einfügen oder entfernen, müssen Sie (über **DWL \_ msgresult**) einen Wert ungleich 0 (null) zurückgeben, um die gewünschte neue Seite anzugeben. Beachten Sie jedoch Folgendes: Wenn Sie eine Seite einfügen oder entfernen, die sich vor der aktuellen Seite befindet (die einen kleineren Index als die aktuelle Seite aufweist), wird " [PSN \_ killactive](psn-killactive.md) " möglicherweise an die falsche Seite gesendet.
+Wenn Sie Seiten vor der aktuellen Seite einfügen oder entfernen, müssen Sie (über **DWL \_ MSGRESULT)** einen Wert ungleich 0 (null) zurückgeben, um die gewünschte neue Seite anzugeben. Beachten Sie jedoch, dass [PSN \_ KILLACTIVE](psn-killactive.md) möglicherweise an die falsche Seite gesendet wird, wenn Sie eine Seite einfügen oder entfernen, die sich vor der aktuellen Seite befindet (die über einen kleineren Index als die aktuelle Seite verfügt).
 
-Aus diesem Grund empfiehlt es sich, Assistenten zu verwenden, die als Reaktion auf "PSN-und" PSN-Wort Antworten "Seiten dynamisch hinzufügen und entfernen \_ . [ \_ ](psn-wizback.md) Wenn Sie möchten, dass der Assistent Seiten genau entfernt, behalten Sie die dynamischen Seiten am Ende der Liste bei, und kehren Sie zu permanenten Seiten zurück, bevor Sie Sie löschen.
+Aus diesem Grund wird empfohlen, dass Assistenten, die Seiten dynamisch als Reaktion auf PSN \_ WIZNEXT und [PSN \_ WIZBACK](psn-wizback.md) hinzufügen und entfernen, dies nur für Seiten am Ende der Liste tun. Wenn Sie möchten, dass Der Assistent Seiten genau entfernt, behalten Sie die dynamischen Seiten am Ende der Liste bei, und springen Sie zurück zu permanenten Seiten, bevor Sie sie löschen.
 
-Nehmen wir beispielsweise an, dass ein Assistent aus einer Einführungsseite, einer Reihe dynamischer Seiten und einer Abschluss Seite besteht und Sie die dynamischen Seiten löschen möchten, wenn der Benutzer die Abschluss Seite erreicht.
+Angenommen, ein Assistent besteht aus einer Einführungsseite, einer Reihe dynamischer Seiten und einer Vervollständigungsseite, und Sie möchten die dynamischen Seiten löschen, wenn der Benutzer die Abschlussseite erreicht.
 
-1.  Der Assistent beginnt mit zwei Seiten: "Introduction" und "completion". Der Benutzer beginnt auf der Seite "Introduction" (Einführung).
+1.  Der Assistent beginnt mit zwei Seiten: "Einführung" und "Vervollständigung". Der Benutzer beginnt auf der Seite "Einführung".
     1.  Einführung (Benutzer ist hier)
     2.  Completion
-2.  Wenn der Benutzer von der "Einführung" weg navigiert, fügt der Assistent die dynamischen Seiten hinzu und platziert den Benutzer auf der ersten dynamischen Seite, indem er (über DWL msgresult) den Dialog Bezeichner der Seite "Dynamic 1" (durch **DWL \_ msgresult**) zurückgibt. In diesem Beispiel gibt es drei dynamische Seiten.
+2.  Wenn der Benutzer von "Einführung" weg navigiert, fügt der Assistent die dynamischen Seiten hinzu und platziert den Benutzer auf der ersten dynamischen Seite, indem er (über **DWL \_ MSGRESULT)** den Dialogbezeichner der Seite "Dynamic 1" zurückgibt. In diesem Beispiel gibt es drei dynamische Seiten.
     1.  Einführung
     2.  Completion
     3.  Dynamisch 1 (Benutzer ist hier)
     4.  Dynamisch 2
     5.  Dynamisch 3
-3.  Nachdem der Benutzer die dynamischen Seiten zu "Dynamic 3" navigiert und dann zur nächsten Seite navigiert hat, sollte die Anwendung den Benutzer auf der Seite "Abschluss" platzieren. Dies erfolgt wiederum durch Zurückgeben von (über **DWL \_ msgresult**) dem Dialog Bezeichner der Seite "Abschluss".
+3.  Nachdem der Benutzer durch die dynamischen Seiten zu "Dynamic 3" navigiert und dann zur nächsten Seite navigiert ist, sollte die Anwendung den Benutzer auf die Seite "Vervollständigung" platzieren. Auch dies geschieht, indem (über **DWL \_ MSGRESULT)** der Dialogbezeichner der Seite "Completion" zurückgegeben wird.
     1.  Einführung
-    2.  Abschluss (Benutzer ist hier)
+    2.  Vervollständigung (Benutzer ist hier)
     3.  Dynamisch 1
     4.  Dynamisch 2
     5.  Dynamisch 3
-4.  Die Anwendung kann dann die drei dynamischen Seiten (in drei bis fünf nummerierte Seiten) sicher entfernen.
+4.  Die Anwendung kann dann die drei dynamischen Seiten (drei bis fünf) sicher entfernen.
     1.  Einführung
-    2.  Abschluss (Benutzer ist hier)
+    2.  Vervollständigung (Benutzer ist hier)
 
-Beachten Sie, dass diese Technik nur erforderlich ist, wenn der Assistent Seiten dynamisch entfernt. Wenn der Assistent nur Seiten dynamisch hinzufügt, ist dieser Vorgang nicht erforderlich.
+Beachten Sie, dass diese Technik nur erforderlich ist, wenn der Assistent Seiten dynamisch entfernt. Wenn der Assistent Seiten nur dynamisch hinzufügt, ist dieser Vorgang nicht erforderlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,9 +100,9 @@ Beachten Sie, dass diese Technik nur erforderlich ist, wenn der Assistent Seiten
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

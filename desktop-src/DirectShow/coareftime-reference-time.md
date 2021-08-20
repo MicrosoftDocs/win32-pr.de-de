@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator Ruft die Verweis Zeit als Verweis \_ Zeitwert ab.
+description: Dieser Operator ruft die Verweiszeit als REFERENCE \_ TIME-Wert ab.
 ms.assetid: ac77ca0d-f3d1-4258-bf2e-d7e8a33eb68e
-title: Coaref time. Operator REFERENCE_TIME-Methode (ctlutil. h)
+title: COARefTime.operator REFERENCE_TIME-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0ef483901a366fffb38ae8cae37cc987d6a228a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2302fc27a76e6bfffb08fe75086b588ea361b192df2c94eba647006cbdd045ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954239"
 ---
-# <a name="coareftimeoperator-reference_time-method"></a>Coaref time. Operator-Verweis \_ Zeit Methode
+# <a name="coareftimeoperator-reference_time-method"></a>REFERENCE TIME-Methode für COARefTime.operator \_
 
-Dieser Operator Ruft die Verweis Zeit als **Verweis \_ Zeitwert** ab.
+Dieser Operator ruft die Verweiszeit als **REFERENCE \_ TIME-Wert** ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Verweis Zeit in 100-Nanosecond-Einheiten zurück.
+Gibt die Referenzzeit in Einheiten von 100 Nanosekunden zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt die Verweis Zeit in 100-Nanosecond-Einheiten zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt die Verweis Zeit in 100-Nanosecond-Einheiten zurück.
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

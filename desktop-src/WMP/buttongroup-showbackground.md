@@ -1,9 +1,9 @@
 ---
 title: BUTTONGROUP.showBackground
-description: Das showBackground-Attribut gibt einen Wert an, der angibt, ob buttongroup nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im Imageattribut angegeben ist, oder ruft einen Wert ab.
+description: Das showBackground-Attribut gibt einen Wert an, der angibt, ob buttongroup nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im Bildattribut angegeben ist, oder ruft diesen ab.
 ms.assetid: 5c3fc873-937c-4dad-ac18-e7a37004ee1e
 keywords:
-- BUTTONGROUP.showBackground Windows Media Player
+- BUTTONGROUP.showBackground-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118342673"
 ---
 # <a name="buttongroupshowbackground"></a>BUTTONGROUP.showBackground
 
-Das **showBackground-Attribut** gibt einen Wert an, der angibt, ob **buttongroup** nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im **Imageattribut** angegeben ist, oder ruft einen Wert ab.
+Das **showBackground-Attribut** gibt einen Wert an, der angibt, ob **buttongroup** nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im Bildattribut angegeben ist, oder **ruft diesen** ab.
 
 ``` syntax
         elementID.showBackground
@@ -29,14 +29,14 @@ Das **showBackground-Attribut** gibt einen Wert an, der angibt, ob **buttongroup
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                                                                |
 |-------|--------------------------------------------------------------------------------------------|
-| true  | Schaltflächen werden angezeigt, und der Bereich, der nicht von Schaltflächen belegt ist, wird aus der Bildbitmap gezeichnet. |
-| false | Standard. Nur die Schaltflächen werden angezeigt.                                                   |
+| true  | Schaltflächen werden angezeigt, und der von Schaltflächen nicht belegte Bereich wird aus der Bildbitmap gezeichnet. |
+| false | Standard. Es werden nur die Schaltflächen angezeigt.                                                   |
 
 
 
@@ -44,9 +44,9 @@ Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **showBackground** true ist, wird das gesamte **Hauptbild** angezeigt.
+Wenn **showBackground** true ist, wird das **gesamte Hauptbild** angezeigt.
 
-Wenn **showBackground** false ist, werden nur die Bereiche gerendert, die zugewiesenen **MappingImage-Farben** entsprechen. Anders ausgedrückt: Nur **BUTTONELEMENTs,** deren **mappingColor** zugewiesen ist, sind sichtbar.
+Wenn **showBackground** false ist, werden nur die Bereiche gerendert, die der **zugewiesenen** ZuordnungImagefarben zugeordnet sind. Anders ausgedrückt: Nur **BUTTONELEMENTs,** deren **mappingColor** zugewiesen ist, sind sichtbar.
 
 Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten.
 
@@ -60,7 +60,7 @@ Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

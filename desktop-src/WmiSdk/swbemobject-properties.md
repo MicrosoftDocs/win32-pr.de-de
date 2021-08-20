@@ -1,29 +1,29 @@
 ---
-description: Das "errbemubject"-Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemObject-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: A39AF028-EFE8-4699-9505-59B9AE879F86
 ms.tgt_platform: multiple
-title: Eigenschaften von "errbemubject"
+title: SWbemObject-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 421af70137f901b50a8b059cb6c415d8355419ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63559c43799380ddaa1fd6def7a90b67b499ff09496282f4dfff855cbe2a9df5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860330"
 ---
-# <a name="swbemobject-properties"></a>Eigenschaften von "errbemubject"
+# <a name="swbemobject-properties"></a>SWbemObject-Eigenschaften
 
-Das " [**errbemubject**](swbemobject.md) "-Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemObject-Objekt**](swbemobject.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Abderivations \_ Eigenschaft**](swbemobject-derivation-.md)
--   [**Methods- \_ Eigenschaft**](swbemobject-methods-.md)
--   [**Path- \_ Eigenschaft**](swbemobject-path-.md)
--   [**Properties- \_ Eigenschaft**](swbemobject-properties-.md)
--   [**\_Qualifiziereneigenschaft**](swbemobject-qualifiers-.md)
--   [**Security- \_ Eigenschaft**](swbemobject-security-.md)
+-   [**\_Ableitungseigenschaft**](swbemobject-derivation-.md)
+-   [**\_Methods-Eigenschaft**](swbemobject-methods-.md)
+-   [**\_Path-Eigenschaft**](swbemobject-path-.md)
+-   [**\_Properties-Eigenschaft**](swbemobject-properties-.md)
+-   [**\_Qualifiers-Eigenschaft**](swbemobject-qualifiers-.md)
+-   [**\_Sicherheitseigenschaft**](swbemobject-security-.md)
 
  
 

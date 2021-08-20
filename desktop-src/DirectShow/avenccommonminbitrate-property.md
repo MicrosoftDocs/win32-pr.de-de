@@ -1,37 +1,37 @@
 ---
-description: Gibt die minimale Bitrate in Bits pro Sekunde an. Diese Eigenschaft gilt nur für die Konstante Bitrate (CBR) und die Variablen Bitrate (VBR)-Codierungs Modi.
+description: Gibt die minimale Bitrate in Bits pro Sekunde an. Diese Eigenschaft gilt nur für die Codierungsmodi Constant Bit Rate (CBR) und Variable Bit Rate (VBR).
 ms.assetid: 57ef6c08-3bad-4d8d-8daf-61041b878802
-title: Avenccommonminbitrate-Eigenschaft (codecapi. h)
+title: AVEncCommonMinBitRate-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95c9b6e84675994d2aca7548f6c13d6558ebc020
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 65488b3a855d4b664c96a1d7abfc1718a35e94c466877c68848a1acf25a3bfe4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118159856"
 ---
-# <a name="avenccommonminbitrate-property"></a>Avenccommonminbitrate (Eigenschaft)
+# <a name="avenccommonminbitrate-property"></a>AVEncCommonMinBitRate (Eigenschaft)
 
-Gibt die minimale Bitrate in Bits pro Sekunde an. Diese Eigenschaft gilt nur für die Konstante Bitrate (CBR) und die Variablen Bitrate (VBR)-Codierungs Modi.
+Gibt die minimale Bitrate in Bits pro Sekunde an. Diese Eigenschaft gilt nur für die Codierungsmodi Constant Bit Rate (CBR) und Variable Bit Rate (VBR).
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avenccommonminbitrate**
+**CODECAPI \_ AVEncCommonMinBitRate**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft verfügt über einen linearen Wertebereich. Um den unterstützten Bereich abzurufen, nennen Sie [**icodecapi:: getparameterrange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange).
+Diese Eigenschaft verfügt über einen linearen Wertebereich. Um den unterstützten Bereich zu erhalten, rufen [**Sie ICodecAPI::GetParameterRange auf.**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Encoder erzwingt die minimale Bitrate durch Erhöhen der Codierungsqualität nach Bedarf.
+Der Encoder erzwingt die minimale Bitrate, indem er die Codierungsqualität bei Bedarf erhöht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Der Encoder erzwingt die minimale Bitrate durch Erhöhen der Codierungsqualität
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -49,10 +49,10 @@ Der Encoder erzwingt die minimale Bitrate durch Erhöhen der Codierungsqualität
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

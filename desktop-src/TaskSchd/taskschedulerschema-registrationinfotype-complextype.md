@@ -67,7 +67,7 @@ Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das 
 
 
 
-| Element                                                                                           | type     | BESCHREIBUNG                                                                                                        |
+| Element                                                                                           | Typ     | Beschreibung                                                                                                        |
 |---------------------------------------------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------|
 | [**Autor**](taskschedulerschema-author-registrationinfotype-element.md)                         | Zeichenfolge   | Gibt den Autor der Aufgabe an.<br/>                                                                       |
 | [**Datum**](taskschedulerschema-date-registrationinfotype-element.md)                             | dateTime | Gibt das Datum und die Uhrzeit der Registrierung des Task an.<br/>                                                |
@@ -91,7 +91,7 @@ Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,83 +1,83 @@
 ---
-title: Proxy Server und WinRM
-description: Windows-Remoteverwaltung (WinRM) verwendet HTTP und HTTPS zum Senden von Nachrichten zwischen dem Client-und dem Server Computer. Im allgemeinen sendet der WinRM-Client Nachrichten direkt an den WinRM-Server. WinRM-Clients können auch so konfiguriert werden, dass Sie einen Proxy Server verwenden.
+title: Proxyserver und WinRM
+description: Windows Die Remoteverwaltung (WinRM) verwendet HTTP und HTTPS, um Nachrichten zwischen client- und servercomputern zu senden. Im Allgemeinen sendet der WinRM-Client Nachrichten direkt an den WinRM-Server. WinRM-Clients können auch für die Verwendung eines Proxyservers konfiguriert werden.
 ms.assetid: f8137b3a-7704-4b21-a923-6e2692e18d90
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e07bbfebb4c8f0eb9e77a8942d54677b55c60006
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 663493f9c3e71e44be000f436ad4573f911652a8e142b77ffab41acbff250b60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118112938"
 ---
-# <a name="proxy-servers-and-winrm"></a>Proxy Server und WinRM
+# <a name="proxy-servers-and-winrm"></a>Proxyserver und WinRM
 
-Windows-Remoteverwaltung (WinRM) verwendet HTTP und HTTPS zum Senden von Nachrichten zwischen dem Client-und dem Server Computer. Im allgemeinen sendet der WinRM-Client Nachrichten direkt an den WinRM-Server. WinRM-Clients können auch so konfiguriert werden, dass Sie einen Proxy Server verwenden.
+Windows Die Remoteverwaltung (WinRM) verwendet HTTP und HTTPS, um Nachrichten zwischen client- und servercomputern zu senden. Im Allgemeinen sendet der WinRM-Client Nachrichten direkt an den WinRM-Server. WinRM-Clients können auch für die Verwendung eines Proxyservers konfiguriert werden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
--   [Konfigurieren eines Proxy Servers für WinRM 2,0](#configuring-a-proxy-server-for-winrm-20)
-    -   [HTTPS-basierte Proxy Verbindungen](#https-based-proxy-connections)
-    -   [HTTP-basierte Proxy Verbindungen](#http-based-proxy-connections)
--   [Konfigurieren eines Proxy Servers für WinRM 1,1 und früher](#configuring-a-proxy-server-for-winrm-11-and-earlier)
+-   [Konfigurieren eines Proxyservers für WinRM 2.0](#configuring-a-proxy-server-for-winrm-20)
+    -   [HTTPS-basierte Proxyverbindungen](#https-based-proxy-connections)
+    -   [HTTP-basierte Proxyverbindungen](#http-based-proxy-connections)
+-   [Konfigurieren eines Proxyservers für WinRM 1.1 und früher](#configuring-a-proxy-server-for-winrm-11-and-earlier)
 
-## <a name="configuring-a-proxy-server-for-winrm-20"></a>Konfigurieren eines Proxy Servers für WinRM 2,0
+## <a name="configuring-a-proxy-server-for-winrm-20"></a>Konfigurieren eines Proxyservers für WinRM 2.0
 
-WinRM 2,0 unterstützt eine breite Palette von Proxy Konfigurationen. WinRM unterstützt z. b. Proxys für http-und HTTPS-Transporte sowie für authentifizierte und nicht authentifizierte Proxy Server.
+WinRM 2.0 unterstützt eine Vielzahl von Proxykonfigurationen. WinRM unterstützt beispielsweise Proxys für HTTP- und HTTPS-Transporte sowie für authentifizierte und nicht authentifizierte Proxyserver.
 
-### <a name="https-based-proxy-connections"></a>HTTPS-Based von Proxy Verbindungen
+### <a name="https-based-proxy-connections"></a>HTTPS-Based Proxyverbindungen
 
-Um eine bessere Sicherheit und Verbindungs basierte Affinität zu erzielen, sollte HTTPS als Transportmechanismus verwendet werden.
+Zur Besseren Sicherheit und verbindungsbasierten Affinität sollte HTTPS als Transportmechanismus verwendet werden.
 
-Wenn für den Proxy Server eine Authentifizierung erforderlich ist, müssen die WinRM-Clients und-Server HTTPS verwenden.
+Wenn der Proxyserver eine Authentifizierung erfordert, müssen die WinRM-Clients und -Server HTTPS verwenden.
 
 > [!Note]  
-> Die Authentifizierung beim Proxy Server ist unabhängig von der Authentifizierung beim Zielserver.
+> Die Authentifizierung beim Proxyserver ist unabhängig von der Authentifizierung beim Zielserver.
 
- 
+ 
 
-### <a name="http-based-proxy-connections"></a>HTTP-Based von Proxy Verbindungen
+### <a name="http-based-proxy-connections"></a>HTTP-Based Proxyverbindungen
 
-Wenn keine Proxy Server Authentifizierung erforderlich ist, kann entweder http oder HTTPS für den Transport verwendet werden. HTTP-basierte Verbindungen von einem WinRM-Client zu einem WinRM-Server über einen Proxy Server können jedoch problematisch sein.
+Wenn keine Proxyserverauthentifizierung erforderlich ist, können http oder HTTPs für den Transport verwendet werden. HTTP-basierte Verbindungen von einem WinRM-Client zu einem WinRM-Server über einen Proxyserver können jedoch problematisch sein.
 
-Bei der Verwendung von http-basierten Verbindungen können folgende Probleme auftreten:
+Die folgenden Probleme können bei der Verwendung von HTTP-basierten Verbindungen auftreten:
 
--   Der Proxy Server unterstützt keine Verbindungs basierte Authentifizierung, was dazu führen kann, dass die Authentifizierung auf dem Zielserver mit einem Fehler vom Typ "Zugriff verweigert" fehlschlägt.
--   Zum Herstellen einer Verbindung mit dem Zielserver und dem Proxy Server sind mehrere Anmelde Informationen erforderlich.
--   HTTP-basierte Proxy Server unterstützen möglicherweise nicht die Fähigkeit, die zugeordneten Client basierten und serverbasierten Verbindungen aufrechtzuerhalten. Wenn der Proxy einen Client nicht stark mit einem Server verbindet und die TCP/IP-Verbindung aufrecht erhält, erhalten nicht authentifizierte Clients möglicherweise Zugriff auf Daten. Die fehlende Verbindungs Affinität kann auch dazu führen, dass die Authentifizierung auf dem Server fehlschlägt.
+-   Der Proxyserver unterstützt keine verbindungsbasierte Authentifizierung, was dazu führen kann, dass bei der Authentifizierung beim Zielserver ein Fehler aufgrund eines Zugriffs verweigert wird.
+-   Es sind mehrere Anmeldeinformationen erforderlich, um eine Verbindung mit dem Zielserver und dem Proxyserver herzustellen.
+-   HTTP-basierte Proxyserver unterstützen möglicherweise nicht die Möglichkeit, die zugeordneten clientbasierten und serverbasierten Verbindungen zu verwalten. Wenn der Proxy einen Client nicht stark mit einem Server verlinkt und die TCP/IP-Verbindung verwaltet, erhalten nicht authentifizierte Clients möglicherweise Zugriff auf Daten. Außerdem kann die fehlende Verbindungsaffinität dazu führen, dass die Authentifizierung beim Server fehlschlägt.
 
-Wenn http als Transport verwendet werden muss, sollte der Proxy Server die folgende Konfiguration unterstützen, um eine bessere WinRM-Antwort zu erzielen und Zugriffs Verweigerungs Fehler für WinRM-Clients zu verhindern:
+Wenn HTTP als Transport verwendet werden muss, sollte der Proxyserver die folgende Konfiguration unterstützen, um eine bessere WinRM-Antwort zu erzielen und Zugriffsfehler für WinRM-Clients zu verhindern:
 
--   Unterstützung für HTTP/1.1. HTTP/1.1 ist bei der Zuordnung der Verbindungs Affinität zwischen Client und Server strenger.
--   Verbindungs basierte Authentifizierung für die Authentifizierung von Aushandlungs-, Kerberos-und kredssp-Authentifizierung.
+-   Unterstützung für HTTP/1.1. HTTP/1.1 ist bei der Zuordnung der Verbindungsaffinität zwischen Client und Server strenger.
+-   Verbindungsbasierte Authentifizierung für negotiate-, Kerberos- und CredSSP-Authentifizierung.
 
-    Die Authentifizierung einer Anforderung erfordert mehrere Roundtrips zwischen Client und Server. Die meisten Aushandlung der Authentifizierung ist fertiggestellt, nachdem der authentifizier Ende Server (WinRM) eine Antwort an den Client gesendet hat, die keine 401-Antwort (nicht autorisiert) ist. Wenn der WinRM-Server eine Antwort an den Client zurückgibt, bei der es sich nicht um eine 401-Antwort handelt, sollte der Proxy die Verbindung nicht schließen.
+    Für die Authentifizierung einer Anforderung sind mehrere Roundtrips zwischen Client und Server erforderlich. Die meisten Aushandlung für die Authentifizierung ist abgeschlossen, nachdem der Authentifizierungsserver (WinRM) eine Antwort an den Client sendet, die keine 401-Antwort (Nicht autorisiert) ist. Wenn der WinRM-Server eine Antwort an den Client zurückgibt, die keine 401-Antwort ist, sollte der Proxy die Verbindung nicht schließen.
 
-    Es können mehrere Anforderungs-/Antwort-Paare zwischen Client und Server gesendet werden, bevor die eigentlichen Paketdaten gesendet werden. WinRM 2,0 verwendet die Aushandlungs-und Kerberos-Authentifizierungs Schemas mit Verschlüsselung, wodurch zusätzliche Roundtrips hinzugefügt werden können. Daten können erst an den Server gesendet werden, wenn die Authentifizierung beendet ist.
+    Zwischen Client und Server können mehrere Anforderungs-/Antwortpaare gesendet werden, bevor die tatsächlichen Paketdaten gesendet werden. WinRM 2.0 verwendet die Negotiate- und Kerberos-Authentifizierungsschemas mit Verschlüsselung, die zusätzliche Roundtrips hinzufügen können. Daten können erst an den Server gesendet werden, wenn die Authentifizierung abgeschlossen ist.
 
-    Der WinRM-Server gibt eine Antwort auf 200-Ebene zurück, die angibt, dass die Authentifizierung fertiggestellt wurde. HTTP-basierte Proxy Server beenden möglicherweise die Verbindungs basierte Authentifizierungs Affinität und schließen die TCP/IP-Verbindung nach dem Empfang der Antwort auf 200-Ebene vom WinRM-Server. Der abschließende Roundtrip vom Client zum Server enthält nicht das ursprüngliche Anforderungspaket. Wenn die Verbindung vom Proxy Server geschlossen wird, versucht der Server, den Client erneut zu authentifizieren, und die Client Anforderung wird möglicherweise nie an den Server gesendet. Wenn die Verbindungs basierte Affinität nicht beibehalten wird, kann die Authentifizierung beim Zielserver mit einem Fehler vom Typ "Zugriff verweigert" fehlschlagen.
+    Der WinRM-Server gibt eine Antwort auf 200-Ebene zurück, die angibt, dass die Authentifizierung abgeschlossen ist. HTTP-basierte Proxyserver beenden möglicherweise die verbindungsbasierte Authentifizierungsaffinität und schließen die TCP/IP-Verbindung, nachdem sie die Antwort auf 200-Ebene vom WinRM-Server empfangen haben. Der letzte Roundtrip vom Client zum Server enthält nicht das ursprüngliche Anforderungspaket. Wenn der Proxyserver die Verbindung schließt, versucht der Server, den Client erneut zu authentifizieren, und die Clientanforderung wird möglicherweise nie an den Server gesendet. Wenn die verbindungsbasierte Affinität nicht beibehalten wird, kann bei der Authentifizierung beim Zielserver ein Fehler aufgrund eines Zugriffs verweigert werden.
 
--   Verbindungs Persistenz. Die TCP/IP-Client Verbindung mit dem Proxy sollte weiterhin derselben TCP/IP-Verbindung vom Proxy zum Server zugeordnet werden. Die Beibehaltung dieser Verbindung sorgt für eine höhere Leistung. Wenn die Verbindung nicht beibehalten wird, muss jede Anforderung erneut authentifiziert werden, was sich auf die Leistung auswirken kann.
+-   Verbindungspersistenz. Die TCP/IP-Clientverbindung mit dem Proxy sollte weiterhin derselben TCP/IP-Verbindung vom Proxy zum Server zuordnen. Die Aufrechterhaltung dieser Verbindung trägt dazu bei, eine höhere Leistung zu erzielen. Wenn die Verbindung nicht aufrechterhalten wird, muss jede Anforderung erneut authentifiziert werden, was sich auf die Leistung auswirken kann.
 
-### <a name="encryption-and-winrm-20"></a>Verschlüsselung und WinRM 2,0
+### <a name="encryption-and-winrm-20"></a>Verschlüsselung und WinRM 2.0
 
-WinRM 2,0 unterstützt die Verschlüsselung über HTTP mithilfe der Authentifizierungs Schemas aushandeln, Kerberos und kredssp. Wenn ein WinRM-Server HTTP unterstützt und über einen Proxy darauf zugegriffen wird, muss der WinRM-Server die Verschlüsselung erzwingen und unverschlüsselten Netzwerk Datenverkehr nicht zulassen.
+WinRM 2.0 unterstützt die Verschlüsselung über HTTP mithilfe der Authentifizierungsschemas Negotiate, Kerberos und CredSSP. Wenn ein WinRM-Server HTTP unterstützt und über einen Proxy darauf zugegriffen wird, muss der WinRM-Server die Verschlüsselung erzwingen und keinen unverschlüsselten Netzwerkdatenverkehr zulassen.
 
-Unter keinen Umständen sollten unverschlüsselte HTTP-Anforderungen über Proxy Server gesendet werden. Wenn Daten über einen Proxy Server übergeben werden müssen, bevor Sie an den Zielserver gesendet werden, sind die folgenden Sicherheitsprobleme sehr wichtig:
+Unter keinen Umständen sollten unverschlüsselte HTTP-Anforderungen über Proxyserver gesendet werden. Wenn Daten einen Proxyserver passieren müssen, bevor sie an den Zielserver gesendet werden, sind die folgenden Sicherheitsprobleme sehr wichtig:
 
--   Es ist möglich, dass ein böswilliger Proxy Server jedes Anforderungs-/Antwort-Paar einschließlich Anmelde Informationen untersucht.
--   Wenn die TCP/IP-Verbindungen zwischen dem WinRM-Client und dem Proxy Server sowie zwischen dem Proxy Server und dem Zielserver nicht stark zugeordnet sind, könnte ein nicht autorisierter Client eine Verbindung mit dem Zielserver herstellen, indem er die gleiche authentifizierte Verbindung vom Proxy Server zum Zielserver verwendet. Der Zielserver gestattet dem nicht authentifizierten Client möglicherweise den Zugriff auf Daten. Wenn die Verschlüsselung erzwungen wird, sendet der Zielserver eine Meldung vom Typ "Zugriff verweigert" an den nicht authentifizierten Client.
+-   Es ist möglich, dass ein böswilliger Proxyserver jedes Anforderung/Antwort-Paar einschließlich Anmeldeinformationen untersuchen kann.
+-   Wenn die TCP/IP-Verbindungen nicht stark zwischen dem WinRM-Client und dem Proxyserver sowie zwischen dem Proxyserver und dem Zielserver zugeordnet sind, kann ein nicht autorisierter Client eine Verbindung mit dem Zielserver herstellen, indem er dieselbe authentifizierte Verbindung vom Proxyserver zum Zielserver verwendet. Der Zielserver erlaubt dem nicht authentifizierten Client möglicherweise den Zugriff auf Daten. Wenn die Verschlüsselung erzwungen wird, sendet der Zielserver eine Zugriffs verweigerte Nachricht an den nicht authentifizierten Client.
 
-Die Verwendung der Verschlüsselung würde diese potenziellen Sicherheitsprobleme mindern.
+Die Verwendung der Verschlüsselung würde diese potenziellen Sicherheitsprobleme minimieren.
 
-## <a name="configuring-a-proxy-server-for-winrm-11-and-earlier"></a>Konfigurieren eines Proxy Servers für WinRM 1,1 und früher
+## <a name="configuring-a-proxy-server-for-winrm-11-and-earlier"></a>Konfigurieren eines Proxyservers für WinRM 1.1 und früher
 
-Wenn ein Proxy erforderlich ist, um den WinRM-Server zu erreichen, benötigt der WinRM-Client die Windows HTTP-Dienste (WinHTTP)-Proxykonfiguration. WinHTTP ist standardmäßig nicht für die Verwendung eines Proxy Servers konfiguriert. Die WinHTTP-Proxykonfiguration kann mit den Befehlszeilen Programmen [ProxyCfg.exe](/previous-versions/windows/desktop/ms761351(v=vs.85)) oder [netsh](/previous-versions/windows/it-pro/windows-server-2003/cc785383(v=ws.10)) geändert werden.
+Wenn ein Proxy erforderlich ist, um den WinRM-Server zu erreichen, verwendet der WinRM-Client die Proxykonfiguration Windows HTTP-Diensten (WinHTTP). Standardmäßig ist WinHTTP nicht für die Verwendung eines Proxyservers konfiguriert. Die WinHTTP-Proxykonfiguration kann [](/previous-versions/windows/desktop/ms761351(v=vs.85)) mithilfe der BefehlszeilenprogrammeProxyCfg.exe[oder netsh](/previous-versions/windows/it-pro/windows-server-2003/cc785383(v=ws.10)) geändert werden.
 
-**WinRM 1,1 und früher:** WinRM verwendet die Internet Explorer-Proxy Einstellungen nicht.
+**WinRM 1.1 und früher:** WinRM verwendet nicht die Internet Explorer Proxyeinstellungen.
 
- 
+ 
 
- 
+ 

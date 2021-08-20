@@ -4,8 +4,8 @@ description: Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses K
 ms.assetid: 21bd40d9-df90-4f46-90e7-582e86eef760
 ms.tgt_platform: multiple
 keywords:
-- MS-DS-KeyVersionNumber-Attribut AD-Schema
-- MSDS-KeyVersionNumber-Attribut AD-Schema
+- AD-Schema des ms-DS-KeyVersionNumber-Attributs
+- AD-Schema des msDS-KeyVersionNumber-Attributs
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1782              |
-| System-ID-GUID    | c523e9c0-33b5-4ac8-8923-b57b927f42f6 |
+| System-Id-Guid    | c523e9c0-33b5-4ac8-8923-b57b927f42f6 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -57,7 +57,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | True                                                         |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -78,7 +78,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | True                                                         |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -99,7 +99,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | True                                                         |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -120,7 +120,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | True                                                         |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -141,7 +141,7 @@ Die Kerberos-Versionsnummer des aktuellen Schlüssels für dieses Konto. Dies is
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | True                                                         |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |

@@ -1,7 +1,7 @@
 ---
-description: Die setsamplesize-Methode gibt eine festgelegte Stichprobengröße an oder gibt an, dass die Beispiele eine Variable Größe aufweisen.
+description: Die SetSampleSize-Methode gibt eine feste Stichprobengröße an oder gibt an, dass Stichproben eine variable Größe haben.
 ms.assetid: b0f9dd7b-4ff9-4d11-9c13-b52d7b1549b5
-title: Cmediatype. setsamplesize-Methode (mtype. h)
+title: CMediaType.SetSampleSize-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0992afd0576c1039397e6ecaa2119a989283136e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5a29393ed4c9251d1e12895ad57a61f96bdc80bb05757ce72fc9485bb42a1047
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954409"
 ---
-# <a name="cmediatypesetsamplesize-method"></a>Cmediatype. setsamplesize-Methode
+# <a name="cmediatypesetsamplesize-method"></a>CMediaType.SetSampleSize-Methode
 
-Die- `SetSampleSize` Methode gibt eine festgelegte Stichprobengröße an oder gibt an, dass Beispiele eine Variable Größe aufweisen.
+Die `SetSampleSize` -Methode gibt eine feste Stichprobengröße an oder gibt an, dass Stichproben eine variable Größe haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetSampleSize(
 
 <dl> <dt>
 
-*RT* 
+*Sz* 
 </dt> <dd>
 
-Stichprobengröße in Byte oder NULL.
+Stichprobengröße in Bytes oder 0 (null).
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Stichprobengröße in Byte oder NULL.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert von " *SZ* " 0 (null) ist, verwendet der Medientyp Variablen Stichprobengrößen. Andernfalls wird die Stichprobengröße bei den *SZ* -Bytes korrigiert.
+Wenn der Wert *von sz* 0 (null) ist, verwendet der Medientyp variable Stichprobengrößen. Andernfalls wird die Stichprobengröße auf *sz Bytes* festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn der Wert von " *SZ* " 0 (null) ist, verwendet der Medientyp Variablen Stich
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn der Wert von " *SZ* " 0 (null) ist, verwendet der Medientyp Variablen Stich
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iorpcdebugnotify clientgetbuffersize-Methode
-description: Ruft die RPC-Puffergröße aus dem Client seitigen Debugger ab.
+title: IOrpcDebugNotify ClientGetBufferSize-Methode
+description: Ruft die RPC-Puffergröße vom clientseitigen Debugger ab.
 ms.assetid: 05475156-1508-4eb2-82a6-bb1701839fbd
 keywords:
-- Clientgetbuffersize-Methode com
-- Clientgetbuffersize-Methode com, iorpcdebugnotify-Schnittstelle
-- Iorpcdebugnotify-Schnittstelle com, clientgetbuffersize-Methode
+- ClientGetBufferSize-Methode COM
+- ClientGetBufferSize-Methode COM, IOrpcDebugNotify-Schnittstelle
+- IOrpcDebugNotify-Schnittstelle COM, ClientGetBufferSize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 50bd925b9c518c78ca37aa8219a00965f398c415
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 038273dfd93264d483bacb314b78e33f3e8f16cef4f120be27bd48901ef5b060
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119859470"
 ---
-# <a name="iorpcdebugnotifyclientgetbuffersize-method"></a>Iorpcdebugnotify:: clientgetbuffersize-Methode
+# <a name="iorpcdebugnotifyclientgetbuffersize-method"></a>IOrpcDebugNotify::ClientGetBufferSize-Methode
 
-Ruft die RPC-Puffergröße aus dem Client seitigen Debugger ab.
+Ruft die RPC-Puffergröße vom clientseitigen Debugger ab.
 
 > [!Note]  
-> Eine Import Bibliothek mit der Funktion " **clientgetbuffersize** " ist nicht im Microsoft Windows Software Development Kit (SDK) enthalten. Eine Anwendung kann die Funktionen [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und [**GetModuleHandle**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) verwenden, um aus oleaut.dll einen Funktionszeiger auf [**dlldebugobjectrpchook**](dlldebugobjectrpchook.md) abzurufen und diese Funktion über die [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle bereitzustellen.
+> Eine Importbibliothek, die die **ClientGetBufferSize-Funktion** enthält, ist nicht im Microsoft Windows Software Development Kit (SDK) enthalten. Eine Anwendung kann die Funktionen [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und [**GetModuleHandle**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) verwenden, um einen Funktionszeiger auf [**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md) aus oleaut.dll abzurufen und diese Funktion über die [**IOrpcDebugNotify-Schnittstelle**](iorpcdebugnotify.md) bereitzustellen.
 
  
 
@@ -47,10 +47,10 @@ void ClientGetBufferSize(
 
 <dl> <dt>
 
-*lporpcdebug* 
+*lpOrpcDebugAll* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**ORPC \_ dbg \_ all**](orpc-dbg-all.md) -Struktur, die Benachrichtigungs spezifische Informationen enthält, die das com-RPC-System an den Debugger übergibt.
+Ein Zeiger auf eine [**ORPC \_ DBG \_ ALL-Struktur,**](orpc-dbg-all.md) die Benachrichtigungsinformationen enthält, die das COM-RPC-System an den Debugger übergibt.
 
 </dd> </dl>
 
@@ -67,7 +67,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                           |
 | Header<br/>                   | <dl> <dt>N/V</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>N/V</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>N/V</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**ORPC-init-Argumente \_ \_**](orpc-init-args.md)
+[**ORPC \_ INIT \_ ARGS**](orpc-init-args.md)
 </dt> <dt>
 
-[**Dlldebugobjectrpchook**](dlldebugobjectrpchook.md)
+[**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md)
 </dt> <dt>
 
-[**Iorpcdebug-Benachrichtigung**](iorpcdebugnotify.md)
+[**IOrpcDebugNotify**](iorpcdebugnotify.md)
 </dt> </dl>
 
  

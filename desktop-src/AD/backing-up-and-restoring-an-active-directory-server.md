@@ -1,53 +1,53 @@
 ---
-title: Sichern und Wiederherstellen eines Active Directory Servers
-description: Active Directory Domain Services Funktionen zum Sichern und Wiederherstellen von Daten in der Verzeichnis Datenbank bereitstellen.
+title: Sichern und Wiederherstellen eines Active Directory-Servers
+description: Active Directory Domain Services Funktionen zum Sichern und Wiederherstellen von Daten in der Verzeichnisdatenbank bereitstellen.
 ms.assetid: d9b9db51-ed1b-4db4-a4de-b8798c9647ac
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Domain Services, verwenden, sichern und Wiederherstellen
+- Active Directory Domain Services, Verwenden, Sichern und Wiederherstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a92d57c2ddf572db8806aca71282e6b4fd8799ee
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 1955c70daed8cfaed0f5afe6c498a599aebb30f5d7b1846442d22cf84e9634e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118024157"
 ---
-# <a name="backing-up-and-restoring-an-active-directory-server"></a>Sichern und Wiederherstellen eines Active Directory Servers
+# <a name="backing-up-and-restoring-an-active-directory-server"></a>Sichern und Wiederherstellen eines Active Directory-Servers
 
-Active Directory Domain Services Funktionen zum Sichern und Wiederherstellen von Daten in der Verzeichnis Datenbank bereitstellen. In diesem Abschnitt wird beschrieben, wie ein Active Directory Server [gesichert](backing-up-an-active-directory-server.md) und [wieder hergestellt](restoring-an-active-directory-server.md) wird. Weitere Informationen zum Sichern eines Active Directory Servers mithilfe der Hilfsprogramme in den Betriebssystemen Windows 2000 und Windows Server 2003 finden Sie im entsprechenden Ressourcenkit, das auf der Microsoft TechNet-Website verfügbar ist.
+Active Directory Domain Services Funktionen zum Sichern und Wiederherstellen von Daten in der Verzeichnisdatenbank bereitstellen. In diesem Abschnitt wird beschrieben, wie Sie einen Active Directory-Server [sichern](backing-up-an-active-directory-server.md) und [wiederherstellen.](restoring-an-active-directory-server.md) Weitere Informationen zum Sichern eines Active Directory-Servers mithilfe der in Windows 2000 und Windows Server 2003 bereitgestellten Hilfsprogramme finden Sie im entsprechenden Resource Kit, das auf der Microsoft TechNet-Website verfügbar ist.
 
-Die Sicherung eines Active Directory Servers muss online durchgeführt werden und muss bei der Installation der Active Directory Domain Services ausgeführt werden. Active Directory Domain Services werden auf einer speziellen Datenbank erstellt und exportieren eine Reihe von Sicherungsfunktionen, die die programmgesteuerte Sicherungs Schnittstelle bereitstellen. Die Sicherung unterstützt keine inkrementellen Sicherungen. Eine Sicherungs Anwendung bindet an eine lokale Client seitige dll mit in ntdsbcli. h definierten Einstiegspunkten.
+Die Sicherung eines Active Directory-Servers muss online erfolgen und bei der Installation der Active Directory Domain Services erfolgen. Active Directory Domain Services basieren auf einer speziellen Datenbank und exportieren eine Reihe von Sicherungsfunktionen, die die programmgesteuerte Sicherungsschnittstelle bereitstellen. Die Sicherung unterstützt keine inkrementellen Sicherungen. Eine Sicherungsanwendung wird an eine lokale clientseitige DLL gebunden, deren Einstiegspunkte in "Ntdsbcli.h" definiert sind.
 
-Die Wiederherstellung eines Active Directory Servers erfolgt immer offline.
+Die Wiederherstellung eines Active Directory-Servers erfolgt immer offline.
 
-Obwohl in den Themen in diesem Abschnitt nur das Sichern und Wiederherstellen eines Active Directory Servers beschrieben wird, beachten Sie, dass die Betriebssysteme Windows 2000 und Windows Server 2003 mehrere Systemstatus Komponenten aufweisen, die gleichzeitig gesichert und wieder hergestellt werden müssen. Diese Systemstatus Komponenten bestehen aus folgenden Komponenten:
+Obwohl in den Themen in diesem Abschnitt nur beschrieben wird, wie ein Active Directory-Server gesichert und wiederhergestellt wird, sollten Sie beachten, dass Windows 2000 und die Betriebssysteme Windows Server 2003 über mehrere Komponenten für den "Systemzustand" verfügen, die zusammen gesichert und wiederhergestellt werden müssen. Diese Systemzustandskomponenten bestehen aus:
 
--   Startdateien wie NTLDR, ntdetect, alle durch SFP geschützten Dateien und die Konfiguration des Leistungs Zählers
+-   Startdateien wie ntldr, ntdetect, alle durch SFP geschützten Dateien und die Konfiguration des Leistungsindikators
 -   Der Active Directory-Domäne Controller
--   SYSVOL (nur Domänen Controller)
--   Zertifikat Server (nur ca)
--   Cluster Datenbank (nur Cluster Knoten)
--   Registrierung
--   Com+-Klassen Registrierungsdatenbank
+-   SysVol (nur Domänencontroller)
+-   Zertifikatserver (nur Zertifizierungsstelle)
+-   Clusterdatenbank (nur Clusterknoten)
+-   Registry
+-   COM+-Klassenregistrierungsdatenbank
 
-Der Systemstatus kann in beliebiger Reihenfolge gesichert werden, aber die Wiederherstellung des Systemstatus muss in der folgenden Reihenfolge erfolgen:
+Der Systemstatus kann in beliebiger Reihenfolge gesichert werden, aber die Wiederherstellung des Systemzustands muss in der folgenden Reihenfolge erfolgen:
 
 1.  Stellen Sie die Startdateien wieder her.
-2.  Stellen Sie SYSVOL, den Zertifikat Server, die Cluster Datenbank und die com+-Klassen Registrierungsdatenbank ggf. wieder her.
-3.  Stellen Sie den Active Directory Server wieder her.
+2.  Stellen Sie SysVol, Zertifikatserver, Clusterdatenbank und COM+-Klassenregistrierungsdatenbank nach Bedarf wieder her.
+3.  Stellen Sie den Active Directory-Server wieder her.
 4.  Stellen Sie die Registrierung wieder her.
 
-Weitere Informationen zum Sichern und Wiederherstellen von Zertifikat Diensten finden [Sie unter Verwenden der Funktionen zum Sichern und Wiederherstellen von Zertifikat Diensten](/windows/desktop/SecCrypto/using-the-certificate-services-backup-and-restore-functions).
+Weitere Informationen zum Sichern und Wiederherstellen von Zertifikatdiensten finden Sie unter [Verwenden der Sicherungs- und Wiederherstellungsfunktionen von Zertifikatdiensten.](/windows/desktop/SecCrypto/using-the-certificate-services-backup-and-restore-functions)
 
-Weitere Informationen zum Sichern und Wiederherstellen von Active Directory Domain Services finden Sie unter:
+Weitere Informationen zum Sichern und Wiederherstellen Active Directory Domain Services finden Sie unter:
 
 -   [Überlegungen zur Active Directory Domain Services Sicherung](considerations-for-active-directory-domain-services-backup.md)
--   [Sichern eines Active Directory Servers](backing-up-an-active-directory-server.md)
--   [Wiederherstellen eines Active Directory Servers](restoring-an-active-directory-server.md)
--   [Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+-   [Sichern eines Active Directory-Servers](backing-up-an-active-directory-server.md)
+-   [Wiederherstellen eines Active Directory-Servers](restoring-an-active-directory-server.md)
+-   [Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-title: Hilfereferenz zu Tools
+title: Toolhilfereferenz
 description: Die folgenden Funktionen und Strukturen sind der Toolhilfebibliothek zugeordnet.
 ms.assetid: 850c1688-40e2-4762-9951-324f062b53ad
 ms.topic: article
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118348317"
 ---
-# <a name="tool-help-reference"></a>Hilfereferenz zu Tools
+# <a name="tool-help-reference"></a>Toolhilfereferenz
 
 Die folgenden Funktionen und Strukturen sind der Toolhilfebibliothek zugeordnet.
 

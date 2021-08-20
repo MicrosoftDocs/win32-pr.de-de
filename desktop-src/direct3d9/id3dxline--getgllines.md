@@ -55,7 +55,7 @@ Gibt **TRUE** zurück, wenn OpenGL-Stillinien aktiviert sind, und **FALSE,** wen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

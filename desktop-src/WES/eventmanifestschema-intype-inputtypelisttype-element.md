@@ -1,9 +1,9 @@
 ---
-title: intype (inputtypelisttype)-Element
-description: Definiert einen Eingabe Datentyp. | intype (inputtypelisttype)-Element
+title: inType (InputTypeListType)-Element
+description: Definiert einen Eingabedatentyp. | inType (InputTypeListType)-Element
 ms.assetid: f29cb871-e5f7-416a-beca-f91476d78c1f
 keywords:
-- intype-Element (Ereignisprotokoll)
+- inType-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a233397e3a190068ec854c3830646503f50b417e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4c8ea65add9f46cc5db0a3587206142cee3e0cf59b0c18d423efdc3313ce6213
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863440"
 ---
-# <a name="intype-inputtypelisttype-element"></a>intype (inputtypelisttype)-Element
+# <a name="intype-inputtypelisttype-element"></a>inType (InputTypeListType)-Element
 
-Definiert einen Eingabe Datentyp.
+Definiert einen Eingabedatentyp.
 
 ``` syntax
 <xs:element name="inType"
@@ -30,7 +30,7 @@ Definiert einen Eingabe Datentyp.
  />
 ```
 
-Das **intype** -Element wird durch den komplexen [**inputtypelisttype**](eventmanifestschema-inputtypelisttype-complextype.md) -Typ definiert.
+Das **inType-Element** wird durch den komplexen [**InputTypeListType-Typ**](eventmanifestschema-inputtypelisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **intype** -Element wird durch den komplexen [**inputtypelisttype**](eventma
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **intype** -Element wird durch den komplexen [**inputtypelisttype**](eventma
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Intypes (typelisttype)**](eventmanifestschema-intypes-typelisttype-element.md)
+[**inTypes (TypeListType)**](eventmanifestschema-intypes-typelisttype-element.md)
 </dt> </dl>
 
  

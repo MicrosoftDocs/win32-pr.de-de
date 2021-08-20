@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_APPLY (Adsprop.h)
-description: Eine Eigenschaftenblatterweiterung für den Active Directory-Verzeichnisdienst sendet die WM ADSPROP NOTIFY APPLY-Meldung an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ \_ erfolgreich \_ \_ ist.
+title: WM_ADSPROP_NOTIFY_APPLY-Nachricht (Adsprop.h)
+description: Eine Eigenschaftenblatterweiterung des Active Directory-Verzeichnisdiensts sendet die WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ erfolgreich ist.
 ms.assetid: 3536054b-83ee-4cfa-ab54-c0af3a46289e
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_APPLY Active Directory-Nachricht
+- WM_ADSPROP_NOTIFY_APPLY Meldung Active Directory
 topic_type:
 - apiref
 api_name:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119024298"
 ---
-# <a name="wm_adsprop_notify_apply-message"></a>WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung
+# <a name="wm_adsprop_notify_apply-message"></a>WM \_ ADSPROP \_ NOTIFY \_ APPLY-Nachricht
 
-Eine Eigenschaftenblatterweiterung für den Active Directory-Verzeichnisdienst sendet die **WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung** an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ erfolgreich ist.
+Eine Eigenschaftenblatterweiterung des Active Directory-Verzeichnisdiensts sendet die **WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung** an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ erfolgreich ist.
 
 
 ```C++
@@ -44,7 +44,7 @@ WM_ADSPROP_NOTIFY_APPLY
 *Hwnd* 
 </dt> <dd>
 
-Das Handle des Benachrichtigungsobjekts. Um dieses Handle zu erhalten, rufen Sie [**ADsPropCreateNotifyObj auf.**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
+Das Handle des Benachrichtigungsobjekts. Rufen Sie [**ADsPropCreateNotifyObj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf, um dieses Handle abzurufen.
 
 </dd> <dt>
 
@@ -64,11 +64,11 @@ Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung hat keinen Rückgabewert.
+Diese Nachricht weist keinen Rückgabewert auf.
 
 ## <a name="remarks"></a>Hinweise
 
-Beim Hinzufügen von Seiten zum MMC-Snap-In des Active Directory-Managers erstellen die Active Directory-MMC-Eigenschaftenblätter die Benachrichtigungsobjekte durch einen Aufruf der [**ADsPropCreateNotifyObj-Funktion**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj) und übergeben dann das Benachrichtigungsobjekthandl an jede Eigenschaftenseite.
+Beim Hinzufügen von Seiten zum ACTIVE Directory Manager-MMC-Snap-In erstellen Active Directory MMC-Eigenschaftenblätter die Benachrichtigungsobjekte durch einen Aufruf der [**ADsPropCreateNotifyObj-Funktion**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj) und übergeben dann das Handle des Benachrichtigungsobjekts an jede Eigenschaftenseite.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Beim Hinzufügen von Seiten zum MMC-Snap-In des Active Directory-Managers erstel
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

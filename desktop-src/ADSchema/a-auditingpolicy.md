@@ -5,7 +5,7 @@ ms.assetid: bbe96a2a-5ad0-4160-894c-ff04b829b00a
 ms.tgt_platform: multiple
 keywords:
 - Auditing-Policy AD-Attributschema
-- AUDITINGPolicy-Attribut-AD-Schema
+- AUDITINGPolicy-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -57,10 +57,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -78,10 +78,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -99,10 +99,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -120,10 +120,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -141,10 +141,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -162,10 +162,10 @@ ms.locfileid: "119022808"
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |

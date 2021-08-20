@@ -3,58 +3,58 @@ title: G
 description: G
 ms.assetid: 17900c00-ade1-4dae-8012-bcf3c5cfe846
 keywords:
-- Windows Color System (WCS), Glossar
+- Windows Farbsystem (WCS), Glossar
 - WCS (Windows Color System), Glossar
-- Bildfarben Verwaltung, Glossar
-- Farbverwaltung, Glossar
-- Farben, Glossar
-- Windows Color System (WCS), Definitionen
+- Bildfarbverwaltung,Glossar
+- Farbverwaltung,Glossar
+- Farben,Glossar
+- Windows Farbsystem (WCS), Definitionen
 - WCS (Windows Color System), Definitionen
-- Bild Farbverwaltung, Definitionen
-- Farbverwaltung, Definitionen
-- Farben, Definitionen
-- Windows Color System (WCS), Begriffe
+- Bildfarbverwaltung,Definitionen
+- Farbverwaltung,Definitionen
+- Farben,Definitionen
+- Windows Farbsystem (WCS), Begriffe
 - WCS (Windows Color System), Begriffe
-- Bildfarben Verwaltung, Begriffe
-- Farbverwaltung, Begriffe
-- Farben, Begriffe
+- Bildfarbverwaltung,Begriffe
+- Farbverwaltung,Begriffe
+- Farben,Begriffe
 - Gammakorrektur
-- Gamma Kurve
+- Gammakurve
 - Gamma-Rampe
-- Farbskala
-- Farbskala Map Model Profile (GMMP)
-- GMMP (Gamut Map Model Profile)
+- Gamut
+- gamut map model profile (GMMP) (Gamut-Kartenmodellprofil (GMMP))
+- GMMP (gamut map model profile)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 89e251b97df23a60415235b003f29ad199aa3860
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 8f4f4d6e7cac8a0832e430acbbf55ff14d3991d5146b13fc952457ba7892e7b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106351180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007700"
 ---
 # <a name="g"></a>G
 
 ## <a name="gamma-correction"></a>Gammakorrektur
 
-Die systemeigenen physischen Ton Merkmale eines Geräts unterscheiden sich häufig auf verschiedenen Arten von Geräten. Der Gammakorrektur Faktor kompensiert diese Unterschiede.
+Die nativen physischen Tonmerkmale eines Geräts unterscheiden sich häufig auf verschiedenen Gerätetypen. Der Gammakorrekturfaktor gleicht diese Unterschiede aus.
 
-## <a name="gamma-curve"></a>Gamma Kurve
+## <a name="gamma-curve"></a>Gammakurve
 
-Eine Auflistung von gammakorrekturen für den gesamten Bereich von Farben. Wenn Sie in einem Diagramm dargestellt werden, bilden Sie eine Kurve.
+Eine Auflistung von Gammakorrekturen für den gesamten Farbbereich. Wenn sie in einem Diagramm dargestellt werden, bilden sie eine Kurve.
 
 ## <a name="gamma-ramp"></a>Gamma-Rampe
 
-Siehe Gamma Curve.
+Siehe Gammakurve.
 
-## <a name="gamut"></a>Farbskala
+## <a name="gamut"></a>Gamut
 
-Der Satz von Farben aus einem Farbraum, der von einem Gerät erzeugt werden kann.
+Der Satz von Farben aus einem Farbraum, den ein Gerät erzeugen kann.
 
 ## <a name="gmmp"></a>GMMP
 
-Das Profil Format des Farb gamingmodells ist ein XML-basiertes Dateiformat, das die Zuordnung von Farben zwischen Quell-und Zielgeräte Gamuts steuert.
+Das Color Gamut Map Model Profile Format ist ein XML-basiertes Dateiformat, das die Zuordnung von Farben zwischen Quell- und Zielgeräte-Gamuts steuert.
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skripterstellungs-API-Methoden aus Microsoft Visual Studio und in Windows Skripthost-WSF-Dateien aufrufen.
+description: Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skript-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
 ms.assetid: 6ef4e210-0733-4f2a-89c1-1a7aca5a19d9
 ms.tgt_platform: multiple
 title: Verwenden der WMI-Skripttypbibliothek
@@ -19,36 +19,36 @@ ms.locfileid: "120120770"
 ---
 # <a name="using-the-wmi-scripting-type-library"></a>Verwenden der WMI-Skripttypbibliothek
 
-Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skripterstellungs-API-Methoden aus Microsoft Visual Studio und in Windows Skripthost-WSF-Dateien aufrufen.
+Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skript-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
 
 ## <a name="using-the-wmi-scripting-type-library-with-microsoft-visual-studio"></a>Verwenden der WMI-Skripttypbibliothek mit Microsoft Visual Studio
 
 > [!Note]  
-> Visual InterDev 6.0-Features wurden in Microsoft Visual Studio [.NET integriert.](https://msdn.microsoft.com/vstudio/default.aspx)
+> Visual InterDev 6.0-Features wurden in [Microsoft Visual Studio .NET](https://msdn.microsoft.com/vstudio/default.aspx)integriert.
 
  
 
-Im folgenden Verfahren wird beschrieben, wie Sie der integrierten Entwicklungsumgebung (IDE) ermöglichen, die WbemScripting-Typbibliothek zu kennen.
+Im folgenden Verfahren wird beschrieben, wie Sie der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) ermöglichen, die WbemScripting-Typbibliothek zu kennen.
 
 **So fügen Sie den Projektverweisen die WMI-Skripttypbibliothek hinzu**
 
-1.  Wählen **Sie im Menü "Verweise** **hinzufügen Project** aus.
-2.  Wählen Sie auf der Registerkarte COM des **Felds Verweis** hinzufügen die Option Microsoft WMI Scripting V1.2 Library (Microsoft WMI Scripting V1.2-Bibliothek) aus.
-3.  Wenn in der Liste Verweise keine geeignete Option angezeigt wird, fügen Sie sie mithilfe von **Durchsuchen** im **Feld Verweise** hinzu. Das **Feld Verweis** hinzufügen wird geöffnet, mit dem Sie die WbemScripting-Typbibliothek suchen können. 
+1.  Wählen Sie im **Menü Project** die Option Verweise **hinzufügen** aus.
+2.  Wählen Sie auf der Registerkarte COM des Felds **Verweis hinzufügen** die Option Microsoft WMI Scripting V1.2 Library aus.
+3.  Wenn keine geeignete Option in der Liste Verweise angezeigt wird, fügen Sie sie **mithilfe** von Durchsuchen im Feld **Verweise** hinzu. **Das Durchsuchen** öffnet ein Feld **Verweis hinzufügen,** mit dem Sie die WbemScripting-Typbibliothek suchen können.
 
     Die WbemScripting-Typbibliothek befindet sich in der Datei Wbemdisp.tlb im Verzeichnis %windir% \\ System32 \\ Wbem.
 
-4.  Wählen Sie die Datei aus, und klicken Sie auf **Öffnen**. Die Microsoft WMI Scripting V1.2-Bibliothek wird in der Liste der Verweise angezeigt. Stellen Sie sicher, dass Sie das Kontrollkästchen neben diesem Element in der Liste aktivieren.
+4.  Wählen Sie die Datei aus, und klicken Sie auf **Öffnen**. Die Microsoft WMI Scripting V1.2-Bibliothek wird in der Verweisliste angezeigt. Stellen Sie sicher, dass Sie das Kontrollkästchen neben diesem Element in der Liste auswählen.
 
 ## <a name="using-the-wmi-scripting-type-library-with-windows-script-host-20"></a>Verwenden der WMI-Skripttypbibliothek mit Windows Script Host 2.0
 
-Sie können den Verweis auf **"WbemScripting.SWbemLocator"** in eine WSF-Datei des Windows-Skripthosts im Gegensatz zu einem Skript, das in Visual Basic, Scripting Edition oder anderen Skriptsprachen geschrieben wurde, enthalten. Dadurch können Sie konstante Namen anstelle von Werten verwenden. Verwenden Sie beispielsweise **WbemAuthenticationLevelPktPrivacy** anstelle des Werts 6, wenn Sie die Authentifizierung festlegen.
+Sie können den Verweis auf **WbemScripting.SWbemLocator** in eine Windows Skripthost-WSF-Datei einfügen, im Gegensatz zu einem Skript, das in Visual Basic, Scripting Edition oder anderen Skriptsprachen geschrieben wurde. Dadurch können Sie konstante Namen anstelle von Werten verwenden. Verwenden Sie beispielsweise **WbemAuthenticationLevelPktPrivacy** anstelle des Werts 6, wenn Sie die Authentifizierung festlegen.
 
 Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-API für die WMI-Typbibliothek herstellen:
 
--   Angeben der WbemScripting-GUID in den VBScript-Methoden [CreateObject](/previous-versions//xzysf6hc(v=vs.85)) und [**GetObject**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx).
+-   Angeben der WbemScripting-GUID in den VBScript-Methoden [CreateObject](/previous-versions//xzysf6hc(v=vs.85)) und [**GetObject.**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx)
 
-    Diese Warnung Windows Skripthost, um eine Verbindung mit dem WMI-Objektsatz herzustellen.
+    Dadurch wird Windows Skripthost benachrichtigt, um eine Verbindung mit dem WMI-Objektsatz herzustellen.
 
     Im folgenden VBScript-Codebeispiel wird ein neues [**SWbemDateTime-Objekt**](swbemdatetime.md) erstellt.
 
@@ -60,7 +60,7 @@ Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-A
 
 -   Verwenden der [Monikerzeichenfolge](constructing-a-moniker-string.md) "winmgmts:" beim Abrufen eines neuen oder vorhandenen Objekts.
 
-    Im folgenden VBScript-Codebeispiel wird der Moniker "winmgmts:" verwendet, um die Instanz von [**Win32 \_ Process**](/windows/desktop/CIMWin32Prov/win32-process) mit der **Handle-Eigenschaft** 0 (null) zu erhalten. **Handle** ist die Schlüsseleigenschaft für diese Klasse.
+    Im folgenden VBScript-Codebeispiel wird der Moniker "winmgmts:" verwendet, um die Instanz des [**Win32-Prozesses \_**](/windows/desktop/CIMWin32Prov/win32-process) mit der **Handle-Eigenschaft** 0 (null) abzurufen. **Handle** ist die Schlüsseleigenschaft für diese Klasse.
 
     ```VB
     Set Process = GetObject("winmgmts:Win32_Process.Handle=0")
@@ -68,7 +68,7 @@ Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-A
 
     
 
--   Verweisen auf die WMI-Typbibliothek mithilfe des <reference> -Tags des WSH 2.0-XML-Dateiformats. Wenn Sie das -Tag verwenden, muss das Tag entweder ein <reference> **uuid-Attribut** haben, dessen Wert die **GUID** der WMI-Typbibliothek ist, oder (empfohlen) ein Objektattribut, dessen Wert die **PROGID** eines der WMI-Skriptobjekte ist, die Sie erstellen können.
+-   Verweisen auf die WMI-Typbibliothek mit dem <reference> -Tag des WSH 2.0-XML-Dateiformats. Wenn Sie das <reference> Tag verwenden, muss das Tag entweder über ein **uuid-Attribut** verfügen, dessen Wert der **GUID** der WMI-Typbibliothek entspricht, oder (empfohlen) ein Objektattribut, dessen Wert der **PROGID** eines beliebigen WMI-Skriptobjekts entspricht, das Sie erstellen können.
 
     Im folgenden VBScript-Codebeispiel wird die PROGID von "WbemScripting" verwendet. Um das Skript auszuführen, speichern Sie den Text in einer Datei mit der Erweiterung WSF.
 
@@ -88,7 +88,7 @@ Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-A
 
     
 
--   Verwenden eines **<->-Tags** zum Erstellen eines WMI-Skriptobjekts. Sie können das **attribut id** mit dem Wert eines Namens angeben, der auf das zu erstellende WMI-Skriptobjekt verweist, und das **attribut progid** gleich der PROID des WMI-Skriptobjekts.
+-   Verwenden eines **<-Objekts**> Tag zum Erstellen eines WMI-Skriptobjekts. Sie können das **ID-Attribut** mit dem Wert eines Namens angeben, der auf das WMI-Skriptobjekt verweist, das Sie erstellen möchten, und das **progid-Attribut** gleich der PROID des WMI-Skriptobjekts.
 
     Das folgende WSH-Skript zeigt den Hostnamen und die Anzahl der Prozessoren auf dem lokalen Computer an. Um das Skript auszuführen, speichern Sie den Text in einer Datei mit der Erweiterung WSF.
 

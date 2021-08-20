@@ -1,32 +1,32 @@
 ---
-title: Schleifen Wiedergabe (Waveform-Audiodatei)
-description: Schleifen Wiedergabe (Waveform-Audiodatei)
+title: Looping Playback (Waveform Audio)
+description: Looping Playback (Waveform Audio)
 ms.assetid: 8411290b-a3c5-4347-bee3-43c35188f736
 keywords:
-- Wellenform-Audio, Schleifen Klänge
-- Waveform-Audioschnittstelle, Schleifen Klänge
-- Wellenform-Audiodaten, Schleifen Wiedergabe
-- Waveform-Audioschnittstelle, Schleifen Wiedergabe
-- Schleifen von Waveform-audiosounds
-- Schleifen Wellenform-Audiowiedergabe
+- Waveform-Audio, Looping-Sounds
+- Waveform-Audio-Schnittstelle, Looping-Sounds
+- Waveform-Audio, Loopingwiedergabe
+- waveform-audio interface,looping playback
+- Looping waveform-audio sounds
+- Looping der Wiedergabe von Waveform-Audio
 - waveOutWrite-Funktion
-- waveoutbreakloop-Funktion
+- waveOutBreakLoop-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c233799e2d4faf8107b4a2a68a261b544ec1274
-ms.sourcegitcommit: 4570ac533e129ff88b23f2c2b69e0140ead3a4a4
+ms.openlocfilehash: 2d98732ccc0a1d75ad13a10dc881b66a3bb634beab03a95a86a9db5689890979
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "106371381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139311"
 ---
-# <a name="looping-playback"></a>Schleifen Wiedergabe
+# <a name="looping-playback"></a>Schleifenwiedergabe
 
-Das Schleifen eines Sounds wird durch die **dwloops** -und **dwFlags** -Elemente in den [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Strukturen gesteuert, die mit der [**waveOutWrite**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutwrite) -Funktion an das Gerät übermittelt werden. Verwenden Sie die Flags **whdr \_ BeginLoop** und **whdr \_ ENDLOOP** im **dwFlags** -Member, um die Anfangs-und Enddaten Blöcke für Schleifen anzugeben.
+Die Schleife eines Sounds wird von den **dwLoops-** und **dwFlags-Membern** in den [**WAVEHDR-Strukturen**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) gesteuert, die mit der [**waveOutWrite-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutwrite) an das Gerät übergeben werden. Verwenden Sie **die Flags WHDR \_ BEGINLOOP** und **WHDR \_ ENDLOOP** im **dwFlags-Member,** um die Anfangs- und Enddatenblöcke für Schleifen anzugeben.
 
-Wenn Sie einen einzelnen Datenblock Schleifen möchten, geben Sie beide Flags für denselben Block an. Um die Anzahl der Schleifen anzugeben, verwenden Sie den **dwloops** -Member in der [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur für den ersten Block in der Schleife.
+Um eine Schleife für einen einzelnen Datenblock zu verwenden, geben Sie beide Flags für denselben Block an. Um die Anzahl der Schleifen anzugeben, verwenden Sie den **dwLoops-Member** in der [**WAVEHDR-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) für den ersten Block in der Schleife.
 
-Sie können die [**waveoutbreakloop**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutbreakloop) -Funktion zum Anhalten eines audiosounds aufruft.
+Sie können die [**waveOutBreakLoop-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutbreakloop) aufrufen, um einen Schleifenklang zu beenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

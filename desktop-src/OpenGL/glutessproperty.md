@@ -1,9 +1,9 @@
 ---
-title: glutessproperty-Funktion (glu. h)
-description: Die Funktion "glutessproperty" legt die-Eigenschaft eines Mosaik Objekts fest.
+title: gluTessProperty-Funktion (Glu.h)
+description: Die gluTessProperty-Funktion legt die -Eigenschaft eines Mosaikobjekts fest.
 ms.assetid: 1306b9ef-4f1e-4684-99ea-464bae1d0a61
 keywords:
-- glutessproperty-Funktion OpenGL
+- gluTessProperty-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bfe21f2961cd4cb1df31a1fdb3f407a71d6e6d68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 595139b91e0fb19ac6ef479831604663dea1981e401aa807ba2bb3cd24a29a41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488430"
 ---
-# <a name="glutessproperty-function"></a>glutessproperty-Funktion
+# <a name="glutessproperty-function"></a>gluTessProperty-Funktion
 
-Die Funktion " **glutessproperty** " legt die-Eigenschaft eines Mosaik Objekts fest.
+Die **gluTessProperty-Funktion** legt die -Eigenschaft eines Mosaikobjekts fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,25 +42,25 @@ void WINAPI gluTessProperty(
 
 <dl> <dt>
 
-*ATI* 
+*Tess* 
 </dt> <dd>
 
-Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
+Das Mosaikobjekt (erstellt mit [**gluNewTess**](glunewtess.md)).
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Der festzulegende Eigenschaftswert. Die folgenden Werte sind gültig: die \_ Regel "glu Tess" \_ , " \_ glu Tess" und " \_ \_ \_ glu- \_ Toleranz" \_ .
+Der festzulegende Eigenschaftswert. Die folgenden Werte sind gültig: GLU \_ TESS \_ WINDING \_ RULE, GLU \_ TESS \_ BOUNDARY ONLY und GLU \_ \_ TESS \_ TOLERANCE.
 
 
 
 | Wert                                                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GLU_TESS_WINDING_RULE"></span><span id="glu_tess_winding_rule"></span><dl> <dt>**Glu \_ - \_ aufwickungsregel \_**</dt> </dl>    | Bestimmt, welche Teile des Polygons sich im Inneren befinden. Der value-Parameter kann auf einen der folgenden Werte festgelegt werden: glu \_ Tess \_ \_ , ungerade, Glu Tess \_ Winding ungleich \_ \_ NULL, Glu \_ Tess \_ Winding \_ positiv, Glu \_ Tess \_ Winding \_ negative oder glu \_ Tess \_ Winding \_ ABS \_ GEQ \_ Two. <br/> Um zu verstehen, wie die Regel für die Regel funktioniert, sollten Sie zuerst berücksichtigen, dass die Eingabe Kontur die Ebene in Regionen partitioniert. Die Wicklungs Regel bestimmt, welche dieser Regionen sich innerhalb des Polygons befinden.<br/> Bei einer Einzel Kontur-c ist die Zahl von x Punkt x einfach die signierte Anzahl von Umdrehungen, die wir ungefähr x durchführen, während wir einmal um c herumreisen (wobei gegen den Uhrzeigersinn positiv ist). Wenn mehrere Kontur vorhanden sind, werden die einzelnen aufwicklungs Zahlen summiert. Diese Prozedur ordnet jedem Punkt x in der Ebene einen ganzzahligen Wert mit Vorzeichen zu. Beachten Sie, dass die Anzahl der Wicklungen für alle Punkte in einer einzelnen Region identisch ist.<br/> Die Wicklungs Regel klassifiziert einen Bereich als "innen", wenn die zugehörige Zahl zur ausgewählten Kategorie gehört (ungerade, nicht NULL, positiv, negativ oder absoluter Wert von mindestens zwei). Der vorherige glu-Mosaik Speicher (vor der Verwendung von Glu 1,2) hat die Regel "ungerade" verwendet. Die Regel "nicht NULL" (GLU \_ Tess \_ \_ , nicht null) ist eine andere gängige Methode zum Definieren des Inneren. Die anderen drei Regeln ( \_ atentess \_ Winding \_ positiv, Glu \_ Tess \_ Winding \_ negativ, Glu \_ Tess \_ Winding \_ ABS \_ GEQ \_ Two) eignen sich für Polygon-CSG-Vorgänge.<br/> |
-| <span id="GLU_TESS_BOUNDARY_ONLY"></span><span id="glu_tess_boundary_only"></span><dl> <dt>**nur die Grenze von Glu \_ Tess \_ \_**</dt> </dl> | Gibt einen booleschen Wert an (legen Sie den Wert auf GL \_ true oder GL \_ false fest). Wenn Sie Value auf den Wert "GL true" festlegen \_ , wird anstelle eines Mosaik Satzes eine Reihe geschlossener Kontur zurückgegeben, die das Polygon innere und das äußere trennt. Äußere Kontur werden im Uhrzeigersinn gegen den Uhrzeigersinn ausgerichtet. innere Kontur werden im Uhrzeigersinn ausgerichtet. Die \_ \_ Daten Rückrufe von Glu Tess BEGIN und glu \_ Tess \_ \_ verwenden die Type GL- \_ Zeilen \_ Schleife für jede Kontur.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| <span id="GLU_TESS_TOLERANCE"></span><span id="glu_tess_tolerance"></span><dl> <dt>**Glu \_ Tess- \_ Toleranz**</dt> </dl>              | Gibt eine Toleranz für das Zusammenführen von Features an, um die Größe der Ausgabe zu verringern. Beispielsweise können zwei vertexen, die sich sehr nahe beieinander befinden, durch einen einzelnen Scheitelpunkt ersetzt werden. Die Toleranz wird mit der größten Koordinaten Größe eines beliebigen Eingabe Vertex multipliziert. Gibt den maximalen Abstand an, den ein beliebiges Feature als Ergebnis eines einzelnen zusammenlaufvorgangs verschieben kann. Wenn eine einzelne Funktion an mehreren Merge-Vorgängen beteiligt ist, kann die gesamte verschoderte Entfernung größer sein. <br/> Das Zusammenführen von Funktionen ist vollständig optional. die Toleranz ist nur ein Hinweis. Die Implementierung kann in einigen Fällen zusammengeführt werden, nicht in anderen, oder es werden niemals Features überhaupt zusammengeführt. Die Standardtoleranz ist 0 (null).<br/> Die aktuelle Implementierung führt Eckpunkte nur dann zusammen, wenn Sie unabhängig von der aktuellen Toleranz genau Coincident sind. Ein Scheitelpunkt wird nur dann in einen Edge gesplitet, wenn die Implementierung nicht unterscheiden kann, auf welcher Seite der Kante der Scheitelpunkt liegt. Zwei Ränder werden nur zusammengeführt, wenn beide Endpunkte identisch sind.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="GLU_TESS_WINDING_RULE"></span><span id="glu_tess_winding_rule"></span><dl> <dt>**GLU \_ TESS \_ WINDING \_ RULE**</dt> </dl>    | Bestimmt, welche Teile des Polygons sich im Inneren befinden. Der Value-Parameter kann auf eine der folgenden Werte festgelegt werden: GLU \_ TESS \_ WINDING \_ ODD, GLU \_ TESS \_ WINDING \_ NONZERO, GLU \_ TESS \_ WINDING \_ POSITIVE, GLU \_ TESS \_ WINDING \_ NEGATIVE oder GLU \_ TESS \_ WINDING ABS \_ \_ GEQ \_ TWO. <br/> Um zu verstehen, wie die Wickelregel funktioniert, berücksichtigen Sie zunächst, dass die Eingabe die Ebene in Regionen unterteilt. Die Ziehregel bestimmt, welche dieser Regionen sich innerhalb des Polygons befinden.<br/> Für ein einzelnes konturierendes C ist die Ziehnummer eines Punkts x einfach die signierte Anzahl von Revolutionen, die wir um x drehen, während wir einmal um C herum reisen (wobei gegen den Uhrzeigersinn positiv ist). Wenn mehrere Konturen vorhanden sind, werden die einzelnen Ziehzahlen summiert. Diese Prozedur ordnet jedem Punkt x auf der Ebene einen ganzzahligen Wert mit Vorzeichen zu. Beachten Sie, dass die Wickelnummer für alle Punkte in einer einzelnen Region identisch ist.<br/> Die Ziehregel klassifiziert einen Bereich als "innerhalb", wenn seine Ziehnummer zur ausgewählten Kategorie gehört (ungerade, ungleich Null, positiv, negativ oder absoluter Wert von mindestens zwei). Der vorherige GLU-Mosaikator (vor GLU 1.2) verwendete die "ungerade" Regel. Die Regel "ungleich 0" (GLU \_ TESS \_ WINDING \_ NONZERO) ist eine weitere gängige Methode zum Definieren des Inneren. Die anderen drei Regeln (GLU \_ TESS \_ WINDING \_ POSITIVE, GLU \_ TESS \_ WINDING \_ NEGATIVE, GLU \_ TESS \_ WINDING \_ ABS \_ GEQ \_ TWO) sind für Polygon-CSG-Vorgänge nützlich.<br/> |
+| <span id="GLU_TESS_BOUNDARY_ONLY"></span><span id="glu_tess_boundary_only"></span><dl> <dt>**\_NUR GLU-TESS-GRENZE \_ \_**</dt> </dl> | Gibt einen booleschen Wert an (legen Sie den Wert auf GL \_ TRUE oder GL FALSE \_ fest). Wenn Sie den Wert auf GL \_ TRUE festlegen, wird anstelle eines Mosaiks eine Reihe geschlossener Konturen zurückgegeben, die das Polygoninnere und das äußere Polygon trennen. Äußere Konturen sind im Hinblick auf die Normalität gegen den Uhrzeigersinn ausgerichtet; Innere Konturen sind im Uhrzeigersinn ausgerichtet. Die \_ RÜCKRUFE GLU TESS \_ BEGIN und GLU \_ TESS \_ BEGIN DATA verwenden für jede \_ Kontur den Typ GL LINE \_ \_ LOOP.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| <span id="GLU_TESS_TOLERANCE"></span><span id="glu_tess_tolerance"></span><dl> <dt>**GLU \_ TESS \_ TOLERANCE**</dt> </dl>              | Gibt eine Toleranz für das Zusammenführen von Features an, um die Größe der Ausgabe zu reduzieren. Beispielsweise können zwei Scheitelpunkte, die sehr nah beieinander liegen, durch einen einzelnen Scheitelpunkt ersetzt werden. Die Toleranz wird mit der größten Koordinatengröße jedes Eingabevertex multipliziert. gibt den maximalen Abstand an, den jedes Feature als Ergebnis eines einzelnen Mergevorgangs verschieben kann. Wenn ein einzelnes Feature an mehreren Zusammenführungsvorgängen teilnimmt, kann der verschobene Gesamtabstand größer sein. <br/> Das Zusammenführen von Features ist vollständig optional. Die Toleranz ist nur ein Hinweis. Die Implementierung kann in einigen Fällen und nicht in anderen Fällen zusammengeführt werden, oder Funktionen können nie zusammengeführt werden. Die Standardtoleranz ist 0 (null).<br/> Die aktuelle Implementierung führt Scheitelpunkte nur zusammen, wenn sie unabhängig von der aktuellen Toleranz genau zufällig sind. Ein Scheitelpunkt wird nur dann in eine Kante aufgeteilt, wenn die Implementierung nicht unterscheiden kann, auf welcher Seite des Edges sich der Scheitelpunkt befindet. Zwei Kanten werden nur zusammengeführt, wenn beide Endpunkte identisch sind.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 
@@ -71,7 +71,7 @@ Der festzulegende Eigenschaftswert. Die folgenden Werte sind gültig: die \_ Reg
 *value* 
 </dt> <dd>
 
-Der Wert der angegeben Eigenschaft.
+Der Wert der angegebenen Eigenschaft.
 
 </dd> </dl>
 
@@ -79,9 +79,9 @@ Der Wert der angegeben Eigenschaft.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glutessproperty** " steuert Eigenschaften, die in einem Mosaik Objekt gespeichert sind. Diese Eigenschaften beeinflussen die Art und Weise, wie Polygone interpretiert und gerendert werden.
+Die **gluTessProperty-Funktion** steuert Eigenschaften, die in einem Mosaikobjekt gespeichert sind. Diese Eigenschaften wirken sich darauf aus, wie die Polygone interpretiert und gerendert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Die Funktion " **glutessproperty** " steuert Eigenschaften, die in einem Mosaik 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -101,10 +101,10 @@ Die Funktion " **glutessproperty** " steuert Eigenschaften, die in einem Mosaik 
 
 <dl> <dt>
 
-[**"glugettessproperty"**](glugettessproperty.md)
+[**gluGetTessProperty**](glugettessproperty.md)
 </dt> <dt>
 
-[**glunewtess**](glunewtess.md)
+[**gluNewTess**](glunewtess.md)
 </dt> </dl>
 
  

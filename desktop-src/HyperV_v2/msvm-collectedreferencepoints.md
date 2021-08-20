@@ -1,5 +1,5 @@
 ---
-description: Ordnet die MSVM \_ referencepointcollection den enthaltenen MSVM \_ virtualsystemreferencepoint-Objekten zu.
+description: Ordnet die Msvm \_ ReferencePointCollection den enthaltenen Msvm \_ VirtualSystemReferencePoint-Objekten zu.
 ms.assetid: 826125c3-0a89-4573-ac28-88588eac248d
 title: Msvm_CollectedReferencePoints-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4891d4ec4c613c92c3b5d5a090f2683bfc77dc5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e68c0eb64bd1550966963d9913fd734a7672cbef051bd21281e61e7777ca4857
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118149290"
 ---
-# <a name="msvm_collectedreferencepoints-class"></a>MSVM \_ collectedreferencepoints-Klasse
+# <a name="msvm_collectedreferencepoints-class"></a>Msvm \_ CollectedReferencePoints-Klasse
 
-Ordnet die [**MSVM \_ referencepointcollection**](msvm-referencepointcollection.md) den enthaltenen [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.md) -Objekten zu.
+Ordnet die [**Msvm \_ ReferencePointCollection**](msvm-referencepointcollection.md) den enthaltenen [**Msvm \_ VirtualSystemReferencePoint-Objekten**](msvm-virtualsystemreferencepoint.md) zu.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_CollectedReferencePoints : CIM_CollectedMSEs
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ collectedreferencepoints** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CollectedReferencePoints-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ collectedreferencepoints** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CollectedReferencePoints-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Sammlung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ referencepointcollection**
+Datentyp: **Msvm \_ ReferencePointCollection**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
 </dt> </dl>
 
-Eine [**MSVM- \_ referencepointcollection**](msvm-referencepointcollection.md) -Gruppierung oder ein "Bag"-Objekt, das die Auflistung darstellt.
+Ein [**Msvm \_ ReferencePointCollection-Gruppierungs-**](msvm-referencepointcollection.md) oder Bag-Objekt, das die Auflistung darstellt.
 
 </dd> <dt>
 
 **Member**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ virtualsystemreferencepoint**
+Datentyp: **Msvm \_ VirtualSystemReferencePoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
 </dt> </dl>
 
-Ein [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.md) , der die Member der Auflistung enthält.
+Ein [**Msvm \_ VirtualSystemReferencePoint**](msvm-virtualsystemreferencepoint.md) mit den Membern der Auflistung.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.m
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -101,7 +101,7 @@ Ein [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.m
 
 <dl> <dt>
 
-[**CIM \_ collectedmses**](cim-collectedmses.md)
+[**CIM \_ CollectedMSEs**](cim-collectedmses.md)
 </dt> </dl>
 
  

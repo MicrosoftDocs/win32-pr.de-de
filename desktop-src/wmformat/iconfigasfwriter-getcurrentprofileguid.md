@@ -1,6 +1,6 @@
 ---
 title: IConfigAsfWriter GetCurrentProfileGuid-Methode
-description: Die GetCurrentProfileGuid-Methode ruft die aktuelle Windows Profil-GUID des Mediensystems ab.
+description: Die GetCurrentProfileGuid-Methode ruft die aktuelle Windows Media-Systemprofil-GUID ab.
 ms.assetid: e7a2ecc0-48d4-446c-852a-0d7677cbbe71
 keywords:
 - GetCurrentProfileGuid-Methode windows Media Format
@@ -54,9 +54,9 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler a
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird nicht mit benutzerdefinierten Profilen verwendet (einschließlich aller Profile, die Streams enthalten, die die Windows Media Audio- und Videocodecs verwenden), da alle diese Profile von Anwendungen erstellt werden und keinen GUID-Bezeichner haben. Wenn kein Systemprofil geladen wird, *wird pProfileGuid* auf **NULL festgelegt.**
+Diese Methode wird nicht mit benutzerdefinierten Profilen verwendet (einschließlich aller Profile, die Streams enthalten, die den Windows Medienaudio- und Videocodecs verwenden), da alle diese Profile von Anwendungen erstellt werden und keinen GUID-Bezeichner aufweisen. Wenn kein Systemprofil geladen wird, wird *pProfileGuid* auf **NULL** festgelegt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

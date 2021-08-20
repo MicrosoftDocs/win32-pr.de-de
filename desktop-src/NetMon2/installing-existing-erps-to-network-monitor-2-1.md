@@ -1,35 +1,35 @@
 ---
-description: Nachdem Sie eine Ereignis Referenzseite (ERP) geschrieben und benennen, müssen Sie Sie installieren.
+description: Nachdem Sie eine Ereignisverweisseite (ERP) geschrieben und bezeichnet haben, müssen Sie sie installieren.
 ms.assetid: 438bce7b-5a88-4e80-bdf9-6affdcbd169b
-title: Installieren vorhandener Erps in Netzwerkmonitor 2,1
+title: Installieren vorhandener ERPs für Netzwerkmonitor 2.1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe17685981bbf7530bdde05b7056e17e3380e291
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58ddd7a52c51eb761ec6c260dc88fde750e3d85a49d1af76741c0add61d13269
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132949"
 ---
-# <a name="installing-existing-erps-to-network-monitor-21"></a>Installieren vorhandener Erps in Netzwerkmonitor 2,1
+# <a name="installing-existing-erps-to-network-monitor-21"></a>Installieren vorhandener ERPs für Netzwerkmonitor 2.1
 
-Nachdem Sie eine Ereignis Referenzseite (ERP) geschrieben und benennen, müssen Sie Sie installieren.
+Nachdem Sie eine Ereignisverweisseite (ERP) geschrieben und bezeichnet haben, müssen Sie sie installieren.
 
-**So installieren Sie eine Ereignis Referenzseite**
+**So installieren Sie eine Ereignisreferenzseite**
 
-1.  Erstellen Sie ein ERP-Verzeichnis. In diesen Beispielen werden Verzeichnisse für Experten veranschaulicht:
+1.  Erstellen Sie ein ERP-Verzeichnis. Diese Beispiele veranschaulichen Verzeichnisse für Experten:
 
     ``` syntax
     C:\Program Files\NetMon2\Bok\Expert\
     ```
 
-2.  Erstellen Sie ein Unterverzeichnis für jeden neuen Experten, in dem die Erps angezeigt werden. Die folgenden Unterverzeichnis Auflistungen gelten für einen Experten:
+2.  Erstellen Sie für jeden neuen Experten ein Unterverzeichnis, in dem die ERPs angezeigt werden. Die folgenden Unterverzeichnisse sind für Experten:
 
     ``` syntax
     C:\Program Files\NetMon2\Bok\Experts\MyExpert
     ```
 
-3.  Kopieren Sie die ERP-Dateien in das zugehörige Unterverzeichnis. In den folgenden Beispielen werden die kompletten Pfade zu den installierten Experten Erps bereitgestellt:
+3.  Kopieren Sie die ERP-Dateien in das zugeordnete Unterverzeichnis. Die folgenden Beispiele bieten vollständige Pfade zu installierten ErPs von Experten:
 
     ``` syntax
     C:\Program Files\NetMon2\Bok\Experts\MyExpert\MyExpert1.htm

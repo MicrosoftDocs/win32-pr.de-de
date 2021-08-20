@@ -1,5 +1,5 @@
 ---
-description: Ist die Basisklasse, von der die meisten System Klassen abgeleitet werden.
+description: Die Basisklasse, von der die meisten Systemklassen ableiten.
 ms.assetid: a9d023ba-d401-4dde-88e6-cbd0e20d4549
 ms.tgt_platform: multiple
 title: __SystemClass-Klasse
@@ -14,18 +14,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 2c69b04df24d8996d360697b9c60f02d8a2ebc0a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c229f1de116b7d5eb248b6aecfacc8205a94684ca5095a01d40e793d1a04e864
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118110177"
 ---
-# <a name="__systemclass-class"></a>\_\_System Class-Klasse
+# <a name="__systemclass-class"></a>\_\_SystemClass-Klasse
 
-Die System **Klasse Abstract System Class ist \_ die Basisklasse \_** , von der die meisten System Klassen abgeleitet werden. Instanzen dieser Klasse können nicht erstellt werden.
+Die **\_ \_ abstrakte Systemklasse SystemClass** ist die Basisklasse, von der die meisten Systemklassen ableiten. Instanzen dieser Klasse können nicht erstellt werden.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ class __SystemClass
 
 ## <a name="members"></a>Member
 
-Die Klasse " **\_ \_ System Class** " definiert keine Member.
+Die **\_ \_ SystemClass-Klasse** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Die Klasse " **\_ \_ System Class** " definiert keine Member.
 
 <dl> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

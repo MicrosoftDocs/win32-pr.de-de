@@ -10,9 +10,9 @@ keywords:
 - Advanced Systems Format (ASF), globale Konstanten
 - ASF (Advanced Systems Format), globale Konstanten
 - Windows Medienformat-SDK, Konstanten
-- Advanced Systems Format (ASF),constants
-- ASF (Advanced Systems Format),constants
-- Globale Konstanten, GUID-Werte
+- Advanced Systems Format (ASF), Konstanten
+- ASF (Advanced Systems Format), Konstanten
+- globale Konstanten, GUID-Werte
 - Konstanten, GUID-Werte
 ms.topic: article
 ms.date: 05/31/2018
@@ -25,7 +25,7 @@ ms.locfileid: "118433876"
 ---
 # <a name="guid-values"></a>GUID-Werte
 
-In den folgenden Abschnitten werden die GUID-Werte aufgeführt, die im Windows Media Format SDK verwendet werden, und die globalen Konstanten, die für deren Darstellung verwendet werden.
+In den folgenden Abschnitten werden die GUID-Werte aufgeführt, die im Windows Media Format SDK verwendet werden, und die globalen Konstanten, die verwendet werden, um sie darzustellen.
 
 
 
@@ -35,7 +35,7 @@ In den folgenden Abschnitten werden die GUID-Werte aufgeführt, die im Windows M
 | [Medientypbezeichner](media-type-identifiers.md)     | Listet die GUID-Werte und zugeordneten Konstanten für die Medientypen auf, die vom Windows Media Format SDK unterstützt werden.             |
 | [Gegenseitige Ausschlusstypen](mutual-exclusion-types.md)     | Listet die GUID-Werte und zugeordneten Konstanten für die gegenseitigen Ausschlusstypen auf, die vom Windows Media Format SDK unterstützt werden.  |
 | [Bandbreitenfreigabetypen](bandwidth-sharing-types.md)   | Listet die GUID-Werte und zugeordneten Konstanten für die Bandbreitenfreigabetypen auf, die vom Windows Media Format SDK unterstützt werden. |
-| [Kategorietypen für Wasserzeichen](watermark-category-types.md) | Listet die GUID-Werte und zugeordneten Konstanten auf, die Wasserzeichen für DMO identifizieren.                                 |
+| [Wasserzeichenkategorietypen](watermark-category-types.md) | Listet die GUID-Werte und zugeordneten Konstanten auf, die Wasserzeichen DMO Kategorien identifizieren.                                 |
 
 
 

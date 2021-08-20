@@ -1,7 +1,7 @@
 ---
-description: Gibt die Anzahl der Elemente in jeder der drei Warteschlangen innerhalb der Thread Pumpe an.
+description: Abrufen der Anzahl von Elementen in jeder der drei Warteschlangen innerhalb der Threadpumpe.
 ms.assetid: b5b829a5-5ef7-4ef5-afb4-efe1bb22ae70
-title: 'ID3DX10ThreadPump:: getqueuestatus-Methode (d3dx10. h)'
+title: ID3DX10ThreadPump::GetQueueStatus-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 4cf3b5879da0346cefbb5b8835d6922dd736cfd3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9cab3211765f12812e08845165c41868049020573a3cbfb706fad01821a2c3bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118100202"
 ---
-# <a name="id3dx10threadpumpgetqueuestatus-method"></a>ID3DX10ThreadPump:: getqueuestatus-Methode
+# <a name="id3dx10threadpumpgetqueuestatus-method"></a>ID3DX10ThreadPump::GetQueueStatus-Methode
 
-Gibt die Anzahl der Elemente in jeder der drei Warteschlangen innerhalb der Thread Pumpe an.
+Abrufen der Anzahl von Elementen in jeder der drei Warteschlangen innerhalb der Threadpumpe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT GetQueueStatus(
 
 <dl> <dt>
 
-*pioqueue* \[ in\]
+*pIoQueue* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Anzahl der Elemente in der e/a-Warteschlange.
+Anzahl der Elemente in der E/A-Warteschlange.
 
 </dd> <dt>
 
-*pprocessqueue* \[ in\]
+*pProcessQueue* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Anzahl der Elemente in der Verarbeitungs Warteschlange.
+Anzahl der Elemente in der Prozesswarteschlange.
 
 </dd> <dt>
 
-*pdevicequeue* \[ in\]
+*pDeviceQueue* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Anzahl der Elemente in der Geräte Warteschlange.
+Anzahl der Elemente in der Gerätewarteschlange.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Anzahl der Elemente in der Geräte Warteschlange.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

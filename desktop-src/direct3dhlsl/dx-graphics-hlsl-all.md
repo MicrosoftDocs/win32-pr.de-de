@@ -1,6 +1,6 @@
 ---
 title: alle
-description: Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
+description: Bestimmt, ob alle Komponenten des angegebenen Werts ungleich 0 (null) sind.
 ms.assetid: 9ee079ff-cd2c-41f5-98cd-ea1f4215e7d5
 keywords:
 - alle HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "119673600"
 ---
 # <a name="all"></a>alle
 
-Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
+Bestimmt, ob alle Komponenten des angegebenen Werts ungleich 0 (null) sind.
 
 
 
@@ -37,7 +37,7 @@ Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
@@ -47,11 +47,11 @@ Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**TRUE,** wenn alle Komponenten des *x-Parameters* nicht 0 (null) sind; andernfalls **FALSE.**
+**True,** wenn alle Komponenten des *x-Parameters* ungleich 0 (null) sind; andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ähnelt der [**systeminternen**](dx-graphics-hlsl-any.md) HLSL-Funktion. Die **any-Funktion** bestimmt, ob Komponenten des angegebenen Werts nicht 0 (null) sind, während die **all-Funktion** bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
+Diese Funktion ähnelt [**jeder**](dx-graphics-hlsl-any.md) intrinsischen HLSL-Funktion. Die **any-Funktion** bestimmt, ob Komponenten des angegebenen Werts ungleich 0 (null) sind, während die **all-Funktion** bestimmt, ob alle Komponenten des angegebenen Werts ungleich 0 (null) sind.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -66,7 +66,7 @@ Diese Funktion ähnelt der [**systeminternen**](dx-graphics-hlsl-any.md) HLSL-Fu
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -74,14 +74,14 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt             |
 |------------------------------------------------------------------------------------|-----------------------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                   |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                   |
 | [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1 und ps \_ 1 \_ 4 |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

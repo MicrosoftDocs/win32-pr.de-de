@@ -1,27 +1,27 @@
 ---
-description: Die Bild Zugriffs Funktionen greifen auf die Daten in einem ausführbaren Image zu. Diese Funktionen bieten Zugriff auf hoher Ebene auf die Basis von Bildern und einen sehr spezifischen Zugriff auf die gängigsten Teile der Daten eines Bilds.
+description: Die Bildzugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Diese Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
 ms.assetid: da72af2b-7afe-42fc-80ae-700ac0829356
-title: Bild Zugriffs Funktionen
+title: Bildzugriffsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bca0022c29b1ba588740201652957198dbcd607d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c6c13aedf26b0395a7819134f72f3277e277a339b5d7b55a73d54594d6febace
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162641"
 ---
-# <a name="image-access-functions"></a>Bild Zugriffs Funktionen
+# <a name="image-access-functions"></a>Bildzugriffsfunktionen
 
-Die Bild Zugriffs Funktionen greifen auf die Daten in einem ausführbaren Image zu. Diese Funktionen bieten Zugriff auf hoher Ebene auf die Basis von Bildern und einen sehr spezifischen Zugriff auf die gängigsten Teile der Daten eines Bilds.
+Die Bildzugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Diese Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
 
--   [**Getimageconfiginformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageconfiginformation)
--   [**Getimageunusedheaderbytes**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageunusedheaderbytes)
+-   [**GetImageConfigInformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageconfiginformation)
+-   [**GetImageUnusedHeaderBytes**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageunusedheaderbytes)
 -   [**ImageLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageload)
--   [**Image entladen**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageunload)
--   [**Mapandload**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapandload)
--   [**"Contimageconfiginformation"**](/windows/desktop/api/Imagehlp/nf-imagehlp-setimageconfiginformation)
--   [**Fehler bei unmapandload**](/windows/desktop/api/Imagehlp/nf-imagehlp-unmapandload)
+-   [**ImageUnload**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageunload)
+-   [**MapAndLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapandload)
+-   [**SetImageConfigInformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-setimageconfiginformation)
+-   [**UnMapAndLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-unmapandload)
 
  
 

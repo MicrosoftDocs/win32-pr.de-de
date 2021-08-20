@@ -1,9 +1,9 @@
 ---
-title: 'RWTexture2DArray:: Load (int, uint)-Funktion'
-description: 'Liest Textur Daten und gibt den Status des Vorgangs zurück. | RWTexture2DArray:: Load (int, uint)-Funktion'
+title: RWTexture2DArray::Load(int,uint)-Funktion
+description: Liest Texturdaten und gibt den Status des Vorgangs zurück. | RWTexture2DArray::Load(int,uint)-Funktion
 ms.assetid: 97D6E36A-1613-43BA-92C1-3034E0F344F0
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 969aa0a4efa62f7072c759a1f2188e4d210d8649
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: e68659bc8d8cbca9880774de7fc4f3463742ee4cfa6d76aac432fad8e348b680
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672000"
 ---
-# <a name="rwtexture2darrayloadintuint-function"></a>RWTexture2DArray:: Load (int, uint)-Funktion
+# <a name="rwtexture2darrayloadintuint-function"></a>RWTexture2DArray::Load(int,uint)-Funktion
 
-Liest Textur Daten und gibt den Status des Vorgangs zurück.
+Liest Texturdaten und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ Liest Textur Daten und gibt den Status des Vorgangs zurück.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort der Textur.
+Die Position der Textur.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
@@ -62,15 +62,15 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWTexture2DArray**](sm5-object-rwtexture2darray.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWTexture2DArray-Objekt.**](sm5-object-rwtexture2darray.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -78,11 +78,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](rwtexture2darray-load.md)
+[Laden von Methoden](rwtexture2darray-load.md)
 </dt> </dl>
 
  

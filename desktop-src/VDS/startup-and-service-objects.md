@@ -1,131 +1,131 @@
 ---
-description: VDS stellt Objekte zum Ausführen Dienst bezogener Aktivitäten bereit. In diesem Thema werden die einzelnen-Objekte beschrieben.
+description: VDS stellt Objekte zum Ausführen dienstbezogener Aktivitäten bereit. In diesem Thema werden die einzelnen Objekte beschrieben.
 ms.assetid: ae4d18f2-4d50-480c-bc7a-4eec0334707d
-title: Start-und Dienst Objekte
+title: Start- und Dienstobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 92beb0a4f825f767299a7ced74d43ef2487fa252
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d60a87c7e52a263d03e80f44911f72db5f49259baf33a7b2f90680f30bb3b2fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125930"
 ---
-# <a name="startup-and-service-objects"></a>Start-und Dienst Objekte
+# <a name="startup-and-service-objects"></a>Start- und Dienstobjekte
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-VDS stellt Objekte zum Ausführen Dienst bezogener Aktivitäten bereit. In diesem Thema werden die einzelnen-Objekte beschrieben.
+VDS stellt Objekte zum Ausführen dienstbezogener Aktivitäten bereit. In diesem Thema werden die einzelnen Objekte beschrieben.
 
 ## <a name="service-loader-object"></a>Service Loader-Objekt
 
-Das Dienst Lade Programm-Objekt stellt die Methoden bereit, die von Anwendungen zum Laden und Initialisieren von VDS verwendet werden. Um VDS für die Verwendung vorzubereiten, muss eine Anwendung die folgenden Vorgänge ausführen:
+Das Dienstladeprogrammobjekt stellt die Methoden bereit, die von Anwendungen zum Laden und Initialisieren von VDS verwendet werden. Um VDS für die Verwendung vorzubereiten, muss eine Anwendung die folgenden Vorgänge ausführen:
 
--   Erstellen Sie eine Instanz des Service Loader-Objekts, das die [**ivdsserviceloader**](/windows/desktop/api/Vds/nn-vds-ivdsserviceloader) -Schnittstelle zurückgibt.
--   Um den Dienst zu laden, wenden Sie die [**ivdsserviceloader:: loadservice**](/windows/desktop/api/Vds/nf-vds-ivdsserviceloader-loadservice) -Methode an.
+-   Erstellen Sie eine Instanz des Dienstladeprogrammobjekts, das die [**IVdsServiceLoader-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdsserviceloader) zurückgibt.
+-   Rufen Sie die [**IVdsServiceLoader::LoadService-Methode**](/windows/desktop/api/Vds/nf-vds-ivdsserviceloader-loadservice) auf, um den Dienst zu laden.
 
-Ein Codebeispiel finden Sie unter [Laden von VDS](loading-vds.md).
+Ein Codebeispiel finden Sie unter [Laden von VDS.](loading-vds.md)
 
-Gestatten Sie immer, dass der Dienst vollständig initialisiert wird, bevor Sie die Methoden aufrufen, die vom Dienst Objekt verfügbar gemacht werden. Verwenden Sie die [**ivdsservice:: isserviceready**](/windows/desktop/api/Vds/nf-vds-ivdsservice-isserviceready) -Methode, um den Status des Ladevorgangs zu bestimmen. Verwenden Sie die [**ivdsservice:: waitforserviceready**](/windows/desktop/api/Vds/nf-vds-ivdsservice-waitforserviceready) -Methode, um Aufrufe von VDS-Objekten zu blockieren, bis die Initialisierung abgeschlossen ist.
+Lassen Sie immer zu, dass der Dienst vollständig initialisiert wird, bevor die Methoden aufgerufen werden, die vom Dienstobjekt verfügbar gemacht werden. Verwenden Sie die [**IVdsService::IsServiceReady-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdsservice-isserviceready) um den Status des Ladevorgangs zu bestimmen. Verwenden Sie die [**IVdsService::WaitForServiceReady-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdsservice-waitforserviceready) um Aufrufe von VDS-Objekten zu blockieren, bis die Initialisierung abgeschlossen ist.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet.
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt.
 
-| type                                              | Element                                         |
+| Typ                                              | Element                                         |
 |---------------------------------------------------|-------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ivdsserviceloader**](/windows/desktop/api/Vds/nn-vds-ivdsserviceloader). |
-| Zugehörige Enumerationen                           | Keine.                                           |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IVdsServiceLoader**](/windows/desktop/api/Vds/nn-vds-ivdsserviceloader). |
+| Zugeordnete Enumerationen                           | Keine.                                           |
 | Zugeordnete Strukturen                             | Keine.                                           |
 
 
 
  
 
-## <a name="service-object"></a>Dienst Objekt
+## <a name="service-object"></a>Dienstobjekt
 
-Das Dienst Objekt ist ein multifunktionales Objekt, das für alle VDS-Anwendungen von zentraler Bedeutung ist. Mit diesem Objekt kann ein Aufrufer die folgenden Vorgänge ausführen:
+Das Dienstobjekt ist ein flaches Objekt, das für alle VDS-Anwendungen von zentraler Bedeutung ist. Mit diesem Objekt kann ein Aufrufer die folgenden Vorgänge ausführen:
 
--   Bestimmen Sie den Status der Dienst Initialisierung.
--   Ruft alle Hardware-oder Softwareanbieter ab, die bei VDS registriert sind.
--   Bericht über nicht zugeordnete Datenträger.
--   Gibt den Dateisystemtyp und den Laufwerk Buchstaben zurück, die Volumes auf einem Datenträger zugeordnet sind.
--   Entfernen nicht verwendeter benutzermoduspfade und bereitgestellter Ordner aus der Registrierung und Aktualisieren von Datenträgern.
+-   Bestimmen Sie den Status der Dienstinitialisierung.
+-   Rufen Sie alle bei VDS registrierten Hardware- oder Softwareanbieter ab.
+-   Bericht zu nicht zugeordneten Datenträgern.
+-   Geben Sie den Dateisystemtyp und den Laufwerkbuchstaben zurück, die Volumes auf einem Datenträger zugeordnet sind.
+-   Entfernen Sie nicht verwendeten Benutzermoduspfade und bereitgestellte Ordner aus der Registrierung, und aktualisieren Sie Datenträger.
 -   Empfangen von VDS-Benachrichtigungen.
 -   Starten Sie den Host neu.
--   Rufen Sie Fibre Channel HBA-Ports oder iSCSI-Initiator-Adapter auf dem lokalen Computer ab.
--   Sicheres Vorbereiten von LUNs, die als Datenträger auf dem lokalen Computer verfügbar gemacht werden, zum Entfernen
+-   Rufen Sie Fibre Channel HBA-Ports oder iSCSI-Initiatoradapter auf dem lokalen Computer ab.
+-   Bereiten Sie LUNs, die als Datenträger auf dem lokalen Computer verfügbar gemacht werden, sicher für das Entfernen vor.
 
-VDS-Benachrichtigungs Strukturen übergeben Objekt-GUIDs an alle Anwendungen, die mit VDS registriert sind, um Benachrichtigungen zu empfangen. Verwenden Sie die [**ivdsservice:: GetObject**](/windows/desktop/api/Vds/nf-vds-ivdsservice-getobject) -Methode, um eine Objekt-GUID in einen Objekt Zeiger zu konvertieren. Eine ausführlichere Beschreibung des Benachrichtigungs Modells finden Sie unter [VDS-Benachrichtigungen](vds-notification-model.md).
+VDS-Benachrichtigungsstrukturen übergeben Objekt-GUIDs an alle Anwendungen, die beim VDS registriert sind, um Benachrichtigungen zu empfangen. Verwenden Sie die [**IVdsService::GetObject-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdsservice-getobject) um eine Objekt-GUID in einen Objektzeiger zu konvertieren. Eine ausführlichere Beschreibung des Benachrichtigungsmodells finden Sie unter [VDS-Benachrichtigungen.](vds-notification-model.md)
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet. 
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
-| type                                                                   | Element                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Typ                                                                   | Element                                                                                                                                                                                                                                                                                                                                                                                                   |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden                      | [**Ivdsservice**](/windows/desktop/api/Vds/nn-vds-ivdsservice), [**ivdsservicehba**](/windows/desktop/api/Vds/nn-vds-ivdsservicehba) \* , [**ivdsserviceiscsi**](/windows/desktop/api/Vds/nn-vds-ivdsserviceiscsi) \* , [**ivdsserviceuninstalldisk**](/windows/desktop/api/Vds/nn-vds-ivdsserviceuninstalldisk) \* .                                                                                                                                                                                                           |
-| Schnittstellen, die immer implementiert, aber nicht für Anwendungen verfügbar gemacht werden | [**Ivdsadmin**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdsadmin)                                                                                                                                                                                                                                                                                                                                                                            |
-| Zugehörige Enumerationen                                                | [**VDS \_ \_ \_ Flag für Abfrage Anbieter**](/windows/desktop/api/Vds/ne-vds-vds_query_provider_flag), [**VDS- \_ \_ Objekttyp**](/windows/desktop/api/Vds/ne-vds-vds_object_type), [**VDS- \_ \_ Dienstflag**](/windows/desktop/api/Vds/ne-vds-vds_service_flag), [**VDS- \_ \_ laufwerkbuchstabungsflag \_**](/windows/desktop/api/Vds/ne-vds-vds_drive_letter_flag), [**VDS- \_ \_ dateisystemflag \_**](/windows/desktop/api/Vds/ne-vds-vds_file_system_flag), [**VDS- \_ \_ dateisystemprop \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_file_system_prop_flag)                                                      |
-| Zugeordnete Strukturen                                                  | [**VDS \_ Dienst \_ Prop**](/windows/desktop/api/Vds/ns-vds-vds_service_prop), [**VDS \_ - \_ Datei \_ System Stütze**](/windows/desktop/api/Vds/ns-vds-vds_file_system_prop), [**VDS- \_ Datei \_ \_ Systemtyp- \_ Prop**](/windows/desktop/api/Vds/ns-vds-vds_file_system_type_prop), [**VDS- \_ Laufwerk \_ Buchstaben \_ Benachrichtigung**](/windows/desktop/api/Vds/ns-vds-vds_drive_letter_notification), [**VDS- \_ Datei \_ System \_ Benachrichtigung**](/windows/desktop/api/Vds/ns-vds-vds_file_system_notification), VDS-Bereitstellungs [**\_ \_ Punkt \_ Benachrichtigung**](/windows/desktop/api/Vds/ns-vds-vds_mount_point_notification). |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden                      | [**IVdsService**](/windows/desktop/api/Vds/nn-vds-ivdsservice), [**IVdsServiceHba**](/windows/desktop/api/Vds/nn-vds-ivdsservicehba) \* , [**IVdsServiceIscsi**](/windows/desktop/api/Vds/nn-vds-ivdsserviceiscsi) \* , [**IVdsServiceUninstallDisk**](/windows/desktop/api/Vds/nn-vds-ivdsserviceuninstalldisk) \* .                                                                                                                                                                                                           |
+| Schnittstellen, die immer implementiert, aber nicht für Anwendungen verfügbar gemacht werden | [**IVdsAdmin**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdsadmin)                                                                                                                                                                                                                                                                                                                                                                            |
+| Zugeordnete Enumerationen                                                | [**VDS \_ \_ \_ ABFRAGEANBIETERFLAG,**](/windows/desktop/api/Vds/ne-vds-vds_query_provider_flag) [**VDS-OBJEKTTYP, \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_object_type) [**\_ VDS-DIENSTFLAG, \_**](/windows/desktop/api/Vds/ne-vds-vds_service_flag) [**VDS-LAUFWERKBUCHSTABENFLAG, \_ \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_drive_letter_flag) [**\_ VDS-DATEISYSTEMFLAG, \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_file_system_flag) [**\_ \_ VDS-DATEISYSTEM-PROP-FLAG \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_file_system_prop_flag).                                                      |
+| Zugeordnete Strukturen                                                  | [**VDS \_ \_DIENSTPROP,**](/windows/desktop/api/Vds/ns-vds-vds_service_prop) [**VDS \_ FILE SYSTEM \_ \_ PROP,**](/windows/desktop/api/Vds/ns-vds-vds_file_system_prop) [**VDS FILE SYSTEM TYPE \_ \_ \_ \_ PROP,**](/windows/desktop/api/Vds/ns-vds-vds_file_system_type_prop) [**VDS DRIVE LETTER \_ \_ \_ NOTIFICATION,**](/windows/desktop/api/Vds/ns-vds-vds_drive_letter_notification) [**VDS FILE SYSTEM \_ \_ \_ NOTIFICATION**](/windows/desktop/api/Vds/ns-vds-vds_file_system_notification), [**VDS MOUNT POINT \_ \_ \_ NOTIFICATION**](/windows/desktop/api/Vds/ns-vds-vds_mount_point_notification). |
 
 
 
  
 
-**\* Windows Server 2003:** diese Schnittstellen werden bis Windows Server 2003 R2 nicht unterstützt.
+**\* Windows Server 2003:** Diese Schnittstellen werden erst Windows Server 2003 R2 unterstützt.
 
-## <a name="initiator-adapter-object"></a>Initiator-Adapter Objekt
+## <a name="initiator-adapter-object"></a>Initiatoradapterobjekt
 
-Ein Initiator-Adapter Objekt modelliert einen iSCSI-Initiator-Adapter auf dem Host Computer des VDS-Diensts. Der VDS-Dienst kann nur Initiator-Adapter auf dem lokalen Computer anzeigen. Die Rolle eines initiatoradapterobjekts besteht in der Verwaltung von Anmelde Sitzungen vom lokalen Computer zu iSCSI-Zielen.
+Ein Initiatoradapterobjekt modelliert einen iSCSI-Initiatoradapter auf dem Hostcomputer des VDS-Diensts. Der VDS-Dienst kann initiator-Adapter nur auf dem lokalen Computer anzeigen. Die Rolle eines Initiatoradapterobjekts dient zum Verwalten von Anmeldesitzungen vom lokalen Computer zu iSCSI-Zielen.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet. 
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
-| type                                              | Element                                                                                                                                                                  |
+| Typ                                              | Element                                                                                                                                                                  |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ivdsiscsiinitiatoradapter**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiinitiatoradapter) \* .                                                                                                        |
-| Zugehörige Enumerationen                           | [**VDS \_ der iSCSI- \_ \_ Anmeldetyp**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_login_type). [**VDS \_ iSCSI \_ - \_ Anmeldungs**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_login_flag)Kennzeichen, [**VDS- \_ iSCSI- \_ \_ Authentifizierungstyp**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_auth_type). |
-| Zugeordnete Strukturen                             | [**VDS \_ der iSCSI- \_ Initiator- \_ Adapter \_**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_initiator_adapter_prop).                                                                                        |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IVdsIscsiInitiatorAdapter**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiinitiatoradapter) \* .                                                                                                        |
+| Zugeordnete Enumerationen                           | [**VDS \_ \_ \_ ISCSI-ANMELDETYP.**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_login_type) [**VDS \_ ISCSI \_ LOGIN \_ FLAG**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_login_flag), [**VDS \_ ISCSI \_ AUTH \_ TYPE**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_auth_type). |
+| Zugeordnete Strukturen                             | [**VDS \_ \_ISCSI-INITIATORADAPTER- \_ \_ PROP**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_initiator_adapter_prop).                                                                                        |
 
 
 
  
 
-**\* Windows Server 2003:** diese Schnittstelle wird bis Windows Server 2003 R2 nicht unterstützt.
+**\* Windows Server 2003:** Diese Schnittstelle wird erst Windows Server 2003 R2 unterstützt.
 
-## <a name="initiator-portal-object"></a>Initiator-Portal Objekt
+## <a name="initiator-portal-object"></a>Initiator-Portalobjekt
 
-Ein Objekt des Initiator-Portals modelliert ein iSCSI-Initiator-Portal auf einem iSCSI-Initiator. Ein Initiator-Portal ist die Kombination aus IP-Adresse und Port, über die ein Host Computer eine Verbindung mit einem Portal in einem iSCSI-Subsystem herstellt. Die Rolle eines Initiator-Portal Objekts besteht darin, als einer der Endpunkte eines MPIO-Pfads zu fungieren und die IPSec-Sicherheitseinstellungen zu konfigurieren.
+Ein Initiatorportalobjekt modelliert ein iSCSI-Initiatorportal auf einem iSCSI-Initiator. Ein Initiatorportal ist die Kombination aus IP-Adresse und Port, über die ein Hostcomputer eine Verbindung mit einem Portal in einem iSCSI-Subsystem herstellt. Die Rolle eines Initiatorportalobjekts besteht darin, als einer der Endpunkte eines MPIO-Pfads zu fungieren und IPSEC-Sicherheitseinstellungen zu konfigurieren.
 
-In der folgenden Tabelle sind die verknüpften Schnittstellen, Enumerationen und Strukturen aufgeführt. 
+In der folgenden Tabelle sind die zugehörigen Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
-| type                                              | Element                                                                                                                                                                         |
+| Typ                                              | Element                                                                                                                                                                         |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ivdsiscsiinitiatorportal**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiinitiatorportal) \* .                                                                                                                 |
-| Zugehörige Enumerationen                           | [**VDS \_ iSCSI- \_ IPSec- \_ Flag**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_ipsec_flag).                                                                                                                        |
-| Zugeordnete Strukturen                             | [**VDS \_ unter \_ \_ \_ Stützung des iSCSI-Initiator-Portals**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_initiator_portal_prop), [**VDS- \_ iSCSI- \_ IPSec- \_ Schlüssel**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_ipsec_key), [**VDS- \_ IPAddress**](/windows/desktop/api/Vds/ns-vds-vds_ipaddress). |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IVdsIscsiInitiatorPortal**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiinitiatorportal) \* .                                                                                                                 |
+| Zugeordnete Enumerationen                           | [**VDS \_ \_ISCSI-IPSEC-FLAG \_**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_ipsec_flag).                                                                                                                        |
+| Zugeordnete Strukturen                             | [**VDS \_ \_ISCSI-INITIATORPORTAL \_ \_ PROP**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_initiator_portal_prop), [**VDS \_ ISCSI \_ IPSEC \_ KEY**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_ipsec_key), [**VDS \_ IPADDRESS**](/windows/desktop/api/Vds/ns-vds-vds_ipaddress). |
 
 
 
  
 
-**\* Windows Server 2003:** diese Schnittstelle wird bis Windows Server 2003 R2 nicht unterstützt.
+**\* Windows Server 2003:** Diese Schnittstelle wird erst Windows Server 2003 R2 unterstützt.
 
-## <a name="hba-port-object"></a>HBA-Port Objekt
+## <a name="hba-port-object"></a>HBA-Portobjekt
 
-Das HBA-Port Objekt modelliert einen Fibre Channel HBA-Port (Hostbus Adapter).
+Das HBA-Portobjekt modelliert einen Fibre Channel HBA-Port (Host Bus Adapter).
 
-Verwenden Sie die [**ivdsservicehba:: queryhbapbrüche**](/windows/desktop/api/Vds/nf-vds-ivdsservicehba-queryhbaports) -Methode, um die HBA-Ports zu bestimmen, die VDS auf dem lokalen Computer bekannt sind.
+Verwenden Sie die [**IVdsServiceHba::QueryHbaPorts-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdsservicehba-queryhbaports) um die HBA-Ports zu bestimmen, die VDS auf dem lokalen Computer bekannt sind.
 
-In der folgenden Tabelle sind die verknüpften Schnittstellen, Enumerationen und Strukturen aufgeführt.
+In der folgenden Tabelle sind die zugehörigen Schnittstellen, Enumerationen und Strukturen aufgeführt.
 
-| type                                              | Element                                                                                                                                                          |
+| Typ                                              | Element                                                                                                                                                          |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden | [**Ivdshbaport**](/windows/desktop/api/Vds/nn-vds-ivdshbaport) \* .                                                                                                                            |
-| Zugehörige Enumerationen                           | [**VDS \_ HBAPORT \_**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_type), [**VDS \_ HBAPORT \_ Status**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_status), [**VDS \_ HBAPORT \_ Speed \_ Flag**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_speed_flag). |
-| Zugeordnete Strukturen                             | [**VDS \_ HBAPORT- \_ Prop**](/windows/desktop/api/Vds/ns-vds-vds_hbaport_prop).                                                                                                                  |
+| Schnittstellen, die immer von diesem Objekt verfügbar gemacht werden | [**IVdsHbaPort**](/windows/desktop/api/Vds/nn-vds-ivdshbaport) \* .                                                                                                                            |
+| Zugeordnete Enumerationen                           | [**VDS \_ \_HBAPORT-TYP,**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_type) [**VDS \_ HBAPORT-STATUS, \_**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_status) [**VDS \_ HBAPORT-GESCHWINDIGKEITSFLAG \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_hbaport_speed_flag). |
+| Zugeordnete Strukturen                             | [**VDS \_ HBAPORT \_ PROP**](/windows/desktop/api/Vds/ns-vds-vds_hbaport_prop).                                                                                                                  |
 
 
 
  
 
-**\* Windows Server 2003:** diese Schnittstelle wird bis Windows Server 2003 R2 nicht unterstützt.
+**\* Windows Server 2003:** Diese Schnittstelle wird erst Windows Server 2003 R2 unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -134,13 +134,13 @@ In der folgenden Tabelle sind die verknüpften Schnittstellen, Enumerationen und
 [VDS-Objektmodell](vds-object-model.md)
 </dt> <dt>
 
-[**Ivdsserviceloader:: loadservice**](/windows/desktop/api/Vds/nf-vds-ivdsserviceloader-loadservice)
+[**IVdsServiceLoader::LoadService**](/windows/desktop/api/Vds/nf-vds-ivdsserviceloader-loadservice)
 </dt> <dt>
 
-[VDS werden geladen](loading-vds.md)
+[Laden von VDS](loading-vds.md)
 </dt> <dt>
 
-[**Ivdsservice:: GetObject**](/windows/desktop/api/Vds/nf-vds-ivdsservice-getobject)
+[**IVdsService::GetObject**](/windows/desktop/api/Vds/nf-vds-ivdsservice-getobject)
 </dt> <dt>
 
 [VDS-Benachrichtigungen](vds-notification-model.md)

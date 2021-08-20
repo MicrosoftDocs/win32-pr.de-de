@@ -1,23 +1,23 @@
 ---
-description: Dieser Abschnitt enthält die Referenz für die-Strukturen der Telefonie-Anwendungsprogrammierschnittstelle (TAPI).
+description: Dieser Abschnitt enthält den Verweis auf die TAPI-Strukturen (Telephony Application Programming Interface).
 ms.assetid: 2f51f8f9-e598-4ae2-9b3a-d8b2babd7d01
 title: TAPI-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c45508aad628e397adf052cd90a5f33548a25c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f30b3995d9142e8dc9be75495aff723c14475f53edc7ef8dca9b1ccd05cfd7f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118860949"
 ---
 # <a name="tapi-structures"></a>TAPI-Strukturen
 
-Dieser Abschnitt enthält die Referenz für die folgenden TAPI-Strukturen (Telefonie Application Programming Interface):
+Dieser Abschnitt enthält die Referenz für die folgenden TAPI-Strukturen (Telefonieanwendungsprogrammierungsschnittstelle):
 
--   [Callcenter-Strukturen](call-center-structures.md)
--   [Linien gerätestrukturen](line-device-structures.md)
--   [Mobiltelefon gerätestrukturen](phone-device-structures.md)
+-   [Callcenterstrukturen](call-center-structures.md)
+-   [Liniengerätestrukturen](line-device-structures.md)
+-   [Telefon Gerätestrukturen](phone-device-structures.md)
 
  
 

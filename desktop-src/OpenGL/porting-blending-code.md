@@ -1,66 +1,66 @@
 ---
-title: Portieren von Mischungs Code
-description: Wenn Sie in IRIS gl auf den vorderen und den Hintergrund Puffer zeichnen, wird der Mischungs Vorgang durch das Lesen eines der Puffer, das Kombination mit dieser Farbe und das anschließende Schreiben des Ergebnisses in beide Puffer erfolgt. In OpenGL wird jeder Puffer jedoch nacheinander gelesen, gemischt und dann geschrieben.
+title: Portieren von Blendingcode
+description: In IRIS GL wird beim Zeichnen in den Vorder- und Hintergrundpuffer eine Mischung durchgeführt, indem einer der Puffer gelesen, mit dieser Farbe gemischt und dann das Ergebnis in beide Puffer geschrieben wird. In OpenGL wird jeder Puffer jedoch nacheinander gelesen, gemischt und dann geschrieben.
 ms.assetid: 18334c6b-586d-44a3-aa95-d10589ba99f4
 keywords:
-- IRIS GL portieren, mischen
-- Portieren von IRIS GL, Blending
-- Portieren auf OpenGL von IRIS GL, Blending
-- OpenGL-Portierung von IRIS GL, Blending
+- IRIS GL-Portierung, Blending
+- Portieren von IRIS GL,Blending
+- Portieren von IRIS GL zu OpenGL,Blending
+- OpenGL-Portierung von IRIS GL,Blending
 - Mischen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7956c675848f454b660126a7a17869295a827438
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13548a2f08821e4f80bf63230077f9a39540ba9b8a37763e7935d211ef0dcdc0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119485910"
 ---
-# <a name="porting-blending-code"></a>Portieren von Mischungs Code
+# <a name="porting-blending-code"></a>Portieren von Blendingcode
 
-Wenn Sie in IRIS gl auf den vorderen und den Hintergrund Puffer zeichnen, wird der Mischungs Vorgang durch das Lesen eines der Puffer, das Kombination mit dieser Farbe und das anschließende Schreiben des Ergebnisses in beide Puffer erfolgt. In OpenGL wird jeder Puffer jedoch nacheinander gelesen, gemischt und dann geschrieben.
+In IRIS GL wird beim Zeichnen in den Vorder- und Hintergrundpuffer eine Mischung durchgeführt, indem einer der Puffer gelesen, mit dieser Farbe gemischt und dann das Ergebnis in beide Puffer geschrieben wird. In OpenGL wird jeder Puffer jedoch nacheinander gelesen, gemischt und dann geschrieben.
 
-In der folgenden Tabelle werden die Mischungs Funktionen von IRIS GL und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die IRIS GL-Mischungsfunktionen und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion  | OpenGL-Funktion                            | Bedeutung                     |
 |-------------------|--------------------------------------------|-----------------------------|
-|                   | [**glEnable**](glenable.md) (GL \_ Blend) | Schaltet das Mischen ein.          |
-| **BLENDFUNCTION** | [**glblendfunc**](glblendfunc.md)         | Gibt eine Blend-Funktion an. |
+|                   | [**glEnable**](glenable.md) ( GL \_ BLEND ) | Aktiviert das Mischen.          |
+| **Blendfunction** | [**glBlendFunc**](glblendfunc.md)         | Gibt eine Blend-Funktion an. |
 
 
 
- 
+ 
 
-Die OpenGL-Funktion " **glblendfunc** " und die Iris GL **BLENDFUNCTION** -Funktion sind nahezu identisch. Die folgende Tabelle enthält die Iris GL-Faktoren und deren OpenGL-Entsprechungen.
+Die OpenGL **glBlendFunc-Funktion** und die **Blendfunction-Funktion** IRIS GL sind fast identisch. In der folgenden Tabelle sind iris gl blend-Faktoren und ihre OpenGL-Entsprechungen aufgeführt.
 
 
 
-| IRIS GL          | OpenGL                     | Notizen             |
+| IRIS GL          | Opengl                     | Hinweise             |
 |------------------|----------------------------|-------------------|
-| BF \_ null         | GL \_ null                   |                   |
-| BF- \_ 1          | GL \_ 1                    |                   |
-| BF \_ sa           | GL \_ src \_ Alpha             |                   |
-| BF- \_ MSA          | GL \_ One \_ minus \_ src \_ Alpha |                   |
-| BF- \_ da           | GL- \_ DST- \_ Alpha             |                   |
-| BF- \_ MDA          | GL \_ 1 \_ minus \_ DST- \_ Alpha |                   |
-| BF \_ SC           | GL- \_ src- \_ Farbe             |                   |
-| BF \_ MSC          | GL \_ 1 \_ minus \_ src- \_ Farbe | Nur Ziel. |
-| BF- \_ DC           | GL- \_ DST- \_ Farbe             | Nur Quelle.      |
-| BF- \_ MDC          | GL \_ 1 \_ minus \_ DST- \_ Farbe | Nur Quelle.      |
-| BF \_ Min. \_ sa- \_ MDA | GL \_ src \_ alpha- \_ vollständig   |                   |
+| BF \_ ZERO         | GL \_ ZERO                   |                   |
+| BF \_ ONE          | GL \_ ONE                    |                   |
+| BF \_ SA           | GL \_ SRC \_ ALPHA             |                   |
+| BF \_ MSA          | GL \_ 1 \_ MINUS \_ SRC \_ ALPHA |                   |
+| BF \_ DA           | GL \_ DST \_ ALPHA             |                   |
+| BF \_ MDA          | GL \_ 1 \_ MINUS \_ DST \_ ALPHA |                   |
+| BF \_ SC           | GL \_ SRC \_ COLOR             |                   |
+| BF \_ MSC          | GL \_ ONE \_ MINUS \_ SRC \_ COLOR | Nur Ziel. |
+| BF \_ DC           | GL \_ DST \_ COLOR             | Nur Quelle.      |
+| BF \_ MDC          | GL \_ ONE \_ MINUS \_ DST \_ COLOR | Nur Quelle.      |
+| BF \_ MIN \_ SA \_ MDA | GL \_ SRC \_ ALPHA \_ SATURATE   |                   |
 
 
 
- 
+ 
 
 ??
 
- 
+ 
 
- 
+ 
 
 
 

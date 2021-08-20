@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectPass GetAnnotationByName-Methode (D3dx11effect.h)
-description: Abrufen einer Anmerkung anhand des Namens. | ID3DX11EffectPass GetAnnotationByName-Methode (D3dx11effect.h)
+description: Erhalten Sie eine Anmerkung nach Namen. | ID3DX11EffectPass GetAnnotationByName-Methode (D3dx11effect.h)
 ms.assetid: b54a4fb0-62c7-4d96-af30-f9ae04ff7dab
 keywords:
 - GetAnnotationByName-Methode Direct3D 11
-- GetAnnotationByName-Methode Direct3D 11 , ID3DX11EffectPass-Schnittstelle
+- GetAnnotationByName-Methode Direct3D 11, ID3DX11EffectPass-Schnittstelle
 - ID3DX11EffectPass-Schnittstelle Direct3D 11 , GetAnnotationByName-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118535076"
 ---
 # <a name="id3dx11effectpassgetannotationbyname-method"></a>ID3DX11EffectPass::GetAnnotationByName-Methode
 
-Abrufen einer Anmerkung anhand des Namens.
+Erhalten Sie eine Anmerkung nach Namen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ Ein Zeiger auf eine [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -72,11 +72,11 @@ Ein Zeiger auf eine [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

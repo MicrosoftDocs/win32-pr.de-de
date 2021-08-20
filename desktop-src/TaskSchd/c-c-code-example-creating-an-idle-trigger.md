@@ -1,19 +1,19 @@
 ---
-title: C/C++-Code Beispiel Erstellen eines Leerlauf-Auslösers
-description: In diesem Beispiel wird ein Leerlauf-Auslösung für eine vorhandene Aufgabe erstellt. Informationen zu Bedingungen im Leerlauf finden Sie Unteraufgaben im Leerlauf.
+title: 'C/C++-Codebeispiel: Erstellen eines Leerlauftriggers'
+description: In diesem Beispiel wird ein Leerlauftrigger für eine vorhandene Aufgabe erstellt. Informationen zu Leerlaufbedingungen finden Sie unter Leerlaufbedingungen für Aufgaben.
 ms.assetid: 89fedc86-7abc-42ce-a497-b0b0c46896ad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74f4ad6404e5028f45057dbfbba9dc15b0b55a8e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 669453f303394fc55f3e5f8677469c732bf161006aeeec222effa4202bb0db64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118859737"
 ---
-# <a name="cc-code-example-creating-an-idle-trigger"></a>C/C++-Code Beispiel: Erstellen eines Leerlauf-Auslösers
+# <a name="cc-code-example-creating-an-idle-trigger"></a>C/C++-Codebeispiel: Erstellen eines Leerlauftriggers
 
-In diesem Beispiel wird ein Leerlauf-Auslösung für eine vorhandene Aufgabe erstellt. Informationen zu Bedingungen im Leerlauf finden Sie unter [Aufgaben im Leerlauf](task-idle-conditions.md).
+In diesem Beispiel wird ein Leerlauftrigger für eine vorhandene Aufgabe erstellt. Informationen zu Leerlaufbedingungen finden Sie unter [Leerlaufbedingungen für Aufgaben.](task-idle-conditions.md)
 
 
 ```C++
@@ -194,12 +194,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Defender02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ Defender02class stellt Richtlinien für Windows Defender dar.
+description: Die MDM \_ Policy \_ Result01 \_ Defender02-Klasse stellt Richtlinien dar, die sich auf Windows Defender.
 ms.assetid: 82c8a7a2-8369-46c4-aa87-b44b742a274d
 keywords:
 - MDM_Policy_Result01_Defender02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae898751a9f15af1c945efd3e6a473dfe07c7cd7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 085e8092778a1d182f948a75dd310a052e6ffbf0d81284b15f5071ae1c3279a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118164574"
 ---
-# <a name="mdm_policy_result01_defender02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Defender02-Klasse
+# <a name="mdm_policy_result01_defender02-class"></a>MDM \_ Policy \_ Result01 \_ Defender02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Defender02**-Klasse stellt Richtlinien für Windows Defender dar.
+Die **MDM \_ Policy \_ Result01 \_ Defender02-Klasse** stellt Richtlinien dar, die sich auf Windows Defender
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -80,13 +80,13 @@ class MDM_Policy_Result01_Defender02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Defender02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ Defender02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Defender02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ Defender02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -233,10 +233,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Angreigeereductiononlyausschlüsse](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
+[AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -244,10 +244,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Angreiderereductionrules](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules)
+[AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -266,7 +266,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Cloudblocklevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+[CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -277,7 +277,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Cloudextendedtimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+[CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -288,10 +288,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Controlledfolderaccesszuwebdapplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
+[ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -299,10 +299,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Controlledfolderaccessprotectedfolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
+[ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -321,7 +321,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enablecontrolledfolderaccess](/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
+[EnableControlledFolderAccess](/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -332,7 +332,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enablenetworkprotection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+[EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -346,7 +346,7 @@ Zugriffstyp: Lesen/Schreiben
 [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -357,7 +357,7 @@ Zugriffstyp: Lesen/Schreiben
 [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -368,7 +368,7 @@ Zugriffstyp: Lesen/Schreiben
 [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -379,7 +379,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -388,14 +388,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Defender".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Defender".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -404,11 +404,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
-[Puaprotection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+[PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -499,7 +499,7 @@ Zugriffstyp: Lesen/Schreiben
 [ThreatSeverityDefaultAction](/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -513,10 +513,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -525,7 +525,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

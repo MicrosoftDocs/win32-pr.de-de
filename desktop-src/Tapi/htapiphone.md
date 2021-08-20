@@ -1,5 +1,5 @@
 ---
-description: Der HTAPIPHONE-Datentyp stellt ein nicht transparentes TAPIs-Handle für eine Telefondatenstruktur dar.
+description: Der HTAPIPHONE-Datentyp stellt ein nicht transparentes TAPIs-Handle für eine Phone-Datenstruktur dar.
 ms.assetid: e869cb3e-0eeb-4edf-a272-a655a236a3a2
 title: HTAPIPHONE
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119003598"
 ---
 # <a name="htapiphone"></a>HTAPIPHONE
 
-Der **HTAPIPHONE-Datentyp** stellt das nicht transparente Handle von TAPI für eine Telefondatenstruktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen. Der Dienstanbieter darf nicht versuchen, über diesen Verweis zu verweisen, als ob es sich um einen Zeiger handelte, Annahmen über seine Werte zu treffen oder seine Darstellung auf eine andere Weise zu interpretieren, als seinen Wert zu geeigneten Zeiten an TAPI zu übergeben.
+Der **HTAPIPHONE-Datentyp** stellt das opake Handle von TAPI für eine Telefondatenstruktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen. Der Dienstanbieter darf nicht versuchen, über diesen zu verweisen, als wäre er ein Zeiger, darf Annahmen über seine Werte treffen oder seine Darstellung in einer anderen Weise interpretieren, als den Wert zu geeigneten Zeitpunkten an TAPI zu übergeben.
 
  
 

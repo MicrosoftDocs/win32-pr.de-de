@@ -1,9 +1,9 @@
 ---
-title: Image-Element (WMP-SDK)
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Image-Element (WMP-SDK)
+title: Image-Element (WMP SDK)
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | Image-Element (WMP SDK)
 ms.assetid: 06804c26-e847-43a7-bb75-60da600c7d4f
 keywords:
-- Bild Element Windows-Media Player
+- Image-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,21 +13,21 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c10b62365453f395c1aaf373e355c21260900f8d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9815844833c8068fb89589368f29b15787ad8fb18a21c9f9c6867d202e3095a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862640"
 ---
-# <a name="image-element-wmp-sdk"></a>Image-Element (WMP-SDK)
+# <a name="image-element-wmp-sdk"></a>Image-Element (WMP SDK)
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **Image** -Element gibt die Bilder an, die von Windows Media Player dem Benutzer angezeigt werden, um den Online Store darzustellen.
+Das **Image-Element** gibt die Bilder an, die dem Benutzer Windows Media Player angezeigt werden, um den Onlineshop darzustellen.
 
 ``` syntax
 <Image
@@ -42,37 +42,37 @@ Das **Image** -Element gibt die Bilder an, die von Windows Media Player dem Benu
 
 <dl> <dt>
 
-<span id="EulaURL__required_for_type_1_stores__ignored_for_type_2_"></span><span id="eulaurl__required_for_type_1_stores__ignored_for_type_2_"></span><span id="EULAURL__REQUIRED_FOR_TYPE_1_STORES__IGNORED_FOR_TYPE_2_"></span>**Eulaurl** (erforderlich für den Speicher vom Typ 1, wird für Typ 2 ignoriert)
+<span id="EulaURL__required_for_type_1_stores__ignored_for_type_2_"></span><span id="eulaurl__required_for_type_1_stores__ignored_for_type_2_"></span><span id="EULAURL__REQUIRED_FOR_TYPE_1_STORES__IGNORED_FOR_TYPE_2_"></span>**EulaURL** (erforderlich für Speicher vom Typ 1, für Typ 2 ignoriert)
 </dt> <dd>
 
-Die URL für das Logo, das von Windows Media Player im Dialogfeld Endbenutzer-Lizenzvertrag (EULA) angezeigt wird. Dabei muss es sich um ein PNG-Bild handeln, das 80 x 80 Pixel ist.
+URL für das Logo, das Windows Media Player im Dialogfeld Endbenutzer-Lizenzvertrag (EULA) angezeigt wird. Dabei muss es sich um ein PNG-Bild mit 80 x 80 Pixeln handelt.
 
 </dd> <dt>
 
-<span id="MenuURL__optional_"></span><span id="menuurl__optional_"></span><span id="MENUURL__OPTIONAL_"></span>**Menuurl** (optional)
+<span id="MenuURL__optional_"></span><span id="menuurl__optional_"></span><span id="MENUURL__OPTIONAL_"></span>**MenuURL** (optional)
 </dt> <dd>
 
-Die URL für das Bild, das von Windows Media Player im Menü Dienste angezeigt wird. Dieses Bild muss 15 x 15 Pixel betragen.
+URL für das Bild, das Windows Media Player im Menü "Dienste" angezeigt wird. Dieses Bild muss 15 x 15 Pixel groß sein.
 
 </dd> <dt>
 
-<span id="ServiceLargeURL__optional_"></span><span id="servicelargeurl__optional_"></span><span id="SERVICELARGEURL__OPTIONAL_"></span>**Servicelargeurl** (optional)
+<span id="ServiceLargeURL__optional_"></span><span id="servicelargeurl__optional_"></span><span id="SERVICELARGEURL__OPTIONAL_"></span>**ServiceLargeURL** (optional)
 </dt> <dd>
 
-Bei einem Online Store vom Typ 1 ist dies die URL für das Image, das in Windows Media Player auf der Registerkarte " **Online Stores** " angezeigt wird. Für Windows Media Player 11 muss dieses Bild 45 Pixel breit und 13 Pixel hoch sein. Bei Windows Media Player 12 muss dieses Bild 45 Pixel breit und 30 Pixel hoch sein. Um sowohl die Versionen 11 als auch 12 von Windows Media Player zu unterstützen, müssen Sie zwei separate ServiceInfo.xml Dokumente bereitstellen, von denen jedes auf das Bild der passenden Größe für servicelargeurl zeigt.
+Bei einem Onlineshop vom Typ 1 ist dies die URL für das Bild, das Windows Media Player auf der Registerkarte **Onlineshops** angezeigt wird. Für Windows Media Player 11 muss dieses Bild 45 x 13 Pixel breit sein. Für Windows Media Player 12 muss dieses Bild 45 x 30 Pixel breit sein. Um die Versionen 11 und 12 von Windows Media Player zu unterstützen, müssen Sie zwei separate ServiceInfo.xml Dokumente bereitstellen, von denen jedes auf das entsprechend dimensionierte Image für ServiceLargeURL verweist.
 
-Bei einem Online Store vom Typ 2 ist dies die URL für das Image, das in Windows Media Player neben der Registerkarte **Online Stores** oder neben den Schaltflächen für den Aufgabenbereich angezeigt wird. Dieses Bild muss 30 x 30 Pixel betragen.
+Bei einem Onlineshop vom Typ 2 ist dies die URL für das Bild, das Windows Media Player neben der Registerkarte **Onlineshops** oder neben den Schaltflächen des Aufgabenbereichs angezeigt wird. Dieses Bild muss 30 x 30 Pixel groß sein.
 
 </dd> <dt>
 
-<span id="ServiceSmallURL__optional_"></span><span id="servicesmallurl__optional_"></span><span id="SERVICESMALLURL__OPTIONAL_"></span>**Servicesmallurl** (optional)
+<span id="ServiceSmallURL__optional_"></span><span id="servicesmallurl__optional_"></span><span id="SERVICESMALLURL__OPTIONAL_"></span>**ServiceSmallURL** (optional)
 </dt> <dd>
 
-Die URL für das Logo, das zusammen mit der im **Description** -Element angegebenen Marketing Beschreibung angezeigt wird. Wenn Sie nicht bereitgestellt wird, ist sie leer. (Alle Typen, optional) Dabei muss es sich um ein PNG-Bild handeln, das 45 Pixel breit und 13 Pixel hoch ist.
+URL für das Logo, das zusammen mit der Marketingbeschreibung angezeigt wird, die im **Description-Element** angegeben ist. Wenn sie nicht angegeben wird, ist sie leer. (Alle Typen, optional) Dies muss ein PNG-Bild sein, das 45 Pixel breit und 13 Pixel hoch ist.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -87,11 +87,11 @@ Die URL für das Logo, das zusammen mit der im **Description** -Element angegebe
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die unterstützten Bildformate sind GIF, JPG, BMP und PNG (das empfohlene Format). Die Verwendung von Webtransparenz wird unterstützt und empfohlen. Animierte GIF-Dateien werden nicht unterstützt.
+Die unterstützten Bildformate sind .gif, .jpg, .bmp und .png (das empfohlene Format). Die Verwendung von Webtransparenz wird sowohl unterstützt als auch empfohlen. Animierte GIF-Dateien werden nicht unterstützt.
 
-Wenn Sie keinen Wert für **menuurl** angeben, zeigt Windows Media Player im Menü für den Online Shop keine Grafik an.
+Wenn Sie keinen Wert für **MenuURL** bereitstellen, zeigt Windows Media Player keine Grafik im Menü für Ihren Onlineshop an.
 
-Sie können ein animiertes Bild für servicelargeurl bereitstellen. In Windows Media Player 10 oder 11 ist das Bild animiert. In Windows Media Player 12 wird nur der erste Frame des Bilds angezeigt. Zum Bereitstellen eines animierten Bilds erstellen Sie eine einzelne Bilddatei, die aufeinander folgende Rahmen der Animation enthält. Beispielsweise können Sie für ein Bild, das 30 Pixel breit und 30 Pixel hoch ist, 20 aufeinander folgende Bilder nebeneinander in einem Bild bereitstellen, das 600 Pixel breit und 30 Pixel hoch ist. Ein solches Bild wird von Windows Media Player automatisch animiert, indem die 20 einzelnen Bilder nacheinander angezeigt werden. Diese Animation tritt nur einmal auf, wenn der Online Shop geöffnet wird. der Vorgang wird nicht wiederholt.
+Sie können ein animiertes Bild für ServiceLargeURL bereitstellen. In Windows Media Player 10 oder 11 wird das Bild animiert. In Windows Media Player 12 wird nur der erste Frame des Bilds angezeigt. Um ein animiertes Bild bereitzustellen, erstellen Sie eine einzelne Bilddatei, die aufeinander folgende Frames Ihrer Animation enthält. Für ein Bild, das 30 Pixel breit und 30 Pixel hoch ist, können Sie beispielsweise 20 aufeinander folgende Bilder nebeneinander in einem Bild bereitstellen, das 600 Pixel breit und 30 Pixel hoch ist. Windows Media Player würde ein solches Bild automatisch animieren, indem die 20 einzelnen Bilder nacheinander angezeigt werden. Diese Animation tritt nur einmal auf, wenn der Onlineshop geöffnet wird. wird nicht wiederholt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,13 +107,13 @@ Sie können ein animiertes Bild für servicelargeurl bereitstellen. In Windows M
 
 <dl> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Online Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für ein Online-Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für ein Online-Store vom Typ 2**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
  

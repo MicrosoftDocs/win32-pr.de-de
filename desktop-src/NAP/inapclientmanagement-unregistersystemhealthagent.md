@@ -1,11 +1,11 @@
 ---
-title: Inapclientmanagement unregistersystemhealthagent-Methode (napmanagement. h)
-description: Hebt die Registrierung eines SHA beim NAP-System auf.
+title: INapClientManagement UnregisterSystemHealthAgent-Methode (NapManagement.h)
+description: Aufheben der Registrierung eines SHA beim NAP-System.
 ms.assetid: c3ad6f2a-c39a-4590-8487-24c802433845
 keywords:
-- Unregistersystemhealthagent-Methode NAP
-- Unregistersystemhealthagent-Methode NAP, inapclientmanagement-Schnittstelle
-- Inapclientmanagement Interface NAP, unregistersystemhealthagent-Methode
+- UnregisterSystemHealthAgent-Methode NAP
+- UnregisterSystemHealthAgent-Methode NAP, INapClientManagement-Schnittstelle
+- INapClientManagement-Schnittstelle NAP, UnregisterSystemHealthAgent-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbff7af1c279090d12883d2a4e06ee9bcc364438
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ad43df1c7edeb2525ff5c8901278d082c4ba299ea78d56c67a4380f8a7bab019
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134508"
 ---
-# <a name="inapclientmanagementunregistersystemhealthagent-method"></a>Inapclientmanagement:: unregistersystemhealthagent-Methode
+# <a name="inapclientmanagementunregistersystemhealthagent-method"></a>INapClientManagement::UnregisterSystemHealthAgent-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **unregistersystemhealthagent** -Methode hebt die Registrierung eines SHA beim NAP-System auf.
+Mit **der UnregisterSystemHealthAgent-Methode** wird die Registrierung eines SHA beim NAP-System aufgehoben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,25 +47,25 @@ HRESULT UnregisterSystemHealthAgent(
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
-Eine [**systemhealthentityid**](nap-datatypes.md) , die den Systemintegritäts-Agent identifiziert, dessen Registrierung aufgehoben werden soll.
+Eine [**SystemHealthEntityId,**](nap-datatypes.md) die den Systemstatus-Agent identifiziert, für den die Registrierung aufgehoben werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
+Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                        |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Vorgang erfolgreich.<br/>                                   |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl>      | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>       | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**NAP \_ E \_ trotzdem \_ gebunden**</dt> </dl> | Der SHA bleibt gebunden, und die Registrierung konnte nicht aufgehoben werden.<br/>    |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>      | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>       | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**NAP \_ E \_ NOCH \_ GEBUNDEN**</dt> </dl> | Die SHA bleibt gebunden und konnte nicht aufgehoben werden.<br/>    |
 
 
 
@@ -77,10 +77,10 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
@@ -89,7 +89,7 @@ Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht b
 
 <dl> <dt>
 
-[**Inapclientmanagement**](inapclientmanagement.md)
+[**INapClientManagement**](inapclientmanagement.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: RB_SETCOLORSCHEME Meldung (kommstrg. h)
-description: Legt die Farbschema Informationen für das Grund leisten-Steuerelement fest.
+title: RB_SETCOLORSCHEME Nachricht (Commctrl.h)
+description: Legt die Farbschemainformationen für das Rebar-Steuerelement fest.
 ms.assetid: ddf8f3e4-66b7-4b53-a04e-b4dd372f71c4
 keywords:
-- Windows-Steuerelemente für RB_SETCOLORSCHEME Meldung
+- RB_SETCOLORSCHEME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9c7725d3c0bc3f3a7a7a72db16e19626a3c4d2a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ce7715082a371c3632d8accb8fdf60bbac50d8d7d8182732d6a62c2dbb423c34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169276"
 ---
-# <a name="rb_setcolorscheme-message"></a>RB \_ SetColorScheme-Meldung
+# <a name="rb_setcolorscheme-message"></a>RB \_ SETCOLORSCHEME-Nachricht
 
-Legt die Farbschema Informationen für das Grund leisten-Steuerelement fest.
+Legt die Farbschemainformationen für das Rebar-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt die Farbschema Informationen für das Grund leisten-Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**ColorScheme**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur, die die Farbschema Informationen enthält.
+Zeiger auf eine [**COLORSCHEME-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-colorscheme) die die Farbschemainformationen enthält.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Zeiger auf eine [**ColorScheme**](/windows/win32/api/commctrl/ns-commctrl-colors
 
 Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Grund leisten-Steuerelement verwendet die Farbschema Informationen beim Zeichnen der 3D-Elemente im Steuerelement und den Bändern.
+Das Steuerelement für die Neuleiste verwendet die Farbschemainformationen, wenn die 3D-Elemente im Steuerelement und in den Bändern gezeichnet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Das Grund leisten-Steuerelement verwendet die Farbschema Informationen beim Zeic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Das Grund leisten-Steuerelement verwendet die Farbschema Informationen beim Zeic
 
 <dl> <dt>
 
-[**RB \_ getcolorscheme**](rb-getcolorscheme.md)
+[**RB \_ GETCOLORSCHEME**](rb-getcolorscheme.md)
 </dt> </dl>
 
  

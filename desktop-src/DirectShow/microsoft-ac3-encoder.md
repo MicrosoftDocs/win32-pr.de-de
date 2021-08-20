@@ -1,22 +1,22 @@
 ---
-description: Der Microsoft AC-3-Encoder-Filter codiert Stereo PCM-Audiodaten in einen Dolby Digital Bitstream.
+description: Der Microsoft AC-3-Encoderfilter codiert Stereo-PCM-Audio in einen Dolby Digital-Bitstream.
 ms.assetid: 59d46ee2-d45f-4492-938d-39c55a7368e1
-title: Microsoft AC-3 Encoder (wmcodecdsp. h)
+title: Microsoft AC-3 Encoder (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 160b020e07bb3ba4e4dc5636b58dd0e66f581a6f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 35984975fc5a56b043f1b2ceda56505ee6fe74038034fb35deb09b6a5f6a0f41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118153168"
 ---
 # <a name="microsoft-ac-3-encoder"></a>Microsoft AC-3-Encoder
 
-Der Microsoft AC-3-Encoder-Filter codiert Stereo PCM-Audiodaten in einen Dolby Digital Bitstream.
+Der Microsoft AC-3-Encoderfilter codiert Stereo-PCM-Audio in einen Dolby Digital-Bitstream.
 
 > [!Note]  
-> Die Microsoft-Implementierung der Dolby Digital-Technologie ist gemäß den Bedingungen des Dolby Digital Licensing Program eingeschränkt, das von Microsoft-Anwendungen verwendet werden kann.
+> Die Microsoft-Implementierung der Dolby Digital-Technologie ist im Rahmen des Dolby Digital-Lizenzierungsprogramms auf die Verwendung durch Microsoft-Anwendungen beschränkt.
 
  
 
@@ -27,31 +27,31 @@ Der Microsoft AC-3-Encoder-Filter codiert Stereo PCM-Audiodaten in einen Dolby D
 
 
 
-Filter Informationen
+Filterinformationen
 
-Filter Schnittstellen
+Filterschnittstellen
 
-[**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)<br/>
+[**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)<br/>
 
-Eingabe-PIN-Medientypen
+Eingabepinmedientypen
 
-**MediaType \_ Audiodatei**, **mediasubtype \_ PCM**<br/> Der Eingabetyp muss 48-kHz-Stereo, 16 Bits pro Beispiel sein.<br/>
+**MEDIATYPE \_ Audio,** **MEDIASUBTYPE \_ PCM**<br/> Der Eingabetyp muss stereo mit 48 kHz und 16 Bits pro Stichprobe sein.<br/>
 
-PIN-Eingabeschnittstellen
+Eingabe-Pin-Schnittstellen
 
-[**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**Iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
+[**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> [**Ipin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
 
-Ausgabe-PIN-Medientypen
+Medientypen des Ausgabepins
 
-**MediaType \_ Audiodatei**, **mediasubtype \_ Dolby \_ AC3**<br/> **MediaType \_ Stream**, **mediasubtype \_ Dolby \_ AC3**<br/>
+**MEDIATYPE \_ Audio,** **MEDIASUBTYPE \_ DOLBY \_ AC3**<br/> **MEDIATYPE \_ Stream,** **MEDIASUBTYPE \_ DOLBY \_ AC3**<br/>
 
-PIN-Schnittstellen
+Ausgabe-Pin-Schnittstellen
 
-[**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**Iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
+[**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**Ipin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
 
-CLSID Filtern
+Filtern von CLSID
 
-**CLSID \_ CMSAC3Enc** (in wmcodecdsp. h deklariert)
+**CLSID \_ CMSAC3Enc** (deklariert in wmcodecdsp.h)
 
 Ausführbare Datei
 
@@ -59,19 +59,19 @@ msac3enc.dll
 
 [Verdienst](merit.md)
 
-**das Verdienst wird \_ \_ nicht \_ verwendet.**
+**NOT USE (NICHT \_ \_ \_ VERWENDEN)**
 
-[Filter Kategorie](filter-categories.md)
+[Filterkategorie](filter-categories.md)
 
-**CLSID \_ legacyamfiltercategory**
+**CLSID \_ LegacyAmFilterCategory**
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Filter ist nicht zur Verwendung durch Drittanbieter Anwendungen verfügbar.
+Dieser Filter ist nicht für die Verwendung durch Drittanbieteranwendungen verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,9 +79,9 @@ Dieser Filter ist nicht zur Verwendung durch Drittanbieter Anwendungen verfügba
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista Home Premium, Windows Vista Ultimate, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, Windows 7 Ultimate \[ Desktop Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Home Premium, Windows Vista Ultimate, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, nur Windows 7 \[ Ultimate-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl>                                                                                       |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl>                                                                                       |
 
 
 

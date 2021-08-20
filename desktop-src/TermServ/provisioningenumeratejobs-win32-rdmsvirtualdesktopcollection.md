@@ -1,12 +1,12 @@
 ---
-title: ProvisioningEnumerateJobs-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Listet Aufträge für die Bereitstellung virtueller Desktops für diesen Dienst auf.
+title: ProvisioningEnumerateJobs-Methode der Win32_RDMSVirtualDesktopCollection Klasse
+description: Aufzählen von Bereitstellungsaufträgen für virtuelle Desktops für diesen Dienst.
 ms.assetid: 4bd2b03f-ba8c-483e-af09-270424f9b1ed
 ms.tgt_platform: multiple
 keywords:
-- ProvisioningEnumerateJobs-Methode Remotedesktopdienste
+- ProvisioningEnumerateJobs-Remotedesktopdienste
 - ProvisioningEnumerateJobs-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste , ProvisioningEnumerateJobs-Methode
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , ProvisioningEnumerateJobs-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "118350222"
 ---
 # <a name="provisioningenumeratejobs-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>ProvisioningEnumerateJobs-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Listet Aufträge für die Bereitstellung virtueller Desktops für diesen Dienst auf.
+Aufzählen von Bereitstellungsaufträgen für virtuelle Desktops für diesen Dienst.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ uint32 ProvisioningEnumerateJobs(
 *JobType* \[ In\]
 </dt> <dd>
 
-Eine ganze Zahl, die den Typ des aufzuzählenden Auftrags angibt.
+Eine ganze Zahl, die den Typ des aufzählenden Auftrags angibt.
 
 Dieser Parameter kann auf einen der folgenden Werte festgelegt werden:
 
@@ -71,20 +71,20 @@ Abgeschlossene Aufträge
 *CollectionAlias* \[ In\]
 </dt> <dd>
 
-Der Alias der aufzulistenden virtuellen Desktopauflistung. Der Standardwert für diesen Parameter ist FALSE, der angibt, dass alle ausgeführten Aufträge aufzählt werden sollen.
+Der Alias der auflistung virtueller Desktops, die aufzählt werden soll. Der Standardwert für diesen Parameter ist FALSE, der angibt, dass alle ausgeführten Aufträge aufzählt werden sollen.
 
 </dd> <dt>
 
 *JobGuids* \[ out\]
 </dt> <dd>
 
-Ein Array, das die **GUIDs** der aufzuzählenden Bereitstellungsaufträge enthält.
+Ein Array, das die **GUIDs der** aufzählenden Bereitstellungsaufträge enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,13 +94,13 @@ Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
 | MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -17,7 +17,7 @@ Materialien beschreiben, wie Polygone Licht reflektieren oder in einer 3D-Szene 
 
 ## <a name="diffuse-and-ambient-reflection"></a>Diffus und Umgebungsreflektion
 
-Die Diffuse- und Ambient-Member der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) beschreiben, wie ein Material das Umgebungslicht und das diffuse Licht in einer Szene widerspiegelt. Da die meisten Szenen viel mehr diffuses Licht als Umgebungslicht enthalten, spielt die diffuse Reflektion die größte Rolle bei der Bestimmung der Farbe. Da diffuses Licht richtungsrichtungsbedingt ist, wirkt sich der Neigungswinkel für diffuses Licht auf die Gesamtdichte der Reflexion aus. Diffuse Reflektion ist am größten, wenn das Licht einen Scheitelpunkt parallel zur Scheitelpunktnorm normal aufstst. Wenn der Winkel zunimmt, verringert sich die Auswirkung der diffusen Reflektion. Die reflektierte Lichtmenge ist der Kosinus des Winkels zwischen dem eingehenden Licht und der Scheitelpunktnorm normal, wie in der folgenden Abbildung dargestellt.
+Die Diffuse- und Ambient-Member der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) beschreiben, wie ein Material das Umgebungslicht und das diffuse Licht in einer Szene widerspiegelt. Da die meisten Szenen viel mehr diffuses Licht als Umgebungslicht enthalten, spielt die diffuse Reflektion die größte Rolle bei der Bestimmung der Farbe. Darüber hinaus wirkt sich der Neigungswinkel für diffuses Licht auf die Gesamtdichte der Reflektion aus, da diffuses Licht richtungsrichtungsbedingt ist. Diffuse Reflektion ist am größten, wenn das Licht einen Scheitelpunkt parallel zur Scheitelpunktnorm normal aufstst. Wenn der Winkel zunimmt, nimmt die Auswirkung der diffusen Reflektion ab. Die reflektierte Lichtmenge ist der Kosinus des Winkels zwischen dem eingehenden Licht und der Scheitelpunktnorm normal, wie in der folgenden Abbildung dargestellt.
 
 ![Abbildung der Menge des reflektierten Lichts](images/incident.png)
 
@@ -29,13 +29,13 @@ Diffuse und Umgebungsreflektion arbeiten zusammen, um die wahrgenommene Farbe ei
 
 Materialien können verwendet werden, damit ein gerenderte Objekt selbsterkannt zu sein scheint. Der Emissive-Member der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) wird verwendet, um die Farbe und Transparenz des ausgegebenen Lichts zu beschreiben. Ausgabe wirkt sich auf die Farbe eines Objekts aus und kann z. B. ein dunkles Material hell machen und einen Teil der ausgegebenen Farbe übernehmen.
 
-Sie können die freizügige Eigenschaft eines Materials verwenden, um die Vorstellung hinzuzufügen, dass ein Objekt Licht aussendet, ohne den Rechenaufwand zu verursachen, der durch das Hinzufügen eines Lichts zur Szene entsteht. Im Fall des blauen Steines ist die freizügige Eigenschaft nützlich, wenn Sie möchten, dass das Steine aufleuchten, aber kein Licht auf andere Objekte in der Szene werfen soll. Denken Sie daran, dass Materialien mit freizügigen Eigenschaften kein Licht ausgeben, das von anderen Objekten in einer Szene reflektiert werden kann. Um dieses reflektierte Licht zu erreichen, müssen Sie ein zusätzliches Licht innerhalb der Szene platzieren.
+Sie können die freizügige Eigenschaft eines Materials verwenden, um die Vorstellung hinzuzufügen, dass ein Objekt Licht aussendet, ohne den Rechenaufwand zu verursachen, der durch das Hinzufügen eines Lichts zur Szene entsteht. Im Fall des blauen Steines ist die freizügige Eigenschaft nützlich, wenn Sie möchten, dass das Strahllicht scheint, aber nicht licht auf andere Objekte in der Szene geworfen wird. Denken Sie daran, dass Materialien mit freizügigen Eigenschaften kein Licht ausgeben, das von anderen Objekten in einer Szene reflektiert werden kann. Um dieses reflektierte Licht zu erreichen, müssen Sie ein zusätzliches Licht innerhalb der Szene platzieren.
 
 ## <a name="specular-reflection"></a>Spiegelung
 
 Die Glanzreflektion erstellt Hervorhebungen für Objekte, sodass sie liglig erscheinen. Die [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) enthält zwei Member, die die Glanzlichtfarbe sowie die Allgemeine Färbung des Materials beschreiben. Sie legen die Farbe der Glanzlichter fest, indem Sie das Specular-Element auf die gewünschte RGBA-Farbe festlegen. Die gängigsten Farben sind Weiß oder Hellgrau. Die Werte, die Sie im Power-Member festlegen, steuern, wie stark die Glanzeffekte sind.
 
-Glanzlichter können zu drastischen Effekten führen. Erneutes Zeichnen auf der analogen Blauen Steine: Ein größerer Power-Wert erzeugt schärferen Glanzlichter, sodass das Steine recht blendig zu sein scheint. Kleinere Werte vergrößern den Bereich des Effekts und erzeugen eine dumpfe Reflektion, die das Aussehen des Gitters glättet. Um ein Objekt wirklich matt zu machen, legen Sie den Power-Member auf 0 (null) und die Farbe in Specular auf black (Schwarz) fest. Experimentieren Sie mit verschiedenen Reflektionsebenen, um eine realistische Darstellung für Ihre Anforderungen zu erzielen. Die folgende Abbildung zeigt zwei identische Modelle. Der linke verwendet eine Glanzreflektionsleistung von 10. das Modell auf der rechten Seite hat keine Glanzreflektion.
+Glanzlichter können zu drastischen Effekten führen. Erneutes Zeichnen auf der blaufarbenen Analogie: Ein größerer Power-Wert erzeugt schärferen Glanzlichter, sodass das Gitter sehr gut zu sein scheint. Kleinere Werte vergrößern den Bereich des Effekts und erzeugen eine dumpfe Reflektion, die das Aussehen des Gitters glättet. Um ein Objekt wirklich matt zu machen, legen Sie den Power-Member auf 0 (null) und die Farbe in Specular auf black (Schwarz) fest. Experimentieren Sie mit verschiedenen Reflektionsebenen, um eine realistische Darstellung für Ihre Anforderungen zu erzielen. Die folgende Abbildung zeigt zwei identische Modelle. Der linke verwendet eine Glanzreflektionsleistung von 10. das Modell auf der rechten Seite hat keine Glanzreflektion.
 
 ![Abbildung von Spiegelungsreflektionsmodellen](images/spechigh.png)
 
@@ -106,7 +106,7 @@ Wenn Sie ein Direct3D-Gerät erstellen, wird das aktuelle Material automatisch a
 | Glänzend | (R:0, G:0, B:0, A:0) |
 | Umgebend  | (R:0, G:0, B:0, A:0) |
 | Selbstleuchtend | (R:0, G:0, B:0, A:0) |
-| Power    | (0.0)                |
+| Strom    | (0.0)                |
 
 
 
@@ -133,7 +133,7 @@ if(FAILED(hr))
 
 
 > [!Note]  
-> Wenn ihre Anwendung keine Materialeigenschaften für das Rendering angibt, verwendet das System ein Standardmaterial. Das Standardmaterial spiegelt das gesamte diffuse Licht (z. B. weiß) ohne Umgebungs- oder Glanzreflektion und ohne freizügige Farbe wider.
+> Wenn Ihre Anwendung keine Materialeigenschaften für das Rendering angibt, verwendet das System ein Standardmaterial. Das Standardmaterial spiegelt das gesamte diffuse Licht (z. B. weiß) ohne Umgebungs- oder Glanzreflektion und ohne freizügige Farbe wider.
 
  
 

@@ -4,8 +4,8 @@ description: Dieses Attribut enthält Informationen zu jedem Kontotypobjekt.
 ms.assetid: 00479b89-1d96-4ace-bbd8-053ca9e548b0
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des SAM-Account-Type-Attributs
-- sAMAccountType-Attribut AD-Schema
+- AD-Schema des SAM-Kontotypattributs
+- AD-Schema des sAMAccountType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -25,20 +25,20 @@ ms.locfileid: "118423387"
 
 Dieses Attribut enthält Informationen zu jedem Kontotypobjekt. Sie können eine Liste von Kontotypen auflisten oder die API zum Anzeigen von Informationen verwenden, um eine Liste zu erstellen. Da Computer, normale Benutzerkonten und Vertrauenskonten auch als Benutzerobjekte aufzählt werden können, müssen die Werte für diese Konten ein zusammenhängender Bereich sein.
 
-Folgende Werte sind für dieses Attribut möglich:
+Die möglichen Werte für dieses Attribut sind die folgenden:
 
--   \_SAM DOMAIN OBJECT \_ 0x0
+-   SAM \_ DOMAIN \_ OBJECT 0x0
 -   SAM \_ GROUP \_ OBJECT 0x10000000
--   SAM \_ NON SECURITY GROUP OBJECT \_ \_ \_ 0x10000001
--   \_SAM ALIAS OBJECT \_ 0x20000000
+-   SAM \_ NON SECURITY GROUP OBJECT \_ \_ \_ 0X10000001
+-   SAM \_ ALIAS \_ OBJECT 0x20000000
 -   SAM \_ NON SECURITY ALIAS OBJECT \_ \_ \_ 0x20000001
--   \_SAM USER OBJECT \_ 0x30000000
--   SAM \_ NORMAL USER ACCOUNT \_ \_ 0x30000000
--   0X30000001 FÜR \_ SAM-COMPUTERKONTEN \_
+-   SAM \_ USER \_ OBJECT 0x30000000
+-   SAM \_ NORMAL USER ACCOUNT \_ \_ 0X30000000
+-   SAM \_ \_ MACHINE-0X30000001
 -   SAM \_ TRUST \_ ACCOUNT 0x30000002
 -   SAM \_ APP BASIC GROUP \_ \_ 0x40000000
--   0X40000001 DER \_ SAM-APP-ABFRAGEGRUPPE \_ \_
--   \_ \_ SAM-KONTOTYP \_ MAX 0x7fffffff
+-   SAM \_ APP QUERY GROUP \_ \_ 0X40000001
+-   SAM \_ ACCOUNT TYPE MAX \_ \_ 0x7fffffff
 
 
 
@@ -50,7 +50,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                |
 | Updatehäufigkeit  | Dies wird vom Betriebssystem festgelegt, wenn das -Objekt erstellt wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.302                                          |
-| System-ID-GUID    | 6e7b626c-64f2-11d0-afd2-00c04fd930c9                            |
+| System-Id-Guid    | 6e7b626c-64f2-11d0-afd2-00c04fd930c9                            |
 | Syntax            | [**Enumeration**](s-enumeration.md)                            |
 
 
@@ -73,7 +73,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -94,7 +94,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -115,7 +115,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist einwertig       | True                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |

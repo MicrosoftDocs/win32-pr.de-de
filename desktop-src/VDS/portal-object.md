@@ -1,39 +1,39 @@
 ---
-description: Portal Objekt
+description: Portalobjekt
 ms.assetid: 6655bbae-07d3-416b-9e45-ddcbe3433f40
-title: Portal Objekt
+title: Portalobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01328d8dccfe7a29c0686cde9b531df63d56e63e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b7004f648b11b16c8c6279a0a74bae775fa539d8f0a93fc83d7effccea68915
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864520"
 ---
-# <a name="portal-object"></a>Portal Objekt
+# <a name="portal-object"></a>Portalobjekt
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-Ein Portal Objekt modelliert ein iSCSI-Portal, das in einem iSCSI-Subsystem enthalten ist.
+Ein Portalobjekt modelliert ein iSCSI-Portal, das in einem iSCSI-Subsystem enthalten ist.
 
-Verwenden Sie die [**ivdssubsystemiscsi:: queryportals**](/windows/desktop/api/Vds/nf-vds-ivdssubsystemiscsi-queryportals) -Methode, um die iSCSI-Portale des Subsystems zu ermitteln. Aufrufer können einen Zeiger auf ein bestimmtes Portal abrufen, indem Sie das gewünschte Portal Objekt aus der-Enumeration auswählen, die von der **queryportals** -Methode zurückgegeben wird. Mit einem Portal Objekt können Sie den Portal Status und die Abfrage für Portal Eigenschaften, zugehörige Portal Gruppen und das Subsystem festlegen, das das Portal enthält.
+Verwenden Sie die [**IVdsSubSystemIscsi::QueryPortals-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdssubsystemiscsi-queryportals) um die iSCSI-Portale des Subsystems zu bestimmen. Aufrufer können einen Zeiger auf ein bestimmtes Portal abrufen, indem sie das gewünschte Portalobjekt aus der Enumeration auswählen, die von der **QueryPortals-Methode** zurückgegeben wird. Mit einem Portalobjekt können Sie den Portalstatus und die Abfrage nach Portaleigenschaften, zugeordneten Portalgruppen und dem Subsystem festlegen, das das Portal enthält.
 
-Ein Portal Objekt kann nur höchstens einer Portal Gruppe eines angegebenen Ziels zugeordnet werden.
+Ein Portalobjekt kann höchstens einer Portalgruppe eines angegebenen Ziels zugeordnet werden.
 
-Portale dienen als einer der Endpunkte von MPIO-Pfaden in iSCSI-Hardwareanbietern, auf denen Richtlinien für den Lastenausgleich festgelegt werden können.
+Portale dienen als einer der Endpunkte von MPIO-Pfaden bei iSCSI-Hardwareanbietern, für die Lastenausgleichsrichtlinien erzwungen werden können.
 
-Zu den Portal Objekteigenschaften gehören ein Objekt Bezeichner, eine IP-Adresse und ein Port sowie der Status des Portals.
+Zu den Portalobjekteigenschaften gehören ein Objektbezeichner, eine IP-Adresse und ein Port sowie der Portalstatus.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet.
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt.
 
 
 
 | type                                                                                      | Element                                                                                                                 |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer nur in VDS 1,1-und 2,0-iSCSI-Anbietern verfügbar gemacht werden | [**Ivdsiscsiportal**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiportal).                                                                             |
-| Zugehörige Enumerationen                                                                   | [**VDS \_ \_ \_ Status des iSCSI-Portals**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_portal_status).                                                          |
-| Zugeordnete Strukturen                                                                     | [**VDS \_ Unter \_ \_ Stützung für das iSCSI-Portal**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_portal_prop) und [**VDS- \_ Port \_ Benachrichtigung**](/windows/desktop/api/Vds/ns-vds-vds_port_notification). |
+| Schnittstellen, die von diesem Objekt immer nur in VDS 1.1- und 2.0-iSCSI-Anbietern verfügbar gemacht werden | [**IVdsIscsiPortal**](/windows/desktop/api/Vds/nn-vds-ivdsiscsiportal).                                                                             |
+| Zugeordnete Enumerationen                                                                   | [**VDS \_ STATUS DES \_ ISCSI-PORTALS. \_**](/windows/desktop/api/Vds/ne-vds-vds_iscsi_portal_status)                                                          |
+| Zugeordnete Strukturen                                                                     | [**VDS \_ PROP- \_ \_**](/windows/desktop/api/Vds/ns-vds-vds_iscsi_portal_prop) und [**\_ VDS-PORTBENACHRICHTIGUNG \_**](/windows/desktop/api/Vds/ns-vds-vds_port_notification)IM ISCSI-PORTAL . |
 
 
 
@@ -43,10 +43,10 @@ In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Stru
 
 <dl> <dt>
 
-[Hardware Anbieter Objekte](hardware-provider-objects.md)
+[Hardwareanbieterobjekte](hardware-provider-objects.md)
 </dt> <dt>
 
-[**Ivdssubsystemiscsi:: queryportals**](/windows/desktop/api/Vds/nf-vds-ivdssubsystemiscsi-queryportals)
+[**IVdsSubSystemIscsi::QueryPortals**](/windows/desktop/api/Vds/nf-vds-ivdssubsystemiscsi-queryportals)
 </dt> </dl>
 
  

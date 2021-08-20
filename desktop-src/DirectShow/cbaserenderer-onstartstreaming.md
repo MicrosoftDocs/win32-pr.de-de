@@ -1,7 +1,7 @@
 ---
-description: Die onstartstreaming-Methode wird aufgerufen, wenn der Filter das Streaming startet.
+description: Die OnStartStreaming-Methode wird aufgerufen, wenn der Filter mit dem Streaming beginnt.
 ms.assetid: 02a5b334-f6c4-4cba-8882-c6b36d97feb3
-title: Cbaserderderer. onstartstreaming-Methode (renbase. h)
+title: CBaseRenderer.OnStartStreaming-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 66433795b0674e1d2d5b7a7de5b1dcd1b50eb424
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b0f050222b0ca6a88c7cf1d9348597e4d7b68f2a2ed431b4f6843afe97efd5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157673"
 ---
-# <a name="cbaserendereronstartstreaming-method"></a>Cbaserderderer. onstartstreaming-Methode
+# <a name="cbaserendereronstartstreaming-method"></a>CBaseRenderer.OnStartStreaming-Methode
 
-Die- `OnStartStreaming` Methode wird aufgerufen, wenn der Filter das Streaming startet.
+Die `OnStartStreaming` -Methode wird aufgerufen, wenn der Filter mit dem Streaming beginnt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserdenderer:: startstreaming**](cbaserenderer-startstreaming.md) -Methode ruft diese Methode auf. Es wird keine Aktion in der Basisklasse durchführt, aber die abgeleitete Klasse kann Sie überschreiben.
+Die [**CBaseRenderer::StartStreaming-Methode**](cbaserenderer-startstreaming.md) ruft diese Methode auf. Sie führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die [**cbaserdenderer:: startstreaming**](cbaserenderer-startstreaming.md) -Meth
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die [**cbaserdenderer:: startstreaming**](cbaserenderer-startstreaming.md) -Meth
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

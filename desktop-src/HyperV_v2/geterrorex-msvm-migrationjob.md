@@ -1,7 +1,7 @@
 ---
-description: Ruft die Fehler Objekte für den Migrations Auftrag ab, sofern vorhanden.
+description: Ruft die Fehlerobjekte für den Migrationsauftrag ab, sofern vorhanden.
 ms.assetid: 8526e28c-bfc8-42b3-850c-0a875a52a42c
-title: Geterrorex-Methode der Msvm_MigrationJob-Klasse
+title: GetErrorEx-Methode der Msvm_MigrationJob-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: b51bc0c439add0e0959d3fd375fad477e51ba35f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6cb3b1b380708a3be259bfd4f9c6ae07bb7e401506dcfe76f2fcf1299ed5d18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117995243"
 ---
-# <a name="geterrorex-method-of-the-msvm_migrationjob-class"></a>Geterrorex-Methode der MSVM \_ migrationjob-Klasse
+# <a name="geterrorex-method-of-the-msvm_migrationjob-class"></a>GetErrorEx-Methode der Msvm \_ MigrationJob-Klasse
 
-Ruft die Fehler Objekte für den Migrations Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**MSVM- \_ Fehler**](msvm-error.md) Instanz zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder der Auftrag von einem Client beendet wurde, werden mindestens eine **MSVM- \_ Fehler** Instanz zurückgegeben.
+Ruft die Fehlerobjekte für den Migrationsauftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**\_ Msvm-Fehlerinstanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **\_ Msvm-Fehlerinstanz** zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ uint32 GetErrorEx(
 
 <dl> <dt>
 
-*Fehler* \[ vorgenommen\]
+*Fehler* \[ out\]
 </dt> <dd>
 
-Wenn der Betriebsstatus des Auftrags nicht 2 (OK) ist, gibt diese Methode mindestens eine eingebettete Instanz der [**MSVM- \_ Fehler**](msvm-error.md) Klasse im CIM-XML-Format zurück, die die im Auftrag gefundenen Fehler darstellt. Wenn der Betriebsstatus des Auftrags 2 (OK) ist, wird **null** zurückgegeben.
+Wenn der Betriebsstatus des Auftrags nicht 2 (OK) lautet, gibt diese Methode eine oder mehrere eingebettete Instanzen der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) lautet, wird **NULL** zurückgegeben.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -64,7 +64,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -73,19 +73,19 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -94,10 +94,10 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -106,7 +106,7 @@ Das **System ist nicht verfügbar** (32777).
 
 <dl> <dt>
 
-[**MSVM \_ migrationjob**](msvm-migrationjob.md)
+[**Msvm \_ MigrationJob**](msvm-migrationjob.md)
 </dt> </dl>
 
  

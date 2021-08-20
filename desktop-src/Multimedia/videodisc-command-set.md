@@ -1,50 +1,50 @@
 ---
-title: Videodisk-Befehlssatz
-description: Videodisk-Befehlssatz
+title: Videodisc-Befehlssatz
+description: Videodisc-Befehlssatz
 ms.assetid: 44e3b052-5fb1-4cad-939e-41954800ab5d
 keywords:
-- Videodisk-Befehlssatz
+- videodisc-Befehlssatz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: facea09cd84f55b2cf8acb2abf042e3232289573
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a5ca5212d1fe121f2d5f8f3bb57772780b4b694f7c3069ff48fb19cbdd21f6ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135568"
 ---
-# <a name="videodisc-command-set"></a>Videodisk-Befehlssatz
+# <a name="videodisc-command-set"></a>Videodisc-Befehlssatz
 
-Videodisk-Geräte unterstützen den folgenden Satz von Befehlen.
+Videodisc-Geräte unterstützen die folgenden Befehle.
 
 
 
-| Zeichen folgen Formular                      | Nachrichten Formular                              |
+| Zeichenfolgenformular                      | Nachrichtenformular                              |
 |----------------------------------|-------------------------------------------|
-| [**Umbruch**](break.md)           | [**MCI-unter \_ Brechung**](mci-break.md)           |
-| [**Re**](capability.md) | [**MCI- \_ getdevcaps**](mci-getdevcaps.md) |
-| [**ihrer**](close.md)           | [**MCI- \_ Schließen**](mci-close.md)           |
-| [Weg](escape.md)             | [**MCI- \_ Escape**](mci-escape.md)         |
-| [**Opo**](info.md)             | [**MCI- \_ Informationen**](mci-info.md)             |
-| [**eren**](open.md)             | [**MCI \_ geöffnet**](mci-open.md)             |
-| [**Brechung**](pause.md)           | [**MCI- \_ Pause**](mci-pause.md)           |
-| [**Theater**](play.md)             | [**MCI- \_ Play**](mci-play.md)             |
-| [**zusetzen**](resume.md)         | [**MCI-Fortsetzung \_**](mci-resume.md)         |
-| [**einzuholen**](seek.md)             | [**MCI- \_ Suche**](mci-seek.md)             |
-| [**Set**](set.md)               | [**MCI- \_ Gruppe**](mci-set.md)               |
-| [**Spirale**](spin.md)             | [**MCI- \_ Spin**](mci-spin.md)             |
-| [**status**](status.md)         | [**MCI- \_ Status**](mci-status.md)         |
-| [**Schritt**](step.md)             | [**MCI- \_ Schritt**](mci-step.md)             |
-| [**anzuhalten**](stop.md)             | [**MCI- \_ Beendigung**](mci-stop.md)             |
-| [sysinfo](sysinfo.md)           | [**MCI- \_ sysinfo**](mci-sysinfo.md)       |
+| [**Brechen**](break.md)           | [**MCI \_ BREAK**](mci-break.md)           |
+| [**Fähigkeit**](capability.md) | [**MCI \_ GETDEVCAPS**](mci-getdevcaps.md) |
+| [**Schließen**](close.md)           | [**MCI \_ CLOSE**](mci-close.md)           |
+| [Flucht](escape.md)             | [**MCI \_ ESCAPE**](mci-escape.md)         |
+| [**Informationen**](info.md)             | [**\_MCI-INFORMATIONEN**](mci-info.md)             |
+| [**öffnen**](open.md)             | [**MCI \_ OPEN**](mci-open.md)             |
+| [**pause**](pause.md)           | [**MCI \_ PAUSE**](mci-pause.md)           |
+| [**Spielen**](play.md)             | [**MCI \_ PLAY**](mci-play.md)             |
+| [**Fortsetzen**](resume.md)         | [**MCI \_ RESUME**](mci-resume.md)         |
+| [**Suchen**](seek.md)             | [**MCI \_ SEEK**](mci-seek.md)             |
+| [**Festgelegt**](set.md)               | [**MCI \_ SET**](mci-set.md)               |
+| [**drehen**](spin.md)             | [**MCI \_ SPIN**](mci-spin.md)             |
+| [**status**](status.md)         | [**\_MCI-STATUS**](mci-status.md)         |
+| [**Schritt**](step.md)             | [**\_MCI-SCHRITT**](mci-step.md)             |
+| [**Stoppen**](stop.md)             | [**MCI \_ STOP**](mci-stop.md)             |
+| [Sysinfo](sysinfo.md)           | [**MCI \_ SYSINFO**](mci-sysinfo.md)       |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

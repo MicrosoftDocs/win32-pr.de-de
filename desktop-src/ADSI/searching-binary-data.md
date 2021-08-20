@@ -1,29 +1,29 @@
 ---
-title: Suchen von Binärdaten
-description: Obwohl die ADSI-Suchfunktion nur das Suchen nach Zeichen folgen Daten unterstützt, ist es möglich, Binärdaten zu suchen.
+title: Durchsuchen von Binärdaten
+description: Obwohl das ADSI-Suchfeature nur die Suche nach Zeichenfolgendaten unterstützt, ist es möglich, nach Binärdaten zu suchen.
 ms.assetid: 52b75ae0-dbf1-4310-8b6b-a176de9f1b7d
 ms.tgt_platform: multiple
 keywords:
-- Suchen von Binärdaten ADSI
-- Binäre Daten (ADSI)
-- Binary Data ADSI, Durchsuchen von Binärdaten
-- ADSI ADSI, Beispiel Code C/C++, suchen nach Binärdaten
+- Durchsuchen von Binärdaten ADSI
+- Binary Data ADSI
+- Binary Data ADSI , Searching Binary Data
+- ADSI ADSI , Beispielcode C/C++ , Suchen nach Binärdaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0973ff7a769d68abf85e6557fef2e1d434ba3ff4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9f77ead11f4e2d02c6e7ef3e25975a7059c2c057dbc62f71e406bbda3e24c3b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005420"
 ---
-# <a name="searching-binary-data"></a>Suchen von Binärdaten
+# <a name="searching-binary-data"></a>Durchsuchen von Binärdaten
 
-Obwohl die ADSI-Suchfunktion nur das Suchen nach Zeichen folgen Daten unterstützt, ist es möglich, Binärdaten zu suchen. Verwenden Sie hierzu die [**ADsEncodeBinaryData**](/windows/desktop/api/Adshlp/nf-adshlp-adsencodebinarydata) -Funktion, um die Binärdaten in eine Zeichenfolge zu konvertieren, die mit den Suchmethoden verwendet werden kann. Das Suchen nach Binärdaten ist besonders nützlich, wenn Sie nach einer GUID oder einer SID suchen, da diese Datentypen als Binärdaten gespeichert werden.
+Obwohl das ADSI-Suchfeature nur die Suche nach Zeichenfolgendaten unterstützt, ist es möglich, nach Binärdaten zu suchen. Verwenden Sie hierzu die [**ADsEncodeBinaryData-Funktion,**](/windows/desktop/api/Adshlp/nf-adshlp-adsencodebinarydata) um die Binärdaten in eine Zeichenfolge zu konvertieren, die mit den Suchmethoden verwendet werden kann. Die Suche nach Binärdaten ist besonders nützlich, wenn Nach einer GUID oder SID gesucht wird, da diese Datentypen als Binärdaten gespeichert werden.
 
-Bei Verwendung der [**ADsEncodeBinaryData**](/windows/desktop/api/Adshlp/nf-adshlp-adsencodebinarydata) -Funktion muss der zugeordnete Arbeitsspeicher mithilfe der Funktion " [**freadsmem**](/windows/desktop/api/Adshlp/nf-adshlp-freeadsmem) " freigegeben werden.
+Bei Verwendung der [**ADsEncodeBinaryData-Funktion**](/windows/desktop/api/Adshlp/nf-adshlp-adsencodebinarydata) muss der zugeordnete Arbeitsspeicher mithilfe der [**FreeADsMem-Funktion**](/windows/desktop/api/Adshlp/nf-adshlp-freeadsmem) freigegeben werden.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie eine Abfrage Zeichenfolge erstellt wird, um nach einem Objekt zu suchen, das einen bestimmten **objectGUID** -Wert aufweist.
+Das folgende C++-Codebeispiel zeigt, wie Sie eine Abfragezeichenfolge erstellen, um nach einem Objekt zu suchen, das über einen bestimmten **objectGUID-Wert** verfügt.
 
 
 ```C++
@@ -60,9 +60,9 @@ if(pwszSearch)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

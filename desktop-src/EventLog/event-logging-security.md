@@ -13,7 +13,7 @@ ms.locfileid: "118151550"
 ---
 # <a name="event-logging-security"></a>Sicherheit der Ereignisprotokollierung
 
-Das **Sicherheitsprotokoll** ist für die Verwendung durch das System konzipiert. Benutzer können das Sicherheitsprotokoll  jedoch lesen und löschen, wenn ihnen die berechtigung SE SECURITY NAME (das Benutzerrecht "Überwachung und \_ \_ Sicherheitsprotokoll verwalten") erteilt wurde. Weitere Informationen finden Sie unter [Berechtigungen.](/windows/desktop/SecAuthZ/privileges)
+Das **Sicherheitsprotokoll** ist für die Verwendung durch das System konzipiert. Benutzer können das Sicherheitsprotokoll  jedoch lesen und löschen, wenn ihnen die berechtigung SE SECURITY NAME (das Benutzerrecht "Überwachung und Sicherheitsprotokoll \_ \_ verwalten") erteilt wurde. Weitere Informationen finden Sie unter [Berechtigungen.](/windows/desktop/SecAuthZ/privileges)
 
 Nur die lokale Sicherheitsstelle (local security authority, Lsass.exe) verfügt über schreibberechtigung für das **Sicherheitsprotokoll.** Dieses Privileg kann von keinem anderen Konto anfordern werden. Um ein Ereignis in das **Sicherheitsprotokoll zu** schreiben, verwenden Sie die [**FunktionHzReportSecurityEvent.**](/windows/desktop/api/authz/nf-authz-authzreportsecurityevent)
 
@@ -21,7 +21,7 @@ Der Zugriff auf **das Anwendungsprotokoll,** das **Systemprotokoll** und benutze
 
 
 
-| Zugriffsrechte                 | BESCHREIBUNG                                                                                            |
+| Zugriffsrecht                 | Beschreibung                                                                                            |
 |------------------------------|--------------------------------------------------------------------------------------------------------|
 | ELF \_ LOGFILE \_ CLEAR (0x0004) | Erforderlich für [**ClearEventLog**](/windows/desktop/api/Winbase/nf-winbase-cleareventloga).                                                    |
 | ELF \_ LOGFILE \_ READ (0x0001)  | Erforderlich für [**OpenBackupEventLog**](/windows/desktop/api/Winbase/nf-winbase-openbackupeventloga) und [**OpenEventLog.**](/windows/desktop/api/Winbase/nf-winbase-openeventloga) |
@@ -35,7 +35,7 @@ Verwenden Sie **den Registrierungswert CustomSD,** um die Sicherheit des Anwendu
 
 **Windows XP/2000:** In der folgenden Tabelle werden die Zugriffsrechte beschrieben, die für jedes Konto in jedem Protokoll gewährt werden.
 
-| Protokoll             | Konto                 | Lesen | Schreiben | Löschen |
+| Protokoll wird erstellt             | Konto                 | Lesen | Schreiben | Clear |
 |-----------------|-------------------------|------|-------|-------|
 | **Anwendung** | Administratoren (System) | X    | X     | X     |
 |                 | Administratoren (Domäne) | X    | X     | X     |

@@ -1,23 +1,23 @@
 ---
-description: Spezialisierte Kommunikationshardware, wie z. b. Kabel-oder Telefoniekarten, wird in der Regel mit einem oder mehreren für das Gerät spezifischen TSPS und MSPs erreicht. Die Dokumentation für das Gerät sollte Funktionen anzeigen und Programmier Richtlinien enthalten.
+description: Spezialisierte Kommunikationshardware, z. B. Kabelmodems oder Telefonkarten, kommt in der Regel mit einem oder mehreren für das Gerät spezifischen TSPs und MSPs an. In der Dokumentation für das Gerät sollten Funktionen angegeben und Programmierrichtlinien angegeben werden.
 ms.assetid: 9033b651-c8f4-47f1-b953-557b519ea3bc
-title: TSP von Drittanbietern
+title: Drittanbieter-TSP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ee3c658d549eba384af4e71d7f59d62f4630a5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2530a3a3339d90da2a7ca02d614195eb14f7412bf3d092cb13db197e714942cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118860518"
 ---
-# <a name="third-party-tsp"></a>TSP von Drittanbietern
+# <a name="third-party-tsp"></a>Drittanbieter-TSP
 
-Spezialisierte Kommunikationshardware, wie z. b. Kabel-oder Telefoniekarten, wird in der Regel mit einem oder mehreren für das Gerät spezifischen TSPS und MSPs erreicht. Die Dokumentation für das Gerät sollte Funktionen anzeigen und Programmier Richtlinien enthalten.
+Spezialisierte Kommunikationshardware, z. B. Kabelmodems oder Telefonkarten, kommt in der Regel mit einem oder mehreren für das Gerät spezifischen TSPs und MSPs an. In der Dokumentation für das Gerät sollten Funktionen angegeben und Programmierrichtlinien angegeben werden.
 
-Wenn ein Legacy-TSP keinen MSP hat, aber Wave-Geräte verwendet, ordnet TAPI den Wave MSP diesem TSP zu. Legacy-TSPS, die keine Wave-Geräte verwenden, wird kein zugeordnetes MSP zugewiesen, und es sind keine Stream-Steuerungs Vorgänge verfügbar.
+Wenn ein Legacy-TSP keinen MSP hat, aber Wellengeräte verwendet, verknüpft TAPI den Wave-MSP mit diesem TSP. Legacy-TSPs, die keine Wellengeräte verwenden, werden keinem zugeordneten MSP zugewiesen, und Streamsteuerungsvorgänge sind nicht verfügbar.
 
-Ein Drittanbieter-TSP wird mit dem Gerät installiert, das unterstützt werden soll.
+Ein Drittanbieter-TSP wird mit dem Gerät installiert, das es unterstützen soll.
 
  
 

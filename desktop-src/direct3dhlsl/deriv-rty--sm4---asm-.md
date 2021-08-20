@@ -1,6 +1,6 @@
 ---
-title: deriv_rty (sm4 - asm)
-description: Renderziel y-Entsprechung von deriv \_ rtx.
+title: deriv_rty (sm4 – asm)
+description: Renderziel-y-Entsprechung von deriv \_ rtx.
 ms.assetid: F78F2DBD-9428-4F34-85AD-276DF54C52D1
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118515468"
 ---
 # <a name="deriv_rty-sm4---asm"></a>deriv \_ rty (sm4 - asm)
 
-Renderziel y-Entsprechung [von deriv \_ rtx](deriv-rtx--sm4---asm-.md).
+Renderziel-y-Entsprechung von [deriv \_ rtx](deriv-rtx--sm4---asm-.md).
 
 
 
@@ -26,7 +26,7 @@ Renderziel y-Entsprechung [von deriv \_ rtx](deriv-rtx--sm4---asm-.md).
 
 
 
-| Element                                                            | BESCHREIBUNG                                                   |
+| Element                                                            | Beschreibung                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
 | <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
 | <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponente im Vorgang.<br/>             |
@@ -37,17 +37,17 @@ Renderziel y-Entsprechung [von deriv \_ rtx](deriv-rtx--sm4---asm-.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Für jeden 2x2-Stempel von Pixeln wird nur ein einzelnes x,y-Ableitungspaar berechnet.
+Es wird nur ein einzelnes x,y-Ableitungspaar für jeden 2x2-Stempel von Pixeln berechnet.
 
 Dieser Vorgang ist hardwareabhängig.
 
-Referenz zur Rasterizerimplementierung für Dreiecke:
+Referenzrasterimplementierungen für Dreiecke:
 
--   Pixel-Shader führt shader immer über 2 x 2 Quad pixel in lockstep aus (auch durch Flusssteuerung, Maskierung deaktivierter Pixel).
--   Quads verfügen immer über gleichmäßig nummerierte Pixelkoordinaten (x und y) für pixel oben links.
--   Dummypixel laufen primitiv ab, wenn der Primitivtyp zu klein ist, um ein 2x2-Quad zu füllen.
--   [deriv \_ rtx](deriv-rtx--sm4---asm-.md) wird berechnet, indem zuerst 2 Pixel angegeben werden: das aktuelle Pixel und das andere Pixel mit der gleichen y-Koordinate aus dem Quader. Anschließend wird das Ergebnis wie folgt berechnet: *src0*(ungerades x Pixel) – *src0*(sogar x \[ Pixel) pro Komponente\]
--   **deriv \_ rty** wird berechnet, indem zuerst 2 Pixel auswählt: das aktuelle Pixel und das andere Pixel mit der gleichen x-Koordinate vom Quader. Anschließend wird das Ergebnis wie folgt berechnet: *src0*(ungerades y Pixel) - *src0*(sogar y Pixel) \[ pro Komponente\]
+-   Der Pixel-Shader führt Shader immer über 2 x 2 Quadrat pixel im Sperrschritt aus (auch durch Flusssteuerung, Maskierung deaktivierter Pixel).
+-   Quader verfügen immer über gerade nummerierte Pixelkoordinaten (sowohl x als auch y) für das obere linke Pixel.
+-   Dummypixel werden als primitiv ausgeführt, wenn der Primitive zu klein ist, um ein 2x2-Quader aufzufüllen.
+-   [deriv \_ rtx](deriv-rtx--sm4---asm-.md) wird berechnet, indem zuerst 2 Pixel ausgewählt werden: das aktuelle Pixel und das andere Pixel mit der gleichen y-Koordinate aus dem Quader. Anschließend wird das Ergebnis wie folgt berechnet: *src0*(ungerade x Pixel) – *src0*(sogar x Pixel) \[ pro Komponente\]
+-   **deriv \_ rty** wird berechnet, indem zuerst 2 Pixel ausgewählt werden: das aktuelle Pixel und das andere Pixel mit der gleichen x-Koordinate aus dem Quader. Anschließend wird das Ergebnis wie folgt berechnet: *src0*(ungerades y Pixel) – *src0*(sogar y Pixel) \[ pro Komponente\]
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -61,7 +61,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -69,12 +69,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -84,7 +84,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  
