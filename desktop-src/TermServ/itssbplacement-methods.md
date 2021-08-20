@@ -1,28 +1,28 @@
 ---
-title: Itssbplacement-Methoden
-description: Die itssbplacement-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: ITsSbPlacement-Methoden
+description: Die ITsSbPlacement-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 23EB1913-E6C6-4D88-AC2A-9C9B52CC1553
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45dac0bd8336bc5960a3b390251e266cc41328c4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 61e62913c1d761c7db8f02b98c80fedcb4c0387116e81a6084ef9b3c393ff010
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118128572"
 ---
-# <a name="itssbplacement-methods"></a>Itssbplacement-Methoden
+# <a name="itssbplacement-methods"></a>ITsSbPlacement-Methoden
 
-Die [**itssbplacement**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbplacement) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ITsSbPlacement-Schnittstelle**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbplacement) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Queryumgebfortarget-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbplacement-queryenvironmentfortarget)
+-   [**QueryEnvironmentForTarget-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbplacement-queryenvironmentfortarget)
 
- 
+ 
 
- 
+ 
 
 
 

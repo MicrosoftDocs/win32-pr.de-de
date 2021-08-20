@@ -1,5 +1,5 @@
 ---
-description: Die AGGREGATION CIM \_ StorageDefect erfasst die Speicherfehler für einen Speicherspeicher.
+description: Die \_ CIM StorageDefect-Aggregation erfasst die Speicherfehler für einen Speicherumfang.
 ms.assetid: 7acd3d25-4691-43cb-badc-662684989345
 ms.tgt_platform: multiple
 title: CIM_StorageDefect-Klasse
@@ -25,14 +25,14 @@ ms.locfileid: "118420968"
 ---
 # <a name="cim_storagedefect-class"></a>CIM \_ StorageDefect-Klasse
 
-Die **AGGREGATION CIM \_ StorageDefect** erfasst die Speicherfehler für einen Speicherspeicher.
+Die **CIM \_ StorageDefect-Aggregation** erfasst die Speicherfehler für einen Speicherumfang.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ class CIM_StorageDefect
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ StorageDefect-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ StorageDefect-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -69,7 +69,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Verweis auf das Fehlerobjekt, das die Start- und Endadressen definiert, die dem Speicher extent zugeordnet sind.
+Verweis auf das Fehlerobjekt, das die Start- und Endadressen definiert, die aus dem Speicherumfang zugeordnet werden.
 
 </dd> <dt>
 
@@ -82,10 +82,10 @@ Datentyp: **CIM \_ StorageExtent**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Verweis auf den Speicher extent, in dem die Fehler aufgetreten sind.
+Verweis auf den Speicherumfang, in dem die Fehler aufgetreten sind.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Verweis auf den Speicher extent, in dem die Fehler aufgetreten sind.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 

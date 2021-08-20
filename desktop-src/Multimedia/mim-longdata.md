@@ -1,9 +1,9 @@
 ---
-title: MIM_LONGDATA Meldung (MMSYSTEM. h)
-description: Die MIM \_ longdata-Nachricht wird an eine MIDI-Eingabe Rückruffunktion gesendet, wenn ein System exklusiver Puffer mit Daten gefüllt wurde und an die Anwendung zurückgegeben wird.
+title: MIM_LONGDATA (Mmsystem.h)
+description: Die MIM LONGDATA-Nachricht wird an eine EINGABE-Rückruffunktion gesendet, wenn ein system exklusiver Puffer mit Daten gefüllt wurde und an \_ die Anwendung zurückgegeben wird.
 ms.assetid: 3a11ed21-e7c5-4b78-9536-f0d862e26a02
 keywords:
-- MIM_LONGDATA-Nachricht (Multimedia)
+- MIM_LONGDATA-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bc5f83b1f0468540da18d0d8317dae42cbf33bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 82605835ce8ac231346014215c854abfe9ae7a55fd81e81b8d6214fb8a230327
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137211"
 ---
-# <a name="mim_longdata-message"></a>MIM \_ longdata-Nachricht
+# <a name="mim_longdata-message"></a>\_MIM LONGDATA-Nachricht
 
-Die **MIM \_ longdata** -Nachricht wird an eine MIDI-Eingabe Rückruffunktion gesendet, wenn ein System exklusiver Puffer mit Daten gefüllt wurde und an die Anwendung zurückgegeben wird.
+Die **MIM \_ LONGDATA-Nachricht** wird an eine EINGABE-Rückruffunktion gesendet, wenn ein system exklusiver Puffer mit Daten gefüllt wurde und an die Anwendung zurückgegeben wird.
 
 
 ```C++
@@ -38,17 +38,17 @@ dwParam2 = dwTimestamp
 
 <dl> <dt>
 
-<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpmidihdr*
+<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpMidiHdr*
 </dt> <dd>
 
-Zeiger auf eine [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur, die den Eingabepuffer identifiziert.
+Zeiger auf eine [**KEYBOARDHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) die den Eingabepuffer identifiziert.
 
 </dd> <dt>
 
-<span id="dwTimestamp"></span><span id="dwtimestamp"></span><span id="DWTIMESTAMP"></span>*dwtimestamp*
+<span id="dwTimestamp"></span><span id="dwtimestamp"></span><span id="DWTIMESTAMP"></span>*dwTimestamp*
 </dt> <dd>
 
-Zeitpunkt, zu dem die Daten vom Eingabegeräte Treiber empfangen wurden. Der Zeitstempel wird in Millisekunden angegeben, beginnend bei Null, als die [**midiinstart**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart) -Funktion aufgerufen wurde.
+Der Zeitpunkt, zu dem die Daten vom Eingabegerätetreiber empfangen wurden. Der Zeitstempel wird in Millisekunden angegeben, beginnend bei 0 (null), als die [**funktion "formatInStart"**](/windows/win32/api/mmeapi/nf-mmeapi-midiinstart) aufgerufen wurde.
 
 </dd> </dl>
 
@@ -56,9 +56,9 @@ Zeitpunkt, zu dem die Daten vom Eingabegeräte Treiber empfangen wurden. Der Zei
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl der Bytes zu bestimmen, die im zurückgegebenen Puffer aufgezeichnet wurden, verwenden Sie den **dwbyteslock** -Member der von *lpmidihdr* angegebenen [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur.
+Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl der in den zurückgegebenen Puffer aufgezeichneten Bytes zu bestimmen, verwenden Sie den **dwBytesRecorded-Member** der durch *lpMidiHdr* [**angegebenenSKRIPTHDR-Struktur.**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl der Byt
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl der Byt
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Instrument Digital Interface (KEYBOARD)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MESSAGES-Meldungen](midi-messages.md)
 </dt> </dl>
 
  

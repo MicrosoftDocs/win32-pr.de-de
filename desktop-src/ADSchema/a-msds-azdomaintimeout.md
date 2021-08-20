@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Az-Domain-Timeout-Attribut
-description: Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der DC erneut versucht wird.
+description: Zeit in Millisekunden, nachdem eine Domäne als nicht erreichbar erkannt wurde und bevor der DC erneut versucht wird.
 ms.assetid: b2523faa-7cf1-4325-a3fa-70c5f568adaa
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Az-Domain-Timeout-Attributs
-- AD-Schema des msDS-AzDomainTimeout-Attributs
+- MS-DS-Az-Domain-Timeout-Attribut AD-Schema
+- msDS-AzDomainTimeout-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118426733"
 ---
 # <a name="ms-ds-az-domain-timeout-attribute"></a>ms-DS-Az-Domain-Timeout-Attribut
 
-Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der DC erneut versucht wird.
+Zeit in Millisekunden, nachdem eine Domäne als nicht erreichbar erkannt wurde und bevor der DC erneut versucht wird.
 
 
 
@@ -35,7 +35,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Aktualisieren von Berechtigungen  | AzRoles admin                           |
 | Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung. |
 | Attribute-Id      | 1.2.840.113556.1.4.1795                 |
-| System-Id-Guid    | 6448f56a-ca70-4e2e-b0af-d20e4ce653d0    |
+| System-ID-GUID    | 6448f56a-ca70-4e2e-b0af-d20e4ce653d0    |
 | Syntax            | [**Enumeration**](s-enumeration.md)    |
 
 
@@ -57,7 +57,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | True                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -78,7 +78,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | True                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -99,7 +99,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | True                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -120,7 +120,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | True                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -141,7 +141,7 @@ Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | True                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |

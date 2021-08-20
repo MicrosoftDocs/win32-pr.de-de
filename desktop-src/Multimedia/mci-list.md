@@ -1,9 +1,9 @@
 ---
-title: MCI_LIST Befehl (MMSYSTEM. h)
-description: Der MCI \_ -Listen Befehl ruft Informationen über die Anzahl und die Typen der Eingaben ab, die für das Gerät verfügbar sind. Dieser Befehl wird von Digital-Video-und VCR-Geräten erkannt.
+title: MCI_LIST Befehl (Mmsystem.h)
+description: Der Befehl MCI LIST erhält Informationen über die Anzahl und die \_ Typen von Eingaben, die für das Gerät verfügbar sind. Digital-Video- und VCR-Geräte erkennen diesen Befehl.
 ms.assetid: 1977fbfa-cae4-4afe-9fc5-ac68177574ca
 keywords:
-- MCI_LIST Befehl Windows-Multimedia
+- MCI_LIST-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15d5a616085028132c83fd71c46f7d409bf48a14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f9bd3aa35875791d6fa916d9d6831bdcb83a6db43be6e5859ce582243606f666
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138636"
 ---
-# <a name="mci_list-command"></a>MCI- \_ Listen Befehl
+# <a name="mci_list-command"></a>MCI \_ LIST-Befehl
 
-Der MCI \_ -Listen Befehl ruft Informationen über die Anzahl und die Typen der Eingaben ab, die für das Gerät verfügbar sind. Dieser Befehl wird von Digital-Video-und VCR-Geräten erkannt.
+Der Befehl MCI LIST erhält Informationen über die Anzahl und die \_ Typen von Eingaben, die für das Gerät verfügbar sind. Digital-Video- und VCR-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,172 +43,172 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpList"></span><span id="lplist"></span><span id="LPLIST"></span>*lplist*
+<span id="lpList"></span><span id="lplist"></span><span id="LPLIST"></span>*lpList*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ GENERIC \_ PARMS-Struktur.**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen ersetzen diese Struktur möglicherweise durch eine gerätespezifische Struktur.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags gelten für den **Digitalvideo** -Gerätetyp:
+Die folgenden zusätzlichen Flags gelten für den **DigitalVideo-Gerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_DGV_LIST_ALG"></span><span id="mci_dgv_list_alg"></span>MCI \_ DGV \_ List \_ alg
+<span id="MCI_DGV_LIST_ALG"></span><span id="mci_dgv_list_alg"></span>MCI \_ DGV \_ LIST \_ ALG
 </dt> <dd>
 
-Der **lpstrinalgorithmus** -Member der durch *lplist* identifizierten Struktur enthält eine Adresse eines Puffers, der den Namen eines Algorithmus enthält. Der Name wird verwendet, um die einem Algorithmus zugeordneten Typen von Qualitäts Deskriptoren abzurufen.
+Das **lpstrAlgorithm-Member** der durch *lpList* identifizierten Struktur enthält eine Adresse eines Puffers, der den Namen eines Algorithmus enthält. Der Name wird verwendet, um die Einem Algorithmus zugeordneten Typen von Qualitätsdeskriptoren abzurufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_COUNT"></span><span id="mci_dgv_list_count"></span>MCI- \_ DGV- \_ Listen \_ Anzahl
+<span id="MCI_DGV_LIST_COUNT"></span><span id="mci_dgv_list_count"></span>MCI \_ DGV \_ LIST \_ COUNT
 </dt> <dd>
 
 Gibt die Anzahl der Optionen des angegebenen Typs zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_ITEM"></span><span id="mci_dgv_list_item"></span>MCI- \_ DGV- \_ Listen \_ Element
+<span id="MCI_DGV_LIST_ITEM"></span><span id="mci_dgv_list_item"></span>MCI \_ \_ DGV-LISTENELEMENT \_
 </dt> <dd>
 
-Eine-Konstante, die angibt, dass der Listentyp im **dwitem** -Member der durch *lplist* identifizierten-Struktur enthalten ist. Dieses Flag ist erforderlich. Verwenden Sie eine der folgenden Konstanten, um den Auflistungstyp anzugeben:
+Eine Konstante, die den Listentyp angibt, ist im **dwItem-Member** der struktur enthalten, die durch *lpList identifiziert wird.* Dieses Flag ist erforderlich. Verwenden Sie eine der folgenden Konstanten, um den Listentyp anzugeben:
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_AUDIO_ALG"></span><span id="mci_dgv_list_audio_alg"></span>MCI \_ DGV \_ \_ -Liste Audio- \_ alg
+<span id="MCI_DGV_LIST_AUDIO_ALG"></span><span id="mci_dgv_list_audio_alg"></span>MCI \_ DGV \_ LIST \_ AUDIO \_ ALG
 </dt> <dd>
 
-Der Befehl sollte Namen von audioalgorithmen abrufen.
+Der Befehl sollte Namen von Audioalgorithmen abrufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_AUDIO_QUALITY"></span><span id="mci_dgv_list_audio_quality"></span>MCI \_ DGV \_ \_ -Liste \_ Audioqualität
+<span id="MCI_DGV_LIST_AUDIO_QUALITY"></span><span id="mci_dgv_list_audio_quality"></span>MCI \_ DGV \_ LIST \_ AUDIO \_ QUALITY
 </dt> <dd>
 
-Der Befehl sollte audioqualitätsgrade abrufen. Die zurückgegebenen Ebenen werden dem Algorithmus zugeordnet, auf den der **lpstrinalgorithmus** -Member der durch *lplist* bezeichneten Struktur verweist. Wenn dieser Member mithilfe der Zeichenfolge "Current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
+Der Befehl sollte Audioqualitätsstufen abrufen. Die zurückgegebenen Ebenen sind dem Algorithmus zugeordnet, auf den das **lpstrAlgorithm-Member** der durch lpList identifizierten *Struktur verweist.* Wenn dieser Member mit der Zeichenfolge "current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_AUDIO_STREAM"></span><span id="mci_dgv_list_audio_stream"></span>MCI \_ \_ -DGV \_ -Listen-Audiodatenstrom \_
+<span id="MCI_DGV_LIST_AUDIO_STREAM"></span><span id="mci_dgv_list_audio_stream"></span>MCI \_ DGV \_ LIST \_ AUDIO \_ STREAM
 </dt> <dd>
 
-Der Befehl sollte Namen von Audiodatenströmen abrufen.
+Der Befehl sollte Namen von Audiostreams abrufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_STILL_AL"></span><span id="mci_dgv_list_still_al"></span>MCI- \_ DGV- \_ Liste \_ immer noch \_ Al
+<span id="MCI_DGV_LIST_STILL_AL"></span><span id="mci_dgv_list_still_al"></span>MCI \_ DGV \_ LIST \_ STILL \_ AL
 </dt> <dd>
 
-Der Befehl sollte Namen von immer noch Algorithmen abrufen.
+Der Befehl sollte Namen von still-Algorithmen abrufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_STILL_QUALITY"></span><span id="mci_dgv_list_still_quality"></span>MCI- \_ DGV- \_ Liste \_ immer noch \_ Qualität
+<span id="MCI_DGV_LIST_STILL_QUALITY"></span><span id="mci_dgv_list_still_quality"></span>MCI \_ DGV \_ LIST \_ STILL \_ QUALITY
 </dt> <dd>
 
-Der Befehl sollte Qualitätsstufen abrufen. Die zurückgegebenen Ebenen werden dem Algorithmus zugeordnet, auf den der **lpstrinalgorithmus** -Member der durch *lplist* bezeichneten Struktur verweist. Wenn dieser Member mithilfe der Zeichenfolge "Current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
+Der Befehl sollte Qualitätsstufen abrufen. Die zurückgegebenen Ebenen sind dem Algorithmus zugeordnet, auf den das **lpstrAlgorithm-Member** der durch lpList identifizierten *Struktur verweist.* Wenn dieser Member mit der Zeichenfolge "current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_VIDEO_ALG"></span><span id="mci_dgv_list_video_alg"></span>MCI- \_ DGV- \_ Liste \_ Video- \_ alg
+<span id="MCI_DGV_LIST_VIDEO_ALG"></span><span id="mci_dgv_list_video_alg"></span>MCI \_ DGV \_ LIST \_ VIDEO \_ ALG
 </dt> <dd>
 
-Der Befehl sollte Namen von Video Algorithmen abrufen.
+Der Befehl sollte Die Namen von Videoalgorithmen abrufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_VIDEO_QUALITY"></span><span id="mci_dgv_list_video_quality"></span>MCI- \_ DGV- \_ Listen \_ Video \_ Qualität
+<span id="MCI_DGV_LIST_VIDEO_QUALITY"></span><span id="mci_dgv_list_video_quality"></span>MCI \_ DGV \_ LIST \_ VIDEO \_ QUALITY
 </dt> <dd>
 
-Der Befehl sollte Video Qualitäts Ebenen abrufen. Die zurückgegebenen Ebenen werden dem Algorithmus zugeordnet, auf den der **lpstrinalgorithmus** -Member der durch *lplist* bezeichneten Struktur verweist. Wenn dieser Member mithilfe der Zeichenfolge "Current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
+Der Befehl sollte Videoqualitätsstufen abrufen. Die zurückgegebenen Ebenen sind dem Algorithmus zugeordnet, auf den das **lpstrAlgorithm-Member** der durch lpList identifizierten *Struktur verweist.* Wenn dieser Member mit der Zeichenfolge "current" angegeben wird, werden die dem aktuellen Algorithmus zugeordneten Qualitäten zurückgegeben.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_VIDEO_SOURCE"></span><span id="mci_dgv_list_video_source"></span>MCI- \_ DGV- \_ Liste ( \_ Video \_ Quelle)
+<span id="MCI_DGV_LIST_VIDEO_SOURCE"></span><span id="mci_dgv_list_video_source"></span>MCI \_ DGV \_ LIST \_ VIDEO \_ SOURCE
 </dt> <dd>
 
-Der Befehl sollte Informationen zu den Videoquellen zurückgeben. Bei Verwendung mit der MCI- \_ DGV- \_ Listen Anzahl \_ gibt der Befehl die Anzahl der Videoquellen zurück. Bei Verwendung mit der MCI- \_ DGV- \_ Listen \_ Nummer gibt der Befehl den Typ einer Videoquelle zurück. MCI definiert die folgenden Typen:
+Der Befehl sollte Informationen zu den Videoquellen zurückgeben. Bei Verwendung mit MCI \_ DGV \_ LIST COUNT gibt der Befehl die Anzahl der \_ Videoquellen zurück. Bei Verwendung mit MCI \_ DGV \_ LIST NUMBER gibt der Befehl den Typ einer \_ Videoquelle zurück. MCI definiert die folgenden Typen:
 
--   MCI \_ DGV \_ setvideo \_ src \_ generic
--   MCI \_ DGV \_ setvideo \_ src \_ NTSC
--   MCI \_ DGV \_ setvideo \_ src \_ PAL
--   MCI \_ DGV \_ setvideo \_ src \_ RGB
--   MCI \_ DGV \_ setvideo \_ src \_ SECAM
--   MCI \_ DGV \_ setvideo \_ src \_ SVideo
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ GENERIC
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ NTSC
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ PAL
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ RGB
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ SECAM
+-   MCI \_ DGV \_ SETVIDEO \_ SRC \_ SVIDEO
 
-Möglicherweise gibt es mehrere Quellen für jeden Typ, die zurückgegeben werden. Der generische Quelltyp wird verwendet, wenn mehr als ein Typ von Signal für diesen Connector zulässig ist.
+Es kann mehrere Quellen für jeden zurückgegebenen Typ geben. Der generische Quelltyp wird verwendet, wenn mehr als ein Signaltyp für diesen Connector zulässig ist.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_VIDEO_STREAM"></span><span id="mci_dgv_list_video_stream"></span>MCI- \_ DGV- \_ Listen \_ \_ Videostream
+<span id="MCI_DGV_LIST_VIDEO_STREAM"></span><span id="mci_dgv_list_video_stream"></span>MCI \_ DGV \_ LIST \_ VIDEO \_ STREAM
 </dt> <dd>
 
-Der Befehl sollte Namen von Videostreams abrufen.
+Der Befehl sollte Die Namen von Videostreams abrufen.
 
 </dd> <dt>
 
-<span id="MCI_DGV_LIST_NUMBER"></span><span id="mci_dgv_list_number"></span>MCI- \_ DGV- \_ Listen \_ Nummer
+<span id="MCI_DGV_LIST_NUMBER"></span><span id="mci_dgv_list_number"></span>MCI \_ \_ DGV-LISTENNUMMER \_
 </dt> <dd>
 
-Ein Index wird im **dwnumber** -Member der durch *lplist* identifizierten Struktur angegeben. Der Index muss eine ganze Zahl zwischen 1 und dem Wert sein, der für das MCI- \_ DGV- \_ Listen Anzahl-Flag zurückgegeben wird \_ .
+Ein Index wird im **dwNumber-Member** der struktur angegeben, die durch *lpList identifiziert wird.* Der Index muss eine ganze Zahl zwischen 1 und dem Wert sein, der für das MCI \_ DGV \_ LIST \_ COUNT-Flag zurückgegeben wird.
 
 </dd> </dl>
 
-Für Digital Video-Geräte verweist die *lplist* auf eine [**MCI- \_ DGV- \_ Listen \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_list_parmsa) -Elementstruktur.
+Für Digitalvideogeräte verweist *lpList* auf eine [**MCI \_ DGV \_ LIST \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_list_parmsa)
 
-Die folgenden zusätzlichen Flags gelten für den **VCR** -Gerätetyp:
+Die folgenden zusätzlichen Flags gelten für den **vcr-Gerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_VCR_LIST_AUDIO_SOURCE"></span><span id="mci_vcr_list_audio_source"></span>Audioquelle für MCI \_ VCR \_ \_ -Liste \_
+<span id="MCI_VCR_LIST_AUDIO_SOURCE"></span><span id="mci_vcr_list_audio_source"></span>MCI \_ VCR \_ LIST \_ AUDIO \_ SOURCE
 </dt> <dd>
 
-Listet Audioeingaben oder-Typen auf.
+Auflisten von Audioeingaben oder -typen.
 
 </dd> <dt>
 
-<span id="MCI_VCR_LIST_COUNT"></span><span id="mci_vcr_list_count"></span>Anzahl der MCI- \_ VCR- \_ Listen \_
+<span id="MCI_VCR_LIST_COUNT"></span><span id="mci_vcr_list_count"></span>ANZAHL DER \_ MCI-VCR-LISTEN \_ \_
 </dt> <dd>
 
-Legt den **dwreturn** -Member der von *lplist* identifizierten-Struktur auf die Gesamtzahl von Video-oder Audioeingaben fest.
+Legt das **dwReturn-Member** der durch *lpList* identifizierten Struktur auf die Gesamtzahl der Video- oder Audioeingaben fest.
 
 </dd> <dt>
 
-<span id="MCI_VCR_LIST_NUMBER"></span><span id="mci_vcr_list_number"></span>MCI- \_ VCR- \_ Listen \_ Nummer
+<span id="MCI_VCR_LIST_NUMBER"></span><span id="mci_vcr_list_number"></span>MCI \_ \_ VCR-LISTENNUMMER \_
 </dt> <dd>
 
-Legt den **dwreturn** -Member der durch *lplist* identifizierten Struktur auf den Typ der Video-oder Audioeingabe fest, die vom **dwnumber** -Member angegeben wird.
+Legt den **dwReturn-Member** der durch *lpList* identifizierten Struktur auf den Typ der Video- oder Audioeingabe fest, die vom **dwNumber-Member angegeben** wird.
 
 </dd> <dt>
 
-<span id="MCI_VCR_LIST_VIDEO_SOURCE"></span><span id="mci_vcr_list_video_source"></span>Video Quelle für MCI \_ VCR- \_ Liste \_ \_
+<span id="MCI_VCR_LIST_VIDEO_SOURCE"></span><span id="mci_vcr_list_video_source"></span>VIDEOQUELLE \_ DER MCI-VCR-LISTE \_ \_ \_
 </dt> <dd>
 
-Listet Videoeingaben oder-Typen auf.
+Auflisten von Videoeingaben oder -typen
 
 </dd> </dl>
 
-Bei VCR-Geräten verweist *lplist* auf eine [**MCI- \_ VCR- \_ Listen \_**](mci-vcr-list-parms.md) -Element-Struktur.
+Für VCR-Geräte *verweist lpList* auf eine [**MCI \_ VCR \_ LIST \_ PARMS-Struktur.**](mci-vcr-list-parms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -218,7 +218,7 @@ Bei VCR-Geräten verweist *lplist* auf eine [**MCI- \_ VCR- \_ Listen \_**](mci-
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -226,7 +226,7 @@ Bei VCR-Geräten verweist *lplist* auf eine [**MCI- \_ VCR- \_ Listen \_**](mci-
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

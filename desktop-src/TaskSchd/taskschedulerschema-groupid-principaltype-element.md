@@ -1,5 +1,5 @@
 ---
-title: GroupId (principalType)-Element
+title: GroupId -Element (principalType)
 description: Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 ms.assetid: 1e576c31-79a9-42d4-b497-74412e464d60
 keywords:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118131839"
 ---
-# <a name="groupid-principaltype-element"></a>GroupId (principalType)-Element
+# <a name="groupid-principaltype-element"></a>GroupId -Element (principalType)
 
 Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 
@@ -30,13 +30,13 @@ Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der aufgaben erfor
  />
 ```
 
-Das **GroupId-Element** wird durch den komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
+Das **GroupId-Element** wird durch den komplexen [**PrincipalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                  | Abgeleitet von                                                           | BESCHREIBUNG                                                    |
+| Element                                                                  | Abgeleitet von                                                           | Beschreibung                                                    |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------|
 | [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.<br/> |
 
@@ -44,7 +44,7 @@ Das **GroupId-Element** wird durch den komplexen [**principalType-Typ**](tasksch
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können keinen Gruppenbezeichner und einen Benutzerbezeichner gleichzeitig angeben. Geben Sie entweder das [**UserId-**](taskschedulerschema-userid-principaltype-element.md) oder **groupId-Element** an, aber nicht beides.
+Sie können nicht gleichzeitig einen Gruppenbezeichner und einen Benutzerbezeichner angeben. Geben Sie entweder [**das UserId-**](taskschedulerschema-userid-principaltype-element.md) oder **das GroupId-Element** an, aber nicht beide.
 
 Für die Skriptentwicklung wird der Gruppenbezeichner des Prinzipals mithilfe der [**Principal.GroupId-Eigenschaft**](principal-groupid.md) angegeben.
 
@@ -52,7 +52,7 @@ Für die C++-Entwicklung wird der Gruppenbezeichner des Prinzipals mithilfe der 
 
 ## <a name="examples"></a>Beispiele
 
-Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die dieses Element verwendet, finden Sie unter [Logon Trigger Example (XML) (Beispiel für logon-Trigger (XML)).](logon-trigger-example--xml-.md)
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die dieses Element verwendet, finden Sie unter [Logon Trigger Example (XML) .](logon-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,12 +60,12 @@ Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die dieses Elem
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

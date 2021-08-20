@@ -1,27 +1,27 @@
 ---
-description: Dieser Abschnitt richtet sich an Entwickler, die eigene Setup Programme mithilfe der internen Benutzeroberfläche der Windows Installer-Datenbank schreiben. Allgemeine Informationen zum Installationsprogramm finden Sie unter Informationen zu Windows Installer.
+description: Dieser Abschnitt richtet sich an Entwickler, die ihre eigenen Setupprogramme über die interne Benutzeroberfläche der Windows Installer-Datenbank schreiben. Allgemeine Informationen zum Installationsprogramm finden Sie unter Informationen Windows Installer.
 ms.assetid: d4a4b34b-98e7-495b-a1e2-67586bfe9c1b
 title: Referenz zur Benutzeroberfläche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 679cd2cfff2c231c8cfbf50b487f299c0acceedb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c87b1e7373091663faedd2865f0a20306aa4e4fed35c1b1a25ac4448332e17c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118141586"
 ---
 # <a name="user-interface-reference"></a>Referenz zur Benutzeroberfläche
 
-Dieser Abschnitt richtet sich an Entwickler, die eigene Setup Programme mithilfe der internen Benutzeroberfläche der Windows Installer-Datenbank schreiben. Allgemeine Informationen zum Installationsprogramm finden Sie unter Informationen [zu Windows Installer](about-windows-installer.md).
+Dieser Abschnitt richtet sich an Entwickler, die ihre eigenen Setupprogramme über die interne Benutzeroberfläche der Windows Installer-Datenbank schreiben. Allgemeine Informationen zum Installationsprogramm finden Sie unter [Informationen Windows Installer.](about-windows-installer.md)
 
-Weitere Informationen zum Erstellen einer Benutzeroberfläche finden [Sie unter Verwenden der Benutzeroberfläche](using-the-user-interface.md).
+Weitere Informationen zum Erstellen einer Benutzeroberfläche finden Sie unter [Verwenden der Benutzeroberfläche](using-the-user-interface.md).
 
-[Dialog Felder](dialog-boxes.md)
+[Dialogfelder](dialog-boxes.md)
 
  
 
-[Dialog Feld stilbits](dialog-style-bits.md)
+[Dialogformatbits](dialog-style-bits.md)
 
  
 
@@ -29,7 +29,7 @@ Weitere Informationen zum Erstellen einer Benutzeroberfläche finden [Sie unter 
 
  
 
-[Steuerelement Attribute](control-attributes.md)
+[Steuerelementattribute](control-attributes.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
 description: Weitere Informationen zu StringColumnValue-Membern
-title: StringColumnValue-Member
+title: StringColumnValue-Elemente
 TOCTitle: StringColumnValue members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.StringColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.stringcolumnvalue_members(v=EXCHG.10)
@@ -14,10 +14,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118071250"
 ---
-# <a name="stringcolumnvalue-members"></a>StringColumnValue-Member
+# <a name="stringcolumnvalue-members"></a>StringColumnValue-Elemente
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Ein Unicode-Zeichenfolgenspaltenwert.
 
@@ -30,7 +30,7 @@ Der [StringColumnValue-Typ](./stringcolumnvalue-class.md) macht die folgenden Me
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -52,34 +52,34 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334166(v=exchg.10).md">Columnid</a></td>
-<td>Ruft die festzulegende oder abzurufende columnid ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die columnid ab, die festgelegt oder abgerufen werden soll, oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334212(v=exchg.10).md">Fehler</a></td>
-<td>Ruft die Warnung ab, die durch Abrufen oder Festlegen dieser Spalte generiert wurde. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die Warnung ab, die durch Abrufen oder Festlegen dieser Spalte generiert wird. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334165(v=exchg.10).md">ItagSequence</a></td>
-<td>Ruft die Itagsequenz der Spalte ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die Spalten itag-Sequenz ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351195(v=exchg.10).md">Länge</a></td>
-<td>Ruft die Bytelänge eines Spaltenwerts ab, der 0 (null) ist, wenn die Spalte NULL ist, andernfalls entspricht sie der Bytelänge des Zeichenfolgenwerts. Die Bytelänge wird in der Annahme von zwei Bytes pro Zeichen bestimmt. (Überschreibt <a href="dn334213(v=exchg.10).md">ColumnValue.Length.)</a></td>
+<td>Ruft die Bytelänge eines Spaltenwerts ab, der null ist, wenn die Spalte NULL ist, andernfalls entspricht sie der Bytelänge des Zeichenfolgenwerts. Die Bytelänge wird unter Annahme von zwei Bytes pro Zeichen bestimmt. (Überschreibt <a href="dn334213(v=exchg.10).md">ColumnValue.Length</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334169(v=exchg.10).md">RetrieveGrbit</a></td>
-<td>Ruft Spaltenabrufoptionen ab oder legt diese fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft Spaltenabrufoptionen ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -94,12 +94,12 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351204(v=exchg.10).md">Wert</a></td>
-<td>Ruft den Wert der Spalte ab oder legt den Wert fest. Verwenden Sie <a href="dn334138(v=exchg.10).md">SetColumns(JET_SESID, JET_TABLEID, []),</a> um einen Datensatz mit dem Spaltenwert zu aktualisieren.</td>
+<td>Ruft den Wert der Spalte ab oder legt den Wert fest. Verwenden <a href="dn334138(v=exchg.10).md">Sie SetColumns(JET_SESID, JET_TABLEID, []),</a> um einen Datensatz mit dem Spaltenwert zu aktualisieren.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn351202(v=exchg.10).md">ValueAsObject</a></td>
-<td>Ruft den zuletzt festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches -Objekt zurückgegeben. (Überschreibt <a href="dn334214(v=exchg.10).md">ColumnValue.ValueAsObject.)</a></td>
+<td>Ruft den letzten festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches Objekt zurückgegeben. (Überschreibt <a href="dn334214(v=exchg.10).md">ColumnValue.ValueAsObject</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -114,7 +114,7 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -159,7 +159,7 @@ Oben
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

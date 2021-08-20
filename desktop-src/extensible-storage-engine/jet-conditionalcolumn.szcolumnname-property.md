@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_CONDITIONALCOLUMN.szColumnName-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_CONDITIONALCOLUMN.szColumnName-Eigenschaft'
 title: JET_CONDITIONALCOLUMN.szColumnName-Eigenschaft
 TOCTitle: 'szColumnName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_CONDITIONALCOLUMN.szColumnName
@@ -64,12 +64,12 @@ public string szColumnName { get; set; }
 
 Typ: [System.String](/dotnet/api/system.string)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 
 [JET_CONDITIONALCOLUMN-Klasse](./jet-conditionalcolumn-class.md)
 
-[JET_CONDITIONALCOLUMN-Member](./jet-conditionalcolumn-members.md)
+[JET_CONDITIONALCOLUMN Mitglieder](./jet-conditionalcolumn-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

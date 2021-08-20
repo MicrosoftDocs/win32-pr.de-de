@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_CALLBACK-Rückruffunktion'
+description: 'Weitere Informationen finden Sie unter: JET_CALLBACK Rückruffunktion'
 title: JET_CALLBACK Rückruffunktion
 TOCTitle: JET_CALLBACK Callback Function
 ms:assetid: d15d4f84-8378-4b4b-9b8b-e89a56be5ead
@@ -31,7 +31,7 @@ _**Gilt für:** Windows | Windows Server_
 
 Die **JET_CALLBACK** ist eine mehrzweckige Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung eines Ereignisses mit Onlinedefragmentierung und Cursorzustandsbenachrichtigungen zu informieren.
 
-Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie spezifische Einstellungen, die für die Parameter dieser Funktion  verwendet werden sollen, da sich diese Einstellungen je nach der JET_CBTYP-Option unterscheiden, die für die Verwendung im *cbtyp-Parameter ausgewählt* ist.
+Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie spezifische Einstellungen, die für die Parameter dieser Funktion verwendet werden sollen, da sich diese Einstellungen je nach der **JET_CBTYP-Option** unterscheiden, die für die Verwendung im *cbtyp-Parameter ausgewählt* ist.
 
 ```cpp
     JET_ERR JET_API* JET_CALLBACK(

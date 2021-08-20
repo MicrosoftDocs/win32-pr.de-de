@@ -19,7 +19,7 @@ Die Platzierungs-API für virtuelle Hyper-V-Computer (VM) enthält die Kompatibi
 
 
 
-| Thema                                                                    | BESCHREIBUNG                                                                                                                                                |
+| Thema                                                                    | Beschreibung                                                                                                                                                |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Msvm \_ CompatibilityVector**](msvm-compatibilityvector.md)<br/> | Verweist auf die Kompatibilitätsinformationen für einen virtuellen Computer (VM) (bei Ausführung auf einem VM-Computersystem) oder einen Host (bei Ausführung auf einem Hostcomputersystem).<br/> |
 

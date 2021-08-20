@@ -1,6 +1,6 @@
 ---
 title: ID3DX11EffectRasterizerVariable-Schnittstelle (D3dx11effect.h)
-description: Eine Rasterizer-Variable-Schnittstelle greifen auf den Rasterizerzustand zu.
+description: Eine Rasterizer-Variable-Schnittstelle greift auf den Rasterizerzustand zu.
 ms.assetid: d039e3c5-c066-4658-bead-92a5d705ed89
 keywords:
 - ID3DX11EffectRasterizerVariable-Schnittstelle Direct3D 11
@@ -25,11 +25,11 @@ ms.locfileid: "118534186"
 ---
 # <a name="id3dx11effectrasterizervariable-interface"></a>ID3DX11EffectRasterizerVariable-Schnittstelle
 
-Eine Rasterizer-Variable-Schnittstelle greifen auf den Rasterizerzustand zu.
+Eine Rasterizer-Variable-Schnittstelle greift auf den Rasterizerzustand zu.
 
 ## <a name="members"></a>Member
 
-Die **ID3DX11EffectRasterizerVariable-Schnittstelle** erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectRasterizerVariable** verfügt auch über diese Membertypen:
+Die **ID3DX11EffectRasterizerVariable-Schnittstelle** erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectRasterizerVariable** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -39,10 +39,10 @@ Die **ID3DX11EffectRasterizerVariable-Schnittstelle** verfügt über diese Metho
 
 
 
-| Methode                                                                                   | BESCHREIBUNG                                                            |
+| Methode                                                                                   | Beschreibung                                                            |
 |:-----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**GetBackingStore**](id3dx11effectrasterizervariable-getbackingstore.md)               | Sie erhalten einen Zeiger auf eine Variable, die den Rasteriserzustand enthält.<br/> |
-| [**GetRasterizerState**](id3dx11effectrasterizervariable-getrasterizerstate.md)         | Hier erhalten Sie einen Zeiger auf eine Rasterizer-Schnittstelle.<br/>                    |
+| [**GetBackingStore**](id3dx11effectrasterizervariable-getbackingstore.md)               | Abrufen eines Zeigers auf eine Variable, die den Rasteriserzustand enthält.<br/> |
+| [**GetRasterizerState**](id3dx11effectrasterizervariable-getrasterizerstate.md)         | Abrufen eines Zeigers auf eine Rasterizerschnittstelle.<br/>                    |
 | [**SetRasterizerState**](id3dx11effectrasterizervariable-setrasterizerstate.md)         | Legt den Rasterizerzustand fest.<br/>                                  |
 | [**UndoSetRasterizerState**](id3dx11effectrasterizervariable-undosetrasterizerstate.md) | Setzt einen zuvor festgelegten Rasterizerzustand zurück.<br/>                  |
 
@@ -54,10 +54,10 @@ Die **ID3DX11EffectRasterizerVariable-Schnittstelle** verfügt über diese Metho
 
 Eine [**ID3DX11EffectVariable-Schnittstelle**](id3dx11effectvariable.md) wird erstellt, wenn ein Effekt in den Arbeitsspeicher gelesen wird.
 
-Effektvariablen werden im Arbeitsspeicher im Hintergrundspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Hintergrundspeicher auf das Gerät kopiert. Sie können eine dieser Methoden verwenden, um den Zustand zurück zu geben.
+Effektvariablen werden im Speicher im Sicherungsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungsspeicher auf das Gerät kopiert. Sie können eine dieser Methoden verwenden, um den Zustand zurückzugeben.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -68,11 +68,11 @@ Effektvariablen werden im Arbeitsspeicher im Hintergrundspeicher gespeichert. We
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

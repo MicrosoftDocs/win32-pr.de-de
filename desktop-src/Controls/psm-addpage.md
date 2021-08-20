@@ -1,9 +1,9 @@
 ---
-title: PSM_ADDPAGE Meldung (prsht. h)
-description: Fügt am Ende eines vorhandenen Eigenschaften Blatts eine neue Seite hinzu. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ addPage-Makros senden.
+title: PSM_ADDPAGE-Nachricht (Prsht.h)
+description: Fügt am Ende eines vorhandenen Eigenschaftenblatts eine neue Seite hinzu. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ AddPage-Makros senden.
 ms.assetid: 41f9a09e-6de6-466b-bdfa-c8c4e8f193e4
 keywords:
-- Windows-Steuerelemente für PSM_ADDPAGE Meldung
+- PSM_ADDPAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c4d09e07dfa2be86e11fa33863f091732955714
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d17e9da965e5e45c6fe11bc319436c00663fdc6348d3d2457b3c15472f6f3868
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169826"
 ---
-# <a name="psm_addpage-message"></a>PSM \_ addPage-Nachricht
+# <a name="psm_addpage-message"></a>PSM \_ ADDPAGE-Nachricht
 
-Fügt am Ende eines vorhandenen Eigenschaften Blatts eine neue Seite hinzu. Sie können diese Nachricht explizit oder mithilfe des [**propsheet- \_ addPage**](/windows/desktop/api/Prsht/nf-prsht-propsheet_addpage) -Makros senden.
+Fügt am Ende eines vorhandenen Eigenschaftenblatts eine neue Seite hinzu. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ AddPage-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_addpage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,28 +39,28 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Handle für die hinzu zufügende Seite. Die Seite muss durch einen vorherigen Aufrufen der Funktion "-Funktion" von "| [**atepropertysheetpage**](/windows/desktop/api/Prsht/nf-prsht-createpropertysheetpagea) " erstellt worden sein.
+Handle für die hinzuzufügende Seite. Die Seite muss durch einen vorherigen Aufruf der [**CreatePropertySheetPage-Funktion**](/windows/desktop/api/Prsht/nf-prsht-createpropertysheetpagea) erstellt worden sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die neue Seite sollte nicht größer als die größte Seite sein, die sich derzeit im Eigenschaften Blatt befindet, da die Größe des Eigenschaften Blatts nicht an die neue Seite angepasst wird.
+Die neue Seite sollte nicht größer als die größte Seite sein, die sich derzeit im Eigenschaftenblatt befindet, da die Größe des Eigenschaftenblatts nicht an die neue Seite angepasst wird.
 
-Eine Reihe von Nachrichten und ein Funktions aufruftritt auf, während das Eigenschaften Blatt die Liste der Seiten bearbeitet. Während diese Aktion ausgeführt wird, kann der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen führen. Dementsprechend sollten Sie die PSM \_ -addPage-Nachricht nicht in der Implementierung von [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Behandlung der folgenden Benachrichtigungen und Windows-Meldungen verwenden.
+Eine Reihe von Nachrichten und ein Funktionsaufruf treten auf, während das Eigenschaftenblatt die Seitenliste bearbeitet. Während diese Aktion durchgeführt wird, führt der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen. Daher sollten Sie die \_ PSM-ADDPAGE-Nachricht nicht in Ihrer [*PropSheetPageProc-Implementierung*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Verarbeitung der folgenden Benachrichtigungen und Windows Nachrichten verwenden.
 
--   [PSN- \_ Anwendung](psn-apply.md)
--   [PSN- \_ killactive](psn-killactive.md)
--   [PSN- \_ zurück Setzung](psn-reset.md)
--   [PSN- \_ SETACTIVE](psn-setactive.md)
--   [**WM \_ zerstören**](/windows/desktop/winmsg/wm-destroy)
--   [**WM \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog)
+-   [PSN \_ APPLY](psn-apply.md)
+-   [PSN \_ KILLACTIVE](psn-killactive.md)
+-   [\_PSN-ZURÜCKSETZUNG](psn-reset.md)
+-   [PSN \_ SETACTIVE](psn-setactive.md)
+-   [**WM \_ DESTROY**](/windows/desktop/winmsg/wm-destroy)
+-   [**WM \_ INITDIALOG**](/windows/desktop/dlgbox/wm-initdialog)
 
-Wenn Sie eine Eigenschaften Blattseite ändern müssen, während Sie eine dieser Nachrichten verarbeiten, oder wenn [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, stellen Sie selbst eine private Windows-Meldung bereit. Die Anwendung empfängt diese Nachricht erst, nachdem die Aufgaben des Eigenschaften Blatt-Managers beendet wurden. Anschließend können Sie die Seitenliste ändern.
+Wenn Sie eine Eigenschaftenblattseite ändern müssen, während Sie eine dieser Nachrichten verarbeiten oder [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, posten Sie sich selbst eine private Windows Nachricht. Ihre Anwendung empfängt diese Meldung erst, nachdem der Eigenschaftenblatt-Manager seine Aufgaben abgeschlossen hat. Anschließend können Sie die Liste der Seiten ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Wenn Sie eine Eigenschaften Blattseite ändern müssen, während Sie eine dieser
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

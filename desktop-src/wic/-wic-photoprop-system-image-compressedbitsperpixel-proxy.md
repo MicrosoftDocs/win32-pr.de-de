@@ -15,9 +15,9 @@ ms.locfileid: "118710355"
 
 Der Eigenschaftenproxy für die Fotometadatenrichtlinie System.Image.CompressedBitsPerPixel.
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
-Der Eigenschaftenproxy gibt ein rationales Paar a über das [PROPVARIANT-Element](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) "hmVal" zurück.
+Der Eigenschaftenproxy gibt ein rationales Paar a über den [PROPVARIANT-Member](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) "valval" zurück.
 
 ### <a name="containers"></a>Container
 
@@ -33,11 +33,11 @@ VT \_ UI8
 
 ### <a name="denominator"></a>Nenner
 
-HighPart des "hmVal".
+HighPart des "valVal".
 
 ### <a name="numerator"></a>Zähler
 
-LowPart des "hmVal".
+LowPart von "valVal".
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

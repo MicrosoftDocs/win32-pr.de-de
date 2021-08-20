@@ -4,8 +4,8 @@ description: Definiert Konfigurationseinstellungen für die Win32 \_ Terminal-Kl
 ms.assetid: 438baf22-adc2-410e-bf9b-4b17a05c5ce4
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSClientSetting-Klassen-Remotedesktopdienste
-- Win32_TSClientSetting-Klasse Remotedesktopdienste beschrieben
+- Win32_TSClientSetting der Remotedesktopdienste
+- Win32_TSClientSetting klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -79,9 +79,9 @@ ms.locfileid: "118349364"
 ---
 # <a name="win32_tsclientsetting-class"></a>Win32 \_ TSClientSetting-Klasse
 
-Die WMI-Klasse **Win32 \_ TSClientSetting** definiert Konfigurationseinstellungen für die [**Win32 \_ Terminal-Klasse**](win32-terminal.md) im Zusammenhang mit der Verbindungsrichtlinie.
+Die **WMI-Klasse Win32 \_ TSClientSetting** definiert Konfigurationseinstellungen für die [**Win32 \_ Terminal-Klasse**](win32-terminal.md) im Zusammenhang mit der Verbindungsrichtlinie.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird von MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -148,7 +148,7 @@ class Win32_TSClientSetting : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ TSClientSetting-Klasse** verfügt über folgende Typen von Membern:
+Die **Win32 \_ TSClientSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -159,11 +159,11 @@ Die **Win32 \_ TSClientSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                   | BESCHREIBUNG                                                                                                                                                  |
+| Methode                                                                   | Beschreibung                                                                                                                                                  |
 |:-------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ConnectionSettings**](win32-tsclientsetting-connectionsettings.md)   | Legt die Eigenschaften **ConnectClientDrivesAtLogon,** **ConnectPrinterAtLogon** und **DefaultToClientPrinter** dieser Klasse fest.<br/>                      |
+| [**ConnectionSettings**](win32-tsclientsetting-connectionsettings.md)   | Legt die **Eigenschaften ConnectClientDrivesAtLogon,** **ConnectPrinterAtLogon** und **DefaultToClientPrinter dieser** Klasse fest.<br/>                      |
 | [**SetAllowDwm**](setallowdwm-win32-tsclientsetting.md)                 | Wird nicht unterstützt.<br/> **Windows 7 und Windows Server 2008 R2:** Legt die **AllowDwm-Eigenschaft** fest.<br/>                                               |
-| [**SetClientProperty**](win32-tsclientsetting-setclientproperty.md)     | Legt die Eigenschaften **LPTPortMapping,** **COMPortMapping,** **AudioMapping,** **ClipboardMapping,** **DriveMapping** oder **WindowsPrinterMapping** fest.<br/> |
+| [**SetClientProperty**](win32-tsclientsetting-setclientproperty.md)     | Legt die **LPTPortMapping-,** **COMPortMapping-,** **AudioMapping-,** **ClipboardMapping-,** **DriveMapping-** oder **WindowsPrinterMapping-Eigenschaft** fest.<br/> |
 | [**SetColorDepth**](win32-tsclientsetting-setcolordepth.md)             | Legt die **ColorDepth-Eigenschaft** fest.<br/>                                                                                                                 |
 | [**SetColorDepthPolicy**](win32-tsclientsetting-setcolordepthpolicy.md) | Legt die **ColorDepthPolicy-Eigenschaft** fest.<br/>                                                                                                           |
 | [**SetMaxMonitors**](setmaxmonitors-win32-tsclientsetting.md)           | Legt die **MaxMonitors-Eigenschaft** fest.<br/>                                                                                                                |
@@ -189,9 +189,9 @@ Datentyp: **uint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob erweiterte RemoteFX Grafiken für RemoteApp aktiviert werden sollen.
+Gibt an, ob erweiterte RemoteFX für RemoteApp aktiviert werden soll.
 
-**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2012 R2 und Windows 8.1 nicht verfügbar.
+**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht verfügbar, bevor Windows Server 2012 R2 und Windows 8.1.
 
 <dt>
 
@@ -232,9 +232,9 @@ Diese Eigenschaft ist nicht verfügbar.
 
 **Windows 7 und Windows Server 2008 R2: **
 
-Gibt an, ob die Remotedesktopkomposition aktiviert oder deaktiviert werden soll. Null deaktiviert die Remotedesktopkomposition, und ein Wert ungleich 0 (null) aktiviert ihn.
+Gibt an, ob die Remotedesktopkomposition aktiviert oder deaktiviert werden soll. 0 deaktiviert die Remotedesktopkomposition, und ein Wert ungleich 0 (null) aktiviert dies.
 
-Verwenden Sie die [**SetAllowDwm-Methode,**](setallowdwm-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
+Verwenden Sie [**die SetAllowDwm-Methode,**](setallowdwm-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
 
 </dd> <dt>
 
@@ -247,9 +247,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Umleitung von Audioaufnahmen zugelassen werden soll.
+Gibt an, ob die Umleitung der Audioaufnahme zulässig ist.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
 
 <dt>
 
@@ -317,7 +317,7 @@ Zugriffstyp: Lesen/Schreiben
 
 Gibt an, ob der AVC444-Modus bevorzugt wird.
 
-**Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 10 oder Windows Server 2016 nicht verfügbar.
+**Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 10 oder Windows Server 2016.
 
 <dt>
 
@@ -349,13 +349,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**ClipboardMapping**
+**ZwischenablageMapping**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint32**
@@ -364,7 +364,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zwischenablagezuordnung deaktiviert oder aktiviert ist.
+Gibt an, ob die Zuordnung der Zwischenablage deaktiviert oder aktiviert ist.
 
 <dt>
 
@@ -375,7 +375,7 @@ Gibt an, ob die Zwischenablagezuordnung deaktiviert oder aktiviert ist.
 
 </dt> <dd>
 
-Die Zwischenablagezuordnung ist aktiviert.
+Die Zuordnung der Zwischenablage ist aktiviert.
 
 </dd> <dt>
 
@@ -386,7 +386,7 @@ Die Zwischenablagezuordnung ist aktiviert.
 
 </dt> <dd>
 
-Die Zwischenablagezuordnung ist deaktiviert.
+Die Zuordnung der Zwischenablage ist deaktiviert.
 
 </dd> </dl>
 
@@ -864,9 +864,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale X-Auflösung, die vom Server unterstützt wird. Verwenden Sie [**die SetMaxXResolution-Methode,**](setmaxxresolution-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
+Die maximale X-Auflösung, die vom Server unterstützt wird. Verwenden Sie die [**SetMaxXResolution-Methode,**](setmaxxresolution-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
 
 </dd> <dt>
 
@@ -879,9 +879,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Y-Auflösung, die vom Server unterstützt wird. Verwenden Sie [**die SetMaxYResolution-Methode,**](setmaxyresolution-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
+Die maximale Y-Auflösung, die vom Server unterstützt wird. Verwenden Sie die [**SetMaxYResolution-Methode,**](setmaxyresolution-win32-tsclientsetting.md) um diese Eigenschaft zu ändern.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
 
 </dd> <dt>
 
@@ -896,7 +896,7 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
@@ -909,7 +909,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Umleitung Plug & Play werden soll.
+Gibt an, ob Plug & Play Umleitung zugelassen werden soll.
 
 <dt>
 
@@ -920,7 +920,7 @@ Gibt an, ob die Umleitung Plug & Play werden soll.
 
 </dt> <dd>
 
-Zulassen Plug & Play Umleitung.
+Lassen Sie Plug & Play Umleitung zu.
 
 </dd> <dt>
 
@@ -931,7 +931,7 @@ Zulassen Plug & Play Umleitung.
 
 </dt> <dd>
 
-Lassen Sie keine Plug & Play zu.
+Lassen Sie Plug & Play Umleitung nicht zu.
 
 </dd> </dl>
 
@@ -946,9 +946,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob **die AdvancedRemoteAppGraphics-Eigenschaft** durch die Server- oder Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **AdvancedRemoteAppGraphics-Eigenschaft** vom Server oder der Gruppenrichtlinie konfiguriert wird.
 
-**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht verfügbar, bevor Windows Server 2012 R2 und Windows 8.1.
+**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2012 R2 und Windows 8.1 nicht verfügbar.
 
 <dt>
 
@@ -981,7 +981,7 @@ Diese Eigenschaft ist nicht verfügbar.
 
 **Windows 7 und Windows Server 2008 R2: **
 
-Gibt an, ob **die AllowDwm-Eigenschaft** von der Server- oder Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **AllowDwm-Eigenschaft** durch den Server oder die Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1010,9 +1010,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob **die AudioCaptureRedir-Eigenschaft** durch die Server- oder Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **AudioCaptureRedir-Eigenschaft** vom Server oder der Gruppenrichtlinie konfiguriert wird.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
 
 <dt>
 
@@ -1041,7 +1041,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die AudioMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **AudioMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1077,9 +1077,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **wie die AVC444ModePreferredis-Eigenschaft** konfiguriert ist.
+Gibt an, wie die **Eigenschaft AVC444ModePreferredis** konfiguriert ist.
 
-**Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 10 oder Windows Server 2016.
+**Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 10 oder Windows Server 2016 nicht verfügbar.
 
 <dt>
 
@@ -1108,7 +1108,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt **an, ob die ClipboardMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **ClipboardMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1144,7 +1144,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die ColorDepth-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **ColorDepth-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1180,7 +1180,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die ColorDepthPolicy-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **ColorDepthPolicy-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1216,7 +1216,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die COMPortMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **COMPortMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1252,7 +1252,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die DefaultToClientPrinter-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **DefaultToClientPrinter-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1288,7 +1288,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die DriveMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **DriveMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1326,7 +1326,7 @@ Zugriffstyp: Schreibgeschützt
 
 Gibt an, wie **EncodeImageQualityi** konfiguriert ist.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
 
 <dt>
 
@@ -1355,9 +1355,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie **HardwareGraphicsAdapter** konfiguriert ist.
+Gibt an, wie der **HardwareGraphicsAdapter** konfiguriert ist.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
 
 <dt>
 
@@ -1386,7 +1386,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die LPTPortMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **LPTPortMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1422,7 +1422,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die MaxMonitors-Eigenschaft** vom Server, der Gruppenrichtlinie oder dem Standardwert konfiguriert wird.
+Gibt an, ob die **MaxMonitors-Eigenschaft** vom Server, der Gruppenrichtlinie oder der Standardeinstellung konfiguriert wird.
 
 <dt>
 
@@ -1447,7 +1447,7 @@ Standard
 
 </dd> </dl>
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
 
 </dd> <dt>
 
@@ -1460,9 +1460,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, **ob die Eigenschaften MaxXResolution** und **MaxYResolution** vom Server, der Gruppenrichtlinie oder dem Standardwert konfiguriert werden.
+Gibt an, ob die Eigenschaften **MaxXResolution** und **MaxYResolution** vom Server, der Gruppenrichtlinie oder der Standardeinstellung konfiguriert werden.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
 
 <dt>
 
@@ -1498,7 +1498,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob **die PNPRedirection-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **PNPRedirection-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1527,9 +1527,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie **RemoteSessionProfile** konfiguriert ist.
+Gibt an, wie **remoteSessionProfile** konfiguriert ist.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
 
 <dt>
 
@@ -1558,9 +1558,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie die **Eigenschaft SelectNetworkDetect** konfiguriert ist.
+Gibt an, wie die Eigenschaft **SelectNetworkDetect** konfiguriert ist.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
 
 <dt>
 
@@ -1589,9 +1589,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie die Eigenschaft **SelectTransport** konfiguriert ist.
+Gibt an, wie die **SelectTransport-Eigenschaft** konfiguriert ist.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
 
 <dt>
 
@@ -1620,9 +1620,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **VideoPlaybackRedir-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die VideoPlaybackRedir-Eigenschaft** von der Server- oder Gruppenrichtlinie konfiguriert wird.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
 
 <dt>
 
@@ -1651,7 +1651,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **WindowsPrinterMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, **ob die WindowsPrinterMapping-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -1687,15 +1687,15 @@ Datentyp: **uint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt das Profil für die RDP-Benutzeroberfläche an.
+Gibt das Profil für die RDP-Erfahrung an.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
 
 <dt>
 
 <span id="scale"></span><span id="SCALE"></span>
 
-**Skalierung** (1)
+**scale** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1716,7 +1716,7 @@ Gibt das Profil für die RDP-Benutzeroberfläche an.
 
 </dd> <dt>
 
-**Wählen SieNetworkDetect aus.**
+**SelectNetworkDetect**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint32**
@@ -1727,7 +1727,7 @@ Zugriffstyp: Lesen/Schreiben
 
 Gibt an, ob die Netzwerkerkennung verwendet wird.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
 
 <dt>
 
@@ -1741,27 +1741,27 @@ wird zur Verbindungszeit und im stabilen Zustand verwendet.
 1
 </dt> <dd>
 
-Zum Zeitpunkt der Verbindung deaktiviert
+Zur Verbindungszeit deaktiviert
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-deaktiviert im stabilen Zustand
+Deaktiviert im stabilen Zustand
 
 </dd> <dt>
 
 3
 </dt> <dd>
 
-deaktiviert zur Verbindungszeit und im stabilen Zustand.
+zur Verbindungszeit und im stabilen Zustand deaktiviert.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Auswählen von "Transport"**
+**Wählen SieTransport aus.**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint32**
@@ -1772,7 +1772,7 @@ Zugriffstyp: Lesen/Schreiben
 
 Gibt an, welche Transportprotokolle für den RDP-Zugriff auf den Server verwendet werden können.
 
-**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor Windows 8 oder Windows Server 2012 nicht verfügbar.
+**Windows 7, Windows Server 2008 R2, Windows Vista und Windows Server 2008:** Diese Eigenschaft ist vor dem Windows 8 oder Windows Server 2012.
 
 <dt>
 
@@ -1811,9 +1811,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. eine SMART-fähige Festplatte, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 <dt>
 
@@ -1886,7 +1886,7 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Terminals.
 
-Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ TerminalSetting geerbt.**](win32-terminalsetting.md)
 
 </dd> <dt>
 
@@ -1899,9 +1899,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Umleitung der Videowiedergabe zugelassen werden soll.
+Gibt an, ob die Umleitung der Videowiedergabe zulässig ist.
 
-**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist vor Windows Server 2008 R2 und Windows 7 nicht verfügbar.
+**Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht vor Windows Server 2008 R2 und Windows 7 verfügbar.
 
 <dt>
 
@@ -1991,7 +1991,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

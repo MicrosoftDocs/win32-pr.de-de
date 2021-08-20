@@ -1,5 +1,5 @@
 ---
-description: 'GetErrorEx-Methode der Msvm_ConcreteJob-Klasse: Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden.'
+description: 'GetErrorEx-Methode der Msvm_ConcreteJob Klasse: Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden.'
 ms.assetid: B4B4F60C-9221-4125-8D42-F0F1D32C3E79
 title: GetErrorEx-Methode der Msvm_ConcreteJob-Klasse
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118149793"
 ---
 # <a name="geterrorex-method-of-the-msvm_concretejob-class"></a>GetErrorEx-Methode der Msvm \_ ConcreteJob-Klasse
 
-Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**\_ Msvm-Fehlerinstanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **\_ Msvm-Fehlerinstanz** zurückgegeben.
+Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**Msvm \_ Error-Instanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **Msvm \_ Error-Instanz** zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 GetErrorEx(
 
 Typ: **\[ \] Zeichenfolge**
 
-Wenn der Betriebsstatus des Auftrags nicht 2 (OK) lautet, gibt diese Methode eine oder mehrere eingebettete Instanzen der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) lautet, wird **NULL** zurückgegeben.
+Wenn der Betriebsstatus des Auftrags nicht 2 (OK) ist, gibt diese Methode mindestens eine eingebettete Instanz der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) ist, wird **NULL** zurückgegeben.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -94,7 +94,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
+Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

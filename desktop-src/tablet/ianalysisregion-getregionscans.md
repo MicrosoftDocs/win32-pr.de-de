@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Array von Rechtecke ab, das den Bereich von ianalysisregion definiert.
+description: Ruft ein Array von Rechtecke ab, das den Bereich von IAnalysisRegion definiert.
 ms.assetid: 40de4c27-4b3b-4db3-af08-cb53e638db6b
-title: 'Ianalysisregion:: GetRegionScans-Methode (iacom. h)'
+title: IAnalysisRegion::GetRegionScans-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 6cb8db60b5818f5bc2bc38892912e9ec40af1eb9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e197126a99023fb96c2798343b391d53de4f6cd97aaaa141918f0fe705e5ad1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118045317"
 ---
-# <a name="ianalysisregiongetregionscans-method"></a>Ianalysisregion:: GetRegionScans-Methode
+# <a name="ianalysisregiongetregionscans-method"></a>IAnalysisRegion::GetRegionScans-Methode
 
-Ruft ein Array von Rechtecke ab, das den Bereich von [**ianalysisregion**](ianalysisregion.md)definiert.
+Ruft ein Array von Rechtecke ab, das den Bereich von [**IAnalysisRegion**](ianalysisregion.md)definiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,40 +40,40 @@ HRESULT GetRegionScans(
 
 <dl> <dt>
 
-*pulCount* \[ vorgenommen\]
+*pulCount* \[ out\]
 </dt> <dd>
 
-Die Anzahl der in *pregionscans* zurückgegebenen Rechtecke.
+Die Anzahl der in *pRegionScans zurückgegebenen* Rechtecke.
 
 </dd> <dt>
 
-*pregionscans* \[ vorgenommen\]
+*pRegionScans* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von Rechtecke, das den Bereich von [**ianalysisregion**](ianalysisregion.md)definiert.
+Ein Zeiger auf ein Array von Rechtecke, das den Bereich von [**IAnalysisRegion**](ianalysisregion.md)definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *pregionscans* als **null**-Werte übergangen werden, gibt die **GetRegionScans** -Methode **S \_ OK** zurück, und die Anzahl der Rechtecke wird in *pulCount* zurückgegeben.
+Wenn *pRegionScans* als **NULL** übergeben wird, gibt die **GetRegionScans-Methode** **S \_ OK** zurück, und die Anzahl der Rechtecke wird in *pulCount* zurückgegeben.
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher von \* *pregionscans* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Speicherverlust zu vermeiden, verwenden Sie [**CoTaskMemFree,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *pRegionScans* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
-Die Begrenzungen der Rechtecke befinden sich in frei Hand Raumkoordinaten.
+Die Begrenzungen der Rechtecke befinden sich in Freihandraumkoordinaten.
 
-Die Vereinigung der zurückgegebenen Rechtecke stellt den Bereich von [**ianalysisregion**](ianalysisregion.md)dar.
+Die Vereinigung der zurückgegebenen Rechtecke stellt den Bereich des [**IAnalysisRegion**](ianalysisregion.md)dar.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Rechtecke, die den Bereich von [**ianalysisregion**](ianalysisregion.md)definieren, `region` und nur die Anzahl der Rechtecke erhalten.
+Das folgende Beispiel zeigt, wie Die Rechtecke, die den Bereich von [**IAnalysisRegion**](ianalysisregion.md)definieren, `region` und nur die Anzahl der Rechtecke abrufen.
 
 
 ```C++
@@ -99,9 +99,9 @@ region->GetRegionScans(&number, NULL);
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -110,13 +110,13 @@ region->GetRegionScans(&number, NULL);
 
 <dl> <dt>
 
-[**Ianalysisregion**](ianalysisregion.md)
+[**IAnalysisRegion**](ianalysisregion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: GetBounds-Methode**](ianalysisregion-getbounds.md)
+[**IAnalysisRegion::GetBounds-Methode**](ianalysisregion-getbounds.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

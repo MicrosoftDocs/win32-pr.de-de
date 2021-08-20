@@ -1,23 +1,23 @@
 ---
-description: Der sprach Datentyp ist eine Text Zeichenfolge, die mindestens eine gültige numerische Sprach-ID enthält. Wenn zwei oder mehr Sprach-IDs vorhanden sind, müssen diese durch Kommas getrennt werden.
+description: Der Language-Datentyp ist eine Textzeichenfolge, die mindestens eine gültige numerische Sprach-IDs enthält. Wenn zwei oder mehr Sprach-IDs vorhanden sind, müssen sie durch Kommas getrennt werden.
 ms.assetid: 547fc662-f055-421e-a621-eecdfa0b13f6
 title: Sprache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fc87cb8b88dc3a693eee6890276adb67ad359e7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b98e24ec0ad4d4b42dfcba02374792e10ea117db474a973eae06336a55834538
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013128"
 ---
 # <a name="language"></a>Sprache
 
-Der sprach Datentyp ist eine Text Zeichenfolge, die mindestens eine gültige numerische Sprach-ID enthält. Wenn zwei oder mehr Sprach-IDs vorhanden sind, müssen diese durch Kommas getrennt werden.
+Der Language-Datentyp ist eine Textzeichenfolge, die mindestens eine gültige numerische Sprach-IDs enthält. Wenn zwei oder mehr Sprach-IDs vorhanden sind, müssen sie durch Kommas getrennt werden.
 
-Der sprach Datentyp ist ein 16-Bit-Wert, bei dem es sich um die Kombination aus einer primären und einer unter Sprachen numerischen ID handelt. Die primäre langid besteht aus den Bits 0 bis 9, während die unter Sprachen-ID Bits 10 bis 15 ist. Eine Liste der numerischen und numerischen IDs von Primär-und unter Sprachen finden Sie im Thema [sprach Bezeichner-Konstanten und-](../intl/language-identifier-constants-and-strings.md) Zeichen folgen.
+Der Language-Datentyp ist ein 16-Bit-Wert, der die Kombination aus einer primären und einer untersprachigen numerischen IDs ist. Die primäre LANGID besteht aus den Bits 0 bis 9, während die subLanguage-ID die Bits 10 bis 15 ist. Eine Liste der numerischen Bezeichner der primären und untergeordneten Sprache finden Sie im Thema [Konstanten und Zeichenfolgen für Sprachbezeichner.](../intl/language-identifier-constants-and-strings.md)
 
-Bei primären Sprach-IDs kann der Bereich von 0x200 bis 0x3ff vom Benutzer definiert werden. Der Bereich 0x000 bis 0x1FF ist für die Verwendung durch das System reserviert. Bei unter Sprachen-IDs ist der Bereich 0x20 bis 0x3f benutzerdefinierbar. Der Bereich 0x00 bis 0x1F ist für die Verwendung durch das System reserviert.
+Bei IDs der primären Sprache ist der Bereich, der 0x200 0x3ff ist, benutzerdefinierbar. Der bereich, der 0x1ff 0x000 wird, ist für die Systemverwendung reserviert. Bei Untersprache-IDs kann der Bereich, der 0x3f 0x20 wird, vom Benutzerdefinierbar sein. Der Bereich 0x00, der 0x1f werden soll, ist für die Systemverwendung reserviert.
 
  
 

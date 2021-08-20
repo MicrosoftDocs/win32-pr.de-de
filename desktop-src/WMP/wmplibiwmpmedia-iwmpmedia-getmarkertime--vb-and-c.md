@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia getmarkertime-Methode
-description: Die getmarkertime-Methode gibt die Zeit des Markers am angegebenen Index zurück.
+title: IWMPMedia getMarkerTime-Methode
+description: Die getMarkerTime-Methode gibt die Zeit des Markers am angegebenen Index zurück.
 ms.assetid: 1c617e3a-0978-479c-a636-b655082232c1
 keywords:
-- getmarkertime-Methode, Windows-Media Player
-- getmarkertime-Methode, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, getmarkertime-Methode
+- getMarkerTime-Windows Media Player
+- getMarkerTime-Methode Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , getMarkerTime-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df171977adeee3b597cab1f40469af1d975425c9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 293ad08137df1b87f47f614781d92be2b7c310fa7282cc234b38e1f3e0e63586
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118115691"
 ---
-# <a name="iwmpmediagetmarkertime-method"></a>Iwmpmedia:: getmarkertime-Methode
+# <a name="iwmpmediagetmarkertime-method"></a>IWMPMedia::getMarkerTime-Methode
 
-Die **getmarkertime** -Methode gibt die Zeit des Markers am angegebenen Index zurück.
+Die **getMarkerTime-Methode** gibt die Zeit des Markers am angegebenen Index zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,30 +53,30 @@ Implements IWMPMedia.getMarkerTime
 
 <dl> <dt>
 
-*Markernum* \[ in\]
+*MarkerNum* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der MarkerIndex ist.
+Ein **System.Int32,** das der Markerindex ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Double** -Wert, der die Markerzeit ist.
+Ein **System.Double,** das die Markerzeit ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt **null** zurück, wenn der angegebene Marker nicht vorhanden ist.
+Diese Methode gibt **NULL zurück,** wenn der angegebene Marker nicht vorhanden ist.
 
-Einige Medienelemente enthalten keine Marker. Verwenden Sie **markercount** , um herauszufinden, wie viele Marker im aktuellen Medien Element sind.
+Einige Medienelemente enthalten keine Marker. Verwenden **Sie markerCount,** um herauszufinden, wie viele Marker sich im aktuellen Medienelement befinden.
 
 Markerindexnummern beginnen bei 1.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **getmarkertime** verwendet, um ein mehrzeilige Textfeld mit der Position der einzelnen Marker auszufüllen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **getMarkerTime** verwendet, um ein mehrzeilenbasiertes Textfeld mit der Position der einzelnen Marker zu füllen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -151,10 +151,10 @@ End If
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. markercount (VB und c#)**](wmplibiwmpmedia-iwmpmedia-markercount--vb-and-c.md)
+[**IWMPMedia.markerCount (VB und C#)**](wmplibiwmpmedia-iwmpmedia-markercount--vb-and-c.md)
 </dt> </dl>
 
  

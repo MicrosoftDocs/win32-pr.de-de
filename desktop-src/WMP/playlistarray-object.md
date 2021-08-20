@@ -1,9 +1,9 @@
 ---
 title: PlaylistArray-Objekt
-description: Das PlaylistArray-Objekt bietet eine Möglichkeit, nach Indexnummer auf Wiedergabelisten zuzugreifen.
+description: Das PlaylistArray-Objekt bietet eine Möglichkeit, auf Wiedergabelisten nach Indexnummer zu zugreifen.
 ms.assetid: 8a29f36c-9c7c-4bc7-9adb-b34cc4231d81
 keywords:
-- PlaylistArray-Objekt Windows Media Player
+- PlaylistArray-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -22,13 +22,13 @@ ms.locfileid: "118334985"
 ---
 # <a name="playlistarray-object"></a>PlaylistArray-Objekt
 
-Das **PlaylistArray-Objekt** bietet eine Möglichkeit, nach Indexnummer auf Wiedergabelisten zuzugreifen.
+Das **PlaylistArray-Objekt** bietet eine Möglichkeit, auf Wiedergabelisten nach Indexnummer zu zugreifen.
 
 Das **PlaylistArray-Objekt** unterstützt die folgende Eigenschaft.
 
 
 
-| Eigenschaft                         | BESCHREIBUNG                                              |
+| Eigenschaft                         | Beschreibung                                              |
 |----------------------------------|----------------------------------------------------------|
 | [count](playlistarray-count.md) | Ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab. |
 
@@ -40,7 +40,7 @@ Das **PlaylistArray-Objekt** unterstützt die folgende Methode.
 
 
 
-| Methode                         | BESCHREIBUNG                                                              |
+| Methode                         | Beschreibung                                                              |
 |--------------------------------|--------------------------------------------------------------------------|
 | [item](playlistarray-item.md) | Ruft das [Playlist-Objekt](playlist-object.md) am angegebenen Index ab. |
 
@@ -48,25 +48,25 @@ Das **PlaylistArray-Objekt** unterstützt die folgende Methode.
 
  
 
-Der Zugriff auf das **PlaylistArray-Objekt** erfolgt über die folgenden Methoden.
+Auf **das PlaylistArray-Objekt** wird über die folgenden Methoden zugegriffen.
 
 
 
 | Object                                              | Methode                                                                                 |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------|
-| [PlaylistCollection](playlistcollection-object.md) | [getAll](playlistcollection-getall.md), [getByName](playlistcollection-getbyname.md) |
+| [PlaylistCollection](playlistcollection-object.md) | [getAll,](playlistcollection-getall.md) [getByName](playlistcollection-getbyname.md) |
 
 
 
  
 
-Zur Veranschaulichung *wird player verwendet.* *playlistCollection*. **getAll** wird in den Abschnitten zur Verweissyntax verwendet.
+Zur Veranschaulichung: *Player*. *playlistCollection*. **getAll** wird in den Abschnitten zur Referenzsyntax verwendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Objektmodellreferenz für Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für die Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
  

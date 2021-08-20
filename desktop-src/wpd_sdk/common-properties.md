@@ -1,5 +1,5 @@
 ---
-description: Windows Portable Geräte (WPD) unterstützen die folgenden Eigenschaften von Befehlsparametern.
+description: Windows Portable Devices (WPD) unterstützt die folgenden Eigenschaften von Befehlsparametern.
 ms.assetid: 03eff101-5c36-48ea-9dcd-2c4ee29a2ac6
 title: Befehlsparameter (PortableDevice.h)
 ms.topic: reference
@@ -22,22 +22,22 @@ ms.locfileid: "118431057"
 ---
 # <a name="command-parameters"></a>Befehlsparameter
 
-Windows Portable Geräte (WPD) unterstützen die folgenden Eigenschaften von Befehlsparametern.
+Windows Portable Devices (WPD) unterstützt die folgenden Eigenschaften von Befehlsparametern.
 
 
 
 
 | **Eigenschaft**                                            | **VarType**     | **Beschreibung**                                                                                                                                                              |
 |---------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ALLGEMEINE \_ \_ \_ \_ CLIENTINFORMATIONEN ZUR WPD-EIGENSCHAFT**          | **VT \_ UNKNOWN** | Eine [**IPortableDeviceValues-Schnittstelle,**](iportabledevicevalues.md) die der Treiber zum Identifizieren des Clients verwendet.                                                             |
-| **\_WPD-EIGENSCHAFT \_ ALLGEMEINER \_ \_ CLIENTINFORMATIONSKONTEXT \_** | **VT \_ LPWSTR**  | Ein vom Treiber angegebener Kontext, der einen Client für alle nachfolgenden Vorgänge identifiziert.                                                                                          |
-| **\_WPD-EIGENSCHAFT \_ : ALLGEMEINE \_ \_ BEFEHLSKATEGORIE**            | **VT \_ CLSID**   | Der **GUID-Teil** des **PROPERTYKEY-Werts** des Befehls.                                                                                                            |
-| **ALLGEMEINE \_ \_ \_ BEFEHLS-ID DER \_ WPD-EIGENSCHAFT**                  | **VT \_ UI4**     | Der PiD-Teil (Persistent Unique ID) des **PROPERTYKEY-Werts** des Befehls.                                                                                          |
-| **\_ \_ ALLGEMEINES \_ \_ BEFEHLSZIEL DER WPD-EIGENSCHAFT**              | **VT \_ LPWSTR**  | Der Zielobjektbezeichner.                                                                                                                                                |
-| **ALLGEMEINER \_ \_ \_ \_ TREIBERFEHLERCODE \_ FÜR WPD-EIGENSCHAFTEN**          | **VT \_ UI4**     | Ein treiberspezifischer Fehlercode, der von einem WPD-Treiber zurückgegeben wird.                                                                                                                       |
-| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**                      | **\_VT-FEHLER**   | Der **HRESULT-Wert, der** von einem WPD-Treiber für einen bestimmten Vorgang zurückgegeben wird.                                                                                                   |
-| **ALLGEMEINE \_ \_ \_ \_ OBJEKT-IDS DER WPD-EIGENSCHAFT**                  | **VT \_ UNKNOWN** | Eine [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) des **Variant-Typs VT \_ LPWSTR,** die eine Liste von Objektbezeichnern enthält. |
-| **ALLGEMEINE \_ \_ PERSISTENTE EINDEUTIGE IDS DER \_ \_ \_ WPD-EIGENSCHAFT**      | **VT \_ UNKNOWN** | Eine [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) des Variant-Typs **VT \_ LPWSTR,** die eine Liste von PIDs enthält.               |
+| **\_WPD-EIGENSCHAFT \_ – ALLGEMEINE \_ \_ CLIENTINFORMATIONEN**          | **VT \_ UNKNOWN** | Eine [**IPortableDeviceValues-Schnittstelle,**](iportabledevicevalues.md) die der Treiber zum Identifizieren des Clients verwendet.                                                             |
+| **\_WPD-EIGENSCHAFT: \_ ALLGEMEINE \_ \_ CLIENTINFORMATIONSKONTEXTE \_** | **VT \_ LPWSTR**  | Ein vom Treiber angegebener Kontext, der einen Client für alle nachfolgenden Vorgänge identifiziert.                                                                                          |
+| **\_WPD-EIGENSCHAFT \_ ALLGEMEINE \_ \_ BEFEHLSKATEGORIE**            | **VT \_ CLSID**   | Der **GUID-Teil** des **PROPERTYKEY-Werts** des Befehls.                                                                                                            |
+| **\_WPD-EIGENSCHAFT \_ : ALLGEMEINE \_ BEFEHLS-ID \_**                  | **VT \_ UI4**     | Der PiD-Teil (Persistent Unique ID) des **PROPERTYKEY-Werts** des Befehls.                                                                                          |
+| **\_WPD-EIGENSCHAFT \_ COMMON COMMAND \_ \_ TARGET**              | **VT \_ LPWSTR**  | Der Zielobjektbezeichner.                                                                                                                                                |
+| **\_WPD-EIGENSCHAFT \_ COMMON DRIVER \_ ERROR \_ \_ CODE**          | **VT \_ UI4**     | Ein treiberspezifischer Fehlercode, der von einem WPD-Treiber zurückgegeben wird.                                                                                                                       |
+| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**                      | **\_VT-FEHLER**   | Der **HRESULT-Wert,** der von einem WPD-Treiber für einen bestimmten Vorgang zurückgegeben wird.                                                                                                   |
+| **\_WPD-EIGENSCHAFT \_ : ALLGEMEINE \_ \_ OBJEKT-IDs**                  | **VT \_ UNKNOWN** | Eine [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) des Variantentyps **VT \_ LPWSTR,** die eine Liste von Objektbezeichnern enthält. |
+| **\_WPD-EIGENSCHAFT \_ COMMON PERSISTENT \_ UNIQUE \_ \_ IDS**      | **VT \_ UNKNOWN** | Eine [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) des Variantentyps **VT \_ LPWSTR,** die eine Liste von PIDs enthält.               |
 
 
 
@@ -53,7 +53,7 @@ Windows Portable Geräte (WPD) unterstützen die folgenden Eigenschaften von Bef
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

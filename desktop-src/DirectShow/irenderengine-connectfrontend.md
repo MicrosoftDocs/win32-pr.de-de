@@ -1,7 +1,7 @@
 ---
-description: Die connectfrontend-Methode erstellt das Front-End des Filter Diagramms aus der aktuellen Zeitachse.
+description: Die ConnectFrontEnd-Methode erstellt das Front-End des Filterdiagramms aus der aktuellen Zeitachse.
 ms.assetid: ac484fd6-b88d-4c3a-bc4d-f118083d706d
-title: 'Unenderengine:: connectfrontend-Methode (qedit. h)'
+title: IRenderEngine::ConnectFrontEnd-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 58ebd8e162f376b6ef942397e601139c46d8e4cf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b7e0b00d467eb56dabaf6623f129ed1eb82945a1add63386b2b21fb01f725082
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154037"
 ---
-# <a name="irenderengineconnectfrontend-method"></a>Unenderengine:: connectfrontend-Methode
+# <a name="irenderengineconnectfrontend-method"></a>IRenderEngine::ConnectFrontEnd-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Mit der- `ConnectFrontEnd` Methode wird das Front-End des Filter Diagramms aus der aktuellen Zeitachse erstellt.
+Die `ConnectFrontEnd` -Methode erstellt das Front-End des Filterdiagramms aus der aktuellen Zeitachse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,42 +45,42 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Rückgabewerte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Mögliche Rückgabewerte sind:
 
 
 
 | Rückgabecode                                                                                                  | Beschreibung                                                                    |
 |--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                         | Erfolg.<br/>                                                            |
-| <dl> <dt>**S \_ Warnung \_ outputreset**</dt> </dl>          | Der Renderingbereich des Diagramms wurde gelöscht.<br/>                         |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                 | Es wurde keine Zeitachse für diese Renderingengine<br/>                             |
-| <dl> <dt>**E \_ muss \_ Init \_ Renderer**</dt> </dl>       | Fehler beim Initialisieren der Rendering-Engine.<br/>                                 |
-| <dl> <dt>**E- \_ Rendering- \_ Engine \_ ist \_ beschädigt.**</dt> </dl> | Fehler beim Vorgang, da das Projekt nicht erfolgreich gerendert wurde.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>                 | Unerwarteter Fehler.<br/>                                                   |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl>      | Ungültiger Medientyp.<br/>                                                 |
+| <dl> <dt>**S \_ \_ WARNAUSGABERESET**</dt> </dl>          | Der Renderingteil des Diagramms wurde gelöscht.<br/>                         |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                 | Für diese Render-Engine ist keine Zeitachse festgelegt.<br/>                             |
+| <dl> <dt>**E \_ MUST \_ \_ INIT-RENDERER**</dt> </dl>       | Fehler beim Initialisieren der Render-Engine.<br/>                                 |
+| <dl> <dt>**DIE \_ \_ RENDER-ENGINE \_ IST \_ BESCHÄDIGT.**</dt> </dl> | Fehler beim Vorgang, weil das Projekt nicht erfolgreich gerendert wurde.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>                 | Unerwarteter Fehler.<br/>                                                   |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl>      | Ungültiger Medientyp.<br/>                                                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt nicht den renderingteil des Filter Diagramms. Die Anwendung muss die Ausgabe Pins auf dem Front-End mit den gewünschten renderingfiltern verbinden:
+Diese Methode führt nicht zum Erstellen des Renderingbereichs des Filterdiagramms. Die Anwendung muss die Ausgabepins am Front-End mit den gewünschten Renderingfiltern verbinden:
 
--   Um die Vorschau anzuzeigen, wenden Sie die Methode " [**irienderengine:: renderoutputpins**](irenderengine-renderoutputpins.md) " an.
--   Um eine Datei auszugeben, rufen Sie die Datei " [**faienderengine:: getgroupoutputpin**](irenderengine-getgroupoutputpin.md) " auf, um die Ausgabe-PIN für jede Gruppe abzurufen, und verbinden Sie dann die Pins mit einem Multiplexer-Filter.
+-   Um eine Vorschau anzuzeigen, rufen Sie die [**IRenderEngine::RenderOutputPins-Methode**](irenderengine-renderoutputpins.md) auf.
+-   Rufen Sie zum Ausgabe einer Datei [**IRenderEngine::GetGroupOutputPin**](irenderengine-getgroupoutputpin.md) auf, um den Ausgabepin für jede Gruppe abzurufen, und verbinden Sie dann die Stecknadeln mit einem Multiplexerfilter.
 
-Wenn Sie die einfache Renderingengine verwenden, erzeugen die Ausgabe Pins auf dem Front-End unkomprimierte Daten. Wenn Sie die Smart-Rendering-Engine verwenden, erzeugen die Ausgabe Pins komprimierte Daten.
+Wenn Sie die einfache Render-Engine verwenden, erzeugen die Ausgabepins am Front-End unkomprimierte Daten. Wenn Sie die intelligente Render-Engine verwenden, erzeugen die Ausgabepins komprimierte Daten.
 
-Wenn Sie die Zeitachse nach dem Erstellen des Filter Diagramms ändern, müssen Sie erneut einen Aufruf `ConnectFrontEnd` zum erneuten Erstellen des Front-Ends durchsetzen. Die-Methode behält den Renderingbereich des Diagramms bei, wenn möglich. Wenn Sie jedoch eine Gruppe hinzufügen oder löschen oder die Reihenfolge der Gruppen ändern, `ConnectFrontEnd` Löscht den renderingteil, und die Anwendung muss Sie neu erstellen. Wenn die-Methode den renderingteil löscht, gibt Sie "S \_ Warn \_ outputreset" zurück.
+Wenn Sie die Zeitachse nach dem Erstellen des Filterdiagramms ändern, müssen Sie erneut aufrufen, `ConnectFrontEnd` um das Front-End neu zu erstellen. Die -Methode behält nach Möglichkeit den Renderingteil des Diagramms bei. Wenn Sie jedoch eine Gruppe hinzufügen oder löschen oder die Reihenfolge der Gruppen ändern, wird der Renderingteil gelöscht, und Ihre Anwendung `ConnectFrontEnd` muss ihn neu erstellen. Wenn die Methode den Renderingteil löscht, gibt sie S \_ WARN \_ OUTPUTRESET zurück.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -90,8 +90,8 @@ Wenn Sie die Zeitachse nach dem Erstellen des Filter Diagramms ändern, müssen 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -99,10 +99,10 @@ Wenn Sie die Zeitachse nach dem Erstellen des Filter Diagramms ändern, müssen 
 
 <dl> <dt>
 
-[**Schnittstelle ""**](irenderengine.md)
+[**IRenderEngine-Schnittstelle**](irenderengine.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

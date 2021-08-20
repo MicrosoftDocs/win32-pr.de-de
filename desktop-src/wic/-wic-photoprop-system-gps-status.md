@@ -1,7 +1,7 @@
 ---
-description: Die Richtlinie für Fotometadaten für die System.GPS.Status-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.Status-Eigenschaft.
 ms.assetid: 74ea0384-3b1f-4d5e-8713-7b3936813a3a
-title: Richtlinie für System.GPS.Status-Fotometadaten
+title: System.GPS.Status Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: a99237b9fe14d9adbc97dd5de95158a8aa714caaa4a0a8440d9f3798a2155d20
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118710515"
 ---
-# <a name="systemgpsstatus-photo-metadata-policy"></a>Richtlinie für System.GPS.Status-Fotometadaten
+# <a name="systemgpsstatus-photo-metadata-policy"></a>System.GPS.Status Photo Metadata Policy
 
-Die Richtlinie für Fotometadaten für die [System.GPS.Status-Eigenschaft.](../properties/props-system-gps-status.md)
+Die Fotometadatenrichtlinie für die [System.GPS.Status-Eigenschaft.](../properties/props-system-gps-status.md)
 
 ### <a name="pkey"></a>PKEY
 
-PKEY \_ GPS \_ Status
+PKEY \_ \_ GPS-Status
 
 ### <a name="containers"></a>Container
 
@@ -31,13 +31,13 @@ Nein
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
+### <a name="input-propvariant-type"></a>Propvariant-Eingabetyp
 
 VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus verschiedenen Schemas werden abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 

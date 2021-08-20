@@ -1,41 +1,41 @@
 ---
-title: Empfangen von Fehlern für IAccessible-Schnittstellen Zeiger
-description: In diesem Thema werden Situationen beschrieben, in denen Sie möglicherweise einen Fehler für einen IAccessible-Schnittstellen Zeiger erhalten.
+title: Empfangen von Fehlern für IAccessible-Schnittstellenzeker
+description: In diesem Thema werden Situationen beschrieben, in denen sie möglicherweise einen Fehler für einen IAccessible-Schnittstellenzeiger erhalten.
 ms.assetid: 408bfa47-fda0-4a25-89c1-da41d967ad61
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e54d3bd9e39dae9c5de9ad1644e5955bd5fb90d2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4d36a29c688966526d5431e1fe2f643e39b378779d122d22f38dea2089a5191c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118115141"
 ---
-# <a name="receiving-errors-for-iaccessible-interface-pointers"></a>Empfangen von Fehlern für IAccessible-Schnittstellen Zeiger
+# <a name="receiving-errors-for-iaccessible-interface-pointers"></a>Empfangen von Fehlern für IAccessible-Schnittstellenzeker
 
-In diesem Thema werden Situationen beschrieben, in denen Sie möglicherweise einen Fehler für einen [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstellen Zeiger erhalten. **IAccessible** -Funktionen können Fehler für **IAccessible** -Schnittstellen Zeiger zurückgeben, wenn ein Benutzer eine Anwendung schließt, zu der das Objekt gehört, oder wenn ein Benutzer ein Steuerelement über die Benutzeroberfläche abschließt.
+In diesem Thema werden Situationen beschrieben, in [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) denen sie möglicherweise einen Fehler für einen IAccessible-Schnittstellenzeiger erhalten. **IAccessible-Funktionen** können Fehler für **IAccessible-Schnittstellenzeker** zurückgeben, wenn ein Benutzer eine Anwendung schließt, zu der das Objekt gehört, oder wenn ein Benutzer ein Steuerelement über die Benutzeroberfläche verlässt.
 
-## <a name="user-closes-an-application"></a>Benutzer schließt eine Anwendung.
+## <a name="user-closes-an-application"></a>Benutzer schließt eine Anwendung
 
-Wenn ein Benutzer die Anwendung schließt, die ein Objekt enthält, auf das der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstellen Zeiger verweist, wird bei allen zukünftigen Aufrufen dieses Objekts ein Fehlercode zurückgegeben. Der Fehler, wie z **. \_ b. Co E \_ objnotconnected**, gibt an, dass das Objekt nicht mehr vorhanden ist. Dies gilt für alle **IAccessible** -Schnittstellen Zeiger.
+Wenn ein Benutzer die Anwendung schließt, die [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) ein Objekt enthält, auf das der IAccessible-Schnittstellenzeiger gezeigert hat, geben alle zukünftigen Aufrufe dieses Objekts einen Fehlercode zurück. Der Fehler, z. **B. CO \_ E \_ OBJNOTCONNECTED,** gibt an, dass das Objekt nicht mehr vorhanden ist. Dies gilt für alle **IAccessible-Schnittstellenzeker.**
 
-## <a name="user-dismisses-a-control"></a>Benutzer lehnt ein Steuerelement ab.
+## <a name="user-dismisses-a-control"></a>Benutzer verlässt ein Steuerelement
 
-Wenn ein Benutzer ein Steuerelement abschließt (z. b. durch Drücken einer Schaltfläche "Push"), können Clients weiterhin [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden und-Eigenschaften für dieses Objekt aufzurufen, da das Objekt nicht freigegeben wurde. Zukünftige Aufrufe empfangen jedoch Fehlermeldungen.
+Wenn ein Benutzer ein Steuerelement verlässt (z. B. durch Drücken einer Pushschaltfläche), können Clients weiterhin [**IAccessible-Methoden**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) und -Eigenschaften für dieses Objekt aufrufen, da das Objekt nicht freigegeben wurde. Zukünftige Aufrufe erhalten jedoch Fehlermeldungen.
 
-Diese Situation gilt für die folgenden Funktionen und Methoden:
+Dies gilt für die folgenden Funktionen und Methoden:
 
--   [**Accessibleobjectfromevent**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromevent)
--   [**Accessibleobjectfrompoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
--   [**Accessibleobjectfromwindow**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromwindow)
--   [**IAccessible:: accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
--   [**IAccessible:: accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate)
--   [**IAccessible:: get- \_ Fokus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)
--   [**IAccessible:: get- \_ accSelection**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection)
+-   [**AccessibleObjectFromEvent**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromevent)
+-   [**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
+-   [**AccessibleObjectFromWindow**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromwindow)
+-   [**IAccessible::accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
+-   [**IAccessible::accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate)
+-   [**IAccessible::get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)
+-   [**IAccessible::get \_ accSelection**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accselection)
 
- 
+ 
 
- 
+ 
 
 
 

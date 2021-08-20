@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETPALETTE Meldung (VFW. h)
-description: Die mciwndm \_ getpalette-Nachricht Ruft ein Handle der Palette ab, die von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des mciwndgetpalette-Makros senden.
+title: MCIWNDM_GETPALETTE Nachricht (Vfw.h)
+description: Die MCIWNDM \_ GETPALETTE-Nachricht ruft ein Handle der Palette ab, die von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetPalette-Makros senden.
 ms.assetid: f8426344-0fee-4419-9d8a-dcee26cb4c28
 keywords:
-- MCIWNDM_GETPALETTE-Nachricht (Multimedia)
+- MCIWNDM_GETPALETTE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: faec3dd5d9c401d943fbc55ca58e452d3fb25497
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 319fe1fedc21c064896c3316d0a45132c034b73c25bf107ee667269a13ed678b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137701"
 ---
-# <a name="mciwndm_getpalette-message"></a>Mciwndm \_ getpalette-Nachricht
+# <a name="mciwndm_getpalette-message"></a>MCIWNDM \_ GETPALETTE-Nachricht
 
-Die **mciwndm \_ getpalette** -Nachricht Ruft ein Handle der Palette ab, die von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**mciwndgetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette) -Makros senden.
+Die **MCIWNDM \_ GETPALETTE-Nachricht** ruft ein Handle der Palette ab, die von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetPalette-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle der Palette zurück, wenn erfolgreich.
+Gibt bei Erfolg das Handle der Palette zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt das Handle der Palette zurück, wenn erfolgreich.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,7 +54,7 @@ Gibt das Handle der Palette zurück, wenn erfolgreich.
 
 <dl> <dt>
 
-[**Mciwndgetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette)
+[**MCIWndGetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette)
 </dt> </dl>
 
  

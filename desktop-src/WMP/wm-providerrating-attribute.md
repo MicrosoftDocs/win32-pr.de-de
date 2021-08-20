@@ -1,9 +1,9 @@
 ---
-title: WM/providerrating-Attribut
-description: Das WM/providerrating-Attribut ist die Bewertung des Elements, das vom Anbieter der Attributwerte zugewiesen wird.
+title: WM/ProviderRating-Attribut
+description: Das WM/ProviderRating-Attribut ist die Bewertung des Elements, das vom Anbieter der Attributwerte zugewiesen wird.
 ms.assetid: a1a76560-a8d9-486a-badc-56d7bf488c10
 keywords:
-- WM/providerrating-Attribut, Windows Media Player
+- WM/ProviderRating-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc0f71985d948e59b8c0f98d50445a48263d67cf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ddcff262f21b4f31daff6f704dba1cb096f54bb295a21a3ae9a7c90f574af34f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116606"
 ---
-# <a name="wmproviderrating-attribute"></a>WM/providerrating-Attribut
+# <a name="wmproviderrating-attribute"></a>WM/ProviderRating-Attribut
 
-Das **WM/providerrating-** Attribut ist die Bewertung des Elements, das vom Anbieter der Attributwerte zugewiesen wird.
+Das **WM/ProviderRating-Attribut** ist die Bewertung des Elements, das vom Anbieter der Attributwerte zugewiesen wird.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [CD-Wiedergabelisten](cd-playlist-attributes.md)
 -   [CD-Spuren](cd-track-attributes.md)
--   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateiattribute](commonly-used-windows-media-file-attributes.md)
 -   [DVDs](dvd-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek (oder im Cache) als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek (oder im Cache) als auch in der digitalen Mediendatei gespeichert.
 
-Die **Bewertung** ist ein Alias für dieses Attribut.
+**Rating** ist ein Alias für dieses Attribut.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmproviderrating.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMProviderRating.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

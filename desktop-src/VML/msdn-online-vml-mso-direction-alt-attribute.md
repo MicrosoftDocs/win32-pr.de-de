@@ -1,26 +1,26 @@
 ---
-title: VML mso-Direction-alt-Attribut
-description: VML mso-Direction-alt-Attribut
+title: VML MSO-Direction-Alt-Attribut
+description: VML MSO-Direction-Alt-Attribut
 ms.assetid: b507d1d7-98d7-4814-81ac-de101d777710
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd1ca0612682b53b5e50d7bd0e3d3330758939aa
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 024b3fc97ea8cdccb32d16cbbaab4432ef74bca5f71daece000e0231250c85f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118124310"
 ---
-# <a name="vml-mso-direction-alt-attribute"></a>VML mso-Direction-alt-Attribut
+# <a name="vml-mso-direction-alt-attribute"></a>VML MSO-Direction-Alt-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine Alternative Richtung für Text in Textfeldern. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert eine alternative Richtung für Text in Textboxen. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Definiert eine Alternative Richtung für Text in Textfeldern. Lese-/Schreibzugri
 
 **Tagsyntax**
 
-<v: *Element* Style = "mso-Direction-alt: *Expression* " >
+<v: *element* style="mso-direction-alt: *expression* ">
 
 **Anmerkungen**
 
-Wenn der Wert des [Direction](msdn-online-vml-direction-attribute.md) -Attributs " **context**" ist, wird das Attribut " **mso-Direction-alt** " verwendet, und sein Wert ist ebenfalls " **context**".
+Wenn der Wert des [Direction-Attributs](msdn-online-vml-direction-attribute.md) ein **Kontext** ist, wird das **MSO-Direction-Alt-Attribut** verwendet, und sein Wert ist ebenfalls **Kontext.**
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

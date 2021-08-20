@@ -1,35 +1,35 @@
 ---
 title: Abrufen der SACL eines Objekts
-description: Die Sicherheits Beschreibung eines Objekts in Active Directory Domain Services kann eine SACL (System Access-Control List) enthalten.
+description: Die Sicherheitsbeschreibung eines Objekts in Active Directory Domain Services kann eine Systemzugriffssteuerungsliste (SACL) enthalten.
 ms.assetid: b1da91a2-d9b0-48a3-9de5-1e588209032d
 ms.tgt_platform: multiple
 keywords:
-- SACL-AD
-- SACL AD, Abrufen der SACL eines Objekts
+- SACL AD
+- SACL AD , Abrufen der SACL eines Objekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 537846f2080aecdab8e22f5fce5bdfa36298fb74
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: f2b259ba838dbd0245725990a0c849ec4c3543b2bcac0e3c1e90dd7abd873c91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104314612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118184178"
 ---
 # <a name="retrieving-an-objects-sacl"></a>Abrufen der SACL eines Objekts
 
-Die Sicherheits Beschreibung eines Objekts in Active Directory Domain Services kann eine SACL (System Access-Control List) enthalten. Eine SACL enthält Zugriffs Steuerungs Einträge (Access Control Entries, ACEs), die die Typen der Zugriffsversuche angeben, mit denen Überwachungsdaten Sätze im Sicherheits Ereignisprotokoll eines Domänen Controllers generiert werden. Beachten Sie, dass eine SACL Protokolleinträge nur auf dem Domänen Controller generiert, auf dem der Zugriffs Versuch aufgetreten ist, nicht auf allen Domänen Controllern, die ein Replikat des Objekts enthalten.
+Die Sicherheitsbeschreibung eines Objekts in Active Directory Domain Services kann eine Systemzugriffssteuerungsliste (SACL) enthalten. Eine SACL enthält Zugriffssteuerungseinträge (Access Control Entries, ACEs), die die Typen von Zugriffsversuchen angeben, die Überwachungsdatensätze im Sicherheitsereignisprotokoll eines Domänencontrollers generieren. Beachten Sie, dass eine SACL Protokolleinträge nur auf dem Domänencontroller generiert, auf dem der Zugriffsversuch aufgetreten ist, nicht auf jedem Domänencontroller, der ein Replikat des Objekts enthält.
 
-Um die SACL aus einer Objekt Sicherheits Beschreibung festzulegen oder zu erhalten, muss die Berechtigung " **SE \_ Security \_ Name** " im Zugriffs Token des anfordernden Threads aktiviert werden. Die Administratoren Gruppe verfügt standardmäßig über diese Berechtigung und kann anderen Benutzern oder Gruppen zugewiesen werden. Weitere Informationen finden Sie unter [SACL-Zugriffsrecht](/windows/desktop/SecAuthZ/sacl-access-right).
+Zum Festlegen oder Abrufen der SACL aus einem Objektsicherheitsdeskriptor muss die **SE \_ SECURITY \_ NAME-Berechtigung** im Zugriffstoken des anfordernden Threads aktiviert sein. Die Administratorengruppe verfügt standardmäßig über diese Berechtigung und kann anderen Benutzern oder Gruppen zugewiesen werden. Weitere Informationen finden Sie unter [SACL-Zugriffsrecht.](/windows/desktop/SecAuthZ/sacl-access-right)
 
-Um die SACL eines Verzeichnis Objekts zu erhalten und festzulegen, verwenden Sie die [**IADsSecurityDescriptor**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) -Schnittstelle. Mithilfe von C++ gibt die [**IADsSecurityDescriptor:: get \_ SystemAcl**](/windows/desktop/ADSI/iadssecuritydescriptor-property-methods) -Methode einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger zurück. Aufrufen von **QueryInterface** für diesen **IDispatch** -Zeiger, um eine [**IADsAccessControlList**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrollist) -Schnittstelle abzurufen, und verwenden die Methoden für diese Schnittstelle, um auf die einzelnen ACEs in der SACL zuzugreifen. Weitere Informationen zur Vorgehensweise beim Ändern einer SACL, die dem zum Ändern einer DACL ähnelt, finden Sie unter [Festlegen von Zugriffsrechten für ein Objekt](setting-access-rights-on-an-object.md).
+Verwenden Sie die [**IADsSecurityDescriptor-Schnittstelle,**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) um die SACL eines Verzeichnisobjekts abzurufen und festzulegen. Mit C++ gibt die [**IADsSecurityDescriptor::get \_ SystemAcl-Methode**](/windows/desktop/ADSI/iadssecuritydescriptor-property-methods) einen [**IDispatch-Zeiger**](/windows/win32/api/oaidl/nn-oaidl-idispatch) zurück. Rufen Sie **QueryInterface** für diesen **IDispatch-Zeiger** auf, um eine [**IADsAccessControlList-Schnittstelle**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrollist) abzurufen, und verwenden Sie die Methoden auf dieser Schnittstelle, um auf die einzelnen ACEs in der SACL zuzugreifen. Weitere Informationen zum Verfahren zum Ändern einer SACL, die dem Verfahren zum Ändern einer DACL ähnelt, finden Sie unter [Festlegen von Zugriffsrechten für ein Objekt.](setting-access-rights-on-an-object.md)
 
-Um die ACEs in einer SACL aufzulisten, verwenden Sie die [**IADsAccessControlList:: get \_ \_ NewEnum**](/windows/desktop/api/iads/nf-iads-iadsaccesscontrollist-get__newenum) -Methode, die einen [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger zurückgibt. Ruft **QueryInterface** für diesen **IUnknown** -Zeiger auf, um eine [**IEnumVARIANT**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Schnittstelle zu erhalten. Verwenden Sie die [**IEnumVARIANT:: Next**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-next) -Methode, um die ACEs in der ACL aufzuzählen. Jeder ACE wird als **Variant** zurückgegeben, der einen [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeiger enthält. Beachten Sie, dass das **VT** -Element **VT \_ Dispatch** ist. Ruft **QueryInterface** für diesen **IDispatch** -Zeiger auf, um eine [**IADsAccessControlEntry**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrolentry) -Schnittstelle für den ACE zu erhalten. Verwenden Sie die **IADsAccessControlEntry** -Schnittstellen Methoden, um die Komponenten eines ACE festzulegen oder zu erhalten.
+Um die ACEs in einer SACL aufzulisten, verwenden Sie die [**IADsAccessControlList::get \_ \_ NewEnum-Methode,**](/windows/desktop/api/iads/nf-iads-iadsaccesscontrollist-get__newenum) die einen [**IUnknown-Zeiger**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zurückgibt. Rufen Sie **QueryInterface** für diesen **IUnknown-Zeiger** auf, um eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) abzurufen. Verwenden Sie die [**IEnumVARIANT::Next-Methode,**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-next) um die ACEs in der ACL aufzuzählen. Jeder ACE wird als **VARIANT** zurückgegeben, der einen [**IDispatch-Zeiger**](/windows/win32/api/oaidl/nn-oaidl-idispatch) enthält. Beachten Sie, dass der **vt-Member** **VT \_ DISPATCH** ist. Rufen Sie **QueryInterface** für diesen **IDispatch-Zeiger** auf, um eine [**IADsAccessControlEntry-Schnittstelle**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrolentry) für den ACE abzurufen. Verwenden Sie die **IADsAccessControlEntry-Schnittstellenmethoden,** um die Komponenten eines ACE festzulegen oder abzurufen.
 
 Weitere Informationen zu SACLs finden Sie unter:
 
--   [Zugriffs Steuerungs Listen (ACLs)](/windows/desktop/SecAuthZ/access-control-lists)
+-   [Zugriffssteuerungslisten (ACLs)](/windows/desktop/SecAuthZ/access-control-lists)
 -   [Generierung von Überwachungsdatensätzen](/windows/desktop/SecAuthZ/audit-generation)
 
- 
+ 
 
- 
+ 

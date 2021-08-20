@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentexistinglogffleisnotcontiguousexception-Konstruktor'
-title: Esentexistinglogfsnotcontiguousexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentExistingLogFileIsNotContiguousException-Konstruktor'
+title: EsentExistingLogFileIsNotContiguousException-Konstruktor
 TOCTitle: 'EsentExistingLogFileIsNotContiguousException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentExistingLogFileIsNotContiguousException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentexistinglogfileisnotcontiguousexception.esentexistinglogfileisnotcontiguousexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f42b5dcf5d42bf1ee41c748b918ce46117c9b6d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8efd2957606e5d042cca71aedd08891bfe784e0f1e4bc46a01714d5d27eed4e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118082050"
 ---
-# <a name="esentexistinglogfileisnotcontiguousexception-constructor"></a>Esentexistinglogfsnotcontiguousexception-Konstruktor
+# <a name="esentexistinglogfileisnotcontiguousexception-constructor"></a>EsentExistingLogFileIsNotContiguousException-Konstruktor
 
-Initialisiert eine neue Instanz der esentexistinglogfspleisnotcontiguousexception-Klasse.
+Initialisiert eine neue Instanz der EsentExistingLogFileIsNotContiguousException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentExistingLogFileIsNotContiguousException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentexistinglogfsnotcontiguousexception-Klasse](./esentexistinglogfileisnotcontiguousexception-class.md)
+[EsentExistingLogFileIsNotContiguousException-Klasse](./esentexistinglogfileisnotcontiguousexception-class.md)
 
-[Esentexistinglogfsnotcontiguousexception-Elemente](./esentexistinglogfileisnotcontiguousexception-members.md)
+[EsentExistingLogFileIsNotContiguousException-Member](./esentexistinglogfileisnotcontiguousexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

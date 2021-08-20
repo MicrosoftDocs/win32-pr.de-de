@@ -1,9 +1,9 @@
 ---
-title: ICM_COMPRESS_FRAMES_INFO Meldung (VFW. h)
-description: In der Info Meldung zum ICM- \_ komprimieren wird \_ \_ ein Komprimierungs Treiber benachrichtigt, um die Parameter für die ausstehende Komprimierung festzulegen.
+title: ICM_COMPRESS_FRAMES_INFO Nachricht (Vfw.h)
+description: Die \_ ICM COMPRESS \_ FRAMES \_ INFO-Meldung benachrichtigt einen Komprimierungstreiber, die Parameter für die ausstehende Komprimierung festzulegen.
 ms.assetid: d2f6f3b7-dff6-4fef-a642-cb77b00119af
 keywords:
-- ICM_COMPRESS_FRAMES_INFO-Nachricht (Multimedia)
+- ICM_COMPRESS_FRAMES_INFO nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cbb6df0eab7706ebfc03a5e3069d4323be26ecdb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2382a930b0ce12e212adf78ddaf3c7e1b3300e47597b4671d0eae223cb536f73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140911"
 ---
-# <a name="icm_compress_frames_info-message"></a>ICM- \_ Informationen zum Komprimieren von \_ Frames \_
+# <a name="icm_compress_frames_info-message"></a>\_ICM COMPRESS \_ FRAMES \_ INFO message
 
-In der **\_ \_ \_ Info Meldung zum ICM-komprimieren** wird ein Komprimierungs Treiber benachrichtigt, um die Parameter für die ausstehende Komprimierung festzulegen.
+Die **ICM COMPRESS FRAMES \_ \_ \_ INFO-Meldung** benachrichtigt einen Komprimierungstreiber, die Parameter für die ausstehende Komprimierung festzulegen.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = sizeof(ICCOMPRESSFRAMES);
 
 <dl> <dt>
 
-<span id="icf"></span><span id="ICF"></span>*ICF*
+<span id="icf"></span><span id="ICF"></span>*Icf*
 </dt> <dd>
 
-Zeiger auf eine [**iccompressframes**](/windows/desktop/api/Vfw/ns-vfw-iccompressframes) -Struktur. Die **GetData** -und **putdata** -Member dieser Struktur werden mit dieser Nachricht nicht verwendet.
+Zeiger auf eine [**ICCOMPRESSFRAMES-Struktur.**](/windows/desktop/api/Vfw/ns-vfw-iccompressframes) Die **Elemente GetData** und **PutData** dieser Struktur werden nicht mit dieser Nachricht verwendet.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Größe von [**iccompressframes**](/windows/desktop/api/Vfw/ns-vfw-iccompressframes)in Bytes.
+Größe von [**ICCOMPRESSFRAMES**](/windows/desktop/api/Vfw/ns-vfw-iccompressframes)in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein-Kompressor kann diese Meldung verwenden, um zu bestimmen, wie viel Speicherplatz für jeden Frame während der Komprimierung belegt werden soll.
+Ein Sprecher kann diese Meldung verwenden, um zu bestimmen, wie viel Speicherplatz für jeden Frame während der Komprimierung belegt werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Ein-Kompressor kann diese Meldung verwenden, um zu bestimmen, wie viel Speicherp
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Ein-Kompressor kann diese Meldung verwenden, um zu bestimmen, wie viel Speicherp
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

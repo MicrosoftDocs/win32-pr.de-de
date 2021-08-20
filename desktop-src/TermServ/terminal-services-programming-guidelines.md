@@ -1,23 +1,23 @@
 ---
-title: Programmier Richtlinien für Remotedesktopdienste
-description: Themen, in denen Richtlinien zum Entwickeln von Anwendungen in einer Remotedesktopdienste Umgebung bereitgestellt werden.
+title: Remotedesktopdienste Programmierrichtlinien
+description: Themen, die Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste bereitstellen.
 ms.assetid: e0cd52c5-40d7-4a48-9d10-fdbcea46a5a0
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, Programmier Richtlinien
-- Programmier Richtlinien Remotedesktopdienste
+- Remotedesktopdienste Remotedesktopdienste , Programmierrichtlinien
+- Programmierrichtlinien Remotedesktopdienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e767740a2f279c90ce4f0eb37c49919749465ad1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2f1f935ada4dfe486b418b5ec3b6f347eb6166e6b392a3adc1bd8c1e5987a773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999870"
 ---
-# <a name="remote-desktop-services-programming-guidelines"></a>Programmier Richtlinien für Remotedesktopdienste
+# <a name="remote-desktop-services-programming-guidelines"></a>Remotedesktopdienste Programmierrichtlinien
 
-Die meisten vorhandenen Windows-basierten 32-Bit-oder 64-Bit-Anwendungen werden "unverändert" in einer Remotedesktopdienste-Umgebung (ehemals "Terminal Services" genannt) ausgeführt. Einige Anwendungen funktionieren jedoch ordnungsgemäß und funktionieren gut in einer Remotedesktopdienste Umgebung, andere hingegen nicht. Die folgenden Themen bieten Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste Umgebung.
+Die meisten vorhandenen 32-Bit- oder 64-Bit-Windows-basierten Anwendungen werden in einer Remotedesktopdienste-Umgebung (früher als Terminaldienste bezeichnet) "wie begehbar" ausgeführt. Einige Anwendungen funktionieren jedoch ordnungsgemäß und funktionieren in einer Remotedesktopdienste, andere nicht. Die folgenden Themen enthalten Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste Umgebung.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -26,25 +26,25 @@ Die meisten vorhandenen Windows-basierten 32-Bit-oder 64-Bit-Anwendungen werden 
 [Richtlinien für mehrere Benutzer](multiple-user-guidelines.md)
 </dt> <dd>
 
-Richtlinien für die Entwicklung von Anwendungen für mehrere Benutzer in einer Remotedesktopdienste Umgebung.
+Richtlinien für die Entwicklung von Anwendungen für mehrere Benutzer in Remotedesktopdienste Umgebung.
 
 </dd> <dt>
 
 [Leistungsrichtlinien](performance-guidelines.md)
 </dt> <dd>
 
-Richtlinien für die Entwicklung von Anwendungen, die in einer Remotedesktopdienste Umgebung eine gute Leistung erbringen.
+Richtlinien für die Entwicklung von Anwendungen, die eine gute Leistung in einer Remotedesktopdienste bieten.
 
 </dd> <dt>
 
-[Allgemeine Programmier Richtlinien](general-programming-guidelines.md)
+[Allgemeine Programmierrichtlinien](general-programming-guidelines.md)
 </dt> <dd>
 
 Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste Umgebung.
 
 </dd> </dl>
 
-Viele dieser Richtlinien sind gute Programmierverfahren, die Anwendungen profitieren, die in jeder Windows-Umgebung ausgeführt werden. Einige empfohlene Optimierungen, wie z. b. das Einschränken von grafischen Effekten, sind jedoch Optimierungen, die Sie nur dann wünschen, wenn Ihre Anwendung unter Remotedesktopdienste ausgeführt wird. Ein Codebeispiel, in dem gezeigt wird, wie eine Remotedesktopdienste Umgebung erkannt wird, finden Sie unter [erkennen der Remotedesktopdienste Umgebung](detecting-the-terminal-services-environment.md).
+Viele dieser Richtlinien sind bewährte Programmiermethoden, von denen Anwendungen profitieren, die in jeder Windows werden. Einige empfohlene Optimierungen, z. B. das Einschränken von grafikgesteuerten Effekten, sind jedoch Optimierungen, die Sie nur wünschen, wenn Ihre Anwendung unter Remotedesktopdienste. Ein Codebeispiel, das zeigt, wie sie eine Remotedesktopdienste erkennen, finden Sie unter [Erkennen der Remotedesktopdienste Umgebung.](detecting-the-terminal-services-environment.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -53,27 +53,27 @@ Viele dieser Richtlinien sind gute Programmierverfahren, die Anwendungen profiti
 
 </dt> <dt>
 
-[Terminal Dienste sind jetzt Remotedesktopdienste](terminal-services-is-now-remote-desktop-services.md)
+[Terminaldienste sind jetzt Remotedesktopdienste](terminal-services-is-now-remote-desktop-services.md)
 </dt> <dt>
 
-[Format der administrativen Vorlagen Datei](/previous-versions/windows/desktop/Policy/administrative-template-file-format)
+[Dateiformat der administrativen Vorlage](/previous-versions/windows/desktop/Policy/administrative-template-file-format)
 </dt> <dt>
 
-[Sicherheit und Zugriffsrechte für den Registrierungsschlüssel](/windows/desktop/SysInfo/registry-key-security-and-access-rights)
+[Sicherheit und Zugriffsrechte für Registrierungsschlüssel](/windows/desktop/SysInfo/registry-key-security-and-access-rights)
 </dt> <dt>
 
-[Registrierungs Strukturen](/windows/desktop/SysInfo/registry-hives)
+[Registrierungsstruktur](/windows/desktop/SysInfo/registry-hives)
 </dt> <dt>
 
 [Sicherheitsbeschreibungen](/windows/desktop/SecAuthZ/security-descriptors)
 </dt> <dt>
 
-[Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)
+[Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)
 </dt> <dt>
 
 [Access Control Modell](/windows/desktop/SecAuthZ/access-control-model)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: System Monitor. scaledefit-Methode
-description: Skalierungs Wert Werte, die in das Diagramm passen.
+title: SystemMonitor.ScaleToFit-Methode
+description: Skalieren Sie Indikatorwerte so, dass sie in das Diagramm passen.
 ms.assetid: 8e58e51a-4767-40da-836a-e49d34dec195
 keywords:
-- Scaledefit-Methode (Sysmon)
-- Scaledefit-Methode (Sysmon), Systemmonitor-Objekt
-- Systemmonitor-Objekt "sysmon", scaledefit-Methode
+- ScaleToFit-Methode SysMon
+- ScaleToFit-Methode SysMon , SystemMonitor-Objekt
+- SystemMonitor-Objekt SysMon , ScaleToFit-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9a1e481dd44c441ea9e2dd44f2e63a06539da74
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1cddb539f8c8d2c6c78f70d96d82da171e11a62afbeaa31d1a011c74c2cb096d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118881514"
 ---
-# <a name="systemmonitorscaletofit-method"></a>System Monitor. scaledefit-Methode
+# <a name="systemmonitorscaletofit-method"></a>SystemMonitor.ScaleToFit-Methode
 
-Skalierungs Wert Werte, die in das Diagramm passen.
+Skalieren Sie Indikatorwerte so, dass sie in das Diagramm passen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ SystemMonitor.ScaleToFit( _
 
 <dl> <dt>
 
-*selectedcountersonly* \[ in\]
+*selectedCountersOnly* \[ In\]
 </dt> <dd>
 
-True, wenn nur die ausgewählten Indikatoren skaliert werden sollen. andernfalls false, um alle Indikatoren zu skalieren.
+True, um nur die ausgewählten Leistungsindikatoren zu skalieren; andernfalls FALSE, um alle Leistungsindikatoren zu skalieren.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ True, wenn nur die ausgewählten Indikatoren skaliert werden sollen. andernfalls
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode wird die Diagramm Ansicht gelöscht. Sysmon verwendet dann den für jeden Zählers angegebenen Skalierungsfaktor, um das Diagramm neu zu zeichnen, wenn es sich bei der Datenquelle um eine Protokolldatei handelt, oder um neue Werte zu erstellen, wenn die Datenquelle eine echt Zeit Aktivität ist.
+Diese Methode löscht die Diagrammansicht. SYSMON verwendet dann den für jeden Indikator angegebenen Skalierungsfaktor, um das Diagramm neu zu zeichnen, wenn es sich bei der Datenquelle um eine Protokolldatei handelt, oder beginnt mit dem Graphen neuer Indikatorwerte, wenn es sich bei der Datenquelle um eine Echtzeitaktivität handelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Mit dieser Methode wird die Diagramm Ansicht gelöscht. Sysmon verwendet dann de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
@@ -73,13 +73,13 @@ Mit dieser Methode wird die Diagramm Ansicht gelöscht. Sysmon verwendet dann de
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**"Count. scalefactor"**](counteritem-scalefactor.md)
+[**CounterItem.ScaleFactor**](counteritem-scalefactor.md)
 </dt> <dt>
 
-[**"Zählelement. ausgewählt"**](counteritem-selected.md)
+[**CounterItem.Selected**](counteritem-selected.md)
 </dt> </dl>
 
  

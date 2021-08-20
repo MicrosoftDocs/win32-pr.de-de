@@ -68,16 +68,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118147759"
 ---
-# <a name="msvm_idecontroller-class"></a>Msvm \_ IDEController-Klasse
+# <a name="msvm_idecontroller-class"></a>\_Msvm-IDEController-Klasse
 
-Stellt einen IDE-Controller dar. Diese Klasse kann bis zu vier Laufwerke unterstützen, die an den Controller angefügt sind. Der IDE-Controller ist auf dem virtuellen Computer festgelegt und verfügt daher nicht über einen zugeordneten Ressourcenpool.
+Stellt einen IDE-Controller dar. Diese Klasse kann bis zu vier Laufwerke unterstützen, die an den Controller angefügt sind. Der IDE-Controller ist auf dem virtuellen Computer behoben und verfügt daher nicht über einen zugeordneten Ressourcenpool.
 
 > [!Note]  
 > Diese Klasse ist für virtuelle Computer der Generation 2 nicht verfügbar.
 
  
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -132,21 +132,21 @@ class Msvm_IDEController : CIM_IDEController
 
 ## <a name="members"></a>Member
 
-Die **Msvm \_ IDEController-Klasse** verfügt über die folgenden Membertypen:
+Die **\_ Msvm-IDEController-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Msvm \_ IDEController-Klasse** verfügt über diese Methoden.
+Die **\_ Msvm-IDEController-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                              | BESCHREIBUNG                              |
+| Methode                                                              | Beschreibung                              |
 |:--------------------------------------------------------------------|:-----------------------------------------|
 | **EnableDevice**                                                    | Diese Methode wird nicht unterstützt.<br/> |
-| **OnlineDevice**                                                    | Diese Methode wird nicht unterstützt.<br/> |
+| **OnlineGeräte**                                                    | Diese Methode wird nicht unterstützt.<br/> |
 | **QuiesceDevice**                                                   | Diese Methode wird nicht unterstützt.<br/> |
 | [**RequestStateChange**](msvm-idecontroller-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/>      |
 | [**Zurücksetzen**](msvm-idecontroller-reset.md)                           | Setzt das virtuelle Gerät zurück.<br/>    |
@@ -160,20 +160,20 @@ Die **Msvm \_ IDEController-Klasse** verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Msvm \_ IDEController-Klasse** verfügt über diese Eigenschaften.
+Die **\_ Msvm-IDEController-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AdditionalAvailability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16 array**
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Alle zusätzlichen Verfügbarkeiten und Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
+Alle zusätzlichen Verfügbarkeiten und Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
@@ -186,22 +186,22 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die primäre Verfügbarkeit und der Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
+Die primäre Verfügbarkeit und der Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
 **AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16 array**
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Werte für den *RequestedState-Parameter* der [**RequestStateChange-Methode**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) an, die zum Initiieren einer Zustandsänderung verwendet wird. Die aufgeführten Werte sind eine Teilmenge der Werte, die in der **RequestedStatesSupported-Eigenschaft** der zugeordneten Instanz von **CIM \_ EnabledLogicalElementCapabilities** enthalten sind, wobei die ausgewählten Werte eine Funktion des aktuellen Zustands des [**CIM \_ EnabledLogicalElement-Objekts**](/previous-versions//cc136818(v=vs.85)) sind. Diese Eigenschaft kann nicht NULL sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands anknullen kann. Diese Eigenschaft ist **NULL,** wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der [**RequestStateChange-Methode**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) an, die zum Initiieren einer Zustandsänderung verwendet wird. Die aufgelisteten Werte sind eine Teilmenge der Werte, die in der **RequestedStatesSupported-Eigenschaft** der zugeordneten Instanz von **CIM \_ EnabledLogicalElementCapabilities** enthalten sind, wobei die ausgewählten Werte eine Funktion des aktuellen Zustands des [**CIM \_ EnabledLogicalElement-Objekts**](/previous-versions//cc136818(v=vs.85)) sind. Diese Eigenschaft kann ungleich **NULL** sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands ankündigen kann. Diese Eigenschaft ist **NULL,** wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
 
-Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
+Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
@@ -214,7 +214,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 
 
@@ -238,7 +238,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -251,7 +251,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
@@ -264,7 +264,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
@@ -277,7 +277,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -290,7 +290,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)und auf "Microsoft:*GUID* \\ *device-specific-data"* festgelegt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und auf "Microsoft:*GUID* \\ *device-specific-data"* festgelegt.
 
 </dd> <dt>
 
@@ -303,7 +303,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 
 
@@ -564,7 +564,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der aufeinanderfolgenden Stunden, die dieses Gerät seit seinem letzten Energiezyklus eingeschaltet wurde. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
+Die Anzahl der aufeinanderfolgenden Stunden, in denen dieses Gerät seit dem letzten Energiesparzyklus eingeschaltet wurde. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
@@ -577,7 +577,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte Informationen zum Integritätsstatus für das Element und seine Unterkomponenten zu erhalten. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte und detaillierte Integritätsstatusinformationen für das Element und seine Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -590,7 +590,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die weitere Informationen zu dem vom Controller unterstützten Protokoll enthält. Diese Eigenschaft wird vom [**\_ CIM-Controller geerbt.**](/windows/desktop/CIMWin32Prov/cim-controller)
+Eine Zeichenfolge, die weitere Informationen im Zusammenhang mit dem vom Controller unterstützten Protokoll bereitstellt. Diese Eigenschaft wird vom [**\_ CIM-Controller**](/windows/desktop/CIMWin32Prov/cim-controller)geerbt.
 
 </dd> <dt>
 
@@ -603,7 +603,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Protokoll, das vom Controller für den Zugriff auf kontrollierte Geräte verwendet wird. Diese Eigenschaft wird vom [**\_ CIM-Controller geerbt.**](/windows/desktop/CIMWin32Prov/cim-controller)
+Das Protokoll, das vom Controller für den Zugriff auf kontrollierte Geräte verwendet wird. Diese Eigenschaft wird vom [**\_ CIM-Controller**](/windows/desktop/CIMWin32Prov/cim-controller)geerbt.
 
 
 
@@ -626,7 +626,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **EnabledState dargestellt.** Diese Eigenschaft wird bereitgestellt, um den zuletzt angeforderten und den aktuell aktivierten oder deaktivierten Zustand zu vergleichen. Eine bestimmte Instanz eines aktivierten logischen Elements unterstützt **requestedStateChange möglicherweise nicht.** In diesem Fall wird der Wert 12 (Nicht zutreffend) verwendet. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
+Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **EnabledState** dargestellt. Diese Eigenschaft wird bereitgestellt, um den zuletzt angeforderten und den aktuellen aktivierten oder deaktivierten Status zu vergleichen. Eine bestimmte Instanz eines aktivierten logischen Elements unterstützt **requestedStateChange** möglicherweise nicht. In diesem Fall wird der Wert 12 (Nicht zutreffend) verwendet. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
@@ -639,7 +639,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt,**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)aber nicht verwendet.
+Der aktuelle Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
@@ -652,7 +652,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -665,7 +665,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
+Der aktuelle Status des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
@@ -678,7 +678,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
@@ -691,7 +691,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Bezeichner für den virtuellen Bereichscomputer. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
+Der eindeutige Bezeichner für den bereichsspezifischen virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
@@ -704,7 +704,7 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zeitpunkt, zu dem der virtuelle Computer zuletzt eingeschaltet wurde. Diese Eigenschaft wird vom [**\_ CIM-Controller geerbt.**](/windows/desktop/CIMWin32Prov/cim-controller)
+Das letzte Einschalten des virtuellen Computers. Diese Eigenschaft wird vom [**\_ CIM-Controller**](/windows/desktop/CIMWin32Prov/cim-controller)geerbt.
 
 </dd> <dt>
 
@@ -717,7 +717,7 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum oder die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
+Das Datum oder die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
@@ -730,7 +730,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der Stunden, in denen dieses Gerät eingeschaltet wurde. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
+Die Gesamtzahl der Stunden, in denen dieses Gerät eingeschaltet wurde. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
@@ -743,13 +743,13 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Zielzustand an, in den die Instanz übergibt. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt,**](/previous-versions//cc136818(v=vs.85))aber nicht verwendet.
+Gibt den Zielzustand an, in den die Instanz übergehen soll. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt, aber nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **Msvm \_ IDEController-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
+Der Zugriff auf die **\_ Msvm-IDEController-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -765,14 +765,14 @@ Der Zugriff auf die **Msvm \_ IDEController-Klasse** kann durch UAC-Filterung ei
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**CIM \_ IDEController**](cim-idecontroller.md)
+[**\_CIM-IDEController**](cim-idecontroller.md)
 </dt> <dt>
 
-[**CIM \_ IDEController**](/previous-versions//cc136863(v=vs.85))
+[**\_CIM-IDEController**](/previous-versions//cc136863(v=vs.85))
 </dt> <dt>
 
 [Storage Klassen](storage-classes.md)

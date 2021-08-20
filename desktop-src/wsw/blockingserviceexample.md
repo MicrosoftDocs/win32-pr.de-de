@@ -1,29 +1,29 @@
 ---
-title: Blockingserviceexample
-description: Beispiel für eine Dienst Anwendung, die einen serverseitigen Abbruch aufruft.
+title: BlockingServiceExample
+description: Beispieldienstanwendung, die den Abbruch serverseitiger Aufrufe demonstriert.
 ms.assetid: a0a862bc-521a-477a-854d-58642d497109
 keywords:
-- 'Blockingserviceexample: Native Webdienste'
-- Wwsapi
+- BlockingServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd8a918d09dd6fbb0521fe0d5a015e9b15ed97a4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8dfe2b5c940528eca538971c595c52295eb4c5eeaf431fba50c86eb172472ec7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805820"
 ---
-# <a name="blockingserviceexample"></a>Blockingserviceexample
+# <a name="blockingserviceexample"></a>BlockingServiceExample
 
-Beispiel für eine Dienst Anwendung, die einen serverseitigen Abbruch aufruft.
+Beispieldienstanwendung, die den Abbruch serverseitiger Aufrufe demonstriert.
 
--   [Cancellingservice. cpp](#cancellingservicecpp)
--   [Blockunblockservice. WSDL](#blockunblockservicewsdl)
+-   [CancellingService.cpp](#cancellingservicecpp)
+-   [BlockUnBlockService.wsdl](#blockunblockservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="cancellingservicecpp"></a>Cancellingservice. cpp
+## <a name="cancellingservicecpp"></a>CancellingService.cpp
 
 
 ```C++
@@ -270,7 +270,7 @@ Exit:
 
 
 
-## <a name="blockunblockservicewsdl"></a>Blockunblockservice. WSDL
+## <a name="blockunblockservicewsdl"></a>BlockUnBlockService.wsdl
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8"?>
@@ -379,9 +379,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

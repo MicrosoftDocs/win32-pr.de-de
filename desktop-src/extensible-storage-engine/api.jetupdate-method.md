@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. jetupdate-Methode'
-title: API. jetupdate-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetUpdate-Methode'
+title: Api.JetUpdate-Methode
 TOCTitle: 'JetUpdate method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.JetUpdate
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetupdate(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: aaebd60ecfeeb849c537505f7af3e9a0d5d49da3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0687c15e16fd150f14f9dfc17ee4ebb8b30cf5fd25f450424443742e8384215a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104567120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084824"
 ---
-# <a name="apijetupdate-method"></a>API. jetupdate-Methode
+# <a name="apijetupdate-method"></a>Api.JetUpdate-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,19 +33,19 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334036(v=exchg.10).md">Jetupdate (JET_SESID JET_TABLEID)</a></td>
-<td>Die jetupdate-Funktion führt einen Aktualisierungs Vorgang aus, einschließlich des Einfügens einer neuen Zeile in eine Tabelle oder der Aktualisierung einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von <a href="dn292131(v=exchg.10).md">jetdelete (JET_SESID JET_TABLEID)</a>.</td>
+<td><a href="dn334036(v=exchg.10).md">JetUpdate(JET_SESID, JET_TABLEID)</a></td>
+<td>Die JetUpdate-Funktion führt einen Aktualisierungsvorgang aus, einschließlich einfügen einer neuen Zeile in eine Tabelle oder Aktualisieren einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von <a href="dn292131(v=exchg.10).md">JetDelete(JET_SESID, JET_TABLEID).</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334023(v=exchg.10).md">Jetupdate (JET_SESID, JET_TABLEID, [], Int32, Int32)</a></td>
-<td>Die jetupdate-Funktion führt einen Aktualisierungs Vorgang aus, einschließlich des Einfügens einer neuen Zeile in eine Tabelle oder der Aktualisierung einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von <a href="dn292131(v=exchg.10).md">jetdelete (JET_SESID JET_TABLEID)</a>.</td>
+<td><a href="dn334023(v=exchg.10).md">JetUpdate(JET_SESID, JET_TABLEID, [], Int32, Int32)</a></td>
+<td>Die JetUpdate-Funktion führt einen Aktualisierungsvorgang aus, einschließlich einfügen einer neuen Zeile in eine Tabelle oder Aktualisieren einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von <a href="dn292131(v=exchg.10).md">JetDelete(JET_SESID, JET_TABLEID).</a></td>
 </tr>
 </tbody>
 </table>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,37 +1,37 @@
 ---
-title: Informationen zur zeitlichen Steuerung
-description: Informationen zur zeitlichen Steuerung
+title: Zeitsteuerungsinformationen
+description: Zeitsteuerungsinformationen
 ms.assetid: ff9d6fb2-1387-49ce-a4de-1b2f67353628
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Zeit Steuerungsinformationen
-- MIDI (Digital Instrumentation Digital Interface), Zeit Steuerungsinformationen
-- Streampuffer, Zeit Steuerungsinformationen
-- MidiEvent-Struktur
+- Music Instrument Digital Interface (OPC), Zeitsteuerungsinformationen
+- INSTRUMENTS (Music Instrument Digital Interface),Zeitsteuerungsinformationen
+- Streampuffer, Zeitsteuerungsinformationen
+- STRUKTURENEVENT-Struktur
 - Streampuffer, SMPTE-Format
-- Streampuffer, Quartals Hinweis Zeit
+- Streampuffer, Quartalsnotizzeit
 - Streampuffer, Ticks
 - SMPTE-Format
-- Zeit des Quartals Hinweises
+- Uhrzeit der Quartalsnotiz
 - ticks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2daf5b1847456e8fb518665521e484118fead79
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f6a75be9964457c64c7c1da59cb93aab2e423f72e861ba496494a5007025461c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804740"
 ---
-# <a name="timing-information"></a>Informationen zur zeitlichen Steuerung
+# <a name="timing-information"></a>Zeitsteuerungsinformationen
 
-Zeit Steuerungsinformationen für ein Ereignis vom Typ "MIDI" werden im **dwdelta** -Member der [**MidiEvent**](/windows/win32/api/mmeapi/ns-mmeapi-midievent) -Struktur gespeichert. Die Zeit wird in Ticks angegeben, wie in der Standard--Datei mit den- *Standard-Dateien 1,0* definiert. Die Länge eines Teil Strichs wird durch das Uhrzeit Format und möglicherweise vom dem Stream zugeordneten Tempo definiert. Weitere Informationen zu Streams finden Sie unter [MIDI-Streams](midi-streams.md).
+Zeitsteuerungsinformationen für ein CSV-Ereignis werden im **dwDeltaTime-Member** der [**ELEMENTSEVENT-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-midievent) gespeichert. Die Zeit wird in Ticks angegeben, wie in der *STANDARD-SPEZIFIKATION FÜR DATEIEN 1.0* definiert. Die Länge eines Ticks wird durch das Zeitformat und möglicherweise durch das dem Stream zugeordnete Tempo definiert. Weitere Informationen zu Streams finden Sie unter [CSV Streams](midi-streams.md).
 
-Ein Tick wird entweder als Mikrosekunden pro Quartals Notiz oder als Ticks von SMPTE (Society of Motion Picture and TV Engineers)-Zeit ausgedrückt. Anwendungen, die Nachrichten einzeln senden oder nicht verarbeitete MIDI-Nachrichten verwenden, verwenden die Quartals Notiz und die Gültigkeitsdauer eines Teil Strichs. Anwendungen, die eine Vorverarbeitung von MIDI-Nachrichten ausführen, können die verstrichene Zeit als Anzahl der verwendeten SMPTE-Einheiten speichern.
+Ein Tick wird entweder als Mikrosekunden pro Quartalsnotiz oder als Ticks der Zeit von SMPTE (Society of Motion Picture and Tv Engineers) ausgedrückt. Anwendungen, die CSV-Nachrichten einzeln senden oder unverarbeitete CAB-Nachrichten verwenden, verwenden Zeit- und Geschwindigkeitsinformationen für Quartalsnotizen, um die Dauer eines Ticks zu bestimmen. Anwendungen, die MELDUNGEN vorverarbeiten, können die verstrichene Zeit als Anzahl der verwendeten SMPTE-Einheiten speichern.
 
-Die Zeit für den Quartals Hinweis wird im Word-Bit (Bit 15) mit einem Nullwert (0) angegeben. Der Rest des Worts enthält den Hinweis Ticks pro Quartal. Ein mit einem Stream von MIDI-Daten verknüpfter Wert wird in Einheiten (Mikrosekunden pro Quartals Notiz) gespeichert, die mit der *Standard mäßigen-Standard-Datei 1,0* -Spezifikation übereinstimmen. Beispiel: ein Quartals Hinweis in 4/4-Zeit, der ein Tempo von 500.000 Mikrosekunden pro Quartals Notiz verwendet, wird mit der Rate von 120 Beats pro Minute abgespielt.
+Die Quartalsnotizzeit wird mit einer Null im hohen Wortbit (Bit 15) des Zeitteilungsworts angegeben. Der Rest des Worts enthält die Ticks pro Quartalsnotiz. Ein Tempo, das einem Stream von CSV-Daten zugeordnet ist, wird in Einheiten (Mikrosekunden pro Quartalshinweis) beibehalten, die mit der *STANDARD-SPEZIFIKATION VON CAB Files 1.0* konsistent sind. Beispielsweise wird ein Quartalshinweis in 4/4-Zeit mit einem Tempo von 500.000 Mikrosekunden pro Quartal mit einer Rate von 120 Schlägen pro Minute wiedergegeben.
 
-SMPTE-Zeit Abteilungs Formate geben die Länge eines Takts vollständig an, ohne dass die Notwendigkeit von Tempo Informationen erforderlich ist. Bei Verwendung von SMPTE-Zeitformaten können MIDI-Sequenzen mit anderen SMPTE-Ereignissen synchronisiert werden, z. b. Video-oder stripesetaudiodaten. Die SMPTE-Zeit wird mit einem Wert von 1 im höherwertigen Bit (Bit 15) des Zeit Teilungs Worts angegeben. Der Rest des signifikantesten Bytes gibt das verwendete SMPTE-Format als negative Werte an. Die unterstützten SMPTE-Formate und ihre entsprechenden Werte (in Klammern) sind 24 (-24), 25 (-25), 30 (-30) und 30 Drop (-29). Das niedrige Byte des Zeit Teilungs Worts gibt die Anzahl der Ticks pro SMPTE-Rahmen an.
+SMPTE-Zeitteilungsformate geben die Länge eines Ticks vollständig an, ohne dass Geschwindigkeitsinformationen erforderlich sind. Bei Verwendung von SMPTE-Zeitformaten können DIE SEQUENZEN mit anderen SMPTE-Ereignissen synchronisiert werden, z. B. Mit Video oder Stripesetaudio. Die SMPTE-Zeit wird mit einem 1 im hohen Bit (Bit 15) des Zeitteilungsworts angegeben. Der Rest des wichtigsten Byte gibt das SMPTE-Format an, das als negative Werte verwendet wird. Die unterstützten SMPTE-Formate und die entsprechenden Werte (in Klammern) sind 24 (-24), 25 (-25), 30 (-30) und 30 Drop (-29). Das niedrige Byte des Zeitteilungsworts gibt die Anzahl der Ticks pro SMPTE-Frame an.
 
- 
+ 
 
- 
+ 

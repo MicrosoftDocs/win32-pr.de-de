@@ -1,7 +1,7 @@
 ---
-description: Die Fotometadatenrichtlinie für die System.GPS.HeightRef-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.AltitudeRef-Eigenschaft.
 ms.assetid: abbb2441-25ca-484b-a744-620ff2794221
-title: System.GPS.HeightRef-Fotometadatenrichtlinie
+title: System.GPS.AltitudeRef-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: ca49213754f605dcf6df40dfa3ff00e2b7aeaf765008037c23da21e35ab9ddee
@@ -11,17 +11,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118710697"
 ---
-# <a name="systemgpsaltituderef-photo-metadata-policy"></a>System.GPS.HeightRef-Fotometadatenrichtlinie
+# <a name="systemgpsaltituderef-photo-metadata-policy"></a>System.GPS.AltitudeRef-Richtlinie für Fotometadaten
 
-Die Fotometadatenrichtlinie für die [System.GPS.HeightRef-Eigenschaft.](../properties/props-system-gps-altituderef.md)
+Die Richtlinie für Fotometadaten für die [System.GPS.AltitudeRef-Eigenschaft.](../properties/props-system-gps-altituderef.md)
 
 ### <a name="pkey"></a>PKEY
 
-PKEY \_ GPS \_ HeightRef
+PKEY \_ GPS \_ AltitudeRef
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
-Gibt die Höhe an, die als Referenzhöhe verwendet wird. Der Wert 0 gibt an, dass die Höhe über dem Wasserstand liegt. Der Wert 1 gibt eine Höhe unterhalb des Wasserstands an.
+Gibt die Höhe an, die als Referenzhöhe verwendet wird. Der Wert 0 gibt an, dass die Höhe oberhalb des Seeniveaus liegt. Der Wert 1 gibt eine Höhe unterhalb des Seeniveaus an.
 
 ### <a name="containers"></a>Container
 
@@ -41,7 +41,7 @@ Byte.
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas werden abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
@@ -131,7 +131,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 <dl> <dt>
 
-[System.GPS.HeightRef](../properties/props-system-gps-altituderef.md)
+[System.GPS.AltitudeRef](../properties/props-system-gps-altituderef.md)
 </dt> </dl>
 
  

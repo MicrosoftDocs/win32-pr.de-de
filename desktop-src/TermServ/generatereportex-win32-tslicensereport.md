@@ -1,12 +1,12 @@
 ---
-title: GenerateReportEx-Methode der Win32_TSLicenseReport-Klasse
+title: GenerateReportEx-Methode der Win32_TSLicenseReport Klasse
 description: Generiert einen aktuellen Lizenznutzungsbericht für Lizenzen pro Benutzer und Pro Gerät.
 ms.assetid: c454e0c5-ca1c-41c7-86b2-1e52c414aeb5
 ms.tgt_platform: multiple
 keywords:
-- GenerateReportEx-Methode Remotedesktopdienste
+- GenerateReportEx-Remotedesktopdienste
 - GenerateReportEx-Methode Remotedesktopdienste , Win32_TSLicenseReport-Klasse
-- Win32_TSLicenseReport-Klasse Remotedesktopdienste , GenerateReportEx-Methode
+- Win32_TSLicenseReport klasse Remotedesktopdienste , GenerateReportEx-Methode
 topic_type:
 - apiref
 api_name:
@@ -52,15 +52,15 @@ Der Dateiname des generierten Berichts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="remarks"></a>Bemerkungen
 
 Dies ist eine statische Methode.
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,24 +1,24 @@
 ---
-title: Hosten eines Windows-losen ActiveX-Steuer Elements mit MSAA
-description: Erfahren Sie, wie Sie einen Steuerelement Container erstellen, der fensterlose Microsoft-ActiveX-Steuerelemente hosten kann, die Microsoft Active Accessibility implementieren.
+title: Hosten eines fensterlosen MSAA-steuerelements ActiveX
+description: Erfahren Sie, wie Sie einen Steuerelementcontainer erstellen, der fensterlose Microsoft ActiveX-Steuerelemente hosten kann, die Microsoft Active Accessibility.
 ms.assetid: 9497561C-37ED-4094-A6B0-C219F63C04B6
 keywords:
-- MSAA, fensterloses ActiveX-Steuerelement
-- Fensterloses ActiveX-Steuerelement, MSAA
+- MSAA, Fensterloses ActiveX-Steuerelement
+- Fensterloses ActiveX,MSAA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9de45313b19490af3c3fffb633f3822ad93d25a4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b3d086fdc33c1b645294827ec62784612ffeb617f12caf5a101ea8472da3e765
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118115131"
 ---
-# <a name="how-to-host-an-msaa-windowless-activex-control"></a>Hosten eines Windows-losen ActiveX-Steuer Elements mit MSAA
+# <a name="how-to-host-an-msaa-windowless-activex-control"></a>Hosten eines fensterlosen MSAA-steuerelements ActiveX
 
-Erfahren Sie, wie Sie einen Steuerelement Container erstellen, der fensterlose Microsoft-ActiveX-Steuerelemente hosten kann, die Microsoft Active Accessibility implementieren. Wenn Sie die hier beschriebenen Schritte ausführen, können Sie sicherstellen, dass alle auf Microsoft Active Accessibility basierten, fensterlosen Steuerelemente, die in Ihrem Steuerelement Container gehostet werden, für die Hilfstechnologie (at)-Client Anwendungen verfügbar sind.
+Erfahren Sie, wie Sie einen Steuerelementcontainer erstellen, der fensterlose Microsoft ActiveX-Steuerelemente hosten kann, die Microsoft Active Accessibility. Mithilfe der hier beschriebenen Schritte können Sie sicherstellen, dass alle Microsoft Active Accessibility-basierten fensterlosen Steuerelemente, die in Ihrem Steuerelementcontainer gehostet werden, für Hilfstechnologieclientanwendungen (AT) zugänglich sind.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
@@ -28,64 +28,64 @@ Erfahren Sie, wie Sie einen Steuerelement Container erstellen, der fensterlose M
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmierung von Microsoft Win32 und Component Object Model (com)
--   Fensterlose ActiveX-Steuerelemente
--   Microsoft Active Accessibility-Server
+-   Microsoft Win32- und Component Object Model-Programmierung (COM)
+-   Fensterlose ActiveX Steuerelemente
+-   Microsoft Active Accessibility Server
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-provide-the-root-iaccessible-interface-on-behalf-of-the-windowless-control"></a>Schritt 1: Stellen Sie die Schnittstelle "IAccessible" im Namen des fensterlosen Steuer Elements bereit.
+### <a name="step-1-provide-the-root-iaccessible-interface-on-behalf-of-the-windowless-control"></a>Schritt 1: Geben Sie die IAccessible-Stammschnittstelle im Namen des fensterlosen Steuerelements an.
 
-Wenn das System den [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Zeiger für den Stamm eines fensterlosen Steuer Elements benötigt, fragt das System den Steuerelement Container ab. Zum Abrufen des Zeigers ruft der Container die Implementierung der [**IServiceProvider:: QueryService**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)) -Methode des fensterlosen Steuer Elements auf.
+Wenn das System den [**IAccessible-Zeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) für den Stamm eines fensterlosen Steuerelements benötigt, fragt das System den Steuerelementcontainer ab. Um den Zeiger abzurufen, ruft der Container die Implementierung der [**IServiceProvider::QueryService-Methode**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)) des fensterlosen Steuerelements auf.
 
-Wenn der Steuerelement Container über eine Microsoft Active Accessibility-Implementierung verfügt, kann er den [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Zeiger des fensterlosen Steuer Elements auf das System zurückgeben.
+Wenn der Steuerelementcontainer über eine Microsoft Active Accessibility verfügt, kann er den [**IAccessible-Zeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) des fensterlosen Steuerelements auf das System zurückgeben.
 
-Wenn der Steuerelement Container eine Microsoft UI Automation-Implementierung aufweist, rufen Sie die [**uiaproviderfromiaccessible**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uiaproviderfromiaccessible) -Funktion auf, um einen [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) -Schnittstellen Zeiger zu erhalten, der das Steuerelement darstellt, und geben Sie dann den **IRawElementProviderSimple** -Schnittstellen Zeiger an das System zurück.
+Wenn der Steuerelementcontainer über eine Microsoft Benutzeroberflächenautomatisierung-Implementierung verfügt, rufen Sie die [**UiaProviderFromIAccessible-Funktion**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uiaproviderfromiaccessible) auf, um einen [**IRawElementProviderSimple-Schnittstellenzeiger**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) zu erhalten, der das Steuerelement darstellt, und geben Sie dann den **IRawElementProviderSimple-Schnittstellenzeiger** an das System zurück.
 
-### <a name="step-2-respond-to-the-wm_getobject-message-on-behalf-of-the-windowless-control"></a>Schritt 2: Antworten auf die WM- \_ GetObject-Nachricht im Namen des fensterlosen Steuer Elements.
+### <a name="step-2-respond-to-the-wm_getobject-message-on-behalf-of-the-windowless-control"></a>Schritt 2: Reagieren sie im Namen des fensterlosen Steuerelements auf die WM \_ GETOBJECT-Nachricht.
 
-Wenn eine Client Anwendung auf ein WinEvent antwortet, das von einem fensterlosen Steuerelement ausgelöst wird, empfängt der Steuerelement Container eine [**WM- \_ GetObject**](wm-getobject.md) -Nachricht für das Steuerelement. Die Meldung enthält die Objekt-ID des fensterlosen Steuer Elements, das das Ereignis ausgelöst hat.
+Wenn eine Clientanwendung auf ein WinEvent antwortet, das von einem fensterlosen Steuerelement ausgelöst wird, empfängt der Steuerelementcontainer im Namen des Steuerelements eine [**WM \_ GETOBJECT-Nachricht.**](wm-getobject.md) Die Nachricht enthält die Objekt-ID des fensterlosen Steuerelements, das das Ereignis ausgelöst hat.
 
-Der Steuerelement Container antwortet, indem er das fensterlose Steuerelement sucht, das die Objekt-ID besitzt, und dann die [**iaccessibleobjectfromid**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessiblehandler-accessibleobjectfromid) -Methode dieses Steuer Elements aufruft. Die **AccessibleObjectFromID** -Methode gibt den [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstellen Zeiger für das UI-Element zurück, und der Steuerelement Container gibt den Zeiger auf das System zurück, das diese an die Client Anwendung weiterleitet.
+Der Steuerelementcontainer reagiert, indem er nach dem fensterlosen Steuerelement sucht, das die Objekt-ID "besitzt" und dann die [**IAccessibleHandler::AccessibleObjectFromID-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessiblehandler-accessibleobjectfromid) dieses Steuerelements aufruft. Die **AccessibleObjectFromID-Methode** gibt den [**IAccessible-Schnittstellenzeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) für das Benutzeroberflächenelement zurück, und der Steuerelementcontainer gibt den Zeiger auf das System zurück, das ihn an die Clientanwendung weiterleite.
 
-### <a name="step-3-implement-the-iaccessiblewindowlesssite-interface"></a>Schritt 3: Implementieren Sie die iaccessiblewindowlesssite-Schnittstelle.
+### <a name="step-3-implement-the-iaccessiblewindowlesssite-interface"></a>Schritt 3: Implementieren Sie die IAccessibleWindowlessSite-Schnittstelle.
 
-1.  Implementieren Sie die [**iaccessiblewindowlesssite:: getparameentaccessible**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-getparentaccessible) -Methode.
+1.  Implementieren Sie [**die IAccessibleWindowlessSite::GetParentAccessible-Methode.**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-getparentaccessible)
 
-    Wenn eine Client Anwendung Barrierefreiheits Informationen über das übergeordnete Element des Stamm Anbieters des fensterlosen Steuer Elements benötigt, ruft das System die [**IAccessible:: get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent) -Methode des fensterlosen Steuer Elements auf. Das-Steuerelement antwortet, indem er die [**iaccessiblewindowlesssite:: getParser**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-getparentaccessible) -Methode des Steuerelement Containers aufruft, die den [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Zeiger auf das übergeordnete Element des fensterlosen Steuer Elements bereitstellt.
+    Wenn eine Clientanwendung Barrierefreiheitsinformationen über das übergeordnete Element des Stammanbieters des fensterlosen Steuerelements benötigt, ruft das System die [**IAccessible::get \_ accParent-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent) des fensterlosen Steuerelements auf. Das Steuerelement antwortet, indem es die [**IAccessibleWindowlessSite::GetParentAccessible-Methode**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-getparentaccessible) des Steuerelementcontainers aufruft, die den [**IAccessible-Zeiger**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) des übergeordneten Steuerelements des fensterlosen Steuerelements zur Verfügung stellt.
 
-2.  Implementieren Sie die Methoden [**iaccessiblewindowlesssite:: acquireobjectidrange**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-acquireobjectidrange), [**queryobjectidrange**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-queryobjectidranges)und [**releaseobjectidrange**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-releaseobjectidrange) .
+2.  Implementieren Sie [**die Methoden IAccessibleWindowlessSite::AcquireObjectIdRange,**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-acquireobjectidrange) [**QueryObjectIdRange**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-queryobjectidranges)und [**ReleaseObjectIdRange.**](/windows/desktop/api/oleacc/nf-oleacc-iaccessiblewindowlesssite-releaseobjectidrange)
 
-    Der Steuerelement Container muss eine Zuordnung von Objekt-ID-Bereichen zu fensterlosen Steuerelementen aufrechterhalten. Die Zuordnung ermöglicht es dem Steuerelement Container, das Steuerelement zu identifizieren, das auf eine bestimmte Anforderung für eine Objekt-ID reagieren soll. Die folgende Tabelle zeigt ein Beispiel für das Mapping von Objekt-ID-Bereichen zu fensterlosen Steuerelementen.
+    Ihr Steuerelementcontainer muss eine Zuordnung von Objekt-ID-Bereichen zu fensterlosen Steuerelementen verwalten. Die Zuordnung ermöglicht es dem Steuerelementcontainer, das Steuerelement zu identifizieren, das auf eine bestimmte Anforderung für eine Objekt-ID reagieren soll. Die folgende Tabelle zeigt ein Beispiel für die Zuordnung von Objekt-ID-Bereichen zu fensterlosen Steuerelementen.
 
     
 
-    | Bereichs Basis | Bereichs Größe | Control   |
+    | Bereichsbasis | Bereichsgröße | Control   |
     |------------|------------|-----------|
-    | 1000       | 500        | Steuerelement 1 |
+    | 1000       | 500        | Steuerung 1 |
     | 1500       | 1000       | Steuerung 2 |
-    | 2500       | 2000       | Steuerelement 1 |
+    | 2500       | 2000       | Steuerung 1 |
 
     
 
-     
+     
 
-    Der Steuerelement Container muss die Zuordnung von Objekt-ID-Bereichen zu fensterlosen Steuerelementen für sich selbst und alle fensterlosen untergeordneten Elemente aufrechterhalten. Die Objekt-ID-Bereiche müssen nicht nebeneinander angeordnet werden. Um Denial-of-Service-Angriffe zu vermeiden, kann der Steuerelement Container außerdem Grenzwerte für die Anzahl der Bereiche festlegen, die einem bestimmten Steuerelement erteilt werden. Es ist jedoch sinnvoll, mehr als einen Bereich pro Steuerelement zuzulassen, damit ein Steuerelement vergrößert werden kann.
+    Der Steuerelementcontainer muss die Zuordnung von Objekt-ID-Bereichen zu fensterlosen Steuerelementen für sich selbst und alle fensterlosen children-Objekte verwalten. Die Objekt-ID-Bereiche müssen nicht nebeneinander liegen. Um Denial-of-Service-Angriffe zu vermeiden, kann der Steuerungscontainer außerdem Grenzwerte für die Anzahl der Bereiche setzen, die einer bestimmten Steuerung gewährt werden. Es ist jedoch hilfreich, mehr als einen Bereich pro Steuerelement zu erlauben, damit ein Steuerelement wachsen kann.
 
-### <a name="step-4-optional-implement-the-iaccessiblehostingelementproviders-interface"></a>Schritt 4: optional: Implementieren Sie die iaccessiblehostingelementproviders-Schnittstelle.
+### <a name="step-4-optional-implement-the-iaccessiblehostingelementproviders-interface"></a>Schritt 4: Optional: Implementieren Sie die IAccessibleHostingElementProviders-Schnittstelle.
 
-Implementieren Sie die [**iaccessiblehostingelementproviders**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iaccessiblehostingelementproviders) -Schnittstelle, wenn Ihr Steuerelement Container über eine Microsoft Active Accessibility Server-Implementierung verfügt und der Server der Stamm einer Barrierefreiheits Struktur ist, die fensterlose ActiveX-Steuerelemente enthält, die die Benutzeroberflächen Automatisierung unterstützen. Die **iaccessiblehostingelementproviders** -Schnittstelle verfügt über eine einzelne Methode, [**getembeddedfragmentroots**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-getembeddedfragmentroots), mit der die [**IRawElementProviderFragmentRoot**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot) -Schnittstellen Zeiger von allen fensterlosen ActiveX-Steuerelementen der Benutzeroberflächen Automatisierung abgerufen werden, die von Ihrem Steuerelement Container gehostet werden.
+Implementieren Sie die [**IAccessibleHostingElementProviders-Schnittstelle,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iaccessiblehostingelementproviders) wenn Ihr Steuerelementcontainer über eine Microsoft Active Accessibility-Serverimplementierung verfügt und der Server der Stamm einer Barrierefreiheitsstruktur ist, die fensterlose ActiveX-Steuerelemente enthält, die Benutzeroberflächenautomatisierung. Die **IAccessibleHostingElementProviders-Schnittstelle** verfügt über eine einzelne Methode, [**GetEmbeddedFragmentRoots,**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-getembeddedfragmentroots)die die [**IRawElementProviderFragmentRoot-Schnittstellenzeige**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot) aller Benutzeroberflächenautomatisierung ActiveX-Steuerelemente abruft, die von Ihrem Steuerelementcontainer gehostet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Hosten eines fensterlosen ActiveX-Steuer Elements für die Benutzeroberflächen Automatisierung](host-a-ui-automation-windowless-activex-control.md)
+[Hosten eines fensterlosen Benutzeroberflächenautomatisierung-Steuerelements ActiveX Steuerelements](host-a-ui-automation-windowless-activex-control.md)
 </dt> <dt>
 
-[Barrierefreiheit für das fensterlose ActiveX-Steuerelement](windowless-activex-control-accessibility.md)
+[Fensterloses ActiveX Barrierefreiheit](windowless-activex-control-accessibility.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

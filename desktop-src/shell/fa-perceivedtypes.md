@@ -1,6 +1,6 @@
 ---
-description: Ein wahrgenommener Typ ist eine Kategorie von Dateitypen, mit der Sie den Dateityp für Windows (und Anwendungen) als Bild, Audiodaten, Dokument oder anderen Typ identifizieren können.
-title: Wahrgenommene Typen (die Windows-Shell)
+description: Ein wahrgenommener Typ ist eine Kategorie von Dateitypen, mit der Sie Ihren Dateityp identifizieren können, um Windows (und Anwendungen) als Bild-, Audio-, Dokument- oder anderen Typ zu identifizieren.
+title: Erkannte Typen (die Windows Shell)
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 56d4c495-a886-4723-88ca-5b7753398062
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: e6136389c717fd4e27621a4d7f9f4cf2895c4116
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: fbbd459c610deb0b597e23bd4dc7217289b94c8a907b5341fa5667454ee778a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104995278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118050329"
 ---
-# <a name="perceived-types-the-windows-shell"></a>Wahrgenommene Typen (die Windows-Shell)
+# <a name="perceived-types-the-windows-shell"></a>Erkannte Typen (die Windows Shell)
 
-Ein wahrgenommener Typ ist eine Kategorie von Dateitypen, mit der Sie den Dateityp für Windows (und Anwendungen) als Bild, Audiodaten, Dokument oder anderen Typ identifizieren können. Wahrgenommene Typen werden für verschiedene Zwecke verwendet, einschließlich der Bestimmung des Ordner Typs, der dann zum Festlegen der Standard Ansichts Einstellungen verwendet wird. So wird z. b. einem Ordner, der in Dateien mit dem Bild des Typs wahrgenommen ist, ein Standard Ansichtsmodus für Miniaturansichten zugewiesen.
+Ein wahrgenommener Typ ist eine Kategorie von Dateitypen, mit der Sie Ihren Dateityp identifizieren können, um Windows (und Anwendungen) als Bild-, Audio-, Dokument- oder anderen Typ zu identifizieren. Erkannte Typen werden für verschiedene Zwecke verwendet, einschließlich der Bestimmung des Ordnertyps, der dann zum Festlegen der Standardansichtseinstellungen verwendet wird. Beispielsweise wird einem Ordner mit Dateien des wahrgenommenen Bildtyps ein Standardansichtsmodus von Miniaturansichten zugewiesen.
 
 Dieses Thema ist wie folgt organisiert:
 
@@ -28,9 +28,9 @@ Dieses Thema ist wie folgt organisiert:
 
 ## <a name="about-perceived-types"></a>Informationen zu wahrgenommenen Typen
 
-Wahrgenommene Typen, die als "wahrnehmdtype"-Werte definiert sind, ähneln Dateitypen, außer dass Sie auf allgemeine Kategorien von Dateiformat Typen anstatt auf bestimmte Dateitypen verweisen. Beispielsweise werden Bild-, Text-, Audiodaten und komprimierte Typen als Typen angesehen. Dateitypen (in der Regel öffentliche Dateitypen) kann ein wahr gegebener Typ zugewiesen werden, und Sie sollten immer eine zugewiesen werden, wenn eine geeignete vorhanden ist. Die Bild Dateitypen BMP, PNG, JPG und GIF sind z. b. auch das wahrgenommene typimage.
+Als PerceivedType-Werte definierte typen ähneln Dateitypen, mit der Ausnahme, dass sie auf allgemeine Kategorien von Dateiformattypen und nicht auf bestimmte Dateitypen verweisen. Bild, Text, Audio und komprimiert werden beispielsweise als Typen wahrgenommen. Dateitypen (im Allgemeinen öffentliche Dateitypen) können einem wahrgenommenen Typ zugewiesen werden und sollten immer dann zugewiesen werden, wenn es einen geeigneten Typ gibt. Beispielsweise werden die Bilddateitypen .bmp, .png, .jpg und .gif ebenfalls als Bildtyp wahrgenommen.
 
-Die standardmäßig erkannten Typen lauten wie folgt:
+Die standardmäßig erkannten Typen sind wie folgt:
 
 -   Ordner
 -   Text
@@ -41,20 +41,20 @@ Die standardmäßig erkannten Typen lauten wie folgt:
 -   Dokument
 -   System
 -   Application
--   GameMedia
+-   Gamemedia
 -   Kontakte
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Informationen zum Registrieren von wahrgenommenen Typen finden Sie unter [Anwendungs Registrierung](app-registration.md).
--   Eine Liste der erkannten Standardtypen finden Sie unter der [**wahrgenommenen**](/windows/win32/api/shtypes/ne-shtypes-perceived) Enumeration.
--   Informationen zum Abrufen des wahrgenommenen Datentyps einer Datei anhand ihrer Dateinamenerweiterung finden Sie unter der Funktion " [**assocgetwahrnehmvedtype**](/windows/desktop/api/Shlwapi/nf-shlwapi-assocgetperceivedtype) ".
+-   Informationen zum Registrieren von wahrgenommenen Typen finden Sie unter [Anwendungsregistrierung.](app-registration.md)
+-   Eine Liste der standardmäßig erkannten Typen finden Sie in der [**PERCEIVED-Enumeration.**](/windows/win32/api/shtypes/ne-shtypes-perceived)
+-   Informationen zum Abrufen des erkannten Typs einer Datei basierend auf ihrer Dateinamenerweiterung finden Sie in der [**AssocGetPerceivedType-Funktion.**](/windows/desktop/api/Shlwapi/nf-shlwapi-assocgetperceivedtype)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anwendungs Registrierung](app-registration.md)
+[Anwendungsregistrierung](app-registration.md)
 </dt> <dt>
 
 [Dateitypen](fa-file-types.md)
@@ -63,19 +63,19 @@ Die standardmäßig erkannten Typen lauten wie folgt:
 [Funktionsweise von Dateizuordnungen](fa-how-work.md)
 </dt> <dt>
 
-[Inhaltsansicht nach Dateityp oder-Art](prophand-content-view.md)
+[Inhaltsansicht nach Dateityp oder Art](prophand-content-view.md)
 </dt> <dt>
 
-[Dateityp Überprüfung](file-type-verifier.md)
+[Dateitypüberprüfung](file-type-verifier.md)
 </dt> <dt>
 
-[Dateityp Handler](fa-file-extensions.md)
+[Dateityphandler](fa-file-extensions.md)
 </dt> <dt>
 
 [Programmgesteuerte Bezeichner](fa-progids.md)
 </dt> <dt>
 
-[Zuordnungs Arrays](fa-associationarray.md)
+[Zuordnungsarrays](fa-associationarray.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Fügen Sie der Thread Pumpe ein Arbeits Element hinzu.
+description: Fügen Sie der Threadpump ein Arbeitselement hinzu.
 ms.assetid: f07789dc-a3d5-4bad-9768-527e701271b8
-title: 'ID3DX10ThreadPump:: addworkitem-Methode (d3dx10. h)'
+title: ID3DX10ThreadPump::AddWorkItem-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: aaf5286ca6cf7b61b0027b176d9a9261bd0beaa8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 43602019018a9751453eb93f4ffb9b1c29eada6caf120a6721522982c3355dfc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609320"
 ---
-# <a name="id3dx10threadpumpaddworkitem-method"></a>ID3DX10ThreadPump:: addworkitem-Methode
+# <a name="id3dx10threadpumpaddworkitem-method"></a>ID3DX10ThreadPump::AddWorkItem-Methode
 
-Fügen Sie der Thread Pumpe ein Arbeits Element hinzu.
+Fügen Sie der Threadpump ein Arbeitselement hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT AddWorkItem(
 
 <dl> <dt>
 
-*pdataloader* \[ in\]
+*pDataLoader* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10DataLoader**](id3dx10dataloader.md)\***
 
-Das Lade Modul, das vom threadpump verwendet wird, wenn ein Arbeits Element zum Laden von Daten benötigt wird.
+Das Lader, das vom Threadpump verwendet wird, wenn für ein Arbeitselement Daten geladen werden müssen.
 
 </dd> <dt>
 
-*pdataprocessor* \[ in\]
+*pDataProcessor* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10DataProcessor**](id3dx10dataprocessor.md)\***
 
-Der Prozessor, den das Thread-Pump-Element verwendet, wenn für eine Arbeitsaufgabe die Verarbeitung von Daten erforderlich ist.
+Der Prozessor, den die Threadpump verwendet, wenn für ein Arbeitselement Daten verarbeitet werden müssen.
 
 </dd> <dt>
 
-*phresult* \[ in\]
+*pHResult* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein.
+Ein Zeiger auf den Rückgabewert. Kann NULL **sein.**
 
 </dd> <dt>
 
-*ppdeviceobject* \[ vorgenommen\]
+*ppDeviceObject* \[ out\]
 </dt> <dd>
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Das Gerät, von dem das-Objekt verwendet wird.
+Das Gerät, das das -Objekt verwendet.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Das Gerät, von dem das-Objekt verwendet wird.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

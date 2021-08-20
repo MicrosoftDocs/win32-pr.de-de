@@ -1,10 +1,10 @@
 ---
-title: Redirectde vicetype-Enumeration
+title: RedirectDeviceType-Enumeration
 description: Wird verwendet, um den Typ eines Geräts anzugeben.
 ms.assetid: B6356217-814E-462F-9DBC-F6D3C0CE129F
 ms.tgt_platform: multiple
 keywords:
-- Redirectde vicetype-Enumeration Remotedesktopdienste
+- RedirectDeviceType-Enumerations Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7058313e7f987589ae17924cce6a95610d997ef
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e987e4f6424c030cdb4ff0699efadaf34f2f9ad14ec49dd8d7e7043f9b55cd9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127900"
 ---
-# <a name="redirectdevicetype-enumeration"></a>Redirectde vicetype-Enumeration
+# <a name="redirectdevicetype-enumeration"></a>RedirectDeviceType-Enumeration
 
 Wird verwendet, um den Typ eines Geräts anzugeben.
 
@@ -41,7 +41,7 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="UsbDevice"></span><span id="usbdevice"></span><span id="USBDEVICE"></span>**Startgerät**
+<span id="UsbDevice"></span><span id="usbdevice"></span><span id="USBDEVICE"></span>**UsbDevice**
 </dt> <dd>
 
 Ein USB-Gerät.
@@ -64,10 +64,10 @@ Ein USB-Gerät.
 
 <dl> <dt>
 
-[**Adddevicebyinstanceid**](imsrdpdevicecollection2-adddevicebyinstanceid.md)
+[**AddDeviceByInstanceId**](imsrdpdevicecollection2-adddevicebyinstanceid.md)
 </dt> <dt>
 
-[**Redirectnow**](imsrdpdevicecollection2-redirectnow.md)
+[**RedirectNow**](imsrdpdevicecollection2-redirectnow.md)
 </dt> </dl>
 
  

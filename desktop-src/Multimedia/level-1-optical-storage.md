@@ -21,7 +21,7 @@ ms.locfileid: "118139868"
 Das optische Speichergerät mit minimaler Leistung ist ein CD-ROM-Laufwerk, das die folgenden Kriterien erfüllt:
 
 -   Eine dauerhafte Datenübertragungsrate von 150 Kilobyte pro Sekunde
--   Eine CPU-Bandbreitenauslastung von 40 Prozent oder weniger bei einer dauerhaften Datenübertragungsrate von 150 Kilobyte pro Sekunde
+-   Eine CPU-Bandbreitenauslastung von 40 Prozent oder weniger, wenn eine dauerhafte Datenübertragungsrate von 150 Kilobyte pro Sekunde beibehalten wird
 -   Eine durchschnittliche Suchzeit von 1 Sekunde oder weniger
 
  

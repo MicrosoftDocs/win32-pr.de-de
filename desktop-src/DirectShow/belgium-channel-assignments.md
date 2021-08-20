@@ -1,25 +1,25 @@
 ---
-description: In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für Belgien verwendet
+description: In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Dies sind die Tabellen.
 ms.assetid: 214debba-4256-4682-b98d-0bbfb2d68a13
-title: Belgien-Kanal Zuweisungen
+title: Kanalzuweisungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fb1d295c8ff4c5fc28a7c0a92f3d787f3d92ec6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8cd4bef5c934fcedb3cccc92921ec449aeb274bc764accf42d0225d85646be04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118159262"
 ---
-# <a name="belgium-channel-assignments"></a>Belgien-Kanal Zuweisungen
+# <a name="belgium-channel-assignments"></a>Kanalzuweisungen
 
-In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für Belgien verwendet
+In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Dies sind die Tabellen.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle Unicable Frequency](unicable-frequency-table.md) verwendet.
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -166,7 +166,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

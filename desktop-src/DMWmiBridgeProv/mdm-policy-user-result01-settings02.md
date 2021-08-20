@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Result01_Settings02-Klasse
-description: Die Benutzer Result01 Settings02-Klasse der MDM- \_ Richtlinie ruft \_ \_ \_ die Einstellungen für zusätzliche Kalender auf der Taskleiste ab.
+description: Die Mdm \_ Policy \_ User \_ Result01 \_ Settings02-Klasse ruft die Einstellungen für zusätzliche Kalender in der Taskleiste ab.
 ms.assetid: 84121b24-590a-4b0b-946f-8a107eaed6c6
 keywords:
 - MDM_Policy_User_Result01_Settings02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8b38956121d6391433fd2727048ce95eb0b5646
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 51693842dab0c230632198923d085f2987982acac711fb482d7f504643931ffa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118164304"
 ---
-# <a name="mdm_policy_user_result01_settings02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Result01 \_ Settings02-Klasse
+# <a name="mdm_policy_user_result01_settings02-class"></a>MDM \_ Policy \_ User \_ Result01 \_ Settings02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Benutzer Result01 Settings02-Klasse der MDM- \_ Richtlinie ruft \_ \_ \_ die Einstellungen für zusätzliche Kalender auf der Taskleiste ab.
+Die Mdm \_ Policy \_ User \_ Result01 \_ Settings02-Klasse ruft die Einstellungen für zusätzliche Kalender in der Taskleiste ab.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_User_Result01_Settings02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Result01 \_ Settings02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Result01 \_ Settings02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Result01 \_ Settings02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Result01 \_ Settings02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Konfigurations Kalender konfigurieren](/windows/client-management/mdm/policy-csp-settings#settings-configuretaskbarcalendar)
+[ConfigureTaskbarCalendar](/windows/client-management/mdm/policy-csp-settings#settings-configuretaskbarcalendar)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,7 +81,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

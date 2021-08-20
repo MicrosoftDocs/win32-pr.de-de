@@ -1,12 +1,12 @@
 ---
-title: DisconnectUser-Methode der Win32_TSGatewayConnection-Klasse (Ts dllthenticationengine.h)
+title: DisconnectUser-Methode der Win32_TSGatewayConnection -Klasse (Tsünthenticationengine.h)
 description: Trennt alle Verbindungen des angegebenen Benutzers vom Remotedesktop Gatewayserver (RD-Gateway).
 ms.assetid: 3c5d66b6-c1f0-4a91-bf93-be886d8e2391
 ms.tgt_platform: multiple
 keywords:
-- DisconnectUser-Methode Remotedesktopdienste
+- DisconnectUser-Remotedesktopdienste
 - DisconnectUser-Methode Remotedesktopdienste , Win32_TSGatewayConnection-Klasse
-- Win32_TSGatewayConnection Klasse Remotedesktopdienste , DisconnectUser-Methode
+- Win32_TSGatewayConnection klasse Remotedesktopdienste , DisconnectUser-Methode
 topic_type:
 - apiref
 api_name:
@@ -46,19 +46,19 @@ uint32 DisconnectUser(
 *UserName* \[ In\]
 </dt> <dd>
 
-Der Benutzername im **\\** _UserName-Format_ *Domäne*, dessen Verbindungen getrennt werden sollen.
+Der Benutzername im **\\** _*Domain*UserName-Format,_ dessen Verbindungen getrennt werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation -Klassen (WMI). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,14 +68,14 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Ts dllthenticationengine.h</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                             |
+| Header<br/>                   | <dl> <dt>Tsünthenticationengine.h</dt> </dl> |
 | MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl>             |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>                |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
 title: Modify-Methode der MicrosoftDNS_NXTType-Klasse
-description: Die Modify-Methode aktualisiert einen nächsten (NXT) Ressourcen Daten Satz.
+description: Mit der Modify-Methode wird ein Next-Ressourceneintrag (NXT) aktualisiert.
 ms.assetid: 5a21b843-0761-4022-b00a-9dbcd6814454
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_NXTType-Klasse
-- DNS-MicrosoftDNS_NXTType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_NXTType class
+- MicrosoftDNS_NXTType-Klasse DNS, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bab7bf8480c7e18914cac4f7ae0deb8a608090f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e43082ff829a7b8701701e9b099aa0f36d274879bfb6f281272096558f1c8bd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163201"
 ---
-# <a name="modify-method-of-the-microsoftdns_nxttype-class"></a>Modify-Methode der MicrosoftDNS- \_ nxttype-Klasse
+# <a name="modify-method-of-the-microsoftdns_nxttype-class"></a>Modify-Methode der MicrosoftDNS \_ NXTType-Klasse
 
-Die **Modify** -Methode aktualisiert einen nächsten (NXT) Ressourcen Daten Satz.
+Mit **der Modify-Methode** wird ein Next-Ressourceneintrag (NXT) aktualisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Nextdomainname* \[ in\]
+*NextDomainName* \[ In\]
 </dt> <dd>
 
-Der nächste Domänen Name.
+Nächster Domänenname.
 
 </dd> <dt>
 
-*Typen* \[ in\]
+*Typen* \[ In\]
 </dt> <dd>
 
-Durch Leerzeichen getrennte Liste der RR-Type-mnetmonics für den Besitzer Namen des NXT-Ressourcen Datensatzes.
+Durch Leerzeichen getrennte Liste der Mnemonics vom RR-Typ für den Besitzernamen des NXT-Ressourcendatensatzes.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -77,9 +77,9 @@ Verweis auf das neue-Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ nxttype**](microsoftdns-nxttype.md)
+[**MicrosoftDNS \_ NXTType**](microsoftdns-nxttype.md)
 </dt> <dt>
 
-[**Die Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ nxttype"**](microsoftdns-nxttype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der \_ MicrosoftDNS-NXTType-Klasse**](microsoftdns-nxttype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

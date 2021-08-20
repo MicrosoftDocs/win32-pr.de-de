@@ -36,7 +36,7 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2130              |
 | System-ID-GUID    | aa12854c-d8fc-4d5e-91ca-368b8d829bee |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 

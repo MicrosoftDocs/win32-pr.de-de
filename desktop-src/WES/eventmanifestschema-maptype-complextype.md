@@ -1,9 +1,9 @@
 ---
-title: Komplexer maptype-Typ
+title: Komplexer MapType-Typ
 description: Definiert eine Liste von Name-Wert-Paaren.
 ms.assetid: 208ae219-8f79-4049-b946-a57b33c97b1b
 keywords:
-- "\"Maptype Complex Type Event Log\""
+- Komplexer MapType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4daf6cfe677ab5585ac580e19c868f1bba17de45
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 162676ab5d017c8fa6d6d280a07d1e4500e77cc79e0eacf25e23d5f20c0b3326
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120918"
 ---
-# <a name="maptype-complex-type"></a>Komplexer maptype-Typ
+# <a name="maptype-complex-type"></a>Komplexer MapType-Typ
 
 Definiert eine Liste von Name-Wert-Paaren.
 
@@ -43,20 +43,20 @@ Definiert eine Liste von Name-Wert-Paaren.
 
 
 
-| Element                                                          | type                                                                 | BESCHREIBUNG                                                                              |
+| Element                                                          | Typ                                                                 | Beschreibung                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| [**bitMap**](eventmanifestschema-bitmap-maptype-element.md)     | [**Bitmaptype**](eventmanifestschema-bitmaptype-complextype.md)     | Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichen folgen Werte zuordnen.<br/>     |
-| [**valueMap**](eventmanifestschema-valuemap-maptype-element.md) | [**Valuemaptype**](eventmanifestschema-valuemaptype-complextype.md) | Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichen folgen Werte zuordnen.<br/> |
+| [**Bitmap**](eventmanifestschema-bitmap-maptype-element.md)     | [**BitMapType**](eventmanifestschema-bitmaptype-complextype.md)     | Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichenfolgenwerte zuordnen.<br/>     |
+| [**valueMap**](eventmanifestschema-valuemap-maptype-element.md) | [**ValueMapType**](eventmanifestschema-valuemaptype-complextype.md) | Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichenfolgenwerte zuordnen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel erstellen Sie Zuordnungen, um aufgelistete Zeichen folgen Werte für Ereignisdaten bereitzustellen.
+In der Regel erstellen Sie Zuordnungen, um aufzählte Zeichenfolgenwerte für Ereignisdaten zur Verfügung zu stellen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine Werte Zuordnung und eine Bitmap angegeben werden.
+Das folgende Beispiel zeigt, wie Sie eine Wertzuordnung und eine Bitmap angeben.
 
 
 ```XML
@@ -81,8 +81,8 @@ Im folgenden Beispiel wird gezeigt, wie eine Werte Zuordnung und eine Bitmap ang
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

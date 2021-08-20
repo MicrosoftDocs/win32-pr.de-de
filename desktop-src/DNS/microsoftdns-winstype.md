@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_WINSType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen WINS-Datensatz (Windows Internet Name Service) darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Windows WINS-Eintrag (Internet Name Service) darstellt.
 ms.assetid: 8f891d80-ee4d-4641-8a6c-159c78e5cf86
 keywords:
-- DNS-MicrosoftDNS_WINSType Klasse
-- DNS-MicrosoftDNS_WINSType Klasse, beschrieben
+- dns der MicrosoftDNS_WINSType-Klasse
+- MicrosoftDNS_WINSType Dns-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -21,18 +21,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce23132073305142948518327ea5b6c7e46f1289
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 089faa6fa3cda6780b600dbf6c296fd1ce71f902428e6c2abe16f92dada1e219
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162840"
 ---
-# <a name="microsoftdns_winstype-class"></a>MicrosoftDNS- \_ winstype-Klasse
+# <a name="microsoftdns_winstype-class"></a>MicrosoftDNS \_ WINSType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen WINS-Datensatz (Windows Internet Name Service) darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Windows WINS-Eintrag (Internet Name Service) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ class MicrosoftDNS_WINSType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ winstype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ WINSType-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ winstype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ WINSType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                  |
 |:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen WINS-Typ von RR basierend auf den Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer Namen, der Klasse (Standard = in), dem Wert für die Gültigkeitsdauer und dem WINS-ZuordnungsFlag, dem Such Timeout, dem Cache Timeout und der Liste der IP-Adressen für die Suche. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer, das ZuordnungsFlag, das Nachschlage Timeout, den Cache Timeout und die WINS-Server auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>                      |
+| **CreateInstanceFromPropertyData** | Instanziiert einen WINS-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername, Klasse (Standard = IN), Time-to-Live-Wert und WINS-Zuordnungsflag, Suchtime out, Cachetime out und Liste der IP-Adressen für die Suche. Es gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert TTL, Zuordnungsflag, Suchtime out, Cachetime out und Wins Servers auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                      |
 
 
 
@@ -70,53 +70,53 @@ Die **MicrosoftDNS- \_ winstype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ winstype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ WINSType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **CacheTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeit in Sekunden, für die ein DNS-Server mit WINS-Suche die Antwort des WINS-Servers zwischenspeichern kann.
+Zeit in Sekunden, in der ein DNS-Server, der WINS Look up verwendet, die Antwort des WINS-Servers zwischenspeichern kann.
 
 </dd> <dt>
 
-**Lookuptimeout**
+**LookupTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeit (in Sekunden), die ein DNS-Server versucht, mithilfe von WINS eine Auflösung durchsuchen zu können.
+Zeit in Sekunden, in der ein DNS-Server versucht, die Auflösung mithilfe der WINS-Suche zu lösen.
 
 </dd> <dt>
 
-**Mappingflag**
+**MappingFlag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-WINS-ZuordnungsFlag, das angibt, ob der Datensatz in die Zonen Replikation eingeschlossen werden muss. Sie kann nur zwei Werte aufweisen: 0x80000000 und 0x00010000 bis, die den Replikations-und No-Replication-Flags (local Record) entsprechen. Die folgenden Werte sind gültig.
+WINS-Zuordnungsflag, das angibt, ob der Datensatz in die Zonenreplikation eingeschlossen werden muss. Sie kann nur zwei Werte aufweisen: 0x80000000 und 0x00010000 entsprechend den Replikationsflags bzw. Flags ohne Replikation (lokaler Datensatz). Die folgenden Werte sind gültig.
 
 
 
 | Wert                                                                                                                                               | Bedeutung                                       |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <span id="0x80000000"></span><span id="0X80000000"></span><dl> <dt>**0x80000000**</dt> </dl> | Replikationsflag<br/>                   |
-| <span id="0x00010000"></span><span id="0X00010000"></span><dl> <dt>**0x00010000**</dt> </dl> | Flag "keine Replikation (lokaler Datensatz)"<br/> |
+| <span id="0x00010000"></span><span id="0X00010000"></span><dl> <dt>**0x00010000**</dt> </dl> | Flag "No-Replication (local record)" (Keine Replikation (lokaler Datensatz))<br/> |
 
 
 
@@ -124,16 +124,16 @@ WINS-ZuordnungsFlag, das angibt, ob der Datensatz in die Zonen Replikation einge
 
 </dd> <dt>
 
-**Windows Server**
+**WinsServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Liste mit durch Trennzeichen getrennten IP-Adressen von WINS-Servern, die in WINS-suchen verwendet werden.
+Liste der durch Kommas getrennten IP-Adressen von WINS-Servern, die in WINS-Suchläufen verwendet werden.
 
 </dd> </dl>
 
@@ -145,8 +145,8 @@ Liste mit durch Trennzeichen getrennten IP-Adressen von WINS-Servern, die in WIN
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -154,13 +154,13 @@ Liste mit durch Trennzeichen getrennten IP-Adressen von WINS-Servern, die in WIN
 
 <dl> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der MicrosoftDNS- \_ winstype-Klasse**](microsoftdns-winstype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ WINSType-Klasse**](microsoftdns-winstype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ winstype-Klasse**](microsoftdns-winstype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ WINSType-Klasse**](microsoftdns-winstype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

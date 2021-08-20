@@ -1,10 +1,10 @@
 ---
 title: IADsPropertyEntry-Eigenschaftsmethoden (Iads.h)
-description: Geben Sie Zugriff auf die folgenden Eigenschaften an.
+description: Stellen Sie Zugriff auf die folgenden Eigenschaften zur Verfügung.
 ms.assetid: 73b0f6d4-55db-46cf-a781-e10bc4fcf2db
 ms.tgt_platform: multiple
 keywords:
-- IADsPropertyEntry-Eigenschaftenmethoden ADSI
+- IADsPropertyEntry-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -36,7 +36,7 @@ ms.locfileid: "118427653"
 ---
 # <a name="iadspropertyentry-property-methods"></a>IADsPropertyEntry-Eigenschaftsmethoden
 
-Die Eigenschaftenmethoden der [**IADsPropertyEntry-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry) bieten Zugriff auf die folgenden Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
+Die Eigenschaftenmethoden der [**IADsPropertyEntry-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry) bieten Zugriff auf die folgenden Eigenschaften. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -101,7 +101,7 @@ HRESULT put_ControlCode(
 **Name**
 </dt> <dd> <dl>
 
-Name des Eigenschaftseintrags. Dieser Name sollte dem Namen eines Attributs entsprechen, wie im Schema definiert.
+Name des Eigenschafteneintrags. Dieser Name sollte dem Namen eines Attributs entsprechen, wie im Schema definiert.
 
 <dt>
 
@@ -129,7 +129,7 @@ HRESULT put_Name(
 **Werte**
 </dt> <dd> <dl>
 
-Ein **VARIANT-Array.** Jedes Element in diesem Array stellt einen Wert der benannten Eigenschaft dar. Solche Eigenschaftswerte werden durch ADSI-Objekte dargestellt, die die Schnittstellen [**IADsPropertyValue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) und [**IADsPropertyValue2**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue2) implementieren. Daher enthält das **VARIANT-Array** ein Array von Zeigern auf die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) für die ADSI-Objekte, die die **Schnittstellen IADsPropertyValue** und **IADsPropertyValue2** implementieren.
+Ein **VARIANT-Array.** Jedes Element in diesem Array stellt einen Wert der benannten Eigenschaft dar. Solche Eigenschaftswerte werden durch ADSI-Objekte dargestellt, die die [**Schnittstellen IADsPropertyValue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) und [**IADsPropertyValue2**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue2) implementieren. Daher enthält das **VARIANT-Array** ein Array von Zeigern auf die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) der ADSI-Objekte, die die **Schnittstellen IADsPropertyValue** und **IADsPropertyValue2** implementieren.
 
 <dt>
 
@@ -158,7 +158,7 @@ HRESULT put_Values(
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Eigenschaftsmethode unterstützt die HRESULT-Standardrückgabewerte, einschließlich S  \_ OK. Weitere Informationen zu anderen Rückgabewerten finden Sie unter [ADSI-Fehlercodes.](adsi-error-codes.md)
+Jede Eigenschaftsmethode unterstützt die **HRESULT-Standard-Rückgabewerte,** einschließlich S \_ OK. Weitere Informationen zu anderen Rückgabewerten finden Sie unter [ADSI-Fehlercodes](adsi-error-codes.md).
 
 ## <a name="examples"></a>Beispiele
 
@@ -222,7 +222,7 @@ Cleanup:
 
 
 
-Das folgende Codebeispiel zeigt, wie sie eine benannte Eigenschaft aus einem Cache abrufen.
+Das folgende Codebeispiel zeigt, wie sie eine benannte Eigenschaft aus einem Cache erhalten.
 
 
 ```C++
@@ -299,11 +299,11 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**ADS \_ PROPERTY \_ OPERATION \_ ENUM**](/windows/win32/api/iads/ne-iads-ads_property_operation_enum)
+[**\_ENUM FÜR \_ \_ ADS-EIGENSCHAFTSVORGANG**](/windows/win32/api/iads/ne-iads-ads_property_operation_enum)
 </dt> <dt>
 
 [ADSI-Fehlercodes](adsi-error-codes.md)

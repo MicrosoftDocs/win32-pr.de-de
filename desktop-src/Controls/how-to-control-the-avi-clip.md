@@ -1,38 +1,38 @@
 ---
 title: Steuern des AVI-Clips
-description: In diesem Thema wird veranschaulicht, wie Sie mit den Animations Steuerelement-Makros ein zugeordnetes Audio-Video Interleaved (AVI)-Clip abspielen, beenden und schließen.
+description: In diesem Thema wird veranschaulicht, wie sie die Animationssteuersteuermakros verwenden, um einen zugeordneten zwischengespeicherten Clip (AVI) Audio-Video, zu beenden und zu schließen.
 ms.assetid: 4B19F929-B306-4EBF-B82F-6539FAA42BA6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c11f7d8f519f98f3293d5be29fac0e0a40dd704
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 5fbabd3ea6e0694448e4bd8c01e53161333b2df3904cf1578252bdbe150d3d5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104474704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118170761"
 ---
 # <a name="how-to-control-the-avi-clip"></a>Steuern des AVI-Clips
 
-In diesem Thema wird veranschaulicht, wie Sie mit den Animations Steuerelement-Makros ein zugeordnetes Audio-Video Interleaved (AVI)-Clip abspielen, beenden und schließen.
+In diesem Thema wird veranschaulicht, wie sie die Animationssteuersteuermakros verwenden, um einen zugeordneten zwischengespeicherten Clip (AVI) Audio-Video, zu beenden und zu schließen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 -   AVI-Dateien
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Erstellen Sie eine Funktion, die als Parameter ein Handle für das Animations Steuerelement und ein Flag annimmt, das die Aktion angibt, die für den zugeordneten AVI-Clip ausgeführt werden soll.
+Erstellen Sie eine Funktion, die als Parameter ein Handle für das Animationssteuerzeichen und ein Flag angibt, das die Aktion angibt, die für den zugeordneten AVI-Clip ausgeführt werden soll.
 
-Die Funktion im folgenden C++-Beispiel ruft eines von drei Animations Steuerelement-[**Makros \_ auf, basierend**](/windows/desktop/api/Commctrl/nf-commctrl-animate_play)auf dem [**Wert \_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close)des *naction* -Parameters. [**\_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_stop) Das Handle für das Animations Steuerelement, das dem AVI-Clip zugeordnet ist, wird über den *hwndanim* -Parameter übergeben.
+Die Funktion im folgenden C++-Beispiel ruft basierend auf dem Wert des *nAction-Parameters* eines von drei Animationssteuersteuermakros auf ([**\_ Animieren**](/windows/desktop/api/Commctrl/nf-commctrl-animate_play)der Wiedergabe , [**Animieren \_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_stop)beenden , [**Schließen animieren). \_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close) Das Handle für das animations-Steuerelement, das dem AVI-Clip zugeordnet ist, wird über den *hwndAnim-Parameter* übergeben.
 
 
 ```C++
@@ -73,16 +73,16 @@ void DoAnimation(HWND hwndAnim, int nAction)
 
 <dl> <dt>
 
-[Informationen zu Animations Steuerelementen](animation-control-overview.md)
+[Informationen zu Animationssteuerelementen](animation-control-overview.md)
 </dt> <dt>
 
-[Referenz zum Animations Steuerelement](bumper-animation-animation-control-reference.md)
+[Referenz zum Animationssteuersteuersystem](bumper-animation-animation-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Animations Steuerelementen](using-animation-control.md)
+[Verwenden von Animationssteuerelementen](using-animation-control.md)
 </dt> <dt>
 
-[Animations Steuerelement](animation-control-reference.md)
+[Animation-Steuerelement](animation-control-reference.md)
 </dt> </dl>
 
  

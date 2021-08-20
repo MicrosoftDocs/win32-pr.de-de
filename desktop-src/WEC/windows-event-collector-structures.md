@@ -18,7 +18,7 @@ In der folgenden Tabelle sind die Strukturen des Windows Event Collector SDK auf
 
 
 
-| Struktur                         | BESCHREIBUNG                                                                 |
+| Struktur                         | Beschreibung                                                                 |
 |-----------------------------------|-----------------------------------------------------------------------------|
 | [**EC \_ VARIANT**](/windows/desktop/api/Evcoll/ns-evcoll-ec_variant) | Enthält Ereignissammlerdaten (Ereignisabonnementdaten) oder Eigenschaftswerte. |
 

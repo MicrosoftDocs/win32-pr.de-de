@@ -1,24 +1,24 @@
 ---
-title: IMsRdpClientAdvancedSettings2 canautoreconnetct (Eigenschaft)
-description: Gibt an, ob das Client Steuerelement automatisch eine Verbindung mit der aktuellen Sitzung herstellen kann, wenn eine Netzwerkverbindung getrennt wird.
+title: IMsRdpClientAdvancedSettings2 CanAutoReconnect (Eigenschaft)
+description: Gibt an, ob das Clientsteuer steuerelement im Falle einer Trennung der Netzwerkverbindung automatisch wieder eine Verbindung mit der aktuellen Sitzung herstellen kann.
 ms.assetid: 0a7ecf90-832b-4ec1-990b-7fe26ff134b1
 ms.tgt_platform: multiple
 keywords:
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
-- Canautoreconnetct-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, canautoreconnetct (Eigenschaft)
+- CanAutoReconnect-Remotedesktopdienste
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
+- CanAutoReconnect-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , CanAutoReconnect-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -42,16 +42,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d8c8f4113c39b79783978252136c50d2111ed0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 20d64ac732af45e935ddef8d0436bc2b9173854394c55bcc19c085dec5926e31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001418"
 ---
-# <a name="imsrdpclientadvancedsettings2canautoreconnect-property"></a>IMsRdpClientAdvancedSettings2:: canautoreconnetct (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings2canautoreconnect-property"></a>IMsRdpClientAdvancedSettings2::CanAutoReconnect (Eigenschaft)
 
-Gibt an, ob das Client Steuerelement automatisch eine Verbindung mit der aktuellen Sitzung herstellen kann, wenn eine Netzwerkverbindung getrennt wird.
+Gibt an, ob das Clientsteuer steuerelement im Falle einer Trennung der Netzwerkverbindung automatisch wieder eine Verbindung mit der aktuellen Sitzung herstellen kann.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -68,15 +68,15 @@ HRESULT get_CanAutoReconnect(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Empfängt **Variant \_ true** , wenn das Steuerelement automatisch eine Verbindung herstellen kann, und andernfalls **Variant \_ false** .
+Empfängt **VARIANT \_ TRUE,** wenn das Steuerelement die Verbindung automatisch wiederherstellen kann, andernfalls **VARIANT \_ FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Situationen, in denen die automatische Verbindungs Wiederherstellung möglicherweise nicht aktiviert ist, sind u. a. solche, in denen ein Administrator die automatische erneute Verbindungs Herstellung mit Gruppenrichtlinien deaktiviert.
+Zu situationen, in denen die automatische wiederhergestellte Verbindung möglicherweise nicht aktiviert ist, gehören dieJenigen, in denen ein Administrator die Gruppenrichtlinie verwendet, um die automatische Verbindung zu deaktivieren, und Ältere Umgebungen, die die automatische Wiederherstellung der Verbindung nicht unterstützen.
 
 Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
 

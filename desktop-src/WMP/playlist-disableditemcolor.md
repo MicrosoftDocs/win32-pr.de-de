@@ -3,7 +3,7 @@ title: PLAYLIST.disabledItemColor
 description: Das disabledItemColor-Attribut gibt die Farbe einer deaktivierten CD-Spur oder von Onlineinhalten im Offlinemodus an oder ruft sie ab.
 ms.assetid: a6e3af4b-2492-43fe-b508-393632512971
 keywords:
-- PLAYLIST.disabledItemColor-Windows Media Player
+- PLAYLIST.disabledItemColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -29,7 +29,7 @@ Das **disabledItemColor-Attribut** gibt die Farbe einer deaktivierten CD-Spur od
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er hat den Standardwert "graytext".
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Der Standardwert ist "graytext".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen be
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

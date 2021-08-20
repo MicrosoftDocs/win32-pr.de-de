@@ -1,28 +1,28 @@
 ---
-title: Erstellen und Registrieren von SPNs für den SCP-basierten Windows Sockets-Dienst
-description: Im folgenden Codebeispiel wird gezeigt, wie Sie die SPNs für einen Dienst verfassen und registrieren. Rufen Sie diesen Code nach dem Aufrufen von CreateService und dem Erstellen des Dienst Verbindungs Punkts (Service Connection Point, SCP) von Ihrem Dienst Installationsprogramm auf.
+title: Verfassen und Registrieren von SPNs für SCP-basierte Windows Sockets Service
+description: Das folgende Codebeispiel zeigt, wie Sie die SPNs für einen Dienst erstellen und registrieren. Rufen Sie diesen Code von Ihrem Dienstinstallationsprogramm auf, nachdem Sie CreateService aufgerufen und den Dienstverbindungspunkt (Service Connection Point, SCP) des Diensts erstellt haben.
 ms.assetid: 3957af10-974a-415f-b8fb-d9b52ac5a82d
 ms.tgt_platform: multiple
 keywords:
-- Dienst Prinzipal Namen AD, erstellen und Registrieren von SPNs für einen SCP-basierten Windows Sockets-Dienst
+- Dienstprinzipalnamen AD, Verfassen und Registrieren von SPNs für einen SCP-basierten Windows Sockets-Dienst
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d754d51c0ad34b1623bdc84fc8178b04d33515ed
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 06e7724ef764b9269357ed932425c3526be4f7dc41a8640d29420cc48904c0f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118022348"
 ---
-# <a name="composing-and-registering-spns-for-scp-based-windows-sockets-service"></a>Erstellen und Registrieren von SPNs für den SCP-basierten Windows Sockets-Dienst
+# <a name="composing-and-registering-spns-for-scp-based-windows-sockets-service"></a>Verfassen und Registrieren von SPNs für SCP-basierte Windows Sockets Service
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die SPNs für einen Dienst verfassen und registrieren. Rufen Sie diesen Code nach dem Aufrufen von [**CreateService**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) und dem Erstellen des Dienst Verbindungs Punkts (Service Connection Point, SCP) von Ihrem Dienst Installationsprogramm auf.
+Das folgende Codebeispiel zeigt, wie Sie die SPNs für einen Dienst erstellen und registrieren. Rufen Sie diesen Code von Ihrem Dienstinstallationsprogramm auf, nachdem [**Sie CreateService**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) aufgerufen und den Dienstverbindungspunkt (Service Connection Point, SCP) des Diensts erstellt haben.
 
-Im folgenden Codebeispiel werden die Funktionen **spncompose** und **spnregister** aufgerufen, um den SPN zu verfassen und zu registrieren. Weitere Informationen und den **spncompose** -Quellcode finden Sie unter Verfassen [der SPNs für einen Dienst mit einem SCP](composing-the-spns-for-a-service-with-an-scp.md). Weitere Informationen und den **spnregister** -Quellcode finden Sie unter [Registrieren der SPNs für einen Dienst](registering-the-spns-for-a-service.md).
+Das folgende Codebeispiel ruft die **Beispielfunktionen SpnCompose** und **SpnRegister** auf, die den SPN zusammenstellen und registrieren. Weitere Informationen und den **SpnCompose-Quellcode** finden Sie unter [Zusammenstellen der SPNs für einen Dienst mit einem SCP.](composing-the-spns-for-a-service-with-an-scp.md) Weitere Informationen und den **SpnRegister-Quellcode** finden Sie unter [Registrieren der SPNs für einen Dienst.](registering-the-spns-for-a-service.md)
 
-In diesem Beispiel werden der Dienst Klassenname und der Distinguished Name seines Dienst Prinzipals verwendet, um seinen Dienst Prinzipal Namen zu erstellen. Weitere Informationen und ein Codebeispiel, das zeigt, wie der Client an den Dienst-SCP gebunden wird, um diese namens Zeichenfolgen abzurufen, finden Sie unter [wie Clients einen Dienst Verbindungspunkt suchen und verwenden](how-clients-find-and-use-a-service-connection-point.md). Beachten Sie, dass der Code zum Erstellen eines SPN abhängig vom Diensttyp und den Mechanismen, die zum Veröffentlichen des diensdienstanbieter verwendet werden, abweicht.
+In diesem Beispiel werden der Dienstklassenname und der Distinguished Name des SCP verwendet, um den Dienstprinzipalnamen zu erstellen. Weitere Informationen und ein Codebeispiel, das zeigt, wie der Client an den Dienst-SCP gebunden wird, um diese Namenszeichenfolgen abzurufen, finden Sie unter [Suchen und Verwenden eines Dienstverbindungspunkts](how-clients-find-and-use-a-service-connection-point.md)durch Clients. Beachten Sie, dass der Code zum Verfassen eines SPN je nach Diensttyp und den Mechanismen zum Veröffentlichen des Diensts variiert.
 
-Der Dienst registriert seinen SPN, indem er ihn im **servicePrincipalName** -Attribut des Dienst Konto Objekts im Verzeichnis speichert. Wenn der Dienst unter dem Konto "LocalSystem" statt unter einem Dienst Konto ausgeführt wird, registriert er seinen SPN unter dem Objekt des lokalen Computer Kontos im Verzeichnis.
+Der Dienst registriert seinen SPN, indem er ihn im **servicePrincipalName-Attribut** des Kontoobjekts des Diensts im Verzeichnis speichert. Wenn der Dienst unter dem LocalSystem-Konto und nicht unter einem Dienstkonto ausgeführt wird, registriert er seinen SPN unter dem -Objekt des lokalen Computerkontos im Verzeichnis.
 
 
 ```C++
@@ -55,8 +55,8 @@ DsFreeSpnArray(ulSpn, pspn);
 
 
 
-Sie können ähnlichen Code verwenden, um die Registrierung Ihrer SPNs aufzuheben, wenn der Dienst deinstalliert wird. Geben Sie den DS-SPN-Vorgang zum **\_ Löschen von \_ \_ SPN \_** -SPN anstelle von **DS \_ SPN \_ Add \_ SPN \_ op** an.
+Sie können ähnlichen Code verwenden, um die Registrierung Ihrer SPNs bei der Deinstallation des Diensts zu aufheben. Geben Sie den **VORGANG DS \_ \_ SPN DELETE \_ SPN \_ OP** anstelle von **DS \_ SPN \_ ADD \_ SPN \_ OP** an.
 
- 
+ 
 
- 
+ 
