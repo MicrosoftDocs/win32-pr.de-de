@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Msmdun80.dll
 - Sqlunirl.dll
-ms.openlocfilehash: becd7fed9e32385409b78e00169191a12b550e3b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8ff69057397fd887d4c7489c350579e7c3a31e432c3716b3107fc483315376fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956759"
 ---
-# <a name="_createfile-function"></a>\_Funktion "kreatefile"
+# <a name="_createfile-function"></a>\_CreateFile-Funktion
 
-\[Diese Funktion ist ein Wrapper **über die Funktion** "Funktion". Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten " **kreatefile** " direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **CreateFile-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **CreateFile** direkt aufrufen.\]
 
-Erstellt oder öffnet eine Datei. Siehe " [**kreatefile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)".
+Erstellt oder öffnet eine Datei. Weitere Informationen finden Sie unter [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea).
 
 ## <a name="syntax"></a>Syntax
 

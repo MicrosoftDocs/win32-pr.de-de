@@ -1,11 +1,11 @@
 ---
-title: Token-Groups-Global-and-Universal-Attribut
+title: Attribut "Token-Groups-Global-And-Universal"
 description: Tokengruppen für Exchange.
 ms.assetid: 4a146250-3dbc-4a91-baac-faa39d7d6253
 ms.tgt_platform: multiple
 keywords:
-- Token-Groups-Global-and-Universal Attribute ad-Schema
-- AD-Schema für das Attribut "tykengroupsglobalanduniversal"
+- AD-Schema des Attributs "Token-Groups-Global-And-Universal"
+- tokenGroupsGlobalAndUniversal-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4225af8b33a59eea2263c3590380f7d363736619
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d9296396ec01ac39779cb23ef06b7aca29b35b3e571cc120bf45bdbe0ce6a7f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081334"
 ---
-# <a name="token-groups-global-and-universal-attribute"></a>Token-Groups-Global-and-Universal-Attribut
+# <a name="token-groups-global-and-universal-attribute"></a>Attribut "Token-Groups-Global-And-Universal"
 
 Tokengruppen für Exchange.
 
@@ -29,21 +29,21 @@ Tokengruppen für Exchange.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Token-Groups-Global-and-Universal    |
-| LDAP-Display-Name | "tokenGroupsGlobalAndUniversal"        |
+| CN                | Tokengruppen– global und universell    |
+| Ldap-Anzeigename | tokenGroupsGlobalAndUniversal        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1418              |
 | System-ID-GUID    | 46a9b11d-60ae-405a-b7e8-ff8a58d456d2 |
-| Syntax            | [**Zeichenfolge (SID)**](s-string-sid.md)  |
+| Syntax            | [**String(Sid)**](s-string-sid.md)  |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Tokengruppen für Exchange.
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x08000014                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 

@@ -1,46 +1,46 @@
 ---
 title: Druck- und Befehlslisten
-description: Das Druck Steuerelement Direct2D \ 32; ist eine neue Komponente im Direct2D-Modul in Windows 8.
+description: Das Steuerelement Direct2D \ 32;print ist eine neue Komponente im Direct2D-Modul in Windows 8.
 ms.assetid: C51ACCDE-B205-4F79-A2FD-D112BAAD1616
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b6beb16a24c972016686e2dffe915a947128a63
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: de0026071ce8e78fc2ea946e0fffff2993e32ab48a2a20d4de6cdb12ca9b1eaa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075048"
 ---
 # <a name="printing-and-command-lists"></a>Druck- und Befehlslisten
 
-Das [Direct2D](./direct2d-portal.md) - [**Druck Steuer**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1printcontrol) Element ist eine neue Komponente im Direct2D-Modul in Windows 8. Mit dieser Komponente können Direct2D-Apps ihre Direct2D-Zeichnungs Aufrufe (hinsichtlich Zustandsänderungen und renderprimitiver) wieder verwenden, um Druckergebnisse zu übermitteln, die mit der Anzeige auf dem Bildschirm vergleichbar sind.
+Das [Direct2D-Drucksteuerelement](./direct2d-portal.md) [](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1printcontrol) ist eine neue Komponente im Direct2D-Modul in Windows 8. Mit dieser Komponente können Direct2D-Apps ihre Direct2D-Zeichnungsaufrufe wiederverwenden (in Bezug auf Zustandsänderungen und Zurückungsprimitiven), um Druckergebnisse zu liefern, die denen auf dem Bildschirm ähneln.
 
-Die [**ID2D1PrintControl**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1printcontrol) -Schnittstelle stellt einen virtuellen Druckauftrag dar: Sie können ein [Direct2D](./direct2d-portal.md) -Druck Steuerelement erstellen, um einen neuen Druckauftrag zu initiieren, Direct2D-Inhalte für jede Seite zu übergeben, die Sie drucken möchten, und dann das Druck Steuerelement schließen, um einen Druckauftrag abzuschließen.
-
-> [!Note]  
-> Ein Druck Steuerelement wird einem und genau einem Druckauftrag zugeordnet und kann nicht wieder verwendet werden.
-
-Mit dem Druck Steuerelement [Direct2D](./direct2d-portal.md) wird der übergebene Direct2D-Inhalt für das Druck Subsystem konvertiert und optimiert, das mit den echten Druckern funktioniert, um das tatsächliche PrintOut-Element bereitzustellen. Alle druckspezifischen Details werden in Direct2D-apps ausgeblendet, was bedeutet, dass Direct2D-apps drucken können, ohne zu wissen, auf welche Geräte Sie sich beziehen, oder wie die Zeichnungen in den Druckvorgang übersetzt werden.
-
-Zum Drucken mit [Direct2D](./direct2d-portal.md)müssen Sie eine Direct2D-Befehlsliste für jede Seite vorbereiten, die Sie drucken möchten. übergeben Sie dann die Befehlsliste an das Direct2D-Druck Steuerelement. Um diese Direct2D-Befehlsliste vorzubereiten, erstellen Sie einfach eine Befehlsliste als Zeichnungs Ziel des aktuellen Geräte Kontexts und legen Sie dann auf diesen Gerätekontext fest, genau so, als ob Sie auf ein bitmapziel für die Anzeige zeichnen. Weitere Informationen zu Geräten und Zielen finden Sie unter [Geräte und Geräte Kontexte](devices-and-device-contexts.md) .
-
-Das Diagramm zeigt die Interaktion zwischen der APP, dem Gerätekontext, dem bitmapziel, dem Ziel der Befehlsliste und dem Druck Steuerelement.
+Die [**ID2D1PrintControl-Schnittstelle**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1printcontrol) stellt einen virtuellen Druckauftrag dar: Sie können ein [Direct2D-Drucksteuer](./direct2d-portal.md) steuerelement erstellen, um einen neuen Druckauftrag zu initiieren, Direct2D-Inhalt für jede Seite übergeben, die Sie drucken möchten, und dann das Drucksteuerblatt schließen, um einen Druckauftrag zu abschließen.
 
 > [!Note]  
-> Die Druck Sub-System und Drucker Komponenten von Windows sind grau, da Sie in [Direct2D](./direct2d-portal.md) -apps vollständig ausgeblendet sind.
+> Ein Drucksteuer steuerelement wird einem und genau einem Druckauftrag zuordnungen, und Sie können es nicht wiederverwenden.
 
-![ein Diagramm, das zeigt, wie die CommandList und der Druckvorgang mit einer APP und Direct2D interagieren.](images/d2dprintcontroldiagram.png)
+Das [Direct2D-Drucksteuer](./direct2d-portal.md) steuerelement konvertiert und optimiert den übergebenen Direct2D-Inhalt für das Druckuntersystem, das mit den echten Druckern arbeitet, um den tatsächlichen Druck zu liefern. Alle druckspezifischen Details werden in Direct2D-Apps ausgeblendet. Dies bedeutet, dass Direct2D-Apps drucken können, ohne zu wissen, auf welche Geräte sie zeichnen oder wie die Zeichnungen in den Druck übersetzt werden.
+
+Zum Drucken mit [Direct2D](./direct2d-portal.md)müssen Sie eine Direct2D-Befehlsliste für jede Seite vorbereiten, die Sie drucken möchten, und diese Befehlsliste dann an das Direct2D-Drucksteuersystem übergeben. Um diese Direct2D-Befehlsliste vorzubereiten, erstellen und legen Sie einfach eine Befehlsliste als Zeichnungsziel des aktuellen Gerätekontexts fest und zeichnen dann in diesen Gerätekontext, genau so, als würden Sie auf ein Bitmapziel für die Anzeige zeichnen. Weitere [Informationen zu Geräten und](devices-and-device-contexts.md) Zielen finden Sie unter Geräte und Gerätekontexte.
+
+Das Diagramm hier veranschaulicht die Interaktion zwischen der App, dem Gerätekontext, dem Bitmapziel, dem Befehlslistenziel und dem Drucksteuergerät.
+
+> [!Note]  
+> Die Windows Print Sub-System- und Printer-Komponenten sind grau, da sie vollständig für [Direct2D-Apps ausgeblendet](./direct2d-portal.md) sind.
+
+![Ein Diagramm, das zeigt, wie die Befehlsliste und das Drucken mit einer App und direct2d interagieren.](images/d2dprintcontroldiagram.png)
 
 ## <a name="example"></a>Beispiel
 
-Der gesamte Druck Direct2D Inhalt umfasst die folgenden Schritte.
+Der vollständige Prozess zum Drucken von Direct2D-Inhalten umfasst die folgenden Schritte.
 
-1.  Erstellen Sie ein Druck Steuerelement zum Initiieren eines Druckauftrags.
-2.  Fügen Sie dem Druck Steuerelement eine Seite hinzu, indem Sie eine Befehlsliste übergeben.
+1.  Erstellen Sie ein Drucksteuer steuerelement, um einen Druckauftrag zu initiieren.
+2.  Fügen Sie dem Drucksteuer steuerelement eine Seite hinzu, indem Sie eine Befehlsliste übergeben.
 3.  Wiederholen Sie Schritt 2 für jede Seite im restlichen Dokument.
-4.  Schließen Sie das Druck Steuerelement, um den Druckauftrag abzuschließen.
+4.  Schließen Sie das Drucksteuer steuerelement, um den Druckauftrag fertig zu stellen.
 
-Hier sehen Sie ein Codebeispiel, in dem der Prozess veranschaulicht wird.
+Hier sehen Sie ein Codebeispiel, das den Prozess zeigt.
 
 ```cpp
 ID2D1CommandList* commandList;

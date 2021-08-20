@@ -1,34 +1,34 @@
 ---
 title: Vertrag
-description: Ein Dienstvertrag enthält Metadaten, die definieren, wie ein Dienst Kanalnachrichten verarbeitet.
+description: Ein Dienstvertrag enthält Metadaten, die definieren, wie ein Dienst Kanalnachrichten behandelt.
 ms.assetid: 670530bf-344b-4480-8357-8984d80c0c68
 keywords:
-- Vertragsweb Dienste für Windows
-- Wwsapi
+- Vertragswebdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7120346dac4d11c21955cd2430ed0a7dc277e88c
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: c69be302ace90c82b7b0db5666289cf4d312458e7283a04e2a1d892faa894ad9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "104567808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026578"
 ---
 # <a name="contract"></a>Vertrag
 
-Ein Dienstvertrag enthält Metadaten, die definieren, wie ein Dienst Kanalnachrichten verarbeitet.
+Ein Dienstvertrag enthält Metadaten, die definieren, wie ein Dienst Kanalnachrichten behandelt.
 
 
-Ein [**WS- \_ Dienst \_ Vertrag**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract) enthält Metadaten für einen Dienst, der eine [WS- \_ Nachricht](ws-message.md)verarbeitet.
+Ein [**\_ WS-DIENSTVERTRAG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract) enthält Metadaten für einen Dienst zur Handhabung einer [ \_ WS-NACHRICHT.](ws-message.md)
 
-![Diagramm, das WS_SERVICE_CONTRACT Metadaten in einer Nachricht an einen Dienst Endpunkt zeigt.](images/servicecontractintro.png)
+![Diagramm, das WS_SERVICE_CONTRACT Metadaten in einer Nachricht an einen Dienstendpunkt zeigt.](images/servicecontractintro.png)
 
-Sie verfügt über eine [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) und eine Funktions Tabelle. Eine Anwendung kann optional den [**\_ \_ \_ Empfangs \_ Rückruf**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)für den WS-Dienst angeben.
+Sie verfügt über [**eine WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) und eine Funktionstabelle. Eine Anwendung kann optional [**WS \_ SERVICE MESSAGE RECEIVE \_ \_ \_ CALLBACK angeben.**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
 
-Wenn eine [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) und eine Funktions Tabelle nicht angegeben werden, muss die Anwendung den [**\_ \_ \_ Empfangs \_ Rückruf für die WS-Dienst Nachricht**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)angeben.
+Wenn keine [**WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) und eine Funktionstabelle angegeben werden, muss die Anwendung [**WS \_ SERVICE MESSAGE \_ RECEIVE \_ \_ CALLBACK angeben.**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
 
-![Das Diagramm zeigt die Vorgänge zum Addieren und Subtrahieren von Diensten im ICalculator-Dienstvertrag.](images/servicecontract.png)
+![Diagramm, das die Dienstvorgänge "Hinzufügen" und "Subtrahieren" im ICalculator-Dienstvertrag zeigt.](images/servicecontract.png)
 
 
 ``` syntax
@@ -40,17 +40,17 @@ static WS_SERVICE_CONTRACT calculatorContract =
 };
 ```
 
-Weitere Informationen finden Sie im [Rechner](httpcalculatorserviceexample.md) Beispiel.
+Weitere Informationen finden [Sie im](httpcalculatorserviceexample.md) Rechnerbeispiel.
 
 Vertragsbeschreibung
 
-[**WS \_ Bei der Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) handelt es sich um Metadaten, die den typvertrag des Dienstanbieter definieren Wird von [wsutil.exe](web-service-compiler-tool.md)generiert.
+[**WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) sind Metadaten, die den Typvertrag des Diensts definieren. Wird von [wsutil.exe. ](web-service-compiler-tool.md)
 
-Im Hinblick auf WSDL wird eine [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) einem WSDL: PortType zugeordnet. Für jeden WSDL: portType im WSDL-Dokument wird eine separate **WS- \_ Vertrags \_ Beschreibung** generiert.
+Im Hinblick auf WSDL wird [**eine WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) einem wsdl:portType-Objekt (wsdl:portType) zuordnen. Für jeden wsdl:portType im WSDL-Dokument wird eine separate **WS \_ CONTRACT \_ DESCRIPTION** generiert.
 
-Eine Vertragsbeschreibung besteht aus einem oder mehreren [Dienst Vorgängen](service-operation.md). Diese Vorgänge werden als Array von WS- [**\_ Vorgangs \_ Beschreibungen**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description)angegeben.
+Eine Vertragsbeschreibung besteht aus oder mehr [Dienstvorgängen.](service-operation.md) Diese Vorgänge werden als Array von [**WS \_ OPERATION DESCRIPTION \_ angegeben.**](/windows/desktop/api/WebServices/ns-webservices-ws_operation_description)
 
-![Diagramm, das eine WS_CONTRACT_DESCRIPTION als Array von WS_OPERATION_DESCRIPTIONs anzeigt.](images/porttypetocontract.png)
+![Diagramm, das eine WS_CONTRACT_DESCRIPTION als Array von WS_OPERATION_DESCRIPTIONs.](images/porttypetocontract.png)
 
 ``` syntax
 <wsdl:definitions xmlns:soap="https://schemas.xmlsoap.org/wsdl/soap/" 
@@ -73,9 +73,9 @@ xmlns:wsdl="https://schemas.xmlsoap.org/wsdl/">
 </wsdl:definitions>
 ```
 
-Ausführliche Informationen zur Konvertierung von WSDL: portType zur [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) finden Sie im [Abschnitt WSDL-Ausgabe](wsdl-support.md).
+Ausführliche Informationen zur Konvertierung von wsdl:portType in [**WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) finden Sie im [WSDL-Ausgabeabschnitt](wsdl-support.md).
 
-Beispiel: [ **WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description)
+Beispiel: [ **WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description)
 
 ``` syntax
 static WS_CONTRACT_DESCRIPTION contractDescriptionICalculator =
@@ -85,11 +85,11 @@ static WS_CONTRACT_DESCRIPTION contractDescriptionICalculator =
 };
 ```
 
-Funktions Tabelle
+Funktionstabelle
 
-Die Funktions Tabelle ist eine Struktur von Funktions Zeigern, die die einzelnen [Dienst Vorgänge](service-operation.md) im Dienstvertrag darstellen. Die Definition der Funktions Tabelle wird auch von [wsutil.exe](web-service-compiler-tool.md)generiert.
+Die Funktionstabelle ist eine Struktur von Funktionszedern, die die einzelnen [Dienstvorgänge](service-operation.md) im Dienstvertrag darstellen. Die Definition der Funktionstabelle wird auch von [wsutil.exe. ](web-service-compiler-tool.md)
 
-Beispiel: Funktions Tabelle
+Beispiel: Funktionstabelle
 
 ``` syntax
  // Function Table
@@ -103,27 +103,27 @@ struct CalculatorServiceFunctionTable
 static const CalculatorServiceFunctionTable calculatorFunctions = {Add, Subtract};
 ```
 
-Verwenden des [ **WS- \_ Dienst- \_ Nachrichten \_ Empfangs \_ Rückrufs**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
+Verwenden des [ **WS \_ SERVICE \_ MESSAGE \_ \_ RECEIVE-RÜCKRUFS**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
 
-[**WS \_ Der \_ \_ Empfangs \_ Rückruf für Dienst Nachrichten**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback) hat eine zweiseitig ausschließende Rolle.
+[**WS \_ SERVICE \_ MESSAGE \_ RECEIVE \_ CALLBACK**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback) hat eine zwei sich gegenseitig ausschließende Rolle.
 
-Wenn eine [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) für den [**WS- \_ Dienst \_ Vertrag**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract)angegeben wird, wird dies zum Standard Nachrichten Handler für alle Aktionen, die von der angegebenen **WS- \_ Vertrags \_ Beschreibung** nicht unterstützt werden. Andernfalls, wenn die **WS- \_ Vertrags \_ Beschreibung** für den WS **- \_ Dienst \_ Vertrag** nicht angegeben wird und der [**WS-Dienst- \_ \_ Nachrichten \_ Empfangs \_ Rückruf**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback) für den **WS- \_ Dienst \_ Vertrag** angegeben wird, werden alle in den kommenden [Nachrichten](ws-message.md) an diesen Rückruf weitergeleitet.
+Wenn eine [**WS \_ CONTRACT \_ DESCRIPTION**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description) für den [**WS SERVICE \_ \_ CONTRACT**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract)angegeben wird, wird dies zum Standardmeldungshandler für alle Aktionen, die von der angegebenen WS CONTRACT DESCRIPTION nicht **unterstützt \_ \_ werden.** [](ws-message.md) Andernfalls, wenn **WS CONTRACT \_ \_ DESCRIPTION** nicht im **WS-DIENSTVERTRAG \_ \_** angegeben ist und der [**WS \_ SERVICE MESSAGE RECEIVE \_ \_ \_ CALLBACK**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback) im **\_ \_ WS-DIENSTVERTRAG** angegeben ist, werden alle in kommenden Nachrichten an diesen Rückruf übergeben.
 
-Weitere Beispiele finden Sie unter.
+Weitere Beispiele finden Sie unter
 
--   [Beispiel für nicht typisierten Dienst](untypedserviceexample.md)
--   [Beispiel für den Rechner Dienst](httpcalculatorserviceexample.md)
--   [Dienst Vorgänge](service-operation.md)
+-   [Beispiel für einen nicht typisierten Dienst](untypedserviceexample.md)
+-   [Beispiel für Rechnerdienst](httpcalculatorserviceexample.md)
+-   [Dienstvorgänge](service-operation.md)
 
 Die folgenden Rückrufe sind Teil des Vertrags:
 
--   [**WS- \_ Dienst- \_ Nachrichten \_ Empfangs \_ Rückruf**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
--   [**WS- \_ Dienst- \_ Stub- \_ Rückruf**](/windows/desktop/api/WebServices/nc-webservices-ws_service_stub_callback)
+-   [**WS \_ SERVICE \_ MESSAGE \_ RECEIVE \_ CALLBACK**](/windows/desktop/api/WebServices/nc-webservices-ws_service_message_receive_callback)
+-   [**\_ \_ WS-DIENSTSTUBRÜCKRUF \_**](/windows/desktop/api/WebServices/nc-webservices-ws_service_stub_callback)
 
 Die folgenden Strukturen sind Teil des Vertrags:
 
--   [**WS- \_ Vertrags \_ Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description)
--   [**WS- \_ Dienst \_ Vertrag**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract)
+-   [**\_WS-VERTRAGSBESCHREIBUNG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_contract_description)
+-   [**\_WS-DIENSTVERTRAG \_**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract)
 
  
 

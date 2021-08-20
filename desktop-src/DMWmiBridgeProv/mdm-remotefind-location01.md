@@ -1,6 +1,6 @@
 ---
 title: MDM_RemoteFind_Location01-Klasse
-description: Die MDM \_ remotefind \_ Location01-Klasse ruft die Speicherort Informationen für ein bestimmtes Gerät ab.
+description: Die MDM \_ RemoteFind \_ Location01-Klasse ruft die Standortinformationen für ein bestimmtes Gerät ab.
 ms.assetid: 0c26bb3c-99b4-43ed-99ce-d976d48c4445
 keywords:
 - MDM_RemoteFind_Location01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56e1b46a7b4a0c3439f78f38a5fb6cd5b865275c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 36942badfe975a28d5212e502ab28984fa745f4a7563c39ed1cebb7d1b5dbcef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077024"
 ---
-# <a name="mdm_remotefind_location01-class"></a>MDM \_ remotefind \_ Location01-Klasse
+# <a name="mdm_remotefind_location01-class"></a>MDM \_ RemoteFind \_ Location01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ remotefind \_ Location01** -Klasse ruft die Speicherort Informationen für ein bestimmtes Gerät ab.
+Die **MDM \_ RemoteFind \_ Location01-Klasse** ruft die Standortinformationen für ein bestimmtes Gerät ab.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -51,13 +51,13 @@ class MDM_RemoteFind_Location01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ remotefind \_ Location01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ RemoteFind \_ Location01-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ remotefind \_ Location01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ RemoteFind \_ Location01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -75,7 +75,7 @@ Zugriffstyp: Lesen/Schreiben
 [Age](/windows/client-management/mdm/remotefind-csp#age) (Alter)
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -94,7 +94,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Altitudäaccuracy](/windows/client-management/mdm/remotefind-csp#altitudeaccuracy)
+[HöheAccuracy](/windows/client-management/mdm/remotefind-csp#altitudeaccuracy)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -108,16 +108,16 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Location".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "Location".
 
 </dd> <dt>
 
@@ -143,19 +143,19 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/RemoteFind".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/RemoteFind".
 
 </dd> </dl>
 
@@ -165,10 +165,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 
@@ -177,7 +177,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

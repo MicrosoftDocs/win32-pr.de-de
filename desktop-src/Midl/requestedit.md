@@ -1,9 +1,9 @@
 ---
 title: requestedit-Attribut
-description: Das Attribut \ requestedit \ gibt an, dass die Eigenschaft die OnRequestEdit-Benachrichtigung unterstützt.
+description: Das Attribut \requestedit\ gibt an, dass die Eigenschaft die OnRequestEdit-Benachrichtigung unterstützt.
 ms.assetid: 63f38d83-596b-4031-bb6a-972374cd0c60
 keywords:
-- requestedit-Attribut-Mittel l
+- requestedit attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18d83beea34f008e6e96fcd493d8410d7d2c5b88
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 51a894e5d4a09e7535e10a73e1bd118245e5886e0cdbb23b0f0645e588ab4adf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146353"
 ---
 # <a name="requestedit-attribute"></a>requestedit-Attribut
 
-Das **\[ requestedit \]** -Attribut gibt an, dass die Eigenschaft die **OnRequestEdit** -Benachrichtigung unterstützt.
+Das **\[ requestedit-Attribut \]** gibt an, dass die Eigenschaft die **OnRequestEdit-Benachrichtigung** unterstützt.
 
 ``` syntax
 [requestedit [,optional-attributes]] return-type function-name(params)
@@ -31,21 +31,21 @@ Das **\[ requestedit \]** -Attribut gibt an, dass die Eigenschaft die **OnReques
 
 <dl> <dt>
 
-*optionale Attribute* 
+*optional-attributes* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute.
+Null oder mehr MIDL-Attribute.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*return-type* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion in der IDL-Datei an.
@@ -55,17 +55,17 @@ Gibt den Namen der Funktion in der IDL-Datei an.
 *params* 
 </dt> <dd>
 
-NULL oder mehr Funktionsparameter.
+Null oder mehr Funktionsparameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Unterstützung der **OnRequestEdit** -Benachrichtigung bedeutet, dass das-Objekt vor einer Änderung dem Client eine Anforderung zur Berechtigung zum Ändern einer Eigenschaft sendet. Ein Objekt kann die Datenbindung unterstützen, aber nicht über dieses Attribut verfügen.
+Die **Unterstützung der OnRequestEdit-Benachrichtigung** bedeutet, dass das -Objekt dem Client vor dem Ändern einer Eigenschaft eine Berechtigungsanforderung sendet. Ein Objekt kann die Datenbindung unterstützen, aber nicht über dieses Attribut verfügen.
 
 ### <a name="flags"></a>Flags
 
-funcflag \_ frequestedit, varflag \_ frequestedit
+FUNCFLAG \_ FREQUESTEDIT, VARFLAG \_ FREQUESTEDIT
 
 ## <a name="examples"></a>Beispiele
 
@@ -79,18 +79,18 @@ properties:
 
 <dl> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

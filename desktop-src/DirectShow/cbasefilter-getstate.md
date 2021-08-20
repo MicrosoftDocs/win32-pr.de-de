@@ -1,7 +1,7 @@
 ---
-description: 'Mit der GetState-Methode wird der Zustand des Filters abgerufen (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die imediafilter:: GetState-Methode.'
+description: Die GetState-Methode ruft den Zustand der Filter ab (wird ausgeführt, angehalten oder angehalten). Diese Methode implementiert die IMediaFilter::GetState-Methode.
 ms.assetid: e32e3a1d-857f-4db3-b52c-5b6b802ded42
-title: Cbasefilter. GetState-Methode (amfilter. h)
+title: CBaseFilter.GetState-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0c9470e5d71bf71f4e37e6eef84015becdf05f65
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9b6ed61b8b1e72652e9590d11827322256d4923bd92405206e5c5419cd5e7ae5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017168"
 ---
-# <a name="cbasefiltergetstate-method"></a>Cbasefilter. GetState-Methode
+# <a name="cbasefiltergetstate-method"></a>CBaseFilter.GetState-Methode
 
-Mit der `GetState` -Methode wird der Zustand des Filters abgerufen (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die [**imediafilter:: GetState**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-getstate) -Methode.
+Die `GetState` -Methode ruft den Zustand der Filter ab (wird ausgeführt, angehalten oder angehalten). Diese Methode implementiert die [**IMediaFilter::GetState-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-getstate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,29 +43,29 @@ HRESULT GetState(
 
 <dl> <dt>
 
-*dwmillisecstimeout* 
+*dwMsecsTimeout* 
 </dt> <dd>
 
-Timeout Intervall in Millisekunden.
+Time out-Intervall in Millisekunden.
 
 </dd> <dt>
 
 *State* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Member des Enumerationstyps des [**Filter \_ Zustands**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Filters angibt.
+Zeiger auf eine Variable, die einen Member des Enumerationstyps [**FILTER \_ STATE**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Filters angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den S \_ OK-oder E- \_ Zeiger zurück.
+Gibt S \_ OK oder E POINTER \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Basisklasse sind alle Zustandsübergänge synchron, und der Parameter " *dwmillisecstimeout* " wird ignoriert. Wenn eine abgeleitete Klasse asynchrone Zustandsübergänge ausführt, sollte Sie diese Methode überschreiben, um während der Zustandsübergänge zu warten, wobei ein Timeout von *dwmillisecstimeout* -Millisekunden auftritt.
+In der Basisklasse sind alle Zustandsübergänge synchron, und der *dwMsecsTimeout-Parameter* wird ignoriert. Wenn eine abgeleitete Klasse asynchrone Zustandsübergänge ausführt, sollte sie diese Methode überschreiben, um während Zustandsübergängen mit einem Timeout von *dwMsecsTimeout* in Millisekunden zu warten.
 
-Wenn der Filter keine Daten bereitstellt, während Sie angehalten werden, überschreiben Sie die- `GetState` Methode, um den Wert von VFW S nicht zu senden, \_ \_ \_ Wenn der Filter angehalten wird (siehe [Bereitstellung von Beispielen](delivering-samples.md)). Beispiel:
+Wenn Ihr Filter keine Daten übermittelt, während er angehalten wird, überschreiben Sie die `GetState` -Methode, um den Wert VFW \_ S \_ CANT \_ CUE zurückzugeben, wenn der Filter angehalten wird (siehe [Bereitstellen von Beispielen](delivering-samples.md)). Beispiel:
 
 
 ```C++
@@ -88,16 +88,16 @@ CMyFilter::GetState(DWORD dw, FILTER_STATE *pState)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

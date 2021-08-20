@@ -1,98 +1,98 @@
 ---
-description: Datenstrom Verwaltung
+description: Streamverwaltung
 ms.assetid: 936d8d69-e86c-418b-b5b0-c4fbbfa1dd49
-title: Datenstrom Verwaltung
+title: Streamverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07180d8b46f4d079c08f4b619cf4a7773a6104d3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 669e3be8af4532f9045c08f07400d47c423d507d4e11da4ada0b1a279c52772d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077434"
 ---
-# <a name="stream-management"></a>Datenstrom Verwaltung
+# <a name="stream-management"></a>Streamverwaltung
 
-Nachdem Sie die [audioendpunktgeräte](audio-endpoint-devices.md) im System aufgelistet und ein geeignetes Rendering-oder Erfassungsgerät identifiziert haben, besteht die nächste Aufgabe für eine audioclientanwendung darin, eine Verbindung mit dem Endpunkt Gerät zu öffnen und den Fluss der Audiodaten über diese Verbindung zu verwalten. [WASAPI](wasapi.md) ermöglicht Clients das Erstellen und Verwalten von Audiodatenströmen.
+Nach dem Aufzählen der [Audioendpunktgeräte](audio-endpoint-devices.md) im System und dem Identifizieren eines geeigneten Rendering- oder Erfassungsgeräts besteht die nächste Aufgabe für eine Audioclientanwendung darin, eine Verbindung mit dem Endpunktgerät zu öffnen und den Datenfluss von Audiodaten über diese Verbindung zu verwalten. [WASAPI](wasapi.md) ermöglicht Clients das Erstellen und Verwalten von Audiostreams.
 
-WASAPI implementiert mehrere Schnittstellen, um streamverwaltungsdienste für audioclients bereitzustellen. Die primäre Schnittstelle ist [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient). Ein Client ruft die **iaudioclient** -Schnittstelle für ein audioendpunktgerät ab, indem er die [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) -Methode (mit dem Parameter *IID* ist auf **refi** IID \_ iaudioclient festgelegt) für das Endpunkt Objekt aufgerufen.
+WASAPI implementiert mehrere Schnittstellen, um Datenstromverwaltungsdienste für Audioclients bereitzustellen. Die primäre Schnittstelle ist [**IAudioClient.**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) Ein Client ruft die **IAudioClient-Schnittstelle** für ein Audioendpunktgerät ab, indem er die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) (wobei der Parameter *iid* auf **REFIID** IID \_ IAudioClient festgelegt ist) für das Endpunktobjekt aufruft.
 
-Der Client ruft die Methoden in der [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle auf, um Folgendes durchzuführen:
+Der Client ruft die Methoden in der [**IAudioClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) auf, um Folgendes zu tun:
 
--   Ermitteln Sie, welche Audioformate das Endpunkt Gerät unterstützt.
--   Gibt die Größe des Endpunkt Puffers an.
--   Das Streamformat und die Latenzzeit erhalten.
--   Starten, Abbrechen und Zurücksetzen des Streams, der über das Endpunkt Gerät fließt.
--   Greifen Sie auf zusätzliche Audiodienste zu.
+-   Ermitteln Sie, welche Audioformate das Endpunktgerät unterstützt.
+-   Abrufen der Größe des Endpunktpuffers.
+-   Abrufen des Streamformats und der Latenz.
+-   Starten, Beenden und Zurücksetzen des Streams, der das Endpunktgerät durchläuft.
+-   Zugreifen auf zusätzliche Audiodienste.
 
-Zum Erstellen eines Streams Ruft ein Client die [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Methode auf. Durch diese Methode gibt der Client das Datenformat für den Stream, die Größe des Endpunkt Puffers und ob der Stream im freigegebenen oder exklusiven Modus betrieben wird.
+Zum Erstellen eines Streams ruft ein Client die [**IAudioClient::Initialize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) auf. Mit dieser Methode gibt der Client das Datenformat für den Stream, die Größe des Endpunktpuffers und ob der Stream im freigegebenen oder exklusiven Modus ausgeführt wird.
 
-Die verbleibenden Methoden in der [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle fallen in zwei Gruppen:
+Die verbleibenden Methoden in der [**IAudioClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) lassen sich in zwei Gruppen unterteilen:
 
--   Methoden, die nur aufgerufen werden können, nachdem der Stream von [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize)geöffnet wurde.
--   Methoden, die zu einem beliebigen Zeitpunkt vor oder nach dem [**Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Aufruf aufgerufen werden können.
+-   Methoden, die erst aufgerufen werden können, nachdem der Stream von [**IAudioClient::Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize)geöffnet wurde.
+-   Methoden, die vor oder nach dem [**Initialize-Aufruf**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) jederzeit aufgerufen werden können.
 
-Die folgenden Methoden können nur nach dem Aufruf von [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize)aufgerufen werden:
+Die folgenden Methoden können nur nach dem Aufruf von [**IAudioClient::Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize)aufgerufen werden:
 
--   [**Iaudioclient:: getBufferSize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getbuffersize)
--   [**Iaudioclient:: getcurrentpadding**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getcurrentpadding)
--   [**Iaudioclient:: GetService**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice)
--   [**Iaudioclient:: getstreamlatency**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getstreamlatency)
--   [**Iaudioclient:: Reset**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-reset)
--   [**Iaudioclient:: Start**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-start)
--   [**Iaudioclient:: Beendigung**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-stop)
+-   [**IAudioClient::GetBufferSize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getbuffersize)
+-   [**IAudioClient::GetCurrentPadding**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getcurrentpadding)
+-   [**IAudioClient::GetService**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice)
+-   [**IAudioClient::GetStreamLatency**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getstreamlatency)
+-   [**IAudioClient::Reset**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-reset)
+-   [**IAudioClient::Start**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-start)
+-   [**IAudioClient::Stop**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-stop)
 
-Die folgenden Methoden können vor oder nach dem [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Aufruf aufgerufen werden:
+Die folgenden Methoden können vor oder nach dem Aufruf von [**IAudioClient::Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) aufgerufen werden:
 
--   [**Iaudioclient:: getdeviceperiod**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getdeviceperiod)
--   [**Iaudioclient:: getmixformat**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getmixformat)
--   [**Iaudioclient:: isformatsupported**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-isformatsupported)
+-   [**IAudioClient::GetDevicePeriod**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getdeviceperiod)
+-   [**IAudioClient::GetMixFormat**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getmixformat)
+-   [**IAudioClient::IsFormatSupported**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-isformatsupported)
 
-Um auf die zusätzlichen audioclientdienste zuzugreifen, ruft der Client die [**iaudioclient:: GetService**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) -Methode auf. Mit dieser Methode kann der Client Verweise auf die folgenden Schnittstellen abrufen:
+Um auf die zusätzlichen Audioclientdienste zuzugreifen, ruft der Client die [**IAudioClient::GetService-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) auf. Mit dieser Methode kann der Client Verweise auf die folgenden Schnittstellen abrufen:
 
--   [**Iaudiorenderclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiorenderclient)
+-   [**IAudioRenderClient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiorenderclient)
 
-    Schreibt Renderingdaten in einen Endpunkt Puffer für audiorendering.
+    Schreibt Renderingdaten in einen Audiorendering-Endpunktpuffer.
 
--   [**Iaudiocaptureclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient)
+-   [**IAudioCaptureClient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient)
 
-    Liest erfasste Daten aus einem Endpunkt Puffer der Audioerfassung.
+    Liest erfasste Daten aus einem Audioerfassungsendpunktpuffer.
 
--   [**Iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol)
+-   [**IAudioSessionControl**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol)
 
-    Kommuniziert mit dem audiositzungsmanager, um die dem Stream zugeordnete Audiositzung zu konfigurieren und zu verwalten.
+    Kommuniziert mit dem Audiositzungs-Manager, um die Audiositzung zu konfigurieren und zu verwalten, die dem Stream zugeordnet ist.
 
--   [**Isimpleaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume)
+-   [**ISimpleAudioVolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume)
 
-    Steuert die Volumeebene der Audiositzung, die dem Stream zugeordnet ist.
+    Steuert die Lautstärke der Audiositzung, die dem Stream zugeordnet ist.
 
--   [**Ichannelaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume)
+-   [**IChannelAudioVolume**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume)
 
-    Steuert die volumeebenen der einzelnen Kanäle in der Audiositzung, die dem Stream zugeordnet ist.
+    Steuert die Lautstärkeebenen der einzelnen Kanäle in der Audiositzung, die dem Stream zugeordnet ist.
 
--   [**Iaudioclock**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclock)
+-   [**IAudioClock**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclock)
 
-    Überwacht die streamdatenrate und die Streamposition.
+    Überwacht die Datenstromrate und die Streamposition.
 
-Außerdem sollten WASAPI-Clients, für die Benachrichtigungen über Sitzungs bezogene Ereignisse erforderlich sind, die folgende Schnittstelle implementieren:
+Darüber hinaus sollten WASAPI-Clients, die eine Benachrichtigung über sitzungsbezogene Ereignisse erfordern, die folgende Schnittstelle implementieren:
 
--   [**Iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents)
+-   [**IAudioSessionEvents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents)
 
-    Um Ereignis Benachrichtigungen zu empfangen, übergibt der Client einen Zeiger an seine [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle an die [**iaudiosessioncontrol:: registeraudiosessionnotification**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-registeraudiosessionnotification) -Methode als callparameter.
+    Um Ereignisbenachrichtigungen zu empfangen, übergibt der Client einen Zeiger auf seine [**IAudioSessionEvents-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) als Aufrufparameter an die [**IAudioSessionControl::RegisterAudioSessionNotification-Methode.**](/windows/desktop/api/Audiopolicy/nf-audiopolicy-iaudiosessioncontrol-registeraudiosessionnotification)
 
-Zum Schluss verwendet ein Client möglicherweise eine API auf höherer Ebene, um einen Audiostream zu erstellen, erfordert aber auch Zugriff auf die Sitzungs Steuerelemente und volumesteuerelemente für die Sitzung, die den Stream enthält. Eine API höherer Ebene bietet diesen Zugriff in der Regel nicht. Der Client kann die Steuerelemente für eine bestimmte Sitzung über die [**iaudiosessionmanager**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) -Schnittstelle abrufen. Diese Schnittstelle ermöglicht es dem Client, die [**iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) -Schnittstelle und die [**isimpleaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume) -Schnittstelle für eine Sitzung abzurufen, ohne dass der Client die [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle zum Erstellen eines Streams und zum Zuweisen des Streams zur Sitzung benötigt. Ein Client ruft die **iaudiosessionmanager** -Schnittstelle für ein audioendpunktobjekt ab, indem er die [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) -Methode (mit dem Parameter *IID* ist auf **refID** IID \_ iaudiosessionmanager festgelegt) für das Endpunkt Objekt aufgerufen wird.
+Schließlich kann ein Client eine API auf höherer Ebene verwenden, um einen Audiostream zu erstellen, erfordert aber auch Zugriff auf die Sitzungssteuerelemente und Volumesteuerelemente für die Sitzung, die den Stream enthält. Eine API auf höherer Ebene bietet diesen Zugriff in der Regel nicht. Der Client kann die Steuerelemente für eine bestimmte Sitzung über die [**IAudioSessionManager-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) abrufen. Mit dieser Schnittstelle kann der Client die Schnittstellen [**IAudioSessionControl**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) und [**ISimpleAudioVolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume) für eine Sitzung abrufen, ohne dass der Client die [**IAudioClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) verwenden muss, um einen Stream zu erstellen und den Stream der Sitzung zuzuweisen. Ein Client ruft die **IAudioSessionManager-Schnittstelle** für ein Audioendpunktgerät ab, indem er die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) (wobei der Parameter *iid* auf **REFIID** IID \_ IAudioSessionManager festgelegt ist) für das Endpunktobjekt aufruft.
 
-Die Schnittstellen [**iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol), [**iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents)und [**iaudiosessionmanager**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) werden in der Header Datei audiopolicy. h definiert. Alle anderen WASAPI-Schnittstellen sind in der Header Datei "AudioClient. h" definiert.
+Die Schnittstellen [**IAudioSessionControl,**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) [**IAudioSessionEvents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents)und [**IAudioSessionManager**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) werden in der Headerdatei Audiopolicy.h definiert. Alle anderen WASAPI-Schnittstellen werden in der Headerdatei Audioclient.h definiert.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie die WASAPI verwenden, um Audiostreams zu verwalten:
+In den folgenden Abschnitten wird beschrieben, wie Sie MIT WASAPI Audiostreams verwalten:
 
 -   [Informationen zu WASAPI](wasapi.md)
 -   [Rendern eines Streams](rendering-a-stream.md)
 -   [Erfassen eines Streams](capturing-a-stream.md)
--   [Loopback Aufzeichnung](loopback-recording.md)
--   [Datenströme im exklusiven Modus](exclusive-mode-streams.md)
--   [Wiederherstellen nach einem Invalid-Device Fehler](recovering-from-an-invalid-device-error.md)
--   [Verwenden eines kommunikationsgeräts](using-the-communication-device.md)
+-   [Loopbackaufzeichnung](loopback-recording.md)
+-   [Streams im exklusiven Modus](exclusive-mode-streams.md)
+-   [Wiederherstellen nach einem Invalid-Device-Fehler](recovering-from-an-invalid-device-error.md)
+-   [Verwenden eines Kommunikationsgeräts](using-the-communication-device.md)
 -   [Streamrouting](stream-routing.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen

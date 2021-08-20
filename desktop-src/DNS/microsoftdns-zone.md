@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_Zone-Klasse
-description: Die MicrosoftDNS- \_ Zonen Klasse beschreibt eine DNS-Zone. Jede Instanz der MicrosoftDNS- \_ Zonen Klasse muss genau einem DNS-Server zugewiesen werden. Zonen können mehreren Instanzen der MicrosoftDNS- \_ Domäne oder der MicrosoftDNS- \_ resourcerecord-Klassen zugeordnet werden.
+description: Die MicrosoftDNS \_ Zone-Klasse beschreibt eine DNS-Zone. Jede Instanz der \_ MicrosoftDNS-Zonenklasse muss genau einem DNS-Server zugewiesen werden. Zonen können mehreren Instanzen der \_ MicrosoftDNS-Domänen- oder \_ MicrosoftDNS-Ressourcenrecord-Klassen zugeordnet werden.
 ms.assetid: 9c59fa61-cca5-4718-ad40-8d2c6ed5fc2d
 keywords:
-- DNS-MicrosoftDNS_Zone Klasse
-- DNS-MicrosoftDNS_Zone Klasse, beschrieben
+- MicrosoftDNS_Zone-Klasse DNS
+- MicrosoftDNS_Zone DNS-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -52,24 +52,24 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b15119c7a5cdc1dba2998e17b5c69a4d0e15c6ca
-ms.sourcegitcommit: 03fb201e1ea36e353c335ff063ed993fb5993e61
+ms.openlocfilehash: a37b8c99fcd0fb70206758dd67dab8cfffe145ea2ef1aa75186b1268a7ff3b63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957179"
 ---
-# <a name="microsoftdns_zone-class"></a>MicrosoftDNS- \_ Zonen Klasse
+# <a name="microsoftdns_zone-class"></a>MicrosoftDNS \_ Zone-Klasse
 
 > [!NOTE]
 > Dieser Artikel enthält Verweise auf den Begriff Slave, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
 > [!NOTE]
-> Dieser Artikel enthält Verweise auf den Begriff Master Server, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
+> Dieser Artikel enthält Verweise auf den Begriff Masterserver, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
-Die **MicrosoftDNS- \_ Zonen** Klasse beschreibt eine DNS-Zone. Jede Instanz der **MicrosoftDNS- \_ Zonen** Klasse muss genau einem DNS-Server zugewiesen werden. Zonen können mehreren Instanzen der [**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md) oder der [**MicrosoftDNS- \_ resourcerecord**](microsoftdns-resourcerecord.md) -Klassen zugeordnet werden.
+Die **\_ MicrosoftDNS-Zone-Klasse** beschreibt eine DNS-Zone. Jede Instanz der **MicrosoftDNS-Zonenklasse \_** muss genau einem DNS-Server zugewiesen werden. Zonen können mehreren Instanzen der [**MicrosoftDNS-Domänen- \_**](microsoftdns-domain.md) oder [**MicrosoftDNS-Ressourcenrecord-Klassen \_**](microsoftdns-resourcerecord.md) zugeordnet werden.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -107,30 +107,30 @@ class MicrosoftDNS_Zone : MicrosoftDNS_Domain
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ Zonen** Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ Zone-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ Zonen** Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ Zone-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                   | BESCHREIBUNG                                                                                                                                                                                                |
 |:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **AgeAllRecords**        | Ermöglicht die Alterung für einige oder alle nicht-NS-und nicht-SOA-Datensätze.<br/>                                                                                                                                       |
-| **Changezonetype**       | Ändert Zonen Typen. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                         |
-| **"Kreatezone"**           | Erstellt eine neue Zone. <br/> Qualifizierer: keine.<br/>                                                                                                                                               |
-| **ForceRefresh**         | Erzwingt ein Update der sekundären Datenbank vom DNS-Master Server. <br/> Qualifizierer: Implementiert<br/>                                                                                               |
-| **Getchilshedname** | Ruft den Distinguished Name DS für die Zone ab. <br/> Qualifizierer: Implementiert<br/>                                                                                                                 |
-| **Pausegzone**            | Hält die Zone an. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                            |
-| **Reloadzone**           | Lädt die Zone erneut. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                           |
-| **Resetsecon-Replikate**     | Setzt das Array der sekundären IP-Adresse zurück. <br/> Qualifizierer: Implementiert<br/>                                                                                                                      |
-| **Resumezone**           | Nimmt die Zone wieder auf. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                           |
-| **Updatefromds**         | Erzwingt ein Update der Zone aus dem Verzeichnisdienst (DS). Damit diese Methode gültig ist, muss zonetype gleich 0 sein. die Zone muss tatsächlich in DS gespeichert werden. <br/> Qualifizierer: Implementiert<br/> |
-| **"Write Backzone"**        | Speichert Zonendaten in der zugehörigen Zonendatei. <br/> Qualifizierer: implementiert, statisch<br/>                                                                                                                   |
+| **AgeAllRecords**        | Aktiviert das Altern für einige oder alle Nicht-NS- und Nicht-SOA-Datensätze.<br/>                                                                                                                                       |
+| **ChangeZoneType**       | Ändert Zonentypen. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                         |
+| **CreateZone**           | Erstellt eine neue Zone. <br/> Qualifizierer: Keine.<br/>                                                                                                                                               |
+| **ForceRefresh**         | Erzwingt ein Update der sekundären Vom Master-DNS-Server. <br/> Qualifizierer: Implementiert<br/>                                                                                               |
+| **GetDistinguishedName** | Ruft den DS-Distinguished Name für die Zone ab. <br/> Qualifizierer: Implementiert<br/>                                                                                                                 |
+| **PauseZone**            | Hält die Zone an. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                            |
+| **ReloadZone**           | Lädt die Zone erneut. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                           |
+| **ResetSecondaries**     | Setzt das sekundäre IP-Adressarray zurück. <br/> Qualifizierer: Implementiert<br/>                                                                                                                      |
+| **ResumeZone**           | Setzt die Zone fort. <br/> Qualifizierer: Implementiert<br/>                                                                                                                                           |
+| **UpdateFromDS**         | Erzwingt eine Aktualisierung der Zone vom Verzeichnisdienst (Directory Service, DS). Damit diese Methode gültig ist, muss ZoneType 0 sein, die Zone muss tatsächlich im DS gespeichert werden. <br/> Qualifizierer: Implementiert<br/> |
+| **WriteBackZone**        | Speichert Zonendaten in der Zonendatei. <br/> Qualifizierer: Implementiert, statisch<br/>                                                                                                                   |
 
 
 
@@ -138,66 +138,66 @@ Die **MicrosoftDNS- \_ Zonen** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ Zonen** Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ Zone-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Zunehmendem**
+**Alterung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt das Verhalten für die Alterung und das Verhalten der Zone an. NULL gibt an, dass das Bereinigung deaktiviert ist. Wenn das Bereinigung deaktiviert ist, werden die Zeitstempel der Datensätze in der Zone nicht aktualisiert, und die Datensätze unterliegen nicht dem scräging. Wenn diese Einstellung auf 1 festgelegt ist, werden die Datensätze gelöscht, und ihre Zeitstempel werden aktualisiert, wenn der Server die Anforderung für das dynamische Update für die Datensätze empfängt. Für Active Directory integrierte Zonen wird dieser Wert auf die *DefaultAgingState* -Eigenschaft des DNS-Servers festgelegt, auf dem die Zone erstellt wird. Für Standard primäre Zonen ist der Standardwert 0 (null).
+Gibt das Altern und Löschverhalten der Zone an. 0 (null) gibt an, dass die Kapselung deaktiviert ist. Wenn die Kapselung deaktiviert ist, werden die Zeitstempel von Datensätzen in der Zone nicht aktualisiert, und die Datensätze werden nicht gespeichert. Wenn diese Einstellung auf 1 festgelegt ist, werden Datensätze gespeichert, und ihre Zeitstempel werden aktualisiert, wenn der Server die dynamische Updateanforderung für die Datensätze empfängt. Für in Active Directory integrierte Zonen wird dieser Wert auf die *DefaultAgingState-Eigenschaft* des DNS-Servers festgelegt, auf dem die Zone erstellt wird. Für primäre Standardzonen ist der Standardwert 0 (null).
 
 </dd> <dt>
 
 **AllowUpdate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zone dynamische Update Anforderungen akzeptiert.
+Gibt an, ob die Zone dynamische Updateanforderungen akzeptiert.
 
 </dd> <dt>
 
-**Automatisch**
+**AutoCreated**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zone automatisch erstellt wird.
+Gibt an, ob die Zone automatisch generiert wird.
 
 </dd> <dt>
 
-**Availforscavengetime**
+**AvailForScavengeTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zeit an, zu der der Server versuchen kann, die Zone zu löschen. Auch wenn die Zone so konfiguriert ist, dass die Weiterbildung aktiviert ist, versucht der DNS-Server erst nach diesem Moment, diese Zone zu löschen. Dieser Wert wird auf die aktuelle Uhrzeit zuzüglich des Aktualisierungs Intervalls der Zone festgelegt, wenn die Zone geladen wird. Dieser Parameter wird lokal gespeichert und nicht in andere Kopien der Zone repliziert.
+Gibt den Zeitpunkt an, zu dem der Server versuchen kann, die Zone zu speichern. Selbst wenn die Zone so konfiguriert ist, dass die Kapselung aktiviert ist, versucht der DNS-Server erst nach diesem Moment, diese Zone zu speichern. Dieser Wert wird auf die aktuelle Zeit plus das Aktualisierungsintervall der Zone festgelegt, wenn die Zone geladen wird. Dieser Parameter wird lokal gespeichert und nicht in andere Kopien der Zone repliziert.
 
 </dd> <dt>
 
-**Datendatei**
+**Datafile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -207,114 +207,114 @@ Gibt den Namen der Zonendatei an.
 
 </dd> <dt>
 
-**Disablewinsrecordreplizierung**
+**DisableWINSRecordReplication**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der WINS-Datensatz repliziert wird. Wenn true festgelegt ist, ist die WINS-Daten Satz Replikation deaktiviert.
+Gibt an, ob der WINS-Eintrag repliziert wird. Wenn diese Einstellung auf TRUE festgelegt ist, ist die WINS-Datensatzreplikation deaktiviert.
 
 </dd> <dt>
 
-**Dsintegriert**
+**DsIntegrated**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zone DS-integriert ist.
+Gibt an, ob die Zone in DS integriert ist.
 
 </dd> <dt>
 
-**Forwarderslave**
+**ForwarderSlave**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das DNS Rekursion verwendet, wenn die Namen für die angegebene vorwärts Zone aufgelöst werden. Gilt nur für bedingte Weiterleitungs Zonen.
+Gibt an, ob das DNS beim Auflösen der Namen für die angegebene Forwardzone eine Rekursion verwendet. Gilt nur für Zonen mit bedingter Weiterleitung.
 
 </dd> <dt>
 
-**Weiterforwardertimeout**
+**ForwarderTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zeit in Sekunden an, die ein DNS-Server, der eine Abfrage für den Namen in der Forward-Zone weiterleitet, auf eine Auflösung von der Weiterleitung wartet, bevor versucht wird, die Abfrage selbst aufzulösen. Dieser Parameter gilt nur für die vorwärts Zonen.
+Gibt die Zeit in Sekunden an, die ein DNS-Server, der eine Abfrage für den Namen unter der Forwardzone weiterleitet, auf die Auflösung von der Weiterleitung wartet, bevor versucht wird, die Abfrage selbst aufzulösen. Dieser Parameter gilt nur für Forward-Zonen.
 
 </dd> <dt>
 
-**Lasterfolgreichen fulsoacheck**
+**LastSuccessfulSoaCheck**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Sekunden seit dem 1. Januar 1970 GMT, seit die SOA-Seriennummer für die Zone zuletzt aktiviert wurde.
+Anzahl der Sekunden seit Dem 1. Januar 1970 GMT seit der letzten Überprüfung der SOA-Seriennummer für die Zone.
 
 </dd> <dt>
 
-**Lasterfolgreiches XFR**
+**LastSuccessfulXfr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Sekunden seit dem 1. Januar 1970 GMT, seit die Zone zuletzt von einem Master Server übertragen wurde.
+Anzahl der Sekunden seit Dem 1. Januar 1970 GMT seit der letzten Übertragung der Zone von einem Masterserver.
 
 </dd> <dt>
 
-**Localmasterservers**
+**LocalMasterServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Lokale IP-Adressen der Master-DNS-Server für diese Zone. Wenn festgelegt, werden diese Master Server in Active Directory überlaufen.
+Lokale IP-Adressen der DNS-Masterserver für diese Zone. Wenn diese Einstellung festgelegt ist, überfahren diese Masterserver die in Active Directory gefundenen MasterServer.
 
 </dd> <dt>
 
-**Master Server**
+**MasterServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-IP-Adressen der Master-DNS-Server für diese Zone.
+IP-Adressen der MASTER-DNS-Server für diese Zone.
 
 </dd> <dt>
 
 **NoRefreshInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -327,137 +327,137 @@ Gibt das Zeitintervall zwischen der letzten Aktualisierung des Zeitstempels eine
 **Benachrichtigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Master Zone die sekundären Replikate über Änderungen in der RRS-Datenbank benachrichtigt. Legen Sie auf 1 fest, um sekundäre Datenbanken zu Benachrichtigen
+Gibt an, ob die Masterzone die zweiten Datenbanken über Änderungen in ihrer RRs-Datenbank benachrichtigt. Legen Sie auf 1 fest, um die zweiten Binärdateien zu benachrichtigen.
 
 </dd> <dt>
 
-**Notifyservers**
+**NotifyServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Array von Zeichen folgen, das IP-Adressen von DNS-Servern auflistet, die über Änderungen in dieser Zone benachrichtigt werden sollen.
+Array von Zeichenfolgen, die IP-Adressen von DNS-Servern aufzählen, um über Änderungen in dieser Zone benachrichtigt zu werden.
 
 </dd> <dt>
 
 **Angehalten**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zone angehalten wurde.
+Gibt an, ob die Zone angehalten wird.
 
 </dd> <dt>
 
 **RefreshInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt das Aktualisierungs Intervall an, in dem die Datensätze mit einem Zeitstempel ungleich NULL aktualisiert werden, damit Sie in der Zone verbleiben. Datensätze, die nach Ablauf des Aktualisierungs Intervalls nicht aktualisiert wurden, können durch das nächste von einem Server ausgeführte Bereinigung entfernt werden. Dieser Wert sollte nie kleiner als der längste Aktualisierungs Zeitraum der in der Zone registrierten Datensätze sein. Werte, die zu klein sind, können dazu führen, dass gültige DNS-Einträge entfernt werden. Werte, die zu groß sind, verlängern die Lebensdauer veralteter Datensätze. Dieser Wert wird auf die *DefaultRefreshInterval* -Eigenschaft des DNS-Servers festgelegt, auf dem die Zone erstellt wird.
+Gibt das Aktualisierungsintervall an, in dem die Datensätze mit einem Zeitstempel ungleich 0 (null) aktualisiert werden sollen, damit sie in der Zone verbleiben. Datensätze, die nach Ablauf des Aktualisierungsintervalls nicht aktualisiert wurden, können durch die nächste Kapselung entfernt werden, die von einem Server ausgeführt wird. Dieser Wert darf nie kleiner als der längste Aktualisierungszeitraum der in der Zone registrierten Datensätze sein. Werte, die zu klein sind, können dazu führen, dass gültige DNS-Einträge entfernt werden. -Werte, die zu groß sind, verlängern die Lebensdauer veralteter Datensätze. Dieser Wert wird auf die *DefaultRefreshInterval-Eigenschaft* des DNS-Servers festgelegt, auf dem die Zone erstellt wird.
 
 </dd> <dt>
 
-**Umgekehr**
+**Rückwärts**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zone umgekehrt (true) oder vorwärts (false) ist.
+Gibt an, ob die Zone umgekehrt (TRUE) oder vorwärts (FALSE) ist.
 
 </dd> <dt>
 
-**Scavengeservers**
+**ScavengeServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Zeichen folgen, das die Liste der IP-Adressen von DNS-Servern auflistet, die für die Ausführung veralteter Datensätze dieser Zone berechtigt sind. Wenn die Liste nicht angegeben wird, darf jeder primäre DNS-Server, der für die Zone autorisierend ist, die Zone durchlaufen, wenn andere Voraussetzungen erfüllt sind.
+Ein Array von Zeichenfolgen, das die Liste der IP-Adressen von DNS-Servern auflistet, die die Kapselung veralteter Datensätze dieser Zone ausführen dürfen. Wenn die Liste nicht angegeben ist, kann jeder primäre DNS-Server, der für die Zone autoritativ ist, die Zone speichern, wenn andere Voraussetzungen erfüllt sind.
 
 </dd> <dt>
 
-**Secondaryservers**
+**SecondaryServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Array von Zeichen folgen, das IP-Adressen von DNS-Servern auflistet, die diese Zone durch Zonen Replikation empfangen dürfen.
+Array von Zeichenfolgen, die IP-Adressen von DNS-Servern aufzählen, die diese Zone über die Zonenreplikation empfangen dürfen.
 
 </dd> <dt>
 
-**Securesecon-Replikate**
+**SecureSecondaries**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zonen Übertragung nur für bestimmte sekundäre Replikate zulässig ist. Die vorgesehenen sekundären Replikate sind DNS-Server, deren IP-Adressen in secondariesipaddressesarray aufgeführt sind.
+Gibt an, ob die Zonenübertragung nur für bestimmte secondaries zulässig ist. Designierte secondaries sind DNS-Server, deren IP-Adressen unter SecondariesIPAddressesArrayaufgeführt sind.
 
 </dd> <dt>
 
 **Herunterfahren**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Kopie der Zone abgelaufen ist. TRUE gibt an, dass die Zone abgelaufen ist oder heruntergefahren wird.
+Gibt an, ob die Kopie der Zone abgelaufen ist. True gibt an, dass die Zone abgelaufen ist oder heruntergefahren wird.
 
 </dd> <dt>
 
-**Usenbstat**
+**UseNBStat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Dieser boolesche Wert gibt an, ob die Zone NBSTAT Reverse Lookup verwendet.
+Dieser boolesche Wert gibt an, ob die Zone den reversen NBStat-Lookup verwendet.
 
 </dd> <dt>
 
-**Usewins**
+**UseWins**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -467,10 +467,10 @@ Gibt an, ob die Zone WINS-Suche verwendet.
 
 </dd> <dt>
 
-**Zonetype**
+**ZoneType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -482,9 +482,9 @@ Gibt den Typ der Zone an. Gültige Werte sind:
 -   Primär
 -   Secondary
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-Weitere Werte:
+Zusätzliche Werte:
 
 -   Cache
 -   Stub
@@ -501,7 +501,7 @@ Weitere Werte:
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -509,40 +509,40 @@ Weitere Werte:
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md)
+[**MicrosoftDNS-Domäne \_**](microsoftdns-domain.md)
 </dt> <dt>
 
-[**AgeAllRecords-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-ageallrecords.md)
+[**AgeAllRecords-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-ageallrecords.md)
 </dt> <dt>
 
-[**Changezonetype-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-changezonetype.md)
+[**ChangeZoneType-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-changezonetype.md)
 </dt> <dt>
 
-[**Die Methode "kreatezone" der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-createzone.md)
+[**CreateZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-createzone.md)
 </dt> <dt>
 
-[**ForceRefresh-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-forcerefresh.md)
+[**ForceRefresh-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-forcerefresh.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-getdistinguishedname.md)
 </dt> <dt>
 
-[**Pauzzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-pausezone.md)
+[**PauseZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-pausezone.md)
 </dt> <dt>
 
-[**Reloadzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-reloadzone.md)
+[**ReloadZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-reloadzone.md)
 </dt> <dt>
 
-[**Resetsecon-Replikats-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resetsecondaries.md)
+[**ResetSecondaries-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resetsecondaries.md)
 </dt> <dt>
 
-[**Resumezone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resumezone.md)
+[**ResumeZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resumezone.md)
 </dt> <dt>
 
-[**Updatefromds-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-updatefromds.md)
+[**UpdateFromDS-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-updatefromds.md)
 </dt> <dt>
 
-[**"Write Backzone"-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-writebackzone.md)
+[**WriteBackZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-writebackzone.md)
 </dt> </dl>
 
  

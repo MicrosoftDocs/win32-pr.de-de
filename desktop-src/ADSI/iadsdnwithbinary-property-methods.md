@@ -1,10 +1,10 @@
 ---
-title: IADsDNWithBinary-Eigenschafts Methoden (IADs. h)
-description: Die-Eigenschaften Methode der IADsDNWithBinary-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsDNWithBinary-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsDNWithBinary-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 3e9ceabb-7a38-4a63-ab62-240ff521e373
 ms.tgt_platform: multiple
 keywords:
-- IADsDNWithBinary-Eigenschafts Methoden ADSI
+- IADsDNWithBinary-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,32 +21,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: adf0398a141596de677d7d1739e84ff7525da9a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc8ab9fb355f2602d290c064f6636a13375ea92fdfbf0d6d47c1c6cf8d61e335
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023498"
 ---
-# <a name="iadsdnwithbinary-property-methods"></a>IADsDNWithBinary-Eigenschaften Methoden
+# <a name="iadsdnwithbinary-property-methods"></a>IADsDNWithBinary-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**IADsDNWithBinary**](/windows/desktop/api/Iads/nn-iads-iadsdnwithbinary) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsDNWithBinary-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsdnwithbinary) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Binaryvalue**
+**BinaryValue**
 </dt> <dd> <dl>
 
-Die GUID eines einem DN zugeordneten Objekts.
+Die GUID eines Objekts, das einem DN zugeordnet ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -64,7 +64,7 @@ HRESULT put_BinaryValue(
 
 </dt> </dl> </dd> <dt>
 
-**Dnstring**
+**DNString**
 </dt> <dd> <dl>
 
 Die DN-Zeichenfolge, die der GUID eines Objekts zugeordnet ist.
@@ -74,7 +74,7 @@ Die DN-Zeichenfolge, die der GUID eines Objekts zugeordnet ist.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -102,9 +102,9 @@ HRESULT put_DNString(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsDNWithBinary ist als 7e99c0a2-s935-11d2-ba96-00c04sb6d0d1 definiert.<br/>     |
+| IID<br/>                      | IID \_ IADsDNWithBinary ist als 7E99C0A2-F935-11D2-BA96-00C04FB6D0D1 definiert.<br/>     |
 
 
 
@@ -115,7 +115,7 @@ HRESULT put_DNString(
 [**IADsDNWithBinary**](/windows/desktop/api/Iads/nn-iads-iadsdnwithbinary)
 </dt> <dt>
 
-[**ADS \_ DN \_ mit \_ Binär**](/windows/win32/api/iads/ns-iads-ads_dn_with_binary)
+[**ADS \_ DN \_ WITH \_ BINARY**](/windows/win32/api/iads/ns-iads-ads_dn_with_binary)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Enthält eine einzelne Adresse eines beliebigen Typs unterstützter Adressen.
 ms.assetid: 3f840842-8992-4fab-8820-cbbfc63242b8
-title: ADDRESS2-Struktur (Netmon. h)
+title: ADDRESS2-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 4a8d66548aa683abf82b795d6a47e93fbdc03e08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95716e7d593bdf655960bfd64901fa09c1020bc4e7d1b6ec850964311a80ca52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012368"
 ---
 # <a name="address2-structure"></a>ADDRESS2-Struktur
 
-Die **Adress** Struktur enthält eine einzelne Adresse eines beliebigen Typs unterstützter Adressen.
+Die **ADDRESS-Struktur** enthält eine einzelne Adresse eines beliebigen Typs unterstützter Adressen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ typedef struct _ADDRESS {
 
 <dl> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
 Adresstyp. Folgende Werte sind möglich:
@@ -65,91 +65,91 @@ Adresstyp. Folgende Werte sind möglich:
 **MACAddress**
 </dt> <dd>
 
-Anzeigen der Daten, die als unformatierte Mac-Adresse ausgedrückt werden.
+Ansicht der Daten, die als unformatte MAC-Adresse ausgedrückt werden.
 
 </dd> <dt>
 
 **IPAddress**
 </dt> <dd>
 
-Sicht der Daten, die als unformatierte IP-Adresse ausgedrückt werden.
+Ansicht der Daten, die als unformatte IP-Adresse ausgedrückt werden.
 
 </dd> <dt>
 
 **IP6Address**
 </dt> <dd>
 
-Anzeigen der Daten, die als Rohdaten der IP-Version 6 ausgedrückt werden.
+Ansicht der Daten, die als unformatte IP-Adresse der Version 6 ausgedrückt werden.
 
 </dd> <dt>
 
-**Ipxrawaddress**
+**IPXRawAddress**
 </dt> <dd>
 
-Sicht der Daten, die als unformatierte IPX-Adresse ausgedrückt werden.
+Ansicht der Daten, die als UN-IPX-Adresse ausgedrückt werden.
 
 </dd> <dt>
 
 **IPXAddress**
 </dt> <dd>
 
-Sicht der Daten, die als decodierte IPX-Adress Werte ausgedrückt werden.
+Ansicht der Daten, die als decodierten IPX-Adresswert ausgedrückt werden.
 
 </dd> <dt>
 
-**Vinesiprawaddress**
+**VinesIPRawAddress**
 </dt> <dd>
 
-Anzeigen der Daten, die als Rohdaten für die Reben-IP-Adresse ausgedrückt werden.
+Ansicht der Daten als unformatiert ausgedrückte Vines-IP-Adresse.
 
 </dd> <dt>
 
-**Vinesipaddress**
+**VinesIPAddress**
 </dt> <dd>
 
-Ansicht der Daten, die als decodierte IP-Adresse für die Reben ausgedrückt werden.
+Ansicht der Daten, die als decodierte Vines-IP-Adresse ausgedrückt werden.
 
 </dd> <dt>
 
-**Ethernetzrcaddress**
+**EthernetSrcAddress**
 </dt> <dd>
 
-Sicht der Daten, die als Ethernet-Quelladresse ausgedrückt werden.
+Ansicht der Daten, die als Ethernet-Quelladresse ausgedrückt werden.
 
 </dd> <dt>
 
-**Ethernetdstaddress**
+**EthernetDstAddress**
 </dt> <dd>
 
-Sicht der Daten, die als Ethernet-Zieladresse ausgedrückt werden.
+Ansicht der Daten, die als Ethernet-Zieladresse ausgedrückt werden.
 
 </dd> <dt>
 
-**"Dekenringsrcaddress"**
+**TokenringSrcAddress**
 </dt> <dd>
 
-Eine Ansicht der Daten als Quelladresse für den Tokenring.
+Eine Ansicht der Daten als Tokenring-Quelladresse.
 
 </dd> <dt>
 
-**Verzeichnis-dstaddress**
+**TokenringDstAddress**
 </dt> <dd>
 
-Eine Ansicht der Daten als Zieladresse für den Tokenring.
+Eine Ansicht der Daten als Zieladresse des Tokenrings.
 
 </dd> <dt>
 
-**"Rddisrcaddress"**
+**FddiSrcAddress**
 </dt> <dd>
 
-Sicht der Daten, die als eine "f"-Quelladresse ausgedrückt werden.
+Ansicht der Daten, die als FDDI-Quelladresse ausgedrückt werden.
 
 </dd> <dt>
 
-**"F"**
+**FddiDstAddress**
 </dt> <dd>
 
-Die Ansicht der Daten, die als eine Adresse für ein BDI-Ziel ausgedrückt werden.
+Ansicht der Daten, die als FDDI-Zieladresse ausgedrückt werden.
 
 </dd> <dt>
 
@@ -164,7 +164,7 @@ Die Ansicht der Daten, die als eine Adresse für ein BDI-Ziel ausgedrückt werde
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

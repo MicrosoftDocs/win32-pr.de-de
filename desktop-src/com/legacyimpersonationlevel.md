@@ -1,66 +1,66 @@
 ---
-title: Legacyidentitäts ationlevel
-description: Legt die Standard Ebene des Identitäts Wechsels für Anwendungen fest, die CoInitializeSecurity nicht aufzurufen.
+title: LegacyImpersonationLevel
+description: Legt die Standardebene des Identitätswechsels für Anwendungen fest, die CoInitializeSecurity nicht aufrufen.
 ms.assetid: 3f42c6d7-729d-4406-9391-4bfe28f7a59d
 keywords:
-- Registrierungs Wert "legacyidentitäts ationlevel" com
+- LegacyImpersonationLevel-Registrierungswert COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74fa00494eb71e49c35bfa37b434afc5c999e73e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cd032e83290c18fc3a2588e382ade7730fa2ea39a7847e375b1e887cdbbb90f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048078"
 ---
-# <a name="legacyimpersonationlevel"></a>Legacyidentitäts ationlevel
+# <a name="legacyimpersonationlevel"></a>LegacyImpersonationLevel
 
-Legt die Standard Ebene des Identitäts Wechsels für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)nicht aufzurufen.
+Legt die Standardebene des Identitätswechsels für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)nicht aufrufen.
 
 > [!Caution]  
-> Es wird nicht empfohlen, diesen Wert zu ändern, da dies Auswirkungen auf alle com-Server Anwendungen hat, die nicht Ihre eigene Prozess weite Sicherheit festlegen, und möglicherweise verhindern, dass Sie ordnungsgemäß funktionieren. Wenn Sie diesen Wert ändern, um die Sicherheitseinstellungen für eine bestimmte COM-Anwendung zu beeinflussen, sollten Sie stattdessen die Prozess weiten Sicherheitseinstellungen für die jeweilige COM-Anwendung ändern. Weitere Informationen zum Festlegen der Prozess weiten Sicherheit finden Sie unter [Festlegen der Prozess weiten Sicherheit](setting-processwide-security.md).
+> Es wird nicht empfohlen, diesen Wert zu ändern, da sich dies auf alle COM-Serveranwendungen auswirkt, die keine eigene prozessweite Sicherheit festlegen und möglicherweise verhindern, dass sie ordnungsgemäß funktionieren. Wenn Sie diesen Wert ändern, um die Sicherheitseinstellungen für eine bestimmte COM-Anwendung zu beeinflussen, sollten Sie stattdessen die prozessweiten Sicherheitseinstellungen für diese bestimmte COM-Anwendung ändern. Weitere Informationen zum Festlegen der prozessweiten Sicherheit finden Sie unter [Festlegen der prozessweiten Sicherheit.](setting-processwide-security.md)
 
- 
+ 
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole
-   LegacyImpersonationLevel = value
+   LegacyImpersonationLevel = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ Word** -Wert, der den Konstanten der RPC- \_ C- \_ IMP- \_ Ebene entspricht.
+Dies ist ein **REG \_ WORD-Wert,** der den RPC \_ \_ C-IMP \_ LEVEL-Konstanten entspricht.
 
 
 
 | Wert | Konstante                        |
 |-------|---------------------------------|
-| 1     | RPC- \_ C- \_ IMP- \_ Ebene \_ Anonym   |
-| 2     | RPC- \_ C- \_ IMP- \_ Stufe \_ identifizieren    |
-| 3     | Identitätswechsel auf RPC- \_ C- \_ \_ Ebene \_ |
-| 4     | RPC- \_ C- \_ IMP- \_ Stufen \_ Delegat    |
+| 1     | RPC \_ C \_ IMP \_ LEVEL \_ ANONYMOUS   |
+| 2     | RPC \_ C \_ IMP \_ LEVEL \_ IDENTIFY    |
+| 3     | RPC \_ C \_ IMP \_ LEVEL \_ IMPERSONATE |
+| 4     | RPC \_ C \_ IMP \_ LEVEL \_ DELEGATE    |
 
 
 
- 
+ 
 
-Wenn dieser Registrierungs Wert nicht vorhanden ist, ist die Standard Ebene des Identitäts Wechsels, die vom System festgelegt wird, 2 (RPC- \_ C- \_ Ebene- \_ Ebene \_ identifizieren).
+Wenn dieser Registrierungswert nicht vorhanden ist, ist die vom System festgelegte Standardidentitätsebene 2 (RPC \_ C \_ IMP \_ LEVEL \_ IDENTIFY).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Registrieren von com-Servern](registering-com-servers.md)
+[Registrieren von COM-Servern](registering-com-servers.md)
 </dt> <dt>
 
-[Festlegen der Prozess weiten Sicherheit](setting-processwide-security.md)
+[Festlegen der prozessweiten Sicherheit](setting-processwide-security.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

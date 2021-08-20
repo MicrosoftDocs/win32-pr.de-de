@@ -1,19 +1,19 @@
 ---
-description: Gibt die parametesteuerungsparameter für einen Video Encoder an.
+description: Gibt die Parameter für die Videoratensteuerung für einen Videoencoder an.
 ms.assetid: 8AF841A8-E121-4C41-BD3F-26760232E857
-title: CODECAPI_AVEncVideoRateControlParams-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncVideoRateControlParams-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 63e292ee5b1b8a9dc8a63d0e445ffbf60b9c91b3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df0af9d4eb903725b1a4ae326d71ce07072428e0667a7032a86448f1e270f734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974879"
 ---
-# <a name="codecapi_avencvideoratecontrolparams-property"></a>Codecapi- \_ Eigenschaft "avencvideoratecontrolparser"
+# <a name="codecapi_avencvideoratecontrolparams-property"></a>CODECAPI \_ AVEncVideoRateControlParams-Eigenschaft
 
-Gibt die parametesteuerungsparameter für einen Video Encoder an.
+Gibt die Parameter für die Videoratensteuerung für einen Videoencoder an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,7 +21,7 @@ Gibt die parametesteuerungsparameter für einen Video Encoder an.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoratecontrolparametriams**
+**CODECAPI \_ AVEncVideoRateControlParams**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Gibt die parametesteuerungsparameter für einen Video Encoder an.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -39,7 +39,7 @@ Gibt die parametesteuerungsparameter für einen Video Encoder an.
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

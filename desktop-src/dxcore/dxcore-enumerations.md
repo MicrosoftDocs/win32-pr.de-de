@@ -1,29 +1,29 @@
 ---
 title: DXCore-Enumerationen
-description: Die folgenden Enumerationen werden in dxcore_interface. h deklariert.
+description: Die folgenden Enumerationen werden in dxcore_interface.h deklariert.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: f6c5a6797e6d3ad2bb8676666c3d12fee4ed4b20
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 43d6c036d2aeabc5be48dba8a6a3c2a9dabb9889bac6708dc11240cd91127a7a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118744"
 ---
 # <a name="dxcore-enumerations"></a>DXCore-Enumerationen
 
-Die folgenden Enumerationen werden in dxcore_interface. h deklariert.
+Die folgenden Enumerationen werden in dxcore_interface.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema und Beschreibung |
 |-|
-| [**Dxcoreadapterpreference**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterpreference.md). Definiert Konstanten, die DXCore-Adapter Einstellungen angeben, die als Listen Sortierkriterien verwendet werden sollen. |
-| [**Dxcoreadapterproperty**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterproperty.md). Definiert Konstanten, die DXCore-Adapter Eigenschaften angeben. |
-| [**Dxcoreadapterstate**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterstate.md). Definiert Konstanten, die Arten von DXCore-Adapter Zuständen angeben. |
-| [**Dxcorenotificationtype**](./dxcore_interface/ne-dxcore_interface-dxcorenotificationtype.md). Definiert Konstanten, die Typen von Benachrichtigungen angeben, die von [idxcoreadapter](./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md) -oder [idxcoreadapterlist](./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md) -Objekten ausgelöst werden. |
-| [**Dxcoresegmentgroup**](./dxcore_interface/ne-dxcore_interface-dxcoresegmentgroup.md). Definiert Konstanten, die die Speichersegment Gruppierung eines Adapters angeben. |
+| [**DXCoreAdapterPreference**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterpreference.md). Definiert Konstanten, die DXCore-Adaptereinstellungen angeben, die als Listensortierkriterien verwendet werden sollen. |
+| [**DXCoreAdapterProperty**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterproperty.md). Definiert Konstanten, die DXCore-Adaptereigenschaften angeben. |
+| [**DXCoreAdapterState**](./dxcore_interface/ne-dxcore_interface-dxcoreadapterstate.md). Definiert Konstanten, die Arten von DXCore-Adapterzuständen angeben. |
+| [**DXCoreNotificationType**](./dxcore_interface/ne-dxcore_interface-dxcorenotificationtype.md). Definiert Konstanten, die Benachrichtigungstypen angeben, die von [IDXCoreAdapter-](./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md) oder [IDXCoreAdapterList-Objekten ausgelöst](./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md) werden. |
+| [**DXCoreSegmentGroup**](./dxcore_interface/ne-dxcore_interface-dxcoresegmentgroup.md). Definiert Konstanten, die die Speichersegmentgruppe eines Adapters angeben. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

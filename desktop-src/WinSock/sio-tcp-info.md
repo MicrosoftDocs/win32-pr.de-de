@@ -8,18 +8,18 @@ req.target-min-winverclnt: Windows Vista [desktop apps only]
 req.target-min-winversvr: Windows Server 2008 [desktop apps only]
 api_location:
 - mstcpip.h
-ms.openlocfilehash: f6076440f117ed287ad544c308e574454f33e2b7
-ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
+ms.openlocfilehash: 60b4c04fc4629e67fcd9dc07a4590b4a1b4c735e84000b1272e27681b4436f0d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112587801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119244850"
 ---
 # <a name="sio_tcp_info-control-code"></a>SIO_TCP_INFO-Steuerelementcode
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
-Der **SIO \_ TCP \_ INFO-Steuerungscode** ruft die TCP-Statistik (Transmission Control Protocol) für einen angegebenen Socket ab.
+Der **SIO \_ TCP INFO-Steuerungscode \_** ruft die TCP-Statistik (Transmission Control Protocol) für einen angegebenen Socket ab.
 
 Rufen Sie zum Ausführen dieses Vorgangs die [**Funktion WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **WSPIoctl** mit den folgenden Parametern auf.
 
@@ -67,7 +67,7 @@ Verwenden Sie für diesen Vorgang **SIO \_ TCP \_ INFO.**
 ### <a name="lpvinbuffer"></a>lpvInBuffer
 
 Ein Zeiger auf den Eingabepuffer.
-Dieser Parameter enthält einen Zeiger auf ein **DWORD,** das die Version des verwendeten **SIO \_ TCP \_ INFO-Steuerelementcodes** angibt. Geben Sie 0 an, um [TCP_INFO_v0](/windows/win32/api/mstcpip/ns-mstcpip-tcp_info_v0)zu verwenden. Geben Sie 1 an, um [TCP_INFO_v1](/windows/win32/api/mstcpip/ns-mstcpip-tcp_info_v1)zu verwenden, der weitere Felder bereitstellt.
+Dieser Parameter enthält einen Zeiger auf ein **DWORD,** das die Version des verwendeten **SIO \_ TCP \_ INFO-Steuerelementcodes** angibt. Geben Sie 0 an, um [TCP_INFO_v0](/windows/win32/api/mstcpip/ns-mstcpip-tcp_info_v0)zu verwenden. Geben Sie 1 an, um [TCP_INFO_v1](/windows/win32/api/mstcpip/ns-mstcpip-tcp_info_v1)zu verwenden, das weitere Felder bereitstellt.
 
 ### <a name="cbinbuffer"></a>cbInBuffer
 
@@ -82,7 +82,7 @@ Bei erfolgreicher Ausgabe enthält dieser Parameter einen Zeiger auf eine [**TCP
 ### <a name="cboutbuffer"></a>cbOutBuffer
 
 Die Größe des Ausgabepuffers in Bytes.
-Dieser Parameter muss mindestens die Größe der [**TCP_INFO_v0-Struktur**](/windows/desktop/api/mstcpip/ns-mstcpip-tcp_info_v0) aufweisen.
+Dieser Parameter muss mindestens die Größe der [**TCP_INFO_v0**](/windows/desktop/api/mstcpip/ns-mstcpip-tcp_info_v0) Struktur aufweisen.
 
 ### <a name="lpcbbytesreturned"></a>lpcbBytesReturned
 
@@ -92,7 +92,7 @@ Wenn der Ausgabepuffer zu klein ist, schlägt der Aufruf fehl, [**WSAGetLastErro
 
 Wenn *lpOverlapped* **NULL** ist, darf der **DWORD-Wert,** auf den der *lpcbBytesReturned-Parameter* zeigt, der bei einem erfolgreichen Aufruf zurückgegeben wird, nicht 0 (null) sein.
 
-Wenn der *lpOverlapped-Parameter* für überlappende Sockets nicht **NULL** ist, werden Vorgänge initiiert, die nicht sofort abgeschlossen werden können, und der Abschluss wird zu einem späteren Zeitpunkt angegeben.
+Wenn der *lpOverlapped-Parameter* für überlappende Sockets nicht **NULL** ist, werden Vorgänge initiiert, die nicht sofort abgeschlossen werden können, und der Abschluss wird zu einem späteren Zeitpunkt angezeigt.
 Der **DWORD-Wert,** auf den der *lpcbBytesReturned-Parameter* zeigt, der zurückgegeben wird, kann 0 (null) sein, da die Größe der gespeicherten Daten erst bestimmt werden kann, nachdem der überlappende Vorgang abgeschlossen wurde.
 Der endgültige Abschlussstatus kann abgerufen werden, wenn die entsprechende Vervollständigungsmethode signalisiert wird, wenn der Vorgang abgeschlossen wurde.
 
@@ -139,11 +139,11 @@ Um erweiterte Fehlerinformationen abzurufen, rufen [**Sie WSAGetLastError auf.**
 | **WSAEMSGSIZE** | Der Zeiger auf den Eingabepuffer war **NULL,** oder die angegebene Größe des Eingabepuffers war nicht richtig. |
 | **WSAEINVAL** | Ein ungültiges Argument wurde angegeben. Dieser Fehler wird zurückgegeben, wenn der *dwIoControlCode-Parameter* kein gültiger Befehl ist oder ein angegebener Eingabeparameter nicht akzeptabel ist oder der Befehl nicht auf den angegebenen Sockettyp anwendbar ist. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Im Gegensatz zum Abrufen von TCP-Statistiken mit der [**GetPerTcpConnectionEStats-Funktion**](/windows/desktop/api/iphlpapi/nf-iphlpapi-getpertcpconnectionestats) erfordert das Abrufen von TCP-Statistiken mit diesem Steuerungscode nicht, dass der Benutzercode die TCP-Verbindungstabelle lädt, speichert und filtert, und erfordert keine erhöhten Berechtigungen für die Verwendung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Socket](/windows/desktop/api/winsock2/nf-winsock2-socket)
 

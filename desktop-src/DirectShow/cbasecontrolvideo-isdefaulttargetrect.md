@@ -1,7 +1,7 @@
 ---
-description: Die isdefaulttargetrect-Methode bestimmt, ob der Renderer das standardmäßige Ziel Rechteck (rein virtuell) verwendet.
+description: Die IsDefaultTargetRect-Methode bestimmt, ob der Renderer das Standardzielrechteck (rein virtuell) verwendet.
 ms.assetid: 60c09515-7a34-421c-b3e8-ce746a935583
-title: Cbasecontrolvideo. isdefaulttargetrect-Methode (ctlutil. h)
+title: CBaseControlVideo.IsDefaultTargetRect-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e267cc65345d18800beccbc80ac7952c89d781d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c11d5b99610ff88a9e5f4088aa47efdcd8f3d9d676f0b17fad4d8e316324e807
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955239"
 ---
-# <a name="cbasecontrolvideoisdefaulttargetrect-method"></a>Cbasecontrolvideo. isdefaulttargetrect-Methode
+# <a name="cbasecontrolvideoisdefaulttargetrect-method"></a>CBaseControlVideo.IsDefaultTargetRect-Methode
 
-Die- `IsDefaultTargetRect` Methode bestimmt, ob der Renderer das standardmäßige Ziel Rechteck (rein virtuell) verwendet.
+Die `IsDefaultTargetRect` -Methode bestimmt, ob der Renderer das Standardzielrechteck (rein virtuell) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt s \_ OK zurück, wenn der Renderer das Standardziel verwendet; andernfalls wird s \_ false zurückgegeben.
+Gibt S \_ OK zurück, wenn der Renderer das Standardziel verwendet, andernfalls S \_ FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion muss in der abgeleiteten Klasse implementiert werden. Sie wird von der [**cbasecontrolvideo:: isusingdefaultdestination**](cbasecontrolvideo-isusingdefaultdestination.md) -Member-Funktion aufgerufen.
+Diese Memberfunktion muss in der abgeleiteten Klasse implementiert werden. Sie wird von der [**CBaseControlVideo::IsUsingDefaultDestination-Memberfunktion**](cbasecontrolvideo-isusingdefaultdestination.md) aufgerufen.
 
 Im folgenden Beispiel wird eine Implementierung dieser Funktion in einer abgeleiteten Klasse veranschaulicht.
 
@@ -74,7 +74,7 @@ HRESULT CVideoText::IsDefaultTargetRect()
 
 
 
-In diesem Beispiel ist cvideotext eine Klasse, die von [**cbasecontrolvideo**](cbasecontrolvideo.md)abgeleitet ist. m \_ prenderer enthält ein Objekt einer Klasse, die von [**cbasevideorenderer**](cbasevideorenderer.md)abgeleitet ist, und das \_ in der abgeleiteten Klasse definierte Datenmember m DrawImage enthält ein [**cdrawimage**](cdrawimage.md) -Objekt. Der m \_ MTiN-Datenmember, der auch in der abgeleiteten Klasse definiert ist, enthält ein [**cmediatype**](cmediatype.md) -Objekt mit dem Medientyp der Eingabe-PIN.
+In diesem Beispiel ist CVideoText eine von [**CBaseControlVideo**](cbasecontrolvideo.md)abgeleitete Klasse, m \_ pRenderer enthält ein Objekt einer klasse, die von [**CBaseVideoRenderer**](cbasevideorenderer.md)abgeleitet wurde, und der \_ m DrawImage-Datenmember, der in der abgeleiteten Klasse definiert ist, enthält ein [**CDrawImage-Objekt.**](cdrawimage.md) Der m \_ mtIn-Datenmember, der auch in der abgeleiteten Klasse definiert ist, enthält ein [**CMediaType-Objekt**](cmediatype.md) mit dem Medientyp des Eingabepins.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ In diesem Beispiel ist cvideotext eine Klasse, die von [**cbasecontrolvideo**](c
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ In diesem Beispiel ist cvideotext eine Klasse, die von [**cbasecontrolvideo**](c
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

@@ -1,56 +1,56 @@
 ---
-description: Eine Schatten Kopie ist eine Momentaufnahme eines Volumes, bei dem alle Daten, die auf diesem Volume gespeichert sind, zu einem bestimmten Zeitpunkt dupliziert werden. VSS identifiziert jede Schatten Kopie durch eine persistente GUID.
+description: Eine Schattenkopie ist eine Momentaufnahme eines Volumes, die alle Daten dupliziert, die zu einem genau definierten Zeitpunkt auf diesem Volume gespeichert sind. VSS identifiziert jede Schattenkopie durch eine persistente GUID.
 ms.assetid: 8ef2478a-c8bc-4517-9a14-e1d9226ec4cd
-title: Schatten Kopien und schattenkopiesätze
+title: Schattenkopien und Schattenkopiesätze
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18709842b1fb0fbf6d6cce2557b51042dfb024ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 764478c371cf4a622612865ef7a529955780d82847125874253533d331c195f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998154"
 ---
-# <a name="shadow-copies-and-shadow-copy-sets"></a>Schatten Kopien und schattenkopiesätze
+# <a name="shadow-copies-and-shadow-copy-sets"></a>Schattenkopien und Schattenkopiesätze
 
-Eine [*Schatten Kopie*](vssgloss-s.md) ist eine Momentaufnahme eines Volumes, bei dem alle Daten, die auf diesem Volume gespeichert sind, zu einem bestimmten Zeitpunkt dupliziert werden. VSS identifiziert jede Schatten Kopie durch eine persistente GUID.
+Eine [*Schattenkopie*](vssgloss-s.md) ist eine Momentaufnahme eines Volumes, die alle Daten dupliziert, die zu einem genau definierten Zeitpunkt auf diesem Volume gespeichert sind. VSS identifiziert jede Schattenkopie durch eine persistente GUID.
 
-Ein [*Schattenkopiesatz*](vssgloss-s.md) ist eine Sammlung von Schatten Kopien verschiedener Volumes, die alle gleichzeitig erstellt wurden. VSS identifiziert jede Schatten Kopie, die durch eine persistente GUID festgelegt ist.
+Ein [*Schattenkopiesatz ist*](vssgloss-s.md) eine Sammlung von Schattenkopien verschiedener Volumes, die alle gleichzeitig aufgenommen werden. VSS identifiziert jeden Schattenkopiesatz durch eine persistente GUID.
 
-Die Art und Weise, wie sich ein bestimmter Hardware-oder Softwarehersteller für die Implementierung von Schatten Kopien entscheidet, ist vollständig Nachdem eine Schatten Kopie erstellt wurde, sind tatsächlich zwei Images des schattenkopierten Volumes für das System verfügbar: das ursprüngliche Volume, auf das konventionell zugegriffen werden kann. und den kopierten Daten, auf die über die VSS-API zugegriffen werden kann.
+Wie sich ein bestimmter Hardware- oder Softwareanbieter für die Implementierung von Schattenkopien entscheidet, liegt vollständig in seinem Ermessen. Sobald eine Schattenkopie erstellt wurde, stehen dem System zwei Bilder des kopierten Schattenvolumens zur Verfügung: das ursprüngliche Volume, auf das herkömmlicher Weise zugegriffen werden kann. und die kopierten Daten, auf die über die VSS-API zugegriffen werden kann.
 
-Dadurch können zwei Gruppen von Aktivitäten gleichzeitig stattfinden:
+Dadurch können zwei Sätze von Aktivitäten gleichzeitig stattfinden:
 
--   Normale Anwendungen im System können mit dem ursprünglichen Volume schnell fortfahren oder fortgesetzt werden, indem die Daten auf dem Datenträger aktualisiert werden.
--   Anwendungen, die die VSS-Anforderer-API verwenden, um auf das schattenkopierte Volume zuzugreifen, können Sicherungen oder ähnliche Vorgänge ausführen.
+-   Normale Anwendungen im System können schnell mit der Verwendung des ursprünglichen Volumes fortfahren oder fortsetzen und daten auf dem Datenträger aktualisieren.
+-   Anwendungen, die die VSS-Anforderungs-API für den Zugriff auf das Schattenkopie-Volume verwenden, können Sicherungen oder ähnliche Vorgänge ausführen.
 
-Schatten Kopien müssen nicht auf die gleiche Weise für alle Dateien, Verzeichnisse oder Volumes implementiert werden. Verschiedene Implementierungen des schattenkopiemechanismus ([*Anbieter*](vssgloss-p.md)) können unterschiedliche Ansätze zum Erstellen einer Schatten Kopie verwenden. Für alle Anwendungen, die die VSS-API verwenden, sollten allerdings alle Schatten Kopien identisch angezeigt werden.
+Schattenkopien müssen nicht für jede Datei, jedes Verzeichnis oder Volume auf die gleiche Weise implementiert werden. Verschiedene Implementierungen des Schattenkopiemechanismus [*(Anbieter*](vssgloss-p.md)) können verschiedene Ansätze zum Erstellen einer Schattenkopie verwenden. Für alle Anwendungen, die die VSS-API verwenden, sollten jedoch alle Schattenkopien identisch sein.
 
-Weitere Informationen zur Standard Implementierung des Windows-Anbieters finden Sie unter [System Anbieter](providers.md).
+Informationen zur Standardimplementierung Windows-Anbieters finden Sie unter [Systemanbieter](providers.md).
 
-## <a name="default-shadow-copy-state"></a>Standardmäßiger schattenkopiestatus
+## <a name="default-shadow-copy-state"></a>Standardstatus der Schattenkopie
 
-Obwohl das Dateisystem vor dem Erstellen einer Schatten Kopie alle e/a-Puffer geleert hat, wird dadurch nicht sichergestellt, dass unvollständige e/a-Vorgänge ordnungsgemäß verarbeitet werden.
+Obwohl das Dateisystem alle E/A-Puffer leert, bevor eine Schattenkopie erstellt wird, wird dadurch nicht sichergestellt, dass unvollständige E/A ordnungsgemäß verarbeitet werden.
 
-Wenn das System keine VSS-fähigen Anwendungen hat, werden die Daten in einer Schatten Kopie daher in einem [*Absturz konsistenten Zustand*](vssgloss-c.md)angezeigt. Eine Schatten Kopie in einem Absturz konsistenten Zustand enthält ein Abbild des Datenträgers, das mit dem übereinstimmt, das nach einem schwerwiegenden Herunterfahren des Systems vorhanden wäre. Alle geöffneten Dateien sind weiterhin auf dem Volume vorhanden, aber Sie sind nicht garantiert, dass unvollständige e/a-Vorgänge oder Daten beschädigt sind.
+Wenn das System über keine VSS-fähigen Anwendungen verfügt, werden die Daten in einer Schattenkopie daher als absturz konsistent [*bezeichnet.*](vssgloss-c.md) Eine Schattenkopie in einem absturzeinheitlichen Zustand enthält ein Image des Datenträgers, das mit dem Image identisch ist, das nach einem schwerwiegenden Herunterfahren des Systems vorhanden wäre. Alle geöffneten Dateien sind weiterhin auf dem Volume vorhanden, aber es ist nicht garantiert, dass sie frei von unvollständigen E/A-Vorgängen oder Datenbeschädigungen sind.
 
-Während der Absturz konsistente Zustand alle Probleme im Zusammenhang mit der Definition eines stabilen Sicherungs Satzes (siehe häufige Probleme mit der [Volumesicherung](common-volume-backup-issues.md)) nicht vollständig behandelt, bietet er mehrere Vorteile gegenüber dem Sicherungs Satz, der von herkömmlichen Sicherungs Vorgängen verwendet werden müsste:
+Obwohl der absturz konsistente Zustand nicht alle Probleme im Zusammenhang mit der [](common-volume-backup-issues.md)Definition eines stabilen Sicherungssets vollständig behandelt (siehe Allgemeine Probleme bei der Volumesicherung), hat er gegenüber dem Sicherungssatz mehrere Vorteile, die herkömmliche Sicherungsvorgänge verwenden müssten:
 
--   Ein Volume, das in einer Schatten Kopie enthalten ist, selbst in einem Absturz konsistenten Zustand, enthält weiterhin alle Dateien. Ein Sicherungs Satz, der ohne eine Schatten Kopie erstellt wurde, enthält nicht alle Dateien, die zum Zeitpunkt der Sicherung geöffnet waren. Dateien, die zum Zeitpunkt des Sicherungs Vorgangs geöffnet gehalten wurden, werden von der Sicherung ausgeschlossen.
--   Die Schatten Kopie des Volumes wird zu einem Zeitpunkt erstellt, nicht durch das Durchlaufen eines aktiven Dateisystems, das in der Regel viel mehr Zeit erfordert.
+-   Ein Volume, das in einer Schattenkopie enthalten ist, enthält auch in einem absturz konsistenten Zustand weiterhin alle Dateien. Ein Sicherungssatz, der ohne Schattenkopie erstellt wurde, würde nicht alle Dateien enthalten, die zum Zeitpunkt der Sicherung geöffnet waren. Dateien, die zum Zeitpunkt des Sicherungsvorgang geöffnet bleiben, werden von der Sicherung ausgeschlossen.
+-   Die Schattenkopie des Volumes wird zu einem Zeitpunkt erstellt und nicht durch das Durchlaufen eines aktiven Dateisystems, was in der Regel viel mehr Zeit erfordert.
 
-Anwendungen auf einem System, die nicht VSS-fähig sind – Word-Prozessoren, Editoren usw. – haben wahrscheinlich, dass Ihre Dateien in einem Absturz konsistenten Zustand verbleiben. VSS-fähige Anwendungen (Writer) können Ihre Aktionen jedoch koordinieren, sodass der Zustand Ihrer Dateien in der Schatten Kopie wohl definiert und konsistent ist.
+Anwendungen auf einem System, die VSS-ler sind – Wortprozessoren, Editoren und so weiter – haben ihre Dateien wahrscheinlich in einem absturzeinheitlichen Zustand. VSS-orientierte Anwendungen (Writer) können ihre Aktionen jedoch so koordinieren, dass der Status ihrer Dateien in der Schattenkopie klar definiert und konsistent ist.
 
-## <a name="shadow-copy-freeze-and-thaw"></a>Einfrieren von Schatten Kopien und durch das durch täuschen
+## <a name="shadow-copy-freeze-and-thaw"></a>Einfrieren und Auftauen von Schattenkopien
 
-Die Erstellung jedes VSS-schattenkopievorgangs wird durch [*Freeze*](vssgloss-f.md) -und [*Thaw*](vssgloss-t.md) -Ereignisse in Klammern gesetzt, die Writer verwenden, um Ihre Dateien vor dem Schatten kopieren in einen stabilen Zustand zu versetzen.
+Die Erstellung jedes VSS-Schattenkopie-Vorgangs wird durch Freeze- und [*Thaw-Ereignisse*](vssgloss-t.md) in Klammern gesetzt, die Writer verwenden, um ihre Dateien vor der Schattenkopie in einen stabilen Zustand zu bringen. [](vssgloss-f.md)
 
-Die Verwendung von Freeze-und Thaw-Ereignissen als Teil des VSS-Modells bedeutet Folgendes:
+Das Einfrieren und Auftauen von Ereignissen als Teil des VSS-Modells bedeutet:
 
--   Das Behandeln des Freeze-Ereignisses bedeutet, dass Benutzer, die Writer entwickeln, einen klar abgeglichen Punkt im Sicherungs Zeitraum aufweisen müssen, in dem Sie sicherstellen, dass alle Schreibvorgänge auf dem Datenträger beendet werden und dass sich die Dateien in einem klar definierten Zustand für die Sicherung befinden.
--   Wenn Sie das Ereignis Thaw verarbeiten, können Writer Schreibvorgänge auf dem Datenträger fortsetzen und temporäre Dateien oder andere temporäre Zustandsinformationen bereinigen, die in der Zuordnung zur Schatten Kopie erstellt wurden.
--   Das Standardfenster zwischen den Freeze-und den thaw-Ereignissen ist kurz (in der Regel 60 Sekunden); Daher kann die tatsächliche Unterbrechung eines Diensts, den ein Writer bereitstellt, minimiert werden.
--   Durch die Verarbeitung anderer Ereignisse (z. b. prepareforsnapshot) vor und nach den Ereignissen zum Einfrieren bzw. nachverfolgen wird die erforderliche Flexibilität bereitgestellt, damit Writer komplizierte Vorgänge ausführen können, um Schatten Kopien zu unterstützen.
+-   Die Behandlung des Freeze-Ereignisses bedeutet, dass diejenigen, die Writer entwickeln, einen klar definierten Punkt im Sicherungszyklus haben müssen, an dem sie sicherstellen, dass alle Schreibvorgänge auf dem Datenträger beendet werden und dass dateien sich in einem klar definierten Zustand für die Sicherung befinden.
+-   Die Behandlung des Thaw-Ereignisses bietet den Mechanismus, mit dem Writer Schreibvorgänge auf dem Datenträger fortsetzen und alle temporären Dateien oder anderen temporären Zustandsinformationen bereinigt, die in Verbindung mit der Schattenkopie erstellt wurden.
+-   Das Standardfenster zwischen den Ereignissen Freeze und Thaw ist kurz (in der Regel 60 Sekunden). Daher kann die tatsächliche Unterbrechung eines Diensts, der von einem Writer zur Verfügung steht, minimiert werden.
+-   Die Behandlung anderer Ereignisse (z. B. PrepareForSnapshot) vor bzw. nach den Freeze- bzw. Thaw-Ereignissen bietet die erforderliche Flexibilität, damit Writer komplizierte Vorgänge abschließen können, um Schattenkopien zu unterstützen.
 
  
 

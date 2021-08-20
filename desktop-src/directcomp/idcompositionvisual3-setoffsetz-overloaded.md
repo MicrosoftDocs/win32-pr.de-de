@@ -1,9 +1,9 @@
 ---
-title: IDCompositionVisual3-Enumeratormethoden (Dcomp. h)
-description: Legt den Wert der OffsetZ-Eigenschaft des visuellen Elements fest.
+title: IDCompositionVisual3 SetOffsetZ-Methoden (Dcomp.h)
+description: Legt den Wert der OffsetZ-Eigenschaft des Visuals fest.
 ms.assetid: 55ad436e-6f95-ee45-c7d3-1636194917da
 keywords:
-- "\"\" \"\" \"\" \"."
+- SetOffsetZ-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 3ea4eca49f134b8524868f6013b5905188f711d0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ffd9cc099a92194c91512d11cbc53b24bb97dacfa7538b5e5463c2d6e67cf54a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043078"
 ---
-# <a name="idcompositionvisual3setoffsetz-methods"></a>IDCompositionVisual3::-Methode
+# <a name="idcompositionvisual3setoffsetz-methods"></a>IDCompositionVisual3::SetOffsetZ-Methoden
 
-Legt den Wert der OffsetZ-Eigenschaft des visuellen Elements fest.
+Legt den Wert der OffsetZ-Eigenschaft des Visuals fest.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                            | BESCHREIBUNG                                                 |
+| Methode                                                                            | Beschreibung                                                 |
 |:----------------------------------------------------------------------------------|:------------------------------------------------------------|
-| [**"Sekunden" (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual3-setoffsetz(float))                      | Legt den Wert der OffsetZ-Eigenschaft des visuellen Elements fest.<br/> |
-| [**"T-ffsetz" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual3-setoffsetz(idcompositionanimation)) | Animiert den Wert der OffsetZ-Eigenschaft.<br/>      |
+| [**SetOffsetZ(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual3-setoffsetz(float))                      | Legt den Wert der OffsetZ-Eigenschaft des Visuals fest.<br/> |
+| [**SetOffsetZ(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual3-setoffsetz(idcompositionanimation)) | Animiert den Wert der OffsetZ-Eigenschaft.<br/>      |
 
 
 
@@ -40,7 +40,7 @@ Legt den Wert der OffsetZ-Eigenschaft des visuellen Elements fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 

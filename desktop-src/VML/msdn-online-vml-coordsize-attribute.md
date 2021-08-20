@@ -1,56 +1,56 @@
 ---
-title: VML coordsize-Attribut
-description: VML coordsize-Attribut
+title: VML CoordSize-Attribut
+description: VML CoordSize-Attribut
 ms.assetid: 4e7a7eca-7db2-4522-be8e-e817601625ed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a0e1fee484071c04c7184e0f200aed9b52aadf9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bce9ce79507e789c38512e775100aa27eda25dc61d5f2af56f9a677daf04d238
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999190"
 ---
-# <a name="vml-coordsize-attribute"></a>VML coordsize-Attribut
+# <a name="vml-coordsize-attribute"></a>VML CoordSize-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt die horizontalen und vertikalen Einheiten des Rechtecks an, das eine Form umschließt. Lese-/Schreibzugriff. [IVgVector2D](msdn-online-vml-ivgvector2d-data-type.md).
+Gibt die horizontalen und vertikalen Einheiten des Rechtecks an, das eine Form umgibt. Lese-/Schreibzugriff. [IVgVector2D](msdn-online-vml-ivgvector2d-data-type.md).
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* coordsize = " *Expression* " >
+<v: *element* coordsize=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . coordsize = "*Ausdruck*"
+*element* .coordsize="*expression*"
 
-*Ausdruck* = *Element*. coordsize
+*expression* = *.coordsize-Element*
 
 **Anmerkungen**
 
-Wenn nicht angegeben, ist die Koordinaten Größe mit dem umgebenden Feld der Form identisch.
+Wenn keine Angabe erfolgt, entspricht die Koordinatengröße dem begrenzungsfeld der Form.
 
-Beachten Sie, dass es sich bei diesem Attribut um einen Vektor handelt und dass die Einheiten relativ zur Länge und Breite des umgebenden Rechtecks sind.
+Beachten Sie, dass dieses Attribut ein Vektor ist und dass die Einheiten relativ zur Länge und Breite des umgrenzenden Rechtecks sind.
 
-Beachten Sie auch, dass die Zuordnung zwischen **coordsize** und dem umgebenden Feld zu einem anisotrope gemacht werden kann. Stellen Sie sicher, dass die **Breite** und die Höhe von **coordsize** mit der **Breite und** **Höhe** des Formats identisch sind, wenn Sie die Form nicht verzerren möchten.
+Beachten Sie auch, dass die Zuordnung zwischen **coordsize** und dem Begrenzungsfeld als Anisotrope erfolgen kann. Stellen Sie sicher, dass die **Coordsize-Breite** und **coordsize-Höhe** mit der **Stilbreite** und **-höhe** identisch sind, wenn Sie die Form nicht verzerren möchten.
 
-Da es sich hierbei um einen 2-D-Vektor handelt, können Sie bei der Skripterstellung separat auf die x-und y-Werte zugreifen und auch den Typ der erwarteten Einheiten festlegen.
+Da es sich bei der Skripterstellung um einen 2D-Vektor handelt, können Sie separat auf die x- und y-Werte zugreifen und auch den erwarteten Einheitentyp bestimmen.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Form ist 100 Punkte hoch und 100 Punkte breit, aber jede horizontale und vertikale Einheit im Koordinaten Bereich ist 1/10 eines Punkts.
+Die Form ist 100 Punkte hoch und 100 Punkte breit, aber jede horizontale und vertikale Einheit im Koordinatenbereich beträgt 1/10 eines Punkts.
 
 
 ```HTML
@@ -64,8 +64,8 @@ Die Form ist 100 Punkte hoch und 100 Punkte breit, aber jede horizontale und ver
 
 
 
-[Beispiel für das coordsize-Attribut](/previous-versions/bb229665(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[CoordSize-Attribut – Beispiel.](/previous-versions/bb229665(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

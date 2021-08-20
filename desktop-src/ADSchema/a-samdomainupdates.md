@@ -1,11 +1,11 @@
 ---
 title: SAM-Domain-Updates-Attribut
-description: Enthält eine Bitmaske von ausgeführten Sam-Vorgängen auf Active Directory.
+description: Enthält eine Bitmaske der ausgeführten SAM-Vorgänge in Active Directory.
 ms.assetid: cafef47d-4923-4ee6-92bc-764301506cfe
 ms.tgt_platform: multiple
 keywords:
-- "\"SAM-Domain-Updates\"-Attribut AD-Schema"
-- AD-Schema des samdomainupdates-Attributs
+- AD-Schema des SAM-Domain-Updates-Attributs
+- samDomainUpdates-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 812a1995ec89f3827b7fcfd984edb2de164d0bd3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d2c2bb6bc23e04874221fa65486247b1ed0dfd28f208ca41329b8528e558b257
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022208"
 ---
 # <a name="sam-domain-updates-attribute"></a>SAM-Domain-Updates-Attribut
 
-Enthält eine Bitmaske von ausgeführten Sam-Vorgängen auf Active Directory.
+Enthält eine Bitmaske der ausgeführten SAM-Vorgänge in Active Directory.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | SAM-Domain-Updates                                    |
-| LDAP-Display-Name | samdomainupdates                                      |
+| Ldap-Anzeigename | samDomainUpdates                                      |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1969                               |
-| System-ID-GUID    | 04d2d114-f 799-4e9b-BCDC-90e8f 5ba7ebe                  |
+| System-ID-GUID    | 04d2d114-f799-4e9b-bcdc-90e8f5ba7ebe                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -54,16 +54,16 @@ Enthält eine Bitmaske von ausgeführten Sam-Vorgängen auf Active Directory.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**SAM-Server**](c-samserver.md)<br/> |
+| In verwendete Klassen        | [**Sam-Server**](c-samserver.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Enthält eine Bitmaske von ausgeführten Sam-Vorgängen auf Active Directory.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**SAM-Server**](c-samserver.md)<br/> |
+| In verwendete Klassen        | [**Sam-Server**](c-samserver.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Enthält eine Bitmaske von ausgeführten Sam-Vorgängen auf Active Directory.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**SAM-Server**](c-samserver.md)<br/> |
+| In verwendete Klassen        | [**Sam-Server**](c-samserver.md)<br/> |
 
 
 

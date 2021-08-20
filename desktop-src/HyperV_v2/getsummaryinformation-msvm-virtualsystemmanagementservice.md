@@ -1,7 +1,7 @@
 ---
-description: Gibt Zusammenfassungs Informationen für virtuelle Computer zurück.
+description: Gibt Zusammenfassungsinformationen für virtuelle Computer zurück.
 ms.assetid: CDDC2B5A-8172-4E6D-A206-CEAB9E54C69A
-title: Getsummaryinformation-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: GetSummaryInformation-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1399acd40f768fdb857d6a4a26e80a52d29111b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efa879cd3da0f5e8a4cc8cf1e9873390c94a94bae0eef3dd8d36c59c9e1680e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253650"
 ---
-# <a name="getsummaryinformation-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Getsummaryinformation-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="getsummaryinformation-method-of-the-msvm_virtualsystemmanagementservice-class"></a>GetSummaryInformation-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Gibt Zusammenfassungs Informationen für virtuelle Computer zurück.
+Gibt Zusammenfassungsinformationen für virtuelle Computer zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ uint32 GetSummaryInformation(
 
 <dl> <dt>
 
-*SettingData* \[ in\]
+*SettingData* \[ In\]
 </dt> <dd>
 
-Typ: **CIM \_ virtualsystemsettingdata \[ \]**
+Typ: **CIM \_ \[ \] VirtualSystemSettingData**
 
-Ein Array von [**CIM- \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)) -Instanzen, die die virtuellen Computer oder Momentaufnahmen angeben, für die Informationen abgerufen werden sollen. Wenn dieser Parameter **null** ist, werden Informationen für alle virtuellen Computer abgerufen.
+Ein Array von [**CIM \_ VirtualSystemSettingData-Instanzen,**](/previous-versions//cc136954(v=vs.85)) die die virtuellen Computer oder Momentaufnahmen angeben, für die Informationen abgerufen werden sollen. Wenn dieser Parameter **NULL** ist, werden Informationen für alle virtuellen Computer abgerufen.
 
 </dd> <dt>
 
-*Requestedinformation* \[ in\]
+*RequestedInformation* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32 \[ \]**
+Typ: **uint32 \[ \]**
 
-Ein Array von Enumerationswerten, die den Eigenschaften in der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse entsprechen, die die Daten angeben, die für die im *SettingData* -Array angegebenen virtuellen Maschinen und Momentaufnahmen abgerufen werden sollen.
+Ein Array von Enumerationswerten, die den Eigenschaften in der [**Msvm \_ SummaryInformation-Klasse**](msvm-summaryinformation.md) entsprechen, die die abzurufenden Daten für die virtuellen Computer und Momentaufnahmen angeben, die im *SettingData-Array* angegeben sind.
 
 <dt>
 
@@ -66,18 +66,18 @@ Ein Array von Enumerationswerten, die den Eigenschaften in der [**MSVM \_ Summar
 
 </dt> <dd>
 
-Dies entspricht der **Name** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **Name-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Element_Name"></span><span id="element_name"></span><span id="ELEMENT_NAME"></span>
 
-<span id="Element_Name"></span><span id="element_name"></span><span id="ELEMENT_NAME"></span>**Element Name** (1)
+<span id="Element_Name"></span><span id="element_name"></span><span id="ELEMENT_NAME"></span>**Elementname** (1)
 
 
 </dt> <dd>
 
-Dies entspricht der **ElementName** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ElementName-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Dies entspricht der **ElementName** -Eigenschaft der [**MSVM \_ SummaryInformati
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **kreationtime** " der Klasse " [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **CreationTime-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -99,7 +99,7 @@ Dies entspricht der Eigenschaft " **kreationtime** " der Klasse " [**MSVM \_ Sum
 
 </dt> <dd>
 
-Dies entspricht der **Notes** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **Notes-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -110,57 +110,57 @@ Dies entspricht der **Notes** -Eigenschaft der [**MSVM \_ SummaryInformation**](
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **numofprocessor** " der [**MSVM-Klasse " \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **NumberOfProcessors-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Small_Thumbnail_Image__80x60_"></span><span id="small_thumbnail_image__80x60_"></span><span id="SMALL_THUMBNAIL_IMAGE__80X60_"></span>
 
-<span id="Small_Thumbnail_Image__80x60_"></span><span id="small_thumbnail_image__80x60_"></span><span id="SMALL_THUMBNAIL_IMAGE__80X60_"></span>**Kleines Miniaturbild (80X 60)** (5)
+<span id="Small_Thumbnail_Image__80x60_"></span><span id="small_thumbnail_image__80x60_"></span><span id="SMALL_THUMBNAIL_IMAGE__80X60_"></span>**Kleines Miniaturbild (80 x 60)** (5)
 
 
 </dt> <dd>
 
-Dies entspricht der **thumbnailimage** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse. Ein Miniaturbild mit den Abmessungen 80 60 wird abgerufen.
+Dies entspricht der **ThumbnailImage-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md) Ein Miniaturbild mit den Dimensionen 80 60 wird abgerufen.
 
 </dd> <dt>
 
 <span id="Medium_Thumbnail_Image__160x120_"></span><span id="medium_thumbnail_image__160x120_"></span><span id="MEDIUM_THUMBNAIL_IMAGE__160X120_"></span>
 
-<span id="Medium_Thumbnail_Image__160x120_"></span><span id="medium_thumbnail_image__160x120_"></span><span id="MEDIUM_THUMBNAIL_IMAGE__160X120_"></span>**Bild für mittlere Miniaturansicht (160 x 120)** (6)
+<span id="Medium_Thumbnail_Image__160x120_"></span><span id="medium_thumbnail_image__160x120_"></span><span id="MEDIUM_THUMBNAIL_IMAGE__160X120_"></span>**Mittlere Miniaturansicht (160 x 120)** (6)
 
 
 </dt> <dd>
 
-Dies entspricht der **thumbnailimage** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse. Ein Miniaturbild mit den Abmessungen 160 120 wird abgerufen.
+Dies entspricht der **ThumbnailImage-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md) Ein Miniaturbild mit den Dimensionen 160 120 wird abgerufen.
 
 </dd> <dt>
 
 <span id="Large_Thumbnail_Image__320x240_"></span><span id="large_thumbnail_image__320x240_"></span><span id="LARGE_THUMBNAIL_IMAGE__320X240_"></span>
 
-<span id="Large_Thumbnail_Image__320x240_"></span><span id="large_thumbnail_image__320x240_"></span><span id="LARGE_THUMBNAIL_IMAGE__320X240_"></span>**Großes Miniaturbild (320 x 240)** (7)
+<span id="Large_Thumbnail_Image__320x240_"></span><span id="large_thumbnail_image__320x240_"></span><span id="LARGE_THUMBNAIL_IMAGE__320X240_"></span>**Große Miniaturansicht (320 x 240)** (7)
 
 
 </dt> <dd>
 
-Dies entspricht der **thumbnailimage** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse. Ein Miniaturbild mit den Abmessungen 320 240 wird abgerufen.
+Dies entspricht der **ThumbnailImage-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md) Ein Miniaturbild mit den Dimensionen 320 240 wird abgerufen.
 
 </dd> <dt>
 
 <span id="AllocatedGPU"></span><span id="allocatedgpu"></span><span id="ALLOCATEDGPU"></span>
 
-<span id="AllocatedGPU"></span><span id="allocatedgpu"></span><span id="ALLOCATEDGPU"></span>**Zugedgpu** (8)
+<span id="AllocatedGPU"></span><span id="allocatedgpu"></span><span id="ALLOCATEDGPU"></span>**AllocatedGPU** (8)
 
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **zugseredgpu** " der [**MSVM-Klasse " \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **AllocatedGPU-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="VirtualSwitchNames"></span><span id="virtualswitchnames"></span><span id="VIRTUALSWITCHNAMES"></span>
 
-<span id="VirtualSwitchNames"></span><span id="virtualswitchnames"></span><span id="VIRTUALSWITCHNAMES"></span>**Virtualswitchnames** (9)
+<span id="VirtualSwitchNames"></span><span id="virtualswitchnames"></span><span id="VIRTUALSWITCHNAMES"></span>**VirtualSwitchNames** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -187,7 +187,7 @@ Dies entspricht der Eigenschaft " **zugseredgpu** " der [**MSVM-Klasse " \_ Summ
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -195,56 +195,56 @@ Dies entspricht der Eigenschaft " **zugseredgpu** " der [**MSVM-Klasse " \_ Summ
 
 <span id="EnabledState"></span><span id="enabledstate"></span><span id="ENABLEDSTATE"></span>
 
-<span id="EnabledState"></span><span id="enabledstate"></span><span id="ENABLEDSTATE"></span>**Enabledstate** (100)
+<span id="EnabledState"></span><span id="enabledstate"></span><span id="ENABLEDSTATE"></span>**EnabledState** (100)
 
 
 </dt> <dd>
 
-Dies entspricht der **enabledstate** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **EnabledState-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="ProcessorLoad"></span><span id="processorload"></span><span id="PROCESSORLOAD"></span>
 
-<span id="ProcessorLoad"></span><span id="processorload"></span><span id="PROCESSORLOAD"></span>**Processorload** (101)
+<span id="ProcessorLoad"></span><span id="processorload"></span><span id="PROCESSORLOAD"></span>**ProcessorLoad** (101)
 
 
 </dt> <dd>
 
-Dies entspricht der **processorload** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ProcessorLoad-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="ProcessorLoadHistory"></span><span id="processorloadhistory"></span><span id="PROCESSORLOADHISTORY"></span>
 
-<span id="ProcessorLoadHistory"></span><span id="processorloadhistory"></span><span id="PROCESSORLOADHISTORY"></span>**Processorloadhistory** (102)
+<span id="ProcessorLoadHistory"></span><span id="processorloadhistory"></span><span id="PROCESSORLOADHISTORY"></span>**ProcessorLoadHistory** (102)
 
 
 </dt> <dd>
 
-Dies entspricht der **processorloadhistory** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ProcessorLoadHistory-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="MemoryUsage"></span><span id="memoryusage"></span><span id="MEMORYUSAGE"></span>
 
-<span id="MemoryUsage"></span><span id="memoryusage"></span><span id="MEMORYUSAGE"></span>**Memoryusage** (103)
+<span id="MemoryUsage"></span><span id="memoryusage"></span><span id="MEMORYUSAGE"></span>**MemoryUsage** (103)
 
 
 </dt> <dd>
 
-Dies entspricht der **memoryusage** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **MemoryUsage-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Heartbeat"></span><span id="heartbeat"></span><span id="HEARTBEAT"></span>
 
-<span id="Heartbeat"></span><span id="heartbeat"></span><span id="HEARTBEAT"></span>Takt **(104** )
+<span id="Heartbeat"></span><span id="heartbeat"></span><span id="HEARTBEAT"></span>**Heartbeat** (104)
 
 
 </dt> <dd>
 
-Dies entspricht der **Heartbeat** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **Heartbeat-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -255,18 +255,18 @@ Dies entspricht der **Heartbeat** -Eigenschaft der [**MSVM \_ SummaryInformation
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **Uptime** " der Klasse " [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **UpTime-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="GuestOperatingSystem"></span><span id="guestoperatingsystem"></span><span id="GUESTOPERATINGSYSTEM"></span>
 
-<span id="GuestOperatingSystem"></span><span id="guestoperatingsystem"></span><span id="GUESTOPERATINGSYSTEM"></span>**Guestoperatingsystem** (106)
+<span id="GuestOperatingSystem"></span><span id="guestoperatingsystem"></span><span id="GUESTOPERATINGSYSTEM"></span>**GuestOperatingSystem** (106)
 
 
 </dt> <dd>
 
-Dies entspricht der **guestoperatingsystem** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **GuestOperatingSystem-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -277,29 +277,29 @@ Dies entspricht der **guestoperatingsystem** -Eigenschaft der [**MSVM \_ Summary
 
 </dt> <dd>
 
-Dies entspricht der **Momentaufnahmen** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **Snapshots-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="AsynchronousTasks"></span><span id="asynchronoustasks"></span><span id="ASYNCHRONOUSTASKS"></span>
 
-<span id="AsynchronousTasks"></span><span id="asynchronoustasks"></span><span id="ASYNCHRONOUSTASKS"></span>**Asynchronoustasks** (108)
+<span id="AsynchronousTasks"></span><span id="asynchronoustasks"></span><span id="ASYNCHRONOUSTASKS"></span>**AsynchronousTasks** (108)
 
 
 </dt> <dd>
 
-Dies entspricht der **asynchronoustasks** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **AsynchronousTasks-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="HealthState"></span><span id="healthstate"></span><span id="HEALTHSTATE"></span>
 
-<span id="HealthState"></span><span id="healthstate"></span><span id="HEALTHSTATE"></span>**Healthstate** (109)
+<span id="HealthState"></span><span id="healthstate"></span><span id="HEALTHSTATE"></span>**HealthState** (109)
 
 
 </dt> <dd>
 
-Dies entspricht der **healthstate** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **HealthState-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -310,160 +310,160 @@ Dies entspricht der **healthstate** -Eigenschaft der [**MSVM \_ SummaryInformati
 
 </dt> <dd>
 
-Dies entspricht der **OperationalStatus** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **OperationalStatus-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="StatusDescriptions"></span><span id="statusdescriptions"></span><span id="STATUSDESCRIPTIONS"></span>
 
-<span id="StatusDescriptions"></span><span id="statusdescriptions"></span><span id="STATUSDESCRIPTIONS"></span>**Status Beschreibungen** (111)
+<span id="StatusDescriptions"></span><span id="statusdescriptions"></span><span id="STATUSDESCRIPTIONS"></span>**StatusDescriptions** (111)
 
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **Status Beschreibungen** " der [**MSVM-Klasse " \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **StatusDescriptions-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="MemoryAvailable"></span><span id="memoryavailable"></span><span id="MEMORYAVAILABLE"></span>
 
-<span id="MemoryAvailable"></span><span id="memoryavailable"></span><span id="MEMORYAVAILABLE"></span>Speicher **verfügbar** (112)
+<span id="MemoryAvailable"></span><span id="memoryavailable"></span><span id="MEMORYAVAILABLE"></span>**Arbeitsspeicher verfügbar** (112)
 
 
 </dt> <dd>
 
-Dies entspricht der **memoryavailable** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **MemoryAvailable-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="AvailableMemoryBuffer"></span><span id="availablememorybuffer"></span><span id="AVAILABLEMEMORYBUFFER"></span>
 
-<span id="AvailableMemoryBuffer"></span><span id="availablememorybuffer"></span><span id="AVAILABLEMEMORYBUFFER"></span>**Availablememorybuffer** (113)
+<span id="AvailableMemoryBuffer"></span><span id="availablememorybuffer"></span><span id="AVAILABLEMEMORYBUFFER"></span>**AvailableMemoryBuffer** (113)
 
 
 </dt> <dd>
 
-Dies entspricht der **availablememorybuffer** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **AvailableMemoryBuffer-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Replication_Mode"></span><span id="replication_mode"></span><span id="REPLICATION_MODE"></span>
 
-<span id="Replication_Mode"></span><span id="replication_mode"></span><span id="REPLICATION_MODE"></span>**Replikations Modus** (114)
+<span id="Replication_Mode"></span><span id="replication_mode"></span><span id="REPLICATION_MODE"></span>**Replikationsmodus** (114)
 
 
 </dt> <dd>
 
-Dies entspricht der **replicationmode** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ReplicationMode-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Replication_State"></span><span id="replication_state"></span><span id="REPLICATION_STATE"></span>
 
-<span id="Replication_State"></span><span id="replication_state"></span><span id="REPLICATION_STATE"></span>**Replikations Status** (115)
+<span id="Replication_State"></span><span id="replication_state"></span><span id="REPLICATION_STATE"></span>**Replikationsstatus** (115)
 
 
 </dt> <dd>
 
-Dies entspricht der **replicationstate** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ReplicationState-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Replication_HealthTest_Replica_System"></span><span id="replication_healthtest_replica_system"></span><span id="REPLICATION_HEALTHTEST_REPLICA_SYSTEM"></span>
 
-<span id="Replication_HealthTest_Replica_System"></span><span id="replication_healthtest_replica_system"></span><span id="REPLICATION_HEALTHTEST_REPLICA_SYSTEM"></span>**Replikation healthtest Replica System** (116)
+<span id="Replication_HealthTest_Replica_System"></span><span id="replication_healthtest_replica_system"></span><span id="REPLICATION_HEALTHTEST_REPLICA_SYSTEM"></span>**ReplikationszustandTestreplikatsystem** (116)
 
 
 </dt> <dd>
 
-Dies entspricht der **ReplicationHealth** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **ReplicationHealth-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="Application_Health"></span><span id="application_health"></span><span id="APPLICATION_HEALTH"></span>
 
-<span id="Application_Health"></span><span id="application_health"></span><span id="APPLICATION_HEALTH"></span>**Anwendungs** Integrität (117)
+<span id="Application_Health"></span><span id="application_health"></span><span id="APPLICATION_HEALTH"></span>**Anwendungszustand** (117)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ReplicationStateEx"></span><span id="replicationstateex"></span><span id="REPLICATIONSTATEEX"></span>
 
-<span id="ReplicationStateEx"></span><span id="replicationstateex"></span><span id="REPLICATIONSTATEEX"></span>**Replicationstateex** (118)
+<span id="ReplicationStateEx"></span><span id="replicationstateex"></span><span id="REPLICATIONSTATEEX"></span>**ReplicationStateEx** (118)
 
 
 </dt> <dd>
 
-Dies entspricht der **replicationstate** -Eigenschaft der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse. Dies ist ein Array für alle Replikations Zustands Werte über die primäre und erweiterte Beziehung hinweg. 0 der Indexwert ist für die primäre Beziehung immer, und wenn die erweiterte Replikation aktiviert ist, wird Sie in Index 1 zurückgegeben.
+Dies entspricht der **ReplicationState-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md) Dies ist ein Array für alle Replikationszustandswerte in der primären und erweiterten Beziehung. Der Indexwert 0 ist immer für die primäre Beziehung, und wenn die erweiterte Replikation aktiviert ist, wird er in Index 1 zurückgegeben.
 
 </dd> <dt>
 
 <span id="ReplicationHealthEx"></span><span id="replicationhealthex"></span><span id="REPLICATIONHEALTHEX"></span>
 
-<span id="ReplicationHealthEx"></span><span id="replicationhealthex"></span><span id="REPLICATIONHEALTHEX"></span>**Replicationhealthex** (119)
+<span id="ReplicationHealthEx"></span><span id="replicationhealthex"></span><span id="REPLICATIONHEALTHEX"></span>**ReplicationHealthEx** (119)
 
 
 </dt> <dd>
 
-Dies entspricht der **ReplicationHealth** -Eigenschaft der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse. Dies ist ein Array für alle Replikations Integritäts Werte über die primäre und erweiterte Beziehung hinweg. 0 der Indexwert ist für die primäre Beziehung immer, und wenn die erweiterte Replikation aktiviert ist, wird Sie in Index 1 zurückgegeben.
+Dies entspricht der **ReplicationHealth-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md) Dies ist ein Array für alle Replikationszustandswerte in der primären und erweiterten Beziehung. Der Indexwert 0 ist immer für die primäre Beziehung, und wenn die erweiterte Replikation aktiviert ist, wird er in Index 1 zurückgegeben.
 
 </dd> <dt>
 
 <span id="SwapFilesInUse"></span><span id="swapfilesinuse"></span><span id="SWAPFILESINUSE"></span>
 
-<span id="SwapFilesInUse"></span><span id="swapfilesinuse"></span><span id="SWAPFILESINUSE"></span>" **Swap-FilesInUse** " (120)
+<span id="SwapFilesInUse"></span><span id="swapfilesinuse"></span><span id="SWAPFILESINUSE"></span>**SwapFilesInUse** (120)
 
 
 </dt> <dd>
 
-Dies entspricht der Eigenschaft " **shiapfilesinuse** " der Klasse " [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) ".
+Dies entspricht der **SwapFilesInUse-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>
 
-<span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>**Integrationservicesversionstate** (121)
+<span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>**IntegrationServicesVersionState** (121)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ReplicationProviderId"></span><span id="replicationproviderid"></span><span id="REPLICATIONPROVIDERID"></span>
 
-<span id="ReplicationProviderId"></span><span id="replicationproviderid"></span><span id="REPLICATIONPROVIDERID"></span>**Replicationproviderid** (122)
+<span id="ReplicationProviderId"></span><span id="replicationproviderid"></span><span id="REPLICATIONPROVIDERID"></span>**ReplicationProviderId** (122)
 
 
 </dt> <dd>
 
-Dies entspricht der **Name** -Eigenschaft der [**MSVM \_ replicationprovider**](msvm-replicationprovider.md) -Klasse.
+Dies entspricht der **Name-Eigenschaft** der [**Msvm \_ ReplicationProvider-Klasse.**](msvm-replicationprovider.md)
 
 </dd> <dt>
 
 <span id="MemorySpansPhysicalNumaNodes"></span><span id="memoryspansphysicalnumanodes"></span><span id="MEMORYSPANSPHYSICALNUMANODES"></span>
 
-<span id="MemorySpansPhysicalNumaNodes"></span><span id="memoryspansphysicalnumanodes"></span><span id="MEMORYSPANSPHYSICALNUMANODES"></span>**Memoryspansphysicalnumanodes** (123)
+<span id="MemorySpansPhysicalNumaNodes"></span><span id="memoryspansphysicalnumanodes"></span><span id="MEMORYSPANSPHYSICALNUMANODES"></span>**MemorySpansPhysicalNumaNodes** (123)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>
 
-<span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>**Integrationservicesversionstate** (132)
+<span id="IntegrationServicesVersionState"></span><span id="integrationservicesversionstate"></span><span id="INTEGRATIONSERVICESVERSIONSTATE"></span>**IntegrationServicesVersionState** (132)
 
 
 </dt> <dd>
 
-Dies entspricht der **integrationservicesversionstate** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **IntegrationServicesVersionState-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
 <span id="OtherEnabledState"></span><span id="otherenabledstate"></span><span id="OTHERENABLEDSTATE"></span>
 
-<span id="OtherEnabledState"></span><span id="otherenabledstate"></span><span id="OTHERENABLEDSTATE"></span>**Otherenabledstate** (132)
+<span id="OtherEnabledState"></span><span id="otherenabledstate"></span><span id="OTHERENABLEDSTATE"></span>**OtherEnabledState** (132)
 
 
 </dt> <dd>
 
-Dies entspricht der **otherenabledstate** -Eigenschaft der [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md) -Klasse.
+Dies entspricht der **OtherEnabledState-Eigenschaft** der [**Msvm \_ SummaryInformation-Klasse.**](msvm-summaryinformation.md)
 
 </dd> <dt>
 
@@ -474,17 +474,17 @@ Dies entspricht der **otherenabledstate** -Eigenschaft der [**MSVM \_ SummaryInf
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*SummaryInformation* \[ vorgenommen\]
+*SummaryInformation* \[ out\]
 </dt> <dd>
 
-Typ: **[ **MSVM \_ summaryinformationbase**](msvm-summaryinformationbase.md)\[\]**
+Typ: **[ **Msvm \_ SummaryInformationBase**](msvm-summaryinformationbase.md)\[\]**
 
-Ein Array von [**MSVM- \_ summaryinformationbase**](msvm-summaryinformationbase.md) -Instanzen, die die angeforderten Informationen für die virtuellen Computer und/oder Momentaufnahmen enthalten, die im *SettingData* -Array angegeben sind. Dieses Array verfügt über die gleiche Anzahl von Elementen wie das *SettingData* -Array. Jeder dieser Einträge enthält die **Name** -Eigenschaft, auch wenn diese Eigenschaft nicht angefordert wurde. Wenn der virtuelle Computer oder die Momentaufnahme nicht gefunden werden kann oder nicht verfügbar ist, ist die **Name** -Eigenschaft des entsprechenden zusammenfassenden Informations Eintrags leer.
+Ein Array von [**Msvm \_ SummaryInformationBase-Instanzen,**](msvm-summaryinformationbase.md) das die angeforderten Informationen für die virtuellen Computer und/oder Momentaufnahmen enthält, die im *SettingData-Array* angegeben sind. Dieses Array hat die gleiche Anzahl von Elementen wie das *SettingData-Array.* Jeder dieser Einträge enthält die **Name-Eigenschaft,** auch wenn diese Eigenschaft nicht angefordert wurde. Wenn der virtuelle Computer oder die Momentaufnahme nicht gefunden werden kann oder nicht verfügbar ist, ist die **Name-Eigenschaft** des entsprechenden Zusammenfassungsinformationseintrags leer.
 
-Eigenschaften, die nicht im *requestedinformation* -Parameter angegeben sind, haben einen **null** -Wert.
+Eigenschaften, die nicht im *RequestedInformation-Parameter* angegeben sind, weisen einen **NULL-Wert** auf.
 
 > [!Note]  
-> Der Datentyp wurde in Windows 10, Version 1703, von [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md)aktualisiert.
+> Der Datentyp wurde von in Windows 10 Version 1703 von [**Msvm \_ SummaryInformation aktualisiert.**](msvm-summaryinformation.md)
 
  
 
@@ -492,7 +492,7 @@ Eigenschaften, die nicht im *requestedinformation* -Parameter angegeben sind, ha
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Werte zurück.
 
@@ -501,10 +501,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -513,40 +513,40 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel werden Zusammenfassungs Informationen angezeigt. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel werden Zusammenfassende Informationen angezeigt. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 > [!IMPORTANT]
-> Der folgende Code muss auf dem Host Server des virtuellen Computers ausgeführt werden, und er muss mit Administrator Rechten ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Damit der folgende Code ordnungsgemäß funktioniert, muss er auf dem Hostserver des virtuellen Computers und mit Administratorrechten ausgeführt werden.
 
  
 
@@ -663,25 +663,25 @@ public class GetSummaryInformationClassV2
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> <dt>
 
-[**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))
+[**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))
 </dt> <dt>
 
-[**MSVM- \_ SummaryInformation**](msvm-summaryinformation.md)
+[**Msvm \_ SummaryInformation**](msvm-summaryinformation.md)
 </dt> </dl>
 
  

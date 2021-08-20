@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn der inkrecognizercontext Ergebnisse aus der backgrounderkennmethode generiert hat.
+description: Tritt ein, wenn der InkRecognizerContext Ergebnisse aus der BackgroundRecognize-Methode generiert hat.
 ms.assetid: 0cc319af-cd0b-4089-928b-cae6c86f6f61
-title: Inkrecognizercontext. Recognition-Ereignis (msink AUT. h)
+title: InkRecognizerContext.Recognition-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86da1a7470169f9f978e92a87f3e32f7e63acb42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4f6c4799f3366003d14451a19a7bea19ea35aadcce9226f25f1fe80a14ab19e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966939"
 ---
-# <a name="inkrecognizercontextrecognition-event"></a>Inkrecognizercontext. Recognition-Ereignis
+# <a name="inkrecognizercontextrecognition-event"></a>InkRecognizerContext.Recognition-Ereignis
 
-Tritt auf, wenn der [**inkrecognizercontext**](inkrecognizercontext-class.md) Ergebnisse aus der [**backgrounderkennmethode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-backgroundrecognize) generiert hat.
+Tritt ein, wenn [**der InkRecognizerContext**](inkrecognizercontext-class.md) Ergebnisse aus der [**BackgroundRecognize-Methode generiert**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-backgroundrecognize) hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,28 +32,28 @@ void Recognition(
 
 <dl> <dt>
 
-*Erkennungs Zeichenfolge* \[ in\]
+*RecognizedString* \[ In\]
 </dt> <dd>
 
-Der Erkennungs Ergebnis Text mit dem höchsten Vertrauen.
+Der Text des Erkennungsergebnis mit der höchsten Konfidenz.
 
-Weitere Informationen zum BSTR-Datentyp finden [Sie unter Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> <dt>
 
-*CustomData* \[ in\]
+*CustomData* \[ In\]
 </dt> <dd>
 
-Das-Objekt, das die benutzerdefinierten Daten für das Erkennungs Ergebnis enthält.
+Das -Objekt, das die benutzerdefinierten Daten für das Erkennungsergebnis enthält.
 
-Weitere Informationen zur VARIANT-Struktur finden [Sie unter Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> <dt>
 
-*Erkennungs Status* \[ in\]
+*RecognitionStatus* \[ In\]
 </dt> <dd>
 
-Der Erkennungs Status für das letzte Erkennungs Ergebnis.
+Der Erkennungsstatus ab dem letzten Erkennungsergebnis.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Der Erkennungs Status für das letzte Erkennungs Ergebnis.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Verhalten der Anwendungsprogrammierschnittstelle (Application Programming Interface, API) ist unvorhersehbar, wenn Sie versuchen, vom Erkennungs Ereignishandler auf das ursprüngliche [**inkrecognizercontext**](inkrecognizercontext-class.md) -Objekt zuzugreifen. Versuchen Sie nicht, dies zu tun. Wenn Sie dies tun müssen, erstellen Sie stattdessen ein Flag, und legen Sie es im [Erkennungs](ink-recognition.md) Ereignishandler fest. Anschließend können Sie dieses Flag Abfragen, um zu bestimmen, wann die **inkrecognizercontext** -Eigenschaften außerhalb des Ereignis Handlers geändert werden müssen.
+Das Verhalten der Anwendungsprogrammierschnittstelle (API) ist unvorhersehbar, wenn Sie versuchen, über den Erkennungsereignishandler Zugriff auf das ursprüngliche [**InkRecognizerContext-Objekt**](inkrecognizercontext-class.md) zu erhalten. Versuchen Sie nicht, dies zu tun. Wenn Sie dies tun müssen, erstellen Sie stattdessen ein Flag, und legen Sie es im [Erkennungsereignishandler](ink-recognition.md) fest. Anschließend können Sie dieses Flag abrufen, um zu bestimmen, wann die **InkRecognizerContext-Eigenschaften** außerhalb des Ereignishandlers geändert werden sollten.
 
-Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ iinkevents-Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID \_ unerekognition".
+Diese Ereignismethode wird in der \_ IInkEvents-Schnittstelle definiert. Die \_ IInkEvents-Schnittstelle implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IRERecognition.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,9 +73,9 @@ Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -84,19 +84,19 @@ Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ 
 
 <dl> <dt>
 
-[**Inkrecognizercontext-Klasse**](inkrecognizercontext-class.md)
+[**InkRecognizerContext-Klasse**](inkrecognizercontext-class.md)
 </dt> <dt>
 
-[**Backgrounderkenungsmethode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-backgroundrecognize)
+[**BackgroundRecognize-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-backgroundrecognize)
 </dt> <dt>
 
-[**Inkrecognitionstatus-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkrecognitionstatus)
+[**InkRecognitionStatus-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkrecognitionstatus)
 </dt> <dt>
 
-[**Methode erkennen**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-recognize)
+[**Recognize-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-recognize)
 </dt> <dt>
 
-[**Iinkrecognitionresult-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionresult)
+[**IInkRecognitionResult-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionresult)
 </dt> </dl>
 
  

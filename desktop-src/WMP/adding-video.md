@@ -3,24 +3,24 @@ title: Hinzufügen von Videos
 description: Hinzufügen von Videos
 ms.assetid: 6f20a9ad-e92e-4774-868d-ad0e071f4935
 keywords:
-- Erstellen von Skins, Video
-- Windows Media Player Skins, Video
-- Skins, Video
+- Erstellen von Skins,Video
+- Windows Media Player Skins,Video
+- Skins,Video
 - Video in Skins, hinzufügen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cc952f2fa80536bc6b2bb9ef3b43c6730616af3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 099778395146cb0bf0f27b483d55dd75c0fb8a0b28b879cc2d388f8e8cb7ba75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055408"
 ---
 # <a name="adding-video"></a>Hinzufügen von Videos
 
-Sie können der Datei ein Video hinzufügen, indem Sie einfach das **Video** -Element verwenden und definieren, wo das Videofenster platziert werden soll.
+Sie können Ihrer Datei ein Video hinzufügen, indem Sie einfach das **VIDEO-Element** verwenden und definieren, wo das Videofenster platziert werden soll.
 
-Verwenden Sie denselben Code wie im Abschnitt auswählen von Dateien. Sie müssen lediglich das **Video** -Element mit den Attributen "Top", "Left", "width" und "Height" hinzufügen.
+Verwenden Sie den gleichen Code wie im Abschnitt Auswählen von Dateien. Sie müssen nur das **VIDEO-Element** mit den Attributen "top", "left", "width" und "height" hinzufügen.
 
 
 ```C++
@@ -34,20 +34,20 @@ Verwenden Sie denselben Code wie im Abschnitt auswählen von Dateien. Sie müsse
 
 
 
-Wenn Sie ein Video abspielen, wird es im Fenster angezeigt. Die Grafik für das Video Beispiel wurde geändert, um eine etwas größere Skin zu machen. Da Schichten in Photoshop verwendet wurden, wurden die Schaltflächen leicht verschoben, und ein neuer Satz wurde sehr schnell erstellt. Nur das Hintergrundbild wurde geändert. Eine Füllung wurde in einer leeren Ebene verwendet, und es wurde eine einschrägung und ein Prägung-Effekt hinzugefügt.
+Wenn Sie dann ein Video wieder geben, wird es im Fenster angezeigt. Die Art für das Videobeispiel wurde geändert, um eine etwas größere Skin zu erhalten. Da Ebenen in Buttons verwendet wurden, konnten die Schaltflächen problemlos verschoben werden, und eine neue Gruppe wurde sehr schnell erstellt. Nur das Hintergrundbild wurde geändert. Eine Füllung wurde in einer leeren Ebene verwendet, und ein Abschräge- und Einbettungseffekt wurde hinzugefügt.
 
-Im Beispiel Abschnitt des SDK sehen Sie eine ähnliche funktionierende Grafik Skin.
+Eine ähnliche funktionierende Video-Skin finden Sie im Beispielabschnitt des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Leitfaden zum Erstellen von Skin**](skin-creation-guide.md)
+[**Handbuch zur Erstellung von Skins**](skin-creation-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

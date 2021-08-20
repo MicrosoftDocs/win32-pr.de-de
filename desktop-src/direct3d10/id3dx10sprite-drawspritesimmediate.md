@@ -1,7 +1,7 @@
 ---
-description: Zeichnen Sie ein Array von Sprites.
+description: Zeichnen sie ein Array von Sprites.
 ms.assetid: 3fcc7705-0d59-450e-b137-c9cb7ec6b1ea
-title: ID3DX10Sprite::D rawspritesimvermittler-Methode (d3dx10. h)
+title: ID3DX10Sprite::D rawSpritesImmediate-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 7fa4012f5f589c7bc0d1f789599da142194f6e08
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0a3295d64efc3f3ff05b39e0866a15fb7eed9ba2d8c580fe2c7b219d36708e02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046898"
 ---
-# <a name="id3dx10spritedrawspritesimmediate-method"></a>ID3DX10Sprite::D rawspritesimvermittler-Methode
+# <a name="id3dx10spritedrawspritesimmediate-method"></a>ID3DX10Sprite::D rawSpritesImmediate-Methode
 
-Zeichnen Sie ein Array von Sprites. Dadurch werden die Sprites sofort zum Rendern an das Gerät gesendet. Dies unterscheidet sich von [**ID3DX10Sprite::D rawspritesbuffered**](id3dx10sprite-drawspritesbuffered.md) , das nur ein Array von Sprites zu einem Batch von Sprites hinzufügt, die gerendert werden, wenn [**ID3DX10Sprite:: Flush**](id3dx10sprite-flush.md) aufgerufen wird. Diese Draw-Methode ist besonders nützlich, wenn eine große Anzahl von Sprites gezeichnet wird, die bereits auf der CPU sortiert wurden (oder nicht sortiert werden müssen), z. b. in einem Partikelsystem. Dies muss zwischen Aufrufen von [**ID3DX10Sprite:: begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite:: End**](id3dx10sprite-end.md)aufgerufen werden.
+Zeichnen sie ein Array von Sprites. Dadurch werden die Sprites sofort zum Rendern an das Gerät gesendet, das sich von [**ID3DX10Sprite::D rawSpritesBuffered**](id3dx10sprite-drawspritesbuffered.md) unterscheidet und nur ein Array von Sprites zu einem Batch von Sprites hinzufügt, die gerendert werden sollen, wenn [**ID3DX10Sprite::Flush**](id3dx10sprite-flush.md) aufgerufen wird. Diese Draw-Methode ist besonders nützlich beim Zeichnen einer großen Anzahl von Sprites, die bereits auf der CPU sortiert wurden (oder nicht sortiert werden müssen), z. B. in einem Partikelsystem. Dies muss zwischen Aufrufen von [**ID3DX10Sprite::Begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite::End**](id3dx10sprite-end.md)aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ HRESULT DrawSpritesImmediate(
 
 <dl> <dt>
 
-*psprites* \[ in\]
+*pSprites* \[ In\]
 </dt> <dd>
 
-Typ: **[ **d3dx10 \_ Sprite**](d3dx10-sprite.md)\***
+Typ: **[ **D3DX10 \_ SPRITE**](d3dx10-sprite.md)\***
 
-Das Array von Sprites, das gezeichnet werden soll. Siehe [**d3dx10 \_ Sprite**](d3dx10-sprite.md).
+Das Zu zeichnende Array von Sprites. Siehe [**D3DX10 \_ SPRITE**](d3dx10-sprite.md).
 
 </dd> <dt>
 
-*csprites* \[ in\]
+*cSprites* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Sprites in psprites.
+Die Anzahl der Sprites in pSprites.
 
 </dd> <dt>
 
-*cbsprite* \[ in\]
+*cbSprite* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Größe der Sprite-Struktur, die an psprites übergeben wird. Das übergeben von 0 entspricht der Übergabe von sizeof (d3dx10 \_ Sprite).
+Die Größe der Spritestruktur, die Sie an pSprites übergeben. Das Übergeben von 0 entspricht der Übergabe von sizeof(D3DX10 \_ SPRITE).
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Reserviert.
 
@@ -83,7 +83,7 @@ Reserviert.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

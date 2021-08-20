@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der die Details zu allen Rändern in der Journal Notiz enthält, z. b. Stil, Farbe und Position.
+description: Definiert den Typ, der die Details zu allen Rändern in der Journalnotiz enthält, z. B. Stil, Farbe und Position.
 ms.assetid: 35ae4720-4012-452e-abdc-f04b38622337
-title: Komplexer margintype-Typ
+title: Komplexer MarginType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: ed602a7ef562ffed6bd18851dd1f25f4e18b13aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3f03b28eaec62d2c7afe74198e41410dfc2020fc83b7214ee99afc1f4b7b51a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031698"
 ---
-# <a name="margintype-complex-type"></a>Komplexer margintype-Typ
+# <a name="margintype-complex-type"></a>Komplexer MarginType-Typ
 
-Definiert den Typ, der die Details zu allen Rändern in der Journal Notiz enthält, z. b. Stil, Farbe und Position.
+Definiert den Typ, der die Details zu allen Rändern in der Journalnotiz enthält, z. B. Stil, Farbe und Position.
 
 ``` syntax
 <xs:complexType name="MarginType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der die Details zu allen Rändern in der Journal Notiz enthä
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

@@ -1,11 +1,11 @@
 ---
-title: Imsrdpdebug-Schnittstelle
-description: Stellt eine Auflistung von Geräte Objekten dar.
+title: IMsRdpDeviceCollection-Schnittstelle
+description: Stellt eine Auflistung von Geräteobjekten dar.
 ms.assetid: 9731b16b-12e0-457e-a4e5-a55d8a6db582
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpentvicecollection-Schnittstelle Remotedesktopdienste
-- Imsrdpdebug-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpDeviceCollection-Schnittstelle Remotedesktopdienste
+- IMsRdpDeviceCollection-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,33 +16,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cace1bc684be4e3e8cf20db84ec8923c9b35a8fa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c5f7008b0b524150cd106b9bbe97d21a8de890773d8b0b461a6ae3045e847a79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000740"
 ---
-# <a name="imsrdpdevicecollection-interface"></a>Imsrdpdebug-Schnittstelle
+# <a name="imsrdpdevicecollection-interface"></a>IMsRdpDeviceCollection-Schnittstelle
 
-Stellt eine Auflistung von Geräte Objekten dar.
+Stellt eine Auflistung von Geräteobjekten dar.
 
 ## <a name="members"></a>Member
 
-Die **imsrdpdebug** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imsrdptovicecollection** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpDeviceCollection-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpDeviceCollection** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **imsrdpdevicecollection** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpDeviceCollection-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                        | BESCHREIBUNG                                                 |
 |:--------------------------------------------------------------|:------------------------------------------------------------|
-| [**Redevices**](imsrdpdevicecollection-rescandevices.md) | Aktualisiert die Liste der-Objekte in der Auflistung.<br/> |
+| [**RescanDevices**](imsrdpdevicecollection-rescandevices.md) | Aktualisiert die Liste der Objekte in der Auflistung.<br/> |
 
 
 
@@ -50,15 +50,15 @@ Die **imsrdpdevicecollection** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **imsrdpentvicecollection** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpDeviceCollection-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                 | Zugriffstyp          | BESCHREIBUNG                                                    |
 |:-------------------------------------------------------------------------|:---------------------|:---------------------------------------------------------------|
-| [**Devicebyid**](imsrdpdevicecollection-devicebyid.md)<br/>       | Schreibgeschützt<br/> | Ruft das Gerät mit dem angegebenen Bezeichner ab.<br/> |
-| [**Devicebyindex**](imsrdpdevicecollection-devicebyindex.md)<br/> | Schreibgeschützt<br/> | Ruft das Gerät am angegebenen Index ab.<br/>        |
-| [**DeviceCount**](imsrdpdevicecollection-devicecount.md)<br/>     | Schreibgeschützt<br/> | Ruft die Anzahl der-Objekte in der-Auflistung ab.<br/>   |
+| [**DeviceById**](imsrdpdevicecollection-devicebyid.md)<br/>       | Schreibgeschützt<br/> | Ruft das Gerät mit dem angegebenen Bezeichner ab.<br/> |
+| [**DeviceByIndex**](imsrdpdevicecollection-devicebyindex.md)<br/> | Schreibgeschützt<br/> | Ruft das Gerät am angegebenen Index ab.<br/>        |
+| [**DeviceCount**](imsrdpdevicecollection-devicecount.md)<br/>     | Schreibgeschützt<br/> | Ruft die Anzahl der Objekte in der Auflistung ab.<br/>   |
 
 
 
@@ -74,7 +74,7 @@ Die **imsrdpentvicecollection** -Schnittstelle verfügt über diese Eigenschafte
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ imsrdpendvicecollection ist als 56540617-d281-488c-8738-6a8sdf64a118 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpDeviceCollection ist als 56540617-d281-488c-8738-6a8fdf64a118 definiert.<br/> |
 
 
 
@@ -82,10 +82,10 @@ Die **imsrdpentvicecollection** -Schnittstelle verfügt über diese Eigenschafte
 
 <dl> <dt>
 
-[Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
+[Remotedesktop-Webverbindung-Referenz](remote-desktop-web-connection-reference.md)
 </dt> <dt>
 
-[**Imsrdpdevice**](imsrdpdevice.md)
+[**IMsRdpDevice**](imsrdpdevice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Identifiziert einen Counter in einem vom Anbieter bereitgestellten Zählers.
+description: Identifiziert einen Zähler in einem Vom Anbieter festgelegten Leistungsindikatorsatz.
 ms.assetid: 5b39804f-c117-4f1f-b100-d02674d1e8ad
-title: Counter-Element (Counter Set)
+title: counter (counterSet)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 89772b06c2f97de4d2414e3923f026b69774631f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98c4c5d8c683e23faebcdfdfe60820571fc6e70acc2e132c7f221ec88f7f7c36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061118"
 ---
-# <a name="counter-counterset-element"></a>Counter-Element (Counter Set)
+# <a name="counter-counterset-element"></a>counter (counterSet)-Element
 
-Identifiziert einen Counter in einem vom Anbieter bereitgestellten Zählers.
+Identifiziert einen Zähler in einem Vom Anbieter festgelegten Leistungsindikatorsatz.
 
 ``` syntax
 <xs:element name="counter"
@@ -26,7 +26,7 @@ Identifiziert einen Counter in einem vom Anbieter bereitgestellten Zählers.
  />
 ```
 
-Das **Counter** -Element wird durch den komplexen [**CounterSet**](performance-counters-counterset-complex-type.md) -Typ definiert.
+Das **Counter-Element** wird durch den komplexen [**counterSet-Typ**](performance-counters-counterset-complex-type.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,8 +34,8 @@ Das **Counter** -Element wird durch den komplexen [**CounterSet**](performance-c
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -46,7 +46,7 @@ Das **Counter** -Element wird durch den komplexen [**CounterSet**](performance-c
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**Counter Set (Anbieter)**](performance-counters-counterset--provider--element.md)
+[**counterSet (Anbieter)**](performance-counters-counterset--provider--element.md)
 </dt> </dl>
 
  

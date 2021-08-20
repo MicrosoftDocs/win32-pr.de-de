@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: System Parameters. mindataforxpress-Eigenschaft'
-title: System Parameters. mindataforxpress (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: SystemParameters.MinDataForXpress-Eigenschaft'
+title: SystemParameters.MinDataForXpress(Eigenschaft)
 TOCTitle: 'MinDataForXpress property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.MinDataForXpress
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.mindataforxpress(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 358e37c952496faf10168e4ca3d593cb1b1318de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2f1a44fa45b07902bc0bf99961391209234f3506880399622a3b19ae56b2a52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978500"
 ---
-# <a name="systemparametersmindataforxpress-property"></a>System Parameters. mindataforxpress (Eigenschaft)
+# <a name="systemparametersmindataforxpress-property"></a>SystemParameters.MinDataForXpress(Eigenschaft)
 
-Ruft die kleinste Datenmenge ab, die mit der Xpress-Komprimierung komprimiert werden soll, oder legt diese fest.
+Ruft die kleinste Datenmenge ab, die mit Xpress-Komprimierung komprimiert werden soll, oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static int MinDataForXpress { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

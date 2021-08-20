@@ -1,24 +1,24 @@
 ---
-description: Das changecurrentaudiostream-Ereignis wird gesendet, wenn die Festplatte das Ändern des Audiostreams aktiviert oder deaktiviert.
+description: Das ChangeCurrentAudioStream-Ereignis wird gesendet, wenn der Datenträger das Ändern des Audiostreams aktiviert oder deaktiviert.
 ms.assetid: b3a146e7-cfc6-4fb2-92af-598bf695e816
-title: Changecurrentaudiostream (Segment. h)
+title: ChangeCurrentAudioStream (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ab22bd76b87eb3a80255b85d505791fa34e3862
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 07527d2aaa2ca979ba0dae833d378a3176617e873f346e5c2465e911be497a7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074213"
 ---
-# <a name="changecurrentaudiostream"></a>Changecurrentaudiostream
+# <a name="changecurrentaudiostream"></a>ChangeCurrentAudioStream
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das `ChangeCurrentAudioStream` Ereignis wird gesendet, wenn die Festplatte das Ändern des Audiostreams aktiviert oder deaktiviert.
+Das Ereignis wird gesendet, wenn der Datenträger das Ändern des `ChangeCurrentAudioStream` Audiostreams aktiviert oder deaktiviert.
 
 ``` syntax
 ChangeCurrentAudioStream(bEnabled)
@@ -28,7 +28,7 @@ ChangeCurrentAudioStream(bEnabled)
 
 <dl> <dt>
 
-<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*benabled*
+<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
 Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.
@@ -41,7 +41,7 @@ Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 

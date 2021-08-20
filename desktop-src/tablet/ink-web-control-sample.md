@@ -1,27 +1,27 @@
 ---
-description: In diesem Beispiel wird gezeigt, wie ein frei Hand fähiges Steuerelement für die Verwendung in einem Webbrowser erstellt wird. Im Beispiel wird das ursprüngliche Formular Beispiel für automatische Ansprüche übernommen und in ein Steuerelement umgewandelt, das auf einer Webseite abgelegt ist.
+description: In diesem Beispiel wird gezeigt, wie Sie ein Steuerelement mit Ink-Aktivierung für die Verwendung in einem Webbrowser erstellen. Das Beispiel verwendet das ursprüngliche Formularbeispiel für automatische Ansprüche und wandelt es in ein Steuerelement um, das auf einer Webseite angezeigt wird.
 ms.assetid: 7a9e304c-57ef-41a3-83be-2b2d31435da8
-title: Ink-websteuer Element-Beispiel
+title: Beispiel für Ink-Websteuerelement
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 101537c4cc7b42181cf8d9ff177a5854c5b84054
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8a2f305f1dcbb412325970510c6eaa5f09732bf10d870c961820ab8d8749eda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032198"
 ---
-# <a name="ink-web-control-sample"></a>Ink-websteuer Element-Beispiel
+# <a name="ink-web-control-sample"></a>Beispiel für Ink-Websteuerelement
 
-In diesem Beispiel wird gezeigt, wie ein frei Hand fähiges Steuerelement für die Verwendung in einem Webbrowser erstellt wird. Im Beispiel wird das ursprüngliche [Formular Beispiel für automatische Ansprüche](auto-claims-form-sample.md) übernommen und in ein Steuerelement umgewandelt, das auf einer Webseite abgelegt ist.
+In diesem Beispiel wird gezeigt, wie Sie ein Steuerelement mit Ink-Aktivierung für die Verwendung in einem Webbrowser erstellen. Das Beispiel verwendet das ursprüngliche [Formularbeispiel](auto-claims-form-sample.md) für automatische Ansprüche und wandelt es in ein Steuerelement um, das auf einer Webseite angezeigt wird.
 
-Weitere Informationen zur Verwendung von frei Hand Eingaben im Web finden Sie unter frei Hand Eingaben [im Web](ink-on-the-web.md).
+Weitere Informationen zur Verwendung von Ink im Web finden Sie unter [Ink im Web.](ink-on-the-web.md)
 
-## <a name="modifications-to-the-original-sample-project"></a>Änderungen am ursprünglichen Beispiel Projekt
+## <a name="modifications-to-the-original-sample-project"></a>Änderungen am ursprünglichen Beispiel Project
 
-Dieses Beispiel besteht aus einer Projekt Mappe, die zwei Projekte und eine HTML-Datei enthält. Das erste Projekt, autoclaims, ist ein Microsoft Visual C- \# Steuerelement Bibliothek-Projekt (ein Benutzer Steuerelement). Der Quellcode für dieses Steuerelement ist beinahe identisch mit dem des Beispiels "autoclaims" mit zwei unterschieden:
+Dieses Beispiel besteht aus einer Projektmappe, die zwei Projekte und eine HTML-Datei enthält. Das erste Projekt, AutoClaims, ist ein Microsoft Visual \# C-Steuerelementbibliotheksprojekt (ein Benutzersteuerelement). Der Quellcode für dieses Steuerelement ist fast identisch mit dem des AutoClaims-Beispiels mit zwei Unterschieden:
 
--   Die- `AutoClaims` Klasse in diesem Beispiel erbt von der [UserControl](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) -Klasse und nicht von der [Formular](/dotnet/api/system.windows.forms.form?view=netcore-3.1) Klasse.
+-   Die `AutoClaims` -Klasse in diesem Beispiel erbt von der [UserControl-Klasse](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) und nicht von der [Form-Klasse.](/dotnet/api/system.windows.forms.form?view=netcore-3.1)
 
     ```C++
     public class AutoClaims : System.Windows.Forms.UserControl 
@@ -29,11 +29,11 @@ Dieses Beispiel besteht aus einer Projekt Mappe, die zwei Projekte und eine HTML
 
     
 
--   Die autoclaims-Klasse in diesem Beispiel verfügt über eine hinzugefügte öffentliche Methode, die die internen untergeordneten Steuer `DisposeResources` Elemente zum Sammeln von frei Hand Eingaben freigibt. Diese Methode muss von der Webpage aufgerufen werden, die das-Steuerelement verwendet, wenn diese Seite die Verwendung des-Steuer Elements beendet.
+-   Die AutoClaims-Klasse in diesem Beispiel verfügt über eine hinzugefügte öffentliche Methode, mit der die internen untergeordneten Steuerelemente verworfen `DisposeResources` werden, die zum Sammeln von Freihanddaten verwendet werden. Diese Methode muss von derwebpage aufgerufen werden, auf der das -Steuerelement verwendet wird, wenn diese Seite mit dem -Steuerelement beendet ist.
 
 ## <a name="referencing-the-control-in-html"></a>Verweisen auf das Steuerelement in HTML
 
-Die Lösung enthält eine HTML-Datei, default.htm. Diese Datei ist die Seite, zu der der Browser navigiert, um das Steuerelement zu laden. Die Datei enthält ein- <object> Tag, das auf das-Steuerelement verweist. Sie enthält auch ein Skript, das aufgerufen wird, wenn die Seite entladen wird, wie durch das vorhanden sein des OnLoad = " `OnUnload()` "-Attributs im <body> ein. Diese Funktion Ruft die-Methode des-Steuer Elements auf `DisposeResources` , um sicherzustellen, dass alle Ressourcen beim Herunterfahren ordnungsgemäß freigegeben werden.
+Die Projektmappe enthält eine HTML-Datei default.htm. Diese Datei ist die Seite, zu der der Browser navigiert, um das Steuerelement zu laden. Die Datei enthält ein <object> Tag, das auf das Steuerelement verweist. Es enthält auch ein Skript, das aufgerufen wird, wenn die Seite entladen wird, wie durch das Vorhandensein des onload=" `OnUnload()` " -Attributs in der <body> ein. Diese Funktion ruft die `DisposeResources` -Methode für das -Steuerelement auf, um sicherzustellen, dass alle Ressourcen beim Herunterfahren ordnungsgemäß freigegeben werden.
 
 
 ```C++
@@ -59,16 +59,16 @@ Die Lösung enthält eine HTML-Datei, default.htm. Diese Datei ist die Seite, zu
 
 
 
-Beachten Sie das Format des ClassID-Attribut Werts für das <object> Tag. Sie benennt die Assembly, gefolgt von einem \# Vorzeichen Trennzeichen, und dann den Namespace, der das Steuerelement enthält, und dann den Klassennamen des Steuer Elements.
+Beachten Sie das Format des classid-Attributwerts für das <object> -Tag. Er benennt die Assembly, gefolgt von einem \# Vorzeichentrennzeichen und dann den Namespace, der das Steuerelement enthält, und dann den Klassennamen des Steuerelements.
 
-Ein Benutzer Steuerelement in der Praxis würde wahrscheinlich zusätzliche Methoden enthalten, mit denen die in der Anwendung gesammelten Daten persistent gespeichert oder gesendet werden.
+Ein echtes Benutzersteuerelement würde wahrscheinlich zusätzliche Methoden enthalten, die zum Beibehalten oder Senden der in der Anwendung gesammelten Daten verwendet werden.
 
-## <a name="the-autoclaims_webcontrol-project"></a>Das Projekt autoclaims \_ WebControl
+## <a name="the-autoclaims_webcontrol-project"></a>AutoClaims \_ WebControl-Project
 
-Das Projekt autoclaims \_ WebControl ist ein Bereitstellungs Projekt, das ein-Setup erstellt, das bei der Installation ein virtuelles Stammverzeichnis, autoclaims \_ WebControl, auf dem Webserver hinzufügt. Das-Steuerelement und die HTML-Datei werden in diesem virtuellen Stammverzeichnis platziert.
+Das AutoClaims \_ WebControl-Projekt ist eine Bereitstellungs-Project, die ein Setup erstellt, das bei der Installation einen virtuellen Stamm ( AutoClaims \_ WebControl) auf dem Webserver hinzufügt. Das Steuerelement und die HTML-Datei werden in diesem virtuellen Stamm abgelegt.
 
 > [!Note]  
-> Die kompilierten webbeispiele werden von der Standard Installationsoption für das SDK nicht installiert. Sie müssen eine benutzerdefinierte Installation durchführen und die unter Option "vorkompilierte webbeispiele" auswählen, um Sie zu installieren.
+> Die kompilierten Webbeispiele werden nicht von der Standardinstallationsoption für das SDK installiert. Sie müssen eine benutzerdefinierte Installation abschließen und die Unteroption "Vorkompilierte Webbeispiele" auswählen, um sie zu installieren.
 
  
 
@@ -76,10 +76,10 @@ Das Projekt autoclaims \_ WebControl ist ein Bereitstellungs Projekt, das ein-Se
 
 <dl> <dt>
 
-[Beispiel für automatisches Anspruchsformular](auto-claims-form-sample.md)
+[Beispiel für das Formular für automatische Ansprüche](auto-claims-form-sample.md)
 </dt> <dt>
 
-[Frei Hand Eingaben im Web](ink-on-the-web.md)
+[Ink im Web](ink-on-the-web.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Isospeed-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.ISOSpeed-Eigenschaft.
 ms.assetid: 22b5552c-41b1-4090-a827-b920dcbba5e9
-title: System. Photo. Isospeed-Foto-metadatenrichtlinie
+title: System.Photo.ISOSpeed-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2988f774f70721ab1817ffaf605098ab1164316a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c01cb8c3e8e4c80c63985b49e8eda49ebe16d47982dde4cd051f555b8c93d68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964801"
 ---
-# <a name="systemphotoisospeed-photo-metadata-policy"></a>System. Photo. Isospeed-Foto-metadatenrichtlinie
+# <a name="systemphotoisospeed-photo-metadata-policy"></a>System.Photo.ISOSpeed-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. Isospeed](../properties/props-system-photo-focallengthinfilm.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.ISOSpeed-Eigenschaft.](../properties/props-system-photo-focallengthinfilm.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto- \_ Isospeed
+PKEY \_ Photo \_ ISOSpeed
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI2
 
@@ -35,49 +35,49 @@ VT \_ UI2
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 34855}           | ushort      |
-| 2     | /XMP/ <xmpseq> EXIF: ISOSpeedRatings | Unicode     |
-| 3     | /XMP/EXIF: Isospeed                      | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=34855}           | ushort      |
+| 2     | /xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 3     | /xmp/exif:ISOSpeed                      | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 34855}           | ushort      |
-| 2     | /XMP/ <xmpseq> EXIF: ISOSpeedRatings | Unicode     |
-| 3     | /XMP/EXIF: Isospeed                      | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=34855}           | ushort      |
+| 2     | /xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 3     | /xmp/exif:ISOSpeed                      | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                    |
 |-------|-----------------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 34855}           |
-| 2     | /XMP/ <xmpseq> EXIF: ISOSpeedRatings |
-| 3     | /XMP/EXIF: Isospeed                      |
+| 1     | /app1/ifd/exif/{ushort=34855}           |
+| 2     | /xmp/ <xmpseq> exif:isospeedratings |
+| 3     | /xmp/exif:isospeed                      |
 
 
 
@@ -85,55 +85,55 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                        | Datenträger Format |
+| Auftrag | Pfad                                        | Datenträgerformat |
 |-------|---------------------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 34855}                    | ushort      |
-| 2     | /IFD/XMP/ <xmpseq> EXIF: ISOSpeedRatings | Unicode     |
-| 3     | /IFD/XMP/EXIF: Isospeed                      | Unicode     |
+| 1     | /ifd/exif/{ushort=34855}                    | ushort      |
+| 2     | /ifd/xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 3     | /ifd/xmp/exif:ISOSpeed                      | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                        | Datenträger Format |
+| Auftrag | Pfad                                        | Datenträgerformat |
 |-------|---------------------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 34855}                    | ushort      |
-| 2     | /IFD/XMP/ <xmpseq> EXIF: ISOSpeedRatings | Unicode     |
-| 3     | /IFD/XMP/EXIF: Isospeed                      | Unicode     |
+| 1     | /ifd/exif/{ushort=34855}                    | ushort      |
+| 2     | /ifd/xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 3     | /ifd/xmp/exif:ISOSpeed                      | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                        |
 |-------|---------------------------------------------|
-| 1     | /IFD/EXIF/{ushort = 34855}                    |
-| 2     | /IFD/XMP/ <xmpseq> EXIF: ISOSpeedRatings |
-| 3     | /IFD/XMP/EXIF: Isospeed                      |
+| 1     | /ifd/exif/{ushort=34855}                    |
+| 2     | /ifd/xmp/ <xmpseq> exif:isospeedratings |
+| 3     | /ifd/xmp/exif:isospeed                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Isospeed](../properties/props-system-photo-focallengthinfilm.md)
+[System.Photo.ISOSpeed](../properties/props-system-photo-focallengthinfilm.md)
 </dt> </dl>
 
  

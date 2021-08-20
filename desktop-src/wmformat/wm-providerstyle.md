@@ -1,9 +1,9 @@
 ---
-title: WM/providerstyle
-description: Das WM/providerstyle-Attribut enthält den Stil der Datei, wie er vom metadateninhaltsanbieter zugewiesen wird.
+title: WM/ProviderStyle
+description: Das WM/ProviderStyle-Attribut enthält den Stil der Datei, der vom Metadateninhaltsanbieter zugewiesen wird.
 ms.assetid: 3bf6811e-a527-4ec7-b330-6e0eabab485a
 keywords:
-- Windows Media-Format "WM/providerstyle"
+- WM/ProviderStyle-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e1813ed76c92adf81daf0d1f96fe22fdc5c1fa3
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f0d25a536c40f2989a82a1e1afcf71f3dc20f1cebd900e62d98b141f4d587338
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026958"
 ---
-# <a name="wmproviderstyle"></a>WM/providerstyle
+# <a name="wmproviderstyle"></a>WM/ProviderStyle
 
-Das **WM/providerstyle-** Attribut enthält den Stil der Datei, wie er vom metadateninhaltsanbieter zugewiesen wird.
+Das **WM/ProviderStyle-Attribut** enthält den Stil der Datei, der vom Metadateninhaltsanbieter zugewiesen wird.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmproviderstyle
+g \_ wszWMProviderStyle
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei diesem Attribut handelt es sich im Wesentlichen um eine zweite Genre Bezeichnung. Da unterschiedliche Klassifizierungen verschiedene Begriffe der mit Inhalt verknüpften Genres aufweisen, kann sich der Anbieter Stil von dem vom Inhalts Ersteller zugewiesenen Genre unterscheiden.
+Dieses Attribut ist im Wesentlichen eine zweite Genrebezeichnung. Da verschiedene Klassifizierer unterschiedliche Vorstellungen von den Inhalten haben, kann sich der Anbieterstil von dem Genre unterscheiden, das vom Inhaltsersteller zugewiesen wird.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -48,9 +48,9 @@ Bei diesem Attribut handelt es sich im Wesentlichen um eine zweite Genre Bezeich
 [**WM/GenreID**](wm-genreid.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

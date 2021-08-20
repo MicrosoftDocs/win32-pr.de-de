@@ -1,7 +1,7 @@
 ---
-description: Die performancealignwindow-Methode richtet die Fensterposition an DWORD-Begrenzungen aus, um eine maximale Leistung zu erzielen.
+description: Die PerformanceAlignWindow-Methode richtet die Fensterposition an DWORD-Grenzen aus, um eine maximale Leistung zu erzielen.
 ms.assetid: e28950bc-2510-45b9-9c9c-c2a9dbc3dc02
-title: Cbasewindow. performancealignwindow-Methode (winutil. h)
+title: CBaseWindow.PerformanceAlignWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e6e7a54372743d430cd904f47c79414d149cf033
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3c077b6cf00f61565124f3d79ad905f6d34a3d8da50d58396e2df1bd35b0d60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016468"
 ---
-# <a name="cbasewindowperformancealignwindow-method"></a>Cbasewindow. performancealignwindow-Methode
+# <a name="cbasewindowperformancealignwindow-method"></a>CBaseWindow.PerformanceAlignWindow-Methode
 
-Die- `PerformanceAlignWindow` Methode richtet die Fensterposition an **DWORD** -Begrenzungen aus, um eine maximale Leistung zu erzielen.
+Die `PerformanceAlignWindow` -Methode richtet die Fensterposition an **DWORD-Grenzen** aus, um maximale Leistung zu erzielen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode richtet den linken und oberen Rand des Fensters an DWORD-Begrenzungen aus, wodurch die Leistung verbessert werden kann. Wenn das Fenster über ein übergeordnetes Element verfügt, gibt die Methode S OK zurück, führt \_ jedoch die Ausrichtung aus.
+Diese Methode richtet den linken und oberen Rand des Fensters an DWORD-Grenzen aus, wodurch die Leistung verbessert werden kann. Wenn das Fenster über ein übergeordnetes Element verfügt, gibt die Methode S \_ OK zurück, führt jedoch die Ausrichtung aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode richtet den linken und oberen Rand des Fensters an DWORD-Begrenzun
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode richtet den linken und oberen Rand des Fensters an DWORD-Begrenzun
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

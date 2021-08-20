@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Weiterleitungs Dienst für Netzwerk Datenverkehr dar. Der Dienst verarbeitet von Paketen empfangene Protokoll Endpunkte, indem Sie Sie verwerfen oder an andere Protokoll Endpunkte senden.
+description: Stellt einen Weiterleitungsdienst für Netzwerkdatenverkehr dar. Der Dienst verarbeitet pakete empfangene Protokollendpunkte, indem er sie verwirft oder die Pakete an andere Protokollendpunkte sendet.
 ms.assetid: 366ae2bf-a436-4ad2-b212-39958a7fbc43
 title: CIM_ForwardingService-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 12ebb33d6c63b637c9342bd7a869993019abb26b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63dd03c6e458ee88ef73dea89d006d6d733dd147ed2d4ad7433901c18cbb25d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014658"
 ---
-# <a name="cim_forwardingservice-class"></a>CIM \_ forwardingservice-Klasse
+# <a name="cim_forwardingservice-class"></a>CIM \_ ForwardingService-Klasse
 
-Stellt einen Weiterleitungs Dienst für Netzwerk Datenverkehr dar. Der Dienst verarbeitet von Paketen empfangene Protokoll Endpunkte, indem Sie Sie verwerfen oder an andere Protokoll Endpunkte senden.
+Stellt einen Weiterleitungsdienst für Netzwerkdatenverkehr dar. Der Dienst verarbeitet pakete empfangene Protokollendpunkte, indem er sie verwirft oder die Pakete an andere Protokollendpunkte sendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_ForwardingService : CIM_NetworkService
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ forwardingservice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ForwardingService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ forwardingservice** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ForwardingService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Otherprotocoltype**
+**OtherProtocolType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ forwardingservice**.**ProtocolType**")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ForwardingService**.**ProtocolType**")
 </dt> </dl>
 
-Definiert den Typ des weiter zuweisenden Protokolls, wenn der Wert der **ProtocolType** -Eigenschaft 1 (Sonstiges) ist.
+Definiert den Typ des weiterzuleitenden Protokolls, wenn der Wert der **ProtocolType-Eigenschaft** 1 (Other) ist.
 
 </dd> <dt>
 
-**ProtocolType**
+**Protocoltype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ forwardingservice**".**Otherprotocoltype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ForwardingService**.**OtherProtocolType**")
 </dt> </dl>
 
-Der Typ des weiter zuweisenden Protokolls.
+Der Typ des weiterzuleitende Protokolls.
 
 <dt>
 
@@ -90,7 +90,7 @@ Der Typ des weiter zuweisenden Protokolls.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -146,7 +146,7 @@ Der Typ des weiter zuweisenden Protokolls.
 
 <span id="CONP"></span><span id="conp"></span>
 
-Verbindung **(9** )
+**CONP** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -160,7 +160,7 @@ Verbindung **(9** )
 
 <span id="VINES"></span><span id="vines"></span>
 
-**Reben** (11)
+**VINES** (11)
 
 
 </dt> <dd></dd> <dt>
@@ -202,14 +202,14 @@ Verbindung **(9** )
 
 <span id="FDDI"></span><span id="fddi"></span>
 
-**F** (17)
+**FDDI** (17)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Infiniband"></span><span id="infiniband"></span><span id="INFINIBAND"></span>
 
-**InfiniBand** (18)
+**Infiniband** (18)
 
 
 </dt> <dd></dd> <dt>
@@ -231,17 +231,17 @@ Verbindung **(9** )
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ NetworkService**](cim-networkservice.md)
+[**CIM \_ NetworkService**](cim-networkservice.md)
 </dt> </dl>
 
  

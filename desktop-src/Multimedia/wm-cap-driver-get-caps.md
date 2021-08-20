@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DRIVER_GET_CAPS Meldung (VFW. h)
-description: Die Meldung "WM \_ Cap \_ Driver \_ get \_ Caps" gibt die Hardwarefunktionen des Aufzeichnungs Treibers zurück, der zurzeit mit einem Aufzeichnungs Fenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des capdrivergetcaps-Makros senden.
+title: WM_CAP_DRIVER_GET_CAPS Nachricht (Vfw.h)
+description: Die MELDUNG WM \_ CAP \_ DRIVER GET \_ \_ CAPS gibt die Hardwarefunktionen des Erfassungstreibers zurück, der derzeit mit einem Erfassungsfenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des CapDriverGetCaps-Makros senden.
 ms.assetid: 898a800c-1109-47cd-bcc9-cb61d86a4a2e
 keywords:
-- WM_CAP_DRIVER_GET_CAPS-Nachricht (Multimedia)
+- WM_CAP_DRIVER_GET_CAPS nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 027e530be82c76afebc343ceebe4905daef9b126
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aecc863234cddf64bece47896015fd01e97093d227951aef69363136e55cabe5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687080"
 ---
-# <a name="wm_cap_driver_get_caps-message"></a>WM- \_ Cap- \_ Treiber \_ Get Caps- \_ Nachricht
+# <a name="wm_cap_driver_get_caps-message"></a>WM CAP DRIVER GET CAPS message (WM \_ CAP \_ DRIVER GET \_ \_ CAPS-Meldung)
 
-Die Meldung " **WM \_ Cap \_ Driver \_ get \_ Caps** " gibt die Hardwarefunktionen des Aufzeichnungs Treibers zurück, der zurzeit mit einem Aufzeichnungs Fenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des [**capdrivergetcaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) -Makros senden.
+Die **MELDUNG WM CAP DRIVER GET \_ \_ \_ \_ CAPS** gibt die Hardwarefunktionen des Erfassungstreibers zurück, der derzeit mit einem Erfassungsfenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des [**CapDriverGetCaps-Makros**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (LPCAPDRIVERCAPS) (psCaps);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) der Struktur, auf die von **s** verwiesen wird.
+Größe der Struktur in Bytes, auf die von **s** verwiesen wird.
 
 </dd> <dt>
 
-<span id="psCaps"></span><span id="pscaps"></span><span id="PSCAPS"></span>*pscaps*
+<span id="psCaps"></span><span id="pscaps"></span><span id="PSCAPS"></span>*psCaps*
 </dt> <dd>
 
-Ein Zeiger auf die [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) -Struktur, die die Hardwarefunktionen enthalten soll.
+Zeiger auf die [**CAPDRIVERCAPS-Struktur,**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) die die Hardwarefunktionen enthalten soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn das Aufzeichnungs Fenster nicht mit einem Aufzeichnungs Treiber verbunden ist.
+Gibt **TRUE** zurück, wenn erfolgreich, oder **FALSE,** wenn das Erfassungsfenster nicht mit einem Erfassungstreiber verbunden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die in [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) zurückgegebenen Funktionen sind für einen bestimmten Erfassungs Treiber konstant. Anwendungen müssen diese Informationen einmal abrufen, wenn der Erfassungs Treiber zum ersten Mal mit einem Aufzeichnungs Fenster verbunden ist.
+Die in [**CAPDRIVERCAPS**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) zurückgegebenen Funktionen sind für einen bestimmten Erfassungstreiber konstant. Anwendungen müssen diese Informationen einmal abrufen, wenn der Erfassungstreiber zum ersten Mal mit einem Erfassungsfenster verbunden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Die in [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) zurückg
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ Die in [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) zurückg
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

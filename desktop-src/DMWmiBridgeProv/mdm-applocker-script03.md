@@ -1,6 +1,6 @@
 ---
 title: MDM_AppLocker_Script03-Klasse
-description: Die MDM \_ AppLocker \_ Script03-Klasse definiert die Richtlinien Einschränkungen für die Verarbeitung von DLL-Dateien.
+description: Die MDM \_ AppLocker \_ Script03-Klasse definiert die Richtlinieneinschränkungen für die Verarbeitung von DLL-Dateien.
 ms.assetid: 61fada02-7245-4825-945c-b41e9eff8e74
 keywords:
 - MDM_AppLocker_Script03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 402efedb1e15a0ea0df3dea654328de4ba0ddd86
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 681b70e98352bae70decf4d94dd78a2a08a1e180713056d37593c540896f2b86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077344"
 ---
 # <a name="mdm_applocker_script03-class"></a>MDM \_ AppLocker \_ Script03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ AppLocker \_ Script03** -Klasse definiert die Richtlinien Einschränkungen für die Verarbeitung von DLL-Dateien.
+Die **MDM \_ AppLocker \_ Script03-Klasse** definiert die Richtlinieneinschränkungen für die Verarbeitung von DLL-Dateien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,20 +47,20 @@ class MDM_AppLocker_Script03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ AppLocker \_ Script03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ AppLocker \_ Script03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ AppLocker- \_ Script03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ AppLocker \_ Script03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[**Enforcementmode**](/windows/client-management/mdm/applocker-csp)
+[**EnforcementMode**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -71,7 +71,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -80,14 +80,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -100,10 +100,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 </dd> <dt>
 
-[**Policy**](/windows/client-management/mdm/applocker-csp)
+[**Richtlinie**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -117,10 +117,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -129,7 +129,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmnettransmitter-Schnittstelle
-description: Die iwmdrmnettransmitter-Schnittstelle stellt Methoden bereit, die erforderlich sind, um Windows Media DRM für Netzwerkgeräte als Sender zu verwenden. Um eine Instanz dieser Schnittstelle zu erhalten, rufen Sie iwmdrmprovider-Erstellungsobjekt auf. Übergeben Sie IID \_ iwmdrmnettransmitter als riid-Parameter.
+title: IWMDRMNetTransmitter-Schnittstelle
+description: Die IWMDRMNetTransmitter-Schnittstelle stellt Methoden bereit, die erforderlich sind, um Windows Medien-DRM für Netzwerkgeräte als Sender zu verwenden. Rufen Sie IWMDRMProvider CreateObject auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie IID \_ IWMDRMNetTransmitter als riid-Parameter.
 ms.assetid: e93db52a-8829-4d16-b839-824e34b3e582
 keywords:
-- Iwmdrmnettransmitter-Schnittstelle Windows Media-Format
-- Iwmdrmnettransmitter-Schnittstelle Windows Media-Format, beschrieben
+- IWMDRMNetTransmitter-Schnittstelle windows Media Format
+- IWMDRMNetTransmitter-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a56db31bb7c03aa70aa136dcd07a8f41f1d9b84d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b7526ad349403abdb74f1e5684356af1b51b91f99b40e8e26a3b04932d4e5cf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027558"
 ---
-# <a name="iwmdrmnettransmitter-interface"></a>Iwmdrmnettransmitter-Schnittstelle
+# <a name="iwmdrmnettransmitter-interface"></a>IWMDRMNetTransmitter-Schnittstelle
 
-Die **iwmdrmnettransmitter** -Schnittstelle stellt Methoden bereit, die erforderlich sind, um Windows Media DRM für Netzwerkgeräte als Sender zu verwenden.
+Die **IWMDRMNetTransmitter-Schnittstelle** stellt Methoden bereit, die erforderlich sind, um Windows Medien-DRM für Netzwerkgeräte als Sender zu verwenden.
 
-Um eine Instanz dieser Schnittstelle abzurufen, rufen Sie [**iwmdrmprovider:: builateobject**](iwmdrmprovider-createobject.md)auf. Übergeben Sie **IID \_ iwmdrmnettransmitter** als *riid* -Parameter.
+Rufen Sie [**IWMDRMProvider::CreateObject**](iwmdrmprovider-createobject.md)auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie **IID \_ IWMDRMNetTransmitter** als *riid-Parameter.*
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmnettransmitter** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmnettransmitter** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMNetTransmitter-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMNetTransmitter** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmnettransmitter** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMNetTransmitter-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                        | BESCHREIBUNG                                                                                                 |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| [**Getleaflicenseresponse**](iwmdrmnettransmitter-getleaflicenseresponse.md) | Generiert eine Blatt Lizenz-Antwortnachricht.<br/>                                                       |
-| [**Getrootlicenseresponse**](iwmdrmnettransmitter-getrootlicenseresponse.md) | Generiert eine Stamm Lizenz-Antwortnachricht.<br/>                                                        |
-| [**Setlicensechallenge**](iwmdrmnettransmitter-setlicensechallenge.md)       | Verarbeitet eine Lizenzanfrage, die von einem Microsoft Windows Media DRM für Netzwerkgeräte Empfänger gesendet wird.<br/> |
+| [**GetLeafLicenseResponse**](iwmdrmnettransmitter-getleaflicenseresponse.md) | Generiert eine Antwortnachricht für die Blattlizenz.<br/>                                                       |
+| [**GetRootLicenseResponse**](iwmdrmnettransmitter-getrootlicenseresponse.md) | Generiert eine Antwortnachricht für die Stammlizenz.<br/>                                                        |
+| [**SetLicenseChallenge**](iwmdrmnettransmitter-setlicensechallenge.md)       | Verarbeitet eine Lizenzaufgabe, die von einem Microsoft Windows-Medien-DRM für den Empfänger von Netzwerkgeräten gesendet wird<br/> |
 
 
 
@@ -56,7 +56,7 @@ Die **iwmdrmnettransmitter** -Schnittstelle verfügt über diese Methoden.
 [**Schnittstellen**](drm-interfaces.md)
 </dt> <dt>
 
-[**Iwmdrmnetreceiver-Schnittstelle**](iwmdrmnetreceiver.md)
+[**IWMDRMNetReceiver-Schnittstelle**](iwmdrmnetreceiver.md)
 </dt> </dl>
 
  

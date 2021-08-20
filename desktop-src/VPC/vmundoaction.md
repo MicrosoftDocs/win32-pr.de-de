@@ -1,9 +1,9 @@
 ---
-title: Vmundoaction-Enumeration (vpccominterfaces. h)
-description: Gibt an, was mit rückgängig-Laufwerken geschieht, wenn ein virtueller Computer heruntergefahren oder ausgeschaltet wird.
+title: VMUndoAction-Enumeration (VPCCOMInterfaces.h)
+description: Gibt an, was mit rückgängig gemachten Laufwerken geschieht, wenn ein virtueller Computer heruntergefahren oder ausgeschaltet wird.
 ms.assetid: f8f96fd3-0b2a-40ae-8b2e-b6bcc995dedd
 keywords:
-- Virtueller PC der vmundoaction-Enumeration
+- VMUndoAction-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10917a5fb8d00e16a28f4b175237484b977cf914
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54f62c4ab00b30300b2951a5a6b1c300bf34b1b3797f036f28a66e82dc2cad22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998330"
 ---
-# <a name="vmundoaction-enumeration"></a>Vmundoaction-Enumeration
+# <a name="vmundoaction-enumeration"></a>VMUndoAction-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt an, was mit rückgängig-Laufwerken geschieht, wenn ein virtueller Computer heruntergefahren oder ausgeschaltet wird.
+Gibt an, was mit rückgängig gemachten Laufwerken geschieht, wenn ein virtueller Computer heruntergefahren oder ausgeschaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmUndoAction_Discard"></span><span id="vmundoaction_discard"></span><span id="VMUNDOACTION_DISCARD"></span>**vmundoaction \_ verwerfen**
+<span id="vmUndoAction_Discard"></span><span id="vmundoaction_discard"></span><span id="VMUNDOACTION_DISCARD"></span>**vmUndoAction \_ Discard**
 </dt> <dd>
 
-Verwerfen der rückgängig-Laufwerke die übergeordneten Laufwerke bleiben unverändert.
+Verwerfen der rückgängigen Laufwerke; die übergeordneten Laufwerke bleiben unverändert.
 
 </dd> <dt>
 
-<span id="vmUndoAction_Keep"></span><span id="vmundoaction_keep"></span><span id="VMUNDOACTION_KEEP"></span>**vmundoaction \_ beibehalten**
+<span id="vmUndoAction_Keep"></span><span id="vmundoaction_keep"></span><span id="VMUNDOACTION_KEEP"></span>**vmUndoAction \_ Keep**
 </dt> <dd>
 
-Behalten Sie die rückgängig-Laufwerke. die übergeordneten Laufwerke bleiben unverändert, Änderungen werden jedoch beim nächsten Start des virtuellen Computers beibehalten.
+Behalten Sie die rückgängigen Laufwerke bei. die übergeordneten Laufwerke bleiben unverändert, änderungen werden jedoch beim nächsten Start des virtuellen Computers beibehalten.
 
 </dd> <dt>
 
-<span id="vmUndoAction_Commit"></span><span id="vmundoaction_commit"></span><span id="VMUNDOACTION_COMMIT"></span>**vmundoaction- \_ Commit**
+<span id="vmUndoAction_Commit"></span><span id="vmundoaction_commit"></span><span id="VMUNDOACTION_COMMIT"></span>**\_vmUndoAction-Commit**
 </dt> <dd>
 
-Commit für Änderungen an den übergeordneten Laufwerken.
+Committen Sie Änderungen an den übergeordneten Laufwerken.
 
 </dd> </dl>
 
@@ -71,11 +71,11 @@ Commit für Änderungen an den übergeordneten Laufwerken.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Commit für Änderungen an den übergeordneten Laufwerken.
 
 <dl> <dt>
 
-[**Ivmvirtualmachine:: UndoAction**](ivmvirtualmachine-undoaction.md)
+[**IVMVirtualMachine::UndoAction**](ivmvirtualmachine-undoaction.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Die GetTcpStatistics-Funktion füllt einen Zeiger auf eine MIB \_ tcpstats-Struktur mit Informationen zu den TCP-Protokoll Statistiken für den lokalen Computer.
+description: Die GetTcpStatistics-Funktion füllt einen Zeiger auf eine MIB-TCPSTATS-Struktur mit Informationen zu den TCP-Protokollstatistiken für \_ den lokalen Computer.
 ms.assetid: cb405d46-cf3e-4f3c-870a-935a0cc8118f
-title: Abrufen von Informationen mithilfe von GetTcpStatistics
+title: Abrufen von Informationen mit GetTcpStatistics
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3f4d4d42c2716d258ff72e3dd91ab750baaed20
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fb51b1a71c9dc0ff98a40c31894aa3fcf8c0c0ace7b6b05812940cb9808cced
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146593"
 ---
-# <a name="retrieving-information-using-gettcpstatistics"></a>Abrufen von Informationen mithilfe von GetTcpStatistics
+# <a name="retrieving-information-using-gettcpstatistics"></a>Abrufen von Informationen mit GetTcpStatistics
 
-Die [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstatistics) -Funktion füllt einen Zeiger auf eine [**MIB \_ tcpstats**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) -Struktur mit Informationen zu den TCP-Protokoll Statistiken für den lokalen Computer.
+Die [**GetTcpStatistics-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstatistics) füllt einen Zeiger auf eine [**\_ MIB-TCPSTATS-Struktur**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) mit Informationen zu den TCP-Protokollstatistiken für den lokalen Computer.
 
 **So verwenden Sie GetTcpStatistics**
 
-1.  Deklarieren Sie einige erforderliche Variablen.
+1.  Deklarieren Sie einige benötigte Variablen.
 
-    Deklarieren Sie eine **DWORD** -Variable `dwRetVal` , die für Fehler Überprüfungs Funktionsaufrufe verwendet. Deklarieren Sie einen Zeiger auf eine [**MIB- \_ tcpstats**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) -Variable mit dem Namen *ptcpstats*, und weisen Sie der Struktur Arbeitsspeicher zu. Überprüfen Sie, ob Arbeitsspeicher zugeordnet werden konnte.
+    Deklarieren Sie **eine DWORD-Variable,** `dwRetVal` die für Funktionsaufrufe zur Fehlerüberprüfung verwendet wird. Deklarieren Sie einen Zeiger auf eine [**\_ MIB-TCPSTATS-Variable**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) namens *pTCPStats,* und weisen Sie Arbeitsspeicher für die Struktur zu. Überprüfen Sie, ob Arbeitsspeicher zugeordnet werden kann.
 
     ```C++
     DWORD dwRetVal = 0;
@@ -33,7 +33,7 @@ Die [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstati
 
     
 
-2.  Rufen Sie die Funktion " [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstatistics) " mit dem Parameter " *ptcpstats* " auf, um TCP-Statistiken für IPv4 auf dem lokalen Computer abzurufen. Überprüfen Sie auf Fehler, und geben Sie den Fehlerwert in der **DWORD** -Variablen zurück `dwRetVal` . Wenn ein Fehler auftritt, `dwRetVal` kann die Variable für eine umfassendere Fehlerüberprüfung und Berichterstellung verwendet werden.
+2.  Rufen Sie [**die GetTcpStatistics-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstatistics) mit dem *pTCPStats-Parameter* auf, um TCP-Statistiken für IPv4 auf dem lokalen Computer abzurufen. Überprüfen Sie auf Fehler, und geben Sie den Fehlerwert in der **DWORD-Variablen** `dwRetVal` zurück. Wenn ein Fehler auftritt, kann die Variable für umfangreichere `dwRetVal` Fehlerüberprüfungen und -berichte verwendet werden.
     ```C++
         if ((dwRetVal = GetTcpStatistics(pTCPStats)) != NO_ERROR) {
             printf("GetTcpStatistics failed with error: %ld\n", dwRetVal);
@@ -42,7 +42,7 @@ Die [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstati
 
     
 
-3.  Wenn der-Befehl erfolgreich ausgeführt wurde, greifen Sie auf die Daten zu *, die in* den [**MIB- \_ tcpstats**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) -Werten zurückgegeben werden
+3.  Wenn der Aufruf erfolgreich war, greifen Sie auf die Daten zu, die in [**der \_ MIB-TCPSTATS-Datei zurückgegeben**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) werden, auf die der *pTCPStats-Parameter* zeigt.
     ```C++
     printf("\tNumber of active opens:  %u\n", pTCPStats->dwActiveOpens);
     printf("\tNumber of passive opens: %u\n", pTCPStats->dwPassiveOpens);
@@ -53,7 +53,7 @@ Die [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstati
 
     
 
-4.  Gibt den Arbeitsspeicher frei, der für die [**MIB \_ tcpstats**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) -Struktur reserviert ist, auf die der *ptcpstats* -Parameter verweist. Dies sollte erfolgen, wenn die Anwendung die Daten nicht mehr benötigt, die vom *ptcpstats* -Parameter zurückgegeben werden.
+4.  Geben Sie den Für die [**\_ MIB-TCPSTATS-Struktur zugeordneten Arbeitsspeicher**](/windows/win32/api/tcpmib/ns-tcpmib-mib_tcpstats_lh) frei, auf den der *pTCPStats-Parameter* zeigt. Dies sollte erfolgen, wenn die Anwendung die vom *pTCPStats-Parameter* zurückgegebenen Daten nicht mehr benötigt.
     ```C++
     if (pTCPStats)
         free(pTCPStats);
@@ -61,13 +61,13 @@ Die [**GetTcpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-gettcpstati
 
     
 
-Nächster Schritt: [Abrufen von Informationen mithilfe von GetIpStatistics](retrieving-information-using-getipstatistics.md)
+Nächster Schritt: [Abrufen von Informationen mit GetIpStatistics](retrieving-information-using-getipstatistics.md)
 
-Vorheriger Schritt: [Abrufen von Informationen mithilfe von GetIpStatistics](retrieving-information-using-getipstatistics.md)
+Vorheriger Schritt: [Abrufen von Informationen mit getIpStatistics](retrieving-information-using-getipstatistics.md)
 
-## <a name="complete-source-code"></a>Vervollständigen des Quellcodes
+## <a name="complete-source-code"></a>Vollständiger Quellcode
 
--   [Vollständiger IP-hilfsanwendungs-Quellcode](complete-ip-helper-application-source-code.md)
+-   [Vollständiger Quellcode der IP-Hilfsanwendung](complete-ip-helper-application-source-code.md)
 
  
 

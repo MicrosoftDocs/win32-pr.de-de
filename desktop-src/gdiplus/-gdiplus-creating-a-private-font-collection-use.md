@@ -1,42 +1,42 @@
 ---
-description: Die PrivateFontCollection-Klasse erbt von der abstrakten Basisklasse FontCollection. Sie können ein PrivateFontCollection-Objekt verwenden, um eine Reihe von Schriftarten speziell für Ihre Anwendung beizubehalten.
+description: Die PrivateFontCollection-Klasse erbt von der abstrakten FontCollection-Basisklasse. Sie können ein PrivateFontCollection-Objekt verwenden, um einen Satz von Schriftarten speziell für Ihre Anwendung zu verwalten.
 ms.assetid: ae12afcf-12cc-4c84-9aba-de56fc39437b
 title: Erstellen einer privaten Schriftartsammlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 084e8a2d6f79f60e0719f04fbabb778b9483bd80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df673273611ed329e933c84e6540ed984088202590dc1d1c644ccdedca2c80c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977590"
 ---
 # <a name="creating-a-private-font-collection"></a>Erstellen einer privaten Schriftartsammlung
 
-Die [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Klasse erbt von der abstrakten Basisklasse [**FontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontcollection) . Sie können ein **PrivateFontCollection** -Objekt verwenden, um eine Reihe von Schriftarten speziell für Ihre Anwendung beizubehalten.
+Die [**PrivateFontCollection-Klasse erbt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) von der abstrakten [**FontCollection-Basisklasse.**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontcollection) Sie können ein **PrivateFontCollection-Objekt** verwenden, um einen Satz von Schriftarten speziell für Ihre Anwendung zu verwalten.
 
-Eine private Schriftart Auflistung kann installierte System Schriftarten und Schriftarten enthalten, die nicht auf dem Computer installiert wurden. Um einer privaten Schriftart Auflistung eine Schriftart Datei hinzuzufügen, nennen Sie die [**PrivateFontCollection:: AddFontFile**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-privatefontcollection-addfontfile) -Methode eines [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Objekts.
+Eine private Schriftartsammlung kann installierte Systemschriftarten sowie Schriftarten enthalten, die nicht auf dem Computer installiert wurden. Um einer privaten Schriftartsammlung eine Schriftartdatei hinzuzufügen, rufen Sie die [**PrivateFontCollection::AddFontFile-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-privatefontcollection-addfontfile) eines [**PrivateFontCollection-Objekts**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) auf.
 
 > [!Note]  
-> Wenn Sie die GDI+-API verwenden, dürfen Sie niemals zulassen, dass Ihre Anwendung beliebige Schriftarten aus nicht vertrauenswürdigen Quellen herunterlädt. Das Betriebssystem erfordert erhöhte Berechtigungen, um sicherzustellen, dass alle installierten Schriftarten vertrauenswürdig sind.
+> Wenn Sie die GDI+-API verwenden, dürfen Sie niemals zulassen, dass Ihre Anwendung beliebige Schriftarten aus nicht vertrauenswürdigen Quellen herunterlädt. Das Betriebssystem erfordert erhöhte Rechte, um sicherzustellen, dass alle installierten Schriftarten vertrauenswürdig sind.
 
  
 
-Die [**FontCollection:: GetFamilies**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilies) -Methode eines [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Objekts gibt ein Array von [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Objekten zurück. Bevor Sie **FontCollection:: GetFamilies** aufrufen, müssen Sie einen Puffer zuordnen, der groß genug ist, um das Array zu speichern. Um die Größe des erforderlichen Puffers zu bestimmen, müssen Sie die [**FontCollection:: getfamilycount**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilycount) -Methode aufrufen und den Rückgabewert mit **sizeof**(**FontFamily**) multiplizieren.
+Die [**FontCollection::GetFamilies-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilies) eines [**PrivateFontCollection-Objekts**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) gibt ein Array von [**FontFamily-Objekten**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) zurück. Bevor Sie **FontCollection::GetFamilies** aufrufen, müssen Sie einen Puffer zuordnen, der groß genug ist, um dieses Array zu speichern. Um die Größe des erforderlichen Puffers zu bestimmen, rufen Sie die [**FontCollection::GetFamilyCount-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilycount) auf, und multiplizieren Sie den Rückgabewert mit **sizeof**(**FontFamily**).
 
-Die Anzahl der Schriftart Familien in einer privaten Schriftart Auflistung ist nicht notwendigerweise identisch mit der Anzahl der Schriftart Dateien, die der Sammlung hinzugefügt wurden. Nehmen Sie beispielsweise an, dass Sie die Dateien ArialBd. tff, Times. tff und TimesBd. tff einer Auflistung hinzufügen. Es gibt drei Dateien, aber nur zwei Familien in der Sammlung, da times. tff und TimesBd. tff derselben Familie angehören.
+Die Anzahl der Schriftfamilien in einer privaten Schriftartauflistung ist nicht notwendigerweise mit der Anzahl der Schriftartdateien identisch, die der Auflistung hinzugefügt wurden. Angenommen, Sie fügen die Dateien ArialBd.tff, Times.tff und TimesBd.tff einer Sammlung hinzu. Es gibt drei Dateien, aber nur zwei Familien in der Sammlung, da Times.tff und TimesBd.tff zur gleichen Familie gehören.
 
-Im folgenden Beispiel werden die folgenden drei Schriftart Dateien einem [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Objekt hinzugefügt:
+Im folgenden Beispiel werden die folgenden drei Schriftartdateien einem [**PrivateFontCollection-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) hinzugefügt:
 
--   C: \\ Winnt \\ Fonts \\ Arial. tff (Arial, Regular)
--   C: \\ Winnt \\ Fonts \\ courbi. tff (Courier New, Fett kursiv)
--   C: \\ Winnt \\ Fonts \\ TimesBd. tff (Times New Roman, Bold)
+-   C: \\ WINNT \\ Fonts \\ Arial.tff (Arial, regular)
+-   C: \\ \\ WINNT-Schriftarten \\ –SchriftartenBI.tff (Courier New, bold kursiv)
+-   C: \\ WINNT \\ Fonts \\ TimesBd.tff (Times New Roman, bold)
 
-Der Code Ruft die [**FontCollection:: getfamilycount**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilycount) -Methode des [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Objekts auf, um die Anzahl der Familien in der privaten Auflistung zu bestimmen, und ruft dann [**FontCollection:: GetFamilies**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilies) auf, um ein Array von [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Objekten abzurufen.
+Der Code ruft die [**FontCollection::GetFamilyCount-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilycount) des [**PrivateFontCollection-Objekts**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) auf, um die Anzahl der Familien in der privaten Auflistung zu bestimmen, und ruft dann [**FontCollection::GetFamilies**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontcollection-getfamilies) auf, um ein Array von [**FontFamily-Objekten**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) abzurufen.
 
-Der Code Ruft für jedes [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Objekt in der Auflistung die [**FontFamily:: IsStyleAvailable**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontfamily-isstyleavailable) -Methode auf, um zu bestimmen, ob verschiedene Stile (regulär, Fett, kursiv, Fett kursiv, unterstrichen und durchgestrichen) verfügbar sind. Die an die **FontFamily:: IsStyleAvailable** -Methode über gebenden Argumente sind Member der [**FontStyle**](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-fontstyle) -Enumeration, die in "gdiplusenums. h" deklariert wird.
+Für jedes [**FontFamily-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) in der Auflistung ruft der Code die [**FontFamily::IsStyleAvailable-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-fontfamily-isstyleavailable) auf, um zu bestimmen, ob verschiedene Stile (normal, fett, kursiv, fett kursiv, unterstrichen und durchstrichen) verfügbar sind. Die an die **FontFamily::IsStyleAvailable-Methode** übergebenen Argumente sind Member der [**FontStyle-Enumeration,**](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-fontstyle) die in Gdiplusenums.h deklariert ist.
 
-Wenn eine bestimmte Kombination aus Familie und Stil verfügbar ist, wird ein [**Schriftart**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-font) Objekt mit dieser Familie und diesem Stil erstellt. Das erste Argument, das an den **Schriftart** -Konstruktor übergeben wird, ist der Schriftfamilien Name (kein [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Objekt wie bei anderen Variationen des **Schriftart** Konstruktors), und das letzte Argument ist die Adresse des [**PrivateFontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) -Objekts. Nachdem das **Schriftart** Objekt erstellt wurde, wird die Adresse an die [DrawString](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush)) -Methode der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse weitergegeben, um den Familiennamen zusammen mit dem Namen des Stils anzuzeigen.
+Wenn eine bestimmte Kombination aus Familie und Stil verfügbar ist, wird ein [**Font-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-font) mit dieser Familie und diesem Stil erstellt. Das erste Argument,  das an den Font-Konstruktor übergeben wird, ist der Name der Schriftfamilie (kein [**FontFamily-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) wie bei anderen Varianten des Font-Konstruktors), und das letzte Argument ist die Adresse des  [**PrivateFontCollection-Objekts.**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-privatefontcollection) Nachdem das **Font-Objekt** erstellt wurde, wird seine Adresse an die [DrawString-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush)) der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) übergeben, um den Familiennamen zusammen mit dem Namen des Stils anzuzeigen.
 
 
 ```
@@ -177,24 +177,24 @@ delete pFontFamily;
 
 Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes.
 
-![Screenshot eines Fensters, das neun Schriftart Namen auflistet, von denen jede die benannte Schriftart veranschaulicht](images/fontstext7.png)
+![Screenshot eines Fensters, in dem neun Schriftartnamen aufgelistet sind, die jeweils die benannte Schriftart veranschaulichen](images/fontstext7.png)
 
-Arial. tff (der der privaten Schriftart Auflistung im vorangehenden Codebeispiel hinzugefügt wurde) ist die Schriftart Datei für den normalen Arial-Stil. Beachten Sie jedoch, dass die Programmausgabe für die Schriftart der Arial-Schriftart verschiedene andere andere Formate als regulär anzeigt. Dies liegt daran, dass Windows GDI+ die fetten, kursiv und Fetten kursiv formatierten Stile aus dem regulären Stil simulieren kann. GDI+ kann auch Unterstriche und Striche aus dem regulären Stil ergeben.
+Arial.tff (das im vorherigen Codebeispiel der privaten Schriftartsammlung hinzugefügt wurde) ist die Schriftartdatei für den regulären Arial-Stil. Beachten Sie jedoch, dass die Programmausgabe mehrere verfügbare Stile anzeigt, die für die Arial-Schriftfamilie nicht normal sind. Dies liegt daran, dass Windows GDI+ die kursiven Fett-, Kursiv- und Fettformatvorlagen aus dem regulären Stil simulieren können. GDI+ können auch Unterstreichungen und Striche im regulären Stil erzeugen.
 
-Ebenso kann GDI+ den fett formatierten Stil entweder aus dem fett formatierten Stil oder dem kursiv formatierten Stil simulieren. Die Programmausgabe zeigt, dass der Fett formatierte Stil für die Zeit Familie verfügbar ist, auch wenn TimesBd. tff (Times New Roman, Bold) die einzige Datei in der Sammlung ist.
+Auf ähnliche Weise können GDI+ den kursiven Fettstil entweder aus dem fett formatiertem oder kursiv formatiertem Stil simulieren. Die Programmausgabe zeigt, dass der kursive Fettformatierstil für die Times-Familie verfügbar ist, obwohl TimesBd.tff (Times New Roman, bold) die einzige Times-Datei in der Sammlung ist.
 
-Diese Tabelle gibt die nicht-System Schriftarten an, die von GDI+ unterstützt werden.
+Diese Tabelle gibt die Nicht-Systemschriftarten an, die GDI+ unterstützt.
 
 
 
-|                     | GDI | GDI+ unter Windows 7 | GDI+ unter Windows 8 | DirectWrite |
+|                     | GDI | GDI+ auf Windows 7 | GDI+ auf Windows 8 | DirectWrite |
 |---------------------|-----|-------------------|-------------------|-------------|
-| . Geruchs                | ja | nein                | nein                | nein          |
-| . Mit dem Namen                | ja | nein                | nein                | nein          |
-| . TTF                | ja | ja               | ja               | ja         |
-| . OTF mit TrueType  | ja | ja               | ja               | ja         |
-| . OTF mit Adobe CFF | ja | nein                | ja               | ja         |
-| Adobe-Typ 1        | ja | nein                | nein                | nein          |
+| . Fon                | Ja | Nein                | Nein                | Nein          |
+| . Fnt                | Ja | Nein                | Nein                | Nein          |
+| . Ttf                | Ja | Ja               | Ja               | Ja         |
+| . OTF mit TrueType  | Ja | Ja               | Ja               | Ja         |
+| . OTF mit Adobe CFF | Ja | Nein                | Ja               | Ja         |
+| Adobe Type 1        | Ja | Nein                | Nein                | Nein          |
 
 
 

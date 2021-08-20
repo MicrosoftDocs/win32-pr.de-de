@@ -5,66 +5,66 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 48f4f44d-c1b5-4312-b024-5a0097b0c032
 keywords:
 - networks
-- nicht konvexen
+- nonconvex
 - normal
 - Normalisieren
-- normaler Vektor
+- Normaler Vektor
 - NURBS (Non-Uniform Rational B-Spline)
-- Nicht einheitlicher rationaler B-Spline (NURBS)
+- Non-Uniform Rational B-Spline (NURBS)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc8f81b022e92c0df932c2b3b308f58d3d7ffe54
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 70fe10bf562a9623e195c691296a7a187b8428bbcd0e2662e021f4efb2adadbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103949336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937049"
 ---
 # <a name="n-opengl"></a>N (OpenGL)
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) [J K](jk.md) [L](l.md) [M](m.md) N [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) [U V](u-v.md) [W](w.md) [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) F [G](f.md) [](g.md) [H](h.md) [I](i.md) J [K](jk.md) [L](l.md) [M](m.md) N [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) T [U](t.md) [V](u-v.md) [W](w.md) X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
 <span id="opengl_network"></span><span id="OPENGL_NETWORK"></span>**Netzwerk**
 </dt> <dd>
 
-Eine Verbindung zwischen zwei oder mehr Computern, mit denen die Daten von den anderen Computern übertragen werden können.
+Eine Verbindung zwischen zwei oder mehr Computern, die es jedem ermöglicht, Daten an und von den anderen Computern zu übertragen.
 
 </dd> <dt>
 
-<span id="opengl_nonconvex"></span><span id="OPENGL_NONCONVEX"></span>**nicht konvexen**
+<span id="opengl_nonconvex"></span><span id="OPENGL_NONCONVEX"></span>**nonconvex**
 </dt> <dd>
 
-Der Status eines Polygons, in dem eine Linie in der Ebene des Polygons mehr als zwei Punkte überschneidet.
+Ein Zustand eines Polygons, in dem eine Linie in der Polygonebene das Polygon mehr als zweimal überschneidet.
 
 </dd> <dt>
 
-<span id="opengl_normal"></span><span id="OPENGL_NORMAL"></span>**normaler**
+<span id="opengl_normal"></span><span id="OPENGL_NORMAL"></span>**Normalen**
 </dt> <dd>
 
-Eine Plane-Gleichung mit drei Komponenten, die die Winkel Ausrichtung, aber keine Position, einer Ebene oder Oberfläche definiert.
+Eine Gleichung der Drei-Komponenten-Ebene, die die Winkelausrichtung, aber nicht die Position einer Ebene oder Oberfläche definiert.
 
 </dd> <dt>
 
 <span id="opengl_normalize"></span><span id="OPENGL_NORMALIZE"></span>**Normalisieren**
 </dt> <dd>
 
-, Um die einzelnen Komponenten einer normalen durch die Quadratwurzel der Summe ihrer Quadrate aufzuteilen. Wenn dann der normale als Vektor vom Ursprung bis zum Punkt (NX ', NY ', NX ') betrachtet wird, hat dieser Vektor eine Einheitslänge:
+Zum Unterteilen der einzelnen Komponenten einer Normalität durch die Quadratwurzel der Summe ihrer Quadrate. Wenn der Normalwert dann als Vektor vom Ursprung bis zum Punkt (nx', ny', nx') gedacht wird, hat dieser Vektor die Länge der Einheit:
 
-<dl> <dd>NX ' = NX/Factor</dd> <dd>NY ' = NY/Factor</dd> <dd>NZ ' = NZ/Faktor</dd> </dl> </dd> <dt>
+<dl> <dd>nx' = nx/factor</dd> <dd>ny' = ny/factor</dd> <dd>nz' = nz/factor</dd> </dl> </dd> <dt>
 
-<span id="opengl_normal_vector"></span><span id="OPENGL_NORMAL_VECTOR"></span>**normaler Vektor**
+<span id="opengl_normal_vector"></span><span id="OPENGL_NORMAL_VECTOR"></span>**Normaler Vektor**
 </dt> <dd>
 
-Siehe *Normal*.
+Siehe *normal*.
 
 </dd> <dt>
 
-<span id="opengl_nurbs"></span><span id="OPENGL_NURBS"></span>**Nursb**
+<span id="opengl_nurbs"></span><span id="OPENGL_NURBS"></span>**Nurbs**
 </dt> <dd>
 
-Nicht einheitlicher rationeller B-Spline. Eine gängige Methode zum Angeben von parametrischen Kurven und Oberflächen.
+Nicht einheitliche rationale B-Spline. Eine gängige Methode zum Angeben von parametrischen Kurven und Oberflächen.
 
 </dd> </dl>
 

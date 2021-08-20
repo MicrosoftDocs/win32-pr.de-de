@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator Fügt zwei Verweis Zeiten hinzu.
+description: Dieser Operator fügt zwei Verweiszeiten hinzu.
 ms.assetid: 4dfc087a-ec4f-4a8a-8bd4-4da9e1699bcd
-title: Coaref time. Operator +-Methode (ctlutil. h)
+title: COARefTime.operator+-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1a6f5019c61d4c1baec47652db8842aa5085b675
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 348151b4bb7dc7cca6578755e10934364ba59b8ac5447c0bce4b5240483e7fef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954339"
 ---
-# <a name="coareftimeoperator-method"></a>Coaref time. Operator +-Methode
+# <a name="coareftimeoperator-method"></a>COARefTime.operator+-Methode
 
-Dieser Operator Fügt zwei Verweis Zeiten hinzu.
+Dieser Operator fügt zwei Verweiszeiten hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ COARefTime operator+(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis auf das hinzu zufügende **coareftime** -Objekt.
+Verweis auf das **hinzuzufügende COARefTime-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein neues **coareftime** -Objekt zurück, das gleich der Summe der Verweis Zeiten ist.
+Gibt ein neues **COARefTime-Objekt** zurück, das der Summe der Verweiszeiten entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt ein neues **coareftime** -Objekt zurück, das gleich der Summe der Verweis 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt ein neues **coareftime** -Objekt zurück, das gleich der Summe der Verweis 
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

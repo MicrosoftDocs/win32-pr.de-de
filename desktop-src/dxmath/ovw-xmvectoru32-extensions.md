@@ -1,19 +1,19 @@
 ---
-description: Der XMVECTORU32-Typ unterstützt die Verwendung der C/C++-initialisierersyntax zum Laden von Gleit Komma Werten in eine Instanz des xmvector-Typs.
+description: Der XMVECTORU32-Typ unterstützt die Verwendung der C/C++-Initialisierersyntax zum Laden von Gleitkommawerten in eine Instanz des XMVECTOR-Typs.
 ms.assetid: 849b6560-3be0-4c07-8731-09f4f11afb58
 title: XMVECTORU32-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acf8b1e0aa83669bf42b0f224b626b8012617ba7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01e1aa530bb2b050fa658695dc037f2fe091ede643794fc874ace6d51a67130c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118310"
 ---
 # <a name="xmvectoru32-extensions"></a>XMVECTORU32-Erweiterungen
 
-Der [**XMVECTORU32**](xmvectoru32-data-type.md) -Typ unterstützt die Verwendung der C/C++-initialisierersyntax zum Laden von Gleit Komma Werten in eine Instanz des [**xmvector**](xmvector-data-type.md) -Typs.
+Der [**XMVECTORU32-Typ**](xmvectoru32-data-type.md) unterstützt die Verwendung der C/C++-Initialisierersyntax zum Laden von Gleitkommawerten in eine Instanz des [**XMVECTOR-Typs.**](xmvector-data-type.md)
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,9 +24,9 @@ Der [**XMVECTORU32**](xmvectoru32-data-type.md) -Typ unterstützt die Verwendung
 
 
 
-| Thema                                                             | BESCHREIBUNG                                                                                            |
+| Thema                                                             | Beschreibung                                                                                            |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [XMVECTORU32-Operatoren](ovw-xmvectoru32-operators.md)<br/> | Die [**XMVECTORU32**](xmvectoru32-data-type.md) -Struktur macht die folgenden Operatoren verfügbar.<br/> |
+| [XMVECTORU32-Operatoren](ovw-xmvectoru32-operators.md)<br/> | Die [**XMVECTORU32-Struktur**](xmvectoru32-data-type.md) macht die folgenden Operatoren verfügbar.<br/> |
 
 
 

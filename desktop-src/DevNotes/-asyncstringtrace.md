@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Exstrace.dll
-ms.openlocfilehash: 342670dc406cb84588984d0a9ab10fae280c5483
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ac099b0b69c1417c428aefe04b8e6591f945545a2b69196da588ebce8de23f18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076174"
 ---
 # <a name="asyncstringtrace-function"></a>AsyncStringTrace-Funktion
 
-Beendet das Einrichten eines Ablaufverfolgungspuffers mit optionalen Feldern für Sprintf-Ablaufverfolgungen. 
+Schließt das Einrichten eines Ablaufverfolgungspuffers mit optionalen Feldern für sprintf-style-Ablaufverfolgungen ab. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Ein 32-Bit-Ablaufverfolgungsparameter, der für die Filterung auf Anwendungseben
 *szFormat* 
 </dt> <dd>
 
-Eine mit 0 (null) beendete Zeichenfolge, die das Format der Ablaufverfolgung beschreibt.
+Eine auf null endende Zeichenfolge, die das Format der Ablaufverfolgung beschreibt.
 
 </dd> <dt>
 
@@ -66,11 +66,11 @@ Ein Marker für **vsprintf-Funktionen.**
 
 Diese Funktion gibt die Länge der Ablaufverfolgungs-Anweisung in Bytes zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Exstrace.dll ist eine optionale Komponente, die mit dem Simple Mail Transfer Protocol (SMTP) und dem Network News Transfer Protocol (NNTP) installiert wird.
 
-Der **datentyp va \_ list** ist ein Standardtyp, der zum Enthalten von Informationen verwendet wird, die von **va \_ arg-** und **\_ va-End-Makros benötigt** werden. Weitere Informationen finden Sie unter [Standardtypen.](/cpp/c-runtime-library/standard-types?view=vs-2019)
+Der **Datentyp va \_ list** ist ein Standardtyp, der zum Speichern von Informationen verwendet wird, die von **va \_ arg-** und **va \_ end-Makros** benötigt werden. Weitere Informationen finden Sie unter [Standardtypen.](/cpp/c-runtime-library/standard-types?view=vs-2019)
 
 Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
@@ -78,7 +78,7 @@ Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müs
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |----------------|-----------------------------------------------------------------------------------------|
 | DLL<br/> | <dl> <dt>Exstrace.dll</dt> </dl> |
 

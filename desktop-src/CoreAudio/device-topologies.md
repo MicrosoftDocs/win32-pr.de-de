@@ -4,79 +4,79 @@ ms.assetid: 5ac421e5-74a4-40e8-af6f-a99a05ebc3e0
 title: Gerätetopologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31e0af267bb4a0fa924ee23d36a2a615ac5ae7fa
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cb08221ac157738f8b13ff3dce68d70675b6e94ddc04d99514277d3f1b79b42c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077618"
 ---
 # <a name="device-topologies"></a>Gerätetopologien
 
-Die [devicetopology-API](devicetopology-api.md) ermöglicht Clients die Kontrolle über eine Vielzahl von internen Funktionen von audioadaptern, auf die Sie über die [mmdevice-API](mmdevice-api.md), die [WASAPI](wasapi.md)oder die [endpointvolume-API](endpointvolume-api.md)nicht zugreifen können.
+Die [DeviceTopology-API](devicetopology-api.md) ermöglicht Clients die Kontrolle über eine Vielzahl interner Funktionen von Audioadaptern, auf die sie nicht über die [MMDevice-API,](mmdevice-api.md) [WASAPI](wasapi.md)oder die [EndpointVolume-API](endpointvolume-api.md)zugreifen können.
 
-Wie bereits erläutert, stellen die [mmdevice-API](mmdevice-api.md), [WASAPI](wasapi.md)und die [endpointvolume-API](endpointvolume-api.md) an Clients als [audioendpunktgeräte](audio-endpoint-devices.md)Mikrofon, Referenten, Kopfhörer und andere Audioeingabe-und-Ausgabegeräte zur Verfügung. Das Endpunkt Gerätemodell ermöglicht Clients den bequemen Zugriff auf die Volume-und stumm Steuerelemente in Audiogeräten. Clients, die nur diese einfachen Steuerelemente benötigen, können vermeiden, dass die internen Topologien von Hardware Geräten in audioadaptern durchlaufen werden.
+Wie bereits erläutert, stellen die [MMDevice-API,](mmdevice-api.md) [WASAPI](wasapi.md)und die [EndpointVolume-API Mikrofone,](endpointvolume-api.md) Lautsprecher, Lautsprecher und andere Audioeingabe- und -ausgabegeräte als [Audioendpunktgeräte](audio-endpoint-devices.md)für Clients bereit. Das Endpunktgerätemodell bietet Clients bequemen Zugriff auf Lautstärke- und Stummschaltungssteuerelemente auf Audiogeräten. Clients, die nur diese einfachen Steuerelemente benötigen, können das Durchlaufen der internen Topologien von Hardwaregeräten in Audioadaptern vermeiden.
 
-In Windows Vista konfiguriert die Audioengine automatisch die Topologien von Audiogeräten für die Verwendung durch Audioanwendungen. Daher müssen Anwendungen selten, falls immer, die Debug-API-API zu diesem Zweck verwenden. Nehmen wir beispielsweise an, dass ein Audioadapter einen eingabemultiplexer enthält, der einen Stream aus einer Zeilen Eingabe oder einem Mikrofon erfassen kann, aber nicht gleichzeitig Datenströme von beiden Endpunkt Geräten erfassen kann. Angenommen, der Benutzer hat Anwendungen im exklusiven Modus aktiviert, um die Verwendung eines audioendpunktgeräts durch Anwendungen im freigegebenen Modus vorzuführen, wie in Daten [strömen im exklusiven Modus](exclusive-mode-streams.md)beschrieben. Wenn eine Anwendung im freigegebenen Modus einen Stream aus der Zeilen Eingabe abzeichnet, wenn eine Anwendung im exklusiven Modus beginnt, einen Stream vom Mikrofon aufzuzeichnen, schaltet die Audioengine den Multiplexer automatisch von der Zeilen Eingabe in das Mikrofon um. In früheren Versionen von Windows, einschließlich Windows XP, würde die Anwendung im exklusiven Modus in diesem Beispiel die **mixerxxx** -Funktionen in der Windows-Multimedia-API verwenden, um die Topologien der Adapter Geräte zu durchlaufen, den Multiplexer zu ermitteln und den Multiplexer so zu konfigurieren, dass die Mikrofon Eingabe ausgewählt wird. In Windows Vista sind diese Schritte nicht mehr erforderlich.
+In Windows Vista konfiguriert die Audio-Engine automatisch die Topologien von Audiogeräten für die Verwendung durch Audioanwendungen. Daher müssen Anwendungen die DeviceTopology-API nur selten zu diesem Zweck verwenden, falls überhaupt. Angenommen, ein Audioadapter enthält einen Eingabemultixer, der einen Datenstrom entweder aus einer Zeileneingabe oder einem Mikrofon erfassen kann, aber keine Datenströme von beiden Endpunktgeräten gleichzeitig erfassen kann. Angenommen, der Benutzer hat Anwendungen im exklusiven Modus aktiviert, um die Verwendung eines Audioendpunktgeräts durch Anwendungen im gemeinsam genutzten Modus zu verstellen, wie unter [Exklusiver Modus Streams](exclusive-mode-streams.md)beschrieben. Wenn eine Anwendung im gemeinsam genutzten Modus einen Datenstrom aus der Zeileneingabe erfasst, wenn eine Anwendung im exklusiven Modus mit der Aufzeichnung eines Streams über das Mikrofon beginnt, schaltet die Audio-Engine den Multiplexer automatisch von der Zeileneingabe in das Mikrofon um. In früheren Versionen von Windows, einschließlich Windows XP, verwendet die Anwendung im exklusiven Modus in diesem Beispiel die **mixerXxx-Funktionen** in der Windows Multimedia-API, um die Topologien der Adaptergeräte zu durchlaufen, den Multiplexer zu ermitteln und den Multiplexer zu konfigurieren, um die Mikrofoneingabe auszuwählen. In Windows Vista sind diese Schritte nicht mehr erforderlich.
 
-Einige Clients benötigen jedoch möglicherweise explizite Kontrolle über die Typen von audiohardwaresteuerelementen, auf die über die mmdevice-API, die WASAPI oder die endpointvolume-API nicht zugegriffen werden kann. Für diese Clients bietet die devicetopology-API die Möglichkeit, die Topologien von Adapter Geräten zu durchlaufen, um die Audiosteuerelemente in den Geräten zu ermitteln und zu verwalten. Anwendungen, die die devicetopology-API verwenden, müssen sorgfältig entworfen werden, um das stören der Windows-audiorichtlinie zu vermeiden und die internen Konfigurationen von Audiogeräten zu beeinträchtigen, die für andere Anwendungen freigegeben sind. Weitere Informationen zur Windows-audiorichtlinie finden Sie unter [benutzermodusaudiokomponenten](user-mode-audio-components.md).
+Einige Clients erfordern jedoch möglicherweise eine explizite Kontrolle über Arten von Audiohardwaresteuerelementen, auf die nicht über die MMDevice-API, WASAPI oder die EndpointVolume-API zugegriffen werden kann. Für diese Clients bietet die DeviceTopology-API die Möglichkeit, die Topologien von Adaptergeräten zu durchlaufen, um die Audiosteuerelemente auf den Geräten zu ermitteln und zu verwalten. Anwendungen, die die DeviceTopology-API verwenden, müssen mit Vorsicht entworfen werden, um Windows Audiorichtlinie zu verhindern und die internen Konfigurationen von Audiogeräten zu beeinträchtigen, die für andere Anwendungen freigegeben werden. Weitere Informationen zu Windows Audiorichtlinie finden Sie unter [Benutzermodus-Audiokomponenten.](user-mode-audio-components.md)
 
-Die devicetopology-API stellt Schnittstellen zum Ermitteln und Verwalten der folgenden Typen von Audiosteuer Elementen in einer Geräte Topologie bereit:
+Die DeviceTopology-API stellt Schnittstellen zum Ermitteln und Verwalten der folgenden Arten von Audiosteuerelementen in einer Gerätetopologie bereit:
 
--   Automatisches erlangen von Steuerelementen
--   Bass-Steuerelement
--   Eingabeauswahl (Multiplexer)
--   Lautheit-Steuerelement
+-   Steuerung der automatischen Verstärkung
+-   Steuerelement "Linden"
+-   Eingabeselektor (Multiplexer)
+-   Lautstärkesteuerung
 -   Midrange-Steuerelement
--   Steuerelement stumm schalten
--   Ausgabe Auswahl (Demultiplexer)
--   Spitzen Meter
+-   Stummschalten des Steuerelements
+-   Ausgabeselektor (Demultiplexer)
+-   Spitzenzähler
 -   Treble-Steuerelement
 -   Volumesteuerung
 
-Außerdem ermöglicht die devicetopology-API Clients, Adapter Geräte nach Informationen zu den von Ihnen unterstützten Streamingformaten abzufragen. In der Header Datei devicetopology. h sind die Schnittstellen in der devicetopology-API definiert.
+Darüber hinaus ermöglicht die DeviceTopology-API Clients, Adaptergeräte nach Informationen zu den von ihnen unterstützten Streamformaten abzufragen. Die Headerdatei Devicetopology.h definiert die Schnittstellen in der DeviceTopology-API.
 
-Das folgende Diagramm zeigt ein Beispiel für mehrere verbundene gerätetopologien für den Teil eines PCI-Adapters, der Audiodaten von einem Mikrofon, einer Zeilen Eingabe und einem CD-Player aufzeichnet.
+Das folgende Diagramm zeigt ein Beispiel für mehrere verbundene Gerätetopologien für den Teil eines PCI-Adapters, der Audiodaten von einem Mikrofon, einer Zeileneingabe und einem CD-Player erfasst.
 
-![Beispiel für vier Topologien mit verbundenen Geräten](images/fig2.jpg)
+![Beispiel für vier Topologien für verbundene Geräte](images/fig2.jpg)
 
-Das obige Diagramm zeigt die Daten Pfade, die von den analogen Eingaben zum Systembus geleitet werden. Jedes der folgenden Geräte wird als Geräte Topologieobjekt mit einer [**idevicetopology**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) -Schnittstelle dargestellt:
+Das obige Diagramm zeigt die Datenpfade, die von den analogen Eingaben zum Systembus führen. Jedes der folgenden Geräte wird als Gerätetopologieobjekt mit einer [**IDeviceTopology-Schnittstelle**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) dargestellt:
 
--   Wave Capture-Gerät
--   Eingabe-Multiplexer-Gerät
--   Endpunkt Gerät A
--   Endpunkt Gerät B
+-   Wave capture device (Wellenerfassungsgerät)
+-   Eingabe-Multiplexergerät
+-   Endpunktgerät A
+-   Endpunktgerät B
 
-Beachten Sie, dass im Topologiediagramm Adapter Geräte (die Wellen Erfassung und die Eingabe-Multiplexer-Geräte) mit Endpunkt Geräten kombiniert werden. Über die Verbindungen zwischen Geräten werden Audiodaten von einem Gerät an das nächste weitergeleitet. Auf jeder Seite einer Verbindung befindet sich ein Connector (im Diagramm als "con" bezeichnet), über den Daten in ein Gerät eingegeben oder verlassen werden.
+Beachten Sie, dass das Topologiediagramm Adaptergeräte (Die Wellenerfassungs- und Eingabemultixergeräte) mit Endpunktgeräten kombiniert. Über die Verbindungen zwischen Geräten werden Audiodaten von einem Gerät zum nächsten übertragen. Auf jeder Seite einer Verbindung befindet sich ein Connector (im Diagramm als Con bezeichnet), über den Daten in ein Gerät gelangen oder es verlassen.
 
-Am linken Rand des Diagramms geben Signale von den Zeilen-und Mikrofon-Buben die Endpunkt Geräte ein.
+Am linken Rand des Diagramms gelangen Signale von der Zeileneingabe und den Mikrofonbuchsen in die Endpunktgeräte.
 
-Innerhalb des Wave Capture-Geräts und des Eingabe-Multiplexer-Geräts handelt es sich um streamverarbeitungs Funktionen, die in der Terminologie der devicetopology-API als Untereinheiten bezeichnet werden. Die folgenden Typen von Untereinheiten werden im vorangehenden Diagramm angezeigt:
+Innerhalb des Wave Capture-Geräts und des Eingabe-Multiplexergeräts sind Streamverarbeitungsfunktionen, die in der Terminologie der DeviceTopology-API als Untereinheiten bezeichnet werden. Die folgenden Typen von Untereinheiten werden im vorherigen Diagramm angezeigt:
 
--   Volumesteuerelement (mit der Bezeichnung Vol)
--   Stumm Steuerelement (mit der Bezeichnung stumm)
--   Multiplexer (oder Eingabeauswahl; mit Bezeichnung MUX)
--   Analog zu Digital Converter (mit der Bezeichnung ADC)
+-   Volumesteuerelement (mit der Bezeichnung Vol bezeichnet)
+-   Stummschaltungssteuerelement (mit der Bezeichnung Stummschalten bezeichnet)
+-   Multiplexer (oder Eingabeselektor mit der Bezeichnung MUX)
+-   Analog-digital-Konverter (bezeichnet als ADC)
 
-Die Einstellungen in den Untereinheiten Volume, stumm und Multiplexer können von Clients gesteuert werden, und die devicetopology-API stellt Steuerungs Schnittstellen für Clients zur Steuerung bereit. In diesem Beispiel hat die ADC-Untereinheit keine Steuerungseinstellungen. Folglich bietet die API "de vicetopology" keine Steuerungs Schnittstelle für den ADC.
+Die Einstellungen in den Untereinheiten Volume, Stummschaltung und Multiplexer können von Clients gesteuert werden, und die DeviceTopology-API stellt Steuerungsschnittstellen für Clients bereit, um sie zu steuern. In diesem Beispiel verfügt die ADC-Untereinheit über keine Steuerungseinstellungen. Daher stellt die DeviceTopology-API keine Steuerungsschnittstelle für den ADC bereit.
 
-In der Terminologie der Debug-API-API Gehören Connectors und Untereinheiten zur gleichen allgemeinen Kategorie – Parts. Alle Teile, unabhängig davon, ob es sich um Connectors oder Untereinheiten handelt, stellen einen gemeinsamen Satz von Funktionen bereit. Die devicetopology-API implementiert eine [**ipart**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipart) -Schnittstelle, die die generischen Funktionen darstellt, die von Connectors und Untereinheiten gemeinsam sind. Die API implementiert die [**IConnector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iconnector) -und [**isubunit**](/windows/win32/api/devicetopology/nn-devicetopology-isubunit) -Schnittstellen, um die spezifischen Aspekte von Connectors und Untereinheiten darzustellen.
+In der Terminologie der DeviceTopology-API gehören Connectors und Untereinheiten zur gleichen allgemeinen Kategorie– Teile. Alle Teile stellen einen gemeinsamen Satz von Funktionen bereit, unabhängig davon, ob es sich um Connectors oder Untereinheiten handelt. Die DeviceTopology-API implementiert eine [**IPart-Schnittstelle,**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipart) um die generischen Funktionen darzustellen, die Connectors und Untereinheiten gemeinsam sind. Die API implementiert die [**IConnector-**](/windows/desktop/api/Devicetopology/nn-devicetopology-iconnector) und [**ISubunit-Schnittstellen,**](/windows/win32/api/devicetopology/nn-devicetopology-isubunit) um die spezifischen Aspekte von Connectors und Untereinheiten darzustellen.
 
-Die devicetopology-API erstellt die Topologien des Wave Capture-Geräts und des Eingabe-Multiplexer-Geräts aus den kernelstreamingfiltern, die der Audiotreiber für das Betriebssystem zur Darstellung dieser Geräte verfügbar macht. (Der audioadaptertreiber implementiert **iminiportwavexxx** -und **iminiporttopology** -Schnittstellen, um die Hardware abhängigen Teile dieser Filter darzustellen. Weitere Informationen zu diesen Schnittstellen und zu KS-Filtern finden Sie in der Windows-DDK-Dokumentation.)
+Die DeviceTopology-API erstellt die Topologien des Wave capture-Geräts und des Eingabe-Multiplexergeräts aus den Kernelstreamingfiltern (KS), die der Audiotreiber dem Betriebssystem zur Darstellung dieser Geräte verfügbar macht. (Der Audioadaptertreiber implementiert **IMiniportWaveXxx-** und **IMiniportTopology-Schnittstellen,** um die hardwareabhängigen Teile dieser Filter darzustellen. Weitere Informationen zu diesen Schnittstellen und zu KS-Filtern finden Sie in der Windows DDK-Dokumentation.)
 
-Die Debug-API erstellt triviale Topologien zur Darstellung der Endpunkt Geräte A und B im vorangehenden Diagramm. Die Geräte Topologie eines Endpunkt Geräts besteht aus einem einzelnen Connector. Bei dieser Topologie handelt es sich lediglich um einen Platzhalter für das Endpunktgerät, der keine Untereinheiten für die Verarbeitung von Audiodaten enthält. In der Tat enthalten Adapter Geräte alle Untereinheiten, die von Client Anwendungen zum Steuern der Audioverarbeitung verwendet werden. Die Geräte Topologie eines Endpunkt Geräts dient hauptsächlich als Ausgangspunkt für die Untersuchung der gerätetopologien von Adapter Geräten.
+Die DeviceTopology-API erstellt triviale Topologien, um die Endpunktgeräte A und B im vorherigen Diagramm darzustellen. Die Gerätetopologie eines Endpunktgeräts besteht aus einem einzelnen Connector. Diese Topologie ist lediglich ein Platzhalter für das Endpunktgerät und enthält keine Untereinheiten für die Verarbeitung von Audiodaten. Tatsächlich enthalten Adaptergeräte alle Untereinheiten, die Clientanwendungen zum Steuern der Audioverarbeitung verwenden. Die Gerätetopologie eines Endpunktgeräts dient in erster Linie als Ausgangspunkt für die Untersuchung der Gerätetopologien von Adaptergeräten.
 
-Interne Verbindungen zwischen zwei Teilen in einer Geräte Topologie werden als Verknüpfungen bezeichnet. Die devicetopology-API stellt Methoden zum Durchlaufen von Links von einem Teil zum nächsten in einer Geräte Topologie bereit. Die API bietet auch Methoden zum Durchlaufen der Verbindungen zwischen gerätetopologien.
+Interne Verbindungen zwischen zwei Teilen in einer Gerätetopologie werden als Links bezeichnet. Die DeviceTopology-API stellt Methoden zum Durchlaufen von Links von einem Teil zum nächsten in einer Gerätetopologie bereit. Die API stellt auch Methoden zum Durchlaufen der Verbindungen zwischen Gerätetopologien bereit.
 
-Um mit der Untersuchung eines Satzes von Topologien verbundener Geräte zu beginnen, aktiviert eine Client Anwendung die **idevicetopology** -Schnittstelle eines audioendpunktgeräts. Der Connector in einem Endpunkt Gerät stellt eine Verbindung mit einem Connector in einem Audioadapter oder einem Netzwerk her. Wenn der Endpunkt eine Verbindung mit einem Gerät auf einem Audioadapter herstellt, ermöglichen die Methoden in der devicetopology-API der Anwendung, über die Verbindung zwischen dem Endpunkt und dem Adapter zu wechseln, indem Sie einen Verweis auf die **idevicetopology** -Schnittstelle des Adapter Geräts auf der anderen Seite der Verbindung erhalten. Ein Netzwerk hat dagegen keine Geräte Topologie. Eine Netzwerkverbindung leitet einen Audiostream an einen Client, der Remote auf das System zugreift.
+Um mit der Untersuchung eines Satzes verbundener Gerätetopologien zu beginnen, aktiviert eine Clientanwendung die **IDeviceTopology-Schnittstelle** eines Audioendpunktgeräts. Der Connector auf einem Endpunktgerät stellt entweder eine Verbindung mit einem Connector in einem Audioadapter oder mit einem Netzwerk her. Wenn der Endpunkt eine Verbindung mit einem Gerät auf einem Audioadapter herstellt, können die Methoden in der DeviceTopology-API der Anwendung ermöglichen, die Verbindung zwischen dem Endpunkt und dem Adapter schrittweise herzustellen, indem sie einen Verweis auf die **IDeviceTopology-Schnittstelle** des Adaptergeräts auf der anderen Seite der Verbindung erhält. Ein Netzwerk verfügt dagegen über keine Gerätetopologie. Eine Netzwerkverbindung überlässt einen Audiostream an einen Client, der remote auf das System zugreift.
 
-Die devicetopology-API ermöglicht nur den Zugriff auf die Topologien der Hardware Geräte in einem Audioadapter. Die externen Geräte am linken Rand des Diagramms und die Softwarekomponenten am rechten Rand überschreiten den Geltungsbereich der API. Die gestrichelten Linien auf beiden Seiten des Diagramms stellen die Grenzen der devicetopology-API dar. Der Client kann die API verwenden, um einen Dateipfad zu untersuchen, der vom Eingabe-Jack zum Systembus reicht, aber die API kann nicht über diese Grenzen hinweg durchdringen.
+Die DeviceTopology-API bietet nur Zugriff auf die Topologien der Hardwaregeräte in einem Audioadapter. Die externen Geräte am linken Rand des Diagramms und die Softwarekomponenten am rechten Rand liegen außerhalb des Bereichs der API. Die gestrichelten Linien auf beiden Seiten des Diagramms stellen die Grenzwerte der DeviceTopology-API dar. Der Client kann die API verwenden, um einen Datenpfad zu untersuchen, der sich von der Eingabebuchse bis zum Systembus erstreckt, aber die API kann diese Grenzen nicht überschreiten.
 
-Jeder Connector im vorangehenden Diagramm verfügt über einen zugeordneten Verbindungstyp, der den Verbindungstyp angibt, der vom Connector hergestellt wird. Daher verfügen die Connectors auf den beiden Seiten einer Verbindung immer über identische Verbindungstypen. Der Verbindungstyp wird durch einen [**ConnectorType**](/windows/win32/api/devicetopology/ne-devicetopology-connectortype) -Enumerationswert angegeben – physischer \_ externer, physischer interner, Software-Fixed, Software-e/a \_ \_ \_ oder Netzwerk. Die Verbindungen zwischen dem Eingabe-Multiplexer-Gerät und den Endpunkt Geräten A und B sind physischer \_ extern, d. h. die Verbindung stellt eine physische Verbindung mit einem externen Gerät dar (d. h. einen AudioJack, der vom Benutzer aufgerufen werden kann). Die Verbindung mit dem analogen Signal vom internen CD-Player ist vom Typ Physical \_ internal, was eine physische Verbindung mit einem zusätzlichen Gerät angibt, das im System Chassis installiert ist. Die Verbindung zwischen dem Wave Capture-Gerät und dem Eingabe-Multiplexer-Gerät ist vom Typ "Software \_ Fixed", was auf eine permanente Verbindung hinweist, die fest ist und nicht unter der Software Steuerung konfiguriert werden kann. Zum Schluss ist die Verbindung mit dem Systembus auf der rechten Seite des Diagramms vom Typ Software-e \_ /a, was darauf hinweist, dass die Daten-e/a für die Verbindung von einem DMA-Modul unter Software Steuerung implementiert wird. (Das Diagramm enthält kein Beispiel für einen Netzwerk Verbindungstyp.)
+Jeder Connector im obigen Diagramm verfügt über einen zugeordneten Verbindungstyp, der den Typ der Verbindung angibt, die vom Connector hergestellt wird. Daher verfügen die Connectors auf den beiden Seiten einer Verbindung immer über identische Verbindungstypen. Der Verbindungstyp wird durch einen [**ConnectorType-Enumerationswert**](/windows/win32/api/devicetopology/ne-devicetopology-connectortype) angegeben: Physisch \_ extern, physisch \_ intern, Software \_ fixed, \_ Software-E/A oder Netzwerk. Die Verbindungen zwischen dem Eingabe-Multiplexergerät und den Endpunktgeräten A und B sind vom Typ Physisch \_ extern. Dies bedeutet, dass die Verbindung eine physische Verbindung mit einem externen Gerät darstellt (d. h. eine vom Benutzer zugängliche Audiobuchse). Die Verbindung mit dem analogen Signal vom internen CD-Player ist vom Typ Physisch \_ intern, was auf eine physische Verbindung mit einem Hilfsgerät hinweist, das im Systemchassis installiert ist. Die Verbindung zwischen dem Wave capture-Gerät und dem Eingabe-Multiplexergerät ist vom Typ Software \_ Fixed. Dies gibt eine permanente Verbindung an, die behoben ist und nicht unter Softwaresteuerung konfiguriert werden kann. Schließlich ist die Verbindung mit dem Systembus auf der rechten Seite des Diagramms vom Typ \_ Software-E/A, der angibt, dass die Daten-E/A für die Verbindung von einer DMA-Engine unter Softwaresteuerung implementiert wird. (Das Diagramm enthält kein Beispiel für einen Netzwerkverbindungstyp.)
 
-Der Client beginnt mit dem Durchlaufen eines Daten Pfads auf dem Endpunkt Gerät. Zuerst erhält der Client eine [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle, die das Endpunkt Gerät darstellt, wie in Auflisten von [Audiogeräten](enumerating-audio-devices.md)erläutert. Um die **idevicetopology** -Schnittstelle für das Endpunkt Gerät abzurufen, ruft der Client die Methode " [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) " mit dem Parameter " *IID* " auf, der auf refi IID \_ idevicetopology festgelegt ist.
+Der Client beginnt mit dem Durchlaufen eines Datenpfads auf dem Endpunktgerät. Zunächst ruft der Client eine [**IMMDevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) ab, die das Endpunktgerät darstellt, wie unter [Auflisten von Audiogeräten](enumerating-audio-devices.md)erläutert. Um die **IDeviceTopology-Schnittstelle** für das Endpunktgerät abzurufen, ruft der Client die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) auf, wobei der Parameter *iid* auf REFIID IID \_ IDeviceTopology festgelegt ist.
 
-Im Beispiel im vorangehenden Diagramm enthält das Eingabe-Multiplexer-Gerät alle Hardware Steuerelemente (Volume, stumm und Multiplexer) für die Erfassungsdaten Ströme von den Zeilen-und Mikrofon-Buben. Im folgenden Codebeispiel wird veranschaulicht, wie Sie die **idevicetopology** -Schnittstelle für das Eingabe-Multiplexer-Gerät von der **immdevice** -Schnittstelle für das Endpunkt Gerät für die Zeilen Eingabe oder das Mikrofon abrufen:
+Im Beispiel im vorherigen Diagramm enthält das Eingabe-Multiplexergerät alle Hardwaresteuerelemente (Lautstärke, Stummschaltung und Multiplexer) für die Erfassungsstreams aus den Zeileneingabe- und Mikrofonbuchsen. Das folgende Codebeispiel zeigt, wie Sie die **IDeviceTopology-Schnittstelle** für das Eingabemultixergerät von der **IMMDevice-Schnittstelle** für das Endpunktgerät für die Zeileneingabe oder das Mikrofon abrufen:
 
 
 ```C++
@@ -149,15 +149,15 @@ Exit:
 
 
 
-Die Funktion "gethardwaredevicetopology" im vorangehenden Codebeispiel führt die folgenden Schritte aus, um die **idevicetopology** -Schnittstelle für das Eingabe-Multiplexer-Gerät abzurufen:
+Die GetHardwareDeviceTopology-Funktion im vorherigen Codebeispiel führt die folgenden Schritte aus, um die **IDeviceTopology-Schnittstelle** für das Eingabe-Multiplexergerät abzurufen:
 
-1.  Wenden Sie die **immdevice:: Aktivierungs** -Methode an, um die **idevicetopology** -Schnittstelle für das Endpunkt Gerät abzurufen.
-2.  Mit der im vorherigen Schritt erhaltenen **idevicetopology** -Schnittstelle können Sie die [**idevicetopology:: getconnector**](/windows/desktop/api/Devicetopology/nf-devicetopology-idevicetopology-getconnector) -Methode aufrufen, um die **IConnector** -Schnittstelle des einzelnen Connector (Connector-Nummer 0) im Endpunkt Gerät abzurufen.
-3.  Mit der **IConnector** -Schnittstelle, die Sie im vorherigen Schritt abgerufen haben, können Sie die [**IConnector:: getconnectedto**](/windows/desktop/api/Devicetopology/nf-devicetopology-iconnector-getconnectedto) -Methode aufrufen, um die **IConnector** -Schnittstelle des Konnektors im Eingabe-Multiplexer-Gerät abzurufen.
-4.  Fragen Sie die **IConnector** -Schnittstelle ab, die im vorherigen Schritt für die **ipart** -Schnittstelle abgerufen wurde
-5.  Mit der im vorherigen Schritt abzurufenden **ipart** -Schnittstelle können Sie die [**ipart:: gettopologyobject**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-gettopologyobject) -Methode aufrufen, um die **idevicetopology** -Schnittstelle für das eingabemultiplexer-Gerät abzurufen.
+1.  Rufen Sie die **IMMDevice::Activate-Methode** auf, um die **IDeviceTopology-Schnittstelle** für das Endpunktgerät abzurufen.
+2.  Rufen Sie mit der **IDeviceTopology-Schnittstelle** aus dem vorherigen Schritt die [**IDeviceTopology::GetConnector-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-idevicetopology-getconnector) auf, um die **IConnector-Schnittstelle** des einzelnen Connectors (Connectornummer 0) auf dem Endpunktgerät abzurufen.
+3.  Rufen Sie mit der **IConnector-Schnittstelle** aus dem vorherigen Schritt die [**IConnector::GetConnectedTo-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-iconnector-getconnectedto) auf, um die **IConnector-Schnittstelle** des Connectors im Eingabe-Multiplexergerät abzurufen.
+4.  Fragen Sie die im vorherigen Schritt abgerufene **IConnector-Schnittstelle** nach ihrer **IPart-Schnittstelle** ab.
+5.  Rufen Sie mit der im vorherigen Schritt abgerufenen **IPart-Schnittstelle** die [**IPart::GetTopologyObject-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-gettopologyobject) auf, um die **IDeviceTopology-Schnittstelle** für das Eingabe-Multiplexergerät abzurufen.
 
-Bevor der Benutzer aus dem Mikrofon im vorangehenden Diagramm aufzeichnen kann, muss die Client Anwendung sicherstellen, dass der Multiplexer die Mikrofon Eingabe auswählt. Im folgenden Codebeispiel wird gezeigt, wie ein Client den Dateipfad vom Mikrofon durchlaufen kann, bis der Multiplexer gefunden wird, der dann die Mikrofon Eingabe auswählen kann:
+Bevor der Benutzer über das Mikrofon im vorherigen Diagramm aufzeichnen kann, muss die Clientanwendung sicherstellen, dass der Multiplexer die Mikrofoneingabe auswählt. Das folgende Codebeispiel zeigt, wie ein Client den Datenpfad vom Mikrofon durchlaufen kann, bis er den Multiplexer findet, den er dann programmiert, um die Mikrofoneingabe auszuwählen:
 
 
 ```C++
@@ -328,47 +328,47 @@ Exit:
 
 
 
-Die devicetopology-API implementiert eine [**iaudioinputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector) -Schnittstelle, um einen Multiplexer (z. b. den im vorangehenden Diagramm) zu kapseln. (Eine [**iaudiooutputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector) -Schnittstelle kapselt einen Demultiplexer.) Im vorangehenden Codebeispiel fragt die innere Schleife der selectcapturedevice-Funktion jede gefundene Untereinheit ab, um zu ermitteln, ob die Untereinheit ein Multiplexer ist. Wenn es sich bei der Teil Einheit um einen Multiplexer handelt, ruft die Funktion die [**iaudioinputselector:: setSelection**](/windows/desktop/api/Devicetopology/nf-devicetopology-iaudioinputselector-setselection) -Methode auf, um die Eingabe auszuwählen, die vom Endpunkt Gerät aus eine Verbindung mit dem Stream herstellt.
+Die DeviceTopology-API implementiert eine [**IAudioInputSelector-Schnittstelle,**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector) um einen Multiplexer zu kapseln, z. B. den im vorherigen Diagramm. (Eine [**IAudioOutputSelector-Schnittstelle**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector) kapselt einen Demultiplexer.) Im vorherigen Codebeispiel fragt die innere Schleife der SelectCaptureDevice-Funktion jede gefundene Untereinheit ab, um zu ermitteln, ob die Untereinheit ein Multiplexer ist. Wenn die Untereinheit ein Multiplexer ist, ruft die Funktion die [**IAudioInputSelector::SetSelection-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-iaudioinputselector-setselection) auf, um die Eingabe auszuwählen, die vom Endpunktgerät eine Verbindung mit dem Stream herstellt.
 
-Im vorangehenden Codebeispiel durchläuft jede Iterationen der äußeren Schleife eine Geräte Topologie. Beim Durchlaufen der gerätetopologien im vorangehenden Diagramm durchläuft die erste Iteration das Eingabe-Multiplexer-Gerät, und die zweite Iteration durchläuft das Wave Capture-Gerät. Die Funktion wird beendet, wenn Sie den Connector am rechten Rand des Diagramms erreicht. Die Beendigung tritt auf, wenn die Funktion einen Connector mit einem Software- \_ IO-Verbindungstyp erkennt. Dieser Verbindungstyp gibt den Punkt an, an dem sich das Adapter Gerät mit dem Systembus verbindet.
+Im vorherigen Codebeispiel durchläuft jede Iteration der äußeren Schleife eine Gerätetopologie. Beim Durchlaufen der Gerätetopologien im vorherigen Diagramm durchläuft die erste Iteration das Eingabe-Multiplexergerät, und die zweite Iteration durchläuft das Wellenerfassungsgerät. Die Funktion wird beendet, wenn sie den Connector am rechten Rand des Diagramms erreicht. Die Beendigung tritt auf, wenn die Funktion einen Connector mit einem \_ Software-E/A-Verbindungstyp erkennt. Dieser Verbindungstyp identifiziert den Punkt, an dem das Adaptergerät eine Verbindung mit dem Systembus herstellt.
 
-Durch den Aufrufen der [**ipart:: getParser Type**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getparttype) -Methode im vorangehenden Codebeispiel wird ein **iparser Type** -Enumerationswert abgerufen, der angibt, ob es sich bei dem aktuellen Teil um einen Connector oder eine Audioverarbeitungs-Untereinheit handelt.
+Der Aufruf der [**IPart::GetPartType-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getparttype) im vorherigen Codebeispiel ruft einen **IPartType-Enumerationswert** ab, der angibt, ob der aktuelle Teil ein Connector oder eine Audioverarbeitungsuntereinheit ist.
 
-In der inneren-Schleife im vorangehenden Codebeispiel wird durch Aufrufen der [**ipart:: enumpartsoutgoing**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-enumpartsoutgoing) -Methode die Verknüpfung zwischen einem Teil und dem nächsten Schritt überschritten. (Es gibt auch eine [**ipart:: enumpartsincoming**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-enumpartsincoming) -Methode, die in umgekehrter Richtung verläuft.) Diese Methode ruft ein [**ipartslist**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipartslist) -Objekt ab, das eine Liste aller ausgehenden Teile enthält. Alle Teile, die von der selectcapturedevice-Funktion in einem Erfassungsgerät erwartet werden, haben jedoch immer genau einen ausgehenden Teil. Folglich fordert der nachfolgende Aufrufe von [**ipartslist:: GetPart**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipartslist-getpart) immer den ersten Teil in der Liste an, Teil Nummer 0, da die Funktion annimmt, dass dies der einzige Teil in der Liste ist.
+Die innere Schleife im vorherigen Codebeispiel durch Aufrufen der [**IPart::EnumPartsOutgoing-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-enumpartsoutgoing) über den Link von einem Teil zum nächsten. (Es gibt auch eine [**IPart::EnumPartsIncoming-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-enumpartsincoming) zum Schrittweisen in entgegengesetzter Richtung.) Diese Methode ruft ein [**IPartsList-Objekt**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipartslist) ab, das eine Liste aller ausgehenden Teile enthält. Jeder Teil, den die SelectCaptureDevice-Funktion auf einem Erfassungsgerät erwartet, hat jedoch immer genau einen ausgehenden Teil. Daher fordert der nachfolgende Aufruf von [**IPartsList::GetPart**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipartslist-getpart) immer den ersten Teil in der Liste an, Teil 0, da die Funktion davon ausgeht, dass dies der einzige Teil in der Liste ist.
 
-Wenn die selectcapturedevice-Funktion auf eine Topologie stößt, für die diese Annahme nicht gültig ist, kann die Funktion das Gerät möglicherweise nicht ordnungsgemäß konfigurieren. Um einen solchen Fehler zu vermeiden, kann eine allgemeinere Version der-Funktion folgende Aktionen ausführen:
+Wenn die SelectCaptureDevice-Funktion auf eine Topologie stößt, für die diese Annahme ungültig ist, kann die Funktion das Gerät möglicherweise nicht ordnungsgemäß konfigurieren. Um einen solchen Fehler zu vermeiden, kann eine allgemeinere Version der Funktion wie folgt funktionieren:
 
--   Aufrufen der [**ipartslist:: GetCount**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipartslist-getcount) -Methode, um die Anzahl der ausgehenden Teile zu bestimmen.
--   Für jeden ausgehenden Teil muss **ipartslist:: GetPart** aufgerufen werden, um zu beginnen, den Daten Pfad zu durchlaufen, der aus dem Teil resultiert.
+-   Rufen Sie die [**IPartsList::GetCount-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipartslist-getcount) auf, um die Anzahl ausgehender Teile zu bestimmen.
+-   Rufen Sie für jeden ausgehenden Teil **IPartsList::GetPart** auf, um mit dem Durchlaufen des Datenpfads zu beginnen, der vom Teil führt.
 
-Einige, aber nicht unbedingt alle Teile verfügen über zugeordnete Hardware Steuerelemente, die von Clients festgelegt oder festgelegt werden können. Ein bestimmter Teil kann keine, eine oder mehrere Hardware Steuerelemente enthalten. Ein Hardware Steuerelement wird durch das folgende Schnittstellen Paar dargestellt:
+Einige, aber nicht unbedingt alle Teile verfügen über zugeordnete Hardwaresteuerelemente, die Clients festlegen oder abrufen können. Ein bestimmter Teil kann über 0 (null), eine oder mehrere Hardwaresteuerelemente verfügen. Ein Hardwaresteuerelement wird durch das folgende Schnittstellenpaar dargestellt:
 
--   Eine generische Steuerungs Schnittstelle ( [**icontrolinterface**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolinterface)), die über Methoden verfügt, die allen Hardware Steuerelementen gemeinsam sind.
--   Eine Funktions spezifische Schnittstelle (z. b. [**iaudiovolumelevel**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)), die die Steuerelement Parameter für einen bestimmten Typ von Hardware Steuerung (z. b. ein volumesteuerelement) verfügbar macht.
+-   Eine generische Steuerelementschnittstelle, [**IControlInterface,**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolinterface)mit Methoden, die allen Hardwaresteuerelementen gemeinsam sind.
+-   Eine funktionsspezifische Schnittstelle (z. [**B. IAudioVolumeLevel),**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)die die Steuerungsparameter für einen bestimmten Typ von Hardwaresteuerelement (z. B. ein Volumesteuerelement) verfügbar macht.
 
-Zum Auflisten der Hardware Steuerelemente für einen Teil ruft der Client zuerst die [**ipart:: getcontrolinterfacecount**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getcontrolinterfacecount) -Methode auf, um die Anzahl der Hardware Steuerelemente zu ermitteln, die mit dem Teil verknüpft sind. Als Nächstes führt der Client eine Reihe von Aufrufen der [**ipart:: getcontrolinterface**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getcontrolinterface) -Methode aus, um die **icontrolinterface** -Schnittstelle für jedes Hardware Steuerelement abzurufen. Schließlich ruft der Client die Funktions spezifische Schnittstelle für jedes Hardware Steuerelement ab, indem er die [**icontrolinterface:: getiid**](/windows/desktop/api/Devicetopology/nf-devicetopology-icontrolinterface-getiid) -Methode zum Abrufen der Schnittstellen-ID anfordert. Der Client ruft die [**ipart:: Aktivierungs**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-activate) -Methode mit dieser ID auf, um die Funktions spezifische Schnittstelle abzurufen.
+Um die Hardwaresteuerelemente für einen Teil aufzulisten, ruft der Client zuerst die [**IPart::GetControlInterfaceCount-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getcontrolinterfacecount) auf, um die Anzahl der Hardwaresteuerelemente zu bestimmen, die dem Teil zugeordnet sind. Als Nächstes ruft der Client die [**IPart::GetControlInterface-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getcontrolinterface) auf, um die **IControlInterface-Schnittstelle** für jedes Hardwaresteuerelement abzurufen. Schließlich ruft der Client die funktionsspezifische Schnittstelle für jedes Hardwaresteuerelement ab, indem er die [**IControlInterface::GetIID-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-icontrolinterface-getiid) aufruft, um die Schnittstellen-ID abzurufen. Der Client ruft die [**IPart::Activate-Methode**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-activate) mit dieser ID auf, um die funktionsspezifische Schnittstelle abzurufen.
 
-Ein Teil, bei dem es sich um einen Connector handelt, kann eine der folgenden Funktions spezifischen Steuerungs Schnittstellen unterstützen:
+Ein Teil, der ein Connector ist, unterstützt möglicherweise eine der folgenden funktionsspezifischen Steuerelementschnittstellen:
 
--   [**"Iksformatsupport"**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksformatsupport)
--   [**"Iksjackdescription"**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksjackdescription)
+-   [**IKsFormatSupport**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksformatsupport)
+-   [**IKsJackDescription**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksjackdescription)
 
-Ein Teil, bei dem es sich um eine Untereinheit handelt, kann eine oder mehrere der folgenden Funktions spezifischen Steuerungs Schnittstellen unterstützen:
+Ein Teil, der eine Untereinheit ist, kann eine oder mehrere der folgenden funktionsspezifischen Steuerelementschnittstellen unterstützen:
 
--   [**Iaudioautogaincontrol**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioautogaincontrol)
--   [**Iaudiobass**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiobass)
--   [**Iaudiochannelconfig**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiochannelconfig)
--   [**Iaudioinputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector)
--   [**Iaudioloudness**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioloudness)
--   [**Iaudiomidrange**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiomidrange)
--   [**Iaudiomute**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiomute)
--   [**Iaudiooutputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector)
--   [**Iaudiopeakmeter**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiopeakmeter)
--   [**Iaudiotreble**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiotreble)
--   [**Iaudiovolumelevel**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)
--   [**Idevicespecificproperty**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicespecificproperty)
+-   [**IAudioAutoGainControl**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioautogaincontrol)
+-   [**IAudioBass**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiobass)
+-   [**IAudioChannelConfig**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiochannelconfig)
+-   [**IAudioInputSelector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector)
+-   [**IAudioLoudness**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioloudness)
+-   [**IAudioMidrange**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiomidrange)
+-   [**IAudioMute**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiomute)
+-   [**IAudioOutputSelector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector)
+-   [**IAudioPeakMeter**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiopeakmeter)
+-   [**IAudioTreble**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiotreble)
+-   [**IAudioVolumeLevel**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)
+-   [**IDeviceSpecificProperty**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicespecificproperty)
 
-Ein Teil unterstützt die **idevicespecificproperty** -Schnittstelle nur dann, wenn das zugrunde liegende Hardware Steuerelement über einen gerätespezifischen Steuerelement Wert verfügt und das Steuerelement nicht durch eine andere Funktions spezifische Schnittstelle in der vorangehenden Liste dargestellt werden kann. In der Regel ist eine gerätespezifische Eigenschaft nur für einen Client nützlich, der die Bedeutung des Eigenschafts Werts aus Informationen wie z. b. dem Teiltyp, dem Part-Untertyp und dem Teilnamen ableiten kann. Der Client kann diese Informationen abrufen, indem er die Methoden [**ipart:: getparamettype**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getparttype), [**ipart:: getsubtype**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getsubtype)und [**ipart:: GetName**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getname) anruft.
+Ein Teil unterstützt die **IDeviceSpecificProperty-Schnittstelle** nur, wenn das zugrunde liegende Hardwaresteuerelement über einen gerätespezifischen Steuerelementwert verfügt und das Steuerelement nicht angemessen durch eine andere funktionsspezifische Schnittstelle in der vorherigen Liste dargestellt werden kann. In der Regel ist eine gerätespezifische Eigenschaft nur für einen Client nützlich, der die Bedeutung des Eigenschaftswerts aus Informationen wie dem Teiltyp, Teiluntertyp und Teilnamen ableiten kann. Der Client kann diese Informationen abrufen, indem er die Methoden [**IPart::GetPartType,**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getparttype) [**IPart::GetSubType**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getsubtype)und [**IPart::GetName aufruft.**](/windows/desktop/api/Devicetopology/nf-devicetopology-ipart-getname)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,33 +1,33 @@
 ---
-description: NLA ist in der Lage, Clients eine Benachrichtigung über Netzwerkadressen Änderungen bereitzustellen. Der Mechanismus, der zum Anfordern von Benachrichtigungen über Änderungs Ereignisse verwendet wird, ist eine Kombination der Funktionen wsalookupservicebegin, wsanspioctl und WSALookupServiceNext.
+description: Die NLA kann ihren Clients Benachrichtigungen über Änderungen des Netzwerkspeicherorts bereitstellen. Der Mechanismus zum Anfordern von Benachrichtigungen über Änderungsereignisse ist eine Kombination der Funktionen WSALookupServiceBegin, WSANSPIoctl und WSALookupServiceNext.
 ms.assetid: fed5a90d-0bc5-46e7-b3d3-edc4b303d305
 title: Benachrichtigung von NLA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 13ee0ad0530725db27c8f5df39b6fc573f7e97c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c8e7309fe6845d822702ffd81448999e2472ebdd37a6949812f622110ee9d42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118822665"
 ---
 # <a name="notification-from-nla"></a>Benachrichtigung von NLA
 
-NLA ist in der Lage, Clients eine Benachrichtigung über Netzwerkadressen Änderungen bereitzustellen. Der Mechanismus, der zum Anfordern von Benachrichtigungen über Änderungs Ereignisse verwendet wird, ist eine Kombination der Funktionen [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina), [**wsanspioctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl)und [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) .
+Die NLA kann ihren Clients Benachrichtigungen über Änderungen des Netzwerkspeicherorts bereitstellen. Der Mechanismus zum Anfordern von Benachrichtigungen über Änderungsereignisse ist eine Kombination der Funktionen [**WSALookupServiceBegin,**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) [**WSANSPIoctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl)und [**WSALookupServiceNext.**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta)
 
-Um eine Änderungs Benachrichtigung von NLA zu erhalten, muss ein Client zuerst [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) aufrufen, um ein gültiges NLA SP-Nachschlage Handle zu erhalten. Anschließend kann der Client [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) oder [**wsanspioctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) in beliebiger Reihenfolge abrufen. um sich für eine Benachrichtigung zu registrieren, müssen Sie die **wsanspioctl** -Funktion mit dem \_ \_ \_ im Parameter " *dwcontrolcode* " festgelegten Code der "sio NSP Notify Change Control" aufrufen
+Um Änderungsbenachrichtigungen von der NLA zu erhalten, muss ein Client zuerst [**WSALookupServiceBegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) aufrufen, um ein gültiges NLA-SP-Suchhandle abzurufen. Als Nächstes kann der Client [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) oder [**WSANSPIoctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) in beliebiger Reihenfolge aufrufen. Um sich für Benachrichtigungen zu registrieren, rufen Sie die **WSANSPIoctl-Funktion** mit dem \_ SIO NSP \_ NOTIFY \_ CHANGE-Steuerungscode auf, der im *dwControlCode-Parameter* festgelegt ist.
 
-Die [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) -Funktion gibt WSA \_ E \_ nicht \_ mehr als festgelegter Trennzeichen zurück. Wenn ein Client mithilfe der [**wsanspioctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) -Funktion für eine Benachrichtigung registriert wurde und **WSALookupServiceNext** WSA \_ E nicht mehr zurückgibt, gibt der Aufruf von \_ \_ **WSALookupServiceNext** erneut an, ob eine Änderung aufgetreten ist:
+Die [**WSALookupServiceNext-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) gibt WSA \_ E NO MORE als \_ \_ Set-Trennzeichen zurück. Wenn sich ein Client mithilfe der [**WSANSPIoctl-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) für die Benachrichtigung registriert hat und **WSALookupServiceNext** WSA E NO MORE zurückgibt, \_ zeigt der \_ \_ aufrufende **WSALookupServiceNext** erneut an, ob eine Änderung aufgetreten ist:
 
--   Wenn seit dem vorherigen WSA e keine Änderungen vorgenommen \_ wurden \_ \_ , wird WSA \_ e \_ nicht \_ mehr zurückgegeben.
--   Wenn eine Änderung aufgetreten ist, oder wenn eine Änderung stattgefunden hat und ein Abruf Vorgang erfolgt ist, gibt der [**WSALookupServiceNext**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) -Funktionsaufrufs Netzwerke als [**wsaqueryset**](/windows/desktop/api/Winsock2/ns-winsock2-wsaquerysetw) -Strukturen zurück, wobei eines der folgenden Flags im **dwoutputflags** -Member festgelegt wird:
+-   Wenn seit dem vorherigen WSA E NO MORE keine Änderungen vorgenommen \_ \_ \_ wurden, wird WSA \_ E NO MORE \_ \_ zurückgegeben.
+-   Wenn eine Änderung aufgetreten ist oder eine Änderung aufgetreten ist und ein Abrufaufruf erfolgt ist, gibt der [**WSALookupServiceNext-Funktionsaufruf**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicenexta) Netzwerke als [**WSAQUERYSET-Strukturen**](/windows/desktop/api/Winsock2/ns-winsock2-wsaquerysetw) zurück, wobei eines der folgenden Flags in seinem **dwOutputFlags-Member** festgelegt ist:
 
-    <dl> Ergebnis \_ wird \_ hinzugefügt  
-    Ergebnis \_ wurde \_ geändert  
-    Das Ergebnis \_ ist \_ gelöscht.  
+    <dl> ERGEBNIS \_ \_ HINZUGEFÜGT  
+    ERGEBNIS \_ \_ GEÄNDERT  
+    ERGEBNIS \_ WIRD \_ GELÖSCHT  
     </dl>
 
-Die Änderungs Benachrichtigung wird für alle Felder bereitgestellt, die sich geändert haben, seit das NLA-Nachschlage Handle mit dem [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) -Funktionsbefehl abgerufen wurde, oder seit der letzten Enumeration, die zu dem WSA-Fehler geführt hat, \_ \_ nicht \_ mehr. Wenn alle geänderten Netzwerkadressen Informationen bereitgestellt werden, wird WSA \_ E \_ nicht \_ mehr zurückgegeben. Clients können jederzeit einen [**wsanspioctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) -Funktionsaufruf für das gleiche Abfrage Handle für das gleiche Abfrage handle wiederholen, wobei das \_ sicherheitsflag für die bilitätsnsp- \_ Benachrichtigung \_ festgelegt ist. Diese Funktion ermöglicht es einem Client, das Abfrage handle fortlaufend wiederzuverwenden. Dadurch wird der Client nicht mehr in der Lage sein, Informationen zum Änderungs Zustand selbst zu erhalten. Wenn ein Client keine Änderungs Benachrichtigungen mehr benötigt, sollte er das Abfrage Handle mithilfe der [**WSALookupServiceEnd**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupserviceend) -Funktion schließen.
+Änderungsbenachrichtigungen werden für alle Felder bereitgestellt, die sich seit dem Abrufen des NLA-Suchhandle mit dem [**WSALookupServiceBegin-Funktionsaufruf**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) oder seit der letzten Enumeration geändert haben, die zum \_ WSA E \_ NO \_ MORE-Fehler geführt hat. Wenn alle informationen zum geänderten Netzwerkspeicherort bereitgestellt werden, wird WSA \_ E \_ NO MORE \_ zurückgegeben. Clients können einen [**WSANSPIoctl-Funktionsaufruf**](/windows/desktop/api/Winsock2/nf-winsock2-wsanspioctl) für dasselbe Abfragehandle jederzeit nacheinander erneut ausführen, wobei das \_ SIO NSP \_ NOTIFY \_ CHANGE-Flag festgelegt ist. Diese Funktion ermöglicht es einem Client, das Abfragehandle fortlaufend wiederzuverwenden, sodass der Client keine Änderungszustandsinformationen selbst verwalten muss. Sobald ein Client keine Änderungsbenachrichtigungen mehr benötigt, sollte er das Abfragehandle mithilfe der [**WSALookupServiceEnd-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupserviceend) schließen.
 
  
 

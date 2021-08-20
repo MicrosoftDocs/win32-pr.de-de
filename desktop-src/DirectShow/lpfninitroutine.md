@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.
+description: Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.
 ms.assetid: 30196657-38ab-42ca-b673-b0894999e566
-title: Lpfninitroutine-Funktionszeiger (ComBase. h)
+title: LPFNInitRoutine-Funktionszeiger (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Combase.h
-ms.openlocfilehash: 375660399180196e2434030ea7551733affc4062
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c07f22b9dc261fe9d7b073a1f1ab93aa49e482fb70c53288aeaf606e6be9aec9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685080"
 ---
-# <a name="lpfninitroutine-function-pointer"></a>Lpfninitroutine-Funktionszeiger
+# <a name="lpfninitroutine-function-pointer"></a>LPFNInitRoutine-Funktionszeiger
 
-Ein Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.
+Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ typedef void ( CALLBACK *LPFNInitRoutine)(
 
 <dl> <dt>
 
-*bloading* 
+*bLoading* 
 </dt> <dd>
 
-**True** , wenn die dll geladen wird, **false** , wenn die DLL entladen wird.
+**TRUE,** wenn die DLL geladen wird, **FALSE,** wenn die DLL entladen wird.
 
 </dd> <dt>
 
 *rclsid* 
 </dt> <dd>
 
-Zeiger auf das CLISD des Objekts, das in der [**cfactorytemplate:: m \_ CLSID**](cfactorytemplate-m-clsid.md) -Element Variablen angegeben ist.
+Zeiger auf die CLISD des Objekts, angegeben in der [**CFactoryTemplate::m \_ ClsID-Membervariable.**](cfactorytemplate-m-clsid.md)
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Dieser Funktionszeiger gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Combase.h (include Streams.h)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Dieser Funktionszeiger gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

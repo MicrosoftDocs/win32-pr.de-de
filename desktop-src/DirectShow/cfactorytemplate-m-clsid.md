@@ -1,7 +1,7 @@
 ---
 description: Zeiger auf die CLSID des Objekts.
 ms.assetid: 629675e9-4b8a-4c1d-a2be-9eb2764ff5a0
-title: 'Cfactoriytemplate:: m_ClsID Member (ComBase. h)'
+title: CFactoryTemplate::m_ClsID-Member (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7b7d205525c0aebaa1217bb6ebffc785f0e16baa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: efe09727ba26a85c7318d67f003accdaea994b87b7c9a5e5718637ac1de91c4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074223"
 ---
-# <a name="cfactorytemplatem_clsid-member"></a>Cfactor ytemplate:: m \_ CLSID-Element
+# <a name="cfactorytemplatem_clsid-member"></a>CFactoryTemplate::m \_ ClsID-Member
 
 Zeiger auf die CLSID des Objekts.
 
@@ -42,8 +42,8 @@ const CLSID *m_ClsID;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ const CLSID *m_ClsID;
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

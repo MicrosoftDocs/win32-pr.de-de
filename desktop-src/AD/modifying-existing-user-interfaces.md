@@ -1,30 +1,30 @@
 ---
 title: Ändern vorhandener Benutzeroberflächen
-description: Im Ergebnisbereich des MMC-Snap-Ins "Active Directory-Benutzer und-Computer" werden mehrere Spalten mit Attributdaten für Objekte in einem Container angezeigt, z. b. die Attribute "Name" und "Description".
+description: Im Ergebnisbereich des Active Directory-Benutzer und -Computer MMC-Snap-Ins werden mehrere Spalten mit Attributdaten für Objekte innerhalb eines Containers angezeigt, z. B. die Attribute Name und Description.
 ms.assetid: 55f4ae82-c380-42a9-beba-047ffd0131eb
 ms.tgt_platform: multiple
 keywords:
-- Ändern vorhandener Benutzeroberflächen anzeigen
-- AD-Snap-in "Benutzer und Computer", Ändern der Anzeige
-- AD-Snap-in "Benutzer und Computer", Hinzufügen von Spalten
+- Ändern vorhandener Benutzeroberflächen in AD
+- Benutzer- und Computer-Snap-In AD, Anzeige ändern
+- Benutzer- und Computer-Snap-In AD, Hinzufügen von Spalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd0765988a9ceed3e98966091ad94b868b96fd88
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dcf6ef4743009086ae19148c42a8addc5974e4ac833cdad8eee675fdce76a5f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025868"
 ---
 # <a name="modifying-existing-user-interfaces"></a>Ändern vorhandener Benutzeroberflächen
 
-Im Ergebnisbereich des MMC-Snap-Ins "Active Directory-Benutzer und-Computer" werden mehrere Spalten mit Attributdaten für Objekte in einem Container angezeigt, z. b. die Attribute " **Name** " und " **Description** ". Das Snap-in ermöglicht dem Benutzer das Hinzufügen und Entfernen der Spalten, die im Ergebnisbereich des Snap-Ins angezeigt werden.
+Im Ergebnisbereich des Active Directory-Benutzer und -Computer MMC-Snap-Ins werden mehrere Spalten mit Attributdaten für Objekte innerhalb eines Containers angezeigt, z. B. die Attribute **Name** und **Description.** Mit dem Snap-In kann der Benutzer die im Ergebnisbereich des Snap-Ins angezeigten Spalten hinzufügen und entfernen.
 
-Um die Anzeige zu ändern, verwendet der Benutzer das Pulldownmenü **anzeigen** und wählt **Spalten hinzufügen/entfernen** aus. Im Dialogfeld **Spalten hinzufügen/entfernen** finden Sie eine Liste der Spalten, aus denen der Benutzer auswählen kann, um ihn im Ergebnisbereich anzuzeigen.
+Um die Anzeige zu ändern, verwendet der Benutzer das Pull-Down-Menü **Ansicht** und wählt **Spalten hinzufügen/entfernen** aus. Im Dialogfeld **Spalten hinzufügen/entfernen** gibt es eine Liste von Spalten, aus denen der Benutzer auswählen kann, um sie im Ergebnisbereich anzuzeigen.
 
-Das MMC-Snap-in "Active Directory-Benutzer und-Computer", das in Windows Server 2003, Standard Edition, Windows Server 2003, Enterprise Edition und Windows Server 2003, Datacenter Edition enthalten ist, bietet die Möglichkeit, die Liste der Spalten zu ändern, die im Ergebnisbereich des Snap-Ins für einen Container angezeigt werden können. Diese Funktion ist nur vorhanden, wenn das-Snap-in auf eine Gesamtstruktur mit Windows Server 2003-Schema ausgerichtet ist.
+Das Active Directory-Benutzer und -Computer MMC-Snap-In, das in Windows Server 2003, Standard Edition, Windows Server 2003, Enterprise Edition und Windows Server 2003 Datacenter Edition enthalten ist, bietet die Möglichkeit, die Liste der Spalten zu ändern, die im Ergebnisbereich des Snap-Ins für einen Container angezeigt werden können. Dieses Feature ist nur vorhanden, wenn das Snap-In auf eine Gesamtstruktur mit Windows Server 2003-Schema ausgerichtet ist.
 
-Um der Liste eine Spalte hinzuzufügen, fügen Sie dem **extraColumns** -Attribut des Anzeige Spezifizierers einen Wert für den Objekttyp hinzu, dem das Attribut zugeordnet ist. Das **extraColumns** -Attribut ist ein mehr wertiges Zeichen folgen Attribut, bei dem jede Zeichenfolge das folgende Format hat.
+Um der Liste eine Spalte hinzuzufügen, fügen Sie dem **extraColumns-Attribut** des Anzeigespezifizierrs für den Objekttyp, dem das Attribut zugeordnet ist, einen Wert hinzu. Das **extraColumns-Attribut** ist ein mehrwertiges Zeichenfolgenattribut, bei dem jede Zeichenfolge im folgenden Format vorliegt.
 
 
 ```C++
@@ -41,17 +41,17 @@ In der folgenden Tabelle sind die Inhalte dieser Werte aufgeführt.
 
 | Wert                        | BESCHREIBUNG                                                                                                                         |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| " &lt; ldapDisplayName &gt; "    | Enthält eine Zeichenfolge, die den **ldapDisplayName** des Attributs darstellt.                                                         |
-| " &lt; Spalten Kopfzeile &gt; "      | Enthält eine Zeichenfolge, die den Text darstellt, der im Header der Spalte angezeigt wird.                                                  |
-| " &lt; Standard Sichtbarkeit &gt; " | Enthält einen numerischen Wert, der 0 (null) ist, wenn das Attribut standardmäßig ausgeblendet ist, oder 1, wenn das Attribut standardmäßig sichtbar ist.               |
-| " &lt; Width &gt; "              | Enthält die Breite der Spalte in Pixel. Wenn dieser Wert-1 ist, wird die Breite der Spalte auf die Breite des Spalten Headers festgelegt. |
-| "nicht &lt; verwendet &gt; "             | Nicht verwendet. Muss Null sein.                                                                                                               |
+| " &lt; ldapdisplayname &gt; "    | Enthält eine Zeichenfolge, die den **ldapDisplayName** des Attributs darstellt.                                                         |
+| " &lt; Spaltenüberschrift &gt; "      | Enthält eine Zeichenfolge, die den im Header für die Spalte angezeigten Text darstellt.                                                  |
+| " &lt; Standardsichtbarkeit &gt; " | Enthält einen numerischen Wert, der 0 ist, wenn das Attribut standardmäßig ausgeblendet ist, oder 1, wenn das Attribut standardmäßig sichtbar ist.               |
+| " &lt; width &gt; "              | Enthält die Breite der Spalte in Pixel. Wenn dieser Wert -1 ist, wird die Breite der Spalte auf die Breite des Spaltenheaders festgelegt. |
+| " &lt; nicht verwendet &gt; "             | Nicht verwendet. Muss Null sein.                                                                                                               |
 
 
 
- 
+ 
 
-Um z. b. eine Spalte hinzuzufügen, die den kanonischen Namen für Objekte in einer Organisationseinheit anzeigt, wird ein Wert für das Attribut " **CanonicalName** " dem Attribut " **extraColumns** " des Objekts " **organizationalUnit-Display** " im Container "Anzeige spezifiker" hinzugefügt. Die Zeichenfolge, die dem **extraColumns** -Attribut des **organizationalUnit-Display-** Objekts hinzugefügt wird, sieht wie folgt aus.
+Um beispielsweise eine Spalte hinzuzufügen, die den kanonischen Namen für Objekte in einer Organisationseinheit anzeigt, wird dem **extraColumns-Attribut** des **organizationalUnit-Display-Objekts** im Container display specifiers ein Wert für das **canonicalName-Attribut** hinzugefügt. Die Zeichenfolge, die dem **extraColumns-Attribut** des **organizationalUnit-Display-Objekts** hinzugefügt wird, sieht wie folgt aus.
 
 
 ```C++
@@ -60,15 +60,15 @@ canonicalName,Canonical Name,0,150,0
 
 
 
-Im Dialogfeld **Spalten hinzufügen/entfernen** werden nur die Spalten angezeigt, die im **extraColumns** -Attribut des **displaySpecifier** -Objekts des angezeigten Container Typs enthalten sind. Wenn das **extraColumns** -Attribut keine Werte enthält, wird im Dialogfeld **Spalten hinzufügen/entfernen** ein fester Satz von Spalten angezeigt. Eine Kopie des fixierten Satzes von Spalten ist im **extraColumns** -Attribut des **default-Display-** Objekts enthalten.
+Im Dialogfeld **Spalten hinzufügen/entfernen** werden nur die Spalten angezeigt, die im **extraColumns-Attribut** des **displaySpecifier-Objekts** des angezeigten Containertyps enthalten sind. Wenn das **extraColumns-Attribut** keine Werte enthält, zeigt das Dialogfeld **Spalten hinzufügen/entfernen** einen festen Satz von Spalten an. Eine Kopie des festen Spaltensatzes ist im **extraColumns-Attribut** des **default-Display-Objekts** enthalten.
 
-Wenn Sie einer Spaltenliste für ein bestimmtes Objekt eine oder mehrere Spalten hinzufügen möchten, müssen Sie alle **extraColumns** -Werte aus dem **default-Display-** Objekt in das Zielobjekt kopieren und dann die benutzerdefinierten Spalten hinzufügen. Wenn Sie das **extraColumns** -Attribut für eine bestimmte Klasse angeben, werden diese Spalten von dieser Klasse verwendet und nicht mit den Spalten zusammengeführt, die in der **default-Display-** Klasse angegeben sind. Folglich haben weitere Änderungen an der **default-Display-** Klasse keine Auswirkung auf dieses Objekt.
+Um der Liste der Spalten für ein bestimmtes Objekt eine oder mehrere Spalten hinzuzufügen, müssen Sie alle **extraColumns-Werte** aus dem **Default-Display-Objekt** in das Zielobjekt kopieren und dann die benutzerdefinierten Spalten hinzufügen. Wenn Sie das **extraColumns-Attribut** für eine bestimmte Klasse angeben, verwendet diese Klasse diese Spalten und führt sie nicht mit den Spalten zusammen, die in der **default-Display-Klasse** angegeben sind. Daher haben weitere Änderungen an der **Default-Display-Klasse** keine Auswirkungen auf dieses Objekt.
 
-Wenn Sie eine benutzerdefinierte Spalte für alle Containertypen anzeigen möchten, für die keine benutzerdefinierten Spalten registriert sind, fügen Sie dem **extraColumns** -Attribut des **default-Display-** Objekts einen Wert für die Spalte hinzu.
+Um eine benutzerdefinierte Spalte für alle Containertypen anzuzeigen, für die keine benutzerdefinierten Spalten registriert sind, fügen Sie dem **extraColumns-Attribut** des **default-Display-Objekts** einen Wert für die Spalte hinzu.
 
- 
+ 
 
- 
+ 
 
 
 

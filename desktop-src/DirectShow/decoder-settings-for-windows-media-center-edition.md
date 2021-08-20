@@ -1,50 +1,50 @@
 ---
-description: Decodereinstellungen für Windows Media Center Edition
+description: Decoder Einstellungen für Windows Media Center Edition
 ms.assetid: 019b063f-f215-44d8-a916-3125bee6af93
-title: Decodereinstellungen für Windows Media Center Edition
+title: Decoder Einstellungen für Windows Media Center Edition
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2f66b5107fa0316f6ce2547e1f5f066165ed598
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: cfc373f2ea58bc169748ff42841650cf979822014e579a78459e47da5c694814
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106363889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953159"
 ---
-# <a name="decoder-settings-for-windows-media-center-edition"></a>Decodereinstellungen für Windows Media Center Edition
+# <a name="decoder-settings-for-windows-media-center-edition"></a>Decoder Einstellungen für Windows Media Center Edition
 
-Windows XP Media Center Edition 2005 und höher verwendet die [**icodecapi**](/windows/desktop/api/Strmif/nn-strmif-icodecapi) -Schnittstelle, um den audiodecoderfilter für die Fernseh-und DVD-Wiedergabe zu konfigurieren. Die folgenden Eigenschaften werden unterstützt.
+Windows XP Media Center Edition 2005 und höher verwendet die [**ICodecAPI-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-icodecapi) um den Audiodecoderfilter für die Wiedergabe von Fernseh- und DVD-Dateien zu konfigurieren. Die folgenden Eigenschaften werden unterstützt.
 
 
 
 | Eigenschaften-GUID                   | BESCHREIBUNG                                      |
 |---------------------------------|--------------------------------------------------|
-| codecapi \_ - \_ audioausgabeformat \_ | Konfiguriert das audioausgabeformat. Siehe Hinweise. |
+| \_ \_ CODECAPI-AUDIOAUSGABEFORMAT \_ | Konfiguriert das Audioausgabeformat. Siehe Hinweise. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft codecapi \_ - \_ audioausgabeformat \_ ist eine Zeichen folgen Darstellung einer GUID, die als **BSTR** -Wert gespeichert wird. Die folgenden GUIDs sind definiert.
+Der Wert der CODECAPI AUDIO OUTPUT FORMAT-Eigenschaft ist eine Zeichenfolgendarstellung einer \_ \_ \_ GUID, die als **BSTR-Wert gespeichert** ist. Die folgenden GUIDs sind definiert.
 
 
 
 | GUID                                                        | Beschreibung                                                                                                                                                                                                    |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| codecapi \_ - \_ audioausgabeformat \_ \_ PCM \_ Stereo \_ matrixencoded | Der Software Audiofilter sollte das Decodieren von Software und das Ausgeben eines Stereo-Audiostreams durchführen, wobei die Multichannel-Audiomatrix auf die beiden Kanäle codiert ist.                                                   |
-| codecapi \_ - \_ audioausgabeformat \_ \_ PCM \_ Stereo                | Der Software-Audiofilter sollte Software Decodierung durchführen und einen Stereo-Audiostream ausgeben.                                                                                                                   |
-| codecapi \_ - \_ audioausgabeformat \_ \_ SPDIF \_ PCM                 | Der Software Audiofilter sollte Software-Audiodecodierung durchführen, auch wenn die physische Ausgabe des PCs eine digitale Schnittstelle sein kann, z. b. S/PDIF.                                                      |
-| codecapi \_ - \_ audioausgabeformat \_ \_ SPDIF \_ Bitstream           | Der softwareupdateifilter sollte keine Software-Audiodecodierung durchführen, sondern den unformatierten, digitalen audiopstream für die externe Verarbeitung durch ein Gerät übergeben, das mit einem digitalen audiolink verbunden ist, z. b. S/PDIF |
-| codecapi \_ - \_ audioausgabeformat \_ \_ PCM- \_ Kopfhörer            | Der Software Audiofilter sollte Software-Audiodecodierung durchführen und die proprietäre Verarbeitung anwenden, um für Kopfhörer zu optimieren. Die Unterstützung für diese Einstellung ist optional.                                     |
+| CODECAPI \_ AUDIO \_ OUTPUT \_ FORMAT \_ PCM \_ STEREO \_ MATRIXENCODED | Der Softwareaudiofilter sollte die Softwaredecodierung durchführen und einen Stereo-Audiostream mit der Multichannel-Audiomatrix, die an die beiden Kanäle codiert ist, aus geben.                                                   |
+| CODECAPI \_ AUDIO \_ OUTPUT \_ FORMAT \_ PCM \_ STEREO                | Der Softwareaudiofilter sollte die Softwaredecodierung durchführen und einen Stereo-Audiostream aus geben.                                                                                                                   |
+| \_CODECAPI-AUDIOAUSGABEFORMAT \_ \_ \_ \_ :PCMIF                 | Der Softwareaudiofilter sollte die Softwareaudiodecodierung durchführen, auch wenn die physische Ausgabe des PCs eine digitale Schnittstelle sein kann, z. B. S/PDIF.                                                      |
+| \_CODECAPI-AUDIOAUSGABEFORMAT \_ \_ : \_ \_ BITSTREAMIF           | Der Softwareaudiofilter sollte keine Softwareaudiodecodierung durchführen, sondern den unformatierten digitalen Audiobitstream für die externe Verarbeitung durch ein Gerät übergeben, das mit einem digitalen Audiolink wie S/PDIF verbunden ist. |
+| \_CODECAPI-AUDIOAUSGABEFORMAT \_ \_ \_ \_ PCM-FEHLER            | Der Softwareaudiofilter sollte die Softwareaudiodecodierung durchführen und proprietäre Verarbeitung anwenden, um die Optimierung für Dies zu optimieren. Die Unterstützung für diese Einstellung ist optional.                                     |
 
 
 
  
 
 > [!Note]  
-> Die **icodecapi** -Schnittstelle speichert Codec-Eigenschaften als Schlüssel-Wert-Paare, wobei der Schlüssel eine GUID und der Wert ein **Variant** -Typ ist.
+> Die **ICodecAPI-Schnittstelle** speichert Codeceigenschaften als Schlüssel-Wert-Paare, wobei der Schlüssel eine GUID und der Wert ein **VARIANT-Typ** ist.
 
  
 
@@ -52,7 +52,7 @@ Der Wert der Eigenschaft codecapi \_ - \_ audioausgabeformat \_ ist eine Zeichen
 
 <dl> <dt>
 
-[Encoder-und decoderentwicklung](encoder-and-decoder-development.md)
+[Encoder- und Decoderentwicklung](encoder-and-decoder-development.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getzählti-Methode ruft die Anzahl der Elemente in der Liste ab.
+description: Die GetCountI-Methode ruft die Anzahl der Elemente in der Liste ab.
 ms.assetid: 1c6f6a3b-8604-44e4-a5fc-b29fa6869173
-title: Cbaselist. getzählti-Methode (wxlist. h)
+title: CBaseList.GetCountI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 72268112c2a9c7d530b786a867208971ec6f4311
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ffb460f287d959b5e1baed1dda78c2ce6b2b0053c453572e42a67012affc60dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016948"
 ---
-# <a name="cbaselistgetcounti-method"></a>Cbaselist. getzählti-Methode
+# <a name="cbaselistgetcounti-method"></a>CBaseList.GetCountI-Methode
 
-Die- `GetCountI` Methode ruft die Anzahl der Elemente in der Liste ab.
+Die `GetCountI` -Methode ruft die Anzahl der Elemente in der Liste ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Gibt die Anzahl der Elemente in der Liste zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt die Anzahl der Elemente in der Liste zurück.
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

@@ -1,45 +1,45 @@
 ---
-title: glmapgrid-Funktionen
-description: Diese Funktionen definieren ein eindimensionales oder zweidimensionales Mesh.
+title: glMapGrid-Funktionen
+description: Diese Funktionen definieren ein eindimensionales oder zweidimensionales Gitter.
 ms.assetid: 87532b49-a506-44a7-be2f-b74c289f1a19
 keywords:
-- OpenGL, glmapgrid-Funktionen
-- OpenGL-Referenz, glmapgrid-Funktionen
-- Referenz für OpenGL, glmapgrid-Funktionen
-- OpenGL, Map-Funktionen
-- OpenGL-Referenz, Map-Funktionen
-- Verweis für OpenGL, Map-Funktionen
-- glmapgrid-Funktionen
+- OpenGL,glMapGrid-Funktionen
+- OpenGL-Referenz,glMapGrid-Funktionen
+- Referenz für OpenGL,glMapGrid-Funktionen
+- OpenGL, Kartenfunktionen
+- OpenGL-Referenz,Kartenfunktionen
+- Referenz für OpenGL,Map-Funktionen
+- glMapGrid-Funktionen
 - map-Funktionen
-- eindimensionale Gitter Funktionen
-- zweidimensionale Gitter Funktionen
-- OpenGL, eindimensionale Gitter Funktionen
-- OpenGL-Referenz, eindimensionale Mesh-Funktionen
-- Referenz für OpenGL, eindimensionale Mesh-Funktionen
-- OpenGL, zweidimensionale Gitter Funktionen
-- OpenGL-Referenz, zweidimensionale Gitter Funktionen
-- Verweis für OpenGL, zweidimensionale Gitter Funktionen
+- Eindimensionale Gitternetzfunktionen
+- Zweidimensionale Gitternetzfunktionen
+- OpenGL,eindimensionale Gitternetzfunktionen
+- OpenGL-Referenz, eindimensionale Gitternetzfunktionen
+- Referenz für eindimensionale OpenGL-Gitternetzfunktionen
+- OpenGL,zweidimensionale Gitternetzfunktionen
+- OpenGL-Referenz,zweidimensionale Gitternetzfunktionen
+- Referenz für zweidimensionale OpenGL-Gitternetzfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6198210a5aaedd8f67e3a180b5a2acbed98a2d40
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43bc03268cd65c607cf9fe09c157fc7a5302d7e6be1b615ff49b8554892b9acb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938463"
 ---
-# <a name="glmapgrid-functions"></a>glmapgrid-Funktionen
+# <a name="glmapgrid-functions"></a>glMapGrid-Funktionen
 
-Diese Funktionen definieren ein eindimensionales oder zweidimensionales Mesh:
+Diese Funktionen definieren ein eindimensionales oder zweidimensionales Gitternetz:
 
 -   [**glMapGrid1d**](glmapgrid1d.md)
 -   [**glMapGrid1f**](glmapgrid1f.md)
 -   [**glMapGrid2d**](glmapgrid2d.md)
 -   [**glMapGrid2f**](glmapgrid2f.md)
 
- 
+ 
 
- 
+ 
 
 
 

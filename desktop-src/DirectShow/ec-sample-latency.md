@@ -1,19 +1,19 @@
 ---
-description: Gibt an, wie weit hinter dem Zeitplan eine Komponente für die Verarbeitung von Beispielen liegt.
+description: Gibt an, wie weit der Zeitplan einer Komponente für die Verarbeitung von Beispielen zurück liegt.
 ms.assetid: 8bd202fb-3015-41a2-ad14-862f64cb252f
-title: EC_SAMPLE_LATENCY (DShow. h)
+title: EC_SAMPLE_LATENCY (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee90d42e6464eccc4bc93b1052e29392b74bb2d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 612c553916dc19685224bb512f6627363dba439883553d82c59f153324f5eda7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119686150"
 ---
-# <a name="ec_sample_latency"></a>Wartezeit für EC- \_ Beispiel \_
+# <a name="ec_sample_latency"></a>EC \_ SAMPLE \_ LATENCY
 
-Gibt an, wie weit hinter dem Zeitplan eine Komponente für die Verarbeitung von Beispielen liegt.
+Gibt an, wie weit der Zeitplan einer Komponente für die Verarbeitung von Beispielen zurück liegt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,7 +22,7 @@ Gibt an, wie weit hinter dem Zeitplan eine Komponente für die Verarbeitung von 
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-(Konstante **Referenz \_ Zeit** \* ), die sich hinter der Komponente befindet, in 100-Nanosecond-Einheiten. Wenn dieser Wert positiv ist, befindet sich die Komponente hinter dem Zeitplan. Wenn dieser Wert negativ ist, liegt die Komponente vor dem Zeitplan.
+(**const REFERENCE \_ TIME** \* ) Der Abstand hinter der Komponente in Einheiten von 100 Nanosekunden. Wenn dieser Wert positiv ist, liegt die Komponente hinter dem Zeitplan. Wenn dieser Wert negativ ist, liegt die Komponente dem Zeitplan voraus.
 
 </dd> <dt>
 
@@ -37,11 +37,11 @@ Keinen.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein benutzerdefinierter Presenter für den " [**Enhanced Video Renderer**](enhanced-video-renderer-filter.md) "-Filter (EVR) kann diese Nachricht an den EVR senden, um den EVR zu benachrichtigen, ob der Presenter hinter einem Zeitplan oder vor dem Zeitplan steht.
+Eine benutzerdefinierte Moderatorin für den FILTER [**"Enhanced Video Renderer"**](enhanced-video-renderer-filter.md) (EVR) kann diese Nachricht an die EVR senden, um den EVR zu benachrichtigen, ob der Moderator einen Zeitplan zurücklässt oder vor dem Zeitplan liegt.
 
-Die einfachste Möglichkeit zum Berechnen *von lParam1* ist: *QPC now*   *QPC Target*, wobei *QPC jetzt* die Uhrzeit und *QPC Target* die Präsentationszeit ist.
+Die einfachste Möglichkeit zum Berechnen von *lParam1* ist: *QPC* jetzt *QPC-Ziel,* wobei *QPC* jetzt die Uhrzeit und *QPC-Ziel* die Präsentationszeit ist.   
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Die einfachste Möglichkeit zum Berechnen *von lParam1* ist: *QPC now*   *QPC Ta
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -57,10 +57,10 @@ Die einfachste Möglichkeit zum Berechnen *von lParam1* ist: *QPC now*   *QPC Ta
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Schreiben von EVR Presenter](/windows/desktop/medfound/how-to-write-an-evr-presenter)
+[Schreiben eines EVR-Presenters](/windows/desktop/medfound/how-to-write-an-evr-presenter)
 </dt> </dl>
 
  

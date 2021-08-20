@@ -1,23 +1,23 @@
 ---
-description: Der Installer legt die afterreboot-Eigenschaft nach einem von der ForceReboot-Aktion aufgerufenen Neustart auf 1 fest. Der Installer fügt afterreboot = 1 der Befehlszeile hinzu, die unmittelbar nach dem Neustart ausgeführt wird.
+description: Das Installationsprogramm legt die AFTERREBOOT-Eigenschaft nach einem Neustart, der von der ForceReboot-Aktion aufgerufen wurde, auf 1 fest. Das Installationsprogramm fügt AFTERREBOOT=1 der Befehlszeile hinzu, die unmittelbar nach dem Neustart ausgeführt wird.
 ms.assetid: d8a71d9a-64bf-4a38-9c3b-073c216de7fa
-title: Afterreboot (Eigenschaft)
+title: AFTERREBOOT-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa891c84e2e8f7bdea5bb90311e9706a37e46e31
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf8fb80a3d8ff167f93aab6c95fc3eadb8b5312daf9d2a2856f01cb7d01ee383
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145913"
 ---
-# <a name="afterreboot-property"></a>Afterreboot (Eigenschaft)
+# <a name="afterreboot-property"></a>AFTERREBOOT-Eigenschaft
 
-Der Installer legt die **afterreboot** -Eigenschaft nach einem von der [ForceReboot-Aktion](forcereboot-action.md)aufgerufenen Neustart auf 1 fest. Der Installer fügt afterreboot = 1 der Befehlszeile hinzu, die unmittelbar nach dem Neustart ausgeführt wird.
+Das Installationsprogramm legt die **AFTERREBOOT-Eigenschaft** nach einem Neustart, der von der [ForceReboot-Aktion](forcereboot-action.md)aufgerufen wurde, auf 1 fest. Das Installationsprogramm fügt AFTERREBOOT=1 der Befehlszeile hinzu, die unmittelbar nach dem Neustart ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [ForceReboot-Aktion](forcereboot-action.md) muss immer mit einer Bedingungs Anweisung verwendet werden, damit das Installationsprogramm nur bei Bedarf einen Neustart auslöst. Möglicherweise ist ein Neustart erforderlich, wenn eine bestimmte Datei ersetzt oder eine bestimmte Komponente installiert wurde. Der Fall unterscheidet sich für jedes Produkt, und eine benutzerdefinierte Aktion ist möglicherweise erforderlich, um zu bestimmen, ob ein Neustart erforderlich ist. Die Bedingung für die ForceReboot-Aktion verwendet in der Regel die Eigenschaft **afterreboot** .
+Die [ForceReboot-Aktion](forcereboot-action.md) muss immer mit einer bedingungsbedingten Anweisung verwendet werden, damit das Installationsprogramm nur bei Bedarf einen Neustart auslöst. Ein Neustart ist möglicherweise erforderlich, wenn eine bestimmte Datei ersetzt oder eine bestimmte Komponente installiert wurde. Der Fall ist für jedes Produkt unterschiedlich, und möglicherweise ist eine benutzerdefinierte Aktion erforderlich, um zu bestimmen, ob ein Neustart erforderlich ist. Die Bedingung für die ForceReboot-Aktion verwendet in der Regel die **AFTERREBOOT-Eigenschaft.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Die [ForceReboot-Aktion](forcereboot-action.md) muss immer mit einer Bedingungs 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 
@@ -36,7 +36,7 @@ Die [ForceReboot-Aktion](forcereboot-action.md) muss immer mit einer Bedingungs 
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[System Neustarts](system-reboots.md)
+[Systemneustarts](system-reboots.md)
 </dt> </dl>
 
  

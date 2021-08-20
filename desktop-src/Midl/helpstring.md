@@ -1,9 +1,9 @@
 ---
-title: HelpString-Attribut
-description: Das Attribut \ HelpString \ gibt eine Zeichenfolge an, mit der das Element beschrieben wird, auf das es angewendet wird.
+title: helpstring-Attribut
+description: Das \helpstring\-Attribut gibt eine Zeichenfolge an, die verwendet wird, um das Element zu beschreiben, auf das es angewendet wird.
 ms.assetid: f05d3fdd-d975-4f0e-8181-07e16288ff48
 keywords:
-- HelpString-Attribut-Mittel l
+- HELPSTRING-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c58bbe61b10e2f223cf9f662f10d95ca72819b02
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7abb433d7112bc4c3257345d086ccf308cc1892b61a99991b485ce4962b5851e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013868"
 ---
-# <a name="helpstring-attribute"></a>HelpString-Attribut
+# <a name="helpstring-attribute"></a>helpstring-Attribut
 
-Das **\[ HelpString \]** -Attribut gibt eine Zeichenfolge an, die verwendet wird, um das Element zu beschreiben, auf das es angewendet wird. Sie können das **\[ HelpString \]** -Attribut auf die Anweisungen Library, importlib, Interface, dispinterface, Module oder Co-Klasse, Typedefs, Properties und Methods anwenden.
+Das **\[ \] helpstring-Attribut** gibt eine Zeichenfolge an, die verwendet wird, um das Element zu beschreiben, auf das es angewendet wird. Sie können das **\[ \] helpstring-Attribut** auf Bibliotheks-, Importlib-, Schnittstellen-, Dispinterface-, Modul- oder Coclass-Anweisungen, TypeDefs, Eigenschaften und Methoden anwenden.
 
 ``` syntax
 [
@@ -40,51 +40,51 @@ element element-name
 
 <dl> <dt>
 
-*Hilfe-Text Zeichenfolge* 
+*help-text-string* 
 </dt> <dd>
 
-Eine mit NULL endend beendete Zeichenfolge, die Hilfetext enthält.
+Eine auf null endende Zeichenfolge von Zeichen, die Hilfetext enthält.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-NULL oder mehr Mittelwert-Attribut Anweisungen.
+Null oder mehr MIDL-Attributanweisungen.
 
 </dd> <dt>
 
-*gewisses* 
+*Element* 
 </dt> <dd>
 
-Eine der folgenden Direktiven: [**Library**](library.md), **\[** [**importlib**](importlib.md) **\]** , [**Interface**](interface.md), [**dispinterface**](dispinterface.md), [**Module**](module.md), [**typedef**](typedef.md), **method**, **Property** oder [**Co-Klasse**](coclass.md).
+Eine der folgenden Direktiven: [**bibliothek,**](library.md) **\[** [**importlib,**](importlib.md) **\]** [**interface,**](interface.md) [**dispinterface,**](dispinterface.md) [**module,**](module.md) [**typedef,**](typedef.md) **method,** **property** oder [**coclass**](coclass.md).
 
 </dd> <dt>
 
 *Elementname* 
 </dt> <dd>
 
-Der Name, den andere Softwarekomponenten verwenden können, um das aktuelle Element zu definieren.
+Der Name, den andere Softwarekomponenten verwenden können, um das aktuelle Element abzugrenzen
 
 </dd> <dt>
 
 *Definition* 
 </dt> <dd>
 
-Gibt die-Anweisungen an, die die Element Definition bilden.
+Gibt Anweisungen an, die die Elementdefinition bilden.
 
 </dd> <dt>
 
-*IDL-Anweisung* 
+*idl-statement* 
 </dt> <dd>
 
-Eine Anweisung der Mittell-Schnittstellen Definition, z. b. [**propget**](propget.md) oder [**PROPPUT**](propput.md).
+Eine MIDL-Schnittstellendefinitions-Anweisung wie [**propget**](propget.md) oder [**propput**](propput.md).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [**GetDocumentation**](/windows/win32/api/oaidl/nf-oaidl-itypelib-getdocumentation) -Funktionen in den Schnittstellen [**ITypeLib**](/windows/win32/api/oaidl/nn-oaidl-itypelib) und [**itypeingefo**](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) , um die Hilfe Zeichenfolge abzurufen.
+Verwenden Sie die [**GetDocumentation-Funktionen**](/windows/win32/api/oaidl/nf-oaidl-itypelib-getdocumentation) in den [**Schnittstellen ITypeLib**](/windows/win32/api/oaidl/nn-oaidl-itypelib) und [**ITypeInfo,**](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) um die Hilfezeichenfolge abzurufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -122,30 +122,30 @@ library Lines
 [**importlib**](importlib.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[**Mond**](module.md)
+[**Modul**](module.md)
 </dt> <dt>
 
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

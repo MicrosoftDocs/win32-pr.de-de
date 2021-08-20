@@ -1,7 +1,7 @@
 ---
-description: Die addaf Teri-Methode fügt ein Element nach der angegebenen Position ein.
+description: Die AddAfterI-Methode fügt ein Element nach der angegebenen Position ein.
 ms.assetid: 6da6c1ed-5f22-4364-b636-64b5a0ce1560
-title: Cbaselist. addafteri-Methode (wxlist. h)
+title: CBaseList.AddAfterI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 760c0bea3a213d7126ea795e9575b3897117f7a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b72be7342e6085b773ef2493f5ad138f73349dffcdafc1a60a380692df3f16ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016988"
 ---
-# <a name="cbaselistaddafteri-method"></a>Cbaselist. addafteri-Methode
+# <a name="cbaselistaddafteri-method"></a>CBaseList.AddAfterI-Methode
 
-Die- `AddAfterI` Methode fügt ein Element nach der angegebenen Position ein.
+Die `AddAfterI` -Methode fügt ein Element nach der angegebenen Position ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ POSITION AddAfterI(
 *pos* 
 </dt> <dd>
 
-Die Position, an der das Element hinzugefügt werden soll.
+Position, nach der das Element hinzugefügt werden soll.
 
 </dd> <dt>
 
-*pobj* 
+*pObj* 
 </dt> <dd>
 
-Zeiger auf das hinzu zufügende Element.
+Zeiger auf das hinzuzufügende Element.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Zeiger auf das hinzu zufügende Element.
 
 Gibt den Positionsindikator des eingefügten Elements zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *POS* **null** ist, fügt diese Methode das Element am Anfang der Liste hinzu (entspricht dem Aufruf der [**cbaselist:: addheadi**](cbaselist-addheadi.md) -Methode).
+Wenn *pos* **NULL** ist, fügt diese Methode das Element dem Kopf der Liste hinzu (entspricht dem Aufruf der [**CBaseList::AddHeadI-Methode).**](cbaselist-addheadi.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn *POS* **null** ist, fügt diese Methode das Element am Anfang der Liste hin
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Wenn *POS* **null** ist, fügt diese Methode das Element am Anfang der Liste hin
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

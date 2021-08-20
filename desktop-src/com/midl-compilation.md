@@ -1,35 +1,35 @@
 ---
-title: Kompilierung in mittlerer l
-description: Kompilierung in mittlerer l
+title: MIDL-Kompilierung
+description: MIDL-Kompilierung
 ms.assetid: 2797ee3b-82fd-4cb5-9e95-23b2f2a8f011
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e281fa66ec1b8f997dd58fc55a67c19a801d2d36
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 6d6a94f94122aeeb1f2900c3adec7e567c794f31ee22259f657dfe5e95f3f688
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047948"
 ---
-# <a name="midl-compilation"></a>Kompilierung in mittlerer l
+# <a name="midl-compilation"></a>MIDL-Kompilierung
 
-Wenn eine IDL-Datei, wie z [. b. "example2". idl](anatomy-of-an-idl-file.md), eine oder mehrere COM-Schnittstellen und eine Typbibliothek definiert, generiert der mittlerer l-Compiler (Midl.exe) die in der folgenden Tabelle beschriebenen Dateien als Standardausgabe.
+Bei einer IDL-Datei wie [Example2.idl,](anatomy-of-an-idl-file.md)die eine oder mehrere COM-Schnittstellen und eine Typbibliothek definiert, generiert der MIDL-Compiler (Midl.exe) die in der folgenden Tabelle beschriebenen Dateien als Standardausgabe.
 
 
 
 | Dateiname                 | BESCHREIBUNG                                                                                                                                                                                           |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| "Example2". h<br/>    | Die Header Datei, die Typdefinitionen und Funktions Deklarationen für alle Schnittstellen enthält, die in der IDL-Datei definiert sind, sowie vorwärts Deklarationen für Routinen, die vom stubbefehl aufgerufen werden.<br/> |
-| "Example2" \_ p. c<br/> | Die Proxy-/Stubdatei, die die Ersatz Einstiegspunkte für-Clients und für-Server enthält.<br/>                                                                                           |
-| "Example2" \_ i. c<br/> | Die Schnittstellen-ID-Datei, die die GUID für jede Schnittstelle definiert, die in der IDL-Datei angegeben ist.<br/>                                                                                               |
-| "Example2". tlb<br/>  | Eine Verbund Dokument Datei, die Informationen zu Typen und Objekten enthält.<br/>                                                                                                                |
-| Dlldata. c<br/>     | Enthält die Daten, die Sie benötigen, um eine Proxy-/Stub-DLL zu erstellen.<br/>                                                                                                                                     |
+| Example2.h<br/>    | Die Headerdatei, die Typdefinitionen und Funktionsdeklarationen für alle schnittstellen enthält, die in der IDL-Datei definiert sind, sowie Vorwärtsdeklarationen für Routinen, die die Stubs aufrufen.<br/> |
+| Beispiel2 \_ p.c<br/> | Die Proxy-/Stubdatei, die die Ersatzeinstiegspunkte sowohl für Clients als auch für Server enthält.<br/>                                                                                           |
+| Example2 \_ i.c<br/> | Die Schnittstellen-ID-Datei, die die GUID für jede schnittstelle definiert, die in der IDL-Datei angegeben ist.<br/>                                                                                               |
+| Example2.tlb<br/>  | Eine zusammengesetzte Dokumentdatei, die Informationen zu Typen und Objekten enthält.<br/>                                                                                                                |
+| Dlldata.c<br/>     | Enthält die Daten, die Sie zum Erstellen einer Proxy-/Stub-DLL benötigen.<br/>                                                                                                                                     |
 
 
 
  
 
-Verwenden Sie die Header Datei und alle c-Dateien, um [eine Proxy-dll zu erstellen](building-and-registering-a-proxy-dll.md) , die die-Schnittstelle unterstützen kann, wenn Sie sowohl von Client Anwendungen als auch von Objekt Servern verwendet wird. \_Beim Erstellen der ausführbaren Datei für eine Client Anwendung, die die-Schnittstelle verwendet, verwenden Sie die Schnittstellen Header Datei ("example2". h) und die Interface-ID-Datei ("example2" i. c). Sie können wählen, ob Sie die Typbibliotheks Datei als Ressource in die exe-oder DLL-Datei einschließen möchten, oder Sie können Sie als separate Datei versenden.
+Sie verwenden die Headerdatei und alle C-Dateien, um [eine Proxy-DLL](building-and-registering-a-proxy-dll.md) zu erstellen, die die -Schnittstelle unterstützen kann, wenn sie sowohl von Clientanwendungen als auch von Objektservern verwendet wird. Sie verwenden die Schnittstellenheaderdatei (Example2.h) und die Schnittstellen-ID (Example2 \_ i.c), wenn Sie die ausführbare Datei für eine Clientanwendung erstellen, die die -Schnittstelle verwendet. Sie können die Typbibliotheksdatei als Ressource in Ihre EXE- oder DLL-Datei einschließen oder als separate Datei versenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,7 +38,7 @@ Verwenden Sie die Header Datei und alle c-Dateien, um [eine Proxy-dll zu erstell
 [Für eine COM-Schnittstelle generierte Dateien](/windows/desktop/Midl/files-generated-for-a-com-interface)
 </dt> <dt>
 
-[Mittel l-Compileroptionen](midl-compiler-options.md)
+[MIDL-Compileroptionen](midl-compiler-options.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc-Hostinfo-Eigenschaft (vpccominterfaces. h)
-description: Ruft Informationen über den physischen Computer ab.
+title: IVMVirtualPC-HostInfo-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft Informationen zum physischen Computer ab.
 ms.assetid: 9efefea1-e608-48db-a91a-e3808b420fc2
 keywords:
-- Hostinfo-Eigenschaft virtueller PC
-- Hostinfo-Eigenschaft Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, Hostinfo-Eigenschaft
+- HostInfo-Eigenschaft Virtueller PC
+- HostInfo-Eigenschaft Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC, HostInfo-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 351da69a19fd691b037a607a57136576e3b64011
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2438c42f02b76c4e4bf7647ba4b1921cc99d04f3d1c99d6004a8323823a2dfd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056558"
 ---
-# <a name="ivmvirtualpchostinfo-property"></a>Ivmvirtualpc:: Hostinfo-Eigenschaft
+# <a name="ivmvirtualpchostinfo-property"></a>IVMVirtualPC::HostInfo-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft Informationen über den physischen Computer ab.
+Ruft Informationen zum physischen Computer ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_HostInfo(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**ivmhostinfo**](ivmhostinfo.md) -Objekt, das Informationen über den Host Computer enthält.
+Das [**IVMHostInfo-Objekt,**](ivmhostinfo.md) das Informationen zum Hostcomputer enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,9 +54,9 @@ Das [**ivmhostinfo**](ivmhostinfo.md) -Objekt, das Informationen über den Host 
 | Name/Wert                                                                                                                                                                           | Bedeutung                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                                | Der-Parameter ist **null**.<br/>                                                           |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
+| <dl> <dt>VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -66,12 +66,12 @@ Das [**ivmhostinfo**](ivmhostinfo.md) -Objekt, das Informationen über den Host 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -79,7 +79,7 @@ Das [**ivmhostinfo**](ivmhostinfo.md) -Objekt, das Informationen über den Host 
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

@@ -1,22 +1,22 @@
 ---
 title: D3DX-Schnittstellen (Direct3D 11-Grafiken)
-description: Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX Utility Library bereitgestellt werden.
+description: Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden.
 ms.assetid: 0d3be1e6-b558-4586-9440-251a5611d7cd
 keywords:
 - D3DX-Schnittstellen, Direct3D 11
 - Schnittstellen, Direct3D 11 D3DX
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da2890c3c55d1bac9eba09c046927e432b1a27f8
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 4d746c02695860ecefda85b1d2700c718a65cdc657965af093c883c43914bbb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046628"
 ---
 # <a name="d3dx-interfaces-direct3d-11-graphics"></a>D3DX-Schnittstellen (Direct3D 11-Grafiken)
 
-Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX Utility Library bereitgestellt werden.
+Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden.
 
 > [!Note]  
 > Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
@@ -36,7 +36,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Compo
 <thead>
 <tr class="header">
 <th>Thema</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -46,7 +46,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Compo
 [!Note]<br />
 Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 </blockquote>
-<br/> Datenlade Objekt, das von der <a href="id3dx11threadpump.md"><strong>ID3DX11ThreadPump-Schnittstelle</strong></a> zum asynchronen Laden von Daten verwendet wird<br/></td>
+<br/> Datenladeobjekt, das von <a href="id3dx11threadpump.md"><strong>der ID3DX11ThreadPump-Schnittstelle</strong></a> zum asynchronen Laden von Daten verwendet wird.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="id3dx11dataprocessor.md"><strong>ID3DX11DataProcessor</strong></a><br/></td>
@@ -54,7 +54,7 @@ Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 
 [!Note]<br />
 Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 </blockquote>
-<br/> Datenverarbeitungs Objekt, das von der <a href="id3dx11threadpump.md"><strong>ID3DX11ThreadPump-Schnittstelle</strong></a> zum asynchronen Laden von Daten verwendet wird<br/></td>
+<br/> Datenverarbeitungsobjekt, das von <a href="id3dx11threadpump.md"><strong>der ID3DX11ThreadPump-Schnittstelle zum</strong></a> asynchronen Laden von Daten verwendet wird.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="id3dx11threadpump.md"><strong>ID3DX11ThreadPump</strong></a><br/></td>
@@ -62,7 +62,7 @@ Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 
 [!Note]<br />
 Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 </blockquote>
-<br/> Ein Thread-Pump führt Aufgaben asynchron aus. Sie wird durch Aufrufen von <a href="d3dx11createthreadpump.md"><strong>D3DX11CreateThreadPump</strong></a>erstellt. Es gibt mehrere APIs, die ein optionales threadpump als Parameter akzeptieren, z. b. <a href="d3dx11createtexturefromfile.md"><strong>D3DX11CreateTextureFromFile</strong></a> und <a href="d3dx11compilefromfile.md"><strong>D3DX11CompileFromFile</strong></a>. Wenn Sie eine Thread-Pump-Schnittstelle an diese APIs übergeben, werden die Funktionen asynchron in einem separaten Thread ausgeführt. Vor allem bei Multiprozessorcomputern kann ein Thread-Pump Ressourcen laden und Daten verarbeiten, ohne eine spürbare Leistungsminderung zu erzielen.<br/></td>
+<br/> Ein Threadpump führt Aufgaben asynchron aus. Sie wird durch Aufrufen von <a href="d3dx11createthreadpump.md"><strong>D3DX11CreateThreadPump erstellt.</strong></a> Es gibt mehrere APIs, die eine optionale Threadpump als Parameter verwenden, z. B. <a href="d3dx11createtexturefromfile.md"><strong>D3DX11CreateTextureFromFile</strong></a> und <a href="d3dx11compilefromfile.md"><strong>D3DX11CompileFromFile;</strong></a> Wenn Sie eine Threadpumpschnittstelle an diese APIs übergeben, werden die Funktionen asynchron in einem separaten Thread ausgeführt. Insbesondere auf Multiprozessorcomputern kann eine Threadpump Ressourcen laden und Daten verarbeiten, ohne die Leistung merklich zu beeinträchtigen.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -75,7 +75,7 @@ Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 
 
 <dl> <dt>
 
-[Referenz zu D3DX 11](d3d11-graphics-reference-d3dx11.md)
+[D3DX 11-Referenz](d3d11-graphics-reference-d3dx11.md)
 </dt> </dl>
 
  

@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 6e3ae592-a0cb-4d9d-b186-241a757da5ea
-ms.openlocfilehash: 953bf54ff64cf41724ce0dfabd064f9c7b980cc6
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 026b5b458736a0805d48dc59715a1705ecdb8557037232332767946dd05d333d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119223350"
 ---
 # <a name="ishellfoldersearchablecallbackrunbegin-method"></a>IShellFolderSearchableCallback::RunBegin-Methode
 
@@ -52,11 +52,11 @@ Reserviert. Muss auf 0 festgelegt werden.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Als Reaktion auf diesen Rückruf kann die Anwendung beispielsweise die **Schaltfläche Abbrechen** aktivieren.
+Als Reaktion auf diesen Rückruf kann die Anwendung beispielsweise die Schaltfläche **Abbrechen** aktivieren.
 
 ## <a name="requirements"></a>Anforderungen
 

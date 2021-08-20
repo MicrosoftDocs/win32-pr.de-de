@@ -1,9 +1,9 @@
 ---
-title: Weeksinterval-Element (weeklyscheduletype)
+title: WeeksInterval (weeklyScheduleType) -Element
 description: Gibt das Intervall zwischen den Wochen im Zeitplan an.
 ms.assetid: 6cbf1e7e-a695-4012-97fd-fe3360c362c4
 keywords:
-- Weeksinterval-Element Taskplaner
+- WeeksInterval-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 747ca4b73ff18bdb3e29d8b909d72b8d2367d89b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c59e4f4b163e5e96418c84bf2925e45cf3a54da1bbb50e17ad9282409438ff3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059758"
 ---
-# <a name="weeksinterval-weeklyscheduletype-element"></a>Weeksinterval-Element (weeklyscheduletype)
+# <a name="weeksinterval-weeklyscheduletype-element"></a>WeeksInterval (weeklyScheduleType) -Element
 
 Gibt das Intervall zwischen den Wochen im Zeitplan an.
 
@@ -43,27 +43,27 @@ Gibt das Intervall zwischen den Wochen im Zeitplan an.
 </xs:element>
 ```
 
-Das-Element wird durch den komplexen Typ " [**weeklyscheduletype**](taskschedulerschema-weeklyscheduletype-complextype.md) " definiert.
+Das -Element wird durch den komplexen [**WeeklyScheduleType-Typ**](taskschedulerschema-weeklyscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                  | Abgeleitet von                                                                     | BESCHREIBUNG                             |
+| Element                                                                                  | Abgeleitet von                                                                     | Beschreibung                             |
 |------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------|
-| [**Schedulebyweek**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md) | [**weeklyscheduletype**](taskschedulerschema-weeklyscheduletype-complextype.md) | Gibt einen wöchentlichen Zeitplan an.<br/> |
+| [**ScheduleByWeek**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md) | [**weeklyScheduleType**](taskschedulerschema-weeklyscheduletype-complextype.md) | Gibt einen wöchentlichen Zeitplan an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird das wöchentliche Intervall mithilfe der [**weeklyghost. weeksinterval**](weeklytrigger-weeksinterval.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird das wöchentliche Intervall mithilfe der [**WeeklyTrigger.WeeksInterval-Eigenschaft**](weeklytrigger-weeksinterval.md) angegeben.
 
-Bei der C++-Entwicklung wird das wöchentliche Intervall mithilfe der [**iweeklyauslöst:: weeksinterval**](/windows/desktop/api/taskschd/nf-taskschd-iweeklytrigger-get_weeksinterval) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird das wöchentliche Intervall mithilfe der [**IWeeklyTrigger::WeeksInterval-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iweeklytrigger-get_weeksinterval) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen wöchentlichen Kalender--Auslösers, der jede Woche einen Task Montag bis Freitag (um 8:00 Uhr) startet.
+Der folgende XML-Code definiert einen wöchentlichen Kalendertrigger, der jeden Montag bis Freitag (um 8:00 Uhr) eine Aufgabe startet.
 
 
 ```XML
@@ -91,16 +91,16 @@ Der folgende XML-Code definiert einen wöchentlichen Kalender--Auslösers, der j
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

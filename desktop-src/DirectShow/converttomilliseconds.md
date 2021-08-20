@@ -1,7 +1,7 @@
 ---
-description: Die converttomilliseconds-Funktion konvertiert eine Verweis Zeit in Millisekunden.
+description: Die ConvertToMilliseconds-Funktion konvertiert eine Verweiszeit in Millisekunden.
 ms.assetid: fae3baa4-9344-4197-b375-4abe2656e1b7
-title: Convertthmilliseconds-Funktion (Ref. h)
+title: ConvertToMilliseconds-Funktion (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 066f50856824a9bc7b5bbb8c4918c7cbfe5b9da5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e68b84482a437789c620efee7455144905fd33e7b1bdb651df207958ee6befc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073743"
 ---
-# <a name="converttomilliseconds-function"></a>Converttmilliseconds-Funktion
+# <a name="converttomilliseconds-function"></a>ConvertToMilliseconds-Funktion
 
-Die- `ConvertToMilliseconds` Funktion konvertiert eine Verweis Zeit in Millisekunden.
+Die `ConvertToMilliseconds` Funktion konvertiert eine Verweiszeit in Millisekunden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ LONGLONG ConvertToMilliseconds(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*RT* \[ Ref\]
 </dt> <dd>
 
-Verweis Zeit in 100-Nanosecond-Einheiten.
+Referenzzeit in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die in Millisekunden konvertierte Verweis Zeit zurück.
+Gibt die in Millisekunden konvertierte Verweiszeit zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt die in Millisekunden konvertierte Verweis Zeit zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt die in Millisekunden konvertierte Verweis Zeit zurück.
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

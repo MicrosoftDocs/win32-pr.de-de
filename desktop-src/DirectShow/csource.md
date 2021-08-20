@@ -1,7 +1,7 @@
 ---
-description: Die CSource-Klasse ist eine Basisklasse zum Implementieren von Quell filtern. Ein von CSource abgeleiteter Filter enthält eine oder mehrere aus der csourcestream-Klasse abgeleitete Ausgabe Pins. Jede Ausgabepin erstellt einen Arbeits Thread, der die Medien Beispiele nach unten verschiebt.
+description: Die CSource-Klasse ist eine Basisklasse zum Implementieren von Quellfiltern. Ein von CSource abgeleiteter Filter enthält mindestens einen Ausgabepin, der von der CSourceStream-Klasse abgeleitet wurde. Jeder Ausgabepin erstellt einen Arbeitsthread, der Medienbeispiele nachgeschaltet pusht.
 ms.assetid: 25bd0334-4ad1-48ed-93f9-b36c13a280a3
-title: CSource-Klasse (Quelle. h)
+title: CSource-Klasse (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,62 +16,62 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a4fcecbd1973c54e30c9bf1251bed174aa4a469f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6708ce38c826aae9ccb40d077972d267a20d5e22b4f67157000c4a62e92afa1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687514"
 ---
 # <a name="csource-class"></a>CSource-Klasse
 
-![CSource-Klassenhierarchie](images/source01.png)
+![csource-Klassenhierarchie](images/source01.png)
 
-Die **CSource** -Klasse ist eine Basisklasse zum Implementieren von Quell filtern. Ein von **CSource** abgeleiteter Filter enthält eine oder mehrere aus der [**csourcestream**](csourcestream.md) -Klasse abgeleitete Ausgabe Pins. Jede Ausgabepin erstellt einen Arbeits Thread, der die Medien Beispiele nach unten verschiebt.
+Die **CSource-Klasse** ist eine Basisklasse zum Implementieren von Quellfiltern. Ein von **CSource** abgeleiteter Filter enthält mindestens einen Ausgabepin, der von der [**CSourceStream-Klasse**](csourcestream.md) abgeleitet wurde. Jeder Ausgabepin erstellt einen Arbeitsthread, der Medienbeispiele nachgeschaltet pusht.
 
 > [!Note]  
-> Die **CSource** -Klasse unterstützt das Push-Modell für den Datenfluss. Diese Klasse wird nicht zum Erstellen von Datei Leser Filtern empfohlen. Datei Reader sollten das Pull-Modell über die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle unterstützen. Weitere Informationen finden Sie unter [Datenfluss für Filter Entwickler](data-flow-for-filter-developers.md).
+> Die **CSource-Klasse** wurde entwickelt, um das Pushmodell für den Datenfluss zu unterstützen. Diese Klasse wird nicht zum Erstellen von Dateilesefiltern empfohlen. Dateileser sollten das Pullmodell über die [**IAsyncReader-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) unterstützen. Weitere Informationen finden Sie unter [Data Flow for Filter Developers](data-flow-for-filter-developers.md).
 
  
 
 
 
-| Geschützte Member-Variablen                     | BESCHREIBUNG                                                  |
+| Geschützte Membervariablen                     | Beschreibung                                                  |
 |------------------------------------------------|--------------------------------------------------------------|
-| [**m- \_ ipins**](csource-m-ipins.md)            | Anzahl der Pins für den Filter.                                |
-| [**m- \_ Paare**](csource-m-pastreams.md)    | Array von Pins.                                               |
-| [**m \_ cstatus**](csource-m-cstatelock.md)  | Kritisches Abschnitts Objekt, das den Filter Zustand schützt.      |
-| Öffentliche Methoden                                 | BESCHREIBUNG                                                  |
+| [**m \_ iPins**](csource-m-ipins.md)            | Anzahl der Pins im Filter.                                |
+| [**m \_ paStreams**](csource-m-pastreams.md)    | Array von Stecknadeln.                                               |
+| [**m \_ cStateLock**](csource-m-cstatelock.md)  | Kritisches Abschnittsobjekt, das den Filterzustand schützt.      |
+| Öffentliche Methoden                                 | Beschreibung                                                  |
 | [**CSource**](csource-csource.md)             | Konstruktormethode.                                          |
-| [**~ CSource**](csource--csource.md)           | Dekonstruktormethode.                                           |
-| [**Getpincount**](csource-getpincount.md)     | Ruft die Anzahl der Pins für den Filter ab.                  |
-| [**Getpin**](csource-getpin.md)               | Ruft eine PIN ab.                                             |
-| [**pstatus-Datei**](csource--pstatelock.md)      | Ruft einen Zeiger auf das kritische Abschnitts Objekt des Filters ab. |
-| [**Addpin**](csource-addpin.md)               | Fügt dem Filter eine neue Ausgabe-PIN hinzu.                         |
-| [**Removepin**](csource-removepin.md)         | Entfernt eine angegebene PIN aus dem Filter.                     |
-| [**Findpinnumber**](csource-findpinnumber.md) | Ruft die Nummer einer angegebenen PIN für den Filter ab.       |
-| Ibasefilter-Methoden                            | BESCHREIBUNG                                                  |
-| [**Findpin**](csource-findpin.md)             | Ruft die PIN mit dem angegebenen Bezeichner ab.             |
+| [**~CSource**](csource--csource.md)           | Destruktormethode.                                           |
+| [**GetPinCount**](csource-getpincount.md)     | Ruft die Anzahl der Pins im Filter ab.                  |
+| [**GetPin**](csource-getpin.md)               | Ruft eine Stecknadel ab.                                             |
+| [**pStateLock**](csource--pstatelock.md)      | Ruft einen Zeiger auf das kritische Abschnittsobjekt des Filters ab. |
+| [**AddPin**](csource-addpin.md)               | Fügt dem Filter einen neuen Ausgabepin hinzu.                         |
+| [**RemovePin**](csource-removepin.md)         | Entfernt einen angegebenen Pin aus dem Filter.                     |
+| [**FindPinNumber**](csource-findpinnumber.md) | Ruft die Nummer eines angegebenen Pins für den Filter ab.       |
+| IBaseFilter-Methoden                            | Beschreibung                                                  |
+| [**FindPin**](csource-findpin.md)             | Ruft die Stecknadel mit dem angegebenen Bezeichner ab.             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gehen Sie folgendermaßen vor, um eine Ausgabe-PIN zu implementieren:
+Gehen Sie wie folgt vor, um einen Ausgabepin zu implementieren:
 
--   Leiten Sie eine Klasse von [**csourcestream**](csourcestream.md)ab.
--   Überschreiben Sie die [**csourcestream:: getmediatype**](csourcestream-getmediatype.md) -Methode und möglicherweise die [**csourcestream:: checkmediatype**](csourcestream-checkmediatype.md) -Methode, die die Medientypen für die PIN überprüfen.
--   Implementieren Sie die [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md) -Methode, die die Puffer Anforderungen der PIN zurückgibt.
--   Implementieren Sie die [**csourcestream:: FillBuffer**](csourcestream-fillbuffer.md) -Methode, die einen Medien Beispiel Puffer mit Daten füllt.
+-   Leiten Sie eine Klasse von [**CSourceStream**](csourcestream.md)ab.
+-   Überschreiben Sie die [**CSourceStream::GetMediaType-Methode**](csourcestream-getmediatype.md) und möglicherweise die [**CSourceStream::CheckMediaType-Methode,**](csourcestream-checkmediatype.md) die Medientypen für den Pin überprüft.
+-   Implementieren Sie die [**CBaseOutputPin::D ecideBufferSize-Methode,**](cbaseoutputpin-decidebuffersize.md) die die Pufferanforderungen des Pins zurückgibt.
+-   Implementieren Sie die [**CSourceStream::FillBuffer-Methode,**](csourcestream-fillbuffer.md) die einen Medienbeispielpuffer mit Daten füllt.
 
-Gehen Sie folgendermaßen vor, um den Filter zu implementieren:
+Gehen Sie wie folgt vor, um den Filter zu implementieren:
 
 -   Leiten Sie eine Klasse von **CSource** ab.
--   Erstellen Sie im Konstruktor eine oder mehrere aus [**csourcestream**](csourcestream.md)abgeleitete Ausgabe Pins. Die Pins fügen sich automatisch dem Filter in den Konstruktormethoden hinzu und entfernen sich selbst in ihren demarkermethoden.
+-   Erstellen Sie im Konstruktor mindestens einen Ausgabepin, der von [**CSourceStream**](csourcestream.md)abgeleitet wurde. Die Pins fügen sich automatisch dem Filter in ihren Konstruktormethoden hinzu und entfernen sich selbst in ihren Destruktormethoden.
 
-Um den Filter Zustand zwischen mehreren Threads zu synchronisieren, müssen Sie die [**CSource::p statelock**](csource--pstatelock.md) -Methode aufrufen. Diese Methode gibt einen Zeiger auf den kritischen Abschnitt des Filter Zustands zurück. Verwenden Sie die [**cautolock**](cautolock.md) -Klasse, um den kritischen Abschnitt zu halten. Von einer PIN aus können Sie wie folgt aus der [**cbasepin:: m \_ pFilter**](cbasepin-m-pfilter.md) -Element Variablen der PIN auf **pstatus-ck** zugreifen:
+Um den Filterzustand zwischen mehreren Threads zu synchronisieren, rufen Sie die [**CSource::p StateLock-Methode**](csource--pstatelock.md) auf. Diese Methode gibt einen Zeiger auf den kritischen Filterzustandsabschnitt zurück. Verwenden Sie die [**CAutoLock-Klasse,**](cautolock.md) um den kritischen Abschnitt zu speichern. Über eine Pin können Sie wie folgt über die [**CBasePin::m \_ pFilter-Membervariable**](cbasepin-m-pfilter.md) des Pins auf **pStateLock** zugreifen:
 
 
 ```
@@ -86,8 +86,8 @@ CAutoLock lock(m_pFilter->pStateLock());
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -95,7 +95,7 @@ CAutoLock lock(m_pFilter->pStateLock());
 
 <dl> <dt>
 
-[Schreiben von Quell Filtern](writing-source-filters.md)
+[Schreiben von Quellfiltern](writing-source-filters.md)
 </dt> </dl>
 
  

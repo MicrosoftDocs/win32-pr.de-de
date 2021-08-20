@@ -1,29 +1,29 @@
 ---
-description: Benachrichtigungs Sounds für Legacy-Audioanwendungen
+description: Benachrichtigungsgeräusche für Ältere Audioanwendungen
 ms.assetid: c5ad67d9-56fb-4bf0-aea4-5b49b0e5bf95
-title: Benachrichtigungs Sounds für Legacy-Audioanwendungen
+title: Benachrichtigungsgeräusche für Ältere Audioanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e9ee2ef1155694e32a21779c55d290da6b3799c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f4ce813fb2d38a9995f929c62936879f502392415d040e88ddb50f3b4699734a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077524"
 ---
-# <a name="notification-sounds-for-legacy-audio-applications"></a>Benachrichtigungs Sounds für Legacy-Audioanwendungen
+# <a name="notification-sounds-for-legacy-audio-applications"></a>Benachrichtigungsgeräusche für Ältere Audioanwendungen
 
-In Windows Vista weist das Betriebssystem alle System Benachrichtigungs Sounds einer prozessübergreifenden Audiositzung zu, die über das renderingendpunktgerät abgespielt wird, das zurzeit der econsole- [Geräte Rolle](device-roles.md)zugewiesen ist. Das System Volume-Control-Programm sndvol zeigt einen volumeschiebe Regler an, der für System Benachrichtigungs Sounds dediziert ist.
+In Windows Vista weist das Betriebssystem alle Systembenachrichtigungs-Sounds einer prozessübergreifenden Audiositzung zu, die über das Renderingendpunktgerät abspielt, das derzeit der eConsole-Geräterolle zugewiesen [ist.](device-roles.md) Das Systemvolumesteuerungsprogramm Sndvol zeigt einen Volumeschieberegler an, der für Systembenachrichtigungs-Sounds de dedicated ist.
 
-Einige Anwendungen spielen Benachrichtigungs Sounds. Anstatt den Benutzer zu zwingen, die Benachrichtigungs Geräusche einer Anwendung über einen separaten volumeschiebe Regler in sndvol zu verwalten, kann die Anwendung die Benachrichtigungs Geräusche der gleichen Sitzung zuweisen, in der die System Benachrichtigung ertönt. Mit dem Schieberegler sndvol-Volume, der die Systembenachrichtigungs-Sounds steuert, werden die Benachrichtigungs Geräusche der Anwendung gesteuert.
+Einige Anwendungen geben Benachrichtigungsgeräusche wieder. Anstatt den Benutzer zur Verwaltung der Benachrichtigungsgeräusche einer Anwendung über einen separaten Volumeschieberegler in Sndvol zu schieben, kann die Anwendung seine Benachrichtigungsgeräusche derselben Sitzung zuweisen, in der die Systembenachrichtigung klingt. Der Sndvol-Volumeschieberegler, der die Systembenachrichtigung steuert, steuert dann die Benachrichtigungsgeräusche der Anwendung.
 
-Um dieses Verhalten zu aktivieren, definiert Windows Vista ein snd- \_ Systemflag für die Legacy-Funktion [**PlaySound**](/previous-versions//dd743680(v=vs.85)) . (Dieses Flag wird in früheren Versionen von Windows, einschließlich Windows Server 2003, Windows XP und Windows 2000, nicht unterstützt.) Wenn der Aufrufer dieses Flag festlegt, weist die **PlaySound** -Funktion den Sound, den er wieder gibt, der prozessübergreifenden Sitzung zu, die das Betriebssystem für seine Benachrichtigungs Geräusche verwendet. Wenn der Aufrufer das Flag nicht festgelegt hat, weist **PlaySound** den von ihm wiederverwendeten Sound der Standard Sitzung zu – die prozessspezifische Sitzung, die durch den Sitzungs-GUID-Wert GUID NULL identifiziert wird \_ . Snd \_ System ist in der Header Datei "MMSYSTEM. h" definiert. Weitere Informationen zu **PlaySound** finden Sie in der Windows SDK-Dokumentation.
+Um dieses Verhalten zu aktivieren, Windows Vista ein SND \_ SYSTEM-Flag für die legacy [**PlaySound-Funktion**](/previous-versions//dd743680(v=vs.85)) definiert. (Dieses Flag wird in früheren Versionen von Windows nicht unterstützt, einschließlich Windows Server 2003, Windows XP und Windows 2000.) Wenn der Aufrufer dieses Flag fest legt, weist die **PlaySound-Funktion** den Sound, den er abspielt, der prozessübergreifenden Sitzung zu, die das Betriebssystem für seine Benachrichtigungssounds verwendet. Wenn der Aufrufer das Flag nicht festgelegt hat, weist **PlaySound** den Sound, den er wiedergibt, der Standardsitzung zu– der prozessspezifischen Sitzung, die durch den SITZUNGs-GUID-Wert GUID NULL identifiziert \_ wird. SND \_ SYSTEM wird in der Headerdatei Mmsystem.h definiert. Weitere Informationen zu **PlaySound** finden Sie in der dokumentation Windows SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Interoperabilität mit Legacy-audioapis](interoperability-with-legacy-audio-apis.md)
+[Interoperabilität mit Legacyaudio-APIs](interoperability-with-legacy-audio-apis.md)
 </dt> </dl>
 
  

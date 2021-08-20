@@ -1,7 +1,7 @@
 ---
 description: Überprüft das angegebene geplante System.
 ms.assetid: cb969b38-f36d-4c70-b234-590f1c219d22
-title: Validateplannedsystem-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ValidatePlannedSystem-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 96137c3774291e06bfffdea3843658a427e36950
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a35c34967272563426fc70cc6b9b0dd6d5aeaa682202e1d5ca52a2a0d5720d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119212950"
 ---
-# <a name="validateplannedsystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Validateplannedsystem-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="validateplannedsystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ValidatePlannedSystem-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Überprüft das angegebene geplante System. Dies umfasst das Überprüfen der Konfiguration des virtuellen Computers, der Geräte, der momentaufnahmenkonfiguration, von Momentaufnahme Geräten, gespeicherter Zustands Dateien und Speicherdateien
+Überprüft das angegebene geplante System. Dies umfasst Überprüfungen der Konfiguration des virtuellen Computers, der Geräte, der Momentaufnahmekonfiguration, der Momentaufnahmegeräte, der gespeicherten Zustandsdateien und der Speicherdateien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 ValidatePlannedSystem(
 
 <dl> <dt>
 
-*Plannedsystem* \[ in\]
+*PlannedSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein [**MSVM- \_ plannedcomputersystem**](msvm-plannedcomputersystem.md) -Objekt, das das geplante System darstellt, das überprüft werden soll.
+Ein Verweis auf ein [**Msvm \_ PlannedComputerSystem-Objekt, das**](msvm-plannedcomputersystem.md) das zu validierte geplante System darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,7 +75,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -87,16 +87,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
 **Verwendete Datei** (32779)
@@ -104,10 +104,10 @@ Das **System ist nicht verfügbar** (32777).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird die **validateplannedsystem** -Methode verwendet, um einen geplanten virtuellen Computer zu validieren. Dieser Code stammt aus dem Beispiel zu den von [Hyper-V geplanten virtuellen](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Pvm)Computern. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird die **ValidatePlannedSystem-Methode** verwendet, um einen geplanten virtuellen Computer zu überprüfen. Dieser Code stammt aus dem [Hyper-V-Beispiel für geplante virtuelle Computer.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Pvm) Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 > [!IMPORTANT]
-> Der folgende Code muss auf dem Host Server des virtuellen Computers ausgeführt werden, und er muss mit Administrator Rechten ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Um ordnungsgemäß zu funktionieren, muss der folgende Code auf dem Hostserver des virtuellen Computers und mit Administratorrechten ausgeführt werden.
 
  
 
@@ -159,19 +159,19 @@ ValidatePvm(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

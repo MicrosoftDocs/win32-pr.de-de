@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabaseinvalidpgesexception-Konstruktor'
-title: Esentdatabaseinvalidpgesexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseInvalidPagesException-Konstruktor'
+title: EsentDatabaseInvalidPagesException-Konstruktor
 TOCTitle: 'EsentDatabaseInvalidPagesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseInvalidPagesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabaseinvalidpagesexception.esentdatabaseinvalidpagesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 56ac59b1f9e2bae1e5dda23cc05956584d321dae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b5d97563716e4569daa89a0c6cb52516643c6ae6a44a6fac9861c8b1236eb4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119041468"
 ---
-# <a name="esentdatabaseinvalidpagesexception-constructor"></a>Esentdatabaseinvalidpgesexception-Konstruktor
+# <a name="esentdatabaseinvalidpagesexception-constructor"></a>EsentDatabaseInvalidPagesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabaseinvalidpgesexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseInvalidPagesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseInvalidPagesException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabaseinvalidpgesexception-Klasse](./esentdatabaseinvalidpagesexception-class.md)
+[EsentDatabaseInvalidPagesException-Klasse](./esentdatabaseinvalidpagesexception-class.md)
 
-[Esentdatabaseinvalidpgesexception-Elemente](./esentdatabaseinvalidpagesexception-members.md)
+[EsentDatabaseInvalidPagesException-Member](./esentdatabaseinvalidpagesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
 description: Die GetGroup-Methode ruft eine angegebene Gruppe ab.
 ms.assetid: 4ff651e5-a3aa-4da9-af23-a3a2bdbf7c5b
-title: 'Iamtimeline:: GetGroup-Methode (qedit. h)'
+title: IAMTimeline::GetGroup-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 1241a125698cf78c1138d9264ecd8c73ff78056c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 71bf4aa0dd5d6f338da43d71384ead024fe821d3a639b0021299f6f6deb14be8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119685190"
 ---
-# <a name="iamtimelinegetgroup-method"></a>Iamtimeline:: GetGroup-Methode
+# <a name="iamtimelinegetgroup-method"></a>IAMTimeline::GetGroup-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `GetGroup` Methode ruft eine angegebene Gruppe ab.
+Die `GetGroup` -Methode ruft eine angegebene Gruppe ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ HRESULT GetGroup(
 
 <dl> <dt>
 
-*ppgroup* \[ vorgenommen\]
+*ppGroup* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle der Gruppe.
+Empfängt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle der**](iamtimelineobj.md) Gruppe.
 
 </dd> <dt>
 
-*Whichgroup* 
+*WhichGroup* 
 </dt> <dd>
 
-Der Index der abzurufenden Gruppe, basierend auf der Reihenfolge, in der die Gruppen der Zeitachse hinzugefügt wurden. Die erste Gruppe, die der Zeitachse hinzugefügt wird, hat einen Index von 0.
+Index der abzurufenden Gruppe, basierend auf der Reihenfolge, in der die Gruppen der Zeitachse hinzugefügt wurden. Die erste Gruppe, die der Zeitachse hinzugefügt wurde, hat den Index 0.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamtimelineobj** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode erfolgreich ist, verfügt die **IAMTimelineObj-Schnittstelle,** die sie zurückgibt, über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie die -Schnittstelle wieder frei geben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -84,8 +84,8 @@ Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamti
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -93,10 +93,10 @@ Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamti
 
 <dl> <dt>
 
-[**Iamtimeline-Schnittstelle**](iamtimeline.md)
+[**IAMTimeline-Schnittstelle**](iamtimeline.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

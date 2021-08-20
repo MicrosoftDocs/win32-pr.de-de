@@ -1,28 +1,28 @@
 ---
-title: Ivmvirtualmachinecollection-Eigenschaften
-description: Die ivmvirtualmachinecollection-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IVMVirtualMachineCollection-Eigenschaften
+description: Die IVMVirtualMachineCollection-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 5658AA88-8F02-46EC-AC9A-60A9A6F935EE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f0544b7fe9c264efbbe2969ae47719cebd83749
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ae6cd85272541d9fd84e8354d6f1e20810598312a273743548af10a4156268d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056768"
 ---
-# <a name="ivmvirtualmachinecollection-properties"></a>Ivmvirtualmachinecollection-Eigenschaften
+# <a name="ivmvirtualmachinecollection-properties"></a>IVMVirtualMachineCollection-Eigenschaften
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmvirtualmachinecollection**](ivmvirtualmachinecollection.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IVMVirtualMachineCollection-Schnittstelle**](ivmvirtualmachinecollection.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**\_Eigenschaft "netwenum"**](ivmvirtualmachinecollection--newenum.md)
+-   [**\_NewEnum-Eigenschaft**](ivmvirtualmachinecollection--newenum.md)
 -   [**Count-Eigenschaft**](ivmvirtualmachinecollection-count.md)
 -   [**Item-Eigenschaft**](ivmvirtualmachinecollection-item.md)
 
- 
+ 
 
- 
+ 

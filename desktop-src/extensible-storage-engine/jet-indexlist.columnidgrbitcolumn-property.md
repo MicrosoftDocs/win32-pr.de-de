@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXLIST. columnidgrbitcolumn-Eigenschaft'
-title: JET_INDEXLIST. columnidgrbitcolumn (Eigenschaft)
+description: 'Weitere Informationen zu: JET_INDEXLIST.columnidgrbitColumn-Eigenschaft'
+title: JET_INDEXLIST.columnidgrbitColumn-Eigenschaft
 TOCTitle: 'columnidgrbitColumn property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXLIST.columnidgrbitColumn
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexlist.columnidgrbitcolumn(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 18be8455f2618265d77991b7c839f21ff04ef497
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8588b5e7647507eb417610baab685e27e9c00a836f56ed6f1da499b0b66121e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038958"
 ---
-# <a name="jet_indexlistcolumnidgrbitcolumn-property"></a>JET_INDEXLIST. columnidgrbitcolumn (Eigenschaft)
+# <a name="jet_indexlistcolumnidgrbitcolumn-property"></a>JET_INDEXLIST.columnidgrbitColumn-Eigenschaft
 
-Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der das grbit gespeichert ist, das auf die indizierte Spalte angewendet wird. Siehe [indexkeygrbit](./indexkeygrbit-enumeration.md). Die Spalte ist vom Typ [Long](./jet-coltyp-enumeration.md).
+Ruft die columnid der Spalte in der temporären Tabelle ab, in der das grbit gespeichert wird, das für die indizierte Spalte gilt. Weitere Informationen finden Sie [unter IndexKeyGrbit](./indexkeygrbit-enumeration.md). Die Spalte ist vom Typ [Long](./jet-coltyp-enumeration.md).
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_COLUMNID columnidgrbitColumn { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXLIST-Klasse](./jet-indexlist-class.md)
 
-[Mitglieder JET_INDEXLIST](./jet-indexlist-members.md)
+[JET_INDEXLIST-Member](./jet-indexlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. jetescrowupdate-Methode'
-title: API. jetescrowupdate-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetEscrowUpdate-Methode'
+title: Api.JetEscrowUpdate-Methode
 TOCTitle: 'JetEscrowUpdate method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetEscrowUpdate(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID,System.Byte[],System.Int32,System.Byte[],System.Int32,System.Int32@,Microsoft.Isam.Esent.Interop.EscrowUpdateGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetescrowupdate(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 09e74f964fd6018248a3cfc594621bed96f92e60
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec5ddbedb921b89ef1b3c6e5bc48284da72407e8374bd6f0bb2de51c39c087e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042668"
 ---
-# <a name="apijetescrowupdate-method"></a>API. jetescrowupdate-Methode
+# <a name="apijetescrowupdate-method"></a>Api.JetEscrowUpdate-Methode
 
-Führt eine atomarische Additions Operation für eine Spalte aus. Diese Funktion ermöglicht es mehreren Sitzungen, denselben Datensatz gleichzeitig zu aktualisieren, ohne dass Konflikte auftreten. Siehe auch [escrowupdate (JET_SESID, JET_TABLEID, JET_COLUMNID, Int32)](./api.escrowupdate-method.md).
+Führt einen atomaren Additionsvorgang für eine Spalte aus. Diese Funktion ermöglicht es mehreren Sitzungen, denselben Datensatz gleichzeitig ohne Konflikte zu aktualisieren. Siehe auch [EscrowUpdate(JET_SESID, JET_TABLEID, JET_COLUMNID, Int32).](./api.escrowupdate-method.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -84,73 +84,73 @@ public static void JetEscrowUpdate(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die zu verwendende Sitzung. Die Sitzung muss sich in einer Transaktion befinden.
+    Die zu verwendende Sitzung. Die Sitzung muss in einer Transaktion sein.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, der aktualisiert werden soll.
+    Der zu aktualisierende Cursor.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Die zu Aktualisier gende Spalte. Dabei muss es sich um eine aktualisierbare Spalte für die Hinterlegung
+    Die zu aktualisierende Spalte. Dabei muss es sich um eine aktualisierbare Spalte mit Aktualisierbarer Füllung handelt.
 
 <!-- end list -->
 
   - delta  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Der Puffer, der den Addend enthält.
+    Der Puffer, der das Add-In enthält.
 
 <!-- end list -->
 
-  - Delta size  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - deltaSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Größe des Addend.
+    Die Größe des Add-Ins.
 
 <!-- end list -->
 
   - previousValue  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Ein Ausgabepuffer, der den aktuellen Wert der Spalte empfängt. Dieser Puffer kann NULL sein.
 
 <!-- end list -->
 
-  - previousvaluelength  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - previousValueLength  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Größe des previousValue-Puffers.
 
 <!-- end list -->
 
-  - actualpreviousvaluelength  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualPreviousValueLength  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Gibt die tatsächliche Größe von previousValue zurück.
+    Gibt die tatsächliche Größe des previousValue zurück.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. escrowupdategrbit](./escrowupdategrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.EscrowUpdateGrbit](./escrowupdategrbit-enumeration.md)  
     
-    Optionen zum Aktualisieren von Optionen.
+    Escrow-Updateoptionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

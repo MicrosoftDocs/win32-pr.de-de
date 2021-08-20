@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentchangecystackoudef memoryexception-Konstruktor'
-title: Esentchangecystackouessmemoryexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentCurrencyStackOutOfMemoryException-Konstruktor'
+title: EsentCurrencyStackOutOfMemoryException-Konstruktor
 TOCTitle: 'EsentCurrencyStackOutOfMemoryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCurrencyStackOutOfMemoryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcurrencystackoutofmemoryexception.esentcurrencystackoutofmemoryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0ce7a65366c11bd26ff40ba83fecd5b22d77fb8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57be01403aa70601d5249d7f32aab217b398b3f12c27dbb6df452ce7daa0d9af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119041618"
 ---
-# <a name="esentcurrencystackoutofmemoryexception-constructor"></a>Esentchangecystackouessmemoryexception-Konstruktor
+# <a name="esentcurrencystackoutofmemoryexception-constructor"></a>EsentCurrencyStackOutOfMemoryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentchangecystackouesf memoryexception-Klasse.
+Initialisiert eine neue Instanz der EsentCurrencyStackOutOfMemoryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentCurrencyStackOutOfMemoryException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentchangecystackoudef memoryexception-Klasse](./esentcurrencystackoutofmemoryexception-class.md)
+[EsentCurrencyStackOutOfMemoryException-Klasse](./esentcurrencystackoutofmemoryexception-class.md)
 
-[Esentchangecystackouesfmemoryexception-Member](./esentcurrencystackoutofmemoryexception-members.md)
+[EsentCurrencyStackOutOfMemoryException-Member](./esentcurrencystackoutofmemoryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

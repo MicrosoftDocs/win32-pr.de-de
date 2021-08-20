@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Ereignis dar, das jedes Mal ausgelöst wird, wenn sich die OperationalStatus-Eigenschaft der MSVM \_ resourcepool-Klasse oder der MSVM \_ LogicalDisk-Klasse ändert.
+description: Stellt ein Ereignis dar, das jedes Mal ausgelöst wird, wenn sich die OperationalStatus-Eigenschaft der \_ Msvm ResourcePool- oder Msvm \_ LogicalDisk-Klasse ändert.
 ms.assetid: 20E7C22A-A151-4EDC-90D8-4BCD53C42355
 title: Msvm_StorageAlert-Klasse
 ms.topic: reference
@@ -25,18 +25,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: fa7f0430631082a9690cf2083f6b075ca62ee26b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 478b4617f56c73e425d833842b313767f85c385e9142314a7ca8978b5783f492
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950229"
 ---
-# <a name="msvm_storagealert-class"></a>MSVM \_ storagealert-Klasse
+# <a name="msvm_storagealert-class"></a>Msvm \_ StorageAlert-Klasse
 
-Stellt ein Ereignis dar, das jedes Mal ausgelöst wird, wenn sich die **OperationalStatus** -Eigenschaft der [**MSVM \_ resourcepool**](msvm-resourcepool.md) -Klasse oder der [**MSVM \_ LogicalDisk**](msvm-logicaldisk.md) -Klasse ändert.
+Stellt ein Ereignis dar, das jedes Mal ausgelöst wird, wenn sich die **OperationalStatus-Eigenschaft** der [**Msvm \_ ResourcePool-**](msvm-resourcepool.md) oder [**Msvm \_ LogicalDisk-Klasse**](msvm-logicaldisk.md) ändert.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und enthält diese Eigenschaften.
+Die folgende Syntax wird durch MOF-Code vereinfacht und enthält diese Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,31 +61,31 @@ class Msvm_StorageAlert : CIM_AlertIndication
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ storagealert** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ StorageAlert-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ storagealert** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ StorageAlert-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Alertingelementformat**
+**AlertingElementFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **modelcorrespondence** ("CIM \_ alertindikation. alertingmanagedelta ement", "CIM \_ alertindikation. otheralertingelementformat")
+Qualifizierer: **ModelCorrespondence** ("CIM \_ AlertIndication.AlertingManagedElement", "CIM \_ AlertIndication.OtherAlertingElementFormat")
 </dt> </dl>
 
-Gibt das Format der **alertingmanagedelta** -Eigenschaft an. Das Format ist ein cimabjectpath mit dem folgenden Format *<NamespacePath> : <ClassName> . <Prop1> = \\ " <Value1> \\ ", " <Prop2> = \\ " <Value2> \\ "*, der eine Instanz im CIM-Schema angibt.
+Gibt das Format der **AlertingManagedElement-Eigenschaft** an. Das Format ist ein CIMObjectPath mit dem Format *<NamespacePath> : . " <ClassName> <Prop1> = \\ <Value1> \\ ", " <Prop2> = \\ " <Value2> \\ " " ,*, das eine Instanz im CIM-Schema angibt.
 
-Diese Eigenschaft wird von der **CIM \_ alertindikation** -Klasse geerbt.
+Diese Eigenschaft wird von der **CIM \_ AlertIndication-Klasse geerbt.**
 
 Mögliche Werte sind:
 
@@ -97,28 +97,28 @@ Mögliche Werte sind:
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 </dt> <dt>
 
-<span id="CIMObjectPath"></span><span id="cimobjectpath"></span><span id="CIMOBJECTPATH"></span>**Cifibjectpath** (2)
+<span id="CIMObjectPath"></span><span id="cimobjectpath"></span><span id="CIMOBJECTPATH"></span>**CIMObjectPath** (2)
 </dt> </dl>
 
 </dd> <dt>
 
-**Alertingmanagedelta**
+**AlertingManagedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die WMI-Pfade der-Instanz, für die die Warnung generiert wird.
+Die WMI-Pfade der Instanz, für die die Warnung generiert wird.
 
 </dd> <dt>
 
 **AlertType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -136,149 +136,149 @@ Gibt die primäre Klassifizierung der Warnung an. Folgende Werte sind für diese
 **EventTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit, zu denen das zugrunde liegende Ereignis erkannt wurde.
+Das Datum und die Uhrzeit, zu der das zugrunde liegende Ereignis erkannt wurde.
 
 </dd> <dt>
 
 **Meldung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine formatierte Nachricht, die erstellt wird, indem einige oder alle der dynamischen Elemente kombiniert werden, die in der **messagearguments** -Eigenschaft angegeben sind, und die statischen Elemente, die durch die Eigenschaft **MessageId** in einer Nachrichten Registrierung oder einem anderen der **owningentity** -Eigenschaft zugeordneten Katalog eindeutig identifiziert werden.
+Eine formatierte Nachricht, die erstellt wird, indem einige oder alle dynamischen Elemente, die in der **MessageArguments-Eigenschaft** angegeben sind, mit den statischen Elementen kombiniert werden, die eindeutig durch die **MessageID-Eigenschaft** in einer Nachrichtenregistrierung oder einem anderen Katalog identifiziert werden, der der **OwningEntity-Eigenschaft** zugeordnet ist.
 
 </dd> <dt>
 
-**Messagearguments**
+**MessageArguments**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das den dynamischen Inhalt der Nachricht enthält. Wenn der Wert von **MessageId** 32930 ist, ist das Argument an Position 0 der **poolid** der [**MSVM \_ resourcepool**](msvm-resourcepoolcomponent.md) -Instanz, für die die Warnung generiert wird.
+Ein Array, das den dynamischen Inhalt der Nachricht enthält. Wenn der Wert von **MessageID** 32930 ist, ist das Argument an Position 0 die **PoolID** der [**Msvm \_ ResourcePool-Instanz,**](msvm-resourcepoolcomponent.md) für die die Warnung generiert wird.
 
 </dd> <dt>
 
-**MessageId**
+**MessageID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert eindeutig innerhalb des Gültigkeits Bereichs der **owningentity** -Eigenschaft das Format der **Message** -Eigenschaft. Folgende Werte sind für diese Eigenschaft möglich:
+Identifiziert das Format der Message-Eigenschaft innerhalb des Bereichs der **OwningEntity-Eigenschaft** eindeutig.  Folgende Werte sind für diese Eigenschaft möglich:
 
-32930 ("Speicher Pool-QoS unzureichende Durchsatz Nachricht")
+32930 ("Storage Pool QoS Insufficient Throughput Message")
 
 </dd> <dt>
 
-**Otheralertingelementformat**
+**OtherAlertingElementFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die "Other"-Werte für **alertingmanagedelta Element** definiert. Dieser Wert muss auf einen Wert ungleich NULL festgelegt werden, wenn **alertingmanagedelta** auf den Wert 1 ("Other") festgelegt ist. Für alle anderen Werte von **alertingmanagedelta** muss der Wert dieser Zeichenfolge auf NULL festgelegt werden.
+Eine Zeichenfolge, die "Andere" Werte für **AlertingManagedElement definiert.** Dieser Wert MUSS auf einen Nicht-NULL-Wert festgelegt werden, **wenn AlertingManagedElement** auf den Wert 1 ("Other") festgelegt ist. Für alle anderen Werte von **AlertingManagedElement** muss der Wert dieser Zeichenfolge auf NULL festgelegt werden.
 
-Diese Eigenschaft wird von der **CIM \_ alertindikation** -Klasse geerbt.
+Diese Eigenschaft wird von der **CIM \_ AlertIndication-Klasse geerbt.**
 
 </dd> <dt>
 
-**Owningentity**
+**OwningEntity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert die Entität eindeutig, die die Definition des Formats der in dieser Instanz beschriebenen **Meldung** besitzt. Der Wert dieser Eigenschaft lautet immer "Microsoft-Windows-Hyper-V".
+Identifiziert eindeutig die Entität, die die Definition des  In dieser Instanz beschriebenen Nachrichtenformats besitzt. Der Wert dieser Eigenschaft ist immer "Microsoft-Windows- Hyper-V".
 
-"Microsoft-Windows-Hyper-V"
+"Microsoft-Windows- Hyper-V"
 
 </dd> <dt>
 
-**Wahrnehmgrad**
+**PerceivedSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt den Schweregrad der Warnungs Anzeige. Folgende Werte sind für diese Eigenschaft möglich:
+Beschreibt den Schweregrad der Warnungsanzeige. Folgende Werte sind für diese Eigenschaft möglich:
 
 <dl> <dt>
 
 <span id="Information"></span><span id="information"></span><span id="INFORMATION"></span>**Informationen** (2)
 </dt> <dt>
 
-<span id="Degraded_Warning"></span><span id="degraded_warning"></span><span id="DEGRADED_WARNING"></span>Heruntergestuft **/Warnung** (3)
+<span id="Degraded_Warning"></span><span id="degraded_warning"></span><span id="DEGRADED_WARNING"></span>**Heruntergestuft/Warnung** (3)
 </dt> </dl>
 
 </dd> <dt>
 
-**Probableursache**
+**WahrscheinlichkeitCause**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die mögliche Ursache der Situation, die zu der Warnungs Warnung geführt hat.
+Beschreibt die wahrscheinliche Ursache der Situation, die zur Warnungsanzeige führte.
 
 <dl> <dt>
 
-<span id="Storage_Capacity_Problem"></span><span id="storage_capacity_problem"></span><span id="STORAGE_CAPACITY_PROBLEM"></span>**Speicher Kapazitäts Problem** (50)
+<span id="Storage_Capacity_Problem"></span><span id="storage_capacity_problem"></span><span id="STORAGE_CAPACITY_PROBLEM"></span>**Storage Kapazitätsproblem** (50)
 </dt> <dt>
 
-<span id="Previous_Alert_Cleared"></span><span id="previous_alert_cleared"></span><span id="PREVIOUS_ALERT_CLEARED"></span>**Vorherige Warnung gelöscht** (59)
+<span id="Previous_Alert_Cleared"></span><span id="previous_alert_cleared"></span><span id="PREVIOUS_ALERT_CLEARED"></span>**Vorherige Warnung wurde ausgelöst** (59)
 </dt> </dl>
 
 </dd> <dt>
 
-**Probablecauendescription**
+**WahrscheinlichkeitCauseDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Textbeschreibung, die dem Wert der **probablecause** -Eigenschaft entspricht.
+Eine Textbeschreibung, die dem Wert der **Eigenschaft "ProbableCause"** entspricht.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Hyper-V-WMI-Anbieter gibt keine Ereignisse für einzelne virtuelle Datenträger aus, um zu verhindern, dass Clients mit Ereignissen bei umfangreichen Störungen der zugrunde liegenden Speichersysteme überflutet werden.
+Der Hyper-V-WMI-Anbieter gibt keine Ereignisse für einzelne virtuelle Datenträger aus, um bei großen Fehlfunktionen der zugrunde liegenden Speichersysteme eine Überflutung von Clients mit Ereignissen zu vermeiden.
 
-Wenn ein Client ein **MSVM \_ storagealert** -Ereignis empfängt und der Wert der **probablecause** -Eigenschaft 50 (Speicher Kapazitäts Problem) ist, kann der Client ermitteln, welche virtuellen Datenträger außerhalb der QoS-Richtlinie ausgeführt werden, indem Sie eines der folgenden Verfahren verwenden:
+Wenn ein Client ein **Msvm \_ StorageAlert-Ereignis** empfängt, kann der Client mit einem der folgenden Verfahren feststellen, welche virtuellen Datenträger außerhalb der QoS-Richtlinie ausgeführt werden, wenn der Wert der **Eigenschaft "50"** (Storage Capacity Problem) ist:
 
--   Fragen Sie alle [**MSVM \_ LogicalDisk**](msvm-logicaldisk.md) -Instanzen ab, die aus dem Ressourcenpool zugeordnet wurden, für den das Ereignis generiert wurde. Diese **MSVM \_ LogicalDisk** -Instanzen werden dem Ressourcenpool über die [**MSVM- \_ Zuordnung elementzuordnungsedfrompool**](msvm-elementallocatedfrompool.md) zugeordnet.
+-   Fragen Sie alle [**Msvm \_ LogicalDisk-Instanzen**](msvm-logicaldisk.md) ab, die aus dem Ressourcenpool zugeordnet wurden, für den das Ereignis generiert wurde. Diese **Msvm \_ LogicalDisk-Instanzen** werden dem Ressourcenpool über die [**Msvm-ElementAllocatedFromPool-Zuordnung \_**](msvm-elementallocatedfrompool.md) zugeordnet.
 -   Filtern Sie die Ergebnisliste, indem Sie Instanzen auswählen, deren OperationalStatus unzureichenden Durchsatz enthält.
 
 ## <a name="requirements"></a>Anforderungen
@@ -287,10 +287,10 @@ Wenn ein Client ein **MSVM \_ storagealert** -Ereignis empfängt und der Wert de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -299,13 +299,13 @@ Wenn ein Client ein **MSVM \_ storagealert** -Ereignis empfängt und der Wert de
 
 <dl> <dt>
 
-[**CIM- \_ alertindikation**](cim-alertindication.md)
+[**CIM \_ AlertIndication**](cim-alertindication.md)
 </dt> <dt>
 
-[**MSVM \_ LogicalDisk**](msvm-logicaldisk.md)
+[**Msvm \_ LogicalDisk**](msvm-logicaldisk.md)
 </dt> <dt>
 
-[**MSVM- \_ resourcepool**](msvm-resourcepoolcomponent.md)
+[**Msvm \_ ResourcePool**](msvm-resourcepoolcomponent.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Die Methode "stionbdbconnectionstrings" der Win32_SessionBrokerServiceProperties-Klasse
-description: Speichert DB-Verbindungs Zeichenfolgen (Primär und sekundär) in der Registrierung.
+title: SetSBDbConnectionStrings-Methode der Win32_SessionBrokerServiceProperties-Klasse
+description: Speichert Datenbankverbindungszeichenfolgen sowohl primär als auch sekundär in der Registrierung.
 ms.assetid: a9a20eca-22d9-495c-b976-2952c97be67e
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "
-- Methode Remotedesktopdienste der Methode "" der Klasse "Win32_SessionBrokerServiceProperties"
-- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste, Methode ' Methode ', ' Methode '
+- SetSBDbConnectionStrings-Methode Remotedesktopdienste
+- SetSBDbConnectionStrings-Methode Remotedesktopdienste , Win32_SessionBrokerServiceProperties-Klasse
+- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste , SetSBDbConnectionStrings-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e4aa02cabe89e434fb8b24b308bbe2ec51fa5f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b89baa40d25e6ecf316ac6904cc89091fa581d87be1018c52fa31c2b7ab358d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058417"
 ---
-# <a name="setsbdbconnectionstrings-method-of-the-win32_sessionbrokerserviceproperties-class"></a>Die Methode "" der \_ Klasse "sessionbrokerserviceproperties" der Win32-Klasse
+# <a name="setsbdbconnectionstrings-method-of-the-win32_sessionbrokerserviceproperties-class"></a>SetSBDbConnectionStrings-Methode der Win32 \_ SessionBrokerServiceProperties-Klasse
 
-Speichert DB-Verbindungs Zeichenfolgen (Primär und sekundär) in der Registrierung.
+Speichert Datenbankverbindungszeichenfolgen sowohl primär als auch sekundär in der Registrierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ uint32 SetSBDbConnectionStrings(
 
 <dl> <dt>
 
-"Verbindungs Dienst" für " *recentraldbrdcms* \[ " in\]
+*connStringToCentralDBRdcms* \[ In\]
 </dt> <dd>
 
-Die primäre Verbindungs Zeichenfolge.
+Die primäre Verbindungszeichenfolge.
 
 </dd> <dt>
 
-*secondaryverbindungs-"stringrecentraldbrdcms* \[ " in\]
+*secondaryConnStringToCentralDBRdcms* \[ In\]
 </dt> <dd>
 
-Die sekundäre Verbindungs Zeichenfolge.
+Die sekundäre Verbindungszeichenfolge.
 
 </dd> </dl>
 
@@ -67,16 +67,16 @@ Die sekundäre Verbindungs Zeichenfolge.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                         |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ sessionbrokerserviceproperties**](win32-sessionbrokerserviceproperties.md)
+[**Win32 \_ SessionBrokerServiceProperties**](win32-sessionbrokerserviceproperties.md)
 </dt> </dl>
 
  

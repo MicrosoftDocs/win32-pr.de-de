@@ -1,14 +1,14 @@
 ---
-title: IMsRdpClientAdvancedSettings7 audioqualitymode (Eigenschaft)
-description: Gibt einen Wert an oder ruft ihn ab, der die Einstellung für den audioqualitätsmodus für umgeleitete Audiodaten angibt Standardmäßig ist dieser Wert auf 0 festgelegt.
+title: IMsRdpClientAdvancedSettings7 AudioQualityMode-Eigenschaft
+description: Gibt einen Wert an, der die Einstellung des Audioqualitätsmodus für umgeleitetes Audio angibt, oder ruft diesen ab. Standardmäßig ist dies auf 0 festgelegt.
 ms.assetid: 9945c524-ca50-41ae-a7cf-1386cd758c0f
 ms.tgt_platform: multiple
 keywords:
-- Audioqualitymode-Eigenschaft Remotedesktopdienste
-- Audioqualitymode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, audioqualitymode-Eigenschaft
-- Audioqualitymode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, audioqualitymode-Eigenschaft
+- AudioQualityMode-Eigenschaft Remotedesktopdienste
+- AudioQualityMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AudioQualityMode-Eigenschaft
+- AudioQualityMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AudioQualityMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fdfc19176e03f8979e5adb25bf0c9eaf4ceed9f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1635c2ed01144a640b624a014959a4847ae5f746502267444d958a20b959eef9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001308"
 ---
-# <a name="imsrdpclientadvancedsettings7audioqualitymode-property"></a>IMsRdpClientAdvancedSettings7:: audioqualitymode (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings7audioqualitymode-property"></a>IMsRdpClientAdvancedSettings7::AudioQualityMode-Eigenschaft
 
-Gibt einen Wert an oder ruft ihn ab, der die Einstellung für den audioqualitätsmodus für umgeleitete Audiodaten angibt Standardmäßig ist dieser Wert auf 0 festgelegt.
+Gibt einen Wert an, der die Einstellung des Audioqualitätsmodus für umgeleitetes Audio angibt, oder ruft diesen ab. Standardmäßig ist dies auf 0 festgelegt.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -54,7 +54,7 @@ HRESULT get_AudioQualityMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein-Wert, der den audioqualitätsmodus angibt.
+Ein -Wert, der den Audioqualitätsmodus angibt.
 
 Mögliche Werte sind:
 
@@ -63,7 +63,7 @@ Mögliche Werte sind:
 0
 </dt> <dd>
 
-Dynamische Audioqualität. Dies ist die Standardeinstellung für die Audioqualität. Der Server passt die Qualität der Audioausgabe in Reaktion auf die Netzwerkbedingungen und die Client-und Serverfunktionen dynamisch an.
+Dynamische Audioqualität. Dies ist die Standardeinstellung für die Audioqualität. Der Server passt die Audioausgabequalität dynamisch als Reaktion auf Netzwerkbedingungen und die Client- und Serverfunktionen an.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Mittlere Audioqualität. Der Server verwendet ein festes, aber komprimiertes For
 2
 </dt> <dd>
 
-Hohe Audioqualität. Der Server stellt Audioausgaben im nicht komprimierten PCM-Format bereit, wobei der Verarbeitungsaufwand für die Latenz geringer ist.
+Hohe Audioqualität. Der Server stellt audio output in uncompressed PCM format with lower processing overhead for latency (Audioausgabe im nicht komprimierten PCM-Format mit geringerem Verarbeitungsaufwand für Latenz) bereit.
 
 </dd> </dl>
 
@@ -91,11 +91,11 @@ Hohe Audioqualität. Der Server stellt Audioausgaben im nicht komprimierten PCM-
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                                |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 wird als 26036036-4010-4578-8091-0db9a1edf-C3 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 ist als 26036036-4010-4578-8091-0db9a1edf9c3 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

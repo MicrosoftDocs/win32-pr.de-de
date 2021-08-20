@@ -1,21 +1,21 @@
 ---
-description: Die Grafikklasse ist das Herzstück von Windows GDI+. Um etwas zu zeichnen, erstellen Sie ein Grafik Objekt, legen seine Eigenschaften fest und rufen seine Methoden auf (DrawLine, DrawImage, DrawString und like).
+description: Die Graphics-Klasse steht im Mittelpunkt Windows GDI+. Um alles zu zeichnen, erstellen Sie ein Graphics-Objekt, legen dessen Eigenschaften fest und rufen dessen Methoden auf ( DrawLine, DrawImage, DrawString und ähnliches).
 ms.assetid: 7d70f9fe-c0b2-4d65-815d-483d06df96ad
 title: Status eines Grafikobjekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 661733f944b08633b5df84eed3ac488e612d9e4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f68a2ba754aadc1f7d2572dcbc2ac40d08d7fe95d382ce60511cd72d441bb80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104555247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977330"
 ---
 # <a name="the-state-of-a-graphics-object"></a>Status eines Grafikobjekts
 
-Die [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse ist das Herzstück von Windows GDI+. Um etwas zu zeichnen, erstellen Sie ein **Grafik** Objekt, legen seine Eigenschaften fest und rufen seine Methoden auf ( [DrawLine](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)), [DrawImage](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inconstpointf_inint)), [DrawString](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush))und like).
+Die [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) steht im Mittelpunkt Windows GDI+. Um alles zu zeichnen, erstellen Sie ein **Graphics-Objekt,** legen dessen Eigenschaften fest und rufen dessen Methoden auf ( [DrawLine,](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)) [DrawImage,](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inconstpointf_inint)) [DrawString](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush))und ähnliches).
 
-Im folgenden Beispiel werden ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt und ein [**Pen**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) -Objekt erstellt und dann die [**Grafik::D rawrechteck**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)) -Methode des **Grafik** Objekts aufgerufen:
+Das folgende Beispiel erstellt ein [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) und ein [**Pen-Objekt**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) und ruft dann die [**Graphics::D rawRectangle-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)) des **Graphics-Objekts** auf:
 
 
 ```
@@ -33,26 +33,26 @@ EndPaint(hWnd, &ps);
 
 
 
-Im vorangehenden Code gibt die [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) -Methode ein Handle für einen Gerätekontext zurück, und dieses Handle wird an den [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) -Konstruktor übergeben. Ein Gerätekontext ist eine (von Windows betreute) Struktur, die Informationen über das jeweilige angeverwendete Anzeigegerät enthält.
+Im vorangehenden Code gibt die [BeginPaint-Methode](/windows/win32/api/winuser/nf-winuser-beginpaint) ein Handle an einen Gerätekontext zurück, und dieses Handle wird an den [**Grafikkonstruktor**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) übergeben. Ein Gerätekontext ist eine Struktur (die von Windows verwaltet wird), die Informationen zum verwendeten Anzeigegerät enthält.
 
 ## <a name="graphics-state"></a>Grafikzustand
 
-Ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt bietet mehr als Zeichnungs Methoden, z. b. [DrawLine](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)) und [drawrechteck](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)). Ein **Grafik** Objekt verwaltet auch den Grafik Zustand, der in die folgenden Kategorien unterteilt werden kann:
+Ein [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) stellt mehr als Zeichnungsmethoden bereit, z. [B. DrawLine](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)) und [DrawRectangle.](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)) Ein **Graphics-Objekt** verwaltet auch den Grafikzustand, der in die folgenden Kategorien unterteilt werden kann:
 
--   Ein Link zu einem Gerätekontext.
+-   Ein Link zu einem Gerätekontext
 -   Qualitätseinstellungen
 -   Transformationen
--   Ein Clippingbereich
+-   Ein Ausschneidebereich
 
 ### <a name="device-context"></a>Gerätekontext
 
-Als Anwendungsprogrammierer müssen Sie sich keine Gedanken über die Interaktion zwischen einem [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt und seinem Gerätekontext machen. Diese Interaktion wird von GDI+ im Hintergrund behandelt.
+Als Anwendungsprogrammierer müssen Sie sich keine Gedanken über die Interaktion zwischen einem [**Grafikobjekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) und dessen Gerätekontext machen. Diese Interaktion wird von GDI+ im Hintergrund verarbeitet.
 
-### <a name="quality-settings"></a>Qualitätseinstellungen
+### <a name="quality-settings"></a>Quality Einstellungen
 
-Ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt verfügt über mehrere Eigenschaften, die die Qualität der Elemente beeinflussen, die auf dem Bildschirm gezeichnet werden. Sie können diese Eigenschaften anzeigen und bearbeiten, indem Sie Get-und Set-Methoden aufrufen. Beispielsweise können Sie die [**Graphics:: settextrenderinghint**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-settextrenderinghint) -Methode aufrufen, um den Typ des Antialiasing (sofern vorhanden) anzugeben, der auf Text angewendet wird. Andere Set-Methoden, die die Qualität beeinflussen, sind [**Grafiken:: sezmuothingmode**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setsmoothingmode), [**Graphics:: setcompositingmode**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setcompositingmode), [**Graphics:: setcompositingquality**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setcompositingquality)und [**Graphics:: setinterpolationmode**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setinterpolationmode).
+Ein [**Grafikobjekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) verfügt über mehrere Eigenschaften, die die Qualität der Elemente beeinflussen, die auf dem Bildschirm gezeichnet werden. Sie können diese Eigenschaften anzeigen und bearbeiten, indem Sie get- und set-Methoden aufrufen. Beispielsweise können Sie die [**Graphics::SetTextRenderingHint-Methode**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-settextrenderinghint) aufrufen, um den Typ des Antialiasings (falls vorhanden) anzugeben, das auf Text angewendet wird. Andere Set-Methoden, die die Qualität beeinflussen, sind [**Graphics::SetSmoothingMode,**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setsmoothingmode) [**Graphics::SetCompositingMode,**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setcompositingmode) [**Graphics::SetCompositingQuality**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setcompositingquality)und [**Graphics::SetInterpolationMode**](/windows/win32/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-setinterpolationmode).
 
-Im folgenden Beispiel werden zwei Ellipsen gezeichnet, wobei der Glättungs Modus auf [* * * * SmoothingModeAntiAlias * * * *](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-smoothingmode) und einen mit dem Glättungs Modus * * * [* smoothingmodehighspeed * * * *](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-smoothingmode)festgelegt ist:
+Das folgende Beispiel zeichnet zwei Ausellipsen: eine mit dem [Glättungsmodus "smoothingModeAntiAlias"](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-smoothingmode) und eine mit dem Glättungsmodus ["SmoothingModeHighSpeed":](/windows/win32/api/Gdiplusenums/ne-gdiplusenums-smoothingmode)
 
 
 ```
@@ -69,9 +69,9 @@ graphics.DrawEllipse(&pen, 0, 150, 200, 100);
 
 ### <a name="transformations"></a>Transformationen
 
-Ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt verwaltet zwei Transformationen (Welt und Seite), die auf alle Elemente angewendet werden, die von diesem **Grafik** Objekt gezeichnet werden. Jede affine Transformation kann in der Welt Transformation gespeichert werden. Affine Transformationen umfassen Skalierung, Rotation, Spiegelung, Neigung und Übersetzung. Die Seiten Transformation kann für die Skalierung und für das Ändern von Einheiten (z. b. Pixel in Zoll) verwendet werden. Weitere Informationen zu Transformationen finden Sie unter [Koordinatensysteme und Transformationen](-gdiplus-coordinate-systems-and-transformations-about.md).
+Ein [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) verwaltet zwei Transformationen (Welt und Seite), die auf alle elemente angewendet werden, die von diesem **Graphics-Objekt** gezeichnet werden. Jede affine Transformation kann in der weltweiten Transformation gespeichert werden. Affine Transformationen umfassen Skalierung, Drehung, Reflektion, Skewing und Übersetzung. Die Seitentransformation kann für die Skalierung und zum Ändern von Einheiten (z. B. Pixel in Zoll) verwendet werden. Weitere Informationen zu Transformationen finden Sie unter [Koordinatensysteme und Transformationen.](-gdiplus-coordinate-systems-and-transformations-about.md)
 
-Im folgenden Beispiel werden die Welt-und Seiten Transformationen eines [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts festgelegt. Die Welt Transformation ist auf eine 30-Grad-Drehung festgelegt. Die Seiten Transformation wird so festgelegt, dass die an die zweite Grafik über gebenden Koordinaten [**:D rawellipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawellipse(inconstpen_inint_inint_inint_inint)) als Millimeter anstelle von Pixel behandelt werden. Der Code führt zwei identische Aufrufe der **Grafik aus::D rawellipse** -Methode. Die globale Transformation wird auf die ersten **Grafiken angewendet::D rawellipse** -Aufrufe, und beide Transformationen (Welt und Seite) werden auf die zweite **Grafik angewendet::D rawellipse** -Aufruf.
+Im folgenden Beispiel werden die Welt- und Seitentransformationen eines [**Graphics-Objekts**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) festgelegt. Die Welttransformation ist auf eine 30-Grad-Drehung festgelegt. Die Seitentransformation wird so festgelegt, dass die an die zweite [**Graphics::D rawEllipse**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawellipse(inconstpen_inint_inint_inint_inint)) übergebenen Koordinaten als Millimeter anstelle von Pixeln behandelt werden. Der Code ruft die **Graphics::D rawEllipse-Methode** auf zwei identische Weise auf. Die World-Transformation wird auf den ersten **Graphics::D rawEllipse-Aufruf** angewendet, und beide Transformationen (world und page) werden auf den zweiten **Graphics::D rawEllipse-Aufruf** angewendet.
 
 
 ```
@@ -87,17 +87,17 @@ graphics.DrawEllipse(&pen, 30, 0, 50, 25);
 
 
 
-Die folgende Abbildung zeigt die beiden Ellipsen. Beachten Sie, dass die 30-Grad-Drehung über den Ursprung des Koordinatensystems (obere linke Ecke des Client Bereichs) und nicht über die Mittelpunkte der Ellipsen liegt. Beachten Sie außerdem, dass die Stift Breite 1 für die erste Ellipse 1 Pixel und für die zweite Ellipse 1 Millimeter bedeutet.
+Die folgende Abbildung zeigt die beiden Ausellipsen. Beachten Sie, dass die 30-Grad-Drehung den Ursprung des Koordinatensystems (obere linke Ecke des Clientbereichs) und nicht die Mittelpunkte der Ellipsen betrifft. Beachten Sie auch, dass die Stiftbreite von 1 1 Pixel für die erste Ellipse und 1 Millimeter für die zweite Ellipse bedeutet.
 
-![Screenshot eines Fensters mit einer kleinen, dünnen Ellipse und einer großen, dickeren Ellipse](images/graphicsascon1.png)
+![Screenshot eines Fensters mit einer kleinen, schlanken Ellipse und einer großen, breiteren Ellipse](images/graphicsascon1.png)
 
  
 
-### <a name="clipping-region"></a>Clippingbereich
+### <a name="clipping-region"></a>Beschneidungsregion
 
-Ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt verwaltet einen Clippingbereich, der für alle Elemente gilt, die von diesem **Grafik** Objekt gezeichnet werden. Sie können den Clippingbereich festlegen, indem Sie die [SetClip](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) -Methode aufrufen.
+Ein [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) verwaltet einen Clippingbereich, der für alle von diesem **Graphics-Objekt** gezeichneten Elemente gilt. Sie können den Clippingbereich festlegen, indem Sie die [SetClip-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) aufrufen.
 
-Im folgenden Beispiel wird ein Plus förmiger Bereich erstellt, indem die Union von zwei Rechtecke gebildet wird. Diese Region wird als Clippingbereich eines [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts bezeichnet. Anschließend zeichnet der Code zwei Zeilen, die auf das Innere des Clippingbereichs beschränkt sind.
+Im folgenden Beispiel wird ein plusförmiger Bereich erstellt, indem die Union von zwei Rechtecke gebildet wird. Dieser Bereich wird als Ausschneidebereich eines [**Graphics-Objekts**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) festgelegt. Anschließend zeichnet der Code zwei Linien, die auf das Innere des Ausschneidebereichs beschränkt sind.
 
 
 ```
@@ -120,9 +120,9 @@ graphics.DrawLine(&pen, 40, 20, 190, 150);
 
 
 
-In der folgenden Abbildung sind die ausgeschnittenen Zeilen dargestellt.
+Die folgende Abbildung zeigt die abgeschnittenen Zeilen.
 
-![Abbildung einer farbigen Form, die von zwei diagonalen roten Linien überschritten wird](images/graphicsascon2.png)
+![Abbildung einer farbigen Form, die durch zwei diagonale rote Linien gekreuzt wird](images/graphicsascon2.png)
 
  
 

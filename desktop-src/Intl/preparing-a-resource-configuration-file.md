@@ -1,21 +1,21 @@
 ---
-description: Vorbereiten einer Ressourcen Konfigurationsdatei
+description: Vorbereiten einer Ressourcenkonfigurationsdatei
 ms.assetid: 292b57ea-1c7e-49b6-876c-4ad307a2ec43
-title: Vorbereiten einer Ressourcen Konfigurationsdatei
+title: Vorbereiten einer Ressourcenkonfigurationsdatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac162ad7f6d20148e0ef60cb9dc15da41cc27186
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b862f48f15997300f079a39de0eb385c535758d9392dc452e1d338d86c8d59e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147103"
 ---
-# <a name="preparing-a-resource-configuration-file"></a>Vorbereiten einer Ressourcen Konfigurationsdatei
+# <a name="preparing-a-resource-configuration-file"></a>Vorbereiten einer Ressourcenkonfigurationsdatei
 
-Sowohl das in den [Ressourcen Dienstprogrammen](resource-utilities.md) beschriebene-Compilerdienstprogramm "muunct" als auch "RC" stellen eine Befehlszeilenoption bereit, mit der Sie eine Ressourcen Konfigurationsdatei für die Basis Sprachen Ressourcen angeben können Die Verwendung dieser öffentlichen, lesbaren XML-Datei ermöglicht mehr Kontrolle über das Aufteilen von Ressourcen, als über die regulären Befehls Zeilenschalter der Hilfsprogramme abgerufen werden können. Auch wenn Sie keine Ressourcen Konfigurationsdatei als Eingabe bereitstellen, enthalten die LN-und sprachspezifischen Ressourcen Dateien Ressourcen Konfigurationsdaten.
+Sowohl die unter [Ressourcen-Hilfsprogramme](resource-utilities.md) beschriebenen UTILITYRCT- als auch rc-Compiler-Hilfsprogramme bieten eine Befehlszeilenoption, mit der Sie eine Ressourcenkonfigurationsdatei für die Ressourcen der Basissprache angeben können. Die Verwendung dieser öffentlichen, lesbaren XML-Datei ermöglicht mehr Kontrolle über die Aufteilung von Ressourcen, als mithilfe der regulären Befehlszeilenschalter der Hilfsprogramme abgerufen werden kann. Auch wenn Sie keine Ressourcenkonfigurationsdatei als Eingabe angeben, enthalten die LN- und sprachspezifischen Ressourcendateien Ressourcenkonfigurationsdaten.
 
-Alle Ressourcen Konfigurationsdateien für Win32-Anwendungen beginnen und enden identisch:
+Alle Ressourcenkonfigurationsdateien für Win32-Anwendungen beginnen und enden identisch:
 
 
 ```C++
@@ -32,7 +32,7 @@ Alle Ressourcen Konfigurationsdateien für Win32-Anwendungen beginnen und enden 
 
 
 
-Dieses Thema konzentriert sich auf die Aspekte des XML-Schemas, die beim Entwickeln von nicht verwaltetem Code unter Windows Vista und höher nützlich sind. Insbesondere geht es nur um das Verhalten des win32Resources-Elements.
+Dieses Thema konzentriert sich auf die Aspekte des XML-Schemas, die beim Erstellen von nicht verwaltetem Code auf Windows Vista und höher nützlich sind. Insbesondere geht es nur um das Verhalten des win32Resources-Elements.
 
 ## <a name="win32resources-element"></a>win32Resources-Element
 
@@ -42,63 +42,63 @@ Das win32Resources-Element verfügt über die in der folgenden Tabelle beschrieb
 
 | Attributname           | Obligatorisch. | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |--------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| fileType                 | Nein        | Dateityp. Sollte immer "Application" lauten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Prüfsumme                 | Nein        | Der Prüfsummen Wert, der in den Ressourcen Konfigurationsdaten der LN-Datei und der sprachspezifischen Ressourcen Dateien angezeigt werden soll. Mit diesem Attribut können Sie z. b. die Prüfsumme aus einer einzelnen sprachspezifischen Ressourcen Datei kopieren, gemäß der Konvention für Englisch (USA), und platzieren Sie die Prüfsumme in einer anderen sprachspezifischen Ressourcen Datei. Die Prüfsumme kann als hexadezimale Zahlen Zeichenfolge angegeben werden, die nicht länger als 32 Zeichen ist. Der numerische Wert muss in eine 128-Bit-Zahl containerbar sein. |
-| language                 | Nein        | Die Sprache wird mit einem Namensformat angegeben, das mit RFC 4646 (Windows Vista und höher) kompatibel ist, z. b. "en-US" für Englisch (USA).                                                                                                                                                                                                                                                                                                                                                                             |
-| ultimatefallbacklanguage | Nein        | Die Sprache, die in die Ressourcen Konfigurationsdaten für die LN-Datei eingefügt werden soll, und stellt die endgültige Fall Back Sprache dar, die bei einer Suche nach einer entsprechenden sprachspezifischen Ressourcen Datei verwendet werden soll. Wenn das Ressourcen Lade Modul eine angeforderte Ressourcen Datei nicht von den bevorzugten Benutzeroberflächen Sprachen des Threads lädt, wird als letzter Versuch eine ultimative Fall Back Sprache verwendet. Die Sprache wird mit einem Namensformat angegeben, das mit RFC 4646 (Windows Vista und höher) kompatibel ist, z. b. en-US für Englisch (USA).       |
-| ultimatefallbacklocation | Nein        | Fall Back Speicherort. Geben Sie "Internal" an, wenn Ultimate-Fall Back Ressourcen in die LN-Datei kompiliert werden. Geben Sie "extern" (Standard) an, wenn die LN-Datei auf eine sprachspezifische Ressourcen Datei für die letzten Fall Back Ressourcen verweisen soll.                                                                                                                                                                                                                                                                                |
+| fileType                 | Nein        | Dateityp. Sollte immer "Anwendung" sein.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Prüfsumme                 | Nein        | Prüfsummenwert, der in den Ressourcenkonfigurationsdaten der LN-Datei und sprachspezifischen Ressourcendateien angezeigt wird. Mit diesem Attribut können Sie z. B. die Prüfsumme aus einer einzelnen sprachspezifischen Ressourcendatei kopieren, gemäß der Konvention für Englisch (USA), und die Prüfsumme in einer anderen sprachspezifischen Ressourcendatei platzieren. Die Prüfsumme kann als hexadezimale Zahlenzeichenfolge angegeben werden, die nicht länger als 32 Zeichen ist. Der numerische Wert muss in einer 128-Bit-Zahl enthalten sein. |
+| language                 | Nein        | Sprache, die mit einem Namensformat angegeben wird, das mit RFC 4646 (Windows Vista und höher) kompatibel ist, z. B. en-US für Englisch (USA).                                                                                                                                                                                                                                                                                                                                                                             |
+| ultimateFallbackLanguage | Nein        | Sprache zum Einfügen in die Ressourcenkonfigurationsdaten für die LN-Datei, die die endgültige Fallbacksprache darstellt, die bei der Suche nach einer entsprechenden sprachspezifischen Ressourcendatei verwendet werden soll. Wenn das Ressourcenladeprogramm eine angeforderte Ressourcendatei nicht aus den bevorzugten Ui-Sprachen des Threads laden kann, wird als letzter Versuch eine endgültige Fallbacksprache verwendet. Die Sprache wird mit einem Namensformat angegeben, das mit RFC 4646 (Windows Vista und höher) kompatibel ist, z. B. en-US für Englisch (USA).       |
+| ultimateFallbackLocation | Nein        | Fallbackspeicherort. Geben Sie "intern" an, wenn endgültige Fallbackressourcen in die LN-Datei kompiliert werden. Geben Sie "external" (Standard) an, wenn die LN-Datei auf eine sprachspezifische Ressourcendatei für die endgültigen Fallbackressourcen verweisen soll.                                                                                                                                                                                                                                                                                |
 
 
 
  
 
-In der Ressourcen Konfigurationsdatei enthält das win32Resources-Element die untergeordneten Elemente, die in der folgenden Tabelle beschrieben werden.
+In der Ressourcenkonfigurationsdatei enthält das win32Resources-Element die in der nächsten Tabelle beschriebenen Unterelemente.
 
 
 
 | Elementname       | BESCHREIBUNG                                                                                                                              |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Das localizedresources | Ressourcen, die Informationen zu den Ressourcentypen und den einzelnen Ressourcen enthalten, die in einer sprachspezifischen Ressourcen Datei enthalten sind. |
-| neutralresources   | Ressourcen, die Informationen zu den in einer LN-Datei enthaltenen Ressourcentypen Kapseln.                                                 |
+| localizedResources | Ressourcen, die Informationen zu den Ressourcentypen und einzelnen Ressourcen kapseln, die in einer sprachspezifischen Ressourcendatei enthalten sind. |
+| neutralResources   | Ressourcen, die Informationen zu den in einer LN-Datei enthaltenen Ressourcentypen kapseln.                                                 |
 
 
 
  
 
-## <a name="localizedresources-element"></a>localizedresources-Element
+## <a name="localizedresources-element"></a>localizedResources-Element
 
-Lokalisiertes Ressourcen Element. Standardmäßig hat dieses Element keine Attribute und nur einen Typ von Unterelement. Es handelt sich lediglich um einen Container für ResourceType-Elemente.
+Lokalisiertes Ressourcenelement. Standardmäßig weist dieses Element keine Attribute und nur einen Typ von Untergeordnetem Element auf. Es handelt sich lediglich um einen Container für resourceType-Elemente.
 
 
 
-| Attributname | BESCHREIBUNG                                                                    |
+| Attributname | Beschreibung                                                                    |
 |----------------|--------------------------------------------------------------------------------|
-| resourceType   | Der Typ einer einzelnen Ressource, die in einer sprachspezifischen Ressourcen Datei enthalten ist. |
+| resourceType   | Typ einer einzelnen Ressource, die in einer sprachspezifischen Ressourcendatei enthalten ist. |
 
 
 
  
 
-## <a name="neutralresources-element"></a>neutralresources-Element
+## <a name="neutralresources-element"></a>neutralResources-Element
 
-Neutrales Ressourcen Element. Dieses Element ist nur ein Container für ResourceType-Elemente.
+Neutrales Ressourcenelement. Dieses Element ist nur ein Container für resourceType-Elemente.
 
 
 
-| Attributname | BESCHREIBUNG                                        |
+| Attributname | Beschreibung                                        |
 |----------------|----------------------------------------------------|
-| resourceType   | Der Typ einer einzelnen Ressource, die in einer LN-Datei enthalten ist. |
+| resourceType   | Typ einer einzelnen Ressource, die in einer LN-Datei enthalten ist. |
 
 
 
  
 
-## <a name="resourcetype-element"></a>ResourceType-Element
+## <a name="resourcetype-element"></a>resourceType-Element
 
-Das ResourceType-Element kapselt Informationen zu einem einzelnen Ressourcentyp oder einer einzelnen Ressource. Die Attribute sind unten aufgeführt.
+Das resourceType-Element kapselt Informationen zu einem einzelnen Ressourcentyp oder einer einzelnen Ressource. Es enthält die unten aufgeführten Attribute.
 
 > [!Caution]  
-> Einige Ressourcen Konfigurationsfehler werden nur durch den RC-Compiler oder muunct abgefangen, abhängig von der Eingabe Ressourcen Datei oder dem Binärdatei Inhalt. Die ResourceType-Fehler in der Ressourcen Konfigurationsdatei, die in der Eingabedatei nicht vorhanden sind, werden nicht abgefangen, was zu unerwartetem Verhalten führt. Benutzer können eine fehlerhafte Ressourcen Konfigurationsdatei verwenden und wissen nicht, bis Sie Binärdateien einführen, die die fehlerhaften Teile der Ressourcen Konfigurationsdatei verwenden. Dadurch wird die Darstellung der Unterbrechungen aus den aktuellen Binärdateien erstellt.
+> Einige Ressourcenkonfigurationsfehler werden je nach Eingaberessourcendatei oder Binärdateiinhalt nur vom RC-Compiler oder VOM COMPILER ABGEFANGEN. Die resourceType-Fehler in der Ressourcenkonfigurationsdatei, die in der Eingabedatei nicht vorhanden sind, werden nicht abgefangen, was zu unerwartetem Verhalten führt. Benutzer können eine fehlerhafte Ressourcenkonfigurationsdatei verwenden und wissen es erst, wenn sie Binärdateien einführen, die die fehlerhaften Teile der Ressourcenkonfigurationsdatei verwenden, wodurch die Darstellung entsteht, dass die Unterbrechungen aus den aktuellen Binärdateien stammen.
 
  
 
@@ -106,34 +106,34 @@ Das ResourceType-Element kapselt Informationen zu einem einzelnen Ressourcentyp 
 
 | Attributname | Obligatorisch. | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| typameid     | Ja       | Typname oder Bezeichner für die Ressource. Geben Sie einen Zeichen folgen Namen oder eine Zahl an. Wenn eine Zahl verwendet wird, wird der Zeichenfolge ein " \# " vorangestellt, um anzugeben, dass es sich um eine Zahl handelt. Jedes ResourceType-Element darf nur über ein *typenameid* -Attribut verfügen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| itemName       | Nein        | Die Elementnamen Zeichenfolge für die Ressource, die in der sprachspezifischen Ressourcen Datei abgelegt werden soll. Sie können mehrere Namen angeben, die durch Leerzeichen getrennt sind, z. b. "HTML-MUF-Daten".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| itemId         | Nein        | Der Bezeichner des einzelnen Ressourcen Elements, das in der sprachspezifischen Ressourcen Datei abgelegt werden soll. Das Element kann als Bereich (z. b. "1-12") oder von einzelnen bezeichlern, getrennt durch Leerzeichen (z. b. "1 3 4"), angegeben werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| stringId       | Nein        | Der Zeichen folgen Bezeichner für das einzelne Ressourcen Element, das in die sprachspezifische Ressourcen Datei eingefügt werden soll. Die Zeichenfolge kann als Bereich (z. b. "1-12") oder von einzelnen bezeichlern, getrennt durch Leerzeichen (z. b. "1 3 4"), angegeben werden. Dieses Attribut ermöglicht die Angabe von lokalisierbaren und nicht lokalisierbaren Zeichen folgen Tabellen Einträgen. Er muss in Verbindung mit dem *tytzameid* -Wert "6" verwendet werden, der den Ressourcentyp "String Table Entry" bezeichnet.<br/> Zeichen folgen werden in Blöcken von 16 in einer Zeichen folgen Tabelle gespeichert. Die Zeichen folgen 0 bis 15 werden z. b. in einem einzelnen Ressourcen Element Block gespeichert, und in der Ressourcen Konfigurationsdatei kann als *ItemID* 1 oder als *stringID* "0-15" verwiesen werden. Wenn beispielsweise fünf lokalisierbare Zeichen folgen und drei nicht lokalisierbare Zeichen folgen vorhanden sind, sollten Sie Zeichen folgen Bezeichner 0-4 für die lokalisierbaren Zeichen folgen und Zeichen folgen Bezeichner 16-18 für die nicht lokalisierbaren Zeichen folgen zuweisen. Wenn Sie Zeichen folgen nicht auf diese Weise organisieren, werden die betroffenen Zeichen folgen Blöcke sowohl in der LN-Datei als auch in der sprachspezifischen Ressourcen Datei platziert.<br/> |
+| typeNameId     | Ja       | Geben Sie den Namen oder Bezeichner für die Ressource ein. Geben Sie einen Zeichenfolgennamen oder eine Zahl an. Wenn Sie eine Zahl verwenden, stellen Sie der Zeichenfolge ein \# "" voran, um anzugeben, dass sie eine Zahl darstellt. Jedes resourceType-Element darf nur über ein *typeNameId-Attribut* verfügen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| itemName       | Nein        | Elementnamenszeichenfolge für die Ressource, die in der sprachspezifischen Ressourcendatei platziert werden soll. Sie können mehrere Namen angeben, die durch Leerzeichen getrennt sind, z. B. "HTML MOFDATA".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| itemId         | Nein        | Bezeichner des einzelnen Ressourcenelements, das in der sprachspezifischen Ressourcendatei platziert werden soll. Das Element kann als Bereich (z.B. "1-12") oder durch einzelne, durch Leerzeichen getrennte Bezeichner (z.B. "1 3 4") angegeben werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| stringId       | Nein        | Zeichenfolgenbezeichner für einzelne Ressourcenelement, die in der sprachspezifischen Ressourcendatei platziert werden sollen. Die Zeichenfolge kann als Bereich (z. B. "1-12") oder durch einzelne Bezeichner angegeben werden, die durch Leerzeichen (z. B. "1 3 4") getrennt sind. Dieses Attribut ermöglicht die Angabe von lokalisierbaren und nicht lokalisierbaren Zeichenfolgentabelleneinträgen. Sie muss in Verbindung mit dem *typeNameId-Wert* "6" verwendet werden, der einen Ressourcentyp für den Eintrag einer Zeichenfolgentabelle anknpft.<br/> Zeichenfolgen werden in Blöcken von 16 in einer Zeichenfolgentabelle gespeichert. Zeichenfolgen 0 bis 15 werden beispielsweise in einem einzelnen Ressourcenelementblock gespeichert und können in der Ressourcenkonfigurationsdatei als *itemId* 1 oder als *stringId* "0-15" referenziert werden. Wenn beispielsweise fünf lokalisierbare Zeichenfolgen und drei nicht lokalisierbare Zeichenfolgen vorhanden sind, sollten Sie zeichenfolgenbezeichner 0-4 für die lokalisierbaren Zeichenfolgen und Zeichenfolgenbezeichner 16-18 für die nicht lokalisierbaren Zeichenfolgen zuweisen. Wenn Sie Zeichenfolgen nicht auf diese Weise organisieren, werden die betroffenen Zeichenfolgenblöcke sowohl in der LN-Datei als auch in der sprachspezifischen Ressourcendatei platziert.<br/> |
 
 
 
  
 
-Wenn Sie die Attribute *ItemName*, *ItemID* und/oder *stringID* für einen bestimmten Ressourcentyp unter dem localizedresource-Element angeben, werden nur die angegebenen Elemente bzw. Zeichen folgen für den angegebenen Ressourcentyp in die sprachspezifische Ressourcen Datei eingefügt. Wenn ein ResourceType-Element ohne einen expliziten Elementnamen, Element Bezeichner oder Zeichen folgen Bezeichner angegeben wird, werden alle Elemente des angegebenen Ressourcentyps in der sprachspezifischen Ressourcen Datei abgelegt. Elemente oder Typen, die nicht in einem localizedresource-Element aufgelistet sind, werden in die LN-Datei eingefügt.
+Wenn Sie die Attribute *itemName,* *itemId* und/oder *stringId* für einen bestimmten Ressourcentyp unter dem localizedResource-Element angeben, werden nur diese angegebenen Elemente oder Zeichenfolgen für den angegebenen Ressourcentyp in der sprachspezifischen Ressourcendatei platziert. Wenn ein resourceType-Element ohne expliziten Elementnamen, Elementbezeichner oder Zeichenfolgenbezeichner angegeben wird, werden alle Elemente des angegebenen Ressourcentyps in der sprachspezifischen Ressourcendatei platziert. Elemente oder Typen, die nicht in einem localizedResource-Element aufgeführt sind, werden in der LN-Datei platziert.
 
-Im folgenden sind die Standard Ressourcentypen und deren numerische Bezeichner aufgeführt:
+Im Folgenden sind die Standardressourcentypen und ihre numerischen Bezeichner angegeben:
 
--   Cursor (1)
--   Bitmap (2)
--   Symbol (3)
--   Menü (4)
--   Dialog (5)
--   Zeichenfolge (6)
--   Fontdir (7)
--   Schriftart (8)
--   Accelerators (9)
--   RCDATA (10)
--   Messagetable (11)
--   Gruppen \_ Cursor (12)
--   Gruppen \_ Symbol (14)
--   Version (16)
--   HTML (23)
+-   CURSOR(1)
+-   BITMAP(2)
+-   ICON(3)
+-   MENU(4)
+-   DIALOG(5)
+-   STRING(6)
+-   FONTDIR(7)
+-   FONT(8)
+-   ACCELERATORS(9)
+-   RCDATA(10)
+-   MESSAGETABLE(11)
+-   GROUP \_ CURSOR(12)
+-   \_GRUPPENSYMBOL(14)
+-   VERSION(16)
+-   HTML(23)
 
 ## <a name="example"></a>Beispiel
 
@@ -195,9 +195,9 @@ Im folgenden sind die Standard Ressourcentypen und deren numerische Bezeichner a
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie ein beliebiges Symbol (3), einen Dialog (5), einen Zeichen folgen-(6) oder einen Versions (16) Ressourcentyp im neutralresources-Element enthalten, müssen Sie diesen Eintrag im localizedresources-Element duplizieren. Sie können dies im obigen Beispiel veranschaulichen, wobei der Ressourcentyp 16 sowohl in neutralen als auch in lokalisierten Ressourcen Abschnitten angezeigt wird.
+Wenn Sie den Ressourcentyp ICON(3), DIALOG(5), STRING(6) oder VERSION(16) in das neutralResources-Element einfügen, müssen Sie diesen Eintrag im localizedResources-Element duplizieren. Dies wird im obigen Beispiel veranschaulicht, in dem ressourcentyp 16 sowohl in neutralen als auch lokalisierten Ressourcenabschnitten angezeigt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
