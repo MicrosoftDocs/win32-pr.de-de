@@ -1,19 +1,19 @@
 ---
-title: Else (SM4-ASM)
-description: Startet einen Else-Block.
+title: else (sm4 - asm)
+description: Startet einen else-Block.
 ms.assetid: CFF25E78-D986-4EC5-B542-B3396EFF88E1
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e283a2621c916ac254daab9f055be0ffe1ba67d
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 36f676a1a14f23923e8cebe44a0539a8ba5f382c010fc87a292e77afe1470c57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118512160"
 ---
-# <a name="else-sm4---asm"></a>Else (SM4-ASM)
+# <a name="else-sm4---asm"></a>else (sm4 - asm)
 
-Startet einen **else** -Block.
+Startet einen **else-Block.**
 
 
 
@@ -22,13 +22,13 @@ Startet einen **else** -Block.
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das tokenformat enthält den Offset der entsprechenden [EndIf](endif--sm4---asm-.md) -Anweisung im Shader.
+Das Tokenformat enthält zur Vereinfachung den Offset der entsprechenden [endif-Anweisung](endif--sm4---asm-.md) im Shader.
 
-Im folgenden Beispiel wird die Verwendung der **else** -Anweisung veranschaulicht.
+Im folgenden Beispiel wird die Verwendung der **else-Anweisung** veranschaulicht.
 
 ``` syntax
                 if     // any of the various forms of if* statements
@@ -38,7 +38,7 @@ Im folgenden Beispiel wird die Verwendung der **else** -Anweisung veranschaulich
                 endif
 ```
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -48,37 +48,37 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

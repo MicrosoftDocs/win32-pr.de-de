@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a9a16fef951fdee5ed7fc580da61f43d848a8dec
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3b60c28776006526db461a978c45d2693b97f01b50f09d1ba6eb8ea029b2b2f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118146969"
 ---
 # <a name="stopservice-method-of-the-msvm_securityservice-class"></a>StopService-Methode der Msvm \_ SecurityService-Klasse
 
@@ -53,7 +53,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
@@ -63,7 +63,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

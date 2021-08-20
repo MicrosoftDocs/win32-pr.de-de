@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_CALLBACK_ERROR Meldung (VFW. h)
-description: Die WM- \_ Cap- \_ \_ Rückruf \_ Fehlermeldung legt eine Fehler Rückruffunktion in der Client Anwendung fest. Avicap ruft dieses Verfahren auf, wenn Fehler auftreten. Sie können diese Nachricht explizit oder mithilfe des capsetcallbackonerror-Makros senden.
+title: WM_CAP_SET_CALLBACK_ERROR (Vfw.h)
+description: Die MELDUNG WM CAP SET CALLBACK ERROR legt \_ \_ eine \_ \_ Fehlerrückruffunktion in der Clientanwendung fest. AVICap ruft diese Prozedur auf, wenn Fehler auftreten. Sie können diese Nachricht explizit oder mithilfe des Makros capSetCallbackOnError senden.
 ms.assetid: 4eb57515-9b5a-466c-bbaa-fdee3bca19db
 keywords:
-- WM_CAP_SET_CALLBACK_ERROR-Nachricht (Multimedia)
+- WM_CAP_SET_CALLBACK_ERROR-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40f50d62112d71f78196a17b958dc7d3d10702e1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f2b631a66923fc614e1486405b1c8e64f152c0f0dd21c8abec292548c546d17b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135102"
 ---
-# <a name="wm_cap_set_callback_error-message"></a>\_ \_ \_ Rückruf \_ Fehlermeldung für WM-Cap-Satz
+# <a name="wm_cap_set_callback_error-message"></a>WM CAP SET CALLBACK ERROR message (WM \_ CAP \_ \_ SET-RÜCKRUFFEHLERmeldung) \_
 
-Die **WM- \_ Cap- \_ \_ Rückruf \_ Fehlermeldung** legt eine Fehler Rückruffunktion in der Client Anwendung fest. Avicap ruft dieses Verfahren auf, wenn Fehler auftreten. Sie können diese Nachricht explizit oder mithilfe des [**capsetcallbackonerror**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonerror) -Makros senden.
+Die **MELDUNG WM CAP SET \_ \_ \_ CALLBACK \_ ERROR** legt eine Fehlerrückruffunktion in der Clientanwendung fest. AVICap ruft diese Prozedur auf, wenn Fehler auftreten. Sie können diese Nachricht explizit oder mithilfe des [**Makros capSetCallbackOnError**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonerror) senden.
 
 
 ```C++
@@ -38,26 +38,26 @@ lParam = (LPARAM) (LPVOID) (fpProc);
 
 <dl> <dt>
 
-<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpproc*
+<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpProc*
 </dt> <dd>
 
-Zeiger auf die Fehler Rückruffunktion vom Typ " [**caperrorcallback**](/windows/desktop/api/Vfw/nc-vfw-caperrorcallbacka)". Geben Sie **null** für diesen Parameter an, um eine zuvor installierte Fehler Rückruffunktion zu deaktivieren.
+Zeiger auf die Fehlerrückruffunktion vom Typ [**capErrorCallback**](/windows/desktop/api/Vfw/nc-vfw-caperrorcallbacka). Geben **Sie NULL** für diesen Parameter an, um eine zuvor installierte Fehlerrückruffunktion zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn eine streamingerfassung oder eine Single-Frame-Erfassungs Sitzung ausgeführt wird.
+Gibt **TRUE zurück,** wenn erfolgreich, **oder FALSE,** wenn streaming capture oder eine Singleframe-Erfassungssitzung in Bearbeitung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können optional eine Fehler Rückruffunktion festlegen. Wenn diese Einstellung festgelegt ist, wird die Fehler Prozedur von avicap in den folgenden Situationen aufgerufen:
+Anwendungen können optional eine Fehlerrückruffunktion festlegen. Wenn festgelegt, ruft AVICap die Fehlerprozedur in den folgenden Situationen auf:
 
 -   Der Datenträger ist voll.
--   Ein Aufzeichnungs Fenster kann nicht mit einem Aufzeichnungs Treiber verbunden werden.
--   Ein Waveform-Audiogerät kann nicht geöffnet werden.
--   Die Anzahl der während der Erfassung verworfenen Frames überschreitet den angegebenen Prozentsatz.
--   Die Rahmen können aufgrund vertikaler Synchronisierungs Probleme nicht erfasst werden.
+-   Ein Erfassungsfenster kann nicht mit einem Erfassungstreiber verbunden werden.
+-   Ein Waveform-Audio-Gerät kann nicht geöffnet werden.
+-   Die Anzahl der während der Erfassung gelöschten Frames überschreitet den angegebenen Prozentsatz.
+-   Die Frames können aufgrund von Unterbrechungsproblemen bei der vertikalen Synchronisierung nicht erfasst werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Anwendungen können optional eine Fehler Rückruffunktion festlegen. Wenn diese 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -75,10 +75,10 @@ Anwendungen können optional eine Fehler Rückruffunktion festlegen. Wenn diese 
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

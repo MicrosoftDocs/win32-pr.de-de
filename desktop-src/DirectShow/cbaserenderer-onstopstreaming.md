@@ -1,7 +1,7 @@
 ---
-description: Die onstopstreaming-Methode wird aufgerufen, wenn der Filter das Streaming stoppt.
+description: Die OnStopStreaming-Methode wird aufgerufen, wenn der Filter das Streaming beendet.
 ms.assetid: d882fec8-09e1-4d36-a09c-44568e743da3
-title: Cbaserderderer. onstopstreaming-Methode (renbase. h)
+title: CBaseRenderer.OnStopStreaming-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 417a18ca53240dce0e4ed6d40f551c45c24b0f1c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c61490a0719ce45d9776982b9230734d1126cef747330bb595c205500aca331
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157663"
 ---
-# <a name="cbaserendereronstopstreaming-method"></a>Cbaserderderer. onstopstreaming-Methode
+# <a name="cbaserendereronstopstreaming-method"></a>CBaseRenderer.OnStopStreaming-Methode
 
-Die- `OnStopStreaming` Methode wird aufgerufen, wenn der Filter das Streaming stoppt.
+Die `OnStopStreaming` -Methode wird aufgerufen, wenn der Filter das Streaming beendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserdenderer:: stopstreaming**](cbaserenderer-stopstreaming.md) -Methode ruft diese Methode auf. Es wird keine Aktion in der Basisklasse durchführt, aber die abgeleitete Klasse kann Sie überschreiben.
+Die [**CBaseRenderer::StopStreaming-Methode**](cbaserenderer-stopstreaming.md) ruft diese Methode auf. In der Basisklasse wird nichts verwendet, aber die abgeleitete Klasse kann sie überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die [**cbaserdenderer:: stopstreaming**](cbaserenderer-stopstreaming.md) -Method
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die [**cbaserdenderer:: stopstreaming**](cbaserenderer-stopstreaming.md) -Method
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf ein "camschedule"-Objekt, das Planungsaufgaben für die Uhr behandelt.
+description: Zeiger auf ein DISPOSITIONSchedule-Objekt, das Planungstasks für die Uhr verarbeitet.
 ms.assetid: 6af7437f-313c-4a1e-a412-f82d3486264f
-title: 'Cbasereferenceclock:: m_pSchedule Member (refclock. h)'
+title: CBaseReferenceClock::m_pSchedule Member (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9b71b13d1d6a7678dba61cf30315d09e074669fd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 99a04cf89d012fb9ae01ee1a48ce46c36ebf8b6731072a7a858863b7372e736e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158088"
 ---
-# <a name="cbasereferenceclockm_pschedule-member"></a>Cbasereferenceclock:: m \_ pschedule-Element
+# <a name="cbasereferenceclockm_pschedule-member"></a>CBaseReferenceClock::m \_ pSchedule-Member
 
-Zeiger auf ein " [**camschedule**](camschedule.md) "-Objekt, das Planungsaufgaben für die Uhr behandelt.
+Zeiger auf ein [**DISPOSITIONSchedule-Objekt,**](camschedule.md) das Planungstasks für die Uhr verarbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CAMSchedule *m_pSchedule;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CAMSchedule *m_pSchedule;
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

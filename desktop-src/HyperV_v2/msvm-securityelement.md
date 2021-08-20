@@ -1,5 +1,5 @@
 ---
-description: Stellt die Lauf Zeit Sicherheitseinstellungen eines CIM- \_ Computer Systems dar.
+description: Stellt die Laufzeitsicherheitseinstellungen eines \_ CIM-Computersystems dar.
 ms.assetid: fa4448dc-9353-475f-ac9b-5c50f36360d8
 title: Msvm_SecurityElement-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0f0de0fe1a515db0e7b1d8d49b96b61500703480
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 36b5301fc47033e200a1b1ffdd39443df241544651faff3a0a4fe8a3a2feee85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103961009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118147249"
 ---
-# <a name="msvm_securityelement-class"></a>MSVM \_ SecurityElement-Klasse
+# <a name="msvm_securityelement-class"></a>Msvm \_ SecurityElement-Klasse
 
-Stellt die Lauf Zeit Sicherheitseinstellungen eines [**CIM- \_ Computer Systems**](cim-computersystem.md)dar.
+Stellt die Laufzeitsicherheitseinstellungen eines [**\_ CIM-Computersystems dar.**](cim-computersystem.md)
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -47,87 +47,87 @@ class Msvm_SecurityElement : CIM_EnabledLogicalElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ SecurityElement** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SecurityElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ SecurityElement** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SecurityElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Klasse oder der Unterklasse, die bei der Erstellung einer-Instanz verwendet wird. Wenn Sie mit den anderen Schlüsseleigenschaften dieser Klasse verwendet wird, können Sie mit " **kreationclassname** " alle Instanzen dieser Klasse und ihrer Unterklassen eindeutig identifizieren.
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer -Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften dieser Klasse ermöglicht **CreationClassName,** dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
 </dd> <dt>
 
-**"Verschlüsseltstateandvmmigrationtrafficenabled"**
+**EncryptStateAndVmMigrationTrafficEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Zustands-und Migrations Datenverkehr der VM verschlüsselt ist.
+Gibt an, ob der Zustand des virtuellen Computers und der Migrationsdatenverkehr derzeit verschlüsselt sind.
 
 </dd> <dt>
 
 **Geschützt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der virtuelle Computer zurzeit geschützt ist.
+Gibt an, ob der virtuelle Computer derzeit abgeschirmt ist.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ System**](cim-system.md).**CreationClassName**")
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems.
+Der Name der Erstellungsklasse des Bereichssystems.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**Name**")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ System**](cim-system.md).**Name**")
 </dt> </dl>
 
-Der Name des Bereichs Systems.
+Der Name des Bereichssystems.
 
 </dd> </dl>
 
@@ -137,10 +137,10 @@ Der Name des Bereichs Systems.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -149,7 +149,7 @@ Der Name des Bereichs Systems.
 
 <dl> <dt>
 
-[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)
+[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)
 </dt> </dl>
 
  

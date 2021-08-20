@@ -5,7 +5,7 @@ ms.assetid: 9545420f-70c4-4fd7-9033-5b5c7712c04c
 keywords:
 - Windows Medienformat-SDK, Unterstützung für high-resolution audio
 - Windows Medienformat-SDK, Audiounterstützung
-- Codecs, Unterstützung für audio mit hoher Auflösung
+- Codecs, Unterstützung für high-resolution audio
 - Codecs,Audiounterstützung
 - Audio mit hoher Auflösung
 ms.topic: article
