@@ -1,12 +1,12 @@
 ---
-title: Undvtaskpluginnotifysink deleteschedule-Methode
+title: IRDVTaskPluginNotifySink DeleteSchedule-Methode
 description: Wird vom Task-Agent aufgerufen, um einen geplanten Task zu löschen.
 ms.assetid: 67a9493e-367a-48c9-8f94-276d696406b7
 ms.tgt_platform: multiple
 keywords:
-- Deleteschedule-Methode Remotedesktopdienste
-- Deleteschedule-Methode Remotedesktopdienste, undvtaskpluginnotifysink-Schnittstelle
-- Undvtaskpluginnotifysink-Schnittstelle Remotedesktopdienste, deleteschedule-Methode
+- DeleteSchedule-Methode Remotedesktopdienste
+- DeleteSchedule-Methode Remotedesktopdienste , IRDVTaskPluginNotifySink-Schnittstelle
+- IRDVTaskPluginNotifySink-Schnittstelle Remotedesktopdienste , DeleteSchedule-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f00bcc740f87acb7f051decd5f2fc9b55ffbf642
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5674b3624edc102be6943e63b72444ec68f403fa1066e90a410f028008894d29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129142"
 ---
-# <a name="irdvtaskpluginnotifysinkdeleteschedule-method"></a>Undvtaskpluginnotifysink::D eleteschedule-Methode
+# <a name="irdvtaskpluginnotifysinkdeleteschedule-method"></a>IRDVTaskPluginNotifySink::D eleteSchedule-Methode
 
 Wird vom Task-Agent aufgerufen, um einen geplanten Task zu löschen.
 
@@ -42,7 +42,7 @@ HRESULT DeleteSchedule(
 
 <dl> <dt>
 
-*bstridentifier* \[ in\]
+*bstrIdentifier* \[ In\]
 </dt> <dd>
 
 Der Bezeichner des geplanten Tasks.
@@ -51,7 +51,7 @@ Der Bezeichner des geplanten Tasks.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**"Undvtaskpluginnotifysink"**](irdvtaskpluginnotifysink.md)
+[**IRDVTaskPluginNotifySink**](irdvtaskpluginnotifysink.md)
 </dt> </dl>
 
  

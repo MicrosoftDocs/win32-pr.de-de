@@ -41,7 +41,7 @@ Das Hinzufügen von Bibliotheksunterstützung zu Ihrem Programm bietet dem Benut
 
 -   **Bibliotheken bieten eine konsistente Benutzeroberfläche in Windows 7**
 
-    Die allgemeinen Dateidialogfelder unterstützen Bibliotheken und bieten die gleiche Benutzeroberfläche wie der Windows Explorer in Windows 7. Die Unterstützung von Bibliotheken in Ihrem Programm hilft, eine nahtlose Interaktion für den Benutzer zu ermöglichen, wenn Sie Ihr Programm in Windows 7 verwenden.
+    Die allgemeinen Dateidialogfelder unterstützen Bibliotheken und bieten die gleiche Benutzeroberfläche wie der Windows Explorer in Windows 7. Unterstützende Bibliotheken in Ihrem Programm ermöglichen eine nahtlosere Interaktion für den Benutzer, wenn Sie Ihr Programm in Windows 7 verwenden.
 
 -   **Benutzer entscheiden, wo Inhalte gespeichert werden**
 
@@ -57,11 +57,11 @@ Sie können Bibliotheken in Ihrem Programm verwenden, um eine flexiblere und kom
 
 -   **Einfachere Änderungsbenachrichtigung**
 
-    Sowohl das Dateisystem als auch die Shell-API können Ihr Programm benachrichtigen, wenn sich der Inhalt eines überwachten Ordners oder einer Bibliothek ändert. Mithilfe der Shell-API können Sie jedoch alle Ordner in der Bibliothek mit einer einzigen Benachrichtigung überwachen, auch wenn der Ordner in der Bibliothek auf verschiedenen Laufwerken oder sogar auf unterschiedlichen Computern gespeichert werden kann.
+    Sowohl das Dateisystem als auch die Shell-API können Ihr Programm benachrichtigen, wenn sich der Inhalt eines überwachten Ordners oder einer Bibliothek ändert. Mithilfe der Shell-API können Sie jedoch alle Ordner in der Bibliothek mit einer einzigen Benachrichtigung überwachen, obwohl der Ordner in der Bibliothek auf verschiedenen Laufwerken oder sogar auf verschiedenen Computern gespeichert werden kann.
 
 -   **Bibliotheken verwenden Dateieigenschaften.**
 
-    Programme können die Dateieigenschaften verwenden, um zu steuern, welche Dateien während des Öffnens angezeigt werden, und Vorgänge speichern, die die allgemeinen Dateidialogfelder verwenden. Programme können auch über die [**IPropertyStore-Schnittstellen**](/windows/win32/api/propsys/nn-propsys-ipropertystore) Zugriff auf Dateieigenschaften haben. Die allgemeinen Dateidialogfelder können auch konfiguriert werden, damit Benutzer die Eigenschaften aktualisieren können, die ihrem Inhalt zugeordnet sind.
+    Programme können die Dateieigenschaften verwenden, um zu steuern, welche Dateien während des Öffnens angezeigt werden, und Vorgänge speichern, die die allgemeinen Dateidialogfelder verwenden. Programme können auch über die [**IPropertyStore-Schnittstellen**](/windows/win32/api/propsys/nn-propsys-ipropertystore) Zugriff auf Dateieigenschaften haben. Die allgemeinen Dateidialogfelder können auch so konfiguriert werden, dass Benutzer die Eigenschaften aktualisieren können, die ihrem Inhalt zugeordnet sind.
 
 -   **Programme können dedizierte Bibliotheken erstellen.**
 

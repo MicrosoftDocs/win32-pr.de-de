@@ -1,7 +1,7 @@
 ---
-description: Die get \_ streammediatype-Methode ruft den Medientyp des aktuellen Streams ab. Alle Videostreams werden in videoinfoheader-Typen konvertiert, und alle Audiodatenströme werden in WaveFormatEx-Typen konvertiert.
+description: Die methode \_ get StreamMediaType ruft den Medientyp des aktuellen Streams ab. Alle Videostreams werden in VIDEOINFOHEADER-Typen konvertiert, und alle Audiostreams werden in WAVEFORMATEX-Typen konvertiert.
 ms.assetid: 7fc15cb3-af77-42c1-b5eb-d1d88bf9cd1d
-title: 'Imediadet:: get_StreamMediaType-Methode (qedit. h)'
+title: IMediaDet::get_StreamMediaType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 0c2bea0c9cad7e1a25666cc38735107e14a884ec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8e62f7c7d5a6881647280e17d7ae21c442ae57c21a0c48470e255434007c5db3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154182"
 ---
-# <a name="imediadetget_streammediatype-method"></a>Imediadet:: get \_ streammediatype-Methode
+# <a name="imediadetget_streammediatype-method"></a>IMediaDet::get \_ StreamMediaType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `get_StreamMediaType` Methode ruft den Medientyp des aktuellen Streams ab. Alle Videostreams werden in [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Typen konvertiert, und alle Audiodatenströme werden in [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Typen konvertiert.
+Die `get_StreamMediaType` -Methode ruft den Medientyp des aktuellen Streams ab. Alle Videostreams werden in [**VIDEOINFOHEADER-Typen**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) konvertiert, und alle Audiostreams werden in [**WAVEFORMATEX-Typen**](/previous-versions/dd757713(v=vs.85)) konvertiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT get_StreamMediaType(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Zeiger auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die mit dem Medientyp gefüllt ist.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die mit dem Medientyp gefüllt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und stream fest, indem Sie [**IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream aufrufen.**](imediadet-put-currentstream.md)
 
-Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \_ invalidArg zurück. Weitere Informationen finden Sie unter [**imediadet:: enterbitmapgrabmode**](imediadet-enterbitmapgrabmode.md).
+Wenn sich die Medienerkennung im Bitmap-Greifmodus befindet, gibt diese Methode E \_ INVALIDARG zurück. Weitere Informationen finden Sie unter [**IMediaDet::EnterBitmapGrabMode**](imediadet-enterbitmapgrabmode.md).
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -78,8 +78,8 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

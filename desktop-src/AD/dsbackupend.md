@@ -4,7 +4,7 @@ description: Wird aufgerufen, um einen Sicherungsvorgang zu beenden.
 ms.assetid: 872645bc-3dbe-4b12-af4f-778d54feb18f
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Funktion "DsBackupEnd"
+- DsBackupEnd-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -24,7 +24,7 @@ ms.locfileid: "118430250"
 ---
 # <a name="dsbackupend-function"></a>DsBackupEnd-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
+\[Diese Funktion ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Ab Windows Vista verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
 Die **DsBackupEnd-Funktion** wird aufgerufen, um einen Sicherungsvorgang zu beenden.
 
@@ -46,17 +46,17 @@ HRESULT DsBackupEnd(
 *hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Sicherungskontexthandle, das mit der [**DsBackupPrepare-Funktion**](dsbackupprepare.md) abgerufen wurde.
+Enthält das Sicherungskontexthand handle, das mit der [**DsBackupPrepare-Funktion ermittelt**](dsbackupprepare.md) wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist oder andernfalls ein Win32- oder RPC-Fehlercode vorliegt. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Win32- oder RPC-Fehlercode. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**
+**FEHLER \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
 *hbc* ist ungültig.
@@ -81,7 +81,7 @@ Die **DsBackupEnd-Funktion** schließt ausstehende Bindungshandles und führt na
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

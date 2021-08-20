@@ -1,17 +1,17 @@
 ---
-description: Msdvdadm-Objekt
+description: MSDVDAdm-Objekt
 ms.assetid: 753d2820-4d47-4e07-9f54-9b996e55f0b6
-title: Msdvdadm-Objekt
+title: MSDVDAdm-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 193d5e46837c576c61b8bf1704ec967c1b6fc246
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fa4001def80bff94920996dc627869ffecfd6dda3fbc679be79f2b321ac33a1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072974"
 ---
-# <a name="msdvdadm-object"></a>Msdvdadm-Objekt
+# <a name="msdvdadm-object"></a>MSDVDAdm-Objekt
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
@@ -19,17 +19,17 @@ ms.locfileid: "104123475"
  
 
 > [!Note]  
-> Diese API ist veraltet. Weitere Informationen zur DVD-Wiedergabe und-Navigation in DirectShow finden Sie unter [DVD-Anwendungen](dvd-applications.md).
+> Diese API ist veraltet. Informationen zur Wiedergabe und Navigation von DVD in DirectShow finden Sie unter [DVD-Anwendungen](dvd-applications.md).
 
  
 
-Mit den Methoden und Eigenschaften des `MSDVDAdm` Objekts "Administration" kann eine Skript Anwendung ihre Standardeinstellungen in der Microsoft® Windows®-Registrierung ändern. Die Registrierung ist eine Datenbank auf allen Windows-Systemen, in denen Anwendungen Informationen über sich selbst speichern können, die bei der Initialisierung oder während der Laufzeit verwendet werden können.
+Mit den Methoden und Eigenschaften des Verwaltungsobjekts kann eine Skriptanwendung ihre Standardeinstellungen in der `MSDVDAdm` Microsoft® Windows® ändern. Die Registrierung ist eine Datenbank auf allen Windows, in denen Anwendungen Informationen über sich selbst speichern können, die bei der Initialisierung oder zur Laufzeit verwendet werden sollen.
 
-Die meisten dieser Methoden und Eigenschaften legen die aktuellen Werte im [mswebdvd](mswebdvd-object.md) -Objekt selbst nicht fest oder rufen Sie ab. Dies bedeutet beispielsweise, dass beim Aufrufen von **getparameentallevel** der zurückgegebene Wert nicht die aktuelle Jugend Stufe ist, die im-Objekt gespeichert ist. Vielmehr handelt es sich hierbei um die in der Registrierung gespeicherte Standard-Jugend Stufe. Um die aktuelle Jugend Stufe abzurufen, nennen Sie die **mswebdvd** -Methode [**getplayeranallevel**](getplayerparentallevel-method.md). Durch den Aufruf von [**saveparameentallevel**](saveparentallevel-method.md) wird einfach eine neue standardmäßige Jugend Zugriffsebene in die Registrierung geschrieben. Sie müssen weiterhin die **mswebdvd** -Methode [**selectparamevel**](selectparentallevel-method.md) aufzurufen, damit die Änderungen sofort im **mswebdvd** -Objekt wirksam werden. Die Standardmethoden für Gebiets Schema Bezeichner (LCID) funktionieren auf ähnliche Weise.
+Die meisten dieser Methoden und Eigenschaften legen die aktuellen Werte im [MSWebDVD-Objekt](mswebdvd-object.md) selbst nicht fest oder rufen sie ab. Dies bedeutet beispielsweise, dass beim Aufrufen von **GetParentalLevel** der zurückgegebene Wert nicht die aktuelle im -Objekt gespeicherte Jugendebene ist. Es handelt sich vielmehr um die in der Registrierung gespeicherte Standardebene der Eltern. Um die aktuelle Jugendstufe zu erhalten, rufen Sie die **MSWebDVD-Methode** [**GetPlayerParentalLevel auf.**](getplayerparentallevel-method.md) Beim [**Aufrufen von SaveParentalLevel**](saveparentallevel-method.md) wird einfach eine neue Standardzugriffsebene für Eltern in die Registrierung schreibt. Sie müssen weiterhin die **MSWebDVD-Methode** [**SelectParentalLevel**](selectparentallevel-method.md) aufrufen, damit die Änderung sofort im **MSWebDVD-Objekt wirksam** wird. Die LCID-Standardmethoden (Locale Identifier) funktionieren auf ähnliche Weise.
 
-Andererseits treten die [**bookmarkonstopp**](bookmarkonstop-property.md) -und [**bookmarkonclose**](bookmarkonclose-property.md) -Methoden sofort in Kraft, da das **mswebdvd** -Objekt diese Einstellungen überprüft, kurz bevor der Benutzer die Wiedergabe beendet oder die Anwendung schließt, anstatt Sie während der Initialisierung zu schließen.
+Andererseits werden die [**Methoden BookmarkOnStop**](bookmarkonstop-property.md) und [**BookmarkOnClose**](bookmarkonclose-property.md) sofort wirksam, da das **MSWebDVD-Objekt** diese Einstellungen überprüft, unmittelbar bevor der Benutzer die Wiedergabe beendet oder die Anwendung schließt, anstatt während der Initialisierung.
 
-Sie greifen `MSDVDAdm` auf das Objekt über die **dvdadm** -Eigenschaft von **mswebdvd** zu. Wenn z. b. das **mswebdvd** -Objekt den Namen "DVD" hat, wird **ChangePassword** aufgerufen, wie im folgenden Codebeispiel gezeigt.
+Sie greifen über `MSDVDAdm` die **DVDAdm-Eigenschaft** von **MSWebDVD auf das -Objekt zu.** Wenn das **MSWebDVD-Objekt** also beispielsweise "DVD" heißt, rufen Sie **ChangePassword** auf, wie im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -40,26 +40,26 @@ DVD.DVDAdm.ChangePassword(sUserName, sOld, sNew)
 
 **Methoden und Eigenschaften**
 
-In der folgenden Tabelle sind die Methoden und Eigenschaften aufgeführt, die von den Objektmethoden und Eigenschaften von msdvdadm verfügbar gemacht werden.
+In der folgenden Tabelle sind die Methoden und Eigenschaften aufgeführt, die von den MSDVDAdm-Objektmethoden und -Eigenschaften verfügbar gemacht werden.
 
 
 
-| Methode                                                          | BESCHREIBUNG                                                                                                                                                                      |
+| Methode                                                          | Beschreibung                                                                                                                                                                      |
 |-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ChangePassword**](changepassword-method.md)                 | Speichert ein neues Anwendungs Kennwort in der Registrierung.                                                                                                                                |
-| [**Saveparameentallevel**](saveparentallevel-method.md)           | Speichert eine neue Standard-Jugend Stufe in der Registrierung.                                                                                                                              |
-| [**Savepartalcountry**](saveparentalcountry-method.md)       | Speichert das neue Eltern Land/die Region der Anwendung in der Registrierung.                                                                                                             |
-| [**ConfirmPassword**](confirmpassword-method.md)               | Testet, ob das angegebene Kennwort mit dem zuvor gespeicherten Kennwort übereinstimmt.                                                                                                      |
-| [**Getparametriallevel**](getparentallevel-method.md)             | Ruft die Jugend Stufe ab, die zuletzt in der Registrierung gespeichert wurde.                                                                                                                |
-| [**Getparametrialcountry**](getparentalcountry-method.md)         | Ruft das Eltern Land/die Region ab, das zuletzt in der Registrierung gespeichert wurde.                                                                                                       |
-| [**Restoreskreensaver**](restorescreensaver-method.md)         | Stellt die Einstellungen des System Bildschirmschoners wieder her.                                                                                                                                       |
-| Eigenschaft                                                        | BESCHREIBUNG                                                                                                                                                                      |
-| [**Disablebildschirm**](disablescreensaver-property.md)       | Schaltet den Bildschirmschoner des Systems ein oder aus.                                                                                                                                         |
-| [**Defaultaudiolcid**](defaultaudiolcid-property.md)           | Legt die Registrierungs Einstellung für die vom Benutzer angegebene Standard-LCID für den Audiostream fest oder ruft Sie ab.                                                                                 |
-| [**Defaultsubpicturelcid**](defaultsubpicturelcid-property.md) | Legt die Registrierungs Einstellung für die vom Benutzer angegebene Standard-LCID für den subbildstream fest oder ruft Sie ab.                                                                            |
-| [**Defaultmenulcid**](defaultmenulcid-property.md)             | Legt die Registrierungs Einstellung für die benutzerdefinierte Standard-LCID für Menüs fest oder ruft Sie ab.                                                                                            |
-| [**Bookmarkonstoppt**](bookmarkonstop-property.md)               | Legt einen Wert fest oder Ruft einen Wert ab, der das msdvdadm-Objekt anweist, ob automatisch ein Lesezeichen der aktuellen Position und Einstellungen gespeichert werden soll, wenn der Benutzer auf die Schaltfläche **Beenden** klickt. |
-| [**Bookmarkonclose**](bookmarkonclose-property.md)             | Legt einen Wert fest oder ruft ihn ab, der angibt, ob ein Lesezeichen des aktuellen Speicher Orts und der aktuellen Einstellungen automatisch gespeichert werden sollen, wenn der Benutzer die Anwendung schließt.     |
+| [**ChangePassword**](changepassword-method.md)                 | Speichert ein neues Anwendungskennwort in der Registrierung.                                                                                                                                |
+| [**SaveParentalLevel**](saveparentallevel-method.md)           | Speichert eine neue Standardmäßige Jugendstufe in der Registrierung.                                                                                                                              |
+| [**SaveParentalCountry**](saveparentalcountry-method.md)       | Speichert das neue Land bzw. die Neue Elternregion der Anwendung in der Registrierung.                                                                                                             |
+| [**ConfirmPassword**](confirmpassword-method.md)               | Testet, ob das angegebene Kennwort dem zuvor gespeicherten Kennwort entspricht.                                                                                                      |
+| [**GetParentalLevel**](getparentallevel-method.md)             | Ruft die Ebene der Eltern ab, die zuletzt in der Registrierung gespeichert wurde.                                                                                                                |
+| [**GetParentalCountry**](getparentalcountry-method.md)         | Ruft das Land/die Region der Eltern ab, das/die zuletzt in der Registrierung gespeichert wurde.                                                                                                       |
+| [**RestoreScreenSaver**](restorescreensaver-method.md)         | Stellt die Einstellungen des Systembildschirmschoners wieder auf.                                                                                                                                       |
+| Eigenschaft                                                        | Beschreibung                                                                                                                                                                      |
+| [**DisableScreenSaver**](disablescreensaver-property.md)       | Schaltet den Systembildschirmschoner ein oder aus.                                                                                                                                         |
+| [**DefaultAudioLCID**](defaultaudiolcid-property.md)           | Legt die Registrierungseinstellung für die vom Benutzer angegebene Standard-LCID für den Audiostream fest oder ruft sie ab.                                                                                 |
+| [**DefaultSubpictureLCID**](defaultsubpicturelcid-property.md) | Legt die Registrierungseinstellung für die vom Benutzer angegebene Standard-LCID für den Unterbilddatenstrom fest oder ruft sie ab.                                                                            |
+| [**DefaultMenuLCID**](defaultmenulcid-property.md)             | Legt die Registrierungseinstellung für die vom Benutzer angegebene Standard-LCID für Menüs fest oder ruft sie ab.                                                                                            |
+| [**BookmarkOnStop**](bookmarkonstop-property.md)               | Legt einen Wert fest oder ruft einen Wert ab, der das MSDVDAdm-Objekt darüber informiert, ob ein Lesezeichen des aktuellen Speicherorts und der aktuellen Einstellungen automatisch gespeichert werden soll, wenn der Benutzer auf die **Schaltfläche Beenden** klickt. |
+| [**BookmarkOnClose**](bookmarkonclose-property.md)             | Legt einen Wert fest oder ruft einen Wert ab, der das MSDVDAdm-Objekt darüber informiert, ob ein Lesezeichen des aktuellen Speicherorts und der aktuellen Einstellungen automatisch gespeichert werden soll, wenn der Benutzer die Anwendung schließt.     |
 
 
 

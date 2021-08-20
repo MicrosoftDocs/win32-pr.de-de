@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectGroup gettechniquebyname-Methode (D3dx11effect. h)
-description: Holen Sie sich eine Technik anhand des Namens. | ID3DX11EffectGroup gettechniquebyname-Methode (D3dx11effect. h)
+title: ID3DX11EffectGroup GetTechniqueByName-Methode (D3dx11effect.h)
+description: Abrufen einer Technik anhand des Namens. | ID3DX11EffectGroup GetTechniqueByName-Methode (D3dx11effect.h)
 ms.assetid: 160c6d57-bec4-4718-8fad-fc9c0746736c
 keywords:
-- Gettechniquebyname-Methode Direct3D 11
-- Gettechniquebyname-Methode Direct3D 11, ID3DX11EffectGroup-Schnittstelle
-- ID3DX11EffectGroup-Schnittstelle Direct3D 11, gettechniquebyname-Methode
+- GetTechniqueByName-Methode Direct3D 11
+- GetTechniqueByName-Methode Direct3D 11 , ID3DX11EffectGroup-Schnittstelle
+- ID3DX11EffectGroup-Schnittstelle Direct3D 11 , GetTechniqueByName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5121f67345ba863d773d8e7a73a5d6fa8b69895
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 590defa7477ad41d1e861dc7a8afa05370f4d83d7846c99fa1086aae94c57c1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046258"
 ---
-# <a name="id3dx11effectgroupgettechniquebyname-method"></a>ID3DX11EffectGroup:: gettechniquebyname-Methode
+# <a name="id3dx11effectgroupgettechniquebyname-method"></a>ID3DX11EffectGroup::GetTechniqueByName-Methode
 
-Holen Sie sich eine Technik anhand des Namens.
+Abrufen einer Technik anhand des Namens.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,27 +56,27 @@ Der Name der Technik.
 
 Typ: **[ **ID3DX11EffectTechnique**](id3dx11effecttechnique.md)\***
 
-Ein Zeiger auf ein [**ID3DX11EffectTechnique**](id3dx11effecttechnique.md)-oder **null** -Wert, wenn die Technik nicht gefunden wurde.
+Ein Zeiger auf eine [**ID3DX11EffectTechnique**](id3dx11effecttechnique.md)oder **NULL,** wenn die Technik nicht gefunden wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

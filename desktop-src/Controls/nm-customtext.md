@@ -1,9 +1,9 @@
 ---
-title: NM_CUSTOMTEXT Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Steuer Elements über benutzerdefinierte Textoperationen. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_CUSTOMTEXT Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Steuerelements über benutzerdefinierte Textvorgänge. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b4bde648-3479-4fac-ad32-b34c7272c1fc
 keywords:
-- Windows-Steuerelemente für NM_CUSTOMTEXT Benachrichtigungs
+- NM_CUSTOMTEXT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9eebc4033a76d137e28a0c4170c5c613c7933562
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 512ccb6cd94ce680b9832c342696941d98c0e6543c319caeb89eb409de1fe73c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391514"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018873"
 ---
-# <a name="nm_customtext-notification-code"></a>NM \_ CustomText-Benachrichtigungs Code
+# <a name="nm_customtext-notification-code"></a>NM \_ CUSTOMTEXT-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Steuer Elements über benutzerdefinierte Textoperationen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Steuerelements über benutzerdefinierte Textvorgänge. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_CUSTOMTEXT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmcustomtext**](/windows/win32/api/commctrl/ns-commctrl-nmcustomtext) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Ein Zeiger auf eine [**NMCUSTOMTEXT-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmcustomtext) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert wird vom-Steuerelement ignoriert.
+Der Rückgabewert wird vom -Steuerelement ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Der Rückgabewert wird vom-Steuerelement ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

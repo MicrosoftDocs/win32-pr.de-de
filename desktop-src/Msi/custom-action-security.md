@@ -1,23 +1,23 @@
 ---
-description: Der Installer führt standardmäßig benutzerdefinierte Aktionen mit Benutzerberechtigungen aus, um den Zugriff auf benutzerdefinierte Aktionen auf das System zu beschränken.
+description: Das Installationsprogramm führt standardmäßig benutzerdefinierte Aktionen mit Benutzerberechtigungen aus, um den Zugriff benutzerdefinierter Aktionen auf das System zu beschränken.
 ms.assetid: 62a3d103-a786-4727-b757-3a8229c8a53f
 title: Sicherheit für benutzerdefinierte Aktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e7d36e0e5c6cecc61730144fb7efdeed63ba0fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0a8011640bea177ec253f555b6ff83302541b640a050ccf861eb345c58ca13f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118143310"
 ---
 # <a name="custom-action-security"></a>Sicherheit für benutzerdefinierte Aktionen
 
-Der Installer führt standardmäßig benutzerdefinierte Aktionen mit Benutzerberechtigungen aus, um den Zugriff auf benutzerdefinierte Aktionen auf das System zu beschränken. Der Installer kann benutzerdefinierte Aktionen mit erhöhten Rechten ausführen, wenn eine verwaltete Anwendung installiert wird oder wenn die System Richtlinie für erweiterte Berechtigungen angegeben wurde.
+Das Installationsprogramm führt standardmäßig benutzerdefinierte Aktionen mit Benutzerberechtigungen aus, um den Zugriff benutzerdefinierter Aktionen auf das System zu beschränken. Das Installationsprogramm kann benutzerdefinierte Aktionen mit erhöhten Rechten ausführen, wenn eine verwaltete Anwendung installiert wird oder die Systemrichtlinie für erhöhte Rechte angegeben wurde.
 
-Verwenden Sie zum Verhindern der Protokollierung sensibler Informationen, die von der benutzerdefinierten Aktion verwendet werden, die [**msihiddenproperties**](msihiddenproperties.md) -Eigenschaft und **msidbcustomaction typehidetarget** . Weitere Informationen zu **msidbcustomaction typehidetarget** finden Sie unter ausgeblendete [Ziel Option für benutzerdefinierte Aktionen](custom-action-hidden-target-option.md).
+Sie sollten die [**MsiHiddenProperties-Eigenschaft**](msihiddenproperties.md) und **msidbCustomActionTypeHideTarget** verwenden, um die Protokollierung vertraulicher Informationen zu verhindern, die von der benutzerdefinierten Aktion verwendet werden. Weitere Informationen zu **msidbCustomActionTypeHideTarget finden** Sie unter [Option "Benutzerdefinierte Aktion ausgeblendetes Ziel".](custom-action-hidden-target-option.md)
 
-Deaktivieren Sie die Eigenschaft customaktiondata, nachdem Sie Sie festgelegt haben, um sicherzustellen, dass sensible Daten nicht mehr verfügbar sind. Der folgende Beispielcode zeigt einen Code Ausschnitt, der von einer unmittelbaren benutzerdefinierten DLL-Aktion verwendet wird, die Daten für die Verwendung durch eine verzögerte benutzerdefinierte Aktion mit dem Namen "mydeferredca" festlegt:
+Löschen Sie die CustomActionData-Eigenschaft nach dem Festlegen, um sicherzustellen, dass vertrauliche Daten nicht mehr verfügbar sind. Der folgende Beispielcode ist ein Codeausschnitt, der von einer unmittelbaren benutzerdefinierten DLL-Aktion verwendet wird, die Daten für die Verwendung durch eine zurückgestellte benutzerdefinierte Aktion namens "MyDeferredCA" einsetzt:
 
 
 ```C++
@@ -45,15 +45,15 @@ UINT __stdcall MyImmediateCA(MSIHANDLE hInstall)
 
 
 
-Beachten Sie, dass [benutzerdefinierte Aktionen für die verzögerte Ausführung](deferred-execution-custom-actions.md) nur das **msidbcustomaktiontypoidentitäts Ate** -Attribut verwenden können. Weitere Informationen finden Sie unter [benutzerdefinierte Aktion In-Script Ausführungs Optionen](custom-action-in-script-execution-options.md).
+Beachten Sie, dass nur benutzerdefinierte Aktionen [mit verzögerter](deferred-execution-custom-actions.md) Ausführung das **Attribut msidbCustomActionTypeNoImpersonate verwenden** können. Weitere Informationen finden Sie unter [Benutzerdefinierte Aktion In-Script Ausführungsoptionen](custom-action-in-script-execution-options.md).
 
-Wenn das **msidbcustomaction typoidentitäts** -Bit nicht für eine benutzerdefinierte Aktion festgelegt ist, führt das Installationsprogramm die benutzerdefinierte Aktion mit Berechtigungen auf Benutzerebene aus. Weitere Informationen finden Sie unter [benutzerdefinierte Aktion In-Script Ausführungs Optionen](custom-action-in-script-execution-options.md).
+Wenn das **bit msidbCustomActionTypeNoImpersonate** nicht für eine benutzerdefinierte Aktion festgelegt ist, führt das Installationsprogramm die benutzerdefinierte Aktion mit Berechtigungen auf Benutzerebene aus. Weitere Informationen finden Sie unter [Benutzerdefinierte Aktion In-Script Ausführungsoptionen.](custom-action-in-script-execution-options.md)
 
-Wenn das **msidbcustomaction typoidentitäts Ate** -Bit festgelegt ist und eine verwaltete Anwendung mit der Administrator Berechtigung installiert wird, kann das Installationsprogramm die benutzerdefinierte Aktion mit erhöhten Rechten ausführen. Wenn ein Benutzer jedoch versucht, die verwaltete Anwendung ohne Administrator Berechtigung zu installieren, führt das Installationsprogramm die Anwendung mit Berechtigungen auf Benutzerebene aus, und zwar unabhängig davon, ob **msidbcustomaktiontycuoidentitäts Ate** festgelegt ist.
+Wenn **das msidbCustomActionTypeNoImpersonate-Bit** festgelegt ist und eine verwaltete Anwendung mit Administratorberechtigung installiert wird, kann das Installationsprogramm die benutzerdefinierte Aktion mit erhöhten Rechten ausführen. Wenn ein Benutzer jedoch versucht, die verwaltete Anwendung ohne Administratorberechtigung zu installieren, führt das Installationsprogramm die Anwendung mit Berechtigungen auf Benutzerebene aus, unabhängig davon, ob **msidbCustomActionTypeNoImpersonate** festgelegt ist.
 
-Beachten Sie, dass eine benutzerdefinierte Aktion auch dann mit System Privilegien ausgeführt werden kann, wenn das **msidbcustomaction typoidentitäts Ate** -Bit nicht festgelegt ist. Dies tritt auf, wenn ein Administrator die Anwendung für alle Benutzer auf einem Server installiert, auf dem der Terminal Server-Rollen Dienst mit Windows 2000 ausgeführt wird, und die Aktion nicht mit " **msidbcustomaction typetsaware**" gekennzeichnet ist. Eine benutzerdefinierte Aktion kann auch mit System Privilegien ausgeführt werden, wenn die Installation aufgerufen wird, wenn kein Benutzer Kontext vorhanden ist. Dies ist beispielsweise der Fall, wenn während einer von der Windows 2000-Anwendungs Bereitstellung aufgerufenen Installation kein aktuell angemeldeter Benutzer vorhanden ist.
+Beachten Sie, dass eine benutzerdefinierte Aktion mit Systemberechtigungen ausgeführt werden kann, auch wenn das **msidbCustomActionTypeNoImpersonate-Bit** nicht festgelegt ist. Dies tritt auf, wenn ein Administrator die Anwendung für alle Benutzer auf einem Server installiert, auf dem der Terminalserver-Rollendienst mithilfe von Windows 2000 ausgeführt wird, und die Aktion nicht mit **msidbCustomActionTypeTSAware** gekennzeichnet ist. Eine benutzerdefinierte Aktion kann auch mit Systemberechtigungen ausgeführt werden, wenn die Installation aufgerufen wird, wenn kein Benutzerkontext vorgefertigt ist. Wenn beispielsweise während einer Installation, die von der 2000-Anwendungsbereitstellung aufgerufen wird, kein Windows benutzer angemeldet ist.
 
-Wenn Sie eigene benutzerdefinierte Aktionen erstellen, sollten Sie die benutzerdefinierte Aktion immer mit sicheren Methoden erstellen. Weitere Informationen finden Sie unter [Richtlinien zum Sichern von benutzerdefinierten Aktionen](guidelines-for-securing-custom-actions.md).
+Beim Erstellen eigener benutzerdefinierter Aktionen sollten Sie die benutzerdefinierte Aktion immer mit sicheren Methoden erstellen. Weitere Informationen finden Sie unter [Richtlinien zum Schützen benutzerdefinierter Aktionen.](guidelines-for-securing-custom-actions.md)
 
  
 

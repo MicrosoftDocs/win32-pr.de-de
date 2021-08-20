@@ -1,24 +1,24 @@
 ---
-description: Mit der restorebookmark-Methode wird das mswebdvd-Objekt entsprechend der Angabe im aktuellen Lesezeichen an den Punkt auf dem Datenträger verschoben, wobei alle Audiodateien, Video-und unter Bildeinstellungen wieder hergestellt werden.
+description: Die RestoreBookmark-Methode verschiebt das MSWebDVD-Objekt auf den Punkt auf dem Datenträger, wie im aktuellen Lesezeichen angegeben, wobei alle Audio-, Video- und Bildbildeinstellungen wiederhergestellt werden.
 ms.assetid: 41623395-e891-4e0a-8a1a-1a000b9fd537
-title: Restorebookmark-Methode (Segment. h)
+title: RestoreBookmark-Methode (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47a6bd3fc1739e35467870b35df909e23d170b6f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9102c2d10192ab66a3c870c7f2516b995a89249ff331c7e558ca8f4a72f2231b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072743"
 ---
-# <a name="restorebookmark-method"></a>Restorebookmark-Methode
+# <a name="restorebookmark-method"></a>RestoreBookmark-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die `RestoreBookmark` -Methode verschiebt das **mswebdvd** -Objekt entsprechend der Angabe im aktuellen Lesezeichen an den Punkt auf der Festplatte, wobei alle Audiodateien, Video-und unter Bildeinstellungen wieder hergestellt werden.
+Die `RestoreBookmark` -Methode verschiebt das **MSWebDVD-Objekt** auf den Punkt auf dem Datenträger, wie im aktuellen Lesezeichen angegeben, wobei alle Audio-, Video- und Unterbildeinstellungen wiederhergestellt werden.
 
 ``` syntax
 MSWebDVD.RestoreBookmark()
@@ -34,7 +34,7 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 

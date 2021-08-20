@@ -1,7 +1,7 @@
 ---
-description: Die GetRequest-Methode wartet auf die nächste Thread Anforderung.
+description: Die GetRequest-Methode wartet auf die nächste Threadanforderung.
 ms.assetid: 2938374b-174f-4276-98a2-20a084bd9bbd
-title: Csourcestream. GetRequest-Methode (Source. h)
+title: CSourceStream.GetRequest-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3f45e6f6cf269f7aca6741d8e1c150c7054b07f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e28a8e57535a49903cd2a7b23fb0d0d179bf910b20225042c65b3bdcda620f51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073204"
 ---
-# <a name="csourcestreamgetrequest-method"></a>Csourcestream. GetRequest-Methode
+# <a name="csourcestreamgetrequest-method"></a>CSourceStream.GetRequest-Methode
 
-Die- `GetRequest` Methode wartet auf die nächste Thread Anforderung.
+Die `GetRequest` -Methode wartet auf die nächste Threadanforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die nächste Thread Anforderung zurück.
+Gibt die nächste Threadanforderung zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die Methode " [**camthread:: GetRequest**](camthread-getrequest.md) ". Der Rückgabewert wird in den folgenden enumerierten Typ umgewandelt:
+Diese Methode überschreibt die [**METHODECAMThread::GetRequest.**](camthread-getrequest.md) Der Rückgabewert wird in den folgenden aufzählten Typ umgeändert:
 
 
 ```C++
@@ -61,8 +61,8 @@ enum Command {CMD_INIT, CMD_PAUSE, CMD_RUN, CMD_STOP, CMD_EXIT};
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ enum Command {CMD_INIT, CMD_PAUSE, CMD_RUN, CMD_STOP, CMD_EXIT};
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

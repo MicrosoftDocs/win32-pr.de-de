@@ -1,43 +1,43 @@
 ---
-description: Die erste Konfiguration erfordert keine zusätzliche Konfiguration über die Installation des Microsoft IPv6-Technologievorschau Protokolls hinaus.
+description: Die erste Konfiguration erfordert über die Installation des Microsoft IPv6 Technology Preview-Protokolls hinaus keine zusätzliche Konfiguration.
 ms.assetid: ceed4983-e088-44e8-9cfc-26afb3c35ba0
-title: 'Konfiguration 1: einzelnes Subnetz mit Link-Local-Adressen'
+title: 'Konfiguration 1: Einzelnes Subnetz mit lokalen Linkadressen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d09feb44c222b7213da18a6745fc632f3903209
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a541edd96175dc61ec0aba3b1358c2bbd9464668e6aa1a11aeb6f2097e5b13bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051733"
 ---
-# <a name="configuration-1-single-subnet-with-link-local-addresses"></a>Konfiguration 1: einzelnes Subnetz mit Link-Local-Adressen
+# <a name="configuration-1-single-subnet-with-link-local-addresses"></a>Konfiguration 1: Einzelnes Subnetz mit lokalen Linkadressen
 
-Die erste Konfiguration erfordert keine zusätzliche Konfiguration über die Installation des Microsoft IPv6-Technologievorschau Protokolls hinaus. Diese Konfiguration besteht aus mindestens zwei Knoten im gleichen Subnetz. In der IPv6-Terminologie befinden sich die beiden Knoten in derselben Verbindung ohne zwischengeschaltete Router.
+Die erste Konfiguration erfordert über die Installation des Microsoft IPv6 Technology Preview-Protokolls hinaus keine zusätzliche Konfiguration. Diese Konfiguration besteht aus mindestens zwei Knoten im gleichen Subnetz. In der IPv6-Terminologie befinden sich die beiden Knoten über die gleiche Verbindung ohne Zwischenrouter.
 
-Die folgende Abbildung zeigt die Konfiguration von zwei Knoten in einem einzelnen Subnetz mithilfe von Link-Local-Adressen.
+Die folgende Abbildung zeigt die Konfiguration von zwei Knoten in einem einzelnen Subnetz mithilfe von lokalen Linkadressen.
 
-![zwei Knoten, die Link-Local-Adressen verwenden.](images/v6mig-1.png)
+![zwei Knoten, die lokale Linkadressen verwenden.](images/v6mig-1.png)
 
-Standardmäßig konfiguriert IPv6 Verbindungs lokale IP-Adressen für jede Schnittstelle, die den installierten Ethernet-Netzwerkadaptern entspricht. Link-Local-Adressen haben das Präfix FE80::/64. Die letzten 64 Bits der IPv6-Adresse werden als Schnittstellen Bezeichner bezeichnet und von der 48-Bit-Mac-Adresse des Netzwerkadapters abgeleitet.
+Standardmäßig konfiguriert IPv6 link-local IP-Adressen für jede Schnittstelle, die installierten Ethernet-Netzwerkadaptern entspricht. Lokale Linkadressen haben das Präfix fe80::/64. Die letzten 64 Bits der IPv6-Adresse werden als Schnittstellenbezeichner bezeichnet und von der 48-Bit-MAC-Adresse des Netzwerkadapters abgeleitet.
 
-So erstellen Sie den IPv6-Schnittstellen Bezeichner aus der 48-Bit-Ethernet-MAC-Adresse (6 Byte):
+So erstellen Sie den IPv6-Schnittstellenbezeichner aus der 48-Bit-Ethernet-MAC-Adresse (6 Byte):
 
--   Die hexadezimal Ziffern 0xFF-FE werden zwischen dem dritten und vierten Byte der Mac-Adresse eingefügt.
--   Das Universal/local-Bit, das zweite niedrig wertige Bit des ersten Bytes der Mac-Adresse, wird ergänzt. Wenn der Wert 1 ist, wird er in 0 (null) umgewandelt, und wenn er 0 ist, wird er in 1 umgewandelt.
+-   Die Hexadezimalziffern 0xff-fe werden zwischen dem dritten und vierten Byte der MAC-Adresse eingefügt.
+-   Das universelle/lokale Bit, das zweite low-order-Bit des ersten Byte der MAC-Adresse, wird ergänzt. Wenn es sich um eine 1 handelt, wird sie in 0 und bei 0 in 1 umgeschaltet.
 
-Beispielsweise für die Mac-Adresse 00-60-08-52-F9-D8:
+Beispiel für die MAC-Adresse 00-60-08-52-f9-d8:
 
--   Die hexadezimal Ziffern 0xFF-FE werden zwischen 0x08 (das dritte Byte) und 0x52 (das vierte Byte) der Mac-Adresse eingefügt, wodurch die 64-Bit-Adresse 00-60-08-FF-FE-52-F9-D8 gebildet wird.
--   Das universelle/lokale Bit, das zweite niedrig wertige Bit von 0x00 (das erste Byte) der Mac-Adresse wird ergänzt. Das zweite niedrig wertige Bit von 0x00 ist 0 (null), das, wenn es ergänzt wird, 1 ist. Das Ergebnis ist, dass 0x00 für das erste Byte 0x02 wird.
+-   Die hexadezimalen Ziffern 0xff-fe werden zwischen 0x08 (drittes Byte) und 0x52 (viertes Byte) der MAC-Adresse eingefügt, was die 64-Bit-Adresse 00-60-08-ff-fe-52-f9-d8 bildet.
+-   Das universelle/lokale Bit, das zweite bit von 0x00 (das erste Byte) der MAC-Adresse, wird ergänzt. Das zweite low-order-Bit von 0x00 ist 0, was, wenn es ergänzt wird, zu 1 wird. Das Ergebnis ist, dass für das erste Byte 0x00 wird 0x02.
 
-Daher ist der IPv6-Schnittstellen Bezeichner, der der Ethernet-MAC-Adresse 00-60-08-52-F9-D8 entspricht, 02-60-08-FF-FE-52-F9-D8.
+Daher ist der IPv6-Schnittstellenbezeichner, der der Ethernet-MAC-Adresse 00-60-08-52-f9-d8 entspricht, 02-60-08-ff-fe-52-f9-d8.
 
-Die Link-Local-Adresse eines Knotens ist die Kombination aus dem Präfix FE80::/64 und dem 64-Bit-Schnittstellen Bezeichner, der in IPv6-Doppelpunkt-hexadezimal Notation ausgedrückt wird. Daher ist die Link-Local-Adresse dieses Beispiel Knotens mit dem Präfix FE80::/64 und dem Schnittstellen Bezeichner 02-60-08-FF-FE-52-F9-D8 FE80:: 260:8ff: FE52: F9D8.
+Die link-local-Adresse eines Knotens ist die Kombination aus dem Präfix fe80::/64 und dem 64-Bit-Schnittstellenbezeichner, der in IPv6-Doppelpunkt-Hexadezimal-Notation ausgedrückt wird. Daher ist die link-local-Adresse dieses Beispielknotens mit dem Präfix fe80::/64 und dem Schnittstellenbezeichner 02-60-08-ff-fe-52-f9-d8 fe80::260:8ff:fe52:f9d8.
 
-Sie können Ihre lokale Linkadresse mit IPv6 anzeigen, wie im folgenden Beispiel gezeigt:
+Sie können Ihre lokale Linkadresse anzeigen, indem Sie ipv6 verwenden, wenn dies im folgenden Beispiel gezeigt wird:
 
-**IPv6 if**
+**ipv6, wenn**
 
 ``` syntax
 Interface 4 (site 1): Local Area Connection
@@ -82,36 +82,36 @@ Interface 1 (site 0): Loopback Pseudo-Interface
   DAD transmits 0
 ```
 
-Schnittstelle 4 ist eine Schnittstelle, die einem installierten Ethernet-Adapter mit der Link-Local-Adresse FE80:: 210:5AFF: Feaa: 20A2 entspricht.
+Schnittstelle 4 ist eine Schnittstelle, die einem installierten Ethernet-Adapter mit der lokalen Linkadresse fe80::210:5aff:feaa:20a2 entspricht.
 
-Weitere Informationen zur IPv6-Adressierung und eine Übersicht über IPv6-Konzepte finden Sie im Whitepaper Introduction to IPv6 (Einführung in das IPv6).
+Weitere Informationen zur IPv6-Adressierung und eine Übersicht über IPv6-Konzepte finden Sie im Whitepaper Introduction to IPv6 (Einführung in IPv6).
 
-## <a name="testing-connectivity-between-two-link-local-hosts"></a>Testen der Konnektivität zwischen zwei Verbindungs lokalen Hosts
+## <a name="testing-connectivity-between-two-link-local-hosts"></a>Testen der Konnektivität zwischen zwei lokalen Linkhosts
 
-Sie können einen einfachen Ping (einen Austausch von ICMPv6-Echo Anforderungs-und Echo Antwort Nachrichten) durchführen, indem Sie IPv6 zwischen zwei Verbindungs lokalen Hosts verwenden.
+Sie können einen einfachen Ping (einen Austausch von ICMPv6 Echo Request- und Echo Reply-Nachrichten) mithilfe von IPv6 zwischen zwei lokalen Linkhosts verwenden.
 
-**So Pingen Sie mithilfe von IPv6 zwischen zwei Verbindungs lokalen Hosts**
+**So pingen Sie mit IPv6 zwischen zwei lokalen Linkhosts**
 
-1.  Installieren Sie die Microsoft IPv6-Technologievorschau für Windows auf zwei Windows-Hosts (Host A und Host B), die sich auf demselben Link (Subnetz) befinden.
-2.  Verwenden Sie IPv6 if auf Host A zum Abrufen der Link-Local-Adresse für die Ethernet-Schnittstelle.
+1.  Installieren Sie microsoft IPv6 Technology Preview für Windows auf zwei Windows-Hosts (Host A und Host B), die sich unter demselben Link (Subnetz) befinden.
+2.  Verwenden Sie ipv6 auf Host A, um die lokale Linkadresse für die Ethernet-Schnittstelle zu erhalten.
 
-    Beispiel: die Link-Local-Adresse von Host A ist FE80:: 210:5AFF: Feaa: 20A2.
+    Beispiel: Die link-local-Adresse von Host A ist fe80::210:5aff:feaa:20a2.
 
-3.  Verwenden Sie IPv6 if auf Host B zum Abrufen der Link-Local-Adresse für die Ethernet-Schnittstelle.
+3.  Verwenden Sie ipv6 auf Host B, um die link-local-Adresse für die Ethernet-Schnittstelle zu erhalten.
 
-    Beispiel: die Link-Local-Adresse von Host B lautet FE80:: 260:97FF: FE02:6EA5.
+    Beispiel: Die lokale Linkadresse von Host B ist fe80::260:97ff:fe02:6ea5.
 
-4.  Pingen Sie Host B von Host a mithilfe Ping6.exe.
+4.  Pingen Sie host B über Host A mit Ping6.exe.
 
-    Beispiel: ping6 FE80:: 260:97FF: FE02:6EA5
+    Beispiel: ping6 fe80::260:97ff:fe02:6ea5
 
-Sie können auch die Option Ping6.exe-s verwenden, um die Quelladresse anzugeben, von der die Echo Anforderungs Nachrichten gesendet werden. Um z. B. Echo Anforderungen von der IPv6-Adresse FE80:: 210:5AFF: Feaa: 20A2 an Host B zu senden, verwenden Sie den folgenden Befehl:
+Um die Quelladresse anzugeben, von der die Echo Request-Nachrichten gesendet werden, können Sie auch die Option Ping6.exe -s verwenden. Um beispielsweise Echoanforderungen von der IPv6-Adresse fe80::210:5aff:feaa:20a2 an Host B zu senden, verwenden Sie den folgenden Befehl:
 
-**ping6-s FE80:: 210:5AFF: Feaa: 20A2% 4 FE80:: 260:97FF: FE02:6EA5**
+**ping6 -s fe80::210:5aff:feaa:20a2%4 fe80::260:97ff:fe02:6ea5**
 
-Beim Pingen einer Link-lokal-oder Site-Local-Adresse empfiehlt es sich, die Bereichs-ID anzugeben, damit die Zieladresse eindeutig ist. Die Notation zum Angeben der Bereichs-ID lautet Address% Scope-ID. Bei Link-Local-Adressen ist die Bereichs-ID gleich der Schnittstellen Nummer, wie im IPv6-Befehl "if" angezeigt. Bei Site-Local-Adressen ist die Bereichs-ID gleich der Standort Nummer, wie im IPv6-Befehl "if" angezeigt. Verwenden Sie z. b. den folgenden Befehl, um Echo Anforderungs Nachrichten an Host B mithilfe von Scope-ID 4 zu senden:
+Beim Pingen einer lokalen link- oder standortbasierten Adresse wird empfohlen, die Bereichs-ID anzugeben, um die Zieladresse eindeutig zu machen. Die Notation zum Angeben der Bereichs-ID ist address%scope-ID. Bei lokalen Linkadressen entspricht die Bereichs-ID der Schnittstellennummer, die im Befehl ipv6 if angezeigt wird. Bei standortbasierten Adressen entspricht die Bereichs-ID der Standortnummer, die im Befehl ipv6 if angezeigt wird. Verwenden Sie beispielsweise den folgenden Befehl, um Echo Request-Nachrichten mit scope-ID 4 an Host B zu senden:
 
-**ping6 FE80:: 260:97FF: FE02:6EA5% 4**
+**ping6 fe80::260:97ff:fe02:6ea5%4**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

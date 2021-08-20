@@ -90,13 +90,13 @@ Hoher Verschlüsselungsgrad. Alle Daten, die von Client zu Server und von Server
 
 </dt> <dd>
 
-FIPS-konforme Verschlüsselung. Alle Daten, die von Client zu Server und von Server zu Client gesendet werden, werden mit den FIPS-Verschlüsselungsalgorithmen (Federal Information Processing Standard) mithilfe der kryptografischen Microsoft-Module verschlüsselt und entschlüsselt. FIPS ist ein Standard mit dem Titel "Sicherheitsanforderungen für kryptografische Module". FIPS 140-1 (1994) und FIPS 140-2 (2001) beschreiben die Anforderungen der Regierung für Hardware- und Software-Kryptografiemodule, die innerhalb der US-Regierung verwendet werden.
+FIPS-kompatible Verschlüsselung. Alle Daten, die von Client zu Server und von Server zu Client gesendet werden, werden mit den FIPS-Verschlüsselungsalgorithmen (Federal Information Processing Standard) mithilfe der kryptografischen Microsoft-Module verschlüsselt und entschlüsselt. FIPS ist ein Standard mit dem Titel "Sicherheitsanforderungen für kryptografische Module". FIPS 140-1 (1994) und FIPS 140-2 (2001) beschreiben die Anforderungen der Regierung für Hardware- und Software-Kryptografiemodule, die innerhalb der US-Regierung verwendet werden.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="remarks"></a>Hinweise
 
@@ -116,7 +116,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

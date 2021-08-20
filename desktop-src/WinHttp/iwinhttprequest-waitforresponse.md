@@ -1,7 +1,7 @@
 ---
-description: Die WaitForResponse-Methode wartet auf den Abschluss einer asynchronen Sende Methode mit optionalem Timeout Wert (in Sekunden).
+description: Die WaitForResponse-Methode wartet in Sekunden, bis eine asynchrone Send-Methode mit einem optionalen Time out-Wert abgeschlossen ist.
 ms.assetid: 33265710-ecdc-4eae-8822-161dffbd03fc
-title: 'Iwinhttprequest:: WaitForResponse-Methode'
+title: IWinHttpRequest::WaitForResponse-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: fe9e3508273a3ee52d72ede65fd6575d72decb8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4f72edf2a3532c6d0f2641d979885e6d294c2ad923a28f19b71b348ea3a6377
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051998"
 ---
-# <a name="iwinhttprequestwaitforresponse-method"></a>Iwinhttprequest:: WaitForResponse-Methode
+# <a name="iwinhttprequestwaitforresponse-method"></a>IWinHttpRequest::WaitForResponse-Methode
 
-Die **WaitForResponse** -Methode wartet auf den Abschluss einer asynchronen [**Sende**](iwinhttprequest-send.md) Methode mit optionalem Timeout Wert (in Sekunden).
+Die **WaitForResponse-Methode** wartet in Sekunden, bis eine asynchrone [**Send-Methode**](iwinhttprequest-send.md) mit einem optionalen Time out-Wert abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ HRESULT WaitForResponse(
 *Timeout* \[ in, optional\]
 </dt> <dd>
 
-Timeout Wert in Sekunden. Das Standard Timeout ist unendlich. Wenn Sie das Timeout explizit auf unendlich festlegen möchten, verwenden Sie den Wert-1.
+Time out-Wert in Sekunden. Das Standardtime out ist unendlich. Um time-out explizit auf unendlich festzulegen, verwenden Sie den Wert -1.
 
 </dd> <dt>
 
-*Erfolgreich* \[ Out, retval\]
+*Erfolgreich* \[ out, retval\]
 </dt> <dd>
 
 Empfängt einen der folgenden Werte.
@@ -57,8 +57,8 @@ Empfängt einen der folgenden Werte.
 
 | Wert                                                                                                                                                         | Bedeutung                                                |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <span id="VARIANT_TRUE"></span><span id="variant_true"></span><dl> <dt>**Variant \_ true**</dt> </dl>    | Eine Antwort wurde empfangen.<br/>               |
-| <span id="VARIANT_FALSE"></span><span id="variant_false"></span><dl> <dt>**Variant \_ false**</dt> </dl> | Der angegebene Timeout Zeitraum wurde überschritten.<br/> |
+| <span id="VARIANT_TRUE"></span><span id="variant_true"></span><dl> <dt>**VARIANT \_ TRUE**</dt> </dl>    | Eine Antwort wurde empfangen.<br/>               |
+| <span id="VARIANT_FALSE"></span><span id="variant_false"></span><dl> <dt>**VARIANT \_ FALSE**</dt> </dl> | Der angegebene Time out-Zeitraum wurde überschritten.<br/> |
 
 
 
@@ -68,16 +68,16 @@ Empfängt einen der folgenden Werte.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode hält die Ausführung an und wartet auf eine Antwort auf eine asynchrone Anforderung. Diese Methode sollte nach einem [**Send**](iwinhttprequest-send.md)-Vorgang aufgerufen werden. Beim Aufrufen von Anwendungen kann ein optionaler *Timeout* Wert (in Sekunden) angegeben werden. Wenn für diese Methode ein Timeout auftritt, wird die Anforderung nicht abgebrochen. Auf diese Weise kann die aufrufende Anwendung in einem nachfolgenden Aufruf dieser Methode weiterhin auf die Anforderung warten.
+Diese Methode unterbricht die Ausführung, während auf eine Antwort auf eine asynchrone Anforderung gewartet wird. Diese Methode sollte nach einer [**Send-Methode**](iwinhttprequest-send.md)aufgerufen werden. Aufrufende Anwendungen können einen optionalen *Timeoutwert* in Sekunden angeben. Wenn für diese Methode ein Zeitabbruch erfolgt, wird die Anforderung nicht abgebrochen. Auf diese Weise kann die aufrufende Anwendung bei Bedarf in einem nachfolgenden Aufruf dieser Methode weiterhin auf die Anforderung warten.
 
-Das Aufrufen dieser Eigenschaft nach einer synchronen [**Send**](iwinhttprequest-send.md) -Methode wird sofort zurückgegeben und hat keine Auswirkungen.
+Der Aufruf dieser Eigenschaft nach einer synchronen [**Send-Methode**](iwinhttprequest-send.md) wird sofort zurückgegeben und hat keine Auswirkungen.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
@@ -177,7 +177,7 @@ int main()
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine asynchrone HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet, auf eine Antwort gewartet und der Antworttext gelesen wird.
+Das folgende Skriptbeispiel zeigt, wie Sie eine asynchrone HTTP-Verbindung öffnen, eine HTTP-Anforderung senden, auf eine Antwort warten und den Antworttext lesen.
 
 
 ```JScript
@@ -205,11 +205,11 @@ WScript.Echo( WinHttpReq.ResponseText);
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
@@ -218,13 +218,13 @@ WScript.Echo( WinHttpReq.ResponseText);
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dt>
 
-[**Eren**](iwinhttprequest-open.md)
+[**Öffnen**](iwinhttprequest-open.md)
 </dt> <dt>
 
 [WinHTTP-Versionen](winhttp-versions.md)

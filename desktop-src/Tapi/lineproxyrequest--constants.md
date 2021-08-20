@@ -1,218 +1,218 @@
 ---
 description: Diese Konstanten werden in zwei Kontexten verwendet.
 ms.assetid: 5c05a567-cc65-411e-b049-919a442c5c57
-title: LINEPROXYREQUEST_ Konstanten (TAPI. h)
+title: LINEPROXYREQUEST_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eba34a3a7f7b1f41f0c32783c4132afcfafef1aa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b869027bd801079774f2caf35de47bcf6d883dd568b30f66bd4bda37fae43c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003038"
 ---
-# <a name="lineproxyrequest_-constants"></a>Lineproxyrequest- \_ Konstanten
+# <a name="lineproxyrequest_-constants"></a>\_LINEPROXYREQUEST-Konstanten
 
-Diese Konstanten werden in zwei Kontexten verwendet. Zuerst können Sie in einem Array von **DWORD** -Werten in der [**LINECALLPARAMS**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) -Struktur verwendet werden, die mit [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) übergeben wird, wenn die Option "lineopenoption" \_ angegeben wird, um anzugeben, welche Funktionen die Anwendung verarbeiten soll. Zweitens werden Sie in der [**Zeile \_ proxyrequest**](line-proxyrequest.md) verwendet, die von einer **line \_ proxyrequest** -Nachricht an die Handleranwendung übermittelt wird, um den Typ der zu verarbeitenden Anforderung und das Format der Daten im Puffer anzugeben.
+Diese Konstanten werden in zwei Kontexten verwendet. Erstens können sie in einem Array von **DWORD-Werten** in der [**LINECALLPARAMS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) verwendet werden, die mit [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) übergeben werden, wenn die OPTION LINEOPENOPTION \_ PROXY angegeben wird, um anzugeben, welche Funktionen die Anwendung behandeln möchte. Zweitens werden sie in der [**LINE \_ PROXYREQUEST**](line-proxyrequest.md) verwendet, die von einer **LINE \_ PROXYREQUEST-Nachricht** an die Handleranwendung übergeben wird, um den Typ der zu verarbeitenden Anforderung und das Format der Daten im Puffer anzugeben.
 
 <dl> <dt>
 
-<span id="LINEPROXYREQUEST_AGENTSPECIFIC"></span><span id="lineproxyrequest_agentspecific"></span>**lineproxyrequest- \_ agentspezifisch**
+<span id="LINEPROXYREQUEST_AGENTSPECIFIC"></span><span id="lineproxyrequest_agentspecific"></span>**LINEPROXYREQUEST \_ AGENTSPECIFIC**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**lineagentspecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific)zugeordnet.
+Zugeordnet zu [**lineAgentSpecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_CREATEAGENT"></span><span id="lineproxyrequest_createagent"></span>**lineproxyrequest- \_ kreateagent**
+<span id="LINEPROXYREQUEST_CREATEAGENT"></span><span id="lineproxyrequest_createagent"></span>**LINEPROXYREQUEST \_ CREATEAGENT**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linecreateagent**](/windows/desktop/api/Tapi/nf-tapi-linecreateagenta).
+Ist [**lineCreateAgent**](/windows/desktop/api/Tapi/nf-tapi-linecreateagenta)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_CREATEAGENTSESSION"></span><span id="lineproxyrequest_createagentsession"></span>**lineproxyrequest- \_ Sitzung**
+<span id="LINEPROXYREQUEST_CREATEAGENTSESSION"></span><span id="lineproxyrequest_createagentsession"></span>**LINEPROXYREQUEST \_ CREATEAGENTSESSION**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linecreateagentsession**](/windows/desktop/api/Tapi/nf-tapi-linecreateagentsessiona).
+Zugeordnet zu [**lineCreateAgentSession**](/windows/desktop/api/Tapi/nf-tapi-linecreateagentsessiona).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTACTIVITYLIST"></span><span id="lineproxyrequest_getagentactivitylist"></span>**lineproxyrequest \_ getagentactivitylist**
+<span id="LINEPROXYREQUEST_GETAGENTACTIVITYLIST"></span><span id="lineproxyrequest_getagentactivitylist"></span>**LINEPROXYREQUEST \_ GETAGENTACTIVITYLIST**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentactivitylist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista)zugeordnet.
+Zugeordnet zu [**lineGetAgentActivityList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTCAPS"></span><span id="lineproxyrequest_getagentcaps"></span>**lineproxyrequest \_ getagentcaps**
+<span id="LINEPROXYREQUEST_GETAGENTCAPS"></span><span id="lineproxyrequest_getagentcaps"></span>**LINEPROXYREQUEST \_ GETAGENTCAPS**
 </dt> <dd> <dl> <dt>
 
 
 
-Mit [**linegetagentcaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa)verknüpft.
+Zugeordnet zu [**lineGetAgentCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTGROUPLIST"></span><span id="lineproxyrequest_getagentgrouplist"></span>**lineproxyrequest \_ getagentgrouplist**
+<span id="LINEPROXYREQUEST_GETAGENTGROUPLIST"></span><span id="lineproxyrequest_getagentgrouplist"></span>**LINEPROXYREQUEST \_ GETAGENTGROUPLIST**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentgrouplist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)zugeordnet.
+Wird [**lineGetAgentGroupList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTINFO"></span><span id="lineproxyrequest_getagentinfo"></span>**lineproxyrequest \_ getagentinfo**
+<span id="LINEPROXYREQUEST_GETAGENTINFO"></span><span id="lineproxyrequest_getagentinfo"></span>**LINEPROXYREQUEST \_ GETAGENTINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentinfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentinfo)zugeordnet.
+Wird [**lineGetAgentInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentinfo)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTSESSIONINFO"></span><span id="lineproxyrequest_getagentsessioninfo"></span>**lineproxyrequest \_ getagentsessioninfo**
+<span id="LINEPROXYREQUEST_GETAGENTSESSIONINFO"></span><span id="lineproxyrequest_getagentsessioninfo"></span>**LINEPROXYREQUEST \_ GETAGENTSESSIONINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentsessioninfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)zugeordnet.
+Zugeordnet zu [**lineGetAgentSessionInfo.**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTSESSIONLIST"></span><span id="lineproxyrequest_getagentsessionlist"></span>**lineproxyrequest \_ getagentsessionlist**
+<span id="LINEPROXYREQUEST_GETAGENTSESSIONLIST"></span><span id="lineproxyrequest_getagentsessionlist"></span>**LINEPROXYREQUEST \_ GETAGENTSESSIONLIST**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentsessionlist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessionlist)zugeordnet.
+Wird [**lineGetAgentSessionList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessionlist)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETAGENTSTATUS"></span><span id="lineproxyrequest_getagentstatus"></span>**lineproxyrequest \_ getagentstatus**
+<span id="LINEPROXYREQUEST_GETAGENTSTATUS"></span><span id="lineproxyrequest_getagentstatus"></span>**LINEPROXYREQUEST \_ GETAGENTSTATUS**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetagentstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)zugeordnet.
+Wird [**lineGetAgentStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETGROUPLIST"></span><span id="lineproxyrequest_getgrouplist"></span>**"lineproxyrequest" \_ getgrouplist**
+<span id="LINEPROXYREQUEST_GETGROUPLIST"></span><span id="lineproxyrequest_getgrouplist"></span>**LINEPROXYREQUEST \_ GETGROUPLIST**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetgrouplist**](/windows/desktop/api/Tapi/nf-tapi-linegetgrouplista)zugeordnet.
+Zugeordnet zu [**lineGetGroupList**](/windows/desktop/api/Tapi/nf-tapi-linegetgrouplista).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETQUEUEINFO"></span><span id="lineproxyrequest_getqueueinfo"></span>**lineproxyrequest \_ getqueueinfo**
+<span id="LINEPROXYREQUEST_GETQUEUEINFO"></span><span id="lineproxyrequest_getqueueinfo"></span>**LINEPROXYREQUEST \_ GETQUEUEINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Ist [**linegetqueueinfo**](/windows/desktop/api/Tapi/nf-tapi-linegetqueueinfo)zugeordnet.
+Ist [**lineGetQueueInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetqueueinfo)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_GETQUEUELIST"></span><span id="lineproxyrequest_getqueuelist"></span>**lineproxyrequest \_ getqueuelist**
+<span id="LINEPROXYREQUEST_GETQUEUELIST"></span><span id="lineproxyrequest_getqueuelist"></span>**LINEPROXYREQUEST \_ GETQUEPROXYIST**
 </dt> <dd> <dl> <dt>
 
 
 
-[**Ist linegetqueuelist**](/windows/desktop/api/Tapi/nf-tapi-linegetqueuelista)zugeordnet.
+Zugeordnet zu [**lineGetQueueList**](/windows/desktop/api/Tapi/nf-tapi-linegetqueuelista).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTACTIVITY"></span><span id="lineproxyrequest_setagentactivity"></span>**lineproxyrequest \_ setagentactivity**
+<span id="LINEPROXYREQUEST_SETAGENTACTIVITY"></span><span id="lineproxyrequest_setagentactivity"></span>**LINEPROXYREQUEST \_ SETAGENTACTIVITY**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linesetagentactivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity).
+Zugeordnet zu [**lineSetAgentActivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTGROUP"></span><span id="lineproxyrequest_setagentgroup"></span>**lineproxyrequest \_ setagentgroup**
+<span id="LINEPROXYREQUEST_SETAGENTGROUP"></span><span id="lineproxyrequest_setagentgroup"></span>**LINEPROXYREQUEST \_ SETAGENTGROUP**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linesetagentgroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup).
+Wird [**lineSetAgentGroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTMEASUREMENTPERIOD"></span><span id="lineproxyrequest_setagentmeasurementperiod"></span>**lineproxyrequest \_ setagentmessrementperiod**
+<span id="LINEPROXYREQUEST_SETAGENTMEASUREMENTPERIOD"></span><span id="lineproxyrequest_setagentmeasurementperiod"></span>**LINEPROXYREQUEST \_ SETAGENTMEASUREMENTPERIOD**
 </dt> <dd> <dl> <dt>
 
 
 
-Zugeordnet mit [**linesetagentmessrementperiod**](/windows/desktop/api/Tapi/nf-tapi-linesetagentmeasurementperiod).
+Wird [**lineSetAgentMeasurementPeriod**](/windows/desktop/api/Tapi/nf-tapi-linesetagentmeasurementperiod)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTSESSIONSTATE"></span><span id="lineproxyrequest_setagentsessionstate"></span>**lineproxyrequest \_ setagentsessionstate**
+<span id="LINEPROXYREQUEST_SETAGENTSESSIONSTATE"></span><span id="lineproxyrequest_setagentsessionstate"></span>**LINEPROXYREQUEST \_ SETAGENTSESSIONSTATE**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linesetagentsessionstate**](/windows/desktop/api/Tapi/nf-tapi-linesetagentsessionstate).
+Zugeordnet zu [**lineSetAgentSessionState**](/windows/desktop/api/Tapi/nf-tapi-linesetagentsessionstate).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTSTATE"></span><span id="lineproxyrequest_setagentstate"></span>**lineproxyrequest \_ setagentstate**
+<span id="LINEPROXYREQUEST_SETAGENTSTATE"></span><span id="lineproxyrequest_setagentstate"></span>**LINEPROXYREQUEST \_ SETAGENTSTATE**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linesetagentstate**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate).
+Wird [**lineSetAgentState**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETAGENTSTATEEX"></span><span id="lineproxyrequest_setagentstateex"></span>**lineproxyrequest \_ setagentstateex**
+<span id="LINEPROXYREQUEST_SETAGENTSTATEEX"></span><span id="lineproxyrequest_setagentstateex"></span>**LINEPROXYREQUEST \_ SETAGENTSTATEEX**
 </dt> <dd> <dl> <dt>
 
 
 
-Verknüpft mit [**linesetagentstateex**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstateex).
+Ist [**lineSetAgentStateEx**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstateex)zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEPROXYREQUEST_SETQUEUEMEASUREMENTPERIOD"></span><span id="lineproxyrequest_setqueuemeasurementperiod"></span>**lineproxyrequest \_ setqueuemessrementperiod**
+<span id="LINEPROXYREQUEST_SETQUEUEMEASUREMENTPERIOD"></span><span id="lineproxyrequest_setqueuemeasurementperiod"></span>**LINEPROXYREQUEST \_ SETQUEUEMEASUREMENTPERIOD**
 </dt> <dd> <dl> <dt>
 
 
 
-Zugeordnet mit [**linesetqueuemessrementperiod**](/windows/desktop/api/Tapi/nf-tapi-linesetqueuemeasurementperiod).
+Zugeordnet zu [**lineSetQueueMeasurementPeriod**](/windows/desktop/api/Tapi/nf-tapi-linesetqueuemeasurementperiod).
 
 
 </dt> </dl> </dd> </dl>
@@ -223,19 +223,19 @@ Zugeordnet mit [**linesetqueuemessrementperiod**](/windows/desktop/api/Tapi/nf-t
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Callcenterkonstanten](call-center-constants.md)
 </dt> <dt>
 
-[Callcenter-Funktionen](call-center-functions.md)
+[Callcenterfunktionen](call-center-functions.md)
 </dt> </dl>
 
  

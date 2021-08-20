@@ -1,5 +1,5 @@
 ---
-description: Eine übergeordnete Klasse für Klassen, die eine Auflistung von CIM \_ managedelements-Objekten und die Unterklassen verwalteter Elemente darstellen.
+description: Eine Oberklasse für Klassen, die eine Auflistung von CIM ManagedElement-Objekten und \_ den Unterklassen verwalteter Elemente darstellen.
 ms.assetid: be487f20-b277-47fd-b088-f9ebc349e0a3
 title: CIM_Collection-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 783a79727241583e39efacccceb72a6d079e0043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a147d60d2030be109bcabdaaeecd933971d5c7abd578a8affe1a88ca44796c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014668"
 ---
-# <a name="cim_collection-class"></a>CIM- \_ Sammlungsklasse
+# <a name="cim_collection-class"></a>CIM \_ Collection-Klasse
 
-Eine übergeordnete Klasse für Klassen, die eine Auflistung von [**CIM \_ managedelements**](cim-managedelement.md) -Objekten und die Unterklassen verwalteter Elemente darstellen.
+Eine Oberklasse für Klassen, die eine Auflistung von [**CIM \_ ManagedElement-Objekten**](cim-managedelement.md) und den Unterklassen verwalteter Elemente darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ class CIM_Collection : CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Auflistungs Klasse definiert keine Member.
+Die **CIM \_ Collection-Klasse** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,10 +43,10 @@ Die **CIM \_** -Auflistungs Klasse definiert keine Member.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -55,7 +55,7 @@ Die **CIM \_** -Auflistungs Klasse definiert keine Member.
 
 <dl> <dt>
 
-[**CIM- \_ managedelta**](cim-managedelement.md)
+[**CIM \_ ManagedElement**](cim-managedelement.md)
 </dt> </dl>
 
  

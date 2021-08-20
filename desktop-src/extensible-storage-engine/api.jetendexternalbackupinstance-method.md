@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetendexternalbackupinstance-Methode.
-title: API. jetendexternalbackupinstance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetEndExternalBackupInstance-Methode'
+title: Api.JetEndExternalBackupInstance-Methode
 TOCTitle: 'JetEndExternalBackupInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetEndExternalBackupInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetendexternalbackupinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 16ec4dc235f677ba42b4ae3bae10a79b9d494576
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4611962006d4edc70eb558ad84b6ee47e6fd290a4ed301794695efe9ce513f2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042698"
 ---
-# <a name="apijetendexternalbackupinstance-method"></a>API. jetendexternalbackupinstance-Methode
+# <a name="apijetendexternalbackupinstance-method"></a>Api.JetEndExternalBackupInstance-Methode
 
-Beendet eine externe Sicherungs Sitzung. Diese API ist die letzte API in einer Reihe von APIs, die aufgerufen werden muss, um eine erfolgreiche (nicht auf VSS basierende) Online Sicherung auszuführen.
+Beendet eine externe Sicherungssitzung. Diese API ist die letzte API in einer Reihe von APIs, die aufgerufen werden müssen, um eine erfolgreiche Onlinesicherung (nicht VSS-basiert) auszuführen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,16 +58,16 @@ public static void JetEndExternalBackupInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, für die die Sicherung beendet werden soll.
+    Die Instanz, für die die Sicherung beendet werden soll.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

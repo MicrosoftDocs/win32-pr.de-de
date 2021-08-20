@@ -1,7 +1,7 @@
 ---
-description: Ruft die Besitzer Autorisierungs Informationen für ein TPM ab, sofern in der Registrierung eine verfügbar ist.
+description: Ruft die Besitzerautorisierungsinformationen für ein TPM ab, wenn eine in der Registrierung verfügbar ist.
 ms.assetid: 3E2C28C8-4154-4B1B-9C47-AEDFD5622979
-title: 'Win32_Tpm:: getownerauth-Methode'
+title: Win32_Tpm::GetOwnerAuth-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: a441b07af31758212152b657ccb033d8abdeebbb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c68624def56ff00dbc714f070d5f3532a257f2de0ef818221552e716c7ff571
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004098"
 ---
-# <a name="win32_tpmgetownerauth-method"></a>Win32 \_ TPM:: getownerauth-Methode
+# <a name="win32_tpmgetownerauth-method"></a>Win32 \_ Tpm::GetOwnerAuth-Methode
 
-Ruft die Besitzer Autorisierungs Informationen für ein TPM ab, sofern in der Registrierung eine verfügbar ist. Wenn ein TPM im Besitz von Windows 8 mit den Standardeinstellungen ist, werden die TPM-Besitzer Autorisierungs Informationen in der Registrierung gespeichert und können von dieser Methode verwendet werden.
+Ruft die Besitzerautorisierungsinformationen für ein TPM ab, wenn eine in der Registrierung verfügbar ist. Wenn sich ein TPM im Besitz von oder in Windows 8 mit den Standardeinstellungen befindet, werden die TPM-Besitzerautorisierungsinformationen in der Registrierung gespeichert und stehen zur Verwendung durch diese Methode zur Verfügung.
 
-Diese Methode ist nur für lokale Administratoren zugänglich.
+Auf diese Methode können nur lokale Administratoren zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,22 +41,22 @@ uint32 GetOwnerAuth(
 
 <dl> <dt>
 
-Besitzer *des Besitzers* \[ vorgenommen\]
+*OwnerAuth* \[ out\]
 </dt> <dd>
 
-Die Besitzer Autorisierungs Informationen für ein TPM, sofern in der Registrierung eine verfügbar ist.
+Die Besitzerautorisierungsinformationen für ein TPM, sofern in der Registrierung verfügbar.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Alle TPM-Fehler sowie Fehler, die für die [TPM-Basisdienste](../tbs/tbs-return-codes.md) spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für [TPM-Basisdienste](../tbs/tbs-return-codes.md) sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                 | BESCHREIBUNG                           |
+| Rückgabecode/-wert                                                                                                                                 | Beschreibung                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl> | Die Methode war erfolgreich.<br/> |
 
@@ -64,9 +64,9 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,19 +74,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | \\\\.\\ root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                     |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | \\\\.\\ root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                     |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

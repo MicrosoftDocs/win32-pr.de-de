@@ -1,19 +1,19 @@
 ---
-description: Wird an eine Anwendung gesendet, um Sie über Änderungen am IME-Fenster zu benachrichtigen. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird an eine Anwendung gesendet, um sie über Änderungen am IME-Fenster zu benachrichtigen. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
 ms.assetid: 20e064b8-2baf-4b4c-8341-36c3e4643eff
-title: WM_IME_NOTIFY Meldung (Winuser. h)
+title: WM_IME_NOTIFY Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca5ab1b2a1fd62d159ab4f216bf9b1bb6892ed69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a072ff41b5731662afa94e387ec48de7d14bc245906e581303fe976dcf455708
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014218"
 ---
 # <a name="wm_ime_notify-message"></a>WM_IME_NOTIFY Meldung
 
-Wird an eine Anwendung gesendet, um Sie über Änderungen am IME-Fenster zu benachrichtigen. Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird an eine Anwendung gesendet, um sie über Änderungen am IME-Fenster zu benachrichtigen. Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,10 +31,10 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für fenster.
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Der Befehl. Dieser Parameter kann einen der folgenden Werte aufweisen.
 *lParam* 
 </dt> <dd>
 
-Befehls spezifische Daten, wobei das Format vom Wert des Parameters " *wParam* " abhängig ist. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Befehlen.
+Befehlsspezifische Daten, wobei das Format vom Wert des *wParam-Parameters* abhängig ist. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Befehlen.
 
 </dd> </dl>
 
@@ -72,9 +72,9 @@ Befehls spezifische Daten, wobei das Format vom Wert des Parameters " *wParam* "
 
 Der Rückgabewert hängt vom gesendeten Befehl ab.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung verarbeitet diese Nachricht, wenn Sie für die Verwaltung des IME-Fensters zuständig ist.
+Eine Anwendung verarbeitet diese Nachricht, wenn sie für die Verwaltung des IME-Fensters zuständig ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,18 +84,18 @@ Eine Anwendung verarbeitet diese Nachricht, wenn Sie für die Verwaltung des IME
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen); </dt> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h);</dt> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Eingabemethoden-Manager-Nachrichten](input-method-manager-messages.md)
 </dt> <dt>
 
 [IMN_CHANGECANDIDATE](imn-changecandidate.md)

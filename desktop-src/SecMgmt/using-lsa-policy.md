@@ -15,17 +15,17 @@ ms.locfileid: "119004748"
 
 In den folgenden Themen wird die Verwendung der LSA-Richtlinienfunktionen beschrieben.
 
--   [Unter Verwendung von LSA Unicode-Zeichenfolgen wird](using-lsa-unicode-strings.md) erläutert, wie Zeichenfolgen in das von einigen LSA-Richtlinienfunktionen verwendete Strukturformat konvertiert werden.
--   [Das Öffnen eines Richtlinienobjekthandle](opening-a-policy-object-handle.md) beschreibt, wie ein Handle für das lokale [**Policy-Objekt**](policy-object.md) geöffnet wird. Dieses Handle ist für viele LSA-Richtlinienfunktionen als Eingabeparameter erforderlich.
--   [Unter Verwalten von Richtlinieninformationen](managing-policy-information.md) wird erläutert, wie globale Richtlinieninformationen für das lokale System und die Domäne festgelegt und abgefragt werden.
--   [Das Empfangen von Richtlinienänderungsereignissen](receiving-policy-change-events.md) beschreibt, wie Sie ein Ereignis erstellen und registrieren, um Benachrichtigungen zu erhalten, wenn sich Richtlinieninformationen ändern.
--   [Unter Verwalten von Kontoberechtigungen](managing-account-permissions.md) wird erläutert, wie Sie Konten erstellen, löschen und aufzählen sowie Berechtigungen für diese Konten hinzufügen und entfernen.
--   Unter Verwalten von Informationen zu [vertrauenswürdigen Domänen](managing-trusted-domain-information.md) wird beschrieben, wie vertrauenswürdige Domänen erstellt, aufzählt und gelöscht werden und wie Informationen zu vertrauenswürdigen Domänen festgelegt und abgerufen werden.
--   [Unter Übersetzen zwischen Namen und SIDs](translating-between-names-and-sids.md) wird erläutert, wie SIE SIDs Kontonamen zuordnen und umgekehrt.
--   [Mapping Posix Identifiers (Zuordnen von Posix-Bezeichnern)](mapping-posix-identifiers.md) beschreibt, wie SIDs 32-Bit-Posix-Bezeichnern zugeordnet werden.
+-   [Unter Verwendung von LSA-Unicode-Zeichenfolgen](using-lsa-unicode-strings.md) wird erläutert, wie Zeichenfolgen in das Von einigen LSA-Richtlinienfunktionen verwendete Strukturformat konvertiert werden.
+-   [Beim Öffnen eines Richtlinienobjekthandpunkts](opening-a-policy-object-handle.md) wird beschrieben, wie ein Handle für das lokale [**Policy-Objekt geöffnet**](policy-object.md) wird. Dieses Handle ist für viele der LSA-Richtlinienfunktionen als Eingabeparameter erforderlich.
+-   [Unter Verwalten von Richtlinieninformationen](managing-policy-information.md) erfahren Sie, wie Sie globale Richtlinieninformationen für das lokale System und die Domäne festlegen und abfragen.
+-   [Unter Empfangen von Richtlinienänderungsereignissen](receiving-policy-change-events.md) wird beschrieben, wie Sie ein Ereignis erstellen und registrieren, um Benachrichtigungen zu erhalten, wenn sich Richtlinieninformationen ändern.
+-   [Unter Verwalten von Kontoberechtigungen](managing-account-permissions.md) wird erläutert, wie Konten erstellt, gelöscht und aufzählt werden und wie Berechtigungen für diese Konten hinzugefügt und entfernt werden.
+-   [Unter Verwalten von Informationen zu vertrauenswürdigen](managing-trusted-domain-information.md) Domänen wird beschrieben, wie Sie vertrauenswürdige Domänen erstellen, aufzählen und löschen sowie Informationen zu vertrauenswürdigen Domänen festlegen und abrufen.
+-   [Unter Übersetzen zwischen Namen und SIDs wird](translating-between-names-and-sids.md) erläutert, wie SIDs Kontonamen zugeordnet werden und umgekehrt.
+-   [Mapping Posix Identifiers](mapping-posix-identifiers.md) (Zuordnen von Posix-Bezeichnern) beschreibt das Zuordnen von SIDs zu 32-Bit-Posix-Bezeichnern.
 -   [Unter Speichern privater Daten](storing-private-data.md) wird erläutert, wie private Datenzeichenfolgen gespeichert und abgerufen werden.
 
-Informationen zur Verwendung des LSA zum Anmelden und Authentifizieren von Benutzern finden Sie unter [LSA-Authentifizierung.](/windows/desktop/SecAuthN/lsa-authentication)
+Informationen zur Verwendung des LSA für die Anmeldung und Authentifizierung von Benutzern finden Sie unter [LSA-Authentifizierung.](/windows/desktop/SecAuthN/lsa-authentication)
 
  
 

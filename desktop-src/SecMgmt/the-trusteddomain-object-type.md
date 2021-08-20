@@ -1,5 +1,5 @@
 ---
-description: Windows-basierten Systemen können mehrere Instanzen des TrustedDomain-Objekttyps haben.
+description: Windows-basierten Systemen können mehrere Instanzen des Objekttyps TrustedDomain haben.
 ms.assetid: 13efedb5-ebb6-459b-8c4f-06774226278c
 title: Der TrustedDomain-Objekttyp
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119004838"
 ---
 # <a name="the-trusteddomain-object-type"></a>Der TrustedDomain-Objekttyp
 
-Windows-basierten Systemen können mehrere Instanzen [](trusteddomain-object.md) des TrustedDomain-Objekttyps haben. **TrustedDomain-Objekte** verfügen über zwei Felder, die für alle **TrustedDomain-Objekte eindeutig sein** müssen:
+Windows-basierten Systemen können mehrere Instanzen des [](trusteddomain-object.md) TrustedDomain-Objekttyps haben. **TrustedDomain-Objekte** verfügen über zwei Felder, die für alle **TrustedDomain-Objekte eindeutig sein** müssen:
 
 -   Der Name der [ **TrustedDomain**](trusteddomain-object.md)
 -   Die [*Sicherheits-ID*](/windows/desktop/SecGloss/s-gly) (SID) der [**TrustedDomain.**](trusteddomain-object.md)

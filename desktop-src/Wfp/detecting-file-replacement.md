@@ -1,47 +1,47 @@
 ---
-description: Windows-Ressourcenschutz (WRP) verhindert, dass wichtige Systemdateien, Ordner und Registrierungsschlüssel ersetzt werden, die als Teil von Windows Vista oder Windows Server 2008 installiert werden.
+description: Windows Resource Protection (WRP) verhindert den Austausch wichtiger Systemdateien, Ordner und Registrierungsschlüssel, die als Teil von Windows Vista oder Windows Server 2008 installiert werden.
 ms.assetid: 1cb67b4a-dc75-4bd7-b314-d695c10d5558
-title: Erkennen von Ressourcenaustausch
+title: Erkennen des Ressourcenaustauschs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62dc1855b98ca5834ef9e13e2f48bf7cca492e94
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e452b9fba0a8002e13d7fc309ff3c8a12ec114a6a33b1bd7d8d253d710ffa77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053218"
 ---
-# <a name="detecting-resource-replacement"></a>Erkennen von Ressourcenaustausch
+# <a name="detecting-resource-replacement"></a>Erkennen des Ressourcenaustauschs
 
-Windows-Ressourcenschutz (WRP) verhindert, dass wichtige Systemdateien, Ordner und Registrierungsschlüssel ersetzt werden, die als Teil von Windows Vista oder Windows Server 2008 installiert werden.
+Windows Resource Protection (WRP) verhindert den Austausch wichtiger Systemdateien, Ordner und Registrierungsschlüssel, die als Teil von Windows Vista oder Windows Server 2008 installiert werden.
 
-WRP schützt Dateien, Ordner und Registrierungsschlüssel unter Windows Vista oder Windows Server 2008 durch erkennen und verhindern von versuchen, geschützte Ressourcen zu ersetzen. Dieser Schutz basiert auf einer Windows-Zugriffs Steuerungs Liste (DACL) und einer Zugriffs Steuerungs Liste (ACL), die für geschützte Ressourcen definiert ist. Die Berechtigung für den Vollzugriff zum Ändern von durch WRP geschützten Ressourcen ist auf Treuhänder beschränkt. Durch WRP geschützte Ressourcen können nur mithilfe der [unterstützten Ressourcenaustausch Mechanismen](supported-file-replacement-mechanisms.md) mit dem Windows-Modul Installations Dienst geändert werden. Anwendungen, die versuchen, eine durch WRP geschützte Ressource zu ändern, ändern niemals die Ressource und erhalten möglicherweise eine Fehlermeldung, die besagt, dass der Zugriff auf die Ressource verweigert wurde.
+WRP schützt Dateien, Ordner und Registrierungsschlüssel auf Windows Vista oder Windows Server 2008, indem versuche erkannt und verhindert werden, geschützte Ressourcen zu ersetzen. Dieser Schutz basiert auf einer Windows DACL (Discretionary Access Control List) und Zugriffssteuerungslisten (ACL), die für geschützte Ressourcen definiert sind. Die Berechtigung für vollzugriff zum Ändern von WRP-geschützten Ressourcen ist auf TrustedInstaller beschränkt. WRP-geschützte Ressourcen können nur mithilfe der [unterstützten Ressourcenersetzungsmechanismen](supported-file-replacement-mechanisms.md) mit dem Installerdienst für Windows Module geändert werden. Anwendungen, die versuchen, eine DURCH WRP geschützte Ressource zu ändern, ändern die Ressource nie und erhalten möglicherweise eine Fehlermeldung mit dem Hinweis, dass der Zugriff auf die Ressource verweigert wurde.
 
-Anwendungen und Installationsprogramme können die Funktionen [**SfcIsFileProtected**](/windows/desktop/api/Sfc/nf-sfc-sfcisfileprotected) und [**sfciskeyprotected**](/windows/desktop/api/Sfc/nf-sfc-sfciskeyprotected) verwenden, um zu bestimmen, ob eine Datei oder ein Registrierungsschlüssel geschützt ist.
+Anwendungen und Installationsprogramme können die Funktionen [**SfcIsFileProtected**](/windows/desktop/api/Sfc/nf-sfc-sfcisfileprotected) und [**SfcIsKeyProtected**](/windows/desktop/api/Sfc/nf-sfc-sfciskeyprotected) verwenden, um zu bestimmen, ob eine Datei oder ein Registrierungsschlüssel geschützt ist.
 
-* * Windows Server 2003 und Windows XP: * *
+**Windows Server 2003 und Windows XP: **
 
-Der Windows-Datei Schutz (WFP) schützt Systemdateien durch das Erkennen von versuchen, geschützte Systemdateien zu ersetzen. Dieser Schutz wird ausgelöst, nachdem WFP eine Verzeichnis Änderungs Benachrichtigung für eine Datei in einem geschützten Verzeichnis erhalten hat. Wenn WFP diese Benachrichtigung empfängt, wird ermittelt, welche Datei geändert wurde. Wenn die Datei geschützt ist, sucht WFP in einer Katalog Datei nach der Datei Signatur, um zu bestimmen, ob die neue Datei die richtige Version hat. Wenn die Dateiversion nicht korrekt ist, ersetzt das System die Datei durch die richtige Version aus dem Cache oder den Verteilungs Medien, je nachdem, ob sich die Datei im Cache befindet. WFP sucht in der folgenden Reihenfolge nach der richtigen Datei:
+Windows File Protection (WFP) schützt Systemdateien, indem versucht wird, geschützte Systemdateien zu ersetzen. Dieser Schutz wird ausgelöst, nachdem WFP eine Verzeichnisänderungsbenachrichtigung für eine Datei in einem geschützten Verzeichnis empfängt. Wenn WFP diese Benachrichtigung empfängt, wird ermittelt, welche Datei geändert wurde. Wenn die Datei geschützt ist, sucht WFP die Dateisignatur in einer Katalogdatei, um zu ermitteln, ob die neue Datei die richtige Version ist. Wenn die Dateiversion nicht korrekt ist, ersetzt das System die Datei durch die richtige Version aus dem Cache oder dem Verteilungsmedium, je nachdem, ob sich die Datei im Cache befindet. WFP sucht in der folgenden Reihenfolge nach der richtigen Datei:
 
-1.  Durchsuchen Sie das Cache Verzeichnis.
-2.  Durchsuchen Sie den Netzwerk Installationspfad, wenn das System mithilfe der Netzwerk Installation installiert wurde.
-3.  Suchen Sie auf einer Windows-CD-ROM, wenn das System von CD-ROM installiert wurde.
+1.  Durchsuchen Sie das Cacheverzeichnis.
+2.  Suchen Sie den Netzwerkinstallationspfad, wenn das System mithilfe der Netzwerkinstallation installiert wurde.
+3.  Suchen Sie nach einer Windows CD-ROM, wenn das System von CD-ROM installiert wurde.
 
-Wenn die Datei an den ersten beiden Speicherorten von WFP nicht automatisch gefunden werden kann, wird die folgende Meldung angezeigt:
+Wenn WFP die Datei an den ersten beiden Speicherorten nicht automatisch finden kann, wird die folgende Meldung angezeigt:
 
-![WFP-Meldung angezeigt, wenn die Datei nicht im Cache Verzeichnis oder im Netzwerk Installationspfad gefunden wurde](images/wfp-1.png)
+![WFP-Meldung, die angezeigt wird, wenn die Datei nicht im Cacheverzeichnis oder im Netzwerkinstallationspfad gefunden wurde](images/wfp-1.png)
 
-Wenn das System mit einer CD-ROM installiert wurde, zeigt WFP die folgende Meldung an:
+Wenn das System mithilfe einer CD-ROM installiert wurde, zeigt WFP die folgende Meldung an:
 
-![WFP-Meldung, die den Benutzer zum Einfügen der Windows-CD-ROM auffordert](images/wfp-2.png)
+![WFP-Meldung, die angezeigt wird, um den Benutzer zum Einfügen von Windows-CD-ROM aufzufordern](images/wfp-2.png)
 
-Wenn ein Administrator nicht angemeldet ist, kann WFP keines dieser Dialogfelder anzeigen. WFP zeigt das Dialogfeld an, nachdem sich ein Administrator anmeldet.
+Wenn kein Administrator angemeldet ist, kann WFP keines dieser Dialogfelder anzeigen. WFP zeigt das Dialogfeld an, nachdem sich ein Administrator angemeldet hat.
 
-WFP protokolliert auch den Datei Ersetzungs Versuch im System Ereignisprotokoll. Wenn der Administrator die Wiederherstellung der richtigen Datei abgebrochen hat, protokolliert WFP den Abbruch.
+WFP protokolliert auch den Dateiersetzungsversuch im Systemereignisprotokoll. Wenn der Administrator die Wiederherstellung der richtigen Datei abgebrochen hat, protokolliert WFP den Abbruch.
 
 ## <a name="retrieving-the-list-of-protected-files"></a>Abrufen der Liste der geschützten Dateien
 
-Im folgenden Beispiel wird gezeigt, wie Anwendungen und Installer die [**SfcGetNextProtectedFile**](/windows/desktop/api/Sfc/nf-sfc-sfcgetnextprotectedfile) -Funktion verwenden können, um die komplette Liste der geschützten Dateien zu erhalten.
+Das folgende Beispiel zeigt, wie Anwendungen und Installationsprogramme die [**SfcGetNextProtectedFile-Funktion**](/windows/desktop/api/Sfc/nf-sfc-sfcgetnextprotectedfile) verwenden können, um die vollständige Liste der geschützten Dateien abzurufen.
 
 
 ```C++

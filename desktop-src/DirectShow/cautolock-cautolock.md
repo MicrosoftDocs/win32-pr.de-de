@@ -1,7 +1,7 @@
 ---
-description: Konstruktormethode. Der Konstruktor sperrt das angegebene kritische Abschnitts Objekt.
+description: Konstruktormethode. Der Konstruktor sperrt das angegebene kritische Abschnittsobjekt.
 ms.assetid: 5a0d74f9-bb99-4922-9a92-2e7c1863421f
-title: Cautolock. cautolock-Konstruktor (wxutil. h)
+title: CAutoLock.CAutoLock-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fed29011d4fe581ed146f64800351a3f1053d957
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 11267b444df319e339bcf13b30f200868a0f62d67712ed147513c2f8bc7d000c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017568"
 ---
-# <a name="cautolockcautolock-constructor"></a>Cautolock. cautolock-Konstruktor
+# <a name="cautolockcautolock-constructor"></a>CAutoLock.CAutoLock-Konstruktor
 
-Konstruktormethode. Der Konstruktor sperrt das angegebene kritische Abschnitts Objekt.
+Konstruktormethode. Der Konstruktor sperrt das angegebene kritische Abschnittsobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ CAutoLock(
 *Plock* 
 </dt> <dd>
 
-Zeiger auf ein [**ccritsec**](ccritsec.md) -Objekt, das ein kritisches Abschnitts Objekt enthält.
+Zeiger auf ein [**CCritSec-Objekt,**](ccritsec.md) das ein kritisches Abschnittsobjekt enthält.
 
 </dd> </dl>
 
@@ -55,16 +55,16 @@ Zeiger auf ein [**ccritsec**](ccritsec.md) -Objekt, das ein kritisches Abschnitt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cautolock-Klasse**](cautolock.md)
+[**CAutoLock-Klasse**](cautolock.md)
 </dt> </dl>
 
  

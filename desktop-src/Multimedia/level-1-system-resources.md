@@ -1,35 +1,35 @@
 ---
-title: System Ressourcen der Ebene 1
-description: System Ressourcen der Ebene 1
+title: Systemressourcen der Ebene 1
+description: Systemressourcen der Ebene 1
 ms.assetid: 5cd900dc-5f75-4254-8213-c7cd6a4a80ba
 keywords:
-- Multimedia-PC (MPC), Stufe 1
-- MPC (multimediakpc), Ebene 1
-- Multimedia PC Marketing-Rat, Stufe 1
-- MPC Ebene 1, Systemressourcen
-- MPC Ebene 1, minimale Konfiguration
+- Multimedia-PC (MPC), Ebene 1
+- MPC (Multimedia-PC),Ebene 1
+- Multimedia PC Marketing Council, Ebene 1
+- MPC Level 1, Systemressourcen
+- MPC-Ebene 1, Mindestkonfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5b6daa3b6849d53d6a0d68cdf448df170422e25
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1c098850061bda909d63ae996d522b6caa9ff102a5b01def172fe35ef437c5bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139858"
 ---
-# <a name="level-1-system-resources"></a>System Ressourcen der Ebene 1
+# <a name="level-1-system-resources"></a>Systemressourcen der Ebene 1
 
-Die Mindestkonfiguration für einen PC zum erfüllen der Spezifikation der Ebene 1 umfasst die folgenden Elemente:
+Die Mindestkonfiguration für einen PC, um die Level 1-Spezifikation zu erfüllen, umfasst folgende Elemente:
 
--   Ein 386-SX-Mikroprozessor mit 2 Megabyte (MB) Arbeitsspeicher (RAM)
--   Ein 3,5-Zoll-Diskettenlaufwerk mit hoher Dichte
+-   Ein 386SX-Mikroprozessor mit 2 Megabyte (MB) Arbeitsspeicher mit zufälligem Zugriff (RAM)
+-   Ein Diskettenlaufwerk mit hoher Dichte von 3,5 Zoll
 -   Ein Festplattenlaufwerk mit mindestens 30 MB Speicherplatz
--   Ein Farbmonitor mit einer Bildschirmauflösung von 640 x 480 Pixel mit 16 Farben
--   System Software, die Binärkompatibilität mit dem Betriebssystem Microsoft Windows, Version 3,0, bietet
+-   Ein Farbmonitor mit einer Anzeigeauflösung von 640 x 480 Pixeln mit 16 Farben
+-   Systemsoftware, die binäre Kompatibilität mit der Microsoft Windows Betriebssystemversion 3.0 bietet
 
- 
+ 
 
- 
+ 
 
 
 

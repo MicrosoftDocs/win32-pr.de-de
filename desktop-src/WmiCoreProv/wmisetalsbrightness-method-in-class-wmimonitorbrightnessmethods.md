@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um den Umgebungs Wert des Umgebungslicht Sensors festzulegen.
+description: Wird zum Festlegen des Helligkeitswerts des Umgebungslichtsensors verwendet.
 ms.assetid: 8b3ec692-4043-42b3-8dd6-7a147620e382
-title: Wmisegtalsbrightness-Methode der wmimonitorbrightnessmethods-Klasse
+title: WmiSetALSBrightness-Methode der WmiMonitorBrightnessMethods-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 0768917f9197b6ee3de52877e031acbbdc8f9aed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 93ea1208f81a38b846a1e6a4bf49a8def8a5a8874423a2779b169764016bd193
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118110754"
 ---
-# <a name="wmisetalsbrightness-method-of-the-wmimonitorbrightnessmethods-class"></a>Wmisegtalsbrightness-Methode der wmimonitorbrightnessmethods-Klasse
+# <a name="wmisetalsbrightness-method-of-the-wmimonitorbrightnessmethods-class"></a>WmiSetALSBrightness-Methode der WmiMonitorBrightnessMethods-Klasse
 
-Die **wmisetalsbrightness** -Methode wird verwendet, um den Helligkeit-Wert des Umgebungslicht Sensors festzulegen. Wenn eine Überschreibung der aktiven Helligkeit mithilfe der [**wmisethelligkeit**](wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md) -Methode festgelegt wurde, hat diese außer Kraft Setzung Vorrang vor der als-Helligkeit, die mithilfe dieser Methode festgelegt wird. Damit eine aktivierte außer Kraft setzung der Helligkeit wirksam wird, muss die Helligkeit-Richtlinie mithilfe der [**wmireverttopolicybrightness**](wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md) -Methode wieder hergestellt werden.
+Mit **der WmiSetALSBrightness-Methode** wird der Helligkeitswert des Umgebungslichtsensors festgelegt. Wenn eine aktive Helligkeitsüberschreibung mithilfe der [**WmiSetBrightness-Methode**](wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md) eingerichtet wurde, hat diese Überschreibung Vorrang vor der ALS-Helligkeit, die mit dieser Methode festgelegt wurde. Damit eine aktivierte ALS-Helligkeitsüberschreibung wirksam wird, muss die Helligkeitsrichtlinie mithilfe der [**WmiRevertToPolicyBrightness-Methode zurückverwendet**](wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md) werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ uint32 WmiSetALSBrightness(
 *Helligkeit* 
 </dt> <dd>
 
-Die als-Helligkeit als Prozentsatz.
+Die ALS-Helligkeit als Prozentsatz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum).
+Gibt null (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,8 +58,8 @@ Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehl
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 
@@ -68,7 +68,7 @@ Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehl
 
 <dl> <dt>
 
-[**Wmimonitorbrightnessmethods**](wmimonitorbrightnessmethods.md)
+[**WmiMonitorBrightnessMethods**](wmimonitorbrightnessmethods.md)
 </dt> <dt>
 
 [**MSMonitorClass**](msmonitorclass.md)

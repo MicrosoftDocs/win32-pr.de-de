@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der Protokoll Endpunkte von einem Weiterleitungs Dienst zum Weiterleiten von Daten abhängen.
+description: Stellt eine Zuordnung dar, bei der Protokollendpunkte von einem Weiterleitungsdienst zum Weiterleiten von Daten abhängig sind.
 ms.assetid: b63dbd2c-2842-498a-a352-b7ab7f7c841a
 title: CIM_ForwardsAmong-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2b584f6472d8fbe3eb738d87652b796d9bb617f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa6f3782407f57f999117b83918460adae307c962336386301592d3408e6490d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014648"
 ---
-# <a name="cim_forwardsamong-class"></a>CIM \_ forwardsamong-Klasse
+# <a name="cim_forwardsamong-class"></a>CIM \_ ForwardsAmong-Klasse
 
-Stellt eine Zuordnung dar, in der Protokoll Endpunkte von einem Weiterleitungs Dienst zum Weiterleiten von Daten abhängen.
+Stellt eine Zuordnung dar, bei der Protokollendpunkte von einem Weiterleitungsdienst zum Weiterleiten von Daten abhängig sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_ForwardsAmong : CIM_ServiceSAPDependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ forwardsamong** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ForwardsAmong-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ forwardsamong** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ForwardsAmong-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ protocolendpoint**
+Datentyp: **CIM \_ ProtocolEndpoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Die Protokoll Endpunkte senden und empfangen die weitergeleiteten Daten.
+Die Protokollendpunkte senden und empfangen die weitergeleiteten Daten.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ forwardingservice**
+Datentyp: **CIM \_ ForwardingService**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Der Weiterleitungs Dienst, der die Daten weiterleitet.
+Der Weiterleitungsdienst, der die Daten weiterleiten soll.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Der Weiterleitungs Dienst, der die Daten weiterleitet.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Der Weiterleitungs Dienst, der die Daten weiterleitet.
 
 <dl> <dt>
 
-[**CIM \_ servicesapabhängigkeit**](cim-servicesapdependency.md)
+[**CIM \_ ServiceSAPDependency**](cim-servicesapdependency.md)
 </dt> </dl>
 
  

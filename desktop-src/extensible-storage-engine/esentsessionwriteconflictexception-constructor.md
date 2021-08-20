@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsessionschreiteconflictexception-Konstruktor'
-title: Esentsessionwrite teconflictexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSessionWriteConflictException-Konstruktor'
+title: EsentSessionWriteConflictException-Konstruktor
 TOCTitle: 'EsentSessionWriteConflictException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSessionWriteConflictException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsessionwriteconflictexception.esentsessionwriteconflictexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 787afd498480f600b25484a13e3e0798b501a371
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0928130f74e3e6ae67054d273cd08487fac0297514dda2586af8bdb95f9e4d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039948"
 ---
-# <a name="esentsessionwriteconflictexception-constructor"></a>Esentsessionwrite teconflictexception-Konstruktor
+# <a name="esentsessionwriteconflictexception-constructor"></a>EsentSessionWriteConflictException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsessionwrite teconflictexception-Klasse.
+Initialisiert eine neue Instanz der EsentSessionWriteConflictException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentSessionWriteConflictException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsessionwrite teconflictexception-Klasse](./esentsessionwriteconflictexception-class.md)
+[EsentSessionWriteConflictException-Klasse](./esentsessionwriteconflictexception-class.md)
 
-[Esentsessionschreiteconflictexception-Elemente](./esentsessionwriteconflictexception-members.md)
+[EsentSessionWriteConflictException-Member](./esentsessionwriteconflictexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

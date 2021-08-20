@@ -1,9 +1,9 @@
 ---
-title: Implementation-Dependent Pixel-Depth Zustandsvariablen
-description: Implementation-Dependent Pixel-Depth Zustandsvariablen
+title: Implementierungsabhängige Statusvariablen für die Pixeltiefe
+description: Implementierungsabhängige Statusvariablen für die Pixeltiefe
 ms.assetid: 3e1de9fe-dce5-437f-ae21-875958660da9
 keywords:
-- Implementation-Dependent Pixel-Depth Zustandsvariablen OpenGL
+- Implementation-Dependent Pixel-Depth State Variables OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,20 +12,20 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbee3de10d0a4749aea88c238636040b023dc3fe
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 556e95ae587f44bf41fc1d6f3e9dd0e2fc1351c8dcef9171ffb5d6dba7de134d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554090"
 ---
-# <a name="implementation-dependent-pixel-depth-state-variables"></a>Implementation-Dependent Pixel-Depth Zustandsvariablen
+# <a name="implementation-dependent-pixel-depth-state-variables"></a>Implementierungsabhängige Statusvariablen für die Pixeltiefe
 
 <dl> <dt><span id="GL_RED_BITS"></span><span id="gl_red_bits"></span>GL \_ RED \_ BITS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|---------------------------------------------------|
-| Beschreibung:     | Anzahl von Bits pro roter Komponente in Farbpuffern |
+| Beschreibung:     | Anzahl der Bits pro roter Komponente in Farbpuffern |
 | Attributgruppe: |                                                   |
 | Anfangswert:   |                                                   |
 | Get-Befehl:     | [**glGetIntegerv**](glgetintegerv.md)            |
@@ -38,7 +38,7 @@ ms.locfileid: "107909888"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Anzahl von Bits pro grüner Komponente in Farbpuffern                              |
+| Beschreibung:     | Anzahl der Bits pro grüner Komponente in Farbpuffern                              |
 | Attributgruppe: |                                                                                  |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 | Anfangswert:   |                                                                                  |
@@ -103,7 +103,7 @@ ms.locfileid: "107909888"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Anzahl von Schablonenbitplanes                                                      |
+| Beschreibung:     | Anzahl der Schablonenbitplanen                                                      |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   |                                                                                  |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -112,7 +112,7 @@ ms.locfileid: "107909888"
 
  
 
-</dd> <dt><span id="GL_ACCUM_RED_BITS"></span><span id="gl_accum_red_bits"></span>GL \_ ACCUM \_ RED \_ BITS</dt> <dd> 
+</dd> <dt><span id="GL_ACCUM_RED_BITS"></span><span id="gl_accum_red_bits"></span>\_GL-GL-BIT \_ FÜR RED \_ BITS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -125,7 +125,7 @@ ms.locfileid: "107909888"
 
  
 
-</dd> <dt><span id="GL_ACCUM_GREEN_BITS"></span><span id="gl_accum_green_bits"></span>GL- \_ UND \_ GREEN \_ BITS</dt> <dd> 
+</dd> <dt><span id="GL_ACCUM_GREEN_BITS"></span><span id="gl_accum_green_bits"></span>\_GL-GL-GL-BIT \_ \_ (GRÜN)</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -138,7 +138,7 @@ ms.locfileid: "107909888"
 
  
 
-</dd> <dt><span id="GL_ACCUM_BLUE_BITS"></span><span id="gl_accum_blue_bits"></span>GL \_ ACCUM \_ BLUE \_ BITS</dt> <dd> 
+</dd> <dt><span id="GL_ACCUM_BLUE_BITS"></span><span id="gl_accum_blue_bits"></span>GL- \_ UND \_ \_ BLAUBITS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -151,7 +151,7 @@ ms.locfileid: "107909888"
 
  
 
-</dd> <dt><span id="GL_ACCUM_ALPHA_BITS"></span><span id="gl_accum_alpha_bits"></span>\_GL-GL-ALPHABITS \_ \_</dt> <dd> 
+</dd> <dt><span id="GL_ACCUM_ALPHA_BITS"></span><span id="gl_accum_alpha_bits"></span>\_GL-ALPHABITS \_ \_</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|

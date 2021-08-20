@@ -1,41 +1,41 @@
 ---
-title: Multimedia-Datei-e/a
-description: Multimedia-Datei-e/a
+title: Multimediadatei-E/A
+description: Multimediadatei-E/A
 ms.assetid: 8b41c157-c18d-4962-8709-b919a38ae9c4
 keywords:
-- Windows-Multimedia, Datei-e/a
-- Multimedia, Datei-e/a
-- Multimedia-Eingabe, Datei-e/a
-- Multimedia-Datei-e/a, Informationen
-- Datei-e/a, Informationen
-- Eingabe und Ausgabe (e/a), Informationen zu
-- E/a (Eingabe und Ausgabe), Informationen zu
-- gepufferte e/a
-- Format der Ressourcenaustausch Datei (Riff)
-- Riff (Ressourcenaustausch-Dateiformat)
-- Riff-e/a
-- benutzerdefinierte e/a
-- Arbeitsspeicher-e/a
+- Windows Multimedia,Datei-E/A
+- Multimedia,Datei-E/A
+- Multimediaeingabe, Datei-E/A
+- Multimediadatei-E/A,About
+- Datei-E/A,About
+- Eingabe und Ausgabe (E/A), Informationen
+- E/A (Eingabe und Ausgabe), Informationen
+- Gepufferte E/A
+- Resource Interchange File Format (ENDE)
+- RAFF (Dateiformat für Ressourcenaustausch)
+- ORGANISATIONS-E/A
+- Benutzerdefinierte E/A
+- Speicher-E/A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4dd646cb3195189765d1a5b020632cd26940f817
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 30437732af68bb91942a92e8b98d126687e0ce9762b913a172afb9463cb3a488
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118136719"
 ---
-# <a name="multimedia-file-io"></a>Multimedia-Datei-e/a
+# <a name="multimedia-file-io"></a>Multimediadatei-E/A
 
-Die e/a-Dienste von Multimedia-Dateien bieten mehr Funktionen als die Standard-Betriebssystem Dienste, einschließlich der Unterstützung für gepufferte e/a-Dateien, Dateiformat Dateien (SSDs), Speicherdateien und benutzerdefinierte Speichersysteme. Außerdem sind die e/a-Dienste von Multimedia-Dateien für Anwendungen optimiert, die für die Leistung sensibel sind.
+Die Multimedia-Datei-E/A-Dienste bieten mehr Funktionalität als die Standardbetriebssystemdienste, einschließlich Unterstützung für gepufferte E/A-, DATEI- (Resource Interchange File Format), Speicherdateien und benutzerdefinierte Speichersysteme. Darüber hinaus sind die Multimediadatei-E/A-Dienste für Anwendungen optimiert, die leistungsempfindlich sind.
 
--   [Informationen zu Multimedia-Datei-e/a](about-multimedia-file-i-o.md)
--   [Verwenden von Multimedia-Datei-e/a](using-multimedia-file-i-o.md)
--   [Multimedia-Datei-e/a-Referenz](multimedia-file-i-o-reference.md)
+-   [Informationen zu Multimediadatei-E/A](about-multimedia-file-i-o.md)
+-   [Verwenden von Multimediadatei-E/A](using-multimedia-file-i-o.md)
+-   [Multimediadatei-E/A-Referenz](multimedia-file-i-o-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 
