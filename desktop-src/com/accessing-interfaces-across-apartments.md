@@ -1,63 +1,63 @@
 ---
-title: Zugreifen auf Schnittstellen über mehrere Apartments
-description: Zugreifen auf Schnittstellen über mehrere Apartments
+title: Zugriff auf Schnittstellen über Mehrere Schnittstellen hinweg
+description: Zugriff auf Schnittstellen über Mehrere Schnittstellen hinweg
 ms.assetid: 4e0467b9-bbf1-410c-8aab-40450a7f963a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 626707daf721aee3b440bb79ba2d1e084d154a98
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e89e82fa29e768328e6c110349627d32e92ab010ce61fdf64141ad3ca7fe9a54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048918"
 ---
-# <a name="accessing-interfaces-across-apartments"></a>Zugreifen auf Schnittstellen über mehrere Apartments
+# <a name="accessing-interfaces-across-apartments"></a>Zugriff auf Schnittstellen über Mehrere Schnittstellen hinweg
 
-COM bietet eine Möglichkeit für jedes Apartment in einem Prozess, Zugriff auf eine Schnittstelle zu erhalten, die für ein Objekt in einem beliebigen anderen Apartment im Prozess implementiert ist. Dies erfolgt über die [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) -Schnittstelle. Diese Schnittstelle verfügt über drei Methoden, mit denen Sie die folgenden Aktionen ausführen können:
+COM bietet jedem Apartment in einem Prozess die Möglichkeit, Zugriff auf eine Schnittstelle zu erhalten, die für ein Objekt in einem anderen Apartment im Prozess implementiert ist. Dies erfolgt über die [**IGlobalInterfaceTable-Schnittstelle.**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) Diese Schnittstelle verfügt über drei Methoden, die Folgendes ermöglichen:
 
--   Registrieren Sie eine Schnittstelle als *globale* (Processwide) Schnittstelle.
--   Einen Zeiger auf diese Schnittstelle von einem beliebigen anderen Apartment über ein Cookie erhalten.
+-   Registrieren einer Schnittstelle als *globale* (prozessweite) Schnittstelle.
+-   Erhalten Sie einen Zeiger auf diese Schnittstelle aus einem anderen Apartment über ein Cookie.
 -   Widerrufen Sie die globale Registrierung einer Schnittstelle.
 
-Die [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) -Schnittstelle ist ein effizientes Verfahren zum Speichern eines Schnittstellen Zeigers an einem Speicherort, auf den von mehreren Apartments innerhalb des Prozesses zugegriffen werden kann, z. b. Prozess weite Variablen und *Agile* -Objekte (frei Thread-, gemarshallte Objekte), die Schnittstellen Zeiger auf andere Objekte enthalten.
+Die [**IGlobalInterfaceTable-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) ist eine effiziente Möglichkeit für einen Prozess, einen Schnittstellenzeiger an einem Speicherort zu speichern, auf den von mehreren Ebenen innerhalb des Prozesses zugegriffen werden kann, z. B. prozessweite Variablen und *agile* Objekte (Freithreadobjekte, gemarshallte Objekte), die Schnittstellenzeiger auf andere Objekte enthalten.
 
-Ein Agile-Objekt kennt die zugrunde liegende COM-Infrastruktur, in der es ausgeführt wird, nicht. Anders ausgedrückt: Das Apartment, der Kontext und der Thread, auf dem es ausgeführt wird. Das Objekt ist möglicherweise für Schnittstellen, die für ein Apartment oder einen kontextspezifisch sind. Aus diesem Grund funktioniert das Aufrufen dieser Schnittstellen von überall aus, wo die Agile-Komponente ausgeführt wird, möglicherweise nicht immer ordnungsgemäß. Die globale Schnittstellen Tabelle vermeidet dieses Problem, indem Sie sicherstellt, dass ein gültiger Proxy (oder direkter Zeiger) für das-Objekt verwendet wird, je nachdem, wo das Agile-Objekt ausgeführt wird.
+Ein agiles Objekt weiß nicht über die zugrunde liegende COM-Infrastruktur, in der es ausgeführt wird. das heißt, in welchem Apartment, Kontext und Thread er ausgeführt wird. Das Objekt kann schnittstellenspezifisch sein, die für ein Apartment oder einen Kontext spezifisch sind. Aus diesem Grund funktioniert das Aufrufen dieser Schnittstellen von überall dort, wo die agile Komponente ausgeführt wird, möglicherweise nicht immer ordnungsgemäß. Die globale Schnittstellentabelle vermeidet dieses Problem, indem sichergestellt wird, dass ein gültiger Proxy (oder direkter Zeiger) auf das Objekt verwendet wird, je nachdem, wo das agile Objekt ausgeführt wird.
 
 > [!Note]  
-> Die globale Schnittstellen Tabelle ist nicht über Prozess-oder Computer Grenzen hinweg portabel und kann daher nicht anstelle des normalen Parameters-Passing-Mechanismus verwendet werden.
+> Die globale Schnittstellentabelle ist nicht über Prozess- oder Computergrenzen hinweg portierbar und kann daher nicht statt des normalen Mechanismus zur Parameterübergibtung verwendet werden.
 
- 
+ 
 
-Weitere Informationen zum Erstellen und Verwenden einer globalen Schnittstellen Tabelle finden Sie in den folgenden Themen:
+Informationen zum Erstellen und Verwenden einer globalen Schnittstellentabelle finden Sie in den folgenden Themen:
 
--   [Erstellen der globalen Schnittstellen Tabelle](creating-the-global-interface-table.md)
--   [Verwendungszwecke der globalen Schnittstellen Tabelle](when-to-use-the-global-interface-table.md)
+-   [Erstellen der globalen Schnittstellentabelle](creating-the-global-interface-table.md)
+-   [Verwendung der globalen Schnittstellentabelle](when-to-use-the-global-interface-table.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Auswählen des Threading Modells](choosing-the-threading-model.md)
+[Auswählen des Threadingmodells](choosing-the-threading-model.md)
 </dt> <dt>
 
-[Multithread-Apartments](multithreaded-apartments.md)
+[Multithread-Apartment](multithreaded-apartments.md)
 </dt> <dt>
 
-[Threading Probleme im Prozess internen Server](in-process-server-threading-issues.md)
+[In-Process-Serverthreadingprobleme](in-process-server-threading-issues.md)
 </dt> <dt>
 
-[Prozesse, Threads und Apartments](processes--threads--and-apartments.md)
+[Prozesse, Threads und Apartment](processes--threads--and-apartments.md)
 </dt> <dt>
 
-[Single Thread-und Multithread-Kommunikation](single-threaded-and-multithreaded-communication.md)
+[Singlethread- und Multithreadkommunikation](single-threaded-and-multithreaded-communication.md)
 </dt> <dt>
 
-[Single Thread-Apartments](single-threaded-apartments.md)
+[Singlethread-Apartment](single-threaded-apartments.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

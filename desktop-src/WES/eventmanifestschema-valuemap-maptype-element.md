@@ -1,9 +1,9 @@
 ---
-title: ValueMap (maptype)-Element
-description: Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichen folgen Werte zuordnen.
+title: valueMap-Element (MapType)
+description: Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichenfolgenwerte zuordnen.
 ms.assetid: caf84ed1-8624-4163-bf31-60b9fd877220
 keywords:
-- ValueMap-Element EventLog
+- valueMap-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: aea7a02a1d744687e3ba2083fa4eb67472ee08e7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d350060044bc66662947eb583c35337f642d77586fd7af24b2be99dc4a2d69f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055818"
 ---
-# <a name="valuemap-maptype-element"></a>ValueMap (maptype)-Element
+# <a name="valuemap-maptype-element"></a>valueMap-Element (MapType)
 
-Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichen folgen Werte zuordnen.
+Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichenfolgenwerte zuordnen.
 
 ``` syntax
 <xs:element name="valueMap"
@@ -30,7 +30,7 @@ Definiert eine Liste von Name-Wert-Paaren, die ganzzahlige Werte und Zeichen fol
  />
 ```
 
-Das **ValueMap** -Element wird durch den komplexen [**maptype**](eventmanifestschema-maptype-complextype.md) -Typ definiert.
+Das **valueMap-Element** wird durch den komplexen [**MapType-Typ**](eventmanifestschema-maptype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **ValueMap** -Element wird durch den komplexen [**maptype**](eventmanifestsc
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **ValueMap** -Element wird durch den komplexen [**maptype**](eventmanifestsc
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Zuordnungen (ProviderType)**](eventmanifestschema-maps-providertype-element.md)
+[**maps (ProviderType)**](eventmanifestschema-maps-providertype-element.md)
 </dt> </dl>
 
  

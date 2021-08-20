@@ -1,9 +1,9 @@
 ---
-title: Getnumofphysicalmonitors-Funktion
+title: GetNumberOfPhysicalMonitors-Funktion
 description: Ruft die Anzahl der einem Anzeigegerät zugeordneten physischen Monitore ab.
 ms.assetid: 498404e7-867d-4971-bea1-16e9f8fd9838
 keywords:
-- Getnumofphysicalmonitors-Funktions Monitor Konfiguration
+- GetNumberOfPhysicalMonitors-Funktion Monitorkonfiguration
 topic_type:
 - apiref
 api_name:
@@ -14,17 +14,17 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 09bec6abf296d807f80ab77cdc7ad8b4062fea9b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 673ef12d1e02d87e068784408824bb78dbbbad5dfd5c907ece58c3eb7673e957
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119534930"
 ---
-# <a name="getnumberofphysicalmonitors-function"></a>Getnumofphysicalmonitors-Funktion
+# <a name="getnumberofphysicalmonitors-function"></a>GetNumberOfPhysicalMonitors-Funktion
 
 > [!IMPORTANT]
-> Diese Funktion wird von der Monitor Konfigurations-API verwendet, um auf die Funktionalität des Anzeige Treibers zuzugreifen. Anwendungen sollten diese Funktion nicht aufzurufen.
+> Diese Funktion wird von der Überwachungskonfigurations-API verwendet, um auf funktionen im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
 
  
 
@@ -46,14 +46,14 @@ NTSTATUS WINAPI GetNumberOfPhysicalMonitors(
 
 <dl> <dt>
 
-*pstrindevicename* \[ in\]
+*pstrDeviceName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Unicode- \_ Zeichen**](/windows/desktop/api/subauth/ns-subauth-unicode_string) folgen Struktur, die den Namen des Anzeige Geräts enthält, wie von der [**getmonitorinfo**](/windows/desktop/api/winuser/nf-winuser-getmonitorinfoa) -Funktion zurückgegeben.
+Ein Zeiger auf eine [**UNICODE \_ STRING-Struktur,**](/windows/desktop/api/subauth/ns-subauth-unicode_string) die den Namen des Anzeigegeräts enthält, wie von der [**GetMonitorInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-getmonitorinfoa) zurückgegeben.
 
 </dd> <dt>
 
-*pdwnumofphysicalmonitors* \[ vorgenommen\]
+*pdwNumberOfPhysicalMonitors* \[ out\]
 </dt> <dd>
 
 Empfängt die Anzahl der physischen Monitore.
@@ -62,16 +62,16 @@ Empfängt die Anzahl der physischen Monitore.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, wird der **Status \_ erfolgreich** zurückgegeben. Andernfalls wird ein **NTSTATUS** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS** zurückgegeben. Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anstatt diese Funktion zu verwenden, sollten Anwendungen eine der folgenden Funktionen aufzurufen:
+Anstatt diese Funktion zu verwenden, sollten Anwendungen eine der folgenden Funktionen aufrufen:
 
--   [**Getnumofphysicalmonitorsfromhmonitor**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getnumberofphysicalmonitorsfromhmonitor)
+-   [**GetNumberOfPhysicalMonitorsFromHMONITOR**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getnumberofphysicalmonitorsfromhmonitor)
 -   [**GetNumberOfPhysicalMonitorsFromIDirect3DDevice9**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getnumberofphysicalmonitorsfromidirect3ddevice9)
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funk
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Gdi32.dll</dt> </dl> |
 
 

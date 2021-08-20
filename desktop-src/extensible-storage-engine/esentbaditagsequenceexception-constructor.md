@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentbaditagsequenceexception-Konstruktor'
-title: Esentbaditagsequenceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBadItagSequenceException-Konstruktor'
+title: EsentBadItagSequenceException-Konstruktor
 TOCTitle: 'EsentBadItagSequenceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadItagSequenceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbaditagsequenceexception.esentbaditagsequenceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 181bb278da7d78f88ffb62c1798f1c05637fc554
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bcf3cf413558319cdd405bc310e5a13c854f64bcf369ad0e4e204a8439e15f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042058"
 ---
-# <a name="esentbaditagsequenceexception-constructor"></a>Esentbaditagsequenceexception-Konstruktor
+# <a name="esentbaditagsequenceexception-constructor"></a>EsentBadItagSequenceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbaditagsequenceexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadItagSequenceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBadItagSequenceException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbaditagsequenceexception-Klasse](./esentbaditagsequenceexception-class.md)
+[EsentBadItagSequenceException-Klasse](./esentbaditagsequenceexception-class.md)
 
-[Esentbaditagsequenceexception-Member](./esentbaditagsequenceexception-members.md)
+[EsentBadItagSequenceException-Member](./esentbaditagsequenceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

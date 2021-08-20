@@ -3,12 +3,12 @@ title: Dateinamenerweiterungen
 description: Dateinamenerweiterungen
 ms.assetid: c17bf4e5-b469-45b6-bc22-2b451723d85e
 keywords:
-- Windows Media-Metadateien, Erweiterungen
-- Windows Media-Metadateien, Dateinamen Erweiterungen
-- Metadatendateien, Erweiterungen
-- Metadateien, Dateinamen Erweiterungen
-- Windows Media, Metafiles
-- Dateinamen Erweiterungen für Windows Media-Metadateien
+- Windows Medienmetadateien, Erweiterungen
+- Windows Medienmetadateien, Dateinamenerweiterungen
+- Metadateien, Erweiterungen
+- Metadateien, Dateinamenerweiterungen
+- Windows Medien, Metadateien
+- Dateinamenerweiterungen für Windows Media-Metadateien
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -16,56 +16,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d95d5bcba9bbad5f04b0d085ba712d5b9306c8b5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6c69c36a5865b3496cf63e8cc08d73b9187f5107b14bf0bbb0d52b462e90c88a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054988"
 ---
 # <a name="file-name-extensions"></a>Dateinamenerweiterungen
 
-Es gibt spezielle Richtlinien für die Verwendung von Dateinamen Erweiterungen für Windows Media-Metadateien. Windows Media Metadatei-Erweiterungen werden verwendet, um die verschiedenen Typen von Windows Media-Dateien zu identifizieren. Eine Dateinamenerweiterung bietet einen unabhängigen Software Hersteller (Independent Software Vendor, ISV) mit Informationen zu den Renderinganforderungen einer Anwendung, die eine bestimmte Erweiterung verwendet, und ermöglicht Inhalts Entwicklern das Ausrichten allgemeiner Arten von Medien Playern.
+Es gibt spezifische Richtlinien für die Verwendung von Dateinamenerweiterungen für Windows Media-Metadateien. Windows Medienmetadateinamenerweiterungen werden verwendet, um die verschiedenen Typen von Windows Mediendateien zu identifizieren. Eine Dateinamenerweiterung stellt einem unabhängigen Softwarehersteller (Independent Software Vendor, ISV) Informationen zu den Renderinganforderungen einer Anwendung bereit, die eine bestimmte Erweiterung verwendet, und ermöglicht Es Inhaltsautoren, allgemeine Typen von Medienplayern als Ziel zu verwenden.
 
-Die Richtlinien für die Dateinamenerweiterung sind in der folgenden Tabelle aufgeführt. Es wird empfohlen, dass der MIME-Typ einer Datei, der sich im Dateiheader befindet, für die Dateityp Identifizierung verwendet wird.
+Die Richtlinien für die Dateinamenerweiterung sind in der folgenden Tabelle aufgeführt. Es wird empfohlen, den MIME-Typ einer Datei, der sich im Dateiheader befindet, für die Dateitypidentifikation zu verwenden.
 
 
 
 | Dateinamenerweiterung | MIME-Typ (MIME type)      | Dateiinhalte                                                                                                                                                                            |
 |---------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| .wma                | Audiodatei/x-ms-WMA | Windows Media-Datei mit nur Audioinhalt. Wird normalerweise zum herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet.                                                                             |
-| .wmv                | Video/x-ms-WMV | Windows Media-Datei mit Audioinhalt und/oder Videoinhalt. Wird normalerweise zum herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet.                                                                     |
-| .asf                | Video/x-ms-ASF | Legacy Inhalt. Wird normalerweise zum herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet. Kann Audioinhalte und/oder Videoinhalte enthalten. Wird normalerweise zum herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet. |
-| WM                 | Video/x-ms-WM  | Reserviert                                                                                                                                                                                |
-| . Wachs                | Audiodatei/x-ms-Wax | Metadateien, die auf Windows Media-Dateien mit den Dateinamen Erweiterungen. ASF,. WMA oder. Wax verweisen.                                                                                             |
-| . wvx                | Video/x-ms-wvx | Metadateien, die auf Windows Media-Dateien mit den Dateinamen Erweiterungen. WMA,. WMV,. wvx oder. Wax verweisen.                                                                                       |
-| .asx                | Video/x-ms-ASF | Metadateien, die auf Windows Media-Dateien mit den Dateinamen Erweiterungen. WMA,. Wax,. WMV,. wvx,. ASF oder. ASX verweisen.                                                                           |
-| . wmx                | Video/x-ms-wvx | Reserviert.                                                                                                                                                                               |
+| .wma                | audio/x-ms-wma | Windows Mediendatei nur mit Audioinhalten. Wird in der Regel zum Herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet.                                                                             |
+| .wmv                | video/x-ms-wmv | Windows Mediendatei mit Audio- und/oder Videoinhalten. Wird in der Regel zum Herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet.                                                                     |
+| .asf                | video/x-ms-asf | Legacyinhalt. Wird in der Regel zum Herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet. Kann Audio- und/oder Videoinhalte enthalten. Wird in der Regel zum Herunterladen und Wiedergeben von Dateien oder zum Streamen von Inhalten verwendet. |
+| WM                 | video/x-ms-wm  | Reserviert                                                                                                                                                                                |
+| .dll                | audio/x-ms-org | Metadateien, die auf Windows Mediendateien mit den Dateinamenerweiterungen .asf, .wma oder .extensions verweisen.                                                                                             |
+| WVX                | video/x-ms-wvx | Metadateien, die auf Windows Mediendateien mit WMA-, WMV-, WVX- oder DATEIERWEITERUNGEN verweisen.                                                                                       |
+| .asx                | video/x-ms-asf | Metadateien, die auf Windows Mediendateien mit dateinamenserweiterungen .wma, .extension, .wmv, .wvx, .asf oder .asx verweisen.                                                                           |
+| WMX                | video/x-ms-wvx | Reserviert.                                                                                                                                                                               |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Skripterstellung und Digital Rights Management (DRM) müssen von jeder Anwendung unterstützt werden, die Windows Media-Dateien rendert.
+Skripterstellung und Verwaltung digitaler Rechte (DRM) müssen von jeder Anwendung unterstützt werden, die Windows Mediendateien rendert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Media Metafile Guide**](windows-media-metafile-guide.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

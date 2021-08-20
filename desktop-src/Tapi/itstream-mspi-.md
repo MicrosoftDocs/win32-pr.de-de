@@ -1,21 +1,21 @@
 ---
-description: Die itstream-Schnittstelle ist verfügbar, wenn dem-Befehl ein MSP zugeordnet ist. Mit den Methoden dieser Schnittstelle kann eine Anwendung Informationen zu einem Stream abrufen. , wenn der Stream gestartet, angehalten oder beendet werden soll. und, um Terminals in einem Stream auszuwählen oder deren Auswahl zu deaktivieren.
+description: Die ITStream-Schnittstelle ist verfügbar, wenn dem Aufruf ein MSP zugeordnet ist. Mit den Methoden dieser Schnittstelle kann eine Anwendung Informationen zu einem Stream abrufen. , um den Stream zu starten, anzuhalten oder zu beenden; und , um Terminals für einen Stream auszuwählen oder die Auswahl aufzuheben.
 ms.assetid: 4fedab2f-b379-4333-84f6-37a2d2f338ee
-title: Itstream (MSPi)
+title: ITStream (MSPI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 131225df511be2439db15eec1c03edf50b7670e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d037d29c752a64344680e4967ff440d4606d016b28c58bdeadb5bb8ff9efe139
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104345688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060778"
 ---
-# <a name="itstream-mspi"></a>Itstream (MSPi)
+# <a name="itstream-mspi"></a>ITStream (MSPI)
 
-Die [**itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) -Schnittstelle ist verfügbar, wenn dem-Befehl ein MSP zugeordnet ist. Mit den Methoden dieser Schnittstelle kann eine Anwendung Informationen zu einem Stream abrufen. , wenn der Stream gestartet, angehalten oder beendet werden soll. und, um Terminals in einem Stream auszuwählen oder deren Auswahl zu deaktivieren.
+Die [**ITStream-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) ist verfügbar, wenn dem Aufruf ein MSP zugeordnet ist. Mit den Methoden dieser Schnittstelle kann eine Anwendung Informationen zu einem Stream abrufen. , um den Stream zu starten, anzuhalten oder zu beenden; und , um Terminals für einen Stream auszuwählen oder die Auswahl aufzuheben.
 
-Die [**itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) -Schnittstelle wird von einem MSP implementiert. Ausführliche Informationen zu dieser Schnittstelle finden Sie im Abschnitt **itstream** im Abschnitt MSP-Schnittstelle.
+Die [**ITStream-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) wird von einem MSP implementiert. Weitere Informationen zu dieser Schnittstelle finden Sie unter **ITStream** im Abschnitt MSP-Schnittstelle.
 
  
 

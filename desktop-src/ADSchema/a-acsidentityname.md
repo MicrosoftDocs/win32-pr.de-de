@@ -1,5 +1,5 @@
 ---
-title: ACS-Identity-Name-Attribut
+title: ATTRIBUT "ACS-Identity-Name"
 description: Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit und ist die Identität eines Benutzers oder einer Gruppe von Benutzern, für die diese QoS-Richtlinie gilt.
 ms.assetid: 00e6e2bd-aec8-426f-b89e-0661c15cfd46
 ms.tgt_platform: multiple
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117838400"
 ---
-# <a name="acs-identity-name-attribute"></a>ACS-Identity-Name-Attribut
+# <a name="acs-identity-name-attribute"></a>ATTRIBUT "ACS-Identity-Name"
 
 Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit und ist die Identität eines Benutzers oder einer Gruppe von Benutzern, für die diese QoS-Richtlinie gilt.
 
@@ -35,7 +35,7 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 | Aktualisieren von Berechtigungen  | Domänenadministrator                        |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.784                      |
-| System-Id-Guid    | dab029b6-ddf7-11d1-90a5-00c04fd91ab1        |
+| System-ID-GUID    | dab029b6-ddf7-11d1-90a5-00c04fd91ab1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -57,10 +57,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -78,10 +78,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -99,10 +99,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -120,10 +120,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -141,10 +141,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -162,10 +162,10 @@ Dieses Attribut enthält den DN eines Benutzers oder einer Organisationseinheit 
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | Falsch                                        |
-| Is-Single-Valued       | Falsch                                        |
-| Ist indiziert             | Falsch                                        |
-| Im globalen Katalog      | Falsch                                        |
+| System-Only            | False                                        |
+| Ist einwertig       | False                                        |
+| Ist indiziert             | False                                        |
+| Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |

@@ -1,38 +1,38 @@
 ---
-description: 'Die Erkennungs Punkte:'
+description: 'Die Erkennung behandelt Folgendes:'
 ms.assetid: d7c694a2-0da6-4172-b434-2b0f94e1b649
-title: Erkennungs Referenz
+title: Erkennungsreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40e193b6098f6d82751951d1a39630ad30023c84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e2f72258ec9e5581c7a0064b55f4717c041ff903161a26e2a80e59892854d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031638"
 ---
-# <a name="recognizer-reference"></a>Erkennungs Referenz
+# <a name="recognizer-reference"></a>Erkennungsreferenz
 
-Die Erkennungs Punkte:
+Die Erkennung behandelt Folgendes:
 
--   Bestimmen Sie, welche erkenners auf dem Computer verfügbar sind.
--   Identifizieren Sie die zu verwendende Erkennung.
--   Erstellen Sie einen Erkennungs Kontext.
--   Abrufen der Erkennungsergebnisse und der Alternativen.
+-   Bestimmen Sie, welche Erkennungen auf dem Computer verfügbar sind.
+-   Identifizieren Sie, welche Erkennung verwendet werden soll.
+-   Erstellen Sie einen Erkennungskontext.
+-   Abrufen von Erkennungsergebnissen und Alternativen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                      | BESCHREIBUNG                                                                                                                                                           |
+| Thema                                                      | Beschreibung                                                                                                                                                           |
 |------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Hrecoalt-handle](hrecoalt-handle.md)                     | Ruft die alternativen Zeichen folgen-und Eigenschaftswerte ab, z. b. Vertrauensgrad und Metriken.<br/>                                                                  |
-| [Hrecocontext-handle](hrecocontext-handle.md)             | Fügt dem kontextfrei Hand Eingaben, führt die frei Handerkennung durch und ruft das Erkennungs Ergebnis ab und wechselt.<br/>                                                    |
-| [Herkenzer-handle](hrecognizer-handle.md)               | Erstellt einen Erkennungs Kontext, ruft seine Attribute und Eigenschaften ab und bestimmt, welche Paket Eigenschaften die Erkennung zum Durchführen der Erkennung benötigt.<br/> |
-| [Hrecowordlist-handle](hrecowordlist-handle.md)           | Verwaltet eine Wortliste, die Sie an einen Erkennungs Kontext anfügen. Diese Liste verbessert die Erkennungsergebnisse.<br/>                                                   |
-| [Erkennungsenumerationen](recognizer-api-enumerations.md) | Beschreibt die Enumerationstypen der Erkennung.<br/>                                                                                                                |
-| [Erkennungs Strukturen](recognizer-api-structures.md)     | Beschreibt die Erkennungs Strukturen.<br/>                                                                                                                       |
-| [Erkennungs-GUIDs](recognizer-guids.md)                   | Gibt den Typ der Eigenschaft für Paket Eigenschaften und Erkennungs Eigenschaften an.<br/>                                                                            |
+| [HRECOALT-Handle](hrecoalt-handle.md)                     | Ruft die alternativen Zeichenfolgen- und Eigenschaftswerte ab, z. B. Vertrauensgrad und Metriken.<br/>                                                                  |
+| [HRECOCONTEXT-Handle](hrecocontext-handle.md)             | Fügt dem Kontext "Ink" hinzu, führt die Ink-Erkennung aus und ruft das Erkennungsergebnis und alternative Werte ab.<br/>                                                    |
+| [HRECOGNIZER-Handle](hrecognizer-handle.md)               | Erstellt einen Erkennungskontext, ruft seine Attribute und Eigenschaften ab und bestimmt, welche Paketeigenschaften die Erkennung durchführen muss.<br/> |
+| [HRECOWORDLIST-Handle](hrecowordlist-handle.md)           | Verwaltet eine Wortliste, die Sie an einen Erkennungskontext anfügen. Diese Liste verbessert die Erkennungsergebnisse.<br/>                                                   |
+| [Erkennungsenumerationen](recognizer-api-enumerations.md) | Beschreibt die Erkennungsenumerationstypen.<br/>                                                                                                                |
+| [Erkennungsstrukturen](recognizer-api-structures.md)     | Beschreibt die Erkennungsstrukturen.<br/>                                                                                                                       |
+| [Erkennungs-GUIDs](recognizer-guids.md)                   | Gibt den Typ der Eigenschaft für Paketeigenschaften und Erkennungseigenschaften an.<br/>                                                                            |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die notifyownermessage-Methode übergibt bestimmte Nachrichten an das Videofenster.
+description: Die NotifyOwnerMessage-Methode übergibt bestimmte Nachrichten an das Videofenster.
 ms.assetid: 8b27281a-5b8a-46c3-aa66-390d4496f30e
-title: Cbasecontrolwindow. notilyownermessage-Methode (ctlutil. h)
+title: CBaseControlWindow.NotifyOwnerMessage-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9073d37987404849ba8aa3acbda9919df840b410
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 35d71057027bd8fbd572dffd714f761ff101ba0de95dd42dcf058009b0cb1b04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526850"
 ---
-# <a name="cbasecontrolwindownotifyownermessage-method"></a>Cbasecontrolwindow. notif yownermessage-Methode
+# <a name="cbasecontrolwindownotifyownermessage-method"></a>CBaseControlWindow.NotifyOwnerMessage-Methode
 
-Die- `NotifyOwnerMessage` Methode übergibt bestimmte Meldungen an das Videofenster.
+Die `NotifyOwnerMessage` -Methode übergibt bestimmte Nachrichten an das Videofenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,51 +45,51 @@ HRESULT NotifyOwnerMessage(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Handle für das Videofenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Nachrichten Details.
+Meldungsdetails.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Der erste Message-Parameter.
+Erster Nachrichtenparameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Meldungs Parameter.
+Zweiter Nachrichtenparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt keinen \_ Fehler zurück.
+Gibt NO \_ ERROR zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Videofenster ein untergeordnetes Element eines anderen Fensters ist, empfängt es bestimmte Fenster Nachrichten der obersten Ebene nicht. Diese Nachrichten können für einen Renderer von Bedeutung sein, da Sie sich auf das Verhalten auswirken könnten. `NotifyOwnerMessage` übergibt eine der folgenden Meldungen an das Videofenster.
+Wenn das Videofenster ein untergeordnetes Element eines anderen Fensters ist, empfängt es keine bestimmten Fenstermeldungen der obersten Ebene. Diese Nachrichten können für einen Renderer nützlich sein, da sie sich auf sein Verhalten auswirken können. `NotifyOwnerMessage` übergibt eine der folgenden Meldungen an das Videofenster.
 
--   WM \_ activateapp
--   WM \_ devmodechange
--   WM- \_ Display Change
--   WM \_ palettechanged
--   WM- \_ paletteischanging
--   WM \_ querynewpalette
--   WM- \_ syscolorchange
+-   WM \_ ACTIVATEAPP
+-   WM \_ DEVMODECHANGE
+-   WM \_ DISPLAYCHANGE
+-   WM \_ PALETTECHANGED
+-   WM \_ PALETTEISCHANGING
+-   WM \_ QUERYNEWPALETTE
+-   WM \_ SYSCOLORCHANGE
 
-Sie können anfordern, dass der [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Plug-in-Verteiler (PID) ein Fenster einem anderen Fenster untergeordnet wird. Wenn dies auftritt, sucht die PID nach bestimmten Nachrichten, die möglicherweise an das besitzende Fenster gesendet werden. Die PID führt diese Nachrichten dann an das eigene Fenster weiter. Die Standard Verarbeitung für die Nachrichten besteht darin, Sie synchron an die eigene Fenster Prozedur zu senden, indem Sie die Win32 **SendMessage** -Funktion aufrufen.
+Sie können anfordern, dass der [**IVideoWindow-Plug-In-Verteiler**](/windows/desktop/api/Control/nn-control-ivideowindow) (PID) ein Fenster zu einem untergeordneten Element eines anderen Fensters macht. In diesem Fall sucht die PID nach bestimmten Nachrichten, die möglicherweise an das besitzende Fenster gesendet werden. Die PID leitet diese Nachrichten dann an das eigene Fenster weiter. Die Standardverarbeitung für die Nachrichten besteht darin, sie synchron an die Prozedur des eigenen Fensters zu senden, indem die Win32 **SendMessage-Funktion** aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Sie können anfordern, dass der [**IVideoWindow**](/windows/desktop/api/Control/
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -106,7 +106,7 @@ Sie können anfordern, dass der [**IVideoWindow**](/windows/desktop/api/Control/
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

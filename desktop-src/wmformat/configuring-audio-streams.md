@@ -1,45 +1,45 @@
 ---
-title: Konfigurieren von Audiodatenströmen
-description: Konfigurieren von Audiodatenströmen
+title: Konfigurieren von Audio Streams
+description: Konfigurieren von Audio Streams
 ms.assetid: 6ddd9bc1-3fde-4098-afce-fdda461ced62
 keywords:
-- Streams, Konfigurieren von Audiodatenströmen
-- Codecs, Konfigurieren von Audiodatenströmen
-- Audiodatenströme, konfigurieren
+- Streams,Konfigurieren von Audiostreams
+- Codecs,Konfigurieren von Audiostreams
+- Audiostreams,Konfigurieren
 - Codecs, Formate
-- Streams, iwmcodecinfo-Schnittstelle
-- Iwmcodecinfo, Audiodatenströme
+- streams,IWMCodecInfo-Schnittstelle
+- IWMCodecInfo, Audiostreams
 - Streams, A/V-Synchronisierung
-- Audiodatenströme, A/V-Synchronisierung
+- Audiostreams, A/V-Synchronisierung
 - A/V-Synchronisierung
-- Streams, synchronisieren A/V
-- Audiodatenströme, Synchronisieren von A/V
-- Streams, Audioformate mit niedriger Verzögerung
+- Streams,Synchronisieren von A/V
+- Audiostreams, Synchronisieren von A/V
+- Streams, Audioformate mit geringer Verzögerung
 - Audiostreams, Audioformate mit geringer Verzögerung
-- Codecs, Audioformate mit niedriger Verzögerung
-- Streams, Variable Bitrate (VBR)
-- Audiodatenströme, Variable Bitrate (VBR)
-- Codecs, Variable Bitrate (VBR)
-- variablenbitrate (VBR), konfigurieren
-- VBR (Variable Bitrate), konfigurieren
+- Codecs, Audioformate mit geringer Verzögerung
+- Streams, variable Bitrate (VBR)
+- Audiostreams, variable Bitrate (VBR)
+- Codecs, variable Bitrate (VBR)
+- Variable Bitrate (VBR),Konfigurieren
+- VBR (variable Bitrate),Konfigurieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ad3931ec41e73c125417d39cdd177dc16056e9e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6e28c32e9d0e237e72f693bded74c7620d33845261a6137afdf58b04f35f441f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119548030"
 ---
-# <a name="configuring-audio-streams"></a>Konfigurieren von Audiodatenströmen
+# <a name="configuring-audio-streams"></a>Konfigurieren von Audio Streams
 
-Audiodatenströme sind in der Regel die einfachste zu konfigurieren. Sie erhalten eine streamkonfiguration aus dem Codec mithilfe der Methoden von [**iwmcodecinfo**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo) , wie unter [Get Stream Configuration Information from Codecs](getting-stream-configuration-information-from-codecs.md)beschrieben. In den meisten Fällen sollten Sie die Einstellungen nicht von den abgerufenen Einstellungen ändern.
+Audiostreams sind im Allgemeinen am einfachsten zu konfigurieren. Abrufen einer Streamkonfiguration vom Codec mithilfe der Methoden von [**IWMCodecInfo,**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo) wie unter [Abrufen von Streamkonfigurationsinformationen aus Codecs](getting-stream-configuration-information-from-codecs.md)beschrieben. In den meisten Fällen sollten Sie die Einstellungen der abgerufenen Einstellungen nicht ändern.
 
-Das von Ihnen gewählte Codec-Format hängt von der vorgesehenen Verwendung der mit dem Profil erstellten ASF-Dateien ab. Die von [**IWMCodecInfo2:: getcodecformatdesc abgerufene**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo2-getcodecformatdesc) Codec-Formatbeschreibung fasst die Merkmale des Formats zusammen. Wenn in der Anwendung nicht die Beschreibungen angezeigt werden, die Sie auswählen können, können Sie **QueryInterface** für die [**iwmstreamconfig**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig) -Schnittstelle des Codec-Formats aufrufen, um die [**iwmmediarequigenschnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops) abzurufen. Anschließend können Sie die [**\_ \_ Typ**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) -Struktur des WM-Mediums abrufen, indem Sie [**iwmmedia-Eigenschaften:: getmediatype**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmediaprops-getmediatype)aufrufen. Durch Untersuchen der **WM- \_ \_ Medientyp** Struktur und der [**WaveFormatEx**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) -Struktur, auf die Sie verweist, können Sie die Einstellungen des Codec-Formats ermitteln und Sie mit Ihren Anforderungen vergleichen.
+Das Codecformat, das Sie aus den aufgeführten Formaten auswählen, hängt von der beabsichtigten Verwendung der ASF-Dateien ab, die mit dem Profil erstellt wurden. Die von [**IWMCodecInfo2::GetCodecFormatDesc**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo2-getcodecformatdesc) abgerufene Codecformatbeschreibung fasst die Merkmale des Formats zusammen. Wenn Ihre Anwendung nicht die Beschreibungen anzeigt, die zwischen ihnen ausgewählt werden sollen, können Sie **QueryInterface** für die [**IWMStreamConfig-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig) des Codecformats aufrufen, um die [**IWMMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops) abzurufen. Anschließend können Sie die [**WM \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) abrufen, indem Sie [**IWMMediaProps::GetMediaType**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmediaprops-getmediatype)aufrufen. Indem Sie die **WM \_ MEDIA \_ TYPE-Struktur** und die [**WAVEFORMATEX-Struktur**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) untersuchen, auf die sie verweist, können Sie die Einstellungen des Codecformats bestimmen und sie mit Ihren Anforderungen vergleichen.
 
-## <a name="getting-audio-formats-for-av-synchronization"></a>Erhalten von Audioformaten für eine/V-Synchronisierung
+## <a name="getting-audio-formats-for-av-synchronization"></a>Abrufen von Audioformaten für die A/V-Synchronisierung
 
-Sowohl der Windows Media Audio Codec als auch Windows Media Audio Professional-Codec unterstützen Formate für reine Audiodateien und Audiodateien und Videodateien. Die reinen Audioformate sind für Dateien optimiert, die nur Audiodaten enthalten, während die Audio-/Videoformate für Audiodaten optimiert sind, die sich in einer Datei mit einem Videostream befinden. Beim Auflisten von Codec-Formaten für diese Codecs werden die Audioformate und Videoformate nach den reinen Audioformaten angezeigt. Die Audio-/videoformatbeschreibungen enthalten die Zeichenfolge "(A/V)". Sie können die für die Audio-/Videosynchronisierung entwickelten Formate Programm gesteuert ermitteln, indem Sie die Anzahl der Pakete pro Sekunde überprüfen. Die Formate für die Synchronisierung haben mindestens 5 Pakete pro Sekunde, wenn die Bitrate größer oder gleich 32.000 Bits pro Sekunde ist. Formate mit Bitraten, die kleiner als 32.000 Bits pro Sekunde sind, können mit synchronisiertem Video verwendet werden, wenn Sie drei oder mehr Pakete pro Sekunde verwenden. Das Codebeispiel im Thema [für die Suche nach Audioformaten](to-find-audio-formats.md) enthält den Code, der für diese Überprüfung erforderlich ist:
+Der Windows Medienaudiocodec und Windows Medienaudio-Professional-Codec unterstützen formate sowohl für Audiodateien als auch für Audio-/Videodateien. Die reinen Audioformate sind für Dateien optimiert, die nur Audiodaten enthalten, während die Audio-/Videoformate für Audiodaten optimiert sind, die sich in einer Datei mit einem Videostream befinden. Beim Aufzählen von Codecformaten für diese Codecs folgen die Audio-/Videoformate nach den reinen Audioformaten. Die Audio-/Videoformatbeschreibungen enthalten alle die Zeichenfolge "(A/V)". Sie können die Für die Audio-/Videosynchronisierung konzipierten Formate programmgesteuert identifizieren, indem Sie die Anzahl der Pakete pro Sekunde überprüfen. Formate für die Synchronisierung haben 5 oder mehr Pakete pro Sekunde, wenn die Bitrate größer oder gleich 32.000 Bits pro Sekunde ist. Formate mit Bitraten unter 32.000 Bits pro Sekunde können mit synchronisierten Videos verwendet werden, wenn sie 3 oder mehr Pakete pro Sekunde verwenden. Das Codebeispiel im Thema [To Find Audio Formats (So suchen Sie Audioformate)](to-find-audio-formats.md) enthält den Code, der für diese Überprüfung erforderlich ist:
 
 
 ```C++
@@ -52,28 +52,28 @@ if((pWave->nAvgBytesPerSec / pWave->nBlockAlign) >=
 
 
 
-## <a name="getting-low-delay-audio-formats"></a>Erhalten von Low-Delay Audioformaten
+## <a name="getting-low-delay-audio-formats"></a>Abrufen von Low-Delay Audioformaten
 
-Der Windows Media 9,1-Codec und der Windows Media Audio 9,1 Professional-Codec unterstützen beide Low-Delay-Formate. Diese Formate verfügen über ein kleineres Puffer Fenster als andere Audioformate. Die Audiogeschwindigkeit ist darauf ausgerichtet, die Leistung in Szenarien zu verbessern, in denen Dateien oder Streams häufig gewechselt werden. beispielsweise eine Anwendung, die eine Reihe von Titeln für das Streaming in der Benutzeroberfläche auflistet und es den Benutzern ermöglicht, zwischen Ihnen willkürlich zu wechseln.
+Der Windows Media 9.1-Codec und der Windows Media Audio 9.1 Professional-Codec unterstützen beide Formate mit geringer Verzögerung. Diese Formate verfügen über ein kleineres Pufferfenster als andere Audioformate. Audio mit geringer Verzögerung soll die Leistung in Szenarien verbessern, in denen Dateien oder Streams häufig gewechselt werden. Beispielsweise eine Anwendung, die eine Reihe von Musiktiteln für das Streaming auf der Benutzeroberfläche auflistet und benutzern das willkürliche Wechseln zwischen ihnen ermöglicht.
 
-Low-Delay-Formate sind nur im CBR-Modus (ein-oder zwei-Durchlauf) verfügbar. Die Beschreibungen mit dem Low-Delay-Format enthalten die Zeichenfolge "Low Delay". Sie können die Formate Programm gesteuert ermitteln, indem Sie den Bitraten Wert des Formats überprüfen. Den niedrig verzögerten Formaten werden Bitraten zugewiesen, die 1 Kilobit niedriger sind als die Bitraten des entsprechenden normalen Formats. Der Windows Media Audio 9,1-Codec unterstützt z. b. ein Single-Pass-CBR-Format mit einer Bitrate von 192 Kbit/s. Das entsprechende Low-Delay-Format hat eine Bitrate von 191 Kbit/s. Außerdem sind mit Ausnahme des 5-kbit/s-Mono-Formats, das vom Windows Media Audio 9,1-Codec unterstützt wird, die Low-Delay-Formate die einzigen Formate, die einen ungeraden Bitrate-Wert aufweisen.
+Formate mit geringer Verzögerung sind nur im CBR-Modus (Ein- oder Zwei-Durchlauf) verfügbar. Die Formatbeschreibungen mit geringer Verzögerung enthalten alle die Zeichenfolge "Low Delay". Sie können die Formate programmgesteuert identifizieren, indem Sie den Bitratenwert des Formats überprüfen. Den Formaten mit niedriger Verzögerung werden Bitraten zugewiesen, die 1 Kilobit kleiner als die Bitraten des entsprechenden normalen Formats sind. Beispielsweise unterstützt der Windows Media Audio 9.1-Codec ein CBR-Einzeldurchlaufformat mit einer Bitrate von 192 KBit/s. Das entsprechende Format mit niedriger Verzögerung weist eine Bitrate von 191 KBit/s auf. Mit Ausnahme des mono-Formats mit 5 KBit/s, das vom Windows Media Audio 9.1-Codec unterstützt wird, sind die Formate mit geringer Verzögerung die einzigen Formate, die einen ungeraden Bitratenwert aufweisen.
 
-## <a name="configuring-variable-bit-rate-audio"></a>Konfigurieren der Variablen Bitrate Audiodaten
+## <a name="configuring-variable-bit-rate-audio"></a>Konfigurieren von Audiodaten mit variabler Bitrate
 
-Wenn Sie ein VBR-Format (Variable Bitrate) für eines der Windows Media-Audiocodecs benötigen, können Sie es durch Festlegen der [**enumerationseinstellungen in der IWMCodecInfo3:: setcodecenumerationsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo3-setcodecenumerationsetting) -Methode erhalten. Legen \_ Sie g wszvbrenabled auf true fest, und legen \_ Sie für Qualitäts basiertes VBR den Wert 1 und für die 2-Pass-VBR (eingeschränkt oder uneingeschränkt) den Wert 1 fest. Wenn Sie einen eingeschränkten zweistufigen VBR verwenden, müssen Sie die maximale Bitrate und das Puffer Fenster für den Stream manuell mithilfe der Methoden von [**iwmpropertyvault**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault) festlegen, wie unter [Konfigurieren von VBR-Streams](configuring-vbr-streams.md)beschrieben.
+Wenn Sie ein FORMAT mit variabler Bitrate (VBR) für einen der Windows Medienaudiocodecs benötigen, können Sie es abrufen, indem Sie die Enumerationseinstellungen in der [**IWMCodecInfo3::SetCodecEnumerationSetting-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo3-setcodecenumerationsetting) festlegen. Legen Sie g \_ wszVBREnabled auf True und g \_ wszNumPasses für qualitätsbasierte VBR auf 1 oder für VBR mit zwei Durchläufen (eingeschränkt oder uneingeschränkt) auf 2 fest. Wenn Sie eingeschränkte VBR mit zwei Durchläufen verwenden, müssen Sie die maximale Bitrate und das Pufferfenster für den Stream manuell mithilfe der Methoden von [**IWMPropertyVault**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmpropertyvault) festlegen, wie unter [Konfigurieren von VBR Streams](configuring-vbr-streams.md)beschrieben.
 
-In Qualitäts basierten VBR-Profilen enthält das **navgbytespersec** -Element der **WaveFormatEx** -Struktur die Qualitätsstufe (1 bis 100) im nieder wertigen Byte, und die drei höherwertigen Bytes werden auf 0x7fffff festgelegt. Versuchen Sie nicht, die Qualitätseinstellung zu ändern, indem Sie diesen Wert manuell ändern. Sie müssen das Format verwenden, das vom Codec abgerufen wird. Wenn Sie einen anderen Qualitäts Wert verwenden möchten, müssen Sie die Formate auflisten, bis Sie eine gefunden haben, die Ihren Anforderungen entspricht. Außerdem wird **navgbytespersec** in der ASF-Datei nicht beibehalten. Wenn Sie die **WaveFormatEx** -Struktur für eine Datei abrufen, die mit dem Reader-Objekt geöffnet wurde, enthält **navgbytespersec** einen ungefähren Wert, der die durchschnittliche Anzahl von Bytes pro Sekunde darstellt.
+In qualitätsbasierten VBR-Profilen enthält der **nAvgBytesPerSec-Member** der **WAVEFORMATEX-Struktur** die Qualitätsstufe (1 bis 100) im Low-Order-Byte, und die drei bytes hoher Ordnung werden auf 0x7fffff festgelegt. Versuchen Sie nicht, die Qualitätseinstellung durch manuelles Ändern dieses Werts zu ändern. Sie müssen das Format verwenden, da es aus dem Codec abgerufen wird. Um einen anderen Qualitätswert zu verwenden, müssen Sie Formate aufzählen, bis Sie eines finden, das Ihren Anforderungen entspricht. Außerdem wird **nAvgBytesPerSec** nicht in der ASF-Datei beibehalten. Wenn Sie die **WAVEFORMATEX-Struktur** für eine Datei abrufen, die mit dem Readerobjekt geöffnet wurde, enthält **nAvgBytesPerSec** einen ungefähren Wert, der die durchschnittliche Anzahl von Bytes pro Sekunde darstellt.
 
 > [!Note]  
-> Beim Konfigurieren von Audiodatenströmen sollten Sie nie über einen Wert für das audiopufferfenster verfügen, der größer ist als der Wert für alle Videostreams in der Datei. Normalerweise ist dies kein Problem, da die Werte des audiopufferfensters zwischen 1,5 und 3 Sekunden liegen sollten und die Video Werte zwischen 3 und 5 Sekunden liegen sollten. Wenn ein audiopufferfenster größer als ein Video Puffer Fenster ist, wird die Datei mit den Datenströmen aus der Synchronisierung leicht wiedergegeben.
+> Beim Konfigurieren von Audiostreams sollten Sie nie über einen Wert für das Audiopufferfenster verfügen, der größer als der Wert für Videostreams in der Datei ist. Normalerweise ist dies kein Problem, da die Werte des Audiopufferfensters zwischen 1,5 und 3 Sekunden und die Videowerte zwischen 3 und 5 Sekunden liegen sollten. Wenn ein Audiopufferfenster größer als ein Videopufferfenster ist, wird die Datei mit den Streams etwas außerhalb der Synchronisierung wiedergegeben.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Allgemeine Konfiguration für alle Streams**](configuration-common-to-all-streams.md)
+[**Configuration Common to All Streams**](configuration-common-to-all-streams.md)
 </dt> <dt>
 
 [**Konfigurieren von Streams**](configuring-streams.md)
@@ -82,6 +82,6 @@ In Qualitäts basierten VBR-Profilen enthält das **navgbytespersec** -Element d
 [**So suchen Sie Audioformate**](to-find-audio-formats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

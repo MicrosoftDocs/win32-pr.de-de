@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Tablets ab, die an das System angefügt sind.
+description: Ruft die Anzahl der an das System angefügten Tablets ab.
 ms.assetid: b2027336-611b-4d17-8943-f16770effaf8
-title: 'Itabletmanager:: gettabletcount-Methode'
+title: ITabletManager::GetTabletCount-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: fbdd485c44bc67b3ecaec5aa279d4bc20e18d167
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80d5585a96ebae60885e17dae5ebf1550128d6c5c8db5ae2a35c81c284c10977
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031878"
 ---
-# <a name="itabletmanagergettabletcount-method"></a>Itabletmanager:: gettabletcount-Methode
+# <a name="itabletmanagergettabletcount-method"></a>ITabletManager::GetTabletCount-Methode
 
-Ruft die Anzahl der Tablets ab, die an das System angefügt sind.
+Ruft die Anzahl der an das System angefügten Tablets ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ HRESULT GetTabletCount(
 
 <dl> <dt>
 
-*pctablets* \[ vorgenommen\]
+*pcTablets* \[ out\]
 </dt> <dd>
 
-Die Anzahl der Tablets, die an das System angefügt sind.
+Die Anzahl der an das System angefügten Tablets.
 
 </dd> </dl>
 
@@ -56,7 +56,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -78,7 +78,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itabletmanager-Schnittstelle**](itabletmanager.md)
+[**ITabletManager-Schnittstelle**](itabletmanager.md)
 </dt> </dl>
 
  

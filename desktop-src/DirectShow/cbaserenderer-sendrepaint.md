@@ -67,7 +67,7 @@ Abhängig vom Zustand des Diagramms kann das EC REPAINT-Ereignis dazu führen, d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: 'Benachrichtigt das Rückruf Objekt, dass die hintergrundenumeration beendet ist. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_BACKGROUNDENUMDONE Meldung (shlobj. h)
+description: Benachrichtigt das Rückrufobjekt, dass die Hintergrundenumeration abgeschlossen ist. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_BACKGROUNDENUMDONE (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 31cba726-c52f-46ba-8852-5dca9756206a
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 22ee1239cd281ad741acfc04a6ae397d4de2ea7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41a9fafb2c2af3a836e042ae3c0fd2d142c760a64a9e65375d244fd9accfbcc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592710"
 ---
-# <a name="sfvm_backgroundenumdone-message"></a>Sfvm- \_ backgroundenumschlag-Nachricht
+# <a name="sfvm_backgroundenumdone-message"></a>SFVM \_ BACKGROUNDENUMDONE-Nachricht
 
-Benachrichtigt das Rückruf Objekt, dass die hintergrundenumeration beendet ist. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Benachrichtigt das Rückrufobjekt, dass die Hintergrundenumeration abgeschlossen ist. Wird von [**IShellFolderViewCB::MessageSFVCB verwendet.**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)
 
 
 ```C++
@@ -36,9 +36,9 @@ Benachrichtigt das Rückruf Objekt, dass die hintergrundenumeration beendet ist.
 
 ## <a name="parameters"></a>Parameter
 
-Diese Nachricht weist keine Parameter auf.
+Diese Meldung verfügt über keine Parameter.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -46,7 +46,7 @@ Diese Nachricht weist keine Parameter auf.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Principal (principaltype)-Element
-description: Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an.
+title: Principal (principalType)-Element
+description: Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.
 ms.assetid: 4ba65976-98d2-4329-80f0-566fac2e9fda
 keywords:
 - Principal-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 41d308af651f1aff0ff402c7070adbe631bff9eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b8301371acc7624b4beb9b548191afa641ed267592b246cca7ba71ff170a9bdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059778"
 ---
-# <a name="principal-principaltype-element"></a>Principal (principaltype)-Element
+# <a name="principal-principaltype-element"></a>Principal (principalType)-Element
 
-Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an. Mit diesen Anmelde Informationen wird der Sicherheitskontext definiert, unter dem eine Aufgabe ausgeführt wird.
+Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an. Diese Anmeldeinformationen definieren den Sicherheitskontext, unter dem eine Aufgabe ausgeführt wird.
 
 ``` syntax
 <xs:element name="Principal"
@@ -30,15 +30,15 @@ Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an. Mit diesen A
  />
 ```
 
-Das **Principal** -Element wird durch den komplexen [**principaltype**](taskschedulerschema-principaltype-complextype.md) -Typ definiert.
+Das **Principal-Element** wird vom komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                               | Abgeleitet von                                                             | BESCHREIBUNG                                                            |
+| Element                                                               | Abgeleitet von                                                             | Beschreibung                                                            |
 |-----------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Principals**](taskschedulerschema-principals-tasktype-element.md) | [**principalstype**](taskschedulerschema-principalstype-complextype.md) | Gibt die dem Task zugeordneten Sicherheits Prinzipale an.<br/> |
+| [**Principals**](taskschedulerschema-principals-tasktype-element.md) | [**principalsType**](taskschedulerschema-principalstype-complextype.md) | Gibt die Sicherheitsprinzipale an, die dem Task zugeordnet sind.<br/> |
 
 
 
@@ -46,12 +46,12 @@ Das **Principal** -Element wird durch den komplexen [**principaltype**](tasksche
 
 
 
-| Element                                                                      | type                                                          | BESCHREIBUNG                                                                                                |
+| Element                                                                      | Typ                                                          | Beschreibung                                                                                                |
 |------------------------------------------------------------------------------|---------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**DisplayName**](taskschedulerschema-displayname-principaltype-element.md) | **string**                                                    | Gibt den Namen des Prinzipals an, der in der Taskplaner-Benutzeroberfläche angezeigt wird.<br/>                 |
-| [**GroupID**](taskschedulerschema-groupid-principaltype-element.md)         | **string**                                                    | Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der dem Prinzipal zugeordneten Tasks erforderlich ist.<br/> |
-| [**LogonType**](taskschedulerschema-logontype-principaltype-element.md)     | [**logonType**](taskschedulerschema-logontype-simpletype.md) | Gibt die Anmelde Methode für die Sicherheit an, die zum Ausführen der dem Prinzipal zugeordneten Tasks erforderlich ist.<br/>  |
-| [**UserID**](taskschedulerschema-userid-principaltype-element.md)           | **string**                                                    | Gibt die Benutzer-ID an, die erforderlich ist, um dem Prinzipal zugeordnete Tasks auszuführen<br/>              |
+| [**DisplayName**](taskschedulerschema-displayname-principaltype-element.md) | **string**                                                    | Gibt den Namen des Prinzipals an, der auf der Taskplaner Ui angezeigt wird.<br/>                 |
+| [**Groupid**](taskschedulerschema-groupid-principaltype-element.md)         | **string**                                                    | Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen von Aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.<br/> |
+| [**LogonType**](taskschedulerschema-logontype-principaltype-element.md)     | [**logonType**](taskschedulerschema-logontype-simpletype.md) | Gibt die Sicherheitsanmeldungsmethode an, die zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.<br/>  |
+| [**Userid**](taskschedulerschema-userid-principaltype-element.md)           | **string**                                                    | Gibt den Benutzerbezeichner an, der zum Ausführen von Aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.<br/>              |
 
 
 
@@ -59,23 +59,23 @@ Das **Principal** -Element wird durch den komplexen [**principaltype**](tasksche
 
 
 
-| Name | type | BESCHREIBUNG                                        |
+| Name | Typ | BESCHREIBUNG                                        |
 |------|------|----------------------------------------------------|
-| Id   | id   | Der Bezeichner der Prinzipal Definition.<br/> |
+| Id   | ID   | Bezeichner der Prinzipaldefinition.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung werden die Sicherheits Anmelde Informationen für einen Prinzipal mithilfe des [**Prinzipal**](principal.md) Objekts angegeben.
+Für die Skriptentwicklung werden die Sicherheitsanmeldeinformationen für einen Prinzipal mithilfe des [**Principal-Objekts**](principal.md) angegeben.
 
-Bei der C++-Entwicklung werden die Sicherheits Anmelde Informationen für einen Prinzipal mithilfe der [**IPrincipal**](/windows/desktop/api/taskschd/nn-taskschd-iprincipal) -Schnittstelle angegeben.
+Für die C++-Entwicklung werden die Sicherheitsanmeldeinformationen für einen Prinzipal mithilfe der [**IPrincipal-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iprincipal) angegeben.
 
-Die oben aufgeführten untergeordneten Elemente werden durch den komplexen Typ " [**principaltype**](taskschedulerschema-principaltype-complextype.md) " definiert. Informationen zur Sequenzierung für diese untergeordneten Elemente finden Sie unter [**principaltype**](taskschedulerschema-principaltype-complextype.md).
+Die oben aufgeführten untergeordneten Elemente werden durch den komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert. Sequenzierungsinformationen für diese untergeordneten Elemente finden Sie unter [**principalType**](taskschedulerschema-principaltype-complextype.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein Prinzipal mit einer Benutzer-ID definiert.
+Der folgende XML-Code definiert einen Prinzipal mit einem Benutzerbezeichner.
 
 
 ```XML
@@ -90,7 +90,7 @@ Im folgenden XML-Code wird ein Prinzipal mit einer Benutzer-ID definiert.
 
 
 
-Der folgende XML-Code definiert einen Prinzipal mit einem Gruppen Bezeichner.
+Der folgende XML-Code definiert einen Prinzipal mit einem Gruppenbezeichner.
 
 
 ```XML
@@ -110,8 +110,8 @@ Der folgende XML-Code definiert einen Prinzipal mit einem Gruppen Bezeichner.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

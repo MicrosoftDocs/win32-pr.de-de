@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119540870"
 ---
-# <a name="avencmpvgenerateheaderpicext-property"></a>AVEncMPVGenerateHeaderPicExt (Eigenschaft)
+# <a name="avencmpvgenerateheaderpicext-property"></a>AVEncMPVGenerateHeaderPicExt-Eigenschaft
 
 Gibt an, ob der Encoder Bilderweiterungsheader generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 
@@ -27,7 +27,7 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **VARIANT \_ TRUE ist,** generiert der Encoder Bilderweiterungsheader.
+Wenn der Wert **VARIANT \_ TRUE** ist, generiert der Encoder Bilderweiterungsheader.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn der Wert **VARIANT \_ TRUE ist,** generiert der Encoder Bilderweiterungshea
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

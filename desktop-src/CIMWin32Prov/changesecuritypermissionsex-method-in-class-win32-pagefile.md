@@ -1,8 +1,8 @@
 ---
-description: Ändert die Sicherheits Berechtigungen für die logische Auslagerungs Datei, die im Objekt Pfad angegeben ist (diese Methode ist eine erweiterte Version der changesecurrityberechtigungs-Methode).
+description: Ändert die Sicherheitsberechtigungen für die logische Auslagerungsdatei, die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der ChangeSecurityPermissions-Methode).
 ms.assetid: a852a7e6-f26a-4bd9-bb15-e4cdd577697c
 ms.tgt_platform: multiple
-title: Changesecurritypermissionsex-Methode der Win32_PageFile-Klasse
+title: ChangeSecurityPermissionsEx-Methode der Win32_PageFile Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a01a214e626f9c64ccf460eb3f8c031d1b45ff85
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c22aaa6552a9879eb08a6e65ce7d5a0651df458252a2a228d7d5acd8b5fb1d07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081034"
 ---
-# <a name="changesecuritypermissionsex-method-of-the-win32_pagefile-class"></a>Changesecurritypermissionsex-Methode der Win32- \_ Pagefile-Klasse
+# <a name="changesecuritypermissionsex-method-of-the-win32_pagefile-class"></a>ChangeSecurityPermissionsEx-Methode der Win32 \_ PageFile-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **changesecurritypermissionsex** ändert die Sicherheits Berechtigungen für die logische Auslagerungs Datei, die im Objekt Pfad angegeben ist (diese Methode ist eine erweiterte Version der [**changesecurrityberechtigungs**](changesecuritypermissions-method-in-class-win32-directory.md) -Methode). Wenn die logische Datei ein Verzeichnis ist, ist diese Methode rekursiv und ändert die Sicherheits Berechtigungen aller Dateien und Unterverzeichnisse, die im Verzeichnis enthalten sind.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **ChangeSecurityPermissionsEx** ändert die Sicherheitsberechtigungen für die logische Auslagerungsdatei, die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der [**ChangeSecurityPermissions-Methode).**](changesecuritypermissions-method-in-class-win32-directory.md) Wenn die logische Datei ein Verzeichnis ist, ist diese Methode rekursiv und ändert die Sicherheitsberechtigungen aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ uint32 ChangeSecurityPermissionsEx(
 
 <dl> <dt>
 
-*SecurityDescriptor* \[ in\]
+*SecurityDescriptor* \[ In\]
 </dt> <dd>
 
-Ein Ausdruck, der zu einer Instanz von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)aufgelöst wird. Dieser Parameter enthält neue Sicherheits Berechtigungen für die Instanz von [**Win32 \_ Page File**](win32-pagefile.md).
+Ausdruck, der in eine Instanz von [**Win32 \_ SecurityDescriptor auflöset.**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) Dieser Parameter enthält neue Sicherheitsberechtigungen für die Instanz von [**Win32 \_ PageFile.**](win32-pagefile.md)
 
 </dd> <dt>
 
-*Option* \[ in\]
+*Option* \[ In\]
 </dt> <dd>
 
-Sicherheits Berechtigung, die geändert werden soll. Wenn Sie z. b. den Besitzer und die DACL-Sicherheit (-Zugriffs Steuerungs Liste) ändern möchten, verwenden Sie Folgendes:
+Sicherheitsprivileg, das geändert werden soll. Verwenden Sie beispielsweise Folgendes, um die Sicherheit der Besitzer und der daclären Zugriffssteuerungsliste (Discretionary Access Control List, DACL) zu ändern:
 
 `Option = 1 + 4`
 
@@ -68,7 +68,7 @@ Oder
 
 <span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>
 
-<span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>**Ändern \_ \_Sicherheits \_ Informationen** für den Besitzer (1)
+<span id="CHANGE_OWNER_SECURITY_INFORMATION"></span><span id="change_owner_security_information"></span>**CHANGE \_ \_ \_ BESITZERSICHERHEITSINFORMATIONEN** (1)
 
 
 </dt> <dd>
@@ -79,7 +79,7 @@ Oder
 
 <span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>
 
-<span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>**Ändern \_ Gruppen \_ Sicherheits \_ Informationen** (2)
+<span id="CHANGE_GROUP_SECURITY_INFORMATION"></span><span id="change_group_security_information"></span>**CHANGE \_ \_ \_ GRUPPENSICHERHEITSINFORMATIONEN** (2)
 
 
 </dt> <dd>
@@ -90,7 +90,7 @@ Oder
 
 <span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>
 
-<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**Ändern \_ DACL- \_ Sicherheits \_ Informationen** (4)
+<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**CHANGE \_ \_ \_ DACL-SICHERHEITSINFORMATIONEN** (4)
 
 
 </dt> <dd>
@@ -101,36 +101,36 @@ Oder
 
 <span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>
 
-<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**Ändern \_ SACL- \_ Sicherheits \_ Informationen** (8)
+<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**CHANGE \_ \_ \_ SACL-SICHERHEITSINFORMATIONEN** (8)
 
 
 </dt> <dd>
 
-Ändern Sie die Liste der System Zugriffs Teuerung (SACL) der logischen Datei.
+Ändern Sie die SACL-Liste (System Access Control) der logischen Datei.
 
 </dd> </dl> </dd> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Der Name der Datei oder des Verzeichnisses, in der die **changesecurritypermissionsex** -Methode fehlgeschlagen ist. Dieser Parameter ist **null** , wenn die Methode erfolgreich ist.
+Name der Datei oder des Verzeichnisses, in der bzw. dem die **ChangeSecurityPermissionsEx-Methode fehlgeschlagen** ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in, optional\]
+*StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Benennt die untergeordnete Datei oder das Verzeichnis, die als Ausgangspunkt für **changesecurritypermissionsex** verwendet werden soll. In der Regel ist der *StartFileName* -Parameter der *StartFileName* -Parameter, der die Datei oder das Verzeichnis angibt, in dem ein Fehler aus dem vorherigen Methoden aufzurufen aufgetreten ist. Wenn dieser Parameter **null** ist, wird der Vorgang für die im [**ExecMethod**](/windows/desktop/WmiSdk/swbemservices-execmethod) -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Benennt die untergeordnete Datei oder das untergeordnete Verzeichnis, die bzw. das als Ausgangspunkt für **ChangeSecurityPermissionsEx verwendet werden soll.** In der Regel ist der *StartFileName-Parameter* der *StartFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter NULL **ist,** wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das [**im ExecMethod-Aufruf angegeben**](/windows/desktop/WmiSdk/swbemservices-execmethod) ist.
 
 </dd> <dt>
 
 *Rekursiv* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass die Eigentums Änderung rekursiv auf Dateien und Verzeichnisse in dem Verzeichnis angewendet wird, das von der [**CIM \_ LogicalFile**](cim-logicalfile.md) -Instanz angegeben wird.
+True **gibt** an, dass die Besitzänderung rekursiv auf Dateien und Verzeichnisse in dem von der [**CIM \_ LogicalFile-Instanz**](cim-logicalfile.md) angegebenen Verzeichnis angewendet wird.
 
 > [!Note]  
-> Bei Datei Instanzen wird der *rekursive* Parameter ignoriert.
+> Bei Dateiinstanzen wird *der Rekursive -Parameter* ignoriert.
 
  
 
@@ -160,12 +160,12 @@ Zugriff verweigert.“
 
 </dd> <dt>
 
-**Nicht spezifizierter Fehler**
+**Nicht angegebener Fehler**
 </dt> <dd>
 
 8
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -178,7 +178,7 @@ Der angegebene Name ist ungültig.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden.**
+**Das Objekt ist bereits vorhanden.**
 </dt> <dd>
 
 10
@@ -187,7 +187,7 @@ Das Objekt "" ist bereits vorhanden.
 
 </dd> <dt>
 
-**Dateisystem nicht NTFS**
+**Dateisystem, nicht NTFS**
 </dt> <dd>
 
 11
@@ -223,12 +223,12 @@ Das Verzeichnis ist nicht leer.
 
 </dd> <dt>
 
-**Freigabe Verletzung**
+**Freigabeverletzung**
 </dt> <dd>
 
 15
 
-Eine Freigabe Verletzung ist aufgetreten.
+Es liegt ein Freigabeverstoß vor.
 
 </dd> <dt>
 
@@ -241,7 +241,7 @@ Die angegebene Startdatei ist ungültig.
 
 </dd> <dt>
 
-**Berechtigung nicht aufrechterhalten**
+**Nicht privileg**
 </dt> <dd>
 
 17
@@ -267,8 +267,8 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -280,7 +280,7 @@ Ein angegebener Parameter ist ungültig.
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Pagefile**](win32-pagefile.md)
+[**Win32 \_ PageFile**](win32-pagefile.md)
 </dt> </dl>
 
  

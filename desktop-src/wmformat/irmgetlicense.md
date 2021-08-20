@@ -1,10 +1,10 @@
 ---
-title: Irmgetlicense-Schnittstelle
-description: Die irmgetlicense-Schnittstelle wird in einer Lauf Zeit Bibliothek implementiert, die als Teil des SDK für den Windows Media-Format installiert wird.
+title: IRMGetLicense-Schnittstelle
+description: Die IRMGetLicense-Schnittstelle wird in einer Laufzeitbibliothek implementiert, die als Teil des Windows Media Format SDK installiert wird.
 ms.assetid: 95a8cf57-72a4-496d-8d25-d094b47c3a57
 keywords:
-- Irmgetlicense Interface Windows Media-Format
-- Windows Media-Format für irmgetlicense Interface, beschrieben
+- IRMGetLicense-Schnittstelle – Windows-Medienformat
+- IRMGetLicense-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,22 +14,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3aa63bc7b351aab0a02c36dc16cb3600e405b26f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3ad5f74400fd35356967942403ae4f3c3024b6259a4ab7e62ffa544267a308b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585630"
 ---
-# <a name="irmgetlicense-interface"></a>Irmgetlicense-Schnittstelle
+# <a name="irmgetlicense-interface"></a>IRMGetLicense-Schnittstelle
 
-\[**Irmgetlicense** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Microsoft PlayReady](https://www.microsoft.com/PlayReady/). \]
+\[**IRMGetLicense steht** für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Microsoft PlayReady](https://www.microsoft.com/PlayReady/). \]
 
-Die **irmgetlicense** -Schnittstelle wird in einer Lauf Zeit Bibliothek implementiert, die als Teil des SDK für den Windows Media-Format installiert wird. Sie ermöglicht die Client seitige Lizenz Übernahme. Da diese Methode von Lizenz Ausstellern über webbasierte Anwendungen verwendet wird, ist Sie in der Dokumentation zum Windows Media Rights Manager SDK dokumentiert.
+Die **IRMGetLicense-Schnittstelle** wird in einer Laufzeitbibliothek implementiert, die als Teil des Windows Media Format SDK installiert wird. Sie ermöglicht den clientseitigen Lizenzerwerb. Da diese Methode von Lizenzausstellern über webbasierte Anwendungen verwendet wird, ist sie in der Dokumentation Windows Media Rights Manager SDK dokumentiert.
 
 ## <a name="members"></a>Member
 
-Die **irmgetlicense** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **IRMGetLicense-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
 ## <a name="requirements"></a>Anforderungen
 

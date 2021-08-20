@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: indexInfo. ToString-Methode'
-title: IndexInfo. ToString-Methode
+description: 'Weitere Informationen zu: IndexInfo.ToString-Methode'
+title: IndexInfo.ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.IndexInfo.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexinfo.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: af12b5d32acd77b40d90a24823a0956bcf665571
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 270bded6e6d126b513833c5ea97856fc2a4201a19d3915babd4330ac4757c753
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039468"
 ---
-# <a name="indexinfotostring-method"></a>IndexInfo. ToString-Methode
+# <a name="indexinfotostring-method"></a>IndexInfo.ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [indexInfo](./indexinfo-class.md)-Wert darstellt.
+Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die aktuelle [IndexInfo](./indexinfo-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die die aktuellen [indexInfo](./indexinfo-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [IndexInfo](./indexinfo-class.md)darstellt.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [IndexInfo-Klasse](./indexinfo-class.md)
 
 [IndexInfo-Member](./indexinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

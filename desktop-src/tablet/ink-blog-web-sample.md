@@ -1,45 +1,45 @@
 ---
-description: Die frei Hand Blog-Beispielanwendung veranschaulicht, wie eine verwaltete UserControl-Klasse erstellt wird, die über die Funktion zum Erstellen und Hosten dieses Steuer Elements in Microsoft Internet Explorer verfügt.
+description: Die Beispielanwendung "Ink-Blog" veranschaulicht, wie Sie eine verwaltete UserControl-Klasse erstellen, die über Einekungsfunktionen verfügt und diese Steuerung in Microsoft Internet Explorer hostet.
 ms.assetid: b6c3ad92-3ab1-4311-b318-13939e1a1a5a
-title: Frei Hand Blog-webbeispiel
+title: Ink-Blog-Webbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c24f132d355a95c9cb8debebe074df3f976e3b5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8796a05861d278015205b5ba0d3775e2e47af6a57ce1fee426c5c0c5011dacd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032358"
 ---
-# <a name="ink-blog-web-sample"></a>Frei Hand Blog-webbeispiel
+# <a name="ink-blog-web-sample"></a>Ink-Blog-Webbeispiel
 
-Die frei Hand Blog-Beispielanwendung veranschaulicht, wie eine verwaltete [UserControl](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) -Klasse erstellt wird, die über die Funktion zum Erstellen und Hosten dieses Steuer Elements in Microsoft Internet Explorer verfügt. Das Beispiel veranschaulicht außerdem eine Technik zum Senden von frei Hand Daten über ein Netzwerk mithilfe von http und zum Beibehalten von frei Hand Eingaben auf einem Server.
+Die Beispielanwendung "Ink-Blog" veranschaulicht, wie Sie eine verwaltete [UserControl-Klasse](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) erstellen, die über Einekungsfunktionen verfügt und diese Steuerung in Microsoft Internet Explorer hostet. Das Beispiel veranschaulicht auch ein Verfahren zum Senden von Ink-Daten über ein Netzwerk mithilfe von HTTP und zum Beibehalten von Ink auf einem Server.
 
 > [!Note]  
-> Zum Ausführen dieses Beispiels muss Microsoft Internetinformationsdienste (IIS) mit ASP.NET installiert sein. Stellen Sie sicher, dass der Computer die Anforderungen erfüllt, die für das Ausführen von ASP.NET-Anwendungen auf Ihrem Computer erforderlich sind.
+> Zum Ausführen dieses Beispiels muss Microsoft-Internetinformationsdienste (IIS) mit ASP.NET installiert sein. Stellen Sie sicher, dass Ihr Computer die Anforderungen erfüllt, die erforderlich sind, damit ASP.NET Anwendungen auf Ihrem Computer ausgeführt werden können.
 
  
 
 > [!Note]  
-> Wenn Sie dieses Beispiel auf einem nicht-Tablet PC-Computer mit installiertem Microsoft Windows XP Tablet PC Edition Development Kit 1,7 ausführen, funktioniert die Text Erkennungsfunktion für den frei Hand Titel nicht. Dies liegt daran, dass ein nicht Tablet PC-Computer, auf dem das Tablet PC SDK 1,7 installiert ist, keine Erkennungs Tools hat. Der Rest der Anwendung führt wie beschrieben aus.
+> Wenn Sie dieses Beispiel auf einem Nicht-Tablet-PC-Computer ausführen, auf dem das Microsoft Windows XP Tablet PC Edition Development Kit 1.7 installiert ist, funktioniert das Texterkennungsfeature für den Ink-Titel nicht. Dies liegt daran, dass auf einem Nicht-Tablet PC-Computer, auf dem das Tablet PC SDK 1.7 installiert ist, keine Erkennungen verfügbar sind. Der Rest der Anwendung wird wie beschrieben ausgeführt.
 
  
 
 ## <a name="overview"></a>Übersicht
 
-Das frei Hand Blog Beispiel erstellt ein frei Hand fähiges Weblog. Inkblogweb ist eine ASP.NET-Anwendung. Der Ink-Eintrag wird mithilfe eines Benutzer Steuer Elements durchgeführt, auf das von einer ASP.NET-Seite verwiesen wird.
+Im Ink-Blogbeispiel wird ein Ink-fähiges Weblog erstellt. InkBlogWeb ist eine ASP.NET Anwendung. Die Inkeingabe erfolgt über ein Benutzersteuerelement, auf das von einer ASP.NET Seite verwiesen wird.
 
-Das Benutzer Steuerelement erkennt, ob die Tablet PC-Platt Form Komponenten auf dem Client Computer installiert sind. Wenn dies der Fall ist, stellt das Benutzer Steuerelement dem Benutzer zwei frei Hand fähige Bereiche auf der Webseite zur Seite: eine zum Binden eines Titels für den Blogeintrag und eine für den Text des Eintrags. Wenn die Tablet PC-Platt Form Komponenten nicht installiert sind, erhält der Benutzer ein Standard Textfeld-Steuerelement für den Titel und den Textkörper des Eintrags.
+Das Benutzersteuerelement erkennt, ob die Tablet PC-Plattformkomponenten auf dem Clientcomputer installiert sind. Wenn ja, zeigt das Benutzersteuerelement dem Benutzer zwei Freihandbereiche auf der Webseite an: einen für das Freihandeingaben eines Titels für den Blogeintrag und einen für den Text des Eintrags. Wenn die Tablet PC Platform-Komponenten nicht installiert sind, erhält der Benutzer ein Standardtextfeld-Steuerelement für Titel und Text des Eintrags.
 
-Nachdem der Benutzer die Erstellung des Eintrags abgeschlossen hat, klickt er auf eine Schaltfläche, Hinzufügen eines Blogs, und der Beitrag wird zum Speichern an den Webserver gesendet. Auf dem-Server speichert die Anwendung den Titeltext und das Posting-Datum sowie einen Verweis auf eine Graphics Interchange Format-Datei (GIF). Die GIF-Datei, die ebenfalls auf dem Server gespeichert ist, enthält die frei Hand Daten aus dem Text in einer verstärkten GIF-Datei. Weitere Informationen zum verstärkten GIF-Format finden Sie unter Speichern von frei Hand Eingaben [in HTML](storing-ink-in-html.md).
+Wenn der Benutzer die Erstellung des Eintrags abgeschlossen hat, klickt er auf die Schaltfläche Blog hinzufügen, und der Beitrag wird zur Speicherung an den Webserver gesendet. Auf dem Server speichert die Anwendung den Titeltext und das Veröffentlichungsdatum sowie einen Verweis auf eine GIF-Datei (Graphics Interchange Format). Die GIF-Datei, die ebenfalls auf dem Server gespeichert ist, enthält die Ink-Daten aus dem Text in einer verstärkten GIF-Datei. Weitere Informationen zum verstärkten GIF-Format finden Sie unter [Speichern von Ink in HTML.](storing-ink-in-html.md)
 
-Es gibt zwei Projekte in der Projekt Mappe inkblog: das **inkblogcontrols** -Projekt und das **inkblogweb** -Projekt.
+Es gibt zwei Projekte in der InkBlog-Projektmappe: das **Projekt InkBlogControls** und das **Projekt InkBlogWeb.**
 
-## <a name="inkblogcontrols-project"></a>Inkblogcontrols-Projekt
+## <a name="inkblogcontrols-project"></a>InkBlogControls Project
 
-Das **inkblogcontrols** -Projekt ist ein [UserControl](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) -Projekt, das den Code für das Benutzer Steuerelement enthält, das das Binden auf der Webseite ermöglicht. Der Code für dieses Steuerelement, das inkarea-Steuerelement, befindet sich in der Datei "inkarea. cs".
+Das **InkBlogControls-Projekt** ist ein [UserControl-Projekt,](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) das den Code für das Benutzersteuerelement enthält, das das Öffnen auf der Webseite ermöglicht. Der Code für dieses Steuerelement, das InkArea-Steuerelement, befindet sich in der Datei InkArea.cs.
 
-Die `InkArea` Klasse erbt von der [UserControl](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) -Klasse. Der Konstruktor für das- `InkArea` Steuerelement ruft eine Hilfsmethode auf `CreateInkCollectionSurface` .
+Die `InkArea` -Klasse erbt von der [UserControl-Klasse.](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1) Der Konstruktor für das `InkArea` Steuerelement ruft die Hilfsmethode `CreateInkCollectionSurface` auf.
 
 
 ```C++
@@ -66,7 +66,7 @@ public InkArea()
 
 
 
-Die- `CreateInkCollectionSurface` Methode bestimmt, ob die Tablet PC-Komponenten auf dem Client verfügbar sind, indem versucht wird, eine Instanz der [InkCollector](/previous-versions/ms583683(v=vs.100)) -Klasse zu erstellen. Wenn die Methode erfolgreich aufgerufen `CreateInkCollectionSurface` wird, gibt die Methode ein [Panel](/dotnet/api/system.windows.forms.panel?view=netcore-3.1) -Objekt als Steuerelement zurück.
+Die `CreateInkCollectionSurface` -Methode bestimmt, ob die Freihandkomponenten des Tablet-PCs auf dem Client verfügbar sind, indem versucht wird, eine Instanz der [InkCollector-Klasse](/previous-versions/ms583683(v=vs.100)) zu erstellen. Wenn der Aufruf der `CreateInkCollectionSurface` -Methode erfolgreich ist, gibt die Methode ein [Panel-Objekt](/dotnet/api/system.windows.forms.panel?view=netcore-3.1) als Steuerelement zurück.
 
 
 ```C++
@@ -89,11 +89,11 @@ protected Control CreateInkCollectionSurface()
 
 
 
-Wenn der Konstruktor ausfällt, da die Freihand-Platt Formdateien nicht gefunden werden, `InputArea` wird das Steuerelement als [TextBox](/dotnet/api/system.windows.forms.textbox?view=netcore-3.1) -Steuerelement und nicht als [InkCollector](/previous-versions/ms583683(v=vs.100)) -Steuerelement instanziiert. Der Konstruktor passt dann die Größe des Steuer Elements auf die Größe des übergeordneten Benutzer Steuer Elements an und fügt es der Auflistung der Steuerelemente des übergeordneten Elements hinzu.
+Wenn der Konstruktor fehlschlägt, weil die Plattformdateien für die Markierung nicht gefunden werden, wird das `InputArea` Steuerelement als [TextBox-Steuerelement](/dotnet/api/system.windows.forms.textbox?view=netcore-3.1) anstelle eines [InkCollector-Steuerelements](/previous-versions/ms583683(v=vs.100)) instanziiert. Der Konstruktor dimensioniert das Steuerelement dann auf die Größe des übergeordneten Benutzersteuerelements und fügt es der Controls-Auflistung des übergeordneten Elements hinzu.
 
-Die inkarea-Steuerelement Klasse implementiert drei interessante öffentliche Eigenschaften: inkdata, TextData und webEnabled.
+Die InkArea-Steuerelementklasse implementiert drei interessante öffentliche Eigenschaften: InkData, TextData und WebEnabled.
 
-Die inkdata-Eigenschaft ist schreibgeschützt und ermöglicht den Zugriff auf die serialisierten frei Hand Daten, wenn der Client das Binden unterstützt. Wenn der Client keine Verknüpfung unterstützt, ruft die inkdata-Eigenschaft eine leere Zeichenfolge ab. Die inkdata-Eigenschaft ruft die Hilfsmethode serializeinkdata auf, um zu bestimmen, ob der Client das Binden unterstützt.
+Die InkData-Eigenschaft ist schreibgeschützt und bietet Zugriff auf die serialisierten Ink-Daten, wenn der Client Dienung unterstützt. Wenn der Client Freihandhand nicht unterstützt, ruft die InkData-Eigenschaft eine leere Zeichenfolge ab. Die InkData-Eigenschaft ruft die Hilfsmethode SerializeInkData auf, um zu ermitteln, ob der Client Freihandhand unterstützt.
 
 
 ```C++
@@ -118,9 +118,9 @@ protected String SerializeInkData()
 
 
 
-In der- `SerializeInkData` Methode ist die Umwandlung in [InkCollector](/previous-versions/ms583683(v=vs.100)) erforderlich, wenn das [Ink](/previous-versions/ms583670(v=vs.100)) -Objekt angefordert wird, da `inputArea` als- [Steuer](/dotnet/api/system.windows.forms.control?view=netcore-3.1)Element deklariert wird. Wenn das Ink-Objekt beliebige Striche enthält, werden die frei Hand Daten `inkDataBytes` als GIF (angegeben mit dem [PersistenceFormat](/previous-versions/ms552503(v=vs.100)) -Enumerationswert) im Bytearray gespeichert. Die-Methode konvertiert dann das Bytearray in eine Base64-codierte Zeichenfolge und gibt diese Zeichenfolge zurück.
+In der `SerializeInkData` -Methode ist die Umwandlung [in InkCollector](/previous-versions/ms583683(v=vs.100)) erforderlich, wenn das [Ink-Objekt](/previous-versions/ms583670(v=vs.100)) erhalten wird, da `inputArea` als [Steuerelement](/dotnet/api/system.windows.forms.control?view=netcore-3.1)deklariert wird. Wenn das Ink-Objekt Striche enthält, werden die Ink-Daten als GIF im `inkDataBytes` Bytearray gespeichert (angegeben mithilfe des [PersistenceFormat-Enumerationswerts).](/previous-versions/ms552503(v=vs.100)) Die -Methode konvertiert dann das Bytearray in eine Base64-codierte Zeichenfolge und gibt diese Zeichenfolge zurück.
 
-Vorausgesetzt, dass der Client eine Erkennung ausführen kann, gibt die- `TextData` Eigenschaft das [erkentionresult](/previous-versions/ms552537(v=vs.100)) -Objekt zurück, das die frei Hand Daten an eine Handschrifterkennung übergibt. Wenn der Client nicht frei Hand fähig ist, wird der Text Feld Inhalt zurückgegeben, wie im folgenden Code dargestellt.
+Unter der Annahme, dass der Client die Erkennung durchführen kann, gibt die `TextData` Eigenschaft das [RecognitionResult-Objekt](/previous-versions/ms552537(v=vs.100)) aus der Übergabe der Freihanddaten an eine Handschrifterkennung zurück. Wenn der Client keine Ink-Fähigen ist, wird der Inhalt des Textfelds zurückgegeben, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -142,7 +142,7 @@ public string TextData
 
 
 
-Die- `TextData` Eigenschaft ruft eine Hilfsmethode `RecognizeInkData` auf, die im folgenden Code gezeigt wird, um die Erkennung auszuführen. Wenn auf dem System Erkennungs-Engines vorhanden sind, `RecognizeInkData` gibt die Methode eine Zeichenfolge zurück, die die [TopString](/previous-versions/ms572009(v=vs.100)) -Eigenschaft des [erkentionresult](/previous-versions/ms552537(v=vs.100)) -Objekts enthält. Andernfalls wird eine leere Zeichenfolge zurückgegeben.
+Die `TextData` -Eigenschaft ruft die Hilfsmethode auf, `RecognizeInkData` die im folgenden Code gezeigt wird, um die Erkennung auszuführen. Wenn Erkennungs-Engines auf dem System vorhanden sind, gibt die `RecognizeInkData` Methode eine Zeichenfolge zurück, die die [TopString-Eigenschaft](/previous-versions/ms572009(v=vs.100)) des [RecognitionResult-Objekts](/previous-versions/ms552537(v=vs.100)) enthält. Andernfalls wird eine leere Zeichenfolge zurückgegeben.
 
 
 ```C++
@@ -181,31 +181,31 @@ protected String RecognizeInkData()
 
 
 
-Die- `InkEnabled` Eigenschaft ist ein Schreib geschützter boolescher Wert, der angibt, ob das Freihand auf dem Client Computer unterstützt wird.
+Die `InkEnabled` -Eigenschaft ist ein schreibgeschützter boolescher Wert, der angibt, ob die Inkundung auf dem Clientcomputer unterstützt wird.
 
-Ein weiterer wichtiger öffentlicher Member der `InkArea` Steuerelement Klasse ist die- `DisposeResources` Methode. Diese Methode ruft intern die- `Dispose` Methode auf, um sicherzustellen, dass alle Ressourcen, die vom Benutzer Steuerelement genutzt werden, bereinigt werden. Jede Anwendung, die das-Steuerelement verwendet, `InkArea` muss die- `DisposeResources` Methode nach Abschluss der Verwendung des-Steuer Elements aufruft.
+Ein weiterer wichtiger öffentlicher Member der `InkArea` Steuerelementklasse ist die `DisposeResources` -Methode. Diese Methode ruft intern die `Dispose` -Methode auf, um sicherzustellen, dass alle vom Benutzersteuerelement genutzten Ressourcen bereinigt werden. Jede Anwendung, die das -Steuerelement verwendet, `InkArea` muss die `DisposeResources` -Methode aufrufen, wenn die Verwendung des Steuerelements abgeschlossen ist.
 
-## <a name="inkblogweb-project"></a>Inkblogweb-Projekt
+## <a name="inkblogweb-project"></a>InkBlogWeb Project
 
-Das inkblogweb-Projekt ist ein Websetup-Bereitstellungs Projekt, das auf das-Steuerelement verweist, `InkArea` um die blogfunktionalität bereitzustellen Weitere Informationen zu Websetup-Bereitstellungs Projekten finden Sie unter [Bereitstellung eines Websetup-Projekts](https://msdn.microsoft.com/library/k8kzx145(v=VS.71).aspx).
+Das InkBlogWeb-Projekt ist ein Websetup-Bereitstellungsprojekt, das auf das `InkArea` Steuerelement verweist, um die Blogfunktion bereitzustellen. Weitere Informationen zu WebSetup-Bereitstellungsprojekten finden Sie unter [Bereitstellung eines Websetups Project](https://msdn.microsoft.com/library/k8kzx145(v=VS.71).aspx).
 
-Es gibt zwei ASPX-Dateien, die das Blog Beispiel implementieren: default. aspx und addblog. aspx. Default. aspx ist die Standardseite für die inkblogweb-Anwendung. Die Code Behind-Datei für diese Seite ist "default. aspx. cs". Diese Seite enthält einen Link zu der Seite, die das neue Blogeintrag-Formular enthält, und zeigt alle vorhandenen Blogeinträge an. Dieser Prozess wird später nach der folgenden Untersuchung der neuen Blogeintrag-Formularseite addblog. aspx beschrieben.
+Es gibt zwei ASPX-Dateien, die das Blogbeispiel implementieren: Default.aspx und AddBlog.aspx. Default.aspx ist die Standardseite für die Anwendung InkBlogWeb. Die Code-Behind-Datei für diese Seite ist Default.aspx.cs. Diese Seite enthält einen Link zu der Seite, die das neue Blogeintragsformular enthält, und zeigt alle vorhandenen Blogeinträge an. Dieser Vorgang wird später nach der folgenden Untersuchung der neuen Blogeintragsformularseite AddBlog.aspx beschrieben.
 
-Addblog. aspx und die zugehörige Code Behind-Datei, addblog. aspx. cs, enthalten die Logik und den Benutzeroberflächen Code zum Erstellen neuer Blogeinträge. Addblox. aspx verweist auf zwei Instanzen der inkarea-Steuerelement Klasse, die im Projekt inkblogcontrols erstellt wurde, indem das HTML-Objekt Element verwendet wird, wie im folgenden Beispiel gezeigt. Eine Instanz verfügt über ein `id` Attribut von inkblogtitle, das andere hat ein ID-Attribut von inkblogbody.
+AddBlog.aspx und die zugehörige CodeBehind-Datei AddBlog.aspx.cs enthalten die Logik und den Benutzeroberflächencode zum Erstellen neuer Blogeinträge. AddBlox.aspx verweist auf zwei Instanzen der InkArea-Steuerelementklasse, die im InkBlogControls-Projekt mithilfe des HTML OBJECT-Elements erstellt wurde, wie im folgenden Beispiel gezeigt. Eine Instanz verfügt über das `id` Attribut inkBlogTitle und die andere über das ID-Attribut inkBlogBody.
 
 `<OBJECT id="inkBlogTitle" classid="InkBlogControls.dll#InkBlog.InkArea" width="400" height="48" VIEWASTEXT>``</OBJECT>``<br/>``<OBJECT id="inkBlogBody" classid="InkBlogControls.dll#InkBlog.InkArea" width="400" height="296" VIEWASTEXT>``</OBJECT>`
 
-Die InkBlogControls.dll-Assembly muss sich im selben Verzeichnis befinden wie die ASPX-Seite, die darauf verweist. Das Websetup-Bereitstellungs Projekt stellt sicher, dass dies der Fall ist. Dies wird durch das vorhanden sein des Elements "primäre Ausgabe von inkblogcontrols" im Bereitstellungs Projekt deutlich.
+Die InkBlogControls.dll Assembly muss sich im gleichen Verzeichnis wie die ASPX-Seite befinden, die auf sie verweist. Das Websetup-Bereitstellungsprojekt stellt sicher, dass dies der Fall ist. Dies wird durch das Vorhandensein des Elements "Primäre Ausgabe von InkBlogControls" im Project Bereitstellung belegt.
 
-Das Title-Steuerelement ist nur 48 Pixel hoch, um den Eintrag einer einzelnen Zeile frei Hand Eingaben für den Titel zu vereinfachen. Das Body-Steuerelement ist 296 Pixel hoch, um Platz für größere Blogeinträge mehrerer Zeilen oder möglicherweise Zeichnungen zu schaffen.
+Das Titelsteuerelement ist nur 48 Pixel hoch, um die Eingabe einer einzelnen Ink-Zeile für den Titel zu erleichtern. Das Textsteuerelement ist 296 Pixel hoch, um Platz für größere Blogeinträge mit mehreren Zeilen oder vielleicht Zeichnungen zu schaffen.
 
-Die inkarea-Steuerelemente sind mit einer Client seitigen Skriptfunktion, addblog, über den OnClick-Ereignishandler eines Standard-HTML-Schaltflächen Elements verbunden.
+Die InkArea-Steuerelemente sind mit der clientseitigen Skriptfunktion AddBlog über den onclick-Ereignishandler eines STANDARDMÄßIG-HTML BUTTON-Elements verbunden.
 
 `<button id="BUTTON1" type="button" onclick="AddBlog()">Add Blog</button>`
 
-Es gibt auch ein HTML-Formular auf der Seite, das drei verborgene Eingabeelemente enthält: blogtitletext, blogbodytext und blogbodyinkdata. Dieses Formular wird verwendet, um die Blogeintrags Daten an den Server zurückzusenden. Addblog. aspx ist der Post Back Handler, der für das Formular definiert ist.
+Es gibt auch ein HTML-Formular auf der Seite, das drei ausgeblendete INPUT-Elemente enthält: BlogTitleText, BlogBodyText und BlogBodyInkData. Dieses Formular wird verwendet, um die Blogeintragsdaten zurück an den Server zu posten. AddBlog.aspx ist der für das Formular definierte Postbackhandler.
 
-Die in Microsoft JScript geschriebene Funktion "addblog" <entity type="reg"/> extrahiert die Blog Daten aus den inkarea-Steuerelementen und sendet die Ergebnisse an den Server.
+Die in Microsoft JScript geschriebene AddBlog-Funktion <entity type="reg"/> extrahiert die Blogdaten aus den InkArea-Steuerelementen und sendet die Ergebnisse an den Server.
 
 
 ```C++
@@ -224,7 +224,7 @@ function AddBlog()
 
 
 
-Wenn die Daten auf dem Server eintreffen, prüft der Code in addblog. aspx. cs den \_ Ereignishandler für den Seiten Ladevorgang, um festzustellen, ob die Form-Eigenschaft des HttpRequest-Objekts Daten enthält. Wenn dies der Fall ist, wird ein Dateiname erstellt, der auf der aktuellen Systemzeit basiert, die Formulardaten in drei Zeichen folgen Variablen einfügt und die Daten in eine HTML-Datei und eine GIF-Datei, die die frei Hand Daten enthält (sofern vorhanden), wie im folgenden Code gezeigt, geschrieben.
+Wenn die Daten beim Server eintreffen, überprüft der Code in AddBlog.aspx.cs den \_ Seitenladeereignishandler, um festzustellen, ob die Form-Eigenschaft des HttpRequest-Objekts Daten enthält. Wenn ja, wird ein Dateiname basierend auf der aktuellen Systemzeit erstellt, die Formulardaten werden in drei Zeichenfolgenvariablen geschrieben, und die Daten werden in eine HTML-Datei und eine GIF-Datei geschrieben, die die Ink-Daten enthält(sofern vorhanden), wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -249,51 +249,51 @@ CreateHtm(blogPath, fileName, blogTitle, content);
 
 
 
-Weitere Informationen zu den Hilfsmethoden finden Sie im Beispiel Quell Code.
+Weitere Informationen zu den Hilfsmethoden finden Sie im Beispielquellcode.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Das Tablet PC SDK 1,7 installiert standardmäßig das frei Hand Blog-webbeispiel. Um das Beispiel auszuführen, navigieren Sie in Internet Explorer zu https://localhost/TabletPCSDK\_WebSamples/InkBlogWeb/Default.aspx . Wenn Sie Windows Server 2003 ausführen, ersetzen Sie den Computernamen durch "localhost".
+Das Tablet PC SDK 1.7 installiert standardmäßig das Ink Blog Web-Beispiel. Navigieren Sie zum Ausführen des Beispiels in Internet Explorer zu https://localhost/TabletPCSDK\_WebSamples/InkBlogWeb/Default.aspx . Wenn Sie Windows Server 2003 ausführen, ersetzen Sie den Computernamen durch "localhost".
 
 > [!Note]  
-> Die kompilierten webbeispiele werden von der Standard Installationsoption für das SDK nicht installiert. Sie müssen eine benutzerdefinierte Installation durchführen und die unter Option "vorkompilierte webbeispiele" auswählen, um Sie zu installieren.
+> Die kompilierten Webbeispiele werden nicht von der Standardinstallationsoption für das SDK installiert. Sie müssen eine benutzerdefinierte Installation abschließen und die Unteroption "Vorkompilierte Webbeispiele" auswählen, um sie zu installieren.
 
  
 
-Sie können das Beispiel auch ausführen, indem Sie das Projekt in Microsoft Visual Studio .NET öffnen und <entity type="reg"/> dann auf einem separaten Computer bereitstellen, auf dem IIS ausgeführt wird.
+Sie können das Beispiel auch ausführen, indem Sie das Projekt in Microsoft Visual Studio .NET öffnen und erstellen <entity type="reg"/> und es dann auf einem separaten Computer mit IIS bereitstellen.
 
 ## <a name="troubleshooting-the-sample"></a>Problembehandlung bei diesem Beispiel
 
-Drei Bereiche, die Schwierigkeiten verursachen können, wenn das Beispiel ausgeführt oder gehostet wird, sind Berechtigungen und Erkennung.
+Drei Bereiche, die beim Ausführen oder Hosten des Beispiels Probleme verursachen können, sind Berechtigungen und Erkennung.
 
 ### <a name="permissions"></a>Berechtigungen
 
-Das Beispiel erfordert Schreibberechtigungen innerhalb des virtuellen Stamm Ordners für das Konto, das versucht, einen neuen Blogeintrag zu erstellen. Standardmäßig verfügt die kompilierte Version des Beispiels, das im Tablet PC SDK 1,7 bereitgestellt wurde, über die richtigen Berechtigungen, um diese Anforderung zu erfüllen.
+Das Beispiel erfordert Schreibberechtigungen innerhalb des virtuellen Stammordners für das Konto, das versucht, einen neuen Blogeintrag zu erstellen. Standardmäßig sind für die kompilierte Version des Im Tablet PC SDK 1.7 bereitgestellten Beispiels die richtigen Berechtigungen festgelegt, um diese Anforderung zu erfüllen.
 
-Wenn Sie das Beispiel mit dem bereitgestellten Websetup-Bereitstellungs Projekt erstellen und bereitstellen, müssen Sie der Gruppe "% MachineName% \\ Users" Schreibzugriff auf den Dateisystem Ordner zuweisen, auf den vom virtuellen Stammverzeichnis "inkblogweb" verwiesen wird (z. b. "C: \\ Inetpub \\ wwwroot \\ inkblogweb"). Die Gruppe Benutzer enthält das anonyme Konto, das von IIS verwendet wird. auf diese Weise kann die ASP.NET-Anwendung die neuen Blogeinträge in das Dateisystem schreiben. Eine Alternative besteht darin, den anonymen Zugriff auf das virtuelle Stammverzeichnis zu entfernen und die Authentifizierung zu erzwingen.
+Wenn Sie das Beispiel mithilfe des bereitgestellten Websetupbereitstellungsprojekts erstellen und bereitstellen, müssen Sie der Gruppe %MACHINENAME% \\ Benutzer Schreibzugriff auf den Dateisystemordner gewähren, auf den der virtuelle Stamm inkBlogWeb verweist (z. B. C: \\ InetPub \\ WWWRoot \\ InkBlogWeb). Die Gruppe Benutzer enthält das anonyme Konto, das von IIS verwendet wird, sodass die ASP.NET Anwendung die neuen Blogeinträge in das Dateisystem schreiben kann. Eine Alternative besteht darin, den anonymen Zugriff auf den virtuellen Stamm zu entfernen und die Authentifizierung zu erzwingen.
 
 ### <a name="recognition"></a>Erkennung
 
-Die Handschrifterkennung muss installiert sein, damit die frei Hand Eingaben im Titel des Blogs erkannt werden. Wenn Sie von einem Computer mit einem anderen Betriebssystem als Windows XP Tablet PC Edition auf die Anwendung inkblog zugreifen, aber mit installiertem Tablet PC SDK 1,7, können Sie in den inkarea-Steuerelementen in Freihand schreiben, aber die Erkennungs-Engines sind nicht vorhanden, und für ihre Blogeinträge werden keine Titel angezeigt. Der frei Hand Inhalt im Text wird jedoch immer noch angezeigt.
+Die Handschrifterkennung muss installiert sein, um die Freihand im Titel des Blogs zu erkennen. Wenn Sie von einem Computer mit einem anderen Betriebssystem als Windows XP Tablet PC Edition auf die InkBlog-Anwendung zugreifen, aber das Tablet PC SDK 1.7 installiert ist, können Sie Ink-Ink in die InkArea-Steuerelemente schreiben, aber die Erkennungs-Engines sind nicht vorhanden, und es werden keine Titel für Ihre Blogeinträge angezeigt. Der Freihandinhalt im Text wird jedoch weiterhin angezeigt.
 
 ### <a name="machine-configuration"></a>Computerkonfiguration
 
-Wenn Sie ASP.net und den .NET Framework auf einem Computer installiert haben und anschließend IIS deinstallieren und neu installieren, werden die Skript Zuordnungen unterbrechen und ASP.NET funktioniert nicht. Wenn dies der Fall ist, können Sie die ASP.NET-Skript Zuordnungen mit dem ASP.NET IIS-Registrierungs Tool (ASPNET \_regiis.exe-i) reparieren.
+Wenn Sie ASP.NET und die .NET Framework auf einem Computer installiert haben und IIS dann deinstallieren und neu installieren, werden die Skriptzuordnungen nicht mehr ausgeführt, und ASP.NET funktioniert nicht. In diesem Fall können Sie die ASP.NET Skriptzuordnungen mit dem ASP.NET IIS-Registrierungstool (Aspnet \_regiis.exe -i) reparieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[InkCollector](/previous-versions/ms583683(v=vs.100))
+[Inkcollector](/previous-versions/ms583683(v=vs.100))
 </dt> <dt>
 
-[Frei Hand Eingaben im Web](ink-on-the-web.md)
+[Ink im Web](ink-on-the-web.md)
 </dt> <dt>
 
-[Frei Hand Datenformate](ink-data-formats.md)
+[Ink-Datenformate](ink-data-formats.md)
 </dt> <dt>
 
-[System. Windows. Forms. UserControl-Klasse](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1)
+[System. Windows. Forms.UserControl-Klasse](/dotnet/api/system.windows.forms.usercontrol?view=netcore-3.1)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: HDM_HITTEST Meldung (kommstrg. h)
-description: Testet einen Punkt, um zu bestimmen, welches Header Element, sofern vorhanden, sich am angegebenen Punkt befindet.
+title: HDM_HITTEST-Nachricht (Commctrl.h)
+description: Testet einen Punkt, um zu bestimmen, welches Headerelement sich ggf. am angegebenen Punkt befindet.
 ms.assetid: ff866bd1-9f2a-457c-921d-549610ab9088
 keywords:
-- Windows-Steuerelemente für HDM_HITTEST Meldung
+- HDM_HITTEST Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8b6634396dbd5ecd4510a4f7341fc6380dbb0ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1cc219640d9dd9d5d9a4c9537169401f681e37660554266b3edd653365cf8cc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544770"
 ---
-# <a name="hdm_hittest-message"></a>HDM- \_ HitTest-Meldung
+# <a name="hdm_hittest-message"></a>\_HDM-HITTEST-Nachricht
 
-Testet einen Punkt, um zu bestimmen, welches Header Element, sofern vorhanden, sich am angegebenen Punkt befindet.
+Testet einen Punkt, um zu bestimmen, welches Headerelement sich ggf. am angegebenen Punkt befindet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Testet einen Punkt, um zu bestimmen, welches Header Element, sofern vorhanden, s
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**hdhittestinfo**](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) -Struktur, die die zu testende Position enthält und Informationen über die Ergebnisse des Tests empfängt.
+Ein Zeiger auf eine [**HDHITTESTINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) die die position zum Testen enthält und Informationen über die Ergebnisse des Tests empfängt.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Gibt den Index des Elements an der angegebenen Position zurück, sofern vorhande
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

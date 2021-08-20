@@ -1,74 +1,74 @@
 ---
-title: Benutzerdefinierte RAS-Skript
-description: Entwickler können eine benutzerdefinierte Skript-DLL erstellen, die sich auf einem RAS-Client Computer befindet. Diese DLL kann während der Verbindungs Herstellung mit dem Server kommunizieren.
+title: Benutzerdefinierte RAS-Skripterstellung
+description: Entwickler können eine benutzerdefinierte Skripterstellungs-DLL erstellen, die sich auf einem RAS-Clientcomputer befindet. Diese DLL kann während des Verbindungsvorgangs mit dem Server kommunizieren.
 ms.assetid: c27b8b02-6018-4441-a355-1fb890b9001c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c625f020d9dafcb352c5f1b382014f9dba189330
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 66ac0bd83b8d7c48ee8b0468d89a70d19a5e5e6555b9a8bc8ac86d66c8cd666e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673280"
 ---
-# <a name="ras-custom-scripting"></a>Benutzerdefinierte RAS-Skript
+# <a name="ras-custom-scripting"></a>Benutzerdefinierte RAS-Skripterstellung
 
-Entwickler können eine benutzerdefinierte Skript-DLL erstellen, die sich auf einem RAS-Client Computer befindet. Diese DLL kann während der Verbindungs Herstellung mit dem Server kommunizieren.
+Entwickler können eine benutzerdefinierte Skripterstellungs-DLL erstellen, die sich auf einem RAS-Clientcomputer befindet. Diese DLL kann während des Verbindungsvorgangs mit dem Server kommunizieren.
 
-**Windows NT:** Die benutzerdefinierte Skripterstellung ist nicht verfügbar.
+**Windows NT:** Benutzerdefinierte Skripts sind nicht verfügbar.
 
-## <a name="setting-up-the-dll"></a>Einrichten der dll
+## <a name="setting-up-the-dll"></a>Einrichten der DLL
 
-Um die dll einzurichten, erstellen Sie einen Wert mit dem Namen " **customscriptdllpath** " unter dem folgenden Registrierungsschlüssel:
+Erstellen Sie zum Einrichten der DLL einen Wert mit dem Namen **CustomScriptDllPath unter** dem folgenden Registrierungsschlüssel:
 
 ```
 HKEY_LOCAL_MACHINE
-   System
-      CurrentControlSet
-         Services
-            Rasman
-               Parameters
+   System
+      CurrentControlSet
+         Services
+            Rasman
+               Parameters
 ```
 
-Dieser Wert muss vom Typ " **reg \_ Expand \_ SZ**" sein. Der Wert sollte den Pfad zur benutzerdefinierten Skript-dll enthalten. Nur eine benutzerdefinierte Skript-dll wird für jeden RAS-Client Computer unterstützt.
+Dieser Wert sollte vom Typ **REG \_ EXPAND SZ \_ sein.** Der Wert sollte den Pfad zur DLL für benutzerdefinierte Skripts enthalten. Für jeden RAS-Clientcomputer wird nur eine DLL mit benutzerdefinierter Skripterstellung unterstützt.
 
-## <a name="interaction-between-the-server-ras-and-the-custom-scripting-dll"></a>Interaktion zwischen dem Server, RAS und der Custom-Scripting-dll
+## <a name="interaction-between-the-server-ras-and-the-custom-scripting-dll"></a>Interaktion zwischen Server, RAS und der Custom-Scripting DLL
 
-Die benutzerdefinierte Skript-DLL sollte einen einzelnen Einstiegspunkt exportieren: [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn). RAS ruft diese Funktion während des interaktiven rascs- \_ Zustands des Verbindungsprozesses auf. Der interaktive rascs \_ -Status ist ein angehaltene Zustand, mit dem der Benutzer mit einer Benutzeroberfläche interagieren kann, die von der benutzerdefinierten Skript-dll angezeigt wird. Weitere Informationen zu Verbindungs Zuständen finden Sie unter " [**rasrestate**](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85)) ".
+Die benutzerdefinierte Skript-DLL sollte einen einzelnen Einstiegspunkt exportieren: [**RasCustomScriptExecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn). RAS ruft diese Funktion während des interaktiven \_ RASCS-Zustands des Verbindungsprozesses auf. Der status "RASCS Interactive" ist ein angehaltener Zustand, der es dem Benutzer ermöglicht, mit einer Benutzeroberfläche zu interagieren, die von der DLL mit benutzerdefinierten \_ Skripts dargestellt wird. Weitere Informationen zu Verbindungszuständen finden Sie unter [**RASCONNSTATE.**](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85))
 
-RAS übergibt als Parameter an die [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) -Funktion:
+RAS über gibt als Parameter an die [**RasCustomScriptExecute-Funktion**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) weiter:
 
--   Ein Handle für den Port auf dem Client Computer, der für die Verbindung verwendet wird.
--   Zeichen folgen, die das Telefonbuch und den Eintrag für die Verbindung identifizieren.
--   RAS übergibt auch ein Handle an ein Fenster, damit die DLL eine Benutzeroberfläche bereitstellen kann.
--   Eine Reihe von Funktions Zeigern, die von der DLL für die Kommunikation mit dem Server verwendet werden können.
+-   Ein Handle für den Port auf dem Clientcomputer, der für die Verbindung verwendet wird.
+-   Zeichenfolgen, die das Telefonbuch und den Eintrag für die Verbindung identifizieren.
+-   RAS übergibt auch ein Handle an ein Fenster, damit die DLL eine Benutzeroberfläche präsentieren kann.
+-   Ein Satz von Funktionsze0ern, die die DLL für die Kommunikation mit dem Server verwenden kann.
 
-Weitere Informationen zu diesen Parametern finden Sie unter [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) .
+Weitere Informationen zu diesen Parametern finden Sie unter [**RasCustomScriptExecute.**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn)
 
-RAS übergibt einen Zeiger auf eine [**rascustomscriptextensions**](/previous-versions/windows/desktop/legacy/aa376738(v=vs.85)) -Struktur als letzten Parameter an [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn). Diese Struktur enthält einen Zeiger auf eine Funktion vom Typ [**pfnrassetcommsettings**](/windows/desktop/api/Ras/nc-ras-pfnrassetcommsettings). Die benutzerdefinierte Skript-dll ruft diese Funktion auf, um die Kommunikationseinstellungen auf dem Port zu ändern, der von der Verbindung verwendet wird.
+RAS übergibt einen Zeiger auf eine [**RASCUSTOMSCRIPTEXTENSIONS-Struktur**](/previous-versions/windows/desktop/legacy/aa376738(v=vs.85)) als letzten Parameter an [**RasCustomScriptExecute.**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) Diese Struktur enthält einen Zeiger auf eine Funktion vom Typ [**PFNRASSETCOMMSETTINGS**](/windows/desktop/api/Ras/nc-ras-pfnrassetcommsettings). Die DLL für benutzerdefinierte Skripts ruft diese Funktion auf, um die Kommunikationseinstellungen auf dem Port zu ändern, der von der Verbindung verwendet wird.
 
-RAS vermittelt die Interaktion zwischen dem Server und der benutzerdefinierten Skript-dll. In der Regel initiiert der Server das Dialogfeld. Der Server kann z. b. den Benutzernamen und das Kennwort des Benutzers anfordern.
+RAS vermittelt die Interaktion zwischen dem Server und der DLL mit benutzerdefinierten Skripts. In der Regel initiiert der Server den Dialog. Beispielsweise kann der Server den Benutzernamen und das Kennwort des Benutzers anfordern.
 
-Wenn Sie die benutzerdefinierte Skripterstellung verwenden, um eine Verbindung herzustellen, muss auf dem Server Windows NT 4,0 oder Windows 2000 nicht ausgeführt werden.
+Wenn Sie benutzerdefinierte Skripts zum Herstellen einer Verbindung verwenden, muss auf dem Server Windows NT 4.0 oder Windows 2000 ausgeführt werden.
 
-## <a name="custom-scripting-user-interface-must-support-idcancel"></a>Benutzerdefinierte Skripterstellung für Benutzeroberfläche muss IDCANCEL unterstützen
+## <a name="custom-scripting-user-interface-must-support-idcancel"></a>Benutzerdefinierte Skripterstellungs Benutzeroberfläche muss IDCANCEL unterstützen
 
-Wenn die benutzerdefinierte Einwählprogramm eine Benutzeroberfläche anzeigt, muss die Benutzeroberfläche die WM-befehlsnachrichten unterstützen, \_ wobei LoWord (*wParam*) gleich IDCANCEL ist.
+Wenn das benutzerdefinierte Telefon eine Benutzeroberfläche anzeigt, muss die Benutzeroberfläche WM COMMAND-Nachrichten unterstützen, bei denen \_ LOWORD(*wParam*) IDCANCEL entspricht.
 
 ## <a name="configuring-the-connection"></a>Konfigurieren der Verbindung
 
-Der [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) -Einstiegspunkt kann von der [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga) -oder unter Windows XP von der [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala)aufgerufen werden.
+Der [**Einstiegspunkt RasCustomScriptExecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) kann von [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga) oder auf Windows XP von [**RasDial aufgerufen werden.**](/windows/desktop/api/Ras/nf-ras-rasdiala)
 
-Zum Aufrufen von [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) von [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga)legen Sie die Option raseo \_ CustomScript im Telefonbucheintrag für die Verbindung fest. Unter dem **dwfoptions** -Member von [**rasentry**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) finden Sie eine Beschreibung der Optionen für den Telefonbucheintrag. Verwenden Sie die Funktionen " [**rasgetentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa) " und " [**rassetentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) ", um diese Option Programm gesteuert festzulegen.
+Legen Sie [**zum Aufrufen von RasCustomScriptExecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) aus [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga)die Option RASEO CustomScript im Telefonbucheintrag für \_ die Verbindung fest. Eine Beschreibung der Optionen für die Telefonbucheingabe finden Sie unter **dwfOptions-Mitglied** von [**RASENTRY.**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) Verwenden Sie [**die Funktionen RasGetEntryProperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa) und [**RasSetEntryProperties,**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) um diese Option programmgesteuert festlegen.
 
-**Windows XP:** Zum Aufrufen von [**rascustomscriptexecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) von [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala)muss beim Aufruf von " **rasdial** " eine " [**rasdialextensions**](/previous-versions/windows/desktop/legacy/aa377029(v=vs.85)) "-Struktur angegeben werden, und diese Struktur muss das rtoopt \_ usecustomscripting-Flag angeben. Außerdem muss für den Telefonbucheintrag für die Verbindung die Option "raseo CustomScript" angegeben werden, \_ wie im vorherigen Abschnitt beschrieben.
+**Windows XP:** Zum Aufrufen [**von RasCustomScriptExecute**](/windows/desktop/api/Ras/nc-ras-rascustomscriptexecutefn) aus [**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala)muss der Aufruf von **RasDial** eine [**RASDIALEXTENSIONS-Struktur**](/previous-versions/windows/desktop/legacy/aa377029(v=vs.85)) angeben, und diese Struktur muss das RDEOPT \_ UseCustomScripting-Flag angeben. Darüber hinaus muss im Telefonbucheintrag für die Verbindung die Option RASEO CustomScript angegeben werden, wie \_ im vorherigen Absatz beschrieben.
 
-## <a name="invoking-the-custom-scripting-dll"></a>Aufrufen der benutzerdefinierten Skript-dll
+## <a name="invoking-the-custom-scripting-dll"></a>Aufrufen der DLL für benutzerdefinierte Skripts
 
-Wenn der Benutzer eine Verbindung für einen Telefonbucheintrag aktiviert, bei dem raseo \_ CustomScript festgelegt ist, ruft RAS die benutzerdefinierte Skript-dll auf. In diesem Szenario ruft RAS die benutzerdefinierte Skript-DLL von [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga)auf.
+Wenn der Benutzer eine Verbindung für einen Telefonbucheintrag aktiviert, für den RASEO CustomScript festgelegt ist, ruft RAS die CUSTOM \_ SCRIPTING-DLL auf. In diesem Szenario ruft RAS die DLL mit benutzerdefinierten Skripts von [**RasDialDlg auf.**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga)
 
-Wenn Sie die benutzerdefinierte Skript-dll Programm gesteuert aufrufen möchten, stellen Sie die Verbindung mithilfe der Funktion " [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga) " her. Unter Windows XP Ruft die Funktion " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " auch die benutzerdefinierte Skript-dll auf.
+Stellen Sie die Verbindung mithilfe der [**RasDialDlg-Funktion**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga) auf, um die DLL für die benutzerdefinierte Skripterstellung programmgesteuert aufrufen zu können. Auf Windows XP ruft die [**RasDial-Funktion**](/windows/desktop/api/Ras/nf-ras-rasdiala) auch die DLL für die benutzerdefinierte Skripterstellung auf.
 
- 
+ 
 
- 
+ 

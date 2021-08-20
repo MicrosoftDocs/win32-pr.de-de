@@ -1,44 +1,44 @@
 ---
-description: Dieses Programm veranschaulicht, wie frei Hand Eingaben in eine andere Anwendung kopiert und eingefügt werden. Außerdem kann der Benutzer eine Auswahl von Strichen kopieren und das Ergebnis in das vorhandene Ink-Objekt einfügen.
+description: In diesem Programm wird veranschaulicht, wie Sie Ink kopieren und in eine andere Anwendung einfügen. Außerdem kann der Benutzer eine Auswahl von Strichen kopieren und das Ergebnis in das vorhandene Ink-Objekt einfügen.
 ms.assetid: a0c42f1c-543d-44f8-83d9-fe810de410ff
-title: Beispiel für frei Hand Ablage
+title: Beispiel für die Ink-Zwischenablage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95c5da0bc0ba9a7e3a1b4e1a5c52784f10fb2023
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73aa8acdf785321dc01706d4a4de50e0a2673a31250edbfa4316a27aecd0ce3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032328"
 ---
-# <a name="ink-clipboard-sample"></a>Beispiel für frei Hand Ablage
+# <a name="ink-clipboard-sample"></a>Beispiel für die Ink-Zwischenablage
 
-Dieses Programm veranschaulicht, wie frei Hand Eingaben in eine andere Anwendung kopiert und eingefügt werden. Außerdem kann der Benutzer eine Auswahl von Strichen kopieren und das Ergebnis in das vorhandene Ink-Objekt einfügen.
+In diesem Programm wird veranschaulicht, wie Sie Ink kopieren und in eine andere Anwendung einfügen. Außerdem kann der Benutzer eine Auswahl von Strichen kopieren und das Ergebnis in das vorhandene Ink-Objekt einfügen.
 
-Die folgenden Zwischenablage Modi sind verfügbar:
+Die folgenden Zwischenablagemodi sind verfügbar:
 
--   Ink-serialisiertes Format (ISF)
--   Metadatei
+-   Serialisiertes Ink-Format (ISF)
+-   Metafile
 -   Erweiterte Metadatei (Enhanced Metafile, EMF)
 -   Bitmap
--   Text Freihand
--   Skizzen frei
+-   Text Ink
+-   Sketch Ink
 
-Text Freihand-und Skizzen frei Hand Eingaben sind zwei Arten von frei Hand Steuerelementen, die als Text bzw. gezeichnet werden Es ist möglich, ISF, Text Freihand und Skizzen Freihand in vorhandene Freihand einzufügen.
+Text ink und sketch ink sind zwei Arten von Ink-Steuerelementen, die als Text oder Zeichnung verwendet werden. Es ist möglich, ISF, Text-Ink und Sketch-Ink in vorhandene Ink-Dateien einfüge.
 
-Neben der Zwischenablage veranschaulicht dieses Beispiel auch, wie Striche mit dem Lassopfad-Tool ausgewählt werden. Der Benutzer kann ausgewählte Striche verschieben und seine Zeichnungs Attribute ändern. Diese Funktion ist eine Teilmenge der Auswahl Funktionen, die bereits vom Handschrift Steuerelement bereitgestellt werden. Sie wird hier zur Veranschaulichung implementiert.
+Zusätzlich zur Zwischenablage veranschaulicht dieses Beispiel auch das Auswählen von Strichen mit dem lasso-Tool. Der Benutzer kann ausgewählte Striche verschieben und seine Zeichnungsattribute ändern. Diese Funktionalität ist eine Teilmenge der Auswahlfunktionalität, die bereits vom Steuerelement für die Ink-Überlagerung bereitgestellt wird. Sie wird hier zu Veranschaulichungszwecken implementiert.
 
-In diesem Beispiel werden die folgenden Funktionen verwendet:
+In diesem Beispiel werden die folgenden Features verwendet:
 
--   Das [InkCollector](/previous-versions/ms583683(v=vs.100)) -Objekt.
--   Unterstützung für frei Hand Zwischenablage
--   Die Verwendung von Lassopfad mit der [Microsoft. Ink. Ink. HitTest](/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90)) -Methode.
+-   Das [InkCollector-Objekt.](/previous-versions/ms583683(v=vs.100))
+-   Unterstützung der Ink-Zwischenablage.
+-   Die Verwendung des Lassos mit der [Microsoft.Ink.Ink.HitTest-Methode.](/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))
 
-Dieses Beispiel veranschaulicht das Rendern von frei Hand Eingaben, das Kopieren der frei Hand Eingaben und das anschließende Einfügen der frei Hand Eingaben in eine andere Anwendung wie Microsoft Paint.
+Dieses Beispiel veranschaulicht das Rendern von Ink, das Kopieren dieser Ink-Datei und das anschließende Kopieren der Ink-Datei in eine andere Anwendung, z. B. Microsoft Paint.
 
-## <a name="collecting-ink-and-setting-up-the-form"></a>Sammeln von frei Hand Eingaben und Einrichten des Formulars
+## <a name="collecting-ink-and-setting-up-the-form"></a>Sammeln von Ink und Einrichten des Formulars
 
-Verweisen Sie zunächst auf die Tablet PC Automation-Schnittstellen, die mit dem Microsoft Windows <entity type="reg"/> XP Tablet PC Edition Software Development Kit (SDK) installiert werden.
+Verweisen Sie zunächst auf die Tablet PC Automation-Schnittstellen, die mit dem Microsoft Windows <entity type="reg"/> XP Tablet PC Edition Software Development Kit (SDK) installiert sind.
 
 
 ```C++
@@ -47,7 +47,7 @@ using Microsoft.Ink;
 
 
 
-Im nächsten Schritt deklariert das Formular einige Konstanten und Felder, die später in diesem Beispiel notiert werden.
+Als Nächstes deklariert das Formular einige Konstanten und Felder, die später in diesem Beispiel notiert werden.
 
 
 ```C++
@@ -95,7 +95,7 @@ private Pen dotPen = null;
 
 
 
-Schließlich wird das Formular im [Lade](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) Ereignishandler des Formulars initialisiert, ein [InkCollector](/previous-versions/ms583683(v=vs.100)) -Objekt für das Formular erstellt und der frei Hand Sammler aktiviert.
+Schließlich wird im [Load-Ereignishandler](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) des Formulars das Formular initialisiert, ein [InkCollector-Objekt](/previous-versions/ms583683(v=vs.100)) für das Formular erstellt und der Ink-Collector aktiviert.
 
 
 ```C++
@@ -108,19 +108,19 @@ myInkCollector.Enabled = true;
 
 
 
-## <a name="handling-menu-events"></a>Behandeln von Menü Ereignissen
+## <a name="handling-menu-events"></a>Behandeln von Menüereignissen
 
-Die Ereignishandler für Menü Elemente aktualisieren hauptsächlich den Status des Formulars.
+Die Menüelement-Ereignishandler aktualisieren in erster Linie den Zustand des Formulars.
 
-Der Befehl CLEAR entfernt das Auswahl Rechteck und löscht die Striche aus dem [Ink](/previous-versions/ms583670(v=vs.100)) -Objekt des frei Hand Sammlers.
+Der Clear-Befehl entfernt das Auswahlrechteck und löscht die Striche aus dem Freischaltobjekt des [Freischaltobjekts.](/previous-versions/ms583670(v=vs.100))
 
-Der Exit-Befehl deaktiviert den Ink Collector, bevor die Anwendung beendet wird.
+Der Befehl Exit deaktiviert den Ink Collector, bevor die Anwendung beendet wird.
 
-Im Menü bearbeiten können Sie die Befehle zum Ausschneiden und kopieren basierend auf dem Auswahl Zustand des Formulars aktivieren und den Befehl Einfügen basierend auf dem Inhalt der Zwischenablage aktivieren, der mithilfe der [CanPaste](/previous-versions/dotnet/netframework-3.5/ms571314(v=vs.90)) -Methode des [Ink](/previous-versions/ms583670(v=vs.100)) -Objekts festgelegt wurde.
+Das Menü Bearbeiten aktiviert die Befehle Ausschneiden und Kopieren basierend auf dem Auswahlzustand des Formulars und aktiviert [](/previous-versions/ms583670(v=vs.100)) den Befehl Einfügen basierend auf dem Inhalt der Zwischenablage, der mithilfe der [CanPaste-Methode](/previous-versions/dotnet/netframework-3.5/ms571314(v=vs.90)) des Freischaltobjekts bestimmt wird.
 
-Die Befehle zum Ausschneiden und kopieren verwenden beide eine Hilfsmethode, um frei Hand Eingaben in die Zwischenablage zu kopieren. Der Ausschneide Befehl verwendet eine Hilfsmethode, um die ausgewählten Striche zu löschen.
+Die Befehle Ausschneiden und Kopieren verwenden beide eine Hilfsmethode, um Ink in die Zwischenablage zu kopieren. Der Befehl Cut verwendet eine Hilfsmethode, um die ausgewählten Striche zu löschen.
 
-Der Befehl "Einfügen" prüft zunächst die [CanPaste](/previous-versions/dotnet/netframework-3.5/ms571314(v=vs.90)) -Methode des [Ink](/previous-versions/ms583670(v=vs.100)) -Objekts, um festzustellen, ob das Objekt in der Zwischenablage eingefügt werden kann. Der Befehl "Einfügen" berechnet dann die linke obere Ecke des Einfügebereichs, konvertiert die Koordinaten von Pixeln in frei Hand Raum und fügt die Striche aus der Zwischenablage in den frei Hand Sammler ein. Schließlich wird das Auswahlfeld aktualisiert.
+Der Befehl Einfügen überprüft zunächst die [CanPaste-Methode](/previous-versions/dotnet/netframework-3.5/ms571314(v=vs.90)) des [Ink-Objekts,](/previous-versions/ms583670(v=vs.100)) um zu prüfen, ob das Objekt in der Zwischenablage eingefügt werden kann. Mit dem Befehl Einfügen wird dann die obere linke Ecke für den Einfügebereich berechnet, die Koordinaten von Pixeln in Freihandraum konvertiert und die Striche aus der Zwischenablage in den Freihandsammler eingefügt. Schließlich wird das Auswahlfeld aktualisiert.
 
 
 ```C++
@@ -151,13 +151,13 @@ if (myInkCollector.Ink.CanPaste())
 
 
 
-Die SELECT-und Ink-Befehle aktualisieren den Anwendungsmodus und die Standard Zeichnungs Attribute, löschen die aktuelle Auswahl, aktualisieren den Menü Zustand und aktualisieren das Formular. Andere Handler greifen auf den Anwendungs Zustand zurück, um die richtige Funktion auszuführen, entweder das Auslagern oder das Ablegen von frei Hand Eingaben. Außerdem fügt der Befehl Select dem Ink Collector die [newcollector](/previous-versions/ms567621(v=vs.100)) -und [Stroke](/previous-versions/ms567622(v=vs.100)) -Ereignishandler hinzu, und der Ink-Befehl entfernt diese Ereignishandler aus dem Ink Collector.
+Die Befehle Select und Ink aktualisieren den Anwendungsmodus und die Standardzeichnungsattribute, löschen die aktuelle Auswahl, aktualisieren den Menüzustand und aktualisieren das Formular. Andere Handler verlassen sich auf den Anwendungszustand, um die richtige Funktion durchzuführen, entweder beim Zuordnen oder beim Auflegen von Freit. Darüber hinaus fügt der Select-Befehl dem Ink-Collector die [NewPackets-](/previous-versions/ms567621(v=vs.100)) und [Stroke-Ereignishandler](/previous-versions/ms567622(v=vs.100)) hinzu, und der Ink-Befehl entfernt diese Ereignishandler aus dem Ink-Collector.
 
-Die Formate, die in der Zwischenablage verfügbar sind, wenn Striche kopiert werden, werden im Menü Format aufgelistet, und der Benutzer wählt das Format zum Kopieren der frei Hand Eingabe aus der Liste aus. Zu den verfügbaren Typen von Formaten gehören das frei Hand Format (Ink Serialized Format, ISF), Metadateien, Erweiterte Metadateien und Bitmap. Die Formatierungen von Skizzen Freihand und Text Freihand schließen sich gegenseitig aus und basieren darauf, dass die frei Hand Eingaben als OLE-Objekt in die Zwischenablage kopiert werden
+Die Formate, die beim Kopieren von Strichen in der Zwischenablage verfügbar sind, werden im Menü Format aufgeführt, und der Benutzer wählt das Format zum Kopieren der Freiart aus dieser Liste aus. Zu den verfügbaren Formattypen zählen serialisiertes Freihandformat (ISF), Metadatei, erweiterte Metadatei und Bitmap. Die Formate sketch ink und text ink schließen sich gegenseitig aus und verlassen sich darauf, dass die Ink als OLE-Objekt in die Zwischenablage kopiert wird.
 
-Das Menü Format ermöglicht dem Benutzer das Ändern der Farb-und breiten Eigenschaften des Stifts und aller ausgewählten Striche.
+Im Menü Stil kann der Benutzer die Farb- und Breiteneigenschaften des Stifts und aller ausgewählten Striche ändern.
 
-Beispielsweise wird mit dem roten Befehl die [Color](/previous-versions/ms582103(v=vs.100)) -Eigenschaft der [DefaultDrawingAttributes](/previous-versions/ms571711(v=vs.100)) -Eigenschaft des Ink Collector auf die Farbe Rot festgelegt. Da die [DrawingAttributes](/previous-versions/ms581965(v=vs.100)) -Eigenschaft des [Cursor](/previous-versions/ms552104(v=vs.100)) Objekts nicht festgelegt wurde, erben alle neuen frei Hand Eingaben, die in den Ink Collector gezeichnet werden, auf die Standard Zeichenfarbe. Wenn derzeit eine beliebige Striche ausgewählt sind, wird auch die Farb Eigenschaft der Zeichnungs Attribute des Strichs ebenfalls aktualisiert.
+Beispielsweise legt der Befehl Red die [Color-Eigenschaft](/previous-versions/ms582103(v=vs.100)) der [DefaultDrawingAttributes-Eigenschaft](/previous-versions/ms571711(v=vs.100)) des Ink-Collectors auf die Farbe Rot fest. Da die [DrawingAttributes-Eigenschaft](/previous-versions/ms581965(v=vs.100)) des [Cursor-Objekts](/previous-versions/ms552104(v=vs.100)) nicht festgelegt wurde, erbt jede neue in den Ink-Collector gezeichnete Ink-Farbe an die Standardzeichnungsfarbe. Wenn derzeit Striche ausgewählt sind, werden auch die Farbeigenschaften der einzelnen Striche aktualisiert.
 
 
 ```C++
@@ -183,21 +183,21 @@ private void SetColor(Color newColor)
 
 ## <a name="handling-mouse-events"></a>Behandeln von Mausereignissen
 
-Der [MouseMove](/previous-versions/ms567617(v=vs.100)) -Ereignishandler überprüft den Anwendungsmodus. Wenn der Modus moveink ist und eine Maustaste gedrückt ist, verschiebt der Handler die Striche mithilfe der Move-Methode der [Striche](/previous-versions/ms552701(v=vs.100)) -Auflistung und aktualisiert das Auswahlfeld. Andernfalls prüft der Handler, ob das Auswahl Rechteck den Cursor enthält, aktiviert die Ink-Auflistung entsprechend und legt den Cursor entsprechend fest.
+Der [MouseMove-Ereignishandler](/previous-versions/ms567617(v=vs.100)) überprüft den Anwendungsmodus. Wenn der Modus MoveInk ist und eine Maustaste nach unten ist, verschiebt der Handler die Striche mithilfe der Move-Methode der [Strokes-Sammlung](/previous-versions/ms552701(v=vs.100)) und aktualisiert das Auswahlfeld. Andernfalls überprüft der Handler, ob das Auswahlrechteck den Cursor enthält, aktiviert die Ink-Auflistung entsprechend und legt den Cursor entsprechend fest.
 
-Der [mousetdown](/previous-versions/ms567616(v=vs.100)) -Ereignishandler überprüft die Cursor Einstellung. Wenn der Cursor auf [SizeAll](/dotnet/api/system.windows.forms.cursors.sizeall?view=netcore-3.1)festgelegt ist, legt der Handler den Anwendungsmodus auf moveink fest und zeichnet die Cursorposition auf. Wenn eine aktuelle Auswahl vorliegt, löschen Sie Sie.
+Der [MouseDown-Ereignishandler](/previous-versions/ms567616(v=vs.100)) überprüft die Cursoreinstellung. Wenn der Cursor auf [SizeAll festgelegt ist,](/dotnet/api/system.windows.forms.cursors.sizeall?view=netcore-3.1)legt der Handler den Anwendungsmodus auf MoveInk fest und zeichnet die Cursorposition auf. Wenn eine aktuelle Auswahl vor liegt, löschen Sie sie andernfalls.
 
-Der [MouseUp](/previous-versions/ms567618(v=vs.100)) -Ereignishandler überprüft den Anwendungsmodus. Wenn der Modus "moveink" ist, legt der Handler den Anwendungsmodus basierend auf dem aktivierten Zustand des Select-Befehls fest.
+Der [MouseUp-Ereignishandler](/previous-versions/ms567618(v=vs.100)) überprüft den Anwendungsmodus. Wenn der Modus MoveInk ist, legt der Handler den Anwendungsmodus basierend auf dem aktivierten Zustand des Select-Befehls fest.
 
-Das [newpacket](/previous-versions/ms567621(v=vs.100)) -Ereignis wird im Auswahlmodus ausgelöst, wenn der Ink Collector neue Paketdaten empfängt. Wenn sich die Anwendung im Auswahlmodus befindet, müssen die neuen Pakete abgefangen und zum Zeichnen der Auswahl-Lasso verwendet werden.
+Das [NewPackets-Ereignis](/previous-versions/ms567621(v=vs.100)) wird im Auswahlmodus ausgelöst, wenn der Ink Collector neue Paketdaten empfängt. Wenn sich die Anwendung im Auswahlmodus befindet, müssen die neuen Pakete abgefangen und zum Zeichnen des Auswahl-Lassos verwendet werden.
 
-Die Koordinaten jedes Pakets werden in Pixel konvertiert, auf den Zeichenbereich beschränkt und der Auflistung von Punkten von Lasso hinzugefügt. Anschließend wird eine Hilfsmethode aufgerufen, um die Lassopfad im Formular zu zeichnen.
+Die Koordinate jedes Pakets wird in Pixel konvertiert, auf den Zeichnungsbereich beschränkt und der Auflistung von Punkten des Lassos hinzugefügt. Anschließend wird eine Hilfsmethode aufgerufen, um den Lasso im Formular zu zeichnen.
 
 ## <a name="handling-a-new-stroke"></a>Behandeln eines neuen Strichs
 
-Das [Stroke](/previous-versions/ms567622(v=vs.100)) -Ereignis wird im Auswahlmodus ausgelöst, wenn ein neuer Strich gezeichnet wird. Wenn sich die Anwendung im Auswahlmodus befindet, entspricht dieser Strich dem Lassopfad, und es ist erforderlich, die Informationen zu den ausgewählten Strichen zu aktualisieren.
+Das [Stroke-Ereignis](/previous-versions/ms567622(v=vs.100)) wird im Auswahlmodus ausgelöst, wenn ein neuer Strich gezeichnet wird. Wenn sich die Anwendung im Auswahlmodus befindet, entspricht dieser Strich dem Lasso, und es ist erforderlich, die Informationen der ausgewählten Striche zu aktualisieren.
 
-Der Handler bricht das [Stroke](/previous-versions/ms567622(v=vs.100)) -Ereignis ab, prüft auf mehr als zwei Lassopfad-Punkte, kopiert die Points-Auflistung in ein Array von [Point](/dotnet/api/system.drawing.point?view=netcore-3.1) -Objekten und konvertiert die Koordinaten der Punkte im Array von Pixel in frei Hand Raum. Anschließend verwendet der Handler die [HitTest](/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90)) -Methode des [Ink](/previous-versions/ms583670(v=vs.100)) -Objekts, um die von den Lassopfad-Punkten ausgewählten Striche zu erhalten und den Auswahl Zustand des Formulars zu aktualisieren. Schließlich wird der Strich, der das Ereignis ausgelöst hat, aus der Auflistung ausgewählter Striche entfernt, die Lassopfad Points-Auflistung wird geleert, und eine Hilfsmethode zeichnet das Auswahl Rechteck.
+Der Handler bricht das [Stroke-Ereignis](/previous-versions/ms567622(v=vs.100)) ab, sucht nach mehr als zwei Lassopunkten, kopiert die Points-Auflistung in ein Array von [Point-Objekten](/dotnet/api/system.drawing.point?view=netcore-3.1) und konvertiert die Koordinaten der Punkte im Array von Pixeln in Freiraum. Anschließend verwendet der Handler [](/previous-versions/ms583670(v=vs.100)) die [HitTest-Methode](/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90)) des Freiformobjekts, um die von den Lassopunkten ausgewählten Striche zu erhalten und den Auswahlzustand des Formulars zu aktualisieren. Schließlich wird der Strich, der das Ereignis ausgelöst hat, aus der Auflistung der ausgewählten Striche entfernt, die lasso Points-Auflistung wird geleert, und eine Hilfsmethode zeichnet das Auswahlrechteck.
 
 
 ```C++
@@ -241,9 +241,9 @@ SetSelection(hitStrokes);
 
 
 
-## <a name="copying-ink-to-the-clipboard"></a>Kopieren von Freihand in die Zwischenablage
+## <a name="copying-ink-to-the-clipboard"></a>Kopieren von Ink in die Zwischenablage
 
-Die Hilfsmethode copyinktoclipboard erstellt einen [InkClipboardFormats](/previous-versions/ms583681(v=vs.100)) -Wert, überprüft den Status des Menüs, um die Formate zu aktualisieren, die in die Zwischenablage eingefügt werden sollen, und verwendet die [ClipboardCopy](/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90)) -Methode des [Ink](/previous-versions/ms583670(v=vs.100)) -Objekts, um die Striche in die Zwischenablage zu kopieren.
+Die CopyInkToClipboard-Hilfsmethode erstellt einen [InkClipboardFormats-Wert,](/previous-versions/ms583681(v=vs.100)) überprüft den Status des Menüs Format, um die Formate zu aktualisieren, die in die Zwischenablage eingefügt werden sollen, und verwendet die [ClipboardCopy-Methode](/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90)) des [Ink-Objekts,](/previous-versions/ms583670(v=vs.100)) um die Striche in die Zwischenablage zu kopieren.
 
 
 ```C++
@@ -272,14 +272,14 @@ else
 
 ## <a name="updating-a-selection"></a>Aktualisieren einer Auswahl
 
-Mit der setSelection-Hilfsmethode wird die protokollierte selectedStrokes-Methode aktualisiert. wenn die Auflistung **null** oder **leer** ist, wird das Auswahl Rechteck auf das leere Rechteck festgelegt. Wenn die ausgewählte [Striche](/previous-versions/ms552701(v=vs.100)) -Auflistung nicht leer ist, führt die setSelection-Methode die folgenden Schritte aus:
+Die SetSelection-Hilfsmethode aktualisiert das gespeicherte selectedStrokes-Element. Wenn die Auflistung **NULL** oder **EMPTY** ist, wird das Auswahlrechteck auf das leere Rechteck festgelegt. Wenn die ausgewählte [Strokes-Auflistung](/previous-versions/ms552701(v=vs.100)) nicht leer ist, führt die SetSelection-Methode die folgenden Schritte aus:
 
--   Bestimmt das umgebende Rechteck mithilfe der [GetBoundingBox](/previous-versions/dotnet/netframework-3.5/ms571376(v=vs.90)) -Methode der Striche-Auflistung.
--   Konvertiert die Rechteck Koordinaten aus dem frei Handzeichen Bereich in Pixel.
--   Vergrößert das Rechteck, um zwischen ihm und den ausgewählten Strichen einen visuellen Bereich bereitzustellen.
--   Erstellt Auswahl Handles für das aktuelle Auswahlfeld.
+-   Bestimmt das umgebundene Rechteck mithilfe der [GetBoundingBox-Methode](/previous-versions/dotnet/netframework-3.5/ms571376(v=vs.90)) der Strichsammlung.
+-   Konvertiert die Rechteckkoordinaten aus dem Freiraum in Pixel.
+-   Verflässige das Rechteck, um einen visuellen Raum zwischen ihm und den ausgewählten Strichen zu schaffen.
+-   Erstellt Auswahlhandles für das aktuelle Auswahlfeld.
 
-Schließlich legt die setSelection-Methode die Sichtbarkeit der Auswahl Handles fest und legt die [AutoRedraw](/previous-versions/ms571706(v=vs.100)) -Eigenschaft des Ink Collector auf **false** fest, wenn Striche ausgewählt werden.
+Schließlich legt die SetSelection-Methode die Sichtbarkeit der Auswahlhandles und die [AutoRedraw-Eigenschaft](/previous-versions/ms571706(v=vs.100)) des Ink-Collectors auf **FALSE** fest, wenn Striche ausgewählt sind.
 
 
 ```C++
@@ -358,15 +358,15 @@ Refresh();
 
 
 
-## <a name="drawing-the-lasso"></a>Zeichnen von Lasso
+## <a name="drawing-the-lasso"></a>Zeichnen des Lasso
 
-Der Lassopfad wird als eine Reihe von offenen Punkten gezeichnet, die dem Pfad des Lassopfad-Strichs und einer gestrichelten Verbindungslinie zwischen den beiden Enden folgen. Das [newpakete](/previous-versions/ms567621(v=vs.100)) -Ereignis wird ausgelöst, wenn das Lassopfad gezeichnet wird, und der Ereignishandler übergibt die Strich Informationen an die drawlasso-Methode.
+Der Lasso wird als eine Reihe von offenen Punkten gezeichnet, die dem Pfad des Lassostrichs und einer gestrichelten Konnektorlinie zwischen den beiden Enden folgen. Das [NewPackets-Ereignis](/previous-versions/ms567621(v=vs.100)) wird ausgelöst, während der Lasso gezeichnet wird, und der Ereignishandler übergibt die Strichinformationen an die DrawLasso-Methode.
 
-Die drawlasso-Hilfsmethode entfernt zuerst die alte Verbindungslinie und durchläuft dann die Punkte im Strich. Dann berechnet drawlasso, wo die Punkte auf dem Strich platziert werden, und zeichnet Sie. Schließlich zeichnet er eine neue Connector-Linie.
+Die DrawLasso-Hilfsmethode entfernt zuerst die alte Verbindungslinie und durch iteriert dann die Punkte im Strich. DrawLasso berechnet dann, wo die Punkte entlang des Strichs zu platzieren sind, und zeichnet sie. Schließlich wird eine neue Verbindungslinie ge zeichnet.
 
 ## <a name="closing-the-form"></a>Schließen des Formulars
 
-Die [verwerfen-Methode des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector](/previous-versions/ms583683(v=vs.100)) -Objekt myinkcollector frei.
+Die Dispose-Methode [des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector-Objekt](/previous-versions/ms583683(v=vs.100)) myInkCollector zurück.
 
  
 

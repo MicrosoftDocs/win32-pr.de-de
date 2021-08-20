@@ -1,5 +1,5 @@
 ---
-description: Deaktiviert Features.
+description: Deaktiviert Funktionen.
 ms.assetid: 2ea2dcfb-84e6-4f83-9afd-c3050b53f37c
 title: pSetupSetGlobalFlags-Funktion
 ms.topic: reference
@@ -24,7 +24,7 @@ ms.locfileid: "118955699"
 
 \[Diese Funktion ist in Windows Vista oder Windows Server 2008 nicht verfügbar.\]
 
-Deaktiviert Features.
+Deaktiviert Funktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Die Flags, die zum Deaktivieren der Benutzeroberfläche oder der automatischen S
 
 | Wert                                                                                                                                                                                                                                         | Bedeutung                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| <span id="PSPGF_NONINTERACTIVE"></span><span id="pspgf_noninteractive"></span><dl> <dt>**PSPGF \_ NONINTERACTIVE-0x004**</dt> <dt></dt> </dl> | Legen Sie diese Einstellung fest, um die Benutzeroberfläche zu deaktivieren.<br/>   |
-| <span id="PSPGF_NO_BACKUP"></span><span id="pspgf_no_backup"></span><dl> <dt>**PSPGF \_ NO \_ BACKUP**</dt> <dt>0x002</dt> </dl>               | Legen Sie diese Einstellung fest, um die automatische Sicherung zu deaktivieren.<br/> |
+| <span id="PSPGF_NONINTERACTIVE"></span><span id="pspgf_noninteractive"></span><dl> <dt>**PSPGF \_ NONINTERACTIVE**</dt> <dt>0x004</dt> </dl> | Legen Sie fest, um die Benutzeroberfläche zu deaktivieren.<br/>   |
+| <span id="PSPGF_NO_BACKUP"></span><span id="pspgf_no_backup"></span><dl> <dt>**PSPGF \_ KEINE \_ SICHERUNGS 0X002**</dt> <dt></dt> </dl>               | Legen Sie fest, um die automatische Sicherung zu deaktivieren.<br/> |
 
 
 

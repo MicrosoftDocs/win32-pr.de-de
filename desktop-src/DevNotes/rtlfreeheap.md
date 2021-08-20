@@ -1,7 +1,7 @@
 ---
-description: Gibt einen Speicherblock frei, der von einem Heap von rtlzucateheap zugewiesen wurde.
+description: Gibt einen Speicherblock frei, der von RtlAllocateHeap aus einem Heap zugeordnet wurde.
 ms.assetid: 0A08FB6B-23A3-450B-8745-AEB927CEB7BB
-title: RtlFreeHeap-Funktion (ntifs. h)
+title: RtlFreeHeap-Funktion (Ntifs.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: e51994c4bcd941bc96575eb3fdbb45d4111c1aeb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3dd46808c898cd934bbb4ee8804027bcb926e4a5cd07eb1521e2814a2c4b0e1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538073"
 ---
 # <a name="rtlfreeheap-function"></a>RtlFreeHeap-Funktion
 
-Gibt einen Speicherblock frei, der von einem Heap von [**rtlzucateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)zugewiesen wurde.
+Gibt einen Speicherblock frei, der von [**RtlAllocateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)aus einem Heap zugeordnet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ BOOLEAN RtlFreeHeap(
 
 <dl> <dt>
 
-*Heaphandle* \[ in\]
+*HeapHandle* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Heap, dessen Speicherblock freigegeben werden soll. Dieser Parameter ist ein Handle, das von [**rtlkreateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)zurückgegeben wird.
+Ein Handle für den Heap, dessen Speicherblock freigegeben werden soll. Dieser Parameter ist ein Handle, das von [**RtlCreateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)zurückgegeben wird.
 
 </dd> <dt>
 
 *Flags* \[ in, optional\]
 </dt> <dd>
 
-Ein Satz von Flags, die Aspekte der Freigabe eines Speicherblocks steuern. Wenn Sie den folgenden Wert angeben, wird der entsprechende Wert überschrieben, der im *Flags* -Parameter angegeben wurde, als der Heap von [**rtlkreateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)erstellt wurde.
+Eine Gruppe von Flags, die Aspekte des Freigebens eines Speicherblocks steuern. Wenn Sie den folgenden Wert angeben, wird der entsprechende Wert überschrieben, der im *Flags-Parameter* angegeben wurde, als der Heap von [**RtlCreateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)erstellt wurde.
 
 
 
 | Flag                           | Bedeutung                                                                                   |
 |--------------------------------|-------------------------------------------------------------------------------------------|
-| Heap ist \_ nicht \_ serialisiert.<br/> | Der gegenseitige Ausschluss wird nicht verwendet, wenn **RtlFreeHeap** auf den Heap zugreift. <br/> |
+| HEAP \_ OHNE \_ SERIALISIERUNG<br/> | Der gegenseitige Ausschluss wird nicht verwendet, wenn **RtlFreeHeap** auf den Heap zugreift. <br/> |
 
 
 
@@ -65,19 +65,19 @@ Ein Satz von Flags, die Aspekte der Freigabe eines Speicherblocks steuern. Wenn 
 
 </dd> <dt>
 
-*Heapbase* \[ in\]
+*HeapBase* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Speicherblock, der freigegeben werden soll. Dieser Zeiger wird von [**rtldepcateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)zurückgegeben.
+Ein Zeiger auf den freizugebende Speicherblock. Dieser Zeiger wird von [**RtlAllocateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)zurückgegeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn der Block erfolgreich freigegeben wurde. Andernfalls **false** .
+Gibt **TRUE** zurück, wenn der Block erfolgreich freigegeben wurde. **Andernfalls FALSE.**
 
 > [!Note]  
-> Ab Windows 8 wird der Rückgabewert als **logisch** typisiert, was eine andere Größe aufweist als der **boolesche** Wert.
+> Ab Windows 8 wird der Rückgabewert als **LOGICAL** eingegeben, der eine andere Größe als **BOOLEAN** hat.
 
  
 
@@ -90,8 +90,8 @@ Gibt " **true** " zurück, wenn der Block erfolgreich freigegeben wurde. Andernf
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                    |
 | Zielplattform<br/>          | <dl> <dt>[Universell](https://msdn.microsoft.com/Library/Windows/Hardware/EB2264A4-BAE8-446B-B9A5-19893936DDCA)</dt> </dl> |
-| Header<br/>                   | <dl> <dt>Ntifs. h (ntifs. h einschließen)</dt> </dl>                                    |
-| Bibliothek<br/>                  | <dl> <dt>Ntdll. lib</dt> </dl>                                                    |
+| Header<br/>                   | <dl> <dt>Ntifs.h (include Ntifs.h)</dt> </dl>                                    |
+| Bibliothek<br/>                  | <dl> <dt>Ntdll.lib</dt> </dl>                                                    |
 | DLL<br/>                      | <dl> <dt>Ntdll.dll</dt> </dl>                                                    |
 
 
@@ -100,13 +100,13 @@ Gibt " **true** " zurück, wenn der Block erfolgreich freigegeben wurde. Andernf
 
 <dl> <dt>
 
-[**Rtldepcateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)
+[**RtlAllocateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlallocateheap)
 </dt> <dt>
 
-[**Rtlkreateheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)
+[**RtlCreateHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtlcreateheap)
 </dt> <dt>
 
-[**Rtldestroyheap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtldestroyheap)
+[**RtlDestroyHeap**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-rtldestroyheap)
 </dt> </dl>
 
  

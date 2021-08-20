@@ -1,9 +1,9 @@
 ---
-title: Isnetworkfeed-Attribut
-description: Das Attribut "isnetworkfeed" gibt an, dass die Wiedergabeliste dynamisch aktualisiert wird.
+title: IsNetworkFeed-Attribut
+description: Das IsNetworkFeed-Attribut gibt an, dass die Wiedergabeliste dynamisch aktualisiert wird.
 ms.assetid: 4d5e4516-d49e-48f2-994b-e32a8e4ea42c
 keywords:
-- Isnetworkfeed-Attribut, Windows Media Player
+- IsNetworkFeed-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b49128f7fec428da97a00693eba859d23d9d81c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fee59a007640563b3fe52f81c91ded129b898b720bd5f2ceaab9e38dcb2703ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508800"
 ---
-# <a name="isnetworkfeed-attribute"></a>Isnetworkfeed-Attribut
+# <a name="isnetworkfeed-attribute"></a>IsNetworkFeed-Attribut
 
-Das Attribut " **isnetworkfeed** " gibt an, dass die Wiedergabeliste dynamisch aktualisiert wird.
+Das **IsNetworkFeed-Attribut** gibt an, dass die Wiedergabeliste dynamisch aktualisiert wird.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Wiedergabelisten](playlist-attributes-ref.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

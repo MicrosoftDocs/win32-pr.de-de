@@ -1,9 +1,9 @@
 ---
-title: Extern. appcolorbuttonshadow
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. appcolorbuttonshadow
+title: External.appColorButtonShadow
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.appColorButtonShadow
 ms.assetid: 82ee5b9d-33e5-4622-be68-3922f2469606
 keywords:
-- Externe. appcolorbuttonshadow-Fenster Media Player
+- External.appColorButtonShadow-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8cb849501404c9dea9883f239223cac0c2389ecd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7950812fcd61b9493f95392f414109735a62824dc88f7b1762fe3ad1ee0571d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649910"
 ---
-# <a name="externalappcolorbuttonshadow"></a>Extern. appcolorbuttonshadow
+# <a name="externalappcolorbuttonshadow"></a>External.appColorButtonShadow
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **appcolorbuttonshadow** -Eigenschaft ruft die aktuelle Schaltflächen Schatten Farbe für die Windows Media Player-Benutzeroberfläche ab.
+Die **appColorButtonShadow-Eigenschaft** ruft die aktuelle Schaltflächenschattenfarbe für die Windows Media Player Benutzeroberfläche ab.
 
 ``` syntax
 window.external.appColorButtonShadow
@@ -37,11 +37,11 @@ window.external.appColorButtonShadow
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung der gehosteten Webseite so anzupassen, dass Sie dem Player entspricht.
+Benutzer können die Farbe der Windows Media Player Benutzeroberfläche ändern. Sie können diese Eigenschaft verwenden, um die Darstellung Ihrer gehosteten Webseite an den Player anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Benutzer können die Farbe der Windows Media Player-Benutzeroberfläche ändern.
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 2-Online Speicher**](external-object-for-type-2-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 2**](external-object-for-type-2-online-stores.md)
 </dt> </dl>
 
  

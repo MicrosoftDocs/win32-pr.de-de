@@ -1,6 +1,6 @@
 ---
-title: COM-Fehler Codes (WPN, MBN, P2P, Bluetooth) (Winerror. h)
-description: In der folgenden Tabelle finden Sie eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden. | COM-Fehler Codes (WPN, MBN, P2P, Bluetooth) (Winerror. h)
+title: COM-Fehlercodes (WPN, MBN, P2P, Bluetooth) (Winerror.h)
+description: Die folgende Tabelle enthält eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden. | COM-Fehlercodes (WPN, MBN, P2P, Bluetooth) (Winerror.h)
 ms.assetid: 351E28F9-89E7-4F19-B72D-FFE12C95A6B3
 topic_type:
 - apiref
@@ -171,116 +171,116 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 20eb4273f4f0d11bb62cecf970f5958584b1c5e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 09aa0596e2a4643333a6d925449669b0579b1acc295782da4be6ceaa50a13cba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048558"
 ---
-# <a name="com-error-codes-wpn-mbn-p2p-bluetooth"></a>COM-Fehler Codes (WPN, MBN, P2P, Bluetooth)
+# <a name="com-error-codes-wpn-mbn-p2p-bluetooth"></a>COM-Fehlercodes (WPN, MBN, P2P, Bluetooth)
 
-In der folgenden Tabelle finden Sie eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden.
+Die folgende Tabelle enthält eine Liste der Fehlercodes, die von COM-basierten APIs verwendet werden.
 
-Wenn Sie Probleme mit einer Anwendung haben, die Sie installieren oder ausführen, wenden Sie sich an den Kundensupport für die Software, die die Fehlermeldung anzeigt. Um Unterstützung für ein Microsoft-Produkt zu erhalten, navigieren Sie zu [https://support.microsoft.com](https://support.microsoft.com) .
+Wenn Sie Probleme mit einer Anwendung haben, die Sie installieren oder ausführen, wenden Sie sich an den Kundensupport für die Software, die die Fehlermeldung angezeigt. Um Support für ein Microsoft-Produkt zu erhalten, wechseln Sie zu [https://support.microsoft.com](https://support.microsoft.com) .
 
 <dl> <dt>
 
-<span id="WPN_E_CHANNEL_CLOSED"></span><span id="wpn_e_channel_closed"></span>**WPN \_ E \_ Channel \_ geschlossen**
+<span id="WPN_E_CHANNEL_CLOSED"></span><span id="wpn_e_channel_closed"></span>**WPN \_ E \_ CHANNEL \_ CLOSED**
 </dt> <dd> <dl> <dt>
 
-0x803e0100
+0x803E0100
 </dt> <dt>
 
 
 
-Der Benachrichtigungs Kanal wurde bereits geschlossen.
+Der Benachrichtigungskanal wurde bereits geschlossen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_CHANNEL_REQUEST_NOT_COMPLETE"></span><span id="wpn_e_channel_request_not_complete"></span>**WPN \_ E- \_ Kanal \_ Anforderung \_ nicht \_ fertiggestellt**
+<span id="WPN_E_CHANNEL_REQUEST_NOT_COMPLETE"></span><span id="wpn_e_channel_request_not_complete"></span>**\_ \_ WPN-E-CHANNEL-ANFORDERUNG \_ NICHT \_ \_ ABGESCHLOSSEN**
 </dt> <dd> <dl> <dt>
 
-0x803e0101
+0x803E0101
 </dt> <dt>
 
 
 
-Die Anforderung für den Benachrichtigungs Kanal wurde nicht erfolgreich abgeschlossen.
+Die Benachrichtigungskanalanforderung wurde nicht erfolgreich abgeschlossen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_INVALID_APP"></span><span id="wpn_e_invalid_app"></span>**\_ungültige WPN E- \_ \_ App**
+<span id="WPN_E_INVALID_APP"></span><span id="wpn_e_invalid_app"></span>**WPN \_ E \_ UNGÜLTIGE \_ APP**
 </dt> <dd> <dl> <dt>
 
-0x803e0102
+0x803E0102
 </dt> <dt>
 
 
 
-Der angegebene Anwendungs Bezeichner ist ungültig.
+Der bereitgestellte Anwendungsbezeichner ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_OUTSTANDING_CHANNEL_REQUEST"></span><span id="wpn_e_outstanding_channel_request"></span>**WPN \_ E \_ ausstehende \_ Kanal \_ Anforderung**
+<span id="WPN_E_OUTSTANDING_CHANNEL_REQUEST"></span><span id="wpn_e_outstanding_channel_request"></span>**WPN \_ E \_ AUSSTEHENDE \_ \_ KANALANFORDERUNG**
 </dt> <dd> <dl> <dt>
 
-0x803e0103
+0x803E0103
 </dt> <dt>
 
 
 
-Für den angegebenen Anwendungs Bezeichner wird eine Benachrichtigungs Kanal Anforderung ausgeführt.
+Eine Benachrichtigungskanalanforderung für den bereitgestellten Anwendungsbezeichner wird in Bearbeitung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_DUPLICATE_CHANNEL"></span><span id="wpn_e_duplicate_channel"></span>**doppelter WPN- \_ \_ \_ Kanal**
+<span id="WPN_E_DUPLICATE_CHANNEL"></span><span id="wpn_e_duplicate_channel"></span>**WPN \_ E \_ DUPLICATE \_ CHANNEL**
 </dt> <dd> <dl> <dt>
 
-0x803e0104
+0x803E0104
 </dt> <dt>
 
 
 
-Der Kanal Bezeichner ist bereits an einen anderen Anwendungs Endpunkt gebunden.
+Der Kanalbezeichner ist bereits an einen anderen Anwendungsendpunkt gebunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_PLATFORM_UNAVAILABLE"></span><span id="wpn_e_platform_unavailable"></span>**WPN \_ E \_ Platform nicht \_ verfügbar**
+<span id="WPN_E_PLATFORM_UNAVAILABLE"></span><span id="wpn_e_platform_unavailable"></span>**WPN \_ E PLATFORM NICHT \_ \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
-0x803e0105
+0x803E0105
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform ist nicht verfügbar.
+Die Benachrichtigungsplattform ist nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_POSTED"></span><span id="wpn_e_notification_posted"></span>**WPN \_ E- \_ Benachrichtigung \_ gepostet**
+<span id="WPN_E_NOTIFICATION_POSTED"></span><span id="wpn_e_notification_posted"></span>**WPN \_ \_ E-BENACHRICHTIGUNG \_ VERÖFFENTLICHT**
 </dt> <dd> <dl> <dt>
 
-0x803e0106
+0x803E0106
 </dt> <dt>
 
 
 
-Die Benachrichtigung wurde bereits gepostet.
+Die Benachrichtigung wurde bereits gesendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_HIDDEN"></span><span id="wpn_e_notification_hidden"></span>**WPN \_ E- \_ Benachrichtigung \_ ausgeblendet**
+<span id="WPN_E_NOTIFICATION_HIDDEN"></span><span id="wpn_e_notification_hidden"></span>**WPN \_ E \_ NOTIFICATION \_ HIDDEN**
 </dt> <dd> <dl> <dt>
 
-0x803e0107
+0x803E0107
 </dt> <dt>
 
 
@@ -290,62 +290,62 @@ Die Benachrichtigung wurde bereits ausgeblendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_NOT_POSTED"></span><span id="wpn_e_notification_not_posted"></span>**WPN \_ E- \_ Benachrichtigung \_ nicht \_ gepostet**
+<span id="WPN_E_NOTIFICATION_NOT_POSTED"></span><span id="wpn_e_notification_not_posted"></span>**WPN \_ \_ E-BENACHRICHTIGUNG \_ \_ NICHT VERÖFFENTLICHT**
 </dt> <dd> <dl> <dt>
 
-0x803e0108
+0x803E0108
 </dt> <dt>
 
 
 
-Die Benachrichtigung kann erst ausgeblendet werden, wenn Sie angezeigt wird.
+Die Benachrichtigung kann erst ausgeblendet werden, wenn sie angezeigt wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_CLOUD_DISABLED"></span><span id="wpn_e_cloud_disabled"></span>**WPN \_ E- \_ Cloud \_ deaktiviert**
+<span id="WPN_E_CLOUD_DISABLED"></span><span id="wpn_e_cloud_disabled"></span>**WPN \_ E \_ CLOUD \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
-0x803e0109
+0x803E0109
 </dt> <dt>
 
 
 
-Cloud-Benachrichtigungen wurden ausgeschaltet.
+Cloudbenachrichtigungen wurden deaktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_CLOUD_INCAPABLE"></span><span id="wpn_e_cloud_incapable"></span>**WPN \_ E \_ \_ cloudfähig**
+<span id="WPN_E_CLOUD_INCAPABLE"></span><span id="wpn_e_cloud_incapable"></span>**WPN \_ E \_ CLOUD \_ INCAPABLE**
 </dt> <dd> <dl> <dt>
 
-0x803e0110
+0x803E0110
 </dt> <dt>
 
 
 
-Die Anwendung verfügt nicht über die Cloud-Benachrichtigungsfunktion.
+Die Anwendung verfügt nicht über die Cloudbenachrichtigungsfunktion.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_DISABLED"></span><span id="wpn_e_notification_disabled"></span>**WPN \_ E- \_ Benachrichtigung \_ deaktiviert**
+<span id="WPN_E_NOTIFICATION_DISABLED"></span><span id="wpn_e_notification_disabled"></span>**WPN \_ E \_ NOTIFICATION \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
-0x803e0111
+0x803E0111
 </dt> <dt>
 
 
 
-Die Einstellungen verhindern, dass die Benachrichtigung übermittelt wird.
+Einstellungen verhindern, dass die Benachrichtigung übermittelt wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_INCAPABLE"></span><span id="wpn_e_notification_incapable"></span>**WPN \_ E- \_ Benachrichtigung nicht \_ fähig**
+<span id="WPN_E_NOTIFICATION_INCAPABLE"></span><span id="wpn_e_notification_incapable"></span>**WPN \_ E \_ NOTIFICATION \_ INCAPABLE**
 </dt> <dd> <dl> <dt>
 
-0x803e0112
+0x803E0112
 </dt> <dt>
 
 
@@ -355,202 +355,202 @@ Anwendungsfunktionen verhindern, dass die Benachrichtigung übermittelt wird.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_INTERNET_INCAPABLE"></span><span id="wpn_e_internet_incapable"></span>**WPN \_ E ( \_ Internet \_ fähig)**
+<span id="WPN_E_INTERNET_INCAPABLE"></span><span id="wpn_e_internet_incapable"></span>**WPN \_ E \_ INTERNET \_ INCAPABLE**
 </dt> <dd> <dl> <dt>
 
-0x803e0113
+0x803E0113
 </dt> <dt>
 
 
 
-Die Anwendung verfügt nicht über die Internet Zugriffs Funktion.
+Die Anwendung verfügt nicht über die Internetzugriffsfunktion.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_TYPE_DISABLED"></span><span id="wpn_e_notification_type_disabled"></span>**WPN \_ E \_ - \_ Benachrichtigungstyp \_ deaktiviert**
+<span id="WPN_E_NOTIFICATION_TYPE_DISABLED"></span><span id="wpn_e_notification_type_disabled"></span>**WPN \_ E \_ NOTIFICATION \_ TYPE \_ DISABLED**
 </dt> <dd> <dl> <dt>
 
-0x803e0114
+0x803E0114
 </dt> <dt>
 
 
 
-Einstellungen verhindern, dass der Benachrichtigungstyp zugestellt wird.
+Einstellungen verhindern, dass der Benachrichtigungstyp übermittelt wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_SIZE"></span><span id="wpn_e_notification_size"></span>**WPN \_ E- \_ Benachrichtigungs \_ Größe**
+<span id="WPN_E_NOTIFICATION_SIZE"></span><span id="wpn_e_notification_size"></span>**WPN \_ \_ E-BENACHRICHTIGUNGSGRÖßE \_**
 </dt> <dd> <dl> <dt>
 
-0x803e0115
+0x803E0115
 </dt> <dt>
 
 
 
-Die Größe des Benachrichtigungs Inhalts ist zu groß.
+Die Größe des Benachrichtigungsinhalts ist zu groß.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_TAG_SIZE"></span><span id="wpn_e_tag_size"></span>**WPN \_ E \_ - \_ taggröße**
+<span id="WPN_E_TAG_SIZE"></span><span id="wpn_e_tag_size"></span>**WPN \_ E \_ TAG \_ SIZE**
 </dt> <dd> <dl> <dt>
 
-0x803e0116
+0x803E0116
 </dt> <dt>
 
 
 
-Die Größe des Benachrichtigungs Tags ist zu groß.
+Die Größe des Benachrichtigungstags ist zu groß.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_ACCESS_DENIED"></span><span id="wpn_e_access_denied"></span>**WPN \_ E- \_ Zugriff \_ verweigert**
+<span id="WPN_E_ACCESS_DENIED"></span><span id="wpn_e_access_denied"></span>**WPN E ACCESS DENIED (WPN \_ \_ \_ E-ZUGRIFF VERWEIGERT)**
 </dt> <dd> <dl> <dt>
 
-0x803e0117
+0x803E0117
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform verfügt nicht über die entsprechenden Berechtigungen für Ressourcen.
+Die Benachrichtigungsplattform hat keine entsprechenden Berechtigungen für Ressourcen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_DUPLICATE_REGISTRATION"></span><span id="wpn_e_duplicate_registration"></span>**WPN \_ E- \_ doppelte \_ Registrierung**
+<span id="WPN_E_DUPLICATE_REGISTRATION"></span><span id="wpn_e_duplicate_registration"></span>**WPN \_ E \_ DUPLIZIERTE \_ REGISTRIERUNG**
 </dt> <dd> <dl> <dt>
 
-0x803e0118
+0x803E0118
 </dt> <dt>
 
 
 
-Die Anwendung "Benachrichtigungs Plattform gefunden" ist bereits registriert.
+Die gefundene Anwendung der Benachrichtigungsplattform ist bereits registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_OUT_OF_SESSION"></span><span id="wpn_e_out_of_session"></span>**WPN \_ E \_ außerhalb \_ der \_ Sitzung**
+<span id="WPN_E_OUT_OF_SESSION"></span><span id="wpn_e_out_of_session"></span>**WPN \_ E \_ OUT \_ OF \_ SESSION**
 </dt> <dd> <dl> <dt>
 
-0x803e0200
+0x803E0200
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform verfügt über keine Sitzungen der Präsentationsschicht.
+Auf der Benachrichtigungsplattform sind keine Sitzungen auf Präsentationsebene mehr verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_POWER_SAVE"></span><span id="wpn_e_power_save"></span>**WPN \_ E \_ Power \_ Save**
+<span id="WPN_E_POWER_SAVE"></span><span id="wpn_e_power_save"></span>**WPN \_ E \_ POWER \_ SAVE**
 </dt> <dd> <dl> <dt>
 
-0x803e0201
+0x803E0201
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform lehnt Abbild Download Anforderungen aufgrund des Systems im Energiesparmodus ab.
+Die Benachrichtigungsplattform lehnt image download request due to system in power save mode (System im Energiesparmodus) ab.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_IMAGE_NOT_FOUND_IN_CACHE"></span><span id="wpn_e_image_not_found_in_cache"></span>**WPN \_ E- \_ Image wurde \_ \_ \_ im \_ Cache nicht gefunden.**
+<span id="WPN_E_IMAGE_NOT_FOUND_IN_CACHE"></span><span id="wpn_e_image_not_found_in_cache"></span>**WPN E IMAGE NOT FOUND IN CACHE (WPN \_ \_ \_ E-IMAGE NICHT IM CACHE \_ \_ \_ GEFUNDEN)**
 </dt> <dd> <dl> <dt>
 
-0x803e0202
+0x803E0202
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform verfügt nicht über das angeforderte Image im Cache.
+Die Benachrichtigungsplattform hat das angeforderte Image nicht im Cache.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_ALL_URL_NOT_COMPLETED"></span><span id="wpn_e_all_url_not_completed"></span>**WPN \_ E \_ alle \_ URL \_ nicht \_ abgeschlossen**
+<span id="WPN_E_ALL_URL_NOT_COMPLETED"></span><span id="wpn_e_all_url_not_completed"></span>**WPN \_ E \_ ALL \_ URL \_ NOT \_ COMPLETED**
 </dt> <dd> <dl> <dt>
 
-0x803e0203
+0x803E0203
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform kann nicht alle angeforderten Images vollständig ausfüllen.
+Die Benachrichtigungsplattform kann nicht alle angeforderten Images abschließen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_INVALID_CLOUD_IMAGE"></span><span id="wpn_e_invalid_cloud_image"></span>**WPN \_ E ( \_ ungültiges \_ \_ cloudimage)**
+<span id="WPN_E_INVALID_CLOUD_IMAGE"></span><span id="wpn_e_invalid_cloud_image"></span>**WPN \_ E \_ UNGÜLTIGES \_ \_ CLOUDIMAGE**
 </dt> <dd> <dl> <dt>
 
-0x803e0204
+0x803E0204
 </dt> <dt>
 
 
 
-Ein von der Benachrichtigungs Plattform heruntergeladenes cloudimage ist ungültig.
+Ein von der Benachrichtigungsplattform heruntergeladenes Cloudimage ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_NOTIFICATION_ID_MATCHED"></span><span id="wpn_e_notification_id_matched"></span>**WPN \_ E- \_ Benachrichtigungs- \_ ID stimmt \_ überein**
+<span id="WPN_E_NOTIFICATION_ID_MATCHED"></span><span id="wpn_e_notification_id_matched"></span>**WPN \_ E \_ NOTIFICATION \_ ID \_ MATCHED**
 </dt> <dd> <dl> <dt>
 
-0x803e0205
+0x803E0205
 </dt> <dt>
 
 
 
-Die als Filter angegebene Benachrichtigungs-ID wird mit der Art der Benachrichtigungs Plattform abgeglichen.
+Die als Filter bereitgestellte Benachrichtigungs-ID wird mit dem übereinstimmen, was die Benachrichtigungsplattform verwaltet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_CALLBACK_ALREADY_REGISTERED"></span><span id="wpn_e_callback_already_registered"></span>**WPN \_ E- \_ Rückruf \_ bereits \_ registriert**
+<span id="WPN_E_CALLBACK_ALREADY_REGISTERED"></span><span id="wpn_e_callback_already_registered"></span>**WPN \_ \_ E-RÜCKRUF \_ BEREITS \_ REGISTRIERT**
 </dt> <dd> <dl> <dt>
 
-0x803e0206
+0x803E0206
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Rückruf-Schnittstelle ist bereits registriert.
+Die Benachrichtigungsrückrufschnittstelle ist bereits registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_TOAST_NOTIFICATION_DROPPED"></span><span id="wpn_e_toast_notification_dropped"></span>**WPN \_ E-Popup \_ \_ Benachrichtigung \_ gelöscht**
+<span id="WPN_E_TOAST_NOTIFICATION_DROPPED"></span><span id="wpn_e_toast_notification_dropped"></span>**\_ \_ WPN-E-POPUPBENACHRICHTIGUNG \_ \_ GELÖSCHT**
 </dt> <dd> <dl> <dt>
 
-0x803e0207
+0x803E0207
 </dt> <dt>
 
 
 
-Die Popup Benachrichtigung wurde gelöscht, ohne dass Sie dem Benutzer angezeigt wird.
+Popupbenachrichtigung wurde gelöscht, ohne dem Benutzer angezeigt zu werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WPN_E_STORAGE_LOCKED"></span><span id="wpn_e_storage_locked"></span>**WPN \_ E- \_ Speicher \_ gesperrt**
+<span id="WPN_E_STORAGE_LOCKED"></span><span id="wpn_e_storage_locked"></span>**WPN \_ E \_ STORAGE \_ LOCKED**
 </dt> <dd> <dl> <dt>
 
-0x803e0208
+0x803E0208
 </dt> <dt>
 
 
 
-Die Benachrichtigungs Plattform verfügt nicht über die erforderlichen Berechtigungen, um die Anforderung abzuschließen.
+Die Benachrichtigungsplattform verfügt nicht über die erforderlichen Berechtigungen zum Abschließen der Anforderung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_CONTEXT_NOT_ACTIVATED"></span><span id="e_mbn_context_not_activated"></span>**E \_ MBN- \_ Kontext \_ nicht \_ aktiviert**
+<span id="E_MBN_CONTEXT_NOT_ACTIVATED"></span><span id="e_mbn_context_not_activated"></span>**E \_ \_ MBN-KONTEXT \_ NICHT \_ AKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 0x80548201
@@ -563,7 +563,7 @@ Der Kontext ist nicht aktiviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_BAD_SIM"></span><span id="e_mbn_bad_sim"></span>**E \_ MBN \_ Bad \_ SIM**
+<span id="E_MBN_BAD_SIM"></span><span id="e_mbn_bad_sim"></span>**E \_ MBN \_ BAD \_ SIM**
 </dt> <dd> <dl> <dt>
 
 0x80548202
@@ -571,12 +571,12 @@ Der Kontext ist nicht aktiviert.
 
 
 
-Es wurde eine ungültige SIM eingefügt.
+Eine fehlerhafte SIM wird eingefügt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_DATA_CLASS_NOT_AVAILABLE"></span><span id="e_mbn_data_class_not_available"></span>**E \_ MBN- \_ Daten \_ Klasse \_ nicht \_ verfügbar**
+<span id="E_MBN_DATA_CLASS_NOT_AVAILABLE"></span><span id="e_mbn_data_class_not_available"></span>**E \_ \_ MBN-DATENKLASSE \_ \_ NICHT \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 0x80548203
@@ -589,7 +589,7 @@ Die angeforderte Datenklasse ist nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_INVALID_ACCESS_STRING"></span><span id="e_mbn_invalid_access_string"></span>**E \_ MBN \_ ungültige \_ Zugriffs \_ Zeichenfolge**
+<span id="E_MBN_INVALID_ACCESS_STRING"></span><span id="e_mbn_invalid_access_string"></span>**E \_ MBN \_ UNGÜLTIGE \_ \_ ZUGRIFFSZEICHENFOLGE**
 </dt> <dd> <dl> <dt>
 
 0x80548204
@@ -597,12 +597,12 @@ Die angeforderte Datenklasse ist nicht verfügbar.
 
 
 
-Der Zugriffspunkt Name (APN) oder die Zugriffs Zeichenfolge ist falsch.
+Der Zugriffspunktname (ACCESS Point Name, APN) oder die Zugriffszeichenfolge ist falsch.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_MAX_ACTIVATED_CONTEXTS"></span><span id="e_mbn_max_activated_contexts"></span>**\_ \_ maximal \_ aktivierte Kontexte mit \_ MBN**
+<span id="E_MBN_MAX_ACTIVATED_CONTEXTS"></span><span id="e_mbn_max_activated_contexts"></span>**E \_ MBN \_ MAX \_ \_ AKTIVIERTE KONTEXTE**
 </dt> <dd> <dl> <dt>
 
 0x80548205
@@ -610,12 +610,12 @@ Der Zugriffspunkt Name (APN) oder die Zugriffs Zeichenfolge ist falsch.
 
 
 
-Maximal aktivierte Kontexte wurden erreicht.
+Max. aktivierte Kontexte wurden erreicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PACKET_SVC_DETACHED"></span><span id="e_mbn_packet_svc_detached"></span>**E \_ MBN- \_ Paket- \_ svc \_ getrennt**
+<span id="E_MBN_PACKET_SVC_DETACHED"></span><span id="e_mbn_packet_svc_detached"></span>**E \_ MBN \_ PACKET \_ SVC \_ DETACHED**
 </dt> <dd> <dl> <dt>
 
 0x80548206
@@ -623,12 +623,12 @@ Maximal aktivierte Kontexte wurden erreicht.
 
 
 
-Das Gerät befindet sich im Zustand "Paket Trennung".
+Das Gerät befindet sich im Zustand "Pakettrennung".
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PROVIDER_NOT_VISIBLE"></span><span id="e_mbn_provider_not_visible"></span>**E \_ MBN- \_ Anbieter \_ nicht \_ sichtbar**
+<span id="E_MBN_PROVIDER_NOT_VISIBLE"></span><span id="e_mbn_provider_not_visible"></span>**E \_ \_ MBN-ANBIETER \_ NICHT \_ SICHTBAR**
 </dt> <dd> <dl> <dt>
 
 0x80548207
@@ -641,7 +641,7 @@ Der Anbieter ist nicht sichtbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_RADIO_POWER_OFF"></span><span id="e_mbn_radio_power_off"></span>**E \_ MBN \_ Radio \_ \_ ausschalten**
+<span id="E_MBN_RADIO_POWER_OFF"></span><span id="e_mbn_radio_power_off"></span>**E \_ MBN \_ RADIO \_ POWER \_ OFF**
 </dt> <dd> <dl> <dt>
 
 0x80548208
@@ -649,12 +649,12 @@ Der Anbieter ist nicht sichtbar.
 
 
 
-Radio ist ausgeschaltet.
+Das Radio ist ausgeschaltet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SERVICE_NOT_ACTIVATED"></span><span id="e_mbn_service_not_activated"></span>**E \_ MBN- \_ Dienst \_ nicht \_ aktiviert**
+<span id="E_MBN_SERVICE_NOT_ACTIVATED"></span><span id="e_mbn_service_not_activated"></span>**E \_ \_ MBN-DIENST \_ NICHT \_ AKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 0x80548209
@@ -667,10 +667,10 @@ Das MBN-Abonnement ist nicht aktiviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SIM_NOT_INSERTED"></span><span id="e_mbn_sim_not_inserted"></span>**E \_ MBN \_ SIM \_ nicht \_ eingefügt**
+<span id="E_MBN_SIM_NOT_INSERTED"></span><span id="e_mbn_sim_not_inserted"></span>**E \_ MBN \_ SIM NICHT \_ \_ EINGEFÜGT**
 </dt> <dd> <dl> <dt>
 
-0x8054820a
+0x8054820A
 </dt> <dt>
 
 
@@ -680,36 +680,36 @@ SIM wird nicht eingefügt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_VOICE_CALL_IN_PROGRESS"></span><span id="e_mbn_voice_call_in_progress"></span>**E \_ MBN- \_ sprach \_ Anruf \_ in \_ Bearbeitung**
+<span id="E_MBN_VOICE_CALL_IN_PROGRESS"></span><span id="e_mbn_voice_call_in_progress"></span>**E MBN VOICE CALL IN PROGRESS (E \_ \_ MBN-SPRACHANRUF \_ \_ WIRD IN \_ BEARBEITUNG)**
 </dt> <dd> <dl> <dt>
 
-0x8054820b
+0x8054820B
 </dt> <dt>
 
 
 
-Sprachanruf läuft.
+Sprachanruf wird in Bearbeitung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_INVALID_CACHE"></span><span id="e_mbn_invalid_cache"></span>**E \_ MBN \_ ungültiger \_ Cache**
+<span id="E_MBN_INVALID_CACHE"></span><span id="e_mbn_invalid_cache"></span>**E \_ MBN \_ UNGÜLTIGER \_ CACHE**
 </dt> <dd> <dl> <dt>
 
-0x8054820c
+0x8054820C
 </dt> <dt>
 
 
 
-Der sichtbare Anbieter Cache ist ungültig.
+Der sichtbare Anbietercache ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_NOT_REGISTERED"></span><span id="e_mbn_not_registered"></span>**E \_ MBN \_ nicht \_ registriert**
+<span id="E_MBN_NOT_REGISTERED"></span><span id="e_mbn_not_registered"></span>**E \_ MBN \_ NICHT \_ REGISTRIERT**
 </dt> <dd> <dl> <dt>
 
-0x8054820d
+0x8054820D
 </dt> <dt>
 
 
@@ -719,10 +719,10 @@ Das Gerät ist nicht registriert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PROVIDERS_NOT_FOUND"></span><span id="e_mbn_providers_not_found"></span>**E \_ MBN- \_ Anbieter \_ nicht \_ gefunden**
+<span id="E_MBN_PROVIDERS_NOT_FOUND"></span><span id="e_mbn_providers_not_found"></span>**E \_ \_ MBN-ANBIETER \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-0x8054820e
+0x8054820E
 </dt> <dt>
 
 
@@ -732,20 +732,20 @@ Anbieter nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PIN_NOT_SUPPORTED"></span><span id="e_mbn_pin_not_supported"></span>**E \_ MBN \_ - \_ Pin \_ wird nicht unterstützt.**
+<span id="E_MBN_PIN_NOT_SUPPORTED"></span><span id="e_mbn_pin_not_supported"></span>**\_E-MBN-PIN \_ \_ WIRD NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
-0x8054820f
+0x8054820F
 </dt> <dt>
 
 
 
-PIN wird nicht unterstützt.
+Pin wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PIN_REQUIRED"></span><span id="e_mbn_pin_required"></span>**E \_ MBN- \_ Pin \_ erforderlich**
+<span id="E_MBN_PIN_REQUIRED"></span><span id="e_mbn_pin_required"></span>**E \_ \_ MBN-PIN \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 0x80548210
@@ -753,12 +753,12 @@ PIN wird nicht unterstützt.
 
 
 
-PIN ist erforderlich.
+Pin ist erforderlich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_PIN_DISABLED"></span><span id="e_mbn_pin_disabled"></span>**E \_ MBN- \_ Pin \_ deaktiviert**
+<span id="E_MBN_PIN_DISABLED"></span><span id="e_mbn_pin_disabled"></span>**E \_ \_ MBN-PIN \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 0x80548211
@@ -766,12 +766,12 @@ PIN ist erforderlich.
 
 
 
-PIN ist deaktiviert.
+DIE PIN ist deaktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_FAILURE"></span><span id="e_mbn_failure"></span>**E \_ MBN- \_ Fehler**
+<span id="E_MBN_FAILURE"></span><span id="e_mbn_failure"></span>**E \_ \_ MBN-FEHLER**
 </dt> <dd> <dl> <dt>
 
 0x80548212
@@ -784,7 +784,7 @@ Generischer Fehler.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_INVALID_PROFILE"></span><span id="e_mbn_invalid_profile"></span>**E \_ MBN \_ ungültiges \_ Profil**
+<span id="E_MBN_INVALID_PROFILE"></span><span id="e_mbn_invalid_profile"></span>**E \_ MBN \_ UNGÜLTIGES \_ PROFIL**
 </dt> <dd> <dl> <dt>
 
 0x80548218
@@ -797,7 +797,7 @@ Das Profil ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_DEFAULT_PROFILE_EXIST"></span><span id="e_mbn_default_profile_exist"></span>**E \_ MBN- \_ Standard \_ Profil \_ vorhanden**
+<span id="E_MBN_DEFAULT_PROFILE_EXIST"></span><span id="e_mbn_default_profile_exist"></span>**E \_ \_ MBN-STANDARDPROFIL \_ \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 0x80548219
@@ -805,12 +805,12 @@ Das Profil ist ungültig.
 
 
 
-Das Standardprofil ist vorhanden.
+Standardprofil vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_ENCODING_NOT_SUPPORTED"></span><span id="e_mbn_sms_encoding_not_supported"></span>**E \_ MBN \_ SMS \_ - \_ Codierung \_ wird nicht unterstützt.**
+<span id="E_MBN_SMS_ENCODING_NOT_SUPPORTED"></span><span id="e_mbn_sms_encoding_not_supported"></span>**\_ \_ E-MBN-SMS-CODIERUNG \_ \_ NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80548220
@@ -818,12 +818,12 @@ Das Standardprofil ist vorhanden.
 
 
 
-SMS-Codierung wird nicht unterstützt.
+Die SMS-Codierung wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_FILTER_NOT_SUPPORTED"></span><span id="e_mbn_sms_filter_not_supported"></span>**E \_ MBN \_ SMS \_ - \_ Filter \_ wird nicht unterstützt.**
+<span id="E_MBN_SMS_FILTER_NOT_SUPPORTED"></span><span id="e_mbn_sms_filter_not_supported"></span>**\_ \_ E-MBN-SMS-FILTER \_ \_ NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80548221
@@ -836,7 +836,7 @@ Der SMS-Filter wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_INVALID_MEMORY_INDEX"></span><span id="e_mbn_sms_invalid_memory_index"></span>**E \_ MBN- \_ SMS- \_ ungültiger \_ Speicher \_ Index**
+<span id="E_MBN_SMS_INVALID_MEMORY_INDEX"></span><span id="e_mbn_sms_invalid_memory_index"></span>**E \_ MBN \_ SMS \_ INVALID \_ MEMORY \_ INDEX**
 </dt> <dd> <dl> <dt>
 
 0x80548222
@@ -844,12 +844,12 @@ Der SMS-Filter wird nicht unterstützt.
 
 
 
-Es wurde ein ungültiger SMS-Speicher Index verwendet.
+Ungültiger SMS-Arbeitsspeicherindex wird verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_LANG_NOT_SUPPORTED"></span><span id="e_mbn_sms_lang_not_supported"></span>**E \_ MBN \_ SMS \_ lang \_ nicht \_ unterstützt**
+<span id="E_MBN_SMS_LANG_NOT_SUPPORTED"></span><span id="e_mbn_sms_lang_not_supported"></span>**E \_ MBN \_ SMS LANG NICHT \_ \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80548223
@@ -862,7 +862,7 @@ Die SMS-Sprache wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_MEMORY_FAILURE"></span><span id="e_mbn_sms_memory_failure"></span>**E \_ MBN- \_ SMS- \_ Speicher \_ Fehler**
+<span id="E_MBN_SMS_MEMORY_FAILURE"></span><span id="e_mbn_sms_memory_failure"></span>**\_ \_ E-MBN-SMS-ARBEITSSPEICHERFEHLER \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x80548224
@@ -870,12 +870,12 @@ Die SMS-Sprache wird nicht unterstützt.
 
 
 
-SMS-Speicherfehler.
+Sms-Arbeitsspeicherfehler.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_NETWORK_TIMEOUT"></span><span id="e_mbn_sms_network_timeout"></span>**E \_ MBN- \_ SMS- \_ Netzwerk \_ Timeout**
+<span id="E_MBN_SMS_NETWORK_TIMEOUT"></span><span id="e_mbn_sms_network_timeout"></span>**\_ \_ \_ E-MBN-SMS-NETZWERKZEITÜBERSCHREITUNG \_**
 </dt> <dd> <dl> <dt>
 
 0x80548225
@@ -883,12 +883,12 @@ SMS-Speicherfehler.
 
 
 
-Das SMS-Netzwerk Timeout ist aufgetreten.
+Ein SMS-Netzwerk-Timeout ist passiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_UNKNOWN_SMSC_ADDRESS"></span><span id="e_mbn_sms_unknown_smsc_address"></span>**E \_ MBN \_ SMS \_ - \_ SMSC- \_ Adresse unbekannt**
+<span id="E_MBN_SMS_UNKNOWN_SMSC_ADDRESS"></span><span id="e_mbn_sms_unknown_smsc_address"></span>**\_E-MBN-SMS \_ \_ UNBEKANNTE \_ SMSC-ADRESSE \_**
 </dt> <dd> <dl> <dt>
 
 0x80548226
@@ -901,7 +901,7 @@ Es wird eine unbekannte SMSC-Adresse verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_FORMAT_NOT_SUPPORTED"></span><span id="e_mbn_sms_format_not_supported"></span>**E \_ MBN- \_ SMS- \_ Format \_ \_ wird nicht unterstützt.**
+<span id="E_MBN_SMS_FORMAT_NOT_SUPPORTED"></span><span id="e_mbn_sms_format_not_supported"></span>**\_ \_ E-MBN-SMS-FORMAT \_ WIRD NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80548227
@@ -914,7 +914,7 @@ Das SMS-Format wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_OPERATION_NOT_ALLOWED"></span><span id="e_mbn_sms_operation_not_allowed"></span>**E \_ MBN- \_ SMS- \_ Vorgang \_ nicht \_ zulässig**
+<span id="E_MBN_SMS_OPERATION_NOT_ALLOWED"></span><span id="e_mbn_sms_operation_not_allowed"></span>**\_ \_ E-MBN-SMS-VORGANG \_ \_ NICHT \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 0x80548228
@@ -927,7 +927,7 @@ Der SMS-Vorgang ist nicht zulässig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_MBN_SMS_MEMORY_FULL"></span><span id="e_mbn_sms_memory_full"></span>**E \_ MBN \_ SMS- \_ Speicher \_ voll**
+<span id="E_MBN_SMS_MEMORY_FULL"></span><span id="e_mbn_sms_memory_full"></span>**E \_ MBN \_ \_ SMS-ARBEITSSPEICHER \_ VOLL**
 </dt> <dd> <dl> <dt>
 
 0x80548229
@@ -935,12 +935,12 @@ Der SMS-Vorgang ist nicht zulässig.
 
 
 
-Der SMS-Speicher des Geräts ist voll.
+Der SMS-Arbeitsspeicher des Geräts ist voll.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_IPV6_NOT_INSTALLED"></span><span id="peer_e_ipv6_not_installed"></span>**Peer \_ E \_ IPv6 ist \_ nicht \_ installiert**
+<span id="PEER_E_IPV6_NOT_INSTALLED"></span><span id="peer_e_ipv6_not_installed"></span>**PEER \_ E \_ IPV6 \_ NICHT \_ INSTALLIERT**
 </dt> <dd> <dl> <dt>
 
 0x80630001
@@ -953,7 +953,7 @@ Das IPv6-Protokoll ist nicht installiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NOT_INITIALIZED"></span><span id="peer_e_not_initialized"></span>**der Peer \_ E wurde \_ nicht \_ initialisiert.**
+<span id="PEER_E_NOT_INITIALIZED"></span><span id="peer_e_not_initialized"></span>**PEER \_ E \_ NICHT \_ INITIALISIERT**
 </dt> <dd> <dl> <dt>
 
 0x80630002
@@ -966,7 +966,7 @@ Die Komponente wurde nicht initialisiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CANNOT_START_SERVICE"></span><span id="peer_e_cannot_start_service"></span>**Peer \_ E \_ kann \_ den \_ Dienst nicht starten.**
+<span id="PEER_E_CANNOT_START_SERVICE"></span><span id="peer_e_cannot_start_service"></span>**PEER \_ E KANN DIENST NICHT \_ \_ \_ STARTEN**
 </dt> <dd> <dl> <dt>
 
 0x80630003
@@ -974,12 +974,12 @@ Die Komponente wurde nicht initialisiert.
 
 
 
-Der erforderliche Dienst-Canot muss gestartet werden.
+Der erforderliche Dienst kann gestartet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NOT_LICENSED"></span><span id="peer_e_not_licensed"></span>**Peer \_ E \_ nicht \_ lizenziert**
+<span id="PEER_E_NOT_LICENSED"></span><span id="peer_e_not_licensed"></span>**PEER \_ E \_ NICHT \_ LIZENZIERT**
 </dt> <dd> <dl> <dt>
 
 0x80630004
@@ -987,12 +987,12 @@ Der erforderliche Dienst-Canot muss gestartet werden.
 
 
 
-Das P2P-Protokoll ist nicht für die unter Führung unter diesem Betriebssystem lizenziert.
+Das P2P-Protokoll ist nicht für die Ausführung unter diesem Betriebssystem lizenziert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_GRAPH"></span><span id="peer_e_invalid_graph"></span>**Peer \_ E \_ ungültiges \_ Diagramm**
+<span id="PEER_E_INVALID_GRAPH"></span><span id="peer_e_invalid_graph"></span>**PEER \_ E \_ UNGÜLTIGER \_ GRAPH**
 </dt> <dd> <dl> <dt>
 
 0x80630010
@@ -1000,12 +1000,12 @@ Das P2P-Protokoll ist nicht für die unter Führung unter diesem Betriebssystem 
 
 
 
-Das Diagramm Handle ist ungültig.
+Das Diagrammhand handle ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DBNAME_CHANGED"></span><span id="peer_e_dbname_changed"></span>**Peer \_ E \_ dbname \_ geändert**
+<span id="PEER_E_DBNAME_CHANGED"></span><span id="peer_e_dbname_changed"></span>**\_ \_ PEER-E-DBNAME \_ GEÄNDERT**
 </dt> <dd> <dl> <dt>
 
 0x80630011
@@ -1013,12 +1013,12 @@ Das Diagramm Handle ist ungültig.
 
 
 
-Der Name der Graphdaten-Datenbank wurde geändert.
+Der Name der GRaphing-Datenbank wurde geändert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DUPLICATE_GRAPH"></span><span id="peer_e_duplicate_graph"></span>**Doppeltes Peer- \_ E- \_ \_ Diagramm**
+<span id="PEER_E_DUPLICATE_GRAPH"></span><span id="peer_e_duplicate_graph"></span>**PEER \_ E \_ DUPLICATE \_ GRAPH**
 </dt> <dd> <dl> <dt>
 
 0x80630012
@@ -1026,12 +1026,12 @@ Der Name der Graphdaten-Datenbank wurde geändert.
 
 
 
-Es ist bereits ein Diagramm mit der gleichen ID vorhanden.
+Ein Diagramm mit der gleichen ID ist bereits vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GRAPH_NOT_READY"></span><span id="peer_e_graph_not_ready"></span>**Peer- \_ E- \_ Graph \_ nicht \_ bereit**
+<span id="PEER_E_GRAPH_NOT_READY"></span><span id="peer_e_graph_not_ready"></span>**\_ \_ PEER-E-GRAPH \_ NICHT \_ BEREIT**
 </dt> <dd> <dl> <dt>
 
 0x80630013
@@ -1044,7 +1044,7 @@ Das Diagramm ist nicht bereit.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GRAPH_SHUTTING_DOWN"></span><span id="peer_e_graph_shutting_down"></span>**Peer \_ E \_ Graph \_ wird \_ heruntergefahren**
+<span id="PEER_E_GRAPH_SHUTTING_DOWN"></span><span id="peer_e_graph_shutting_down"></span>**\_ \_ PEER-E-GRAPH \_ WIRD \_ HERUNTERGEFAHREN**
 </dt> <dd> <dl> <dt>
 
 0x80630014
@@ -1057,7 +1057,7 @@ Das Diagramm wird heruntergefahren.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GRAPH_IN_USE"></span><span id="peer_e_graph_in_use"></span>**Peer- \_ E- \_ Graph wird \_ \_ verwendet**
+<span id="PEER_E_GRAPH_IN_USE"></span><span id="peer_e_graph_in_use"></span>**VERWENDETER \_ PEER-E-GRAPH \_ \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x80630015
@@ -1070,7 +1070,7 @@ Das Diagramm wird weiterhin verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_DATABASE"></span><span id="peer_e_invalid_database"></span>**Peer \_ E \_ ungültige \_ Datenbank**
+<span id="PEER_E_INVALID_DATABASE"></span><span id="peer_e_invalid_database"></span>**PEER \_ E \_ UNGÜLTIGE \_ DATENBANK**
 </dt> <dd> <dl> <dt>
 
 0x80630016
@@ -1078,12 +1078,12 @@ Das Diagramm wird weiterhin verwendet.
 
 
 
-Die Graph-Datenbank ist beschädigt.
+Die Graphdatenbank ist beschädigt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_TOO_MANY_ATTRIBUTES"></span><span id="peer_e_too_many_attributes"></span>**Peer- \_ E \_ zu \_ viele \_ Attribute**
+<span id="PEER_E_TOO_MANY_ATTRIBUTES"></span><span id="peer_e_too_many_attributes"></span>**\_PEER-E \_ ZU VIELE \_ \_ ATTRIBUTE**
 </dt> <dd> <dl> <dt>
 
 0x80630017
@@ -1096,7 +1096,7 @@ Es wurden zu viele Attribute verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONNECTION_NOT_FOUND"></span><span id="peer_e_connection_not_found"></span>**Peer- \_ E- \_ Verbindung \_ nicht \_ gefunden**
+<span id="PEER_E_CONNECTION_NOT_FOUND"></span><span id="peer_e_connection_not_found"></span>**\_ \_ PEER-E-VERBINDUNG \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630103
@@ -1104,12 +1104,12 @@ Es wurden zu viele Attribute verwendet.
 
 
 
-Die Verbindung kann nicht gefunden werden.
+Die Verbindung wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONNECT_SELF"></span><span id="peer_e_connect_self"></span>**Peer \_ E \_ Connect \_ Self**
+<span id="PEER_E_CONNECT_SELF"></span><span id="peer_e_connect_self"></span>**PEER \_ E \_ CONNECT \_ SELF**
 </dt> <dd> <dl> <dt>
 
 0x80630106
@@ -1122,7 +1122,7 @@ Der Peer hat versucht, eine Verbindung mit sich selbst herzustellen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_ALREADY_LISTENING"></span><span id="peer_e_already_listening"></span>**Peer \_ E \_ \_ lauscht bereits**
+<span id="PEER_E_ALREADY_LISTENING"></span><span id="peer_e_already_listening"></span>**PEER \_ E \_ \_ LAUSCHT BEREITS**
 </dt> <dd> <dl> <dt>
 
 0x80630107
@@ -1135,7 +1135,7 @@ Der Peer lauscht bereits auf Verbindungen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NODE_NOT_FOUND"></span><span id="peer_e_node_not_found"></span>**Peer \_ E- \_ Knoten wurde \_ nicht \_ gefunden.**
+<span id="PEER_E_NODE_NOT_FOUND"></span><span id="peer_e_node_not_found"></span>**\_ \_ PEER-E-KNOTEN \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630108
@@ -1148,7 +1148,7 @@ Der Knoten wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONNECTION_FAILED"></span><span id="peer_e_connection_failed"></span>**Peer- \_ E- \_ Verbindung \_ fehlgeschlagen**
+<span id="PEER_E_CONNECTION_FAILED"></span><span id="peer_e_connection_failed"></span>**\_FEHLER BEI PEER-E-VERBINDUNG \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x80630109
@@ -1156,38 +1156,38 @@ Der Knoten wurde nicht gefunden.
 
 
 
-Der Verbindungsversuch ist fehlgeschlagen.
+Fehler beim Verbindungsversuch.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONNECTION_NOT_AUTHENTICATED"></span><span id="peer_e_connection_not_authenticated"></span>**Peer- \_ E- \_ Verbindung \_ nicht \_ authentifiziert**
+<span id="PEER_E_CONNECTION_NOT_AUTHENTICATED"></span><span id="peer_e_connection_not_authenticated"></span>**\_ \_ PEER-E-VERBINDUNG \_ NICHT \_ AUTHENTIFIZIERT**
 </dt> <dd> <dl> <dt>
 
-0x8063010a
+0x8063010A
 </dt> <dt>
 
 
 
-Die Peer Verbindung konnte nicht authentifiziert werden.
+Die Peerverbindung konnte nicht authentifiziert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONNECTION_REFUSED"></span><span id="peer_e_connection_refused"></span>**Peer- \_ E- \_ Verbindung \_ verweigert**
+<span id="PEER_E_CONNECTION_REFUSED"></span><span id="peer_e_connection_refused"></span>**\_ \_ PEER-E-VERBINDUNG \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
-0x8063010b
+0x8063010B
 </dt> <dt>
 
 
 
-Die Verbindung wurde abgelehnt.
+Die Verbindung wurde verweigert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CLASSIFIER_TOO_LONG"></span><span id="peer_e_classifier_too_long"></span>**Peer- \_ E- \_ Klassifizierung \_ zu \_ lang**
+<span id="PEER_E_CLASSIFIER_TOO_LONG"></span><span id="peer_e_classifier_too_long"></span>**\_ \_ PEER-E-KLASSIFIZIERER \_ ZU \_ LANG**
 </dt> <dd> <dl> <dt>
 
 0x80630201
@@ -1195,12 +1195,12 @@ Die Verbindung wurde abgelehnt.
 
 
 
-Der PeerName-Klassifizierer ist zu lang.
+Die Peernamenklassifizierung ist zu lang.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_TOO_MANY_IDENTITIES"></span><span id="peer_e_too_many_identities"></span>**Peer- \_ E \_ zu \_ viele \_ Identitäten**
+<span id="PEER_E_TOO_MANY_IDENTITIES"></span><span id="peer_e_too_many_identities"></span>**\_PEER-E \_ ZU VIELE \_ \_ IDENTITÄTEN**
 </dt> <dd> <dl> <dt>
 
 0x80630202
@@ -1208,12 +1208,12 @@ Der PeerName-Klassifizierer ist zu lang.
 
 
 
-Die maximale Anzahl von identies wurde erstellt.
+Die maximale Anzahl von Identitäten wurde erstellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NO_KEY_ACCESS"></span><span id="peer_e_no_key_access"></span>**Peer \_ E \_ No \_ Key \_ Access**
+<span id="PEER_E_NO_KEY_ACCESS"></span><span id="peer_e_no_key_access"></span>**PEER \_ E \_ NO \_ KEY \_ ACCESS**
 </dt> <dd> <dl> <dt>
 
 0x80630203
@@ -1226,7 +1226,7 @@ Auf einen Schlüssel kann nicht zugegriffen werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GROUPS_EXIST"></span><span id="peer_e_groups_exist"></span>**Peer- \_ E- \_ Gruppen \_ vorhanden**
+<span id="PEER_E_GROUPS_EXIST"></span><span id="peer_e_groups_exist"></span>**\_ \_ PEER-E-GRUPPEN \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630204
@@ -1239,7 +1239,7 @@ Die Gruppe ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_RECORD_NOT_FOUND"></span><span id="peer_e_record_not_found"></span>**Peer \_ E- \_ Datensatz \_ nicht \_ gefunden.**
+<span id="PEER_E_RECORD_NOT_FOUND"></span><span id="peer_e_record_not_found"></span>**\_ \_ PEER-E-DATENSATZ \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630301
@@ -1252,7 +1252,7 @@ Der angeforderte Datensatz wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DATABASE_ACCESSDENIED"></span><span id="peer_e_database_accessdenied"></span>**Peer \_ E \_ Database \_ AccessDenied**
+<span id="PEER_E_DATABASE_ACCESSDENIED"></span><span id="peer_e_database_accessdenied"></span>**\_ \_ \_ PEER-E-DATENBANKZUGRIFFDENIED**
 </dt> <dd> <dl> <dt>
 
 0x80630302
@@ -1265,7 +1265,7 @@ Der Zugriff auf die Datenbank wurde verweigert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DBINITIALIZATION_FAILED"></span><span id="peer_e_dbinitialization_failed"></span>**Peer \_ E \_ dbinitialization \_ fehlgeschlagen**
+<span id="PEER_E_DBINITIALIZATION_FAILED"></span><span id="peer_e_dbinitialization_failed"></span>**FEHLER BEI DER \_ PEER-E-DATENBANKINITIALISIERUNG \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x80630303
@@ -1278,7 +1278,7 @@ Die Datenbank konnte nicht initialisiert werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_MAX_RECORD_SIZE_EXCEEDED"></span><span id="peer_e_max_record_size_exceeded"></span>**maximale Peer- \_ E- \_ \_ Daten Satz \_ Größe \_ überschritten**
+<span id="PEER_E_MAX_RECORD_SIZE_EXCEEDED"></span><span id="peer_e_max_record_size_exceeded"></span>**PEER \_ E \_ MAX \_ RECORD \_ SIZE \_ EXCEEDED**
 </dt> <dd> <dl> <dt>
 
 0x80630304
@@ -1291,7 +1291,7 @@ Der Datensatz ist zu groß.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DATABASE_ALREADY_PRESENT"></span><span id="peer_e_database_already_present"></span>**Peer \_ E- \_ Datenbank ist \_ bereits \_ vorhanden.**
+<span id="PEER_E_DATABASE_ALREADY_PRESENT"></span><span id="peer_e_database_already_present"></span>**\_ \_ PEER-E-DATENBANK \_ BEREITS \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630305
@@ -1304,7 +1304,7 @@ Die Datenbank ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DATABASE_NOT_PRESENT"></span><span id="peer_e_database_not_present"></span>**Peer \_ E- \_ Datenbank \_ nicht \_ vorhanden**
+<span id="PEER_E_DATABASE_NOT_PRESENT"></span><span id="peer_e_database_not_present"></span>**\_ \_ PEER-E-DATENBANK \_ NICHT \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630306
@@ -1312,12 +1312,12 @@ Die Datenbank ist bereits vorhanden.
 
 
 
-Die Datenbank konnte nicht gefunden werden.
+Die Datenbank wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_IDENTITY_NOT_FOUND"></span><span id="peer_e_identity_not_found"></span>**Peer- \_ E- \_ Identität \_ nicht \_ gefunden**
+<span id="PEER_E_IDENTITY_NOT_FOUND"></span><span id="peer_e_identity_not_found"></span>**\_ \_ PEER-E-IDENTITÄT \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630401
@@ -1325,12 +1325,12 @@ Die Datenbank konnte nicht gefunden werden.
 
 
 
-Die Identität konnte nicht gefunden werden.
+Die Identität wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_EVENT_HANDLE_NOT_FOUND"></span><span id="peer_e_event_handle_not_found"></span>**Peer- \_ E- \_ Ereignis \_ handle \_ nicht \_ gefunden**
+<span id="PEER_E_EVENT_HANDLE_NOT_FOUND"></span><span id="peer_e_event_handle_not_found"></span>**\_ \_ PEER-E-EREIGNISHANDLE \_ \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80630501
@@ -1338,12 +1338,12 @@ Die Identität konnte nicht gefunden werden.
 
 
 
-Das Ereignis Handle konnte nicht gefunden werden.
+Das Ereignishandle wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_SEARCH"></span><span id="peer_e_invalid_search"></span>**Peer \_ E \_ ungültige \_ Suche**
+<span id="PEER_E_INVALID_SEARCH"></span><span id="peer_e_invalid_search"></span>**PEER \_ E \_ UNGÜLTIGE \_ SUCHE**
 </dt> <dd> <dl> <dt>
 
 0x80630601
@@ -1356,7 +1356,7 @@ Ungültige Suche.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_ATTRIBUTES"></span><span id="peer_e_invalid_attributes"></span>**\_ungültige Peer-E- \_ \_ Attribute**
+<span id="PEER_E_INVALID_ATTRIBUTES"></span><span id="peer_e_invalid_attributes"></span>**PEER \_ E \_ UNGÜLTIGE \_ ATTRIBUTE**
 </dt> <dd> <dl> <dt>
 
 0x80630602
@@ -1364,12 +1364,12 @@ Ungültige Suche.
 
 
 
-Die Such Attribute sind ungültig.
+Die Suchattribute sind ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVITATION_NOT_TRUSTED"></span><span id="peer_e_invitation_not_trusted"></span>**Peer \_ E \_ Einladung \_ nicht \_ vertrauenswürdig**
+<span id="PEER_E_INVITATION_NOT_TRUSTED"></span><span id="peer_e_invitation_not_trusted"></span>**\_ \_ PEER-E-EINLADUNG \_ NICHT \_ VERTRAUENSWÜRDIG**
 </dt> <dd> <dl> <dt>
 
 0x80630701
@@ -1382,7 +1382,7 @@ Die Einladung ist nicht vertrauenswürdig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CHAIN_TOO_LONG"></span><span id="peer_e_chain_too_long"></span>**Peer- \_ E- \_ Kette \_ zu \_ lang**
+<span id="PEER_E_CHAIN_TOO_LONG"></span><span id="peer_e_chain_too_long"></span>**\_ \_ PEER-E-KETTE \_ ZU \_ LANG**
 </dt> <dd> <dl> <dt>
 
 0x80630703
@@ -1390,12 +1390,12 @@ Die Einladung ist nicht vertrauenswürdig.
 
 
 
-Der certchain-Wert ist zu lang.
+Die Zertifikatkette ist zu lang.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_TIME_PERIOD"></span><span id="peer_e_invalid_time_period"></span>**\_Ungültiger Peer-E- \_ \_ \_ Zeitraum**
+<span id="PEER_E_INVALID_TIME_PERIOD"></span><span id="peer_e_invalid_time_period"></span>**PEER \_ E \_ UNGÜLTIGER \_ \_ ZEITRAUM**
 </dt> <dd> <dl> <dt>
 
 0x80630705
@@ -1408,7 +1408,7 @@ Der Zeitraum ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CIRCULAR_CHAIN_DETECTED"></span><span id="peer_e_circular_chain_detected"></span>**Peer- \_ E- \_ Kreis \_ Kette \_ erkannt**
+<span id="PEER_E_CIRCULAR_CHAIN_DETECTED"></span><span id="peer_e_circular_chain_detected"></span>**PEER \_ E CIRCULAR CHAIN \_ \_ \_ ERKANNT**
 </dt> <dd> <dl> <dt>
 
 0x80630706
@@ -1416,12 +1416,12 @@ Der Zeitraum ist ungültig.
 
 
 
-Eine zirkuläre Zertifikat Kette wurde erkannt.
+Eine Kreiszertifikatkette wurde erkannt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CERT_STORE_CORRUPTED"></span><span id="peer_e_cert_store_corrupted"></span>**Peer \_ E- \_ Zertifikat \_ Speicher \_ beschädigt**
+<span id="PEER_E_CERT_STORE_CORRUPTED"></span><span id="peer_e_cert_store_corrupted"></span>**\_ \_ PEER-E-ZERTIFIKATSPEICHER \_ \_ BESCHÄDIGT**
 </dt> <dd> <dl> <dt>
 
 0x80630801
@@ -1429,12 +1429,12 @@ Eine zirkuläre Zertifikat Kette wurde erkannt.
 
 
 
-Der certstore ist beschädigt.
+Der Certstore ist beschädigt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NO_CLOUD"></span><span id="peer_e_no_cloud"></span>**Peer \_ E \_ No \_ Cloud**
+<span id="PEER_E_NO_CLOUD"></span><span id="peer_e_no_cloud"></span>**PEER \_ E \_ NO \_ CLOUD**
 </dt> <dd> <dl> <dt>
 
 0x80631001
@@ -1442,12 +1442,12 @@ Der certstore ist beschädigt.
 
 
 
-Das angegebene PNRP-cloudendios ist nicht vorhanden.
+Die angegebenen PNRP-Clouddeos sind nicht vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CLOUD_NAME_AMBIGUOUS"></span><span id="peer_e_cloud_name_ambiguous"></span>**Peer \_ E \_ \_ cloudName \_ mehrdeutig**
+<span id="PEER_E_CLOUD_NAME_AMBIGUOUS"></span><span id="peer_e_cloud_name_ambiguous"></span>**\_ \_ MEHRDEUTIGER PEER-E-CLOUDNAME \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x80631005
@@ -1455,12 +1455,12 @@ Das angegebene PNRP-cloudendios ist nicht vorhanden.
 
 
 
-Der cloudName ist mehrdeutig.
+Der Cloudname ist mehrdeutig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_RECORD"></span><span id="peer_e_invalid_record"></span>**\_Ungültiger Peer-E- \_ \_ Datensatz**
+<span id="PEER_E_INVALID_RECORD"></span><span id="peer_e_invalid_record"></span>**PEER \_ E \_ UNGÜLTIGER \_ DATENSATZ**
 </dt> <dd> <dl> <dt>
 
 0x80632010
@@ -1468,12 +1468,12 @@ Der cloudName ist mehrdeutig.
 
 
 
-Der Datensatz wird in den Daten Satz eingedrungen.
+Der Datensatz ist invlaid.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NOT_AUTHORIZED"></span><span id="peer_e_not_authorized"></span>**Peer \_ E \_ nicht \_ autorisiert**
+<span id="PEER_E_NOT_AUTHORIZED"></span><span id="peer_e_not_authorized"></span>**PEER \_ E \_ NICHT \_ AUTORISIERT**
 </dt> <dd> <dl> <dt>
 
 0x80632020
@@ -1486,7 +1486,7 @@ Nicht autorisiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_PASSWORD_DOES_NOT_MEET_POLICY"></span><span id="peer_e_password_does_not_meet_policy"></span>**Peer \_ E- \_ Kennwort \_ \_ entspricht nicht der \_ \_ Richtlinie**
+<span id="PEER_E_PASSWORD_DOES_NOT_MEET_POLICY"></span><span id="peer_e_password_does_not_meet_policy"></span>**\_ \_ PEER-E-KENNWORT \_ \_ ENTSPRICHT NICHT \_ DER \_ RICHTLINIE**
 </dt> <dd> <dl> <dt>
 
 0x80632021
@@ -1494,12 +1494,12 @@ Nicht autorisiert.
 
 
 
-Das Kennwort entspricht nicht den Richtlinien Anforderungen.
+Das Kennwort entspricht nicht den Richtlinienanforderungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_DEFERRED_VALIDATION"></span><span id="peer_e_deferred_validation"></span>**zurück gestellte Peer- \_ E- \_ \_ Validierung**
+<span id="PEER_E_DEFERRED_VALIDATION"></span><span id="peer_e_deferred_validation"></span>**PEER \_ E \_ – VERZÖGERTE \_ ÜBERPRÜFUNG**
 </dt> <dd> <dl> <dt>
 
 0x80632030
@@ -1507,12 +1507,12 @@ Das Kennwort entspricht nicht den Richtlinien Anforderungen.
 
 
 
-Die Überprüfung des Datensatzes wurde verzögert.
+Die Datensatzüberprüfung wurde zurückgesetzt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_GROUP_PROPERTIES"></span><span id="peer_e_invalid_group_properties"></span>**Peer \_ E \_ ungültige \_ Gruppen \_ Eigenschaften**
+<span id="PEER_E_INVALID_GROUP_PROPERTIES"></span><span id="peer_e_invalid_group_properties"></span>**PEER \_ E \_ UNGÜLTIGE \_ \_ GRUPPENEIGENSCHAFTEN**
 </dt> <dd> <dl> <dt>
 
 0x80632040
@@ -1520,12 +1520,12 @@ Die Überprüfung des Datensatzes wurde verzögert.
 
 
 
-Die Gruppen Eigenschaften sind ungültig.
+Die Gruppenrechte sind ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_PEER_NAME"></span><span id="peer_e_invalid_peer_name"></span>**Peer \_ E \_ ungültiger \_ \_ PeerName.**
+<span id="PEER_E_INVALID_PEER_NAME"></span><span id="peer_e_invalid_peer_name"></span>**PEER \_ E \_ UNGÜLTIGER \_ \_ PEERNAME**
 </dt> <dd> <dl> <dt>
 
 0x80632050
@@ -1533,12 +1533,12 @@ Die Gruppen Eigenschaften sind ungültig.
 
 
 
-Der Peer Name ist ungültig.
+Der Peername ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_CLASSIFIER"></span><span id="peer_e_invalid_classifier"></span>**Peer \_ E \_ ungültige \_ Klassifizierung**
+<span id="PEER_E_INVALID_CLASSIFIER"></span><span id="peer_e_invalid_classifier"></span>**\_UNGÜLTIGER \_ \_ KLASSIFIZIERER FÜR PEER E**
 </dt> <dd> <dl> <dt>
 
 0x80632060
@@ -1551,7 +1551,7 @@ Der Klassifizierer ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_FRIENDLY_NAME"></span><span id="peer_e_invalid_friendly_name"></span>**Peer \_ E \_ Ungültiger Anzeige \_ \_ Name.**
+<span id="PEER_E_INVALID_FRIENDLY_NAME"></span><span id="peer_e_invalid_friendly_name"></span>**PEER \_ E \_ UNGÜLTIGER \_ \_ ANZEIGENAME**
 </dt> <dd> <dl> <dt>
 
 0x80632070
@@ -1559,12 +1559,12 @@ Der Klassifizierer ist ungültig.
 
 
 
-Der Anzeige Name ist ungültig.
+Der Anzeigename ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_ROLE_PROPERTY"></span><span id="peer_e_invalid_role_property"></span>**\_ \_ ungültige \_ Rolle \_ "Peer E"**
+<span id="PEER_E_INVALID_ROLE_PROPERTY"></span><span id="peer_e_invalid_role_property"></span>**PEER \_ E \_ : UNGÜLTIGE \_ \_ ROLLENEIGENSCHAFT**
 </dt> <dd> <dl> <dt>
 
 0x80632071
@@ -1572,12 +1572,12 @@ Der Anzeige Name ist ungültig.
 
 
 
-Ungültige Role-Eigenschaft.
+Ungültige Rolleneigenschaft.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_CLASSIFIER_PROPERTY"></span><span id="peer_e_invalid_classifier_property"></span>**\_ungültige Eigenschaft für Peer E- \_ \_ Klassifizierer \_**
+<span id="PEER_E_INVALID_CLASSIFIER_PROPERTY"></span><span id="peer_e_invalid_classifier_property"></span>**\_ \_ UNGÜLTIGE \_ \_ KLASSIFIZIERUNGSEIGENSCHAFT "PEER E"**
 </dt> <dd> <dl> <dt>
 
 0x80632072
@@ -1585,12 +1585,12 @@ Ungültige Role-Eigenschaft.
 
 
 
-Ungültiger Klassifizierer "protopery".
+Ungültiger Klassifizierer protopery.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_RECORD_EXPIRATION"></span><span id="peer_e_invalid_record_expiration"></span>**Peer \_ E \_ ungültige \_ Daten Satz \_ Ablauf**
+<span id="PEER_E_INVALID_RECORD_EXPIRATION"></span><span id="peer_e_invalid_record_expiration"></span>**PEER \_ E \_ UNGÜLTIGER \_ \_ DATENSATZABLAUF**
 </dt> <dd> <dl> <dt>
 
 0x80632080
@@ -1598,12 +1598,12 @@ Ungültiger Klassifizierer "protopery".
 
 
 
-Ablaufdatum des Datensatzes.
+Ablauf des invlaid-Datensatzes.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_CREDENTIAL_INFO"></span><span id="peer_e_invalid_credential_info"></span>**Peer \_ E \_ ungültige Anmelde \_ \_ Informations Informationen**
+<span id="PEER_E_INVALID_CREDENTIAL_INFO"></span><span id="peer_e_invalid_credential_info"></span>**PEER \_ E \_ – \_ UNGÜLTIGE ANMELDEINFORMATIONEN \_**
 </dt> <dd> <dl> <dt>
 
 0x80632081
@@ -1611,12 +1611,12 @@ Ablaufdatum des Datensatzes.
 
 
 
-Anmelde Informations Informationen wurden in den Anmelde Informationen geschrieben.
+Invlaid credential info (Invlaid-Anmeldeinformationen).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_CREDENTIAL"></span><span id="peer_e_invalid_credential"></span>**Peer \_ E \_ ungültige Anmelde Informationen \_**
+<span id="PEER_E_INVALID_CREDENTIAL"></span><span id="peer_e_invalid_credential"></span>**PEER \_ E \_ UNGÜLTIGE \_ ANMELDEINFORMATIONEN**
 </dt> <dd> <dl> <dt>
 
 0x80632082
@@ -1624,12 +1624,12 @@ Anmelde Informations Informationen wurden in den Anmelde Informationen geschrieb
 
 
 
-Ungültige Anmelde Informationen.
+Ungültige Anmeldeinformationen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_RECORD_SIZE"></span><span id="peer_e_invalid_record_size"></span>**Peer \_ E \_ ungültige \_ Daten Satz \_ Größe**
+<span id="PEER_E_INVALID_RECORD_SIZE"></span><span id="peer_e_invalid_record_size"></span>**PEER \_ E \_ UNGÜLTIGE \_ \_ DATENSATZGRÖßE**
 </dt> <dd> <dl> <dt>
 
 0x80632083
@@ -1637,12 +1637,12 @@ Ungültige Anmelde Informationen.
 
 
 
-Ungültige Daten Satz Größe.
+Ungültige Datensatzgröße.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_UNSUPPORTED_VERSION"></span><span id="peer_e_unsupported_version"></span>**\_ \_ nicht unterstützte \_ Version von Peer E**
+<span id="PEER_E_UNSUPPORTED_VERSION"></span><span id="peer_e_unsupported_version"></span>**\_NICHT \_ UNTERSTÜTZTE \_ PEER-E-VERSION**
 </dt> <dd> <dl> <dt>
 
 0x80632090
@@ -1655,7 +1655,7 @@ Nicht unterstützte Version.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GROUP_NOT_READY"></span><span id="peer_e_group_not_ready"></span>**Peer- \_ E- \_ Gruppe \_ nicht \_ bereit**
+<span id="PEER_E_GROUP_NOT_READY"></span><span id="peer_e_group_not_ready"></span>**\_ \_ PEER-E-GRUPPE \_ NICHT \_ BEREIT**
 </dt> <dd> <dl> <dt>
 
 0x80632091
@@ -1668,7 +1668,7 @@ Die Gruppe ist nicht bereit.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_GROUP_IN_USE"></span><span id="peer_e_group_in_use"></span>**Peer- \_ E- \_ Gruppe wird \_ \_ verwendet**
+<span id="PEER_E_GROUP_IN_USE"></span><span id="peer_e_group_in_use"></span>**\_ \_ PEER-E-GRUPPE \_ IN \_ VERWENDUNG**
 </dt> <dd> <dl> <dt>
 
 0x80632092
@@ -1681,7 +1681,7 @@ Die Gruppe wird weiterhin verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_GROUP"></span><span id="peer_e_invalid_group"></span>**Peer \_ E \_ ungültige \_ Gruppe**
+<span id="PEER_E_INVALID_GROUP"></span><span id="peer_e_invalid_group"></span>**PEER \_ E \_ INVALID \_ GROUP**
 </dt> <dd> <dl> <dt>
 
 0x80632093
@@ -1694,7 +1694,7 @@ Die Gruppe ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NO_MEMBERS_FOUND"></span><span id="peer_e_no_members_found"></span>**Peer \_ E \_ keine \_ Mitglieder \_ gefunden.**
+<span id="PEER_E_NO_MEMBERS_FOUND"></span><span id="peer_e_no_members_found"></span>**PEER \_ E KEINE MITGLIEDER \_ \_ \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x80632094
@@ -1702,12 +1702,12 @@ Die Gruppe ist ungültig.
 
 
 
-Es wurden keine Mitglieder gefunden.
+Es wurden keine Member gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NO_MEMBER_CONNECTIONS"></span><span id="peer_e_no_member_connections"></span>**Peer \_ E \_ No- \_ Member- \_ Verbindungen**
+<span id="PEER_E_NO_MEMBER_CONNECTIONS"></span><span id="peer_e_no_member_connections"></span>**PEER \_ E \_ NO \_ MEMBER \_ CONNECTIONS**
 </dt> <dd> <dl> <dt>
 
 0x80632095
@@ -1715,12 +1715,12 @@ Es wurden keine Mitglieder gefunden.
 
 
 
-Es sind keine Element Verbindungen vorhanden.
+Es gibt keine Memberverbindungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_UNABLE_TO_LISTEN"></span><span id="peer_e_unable_to_listen"></span>**Peer \_ E \_ kann \_ nicht \_ lauschen**
+<span id="PEER_E_UNABLE_TO_LISTEN"></span><span id="peer_e_unable_to_listen"></span>**PEER \_ E KANN NICHT \_ \_ \_ LAUSCHEN**
 </dt> <dd> <dl> <dt>
 
 0x80632096
@@ -1733,10 +1733,10 @@ Lauschen nicht möglich.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_IDENTITY_DELETED"></span><span id="peer_e_identity_deleted"></span>**Peer- \_ E- \_ Identität \_ gelöscht**
+<span id="PEER_E_IDENTITY_DELETED"></span><span id="peer_e_identity_deleted"></span>**\_ \_ PEER-E-IDENTITÄT \_ GELÖSCHT**
 </dt> <dd> <dl> <dt>
 
-0x806320a0
+0x806320A0
 </dt> <dt>
 
 
@@ -1746,10 +1746,10 @@ Die Identität ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_SERVICE_NOT_AVAILABLE"></span><span id="peer_e_service_not_available"></span>**Peer- \_ E- \_ Dienst \_ nicht \_ verfügbar**
+<span id="PEER_E_SERVICE_NOT_AVAILABLE"></span><span id="peer_e_service_not_available"></span>**\_ \_ PEER-E-SERVICE \_ NICHT \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
-0x806320a1
+0x806320A1
 </dt> <dt>
 
 
@@ -1759,7 +1759,7 @@ Der Dienst ist nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CONTACT_NOT_FOUND"></span><span id="peer_e_contact_not_found"></span>**Kontakt zu Peer \_ E \_ \_ nicht \_ gefunden**
+<span id="PEER_E_CONTACT_NOT_FOUND"></span><span id="peer_e_contact_not_found"></span>**PEER \_ E CONTACT NOT FOUND \_ (PEER E-KONTAKT \_ NICHT \_ GEFUNDEN)**
 </dt> <dd> <dl> <dt>
 
 0x80636001
@@ -1767,12 +1767,12 @@ Der Dienst ist nicht verfügbar.
 
 
 
-Der Kontakt konnte nicht gefunden werden.
+Der Kontakt wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_GRAPH_DATA_CREATED"></span><span id="peer_s_graph_data_created"></span>**Peer \_ S \_ Graph- \_ Daten \_ erstellt**
+<span id="PEER_S_GRAPH_DATA_CREATED"></span><span id="peer_s_graph_data_created"></span>**\_ERSTELLTE \_ PEER-S-GRAPHDATEN \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x00630001
@@ -1780,12 +1780,12 @@ Der Kontakt konnte nicht gefunden werden.
 
 
 
-Die Diagramm Daten wurden erstellt.
+Die Graphdaten wurden erstellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_NO_EVENT_DATA"></span><span id="peer_s_no_event_data"></span>**Peer \_ S \_ keine \_ Ereignis \_ Daten**
+<span id="PEER_S_NO_EVENT_DATA"></span><span id="peer_s_no_event_data"></span>**PEER \_ S \_ KEINE \_ \_ EREIGNISDATEN**
 </dt> <dd> <dl> <dt>
 
 0x00630002
@@ -1798,7 +1798,7 @@ Es sind keine weiteren Ereignisdaten vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_ALREADY_CONNECTED"></span><span id="peer_s_already_connected"></span>**Peer- \_ S \_ bereits \_ verbunden**
+<span id="PEER_S_ALREADY_CONNECTED"></span><span id="peer_s_already_connected"></span>**PEER \_ S \_ BEREITS \_ VERBUNDEN**
 </dt> <dd> <dl> <dt>
 
 0x00632000
@@ -1811,7 +1811,7 @@ Das Diagramm ist bereits verbunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_SUBSCRIPTION_EXISTS"></span><span id="peer_s_subscription_exists"></span>**Peer \_ S- \_ Abonnement ist \_ vorhanden.**
+<span id="PEER_S_SUBSCRIPTION_EXISTS"></span><span id="peer_s_subscription_exists"></span>**\_ \_ PEER-S-ABONNEMENT \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 0x00636000
@@ -1824,7 +1824,7 @@ Das Abonnement ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_NO_CONNECTIVITY"></span><span id="peer_s_no_connectivity"></span>**Peer \_ S \_ keine \_ Konnektivität**
+<span id="PEER_S_NO_CONNECTIVITY"></span><span id="peer_s_no_connectivity"></span>**PEER \_ S \_ KEINE \_ KONNEKTIVITÄT**
 </dt> <dd> <dl> <dt>
 
 0x00630005
@@ -1837,7 +1837,7 @@ Keine Konnektivität.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_S_ALREADY_A_MEMBER"></span><span id="peer_s_already_a_member"></span>**Peer \_ S ist \_ bereits \_ ein \_ Mitglied**
+<span id="PEER_S_ALREADY_A_MEMBER"></span><span id="peer_s_already_a_member"></span>**PEER \_ S IST BEREITS \_ \_ \_ MITGLIED**
 </dt> <dd> <dl> <dt>
 
 0x00630006
@@ -1845,12 +1845,12 @@ Keine Konnektivität.
 
 
 
-Bereits ein Mitglied.
+Bereits ein Member.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_CANNOT_CONVERT_PEER_NAME"></span><span id="peer_e_cannot_convert_peer_name"></span>**Peer \_ E \_ kann \_ keinen \_ \_ Peernamen konvertieren.**
+<span id="PEER_E_CANNOT_CONVERT_PEER_NAME"></span><span id="peer_e_cannot_convert_peer_name"></span>**PEER \_ E \_ KANN \_ \_ \_ PEERNAME NICHT KONVERTIEREN**
 </dt> <dd> <dl> <dt>
 
 0x80634001
@@ -1858,12 +1858,12 @@ Bereits ein Mitglied.
 
 
 
-Der PeerName konnte nicht in einen DNS-PNRP-Namen konvertiert werden.
+Der Peername konnte nicht in einen DNS-Pnrpnamen konvertiert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_PEER_HOST_NAME"></span><span id="peer_e_invalid_peer_host_name"></span>**Peer \_ E \_ ungültiger \_ \_ PeerHostName. \_**
+<span id="PEER_E_INVALID_PEER_HOST_NAME"></span><span id="peer_e_invalid_peer_host_name"></span>**PEER \_ E \_ UNGÜLTIGER \_ \_ \_ PEERHOSTNAME**
 </dt> <dd> <dl> <dt>
 
 0x80634002
@@ -1871,12 +1871,12 @@ Der PeerName konnte nicht in einen DNS-PNRP-Namen konvertiert werden.
 
 
 
-Ungültiger Peer Hostname.
+Ungültiger Peerhostname.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NO_MORE"></span><span id="peer_e_no_more"></span>**Peer \_ E \_ nicht \_ mehr**
+<span id="PEER_E_NO_MORE"></span><span id="peer_e_no_more"></span>**PEER \_ E \_ NICHT \_ MEHR**
 </dt> <dd> <dl> <dt>
 
 0x80634003
@@ -1884,12 +1884,12 @@ Ungültiger Peer Hostname.
 
 
 
-Es wurden keine weiteren Daten gefunden.
+Es konnten keine weiteren Daten gefunden werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_PNRP_DUPLICATE_PEER_NAME"></span><span id="peer_e_pnrp_duplicate_peer_name"></span>**Peer- \_ E \_ PNRP \_ doppelter \_ \_ PeerName**
+<span id="PEER_E_PNRP_DUPLICATE_PEER_NAME"></span><span id="peer_e_pnrp_duplicate_peer_name"></span>**PEER \_ E \_ PNRP \_ DUPLICATE \_ PEER \_ NAME**
 </dt> <dd> <dl> <dt>
 
 0x80634005
@@ -1897,12 +1897,12 @@ Es wurden keine weiteren Daten gefunden.
 
 
 
-Der vorhandene PeerName ist bereits registriert.
+Der vorhandene Peername ist bereits registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVITE_CANCELLED"></span><span id="peer_e_invite_cancelled"></span>**Peer- \_ E- \_ Einladung \_ abgebrochen**
+<span id="PEER_E_INVITE_CANCELLED"></span><span id="peer_e_invite_cancelled"></span>**PEER \_ E \_ INVITE \_ CANCELLED**
 </dt> <dd> <dl> <dt>
 
 0x80637000
@@ -1910,12 +1910,12 @@ Der vorhandene PeerName ist bereits registriert.
 
 
 
-Die Anforderung der APP-Einladung wurde vom Benutzer abgebrochen.
+Die App-Einladungsanforderung wurde vom Benutzer abgebrochen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVITE_RESPONSE_NOT_AVAILABLE"></span><span id="peer_e_invite_response_not_available"></span>**Peer- \_ E- \_ Einladungs \_ Antwort \_ nicht \_ verfügbar**
+<span id="PEER_E_INVITE_RESPONSE_NOT_AVAILABLE"></span><span id="peer_e_invite_response_not_available"></span>**PEER \_ E INVITE RESPONSE NOT AVAILABLE (PEER-E-EINLADUNGSANTWORT \_ NICHT \_ \_ \_ VERFÜGBAR)**
 </dt> <dd> <dl> <dt>
 
 0x80637001
@@ -1923,12 +1923,12 @@ Die Anforderung der APP-Einladung wurde vom Benutzer abgebrochen.
 
 
 
-Keine Antwort, dass die Einladung eingegangen ist.
+Die Einladung wurde nicht empfangen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_NOT_SIGNED_IN"></span><span id="peer_e_not_signed_in"></span>**Peer \_ E \_ nicht \_ angemeldet \_**
+<span id="PEER_E_NOT_SIGNED_IN"></span><span id="peer_e_not_signed_in"></span>**PEER \_ E \_ NICHT \_ \_ ANGEMELDET**
 </dt> <dd> <dl> <dt>
 
 0x80637003
@@ -1936,12 +1936,12 @@ Keine Antwort, dass die Einladung eingegangen ist.
 
 
 
-Der Benutzer befindet sich nicht im Server losen vorhanden sein.
+Der Benutzer wird nicht in serverlose Präsenz eingedrunget.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_PRIVACY_DECLINED"></span><span id="peer_e_privacy_declined"></span>**Peer \_ E \_ Privacy \_ abgelehnt**
+<span id="PEER_E_PRIVACY_DECLINED"></span><span id="peer_e_privacy_declined"></span>**PEER \_ E \_ PRIVACY \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
 0x80637004
@@ -1949,12 +1949,12 @@ Der Benutzer befindet sich nicht im Server losen vorhanden sein.
 
 
 
-Der Benutzer hat die Eingabeaufforderung für die Datenschutzrichtlinie entschlüsselt.
+Der Benutzer hat die Aufforderung zur Datenschutzrichtlinie entschäumt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_TIMEOUT"></span><span id="peer_e_timeout"></span>**Peer \_ E \_ Timeout**
+<span id="PEER_E_TIMEOUT"></span><span id="peer_e_timeout"></span>**\_ \_ PEER-E-TIMEOUT**
 </dt> <dd> <dl> <dt>
 
 0x80637005
@@ -1967,7 +1967,7 @@ Ein Timeout ist aufgetreten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_INVALID_ADDRESS"></span><span id="peer_e_invalid_address"></span>**Peer \_ E \_ ungültige \_ Adresse**
+<span id="PEER_E_INVALID_ADDRESS"></span><span id="peer_e_invalid_address"></span>**PEER \_ E \_ UNGÜLTIGE \_ ADRESSE**
 </dt> <dd> <dl> <dt>
 
 0x80637007
@@ -1980,7 +1980,7 @@ Die Adresse ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_FW_EXCEPTION_DISABLED"></span><span id="peer_e_fw_exception_disabled"></span>**Peer \_ E \_ FW- \_ Ausnahme \_ deaktiviert**
+<span id="PEER_E_FW_EXCEPTION_DISABLED"></span><span id="peer_e_fw_exception_disabled"></span>**PEER \_ E \_ FW \_ EXCEPTION \_ DISABLED**
 </dt> <dd> <dl> <dt>
 
 0x80637008
@@ -1993,7 +1993,7 @@ Eine erforderliche Firewallausnahme ist deaktiviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_FW_BLOCKED_BY_POLICY"></span><span id="peer_e_fw_blocked_by_policy"></span>**Peer \_ E \_ FW \_ blockiert \_ nach \_ Richtlinie**
+<span id="PEER_E_FW_BLOCKED_BY_POLICY"></span><span id="peer_e_fw_blocked_by_policy"></span>**PEER \_ E \_ FW \_ BLOCKED \_ BY \_ POLICY**
 </dt> <dd> <dl> <dt>
 
 0x80637009
@@ -2006,10 +2006,10 @@ Der Dienst wird durch eine Firewallrichtlinie blockiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_FW_BLOCKED_BY_SHIELDS_UP"></span><span id="peer_e_fw_blocked_by_shields_up"></span>**Peer \_ E \_ FW \_ blockiert \_ durch \_ Schilde \_**
+<span id="PEER_E_FW_BLOCKED_BY_SHIELDS_UP"></span><span id="peer_e_fw_blocked_by_shields_up"></span>**PEER \_ E \_ FW \_ BLOCKED \_ BY \_ SHIELDS \_ UP**
 </dt> <dd> <dl> <dt>
 
-0x8063700a
+0x8063700A
 </dt> <dt>
 
 
@@ -2019,20 +2019,20 @@ Firewallausnahmen sind deaktiviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PEER_E_FW_DECLINED"></span><span id="peer_e_fw_declined"></span>**Peer \_ E \_ FW hat \_ abgelehnt**
+<span id="PEER_E_FW_DECLINED"></span><span id="peer_e_fw_declined"></span>**PEER \_ E \_ FW \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
-0x8063700b
+0x8063700B
 </dt> <dt>
 
 
 
-Der Benutzer wurde zur Aktivierung der Firewallausnahmen entschlüsselt.
+Der Benutzer hat gezaust, um die Firewallausnahmen zu aktivieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INVALID_HANDLE"></span><span id="e_bluetooth_att_invalid_handle"></span>**E \_ Bluetooth- \_ ATT- \_ \_ Handle ungültig**
+<span id="E_BLUETOOTH_ATT_INVALID_HANDLE"></span><span id="e_bluetooth_att_invalid_handle"></span>**E \_ BLUETOOTH \_ ATT \_ UNGÜLTIGES \_ HANDLE**
 </dt> <dd> <dl> <dt>
 
 0x80650001
@@ -2040,12 +2040,12 @@ Der Benutzer wurde zur Aktivierung der Firewallausnahmen entschlüsselt.
 
 
 
-Das angegebene Attribut Handle war auf diesem Server ungültig.
+Das angegebenen Attributhand handle war auf diesem Server ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_READ_NOT_PERMITTED"></span><span id="e_bluetooth_att_read_not_permitted"></span>**E \_ Bluetooth- \_ ATT \_ Lesen \_ nicht \_ zulässig**
+<span id="E_BLUETOOTH_ATT_READ_NOT_PERMITTED"></span><span id="e_bluetooth_att_read_not_permitted"></span>**E \_ BLUETOOTH \_ ATT READ NICHT \_ \_ \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 0x80650002
@@ -2058,7 +2058,7 @@ Das Attribut kann nicht gelesen werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_WRITE_NOT_PERMITTED"></span><span id="e_bluetooth_att_write_not_permitted"></span>**E \_ Bluetooth- \_ ATT-Schreibvorgänge \_ \_ nicht \_ zulässig**
+<span id="E_BLUETOOTH_ATT_WRITE_NOT_PERMITTED"></span><span id="e_bluetooth_att_write_not_permitted"></span>**E \_ BLUETOOTH \_ ATT WRITE NICHT \_ \_ \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 0x80650003
@@ -2071,7 +2071,7 @@ Das Attribut kann nicht geschrieben werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INVALID_PDU"></span><span id="e_bluetooth_att_invalid_pdu"></span>**E \_ Bluetooth- \_ ATT \_ ungültiges \_ PDU**
+<span id="E_BLUETOOTH_ATT_INVALID_PDU"></span><span id="e_bluetooth_att_invalid_pdu"></span>**E \_ BLUETOOTH \_ ATT \_ INVALID \_ PDU**
 </dt> <dd> <dl> <dt>
 
 0x80650004
@@ -2079,12 +2079,12 @@ Das Attribut kann nicht geschrieben werden.
 
 
 
-Das Attribut "PDU" war ungültig.
+Das Attribut PDU war ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INSUFFICIENT_AUTHENTICATION"></span><span id="e_bluetooth_att_insufficient_authentication"></span>**E \_ Bluetooth- \_ ATT \_ unzureichende \_ Authentifizierung**
+<span id="E_BLUETOOTH_ATT_INSUFFICIENT_AUTHENTICATION"></span><span id="e_bluetooth_att_insufficient_authentication"></span>**E \_ BLUETOOTH \_ ATT UNZUREICHENDE \_ \_ AUTHENTIFIZIERUNG**
 </dt> <dd> <dl> <dt>
 
 0x80650005
@@ -2097,7 +2097,7 @@ Das Attribut erfordert eine Authentifizierung, bevor es gelesen oder geschrieben
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_REQUEST_NOT_SUPPORTED"></span><span id="e_bluetooth_att_request_not_supported"></span>**E \_ Bluetooth- \_ ATT- \_ Anforderung \_ nicht \_ unterstützt**
+<span id="E_BLUETOOTH_ATT_REQUEST_NOT_SUPPORTED"></span><span id="e_bluetooth_att_request_not_supported"></span>**E \_ BLUETOOTH \_ \_ ATT-ANFORDERUNG WIRD NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80650006
@@ -2105,12 +2105,12 @@ Das Attribut erfordert eine Authentifizierung, bevor es gelesen oder geschrieben
 
 
 
-Der Attribut Server unterstützt die vom Client empfangene Anforderung nicht.
+Der Attributserver unterstützt die vom Client empfangene Anforderung nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INVALID_OFFSET"></span><span id="e_bluetooth_att_invalid_offset"></span>**E \_ Bluetooth- \_ ATT- \_ \_ Offset ungültig**
+<span id="E_BLUETOOTH_ATT_INVALID_OFFSET"></span><span id="e_bluetooth_att_invalid_offset"></span>**E \_ BLUETOOTH \_ ATT \_ INVALID \_ OFFSET**
 </dt> <dd> <dl> <dt>
 
 0x80650007
@@ -2118,12 +2118,12 @@ Der Attribut Server unterstützt die vom Client empfangene Anforderung nicht.
 
 
 
-Der angegebene Offset lag hinter dem Ende des Attributs.
+Der angegebene Offset lag über dem Ende des Attributs.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INSUFFICIENT_AUTHORIZATION"></span><span id="e_bluetooth_att_insufficient_authorization"></span>**E \_ Bluetooth \_ ATT \_ unzureichende \_ Autorisierung**
+<span id="E_BLUETOOTH_ATT_INSUFFICIENT_AUTHORIZATION"></span><span id="e_bluetooth_att_insufficient_authorization"></span>**E \_ BLUETOOTH \_ ATT UNZUREICHENDE \_ \_ AUTORISIERUNG**
 </dt> <dd> <dl> <dt>
 
 0x80650008
@@ -2131,12 +2131,12 @@ Der angegebene Offset lag hinter dem Ende des Attributs.
 
 
 
-Für das-Attribut ist eine Autorisierung erforderlich, bevor es gelesen oder geschrieben werden kann.
+Das Attribut erfordert eine Autorisierung, bevor es gelesen oder geschrieben werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_PREPARE_QUEUE_FULL"></span><span id="e_bluetooth_att_prepare_queue_full"></span>**E \_ Bluetooth \_ ATT \_ Vorbereitungs \_ Warteschlange \_ voll**
+<span id="E_BLUETOOTH_ATT_PREPARE_QUEUE_FULL"></span><span id="e_bluetooth_att_prepare_queue_full"></span>**E \_ BLUETOOTH \_ ATT \_ PREPARE \_ QUEUE \_ FULL**
 </dt> <dd> <dl> <dt>
 
 0x80650009
@@ -2144,90 +2144,90 @@ Für das-Attribut ist eine Autorisierung erforderlich, bevor es gelesen oder ges
 
 
 
-Zu viele Vorbereitungs Schreibvorgänge wurden in die Warteschlange eingereiht.
+Zu viele Vorbereitungs-Schreibvorgänge wurden in die Warteschlange gestellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_ATTRIBUTE_NOT_FOUND"></span><span id="e_bluetooth_att_attribute_not_found"></span>**E \_ Bluetooth- \_ ATT-Attribut wurde \_ \_ nicht \_ gefunden.**
+<span id="E_BLUETOOTH_ATT_ATTRIBUTE_NOT_FOUND"></span><span id="e_bluetooth_att_attribute_not_found"></span>**E \_ BLUETOOTH \_ \_ ATT-ATTRIBUT NICHT \_ \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-0x8065000a
+0x8065000A
 </dt> <dt>
 
 
 
-Im angegebenen Attribut handle-Bereich wurde kein Attribut gefunden.
+Innerhalb des angegebenen Attributhandpunktbereichs wurde kein Attribut gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_ATTRIBUTE_NOT_LONG"></span><span id="e_bluetooth_att_attribute_not_long"></span>**E \_ Bluetooth- \_ ATT- \_ Attribut \_ nicht \_ lang**
+<span id="E_BLUETOOTH_ATT_ATTRIBUTE_NOT_LONG"></span><span id="e_bluetooth_att_attribute_not_long"></span>**E \_ BLUETOOTH \_ \_ ATT-ATTRIBUT NICHT \_ \_ LANG**
 </dt> <dd> <dl> <dt>
 
-0x8065000b
+0x8065000B
 </dt> <dt>
 
 
 
-Das Attribut kann nicht mithilfe der Read BLOB-Anforderung gelesen oder geschrieben werden.
+Das Attribut kann nicht mithilfe der Leseblobanforderung gelesen oder geschrieben werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INSUFFICIENT_ENCRYPTION_KEY_SIZE"></span><span id="e_bluetooth_att_insufficient_encryption_key_size"></span>**E \_ Bluetooth \_ ATT \_ unzureichende \_ Größe des Verschlüsselungs \_ Schlüssels \_**
+<span id="E_BLUETOOTH_ATT_INSUFFICIENT_ENCRYPTION_KEY_SIZE"></span><span id="e_bluetooth_att_insufficient_encryption_key_size"></span>**E \_ BLUETOOTH \_ ATT UNZUREICHENDE \_ \_ \_ \_ VERSCHLÜSSELUNGSSCHLÜSSELGRÖßE**
 </dt> <dd> <dl> <dt>
 
-0x8065000c
+0x8065000C
 </dt> <dt>
 
 
 
-Die zum Verschlüsseln dieses Links verwendete Verschlüsselungsschlüssel Größe ist unzureichend.
+Die Zum Verschlüsseln dieses Links verwendete Verschlüsselungsschlüsselgröße reicht nicht aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INVALID_ATTRIBUTE_VALUE_LENGTH"></span><span id="e_bluetooth_att_invalid_attribute_value_length"></span>**E \_ Bluetooth \_ ATT \_ ungültige \_ Länge des Attribut \_ Werts \_ .**
+<span id="E_BLUETOOTH_ATT_INVALID_ATTRIBUTE_VALUE_LENGTH"></span><span id="e_bluetooth_att_invalid_attribute_value_length"></span>**E \_ BLUETOOTH \_ ATT \_ \_ UNGÜLTIGE \_ \_ ATTRIBUTWERTLÄNGE**
 </dt> <dd> <dl> <dt>
 
-0x8065000d
+0x8065000D
 </dt> <dt>
 
 
 
-Die Länge des Attribut Werts ist für den Vorgang ungültig.
+Die Länge des Attributwerts ist für den Vorgang ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_UNLIKELY"></span><span id="e_bluetooth_att_unlikely"></span>**E \_ Bluetooth- \_ ATT \_ unwahrscheinlich**
+<span id="E_BLUETOOTH_ATT_UNLIKELY"></span><span id="e_bluetooth_att_unlikely"></span>**E \_ BLUETOOTH \_ ATT \_ UNWAHRSCHEINLICH**
 </dt> <dd> <dl> <dt>
 
-0x8065000e
+0x8065000E
 </dt> <dt>
 
 
 
-Bei der angeforderten Attribut Anforderung ist ein Fehler aufgetreten, der unwahrscheinlich war und daher nicht wie angefordert abgeschlossen werden konnte.
+Bei der angeforderten Attributanforderung ist ein Fehler aufgetreten, der unwahrscheinlich war und daher nicht wie angefordert abgeschlossen werden konnte.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INSUFFICIENT_ENCRYPTION"></span><span id="e_bluetooth_att_insufficient_encryption"></span>**E \_ Bluetooth- \_ ATT- \_ \_ Verschlüsselung unzureichend**
+<span id="E_BLUETOOTH_ATT_INSUFFICIENT_ENCRYPTION"></span><span id="e_bluetooth_att_insufficient_encryption"></span>**E \_ BLUETOOTH \_ ATT UNZUREICHENDE \_ \_ VERSCHLÜSSELUNG**
 </dt> <dd> <dl> <dt>
 
-0x8065000f
+0x8065000F
 </dt> <dt>
 
 
 
-Für das-Attribut ist eine Verschlüsselung erforderlich, bevor es gelesen oder geschrieben werden kann.
+Das Attribut erfordert Verschlüsselung, bevor es gelesen oder geschrieben werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_UNSUPPORTED_GROUP_TYPE"></span><span id="e_bluetooth_att_unsupported_group_type"></span>**E \_ Bluetooth \_ ATT \_ nicht unterstützter \_ \_ Gruppentyp**
+<span id="E_BLUETOOTH_ATT_UNSUPPORTED_GROUP_TYPE"></span><span id="e_bluetooth_att_unsupported_group_type"></span>**E \_ BLUETOOTH \_ ATT NICHT \_ UNTERSTÜTZTER \_ \_ GRUPPENTYP**
 </dt> <dd> <dl> <dt>
 
 0x80650010
@@ -2235,12 +2235,12 @@ Für das-Attribut ist eine Verschlüsselung erforderlich, bevor es gelesen oder 
 
 
 
-Der Attributtyp ist kein unterstütztes Gruppierungs Attribut, wie in einer höheren ebenenspezifikation definiert.
+Der Attributtyp ist kein unterstütztes Gruppierungsattribut, wie durch eine höhere Ebenenspezifikation definiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_INSUFFICIENT_RESOURCES"></span><span id="e_bluetooth_att_insufficient_resources"></span>**E \_ Bluetooth- \_ ATT \_ unzureichende \_ Ressourcen**
+<span id="E_BLUETOOTH_ATT_INSUFFICIENT_RESOURCES"></span><span id="e_bluetooth_att_insufficient_resources"></span>**E \_ BLUETOOTH \_ ATT \_ INSUFFICIENT \_ RESOURCES**
 </dt> <dd> <dl> <dt>
 
 0x80650011
@@ -2248,12 +2248,12 @@ Der Attributtyp ist kein unterstütztes Gruppierungs Attribut, wie in einer höh
 
 
 
-Nicht genügend Ressourcen, um die Anforderung abzuschließen.
+Nicht genügend Ressourcen zum Abschließen der Anforderung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="E_BLUETOOTH_ATT_UNKNOWN_ERROR"></span><span id="e_bluetooth_att_unknown_error"></span>**E \_ Bluetooth \_ - \_ Fehler (Unbekannter \_ Fehler)**
+<span id="E_BLUETOOTH_ATT_UNKNOWN_ERROR"></span><span id="e_bluetooth_att_unknown_error"></span>**E \_ BLUETOOTH \_ ATT \_ UNKNOWN \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 0x80651000
@@ -2272,7 +2272,7 @@ Ein Fehler, der im reservierten Bereich liegt, wurde empfangen.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Winerror. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Winerror.h</dt> </dl> |
 
 
 
@@ -2280,7 +2280,7 @@ Ein Fehler, der im reservierten Bereich liegt, wurde empfangen.
 
 <dl> <dt>
 
-[COM-Fehler Codes](com-error-codes.md)
+[COM-Fehlercodes](com-error-codes.md)
 </dt> </dl>
 
  

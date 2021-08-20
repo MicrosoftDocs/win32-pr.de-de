@@ -1,49 +1,49 @@
 ---
-title: Farbmatrix Effekt
-description: Verwenden Sie den Farbmatrix Effekt, um die RGBA-Werte einer Bitmap zu ändern.
+title: Farbmatrixeffekt
+description: Verwenden Sie den Farbmatrixeffekt, um die RGBA-Werte einer Bitmap zu ändern.
 ms.assetid: 093EEEF1-8C38-414E-8261-58A6C3DD930D
 keywords:
-- Farbmatrix Effekt
+- Farbmatrixeffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1078b1858bc68396546e1036c717e01acb1069c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec8bb461698e4f8b39eef3bed57fc21947f3cc1175c1bdf4f990629db87e1c5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119653304"
 ---
-# <a name="color-matrix-effect"></a>Farbmatrix Effekt
+# <a name="color-matrix-effect"></a>Farbmatrixeffekt
 
-Verwenden Sie den Farbmatrix Effekt, um die RGBA-Werte einer Bitmap zu ändern.
+Verwenden Sie den Farbmatrixeffekt, um die RGBA-Werte einer Bitmap zu ändern.
 
-Sie können diesen Effekt für Folgendes verwenden:
+Sie können diesen Effekt verwenden, um:
 
 -   Entfernen eines Farbkanals aus einem Bild.
--   Reduzieren Sie die Farbe in einem Bild.
--   Farbkanäle austauschen.
--   Farbkanäle kombinieren.
+-   Reduzieren sie die Farbe in einem Bild.
+-   Tauschen Sie Farbkanäle aus.
+-   Kombinieren sie Farbkanäle.
 
-Viele integrierte Effekte sind Spezialisierungs Farben von Farb Matrizen, die für die beabsichtigte Verwendung der Effekte optimiert sind. Beispiele hierfür sind [Sättigung](saturation.md), [Farbton Drehung](hue-rotate.md),- [Pia](sepia-effect.md)und [Temperatur und Tönungs](temperature-and-tint-effect.md).
+Viele integrierte Effekte sind Spezialisierungen der Farbmatrix, die für die beabsichtigte Verwendung der Effekte optimiert sind. Beispiele hierfür sind [Sättigung,](saturation.md) [Farbtonrotierung,](hue-rotate.md) [Sepia](sepia-effect.md)und [Temperatur und Tönung.](temperature-and-tint-effect.md)
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1ColorMatrix.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Alpha-Modi](#alpha-modes)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Alphamodi](#alpha-modes)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-Das Beispiel zeigt die Eingabe-und Ausgabe Bilder des Farbmatrix Effekts, der die roten und blauen Kanäle vertauscht.
+Das folgende Beispiel zeigt die Ein- und Ausgabebilder des Farbmatrixeffekts, der die roten und blauen Kanäle austauscht.
 
 
 
 | Vorher                                                       |
 |--------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)   |
-| Nach                                                        |
+| Danach                                                        |
 | ![das Bild nach der Transformation.](images/15-colormatrix.png) |
 
 
@@ -66,34 +66,34 @@ m_d2dContext->EndDraw();
 
 
 
-Dieser Effekt multipliziert die RGBA-Werte des Bilds mit einer 5 x 4-Spalten hauptmatrix, wie in dieser Gleichung gezeigt.
+Dieser Effekt multipliziert die RGBA-Werte des Bilds mit einer 5x4-Spaltenhauptmatrix, wie in dieser Gleichung dargestellt.
 
-![eine Beispiel Matrix Definition.](images/color-matrix-formula.png)
+![eine Beispielmatrixdefinition.](images/color-matrix-formula.png)
 
-Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet werden.
+Dieser Effekt funktioniert bei geraden und prämultiplizierten Alphabildern.
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Anzeigename und Indexenumeration                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ColorMatrix<br/> D2D1 \_ ColorMatrix \_ - \_ Farb \_ Matrix<br/> | Eine 5X4-Matrix von float-Werten. Die Elemente in der Matrix sind nicht gebunden und sind unitless.<br/> Der Standardwert ist die Identitätsmatrix.<br/> Der Typ ist D2D1 \_ Matrix \_ 5X4 \_ F.<br/> Der Standardwert ist Matrix5x4F (1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0). <br/>                                                                                                                                                                                                                        |
-| Alpha AMODE<br/> D2D1 \_ ColorMatrix- \_ Prop- \_ alpha- \_ Modus<br/>     | Der Alpha-Modus der Ausgabe. Weitere Informationen finden Sie unter [Alpha-Modi](#alpha-modes) . <br/> Der Typ ist der D2D1 \_ ColorMatrix \_ alpha- \_ Modus.<br/> Der Standardwert ist "D2D1 \_ ColorMatrix \_ Alpha Mode" ( \_ \_ vorab multipliziert).<br/>                                                                                                                                                                                                                                                                                                    |
-| Klamme Ausgabe<br/> D2D1 \_ ColorMatrix- \_ Prop- \_ Klemm \_ Ausgabe<br/> | Gibt an, ob der Effekt Farbwerte auf zwischen 0 und 1 zeigt, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt bindet die Werte, bevor die Alpha-angezeigt werden.<br/> Wenn Sie diese Einstellung auf "true" festlegen, werden die Werte durch die Auswirkung fixiert. Wenn Sie diese Einstellung auf "false" festlegen, werden die Farbwerte durch die Auswirkung nicht fixiert, aber andere Effekte und die Ausgabe Oberfläche können die Werte einspannen, wenn Sie nicht über eine hohe Genauigkeit verfügen.<br/> Der Typ ist "bool".<br/> Der Standardwert ist FALSE.<br/> |
+| Colormatrix<br/> D2D1 \_ COLORMATRIX \_ PROP \_ COLOR \_ MATRIX<br/> | Eine 5x4-Matrix von float-Werten. Die Elemente in der Matrix sind nicht begrenzt und unitlos.<br/> Der Standardwert ist die Identitätsmatrix.<br/> Der Typ ist D2D1 \_ MATRIX \_ 5X4 \_ F.<br/> Der Standardwert ist Matrix5x4F(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0). <br/>                                                                                                                                                                                                                        |
+| AlphaMode<br/> D2D1 \_ COLORMATRIX \_ PROP \_ ALPHA \_ MODE<br/>     | Der Alphamodus der Ausgabe. Weitere Informationen finden Sie [unter Alphamodi.](#alpha-modes) <br/> Der Typ ist D2D1 \_ COLORMATRIX \_ ALPHA \_ MODE.<br/> Der Standardwert ist D2D1 \_ COLORMATRIX \_ ALPHA MODE \_ \_ PREMULTIPLIED.<br/>                                                                                                                                                                                                                                                                                                    |
+| ClampOutput<br/> D2D1 \_ COLORMATRIX \_ \_ PROP-KLAMMERAUSGABE \_<br/> | Gibt an, ob der Effekt Farbwerte zwischen 0 und 1 zusammenbindet, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt klammert die Werte, bevor er das Alpha vormultipliziert.<br/> Wenn Sie diese Einstellung auf TRUE festlegen, werden die Werte durch den Effekt klammern. Wenn Sie diese Einstellung auf FALSE festlegen, bindet der Effekt die Farbwerte nicht, aber andere Effekte und die Ausgabeoberfläche können die Werte klammern, wenn sie nicht hoch genug präzise sind.<br/> Der Typ ist BOOL.<br/> Der Standardwert ist FALSE.<br/> |
 
 
 
  
 
-## <a name="alpha-modes"></a>Alpha-Modi
+## <a name="alpha-modes"></a>Alphamodi
 
 
 
-| Name                                          | BESCHREIBUNG                                                                                               |
+| Name                                          | Beschreibung                                                                                               |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| D2D1 \_ ColorMatrix- \_ alpha \_ Modus ist \_ vorab multipliziert | Der Effekt bewirkt, dass die Eingabe nicht vorab multipliziert wird, wendet die Farbmatrix an und führt die Ausgabe vorab aus.<br/> |
-| D2D1 \_ ColorMatrix- \_ alpha \_ Modus \_ direkt      | Der Effekt wendet die Farbmatrix direkt auf die Eingabe an und führt keine vorab Multiplikation der Ausgabe aus.<br/> |
+| D2D1 \_ COLORMATRIX \_ ALPHA \_ MODE \_ PREMULTIPLIED | Der Effekt entfällt die Prämultiplizierung der Eingabe, wendet die Farbmatrix an und multipliziert die Ausgabe.<br/> |
+| D2D1 \_ COLORMATRIX \_ ALPHA \_ MODE \_ STRAIGHT      | Der Effekt wendet die Farbmatrix direkt auf die Eingabe an und stellt die Ausgabe nicht vor.<br/> |
 
 
 
@@ -105,10 +105,10 @@ Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

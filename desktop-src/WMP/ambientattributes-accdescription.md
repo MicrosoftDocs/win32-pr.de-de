@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. accdescription
-description: Das Attribut "accdescription" gibt eine Beschreibung für ein beliebiges Element an oder ruft diese ab.
+title: AmbientAttributes.accDescription
+description: Das accDescription-Attribut gibt eine Beschreibung für ein beliebiges Element an oder ruft diese ab.
 ms.assetid: 660d886d-5dd2-4f7d-b343-6d9c7c8f8389
 keywords:
-- Ambientattribute. accdescription-Fenster Media Player
+- AmbientAttributes.accDescription Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfb58503bccba022b4d1216c6d64937dc97583bf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0ae8498bff2c185c3c9f28f4f12ac41707f35bf697a509cb719e433e5896a2cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055217"
 ---
-# <a name="ambientattributesaccdescription"></a>Ambientattribute. accdescription
+# <a name="ambientattributesaccdescription"></a>AmbientAttributes.accDescription
 
-Das Attribut " **accdescription** " gibt eine Beschreibung für ein beliebiges Element an oder ruft diese ab.
+Das **accDescription-Attribut** gibt eine Beschreibung für ein beliebiges Element an oder ruft diese ab.
 
 ``` syntax
         elementID.accDescription
@@ -29,13 +29,13 @@ Das Attribut " **accdescription** " gibt eine Beschreibung für ein beliebiges E
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "" (leere Zeichenfolge).
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff mit dem Standardwert "" (leere Zeichenfolge).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Barrierefreiheits Zwecke verwendet. Dadurch kann die Beschreibung eines beliebigen Elements von einem Reader-Programm gelesen werden.
+Dieses Attribut wird für Barrierefreiheitszwecke verwendet. Dadurch kann die Beschreibung jedes Elements von einem Readerprogramm laut vorgelesen werden.
 
-Dieses Attribut gilt auch für Schaltflächen Elemente innerhalb des Steuer Elements der Schaltflächen Gruppe.
+Dieses Attribut gilt auch für Schaltflächenelemente innerhalb des Schaltflächengruppen-Steuerelements.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Dieses Attribut gilt auch für Schaltflächen Elemente innerhalb des Steuer Elem
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 

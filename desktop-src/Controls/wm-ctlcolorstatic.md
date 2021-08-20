@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORSTATIC Meldung (Winuser.h)
-description: Ein statisches Steuerelement oder ein Bearbeitungssteuerelement, das schreibgeschützt oder deaktiviert ist, sendet die WM \_ CTLCOLORSTATIC-Meldung an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll.
+title: WM_CTLCOLORSTATIC (Winuser.h)
+description: Ein statisches Steuerelement oder ein Bearbeitungssteuer steuerelement, das schreibgeschützt oder deaktiviert ist, sendet die WM CTLCOLORSTATIC-Nachricht an das übergeordnete Fenster, wenn das Steuerelement \_ gezeichnet werden soll.
 ms.assetid: a171a1e8-6845-4a8e-8394-44cea99d2b0d
 keywords:
-- WM_CTLCOLORSTATIC Windows-Steuerelemente für Nachrichten
+- WM_CTLCOLORSTATIC meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -23,9 +23,9 @@ ms.locfileid: "119539930"
 ---
 # <a name="wm_ctlcolorstatic-message"></a>WM \_ CTLCOLORSTATIC-Meldung
 
-Ein statisches Steuerelement oder ein Bearbeitungssteuerelement, das schreibgeschützt oder deaktiviert ist, sendet die **WM \_ CTLCOLORSTATIC-Meldung** an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster das angegebene Gerätekontexthandle verwenden, um die Textvordergrund- und Hintergrundfarben des statischen Steuerelements festzulegen.
+Ein statisches Steuerelement oder ein Edit-Steuerelement, das schreibgeschützt oder deaktiviert ist, sendet die **WM \_ CTLCOLORSTATIC-Nachricht** an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Wenn auf diese Meldung reagiert wird, kann das übergeordnete Fenster das angegebene Gerätekontexthand handle verwenden, um die Text- und Hintergrundfarben des statischen Steuerelements festzulegen.
 
-Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
+Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -44,7 +44,7 @@ WM_CTLCOLORSTATIC
 *wParam* 
 </dt> <dd>
 
-Verarbeiten Sie den Gerätekontext für das statische Steuerungsfenster.
+Handle für den Gerätekontext für das statische Steuerfenster.
 
 </dd> <dt>
 
@@ -57,25 +57,25 @@ Handle für das statische Steuerelement.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, ist der Rückgabewert ein Handle für einen Pinsel, den das System verwendet, um den Hintergrund des statischen Steuerelements zu zeichnen.
+Wenn eine Anwendung diese Nachricht verarbeitet, ist der Rückgabewert ein Handle für einen Pinsel, mit dem das System den Hintergrund des statischen Steuerelements zeichnet.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung einen Pinsel zurückgibt, den sie erstellt hat (z. B. mithilfe der [**Funktion CreateSolidBrush**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel freigeben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigeben.
+Wenn die Anwendung einen von ihr erstellten Pinsel zurückgibt (z. B. mithilfe der [**CreateSolidBrush-**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect-Funktion),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel frei geben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigibt.
 
 Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das statische Steuerelement aus.
 
-Sie können die Texthintergrundfarbe eines deaktivierten Bearbeitungssteuerelements festlegen, aber Sie können die Textvordergrundfarbe nicht festlegen. Das System verwendet immer COLOR \_ GRAYTEXT.
+Sie können die Texthintergrundfarbe eines deaktivierten Bearbeitungssteuerfelds festlegen, aber Sie können die Textgrundfarbe nicht festlegen. Das System verwendet immer COLOR \_ GRAYTEXT.
 
-Bearbeitungssteuerelemente, die nicht schreibgeschützt oder deaktiviert sind, senden die **WM \_ CTLCOLORSTATIC-Nachricht** nicht. Stattdessen senden sie die [**WM \_ CTLCOLOREDIT-Nachricht.**](wm-ctlcoloredit.md)
+Bearbeitungssteuerelemente, die nicht schreibgeschützt oder deaktiviert sind, senden die **WM \_ CTLCOLORSTATIC-Nachricht** nicht. Stattdessen senden sie die [**\_ WM-CTLCOLOREDIT-Nachricht.**](wm-ctlcoloredit.md)
 
-Die **WM \_ CTLCOLORSTATIC-Nachricht** wird nie zwischen Threads gesendet. Sie wird nur innerhalb desselben Threads gesendet.
+Die **WM \_ CTLCOLORSTATIC-Nachricht** wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
 
-Wenn eine Dialogfeldprozedur diese Nachricht verarbeitet, sollte sie den gewünschten Rückgabewert in einen **INT \_ PTR-Wert** konvertieren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE** zurückgibt, wird die Standardmäßige Nachrichtenverarbeitung ausgeführt. Der \_ von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte DWL-MSGRESULT-Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert **in eine INT \_ PTR-Datei** casten und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE zurückgibt,** wird die Standardnachrichtenbehandlung ausgeführt. Der von der \_ [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) MSGRESULT-DWL-Wert wird ignoriert.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende C++-Beispiel zeigt, wie die Textvorder- und Hintergrundfarben eines statischen Steuerelements als Reaktion auf die **WM \_ CTLCOLORSTATIC-Nachricht** festgelegt werden. Die `hbrBkgnd` Variable ist eine statische **HBRUSH-Variable,** die mit NULL initialisiert wird und den Hintergrundpinsel zwischen Aufrufen von **WM \_ CTLCOLORSTATIC** speichert. Der Pinsel muss durch einen Aufruf der [**DeleteObject-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject) zerstört werden, wenn er nicht mehr benötigt wird, in der Regel, wenn das zugeordnete Dialogfeld zerstört wird.
+Das folgende C++-Beispiel zeigt, wie die Text- und Hintergrundfarben eines statischen Steuerelements als Reaktion auf die **\_ WM-CTLCOLORSTATIC-Meldung festgelegt** werden. Die `hbrBkgnd` Variable ist eine statische **HBRUSH-Variable,** die mit NULL initialisiert wird und den Hintergrundpinsel zwischen Aufrufen von **WM \_ CTLCOLORSTATIC speichert.** Der Pinsel muss durch einen Aufruf der [**DeleteObject-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject) zerstört werden, wenn er nicht mehr benötigt wird, in der Regel, wenn das zugeordnete Dialogfeld zerstört wird.
 
 
 ```C++
@@ -101,13 +101,13 @@ Das folgende C++-Beispiel zeigt, wie die Textvorder- und Hintergrundfarben eines
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
 | Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

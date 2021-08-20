@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob das Fenster seine Palette erkennen soll. TRUE gibt an, dass das Fenster seine Palette nicht erkennt. Der Standardwert ist FALSE.
+description: Flag, das angibt, ob das Fenster seine Palette realisieren soll. True gibt an, dass die Palette des Fensters nicht erkannt wird. Der Standardwert ist FALSE.
 ms.assetid: 7039d41a-daea-4128-9e1c-3cbd0c05ce13
-title: 'Cbasewindow:: m_bNoRealize Member (winutil. h)'
+title: CBaseWindow::m_bNoRealize-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e24368eb0da2ad16b66d7b06942c83f3e33937da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 45dddb9d596929674adf03ba042d6464718c58c225ef33e568924ef526618e91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016568"
 ---
-# <a name="cbasewindowm_bnorealize-member"></a>Cbasewindow:: m- \_ bnorealize-Member
+# <a name="cbasewindowm_bnorealize-member"></a>CBaseWindow::m \_ bNoRealize-Member
 
-Flag, das angibt, ob das Fenster seine Palette erkennen soll. **True** gibt an, dass das Fenster seine Palette nicht erkennt. Der Standardwert ist **FALSE**.
+Flag, das angibt, ob das Fenster seine Palette realisieren soll. True **gibt an,** dass die Palette des Fensters nicht erkannt wird. Der Standardwert ist **FALSE**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BYTE m_bNoRealize;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BYTE m_bNoRealize;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

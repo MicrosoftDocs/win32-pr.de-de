@@ -108,7 +108,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Range-Upper            | 16                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -121,7 +121,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -129,7 +129,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Range-Upper            | 16                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -142,7 +142,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -150,7 +150,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Range-Upper            | 16                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -163,7 +163,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | False                                                        |
+| Ist einwertig       | False                                                        |
 | Ist indiziert             | False                                                        |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -171,7 +171,7 @@ Die Liste der Websites, zu denen der Computer gehört (ein Array der objectGUIDs
 | Range-Upper            | 16                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 

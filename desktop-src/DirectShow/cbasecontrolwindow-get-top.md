@@ -1,7 +1,7 @@
 ---
-description: Mit der get \_ Top-Methode wird die obere Fenster Koordinate abgerufen.
+description: Die get \_ Top-Methode ruft die Koordinate des oberen Fensters ab.
 ms.assetid: 1e7910bd-e38e-4586-9dd6-701f69c0f6e7
-title: CBaseControlWindow.get_Top-Methode (ctlutil. h)
+title: CBaseControlWindow.get_Top -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9861d930cdb2d93e5e0b73ffad625885c082cb6f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7ba60f3365ba2f1a8ea00579e8c2eb51c9d6aa32843e7603d0d26c2747c97c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017388"
 ---
-# <a name="cbasecontrolwindowget_top-method"></a>Cbasecontrolwindow. get \_ Top-Methode
+# <a name="cbasecontrolwindowget_top-method"></a>CBaseControlWindow.get \_ Top-Methode
 
-Die- `get_Top` Methode ruft die obere Fenster Koordinate ab.
+Die `get_Top` -Methode ruft die Koordinate des oberen Fensters ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_Top(
 
 <dl> <dt>
 
-*ptop* 
+*pTop* 
 </dt> <dd>
 
 Zeiger auf die obere Koordinate in Pixel.
@@ -51,13 +51,13 @@ Zeiger auf die obere Koordinate in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Fenster hat eine Position auf dem Desktop. Dies wird in Pixel durch vier Koordinaten (Links, oben, rechts und unten) ausgedrückt. Schnittstellen, die von OLE automatisiert werden, stellen diese Position normalerweise durch Left, Top, Width und Height dar. Dies ist die in DirectShow verwendete Konvention. Alle Koordinaten werden in Pixel ausgedrückt, und durch Ändern der Koordinaten wird das Fenster sofort aktualisiert.
+Das Fenster hat eine Position auf dem Desktop. Dies wird in Pixel durch vier Koordinaten ausgedrückt (links, oben, rechts und unten). Schnittstellen, die von OLE automatisiert werden, drücken diese Position in der Regel über links, oben, Breite und Höhe aus. dies ist die Konvention, die in DirectShow verwendet wird. Alle Koordinaten werden in Pixel ausgedrückt, und durch das Ändern einer beliebigen Koordinate wird das Fenster sofort aktualisiert.
 
-Durch Festlegen der linken oder oberen Koordinaten wird das Fenster nach links bzw. nach oben verschoben. Diese Koordinaten haben keine Auswirkung auf die Breite und Höhe des Fensters. Ebenso wirkt sich die Festlegung von Breite und Höhe nicht auf die linke und die obere Koordinate aus.
+Durch Festlegen der linken oder oberen Koordinaten wird das Fenster nach links bzw. nach oben bewegt. Diese Koordinaten haben keine Auswirkungen auf die Breite und Höhe des Fensters. Ebenso wirkt sich das Festlegen der Breite und Höhe nicht auf die linke und die obere Koordinate aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Durch Festlegen der linken oder oberen Koordinaten wird das Fenster nach links b
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Durch Festlegen der linken oder oberen Koordinaten wird das Fenster nach links b
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

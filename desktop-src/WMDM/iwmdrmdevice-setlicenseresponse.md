@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmdevice-SetLicenseResponse-Methode
-description: Die SetLicenseResponse-Methode legt die Lizenz Antwort fest.
+title: IWMDRMDevice SetLicenseResponse-Methode
+description: Die SetLicenseResponse-Methode legt die Lizenzantwort fest.
 ms.assetid: 1ef3ba9d-d14c-4a20-92d6-0bcb604fd9e2
 keywords:
-- SetLicenseResponse-Methode, Windows Media Device Manager
-- SetLicenseResponse-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, SetLicenseResponse-Methode
+- SetLicenseResponse-Methode windows Media Geräte-Manager
+- SetLicenseResponse-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice interface windows Media Geräte-Manager , SetLicenseResponse method
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f32a2d27fabe45081b13d658e49171af035b8cc6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4161732002378449f196fdf83c4b880fcc2c02d345a0b08c6e6a464b81acb1dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055718"
 ---
-# <a name="iwmdrmdevicesetlicenseresponse-method"></a>Iwmdrmdevice:: SetLicenseResponse-Methode
+# <a name="iwmdrmdevicesetlicenseresponse-method"></a>IWMDRMDevice::SetLicenseResponse-Methode
 
-Die **SetLicenseResponse** -Methode legt die Lizenz Antwort fest.
+Die **SetLicenseResponse-Methode legt** die Lizenzantwort fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ HRESULT SetLicenseResponse(
 
 <dl> <dt>
 
-*pbresponse* \[ in\]
+*pbResponse* \[ In\]
 </dt> <dd>
 
-Gibt die festzulegende Antwort an.
+Gibt die zu legende Antwort an.
 
 </dd> <dt>
 
-*cbresponse* \[ in\]
+*cbResponse* \[ In\]
 </dt> <dd>
 
-Die Größe der Antwort in Bytes.
+Größe der Antwort in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -78,8 +78,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> </dl>
 
  

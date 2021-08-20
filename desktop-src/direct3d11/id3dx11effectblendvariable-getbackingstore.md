@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectBlendVariable getbackingstore-Methode (D3dx11effect. h)
-description: Einen Zeiger auf eine Blend-State-Variable erhalten.
+title: ID3DX11EffectBlendVariable GetBackingStore-Methode (D3dx11effect.h)
+description: Abrufen eines Zeigers auf eine Mischungszustandsvariable.
 ms.assetid: 809daaad-9bf0-48fb-ae91-f237c43db324
 keywords:
-- Getbackingstore-Methode Direct3D 11
-- Getbackingstore-Methode Direct3D 11, ID3DX11EffectBlendVariable-Schnittstelle
-- ID3DX11EffectBlendVariable Interface Direct3D 11, getbackingstore-Methode
+- GetBackingStore-Methode Direct3D 11
+- GetBackingStore-Methode Direct3D 11 , ID3DX11EffectBlendVariable-Schnittstelle
+- ID3DX11EffectBlendVariable-Schnittstelle Direct3D 11 , GetBackingStore-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0220481b58931edace2a5dfe7298d83f7bd1325
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f02f09c0db4ec56ee592dc39ddbb7fef1ae52d328edec5d9a5c9fd17b769ef58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046558"
 ---
-# <a name="id3dx11effectblendvariablegetbackingstore-method"></a>ID3DX11EffectBlendVariable:: getbackingstore-Methode
+# <a name="id3dx11effectblendvariablegetbackingstore-method"></a>ID3DX11EffectBlendVariable::GetBackingStore-Methode
 
-Einen Zeiger auf eine Blend-State-Variable erhalten.
+Abrufen eines Zeigers auf eine Mischungszustandsvariable.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ HRESULT GetBackingStore(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Indizieren Sie in ein Array von Blend-Zustandsbeschreibungen. Wenn nur eine Blend-State-Variable vorhanden ist, verwenden Sie 0.
+Index in ein Array von Blendzustandsbeschreibungen. Wenn der Effekt nur eine Blendzustandsvariable enthält, verwenden Sie 0.
 
 </dd> <dt>
 
-*pblenddebug* 
+*pBlendDesc* 
 </dt> <dd>
 
-Typ: **[ **D3D11 \_ Blend \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc)\***
+Typ: **[ **D3D11 \_ BLEND \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc)\***
 
-Ein Zeiger auf eine Blend-Statusbeschreibung (siehe [**D3D11 \_ Blend \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc)-Debug).
+Ein Zeiger auf eine Beschreibung des Blendzustands (siehe [**D3D11 \_ BLEND \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc)).
 
 </dd> </dl>
 
@@ -66,29 +66,29 @@ Ein Zeiger auf eine Blend-Statusbeschreibung (siehe [**D3D11 \_ Blend \_**](/win
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Effekt Variablen werden im Sicherungs Speicher im Arbeitsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungs Speicher auf das Gerät kopiert. Das Sichern von Speicherdaten kann verwendet werden, um die Variable bei Bedarf neu zu erstellen.
+Effektvariablen werden im Speicher im Sicherungsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungsspeicher auf das Gerät kopiert. Sicherungsspeicherdaten können verwendet werden, um die Variable bei Bedarf neu zu erstellen.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: NetBoot-SIF-Datei-Attribut
-description: Das netboot-SIF-file-Attribut ist für die interne Verwendung reserviert.
+title: Netboot-SIF-File-Attribut
+description: Das Netboot-SIF-File-Attribut ist für die interne Verwendung reserviert.
 ms.assetid: 3ead21b7-e27e-4056-8e79-96976aa28f37
 ms.tgt_platform: multiple
 keywords:
-- NetBoot-SIF-Datei Attribut AD-Schema
-- AD-Schema des netbootsiffile-Attributs
+- Netboot-SIF-File-Attribut-AD-Schema
+- netbootSIFFile-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4912bb769d8ac4a6409f48832c19e6b7f9cb01c9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7f0d0979e10f72919bd143e9d1041c1ee5d45d775161e8deb75b734bec922069
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343102"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648480"
 ---
-# <a name="netboot-sif-file-attribute"></a>NetBoot-SIF-Datei-Attribut
+# <a name="netboot-sif-file-attribute"></a>Netboot-SIF-File-Attribut
 
-Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
+Das **Netboot-SIF-File-Attribut** ist für die interne Verwendung reserviert.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | NetBoot-SIF-Datei                            |
-| LDAP-Display-Name | netbootsiffile                              |
+| CN                | Netboot-SIF-File                            |
+| Ldap-Anzeigename | netbootSIFFile                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1240                     |
-| System-ID-GUID    | 2df90d84-009F -11d2-aa4c-00c04f d83a        |
+| System-ID-GUID    | 2df90d84-009f-11d2-aa4c-00c04fd7d83a        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -70,7 +70,7 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -100,10 +100,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -121,10 +121,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -142,10 +142,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -163,10 +163,10 @@ Das **netboot-SIF-File-** Attribut ist für die interne Verwendung reserviert.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

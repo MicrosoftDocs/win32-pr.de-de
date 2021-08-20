@@ -1,46 +1,46 @@
 ---
-title: Src-Attribut (vmlframe) (VML)
-description: Src-Attribut (vmlframe) (VML)
+title: Src-Attribut (VMLFrame)(VML)
+description: Src-Attribut (VMLFrame)(VML)
 ms.assetid: 6ac7a3b5-3c1d-43a0-ab92-a03e3bd45733
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28a9c3ec4849098c9469fba56f26d4c3dd514746
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a44f7761a55304eefc655d00ed58d84b7af8f7ce5daf86a3aaf462308b43c193
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057582"
 ---
-# <a name="src-attribute-vmlframevml"></a>Src-Attribut (vmlframe) (VML)
+# <a name="src-attribute-vmlframevml"></a>Src-Attribut (VMLFrame)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Datenquelle für den Frame. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert die Quelle der Daten für den Frame. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Vmlframe](msdn-online-vml-vmlframe-element.md)
+[VMLFrame](msdn-online-vml-vmlframe-element.md)
 
 **Tagsyntax**
 
-<v: *Element* src = " *Expression* " >
+<v: *element* src=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . src = "*Ausdruck*"
+*element* .src="*expression*"
 
-*Ausdruck* = *Element*. src
+*expression* = *.src-Element*
 
 **Anmerkungen**
 
-Das **src** -Attribut kann die folgenden Syntaxen einschließen:
+Das **Src-Attribut** kann die folgenden Syntaxen umfassen:
 
--   URL zu externer Datei. Die Datei muss eine XML-Datei mit folgendem Format sein:
+-   URL zur externen Datei. Die Datei muss eine XML-Datei im folgenden Format sein:
     ```HTML
        <xml xmlns:v = "urn:schemas-microsoft-com:vml">
        .
@@ -51,32 +51,32 @@ Das **src** -Attribut kann die folgenden Syntaxen einschließen:
 
     
 
--   In der Datei müssen Sie über eine oder mehrere VML-Formen mit gültigen IDs verfügen, auf die mit der folgenden Syntax verwiesen werden kann:
+-   Innerhalb der Datei benötigen Sie mindestens eine VML-Form mit gültigen IDs, auf die mithilfe dieser Syntax verwiesen werden kann:
     ```HTML
        filename#shapename
     ```
 
     
 
--   In der folgenden Referenz haben externe Dateien die Erweiterung. VML, aber es kann eine beliebige Erweiterung verwendet werden:
+-   In der folgenden Referenz haben externe Dateien die Erweiterung .vml, aber jede Erweiterung kann verwendet werden:
     ```HTML
        external.vml#image01
     ```
 
     
 
--   Sie können auf eine Form innerhalb derselben Datei verweisen, indem Sie die folgende Syntax verwenden:
+-   Sie können in derselben Datei mithilfe der folgenden Syntax auf eine Form verweisen:
     ```HTML
        #shapename
     ```
 
     
 
-Wenn **Clip** **false** ist, wird die Form so skaliert, dass Sie dem Frame entspricht. **True** gibt an, dass Teile der Form, die sich außerhalb des Rahmens befinden, nicht angezeigt werden.
+Wenn **Clip** **auf False** festgelegt ist, wird die Form an den Frame angepasst. **True** gibt an, dass teile der Form, die sich außerhalb des Rahmens befinden, nicht angezeigt werden.
 
-Beachten Sie, dass [Origin](origin-attribute--vmlframe--vml.md) und [size](size-attribute--vmlframe.md) nicht verwendet werden, es sei denn, **Clip** ist **true**.
+Beachten Sie, dass [Ursprung](origin-attribute--vmlframe--vml.md) und [Größe](size-attribute--vmlframe.md) nur verwendet werden, wenn **Clip** **true** ist.
 
-**VML-Standard Attribut**
+**VML-Standardattribut**
 
 **Beispiel**
 
@@ -93,6 +93,6 @@ Das in der externen Datei definierte Bild wird abgeschnitten.
 
 
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: /WinRT-Schalter
-description: Der/WinRT-Schalter aktiviert Windows-Runtime Semantik.
+title: /winrt-Schalter
+description: Der Schalter /winrt aktiviert Windows Runtimesemantik.
 ms.assetid: 910F4106-1CA2-4486-BBD4-57DAC9B4A78F
 keywords:
-- /WinRT-Schalter-Mittel l
+- /winrt switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25746064b18316edab9c497502b802c7d19adaf9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: add020d1228aaeae6e4a319875dd2118c5c0f185c4032ffcf11781768a4e289d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067430"
 ---
-# <a name="winrt-switch"></a>/WinRT-Schalter
+# <a name="winrt-switch"></a>/winrt-Schalter
 
-Der [**/WinRT**](-winmd.md) -Schalter aktiviert Windows-Runtime Semantik.
+Der [**Schalter /winrt**](-winmd.md) aktiviert Windows Runtime-Semantik.
 
 ``` syntax
 midlrt /winrt 
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ## <a name="examples"></a>Beispiele
 
-**mittlere/WinRT**
+**midlrt /winrt**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieser Switch hat keine Parameter.
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

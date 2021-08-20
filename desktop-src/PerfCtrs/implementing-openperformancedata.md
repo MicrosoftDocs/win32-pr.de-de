@@ -1,21 +1,21 @@
 ---
-description: Die openperformancedata-Funktion gibt dem Anbieter die Möglichkeit, die Leistungsdaten Strukturen zu initialisieren.
+description: Die OpenPerformanceData-Funktion gibt dem Anbieter die Möglichkeit, seine Leistungsdatenstrukturen zu initialisieren.
 ms.assetid: 0849d9cb-90d1-4b79-810d-b43f69cc9055
-title: Implementieren von openperformancedata
+title: Implementieren von OpenPerformanceData
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53f5e4f9860983066f6ce106638962415dcf71b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 835c60e449e7e95264c20623dc103395d34b770feb632ba2409e3d658094d289
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579830"
 ---
-# <a name="implementing-openperformancedata"></a>Implementieren von openperformancedata
+# <a name="implementing-openperformancedata"></a>Implementieren von OpenPerformanceData
 
-Die [**openperformancedata**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) -Funktion gibt dem Anbieter die Möglichkeit, die Leistungsdaten Strukturen zu initialisieren. Das System ruft die Open-Funktion auf, wenn ein Consumer das erste Mal " [**RegQueryValueEx**](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)" aufruft, oder wenn der Consumer die [**RegOpenKey**](/windows/desktop/api/winreg/nf-winreg-regopenkeya) -oder [**regconnectregistry**](/windows/desktop/api/winreg/nf-winreg-regconnectregistrya) -Funktion verwendet, um **HKEY- \_ Leistungs \_ Daten** zu öffnen.
+Die [**OpenPerformanceData-Funktion**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) gibt dem Anbieter die Möglichkeit, seine Leistungsdatenstrukturen zu initialisieren. Das System ruft Ihre open-Funktion auf, wenn ein Consumer zum ersten Mal [**RegQueryValueEx**](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)aufruft, oder wenn der Consumer die [**RegOpenKey-**](/windows/desktop/api/winreg/nf-winreg-regopenkeya) oder [**RegConnectRegistry-Funktion**](/windows/desktop/api/winreg/nf-winreg-regconnectregistrya) verwendet, um **HKEY \_ PERFORMANCE DATA zu \_ öffnen.**
 
-Das folgende Beispiel zeigt eine Implementierung der [**openperformancedata**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) -Funktion. Die Header Datei, die die Definition der in dieser Funktion verwendeten Indikatoren enthält, folgt diesem Beispiel. Wenn Sie C++ verwenden, um diese Funktion zu implementieren, achten Sie darauf, dass Sie extern "C" verwenden, wenn Sie die Funktion deklarieren. Die in diesem Beispiel verwendeten Indikator Offset Konstanten werden in der Datei counteroffsets. h unter [Hinzufügen von Indikator Namen und Beschreibung zur Registrierung](adding-counter-names-and-descriptions-to-the-registry.md)definiert.
+Das folgende Beispiel zeigt eine Implementierung der [**OpenPerformanceData-Funktion.**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) Die Headerdatei, die die Definition der in dieser Funktion verwendeten Leistungsindikatoren enthält, folgt diesem Beispiel. Wenn Sie diese Funktion mit C++ implementieren, sollten Sie extern "C" verwenden, wenn Sie Ihre Funktion deklarieren. Die in diesem Beispiel verwendeten Indikatoroffsetkonst constants werden in der Datei CounterOffsets.h definiert, die unter Hinzufügen von Indikatornamen und Beschreibung zur [Registrierung gezeigt wird.](adding-counter-names-and-descriptions-to-the-registry.md)
 
 
 ```C++
@@ -166,7 +166,7 @@ cleanup:
 
 
 
-Im folgenden finden Sie die Header Datei, die in diesem Beispiel verwendet wird.
+Im Folgenden finden Sie die Headerdatei, die in diesem Beispiel verwendet wird.
 
 
 ```C++
@@ -251,7 +251,7 @@ UNALIGNED LONG g_OpenCount = 0;  // Reference count for the number of times
 
 
 
-Das folgende Beispiel zeigt die Modul Definitionsdatei (. def), mit der die Funktionen zum Öffnen, erfassen und schließen exportiert werden.
+Das folgende Beispiel zeigt die Moduldefinitionsdatei (DEF), die zum Exportieren der Funktionen zum Öffnen, Sammeln und Schließen verwendet wird.
 
 
 ```C++
@@ -265,7 +265,7 @@ EXPORTS
 
 
 
-Das folgende Beispiel zeigt eine Implementierung der [*closeperformancedata*](/windows/win32/api/winperf/nc-winperf-pm_close_proc) -Funktion. Das System ruft Ihre Close-Funktion auf, wenn ein Consumer den [**RegCloseKey**](/windows/desktop/api/winreg/nf-winreg-regclosekey) aufruft, um **HKEY- \_ Leistungs \_ Daten** zu schließen. Anbieter verwenden diesen-Befehl, um alle von Ihnen zugewiesenen Ressourcen freizugeben.
+Das folgende Beispiel zeigt eine Implementierung der [*ClosePerformanceData-Funktion.*](/windows/win32/api/winperf/nc-winperf-pm_close_proc) Das System ruft Ihre close-Funktion auf, wenn ein Consumer [**regCloseKey aufruft,**](/windows/desktop/api/winreg/nf-winreg-regclosekey) um **HKEY \_ PERFORMANCE DATA \_ zu schließen.** Anbieter verwenden diesen Aufruf, um alle ressourcen frei zu geben, die sie zugeordnet haben.
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: 'Die getactualdatalength-Methode ruft die Länge der gültigen Daten im Puffer ab. Diese Methode implementiert die imediasample:: getactualdatalength-Methode.'
+description: Die GetActualDataLength-Methode ruft die Länge der gültigen Daten im Puffer ab. Diese Methode implementiert die IMediaSample::GetActualDataLength-Methode.
 ms.assetid: bdb8c2b9-7be4-494b-bb96-34a9936d4a2f
-title: Cmediasample. getactualdatalength-Methode (amfilter. h)
+title: CMediaSample.GetActualDataLength-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2e65b72c1e0b6db85a271c10f76e5630b0799b78
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 67d41c23e45ba65416a0f57336e51d2784b194ee556a778b7036e8dc5fd829ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016388"
 ---
-# <a name="cmediasamplegetactualdatalength-method"></a>Cmediasample. getactualdatalength-Methode
+# <a name="cmediasamplegetactualdatalength-method"></a>CMediaSample.GetActualDataLength-Methode
 
-Die- `GetActualDataLength` Methode ruft die Länge der gültigen Daten im Puffer ab. Diese Methode implementiert die [**imediasample:: getactualdatalength**](/windows/win32/api/strmif/nf-strmif-imediasample-getactualdatalength) -Methode.
+Die `GetActualDataLength` -Methode ruft die Länge der gültigen Daten im Puffer ab. Diese Methode implementiert die [**IMediaSample::GetActualDataLength-Methode.**](/windows/win32/api/strmif/nf-strmif-imediasample-getactualdatalength)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt die Länge der gültigen Daten in Bytes zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Variable [**cmediasample:: m \_ lactive**](cmediasample-m-lactual.md) Member gibt diese Eigenschaft an.
+Die [**\_ LActual-Membervariable CMediaSample::m**](cmediasample-m-lactual.md) gibt diese Eigenschaft an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Variable [**cmediasample:: m \_ lactive**](cmediasample-m-lactual.md) Member
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Variable [**cmediasample:: m \_ lactive**](cmediasample-m-lactual.md) Member
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

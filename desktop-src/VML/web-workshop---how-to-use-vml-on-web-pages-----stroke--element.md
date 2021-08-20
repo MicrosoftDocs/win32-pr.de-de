@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Stroke-Elements
-description: In diesem Artikel wird die Verwendung des Stroke-Elements von VML beschrieben, einem Feature, das ab Windows Internet Explorer 9 veraltet ist.
+description: In diesem Artikel wird die Verwendung des Stroke-Elements von VML beschrieben, einem Feature, das ab Windows Internet Explorer 9 als veraltet gilt.
 ms.assetid: e3d9dbe5-e087-4b6f-8318-c7d4485cd502
 keywords:
 - Web workshop,stroke-Element
@@ -14,16 +14,16 @@ keywords:
 - Vector Markup Language (VML),Dashstyle-Eigenschaftsattribut
 - VML (Vector Markup Language),Dashstyle-Eigenschaftsattribut
 - Vektorgrafik, Dashstyle-Eigenschaftsattribut
-- dashstyle-Eigenschaftsattribut
-- Vector Markup Language (VML),Opacity-Eigenschaftsattribut
+- Dashstyle-Eigenschaftsattribut
+- Vector Markup Language -Eigenschaftsattribut (VML), Deckkrafteigenschaft
 - VML-Eigenschaftsattribut (Vector Markup Language),Deckkrafteigenschaft
 - Vektorgrafik, Opacity-Eigenschaftsattribut
 - Opacity-Eigenschaftsattribut
-- Vector Markup Language (VML),Linestyle-Eigenschaftsattribut
+- Vector Markup Language (VML), Linestyle-Eigenschaftsattribut
 - VML (Vector Markup Language),Linestyle-Eigenschaftsattribut
 - Vektorgrafik, Eigenschaftenattribut "linestyle"
 - linestyle-Eigenschaftsattribut
-- Vector Markup Language (VML),Joinstyle-Eigenschaftsattribut
+- Vector Markup Language (VML), Joinstyle-Eigenschaftsattribut
 - VML (Vector Markup Language),Joinstyle-Eigenschaftsattribut
 - Vektorgrafik, Joinstyle-Eigenschaftsattribut
 - joinstyle-Eigenschaftsattribut
@@ -33,16 +33,16 @@ keywords:
 - filltype-Eigenschaftsattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dff7a4b3bc654063fe8156476cc9c52453247a0b
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: e0cb69452abe5b3d743036f6a4db094da196281b575a6db65aa48535126fd917
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057447"
 ---
 # <a name="using-the-stroke-element"></a>Verwenden des Stroke-Elements
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
 > Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
@@ -81,7 +81,7 @@ strokecolor="red" strokeweight="2pt">
 
 Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "dot" ändern, können Sie eine gepunktete Linie erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dot.gif (144 Byte)](images/dot.gif)
+![dot.gif (144 Bytes)](images/dot.gif)
 
 
 ```HTML
@@ -97,7 +97,7 @@ strokecolor="red" strokeweight="2pt">
 
 Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "Bindestrich" ändern, können Sie eine Bindestrichlinie erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dash.gif (137 Bytes)](images/dash.gif)
+![dash.gif (137 Byte)](images/dash.gif)
 
 
 ```HTML
@@ -113,7 +113,7 @@ strokecolor="red" strokeweight="2pt">
 
 Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "dashdot" ändern, können Sie eine Linie mit einem gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![dashdot.gif (145 Bytes)](images/dashdot.gif)
+![dashdot.gif (145 Byte)](images/dashdot.gif)
 
 
 ```HTML
@@ -129,7 +129,7 @@ strokecolor="red" strokeweight="2pt">
 
 Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "longdash" ändern, können Sie eine Linie mit einem langen gestrichelten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![longdash.gif (123 Bytes)](images/longdash.gif)
+![longdash.gif (123 Byte)](images/longdash.gif)
 
 
 ```HTML
@@ -145,7 +145,7 @@ strokecolor="red" strokeweight="2pt">
 
 Wenn Sie das **Dashstyle-Eigenschaftsattribut** in "longdashdot" ändern, können Sie eine Linie mit einem langen gestrichelten und gepunkteten Stil erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![longdashdot.gif (135 Byte)](images/longdashdot.gif)
+![longdashdot.gif (135 Bytes)](images/longdashdot.gif)
 
 
 ```HTML
@@ -159,7 +159,7 @@ strokecolor="red" strokeweight="2pt">
 
 
 
-Wenn Sie `<v:stroke dashstyle="dashdot" />` innerhalb des Elements `<rect>` platzieren, können Sie ein Rechteck mit gestrichelter und gepunkteter Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie `<v:stroke dashstyle="dashdot" />` innerhalb des `<rect>` -Elements platzieren, können Sie ein Rechteck mit gestrichelter und gepunkteter Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![rect.gif (615 Bytes)](images/rect.gif)
 
@@ -238,7 +238,7 @@ Wenn Sie `<v:stroke linestyle="single" />` im `<rect>` -Element angeben, können
 
 Wenn Sie  das Linestyle-Eigenschaftsattribut in "thinthin" ändern, können Sie ein Rechteck mit der Kontur (1:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thinthin.gif (642 Byte)](images/thinthin.gif)
+![thinthin.gif (642 Bytes)](images/thinthin.gif)
 
 
 ```HTML
@@ -252,7 +252,7 @@ strokeweight="10pt">
 
 
 
-Wenn Sie  das Linestyle-Eigenschaftsattribut in "thinthick" ändern, können Sie ein Rechteck mit der Kontur (1:1:2) erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie das Eigenschaftenattribut **linestyle** in "thinthick" ändern, können Sie ein Rechteck mit der Kontur (1:1:2) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![thinthick.gif (646 Bytes)](images/thinthick.gif)
 
@@ -286,7 +286,7 @@ strokeweight="10pt">
 
 Wenn Sie  das Linestyle-Eigenschaftsattribut in "thickbetweenthin" ändern, können Sie ein Rechteck mit der Kontur (1:1:2:1:1) erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
-![thickbthin.gif (669 Bytes)](images/thickbthin.gif)
+![thickbthin.gif (669 Byte)](images/thickbthin.gif)
 
 
 ```HTML
@@ -340,7 +340,7 @@ strokecolor="red" strokeweight="20pt">
 
 
 
-Wenn Sie  das joinstyle-Eigenschaftsattribut in "miter" ändern, können Sie eine Form mit der Kontur "miter-join" erstellen, wie in der folgenden VML-Darstellung gezeigt:
+Wenn Sie  das joinstyle-Eigenschaftsattribut in "miter" ändern, können Sie eine Form mit der Kontur miter-join erstellen, wie in der folgenden VML-Darstellung gezeigt:
 
 ![miter.gif (702 Bytes)](images/miter.gif)
 
@@ -381,7 +381,7 @@ strokeweight="15pt">
 
 
 
-Wenn Sie  das filltype-Eigenschaftsattribut in "pattern" ändern, das src-Eigenschaftsattribut auf den Speicherort der Musterbilddatei verweisen und das **Color2-Eigenschaftsattribut** auf die zweite Musterfarbe festlegen, können Sie ein abgerundetes Rechteck mit einer Mustergliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
+Wenn Sie  das Filltype-Eigenschaftsattribut in "pattern" ändern, das src-Eigenschaftsattribut auf den Speicherort der Musterbilddatei verweisen und das **Color2-Eigenschaftsattribut** auf die zweite Musterfarbe festlegen, können Sie ein abgerundetes Rechteck mit einer Mustergliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![pattern.gif (1055 Bytes)](images/pattern.gif)
 
@@ -398,7 +398,7 @@ color2="green" />
 
 
 
-Wenn Sie  das Filltype-Eigenschaftsattribut in "tile" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer gekachelten Gliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
+Wenn Sie  das filltype-Eigenschaftenattribut in "tile" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer gekachelten Kontur erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![tile.gif (6617 Bytes)](images/tile.gif)
 
@@ -414,7 +414,7 @@ strokeweight="15pt">
 
 
 
-Wenn Sie  das filltype-Eigenschaftsattribut in "frame" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer Bildgliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
+Wenn Sie  das filltype-Eigenschaftenattribut in "frame" ändern und das src-Eigenschaftsattribut auf den Speicherort der Bilddatei verweisen, können Sie ein abgerundetes Rechteck mit einer Bildgliederung erstellen, wie in der folgenden VML-Darstellung gezeigt: 
 
 ![frame.gif (6203 Bytes)](images/frame.gif)
 

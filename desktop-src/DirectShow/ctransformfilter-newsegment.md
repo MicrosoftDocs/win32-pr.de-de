@@ -1,5 +1,5 @@
 ---
-description: Die NewSegment-Methode benachrichtigt den Filter, dass medienbeispiele, die nach diesem Aufruf empfangen wurden, als Segment gruppiert werden.
+description: Die NewSegment-Methode benachrichtigt den Filter, dass Medienbeispiele, die nach diesem Aufruf empfangen werden, als Segment gruppiert werden.
 ms.assetid: 78ddaac7-9c1f-47b6-835d-dd16b1f5b01f
 title: CTransformFilter.NewSegment-Methode (Transfrm.h)
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "118953549"
 ---
 # <a name="ctransformfilternewsegment-method"></a>CTransformFilter.NewSegment-Methode
 
-Die -Methode benachrichtigt den Filter, dass medienbeispiele, die nach diesem Aufruf empfangen `NewSegment` wurden, als Segment gruppiert werden.
+Die `NewSegment` -Methode benachrichtigt den Filter, dass nach diesem Aufruf empfangene Medienbeispiele als Segment gruppiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Startzeit des Segments relativ zur ursprünglichen Quelle.
 *tStop* 
 </dt> <dd>
 
-Die Stoppzeit des Segments relativ zur ursprünglichen Quelle.
+Beendigungszeit des Segments relativ zur ursprünglichen Quelle.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die [**CTransformInputPin::NewSegment-Methode**](ctransforminputpin-newsegment.md) des Eingabepins ruft diese Methode auf. Diese Methode übergibt den `NewSegment` Aufruf an den Downstreameingabepin.
+Die [**CTransformInputPin::NewSegment-Methode**](ctransforminputpin-newsegment.md) des Eingabepins ruft diese Methode auf. Diese Methode übermittelt den `NewSegment` Aufruf des Downstreameingabepins.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,11 +80,11 @@ Die [**CTransformInputPin::NewSegment-Methode**](ctransforminputpin-newsegment.m
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
 title: TVN_ITEMEXPANDING Benachrichtigungscode (Commctrl.h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 5ce256df-49e5-4fbf-9cdc-79dd2edbd8ec
 keywords:
-- TVN_ITEMEXPANDING Benachrichtigungscode Windows Steuerelementen
+- TVN_ITEMEXPANDING Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118957789"
 ---
 # <a name="tvn_itemexpanding-notification-code"></a>TVN \_ ITEMEXPANDING-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,13 +43,13 @@ TVN_ITEMEXPANDING
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Das **itemNew-Element** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen über das übergeordnete Element in den **Membern hItem**, **state** und **lParam** enthält. Das **Aktionsmitglied** gibt an, ob die Liste erweitert oder reduziert werden soll. Eine Liste der möglichen Werte finden Sie in der Beschreibung der [**MELDUNG TVM \_ EXPAND.**](tvm-expand.md)
+Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Der **itemNew-Member** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen zum übergeordneten Element in den **Membern hItem,** **state** und **lParam** enthält. Der **Aktionsmember** gibt an, ob die Liste erweitert oder reduziert werden soll. Eine Liste der möglichen Werte finden Sie in der Beschreibung der [**TVM \_ EXPAND-Nachricht.**](tvm-expand.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** um zu verhindern, dass die Liste erweitert oder verklappt wird.
+Gibt **TRUE** zurück, um zu verhindern, dass die Liste erweitert oder reduziert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Gibt **TRUE zurück,** um zu verhindern, dass die Liste erweitert oder verklappt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **TVN \_ ITEMEXPANDINGW** (Unicode) und **TVN \_ ITEMEXPANDINGA** (ANSI)<br/>       |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

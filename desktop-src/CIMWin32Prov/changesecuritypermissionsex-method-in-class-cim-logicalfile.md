@@ -1,8 +1,8 @@
 ---
-description: Ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist (diese Methode ist eine erweiterte Version der changesecurrityberechtigungs Methode).
+description: Ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der ChangeSecurityPermissions-Methode).
 ms.assetid: 29155533-0898-4f8f-af08-f3ea46c8c1d3
 ms.tgt_platform: multiple
-title: Changesecurritypermissionsex-Methode der CIM_LogicalFile-Klasse
+title: ChangeSecurityPermissionsEx-Methode der CIM_LogicalFile Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: af2dc82ef54b6f32eee20f17cd61c0769cc64b1a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9b550ca2c3297d4f2185918036bc283138e619dda2e1facff696ec8fe868e07b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081024"
 ---
-# <a name="changesecuritypermissionsex-method-of-the-cim_logicalfile-class"></a>Changesecurritypermissionsex-Methode der CIM \_ LogicalFile-Klasse
+# <a name="changesecuritypermissionsex-method-of-the-cim_logicalfile-class"></a>ChangeSecurityPermissionsEx-Methode der CIM \_ LogicalFile-Klasse
 
-Die **changesecurritypermissionsex** -Methode ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist (diese Methode ist eine erweiterte Version der [**changesecurrityberechtigungs**](changesecuritypermissions-method-in-class-cim-logicalfile.md) -Methode). Wenn die logische Datei ein Verzeichnis ist, wird diese Methode rekursiv ausgeführt, und die Sicherheits Berechtigungen für alle Dateien und Unterverzeichnisse, die im Verzeichnis enthalten sind, werden geändert.
+Die **ChangeSecurityPermissionsEx-Methode** ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der [**ChangeSecurityPermissions-Methode).**](changesecuritypermissions-method-in-class-cim-logicalfile.md) Wenn die logische Datei ein Verzeichnis ist, wird diese Methode rekursiv agieren und die Sicherheitsberechtigungen für alle Dateien und Unterverzeichnisse ändern, die das Verzeichnis enthält.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,17 +51,17 @@ uint32 ChangeSecurityPermissionsEx(
 
 <dl> <dt>
 
-*SecurityDescriptor* \[ in\]
+*SecurityDescriptor* \[ In\]
 </dt> <dd>
 
 Gibt die Sicherheitsinformationen an.
 
 </dd> <dt>
 
-*Option* \[ in\]
+*Option* \[ In\]
 </dt> <dd>
 
-Zu ändernde Sicherheits Berechtigung. Wenn Sie z. b. den Besitzer und die DACL-Sicherheit ändern möchten, verwenden Sie
+Zu ändernde Sicherheitsberechtigung. Verwenden Sie beispielsweise , um die Besitzer- und DACL-Sicherheit zu ändern.
 
 `Option = 1 + 4`
 
@@ -73,7 +73,7 @@ oder
 
 <span id="Change_Owner_Security_Information"></span><span id="change_owner_security_information"></span><span id="CHANGE_OWNER_SECURITY_INFORMATION"></span>
 
-<span id="Change_Owner_Security_Information"></span><span id="change_owner_security_information"></span><span id="CHANGE_OWNER_SECURITY_INFORMATION"></span>**Ändern \_ \_Sicherheits \_ Informationen** für den Besitzer (1)
+<span id="Change_Owner_Security_Information"></span><span id="change_owner_security_information"></span><span id="CHANGE_OWNER_SECURITY_INFORMATION"></span>**Ändern \_ Sicherheitsinformationen \_ \_ für Besitzer** (1)
 
 
 </dt> <dd>
@@ -84,7 +84,7 @@ oder
 
 <span id="Change_Group_Security_Information"></span><span id="change_group_security_information"></span><span id="CHANGE_GROUP_SECURITY_INFORMATION"></span>
 
-<span id="Change_Group_Security_Information"></span><span id="change_group_security_information"></span><span id="CHANGE_GROUP_SECURITY_INFORMATION"></span>**Ändern \_ Gruppen \_ Sicherheits \_ Informationen** (2)
+<span id="Change_Group_Security_Information"></span><span id="change_group_security_information"></span><span id="CHANGE_GROUP_SECURITY_INFORMATION"></span>**Ändern \_ \_ \_ Gruppensicherheitsinformationen** (2)
 
 
 </dt> <dd>
@@ -95,7 +95,7 @@ oder
 
 <span id="Change_Dacl_Security_Information"></span><span id="change_dacl_security_information"></span><span id="CHANGE_DACL_SECURITY_INFORMATION"></span>
 
-<span id="Change_Dacl_Security_Information"></span><span id="change_dacl_security_information"></span><span id="CHANGE_DACL_SECURITY_INFORMATION"></span>**Ändern \_ DACL- \_ Sicherheits \_ Informationen** (4)
+<span id="Change_Dacl_Security_Information"></span><span id="change_dacl_security_information"></span><span id="CHANGE_DACL_SECURITY_INFORMATION"></span>**Ändern \_ \_ \_ Dacl-Sicherheitsinformationen** (4)
 
 
 </dt> <dd>
@@ -106,7 +106,7 @@ oder
 
 <span id="Change_Sacl_Security_Information"></span><span id="change_sacl_security_information"></span><span id="CHANGE_SACL_SECURITY_INFORMATION"></span>
 
-<span id="Change_Sacl_Security_Information"></span><span id="change_sacl_security_information"></span><span id="CHANGE_SACL_SECURITY_INFORMATION"></span>**Ändern \_ SACL- \_ Sicherheits \_ Informationen** (8)
+<span id="Change_Sacl_Security_Information"></span><span id="change_sacl_security_information"></span><span id="CHANGE_SACL_SECURITY_INFORMATION"></span>**Ändern \_ \_ \_ Sacl-Sicherheitsinformationen** (8)
 
 
 </dt> <dd>
@@ -115,30 +115,30 @@ oder
 
 </dd> </dl> </dd> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter hat den Wert **null** , wenn die Methode erfolgreich ist.
+Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der bzw. dem die Methode fehlgeschlagen ist. Dieser Parameter hat den Wert **NULL, wenn** die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in, optional\]
+*StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der Parameter " *StartFileName* " der Parameter " *StopFileName* ", der die Datei (oder das Verzeichnis) angibt, in der ein Fehler des vorherigen Methoden Aufrufes aufgetreten ist Wenn der Parameterwert **null** ist, wird der Vorgang für die im [**ExecMethod**](/windows/desktop/WmiSdk/swbemservices-execmethod) -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der *StartFileName-Parameter* der *StopFileName-Parameter,* der die Datei (oder das Verzeichnis) angibt, in der beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn der Parameterwert **NULL ist,** wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das [**im ExecMethod-Aufruf angegeben**](/windows/desktop/WmiSdk/swbemservices-execmethod) ist.
 
 </dd> <dt>
 
 *Rekursiv* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass die Sicherheits Berechtigungen rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet werden, das von der [**CIM \_ LogicalFile**](cim-logicalfile.md) -Instanz angegeben wird. Bei Datei Instanzen wird dieser Parameter ignoriert.
+True **gibt** an, dass die Sicherheitsberechtigungen rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet werden, das von der [**CIM \_ LogicalFile-Instanz angegeben**](cim-logicalfile.md) wird. Bei Dateiinstanzen wird dieser Parameter ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -156,16 +156,16 @@ Erfolg.
 
 2
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht spezifizierter Fehler**
+**Nicht angegebener Fehler**
 </dt> <dd>
 
 8
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -178,7 +178,7 @@ Ungültiges Objekt.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden.**
+**Das Objekt ist bereits vorhanden.**
 </dt> <dd>
 
 10
@@ -187,12 +187,12 @@ Das Objekt ist bereits vorhanden.
 
 </dd> <dt>
 
-**Dateisystem nicht NTFS**
+**Dateisystem, nicht NTFS**
 </dt> <dd>
 
 11
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem, nicht NTFS.
 
 </dd> <dt>
 
@@ -210,7 +210,7 @@ Plattform nicht Windows.
 
 13
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -223,7 +223,7 @@ Das Laufwerk ist nicht identisch.
 
 </dd> <dt>
 
-**Freigabe Verletzung**
+**Freigabeverletzung**
 </dt> <dd>
 
 15
@@ -241,12 +241,12 @@ Ungültige Startdatei.
 
 </dd> <dt>
 
-**Berechtigung nicht aufrechterhalten**
+**Nicht privileg**
 </dt> <dd>
 
 17
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -259,9 +259,9 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -271,8 +271,8 @@ Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwend
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

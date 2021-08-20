@@ -1,9 +1,9 @@
 ---
-title: WM_CHARTOITEM (Winuser.h)
-description: Wird von einem Listenfeld mit dem LBS WANTKEYBOARDINPUT-Stil als Reaktion auf eine WM CHAR-Nachricht an den \_ \_ Besitzer gesendet.
+title: WM_CHARTOITEM-Nachricht (Winuser.h)
+description: Wird von einem Listenfeld mit dem LBS \_ WANTKEYBOARDINPUT-Stil als Reaktion auf eine WM CHAR-Nachricht an den Besitzer \_ gesendet.
 ms.assetid: f941c00b-b836-4f1b-b8cf-8ac2b0704af3
 keywords:
-- WM_CHARTOITEM meldungssteuerelemente Windows
+- WM_CHARTOITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118957529"
 ---
-# <a name="wm_chartoitem-message"></a>WM \_ CHARTOITEM-Meldung
+# <a name="wm_chartoitem-message"></a>WM \_ CHARTOITEM-Nachricht
 
 Wird von einem Listenfeld mit dem [**LBS \_ WANTKEYBOARDINPUT-Stil**](list-box-styles.md) als Reaktion auf eine [**WM \_ CHAR-Nachricht**](/windows/desktop/inputdev/wm-char) an den Besitzer gesendet.
 
@@ -42,7 +42,7 @@ WM_CHARTOITEM
 *wParam* 
 </dt> <dd>
 
-Das [**LOWORD gibt**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Zeichencode der Taste an, die der Benutzer gedrückt hat. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die aktuelle Position des Caretworts an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt den Zeichencode der Taste an, die der Benutzer gedrückt hat. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die aktuelle Position des Carets an.
 
 </dd> <dt>
 
@@ -55,15 +55,15 @@ Handle für das Listenfeld.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt die Aktion an, die die Anwendung als Reaktion auf die Nachricht ausgeführt hat. Der Rückgabewert -1 oder -2 gibt an, dass die Anwendung alle Aspekte der Elementauswahl verarbeitet hat und keine weitere Aktion durch das Listenfeld erfordert. Ein Rückgabewert von 0 oder höher gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass das Listenfeld die Standardaktion für die Tastatureingabe für das angegebene Element ausführen soll.
+Der Rückgabewert gibt die Aktion an, die die Anwendung als Antwort auf die Meldung ausgeführt hat. Der Rückgabewert -1 oder -2 gibt an, dass die Anwendung alle Aspekte der Elementauswahl behandelt hat und keine weitere Aktion durch das Listenfeld erfordert. Der Rückgabewert 0 oder höher gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass das Listenfeld die Standardaktion für die Tastatureingabe für das angegebene Element ausführen soll.
 
 ## <a name="remarks"></a>Hinweise
 
 Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) gibt -1 zurück.
 
-Nur vom Besitzer gezeichnete Listenfelder ohne [**LBS \_ HASSTRINGS-Format**](list-box-styles.md) können diese Meldung empfangen.
+Nur vom Besitzer gezeichnete Listenfelder, die nicht über den [**LBS \_ HASSTRINGS-Stil**](list-box-styles.md) verfügen, können diese Meldung empfangen.
 
-Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert in einen **BOOL-Wert** umkehren und den Wert direkt zurückgeben. Der von der [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) *\_ MSGRESULT-DWL-Wert* wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert in eine **BOOL-Datei** konvertieren und den Wert direkt zurückgeben. Der von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte *\_ DWL-MSGRESULT-Wert* wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,13 +71,13 @@ Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünsch
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
 | Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

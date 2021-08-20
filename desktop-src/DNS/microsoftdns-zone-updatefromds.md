@@ -1,11 +1,11 @@
 ---
 title: UpdateFromDS-Methode der MicrosoftDNS_Zone-Klasse
-description: Die UpdateFromDS-Methode erzwingt ein Update der Zone vom Verzeichnisdienst (Directory Service, DS).
+description: Die UpdateFromDS-Methode erzwingt eine Aktualisierung der Zone vom Verzeichnisdienst (DS).
 ms.assetid: 471f0754-1221-4d1d-8ffd-36c1ab54b7e5
 keywords:
-- DNS-Methode "UpdateFromDS"
-- Dns-, MicrosoftDNS_Zone-Klasse der UpdateFromDS-Methode
-- MicrosoftDNS_Zone-Klasse DNS, UpdateFromDS-Methode
+- UpdateFromDS-Methoden-DNS
+- UpdateFromDS-Methode DNS , MicrosoftDNS_Zone-Klasse
+- MicrosoftDNS_Zone DNS-Klasse, UpdateFromDS-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118957189"
 ---
 # <a name="updatefromds-method-of-the-microsoftdns_zone-class"></a>UpdateFromDS-Methode der MicrosoftDNS \_ Zone-Klasse
 
-Die **UpdateFromDS-Methode** erzwingt ein Update der Zone vom Verzeichnisdienst (Directory Service, DS).
+Die **UpdateFromDS-Methode** erzwingt eine Aktualisierung der Zone vom Verzeichnisdienst (DS).
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Um diese Methode erfolgreich auszuführen, muss ZoneType 0 (null) sein, und die Zone muss im DS gespeichert werden.
+Um diese Methode erfolgreich auszuführen, muss zoneType 0 (null) sein, und die Zone muss im DS gespeichert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,16 +56,16 @@ Um diese Methode erfolgreich auszuführen, muss ZoneType 0 (null) sein, und die 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
 | MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**\_MicrosoftDNS-Zone**](microsoftdns-zone.md)
+[**MicrosoftDNS-Zone \_**](microsoftdns-zone.md)
 </dt> <dt>
 
 [**AgeAllRecords-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-ageallrecords.md)

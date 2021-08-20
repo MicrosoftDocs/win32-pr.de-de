@@ -1,11 +1,11 @@
 ---
-title: Extern. navigatetaskpaneurl-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. navigatetaskpaneurl-Methode
+title: External.NavigateTaskPaneURL-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.NavigateTaskPaneURL-Methode
 ms.assetid: c3a888c0-6589-4d21-9d47-37372d9069f4
 keywords:
-- Navigatetaskpaneurl-Methode, Windows Media Player
-- Navigatetaskpaneurl-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, navigatetaskpaneurl-Methode
+- NavigateTaskPaneURL-Methode Windows Media Player
+- NavigateTaskPaneURL-Methode Windows Media Player , External-Klasse
+- Externe Klasse Windows Media Player , NavigateTaskPaneURL-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e70558c7616738f67d9dc1d6d29eca15e5c30d4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eebcf8d799452a9966355f644f00ac5c4aecc4c066374254e8e580431b756b92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649030"
 ---
-# <a name="externalnavigatetaskpaneurl-method"></a>Extern. navigatetaskpaneurl-Methode
+# <a name="externalnavigatetaskpaneurl-method"></a>External.NavigateTaskPaneURL-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **navigatetaskpaneurl** -Methode öffnet eine Webseite im angegebenen Aufgabenbereich und ändert den Fokus auf den angegebenen Bereich.
+Die **NavigateTaskPaneURL-Methode** öffnet eine Webseite im angegebenen Aufgabenbereich und ändert den Fokus in den angegebenen Bereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,24 +49,24 @@ External.NavigateTaskPaneURL(
 
 <dl> <dt>
 
-*btrekeyname* \[ in\]
+*bstrKeyName* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Schlüsselnamen für den Online Store enthält. (erforderlich)
+**Zeichenfolge,** die den Schlüsselnamen für den Onlineshop enthält. (erforderlich)
 
 </dd> <dt>
 
-*bstrautaskpane* \[ in\]
+*bstrTaskPane* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Aufgabenbereichs enthält, in dem die Webseite geöffnet wird. (erforderlich)
+**Zeichenfolge,** die den Namen des Aufgabenbereichs enthält, in dem die Webseite geöffnet wird. (erforderlich)
 
 </dd> <dt>
 
-*bstrinbiams* \[ in\]
+*bstrParams* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die die Abfrage Zeichenfolgen-Parameter enthält, die an die URL angefügt werden sollen, die vom **Navigate** -Element des servicinput (Optional)
+**Zeichenfolge,** die die Abfragezeichenfolgenparameter enthält, die an die URL angefügt werden sollen, die vom **Navigate-Element** des ServiceInfo-Dokuments angegeben wird. (Optional)
 
 </dd> </dl>
 
@@ -74,33 +74,33 @@ Eine **Zeichenfolge** , die die Abfrage Zeichenfolgen-Parameter enthält, die an
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie zu einem Bereich navigieren, den der Online Shop nicht unterstützt, kann sich der aktuelle Online Shop ändern.
+Das Navigieren zu einem Bereich, den Ihr Onlineshop nicht unterstützt, kann dazu führen, dass sich der aktuelle Onlineshop ändert.
 
-Der für *bstrinparameams* angegebene Wert ist nur gültig, wenn **navigatetaskpaneurl** von Webseiten aufgerufen wird, die vom Online Store bereitgestellt werden.
+Der für *bstrParams* angegebene Wert ist nur gültig, wenn **NavigateTaskPaneURL** von Webseiten aufgerufen wird, die vom Onlineshop bereitgestellt werden.
 
-In der folgenden Tabelle sind gültige Werte für *bstrautaskpane* und der zugehörige Aufgabenbereich für jeden aufgeführt.
+In der folgenden Tabelle sind die gültigen Werte für *bstrTaskPane* und der zugehörige Aufgabenbereich für jeden aufgeführt.
 
 
 
 | Wert            | Aufgabenbereich                      |
 |------------------|--------------------------------|
-| **ServiceTask1** | Der erste Aufgabenbereich für den Online Shop.  |
-| **ServiceTask2** | Zweiter Online Store-Aufgabenbereich. |
-| **ServiceTask3** | Dritter Aufgabenbereich für den Online Shop.  |
+| **ServiceTask1** | Erster Aufgabenbereich des Onlineshops.  |
+| **ServiceTask2** | Zweiter Aufgabenbereich des Onlineshops. |
+| **ServiceTask3** | Der dritte Aufgabenbereich des Onlineshops.  |
 
 
 
  
 
-Der Webseiten Code sollte beim Laden einen Wert für " [extern. selectedtaskpane](external-selectedtaskpane.md) " angeben, um sicherzustellen, dass die richtige Aufgabenbereichs Schaltfläche nach Abschluss der Navigation hervorgehoben wird.
+Ihr Webseitencode sollte beim Laden einen Wert für [External.SelectedTaskPane](external-selectedtaskpane.md) angeben, um sicherzustellen, dass die richtige Aufgabenbereichsschaltfläche nach Abschluss der Navigation hervorgehoben ist.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Beispielcode zeigt, wie **navigatetaskpaneurl** die URL der Webseite erstellt, die für **ServiceTask1** angezeigt werden soll.
+Der folgende Beispielcode zeigt, wie **NavigateTaskPaneURL** die URL der Webseite erstellt, die für **ServiceTask1** angezeigt werden soll.
 
-Beispiel für das **Navigate** -Element:
+Beispiel für das **Navigate-Element:**
 
 
 ```XML
@@ -111,7 +111,7 @@ Beispiel für das **Navigate** -Element:
 
 
 
-Beispiel für einen aufzurufenden Befehl der **navigatetaskpaneurl** -Methode:
+Beispielaufruf der **NavigateTaskPaneURL-Methode:**
 
 
 ```XML
@@ -120,7 +120,7 @@ external.NavigateTaskPaneURL("Proseware", "ServiceTask1", "Pane=Store");
 
 
 
-Beispiel für eine resultierende URL, die für die in **ServiceTask1** angezeigte Webseite verwendet wird:
+Beispiel für die resultierende URL, die für die Webseite verwendet wird, die in **ServiceTask1** angezeigt wird:
 
 
 ```XML
@@ -144,10 +144,10 @@ https://www.proseware.com/online store/html/navigate.asp?Pane=Store
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 2-Online Speicher**](external-object-for-type-2-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 2**](external-object-for-type-2-online-stores.md)
 </dt> <dt>
 
-[**Extern. selectedtaskpane**](external-selectedtaskpane.md)
+[**External.SelectedTaskPane**](external-selectedtaskpane.md)
 </dt> </dl>
 
  

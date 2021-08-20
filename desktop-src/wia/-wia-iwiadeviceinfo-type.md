@@ -1,7 +1,7 @@
 ---
-description: Ruft den Typ des Hardware Geräts für die Windows-Abbild Beschaffung (WIA) ab.
+description: Ruft den Typ des WIA-Hardwaregeräts (Windows Image Acquisition) ab.
 ms.assetid: 5f10bcd1-03a0-4cd9-8886-e1f957312c3b
-title: DeviceInfo. Type-Eigenschaft
+title: DeviceInfo.Type-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 89a322890f035a1865c01be7c4bfb0bbab812fa7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 841ba87b71f79d1f9dfbf85053d914315f89f592ec16a50bd9f6baf061b989a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118035501"
 ---
-# <a name="deviceinfotype-property"></a>DeviceInfo. Type-Eigenschaft
+# <a name="deviceinfotype-property"></a>DeviceInfo.Type-Eigenschaft
 
-Ruft den Typ des Hardware Geräts für die Windows-Abbild Beschaffung (WIA) ab. Dabei sind folgende Werte möglich:
+Ruft den Typ des WIA-Hardwaregeräts (Windows Image Acquisition) ab. Mögliche Werte:
 
--   Digitalcamera
+-   DigitalCamera
 -   Scanner
--   Streamingvideo
+-   StreamingVideo
 -   Standard
 
 Diese Eigenschaft ist schreibgeschützt.
@@ -50,9 +50,9 @@ Zeichenfolge, die das Gerät empfängt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

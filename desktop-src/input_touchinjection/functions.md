@@ -1,6 +1,6 @@
 ---
-title: Funktionen (Berührungs Injektion)
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Funktionen zur Einschleusung von einschleusen.
+title: Funktionen (Touch injection)
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Touch Injection-Funktionen.
 ms.assetid: 8C2DF633-EACB-4B99-91D9-BCB7BE518A2E
 keywords:
 - Benutzereingriff
@@ -9,24 +9,24 @@ keywords:
 - Toucheingabe
 ms.topic: article
 ms.date: 02/06/2020
-ms.openlocfilehash: d0b094c27f72d551d9bb7823521a5391a45120bc
-ms.sourcegitcommit: 4570ac533e129ff88b23f2c2b69e0140ead3a4a4
+ms.openlocfilehash: e2ed92fc950d601cde863e96bc33577963d4df018140bbfcd13fed009d7003b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "106372525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611730"
 ---
-# <a name="touch-injection-functions"></a>Funktionen für die Berührungs Injektion
+# <a name="touch-injection-functions"></a>Funktionen für die Toucheinschleusung
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Funktionen zur [Einschleusung von einschleusen](touch-injection-portal.md) .
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Touch Injection-Funktionen.](touch-injection-portal.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |---|---|
-| [**Initializetouchinjection**](/windows/win32/api/winuser/nf-winuser-initializetouchinjection)<br/> | Konfiguriert den Finger einschleusungs-Kontext für die aufrufenden Anwendung und initialisiert die maximale Anzahl von gleichzeitigen Kontakten, die von der app eingefügt werden können.<br/> |
-| [**Injettouchinput**](/windows/win32/api/winuser/nf-winuser-injecttouchinput)<br/>                 | Simuliert die Berührungs Eingaben.<br/> |
+| [**InitializeTouchInjection**](/windows/win32/api/winuser/nf-winuser-initializetouchinjection)<br/> | Konfiguriert den Kontext der Toucheinschleusung für die aufrufende Anwendung und initialisiert die maximale Anzahl gleichzeitiger Kontakte, die die App einfügen kann.<br/> |
+| [**InjectTouchInput**](/windows/win32/api/winuser/nf-winuser-injecttouchinput)<br/>                 | Simuliert Toucheingaben.<br/> |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Touchscreen-Referenz](touch-injection-reference.md)
+[Referenz zur Toucheinschleusung](touch-injection-reference.md)

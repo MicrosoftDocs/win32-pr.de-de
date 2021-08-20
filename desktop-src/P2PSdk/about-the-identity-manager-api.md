@@ -1,27 +1,27 @@
 ---
-description: Die Peer Identity Manager-API ermöglicht es Ihnen, Peer Identitäten in einer Peer Anwendung zu erstellen, aufzulisten und zu bearbeiten.
+description: Mit der Peer Identity Manager-API können Sie Peeridentitäten in einer Peeranwendung erstellen, aufzählen und bearbeiten.
 ms.assetid: c1b2a587-71c7-4623-a318-4624dad7feba
 title: Informationen zu Identity Manager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfe66e21bf6c131006ed98c7f5f211c316464ebe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d062f7324bb949c657b7687b533058cb9e74d3102eea1e484284453d3ff7f25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579920"
 ---
 # <a name="about-identity-manager"></a>Informationen zu Identity Manager
 
-Die Peer Identity Manager-API ermöglicht es Ihnen, Peer Identitäten in einer Peer Anwendung zu erstellen, aufzulisten und zu bearbeiten. Sie können die mit dieser API erstellten Peer Identitäten als Eingabe für die Peer Gruppierung und die PNRP-Namespace Anbieter-APIs (Peer Name Resolution Protocol) verwenden.
+Mit der Peer Identity Manager-API können Sie Peeridentitäten in einer Peeranwendung erstellen, aufzählen und bearbeiten. Sie können die mit dieser API erstellten Peeridentitäten als Eingabe für die Namespaceanbieter-APIs Peer Grouping and Peer Name Resolution Protocol (PNRP) verwenden.
 
 ## <a name="peer-identity-manager-best-practices"></a>Bewährte Methoden für Peer Identity Manager
 
-Jeder Benutzer sollte über einige Peer Identitäten verfügen, die für die Peer Aktivitäten verwendet werden können. Beispielsweise kann ein Benutzer über zwei Peer Identitäten für Arbeit und Freizeit verfügen.
+Jeder Benutzer sollte über einige Peeridentitäten verfügen, die er für die Peeraktivitäten verwenden kann. Beispielsweise kann ein Benutzer über zwei Peeridentitäten für Arbeit und Arbeit verfügen.
 
-Eine gut entworfene Peer Anwendung ermöglicht es Benutzern, eine zu verwendende Peer Identität auszuwählen. Ein Benutzer kann eine neue Peer Identität erstellen, wenn keine der vorhandenen Peer Identitäten für die Verwendung mit einer Anwendung geeignet ist.
+Mit einer gut entworfenen Peeranwendung kann ein Benutzer eine Peeridentität auswählen, die verwendet werden soll. Ein Benutzer kann eine neue Peeridentität erstellen, wenn keine der vorhandenen Peeridentitäten für die Verwendung mit einer Anwendung geeignet ist.
 
-Eine gut entworfene Peer Anwendung steuert außerdem die Anzahl der von ihr erstellten Identitäten. Wenn eine Anwendung eine temporäre Peer Identität erstellt, muss die Anwendung die Peer Identität löschen, wenn die Identität nicht benötigt wird. Wenn eine Anwendung diese Wartung nicht durchführt, kann der Peer Identity Manager möglicherweise keine Peer Identitäten erstellen, bis einige Peer Identitäten entfernt wurden.
+Eine gut entworfene Peeranwendung steuert auch die Anzahl von Identitäten, die sie erstellt. Wenn eine Anwendung eine temporäre Peeridentität erstellt, muss die Anwendung die Peeridentität löschen, wenn die Identität nicht benötigt wird. Wenn eine Anwendung diese Wartung nicht übernimmt, kann der Peeridentitäts-Manager möglicherweise erst Peeridentitäten erstellen, wenn einige Peeridentitäten entfernt wurden.
 
  
 

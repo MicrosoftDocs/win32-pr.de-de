@@ -1,9 +1,9 @@
 ---
 title: Färben von Formen
-description: In diesem Artikel werden Färbungsformen in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
+description: In diesem Artikel wird das Färben von Formen in VML beschrieben, ein Feature, das ab Version Windows Internet Explorer 9 veraltet ist.
 ms.assetid: f528f0c7-1351-4bca-b309-67511431b711
 keywords:
-- Web-Workshop, Färben von Formen
+- Web-Workshop,Färben von Formen
 - Entwerfen von Webseiten, Färben von Formen
 - Vector Markup Language (VML), färbende Formen
 - VML (Vector Markup Language),färbende Formen
@@ -20,16 +20,16 @@ keywords:
 - RGB-Triplets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c203debd01d4234ae58900a023944511f9fc73c1
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f8edd8b067f1e3648d2b69f473c02c59392a10b5716afea74b8f7b0c9d093989
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057046"
 ---
 # <a name="coloring-shapes"></a>Färben von Formen
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
 > Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
@@ -80,7 +80,7 @@ fillcolor="#FDF9BA" strokecolor="blue"/>
 
 
 
-Wenn rgb im Hexadezimal-Format ein Muster wie XXYYZZ auftauen kann, können Sie es in XYZ abkürzen. Beispielsweise kann \# "66FF99" als \# "6F9" geschrieben werden.
+Wenn rgb im Hexadezimal-Format ein Muster wie XXYYZZ auftauen kann, können Sie es zu XYZ abkürzen. Beispielsweise kann \# "66FF99" als \# "6F9" geschrieben werden.
 
 [![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 

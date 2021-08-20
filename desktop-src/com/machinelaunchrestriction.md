@@ -1,41 +1,41 @@
 ---
 title: MachineLaunchRestriction
-description: Legt die Computer weite Einschränkungs Richtlinie für das Starten und Aktivieren von Komponenten fest.
+description: Legt die computerweite Einschränkungsrichtlinie für den Komponentenstart und die Aktivierung fest.
 ms.assetid: 274e3d08-1f38-4179-b7e7-b218d6e184ee
 keywords:
-- Machinelauncheinschränkungs-Registrierungs Wert com
+- MachineLaunchRestriction-Registrierungswert COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14dfcfe5535871c6b5b0fe310c94b920c522f05a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4d5cd235e2dd81e596448f25adfd72ad0b16c13d2da3860eb56fb95f93ef53cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048058"
 ---
 # <a name="machinelaunchrestriction"></a>MachineLaunchRestriction
 
-Legt die Computer weite Einschränkungs Richtlinie für das Starten und Aktivieren von Komponenten fest.
+Legt die computerweite Einschränkungsrichtlinie für den Komponentenstart und die Aktivierung fest.
 
 > [!Caution]  
-> Wenn Sie diesen Wert ändern, wirkt sich dies auf alle com-Server Anwendungen aus und kann die ordnungsgemäße Ausführung verhindern. Wenn es com-Server Anwendungen gibt, die Einschränkungen aufweisen, die weniger streng sind als die Computer weiten Einschränkungen, können diese Anwendungen durch eine Reduzierung der Computer weiten Einschränkungen für unerwünschte Zugriffe zugänglich gemacht werden. Wenn Sie dagegen die Computer weiten Einschränkungen erhöhen, können einige com-Server Anwendungen nicht mehr durch das Aufrufen von Anwendungen aufgerufen werden.
+> Das Ändern dieses Werts wirkt sich auf alle COM-Serveranwendungen aus und verhindert möglicherweise, dass sie ordnungsgemäß funktionieren. Wenn ES COM-Serveranwendungen gibt, die weniger strenge Einschränkungen als die computerweiten Einschränkungen aufweisen, kann die Reduzierung der computerweiten Einschränkungen diese Anwendungen möglicherweise für unerwünschten Zugriff verfügbar machen. Wenn Sie dagegen die computerweiten Einschränkungen erhöhen, kann auf einige COM-Serveranwendungen möglicherweise nicht mehr durch Aufrufen von Anwendungen zugegriffen werden.
 
- 
+ 
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole
-   MachineLaunchRestriction = SECURITY_DESCRIPTOR
+   MachineLaunchRestriction = SECURITY_DESCRIPTOR
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg- \_ Binärwert** .
+Dies ist ein **REG \_ BINARY-Wert.**
 
-Prinzipale, die hier nicht über Berechtigungen verfügen, können diese auch dann nicht abrufen, wenn die Berechtigungen durch den Registrierungs Wert [DefaultAccessPermission](defaultaccesspermission.md) oder durch die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) -Funktion erteilt werden.
+Prinzipale, denen hier keine Berechtigungen erteilt wurden, können sie auch dann nicht abrufen, wenn die Berechtigungen durch den [Registrierungswert DefaultAccessPermission](defaultaccesspermission.md) oder die [**CoInitializeSecurity-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) gewährt werden.
 
-Standardmäßig können Administratoren lokale und Remote Start-und Aktivierungs Berechtigungen erhalten, und Mitglieder der Gruppe Jeder können lokale Aktivierungs-und Start Berechtigungen erhalten.
+Standardmäßig können Administratoren lokale und Remotestart- und Aktivierungsberechtigungen erhalten, und Mitglieder der Gruppe Jeder können lokale Aktivierungs- und Startberechtigungen erhalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,9 +44,9 @@ Standardmäßig können Administratoren lokale und Remote Start-und Aktivierungs
 [Festlegen der Sicherheit für COM-Anwendungen](setting-security-for-com-applications.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

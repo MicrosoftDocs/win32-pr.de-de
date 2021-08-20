@@ -1,5 +1,5 @@
 ---
-title: Anbieterregistrierungsinformationen
+title: Registrierungsinformationen des Anbieters
 description: In diesem Thema wird gezeigt, welche Schlüssel und Werte beim Hinzufügen eines ADSI-Anbieters festgelegt werden müssen.
 ms.assetid: 87293b63-03ad-4be9-b327-313fdebac611
 ms.tgt_platform: multiple
@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117838866"
 ---
-# <a name="provider-registry-information"></a>Anbieterregistrierungsinformationen
+# <a name="provider-registry-information"></a>Registrierungsinformationen des Anbieters
 
 Der Anbieter wird bei ADSI mit den folgenden Schlüsseln und Werten registriert:
 
@@ -25,7 +25,7 @@ HKEY_LOCAL_MACHINE
                provider = <provider namespace>
 ```
 
-Der Anbieter wird bei Windows mit den folgenden Schlüsseln und Werten registriert:
+Der Anbieter ist bei Windows mit den folgenden Schlüsseln und Werten registriert:
 
 ```
 HKEY_CLASSES_ROOT
@@ -47,7 +47,7 @@ HKEY_CLASSES_ROOT
          Version = <provider version number>
 ```
 
-Der Anbieternamespace wird bei Windows mit den folgenden Schlüsseln und Werten registriert:
+Der Anbieternamespace wird mit Windows folgenden Schlüsseln und Werten registriert:
 
 ```
 HKEY_CLASSES_ROOT
@@ -69,9 +69,9 @@ HKEY_CLASSES_ROOT
          Version = <provider namespace version number>
 ```
 
-In den vorherigen Absätzen ist der *Anbieter* der Bezeichner des Objekts der obersten Ebene des Anbieters. Der *Anbieternamespace* ist der Bezeichner des Objekts, das den Namespace des Anbieters implementiert.
+In den vorherigen Absätzen ist *der Anbieter* der Bezeichner des Objekts der obersten Ebene des Anbieters. Der *Anbieternamespace* ist der Bezeichner des Objekts, das den Namespace des Anbieters implementiert.
 
-Ein bestimmtes Beispiel finden Sie unter [Installieren der Beispielanbieterkomponente](installing-the-example-provider-component.md).
+Ein spezifisches Beispiel finden Sie unter [Installieren der Beispielanbieterkomponente](installing-the-example-provider-component.md).
 
  
 

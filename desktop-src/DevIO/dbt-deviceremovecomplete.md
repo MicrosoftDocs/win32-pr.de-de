@@ -1,21 +1,21 @@
 ---
-description: Das System überträgt das DBT \_ deviceremovecomplete-Geräte Ereignis, wenn ein Gerät oder ein Teil des Mediums physisch entfernt wurde.
+description: Das System überträgt das DBT \_ DEVICEREMOVECOMPLETE-Geräteereignis, wenn ein Gerät oder ein Medienelement physisch entfernt wurde.
 ms.assetid: e25d35b9-f8f1-4850-996c-e1cb393cca66
-title: DBT_DEVICEREMOVECOMPLETE-Ereignis (DBT. h)
+title: DBT_DEVICEREMOVECOMPLETE -Ereignis (Dbt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16c899d8cee4a0be34829ba0a8edbaf27be71f6c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e5998742d823d710bfb91cd10579a3fb1ec65bec42b615fc7fdac3ac35545b24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539190"
 ---
-# <a name="dbt_deviceremovecomplete-event"></a>DBT \_ deviceremovecomplete-Ereignis
+# <a name="dbt_deviceremovecomplete-event"></a>DBT \_ DEVICEREMOVECOMPLETE-Ereignis
 
-Das System überträgt das DBT \_ deviceremovecomplete-Geräte Ereignis, wenn ein Gerät oder ein Teil des Mediums physisch entfernt wurde.
+Das System überträgt das DBT \_ DEVICEREMOVECOMPLETE-Geräteereignis, wenn ein Gerät oder ein Medienelement physisch entfernt wurde.
 
-Zum übertragen dieses Geräte Ereignisses verwendet das System die [**WM \_ devicechange**](wm-devicechange.md) -Nachricht, wobei *wParam* auf DBT \_ deviceremovecomplete und *LPARAM* festgelegt ist, wie im folgenden beschrieben.
+Zum Übertragen dieses Geräteereignisses verwendet das System die [**WM \_ DEVICECHANGE-Nachricht,**](wm-devicechange.md) wobei *wParam* wie folgt auf DBT \_ DEVICEREMOVECOMPLETE und *lParam* festgelegt ist.
 
 
 ```C++
@@ -33,47 +33,47 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Das Fensterhandle
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der [**WM- \_ devicechange**](wm-devicechange.md) -Nachrichten Bezeichner.
+Der [**WM \_ DEVICECHANGE-Nachrichtenbezeichner.**](wm-devicechange.md)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Auf DBT \_ deviceremovecomplete festgelegt
+Auf DBT \_ DEVICEREMOVECOMPLETE festlegen
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die das entfernte Gerät identifiziert. Die Struktur besteht aus einem Ereignis unabhängigen Header, gefolgt von Ereignis abhängigen Membern, die das Gerät beschreiben. Um diese Struktur zu verwenden, behandeln Sie die Struktur als Entwicklungs [**\_ Broadcast- \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr) -Struktur, und überprüfen Sie dann den zugehörigen **dbch \_ den DeviceType "** -Member, um den Gerätetyp zu ermitteln.
+Ein Zeiger auf eine Struktur, die das entfernte Gerät identifiziert. Die Struktur besteht aus einem ereignisunabhängigen Header, gefolgt von ereignisabhängigen Membern, die das Gerät beschreiben. Um diese Struktur zu verwenden, behandeln Sie die Struktur als [**DEV \_ BROADCAST \_ HDR-Struktur,**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr) und überprüfen Sie dann den **\_ dbch-Gerätetypmember,** um den Gerätetyp zu bestimmen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das System sendet möglicherweise eine DBT \_ deviceremovecomplete-Nachricht, ohne entsprechende [DBT \_ DeviceQueryRemove](dbt-devicequeryremove.md) -und [DBT \_ deviceremovepend](dbt-deviceremovepending.md) -Nachrichten zu senden. In solchen Fällen müssen die Anwendungen und Treiber nach dem Verlust des Geräts so optimal wie möglich wieder hergestellt werden.
+Das System kann eine DBT \_ DEVICEREMOVECOMPLETE-Nachricht senden, ohne entsprechende [DBT \_ DEVICEQUERYREMOVE-](dbt-devicequeryremove.md) und [DBT \_ DEVICEREMOVEPENDING-Nachrichten](dbt-deviceremovepending.md) zu senden. In solchen Fällen müssen die Anwendungen und Treiber nach möglichkeit nach dem Verlust des Geräts wiederhergestellt werden.
 
-Wenn Medien entfernt werden, ist der Typ des eintreffenden Geräts ein Volume (der **dbch \_ den DeviceType "** -Member ist DBT \_ \_ devypvolume), und die Änderung wirkt sich auf das Medium aus (der **dbcv- \_ Flags** -Member ist dbtf- \_ Medien).
+Wenn Medien entfernt werden, ist der Typ des eingehenden Geräts ein Volume (der **\_ dbch-Gerätetypmember** ist DBT \_ DEVTYP \_ VOLUME), und die Änderung wirkt sich auf das Medium aus (der **dbcv \_ flags-Member** ist DBTF \_ MEDIA).
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel finden Sie unter [Erkennen von Medien Einfügevorgängen oder entfernen](detecting-media-insertion-or-removal.md) oder [Verarbeiten einer Anforderung zum Entfernen eines Geräts](processing-a-request-to-remove-a-device.md).
+Ein Beispiel finden Sie unter [Detecting Media Insertion or Removal or](detecting-media-insertion-or-removal.md) Processing a Request to Remove a [Device](processing-a-request-to-remove-a-device.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Ein Beispiel finden Sie unter [Erkennen von Medien Einfügevorgängen oder entfe
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>DBT. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Dbt.h</dt> </dl> |
 
 
 
@@ -91,16 +91,16 @@ Ein Beispiel finden Sie unter [Erkennen von Medien Einfügevorgängen oder entfe
 
 <dl> <dt>
 
-[Geräte Ereignisse](device-events.md)
+[Geräteereignisse](device-events.md)
 </dt> <dt>
 
-[Geräte Verwaltungs Ereignisse](device-management-events.md)
+[Geräteverwaltung-Ereignisse](device-management-events.md)
 </dt> <dt>
 
-[**Entwickler- \_ Broadcast \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)
+[**DEV \_ BROADCAST \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)
 </dt> <dt>
 
-[**WM- \_ devicechange**](wm-devicechange.md)
+[**WM \_ DEVICECHANGE**](wm-devicechange.md)
 </dt> </dl>
 
  

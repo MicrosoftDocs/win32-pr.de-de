@@ -1,5 +1,5 @@
 ---
-description: 'IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.'
+description: 'IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.'
 ms.assetid: 84135D6F-8232-4CE5-AD38-D18823F0E174
 title: IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "118955949"
 ---
 # <a name="ifeedbackhubappinfogetinstalledlegacyapps-method"></a>IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,10 +38,10 @@ virtual void GetInstalledLegacyApps(
 
 <dl> <dt>
 
-*result* \[ out, optional\]
+*Ergebnis* \[ out, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

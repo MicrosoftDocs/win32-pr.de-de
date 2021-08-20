@@ -1,7 +1,7 @@
 ---
-description: Die get \_ framesdroppedinrenderer-Methode ruft die Anzahl der Frames ab, die vom Renderer gelöscht wurden.
+description: Die get \_ FramesDroppedInRenderer-Methode ruft die Anzahl der vom Renderer gelöschten Frames ab.
 ms.assetid: d890f285-b3bb-426c-80f6-e273cf0cccbb
-title: CBaseVideoRenderer.get_FramesDroppedInRenderer-Methode (renbase. h)
+title: CBaseVideoRenderer.get_FramesDroppedInRenderer-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ef81678fce8d349c7c047b0453cc480d8673f8f8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 21bd2e9c2f9edb50ca3800c95b59ba19fd91674d5ef343cf35842380ce617978
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016758"
 ---
-# <a name="cbasevideorendererget_framesdroppedinrenderer-method"></a>Cbasevideorenderer. get \_ framesdroppedinrenderer-Methode
+# <a name="cbasevideorendererget_framesdroppedinrenderer-method"></a>CBaseVideoRenderer.get \_ FramesDroppedInRenderer-Methode
 
-Die- `get_FramesDroppedInRenderer` Methode ruft die Anzahl der Frames ab, die vom Renderer gelöscht wurden.
+Die `get_FramesDroppedInRenderer` -Methode ruft die Anzahl der vom Renderer gelöschten Frames ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_FramesDroppedInRenderer(
 
 <dl> <dt>
 
-*pcframesdrop* 
+*pcFramesDropped* 
 </dt> <dd>
 
 Zeiger auf die Anzahl der gelöschten Frames.
@@ -51,11 +51,11 @@ Zeiger auf die Anzahl der gelöschten Frames.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**iqualprop:: get \_ framesdroppedinrenderer**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-iqualprop-get_framesdroppedinrenderer) -Methode. Auf diese Weise Ruft die Eigenschaften Seite die Daten aus dem Scheduler ab. Frames können auch Upstream abgelegt werden, ohne dass der Renderer Sie sehen kann.
+Diese Memberfunktion implementiert die [**IQualProp::get \_ FramesDroppedInRenderer-Methode.**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-iqualprop-get_framesdroppedinrenderer) Auf diese Weise ruft die Eigenschaftenseite die Daten vom Planer ab. Frames können auch upstream abgelegt werden, ohne dass der Renderer sie überhaupt sehen kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**iqualprop:: get \_ framesdroppedinren
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**iqualprop:: get \_ framesdroppedinren
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

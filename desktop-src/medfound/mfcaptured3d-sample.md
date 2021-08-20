@@ -1,5 +1,5 @@
 ---
-description: Zeigt, wie Sie eine Vorschau von Videos von einer Videokamera anzeigen, indem Sie Direct3D zum Rendern des Videos verwenden.
+description: Zeigt, wie Sie eine Vorschau des Videos von einer Videokamera anzeigen, indem Sie Direct3D zum Rendern des Videos verwenden.
 ms.assetid: fe241201-f2b5-467c-9d6a-5fc147fa5e2a
 title: MFCaptureD3D-Beispiel
 ms.topic: article
@@ -13,14 +13,14 @@ ms.locfileid: "117874756"
 ---
 # <a name="mfcaptured3d-sample"></a>MFCaptureD3D-Beispiel
 
-Zeigt, wie Sie eine Vorschau von Videos von einer Videokamera anzeigen, indem Sie Direct3D zum Rendern des Videos verwenden.
+Zeigt, wie Sie eine Vorschau des Videos von einer Videokamera anzeigen, indem Sie Direct3D zum Rendern des Videos verwenden.
 
 ## <a name="apis-demonstrated"></a>Gezeigte APIs
 
 In diesem Beispiel werden die folgenden APIs veranschaulicht.
 
--   [**VERSIERTMediaSource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
--   [**VERERBUNGQuelleReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
+-   [**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
+-   [**SOURCEReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
 -   [**MFEnumDeviceSources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
 
 ## <a name="requirements"></a>Anforderungen
@@ -37,7 +37,7 @@ In diesem Beispiel werden die folgenden APIs veranschaulicht.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist im [GitHub-Repository Windows klassischen Beispielen verfügbar.](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/MFCaptureD3D)
+Dieses Beispiel ist im [github-Repository Windows klassischen Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/MFCaptureD3D)verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

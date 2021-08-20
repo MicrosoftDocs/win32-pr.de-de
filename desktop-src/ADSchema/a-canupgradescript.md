@@ -1,11 +1,11 @@
 ---
-title: "\"Can-Upgrade-Script\"-Attribut"
-description: Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch aktualisiert werden können, oder die ein Upgrade für dieses Anwendungspaket durchführen können.
+title: Can-Upgrade-Script-Attribut
+description: Dieses Attribut speichert die Liste der Anwendungspakete, die von aktualisiert werden können oder die dieses Anwendungspaket aktualisieren können.
 ms.assetid: 95dea9c7-dbbd-42fb-ab32-6b89490aa5d6
 ms.tgt_platform: multiple
 keywords:
-- Kann-Upgrade-Skript Attribut AD-Schema
-- AD-Schema des canupgradescript-Attributs
+- AD-Schema für Das Can-Upgrade-Script-Attribut
+- canUpgradeScript-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 305e5b90c45d124a8647dd5d3a0af9c4a2ca6c4f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c258e33a7b70b543bf98991291ed60b7d2ec274ac98a26ceeb2cda9fa7b27a6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022638"
 ---
-# <a name="can-upgrade-script-attribute"></a>"Can-Upgrade-Script"-Attribut
+# <a name="can-upgrade-script-attribute"></a>Can-Upgrade-Script-Attribut
 
-Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch aktualisiert werden können, oder die ein Upgrade für dieses Anwendungspaket durchführen können.
+Dieses Attribut speichert die Liste der Anwendungspakete, die von aktualisiert werden können oder die dieses Anwendungspaket aktualisieren können.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | "Can-Upgrade-Script"                          |
-| LDAP-Display-Name | canupgradescript                            |
+| CN                | Can-Upgrade-Script                          |
+| Ldap-Anzeigename | canUpgradeScript                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.815                      |
 | System-ID-GUID    | d9e18314-8939-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Mit diesem Attribut wird die Liste der Anwendungspakete gespeichert, die durch a
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | False                                                            |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Falsch                                                            |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 

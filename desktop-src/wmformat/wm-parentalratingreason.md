@@ -1,9 +1,9 @@
 ---
-title: WM/parametrialratingreason
-description: Das Attribut WM/parametrialratingreason enthält die Gründe für die dem Inhalt zugewiesene Eltern Bewertung.
+title: WM/ParentalRatingReason
+description: Das WM/ParentalRatingReason-Attribut enthält die Gründe für die dem Inhalt zugewiesene Elternbewertung.
 ms.assetid: ee786737-3e3a-41d0-8a18-edf46ac93496
 keywords:
-- WM/parametrialratingreason Windows Media-Format
+- WM/ParentalRatingReason-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cca966bf503c22b8cb70486d32a31fcfe6e4257
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 485227af771a18ab2614fd1d1bb7e8fc6a25477756fcf9f7106d3cb7036da61c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590690"
 ---
-# <a name="wmparentalratingreason"></a>WM/parametrialratingreason
+# <a name="wmparentalratingreason"></a>WM/ParentalRatingReason
 
-Das Attribut **WM/parametrialratingreason** enthält die Gründe für die dem Inhalt zugewiesene Eltern Bewertung.
+Das **WM/ParentalRatingReason-Attribut** enthält die Gründe für die dem Inhalt zugewiesene Elternbewertung.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmpartalratingreason
+g \_ wszWMParentalRatingReason
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast Fernsehen und andere Videoinhalte verwendet, denen eine Eltern Bewertung zugewiesen wird.
+Dieses Attribut wird für Fernsehsendungen und andere Videoinhalte verwendet, denen eine Jugendbewertung zugewiesen ist.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -42,9 +42,9 @@ Dieses Attribut wird für Broadcast Fernsehen und andere Videoinhalte verwendet,
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

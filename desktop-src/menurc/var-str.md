@@ -1,9 +1,9 @@
 ---
 title: Var-Struktur
-description: Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält in der Regel eine Liste der Sprachen-und Codepage-bezeichnerpaare, die von der Version der Anwendung oder DLL unterstützt werden.
+description: Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält in der Regel eine Liste der Sprachen- und Codepage-Bezeichnerpaare, die von der Version der Anwendung oder DLL unterstützt werden.
 ms.assetid: edd2f2e5-100c-49c2-841f-f75e2909460a
 keywords:
-- Var Structure-Menüs und andere Ressourcen
+- Var structure Menus and Other Resources
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 151103366e85537368cacb7063f199f1f91bf023
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 48537009b56d2b37f4508871049463a65a12965c31658e932716832955503f42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119599580"
 ---
 # <a name="var-structure"></a>Var-Struktur
 
-Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält in der Regel eine Liste der Sprachen-und Codepage-bezeichnerpaare, die von der Version der Anwendung oder DLL unterstützt werden.
+Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält in der Regel eine Liste der Sprachen- und Codepage-Bezeichnerpaare, die von der Version der Anwendung oder DLL unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,58 +44,58 @@ typedef struct {
 
 <dl> <dt>
 
-**wlength**
+**wLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge der **var** -Struktur in Bytes.
+Die Länge der **Var-Struktur** in Bytes.
 
 </dd> <dt>
 
-**wvaluelength**
+**wValueLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge (in Byte) des **Wertmembers** .
+Die Länge des **Value-Members** in Bytes.
 
 </dd> <dt>
 
 **wType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Daten in der Versions Ressource. Dieser Member ist 1, wenn die Versions Ressource Textdaten enthält, und 0, wenn die Versions Ressource binäre Daten enthält.
+Der Datentyp in der Versionsressource. Dieser Member ist 1, wenn die Versionsressource Textdaten enthält, und 0, wenn die Versionsressource Binärdaten enthält.
 
 </dd> <dt>
 
-**szkey**
+**szKey**
 </dt> <dd>
 
 Typ: **WCHAR**
 
 </dd> <dd>
 
-Die Unicode-Zeichenfolge L "Translation".
+Die Unicode-Zeichenfolge L"Translation".
 
 </dd> <dt>
 
 **Auffüllen**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-So viele Null-Wörter, wie erforderlich, um den **Wertmember** an einer 32-Bit-Grenze auszurichten.
+So viele 0 Wörter wie nötig, um das **Value-Element** an einer 32-Bit-Grenze auszurichten.
 
 </dd> <dt>
 
@@ -106,15 +106,15 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Ein Array von einem oder mehreren Werten, die Sprach-und Codepage-bezeichnerpaare sind. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Ein Array von einem oder mehreren Werten, bei denen es sich um Sprach- und Codepagebezeichnerpaare handelt. Weitere Informationen finden Sie im abschnitt "Hinweise".
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist keine echte C-Sprachstruktur, da Sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versions Ressource erstellt und wird nicht in den Header Dateien angezeigt, die im Windows Software Development Kit (SDK) enthalten sind.
+Diese Struktur ist keine echte C-Sprachstruktur, da sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versionsressource erstellt und wird in keiner der Headerdateien angezeigt, die mit dem Windows Software Development Kit (SDK) ausgeliefert werden.
 
-Wenn Sie die **var** -Struktur verwenden, um die Sprachen aufzulisten, die Ihre Anwendung oder DLL unterstützt, anstatt mehrere Versions Ressourcen zu verwenden, verwenden Sie das **Wertmember** , um ein Array von **DWORD** -Werten anzugeben, die die von dieser Datei unterstützten Kombinationen von Sprache und Codepage angeben Das nieder wertige Wort jedes **DWORD** muss einen Microsoft-Sprachen Bezeichner enthalten, und das höchst wertige Wort muss die IBM-Code Page Nummer enthalten. Ein Wort mit hoher Reihenfolge oder niedriger Ordnung kann NULL sein, was darauf hinweist, dass die Datei sprach-oder Codepage-unabhängig ist. Wenn die **var** -Struktur weggelassen wird, wird die Datei als Sprache und Codepage unabhängig interpretiert.
+Wenn Sie die **Var-Struktur** verwenden, um die sprachen aufzulisten, die Ihre Anwendung oder DLL unterstützt, anstatt mehrere Versionsressourcen zu verwenden, verwenden Sie den **Value-Member,** um ein Array von **DWORD-Werten** zu enthalten, das die von dieser Datei unterstützten Sprach- und Codepagekombinationen angibt. Das Wort in niedriger Reihenfolge jedes **DWORD** muss einen Microsoft-Sprachbezeichner enthalten, und das Wort in hoher Reihenfolge muss die IBM-Codepagenummer enthalten. Ein Wort mit hoher oder niedriger Reihenfolge kann 0 (null) sein, was darauf hinweist, dass die Datei sprach- oder codepageunabhängig ist. Wenn die **Var-Struktur** ausgelassen wird, wird die Datei sowohl als sprach- als auch als codepageunabhängig interpretiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -131,22 +131,22 @@ Wenn Sie die **var** -Struktur verwenden, um die Sprachen aufzulisten, die Ihre 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Varfileingefo**](varfileinfo.md)
+[**VarFileInfo**](varfileinfo.md)
 </dt> <dt>
 
-[**Stringfileingefo**](stringfileinfo.md)
+[**StringFileInfo**](stringfileinfo.md)
 </dt> <dt>
 
-[**STRINGTABLE**](stringtable.md)
+[**Stringtable**](stringtable.md)
 </dt> <dt>
 
 [**VS \_ VERSIONINFO**](vs-versioninfo.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Versionsinformationen](version-information.md)

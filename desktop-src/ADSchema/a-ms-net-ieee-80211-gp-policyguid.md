@@ -1,10 +1,10 @@
 ---
-title: ms-net-IEEE-80211-GP-policyguid-Attribut
-description: Enthält eine GUID, die ein bestimmtes 802,11 Gruppenrichtlinie Objekt in der Domäne identifiziert.
+title: ms-net-ieee-80211-GP-PolicyGUID-Attribut
+description: Enthält eine GUID, die ein bestimmtes 802.11-Gruppenrichtlinie-Objekt in der Domäne identifiziert.
 ms.assetid: 8f7d27e3-d20c-4439-8362-16e2880ae9a1
 ms.tgt_platform: multiple
 keywords:
-- ms-net-IEEE-80211-GP-policyguid-Attribut AD-Schema
+- ms-net-ieee-80211-GP-PolicyGUID-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 506c1519d65913844125f42a1db5b898d8f06f17
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8e8944d577c4c2f1b0fca1bd386c61c03b0bc421a98914813ae9af57a121496f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583490"
 ---
-# <a name="ms-net-ieee-80211-gp-policyguid-attribute"></a>ms-net-IEEE-80211-GP-policyguid-Attribut
+# <a name="ms-net-ieee-80211-gp-policyguid-attribute"></a>ms-net-ieee-80211-GP-PolicyGUID-Attribut
 
-Enthält eine GUID, die ein bestimmtes 802,11 Gruppenrichtlinie Objekt in der Domäne identifiziert.
+Enthält eine GUID, die ein bestimmtes 802.11-Gruppenrichtlinie-Objekt in der Domäne identifiziert.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-net-IEEE-80211-GP-policyguid             |
-| LDAP-Display-Name | ms-net-IEEE-80211-GP-policyguid             |
+| CN                | ms-net-ieee-80211-GP-PolicyGUID             |
+| Ldap-Anzeigename | ms-net-ieee-80211-GP-PolicyGUID             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1951                     |
-| System-ID-GUID    | 35697062-1eaf-448b-ac1e-388e0be4bdee        |
+| System-ID-GUID    | 35697062-1eaf-448b-ac1e-388e0be4fdee        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,15 +54,15 @@ Enthält eine GUID, die ein bestimmtes 802,11 Gruppenrichtlinie Objekt in der Do
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Enthält eine GUID, die ein bestimmtes 802,11 Gruppenrichtlinie Objekt in der Do
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 
@@ -96,15 +96,15 @@ Enthält eine GUID, die ein bestimmtes 802,11 Gruppenrichtlinie Objekt in der Do
 | Link-ID                | \-                                                                                  |
 | MAPI-Id                | \-                                                                                  |
 | System-Only            | False                                                                               |
-| Ist-einwertig       | Richtig                                                                                |
+| Ist einwertig       | True                                                                                |
 | Ist indiziert             | False                                                                               |
 | Im globalen Katalog      | False                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                        |
 | Range-Lower            | \-                                                                                  |
 | Range-Upper            | \-                                                                                  |
 | Search-Flags           | 0x00000000                                                                          |
 | System-Flags           | 0x00000010                                                                          |
-| In verwendete Klassen        | [**ms-net-IEEE-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
+| In verwendete Klassen        | [**ms-net-ieee-80211-GroupPolicy**](c-ms-net-ieee-80211-grouppolicy.md)<br/> |
 
 
 

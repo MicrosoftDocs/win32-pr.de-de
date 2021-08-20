@@ -1,9 +1,9 @@
 ---
-title: Externes. onloginchange-Ereignis
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Externes. onloginchange-Ereignis
+title: External.OnLoginChange-Ereignis
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.OnLoginChange-Ereignis
 ms.assetid: 096794d5-977a-414f-8a98-b7998674c268
 keywords:
-- Externe. onloginchange-Ereignisfenster Media Player
+- External.OnLoginChange-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b7d54da86ffdde896a44580567b0cd381725d5e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a0697aff759309bc3a988e6f24a024d5c05bd8ec27dae85921ee09d3847f3dfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648740"
 ---
-# <a name="externalonloginchange-event"></a>Externes. onloginchange-Ereignis
+# <a name="externalonloginchange-event"></a>External.OnLoginChange-Ereignis
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **onloginchange** -Ereignis tritt auf, wenn der Anmeldestatus des Benutzers geändert wird oder wenn der Anmeldeversuch fehlschlägt.
+Das **OnLoginChange-Ereignis** tritt auf, wenn sich der Anmeldestatus des Benutzers ändert oder ein Anmeldeversuch fehlschlägt.
 
 ``` syntax
 window.external.OnLoginChange = FunctionName
@@ -36,17 +36,17 @@ window.external.OnLoginChange = FunctionName
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die den Namen der Funktion im Skript angibt, die von Windows Media Player bei Auftreten des Ereignisses aufgerufen wird.
+Dies ist eine Schreibeigenschaft, die den Namen der Funktion im Skript angibt, Windows Media Player beim Auftreten des Ereignisses aufruft.
 
 ## <a name="parameters"></a>Parameter
 
 Die Funktion, die dieses Ereignis behandelt, nimmt keine Parameter an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis tritt jedes Mal auf, wenn das Plug-in des Online Stores [iwmpcontentpartnercallback:: notify](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-notify)aufruft und dabei wmpcnloginstatechange im *Typparameter* übergibt. Manchmal führt das Plug-in diesen Rückruf aus, um Windows Media Player zu benachrichtigen, dass es eine Änderung des Anmelde Zustands des Benutzers gab. In anderen Zeiten führt das Plug-in diesen Versuch aus, den Player zu benachrichtigen, dass ein Anmeldeversuch fehlgeschlagen ist. Der *pContext* -Parameter der **Notify** -Methode gibt an, ob die Benachrichtigung für eine Änderung des Anmelde Zustands oder für einen fehlgeschlagenen Anmeldeversuch vorliegt.
+Dieses Ereignis tritt jedes Mal auf, wenn das Plug-In des Onlineshops [IWMPContentPartnerCallback::Notify](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-notify)aufruft und wmpcnLoginStateChange im Typparameter *übergibt.* Manchmal wird durch das Plug-In dieser Aufruf Windows Media Player, dass sich der Anmeldezustand des Benutzers geändert hat. In anderen Zeiten wird vom Plug-In dieser Aufruf unternommen, um den Player darüber zu benachrichtigen, dass ein Anmeldeversuch fehlgeschlagen ist. Der *pContext-Parameter* der **Notify-Methode** gibt an, ob die Benachrichtigung für eine Änderung des Anmeldestatus oder für einen fehlgeschlagenen Anmeldeversuch bestimmt ist.
 
-Da jeder Aufruf von `Notify(wmpcnLoginStateChange, ...)` bewirkt, dass Windows Media Player das **onloginchange** -Ereignis auslöst, wird der **onloginchange** -Ereignishandler manchmal als Ergebnis einer Änderung des Anmelde Zustands aufgerufen und manchmal als Ergebnis eines fehlgeschlagenen Anmelde Versuchs. Um den aktuellen Anmeldestatus des Benutzers zu bestimmen, muss der **onloginchange** -Ereignishandler [extern. userloggedin](external-userloggedin.md)aufrufen.
+Da jeder Aufruf von bewirkt, dass Windows Media Player das `Notify(wmpcnLoginStateChange, ...)` **OnLoginChange-Ereignis** ausruft, wird der **OnLoginChange-Ereignishandler** manchmal als Ergebnis einer Änderung des Anmeldezustands und manchmal als Ergebnis eines fehlgeschlagenen Anmeldeversuchs aufgerufen. Um den aktuellen Anmeldezustand des Benutzers zu bestimmen, muss der **OnLoginChange-Ereignishandler** [External.userLoggedIn aufrufen.](external-userloggedin.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,13 +63,13 @@ Da jeder Aufruf von `Notify(wmpcnLoginStateChange, ...)` bewirkt, dass Windows M
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern.-Anmelde Name**](external-attemptlogin.md)
+[**External.attemptLogin**](external-attemptlogin.md)
 </dt> <dt>
 
-[**Extern. userloggedin**](external-userloggedin.md)
+[**External.userLoggedIn**](external-userloggedin.md)
 </dt> </dl>
 
  

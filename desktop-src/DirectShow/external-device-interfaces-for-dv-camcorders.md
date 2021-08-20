@@ -4,12 +4,12 @@ ms.assetid: 001321c5-70c7-4baa-ba5a-1e424ca0d647
 title: Externe Geräteschnittstellen für DV-Anschlüsse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5e7106ec6e9b744da0d1f71958aeb895ec8df1a
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: bb80a89356a18d25f1fb3536cdc8f6e95be4e1947433d1c0437f1d80d47c8008
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119651520"
 ---
 # <a name="external-device-interfaces-for-dv-camcorders"></a>Externe Geräteschnittstellen für DV-Anschlüsse
 

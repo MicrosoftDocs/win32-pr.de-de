@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Zuordnungsklasse Win32 DriverForDevice verknüpft eine Druckerinstanz mit einer Druckertreiberinstanz.
+description: Die \_ WMI-Klasse win32 DriverForDevice association bezieht eine Druckerinstanz auf eine Druckertreiberinstanz.
 ms.assetid: 56ff74b2-31ba-4d8e-b389-9f962932aa03
 ms.tgt_platform: multiple
 title: Win32_DriverForDevice-Klasse
@@ -25,7 +25,7 @@ ms.locfileid: "119546320"
 ---
 # <a name="win32_driverfordevice-class"></a>Win32 \_ DriverForDevice-Klasse
 
-Die [WMI-Zuordnungsklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ DriverForDevice** verknüpft eine Druckerinstanz mit einer Druckertreiberinstanz.
+Die **WMI-Klasse \_ win32 DriverForDevice** association bezieht eine Druckerinstanz auf eine Druckertreiberinstanz. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -41,7 +41,7 @@ class Win32_DriverForDevice : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ DriverForDevice-Klasse** verfügt über folgende Typen von Membern:
+Die **Win32 \_ DriverForDevice-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -54,7 +54,7 @@ Die **Win32 \_ DriverForDevice-Klasse** verfügt über diese Eigenschaften.
 **Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **\_ Win32-Drucker**
+Datentyp: **Win32-Drucker \_**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -62,7 +62,7 @@ Zugriffstyp: Lesen/Schreiben
 
 Verweis auf die [**Win32-Druckerinstanz, \_**](win32-printer.md) die den Drucker darstellt.
 
-Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](cim-dependency.md)
 
 </dd> <dt>
 
@@ -77,13 +77,13 @@ Zugriffstyp: Schreibgeschützt
 
 Verweis auf die [**Win32 \_ PrinterDriver-Instanz,**](win32-printerdriver.md) die den Druckertreiber für den Drucker darstellt.
 
-Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](cim-dependency.md)
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ DriverForDevice-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **Win32 \_ DriverForDevice-Klasse** wird von der [**CIM-Abhängigkeit \_ abgeleitet.**](cim-dependency.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,11 +99,11 @@ Die **Win32 \_ DriverForDevice-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Computersystemhardwareklassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

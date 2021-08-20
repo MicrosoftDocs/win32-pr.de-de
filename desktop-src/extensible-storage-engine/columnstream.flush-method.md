@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. Flush-Methode.
-title: Columnstream. Flush-Methode
+description: Weitere Informationen finden Sie unter ColumnStream.Flush-Methode.
+title: ColumnStream.Flush-Methode
 TOCTitle: 'Flush method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.ColumnStream.Flush
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.flush(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ee686c2f7f1ed94474275bb5cdb23a8f3f0eff47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4652bcbe90e33737262cbc63914bda5467e27b2d04acaa786c676b4ecdc9fe79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042367"
 ---
-# <a name="columnstreamflush-method"></a>Columnstream. Flush-Methode
+# <a name="columnstreamflush-method"></a>ColumnStream.Flush-Methode
 
 Leeren Sie den Stream.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,10 +55,10 @@ public override void Flush()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Elemente](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

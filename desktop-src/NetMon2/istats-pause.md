@@ -1,7 +1,7 @@
 ---
-description: Mit der Pause-Methode wird die aktuelle Erfassung vorübergehend beendet.
+description: Die Pause-Methode beendet vorübergehend die aktuelle Erfassung.
 ms.assetid: 43176e9e-1502-484c-a8af-4e7bbf5f6474
-title: IStats::P ause-Methode (Netmon. h)
+title: IStats::P ause-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: d9e9f04ce3d25399866c711dad7a853f2c43c2ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d1bab0d66a081c175d997e093d7dd1ff2b0d1c9622ecff73e0b3b1473edc885
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119495210"
 ---
 # <a name="istatspause-method"></a>IStats::P ause-Methode
 
-Mit der **Pause** -Methode wird die aktuelle Erfassung vorübergehend beendet.
+Die **Pause-Methode** beendet vorübergehend die aktuelle Erfassung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,22 +48,22 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung \_ angehalten**</dt> </dl>  | Die Erfassung wurde bereits angehalten.<br/>                                                                                                    |
-| <dl> <dt>**nmerr wird \_ nicht \_ erfasst**</dt> </dl>   | Der NPP erfasst keine Daten. Ruft die [iStats:: Start](istats-start.md) -Methode auf, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>   | Der npp ist nicht mit dem Netzwerk verbunden. Wenden Sie die [iStats:: Connect](istats-connect.md) -Methode an, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ \_ nur Statistiken**</dt> </dl> | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [iStats:: Connect](istats-connect.md) -Methode.<br/>                                |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl>  | Die Erfassung ist bereits angehalten.<br/>                                                                                                    |
+| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl>   | Das NPP erfasst keine Daten. Rufen Sie die [IStats::Start-Methode](istats-start.md) auf, um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie die [IStats::Verbinden-Methode](istats-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ STATS \_ ONLY**</dt> </dl> | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IStats::Verbinden-Methode.](istats-connect.md)<br/>                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während die Erfassung angehalten wird, werden neue Frames erst aufgezeichnet, wenn ein Aufrufe der [iStats:: Resume](istats-resume.md) -Methode die Erfassung neu startet.
+Während die Erfassung angehalten wird, werden neue Frames erst erfasst, wenn die Erfassung durch einen Aufruf der [IStats::Resume-Methode](istats-resume.md) neu gestartet wird.
 
-Wenn Sie die **iStats::P ause** -Methode und die **iStats:: Resume** -Methode verwenden, um die Erfassung zu steuern, werden Netzwerkmonitor weiterhin [*Konversations Statistiken*](c.md) hinzufügen, sobald die Erfassung ausgeführt wird.
+Wenn Sie die Methoden **IStats::P ause** und **IStats::Resume** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor bei jeder Ausführung der Erfassung [*weiterhin Konversationsstatistiken*](c.md) hinzu.
 
-Zum Neustarten des Aufzeichnungs Aufrufes [iStats:: Resume](istats-resume.md). Um die Erfassung anzuhalten, nennen Sie [iStats:: Beendigung](istats-stop.md).
+So starten Sie den [Erfassungsaufruf IStats::Resume](istats-resume.md)neu. Rufen Sie [IStats::Stop](istats-stop.md)auf, um die Erfassung zu beenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Zum Neustarten des Aufzeichnungs Aufrufes [iStats:: Resume](istats-resume.md). U
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
@@ -85,16 +85,16 @@ Zum Neustarten des Aufzeichnungs Aufrufes [iStats:: Resume](istats-resume.md). U
 [IStats](istats.md)
 </dt> <dt>
 
-[IStats:: Connect](istats-connect.md)
+[IStats::Verbinden](istats-connect.md)
 </dt> <dt>
 
-[IStats:: Resume](istats-resume.md)
+[IStats::Resume](istats-resume.md)
 </dt> <dt>
 
-[IStats:: Start](istats-start.md)
+[IStats::Start](istats-start.md)
 </dt> <dt>
 
-[IStats:: Beendigung](istats-stop.md)
+[IStats::Stop](istats-stop.md)
 </dt> </dl>
 
  
