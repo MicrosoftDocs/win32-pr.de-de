@@ -1,9 +1,9 @@
 ---
-title: PGN_HOTITEMCHANGE Nachricht (Commctrl.h)
-description: Benachrichtigt das übergeordnete Fenster eines Pagersteuerelements, dass sich das (hervorgehobene) heiße Element geändert hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+title: PGN_HOTITEMCHANGE (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Pagersteuerelements, dass sich das heiße (hervorgehobene) Element geändert hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 0f59677c-0251-49f4-b909-6fac6d93f354
 keywords:
-- PGN_HOTITEMCHANGE Windows-Steuerelemente für Nachrichten
+- PGN_HOTITEMCHANGE message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117830134"
 ---
 # <a name="pgn_hotitemchange-message"></a>PGN \_ HOTITEMCHANGE-Nachricht
 
-Benachrichtigt das übergeordnete Fenster eines Pagersteuerelements, dass sich das (hervorgehobene) heiße Element geändert hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Benachrichtigt das übergeordnete Fenster eines Pagersteuerelements, dass sich das heiße (hervorgehobene) Element geändert hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -47,12 +47,12 @@ Zeiger auf eine [**NMPGHOTITEM-Struktur,**](/windows/win32/api/commctrl/ns-commc
 
 ## <a name="return-value"></a>Rückgabewert
 
-Geben Sie 0 (null) zurück, um das Element zu markieren, oder ungleich 0 (null), um hervorhebungen zu verhindern.
+Geben Sie 0 (null) zurück, um das Element oder einen Wert ungleich 0 (null) zu markieren, um eine Hervorhebung zu verhindern.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diesen Benachrichtigungscode verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
+> Um diesen Benachrichtigungscode verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -62,7 +62,7 @@ Geben Sie 0 (null) zurück, um das Element zu markieren, oder ungleich 0 (null),
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

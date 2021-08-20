@@ -1,5 +1,5 @@
 ---
-description: Die Autorisierungs-Manager-API stellt Schnittstellen bereit, die Auflistungen anderer Objekte darstellen. Beispielsweise stellt die IAzRoles-Schnittstelle eine Auflistung von IAzRole-Objekten dar.
+description: Die Autorisierungs-Manager-API stellt Schnittstellen bereit, die Sammlungen anderer Objekte darstellen. Beispielsweise stellt die IAzRoles-Schnittstelle eine Sammlung von IAzRole-Objekten dar.
 ms.assetid: dfc21263-dbb6-424c-9e1f-56bd4dda1314
 title: Sammlungen (Autorisierung)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117782695"
 ---
 # <a name="collections-authorization"></a>Sammlungen (Autorisierung)
 
-Die Autorisierungs-Manager-API stellt Schnittstellen bereit, die Auflistungen anderer Objekte darstellen. Beispielsweise stellt die [**IAzRoles-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazroles) eine Auflistung von [**IAzRole-Objekten**](/windows/desktop/api/Azroles/nn-azroles-iazrole) dar.
+Die Autorisierungs-Manager-API stellt Schnittstellen bereit, die Sammlungen anderer Objekte darstellen. Beispielsweise stellt die [**IAzRoles-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazroles) eine Sammlung von [**IAzRole-Objekten**](/windows/desktop/api/Azroles/nn-azroles-iazrole) dar.
 
 Die anderen Schnittstellen, die Sammlungen darstellen, sind [**IAzApplications,**](/windows/desktop/api/Azroles/nn-azroles-iazapplications) [**IAzApplicationGroups,**](/windows/desktop/api/Azroles/nn-azroles-iazapplicationgroups) [**IAzOperations,**](/windows/desktop/api/Azroles/nn-azroles-iazoperations) [**IAzScopes**](/windows/desktop/api/Azroles/nn-azroles-iazscopes)und [**IAzTasks.**](/windows/desktop/api/Azroles/nn-azroles-iaztasks) Jede dieser Schnittstellen stellt Eigenschaften bereit, die das Aufzählen von Objekten in einer Auflistung erleichtern.
 

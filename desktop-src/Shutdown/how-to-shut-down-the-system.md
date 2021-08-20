@@ -4,16 +4,16 @@ ms.assetid: bf8723aa-1c7f-4761-9034-d5a9447a4bc4
 title: Herunterfahren des Systems
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3880319e0ada6c82c6c6c12a7f3b5faf00415a93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb366a3a6159cd43cf1f88f050d01ea75d365035c2f55598f69e91e89fc81de0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117963621"
 ---
 # <a name="how-to-shut-down-the-system"></a>Herunterfahren des Systems
 
-Im folgenden Beispiel wird die [**ExitWindowsEx**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex) -Funktion verwendet, um das System herunterzufahren. Beim Herunterfahren werden die Datei Puffer auf den Datenträger geleert, und das System wird zu einer Bedingung, in der der Computer sicher ausgeschaltet werden kann. Die Anwendung muss zuerst die Berechtigung für das Herunterfahren des Namens "SE" aktivieren \_ \_ Weitere Informationen finden Sie unter [Berechtigungen](../secauthz/privileges.md).
+Im folgenden Beispiel wird die [**ExitWindowsEx-Funktion**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex) verwendet, um das System herunterzufahren. Beim Herunterfahren werden Dateipuffer auf den Datenträger geleert, und das System wird in eine Bedingung versetzt, in der es sicher ist, den Computer zu deaktivieren. Die Anwendung muss zuerst die berechtigung SE \_ SHUTDOWN \_ NAME aktivieren. Weitere Informationen finden Sie unter [Berechtigungen.](../secauthz/privileges.md)
 
 
 ```C++
@@ -64,13 +64,13 @@ BOOL MySystemShutdown()
 
 
 
-Der letzte Parameter im [**ExitWindowsEx**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex) -aufrufswert gibt an, dass das System für ein Planungs Update des Betriebssystems heruntergefahren wurde. Weitere Informationen finden Sie unter [Grund Codes](system-shutdown-reason-codes.md)für das Herunterfahren des Systems.
+Der letzte Parameter im Aufruf von [**ExitWindowsEx**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex) gibt an, dass das System für ein Planungsupdate des Betriebssystems heruntergefahren wurde. Weitere Informationen finden Sie unter [Ursachencodes für das Herunterfahren](system-shutdown-reason-codes.md)des Systems.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Wird heruntergefahren](shutting-down.md)
+[Herunterfahren](shutting-down.md)
 </dt> </dl>
 
  

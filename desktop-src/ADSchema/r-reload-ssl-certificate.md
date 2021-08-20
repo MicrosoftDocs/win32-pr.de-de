@@ -1,10 +1,10 @@
 ---
-title: Erneutes Laden-SSL-Zertifikat für erweiterte Rechte
-description: Erneutes Laden-SSL-Zertifikat für erweiterte Rechte
+title: Erweitertes Recht zum erneuten Laden von SSL-Zertifikaten
+description: Erweitertes Recht zum erneuten Laden von SSL-Zertifikaten
 ms.assetid: 0546b2a7-3ce1-4649-af8b-44674f62d040
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema zum erneuten Laden-SSL-Zertifikat für erweiterte Rechte
+- AD-Schema für erweiterte rechte Rechte erneut laden/SSL-Zertifikat erneut laden
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d103e8fdd55fd9c0589c09fa5a89a4abd43bfa3f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 06b1236c1b9a637f6bc31b2ad847a85674b79f751e6b02ef87bcdddf7f8cf646
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836095"
 ---
-# <a name="reload-ssl-certificate-extended-right"></a>Erneutes Laden-SSL-Zertifikat für erweiterte Rechte
+# <a name="reload-ssl-certificate-extended-right"></a>Erweitertes Recht zum erneuten Laden von SSL-Zertifikaten
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | Erneutes Laden/SSL-Zertifikat               |
-| Anzeigename | SSL/TLS-Zertifikat erneut laden           |
-| Rights-GUID  | 1a60ea8d-58a6-4b20bcdc-fb71eb8a9ff8 |
+| CN           | Erneutes Laden von SSL-Zertifikaten               |
+| Anzeigename | Erneutes Laden des SSL-/TLS-Zertifikats           |
+| Rechte-GUID  | 1a60ea8d-58a6-4b20-bcdc-fb71eb8a9ff8 |
 
 
 
@@ -45,7 +45,7 @@ ms.locfileid: "103859419"
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 76                                       |
+| Lokalisierungsanzeige-ID | 76                                       |
 
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "103859419"
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 76                                       |
+| Lokalisierungsanzeige-ID | 76                                       |
 
 
 
@@ -67,7 +67,7 @@ ms.locfileid: "103859419"
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 76                                       |
+| Lokalisierungsanzeige-ID | 76                                       |
 
 
 

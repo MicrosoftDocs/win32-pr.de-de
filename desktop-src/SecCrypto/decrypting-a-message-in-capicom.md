@@ -1,30 +1,30 @@
 ---
-description: Diese Unterroutine nimmt eine Kenn Wort Zeichenfolge zum Generieren eines Sitzungs Verschlüsselungsschlüssels und den Namen einer Datei an, aus der eine verschlüsselte Nachricht gelesen wird. Alle Parameter werden durch-Werte an die Unterroutine übergeben.
+description: Diese Unterroutine verwendet eine Kennwortzeichenfolge zum Generieren eines Sitzungsverschlüsselungsschlüssels und den Namen einer Datei, aus der eine verschlüsselte Nachricht gelesen wird. Alle Parameter werden durch Werte an die Unterroutine übergeben.
 ms.assetid: 70f23d93-2bca-419b-9de7-e52ce4fb1350
 title: Entschlüsseln einer Nachricht in CAPICOM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba984bad7d9289eaf89725e9598a4330f16b49ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 744878378fbe2791e66151e451029be8adde2435b451d540196a1082c4e005f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767758"
 ---
 # <a name="decrypting-a-message-in-capicom"></a>Entschlüsseln einer Nachricht in CAPICOM
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-Diese Unterroutine nimmt eine Kenn Wort Zeichenfolge zum Generieren eines Sitzungs Verschlüsselungsschlüssels und den Namen einer Datei an, aus der eine verschlüsselte Nachricht gelesen wird. Alle Parameter werden durch-Werte an die Unterroutine übergeben.
+Diese Unterroutine verwendet eine Kennwortzeichenfolge zum Generieren eines Sitzungsverschlüsselungsschlüssels und den Namen einer Datei, aus der eine verschlüsselte Nachricht gelesen wird. Alle Parameter werden durch Werte an die Unterroutine übergeben.
 
 > [!Note]  
-> CAPICOM unterstützt den PKCS \# 7-Inhaltstyp "verschlüsselteddata" nicht, sondern verwendet eine nicht dem Standard entsprechende ASN-Struktur für "verschlüsselteddata". Daher kann nur CAPICOM ein CAPICOM-Objekt "verschlüsselteddata" entschlüsseln.
+> CAPICOM unterstützt den PKCS 7 EncryptedData-Inhaltstyp nicht, verwendet jedoch eine nicht \# standardmäßige ASN-Struktur für EncryptedData. Daher kann nur CAPICOM ein CAPICOM EncryptedData-Objekt entschlüsseln.
 
  
 
-Wenn das Entschlüsseln fehlschlägt, wird der Wert **Err. Number** geprüft, um zu bestimmen, ob der Fehler durch die Verwendung eines Kennworts verursacht wurde, das nicht mit dem Kennwort für die Verschlüsselung der Nachricht identisch war. In diesem Fall wird der Fehler "Erstellungs ungültige \_ \_ Daten" zurückgegeben.
+Wenn bei der Entschlüsselung ein Fehler auftritt, wird der **Err.Number-Wert** überprüft, um zu ermitteln, ob der Fehler durch die Verwendung eines Kennworts verursacht wurde, das nicht mit dem Kennwort zum Verschlüsseln der Nachricht übereinstimmen konnte. In diesem Fall wird der Fehler NTE \_ BAD \_ DATA zurückgegeben.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei jedem CAPICOM-Fehler wird der negative Dezimalwert **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number finden** Sie unter Winerror.h.
 
 
 ```VB

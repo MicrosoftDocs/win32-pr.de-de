@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, bevor das iinkanalyzer-Objekt ein icontextnode-Objekt löscht.
+description: Tritt ein, bevor IInkAnalyzer ein IContextNode-Objekt löscht.
 ms.assetid: 9c89198e-cc64-4041-b7a3-457f94c4aeaf
-title: '_IAnalysisProxyEvents:: contextnodebug-Ereignis (iacom. h)'
+title: _IAnalysisProxyEvents::ContextNodeDeleting-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 26488c5657b6d2765534f82b6eacae774adcf561
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 0610aa6a68814e291b3d0da09669eb6834ed78de0bcfc88044668733e325b033
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106354290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117675566"
 ---
-# <a name="_ianalysisproxyeventscontextnodedeleting-event"></a>\_Ianalysisproxyevents:: contextnodebug-Ereignis
+# <a name="_ianalysisproxyeventscontextnodedeleting-event"></a>\_IAnalysisProxyEvents::ContextNodeDeleting-Ereignis
 
-Tritt auf, bevor das [**iinkanalyzer**](iinkanalyzer.md) -Objekt ein [**icontextnode**](icontextnode.md) -Objekt löscht.
+Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) ein [**IContextNode-Objekt**](icontextnode.md) löscht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,35 +40,35 @@ HRESULT ContextNodeDeleting(
 
 <dl> <dt>
 
-*pinkanalyzer* \[ in\]
+*pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Das [**iinkanalyzer**](iinkanalyzer.md) -Objekt, das das [**icontextnode**](icontextnode.md) -Objekt löscht.
+Das [**IInkAnalyzer-Objekt,**](iinkanalyzer.md) das das [**IContextNode-Objekt**](icontextnode.md) löscht.
 
 </dd> <dt>
 
-*pcontextnodebug* \[ in\]
+*pContextNodeToBeDeleted* \[ In\]
 </dt> <dd>
 
-Das [**icontextnode**](icontextnode.md) -Objekt, das gelöscht werden soll.
+Das zu löschende [**IContextNode-Objekt.**](icontextnode.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der ababstimmungs Phase der frei Hand Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einen [**icontextnode**](icontextnode.md)löscht.
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine Ink-Analysemethode auf, die einen [**IContextNode**](icontextnode.md)löscht.
 
-Bevor [**iinkanalyzer**](iinkanalyzer.md) einen [**icontextnode**](icontextnode.md)löscht, entfernt **iinkanalyzer** alle Striche aus dem Kontext Knoten und entfernt alle Verknüpfungen zu anderen Kontext Knoten. Vor dem Entfernen des Kontext Knotens kann **iinkanalyzer** die folgenden Ereignisse hervorrufen.
+Bevor [**IInkAnalyzer**](iinkanalyzer.md) einen [**IContextNode**](icontextnode.md)löscht, entfernt **IInkAnalyzer** alle Striche aus dem Kontextknoten und entfernt alle Links zu anderen Kontextknoten. Bevor der Kontextknoten entfernt wird, kann **IInkAnalyzer** die folgenden Ereignisse auslösen.
 
--   Das [**\_ ianalysisproxyevents:: strokereprodent**](-ianalysisproxyevents-strokereparented.md) -Ereignis, wenn es einen Strich aus dem [**icontextnode**](icontextnode.md)verschiebt.
--   Das [**\_ ianalysisproxyevents:: contextnodelinklösch**](-ianalysisproxyevents-contextnodelinkdeleting.md) -Ereignis, bevor ein [**icontextlink**](icontextlink.md) aus dem [**icontextnode**](icontextnode.md)entfernt wird.
--   Das **\_ ianalysisproxyevents:: contextnodelösch** -Ereignis, bevor ein übergeordneter Kontext Knoten entfernt wird, der keine untergeordneten Knoten mehr aufweist.
+-   Das [**\_ IAnalysisProxyEvents::StrokeReparented-Ereignis,**](-ianalysisproxyevents-strokereparented.md) wenn ein Strich aus dem [**IContextNode**](icontextnode.md)verschoben wird.
+-   Das [**\_ IAnalysisProxyEvents::ContextNodeLinkDeleting-Ereignis,**](-ianalysisproxyevents-contextnodelinkdeleting.md) bevor ein [**IContextLink**](icontextlink.md) aus dem [**IContextNode**](icontextnode.md)entfernt wird.
+-   Das **\_ IAnalysisProxyEvents::ContextNodeDeleting-Ereignis,** bevor es einen übergeordneten Kontextknoten entfernt, der nicht mehr über untergeordnete Knoten verfügt.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -87,22 +87,22 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

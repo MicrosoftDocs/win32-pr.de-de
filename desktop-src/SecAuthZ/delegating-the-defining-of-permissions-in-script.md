@@ -18,11 +18,11 @@ ms.locfileid: "117782064"
 ---
 # <a name="delegating-the-defining-of-permissions-in-script"></a>Delegieren der Definition von Berechtigungen im Skript
 
-Sie können die Verwaltung von Autorisierungsrichtlinienspeichern delegieren, die in Active Directory gespeichert sind. Die Verwaltung kann an Benutzer und Gruppen auf Store-, Anwendungs- oder Bereichsebene delegiert werden.
+Sie können die Verwaltung von Autorisierungsrichtlinienspeichern delegieren, die in Active Directory gespeichert sind. Die Verwaltung kann an Benutzer und Gruppen auf Speicher-, Anwendungs- oder Bereichsebene delegiert werden.
 
 Auf jeder Ebene gibt es eine Liste von Administratoren und Lesern. Administratoren eines Speichers, einer Anwendung oder eines Bereichs können den Richtlinienspeicher auf delegierter Ebene lesen und ändern. Leser können den Richtlinienspeicher auf delegierter Ebene lesen, aber den Speicher nicht ändern.
 
-Ein Benutzer oder eine Gruppe, der bzw. die entweder Ein Administrator oder Leser einer Anwendung ist, muss auch als delegierter Benutzer des Richtlinienspeichers hinzugefügt werden, der diese Anwendung enthält. Ebenso muss ein Benutzer oder eine Gruppe, der bzw. die ein Administrator oder Leser eines Bereichs ist, als delegierter Benutzer der Anwendung hinzugefügt werden, die diesen Bereich enthält.
+Ein Benutzer oder eine Gruppe, der bzw. die ein Administrator oder Leser einer Anwendung ist, muss auch als delegierter Benutzer des Richtlinienspeichers hinzugefügt werden, der diese Anwendung enthält. Ebenso muss ein Benutzer oder eine Gruppe, der Administrator oder Leser eines Bereichs ist, als delegierter Benutzer der Anwendung hinzugefügt werden, die diesen Bereich enthält.
 
 **So delegieren Sie die Verwaltung eines Bereichs**
 
@@ -31,13 +31,13 @@ Ein Benutzer oder eine Gruppe, der bzw. die entweder Ein Administrator oder Lese
 3.  Fügen Sie den Benutzer oder die Gruppe der Liste der Administratoren des Bereichs hinzu, indem Sie die [**AddPolicyAdministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazscope-addpolicyadministrator) des [**IAzScope-Objekts**](/windows/desktop/api/Azroles/nn-azroles-iazscope) aufrufen.
 
 > [!Note]  
-> XML-basierte Richtlinienspeicher unterstützen keine Delegierung auf einer beliebigen Ebene.
+> XML-basierte Richtlinienspeicher unterstützen delegierungen auf keiner Ebene.
 
  
 
 Wenn ein Bereich in einem Autorisierungsspeicher, der in Active Directory gespeichert ist, Aufgabendefinitionen enthält, die Autorisierungsregeln oder Rollendefinitionen enthalten, die Autorisierungsregeln enthalten, kann der Bereich nicht delegiert werden.
 
-Das folgende Beispiel zeigt, wie die Verwaltung einer Anwendung delegiert wird. Im Beispiel wird davon ausgegangen, dass am angegebenen Speicherort ein Active Directory-Autorisierungsrichtlinienspeicher vorhanden ist, dass dieser Richtlinienspeicher eine Anwendung mit dem Namen Expense enthält und dass diese Anwendung keine Aufgaben mit Geschäftsregelskripts enthält.
+Das folgende Beispiel zeigt, wie die Verwaltung einer Anwendung delegiert wird. Im Beispiel wird davon ausgegangen, dass ein vorhandener Active Directory-Autorisierungsrichtlinienspeicher am angegebenen Speicherort vorhanden ist, dass dieser Richtlinienspeicher eine Anwendung namens Expense enthält und dass diese Anwendung keine Aufgaben mit Geschäftsregelskripts enthält.
 
 
 ```VB

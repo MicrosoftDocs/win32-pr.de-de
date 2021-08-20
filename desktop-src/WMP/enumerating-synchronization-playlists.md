@@ -1,37 +1,37 @@
 ---
-title: Auflisten von Synchronisierungs Wiedergabelisten
-description: Auflisten von Synchronisierungs Wiedergabelisten
+title: Auflisten von Synchronisierungswiedergabelisten
+description: Auflisten von Synchronisierungswiedergabelisten
 ms.assetid: 830c3ea5-2937-48b5-b89f-ef68a6649ca3
 keywords:
-- Windows Media Player, Synchronisierungs Wiedergabelisten
-- Windows Media Player-Objektmodell, Synchronisierungs Wiedergabelisten
-- Objektmodell, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile, Synchronisierungs Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- ActiveX-Steuerung, Synchronisierungs Wiedergabelisten
-- Wiedergabelisten, Synchronisierung
-- Metadatei-Wiedergabelisten, Synchronisierung
-- Windows Media Metadatei-Wiedergabelisten, Synchronisierung
-- Synchronisierungs Wiedergabelisten, auflisten
-- Portable Geräte, auflisten
-- Enumerationen, Synchronisierungs Wiedergabelisten
+- Windows Media Player,Synchronisierungswiedergabelisten
+- Windows Media Player-Objektmodell, Synchronisierungswiedergabelisten
+- Objektmodell,Synchronisierungswiedergabelisten
+- Windows Media Player Mobil, Synchronisierungswiedergabelisten
+- Windows Media Player ActiveX,Synchronisierungswiedergabelisten
+- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungswiedergabelisten
+- ActiveX,Synchronisierungswiedergabelisten
+- Wiedergabelisten,Synchronisierung
+- Metafile-Wiedergabelisten,Synchronisierung
+- Windows Wiedergabelisten von Medienmetadateien, Synchronisierung
+- Synchronisierungswiedergabelisten,Aufzählen
+- Portable Geräte,Aufzählen
+- Enumerationen,Synchronisierungswiedergabelisten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29679380cec1844e9a790ac4ff047bfa4bf05288
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 55c6da1b91ffb779bc32262584375a7970bb20b2c644d6ee6893eacfea0b0d6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106339043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935147"
 ---
-# <a name="enumerating-synchronization-playlists"></a>Auflisten von Synchronisierungs Wiedergabelisten
+# <a name="enumerating-synchronization-playlists"></a>Auflisten von Synchronisierungswiedergabelisten
 
-Im folgenden Beispielcode wird eine Funktion erstellt, die ein ListView-Steuerelement mit Wiedergabelisten füllt. Synchronisierungs Wiedergabelisten werden zuerst angezeigt. Synchronisierungs Wiedergabelisten für das aktuell ausgewählte Gerät sind mit einem Häkchen gekennzeichnet und sind in der Reihenfolge der Synchronisierungs Priorität sortiert. Alle anderen Wiedergabelisten werden deaktiviert.
+Der folgende Beispielcode erstellt eine Funktion, die ein ListView-Steuerelement mit Wiedergabelisten füllt. Synchronisierungswiedergabelisten werden zuerst angezeigt. Synchronisierungswiedergabelisten für das derzeit ausgewählte Gerät werden mit einem Häkchen markiert und in der Reihenfolge der Synchronisierungspriorität sortiert. Alle anderen Wiedergabelisten sind deaktiviert.
 
-Das ListView-Steuerelement wurde für die einfache Auswahl konfiguriert. Die Reihenfolge der Wiedergabelisten im ListView-Steuerelement bestimmt Ihre Synchronisierungs Priorität. Der aktivierte Zustand einer einzelnen Wiedergabeliste bestimmt, ob es sich um eine Synchronisierungs Wiedergabeliste für das aktuell ausgewählte Gerät handelt.
+Das ListView-Steuerelement wurde für eine einzelne Auswahl konfiguriert. Die Reihenfolge der Wiedergabelisten im ListView-Steuerelement bestimmt deren Synchronisierungspriorität. Der überprüfte Status einer einzelnen Wiedergabeliste bestimmt, ob es sich um eine Synchronisierungswiedergabeliste für das aktuell ausgewählte Gerät handelt.
 
-Der Parameter *lpsindex* gibt den Partnerschafts Index für das aktuell ausgewählte portable Gerät an.
+Der Parameter *lPSIndex gibt* den Partnerschaftsindex für das derzeit ausgewählte portable Gerät an.
 
 
 ```C++
@@ -140,27 +140,27 @@ STDMETHODIMP CSyncSettings::ShowPlaylists(long lPSIndex)
 
 
 
-Informationen zur Implementierung der sortwiedergabe-Funktion finden Sie unter [Sortieren von Wiedergabelisten nach Synchronisierungs Priorität](sorting-playlists-by-synchronization-priority.md).
+Informationen zur Implementierung der SortPlaylist-Funktion finden Sie unter [Sortieren von Wiedergabelisten nach Synchronisierungspriorität.](sorting-playlists-by-synchronization-priority.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmpmedia:: getiteminfo**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia-getiteminfo)
+[**IWMPMedia::getItemInfo**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia-getiteminfo)
 </dt> <dt>
 
-[**Iwmpmediacollection:: getbyattribute**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmediacollection-getbyattribute)
+[**IWMPMediaCollection::getByAttribute**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmediacollection-getbyattribute)
 </dt> <dt>
 
-[**Synchronisierungs Wiedergabelisten**](managing-synchronization-playlists.md)
+[**Verwalten von Synchronisierungswiedergabelisten**](managing-synchronization-playlists.md)
 </dt> <dt>
 
-[**Synchronisierungs Attribute**](sync-attributes.md)
+[**Synchronisierungsattribute**](sync-attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

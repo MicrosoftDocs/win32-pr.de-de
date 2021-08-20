@@ -1,23 +1,23 @@
 ---
-description: 'Die folgenden Elemente werden mit dem Herunterfahren des Systems verwendet:'
+description: 'Die folgenden Elemente werden beim Herunterfahren des Systems verwendet:'
 ms.assetid: 6337acad-a55b-4524-acda-2edf6eca9e3b
-title: Verweis auf System Herunterfahren
+title: Referenz zum Herunterfahren des Systems
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46ac5e9462b32ee0518ad169ae27dab3f6bc8d16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b91629c27fd4bae34a992c4d88a4d8b893cd1b0167d60ab71e0a844f84f6b2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117963500"
 ---
-# <a name="system-shutdown-reference"></a>Verweis auf System Herunterfahren
+# <a name="system-shutdown-reference"></a>Referenz zum Herunterfahren des Systems
 
-Die folgenden Elemente werden mit dem Herunterfahren des Systems verwendet:
+Die folgenden Elemente werden beim Herunterfahren des Systems verwendet:
 
--   [SystemShutdown-Funktionen](system-shutdown-functions.md)
--   [Herunterfahren von System Meldungen](system-shutdown-messages.md)
--   [Grund Codes zum Herunterfahren des Systems](system-shutdown-reason-codes.md)
+-   [Funktionen zum Herunterfahren des Systems](system-shutdown-functions.md)
+-   [Meldungen zum Herunterfahren des Systems](system-shutdown-messages.md)
+-   [Grundcodes für das Herunterfahren des Systems](system-shutdown-reason-codes.md)
 
  
 

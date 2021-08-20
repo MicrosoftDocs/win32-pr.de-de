@@ -1,24 +1,24 @@
 ---
-title: VML Width-Attribut
-description: VML Width-Attribut
+title: VML-Breitenattribut
+description: VML-Breitenattribut
 ms.assetid: e01c60d4-3c3a-41e5-8c28-6da9533921df
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 654b3d4917d76b3c8820186b04b2e77537e6a6ec
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 385aee5c45f68d039bc1bcf6bd3b0c52db0871640bc8a2df3a7f25e9e2bdc205
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117938957"
 ---
-# <a name="vml-width-attribute"></a>VML Width-Attribut
+# <a name="vml-width-attribute"></a>VML-Breitenattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert die Breite der Form. Lese-/Schreibzugriff. **Zeichenfolge**.
 
@@ -28,35 +28,35 @@ Definiert die Breite der Form. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Tagsyntax**
 
-<v: *Element* Style = "width: *Expression* " >
+<v: *element* style="width: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. Width = "*Ausdruck*"
+*element* .style.width="*expression*"
 
-*Ausdruck* = *Element*. Style. Width
+*expression* = *Element*.style.width
 
 **Anmerkungen**
 
-Das **Width** -Attribut ähnelt dem standardmäßigen HTML- **Width** -Attribut für Stile.
+Das **Width-Attribut** ähnelt dem **Html-Standardbreitenattribut** für Stile.
 
-Einheiten können dem übergeordneten Element zugeordnet werden, oder Sie können sich in absoluten Einheiten befinden.
+Einheiten können dem übergeordneten Element zugeordnet oder in absoluten Einheiten sein.
 
 Mögliche Werte:
 
 
 
-| Wert      | BESCHREIBUNG                                                                                                                                                      |
+| Wert      | Beschreibung                                                                                                                                                      |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auto       | Die Standardposition eines Elements im Fluss der Seite.                                                                                                          |
-| units      | Eine Zahl mit einem absoluten Einheiten Kenn Zeichner (cm, mm, in, PT, PC oder px) oder einem relativen Einheiten Kenn Zeichner (em oder Ex). Wenn keine Einheiten angegeben werden, wird die Pixel (px) angenommen. |
-| Prozentwert | Wert, ausgedrückt als Prozentsatz der Breite des übergeordneten Objekts.                                                                                                    |
+| Automatisch       | Standardposition eines Elements im Seitenfluss.                                                                                                          |
+| units      | Eine Zahl mit einem absoluten Einheiten-Kennzeichner (cm, mm, in, pt, pc oder px) oder einem bezeichner für relative Einheiten (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. |
+| Prozentwert | Der Als Prozentsatz der Breite des übergeordneten Objekts ausgedrückte Wert.                                                                                                    |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
@@ -75,8 +75,8 @@ Die Breite der Form ist 25.
 
 
 
-[Beispiel](/previous-versions/bb264101(v=vs.85))für das width-Attribut. (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Width-Attribut – Beispiel.](/previous-versions/bb264101(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

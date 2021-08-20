@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_DATA Struktur (mpclient. h)
-description: Benachrichtigungs Daten wurden aufgrund von Bedrohungserkennung oder-Änderung übermittelt.
+title: MPTHREAT_DATA -Struktur (MpClient.h)
+description: Benachrichtigungsdaten, die aufgrund von Bedrohungserkennung oder -änderung übergeben werden.
 ms.assetid: 07A2F88B-9D58-44EC-86D0-BDCC1DF44B94
 keywords:
-- MPTHREAT_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_DATA struktur Legacy-Windows Umgebungsfeatures
+- PMPTHREAT_DATA strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cafbb11dbb3b1a34b38ffd0448db96fd1409efd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2bd6338a027e3b03971f357950bbc351acef0d3fcdca83b72130e0ea475164d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883230"
 ---
-# <a name="mpthreat_data-structure"></a>Mpthreat- \_ Datenstruktur
+# <a name="mpthreat_data-structure"></a>\_MPTHREAT-DATENstruktur
 
-Benachrichtigungs Daten wurden aufgrund von Bedrohungserkennung oder-Änderung übermittelt.
+Benachrichtigungsdaten, die aufgrund von Bedrohungserkennung oder -änderung übergeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,36 +44,36 @@ typedef struct tagMPTHREAT_DATA {
 
 <dl> <dt>
 
-**Threatid**
+**ThreatID**
 </dt> <dd>
 
-Typ: **mpthreat- \_ ID**
+Typ: **MPTHREAT-ID \_**
 
 </dd> <dd>
 
-Bedrohungs Bezeichner. Das obere Bit ist festgelegt, um antivirenbezogene Bedrohungen zu identifizieren.
+Bedrohungsbezeichner. Oberes Bit wird festgelegt, um Bedrohungen im Zusammenhang mit Antivirensoftware zu identifizieren.
 
 </dd> <dt>
 
-**dwsessionid**
+**dwSessionID**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Die der Bedrohung zugeordnete Sitzung. Auf-1 festgelegt, wenn keine Sitzungs spezifischen Informationen verfügbar sind.
+Sitzung, die der Bedrohung zugeordnet ist. Legen Sie auf -1 fest, wenn keine sitzungsspezifischen Informationen verfügbar sind.
 
 </dd> <dt>
 
-**Maßnahme**
+**ThreatAction**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Aktion**](mpthreat-action.md)**
+Typ: **[ **MPTHREAT \_ ACTION**](mpthreat-action.md)**
 
 </dd> <dd>
 
-Es wurde versucht, die Bedrohungs Aktion für den Fehler "mpnotify Threat Clean failed-Ereignisse **\_ \_ \_ erfolgreich**" zu beheben / **\_ \_ \_** .
+Es wurde eine Bedrohungsaktion für **die MPNOTIFY \_ THREAT CLEAN \_ \_ SUCCEEDED** / **MPNOTIFY \_ THREAT CLEAN \_ \_ FAILED-Ereignisse** versucht.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Zusätzliche Status oder Aktionen, die der ausgeführten Aktion zugeordnet sind. Dies ist eine Kombination von Bitflags aus dem [**mpstatus- \_ Flag**](mpstatus-flag.md).
+Zusätzliche Status oder Aktionen, die der durchgeführten Aktion zugeordnet sind. Dies ist eine Kombination von Bitflags von [**MPSTATUS \_ FLAG**](mpstatus-flag.md).
 
 </dd> </dl>
 
@@ -94,9 +94,9 @@ Zusätzliche Status oder Aktionen, die der ausgeführten Aktion zugeordnet sind.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
@@ -104,10 +104,10 @@ Zusätzliche Status oder Aktionen, die der ausgeführten Aktion zugeordnet sind.
 
 <dl> <dt>
 
-[**\_mpstatusflag**](mpstatus-flag.md)
+[**\_MPSTATUS-FLAG**](mpstatus-flag.md)
 </dt> <dt>
 
-[**mpthreat- \_ Aktion**](mpthreat-action.md)
+[**MPTHREAT-AKTION \_**](mpthreat-action.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Um den Datenverkehr des Domänencontrollers zu reduzieren und die Leistung zu verbessern, speichert die clientseitige Microsoft Digest informationen zwischen, die nach erfolgreicher Authentifizierung bei einem Server empfangen wurden.
 ms.assetid: cd928266-889a-494c-a94b-4ea7b1dcc241
-title: Verwalten des Sicherheitskontexts zwischen Verbindungen
+title: Beibehalten des Sicherheitskontexts zwischen Verbindungen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: d36b28d1db96efd6c41b3532b8021db7e6f8cf206e0df0bedf62b5775d2ba7de
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117787047"
 ---
-# <a name="maintaining-the-security-context-between-connections"></a>Verwalten des Sicherheitskontexts zwischen Verbindungen
+# <a name="maintaining-the-security-context-between-connections"></a>Beibehalten des Sicherheitskontexts zwischen Verbindungen
 
 Um den Datenverkehr des Domänencontrollers zu reduzieren und die Leistung zu verbessern, speichert die clientseitige Microsoft Digest informationen zwischen, die nach erfolgreicher Authentifizierung bei einem Server empfangen wurden. Clientanwendungen müssen das Handle nur im [*eingerichteten*](../secgloss/s-gly.md) Sicherheitskontext zwischenspeichern. In der folgenden Tabelle werden die vom Sicherheitspaket zwischengespeicherten Informationen beschrieben.
 
@@ -20,7 +20,7 @@ Um den Datenverkehr des Domänencontrollers zu reduzieren und die Leistung zu ve
 | Information                                                       | BESCHREIBUNG                                                                                                                                         |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Servername                                                       | Der Server, der erfolgreich einen Sicherheitskontext für den Benutzer erstellt hat.                                                                           |
-| Bereich/Domäne                                                      | Der Domänenname, der bei der erfolgreichen Authentifizierung verwendet wird.                                                                                              |
+| Bereich/Domäne                                                      | Der Domänenname, der bei der erfolgreichen Authentifizierung verwendet wurde.                                                                                              |
 | [*Nonce*](../secgloss/n-gly.md) | Eine Server-Nonce, die der erfolgreichen Authentifizierung zugeordnet ist.                                                                               |
 | Nonce-Anzahl                                                       | Gibt an, wie oft der Client die Nonce in Anforderungen an den Server eingeschlossen hat. Dies wird für die Wiedergabeerkennung verwendet.                                 |
 | Nicht transparenter Wert                                                      | Der Wert, der nach einer erfolgreichen Authentifizierung für die nicht transparente -Direktive zurückgegeben wird. Dieser Wert enthält einen Verweis auf den Sicherheitskontext des Benutzers. |

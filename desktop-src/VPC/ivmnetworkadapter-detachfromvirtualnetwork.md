@@ -1,11 +1,11 @@
 ---
-title: Methode ' ivmnetworkadapter detachfromvirtualnetwork ' (vpccominterfaces. h)
-description: Trennt die Netzwerkschnittstelle von Ihrem virtuellen Netzwerk.
+title: IVMNetworkAdapter DetachFromVirtualNetwork-Methode (VPCCOMInterfaces.h)
+description: Trennt die Netzwerkschnittstelle vom virtuellen Netzwerk.
 ms.assetid: f1a00ea2-2b79-4b5c-a4bd-3cab66deb0d0
 keywords:
-- Detachfromvirtualnetwork-Methode Virtual PC
-- Detachfromvirtualnetwork-Methode Virtual PC, ivmnetworkadapter-Schnittstelle
-- Ivmnetworkadapter Interface Virtual PC, detachfromvirtualnetwork-Methode
+- DetachFromVirtualNetwork-Methode Virtueller PC
+- DetachFromVirtualNetwork-Methode Virtual PC, IVMNetworkAdapter-Schnittstelle
+- IVMNetworkAdapter-Schnittstelle Virtueller PC, DetachFromVirtualNetwork-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d90d5046844764fe9e9eb6552fe1a04b6140201b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: abb97c0b2bad30cb05302b67b1b5d0569b13b4c007b79163f1ce63750b512179
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117938471"
 ---
-# <a name="ivmnetworkadapterdetachfromvirtualnetwork-method"></a>Ivmnetworkadapter::D etachfromvirtualnetwork-Methode
+# <a name="ivmnetworkadapterdetachfromvirtualnetwork-method"></a>IVMNetworkAdapter::D etachFromVirtualNetwork-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Trennt die Netzwerkschnittstelle von Ihrem virtuellen Netzwerk.
+Trennt die Netzwerkschnittstelle vom virtuellen Netzwerk.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,10 +48,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                  |
+| Rückgabecode/-wert                                                                                                                                                 | Beschreibung                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -63,12 +63,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmnetworkadapter ist als e32e4165-22b8-4DC0-8d57-850171ae207a definiert.<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMNetworkAdapter ist als e32e4165-22b8-4dc0-8d57-850171ae207a definiert.<br/>          |
 
 
 
@@ -76,7 +76,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmnetworkadapter**](ivmnetworkadapter.md)
+[**IVMNetworkAdapter**](ivmnetworkadapter.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: ISoftware. getsoft keyboardpossize-Methode (Software BDC. h)
-description: Mit der isoftkbd getsoftkeyboardpossize-Methode werden die Anfangsposition und die Größe einer Soft Tastatur abgerufen.
+title: ISoftKbd GetSoftKeyboardPosSize-Methode (Softkbdc.h)
+description: Die ISoftKbd GetSoftKeyboardPosSize-Methode ruft die Anfangsposition und Größe einer Softtastatur ab.
 ms.assetid: d4482e34-1723-4fe2-a488-e7c18eb3f68e
 keywords:
-- Getsoft keyboardpossize-Methode, Text Dienste-Framework
-- Getsoft keyboardpossize-Methode, Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services-Framework, getsoft keyboardpossize-Methode
+- GetSoftKeyboardPosSize-Methode Textdienstframework
+- GetSoftKeyboardPosSize-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , GetSoftKeyboardPosSize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9af445efd3e1b510280d20667862f2d95404597f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 388176e0dd0c45650366c940f3c8302d99e1cf7e49cd61fc95ef3cb8227ea7d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952587"
 ---
-# <a name="isoftkbdgetsoftkeyboardpossize-method"></a>ISOFT kbd:: getsoft keyboardpossize-Methode
+# <a name="isoftkbdgetsoftkeyboardpossize-method"></a>ISoftKbd::GetSoftKeyboardPosSize-Methode
 
-Mit der **isoftkbd:: getsoftkeyboardpossize** -Methode werden die Anfangsposition und die Größe einer Soft Tastatur abgerufen.
+Die **ISoftKbd::GetSoftKeyboardPosSize-Methode** ruft die Anfangsposition und Größe einer soft-Tastatur ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ HRESULT GetSoftKeyboardPosSize(
 
 <dl> <dt>
 
-*lpstartpoint* \[ vorgenommen\]
+*lpStartPoint* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, in dem diese Methode eine [Punkt](/previous-versions//dd162805(v=vs.85)) Struktur abruft, die die Koordinaten der oberen linken Position der Soft Tastatur angibt.
+Zeiger auf einen Puffer, in dem diese Methode eine [POINT-Struktur](/previous-versions//dd162805(v=vs.85)) abruft, die die Koordinaten der oberen linken Position der soft-Tastatur angibt.
 
 </dd> <dt>
 
-*lpwidth* \[ vorgenommen\]
+*lpwidth* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Puffer, in dem diese Methode die Breite der Soft Tastatur abruft.
+Zeiger auf einen Puffer, in dem diese Methode die Breite der soft-Tastatur abruft.
 
 </dd> <dt>
 
-*lpheight* \[ vorgenommen\]
+*lpheight* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Puffer, in dem diese Methode die Höhe der Soft Tastatur abruft.
+Zeiger auf einen Puffer, in dem diese Methode die Höhe der soft-Tastatur abruft.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                        | BESCHREIBUNG                                  |
+| Wert                                                                                        | Beschreibung                                  |
 |----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Einer der Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Einer der Parameter ist ungültig.<br/> |
 
 
 
@@ -88,9 +88,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 on Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -99,10 +99,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**ISOFT kbd:: setsoftware keyboardpossize**](isoftkbd-setsoftkeyboardpossize.md)
+[**ISoftKbd::SetSoftKeyboardPosSize**](isoftkbd-setsoftkeyboardpossize.md)
 </dt> </dl>
 
  

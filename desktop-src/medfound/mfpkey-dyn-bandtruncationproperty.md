@@ -1,27 +1,27 @@
 ---
-description: Gibt an, ob der Encoder die bandtrunzierung ausführt.
+description: Gibt an, ob der Encoder eine Bandschneidung ausführt.
 ms.assetid: 70b44f1e-06fc-4e7f-80cb-f9dd15891f75
-title: MFPKEY_DYN_BANDTRUNCATION-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DYN_BANDTRUNCATION-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66a19b4671a57abe01ae9c5eb634a3c25bd90c93
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a9a97a6a54cc5ea8d29251327c00d80b574b214fb090cf1fc10b8ea25ed4960
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117873507"
 ---
-# <a name="mfpkey_dyn_bandtruncation-property"></a>Mfpkey \_ dyn \_ bandtrunationeigenschaft
+# <a name="mfpkey_dyn_bandtruncation-property"></a>MFPKEY \_ DYN \_ BANDTRUNCATION-Eigenschaft
 
-Gibt an, ob der Encoder die bandtrunzierung ausführt. Lese-/Schreibzugriff.
+Gibt an, ob der Encoder eine Bandschneidung ausführt. Lese-/Schreibzugriff.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -30,7 +30,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -38,19 +38,19 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 <dl> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc \_ bwceil**](mfpkey-dyn-bandtrunc-bwceilproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ BWCEIL**](mfpkey-dyn-bandtrunc-bwceilproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc \_ bwfloor**](mfpkey-dyn-bandtrunc-bwfloorproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ BWFLOOR**](mfpkey-dyn-bandtrunc-bwfloorproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc \_ qceil**](mfpkey-dyn-bandtrunc-qceilproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ QCEIL**](mfpkey-dyn-bandtrunc-qceilproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc- \_ qfloor**](mfpkey-dyn-bandtrunc-qfloorproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ QFLOOR**](mfpkey-dyn-bandtrunc-qfloorproperty.md)
 </dt> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

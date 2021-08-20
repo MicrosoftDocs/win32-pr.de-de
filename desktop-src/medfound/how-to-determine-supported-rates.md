@@ -13,7 +13,7 @@ ms.locfileid: "117878942"
 ---
 # <a name="how-to-determine-supported-rates"></a>Ermitteln der unterstützten Raten
 
-Vor dem Ändern der Wiedergaberate sollte eine Anwendung überprüfen, ob die Wiedergaberate von den Objekten in der Pipeline unterstützt wird. Die [**BERATERateSupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) stellt Methoden bereit, um die maximalen Vorwärts- und Umgekehrt-Raten, die unterstützte Rate, die einer angeforderten Rate am nächsten ist, und die langsamste Rate zu erhalten. Jede dieser Rate-Abfragen kann die Wiedergaberichtung angeben und angeben, ob die Thinning-Abfrage verwendet werden soll. Die genaue Wiedergaberate wird mithilfe der [**BERRATEControl-Schnittstelle abgefragt.**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
+Vor dem Ändern der Wiedergaberate sollte eine Anwendung überprüfen, ob die Wiedergaberate von den Objekten in der Pipeline unterstützt wird. Die [**BERATERateSupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) stellt Methoden bereit, um die maximalen Vorwärts- und Umgekehrt-Raten, die unterstützte Rate, die einer angeforderten Rate am nächsten ist, und die langsamste Rate zu erhalten. Jede dieser Rate-Abfragen kann die Wiedergaberichtung angeben und angeben, ob thinning verwendet werden soll. Die genaue Wiedergaberate wird mithilfe der [**BERRATEControl-Schnittstelle abgefragt.**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
 
 Informationen zum Ändern der Wiedergaberaten finden Sie unter Festlegen der [Wiedergaberate für die Mediensitzung.](how-to-set-the-playback-rate-on-the-media-session.md)
 
@@ -34,7 +34,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
     
 
-    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *eigenschaftObject-Parameter* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
     Die Anwendung muss den Rate Control-Dienst über die Mediensitzung abfragen. Intern fragt die Mediensitzung die Objekte in der Topologie ab.
 
@@ -50,7 +50,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
 ## <a name="to-determine-the-nearest-supported-rate"></a>So bestimmen Sie die nächste unterstützte Rate
 
-1.  Sie können den Supportdienst für die Rate aus der Mediensitzung erhalten.
+1.  Den Supportdienst für die Rate erhalten Sie über die Mediensitzung.
 
     ```C++
     IMFRateSupport *pRateSupport = NULL;
@@ -63,7 +63,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
     
 
-    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *eigenschaftObject-Parameter* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
 2.  Rufen Sie [**die METHODE VERRATESupport::IsRateSupported**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-isratesupported) auf, um die unterstützte Rate abzurufen, die einer angeforderten Wiedergaberate am nächsten liegt.
 
@@ -86,7 +86,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
 ## <a name="to-determine-the-slowest-supported-rate"></a>So bestimmen Sie die langsamste unterstützte Rate
 
-1.  Sie können den Supportdienst für die Rate aus der Mediensitzung erhalten.
+1.  Den Supportdienst für die Rate erhalten Sie über die Mediensitzung.
 
     ```C++
     IMFRateSupport *pRateSupport = NULL;
@@ -99,7 +99,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
     
 
-    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *eigenschaftObject-Parameter* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
 2.  Rufen Sie [**die METHODE MARSHRateSupport::GetSlowestRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate) auf, um die langsamste unterstützte Rate abzurufen.
 
@@ -115,7 +115,7 @@ Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur 
 
     Im Beispiel wird die langsamste Umgekehrt-Wiedergaberate mit Verlangsamung abgefragt. Die untere Grenze wird im *slowestRate-Parameter* von [**GetSlowestRate empfangen.**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate)
 
-    Wenn reverse playback or thinning nicht unterstützt wird, gibt der Aufruf einen entsprechenden Fehlercode zurück.
+    Wenn die umgekehrte Wiedergabe oder Verankerung nicht unterstützt wird, gibt der Aufruf einen entsprechenden Fehlercode zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

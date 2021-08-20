@@ -1,9 +1,9 @@
 ---
-title: Vordefinierte Schriftart Attribute ("tsatyd. h")
-description: Die folgenden Werte identifizieren Schriftart Attribute, die mit der ITF Context getappproperty-Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+title: Vordefinierte Schriftartattribute (TsAttrid.h)
+description: Die folgenden Werte identifizieren Schriftartattribute, die mit der ITfContext GetAppProperty-Methode abgerufen werden. Das Datenformat und der Inhalt jedes Eigenschaftstyps sind enthalten.
 ms.assetid: 8d73c258-77d5-46db-9d31-ac41d9e7acb3
 keywords:
-- Vordefinierte Schriftart Attribute Text Dienst-Framework
+- Vordefinierte Schriftartattribute Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,67 +14,67 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21351d790a09c9364a101a62b7516698df154225
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0fb586258bb6eca1639121fa3b33a26ad560f00bb9b002c347a4e026a53442f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951946"
 ---
-# <a name="predefined-font-attributes"></a>Vordefinierte Schriftart Attribute
+# <a name="predefined-font-attributes"></a>Vordefinierte Schriftartattribute
 
-Die folgenden Werte identifizieren Schriftart Attribute, die mit der [ITF context:: getappproperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) -Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+Die folgenden Werte identifizieren Schriftartattribute, die mit der [ITfContext::GetAppProperty-Methode](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) abgerufen werden. Das Datenformat und der Inhalt jedes Eigenschaftstyps sind enthalten.
 
 ## <a name="properties"></a>Eigenschaften
 
 
 
-| Eigenschaft                                                 | BESCHREIBUNG                                                                                                                 |
+| Eigenschaft                                                 | Beschreibung                                                                                                                 |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **Die Schriftart "tsatder d" \_**                                       | Nicht verwendet.                                                                                                                   |
-| **Der Name der "Tsat"- \_ Schriftart \_**                             | Enthält den Namen der Vorderseite der Text Schriftart.                                                                                    |
-| **Der "Tsat"- \_ Schriftart " \_ sizepts"**                              | Enthält die Punktgröße der Text Schriftart.                                                                                   |
-| **Der-Schrift Schnitt für den- \_ \_ Stil**                                | Nicht verwendet.                                                                                                                   |
-| **Der Zeichenstil für den "Tsat"- \_ \_ Stil \_**                     | Nicht verwendet.                                                                                                                   |
-| **Der-Stil für die Zeichen \_ \_ Stil- \_ Animation \_ von "-"** | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Der-Stil für die Zeichen \_ \_ Stil- \_ Animation \_ in der Zeichen Prüfung**     | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Die Zeichen \_ Stil- \_ Animation \_ " \_ marchingblackants" für den-Stil.**  | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Der-Stil für die Zeichenstil-Animation in den Zeichen \_ \_ Stil. \_ \_**    | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Der- \_ \_ \_ animationshimmer für den Zeichenstil. \_**            | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Der Zeichenstil für die-Animation im- \_ \_ Stil \_ \_**        | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **\_ \_ Zurücksetzen des Stils der Zeichenstil- \_ Animation \_**           | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Der-Stil für die Zeichenstil-Animation im- \_ \_ Stil \_ \_**          | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls NULL.                                         |
-| **Wert für die \_ \_ \_ Hintergrundfarbe des-Stils**               | Enthält den RGB-Wert des Text Hintergrunds. Enthält 0xFF000000, wenn die Textfarbe automatisch ist.                          |
-| **Der "der"-Stil für die- \_ Schriftart \_ \_**                         | Enthält einen Wert ungleich 0 (null), wenn der Text blinkende oder andernfalls 0 (null) ist.                                                         |
-| **Die \_ Schriftart \_ \_ Fett**                          | Enthält einen Wert ungleich 0 (null), wenn der Text fett oder NULL ist.                                                             |
-| **Der-Schrift Schnitt für den Tsat-t-groß \_ \_ \_ Buchstaben**                    | Enthält einen Wert ungleich 0 (null), wenn der Text groß geschrieben ist, andernfalls 0 (null).                                                      |
-| **Wert für den Schrift Schnitt für das-Format \_ \_ \_**                         | Enthält den RGB-Wert der Textfarbe. Enthält 0xFF000000, wenn die Textfarbe automatisch ist.                               |
-| **Oringerlinienstil- \_ \_ \_ emboss**                        | Enthält einen Wert ungleich 0 (null), wenn der Text geprägt ist, andernfalls 0 (null).                                                         |
-| **Schweregrad der "arftd"- \_ Schriftart \_ \_**                       | Enthält einen Wert ungleich 0 (null), wenn der Text eingraviert ist oder andernfalls NULL.                                                         |
-| **Höhe des die \_ Größe des-Schrift Grads \_ \_**                        | Enthält die Schrift Höhe. Weitere Informationen finden Sie unter dem **lfheight** -Member der LOGFONT-Struktur.                       |
-| **Der "Tsat"- \_ Schriftart \_ Stil ist \_ ausgeblendet.**                        | Enthält einen Wert ungleich 0 (null), wenn der Text ausgeblendet ist, andernfalls 0.                                                           |
-| **Oben Formatierungs-Schrift Schnitt ( \_ \_ \_ kursiv)**                        | Enthält einen Wert ungleich 0 (null), wenn der Text kursiv ist, andernfalls 0 (null).                                                           |
-| **URD. \_ \_ \_**                       | Enthält die minimale Größe für die Größe. Weitere Informationen finden Sie unter itextfont:: getkerning.                                         |
-| **"Tsatt"-Schrift Schnitt ( \_ \_ \_ Kleinbuchstaben)**                     | Enthält einen Wert ungleich 0 (null), wenn der Text in Kleinbuchstaben oder andernfalls NULL ist.                                                        |
-| **Oben \_ \_ dargestellte Schriftart Stil \_ "Tsat-d"**                      | Enthält einen Wert ungleich 0 (null), wenn der Text oder andernfalls 0 (null) ist.                                                         |
-| **Obergrenze für \_ das \_ \_ Schreiben von "tsatder d"**                      | Enthält einen Wert ungleich 0 (null), wenn der Text überschrieben oder andernfalls NULL ist.                                                        |
-| **Oben \_ \_ \_ zeilige Zeilen Überschrift für " \_ tsatdouble"**              | Enthält einen Wert ungleich 0 (null), wenn der Text doppelt über geschaltet ist, andernfalls NULL.                                                 |
-| **Oben \_ \_ \_ zeilige Zeilen Überschrift für "tsatt" \_**              | Enthält einen Wert ungleich 0 (null), wenn der Text eine einzelne über-oder NULL ist, andernfalls.                                                 |
-| **Position des- \_ Schrift Schnitt- \_ Stils \_**                      | Enthält die Schriftart Position.                                                                                                 |
-| **Mit der Art der durch die ""-Formatierung \_ \_ \_**                     | Enthält einen Wert ungleich 0 (null), wenn der Text geschützt ist, andernfalls NULL.                                                        |
-| **- \_ \_ \_ Schatten**                        | Enthält einen Wert ungleich 0 (null), wenn der Text Shadowing oder andernfalls NULL ist.                                                         |
-| **"", "", ". \_ \_ \_**                     | Enthält einen Wert ungleich 0 (null), wenn der Text in Kleinbuchstaben oder andernfalls NULL ist.                                                        |
-| **Raum für den Raum für den Raum im Raum \_ \_ \_**                       | Enthält den Schriftart Abstand.                                                                                                  |
-| **\_ \_ \_ Durchgestrichen durch Strich**                 | Nicht verwendet.                                                                                                                   |
-| **Durchgestrichen von "- \_ \_ \_ durch \_ Schnitt '**         | Enthält einen Wert ungleich 0 (null), wenn der Text einen doppelten Strich durchläuft oder andernfalls NULL.                                             |
-| **\_ \_ \_ Durchgestrichen eines einzelnen Stils durch einen \_ einzelnen**         | Enthält einen Wert ungleich 0 (null), wenn der Text ein einzelnes durch Streich Zeichen oder andernfalls NULL ist.                                             |
-| **Der mit dem Zeichenstil für das \_ \_ \_ Entschlüsseln der Zeichen**                     | Enthält einen Wert ungleich 0 (null), wenn der Text Index Index oder andernfalls NULL ist.                                                        |
-| **"Tsatt"-Schrift Schnitt ( \_ \_ \_ SuperScript)**                   | Enthält einen Wert ungleich 0 (null), wenn der Text hoch gestellt ist, andernfalls NULL.                                                      |
-| **Unterstreichung des Unterstrichs für "Tsat" \_ \_ \_**                     | Enthält einen Wert ungleich 0 (null), wenn der Text unterstrichen ist, andernfalls NULL.                                                       |
-| **Unterstreichung von "tsatstrid" im \_ Schrift Schnitt \_ \_ \_**             | Enthält einen Wert ungleich 0 (null), wenn der Text doppelt unterstrichen ist, andernfalls NULL.                                                |
-| **Unter \_ \_ \_ Streichung \_ eines einzelnen**             | Enthält einen Wert ungleich 0 (null), wenn der Text ein einzelnes unterstrichszeichen ist, andernfalls                                                |
-| **-Schrift Schnitt \_ ( \_ \_ Großbuchstaben)**                     | Enthält einen Wert ungleich 0 (null), wenn der Text in Großbuchstaben oder andernfalls NULL ist.                                                        |
-| **Schweregrad des-Schrift Grads \_ \_ \_**                        | Enthält die Schrift Breite. Weitere Informationen zu möglichen Werten finden Sie unter dem **lfWeight** -Member der LOGFONT-Struktur. |
+| **\_TSATTRID-Schriftart**                                       | Wird nicht verwendet.                                                                                                                   |
+| **TSATTRID \_ Font \_ FaceName**                             | Enthält den Gesichtsnamen der Textschriftart.                                                                                    |
+| **TSATTRID \_ Font \_ SizePts**                              | Enthält die Punktgröße der Textschriftart.                                                                                   |
+| **\_TSATTRID-Schriftschnitt \_**                                | Wird nicht verwendet.                                                                                                                   |
+| **ANIMATION DES \_ TSATTRID-Schriftschnitts \_ \_**                     | Wird nicht verwendet.                                                                                                                   |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ BlinkingBackground** | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ LasVegasLights**     | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ MarchingBlackAnts**  | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ MarchingRedAnts**    | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ Shimmer**            | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ SparkleText**        | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ WipeDown**           | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **TSATTRID \_ Font \_ Style \_ Animation \_ WipeRight**          | Enthält einen Wert ungleich 0 (null), wenn der Text über die angegebene Animation verfügt, andernfalls 0 (null).                                         |
+| **HINTERGRUNDFARBE DES \_ TSATTRID-Schriftschnitts \_ \_**               | Enthält den RGB-Wert des Texthintergrunds. Enthält 0xFF000000, wenn die Textfarbe automatisch ist.                          |
+| **\_TSATTRID-Schriftschnitt \_ \_ Blink**                         | Enthält einen Wert ungleich 0 (null), wenn der Text blinkt, andernfalls 0 (null).                                                         |
+| **\_TSATTRID-Schriftschnitt \_ \_ Fett**                          | Enthält einen Wert ungleich 0 (null), wenn der Text fett oder 0 (null) ist.                                                             |
+| **Großschreibung des \_ TSATTRID-Schriftschnitts \_ \_**                    | Enthält einen Wert ungleich 0 (null), wenn der Text großgeschrieben wird oder andernfalls 0 (null).                                                      |
+| **Schriftschnittfarbe "TSATTRID" \_ \_ \_**                         | Enthält den RGB-Wert der Textfarbe. Enthält 0xFF000000, wenn die Textfarbe automatisch ist.                               |
+| **\_TSATTRID-Schriftschnitt- \_ \_ Emboss**                        | Enthält einen Wert ungleich 0 (null), wenn der Text eingebettet ist oder andernfalls 0 (null).                                                         |
+| **TSATTRID \_ Font \_ Style \_ (Tsattrid-Schriftschnitt)**                       | Enthält einen Wert ungleich 0 (null), wenn der Text verschoben wird, andernfalls 0 (null).                                                         |
+| **HÖHE DES \_ TSATTRID-Schriftschnitts \_ \_**                        | Enthält die Schrifthöhe. Weitere Informationen finden Sie unter dem **lfHeight-Member** der LOGFONT-Struktur.                       |
+| **\_TSATTRID-Schriftschnitt \_ \_ ausgeblendet**                        | Enthält einen Wert ungleich 0 (null), wenn der Text ausgeblendet ist oder andernfalls 0 (null).                                                           |
+| **\_TSATTRID-Schriftschnitt \_ \_ italisch**                        | Enthält einen Wert ungleich 0 (null), wenn der Text italisch oder andernfalls 0 (null) ist.                                                           |
+| **TSATTRID \_ Font \_ Style \_ Kerning**                       | Enthält die minimale Kerninggröße. Weitere Informationen finden Sie unter ITextFont::GetKerning.                                         |
+| **\_TSATTRID-Schriftschnitt \_ \_ In Kleinbuchstaben**                     | Enthält einen Wert ungleich 0 (null), wenn der Text klein geschrieben ist oder andernfalls 0 (null).                                                        |
+| **\_Umrandete TSATTRID-Schriftschnitt \_ \_**                      | Enthält einen Wert ungleich 0 (null), wenn der Text umrandt ist, oder 0 (null).                                                         |
+| **\_ \_ \_ TSATTRID-Schriftschnittüberlinie**                      | Enthält einen Wert ungleich 0 (null), wenn der Text über- oder null ist.                                                        |
+| **TSATTRID \_ Font \_ Style \_ Overline \_ Double**              | Enthält einen Wert ungleich 0 (null), wenn der Text doppelt über- oder null ist.                                                 |
+| **TSATTRID \_ Font \_ Style \_ Overline \_ Single**              | Enthält einen Wert ungleich 0 (null), wenn der Text single overlined oder andernfalls 0 (null) ist.                                                 |
+| **\_ \_ \_ TSATTRID-Schriftschnittposition**                      | Enthält die Schriftartposition.                                                                                                 |
+| **GESCHÜTZTER \_ TSATTRID-Schriftschnitt \_ \_**                     | Enthält einen Wert ungleich 0 (null), wenn der Text geschützt ist, andernfalls 0 (null).                                                        |
+| **SCHATTEN IM \_ TSATTRID-Schriftschnitt \_ \_**                        | Enthält einen Wert ungleich 0 (null), wenn der Text überschatten wird oder andernfalls 0 (null).                                                         |
+| **\_ \_ TSATTRID-Schriftschnitt \_ SmallCaps**                     | Enthält einen Wert ungleich 0 (null), wenn der Text klein geschrieben ist oder andernfalls 0 (null).                                                        |
+| **\_TSATTRID-Schriftschnittabstand \_ \_**                       | Enthält den Schriftabstand.                                                                                                  |
+| **\_TSATTRID-Schriftschnitt \_ \_ durchgestrichen**                 | Wird nicht verwendet.                                                                                                                   |
+| **TSATTRID \_ Font \_ Style \_ Strikethrough \_ Double**         | Enthält einen Wert ungleich 0 (null), wenn der Text doppelt durchgestrichen ist oder andernfalls 0 (null).                                             |
+| **TSATTRID \_ Font \_ Style \_ Strikethrough \_ Single**         | Enthält einen Wert ungleich 0 (null), wenn der Text durchgestrichen ist oder andernfalls 0 (null).                                             |
+| **TSATTRID \_ Font \_ Style \_ Subscript**                     | Enthält einen Wert ungleich 0 (null), wenn der Text tiefgestellt ist oder andernfalls 0 (null).                                                        |
+| **TSATTRID \_ Font \_ Style \_ Superscript**                   | Enthält einen Wert ungleich 0 (null), wenn der Text superscript oder 0 (null) ist.                                                      |
+| **\_TSATTRID-Schriftschnitt \_ \_ unterstrichen**                     | Enthält einen Wert ungleich 0 (null), wenn der Text unterstrichen ist, andernfalls 0 (null).                                                       |
+| **TSATTRID \_ Font \_ Style \_ Underline \_ Double**             | Enthält einen Wert ungleich 0 (null), wenn der Text doppelt unterstrichen ist oder andernfalls 0 (null).                                                |
+| **TSATTRID \_ Font \_ Style \_ Underline \_ Single**             | Enthält einen Wert ungleich 0 (null), wenn der Text einfach unterstrichen ist oder andernfalls 0 (null).                                                |
+| **\_TSATTRID-Schriftschnitt \_ \_ in Großbuchstaben**                     | Enthält einen Wert ungleich 0 (null), wenn der Text groß geschrieben ist oder andernfalls 0 (null).                                                        |
+| **TSATTRID \_ \_ \_ Schriftschnittgewichtung**                        | Enthält die Schriftgradung. Weitere Informationen zu möglichen Werten finden Sie unter dem **lfWeight-Member** der LOGFONT-Struktur. |
 
 
 
@@ -88,8 +88,8 @@ Die folgenden Werte identifizieren Schriftart Attribute, die mit der [ITF contex
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                       |
-| Header<br/>                   | <dl> <dt>"Tsatphd. h"</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                       |
+| Header<br/>                   | <dl> <dt>TsAttrid.h</dt> </dl> |
 
 
 
@@ -97,7 +97,7 @@ Die folgenden Werte identifizieren Schriftart Attribute, die mit der [ITF contex
 
 <dl> <dt>
 
-[ITF context:: getappproperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty)
+[ITfContext::GetAppProperty](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty)
 </dt> </dl>
 
  

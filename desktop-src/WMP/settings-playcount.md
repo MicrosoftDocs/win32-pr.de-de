@@ -1,9 +1,9 @@
 ---
-title: Settings. playcount
-description: Mit der Eigenschaft playcount wird angegeben oder abgerufen, wie oft ein Medien Element wiedergegeben wird.
+title: Einstellungen.playCount
+description: Die playCount-Eigenschaft gibt an oder ruft ab, wie oft ein Medienelement wiedergegeben wird.
 ms.assetid: e15d97c6-312a-414d-9b3c-2a15e9081b35
 keywords:
-- Settings. playcount-Windows-Media Player
+- Einstellungen.playCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe916eeb5dfea619ddf570fd0b759a4a3867b648
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5335a87160fd5b023e1f83330baa5417ebebbd57b98d21d966b9872e2f0ae5cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117933650"
 ---
-# <a name="settingsplaycount"></a>Settings. playcount
+# <a name="settingsplaycount"></a>Einstellungen.playCount
 
-Mit der Eigenschaft **playcount** wird angegeben oder abgerufen, wie oft ein Medien Element wiedergegeben wird.
+Die **playCount-Eigenschaft** gibt an oder ruft ab, wie oft ein Medienelement wiedergegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
-Player. Settings. playcount
+player.settings.playCount
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese-/schreibzahl (**Long**) mit einem Minimalwert von 1 und einem Standardwert von 1. 
+Diese Eigenschaft ist eine  Lese-/Schreibnummer **(long**) mit einem Mindestwert von 1 und einem Standardwert von 1.
 
-**Windows Media Player 10 Mobile**: Diese Eigenschaft wird nicht unterstützt.
+**Windows Media Player 10 Mobile:** Diese Eigenschaft wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Diese Eigenschaft ist eine Lese-/schreibzahl (**Long**) mit einem Minimalwert vo
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -50,7 +50,7 @@ Diese Eigenschaft ist eine Lese-/schreibzahl (**Long**) mit einem Minimalwert vo
 
 <dl> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob der Encoder die Stereobildverarbeitung durchführt.
+description: Gibt an, ob der Encoder die Stereobildverarbeitung ausführt.
 ms.assetid: d1c787ee-787b-4efa-8d96-5cb4ffff0ed2
 title: MFPKEY_DYN_STEREO_PREPROC-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "117873517"
 ---
 # <a name="mfpkey_dyn_stereo_preproc-property"></a>MFPKEY \_ DYN \_ STEREO \_ PREPROC-Eigenschaft
 
-Gibt an, ob der Encoder die Stereobildverarbeitung durchführt. Lese-/Schreibzugriff.
+Gibt an, ob der Encoder die Stereobildverarbeitung ausführt. Lese-/Schreibzugriff.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -38,7 +38,7 @@ Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-i
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

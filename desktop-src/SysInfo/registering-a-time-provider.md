@@ -21,7 +21,7 @@ In der folgenden Tabelle werden die Werte beschrieben, die im Schlüssel jedes A
 
 
 
-| Wert             | BESCHREIBUNG                                                                                                                                                                                                              |
+| Wert             | Beschreibung                                                                                                                                                                                                              |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **DllName**       | Der Name der DLL, die den Anbieter enthält. Dieser Wert weist den Typ **REG \_ SZ** auf.                                                                                                                                     |
 | **Aktiviert**       | Gibt an, ob der Anbieter gestartet werden soll. Wenn dieser Wert 1 ist, wird der Anbieter gestartet. Andernfalls wird der Anbieter nicht gestartet. Dieser Wert weist den Typ **REG \_ DWORD** auf.                                           |

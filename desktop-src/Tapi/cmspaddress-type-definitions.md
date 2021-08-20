@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Elemente enthalten die Adresstyp Definitionen.
+description: Die folgenden Elemente enthalten die Adresstypdefinitionen.
 ms.assetid: 94358a20-f581-4e5b-8341-9e2a48f22556
-title: Cmspaddress-Typdefinitionen
+title: CMSPAddress-Typdefinitionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bdac65fe6e53091b8ad1e6e9545c085f8107399
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24e95877d68801e8d8ab7799104d9ed995f53323277f3c10d14b388055c18e8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117947206"
 ---
-# <a name="cmspaddress-type-definitions"></a>Cmspaddress-Typdefinitionen
+# <a name="cmspaddress-type-definitions"></a>CMSPAddress-Typdefinitionen
 
--   [**Mspeventitem**](/windows/desktop/api/Mspaddr/ns-mspaddr-mspeventitem)
+-   [**MSPEVENTITEM**](/windows/desktop/api/Mspaddr/ns-mspaddr-mspeventitem)
 
  
 

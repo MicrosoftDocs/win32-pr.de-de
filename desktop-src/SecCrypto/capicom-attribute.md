@@ -28,7 +28,7 @@ Der **CAPICOM \_ ATTRIBUTE-Enumerationstyp** definiert die Art des Attributs, da
 
 
 
-| Member                                                       | BESCHREIBUNG                                                                | Wert |
+| Member                                                       | Beschreibung                                                                | Wert |
 |--------------------------------------------------------------|----------------------------------------------------------------------------|-------|
 | **SIGNIERUNGSZEIT FÜR \_ CAPICOM-AUTHENTIFIZIERTE \_ \_ \_ ATTRIBUTE**         | Das -Attribut enthält den Zeitpunkt, zu dem die Signatur erstellt wurde.<br/> | 0     |
 | **DOKUMENTNAME DES \_ AUTHENTIFIZIERTEN CAPICOM-ATTRIBUTS \_ \_ \_**        | Das Attribut enthält den Namen des signierten Dokuments.<br/>         | 1     |

@@ -1,26 +1,26 @@
 ---
-title: VML-Ziel Attribut
-description: VML-Ziel Attribut
+title: VML-Zielattribut
+description: VML-Zielattribut
 ms.assetid: 2e1cc002-65c9-4945-8c07-f23dc704d867
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1cb4e438cef8d10093aa2788fc1493d9e2dcc75
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 79f290e6f1c6a2ed84959dc06efa47d1a5216bc1743f3b7c79ca3a5aa99df9f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754435"
 ---
-# <a name="vml-target-attribute"></a>VML-Ziel Attribut
+# <a name="vml-target-attribute"></a>VML-Zielattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert einen Frame oder ein Fenster, in dem eine URL angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert einen Rahmen oder ein Fenster, in dem eine URL angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,35 +28,35 @@ Definiert einen Frame oder ein Fenster, in dem eine URL angezeigt wird. Lese-/Sc
 
 **Tagsyntax**
 
-<v: *Element* target = " *Expression* " >
+<v: *element* target=" *ausdruck* ">
 
 **Anmerkungen**
 
-Das **Ziel** Attribut ähnelt dem Standard-HTML- **Ziel** Attribut von Ankern.
+Das **Target-Attribut** ähnelt dem **HTML-Standardattribut Target** von Ankern.
 
 Mögliche Werte:
 
 
 
-| Wert      | BESCHREIBUNG                                                                                                                                                                                                                                                      |
+| Wert      | Beschreibung                                                                                                                                                                                                                                                      |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | TargetName | Zeichenfolge, die den Namen des Frames oder Fensters enthält, in dem das Dokument geladen werden soll.                                                                                                                                                                                 |
-| \_Blitz    | Gibt an, dass das verknüpfte Dokument in ein neues leeres Fenster geladen wird. Dieses Fenster hat keinen Namen.                                                                                                                                                                  |
-| \_Medien    | Ab Internet Explorer 6 für Windows XP Service Pack 2 \_ ist das Medien Attribut veraltet und wird nicht mehr unterstützt. Der erste in Internet Explorer 6 verfügbare Wert gibt an, dass das verknüpfte Dokument in die Medien Leiste geladen werden soll.                |
-| \_übergeordneten   | Gibt an, dass das verknüpfte Dokument in das direkt übergeordnete Element des Dokuments geladen wird, das den Link enthält.                                                                                                                                                      |
-| \_Such   | Ab Internet Explorer 7 für Windows XP Service Pack 2: das \_ Search-Attribut ist veraltet und wird nicht mehr unterstützt. Der erste in Internet Explorer 6 verfügbare Wert gibt an, dass das verknüpfte Dokument in den Suchbereich des Browsers geladen werden soll. |
+| \_leer    | Gibt an, dass das verknüpfte Dokument in ein neues leeres Fenster geladen wird. Dieses Fenster ist nicht benannt.                                                                                                                                                                  |
+| \_Medien    | Ab Internet Explorer 6 für Windows XP Service Pack 2 ist das \_ Medienattribut veraltet und wird nicht mehr unterstützt. Dieser Wert ist erstmals in Internet Explorer 6 verfügbar und gibt an, dass das verknüpfte Dokument in die Medienleiste geladen werden soll.                |
+| \_Elternteil   | Gibt an, dass das verknüpfte Dokument in das unmittelbar übergeordnete Dokument geladen wird, das den Link enthält.                                                                                                                                                      |
+| \_Suche   | Ab Internet Explorer 7 für Windows XP Service Pack 2: Das \_ Suchattribut ist veraltet und wird nicht mehr unterstützt. Dieser Wert ist in Internet Explorer 6 erstmals verfügbar und gibt an, dass das verknüpfte Dokument in den Suchbereich des Browsers geladen werden soll. |
 | \_self     | Gibt an, dass das verknüpfte Dokument in das Fenster geladen wird, in dem auf den Link geklickt wurde (das aktive Fenster).                                                                                                                                                  |
-| \_top      | Gibt an, dass das verknüpfte Dokument in das oberste Fenster geladen wird.                                                                                                                                                                                            |
+| \_Nach oben      | Gibt an, dass das verknüpfte Dokument in das oberste Fenster geladen wird.                                                                                                                                                                                            |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Beim Klicken auf das Rechteck lädt der Browser die Microsoft Corporation-Startseite im selben Fenster.
+Wenn auf das Rechteck geklickt wird, lädt der Browser die Microsoft Corporation Startseite in dasselbe Fenster.
 
 
 ```HTML
@@ -68,8 +68,8 @@ Beim Klicken auf das Rechteck lädt der Browser die Microsoft Corporation-Starts
 
 
 
-[Beispiel für das Ziel Attribut](/previous-versions/bb264096(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Zielattribut – Beispiel.](/previous-versions/bb264096(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

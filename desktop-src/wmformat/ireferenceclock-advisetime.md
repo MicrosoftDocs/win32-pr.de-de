@@ -1,11 +1,11 @@
 ---
-title: IReferenceClock-advientime-Methode
+title: IReferenceClock AdviseTime-Methode
 description: Die AdviseTime-Methode fordert eine asynchrone Benachrichtigung an, dass eine Zeit verstrichen ist.
 ms.assetid: 8f3f8713-b53c-4110-ac7a-724bbc49368e
 keywords:
-- Advi-Time-Methode Windows Media-Format
-- Advi-Time-Methode Windows Media-Format, IReferenceClock-Schnittstelle
-- IReferenceClock-Schnittstelle Windows Media-Format, advientime-Methode
+- AdviseTime-Methode – Windows-Medienformat
+- AdviseTime-Methode windows Media Format , IReferenceClock-Schnittstelle
+- IReferenceClock-Schnittstelle windows Media Format , AdviseTime-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3fa91338b4bff8f925f00e7159a36089e0de0aa8
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0b648c1c1305503f049b3c02669d1fa3c49be428d31c0cd292801b3541a25cc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106339246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117655367"
 ---
-# <a name="ireferenceclockadvisetime-method"></a>IReferenceClock:: advientime-Methode
+# <a name="ireferenceclockadvisetime-method"></a>IReferenceClock::AdviseTime-Methode
 
-Die **AdviseTime** -Methode fordert eine asynchrone Benachrichtigung an, dass eine Zeit verstrichen ist.
+Die **AdviseTime-Methode** fordert eine asynchrone Benachrichtigung an, dass eine Zeit verstrichen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,45 +44,45 @@ HRESULT AdviseTime(
 
 <dl> <dt>
 
-*rtbasetime* \[ in\]
+*rtBaseTime* \[ In\]
 </dt> <dd>
 
-Basis Verweis Zeit in 100-Nanosecond-Einheiten.
+Basisverweiszeit in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*rtstreamtime* \[ in\]
+*rtStreamTime* \[ In\]
 </dt> <dd>
 
-Streamoffset Zeit in 100-Nanosecond-Einheiten.
+Streamoffsetzeit in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*hevent* \[ in\]
+*hEvent* \[ In\]
 </dt> <dd>
 
-Handle für ein Ereignis, das vom Aufrufer erstellt wurde. Dieses Ereignis wird signalisiert, wenn die angegebene Zeit abgelaufen ist.
+Handle für ein Ereignis, das vom Aufrufer erstellt wurde. Dieses Ereignis wird signalisiert, wenn die angegebene Zeit verstrichen ist.
 
 </dd> <dt>
 
-*pdwadviabcookie* \[ vorgenommen\]
+*pdwAdviseCookie* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Bezeichner für die Anforderung empfängt. Diese wird verwendet, um den Aufruf von **adviin** der Zukunft zu identifizieren, um beispielsweise die Anforderung abzubrechen.
+Zeiger auf eine Variable, die einen Bezeichner für die Anforderung empfängt. Dieser wird verwendet, um diesen Aufruf von **AdviseTime** in Zukunft zu identifizieren, z. B. zum Abbrechen der Anforderung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                             |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode wurde erfolgreich ausgeführt.<br/>                        |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Der *pdwadvietcookie* -Parameter ist **null**.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>    | Nicht spezifizierter Fehler.<br/>                         |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | Der *pdwAdviseCookie-Parameter* ist **NULL.**<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>    | Nicht angegebener Fehler.<br/>                         |
 
 
 

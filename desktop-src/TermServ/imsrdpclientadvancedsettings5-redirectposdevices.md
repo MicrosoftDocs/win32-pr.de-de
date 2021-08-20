@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 redirectposdevices (Eigenschaft)
-description: Legt die Konfiguration für eine Point-of-Service-Geräte Umleitung fest oder ruft Sie ab.
+title: IMsRdpClientAdvancedSettings5 RedirectPOSDevices (Eigenschaft)
+description: Legt die Konfiguration für die Point of Service-Geräteumleitung fest oder ruft sie ab.
 ms.assetid: 2614048e-244d-4dea-96fb-bb8c563a29f9
 ms.tgt_platform: multiple
 keywords:
-- Redirectposdevices-Eigenschaft Remotedesktopdienste
-- Redirectposdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, Eigenschaft redirectposdevices
-- Redirectposdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, Eigenschaft redirectposdevices
-- Redirectposdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, Eigenschaft redirectposdevices
-- Redirectposdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, Eigenschaft redirectposdevices
+- RedirectPOSDevices-Remotedesktopdienste
+- RedirectPOSDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , RedirectPOSDevices-Eigenschaft
+- RedirectPOSDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RedirectPOSDevices-Eigenschaft
+- RedirectPOSDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RedirectPOSDevices-Eigenschaft
+- RedirectPOSDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RedirectPOSDevices-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: da5ceb0c1fb9751b137b5791ce9c8da1bd0cdbb9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4279d4edd5bc7667f54472d5d06eaaaf089da4420756eef2d951e5ac8561922c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117941620"
 ---
-# <a name="imsrdpclientadvancedsettings5redirectposdevices-property"></a>IMsRdpClientAdvancedSettings5:: redirectposdevices (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings5redirectposdevices-property"></a>IMsRdpClientAdvancedSettings5::RedirectPOSDevices (Eigenschaft)
 
-Legt die Konfiguration für eine Point-of-Service-Geräte Umleitung fest oder ruft Sie ab.
+Legt die Konfiguration für die Point of Service-Geräteumleitung fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_RedirectPOSDevices(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Point of Service-Geräte Umleitungs Modus auf **true** oder **false** fest. Wenn der Wert auf **true** festgelegt ist, wird der Geräte Umleitungs Modus für den Dienst aktiviert.
+Legt den Point of Service-Geräteumleitungsmodus auf **TRUE** oder **FALSE fest.** Wenn diese Option auf **TRUE festgelegt** ist, ist der Point of Service-Geräteumleitungsmodus aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 

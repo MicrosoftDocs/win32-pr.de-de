@@ -1,23 +1,23 @@
 ---
-description: Gibt den Aufwand in Bytes pro Paket an, der für den Container erforderlich ist, der zum Speichern der komprimierten Inhalte verwendet wird.
+description: Gibt den Mehraufwand in Bytes pro Paket an, der für den Container erforderlich ist, der zum Speichern des komprimierten Inhalts verwendet wird.
 ms.assetid: 73ec52de-c74a-45b3-a453-7f32510b4484
-title: MFPKEY_ASFOVERHEADPERFRAME-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_ASFOVERHEADPERFRAME-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 208acf55871b18bb029279a27abd36a33ea8c79c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 481c99c50a305219d0548007755d6b6ba27239e39bef5cb47d61ff3d665dfa47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874080"
 ---
-# <a name="mfpkey_asfoverheadperframe-property"></a>Mfpkey \_ asfoverheadperframe (Eigenschaft)
+# <a name="mfpkey_asfoverheadperframe-property"></a>MFPKEY \_ ASFOVERHEADPERFRAME-Eigenschaft
 
-Gibt den Aufwand in Bytes pro Paket an, der für den Container erforderlich ist, der zum Speichern der komprimierten Inhalte verwendet wird.
+Gibt den Mehraufwand in Bytes pro Paket an, der für den Container erforderlich ist, der zum Speichern des komprimierten Inhalts verwendet wird.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvpackezu Head
+g \_ wszWMVPacketOverhead
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,9 +27,9 @@ VT \_ I4
 
 17
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die Dateistruktur "Advanced Systems Format (ASF)" verwenden, ändern Sie diesen Wert nicht von der Standardeinstellung. Wenn Sie die Daten nicht in einer ASF-Datei speichern, müssen Sie diesen Wert auf 0 festlegen.
+Wenn Sie die ASF-Dateistruktur (Advanced Systems Format) verwenden, ändern Sie diesen Wert nicht von seinem Standardwert. Wenn Sie die Daten nicht in einer ASF-Datei speichern, müssen Sie diesen Wert auf 0 festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Wenn Sie die Dateistruktur "Advanced Systems Format (ASF)" verwenden, ändern Si
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Wenn Sie die Dateistruktur "Advanced Systems Format (ASF)" verwenden, ändern Si
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

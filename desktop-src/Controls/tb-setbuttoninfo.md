@@ -66,7 +66,7 @@ Text wird Schaltflächen häufig zugewiesen, wenn sie einer Symbolleiste hinzuge
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

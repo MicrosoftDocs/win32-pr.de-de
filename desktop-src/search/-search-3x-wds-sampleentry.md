@@ -4,47 +4,47 @@ ms.assetid: 76b39ea6-2aaf-40e0-aa56-2165e188244d
 title: Verwandte Suchtechnologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 704f8a03738958e19712ff8cc4566e4b7f7396ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95ae966790a7842ee32bc2c68cf3f8f35b813ab28974a6290cc168bbedd2b1fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118051967"
 ---
 # <a name="related-search-technologies"></a>Verwandte Suchtechnologien
 
-In diesem Thema werden Technologien im Zusammenhang mit [Windows Search](-search-3x-wds-overview.md)beschrieben.
+In diesem Thema werden Technologien beschrieben, die sich auf [Windows Search](-search-3x-wds-overview.md)beziehen.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Unternehmenssuche](#enterprise-search)
-    -   [SharePoint Enterprise-Suche](#sharepoint-enterprise-search)
--   [Windows-Desktop Suche 2. x](#windows-desktop-search-2x)
--   [Platform SDK: Indizierungs Dienst](#platform-sdk-indexing-service)
+-   [Enterprise Suche](#enterprise-search)
+    -   [SharePoint Enterprise Suchen](#sharepoint-enterprise-search)
+-   [Windows Desktopsuche 2.x](#windows-desktop-search-2x)
+-   [Plattform-SDK: Indizierungsdienst](#platform-sdk-indexing-service)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="enterprise-search"></a>Unternehmenssuche
+## <a name="enterprise-search"></a>Enterprise Suche
 
-Eine Übersicht über die technischen Ressourcen für die [Unternehmenssuche von Microsoft](https://www.microsoft.com/enterprisesearch/en/us/default.aspx)finden Sie unter:
+Eine Übersicht über technische Ressourcen für [Enterprise Suche von Microsoft](https://www.microsoft.com/enterprisesearch/en/us/default.aspx)finden Sie unter:
 
--   [Enterprise Search-Ressourcen Center](https://developer.microsoft.com/office/docs)
--   [Blog zu Microsoft Enterprise Search](https://blogs.msdn.com/b/enterprisesearch/rss.aspx)
+-   [Enterprise Ressourcencenter durchsuchen](https://developer.microsoft.com/office/docs)
+-   [Microsoft Enterprise Search-Blog](https://blogs.msdn.com/b/enterprisesearch/rss.aspx)
 
-### <a name="sharepoint-enterprise-search"></a>SharePoint Enterprise-Suche
+### <a name="sharepoint-enterprise-search"></a>SharePoint Enterprise Suchen
 
-SharePoint Foundation 2010 bietet [Abfragen aus Server seitigem Code](/previous-versions/office/developer/sharepoint-2010/ee536691(v=office.14)) und das [Abfragen von Client seitigem Code](/previous-versions/office/developer/sharepoint-2010/ee539764(v=office.14)). Weitere Informationen zum Abfragen, suchen nach neuen Inhalten und verbessern der Relevanz mit SharePoint Server 2010 Enterprise Search finden Sie unter [Grundlagen der Unternehmenssuche](/previous-versions/office/ee554857(v=office.14)).
+SharePoint Foundation 2010 bietet [Abfragen aus serverseitigem Code](/previous-versions/office/developer/sharepoint-2010/ee536691(v=office.14)) und Abfragen aus [clientseitigem Code.](/previous-versions/office/developer/sharepoint-2010/ee539764(v=office.14)) Weitere Informationen zum Abfragen, Suchen nach neuen Inhalten und Verbessern der Relevanz mit Sharepoint Server 2010 Enterprise Search finden Sie unter [Enterprise Search Fundamentals](/previous-versions/office/ee554857(v=office.14)).
 
-Die Windows 7-Suche unterstützt die Suche nach Verbund zu Remote Daten speichern mithilfe von OpenSearch-Technologien, die Benutzern den Zugriff auf und die Interaktion mit ihren Remote Daten innerhalb von Windows Explorer ermöglichen. SharePoint Search Server 2008 und MOSS 2007 SP2 unterstützen auch die Verbund Suche von Remote Servern mithilfe von OpenSearch. Weitere Informationen zur Bereitstellung von Search Server 2008 mit Office SharePoint Server 2007 finden Sie unter [Federated Search \[ Search Server 2008 \] ](/previous-versions/office/bb931109(v=office.14)). Informationen zur Facetten Suche mit Moss, bei der die Suchergebnisse nach Kategorie verfeinert werden, finden Sie unter [codeplex](https://www.codeplex.com/FacetedSearch).
+Windows 7 Die Suche unterstützt den Suchverbund mit Remotedatenspeichern mithilfe von OpenSearch Technologien, die es Benutzern ermöglichen, über Windows Explorer auf ihre Remotedaten zuzugreifen und mit ihnen zu interagieren. SharePoint Search Server 2008 und MOSS 2007 SP2 unterstützen auch die Verbundsuche von Remoteservern mithilfe von OpenSearch. Informationen zur Bereitstellung von Search Server 2008 mit Office SharePoint Server 2007 finden Sie unter [ \[ Suchserver 2008 \] der Verbundsuche.](/previous-versions/office/bb931109(v=office.14)) Informationen zur MOSS-Facettensuche, bei der Suchergebnisse nach Kategorie neu gesucht werden, finden Sie unter [Codeplex](https://www.codeplex.com/FacetedSearch).
 
-Windows Search-Protokollhandler verwenden Designspezifikationen ähnlich wie SharePoint Server, und Sie können häufig austauschbar verwendet werden. Wenn Benutzer also Legacy Datenbanken, e-Mail-Speicher oder andere Datenstrukturen durchsuchen müssen, die nicht von Windows Search unterstützt werden, sollten Sie zunächst feststellen, ob ein Protokollhandler für diesen Datenspeicher bereits vorhanden ist, z. b. für die Verwendung mit einer anderen Anwendung wie SharePoint Server. Wenn dies der Fall ist, können Sie diesen Protokollhandler auf dem System installieren.
+Windows Suchprotokollhandler verwenden Entwurfsspezifikationen, die SharePoint Server ähneln, und sie können häufig austauschbar verwendet werden. Wenn Benutzer ältere Datenbanken, E-Mail-Speicher oder andere Datenstrukturen durchsuchen müssen, die von Windows Search nicht unterstützt werden, sollten Sie daher zunächst ermitteln, ob ein Protokollhandler für diesen Datenspeicher bereits vorhanden ist, z. B. für die Verwendung mit einer anderen Anwendung wie SharePoint Server. Wenn ja, können Sie diesen Protokollhandler auf dem System installieren.
 
-## <a name="windows-desktop-search-2x"></a>Windows-Desktop Suche 2. x
+## <a name="windows-desktop-search-2x"></a>Windows Desktopsuche 2.x
 
-Die Verwendung der-und-Entwicklung für die 2. x-Versionen von Microsoft Windows Desktop Search (WDS) wird dringend davon abgeraten. Verwenden Sie anstelle der [Windows-Desktop Suche 2. x](../lwef/-search-2x-wds-overview.md)die [Windows-Suche](-search-3x-wds-overview.md) und die Windows-Suche- [API](-search-reference-entry-page.md).
+Von der Verwendung von und der Entwicklung für die 2.x-Versionen von Microsoft Windows Desktop Search (WDS) wird dringend abgeraten. Anstatt [Windows Desktopsuche 2.x](../lwef/-search-2x-wds-overview.md)zu verwenden, verwenden Sie [Windows Search-](-search-3x-wds-overview.md) und [Windows Search-API.](-search-reference-entry-page.md)
 
-## <a name="platform-sdk-indexing-service"></a>Platform SDK: Indizierungs Dienst
+## <a name="platform-sdk-indexing-service"></a>Plattform-SDK: Indizierungsdienst
 
-[Platform SDK: der Indizierungs Dienst](/previous-versions/windows/desktop/indexsrv/indexsrv-portal) ist ab Windows XP veraltet. Verwenden Sie stattdessen die [Windows-Suche](-search-3x-wds-overview.md) und die Windows-Suche- [API](-search-reference-entry-page.md).
+[Plattform-SDK: Der Indizierungsdienst](/previous-versions/windows/desktop/indexsrv/indexsrv-portal) ist ab Windows XP veraltet. Verwenden Sie stattdessen [Windows Search-](-search-3x-wds-overview.md) und [Windows Search-API.](-search-reference-entry-page.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -53,19 +53,19 @@ Die Verwendung der-und-Entwicklung für die 2. x-Versionen von Microsoft Windows
 [Übersicht über Windows Search](-search-3x-wds-overview.md)
 </dt> <dt>
 
-[Entwicklerhandbuch für Windows Search](-search-developers-guide-entry-page.md)
+[Windows Search Developer es Guide (Entwicklerhandbuch durchsuchen)](-search-developers-guide-entry-page.md)
 </dt> <dt>
 
-[Referenz zur Windows-Suche](-search-reference-entry-page.md)
+[Windows Suchreferenz](-search-reference-entry-page.md)
 </dt> <dt>
 
-[Code Beispiele für Windows Search](-search-samples-ovw.md)
+[Windows Suchen von Codebeispielen](-search-samples-ovw.md)
 </dt> <dt>
 
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
 </dt> <dt>
 
-[Glossar für Windows-Suche](search-glossary.md)
+[Windows Search Glossary](search-glossary.md)
 </dt> </dl>
 
  

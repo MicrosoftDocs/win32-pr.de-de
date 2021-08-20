@@ -1,8 +1,8 @@
 ---
-description: Zum Herstellen einer Verbindung mit einem WMI-Namespace auf einem Remote Computer müssen Sie möglicherweise die Einstellungen für die Windows-Firewall, die Benutzerkontensteuerung (User Account Control, UAC), DCOM oder den Common Information Model Objekt-Manager (CIMOM) ändern.
+description: Zum Herstellen einer Verbindung mit einem WMI-Namespace auf einem Remotecomputer müssen Sie möglicherweise die Einstellungen für Windows-Firewall, Benutzerkontensteuerung (User Account Control, UAC), DCOM oder Common Information Model Object Manager (CIMOM) ändern.
 ms.assetid: 028b3101-0945-4288-bf32-ef4ad12a55f9
 ms.tgt_platform: multiple
-title: Einrichten einer Remote-WMI-Verbindung
+title: Einrichten einer WMI-Remoteverbindung
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,20 +10,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6ee254e12ecd806cd286d4a55746e203a3136b6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b88aa453646e60bf17e31f1197d76506bb4f75453eb800dc0fa272946a3bf8df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117925702"
 ---
-# <a name="setting-up-a-remote-wmi-connection"></a>Einrichten einer Remote-WMI-Verbindung
+# <a name="setting-up-a-remote-wmi-connection"></a>Einrichten einer WMI-Remoteverbindung
 
-Zum Herstellen einer Verbindung mit einem WMI-Namespace auf einem Remote Computer müssen Sie möglicherweise die Einstellungen für die [Windows-Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)), die [Benutzerkontensteuerung (User Account Control, UAC)](/previous-versions/aa905108(v=msdn.10)), DCOM oder den Common Information Model Objekt-Manager (CIMOM) ändern.
+Zum Herstellen einer Verbindung mit einem WMI-Namespace auf einem Remotecomputer müssen Sie möglicherweise die Einstellungen für [Windows-Firewall,](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11))Benutzerkontensteuerung [(User Account Control, UAC),](/previous-versions/aa905108(v=msdn.10))DCOM oder Common Information Model Object Manager (CIMOM) ändern.
 
 In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Windows-Firewall-Einstellungen](#windows-firewall-settings)
+-   [Windows-Firewalleinstellungen](#windows-firewall-settings)
 -   [Einstellungen der Benutzerkontensteuerung](#user-account-control-settings)
 -   [DCOM-Einstellungen](#dcom-settings)
 -   [CIMOM-Einstellungen](#cimom-settings)
@@ -31,102 +31,102 @@ In diesem Thema werden die folgenden Abschnitte erläutert:
 
 ## <a name="windows-firewall-settings"></a>Windows-Firewalleinstellungen
 
-WMI-Einstellungen für Windows-Firewall-Einstellungen ermöglichen nur WMI-Verbindungen und keine anderen DCOM-Anwendungen.
+WMI-Einstellungen für Windows-Firewalleinstellungen ermöglichen nur WMI-Verbindungen und nicht auch andere DCOM-Anwendungen.
 
-Eine Ausnahme muss in der Firewall für WMI auf dem Remote Zielcomputer festgelegt werden. Die Ausnahme für WMI ermöglicht WMI, Remote Verbindungen und asynchrone Rückrufe zu Unsecapp.exe zu empfangen. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+Eine Ausnahme muss in der Firewall für WMI auf dem Remotezielcomputer festgelegt werden. Die Ausnahme für WMI ermöglicht WMI das Empfangen von Remoteverbindungen und asynchronen Rückrufen Unsecapp.exe. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)von .
 
-Wenn eine Client Anwendung eine eigene Senke erstellt, muss diese Senke explizit den Firewallausnahmen hinzugefügt werden, damit Rückrufe erfolgreich ausgeführt werden können.
+Wenn eine Clientanwendung eine eigene Senke erstellt, muss diese Senke explizit den Firewallausnahmen hinzugefügt werden, damit Rückrufe erfolgreich ausgeführt werden können.
 
-Die Ausnahme für WMI funktioniert auch, wenn WMI mit einem Fixed-Port mit dem Befehl **winmgmt/standalonehost** gestartet wurde. Weitere Informationen finden Sie unter [Einrichten eines Fixed-Ports für WMI](setting-up-a-fixed-port-for-wmi.md).
+Die Ausnahme für WMI funktioniert auch, wenn WMI mit einem festen Port mithilfe des **Befehls winmgmt /standalonehost gestartet** wurde. Weitere Informationen finden Sie unter [Einrichten eines festen Ports für WMI.](setting-up-a-fixed-port-for-wmi.md)
 
-Sie können den WMI-Datenverkehr über die Benutzeroberfläche der Windows-Firewall aktivieren oder deaktivieren.
+Sie können WMI-Datenverkehr über die Windows-Firewall-Benutzeroberfläche aktivieren oder deaktivieren.
 
-**So aktivieren oder deaktivieren Sie WMI-Datenverkehr über die Firewall**
+**So aktivieren oder deaktivieren Sie WMI-Datenverkehr über die Firewallbenutzeroberfläche**
 
-1.  Klicken Sie in der **Systemsteuerung** auf **Sicherheit** und dann auf **Windows-Firewall**.
-2.  Klicken Sie auf **Einstellungen ändern** und dann auf die Registerkarte **Ausnahmen** .
-3.  Aktivieren Sie im Fenster Ausnahmen das Kontrollkästchen für **Windows-Verwaltungsinstrumentation (WMI)** , um den WMI-Datenverkehr über die Firewall zu aktivieren. Deaktivieren Sie das Kontrollkästchen, um den WMI-Datenverkehr zu deaktivieren.
+1.  Klicken Sie **Systemsteuerung** auf **Sicherheit** und dann auf **Windows-Firewall**.
+2.  Klicken **Sie auf Einstellungen** ändern und dann auf die Registerkarte **Ausnahmen.**
+3.  Aktivieren Sie im Fenster Ausnahmen das Kontrollkästchen für Windows-Verwaltungsinstrumentation **(WMI),** um WMI-Datenverkehr über die Firewall zu aktivieren. Deaktivieren Sie das Kontrollkästchen, um WMI-Datenverkehr zu deaktivieren.
 
-Sie können den WMI-Datenverkehr über die Firewall an der Eingabeaufforderung aktivieren oder deaktivieren.
+Sie können WMI-Datenverkehr über die Firewall an der Eingabeaufforderung aktivieren oder deaktivieren.
 
 **So aktivieren oder deaktivieren Sie WMI-Datenverkehr an der Eingabeaufforderung mithilfe der WMI-Regelgruppe**
 
--   Verwenden Sie die folgenden Befehle an einer Eingabeaufforderung. Geben Sie Folgendes ein, um den WMI-Datenverkehr über die Firewall zu aktivieren.
+-   Verwenden Sie die folgenden Befehle an einer Eingabeaufforderung. Geben Sie Folgendes ein, um WMI-Datenverkehr über die Firewall zu aktivieren.
 
-    **netsh advfirewall firewall set rule Group = "Windows Management Instrumentation (WMI)" New enable = yes**
+    **netsh advfirewall firewall set rule group="windows management instrumentation (wmi)" new enable=yes**
 
-    Geben Sie folgenden Befehl ein, um den WMI-Datenverkehr über die Firewall zu deaktivieren.
+    Geben Sie den folgenden Befehl ein, um den WMI-Datenverkehr durch die Firewall zu deaktivieren.
 
-    **netsh advfirewall firewall set rule Group = "Windows Management Instrumentation (WMI)" New enable = no**
+    **netsh advfirewall firewall set rule group="windows management instrumentation (wmi)" new enable=no**
 
-Anstatt den einzelnen WMI-Regel Gruppen Befehl zu verwenden, können Sie auch einzelne Befehle für jeden DCOM-, WMI-Dienst und jede Senke verwenden.
+Anstatt den einzelnen WMI-Regelgruppenbefehl zu verwenden, können Sie auch einzelne Befehle für jeden DCOM-, WMI-Dienst und jede Senke verwenden.
 
-**So aktivieren Sie WMI-Datenverkehr mit separaten Regeln für DCOM, WMI, Rückruf Senke und ausgehende Verbindungen**
+**So aktivieren Sie WMI-Datenverkehr mit separaten Regeln für DCOM, WMI, Rückrufsenke und ausgehende Verbindungen**
 
-1.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für den DCOM-Port 135 einzurichten.
+1.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für DCOM-Port 135 zu erstellen.
 
-    **netsh advfirewall Firewall Add Rule dir = in Name = "DCOM" Program =% systemroot% \\ system32 \\svchost.exe Service = RPCSS Action = Allow Protocol = TCP localport = 135**
+    **netsh advfirewall firewall add rule dir=in name="DCOM" program=%systemroot% \\ system32 \\svchost.exe service=rpcss action=allow protocol=TCP localport=135**
 
-2.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für den WMI-Dienst einzurichten.
+2.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für den WMI-Dienst zu erstellen.
 
-    **netsh advfirewall Firewall Add Rule dir = in Name = "WMI" Program =% systemroot% \\ system32 \\svchost.exe Service = WinMgmt Action = Allow Protocol = TCP localport = any**
+    **netsh advfirewall firewall add rule dir=in name ="WMI" program=%systemroot% \\ system32 \\svchost.exe service=winmgmt action = allow protocol=TCP localport=any**
 
-3.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für die Senke zu erstellen, die Rückrufe von einem Remote Computer empfängt.
+3.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für die Senke zu erstellen, die Rückrufe von einem Remotecomputer empfängt.
 
-    **netsh advfirewall Firewall Add Rule dir = in Name = "unabcapp" Program =% systemroot% \\ system32 \\ WBEM \\unsecapp.exe Action = Allow**
+    **netsh advfirewall firewall add rule dir=in name ="UnsecApp" program=%systemroot% \\ system32 \\ wbem \\unsecapp.exe action=allow**
 
-4.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für ausgehende Verbindungen mit einem Remote Computer einzurichten, mit dem der lokale Computer asynchron kommuniziert.
+4.  Verwenden Sie den folgenden Befehl, um eine Firewallausnahme für ausgehende Verbindungen mit einem Remotecomputer herzustellen, mit dem der lokale Computer asynchron kommuniziert.
 
-    **netsh advfirewall Firewall Add Rule dir = out Name = "WMI \_ out" Program =% systemroot% \\ system32 \\svchost.exe Service = WinMgmt Action = Allow Protocol = TCP localport = any**
+    **netsh advfirewall firewall add rule dir=out name ="WMI \_ OUT" program=%systemroot% \\ system32 \\svchost.exe service=winmgmt action=allow protocol=TCP localport=any**
 
 Verwenden Sie die folgenden Befehle, um die Firewallausnahmen separat zu deaktivieren.
 
-**So deaktivieren Sie WMI-Datenverkehr mit separaten Regeln für DCOM, WMI, Rückruf Senke und ausgehende Verbindungen**
+**So deaktivieren Sie WMI-Datenverkehr mit separaten Regeln für DCOM, WMI, Rückrufsenke und ausgehende Verbindungen**
 
-1.  Zum Deaktivieren der DCOM-Ausnahme.
+1.  So deaktivieren Sie die DCOM-Ausnahme.
 
-    **netsh advfirewall Firewall Delete Rule Name = "DCOM"**
+    **netsh advfirewall firewall delete rule name="DCOM"**
 
-2.  Zum Deaktivieren der Ausnahme des WMI-Dienstanbieter.
+2.  So deaktivieren Sie die WMI-Dienstausnahme.
 
-    **netsh advfirewall Firewall Delete Rule Name = "WMI"**
+    **netsh advfirewall firewall delete rule name="WMI"**
 
-3.  , Wenn die Senke Ausnahme deaktiviert werden soll.
+3.  So deaktivieren Sie die Senkenausnahme.
 
-    **netsh advfirewall Firewall Delete Rule Name = "unabcapp"**
+    **netsh advfirewall firewall delete rule name="UnsecApp"**
 
-4.  , Wenn die ausgehende Ausnahme deaktiviert werden soll.
+4.  So deaktivieren Sie die ausgehende Ausnahme.
 
-    **netsh advfirewall Firewall Delete Rule Name = "WMI \_ out"**
+    **netsh advfirewall firewall delete rule name="WMI \_ OUT"**
 
 ## <a name="user-account-control-settings"></a>Einstellungen der Benutzerkontensteuerung
 
-Die Benutzerkontensteuerung (User Account Control, UAC)-Zugriffs Token-Filterung kann beeinflussen, welche Vorgänge in WMI-Namespaces zulässig sind oder welche Daten zurückgegeben werden. Unter UAC werden alle Konten in der lokalen Administratoren Gruppe mit einem Standardbenutzer [*Zugriffs Token*](/windows/desktop/SecGloss/a-gly)ausgeführt, das auch als UAC-Zugriffs Token-Filterung bezeichnet wird. Ein Administrator Konto kann ein Skript mit erhöhten Berechtigungen ausführen – "als Administrator ausführen".
+Die Filterung von Zugriffstoken der Benutzerkontensteuerung (User Account Control, UAC) kann sich darauf auswirken, welche Vorgänge in WMI-Namespaces zulässig sind oder welche Daten zurückgegeben werden. Unter UAC werden alle Konten in der lokalen Administratorgruppe mit einem Standardbenutzerzugriffstoken [*ausgeführt,*](/windows/desktop/SecGloss/a-gly)das auch als UAC-Zugriffstokenfilterung bezeichnet wird. Ein Administratorkonto kann ein Skript mit erhöhten Rechten ausführen– "Als Administrator ausführen".
 
-Wenn Sie keine Verbindung mit dem integrierten Administrator Konto herstellen, wirkt sich UAC anders auf die Verbindungen mit einem Remote Computer aus, je nachdem, ob sich die beiden Computer in einer Domäne oder Arbeitsgruppe befinden. Weitere Informationen zu UAC und Remote Verbindungen finden Sie unter [Benutzerkontensteuerung und WMI](user-account-control-and-wmi.md).
+Wenn Sie keine Verbindung mit dem integrierten Administratorkonto herstellen, wirkt sich die UAC auf Verbindungen mit einem Remotecomputer unterschiedlich aus, je nachdem, ob sich die beiden Computer in einer Domäne oder Arbeitsgruppe befinden. Weitere Informationen zu UAC und Remoteverbindungen finden Sie unter [Benutzerkontensteuerung und WMI.](user-account-control-and-wmi.md)
 
 ## <a name="dcom-settings"></a>DCOM-Einstellungen
 
-Weitere Informationen zu DCOM-Einstellungen finden Sie unter [Sichern einer Remote-WMI-Verbindung](securing-a-remote-wmi-connection.md). Die UAC wirkt sich jedoch auf Verbindungen für nicht-Domänen Benutzerkonten aus. Wenn Sie über ein nicht-Domänen Benutzerkonto, das in der lokalen Administratoren Gruppe des Remote Computers enthalten ist, eine Verbindung mit einem Remote Computer herstellen, müssen Sie dem Konto explizit Remote-DCOM-Zugriff,-Aktivierung und-Startrechte erteilen.
+Weitere Informationen zu DCOM-Einstellungen finden Sie unter [Sichern einer WMI-Remoteverbindung.](securing-a-remote-wmi-connection.md) UAC wirkt sich jedoch auf Verbindungen für Benutzerkonten ohne Domänen aus. Wenn Sie eine Verbindung mit einem Remotecomputer herstellen, indem Sie ein Nichtdomänenbenutzerkonto verwenden, das in der lokalen Administratorgruppe des Remotecomputers enthalten ist, müssen Sie dem Konto explizit DCOM-Remotezugriffs-, Aktivierungs- und Startrechte gewähren.
 
 ## <a name="cimom-settings"></a>CIMOM-Einstellungen
 
-Die CIMOM-Einstellungen müssen aktualisiert werden, wenn die Remote Verbindung zwischen Computern besteht, die keine Vertrauensstellung haben. Andernfalls tritt bei einer asynchronen Verbindung ein Fehler auf. Diese Einstellung sollte für Computer in derselben Domäne oder in vertrauenswürdigen Domänen nicht geändert werden.
+Die CIMOM-Einstellungen müssen aktualisiert werden, wenn die Remoteverbindung zwischen Computern besteht, die keine Vertrauensstellung haben. Andernfalls kann eine asynchrone Verbindung nicht hergestellt werden. Diese Einstellung sollte nicht für Computer in derselben Domäne oder in vertrauenswürdigen Domänen geändert werden.
 
-Der folgende Registrierungs Eintrag muss geändert werden, um anonyme Rückrufe zuzulassen:
+Der folgende Registrierungseintrag muss geändert werden, um anonyme Rückrufe zu ermöglichen:
 
-**HKEY \_ Software für den lokalen \_ Computer** \\  \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **Zuteilungs Nummer**<dl> <dt>
+**HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **AllowAnonymousCallback**<dl> <dt>
 
                Data type
 </dt> <dd>               REG \_ DWORD</dd> </dl>
 
-Wenn der Wert von "Zuordnungen" auf "0" festgelegt ist, verhindert der WMI-Dienst anonyme **Rückrufe** an den Client. Wenn der Wert auf 1 festgelegt ist, lässt der WMI-Dienst anonyme Rückrufe an den Client zu.
+Wenn der **AllowAnonymousCallback-Wert** auf 0 festgelegt ist, verhindert der WMI-Dienst anonyme Rückrufe an den Client. Wenn der Wert auf 1 festgelegt ist, lässt der WMI-Dienst anonyme Rückrufe an den Client zu.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md)
+[Herstellen einer Verbindung mit WMI auf einem Remotecomputer](connecting-to-wmi-on-a-remote-computer.md)
 </dt> </dl>
 
  

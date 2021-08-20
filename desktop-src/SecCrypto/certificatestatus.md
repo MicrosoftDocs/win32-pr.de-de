@@ -22,13 +22,13 @@ ms.locfileid: "117769999"
 ---
 # <a name="certificatestatus-object"></a>CertificateStatus-Objekt
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Das **CertificateStatus-Objekt** enthält Informationen zum Erstellen einer Zertifikatvertrauenskette.
 
 ## <a name="members"></a>Member
 
-Das **CertificateStatus-Objekt** verfügt über die folgenden Membertypen:
+Das **CertificateStatus-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -39,10 +39,10 @@ Das **CertificateStatus-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                               | BESCHREIBUNG                                                                                                                                  |
+| Methode                                                               | Beschreibung                                                                                                                                  |
 |:---------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ApplicationPolicies**](certificatestatus-applicationpolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die OIDs der Anwendungsrichtlinie darstellt.<br/>                                           |
-| [**CertificatePolicies**](certificatestatus-certificatepolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die Zertifikatrichtlinien-OIDs darstellt, die beim Erstellen der Kette verwendet werden.<br/>                |
+| [**ApplicationPolicies**](certificatestatus-applicationpolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die Anwendungsrichtlinien-OIDs darstellt.<br/>                                           |
+| [**CertificatePolicies**](certificatestatus-certificatepolicies.md) | Gibt eine [**OIDs-Auflistung**](oids.md) zurück, die die zertifikatrichtlinien-OIDs darstellt, die während der Kettenerstellung verwendet werden.<br/>                |
 | [**EKU**](certificatestatus-eku.md)                                 | Gibt das [**EKU-Objekt**](eku.md) zurück, mit dem die EKU-Elemente festgelegt werden, die beim Festlegen des Gültigkeitsstatus eines Zertifikats überprüft werden sollen.<br/> |
 
 
@@ -55,12 +55,12 @@ Das **CertificateStatus-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                                                                                       |
+| Eigenschaft                                                                        | Zugriffstyp           | Beschreibung                                                                                                                                                                                                                                                       |
 |:--------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Zertifikate**](certificatestatus-certificates.md)<br/>               | Lesen/Schreiben<br/> | Legt die Auflistung von Zertifikaten fest, die zum Erstellen der Zertifikatkette verwendet werden können, oder ruft sie ab.<br/> **CAPICOM 2.0.0.3 und früher:** Die [**Certificates-Eigenschaft**](certificatestatus-certificates.md) wird nicht unterstützt.<br/>                    |
-| [**CheckFlag**](certificatestatus-checkflag.md)<br/>                     | Lesen/Schreiben<br/> | Gültigkeitsprüfungsflag. Werte können mithilfe eines logischen **OR-Operators verbunden** werden. Das Standardüberprüfungsflag [**ist CAPICOM \_ CHECK ONLINE \_ \_ ALL.**](capicom-check-flag.md)<br/>                                                                                     |
+| [**CheckFlag**](certificatestatus-checkflag.md)<br/>                     | Lesen/Schreiben<br/> | Gültigkeitsprüfungsflag. Werte können mithilfe eines logischen **OR-Operators** verknüpft werden. Das Standardprüfflag ist [**CAPICOM \_ CHECK \_ ONLINE \_ ALL**](capicom-check-flag.md).<br/>                                                                                     |
 | [**Ergebnis**](certificatestatus-result.md)<br/>                           | Schreibgeschützt<br/>  | Gibt an, ob das Zertifikat gültig ist. Die Gültigkeit des Zertifikats wird mithilfe der aktuellen Einstellung der [**CheckFlag-Eigenschaft**](certificatestatus-checkflag.md) und der Richtlinieneinstellungen des Zertifikats überprüft. Dies ist die Standardeigenschaft.<br/> |
-| [**UrlRetrievalTimeout**](certificatestatus-urlretrievaltimeout.md)<br/> | Lesen/Schreiben<br/> | Legt die Zeitdauer fest oder ruft sie ab, bevor eine URL als nicht erreichbar bestimmt wird.<br/>                                                                                                                                                                     |
+| [**UrlRetrievalTimeout**](certificatestatus-urlretrievaltimeout.md)<br/> | Lesen/Schreiben<br/> | Legt die Zeitspanne fest, nach der eine URL als nicht erreichbar bestimmt wird, oder ruft sie ab.<br/>                                                                                                                                                                     |
 | [**VerificationTime**](certificatestatus-verificationtime.md)<br/>       | Lesen/Schreiben<br/> | Legt den Zeitpunkt fest, zu dem das Zertifikat überprüft wurde, oder ruft diesen ab.<br/>                                                                                                                                                                                          |
 
 

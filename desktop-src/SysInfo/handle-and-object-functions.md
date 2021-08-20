@@ -17,13 +17,13 @@ Die folgenden Funktionen werden mit Handles und Objekten verwendet.
 
 
 
-| Funktion                                             | BESCHREIBUNG                                                                                  |
+| Funktion                                             | Beschreibung                                                                                  |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**Closehandle**](/windows/win32/api/handleapi/nf-handleapi-closehandle)                   | Schließt ein geöffnetes Objekthandle.                                                                |
+| [**Closehandle**](/windows/win32/api/handleapi/nf-handleapi-closehandle)                   | Schließt ein geöffnetes Objekthand handle.                                                                |
 | [**CompareObjectHandles**](/windows/desktop/api/handleapi/nf-handleapi-compareobjecthandles) | Vergleicht zwei Objekthandles, um zu bestimmen, ob sie auf das gleiche zugrunde liegende Kernelobjekt verweisen. |
-| [**DuplicateHandle**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)           | Dupliziert ein Objekthandle.                                                                 |
-| [**GetHandleInformation**](/windows/win32/api/handleapi/nf-handleapi-gethandleinformation) | Ruft bestimmte Eigenschaften eines Objekthandle ab.                                            |
-| [**SetHandleInformation**](/windows/win32/api/handleapi/nf-handleapi-sethandleinformation) | Legt bestimmte Eigenschaften eines Objekthandle fest.                                                 |
+| [**DuplicateHandle**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)           | Dupliziert ein Objekthand handle.                                                                 |
+| [**GetHandleInformation**](/windows/win32/api/handleapi/nf-handleapi-gethandleinformation) | Ruft bestimmte Eigenschaften eines Objekthandpunkts ab.                                            |
+| [**SetHandleInformation**](/windows/win32/api/handleapi/nf-handleapi-sethandleinformation) | Legt bestimmte Eigenschaften eines Objekthandpunkts fest.                                                 |
 
 
 

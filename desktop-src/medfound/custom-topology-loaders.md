@@ -1,32 +1,32 @@
 ---
-description: Benutzerdefinierte topologielader
+description: Benutzerdefinierte Topologielader
 ms.assetid: 3982b07e-3179-45c1-9f17-f2114363f53d
-title: Benutzerdefinierte topologielader
+title: Benutzerdefinierte Topologielader
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34a8f9e24b207d43620e7b2d09080d244b0a9e72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02ca9cf393b83693199cea984183bf88186f74322ed816352e3c43d19a6e880b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117880385"
 ---
-# <a name="custom-topology-loaders"></a>Benutzerdefinierte topologielader
+# <a name="custom-topology-loaders"></a>Benutzerdefinierte Topologielader
 
-Wenn eine Anwendung eine partielle Topologie in der Medien Sitzung in eine Warteschlange stellt, verwendet die Medien Sitzung einen topologielader, um die Topologie aufzulösen. Standardmäßig verwendet die Medien Sitzung die Standard Media Foundation-Implementierung des topologieladers, aber Sie können auch eine benutzerdefinierte-Implementierung bereitstellen. Dadurch erhalten Sie mehr Kontrolle über die endgültige Topologie. Ein benutzerdefiniertes topologielader muss die [**imftopoloader**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader) -Schnittstelle implementieren.
+Wenn eine Anwendung eine Teiltopologie in der Mediensitzung in die Warteschlange einreiht, verwendet die Mediensitzung ein Topologielader, um die Topologie aufzulösen. Standardmäßig verwendet die Mediensitzung die standardmäßige Media Foundation implementierung des Topologieladeers, aber Sie können auch eine benutzerdefinierte Implementierung bereitstellen. Dadurch erhalten Sie mehr Kontrolle über die endgültige Topologie. Ein benutzerdefiniertes Topologielader muss [**dieTOPOLOGYTopoLoader-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader) implementieren.
 
-Gehen Sie folgendermaßen vor, um ein benutzerdefiniertes topologielader in der Medien Sitzung festzulegen:
+Gehen Sie wie folgt vor, um ein benutzerdefiniertes Topologielader für die Mediensitzung festlegen:
 
-1.  Erstellen Sie einen leeren Attribut Speicher, indem Sie [**mfcreateattribute**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)aufrufen.
-2.  Legen Sie das [**MF- \_ Sitzungs \_ topoloader**](mf-session-topoloader-attribute.md) -Attribut für den Attribut Speicher fest. Der Wert des-Attributs ist die CLSID Ihres benutzerdefinierten Lade Moduls.
-3.  Rufen Sie [**mfkreatemediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) auf, um die Medien Sitzung für ungeschützten Inhalt zu erstellen, oder [**mfkreatepmpmediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) , um die Medien Sitzung im geschützten Medien Pfad (PMP) zu erstellen.
+1.  Erstellen Sie einen leeren Attributspeicher, indem [**Sie MFCreateAttributes aufrufen.**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)
+2.  Legen Sie das [**MF \_ SESSION \_ TOPOLOADER-Attribut**](mf-session-topoloader-attribute.md) für den Attributspeicher fest. Der Wert des -Attributs ist die CLSID Des benutzerdefinierten Ladeers.
+3.  Rufen [**Sie MFCreateMediaSession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) auf, um die Mediensitzung für ungeschützten Inhalt zu erstellen, oder [**MFCreatePMPMediaSession,**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) um die Mediensitzung innerhalb des geschützten Medienpfads (PMP) zu erstellen.
 
 > [!Note]  
-> Um ein benutzerdefiniertes topologielader innerhalb des PMP zu verwenden, muss das topologielader eine vertrauenswürdige Komponente sein. Weitere Informationen finden Sie unter [geschützter Medien Pfad](protected-media-path.md).
+> Um ein benutzerdefiniertes Topologielader innerhalb des PMP zu verwenden, muss das Topologielader eine vertrauenswürdige Komponente sein. Weitere Informationen finden Sie unter [Protected Media Path](protected-media-path.md).
 
  
 
-Der folgende Code zeigt, wie ein benutzerdefiniertes topologielader für die Medien Sitzung festgelegt wird.
+Der folgende Code zeigt, wie ein benutzerdefiniertes Topologielader für die Mediensitzung festgelegt wird.
 
 
 ```C++
@@ -68,9 +68,9 @@ HRESULT CreateSession_CustomTopoLoader(REFCLSID clsid, IMFMediaSession **ppSessi
 
 
 
-Es ist nicht erforderlich, den gesamten topologieladealgorithmus in Ihrem topologielader zu implementieren. Als Alternative können Sie den Standard Media Foundation topologielader umschließen. Ändern Sie in der Implementierung der [**imftopoloader:: Load**](/windows/desktop/api/mfidl/nf-mfidl-imftopoloader-load) -Methode die Topologie nach Bedarf, und übergeben Sie die geänderte Topologie an den Standard-topologielader. Der Standard-topologielader schließt dann die Topologie ab. Sie können auch die vollständige Topologie ändern, bevor Sie Sie wieder an die Medien Sitzung übergeben.
+Es ist nicht erforderlich, den gesamten Topologieladealgorithmus in Ihrem Topologielader zu implementieren. Alternativ können Sie das Standard-Media Foundation Topologielader umschließen. Ändern Sie in Ihrer Implementierung der [**METHODETOPOLOGYTopoLoader::Load**](/windows/desktop/api/mfidl/nf-mfidl-imftopoloader-load) die Topologie nach Bedarf, und übergeben Sie die geänderte Topologie an das Standardtopologielader. Anschließend schließt das Standardtopologielader die Topologie ab. Sie können auch die abgeschlossene Topologie ändern, bevor Sie sie an die Mediensitzung übergeben.
 
-Der folgende Code zeigt die allgemeine Gliederung dieses Ansatzes. Es werden keine Details der [**Load**](/windows/desktop/api/mfidl/nf-mfidl-imftopoloader-load) -Methode angezeigt, da diese von den speziellen Anforderungen Ihrer Anwendung abhängen.
+Der folgende Code zeigt die allgemeine Gliederung dieses Ansatzes. Es werden keine Details der [**Load-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imftopoloader-load) gezeigt, da diese von den speziellen Anforderungen Ihrer Anwendung abhängen.
 
 
 ```C++
@@ -170,10 +170,10 @@ private:
 
 <dl> <dt>
 
-[**MF-abetopoloader**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopoloader)
+[**MFCreateTopoLoader**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopoloader)
 </dt> <dt>
 
-[Erweiterte topologiebildung](advanced-topology-building.md)
+[Advanced Topology Building](advanced-topology-building.md)
 </dt> </dl>
 
  

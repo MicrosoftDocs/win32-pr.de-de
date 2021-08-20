@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-IntMin-Attribut
-description: Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
+title: ms-WMI-intMin-Attribut
+description: Der Mindestwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 ms.assetid: 55f0f7ad-33d8-48e2-9924-49897085b078
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-WMI-IntMin-Attribut
-- AD-Schema für mswap-IntMin-Attribut
+- AD-Schema des ms-WMI-intMin-Attributs
+- AD-Schema des msWMI-IntMin-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69920496485e1b774bbef430466cd44529c57aa1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 677117d851bcf6128390be509286dad1ae2de419f1271081246b68c05ab42500
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117837374"
 ---
-# <a name="ms-wmi-intmin-attribute"></a>MS-WMI-IntMin-Attribut
+# <a name="ms-wmi-intmin-attribute"></a>ms-WMI-intMin-Attribut
 
-Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
+Der Mindestwert für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-WMI-IntMin                        |
-| LDAP-Display-Name | mswap-IntMin                         |
+| CN                | ms-WMI-intMin                        |
+| Ldap-Anzeigename | msWMI-IntMin                         |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator           |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator           |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1630              |
-| System-ID-GUID    | 68c2e3ba-9837-4c70-98e0-f d023 |
+| System-ID-GUID    | 68c2e3ba-9837-4c70-98e0-f0c33695d023 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,10 +57,10 @@ Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -78,10 +78,10 @@ Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -99,10 +99,10 @@ Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -120,10 +120,10 @@ Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -141,10 +141,10 @@ Der minimale Wert für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

@@ -1,6 +1,6 @@
 ---
-description: Wird von der standardmäßigen Kontextmenü Implementierung gesendet, um die Rückruffunktion anzufordern, die das Menü (lpfndfmcallback) zum Aufrufen eines Menübefehls aufruft.
-title: DFM_INVOKECOMMAND Meldung (shlobj. h)
+description: Wird von der Standardimplementierung des Kontextmenüs gesendet, um die Rückruffunktion anfordern, die das Menü (LPFNDFMCALLBACK) zum Aufrufen eines Menübefehls verarbeitet.
+title: DFM_INVOKECOMMAND (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: bd3200a6-b9e7-414c-9a01-c432cb306dba
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 168b25833deb6bde2424ea4552f4600b83bc9679
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6730de1e0c66093c0382b9b8fd04c05b5ea3dab4e151d581b155c1704bf26f58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118050760"
 ---
-# <a name="dfm_invokecommand-message"></a>DFM \_ InvokeCommand-Meldung
+# <a name="dfm_invokecommand-message"></a>DFM \_ INVOKECOMMAND-Nachricht
 
-Wird von der standardmäßigen Kontextmenü Implementierung gesendet, um die Rückruffunktion anzufordern, die das Menü ([**lpfndfmcallback**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback)) zum Aufrufen eines Menübefehls aufruft.
+Wird von der Standardimplementierung des Kontextmenüs gesendet, um die Rückruffunktion anfordern, die das Menü ([**LPFNDFMCALLBACK**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback)) verarbeitet, um einen Menübefehl auf aufruft.
 
 
 ```C++
@@ -38,7 +38,7 @@ DFM_INVOKECOMMAND
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
 Die Befehls-ID des ausgewählten Menübefehls. Die folgenden Flags werden erkannt:
@@ -47,62 +47,62 @@ Die Befehls-ID des ausgewählten Menübefehls. Die folgenden Flags werden erkann
 
 <span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>
 
-<span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>**DFM- \_ cmd \_ Löschen**
+<span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>**DFM \_ CMD \_ DELETE**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Löschen Sie das aktuelle Element.
+**Windows Vista und höher.** Löschen Sie das aktuelle Element.
 
 </dd> <dt>
 
 <span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>
 
-<span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>**DFM- \_ cmd- \_ Verschiebung**
+<span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>**DFM \_ CMD \_ MOVE**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Verschieben Sie das aktuelle Element.
+**Windows Vista und höher.** Verschieben Sie das aktuelle Element.
 
 </dd> <dt>
 
 <span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>
 
-<span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>**DFM- \_ cmd- \_ Kopie**
+<span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>**DFM \_ CMD \_ COPY**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Kopieren Sie das aktuelle Element.
+**Windows Vista und höher.** Kopieren Sie das aktuelle Element.
 
 </dd> <dt>
 
 <span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>
 
-<span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>**DFM- \_ cmd- \_ Link**
+<span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>**DFM \_ CMD \_ LINK**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Erstellen Sie einen Link zum aktuellen Element.
+**Windows Vista und höher.** Erstellen Sie einen Link zum aktuellen Element.
 
 </dd> <dt>
 
 <span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>
 
-<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**DFM- \_ cmd- \_ Eigenschaften**
+<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**\_DFM-CMD-EIGENSCHAFTEN \_**
 
 
 </dt> <dd>
 
-Zeigt die **Eigenschaften** Benutzeroberfläche für das Element an, auf dem das Menü aufgerufen wurde.
+Zeigt die **Eigenschaftenbenutzeroberfläche** für das Element an, für das das Menü aufgerufen wurde.
 
 </dd> <dt>
 
 <span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>
 
-<span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>**DFM- \_ cmd \_ NewFolder**
+<span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>**DFM \_ CMD \_ NEWFOLDER**
 
 
 </dt> <dd>
@@ -113,18 +113,18 @@ Wird nicht unterstützt.
 
 <span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>
 
-<span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>**DFM- \_ cmd \_ Einfügen**
+<span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>**DFM \_ CMD \_ PASTE**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Fügt ein Element an der aktuellen Position ein.
+**Windows Vista und höher.** Fügen Sie ein Element an der aktuellen Position ein.
 
 </dd> <dt>
 
 <span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>
 
-<span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>**DFM- \_ cmd- \_ viewlist**
+<span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>**DFM \_ CMD \_ VIEWLIST**
 
 
 </dt> <dd>
@@ -135,7 +135,7 @@ Wird nicht unterstützt.
 
 <span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>
 
-<span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>**DFM- \_ cmd- \_ ViewDetails**
+<span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>**DFM \_ CMD \_ VIEWDETAILS**
 
 
 </dt> <dd>
@@ -146,18 +146,18 @@ Wird nicht unterstützt.
 
 <span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>
 
-<span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>**DFM- \_ cmd- \_ pstelink**
+<span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>**DFM \_ CMD \_ PASTELINK**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Fügen Sie einen Link an der aktuellen Position ein.
+**Windows Vista und höher.** Fügen Sie einen Link an der aktuellen Position ein.
 
 </dd> <dt>
 
 <span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>
 
-<span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>**DFM \_ cmd \_ PasteSpecial**
+<span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>**DFM \_ CMD \_ PASTESPECIAL**
 
 
 </dt> <dd>
@@ -168,7 +168,7 @@ Wird nicht unterstützt.
 
 <span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>
 
-<span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>**DFM- \_ cmd \_ modalprop**
+<span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>**DFM \_ CMD \_ MODALPROP**
 
 
 </dt> <dd>
@@ -179,35 +179,35 @@ Wird nicht unterstützt.
 
 <span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>
 
-<span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>**Umbenennen von DFM- \_ cmd \_**
+<span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>**\_ \_ DFM-CMD-UMBENENNUNG**
 
 
 </dt> <dd>
 
-**Windows Vista und** höher. Benennen Sie das aktuelle Element um.
+**Windows Vista und höher.** Benennen Sie das aktuelle Element um.
 
 </dd> </dl> </dd> <dt>
 
-*args* \[ in\]
+*args* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die zusätzliche Argumente für den ausgewählten Menübefehl enthält. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die zusätzliche Argumente für den ausgewählten Menübefehl enthält. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Handler für diese Nachricht muss S false zurückgeben, \_ Wenn die Standard Implementierung den Standard Handler für den Befehl aufrufen soll. Gibt "S OK" zurück, \_ Wenn die Meldung behandelt wurde. Andernfalls wird ein Standard-HRESULT-Fehlercode zurückgegeben.
+Der Handler für diese Meldung muss S FALSE zurückgeben, wenn die Standardimplementierung den Standardhandler für \_ den Befehl aufrufen soll. Gibt S \_ OK zurück, wenn die Nachricht behandelt wurde. Andernfalls wird ein HRESULT-Standardfehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird abhängig von der Implementierung des Rückrufs entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet. Es gibt zwei APIs für die Rückruf Erstellung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2) , die einen Zeiger auf eine Rückruffunktion annimmt, oder [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu) , das ein Rückruf Objekt verwendet, das [**icontextmenucb**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb)unterstützt.
+Diese Nachricht wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie der Rückruf implementiert wird. Es gibt zwei APIs für die Rückrufkonstruktion: [**CDefFolderMenu \_ Create2,**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2) die einen Zeiger auf eine Rückruffunktion verwenden, oder [**SHCreateDefaultContextMenu,**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu) das ein Rückrufobjekt verwendet, das [**IContextMenuCB unterstützt.**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb)
 
-Die Elemente, für die der Befehl aufgerufen wird, werden in einem Datenobjekt bereitgestellt, das an die Rückruffunktion oder an die [**icontextmenucb:: callback**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenucb-callback) -Methode weitergegeben wird. Dieses Datenobjekt wird von der Datenquelle bereitgestellt, die den Rückruf implementiert. Um die Elemente aus dem Datenobjekt zu extrahieren, verwenden Sie [**shkreateshellitemarrayfromdataobject**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreateshellitemarrayfromdataobject).
+Die Elemente, für die der Befehl aufgerufen wird, werden in einem Datenobjekt bereitgestellt, das an die Rückruffunktion oder die [**IContextMenuCB::CallBack-Methode übergeben**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenucb-callback) wird. Dieses Datenobjekt wird von der Datenquelle bereitgestellt, die den Rückruf implementiert. Um die Elemente aus dem Datenobjekt zu extrahieren, verwenden Sie [**SHCreateShellItemArrayFromDataObject.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreateshellitemarrayfromdataobject)
 
-[**DFM \_ Invokecommandex**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und bietet weitere Informationen für den Rückruf. Verwenden Sie **DFM \_ invokecommandex** , wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in der Implementierung benötigt werden.
+[**DFM \_ INVOKECOMMANDEX**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und stellt weitere Informationen für den Rückruf zur Verfügung. Verwenden **Sie DFM \_ INVOKECOMMANDEX,** wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in Ihrer Implementierung benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -215,7 +215,7 @@ Die Elemente, für die der Befehl aufgerufen wird, werden in einem Datenobjekt b
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

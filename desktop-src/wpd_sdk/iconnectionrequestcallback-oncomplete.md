@@ -1,5 +1,5 @@
 ---
-description: Benachrichtigt eine Anwendung, dass eine zuvor geplante Anforderung Verbinden verbindung mit dem MTP-/Bluetooth abgeschlossen wurde.
+description: Benachrichtigt eine Anwendung, dass eine zuvor geplante Verbinden- oder Disconnect-Anforderung an das MTP-/Bluetooth-Gerät abgeschlossen wurde.
 ms.assetid: 1588d0ec-0d6a-4379-bfdc-4ba5fdaa4665
 title: IConnectionRequestCallback::OnComplete-Methode (Devpkey.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117843188"
 ---
 # <a name="iconnectionrequestcallbackoncomplete-method"></a>IConnectionRequestCallback::OnComplete-Methode
 
-Die **OnComplete-Methode** benachrichtigt eine Anwendung, dass eine zuvor geplante Verbinden- oder Disconnect-Anforderung an das MTP/Bluetooth abgeschlossen wurde.
+Die **OnComplete-Methode** benachrichtigt eine Anwendung, dass eine zuvor geplante Verbinden- oder Disconnect-Anforderung an das MTP-/Bluetooth-Gerät abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,9 +63,9 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Anwendung implementiert die [**IConnectionRequestCallback-Schnittstelle,**](iconnectionrequestcallback.md) um Benachrichtigungen über abgeschlossene Anforderungen zu empfangen und ausstehende Anforderungen abzubricht.
+Eine Anwendung implementiert die [**IConnectionRequestCallback-Schnittstelle,**](iconnectionrequestcallback.md) um Benachrichtigungen über abgeschlossene Anforderungen zu empfangen und ausstehende Anforderungen abzubrechen.
 
-Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu benachrichtigen, dass eine zuvor geplante Anforderung abgeschlossen wurde. Jede Anforderung kann durch den von der Anwendung bereitgestellten Rückruf nachverfolgt und abgebrochen werden. Wenn die Anwendung also mehrere Anforderungen gleichzeitig mit dem gleichen [**IPortableDeviceConnector-Objekt**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) senden muss, sollte jeder Anforderung ein eindeutiges [**IConnectionRequestCallback-Objekt**](iconnectionrequestcallback.md) als Eingabeparameter an die [**Methoden IPortableDeviceConnector::Verbinden**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) und [**IPortableDeviceConnector::D isconnector**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) übergeben werden.
+Windows Portable Geräte (WPD) ruft diese Methode auf, um eine Anwendung darüber zu informieren, dass eine zuvor geplante Anforderung abgeschlossen wurde. Jede Anforderung kann durch den von der Anwendung bereitgestellten Rückruf nachverfolgt und abgebrochen werden. Wenn die Anwendung mehrere Anforderungen gleichzeitig mit demselben [**IPortableDeviceConnector-Objekt**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) senden muss, sollte daher jeder Anforderung ein eindeutiges [**IConnectionRequestCallback-Objekt**](iconnectionrequestcallback.md) als Eingabeparameter an die Methoden [**IPortableDeviceConnector::Verbinden**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) und [**IPortableDeviceConnector::D isconnect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) übergeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu bena
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                              |
 | Header<br/>                   | <dl> <dt>Devpkey.h; </dt> <dt>Portabledeviceconnectapi.h</dt> </dl> |
 | Idl<br/>                      | <dl> <dt>Portabledeviceconnectapi.idl</dt> </dl>                                                                |
@@ -81,7 +81,7 @@ Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu bena
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

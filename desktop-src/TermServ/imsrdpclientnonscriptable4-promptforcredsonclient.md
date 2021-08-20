@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClientNonScriptable4 promptforkredsonclient (Eigenschaft)
-description: Gibt an, ob das Client Steuerelement ein Dialogfeld anzeigt, in dem Anmelde Informationen angefordert werden.
+title: IMsRdpClientNonScriptable4 PromptForCredsOnClient (Eigenschaft)
+description: Gibt an, ob das Clientsteuerfeld ein Dialogfeld anzeigt, das zur Eingabe von Anmeldeinformationen aufgefordert wird.
 ms.assetid: 426676be-0150-4a33-acd0-26423966f32a
 ms.tgt_platform: multiple
 keywords:
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, promptforkredsonclient-Eigenschaft
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, promptforkredsonclient-Eigenschaft
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, promptforkredsonclient-Eigenschaft
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, promptforkredsonclient-Eigenschaft
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, promptforkredsonclient-Eigenschaft
-- Promptforkredsonclient-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, promptforkredsonclient-Eigenschaft
+- PromptForCredsOnClient-Remotedesktopdienste
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
+- PromptForCredsOnClient-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , PromptForCredsOnClient-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -36,16 +36,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6443c503e107bb2edb164a17beedddb1bbbc88a5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4dd914e831f43ffd6dba88bd6b1879ab578902dfb0442d26397344a0df71f8c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117941502"
 ---
-# <a name="imsrdpclientnonscriptable4promptforcredsonclient-property"></a>IMsRdpClientNonScriptable4::P romptforkredsonclient-Eigenschaft
+# <a name="imsrdpclientnonscriptable4promptforcredsonclient-property"></a>IMsRdpClientNonScriptable4::P romptForCredsOnClient (Eigenschaft)
 
-Gibt an, ob das Client Steuerelement ein Dialogfeld anzeigt, in dem Anmelde Informationen angefordert werden.
+Gibt an, ob das Clientsteuerfeld ein Dialogfeld anzeigt, das zur Eingabe von Anmeldeinformationen aufgefordert wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -66,11 +66,11 @@ HRESULT get_PromptForCredsOnClient(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt fest, ob das Client Steuerelement ein Dialogfeld anzeigt, in dem Anmelde Informationen angefordert werden.
+Legt fest, ob das Clientsteuerfeld ein Dialogfeld anzeigt, das zur Eingabe von Anmeldeinformationen aufgefordert wird.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 

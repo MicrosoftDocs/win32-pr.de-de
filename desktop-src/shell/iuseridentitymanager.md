@@ -1,7 +1,7 @@
 ---
-description: Iuseridentitymanager wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.
+description: IUserIdentityManager wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: 3d24b858-bbaf-455c-83cd-3f6f93aba2a8
-title: Iuseridentitymanager-Schnittstelle (Msident. h)
+title: IUserIdentityManager-Schnittstelle (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,44 +13,44 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: d0d00399e0ba958ef63c5e6597eb4a34387f92f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3181677df73d2976853d373c2ec4b9ec24d321151598bf77acdc4ffbaa17508f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118049563"
 ---
-# <a name="iuseridentitymanager-interface"></a>Iuseridentitymanager-Schnittstelle
+# <a name="iuseridentitymanager-interface"></a>IUserIdentityManager-Schnittstelle
 
-\[**Iuseridentitymanager** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IUserIdentityManager** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Macht Methoden verfügbar, mit denen Benutzer Identitäten im System identifiziert, aufgelistet und verwaltet werden.
+Macht Methoden verfügbar, die Benutzeridentitäten im System identifizieren, aufzählen und verwalten.
 
 ## <a name="members"></a>Member
 
-Die **iuseridentitymanager** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iuseridentitymanager** verfügt auch über diese Typen von Membern:
+Die **IUserIdentityManager-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IUserIdentityManager** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iuseridentitymanager** -Schnittstelle verfügt über diese Methoden.
+Die **IUserIdentityManager-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                                                                                                                             |
+| Methode                                                                  | Beschreibung                                                                                                                                                             |
 |:------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**-Eigenschaften**](iuseridentitymanager-enumidentities.md)           | Veraltet. Ruft ein [**ienumuseridentity**](ienumuseridentity.md) -Objekt ab, das verwendet werden kann, um die Benutzer Identitäten aufzulisten, die auf dem System vorhanden sind.<br/> |
-| [**Getidentitybycookie**](iuseridentitymanager-getidentitybycookie.md) | Veraltet. Ruft eine bestimmte Benutzeridentität durch das Cookie ab, das zur eindeutigen Identifizierung verwendet wird.<br/>                                                                        |
-| [**Abmeldung**](iuseridentitymanager-logoff.md)                           | Veraltet. Melden Sie sich von der aktuellen Identität ab.<br/>                                                                                                                    |
-| [**Anmelden**](iuseridentitymanager-logon.md)                             | Veraltet. Zeigt dem Benutzer eine Benutzeroberfläche an und ermöglicht dem Benutzer die Auswahl einer Benutzeridentität. Bei erfolgreicher Ausführung wird die Benutzeridentität angemeldet und abgerufen.<br/>        |
-| [**Manageidentities**](iuseridentitymanager-manageidentities.md)       | Veraltet. Zeigt dem Benutzer eine Benutzeroberfläche an und ermöglicht dem Benutzer die Verwaltung von Benutzer Identitäten.<br/>                                                                          |
+| [**EnumIdentities**](iuseridentitymanager-enumidentities.md)           | Veraltet. Ruft ein [**IEnumUserIdentity-Objekt**](ienumuseridentity.md) ab, das zum Aufzählen der im System vorhanden benutzeridentitäten verwendet werden kann.<br/> |
+| [**GetIdentityByCookie**](iuseridentitymanager-getidentitybycookie.md) | Veraltet. Ruft eine bestimmte Benutzeridentität durch das Cookie ab, das zum eindeutigen Identifizieren verwendet wird.<br/>                                                                        |
+| [**Abmelden**](iuseridentitymanager-logoff.md)                           | Veraltet. Melden Sie sich von der aktuellen Identität ab.<br/>                                                                                                                    |
+| [**Anmelden**](iuseridentitymanager-logon.md)                             | Veraltet. Zeigt dem Benutzer eine Benutzeroberfläche an, über die der Benutzer eine Benutzeridentität auswählen kann. Bei erfolgreicher Anmeldung wird die Benutzeridentität angemeldet und abgerufen.<br/>        |
+| [**ManageIdentities**](iuseridentitymanager-manageidentities.md)       | Veraltet. Zeigt dem Benutzer eine Benutzeroberfläche an, die es dem Benutzer ermöglicht, Benutzeridentitäten zu verwalten.<br/>                                                                          |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -60,26 +60,26 @@ Die **iuseridentitymanager** -Schnittstelle verfügt über diese Methoden.
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/>    | Windows 2000 Server<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Iuseridentity**](iuseridentity.md)
+[**IUserIdentity**](iuseridentity.md)
 </dt> <dt>
 
 [**IUserIdentity2**](iuseridentity2.md)
 </dt> <dt>
 
-[**Iumumuseridentity**](ienumuseridentity.md)
+[**IEnumUserIdentity**](ienumuseridentity.md)
 </dt> <dt>
 
-[**Iidentitychangenotify**](iidentitychangenotify.md)
+[**IIdentityChangeNotify**](iidentitychangenotify.md)
 </dt> </dl>
 
  

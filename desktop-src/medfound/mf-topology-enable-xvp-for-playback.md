@@ -30,7 +30,7 @@ Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 a
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut festgelegt ist, pullt das Topologieladeprogramm den Videoprozessor bei Bedarf während der Topologieauflösung ohne Transcodierung. Wenn Sie die Topologie verwenden, um ihre eigene [CONVERTERTopology](/windows/win32/api/mfidl/nn-mfidl-imftopology) zu erstellen, weist dieses Attribut das Ladeprogramm an, XVP für Konvertierungen anstelle des Legacyfarbkonverters zu verwenden, sodass die hardwarebeschleunigte Farbkonvertierung aktiviert wird. Der Legacyfarbkonverter ist nur Software.
+Wenn dieses Attribut festgelegt ist, pullt das Topologieladeprogramm den Videoprozessor bei Bedarf während der Topologieauflösung ohne Transcodierung. Wenn Sie die Topologie verwenden, um eine eigene [CONVERTERTopology](/windows/win32/api/mfidl/nn-mfidl-imftopology) zu erstellen, weist dieses Attribut das Ladeprogramm an, XVP für Konvertierungen anstelle des Legacyfarbkonverters zu verwenden, wodurch die hardwarebeschleunigte Farbkonvertierung aktiviert wird. Der Legacyfarbkonverter ist nur Software.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Wenn dieses Attribut festgelegt ist, pullt das Topologieladeprogramm den Videopr
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpdvd-topmenu-Methode
-description: Die topmenu-Methode beendet die Wiedergabe und zeigt das obere Menü (oder das Stamm Menü) für den aktuellen Titel an.
+title: IWMPDVD topMenu-Methode
+description: Die topMenu-Methode beendet die Wiedergabe und zeigt das obere Menü (oder Stammmenü) für den aktuellen Titel an.
 ms.assetid: d6eb6311-167d-4cc1-b445-4e3d3e111e43
 keywords:
-- topmenu-Methoden Fenster Media Player
-- topmenu-Methode, Windows Media Player, iwmpdvd-Schnittstelle
-- Iwmpdvd Interface, Windows Media Player, topmenu-Methode
+- topMenu-Windows Media Player
+- topMenu-Methode Windows Media Player , IWMPDVD-Schnittstelle
+- IWMPDVD-Schnittstelle Windows Media Player , topMenu-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d59bf126a026626cc7f1ba87ea9d0eb94bd1a91
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 97f9cc1dcd528b93e9959f63a387747e510f7dd57b403ad70e41768d77006337
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117930212"
 ---
-# <a name="iwmpdvdtopmenu-method"></a>Iwmpdvd:: topmenu-Methode
+# <a name="iwmpdvdtopmenu-method"></a>IWMPDVD::topMenu-Methode
 
-Die **topmenu** -Methode beendet die Wiedergabe und zeigt das obere Menü (oder das Stamm Menü) für den aktuellen Titel an.
+Die **topMenu-Methode** beendet die Wiedergabe und zeigt das obere Menü (oder Stammmenü) für den aktuellen Titel an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,9 +53,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede DVD wird unterschiedlich verfasst. Die DVD muss ein Menü enthalten, damit diese Methode funktioniert. Einige DVDs werden so erstellt, dass die **topmenu** -und **iwmpdvd. titlemenu** -Methoden dasselbe Menü öffnen. Die **topmenu** -Methode ruft normalerweise das Top-Menü (oder das Stamm Menü) auf, aber es kann das Menü Titel aufrufen, wenn kein Stamm Menü verfügbar ist.
+Jede DVD wird anders verfasst. Die DVD muss ein Menü enthalten, damit diese Methode funktioniert. Einige DVDs werden so verfasst, dass die **Methoden topMenu** und **IWMPDVD.titleMenu** das gleiche Menü öffnen. Die **topMenu-Methode** ruft in der Regel das obere Menü (oder Stammmenü) auf, kann jedoch das Titelmenü aufrufen, wenn kein Stammmenü verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Jede DVD wird unterschiedlich verfasst. Die DVD muss ein Menü enthalten, damit 
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,10 +73,10 @@ Jede DVD wird unterschiedlich verfasst. Die DVD muss ein Menü enthalten, damit 
 
 <dl> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpdvd. titlemenu (VB und c#)**](wmplibiwmpdvd-iwmpdvd-titlemenu--vb-and-c.md)
+[**IWMPDVD.titleMenu (VB und C#)**](wmplibiwmpdvd-iwmpdvd-titlemenu--vb-and-c.md)
 </dt> </dl>
 
  

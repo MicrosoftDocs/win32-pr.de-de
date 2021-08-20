@@ -1,19 +1,19 @@
 ---
-description: Das- <scopeItem> Element stellt einen einzelnen Eintrag in der Ausschluss-/Inklusions Bereichs Tabelle dar.
+description: Das <scopeItem> -Element stellt einen einzelnen Eintrag in der Ausschluss-/Einschlussbereichstabelle dar.
 ms.assetid: 18a58b3b-771c-4829-b3d4-253383b4bee8
-title: scopeitem-Element (Suchconnector-Schema)
+title: scopeItem-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c2033202be6d904880ec9c4efa1c60db4bb7e50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67bf8cc7ba9d296503a9703845d8a03287006ed178dca7f51228e89827a0c710
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118051502"
 ---
-# <a name="scopeitem-element-search-connector-schema"></a>scopeitem-Element (Suchconnector-Schema)
+# <a name="scopeitem-element-search-connector-schema"></a>scopeItem-Element (Search Connector Schema)
 
-Das- <scopeItem> Element stellt einen einzelnen Eintrag in der Ausschluss-/Inklusions Bereichs Tabelle dar. <scopeItem> erweitert den standardmäßigen shelllinktype-Typ durch Hinzufügen von drei neuen Elementen, die das einschließen und Ausschließen von Ordnern steuern, die Tiefe der Ergebnisse steuern und den Speicherort des Bereichs angeben. Wenn das- <scope> Element vorhanden ist, ist dieses Element erforderlich. Sie verfügt über drei untergeordnete Elemente und keine Attribute.
+Das <scopeItem> -Element stellt einen einzelnen Eintrag in der Ausschluss-/Einschlussbereichstabelle dar. <scopeItem> erweitert den standardmäßigen shellLinkType-Typ, indem drei neue Elemente hinzugefügt werden, die ein- und ausschließende Ordner steuern, die Tiefe der Ergebnisse steuern und den Speicherort des Bereichs angeben. Wenn das <scope> Element vorhanden ist, ist dieses Element erforderlich. Sie verfügt über drei untergeordnete Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,21 +57,21 @@ Das- <scopeItem> Element stellt einen einzelnen Eintrag in der Ausschluss-/Inklu
 
 | Übergeordnetes Element                                                           | Untergeordnete Elemente                                                                        |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [Scope-Element (Suchconnector-Schema)](search-schema-sconn-scope.md) | [Scope-Element (Suchconnector-Schema)](search-schema-sconn-scope-mode.md).        |
-|                                                                          | [Scope-Element (Suchconnector-Schema)](search-schema-sconn-scope-depth.md).       |
-|                                                                          | [scopeitem-URL-Element (Suchconnector-Schema)](search-schema-sconn-scope-url.md). |
+| [scope-Element (Search Connector Schema)](search-schema-sconn-scope.md) | [scope-Element (Search Connector Schema)](search-schema-sconn-scope-mode.md).        |
+|                                                                          | [scope-Element (Search Connector Schema)](search-schema-sconn-scope-depth.md).       |
+|                                                                          | [scopeItem url-Element (Search Connector Schema)](search-schema-sconn-scope-url.md). |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden <scope> Sie das-Element und das- <scopeItem> Element, um zu ermitteln, welche Orte gesucht werden sollen und welche Standorte von der Suche ausgeschlossen werden sollen
+Verwenden Sie die Elemente und , um zu bestimmen, welche Orte durchsucht werden sollen <scope> und welche Standorte von der Suche ausgeschlossen werden <scopeItem> sollen.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt einen Suchbereich, der c: \\ examplefolder und alle seine untergeordneten Ordner mit Ausnahme von c: \\ examplefolder \\ excludebug enthält.
+Das folgende Beispiel zeigt einen Suchbereich, der C: ExampleFolder und alle untergeordneten Ordner außer \\ C: \\ ExampleFolder \\ ExcludeMe enthält.
 
 
 ```

@@ -17,7 +17,7 @@ Listet die Befehle für die [**IDirect3DAuthenticatedChannel9::Configure-Methode
 
 
 
-| Befehl                                                                                                           | BESCHREIBUNG                                                                                                           |
+| Befehl                                                                                                           | Beschreibung                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | [**D3DAUTHENTICATEDCONFIGURE \_ INITIALIZE**](d3dauthenticatedconfigure-initialize.md)                             | Initialisiert den authentifizierten Kanal.                                                                                |
 | [**D3DAUTHENTICATEDCONFIGURE \_ CRYPTOSESSION**](d3dauthenticatedconfigure-cryptosession.md)                       | Ordnet eine kryptografische Sitzung einem DirectX Video Acceleration 2-Decodergerät (DXVA-2) und einem Direct3D-Gerät zu. |

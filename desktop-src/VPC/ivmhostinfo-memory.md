@@ -4,7 +4,7 @@ description: Ruft die Gesamtmenge des physischen Arbeitsspeichers auf dem Hostco
 ms.assetid: 178013c0-cf29-4f1e-9a9d-d6a5dbd4fe2d
 keywords:
 - Memory-Eigenschaft Virtueller PC
-- Memory-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- Memory-Eigenschaft Virtual PC, IVMHostInfo-Schnittstelle
 - IVMHostInfo-Schnittstelle Virtueller PC, Memory-Eigenschaft
 topic_type:
 - apiref
@@ -68,13 +68,13 @@ Die Gesamtmenge des physischen Arbeitsspeichers in Megabyte. Dieser Wert ist ein
 | Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

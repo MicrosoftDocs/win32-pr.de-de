@@ -3,215 +3,215 @@ title: Attributliste
 description: Attributliste
 ms.assetid: 81fc356e-ee7a-4630-841f-6c1543e022d3
 keywords:
-- Windows Media-Format-SDK, Attribute
+- Windows Medienformat-SDK, Attribute
 - Advanced Systems Format (ASF), Attribute
 - ASF (Advanced Systems Format), Attribute
-- Attribute, Liste von
+- Attribute,Liste von
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 793c0a860f6f9e40257bb6aec610dc7680b34538
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 43ad976956a57ff1a1ac65cc969fe55e79110557296f9ab0dcb46c69cc811af7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117656201"
 ---
 # <a name="attribute-list"></a>Attributliste
 
-Die in diesem SDK enthaltenen vordefinierten Attribute werden in der folgenden Tabelle alphabetisch dargestellt. Jedes Attribut verfügt über einen Namen, einen globalen Bezeichner und einen Datentyp, der vom entsprechenden Member der [**WMT \_ attr \_ DataType**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_attr_datatype) -Enumeration definiert wird. Einige Attribute verwenden keinen einfachen Datentyp oder werden entsprechend einer Struktur formatiert. Einträge für diese Attribute listet einen Struktur Namen in der Spalte Datentyp mit dem Datentyp auf, mit dem der Wert in Klammern festgelegt wird.
+Die in diesem SDK enthaltenen vordefinierten Attribute werden in der folgenden Tabelle alphabetisch dargestellt. Jedes Attribut verfügt über einen Namen, einen globalen Bezeichner und einen Datentyp, wie vom entsprechenden Member der [**WMT \_ ATTR \_ DATATYPE-Enumeration**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_attr_datatype) definiert. Einige Attribute verwenden keinen einfachen Datentyp oder werden entsprechend einer -Struktur formatiert. Einträge für diese Attribute listen einen Strukturnamen in der Datentypspalte mit dem Datentyp auf, der zum Festlegen des Werts in Klammern verwendet wird.
 
 > [!Note]  
-> Eine Tabelle aller DRM-bezogenen Attribute finden Sie in der [Liste der DRM-Attribute](drm-attribute-list.md) .
+> Eine [Tabelle aller DRM-bezogenen](drm-attribute-list.md) Attribute finden Sie unter DRM-Attributliste.
 
- 
+ 
 
-Wenn Sie mit diesen Attributen programmieren, sollten Sie den globalen Bezeichner verwenden, anstatt den Namen als Zeichenfolgenliteralzeichen zu verwenden. Durch die Verwendung des globalen Bezeichners führt jede typografische Fehler zur Kompilierzeit zu einem Fehler.
+Wenn Sie mit diesen Attributen programmieren, sollten Sie den globalen Bezeichner verwenden, anstatt den Namen als Zeichenfolgenliteral zu verwenden. Bei Verwendung des globalen Bezeichners führen typografische Fehler zur Kompilierzeit zu einem Fehler.
 
 
 
 | Attributname                                                                       | Globaler Bezeichner                             | Datentyp                                            |
 |--------------------------------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------|
-| [**Asfleakybucketpair**](asfleakybucketpairs.md)                                   | g \_ wszasfleakybucketpairs                     | **WMT \_ - \_ typbinär Datei**                                |
-| [**Aspectratiox**](aspectratiox.md)                                                 | g \_ wszwmaspectratiox                          | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Aspectratioy**](aspectratioy.md)                                                 | g \_ wszwmaspectratioy                          | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Autor**](author.md)                                                             | g \_ wszwmauthor                                | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Averagelevel**](averagelevel.md)                                                 | g \_ wszaveragelevel                            | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Bannerimagedata**](bannerimagedata.md)                                           | g \_ wszwmbannerimagedata                       | **WMT \_ - \_ typbinär Datei**                                |
-| [**Bannerimagetype**](bannerimagetype.md)                                           | g \_ wszwmbannerimagetype                       | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Bannerimageurl**](bannerimageurl.md)                                             | g \_ wszwmbannerimageurl                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Bitrate**](bit-rate.md)                                                          | g \_ wszwmbitrate                               | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Übertragen**](broadcast.md)                                                       | g \_ wszwmbroadcast                             | **WMT- \_ Typ \_ bool**                                  |
-| [**Bufferaverage**](bufferaverage.md)                                               | g \_ wszbufferaverage                           | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Kann \_ \_ rückwärts springen**](can-skip-backward.md)                                     | g \_ wszwmskiprückwärts                          | **WMT- \_ Typ \_ bool**                                  |
-| [**Kann \_ \_ Vorwärts springen**](can-skip-forward.md)                                       | g \_ wszwmskipforward                           | **WMT- \_ Typ \_ bool**                                  |
-| [**Copyright**](copyright.md)                                                       | g \_ wszwmcopyright                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Copyrighturl**](copyrighturl.md)                                                 | g \_ wszwmcopyrighturl                          | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Currentbitrate**](currentbitrate.md)                                             | g \_ wszwmcurrentbitrate                        | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Beschreibung**](description.md)                                                   | g \_ wszwmdescription                           | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ contentid**](drm-contentid.md)                                              | g \_ wszwmdrm- \_ contentid                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ drmHeader- \_ contentdistributor**](drm-drmheader-contentdistributor.md)       | g \_ wszwmdrm \_ drmHeader- \_ contentdistributor    | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ drmHeader- \_ contentid**](drm-drmheader-contentid.md)                         | g \_ wszwmdrm \_ drmHeader \_ contentid             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM \_ drmHeader \_ IndividualizedVersion**](drm-drmheader-individualizedversion.md) | g \_ wszwmdrm \_ drmHeader \_ IndividualizedVersion | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ drmHeader- \_ keyid**](drm-drmheader-keyid.md)                                 | g \_ wszwmdrm \_ drmHeader- \_ keyid                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM \_ drmHeader \_ licenanacqurl**](drm-drmheader-licenseacqurl.md)                 | g \_ wszwmdrm \_ drmHeader \_ licengacqurl         | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ drmHeader- \_ abonnemencontentid**](drm-drmheader-subscriptioncontentid.md) | g \_ wszwmdrm \_ drmHeader \_ abonnemencontentid | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ drmHeader**](drm-drmheader.md)                                              | g \_ wszwmdrm \_ drmHeader                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ IndividualizedVersion**](drm-individualizedversion.md)                      | g \_ wszwmdrm \_ IndividualizedVersion            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ Schlüssel-ID**](drm-keyid.md)                                                      | Schlüssel-ID für g \_ wszwmdrm \_                            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ lasignaturecert**](drm-lasignaturecert.md)                                  | g \_ wszwmdrm \_ lasignaturecert                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM \_ lasignaturelicsrvcert**](drm-lasignaturelicsrvcert.md)                      | g \_ wszwmdrm \_ lasignaturelicsrvcert            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ lasignatureprivkey**](drm-lasignatureprivkey.md)                            | g \_ wszwmdrm \_ lasignatureprivkey               | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM \_ lasignaturerootcert**](drm-lasignaturerootcert.md)                          | g \_ wszwmdrm \_ lasignaturerootcert              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ Lizenz-AcqURL**](drm-licenseacqurl.md)                                      | "g \_ wszwmdrm \_ licenanacqurl"                    | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM- \_ Lizenz seid**](drm-licenseid.md)                                              | g \_ wszwmdrm \_ licenseid                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**DRM \_ -SourceID**](drm-sourceid.md)                                                | g \_ wszwmdrm \_ SourceID                         | **WMT- \_ Typ \_ DWORD**                                 |
-| [**DRM- \_ V1LicenseAcqURL**](drm-v1licenseacqurl.md)                                  | g \_ wszwmdrm \_ V1LicenseAcqURL                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Duration**](duration.md)                                                         | g \_ wszwmduration                              | **WMT- \_ Typ \_ QWORD**                                 |
-| [**FileSize**](filesize.md)                                                         | g \_ wszwmfilesize                              | **WMT- \_ Typ \_ QWORD**                                 |
-| [**Hasarbiarydatastream**](hasarbitrarydatastream.md)                             | g \_ wszwmhasschiedsrichter arydatastream                | **WMT- \_ Typ \_ bool**                                  |
-| [**Hasattachedimages**](hasattachedimages.md)                                       | g \_ wszwmhasattachedimages                     | **WMT- \_ Typ \_ bool**                                  |
-| [**Hasaudiodaten**](hasaudio.md)                                                         | g \_ wszwmhasaudiodatei                              | **WMT- \_ Typ \_ bool**                                  |
-| [**Hasfiletransferstream**](hasfiletransferstream.md)                               | g \_ wszwmhasfiletransferstream                 | **WMT- \_ Typ \_ bool**                                  |
-| [**Hasimage**](hasimage.md)                                                         | g \_ wszwmhasimage                              | **WMT- \_ Typ \_ bool**                                  |
-| [**HasScript**](hasscript.md)                                                       | g \_ wszwmhasscript                             | **WMT- \_ Typ \_ bool**                                  |
-| [**HasVideo**](hasvideo.md)                                                         | g \_ wszwmhasvideo                              | **WMT- \_ Typ \_ bool**                                  |
-| [**Ist \_ geschützt**](is-protected.md)                                                | g \_ wszwmprotected                             | **WMT- \_ Typ \_ bool**                                  |
-| [**Ist \_ vertrauenswürdig**](is-trusted.md)                                                    | g \_ wszwmtrusted                               | **WMT- \_ Typ \_ bool**                                  |
-| [**ISAN**](isan.md)                                                                 | g \_ wszisan                                    | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Isvbr**](isvbr.md)                                                               | g \_ wszwmisvbr                                 | **WMT- \_ Typ \_ bool**                                  |
-| [**NSC- \_ Adresse**](nsc-address.md)                                                  | g \_ wszwmnscaddress                            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**NSC- \_ Beschreibung**](nsc-description.md)                                          | g \_ wszwmnscdescription                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**NSC \_ -e-Mail**](nsc-email.md)                                                      | g \_ wszwmnscemail                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**NSC- \_ Name**](nsc-name.md)                                                        | g \_ wszwmnscname                               | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**NSC- \_ Telefon**](nsc-phone.md)                                                      | g \_ wszwmnscphone                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**NumberOfFrames**](numberofframes.md)                                             | g \_ wszwmnumofframes                        | **WMT- \_ Typ \_ QWORD**                                 |
-| [**Optimalbitrate**](optimalbitrate.md)                                             | g \_ wszwmoptimalbitrate                        | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Peer Value**](peakvalue.md)                                                       | g \_ wszpeer Value                               | **WMT- \_ Typ \_ DWORD**                                 |
-| [**Rating**](rating.md)                                                             | g \_ wszwmrating                                | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Durchsuchbar**](seekable.md)                                                         | g \_ wszwmseekable                              | **WMT- \_ Typ \_ bool**                                  |
-| [**Signatur \_ Name**](signature-name.md)                                            | g \_ wszwmsignature- \_ Name                       | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Strigbar**](stridable.md)                                                       | g \_ wszwmstridable                             | **WMT- \_ Typ \_ bool**                                  |
-| [**Titel**](title.md)                                                               | g \_ wszwmtitle                                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Vbrpeak**](vbrpeak.md)                                                           | g \_ wszvbrpeak                                 | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/albumartist**](wm-albumartist.md)                                             | g \_ wszwmalbumartist                           | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/albumcoverurl**](wm-albumcoverurl.md)                                         | g \_ wszwmalbumcoverurl                         | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/albumtitle**](wm-albumtitle.md)                                               | g \_ wszwmalbumtitle                            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/asfpacketcount**](wm-asfpacketcount.md)                                       | g \_ wszwmasf-Anzahl                        | **WMT- \_ Typ \_ QWORD**                                 |
-| [**WM/asfsecurityobjectssize**](wm-asfsecurityobjectssize.md)                       | g \_ wszwmasf securityobjectssize                | **WMT- \_ Typ \_ QWORD**                                 |
-| [**WM/audiofileurl**](wm-audiofileurl.md)                                           | g \_ wszwmaudiofileurl                          | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/audiosourceurl**](wm-audiosourceurl.md)                                       | g \_ wszwmaudiosourceurl                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/authorurl**](wm-authorurl.md)                                                 | g \_ wszwmauthorurl                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/beatsperminütlich**](wm-beatsperminute.md)                                       | g \_ wszwmbeatsperminute                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Kategorie**](wm-category.md)                                                   | g \_ wszwmcategory                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Codec**](wm-codec.md)                                                         | g \_ wszwmcodec                                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Composer**](wm-composer.md)                                                   | g \_ wszwmcomposer                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Dirigent**](wm-conductor.md)                                                 | g \_ wszwmconductor                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Containerformat**](wm-containerformat.md)                                     | g \_ wszwmcontainerformat                       | **WMT \_ Speicher \_ Format** (**WMT \_ - \_ typbinär Datei**)     |
-| [**WM/contentdistributor**](wm-contentdistributor.md)                               | g \_ wszwmcontentdistributor                    | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/contentgroupdescription**](wm-contentgroupdescription.md)                     | g \_ wszwmcontentgroupdescription               | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Director**](wm-director.md)                                                   | g \_ wszwmdirector                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/DRM**](wm-drm.md)                                                             | g \_ wszwmdrm                                   | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/dvdid**](wm-dvdid.md)                                                         | g \_ wszwmdvdid                                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/encodby**](wm-encodedby.md)                                                 | g \_ wszwmencodedby                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/encodingsettings**](wm-encodingsettings.md)                                   | g \_ wszwmencodingsettings                      | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/encodingtime**](wm-encodingtime.md)                                           | g \_ wszwmencodingtime                          | **FILETIME** (**WMT- \_ Typ \_ QWORD**)                  |
-| [**WM/Genre**](wm-genre.md)                                                         | g \_ wszwmgenre                                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/GenreID**](wm-genreid.md)                                                     | g \_ wszwmgenreid                               | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/initialkey**](wm-initialkey.md)                                               | g \_ wszwminitialkey                            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/ISRC**](wm-isrc.md)                                                           | g \_ wszwmisrc                                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Sprache**](wm-language.md)                                                   | g \_ wszwmlanguage                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Liedtexte**](wm-lyrics.md)                                                       | g \_ wszwmlyrics                                | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**Synchronisierte WM/Liedtexte \_**](wm-lyrics-synchronised.md)                            | "g \_ wszwmlyrics" ( \_ synchron)                  | **WM \_ synchierte \_ Texte** (**WMT \_ - \_ typbinär Datei**) |
-| [**WM/MCDI**](wm-mcdi.md)                                                           | g \_ wszwmmcdi                                  | **WMT \_ - \_ typbinär Datei**                                |
-| [**WM/mediaclassprimaryid**](wm-mediaprimaryid.md)                                  | g \_ wszwmmediaclassprimaryid                   | **WMT- \_ Typ- \_ GUID**                                  |
-| [**WM/MediaClassSecondaryID**](wm-mediasecondaryid.md)                              | g \_ wszwmmediaclasssecondaryid                 | **WMT- \_ Typ- \_ GUID**                                  |
-| [**WM/mediacredits**](wm-mediacredits.md)                                           | g \_ wszwmmediacredits                          | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/mediaisdelay**](wm-mediaisdelay.md)                                           | g \_ wszwmmediaisdelay                          | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaisfinal**](wm-mediaisfinale.md)                                         | g \_ wszwmmediaisfinal                         | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaislive**](wm-mediaislive.md)                                             | g \_ wszwmmediaislive                           | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaiische miere**](wm-mediaispremiere.md)                                     | g \_ wszwmmediaispree miere                       | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaisrepeat**](wm-mediaisrepeat.md)                                         | g \_ wszwmmediaisrepeat                         | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaissap**](wm-mediaissap.md)                                               | g \_ wszwmmediaissap                            | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaisstereo**](wm-mediaisstereo.md)                                         | g \_ wszwmmediaisstereo                         | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaissubtitel**](wm-mediaissubtitled.md)                                   | g \_ wszwmmediaissubtitel                      | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/mediaistape**](wm-mediaistape.md)                                             | g \_ wszwmmediaistape                           | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/medianetworkzugehörigkeit**](wm-medianetworkaffiliation.md)                     | g \_ wszwmmedianetworkzugehörigkeit               | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/mediaoriginalbroadcastdatetime**](wm-mediaoriginalbroadcastdatetime.md)       | g \_ wszwmmediaoriginalbroadcastdatetime        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/mediaoriginalchannel**](wm-mediaoriginalchannel.md)                           | g \_ wszwmmediaoriginalchannel                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/mediastationcallsign**](wm-mediastationcallsign.md)                           | g \_ wszwmmediastationcallsign                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/mediastationname**](wm-mediastationname.md)                                   | g \_ wszwmmediastationname                      | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/ModifiedBy**](wm-modifiedby.md)                                               | g \_ wszwmmodifiedby                            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Stimmung**](wm-mood.md)                                                           | g \_ wszwmmood                                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/originalalbumtitle**](wm-originalalbumtitle.md)                               | g \_ wszwmoriginalalbumtitle                    | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/originalartist**](wm-originalartist.md)                                       | g \_ wszwmoriginalartist                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/OriginalFileName**](wm-originalfilename.md)                                   | g \_ wszwmoriginalfilename                      | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/originallyriker**](wm-originallyricist.md)                                   | g \_ wszwmoriginallyriker                      | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/originalreleasetime**](wm-originalreleasetime.md)                             | g \_ wszwmoriginalreleasetime                   | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/originalreleaseyear**](wm-originalreleaseyear.md)                             | g \_ wszwmoriginalreleaseyear                   | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/parametrialbewertung**](wm-parentalrating.md)                                       | g \_ wszwmparametrialrating                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/parametrialratingreason**](wm-parentalratingreason.md)                           | g \_ wszwmpartalratingreason                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Element Satz**](wm-partofset.md)                                                 | g \_ wszwmparametset                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Peer-Bitrate**](wm-peakbitrate.md)                                             | g \_ wszwmpeakbitrate                           | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/Zeitraum**](wm-period.md)                                                       | g \_ wszwmperiod                                | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Bild**](/windows/desktop/wmformat/wmpicture)                                      | g \_ wszwmpicture                               | **WM \_ Bild** (**WMT \_ - \_ typbinär Datei**)              |
-| [**WM/playlistdelay**](wm-playlistdelay.md)                                         | g \_ wszwmplaylistdelay                         | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Producer**](wm-producer.md)                                                   | g \_ wszwmproducer                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/promotionurl**](wm-promotionurl.md)                                           | g \_ wszwmpromotionurl                          | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Schutztyp**](wm-protectiontype.md)                                       | g \_ wszwmschutztype                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Anbieter**](wm-provider.md)                                                   | g \_ wszwmprovider                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/providercopyright**](wm-providercopyright.md)                                 | g \_ wszwmprovidercopyright                     | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/providerrating**](wm-providerrating.md)                                       | g \_ wszwmproviderrating                        | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/providerstyle**](wm-providerstyle.md)                                         | g \_ wszwmproviderstyle                         | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Verleger**](wm-publisher.md)                                                 | g \_ wszwmpublisher                             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/radiostationname**](wm-radiostationname.md)                                   | g \_ wszwmradiostationname                      | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/radiostationowner**](wm-radiostationowner.md)                                 | g \_ wszwmradiostationowner                     | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/shareduserrating**](wm-shareduserrating.md)                                   | g \_ wszwmshareduserrating                      | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/streamtypeingangs Info**](wm-streamtypeinfo.md)                                       | g \_ wszwmstreamtypeingangs Info                        | **WM \_ \_Streamtyp \_ Info** (**WMT \_ - \_ typbinär Datei**)   |
-| [**WM/Abonnement-ID**](wm-subscriptioncontentid.md)                         | g \_ wszwmabonnemencontentid                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Untertitel**](wm-subtitle.md)                                                   | g \_ wszwmuntertitel                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/subtitledescription**](wm-subtitledescription.md)                             | g \_ wszwmsubtitledescription                   | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Text**](wm-text.md)                                                           | g \_ wszwmtext                                  | **WM \_ Benutzer \_ Text** (**WMT \_ - \_ typbinär Datei**)           |
-| [**WM/ToolName**](wm-toolname.md)                                                   | g \_ wszwmtoolname                              | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Toolversion**](wm-toolversion.md)                                             | g \_ wszwmtoolversion                           | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Nachverfolgung**](wm-track.md)                                                         | g \_ wszwmtrack                                 | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/tracknumber**](wm-tracknumber.md)                                             | g \_ wszwmtracknumber                           | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/UniqueFileIdentifier**](wm-uniquefileidentifier.md)                           | g \_ wszwmuniquefileidentifier                  | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/userweburl**](wm-userweburl.md)                                               | g \_ wszwmuserweburl                            | **WM \_ Benutzer- \_ Web- \_ URL** (**WMT- \_ \_ typbinär Datei**)       |
-| [**WM/videoclosedbeschriftungen**](wm-videoclosedcaptioning.md)                         | g \_ wszwmvideoclosedcaption                 | **WMT- \_ Typ \_ bool**                                  |
-| [**WM/Videoframerate**](wm-videoframerate.md)                                       | g \_ wszwmvideoframerate                        | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/videoheight**](wm-videoheight.md)                                             | g \_ wszwmvideoheight                           | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/videowidth**](wm-videowidth.md)                                               | g \_ wszwmvideowidth                            | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/wmadrcaveragereferenzierung**](wm-wmadrcaveragereference.md)                       | g \_ wszwmwmadrcaveragereferenzierung                | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/wmadrcaveragetarget**](wm-wmadrcaveragetarget.md)                             | g \_ wszwmwmadrcaveragetarget                   | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/wmadrcpeer Reference**](wm-wmadrcpeakreference.md)                             | g \_ wszwmwmadrcpeer Reference                   | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/wmadrcpeer Target**](wm-wmadrcpeaktarget.md)                                   | g \_ wszwmwmadrcpeer-Ziel                      | **WMT- \_ Typ \_ DWORD**                                 |
-| [**WM/wmcollectiongroupid**](wm-wmcollectiongroupid.md)                             | g \_ wszwmwmcollectiongroupid                   | **WMT- \_ Typ- \_ GUID**                                  |
-| [**WM/wmcollectionid**](wm-wmcollectionid.md)                                       | g \_ wszwmwmcollectionid                        | **WMT- \_ Typ- \_ GUID**                                  |
-| [**WM/wmcontentid**](wm-wmcontentid.md)                                             | g \_ wszwmwmcontentid                           | **WMT- \_ Typ- \_ GUID**                                  |
-| [**WM/wmshadowfilesourcedrmtype**](wm-wmshadowfilesourcedrmtype.md)                 | g \_ wszwmwmshadowfilesourcedrmtype             | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/wmshadowfilesourcefiletype**](wm-wmshadowfilesourcefiletype.md)               | g \_ wszwmwmshadowfilesourcefiletype            | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Writer**](wm-writer.md)                                                       | g \_ wszwmwriter                                | **WMT \_ - \_ Typzeichenfolge**                                |
-| [**WM/Jahr**](wm-year.md)                                                           | g \_ wszwmyear                                  | **WMT \_ - \_ Typzeichenfolge**                                |
+| [**ASFLeakyBucketPairs**](asfleakybucketpairs.md)                                   | g \_ wszASFLeakyBucketPairs                     | **\_WMT-TYP \_ BINARY**                                |
+| [**AspectRatioX**](aspectratiox.md)                                                 | g \_ wszWMAspectRatioX                          | **WMT \_ TYPE \_ DWORD**                                 |
+| [**AspectRatioy**](aspectratioy.md)                                                 | g \_ wszWMAspectRatioY                          | **WMT \_ TYPE \_ DWORD**                                 |
+| [**Autor**](author.md)                                                             | g \_ wszWMAuthor                                | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**AverageLevel**](averagelevel.md)                                                 | g \_ wszAverageLevel                            | **WMT \_ TYPE \_ DWORD**                                 |
+| [**BannerImageData**](bannerimagedata.md)                                           | g \_ wszWMBannerImageData                       | **\_WMT-TYP \_ BINARY**                                |
+| [**BannerImageType**](bannerimagetype.md)                                           | g \_ wszWMBannerImageType                       | **WMT \_ TYPE \_ DWORD**                                 |
+| [**BannerImageURL**](bannerimageurl.md)                                             | g \_ wszWMBannerImageURL                        | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**Bitrate**](bit-rate.md)                                                          | g \_ wszWMBitrate                               | **WMT \_ TYPE \_ DWORD**                                 |
+| [**Übertragen**](broadcast.md)                                                       | g \_ wszWMBroadcast                             | **\_WMT-TYP \_ BOOL**                                  |
+| [**BufferAverage**](bufferaverage.md)                                               | g \_ wszBufferAverage                           | **WMT \_ TYPE \_ DWORD**                                 |
+| [**Kann \_ rückwärts überspringen \_**](can-skip-backward.md)                                     | g \_ wszWMSkipBackward                          | **\_WMT-TYP \_ BOOL**                                  |
+| [**Kann \_ Vorwärts überspringen \_**](can-skip-forward.md)                                       | g \_ wszWMSkipForward                           | **\_WMT-TYP \_ BOOL**                                  |
+| [**Copyright**](copyright.md)                                                       | g \_ wszWMCopyright                             | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**CopyrightURL**](copyrighturl.md)                                                 | g \_ wszWMCopyrightURL                          | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**CurrentBitrate**](currentbitrate.md)                                             | g \_ wszWMCurrentBitrate                        | **WMT \_ TYPE \_ DWORD**                                 |
+| [**Beschreibung**](description.md)                                                   | g \_ wszWMDescription                           | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ ContentID**](drm-contentid.md)                                              | g \_ wszWMDRM \_ ContentID                        | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ ContentDistributor**](drm-drmheader-contentdistributor.md)       | g \_ wszWMDRM \_ DRMHeader \_ ContentDistributor    | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ ContentID**](drm-drmheader-contentid.md)                         | g \_ wszWMDRM \_ DRMHeader \_ ContentID             | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ IndividualizedVersion**](drm-drmheader-individualizedversion.md) | g \_ wszWMDRM \_ DRMHeader \_ IndividualizedVersion | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ KeyID**](drm-drmheader-keyid.md)                                 | g \_ wszWMDRM \_ DRMHeader \_ KeyID                 | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ LicenseAcqURL**](drm-drmheader-licenseacqurl.md)                 | g \_ wszWMDRM \_ DRMHeader \_ LicenseAcqURL         | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader \_ SubscriptionContentID**](drm-drmheader-subscriptioncontentid.md) | g \_ wszWMDRM \_ DRMHeader \_ SubscriptionContentID | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ DRMHeader**](drm-drmheader.md)                                              | g \_ wszWMDRM \_ DRMHeader                        | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ IndividualizedVersion**](drm-individualizedversion.md)                      | g \_ wszWMDRM \_ IndividualizedVersion            | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**\_DRM-Schlüssel-ID**](drm-keyid.md)                                                      | g \_ wszWMDRM \_ KeyID                            | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**DRM \_ LASignatureCert**](drm-lasignaturecert.md)                                  | g \_ wszWMDRM \_ LASignatureCert                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**DRM \_ LASignatureLicSrvCert**](drm-lasignaturelicsrvcert.md)                      | g \_ wszWMDRM \_ LASignatureLicSrvCert            | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**DRM \_ LASignaturePrivKey**](drm-lasignatureprivkey.md)                            | g \_ wszWMDRM \_ LASignaturePrivKey               | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**DRM \_ LASignatureRootCert**](drm-lasignaturerootcert.md)                          | g \_ wszWMDRM \_ LASignatureRootCert              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_DRM-LizenzAcqURL**](drm-licenseacqurl.md)                                      | g \_ wszWMDRM \_ LicenseAcqURL                    | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_DRM-Lizenz-ID**](drm-licenseid.md)                                              | g \_ wszWMDRM \_ LicenseID                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_DRM-Quell-ID**](drm-sourceid.md)                                                | g \_ wszWMDRM \_ SourceID                         | **\_WMT-TYP \_ DWORD**                                 |
+| [**DRM \_ V1LicenseAcqURL**](drm-v1licenseacqurl.md)                                  | g \_ wszWMDRM \_ V1LicenseAcqURL                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**Dauer**](duration.md)                                                         | g \_ wszWMDuration                              | **\_WMT-TYP \_ QWORD**                                 |
+| [**FileSize**](filesize.md)                                                         | g \_ wszWMFileSize                              | **\_WMT-TYP \_ QWORD**                                 |
+| [**HasArbitraryDataStream**](hasarbitrarydatastream.md)                             | g \_ wszWMHasArbitraryDataStream                | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasAttachedImages**](hasattachedimages.md)                                       | g \_ wszWMHasAttachedImages                     | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasAudio**](hasaudio.md)                                                         | g \_ wszWMHasAudio                              | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasFileTransferStream**](hasfiletransferstream.md)                               | g \_ wszWMHasFileTransferStream                 | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasImage**](hasimage.md)                                                         | g \_ wszWMHasImage                              | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasScript**](hasscript.md)                                                       | g \_ wszWMHasScript                             | **\_WMT-TYP \_ BOOL**                                  |
+| [**HasVideo**](hasvideo.md)                                                         | g \_ wszWMHasVideo                              | **\_WMT-TYP \_ BOOL**                                  |
+| [**Ist \_ geschützt**](is-protected.md)                                                | g \_ wszWMProtected                             | **\_WMT-TYP \_ BOOL**                                  |
+| [**Ist \_ vertrauenswürdig**](is-trusted.md)                                                    | g \_ wszWMTrusted                               | **\_WMT-TYP \_ BOOL**                                  |
+| [**Isan**](isan.md)                                                                 | g \_ wszUNEN                                    | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**IsVBR**](isvbr.md)                                                               | g \_ wszWMIsVBR                                 | **\_WMT-TYP \_ BOOL**                                  |
+| [**\_NSC-Adresse**](nsc-address.md)                                                  | g \_ wszWMNSCAddress                            | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_NSC-Beschreibung**](nsc-description.md)                                          | g \_ wszWMNSCDescription                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_NSC-E-Mail**](nsc-email.md)                                                      | g \_ wszWMNSCEmail                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_NSC-Name**](nsc-name.md)                                                        | g \_ wszWMNSCName                               | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**\_NSC-Telefon**](nsc-phone.md)                                                      | g \_ wszWMNSCPhone                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**NumberOfFrames**](numberofframes.md)                                             | g \_ wszWMNumberOfFrames                        | **\_WMT-TYP \_ QWORD**                                 |
+| [**OptimalBitrate**](optimalbitrate.md)                                             | g \_ wszWMOptimalBitrate                        | **\_WMT-TYP \_ DWORD**                                 |
+| [**PeakValue**](peakvalue.md)                                                       | g \_ wszPeakValue                               | **\_WMT-TYP \_ DWORD**                                 |
+| [**Rating**](rating.md)                                                             | g \_ wszWMRating                                | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**Seekable**](seekable.md)                                                         | g \_ wszWMSeekable                              | **\_WMT-TYP \_ BOOL**                                  |
+| [**\_Signaturname**](signature-name.md)                                            | g \_ wszWMSignature \_ Name                       | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**Stridable**](stridable.md)                                                       | g \_ wszWMStridable                             | **\_WMT-TYP \_ BOOL**                                  |
+| [**Titel**](title.md)                                                               | g \_ wszWMTitle                                 | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**VBRPeak**](vbrpeak.md)                                                           | g \_ wszVBRPeak                                 | **\_WMT-TYP \_ DWORD**                                 |
+| [**WM/AlbumArtist**](wm-albumartist.md)                                             | g \_ wszWMMeldungArtist                           | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/AlbumCoverURL**](wm-albumcoverurl.md)                                         | g \_ wszWMCoverURL                         | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/AlbumTitle**](wm-albumtitle.md)                                               | g \_ wszWMIedtitle                            | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ASFPacketCount**](wm-asfpacketcount.md)                                       | g \_ wszWMASFPacketCount                        | **\_WMT-TYP \_ QWORD**                                 |
+| [**WM/ASFSecurityObjectsSize**](wm-asfsecurityobjectssize.md)                       | g \_ wszWMASFSecurityObjectsSize                | **\_WMT-TYP \_ QWORD**                                 |
+| [**WM/AudioFileURL**](wm-audiofileurl.md)                                           | g \_ wszWMAudioFileURL                          | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/AudioSourceURL**](wm-audiosourceurl.md)                                       | g \_ wszWMAudioSourceURL                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/AuthorURL**](wm-authorurl.md)                                                 | g \_ wszWMAuthorURL                             | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/BeatsPerMinute**](wm-beatsperminute.md)                                       | g \_ wszWMBeatsPerMinute                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Kategorie**](wm-category.md)                                                   | g \_ wszWMCategory                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Codec**](wm-codec.md)                                                         | g \_ wszWMCodec                                 | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Composer**](wm-composer.md)                                                   | g \_ wszWMComposer                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Enumer**](wm-conductor.md)                                                 | g \_ wszWMConductor                             | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ContainerFormat**](wm-containerformat.md)                                     | g \_ wszWMContainerFormat                       | **WMT \_ \_SPEICHERFORMAT** (**\_ WMT-TYP \_ BINARY**)     |
+| [**WM/ContentDistributor**](wm-contentdistributor.md)                               | g \_ wszWMContentDistributor                    | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ContentGroupDescription**](wm-contentgroupdescription.md)                     | g \_ wszWMContentGroupDescription               | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Director**](wm-director.md)                                                   | g \_ wszWMDirector                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/DRM**](wm-drm.md)                                                             | g \_ wszWMDRM                                   | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/DVDID**](wm-dvdid.md)                                                         | g \_ wszWMDVDID                                 | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/EncodedBy**](wm-encodedby.md)                                                 | g \_ wszWMEncodedBy                             | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/EncodingSettings**](wm-encodingsettings.md)                                   | g \_ wszWMEncodingSettings                      | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/EncodingTime**](wm-encodingtime.md)                                           | g \_ wszWMEncodingTime                          | **FILETIME** (**\_ WMT-TYP \_ QWORD**)                  |
+| [**WM/Genre**](wm-genre.md)                                                         | g \_ wszWMGenre                                 | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/GenreID**](wm-genreid.md)                                                     | g \_ wszWMGenreID                               | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/InitialKey**](wm-initialkey.md)                                               | g \_ wszWMInitialKey                            | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ISRC**](wm-isrc.md)                                                           | g \_ wszWMISRC                                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Sprache**](wm-language.md)                                                   | g \_ wszWMLanguage                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Wms**](wm-lyrics.md)                                                       | g \_ wszWMLyrics                                | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Synchronisierte Wm/Wm-Synchronisierung \_**](wm-lyrics-synchronised.md)                            | g \_ wszWMLyrics \_ Synchronisiert                  | **WM \_ SYNCHRONISIERTE \_ MENTS** (**\_ WMT-TYP \_ BINARY**) |
+| [**WM/MCDI**](wm-mcdi.md)                                                           | g \_ wszWMMCDI                                  | **\_WMT-TYP \_ BINARY**                                |
+| [**WM/MediaClassPrimaryID**](wm-mediaprimaryid.md)                                  | g \_ wszWMMediaClassPrimaryID                   | **\_ \_ WMT-TYP-GUID**                                  |
+| [**WM/MediaClassSecondaryID**](wm-mediasecondaryid.md)                              | g \_ wszWMMediaClassSecondaryID                 | **\_ \_ WMT-TYP-GUID**                                  |
+| [**WM/MediaCredits**](wm-mediacredits.md)                                           | g \_ wszWMMediaCredits                          | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/MediaIsDelay**](wm-mediaisdelay.md)                                           | g \_ wszWMMediaIsDelay                          | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsFinale**](wm-mediaisfinale.md)                                         | g \_ wszWMMediaIsFinale                         | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsLive**](wm-mediaislive.md)                                             | g \_ wszWMMediaIsLive                           | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsPremiere**](wm-mediaispremiere.md)                                     | g \_ wszWMMediaIsPremiere                       | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsRepeat**](wm-mediaisrepeat.md)                                         | g \_ wszWMMediaIsRepeat                         | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsSAP**](wm-mediaissap.md)                                               | g \_ wszWMMediaIsSAP                            | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsStereo**](wm-mediaisstereo.md)                                         | g \_ wszWMMediaIsStereo                         | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsSubtitled**](wm-mediaissubtitled.md)                                   | g \_ wszWMMediaIsSubtitled                      | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaIsTape**](wm-mediaistape.md)                                             | g \_ wszWMMediaIsTape                           | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/MediaNetworkAffiliation**](wm-medianetworkaffiliation.md)                     | g \_ wszWMMediaNetworkAffiliation               | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/MediaOriginalBroadcastDateTime**](wm-mediaoriginalbroadcastdatetime.md)       | g \_ wszWMMediaOriginalBroadcastDateTime        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/MediaOriginalChannel**](wm-mediaoriginalchannel.md)                           | g \_ wszWMMediaOriginalChannel                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/MediaStationCallSign**](wm-mediastationcallsign.md)                           | g \_ wszWMMediaStationCallSign                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/MediaStationName**](wm-mediastationname.md)                                   | g \_ wszWMMediaStationName                      | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ModifiedBy**](wm-modifiedby.md)                                               | g \_ wszWMModifiedBy                            | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Stimmung**](wm-mood.md)                                                           | g \_ wszWMMood                                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalIedTitle**](wm-originalalbumtitle.md)                               | g \_ wszWMOriginalIedTitle                    | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalArtist**](wm-originalartist.md)                                       | g \_ wszWMOriginalArtist                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalFilename**](wm-originalfilename.md)                                   | g \_ wszWMOriginalFilename                      | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalLyricist**](wm-originallyricist.md)                                   | g \_ wszWMOriginalLyricist                      | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalReleaseTime**](wm-originalreleasetime.md)                             | g \_ wszWMOriginalReleaseTime                   | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/OriginalReleaseYear**](wm-originalreleaseyear.md)                             | g \_ wszWMOriginalReleaseYear                   | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ParentalRating**](wm-parentalrating.md)                                       | g \_ wszWMParentalRating                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ParentalRatingReason**](wm-parentalratingreason.md)                           | g \_ wszWMParentalRatingReason                  | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/PartOfSet**](wm-partofset.md)                                                 | g \_ wszWMPartOfSet                             | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/PeakBitrate**](wm-peakbitrate.md)                                             | g \_ wszWMPeakBitrate                           | **\_WMT-TYP \_ DWORD**                                 |
+| [**WM/Zeitraum**](wm-period.md)                                                       | g \_ wszWMPeriod                                | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Bild**](/windows/desktop/wmformat/wmpicture)                                      | g \_ wszWMPicture                               | **WM \_ PICTURE** (**WMT \_ TYPE \_ BINARY**)              |
+| [**WM/PlaylistDelay**](wm-playlistdelay.md)                                         | g \_ wszWMPlaylistDelay                         | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Producer**](wm-producer.md)                                                   | g \_ wszWMProducer                              | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/PromotionURL**](wm-promotionurl.md)                                           | g \_ wszWMPromotionURL                          | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/ProtectionType**](wm-protectiontype.md)                                       | g \_ wszWMProtectionType                        | **\_ \_ WMT-TYPZEICHENFOLGE**                                |
+| [**WM/Anbieter**](wm-provider.md)                                                   | g \_ wszWMProvider                              | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/ProviderCopyright**](wm-providercopyright.md)                                 | g \_ wszWMProviderCopyright                     | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/ProviderRating**](wm-providerrating.md)                                       | g \_ wszWMProviderRating                        | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/ProviderStyle**](wm-providerstyle.md)                                         | g \_ wszWMProviderStyle                         | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Publisher**](wm-publisher.md)                                                 | g \_ wszWMPublisher                             | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/RadioStationName**](wm-radiostationname.md)                                   | g \_ wszWM WorkstationName                      | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/RadioStationOwner**](wm-radiostationowner.md)                                 | g \_ wszWM WorkstationOwner                     | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/SharedUserRating**](wm-shareduserrating.md)                                   | g \_ wszWMSharedUserRating                      | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/StreamTypeInfo**](wm-streamtypeinfo.md)                                       | g \_ wszWMStreamTypeInfo                        | **WM \_ STREAM \_ TYPE \_ INFO** (**WMT TYPE \_ \_ BINARY**)   |
+| [**WM/SubscriptionContentID**](wm-subscriptioncontentid.md)                         | g \_ wszWMSubscriptionContentID                 | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Untertitel**](wm-subtitle.md)                                                   | g \_ wszWMSubTitle                              | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/SubTitleDescription**](wm-subtitledescription.md)                             | g \_ wszWMSubTitleDescription                   | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Text**](wm-text.md)                                                           | g \_ wszWMText                                  | **WM \_ \_BENUTZERTEXT** (**\_ WMT-TYP \_ BINARY**)           |
+| [**WM/ToolName**](wm-toolname.md)                                                   | g \_ wszWMToolName                              | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/ToolVersion**](wm-toolversion.md)                                             | g \_ wszWMToolVersion                           | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Track**](wm-track.md)                                                         | g \_ wszWMTrack                                 | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/TrackNumber**](wm-tracknumber.md)                                             | g \_ wszWMTrackNumber                           | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/UniqueFileIdentifier**](wm-uniquefileidentifier.md)                           | g \_ wszWMUniqueFileIdentifier                  | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/UserWebURL**](wm-userweburl.md)                                               | g \_ wszWMUserWebURL                            | **WM \_ \_ \_ BENUTZER-WEB-URL** (**BINÄRER \_ WMT-TYP \_**)       |
+| [**WM/VideoClosedCaptioning**](wm-videoclosedcaptioning.md)                         | g \_ wszWMVideoClosedCaptioning                 | **\_WMT-TYP \_ BOOL**                                  |
+| [**WM/VideoFrameRate**](wm-videoframerate.md)                                       | g \_ wszWMVideoFrameRate                        | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/VideoHeight**](wm-videoheight.md)                                             | g \_ wszWMVideoHeight                           | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/VideoWidth**](wm-videowidth.md)                                               | g \_ wszWMVideoWidth                            | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/WMADRCAverageReference**](wm-wmadrcaveragereference.md)                       | g \_ wszWMWMADRCAverageReference                | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/WMADRCAverageTarget**](wm-wmadrcaveragetarget.md)                             | g \_ wszWMWMADRCAverageTarget                   | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/WMADRCPeakReference**](wm-wmadrcpeakreference.md)                             | g \_ wszWMWMADRCPeakReference                   | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/WMADRCPeakTarget**](wm-wmadrcpeaktarget.md)                                   | g \_ wszWMWMADRCPeakTarget                      | **WMT \_ TYPE \_ DWORD**                                 |
+| [**WM/WMCollectionGroupID**](wm-wmcollectiongroupid.md)                             | g \_ wszWMWMCollectionGroupID                   | **\_ \_ WMT-TYP-GUID**                                  |
+| [**WM/WMCollectionID**](wm-wmcollectionid.md)                                       | g \_ wszWMWMCollectionID                        | **\_ \_ WMT-TYP-GUID**                                  |
+| [**WM/WMContentID**](wm-wmcontentid.md)                                             | g \_ wszWMWMContentID                           | **\_ \_ WMT-TYP-GUID**                                  |
+| [**WM/WMShadowFileSourceDRMType**](wm-wmshadowfilesourcedrmtype.md)                 | g \_ wszWMWMShadowFileSourceDRMType             | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/WMShadowFileSourceFileType**](wm-wmshadowfilesourcefiletype.md)               | g \_ wszWMWMShadowFileSourceFileType            | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Writer**](wm-writer.md)                                                       | g \_ wszWMWriter                                | **\_WMT-TYPZEICHENFOLGE \_**                                |
+| [**WM/Jahr**](wm-year.md)                                                           | g \_ wszWMYear                                  | **\_WMT-TYPZEICHENFOLGE \_**                                |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Konstanten werden mit den Attributen definiert. Jeder Wert gibt die Anzahl eines bestimmten Attribut Typs an. Sie müssen diese Werte für nichts in Ihren Anwendungen verwenden.
+Die folgenden Konstanten werden mit den Attributen definiert. Jedes Attribut gibt die Anzahl eines bestimmten Attributtyps an. Sie müssen diese Werte nicht für etwas in Ihren Anwendungen verwenden.
 
 
 
 | Konstante                 | Wert |
 |--------------------------|-------|
-| g \_ dwwmspecialattribute | 20    |
-| g \_ dwwmcontentattribute | 5     |
-| g \_ dwwmnscattribute     | 5     |
+| g \_ dwWMSpecialAttributes | 20    |
+| g \_ dwWMContentAttributes | 5     |
+| g \_ dwWMNSCAttributes     | 5     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -220,6 +220,6 @@ Die folgenden Konstanten werden mit den Attributen definiert. Jeder Wert gibt di
 [**Attribute**](attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

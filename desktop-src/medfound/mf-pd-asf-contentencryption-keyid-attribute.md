@@ -1,5 +1,5 @@
 ---
-description: Gibt den Schlüsselbezeichner für eine verschlüsselte ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Schlüssel-ID-Feld des Content Encryption-Headers, das in der ASF-Spezifikation definiert ist.
+description: Gibt den Schlüsselbezeichner für eine verschlüsselte ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Feld Schlüssel-ID des Content Encryption-Headers, das in der ASF-Spezifikation definiert ist.
 ms.assetid: ebadd156-28f4-499c-a182-f48a35ecbefb
 title: MF_PD_ASF_CONTENTENCRYPTION_KEYID -Attribut (Wmcontainer.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "117876433"
 ---
 # <a name="mf_pd_asf_contentencryption_keyid-attribute"></a>MF \_ PD \_ ASF \_ CONTENTENCRYPTION \_ KEYID-Attribut
 
-Gibt den Schlüsselbezeichner für eine verschlüsselte ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Schlüssel-ID-Feld des Content Encryption-Headers, das in der ASF-Spezifikation definiert ist.
+Gibt den Schlüsselbezeichner für eine verschlüsselte ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Feld Schlüssel-ID des Content Encryption-Headers, das in der ASF-Spezifikation definiert ist.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,9 +21,9 @@ Breitzeichenfolge
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte.
 
-Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) ruft das Schlüssel-ID-Feld ab, konvertiert es in eine Breitzeichenzeichenfolge und füllt dann ein auf NULL endendes Array von **WCHAR** s auf. Die Größe des Arrays entspricht dem Feld Schlüssel-ID-Länge des Content Encryption-Headers.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) ruft das Feld Schlüssel-ID ab, konvertiert es in eine Breitzeichenzeichenfolge und füllt dann ein auf NULL terminiertes Array von **WCHAR-Werten** auf. Die Größe des Arrays entspricht dem Feld Schlüssel-ID-Länge des Content Encryption-Headers.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,29 +31,29 @@ Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/des
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
 | Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
+[**ATTRIBUTEs::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
+[**ZEICHENFOLGEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 </dt> <dt>
 
-[**PRESENTPresentationDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Darstellungsdeskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
 [ASF-Headerobjekt](asf-file-structure.md)

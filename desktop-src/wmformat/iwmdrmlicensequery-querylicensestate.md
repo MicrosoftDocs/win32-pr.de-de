@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicensequery querylicenerstate-Methode (wmdrmsdk. h)
-description: Die querylicenserstate-Methode fragt den lokalen Lizenz Speicher nach Lizenzinformationen ab, die für eine Schlüssel-ID für ein oder mehrere bestimmte Rechte gelten.
+title: IWMDRMLicenseQuery QueryLicenseState-Methode (Wmdrmsdk.h)
+description: Die QueryLicenseState-Methode fragt den lokalen Lizenzspeicher nach Lizenzinformationen ab, die für eine Schlüssel-ID für ein oder mehrere bestimmte Rechte gelten.
 ms.assetid: 17f40c56-2266-4c94-9e95-a33a92ddef74
 keywords:
-- Querylicenenstate-Methode Windows Media-Format
-- Querylicenserstate-Methode Windows Media-Format, iwmdrmlicensequery-Schnittstelle
-- Iwmdrmlicensequery-Schnittstelle Windows Media-Format, querylicenserstate-Methode
+- 'QueryLicenseState-Methode : Windows Media Format'
+- QueryLicenseState-Methode windows Media Format, IWMDRMLicenseQuery-Schnittstelle
+- IWMDRMLicenseQuery-Schnittstelle windows Media Format , QueryLicenseState-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e101d4ad9b5405906d05ba5e5f230326a1a3f13a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 580a9bf635a7a817c63e990b0215bb6b124d468f2437ecc32a6e7d8e2ddc560c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846820"
 ---
-# <a name="iwmdrmlicensequeryquerylicensestate-method"></a>Iwmdrmlicensequery:: querylicenserstate-Methode
+# <a name="iwmdrmlicensequeryquerylicensestate-method"></a>IWMDRMLicenseQuery::QueryLicenseState-Methode
 
-Die **querylicenserstate** -Methode fragt den lokalen Lizenz Speicher nach Lizenzinformationen ab, die für eine Schlüssel-ID für ein oder mehrere bestimmte Rechte gelten.
+Die **QueryLicenseState-Methode** fragt den lokalen Lizenzspeicher nach Lizenzinformationen ab, die für eine Schlüssel-ID für ein oder mehrere bestimmte Rechte gelten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,38 +46,38 @@ HRESULT QueryLicenseState(
 
 <dl> <dt>
 
-*bstrinkid* \[ in\]
+*bstrKID* \[ In\]
 </dt> <dd>
 
-Die Schlüssel-ID, für die abgefragt werden soll. Nur Lizenzen, die auf diese Schlüssel-ID zutreffen, werden ausgewertet.
+Schlüssel-ID, für die eine Abfrage ausgeführt werden soll. Nur Lizenzen, die für diese Schlüssel-ID gelten, werden ausgewertet.
 
 </dd> <dt>
 
-*cactionstoquery* \[ in\]
+*cActionsToQuery* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Aktionen, für die abgefragt werden soll. Dieser Wert muss auf die Anzahl der Elemente in den Arrays festgelegt werden, die für die Parameter *rgbstractionstoquery* und *rgresultstatedata* übermittelt wurden.
+Die Anzahl der Aktionen, für die eine Abfrage durchgeführt werden soll. Dieser Wert muss auf die Anzahl der Elemente in den Arrays festgelegt werden, die für die Parameter *rgbstrActionsToQuery* und *rgResultStateData übergeben* werden.
 
 </dd> <dt>
 
-*rgbstractionstoquery \[ \]* \[in\]
+*rgbstrActionsToQuery \[ \]* \[in\]
 </dt> <dd>
 
-Ein Array von mindestens einem Recht, für das abgefragt werden soll. Dieses Array muss beliebig viele Elemente enthalten, die von *cactionstoquery* angegeben werden. Jedes Element muss auf eine der folgenden Konstanten festgelegt werden.
+Array mit einem oder mehr Rechten, für die eine Abfrage ausgeführt werden soll. Dieses Array muss so viele Elemente enthalten, wie von *cActionsToQuery angegeben.* Jedes Element muss auf eine der folgenden Konstanten festgelegt werden.
 
 
 
-| Konstante                                        | BESCHREIBUNG                                                                                                                                        |
+| Konstante                                        | Beschreibung                                                                                                                                        |
 |-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| g \_ wszwmdrm \_ licenlstate- \_ Sicherung               | Schließen Sie ein, um die Details zu den rechten zum Sichern und Wiederherstellen der Lizenz abzufragen.                                                               |
-| g \_ wszwmdrm \_ licen\state \_ kollaborativeplay    | Schließen Sie ein, um die Details über das Recht zur Freigabe des Inhalts für eine Gruppe von Benutzern im Rahmen eines kollaborativen Wiedergabe Szenarios abzufragen.          |
-| "g \_ wszwmdrm \_ licenanstate" \_ Kopieren                 | Schließen Sie ein, um die Details über das Recht zum Kopieren des Inhalts auf externe Geräte oder Medien abzufragen.                                                 |
-| g \_ wszwmdrm \_ licenanstate \_ copyper CD             | Schließen Sie ein, um die Details über das Recht zum Kopieren des Inhalts auf die CD abzufragen.                                                                        |
-| g \_ wszwmdrm \_ licensstate \_ copytononsdmidevice  | Schließen Sie ein, um die Details über das Recht zum Kopieren des Inhalts auf ein Gerät abzufragen, das die Secure Digital Media Initiative (SDMI) nicht unterstützt. |
-| g \_ wszwmdrm \_ \_ licentarstate copytosdmidevice     | Schließen Sie ein, um die Details über das Recht zum Kopieren des Inhalts auf ein Gerät abzufragen, das SDMI unterstützt.                                           |
-| g \_ wszwmdrm \_ \_ licencstate "erstellungenbnailimage" | Schließen Sie ein, um die Details über das Recht zum Erstellen eines Miniatur Bilds aus dem Inhalt abzufragen.                                                     |
-| g \_ wszwmdrm \_ licenanstate- \_ Wiedergabe             | Schließen Sie ein, um die Details über das Recht zur Wiedergabe des Inhalts abzufragen.                                                                              |
-| g \_ wszwmdrm \_ licenanstate \_ playlistburn         | Schließen Sie ein, um die Details über das Recht zum Kopieren des Inhalts auf CD als Teil einer Wiedergabeliste abzufragen.                                                  |
+| g \_ wszWMDRM \_ LicenseState \_ Backup               | Fügen Sie ein, um details zum Recht zum Sichern und Wiederherstellen der Lizenz abfragt.                                                               |
+| g \_ wszWMDRM \_ LicenseState \_ CollaborativePlay    | Fügen Sie ein, um die Details zum Recht zum Freigeben des Inhalts für eine Gruppe von Benutzern im Rahmen eines gemeinsamen Wiedergabeszenarios abfragt.          |
+| g \_ wszWMDRM \_ LicenseState \_ Copy                 | Fügen Sie ein, um details zum Recht zum Kopieren des Inhalts auf externe Geräte oder Medien abfragt.                                                 |
+| g \_ wszWMDRM \_ LicenseState \_ CopyToCD             | Fügen Sie ein, um die Details zum Recht zum Kopieren des Inhalts auf CD abfragt.                                                                        |
+| g \_ wszWMDRM \_ LicenseState \_ CopyToNonSDMIDevice  | Fügen Sie ein, um details zum Recht zum Kopieren des Inhalts auf ein Gerät abfragt, das die Initiative für sichere digitale Medien (SDMI) nicht unterstützt. |
+| g \_ wszWMDRM \_ LicenseState \_ CopyToSDMIDevice     | Fügen Sie ein, um die Details zum Recht zum Kopieren des Inhalts auf ein Gerät, das die SDMI unterstützt, abfragt.                                           |
+| g \_ wszWMDRM \_ LicenseState \_ CreateThumbnailImage | Fügen Sie ein, um die Details zum Recht zum Erstellen eines Miniaturbilds aus dem Inhalt abfragt.                                                     |
+| g \_ wszWMDRM \_ LicenseState \_ Playback             | Fügen Sie ein, um die Details zum Recht zum Wiederspielen des Inhalts abfragt.                                                                              |
+| g \_ wszWMDRM \_ LicenseState \_ PlaylistPlayList         | Schließen Sie ein, um die Details zum Recht zum Kopieren des Inhalts auf cd als Teil einer Wiedergabeliste abfragt.                                                  |
 
 
 
@@ -85,16 +85,16 @@ Ein Array von mindestens einem Recht, für das abgefragt werden soll. Dieses Arr
 
 </dd> <dt>
 
-*rgresultstatedata \[ \]* \[out\]
+*rgResultStateData \[ \]* \[out\]
 </dt> <dd>
 
-Ein Array aus mindestens einer [**DRM- \_ Lizenz \_ Status \_ Daten**](drmdrm-license-state-data.md) Struktur, die die Lizenz Zustandsinformationen empfängt, die im entsprechenden-Element des *rgbstractionstoquery* -Parameters auf das Recht zutreffen.
+Array von einer oder mehr [**DRM \_ LICENSE STATE \_ \_ DATA-Strukturen,**](drmdrm-license-state-data.md) die die Lizenzstatusinformationen erhalten, die für die rechte im entsprechenden Element des *rgbstrActionsToQuery-Parameters* gelten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -106,9 +106,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Lizenzen, die für die angegebene Schlüssel-ID gelten, werden durchsucht und ausgewertet. Die Ergebnisse werden aggregiert, sodass jede **DRM- \_ Lizenz \_ Status- \_ Daten** Strukturinformationen aus mehreren Lizenzen enthalten kann.
+Alle Lizenzen, die für die angegebene Schlüssel-ID gelten, werden durchsucht und ausgewertet. Die Ergebnisse werden aggregiert, sodass jede **DRM \_ LICENSE STATE \_ \_ DATA-Struktur** Informationen aus mehreren Lizenzen enthalten kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,8 +116,8 @@ Alle Lizenzen, die für die angegebene Schlüssel-ID gelten, werden durchsucht u
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -125,7 +125,7 @@ Alle Lizenzen, die für die angegebene Schlüssel-ID gelten, werden durchsucht u
 
 <dl> <dt>
 
-[**Iwmdrmlicensequery-Schnittstelle**](iwmdrmlicensequery.md)
+[**IWMDRMLicenseQuery-Schnittstelle**](iwmdrmlicensequery.md)
 </dt> </dl>
 
  

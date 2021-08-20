@@ -1,66 +1,66 @@
 ---
-title: Übersicht über Windows Media DRM
-description: Übersicht über Windows Media DRM
+title: Übersicht über Windows Medien-DRM
+description: Übersicht über Windows Medien-DRM
 ms.assetid: 944b5e0b-649f-4955-8df3-4762726b9893
 keywords:
-- Windows Media-Format-SDK, Digital Rights Management (DRM)
-- Windows Media-Format-SDK, DRM-Lizenzen
-- Windows Media-Format-SDK, Lizenzen für DRM
-- Digital Rights Management (DRM), Informationen zu
-- DRM (Digital Rights Management), Informationen zu
-- Digital Rights Management (DRM), Verpacken von Windows Media-Dateien
-- DRM (Digital Rights Management), Verpacken von Windows Media-Dateien
-- Digital Rights Management (DRM), geschützte Datei Lizenzierung
-- DRM (Digital Rights Management), geschützte Datei Lizenzierung
+- Windows Medienformat-SDK, Digital Rights Management (DRM)
+- Windows Medienformat-SDK, DRM-Lizenzen
+- Windows Medienformat-SDK,Lizenzen für DRM
+- Digital Rights Management (DRM), Informationen
+- DRM (Digital Rights Management), Informationen
+- Digital Rights Management (DRM), Verpacken Windows Mediendateien
+- DRM (Verwaltung digitaler Rechte),Verpacken Windows Mediendateien
+- Digital Rights Management (DRM), Lizenzierung geschützter Dateien
+- DRM (Verwaltung digitaler Rechte), Lizenzierung geschützter Dateien
 - Digital Rights Management (DRM), Lizenzen
 - DRM (Digital Rights Management), Lizenzen
-- Digital Rights Management (DRM), lesen geschützter Dateien
-- DRM (Digital Rights Management), lesen geschützter Dateien
+- Digital Rights Management (DRM), Lesen geschützter Dateien
+- DRM (Digital Rights Management),Lesen geschützter Dateien
 - Advanced Systems Format (ASF), Digital Rights Management (DRM)
 - ASF (Advanced Systems Format), Digital Rights Management (DRM)
-- Lizenzen, DRM
+- lizenzen,DRM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d14cb76fcf61346aab9bd68746afc7e50a2f146d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fa6cc882d31873a05361869b9246da1b57ac3d3aebb85073d0b31f24509a615b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846415"
 ---
-# <a name="overview-of-windows-media-drm"></a>Übersicht über Windows Media DRM
+# <a name="overview-of-windows-media-drm"></a>Übersicht über Windows Medien-DRM
 
-Bei Windows Media Digital Rights Management (DRM) handelt es sich um ein System zum Schutz der Inhalte in Windows Media-Dateien, sodass nicht autorisierte Benutzer nicht darauf zugreifen können. Der grundlegende DRM-Cycle umfasst drei Phasen: Verpacken, Lizenzierung und lesen.
+Windows Media Digital Rights Management (DRM) ist ein System zum Schützen der Inhalte in Windows Mediendateien, sodass nicht autorisierte Benutzer nicht darauf zugreifen können. Der grundlegende DRM-Zyklus umfasst drei Phasen: Verpacken, Lizenzierung und Lesen.
 
-## <a name="packaging-windows-media-files"></a>Verpacken von Windows Media-Dateien
+## <a name="packaging-windows-media-files"></a>Verpacken Windows Mediendateien
 
-Windows Media DRM ist für die Arbeit mit Windows Media-Dateien konzipiert. Eine Windows Media-Datei ist eine Datei, die der "Advanced Systems Format (ASF)"-Spezifikation entspricht und nur Audiodateien und Videos enthält, die mithilfe der Windows Media Audio-und Video Codecs komprimiert wurden.
+Windows Medien-DRM ist für die Arbeit mit Windows Mediendateien konzipiert. Eine Windows Media-Datei ist eine Datei, die der ASF-Spezifikation (Advanced Systems Format) entspricht und nur Audio und Video enthält, die mithilfe der Windows Medienaudio- und Videocodecs komprimiert wurden.
 
-Wenn eine ASF-Datei gepackt wird, wird ein DRM-spezifischer Abschnitt zum-Header hinzugefügt. Der DRM-Header enthält eine Schlüssel-ID, die den Inhalt für die Lizenzierung identifiziert, und eine Lizenz Erwerbs-URL. Hierbei handelt es sich um die Adresse einer Webseite, die Lizenzen zum Lesen geschützter Inhalte ausgeben kann. Es gibt noch viel mehr Informationen, die in den DRM-Header eingefügt werden können. Dies ist jedoch optional. Der DRM-Header ist signiert, sodass der Packager überprüft werden kann.
+Wenn eine ASF-Datei gepackt wird, wird dem Header ein DRM-spezifischer Abschnitt hinzugefügt. Der DRM-Header enthält eine Schlüssel-ID, die den Inhalt für die Lizenzierung identifiziert, und eine Lizenzerwerbs-URL, die die Adresse einer Webseite darstellt, die Lizenzen zum Lesen der geschützten Inhalte ausstellen kann. Es gibt viele weitere Informationen, die im DRM-Header abgelegt werden können, aber es ist optional. Der DRM-Header wird signiert, damit der Packager überprüft werden kann.
 
-Der Inhalt in der ASF-Datei wird während des Verpackungsvorgangs verschlüsselt. Die folgenden Informationen in der Paketdatei sind jedoch auch für Clients verfügbar, die nicht über eine Lizenz verfügen:
+Der Inhalt in der ASF-Datei wird während des Komprimierungsprozesses verschlüsselt. Die folgenden Informationen in der gepackten Datei sind jedoch auch für Clients verfügbar, die nicht über eine Lizenz verfügen:
 
 -   Metadaten, die im ASF-Header gespeichert sind.
--   Einige Metadaten, die im DRM-Header gespeichert sind (z. b. können Sie immer die Lizenz Erwerbs-URL abrufen).
+-   Einige Metadaten, die im DRM-Header gespeichert sind (z. B. können Sie immer die Lizenzerwerbs-URL abrufen).
 
-## <a name="licensing-protected-files"></a>Lizenzieren geschützter Dateien
+## <a name="licensing-protected-files"></a>Lizenzierung geschützter Dateien
 
-Damit eine Paketdatei gelesen wird, muss eine Lizenz an den Client Computer ausgegeben werden. Eine Lizenz besteht aus einem Satz von Daten, die die Bedingungen beschreiben, unter denen Daten in geschützten Dateien gelesen werden können. In den meisten Fällen wird eine Lizenz für eine geschützte Datei ausgegeben, als Antwort darauf, dass der Benutzer versucht, einen Vorgang für die Datei auszuführen. Es ist jedoch auch möglich, dass ein Lizenz Aussteller Lizenzen an einen Client übermitteln muss, bevor er explizit angefordert wird. Weitere Informationen zu Lizenzen finden Sie unter [Lizenzen](licenses.md).
+Damit eine gepackte Datei gelesen werden kann, muss eine Lizenz für den Clientcomputer ausgestellt werden. Eine Lizenz ist ein Satz von Daten, der die Bedingungen beschreibt, unter denen Daten in geschützten Dateien gelesen werden können. In den meisten Fällen wird eine Lizenz für eine geschützte Datei als Reaktion auf den Benutzer ausgestellt, der versucht, einen Vorgang für die Datei auszuführen. Es ist jedoch auch möglich, dass ein Lizenzaussteller Lizenzen an einen Client übermittelt, bevor er explizit angefordert wird. Weitere Informationen zu Lizenzen finden Sie unter [Lizenzen.](licenses.md)
 
 ## <a name="reading-data-from-protected-files"></a>Lesen von Daten aus geschützten Dateien
 
-Wenn ein Benutzer versucht, einen Vorgang für eine geschützte Datei auszuführen (Wiedergabe, Brennen auf CD, kopieren auf ein Gerät usw.), muss die Anwendung auf dem Client Computer nach Lizenzen suchen. Wenn auf dem Client Computer eine gültige Lizenz vorhanden ist, kann der Vorgang fortgesetzt werden. Wenn keine Lizenz für den Inhalt vorhanden ist oder wenn keine Lizenz für den Inhalt, der auf dem Client Computer vorhanden ist, die angeforderte Aktion zulässt, muss eine Lizenz erworben werden.
+Wenn ein Benutzer versucht, einen Vorgang für eine geschützte Datei auszuführen (wiedergeben, auf CD speichern, auf ein Gerät kopieren usw.), muss die Anwendung auf dem Clientcomputer nach Lizenzen für den Inhalt suchen. Wenn auf dem Clientcomputer eine gültige Lizenz vorhanden ist, kann der Vorgang fortgesetzt werden. Wenn keine Lizenz für den Inhalt vorhanden ist oder keine Lizenz für den Inhalt auf dem Clientcomputer die angeforderte Aktion zulässt, muss eine Lizenz erworben werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu den erweiterten APIs für den Windows Media DRM-Client**](about-the-windows-media-drm-client-extended-apis.md)
+[**Informationen zu den erweiterten APIs des Windows Media DRM-Clients**](about-the-windows-media-drm-client-extended-apis.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
