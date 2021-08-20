@@ -51,12 +51,12 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 <td>Breite des Einbruchs in Pixel.</td>
 </tr>
 <tr class="even">
-<td>Höhe</td>
+<td>Height</td>
 <td><strong>fEffectPara1</strong></td>
 <td>Höhe des Einbruchs in Pixel.</td>
 </tr>
 <tr class="odd">
-<td>Direction</td>
+<td>Richtung</td>
 <td><strong>fEffectPara2</strong></td>
 <td>Ecke, aus der die Einmenge stammt. Legen Sie auf einen der folgenden Werte fest:<br/>
 <ul>
@@ -92,7 +92,7 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

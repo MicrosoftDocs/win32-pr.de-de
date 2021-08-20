@@ -4,18 +4,18 @@ ms.assetid: 72a3fb10-4554-4a4d-bb73-ee515341b9c1
 title: System.GPS.DestLongitude
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a64f4fe5229195bcbc976d78f9a0b09b053a94ca
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: ae1e7b3482a5e632f774f500bcfe254667c120a3b5ea653c3725a354cbf95025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111988885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117866403"
 ---
 # <a name="systemgpsdestlongitude"></a>System.GPS.DestLongitude
 
-Gibt den Breitengrad des Zielpunkts an. Dies ist ein Array von drei Werten, wie folgt: Index 0 ist der Grad, Index 1 ist die Minuten, Index 2 ist die Sekunden. Jede wird aus den Werten in PKEY \_ GPS \_ DestLongitudeNumerator und PKEY \_ GPS \_ DestLongitudeDenominator berechnet.
+Gibt den Breitengrad des Zielpunkts an. Dies ist ein Array mit drei Werten: Index 0 ist der Grad, Index 1 ist die Minuten, Index 2 die Sekunden. Jede wird anhand der Werte in PKEY \_ GPS \_ DestLongitudeNumerator und PKEY \_ GPS \_ DestLongitudeDenominator berechnet.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription

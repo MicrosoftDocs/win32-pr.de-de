@@ -1,19 +1,19 @@
 ---
-description: Gibt den Breitengrad auf Grundlage des Verweises in pkey \_ GPS \_ breitentuderef an. Berechnet aus pkey \_ GPS " \_ latitudenumerator" und "pkey \_ GPS \_ latituentnenner".
+description: Gibt den Breitengrad basierend auf dem Verweis in PKEY \_ GPS \_ LatitudeRef an. Wird aus PKEY \_ GPS \_ LatitudeNumerator und PKEY \_ GPS \_ LatitudeDenominator berechnet.
 ms.assetid: f896d6eb-052e-4aa7-b479-3f0117055c78
-title: System. GPS. latitubindecimal
+title: System.GPS.LatitudeDecimal
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cdbc120eb7a3185b58c907c1e008a1473e9abf4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13cc7b674ed19b27936928300c808305dec624678ecfba1ca398e9bfba8385d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117866363"
 ---
-# <a name="systemgpslatitudedecimal"></a>System. GPS. latitubindecimal
+# <a name="systemgpslatitudedecimal"></a>System.GPS.LatitudeDecimal
 
-Gibt den Breitengrad auf Grundlage des Verweises in pkey \_ GPS \_ breitentuderef an. Berechnet aus pkey \_ GPS- \_ breiten umerator und pkey \_ GPS- \_ Wert
+Gibt den Breitengrad basierend auf dem Verweis in PKEY \_ GPS \_ LatitudeRef an. Berechnet aus PKEY \_ GPS \_ LatitudeNumerator und PKEY \_ GPS \_ LatitudeDenominator
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WMDRM_OUTPUT_PROTECTION_LEVELS -Struktur (Wmdrmsdk.h)
-description: Die WMDRM OUTPUT PROTECTION LEVELS-Struktur enthält die Ausgabeschutzebenen \_ \_ (OUTPUT Protection Levels, OPLs), die für eine Lizenz zum Ausführen \_ verschiedener Aktionen erforderlich sind.
+title: WMDRM_OUTPUT_PROTECTION_LEVELS-Struktur (Wmdrmsdk.h)
+description: Die WMDRM \_ OUTPUT \_ PROTECTION \_ LEVELS-Struktur enthält die Ausgabeschutzebenen (OUTPUT Protection Levels, OPLs), die von einer Lizenz zum Ausführen verschiedener Aktionen benötigt werden.
 ms.assetid: 6b284180-1033-4c57-b010-6d4ab4bc593a
 keywords:
-- WMDRM_OUTPUT_PROTECTION_LEVELS struktur windows media format
+- WMDRM_OUTPUT_PROTECTION_LEVELS Strukturfenster Medienformat
 - Strukturfenster Medienformat
 topic_type:
 - apiref
@@ -24,7 +24,7 @@ ms.locfileid: "117843961"
 ---
 # <a name="wmdrm_output_protection_levels-structure"></a>WMDRM \_ OUTPUT \_ PROTECTION \_ LEVELS-Struktur
 
-Die **WMDRM \_ OUTPUT PROTECTION \_ \_ LEVELS-Struktur** enthält die Ausgabeschutzebenen (OUTPUT Protection Levels, OPLs), die für eine Lizenz zum Ausführen verschiedener Aktionen erforderlich sind.
+Die **WMDRM \_ OUTPUT PROTECTION \_ \_ LEVELS-Struktur** enthält die Ausgabeschutzebenen (OUTPUT Protection Levels, OPLs), die von einer Lizenz zum Ausführen verschiedener Aktionen benötigt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,14 +56,14 @@ Mindestens erforderliche OPL zum Empfangen komprimierter digitaler Videos.
 **wUncompressedDigitalVideo**
 </dt> <dd>
 
-Mindestens erforderliche OPL für den Empfang nicht komprimierter digitaler Videos.
+Mindestens erforderliche OPL zum Empfangen von unkomprimierten digitalen Videos.
 
 </dd> <dt>
 
 **wAnalogVideo**
 </dt> <dd>
 
-Mindestens erforderliche OPL für den Empfang analoger Videos.
+Mindestens erforderliche OPL zum Empfangen analoger Videos.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Mindestens erforderliche OPL zum Empfangen komprimierter digitaler Audiodaten.
 **wUncompressedDigitalAudio**
 </dt> <dd>
 
-Mindestens erforderliche OPL für den Empfang unkomprimierten digitalen Audios.
+Mindestens erforderliche OPL, um unkomprimierte digitale Audiodaten zu empfangen.
 
 </dd> <dt>
 
@@ -102,7 +102,7 @@ Diese Struktur wird von der [**IWMDRMLicense::GetOutputProtectionLevels-Methode*
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

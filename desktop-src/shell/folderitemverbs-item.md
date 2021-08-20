@@ -1,7 +1,7 @@
 ---
-description: Ruft das folderitemverb-Objekt für ein angegebenes Element in der Auflistung ab.
+description: Ruft das FolderItemVerb-Objekt für ein angegebenes Element in der Auflistung ab.
 ms.assetid: 65871926-0920-4ad6-82da-7aba0a3c0fab
-title: Folderitemverbs. Item-Methode (Shldisp. h)
+title: FolderItemVerbs.Item-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 013215af3f5005e68b396312d0ef13fa974d8a32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86cb3ee7c9d62d943a369dd18cb4471e0682c1c1d0f5e6193a6f34b8c0451203
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117859852"
 ---
-# <a name="folderitemverbsitem-method"></a>Folderitemverbs. Item-Methode
+# <a name="folderitemverbsitem-method"></a>FolderItemVerbs.Item-Methode
 
-Ruft das [**folderitemverb**](folderitemverb.md) -Objekt für ein angegebenes Element in der Auflistung ab.
+Ruft das [**FolderItemVerb-Objekt**](folderitemverb.md) für ein angegebenes Element in der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ retVal = FolderItemVerbs.Item(
 
 <dl> <dt>
 
-*iIndex* \[ in\]
+*iIndex* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner sein als der Wert der [**count**](folderitemverbs-count.md) -Eigenschaft.
+Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner als der Wert der [**Count-Eigenschaft**](folderitemverbs-count.md) sein.
 
 </dd> </dl>
 
@@ -52,13 +52,13 @@ Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner sein 
 
 Typ: **[ **IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)\*\***
 
-Objekt, das das [**folderitemverb**](folderitemverb.md) -Objekt empfängt.
+Objekt, das das [**FolderItemVerb-Objekt**](folderitemverb.md) empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das- **Element** verwendet, um die ersten Verben in der Auflistung abzurufen, die für den System Steuerungs Ordner verfügbar sind. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Item verwendet,** um die ersten Verben in der Auflistung abzurufen, die für den ordner Systemsteuerung verfügbar sind, und zeigt seinen Namen an. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -93,7 +93,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -170,17 +170,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

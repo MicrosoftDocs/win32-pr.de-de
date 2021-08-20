@@ -1,36 +1,36 @@
 ---
-description: Einige Systeme verwenden Internet Firewalls oder Proxy Server, für die eine Authentifizierung für den gesamten Internet Datenverkehr erforderlich ist.
+description: Einige Systeme verwenden Internetfirewalls oder Proxyserver, die eine Authentifizierung für den sämtlichen Internetdatenverkehr erfordern.
 ms.assetid: b79e9a6f-2ffb-4ec0-ac2d-63e79ecfc26c
-title: Symbol Server und Internet Firewalls
+title: Symbolserver und Internetfirewalls
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e2a85a5d0ee2d41e6ffee40bbb275155bdf1e48
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8a998b5bd2aea2685ac060df6ddd8acdcd904c9997a0da8dfbf8fdc636ac90f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118004861"
 ---
-# <a name="symbol-server-and-internet-firewalls"></a>Symbol Server und Internet Firewalls
+# <a name="symbol-server-and-internet-firewalls"></a>Symbolserver und Internetfirewalls
 
-Einige Systeme verwenden Internet Firewalls oder Proxy Server, für die eine Authentifizierung für den gesamten Internet Datenverkehr erforderlich ist. Frühe Versionen des Symbol Servers konnten nicht auf Symbole aus dem Internet zugreifen, es sei denn, das System hat einen Firewallclient verwendet, der die Authentifizierung transparent verarbeitet hat.
+Einige Systeme verwenden Internetfirewalls oder Proxyserver, die eine Authentifizierung für den sämtlichen Internetdatenverkehr erfordern. Frühe Versionen des Symbolservers konnten nur dann auf Symbole aus dem Internet zugreifen, wenn das System einen Firewallclient verwendet hat, der die Authentifizierung transparent verarbeitet hat.
 
-Ab dbghelp 6,1 unterstützt der Symbol Server Proxy Server, für die eine solche Authentifizierung erforderlich ist. Der Symbol Server verwendet einen beliebigen Server, der als Standard in den LAN-Einstellungen des Computers konfiguriert ist. Öffnen Sie hierzu in der Systemsteuerung das Element **Internet Optionen** , klicken Sie auf die Registerkarte **Verbindungen** , und klicken Sie dann auf **LAN-Einstellungen**. Dies kann auch über Internet Explorer erfolgen, indem Sie **im Menü Extras** auf **Internetoptionen** klicken. Der Symbol Server wurde unter Verwendung von Basic-und Challenge-Response-Methoden für die Authentifizierung auf zahlreichen Marken von Proxy Servern getestet.
+Ab Dbghelp 6.1 unterstützt der Symbolserver Proxyserver, die eine solche Authentifizierung erfordern. Der Symbolserver verwendet den Server, der in den LAN-Einstellungen des Computers als Standard konfiguriert ist. Um dies zu finden, öffnen Sie das **Element Internetoptionen** in Systemsteuerung, klicken Sie auf die **Registerkarte** Verbindungen und dann **auf LAN Einstellungen.** Dies kann auch über Internet Explorer durch Klicken auf **Internetoptionen** im Menü **Extras** erfolgen. Der Symbolserver wurde auf vielen Marken von Proxyservern getestet, indem sowohl einfache als auch Challenge-Response-Methoden der Authentifizierung verwendet werden.
 
-Um einen bestimmten Proxy Server zu definieren, der von Symbol Server verwendet werden soll, legen Sie die \_ NT \_ \_ -Symbol Proxy-Umgebungsvariable auf den Namen (oder die IP-Adresse) des Proxy Servers und dann auf die Portnummer fest. Trennen Sie die beiden Werte durch einen Doppelpunkt. Beispiel:
+Um einen bestimmten Proxyserver für die Verwendung durch den Symbolserver zu definieren, legen Sie die NT SYMBOL PROXY-Umgebungsvariable auf den Namen (oder die IP-Adresse) des Proxyservers gefolgt von der \_ \_ \_ Portnummer fest. Trennen Sie die beiden Werte durch einen Doppelpunkt. Beispiel:
 
-**festlegen \_ NT- \_ Symbol \_ Proxy =**_myProxyServer_*_: 80_*
+**set \_ NT \_ SYMBOL \_ PROXY=**_myproxyserver_*_:80_*
 
-Wenn Sie den WinDbg-Debugger verwenden, konfigurieren Sie den Symbol Pfad so, dass er auf den Symbol Speicher verweist, den Sie verwenden möchten. Der einzige Unterschied besteht darin, dass im System ein Dialogfeld angezeigt wird, in dem Sie Ihre Benutzer-ID und das Kennwort eingeben müssen, um Sie an den Proxy Server zu übergeben. Wenn Sie falsche Informationen eingeben, wird das Dialogfeld erneut angezeigt. Wenn Sie auf die Schaltfläche **Abbrechen** klicken, wird das Dialogfeld geschlossen, und der Symbol Server wird für die Verwendung über das Internet deaktiviert.
+Wenn Sie den windbg-Debugger verwenden, konfigurieren Sie den Symbolpfad so, dass er auf den Symbolspeicher zeigt, den Sie verwenden möchten. Der einzige Unterschied besteht in der Anzeige eines Dialogfelds, in dem Sie Ihre Benutzer-ID und ihr Kennwort eingeben müssen, um sie an den Proxyserver zu übergeben. Wenn Sie falsche Informationen eingeben, wird das Dialogfeld erneut angezeigt. Wenn Sie auf die **Schaltfläche Abbrechen** klicken, wird das Dialogfeld verworfen, und der Symbolserver wird für die Verwendung über das Internet deaktiviert.
 
-Wenn Sie die neuesten Versionen von cdb.exe oder ntsd.exe verwenden, ist diese Funktion standardmäßig deaktiviert. Sie können diese Funktion jedoch wie folgt mithilfe des Befehls "! SYM Extension" aktivieren oder deaktivieren:
+Wenn Sie die neuesten Versionen von cdb.exe oder ntsd.exe verwenden, ist diese Funktion standardmäßig deaktiviert. Sie können diese Funktionalität jedoch wie folgt mithilfe des Befehls !sym extension aktivieren oder deaktivieren:
 
--   So aktivieren Sie die Eingabeaufforderung für Benutzer-ID und Kennwort: **! SYM-Eingabe Aufforderungen**.
--   So deaktivieren Sie die Eingabeaufforderung für Benutzer-ID und Kennwort: **! SYM fordert aus**.
+-   So aktivieren Sie die Eingabeaufforderung für Benutzer-ID und Kennwort: **!sym fordert auf.**
+-   So deaktivieren Sie die Eingabeaufforderung für Benutzer-ID und Kennwort: **!sym fordert aus.**
 
-Wenn Sie die Eingabeaufforderung aktivieren, müssen Sie Symbole mit dem Befehl. Reload erneut laden.
+Wenn Sie die Eingabeaufforderung aktivieren, müssen Sie Symbole mit dem Befehl .reload erneut laden.
 
-Die dbghelp-API wurde erweitert, um diese Änderungen zu unterstützen. Die [**symbolserversetoptions**](/previous-versions//ms680676(v=vs.85)) -Funktion unterstützt die ssrvopt- \_ Proxy Option. Wenn der Data-Parameter **null** ist, wird der in den **Internet Optionen** definierte Standard Proxy verwendet. Andernfalls wird eine NULL terminierte Zeichenfolge mit Angabe des Namens und der Portnummer des Proxy Servers übermittelt. Der Name und der Port werden wie folgt durch einen Doppelpunkt getrennt: *myProxyServer*: 80. Die [**symsettoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) -Funktion unterstützt die Option "symopt \_ No \_ Aufforderungen". Dadurch werden alle Eingabe Aufforderungen für die Validierung vom Symbol Server deaktiviert.
+Die DbgHelp-API wurde erweitert, um diese Änderungen zu unterstützen. Die [**SymbolServerSetOptions-Funktion**](/previous-versions//ms680676(v=vs.85)) unterstützt die Option SSRVOPT \_ PROXY. Wenn der Datenparameter **NULL ist,** wird der unter **Internetoptionen definierte Standardproxy** verwendet. Andernfalls wird eine auf 0 (null) beendete Zeichenfolge übergeben, die den Namen und die Portnummer des Proxyservers angibt. Name und Port werden wie folgt durch einen Doppelpunkt getrennt: *myproxyserver*:80. Die [**SymSetOptions-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) unterstützt die SYMOPT \_ NO \_ PROMPTS-Option. Dadurch werden alle Überprüfungsaufforderungen vom Symbolserver deaktiviert.
 
  
 

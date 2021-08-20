@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: esentoperationexception-Konstruktor'
-title: Esentoperationexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOperationException-Konstruktor'
+title: EsentOperationException-Konstruktor
 TOCTitle: 'EsentOperationException constructor '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.EsentOperationException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoperationexception.esentoperationexception(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: a35cd416e79f6bafa1867d8466ee9d80c53bbd7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: faa3dbac425e8503b38916c787737f285ce205acb3926c7b796f81d3937a5263
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104550587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117899021"
 ---
-# <a name="esentoperationexception-constructor"></a>Esentoperationexception-Konstruktor
+# <a name="esentoperationexception-constructor"></a>EsentOperationException-Konstruktor
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,19 +33,19 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn334752(v=exchg.10).md">Esentoperationexception (SerializationInfo, StreamingContext)</a></td>
-<td>Initialisiert eine neue Instanz der esentoperationexception-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
+<td><a href="dn334752(v=exchg.10).md">EsentOperationException(SerializationInfo, StreamingContext)</a></td>
+<td>Initialisiert eine neue Instanz der EsentOperationException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn319686(v=exchg.10).md">Esentoperationexception (Zeichenfolge, JET_err)</a></td>
-<td>Initialisiert eine neue Instanz der esentoperationexception-Klasse.</td>
+<td><a href="dn319686(v=exchg.10).md">EsentOperationException(String, JET_err)</a></td>
+<td>Initialisiert eine neue Instanz der EsentOperationException-Klasse.</td>
 </tr>
 </tbody>
 </table>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentOperationException-Klasse](./esentoperationexception-class.md)
 
-[Esentoperationexception-Member](./esentoperationexception-members.md)
+[EsentOperationException-Member](./esentoperationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,23 +1,23 @@
 ---
-description: ICE71 überprüft, ob die Medien Tabelle einen Eintrag mit einem DiskId-Wert gleich 1 enthält.
+description: ICE71 überprüft, ob die Media-Tabelle einen Eintrag mit diskId gleich 1 enthält.
 ms.assetid: b48c2f3f-24ef-48a8-849f-7abed69c0fc9
 title: ICE71
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c6e136362caa13da2b6305e3d8c3ca9c3a5c7bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb1090eb8b1a36ed361ef763bfda3875a8fde052ed8643dceeb660c88ae954a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142514"
 ---
 # <a name="ice71"></a>ICE71
 
-ICE71 überprüft, ob die [Medien Tabelle](media-table.md) einen Eintrag mit einem DiskId-Wert gleich 1 enthält. (Windows Installer geht davon aus, dass sich das MSI-Paket auf Datenträger 1 befindet.)
+ICE71 überprüft, ob die [Media-Tabelle](media-table.md) einen Eintrag mit diskId gleich 1 enthält. (Windows Installer geht davon aus, dass sich .msi Paket auf Datenträger 1 befindet.)
 
 ## <a name="result"></a>Ergebnis
 
-ICE71 gibt einen Fehler zurück, wenn die Medien Tabelle keinen Eintrag enthält, bei dem DiskId gleich 1 ist.
+ICE71 gibt einen Fehler zurück, wenn die Media-Tabelle keinen Eintrag mit diskId gleich 1 enthält.
 
 ## <a name="example"></a>Beispiel
 
@@ -27,9 +27,9 @@ ICE71 meldet den folgenden Fehler für das gezeigte Beispiel.
 The Media table requires an entry with DiskId=1. First DiskId is '2'.
 ```
 
-T0 beheben Sie diesen Fehler, und ändern Sie die DiskId des Eintrags, in dem das Paket gespeichert ist, auf 1.
+T0 behebt diesen Fehler, und ändern Sie die DiskId des Eintrags, in dem das Paket gespeichert ist, in 1.
 
-[Medien Tabelle](media-table.md) (partiell)
+[Medientabelle](media-table.md) (partiell)
 
 
 
@@ -45,7 +45,7 @@ T0 beheben Sie diesen Fehler, und ändern Sie die DiskId des Eintrags, in dem da
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

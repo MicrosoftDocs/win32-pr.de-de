@@ -1,7 +1,7 @@
 ---
-description: Die providetextdata-Methode wird von Mergemod.dll aufgerufen, um Textdaten aus dem Client Tool abzurufen. Mergemod.dll stellt den Namen aus dem entsprechenden Eintrag in der Tabelle ModuleConfiguration bereit.
+description: Die ProvideTextData-Methode wird von Mergemod.dll aufgerufen, um Textdaten aus dem Clienttool abzurufen. Mergemod.dll stellt den Namen aus dem entsprechenden Eintrag in der Tabelle ModuleConfiguration bereit.
 ms.assetid: 286b0b58-1b6a-4d41-89e1-eb9c23bdd788
-title: "\"Konfigurationsmodul. providetextdata\"-Methode (Mergemod. h)"
+title: ConfigureModule.ProvideTextData-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,24 +14,24 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 6801cb4b3ff90cb277d13573fe4527e8d76bfe0d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9712b7e7f619e40ba3804d7c5671c6855e7982eddd2c4c964f172845cf5de465
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118143716"
 ---
-# <a name="configuremoduleprovidetextdata-method"></a>"Konfigurationsmodul. providetextdata"-Methode
+# <a name="configuremoduleprovidetextdata-method"></a>ConfigureModule.ProvideTextData-Methode
 
-Die **providetextdata** -Methode wird von Mergemod.dll aufgerufen, um Textdaten aus dem Client Tool abzurufen. Mergemod.dll stellt den *Namen* aus dem entsprechenden Eintrag in der Tabelle ModuleConfiguration bereit.
+Die **ProvideTextData-Methode** wird von Mergemod.dll aufgerufen, um Textdaten aus dem Clienttool abzurufen. Mergemod.dll stellt den *Namen* aus dem entsprechenden Eintrag in der Tabelle ModuleConfiguration bereit.
 
-Das Tool sollte S OK zurückgeben \_ und den entsprechenden Anpassungs Text in ConfigData bereitstellen. Das Client Tool ist für die Zuordnung der Daten zuständig, Mergemod.dllist jedoch für die Freigabe des Arbeitsspeichers zuständig. Dieses Argument muss ein **BSTR** -Objekt sein. **LPCWSTR** wird nicht akzeptiert.
+Das Tool sollte S OK zurückgeben \_ und den entsprechenden Anpassungstext in ConfigData bereitstellen. Das Clienttool ist für die Zuordnung der Daten zuständig, aber Mergemod.dllist für die Freigabe des Arbeitsspeichers verantwortlich. Dieses Argument MUSS ein **BSTR-Objekt** sein. **LPCWSTR** wird NICHT akzeptiert.
 
-Wenn das Tool keine Konfigurationsdaten für diesen *namens* Wert bereitstellt, sollte die Funktion "S false" zurückgeben \_ . In diesem Fall Mergemod.dll den Wert des Arguments ConfigData ignoriert und den Standardwert aus der Tabelle ModuleConfiguration verwendet.
+Wenn das Tool keine Konfigurationsdaten für diesen *Name-Wert* bereitstellt, sollte die Funktion S \_ FALSE zurückgeben. In diesem Fall ignoriert Mergemod.dll den Wert des ConfigData-Arguments und verwendet den Standardwert aus der Tabelle ModuleConfiguration.
 
-Jeder andere Rückgabecode als s \_ OK oder s \_ false bewirkt, dass ein Fehler protokolliert wird (wenn ein Protokoll geöffnet ist), und führt zu einem Fehler beim Zusammenführen.
+Jeder andere Rückgabecode als S \_ OK oder S FALSE führt \_ dazu, dass ein Fehler protokolliert wird (wenn ein Protokoll geöffnet ist). Dies führt zu einem Fehler bei der Zusammenführung.
 
-Da diese Funktion der standardmäßigen **BSTR** -Konvention folgt, entspricht NULL der leeren Zeichenfolge.
+Da diese Funktion der **BSTR-Standardkonvention** entspricht, entspricht NULL der leeren Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,14 +52,14 @@ ConfigureModule.ProvideTextData(
 *Name* 
 </dt> <dd>
 
-Der Name des Elements, für das Daten abgerufen werden.
+Name des Elements, für das Daten abgerufen werden.
 
 </dd> <dt>
 
 *ConfigData* 
 </dt> <dd>
 
-Zeiger auf den Anpassungs Text.
+Zeiger auf Anpassungstext.
 
 </dd> </dl>
 
@@ -67,13 +67,13 @@ Zeiger auf den Anpassungs Text.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Client kann für jeden Datensatz in der [Tabelle "ModuleConfiguration](moduleconfiguration-table.md)" nicht mehr als einmal aufgerufen werden. Beachten Sie, dass Mergemod.dll für den gleichen "Name"-Wert nie mehrere Aufrufe an den Client sendet. Wenn kein Datensatz in der ModuleSubstitution-Tabelle die-Eigenschaft verwendet, bewirkt ein Eintrag in der ModuleConfiguration-Tabelle keine Aufrufe an den Client.
+Der Client kann nicht mehr als einmal für jeden Datensatz in der [Tabelle ModuleConfiguration](moduleconfiguration-table.md)aufgerufen werden. Beachten Sie, dass Mergemod.dll nie mehrere Aufrufe an den Client für denselben "Name"-Wert vornimmt. Wenn kein Datensatz in der Tabelle ModuleSubsschädigung die -Eigenschaft verwendet, verursacht ein Eintrag in der Tabelle ModuleConfiguration keine Aufrufe an den Client.
 
 ### <a name="c"></a>C++
 
-Weitere Informationen finden Sie unter [**providebug TextData-Funktion**](/windows/desktop/api/Mergemod/nf-mergemod-imsmconfiguremodule-providetextdata).
+Siehe [**ProvideTextData-Funktion.**](/windows/desktop/api/Mergemod/nf-mergemod-imsmconfiguremodule-providetextdata)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Weitere Informationen finden Sie unter [**providebug TextData-Funktion**](/windo
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 2,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 2.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

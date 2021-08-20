@@ -1,9 +1,9 @@
 ---
-title: MCM_GETRANGE Meldung (Commctrl.h)
-description: Ruft die minimalen und maximal zulässigen Datumsangaben ab, die für ein Monatskalender-Steuerelement festgelegt sind. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetRange-Makros senden.
+title: MCM_GETRANGE (Commctrl.h)
+description: Ruft die minimalen und maximalen zulässigen Datumsangaben ab, die für ein Monatskalender-Steuerelement festgelegt sind. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetRange-Makros senden.
 ms.assetid: 5000053a-2975-4781-b3c9-83f9763f679a
 keywords:
-- MCM_GETRANGE Windows-Steuerelemente für Nachrichten
+- MCM_GETRANGE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117830394"
 ---
 # <a name="mcm_getrange-message"></a>MCM \_ GETRANGE-Nachricht
 
-Ruft die minimalen und maximal zulässigen Datumsangaben ab, die für ein Monatskalender-Steuerelement festgelegt sind. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetRange-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getrange) senden.
+Ruft die minimalen und maximalen zulässigen Datumsangaben ab, die für ein Monatskalender-Steuerelement festgelegt sind. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetRange-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getrange) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft die minimalen und maximal zulässigen Datumsangaben ab, die für ein Monats
 *lParam* 
 </dt> <dd>
 
-Zeiger auf ein Array mit zwei Elementen von [**SYSTEMTIME-Strukturen,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) das die Datumslimitinformationen empfängt. Der Mindestgrenzwert ist in *lprgSysTimeArray* \[ 0 \] festgelegt, und *lprgSysTimeArray* \[ 1 \] empfängt den maximalen Grenzwert. Wenn eines der Elemente auf alle Nullen festgelegt ist, wird kein entsprechender Grenzwert für das Monatskalender-Steuerelement festgelegt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL** sein.
+Zeiger auf ein Zwei-Element-Array von [**SYSTEMTIME-Strukturen,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die Datumslimitinformationen empfangen. Der Mindestgrenzwert wird in *lprgSysTimeArray* \[ 0 \] festgelegt, und *lprgSysTimeArray* \[ 1 \] empfängt den höchstwertigen Grenzwert. Wenn eines der Elemente auf alle Nullen festgelegt ist, wird kein entsprechender Grenzwert für das Monatskalender-Steuerelement festgelegt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **DWORD** zurück, das 0 (keine Grenzwerte festgelegt) oder eine Kombination der folgenden Werte sein kann, die Grenzwertinformationen angeben:
+Gibt ein **DWORD zurück,** das null sein kann (es sind keine Grenzwerte festgelegt) oder eine Kombination der folgenden Werte, die Grenzwertinformationen angeben:
 
 
 
@@ -60,17 +60,17 @@ Gibt ein **DWORD** zurück, das 0 (keine Grenzwerte festgelegt) oder eine Kombin
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Uhrzeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
+[Zeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
 </dt> </dl>
 
  
