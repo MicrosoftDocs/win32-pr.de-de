@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanytestinjectionsexception-Konstruktor'
-title: Esentesomanytestinjectionsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTooManyTestInjectionsException-Konstruktor'
+title: EsentTooManyTestInjectionsException-Konstruktor
 TOCTitle: 'EsentTooManyTestInjectionsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTooManyTestInjectionsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanytestinjectionsexception.esenttoomanytestinjectionsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 46111bcd86345516796e5574b540bbac9a5a8682
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42b70047b40f878d0b97c879825b126b3630c4c245f55862caadf22f78c194e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118078111"
 ---
-# <a name="esenttoomanytestinjectionsexception-constructor"></a>Esentesomanytestinjectionsexception-Konstruktor
+# <a name="esenttoomanytestinjectionsexception-constructor"></a>EsentTooManyTestInjectionsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentesomanytestinjectionsexception-Klasse.
+Initialisiert eine neue Instanz der EsentTooManyTestInjectionsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentTooManyTestInjectionsException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentesomanytestinjectionsexception-Klasse](./esenttoomanytestinjectionsexception-class.md)
+[EsentTooManyTestInjectionsException-Klasse](./esenttoomanytestinjectionsexception-class.md)
 
-[Esentesomanytestinjectionsexception-Elemente](./esenttoomanytestinjectionsexception-members.md)
+[EsentTooManyTestInjectionsException-Member](./esenttoomanytestinjectionsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

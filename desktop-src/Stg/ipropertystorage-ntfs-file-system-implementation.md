@@ -1,40 +1,40 @@
 ---
-title: IPropertyStorage-NTFS-Datei System Implementierung
-description: Die NTFS-Version 5,0 bietet eine Implementierung der IPropertyStorage-Schnittstelle für Dateien auf einem NTFS-Volume, wenn die Dateien keine Verbund Dateien sind.
+title: IPropertyStorage-NTFS-Dateisystemimplementierung
+description: Die NTFS-Version 5.0 stellt eine Implementierung der IPropertyStorage-Schnittstelle für Dateien auf einem NTFS-Volume bereit, wenn es sich bei den Dateien nicht um Verbunddateien handelt.
 ms.assetid: d0ffd975-5bc2-4de3-b0c1-c9188541f46a
 keywords:
-- IPropertyStorage-Schnittstellen-STG, Implementierungen, NTFS-Dateisystem
+- IPropertyStorage Strctd Stg , Implementierungen, NTFS-Dateisystem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ca359bebbd05e67a034494023d7fc23089396b32
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a91db3242761867eb3ec9f9cf744e6b20db3ac1ef5f0e4fef2ae1c460f182907
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117961269"
 ---
-# <a name="ipropertystorage-ntfs-file-system-implementation"></a>IPropertyStorage-NTFS-Datei System Implementierung
+# <a name="ipropertystorage-ntfs-file-system-implementation"></a>IPropertyStorage-NTFS-Dateisystemimplementierung
 
-Die NTFS-Version 5,0 bietet eine Implementierung der [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) -Schnittstelle für Dateien auf einem NTFS-Volume, wenn die Dateien keine Verbund Dateien sind.
+Die NTFS-Version 5.0 stellt eine Implementierung der [**IPropertyStorage-Schnittstelle**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) für Dateien auf einem NTFS-Volume bereit, wenn es sich bei den Dateien nicht um Verbunddateien handelt.
 
-**So erhalten Sie einen Zeiger auf die NTFS-Dateisystem Implementierung von IPropertySetStorage**
+**So erhalten Sie einen Zeiger auf die NTFS-Dateisystemimplementierung von IPropertySetStorage**
 
-1.  Rufen Sie [**IPropertySetStorage:: Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create) mithilfe der NTFS-Implementierung von [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage)auf.
-2.  Aufrufen von [**IPropertySetStorage:: Open**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open) mithilfe der NTFS-Implementierung von [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage).
+1.  Rufen [**Sie IPropertySetStorage::Create mithilfe**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create) der NTFS-Implementierung von [**IPropertySetStorage auf.**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage)
+2.  Rufen [**Sie IPropertySetStorage::Open mithilfe**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open) der NTFS-Implementierung von [**IPropertySetStorage auf.**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage)
 
-## <a name="when-to-use"></a>Verwendungs Zeitpunkt
+## <a name="when-to-use"></a>Verwendung
 
-Verwenden Sie [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) , um Eigenschaften innerhalb eines einzelnen Eigenschaften Satzes zu verwalten. Die Methoden unterstützen das Lesen, schreiben und Löschen von Eigenschaften und die optionalen Zeichen folgen Namen, die Eigenschafts Bezeichnernamen zugeordnet werden können. Eine andere Methode ermöglicht es Ihnen, Zeiten festzulegen, die dem Eigenschaften Speicher zugeordnet sind, und ein anderes ermöglicht die Zuweisung einer CLSID, die zum Zuordnen von anderem Code, z. b. Benutzeroberflächen Code, mit dem Eigenschaften Satz verwendet wird. Der Aufruf der [**enum**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-enum) -Methode liefert einen Zeiger auf die NTFS-Implementierung von [**ienumstatus propstg**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropstg), mit der Sie die Eigenschaften in der Menge auflisten können.
+Verwenden [**Sie IPropertyStorage,**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) um Eigenschaften innerhalb eines einzelnen Eigenschaftensets zu verwalten. Die zugehörigen Methoden unterstützen das Lesen, Schreiben und Löschen von Eigenschaften und die optionalen Zeichenfolgennamen, die Eigenschaftsbezeichnern zugeordnet werden können. Eine andere Methode ermöglicht ihnen das Festlegen von Zeiten, die dem Eigenschaftenspeicher zugeordnet sind, und eine andere ermöglicht die Zuweisung einer CLSID, die verwendet wird, um anderen Code, z. B. Benutzeroberflächencode, dem Eigenschaftensatz zu zuordnen. Das Aufrufen [**der Enum-Methode**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-enum) stellt einen Zeiger auf die NTFS-Implementierung von [**IEnumSTATPROPSTG**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropstg)zur Verfügung, mit der Sie die Eigenschaften in der Gruppe aufzählen können.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die NTFS-Implementierung bietet im wesentlichen dieselben Funktionen wie die Implementierung der Verbund Datei. Weitere Informationen finden Sie unter [IPropertyStorage-Verbund Datei Implementierung](ipropertystorage-compound-file-implementation.md).
+Die NTFS-Implementierung bietet im Wesentlichen die gleichen Features wie die Verbunddateiimplementierung. Weitere Informationen finden Sie unter [IPropertyStorage-Compound File Implementation](ipropertystorage-compound-file-implementation.md).
 
-Da NTFS ein robustes Dateisystem ist, bleibt ein NTFS-Eigenschaften Satz nie in einem falschen Zustand. Wenn der Inhalt eines NTFS- [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) in die zugrunde liegende NTFS-Datei geleert wird, werden entweder alle oder keine der Zustände als atomarer Vorgang in die Datei geschrieben, auch wenn während des Vorgangs ein Fehler auftritt, z. b. eine ungewöhnliche Prozess Beendigung. Um ein ähnliches Verhalten mit der Implementierung der Verbund Datei zu erzielen, muss die übergeordnete [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle im transaktiven Modus geöffnet werden.
+Da NTFS ein stabiles Dateisystem ist, wird ein NTFS-Eigenschaftensatz nie in einem falschen Zustand befließen. Wenn der Inhalt einer [**NTFS-IPropertyStorage-Datei**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) in die zugrunde liegende NTFS-Datei geleert wird, wird entweder der ganze oder keiner der Status als atomarer Vorgang in die Datei geschrieben, selbst wenn während des Vorgangs ein Fehler vor sich geht, z. B. eine ungewöhnliche Prozessbeendigung. Um ein ähnliches Verhalten mit der Verbunddateiimplementierung zu erzielen, muss die übergeordnete [**IPropertySetStorage-Schnittstelle**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) im Transaktionsmodus geöffnet werden.
 
-Diese Robustheit ist nur möglich, wenn auf eine NTFS-Eigenschaft zugegriffen wird, die auf einem NTFS 5,0-Volume festgelegt ist. Es ist möglich, auf NTFS-Eigenschaften Sätze in früheren Versionen von NTFS zuzugreifen (z. b. auf einem Computer unter Windows NT oder Windows 2000, der auf die Eigenschaften Sätze auf einem Dateiserver Computer unter Windows NT 4,0 zugreift), während ein unerwarteter Fehler nicht gewährleistet ist, dass Sie den richtigen Zustand aufweisen.
+Diese Stabilitätsstufe ist nur möglich, wenn auf eine NTFS-Eigenschaft, die auf einem NTFS 5.0-Volume festgelegt ist, zu zugreifen. Es ist möglich, auf NTFS-Eigenschaftensätze in früheren Versionen von NTFS zu zugreifen (z. B. auf einem Computer, der unter Windows NT oder Windows 2000 ausgeführt wird und auf die Eigenschaftensätze auf einem Dateiservercomputer unter Windows NT 4.0 zugeht), bei einem unerwarteten Fehler wird jedoch nicht garantiert, dass sie sich in einem richtigen Zustand befinden.
 
-Obwohl die NTFS-Implementierung von [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) keine Unterstützung für Transaktionen bietet, unterstützt Sie die NTFS-Implementierung von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) . Das heißt, dass **STGM \_ transaktive** im *grfMode* -Parameter für die [**Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create) -und [**Open**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open) -Methode von **IPropertySetStorage** angegeben werden kann. Wie bei der Implementierung der Verbund Datei ist der transaktive Modus nur für nicht einfache Eigenschafts Speicher möglich (bei Angabe von **propsetflag \_ nicht einfache** im *grfFlags* -Parameter).
+Obwohl die NTFS-Implementierung [**von IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) keine Transaktion unterstützt, wird sie von der NTFS-Implementierung von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) unterstützt. Das heißt, **STGM \_ TRANSACTED** kann im *grfMode-Parameter* für die [**Create-**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create) und [**Open-Methoden**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-open) von **IPropertySetStorage angegeben werden.** Wie bei der Verbunddateiimplementierung ist der Transaktionsmodus nur für nicht einfache Eigenschaftenspeicher möglich (Angabe **von PROPSETFLAG \_ NONSIMPLE** im *parameter grfFlags).*
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,9 +43,9 @@ Obwohl die NTFS-Implementierung von [**IPropertySetStorage**](/windows/desktop/a
 [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage)
 </dt> <dt>
 
-[IPropertySetStorage-NTFS-Datei System Implementierung](ipropertysetstorage-ntfs-file-system-implementation.md)
+[IPropertySetStorage-NTFS-Dateisystemimplementierung](ipropertysetstorage-ntfs-file-system-implementation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

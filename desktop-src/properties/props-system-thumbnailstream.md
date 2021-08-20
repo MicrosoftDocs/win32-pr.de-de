@@ -1,5 +1,5 @@
 ---
-description: Daten, die die Miniaturansicht im VT \_ STREAM-Format darstellen und von Windows GDI+ und Windows Codecs wie .jpg und .png unterstützt werden.
+description: Daten, die die Miniaturansicht im VT STREAM-Format darstellt, die von Windows GDI+ und Windows Codecs wie .jpg \_ und .png.
 ms.assetid: 7ffdf9e4-69b1-4946-8867-73696cd241e0
 title: System.ThumbnailStream
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117864258"
 ---
 # <a name="systemthumbnailstream"></a>System.ThumbnailStream
 
-Daten, die die Miniaturansicht im VT \_ STREAM-Format darstellen und von Windows GDI+ und Windows Codecs wie .jpg und .png unterstützt werden.
+Daten, die die Miniaturansicht im VT STREAM-Format darstellt, die von Windows GDI+ und Windows Codecs wie .jpg \_ und .png.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 

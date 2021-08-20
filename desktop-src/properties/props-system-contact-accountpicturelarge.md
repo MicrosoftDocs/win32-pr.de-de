@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Stream mit den Daten, die zum Rendern des großen Kontobilds eines Kontakts erforderlich sind.
+description: Dies ist ein Stream, der die Daten enthält, die zum Rendern des großen Kontobilds eines Kontakts erforderlich sind.
 ms.assetid: 4e3af0ef-3bee-4640-b6d0-c36ca7b3bd08
 title: System.Contact.AccountPictureLarge
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117867250"
 ---
 # <a name="systemcontactaccountpicturelarge"></a>System.Contact.AccountPictureLarge
 
-Dies ist ein Stream mit den Daten, die zum Rendern des großen Kontobilds eines Kontakts erforderlich sind.
+Dies ist ein Stream, der die Daten enthält, die zum Rendern des großen Kontobilds eines Kontakts erforderlich sind.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 

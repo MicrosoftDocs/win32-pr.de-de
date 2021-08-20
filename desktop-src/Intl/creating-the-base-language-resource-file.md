@@ -1,26 +1,26 @@
 ---
-description: Erstellen der Ressourcen Datei für die Basis Sprache
+description: Erstellen der Basissprachressourcendatei
 ms.assetid: 770e1f4b-5258-4b6b-afa4-5c19743daaaa
-title: Erstellen der Ressourcen Datei für die Basis Sprache
+title: Erstellen der Basissprachressourcendatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b96d566625025c105e123e0e2edf9f4f20721274
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72d1d254231e44d6934d3debdcddd788761b8333f687d93aabc8cbdaea342521
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117993231"
 ---
-# <a name="creating-the-base-language-resource-file"></a>Erstellen der Ressourcen Datei für die Basis Sprache
+# <a name="creating-the-base-language-resource-file"></a>Erstellen der Basissprachressourcendatei
 
-Ressourcen für Elemente der Benutzeroberfläche werden für die grundlegende Sprache definiert, die von der Anwendung unterstützt wird, z. b. Englisch (USA). Ein Beispiel für eine Win32 PE-Ressourcen Datei ist eine RC-Datei, die mit dem RC-Compiler erstellt wurde. Ausführliche Informationen zum Erstellen von RC-Dateien finden Sie unter Informationen [zu Ressourcen Dateien](../menurc/about-resource-files.md).
+Ressourcen für Benutzeroberflächenelemente werden für die grundlegende Sprache definiert, die von der Anwendung unterstützt wird, z. B. Englisch (USA). Ein Beispiel für eine Win32 PE-Ressourcendatei ist eine RC-Datei, die mit dem RC-Compiler erstellt wurde. Weitere Informationen zum Erstellen von RC-Dateien finden Sie unter [Informationen zu Ressourcendateien.](../menurc/about-resource-files.md)
 
-Wenn Sie eine RC-Datei für die Basis Sprachen Ressourcen verwenden, haben Sie die Möglichkeit, eine Ressourcen Konfigurationsdatei für eine XML-Darstellung der Ressourcen Konfigurationsdaten zu verwenden. Informationen zum Erstellen dieser Datei finden Sie unter [Vorbereiten einer Ressourcen Konfigurationsdatei](preparing-a-resource-configuration-file.md).
+Wenn Sie eine RC-Datei für die Basissprachressourcen verwenden, haben Sie die Möglichkeit, eine Ressourcenkonfigurationsdatei für eine XML-Darstellung von Ressourcenkonfigurationsdaten zu verwenden. Informationen zum Erstellen dieser Datei finden Sie unter [Vorbereiten einer Ressourcenkonfigurationsdatei.](preparing-a-resource-configuration-file.md)
 
-Sie können auch eine nicht-Win32 PE-Datei verwenden, um Basis Sprachen Ressourcen zu definieren. Beispielsweise können Sie eine XML-Datei oder eine txt-Datei zu diesem Zweck verwenden.
+Sie können auch eine Nicht-Win32 PE-Datei verwenden, um Basissprachressourcen zu definieren. Beispielsweise können Sie zu diesem Zweck eine .xml- oder .txt datei verwenden.
 
 > [!Note]  
-> Wenn Sie Basis Sprachen Ressourcen mit einer nicht-Win32-PE-Datei definieren, können Sie den RC-Compiler nicht für die Ressourcendefinition verwenden. Stattdessen definieren Sie ein eigenes Ressourcen Format, und Ihre Anwendung muss Ihre eigene Funktionalität bereitstellen, um die erforderlichen Ressourcen zu suchen und zu laden.
+> Wenn Sie Basissprachressourcen mit einer Nicht-Win32 PE-Datei definieren, können Sie den RC-Compiler nicht für die Ressourcendefinition verwenden. Stattdessen definieren Sie ihr eigenes Ressourcenformat, und Ihre Anwendung muss ihre eigene Funktionalität bereitstellen, um die erforderlichen Ressourcen zu finden und zu laden.
 
  
 
@@ -31,7 +31,7 @@ Sie können auch eine nicht-Win32 PE-Datei verwenden, um Basis Sprachen Ressourc
 [Vorbereiten von Ressourcen](preparing-resources.md)
 </dt> <dt>
 
-[Vorbereiten einer Ressourcen Konfigurationsdatei](preparing-a-resource-configuration-file.md)
+[Vorbereiten einer Ressourcenkonfigurationsdatei](preparing-a-resource-configuration-file.md)
 </dt> </dl>
 
  

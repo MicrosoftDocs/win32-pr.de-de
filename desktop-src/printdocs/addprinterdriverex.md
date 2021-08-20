@@ -1,5 +1,5 @@
 ---
-description: Die AddPrinterDriverEx-Funktion installiert einen lokalen oder Remotedruckertreiber und verknüpft die Konfigurations-, Daten- und Treiberdateien.
+description: Die Funktion AddPrinterDriverEx installiert einen lokalen oder Remotedruckertreiber und verknüpft die Konfigurations-, Daten- und Treiberdateien.
 ms.assetid: 472adb7d-39cc-4c76-b96c-610ff9d276ad
 title: AddPrinterDriverEx-Funktion (Winspool.h)
 ms.topic: reference
@@ -24,10 +24,10 @@ ms.locfileid: "117868809"
 ---
 # <a name="addprinterdriverex-function"></a>AddPrinterDriverEx-Funktion
 
-Die **AddPrinterDriverEx-Funktion** installiert einen lokalen oder Remotedruckertreiber und verknüpft die Konfigurations-, Daten- und Treiberdateien. Neben den Funktionen von [**AddPrinterDriver**](addprinterdriver.md)verfügt es auch über Optionen, die ein striktes Upgrade, ein striktes Downgrade, nur das Kopieren neuerer Dateien und das Kopieren aller Dateien (unabhängig von Dateizeitstempeln) ermöglichen.
+Die **Funktion AddPrinterDriverEx** installiert einen lokalen oder Remotedruckertreiber und verknüpft die Konfigurations-, Daten- und Treiberdateien. Neben den Funktionen von [**AddPrinterDriver**](addprinterdriver.md)verfügt es auch über Optionen, die ein striktes Upgrade, ein striktes Downgrade, nur das Kopieren neuerer Dateien und das Kopieren aller Dateien (unabhängig von Dateizeitstempeln) ermöglichen.
 
 > [!Note]  
-> Das Installieren eines Druckertreibers ohne Treiberpaket wird nicht mehr empfohlen. Verwenden [**Sie stattdessen InstallPrinterDriverFromPackage.**](installprinterdriverfrompackage.md)
+> Die Installation eines Druckertreibers ohne Treiberpaket wird nicht mehr empfohlen. Verwenden Sie stattdessen [**InstallPrinterDriverFromPackage.**](installprinterdriverfrompackage.md)
 
  
 
@@ -52,7 +52,7 @@ BOOL AddPrinterDriverEx(
 *pName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Servers angibt, auf dem der Treiber installiert werden soll. Wenn dieser Parameter **NULL ist,** installiert die Funktion den Treiber auf dem lokalen Computer.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Servers angibt, auf dem der Treiber installiert werden soll. Wenn dieser Parameter **NULL** ist, installiert die Funktion den Treiber auf dem lokalen Computer.
 
 </dd> <dt>
 
@@ -66,11 +66,11 @@ Die Version der -Struktur, auf die *pDriverInfo* verweist. Dieser Wert kann 2, 3
 *pDriverInfo* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine -Struktur, die Druckertreiberinformationen enthält. Dies kann eine der folgenden Sein.
+Ein Zeiger auf eine -Struktur, die Druckertreiberinformationen enthält. Dies kann einer der folgenden Sein:
 
 
 
-| Wert von Level                                                                                       | DRIVER \_ \_ \* INFO-Struktur                          |
+| Wert der Ebene                                                                                       | DRIVER \_ \_ \* INFO-Struktur                          |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | [**TREIBERINFORMATIONEN \_ \_ 2**](driver-info-2.md)<br/> |
 | <span id="3"></span><dl> <dt>**3**</dt> </dl> | [**TREIBERINFORMATIONEN \_ \_ 3**](driver-info-3.md)<br/> |
@@ -82,7 +82,7 @@ Ein Zeiger auf eine -Struktur, die Druckertreiberinformationen enthält. Dies ka
 
  
 
-Wenn der **pEnvironment-Member** der Struktur, auf die *von pDriverInfo* verwiesen wird, **NULL** ist, verwendet die Funktion die aktuelle Umgebung des Aufrufers/Clients, nicht die Umgebung des Ziels/Servers.
+Wenn der **pEnvironment-Member** der -Struktur, auf die *pDriverInfo* zeigt, **NULL** ist, verwendet die Funktion die aktuelle Umgebung des Aufrufers/Clients, nicht die Umgebung des Ziels/Servers.
 
 </dd> <dt>
 
@@ -95,11 +95,11 @@ Die Optionen zum Kopieren der Treiberdateien. Dieser Parameter kann einen der fo
 
 | Wert                                                                                                                                                                                         | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="APD_COPY_ALL_FILES"></span><span id="apd_copy_all_files"></span><dl> <dt>**\_APD– KOPIEREN \_ ALLER \_ DATEIEN**</dt> </dl>                | Fügen Sie den Druckertreiber hinzu, und kopieren Sie alle Dateien im Verzeichnis printer-driver. Die Dateizeitstempel werden mit dieser Option ignoriert.<br/>                                                                                                                                                                                                                                                                                                                                                                                  |
-| <span id="APD_COPY_FROM_DIRECTORY"></span><span id="apd_copy_from_directory"></span><dl> <dt>**APD \_ COPY \_ FROM \_ DIRECTORY**</dt> </dl> | Fügen Sie den Druckertreiber mithilfe der vollqualifizierten Dateinamen hinzu, die in der [**DRIVER \_ INFO \_ 6-Struktur angegeben**](driver-info-6.md) sind. Dieses Flag wird in Verbindung mit einem der anderen Kopierflags ORed verwendet. Wenn dieses Flag festgelegt ist, kann **AddPrinterDriverEx** nicht verwendet werden, wenn die Dateien nicht dort vorhanden sind, wo sie von der **DRIVER INFO \_ \_ 6-Struktur als** vorhanden angegeben werden. Die Dateien müssen nicht in das Druckertreiberverzeichnis des Systems kopiert werden. Weitere Informationen finden Sie in den Anmerkungen.<br/> **Windows 2000:** Dieses Flag wird nicht unterstützt.<br/> |
+| <span id="APD_COPY_ALL_FILES"></span><span id="apd_copy_all_files"></span><dl> <dt>**\_APD: KOPIEREN \_ ALLER \_ DATEIEN**</dt> </dl>                | Fügen Sie den Druckertreiber hinzu, und kopieren Sie alle Dateien im Verzeichnis printer-driver. Die Dateizeitstempel werden mit dieser Option ignoriert.<br/>                                                                                                                                                                                                                                                                                                                                                                                  |
+| <span id="APD_COPY_FROM_DIRECTORY"></span><span id="apd_copy_from_directory"></span><dl> <dt>**APD \_ COPY \_ FROM \_ DIRECTORY**</dt> </dl> | Fügen Sie den Druckertreiber mithilfe der vollqualifizierten Dateinamen hinzu, die in der [**DRIVER \_ INFO \_ 6-Struktur**](driver-info-6.md) angegeben sind. Dieses Flag wird in Verbindung mit einem der anderen Kopierflags ORed. Wenn dieses Flag festgelegt ist, schlägt **AddPrinterDriverEx** fehl, wenn die Dateien nicht vorhanden sind, wo sie von der **DRIVER INFO \_ \_ 6-Struktur** als vorhanden angegeben werden. Die Dateien müssen nicht in das Druckertreiberverzeichnis des Systems kopiert werden. Weitere Informationen finden Sie in den Hinweisen.<br/> **Windows 2000:** Dieses Flag wird nicht unterstützt.<br/> |
 | <span id="APD_COPY_NEW_FILES"></span><span id="apd_copy_new_files"></span><dl> <dt>**\_APD: KOPIEREN \_ NEUER \_ DATEIEN**</dt> </dl>                | Fügen Sie den Druckertreiber hinzu, und kopieren Sie die Dateien im Druckertreiberverzeichnis, die neuer sind als alle entsprechenden Dateien, die derzeit verwendet werden. Dieses Flag emuliert das Verhalten von [**AddPrinterDriver**](addprinterdriver.md).<br/>                                                                                                                                                                                                                                                                                  |
-| <span id="APD_STRICT_DOWNGRADE"></span><span id="apd_strict_downgrade"></span><dl> <dt>**APD \_ STRICT \_ DOWNGRADE**</dt> </dl>           | Fügen Sie den Druckertreiber nur hinzu, wenn alle Dateien im Verzeichnis printer-driver älter sind als die entsprechenden dateien, die derzeit verwendet werden.<br/>                                                                                                                                                                                                                                                                                                                                                                              |
-| <span id="APD_STRICT_UPGRADE"></span><span id="apd_strict_upgrade"></span><dl> <dt>**APD \_ STRICT \_ UPGRADE**</dt> </dl>                 | Fügen Sie den Druckertreiber nur hinzu, wenn alle Dateien im Druckertreiberverzeichnis neuer sind als alle entsprechenden dateien, die derzeit verwendet werden.<br/>                                                                                                                                                                                                                                                                                                                                                                              |
+| <span id="APD_STRICT_DOWNGRADE"></span><span id="apd_strict_downgrade"></span><dl> <dt>**APD \_ STRICT \_ DOWNGRADE**</dt> </dl>           | Fügen Sie den Druckertreiber nur hinzu, wenn alle Dateien im Druckertreiberverzeichnis älter sind als alle derzeit verwendeten entsprechenden Dateien.<br/>                                                                                                                                                                                                                                                                                                                                                                              |
+| <span id="APD_STRICT_UPGRADE"></span><span id="apd_strict_upgrade"></span><dl> <dt>**APD \_ STRICT \_ UPGRADE**</dt> </dl>                 | Fügen Sie den Druckertreiber nur hinzu, wenn alle Dateien im Verzeichnis printer-driver neuer sind als alle derzeit verwendeten entsprechenden Dateien.<br/>                                                                                                                                                                                                                                                                                                                                                                              |
 
 
 
@@ -109,18 +109,18 @@ Die Optionen zum Kopieren der Treiberdateien. Dieser Parameter kann einen der fo
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-Wenn bekannt ist, dass der Druckertreiber Probleme beim Arbeiten mit dem Betriebssystem hat, tritt bei **AddPrinterDriverEx** ein Fehler mit einem der folgenden Fehlercodes auf:
+Wenn der Druckertreiber bekanntermaßen Probleme beim Arbeiten mit dem Betriebssystem hat, schlägt **AddPrinterDriverEx** mit einem der folgenden Fehlercodes fehl:
 
 
 
 | Fehlercode                      | Bedeutung                                                                                                                                                   |
 |---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| FEHLER: \_ \_ DRUCKERTREIBER \_ BLOCKIERT | Der Treiber funktioniert unter dem Betriebssystem nicht.                                                                                                         |
-| FEHLER: \_ \_ DRUCKERTREIBER \_ GEWARNT  | Der Treiber ist vom Betriebssystem unzuverlässig. Wenn jedoch APD INSTALL WARNING DRIVER angegeben ist, wird der Treiber \_ \_ \_ installiert, und es wird keine Warnung angezeigt. |
+| \_ \_ FEHLERDRUCKERTREIBER \_ BLOCKIERT | Der Treiber funktioniert nicht unter dem Betriebssystem.                                                                                                         |
+| \_ \_ FEHLERDRUCKERTREIBER \_ GEWARNT  | Der Treiber ist auf dem Betriebssystem unzuverlässig. Wenn jedoch APD \_ \_ INSTALL WARNED DRIVER angegeben \_ ist, wird der Treiber installiert, und es wird keine Warnung ausgegeben. |
 
 
 
@@ -131,19 +131,19 @@ Weitere Informationen finden Sie in den Hinweisen.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu kommen, dass die Anwendung nicht reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
 Der Aufrufer muss über [seLoadDriverPrivilege verfügen.](/windows/desktop/SecAuthZ/authorization-constants)
 
-Vor dem Aufrufen **der AddPrinterDriverEx-Funktion** müssen alle vom Treiber benötigten Dateien in das Druckertreiberverzeichnis des Systems kopiert werden. Rufen Sie die [**GetPrinterDriverDirectory-Funktion**](getprinterdriverdirectory.md) auf, um den Namen dieses Verzeichnisses abzurufen.
+Vor dem Aufrufen der **AddPrinterDriverEx-Funktion** müssen alle dateien, die vom Treiber benötigt werden, in das Druckertreiberverzeichnis des Systems kopiert werden. Um den Namen dieses Verzeichnisses abzurufen, rufen Sie die [**GetPrinterDriverDirectory-Funktion**](getprinterdriverdirectory.md) auf.
 
-Um zu bestimmen, welche Druckertreiber derzeit installiert sind, rufen Sie die [**EnumPrinterDrivers-Funktion**](enumprinterdrivers.md) auf.
+Um zu ermitteln, welche Druckertreiber derzeit installiert sind, rufen Sie die [**EnumPrinterDrivers-Funktion**](enumprinterdrivers.md) auf.
 
-Wenn der Druckertreiber erfolgreich hinzugefügt wurde, ruft die Funktion die Funktion DrvDriverEvent (DRIVER \_ EVENT \_ INITIALIZE, Level, DRIVER \_ INFO , \_ \* lparam ) auf, damit der Treiber alle Initialisierungen ausführen kann, die während der Installation eines Druckertreibers erforderlich sind. Weitere Informationen zu **DrvDriverEvent finden** Sie im Microsoft Windows Driver Development Kit (DDK).
+Wenn der Druckertreiber erfolgreich hinzugefügt wurde, ruft die Funktion die Funktion DrvDriverEvent (DRIVER \_ EVENT \_ INITIALIZE, Level, DRIVER \_ INFO , \_ \* lparam ) auf, damit der Treiber alle während der Installation eines Druckertreibers erforderlichen Initialisierungen ausführen kann. Weitere Informationen zu **DrvDriverEvent** finden Sie im Microsoft Windows Driver Development Kit (DDK).
 
-Der Treiber sollte während des Aufrufs von **DrvDriverEvent keinen Benutzeroberflächenaufruf verwenden.** Für benutzeroberflächenbezogene Aufträge sollte das Installationsprogramm entweder den Eintrag VendorSetup in der INF-Datei des Druckers verwenden oder für Plug & Play-Geräte ein gerätespezifisches Co-Installationsprogramm verwenden. Weitere Informationen zu VendorSetup finden Sie im DDK.
+Der Treiber sollte während des Aufrufs von **DrvDriverEvent** keinen Benutzeroberflächenaufruf verwenden. Für benutzeroberflächenbezogene Aufträge sollte das Installationsprogramm entweder den Eintrag VendorSetup in der INF-Datei des Druckers verwenden, oder für Plug & Play Geräte kann das Installationsprogramm ein gerätespezifisches Co-Installationsprogramm verwenden. Weitere Informationen zu VendorSetup finden Sie im DDK.
 
 Die Dateien, auf die in der [**DRIVER \_ INFO \_ 6-Struktur**](driver-info-6.md) verwiesen wird, müssen lokal auf dem Computer sein, von dem aus der Aufruf erfolgt. Ein Dateiname kann ein UNC-Name sein, solange der UNC-Name der lokale Computer ist.
 
@@ -162,7 +162,7 @@ Die Dateien, auf die in der [**DRIVER \_ INFO \_ 6-Struktur**](driver-info-6.md)
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

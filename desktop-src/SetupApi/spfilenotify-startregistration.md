@@ -1,21 +1,21 @@
 ---
-description: 'SPFILENOTIFY_STARTREGISTRATION Meldung: Wenn sie die INF-Direktive RegisterDlls verwenden, um DLLs selbst zu registrieren, erhalten Aufrufer von SetupInstallFromInfSection möglicherweise Benachrichtigungen zu jeder Datei, während sie registriert oder nicht registriert ist.'
+description: 'SPFILENOTIFY_STARTREGISTRATION: Wenn Sie die RegisterDlls INF-Direktive verwenden, um DLLs selbst zu registrieren, erhalten Aufrufer von SetupInstallFromInfSection möglicherweise Benachrichtigungen zu jeder Datei, wenn sie registriert oder nicht registriert ist.'
 ms.assetid: 0faf277c-7805-478f-9cec-0dd7b6acdb0e
-title: SPFILENOTIFY_STARTREGISTRATION Meldung (Setupapi.h)
+title: SPFILENOTIFY_STARTREGISTRATION (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47e71a884d079515436f296faf515a83a985311e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 84f72c237480b2aeb583d9bd7b75fd8ea67f5effc1d51c5baeadc02c4948d3e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117964100"
 ---
 # <a name="spfilenotify_startregistration-message"></a>SPFILENOTIFY \_ STARTREGISTRATION-Meldung
 
-Wenn Sie die INF-Direktive **RegisterDlls** verwenden, um DLLs selbst zu registrieren, erhalten Aufrufer von [**SetupInstallFromInfSection**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona) möglicherweise Benachrichtigungen für jede Datei, während sie registriert oder nicht registriert ist. Um eine **SPFILENOTIFY \_ STARTREGISTRATION-Benachrichtigung** einmal vor dem Registrieren einer Datei an die Rückrufroutine zu senden, schließen Sie SPINST \_ REGISTERCALLBACKAWARE plus SPINST \_ REGSVR in den *Flags-Parameter* von **SetupInstallFromInfSection** ein. Um eine Benachrichtigung über die Aufhebung der Registrierung zu senden, schließen Sie SPINST \_ REGISTERCALLBACKAWARE plus SPINST \_ UNREGSVR in den *Flags-Parameter* ein.
+Wenn Sie die **RegisterDlls** INF-Direktive verwenden, um DLLs selbst zu registrieren, erhalten Aufrufer von [**SetupInstallFromInfSection**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona) möglicherweise Benachrichtigungen zu jeder Datei, wenn sie registriert oder nicht registriert ist. Um eine **SPFILENOTIFY \_ STARTREGISTRATION-Benachrichtigung** einmal an die Rückrufroutine zu senden, bevor Sie eine Datei registrieren, schließen Sie SPINST \_ REGISTERCALLBACKAWARE plus SPINST \_ REGSVR in den *Flags-Parameter* von **SetupInstallFromInfSection** ein. Um eine Benachrichtigung über die Aufhebung der Registrierung zu senden, schließen Sie SPINST \_ REGISTERCALLBACKAWARE plus SPINST \_ UNREGSVR in den *Flags-Parameter* ein.
 
-Die vom *MsgHandler-Parameter* von [**SetupInstallFromInfSection**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona) angegebene Rückrufroutine muss vom Typ [PSP \_ FILE \_ CALLBACK](/windows/win32/api/setupapi/nc-setupapi-psp_file_callback_a)sein. Legen Sie den *Context-Parameter* auf den gleichen *Kontext* fest, der in **SetupInstallFromInfSection** angegeben ist. Legen Sie den *Notification-Parameter* auf **SPFILENOTIFY \_ STARTREGISTRATION** fest.
+Die rückrufroutine, die durch den *MsgHandler-Parameter* von [**SetupInstallFromInfSection**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona) angegeben wird, muss vom [Typ PSP \_ FILE \_ CALLBACK sein.](/windows/win32/api/setupapi/nc-setupapi-psp_file_callback_a) Legen Sie *den Context-Parameter* auf denselben *Kontext fest,* der in **SetupInstallFromInfSection angegeben ist.** Legen Sie den *Notification-Parameter* **auf SPFILENOTIFY \_ STARTREGISTRATION fest.**
 
 
 ```C++
@@ -34,14 +34,14 @@ SPFILENOTIFY_STARTREGISTRATION
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**SP \_ REGISTER CONTROL \_ \_ STATUS-Struktur,**](/windows/desktop/api/Setupapi/ns-setupapi-sp_register_control_statusa) die Informationen zur registrierten oder nicht registrierten Datei enthält. Der **Member cbsize** sollte auf die Größe der -Struktur festgelegt werden. Der **FileName-Member** sollte auf den vollqualifizierten Pfad der zu registrierenden Datei festgelegt werden. **Win32Error** wird nicht verwendet und sollte auf NO ERROR festgelegt \_ werden. **FailureCode** wird nicht verwendet und sollte auf SPREG SUCCESS festgelegt \_ werden.
+Zeiger auf eine [**SP \_ REGISTER CONTROL \_ \_ STATUS-Struktur,**](/windows/desktop/api/Setupapi/ns-setupapi-sp_register_control_statusa) die Informationen zur registrierten oder nicht registrierten Datei enthält. Der Member **cbsize** sollte auf die Größe der -Struktur festgelegt werden. Das **FileName-Mitglied** sollte auf den vollqualifizierten Pfad der Datei festgelegt werden, die registriert wird. **Win32Error** wird nicht verwendet und sollte auf NO ERROR festgelegt \_ werden. **FailureCode** wird nicht verwendet und sollte auf SPREG SUCCESS festgelegt \_ werden.
 
 </dd> <dt>
 
 *Param2* 
 </dt> <dd>
 
-Wenn die Datei registriert wird, sollte *Param2* auf einen Zeiger auf einen Wert ungleich 0 (null) festgelegt werden. Wenn die Registrierung der Datei aufgehoben wird, sollte *Param2* auf einen Zeiger auf 0 (null) festgelegt werden.
+Wenn die Datei registriert wird, *sollte Param2* auf einen Zeiger auf einen Wert ungleich 0 (null) festgelegt werden. Wenn die Registrierung der Datei aufgehoben wird, sollte *Param2* auf einen Zeiger auf 0 (null) festgelegt werden.
 
 </dd> </dl>
 
@@ -65,10 +65,10 @@ Nach dem Empfang der Benachrichtigung gibt die Rückruffunktion möglicherweise 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 

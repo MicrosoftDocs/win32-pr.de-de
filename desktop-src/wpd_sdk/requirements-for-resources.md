@@ -4,28 +4,28 @@ ms.assetid: 6b654cd6-7e9f-4e12-a687-4110e600ba7b
 title: Anforderungen für Ressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5702555704137f4280e527f0fc26f176435238ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca302fcd11abf4bbadc1adfafb1a1be67141055ea7f9a5366991f231cca44fab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118027147"
 ---
 # <a name="requirements-for-resources"></a>Anforderungen für Ressourcen
 
-Tragbare Windows-Geräte definieren die folgenden Ressourcen Kategorien als **PropertyKey** -Werte. Diese Werte werden verwendet, um einzelne Ressourcen in einem-Objekt zu beschreiben. Der *PID* -Member des Eigenschafts Schlüssels kann sich unterscheiden, um unterschiedliche Ressourcen desselben Typs für alle Typen außer dem Standardwert der **WPD- \_ Ressource \_** zu beschreiben, der nur eine Ressource beschreiben kann. Die Seite verknüpfte Beschreibung für jeden Ressourcentyp listet die Attribute auf, die von dieser Ressource unterstützt werden.
+Windows Portable Geräte definieren die folgenden Ressourcenkategorien als **PROPERTYKEY-Werte.** Diese Werte werden verwendet, um einzelne Ressourcen in einem Objekt zu beschreiben. Der *Pid-Member* des Eigenschaftsschlüssels kann sich unterscheiden, um verschiedene Ressourcen desselben Typs für alle Typen mit Ausnahme von **WPD \_ RESOURCE \_ DEFAULT** zu beschreiben, die nur eine Ressource beschreiben können. Auf der verknüpften Beschreibungsseite für jeden Ressourcentyp werden die von dieser Ressource unterstützten Attribute aufgelistet.
 
 
 
-| Ressourcenpropertykey                                                | BESCHREIBUNG                                                                                                    |
+| Resource PROPERTYKEY                                                | Beschreibung                                                                                                    |
 |---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [**WPD- \_ Ressourcen \_ Standard**](wpd-resource-default.md)              | Gibt die gesamte Datei hinter dem Objekt an. Dies ist die einzige erforderliche Ressource für ein beliebiges Objekt mit einer Ressource. |
-| [**WPD- \_ Ressourcen \_ Album- \_ Grafik**](wpd-resource-album-art.md)         | Gibt ein Bild an, das die Albumgrafik für das-Objekt darstellt.                                           |
-| [**WPD \_ \_ - \_ ressourcenaudioclip**](wpd-resource-audio-clip.md)       | Gibt einen Audioclip für das-Objekt an.                                                                        |
-| [**WPD- \_ Ressourcen \_ Kontakt \_ Foto**](wpd-resource-contact-photo.md) | Gibt ein Bild an, das ein Foto der Person darstellt, auf die im Contact-Objekt verwiesen wird.                |
-| [**WPD- \_ Ressource \_ generisch**](wpd-resource-generic.md)              | Eine generische Ressource des nicht definierten Datentyps. Dies sollte als Bytearray behandelt werden.                             |
-| [**Symbol für WPD- \_ Ressource \_**](wpd-resource-icon.md)                    | Symbol                                                                                                       |
-| [**WPD- \_ Ressourcen \_ Miniaturansicht**](wpd-resource-thumbnail.md)          | Ein Miniaturbild.                                                                                             |
+| [**\_WPD-RESSOURCENSTANDARD \_**](wpd-resource-default.md)              | Gibt die gesamte Datei hinter dem -Objekt an. Dies ist die einzige erforderliche Ressource für jedes Objekt mit einer Ressource. |
+| [**WPD \_ RESOURCE \_ ALBUM \_ ART**](wpd-resource-album-art.md)         | Gibt ein Bild an, das die Albumgrafik für das -Objekt darstellt.                                           |
+| [**WPD \_ RESOURCE \_ AUDIO \_ CLIP**](wpd-resource-audio-clip.md)       | Gibt einen Audioclip für das -Objekt an.                                                                        |
+| [**WPD \_ RESOURCE \_ CONTACT \_ PHOTO**](wpd-resource-contact-photo.md) | Gibt ein Bild an, das ein Foto der Person darstellt, auf die im Kontaktobjekt verwiesen wird.                |
+| [**\_WPD-RESSOURCE \_ GENERISCH**](wpd-resource-generic.md)              | Eine generische Ressource des nicht definierten Datentyps. Dies sollte als Bytearray behandelt werden.                             |
+| [**\_WPD-RESSOURCENSYMBOL \_**](wpd-resource-icon.md)                    | Symbol                                                                                                       |
+| [**\_ \_ WPD-RESSOURCENMINIATURANSICHT**](wpd-resource-thumbnail.md)          | Ein Miniaturbild.                                                                                             |
 
 
 

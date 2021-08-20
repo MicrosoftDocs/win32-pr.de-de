@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: Indexsegment. ColumnName-Eigenschaft'
-title: Indexsegment. ColumnName-Eigenschaft
+description: Weitere Informationen zur IndexSegment.ColumnName-Eigenschaft
+title: IndexSegment.ColumnName-Eigenschaft
 TOCTitle: 'ColumnName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.IndexSegment.ColumnName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexsegment.columnname(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ce438a31bd7d282f94deca4c5ff684bd6931ebe9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de6420d48a262931f89612578189d06bc4c4b35ad3a5d1cb73c4b8bfa4086b99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118077058"
 ---
-# <a name="indexsegmentcolumnname-property"></a>Indexsegment. ColumnName-Eigenschaft
+# <a name="indexsegmentcolumnname-property"></a>IndexSegment.ColumnName-Eigenschaft
 
-Ruft den Namen der indizierten Spalte ab.
+Ruft den Namen der spalte ab, die indiziert wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public string ColumnName { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Indexsegment-Klasse](./indexsegment-class.md)
+[IndexSegment-Klasse](./indexsegment-class.md)
 
-[Indexsegment-Member](./indexsegment-members.md)
+[IndexSegment-Member](./indexsegment-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,25 +1,25 @@
 ---
-description: Zertifikate können aus einem Active Directory Speicher abgerufen werden, in dem die Zertifikate der Benutzer einer Domäne gespeichert werden.
+description: Zertifikate können aus einem Active Directory-Speicher abgerufen werden, in dem die Zertifikate der Benutzer einer Domäne gespeichert werden.
 ms.assetid: 5c4d1629-88f3-41f4-afb3-7791cd590e6c
-title: Öffnen des Active Directory Stores und Abrufen von Zertifikaten
+title: Öffnen des Active Directory-Store und Abrufen von Zertifikaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd60c7414aaec8b069817b47fbd2493bb11d98c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd2dc5810e97669e40b27bc374bee09f16c0a7c9a3b2bd4a1fa2951e1249a737
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117979121"
 ---
-# <a name="opening-the-active-directory-store-and-retrieving-certificates"></a>Öffnen des Active Directory Stores und Abrufen von Zertifikaten
+# <a name="opening-the-active-directory-store-and-retrieving-certificates"></a>Öffnen des Active Directory-Store und Abrufen von Zertifikaten
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM.](alternatives-to-using-capicom.md)\]
 
-[*Zertifikate*](../secgloss/c-gly.md) können aus einem Active Directory Speicher abgerufen werden, in dem die Zertifikate der Benutzer einer Domäne gespeichert werden. Ein Active Directory Speicher kann nur im schreibgeschützten Modus geöffnet werden, und Anwendungen können mithilfe von CAPICOM keine Zertifikate zu einem Active Directory Speicher hinzufügen oder daraus entfernen.
+[*Zertifikate*](../secgloss/c-gly.md) können aus einem Active Directory-Speicher abgerufen werden, in dem die Zertifikate der Benutzer einer Domäne gespeichert werden. Ein Active Directory-Speicher kann nur im schreibgeschützten Modus geöffnet werden, und Anwendungen können keine Zertifikate zu einem Active Directory-Speicher mit CAPICOM hinzufügen oder aus diesem entfernen.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei einem CAPICOM-Fehler wird ein negativer Dezimalwert von **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number** finden Sie unter Winerror.h.
 
-Im folgenden Beispiel wird gezeigt, wie ein Active Directory Store geöffnet und Zertifikate aus diesem Speicher abgerufen werden.
+Das folgende Beispiel zeigt das Öffnen eines Active Directory-Speichers und das Abrufen von Zertifikaten aus diesem Speicher.
 
 
 ```VB

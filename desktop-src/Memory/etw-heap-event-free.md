@@ -1,7 +1,7 @@
 ---
-description: Ablauf Verfolgungs Ereignis für die Speicherverwaltung für einen Heap freien Vorgang.
+description: Ablaufverfolgungsereignis für die Speicherverwaltung für einen heapfreien Vorgang.
 ms.assetid: 0CCC59F1-AB96-4B7A-9A86-19CA4FBA4A8A
-title: ETW_HEAP_EVENT_FREE-Ereignis (ntwmi. h)
+title: ETW_HEAP_EVENT_FREE -Ereignis (Ntwmi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - ntwmi.h
-ms.openlocfilehash: fd30eccb5848917d752441df79881078dc14d36e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4cdc7623f666e20b40bda5393b3ff31369181a7f93f3f2f2dc9881cf0c91f7ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117992877"
 ---
-# <a name="etw_heap_event_free-event"></a>\_ \_ Ereignis \_ freies Ereignis für etw-Heap
+# <a name="etw_heap_event_free-event"></a>ETW \_ HEAP \_ EVENT \_ FREE-Ereignis
 
-Das Ereignis **\_ \_ \_ freie Ereignis "etw-Heap** " ist ein Ablauf Verfolgungs Ereignis für die Speicherverwaltung für einen Heap-Free-Vorgang.
+Das **ETW \_ HEAP \_ EVENT \_ FREE-Ereignis** ist ein Speicherverwaltungsablaufverfolgungsereignis für einen heapfreien Vorgang.
 
 
 ```C++
@@ -35,37 +35,37 @@ typedef struct ETW_HEAP_EVENT_FREE
 
 <dl> <dt>
 
-*Heaphandle* 
+*HeapHandle* 
 </dt> <dd>
 
-Das Handle des Heaps, dem der Arbeitsspeicher zugeordnet wurde. Dies ist der Heap, mit dem eine APP an die Funktion " [**zugewiescateheap**](/previous-versions/windows/desktop/legacy/aa374721(v=vs.85)) " übermittelt wurde, als der Arbeitsspeicher belegt wurde.
+Das Handle des Heaps, in dem der Arbeitsspeicher zugeordnet wurde. Dies ist das Heaphanden einer App, die an die [**AllocateHeap-Funktion**](/previous-versions/windows/desktop/legacy/aa374721(v=vs.85)) übergeben wurde, als der Arbeitsspeicher zugeordnet wurde.
 
 </dd> <dt>
 
 *Adresse* 
 </dt> <dd>
 
-Die Adresse des freigegebenen Speichers.
+Die Adresse des Speichers, der frei wurde.
 
 </dd> <dt>
 
 *Quelle* 
 </dt> <dd>
 
-Die Quelle des Speichers, der von der Zuweisung für die Heap Zuordnung verwendet wurde.
+Die Quelle des Arbeitsspeichers, den die Zuweisung für die Heapzuordnung verwendet hat.
 
-In der folgenden Tabelle sind die möglichen Werte für den *Quell* Parameter aufgeführt, die in der *ntetw. h* -Header Datei definiert sind:
+In der folgenden Tabelle sind die möglichen Werte für den *Source-Parameter* aufgeführt, wie in der *Headerdatei "ntetw.h"* definiert:
 
 
 
 | Wert                                                                                                                                                                                                                                                                               | Bedeutung                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| <span id="MEMORY_FROM_LOOKASIDE"></span><span id="memory_from_lookaside"></span><dl> Arbeits <dt>**Speicher \_ Von \_ Lookaside**</dt> <dt>1</dt> </dl>                                       | Arbeitsspeicher aus der Lookaside-Liste.<br/>                                   |
-| <span id="MEMORY_FROM_LOWFRAG"></span><span id="memory_from_lowfrag"></span><dl> Arbeits <dt>**Speicher \_ Aus \_ lowfrag**</dt> <dt>2</dt> </dl>                                             | Arbeitsspeicher vom Heap mit niedriger Fragmentierung.<br/>                           |
-| <span id="MEMORY_FROM_MAINPATH"></span><span id="memory_from_mainpath"></span><dl> Arbeits <dt>**Speicher \_ Aus \_ mainpath**</dt> <dt>3</dt> </dl>                                          | Arbeitsspeicher vom Hauptcodepfad.<br/>                                       |
-| <span id="MEMORY_FROM_SLOWPATH____________________"></span><span id="memory_from_slowpath____________________"></span><dl> Arbeits <dt> **Speicher \_ von \_ slowpath**</dt> <dt>4</dt> </dl> | Arbeitsspeicher von langsamer c.<br/>                                               |
-| <span id="MEMORY_FROM_INVALID"></span><span id="memory_from_invalid"></span><dl> Arbeits <dt>**Speicher \_ Aus \_ ungültigem**</dt> <dt>5</dt> </dl>                                             | Ungültiger Arbeitsspeicher.<br/>                                        |
-| <span id="MEMORY_FROM_SEGMENT_HEAP"></span><span id="memory_from_segment_heap"></span><dl> Arbeits <dt>**Speicher \_ Aus \_ Segment \_ Heap**</dt> <dt>6</dt> </dl>                             | Dieser Wert ist für die zukünftige Verwendung reserviert und wird nie zurückgegeben.<br/> |
+| <span id="MEMORY_FROM_LOOKASIDE"></span><span id="memory_from_lookaside"></span><dl> <dt>**ARBEITSSPEICHER \_ FROM \_ LOOKASIDE**</dt> <dt>1</dt> </dl>                                       | Arbeitsspeicher aus der Lookasideliste.<br/>                                   |
+| <span id="MEMORY_FROM_LOWFRAG"></span><span id="memory_from_lowfrag"></span><dl> <dt>**ARBEITSSPEICHER \_ FROM \_ LOWFRAG**</dt> <dt>2</dt> </dl>                                             | Arbeitsspeicher aus dem Heap mit geringer Fragmentierung.<br/>                           |
+| <span id="MEMORY_FROM_MAINPATH"></span><span id="memory_from_mainpath"></span><dl> <dt>**ARBEITSSPEICHER \_ FROM \_ MAINPATH**</dt> <dt>3</dt> </dl>                                          | Arbeitsspeicher aus dem Hauptcodepfad.<br/>                                       |
+| <span id="MEMORY_FROM_SLOWPATH____________________"></span><span id="memory_from_slowpath____________________"></span><dl> <dt> **ARBEITSSPEICHER \_ AUS \_ SLOWPATH**</dt> <dt>4</dt> </dl> | Arbeitsspeicher von langsam c.<br/>                                               |
+| <span id="MEMORY_FROM_INVALID"></span><span id="memory_from_invalid"></span><dl> <dt>**ARBEITSSPEICHER \_ FROM \_ INVALID**</dt> <dt>5</dt> </dl>                                             | Ungültiger Arbeitsspeicher.<br/>                                        |
+| <span id="MEMORY_FROM_SEGMENT_HEAP"></span><span id="memory_from_segment_heap"></span><dl> <dt>**ARBEITSSPEICHER \_ AUS \_ SEGMENT \_ HEAP**</dt> <dt>6</dt> </dl>                             | Dieser Wert ist für die zukünftige Verwendung reserviert und wird nie zurückgegeben.<br/> |
 
 
 
@@ -73,9 +73,9 @@ In der folgenden Tabelle sind die möglichen Werte für den *Quell* Parameter au
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ereignis freie Ereignis " **etw- \_ Heap \_ Ereignis \_** " wird bei allen Heap freien Vorgängen protokolliert.
+Das **ETW \_ HEAP \_ EVENT \_ FREE-Ereignis** wird bei allen Heap-freien Vorgängen protokolliert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,9 +83,9 @@ Das Ereignis freie Ereignis " **etw- \_ Heap \_ Ereignis \_** " wird bei allen H
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Ntwmi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Ntwmi.h</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Das Ereignis freie Ereignis " **etw- \_ Heap \_ Ereignis \_** " wird bei allen H
 
 <dl> <dt>
 
-[Ablauf Verfolgungs Ereignisse für die Speicherverwaltung](memory-management-tracing-events.md)
+[Ablaufverfolgungsereignisse für die Speicherverwaltung](memory-management-tracing-events.md)
 </dt> </dl>
 
  

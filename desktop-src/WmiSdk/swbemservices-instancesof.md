@@ -2,7 +2,7 @@
 description: Erstellt einen Enumerator, der die Instanzen einer angegebenen Klasse gemäß den vom Benutzer angegebenen Auswahlkriterien zurückgibt.
 ms.assetid: 6465a981-f98e-4ece-a9b6-9da8ae618bc6
 ms.tgt_platform: multiple
-title: "' Swap Services. InstancesOf '-Methode (wbemdisp. h)"
+title: SWbemServices.InstancesOf-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,20 +16,20 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: e2386b52160b1e2a08c5a345b67922ed24afc44c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c53b3f27b570f2fab76cb2164c4a029ad21cfccfe7bff52f2c5b9d8d55bf9da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118107963"
 ---
-# <a name="swbemservicesinstancesof-method"></a>Swap Services. InstancesOf-Methode
+# <a name="swbemservicesinstancesof-method"></a>SWbemServices.InstancesOf-Methode
 
-Die **InstancesOf** -Methode des [**Swap Services**](swbemservices.md) -Objekts erstellt einen Enumerator, der die Instanzen einer angegebenen Klasse gemäß den vom Benutzer angegebenen Auswahlkriterien zurückgibt. Diese Methode implementiert eine einfache Abfrage. Komplexere Abfragen erfordern möglicherweise die Verwendung von [**SWbemServices.Execquery**](swbemservices-execquery.md).
+Die **InstancesOf-Methode** des [**SWbemServices-Objekts**](swbemservices.md) erstellt einen Enumerator, der die Instanzen einer angegebenen Klasse gemäß den vom Benutzer angegebenen Auswahlkriterien zurückgibt. Diese Methode implementiert eine einfache Abfrage. Komplexere Abfragen erfordern möglicherweise die Verwendung vonSWbemServices.Exe [**cQuery.**](swbemservices-execquery.md)
 
-Die-Methode wird im semisynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Die -Methode wird im semisynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,159 +48,159 @@ objWbemObjectSet = .InstancesOf( _
 
 <dl> <dt>
 
-*Klasse* 
+*strClass* 
 </dt> <dd>
 
-Erforderlich. Eine Zeichenfolge, die den Namen der Klasse enthält, für die-Instanzen gewünscht werden. Dieser Parameter darf nicht leer sein.
+Erforderlich. Eine Zeichenfolge, die den Namen der Klasse enthält, für die Instanzen gewünscht werden. Dieser Parameter darf nicht leer sein.
 
 </dd> <dt>
 
-*IFlags* \[ optionale\]
+*iFlags* \[ Optional\]
 </dt> <dd>
 
-Dieser Parameter bestimmt, wie detailliert der aufzurufende Aufzählung und ob dieser aufgerufen wird, sobald dieser aufgerufen wird. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately**. Dieser Parameter kann die folgenden Werte annehmen.
+Dieser Parameter bestimmt, wie detailliert der Aufruf aufzählt und ob dieser Aufruf sofort zurückgegeben wird. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately.** Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
 <span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>
 
-<span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>wbemFlagForwardOnly * * * * (32 (0x20))
+<span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>wbemFlagForwardOnly( (32 (0x20))
 
 
 </dt> <dd>
 
-Bewirkt, dass ein vorwärts-Enumerator zurückgegeben wird. Vorwärts-Enumeratoren sind in der Regel viel schneller und verbrauchen weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber Sie lassen keine Aufrufe von " [**errbemubject. Clone \_**](swbemobject-clone-.md)" zu.
+Bewirkt, dass ein vorwärts enumerator zurückgegeben wird. Vorwärts-Enumeratoren sind im Allgemeinen viel schneller und verwenden weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber sie lassen keine Aufrufe von [**SWbemObject.Clone zu. \_**](swbemobject-clone-.md)
 
 </dd> <dt>
 
 <span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>
 
-<span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>wbemflagbidirektionale * * * * (0 (0x0))
+<span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>wbemFlagBidirectional** (0 (0x0))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI Zeiger auf Objekte der-Enumeration behält, bis der Client den Enumerator freigibt.
+Bewirkt, dass WMI Zeiger auf Objekte der Enumeration beibehalten, bis der Client den Enumerator frei gibt.
 
 </dd> <dt>
 
 <span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>
 
-<span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>wbemFlagReturnImmediately * * * * (16 (0x10))
+<span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>wbemFlagReturnImmediately( (16 (0x10))
 
 
 </dt> <dd>
 
-Standardwert für diesen Parameter. Dieses Flag bewirkt, dass der-Rückruf sofort zurückgegeben wird.
+Standardwert für diesen Parameter. Dieses Flag bewirkt, dass der Aufruf sofort zurückkehrt.
 
 </dd> <dt>
 
 <span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>
 
-<span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>wbemflagreturn-Complete * * * * (0 (0x0))
+<span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>wbemFlagReturnWhenComplete** (0 (0x0))
 
 
 </dt> <dd>
 
-Bewirkt, dass dieser-Befehl blockiert wird, bis die Abfrage abgeschlossen ist. Mit diesem Flag wird die-Methode im synchronen Modus aufgerufen.
+Bewirkt, dass dieser Aufruf blockiert wird, bis die Abfrage abgeschlossen ist. Dieses Flag ruft die -Methode im synchronen Modus auf.
 
 </dd> <dt>
 
 <span id="wbemQueryFlagShallow"></span><span id="wbemqueryflagshallow"></span><span id="WBEMQUERYFLAGSHALLOW"></span>
 
-<span id="wbemQueryFlagShallow"></span><span id="wbemqueryflagshallow"></span><span id="WBEMQUERYFLAGSHALLOW"></span>wbemqueryflagflache * * * * (1 (0x1))
+<span id="wbemQueryFlagShallow"></span><span id="wbemqueryflagshallow"></span><span id="WBEMQUERYFLAGSHALLOW"></span>wbemQueryFlagShallow** (1 (0x1))
 
 
 </dt> <dd>
 
-Erzwingt, dass die Enumeration nur unmittelbare Unterklassen der angegebenen übergeordneten Klasse einschließt.
+Erzwingt, dass die -Enumeration nur unmittelbare Unterklassen der angegebenen übergeordneten Klasse enthält.
 
 </dd> <dt>
 
 <span id="wbemQueryFlagDeep"></span><span id="wbemqueryflagdeep"></span><span id="WBEMQUERYFLAGDEEP"></span>
 
-<span id="wbemQueryFlagDeep"></span><span id="wbemqueryflagdeep"></span><span id="WBEMQUERYFLAGDEEP"></span>wbemqueryflagdeep * * * * (0 (0x0))
+<span id="wbemQueryFlagDeep"></span><span id="wbemqueryflagdeep"></span><span id="WBEMQUERYFLAGDEEP"></span>wbemQueryFlagDeep** (0 (0x0))
 
 
 </dt> <dd>
 
-Standardwert für diesen Parameter. Dieser Wert erzwingt, dass die Enumeration alle Klassen in der Hierarchie einschließt.
+Standardwert für diesen Parameter. Dieser Wert erzwingt, dass die -Enumeration alle Klassen in der Hierarchie enthält.
 
 </dd> <dt>
 
 <span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>
 
-<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemflaguseamendedqualifizierer * * * * (131072 (0x20000))
+<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemFlagUseAmendedQualifiers** (131072 (0x20000))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI Klassen Änderungs Daten mit der Basisklassen Definition zurückgibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klassen Informationen](localizing-wmi-class-information.md).
+Bewirkt, dass WMI Klassenänderungsdaten mit der Basisklassendefinition zurück gibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klasseninformationen.](localizing-wmi-class-information.md)
 
 </dd> </dl> </dd> <dt>
 
-*objwbemnamedvalueset* \[ optionale\]
+*objWbemNamedValueSet* \[ Optional\]
 </dt> <dd>
 
-Dies ist in der Regel nicht definiert. Andernfalls handelt es sich hierbei um ein-Objekt vom [**typswap namedvalueset**](swbemnamedvalueset.md) , dessen Elemente die Kontextinformationen darstellen, die von dem Anbieter verwendet werden können, der die Anforderung verarbeitet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, zulässige Werte und die Semantik dokumentieren.
+In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung bedient. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, gibt die Methode einen " [**errbewbjectset**](swbemobjectset.md)" zurück.
+Bei Erfolg gibt die Methode ein [**SWbemObjectSet zurück.**](swbemobjectset.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **InstancesOf** -Methode kann das **Err** -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **InstancesOf-Methode** kann das **Err-Objekt** einen der Fehlercodes in der folgenden Liste enthalten.
 
 > [!Note]  
-> Ein zurückgegebener Enumerator mit 0 (null) Elementen ist kein Fehler.
+> Ein zurückgegebener Enumerator mit null Elementen ist kein Fehler.
 
  
 
 <dl> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
 Der aktuelle Benutzer verfügt nicht über die Berechtigung zum Anzeigen von Instanzen der angegebenen Klasse.
 
 </dd> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Nicht angegebener Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidClass** -2147749904 (0x80041010)
+**wbemErrInvalidClass** – 2147749904 (0x80041010)
 </dt> <dd>
 
 Die angegebene Klasse ist ungültig.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** : 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **InstancesOf** -Methode funktioniert nur für Klassen Objekte.
+Die **InstancesOf-Methode** funktioniert nur für Klassenobjekte.
 
-Standardmäßig führt InstancesOf einen Deep-Abruf durch. Das heißt, dass InstancesOf alle Instanzen der verwalteten Ressource, die Sie identifizieren, und alle Instanzen aller Unterklassen, die unter der Zielklasse definiert sind, abruft. Das folgende Skript ruft z. b. alle Ressourcen ab, die von allen dynamischen Klassen modelliert werden, die unter der \_ abstrakten Klasse des CIM-Dienstanbieter definiert sind.
+Standardmäßig führt InstancesOf einen tiefen Abruf durch. Das heißt, InstancesOf ruft alle Instanzen der verwalteten Ressource ab, die Sie identifizieren, und alle Instanzen aller Unterklassen, die unter der Zielklasse definiert sind. Das folgende Skript ruft beispielsweise alle Ressourcen ab, die von allen dynamischen Klassen modelliert werden, die unter der abstrakten \_ CIM-Dienstklasse definiert sind.
 
 
 ```VB
@@ -214,7 +214,7 @@ Next
 
 
 
-Wenn Sie dieses Skript ausführen, erhalten Sie Informationen zurück. Diese Informationen werden jedoch nicht auf die auf einem Computer installierten Dienste beschränkt. Stattdessen enthält Sie Informationen von allen untergeordneten Klassen des [**CIM- \_ Dienstanbieter**](/windows/desktop/CIMWin32Prov/cim-service), einschließlich [**Win32 \_ System Driver**](/windows/desktop/CIMWin32Prov/win32-systemdriver) und [**Win32 \_ applicationservice**](/previous-versions/windows/desktop/legacy/aa394068(v=vs.85)).
+Wenn Sie dieses Skript ausführen, erhalten Sie Informationen zurück. Diese Informationen sind jedoch nicht auf die dienste beschränkt, die auf einem Computer installiert sind. Stattdessen enthält sie Informationen aus allen untergeordneten Klassen des CIM-Diensts, einschließlich [**Win32 \_ SystemDriver**](/windows/desktop/CIMWin32Prov/win32-systemdriver) und [**Win32 \_ ApplicationService**](/previous-versions/windows/desktop/legacy/aa394068(v=vs.85)). [**\_**](/windows/desktop/CIMWin32Prov/cim-service)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -224,11 +224,11 @@ Wenn Sie dieses Skript ausführen, erhalten Sie Informationen zurück. Diese Inf
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austauschdienste<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemservices<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemServices<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemServices<br/>                                                          |
 
 
 
@@ -236,10 +236,10 @@ Wenn Sie dieses Skript ausführen, erhalten Sie Informationen zurück. Diese Inf
 
 <dl> <dt>
 
-[**SWbemServices**](swbemservices.md)
+[**Swbemservices**](swbemservices.md)
 </dt> <dt>
 
-[**Austauschen von "errbemubjectset"**](swbemobjectset.md)
+[**SWbemObjectSet**](swbemobjectset.md)
 </dt> </dl>
 
  

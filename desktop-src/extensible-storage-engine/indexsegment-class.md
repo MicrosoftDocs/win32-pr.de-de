@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Indexsegment-Klasse'
-title: Indexsegment-Klasse
+description: Weitere Informationen zur IndexSegment-Klasse
+title: IndexSegment-Klasse
 TOCTitle: IndexSegment class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.IndexSegment
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexsegment(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 01e8a306c2c74330903c898408e9b03e2d1024d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca422ec049bc545562e6de1151a17bbe626c9fa80f012cf5fcc870308a4434a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118077244"
 ---
-# <a name="indexsegment-class"></a>Indexsegment-Klasse
+# <a name="indexsegment-class"></a>IndexSegment-Klasse
 
 Beschreibt ein Segment eines Indexes.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Indexsegment  
+  Microsoft.Isam.Esent.Interop.IndexSegment  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,8 +65,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Indexsegment-Member](./indexsegment-members.md)
+[IndexSegment-Member](./indexsegment-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

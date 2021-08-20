@@ -1,25 +1,25 @@
 ---
-title: 'Save-Methode: cpapfile'
-description: Wenn cpapfile initialisiert ist, kann es verwendet werden, um die aktuellen Zeichnungsdaten im copaper-Objekt zu speichern.
+title: Save-Methode – CPapFile
+description: Wenn CPapFile initialisiert wird, kann es verwendet werden, um die aktuellen Zeichnungsdaten im COPaper-Objekt zu speichern.
 ms.assetid: ceac32e5-7d47-480b-b1cd-5a17ac04dd0c
 keywords:
-- 'Save-Methode: cpapfile'
+- Save-Methode – CPapFile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3166b649f28cb1a8ddc37e9efc53465a6cb5d3e0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3b465d5b275949b3cdfcea04a5023cd110a8600c59a706d2c2f1515e4225c757
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117960597"
 ---
-# <a name="save-method---cpapfile"></a>Save-Methode: cpapfile
+# <a name="save-method---cpapfile"></a>Save-Methode – CPapFile
 
-Wenn **cpapfile** initialisiert ist, kann es verwendet werden, um die aktuellen Zeichnungsdaten im copaper-Objekt zu speichern.
+Wenn **CPapFile** initialisiert wird, kann es verwendet werden, um die aktuellen Zeichnungsdaten im COPaper-Objekt zu speichern.
 
-## <a name="save-method-papfilecpp"></a>Save-Methode (papfile. CPP
+## <a name="save-method-papfilecpp"></a>Save-Methode (PAPFILE. CPP)
 
-Bei diesem Beispiel handelt es sich um die **cpapfile**-Methode zum  [**Speichern**](ipaper--save.md) von papfile. cpp.
+Dieses Beispiel ist die **CPapFile** [**Save-Methode**](ipaper--save.md) von Papfile.cpp.
 
 
 ```C++
@@ -69,23 +69,23 @@ HRESULT CPapFile::Save(
 
 
 
-Wenn **null** für den *pszFileName* -Parameter übergeben wird, wird der gespeicherte Inhalt des Members **m \_ szcurrfilename** als Dateiname verwendet. Der *nlockkey* ist der Client Sperr Schlüssel, der in einem vorherigen-Befehl der copaper [**Lock**](ipaper-methods.md) -Methode in der **iPaper** -Schnittstelle abgerufen wurde.
+Wenn **NULL** für den *pszFileName-Parameter* übergeben wird, wird der gespeicherte Inhalt des Members **m \_ szCurFileName** für den Dateinamen verwendet. *nLockKey* ist der Clientsperrschlüssel, der in einem vorherigen Aufruf der COPaper [**Lock-Methode**](ipaper-methods.md) in der **IPaper-Schnittstelle** abgerufen wurde.
 
-Die Dienstfunktion "com-Standard [**stgkreatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) " wird aufgerufen, um die Verbund Datei zu erstellen, in der die Zeichnungsdaten gespeichert werden.
+Die COM-Standarddienstfunktion [**StgCreateDocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) wird aufgerufen, um die Verbunddatei zu erstellen, in der die Zeichnungsdaten gespeichert werden.
 
-Der Name der zu erstellenden Verbund Datei wird als erster Parameter übergeben. Dies wird von [**stgkreatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) als Unicode-Zeichenfolge erwartet. Wenn **stoclien** für ANSI-Zeichen folgen kompiliert werden (Unicode ist nicht definiert, was der Standardwert in Makefile ist), reduziert sich dieser Aufrufe tatsächlich auf einen Aufrufen einer internen apputil-Funktion, **einer \_ stgfiatedocfile**. Diese Funktion führt die ordnungsgemäße Konvertierung des ANSI pszFile-Parameters in eine Unicode-Version vor, bevor **StgCreateDocfile** aufgerufen wird. Weitere Informationen finden Sie unter apputil. h und Stoserve.htm.
+Der Name der zu erstellende Verbunddatei wird als erster Parameter übergeben. Dies wird von [**StgCreateDocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) als Unicode-Zeichenfolge erwartet. Wenn **StoClien** für ANSI-Zeichenfolgen kompiliert wird (UNICODE ist nicht definiert, was der Standardwert im Makefile ist), reduziert sich dieser Aufruf tatsächlich auf einen Aufruf einer internen APPUTIL-Funktion, **einer \_ StgCreateDocfile-**. Diese Funktion führt die ordnungsgemäße Konvertierung des ANSI pszFile-Parameters in eine Unicode-Version durch, bevor **StgCreateDocfile** aufgerufen wird. Weitere Informationen finden Sie unter Apputil.h und Stoserve.htm.
 
-Die zugriffsmodusflags werden als zweiter Parameter übergeben und legen fest, welche Zugriffs Modi für die neue Datei zulässig sind. Mit dem STGM-Flag zum [ \_ Erstellen](stgm-constants.md) eines Zugriffsmodus wird eine neue Verbund Datei erstellt oder ein vorhandener mit dem gleichen Namen überschrieben. [STGM \_ Der Lesevorgang öffnet die](stgm-constants.md) Datei mit Lese-/Schreibberechtigung. [STGM \_ Direkt](stgm-constants.md) öffnet die Datei für den direkten Zugriff im Gegensatz zum transaktiven Zugriff. [STGM \_ Freigabe \_ exklusiv](stgm-constants.md) öffnet die Datei für den exklusiven, nicht freigegebenen Gebrauch durch den Aufrufer.
+Die Zugriffsmodusflags werden als zweiter Parameter übergeben und bestimmen, welche Zugriffsmodi für die neue Datei zulässig sind. Das [STGM CREATE-Zugriffsmodusflag \_ ](stgm-constants.md) erstellt eine neue Verbunddatei oder überschreibt eine vorhandene mit dem gleichen Namen. [STGM \_ READWRITE](stgm-constants.md) öffnet die Datei mit Lese-/Schreibberechtigung. [STGM \_ DIRECT](stgm-constants.md) öffnet die Datei für den direkten Zugriff und nicht für den transaktiven Zugriff. [STGM \_ SHARE \_ EXCLUSIVE](stgm-constants.md) öffnet die Datei für die exklusive, nicht freigegebene Verwendung durch den Aufrufer.
 
-Der dritte Parameter ist reserviert und muss NULL sein.
+Der dritte Parameter ist reserviert und muss 0 (null) sein.
 
-Die Adresse der Zeiger Variablen **m \_ pistorage** wird als vierter Parameter an [**stgkreatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) übergeben. Wenn der-Rückruf erfolgreich zurückgegeben wurde, enthält **m \_ pistorage** einen Schnittstellen Zeiger auf eine [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle. Dies ist die Schnittstelle, die für nachfolgende Vorgänge in der Datei verwendet wird.
+Die Adresse der Zeigervariable **m \_ pIStorage** wird als vierter Parameter an [**StgCreateDocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) übergeben. Wenn der Aufruf erfolgreich zurückgegeben wird, enthält **m \_ pIStorage** einen Schnittstellenzeiger auf eine [**IStorage-Schnittstelle.**](/windows/desktop/api/Objidl/nn-objidl-istorage) Dies ist die Schnittstelle, die für alle nachfolgenden Vorgänge in der Datei verwendet wird.
 
-Der wichtige Vorgang in diesem Fall besteht darin, dass das copaper-Objekt seine Zeichnungsdaten in der Datei speichert. Dies erfolgt oben mithilfe der [**Save**](ipaper--save.md) -Methode der copaper [**iPaper**](ipaper-methods.md) -Schnittstelle. Wenn copaper das Speichern der Daten im angegebenen Speicher Objekt erfolgreich abgeschlossen hat, wird der Name der Verbund Datei als neuer aktueller Dateiname in **m \_ szcurrfilename** kopiert.
+In diesem Fall ist es wichtig, dass das COPaper-Objekt seine Zeichnungsdaten in der Datei speichert. Dies erfolgt oben mithilfe der [**Save-Methode**](ipaper--save.md) der [**COPaper IPaper-Schnittstelle.**](ipaper-methods.md) Wenn COPaper seine Daten erfolgreich im bereitgestellten Speicherobjekt speichert, wird der Name der Verbunddatei als neuer aktueller Dateiname in **m \_ szCurFileName** kopiert.
 
- 
+ 
 
- 
+ 
 
 
 

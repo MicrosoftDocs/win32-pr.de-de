@@ -1,9 +1,9 @@
 ---
-title: WM/originallyriker
-description: Das WM/originallyricist-Attribut enthält den Namen der Person, die die ursprünglichen Texte geschrieben hat.
+title: WM/OriginalLyricist
+description: Das WM/OriginalLyricist-Attribut enthält den Namen der Person, die die ursprünglichen Titel geschrieben hat.
 ms.assetid: 96855632-b6ba-4796-bd96-434f0bc70d29
 keywords:
-- WM/originallyricist Windows Media-Format
+- WM/OriginalLyricist windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad9b6eca5037d3cd826cf2845e1b7aa17cac2b67
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5eadbeada6c08f084d6e329c5f0139cd620f454848bc0838f31f5c3a42511913
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118027937"
 ---
-# <a name="wmoriginallyricist"></a>WM/originallyriker
+# <a name="wmoriginallyricist"></a>WM/OriginalLyricist
 
-Das **WM/originallyricist-** Attribut enthält den Namen der Person, die die ursprünglichen Texte geschrieben hat.
+Das **WM/OriginalLyricist-Attribut** enthält den Namen der Person, die die ursprünglichen Titel geschrieben hat.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmoriginallyriker
+g \_ wszWMOriginalLyricist
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -38,9 +38,9 @@ g \_ wszwmoriginallyriker
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

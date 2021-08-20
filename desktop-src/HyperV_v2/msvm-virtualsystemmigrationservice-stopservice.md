@@ -1,7 +1,7 @@
 ---
-description: 'StopService-Methode der Msvm_VirtualSystemMigrationService Klasse : Beendet den Dienst.'
+description: 'StopService-Methode der Msvm_VirtualSystemMigrationService-Klasse: Beendet den Dienst.'
 ms.assetid: cf0dde8d-b6cf-4a52-905f-c686ac41e314
-title: StopService-Methode der Msvm_VirtualSystemMigrationService Klasse
+title: StopService-Methode der Msvm_VirtualSystemMigrationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f945f20e86c25b89bf935e46140c1f994e8735b8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 14e94f8351c44319de7ce15053e0f29ab70a6f12dd5bba5894c7b9ab1a3eac39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117994163"
 ---
 # <a name="stopservice-method-of-the-msvm_virtualsystemmigrationservice-class"></a>StopService-Methode der Msvm \_ VirtualSystemMigrationService-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

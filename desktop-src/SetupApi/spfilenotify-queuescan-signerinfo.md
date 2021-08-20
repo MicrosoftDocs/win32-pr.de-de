@@ -1,19 +1,19 @@
 ---
-description: Die "spfilenotify"- \_ \_ Benachrichtigungs Benachrichtigungs Benachrichtigung wird von setupscanfilequeue für jeden Knoten in der Kopier unter Warteschlange der Datei Warteschlange an eine Rückruf Routine gesendet.
+description: Die Benachrichtigung SPFILENOTIFY QUEUESCAN SIGNERINFO wird von \_ SetupScanFileQueue für jeden Knoten in der Kopierunterwarteschlange der Dateiwarteschlange an eine \_ Rückrufroutine gesendet.
 ms.assetid: 5b22e8ba-9a18-461b-bad7-b2d76f83d7f3
-title: SPFILENOTIFY_QUEUESCAN_SIGNERINFO Meldung (Setupapi. h)
+title: SPFILENOTIFY_QUEUESCAN_SIGNERINFO (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e29bf9e9c7e0ab76303d8c2fb21a0109ec60358f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c33e448178629dd9c4528fbc0257a7ceed79b7bf7dc6e6c2d70e631e2c3bd1cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117964414"
 ---
-# <a name="spfilenotify_queuescan_signerinfo-message"></a>Spfilenotifizieren der \_ Warteschlangen \_ Meldung "SignerInfo"
+# <a name="spfilenotify_queuescan_signerinfo-message"></a>SPFILENOTIFY \_ QUEUESCAN \_ SIGNERINFO-Meldung
 
-Die " **spfilenotify" \_ - \_** Benachrichtigungs Benachrichtigungs Benachrichtigung wird von [**setupscanfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea) für jeden Knoten in der Kopier unter Warteschlange der Datei Warteschlange an eine Rückruf Routine gesendet. Dies ist nur der Fall, wenn die **setupscanfilequeue** -Funktion aufgerufen wurde, wobei das Flag SPQ \_ Scan \_ \_ Callback \_ SignerInfo verwendet wird. Verfügbar ab Windows XP.
+Die **Benachrichtigung SPFILENOTIFY \_ QUEUESCAN \_ SIGNERINFO** wird von [**SetupScanFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea) für jeden Knoten in der Kopierunterwarteschlange der Dateiwarteschlange an eine Rückrufroutine gesendet. Dies tritt nur auf, wenn die **SetupScanFileQueue-Funktion** aufgerufen wurde und das Flag SPQ \_ SCAN USE \_ \_ CALLBACK \_ SIGNERINFO angegeben wurde. Verfügbar ab Windows XP.
 
 
 ```C++
@@ -31,18 +31,18 @@ SPFILENOTIFY_QUEUESCAN_SIGNERINFO
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**FilePath- \_ SignerInfo**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_signerinfo_a) -Struktur. Das **Zielmember** ist der Dateiname der Zieldatei im System. Der **Quell** Member ist der erwartete Pfad der Quelldatei. Der **Win32Error** -Member ist der Signatur Fehler. Signatur Informationen werden zurückgegeben, wenn die Rückruf Routine **Win32Error**= = No error zurückgibt \_ . Der **digitalsigner** -Member ist der digitale Signatur Geber. Der **Versions** Member ist die Version. Die **catalogfile** ist die Katalog Datei.
+Zeiger auf eine [**FILEPATHS \_ SIGNERINFO-Struktur.**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_signerinfo_a) Das **Zielmitglied** ist der Dateiname der Zieldatei auf dem System. Der **Source-Member** ist der erwartete Pfad der Quelldatei. Das **Win32Error-Element** ist der Signaturfehler. Signaturinformationen werden zurückgegeben, wenn die Rückrufroutine **Win32Error**==NO \_ ERROR zurückgibt. Das **DigitalSigner-Mitglied** ist der digitale Signaturer. Der **Version-Member** ist die Version. CatalogFile **ist** die Katalogdatei.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Rückruf Routine sollte einen [Systemfehler Code](/windows/desktop/Debug/system-error-codes)zurückgeben.
+Die Rückrufroutine sollte einen [Systemfehlercode zurückgeben.](/windows/desktop/Debug/system-error-codes)
 
-Wenn die Rückruf Routine keinen Fehler zurückgibt \_ , wird die Warteschlangen Überprüfung fortgesetzt, und es wird zurückgegeben, wenn die Routine einen anderen Fehlercode zurückgibt, die Warteschlangen Überprüfung abgebrochen und [**setupscanfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea) **false** zurückgibt.
+Wenn die Rückrufroutine NO ERROR zurückgibt, wird der Warteschlangenscan fortgesetzt und zurückgegeben. Wenn die Routine einen anderen Fehlercode zurückgibt, wird der Warteschlangenscan abgebrochen, und \_ [**SetupScanFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea) gibt **FALSE zurück.**
 
 > [!Note]  
-> Diese Benachrichtigung wird nicht von der [**setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka) -Funktion verarbeitet.
+> Diese Benachrichtigung wird nicht von der [**SetupDefaultQueueCallback-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka) verarbeitet.
 
  
 
@@ -52,9 +52,9 @@ Wenn die Rückruf Routine keinen Fehler zurückgibt \_ , wird die Warteschlangen
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Wenn die Rückruf Routine keinen Fehler zurückgibt \_ , wird die Warteschlangen
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**Setupscanfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea)
+[**SetupScanFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupscanfilequeuea)
 </dt> </dl>
 
  

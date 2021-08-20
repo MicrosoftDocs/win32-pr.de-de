@@ -1,23 +1,23 @@
 ---
-description: ICE75 überprüft, ob alle benutzerdefinierten Aktions Typen 17 (dll), Custom Action Type 18 (exe), Custom Action Type 21 (JScript) und Custom Action Type 22 (VBScript) benutzerdefinierte Aktionen nach der costfinalize-Aktion sequenziert werden.
+description: ICE75 überprüft, ob alle benutzerdefinierten Aktionen vom Typ 17 (DLL), 18 (EXE), benutzerdefinierter Aktionstyp 21 (JScript) und benutzerdefinierter Aktionstyp 22 (VBScript) nach der Aktion CostFinalize sequenziert werden.
 ms.assetid: 831de042-bea6-42da-90a0-3847bb447414
 title: ICE75
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 23d708552b3ed2d397e29d37abdf0ceed01093fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec625f3dd9d71daf8202423b6636d23db663aa15b9ab14c5362b63faf1df9e94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117991055"
 ---
 # <a name="ice75"></a>ICE75
 
-ICE75 überprüft, ob alle benutzerdefinierten [Aktions Typen 17](custom-action-type-17.md) (dll), [Custom Action Type 18](custom-action-type-18.md) (exe), Custom [Action Type 21](custom-action-type-21.md) (JScript) und Custom [Action Type 22](custom-action-type-22.md) (VBScript) benutzerdefinierte Aktionen nach der [costfinalize-Aktion](costfinalize-action.md)sequenziert werden. Diese Typen von benutzerdefinierten Aktionen verwenden eine installierte Datei als Quelle. ICE75 überprüft die Tabelle " [InstallUISequence](installuisequence-table.md)", " [InstallExecuteSequence Table](installexecutesequence-table.md)", " [AdminUISequence](adminuisequence-table.md)" und " [AdminExecuteSequence](adminexecutesequence-table.md)". Beachten Sie, dass die Aktion "costfinalize" in diesen Sequenz Tabellen erforderlich ist.
+ICE75 überprüft, ob alle benutzerdefinierten Aktionen vom Typ [17](custom-action-type-17.md) (DLL), [18](custom-action-type-18.md) (EXE), [benutzerdefinierter Aktionstyp 21](custom-action-type-21.md) (JScript) und [benutzerdefinierter Aktionstyp 22](custom-action-type-22.md) (VBScript) nach der [Aktion CostFinalize](costfinalize-action.md)sequenziert werden. Diese Arten von benutzerdefinierten Aktionen verwenden eine installierte Datei als Quelle. ICE75 überprüft die [Tabelle InstallUISequence,](installuisequence-table.md)die [Tabelle InstallExecuteSequence,](installexecutesequence-table.md)die [Tabelle AdminUISequence](adminuisequence-table.md)und die [Tabelle AdminExecuteSequence.](adminexecutesequence-table.md) Beachten Sie, dass die CostFinalize-Aktion in diesen Sequenztabellen erforderlich ist.
 
 ## <a name="result"></a>Ergebnis
 
-ICE75 gibt einen Fehler aus, wenn eine benutzerdefinierte Aktion mithilfe einer installierten Datei als Quelldatei gefunden wird, die nach der costfinalize-Aktion nicht sequenziert wurde.
+ICE75 sendet einen Fehler, wenn eine benutzerdefinierte Aktion gefunden wird, die eine installierte Datei als Quelldatei verwendet, die nach der CostFinalize-Aktion nicht sequenziert wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -37,10 +37,10 @@ AdminExecuteSequence table
 
 
 
-| Aktion      | type | `Source`  |
+| Aktion      | type | Quelle  |
 |-------------|------|---------|
-| \_Datei-exe-Datei | 18   | FileExe |
-| ZS- \_ Datei-dll | 17   | Filedll |
+| CA \_ FileExe | 18   | FileExe |
+| CA \_ FileDLL | 17   | FileDLL |
 
 
 
@@ -52,7 +52,7 @@ AdminExecuteSequence table
 
 | Aktion      | Sequenz |
 |-------------|----------|
-| \_Datei-exe-Datei | 1100     |
+| CA \_ FileExe | 1100     |
 
 
 
@@ -64,20 +64,20 @@ AdminExecuteSequence table
 
 | Aktion       | Sequenz |
 |--------------|----------|
-| ZS- \_ Datei-dll  | 800      |
-| Costfinalize | 1000     |
+| CA \_ FileDLL  | 800      |
+| CostFinalize | 1000     |
 
 
 
  
 
-Um die Fehler zu beheben, müssen Sie die benutzerdefinierten Aktionen nach der costfinalize-Aktion sequenzieren.
+Sequenzieren Sie die benutzerdefinierten Aktionen nach der Aktion CostFinalize, um die Fehler zu beheben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

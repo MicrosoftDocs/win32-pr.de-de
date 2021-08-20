@@ -1,9 +1,9 @@
 ---
-title: ICM_DECOMPRESSEX_BEGIN Meldung (VFW. h)
-description: Die ICM \_ decompressex \_ Begin-Nachricht benachrichtigt einen Video Komprimierungs Treiber, um die Dekomprimierung von Daten vorzubereiten.
+title: ICM_DECOMPRESSEX_BEGIN (Vfw.h)
+description: Die ICM DECOMPRESSEX BEGIN-Nachricht benachrichtigt einen Videokomprimierungstreiber, um die Dekomprimierung \_ \_ von Daten vorzubereiten.
 ms.assetid: 35298274-91b5-4df0-b4b0-4a71d6a49990
 keywords:
-- ICM_DECOMPRESSEX_BEGIN-Nachricht (Multimedia)
+- ICM_DECOMPRESSEX_BEGIN-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77ea082c91d48a9964348b762ce13631cd80af30
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ffc74d5573437a1606db89377e36442b51677aca016cebd9635a0ab4f64cc55e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117987812"
 ---
-# <a name="icm_decompressex_begin-message"></a>ICM- \_ decompressex- \_ Begin-Meldung
+# <a name="icm_decompressex_begin-message"></a>\_ICM DECOMPRESSEX \_ BEGIN-Meldung
 
-Die **ICM \_ decompressex \_ Begin** -Nachricht benachrichtigt einen Video Komprimierungs Treiber, um die Dekomprimierung von Daten vorzubereiten.
+Die **ICM \_ DECOMPRESSEX \_ BEGIN-Nachricht** benachrichtigt einen Videokomprimierungstreiber, um die Dekomprimierung von Daten vorzubereiten.
 
 
 ```C++
@@ -41,28 +41,28 @@ lParam = sizeof(ICDECOMPRESSEX);
 <span id="icdex"></span><span id="ICDEX"></span>*icdex*
 </dt> <dd>
 
-Zeiger auf eine [**icdecompressex**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex) -Struktur, die die Eingabe-und Ausgabeformate enthält.
+Zeiger auf eine [**ICDECOMPRESSEX-Struktur,**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex) die die Eingabe- und Ausgabeformate enthält.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Größe von [**icdebug**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex)(in Bytes).
+Größe von [**ICDECOMPRESSEX**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex)in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ICERR \_ OK zurück, wenn die angegebene Dekomprimierung unterstützt wird oder andernfalls ICERR \_ badformat.
+Gibt ICERR \_ OK zurück, wenn die angegebene Dekomprimierung unterstützt wird, andernfalls ICERR \_ BADFORMAT.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Treiber diese Nachricht empfängt, sollte er Puffer zuordnen und zeitaufwändige Vorgänge ausführen, damit [**ICM- \_ decompressex**](icm-decompressex.md) -Nachrichten effizient verarbeitet werden können.
+Wenn der Treiber diese Nachricht empfängt, sollte er Puffer zuordnen und zeitaufwändige Vorgänge für die effiziente Verarbeitung ICM [**\_ DECOMPRESSEX-Nachrichten**](icm-decompressex.md) erledigen.
 
-Wenn Sie möchten, dass der Treiber Daten direkt auf dem Bildschirm dekomprimiert, senden Sie die [**ICM \_ Draw \_ Begin**](icm-draw-begin.md) -Nachricht.
+Wenn der Treiber Daten direkt auf dem Bildschirm dekomprimieren soll, senden Sie die ICM [**\_ DRAW \_ BEGIN-Nachricht.**](icm-draw-begin.md)
 
-Die **ICM \_ decompressex \_ Begin** -und [**ICM \_ decompressex- \_ endmeldungen**](icm-decompressex-end.md) werden nicht geschachtelt. Wenn Ihr Treiber **ICM \_ decompressex \_ Begin** empfängt, bevor die Dekomprimierung mit **ICM \_ decompressex \_ End** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
+Die **ICM \_ DECOMPRESSEX \_ BEGIN-** [**und ICM \_ DECOMPRESSEX \_ END-Meldungen**](icm-decompressex-end.md) werden nicht geschachtelt. Wenn Ihr Treiber ICM **\_ DECOMPRESSEX \_ BEGIN** empfängt, bevor die Dekomprimierung mit **ICM \_ DECOMPRESSEX \_ END** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Die **ICM \_ decompressex \_ Begin** -und [**ICM \_ decompressex- \_ endmeldunge
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Die **ICM \_ decompressex \_ Begin** -und [**ICM \_ decompressex- \_ endmeldunge
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  
