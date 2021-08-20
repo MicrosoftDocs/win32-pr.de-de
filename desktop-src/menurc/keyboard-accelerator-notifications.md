@@ -4,12 +4,12 @@ description: Tastaturbeschleunigungsbenachrichtigungen
 ms.assetid: d3fc9c39-44bf-4619-870d-e3f0f40ebc54
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6da482b875a0d4cc5cbce834ad29244b2e67c9bc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 176a208a2cb88276b6ad72df1c57853a06a608294aaad68e4eb1667c0908c96e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117687593"
 ---
 # <a name="keyboard-accelerator-notifications"></a>Tastaturbeschleunigungsbenachrichtigungen
 

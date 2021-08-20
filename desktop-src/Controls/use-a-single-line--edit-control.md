@@ -1,6 +1,6 @@
 ---
-title: Erstellen eines Einzeilen-Bearbeitungssteuerelements
-description: In diesem Thema wird veranschaulicht, wie Sie ein Dialogfeld erstellen, das ein einzeiliges Bearbeitungssteuerelement enthält.
+title: Erstellen eines Einzeilenbearbeitungs-Steuerelements
+description: In diesem Thema wird veranschaulicht, wie Sie ein Dialogfeld erstellen, das ein einzeilenbasiertes Bearbeitungssteuerfeld enthält.
 ms.assetid: 742DF606-9998-46D0-8D0A-F79508AAFFC0
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,16 +11,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117829115"
 ---
-# <a name="how-to-create-a-single-line-edit-control"></a>Erstellen eines Einzeilen-Bearbeitungssteuerelements
+# <a name="how-to-create-a-single-line-edit-control"></a>Erstellen eines Einzeilenbearbeitungs-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie Sie ein Dialogfeld erstellen, das ein einzeiliges Bearbeitungssteuerelement enthält.
+In diesem Thema wird veranschaulicht, wie Sie ein Dialogfeld erstellen, das ein einzeilenbasiertes Bearbeitungssteuerfeld enthält.
 
-Das Einzeilen-Bearbeitungssteuerelement weist das [**ES \_ PASSWORD-Format**](edit-control-styles.md) auf. Standardmäßig zeigen Bearbeitungssteuerelemente mit diesem Stil ein Sternchen für jedes Vom Benutzer eingegebene Zeichen an. In diesem Beispiel wird jedoch die [**EM \_ SETPASSWORDCHAR-Nachricht**](em-setpasswordchar.md) verwendet, um das Standardzeichen von einem Sternchen in ein Pluszeichen (+) zu ändern. Der folgende Screenshot zeigt das Dialogfeld, nachdem der Benutzer ein Kennwort eingegeben hat.
+Das einzeilenbasierte Bearbeitungssteuerwort hat das [**ES \_ PASSWORD-Format.**](edit-control-styles.md) Standardmäßig zeigen Bearbeitungssteuerelemente mit diesem Stil ein Sternchen für jedes Zeichen an, das vom Benutzer typiert wird. In diesem Beispiel wird jedoch die [**EM \_ SETPASSWORDCHAR-Nachricht**](em-setpasswordchar.md) verwendet, um das Standardzeichen von einem Sternchen in ein Pluszeichen (+) zu ändern. Der folgende Screenshot zeigt das Dialogfeld, nachdem der Benutzer ein Kennwort eingegeben hat.
 
-![Screenshot eines Dialogfelds, das ein Bearbeitungssteuerelement für die Eingabe eines Kennworts enthält](images/passworddlg.png)
+![Screenshot eines Dialogfelds, das ein Bearbeitungssteuerfeld für die Kennworteingabe enthält](images/passworddlg.png)
 
 > [!Note]  
-> Comctl32.dll Version 6 ist nicht verteilbar. Um Comctl32.dll Version 6 zu verwenden, geben Sie sie in einem Manifest an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
+> Comctl32.dll Version 6 ist nicht verteilbar. Um Version Comctl32.dll 6 zu verwenden, geben Sie sie in einem Manifest an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -37,9 +37,9 @@ Das Einzeilen-Bearbeitungssteuerelement weist das [**ES \_ PASSWORD-Format**](ed
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-an-instance-of-the-password-dialog-box"></a>Schritt 1: Erstellen Sie eine Instanz des Kennwortdialogfelds.
+### <a name="step-1-create-an-instance-of-the-password-dialog-box"></a>Schritt 1: Erstellen Sie eine Instanz des Dialogfelds Kennwort.
 
-Im folgenden C++-Codebeispiel wird die DialogBox-Funktion verwendet, um ein modales Dialogfeld zu erstellen. Die Dialogfeldvorlage **IDD \_ PASSWORD** wird als Parameter übergeben. Sie definiert unter anderem die Fensterstile, Schaltflächen und Dimensionen des Kennwortdialogfelds.
+Im folgenden C++-Codebeispiel wird die DialogBox-Funktion verwendet, um ein modales Dialogfeld zu erstellen. Die Dialogfeldvorlage **IDD \_ PASSWORD** wird als Parameter übergeben. Sie definiert unter anderem die Fensterstile, Schaltflächen und Dimensionen des Dialogfelds "Kennwort".
 
 
 ```C++
@@ -56,9 +56,9 @@ DialogBox(hInst,                   // application instance
 
 Die Fensterprozedur im folgenden Beispiel initialisiert das Kennwortdialogfeld und verarbeitet Benachrichtigungsmeldungen und Benutzereingaben.
 
-Während der Initialisierung ändert die Fensterprozedur das Standardkennwortzeichen in ein **+** -Zeichen und legt das Standard-Pushbutton auf **Abbrechen** fest.
+Während der Initialisierung ändert die Fensterprozedur das Standardkennwortzeichen in ein Zeichen und legt den **+** Standard-Pushbutton auf **Abbrechen fest.**
 
-Während der Verarbeitung von Benutzereingaben ändert die Fensterprozedur die Standardtastentaste von **ABBRECHEN** in **OK,** sobald der Benutzer Text in das Bearbeitungssteuerelement eingibt. Wenn der Benutzer auf die Schaltfläche **OK** klickt, verwendet die Fensterprozedur die [**EM \_ LINELENGTH-**](em-linelength.md) und [**EM \_ GETLINE-Meldungen,**](em-getline.md) um den Text abzurufen.
+Während der Verarbeitung von Benutzereingaben ändert die Fensterprozedur die Standard-Pushschaltfläche von **ABBRECHEN** in **OK,** sobald der Benutzer Text in das Bearbeitungssteuerfeld ein gibt. Wenn der Benutzer die Schaltfläche **OK drückt,** verwendet die Fensterprozedur die [**EM \_ LINELENGTH-**](em-linelength.md) und [**EM \_ GETLINE-Meldungen,**](em-getline.md) um den Text abzurufen.
 
 
 
@@ -171,10 +171,10 @@ INT_PTR CALLBACK PasswordProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
 [Informationen zum Bearbeiten von Steuerelementen](about-edit-controls.md)
 </dt> <dt>
 
-[Steuerelementverweis bearbeiten](bumper-edit-control-edit-control-reference.md)
+[Referenz zum Bearbeiten von Steuerelementen](bumper-edit-control-edit-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Bearbeitungssteuerelementen](/windows/desktop/Controls/using-edit-controls)
+[Verwenden von Steuerelementen zum Bearbeiten](/windows/desktop/Controls/using-edit-controls)
 </dt> <dt>
 
 [Steuerelement bearbeiten](edit-controls.md)

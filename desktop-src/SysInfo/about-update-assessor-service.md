@@ -1,30 +1,30 @@
 ---
-description: Im folgenden Thema wird beschrieben, wie die API der Windows as a Service (WAAS) Assessment Platform funktioniert.
+description: Im folgenden Thema wird beschrieben, wie die WaaS-Bewertungsplattform-API (Windows-as-a-Service) funktioniert.
 ms.assetid: B107AAF3-4248-40EF-ABD2-C5B31602AEF7
-title: Informationen zur WAAS-Bewertungsplattform
+title: Informationen zur WaaS-Bewertungsplattform
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb96dd27fdc5b8838f2e2a26e74f0046eda8f20b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79493900d508a8a613953f1f9b7bbd0f67e2a200761148b7fe31d9fb31ce3609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117958950"
 ---
-# <a name="about-the-waas-assessment-platform"></a>Informationen zur WAAS-Bewertungsplattform
+# <a name="about-the-waas-assessment-platform"></a>Informationen zur WaaS-Bewertungsplattform
 
-Im folgenden Thema wird beschrieben, wie die API der Windows as a Service (WAAS) Assessment Platform funktioniert.
+Im folgenden Thema wird beschrieben, wie die WaaS-Bewertungsplattform-API (Windows-as-a-Service) funktioniert.
 
-Die WAAS-Bewertungs-API bietet dem Aufrufer die folgenden Informationen:
+Die WaaS-Bewertungs-API bietet dem Aufrufer die folgenden Informationen:
 
--   Wenn ein Gerät auf den neuesten Microsoft-Updates basiert.
+-   Wenn ein Gerät auf den neuesten Microsoft-Updates installiert ist.
 -   Gibt an, ob das Gerät das Ende des Supports erreicht hat.
 -   Die Releasezeiten für die neuesten anwendbaren Updates für das Gerät.
--   Eine Einschätzung, warum ein Gerät nicht auf dem neuesten Stand ist und welche möglichen Auswirkungen es auf das Gerät haben kann.
+-   Eine Bewertung, warum ein Gerät nicht auf dem neuesten Stand ist und welche potenziellen Auswirkungen es auf das Gerät haben kann.
 
-Die WAAS Assessment Platform verwendet das com-API-Modell und wird automatisch mindestens einmal pro Tag ausgeführt. Dieser Cycle fängt die anwendbaren Releaseinformationen ab. Im zwischengespeicherten Zeitraum werden für die zwischengespeicherten Releaseinformationen Bewertungen durchgeführt. Wenn ein aufrufen außerhalb des Cache Ablauf Fensters erfolgt, werden ein neuer Rückruf und eine Bewertung durchgeführt, zwischengespeichert und zurückgegeben. Wenn ein-Befehl durchgeführt wird, kontaktiert der WAAS-Bewertungs Client den WAAS-Bewertungs Dienst mit den Attributen des Geräts und empfängt ein auf das Gerät anwendbares Dossier von Informationen. Der Client verwendet diese Informationen dann anhand der Informationen, die er über das Gerät zum Durchführen der Bewertung sammelt.
+Die WaaS-Bewertungsplattform verwendet das COM-API-Modell und wird mindestens einmal täglich automatisch ausgeführt. Dieser Zyklus fängt die entsprechenden Releaseinformationen ab. Während des zwischengespeicherten Zeitraums werden Bewertungen anhand der zwischengespeicherten Releaseinformationen durchgeführt. Wenn ein Aufruf außerhalb des Cacheablauffensters erfolgt, werden ein neuer Aufruf und eine neue Bewertung durchgeführt, zwischengespeichert und zurückgegeben. Wenn ein Aufruf erfolgt, kontaktiert der WaaS-Bewertungsclient den WaaS-Bewertungsdienst mit den Attributen des Geräts und empfängt ein Dossier mit Informationen, die für das Gerät gelten. Der Client verwendet diese Informationen dann anhand der Informationen, die er zum Gerät sammelt, um die Bewertung durchzuführen.
 
 > [!NOTE]
-> Der Code muss über Administratorrechte verfügen, um die WAAS-Bewertungs-API aufzurufen. Weitere Informationen zum Entwickeln von Anwendungen, für die Administratorrechte erforderlich sind, finden Sie in [diesem Artikel](../secauthz/developing-applications-that-require-administrator-privilege.md).
+> Ihr Code muss über Administratorrechte verfügen, um die Waas-Bewertungs-API aufzurufen. Weitere Informationen zum Entwickeln von Anwendungen, die Administratorrechte erfordern, finden Sie [in diesem Artikel.](../secauthz/developing-applications-that-require-administrator-privilege.md)
 
  

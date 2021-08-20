@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. showtimeaxislabels (Eigenschaft)
-description: Ruft einen Wert ab, der bestimmt, ob die horizontale Achse (X) der Diagramm Ansicht Bezeichnungen enthält, oder legt ihn fest.
+title: SystemMonitor.ShowTimeAxisLabels-Eigenschaft
+description: Ruft einen Wert ab, der bestimmt, ob die horizontale (X)-Achse der Diagrammansicht Bezeichnungen enthält, oder legt diesen fest.
 ms.assetid: 9e9d2d2c-f053-4afe-85de-25242842498f
 keywords:
-- Showtimeaxislabels-Eigenschaft (Sysmon)
-- Showtimeaxislabels-Eigenschaft (Sysmon), Systemmonitor-Objekt
-- Systemmonitor-Objekt "sysmon", showtimeaxislabels (Eigenschaft)
+- ShowTimeAxisLabels-Eigenschaft SysMon
+- ShowTimeAxisLabels-Eigenschaft SysMon , SystemMonitor-Objekt
+- SystemMonitor-Objekt SysMon , ShowTimeAxisLabels-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06569dcd4702ae687b09bfae88c84482a49afb71
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ae2d6ae1fca7834c58a8ae84d1a4b7800a580b4efb0a5b675b7f95a40127067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117954907"
 ---
-# <a name="systemmonitorshowtimeaxislabels-property"></a>Systemmonitor. showtimeaxislabels (Eigenschaft)
+# <a name="systemmonitorshowtimeaxislabels-property"></a>SystemMonitor.ShowTimeAxisLabels-Eigenschaft
 
-Ruft einen Wert ab, der bestimmt, ob die horizontale Achse (X) der Diagramm Ansicht Bezeichnungen enthält, oder legt ihn fest.
+Ruft einen Wert ab, der bestimmt, ob die horizontale (X)-Achse der Diagrammansicht Bezeichnungen enthält, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ Property ShowTimeAxisLabels As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Mit dem Wert true werden Bezeichnungen auf die x-Achse angewendet. Der Wert false ist nicht. Die Standardeinstellung lautet „false“.
+Der Wert True wendet Bezeichnungen auf die x-Achse an. Der Wert False ist nicht. Die Standardeinstellung lautet „false“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sysmon ignoriert diese Eigenschaft für Balkendiagramme, Berichte und Histogramme.
+SYSMON ignoriert diese Eigenschaft für Balkendiagramme, Berichte und Histogramme.
 
-Bei Linien Diagrammen verwendet sysmon die Zeit, in der der Wert des Leistungs Zählers als Bezeichnung erfasst wurde.
+Für Liniendiagramme verwendet SYSMON die Zeit, zu der der Indikatorwert als Bezeichnung entnommen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Bei Linien Diagrammen verwendet sysmon die Zeit, in der der Wert des Leistungs Z
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 

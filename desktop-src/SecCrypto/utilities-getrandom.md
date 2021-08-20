@@ -1,7 +1,7 @@
 ---
-description: Generiert eine sichere Zufallszahl unter Verwendung des Standard-Kryptografiedienstanbieters (CSP).
+description: Generiert eine sichere Zufallszahl mithilfe des standardmäßigen Kryptografiedienstanbieters (Cryptographic Service Provider, CSP).
 ms.assetid: 52c49f73-58b8-455f-9368-54f38de55776
-title: Utilities. getrandom-Methode
+title: Utilities.GetRandom-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 3b7e02c7df61c1a2d710189fb2e5e0a21cc0b504
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 973d34c77dfed1493ac85fe2a98ed2c2e5dc5ef6f9b9007076fbf732e40c10e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117971031"
 ---
-# <a name="utilitiesgetrandom-method"></a>Utilities. getrandom-Methode
+# <a name="utilitiesgetrandom-method"></a>Utilities.GetRandom-Methode
 
-\[Die **getrandom** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **GetRandom-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar.\]
 
-Die **getrandom** -Methode generiert mithilfe des Standard- [*Kryptografiedienstanbieters*](../secgloss/c-gly.md) (CSP) eine sichere Zufallszahl.
+Die **GetRandom-Methode** generiert mithilfe des Standardmäßigen [*Kryptografiedienstanbieters (CSP)*](../secgloss/c-gly.md) eine sichere Zufallszahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ Utilities.GetRandom( _
 *Länge* \[ in, optional\]
 </dt> <dd>
 
-Die Länge (in Byte) der zu erstellenden Zufallszahl. Der Standardwert ist 8 Bytes.
+Die Länge der zu erstellende Zufallszahl in Bytes. Der Standardwert ist 8 Byte.
 
 </dd> <dt>
 
 *EncodingType* \[ in, optional\]
 </dt> <dd>
 
-Ein Wert der [**CAPICOM- \_ \_ Codierungstyp**](capicom-encoding-type.md) -Enumeration, die den Codierungstyp angibt, der für die generierte Zufallszahl verwendet werden soll. Der Standardwert ist CAPICOM- \_ \_ codierungsbinär. Dieser Parameter kann einen der folgenden Werte annehmen.
+Ein Wert der [**CAPICOM \_ ENCODING \_ TYPE-Enumeration,**](capicom-encoding-type.md) der den Typ der Codierung angibt, der für die generierte Zufallszahl verwendet werden soll. Der Standardwert ist CAPICOM \_ ENCODE \_ BINARY. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                  | Bedeutung                                                                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="CAPICOM_ENCODE_ANY"></span><span id="capicom_encode_any"></span><dl> <dt>**CAPICOM \_ Codieren \_ Any**</dt> </dl>          | Dieser Codierungstyp wird nur verwendet, wenn die Eingabedaten einen unbekannten Codierungstyp aufweisen. Wenn dieser Wert verwendet wird, um den Codierungstyp der Ausgabe anzugeben, wird stattdessen der CAPICOM- \_ Code \_ Base64 verwendet. Eingeführt in CAPICOM 2,0.<br/> |
-| <span id="CAPICOM_ENCODE_BASE64"></span><span id="capicom_encode_base64"></span><dl> <dt>**CAPICOM \_ Codieren \_ Base64**</dt> </dl> | Daten werden als Base64-codierte Zeichenfolge gespeichert.<br/>                                                                                                                                                                               |
-| <span id="CAPICOM_ENCODE_BINARY"></span><span id="capicom_encode_binary"></span><dl> <dt>**CAPICOM- \_ Codierung ( \_ Binär)**</dt> </dl> | Daten werden als reine binäre Sequenz gespeichert.<br/>                                                                                                                                                                                |
+| <span id="CAPICOM_ENCODE_ANY"></span><span id="capicom_encode_any"></span><dl> <dt>**CAPICOM \_ ENCODE \_ ANY**</dt> </dl>          | Dieser Codierungstyp wird nur verwendet, wenn die Eingabedaten einen unbekannten Codierungstyp aufweisen. Wenn dieser Wert zum Angeben des Codierungstyps der Ausgabe verwendet wird, wird stattdessen CAPICOM \_ ENCODE \_ BASE64 verwendet. Eingeführt in CAPICOM 2.0.<br/> |
+| <span id="CAPICOM_ENCODE_BASE64"></span><span id="capicom_encode_base64"></span><dl> <dt>**\_CAPICOM-CODIERUNG \_ BASE64**</dt> </dl> | Daten werden als Base64-codierte Zeichenfolge gespeichert.<br/>                                                                                                                                                                               |
+| <span id="CAPICOM_ENCODE_BINARY"></span><span id="capicom_encode_binary"></span><dl> <dt>**\_ \_ CAPICOM-CODIERUNGSBINÄRDATEI**</dt> </dl> | Daten werden als reine binäre Sequenz gespeichert.<br/>                                                                                                                                                                                |
 
 
 
@@ -70,7 +70,7 @@ Ein Wert der [**CAPICOM- \_ \_ Codierungstyp**](capicom-encoding-type.md) -Enume
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine nach dem Zufallsprinzip generierte Zahlen *Länge* mit der angegebenen Codierung.
+Eine zufällig generierte Anzahl *von Längenbytes* mit der angegebenen Codierung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Eine nach dem Zufallsprinzip generierte Zahlen *Länge* mit der angegebenen Codi
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
@@ -87,7 +87,7 @@ Eine nach dem Zufallsprinzip generierte Zahlen *Länge* mit der angegebenen Codi
 
 <dl> <dt>
 
-[**Versorgungsunternehmen**](utilities.md)
+[**Hilfsprogramme**](utilities.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. Schreib only (Eigenschaft)
-description: Ruft einen Wert ab, der bestimmt, ob ein Benutzer die Eigenschaftswerte des Steuer Elements ändern kann, oder legt diesen fest.
+title: SystemMonitor.ReadOnly (Eigenschaft)
+description: Ruft einen Wert ab, der bestimmt, ob ein Benutzer die Eigenschaftswerte des Steuerelements ändern kann, oder legt diesen fest.
 ms.assetid: 6ecfd63a-09b1-46eb-803f-6cb05bdecc25
 keywords:
-- Schreibgeschützte Eigenschaft (Sysmon)
-- Schreibgeschützte Eigenschaft "sysmon", Systemmonitor-Klasse
-- Systemmonitor-Klasse "sysmon", schreibgeschützte Eigenschaft
+- ReadOnly-Eigenschaft SysMon
+- ReadOnly-Eigenschaft SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , ReadOnly-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25f42481e1bb0df0966f09ee354421af6378969f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d4baee1e95a6c40e2983e92e914df921b9f91613ec0bebc1da9f74c54404b7f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117955035"
 ---
-# <a name="systemmonitorreadonly-property"></a>Systemmonitor. Schreib only (Eigenschaft)
+# <a name="systemmonitorreadonly-property"></a>SystemMonitor.ReadOnly (Eigenschaft)
 
-Ruft einen Wert ab, der bestimmt, ob ein Benutzer die Eigenschaftswerte des Steuer Elements ändern kann, oder legt diesen fest.
+Ruft einen Wert ab, der bestimmt, ob ein Benutzer die Eigenschaftswerte des Steuerelements ändern kann, oder legt diesen fest.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,23 +40,23 @@ Property ReadOnly As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-True, wenn der Benutzer die Eigenschaftswerte des Steuer Elements nicht ändern soll. andernfalls false. Der Standardwert ist false. Dies bedeutet, dass Benutzer die Eigenschaftswerte des Steuer Elements ändern können.
+True, wenn der Benutzer die Eigenschaftswerte des Steuerelements nicht ändern soll. andernfalls FALSE. Der Standardwert ist FALSE. Das bedeutet, dass Benutzer die Eigenschaftswerte des Steuerelements ändern können.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert dieser Eigenschaft true ist, sind die folgenden Bedingungen wirksam:
+Wenn der Wert dieser Eigenschaft True ist, sind die folgenden Bedingungen wirksam:
 
 -   Der Benutzer kann das Kontextmenü nicht verwenden.
--   Die folgenden Symbolleisten Schaltflächen sind deaktiviert:
+-   Die folgenden Symbolleistenschaltflächen sind deaktiviert:
     -   Neuen Indikatorensatz
     -   Aktuellen Vorgang anzeigen
     -   Protokolldateidaten anzeigen
-    -   Hinzufügen
+    -   Add
     -   Löschen
     -   Leistungsindikatorliste einfügen
     -   Eigenschaften
 
-Beachten Sie, dass sich diese Eigenschaft nur auf die Fähigkeit des Benutzers auswirkt, Eigenschaftswerte über die Benutzeroberfläche zu ändern. es hindert Sie nicht daran, Eigenschaftswerte oder-Indikatoren Programm gesteuert zu ändern.
+Beachten Sie, dass diese Eigenschaft nur die Fähigkeit des Benutzers beeinflusst, Eigenschaftswerte über die Benutzeroberfläche zu ändern. Sie verhindert nicht, dass Sie Eigenschaftswerte oder Leistungsindikatoren programmgesteuert ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Beachten Sie, dass sich diese Eigenschaft nur auf die Fähigkeit des Benutzers a
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Beachten Sie, dass sich diese Eigenschaft nur auf die Fähigkeit des Benutzers a
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Schieberegler. Folie
-description: Mit dem Folie-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Vordergrundbild über das Hintergrundbild bewegt wird oder in einer statischen Position über das Hintergrundbild angezeigt wird.
+title: SLIDER.slide
+description: Das Slide-Attribut gibt einen Wert an oder ruft einen Wert ab, der angibt, ob das Vordergrundbild über das Hintergrundbild gleitet oder schrittweise an einer statischen Position über dem Hintergrundbild angezeigt wird.
 ms.assetid: dc68c2a0-d3fe-4984-9607-12703a27edbd
 keywords:
-- Schieberegler. Folien Fenster Media Player
+- SLIDER.slide-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b9f79b5016b323380c5a4d06c8af7ab5fb0b8a2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ec5d1a9480a171372ff5c90990d07bd583bd880570472b25af8d1ada945b31a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117933508"
 ---
-# <a name="sliderslide"></a>Schieberegler. Folie
+# <a name="sliderslide"></a>SLIDER.slide
 
-Mit dem **Folie** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Vordergrundbild über das Hintergrundbild bewegt wird oder in einer statischen Position über das Hintergrundbild angezeigt wird.
+Das **Slide-Attribut** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob das Vordergrundbild über das Hintergrundbild gleitet oder schrittweise an einer statischen Position über dem Hintergrundbild angezeigt wird.
 
 ``` syntax
         elementID.slide
@@ -29,22 +29,22 @@ Mit dem **Folie** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                                          |
 |-------|----------------------------------------------------------------------|
-| true  | Standard. Das Vordergrundbild bewegt sich über das Hintergrundbild.      |
-| false | Das Vordergrundbild wird direkt über das Hintergrundbild angezeigt. |
+| true  | Standard. Das Vordergrundbild wird über das Hintergrundbild geschiebet.      |
+| false | Das Vordergrundbild wird an Ort und Stelle über dem Hintergrundbild angezeigt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Schieberegler " **thumbimage** " mit der Maus bewegt wird und " **Folie** " auf "true" festgelegt ist, wird das Vordergrundbild so bewegt, als ob es vom Schieberegler abgerufen wird, um das Hintergrundbild abzudecken. Wenn **Folie** auf false festgelegt ist, wird das Vordergrundbild nicht verschoben, sondern direkt angezeigt, als ob der Schieberegler das Hintergrundbild aus dem Vordergrundbild verschiebt.
+Wenn der **ThumbImage-Schieberegler** mit  der Maus bewegt wird und die Folie auf TRUE festgelegt ist, wird das Vordergrundbild wie durch den Schieberegler gezogen, um das Hintergrundbild zu bedecken. Wenn **die** Folie auf FALSE festgelegt ist, wird das Vordergrundbild nicht bewegt, sondern an Ort und Stelle angezeigt, als würde der Schieberegler das Hintergrundbild vom Vordergrundbild verschieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Wenn der Schieberegler " **thumbimage** " mit der Maus bewegt wird und " **Folie
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -60,13 +60,13 @@ Wenn der Schieberegler " **thumbimage** " mit der Maus bewegt wird und " **Folie
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. BackgroundImage**](slider-backgroundimage.md)
+[**SLIDER.backgroundImage**](slider-backgroundimage.md)
 </dt> <dt>
 
-[**Slider. foregroundimage**](slider-foregroundimage.md)
+[**SLIDER.foregroundImage**](slider-foregroundimage.md)
 </dt> </dl>
 
  

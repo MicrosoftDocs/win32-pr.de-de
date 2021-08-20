@@ -1,6 +1,6 @@
 ---
 title: HttpRawServiceExample
-description: In diesem Beispiel wird gezeigt, wie der Diensthost verwendet wird, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
+description: In diesem Beispiel wird gezeigt, wie Sie den Diensthost verwenden, um UN-HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
 ms.assetid: fbe5ad9c-f3f4-40c2-86e0-03b945aab89f
 keywords:
 - HttpRawServiceExample Native-Web-Services
@@ -17,7 +17,7 @@ ms.locfileid: "117841527"
 ---
 # <a name="httprawserviceexample"></a>HttpRawServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Diensthost verwendet wird, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost verwenden, um UN-HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
 
 ## <a name="httprawservicecpp"></a>HttpRawService.cpp
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXLIST. columnidcp-Eigenschaft'
-title: JET_INDEXLIST. columnidcp (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_INDEXLIST.columnidCp-Eigenschaft.'
+title: JET_INDEXLIST.columnidCp-Eigenschaft
 TOCTitle: 'columnidCp property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXLIST.columnidCp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexlist.columnidcp(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 80afdce5014edf1678807afd40beff613ca9e4ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 173e0dad345ba5f9afd35168ba7f2cb13fda29fe135c6947070367705bc2e3e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117894731"
 ---
-# <a name="jet_indexlistcolumnidcp-property"></a>JET_INDEXLIST. columnidcp (Eigenschaft)
+# <a name="jet_indexlistcolumnidcp-property"></a>JET_INDEXLIST.columnidCp-Eigenschaft
 
-Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der die Codepage der indizierten Spalte gespeichert wird. Die Spalte ist vom Typ [Short](./jet-coltyp-enumeration.md).
+Ruft die columnid der Spalte in der temporären Tabelle ab, in der die Codepage der indizierten Spalte gespeichert wird. Die Spalte ist vom Typ [Short](./jet-coltyp-enumeration.md).
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_COLUMNID columnidCp { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXLIST-Klasse](./jet-indexlist-class.md)
 
-[Mitglieder JET_INDEXLIST](./jet-indexlist-members.md)
+[JET_INDEXLIST-Member](./jet-indexlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

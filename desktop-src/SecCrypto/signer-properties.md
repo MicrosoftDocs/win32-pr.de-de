@@ -1,27 +1,27 @@
 ---
-description: Das Signatur Geber Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das Signer-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 6CAC3769-E295-41ED-86D6-9C2BE54581DC
-title: Signatur Geber Eigenschaften
+title: Eigenschaften des Signierers
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 257dccbecca5eff27abf07d1b788c1937d285aa4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ae2b8a9d26016b81f198ca314de4ac205dac910d4c0a84c622777b6a67fd4dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117973414"
 ---
-# <a name="signer-properties"></a>Signatur Geber Eigenschaften
+# <a name="signer-properties"></a>Eigenschaften des Signierers
 
-Das [**Signatur**](signer.md) Geber Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**Signer-Objekt**](signer.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Authenticatedattributes-Eigenschaft**](signer-authenticatedattributes.md)
+-   [**AuthenticatedAttributes-Eigenschaft**](signer-authenticatedattributes.md)
 -   [**Certificate-Eigenschaft**](signer-certificate.md)
 -   [**Chain-Eigenschaft**](signer-chain.md)
 -   [**Load-Methode**](signer-load.md)
--   [**Options (Eigenschaft)**](signer-options.md)
+-   [**Options-Eigenschaft**](signer-options.md)
 
  
 

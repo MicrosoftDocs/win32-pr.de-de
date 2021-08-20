@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der jetabessionparameter-Funktion
-title: Jetabessionparameter-Funktion
+description: Weitere Informationen finden Sie unter JetSetSessionParameter-Funktion.
+title: JetSetSessionParameter-Funktion
 TOCTitle: JetSetSessionParameter Function
 ms:assetid: 11aecf42-22ef-4bea-a3d7-961a7bdc85aa
 ms:mtpsurl: https://msdn.microsoft.com/library/JJ835038(v=EXCHG.10)
@@ -19,19 +19,19 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 926ae0db2e47ce571f441ab5836c4ddbe6f8bcc9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5766a503fbac8a8abae51c6022fe91e9ecca0d72e28cbecbaeed597862765bf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117891018"
 ---
-# <a name="jetsetsessionparameter-function"></a>Jetabessionparameter-Funktion
+# <a name="jetsetsessionparameter-function"></a>JetSetSessionParameter-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **Jet** -Sitzungs Parameter-Funktion konfiguriert die Datenbank-Engine.
+Die **JetSetSessionParameter-Funktion** konfiguriert die Datenbank-Engine.
 
 ``` c++
 JET_ERR JET_API JetSetSessionParameter (
@@ -44,27 +44,27 @@ JET_ERR JET_API JetSetSessionParameter (
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Gibt die Sitzung an, die für diesen-Befehl verwendet werden soll.
+Gibt die Sitzung an, die für diesen Aufruf verwendet werden soll.
 
-Wenn angegeben, wird die angegebene-Instanz ignoriert, und die-Instanz, die der Sitzung zugeordnet ist, wird verwendet.
+Wenn angegeben, wird die angegebene -Instanz ignoriert, und die der Sitzung zugeordnete -Instanz wird verwendet.
 
-*sesparamid*
+*sespartrenn*
 
-Die ID des festzulegenden Sitzungs Parameters.
+Die ID des sitzungsparameters, der festgelegt werden soll.
 
 *pvParam*
 
-Die in diesem Sitzungs Parameter festzulegenden Daten.
+Die daten, die in diesem Sitzungsparameter festgelegt werden.
 
-*cbparam*
+*cbParam*
 
 Die Größe der bereitgestellten Daten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der in der folgenden Tabelle aufgelisteten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Fehler Behandlungsparameter](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der in der folgenden Tabelle aufgeführten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -84,72 +84,72 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der in der f
 </tr>
 <tr class="even">
 <td><p>JET_errAlreadyInitialized</p></td>
-<td><p>Die Instanz wurde mithilfe eines Aufrufens der <a href="gg294068(v=exchg.10).md">jetinit</a> -Funktion initialisiert, und dieser Vorgang kann nicht als Ergebnis ausgeführt werden. Dies kann vorkommen, wenn versucht wird, einen Systemparameter zu konfigurieren, nachdem eine Änderung des Parameter Werts nicht mehr den Status der Datenbank-Engine beeinflussen kann.</p></td>
+<td><p>Die -Instanz wurde mithilfe eines Aufrufs der <a href="gg294068(v=exchg.10).md">JetInit-Funktion</a> initialisiert, und dieser Vorgang kann daher nicht ausgeführt werden. Dies kann passieren, wenn versucht wird, einen Systemparameter zu konfigurieren, nachdem eine Änderung des Parameterwerts den Zustand der Datenbank-Engine nicht mehr beeinflussen kann.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens der <a href="gg269240(v=exchg.10).md">jetstopservice</a> -Funktion beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs der <a href="gg269240(v=exchg.10).md">JetStopService-Funktion beendet</a> wurden.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errIndexTuplesInvalidLimits</p></td>
-<td><p>Die angegebenen tupelindexparameter waren unzulässig. Dieser Fehler wird nur zurückgegeben, wenn der <em>JET_paramIndexTuplesLengthMin</em>-, <em>JET_paramIndexTuplesLengthMax</em>-oder <em>JET_paramIndexTuplesToIndexMax</em> -Parameter auf einen unzulässigen Wert festgelegt ist. Weitere Informationen zu diesen Parametern finden Sie unter <a href="gg294119(v=exchg.10).md">index Parameter</a>.</p></td>
+<td><p>Die angegebenen Tupelindexparameter waren ungültig. Dieser Fehler wird nur zurückgegeben, wenn <em>JET_paramIndexTuplesLengthMin</em>, <em></em> <em>JET_paramIndexTuplesLengthMax</em>oder JET_paramIndexTuplesToIndexMax parameter auf einen ungültigen Wert festgelegt ist. Informationen zu diesen Parametern finden Sie unter <a href="gg294119(v=exchg.10).md">Indexparameter</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInitInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, initialisiert wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz initialisiert wird.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann vorkommen, wenn Folgendes geschieht:</p>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann passieren, wenn Folgendes auftritt:</p>
 <ul>
 <li><p>Die angegebene Systemparameter-ID ist ungültig oder wird nicht unterstützt.</p></li>
-<li><p>Es wurde versucht, einen Systemparameter mit Zeichen folgen Wert mit einer Zeichenfolge festzulegen, deren Länge außerhalb des gültigen Bereichs für den Parameter lag.</p></li>
-<li><p>Es wurde versucht, einen Systemparameter mit Zeichen folgen Wert mit einem Dateipfad festzulegen, bei dem die Länge der absoluten Pfad Darstellung außerhalb des gültigen Bereichs für diesen Parameter liegt.</p></li>
-<li><p>Es wurde versucht, einen ganzzahligen Wert mit einem ganzzahligen Wert festzulegen, der außerhalb des gültigen Bereichs für den Parameter liegt.</p></li>
-<li><p>Es wurde versucht, JET_paramUnicodeIndexDefault mit einem NULL- <a href="gg294097(v=exchg.10).md">JET_UNICODEINDEX</a> Zeiger, einer ungültigen LCID oder einem nicht unterstützten Satz von <strong>LCMapString</strong> -Flags festzulegen.</p></li>
+<li><p>Es wurde versucht, einen Systemparameter mit Zeichenfolgenwert mit einer Zeichenfolge zu setzen, deren Länge außerhalb des rechtlichen Bereichs für den Parameter lag.</p></li>
+<li><p>Es wurde versucht, einen Systemparameter mit Zeichenfolgenwert mit einem Dateipfad zu setzen, bei dem die Länge seiner absoluten Pfaddarstellung außerhalb des rechtlichen Bereichs für diesen Parameter lag.</p></li>
+<li><p>Es wurde versucht, einen Ganzzahlwert-Systemparameter mit einer ganzen Zahl zu setzen, die außerhalb des rechtlichen Bereichs für den Parameter liegt.</p></li>
+<li><p>Es wurde versucht, die JET_paramUnicodeIndexDefault null <a href="gg294097(v=exchg.10).md"></a> JET_UNICODEINDEX, eine ungültige LCID oder einen nicht unterstützten Satz <strong>von LCMapString-Flags</strong> zu setzen.</p></li>
 <li><p>Der angegebene Systemparameter kann nicht festgelegt werden, da er schreibgeschützt ist.</p></li>
-<li><p>Es wurde versucht, einen Systemparameter festzulegen, nachdem die <a href="gg294068(v=exchg.10).md">jetinit</a> -Funktion aufgerufen wurde, die Datenbank-Engine sich im Einzel Instanz-Modus befindet und keine Sitzung angegeben wurde.</p></li>
-<li><p>Der angegebene Systemparameter ist nur global und es wurde versucht, einen instanzspezifischen Wert für diesen Systemparameter festzulegen.</p></li>
-<li><p>Der angegebene Systemparameter ist nur pro Instanz und es wurde versucht, den globalen Wert für diesen Systemparameter festzulegen.</p></li>
+<li><p>Es wurde versucht, einen Systemparameter festzulegen, nachdem die <a href="gg294068(v=exchg.10).md">JetInit-Funktion</a> aufgerufen wurde, sich die Datenbank-Engine im Einzelinstanzmodus befindet und keine Sitzung angegeben wurde.</p></li>
+<li><p>Der angegebene Systemparameter ist nur global, und es wurde versucht, einen instanzspezifischen Wert für diesen Systemparameter festzulegen.</p></li>
+<li><p>Der angegebene Systemparameter gilt nur pro Instanz, und es wurde versucht, den globalen Wert für diesen Systemparameter festzulegen.</p></li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidPath</p></td>
-<td><p>Der angegebene Dateisystempfad war ungültig. Dieser Fehler wird möglicherweise nur von <strong>jetdeptessionparameter</strong> zurückgegeben, wenn Systemparameter festgelegt werden, die Dateisystem Pfade darstellen. Beispielsweise kann der <em>JET_paramSystemPath</em> -Parameter diesen Fehler zurückgeben. Weitere Informationen zu diesem Parameter finden Sie unter <a href="gg269235(v=exchg.10).md">Transaktionsprotokoll Parameter</a>.</p></td>
+<td><p>Der angegebene Dateisystempfad war ungültig. Dieser Fehler kann nur von <strong>JetSetSessionParameter zurückgegeben werden,</strong> wenn Systemparameter festgelegt werden, die Dateisystempfade darstellen. Beispielsweise kann der <em>JET_paramSystemPath</em> Parameter diesen Fehler zurückgeben. Informationen zu diesem Parameter finden Sie unter <a href="gg269235(v=exchg.10).md">Transaktionsprotokollparameter.</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidSesid</p></td>
-<td><p>Das Sitzungs Handle ist ungültig oder verweist auf eine geschlossene Sitzung.</p>
-<p>Dieser Fehler wird unter allen Umständen nicht zurückgegeben. Handles werden nur auf Grundlage der bestmöglichen Leistung überprüft.</p></td>
+<td><p>Das Sitzungshandy ist ungültig oder verweist auf eine geschlossene Sitzung.</p>
+<p>Dieser Fehler wird nicht unter allen Umständen zurückgegeben. Handles werden nur nach bestem Aufwand überprüft.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidInstance</p></td>
-<td><p>Der Instanzhandle ist ungültig oder verweist auf eine Instanz, die heruntergefahren wurde.</p>
-<p>Dieser Fehler wird unter allen Umständen nicht zurückgegeben. Handles werden nur auf Grundlage der bestmöglichen Leistung überprüft.</p></td>
+<td><p>Das Instanzhandy ist ungültig oder verweist auf eine heruntergefahrene Instanz.</p>
+<p>Dieser Fehler wird nicht unter allen Umständen zurückgegeben. Handles werden nur nach bestem Aufwand überprüft.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg wird der Systemparameter auf den bereitgestellten Wert festgelegt.
+Bei Erfolg wird der Systemparameter auf den angegebenen Wert festgelegt.
 
-Bei einem Fehler bleibt der Wert des System Parameters unverändert.
+Bei einem Fehler bleibt der Wert des Systemparameters unverändert.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -169,14 +169,14 @@ Bei einem Fehler bleibt der Wert des System Parameters unverändert.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -189,7 +189,7 @@ Bei einem Fehler bleibt der Wert des System Parameters unverändert.
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
-[Jetgetsystemparameter](./jetgetsystemparameter-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
+[JetGetSystemParameter](./jetgetsystemparameter-function.md)  
 [JetInit](./jetinit-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

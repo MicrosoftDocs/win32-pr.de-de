@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Instanzkonstruktor (String, String, termgrbit)'
-title: Instanzkonstruktor (String, String, termgrbit)
+description: 'Weitere Informationen zu: Instanzkonstruktor (String, String, TermGrbit)'
+title: Instanzkonstruktor (String, String, TermGrbit)
 TOCTitle: Instance constructor (String, String, TermGrbit)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Instance.#ctor(System.String,System.String,Microsoft.Isam.Esent.Interop.TermGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instance.instance(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b9cf90f9678db1074594c7772eb67d895a8a5b8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c341e13b35709fca7126fe346c2aad64d7ac15b96551716ad04a4fcded08981
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117895851"
 ---
-# <a name="instance-constructor-string-string-termgrbit"></a>Instanzkonstruktor (String, String, termgrbit)
+# <a name="instance-constructor-string-string-termgrbit"></a>Instanzkonstruktor (String, String, TermGrbit)
 
-Initialisiert eine neue Instanz der Instanzklasse. Die zugrunde liegende JET_INSTANCE ist zugeordnet, aber nicht initialisiert.
+Initialisiert eine neue Instanz der Instanzklasse. Die zugrunde liegende JET_INSTANCE zugeordnet, aber nicht initialisiert.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,32 +63,32 @@ public Instance(
 #### <a name="parameters"></a>Parameter
 
   - name  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Der Name der Instanz. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine gehostet, eindeutig sein.
+    Der Name der Instanz. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine hosten, eindeutig sein.
 
 <!-- end list -->
 
   - displayName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Ein Anzeige Name für die-Instanz. Diese wird in EventLog-Einträgen verwendet.
+    Ein Anzeigename für die Instanz. Dies wird in Eventlogeinträgen verwendet.
 
 <!-- end list -->
 
-  - termgrbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. termgrbit](./termgrbit-enumeration.md)  
+  - termGrbit  
+    Typ: [Microsoft.Isam.Esent.Interop.TermGrbit](./termgrbit-enumeration.md)  
     
-    Das termgrbit, das zur jetterm-Zeit verwendet werden soll.
+    Das TermGrbit, das zur JetTerm-Zeit verwendet werden soll.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Instanzklasse](./instance-class.md)
 
-[Instanzmember](./instance-members.md)
+[Instanzmitglieder](./instance-members.md)
 
 [Instanzüberladung](./instance-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

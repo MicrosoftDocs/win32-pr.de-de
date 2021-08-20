@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. oncounterselected-Ereignis
-description: Benachrichtigt Sie, wenn ein Counter ausgewählt wird.
+title: SystemMonitor.OnCounterSelected-Ereignis
+description: Benachrichtigt Sie, wenn ein Leistungsindikator ausgewählt ist.
 ms.assetid: 788a95a7-47ec-41f9-bf46-324ad3cc8a4e
 keywords:
-- Oncounterselected-Ereignis (Sysmon)
-- Oncounterselected-Ereignis (Sysmon), Systemmonitor-Klasse
-- Systemmonitor-Klasse "sysmon", oncounterselected-Ereignis
+- OnCounterSelected-Ereignis SysMon
+- OnCounterSelected-Ereignis SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , OnCounterSelected-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0174ab2f896a27e44df592ec28b7cb12a03198f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9e5e5402eb123c5edd44a5616b6973940ba065e2b0c8c2bfa63e7d151ae30124
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117957247"
 ---
-# <a name="systemmonitoroncounterselected-event"></a>Systemmonitor. oncounterselected-Ereignis
+# <a name="systemmonitoroncounterselected-event"></a>SystemMonitor.OnCounterSelected-Ereignis
 
-Benachrichtigt Sie, wenn ein Counter ausgewählt wird.
+Benachrichtigt Sie, wenn ein Leistungsindikator ausgewählt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ SystemMonitor.OnCounterSelected( _
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Index des ausgewählten Indikators im [**indikatorensammlungs Objekt**](counters.md) .
+Index des ausgewählten Indikators im [**Counters-Auflistungsobjekt.**](counters.md)
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Index des ausgewählten Indikators im [**indikatorensammlungs Objekt**](counters
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie können dieses Ereignis empfangen, wenn
 
--   Sie legen " [**count Item. Selected**](counteritem-selected.md) " auf "true" fest.
--   Der Benutzer wählt einen gegen Wert in der Legende aus.
--   Der Benutzer doppelklickt auf einen Gegenstand in der Legende.
+-   Legen Sie [**CounterItem.Selected auf**](counteritem-selected.md) TRUE fest.
+-   Der Benutzer wählt einen Zähler in der Legende aus.
+-   Der Benutzer doppelklickt in der Legende auf einen Zähler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Sie können dieses Ereignis empfangen, wenn
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
@@ -77,10 +77,10 @@ Sie können dieses Ereignis empfangen, wenn
 
 <dl> <dt>
 
-[**Systemmonitor. oncounteradded**](systemmonitor-oncounteradded.md)
+[**SystemMonitor.OnCounterAdded**](systemmonitor-oncounteradded.md)
 </dt> <dt>
 
-[**Systemmonitor. oncounterdeleted**](-systemmonitor-oncounterdeleted.md)
+[**SystemMonitor.OnCounterDeleted**](-systemmonitor-oncounterdeleted.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie unter JET_COLUMNDEF Methoden.
-title: JET_COLUMNDEF Methoden
+description: 'Weitere Informationen zu: JET_COLUMNDEF-Methoden'
+title: JET_COLUMNDEF-Methoden
 TOCTitle: JET_COLUMNDEF methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columndef_methods(v=EXCHG.10)
@@ -14,12 +14,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118075988"
 ---
-# <a name="jet_columndef-methods"></a>JET_COLUMNDEF Methoden
+# <a name="jet_columndef-methods"></a>JET_COLUMNDEF-Methoden
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_COLUMNDEF](./jet-columndef-class.md) macht die folgenden Member verfügbar.
+Der [JET_COLUMNDEF-Typ](./jet-columndef-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -28,7 +28,7 @@ Der [JET_COLUMNDEF](./jet-columndef-class.md) macht die folgenden Member verfüg
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -70,7 +70,7 @@ Der [JET_COLUMNDEF](./jet-columndef-class.md) macht die folgenden Member verfüg
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335039(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die <a href="dn335038(v=exchg.10).md">aktuelle</a>JET_COLUMNDEF. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die aktuelle <a href="dn335038(v=exchg.10).md">JET_COLUMNDEF</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -78,7 +78,7 @@ Der [JET_COLUMNDEF](./jet-columndef-class.md) macht die folgenden Member verfüg
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

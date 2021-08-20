@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OSSNAPID. Nil-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_OSSNAPID. Nil-Eigenschaft'
 title: JET_OSSNAPID. Nil-Eigenschaft
 TOCTitle: 'Nil property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_OSSNAPID.Nil
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b0a7af204495d08d3ffc138b8e5b7e96ace4a9ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 922ae1f3d9221384456a1e4c3167614c3df940436006670932fa955d097a63e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117893617"
 ---
 # <a name="jet_ossnapidnil-property"></a>JET_OSSNAPID. Nil-Eigenschaft
 
-Ruft eine NULL-JET_OSSNAPID ab.
+Ruft eine NULL-JET_OSSNAPID.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ public static JET_OSSNAPID Nil { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_OSSNAPID Struktur](./jet-ossnapid-structure.md)
+[JET_OSSNAPID-Struktur](./jet-ossnapid-structure.md)
 
-[Mitglieder JET_OSSNAPID](./jet-ossnapid-members.md)
+[JET_OSSNAPID Member](./jet-ossnapid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

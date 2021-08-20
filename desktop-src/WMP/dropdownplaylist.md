@@ -1,9 +1,9 @@
 ---
-title: Dropdownwiedergabe
-description: Dies ist ein vordefiniertes Wiedergabelisten Element mit den folgenden Standardwerten. | Dropdownwiedergabe
+title: DROPDOWNLISTE
+description: Dies ist ein vordefiniertes PLAYLIST-Element mit den folgenden Standardwerten. | DROPDOWNLISTE
 ms.assetid: 5ac2ed28-dc48-4ced-9426-a0681e089c58
 keywords:
-- Dropdownwiedergabe-Fenster Media Player
+- DROPDOWNPLAYLIST Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7d1e04a580f8de6b23d5ff1941b0000f418b52a8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8c192160d319567cd38031ddf3085ed55186d42cd997d44ffc352e6ef5c8a839
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935748"
 ---
-# <a name="dropdownplaylist"></a>Dropdownwiedergabe
+# <a name="dropdownplaylist"></a>DROPDOWNLISTE
 
-Dies ist ein vordefiniertes **Wiedergabe** Listenelement mit den folgenden Standardwerten.
+Dies ist ein vordefiniertes **PLAYLIST-Element** mit den folgenden Standardwerten.
 
 ``` syntax
 playlistItemsVisible="false"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird eine einfache Dropdown **Liste** ohne angezeigte Elemente erstellt. Alle Eigenschaften dieser **Wiedergabeliste** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird eine einfache **Dropdownliste playlist** erstellt, ohne dass Elemente angezeigt werden. Alle Eigenschaften dieser **PLAYLIST** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Dadurch wird eine einfache Dropdown **Liste** ohne angezeigte Elemente erstellt.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
@@ -46,7 +46,7 @@ Dadurch wird eine einfache Dropdown **Liste** ohne angezeigte Elemente erstellt.
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

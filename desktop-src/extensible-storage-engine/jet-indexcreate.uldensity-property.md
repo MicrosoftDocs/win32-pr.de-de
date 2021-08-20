@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_INDEXCREATE. uldensity-Eigenschaft.
-title: JET_INDEXCREATE. uldensity (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_INDEXCREATE.ulDensity-Eigenschaft.'
+title: JET_INDEXCREATE.ulDensity-Eigenschaft
 TOCTitle: 'ulDensity property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXCREATE.ulDensity
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexcreate.uldensity(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: af82a2e18d08e134750e9fbfde82091f216bcc93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b9dc54ecf319c3d41dc85b49f4788a593d446e766eeeeb1e158957f9b9f39ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118075033"
 ---
-# <a name="jet_indexcreateuldensity-property"></a>JET_INDEXCREATE. uldensity (Eigenschaft)
+# <a name="jet_indexcreateuldensity-property"></a>JET_INDEXCREATE.ulDensity-Eigenschaft
 
-Ruft die Dichte des Indexes ab oder legt Sie fest.
+Ruft die Dichte des Indexes ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int ulDensity { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXCREATE-Klasse](./jet-indexcreate-class.md)
 
-[Mitglieder JET_INDEXCREATE](./jet-indexcreate-members.md)
+[JET_INDEXCREATE Member](./jet-indexcreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

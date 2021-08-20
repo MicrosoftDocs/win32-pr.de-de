@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_OSSNAPID-Eigenschaften'
+description: Weitere Informationen zu JET_OSSNAPID Eigenschaften
 title: JET_OSSNAPID Eigenschaften
 TOCTitle: JET_OSSNAPID properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_OSSNAPID
@@ -28,7 +28,7 @@ Der [JET_OSSNAPID-Typ](./jet-ossnapid-structure.md) macht die folgenden Member v
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -43,7 +43,7 @@ Der [JET_OSSNAPID-Typ](./jet-ossnapid-structure.md) macht die folgenden Member v
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

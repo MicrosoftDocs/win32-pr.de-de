@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: Windows8Api. JetCreateIndex4-Methode'
-title: Windows8Api. JetCreateIndex4-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: Windows8Api.JetCreateIndex4-Methode'
+title: Windows8Api.JetCreateIndex4-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'JetCreateIndex4 method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.JetCreateIndex4(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_INDEXCREATE[],System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.jetcreateindex4(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8cc06fa47b8463c6c3b731a7e0e06b7ba13ae687
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e69e9937167262d87fee788d38191d23d32b9bdcb83ce587aac3f286c2aee260
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117700857"
 ---
-# <a name="windows8apijetcreateindex4-method"></a>Windows8Api. JetCreateIndex4-Methode
+# <a name="windows8apijetcreateindex4-method"></a>Windows8Api.JetCreateIndex4-Methode
 
 Erstellt Indizes für Daten in einer ESE-Datenbank.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,42 +67,42 @@ public static void JetCreateIndex4(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Die Tabelle, für die der Index erstellt werden soll.
 
 <!-- end list -->
 
-  - indexerererstellung  
-    Sorte \[\]  
+  - indexcreates  
+    Typ: \[\]  
     
-    Array von-Objekten, die die zu erstellenden Indizes beschreiben.
+    Array von -Objekten, die die zu erstellenden Indizes beschreiben.
 
 <!-- end list -->
 
-  - numindexererererstellung  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numIndexCreates  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Anzahl der Index Beschreibungs Objekte.
+    Anzahl der Indexbeschreibungsobjekte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie mehrere Indizes erstellen (d. h. mit numindexerzes größer als 1), muss diese Methode außerhalb von Transaktionen und mit exklusivem Zugriff auf die Tabelle aufgerufen werden. Der von "API. jetkreatetable" zurückgegebene JET_TABLEID hat einen exlusiven Zugriff, oder die Tabelle kann für exklusiven Zugriff geöffnet werden, indem [denyread](./opentablegrbit-enumeration.md) an [jetopentable (JET_SESID, JET_DBID, String, \[ \] , Int32, opentablegrbit, JET_TABLEID)](./api.jetopentable-method.md)übergeben wird.
+Beim Erstellen mehrerer Indizes (d. h. mit numIndexCreates größer als 1) MUSS diese Methode außerhalb von Transaktionen und mit exklusivem Zugriff auf die Tabelle aufgerufen werden. Die von "Api.JetCreateTable" zurückgegebenen JET_TABLEID verfügen über einen exklusiven Zugriff, oder die Tabelle kann für exklusiven Zugriff geöffnet werden, indem [DenyRead](./opentablegrbit-enumeration.md) an [JetOpenTable(JET_SESID, JET_DBID, String, \[ \] , Int32, OpenTableGrbit, JET_TABLEID)](./api.jetopentable-method.md)übergeben wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

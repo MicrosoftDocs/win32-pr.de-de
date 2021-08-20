@@ -1,8 +1,8 @@
 ---
-description: Die Klasse smtpeer-Consumer sendet eine e-Mail-Nachricht mit Simple Mail Transfer Protocol (SMTP), wenn ein Ereignis an Sie übermittelt wird.
+description: Die SMTPEventConsumer-Klasse sendet eine E-Mail mithilfe Simple Mail Transfer Protocol (SMTP) jedes Mal, wenn ein Ereignis an sie übermittelt wird.
 ms.assetid: 42178360-9e22-4cd1-9b72-5f6b0d7e6c9c
 ms.tgt_platform: multiple
-title: Smtpventconsumer-Klasse
+title: SMTPEventConsumer-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -27,20 +27,20 @@ api_type:
 - DllExport
 api_location:
 - Smtpcons.dll
-ms.openlocfilehash: 76c7fad3b5cb4bbf6c3c0c03689607ba64fbcc67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f216647f7ac6796c4b94157a261e535d9e2eb9cd98e02fd1f9cec5ac3dee95d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117922941"
 ---
-# <a name="smtpeventconsumer-class"></a>Smtpventconsumer-Klasse
+# <a name="smtpeventconsumer-class"></a>SMTPEventConsumer-Klasse
 
-Die Klasse **smtpeer-Consumer** sendet eine e-Mail-Nachricht mit Simple Mail Transfer Protocol (SMTP), wenn ein Ereignis an Sie übermittelt wird. Ein SMTP-Server muss im Netzwerk vorhanden sein. Die Klasse smtpventconsumer unterstützt keine Anlagen. Die Codierung der e-Mail-Nachricht muss "US-ASCII" lauten.
+Die **SMTPEventConsumer-Klasse** sendet eine E-Mail mithilfe Simple Mail Transfer Protocol (SMTP) jedes Mal, wenn ein Ereignis an sie übermittelt wird. Im Netzwerk muss ein SMTP-Server vorhanden sein. Die SMTPEventConsumer-Klasse unterstützt keine Anlagen. Die Codierung der E-Mail-Nachricht muss US-ASCII sein.
 
-Diese Klasse ist einer der standardereignisconsumer, die von WMI bereitstellt werden. Ein Beispiel für die Verwendung von **smtpeer-Consumer** , um einen Consumer zu erstellen, finden Sie unter [Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md). Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Diese Klasse ist einer der Standardereignis-Consumers, die WMI bietet. Ein Beispiel für die Verwendung von **SMTPEventConsumer** zum Erstellen eines Consumers finden Sie unter Senden von [E-Mails basierend auf einem Ereignis.](sending-e-mail-based-on-an-event.md) Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,17 +66,17 @@ class SMTPEventConsumer : __EventConsumer
 
 ## <a name="members"></a>Member
 
-Die Klasse **smtpventconsumer** verfügt über diese Typen von Membern:
+Die **SMTPEventConsumer-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse **smtpventconsumer** verfügt über diese Eigenschaften.
+Die **SMTPEventConsumer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bccline**
+**BccLine**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -85,11 +85,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste von Adressen, getrennt durch ein Komma oder Semikolon, im Format einer standardmäßigen Zeichen folgen Vorlage, an die die Nachricht als Blind Kopie gesendet wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.
+Eine durch ein Komma oder Semikolon getrennte Liste von Adressen im Format einer Standardzeichenfolgenvorlage, an die die Nachricht als blinde Kopie gesendet wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieses Themas.
 
 </dd> <dt>
 
-**Ccline**
+**CcLine**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -98,26 +98,26 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste von Adressen, getrennt durch ein Komma oder Semikolon, im Format einer standardmäßigen Zeichen folgen Vorlage, an die die Nachricht als Kopie der Nachricht gesendet wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.
+Eine Liste von Adressen, getrennt durch ein Komma oder Semikolon, im Format einer Standardzeichenfolgenvorlage, an die die Nachricht als Co-Kopie gesendet wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieses Themas.
 
 </dd> <dt>
 
-**"Kreatorsid"**
+**CreatorSID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Sicherheits-ID (SID), die den Benutzer, der einen Filter erstellt, eindeutig identifiziert. WMI speichert die SID des Benutzers, der eine Instanz von [**\_ \_ eventconsumer**](--eventconsumer.md) oder die Administrator-SID erstellt, je nach Betriebssystem. Weitere Informationen finden Sie unter [Binden eines Ereignis Filters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md) und über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Sicherheits-ID (SID), die den Benutzer, der einen Filter erstellt, eindeutig identifiziert. WMI speichert je nach Betriebssystem die SID des Benutzers, der eine Instanz von [**\_ \_ EventConsumer**](--eventconsumer.md) oder die Administrator-SID erstellt. Weitere Informationen finden Sie unter [Binden eines Ereignisfilters](binding-an-event-filter-with-a-logical-consumer.md) mit einem logischen Consumer und Überwachen und Reagieren auf [Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
 
 </dd> <dt>
 
-**Fromline**
+**FromLine**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -126,20 +126,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aus Zeile einer e-Mail-Nachricht im Format einer Standard Zeichenfolgen-Vorlage. Wenn der Wert **null** ist, wird eine from-Zeile in der Form "Winmgmt@*MachineName*" erstellt.
+Aus der Zeile einer E-Mail im Format einer Standardzeichenfolgenvorlage. Wenn **NULL,** wird eine From-Zeile in Form von "WinMgmt@*MachineName"* erstellt.
 
 </dd> <dt>
 
-**Headerfields**
+**HeaderFields**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Header Feldern, die ohne Interpretation in eine e-Mail-Nachricht eingefügt werden.
+Array von Headerfeldern, die ohne Interpretation in eine E-Mail-Nachricht eingefügt werden.
 
 </dd> <dt>
 
@@ -152,16 +152,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computers, an den Windows-Verwaltungsinstrumentation (WMI) Ereignisse sendet.
+Name des Computers, an den die Windows Management Instrumentation (WMI) Ereignisse sendet.
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
 
 </dd> <dt>
 
 **MaximumQueueSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -169,7 +169,7 @@ Zugriffstyp: Schreibgeschützt
 
 Maximale Warteschlange für einen bestimmten Consumer in Bytes.
 
-Diese Eigenschaft wird von [**\_ \_ eventconsumer**](--eventconsumer.md)geerbt.
+Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
 
 </dd> <dt>
 
@@ -182,7 +182,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Standard mäßige Zeichen folgen Vorlage, die den Textkörper einer e-Mail-Nachricht enthält.
+Standardzeichenfolgenvorlage, die den Text einer E-Mail-Nachricht enthält.
 
 </dd> <dt>
 
@@ -198,11 +198,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](key-qualifier.md)
 </dt> </dl>
 
-Eindeutiger Bezeichner für den Ereignisconsumer.
+Eindeutiger Bezeichner für den Ereignisverbraucher.
 
 </dd> <dt>
 
-**Replytoline**
+**ReplyToLine**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -211,7 +211,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Antwort an Zeile einer e-Mail-Nachricht im Format einer Standard Zeichenfolgen-Vorlage. Wenn der Wert **null** ist, wird keine Antwort an Zeile verwendet.
+Antwortzeile einer E-Mail-Nachricht im Format einer Standardzeichenfolgenvorlage. Wenn **NULL,** wird keine Antwortzeile verwendet.
 
 </dd> <dt>
 
@@ -224,7 +224,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des SMTP-Servers, über den eine e-Mail gesendet wird. Zulässige Namen sind eine IP-Adresse oder ein DNS-oder NetBIOS-Name. Diese Eigenschaft darf nicht **null** sein.
+Name des SMTP-Servers, über den eine E-Mail gesendet wird. Zulässige Namen sind eine IP-Adresse oder ein DNS- oder NetBIOS-Name. Diese Eigenschaft darf nicht **NULL sein.**
 
 </dd> <dt>
 
@@ -237,11 +237,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Standard Zeichen folgen Vorlage, die den Betreff einer e-Mail-Nachricht enthält.
+Standardzeichenfolgenvorlage, die den Betreff einer E-Mail enthält.
 
 </dd> <dt>
 
-**Unter Toline**
+**ToLine**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -250,21 +250,21 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste von Adressen, getrennt durch ein Komma oder Semikolon, im Format einer standardmäßigen Zeichen folgen Vorlage, die angibt, wohin die Nachricht gesendet werden soll. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.
+Eine durch ein Komma oder Semikolon getrennte Liste von Adressen im Format einer Standardzeichenfolgenvorlage, die angibt, wohin die Nachricht gesendet werden soll. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieses Themas.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Klasse smtpeer-Consumer wird von der [**\_ \_ eventconsumer**](--eventconsumer.md) abstract-Klasse abgeleitet.
+Die SMTPEventConsumer-Klasse wird von der abstrakten [**\_ \_ EventConsumer-Klasse**](--eventconsumer.md) abgeleitet.
 
-Einige der Eigenschaften **Toline**, **ccline** oder **bccline** können **null** sein, Sie können jedoch nicht alle **null** sein.
+Einige der **ToLine-,** **CcLine-** oder **BccLine-Eigenschaften** können **NULL** sein, aber sie können nicht alle **NULL sein.**
 
-Der Empfang eines Fehlerrückgabe Codes vom SMTP-Dienst wird als Fehler betrachtet.
+Das Empfangen eines Fehler-Rückgabecodes vom SMTP-Dienst wird als Fehler betrachtet.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung von **smtpeer-Consumer** , um einen Consumer zu erstellen, finden Sie unter [Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md). Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Ein Beispiel für die Verwendung von **SMTPEventConsumer** zum Erstellen eines Consumers finden Sie unter Senden von [E-Mails basierend auf einem Ereignis.](sending-e-mail-based-on-an-event.md) Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -274,8 +274,8 @@ Ein Beispiel für die Verwendung von **smtpeer-Consumer** , um einen Consumer zu
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ Abonnement<br/>                                                           |
-| MOF<br/>                      | <dl> <dt>Smtpcons. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stammabonnement<br/>                                                           |
+| MOF<br/>                      | <dl> <dt>Smtpcons.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Smtpcons.dll</dt> </dl> |
 
 
@@ -284,19 +284,19 @@ Ein Beispiel für die Verwendung von **smtpeer-Consumer** , um einen Consumer zu
 
 <dl> <dt>
 
-[**\_\_Eventconsumer**](--eventconsumer.md)
+[**\_\_EventConsumer**](--eventconsumer.md)
 </dt> <dt>
 
-[Standard Consumer-Klassen](standard-consumer-classes.md)
+[Standard-Consumerklassen](standard-consumer-classes.md)
 </dt> <dt>
 
-[Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md)
+[Senden von E-Mails basierend auf einem Ereignis](sending-e-mail-based-on-an-event.md)
 </dt> <dt>
 
 [Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu allen Zeitpunkten](receiving-events-at-all-times.md)
+[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
 </dt> </dl>
 
  

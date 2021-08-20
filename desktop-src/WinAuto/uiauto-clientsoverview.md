@@ -1,55 +1,55 @@
 ---
-title: Übersicht über UI-Automatisierungs Clients
-description: In diesem Thema werden die Hauptaufgaben beschrieben, die bei der Implementierung einer Microsoft UI Automation-Client Anwendung beteiligt sind.
+title: Übersicht über Benutzeroberflächenautomatisierung Clients
+description: In diesem Thema werden die wichtigsten Aufgaben beschrieben, die bei der Implementierung einer Microsoft Benutzeroberflächenautomatisierung-Clientanwendung zu erledigen sind.
 ms.assetid: 536ccf03-2f52-49e5-a95f-ea56cf821779
 keywords:
-- UI-Automatisierung, Übersicht über Clients
-- Clients, Informationen zu
+- Benutzeroberflächenautomatisierung, Clients – Übersicht
+- Clients, Informationen
 - Clients, Elemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d4705d75a0a80c114e2b83f9625f827c75503b9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f37ff185e72c25f5c3b8eeba8cdd4ae9250391a867538ad3e4b6de4f8d1dce25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117928682"
 ---
-# <a name="ui-automation-clients-overview"></a>Übersicht über UI-Automatisierungs Clients
+# <a name="ui-automation-clients-overview"></a>Übersicht über Benutzeroberflächenautomatisierung Clients
 
-In diesem Thema werden die Hauptaufgaben beschrieben, die bei der Implementierung einer Microsoft UI Automation-Client Anwendung beteiligt sind.
+In diesem Thema werden die wichtigsten Aufgaben beschrieben, die bei der Implementierung einer Microsoft Benutzeroberflächenautomatisierung-Clientanwendung zu erledigen sind.
 
-Ein Benutzeroberflächenautomatisierungs-Client ist eine beliebige Anwendung, die mithilfe der Benutzeroberflächenautomatisierungs-API auf Informationen über Benutzeroberflächen Elemente zugreift oder Anwendungen mittels Programm gesteuerter Bearbeitung Ihrer Benutzeroberflächen Elemente steuert. Benutzeroberflächenautomatisierungs-Clients schließen Hilfstechnologieanwendungen ein, z. b. Sprachausgaben, die Informationen über Benutzeroberflächen Elemente abrufen und die Informationen auf eine Weise darstellen, die für Personen mit Behinderungen geeignet ist. Dazu zählen auch Anwendungen wie sprach Erkennungs Programme und Tools zum Testen von Software, die die Benutzeroberflächen Automatisierung anstelle der Maus und Tastatur zum "Steuern" anderer Anwendungen verwenden.
+Ein Benutzeroberflächenautomatisierung Client ist jede Anwendung, die die Benutzeroberflächenautomatisierung-API verwendet, um auf Informationen zu Benutzeroberflächenelementen zuzugreifen oder Anwendungen durch programmgesteuerte Bearbeitung ihrer Benutzeroberflächenelemente zu steuern. Benutzeroberflächenautomatisierung Clients enthalten Hilfstechnologieanwendungen wie Sprachausgaben, die Informationen zu Benutzeroberflächenelementen abrufen und die Informationen so darstellen, dass sie für Personen mit Behinderungen geeignet sind. Sie umfassen auch Anwendungen wie Spracherkennungsprogramme und Softwaretesttools, die Benutzeroberflächenautomatisierung anstelle der Maus und Tastatur verwenden, um andere Anwendungen zu "steuern".
 
-Aus Sicht der Benutzeroberflächen Automatisierung müssen die Hauptaufgaben, die eine Benutzeroberflächenautomatisierungs-Client Anwendung ausführen muss, Folgendes umfassen:
+Aus Benutzeroberflächenautomatisierung Sicht müssen die wichtigsten Aufgaben, die eine Benutzeroberflächenautomatisierung Clientanwendung ausführen muss, Folgendes umfassen:
 
-1.  **Rufen Sie eine Instanz des cuiautomation-Objekts ab.**
+1.  **Rufen Sie eine Instanz des CUIAutomation-Objekts ab.**
 
-    Informationen zu Benutzeroberflächen Elementen und zum Zugriff auf die Funktionalität des Benutzeroberflächen Elements werden von Benutzeroberflächenautomatisierungs-Anbietern für Clients verfügbar gemacht. Client Anwendungen funktionieren jedoch nicht direkt mit Anbietern. Stattdessen liegt ein Kerndienst zwischen dem Client und dem Anbieter. Wenn ein Client die Benutzeroberflächenautomatisierungs-API aufruft, ruft er tatsächlich den Benutzeroberflächenautomatisierungs-Kerndienst auf, der wiederum Aufrufe an die vom Anbieter implementierten Schnittstellen durchführt.
+    Informationen über Benutzeroberflächenelemente und den Zugriff auf benutzeroberflächenelementfunktionen werden clients von Benutzeroberflächenautomatisierung-Anbietern zur Verfügung gestellt. Clientanwendungen funktionieren jedoch nicht direkt mit Anbietern. Stattdessen liegt ein Kerndienst zwischen dem Client und dem Anbieter. Wenn ein Client die Benutzeroberflächenautomatisierung-API aufruft, ruft er tatsächlich den Benutzeroberflächenautomatisierung Kerndienst auf, der wiederum Aufrufe an die vom Anbieter implementierten Schnittstellen vornimmt.
 
-    Um Zugriff auf den Automation-Kerndienst zu erhalten, muss ein Client eine Instanz des [**cuiautomation**](/previous-versions/windows/desktop/legacy/ff384838(v=vs.85)) -Objekts erstellen und einen [**iuiautomation**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) -Schnittstellen Zeiger für das-Objekt abrufen. Der **iuiautomation** -Zeiger ist der Client Schlüssel für den Zugriff auf alle Benutzeroberflächenautomatisierungs-Funktionen, die für den Client verfügbar sind. Weitere Informationen finden Sie unter [Erstellen des cuiautomation-Objekts](uiauto-creatingcuiautomation.md).
+    Um Zugriff auf den Kerndienst Benutzeroberflächenautomatisierung zu erhalten, muss ein Client eine Instanz des [**CUIAutomation-Objekts**](/previous-versions/windows/desktop/legacy/ff384838(v=vs.85)) erstellen und einen [**IUIAutomation-Schnittstellenzeiger**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) für das Objekt abrufen. Der **IUIAutomation-Zeiger** ist der Schlüssel des Clients für den Zugriff auf alle Benutzeroberflächenautomatisierung Funktionen, die dem Client zur Verfügung stehen. Weitere Informationen finden Sie unter [Erstellen des CUIAutomation-Objekts.](uiauto-creatingcuiautomation.md)
 
-2.  **Abrufen von iuiautomationelement-Schnittstellen für UI-Elemente aus der Benutzeroberflächenautomatisierungs-Struktur.**
+2.  **Rufen Sie IUIAutomationElement-Schnittstellen für Benutzeroberflächenelemente aus der Benutzeroberflächenautomatisierung Struktur ab.**
 
-    Die Benutzeroberflächen Automatisierung macht einzelne Benutzeroberflächen Elemente als Objekte verfügbar, die die [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Schnittstelle implementieren. Informationen zu einem Element stehen den Clients über Eigenschaften zur Verfügung, die von der **iuiautomationelement** -Schnittstelle des Elements verfügbar gemacht werden, sowie über den Zugriff auf die Steuerelement Muster des Elements. Eigenschaften und Methoden, die von den Steuerelement Muster-Schnittstellen verfügbar gemacht werden, ermöglichen den Zugriff auf Steuerungs spezifische Informationen und Funktionen.
+    Benutzeroberflächenautomatisierung macht einzelne Benutzeroberflächenelemente als Objekte verfügbar, die die [**IUIAutomationElement-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) implementieren. Informationen zu einem Element stehen Clients über Eigenschaften zur Verfügung, die von der **IUIAutomationElement-Schnittstelle** des Elements verfügbar gemacht werden, sowie Zugriff auf die Steuerelementmuster des Elements. Eigenschaften und Methoden, die von den Steuerelementmusterschnittstellen verfügbar gemacht werden, bieten Zugriff auf steuerelementspezifische Informationen und Funktionen.
 
-    Die Elemente der Benutzeroberflächenautomatisierungs-Elemente werden für Clients in einer hierarchischen Struktur bereitgestellt, die als UI Automation Tree bezeichnet wird. Clients verwenden Methoden, die von der [**iuiautomation**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) -Schnittstelle verfügbar gemacht werden, um [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Schnittstellen für Benutzeroberflächen Elemente in der Struktur abzurufen, und um andere Schnittstellen abzurufen, mit denen die Struktur nach Elementen gesucht wird, die einem bestimmten Satz von Kriterien entsprechen Weitere Informationen finden Sie unter Abrufen von Benutzeroberflächenautomatisierungs- [Elementen](uiauto-obtainingelements.md).
+    Die Benutzeroberflächenautomatisierung Elementobjekte werden Clients in einer hierarchischen Struktur bereitgestellt, die als Benutzeroberflächenautomatisierung Struktur bezeichnet wird. Clients verwenden Methoden, die von der [**IUIAutomation-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomation) verfügbar gemacht werden, um [**IUIAutomationElement-Schnittstellen**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) für Benutzeroberflächenelemente in der Struktur abzurufen, und um andere Schnittstellen abzurufen, die verwendet werden, um die Struktur nach Elementen zu durchsuchen, die einem bestimmten Kriteriensatz entsprechen. Weitere Informationen finden Sie unter [Abrufen von Benutzeroberflächenautomatisierung Elementen.](uiauto-obtainingelements.md)
 
-    Beim Abrufen von Benutzeroberflächen Elementen können Clients die Systemleistung mithilfe der zwischen Speicherungs Funktionen der Benutzeroberflächen Automatisierung verbessern. Durch das Caching kann ein Client eine Reihe von Eigenschaften und Steuerelement Mustern angeben, die zusammen mit dem Element abgerufen werden sollen. Bei einem einzelnen prozessübergreifende-Befehl ruft die Benutzeroberflächen Automatisierung das-Element und die angegebenen Eigenschaften und Steuerelement Muster ab und speichert Sie dann im Cache. Ohne Caching ist ein separater interprozessaufrufbedarf erforderlich, um die einzelnen Eigenschaften oder Steuerelement Muster abzurufen. Weitere Informationen finden Sie unter zwischen [Speichern von Eigenschaften der Benutzeroberflächen Automatisierung und Steuerelement Mustern](uiauto-cachingforclients.md).
+    Beim Abrufen von Benutzeroberflächenelementen können Clients die Systemleistung mithilfe der Cachefunktionen von Benutzeroberflächenautomatisierung verbessern. Das Zwischenspeichern ermöglicht es einem Client, einen Satz von Eigenschaften und Steuerelementmustern anzugeben, die zusammen mit dem -Element abgerufen werden sollen. In einem einzelnen prozessübergreifenden Aufruf ruft Benutzeroberflächenautomatisierung das Element und die angegebenen Eigenschaften und Steuerelementmuster ab und speichert sie dann im Cache. Ohne Zwischenspeicherung ist ein separater prozessübergreifender Aufruf erforderlich, um jede Eigenschaft oder jedes Steuerelementmuster abzurufen. Weitere Informationen finden Sie unter [Zwischenspeichern Benutzeroberflächenautomatisierung Eigenschaften und Steuerelementmuster.](uiauto-cachingforclients.md)
 
-3.  **Abrufen der Eigenschaften von Benutzeroberflächen Elementen und Aufrufen der Funktionalität des Benutzeroberflächen Elements**
+3.  **Rufen Sie Eigenschaften von UI-Elementen ab, und rufen Sie die Funktionalität des UI-Elements auf.**
 
-    Clients verwenden die [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Schnittstelle, um die Eigenschaften und Steuerelement Muster eines Elements abzurufen. Die-Schnittstelle enthält zwei Versionen der einzelnen Eigenschaften Abruf Methoden – eine Version Ruft die-Eigenschaft aus dem Cache ab, der andere Ruft die-Eigenschaft vom Anbieter ab. Weitere Informationen finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+    Clients verwenden die [**IUIAutomationElement-Schnittstelle,**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) um die Eigenschaften und Steuerelementmuster eines Elements abzurufen. Die Schnittstelle enthält zwei Versionen jeder Eigenschaftsabrufmethode– eine Version ruft die Eigenschaft aus dem Cache ab, die andere ruft die Eigenschaft vom Anbieter ab. Weitere Informationen finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
-4.  **Reagieren auf Benutzeroberflächenautomatisierungs-Ereignisse.**
+4.  **Reagieren sie auf Benutzeroberflächenautomatisierung Ereignisse.**
 
-    Benutzeroberflächenautomatisierungs-Anbieter benachrichtigen Clients über Änderungen oder wichtige Vorkommen in der Benutzeroberfläche, indem Sie Ereignisse ausgeben. Clients müssen bestimmen, welche Ereignisse Sie benötigen, und dann Ereignis Behandlungs Schnittstellen implementieren und registrieren, um diese Ereignisse zu empfangen und zu verarbeiten. Weitere Informationen finden Sie unter [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](uiauto-eventsforclients.md).
+    Benutzeroberflächenautomatisierung-Anbieter benachrichtigen Clients über Änderungen oder wichtige Vorkommen in der Benutzeroberfläche, indem sie Ereignisse auslösen. Clients müssen bestimmen, welche Ereignisse sie benötigen, und dann Schnittstellen zur Ereignisbehandlung implementieren und registrieren, um diese Ereignisse zu empfangen und zu verarbeiten. Weitere Informationen finden Sie unter [Abonnieren von Benutzeroberflächenautomatisierung Ereignissen.](uiauto-eventsforclients.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
@@ -61,6 +61,6 @@ Aus Sicht der Benutzeroberflächen Automatisierung müssen die Hauptaufgaben, di
 [Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse](uiauto-eventsoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

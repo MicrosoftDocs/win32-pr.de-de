@@ -1,6 +1,6 @@
 ---
 title: Zusammengesetzter Effekt
-description: Verwenden Sie den zusammengesetzten Effekt, um 2 oder mehr Bilder zu kombinieren. Dieser Effekt verfügt über 13 verschiedene zusammengesetzte Modi.
+description: Verwenden Sie den zusammengesetzten Effekt, um 2 oder mehr Bilder zu kombinieren. Dieser Effekt hat 13 verschiedene zusammengesetzte Modi.
 ms.assetid: 60b878e9-1bc6-40d4-ade3-4bbd5c822c55
 keywords:
 - Zusammengesetzter Effekt
@@ -15,11 +15,11 @@ ms.locfileid: "117826590"
 ---
 # <a name="composite-effect"></a>Zusammengesetzter Effekt
 
-Verwenden Sie den zusammengesetzten Effekt, um 2 oder mehr Bilder zu kombinieren. Dieser Effekt verfügt über 13 verschiedene zusammengesetzte Modi. T
+Verwenden Sie den zusammengesetzten Effekt, um 2 oder mehr Bilder zu kombinieren. Dieser Effekt hat 13 verschiedene zusammengesetzte Modi. T
 
-Der zusammengesetzte Effekt akzeptiert 2 oder mehr Eingaben. Wenn Sie zwei Bilder angeben, ist das Ziel die erste Eingabe (Index 0) und die Quelle die zweite Eingabe (Index 1). Wenn Sie mehr als zwei Eingaben angeben, werden die Bilder zusammengesetzt, beginnend mit der ersten Eingabe und der zweiten usw.
+Der zusammengesetzte Effekt akzeptiert 2 oder mehr Eingaben. Wenn Sie 2 Bilder angeben, ist das Ziel die erste Eingabe (Index 0), und die Quelle ist die zweite Eingabe (Index 1). Wenn Sie mehr als zwei Eingaben angeben, werden die Bilder beginnend mit der ersten Eingabe und der zweiten Eingabe zusammengesetzt.
 
-Dieser Effekt implementiert alle Modi mithilfe der Mischungseinheit der Grafikverarbeitungseinheit (GRAPHICS Processing Unit, GPU).
+Dieser Effekt implementiert alle Modi mithilfe der Mischungseinheit der Grafikprozessor (Graphics Processing Unit, GPU).
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Composite.
 
@@ -32,11 +32,11 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1Composite.
 
 ## <a name="example-image"></a>Beispielbild
 
-Die Abbildung hier zeigt zwei abgerundete Rechtecke derselben Größe, die sich überlappen. Das blaue Rechteck ist die Quelle, und das rote Rechteck ist das Ziel. Die Bilder wurden mit dem Modus Quellüberlauf zusammengesetzt.
+Die Abbildung zeigt zwei abgerundete Rechtecke derselben Größe, die sich überlappen. Das blaue Rechteck ist die Quelle, und das rote Rechteck ist das Ziel. Die Bilder wurden mit dem Source Over-Modus zusammengesetzt.
 
-![Ein Beispielbild, das zwei abgerundete Rechtecke der gleichen Größe zeigt, die sich mithilfe des Quellmodus überlappen.](images/composite-over.png)
+![Ein Beispielbild, das zwei abgerundete Rechtecke derselben Größe zeigt, die sich mithilfe des Quellmodus überlappen.](images/composite-over.png)
 
-Im Folgenden finden Sie ein weiteres Beispiel für die Verwendung des Standardmodus.
+Hier ist ein weiteres Beispiel mit dem Standardmodus.
 
 
 
@@ -73,7 +73,7 @@ m_d2dContext->EndDraw();
 
 | Anzeigename und Indexenumeration                     | Typ und Standardwert                                                          | BESCHREIBUNG                   |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------|
-| Mode<br/> D2D1– \_ \_ ZUSAMMENGESETZTER \_ PROP-MODUS<br/> | ZUSAMMENGESETZTER \_ \_ D2D1-MODUS<br/> QUELLE DES \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ ÜBER<br/> | Der für den Effekt verwendete Modus. |
+| Mode<br/> ZUSAMMENGESETZTER \_ \_ D2D1-PROP-MODUS \_<br/> | ZUSAMMENGESETZTER \_ D2D1-MODUS \_<br/> QUELLE IM ZUSAMMENGESETZTEN MODUS D2D1 \_ \_ \_ \_ ÜBER<br/> | Der für den Effekt verwendete Modus. |
 
 
 
@@ -81,11 +81,11 @@ m_d2dContext->EndDraw();
 
 ## <a name="mode-types"></a>Modustypen
 
-Die folgende Tabelle zeigt die Modi dieses Effekts. Die in der Tabelle aufgeführten Gleichungen verwenden die folgenden Elemente:
+In der folgenden Tabelle sind die Modi dieses Effekts aufgeführt. Die in der Tabelle aufgeführten Gleichungen verwenden die folgenden Elemente:
 
 -   O = Ausgabe
 -   S = Quelle
--   SA = Source Alpha
+-   SA = Quell alpha
 -   D = Ziel
 -   DA = Ziel alpha
 
@@ -93,31 +93,31 @@ Die folgende Tabelle zeigt die Modi dieses Effekts. Die in der Tabelle aufgefüh
 
 | Enumeration                                  | Gleichung                          | Ausgabebitmapgröße                                                                                      |
 |----------------------------------------------|-----------------------------------|---------------------------------------------------------------------------------------------------------|
-| QUELLE DES \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ ÜBER          | O = S + (1 SA) \* D             | Union von Quell- und Zielbitmaps                                                                 |
-| D2D1 \_ COMPOSITE MODE DESTINATION OVER \_ (D2D1-ZIEL IM ZUSAMMENGESETZTEN MODUS \_ \_ ÜBER)     | O = (1 DA) \* S + D             | Union von Quell- und Zielbitmaps                                                                 |
-| QUELLE DES \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ IN            | O = DA \* S                       | Schnittmenge von Quell- und Zielbitmaps                                                          |
-| \_ \_ D2D1-ZIEL IM ZUSAMMENGESETZTEN MODUS \_ \_ IN       | O = SA \* D                       | Schnittmenge von Quell- und Zielbitmaps                                                          |
-| QUELLE IM \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ OUT           | O = (1 - DA) \* S                 | Bereich der Quellbitmap                                                                             |
-| D2D1 \_ COMPOSITE \_ MODE \_ DESTINATION \_ OUT      | O = (1 - SA) \* D                 | Bereich der Zielbitmap                                                                        |
-| QUELLE IM \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ ATOP          | O = DA \* S + (1 - SA) \* D       | Bereich der Zielbitmap                                                                        |
-| \_D2D1– \_ ZIEL IM ZUSAMMENGESETZTEN MODUS \_ \_ ATOP     | O = (1 - DA) \* S + SA \* D       | Bereich der Quellbitmap                                                                             |
+| QUELLE IM ZUSAMMENGESETZTEN MODUS D2D1 \_ \_ \_ \_ ÜBER          | O = S + (1 SA) \* D             | Union von Quell- und Zielbitmaps                                                                 |
+| ZIEL FÜR ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ \_ ÜBER     | O = (1 DA) \* S + D             | Union von Quell- und Zielbitmaps                                                                 |
+| QUELLE FÜR ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ \_ IN            | O = DA \* S                       | Schnittmenge von Quell- und Zielbitmaps                                                          |
+| ZIEL FÜR ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_ \_ IN       | O = SA \* D                       | Schnittmenge von Quell- und Zielbitmaps                                                          |
+| D2D1 \_ COMPOSITE \_ MODE \_ SOURCE \_ OUT           | O = (1 - DA) \* S                 | Bereich der Quellbitmap                                                                             |
+| D2D1 \_ COMPOSITE \_ MODE \_ DESTINATION \_ OUT      | O = (1 – SA) \* D                 | Bereich der Zielbitmap                                                                        |
+| D2D1 \_ COMPOSITE \_ MODE \_ SOURCE \_ ATOP          | O = DA \* S + (1 – SA) \* D       | Bereich der Zielbitmap                                                                        |
+| D2D1 \_ COMPOSITE \_ MODE \_ DESTINATION \_ ATOP     | O = (1 - DA) \* S + SA \* D       | Bereich der Quellbitmap                                                                             |
 | D2D1 \_ COMPOSITE \_ MODE \_ XOR                   | O = (1 - DA) \* S + (1 - SA) \* D | Union von Quell- und Zielbitmaps                                                                 |
-| D2D1 \_ COMPOSITE \_ MODE \_ PLUS                  | O = S + D                         | Union von Quell- und Zielbitmaps                                                                 |
-| QUELLKOPIE IM \_ ZUSAMMENGESETZTEN D2D1-MODUS \_ \_ \_          | O = S                             | Bereich der Quellbitmap                                                                             |
-| D2D1– \_ ZUSAMMENGESETZTER \_ MODUS – \_ \_ BEGRENZUNGSQUELLKOPIE \_ | O = S (nur dort, wo die Quelle vorhanden ist)  | Union von Quell- und Zielbitmaps. Das Ziel wird nicht überschrieben, wenn die Quelle nicht vorhanden ist. |
-| D2D1 \_ COMPOSITE \_ MODE \_ MASK \_ INVERT          | O = (1 D) \* S + (1 SA) \* D  | Union von Quell- und Zielbitmaps. Die Alphawerte sind unverändert.                                 |
+| ZUSAMMENGESETZTER D2D1-MODUS \_ \_ \_ PLUS                  | O = S + D                         | Union von Quell- und Zielbitmaps                                                                 |
+| QUELLKOPIE IM ZUSAMMENGESETZTEN MODUS D2D1 \_ \_ \_ \_          | O = S                             | Bereich der Quellbitmap                                                                             |
+| D2D1 \_ COMPOSITE \_ MODE \_ BOUNDED \_ SOURCE \_ COPY | O = S (nur wenn die Quelle vorhanden ist)  | Union von Quell- und Zielbitmaps. Das Ziel wird nicht überschrieben, wenn die Quelle nicht vorhanden ist. |
+| D2D1 \_ COMPOSITE \_ MODE \_ MASK \_ INVERT          | O = (1 D) \* S + (1 SA) \* D  | Union von Quell- und Zielbitmaps. Die Alphawerte bleiben unverändert.                                 |
 
 
 
  
 
-Die folgende Abbildung zeigt ein Beispiel für jeden der Modi mit Bildern mit einer Deckkraft von 1,0 oder 0,5.
+Die Abbildung hier zeigt ein Beispiel für jeden Der Modi mit Bildern, die eine Deckkraft von 1,0 oder 0,5 haben.
 
-![Ein Beispielbild der einzelnen Modi mit Durchlässigkeit, die auf 1,0 oder 0,5 festgelegt ist.](images/composite-types.png)
+![Ein Beispielbild der einzelnen Modi, bei dem die Deckkraft auf 1,0 oder 0,5 festgelegt ist.](images/composite-types.png)
 
 ## <a name="sample-code"></a>Beispielcode
 
-Laden Sie für ein Beispiel für diesen Effekt das [Direct2D-Beispiel für zusammengesetzte Effektmodi](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct2D%20composite%20effect%20modes%20sample)herunter.
+Ein Beispiel für diesen Effekt finden Sie im [Beispiel für zusammengesetzte Direct2D-Effektmodi.](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct2D%20composite%20effect%20modes%20sample)
 
 ## <a name="requirements"></a>Anforderungen
 
