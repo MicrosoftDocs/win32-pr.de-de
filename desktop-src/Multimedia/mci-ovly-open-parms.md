@@ -1,6 +1,6 @@
 ---
-title: MCI_OVLY_OPEN_PARMS-Struktur (MMSYSTEM. h)
-description: Die MCI- \_ Struktur mit OVLY- \_ Open-Parametern \_ enthält Informationen zum MCI- \_ Befehl "Öffnen" für Video Überlagerungs Geräte.
+title: MCI_OVLY_OPEN_PARMS-Struktur (Mmsystem.h)
+description: Die MCI \_ OVLY \_ OPEN \_ PARMS-Struktur enthält Informationen zum MCI \_ OPEN-Befehl für Videoüberlagerungsgeräte.
 ms.assetid: 1559ae40-4aa5-4dfc-b337-7b056c706b67
 keywords:
 - MCI_OVLY_OPEN_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e64b864b4b0366421828960504aff3f5a83836b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a2f13d0e9f8a7a4b9f5477459286bc56b9c98b1f9564e8432329681aeaef66d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138276"
 ---
-# <a name="mci_ovly_open_parms-structure"></a>MCI \_ OVLY- \_ Struktur zum Öffnen von \_ Parametern
+# <a name="mci_ovly_open_parms-structure"></a>MCI \_ OVLY \_ OPEN \_ PARMS-Struktur
 
-Die **MCI-Struktur mit \_ OVLY- \_ Open- \_ Parametern** enthält Informationen zum MCI-Befehl " [**\_ Öffnen**](mci-open.md) " für Video Überlagerungs Geräte.
+Die **MCI \_ OVLY \_ OPEN \_ PARMS-Struktur** enthält Informationen zum [**MCI \_ OPEN-Befehl**](mci-open.md) für Videoüberlagerungsgeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,60 +46,60 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**WDE viceid**
+**wDeviceID**
 </dt> <dd>
 
-An die Anwendung zurückgegebener Bezeichner.
+Bezeichner, der an die Anwendung zurückgegeben wird.
 
 </dd> <dt>
 
-**lpstraude vicetype**
+**lpstrDeviceType**
 </dt> <dd>
 
-Der Name oder Konstantenbezeichner des Gerätetyps. (Der Name des Geräts wird in der Regel aus der Registrierung oder SYSTEM.INI Datei abgerufen.) Wenn dieser Member eine Konstante ist, kann er einer der Werte sein, die in den [MCI-Gerätetypen](mci-device-types.md)aufgeführt sind.
+Name oder konstanter Bezeichner des Gerätetyps. (Der Name des Geräts wird in der Regel aus der Registrierung oder SYSTEM.INI Datei abgerufen.) Wenn dieser Member eine Konstante ist, kann es sich um einen der in [MCI-Gerätetypen](mci-device-types.md)aufgeführten Werte handelt.
 
 </dd> <dt>
 
-**lpstrelementname**
+**lpstrElementName**
 </dt> <dd>
 
-Der Name des Geräte Elements (in der Regel ein Pfad).
+Geräteelementname (in der Regel ein Pfad).
 
 </dd> <dt>
 
-**lpstraualias**
+**lpstrAlias**
 </dt> <dd>
 
 Optionaler Gerätealias.
 
 </dd> <dt>
 
-**dwstyle**
+**dwStyle**
 </dt> <dd>
 
-Fenster Stil.
+Fensterformat.
 
 </dd> <dt>
 
-**hwndParent**
+**hWndParent**
 </dt> <dd>
 
-Handle für das übergeordnete Fenster.
+Handle für übergeordnetes Fenster.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
-Wenn Sie die erweiterten Datenmember nicht verwenden, können Sie die [**MCI-Struktur \_ Open- \_ Parser**](mci-open-parms.md) anstelle von **MCI \_ OVLY \_ Open- \_ Parametern** verwenden.
+Sie können die [**MCI \_ OPEN \_ PARMS-Struktur**](mci-open-parms.md) anstelle von **MCI \_ OVLY \_ OPEN \_ PARMS** verwenden, wenn Sie die erweiterten Datenmember nicht verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,7 +109,7 @@ Wenn Sie die erweiterten Datenmember nicht verwenden, können Sie die [**MCI-Str
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h</dt> </dl> |
 
 
 
@@ -117,16 +117,16 @@ Wenn Sie die erweiterten Datenmember nicht verwenden, können Sie die [**MCI-Str
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ geöffnet**](mci-open.md)
+[**MCI \_ OPEN**](mci-open.md)
 </dt> <dt>
 
-[**geöffnete MCI- \_ \_ Parser**](mci-open-parms.md)
+[**MCI \_ OPEN \_ PARMS**](mci-open-parms.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

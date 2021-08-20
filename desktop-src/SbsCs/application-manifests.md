@@ -5,12 +5,12 @@ title: Anwendungsmanifeste
 ms.topic: article
 ms.date: 10/08/2020
 ms.custom: 19H1
-ms.openlocfilehash: 2fb7297310102134dfcacf0e5f0d907fbf3a3e0b
-ms.sourcegitcommit: 7eadd92b1da5eb4eab7d516a5a768e7f7fc02d4c
+ms.openlocfilehash: a1ced7ffb4052f418e989e907f26abb85c2c63db
+ms.sourcegitcommit: 25211012b002a7d1303e438277373d7faf958a68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2021
-ms.locfileid: "112230247"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122436708"
 ---
 # <a name="application-manifests"></a>Anwendungsmanifeste
 
@@ -22,7 +22,7 @@ Anwendungsmanifesten verfügen über die folgenden Elemente und Attribute.
 
 | Element                               | Attribute                | Erforderlich |
 |---------------------------------------|---------------------------|----------|
-| **Assembly**                          |                           | Ja      |
+| **Versammlung**                          |                           | Ja      |
 |                                       | **manifestVersion**       | Ja      |
 | **noInherit**                         |                           | Nein       |
 | **Assemblyidentity**                  |                           | Ja      |
@@ -56,7 +56,7 @@ Anwendungsmanifesten verfügen über die folgenden Elemente und Attribute.
 | **msix**                              |                           | Nein       |
 | **heapType**                          |                           | Nein       |
 
-## <a name="file-location"></a>Dateispeicherort
+## <a name="file-location"></a>Speicherort
 
 Anwendungsmanifeste sollten als Ressource in der EXE-Datei oder DLL der Anwendung enthalten sein.
 
@@ -88,7 +88,7 @@ Das **Assemblyelement** verfügt über die folgenden Attribute.
 
 
 
-| attribute           | Beschreibung                                           |
+| Attribut           | Beschreibung                                           |
 |---------------------|-------------------------------------------------------|
 | **manifestVersion** | Das **manifestVersion-Attribut** muss auf 1.0 festgelegt werden. |
 
@@ -97,7 +97,7 @@ Das **Assemblyelement** verfügt über die folgenden Attribute.
 
 ### <a name="noinherit"></a>noInherit
 
-Schließen Sie dieses Element in ein Anwendungsmanifest ein, um die [aktivierungskontexte,](activation-contexts.md) die aus dem Manifest generiert werden, mit dem Flag "no inherit" festzulegen. Wenn dieses Flag nicht in einem Aktivierungskontext festgelegt ist und der Aktivierungskontext aktiv ist, wird es von neuen Threads im gleichen Prozess, fenster, fensterprozeduren und [asynchronen Prozeduraufrufen](/windows/desktop/Sync/asynchronous-procedure-calls)geerbt. Durch Festlegen dieses Flags wird verhindert, dass das neue Objekt den aktiven Kontext erbt.
+Schließen Sie dieses Element in ein Anwendungsmanifest ein, um die [aktivierungskontexte,](activation-contexts.md) die aus dem Manifest generiert werden, mit dem Flag "No inherit" festzulegen. Wenn dieses Flag nicht in einem Aktivierungskontext festgelegt ist und der Aktivierungskontext aktiv ist, wird es von neuen Threads im gleichen Prozess, fenster, fensterprozeduren und [asynchronen Prozeduraufrufen](/windows/desktop/Sync/asynchronous-procedure-calls)geerbt. Durch Festlegen dieses Flags wird verhindert, dass das neue Objekt den aktiven Kontext erbt.
 
 Das **noInherit-Element** ist optional und wird in der Regel ausgelassen. Die meisten Assemblys funktionieren nicht ordnungsgemäß mithilfe eines Aktivierungskontexts ohne Erben, da die Assembly explizit entworfen werden muss, um die Weitergabe ihres eigenen Aktivierungskontexts zu verwalten. Die Verwendung des **noInherit-Elements** erfordert, dass alle abhängigen Assemblys, auf die vom Anwendungsmanifest verwiesen wird, über ein **noInherit-Element** im [Assemblymanifest verfügen.](assembly-manifests.md)
 
@@ -111,26 +111,26 @@ Als erstes Unterelement eines **Assemblyelements** beschreibt **assemblyIdentity
 
 Das **assemblyIdentity-Element** verfügt über die folgenden Attribute. Sie verfügt über keine Unterelemente.
 
-| attribute                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Attribut                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **type**                  | Gibt den Anwendungs- oder Assemblytyp an. Der Wert muss Win32 und alle in Kleinbuchstaben sein. Erforderlich.                                                                                                                                                                                                                                                                                                                              |
-| **name**                  | Benennt die Anwendung oder Assembly eindeutig. Verwenden Sie das folgende Format für den Namen: Organization.Division.Name. Beispiel: Microsoft.Windows.mysampleApp. Erforderlich.                                                                                                                                                                                                                                                               |
-| **language**              | Identifiziert die Sprache der Anwendung oder Assembly. Dies ist optional. Wenn die Anwendung oder Assembly sprachspezifisch ist, geben Sie den DHTML-Sprachcode an. In der **assemblyIdentity** einer Anwendung, die für die weltweite Verwendung vorgesehen ist (sprachneutral), wird das Sprachattribut weggelassen.<br/> Legen Sie in einer **assemblyIdentity** einer Assembly für die weltweite Verwendung (sprachneutral) den Wert der Sprache auf \* fest.<br/> |
-| **processorArchitecture** | Gibt den Prozessor an. Gültige Werte sind `x86`, `amd64`, `arm` und `arm64`. Dies ist optional.                                                                                                                                                                                                                                                                                                                       |
+| **name**                  | Gibt der Anwendung oder Assembly einen eindeutigen Namen. Verwenden Sie das folgende Format für den Namen: Organization.Division.Name. Beispiel: Microsoft. Windows.mysampleApp. Erforderlich.                                                                                                                                                                                                                                                               |
+| **language**              | Gibt die Sprache der Anwendung oder Assembly an. Optional. Wenn die Anwendung oder Assembly sprachspezifisch ist, geben Sie den DHTML-Sprachcode an. In der **assemblyIdentity** einer Anwendung, die für die weltweite Verwendung vorgesehen ist (sprachneutral), wird das Sprachattribut weggelassen.<br/> Legen Sie in einer **assemblyIdentity** einer Assembly für die weltweite Verwendung (sprachneutral) den Wert der Sprache auf \* fest.<br/> |
+| **processorArchitecture** | Gibt den Prozessor an. Gültige Werte sind `x86`, `amd64`, `arm` und `arm64`. Optional.                                                                                                                                                                                                                                                                                                                       |
 | **version**               | Gibt die Anwendungs- oder Assemblyversion an. Verwenden Sie das vierteilige Versionsformat: mmmmm.nnnnn.ooooo.apkpp. Jeder teil, der durch Zeiträume getrennt ist, kann 0-65535 einschließlich sein. Weitere Informationen finden Sie unter [Assemblyversionen.](assembly-versions.md) Erforderlich.                                                                                                                                                                        |
-| **Publickeytoken**        | Eine Hexadezimalzeichenfolge mit 16 Zeichen, die die letzten 8 Bytes des SHA-1-Hashs des öffentlichen Schlüssels darstellt, unter dem die Anwendung oder Assembly signiert ist. Der zum Signieren des Katalogs verwendete öffentliche Schlüssel muss 2048 Bit oder höher sein. Erforderlich für alle freigegebenen nebeneinander verwendeten Assemblys.                                                                                                                                                     |
+| **Publickeytoken**        | Eine Hexadezimalzeichenfolge mit 16 Zeichen, die die letzten 8 Bytes des SHA-1-Hashs des öffentlichen Schlüssels darstellt, unter dem die Anwendung oder Assembly signiert ist. Der zum Signieren des Katalogs verwendete öffentliche Schlüssel muss 2.048 Bit oder höher sein. Erforderlich für alle freigegebenen nebeneinander verwendeten Assemblys.                                                                                                                                                     |
 
 <span id="compatibility"></span><span id="COMPATIBILITY"></span>
 
 ### <a name="compatibility"></a>Kompatibilität
 
-Enthält mindestens eine **Anwendung.** Sie verfügt über keine Attribute. Dies ist optional. Anwendungsmanifeste ohne Kompatibilitätselement verwenden standardmäßig Windows Vista-Kompatibilität unter Windows 7.
+Enthält mindestens eine **Anwendung.** Sie verfügt über keine Attribute. Optional. Anwendungsmanifeste ohne Kompatibilitätselement Windows vista-Kompatibilität standardmäßig auf Windows 7.
 
 <span id="application"></span><span id="APPLICATION"></span>
 
 ### <a name="application"></a>application
 
-Enthält mindestens ein **supportedOS-Element.** Ab Windows 10 Version 1903 kann es auch ein optionales **maxversiontested-Element** enthalten. Sie verfügt über keine Attribute. Dies ist optional.
+Enthält mindestens ein **supportedOS-Element.** Ab Windows 10 Version 1903 kann es auch ein optionales **maxversiontested-Element** enthalten. Sie verfügt über keine Attribute. Optional.
 
 <span id="supportedOS"></span><span id="supportedos"></span><span id="SUPPORTEDOS"></span>
 
@@ -138,27 +138,27 @@ Enthält mindestens ein **supportedOS-Element.** Ab Windows 10 Version 1903 kann
 
 Das **supportedOS-Element** weist das folgende Attribut auf. Sie verfügt über keine Unterelemente.
 
-| attribute | Beschreibung   |
+| Attribut | Beschreibung   |
 |-----------|-----------------------|
-| **Id**    | Legen Sie das Id-Attribut auf **{e2011457-1546-43c5-a5fe-008deee3d3f0}** fest, um die Anwendung mit vista-Funktionalität auszuführen. Dadurch kann eine Anwendung, die für Windows Vista entwickelt wurde, auf einem späteren Betriebssystem ausgeführt werden. <br/> Legen Sie das Id-Attribut auf **{35138b9a-5d96-4fbd-8e2d-a2440225f93a}** fest, um die Anwendung mithilfe der Windows 7-Funktionalität auszuführen.<br/> Anwendungen, die Windows Vista, Windows 7 und Windows 8 Funktionalität unterstützen, erfordern keine separaten Manifeste. Fügen Sie in diesem Fall die GUIDs für alle Windows-Betriebssysteme hinzu.<br/> Informationen zum **Id-Attributverhalten** in Windows finden Sie im [Windows 8 und windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416).<br/> Die folgenden GUIDs entsprechen den angegebenen Betriebssystemen:<br/> **{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}** -> Windows 10, Windows Server 2016 und Windows Server 2019<br/> **{1f676c76-80e1-4239-95bb-83d0f6d0da78}** -> Windows 8.1 und Windows Server 2012 R2<br/> **{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}** -> Windows 8 und Windows Server 2012<br/> **{35138b9a-5d96-4fbd-8e2d-a2440225f93a}** -> Windows 7 und Windows Server 2008 R2<br/> **{e2011457-1546-43c5-a5fe-008deee3d3f0}** -> Windows Vista und Windows Server 2008<br/> Sie können dies unter Windows 7 oder Windows 8.x testen, indem Sie Ressourcenmonitor (Resmon) ausführen, zur Registerkarte CPU gelangen, mit der rechten Maustaste auf die Spaltenbezeichnungen "Spalte auswählen..." klicken und "Betriebssystemkontext" aktivieren. Auf Windows 8.x finden Sie diese Spalte auch im Task-Manager (taskmgr). Der Inhalt der Spalte zeigt den höchsten gefundenen Wert oder "Windows Vista" als Standard an. <br/> |
+| **Id**    | Legen Sie das Id-Attribut auf **{e2011457-1546-43c5-a5fe-008deee3d3f0}** fest, um die Anwendung mit vista-Funktionalität auszuführen. Dadurch kann eine Anwendung, die für Windows Vista entwickelt wurde, unter einem späteren Betriebssystem ausgeführt werden. <br/> Legen Sie das Id-Attribut auf **{35138b9a-5d96-4fbd-8e2d-a2440225f93a}** fest, um die Anwendung mit Windows 7-Funktionalität auszuführen.<br/> Anwendungen, die Windows Vista-, Windows 7- und Windows 8-Funktionalität unterstützen, erfordern keine separaten Manifeste. Fügen Sie in diesem Fall die GUIDs für alle Windows Betriebssysteme hinzu.<br/> Informationen zum Verhalten des **ID-Attributs** in Windows finden Sie im [Windows 8 und Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416).<br/> Die folgenden GUIDs entsprechen den angegebenen Betriebssystemen:<br/> **{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}** -> Windows 10, Windows Server 2016 und Windows Server 2019<br/> **{1f676c76-80e1-4239-95bb-83d0f6d0da78}** -> Windows 8.1 und Windows Server 2012 R2<br/> **{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}** -> Windows 8 und Windows Server 2012<br/> **{35138b9a-5d96-4fbd-8e2d-a2440225f93a}** -> Windows 7 und Windows Server 2008 R2<br/> **{e2011457-1546-43c5-a5fe-008deee3d3f0}** -> Windows Vista und Windows Server 2008<br/> Sie können dies auf Windows 7 oder Windows 8.x testen, indem Sie Ressourcenmonitor (Resmon) ausführen, zur Registerkarte CPU gelangen, mit der rechten Maustaste auf die Spaltenbezeichnungen "Spalte auswählen..." klicken und "Betriebssystemkontext" aktivieren. Auf Windows 8.x finden Sie diese Spalte auch im Task-Manager (taskmgr). Der Inhalt der Spalte zeigt den höchsten gefundenen Wert oder "Windows Vista" als Standardwert an. <br/> |
 
 <span id="maxVersionTested"></span><span id="maxversiontested"></span><span id="MAXVERSIONTESTED"></span>
 
 ### <a name="maxversiontested"></a>maxversiontested
 
-Das **maxversiontested-Element** gibt die Windows-Versionen an, für die die Anwendung getestet wurde, beginnend mit der minimalen Betriebssystemversion, die die Anwendung bis zur maximalen Version unterstützt. Den vollständigen Satz von Versionen finden Sie [hier.](https://developer.microsoft.com/windows/downloads/sdk-archive/) Dies ist für Desktopanwendungen vorgesehen, die [XAML Islands](/windows/apps/desktop/modernize/xaml-islands) verwenden und nicht in einem MSIX-Paket bereitgestellt werden. Dieses Element wird in Windows 10 Version 1903 und höher unterstützt.
+Das **maxversiontested-Element** gibt die Versionen von Windows an, für die die Anwendung getestet wurde, beginnend mit der minimalen Betriebssystemversion, die die Anwendung bis zur maximalen Version unterstützt. Den vollständigen Satz von Versionen finden Sie [hier.](https://developer.microsoft.com/windows/downloads/sdk-archive/) Dies ist für Desktopanwendungen vorgesehen, die [XAML Islands](/windows/apps/desktop/modernize/xaml-islands) verwenden und nicht in einem MSIX-Paket bereitgestellt werden. Dieses Element wird in Windows 10 Version 1903 und höher unterstützt.
 
 Das **maxversiontested-Element** weist das folgende Attribut auf. Sie verfügt über keine Unterelemente.
 
-| attribute | Beschreibung    |
+| Attribut | Beschreibung    |
 |-----------|----------------|
-| **Id**    | Legen Sie das Id-Attribut auf eine vierteilige Versionszeichenfolge fest, die die maximale Version von Windows angibt, für die die Anwendung getestet wurde. Beispiel: "10.0.18226.0". |
+| **Id**    | Legen Sie das Id-Attribut auf eine vierteilige Versionszeichenfolge fest, die die maximale Version von Windows angibt, mit der die Anwendung getestet wurde. Beispiel: "10.0.18226.0". |
 
 <span id="dependency"></span><span id="DEPENDENCY"></span>
 
 ### <a name="dependency"></a>dependency
 
-Enthält mindestens eine **dependentAssembly-**. Sie verfügt über keine Attribute. Dies ist optional.
+Enthält mindestens eine **dependentAssembly-**. Sie verfügt über keine Attribute. Optional.
 
 <span id="dependentAssembly"></span><span id="dependentassembly"></span><span id="DEPENDENTASSEMBLY"></span>
 
@@ -170,13 +170,13 @@ Das erste Unterelement von **dependentAssembly** muss ein **assemblyIdentity-Ele
 
 ### <a name="file"></a>file
 
-Gibt Dateien an, die für die Anwendung privat sind. Dies ist optional.
+Gibt Dateien an, die für die Anwendung privat sind. Optional.
 
 Das **Dateielement** verfügt über die In der folgenden Tabelle gezeigten Attribute.
 
 
 
-| attribute   | Beschreibung                                                                                             |
+| Attribut   | Beschreibung                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------|
 | **name**    | Der Name der Datei. Beispiel: Comctl32.dll.                                                            |
 | **Hashalg** | Algorithmus, der zum Erstellen eines Hashs der Datei verwendet wird. Dieser Wert sollte SHA1 sein.                                 |
@@ -186,11 +186,16 @@ Das **Dateielement** verfügt über die In der folgenden Tabelle gezeigten Attri
 
 ### <a name="activecodepage"></a>activeCodePage
 
-Erzwingen Sie, dass ein Prozess UTF-8 als Prozesscodepage verwendet.
+Auf Windows 10 erzwingt dieses Element, dass ein Prozess UTF-8 als Prozesscodepage verwendet. Weitere Informationen finden Sie unter [Verwenden der UTF-8-Codepage.](/windows/uwp/design/globalizing/use-utf8-code-page) Auf Windows 10 ist **UTF-8** der einzige gültige Wert für **activeCodePage.**
 
-**activeCodePage** wurde in Windows Version 1903 (Update vom Mai 2019) hinzugefügt. Sie können diese Eigenschaft deklarieren und in früheren Windows-Builds als Ziel bzw. ausführung verwenden, aber Sie müssen die Erkennung und Konvertierung von Legacycodeseiten wie gewohnt behandeln. Weitere Informationen finden [Sie unter Verwenden der UTF-8-Codepage.](/windows/uwp/design/globalizing/use-utf8-code-page)
+Ab Windows 11 ermöglicht dieses Element auch die Auswahl der Legacy-Codepage, die nicht UTF-8 ist, oder der Codepages für ein bestimmtes Gebietsschema, um die Kompatibilität der Legacyanwendung zu gewährleisten. Modernen Anwendungen wird dringend empfohlen, Unicode zu verwenden. Auf Windows 11 kann **activeCodePage** auch auf den Wert **Legacy** oder einen Gebietsschemanamen wie **en-US** oder **ja-JP** festgelegt werden.
 
-Dieses Element weist keine Attribute auf. **UTF-8** ist nur ein gültiger Wert für **das activeCodePage-Element.**
+- Auf Computern, die für eine aktive UTF-8-Systemcodepage konfiguriert sind, wird der Prozess von **Legacy** auf die Codepages des Systemschemas zurückgesetzt. Wenn das Systemschema keine definierten Codepages enthält, wird Windows-1252/437 verwendet. Die Einstellung **Legacycodepage** wird nur in Fusion-Manifesten und erst ab Windows 11 unterstützt.
+- Wenn ein Gebietsschemaname wie **en-US** angegeben wird, wird die Prozesscodepage entsprechend für diese Gebietsschema-Codepage festgelegt. Beispiel: Windows-1252 und 437 für en-US oder 932 für ja-JP.
+
+Dieses Element wurde erstmals in Windows 10 Version 1903 (Update vom Mai 2019) hinzugefügt. Sie können diese Eigenschaft deklarieren und auf früheren Windows Builds als Ziel bzw. ausführen, aber Sie müssen die Erkennung und Konvertierung von Legacycodeseiten wie gewohnt behandeln. Dieses Element weist keine Attribute auf. 
+
+Im folgenden Beispiel wird veranschaulicht, wie sie dieses Element verwenden, um zu erzwingen, dass der aktuelle Prozess UTF-8 als Prozesscodepage verwendet.
 
 ```XML
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
@@ -220,7 +225,7 @@ Gibt an, ob das Angeben von Benutzeroberflächenelementen in einem Design deakti
 
 ### <a name="disablewindowfiltering"></a>disableWindowFiltering
 
-Gibt an, ob die Fensterfilterung deaktiviert werden soll. **TRUE** deaktiviert die Fensterfilterung, sodass Sie immersive Fenster auf dem Desktop aufzählen können. **disableWindowFiltering** wurde in Windows 8 hinzugefügt und weist keine Attribute auf.
+Gibt an, ob die Fensterfilterung deaktiviert werden soll. **TRUE** deaktiviert die Fensterfilterung, sodass Sie immersive Fenster über den Desktop aufzählen können. **disableWindowFiltering** wurde in Windows 8 hinzugefügt und weist keine Attribute auf.
 
 ```XML
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
@@ -240,7 +245,7 @@ Gibt an, ob die Fensterfilterung deaktiviert werden soll. **TRUE** deaktiviert d
 
 Gibt an, ob der aktuelle Prozess Punkt pro Zoll (DPI) erkennt.
 
-**Windows 10, Version 1607:** Das **dpiAware-Element** wird ignoriert, wenn das **dpiAwareness-Element** vorhanden ist. Sie können beide Elemente in ein Manifest einschließen, wenn Sie ein anderes Verhalten für Windows 10, Version 1607, als für eine frühere Version des Betriebssystems angeben möchten.
+**Windows 10 Version 1607:** Das **dpiAware-Element** wird ignoriert, wenn das **dpiAwareness-Element** vorhanden ist. Sie können beide Elemente in ein Manifest einschließen, wenn Sie ein anderes Verhalten für Windows 10, Version 1607, als für eine frühere Version des Betriebssystems angeben möchten.
 
 In der folgenden Tabelle wird das Verhalten beschrieben, das sich basierend auf dem Vorhandensein des **dpiAware-Elements** und des darin enthaltenen Texts ergibt. Beim Text innerhalb des Elements wird die Groß-/Kleinschreibung nicht beachtet.
 
@@ -253,7 +258,7 @@ In der folgenden Tabelle wird das Verhalten beschrieben, das sich basierend auf 
 | Enthält "pro Monitor"            | **Windows Vista, Windows 7 und Windows 8:** Das Verhalten ist identisch mit dem, wenn **dpiAware** nicht vorhanden ist.<br/> **Windows 8.1 und Windows 10:** Der aktuelle Prozess ist monitorspezifische dpi-fähige Prozesse.<br/>                                                                                                                                                                                      |
 | Enthält eine beliebige andere Zeichenfolge.         | **Windows Vista, Windows 7 und Windows 8:** Das Verhalten ist identisch mit dem, wenn **dpiAware** nicht vorhanden ist.<br/> **Windows 8.1 und Windows 10:** Der aktuelle Prozess ist nicht dpi-basiert, und Sie können diese Einstellung nicht programmgesteuert ändern, indem Sie die [**Funktion SetProcessDpiAwareness**](/windows/desktop/api/shellscalingapi/nf-shellscalingapi-setprocessdpiawareness) oder [**SetProcessDPIAware**](/windows/desktop/api/winuser/nf-winuser-setprocessdpiaware) aufrufen.<br/> |
 
-Weitere Informationen zu DPI-Einstellungen finden Sie unter [Vergleich der DPI-Wahrnehmungsebenen.](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot))
+Weitere Informationen zu DPI-Einstellungen finden Sie unter [Vergleich der DPI-Wahrnehmungsstufen.](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot))
 
 **dpiAware** weist keine Attribute auf.
 
@@ -277,9 +282,9 @@ Gibt an, ob der aktuelle Prozess Punkt pro Zoll (DPI) erkennt.
 
 Die Mindestversion des Betriebssystems, das das **dpiAwareness-Element** unterstützt, ist Windows 10 Version 1607. Bei Versionen, die das **dpiAwareness-Element** unterstützen, überschreibt **dpiAwareness** das **dpiAware-Element.** Sie können beide Elemente in ein Manifest einschließen, wenn Sie ein anderes Verhalten für Windows 10, Version 1607, als für eine frühere Version des Betriebssystems angeben möchten.
 
-Das **dpiAwareness-Element** kann ein einzelnes Element oder eine Liste von durch Trennzeichen getrennten Elementen enthalten. Im letzteren Fall wird das erste (ganz links) Element in der Liste verwendet, das vom Betriebssystem erkannt wird. Auf diese Weise können Sie unterschiedliche Verhaltensweisen angeben, die in zukünftigen Windows-Betriebssystemversionen unterstützt werden.
+Das **dpiAwareness-Element** kann ein einzelnes Element oder eine Liste von durch Trennzeichen getrennten Elementen enthalten. Im letzteren Fall wird das erste (ganz links) Element in der Liste verwendet, das vom Betriebssystem erkannt wird. Auf diese Weise können Sie unterschiedliche Verhaltensweisen angeben, die in zukünftigen Windows Betriebssystemversionen unterstützt werden.
 
-In der folgenden Tabelle wird das Verhalten beschrieben, das sich auf grundlage des Vorhandenseins des **dpiAwareness-Elements** und des Texts ergibt, der in seinem am weitesten links erkannten Element enthalten ist. Beim Text innerhalb des Elements wird die Groß-/Kleinschreibung nicht beachtet.
+In der folgenden Tabelle wird das Verhalten beschrieben, das sich ergibt, basierend auf dem Vorhandensein des **dpiAwareness-Elements** und des Texts, der in seinem am weitesten links erkannten Element enthalten ist. Beim Text innerhalb des Elements wird die Groß-/Kleinschreibung nicht beachtet.
 
 | **dpiAwareness-Elementstatus:**        | Beschreibung                          |
 |-----------------------------------------|-------------------------------------------|
@@ -335,13 +340,13 @@ Nichtvektorgrafiken (z. B. Bitmaps, Symbole oder Symbolleisten) können von dies
 
 ### <a name="highresolutionscrollingaware"></a>highResolutionScrollingAware
 
-Gibt an, ob bildlauffähiges Scrollen mit hoher Auflösung aktiviert ist. **TRUE gibt** an, dass es aktiviert ist. Sie verfügt über keine Attribute.
+Gibt an, ob bildlauffähiges Bildlauf mit hoher Auflösung aktiviert ist. **TRUE** gibt an, dass sie aktiviert ist. Sie verfügt über keine Attribute.
 
 <span id="longPathAware"></span><span id="longpathaware"></span><span id="LONGPATHAWARE"></span>
 
 ### <a name="longpathaware"></a>longPathAware
 
-Ermöglicht lange Pfade, die **die** MAX_PATH überschreiten. Dieses Element wird in Windows 10 Version 1607 und höher unterstützt. [hier finden Sie weitere Informationen](../fileio/maximum-file-path-limitation.md)
+Aktiviert lange Pfade, die **MAX_PATH** überschreiten. Dieses Element wird in Windows 10 Version 1607 und höher unterstützt. Weitere Informationen finden Sie in [diesem Artikel](../fileio/maximum-file-path-limitation.md).
 
 ```XML
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
@@ -359,7 +364,7 @@ Ermöglicht lange Pfade, die **die** MAX_PATH überschreiten. Dieses Element wir
 
 ### <a name="printerdriverisolation"></a>printerDriverIsolation
 
-Gibt an, ob die Druckertreiberisolation aktiviert ist. **TRUE gibt** an, dass es aktiviert ist. Sie verfügt über keine Attribute. Die Druckertreiberisolation verbessert die Zuverlässigkeit des Windows-Druckdiensts, da Druckertreiber in Prozessen ausgeführt werden können, die von dem Prozess getrennt sind, in dem der Druckspooler ausgeführt wird. Die Unterstützung der Druckertreiberisolation wurde in Windows 7 und Windows Server 2008 R2 gestartet. Eine App kann die Druckertreiberisolation in ihrem App-Manifest deklarieren, um sich vom Druckertreiber zu isolieren und die Zuverlässigkeit zu verbessern. Das heißt, die App stürzt nicht ab, wenn der Druckertreiber einen Fehler hat.
+Gibt an, ob die Druckertreiberisolation aktiviert ist. **TRUE** gibt an, dass sie aktiviert ist. Sie verfügt über keine Attribute. Die Druckertreiberisolation verbessert die Zuverlässigkeit des Windows Druckdiensts, indem Druckertreiber in Prozessen ausgeführt werden können, die von dem Prozess getrennt sind, in dem der Druckspooler ausgeführt wird. Unterstützung für die Druckertreiberisolation wurde in Windows 7 und Windows Server 2008 R2 gestartet. Eine App kann die Druckertreiberisolation im App-Manifest deklarieren, um sich vom Druckertreiber zu isolieren und seine Zuverlässigkeit zu verbessern. Das heißt, die App stürzt nicht ab, wenn der Druckertreiber einen Fehler aufweist.
 
 
 ```XML
@@ -378,21 +383,21 @@ Gibt an, ob die Druckertreiberisolation aktiviert ist. **TRUE gibt** an, dass es
 
 ### <a name="ultrahighresolutionscrollingaware"></a>ultraHighResolutionScrollingAware
 
-Gibt an, ob bildlauffähiges Ultra-Bildlauf mit hoher Auflösung aktiviert ist. **TRUE gibt** an, dass es aktiviert ist. Sie verfügt über keine Attribute.
+Gibt an, ob bildlauffähiges Bildlauf mit extrem hoher Auflösung aktiviert ist. **TRUE** gibt an, dass sie aktiviert ist. Sie verfügt über keine Attribute.
 
 <span id="msix"></span><span id="MSIX"></span>
 
 ### <a name="msix"></a>MSIX
 
-Gibt die Identitätsinformationen eines [MSIX-Sparsepakets für](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) die aktuelle Anwendung an. Dieses Element wird in Windows 10 Version 2004 und höher unterstützt.
+Gibt die Identitätsinformationen eines [MSIX-Pakets](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) mit geringer Dichte für die aktuelle Anwendung an. Dieses Element wird in Windows 10 Version 2004 und höher unterstützt.
 
-Das **msix-Element** muss sich im Namespace `urn:schemas-microsoft-com:msix.v1` befinden. Sie enthält die in der folgenden Tabelle gezeigten Attribute.
+Das **msix-Element** muss sich im Namespace `urn:schemas-microsoft-com:msix.v1` befinden. Sie verfügt über die attribute, die in der folgenden Tabelle angezeigt werden.
 
-| attribute   | Beschreibung                                                                                             |
+| Attribut   | Beschreibung                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------|
-| **publisher**    | Beschreibt die Herausgeberinformationen. Dieser Wert muss mit dem **Publisher-Attribut** im [Identity-Element](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) in Ihrem Sparsepaketmanifest übereinstimmen. |
+| **publisher**    | Beschreibt die Herausgeberinformationen. Dieser Wert muss mit dem **Publisher** Attribut im [Identity-Element](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) in Ihrem Sparsepaketmanifest übereinstimmen. |
 | **packageName** | Beschreibt den Inhalt des Pakets. Dieser Wert muss mit dem **Name-Attribut** im [Identity-Element](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) in Ihrem Sparsepaketmanifest übereinstimmen.    |
-| **applicationId**    | Der eindeutige Bezeichner der Anwendung. Dieser Wert muss mit dem **ID-Attribut** im [Application-Element](/uwp/schemas/appxpackage/uapmanifestschema/element-application) in Ihrem Sparsepaketmanifest übereinstimmen.  |
+| **applicationId**    | Der eindeutige Bezeichner der Anwendung. Dieser Wert muss mit dem **Id-Attribut** im [Application-Element](/uwp/schemas/appxpackage/uapmanifestschema/element-application) in Ihrem Sparsepaketmanifest übereinstimmen.  |
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -408,9 +413,9 @@ Das **msix-Element** muss sich im Namespace `urn:schemas-microsoft-com:msix.v1` 
 
 ### <a name="heaptype"></a>heapType
 
-Überschreibt die Standardmäßige Heapimplementierung für die zu verwendenden [Win32-Heap-APIs.](../Memory/heap-functions.md)
+Überschreibt die Standardheapimplementierungen für die zu verwendenden [Win32-Heap-APIs.](../Memory/heap-functions.md)
 
-* Der Wert **SegmentHeap gibt** an, dass der Segmentheap verwendet wird. Segment heap ist eine moderne Heapimplementierung, die im Allgemeinen die Gesamtspeicherauslastung reduziert. Dieses Element wird in Windows 10 Version 2004 (Build 19041) und höher unterstützt.
+* Der Wert **SegmentHeap** gibt an, dass der Segmentheap verwendet wird. Segmentheap ist eine moderne Heapimplementierungen, die im Allgemeinen die Gesamtspeicherauslastung reduzieren. Dieses Element wird in Windows 10 Version 2004 (Build 19041) und höher unterstützt.
 * Alle anderen Werte werden ignoriert.
 
 Dieses Element weist keine Attribute auf.
@@ -429,7 +434,7 @@ Dieses Element weist keine Attribute auf.
 
 ## <a name="example"></a>Beispiel
 
-Im Folgenden finden Sie ein Beispiel für ein Anwendungsmanifest für eine Anwendung namens MySampleApp.exe. Die Anwendung verwendet die seiteseitige SampleAssembly-Assembly.
+Im Folgenden ist ein Beispiel für ein Anwendungsmanifest für eine Anwendung mit dem Namen MySampleApp.exe. Die Anwendung verwendet die SampleAssembly-Assembly nebeneinander.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

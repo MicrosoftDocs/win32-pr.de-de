@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: Gather (S, float, int)-Funktion'
-description: 'Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texture2D:: Gather (S, float, int)-Funktion'
+title: Texture2D::Gather(S,float,int)-Funktion
+description: Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden. | Texture2D::Gather(S,float,int)-Funktion
 ms.assetid: 5d196c1c-8cc9-4add-9d33-654294314ee2
 keywords:
-- Funktion "HLSL" erfassen
+- Gather-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4d0a58be0580572441f91a3b3f637601d70cd9c8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 263c3672f55e2f461d9a6c160a60b8222ddeda32ec239b846680d30af0f7fedc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853280"
 ---
-# <a name="texture2dgathersfloatint-function"></a>Texture2D:: Gather (S, float, int)-Funktion
+# <a name="texture2dgathersfloatint-function"></a>Texture2D::Gather(S,float,int)-Funktion
 
-Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ TemplateType Gather(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **Sampler**
+Typ: **sampler**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*location* \[ In\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Der Offset, der vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Der Offset, der vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -87,14 +87,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Gather-Methoden](texture2d-gather.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

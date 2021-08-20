@@ -1,9 +1,9 @@
 ---
-title: TB_REPLACEBITMAP Meldung (kommstrg. h)
+title: TB_REPLACEBITMAP (Commctrl.h)
 description: Ersetzt eine vorhandene Bitmap durch eine neue Bitmap.
 ms.assetid: abad5c7a-ebdd-46b5-a465-fe64ff8eb127
 keywords:
-- Windows-Steuerelemente für TB_REPLACEBITMAP Meldung
+- TB_REPLACEBITMAP meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0216d73f70f9bef8230d7e725834d63d60012798
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 11dd964691b8b854feb09f93bc03673c46103bb34842e326e0f433cfd1fcc77f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968050"
 ---
-# <a name="tb_replacebitmap-message"></a>TB \_ replacebitmap-Meldung
+# <a name="tb_replacebitmap-message"></a>TB \_ REPLACEBITMAP-Nachricht
 
 Ersetzt eine vorhandene Bitmap durch eine neue Bitmap.
 
@@ -35,13 +35,13 @@ Ersetzt eine vorhandene Bitmap durch eine neue Bitmap.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**tbreplacebitmap**](/windows/desktop/api/Commctrl/ns-commctrl-tbreplacebitmap) -Struktur, die die Informationen der zu ersetzenden Bitmap und der neuen Bitmap enthält.
+Zeiger auf eine [**TBREPLACEBITMAP-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbreplacebitmap) die die Informationen der zu ersetzenden Bitmap und der neuen Bitmap enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Konstruktoren, die von XMDEC4 verfügbar gemacht werden.
+description: Von XMDEC4 verfügbar gemachte Konstruktoren.
 ms.assetid: e8ca8689-c946-4fef-a211-6c3737cc88aa
 title: XMDEC4-Konstruktoren
 ms.topic: reference
@@ -11,12 +11,12 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 5e2865b6b685d432cec4cd7f9e74d05b3579116881a4885f36edac9135691b82
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 225ab0e2d6cefee8ac6483e79598b9202d923907
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118984650"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477196"
 ---
 # <a name="xmdec4-constructors"></a>XMDEC4-Konstruktoren
 
@@ -33,56 +33,14 @@ Erstellt Instanzen der [**XMDEC4-Struktur.**](/windows/win32/api/directxpackedve
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Konstruktor</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(uint32_t)"><strong>XMDEC4 (uint32_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMDEC4</code> einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> aus einer Variablen, die <code>uint32_t</code> Komponentendaten in einem gepackten Format enthält. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(constfloat)"><strong>XMDEC4 (const float*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMDEC4</code> einem Arrayargument mit <code>float</code> vier Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4 aus</strong></a> einem Arrayargument mit <code>float</code> vier Elemente.<br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(float_float_float_float)"><strong>XMDEC4 (float,float,float,float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMDEC4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4 aus</strong></a> vier <code>float</code> Argumenten. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(constfloat)"><strong>XMDEC4 ()</strong></a></td>
-<td style="text-align: left;">Standardkonstruktor für <code>XMDEC4</code> . <br/> Standardkonstruktor für <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> . <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Konstruktor | BESCHREIBUNG | 
+|-------------|-------------|
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(uint32_t)"><strong>XMDEC4 (uint32_t)</strong></a> | Initialisiert eine neue Instanz von <code>XMDEC4</code> aus einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> aus einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(constfloat)"><strong>XMDEC4 (const float*)</strong></a> | Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMDEC4</code> vier <code>float</code> Elementen.<br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> aus einem Arrayargument mit vier <code>float</code> Elementen.<br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(float_float_float_float)"><strong>XMDEC4 (float, float, float, float)</strong></a> | Initialisiert eine neue Instanz von <code>XMDEC4</code> aus vier <code>float</code> Argumenten. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> aus vier <code>float</code> Argumenten. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmdec4-xmdec4(constfloat)"><strong>XMDEC4 ()</strong></a> | Standardkonstruktor für <code>XMDEC4</code> . <br /> Standardkonstruktor für <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4.</strong></a> <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+
 
 
 

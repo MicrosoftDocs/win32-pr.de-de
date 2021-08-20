@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: fda8407d49ed3eec7ff86abc94ced6b63d2d77c6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0ebd529faaea7995144481802d755eb705163d94e68133d493f6368ac0bc015a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900250"
 ---
 # <a name="controlmetricsbyclass-method-of-the-cim_metricservice-class"></a>ControlMetricsByClass-Methode der CIM \_ MetricService-Klasse
 
-Aktiviert und deaktiviert die Sammlung von Metriken. **ControlMetricsByClass** wird verwendet, um die Auflistung der einzelnen Metriktypen für alle Instanzen einer Klasse oder die Sammlung einer bestimmten Metrik für alle Instanzen einer Klasse zu steuern.
+Aktiviert und deaktiviert die Erfassung von Metriken. **ControlMetricsByClass** wird verwendet, um die Auflistung der einzelnen Metriktypen für alle Instanzen einer Klasse oder die Sammlung einer bestimmten Metrik für alle Instanzen einer Klasse zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -118,21 +118,21 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 **Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

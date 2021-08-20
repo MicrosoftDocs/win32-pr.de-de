@@ -1,131 +1,131 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den directxmath-Funktionen.
+description: Dieser Abschnitt enthält Informationen zu den DirectXMath-Funktionen.
 ms.assetid: aa285d9c-09b2-a408-ca6d-7aa79670e1e6
-title: Directxmath-Bibliotheksfunktionen
+title: DirectXMath-Bibliotheksfunktionen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6057c9c6ab9ee32fc0ed756c08cb9a953de2271a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b19fde27c7b9df5b488b6f5803d080394f32fe9210cca25ee8d591f325a9ec6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841100"
 ---
-# <a name="directxmath-library-functions"></a>Directxmath-Bibliotheksfunktionen
+# <a name="directxmath-library-functions"></a>DirectXMath-Bibliotheksfunktionen
 
-Dieser Abschnitt enthält Informationen zu den directxmath-Funktionen.
+Dieser Abschnitt enthält Informationen zu den DirectXMath-Funktionen.
 
 <dl> <dt>
 
-[Funktionen der directxmath-Bibliotheks Farbe](ovw-xnamath-reference-functions-color.md)
+[DirectXMath-Bibliothek – Farbfunktionen](ovw-xnamath-reference-functions-color.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Farbfunktionen auf.
+Listet die von DirectXMath bereitgestellten Farbfunktionen auf.
 
 </dd> <dt>
 
-[Konvertierungs Funktionen der directxmath-Bibliothek](ovw-xnamath-reference-functions-conversion.md)
+[Konvertierungsfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-conversion.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Konvertierungs Funktionen auf.
+Listet die von DirectXMath bereitgestellten Konvertierungsfunktionen auf.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Matrix Funktionen](ovw-xnamath-reference-functions-matrix.md)
+[Matrixfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-matrix.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Matrix Funktionen auf.
+Listet die von DirectXMath bereitgestellten Matrixfunktionen auf.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Ebenen-Funktionen](ovw-xnamath-reference-functions-plane.md)
+[Funktionen der DirectXMath-Bibliotheksebene](ovw-xnamath-reference-functions-plane.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Ebenenfunktionen auf.
+Listet die Ebenenfunktionen auf, die von DirectXMath bereitgestellt werden.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks-Quaternion-Funktionen](ovw-xnamath-reference-functions-quaternion.md)
+[Quaternionsfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-quaternion.md)
 </dt> <dd>
 
-Listet die Quaternion-Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die quaternion-Funktionen auf, die von DirectXMath bereitgestellt werden.
 
 </dd> <dt>
 
-[Skalarfunktionen der directxmath-Bibliothek](ovw-xnamath-reference-functions-scalar.md)
+[Skalarfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-scalar.md)
 </dt> <dd>
 
-Listet die skalaren Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die von DirectXMath bereitgestellten Skalarfunktionen auf.
 
 </dd> <dt>
 
-[Bibliotheks Vektor Funktionen in directxmath](ovw-xnamath-reference-functions-vector.md)
+[Vektorfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Vektor Funktionen auf, die für einen beliebigen Vektortyp verwendet werden können.
+Listet die von DirectXMath bereitgestellten Vektorfunktionen auf, die für jeden Vektortyp verwendet werden können.
 
 </dd> <dt>
 
-[2D-Vektor Funktionen der directxmath-Bibliothek](ovw-xnamath-reference-functions-vector2.md)
+[DirectXMath Library 2D Vector Functions](ovw-xnamath-reference-functions-vector2.md)
 </dt> <dd>
 
-Listet die 2D-Vektor Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die von DirectXMath bereitgestellten 2D-Vektorfunktionen auf.
 
 </dd> <dt>
 
-[3D-Vektor Funktionen der directxmath-Bibliothek](ovw-xnamath-reference-functions-vector3.md)
+[3D-Vektorfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector3.md)
 </dt> <dd>
 
-Listet die 3D-Vektor Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die von DirectXMath bereitgestellten 3D-Vektorfunktionen auf.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks-4D-Vektor Funktionen](ovw-xnamath-reference-functions-vector4.md)
+[DirectXMath Library 4D Vector Functions](ovw-xnamath-reference-functions-vector4.md)
 </dt> <dd>
 
-Listet die 4D-Vektor Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die von DirectXMath bereitgestellten 4D-Vektorfunktionen auf.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Vorlagen Funktionen](ovw-xnamath-templates.md)
+[Vorlagenfunktionen der DirectXMath-Bibliothek](ovw-xnamath-templates.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Vorlagen Funktionen auf.
+Listet die Vorlagenfunktionen auf, die von DirectXMath bereitgestellt werden.
 
 </dd> <dt>
 
-[Directxmath-Dreiecks Test Funktionen](ovw-xnamath-triangletests.md)
+[DirectXMath-Dreieckstestfunktionen](ovw-xnamath-triangletests.md)
 </dt> <dd>
 
-Listet die Dreiecks Testfunktionen auf, die vom directxmath triangletests-Namespace bereitgestellt werden.
+Listet die Dreieckstestfunktionen auf, die vom DirectXMath TriangleTests-Namespace bereitgestellt werden.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheksdienst Programm-Funktionen](ovw-xnamath-utilities.md)
+[Funktionen des DirectXMath-Bibliothekshilfsprogramms](ovw-xnamath-utilities.md)
 </dt> <dd>
 
-Listet die von directxmath bereitgestellten Hilfsprogrammfunktionen auf.
+Listet die von DirectXMath bereitgestellten Hilfsprogrammfunktionen auf.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Vektor-Accessor-Funktionen](ovw-xnamath-reference-functions-accessors.md)
+[DirectXMath Library Vector Accessor-Funktionen](ovw-xnamath-reference-functions-accessors.md)
 </dt> <dd>
 
-Listet die Vektor Accessor-Funktionen auf, die von der directxmath-Bibliothek bereitgestellt werden.
+Listet die Vektoraccessorfunktionen auf, die von der DirectXMath-Bibliothek bereitgestellt werden.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Vektor Ladefunktionen](ovw-xnamath-reference-functions-load.md)
+[DirectXMath Library Vector Load Functions](ovw-xnamath-reference-functions-load.md)
 </dt> <dd>
 
-Listet die Funktionen zum Laden von Werten auf, die von Hardware Registern abgerufen werden, die als Teil der directxmath-Bibliothek bereitgestellt werden.
+Listet den Satz von Funktionen zum Laden von Werten auf, die aus Hardwareregistern abgerufen werden, die als Teil der DirectXMath-Bibliothek bereitgestellt werden.
 
 </dd> <dt>
 
-[Directxmath-Bibliotheks Vektor Speicherfunktionen](ovw-xnamath-reference-functions-storage.md)
+[DirectXMath Library Vector Store Functions](ovw-xnamath-reference-functions-storage.md)
 </dt> <dd>
 
-Listet die Funktionen zum Speichern von Werten auf, die von Hardware Registern abgerufen werden, die als Teil der directxmath-Bibliothek bereitgestellt werden.
+Listet den Satz von Funktionen zum Speichern von Werten auf, die aus Hardwareregistern abgerufen werden, die als Teil der DirectXMath-Bibliothek bereitgestellt werden.
 
 </dd> </dl>
 
@@ -133,7 +133,7 @@ Listet die Funktionen zum Speichern von Werten auf, die von Hardware Registern a
 
 <dl> <dt>
 
-[Directxmath-Programmier Referenz](ovw-xnamath-reference.md)
+[DirectXMath-Programmierreferenz](ovw-xnamath-reference.md)
 </dt> </dl>
 
  

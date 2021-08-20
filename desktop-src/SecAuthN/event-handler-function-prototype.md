@@ -1,7 +1,7 @@
 ---
-description: Die Prototypfunktionen von Ereignis Handlern werden für alle Funktionen verwendet, die Winlogon-Benachrichtigungs Ereignisse verarbeiten.
+description: Event Handler Prototype-Funktionen werden für alle Funktionen verwendet, die Winlogon-Benachrichtigungsereignisse behandeln.
 ms.assetid: 99b91e80-5e4e-4119-89aa-c0a80fce69e3
-title: Rückruffunktion der Ereignis Handler-Funktion
+title: Rückruffunktion "Prototyp" der Ereignishandlerfunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 935ddac5660c814b898be17218d879678f2135ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df6670e852ccd12fd2bed1d0c188aa0252c9b3afbcb899cf9480b7011d08625d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008228"
 ---
-# <a name="event-handler-function-prototype-callback-function"></a>Rückruffunktion der Ereignis Handler-Funktion
+# <a name="event-handler-function-prototype-callback-function"></a>Rückruffunktion "Prototyp" der Ereignishandlerfunktion
 
-\[Funktionen des ereignishandlerprototyps sind nicht mehr zur Verwendung ab Windows Server 2008 und Windows Vista verfügbar. \]
+\[Funktionen des Ereignishandlerprototyps können ab Windows Server 2008 und Windows Vista nicht mehr verwendet werden. \]
 
-Die Prototypfunktionen von Ereignis Handlern werden für alle Funktionen verwendet, die [*Winlogon*](/windows/desktop/SecGloss/w-gly) -Benachrichtigungs Ereignisse verarbeiten. Der Name der Funktion, die unten durch den *\_ \_ Funktions \_ Namen* des Platzhalter-Ereignis Handlers dargestellt wird, gibt in der Regel den Namen des Ereignisses wieder, das von der Funktion verarbeitet wird. Beispielsweise könnte die Funktion, die die Anmelde Ereignisse behandelt, den Namen " **WLEventLogon**" haben.
+Ereignishandler-Prototypfunktionen werden für alle Funktionen verwendet, die [*Winlogon-Benachrichtigungsereignisse*](/windows/desktop/SecGloss/w-gly) behandeln. Der Name der Funktion, der unten durch den Platzhalter *Event \_ Handler Function \_ \_ Name* dargestellt wird, spiegelt in der Regel den Namen des Ereignisses wider, das von der Funktion behandelt wird. Beispielsweise könnte die Funktion, die Anmeldeereignisse behandelt, den Namen **WLEventLogon haben.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ void Event_Handler_Function_Name(
 
 <dl> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**wlx- \_ Benachrichtigungs \_ Informations**](/windows/desktop/api/Winwlx/ns-winwlx-wlx_notification_info) Struktur, die die Details des Ereignisses enthält.
+Ein Zeiger auf eine [**WLX \_ NOTIFICATION \_ INFO-Struktur,**](/windows/desktop/api/Winwlx/ns-winwlx-wlx_notification_info) die die Details des Ereignisses enthält.
 
 </dd> </dl>
 
@@ -51,13 +51,13 @@ Ein Zeiger auf eine [**wlx- \_ Benachrichtigungs \_ Informations**](/windows/des
 
 Diese Rückruffunktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Ihr Ereignishandler untergeordnete Prozesse erstellen muss, sollte [**er die Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) "-Funktion" aufrufen. Andernfalls wird der neue Prozess auf dem Winlogon-Desktop erstellt, nicht auf dem Desktop des Benutzers.
+Wenn Ihr Ereignishandler untergeordnete Prozesse erstellen muss, sollte er die [**CreateProcessAsUser-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) aufrufen. Andernfalls wird der neue Prozess auf dem Winlogon-Desktop und nicht auf dem Desktop des Benutzers erstellt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Ereignishandler für Winlogon-Ereignisse implementiert werden. Der Einfachheit halber werden nur die Implementierungen der Anmelde-und Abmelde Ereignishandler angezeigt. Sie können Handler für die restlichen Ereignisse auf genau die gleiche Weise implementieren.
+Das folgende Beispiel zeigt, wie Ereignishandler für Winlogon-Ereignisse implementiert werden. Der Einfachheit halber werden nur die Implementierungen der Logon- und Logoff-Ereignishandler angezeigt. Sie können Handler für die restlichen Ereignisse genau auf die gleiche Weise implementieren.
 
 
 ```C++
@@ -113,8 +113,8 @@ void WLEventLogoff (PWLX_NOTIFICATION_INFO pInfo)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
 | Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 

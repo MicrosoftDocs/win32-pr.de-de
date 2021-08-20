@@ -1,7 +1,7 @@
 ---
 description: Enthält Informationen zu einem Smartcard-Kryptografiedienstanbieter (CSP).
 ms.assetid: b3e6722a-25dd-4137-b224-4082e846ddec
-title: KERB_SMARTCARD_CSP_INFO Struktur
+title: KERB_SMARTCARD_CSP_INFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 03b1a8084e291dde5a4f1f2017e4e97f57640bca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 190c3e770a50acb7363fb10c469a7400831bc7b512d2b8158d687c83403b6df9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127340"
 ---
-# <a name="kerb_smartcard_csp_info-structure"></a>KERB \_ Smartcard- \_ CSP- \_ Informationsstruktur
+# <a name="kerb_smartcard_csp_info-structure"></a>KERB \_ SMARTCARD \_ CSP \_ INFO-Struktur
 
-Die **Info Struktur der KERB \_ Smartcard- \_ CSP \_** enthält Informationen zu einem Smartcard- [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP).
+Die **KERB \_ SMARTCARD \_ CSP \_ INFO-Struktur** enthält Informationen zu einem [*Smartcard-Kryptografiedienstanbieter (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP).
 
-Diese Struktur ist nicht in einem öffentlichen Header deklariert.
+Diese Struktur wird nicht in einem öffentlichen Header deklariert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,21 +52,21 @@ typedef struct _KERB_SMARTCARD_CSP_INFO {
 
 <dl> <dt>
 
-**dwcspinfolen**
+**dwCspInfoLen**
 </dt> <dd>
 
-Die Größe der-Struktur in Bytes, einschließlich angefügter Daten.
+Die Größe dieser Struktur in Bytes, einschließlich aller angefügten Daten.
 
 </dd> <dt>
 
 **MessageType**
 </dt> <dd>
 
-Der Typ der Nachricht, die übermittelt wird. Dieser Member muss auf 1 festgelegt werden.
+Der Typ der übergebenen Nachricht. Dieser Member muss auf 1 festgelegt werden.
 
 </dd> <dt>
 
-**ContextInformation**
+**Contextinformation**
 </dt> <dd>
 
 Reserviert.
@@ -90,14 +90,14 @@ Reserviert.
 **KeySpec**
 </dt> <dd>
 
-Der private Schlüssel, der aus dem Schlüssel Container verwendet werden soll, der im Puffer- **BBuffer** angegeben ist. Der Schlüssel kann einer der folgenden Werte sein, die in Wincrypt. h definiert sind.
+Der private Schlüssel, der aus dem Im Puffer **bBuffer** angegebenen Schlüsselcontainer verwendet werden soll. Der Schlüssel kann einer der folgenden Werte sein, der in WinCrypt.h definiert ist.
 
 
 
 | Wert                                                                                                                                                                                                                   | Bedeutung                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| <span id="AT_KEYEXCHANGE"></span><span id="at_keyexchange"></span><dl> <dt>**Um \_ Keyexchange**</dt> <dt>1</dt> </dl> | Der Schlüssel ist ein Schlüsselaustausch Schlüssel.<br/> |
-| <span id="AT_SIGNATURE"></span><span id="at_signature"></span><dl> <dt>**Um \_ Signatur**</dt> <dt>2</dt> </dl>       | Der Schlüssel ist ein Signatur Schlüssel.<br/>    |
+| <span id="AT_KEYEXCHANGE"></span><span id="at_keyexchange"></span><dl> <dt>**AT \_ KEYEXCHANGE**</dt> <dt>1</dt> </dl> | Der Schlüssel ist ein Schlüsselaustauschschlüssel.<br/> |
+| <span id="AT_SIGNATURE"></span><span id="at_signature"></span><dl> <dt>**AT \_ SIGNATURE**</dt> <dt>2</dt> </dl>       | Der Schlüssel ist ein Signaturschlüssel.<br/>    |
 
 
 
@@ -105,10 +105,10 @@ Der private Schlüssel, der aus dem Schlüssel Container verwendet werden soll, 
 
 </dd> <dt>
 
-**ncardnameoffset**
+**nCardNameOffset**
 </dt> <dd>
 
-Die Anzahl der Zeichen im **BBuffer** -Puffer, die dem Namen der Smartcard in diesem Puffer vorangestellt sind.
+Die Anzahl der Zeichen im **bBuffer-Puffer,** die dem Namen der Smartcard in diesem Puffer vorangestellt sind.
 
 > [!IMPORTANT]
 > Wenn der Name der Smartcard nicht angegeben wird, muss der Puffer eine leere Zeichenfolge enthalten.
@@ -117,44 +117,44 @@ Die Anzahl der Zeichen im **BBuffer** -Puffer, die dem Namen der Smartcard in di
 
 </dd> <dt>
 
-**nreadernameoffset**
+**nReaderNameOffset**
 </dt> <dd>
 
-Die Anzahl der Zeichen im **BBuffer** -Puffer, die dem Namen des smartcardreaders in diesem Puffer vorangestellt sind.
+Die Anzahl der Zeichen im **bBuffer-Puffer,** die dem Namen des Smartcardlesers in diesem Puffer vorangestellt sind.
 
 > [!IMPORTANT]
-> Wenn der Name des smartcardreaders nicht angegeben wird, muss der Puffer eine leere Zeichenfolge enthalten.
+> Wenn der Name des Smartcardlesers nicht angegeben wird, muss der Puffer eine leere Zeichenfolge enthalten.
 
  
 
 </dd> <dt>
 
-**ncontainernameoffset**
+**nContainerNameOffset**
 </dt> <dd>
 
-Die Anzahl der Zeichen im **BBuffer** -Puffer, die dem Namen des Schlüssel Containers in diesem Puffer vorangestellt sind. Diese Zeichenfolge darf nicht leer sein.
+Die Anzahl der Zeichen im **bBuffer-Puffer,** die dem Namen des Schlüsselcontainers in diesem Puffer vorangestellt sind. Diese Zeichenfolge darf nicht leer sein.
 
 </dd> <dt>
 
-**ncspnameoffset**
+**nCSPNameOffset**
 </dt> <dd>
 
-Die Anzahl der Zeichen im **BBuffer** -Puffer, die dem Namen des CSP in diesem Puffer vorangestellt sind.
+Die Anzahl der Zeichen im **bBuffer-Puffer,** die dem Namen des CSP in diesem Puffer vorangestellt sind.
 
 </dd> <dt>
 
-**BBuffer**
+**bBuffer**
 </dt> <dd>
 
-Ein Array von Zeichen, die auf eine Länge von initialisiert werden `sizeof(DWORD)` . Dieser Puffer enthält die Namen, auf die durch die Member **ncardnameoffset**, **nreadernameoffset**, **ncontainernameoffset** und **ncspnameoffset** verwiesen wird, sowie alle zusätzlichen Daten, die vom CSP bereitgestellt werden.
+Ein Array von Zeichen, die mit einer Länge von initialisiert `sizeof(DWORD)` werden. Dieser Puffer enthält die Namen, auf die von den **Membern nCardNameOffset,** **nReaderNameOffset,** **nContainerNameOffset** und **nCSPNameOffset** verwiesen wird, sowie alle zusätzlichen Daten, die vom CSP bereitgestellt werden.
 
-Alle Namen, die nicht bereitgestellt werden, müssen in diesem Puffer durch leere Zeichen folgen dargestellt werden.
+Alle Namen, die nicht bereitgestellt werden, müssen in diesem Puffer durch leere Zeichenfolgen dargestellt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Struktur serialisiert wird, müssen die Strukturmember an Grenzen ausgerichtet werden, die ein Vielfaches von 2 Bytes sind.
+Wenn diese Struktur serialisiert wird, müssen die Strukturmember an Begrenzungen ausgerichtet werden, die ein Vielfaches von 2 Bytes sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -162,8 +162,8 @@ Wenn diese Struktur serialisiert wird, müssen die Strukturmember an Grenzen aus
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -171,7 +171,7 @@ Wenn diese Struktur serialisiert wird, müssen die Strukturmember an Grenzen aus
 
 <dl> <dt>
 
-[**KERB \_ Zertifikat \_ Anmeldung**](/windows/desktop/api/Ntsecapi/ns-ntsecapi-kerb_certificate_logon)
+[**\_KERB-ZERTIFIKATANMELDUNG \_**](/windows/desktop/api/Ntsecapi/ns-ntsecapi-kerb_certificate_logon)
 </dt> </dl>
 
  

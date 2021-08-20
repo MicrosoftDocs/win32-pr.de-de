@@ -1,11 +1,11 @@
 ---
-title: ISOFT kbd advisesoftkeyboardeventsink-Methode (Software BDC. h)
-description: Die isoftkbd advisesoftkeyboardeventsink-Methode installiert eine weiche Tastaturereignis Senke, um onkeyselection-Benachrichtigungen von der Soft Tastatur zu verarbeiten.
+title: ISoftKbd AdviseSoftKeyboardEventSink-Methode (Softkbdc.h)
+description: Die ISoftKbd AdviseSoftKeyboardEventSink-Methode installiert eine Ereignissenke für die softe Tastatur, um OnKeySelection-Benachrichtigungen von der soft-Tastatur zu verarbeiten.
 ms.assetid: f7a441dc-7bef-4fc0-bc62-c153a55a844c
 keywords:
-- Advisesoftkeyboardeventsink-Methode, Text Dienste-Framework
-- Advisesoftkeyboardeventsink-Methode, Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services-Framework, advisesoftkeyboardeventsink-Methode
+- AdviseSoftKeyboardEventSink-Methode Textdienstframework
+- AdviseSoftKeyboardEventSink-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , AdviseSoftKeyboardEventSink-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ab17de2104c6104b044f027152cfc45cca968b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73a3a734e66bb319bb7e24b6ca3b27299f984f33b98772c1cc446c40e3f27426
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118877987"
 ---
-# <a name="isoftkbdadvisesoftkeyboardeventsink-method"></a>ISOFT kbd:: advisesoftkeyboardeventsink-Methode
+# <a name="isoftkbdadvisesoftkeyboardeventsink-method"></a>ISoftKbd::AdviseSoftKeyboardEventSink-Methode
 
-Die **isoftkbd:: advisesoftkeyboardeventsink** -Methode installiert eine weiche Tastaturereignis Senke, um onkeyselection-Benachrichtigungen von der Soft Tastatur zu verarbeiten.
+Die **ISoftKbd::AdviseSoftKeyboardEventSink-Methode** installiert eine Softtastaturereignissenke, um OnKeySelection-Benachrichtigungen von der soft-Tastatur zu verarbeiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ HRESULT AdviseSoftKeyboardEventSink(
 
 <dl> <dt>
 
-*dwkeyboardid* \[ in\]
+*dwKeyboardId* \[ In\]
 </dt> <dd>
 
-Der Bezeichner der Soft Tastatur.
+Bezeichner der soft-Tastatur.
 
 </dd> <dt>
 
-*riid* \[ in\]
+*riid* \[ In\]
 </dt> <dd>
 
-Der Schnittstellen Bezeichner für die Sink-Schnittstelle.
+Schnittstellenbezeichner für die Senkenschnittstelle.
 
 </dd> <dt>
 
-*Punk* \[ in\]
+*im NSD* \[ In\]
 </dt> <dd>
 
-Zeiger auf [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) für die Senke-Schnittstelle, die von *riid* angegeben wird. Dieser Parameter kann nicht auf **null** festgelegt werden.
+Zeiger auf [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) für die durch *riid* angegebene Senkenschnittstelle. Dieser Parameter kann nicht auf **NULL** festgelegt werden.
 
 </dd> <dt>
 
-*pdwcookie* \[ vorgenommen\]
+*pdwCookie* \[ out\]
 </dt> <dd>
 
-Zeiger auf den Puffer, in dem diese Methode das weiche Tastatur-"Cookie" abruft, das für die Verbindung mit dem Client verwendet wird. Das Cookie muss für jede Verbindung eindeutig sein.
+Zeiger auf den Puffer, in dem diese Methode das Softtastaturcookie abruft, das für die Verbindung mit dem Client verwendet wird. Das Cookie muss für jede Verbindung eindeutig sein.
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                        | BESCHREIBUNG                                    |
+| Wert                                                                                        | Beschreibung                                    |
 |----------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
 
 
 
@@ -96,9 +96,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 on Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -107,10 +107,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**Iweichkbd:: unadvisesoftkeyboarabventsink**](isoftkbd-unadvisesoftkeyboardeventsink.md)
+[**ISoftKbd::UnadviseSoftKeyboardEventSink**](isoftkbd-unadvisesoftkeyboardeventsink.md)
 </dt> </dl>
 
  

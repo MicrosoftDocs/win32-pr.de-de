@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Settings02-Klasse
-description: Die Benutzer Config01 Settings02-Klasse der MDM- \_ Richtlinie \_ \_ \_ konfiguriert zusätzliche Kalender in der Taskleiste.
+description: Die MDM \_ Policy \_ User \_ Config01 \_ Settings02-Klasse konfiguriert zusätzliche Kalender in der Taskleiste.
 ms.assetid: 66cfdb55-17a7-4586-86b3-70ba7dcd5637
 keywords:
 - MDM_Policy_User_Config01_Settings02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8bd0099d19ec4535abf6b525a7487b810b39704
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5f64f23f473324c7ee5dbba1dc7d51b416b7b3602125795799d1b39c8367b438
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045670"
 ---
-# <a name="mdm_policy_user_config01_settings02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ Settings02-Klasse
+# <a name="mdm_policy_user_config01_settings02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ Settings02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Benutzer Config01 Settings02-Klasse der MDM- \_ Richtlinie \_ \_ \_ konfiguriert zusätzliche Kalender in der Taskleiste.
+Die MDM \_ Policy \_ User \_ Config01 \_ Settings02-Klasse konfiguriert zusätzliche Kalender in der Taskleiste.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_User_Config01_Settings02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ Settings02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Settings02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ Settings02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Settings02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Konfigurations Kalender konfigurieren](/windows/client-management/mdm/policy-csp-settings#settings-configuretaskbarcalendar)
+[ConfigureTaskbarCalendar](/windows/client-management/mdm/policy-csp-settings#settings-configuretaskbarcalendar)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,7 +81,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

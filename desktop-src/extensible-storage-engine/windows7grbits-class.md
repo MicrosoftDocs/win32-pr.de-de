@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows7Grbits-Klasse'
-title: Windows7Grbits-Klasse (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: Weitere Informationen finden Sie unter Windows7Grbits-Klasse.
+title: Windows7Grbits-Klasse (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: Windows7Grbits class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows7.Windows7Grbits
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.windows7grbits(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 900943a30295631dafcb49a5fe866e3728c22a11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3725ef2ea1c3a2c84bb5d087527b0370fff6385e0638e764f1180ff756712130
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967160"
 ---
 # <a name="windows7grbits-class"></a>Windows7Grbits-Klasse
 
-Grbits, die der Windows 7-Version von ESENT hinzugefügt wurden.
+Grbits, die der Version Windows 7 von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Windows7. Windows7Grbits  
+  Microsoft.Isam.Esent.Interop.Windows7.Windows7Grbits  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,8 +62,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows7Grbits-Member](./windows7grbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

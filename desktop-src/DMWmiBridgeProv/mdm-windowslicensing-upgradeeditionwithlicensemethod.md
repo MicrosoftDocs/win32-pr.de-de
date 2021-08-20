@@ -1,11 +1,11 @@
 ---
-title: Upgradeeditionwithlicenermethod-Methode der MDM_WindowsLicensing-Klasse
-description: Methode zum Bereitstellen einer Lizenz für ein Editions Upgrade von Windows 10 Mobile-Geräten. Siehe auch Upgrade editionwithlicense.
+title: UpgradeEditionWithLicenseMethod-Methode der MDM_WindowsLicensing-Klasse
+description: Methode zum Bereitstellen einer Lizenz für ein Editionsupgrade von Windows 10 mobilen Geräten. Siehe auch UpgradeEditionWithLicense.
 ms.assetid: 1a57fb71-eea6-41bf-bc44-6d3a816096a4
 keywords:
-- Upgradeeditionwithlicenermethod-Methode
-- Upgradeeditionwithlicenermethod-Methode, MDM_WindowsLicensing-Klasse
-- MDM_WindowsLicensing-Klasse, upgradeeditionwithlicenermethod-Methode
+- UpgradeEditionWithLicenseMethod-Methode
+- UpgradeEditionWithLicenseMethod-Methode, MDM_WindowsLicensing-Klasse
+- MDM_WindowsLicensing-Klasse, UpgradeEditionWithLicenseMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b336ee4128aa520ecd463c3607254526c7c3dc7d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 26329c98bc73919d374787deea21841a2912a9df3fded8fdcde0637d8798c92f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913260"
 ---
-# <a name="upgradeeditionwithlicensemethod-method-of-the-mdm_windowslicensing-class"></a>Upgradeeditionwithlicenermethod-Methode der MDM- \_ windowslicensing-Klasse
+# <a name="upgradeeditionwithlicensemethod-method-of-the-mdm_windowslicensing-class"></a>UpgradeEditionWithLicenseMethod-Methode der \_ MDM-WindowsLicensing-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Methode zum Bereitstellen einer Lizenz für ein Editions Upgrade von Windows 10 Mobile-Geräten. Siehe auch [Upgrade editionwithlicense](/windows/client-management/mdm/windowslicensing-csp).
+Methode zum Bereitstellen einer Lizenz für ein Editionsupgrade von Windows 10 mobilen Geräten. Siehe auch [UpgradeEditionWithLicense](/windows/client-management/mdm/windowslicensing-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 UpgradeEditionWithLicenseMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -53,10 +53,10 @@ uint32 UpgradeEditionWithLicenseMethod(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -65,10 +65,10 @@ uint32 UpgradeEditionWithLicenseMethod(
 
 <dl> <dt>
 
-[**MDM- \_ windowslicensing**](mdm-windowslicensing.md)
+[**MDM \_ WindowsLicensing**](mdm-windowslicensing.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

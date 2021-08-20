@@ -1,31 +1,31 @@
 ---
-description: Die Tabelle InstallExecuteSequence listet Aktionen auf, die ausgeführt werden, wenn die Installations Aktion der obersten Ebene ausgeführt wird.
+description: In der Tabelle InstallExecuteSequence werden Aktionen aufgeführt, die ausgeführt werden, wenn die INSTALL-Aktion der obersten Ebene ausgeführt wird.
 ms.assetid: 995d4159-bfc9-48b2-8328-3ae8251d785d
 title: InstallExecuteSequence-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7d110debacab19739c3da69abf3948d11bb7aa6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d48fb83bd8f3c947feb81ab95df490572ba1ee68d423957759a95c323005070
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142165"
 ---
 # <a name="installexecutesequence-table"></a>InstallExecuteSequence-Tabelle
 
-Die Tabelle InstallExecuteSequence listet Aktionen auf, die ausgeführt werden, wenn die [Installations Aktion](install-action.md) der obersten Ebene ausgeführt wird.
+In der Tabelle InstallExecuteSequence werden Aktionen aufgeführt, die ausgeführt werden, wenn die [INSTALL-Aktion der obersten](install-action.md) Ebene ausgeführt wird.
 
-Aktionen in der Installations Sequenz bis zur [InstallValidate-Aktion](installvalidate-action.md)und alle Beendigungs Dialogfelder befinden sich in der [Tabelle InstallUISequence](installuisequence-table.md). Alle Aktionen von InstallValidate bis zum Ende der Installations Sequenz befinden sich in der InstallExecuteSequence-Tabelle. Da die InstallExecuteSequence-Tabelle eigenständig sein muss, sind alle erforderlichen Initialisierungs Aktionen wie z. b. die [LaunchConditions](launchconditions-action.md)-, [costinitialize](costinitialize-action.md)-, [filecost](filecost-action.md)-und [costfinalize](costfinalize-action.md) -Aktionen erforderlich.
+Aktionen in der Installationssequenz bis zur [InstallValidate-Aktion](installvalidate-action.md)und alle Beendigungsdialogfelder befinden sich in der [InstallUISequence-Tabelle](installuisequence-table.md). Alle Aktionen von InstallValidate bis zum Ende der Installationssequenz befinden sich in der Tabelle InstallExecuteSequence. Da die Tabelle InstallExecuteSequence allein stehen muss, verfügt sie über alle erforderlichen Initialisierungsaktionen, z. B. die [Aktionen LaunchConditions,](launchconditions-action.md) [CostInitialize,](costinitialize-action.md) [FileCost](filecost-action.md)und [CostFinalize.](costfinalize-action.md)
 
-[Benutzerdefinierte Aktionen](custom-actions.md) , für die eine Benutzeroberfläche erforderlich ist, sollten [**msiprocessmessage**](/windows/desktop/api/Msiquery/nf-msiquery-msiprocessmessage) anstelle von erstellten Dialogfeldern verwenden, die mithilfe der [Dialogfeld Tabelle](dialog-table.md)erstellt wurden
+[Benutzerdefinierte Aktionen,](custom-actions.md) die eine Benutzeroberfläche erfordern, sollten [**MsiProcessMessage**](/windows/desktop/api/Msiquery/nf-msiquery-msiprocessmessage) anstelle von erstellten Dialogfeldern verwenden, die mithilfe der [Dialogtabelle erstellt wurden.](dialog-table.md)
 
-Die InstallExecuteSequence-Tabelle weist die folgenden Spalten auf.
+Die Tabelle InstallExecuteSequence enthält die folgenden Spalten.
 
 
 
-| Spalte    | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte    | Typ                         | Key | Nullwerte zulässig |
 |-----------|------------------------------|-----|----------|
-| Aktion    | [Bezeichner](identifier.md) | J   | N        |
+| Aktion    | [Identifier](identifier.md) | J   | N        |
 | Bedingung | [Condition](condition.md)   | N   | J        |
 | Sequenz  | [Integer](integer.md)       | N   | J        |
 
@@ -37,53 +37,53 @@ Die InstallExecuteSequence-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Hinspiel
+<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Aktion
 </dt> <dd>
 
-Der Name der auszuführenden Aktion. Dabei handelt es sich entweder um eine integrierte Aktion oder um eine benutzerdefinierte Aktion.
+Name der auszuführenden Aktion. Dies ist entweder eine integrierte Aktion oder eine benutzerdefinierte Aktion.
 
 Primärer Tabellenschlüssel.
 
 </dd> <dt>
 
-<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Anlage
+<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Zustand
 </dt> <dd>
 
-Dieses Feld enthält einen bedingten Ausdruck. Wenn der Ausdruck zu false ausgewertet wird, wird die Aktion übersprungen. Wenn die Ausdruckssyntax ungültig ist, wird die Sequenz beendet und gibt iesbadaktiondata zurück. Weitere Informationen zur Syntax von Bedingungs Anweisungen finden Sie unter [Syntax für bedingte](conditional-statement-syntax.md)Anweisungen.
+Dieses Feld enthält einen bedingten Ausdruck. Wenn der Ausdruck falseausgewertet wird, wird die Aktion übersprungen. Wenn die Ausdruckssyntax ungültig ist, wird die Sequenz beendet und gibt iesBadActionData zurück. Informationen zur Syntax von bedingten Anweisungen finden Sie unter [Syntax für bedingte Anweisungen.](conditional-statement-syntax.md)
 
 </dd> <dt>
 
 <span id="Sequence"></span><span id="sequence"></span><span id="SEQUENCE"></span>Sequenz
 </dt> <dd>
 
-Zahl, die die Sequenz Position bestimmt, in der diese Aktion ausgeführt werden soll.
+Zahl, die die Sequenzposition bestimmt, an der diese Aktion ausgeführt werden soll.
 
-Ein positiver Wert stellt die Sequenz Position dar. Ein NULL-Wert gibt an, dass die Aktion nicht ausgeführt wird. Die folgenden negativen Werte geben an, dass diese Aktion ausgeführt werden soll, wenn das Installationsprogramm das zugehörige Beendigungs Flag zurückgibt. Jedes terminierungsflag (negativer Wert) kann mit nur einer Aktion verwendet werden. Mehrere Aktionen können über Beendigungs Flags verfügen, müssen jedoch unterschiedliche Flags aufweisen. Beendigungs Flags (negative Werte) werden in der Regel in [Dialog Feldern](dialog-boxes.md)verwendet.
+Ein positiver Wert stellt die Sequenzposition dar. Ein NULL-Wert gibt an, dass die Aktion nicht ausgeführt wird. Die folgenden negativen Werte geben an, dass diese Aktion ausgeführt werden soll, wenn das Installationsprogramm das zugeordnete Beendigungsflag zurückgibt. Jedes Beendigungsflag (negativer Wert) kann mit nicht mehr als einer Aktion verwendet werden. Mehrere Aktionen können Beendigungsflags haben, müssen jedoch unterschiedliche Flags sein. Beendigungsflags (negative Werte) werden in der Regel mit [Dialogfeldern verwendet.](dialog-boxes.md)
 
 
 
-| Beendigungs Flag          | Wert | BESCHREIBUNG                                                                          |
+| Beendigungsflag          | Wert | Beschreibung                                                                          |
 |---------------------------|-------|--------------------------------------------------------------------------------------|
-| msidoaktionstatus-Erfolg  | -1    | Erfolgreicher Abschluss. Wird mit den Dialogfeldern " [Beenden](exit-dialog.md) " verwendet.               |
-| msidoaktionstatus ususerexit | -2    | Der Benutzer beendet die Installation. Wird mit [Userexit](userexit-dialog.md) -Dialogfeldern verwendet.     |
-| msidoaktionstatus-Fehler  | -3    | Schwerwiegender Exit wird beendet. Wird mit den Dialogfeldern " [FatalError](fatalerror-dialog.md) " verwendet. |
-| msidoaktionstatus-Suspend  | –4    | Die Installation wurde angehalten.                                                                |
+| msiDoActionStatusSuccess  | –1    | Erfolgreicher Abschluss. Wird mit [Exitdialogfeldern](exit-dialog.md) verwendet.               |
+| msiDoActionStatusUserExit | –2    | Der Benutzer beendet die Installation. Wird mit [UserExit-Dialogfeldern](userexit-dialog.md) verwendet.     |
+| msiDoActionStatusFailure  | -3    | Schwerwiegendes Beenden wird beendet. Wird mit einem [FatalError-Dialogfeld](fatalerror-dialog.md) verwendet. |
+| msiDoActionStatusSuspend  | –4    | Die Installation wurde angehalten.                                                                |
 
 
 
  
 
-NULL, alle anderen negativen Zahlen oder ein NULL-Wert geben an, dass die Aktion nie ausgeführt wird.
+Null, alle anderen negativen Zahlen oder ein NULL-Wert geben an, dass die Aktion nie ausgeführt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der lokalisierte Text für die Fortschrittsanzeige oder die Protokollierung wird in der [Tabelle "aktiontext](actiontext-table.md)" angegeben.
+Lokalisierter Text für die Statusanzeige oder -protokollierung wird in der [ActionText-Tabelle angegeben.](actiontext-table.md)
 
-Ein Beispiel für eine Sequenz Tabelle finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Ein Beispiel für eine Sequenztabelle finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

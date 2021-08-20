@@ -1,9 +1,9 @@
 ---
-title: WMDM_PROP_CONFIG Struktur
-description: Die WMDM- \_ Prop- \_ Konfigurations Struktur beschreibt eine Reihe kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschafts Beschreibungen in einem Array von WMDM-untergeordneten \_ \_ Strukturen.
+title: WMDM_PROP_CONFIG-Struktur
+description: Die WMDM \_ PROP \_ CONFIG-Struktur beschreibt einen Satz kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschaftenbeschreibungen in einem Array von WMDM \_ PROP \_ DESC-Strukturen.
 ms.assetid: cf116861-e31d-4561-b262-e271888afc24
 keywords:
-- WMDM_PROP_CONFIG Struktur von Windows-Medien Device Manager
+- WMDM_PROP_CONFIG struktur windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b19314b2f012d25fa2d97b44b9dc7524f9e3355
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e50cd18f5b7646934a6add71674f93ebaae700ab39e57f833e555ea3688ecb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862820"
 ---
-# <a name="wmdm_prop_config-structure"></a>WMDM- \_ Prop- \_ Konfigurations Struktur
+# <a name="wmdm_prop_config-structure"></a>WMDM \_ PROP \_ CONFIG-Struktur
 
-Die **WMDM- \_ Prop- \_ Konfigurations** Struktur beschreibt eine Reihe kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschafts Beschreibungen in einem Array von [**WMDM-unter \_ \_**](wmdm-prop-desc.md) geordneten Strukturen.
+Die **WMDM \_ PROP \_ CONFIG-Struktur** beschreibt einen Satz kompatibler Eigenschaftswerte für alle Eigenschaften, die vom Gerät für ein bestimmtes Format unterstützt werden. Diese Struktur enthält eine Reihe von Eigenschaftenbeschreibungen in einem Array von [**WMDM \_ PROP \_ DESC-Strukturen.**](wmdm-prop-desc.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ typedef struct _WMDM_PROP_CONFIG {
 
 <dl> <dt>
 
-**npreference**
+**nPreference**
 </dt> <dd>
 
-Die bevorzugte Ebene des Geräts für diese Konfiguration. Der niedrigste Wert gibt die bevorzugte Konfiguration an.
+Gerätepräferenz für diese Konfiguration. Der niedrigste Wert gibt die bevorzugte Konfiguration an.
 
 </dd> <dt>
 
-**npropentsc**
+**nPropDesc**
 </dt> <dd>
 
-Anzahl der Eigenschafts Beschreibungen, die in dieser Konfiguration enthalten sind. Für jede Eigenschaft, die für das angegebene Format unterstützt wird, gibt es eine einzelne Eigenschafts Beschreibung.
+Anzahl der in dieser Konfiguration enthaltenen Eigenschaftenbeschreibungen. Es gibt eine einzelne Eigenschaftenbeschreibung für jede Eigenschaft, die für das angegebene Format unterstützt wird.
 
 </dd> <dt>
 
-**ppropentsc**
+**pPropDesc**
 </dt> <dd>
 
-Zeiger auf ein Array von [**WMDM \_ \_**](wmdm-prop-desc.md) -untergeordneten Strukturen, die Eigenschafts Beschreibungen enthalten. Die Größe des Arrays ist gleich dem Wert von **npropde SC**. Die Anwendung muss diesen Arbeitsspeicher freigeben, wenn Sie damit fertig ist.
+Zeiger auf ein Array von [**WMDM \_ PROP \_ DESC-Strukturen,**](wmdm-prop-desc.md) die Eigenschaftenbeschreibungen enthalten. Die Größe des Arrays entspricht dem Wert von **nPropDesc.** Die Anwendung muss diesen Arbeitsspeicher freigeben, wenn sie fertig ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von [**IWMDMDevice3:: getformatcapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability) für ein bestimmtes Format zurückgegebene [**WMDM- \_ Format \_**](wmdm-format-capability.md) Funktionsstruktur besteht aus einer Reihe von Eigenschafts Konfigurationen. **WMDM \_ Diese \_** Konfigurationen werden von der prop-Konfigurations Struktur beschrieben.
+Die [**WMDM \_ FORMAT \_ CAPABILITY-Struktur,**](wmdm-format-capability.md) die von [**IWMDMDevice3::GetFormatCapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability) für ein bestimmtes Format zurückgegeben wird, besteht aus einer Reihe von Eigenschaftenkonfigurationen. **WMDM \_ PROP \_ CONFIG-Strukturen** beschreiben diese Konfigurationen.
 
-Eine Eigenschaften Konfiguration beschreibt Werte für alle Eigenschaften, die für ein bestimmtes Format unterstützt werden. Die Werte verschiedener Eigenschaften in einer einzelnen Konfiguration sind miteinander kompatibel. Beispielsweise enthält eine Konfiguration für eine Audiodatei gültige Werte der Samplingrate und gültige Werte der Bitrate, sodass alle Kombinationen dieser Stichproben-und Bitraten auf dem Gerät wiedergegeben werden können.
+Eine Eigenschaftenkonfiguration beschreibt Werte für alle Eigenschaften, die für ein bestimmtes Format unterstützt werden. Die Werte verschiedener Eigenschaften in einer einzelnen Konfiguration sind miteinander kompatibel. Beispielsweise enthält eine Konfiguration für eine Audiodatei gültige Werte der Abtastrate und gültige Werte der Bitrate, sodass alle Kombinationen dieser Stichproben- und Bitraten auf dem Gerät wiedergegeben werden können.
 
-Der Aufrufer muss den von **ppropde** genutzten Arbeitsspeicher freigeben. Ein Beispiel hierfür finden Sie unter [**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md).
+Der Aufrufer ist erforderlich, um den von **pPropDesc** verwendeten Arbeitsspeicher freizugeben. Ein Beispiel hierfür finden Sie unter [**WMDM \_ FORMAT \_ CAPABILITY**](wmdm-format-capability.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Der Aufrufer muss den von **ppropde** genutzten Arbeitsspeicher freigeben. Ein B
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
@@ -85,22 +85,22 @@ Der Aufrufer muss den von **ppropde** genutzten Arbeitsspeicher freigeben. Ein B
 
 <dl> <dt>
 
-[**IWMDMDevice3:: getformatcapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
+[**IWMDMDevice3::GetFormatCapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
 </dt> <dt>
 
-[**\_ \_ \_ Formular für gültige \_ Werte \_ für WMDM-Enumeration**](wmdm-enum-prop-valid-values-form.md)
+[**WMDM \_ ENUM \_ PROP \_ VALID \_ VALUES \_ FORM**](wmdm-enum-prop-valid-values-form.md)
 </dt> <dt>
 
-[**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md)
+[**\_WMDM-FORMATFUNKTION \_**](wmdm-format-capability.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop- \_ Abteilung**](wmdm-prop-desc.md)
+[**WMDM \_ PROP \_ DESC**](wmdm-prop-desc.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop \_ Values- \_ Enumeration**](wmdm-prop-values-enum.md)
+[**WMDM \_ PROP \_ VALUES \_ ENUM**](wmdm-prop-values-enum.md)
 </dt> <dt>
 
-[**Bereich der WMDM- \_ Prop- \_ Werte \_**](wmdm-prop-values-range.md)
+[**\_ \_ WMDM-PROP-WERTEBEREICH \_**](wmdm-prop-values-range.md)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

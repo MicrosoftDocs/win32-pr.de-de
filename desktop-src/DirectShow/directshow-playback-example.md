@@ -1,33 +1,33 @@
 ---
-description: Dieser Abschnitt enthält den gesamten Code für das Tutorial Audiowiedergabe und Video Wiedergabe in DirectShow.
+description: Dieser Abschnitt enthält den vollständigen Code für das Tutorial Audio-/Videowiedergabe in DirectShow.
 ms.assetid: a96474d9-8258-4c5d-b339-48fe167bd615
-title: Beispiel zur DirectShow-Wiedergabe
+title: DirectShow-Wiedergabebeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 523117facf1917233372b672af3a48ebc8e8101e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d8f5a33d0692a47578f957e1a376a09d98fb6a36c7029134452968b253cd46a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966370"
 ---
-# <a name="directshow-playback-example"></a>Beispiel zur DirectShow-Wiedergabe
+# <a name="directshow-playback-example"></a>DirectShow-Wiedergabebeispiel
 
-Dieser Abschnitt enthält den gesamten Code für das Tutorial [Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md).
+Dieser Abschnitt enthält den vollständigen Code für das Tutorial [Audio/Video Playback in DirectShow](audio-video-playback-in-directshow.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Wiedergabe. h](playback-h.md)
--   [Video. h](video-h.md)
--   [Main. cpp](main-cpp.md)
--   [Wiedergabe. cpp](playback-cpp.md)
--   [Video. cpp](video-cpp.md)
+-   [playback.h](playback-h.md)
+-   [video.h](video-h.md)
+-   [main.cpp](main-cpp.md)
+-   [playback.cpp](playback-cpp.md)
+-   [video.cpp](video-cpp.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Audiowiedergabe und Video Wiedergabe in DirectShow](audio-video-playback-in-directshow.md)
+[Audio-/Videowiedergabe in DirectShow](audio-video-playback-in-directshow.md)
 </dt> </dl>
 
  

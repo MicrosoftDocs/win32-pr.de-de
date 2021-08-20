@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse Win32 serialportsetting Association verknüpft einen seriellen Anschluss und seine Konfigurationseinstellungen.
+description: Die WMI-Klasse für die Win32 SerialPortSetting-Zuordnung bezieht sich auf einen \_ seriellen Anschluss und dessen Konfigurationseinstellungen.
 ms.assetid: 57856207-abe5-4d93-9a34-acfe30ccd80c
 ms.tgt_platform: multiple
 title: Win32_SerialPortSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 713cdb57b5ed7135529959d3c17f7453924ce1dc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a40d11600a0da627ec887327b44fd860def774feff624936c302297d162d6372
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118007753"
 ---
-# <a name="win32_serialportsetting-class"></a>Win32 \_ serialportsetting-Klasse
+# <a name="win32_serialportsetting-class"></a>Win32 \_ SerialPortSetting-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) **Win32 \_ serialportsetting** Association verknüpft einen seriellen Anschluss und seine Konfigurationseinstellungen.
+Die **WMI-Klasse für die Win32 \_ SerialPortSetting-Zuordnung** bezieht sich auf einen seriellen Anschluss und dessen Konfigurationseinstellungen. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_SerialPortSetting : Win32_DeviceSettings
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ serialportsetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SerialPortSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ serialportsetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SerialPortSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ SerialPort**
+Datentyp: **Win32 \_ SerialPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ SerialPort")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ SerialPort")
 </dt> </dl>
 
-Ein [**Win32- \_ SerialPort**](win32-serialport.md) , der die Eigenschaften eines seriellen Anschlusses auf dem Computersystem enthält.
+Ein [**Win32 \_ SerialPort,**](win32-serialport.md) der die Eigenschaften eines seriellen Anschlusses auf dem Computersystem enthält.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ serialportconfiguration**
+Datentyp: **Win32 \_ SerialPortConfiguration**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ serialportconfiguration")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) [**("Einstellung"), MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ SerialPortConfiguration")
 </dt> </dl>
 
-Eine [**Win32- \_ serialportconfiguration**](win32-serialportconfiguration.md) , die die Konfigurationseinstellung für den seriellen Anschluss enthält.
+Eine [**Win32 \_ SerialPortConfiguration,**](win32-serialportconfiguration.md) die die Konfigurationseinstellung für den seriellen Anschluss enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ serialportsetting** " wird von [**Win32- \_ devicesettings**](win32-devicesettings.md)abgeleitet.
+Die **Win32 \_ SerialPortSetting-Klasse** wird von [**Win32 \_ DeviceSettings abgeleitet.**](win32-devicesettings.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die Win32-Klasse " **\_ serialportsetting** " wird von [**Win32- \_ devicesettin
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -106,10 +106,10 @@ Die Win32-Klasse " **\_ serialportsetting** " wird von [**Win32- \_ devicesettin
 
 <dl> <dt>
 
-[**Win32-Geräte-Manager \_**](win32-devicesettings.md)
+[**Win32 \_ DeviceSettings**](win32-devicesettings.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

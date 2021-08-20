@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn stopburn-Methode
-description: Die stopburn-Methode beendet den CD-Brennvorgang.
+title: IWMPC über die Stop Ausredungsmethode
+description: Mit der stop Stops-Methode wird der CD-Prozess beendet.
 ms.assetid: f067010c-7125-4f3b-9315-51e2362d6ba9
 keywords:
-- stopburn-Methode, Windows-Media Player
-- stopburn-Methode, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, stopburn-Methode
+- stopMethod Windows Media Player
+- stopMethod Windows Media Player , IWMPCnutzeroberfläche
+- IWMPC über die Schnittstelle Windows Media Player , stopFace-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b65721f46beb8dae4c05756a66d954646c9d5336
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1eb4dc77590f774623ed905a22941a68af5971e7b9c8a639794687d83a95fd41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861940"
 ---
-# <a name="iwmpcdromburnstopburn-method"></a>Iwmpcdromburn:: stopburn-Methode
+# <a name="iwmpcdromburnstopburn-method"></a>IWMPC über die Methode "IWMPCakuSy"::stop Auswendung
 
-Die **stopburn** -Methode beendet den CD-Brennvorgang.
+Mit **der stop Stops-Methode** wird der CD-Prozess beendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,10 +69,10 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCorpora Überl-Schnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromburn. startburn (VB und c#)**](wmplibiwmpcdromburn-iwmpcdromburn-startburn--vb-and-c.md)
+[**IWMPC csv Csv.start Auswertwert (VB und C#)**](wmplibiwmpcdromburn-iwmpcdromburn-startburn--vb-and-c.md)
 </dt> </dl>
 
  

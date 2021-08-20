@@ -1,5 +1,5 @@
 ---
-description: In den folgenden Themen werden Lösungen für allgemeine Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit PNRP auftreten.
+description: In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit PNRP auftreten.
 ms.assetid: 107287ef-1a71-4974-8830-a0c2a45c4981
 title: Verwenden von PNRP
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "119287670"
 ---
 # <a name="using-pnrp"></a>Verwenden von PNRP
 
-In den folgenden Themen werden Lösungen für allgemeine Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit PNRP auftreten.
+In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit PNRP auftreten.
 
 
 
-| Thema                                                      | BESCHREIBUNG                                            |
+| Thema                                                      | Beschreibung                                            |
 |------------------------------------------------------------|--------------------------------------------------------|
-| [Registrieren eines Peernamens](registering-a-peer-name.md)     | Registrieren eines Peernamens mithilfe des Winsock 2-NSP   |
-| [Aufheben der Registrierung eines Peernamens](unregistering-a-peer-name.md) | Aufheben der Registrierung eines Peernamens mithilfe des Winsock 2-NSP |
-| [Auflösen eines Peernamens](resolving-a-peer-name.md)         | Auflösen eines Peernamens mithilfe des Winsock 2-NSP    |
+| [Registrieren eines Peernamens](registering-a-peer-name.md)     | Registrieren eines Peernamens mit dem Winsock 2-NSP   |
+| [Aufheben der Registrierung eines Peernamens](unregistering-a-peer-name.md) | Aufheben der Registrierung eines Peernamens mithilfe des Winsock 2-NSP. |
+| [Auflösen eines Peernamens](resolving-a-peer-name.md)         | Auflösen eines Peernamens mithilfe des Winsock 2-NSP.    |
 | [Aufzählen von Clouds](enumerating-clouds.md)               | Aufzählen von Clouds mithilfe des Winsock 2-NSP       |
 
 

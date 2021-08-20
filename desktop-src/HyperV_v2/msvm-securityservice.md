@@ -1,5 +1,5 @@
 ---
-description: Stellt den Sicherheitsdienst dar. Sie wird zum Konfigurieren der Sicherheitseinstellungen virtueller Systeme verwendet.
+description: Stellt den Sicherheitsdienst dar. Es wird zum Konfigurieren der Sicherheitseinstellungen des virtuellen Systems verwendet.
 ms.assetid: 00097d81-9fea-4b84-b5dd-e45af46d6e0a
 title: Msvm_SecurityService-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cc7b15af3d3033487464fe7b29a93dc649ffbd62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32596a46abaa6d745223ab01f8da734e167909f01621deef85f0b21ddfc0b99e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118146895"
 ---
-# <a name="msvm_securityservice-class"></a>MSVM \_ SecurityService-Klasse
+# <a name="msvm_securityservice-class"></a>Msvm \_ SecurityService-Klasse
 
-Stellt den Sicherheitsdienst dar. Sie wird zum Konfigurieren der Sicherheitseinstellungen virtueller Systeme verwendet.
+Stellt den Sicherheitsdienst dar. Es wird zum Konfigurieren der Sicherheitseinstellungen des virtuellen Systems verwendet.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -37,25 +37,25 @@ class Msvm_SecurityService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ SecurityService** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SecurityService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM- \_ SecurityService** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ SecurityService-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                            | BESCHREIBUNG                                                             |
+| Methode                                                                                            | Beschreibung                                                             |
 |:--------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| [**Getkeyprotector**](msvm-securityservice-getkeyprotector.md)                                   | Methode, mit der die Schlüssel Schutzvorrichtung für ein virtuelles System abgerufen wird.<br/>   |
-| [**Modifysecuritysettings**](msvm-securityservice-modifysecuritysettings.md)                     | Ändert die aktuellen Sicherheitseinstellungen einer virtuellen Maschine.<br/> |
-| [**Restorelastknowngoodkeyprotector**](msvm-securityservice-restorelastknowngoodkeyprotector.md) | Methode für die Wiederherstellung der letzten als funktionierend bekannten Schlüssel Schutzvorrichtung.<br/> |
-| [**Setkeyprotector**](msvm-securityservice-setkeyprotector.md)                                   | Methode, mit der die Schlüssel Schutzvorrichtung für ein virtuelles System festgelegt wird.<br/>        |
-| [**Setsecuritypolicy**](msvm-securityservice-setsecuritypolicy.md)                               | Methode, mit der die Schlüssel Schutzvorrichtung für ein virtuelles System festgelegt wird.<br/>        |
-| [**Start Service**](msvm-securityservice-startservice.md)                                         | Startet den Dienst.<br/>                                          |
-| [**Stop Service**](msvm-securityservice-stopservice.md)                                           | Beendet den Dienst.<br/>                                           |
+| [**GetKeyProtector**](msvm-securityservice-getkeyprotector.md)                                   | Methode zum Abrufen der Schlüsselschutzvorrichtung für ein virtuelles System.<br/>   |
+| [**ModifySecuritySettings**](msvm-securityservice-modifysecuritysettings.md)                     | Ändert die aktuellen Sicherheitseinstellungen eines virtuellen Computers.<br/> |
+| [**RestoreLastKnownGoodKeyProtector**](msvm-securityservice-restorelastknowngoodkeyprotector.md) | Methode zum Wiederherstellen der letzten bekannten guten Schlüsselschutzvorrichtung.<br/> |
+| [**SetKeyProtector**](msvm-securityservice-setkeyprotector.md)                                   | Methode zum Festlegen der Schlüsselschutzvorrichtung für ein virtuelles System.<br/>        |
+| [**SetSecurityPolicy**](msvm-securityservice-setsecuritypolicy.md)                               | Methode zum Festlegen der Schlüsselschutzvorrichtung für ein virtuelles System.<br/>        |
+| [**Startservice**](msvm-securityservice-startservice.md)                                         | Startet den Dienst.<br/>                                          |
+| [**StopService**](msvm-securityservice-stopservice.md)                                           | Beendet den Dienst.<br/>                                           |
 
 
 
@@ -67,10 +67,10 @@ Die **MSVM- \_ SecurityService** -Klasse verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -79,7 +79,7 @@ Die **MSVM- \_ SecurityService** -Klasse verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

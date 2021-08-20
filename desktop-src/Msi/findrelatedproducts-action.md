@@ -1,43 +1,43 @@
 ---
-description: Die Aktion FindRelatedProducts wird nacheinander durch jeden Datensatz der upgradetabelle durchlaufen und vergleicht den UpgradeCode, die Produktversion und die Sprache in jeder Zeile mit den auf dem System installierten Produkten.
+description: Die Aktion FindRelatedProducts durchläuft jeden Datensatz der Upgradetabelle nacheinander und vergleicht den Upgradecode, die Produktversion und die Sprache in jeder Zeile mit produkten, die auf dem System installiert sind.
 ms.assetid: 7efcb767-9bdf-43a4-83b8-61b6fc84adf6
-title: FindRelatedProducts-Aktion
+title: Aktion "FindRelatedProducts"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a87973631e51315df17a156bc8c57aa9facd84f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8201a2e86f9dec09931b17cd4dd594c45e4bf78de32ba438b8824a6f540563fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142879"
 ---
-# <a name="findrelatedproducts-action"></a>FindRelatedProducts-Aktion
+# <a name="findrelatedproducts-action"></a>Aktion "FindRelatedProducts"
 
-Die Aktion FindRelatedProducts wird nacheinander durch jeden Datensatz der [upgradetabelle](upgrade-table.md) durchlaufen und vergleicht den UpgradeCode, die Produktversion und die Sprache in jeder Zeile mit den auf dem System installierten Produkten. Wenn "FindRelatedProducts" eine Übereinstimmung zwischen den Upgradeinformationen und einem installierten Produkt erkennt, fügt Sie den Produktcode an die Eigenschaft an, die in der Spalte "Aktions Eigenschaft" von "upgradetable" angegeben ist.
+Die Aktion FindRelatedProducts durchläuft jeden Datensatz der [Upgradetabelle](upgrade-table.md) nacheinander und vergleicht den Upgradecode, die Produktversion und die Sprache in jeder Zeile mit produkten, die auf dem System installiert sind. Wenn FindRelatedProducts eine Entsprechung zwischen den Upgradeinformationen und einem installierten Produkt erkennt, wird der Produktcode an die Eigenschaft angefügt, die in der Spalte ActionProperty der UpgradeTable angegeben ist.
 
-Die Aktion "FindRelatedProducts" wird nur bei der erstmaligen Installation des Produkts ausgeführt. Die Aktion "FindRelatedProducts" wird während des Wartungsmodus oder der nicht Installation nicht ausgeführt.
+Die Aktion FindRelatedProducts wird nur bei der ersten Installation des Produkts ausgeführt. Die Aktion FindRelatedProducts wird nicht während des Wartungsmodus oder der Deinstallation ausgeführt.
 
 ## <a name="database-tables-queried"></a>Abgefragte Datenbanktabellen
 
-Mit dieser Aktion wird die folgende Tabelle abgefragt:
+Diese Aktion fragt die folgende Tabelle ab:
 
 [Upgradetabelle](upgrade-table.md)
 
 ## <a name="properties-used"></a>Verwendete Eigenschaften
 
-Die Aktion FindRelatedProducts verwendet die [**UpgradeCode**](upgradecode.md) -Eigenschaft und die in der upgradetabelle erstellten Versions-und Sprachinformationen, um installierte Produkte zu erkennen, die von dem ausstehenden Upgrade betroffen sind. Der Produktcode der erkannten Produkte wird an die Eigenschaft in der Spalte "Aktions Eigenschaft" von "upgradetable" angehängt.
+Die Aktion FindRelatedProducts verwendet die [**UpgradeCode-Eigenschaft**](upgradecode.md) und die Versions- und Sprachinformationen, die in der Upgradetabelle erfasst wurden, um installierte Produkte zu erkennen, die vom ausstehenden Upgrade betroffen sind. Er fügt den Produktcode der erkannten Produkte an die -Eigenschaft in der ActionProperty -Spalte der UpgradeTable an.
 
-FindRelatedProducts erkennt nur vorhandene Produkte, die mithilfe des Windows Installer mit einer MSI-Datei installiert wurden, die eine [**UpgradeCode**](upgradecode.md) -Eigenschaft definiert, eine [**ProductVersion**](productversion.md) -Eigenschaft und einen Wert für die [**productlanguage**](productlanguage.md) -Eigenschaft, die eine der in der [**Vorlagen Zusammenfassungs**](template-summary.md) Eigenschaft aufgelisteten Sprachen ist.
+FindRelatedProducts erkennt nur vorhandene Produkte, die mit dem Windows Installer installiert wurden, mit einem .msi, der eine [**UpgradeCode-Eigenschaft,**](upgradecode.md) eine [**ProductVersion-Eigenschaft**](productversion.md) und einen [](template-summary.md) Wert für die [**ProductLanguage-Eigenschaft**](productlanguage.md) definiert, die eine der in der Eigenschaft "Vorlagenzusammenfassung" aufgeführten Sprachen ist.
 
-Beachten Sie, dass "FindRelatedProducts" die von " [**msigetproductinfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)" zurückgegebene Sprache verwendet. Damit FindRelatedProducts ordnungsgemäß funktioniert, muss der Paket Ersteller sicherstellen, dass die [**productlanguage**](productlanguage.md) -Eigenschaft in der [Eigenschaften Tabelle](property-table.md) auf eine Sprache festgelegt ist, die auch in der [**Template-Übersichts**](template-summary.md) Eigenschaft aufgeführt ist. Weitere [wichtige Upgrades finden Sie unter Vorbereiten einer Anwendung](preparing-an-application-for-future-major-upgrades.md).
+Beachten Sie, dass FindRelatedProducts die von [**MsiGetProductInfo zurückgegebene Sprache verwendet.**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa) Damit FindRelatedProducts ordnungsgemäß funktioniert, muss der Paketautor sicherstellen, dass die [**ProductLanguage-Eigenschaft**](productlanguage.md) in der [Property](property-table.md) -Tabelle auf eine Sprache festgelegt ist, die auch in der Eigenschaft für die Vorlagenzusammenfassung [**aufgeführt**](template-summary.md) ist. Weitere Informationen finden Sie unter Preparing an Application for Future Major Upgrades (Vorbereiten einer Anwendung [für zukünftige Hauptupgrades).](preparing-an-application-for-future-major-upgrades.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-FindRelatedProducts muss in der Tabelle " [InstallUISequence](installuisequence-table.md) " und in [InstallExecuteSequence](installexecutesequence-table.md) -Tabellen erstellt werden. Das Installationsprogramm verhindert, dass findrelated-Produkte in InstallExecuteSequence ausgeführt werden, wenn die Aktion bereits in InstallUISequence ausgeführt wurde. Die FindRelatedProducts-Aktion muss vor der Aktion " [MigrateFeatureStates](migratefeaturestates-action.md) " und der [Aktion "RemoveExistingProducts](removeexistingproducts-action.md)" erfolgen.
+FindRelatedProducts sollte in die [Tabellen InstallUISequence](installuisequence-table.md) und [InstallExecuteSequence erstellt](installexecutesequence-table.md) werden. Das Installationsprogramm verhindert die Ausführung von FindRelated Products in InstallExecuteSequence, wenn die Aktion bereits in InstallUISequence ausgeführt wurde. Die Aktion FindRelatedProducts muss vor der [MigrateFeatureStates-Aktion](migratefeaturestates-action.md) und der [RemoveExistingProducts-Aktion kommen.](removeexistingproducts-action.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-FindRelatedProducts sendet eine Aktions Daten Nachricht für jedes zugehörige Produkt, das auf dem System erkannt wird.
+FindRelatedProducts sendet eine Aktionsdatenmeldung für jedes zugehörige Produkt, das im System erkannt wird.
 
  
 

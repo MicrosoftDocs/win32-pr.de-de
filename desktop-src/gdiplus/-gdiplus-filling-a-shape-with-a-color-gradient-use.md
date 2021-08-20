@@ -1,7 +1,7 @@
 ---
-description: Sie können eine Form mit einer sich schrittweise ändernden Farbe füllen, indem Sie einen Farbverlaufspinsel verwenden.
+description: Sie können eine Form mit einer sich allmählich ändernden Farbe füllen, indem Sie einen Farbverlaufspinsel verwenden.
 ms.assetid: 7aa94b39-bd4c-4e66-b0dc-77f8953797b1
-title: Auffüllen einer Form mit einem Farbverlauf
+title: Füllen einer Form mit einem Farbverlauf
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 2ad27cd477ead63bd104c7462145f3e7063f997127c8d031afc1331f99d654ea
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118067240"
 ---
-# <a name="filling-a-shape-with-a-color-gradient"></a>Auffüllen einer Form mit einem Farbverlauf
+# <a name="filling-a-shape-with-a-color-gradient"></a>Füllen einer Form mit einem Farbverlauf
 
-Sie können eine Form mit einer sich schrittweise ändernden Farbe füllen, indem Sie einen Farbverlaufspinsel verwenden. Windows GDI+ bietet lineare Farbverlaufspinsel und Pfadverlaufspinsel. Die folgende Abbildung zeigt ein Rechteck, das mit einem pinsel für linearen Farbverlauf und einer mit einem Pfadverlaufspinsel gefüllten Ellipse gefüllt ist.
+Sie können eine Form mit einer sich allmählich ändernden Farbe füllen, indem Sie einen Farbverlaufspinsel verwenden. Windows GDI+ stellt lineare Farbverlaufspinsel und Pfadfarbengradpinsel bereit. Die folgende Abbildung zeigt ein Rechteck, das mit einem linearen Farbverlaufspinsel gefüllt ist, und eine Ellipse, die mit einem Pfadfarbepinsel gefüllt ist.
 
-![Abbildung eines Rechtecks, das von oben links nach unten rechts gefüllt ist, und einer Ellipse, die sich von der Mitte bis zum Rand füllt](images/gradient2.png)
+![Abbildung eines Rechtecks, das von oben links nach unten rechts gefüllt ist, und einer Ellipse, die von zentriert zum Rand gefüllt wird](images/gradient2.png)
 
-Weitere Informationen zu Farbverlaufspinsel finden Sie unter [Auffüllen von Formen mit einem Farbverlaufspinsel.](-gdiplus-filling-shapes-with-a-gradient-brush-use.md)
+Weitere Informationen zu Farbverlaufspinsel finden Sie unter [Füllen von Formen mit einem Farbverlaufspinsel.](-gdiplus-filling-shapes-with-a-gradient-brush-use.md)
 
  
 

@@ -1,7 +1,7 @@
 ---
 description: Ruft das Enddatum für die Gültigkeit des Zertifikats ab.
 ms.assetid: 25e76b25-9a18-439c-acb8-e0af97b6fcd5
-title: Certificate. validtodate (Eigenschaft)
+title: Certificate.ValidToDate-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 08f6c0748c38ec31085c937eda37a413a3644f13
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a94e061719dc221cedf2f086648677373c9dd7b72d1619b22bb288b484534de9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126790"
 ---
-# <a name="certificatevalidtodate-property"></a>Certificate. validtodate (Eigenschaft)
+# <a name="certificatevalidtodate-property"></a>Certificate.ValidToDate-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **validtodate** -Eigenschaft ruft das Enddatum für die Gültigkeit des Zertifikats ab.
+Die **ValidToDate-Eigenschaft** ruft das Enddatum für die Gültigkeit des Zertifikats ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ Ein Datum, das das Enddatum für die Gültigkeit des Zertifikats angibt.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
@@ -58,7 +58,7 @@ Ein Datum, das das Enddatum für die Gültigkeit des Zertifikats angibt.
 
 <dl> <dt>
 
-[**Stellt**](certificate.md)
+[**Zertifikat**](certificate.md)
 </dt> </dl>
 
  

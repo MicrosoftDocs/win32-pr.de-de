@@ -1,29 +1,29 @@
 ---
-description: Wird durch eine asynchrone Media Foundation Transformation (MFT) als Antwort auf eine MFT- \_ Nachrichten \_ Befehls \_ markernachricht gesendet.
+description: Wird von einer asynchronen Media Foundation-Transformation (MFT) als Reaktion auf eine MFT \_ MESSAGE \_ COMMAND \_ MARKER-Nachricht gesendet.
 ms.assetid: d0c0d62d-9133-4d4b-8606-c2ae1d4c9f0a
-title: Metransformmarker-Ereignis (mfobjects. h)
+title: METransformMarker-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab79c47e2ddb26f2366aff075548f7905807df1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7029119b30314e56531c0afb29accadb67e1efb343a906c2558af2157c0b1f82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827040"
 ---
-# <a name="metransformmarker-event"></a>Metransformmarker-Ereignis
+# <a name="metransformmarker-event"></a>METransformMarker-Ereignis
 
-Wird durch eine asynchrone Media Foundation Transformation (MFT) als Antwort auf eine **MFT- \_ Nachrichten \_ Befehls \_ markernachricht** gesendet.
+Wird von einer asynchronen Media Foundation-Transformation (MFT) als Antwort auf eine **MFT \_ MESSAGE COMMAND \_ \_ MARKER-Nachricht** gesendet.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG               |
+| VARTYPE              | Beschreibung               |
 |----------------------|---------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> |
 
 
 
@@ -33,19 +33,19 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                      | BESCHREIBUNG                                                                                                                |
+| attribute                                                      | Beschreibung                                                                                                                |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [\_ \_ MFT- \_ Kontext für MF-Ereignis](mf-event-mft-context.md)<br/> | Der Wert des *ulparam* -Parameters aus der **MFT- \_ Nachrichten \_ Befehls \_ markernachricht** .<br/>*Benötigten*<br/> |
+| [MF \_ EVENT \_ MFT \_ CONTEXT](mf-event-mft-context.md)<br/> | Der Wert des *ulParam-Parameters* aus der **MFT \_ MESSAGE COMMAND \_ \_ MARKER-Nachricht.**<br/>*(Erforderlich)*<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asynchrone MFTs Senden dieses Ereignis über die [**IMF mediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle. Dieses Ereignis wird von synchronen MFTs niemals gesendet.
+Asynchrone MFTs senden dieses Ereignis über die [**INTERFACESMediaEventGenerator-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) Synchrone MFTs senden dieses Ereignis nie.
 
-Der Client einer asynchronen MFT kann einen Marker im Stream platzieren, indem er [**imftransform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) mit der **MFT- \_ Nachrichten \_ Befehls \_ markernachricht** aufruft. Der *ulparam* -Parameter enthält Anwendungs definierte Daten.
+Der Client eines asynchronen MFT kann einen Marker im Datenstrom platzieren, indem [**ERFTransform::P rocessMessage**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) mit der **MFT \_ MESSAGE COMMAND \_ \_ MARKER-Nachricht** aufruft. Der *ulParam-Parameter* enthält anwendungsdefinierte Daten.
 
-Wenn die MFT die Verarbeitung aller Eingabedaten abgeschlossen hat, die zum Zeitpunkt des [**ProcessMessage**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) -Aufrufes aufgerufen wurden, fügt die MFT ein metransformmarker-Ereignis in die Warteschlange ein. Das [ \_ \_ MFT- \_ Kontext](mf-event-mft-context.md) Attribut des MF-Ereignisses des Ereignisses enthält den Wert des *ulparam* -Parameters. Weitere Informationen finden Sie unter [asynchrone MFTs](asynchronous-mfts.md).
+Wenn der MFT die Verarbeitung aller Eingabedaten abgeschlossen hat, die zum Zeitpunkt des [**ProcessMessage-Aufrufs**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) verfügbar waren, stellt der MFT ein METransformMarker-Ereignis in die Warteschlange. Das [MF \_ EVENT \_ MFT \_ CONTEXT-Attribut](mf-event-mft-context.md) des Ereignisses enthält den Wert des *ulParam-Parameters.* Weitere Informationen finden Sie unter [Asynchrone MFTs.](asynchronous-mfts.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Wenn die MFT die Verarbeitung aller Eingabedaten abgeschlossen hat, die zum Zeit
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
 [Asynchrone MFTs](asynchronous-mfts.md)

@@ -1,11 +1,11 @@
 ---
-title: Downloadcollection. Clear-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Clear-Methode entfernt alle Elemente aus einer Download Auflistung.
+title: DownloadCollection.Clear-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Clear-Methode entfernt alle Elemente aus einer Downloadsammlung.
 ms.assetid: 3947a99d-5853-432d-a47b-7b19adebc3a5
 keywords:
-- Methoden Fenster Media Player löschen
-- Clear-Methode, Windows Media Player, downloadcollection-Klasse
-- Download Collection-Klasse, Windows Media Player, Clear-Methode
+- Clear-Methode Windows Media Player
+- Clear-Methode Windows Media Player , DownloadCollection-Klasse
+- DownloadCollection-Klasse Windows Media Player , Clear-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 570612206408e607b286317c308525345e990c3f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 92722bd08ce761a705d1de144757d09afb0af74cfb8ba61570bca87069f33afd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863480"
 ---
-# <a name="downloadcollectionclear-method"></a>Downloadcollection. Clear-Methode
+# <a name="downloadcollectionclear-method"></a>DownloadCollection.Clear-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **Clear** -Methode entfernt alle Elemente aus einer Download Auflistung.
+Die **Clear-Methode** entfernt alle Elemente aus einer Downloadsammlung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -64,7 +64,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Download Collection-Objekt**](downloadcollection-object.md)
+[**DownloadCollection-Objekt**](downloadcollection-object.md)
 </dt> </dl>
 
  

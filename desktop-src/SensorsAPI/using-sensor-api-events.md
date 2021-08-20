@@ -1,23 +1,23 @@
 ---
-description: Die Sensor-API stellt Ereignis Benachrichtigungen über Rückruf Schnittstellen bereit.
+description: Die Sensor-API stellt Ereignisbenachrichtigungen über Rückrufschnittstellen bereit.
 ms.assetid: 0c396d54-cb2e-4b07-999f-3f4001db2a02
 title: Verwenden von Sensor-API-Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a54fcb14138c1b20470a2b716e5cce86235c3102
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ba26e99ef039808ea8c3d6bee9ac8a5b0d6b1a231fb2a4b62c2bb05a2489099
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126500"
 ---
 # <a name="using-sensor-api-events"></a>Verwenden von Sensor-API-Ereignissen
 
-Die Sensor-API stellt Ereignis Benachrichtigungen über Rückruf Schnittstellen bereit.
+Die Sensor-API stellt Ereignisbenachrichtigungen über Rückrufschnittstellen bereit.
 
-Um Ereignis Benachrichtigungen zu empfangen, muss das Programm die erforderlichen com-Rückruf Schnittstellen implementieren. Zum Empfangen von Ereignissen von Sensoren müssen Sie " [**isensorevents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents)" implementieren. Um Ereignisse vom Sensor-Manager zu empfangen, müssen Sie " [**isensormanagerevents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensormanagerevents)" implementieren.
+Um Ereignisbenachrichtigungen zu empfangen, muss Ihr Programm die erforderlichen COM-Rückrufschnittstellen implementieren. Um Ereignisse von Sensoren zu empfangen, müssen Sie [**ISensorEvents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents)implementieren. Um Ereignisse vom Sensor-Manager zu empfangen, müssen Sie [**ISensorManagerEvents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensormanagerevents)implementieren.
 
-Im folgenden Beispielcode wird eine Klasse erstellt, die " [**isenevents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents)" implementiert.
+Im folgenden Beispielcode wird eine Klasse erstellt, die [**ISensorEvents**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensorevents)implementiert.
 
 
 ```C++
@@ -200,9 +200,9 @@ public:
 
 
 
-Nachdem Sie die Rückruf Schnittstelle implementiert haben, können Sie einen bestimmten Sensor mit einem Zeiger auf eine Instanz der Rückruf Klasse bereitstellen, um mit dem Empfang von Ereignis Benachrichtigungen vom Sensor zu beginnen.
+Nach der Implementierung der Rückrufschnittstelle können Sie einen bestimmten Sensor mit einem Zeiger auf eine Instanz Ihrer Rückrufklasse bereitstellen, um mit dem Empfangen von Ereignisbenachrichtigungen vom Sensor zu beginnen.
 
-Im folgenden Beispielcode wird eine Instanz der Rückruf Klasse erstellt und anschließend Ereignis Notierungen von einem Sensor angefordert.
+Der folgende Beispielcode erstellt eine Instanz der Rückrufklasse und fordert dann Ereignisinformationen von einem Sensor an.
 
 
 ```C++
@@ -233,7 +233,7 @@ if(SUCCEEDED(hr))
 
 Sie können ähnlichen Code schreiben, um Ereignisse vom Sensor-Manager zu empfangen.
 
-Der folgende Beispielcode zeigt, wie der Empfang von Ereignis Benachrichtigungen beendet wird.
+Der folgende Beispielcode zeigt, wie Ereignisbenachrichtigungen nicht mehr empfangen werden.
 
 
 ```C++
@@ -245,11 +245,11 @@ if(SUCCEEDED(hr))
 
 
 
-## <a name="requesting-a-report-interval"></a>Anfordern eines Berichts Intervalls
+## <a name="requesting-a-report-interval"></a>Anfordern eines Berichtsintervalls
 
-Sie können einen Wert vorschlagen, um zu erfahren, wie oft Ihre Anwendung Daten aktualisierte Ereignisse empfängt. Es ist jedoch nicht erforderlich, dass Sensoren in einem bestimmten Intervall Ereignisse bereitstellen. Sie sollten sich bewusst sein, dass der vorgeschlagene Wert möglicherweise nicht mit dem tatsächlichen Berichts Intervall identisch ist, das vom Sensor verwendet wird, um Ereignisse zu Um das tatsächliche Berichts Intervall zu ermitteln, rufen Sie den Wert für \_ die \_ Eigenschaft des aktuellen \_ Berichts Intervalls der Sensor Eigenschaft \_ ab, wie unter [Abrufen und Festlegen von Sensor Eigenschaften](setting-and-retrieving-sensor-properties.md)beschrieben.
+Sie können einen Wert dafür vorschlagen, wie oft Ihre Anwendung datenaktuelle Ereignisse empfängt. Sensoren sind jedoch nicht erforderlich, um Ereignisse in einem bestimmten Intervall bereitzustellen. Beachten Sie, dass Ihr vorgeschlagener Wert möglicherweise nicht mit dem tatsächlichen Berichtsintervall übereinstimmt, das der Sensor zum Auslösen von Ereignissen verwendet. Um das tatsächliche Berichtsintervall zu ermitteln, rufen Sie den Wert für die EIGENSCHAFT SENSOR \_ PROPERTY CURRENT REPORT INTERVAL \_ \_ \_ ab, wie unter Abrufen und Festlegen von [Sensoreigenschaften](setting-and-retrieving-sensor-properties.md)beschrieben.
 
-Der folgende Beispielcode erstellt eine Hilfsfunktion, die einen neuen Wert für die \_ \_ aktuelle \_ Berichts \_ Intervall Eigenschaft der Sensor Eigenschaft anfordert. Die-Funktion nimmt einen Zeiger auf den Sensor, für den die-Eigenschaft festgelegt werden soll, und einen **ulong** -Wert, der das neue Berichts Intervall angibt, das festgelegt werden soll.
+Der folgende Beispielcode erstellt eine Hilfsfunktion, die einen neuen Wert für die EIGENSCHAFT SENSOR PROPERTY CURRENT REPORT INTERVAL anfordert. \_ \_ \_ \_ Die Funktion verwendet einen Zeiger auf den Sensor, für den die Eigenschaft festgelegt werden soll, und einen **ULONG-Wert,** der das neue Berichtsintervall angibt, das festgelegt werden soll.
 
 
 ```C++

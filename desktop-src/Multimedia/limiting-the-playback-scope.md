@@ -1,30 +1,30 @@
 ---
-title: Einschränken des Wiedergabe Bereichs
-description: Einschränken des Wiedergabe Bereichs
+title: Einschränken des Wiedergabebereichs
+description: Einschränken des Wiedergabebereichs
 ms.assetid: 080ab96f-1cb5-48d4-ac0a-8fd9ba68a31a
 keywords:
-- Mciwndplayfrom-Makro
-- Mciwndplayto-Makro
-- Mciwndplayfromto-Makro
-- MCI-Wiedergabe Befehle
+- MCIWndPlayFrom-Makro
+- MCIWndPlayTo-Makro
+- MCIWndPlayFromTo-Makro
+- MCI-Wiedergabebefehle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 465bcf7a7b6b5811de8413a1c89f7befcf81037f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 064f62e913c33bef0582efaa950ee376e31a5b06a54d0e70674192e31a679a9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139483"
 ---
-# <a name="limiting-the-playback-scope"></a>Einschränken des Wiedergabe Bereichs
+# <a name="limiting-the-playback-scope"></a>Einschränken des Wiedergabebereichs
 
-Das Steuern der Wiedergabe beginnt mit dem [**mciwndplay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay) -Makro, das den Inhalt oder die Datei wieder gibt, der mit einem mciwnd-Fenster von der aktuellen Wiedergabe Position bis zum Ende des Inhalts verknüpft ist. Wenn Sie die Wiedergabe auf einen bestimmten Teil des Inhalts oder der Datei beschränken möchten, können Sie zwischen den anderen Wiedergabe-mciwnd-Makros wählen: [**mciwndplayfrom**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom), [**mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)und [**mciwndplayfromto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto).
+Die Steuerung der Wiedergabe beginnt mit dem [**MCIWndPlay-Makro,**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay) das den Inhalt oder die Datei, die einem MCIWnd-Fenster zugeordnet ist, von der aktuellen Wiedergabeposition bis zum Ende des Inhalts wiedergibt. Wenn Sie die Wiedergabe auf einen bestimmten Teil des Inhalts oder der Datei beschränken möchten, können Sie aus den anderen MCIWnd-Wiedergabemakros auswählen: [**MCIWndPlayFrom,**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom) [**MCIWndPlayTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)und [**MCIWndPlayFromTo.**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
 
 Außerdem müssen Sie ein geeignetes Zeitformat festlegen. Das Zeitformat bestimmt, ob der Inhalt in Frames, Millisekunden, Spuren oder anderen Einheiten gemessen wird.
 
-Im folgenden Beispiel wird ein mciwnd-Fenster erstellt und Menübefehle bereitstellt, um das letzte Dritte, erste Dritte oder mittlere dritte des Inhalts wiederzugeben. Diese Menübefehle verwenden **mciwndplayfrom**, **mciwndplayto** und **mciwndplayfromto** zum Wiedergeben der Inhalts Segmente. Das Beispiel verwendet auch die Makros " [**mciwndgetstart**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstart) " und " [**mciwndgetend**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend) ", um den Anfang und das Ende des Inhalts zu identifizieren, und verwendet das [**mciwndhome**](/windows/desktop/api/Vfw/nf-vfw-mciwndhome) -Makro, um die Wiedergabe Position an den Anfang des Inhalts zu verschieben.
+Im folgenden Beispiel wird ein MCIWnd-Fenster erstellt und Menübefehle zum Wiedergeben des letzten, ersten dritten oder mittleren Drittels des Inhalts angezeigt. Diese Menübefehle verwenden **MCIWndPlayFrom,** **MCIWndPlayTo** und **MCIWndPlayFromTo,** um die Inhaltssegmente wiederzugeben. Im Beispiel werden auch die Makros [**MCIWndGetStart**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstart) und [**MCIWndGetEnd**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend) verwendet, um den Anfang und das Ende des Inhalts zu identifizieren, und es wird das [**MCIWndHome-Makro**](/windows/desktop/api/Vfw/nf-vfw-mciwndhome) verwendet, um die Wiedergabeposition an den Anfang des Inhalts zu verschieben.
 
-Die [**mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) -Funktion verwendet \_ zusätzlich zu den Standardfenster Stilen die WS-Beschriftung und mciwndf- \_ ShowAll-Stile, um den Dateinamen, den Modus und die aktuelle Wiedergabe Position in der Titelleiste des mciwnd-Fensters anzuzeigen.
+Die [**MCIWndCreate-Funktion**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) verwendet die WS \_ CAPTION- und MCIWNDF \_ SHOWALL-Stile zusätzlich zu den Standardfensterstilen, um den Dateinamen, den Modus und die aktuelle Wiedergabeposition in der Titelleiste des MCIWnd-Fensters anzuzeigen.
 
 
 ```C++
@@ -83,9 +83,9 @@ case WM_COMMAND:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

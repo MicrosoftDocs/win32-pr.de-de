@@ -1,11 +1,11 @@
 ---
-title: IWMPStringCollection2 getiteminfo-Methode
-description: Die getiteminfo-Methode gibt die Zeichenfolge zurück, die dem angegebenen Index und Namen des Zeichen folgen Auflistungs Elements entspricht.
+title: IWMPStringCollection2 getItemInfo-Methode
+description: Die getItemInfo-Methode gibt die Zeichenfolge zurück, die dem angegebenen Index und Namen des Zeichenfolgensammlungselements entspricht.
 ms.assetid: 4a107e85-9eb7-42be-b1f9-8e9e92e6e509
 keywords:
-- getiteminfo-Methode, Windows Media Player
-- getiteminfo-Methode, Windows Media Player, IWMPStringCollection2-Schnittstelle
-- IWMPStringCollection2 Interface, Windows Media Player, getiteminfo-Methode
+- getItemInfo-Windows Media Player
+- getItemInfo-Methode Windows Media Player , IWMPStringCollection2-Schnittstelle
+- IWMPStringCollection2-Schnittstelle Windows Media Player , getItemInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4741c4a3ba74b03038974d8b66bc42c23830ebb3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f3f5371d55384544e4135e702b686cc7ce36707d204529ca7a4e68a3734d8ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899840"
 ---
-# <a name="iwmpstringcollection2getiteminfo-method"></a>IWMPStringCollection2:: getiteminfo-Methode
+# <a name="iwmpstringcollection2getiteminfo-method"></a>IWMPStringCollection2::getItemInfo-Methode
 
-Die **getiteminfo** -Methode gibt die Zeichenfolge zurück, die dem angegebenen Index und Namen des Zeichen folgen Auflistungs Elements entspricht.
+Die **getItemInfo-Methode** gibt die Zeichenfolge zurück, die dem angegebenen Index und Namen des Zeichenfolgensammlungselements entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,31 +55,31 @@ Implements IWMPStringCollection2.getItemInfo
 
 <dl> <dt>
 
-*lcollectionindex* \[ in\]
+*lCollectionIndex* \[ In\]
 </dt> <dd>
 
-Der **System. Int32** -Wert, der den NULL basierten Index des Zeichen folgen-Sammel Elements angibt, aus dem das Attribut abgeleitet werden soll.
+Das **System.Int32-Objekt,** das den nullbasierten Index des Zeichenfolgensammlungselements angibt, aus dem das Attribut erhalten werden soll.
 
 </dd> <dt>
 
-*bstritemname* \[ in\]
+*bstrItemName* \[ In\]
 </dt> <dd>
 
-Der **System. String** -Wert, der der Attribut Name ist.
+Die **System.String,** die der Attributname ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der **System. String** -Wert, der der Name des Zeichen folgen-Sammel Elements ist. Bei Attributen, deren zugrunde liegender Wert **System. Boolean** ist, wird die Zeichenfolge "true" oder "false" zurückgegeben.
+Die **System.String,** die der Name des Zeichenfolgensammlungselements ist. Für Attribute, deren zugrunde liegender Wert **System.Boolean** ist, wird die Zeichenfolge "true" oder "false" zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Attribute mit mehreren Werten und Attributen mit komplexen Werten abzurufen, verwenden Sie die **getItemInfoByType** -Methode.
+Verwenden Sie zum Abrufen von Attributen mit mehreren Werten und Attributen mit komplexen Werten die **getItemInfoByType-Methode.**
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -98,7 +98,7 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 [**IWMPStringCollection2-Schnittstelle**](iwmpstringcollection2--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPStringCollection2. getItemInfoByType (VB und c#)**](wmplibiwmpstringcollection2-iwmpstringcollection2-getiteminfobytype--vb-and-c.md)
+[**IWMPStringCollection2.getItemInfoByType (VB und C#)**](wmplibiwmpstringcollection2-iwmpstringcollection2-getiteminfobytype--vb-and-c.md)
 </dt> </dl>
 
  

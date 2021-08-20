@@ -1,7 +1,7 @@
 ---
-description: Die Format-Eigenschaft des configurableitem-Objekts gibt den Wert aus der Spalte Format der Tabelle ModuleConfiguration zurück.
+description: Die Format-Eigenschaft des ConfigurableItem-Objekts gibt den Wert aus der Format -Spalte der ModuleConfiguration-Tabelle zurück.
 ms.assetid: e75ed650-7309-4e24-9c35-82ebf27d011b
-title: Configurableitem. Format-Eigenschaft (Mergemod. h)
+title: ConfigurableItem.Format-Eigenschaft (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 20db09126e9b10aac5c31a3748c4f1606f3f3bab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee8770029c8465d1e1a60349010847ff38fdac928bb61cd02b0e5a2b034538c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118144004"
 ---
-# <a name="configurableitemformat-property"></a>Configurableitem. Format (Eigenschaft)
+# <a name="configurableitemformat-property"></a>ConfigurableItem.Format (Eigenschaft)
 
-Die **Format** -Eigenschaft des [**configurableitem**](configurableitem-object.md) -Objekts gibt den Wert aus der Spalte Format der [Tabelle ModuleConfiguration](moduleconfiguration-table.md)zurück.
+Die **Format-Eigenschaft** des [**ConfigurableItem-Objekts**](configurableitem-object.md) gibt den Wert aus der Spalte Format der [ModuleConfiguration-Tabelle zurück.](moduleconfiguration-table.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -38,18 +38,18 @@ propVal = ConfigurableItem.Format
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nur die folgenden Werte aufweisen.
+Diese Eigenschaft kann nur die folgenden Werte enthalten.
 
 
 
 | Konstante                        | Wert |
 |---------------------------------|-------|
-| **msmconfigurableitemtext**     | 0     |
-| **msmconfigurableitemkey**      | 1     |
-| **msmconfigurableiteminteger**  | 2     |
-| **msmconfigurableitembitfield** | 3     |
+| **msmConfigurableItemText**     | 0     |
+| **msmConfigurableItemKey**      | 1     |
+| **msmConfigurableItemInteger**  | 2     |
+| **msmConfigurableItemBitfield** | 3     |
 
 
 
@@ -57,7 +57,7 @@ Diese Eigenschaft kann nur die folgenden Werte aufweisen.
 
 ### <a name="c"></a>C++
 
-Siehe [**get \_ Format**](/windows/desktop/api/Mergemod/nf-mergemod-imsmconfigurableitem-get_format) function.
+Siehe [**get \_ Format-Funktion.**](/windows/desktop/api/Mergemod/nf-mergemod-imsmconfigurableitem-get_format)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Siehe [**get \_ Format**](/windows/desktop/api/Mergemod/nf-mergemod-imsmconfigur
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 2,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 2.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

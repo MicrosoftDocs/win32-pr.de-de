@@ -1,42 +1,42 @@
 ---
 title: Grundlegendes zu Leistungsproblemen
-description: In diesem Thema werden Leistungsprobleme im Zusammenhang mit Text-und TextRange-Steuerelement Mustern beschrieben.
+description: In diesem Thema werden Leistungsprobleme im Zusammenhang mit der Verwendung der Text- und TextRange-Steuerelementmuster beschrieben.
 ms.assetid: D78BFFA8-E303-441D-9D32-AD22E1B1A249
 keywords:
-- Clients, Grundlegendes zu Leistungsproblemen
-- Clients, textbasierte Steuerelemente
-- Clients, Textbereiche
-- Clients, Text-Steuerelement Muster
-- Clients, TextRange-Steuerelement Muster
+- Clients,Grundlegendes zu Leistungsproblemen
+- Clients,textbasierte Steuerelemente
+- Clients,Textbereiche
+- Clients,Textsteuermuster
+- clients,TextRange-Steuerelementmuster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61d8d9b9b6c5cb0ef3ed34c6960e5aeafa623068
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 24846fea2f35cd9d265ab4f898b60dba2fc4e959b9a0f8bd7baea4661855f0a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104316826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861220"
 ---
 # <a name="understanding-performance-issues"></a>Grundlegendes zu Leistungsproblemen
 
-In diesem Thema werden Leistungsprobleme im Zusammenhang mit [Text-und TextRange-](uiauto-implementingtextandtextrange.md) Steuerelement Mustern beschrieben.
+In diesem Thema werden Leistungsprobleme im Zusammenhang mit der Verwendung der [Text- und TextRange-Steuerelementmuster](uiauto-implementingtextandtextrange.md) beschrieben.
 
 
-Die [**iuiautomationtextpattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextpattern) -Schnittstelle und die [**iuiautomationtextrange**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextrange) -Schnittstelle basieren auf prozessübergreifenden aufrufen – Sie bieten keinen Cachingmechanismus, um die Leistung beim Abrufen oder Verarbeiten von Textinhalten zu verbessern.
+Die [**Schnittstellen IUIAutomationTextPattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextpattern) und [**IUIAutomationTextRange**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextrange) basieren auf prozessübergreifenden Aufrufen. Sie bieten keinen Zwischenspeichermechanismus, um die Leistung beim Abrufen oder Verarbeiten von Textinhalten zu verbessern.
 
-Eine Client Anwendung kann die Leistung verbessern, indem die [**iuiautomationtextrange:: gettext**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-gettext) -Methode verwendet wird, um Textblöcke mit mittlerer Größe abzurufen. Wenn Sie z. b. **gettext** zum Abrufen von einzelnen Zeichen verwenden, wird für jedes Zeichen eine prozessübergreifende Leistungs Einbuße ausgelöst, während beim Aufrufen von **gettext** keine maximale Länge angegeben wird. Dies kann je nach Größe des Text Bereichs eine hohe Latenz verursachen.
+Eine Clientanwendung kann die Leistung verbessern, indem sie die [**IUIAutomationTextRange::GetText-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationtextrange-gettext) verwendet, um Textblöcke mittlerer Größe abzurufen. Beispielsweise führt die Verwendung von **GetText** zum Abrufen einzelner Zeichen zu einem prozessübergreifenden Leistungstreffer für jedes Zeichen, während die Angabe einer maximalen Länge beim Aufrufen von **GetText** einen prozessübergreifenden Treffer zur Anwendung kommt, aber abhängig von der Größe des Textbereichs eine hohe Latenz haben kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Text-und TextRange-Steuerelement Muster](uiauto-implementingtextandtextrange.md)
+[Text- und TextRange-Steuerelementmuster](uiauto-implementingtextandtextrange.md)
 </dt> <dt>
 
-[Benutzeroberflächenautomatisierungs-Unterstützung für Textinhalte](uiauto-ui-automation-textpattern-overview.md)
+[Benutzeroberflächenautomatisierung Unterstützung für Textinhalte](uiauto-ui-automation-textpattern-overview.md)
 </dt> <dt>
 
-[Arbeiten mit Text basierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
+[Arbeiten mit textbasierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
 </dt> </dl>
 
  

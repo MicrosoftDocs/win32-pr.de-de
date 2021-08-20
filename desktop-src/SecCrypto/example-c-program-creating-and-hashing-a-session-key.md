@@ -1,31 +1,31 @@
 ---
-description: Erstellt und Hashes einen Sitzungsschlüssel, der zum Verschlüsseln einer Nachricht, eines Texts oder einer Datei verwendet werden kann.
+description: Erstellt und hasht einen Sitzungsschlüssel, der zum Verschlüsseln einer Nachricht, eines Texts oder einer Datei verwendet werden kann.
 ms.assetid: 15d4a05d-5888-4532-91fd-6cd94afe0b99
-title: 'Beispiel-C-Programm: Erstellen und Hashwert eines Sitzungsschlüssels'
+title: 'C-Beispielprogramm: Erstellen und Hashing eines Sitzungsschlüssels'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbfb1dae0f331a80a2b2c473f0446cf2a1623dda
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3264e8b7d78506f2aed663d14a4bd8278059152ce085f460ddbbc8e75325d91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007852"
 ---
-# <a name="example-c-program-creating-and-hashing-a-session-key"></a>Beispiel-C-Programm: Erstellen und Hashwert eines Sitzungsschlüssels
+# <a name="example-c-program-creating-and-hashing-a-session-key"></a>C-Beispielprogramm: Erstellen und Hashing eines Sitzungsschlüssels
 
-Im folgenden Beispiel wird ein [*Sitzungsschlüssel*](../secgloss/s-gly.md) erstellt und [*Hashes*](../secgloss/h-gly.md) erstellt, der zum Verschlüsseln von Nachrichten, Text oder Dateien verwendet werden kann.
+Im folgenden Beispiel wird ein [*Sitzungsschlüssel*](../secgloss/s-gly.md) erstellt und [*gehasht,*](../secgloss/h-gly.md) der zum Verschlüsseln einer Nachricht, eines Texts oder einer Datei verwendet werden kann.
 
 Dieses Beispiel zeigt auch die Verwendung der folgenden CryptoAPI-Funktionen:
 
--   [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) zum Abrufen eines [*Kryptografiedienstanbieters*](../secgloss/c-gly.md).
--   [**Cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) zum Erstellen eines leeren Hash Objekts.
--   [**CryptGenKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey) zum Erstellen eines zufälligen [*Sitzungsschlüssels*](../secgloss/s-gly.md).
--   [**Crypthashsessionkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashsessionkey) zum Hashen des erstellten Sitzungsschlüssels.
--   [**Cryptdestroyhash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash) , um den Hash zu zerstören.
--   [**Cryptdestroykey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroykey) , um den erstellten Schlüssel zu zerstören.
--   [**Cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Freigeben des CSP.
+-   [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) zum Abrufen eines [*Kryptografiedienstanbieters.*](../secgloss/c-gly.md)
+-   [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) zum Erstellen eines leeren Hashobjekts.
+-   [**CryptGenKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey) zum Erstellen eines zufälligen [*Sitzungsschlüssels.*](../secgloss/s-gly.md)
+-   [**CryptHashSessionKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashsessionkey) zum Hashen des erstellten Sitzungsschlüssels.
+-   [**CryptDestroyHash,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash) um den Hash zu zerstören.
+-   [**CryptDestroyKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroykey) zum Zerstören des erstellten Schlüssels.
+-   [**CryptReleaseContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Freigeben des CSP.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
 
 ```C++

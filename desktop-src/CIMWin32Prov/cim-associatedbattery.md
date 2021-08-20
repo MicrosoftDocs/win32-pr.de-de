@@ -1,5 +1,5 @@
 ---
-description: Die \_ CIM AssociatedBattery-Abhängigkeit ordnet einen Akku einem logischen Gerät zu. Verwenden Sie diese Zuordnung, um einzelne Akkus zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) bilden.
+description: Die CIM \_ AssociatedBattery-Abhängigkeit ordnet einem logischen Gerät einen Akku zu. Verwenden Sie diese Zuordnung, um einzelne Akkus zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) machen.
 ms.assetid: f8d8b3d3-edc5-438a-8be6-3ea4d765085b
 ms.tgt_platform: multiple
 title: CIM_AssociatedBattery-Klasse
@@ -25,10 +25,10 @@ ms.locfileid: "119284590"
 ---
 # <a name="cim_associatedbattery-class"></a>CIM \_ AssociatedBattery-Klasse
 
-Die **\_ CIM AssociatedBattery-Abhängigkeit** ordnet einen Akku einem logischen Gerät zu. Verwenden Sie diese Zuordnung, um einzelne Akkus zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) bilden.
+Die **CIM \_ AssociatedBattery-Abhängigkeit** ordnet einem logischen Gerät einen Akku zu. Verwenden Sie diese Zuordnung, um einzelne Akkus zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) machen.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -47,7 +47,7 @@ class CIM_AssociatedBattery : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ AssociatedBattery-Klasse** verfügt über diese Typen von Membern:
+Die **CIM \_ AssociatedBattery-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -60,13 +60,13 @@ Die **CIM \_ AssociatedBattery-Klasse** verfügt über diese Eigenschaften.
 **Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Battery**
+Datentyp: **\_ CIM-Akku**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
 Ein [**\_ CIM-Akku,**](cim-battery.md) der den Akku beschreibt.
@@ -85,17 +85,17 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das das logische Gerät enthält, das den Akku benötigt oder zugeordnet ist.
+Ein [**CIM \_ LogicalDevice-Gerät,**](cim-logicaldevice.md) das das logische Gerät enthält, das den Akku benötigt oder dem Akku zugeordnet ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ AssociatedBattery-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ AssociatedBattery-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
 
-WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **CIM \_ AssociatedBattery** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **CIM \_ AssociatedBattery abgeleitet werden,** finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,7 +111,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

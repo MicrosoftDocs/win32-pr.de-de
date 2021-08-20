@@ -1,7 +1,7 @@
 ---
-description: Listet die erste oder nächste Zertifikat Sperr Liste in einem externen Speicher auf, der den angegebenen Kriterien entspricht, oder ermittelt Sie.
+description: Aufzählt oder sucht die erste oder nächste Zertifikatsperrliste in einem externen Speicher, der den angegebenen Kriterien entspricht.
 ms.assetid: caf218f5-f379-4cb6-bb4b-4767b846d45c
-title: Certstoreprovfindcrl-Rückruffunktion
+title: CertStoreProvFindCRL-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: b20b7a4b677356e59be9f2f6df47b260c12d2f64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eebcc990da0cd2d866325200223e9e654e45e055299a8b384a613dc9841c2799
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126680"
 ---
-# <a name="certstoreprovfindcrl-callback-function"></a>Certstoreprovfindcrl-Rückruffunktion
+# <a name="certstoreprovfindcrl-callback-function"></a>CertStoreProvFindCRL-Rückruffunktion
 
-Die **certstoreprovfindcrl** -Rückruffunktion listet die erste oder die nächste [*CRL*](../secgloss/c-gly.md) in einem externen [*Speicher*](../secgloss/e-gly.md) auf, die den angegebenen Kriterien entspricht, oder sucht Sie.
+Die **Rückruffunktion CertStoreProvFindCRL** listet die erste oder nächste [*Zertifikatsperrliste*](../secgloss/c-gly.md) in einem externen Speicher auf, der den angegebenen Kriterien entspricht, oder sucht sie. [](../secgloss/e-gly.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,51 +43,51 @@ BOOL WINAPI CertStoreProvFindCRL(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-**Hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+**HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pfindinfo* \[ in\]
+*pFindInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Zertifikat \_ Speicher- \_ Prov- \_ \_ Informations**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_store_prov_find_info) Struktur, die alle Parameter enthält, die an die [**certfindcrlinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcrlinstore) -Funktion übergeben werden.
+Ein Zeiger auf eine [**CERT \_ STORE \_ PROV \_ FIND \_ INFO-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_store_prov_find_info) mit allen Parametern, die an die [**CertFindCRLInStore-Funktion übergeben**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcrlinstore) werden.
 
 </dd> <dt>
 
-*pprevcrlcontext* \[ in\]
+*pPrevCrlContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CRL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context) Struktur der letzten gefundenen CRL. Beim ersten Aufrufen der-Funktion sollte dieser Parameter auf **null** festgelegt werden. Bei nachfolgenden Aufrufen sollte Sie auf den Zeiger festgelegt werden, der beim letzten Aufruf im *ppprovcrlcontext* -Parameter zurückgegeben wurde. Ein nicht-**null** -Zeiger, der in diesem Parameter übergeben wird, wird von der Rückruffunktion freigegeben.
+Ein Zeiger auf eine [**CRL \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context) der letzten gefundenen Zertifikatsperrliste. Beim ersten Aufruf der Funktion sollte dieser Parameter auf NULL **festgelegt werden.** Bei nachfolgenden Aufrufen sollte sie auf den Zeiger festgelegt werden, der beim letzten Aufruf im *ppProvCRLContext-Parameter* zurückgegeben wurde. Ein in diesem Parameter übergebener **Nicht-NULL-Zeiger** wird von der Rückruffunktion frei.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> <dt>
 
-*ppvstoreprovfindinfo* \[ in, out\]
+*ppvStoreProvFindInfo* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf einen Puffer, um die Informationen zum Speicher Anbieter zurückzugeben. Optional kann der Rückruf einen Zeiger auf interne Suchinformationen in diesem Parameter zurückgeben. Nach dem ersten-Befehl wird dieser Parameter auf den Zeiger festgelegt, der durch den vorherigen Aufrufen der-Funktion zurückgegeben wurde.
+Ein Zeiger auf einen Zeiger auf einen Puffer, um die Speicheranbieterinformationen zurück zu geben. Optional kann der Rückruf einen Zeiger auf interne Find-Informationen in diesem Parameter zurückgeben. Nach dem ersten Aufruf wird dieser Parameter auf den Zeiger festgelegt, der durch den vorherigen Aufruf der Funktion zurückgegeben wurde.
 
 </dd> <dt>
 
-*ppprovcrlcontext* \[ vorgenommen\]
+*ppProvCrlContext* \[ out\]
 </dt> <dd>
 
-Bei einer erfolgreichen Suche wird in diesem Parameter ein Zeiger auf die gefundene CRL zurückgegeben.
+Bei einer erfolgreichen Suche wird in diesem Parameter ein Zeiger auf die gefundene Zertifikatsperrliste zurückgegeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn Sie fehlschlägt.
+Gibt **TRUE zurück,** wenn die Funktion erfolgreich ist, oder **FALSE,** wenn sie fehlschlägt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,8 +95,8 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -104,13 +104,13 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 <dl> <dt>
 
-[**CERT \_ Store \_ Prov \_ Find \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_store_prov_find_info)
+[**CERT \_ STORE \_ PROV \_ FIND \_ INFO**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_store_prov_find_info)
 </dt> <dt>
 
-[**Certfindcrlinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcrlinstore)
+[**CertFindCRLInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcrlinstore)
 </dt> <dt>
 
-[**CRL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context)
+[**\_CRL-KONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context)
 </dt> </dl>
 
  

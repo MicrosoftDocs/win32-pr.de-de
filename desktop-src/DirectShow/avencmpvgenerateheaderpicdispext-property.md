@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob der Encoder Header für Bildanzeigeerweiterungen generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
+description: Gibt an, ob der Encoder Bildanzeigeerweiterungsheader generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 ms.assetid: 01d616ff-e1e4-4cad-9145-c01181e4f8b8
 title: AVEncMPVGenerateHeaderPicDispExt-Eigenschaft (Codecapi.h)
 ms.topic: reference
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119276180"
 ---
-# <a name="avencmpvgenerateheaderpicdispext-property"></a>AVEncMPVGenerateHeaderPicDispExt (Eigenschaft)
+# <a name="avencmpvgenerateheaderpicdispext-property"></a>AVEncMPVGenerateHeaderPicDispExt-Eigenschaft
 
-Gibt an, ob der Encoder Header für Bildanzeigeerweiterungen generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
+Gibt an, ob der Encoder Bildanzeigeerweiterungsheader generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -27,7 +27,7 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **VARIANT \_ TRUE ist,** generiert der Encoder Header für Bildanzeigeerweiterungen.
+Wenn der Wert **VARIANT \_ TRUE** ist, generiert der Encoder Bildanzeigeerweiterungsheader.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn der Wert **VARIANT \_ TRUE ist,** generiert der Encoder Header für Bildanz
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

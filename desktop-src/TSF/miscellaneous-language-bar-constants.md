@@ -1,6 +1,6 @@
 ---
-title: Diverse sprach Balken Konstanten (ctfutb. h)
-description: Die verschiedenen sprach leisten Konstanten legen bestimmte Eigenschaften von sprach leisten fest.
+title: Verschiedene Sprachleistenkonst constants (Ctfutb.h)
+description: Die verschiedenen Sprachleistenkonst constants legen bestimmte Eigenschaften von Sprachleisten fest.
 ms.assetid: c1740636-7ba3-4748-9005-ee94d04dbb15
 topic_type:
 - apiref
@@ -15,25 +15,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91fd1a371581dea02226ba6539ca25a06ef98e75
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 681477018ad9afbfd42de3a1756cf68c4efe4f20405a7e3d566078927e75817b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118876488"
 ---
-# <a name="miscellaneous-language-bar-constants"></a>Diverse sprach Balken Konstanten
+# <a name="miscellaneous-language-bar-constants"></a>Verschiedene Sprachleistenkonst constants
 
-Die verschiedenen sprach leisten Konstanten legen bestimmte Eigenschaften von sprach leisten fest.
+Die verschiedenen Sprachleistenkonst constants legen bestimmte Eigenschaften von Sprachleisten fest.
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                              |
+| Konstante/Wert                                                                                                                                                                                                                                               | Beschreibung                                                                                                                                                                                                                                                                                                              |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TF_DTLBI_USEPROFILEICON"></span><span id="tf_dtlbi_useprofileicon"></span><dl> <dt>**Tf \_ Dtlbi \_ useprofileicon**</dt> <dt>0x00000001</dt> </dl> | Das Element System Language Bar sollte das Symbol anzeigen, das für das Sprachprofil angegeben ist. Wird in den Methoden [ITF systemdevicetypelangbaritem:: getianmode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-geticonmode) und [ITF systemdevicetypelangbaritem::](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-seticonmode) -Methode verwendet.<br/> |
-| <span id="TF_INVALIDMENUITEM"></span><span id="tf_invalidmenuitem"></span><dl> <dt>**Tf \_ Invalidmenuitem**</dt> <dt>(uint) (-1)</dt> </dl>                 | Nicht verwendet.<br/>                                                                                                                                                                                                                                                                                                     |
-| <span id="TF_LBI_BMPF_VERTICAL"></span><span id="tf_lbi_bmpf_vertical"></span><dl> <dt>**Tf \_ LBI \_ BMPF \_ vertikal**</dt> <dt>0x00000001</dt> </dl>         | Nicht verwendet.<br/>                                                                                                                                                                                                                                                                                                     |
-| <span id="TF_LBI_DESC_MAXLEN"></span><span id="tf_lbi_desc_maxlen"></span><dl> <dt>**Tf \_ LBI-zu-Ende- \_ \_ maxlen**</dt> <dt>32</dt> </dl>                       | Länge in WCHAR-Zeichen des Strukturmembers [tf \_ langbariteminfo. szDescription](/windows/desktop/api/Ctfutb/ns-ctfutb-tf_langbariteminfo).<br/>                                                                                                                                                                                                 |
+| <span id="TF_DTLBI_USEPROFILEICON"></span><span id="tf_dtlbi_useprofileicon"></span><dl> <dt>**TF \_ DTLBI \_ USEPROFILEICON**</dt> <dt>0x00000001</dt> </dl> | Das Systemsprachleistenelement sollte das für das Sprachprofil angegebene Symbol anzeigen. Wird in den [Methoden ITfSystemDeviceTypeLangBarItem::GetIconMode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-geticonmode) und [ITfSystemDeviceTypeLangBarItem::SetIconMode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-seticonmode) verwendet.<br/> |
+| <span id="TF_INVALIDMENUITEM"></span><span id="tf_invalidmenuitem"></span><dl> <dt>**TF \_ INVALIDMENUITEM**</dt> <dt>(UINT)(-1)</dt> </dl>                 | Wird nicht verwendet.<br/>                                                                                                                                                                                                                                                                                                     |
+| <span id="TF_LBI_BMPF_VERTICAL"></span><span id="tf_lbi_bmpf_vertical"></span><dl> <dt>**TF \_ LBI \_ BMPF \_ VERTICAL**</dt> <dt>0x00000001</dt> </dl>         | Wird nicht verwendet.<br/>                                                                                                                                                                                                                                                                                                     |
+| <span id="TF_LBI_DESC_MAXLEN"></span><span id="tf_lbi_desc_maxlen"></span><dl> <dt>**TF \_ LBI \_ DESC \_ MAXLEN**</dt> <dt>32</dt> </dl>                       | Länge des Strukturmitglieds TF [ \_ LANGBARITEMINFO.szDescription in WCHAR-Zeichen.](/windows/desktop/api/Ctfutb/ns-ctfutb-tf_langbariteminfo)<br/>                                                                                                                                                                                                 |
 
 
 
@@ -45,9 +45,9 @@ Die verschiedenen sprach leisten Konstanten legen bestimmte Eigenschaften von sp
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ctfutb. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Ctfutb. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ctfutb.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Ctfutb.idl</dt> </dl> |
 
 
 
@@ -55,13 +55,13 @@ Die verschiedenen sprach leisten Konstanten legen bestimmte Eigenschaften von sp
 
 <dl> <dt>
 
-[ITF systemdevicetypelangbaritem:: getidesystemmode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-geticonmode)
+[ITfSystemDeviceTypeLangBarItem::GetIconMode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-geticonmode)
 </dt> <dt>
 
-[ITF systemdevicetypelangbaritem:: Settings-Modus](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-seticonmode)
+[ITfSystemDeviceTypeLangBarItem::SetIconMode](/windows/desktop/api/Ctfutb/nf-ctfutb-itfsystemdevicetypelangbaritem-seticonmode)
 </dt> <dt>
 
-[TF \_ langbariteminfo](/windows/desktop/api/Ctfutb/ns-ctfutb-tf_langbariteminfo)
+[TF \_ LANGBARITEMINFO](/windows/desktop/api/Ctfutb/ns-ctfutb-tf_langbariteminfo)
 </dt> </dl>
 
  
