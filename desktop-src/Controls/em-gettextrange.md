@@ -1,9 +1,9 @@
 ---
-title: EM_GETTEXTRANGE Meldung (RichEdit. h)
-description: Ruft einen angegebenen Zeichenbereich von einem Rich-Edit-Steuerelement ab.
+title: EM_GETTEXTRANGE Nachricht (Richedit.h)
+description: Ruft einen angegebenen Zeichenbereich aus einem Rich-Edit-Steuerelement ab.
 ms.assetid: 18398963-eb2c-4f64-99f5-9614a5d34b52
 keywords:
-- Windows-Steuerelemente für EM_GETTEXTRANGE Meldung
+- EM_GETTEXTRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d68c4089bbe2cc09daa39d69e9094a4abaead787
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e12282b970c38164e5b28a31ed778a3320f88bbdf16b6d182586e492e5e699eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118006575"
 ---
-# <a name="em_gettextrange-message"></a>EM \_ GetTextRange-Nachricht
+# <a name="em_gettextrange-message"></a>EM \_ GETTEXTRANGE-Nachricht
 
-Ruft einen angegebenen Zeichenbereich von einem Rich-Edit-Steuerelement ab.
+Ruft einen angegebenen Zeichenbereich aus einem Rich-Edit-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Ruft einen angegebenen Zeichenbereich von einem Rich-Edit-Steuerelement ab.
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**TextRange**](/windows/win32/api/richedit/ns-richedit-textrangea) -Struktur, die den Bereich der abzurufenden Zeichen und einen Puffer angibt, in den die Zeichen kopiert werden sollen.
+Zeiger auf eine [**TEXTRANGE-Struktur,**](/windows/win32/api/richedit/ns-richedit-textrangea) die den Bereich der abzurufenden Zeichen und einen Puffer angibt, in den die Zeichen kopiert werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Meldung gibt die Anzahl der kopierten Zeichen zurück, ohne das abschließende Null Zeichen.
+Die Nachricht gibt die Anzahl der kopierten Zeichen zurück, ohne das abschließende NULL-Zeichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die Meldung gibt die Anzahl der kopierten Zeichen zurück, ohne das abschließen
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Meldung gibt die Anzahl der kopierten Zeichen zurück, ohne das abschließen
 
 <dl> <dt>
 
-[**TEXTRANGE**](/windows/win32/api/richedit/ns-richedit-textrangea)
+[**Textrange**](/windows/win32/api/richedit/ns-richedit-textrangea)
 </dt> </dl>
 
  

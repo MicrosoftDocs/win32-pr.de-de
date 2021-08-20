@@ -1,7 +1,7 @@
 ---
-description: Die LogError-Methode protokolliert einen Fehler. Anwendungen müssen diese Methode nicht aufzurufen. Sie wird intern als Reaktion auf Renderingfehler aufgerufen.
+description: Die LogError-Methode protokolliert einen Fehler. Anwendungen müssen diese Methode nicht aufrufen. Sie wird intern als Reaktion auf Renderingfehler aufgerufen.
 ms.assetid: 08765c8a-21ca-4c40-84a8-d13da87d9c5f
-title: 'Iamerrorlog:: LogError-Methode (qedit. h)'
+title: IAMErrorLog::LogError-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: dc94532639f325b53db850ebe8a5af489a8b3cf2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5652bf5fa60fda79a706179d1a8c0e86d91f3eaf6d66c7d3313dba1964846ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117999705"
 ---
-# <a name="iamerrorloglogerror-method"></a>Iamerrorlog:: LogError-Methode
+# <a name="iamerrorloglogerror-method"></a>IAMErrorLog::LogError-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die **LogError** -Methode protokolliert einen Fehler. Anwendungen müssen diese Methode nicht aufzurufen. Sie wird intern als Reaktion auf Renderingfehler aufgerufen.
+Die **LogError-Methode** protokolliert einen Fehler. Anwendungen müssen diese Methode nicht aufrufen. Sie wird intern als Reaktion auf Renderingfehler aufgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT LogError(
 
 <dl> <dt>
 
-*Severity* 
+*Schweregrad* 
 </dt> <dd>
 
 Reserviert. Darf nicht verwendet werden.
@@ -59,7 +59,7 @@ Reserviert. Darf nicht verwendet werden.
 *ErrorString* 
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der den Text des Fehlers enthält.
+Zeichenfolgenwert, der den Text des Fehlers enthält.
 
 </dd> <dt>
 
@@ -70,39 +70,39 @@ Fehlercode
 
 </dd> <dt>
 
-*HRESULT* 
+*Hresult* 
 </dt> <dd>
 
-Der HRESULT-Wert, der vom Methoden Aufrufwert zurückgegeben wurde, der den Fehler verursacht hat.
+Der HRESULT-Wert, der vom Methodenaufruf zurückgegeben wurde, der den Fehler verursacht hat.
 
 </dd> <dt>
 
-*pextrainfo* \[ in\]
+*pExtraInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variante, die alle zusätzlichen Informationen über den Fehler enthält.
+Zeiger auf eine VARIANT-Datei, die zusätzliche Informationen zum Fehler enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert des *HRESULT* -Parameters zurück.
+Gibt den Wert des *hresult-Parameters* zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Freigeben Sie in dieser Methode nicht die **Variante** , auf die *pextrainfo* zeigt. Außerdem wird die **Variante** nach der Rückgabe der Methode ungültig. versuchen Sie später nicht, darauf zu verweisen.
+Geben Sie in dieser Methode nicht den **VARIANT** frei, auf den *pExtraInfo* zeigt. Außerdem wird der **VARIANT-Wert** ungültig, nachdem die Methode zurückgegeben wurde. Versuchen Sie daher nicht, später darauf zu verweisen.
 
-Implementieren Sie diese Methode, um so schnell wie möglich zurückzukehren. Erstellen Sie innerhalb dieser Methode keine Funktionsaufrufe, die möglicherweise die Programmausführung blockieren. Sie können z. b. keine Funktionen aufzurufen, die Fenster Meldungen senden, Ereignisse blockieren oder anderweitig die Ausführung blockieren. Dies könnte dazu führen, dass der Computer nicht mehr reagiert.
+Implementieren Sie diese Methode, um so schnell wie möglich zurückzugeben. Nehmen Sie innerhalb dieser Methode keine Funktionsaufrufe vor, die die Programmausführung blockieren könnten. Rufen Sie beispielsweise keine Funktionen auf, die Fenstermeldungen senden, Ereignisse blockieren oder anderweitig die Ausführung blockieren. Dies kann dazu führen, dass der Computer nicht mehr reagiert.
 
-Eine Liste der Fehler, die von des definiert werden, sowie die Bedeutung und den Datentyp der **Variant** , auf die *pextrainfo* zeigt, finden Sie unter [Rendern von Fehlern](rendering-errors.md).
+Eine Liste der vom DES definierten Fehler sowie die Bedeutung und den Datentyp der **VARIANT,auf** die *von pExtraInfo* verwiesen wird, finden Sie unter [Renderingfehler.](rendering-errors.md)
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -112,8 +112,8 @@ Eine Liste der Fehler, die von des definiert werden, sowie die Bedeutung und den
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -121,10 +121,10 @@ Eine Liste der Fehler, die von des definiert werden, sowie die Bedeutung und den
 
 <dl> <dt>
 
-[**Iamerrorlog-Schnittstelle**](iamerrorlog.md)
+[**IAMErrorLog-Schnittstelle**](iamerrorlog.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

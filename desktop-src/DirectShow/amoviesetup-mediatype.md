@@ -1,5 +1,5 @@
 ---
-description: Die Typedef für die regpintypes-Struktur.
+description: Typedef für die REGPINTYPES-Struktur.
 ms.assetid: 606e48b0-6b71-41b3-b634-227bf973bc0c
 title: AMOVIESETUP_MEDIATYPE Struktur
 ms.topic: reference
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 21300e6b45d40ad9b17e8d5835c41a4f3eaee119
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 1faeea62fb0cc0f859ac0642e1bf88dc9af2b446c3ddda0dbccdc1eda7a19d2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106361768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118001902"
 ---
-# <a name="amoviesetup_mediatype-structure"></a>Amoviesetup- \_ mediaType-Struktur
+# <a name="amoviesetup_mediatype-structure"></a>AMOVIESETUP \_ MEDIATYPE-Struktur
 
-Die Typedef für die [**regpintypes**](/windows/desktop/api/strmif/ns-strmif-regpintypes) -Struktur.
+Typedef für die [**REGPINTYPES-Struktur.**](/windows/desktop/api/strmif/ns-strmif-regpintypes)
 
 ## <a name="see-also"></a>Siehe auch
 

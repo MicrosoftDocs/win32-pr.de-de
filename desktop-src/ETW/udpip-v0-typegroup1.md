@@ -1,5 +1,5 @@
 ---
-description: 'UdpIp_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'UdpIp_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 834a761a-089b-4b93-9a6a-a1edf752b582
 title: UdpIp_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 78243a49e4504fd9e132407feebe98d9b48f7bdd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8061009fcf419bd7b5ab04eda0b056a8ccee1ad3f3b990a0846058599f34fbde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813762"
 ---
 # <a name="udpip_v0_typegroup1-class"></a>UdpIp \_ V0 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -127,7 +127,7 @@ Größe des Zielpakets.
 saddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -159,7 +159,7 @@ Größe des Quellpakets.
 Sport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -176,14 +176,14 @@ Quellportnummer.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

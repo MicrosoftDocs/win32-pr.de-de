@@ -1,12 +1,12 @@
 ---
-title: ResourceLocator. AddOption-Methode (WSManDisp. h)
-description: Fügt zusätzliche Daten hinzu, die für die Verarbeitung der Anforderung erforderlich sind. Einige WMI-Anbieter benötigen beispielsweise ein IWbemContext-oder ein Swap-Objekt mit anbieterspezifischen Informationen.
+title: ResourceLocator.AddOption-Methode (WSManDisp.h)
+description: Fügt zusätzliche Daten hinzu, die zum Verarbeiten der Anforderung erforderlich sind. Einige WMI-Anbieter erfordern beispielsweise möglicherweise ein IWbemContext- oder SWbemNamedValueSet-Objekt mit anbieterspezifischen Informationen.
 ms.assetid: c85949fc-41e7-47eb-8aab-9b456490bc81
 ms.tgt_platform: multiple
 keywords:
-- AddOption-Methode Windows-Remoteverwaltung
-- AddOption-Methode Windows-Remoteverwaltung, ResourceLocator-Objekt
-- ResourceLocator-Objekt Windows-Remoteverwaltung, AddOption-Methode
+- AddOption-Methode Windows Remoteverwaltung
+- AddOption-Methode Windows Remoteverwaltung, ResourceLocator-Objekt
+- ResourceLocator-Objekt Windows Remoteverwaltung, AddOption-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 882f400dd2c59d2395dd2755846245f4e4ad385e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2c03e587c4884e6d9efc3b98bdd7b41b4204a783e153d9e59a400a4e4bc02a65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118112965"
 ---
-# <a name="resourcelocatoraddoption-method"></a>ResourceLocator. AddOption-Methode
+# <a name="resourcelocatoraddoption-method"></a>ResourceLocator.AddOption-Methode
 
-Fügt zusätzliche Daten hinzu, die für die Verarbeitung der Anforderung erforderlich sind. Einige WMI-Anbieter benötigen beispielsweise ein [**IWbemContext**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -oder ein [**Swap**](/windows/desktop/WmiSdk/swbemnamedvalueset) -Objekt mit anbieterspezifischen Informationen. Sie können ein [**ResourceLocator**](resourcelocator.md) -Objekt bereitstellen, anstatt einen Ressourcen-URI in [**Sitzungs**](session.md) Objekt Vorgängen wie " [**Session. Get**](session-get.md)", " [**Session. Put**](session-put.md)" oder " [**Session. Enumerate**](session-enumerate.md)" anzugeben.
+Fügt zusätzliche Daten hinzu, die zum Verarbeiten der Anforderung erforderlich sind. Einige WMI-Anbieter erfordern beispielsweise möglicherweise ein [**IWbemContext-**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) oder [**SWbemNamedValueSet-Objekt**](/windows/desktop/WmiSdk/swbemnamedvalueset) mit anbieterspezifischen Informationen. Sie können ein [**ResourceLocator-Objekt**](resourcelocator.md) angeben, anstatt einen Ressourcen-URI in [**Sitzungsobjektvorgängen**](session.md) wie [**Session.Get,**](session-get.md) [**Session.Put**](session-put.md)oder [**Session.Enumerate**](session-enumerate.md)anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,24 +45,24 @@ ResourceLocator.AddOption( _
 
 <dl> <dt>
 
-*OptionName* \[ in\]
+*OptionName* \[ In\]
 </dt> <dd>
 
 Der Name (Schlüssel) des optionalen Datenobjekts.
 
 </dd> <dt>
 
-*OptionValue* \[ in\]
+*OptionValue* \[ In\]
 </dt> <dd>
 
-Ein Wert, der für das optionale Datenobjekt angegeben wird.
+Ein für das optionale Datenobjekt bereitgestellter Wert.
 
 </dd> <dt>
 
-*mustcompliance* \[ in\]
+*mustComply* \[ In\]
 </dt> <dd>
 
-Ein Flag, das angibt, dass die Option verarbeitet werden muss. Der Standardwert ist **false** (0).
+Ein Flag, das angibt, dass die Option verarbeitet werden muss. Der Standardwert ist **False** (0).
 
 </dd> </dl>
 
@@ -70,9 +70,9 @@ Ein Flag, das angibt, dass die Option verarbeitet werden muss. Der Standardwert 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwsmanresourcelocator:: AddOption** ist die entsprechende C++-Methode.
+**IWSManResourceLocator::AddOption** ist die entsprechende C++-Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,9 +82,9 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
@@ -93,7 +93,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**ResourceLocator**](resourcelocator.md)
+[**Resourcelocator**](resourcelocator.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. normalizationpeak
-description: Das normalizationpeak-Attribut ruft den Spitzen normalisierungs Wert ab.
+title: EQUALIZERSETTINGS.normalizationPeak
+description: Das attribut normalizationPeak ruft den Höchstnormalisierungswert ab.
 ms.assetid: edc914a8-5e80-41a2-b60e-a8bd481e2d11
 keywords:
-- Equalizersettings. normalizationpeak-Fenster Media Player
+- EQUALIZERSETTINGS.normalizationPeak Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57699ccb78e7d79a92137719157d1918baf5454b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6dd014d8d8b4de494d93cbf7250c39454a4c7c87c4160ffe1508e151c72ec7e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935137"
 ---
-# <a name="equalizersettingsnormalizationpeak"></a>Equalizersettings. normalizationpeak
+# <a name="equalizersettingsnormalizationpeak"></a>EQUALIZERSETTINGS.normalizationPeak
 
-Das **normalizationpeak** -Attribut ruft den Spitzen normalisierungs Wert ab.
+Das **attribut normalizationPeak** ruft den Höchstnormalisierungswert ab.
 
 ``` syntax
         elementID.normalizationPeak
@@ -37,7 +37,7 @@ Dieses Attribut ist eine schreibgeschützte **Zahl** (**float**).
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -45,13 +45,13 @@ Dieses Attribut ist eine schreibgeschützte **Zahl** (**float**).
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. Normalisierung**](equalizersettings-normalization.md)
+[**EQUALIZERSETTINGS.normalization**](equalizersettings-normalization.md)
 </dt> <dt>
 
-[**Equalizersettings. normalizationaverage**](equalizersettings-normalizationaverage.md)
+[**EQUALIZERSETTINGS.normalizationAverage**](equalizersettings-normalizationaverage.md)
 </dt> </dl>
 
  

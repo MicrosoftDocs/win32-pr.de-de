@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob die Vorauthentifizierung vom Client verwendet wird.
 ms.assetid: 305d77b6-fe2d-45c6-ac91-5769f91de152
-title: preauthmode (Security)-Element
+title: preAuthMode (security)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 6ac74f193fb89c260b1a121b673f239147658865
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd8fad733b66337572b428ad9b15bbf8e24fb96444a646100a331f7ec9ce460a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797788"
 ---
-# <a name="preauthmode-security-element"></a>preauthmode (Security)-Element
+# <a name="preauthmode-security-element"></a>preAuthMode (security)-Element
 
-Das preauthmode (Security)-Element gibt an, ob die Vorauthentifizierung vom Client verwendet wird. Die Vorauthentifizierung ist für das sichere schnelle Roaming von WPA2 erforderlich. Dieses Element gilt nur für WPA2-definierte Netzwerke, bei denen [**pmkcachemode**](wlan-profileschema-pmkcachemode-security-element.md) auf "aktiviert" festgelegt ist. Wenn **pmkcachemode** aktiviert ist und dieses Element nicht vorhanden ist, ist der Standardwert "deaktiviert".
+Das preAuthMode -Element (Sicherheit) gibt an, ob die Vorauthentifizierung vom Client verwendet wird. Die Vorauthentifizierung ist für sicheres schnelles Roaming mit WPA2 erforderlich. Dieses Element ist nur für WPA2-definierte Netzwerke gültig, für die [**PMKCacheMode**](wlan-profileschema-pmkcachemode-security-element.md) auf "enabled" festgelegt ist. Wenn **PMKCacheMode** aktiviert ist und dieses Element nicht vorhanden ist, lautet der Standardwert "disabled".
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="preAuthMode"
@@ -44,7 +44,7 @@ Das preauthmode (Security)-Element gibt an, ob die Vorauthentifizierung vom Clie
 </xs:element>
 ```
 
-Das-Element wird durch das [**Security**](wlan-profileschema-security-msm-element.md) -Element definiert.
+Das -Element wird durch das [**-Sicherheitselement**](wlan-profileschema-security-msm-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,8 +52,8 @@ Das-Element wird durch das [**Security**](wlan-profileschema-security-msm-elemen
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -61,13 +61,13 @@ Das-Element wird durch das [**Security**](wlan-profileschema-security-msm-elemen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Sicherung**](wlan-profileschema-security-msm-element.md)
+[**Sicherheit**](wlan-profileschema-security-msm-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Sicherheit (MSM)**](wlan-profileschema-security-msm-element.md)

@@ -1,29 +1,29 @@
 ---
-description: Wird von der Richtlinien-Engine ausgelöst, wenn die Individualisierung fertiggestellt ist. Weitere Informationen finden Sie unter "meindividualizationstart"-Ereignis.
+description: Wird von der Richtlinien-Engine ausgelöst, wenn die Individualisierung abgeschlossen ist. Weitere Informationen finden Sie unter MEIndividualizationStart-Ereignis.
 ms.assetid: 44a4956f-19ba-410d-b96c-e7774cbe2d7e
-title: Meindividualizationabgeschlossene-Ereignis (mfobjects. h)
+title: MEIndividualizationCompleted-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7143274d12a9ad113f714062ff8f88c1fb8277cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f992f9369432114dafdf4c606370075ea454a6d35d6e8894099fa24831e8b3d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877783"
 ---
-# <a name="meindividualizationcompleted-event"></a>Meindividualizationabgeschlossene-Ereignis
+# <a name="meindividualizationcompleted-event"></a>MEIndividualizationCompleted-Ereignis
 
-Wird von der Richtlinien-Engine ausgelöst, wenn die Individualisierung fertiggestellt ist. Weitere Informationen finden Sie unter " [meindividualizationstart](meindividualizationstart.md) "-Ereignis.
+Wird von der Richtlinien-Engine ausgelöst, wenn die Individualisierung abgeschlossen ist. Weitere Informationen finden Sie unter [MEIndividualizationStart-Ereignis.](meindividualizationstart.md)
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,9 +33,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

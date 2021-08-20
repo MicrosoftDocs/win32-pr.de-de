@@ -1,26 +1,26 @@
 ---
-title: VML-Text Attribut
-description: VML-Text Attribut
+title: VML-Textattribut
+description: VML-Textattribut
 ms.assetid: dc7c161b-b78d-4baf-acb4-962a95418d77
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d79b852af4a02ffd32460aa18462da8bb07e498a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a850d0c380eb6d87fa51469500af1c432a46e73d4ace7028aba3338b6694e3a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117939369"
 ---
-# <a name="vml-text-attribute"></a>VML-Text Attribut
+# <a name="vml-text-attribute"></a>VML-Textattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob der an eine Form angefügte Text bearbeitet werden kann. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob der an eine Form angefügte Text bearbeitet werden kann. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Bestimmt, ob der an eine Form angefügte Text bearbeitet werden kann. Lese-/Schr
 
 **Tagsyntax**
 
-<o: *Element* Text = " *Expression* " >
+<o: *element* text=" *ausdruck* ">
 
 **Anmerkungen**
 
-Wenn der Wert **true** ist, kann der an eine Form angefügte Text nicht von einem grafischen Editor geändert werden. Der Standardwert ist **False**.
+**True** gibt an, dass der an eine Form angefügte Text nicht von einem grafischen Editor geändert werden kann. Der Standardwert ist **False**.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

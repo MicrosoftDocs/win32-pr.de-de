@@ -1,23 +1,23 @@
 ---
-description: Gibt das Steuerelement an, das beim Bearbeiten der Eigenschaft verwendet werden soll.
+description: Gibt an, welches Steuerelement beim Bearbeiten der Eigenschaft verwendet werden soll.
 ms.assetid: cef6d76f-664a-4808-a224-e82a5adb2d70
-title: editcontrol
+title: editControl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 966f9742082fd6b5f939941a956eaae1ac4e427a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bdb47a3866c156ff10dba8eed4584f814793b863e8f615ae5e1a10b8d687ed4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118055990"
 ---
-# <a name="editcontrol"></a>editcontrol
+# <a name="editcontrol"></a>editControl
 
-Gibt das Steuerelement an, das beim Bearbeiten der Eigenschaft verwendet werden soll. Es darf nur ein [editcontrol]() -Element für jedes [DisplayInfo](./propdesc-schema-displayinfo.md) -Element vorhanden sein.
+Gibt an, welches Steuerelement beim Bearbeiten der Eigenschaft verwendet werden soll. Es sollte nur ein [editControl-Element]() für jedes [displayInfo-Element geben.](./propdesc-schema-displayinfo.md)
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [editcontrol]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [editControl-Element]() angegeben wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
-Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angeborene Eigenschaft nicht bearbeitet werden kann.
+Gibt <typeInfo isInnate="true"> an, dass dieses Element ignoriert wird, da eine innierte Eigenschaft nicht bearbeitet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angebor
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -70,14 +70,14 @@ Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angebor
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>attribute</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Steuerung</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist Default &quot; &quot; . Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; Default &quot; . Die folgenden Werte sind gültig. 
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -92,11 +92,11 @@ Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angebor
 <tbody>
 <tr class="odd">
 <td>Standard</td>
-<td>Standard. Verwendet das Standard Steuerelement auf Grundlage des- <typeInfo type=&quot;&quot;> Attributs. Die Standardtypen sind unten aufgeführt. Jeder andere Typ führt zur Verwendung des &quot; Text- &quot; Steuer Elements. 
+<td>Standard. Verwendet das standard-Steuerelement, das auf dem -Attribut <typeInfo type=&quot;&quot;> basiert. Die Standardtypen sind unten aufgeführt. Jeder andere Typ führt zur Verwendung des &quot; &quot; Text-Steuerelements. 
 <table>
 <thead>
 <tr class="header">
-<th>type</th>
+<th>Typ</th>
 <th>Control</th>
 </tr>
 </thead>
@@ -106,8 +106,8 @@ Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angebor
 <td>Text</td>
 </tr>
 <tr class="even">
-<td>Zeichenfolge (mehrere Werte)</td>
-<td>Multivaluetext</td>
+<td>Zeichenfolge (Mehrwert)</td>
+<td>MultiValueText</td>
 </tr>
 <tr class="odd">
 <td>Datetime</td>
@@ -120,31 +120,31 @@ Wenn <typeInfo isInnate="true"> , wird dieses Element ignoriert, da eine angebor
 </tr>
 <tr class="even">
 <td>Kalender</td>
-<td>Verwendet das Kalender Steuerelement.</td>
+<td>Verwendet das Calendar-Steuerelement.</td>
 </tr>
 <tr class="odd">
-<td>Checkboxdroplist</td>
-<td>Verwendet das Listen Steuerelement mit Kontrollkästchen.</td>
+<td>CheckboxDropList</td>
+<td>Verwendet das Listensteuerfeld mit Kontrollkästchen.</td>
 </tr>
 <tr class="even">
-<td>Droplist</td>
-<td>Verwendet das Dropdown Listen-Steuerelement.</td>
+<td>DropList</td>
+<td>Verwendet das Dropdownlisten-Steuerelement.</td>
 </tr>
 <tr class="odd">
-<td>Multilinetext</td>
-<td>Verwendet das mehrzeilige Textbearbeitungs-Steuerelement.</td>
+<td>MultiLineText</td>
+<td>Verwendet das mehrzeilenbasierte Textbearbeitungssteuerfeld.</td>
 </tr>
 <tr class="even">
-<td>Multivaluetext</td>
-<td>Verwendet das mehrwertige Text Bearbeitungs Steuerelement.</td>
+<td>MultiValueText</td>
+<td>Verwendet das mehrwertige Textbearbeitungssteuerfeld.</td>
 </tr>
 <tr class="odd">
 <td>Rating</td>
-<td>Verwendet das 5-Sterne-Bewertungs Steuerelement.</td>
+<td>Verwendet das 5-Stern-Bewertungssteuer steuerelement.</td>
 </tr>
 <tr class="even">
 <td>Text</td>
-<td>Verwendet das Steuerelement für die Textbearbeitung.</td>
+<td>Verwendet das Textbearbeitungssteuerfeld.</td>
 </tr>
 <tr class="odd">
 <td>IconList</td>

@@ -1,7 +1,7 @@
 ---
-description: Die getnppeer Type esapfilter-Funktion Ruft den ETYPE/SAP-Filter aus einem angegebenen BLOB ab.
+description: Die GetNPPEtypeSapFilter-Funktion ruft den Etype/Sap-Filter aus einem bestimmten BLOB ab.
 ms.assetid: c4891eff-ab2d-43ff-8d2b-3aa299570c0a
-title: Getnppeer Type esapfilter-Funktion (Netmon. h)
+title: GetNPPEtypeSapFilter-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 5359332d96fb85343300c5def12070c812bd99d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 593030c3b53e7e11b20b9fe1497a3989b2ff68650d3d2df73f52e6491529d58e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117982304"
 ---
-# <a name="getnppetypesapfilter-function"></a>Getnppeer Type esapfilter-Funktion
+# <a name="getnppetypesapfilter-function"></a>GetNPPEtypeSapFilter-Funktion
 
-Die **getnppeer Type esapfilter** -Funktion Ruft den ETYPE/SAP-Filter aus einem angegebenen BLOB ab.
+Die **GetNPPEtypeSapFilter-Funktion** ruft den Etype/Sap-Filter aus einem bestimmten BLOB ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,64 +45,64 @@ DWORD GetNPPEtypeSapFilter(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Handle für das BLOB.
 
 </dd> <dt>
 
-*pnsaps* \[ vorgenommen\]
+*pnSaps* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die zurückgegebene Anzahl von Protokollen in der SAP-Tabelle.
+Zeiger auf die zurückgegebene Anzahl von Protokollen in der SAP-Tabelle.
 
 </dd> <dt>
 
-*pnettypes* \[ vorgenommen\]
+*pnEtypes* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die zurückgegebene Anzahl von ETYPEs in der ETYPE-Tabelle.
+Zeiger auf die zurückgegebene Anzahl von Etypes in der Etype-Tabelle.
 
 </dd> <dt>
 
-*ppsaptable* \[ vorgenommen\]
+*ppSapTable* \[ out\]
 </dt> <dd>
 
 Zeiger auf die zurückgegebene SAP-Tabelle.
 
 </dd> <dt>
 
-*ppeer typetable* \[ vorgenommen\]
+*ppEtypeTable* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die zurückgegebene ETYPE-Tabelle.
+Zeiger auf die zurückgegebene Etype-Tabelle.
 
 </dd> <dt>
 
-*pfilterflags* \[ vorgenommen\]
+*pFilterFlags* \[ out\]
 </dt> <dd>
 
 Zeiger auf die zurückgegebenen Filterflags.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für einen fehlerblob, der den Speicherort im ursprünglichen BLOB angibt, an dem der Fehler (falls vorhanden) aufgetreten ist.
+Behandeln sie ein Fehler-BLOB, das den Speicherort im ursprünglichen BLOB angibt, an dem der Fehler aufgetreten ist (falls vorhanden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die ETYPE/SAP-Informationen werden in der Kategorie **config** des Abschnitts NPP- **Besitzer** gespeichert.
+Die Etype/Sap-Informationen werden in der Kategorie **Config** des NPP-Abschnitts **Besitzer** gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,8 +112,8 @@ Die ETYPE/SAP-Informationen werden in der Kategorie **config** des Abschnitts NP
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
@@ -122,7 +122,7 @@ Die ETYPE/SAP-Informationen werden in der Kategorie **config** des Abschnitts NP
 
 <dl> <dt>
 
-[Setnppeer Type esapfilter](setnppetypesapfilter.md)
+[SetNPPEtypeSapFilter](setnppetypesapfilter.md)
 </dt> </dl>
 
  

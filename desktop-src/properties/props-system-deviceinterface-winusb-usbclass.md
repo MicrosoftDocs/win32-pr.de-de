@@ -1,19 +1,19 @@
 ---
-description: Der Klassen Wert aus dem ersten USB-Schnittstellen Deskriptor des USB-Geräts.
+description: Klassenwert aus dem ersten USB-Schnittstellendeskriptor des USB-Geräts.
 ms.assetid: ef1781eb-25eb-44cd-935a-dcd1441425bd
-title: System. deviceingeterface. winusb. Start Class
+title: System.DeviceInterface.WinUsb.UsbClass
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c9daebf019aa69e1e67e2beccdd5eebecd81576
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65cd0e62ef40082fd706e4d2cfeb16d7c8dbe7a5ee800486dc3643aafbc41026
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118054819"
 ---
-# <a name="systemdeviceinterfacewinusbusbclass"></a>System. deviceingeterface. winusb. Start Class
+# <a name="systemdeviceinterfacewinusbusbclass"></a>System.DeviceInterface.WinUsb.UsbClass
 
-Der Klassen Wert aus dem ersten USB-Schnittstellen Deskriptor des USB-Geräts.
+Klassenwert aus dem ersten USB-Schnittstellendeskriptor des USB-Geräts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 
@@ -30,54 +30,54 @@ propertyDescription
       type = Byte
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

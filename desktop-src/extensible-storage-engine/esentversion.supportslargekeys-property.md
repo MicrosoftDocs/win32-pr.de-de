@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentversion. supportslargekeys-Eigenschaft'
-title: Esentversion. supportslargekeys-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: EsentVersion.SupportsLargeKeys(Eigenschaft)'
+title: EsentVersion.SupportsLargeKeys (Eigenschaft)
 TOCTitle: 'SupportsLargeKeys property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.EsentVersion.SupportsLargeKeys
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentversion.supportslargekeys(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 43ee88b7c0e190d9c717c087deeb5fc4556e6575
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19eb0afe6cdf1cc4dcdbc2f29706001b037fb5b9f3560c68f54e93186673111c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363836"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117706556"
 ---
-# <a name="esentversionsupportslargekeys-property"></a>Esentversion. supportslargekeys-Eigenschaft
+# <a name="esentversionsupportslargekeys-property"></a>EsentVersion.SupportsLargeKeys (Eigenschaft)
 
-Ruft einen Wert ab, der angibt, ob große ( \> 255 Byte) Schlüssel unterstützt werden. Die Schlüsselgröße für einen Index kann im [JET_INDEXCREATE](./jet-indexcreate-class.md) Objekt angegeben werden.
+Ruft einen Wert ab, der angibt, ob große Schlüssel \> (255 Byte) unterstützt werden. Die Schlüsselgröße für einen Index kann im -Objekt JET_INDEXCREATE [werden.](./jet-indexcreate-class.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ public static bool SupportsLargeKeys { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentversion-Klasse](./esentversion-class.md)
+[EsentVersion-Klasse](./esentversion-class.md)
 
-[Esentversion-Member](./esentversion-members.md)
+[EsentVersion-Member](./esentversion-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

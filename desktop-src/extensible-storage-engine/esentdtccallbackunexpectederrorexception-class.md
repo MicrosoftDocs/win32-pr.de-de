@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdtccallbackunexpectederrorexception-Klasse'
-title: Esentdtccallbackunexpectederrorexception-Klasse
+description: 'Weitere Informationen zu: EsentDTCCallbackUnexpectedErrorException-Klasse'
+title: EsentDTCCallbackUnexpectedErrorException-Klasse
 TOCTitle: EsentDTCCallbackUnexpectedErrorException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDTCCallbackUnexpectedErrorException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdtccallbackunexpectederrorexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7ec2d5c2e204d0babeaf1e671d6096b8c52a9b78
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68ca839427d5f8ae15725bd1ae80b34c82918907f5f23a8a1e3ddf27d8453504
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117711180"
 ---
-# <a name="esentdtccallbackunexpectederrorexception-class"></a>Esentdtccallbackunexpectederrorexception-Klasse
+# <a name="esentdtccallbackunexpectederrorexception-class"></a>EsentDTCCallbackUnexpectedErrorException-Klasse
 
-Basisklasse für JET_err. Dtccallbackunexpectederror-Ausnahmen.
+Basisklasse für JET_err. DTCCallbackUnexpectedError-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentdtccallbackunexpectederrorexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentDTCCallbackUnexpectedErrorException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdtccallbackunexpectederrorexception-Member](./esentdtccallbackunexpectederrorexception-members.md)
+[EsentDTCCallbackUnexpectedErrorException-Member](./esentdtccallbackunexpectederrorexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

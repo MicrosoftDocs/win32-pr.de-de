@@ -1,10 +1,10 @@
 ---
-description: Fordert die Rückgabe von generischen Objektdaten an, die ein Objekt in der vsglog-Datei für das angegebene Ereignis und das angegebene Format beschreiben.
+description: Fordert an, generische Objektdaten zurückzugeben, die ein Objekt in der VSGLOG-Datei für das angegebene Ereignis und im angegebenen Format beschreiben.
 MS-HAID: vspixengine.IGenericBufferDataRequest\_RequestAsync\_DumperType\_EventID\_DWORD\_IGenericBufferDataCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Igenericbufferdatarequest:: requestasync-Methode'
+title: IGenericBufferDataRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 542E20F9-B91D-4A05-AEE8-9DD2E80B76DB
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6d8860b2de7c3dce5c6f8b61467bfe147530ed76
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1859c5527480f018223933603a2dedb0af54cfe009194a170d537f10e124d35a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117722067"
 ---
-# <a name="span-idvspixengineigenericbufferdatarequest_requestasync_dumpertype_eventid_dword_igenericbufferdatacallback_ptr_dword_dwordspanigenericbufferdatarequestrequestasync-method"></a><span id="vspixengine.igenericbufferdatarequest_requestasync_dumpertype_eventid_dword_igenericbufferdatacallback_ptr_dword_dword"></span>Igenericbufferdatarequest:: requestasync-Methode
+# <a name="span-idvspixengineigenericbufferdatarequest_requestasync_dumpertype_eventid_dword_igenericbufferdatacallback_ptr_dword_dwordspanigenericbufferdatarequestrequestasync-method"></a><span id="vspixengine.igenericbufferdatarequest_requestasync_dumpertype_eventid_dword_igenericbufferdatacallback_ptr_dword_dword"></span>IGenericBufferDataRequest::RequestAsync-Methode
 
-Fordert die Rückgabe von generischen Objektdaten an, die ein Objekt in der vsglog-Datei für das angegebene Ereignis und das angegebene Format beschreiben.
+Fordert an, generische Objektdaten zurückzugeben, die ein Objekt in der VSGLOG-Datei für das angegebene Ereignis und im angegebenen Format beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,35 +44,35 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*dumpertype*   
-Das angegebene Format der Textdarstellung des-Objekts (HTML, XML usw.).
+*dumperType*   
+Das angegebene Format der Textdarstellung des Objekts (HTML, XML usw.)
 
-*EventID*   
-Das angegebene Ereignis, mit dem der Inhalt des Puffers verglichen werden soll (z. b. kann sich ein Renderziel im Laufe der Zeit ändern).
+*Eventid*   
+Das angegebene Ereignis, mit dem der Inhalt des Puffers übereinstimmt (z. B. kann sich ein Renderziel im Laufe der Zeit ändern).
 
-*Requesteddatauid*   
+*RequestedDataUID*   
 Die Adresse des angegebenen Objekts.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Igenericbufferdatarequest**](/windows/desktop/direct3dtools/igenericbufferdatarequest)
+[**IGenericBufferDataRequest**](/windows/desktop/direct3dtools/igenericbufferdatarequest)
 
  
 

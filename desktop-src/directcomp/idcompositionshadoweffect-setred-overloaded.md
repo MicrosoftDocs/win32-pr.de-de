@@ -1,9 +1,9 @@
 ---
-title: Idcompositionshadoweffect-Methoden (Dcomp. h)
+title: IDCompositionShadowEffect SetRed-Methoden (Dcomp.h)
 description: Legt den roten Wert für die Farbe des Schattens fest.
 ms.assetid: c1a74aca-6026-1307-7300-ca2941246000
 keywords:
-- "\"Ttred\"-Methoden \"directcomposition\""
+- SetRed-Methoden – DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: cb07dc3a07a7a612e91e34bde91aefa277c2dc7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 060840d7ed33cf91a21c69e13d79f28bba2f7e31e984efd8b19160a7f021d0b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118088599"
 ---
-# <a name="idcompositionshadoweffectsetred-methods"></a>Idcompositionshadoweffect::-Methode
+# <a name="idcompositionshadoweffectsetred-methods"></a>IDCompositionShadowEffect::SetRed-Methoden
 
 Legt den roten Wert für die Farbe des Schattens fest.
 
@@ -27,10 +27,10 @@ Legt den roten Wert für die Farbe des Schattens fest.
 
 
 
-| Methode                                                                           | BESCHREIBUNG                                                |
+| Methode                                                                           | Beschreibung                                                |
 |:---------------------------------------------------------------------------------|:-----------------------------------------------------------|
-| [**"-ID" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setred(idcompositionanimation)) | Legt den roten Wert für die Farbe des Schattens fest.<br/> |
-| [**"Abtred"**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setred(float))                               | Legt den roten Wert für die Farbe des Schattens fest.<br/> |
+| [**SetRed (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setred(idcompositionanimation)) | Legt den roten Wert für die Farbe des Schattens fest.<br/> |
+| [**SetRed**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setred(float))                               | Legt den roten Wert für die Farbe des Schattens fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den roten Wert für die Farbe des Schattens fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den roten Wert für die Farbe des Schattens fest.
 
 <dl> <dt>
 
-[**Idcompositionshadoweffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
+[**IDCompositionShadowEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
 </dt> </dl>
 
 �

@@ -1,9 +1,9 @@
 ---
-title: EditBox. LineCount
-description: Das LineCount-Attribut ruft die Anzahl der Zeilen im Bearbeitungsfeld-Steuerelement ab.
+title: EDITBOX.lineCount
+description: Das lineCount-Attribut ruft die Anzahl der Zeilen im Bearbeitungsfeld-Steuerelement ab.
 ms.assetid: 8922aa4a-2b39-431d-b876-82fd368df17a
 keywords:
-- EditBox. LineCount-Fenster Media Player
+- EDITBOX.lineCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5481f345a0f15ce499b67b9dfb2c2048e150a67c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 169c9d11a337c829ef33fe73099dd15b1aa2dc464c2cca733bf530ae1f11aa32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935630"
 ---
-# <a name="editboxlinecount"></a>EditBox. LineCount
+# <a name="editboxlinecount"></a>EDITBOX.lineCount
 
-Das **LineCount** -Attribut ruft die Anzahl der Zeilen im Bearbeitungsfeld-Steuerelement ab.
+Das **lineCount-Attribut** ruft die Anzahl der Zeilen im Bearbeitungsfeld-Steuerelement ab.
 
 ``` syntax
         elementID.lineCount
@@ -29,11 +29,11 @@ Das **LineCount** -Attribut ruft die Anzahl der Zeilen im Bearbeitungsfeld-Steue
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur nützlich, wenn **editstyle** auf "Multiline" festgelegt ist.
+Dieses Attribut ist nur nützlich, **wenn editStyle** auf "multiline" festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,10 +49,10 @@ Dieses Attribut ist nur nützlich, wenn **editstyle** auf "Multiline" festgelegt
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> <dt>
 
-[**EditBox. editstyle**](editbox-editstyle.md)
+[**EDITBOX.editStyle**](editbox-editstyle.md)
 </dt> </dl>
 
  

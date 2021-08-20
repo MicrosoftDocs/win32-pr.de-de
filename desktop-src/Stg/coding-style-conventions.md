@@ -1,19 +1,19 @@
 ---
-title: Codierungsstil Konventionen
-description: Codierungsstil Konventionen werden in dieser Beispiel Reihe verwendet, um Klarheit und Konsistenz zu gewährleisten.
+title: Konventionen für Codierungsstile
+description: Codierungsstilkonventionen werden in dieser Beispielreihe verwendet, um Klarheit und Konsistenz zu unterstützen.
 ms.assetid: d5e81a52-79f6-4561-891c-05fee125a1b0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e28e65e19d69f060a5f85d86976c4bd3694f7611
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: fd6f45fcff7e8f5f8e6f152ec1449bdf12170028537fd4b579d25479572dc5ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117962440"
 ---
-# <a name="coding-style-conventions"></a>Codierungsstil Konventionen
+# <a name="coding-style-conventions"></a>Konventionen für Codierungsstile
 
-Codierungsstil Konventionen werden in dieser Beispiel Reihe verwendet, um Klarheit und Konsistenz zu gewährleisten. Die Konventionen für die "ungarisch"-Notation werden verwendet. Diese wurden in der Win32-Programmierung häufig zum Codierungs Verhalten. Sie enthalten Variablen Präfix-Notationen, die Variablennamen einen Vorschlag des Typs der Variablen geben.
+Codierungsstilkonventionen werden in dieser Beispielreihe verwendet, um Klarheit und Konsistenz zu unterstützen. Die Notationskonventionen für "Ungarisch" werden verwendet. Diese haben sich zu einer gängigen Programmierpraktiken bei der Win32-Programmierung entwickelt. Sie enthalten Variablenpräfix-Notationen, die Variablennamen einen Vorschlag vom Typ der Variablen geben.
 
 In der folgenden Tabelle sind allgemeine Präfixe aufgeführt.
 
@@ -22,66 +22,66 @@ In der folgenden Tabelle sind allgemeine Präfixe aufgeführt.
 | Präfix | BESCHREIBUNG                         |
 |--------|-------------------------------------|
 | a      | Array                               |
-| b      | Bool (int)                          |
+| b      | BOOL (int)                          |
 | c      | Char                                |
-| betrieben     | Anzahl von Bytes                      |
-| cr     | Farb Verweis Wert               |
-| verschoben     | Anzahl von x (Short)                  |
+| Cb     | Anzahl der Bytes                      |
+| cr     | Farbverweiswert               |
+| Cx     | Anzahl von x (kurz)                  |
 | dw     | DWORD (unsigned long)               |
 | f      | Flags (in der Regel mehrere Bitwerte) |
 | fn     | Funktion                            |
-| selbst\_    | Global                              |
-| h.      | Handle                              |
+| G\_    | Global                              |
+| h      | Handle                              |
 | i      | Integer                             |
 | l      | Long                                |
-| lp     | Long-Zeiger                        |
-| 800\_    | Datenmember einer Klasse              |
+| lp     | Langer Zeiger                        |
+| M\_    | Datenmember einer Klasse              |
 | n      | Short int                           |
 | p      | Zeiger                             |
 | s      | String                              |
-| sz     | NULL beendete Zeichenfolge              |
+| sz     | 0 (null) beendete Zeichenfolge              |
 | tm     | Textmetrik                         |
 | u      | Unsigned int                        |
-| nützlichen     | Unsigned long (ULONG)               |
-| w      | Word (kurz ohne Vorzeichen)               |
-| x, y    | x, y-Koordinaten (kurz)            |
+| Ul     | Unsigned long (ULONG)               |
+| w      | WORD (unsigned short)               |
+| x,y    | x- und y-Koordinaten (kurz)            |
 
 
 
  
 
-Diese werden häufig kombiniert, wie im folgenden.
+Diese werden häufig wie im folgenden Beispiel kombiniert.
 
 
 
-| Präfix Kombination | BESCHREIBUNG                                             |
+| Präfixkombination | Beschreibung                                             |
 |--------------------|---------------------------------------------------------|
-| pszmystring        | Ein Zeiger auf eine Zeichenfolge.                                  |
-| m \_ pszmystring     | Ein Zeiger auf eine Zeichenfolge, die ein Datenmember einer Klasse ist. |
+| pszMyString        | Ein Zeiger auf eine Zeichenfolge.                                  |
+| m \_ pszMyString     | Ein Zeiger auf eine Zeichenfolge, die ein Datenmember einer Klasse ist. |
 
 
 
  
 
-In der folgenden Tabelle sind andere Konventionen aufgeführt.
+Andere Konventionen sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Konvention       | BESCHREIBUNG                                              |
+| Konvention       | Beschreibung                                              |
 |------------------|----------------------------------------------------------|
 | CMyClass         | Präfix "C" für C++-Klassennamen.                          |
-| Comyobjectclass  | Präfix ' Co ' für COM-Objektklassen Namen.                  |
-| Cfmyclassfactory | Präfix ' CF ' für com-klassenfactorynamen.                 |
-| Imeineschnittstelle     | Präfix "I" für Namen der COM-Schnittstellen Klasse.                |
-| Cimpimyinterface | Präfix ' cimpi ' für Implementierungsklassen der COM-Schnittstelle. |
+| COMyObjectClass  | Präfix "CO" für COM-Objektklassennamen.                  |
+| CFMyClassFactory | Präfix 'CF' für COM-Klassenfactorynamen.                 |
+| IMyInterface     | Präfix "I" für Com-Schnittstellenklassennamen.                |
+| CImpIMyInterface | Präfix "CImpI" für IMPLEMENTIERUNGsklassen der COM-Schnittstelle. |
 
 
 
  
 
-Einige konsistente Konventionen für Kommentar Header Blöcke werden wie folgt in dieser Beispiel Reihe verwendet.
+Einige konsistente Konventionen für Kommentarheaderblöcke werden in dieser Beispielreihe wie folgt verwendet.
 
-## <a name="file-header"></a>Datei Header
+## <a name="file-header"></a>Dateiheader
 
 ``` syntax
 /*+===================================================================
@@ -103,7 +103,7 @@ Einige konsistente Konventionen für Kommentar Header Blöcke werden wie folgt i
 ===================================================================+*/
 ```
 
-## <a name="plain-comment-block"></a>Block "Plain comment"
+## <a name="plain-comment-block"></a>Plain Comment Block
 
 ``` syntax
 /*--------------------------------------------------------------------
@@ -112,7 +112,7 @@ Einige konsistente Konventionen für Kommentar Header Blöcke werden wie folgt i
 --------------------------------------------------------------------*/
 ```
 
-## <a name="class-declaration-header"></a>Klassen Deklarations Header
+## <a name="class-declaration-header"></a>Klassendeklarationsheader
 
 ``` syntax
 /*C+C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C+++C
@@ -132,7 +132,7 @@ Einige konsistente Konventionen für Kommentar Header Blöcke werden wie folgt i
 C---C---C---C---C---C---C---C---C---C---C---C---C---C---C---C---C-C*/
 ```
 
-## <a name="class-method-definition-header"></a>Klassen Methoden-Definitions Header
+## <a name="class-method-definition-header"></a>Klassenmethodendefinitionsheader
 
 ``` syntax
 /*M+M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M+++M
@@ -171,7 +171,7 @@ M---M---M---M---M---M---M---M---M---M---M---M---M---M---M---M---M-M*/
 -----------------------------------------------------------------F-F*/
 ```
 
-## <a name="exported-function-definition-header"></a>Definitions Header der exportierten Funktion
+## <a name="exported-function-definition-header"></a>Exportierter Funktionsdefinitionsheader
 
 ``` syntax
 /*F+F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F
@@ -189,7 +189,7 @@ M---M---M---M---M---M---M---M---M---M---M---M---M---M---M---M---M-M*/
 F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
 ```
 
-## <a name="com-interface-declaration-header"></a>Deklaration der COM-Schnittstelle
+## <a name="com-interface-declaration-header"></a>COM-Schnittstellendeklarationsheader
 
 ``` syntax
 /*I+I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I+++I
@@ -205,7 +205,7 @@ F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
 I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I-I*/
 ```
 
-## <a name="com-object-class-declaration-header"></a>COM-Objektklassen Deklarations Header
+## <a name="com-object-class-declaration-header"></a>COM-Objektklassendeklarationsheader
 
 ``` syntax
 /*O+O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O+++O
@@ -224,36 +224,36 @@ I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I-I*/
 O---O---O---O---O---O---O---O---O---O---O---O---O---O---O---O---O-O*/
 ```
 
-Alle diese Kommentar Block Konventionen haben konsistente Anfangs-und Endtoken-Zeichen folgen. Diese Konsistenz unterstützt die automatische Verarbeitung der Header auf irgendeine Weise. Beispielsweise können awk-Skripts geschrieben werden, um die Funktions Header in eine separate Textdatei zu filtern, die als Grundlage für ein Spezifikationsdokument dienen kann. Ebenso können Tools wie das nicht unterstützte autoduck-Hilfsprogramm (zurzeit auf der Microsoft Developer Network Development Library-CD-ROM verfügbar) zum Verarbeiten der Kommentar Blöcke in diesen Headern verwendet werden.
+Alle diese Kommentarblockkonventionen verfügen über konsistente Anfangs- und Endtokenzeichenfolgen. Diese Konsistenz unterstützt die automatische Verarbeitung der Header in irgendeiner Weise. Beispielsweise können AWK-Skripts geschrieben werden, um die Funktionsheader in eine separate Textdatei zu filtern, die dann als Grundlage für ein Spezifikationsdokument dienen kann. Ebenso können Tools wie das nicht unterstützte AUTODUCK-Hilfsprogramm (derzeit auf der CD-ROM der Microsoft-Entwickler Network Development Library verfügbar) verwendet werden, um die Kommentarblöcke in diesen Headern zu verarbeiten.
 
-In der folgenden Tabelle werden die in Beispiel Lernprogrammen verwendeten Zeichen folgen für den Anfang und das Beenden aufgeführt
+In der folgenden Tabelle sind die in Beispieltutorials verwendeten Anfangs- und Endtokenzeichenfolgen aufgeführt.
 
 
 
 | Token | BESCHREIBUNG                      |
 |-------|----------------------------------|
-| /\*+  | Datei Header Anfang                |
-| +\*/  | Datei Header Ende                  |
-| /\*-  | Anfang der Block Kopfzeile für Klartext |
-| -\*/  | Ende der Block Kopfzeile des Plain comment   |
-| /\*Scher  | Klassen Header Anfang               |
-| Scher\*/  | Header Ende der Klasse                 |
-| /\*800  | Methoden Header Anfang              |
-| 800\*/  | Methoden Header Ende                |
-| /\*C  | Funktions Header Anfang            |
-| C\*/  | Funktions Header Ende              |
-| /\*Ich  | Schnittstellen-Header Anfang           |
-| Ich\*/  | Schnittstellen-Header Ende             |
-| /\*'  | Anfang der com-Objektklassen Kopfzeile    |
-| '\*/  | Header Ende der com-Objektklasse      |
+| /\*+  | File Header Begin                |
+| +\*/  | Dateiheaderende                  |
+| /\*-  | Plain comment block Header Begin |
+| -\*/  | Einfaches Kommentarblock-Headerend   |
+| /\*C  | Klassenheader Begin               |
+| C\*/  | Klassenheaderende                 |
+| /\*M  | Method Header Begin              |
+| M\*/  | Methodenheaderende                |
+| /\*F  | Start des Funktionsheaders            |
+| F\*/  | Funktionsheaderende              |
+| /\*Ich  | Interface Header Begin           |
+| Ich\*/  | Schnittstellenheaderende             |
+| /\*O  | COM Object Class Header Begin    |
+| O\*/  | Headerende der COM-Objektklasse      |
 
 
 
  
 
-Diese Header können auch als visuelle Hinweise für das schnelle Scannen von Quelldateien verwendet werden. Außerdem bieten Sie Ihnen die Möglichkeit, schnell zu einem Quell Speicherort zu gelangen, wenn Sie Such Zeichenfolgen in Ihrem Editor einrichten und dann "Letzte Suche" wiederholen, um diese Header schnell zu finden.
+Diese Header können auch als visuelle Hinweise für die schnelle Überprüfung von Quelldateien verwendet werden. Sie bieten auch die Vereinfachung, schnell zu einem Bestimmten Quellspeicherort zu kommen, wenn Sie Suchzeichenfolgen in Ihrem Editor einrichten und dann die letzte Suche wiederholen, um diese Header schnell zu finden.
 
-Die Such Zeichenfolge "m + M" findet z. b. den Anfang von Methoden Headern, und "m-m" findet den Anfang des tatsächlichen Methoden Definitions-/Implementierungs Codes.
+Die Suchzeichenfolge "M+M" sucht beispielsweise den Anfang der Methodenheader, und "M-M" findet den Anfang der tatsächlichen Methodendefinition bzw. des Implementierungscodes.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Enthält eine GRL-Signatur (Global Sperrlist).
+description: Enthält eine GRL-Signatur (Global Revocation List).
 ms.assetid: 388a901c-6202-41cf-9c3d-f29d8ccca76b
-title: MF_SIGNATURE Struktur
+title: MF_SIGNATURE-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4827fea8e4259609cbb54f2b58a3d1c88ad6c23e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d5eec1105e490e68b5fecb46253154b3ed85a112b10641e8394bcc713b71c62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118059165"
 ---
-# <a name="mf_signature-structure"></a>MF- \_ Signatur Struktur
+# <a name="mf_signature-structure"></a>MF \_ SIGNATURE-Struktur
 
-Enthält eine GRL-Signatur (Global Sperrlist).
+Enthält eine GRL-Signatur (Global Revocation List).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,30 +40,30 @@ typedef struct _MF_SIGNATURE {
 
 <dl> <dt>
 
-**dwsignver**
+**dwSignVer**
 </dt> <dd>
 
-Die Signatur Versionsnummer.
+Die Signaturversionsnummer.
 
 </dd> <dt>
 
-**cbsign**
+**cbSign**
 </dt> <dd>
 
 Die Größe der Signatur in Bytes.
 
 </dd> <dt>
 
-**rgsign**
+**rgSign**
 </dt> <dd>
 
-Ein Bytearray der Größe **cbsign** , das die Signatur enthält. Die tatsächliche Array Größe ist größer als die in der Struktur Deklaration angegebene Größe.
+Ein Bytearray der Größe **cbSign,** das die Signatur enthält. Die tatsächliche Arraygröße ist größer als die in der Strukturdeklaration angegebenen Größe.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist nicht in einem SDK-Header deklariert. Um diese Struktur zu verwenden, fügen Sie die hier gezeigte Deklaration dem Quellcode hinzu.
+Diese Struktur wird nicht in einem SDK-Header deklariert. Um diese Struktur zu verwenden, fügen Sie ihrem Quellcode die hier gezeigte Deklaration hinzu.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Struktur ist nicht in einem SDK-Header deklariert. Um diese Struktur zu ve
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -80,7 +80,7 @@ Diese Struktur ist nicht in einem SDK-Header deklariert. Um diese Struktur zu ve
 
 <dl> <dt>
 
-[OPM-Zertifikat Sperrung](opm-certificate-revocation.md)
+[OPM-Zertifikatsperrung](opm-certificate-revocation.md)
 </dt> <dt>
 
 [OPM-Strukturen](opm-structures.md)

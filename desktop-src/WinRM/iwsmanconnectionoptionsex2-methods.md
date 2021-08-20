@@ -1,35 +1,35 @@
 ---
 title: IWSManConnectionOptionsEx2-Methoden
-description: Die IWSManConnectionOptionsEx2-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWSManConnectionOptionsEx2-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 47ED80AD-DE42-45B4-94A7-8AF7E6C27213
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a4de52a298359fcde9038d7923c1457b53bfd00
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4195be8f66cac20352626362b4371a73630d8d805ad802278617663d3730d779
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118113090"
 ---
 # <a name="iwsmanconnectionoptionsex2-methods"></a>IWSManConnectionOptionsEx2-Methoden
 
-Die [**IWSManConnectionOptionsEx2**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanconnectionoptionsex2) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWSManConnectionOptionsEx2-Schnittstelle**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanconnectionoptionsex2) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Proxyauthenticationusebasic-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusebasic)
--   [**Proxyauthenticationusedigest-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusedigest)
--   [**Proxyauthenticationusenegotiate-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusenegotiate)
--   [**Proxyautodetect-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyautodetect)
--   [**Proxyieconfig-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyieconfig)
--   [**Proxynoproxyserver-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxynoproxyserver)
--   [**Proxywinhttpconfig-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxywinhttpconfig)
+-   [**ProxyAuthenticationUseBasic-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusebasic)
+-   [**ProxyAuthenticationUseDigest-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusedigest)
+-   [**ProxyAuthenticationUseNegotiate-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyauthenticationusenegotiate)
+-   [**ProxyAutoDetect-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyautodetect)
+-   [**ProxyIEConfig-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxyieconfig)
+-   [**ProxyNoProxyServer-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxynoproxyserver)
+-   [**ProxyWinHttpConfig-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-proxywinhttpconfig)
 -   [**SetProxy-Methode**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanconnectionoptionsex2-setproxy)
 
- 
+ 
 
- 
+ 
 
 
 

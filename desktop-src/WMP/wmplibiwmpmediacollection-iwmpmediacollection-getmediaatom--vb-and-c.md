@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection getmediaatom-Methode
-description: Die getmediaatom-Methode gibt den Index eines angegebenen Attributs innerhalb des Satzes verfügbarer Attribute zurück.
+title: IWMPMediaCollection getMediaAtom-Methode
+description: Die getMediaAtom-Methode gibt den Index eines angegebenen Attributs innerhalb des Sets verfügbarer Attribute zurück.
 ms.assetid: 01e3d073-677b-4939-96d3-63ae96eaa25d
 keywords:
-- getmediaatom-Methode, Windows-Media Player
-- getmediaatom-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection Interface, Windows Media Player, getmediaatom-Methode
+- getMediaAtom-Windows Media Player
+- getMediaAtom-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , getMediaAtom-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08487cf60c351ff4f8e0741209655cb78c30c3f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 39bd626537defe07fd214c61e29aac67f8c125034817f8a9041a586ab3b24e35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117929773"
 ---
-# <a name="iwmpmediacollectiongetmediaatom-method"></a>Iwmpmediacollection:: getmediaatom-Methode
+# <a name="iwmpmediacollectiongetmediaatom-method"></a>IWMPMediaCollection::getMediaAtom-Methode
 
-Die- `getMediaAtom` Methode gibt den Index eines angegebenen Attributs innerhalb des Satzes verfügbarer Attribute zurück.
+Die `getMediaAtom` -Methode gibt den Index eines angegebenen Attributs innerhalb der Gruppe verfügbarer Attribute zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPMediaCollection.getMediaAtom
 
 <dl> <dt>
 
-*bstritemname* \[ in\]
+*bstrItemName* \[ In\]
 </dt> <dd>
 
-**System. String** der Name des Elements, für das der Index abgerufen werden soll.
+Die **System.String,** die der Name des Elements ist, für das der Index abgerufen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der **System. Int32** -Wert, der der Index ist.
+Das **System.Int32,** das der Index ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mit dieser Methode abgerufene Indexnummer kann an das **iwmpmedia. getiteminfobyatom** -Element übermittelt werden, um auf Attributwerte zuzugreifen. Diese Technik ist in der Regel effizienter, wenn Sie mit großen Wiedergabelisten arbeiten als der Zugriff auf einen Attribut Wert über " **iwmpmedia. getiteminfo**".
+Die mit dieser Methode abgerufene Indexnummer kann an **IWMPMedia.getItemInfoByAtom** übergeben werden, um auf Attributwerte zu zugreifen. Diese Technik ist im Allgemeinen effizienter bei der Arbeit mit großen Wiedergabelisten als der Zugriff auf einen Attributwert über **IWMPMedia.getItemInfo.**
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,13 +86,13 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**Iwmpmedia. getiteminfo (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
+[**IWMPMedia.getItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. getiteminfobyatom (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getiteminfobyatom--vb-and-c.md)
+[**IWMPMedia.getItemInfoByAtom (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getiteminfobyatom--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-title: Bestimmen des Ausgabeformats eines Kompressors
-description: Bestimmen des Ausgabeformats eines Kompressors
+title: Bestimmen des Ausgabeformats eines 1.
+description: Bestimmen des Ausgabeformats eines 1.
 ms.assetid: 910bd77f-4c65-4ea2-bab2-96f42a2b6cf1
 keywords:
 - Videokomprimierungs-Manager (VCM), Ausgabeformat
 - VCM (Videokomprimierungs-Manager), Ausgabeformat
-- Iccompressgetformat-Makro
-- Iccompressquery-Makro
-- Iccompressgetsize-Makro
+- ICCompressGetFormat-Makro
+- ICCompressQuery-Makro
+- ICCompressGetSize-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c4356870598dc08ad84c4073be5ffa3c2ddbd5b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4160942c2b5524e57a3a7d7e4eb79128abd55bf5f62ea0926c1ba60e02ce70c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117989000"
 ---
-# <a name="determining-a-compressors-output-format"></a>Bestimmen des Ausgabeformats eines Kompressors
+# <a name="determining-a-compressors-output-format"></a>Bestimmen des Ausgabeformats eines 1.
 
-Im folgenden Beispiel wird das [**iccompressgetformat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat) size-Makro verwendet, um die für die Daten, die das Komprimierungs Format angeben, benötigte Puffergröße zu ermitteln, einen Puffer der entsprechenden Größe mithilfe der [globalzuordc](/windows/win32/api/winbase/nf-winbase-globalalloc) -Funktion zuzuordnen und die Informationen zum Komprimierungs Format mithilfe des **iccompressgetformat** -Makros abzurufen.
+Im folgenden Beispiel wird das [**Größenmakro ICCompressGetFormat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat) verwendet, um die Puffergröße zu bestimmen, die für die Daten erforderlich ist, die das Komprimierungsformat angeben, ordnet einen Puffer der entsprechenden Größe mithilfe der [GlobalAlloc-Funktion](/windows/win32/api/winbase/nf-winbase-globalalloc) zu und ruft die Informationen zum Komprimierungsformat mithilfe des **ICCompressGetFormat-Makros** ab.
 
 
 ```C++
@@ -36,7 +36,7 @@ ICCompressGetFormat(hIC, lpbiIn, lpbiOut);
 
 
 
-Im folgenden Beispiel wird das [**iccompressquery**](/windows/desktop/api/Vfw/nf-vfw-iccompressquery) -Makro verwendet, um zu bestimmen, ob ein-Kompressor die Eingabe-und Ausgabeformate verarbeiten kann.
+Im folgenden Beispiel wird das [**ICCompressQuery-Makro**](/windows/desktop/api/Vfw/nf-vfw-iccompressquery) verwendet, um zu bestimmen, ob eine Maske die Eingabe- und Ausgabeformate verarbeiten kann.
 
 
 ```C++
@@ -58,7 +58,7 @@ if (ICCompressQuery(hIC, lpbiIn, lpbiOut) == ICERR_OK)
 
 
 
-Im folgenden Beispiel wird das [**iccompressgetsize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize) -Makro zum Ermitteln der Puffergröße verwendet, und es wird ein Puffer dieser Größe mithilfe von [Globalzuweisung](/windows/win32/api/winbase/nf-winbase-globalalloc)zugewiesen.
+Im folgenden Beispiel wird das [**MAKRO ICCompressGetSize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize) verwendet, um die Puffergröße zu bestimmen, und es ordnet einen Puffer dieser Größe mit [globalalloc zu.](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
 
 ```C++
@@ -74,6 +74,6 @@ lpOutput = (LPVOID)GlobalLock(h);
 
 
 
- 
+ 
 
- 
+ 

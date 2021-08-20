@@ -23,7 +23,7 @@ ms.locfileid: "117797910"
 
 Das Konnektivitätselement (IHV) enthält IHV-bezogene Konnektivitätseinstellungen. Sie ist derzeit nicht implementiert.
 
-**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="connectivity"
@@ -53,7 +53,7 @@ Das -Element wird durch das [**IHV-Element**](wlan-profileschema-ihv-wlanprofile
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

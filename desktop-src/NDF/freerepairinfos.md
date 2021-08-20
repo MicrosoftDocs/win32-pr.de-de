@@ -1,9 +1,9 @@
 ---
-title: Freerepirren Infos-Funktion (ndattributils. h)
-description: Hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einem Array von repairren Info-Strukturen auf.
+title: FreeRepairInfos-Funktion (Ndattributils.h)
+description: Hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einem Array von RepairInfo-Strukturen auf.
 ms.assetid: c40f9d10-8d9e-4c79-ac0b-fa88608888f1
 keywords:
-- Freerepaarinfos-Funktion NDF
+- FreeRepairInfos-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 63bf6ab2154376302e4c9dd076ccaf83a0c565c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 745f6cd9a7fd484db943fc91c5c9dadf440b3635f31cdb539b356358c22362a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117798605"
 ---
-# <a name="freerepairinfos-function"></a>Freerepirren Infos-Funktion
+# <a name="freerepairinfos-function"></a>FreeRepairInfos-Funktion
 
-Die **freerepirren Infos** -Funktion hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einem Array von [**repauninfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) -Strukturen auf. Diese Funktion ruft [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um den Speicherplatz freizugeben.
+Die **FreeRepairInfos-Funktion** hebt die Zuordnung des intern zugewiesenen Arbeitsspeichers zu einem Array von [**RepairInfo-Strukturen**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) auf. Diese Funktion ruft [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um die Zuordnung des Arbeitsspeichers freizugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ VOID FreeRepairInfos(
 
 <dl> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**repairren Info**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) \** _
+Typ: **[ **RepairInfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)\***
 
-Das Array von-Strukturen. Der zugewiesene Speicher, auf den diese Strukturen zeigen, wird freigegeben.
+Das Array von -Strukturen. Der zugeordnete Arbeitsspeicher, auf den diese Strukturen verweisen, wird freigegeben.
 
 </dd> <dt>
 
-_RepairCount * 
+*RepairCount* 
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Anzahl der Strukturen im Array, auf die von *pinfo* verwiesen wird.
+Die Anzahl der Strukturen im Array, auf die *pInfo* zeigt.
 
 </dd> <dt>
 
-*bfrepointer* 
+*bFreePointer* 
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-True, wenn das Array von-Strukturen ebenfalls gelöscht werden soll. andernfalls false.
+True, wenn auch das Array von Strukturen gelöscht werden soll. andernfalls FALSE.
 
 </dd> </dl>
 
@@ -79,9 +79,9 @@ Diese Funktion gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
@@ -89,7 +89,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Repairren Info**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)
+[**RepairInfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo)
 </dt> <dt>
 
 [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)

@@ -1,5 +1,5 @@
 ---
-description: CBasePropertyPage.CBasePropertyPage-Konstruktor – Konstruktormethode.
+description: 'CBasePropertyPage.CBasePropertyPage-Konstruktor : Konstruktormethode.'
 ms.assetid: 5d9863e7-fdd9-4df2-a603-34a240a2286c
 title: CBasePropertyPage.CBasePropertyPage-Konstruktor (Cprop.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 95821062b6b1199ea98a5329934d76e2197901d4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 334095e6be096d386097ba810ca380d04f9425771da55bc34ae1dac0c90ef090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118000822"
 ---
 # <a name="cbasepropertypagecbasepropertypage-constructor"></a>CBasePropertyPage.CBasePropertyPage-Konstruktor
 
@@ -87,14 +87,14 @@ CMyProp::CMyProp(IUnknown *pUnk) :
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

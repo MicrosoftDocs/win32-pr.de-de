@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: System Parameters. outstandingiomax (Eigenschaft)'
-title: System Parameters. outstandingiomax (Eigenschaft)
+description: Weitere Informationen finden Sie unter SystemParameters.OutstandingIOMax (Eigenschaft).
+title: SystemParameters.OutstandingIOMax (Eigenschaft)
 TOCTitle: 'OutstandingIOMax property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.OutstandingIOMax
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.outstandingiomax(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7faf7af3aec16bc81fada5c8742b4c60595bedad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 820ff3d1351d72505c0d78d590b49ae291bfd3df51fa8477d3026ca9a1683abf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117702302"
 ---
-# <a name="systemparametersoutstandingiomax-property"></a>System Parameters. outstandingiomax (Eigenschaft)
+# <a name="systemparametersoutstandingiomax-property"></a>SystemParameters.OutstandingIOMax (Eigenschaft)
 
-Mit diesem Parameter wird gesteuert, wie viele Datenbankdatei-e/a-Vorgänge pro Datenträger im Host Betriebssystem gleichzeitig in eine Warteschlange eingereiht werden können. Ein größerer Wert für diesen Parameter kann die Leistung einer großen Datenbankanwendung erheblich unterstützen.
+Dieser Parameter steuert, wie viele Datenbankdatei-E/A-Dateien pro Datenträger gleichzeitig im Hostbetriebssystem in die Warteschlange gestellt werden können. Ein größerer Wert für diesen Parameter kann die Leistung einer großen Datenbankanwendung erheblich verbessern.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static int OutstandingIOMax { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

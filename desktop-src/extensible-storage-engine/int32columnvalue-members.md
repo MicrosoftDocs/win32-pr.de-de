@@ -16,8 +16,8 @@ ms.locfileid: "118076697"
 ---
 # <a name="int32columnvalue-members"></a>Int32ColumnValue-Member
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Ein [Int32-Spaltenwert.](/dotnet/api/system.int32)
 
@@ -30,7 +30,7 @@ Der [Int32ColumnValue-Typ](./int32columnvalue-class.md) macht die folgenden Memb
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -52,34 +52,34 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334166(v=exchg.10).md">Columnid</a></td>
-<td>Ruft die festzulegende oder abzurufende columnid ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die columnid ab, die festgelegt oder abgerufen werden soll, oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334212(v=exchg.10).md">Fehler</a></td>
-<td>Ruft die Warnung ab, die durch Abrufen oder Festlegen dieser Spalte generiert wurde. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die Warnung ab, die durch Abrufen oder Festlegen dieser Spalte generiert wird. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334165(v=exchg.10).md">ItagSequence</a></td>
-<td>Ruft die Itagsequenz der Spalte ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft die Spalten itag-Sequenz ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334225(v=exchg.10).md">Länge</a></td>
-<td>Ruft die Bytelänge eines Spaltenwerts ab, der 0 (null) ist, wenn die Spalte NULL ist, andernfalls entspricht sie der Größe für diese Spalte mit fester Größe. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
+<td>Ruft die Bytelänge eines Spaltenwerts ab, der null ist, wenn die Spalte NULL ist. Andernfalls entspricht sie der Größe für diese Spalte mit fester Größe. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334169(v=exchg.10).md">RetrieveGrbit</a></td>
-<td>Ruft Spaltenabrufoptionen ab oder legt diese fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td>Ruft Spaltenabrufoptionen ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -99,7 +99,7 @@ Oben
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334226(v=exchg.10).md">ValueAsObject</a></td>
-<td>Ruft den zuletzt festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches -Objekt zurückgegeben. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
+<td>Ruft den letzten festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches Objekt zurückgegeben. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -114,14 +114,14 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="dn334178(v=exchg.10).md">CheckDataCount</a></td>
-<td>Stellen Sie sicher, dass die abgerufenen Daten genau der Größe entspricht, die für die Struktur erforderlich ist. Eine Ausnahme wird ausgelöst, wenn ein Konflikt vorliegt. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
+<td>Stellen Sie sicher, dass die abgerufenen Daten genau die Größe haben, die für die Struktur erforderlich ist. Bei einem Konflikt wird eine Ausnahme ausgelöst. (Geerbt von <a href="dn334171(v=exchg.10).md">ColumnValueOfStruct &lt; &gt; T</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -164,7 +164,7 @@ Oben
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

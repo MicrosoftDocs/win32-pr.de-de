@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: System Parameters. cachesizemin-Eigenschaft'
-title: System Parameters. cachesizemin (Eigenschaft)
+description: 'Weitere Informationen zu: SystemParameters.CacheSizeMin-Eigenschaft'
+title: SystemParameters.CacheSizeMin-Eigenschaft
 TOCTitle: 'CacheSizeMin property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.CacheSizeMin
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.cachesizemin(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3deeefd7fed8e17099dc74b2cc6422a126ef6b1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df93bddc14d9788164fa8f278536939bd108e1a99ab320d06b68b8059ec8bd38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890587"
 ---
-# <a name="systemparameterscachesizemin-property"></a>System Parameters. cachesizemin (Eigenschaft)
+# <a name="systemparameterscachesizemin-property"></a>SystemParameters.CacheSizeMin-Eigenschaft
 
-Ruft die Mindestgröße des Datenbankseiten Caches in Datenbankseiten ab oder legt diese fest.
+Ruft die Mindestgröße des Datenbankseitencaches auf Datenbankseiten ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static int CacheSizeMin { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

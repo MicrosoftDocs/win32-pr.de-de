@@ -3,24 +3,24 @@ title: Video (Windows Media Player SDK)
 description: Video
 ms.assetid: 3c654494-19b5-401e-bed8-02f7cc7d7f4e
 keywords:
-- Windows Media Player Mobile Skins, Video
-- Skins, Video
-- Referenz für Skins, Video
-- Video in Skins, Informationen zu
+- Windows Media Player Mobile Skins,Video
+- Skins,Video
+- Referenz für Skins,Video
+- Video in Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb3d505acec3f6917c7ed3d182c656ff5e9f29f0
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: c116be7371191780d4939e15c99b30437c895adb31de6d207e120be9225af628
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106340553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117931387"
 ---
 # <a name="video-windows-media-player-sdk"></a>Video (Windows Media Player SDK)
 
-Eine Videoanzeige ermöglicht dem Benutzer die Anzeige digitaler Videodateien. Der Anzeigebereich des Videos ist nur sichtbar, wenn das Video abgespielt oder angehalten wird. Wenn Sie Ihre Skin entwerfen, sollten Sie Platz im Hintergrundbild reservieren, um die Videoanzeige zu enthalten. Wenn Sie dies nicht tun, kann sich die Videoanzeige selbst über alle sichtbaren Grafiken, wie z. b. die Hintergrund Datei, Schaltflächen und trackbars, übernehmen, sodass der Benutzer die Steuerelemente auf der Skin nicht mehr bedienen kann.
+Mit einer Videoanzeige kann der Benutzer digitale Videodateien anzeigen. Der Videoanzeigebereich ist nur sichtbar, wenn das Video abspielt oder angehalten wird. Wenn Sie Ihre Skin entwerfen, sollten Sie Platz im Hintergrundbild reservieren, um die Videoanzeige zu enthalten. Wenn dies nicht der Fall ist, überlagert sich die Videoanzeige möglicherweise selbst über alle sichtbaren Artefakte, z. B. die Hintergrunddatei, Schaltflächen und Trackbars, die den Benutzer davon abhält, die Steuerelemente auf Ihrer Skin zu verwenden.
 
-Der Video Abschnitt der Skin-Definitionsdatei muss mit der folgenden Zeile beginnen:
+Der Abschnitt Video der Skindefinitionsdatei muss mit dieser Zeile beginnen:
 
 
 ```C++
@@ -30,7 +30,7 @@ Der Video Abschnitt der Skin-Definitionsdatei muss mit der folgenden Zeile begin
 
 
 
-Anschließend müssen Sie eine Zeile hinzufügen, die den Speicherort und die Größe des Videoanzeige Bereichs in der Skin angibt.
+Anschließend müssen Sie eine Zeile hinzufügen, die die Position und Größe des Videoanzeigebereichs in Ihrer Skin angibt.
 
 
 ```C++
@@ -40,7 +40,7 @@ Anschließend müssen Sie eine Zeile hinzufügen, die den Speicherort und die Gr
 
 
 
-Sie können die folgende Vorlage für den Video Abschnitt Ihrer Skin-Definitionsdatei verwenden:
+Sie können die folgende Vorlage für den Abschnitt Video Ihrer Skindefinitionsdatei verwenden:
 
 
 ```C++
@@ -51,12 +51,12 @@ Sie können die folgende Vorlage für den Video Abschnitt Ihrer Skin-Definitions
 
 
 
-In den folgenden Abschnitten finden Sie weitere Informationen.
+Die folgenden Abschnitte enthalten weitere Details.
 
--   [Video Speicherort](video-location.md)
--   [Video Bildquelle](video-image-source.md)
--   [Video Größe](video-size.md)
--   [Beispiel für einen Video Abschnitt](sample-video-section.md)
+-   [Videospeicherort](video-location.md)
+-   [Videobildquelle](video-image-source.md)
+-   [Videogröße](video-size.md)
+-   [Abschnitt "Beispielvideo"](sample-video-section.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

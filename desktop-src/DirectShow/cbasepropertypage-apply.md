@@ -1,5 +1,5 @@
 ---
-description: Die Apply-Methode wendet die aktuellen Eigenschaftsseitenwerte auf das Objekt an, das der Eigenschaftenseite zugeordnet ist. Diese Methode implementiert die IPropertyPage::Apply-Methode.
+description: Die Apply-Methode wendet die aktuellen Eigenschaftsseitenwerte auf das -Objekt an, das der Eigenschaftenseite zugeordnet ist. Diese Methode implementiert die IPropertyPage::Apply-Methode.
 ms.assetid: 9fe759d1-2b46-4489-b7b8-b5a35330091d
 title: CBasePropertyPage.Apply-Methode (Cprop.h)
 ms.topic: reference
@@ -57,7 +57,7 @@ Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn das [**CBasePropertyPage::m \_ bDirty-Flag**](cbasepropertypage-m-bdirty.md) **TRUE** ist, ruft diese Methode die [**CBasePropertyPage::OnApplyChanges-Methode auf.**](cbasepropertypage-onapplychanges.md) Überschreiben Sie **OnApplyChanges,** um die Änderungen auf das -Objekt anzuwenden.
+Wenn das [**CBasePropertyPage::m \_ bDirty-Flag**](cbasepropertypage-m-bdirty.md) **TRUE** ist, ruft diese Methode die [**CBasePropertyPage::OnApplyChanges-Methode**](cbasepropertypage-onapplychanges.md) auf. Überschreiben **Sie OnApplyChanges,** um die Änderungen auf das Objekt anzuwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,11 +66,11 @@ Wenn das [**CBasePropertyPage::m \_ bDirty-Flag**](cbasepropertypage-m-bdirty.md
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

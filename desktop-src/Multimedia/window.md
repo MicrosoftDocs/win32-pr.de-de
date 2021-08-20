@@ -1,9 +1,9 @@
 ---
-title: Fenster Befehl
-description: Der Fenster Befehl steuert das Anzeige Fenster.
+title: Window-Befehl
+description: Der Befehl window steuert das Anzeigefenster.
 ms.assetid: 613dfedb-5ca8-45da-a4ba-ce465b933451
 keywords:
-- Fenster Befehl Windows Multimedia
+- window-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21dde3304fa1445b0eaac68950cdfb91f48e5986
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5c65fe13309d30a3aff94e6e78dc0ab1fbcfec26aa1634e8dae72130370cc8e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117800704"
 ---
-# <a name="window-command"></a>Fenster Befehl
+# <a name="window-command"></a>Window-Befehl
 
-Der Fenster Befehl steuert das Anzeige Fenster. Sie können diesen Befehl verwenden, um die Anzeigeeigenschaften des Fensters zu ändern oder ein Zielfenster für den Treiber bereitzustellen, das anstelle des Standard Anzeige Fensters verwendet werden soll. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+Der Befehl window steuert das Anzeigefenster. Mit diesem Befehl können Sie die Anzeigemerkmale des Fensters ändern oder ein Zielfenster bereitstellen, das der Treiber statt des Standardanzeigefensters verwenden kann. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,56 +39,56 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszWindowFlags"></span><span id="lpszwindowflags"></span><span id="LPSZWINDOWFLAGS"></span>*lpszwindowflags*
+<span id="lpszWindowFlags"></span><span id="lpszwindowflags"></span><span id="LPSZWINDOWFLAGS"></span>*lpszWindowFlags*
 </dt> <dd>
 
-Flag zum Steuern des Anzeige Fensters. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den Fenster Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag zum Steuern des Anzeigefensters. In der folgenden Tabelle sind Gerätetypen aufgeführt, die den Fensterbefehl und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung                                                                                                                                        | Bedeutung                                                                                                                                   |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Digitalvideo | Handle für *HWND* State hidestate minimizestate restorestate das zeigt maximiert                                                                    | Anzeigen von minimizedshow [**Min**](min.md) noactiveshow nashow noactivateshow Normaltext *Caption*                                             |
-| overlay      | fixedhandle defaulthandle *HWND* State hidestate iconicstate maximizedstate minimizestate minimizedstate No aktionstate noactivatestate normal | State restorestate das zeigt maximizedshow minimizedshow [**Min**](min.md) noactiveshow nashow noactivatesas normalstretchtext *Caption* |
+| digitalvideo | handle *hwnd state* hidestate minimizestate restorestate showshow maximized                                                                    | show minimizedshow [**min**](min.md) noactiveshow nashow noactivateshow normaltext *caption*                                             |
+| overlay      | fixedhandle defaulthandle *hwnd* state hidestate maximizedstate minimizestate minimizedstate no actionstate noactivatestate normal | status restorestate showshow maximizedshow minimizedshow [**min**](min.md) noactiveshow nashow noactivateshow normalstretchtext *caption* |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszwindowflags** -Parameter und deren Bedeutung angegeben werden können.
+In der folgenden Tabelle sind die Flags, die im **lpszWindowFlags-Parameter** angegeben werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 | Wert                            | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| fixed                            | Deaktiviert die Streckung des Bilds.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Standard verarbeiten                   | Gibt an, dass das Gerät das Anzeige Fenster auf das Standardfenster zurücksetzen soll, das während des [öffnenden](open.md) Vorgangs erstellt wurde. Gibt bei Video Überlagerungs Geräten an, dass das Gerät sein eigenes Zielfenster erstellen und verwalten soll.                                                                                                                                                                                                                                                                                                                                                  |
-| *HWND* behandeln                    | Gibt das Handle des Zielfensters an, das anstelle des Standard Fensters verwendet werden soll. Der *HWND* -Parameter enthält die numerische ASCII-Entsprechung des Fenster Handles, das von der Funktion "up [Window](/windows/win32/api/winuser/nf-winuser-createwindowa) " zurückgegeben wird. Zwei Geräte Instanzen können dasselbe Fenster Handle verwenden, vorausgesetzt, dass jede Instanz die Video-und Bild Pixel im Fenster aktualisiert, als wäre die andere Instanz nicht vorhanden. Wenn die Videoausgabe mit [setvideo](setvideo.md) "Off" deaktiviert ist, wird das Ziel Rechteck durch einen [Update](update.md) -Befehl zu einer voll Tonfarbe. |
-| maximiert anzeigen                   | Maximiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [**minimale**](min.md) noaktive anzeigen | Zeigt das Zielfenster als Symbol an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Minimierte anzeigen                   | Minimiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Na anzeigen                          | Zeigt das Zielfenster im aktuellen Zustand an. das aktuell aktive Fenster bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| noaktivierungs anzeigen                  | Zeigt das Zielfenster in seiner aktuellen Größe und Position an. das aktuell aktive Fenster bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| normal anzeigen                      | Aktiviert und zeigt das Zielfenster in der ursprünglichen Größe und Position an. (Dies ist das gleiche wie das Flag "State Restore".)                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| fixed                            | Deaktiviert das Strecken des Bilds.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| handle default                   | Gibt an, dass das Gerät das Anzeigefenster wieder auf das Standardfenster festlegen soll, das während des Öffnens [erstellt](open.md) wurde. Für Videoüberlagerungsgeräte gibt an, dass das Gerät ein eigenes Zielfenster erstellen und verwalten soll.                                                                                                                                                                                                                                                                                                                                                  |
+| handle *hwnd*                    | Gibt das Handle des Zielfensters an, das anstelle des Standardfensters verwendet werden soll. Der *hwnd-Parameter* enthält die numerische ASCII-Entsprechung des Fensterhandpunkts, das von der [CreateWindow-Funktion zurückgegeben](/windows/win32/api/winuser/nf-winuser-createwindowa) wird. Zwei Geräteinstanzen können dasselbe Fensterhand handle verwenden, vorausgesetzt, dass jede Instanz die Video- und Bildpixel im Fenster aktualisiert, als wäre die andere Instanz nicht vorhanden. Wenn die Videoausgabe mit [setvideo](setvideo.md) "off" deaktiviert ist, wird das Zielrechteck durch einen Updatebefehl zu einer Volltonfarbe. [](update.md) |
+| Maximiert anzeigen                   | Maximiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| show [**min**](min.md) noactive | Zeigt das Zielfenster als Symbol an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| minimiert anzeigen                   | Minimiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| show na                          | Zeigt das Zielfenster im aktuellen Zustand an. Das fenster, das derzeit aktiv ist, bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| noactivate anzeigen                  | Zeigt das Zielfenster in seiner letzten Größe und Position an. Das fenster, das derzeit aktiv ist, bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Normal anzeigen                      | Aktiviert das Zielfenster in seiner ursprünglichen Größe und Position und zeigt es an. (Dies ist identisch mit dem Flag "Zustandswiederherstellung".)                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Status ausblenden                       | Blendet das Zielfenster aus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Status "berühmt"                     | Zeigt das Zielfenster als Symbol an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Status maximiert                  | Maximiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Status Minimierung                   | Minimiert das Zielfenster und aktiviert das Fenster der obersten Ebene in der Liste der Fenster-Manager.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Zustandserzustand                     | Zeigt das Zielfenster als Symbol an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Zustand maximiert                  | Maximiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Status minimieren                   | Minimiert das Zielfenster und aktiviert das Fenster der obersten Ebene in der Liste des Fenster-Managers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Status minimiert                  | Minimiert das Zielfenster.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| State No action                  | Zeigt das Zielfenster im aktuellen Zustand an. Das aktuell aktive Fenster bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Status noaktivierungs                 | Zeigt das Zielfenster in der aktuellen Größe und dem aktuellen Status an. Das derzeit aktive Fenster bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Zustand normal                     | Aktiviert und zeigt das Zielfenster in der ursprünglichen Größe und Position an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Zustands Wiederherstellung                    | Aktiviert und zeigt das Zielfenster in der ursprünglichen Größe und Position an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Statusanzeige                       | Zeigt das Zielfenster an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| strecken                          | Ermöglicht das Stretching des Bilds.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Text *Beschriftung*                   | Gibt die Beschriftung für das Zielfenster an. Wenn dieser Text eingebettete Leerzeichen enthält, muss die gesamte Beschriftung in Anführungszeichen eingeschlossen werden. Die Standard Beschriftung für das Standardfenster ist leer.                                                                                                                                                                                                                                                                                                                                                                                        |
+| Status "Keine Aktion"                  | Zeigt das Zielfenster im aktuellen Zustand an. Das fenster, das derzeit aktiv ist, bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| state noactivate                 | Zeigt das Zielfenster in seiner letzten Größe und seinem aktuellen Zustand an. Das derzeit aktive Fenster bleibt aktiv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Normalzustand                     | Aktiviert das Zielfenster in seiner ursprünglichen Größe und Position und zeigt es an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Zustandswiederherstellung                    | Aktiviert das Zielfenster in seiner ursprünglichen Größe und Position und zeigt es an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| state show                       | Zeigt das Zielfenster an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| strecken                          | Ermöglicht das Strecken des Bilds.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| *Textbeschriftung*                   | Gibt die Beschriftung für das Zielfenster an. Wenn dieser Text eingebettete Leerzeichen enthält, muss die gesamte Beschriftung in Anführungszeichen eingeschlossen werden. Die Standardbeschriftung für das Standardfenster ist leer.                                                                                                                                                                                                                                                                                                                                                                                        |
 
 
 
@@ -96,26 +96,26 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszwindowflags*
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für Digitalvideogeräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Video Überlagerungs Geräte erstellen und zeigen beim Öffnen normalerweise ein Fenster an. Wenn Ihre Anwendung ein Fenster für den Treiber bereitstellt, ist Ihre Anwendung für die Verwaltung der an das Fenster gesendeten Nachrichten verantwortlich.
+Videoüberlagerungsgeräte erstellen in der Regel ein Fenster und zeigen es an, wenn es geöffnet wird. Wenn Ihre Anwendung ein Fenster für den Treiber bietet, ist Ihre Anwendung für die Verwaltung der an das Fenster gesendeten Nachrichten verantwortlich.
 
-Da Sie mit dem Befehl " [Status](status.md) " das Handle zum Anzeige Fenster des Treibers abrufen können, können Sie auch die Standardfenster-Manager-Funktionen (z. b. [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow)) verwenden, um das Fenster zu bearbeiten.
+Da Sie den [](status.md) Statusbefehl verwenden können, um das Handle für das Anzeigefenster des Treibers abzurufen, können Sie auch die Standardmäßig-Fenster-Manager-Funktionen (z. B. [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow)) verwenden, um das Fenster zu bearbeiten.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl zeigt die Beschriftung für das Wiedergabe Fenster "Movie" an und legt diese fest.
+Der folgende Befehl zeigt die Beschriftung für das Wiedergabefenster "Movie" an und legt sie fest.
 
 ``` syntax
 window movie text "Welcome to the Movies" state show
@@ -136,16 +136,16 @@ window movie text "Welcome to the Movies" state show
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [open](open.md)
 </dt> <dt>
 
-[Theater](play.md)
+[Spielen](play.md)
 </dt> <dt>
 
 [setvideo](setvideo.md)

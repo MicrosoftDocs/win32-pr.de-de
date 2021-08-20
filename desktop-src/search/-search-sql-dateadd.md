@@ -1,19 +1,19 @@
 ---
-description: Die DateAdd-Funktion führt Zeit-und Datumsberechnungen für übereinstimmende Eigenschaften mit Datums Typen aus. Verwenden Sie die Funktion DateAdd, um Datumsangaben und Uhrzeiten in einem angegebenen Zeitraum vor dem aktuellen abzurufen.
+description: Die DATEADD-Funktion führt Zeit- und Datumsberechnungen für übereinstimmende Eigenschaften mit Datumstypen durch. Verwenden Sie die DATEADD-Funktion, um Datums- und Uhrzeitangaben in einer angegebenen Zeitspanne vor dem Aktuellen abzurufen.
 ms.assetid: 83ef098d-85ef-4883-a1e1-9229e050247f
 title: DATEADD-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c0b193e75ec644eb3312a61c723edeac43ee264
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 875855ac69809c6312a4911b82dd3dd627965331946e206863cfc29a8a090c38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117680734"
 ---
 # <a name="dateadd-function"></a>DATEADD-Funktion
 
-Die DateAdd-Funktion führt Zeit-und Datumsberechnungen für übereinstimmende Eigenschaften mit Datums Typen aus. Verwenden Sie die Funktion DateAdd, um Datumsangaben und Uhrzeiten in einem angegebenen Zeitraum vor dem aktuellen abzurufen.
+Die DATEADD-Funktion führt Zeit- und Datumsberechnungen für übereinstimmende Eigenschaften mit Datumstypen durch. Verwenden Sie die DATEADD-Funktion, um Datums- und Uhrzeitangaben in einer angegebenen Zeitspanne vor dem Aktuellen abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,31 +26,31 @@ DATEADD (DateTimeUnits, OffsetValue, DateTime)
 
 ## <a name="arguments"></a>Argumente
 
-*Datetimeunits*
+*DateTimeUnits*
 
-Gibt die Einheiten des *DateTime* -Parameters an: Jahr, Quartal, Monat, Woche, Tag, Stunde, Minute oder Sekunde. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet, und für den Parameter sind keine Anführungszeichen erforderlich.
+Gibt die Einheiten des *DateTime-Parameters* an: YEAR, QUARTER, MONTH, WEEK, DAY, HOUR, MINUTE oder SECOND. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet, und für den Parameter sind keine Anführungszeichen erforderlich.
 
-*Offsetvalue*
+*OffsetValue*
 
-Gibt den Zeit Offset in den Einheiten an, die durch den *datetimeunits* -Parameter angegeben werden. **Offsetvalue** muss eine negative Ganzzahl sein. Positive Werte werden nicht unterstützt.
+Gibt den Zeitoffset in den vom *DateTimeUnits-Parameter angegebenen* Einheiten an. **OffsetValue** muss eine negative ganze Zahl sein. Positive Werte werden nicht unterstützt.
 
 *DateTime*
 
-Gibt einen Zeitstempel an, aus dem der Offset berechnet werden soll. Dies darf kein Datumsliteral sein. Es muss entweder getgmtdate oder das Ergebnis einer anderen DateAdd-Funktion sein.
+Gibt einen Zeitstempel an, aus dem der Offset berechnet werden soll. Dies kann kein Datumsliteral sein. Dies muss entweder GETGMTDATE oder das Ergebnis einer anderen DATEADD-Funktion sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die DateAdd-Funktion kann nur in literalen Wert vergleichen und nur auf der rechten Seite des Vergleichs Operators verwendet werden.
+Die DATEADD-Funktion kann nur in Literalwertvergleichen und nur auf der rechten Seite des Vergleichsoperators verwendet werden.
 
-Die getgmtdate-Funktion gibt das aktuelle Datum und die aktuelle Uhrzeit in der Ortszeit (Ortszeit) zurück. Beachten Sie, dass dieser Wert möglicherweise nicht mit der lokalen Zeit des Computers identisch ist.
+Die GETGMTDATE-Funktion gibt das aktuelle Datum und die aktuelle Uhrzeit in Greenwich Mean Time (GMT) zurück. Denken Sie daran, dass dieser Wert möglicherweise nicht mit der lokalen Zeit Ihres Computers identisch ist.
 
-Verwenden Sie den Vergleichs Operator "gleich" (=) nicht, da die interne Zeit Darstellung Rundungsfehler verursachen kann, die zu unerwarteten übereinstimmenden Ergebnissen führen.
+Verwenden Sie nicht den Vergleichsoperator equals (=), da die interne Zeitdarstellung Rundungsfehler erzeugen kann, die zu unerwarteten Übereinstimmungsergebnissen führen.
 
-Sie können mehrere DateAdd-Funktionen verwenden, um Offset Einheiten zu kombinieren.
+Sie können mehrere DATEADD-Funktionen verwenden, um Offseteinheiten zu kombinieren.
 
 ### <a name="examples"></a>Beispiele
 
-Die folgende Beispiel-WHERE-Klausel stimmt mit Dokumenten überein, die innerhalb der letzten fünf Tage geändert wurden:
+Die folgende WHERE-Beispielklausel entspricht Dokumenten, die innerhalb der letzten fünf Tage geändert wurden:
 
 
 ```
@@ -59,7 +59,7 @@ Die folgende Beispiel-WHERE-Klausel stimmt mit Dokumenten überein, die innerhal
 
 
 
-Die folgende Beispiel-WHERE-Klausel stimmt mit Dokumenten überein, die innerhalb der letzten zwei Tage und vier Stunden geändert wurden:
+Die folgende WHERE-Beispielklausel entspricht Dokumenten, die innerhalb der letzten zwei Tage und vier Stunden geändert wurden:
 
 
 ```
@@ -75,19 +75,19 @@ Die folgende Beispiel-WHERE-Klausel stimmt mit Dokumenten überein, die innerhal
 **Referenz**
 </dt> <dt>
 
-[Vergleich von literalen Werten](-search-sql-literalvaluecomparison.md)
+[Literalwertvergleich](-search-sql-literalvaluecomparison.md)
 </dt> <dt>
 
-[Mehrwertige Vergleiche (Array)](-search-sql-multivaluedcomparisons.md)
+[Mehrwertige Vergleiche (ARRAY)](-search-sql-multivaluedcomparisons.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-voll Text Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

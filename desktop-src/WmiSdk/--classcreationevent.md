@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Klassen Erstellungs Ereignis dar, bei dem es sich um einen Typ eines systeminternen Ereignisses handelt, das beim Hinzufügen einer neuen Klasse zum Namespace generiert wird.
+description: Stellt ein Klassenerstellungsereignis dar, bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn dem Namespace eine neue Klasse hinzugefügt wird.
 ms.assetid: a946a8eb-498c-4104-b80f-e520b0e62e36
 ms.tgt_platform: multiple
 title: __ClassCreationEvent-Klasse
@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 18994ee7067e44a9199de9b62f7ff278a8bece00
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e420d9dad948b9bd8ebd0c6670b850b3a2f9d5f578ca36a25a986081a1c454a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118110697"
 ---
-# <a name="__classcreationevent-class"></a>\_\_Classcreationevent-Klasse
+# <a name="__classcreationevent-class"></a>\_\_ClassCreationEvent-Klasse
 
-Die **\_ \_ classcreationevent** -System Klasse stellt ein Klassen Erstellungs Ereignis dar, bei dem es sich um einen Typ eines systeminternen [Ereignisses](determining-the-type-of-event-to-receive.md) handelt, das beim Hinzufügen einer neuen Klasse zum Namespace generiert wird.
+Die **\_ \_ ClassCreationEvent-Systemklasse** stellt ein Klassenerstellungsereignis [](determining-the-type-of-event-to-receive.md) dar, bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn dem Namespace eine neue Klasse hinzugefügt wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,60 +43,60 @@ class __ClassCreationEvent : __ClassOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ classcreationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ ClassCreationEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ classcreationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ ClassCreationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
-**Targetclass**
+**TargetClass**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der neu erstellten Klasse, die vom Klassen Erstellungs Ereignis gemeldet wird. Diese Eigenschaft wird von [**\_ \_ classoperationevent**](--classoperationevent.md)geerbt.
+Kopie der neu erstellten Klasse, die vom Klassenerstellungsereignis gemeldet wird. Diese Eigenschaft wird von [**\_ \_ ClassOperationEvent geerbt.**](--classoperationevent.md)
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Universal Time Koordinaten) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Universal Time Coordinates) angegeben. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ classcreationevent** -Klasse wird von [**\_ \_ classoperationevent**](--classoperationevent.md)abgeleitet.
+Die **\_ \_ ClassCreationEvent-Klasse** wird von [**\_ \_ ClassOperationEvent abgeleitet.**](--classoperationevent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,10 +114,10 @@ Die **\_ \_ classcreationevent** -Klasse wird von [**\_ \_ classoperationevent**
 
 <dl> <dt>
 
-[**\_\_Classoperationevent**](/windows/desktop/WmiSdk/--classoperationevent)
+[**\_\_ClassOperationEvent**](/windows/desktop/WmiSdk/--classoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

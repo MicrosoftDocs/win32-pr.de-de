@@ -3,9 +3,9 @@ title: IWMPMedia3 getItemInfoByType-Methode
 description: Die getItemInfoByType-Methode gibt den Wert des Attributs zurück, das dem angegebenen Attributtyp und Index entspricht.
 ms.assetid: e4cf14b4-3c59-485f-a573-734a0076647b
 keywords:
-- getItemInfoByType-Methode, Windows Media Player
-- getItemInfoByType-Methode, Windows Media Player, IWMPMedia3-Schnittstelle
-- IWMPMedia3 Interface, Windows Media Player, getItemInfoByType-Methode
+- getItemInfoByType-Windows Media Player
+- getItemInfoByType-Methode Windows Media Player , IWMPMedia3-Schnittstelle
+- IWMPMedia3-Schnittstelle Windows Media Player , getItemInfoByType-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2f37992201d5d19397724071f8c2a4b8e851aac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fdcfd965af6ac6201687ca8c7ecc7584085b7810a2c0ca11bbc70c1b04403c5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117929864"
 ---
-# <a name="iwmpmedia3getiteminfobytype-method"></a>IWMPMedia3:: getItemInfoByType-Methode
+# <a name="iwmpmedia3getiteminfobytype-method"></a>IWMPMedia3::getItemInfoByType-Methode
 
-Die **getItemInfoByType** -Methode gibt den Wert des Attributs zurück, das dem angegebenen Attributtyp und Index entspricht.
+Die **getItemInfoByType-Methode** gibt den Wert des Attributs zurück, das dem angegebenen Attributtyp und Index entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,44 +57,44 @@ Implements IWMPMedia3.getItemInfoByType
 
 <dl> <dt>
 
-*bstrintype* \[ in\]
+*bstrType* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Attributtyp ist.
+Eine **System.String,die** den Attributtyp ist.
 
 </dd> <dt>
 
-*bstraulanguage* \[ in\]
+*bstrLanguage* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der die Sprache ist. Wenn der Wert auf NULL oder eine Zeichenfolge der Länge 0 (null) ("") festgelegt ist, wird die aktuelle Gebiets Schema Zeichenfolge verwendet. Andernfalls muss der Wert eine gültige RFC 1766-sprach Zeichenfolge sein, z. b. "en-US".
+Eine **System.String-,** die die Sprache ist. Wenn der Wert auf NULL oder eine Zeichenfolge der Länge 0 (null) festgelegt ist (""), wird die aktuelle Locale String verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
 
 </dd> <dt>
 
-*Lindex* \[ in\]
+*lIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der Attribut Index ist.
+Ein **System.Int32,** das der Attributindex ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Object** , das den Wert des Attributs ist. Der Typ, in den dieses Objekt umgewandelt werden soll, hängt vom Typ des Attributs ab.
+Ein **System.Object,** das der Wert des Attributs ist. Der Typ, in den dieses Objekt umtabellet werden soll, hängt vom Typ des Attributs ab.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt die Metadaten für ein einzelnes digitales Medien Element oder ein Medien Element zurück, das Teil einer Wiedergabeliste ist.
+Diese Methode gibt die Metadaten für ein einzelnes digitales Medienelement oder ein Medienelement zurück, das Teil einer Wiedergabeliste ist.
 
-Diese Methode unterstützt Attribute mit mehreren Werten und Attributen mit komplexen Werten. Die **getiteminfo** -Methode unterstützt keine Attribute mit mehreren Werten und Attributen mit komplexen Werten.
+Diese Methode unterstützt Attribute mit mehreren Werten und Attribute mit komplexen Werten. Die **getItemInfo-Methode** unterstützt keine Attribute mit mehreren Werten und Attribute mit komplexen Werten.
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der für ein bestimmtes Medien Element verfügbaren Attributnamen ab. Index Nummern können dann mit der **GetAttributeName** -Methode verwendet werden, um den Namen der einzelnen verfügbaren Attribute zu bestimmen. Einzelne Attributnamen können an den *Name* -Parameter von **getItemInfoByType** übergeben werden.
+Die **attributeCount-Eigenschaft** ruft die Anzahl der Attributnamen ab, die für ein bestimmtes Medienelement verfügbar sind. Indexnummern können dann mit der **getAttributeName-Methode** verwendet werden, um den Namen jedes verfügbaren Attributs zu bestimmen. Einzelne Attributnamen können an den *Name-Parameter* von **getItemInfoByType übergeben werden.**
 
-Die **getattributezähltbytype** -Methode gibt die Anzahl von Attributen zurück, die einem bestimmten Attributnamen für ein bestimmtes Medien Element entsprechen. Indexnummern können dann an den *Index* -Parameter von **getItemInfoByType** übergeben werden. Dies ist hilfreich, wenn ein Medien Element z. b. unter mehreren Genres kategorisiert wurde.
+Die **getAttributeCountByType-Methode** gibt die Anzahl von Attributen zurück, die einem bestimmten Attributnamen für ein bestimmtes Medienelement entsprechen. Indexnummern können dann an  den Indexparameter von **getItemInfoByType übergeben werden.** Dies ist nützlich, wenn ein Medienelement beispielsweise unter mehreren Genren kategorisiert wurde.
 
-Wenn das Medien Element aus einer Bibliothek stammt, die durch den Aufruf von [iwmplibrary. mediacollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abgerufen wurde, unterscheidet sich der Satz verfügbarer Attribute von denjenigen, die von der lokalen Bibliothek abgerufen werden können, die durch Aufrufen von [AxWindowsMediaPlayer. mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abgerufen wurde. Beispielsweise sind die Attribute, die in der lokalen Bibliothek verfügbar sind, die mithilfe von **iwmplibrary** abgerufen werden, eine Teilmenge der Attribute, die in der lokalen Bibliothek verfügbar sind, die mithilfe von **AxWindowsMediaPlayer** abgerufen wurde. Der Satz von Attributen, der aus anderen Quellen (Remote Bibliotheken, portable Geräte oder CDs) verfügbar ist, wird von den anderen Quellen definiert.
+Wenn das Medienelement aus einer Bibliothek stammt, die durch Aufrufen von [IWMPLibrary.mediaCollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abgerufen wurde, unterscheiden sich die verfügbaren Attribute von den Attributen, die von der lokalen Bibliothek abgefragt werden können, die durch Aufrufen von [AxWindowsMediaPlayer.mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abgerufen wird. Beispielsweise sind die attributes, die aus der lokalen Bibliothek verfügbar sind, die mithilfe von **IWMPLibrary** abgerufen wurde, eine Teilmenge der Attribute, die aus der lokalen Bibliothek verfügbar sind, die mit **AxWindowsMediaPlayer** abgerufen wurde. Der Satz von Attributen, die aus anderen Quellen (Remotebibliotheken, portable Geräte oder CDs) verfügbar sind, wird von den anderen Quellen definiert.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,19 +112,19 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**IWMPMedia3-Schnittstelle (VB und c#)**](iwmpmedia3--vb-and-c.md)
+[**IWMPMedia3-Schnittstelle (VB und C#)**](iwmpmedia3--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. AttributeCount (VB und c#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
+[**IWMPMedia.attributeCount (VB und C#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. GetAttributeName (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
+[**IWMPMedia.getAttributeName (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. getiteminfo (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
+[**IWMPMedia.getItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getiteminfo--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia3. getattributezähltbytype (VB und c#)**](wmplibiwmpmedia3-iwmpmedia3-getattributecountbytype--vb-and-c.md)
+[**IWMPMedia3.getAttributeCountByType (VB und C#)**](wmplibiwmpmedia3-iwmpmedia3-getattributecountbytype--vb-and-c.md)
 </dt> </dl>
 
  

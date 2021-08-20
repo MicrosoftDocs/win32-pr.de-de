@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen zur Update. Save-Methoden Überladungs Liste
-title: Überladungs Liste der Update. Save-Methode
+description: 'Weitere Informationen zu: Update.Save-Methodenüberladungsliste'
+title: Update.Save-Methodenüberladungsliste
 TOCTitle: 'Save method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Update.Save
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.update.save(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: fbb960ad5be6e7774a52fed9dd75a4ff6c420197
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 6e5c888c6bd51d3ef581834c8f346979c365ef2f9413c8f5595a0200a0d30bba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890132"
 ---
-# <a name="updatesave-method-overload-list"></a>Überladungs Liste der Update. Save-Methode
+# <a name="updatesave-method-overload-list"></a>Update.Save-Methodenüberladungsliste
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,19 +33,19 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn351270(v=exchg.10).md">Speichern ()</a></td>
-<td>Aktualisieren Sie TableID.</td>
+<td><a href="dn351270(v=exchg.10).md">Save()</a></td>
+<td>Aktualisieren Sie tableid.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn351199(v=exchg.10).md">Speichern ([], Int32, Int32)</a></td>
-<td>Aktualisieren Sie TableID.</td>
+<td><a href="dn351199(v=exchg.10).md">Save([], Int32, Int32)</a></td>
+<td>Aktualisieren Sie tableid.</td>
 </tr>
 </tbody>
 </table>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Mitglieder aktualisieren](./update-members.md)
+[Aktualisieren von Membern](./update-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

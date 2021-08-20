@@ -1,7 +1,7 @@
 ---
-description: Die getframemactype-Funktion gibt den Mac-Typ des Frames zurück.
+description: Die GetFrameMacType-Funktion gibt den MAC-Typ des Frames zurück.
 ms.assetid: 8d3da770-1392-4638-a267-32c2dae289b0
-title: Getframemactype-Funktion (Netmon. h)
+title: GetFrameMacType-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: b85accc64a6e29424e3f65d070bafcf29bb3ec0f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4202e05d6820718166b4eb2e66fc0c37e7e4e3461b235069278f2128278cc7ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117982368"
 ---
-# <a name="getframemactype-function"></a>Getframemactype-Funktion
+# <a name="getframemactype-function"></a>GetFrameMacType-Funktion
 
-Die **getframemactype** -Funktion gibt den Mac-Typ des Frames zurück.
+Die **GetFrameMacType-Funktion** gibt den MAC-Typ des Frames zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ DWORD WINAPI GetFrameMacType(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
 Handle für den Frame.
@@ -48,16 +48,16 @@ Handle für den Frame.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt den Mac-Typ des Frames zurück, der einen der folgenden Werte aufweisen kann.
+Die Funktion gibt den MAC-Typ des Frames zurück, der einen der folgenden Werte aufweisen kann.
 
--   Unbekannter Mac- \_ Typ. \_
--   Mac- \_ Typ \_ Ethernet
--   Mac- \_ Typ \_ TokenRing
--   Mac- \_ Typ " \_ f"
+-   \_MAC-TYP \_ UNBEKANNT
+-   \_ \_ MAC-TYP ETHERNET
+-   MAC \_ TYPE \_ TOKENRING
+-   MAC \_ TYPE \_ FDDI
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **getframemactype** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **GetFrameMacType-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Die-Funktion gibt den Mac-Typ des Frames zurück, der einen der folgenden Werte 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

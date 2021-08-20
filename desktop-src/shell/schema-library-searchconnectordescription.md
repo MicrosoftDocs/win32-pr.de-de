@@ -1,19 +1,19 @@
 ---
-description: Das- <searchConnectorDescription> Element ist das Containerelement der obersten Ebene einer Suchconnector-Definition.
+description: Das <searchConnectorDescription> -Element ist das Containerelement der obersten Ebene einer Suchconnectordefinition.
 ms.assetid: 383CAA20-56CA-4bdc-AC79-E57A1D59785C
-title: searchconnectordescription-Element (Bibliotheks Schema)
+title: searchConnectorDescription-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: faa6c213d43a648ebea51b58b4c3103a0ee42f13
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91be0345ae2770e28437f13cdc754a1855f050210b85a03a4eb5c6c3726af98b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858249"
 ---
-# <a name="searchconnectordescription-element-library-schema"></a>searchconnectordescription-Element (Bibliotheks Schema)
+# <a name="searchconnectordescription-element-library-schema"></a>searchConnectorDescription-Element (Bibliotheksschema)
 
-Das- <searchConnectorDescription> Element ist das Containerelement der obersten Ebene einer Suchconnector-Definition. Das- <searchConnectorDescription> Element ist eine Erweiterung des- <searchConnectorDescriptionType> Elementtyps, der mit Windows-Verbund Suchconnectors verknüpft ist. es ist jedoch nicht möglich, Suchconnectors für die Windows-Verbund Suche oder-Protokollhandler in einer Bibliothek einzuschließen.
+Das <searchConnectorDescription> -Element ist das Containerelement der obersten Ebene einer Suchconnectordefinition. Das -Element ist eine Erweiterung des Elementtyps, der Windows Federated Search-Connectors zugeordnet ist. Sie können jedoch keine Suchconnectors für Windows-Verbundsuche oder Protokollhandler in eine Bibliothek <searchConnectorDescription> <searchConnectorDescriptionType> einbinden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,13 +97,13 @@ Das- <searchConnectorDescription> Element ist das Containerelement der obersten 
 
 ## <a name="element-information"></a>Elementinformationen
 
-Weitere Informationen finden Sie in der Schema Dokumentation in [Windows Search](/previous-versions/bb268030(v=msdn.10)) .
+Weitere Informationen finden Sie in der Schemadokumentation in [Windows Search.](/previous-versions/bb268030(v=msdn.10))
 
 
 
 | Übergeordnetes Element                                                                                               | Untergeordnete Elemente                        |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [searchconnectordescriptionlist-Element (Bibliotheks Schema)](schema-library-searchconnectordescriptionlist.md) | <issearchonlyi. tem>             |
+| [searchConnectorDescriptionList-Element (Bibliotheksschema)](schema-library-searchconnectordescriptionlist.md) | <isSearchOnlyI.tem->             |
 |                                                                                                              | <description>                   |
 |                                                                                                              | <iconReference>                 |
 |                                                                                                              | <imageLink>                     |
@@ -125,31 +125,31 @@ Weitere Informationen finden Sie in der Schema Dokumentation in [Windows Search]
 
  
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 
 
-| attribute | BESCHREIBUNG                                                                      |
+| attribute | Beschreibung                                                                      |
 |-----------|----------------------------------------------------------------------------------|
-| publisher | Optional. Der Anzeige Name des Verlegers, der den Suchconnector bereitstellt.      |
-| product   | Optional. Der Anzeige Name des Produkts, auf das der Suchconnector angewendet wird. |
+| publisher | Optional. Der Anzeigename des Herausgebers, der den Suchconnector an stellt.      |
+| product   | Optional. Der Anzeigename des Produkts, für das der Suchconnector gilt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das- <searchConnectorDescription> Element einer Bibliothek verwendet die gleiche Schema Definition wie <searchConnectorDescription> für die Windows-Verbund Suche. Obwohl die gleichen Schemas verwendet werden, können Suchconnectors für die Windows-Verbund Suche nicht in einer Bibliothek enthalten sein.
+Das <searchConnectorDescription> -Element einer Bibliothek verwendet die gleiche Schemadefinition wie für Windows <searchConnectorDescription> Verbundsuche. Obwohl sie dieselben Schemas verwenden, können Suchconnectors für Windows Verbundsuche nicht in eine Bibliothek eingeschlossen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Schema der Bibliotheksbeschreibung](library-schema-entry.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](../search/search-sconn-desc-schema-entry.md)
+[Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)
 </dt> </dl>
 
  

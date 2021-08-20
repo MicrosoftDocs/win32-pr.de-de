@@ -1,9 +1,9 @@
 ---
 title: Copyright
-description: Das Copyright-Attribut enthält eine Copyright Meldung für den Inhalt.
+description: Das Copyright-Attribut enthält eine Copyrightmeldung für den Inhalt.
 ms.assetid: 4c5bdb9d-9dcd-42a5-bf03-b83bfd73135e
 keywords:
-- Copyright Windows Media-Format
+- Copyrightfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f8025352226e7fa8820fcde59fea262dbc1f0e1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e25415caf94cecc320e34bda03bce926df12e10a8c312c388550e4ee8932e90b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117848769"
 ---
 # <a name="copyright"></a>Copyright
 
-Das **Copyright** -Attribut enthält eine Copyright Meldung für den Inhalt.
+Das **Copyright-Attribut** enthält eine Copyrightmeldung für den Inhalt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmcopyright
+g \_ wszWMCopyright
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="example"></a>Beispiel
 
@@ -37,15 +37,15 @@ g \_ wszwmcopyright
 
 | Dateityp | Beispielwert                          |
 |-----------|----------------------------------------|
-| Any       | "Copyright (C) Microsoft Corporation". |
+| Beliebig       | "Copyright (C) Microsoft Corporation." |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Text einer Copyright Meldung entspricht keinem Standard. Einzelne Unternehmen können ein entsprechendes Format verwenden.
+Der Text einer Copyrightmeldung entspricht keinem Standard. Einzelne Unternehmen können jedes geeignete Format verwenden.
 
 Dieses Attribut gilt für die gesamte Datei.
 
@@ -56,9 +56,9 @@ Dieses Attribut gilt für die gesamte Datei.
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

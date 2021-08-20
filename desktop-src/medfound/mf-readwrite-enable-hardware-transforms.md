@@ -1,19 +1,19 @@
 ---
-description: Ermöglicht es dem Quell-oder senkenwriter, hardwarebasierte Media Foundation Transformationen (MFTs) zu verwenden.
+description: Ermöglicht dem Quellleser oder Senkenwriter die Verwendung hardwarebasierter Media Foundation Transformationen (MFTs).
 ms.assetid: 03f2fa76-b828-40b1-929d-60e7d5ab49bb
-title: MF_READWRITE_ENABLE_HARDWARE_TRANSFORMS-Attribut (mfreadwrite. h)
+title: MF_READWRITE_ENABLE_HARDWARE_TRANSFORMS-Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 642be732a51f064d07e57609a886810f2a9c40b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f851ba188f8a2cc42140b799e23156cdc8e5c06bb474deb16debf508c173a908
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118059533"
 ---
-# <a name="mf_readwrite_enable_hardware_transforms-attribute"></a>MF- \_ Lesevorgang \_ enable \_ Hardware Transformationen- \_ Attribut
+# <a name="mf_readwrite_enable_hardware_transforms-attribute"></a>MF \_ READWRITE \_ ENABLE HARDWARE \_ \_ TRANSFORMS-Attribut
 
-Ermöglicht es dem Quell-oder senkenwriter, hardwarebasierte Media Foundation Transformationen (MFTs) zu verwenden.
+Ermöglicht dem Quellleser oder Senkenwriter die Verwendung hardwarebasierter Media Foundation Transformationen (MFTs).
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,27 +21,27 @@ Ermöglicht es dem Quell-oder senkenwriter, hardwarebasierte Media Foundation Tr
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig verwenden der Quell-und der sendende Writer keine Hardware-Decoder oder-Encoder. Um die Verwendung von Hardware-MFTs zu aktivieren, legen Sie dieses Attribut auf " **true** " fest, wenn Sie den Quell-oder sendenden Writer erstellen.
+Standardmäßig verwenden der Quellleser und der Senkenwriter keine Hardwaredecoder oder Encoder. Um die Verwendung von Hardware-MFTs zu aktivieren, legen Sie dieses Attribut beim Erstellen des Quelllesers oder Senkenwriters auf **TRUE** fest.
 
 Verwenden Sie dieses Attribut mit den folgenden Funktionen:
 
--   [**MF | atesourcereaderfromb-testream**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrombytestream)
--   [**Mfkreatesourcereaderfrommediasource**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrommediasource)
--   [**MF | atesourcereaderfromurl**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfromurl)
--   [**Mfkreatesinkschreiterfrommediasink**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfrommediasink)
--   [**MF | atesinkschreiterfromurl**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl)
+-   [**MFCreateSourceReaderFromByteStream**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrombytestream)
+-   [**MFCreateSourceReaderFromMediaSource**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfrommediasource)
+-   [**MFCreateSourceReaderFromURL**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesourcereaderfromurl)
+-   [**MFCreateSinkWriterFromMediaSink**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfrommediasink)
+-   [**MFCreateSinkWriterFromURL**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl)
 
-Es gibt eine Ausnahme zum Standardverhalten. Der Quell-und sendende Writer verwendet automatisch MFTs, die lokal im Prozess des Aufrufers registriert sind. Um eine MFT lokal zu registrieren, müssen Sie [**mftregisterlocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal) oder [**mftregisterlocalbyclsid**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocalbyclsid)aufrufen. Lokal registrierte Hardware-MFTs werden auch dann verwendet, wenn das Paket "read- **\_ \_ \_ Hardware \_ Transformationen aktivieren** " nicht festgelegt ist.
+Es gibt eine Ausnahme vom Standardverhalten. Der Quellleser und der Senkenwriter verwenden automatisch MFTs, die lokal im Prozess des Aufrufers registriert sind. Um ein MFT lokal zu registrieren, rufen Sie [**MFTRegisterLocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal) oder [**MFTRegisterLocalByCLSID**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocalbyclsid)auf. Hardware-MFTs, die lokal registriert sind, werden auch dann verwendet, wenn das **ATTRIBUT MF \_ READWRITE \_ ENABLE HARDWARE \_ \_ TRANSFORMS** nicht festgelegt ist.
 
-Dieses Attribut wirkt sich nicht auf die hardwarebeschleunigte Video Decodierung aus, die DirectX Video Acceleration (DXVA) verwendet. Legen Sie zum Aktivieren der DXVA-Decodierung im Quell Leser das [ \_ \_ \_ D3D \_ Manager](mf-source-reader-d3d-manager.md) -Attribut des MF-Quell Readers fest.
+Dieses Attribut wirkt sich nicht auf die hardwarebeschleunigte Videodecodierung aus, die DirectX Video Acceleration (DXVA) verwendet. Legen Sie das ATTRIBUT MF SOURCE READER [ \_ \_ \_ D3D \_ MANAGER](mf-source-reader-d3d-manager.md) fest, um die DXVA-Decodierung im Quellleser zu aktivieren.
 
-Wenn dieses Attribut auf **true** festgelegt ist, legen Sie das-Attribut für das [MF- \_ Lese schreiben \_ deaktiviert \_](mf-readwrite-disable-converters.md)
+Wenn dieses Attribut **TRUE** ist, legen Sie das [MF \_ READWRITE \_ DISABLE \_ CONVERTERS-Attribut](mf-readwrite-disable-converters.md) nicht fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Wenn dieses Attribut auf **true** festgelegt ist, legen Sie das-Attribut für da
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
@@ -62,10 +62,10 @@ Wenn dieses Attribut auf **true** festgelegt ist, legen Sie das-Attribut für da
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Senkenwriter-Attribute](sink-writer-attributes.md)
+[Sink Writer-Attribute](sink-writer-attributes.md)
 </dt> <dt>
 
-[Attribute des Quell Readers](source-reader-attributes.md)
+[Quellleseattribute](source-reader-attributes.md)
 </dt> </dl>
 
  

@@ -2,7 +2,7 @@
 description: Führt eine Abfrage zum Empfangen von Ereignissen aus.
 ms.assetid: 0b0e8313-4ffd-4d4a-8965-d2c6743e7573
 ms.tgt_platform: multiple
-title: SWbemServices.Execnotificationqueryasync-Methode (wbemdisp. h)
+title: SWbemServices.ExecNotificationQueryAsync-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,22 +16,22 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 8e2ecddf290d83583b3108620b8b4bb23be7c957
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f6c02be1be258f84afcbc941dafdaae6b492f995c25d9718ddbf719c347ae27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118108034"
 ---
-# <a name="swbemservicesexecnotificationqueryasync-method"></a>SWbemServices.Execnotificationqueryasync-Methode
+# <a name="swbemservicesexecnotificationqueryasync-method"></a>SWbemServices.ExecNotificationQueryAsync-Methode
 
-Die **ExecNotificationQueryAsync** -Methode des-Objekts " [**Swap-Dienste**](swbemservices.md) " führt eine Abfrage zum Empfangen von Ereignissen aus. Dieser Aufruf wird sofort zurückgegeben, und die Ergebnisse und der Status werden über Ereignisse an die Senke, die in *objwbemsink* angegeben ist, an den Aufrufer zurückgegeben.
+Die **ExecNotificationQueryAsync-Methode** des [**SWbemServices-Objekts**](swbemservices.md) führt eine Abfrage aus, um Ereignisse zu empfangen. Dieser Aufruf wird sofort zurückgegeben, und die Ergebnisse und der Status werden dem Aufrufer über Ereignisse zurückgegeben, die an die Senke übermittelt werden, die in *objWbemSink* angegeben ist.
 
-Die in der Abfrage angegebenen Ereignisse können systeminterne Windows-Verwaltungsinstrumentation (WMI)-Ereignisse (z. b. [**\_ \_ instancecreationevent**](--instancecreationevent.md)) oder extrinsische Ereignisse wie z. b. [**Win32 \_ IP4RouteTableEvent**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetableevent) oder [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent)sein. Weitere Informationen finden Sie unter [bestimmen des empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md).
+Die in der Abfrage angegebenen Ereignisse können systeminterne Windows WMI-Ereignisse (Management Instrumentation, Verwaltungsinstrumentation) wie [**\_ \_ InstanceCreationEvent**](--instancecreationevent.md)oder extrinsische Ereignisse wie [**Win32 \_ IP4RouteTableEvent**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetableevent) oder [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent)sein. Weitere Informationen finden Sie unter [Bestimmen des Typs des zu empfangenden Ereignisses.](determining-the-type-of-event-to-receive.md)
 
-Die-Methode wird im asynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Die -Methode wird im asynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,137 +53,137 @@ SWbemServices.ExecNotificationQueryAsync( _
 
 <dl> <dt>
 
-*objwbemsink* 
+*objWbemSink* 
 </dt> <dd>
 
-Erforderlich. Objekt Senke, die die Benachrichtigung über Ereignisse asynchron empfängt. Erstellen Sie ein " [**Swap**](swbemsink.md) "-Objekt, um die Objekte zu empfangen.
+Erforderlich. Objektsenke, die die Benachrichtigung über Ereignisse asynchron empfängt. Erstellen Sie ein [**SWbemSink-Objekt,**](swbemsink.md) um die Objekte zu empfangen.
 
 </dd> <dt>
 
-*"-Abfrage"* 
+*strQuery* 
 </dt> <dd>
 
-Erforderlich. Eine Zeichenfolge, die den Text der ereignisbezogenen Abfrage enthält. Dieser Parameter darf nicht leer sein. Weitere Informationen zum Aufbau von WMI-Abfrage Zeichenfolgen finden Sie unter [Abfragen mit WQL](querying-with-wql.md) und [WQL](wql-sql-for-wmi.md) -Referenz.
+Erforderlich. Zeichenfolge, die den Text der ereignisbezogenen Abfrage enthält. Dieser Parameter darf nicht leer sein. Weitere Informationen zum Erstellen von WMI-Abfragezeichenfolgen finden Sie unter [Abfragen mit WQL](querying-with-wql.md) und in der [WQL-Referenz.](wql-sql-for-wmi.md)
 
 </dd> <dt>
 
-"in der *Sprache* \[ " optionale\]
+*strQueryLanguage* \[ Optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die zu verwendende Abfragesprache enthält. Wenn angegeben, muss dieser Wert "WQL" lauten.
+Zeichenfolge, die die zu verwendende Abfragesprache enthält. Wenn angegeben, muss dieser Wert "WQL" sein.
 
 </dd> <dt>
 
-*IFlags* \[ optionale\]
+*iFlags* \[ Optional\]
 </dt> <dd>
 
-Eine ganze Zahl, die das Verhalten der Abfrage bestimmt. Dieser Parameter kann auf die folgenden Werte festgelegt werden.
+Ganze Zahl, die das Verhalten der Abfrage bestimmt. Dieser Parameter kann auf die folgenden Werte festgelegt werden.
 
 <dt>
 
 <span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>
 
-<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemflagsendstatus * * * * (128 (0x80))
+<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemFlagSendStatus( (128 (0x80))
 
 
 </dt> <dd>
 
-Bewirkt, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Bewirkt, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>
 
-<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemflagdontsendstatus * * * * (0 (0x0))
+<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemFlagDontSendStatus( (0 (0x0))
 
 
 </dt> <dd>
 
-Verhindert, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Verhindert, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> </dl> </dd> <dt>
 
-*objwbemnamedvalueset* \[ optionale\]
+*objwbemNamedValueSet* \[ Optional\]
 </dt> <dd>
 
-Dies ist in der Regel nicht definiert. Andernfalls handelt es sich hierbei um ein Objekt vom [**typswap namedvalueset**](swbemnamedvalueset.md) , dessen Elemente die Kontextinformationen darstellen, die von dem Anbieter verwendet werden können, der die Anforderung verwendet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, zulässige Werte und die Semantik dokumentieren.
+In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung bedient. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> <dt>
 
-*objwbemasynccontext* \[ optionale\]
+*objWbemAsyncContext* \[ Optional\]
 </dt> <dd>
 
-Dabei handelt es sich um ein Objekt vom Typ " [**taubemnamedvalueset**](swbemnamedvalueset.md) ", das zur Objekt Senke zurückkehrt, um die Quelle für den ursprünglichen asynchronen aufzurufen. Verwenden Sie diesen Parameter, um mehrere asynchrone Aufrufe mithilfe derselben Objekt Senke auszuführen. Um diesen Parameter zu verwenden, erstellen Sie ein Objekt vom Typ " **Swap namedvalueset** ", und verwenden Sie die Methode " [**taubemnamedvalueset. Add**](swbemnamedvalueset-add.md) ", um einen Wert hinzuzufügen, der den von Ihnen ausgeführten asynchronen Befehl identifiziert. Das Objekt " **taubemnamedvalueset** " wird an die Objekt Senke zurückgegeben, und die Quelle des Aufrufes kann mithilfe der Methode " [**Swap Name. Item**](swbemnamedvalueset-item.md) " extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Dies ist ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das zur Objektsenke zurückkehrt, um die Quelle des ursprünglichen asynchronen Aufrufs zu identifizieren. Verwenden Sie diesen Parameter, um mehrere asynchrone Aufrufe mit derselben Objektsenke vorzunehmen. Um diesen Parameter zu verwenden, erstellen Sie ein **SWbemNamedValueSet-Objekt,** und verwenden Sie die [**SWbemNamedValueSet.Add-Methode,**](swbemnamedvalueset-add.md) um einen Wert hinzuzufügen, der den asynchronen Aufruf identifiziert, den Sie vornehmen. Das **SWbemNamedValueSet-Objekt** wird an die Objektsenke zurückgegeben, und die Quelle des Aufrufs kann mithilfe der [**SWbemNamedValueSet.Item-Methode**](swbemnamedvalueset-item.md) extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt keinen Wert zurück. Bei erfolgreicher Ausführung empfängt die Senke ein [**onobjectready**](swbemsink-onobjectready.md) -Ereignis pro Instanz. Nach der letzten Instanz empfängt die Objekt Senke ein [**onabgeschlossene**](swbemsink-oncompleted.md) -Ereignis.
+Diese Methode gibt keinen Wert zurück. Bei Erfolg empfängt die Senke ein [**OnObjectReady-Ereignis**](swbemsink-onobjectready.md) pro Instanz. Nach der letzten Instanz empfängt die Objektsenke ein [**OnCompleted-Ereignis.**](swbemsink-oncompleted.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **ExecNotificationQueryAsync** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der in der folgenden Liste identifizierten Fehlercodes enthalten.
+Nach Abschluss der **ExecNotificationQueryAsync-Methode** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der in der folgenden Liste identifizierten Fehlercodes enthalten.
 
 <dl> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer ist nicht autorisiert, das Resultset anzuzeigen.
+Der aktuelle Benutzer ist nicht berechtigt, das Resultset anzuzeigen.
 
 </dd> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
-Es wurde ein ungültiger Parameter angegeben.
+Es wird ein ungültiger Parameter angegeben.
 
 </dd> <dt>
 
-**wbemErrInvalidQuery** -2147749911 (0x80041017)
+**wbemErrInvalidQuery** – 2147749911 (0x80041017)
 </dt> <dd>
 
-Die Abfrage Syntax ist ungültig.
+Die Abfragesyntax ist ungültig.
 
 </dd> <dt>
 
-**wbemErrInvalidQueryType** -2147749912 (0x80041018)
+**wbemErrInvalidQueryType** – 2147749912 (0x80041018)
 </dt> <dd>
 
 Die angeforderte Abfragesprache wird nicht unterstützt.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **ExecNotificationQueryAsync** -Methode gibt Ereignistyp Objekte zurück, die von zukünftigen Ereignissen generiert werden. Die Ereignis Objekte, die **ExecNotificationQueryAsync** -Anforderungen haben, können System intern (z. b. [**\_ \_ instancecreationevent**](--instancecreationevent.md)) oder System externe (z. b. [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) -oder SNMP-Ereignisse) sein. Weitere Informationen finden Sie unter [bestimmen des empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md).
+Die **ExecNotificationQueryAsync-Methode** gibt Ereignistypobjekte zurück, die zukünftige Ereignisse generieren. Die Ereignisobjekte, die **ExecNotificationQueryAsync** anfordert, können systeminterne (z. [**\_ \_ B. InstanceCreationEvent)**](--instancecreationevent.md)oder extrinsisch (z. B. [**RegistryKeyChangeEvent-**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) oder SNMP-Ereignisse) sein. Weitere Informationen finden Sie unter [Bestimmen des Typs des zu empfangenden Ereignisses.](determining-the-type-of-event-to-receive.md)
 
-Der Aufruf von **ExecNotificationQueryAsync** wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden an den Aufrufer zurückgegeben, wenn Rückrufe an die Senke gesendet werden, die in *objwbemsink* angegeben ist. Um jedes Objekt zu verarbeiten, wenn es zurückgegeben wird, erstellen Sie eine *objwbemsink*. [**Onobjectready**](swbemsink-onobjectready.md) -Ereignis Unterroutine. Nachdem alle Objekte zurückgegeben wurden, führen Sie die endgültige Verarbeitung aus, um die *objwbemsink*-Komponente zu implementieren. [**Onabgeschlossene**](swbemsink-oncompleted.md) -Ereignis.
+Der Aufruf von **ExecNotificationQueryAsync** wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden dem Aufrufer über Rückrufe zurückgegeben, die an die Senke übermittelt werden, die in *objWbemSink* angegeben ist. Um jedes Objekt zu verarbeiten, wenn es zurückgegeben wird, erstellen Sie einen *objWbemSink*. [**OnObjectReady-Ereignisunterroutine.**](swbemsink-onobjectready.md) Nachdem alle Objekte zurückgegeben wurden, führen Sie die abschließende Verarbeitung aus, um *objWbemSink* zu implementieren. [**OnCompleted-Ereignis.**](swbemsink-oncompleted.md)
 
-Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, finden Sie weitere Informationen unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke bereitzustellen. Dies stellt Sicherheitsrisiken für Ihre Skripts und Anwendungen dar. Informationen zum Beseitigen der Risiken finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-Es gibt Einschränkungen für die Anzahl von **-** und- **oder** -Schlüsselwörtern, die in WQL-Abfragen verwendet werden können. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den Wert für die **WBEM \_ E- \_ Kontingent \_ Verletzungs** Fehlercode- **HRESULT** Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
+Die Anzahl von **AND-** und OR-Schlüsselwörtern, die in WQL-Abfragen verwendet werden können, ist begrenzt.  Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den **WBEM \_ E \_ QUOTA \_ VIOLATION-Fehlercode** als **HRESULT-Wert** zurückgibt. Die Beschränkung der WQL-Schlüsselwörter hängt davon ab, wie komplex die Abfrage ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird ein Skript gezeigt, das auf eine WMI-Ereignis Benachrichtigung wartet, die angibt, dass ein Prozess beendet wurde. Er wartet auf ein System eigenes WMI-Ereignis, eine Instanz der Ereignisklasse [**\_ \_ instancedeletionevent**](--instancedeletionevent.md). Das **\_ \_ instancedeletionevent** muss das Löschen einer Instanz des Win32- [**\_ Prozesses**](/windows/desktop/CIMWin32Prov/win32-process)darstellen. Weitere Informationen zu systeminternen WMI-Ereignissen finden [Sie unter Bestimmen des zu empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md).
+Das folgende VBScript-Codebeispiel zeigt ein Skript, das auf eine WMI-Ereignisbenachrichtigung wartet, die angibt, dass ein Prozess beendet wurde. Sie wartet auf ein systeminternes WMI-Ereignis, eine Instanz der Ereignisklasse [**\_ \_ InstanceDeletionEvent.**](--instancedeletionevent.md) **\_ \_ InstanceDeletionEvent** muss das Löschen einer Instanz von [**Win32 \_ Process**](/windows/desktop/CIMWin32Prov/win32-process)darstellen. Weitere Informationen zu systeminternen WMI-Ereignissen finden Sie unter [Bestimmen des Typs des zu empfangenden Ereignisses.](determining-the-type-of-event-to-receive.md)
 
-Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell anzuhalten, verwenden Sie den Task-Manager, um den Prozess zu unterbinden. Verwenden Sie zum programmgesteuerten beenden die Methode " [**Beenden**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) " in der Win32- \_ Prozess Klasse.
+Das folgende Skript wird unbegrenzt ausgeführt, bis der Computer neu gestartet, WMI beendet oder das Skript beendet wird. Um das Skript manuell zu beenden, verwenden Sie Task-Manager, um den Prozess zu beenden. Verwenden Sie zum programmgesteuerten Beenden die [**Terminate-Methode**](/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process) in der Win32 \_ Process-Klasse.
 
 
 ```VB
@@ -219,11 +219,11 @@ End Sub
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austauschdienste<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemservices<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemServices<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemServices<br/>                                                          |
 
 
 
@@ -231,25 +231,25 @@ End Sub
 
 <dl> <dt>
 
-[**SWbemServices**](swbemservices.md)
+[**Swbemservices**](swbemservices.md)
 </dt> <dt>
 
-[**CquerySWbemServices.Exe**](swbemservices-execquery.md)
+[**SWbemServices.ExecQuery**](swbemservices-execquery.md)
 </dt> <dt>
 
-[**CqueryasyncSWbemServices.Exe**](swbemservices-execqueryasync.md)
+[**SWbemServices.ExecQueryAsync**](swbemservices-execqueryasync.md)
 </dt> <dt>
 
-[Registrierung für System Registrierungs Ereignisse](registering-for-system-registry-events.md)
+[Registrieren für Systemregistrierungsereignisse](registering-for-system-registry-events.md)
 </dt> <dt>
 
-[Bestimmen des zu empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md)
+[Bestimmen des Zu empfangenden Ereignistyps](determining-the-type-of-event-to-receive.md)
 </dt> <dt>
 
 [Aufrufen einer Methode](calling-a-method.md)
 </dt> <dt>
 
-[Festlegen der Sicherheit für einen asynchronen-Befehl](setting-security-on-an-asynchronous-call.md)
+[Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'UdpIp_Fail Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'UdpIp_Fail Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 552e63ef-70e4-4bc4-be33-bd77bd5acd61
 title: UdpIp_Fail-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f923f26e1371d11e27bfd58bcb69c053bfb5f1a3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3cb58c7262e46dde761d1494bc26b5a5701489f7e5aed167e1edf85bd9789f94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813802"
 ---
 # <a name="udpip_fail-class"></a>UdpIp \_ Fail-Klasse
 
 Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -92,13 +92,13 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert das Protokoll. Folgenden Werte sind möglich:
+Identifiziert das Protokoll. Es kann sich um einen der folgenden Werte handeln:
 
 
 
 | Wert                                                                                                                                                                                                  | Bedeutung                                                            |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <span id="AF_INET"></span><span id="af_inet"></span><dl> <dt>**AF \_ INET**</dt> <dt>2</dt> </dl>     | Die IPv4-Adressfamilie (Internetprotokoll, Version 4).<br/>  |
+| <span id="AF_INET"></span><span id="af_inet"></span><dl> <dt>**AF \_ INET**</dt> <dt>2</dt> </dl>     | Die Internetprotokoll, Version 4 -Adressfamilie (IPv4).<br/>  |
 | <span id="AF_INET6"></span><span id="af_inet6"></span><dl> <dt>**AF \_ INET6**</dt> <dt>23</dt> </dl> | Die IPv6-Adressfamilie (Internet Protocol Version 6).<br/> |
 
 
@@ -111,14 +111,14 @@ Identifiziert das Protokoll. Folgenden Werte sind möglich:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

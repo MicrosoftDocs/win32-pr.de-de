@@ -1,21 +1,21 @@
 ---
-description: ASF-Indexer
+description: ASF Indexer
 ms.assetid: 3f95b0ac-d70f-4bc2-8524-c7de1df34afa
-title: ASF-Indexer
+title: ASF Indexer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c729b547339149ee578a90283c570ec8460b0c57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: adde38583d70bdbc23382e6d57316cc92b5fbd3963560a10960acbe29ea97624
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117881141"
 ---
-# <a name="asf-indexer"></a>ASF-Indexer
+# <a name="asf-indexer"></a>ASF Indexer
 
-Der ASF- *Indexer* ist eine wmcontainer-Ebenenkomponente, die verwendet wird, um Index Objekte in einer ASF-Datei (Advanced Systems Format) zu lesen oder zu schreiben. Weitere Informationen zur Struktur einer ASF-Datei finden Sie unter [Struktur der ASF-Datei](asf-file-structure.md).
+Der *ASF-Indexer* ist eine WMContainer-Schichtkomponente, die zum Lesen oder Schreiben von Indexobjekten in einer ASF-Datei (Advanced Systems Format) verwendet wird. Informationen zur Struktur einer ASF-Datei finden Sie unter [ASF-Dateistruktur.](asf-file-structure.md)
 
-Eine Anwendung kann den Indexer verwenden, um Suchvorgänge auf der Grundlage der Präsentationszeit auszuführen oder um neue Indexeinträge für eine ASF-Datei zu generieren. Der ASF-Indexer implementiert die [**imfasfindexer**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfindexer) -Schnittstelle.
+Eine Anwendung kann den Indexer verwenden, um Suchaufgaben basierend auf der Präsentationszeit auszuführen oder neue Indexeinträge für eine ASF-Datei zu generieren. Der ASF-Indexer implementiert die [**IMFASFIndexer-Schnittstelle.**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfindexer)
 
 
 
@@ -32,24 +32,24 @@ Eine Anwendung kann den Indexer verwenden, um Suchvorgänge auf der Grundlage de
 </thead>
 <tbody>
 <tr class="odd">
-<td>Präsentationszeit basierter Index</td>
-<td>Stellt die Präsentationszeit basierte Indizierung für Audiodaten und Videostreams in Indexblöcken bereit, um die Indizierung zu erhöhen. Jeder Indexblock verweist auf Indexeinträge, die einen Byte Offset enthalten. <br/> Der Offset ist die Position des Datenpakets, das Seeding ist, relativ zum Anfang des ASF-Datenobjekts.<br/> GUID_NULL muss als GUID-Typ für den Index Bezeichner verwendet werden. Weitere Informationen finden Sie unter. Weitere Informationen finden <a href="using-the-indexer-to-write-a-new-index.md">Sie unter Verwenden des Indexers zum Schreiben eines neuen Indexes</a>.<br/></td>
+<td>Präsentationszeitbasierter Index</td>
+<td>Bietet eine präsentationszeitbasierte Indizierung für Audio- und Videostreams in Indexblöcken, um die Indizierung effizienter zu gestalten. Jeder Indexblock verweist auf Indexeinträge, die einen Byteoffset enthalten. <br/> Der Offset ist die Position des gesuchten Datenpakets relativ zum Anfang des ASF-Datenobjekts.<br/> GUID_NULL muss als GUID-Typ für den Indexbezeichner verwendet werden. Weitere Informationen: siehe <a href="using-the-indexer-to-write-a-new-index.md">Verwenden des Indexers zum Schreiben eines neuen Indexes.</a><br/></td>
 </tr>
 <tr class="even">
-<td>Timecode-Index</td>
-<td>Ermöglicht das Suchen nach Zeitcode in Streams, die Zeitcode-Metadaten enthalten. Die Timecodes entsprechen einem SMPTE-Format (<em>Stunden: Minuten: Sekunden: Frames</em>). Jeder Indexblock verweist auf Indexeinträge, die einen Byte Offset enthalten. <br/> Der Offset ist die Position des Datenpakets, das Seeding ist, relativ zum Anfang des ASF-Datenobjekts.<br/>
+<td>Timecodeindex</td>
+<td>Erleichtert die Suche nach Timecode in Datenströmen, die Timecodemetadaten enthalten. Die Zeitcodes entsprechen einem SMPTE-Format (<em>Hours:Minutes:Seconds:Frames</em>). Jeder Indexblock verweist auf Indexeinträge, die einen Byteoffset enthalten. <br/> Der Offset ist die Position des gesuchten Datenpakets relativ zum Anfang des ASF-Datenobjekts.<br/>
 <blockquote>
 [!Note]<br />
-Timecode-Index Objekte werden zurzeit nicht unterstützt.
+Timecodeindexobjekte werden derzeit nicht unterstützt.
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="odd">
-<td>Frame basierter Index</td>
-<td>Stellt eine Frame basierte Indizierung für Videostreams bereit. Indizes in den Frame basierten Index entsprechen Frame Nummern, wobei der erste Frame für einen Datenstrom in der ASF-Datei dem Eintrag 0 im Frame basierten Index Objekt entspricht. Jeder Indexblock verweist auf Indexeinträge, die einen Byte Offset enthalten.<br/>
+<td>Framebasierter Index</td>
+<td>Stellt framebasierte Indizierung für Videostreams bereit. Indizes im framebasierten Index sind framebasierte Zahlen, wobei der erste Frame für einen Stream in der ASF-Datei dem Eintrag 0 im framebasierten Indexobjekt entspricht. Jeder Indexblock verweist auf Indexeinträge, die einen Byteoffset enthalten.<br/>
 <blockquote>
 [!Note]<br />
-Frame basierte Index Objekte werden zurzeit nicht unterstützt.
+Framebasierte Indexobjekte werden derzeit nicht unterstützt.
 </blockquote>
 <br/> <br/></td>
 </tr>
@@ -64,11 +64,11 @@ In diesem Abschnitt werden die folgenden Themen behandelt:
 
 
 
-| Thema                                                                                | BESCHREIBUNG                                                                                                                      |
+| Thema                                                                                | Beschreibung                                                                                                                      |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [Erstellung und Konfiguration von Indexern](indexer-creation-and-configuration.md)         | So erstellen Sie ein Indexer-Objekt und konfigurieren es für das Lesen eines vorhandenen Indexes oder das Schreiben eines neuen ASF-Index Objekts für eine Datei. |
-| [Verwenden des Indexers zum Suchen in einer Datei](using-the-indexer-to-seek.md)                 | Verwenden des Indexers, um in einer ASF-Datei zu suchen.                                                                               |
-| [Verwenden des Indexers zum Schreiben eines neuen Indexes](using-the-indexer-to-write-a-new-index.md) | Verwenden des Indexers, um Indexeinträge zu generieren und ein neues Index Objekt für eine ASF-Datei zu schreiben.                                   |
+| [Indexererstellung und -konfiguration](indexer-creation-and-configuration.md)         | Hier erfahren Sie, wie Sie ein Indexerobjekt erstellen und zum Lesen eines vorhandenen Indexes oder zum Schreiben eines neuen ASF-Indexobjekts für eine Datei konfigurieren. |
+| [Verwenden des Indexers zum Suchen in einer Datei](using-the-indexer-to-seek.md)                 | Verwenden des Indexers zum Suchen innerhalb einer ASF-Datei.                                                                               |
+| [Verwenden des Indexers zum Schreiben eines neuen Indexes](using-the-indexer-to-write-a-new-index.md) | Hier erfahren Sie, wie Sie den Indexer verwenden, um Indexeinträge zu generieren und ein neues Indexobjekt für eine ASF-Datei zu schreiben.                                   |
 
 
 
@@ -78,10 +78,10 @@ In diesem Abschnitt werden die folgenden Themen behandelt:
 
 <dl> <dt>
 
-[Wmcontainer-ASF-Komponenten](wmcontainer-asf-components.md)
+[WMContainer ASF-Komponenten](wmcontainer-asf-components.md)
 </dt> <dt>
 
-[Unterstützung von ASF in Media Foundation](asf-support-in-media-foundation.md)
+[ASF-Unterstützung in Media Foundation](asf-support-in-media-foundation.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die closemodule-Methode des Merge-Objekts schließt das aktuell geöffnete Windows Installer Mergemodul.
+description: Die CloseModule-Methode des Merge-Objekts schließt das derzeit geöffnete Windows Installer-Mergemodul.
 ms.assetid: a11f72cf-4c4e-4650-95f9-549169452622
-title: Merge. closemodule-Methode (Mergemod. h)
+title: Merge.CloseModule-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 8688ae06cedca1e3b75290f7831f7d3539e3ec21
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 83f0238a1e65a6c3551b7fea5262fe91d74705287aba0714dfbb4b3cc3a37976
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106363203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117805051"
 ---
-# <a name="mergeclosemodule-method"></a>Merge. closemodule-Methode
+# <a name="mergeclosemodule-method"></a>Merge.CloseModule-Methode
 
-Die **closemodule** -Methode des [**Merge**](merge-object.md) -Objekts schließt das aktuell geöffnete Windows Installer Mergemodul.
+Die **CloseModule-Methode** des [**Merge-Objekts**](merge-object.md) schließt das derzeit geöffnete Windows Installer-Mergemodul.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Schließen eines Mergemoduls wirkt sich nicht auf Fehler aus, die nicht abgerufen wurden.
 
 ### <a name="c"></a>C++
 
-Siehe [**closemodule**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closemodule) -Funktion.
+Siehe [**CloseModule-Funktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closemodule)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Siehe [**closemodule**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closem
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

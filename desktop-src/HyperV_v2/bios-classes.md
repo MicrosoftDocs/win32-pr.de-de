@@ -1,30 +1,30 @@
 ---
-description: Das virtuelle BIOS ist ein Software Abbild, das in den RAM geladen wird, um einige der grundlegenden Aspekte von zu konfigurieren und ein Computersystem zu starten. Es gibt ein BIOS-Element pro Computersystem, und dieses Element kann nicht ersetzt oder entfernt werden.
+description: Das virtuelle BIOS ist ein Softwareimage, das in den RAM geladen wird, um einige der grundlegenden Aspekte eines Computersystems zu konfigurieren und zu starten. Es gibt ein BIOS-Element pro Computersystem, und dieses Element kann nicht ersetzt oder entfernt werden.
 ms.assetid: EC691401-947F-4B56-A8A7-F0ECBF01677B
 title: BIOS-Klassen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e725910bbeb1032f876b5e4fcf08da4a6ea60bc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9605f28a23fc84b653ba5efe6c6e4be057eba48da81ddb777c7516d1317da6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813637"
 ---
 # <a name="bios-classes"></a>BIOS-Klassen
 
-Das virtuelle BIOS ist ein Software Abbild, das in den RAM geladen wird, um einige der grundlegenden Aspekte von zu konfigurieren und ein Computersystem zu starten. Es gibt ein BIOS-Element pro Computersystem, und dieses Element kann nicht ersetzt oder entfernt werden. Folglich gibt es keinen Ressourcenpool zum Hinzufügen neuer BIOS-Elemente zum virtuellen Computer. Das BIOS-Element verfügt auch nicht über eine eigene SettingData-Klasse, um die Einstellungen für das BIOS zu beschreiben. Die Einstellungen für das BIOS (z. b. Seriennummern, Start Reihenfolge und Num-Sperr Status) finden Sie in der Klasse " [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) ".
+Das virtuelle BIOS ist ein Softwareimage, das in den RAM geladen wird, um einige der grundlegenden Aspekte eines Computersystems zu konfigurieren und zu starten. Es gibt ein BIOS-Element pro Computersystem, und dieses Element kann nicht ersetzt oder entfernt werden. Daher gibt es keinen Ressourcenpool zum Hinzufügen neuer BIOS-Elemente zum virtuellen Computer. Das BIOS-Element verfügt auch nicht über eine eigene SettingData-Klasse, um die Einstellungen für das BIOS zu beschreiben. Einstellungen für das BIOS, z. B. Seriennummern, Startreihenfolge und Num-Sperrzustand, befinden sich in der [**Msvm \_ VirtualSystemSettingData-Klasse.**](msvm-virtualsystemsettingdata.md)
 
-Im folgenden finden Sie WMI-Klassen für die Virtualisierung im Zusammenhang mit dem BIOS. Diese Klassen befinden sich im \\ \\ . \\ \\Namespace für die stammvirtualisierung.
+Im Folgenden sind Virtualisierungs-WMI-Klassen im Zusammenhang mit dem BIOS. Diese Klassen befinden sich im \\ \\ . \\ \\Stammvirtualisierungsnamespace.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                    | BESCHREIBUNG                                                                                             |
+| Thema                                                    | Beschreibung                                                                                             |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**MSVM- \_ bioselements**](msvm-bioselement.md)<br/> | Stellt die Software auf niedriger Ebene dar, die in den RAM geladen wird, um das System zu konfigurieren und zu starten.<br/> |
-| [**MSVM- \_ Systembios**](msvm-systembios.md)<br/>   | Wird verwendet, um dem BIOS eine virtuelle Maschine zuzuordnen.<br/>                                           |
+| [**Msvm \_ BIOSElement**](msvm-bioselement.md)<br/> | Stellt die Software auf niedriger Ebene dar, die in den RAM geladen wird, um das System zu konfigurieren und zu starten.<br/> |
+| [**Msvm \_ SystemBIOS**](msvm-systembios.md)<br/>   | Wird verwendet, um einem virtuellen Computer sein BIOS zuzuordnen.<br/>                                           |
 
 
 

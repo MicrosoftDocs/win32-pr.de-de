@@ -1,32 +1,32 @@
 ---
-description: Wenn ein Fehler auftritt, muss der Systemadministrator oder der Supportmitarbeiter feststellen, was den Fehler verursacht hat. es muss versucht werden, verlorene Daten wiederherzustellen und den Fehler zu verhindern.
+description: Wenn ein Fehler auftritt, muss der Systemadministrator oder Supportmitarbeiter ermitteln, was den Fehler verursacht hat, versuchen, verlorene Daten wiederhergestellt zu haben, und verhindern, dass sich der Fehler wiederholt.
 ms.assetid: 2a625c8a-afa2-484a-a0e3-df3ef774abe4
 title: Informationen zur Ereignisprotokollierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1104a4b54d2989cb329b665e20fd273766e57209
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d9f30e4f8a44594b95215d748ac5cafda6b0633eefa668d0d864362c8f3c5de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814257"
 ---
 # <a name="about-event-logging"></a>Informationen zur Ereignisprotokollierung
 
-Wenn ein Fehler auftritt, muss der Systemadministrator oder der Supportmitarbeiter feststellen, was den Fehler verursacht hat. es muss versucht werden, verlorene Daten wiederherzustellen und den Fehler zu verhindern. Es ist hilfreich, wenn Anwendungen, das Betriebssystem und andere Systemdienste wichtige Ereignisse aufzeichnen, z. b. Bedingungen mit geringem Arbeitsspeicher oder übermäßig viele Zugriffsversuche auf einen Datenträger. Der Systemadministrator kann dann das Ereignisprotokoll verwenden, um zu bestimmen, welche Bedingungen den Fehler verursacht haben, und den Kontext zu identifizieren, in dem er aufgetreten ist. Wenn Sie das Ereignisprotokoll in regelmäßigen Abständen anzeigen, kann der Systemadministrator möglicherweise Probleme erkennen (z. b. eine fehlerhafte Festplatte), bevor diese Schaden anrichten.
+Wenn ein Fehler auftritt, muss der Systemadministrator oder Supportmitarbeiter ermitteln, was den Fehler verursacht hat, versuchen, verlorene Daten wiederhergestellt zu haben, und verhindern, dass sich der Fehler wiederholt. Es ist hilfreich, wenn Anwendungen, das Betriebssystem und andere Systemdienste wichtige Ereignisse aufzeichnen, z. B. Bedingungen mit geringem Arbeitsspeicher oder übermäßige Versuche, auf einen Datenträger zu zugreifen. Der Systemadministrator kann dann das Ereignisprotokoll verwenden, um zu bestimmen, welche Bedingungen den Fehler verursacht haben, und den Kontext zu identifizieren, in dem er aufgetreten ist. Durch regelmäßiges Anzeigen des Ereignisprotokolls kann der Systemadministrator möglicherweise Probleme (z. B. eine fehlerhafte Festplatte) identifizieren, bevor sie schaden.
 
 > [!Note]  
-> Die Ereignis Protokollierungs-API wurde für Anwendungen entwickelt, die auf dem Betriebssystem Windows Server 2003, Windows XP oder Windows 2000 ausgeführt werden. In Windows Vista wurde die Infrastruktur zur Ereignisprotokollierung umgestaltet. Anwendungen, die für die Betriebssysteme Windows Vista oder höher entwickelt wurden, sollten jetzt das [Windows-Ereignisprotokoll](/windows/desktop/WES/windows-event-log) verwenden, um Ereignisse zu protokollieren.
+> Die Ereignisprotokollierungs-API wurde für Anwendungen entwickelt, die unter dem Betriebssystem Windows Server 2003, Windows XP oder Windows 2000 ausgeführt werden. In Windows Vista wurde die Ereignisprotokollierungsinfrastruktur neu gestaltet. Anwendungen, die für die Ausführung unter den Betriebssystemen Windows Vista oder höher entwickelt wurden, sollten jetzt Windows [Ereignisprotokoll](/windows/desktop/WES/windows-event-log) verwenden, um Ereignisse zu protokollieren.
 
  
-In diesem Abschnitt wird die Programmierschnittstelle zum Schreiben und Verarbeiten von Ereignissen mithilfe der Ereignisprotokollierung erläutert.
+In diesem Abschnitt wird die Programmierschnittstelle zum Schreiben und Nutzen von Ereignissen mithilfe der Ereignisprotokollierung erläutert.
 
 -   [Ereignistypen](event-types.md)
--   [Protokollierungs Richtlinien](logging-guidelines.md)
--   [Ereignis Protokollierungs Elemente](event-logging-elements.md)
--   [Ereignis Protokollierungs Vorgänge](event-logging-operations.md)
--   [Ereignis Protokollierungs Modell](event-logging-model.md)
+-   [Protokollierungsrichtlinien](logging-guidelines.md)
+-   [Ereignisprotokollierungselemente](event-logging-elements.md)
+-   [Ereignisprotokollierungsvorgänge](event-logging-operations.md)
+-   [Ereignisprotokollierungsmodell](event-logging-model.md)
 -   [Sicherheit der Ereignisprotokollierung](event-logging-security.md)
 
 > [!Note]  
-> Anwendungen, die Ereignisse veröffentlichen, die auf einem Computer mit Windows Server 2003, Windows XP oder Windows 2000 mehr als 64 Kilobyte haben, können Ereignisse auf Computern mit Windows Vista oder höher nicht veröffentlichen.
+> Anwendungen, die Ereignisse mit einer Größe von mehr als 64 KB auf einem computer mit Windows Server 2003, Windows XP oder Windows 2000 veröffentlichen, können keine Ereignisse auf einem Computer mit Windows Vista oder höher veröffentlichen.

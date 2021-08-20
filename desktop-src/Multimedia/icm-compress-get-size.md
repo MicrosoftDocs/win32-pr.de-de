@@ -1,9 +1,9 @@
 ---
-title: ICM_COMPRESS_GET_SIZE Meldung (VFW. h)
-description: Mit der ICM- \_ \_ \_ Komprimierung Get Size wird angefordert, dass der Video Komprimierungs Treiber die maximale Größe von einem Datenrahmen bei Komprimierung in das angegebene Ausgabeformat bereitstellt. Sie können diese Nachricht explizit oder mithilfe des iccompressgetsize-Makros senden.
+title: ICM_COMPRESS_GET_SIZE (Vfw.h)
+description: Die ICM COMPRESS GET SIZE-Meldung fordert an, dass der Videokomprimierungstreiber die maximale Größe eines Frames von Daten anliefert, wenn er in das angegebene \_ \_ \_ Ausgabeformat komprimiert wird. Sie können diese Nachricht explizit oder mithilfe des Makros ICCompressGetSize senden.
 ms.assetid: 6910e588-e60f-43b1-8fa6-113c2ec32a53
 keywords:
-- ICM_COMPRESS_GET_SIZE-Nachricht (Multimedia)
+- ICM_COMPRESS_GET_SIZE von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38b0b61c78cc684de27d1e9a2747498e30eb3fe9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ac84919b81eda747263877a79e8ce6fe6ab3bdfc50d37e77ce2026288fbe321
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117988173"
 ---
-# <a name="icm_compress_get_size-message"></a>ICM- \_ Komprimierung \_ get \_ size-Nachricht
+# <a name="icm_compress_get_size-message"></a>\_ICM COMPRESS \_ GET \_ SIZE-Nachricht
 
-Mit der ICM-Komprimierung **\_ \_ get \_ size** wird angefordert, dass der Video Komprimierungs Treiber die maximale Größe von einem Datenrahmen bei Komprimierung in das angegebene Ausgabeformat bereitstellt. Sie können diese Nachricht explizit oder mithilfe des [**iccompressgetsize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize) -Makros senden.
+Die **ICM \_ COMPRESS GET \_ \_ SIZE-Meldung** fordert an, dass der Videokomprimierungstreiber die maximale Größe eines Datenrahmens anliefert, wenn er in das angegebene Ausgabeformat komprimiert wird. Sie können diese Nachricht explizit oder mithilfe des [**Makros ICCompressGetSize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetsize) senden.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (DWORD_PTR) (LPVOID) lpbiOutput;
 
 <dl> <dt>
 
-<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiinput*
+<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiInput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Eingabeformat enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Eingabeformat enthält.
 
 </dd> <dt>
 
-<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbioutput*
+<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbiOutput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Ausgabeformat enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Ausgabeformat enthält.
 
 </dd> </dl>
 
@@ -56,11 +56,11 @@ Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo)
 
 Gibt die maximale Anzahl von Bytes zurück, die ein einzelner komprimierter Frame belegen kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Normalerweise senden Anwendungen diese Nachricht, um zu bestimmen, wie groß ein Puffer für den komprimierten Frame ist.
+In der Regel senden Anwendungen diese Nachricht, um zu bestimmen, wie groß ein Puffer für den komprimierten Frame zu reservieren ist.
 
-Der Treiber sollte die Größe des größtmöglichen Frames basierend auf den Eingabe-und Ausgabeformaten berechnen.
+Der Treiber sollte die Größe des größten möglichen Frames basierend auf den Eingabe- und Ausgabeformaten berechnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Der Treiber sollte die Größe des größtmöglichen Frames basierend auf den Ei
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Der Treiber sollte die Größe des größtmöglichen Frames basierend auf den Ei
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

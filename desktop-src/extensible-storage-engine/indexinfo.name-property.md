@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: IndexInfo.Name-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: IndexInfo.Name-Eigenschaft'
 title: IndexInfo.Name-Eigenschaft
 TOCTitle: 'Name property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.IndexInfo.Name
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e91d47962960e73535c83b89bc84b975ed58e770
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 272d2b14820ef6f8d7a8df2e67abc67e0f9db3bb73024e80d4f1810d7b3fec12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117706025"
 ---
 # <a name="indexinfoname-property"></a>IndexInfo.Name-Eigenschaft
 
 Ruft den Namen des Index ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public string Name { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [IndexInfo-Klasse](./indexinfo-class.md)
 
 [IndexInfo-Member](./indexinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

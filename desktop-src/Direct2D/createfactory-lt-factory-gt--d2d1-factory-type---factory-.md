@@ -1,9 +1,9 @@
 ---
-title: D2D1CreateFactory Factory -Funktion (D2D1_FACTORY_TYPE,Factory) (D2d1.h)
-description: Erstellt ein Factoryobjekt, das zum Erstellen von Direct2D-Ressourcen verwendet werden kann. | D2D1CreateFactory Factory -Funktion (D2D1_FACTORY_TYPE,Factory) (D2d1.h)
+title: D2D1CreateFactory Factory -Funktion (D2D1_FACTORY_TYPE,Factory ) (D2d1.h)
+description: Erstellt ein Factoryobjekt, das zum Erstellen von Direct2D-Ressourcen verwendet werden kann. | D2D1CreateFactory Factory (D2D1_FACTORY_TYPE,Factory ) -Funktion (D2d1.h)
 ms.assetid: c1c25d51-15ea-4075-a896-bd6501bf68c1
 keywords:
-- D2D1CreateFactory Factory (D2D1_FACTORY_TYPE,Factory ) Funktion Direct2D
+- D2D1CreateFactory Factory-Funktion (D2D1_FACTORY_TYPE,Factory ) Direct2D
 topic_type:
 - apiref
 api_name:
@@ -39,7 +39,7 @@ HRESULT D2D1CreateFactory(
 
 | Parameter | Beschreibung                                                 |
 |-----------|-------------------------------------------------------------|
-| *Fabrik* | Der Typ von [**ID2D1Factory,**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) der erstellt werden soll. |
+| *Fabrik* | Der Typ der [**zu erstellenden ID2D1Factory.**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) |
 
 
 
@@ -52,7 +52,7 @@ HRESULT D2D1CreateFactory(
 | Parameter     | Beschreibung                                                                     |
 |---------------|---------------------------------------------------------------------------------|
 | *factoryType* | Das Threadingmodell der Factory und die von ihr erstellten Ressourcen.                |
-| *Fabrik*     | Diese Methode gibt die Adresse eines Zeigers auf die neue Factory zurück. |
+| *Fabrik*     | Enthält nach der Rückkehr dieser Methode die Adresse eines Zeigers auf die neue Factory. |
 
 
 
@@ -60,7 +60,7 @@ HRESULT D2D1CreateFactory(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="examples"></a>Beispiele
 
@@ -87,9 +87,9 @@ HRESULT DemoApp::CreateDeviceIndependentResources()
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server \[ 2008-Desktop-Apps \| UWP-Apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/>                                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für Windows Vista-Desktop-Apps \[ \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server 2008-Desktop-Apps \[ \| UWP-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/>                                                  |
 | Header<br/>                   | <dl> <dt>D2d1.h</dt> </dl>                                                        |
 | Bibliothek<br/>                  | <dl> <dt>D2d1.lib</dt> </dl>                                                      |
 | DLL<br/>                      | <dl> <dt>D2d1.dll</dt> </dl>                                                      |

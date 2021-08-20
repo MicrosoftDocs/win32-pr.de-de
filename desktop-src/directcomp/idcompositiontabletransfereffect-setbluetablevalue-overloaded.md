@@ -1,9 +1,9 @@
 ---
-title: Idcompositiontabletransfereffect setbluetablevalue-Methode (Dcomp. h)
+title: IDCompositionTableTransferEffect SetBlueTableValue-Methoden (Dcomp.h)
 description: Legt einen Wert in der blauen Tabelle fest.
 ms.assetid: 9c7098d5-17aa-3154-02a7-7acf972a212d
 keywords:
-- Setbluetablevalue-Methoden directcomposition
+- SetBlueTableValue-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: ee5b04a000cf1e758780c15c257af331538da7a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a5ef8e0c6c4c80e3e9391bc7453be18976f1d4263887382e4ee7d74953e8f530
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118088619"
 ---
-# <a name="idcompositiontabletransfereffectsetbluetablevalue-methods"></a>Idcompositiontabletransfereffect:: setbluetablevalue-Methode
+# <a name="idcompositiontabletransfereffectsetbluetablevalue-methods"></a>IDCompositionTableTransferEffect::SetBlueTableValue-Methoden
 
 Legt einen Wert in der blauen Tabelle fest.
 
@@ -27,10 +27,10 @@ Legt einen Wert in der blauen Tabelle fest.
 
 
 
-| Methode                                                                                                              | BESCHREIBUNG                                |
+| Methode                                                                                                              | Beschreibung                                |
 |:--------------------------------------------------------------------------------------------------------------------|:-------------------------------------------|
-| [**Setbluetablevalue**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluetablevalue(uint_float))                                     | Legt einen Wert in der blauen Tabelle fest.<br/> |
-| [**Setbluetablevalue (uint, idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluetablevalue(uint_idcompositionanimation)) | Legt einen Wert in der blauen Tabelle fest.<br/> |
+| [**SetBlueTableValue**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluetablevalue(uint_float))                                     | Legt einen Wert in der blauen Tabelle fest.<br/> |
+| [**SetBlueTableValue (UINT, IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluetablevalue(uint_idcompositionanimation)) | Legt einen Wert in der blauen Tabelle fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt einen Wert in der blauen Tabelle fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt einen Wert in der blauen Tabelle fest.
 
 <dl> <dt>
 
-[**Idcompositiontabletransfereffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontabletransfereffect)
+[**IDCompositionTableTransferEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontabletransfereffect)
 </dt> </dl>
 
 �

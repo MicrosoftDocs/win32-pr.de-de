@@ -1,9 +1,9 @@
 ---
-title: MCI_MONITOR Befehl (MMSYSTEM. h)
-description: Der MCI- \_ Monitor-Befehl gibt die Präsentations Quelle an. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: MCI_MONITOR Befehl (Mmsystem.h)
+description: Der MCI \_ MONITOR-Befehl gibt die Präsentationsquelle an. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: b6c476ef-d1a4-477d-a104-dda10be60915
 keywords:
-- MCI_MONITOR Befehl Windows-Multimedia
+- MCI_MONITOR-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6aa2f36b0e486143dc348d2e150422b2b082ecf7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6127a193feb16c6d2cdad21d2e99a062901be3ad37aab22fabfad172329ccc2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117986310"
 ---
-# <a name="mci_monitor-command"></a>MCI- \_ Monitor (Befehl)
+# <a name="mci_monitor-command"></a>MCI \_ MONITOR-Befehl
 
-Der MCI- \_ Monitor-Befehl gibt die Präsentations Quelle an. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Der MCI \_ MONITOR-Befehl gibt die Präsentationsquelle an. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,50 +43,50 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpMonitor"></span><span id="lpmonitor"></span><span id="LPMONITOR"></span>*lpmonitor*
+<span id="lpMonitor"></span><span id="lpmonitor"></span><span id="LPMONITOR"></span>*lpMonitor*
 </dt> <dd>
 
-Zeiger auf eine [**MCI- \_ DGV- \_ Monitor \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_monitor_parms) -Struktur.
+Zeiger auf eine [**MCI \_ DGV \_ MONITOR \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_monitor_parms)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags gelten für Digital-Video-Geräte:
+Die folgenden zusätzlichen Flags gelten für Digitalvideogeräte:
 
 <dl> <dt>
 
-<span id="MCI_DGV_MONITOR_METHOD"></span><span id="mci_dgv_monitor_method"></span>MCI- \_ DGV- \_ Monitor \_ Methode
+<span id="MCI_DGV_MONITOR_METHOD"></span><span id="mci_dgv_monitor_method"></span>MCI \_ DGV \_ \_ MONITOR-METHODE
 </dt> <dd>
 
-Eine-Konstante, die angibt, dass die Überwachungsmethode im **dwmethod** -Member der von *lpmonitor* identifizierten Struktur enthalten ist.
+Eine Konstante, die die Überwachungsmethode angibt, ist im **dwMethod-Member** der struktur enthalten, die durch *lpMonitor identifiziert wird.*
 
-Wenn das Eingabe Kennzeichen für das MCI- \_ DGV- \_ Monitor \_ im **dwsource** -Member verwendet wird, wählt dies die Überwachungsmethode aus. In der Regel haben unterschiedliche Überwachungsmethoden andere Auswirkungen auf die Verwendung der Hardware. Die Standard Überwachungsmethode wird vom Gerät ausgewählt.
+Wenn das MCI \_ DGV \_ MONITOR \_ INPUT-Flag im **dwSource-Member** verwendet wird, wird die Überwachungsmethode ausgewählt. In der Regel haben verschiedene Überwachungsmethoden unterschiedliche Auswirkungen auf die Verwendung der Hardware. Die Standardüberwachungsmethode wird vom Gerät ausgewählt.
 
 </dd> <dt>
 
-<span id="MCI_DGV_MONITOR_SOURCE"></span><span id="mci_dgv_monitor_source"></span>MCI- \_ DGV- \_ Monitor \_ Quelle
+<span id="MCI_DGV_MONITOR_SOURCE"></span><span id="mci_dgv_monitor_source"></span>MCI \_ DGV \_ MONITOR \_ SOURCE
 </dt> <dd>
 
-Eine-Konstante, die angibt, dass die Monitor Quelle im **dwsource** -Member der von *lpmonitor* identifizierten Struktur enthalten ist.
+Eine Konstante, die angibt, dass die Monitorquelle im **dwSource-Member** der struktur enthalten ist, die durch *lpMonitor identifiziert wird.*
 
 </dd> </dl>
 
@@ -98,7 +98,7 @@ Eine-Konstante, die angibt, dass die Monitor Quelle im **dwsource** -Member der 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -106,7 +106,7 @@ Eine-Konstante, die angibt, dass die Monitor Quelle im **dwsource** -Member der 
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

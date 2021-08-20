@@ -1,7 +1,7 @@
 ---
-description: Die Merge-Methode des Merge-Objekts führt einen Merge der aktuellen Datenbank und des aktuellen Moduls aus.
+description: Die Merge-Methode des Merge-Objekts führt eine Zusammenführung der aktuellen Datenbank und des aktuellen Moduls aus.
 ms.assetid: 4b580b1f-5071-42f1-8022-a152817f9fdc
-title: Merge. Merge-Methode (Mergemod. h)
+title: Merge.Merge-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: f33a0ba8218ae38d8fb31cefb6910f5b2c16484d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 43644f8ef19b81331f9f2d88d4dac03d654379d51174a50e994d3642cb86eabc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117804730"
 ---
-# <a name="mergemerge-method"></a>Merge. Merge-Methode
+# <a name="mergemerge-method"></a>Merge.Merge-Methode
 
-Die **Merge** -Methode des [**Merge**](merge-object.md) -Objekts führt einen Merge der aktuellen Datenbank und des aktuellen Moduls aus. Der Merge fügt die Komponenten im Modul an die Funktion an, die durch die *Funktion* identifiziert wird. Der Stamm der Verzeichnisstruktur des Moduls wird an den von *redirectdir* angegebenen Speicherort umgeleitet.
+Die **Merge-Methode** des [**Merge-Objekts**](merge-object.md) führt eine Zusammenführung der aktuellen Datenbank und des aktuellen Moduls aus. Die Zusammenführung verbindet die Komponenten im Modul mit dem feature identifizierten *Feature.* Der Stamm der Verzeichnisstruktur des Moduls wird an den Von *RedirectDir angegebenen Speicherort umgeleitet.*
 
-Die **Merge** -Methode kann nur einmal aufgerufen werden, um eine bestimmte Kombination aus MSI-und MSM-Dateien zusammenzuführen.
+Die **Merge-Methode** kann nur einmal aufgerufen werden, um eine bestimmte Kombination aus .msi msm-Dateien zusammenführungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ Merge.Merge(
 *Feature* 
 </dt> <dd>
 
-Der Name einer Funktion in der Datenbank.
+Der Name eines Features in der Datenbank.
 
 </dd> <dt>
 
-*Redirectdir* 
+*RedirectDir* 
 </dt> <dd>
 
-Der Schlüssel eines Eintrags in der [Verzeichnis Tabelle](directory-table.md) der Datenbank. Dieser Parameter kann NULL oder eine leere Zeichenfolge sein.
+Der Schlüssel eines Eintrags in der [Directory-Tabelle](directory-table.md) der Datenbank. Dieser Parameter kann NULL oder eine leere Zeichenfolge sein.
 
 </dd> </dl>
 
@@ -61,19 +61,19 @@ Der Schlüssel eines Eintrags in der [Verzeichnis Tabelle](directory-table.md) d
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem die Zusammenführung fertiggestellt wurde, werden die Komponenten im Modul an das von der *Funktion* identifizierte Feature angefügt. Diese Funktion wird nicht erstellt und muss ein vorhandenes Feature sein. Beachten Sie, dass die **Merge** -Methode alle Funktions Verweise im Modul abruft und die Funktionsreferenz für alle Vorkommen der NULL-GUID in der Modul Datenbank ersetzt. Weitere Informationen finden Sie unter [verweisen auf Features in Mergemodulen](referencing-features-in-merge-modules.md).
+Sobald der Merge abgeschlossen ist, werden Komponenten im Modul an das Feature angefügt, das durch Feature *identifiziert wird.* Dieses Feature wird nicht erstellt und muss bereits vorhanden sein. Beachten Sie, dass die **Merge-Methode** alle Funktionsverweise im Modul ruft und den Funktionsverweis für alle Vorkommen der NULL-GUID in der Moduldatenbank ersetzt. Weitere Informationen finden Sie unter [Verweisen auf Funktionen in Mergemodule](referencing-features-in-merge-modules.md).
 
-Das Modul kann mit der [**Connect**](merge-connect.md) -Methode an zusätzliche Features angefügt werden. Beachten Sie, dass durch den Aufruf der **Connect** -Methode nur Funktionskomponenten Zuordnungen erstellt werden. Die Zeilen, die bereits in der Datenbank zusammengeführt wurden, werden nicht geändert.
+Das Modul kann mithilfe der -Methode an zusätzliche [**Verbinden**](merge-connect.md) angefügt werden. Beachten Sie, dass **Verbinden-Methode** nur Funktionskomponentenzuordnungen erstellt. Die Zeilen, die bereits mit der Datenbank zusammengeführt wurden, werden nicht geändert.
 
-Änderungen, die an der Datenbank vorgenommen werden, werden nur dann gespeichert, wenn die Methode [**CloseDatabase**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase) aufgerufen wird und *bcommit* auf **true** festgelegt ist.
+Änderungen an der Datenbank werden nur gespeichert, wenn die [**CloseDatabase-Methode**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase) aufgerufen wird und *bCommit* auf **TRUE festgelegt ist.**
 
-Wenn Mergekonflikte auftreten, einschließlich Ausschlüsse, werden Sie für den späteren Abruf in den Fehler Enumerator eingefügt, führen jedoch nicht zu einem Fehler bei der Zusammenführung. Fehler können mithilfe der [**Errors**](error-object.md) -Eigenschaft abgerufen werden. Fehler und Informationsmeldungen werden in der aktuellen Protokolldatei gepostet.
+Wenn Mergekonflikte auftreten, einschließlich Ausschlüssen, werden sie zum späteren Abrufen in den Fehler-Enumerator platziert, führen jedoch nicht zu einem Fehler bei der Zusammenführung. Fehler können über die [**Errors-Eigenschaft abgerufen**](error-object.md) werden. Fehler und Informationsmeldungen werden an die aktuelle Protokolldatei gesendet.
 
 ### <a name="c"></a>C++
 
-Siehe [**Merge**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) -Funktion.
+Weitere Informationen [**finden Sie unter Mergefunktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Siehe [**Merge**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) -Funk
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcheckpointdepthyodeepexception-Klasse'
-title: Esentcheckpointdepthyodeepexception-Klasse
+description: 'Weitere Informationen zu: EsentCheckpointDepthTooDeepException-Klasse'
+title: EsentCheckpointDepthTooDeepException-Klasse
 TOCTitle: EsentCheckpointDepthTooDeepException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCheckpointDepthTooDeepException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcheckpointdepthtoodeepexception(v=EXCHG.10)
@@ -24,28 +24,28 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5cb3bf934336ba4990456966582f20c4ab50c392
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73eb60f795d285186474de73a175f19e95a3a6dafb2b9db04356dc4f5e6851c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117714506"
 ---
-# <a name="esentcheckpointdepthtoodeepexception-class"></a>Esentcheckpointdepthyodeepexception-Klasse
+# <a name="esentcheckpointdepthtoodeepexception-class"></a>EsentCheckpointDepthTooDeepException-Klasse
 
-Basisklasse für JET_err. Checkpointdepthdeodeep-Ausnahmen.
+Basisklasse für JET_err. CheckpointDepthTooDeep-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentcheckpointdepthopodeepexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentCheckpointDepthTooDeepException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,8 +69,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcheckpointdepthesodeepexception-Member](./esentcheckpointdepthtoodeepexception-members.md)
+[EsentCheckpointDepthTooDeepException-Member](./esentcheckpointdepthtoodeepexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,11 +1,11 @@
 ---
-title: Idrmstatuscallback OnStatus-Methode
+title: IDRMStatusCallback OnStatus-Methode
 description: Die OnStatus-Methode empfängt Statusmeldungen von asynchronen DRM-Prozessen.
 ms.assetid: 2a128088-0924-4c54-b08d-a1c7ea91e541
 keywords:
-- OnStatus-Methode Windows Media-Format
-- OnStatus-Methode Windows Media-Format, idrmstatuscallback-Schnittstelle
-- Idrmstatuscallback-Schnittstelle Windows Media-Format, OnStatus-Methode
+- OnStatus-Methode windows Media Format
+- OnStatus-Methode Windows Media Format, IDRMStatusCallback-Schnittstelle
+- IDRMStatusCallback-Schnittstelle windows Media Format , OnStatus-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 754d59d74fb0365f423243e92565ac17b46628a5
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 2c9f8c0424752ababe684b426d78001f2783d62db9781fe3d6a23ed002e91773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117847454"
 ---
-# <a name="idrmstatuscallbackonstatus-method"></a>Idrmstatuscallback:: OnStatus-Methode
+# <a name="idrmstatuscallbackonstatus-method"></a>IDRMStatusCallback::OnStatus-Methode
 
-Die **OnStatus** -Methode empfängt Statusmeldungen von asynchronen DRM-Prozessen.
+Die **OnStatus-Methode** empfängt Statusmeldungen von asynchronen DRM-Prozessen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,44 +45,44 @@ HRESULT OnStatus(
 
 <dl> <dt>
 
-*Status* \[ in\]
+*Status* \[ In\]
 </dt> <dd>
 
-Statuscode. Nachrichten Codes werden im Enumerationstyp " **msdrm- \_ Status** " definiert.
+Statuscode. Nachrichtencodes werden im **MSDRM \_ STATUS-Enumerationstyp** definiert.
 
 </dd> <dt>
 
-*Personalabteilung* \[ in\]
+*hr* \[ In\]
 </dt> <dd>
 
-Rückgabecode, der die Statusmeldung unterstützt.
+Gibt Code zurück, der die Statusmeldung unterstützt.
 
 </dd> <dt>
 
-*dwType* \[ in\]
+*dwType* \[ In\]
 </dt> <dd>
 
-Der Typ der Daten, auf die von *pValue* verwiesen wird. Legen Sie auf einen der Werte der " [**DRM \_ attr \_ DataType**](drm-attr-datatype.md) "-Enumeration fest.
+Typ der Daten, auf die *pValue zeigt.* Legen Sie auf einen der Werte der [**DRM \_ ATTR \_ DATATYPE-Enumeration**](drm-attr-datatype.md) fest.
 
 </dd> <dt>
 
-*pValue* \[ in\]
+*pValue* \[ In\]
 </dt> <dd>
 
-Zeiger auf Daten, die mit der Statusmeldung verknüpft sind. Der Typ der Daten wird durch den Wert des *dwType* -Parameters bestimmt. Weitere Informationen finden Sie in der " [**DRM \_ attr \_ DataType**](drm-attr-datatype.md) "-Enumeration.
+Zeiger auf Daten im Zusammenhang mit der Statusmeldung. Der Datentyp wird durch den Wert des *dwType-Parameters* bestimmt. Weitere Informationen finden Sie in der [**DRM \_ ATTR \_ DATATYPE-Enumeration.**](drm-attr-datatype.md)
 
 </dd> <dt>
 
-*pvcontext* \[ in\]
+*pvContext* \[ In\]
 </dt> <dd>
 
-Optionaler Parameter, der verwendet werden kann, um das Objekt zu identifizieren, das die Nachricht gesendet hat. Wenn Sie *pvcontext* festlegen, wenn Sie diesen Rückruf registrieren, können Sie denselben Rückruf verwenden, um mehrere asynchrone Prozesse zu verarbeiten.
+Optionaler Parameter, der verwendet werden kann, um das Objekt zu identifizieren, das die Nachricht gesendet hat. Durch Festlegen *von pvContext* beim Registrieren dieses Rückrufs können Sie denselben Rückruf verwenden, um mehrere asynchrone Prozesse zu verarbeiten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -102,10 +102,10 @@ Keine.
 
 <dl> <dt>
 
-[**DRM- \_ attr- \_ Datentyp**](drm-attr-datatype.md)
+[**DRM \_ \_ ATTR-DATENTYP**](drm-attr-datatype.md)
 </dt> <dt>
 
-[**Idrmstatus Callback-Schnittstelle**](idrmstatuscallback.md)
+[**IDRMStatusCallback-Schnittstelle**](idrmstatuscallback.md)
 </dt> </dl>
 
  

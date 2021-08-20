@@ -113,38 +113,38 @@ Im Allgemeinen legt der Effekt alpha auf 1 (nicht transparent) fest, wenn im Que
 </tr>
 <tr class="even">
 <td>1 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden durch übergeben.</td>
+<td>Alphadaten werden übergeben</td>
 
 </tr>
 <tr class="odd">
 <td>3 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden durch übergeben.</td>
+<td>Alphadaten werden übergeben</td>
 
 </tr>
 <tr class="even">
 <td>4 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden verworfen.</td>
+<td>Alphadaten werden verworfen</td>
 
 </tr>
 <tr class="odd">
 <td rowspan="4">3 Kanal, RGBA-Pixelformat ${REMOVE}$<br />
 </td>
 <td>1 Kanal, R-Pixelformat</td>
-<td>Alphadaten werden verworfen.</td>
+<td>Alphadaten werden verworfen</td>
 </tr>
 <tr class="even">
 <td>1 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden durch übergeben.</td>
+<td>Alphadaten werden übergeben</td>
 
 </tr>
 <tr class="odd">
 <td>3 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden durch übergeben.</td>
+<td>Alphadaten werden übergeben</td>
 
 </tr>
 <tr class="even">
 <td>4 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten werden verworfen.</td>
+<td>Alphadaten werden verworfen</td>
 
 </tr>
 <tr class="odd">
@@ -155,12 +155,12 @@ Im Allgemeinen legt der Effekt alpha auf 1 (nicht transparent) fest, wenn im Que
 </tr>
 <tr class="even">
 <td>1 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten sind auf 1 festgelegt (nicht transparent)</td>
+<td>Alphadaten sind auf 1 (nicht transparent) festgelegt.</td>
 
 </tr>
 <tr class="odd">
 <td>3 Kanal, RGBA-Pixelformat</td>
-<td>Alphadaten sind auf 1 festgelegt (nicht transparent)</td>
+<td>Alphadaten sind auf 1 (nicht transparent) festgelegt.</td>
 
 </tr>
 <tr class="even">
@@ -175,15 +175,15 @@ Im Allgemeinen legt der Effekt alpha auf 1 (nicht transparent) fest, wenn im Que
 
 | Mode | BESCHREIBUNG |
 |-|-|
-| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ PROOF | Der Modus mit der niedrigsten Qualität. Für diesen Modus ist die Featureebene 9 \_ 1 oder höher erforderlich. |
-| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ NORMAL | Normaler Qualitätsmodus. Für diesen Modus ist die Featureebene 9 \_ 1 oder höher erforderlich. |
-| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ BEST | Der Modus mit der besten Qualität. Dieser Modus erfordert die Featureebene 10 \_ 0 oder höher sowie Gleitkommagenauigkeitspuffer. Dieser Modus unterstützt die Gleitkommagenauigkeit sowie den erweiterten Bereich, wie in der SPEZIFIKATION VON CAB v4.3 definiert. |
+| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ PROOF | Der Modus mit der niedrigsten Qualität. Für diesen Modus ist die Funktionsebene 9 \_ 1 oder höher erforderlich. |
+| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ NORMAL | Normaler Qualitätsmodus. Für diesen Modus ist die Funktionsebene 9 \_ 1 oder höher erforderlich. |
+| D2D1 \_ COLORMANAGEMENT \_ QUALITY \_ BEST | Der Modus mit der besten Qualität. Dieser Modus erfordert die Featureebene 10 0 oder höher sowie Puffer \_ mit Gleitkommagenauigkeit. Dieser Modus unterstützt die Gleitkommagenauigkeit sowie den erweiterten Bereich, wie in der SPEZIFIKATION FÜR DIE Version 4.3 definiert. |
 
-Der Farbverwaltungseffekt schlägt beim Zeichnen fehl, wenn die Anwendung einen Qualitätsmodus anfordert, der von der Hardware nicht unterstützt wird. Sie können die Funktionsebene bestimmen, wenn Sie [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)aufrufen. Sie können die Gleitkommapufferunterstützung überprüfen, indem Sie [**ID2D1EffectContext::IsBufferPrecisionSupported**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-isbufferprecisionsupported) mit dem Wert [**D2D1 \_ BUFFER PRECISION \_ \_ 32BPC \_ FLOAT**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_buffer_precision)aufrufen.
+Der Farbverwaltungseffekt schlägt beim Zeichnen fehl, wenn die Anwendung einen Qualitätsmodus an fordert, der von der Hardware nicht unterstützt wird. Sie können die Funktionsebene bestimmen, wenn Sie [**D3D11CreateDevice aufrufen.**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) Sie können die Gleitkommapufferunterstützung überprüfen, indem Sie [**ID2D1EffectContext::IsBufferPrecisionSupported**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-isbufferprecisionsupported) mit dem Wert [**D2D1 \_ BUFFER PRECISION \_ \_ 32BPC \_ FLOAT aufrufen.**](/windows/desktop/api/D2d1_1/ne-d2d1_1-d2d1_buffer_precision)
 
 ## <a name="sample-code"></a>Beispielcode
 
-Ein Beispiel für diesen Effekt finden Sie unter Direct2D effects photo adjustment sample (Beispiel für die Anpassung von [Direct2D-Effekten),](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/D2DPhotoAdjustment)und lesen Sie Lektion 4 des Beispiels.
+Ein Beispiel für diesen Effekt finden Sie im Beispiel zur Anpassung von [Direct2D-Effekten](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/D2DPhotoAdjustment)und unter Lektion 4 des Beispiels.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,19 +1,19 @@
 ---
-title: Iagentcommands setVisible
-description: Iagentcommands setVisible
+title: IAgentCommands SetVisible
+description: IAgentCommands SetVisible
 ms.assetid: 4b99989a-29bb-4e0e-8155-cf734cc667fd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04a4bdb3c1a7f1e11c9548eb1e1af415d0f5d18f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7979651635c27f5633d5ebeada8e5f2866d383ece0b19a38dd32082596e4712b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117692779"
 ---
-# <a name="iagentcommandssetvisible"></a>Iagentcommands:: setVisible
+# <a name="iagentcommandssetvisible"></a>IAgentCommands::SetVisible
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetVisible(
@@ -21,26 +21,26 @@ HRESULT SetVisible(
 );
 ```
 
-Legt den Wert der [**Visible**](visible-property.md) -Eigenschaft für eine [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung fest.
+Legt den Wert der [**Visible-Eigenschaft**](visible-property.md) für eine [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bVisible"></span><span id="bvisible"></span><span id="BVISIBLE"></span>*bvisible*
+<span id="bVisible"></span><span id="bvisible"></span><span id="BVISIBLE"></span>*bVisible*
 </dt> <dd>
 
-Ein boolescher Wert, der die [**sichtbare**](visible-property.md) Eigenschaft einer [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung bestimmt. **True** legt fest, dass die [**Beschriftung**](caption-property.md) der **Befehle** Auflistung sichtbar ist, wenn das Popupmenü des Zeichens angezeigt wird. *False* zeigt ihn nicht an.
+Ein boolescher Wert, der die [**Visible-Eigenschaft**](visible-property.md) einer [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) bestimmt. **True** legt **fest, dass** die [**Beschriftung**](caption-property.md) der Commands-Sammlung sichtbar ist, wenn das Popupmenü des Zeichens angezeigt wird. *False* zeigt es nicht an.
 
 </dd> </dl>
 
-Für eine [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung muss die [**Caption**](caption-property.md) -Eigenschaft festgelegt sein und deren [**Visible**](visible-property.md) -Eigenschaft auf **true** festgelegt sein, damit Sie im Popupmenü des Zeichens angezeigt wird. Die **Visible** -Eigenschaft muss auch auf **true** festgelegt werden, damit Befehle in der Auflistung angezeigt werden, wenn die Client Anwendung aktiv ist.
+Für [**eine Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) muss [**die Caption-Eigenschaft**](caption-property.md) und die [**Visible-Eigenschaft**](visible-property.md) auf **True** festgelegt sein, damit sie im Popupmenü des Zeichens angezeigt wird. Die **Visible-Eigenschaft** muss auch auf **True** festgelegt werden, damit Befehle in der Auflistung angezeigt werden, wenn Ihre Clientanwendung eingabeaktiv ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommands:: getVisible**](iagentcommands--getvisible.md), [ **iagentcommand:: setCaption**](iagentcommand--setcaption.md)
+[**IAgentCommands::GetVisible**](iagentcommands--getvisible.md), [ **IAgentCommand::SetCaption**](iagentcommand--setcaption.md)
 
 
- 
+ 
 
- 
+ 

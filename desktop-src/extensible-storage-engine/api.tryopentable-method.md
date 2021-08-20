@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. tryopentable-Methode.
-title: API. tryopentable-Methode
+description: Weitere Informationen finden Sie unter Api.TryOpenTable-Methode.
+title: Api.TryOpenTable-Methode
 TOCTitle: 'TryOpenTable method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.TryOpenTable(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String,Microsoft.Isam.Esent.Interop.OpenTableGrbit,Microsoft.Isam.Esent.Interop.JET_TABLEID@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.tryopentable(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 556d3f12f24229326a6b26f357e5b19801119b74
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3624e32543d671f9c31334608a91b4528b4966ee70de2a0014dc3e96fd6c57b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117717206"
 ---
-# <a name="apitryopentable-method"></a>API. tryopentable-Methode
+# <a name="apitryopentable-method"></a>Api.TryOpenTable-Methode
 
 Versuchen Sie, eine Tabelle zu öffnen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,50 +73,50 @@ public static bool TryOpenTable(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
-    Die Datenbank, in der die Tabelle gesucht werden soll.
+    Die Datenbank, in der nach der Tabelle gesucht werden soll.
 
 <!-- end list -->
 
   - Tabellenname  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Tabelle.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. opentablegrbit](./opentablegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.OpenTableGrbit](./opentablegrbit-enumeration.md)  
     
-    Tabellen Öffnungs Optionen.
+    Optionen zum Öffnen von Tabellen.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Gibt die geöffnete TableID zurück.
+    Gibt die geöffnete tableid zurück.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die Tabelle geöffnet wurde, false, wenn die Tabelle nicht vorhanden ist.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+True, wenn die Tabelle geöffnet wurde, FALSE, wenn die Tabelle nicht vorhanden ist.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

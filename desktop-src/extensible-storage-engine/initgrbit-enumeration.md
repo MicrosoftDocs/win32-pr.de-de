@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der initgrbit-Enumeration.
-title: Initgrbit-Enumeration
+description: 'Weitere Informationen zu: InitGrbit-Enumeration'
+title: InitGrbit-Enumeration
 TOCTitle: InitGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.InitGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.initgrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e4278279aa38b4d560a63bf9f69915f81666d8d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bfd6cbc194e6a48c0c1d7d6fc7332e2bcd71160e6828e2800ca183ec46e57782
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118077039"
 ---
-# <a name="initgrbit-enumeration"></a>Initgrbit-Enumeration
+# <a name="initgrbit-enumeration"></a>InitGrbit-Enumeration
 
-Optionen für [JetInit2 (JET_INSTANCE, initgrbit)](./api.jetinit2-method.md).
+Optionen für [JetInit2(JET_INSTANCE, InitGrbit)](./api.jetinit2-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,8 +79,8 @@ public enum InitGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
-[Replayignorelostlogs](./windows7grbits.replayignorelostlogs-field.md)
+[ReplayIgnoreLostLogs](./windows7grbits.replayignorelostlogs-field.md)

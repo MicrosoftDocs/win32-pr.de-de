@@ -1,76 +1,76 @@
 ---
-title: Update der Datenträger Kompatibilität im erweiterten Format (4K)
-description: Update der Datenträger Kompatibilität im erweiterten Format (4K)
+title: Update der Datenträgerkompatibilität im erweiterten Format (4K)
+description: Update der Datenträgerkompatibilität im erweiterten Format (4K)
 ms.assetid: 2C9EB0CF-D27B-457A-8FE6-24824BCC084C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fbad505575c4479bd750f09ccd83bc4da4c39667
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: 99cf89345dfc33826c4eb1f155083793726de7d70bc95c1dcdda96644d5d1173
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117672202"
 ---
-# <a name="advanced-format-4k-disk-compatibility-update"></a>Update der Datenträger Kompatibilität im erweiterten Format (4K)
+# <a name="advanced-format-4k-disk-compatibility-update"></a>Update der Datenträgerkompatibilität im erweiterten Format (4K)
 
 ## <a name="platforms"></a>Plattformen
 
-**Clients**   Windows XP, Windows Vista, Windows 7, Windows 7 SP1, Windows 8  
-**Server**   Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016  
+**Clients** Windows XP, Windows Vista, Windows 7, Windows 7 SP1, Windows 8     
+**Server** Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016     
 
 
 ## <a name="description"></a>Beschreibung
 
-Dieser Artikel ist eine aktualisierte Version des Artikels mit dem Titel 512-Byte Emulation (512 e) Disk Compatibility Update, das für Windows 7 SP1 und Windows Server 2008 R2 SP1 veröffentlicht wurde. Dieses Update enthält viele neue Informationen, von denen einige nur für Windows 8 und Windows Server 2012 anwendbar sind.
+Dieser Artikel ist eine aktualisierte Version des Artikels mit dem Titel 512-Byte Emulation (512e) Disk Compatibility Update, das für Windows 7 SP1 und Windows Server 2008 R2 SP1 veröffentlicht wurde. Dieses Update enthält viele neue Informationen, von denen einige nur für Windows 8 und Windows Server 2012 gelten.
 
-Die Raum dichten werden jährlich gesteigert, und bei der letzten Einführung von 3 TB-Datenträgern werden die Fehlerkorrektur Mechanismen, die für den Umgang mit dem abnehmenden Signal-zu-Rauschen-Verhältnis (SNR) verwendet wurden, zu einem ineffizienten Raum. Dies bedeutet, dass ein erhöhter mehr Aufwand erforderlich ist, um sicherzustellen, dass die Medien verwendbar sind. Eine der Speicher-Branchenlösungen zum verbessern dieses Fehlerkorrektur Mechanismus besteht darin, ein anderes physisches Medienformat einzuführen, das eine größere physische Sektorgröße umfasst. Dieses neue Format für physische Medien wird als erweitertes Format bezeichnet. Daher ist es nicht mehr sicher, jegliche Annahmen hinsichtlich der Sektorgröße moderner Speichergeräte zu treffen, und Entwickler müssen die Annahmen, die Ihrem Code zugrunde liegen, untersuchen, um zu ermitteln, ob eine Auswirkung vorliegt.
+Die Arealdichten nehmen jährlich zu, und mit dem aktuellen Aufkommen von 3 TB Datenträgern werden die Fehlerkorrekturmechanismen, die zum Umgang mit dem abnehmenden Signal-Rausch-Verhältnis (Signal-to-Noise-Ratio, SNR) verwendet werden, ineffizient. Das heißt, es ist ein höherer Mehraufwand erforderlich, um sicherzustellen, dass die Medien verwendbar sind. Eine der Speicherbranchelösungen zur Verbesserung dieses Fehlerkorrekturmechanismus ist die Einführung eines anderen physischen Medienformats, das eine größere physische Sektorgröße umfasst. Dieses neue physische Medienformat heißt Erweitertes Format. Daher ist es nicht mehr sicher, Annahmen zur Sektorgröße moderner Speichergeräte zu treffen, und Entwickler müssen die Annahmen untersuchen, die ihrem Code zugrunde liegen, um festzustellen, ob es Auswirkungen gibt.
 
-In diesem Thema wird erläutert, wie sich das erweiterte Formatieren von Speichergeräten in Software unterstützt. Außerdem wird erläutert, welche Aktionen Apps zur Unterstützung dieser Art von Medien ausführen können. Außerdem wird die Infrastruktur erläutert, die Microsoft mit Windows Vista, Windows 7 und Windows 8 eingeführt hat, damit Entwickler diese Gerätetypen unterstützen können. Obwohl das in diesem Thema gezeigte Material Richtlinien zur Verbesserung der Kompatibilität mit erweiterten Format Datenträgern enthält, gelten die Informationen im Allgemeinen für alle Systeme mit erweiterten Format Datenträgern, auf denen Windows Vista, Windows 7 und Windows 8 ausgeführt werden.
+In diesem Thema werden die Auswirkungen von Speichergeräten im erweiterten Format auf Software vorgestellt, und es wird erläutert, welche Möglichkeiten Apps zur Unterstützung dieser Art von Medien haben. Außerdem wird die Infrastruktur erläutert, die Microsoft mit Windows Vista, Windows 7 und Windows 8 eingeführt hat, um Entwicklern die Unterstützung dieser Gerätetypen zu ermöglichen. Während das in diesem Thema vorgestellte Material Richtlinien zur Verbesserung der Kompatibilität mit Datenträgern im erweiterten Format enthält, gelten die Informationen im Allgemeinen für alle Systeme mit Datenträgern im erweiterten Format, die Windows Vista, Windows 7 und Windows 8 ausgeführt werden.
 
-**Zusammenfassung der neuen großen sektorbezogenen Features**
+**Zusammenfassung der neuen Features im Zusammenhang mit großen Sektoren**
 
-In der folgenden Liste werden die neuen Features, die als Teil von Windows 8 und Windows Server 2012 bereitgestellt werden, zusammengefasst, um die Kunden-und Entwickler Freundlichkeit bei Datenträgern mit großen Sektoren Eine ausführlichere Beschreibung der einzelnen Elemente folgt.
+In der folgenden Liste sind die neuen Features zusammengefasst, die als Teil der Windows 8 und Windows Server 2012 bereitgestellt werden, um die Kunden- und Entwicklererfahrung mit großen Sektordatenträgern zu verbessern. Eine ausführlichere Beschreibung der einzelnen Elemente finden Sie hier.
 
--   Basiert auf der Windows 7 SP1-Unterstützung für 4K-Datenträger mit Emulation (512 e) und bietet vollständige Eingangsbox Unterstützung für Datenträger mit einer Sektorgröße von 4 KB ohne Emulation (4K Native). Einige unterstützte apps und Szenarien umfassen Folgendes:
-    -   Möglichkeit der Installation von Windows auf einem 4-KB-sektordatenträger ohne Emulation (4K Native Festplatte)
-    -   VHD und das neue vhdx-Dateiformat
+-   Baut auf der Windows 7 SP1-Unterstützung für 4K-Datenträger mit Emulation (512e) auf und bietet vollständige Posteingangsunterstützung für Datenträger mit einer Sektorgröße von 4K ohne Emulation (4K nativ). Zu den unterstützten Apps und Szenarien gehören:
+    -   Möglichkeit zum Installieren Windows und Starten von einem 4K-Sektordatenträger ohne Emulation (nativer 4K-Datenträger)
+    -   VHD und neues VHDX-Dateiformat
     -   Vollständige HyperV-Unterstützung
-    -   Windows-Sicherung
+    -   Windows Sicherung
     -   Vollständige Unterstützung im NT-Dateisystem (NTFS)
-    -   Vollständige Unterstützung mit neuen Speicherplätzen und Pools (SSP)
+    -   Vollständige Unterstützung mit neuen Speicherplätze und Pools (SSP)
     -   Vollständige Unterstützung mit Windows Defender
--   Bietet eine neue API zum Abfragen der Größe des physischen Sektors ("flefssectorsizeinformation"):
+-   Stellt eine neue API zum Abfragen der physischen Sektorgröße (FileFsSectorSizeInformation) bereit:
     -   Verfügbar für Netzwerkvolumes
-    -   Kann für ein beliebiges Datei Handle ausgestellt werden.
-    -   Verfügbar für nicht privilegierte apps
-    -   Friendlier-Verwendungs Modell
--   Umfasst das Erweiterte Befehlszeilen-Hilfsprogramm fsutil zum Abfragen der logischen und physischen Sektorgröße von Volumes mit Ausrichtungs Informationen (grundlegende Version des Hilfsprogramms ohne Ausrichtungs Informationen ist für Windows 7 mit Microsoft KB 982018 und Windows Server 2008 R2 mit Microsoft KB 982018 verfügbar)
+    -   Kann für jedes Dateihandle ausgegeben werden
+    -   Verfügbar für nicht privilegierte Apps
+    -   Benutzerfreundlicheres Nutzungsmodell
+-   Enthält ein erweitertes Fsutil-Befehlszeilenprogramm zum Abfragen der logischen und physischen Sektorgröße des Volumes mit Ausrichtungsinformationen (grundlegende Version des Hilfsprogramms ohne Ausrichtungsinformationen ist für Windows 7 mit Microsoft KB 982018 und Windows Server 2008 R2 mit Microsoft KB 982018 verfügbar).
 
-**Einführung in erweiterte Format Datenträger (4K)**
+**Einführung in Datenträger im erweiterten Format (4K)**
 
-Eines der Probleme bei der Einführung dieser Änderung im Medienformat ist das Potenzial, Kompatibilitätsprobleme mit vorhandener Software und Hardware einzuführen. Als temporäre Kompatibilitäts Lösung führt die Speicher Branche anfänglich Datenträger ein, die einen regulären 512-Byte-sektordatenträger emulieren, aber über standardmäßige ATA-und SCSI-Befehle Informationen über die tatsächliche Sektorgröße bereitstellen. Infolge dieser Emulation gibt es im Wesentlichen zwei Sektorgrößen:
+Eines der Probleme bei der Einführung dieser Änderung im Medienformat besteht darin, dass Kompatibilitätsprobleme mit vorhandener Software und Hardware auftreten können. Als temporäre Kompatibilitätslösung führt die Speicherbranche anfänglich Datenträger ein, die einen regulären 512-Byte-Sektordatenträger emulieren, aber Informationen zur tatsächlichen Sektorgröße über ATA- und SCSI-Standardbefehle zur Verfügung stellen. Aufgrund dieser Emulation gibt es im Wesentlichen zwei Sektorgrößen:
 
-**Logischer Sektor:** Die Einheit, die für die logische Block Adressierung für das Medium verwendet wird. Wir können uns dies auch als kleinste Schreibeinheit vorstellen, die der Speicher annehmen kann. Dies ist die Emulation.   
-**Physischer Sektor:** Die Einheit, für die Lese-und Schreibvorgänge auf dem Gerät in einem einzelnen Vorgang abgeschlossen werden. Dies ist die Einheit des atomaren Schreibzugriffs.  
- Die meisten aktuellen Windows-APIs, wie z. b. IOCTL \_ Disk \_ get \_ Drive \_ Geometry, geben die logische Sektorgröße zurück, aber die physische Sektorgröße kann über den <a href="/windows-hardware/drivers/ddi/content/ntddstor/ni-ntddstor-ioctl_storage_query_property">IOCTL \_ Storage \_ Query- \_ Eigenschaften</a> Steuerungs Code abgerufen werden, wobei die relevanten Informationen im Feld bytesperphysicalsektorin der <a href="/windows/desktop/api/winioctl/ns-winioctl-storage_access_alignment_descriptor"> \_ \_ \_ deskriptorstruktur der Speicherzugriffs Ausrichtung</a> enthalten sind. Dies wird weiter unten in diesem Artikel ausführlicher erläutert.
+**Logischer Sektor:** Die Einheit, die für die Adressierung logischer Blöcke für die Medien verwendet wird. Wir können uns dies auch als die kleinste Schreibeinheit vorstellen, die der Speicher akzeptieren kann. Dies ist die Emulation.   
+**Physischer Sektor:** Die Einheit, für die Lese- und Schreibvorgänge auf dem Gerät in einem einzigen Vorgang abgeschlossen werden. Dies ist die Einheit des atomaren Schreibzugriffs.  
+ Die meisten aktuellen Windows-APIs, z. B. IOCTL \_ DISK \_ GET DRIVE \_ \_ GEOMETRY, geben die größe des logischen Sektor zurück. Die physische Sektorgröße kann jedoch über den <a href="/windows-hardware/drivers/ddi/content/ntddstor/ni-ntddstor-ioctl_storage_query_property">IOCTL \_ STORAGE QUERY \_ PROPERTY-Steuerungscode \_ </a> abgerufen werden, wobei die relevanten Informationen im Feld BytesPerPhysicalSector in der <a href="/windows/desktop/api/winioctl/ns-winioctl-storage_access_alignment_descriptor"> \_ \_ \_ DESCRIPTOR-Struktur für DIE AUSRICHTUNG DES SPEICHERZUGRIFFs</a> enthalten sind. Dies wird weiter unten in diesem Artikel ausführlicher erläutert.
 
-**Anfängliche Typen von Medien im großen Sektor**
+**Anfängliche Typen großer Sektormedien**
 
-Die Speicher Branche beschleunigt rasch den Umstieg auf diesen neuen erweiterten Formattyp von Speicher für Medien mit einer physischen Sektorgröße von 4 KB. Zwei Arten von Medien werden auf dem Markt veröffentlicht:
+Die Speicherbranche setzt die Umstellung auf diesen neuen Speichertyp im erweiterten Format für Medien mit einer physischen Sektorgröße von 4 KB schnell fort. Zwei Medientypen werden auf dem Markt veröffentlicht:
 
-**4 KB** System eigen: Dieses Medium hat keine Emulations Schicht und macht 4 KB direkt als logische und physische Sektorgröße verfügbar. Das Gesamtproblem bei dieser neuen Art von Medien besteht darin, dass die meisten apps und Betriebssysteme keine e/a-Vorgängen für die physische Sektorgröße Abfragen und ausrichten, was zu unerwarteten fehlgeschlagenen e/a-Vorgängen führen kann.  
-**512-Byte-Emulation (512 e):** Dieses Medium verfügt über eine Emulations Schicht, wie im vorherigen Abschnitt erläutert wurde, und macht 512-Bytes als logische Sektorgröße verfügbar (ähnlich wie bei einem regulären Datenträger), stellt jedoch die Größe der physischen Sektoren (4 KB) zur Verfügung. Das Gesamtproblem bei diesem neuen Medientyp besteht darin, dass die Mehrzahl der APP und der Betriebssysteme nicht das vorhanden sein der physischen Sektorgröße verstehen, was zu einer Reihe von Problemen führen kann, die im folgenden erläutert werden.  
-**Allgemeine Windows-Unterstützung für Medien im großen Sektor**
+**4 KB nativ:** Dieses Medium verfügt über keine Emulationsebene und macht 4 KB direkt als logische und physische Sektorgröße verfügbar. Das Gesamtproblem bei diesem neuen Medientyp besteht darin, dass die Meisten Apps und Betriebssysteme keine E/A-Abfragen durchführen und die E/A-Daten nicht an die Größe des physischen Sektor ausrichten, was zu unerwarteten E/A-Fehlern führen kann.  
+**512-Byte-Emulation (512e):** Dieses Medium verfügt über eine Emulationsebene, wie im vorherigen Abschnitt erläutert, und macht 512 Bytes als logische Sektorgröße verfügbar (ähnlich wie ein regulärer Datenträger heute), stellt aber informationen zur physischen Sektorgröße (4 KB) zur Verfügung. Das Allgemeine Problem bei diesem neuen Medientyp besteht darin, dass die Mehrheit der App- und Betriebssysteme das Vorhandensein der physischen Sektorgröße nicht versteht, was zu einer Reihe von Problemen führen kann, wie unten erläutert.  
+**Allgemeine Windows Unterstützung für große Sektormedien**
 
-In dieser Tabelle wird die offizielle Microsoft-Support Richtlinie für verschiedene Medien und die resultierenden gemeldeten Sektorgrößen dokumentiert. Weitere Informationen finden Sie in diesem [KB-Artikel](https://support.microsoft.com/kb/2510009) .
+In dieser Tabelle werden die offizielle Microsoft-Supportrichtlinie für verschiedene Medien und die daraus resultierenden gemeldeten Sektorgrößen dokumentiert. Weitere Informationen finden Sie in diesem [KB-Artikel.](https://support.microsoft.com/kb/2510009)
 
 
 
-| Allgemeine Namen                                  | Gemeldete logische Sektorgröße | Gemeldete physische Sektorgröße | Windows-Version mit Unterstützung                                                                                                                                                                                                                                                                             |
+| Allgemeine Namen                                  | Gemeldete Größe des logischen Sektor | Gemeldete Größe des physischen Sektor | Windows Version mit Support                                                                                                                                                                                                                                                                             |
 |-----------------------------------------------|------------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 512-Byte Native, 512 n                         | 512 Bytes                    | 512 Bytes                     | Alle Windows-Versionen                                                                                                                                                                                                                                                                                     |
-| Erweitertes Format, 512 e, AF, 512-Byte-Emulation | 512 Bytes                    | 4 KB                          | Windows Vista w/MS KB 2553708 <br/> Windows Server 2008 \* w/MS KB 2553708 <br/> Windows 7 w/MS KB 982018 <br/> Windows Server 2008 R2 * w/MS KB 982018 <br/> Alle Windows-Versionen von Windows 7 SP1 und darüber hinaus. <br/> Alle Serverversionen von Server 2008 R2 SP1 und darüber hinaus. <br/> <br/> \*Mit Ausnahme von Hyper-V. Weitere Informationen finden Sie im Abschnitt ["Anforderungen für die Anwendungsunterstützung für große sektorlaufwerke"](https://support.microsoft.com/help/2510009/microsoft-support-policy-for-4k-sector-hard-drives-in-windows) . |
-| Vorab Format, AF, 4K Native, 4kN            | 4 KB                         | 4 KB                          | Alle Windows-Versionen von Windows 8 und darüber hinaus <br/> Alle Server Versionen von Windows Server 2012 und darüber hinaus <br/>                                                                                                                                                                                                                                                      |
+| 512 Byte nativ, 512n                         | 512 Bytes                    | 512 Bytes                     | Alle Windows-Versionen                                                                                                                                                                                                                                                                                     |
+| Erweitertes Format, 512e, AF, 512-Byte-Emulation | 512 Bytes                    | 4 KB                          | Windows Vista w/MS KB 2553708 <br/> Windows Server 2008 \* w/MS KB 2553708 <br/> Windows 7 w/MS KB 982018 <br/> Windows Server 2008 R2* mit MS KB 982018 <br/> Alle Windows Versionen von Windows 7 SP1 und höher. <br/> Alle Serverversionen ab Server 2008 R2 SP1. <br/> <br/> \*Mit Ausnahme von Hyper-V. Weitere Informationen finden Sie im Abschnitt "Anforderungen an die [Anwendungsunterstützung für Große Sektorlaufwerke".](https://support.microsoft.com/help/2510009/microsoft-support-policy-for-4k-sector-hard-drives-in-windows) |
+| Advance Format, AF, 4K Native, 4Kn            | 4 KB                         | 4 KB                          | Alle Windows Versionen von Windows 8 und darüber hinaus <br/> Alle Serverversionen von Windows Server 2012 und höher <br/>                                                                                                                                                                                                                                                      |
 | Andere                                         | Nicht 4 KB oder 512 Bytes        | Nicht 4 KB oder 512 Bytes         | Nicht unterstützt                                                                                                                                                                                                                                                                                            |
 
 
@@ -78,78 +78,78 @@ In dieser Tabelle wird die offizielle Microsoft-Support Richtlinie für verschie
  
 
 > [!Note]  
-> Obwohl es in der obigen Tabelle nicht hervorgehoben ist, unterstützen Windows XP, Windows Server 2003 und Windows Server 2003 R2 nicht die Medien 512 e oder 4kN. Obwohl das System gestartet werden kann und in der Lage sein kann, minimal zu arbeiten, gibt es möglicherweise unbekannte Szenarios mit Funktions Problemen, Datenverlusten oder suboptimaler Leistung. Daher unterliegt Microsoft stark der Verwendung von 512 e-Medien mit Windows XP oder anderen Produkten, die auf der Windows XP-Codebasis basieren (z. b. Windows Home Server 1,0, Windows Server 2003, Windows Server 2003 R2, Windows XP 64-Bit Edition, Windows XP Embedded, Windows Small Business Server 2003 und Windows Small Business Server 2003 R2).
+> Obwohl in der obigen Tabelle nicht enthalten, unterstützen Windows XP, Windows Server 2003 und Windows Server 2003 R2 keine 512e- oder 4Kn-Medien. Obwohl das System möglicherweise gestartet wird und minimal betrieben werden kann, gibt es möglicherweise unbekannte Szenarien mit Funktionalitätsproblemen, Datenverlust oder suboptimaler Leistung. Daher warnt Microsoft dringend davor, 512e-Medien mit Windows XP oder anderen Produkten zu verwenden, die auf der Windows XP-Codebasis basieren (z. B. Windows Home Server 1.0, Windows Server 2003, Windows Server 2003 R2, Windows XP 64-Bit Edition, Windows XP Embedded, Windows Small Business Server 2003 und Windows Small Business Server 2003 R2).
 
  
 
 ## <a name="how-emulation-works-read-modify-write-rmw"></a>Funktionsweise der Emulation: Read-Modify-Write (RMW)
 
-Ein Speichermedium verfügt über eine bestimmte Einheit, in der das physische Medium geändert werden kann. Das heißt, die Medien können nur in Einheiten der physischen Sektorgröße geschrieben oder umgeschrieben werden. Folglich erfordern Schreibvorgänge, die nicht auf dieser Einheits Ebene ausgeführt werden, zusätzliche Schritte, die wir im folgenden Beispiel durchgehen werden.
+Ein Speichermedium verfügt über eine bestimmte Einheit, in der das physische Medium geändert werden kann. Das heißt, die Medien können nur in Einheiten der physischen Sektorgröße geschrieben oder umgeschrieben werden. Daher sind für Schreibvorgänge, die nicht auf dieser Einheitenebene ausgeführt werden, zusätzliche Schritte erforderlich. Dies wird im folgenden Beispiel erläutert.
 
-In diesem Szenario muss eine APP den Inhalt eines dataStor-Datensatzes innerhalb eines logischen 512-Byte-Sektors aktualisieren. Dieses Diagramm veranschaulicht die Schritte, die erforderlich sind, damit das Speichergerät den Schreibvorgang beendet:
+In diesem Szenario muss eine App den Inhalt eines Datastor-Datensatzes aktualisieren, der sich in einem logischen 512-Byte-Sektor befindet. Dieses Diagramm veranschaulicht die Schritte, die für das Speichergerät erforderlich sind, um den Schreibvorgang abzuschließen:
 
-![Schritte für ein Speichergerät zum Abschluss eines Schreibvorgangs](images/512ermwsteps.png)
+![Schritte für ein Speichergerät zum Abschließen eines Schreibzugriffs](images/512ermwsteps.png)
 
-Wie oben gezeigt, umfasst dieser Prozess etwas Arbeit vom Speichergerät, das zu einem Leistungsverlust führen kann. Um diese zusätzliche Arbeit zu vermeiden, müssen apps wie folgt aktualisiert werden:
+Wie oben gezeigt, umfasst dieser Prozess einige Arbeit des Speichergeräts, die zu leistungseinbußen führen kann. Um diese zusätzliche Arbeit zu vermeiden, müssen Apps aktualisiert werden auf:
 
--   Abfragen der physischen Sektorgröße
--   Sicherstellen, dass Schreibvorgänge an der Größe des gemeldeten physischen Sektors ausgerichtet sind
+-   Abfrage der physischen Sektorgröße
+-   Stellen Sie sicher, dass Schreibvorgänge an der gemeldeten physischen Sektorgröße ausgerichtet sind.
 
-Obwohl dies anfänglich scheinbar nur ein Leistungsproblem sein kann, kann es zu einem schwerwiegenderen Problem kommen. Dies wird im nächsten Abschnitt erläutert.
+Obwohl dies anfänglich nur ein Leistungsproblem zu sein scheint, kann es zu einem schwerwiegenderen Problem kommen. Dies wird im nächsten Abschnitt erläutert.
 
-**Resilienz: die ausgeblendeten Kosten für Lese-und Schreibvorgänge**
+**Resilienz: die verborgenen Kosten für Lese-/Änderungs-/Schreibzugriff**
 
-Resilienz spricht von der Fähigkeit einer APP, den Status zwischen den Sitzungen wiederherzustellen. Wir haben gesehen, was erforderlich ist, damit ein 512E-Speichergerät einen 512-Byte-Sektor durchführen kann, um den Lese-und Schreibvorgang zu schreiben. Sehen Sie sich an, was passiert, wenn der Prozess der Überschreibung des vorherigen physischen Sektors auf dem Medium unterbrochen wurde. Wie lauten die Konsequenzen?
+Resilienz bezeichnet die Fähigkeit einer App, den Zustand zwischen Sitzungen wiederherzustellen. Wir haben gesehen, was erforderlich ist, damit ein 512e-Speichergerät einen 512-Byte-Sektor ausführen kann, um den Lese-/Änderungs-/Schreibzyklus zu schreiben. Sehen wir uns an, was passieren würde, wenn der Prozess des Überschreibens des vorherigen physischen Sektor auf den Medien unterbrochen würde. Was wären die Konsequenzen?
 
--   Da die meisten Festplattenlaufwerke direkt aktualisiert werden, ist der physische Sektor, d. h. der Teil des Mediums, auf dem sich der physische Sektor befand, möglicherweise aufgrund einer partiellen Überschreibung mit unvollständigen Informationen beschädigt worden. Anders ausgedrückt, Sie können sich davon vorstellen, dass alle acht logischen Sektoren verloren gegangen sind (was der physische Sektor logisch enthält).
--   Obwohl die meisten apps mit einem Datenspeicher mit der Funktion zur Wiederherstellung nach Medien Fehlern, dem Verlust von acht Sektoren oder einem anderen Weg, dem Verlust von acht Commit-Datensätzen, entworfen wurden, kann es möglicherweise unmöglich machen, dass der Datenspeicher ordnungsgemäß wieder hergestellt wird. Ein Administrator muss die Datenbank möglicherweise manuell aus einer Sicherung wiederherstellen oder sogar eine langwierige Neuerstellung durchführen.
--   Eine weitere wichtige Auswirkung besteht darin, dass der Act einer anderen APP, der einen Lese-/Änderungs-Vorgang verursacht, möglicherweise dazu führen kann, dass Ihre Daten verloren gehen, auch wenn Ihre APP nicht ausgeführt wird. Dies liegt einfach daran, dass sich die Daten und die anderen APP-Daten innerhalb desselben physischen Sektors befinden könnten.
+-   Da die meisten Festplattenlaufwerke direkt aktualisiert werden, könnte der physische Sektor, d. h. der Teil der Medien, in dem sich der physische Sektor befand, aufgrund eines partiellen Überschreibens mit unvollständigen Informationen beschädigt worden sein. Anders ausgedrückt: Sie können sich vorstellen, dass möglicherweise alle acht logischen Sektoren verloren gegangen sind (die der physische Sektor logisch enthält).
+-   Während die meisten Apps mit einem Datenspeicher mit der Möglichkeit zur Wiederherstellung nach Medienfehlern, dem Verlust von acht Sektoren oder einem anderen Weg, dem Verlust von acht Commitdatensätzen, entworfen wurden, kann es für den Datenspeicher möglicherweise unmöglich sein, ordnungsgemäß wiederhergestellt zu werden. Ein Administrator muss die Datenbank möglicherweise manuell aus einer Sicherung wiederherstellen oder sogar eine lange Neuerstellung durchführen.
+-   Ein weiterer wichtiger Einfluss ist, dass der Vorgang einer anderen App, die einen Lese-/Änderungs-/Schreibzyklus verursacht, dazu führen kann, dass Ihre Daten verloren gehen, auch wenn Ihre App nicht ausgeführt wird! Dies liegt einfach daran, dass sich Ihre Daten und die Daten der anderen App im selben physischen Sektor befinden können.
 
-Vor diesem Hintergrund ist es wichtig, dass die APP-Software alle Annahmen, die im Code vorgenommen wurden, neu bewertet und die Unterscheidung der logischen Sektorgröße sowie einige interessante Kunden Szenarios beachten, die später in diesem Artikel erläutert werden.
+Vor diesem Hintergrund ist es wichtig, dass App-Software alle Annahmen im Code neu bewertet und sich der Unterscheidung zwischen logisch und physisch nach Sektorgröße sowie einigen interessanten Kundenszenarien bewusst ist, die weiter unten in diesem Artikel erläutert werden.
 
-**Alles tun (vermeiden von Lese-und Schreibzugriff)**
+**Richtiges Tun (Vermeiden von Lese-/Änderungs-/Schreibzugriff)**
 
-Während einige Speicher Anbieter einige Stufen der Entschärfung innerhalb bestimmter 512 e-Speichergeräte einführen, um die Leistungs-und resilienzprobleme des Lese-/Änderungs-Schreibzyklen zu vereinfachen, gibt es nur so viele Entschärfungs Maßnahmen in Bezug auf die Arbeitsauslastung. Daher sollten sich apps nicht auf diese Entschärfung als langfristige Lösung verlassen. Außerdem gibt es keine Garantie dafür, dass für alle Klassen von Datenträgern diese Entschärfung vorhanden ist, und es gibt auch keine Garantie dafür, dass die Entschärfung gut entworfen wurde.
+Während einige Speicheranbieter auf bestimmten 512e-Speichergeräten möglicherweise ein gewisses Maß an Entschärfung einführen, um zu versuchen, die Leistungs- und Resilienzprobleme des Lese-/Änderungs-/Schreibzyklus zu reduzieren, gibt es nur so viele Entschärfungen in Bezug auf die Workload. Daher sollten Sich Apps nicht auf diese Lösung als langfristige Lösung verlassen. Darüber hinaus gibt es keine Garantie dafür, dass diese Entschärfung für alle Klassen von Datenträgern vorhanden ist, und es gibt auch keine Garantie dafür, dass die Entschärfung gut konzipiert ist.
 
-Dabei handelt es sich nicht um eine nicht-Laufwerke-Lösung, sondern um die Entwicklung von Apps für den richtigen Satz von Medien, um diese Art von Medien zu unterstützen. In diesem Abschnitt werden häufige Szenarien erläutert, in denen apps Probleme mit großen sektordatenträgern haben können, und es wird eine Untersuchungs Möglichkeit vorgeschlagen, um die einzelnen Probleme zu beheben.
+Die Lösung hierfür besteht nicht in der vermeidungsorientierten Risikominderung, sondern darin, Apps so zu entwerfen, dass sie die richtigen Maßnahmen zur Unterstützung dieser Art von Medien durchführen. In diesem Abschnitt werden häufige Szenarien erläutert, in denen Apps Probleme mit großen Sektordatenträgern haben können, und es wird eine Möglichkeit zur Untersuchung vorgeschlagen, um die einzelnen Probleme zu beheben.
 
-**Problem 1: die Partition ist nicht an einer physischen Sektorgrenze ausgerichtet.**
+**Problem 1: Die Partition ist nicht an einer physischen Sektorgrenze ausgerichtet.**
 
-Wenn der Administrator/Benutzer den Datenträger partitioniert, wurde die erste Partition möglicherweise nicht an einer ausgerichteten Grenze erstellt. Dies kann dazu führen, dass alle nachfolgenden Schreibvorgänge an den physischen Sektorgrenzen nicht ausgerichtet werden. Ab Windows Vista SP1 und Windows Server 2008 wird die erste Partition auf den ersten 1024 KB des Datenträgers platziert (für Datenträger mit einer Größe von 4 GB oder größer, andernfalls ist die Ausrichtung auf 64 KB), die an einer physischen Sektorgrenze von 4 KB ausgerichtet ist. Wenn jedoch die Standard Partitionierung in Windows XP, ein Drittanbieter-Partitionierungsprogramm oder eine falsche Verwendung von Windows-APIs vorhanden ist, sind erstellte Partitionen möglicherweise nicht an einer physischen Sektorgrenze ausgerichtet. Entwickler müssen sicherstellen, dass die richtigen APIs verwendet werden, um die Ausrichtung sicherzustellen. Die empfohlenen APIs, um sicherzustellen, dass die Partitions Ausrichtung nachfolgend beschrieben wird.
+Wenn der Administrator/Benutzer den Datenträger partitioniert, wurde die erste Partition möglicherweise nicht an einer ausgerichteten Grenze erstellt. Dies kann dazu führen, dass alle nachfolgenden Schreibvorgänge nicht mehr an physischen Sektorgrenzen ausgerichtet werden. Ab Windows Vista SP1 und Windows Server 2008 wird die erste Partition auf den ersten 1024 KB des Datenträgers platziert (bei Datenträgern mit 4 GB oder höher, andernfalls 64 KB), die an einer physischen Sektorgrenze von 4 KB ausgerichtet sind. Angesichts der Standardpartitionierung in Windows XP, einem Partitionierungshilfsprogramm eines Drittanbieters oder einer falschen Verwendung Windows APIs werden erstellte Partitionen möglicherweise nicht an einer physischen Sektorgrenze ausgerichtet. Entwickler müssen sicherstellen, dass die richtigen APIs verwendet werden, um die Ausrichtung sicherzustellen. Die empfohlenen APIs zur Sicherstellung der Partitionsausrichtung sind unten beschrieben.
 
-Die ivdspack:: anatevolume-und IVdsPack2:: CreateVolume2-APIs verwenden den angegebenen Ausrichtungs Parameter nicht, wenn ein neues Volume erstellt wird, sondern verwenden stattdessen den Standardwert für die Ausrichtung des Betriebssystems (Pre-Windows Vista SP1 verwendet 63 Bytes, und nach Windows Vista SP1 werden die oben genannten Standardeinstellungen verwendet). Verwenden Sie stattdessen die ivdscreatepartitionex:: | atepartitionex-oder ivdsadvanceddisk:: up-Partition-APIs, die den angegebenen Ausrichtungs Parameter für die apps verwenden, die Partitionen erstellen müssen.
+Die APIs IVdsPack::CreateVolume und IVdsPack2::CreateVolume2 verwenden beim Erstellen eines neuen Volumes nicht den angegebenen Ausrichtungsparameter, sondern den Standardwert für die Ausrichtung für das Betriebssystem (Vor Windows Vista SP1 verwendet 63 Bytes, und nach Windows Vista SP1 werden die oben angegebenen Standardwerte verwendet). Verwenden Sie stattdessen die IVdsCreatePartitionEx::CreatePartitionEx- oder IVdsAdvancedDisk::CreatePartition-APIs, die den angegebenen Ausrichtungsparameter für die Apps verwenden, die Partitionen erstellen müssen.
 
-Die beste Möglichkeit, um sicherzustellen, dass die Ausrichtung korrekt ist, ist das Recht, wenn Sie die Partition erstmalig erstellen. Andernfalls muss Ihre APP beim Ausführen von Schreibvorgängen oder bei der Initialisierung, bei der es sich um einen sehr komplexen Prozess handeln kann, eine Ausrichtung berücksichtigen.
+Die beste Möglichkeit, um sicherzustellen, dass die Ausrichtung richtig ist, besteht darin, dies beim ersten Erstellen der Partition richtig zu tun. Andernfalls muss Ihre App die Ausrichtung beim Ausführen von Schreibvorgängen oder bei der Initialisierung berücksichtigen, was ein sehr komplexer Prozess sein kann.
 
-**Problem 2: nicht gepufferte Schreibvorgänge, die nicht an der physischen Sektorgröße ausgerichtet sind**
+**Problem 2: Nicht gepufferte Schreibvorgänge, die nicht an der physischen Sektorgröße ausgerichtet sind**
 
-Das einfachste Problem ist, dass nicht gepufferte Schreibvorgänge nicht an der gemeldeten physischen Sektorgröße des Speichermediums ausgerichtet werden. Gepufferte Schreibvorgänge werden hingegen auf die Seitengröße 4 KB ausgerichtet, was zufälligerweise die physische Sektorgröße der ersten Generation von Medien mit großen Sektoren ist. Bei den meisten apps mit einem Datenspeicher werden jedoch nicht gepufferte Schreibvorgänge ausgeführt. Daher muss sichergestellt werden, dass diese Schreibvorgänge in Einheiten der physischen Sektorgröße durchgeführt werden.
+Das einfachste Problem besteht darin, dass nicht gepufferte Schreibvorgänge nicht an der gemeldeten physischen Sektorgröße des Speichermediums ausgerichtet sind. Gepufferte Schreibvorgänge werden dagegen an der Seitengröße von 4 KB ausgerichtet, was zufällig der physischen Sektorgröße der ersten Generation großer Sektormedien entspricht. Die meisten Apps mit einem Datenspeicher führen jedoch nicht gepufferte Schreibvorgänge durch und müssen daher sicherstellen, dass diese Schreibvorgänge in Einheiten der physischen Sektorgröße ausgeführt werden.
 
-Einige Beispiele für Szenarien, in denen die resultierende App-e/a nicht ausgerichtet ist:
+Einige Beispiele für Szenarien, in denen die resultierende App-E/A nicht ausgerichtet ist:
 
-**Commit-Datensätze werden in 512-Byte-Sektoren aufgefüllt:** Apps mit einem Datenspeicher verfügen in der Regel über eine Art Commit-Datensatz, der entweder Informationen über Metadatenänderungen verwaltet oder die Struktur des Datenspeicher beibehält. Um sicherzustellen, dass sich der Verlust eines Sektors nicht auf mehrere Datensätze auswirkt, wird dieser Commit-Datensatz in der Regel in einer Sektorgröße aufgefüllt. Bei einem Datenträger mit einer größeren physischen Sektorgröße muss die APP die physische Sektorgröße Abfragen, wie im vorherigen Abschnitt gezeigt, und sicherstellen, dass jeder Commit-Datensatz in dieser Größe aufgefüllt wird. Bei einem 4K-Datenträger wird dadurch sichergestellt, dass e/a-Vorgänge nicht ausgeführt werden. Mit einem 512 e-Datenträger wird nicht nur der Lese-und Schreibvorgang vermieden, sondern es wird sichergestellt, dass nur ein Commit-Datensatz verloren geht, wenn ein physischer Sektor verloren gegangen ist.  
-**Protokolldateien werden in nicht ausgerichtete Blöcke in geschrieben:** Nicht gepufferte e/a-Vorgänge werden in der Regel beim Aktualisieren oder Anhängen an eine Protokolldatei verwendet. Apps können entweder zu gepufferter e/a-Vorgänge wechseln oder die Protokoll Aktualisierungen intern auf Einheiten der physischen Sektorgröße Puffern, um fehlerhafte e/As zu vermeiden oder einen Lese-/Änderungs-Schreibvorgang auszulösen.  
- Wenn Sie ermitteln möchten, ob Ihre APP nicht gepufferte e/a-Vorgänge ausgibt, stellen Sie sicher, dass Sie das Flag für die \_ Dateiflag " \_ keine \_ Pufferung" in den Parameter " *dwflagsandattributs* " einschließen, wenn Sie die Funktion "
+**Commitdatensätze werden auf 512-Byte-Sektoren aufgefüllt:** Apps mit einem Datenspeicher verfügen in der Regel über einen Commitdatensatz, der entweder Informationen zu Metadatenänderungen oder die Struktur des Datenspeichers beibehält. Um sicherzustellen, dass sich der Verlust eines Sektor nicht auf mehrere Datensätze auswirkt, wird dieser Commitdatensatz in der Regel auf eine Sektorgröße aufgefüllt. Bei einem Datenträger mit einer größeren physischen Sektorgröße muss die App die Größe des physischen Sektor wie im vorherigen Abschnitt gezeigt abfragen und sicherstellen, dass jeder Commitdatensatz auf diese Größe aufgefüllt ist. Bei einem 4K-Datenträger wird dadurch sichergestellt, dass E/A-Fehler nicht fehlschlagen. Bei einem 512e-Datenträger vermeidet dies nicht nur den Lese-/Änderungs-/Schreibzyklus, sondern stellt auch sicher, dass bei einem Verlust eines physischen Sektor nur ein Commitdatensatz verloren geht.  
+**Protokolldateien werden in nicht ausgerichtete Blöcke geschrieben:** Nicht gepufferte E/A wird in der Regel beim Aktualisieren oder Anfügen an eine Protokolldatei verwendet. Apps können entweder zu gepufferten E/A-Blöcken wechseln oder die Protokollaktualisierungen intern auf Einheiten der physischen Sektorgröße puffern, um E/A-Fehler zu vermeiden oder Lese-/Änderungs-/Schreibzugriff auszulösen.  
+ Um zu ermitteln, ob Ihre App ungepufferte E/A-Aufgaben ausgibt, stellen Sie sicher, dass Sie das FLAG FILE \_ FLAG \_ NO \_ BUFFERING in den *dwFlagsAndAttributes-Parameter* einschließen, wenn Sie die CreateFile-Funktion aufrufen.
 
-Wenn Sie derzeit die Schreibvorgänge an der Sektorgröße ausrichten, ist diese Sektorgröße wahrscheinlich nur die logische Sektorgröße, da die meisten vorhandenen APIs, die die Sektorgröße der Medien Abfragen, nur die Einheit der Adressierung Abfragen, d. h. die Größe des logischen Sektors. Die Sektorgröße, die hier von Interesse ist, ist die physische Sektorgröße, bei der es sich um die reale Einheit der Atomizität handelt. Einige Beispiele für APIs, die die logische Sektorgröße abrufen, sind:
+Wenn Sie die Schreibvorgänge derzeit an der Sektorgröße ausrichten, entspricht diese Sektorgröße wahrscheinlich nur der größe des logischen Sektor, da die meisten vorhandenen APIs, die die Sektorgröße der Medien abfragen, nur die Adressierungseinheit abfragen, d. h. die Größe des logischen Sektor. Die Sektorgröße, die hier von Interesse ist, ist die physische Sektorgröße, die die tatsächliche Einheit der Atomarität ist. Einige Beispiele für APIs, die die logische Sektorgröße abrufen, sind:
 
 -   GetDiskFreeSpace, GetDiskFreeSpaceEx
--   "Flefsvolumeinformation"
--   ioctl-Datenträger \_ \_ get- \_ Laufwerk \_ Geometrie, IOCTL \_ Disk \_ get \_ Drive \_ Geometry \_ Ex
--   Ivdsdisk:: GetProperties, IVdsDisk3:: GetProperties2
+-   FileFsVolumeInformation
+-   IOCTL \_ DISK \_ GET \_ DRIVE \_ GEOMETRY, IOCTL \_ DISK \_ GET \_ DRIVE \_ GEOMETRY \_ EX
+-   IVdsDisk::GetProperties, IVdsDisk3::GetProperties2
 
-Hier erfahren Sie, wie Sie die physische Sektorgröße Abfragen können:
+So können Sie die physische Sektorgröße abfragen:
 
 **Bevorzugte Methode für Windows 8**
 
-Mit Windows 8 hat Microsoft eine neue API eingeführt, die es Entwicklern ermöglicht, 4K-Unterstützung problemlos in Ihre apps zu integrieren. Diese neue API unterstützt eine noch größere Anzahl von Szenarien als die ältere Methode für Windows Vista und Windows 7, die im folgenden erläutert wird. Diese API ermöglicht folgende Aufruf Szenarien:
+Mit Windows 8 hat Microsoft eine neue API eingeführt, mit der Entwickler 4K-Unterstützung problemlos in ihre Apps integrieren können. Diese neue API unterstützt eine noch größere Anzahl von Szenarien als die legacy-Methode für Windows Vista und Windows 7 weiter unten beschrieben. Diese API ermöglicht die folgenden Aufrufszenarien:
 
 -   Aufrufen von einer nicht privilegierten App
--   Aufrufen eines beliebigen gültigen Datei Handles
--   Aufrufen eines Datei Handles auf einem Remote Volume über SMB2
+-   Aufrufen eines gültigen Dateihandle
+-   Aufrufen eines Dateihandle auf einem Remotevolume über SMB2
 -   Vereinfachtes Programmiermodell
 
-Die API verfügt über die neue Info-Klasse "flefssectorsizeinformation" mit zugeordneten Informationen zu den \_ Sektorgrößen für Struktur Datei FS \_ , die \_ \_ wie folgt definiert werden:
+Die API hat die Form einer neuen Infoklasse, FileFsSectorSizeInformation, mit der zugeordneten Struktur FILE \_ FS \_ SECTOR SIZE \_ \_ INFORMATION, die wie folgt definiert ist:
 
 
 ```
@@ -166,52 +166,52 @@ typedef struct _FILE_FS_SECTOR_SIZE_INFORMATION {
 
 
 
-**Legacy Methode für Windows 7 und Windows Vista**
+**Legacymethode für Windows 7 und Windows Vista**
 
-Mit Windows Vista und Windows Server 2008 wurden APIs eingeführt, um die physische Sektorgröße des angefügten Speichergeräts für AHCI-basierte Speichercontroller abzufragen. Mit Windows 7 und Windows Server 2008 R2, ab SP1 (oder Microsoft Knowledge Base 982018), wird diese Unterstützung auf Storport-basierte Speichercontroller erweitert. Microsoft hat in MSDN ein [Codebeispiel](/windows/desktop/api/winioctl/ns-winioctl-storage_access_alignment_descriptor) bereitgestellt, in dem erläutert wird, wie eine APP die physische Sektorgröße des Volumes Abfragen kann.
+Windows Vista und Windows Server 2008 haben APIs eingeführt, um die physische Sektorgröße des angeschlossenen Speichergeräts für AHCI-basierte Speichercontroller abzufragen. Mit Windows 7 und Windows Server 2008 R2 ab SP1 (oder Microsoft Knowledge Base 982018) wird diese Unterstützung auf Storport-basierte Speichercontroller erweitert. Microsoft hat auf MSDN ein [Codebeispiel](/windows/desktop/api/winioctl/ns-winioctl-storage_access_alignment_descriptor) bereitgestellt, in dem erläutert wird, wie eine App die physische Sektorgröße des Volumes abfragen kann.
 
-Im obigen Codebeispiel können Sie die physische Sektorgröße des Volumes abrufen. Sie sollten jedoch einige grundlegende integritätprüfungen der gemeldeten physischen Sektorgröße durchführen, bevor Sie Sie verwenden, da festgestellt wurde, dass einige Treiber möglicherweise nicht ordnungsgemäß formatierte Daten zurückgeben:
+Im obigen Codebeispiel können Sie zwar die Größe des physischen Sektor des Volumes abrufen, aber Sie sollten vor der Verwendung eine grundlegende Überprüfung der Gemeldeten physischen Sektorgröße durchführen, da festgestellt wurde, dass einige Treiber möglicherweise nicht ordnungsgemäß formatierte Daten zurückgeben:
 
--   Stellen Sie sicher, dass die gemeldete physische Sektorgröße >= der gemeldeten logischen Sektorgröße ist. Wenn dies nicht der Fall ist, sollte Ihre APP eine physische Sektorgröße verwenden, die der gemeldeten logischen Sektorgröße entspricht.
--   Stellen Sie sicher, dass die gemeldete physische Sektorgröße eine Potenz von zwei ist. Wenn dies nicht der Fall ist, sollte Ihre APP eine physische Sektorgröße verwenden, die der gemeldeten logischen Sektorgröße entspricht.
--   Wenn die physische Sektorgröße einen zweidimensionalen Wert zwischen 512-Byte und 4 KB beträgt, sollten Sie die Verwendung einer physischen Sektorgröße in Erwägung nehmen, die auf die gemeldete logische Sektorgröße gerundet ist.
--   Wenn es sich bei der physischen Sektorgröße um einen zweidimensionalen Wert als 4 KB handelt, sollten Sie die Fähigkeit Ihrer APP auswerten, dieses Szenario zu verarbeiten, bevor Sie diesen Wert verwenden. Andernfalls sollten Sie die Verwendung einer physischen Sektorgröße in Erwägung gezogen, die auf 4 KB gerundet ist.
+-   Stellen Sie sicher, dass die gemeldete physische Sektorgröße >= die gemeldete größe des logischen Sektor ist. Andernfalls sollte Ihre App eine physische Sektorgröße verwenden, die der gemeldeten größe des logischen Sektor entspricht.
+-   Stellen Sie sicher, dass die gemeldete physische Sektorgröße eine Potenz von zwei ist. Andernfalls sollte Ihre App eine physische Sektorgröße verwenden, die der gemeldeten größe des logischen Sektor entspricht.
+-   Wenn die größe des physischen Sektor einen Wert von zwei Potenzen zwischen 512 Byte und 4 KB hat, sollten Sie erwägen, eine physische Sektorgröße zu verwenden, die auf die gemeldete logische Sektorgröße gerundet wird.
+-   Wenn die Größe des physischen Sektor einen Wert von zwei Potenzen über 4 KB hat, sollten Sie die Fähigkeit Ihrer App auswerten, dieses Szenario zu verarbeiten, bevor Sie diesen Wert verwenden. Andernfalls sollten Sie erwägen, eine auf 4 KB aufgerundete physische Sektorgröße zu verwenden.
 
-Die Verwendung dieser ioctl zum erzielen der physischen Sektorgröße hat mehrere Einschränkungen. Sie hat folgende Aufgaben:
+Die Verwendung dieser IOCTL zum Abrufen der physischen Sektorgröße hat mehrere Einschränkungen. Sie hat folgende Aufgaben:
 
--   Erfordert erweiterte Berechtigungen. Wenn Ihre APP nicht mit Berechtigungen ausgeführt wird, müssen Sie möglicherweise wie oben beschrieben eine Windows-Dienst Anwendung schreiben.
--   SMB-Volumes werden von nicht unterstützt. Sie müssen möglicherweise auch eine Windows-Dienst Anwendung schreiben, um die Abfragen physischer Sektorgröße auf diesen Volumes zu unterstützen.
--   Kann nicht an ein Datei Handle ausgegeben werden (die IOCTL muss für ein volumehandle ausgestellt werden)
+-   Erfordert erhöhte Rechte. Wenn Ihre App nicht mit Berechtigungen ausgeführt wird, müssen Sie möglicherweise wie oben erwähnt eine Windows-Dienstanwendung schreiben.
+-   Unterstützt keine SMB-Volumes. Möglicherweise müssen Sie auch eine Windows-Dienstanwendung schreiben, um Abfragen der physischen Sektorgröße für diese Volumes zu unterstützen.
+-   Kann nicht für ein Dateihandle ausgegeben werden (die IOCTL muss für ein Volumehandle ausgegeben werden)
 
-**Problem 3: Dateiformate, die sich auf 512-Byte-Sektoren verlassen**
+**Problem 3: Dateiformate, die auf 512-Byte-Sektoren basieren**
 
-Für einige apps mit Standarddatei Formaten (z. b. VHD 1,0) können diese Dateien hart codiert werden, um die Sektorgröße von 512 Bytes anzunehmen. Daher führen Updates und Schreibvorgänge für diese Datei zu einem Lese-/Schreib-Schreibvorgang auf dem Gerät, was potenziell zu Leistungs-und resilienzproblemen für Ihre Kunden führen kann. Es gibt jedoch Möglichkeiten, wie eine APP Unterstützung für diese Art von Medien bietet, z. b.:
+Bei einigen Apps mit Standarddateiformaten (z.B. VHD 1.0) sind diese Dateien möglicherweise hart codiert, um eine Sektorgröße von 512 Byte zu übernehmen. Daher führen Updates und Schreibvorgänge in dieser Datei zu einem Lese-/Änderungs-/Schreibzyklus auf dem Gerät, der möglicherweise zu Leistungs- und Resilienzproblemen für Ihre Kunden führt. Es gibt jedoch Möglichkeiten für eine App, unterstützung für den Betrieb auf dieser Art von Medien bereitzustellen, z. B.:
 
--   Verwenden Sie Pufferung, um sicherzustellen, dass Schreibvorgänge in Einheiten der physischen Sektorgröße durchgeführt werden.
--   Implementieren Sie einen internen Lese-und Schreibzugriff, mit dem sichergestellt werden kann, dass Updates in Einheiten der gemeldeten physischen Sektorgröße durchgeführt werden.
--   Füllen Sie nach Möglichkeit Datensätze in einem physischen Sektor auf, so dass die Auffüllung als leerer Raum interpretiert werden würde.
--   Sie sollten eine Version der APP-Datenstruktur mit Unterstützung für größere Sektoren umgestalten.
+-   Verwenden Sie die Pufferung, um sicherzustellen, dass Schreibvorgänge in Einheiten der physischen Sektorgröße ausgeführt werden.
+-   Implementieren Sie einen internen Lese-/Änderungs-/Schreibzugriff, mit dem sichergestellt werden kann, dass Updates in Einheiten der gemeldeten physischen Sektorgröße ausgeführt werden.
+-   Auffüllen von Datensätzen in einem physischen Sektor nach Möglichkeit so, dass die Auffüllung als leerer Bereich interpretiert wird
+-   Erwägen Sie das Umgestalten einer Version der App-Datenstruktur mit Unterstützung für größere Sektoren.
 
-**Problem 4: die gemeldete physische Sektorgröße kann sich zwischen den Sitzungen ändern.**
+**Problem 4: Die gemeldete physische Sektorgröße kann sich zwischen sitzungen ändern.**
 
-Es gibt viele Szenarien, in denen die gemeldete physische Sektorgröße des zugrunde liegenden Speichers, der den dataStor hostet, geändert werden kann. Der häufigste Fall ist, wenn Sie den dataStor zu einem anderen Volume oder sogar über das Netzwerk migrieren. Eine Änderung in der gemeldeten physischen Sektorgröße kann ein unerwartetes Ereignis für viele apps sein und möglicherweise dazu führen, dass einige apps nicht erneut initialisiert werden.
+Es gibt viele Szenarien, in denen sich die gemeldete physische Sektorgröße des zugrunde liegenden Speichers, der den Datastor hostet, ändern kann. Die gängigste davon ist, wenn Sie den Datastor auf ein anderes Volume oder sogar über das Netzwerk migrieren. Eine Änderung der gemeldeten physischen Sektorgröße kann für viele Apps ein unerwartetes Ereignis sein und möglicherweise dazu führen, dass einige Apps nicht erneut initialisiert werden können.
 
-Dies ist nicht das einfachste Szenario für die Unterstützung von und wird hier als Empfehlung erwähnt. Berücksichtigen Sie die Mobilitätsanforderungen ihrer Kunden, und passen Sie Ihren Support entsprechend an, um sicherzustellen, dass die Kunden nicht durch die Verwendung von 4K Native oder 512 e-Medien beeinträchtigt werden.
+Dies ist nicht das einfachste Szenario, das unterstützt werden kann, und wird hier als Empfehlung erwähnt. Sie sollten die Mobilitätsanforderungen Ihrer Kunden berücksichtigen und Ihren Support entsprechend anpassen, um sicherzustellen, dass Kunden nicht durch die Verwendung nativer 4K- oder 512e-Medien beeinträchtigt werden.
 
-**Wie ein Benutzer die logische und physische Sektorgröße für ein Volume abrufen kann**
+**Abrufen der logischen und physischen Sektorgröße für ein Volume durch einen Benutzer**
 
-In-Box mit Windows ist ein Hilfsprogramm zum Anzeigen der Sektorgrößen Informationen für ein Volume. Windows-Versionen mit unterstützter Unterstützung:
+In-Box mit Windows ist ein Hilfsprogramm zum Anzeigen der Informationen zur Sektorgröße für ein Volume. Versionen von Windows mit unterstützten fsutil-Versionen sind:
 
 -   Windows 8
 -   Windows Server 2012
--   Windows 7 SP1 mit Microsoft KB 982018
--   Windows 7 mit Microsoft KB 982018
+-   Windows 7 SP1 mit Microsoft KB-982018
+-   Windows 7 mit Microsoft KB-982018
 -   Windows Server 2008 R2 SP1 mit Microsoft KB 982018 (v3)
 -   Windows Server 2008 R2 mit Microsoft KB 982018 (v3)
 -   Windows Vista mit Microsoft KB 2553708
 -   Windows Server 2008 mit Microsoft KB 2553708
 
-Um die Sektorgrößen Informationen abzurufen, nennen Sie das-Hilfsprogramm an einer Eingabeaufforderung mit erhöhten Rechten wie folgt:
+Rufen Sie das Hilfsprogramm wie folgt an einer Eingabeaufforderung mit erhöhten Rechten auf, um informationen zur Sektorgröße abzurufen:
 
 
 ```
@@ -220,34 +220,34 @@ fsutil fsinfo ntfsinfo <drive letter>
 
 
 
-Ein 4K-sektordatenträger mit 512-Byte-Emulation hat das Feld Bytes pro Sektor auf 512 festgelegt, und das Feld Bytes pro physischem Sektor ist wie folgt auf 4096 festgelegt:
+Bei einem 4K-Sektordatenträger mit 512-Byte-Emulation ist das Feld Bytes pro Sektor auf 512 und das Feld Bytes pro physischem Sektor wie folgt auf 4096 festgelegt:
 
-![Bytes pro Sektor und pro physischem Sektor eines 4K-sektordatenträgers mit 512-Byte-Emulation](images/4ksectordiskwith512emulation.png)
+![Bytes pro Sektor und pro physischem Sektor eines 4K-Sektordatenträgers mit 512-Byte-Emulation](images/4ksectordiskwith512emulation.png)
 
-Ein 4K-Datenträger mit einer Größe von 4 KB weist die Felder Bytes pro Sektor und Bytes pro physischem Sektor auf 4096, wie im folgenden dargestellt:
+Auf einem nativen 4K-Datenträger sind die Felder Bytes pro Sektor und Bytes pro physischem Sektor wie folgt auf 4096 festgelegt:
 
-![Bytes pro Sektor und pro physischem Sektor eines 4K-Datenträgers](images/4knativedisk.png)
+![Bytes pro Sektor und physischem Sektor eines nativen 4K-Datenträgers](images/4knativedisk.png)
 
 > [!Note]  
-> Wenn das Feld Byte pro physischem Sektor nicht unterstützt angezeigt wird, unterstützt der Speicher Treiber die IOCTL- \_ Speicher \_ Abfrage \_ Eigenschaft nicht, oder es ist ein Fehler beim Abrufen der Informationen aufgetreten.
+> Wenn im Feld Byte pro physischem Sektor nicht unterstützt angezeigt wird, unterstützt der Speichertreiber IOCTL STORAGE QUERY PROPERTY nicht, oder es ist ein Fehler beim Abrufen der \_ \_ Informationen \_ aufgetreten.
 
  
 
 ## <a name="resources"></a>Ressourcen
 
--   [Allgemeine Windows-Support-Anweisung](https://support.microsoft.com/kb/2510009)
--   [Microsoft KB 982018](https://support.microsoft.com/kb/982018)
--   [Microsoft KB 2553708](https://support.microsoft.com/kb/2553708)
+-   [Windows Allgemeine Supportbestimmungen](https://support.microsoft.com/kb/2510009)
+-   [Microsoft KB-982018](https://support.microsoft.com/kb/982018)
+-   [Microsoft KB-2553708](https://support.microsoft.com/kb/2553708)
 -   [Hotfix für Windows 7 und Windows Server 2008 R2](https://support.microsoft.com/kb/982018)
 -   [Hotfix für Windows Vista und Windows Server 2008](https://support.microsoft.com/kb/2553708)
--   [HyperV-Unterstützungs Anweisung](https://support.microsoft.com/kb/2515143)
--   [Allgemeine Informationen über den Steuerungs Code der IOCTL- \_ Speicher \_ Abfrage \_ Eigenschaft](/windows-hardware/drivers/ddi/ntddstor/ni-ntddstor-ioctl_storage_query_property)
--   [Steuerungs Code der IOCTL- \_ Speicher \_ Abfrage \_ Eigenschaft](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property)
--   [Allgemeine Informationen zur \_ \_ deskriptorstruktur der Speicherzugriffs Ausrichtung \_](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-_storage_access_alignment_descriptor)
--   [Beschreibung der Standard Terminologie, die zum Beschreiben von Microsoft-Software Updates verwendet wird.](https://support.microsoft.com/kb/824684/)
--   [WDK-Beispielcode mit Details zum Extrahieren der gemeldeten Informationen zur Speicherzugriffs Ausrichtung aus der Speicher \_ Zugriffs- \_ Ausrichtungs \_ deskriptorstruktur beim Aufrufen des \_ \_ Steuercodes der IOCTL Storage Query- \_ Eigenschaft](/windows/win32/api/winioctl/ns-winioctl-storage_access_alignment_descriptor)
--   [Allgemeine Informationen zu ImageX-Command-Line Optionen](/previous-versions/windows/it-pro/windows-7/dd799302(v=ws.10))
--   [Anforderungen an den Intel Chip Set-Treiber zur Unterstützung von 4-KB](https://www.intel.com/support/chipsets/imsm/sb/CS-031502.htm)
+-   [HyperV-Support-Anweisung](https://support.microsoft.com/kb/2515143)
+-   [Allgemeine Informationen zum IOCTL \_ STORAGE \_ QUERY \_ PROPERTY-Steuerungscode](/windows-hardware/drivers/ddi/ntddstor/ni-ntddstor-ioctl_storage_query_property)
+-   [IOCTL \_ STORAGE \_ QUERY \_ PROPERTY Control Code](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property)
+-   [Allgemeine Informationen zur \_ \_ SPEICHERZUGRIFFSAUSRICHTUNGSDESCRIPTOR-Struktur \_](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-_storage_access_alignment_descriptor)
+-   [Beschreibung der Standardterminologie zur Beschreibung von Microsoft-Softwareupdates](https://support.microsoft.com/kb/824684/)
+-   [WDK-Beispielcode mit Details zum Extrahieren der gemeldeten Informationen zur Speicherzugriffsausrichtung aus der STORAGE ACCESS ALIGNMENT DESCRIPTOR-Struktur beim Aufrufen des \_ \_ \_ IOCTL \_ STORAGE \_ QUERY PROPERTY-Steuerungscodes \_](/windows/win32/api/winioctl/ns-winioctl-storage_access_alignment_descriptor)
+-   [Allgemeine Informationen zu ImageX Command-Line Optionen](/previous-versions/windows/it-pro/windows-7/dd799302(v=ws.10))
+-   [Intel-Chipsatztreiberanforderungen zur Unterstützung von 4-KB-Sektorlaufwerken](https://www.intel.com/support/chipsets/imsm/sb/CS-031502.htm)
 
  
 

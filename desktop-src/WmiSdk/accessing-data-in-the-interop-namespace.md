@@ -1,30 +1,30 @@
 ---
-description: Mithilfe von Zuordnungs Anbietern können Windows-Verwaltungsinstrumentation (WMI)-Clients Profile und zugehörige Klassen Instanzen aus unterschiedlichen Namespaces durchlaufen und abrufen.
+description: Zuordnungsanbieter ermöglichen Windows WMI-Clients (Management Instrumentation), Profile und zugeordnete Klasseninstanzen aus verschiedenen Namespaces zu durchlaufen und abzurufen.
 ms.assetid: 00c654d1-a5de-40c5-a190-99382949486a
 ms.tgt_platform: multiple
 title: Zugreifen auf Daten im Interop-Namespace
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a217a7a44651b1a6c94476b53193eedac7f0d43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 855d3c302ca4af5381e1f0794abd643d19615dec2009740d1276698aba785d8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118109644"
 ---
 # <a name="accessing-data-in-the-interop-namespace"></a>Zugreifen auf Daten im Interop-Namespace
 
-Mithilfe von Zuordnungs Anbietern können Windows-Verwaltungsinstrumentation (WMI)-Clients Profile und zugehörige Klassen Instanzen aus unterschiedlichen Namespaces durchlaufen und abrufen.
+Zuordnungsanbieter ermöglichen Windows WMI-Clients (Management Instrumentation), Profile und zugeordnete Klasseninstanzen aus verschiedenen Namespaces zu durchlaufen und abzurufen.
 
-Zuordnungs Anbieter und-Klassen befinden sich im \\ \\ \\ Namespace "root Interop". Weitere Informationen finden Sie unter [Cross Namespace Association Traversal](cross-namespace-association-traversal.md) und [Writing a Association Provider](writing-an-association-provider-for-interop.md).
+Zuordnungsanbieter und Klassen befinden sich im \\ \\ \\ Stamm-Interop-Namespace. Weitere Informationen finden Sie unter [Namespaceübergreifender Zuordnungsdurchlauf](cross-namespace-association-traversal.md) und [Schreiben eines Zuordnungsanbieters.](writing-an-association-provider-for-interop.md)
 
-Zuordnungs Anbieter machen Standardprofile wie z. b. ein Power Profile verfügbar. In den folgenden Beispielen wird das Power Profile verwendet, um zu veranschaulichen, wie Sie Daten mithilfe des Interop-Namespace ermitteln und darauf zugreifen können.
+Zuordnungsanbieter machen Standardprofile verfügbar, z. B. ein Energieprofil. In den folgenden Beispielen wird das Energieprofil verwendet, um zu veranschaulichen, wie Daten über den Interop-Namespace ermittelt und darauf zugegriffen werden kann.
 
-Windows PowerShell bietet einen einfachen Mechanismus zum Durchlaufen der entsprechenden Zuordnung, zum Abrufen eines Geräte Profils und zum Aufrufen einer Methode.
+Windows PowerShell bietet einen einfachen Mechanismus, um die entsprechende Zuordnung zu durchlaufen, ein Geräteprofil abzurufen und eine Methode aufzurufen.
 
-## <a name="enumerating-profiles-in-the-rootinterop-namespace"></a>Auflisten von Profilen im Root/Interop-Namespace
+## <a name="enumerating-profiles-in-the-rootinterop-namespace"></a>Aufzählen von Profilen im Stamm-/Interop-Namespace
 
-Mit dem folgenden Windows PowerShell-Befehl werden die von der[DMTF](https://www.dmtf.org/standards/wsman)(verteilte Management Task Force) unterstützten Profile auf einem Windows 7-Computer aufgelistet:
+Der folgende Windows PowerShell Befehl listet die von der Distributed Management Task Force[(DMTF)](https://www.dmtf.org/standards/wsman)unterstützten Profile auf einem computer Windows 7 auf:
 
 
 ```PowerShell
@@ -33,9 +33,9 @@ Get-WmiObject CIM_RegisteredProfile  -namespace root\interop
 
 
 
-## <a name="retrieving-instances-of-a-specific-device-profile"></a>Abrufen von Instanzen eines bestimmten Geräte Profils
+## <a name="retrieving-instances-of-a-specific-device-profile"></a>Abrufen von Instanzen eines bestimmten Geräteprofils
 
-Mit dem folgenden Windows PowerShell-Befehl werden alle Instanzen eines angegebenen Profils über [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))zurückgegeben:
+Der folgende Windows PowerShell Befehl gibt alle Instanzen eines angegebenen Profils über [**CIM \_ RegisteredProfile**](/previous-versions//ee309375(v=vs.85))zurück:
 
 
 ```PowerShell
@@ -44,9 +44,9 @@ Get-WmiObject -namespace root\interop -query "Associators of {CIM_RegisteredProf
 
 
 
-## <a name="assigning-the-power-profile-to-a-variable"></a>Zuweisen des Power Profile zu einer Variablen
+## <a name="assigning-the-power-profile-to-a-variable"></a>Zuweisen des Energieprofils zu einer Variablen
 
-Der folgende Windows PowerShell-Befehl weist die Power profile-Instanz einer Variablen zu:
+Der folgende Windows PowerShell Befehl weist die Energieprofilinstanz einer Variablen zu:
 
 
 ```PowerShell
@@ -55,9 +55,9 @@ $pplan = Get-WmiObject -query "Select * from Win32_PowerPlan" -Namespace root\ci
 
 
 
-## <a name="enumerating-the-power-plans-on-a-computer"></a>Auflisten von Energie Sparplänen auf einem Computer
+## <a name="enumerating-the-power-plans-on-a-computer"></a>Aufzählen der Energiesparpläne auf einem Computer
 
-Der folgende Windows PowerShell-Befehl listet die verfügbaren Energieprofil Pläne auf:
+Der folgende Windows PowerShell Befehl listet die verfügbaren Energiesparpläne auf:
 
 
 ```PowerShell
@@ -68,7 +68,7 @@ $pplan
 
 ## <a name="calling-a-method"></a>Aufrufen einer Methode
 
-Der folgende Windows PowerShell-Befehl ruft die [**Aktivierungs**](/previous-versions/windows/desktop/powerwmiprov/activate-win32-powerplan) Methode für den Energie Sparplan auf:
+Der folgende Windows PowerShell Befehl ruft die [**Activate-Methode**](/previous-versions/windows/desktop/powerwmiprov/activate-win32-powerplan) für den Energiesparplan auf:
 
 
 ```PowerShell
@@ -81,16 +81,16 @@ $pplan[2].Activate()
 
 <dl> <dt>
 
-[Cross-Namespace Association Traversal](cross-namespace-association-traversal.md)
+[Namespaceübergreifender Zuordnungsdurchlauf](cross-namespace-association-traversal.md)
 </dt> <dt>
 
-[Schreiben eines Zuordnungs Anbieters](writing-an-association-provider-for-interop.md)
+[Schreiben eines Zuordnungsanbieters](writing-an-association-provider-for-interop.md)
 </dt> <dt>
 
-[**CIM- \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))
+[**CIM \_ RegisteredProfile**](/previous-versions//ee309375(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ PowerPlan**](/previous-versions/windows/desktop/legacy/dd904531(v=vs.85))
+[**Win32 \_ PowerPlan**](/previous-versions/windows/desktop/legacy/dd904531(v=vs.85))
 </dt> </dl>
 
  
