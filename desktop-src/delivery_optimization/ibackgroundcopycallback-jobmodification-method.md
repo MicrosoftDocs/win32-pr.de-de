@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopycallback jobänderungs-Methode (deliveryoptimization. h)
-description: Die Übermittlungs Optimierung (Do) ruft Ihre Implementierung der jobmodifizierungsmethode auf, wenn der Auftrag geändert wurde.
+title: IBackgroundCopyCallback JobModification-Methode (Deliveryoptimization.h)
+description: Übermittlungsoptimierung (DO) ruft Ihre Implementierung der JobModification-Methode auf, wenn der Auftrag geändert wurde.
 ms.assetid: 4AC2575F-57FB-45E6-B29C-12DF615237F3
 keywords:
-- Jobänderungs-Methode
-- Jobmodifikations Methode, ibackgroundcopycallback-Schnittstelle
-- Ibackgroundcopycallback-Schnittstelle, jobmodifizierungs Methode
+- JobModification-Methode
+- JobModification-Methode, IBackgroundCopyCallback-Schnittstelle
+- IBackgroundCopyCallback-Schnittstelle, JobModification-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ceeb390fc8592c1e8e1d03efdb432056bd131a6e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b5e6e07cdcd561201c1c1c7cf9b5c07a8796eff344746c0a9199527bba5aad6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118810470"
 ---
-# <a name="ibackgroundcopycallbackjobmodification-method"></a>Ibackgroundcopycallback:: jobänderungs-Methode
+# <a name="ibackgroundcopycallbackjobmodification-method"></a>IBackgroundCopyCallback::JobModification-Methode
 
-Die Übermittlungs Optimierung (Do) ruft Ihre Implementierung der [**jobmodifizierungsmethode**](https://www.bing.com/search?q=**JobModification**) auf, wenn der Auftrag geändert wurde. Der Dienst generiert dieses Ereignis, wenn Bytes übertragen werden, Dateien dem Auftrag hinzugefügt wurden, Eigenschaften geändert wurden oder sich der Status des Auftrags geändert hat.
+Übermittlungsoptimierung (DO) ruft Ihre Implementierung der [**JobModification-Methode**](https://www.bing.com/search?q=**JobModification**) auf, wenn der Auftrag geändert wurde. Der Dienst generiert dieses Ereignis, wenn Bytes übertragen, Dem Auftrag Dateien hinzugefügt, Eigenschaften geändert oder der Status des Auftrags geändert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT JobModification(
 
 <dl> <dt>
 
-*pjob* \[ in\]
+*pJob* \[ In\]
 </dt> <dd>
 
-Enthält die Methoden zum Zugreifen auf Eigenschafts-, Status-und Zustandsinformationen des Auftrags. *Pjob* nicht freigeben; Gibt die-Schnittstelle frei, wenn die [**jobänderungs**](https://www.bing.com/search?q=**JobModification**) -Methode zurückgibt.
+Enthält die Methoden für den Zugriff auf Eigenschaften-, Status- und Statusinformationen des Auftrags. Geben Sie *pJob* nicht frei. DO gibt die Schnittstelle frei, wenn die [**JobModification-Methode**](https://www.bing.com/search?q=**JobModification**) zurückgegeben wird.
 
 </dd> <dt>
 
-*dwReserved* \[ in\]
+*dwReserved* \[ In\]
 </dt> <dd>
 
 Für die zukünftige Verwendung reserviert.
@@ -68,13 +68,13 @@ Diese Methode sollte S_OK zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97ea99c7-0186-4ad4-8df9-c5b4e0ed6b22 definiert.<br/>          |
+| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97EA99C7-0186-4AD4-8DF9-C5B4E0ED6B22 definiert.<br/>          |
 
 
 
@@ -82,7 +82,7 @@ Diese Methode sollte S_OK zurückgeben.
 
 <dl> <dt>
 
-[**Ibackgroundcopycallback**](ibackgroundcopycallback.md)
+[**IBackgroundCopyCallback**](ibackgroundcopycallback.md)
 </dt> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)

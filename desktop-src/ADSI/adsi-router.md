@@ -17,7 +17,7 @@ ms.locfileid: "118429110"
 ---
 # <a name="adsi-router"></a>ADSI-Router
 
-Der ADSI-Router befindet sich zwischen einem Client und den ADSI-Anbietern. Es implementiert einen Kernsatz von -Objekten, die grundlegende Features und Dienste bieten, die allen Anbietern gemeinsam sind. Daher werden alle features, die im Router unterstützt werden, auch in einem der Anbieter unterstützt, sofern der Anbieter nichts anderes wählt. Das ADSI-Routermodul entspricht Activeds.dll.
+Der ADSI-Router befindet sich zwischen einem Client und den ADSI-Anbietern. Es implementiert einen Kernsatz von -Objekten, die grundlegende Features und Dienste bieten, die allen Anbietern gemeinsam sind. Daher wird jedes feature, das im Router unterstützt wird, auch von allen Anbietern unterstützt, es sei denn, der Anbieter wählt etwas anderes aus. Das ADSI-Routermodul entspricht Activeds.dll.
 
  
 

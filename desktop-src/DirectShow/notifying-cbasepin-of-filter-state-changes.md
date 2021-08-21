@@ -1,33 +1,33 @@
 ---
-description: Benachrichtigen von cbasepin mit Filter Zustandsänderungen
+description: Benachrichtigen von CBasePin über Änderungen des Filterstatus
 ms.assetid: 521ba95b-1f2d-4ad0-ab9b-4f1e3343a2d3
-title: Benachrichtigen von cbasepin mit Filter Zustandsänderungen
+title: Benachrichtigen von CBasePin über Änderungen des Filterstatus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49dad6fabc162eb2384283ce2fc8914f76707036
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7193402331f150f88217e2d200279e93314c40a9056f52bc31d8100106d4f960
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118152994"
 ---
-# <a name="notifying-cbasepin-of-filter-state-changes"></a>Benachrichtigen von cbasepin mit Filter Zustandsänderungen
+# <a name="notifying-cbasepin-of-filter-state-changes"></a>Benachrichtigen von CBasePin über Änderungen des Filterstatus
 
-Die **cbasepin** -Klasse wird immer dann benachrichtigt, wenn sich der Status des besitzenden Filters ändert. Für jeden Zustandsübergang ruft der Filter eine entsprechende Methode für die PIN auf, wie in der folgenden Tabelle dargestellt.
+Die **CBasePin-Klasse** wird benachrichtigt, wenn sich der Zustand des besitzenden Filters ändert. Für jeden Zustandsübergang ruft der Filter eine entsprechende Methode auf dem Pin auf, wie in der folgenden Tabelle gezeigt.
 
 
 
-| Neuer Filter Status | Cbasepin-Methode                                 |
+| Neuer Filterstatus | CBasePin-Methode                                 |
 |------------------|-------------------------------------------------|
-| Beendet          | [**Cbasepin:: inaktiv**](cbasepin-inactive.md) |
-| Angehalten           | [**Cbasepin:: Active**](cbasepin-active.md)     |
-| Wird ausgeführt          | [**Cbasepin:: Run**](cbasepin-run.md)           |
+| Beendet          | [**CBasePin::Inactive**](cbasepin-inactive.md) |
+| Angehalten           | [**CBasePin::Active**](cbasepin-active.md)     |
+| Wird ausgeführt          | [**CBasePin::Run**](cbasepin-run.md)           |
 
 
 
  
 
-Die abgeleitete Klasse sollte diese Methoden überschreiben, um auf die Zustandsänderung zu reagieren. Abhängig vom Filter startet die PIN möglicherweise einen Arbeits Thread, der Beispiele bereitstellt, einen Commit oder Decommit für die Arbeitsspeicher Zuweisung durch hat und so weiter.
+Die abgeleitete Klasse sollte diese Methoden überschreiben, um auf die Zustandsänderung zu reagieren. Je nach Filter kann der Pin einen Arbeitsthread starten, der Stichproben liefert, die Speicherbelegung committ oder decommitiert usw.
 
  
 

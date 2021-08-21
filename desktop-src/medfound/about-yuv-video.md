@@ -1,97 +1,97 @@
 ---
-description: Informationen zu YUV-Videos
+description: Informationen zu YUV-Video
 ms.assetid: 089f42f2-1e5b-4d4b-98a4-9ef0ca2823c1
-title: Informationen zu YUV-Videos
+title: Informationen zu YUV-Video
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b57b4a453870af34c221683bdaf613b5038081d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3499a8adfe1a43a22fe9bdd9ff4e576b7a14c398a9dafc0b945647d7225ad581
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118744243"
 ---
-# <a name="about-yuv-video"></a>Informationen zu YUV-Videos
+# <a name="about-yuv-video"></a>Informationen zu YUV-Video
 
-Digitales Video wird häufig in einem *YUV* -Format codiert. In diesem Artikel werden die allgemeinen Konzepte von YUV-Videos zusammen mit einigen Begriffen erläutert, ohne dass Sie sich eingehend mit der Mathematik der YUV-Videoverarbeitung beschäftigen.
+Digitale Videos werden häufig in einem *YUV-Format* codiert. In diesem Artikel werden die allgemeinen Konzepte von YUV-Videos sowie einige Terminologie erläutert, ohne sich mit der Mathematik der YUV-Videoverarbeitung vertraut zu machen.
 
-Wenn Sie mit Computergrafiken gearbeitet haben, sind Sie wahrscheinlich mit der RGB-Farbe vertraut. Eine RGB-Farbe wird mit drei Werten codiert: rot, grün und blau. Diese Werte entsprechen direkt den Teilen des sichtbaren Spektrums. Die drei RGB-Werte bilden ein mathematisches Koordinatensystem, das als *Farbraum* bezeichnet wird. Die rote Komponente definiert eine Achse dieses Koordinatensystems, Blau definiert das zweite und grün definiert das dritte, wie in der folgenden Abbildung dargestellt. Jede gültige RGB-Farbe fällt irgendwo in diesen Farbraum. Beispielsweise ist reiner Magenta 100% Blue, 100% Red und 0% grün.
+Wenn Sie mit Computergrafiken gearbeitet haben, sind Sie wahrscheinlich mit RGB-Farben vertraut. Eine RGB-Farbe wird mit drei Werten codiert: rot, grün und blau. Diese Werte entsprechen direkt Teilen des sichtbaren Spektrums. Die drei RGB-Werte bilden ein mathematisches Koordinatensystem, das als *Farbraum* bezeichnet wird. Die rote Komponente definiert eine Achse dieses Koordinatensystems, blau die zweite und grün die dritte, wie in der folgenden Abbildung dargestellt. Jede gültige RGB-Farbe liegt an einer beliebigen Stelle innerhalb dieses Farbraums. Beispielsweise ist reine Magenta 100 % blau, 100 % rot und 0 % grün.
 
-![Diagramm mit RGB-Farbraum](images/8ec60365-ed5c-41f7-9da9-be46aa82896a.gif)
+![Diagramm mit rgb-Farbraum](images/8ec60365-ed5c-41f7-9da9-be46aa82896a.gif)
 
-Obwohl RGB eine gängige Methode zur Darstellung von Farben ist, sind andere Koordinatensysteme möglich. Der Begriff " *YUV* " bezieht sich auf eine Familie von Farbräumen, die alle Informationen zur Helligkeit unabhängig von den Farbinformationen codieren. Wie bei RGB verwendet YUV drei Werte, um beliebige Farben darzustellen. Diese Werte werden als "Y", "U" und "V" bezeichnet. (tatsächlich ist diese Verwendung des Begriffs "YUV" technisch ungenau. In Computer Videos bezieht sich der Begriff YUV fast immer auf einen bestimmten Farbraum namens y' CbCr, der später erläutert wird. Allerdings wird YUV häufig als allgemeiner Begriff für jeden Farbraum verwendet, der gemeinsam mit den gleichen Prinzipien wie ' CbCr ' funktioniert.
+Obwohl RGB eine gängige Methode zum Darstellen von Farben ist, sind andere Koordinatensysteme möglich. Der Begriff *YUV* bezieht sich auf eine Familie von Farbräumen, die alle Helligkeitsinformationen getrennt von Farbinformationen codieren. Wie RGB verwendet YUV drei Werte, um eine beliebige Farbe darzustellen. Diese Werte werden als "Y", "U" und "V" bezeichnet. (Tatsächlich ist diese Verwendung des Begriffs "YUV" technisch ungenau. Im Computervideo bezieht sich der Begriff YUV fast immer auf einen bestimmten Farbraum namens Y'CbCr, der später erläutert wird. YUV wird jedoch häufig als allgemeiner Begriff für jeden Farbraum verwendet, der nach den gleichen Prinzipien wie Y'CbCr funktioniert.)
 
-Die Y-Komponente, auch als " *Luma*" bezeichnet, stellt den Helligkeitswert der Farbe dar. Das primsymbol (') wird zur Unterscheidung von Luma von einem eng verknüpften Wert, einer "Y"- *Beleuchtung* verwendet. "Leuchtkraft" wird von *linearen* RGB-Werten abgeleitet, während "Luma" von *nichtlinearen* RGB-Werten (Gamma korrigiert) abgeleitet wird. Die Leuchtkraft ist ein genaueres Maß an echter Helligkeit, aber die Verwendung von "Luma" ist aus technischen Gründen praktischer. Das primsymbol wird häufig ausgelassen, aber YUV-Farbbereiche verwenden immer "Luma", nicht "Leuchtkraft".
+Die Y-Komponente, auch *luma* genannt, stellt den Helligkeitswert der Farbe dar. Das Primsymbol (') wird verwendet, um luma von einem eng verwandten Wert zu unterscheiden, *Der Leuchtdichte*, der als Y bezeichnet wird. Die Leuchtdichte wird von *linearen* RGB-Werten abgeleitet, während luma von *nicht linearen RGB-Werten* (gammakorrigiert) abgeleitet wird. Die Leuchtdichte ist ein genaueres Maß für die tatsächliche Helligkeit, aber luma ist aus technischen Gründen praktischer zu verwenden. Das Primsymbol wird häufig ausgelassen, aber YUV-Farbräume verwenden immer Luma, nicht Leuchtdichte.
 
-Der Wert von "Luma" wird aus einer RGB-Farbe abgeleitet, indem ein gewichteter Durchschnitt der roten, grünen und blauen Komponenten übernommen wird. Für das Standard-Definitions Fernsehen wird die folgende Formel verwendet:
+Luma wird von einer RGB-Farbe abgeleitet, indem ein gewichteter Durchschnitt der roten, grünen und blauen Komponenten genommen wird. Für Fernsehsendungen mit Standarddefinition wird die folgende Formel verwendet:
 
 `Y' = 0.299R + 0.587G + 0.114B`
 
-Diese Formel spiegelt die Tatsache wider, dass das menschliche Auge für bestimmte Wellen Wellen besser sensibel ist als andere, was sich auf die wahrgenommene Helligkeit einer Farbe auswirkt. Blaues Licht wird als dimmest angezeigt, grün wird am hellsten angezeigt, und rot befindet sich irgendwo dazwischen. Diese Formel spiegelt auch die physischen Merkmale der in frühen Fernsehgeräten verwendeten Phosphors wider. Eine neuere Formel, die die moderne Fernsehtechnologie berücksichtigt, wird für das hochauflösende Fernsehen verwendet:
+Diese Formel spiegelt die Tatsache wider, dass das menschliche Auge gegenüber bestimmten Lichtlichtungen sensibler ist als andere, was sich auf die wahrgenommene Helligkeit einer Farbe auswirkt. Blaues Licht erscheint am dunkelsten, Grün am hellsten, und Rot befindet sich zwischendurch. Diese Formel spiegelt auch die physischen Merkmale der Inserenten wider, die in frühen Fernsehgeräten verwendet werden. Eine neuere Formel wird unter Berücksichtigung moderner Fernsehtechnologie für High-Definition-Fernsehsendungen verwendet:
 
 `Y' = 0.2125R + 0.7154G + 0.0721B`
 
-Die Luma-Gleichung für das Standard-Definitions Fernsehen ist in einer Spezifikation mit dem Namen "ITU-R BT. 601" definiert. Für das hoch Definitions Fernsehen lautet die relevante Spezifikation "ITU-R BT. 709".
+Die Lumagleichung für Standarddefinitions-Fernsehgerät ist in einer Spezifikation mit dem Namen ITU-R BT.601 definiert. Für High-Definition-Fernsehsendungen ist die relevante Spezifikation ITU-R BT.709.
 
-Die Komponenten "You" und "V", auch als " *Chroma* -Werte" oder " *Farbunterschied* " bezeichnet, werden durch Subtraktion des Y-Werts von den roten und blauen Komponenten der ursprünglichen RGB-Farbe abgeleitet:
+Die Komponenten "you" und "V", die auch als *Farbunterschiede* oder *Farbunterschiede* bezeichnet werden, werden abgeleitet, indem der Y-Wert von den roten und blauen Komponenten der ursprünglichen RGB-Farbe subtrahiert wird:
 
 `U = B - Y'`
 
 `V = R - Y'`
 
-Diese Werte enthalten gemeinsame Informationen, um den ursprünglichen RGB-Wert wiederherzustellen.
+Zusammen enthalten diese Werte genügend Informationen, um den ursprünglichen RGB-Wert wiederherzustellen.
 
 ## <a name="benefits-of-yuv"></a>Vorteile von YUV
 
-Das analoge Fernsehen verwendet YUV zum Teil aus historischen Gründen. Die Signale des analogen Farb Fernsehers wurden für die Abwärtskompatibilität mit schwarzen und weißen Fernsehgeräten entwickelt. Das Color-TV-Signal enthält die Chroma-Informationen (Sie und V), die auf das Luma-Signal über gestellt werden. Schwarze und weiße Fernsehgeräte ignorieren den Chroma und zeigen das kombinierte Signal als Graustufenbild an. (Das Signal ist so konzipiert, dass die Chroma das Luma-Signal nicht signifikant beeinträchtigt.) Farb-Fernsehgeräte können den Chroma extrahieren und das Signal zurück in RGB konvertieren.
+Analoge Fernsehgeräte verwenden YUV teilweise aus historischen Gründen. Analoge Farb-Tv-Signale wurden so konzipiert, dass sie abwärtskompatibel mit Schwarz-Weiß-Fernsehgeräten sind. Das farbliche Fernsehsignal enthält die Farbinformationen (Sie und V), die auf dem Luma-Signal überlagert sind. Schwarz-Weiß-Fernsehgeräte ignorieren das Farbchen und zeigen das kombinierte Signal als Graustufenbild an. (Das Signal ist so konzipiert, dass das Lumasignal nicht erheblich beeinträchtigt wird.) Farblichter können das Extraktionszeichen extrahieren und das Signal wieder in RGB konvertieren.
 
-YUV bietet einen anderen Vorteil, der heute relevanter ist. Das menschliche Auge ist weniger sensibel für Änderungen im Farbton als Änderungen an der Helligkeit. Folglich kann ein Image weniger Chroma-Informationen als Luma-Informationen aufweisen, ohne die wahrgenommene Qualität des Bilds zu beeinträchtigen. Beispielsweise ist es üblich, die Chroma-Werte mit der Hälfte der horizontalen Auflösung der Luma-Beispiele zu testen. Anders ausgedrückt: für jedes zwei Luma-Beispiele in einer Zeile mit Pixeln gibt es ein U-Beispiel und ein V-Beispiel. Vorausgesetzt, dass 8 Bits zum Codieren der einzelnen Werte verwendet werden, werden insgesamt 4 Bytes für alle zwei Pixel benötigt (zwei Y-Werte, ein U und ein V), für einen durchschnittlichen Wert von 16 Bits pro Pixel oder 30% kleiner als die entsprechende 24-Bit-RGB-Codierung.
+YUV bietet einen weiteren Vorteil, der heute relevanter ist. Das menschliche Auge reagiert weniger empfindlich auf Änderungen im Farbton als auf Helligkeitsänderungen. Daher kann ein Bild weniger Informationen enthalten als luma-Informationen, ohne die wahrgenommene Qualität des Bilds zu einbußen. Es ist z. B. üblich, die Werte der Mischungen mit der Hälfte der horizontalen Auflösung der Luma-Stichproben abzutasten. Anders ausgedrückt: Für alle zwei Luma-Stichproben in einer Zeile mit Pixeln gibt es eine U-Stichprobe und eine V-Stichprobe. Wenn 8 Bits zum Codieren jedes Werts verwendet werden, werden für alle zwei Pixel (zwei Y', ein U und ein V) insgesamt 4 Bytes benötigt, durchschnittlich 16 Bits pro Pixel oder 30 % weniger als die entsprechende 24-Bit-RGB-Codierung.
 
-YUV ist von Natur aus nicht kompakter als RGB. Ein YUV-Pixel hat dieselbe Größe wie ein RGB-Pixel, es sei denn, für den Chroma wird ein Downsampling durchgeführt. Außerdem ist die Konvertierung von RGB in YUV nicht verlustfrei. Wenn keine Downsampling vorhanden ist, kann ein YUV-Pixel ohne Informationsverlust wieder in RGB konvertiert werden. Durch das Downsampling wird ein YUV-Image kleiner, und es werden auch einige der Farbinformationen verloren. Wenn Sie jedoch ordnungsgemäß ausgeführt wird, ist der Verlust nicht perperell signifikant.
+YUV ist von Natur aus nicht kompakter als RGB. Ein YUV-Pixel hat die gleiche Größe wie ein RGB-Pixel, es sei denn, der Farbverlauf ist verknöpft. Außerdem ist die Konvertierung von RGB in YUV nicht verlustig. Wenn kein Downsampling vorhanden ist, kann ein YUV-Pixel ohne Informationsverlust wieder in RGB konvertiert werden. Downsampling macht ein YUV-Bild kleiner und verliert auch einige der Farbinformationen. Bei korrekter Leistung ist der Verlust jedoch nicht wahrnehmbar signifikant.
 
-## <a name="yuv-in-computer-video"></a>Video zu YUV in Computer
+## <a name="yuv-in-computer-video"></a>YUV im Computervideo
 
-Die zuvor für YUV aufgeführten Formeln sind nicht die exakten Konvertierungen, die in digitalen Videos verwendet werden. Digitales Video verwendet in der Regel die Form "YUV" mit dem Namen "y' CbCr". Im wesentlichen funktioniert y' CbCr, indem die YUV-Komponenten auf die folgenden Bereiche skaliert werden:
+Die zuvor für YUV aufgeführten Formeln sind nicht die genauen Konvertierungen, die in digitalen Videos verwendet werden. Digitale Videos verwenden im Allgemeinen eine Form von YUV namens Y'CbCr. Im Wesentlichen skaliert Y'CbCr die YUV-Komponenten auf die folgenden Bereiche:
 
 
 
 | Komponente | Range                              |
 |-----------|------------------------------------|
-| Teenie        | 16 – 235                             |
-| CB/CR     | 16 – 240, wobei 128 0 (null) darstellt |
+| Y'        | 16–235                             |
+| Cb/Cr     | 16–240, wobei 128 0 (null) darstellt |
 
 
 
  
 
-Diese Bereiche setzen 8 Bits an Genauigkeit für die ' CbCr '-Komponenten ein. Im folgenden finden Sie die genaue Ableitung von "y' CbCr" mithilfe der BT. 601-Definition von "Luma":
+Diese Bereiche setzen 8 Bit Genauigkeit für die Y'CbCr-Komponenten voraus. Hier ist die genaue Ableitung von Y'CbCr mithilfe der BT.601-Definition von luma:
 
-1.  Beginnen Sie mit RGB-Werten im Bereich von \[ 0... 1 \] . Das heißt, "Pure Black" ist 0, und pure weiß ist 1. Wichtig ist, dass es sich hierbei um nichtlineare (Gamma korrigierte) RGB-Werte handelt.
-2.  Berechnen Sie den "Luma". Für BT. 601, Y ' = 0.299 r + 0.587 g + 0.114 b, wie zuvor beschrieben.
-3.  Berechnen Sie die zwischen Menge der Chroma-Differenz Werte (B-Y ') und (R-y '). Diese Werte haben einen Bereich von +/-0,886 für (B-y ') und +/-0,701 für (R-y ').
-4.  Skalieren Sie die Chroma-Differenz Werte wie folgt:
+1.  Beginnen Sie mit RGB-Werten im Bereich \[ 0...1 \] . Mit anderen Worten: Reines Schwarz ist 0 und reines Weiß ist 1. Wichtig: Hierbei handelt es sich um nicht lineare RGB-Werte (gammakorriert).
+2.  Berechnen Sie das Luma. Für BT.601, Y' = 0,299R + 0,587G + 0,114B, wie zuvor beschrieben.
+3.  Berechnen Sie die Differenzwerte für Zwischenstufen (B - Y' ) und (R - Y'). Diese Werte haben einen Bereich von +/- 0,886 für (B - Y') und +/- 0,701 für (R - Y').
+4.  Skalieren Sie die Differenzwerte wie folgt:
 
-    PB = (0,5/(1-0,114)) × (B-Y ')
+    Pb = (0,5 / (1 - 0,114)) × (B - Y')
 
-    PR = (0,5/(1-0,299)) × (R-Y ')
+    Pr = (0,5 / (1 - 0,299)) × (R - Y')
 
-    Diese Skalierungsfaktoren sind so konzipiert, dass beide Werte denselben numerischen Bereich haben, +/-0,5. In der Zwischenzeit definieren Sie einen YUV-Farbraum mit dem Namen "y' pbpr". Dieser Farbraum wird in einem Video der analogen Komponente verwendet.
+    Diese Skalierungsfaktoren sind so konzipiert, dass beide Werte den gleichen numerischen Bereich (+/- 0,5) erhalten. Zusammen definieren sie einen YUV-Farbraum mit dem Namen Y'PbPr. Dieser Farbraum wird in analogen Komponentenvideos verwendet.
 
-5.  Skalieren Sie die "y' pbpr-Werte, um die endgültigen ' ' CbCr-Werte zu erhalten:
+5.  Skalieren Sie die Y'PbPr-Werte, um die endgültigen Y'CbCr-Werte abzurufen:
 
-    Y "= 16 + 219 × y"
+    Y' = 16 + 219 × Y'
 
-    CB = 128 + 224 × PB
+    Cb = 128 + 224 × Pb
 
-    CR = 128 + 224 × PR
+    Cr = 128 + 224 × Pr
 
-Diese letzten Skalierungsfaktoren ergeben den Wertebereich, der in der vorherigen Tabelle aufgeführt ist. Natürlich können Sie RGB direkt in "y' CbCr konvertieren, ohne die Zwischenergebnisse zu speichern. Die Schritte werden hier separat aufgelistet, um zu veranschaulichen, wie "CbCr" von den ursprünglichen YUV-Gleichungen abgeleitet ist, die zu Beginn dieses Artikels angegeben wurden.
+Diese letzten Skalierungsfaktoren erzeugen den Wertebereich, der in der vorherigen Tabelle aufgeführt ist. Natürlich können Sie RGB direkt in Y'CbCr konvertieren, ohne die Zwischenergebnisse zu speichern. Die Schritte sind hier separat aufgeführt, um zu zeigen, wie Y'CbCr von den ursprünglichen YUV-Gleichungen abgeleitet wird, die am Anfang dieses Artikels angegeben wurden.
 
-In der folgenden Tabelle werden RGB-und YCbCr-Werte für verschiedene Farben angezeigt, wobei die BT. 601-Definition von Luma verwendet wird.
+Die folgende Tabelle zeigt RGB- und YCbCr-Werte für verschiedene Farben, wobei wiederum die BT.601-Definition von luma verwendet wird.
 
 
 
-| Color   | R   | G   | B   | Teenie  | Betrieben  | Cr  |
+| Color   | R   | G   | B   | Y'  | Cb  | Cr  |
 |---------|-----|-----|-----|-----|-----|-----|
 | Schwarz   | 0   | 0   | 0   | 16  | 128 | 128 |
 | Red     | 255 | 0   | 0   | 81  | 90  | 240 |
@@ -106,19 +106,19 @@ In der folgenden Tabelle werden RGB-und YCbCr-Werte für verschiedene Farben ang
 
  
 
-Wie diese Tabelle zeigt, entsprechen CB und CR nicht den intuitiven Ideen zu Color. Beispielsweise enthalten "Pure weiß" und "Pure Black" die neutralen Ebenen "CB" und "CR" (128). Die höchsten und niedrigsten Werte für CB sind blau bzw. gelb. Bei CR sind der höchste und der niedrigste Wert "Red" und "Cyan".
+Wie diese Tabelle zeigt, entsprechen Cb und Cr nicht intuitiven Ideen zur Farbe. Beispielsweise enthalten sowohl reines Weiß als auch reines Schwarz neutrale Ebenen von Cb und Cr (128). Die höchsten und niedrigsten Werte für Cb sind blau bzw. gelb. Für Cr sind die höchsten und niedrigsten Werte Rot und Zyan.
 
 ## <a name="for-more-information"></a>Weitere Informationen
 
--   [Empfohlene 8-Bit-YUV-Formate für Video Rendering](recommended-8-bit-yuv-formats-for-video-rendering.md)
--   Keith Jack. Ein Video entmystifiziert, Fünfte Edition. Newnes, 2007.
+-   [Empfohlene 8-Bit-YUV-Formate für video rendering](recommended-8-bit-yuv-formats-for-video-rendering.md)
+-   Keith Jack. Video Demystified, Fünfte Edition. Newnes, 2007.
 -   Charles A. Poynton. Eine technische Einführung in digitales Video. Wiley, 1996.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video Medientypen](video-media-types.md)
+[Videomedientypen](video-media-types.md)
 </dt> <dt>
 
 [Medientypen](media-types.md)

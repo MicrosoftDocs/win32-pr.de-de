@@ -3,9 +3,9 @@ title: IResultsViewer Contents-Eigenschaft (WdsView.h)
 description: Diese Eigenschaft verfolgt den Typ des Inhalts nach, der in der Ergebnisansicht angezeigt wird.
 ms.assetid: fad3c9c9-9bf4-4725-962a-ae285bcd23d4
 keywords:
-- Contents-Eigenschaft Legacy Windows Umgebungsfeatures
-- Contents-Eigenschaft Legacy Windows Umgebungsfeatures, IResultsViewer-Schnittstelle
-- IResultsViewer-Schnittstelle Legacy Windows Environment Features , Contents-Eigenschaft
+- Inhaltseigenschaft Legacy Windows-Umgebungsfeatures
+- Inhaltseigenschaft Legacy Windows Umgebungsfeatures, IResultsViewer-Schnittstelle
+- IResultsViewer-Schnittstelle Legacy Windows Umgebungsfeatures , Contents-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "118754537"
 # <a name="iresultsviewercontents-property"></a>IResultsViewer::Contents-Eigenschaft
 
 > [!NOTE]
-> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
 Diese Eigenschaft verfolgt den Typ des Inhalts nach, der in der Ergebnisansicht angezeigt wird.
 
@@ -34,7 +34,7 @@ Diese Eigenschaft verfolgt den Typ des Inhalts nach, der in der Ergebnisansicht 
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt einen Zeiger auf den Inhaltstyp zurück, der in der Ergebnisansicht angezeigt wird.
+Gibt einen Zeiger auf den In der Ergebnisansicht angezeigten Inhaltstyp zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Gibt einen Zeiger auf den Inhaltstyp zurück, der in der Ergebnisansicht angezei
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                        |
 | Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                        |
 | Header<br/>                   | <dl> <dt>WdsView.h</dt> </dl> |
 

@@ -76,7 +76,7 @@ Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

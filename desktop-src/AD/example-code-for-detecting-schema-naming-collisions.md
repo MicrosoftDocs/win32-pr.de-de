@@ -1,26 +1,26 @@
 ---
-title: Beispiel Code zum Erkennen von Schema Namenskollisionen
-description: Dieses Thema enthält ein Codebeispiel, in dem Schema Namenskollisionen erkannt werden.
+title: Beispielcode zum Erkennen von Schemabenennungskonflikten
+description: Dieses Thema enthält ein Codebeispiel, das Schemabenennungskonflikte erkennt.
 ms.assetid: e56cefcf-ea34-4217-9aa7-2f0d4a4d06a4
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code zum Erkennen von Schema Namenskollisionen AD
+- Beispielcode zum Erkennen von Schemabenennungskonflikten AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 861b7a93a53c47a234b63b5f52887a22557a2d1b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7203cb9c1d03b02c77a57dde6ebfdda004f21792b7fab94bc37ccfe07e6b0eae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694006"
 ---
-# <a name="example-code-for-detecting-schema-naming-collisions"></a>Beispiel Code zum Erkennen von Schema Namenskollisionen
+# <a name="example-code-for-detecting-schema-naming-collisions"></a>Beispielcode zum Erkennen von Schemabenennungskonflikten
 
-Dieses Thema enthält ein Codebeispiel, in dem Schema Namenskollisionen erkannt werden.
+Dieses Thema enthält ein Codebeispiel, das Schemabenennungskonflikte erkennt.
 
-Im folgenden C/C++-Codebeispiel wird das Schema für die Schlüssel Benennungs Attribute eines **classSchema** -oder **attributeSchema** -Objekts abgefragt.
+Im folgenden C/C++-Codebeispiel wird das Schema nach den Schlüsselbenennungsattributen für ein **classSchema-** oder **attributeSchema-Objekt abgefragt.**
 
-Sie gibt **true** zurück, wenn widersprüchliche Attribute oder Klassen gefunden werden. Gibt **false** zurück, wenn das Attribut oder die Klasse mit der angegebenen **CN**, **ldapDisplayName**, **OID**, **schemaIdGUID** oder **linkid** nicht mit dem Schema in Konflikt steht und somit sicher zum Schema hinzugefügt werden kann.
+Sie gibt **TRUE zurück,** wenn in Konflikt stehende Attribute oder Klassen gefunden werden. Es gibt **FALSE** zurück, wenn das Attribut oder die Klasse mit dem angegebenen **cn,** **lDAPDisplayName,** **OID,** **schemaIDGUID** oder **linkID** keinen Konflikt mit dem Schema aufzeig und daher sicher zum Schema hinzugefügt werden kann.
 
 
 ```C++
@@ -177,9 +177,9 @@ HRESULT FindCollidingAttributesOrClasses(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

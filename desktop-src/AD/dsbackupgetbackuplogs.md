@@ -120,7 +120,7 @@ Die **DsBackupGetBackupLogs-Funktion** stellt eine Liste der Protokolldateien be
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

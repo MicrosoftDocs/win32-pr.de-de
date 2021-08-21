@@ -37,7 +37,7 @@ Die **ID3DX11EffectType-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                       | BESCHREIBUNG                                       |
+| Methode                                                                       | Beschreibung                                       |
 |:-----------------------------------------------------------------------------|:--------------------------------------------------|
 | [**GetDesc**](id3dx11effecttype-getdesc.md)                                 | Abrufen einer Beschreibung des Effekttyps.<br/>        |
 | [**GetMemberName**](id3dx11effecttype-getmembername.md)                     | Abrufen des Namens eines Members.<br/>              |
@@ -71,7 +71,7 @@ Um Informationen zu einem Effekttyp aus einer Effektvariablen abzurufen, rufen [
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

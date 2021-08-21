@@ -1,31 +1,31 @@
 ---
-description: Gibt das Puffer Fenster (in Millisekunden) für einen Encoder an, der für die Verwendung der durchschnittlich kontrollierbaren VBR-Codierung konfiguriert ist.
+description: Gibt das Pufferfenster für einen Encoder in Millisekunden an, der für die Verwendung der durchschnittlich steuerbaren VBR-Codierung konfiguriert ist.
 ms.assetid: ce330ce0-4bda-4340-b21c-63a8b9168cf4
-title: MFPKEY_DYN_VBR_BAVG-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DYN_VBR_BAVG-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e117c2852f660b015bcdd95224178730d2e2a1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a77ba4d3f3d7a5587a7c8aa90771f58accd8a80864dd5a875c6c580eb9e29e01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738160"
 ---
-# <a name="mfpkey_dyn_vbr_bavg-property"></a>Mfpkey \_ dyn \_ VBR \_ bavg (Eigenschaft)
+# <a name="mfpkey_dyn_vbr_bavg-property"></a>MFPKEY \_ DYN \_ VBR \_ BAVG-Eigenschaft
 
-Gibt das Puffer Fenster (in Millisekunden) für einen Encoder an, der für die Verwendung der durchschnittlich kontrollierbaren VBR-Codierung konfiguriert ist.
+Gibt das Pufferfenster für einen Encoder in Millisekunden an, der für die Verwendung der durchschnittlich steuerbaren VBR-Codierung konfiguriert ist.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mithilfe von [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
 **VT \_ I4**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Eigenschaften [**mfpkey, \_ avgeingeschränkter**](mfpkey-avgconstrainedproperty.md) und [**mfpkey \_ vbrenabled**](mfpkey-vbrenabledproperty.md) beide auf **Variant \_ true** festgelegt sind, verwendet der Encoder die durchschnittliche steuerbare VBR-Codierung. In diesem Fall wird der Encoder gemäß dem Wert dieser Eigenschaft und der Eigenschaft [**mfpkey \_ dyn \_ VBR \_ Ravg**](mfpkey-dyn-vbr-ravgproperty.md) konfiguriert.
+Wenn die [**Eigenschaften MFPKEY \_ AVGCONSTRAINED**](mfpkey-avgconstrainedproperty.md) und [**MFPKEY \_ VBRENABLED**](mfpkey-vbrenabledproperty.md) beide auf **VARIANT \_ TRUE** festgelegt sind, verwendet der Encoder die durchschnittlich steuerbare VBR-Codierung. In diesem Fall konfiguriert sich der Encoder gemäß dem Wert dieser Eigenschaft und der [**\_ \_ VBR \_ RAVG-Eigenschaft MFPKEY DYN.**](mfpkey-dyn-vbr-ravgproperty.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,17 +33,17 @@ Wenn die Eigenschaften [**mfpkey, \_ avgeingeschränkter**](mfpkey-avgconstraine
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

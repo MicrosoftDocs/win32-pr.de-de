@@ -1,9 +1,9 @@
 ---
-title: Network. lostpakete
-description: Die lostpaketen-Eigenschaft ruft die Anzahl der verlorenen Pakete ab.
+title: Network.lostPackets
+description: Die lostPackets-Eigenschaft ruft die Anzahl verlorener Pakete ab.
 ms.assetid: b90faaaf-656a-4b9b-abfe-370e6f7c7c4b
 keywords:
-- Network. lostpackt-Fenster Media Player
+- Network.lostPackets Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a780afaea1ba46c5e2d5c7eb55b9476f68c9570
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f4c4211383095559c605de51fd5b182f53632272f268112fd6bdf6aef6dd718
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118836204"
 ---
-# <a name="networklostpackets"></a>Network. lostpakete
+# <a name="networklostpackets"></a>Network.lostPackets
 
-Die **lostpaketen** -Eigenschaft ruft die Anzahl der verlorenen Pakete ab.
+Die **lostPackets-Eigenschaft** ruft die Anzahl verlorener Pakete ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **lostpakete**
+*Player*. *network*. **lostPackets**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist nur für Streamingmedien gültig und gleich 0 (null), wenn das HTTP-Protokoll verwendet wird, das verlustfrei ist.
+Diese Eigenschaft ist nur für Streamingmedien gültig und entspricht 0 (null), wenn das VERLUSTLOSE HTTP-Protokoll verwendet wird.
 
-Pakete können aus verschiedenen Gründen verloren gehen, z. b. Art und Qualität der Netzwerkverbindung.
+Pakete können aus einer Reihe von Gründen verloren gehen, z. B. dem Typ und der Qualität der Netzwerkverbindung.
 
-Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf NULL festgelegt. Wenn die Wiedergabe angehalten und neu gestartet wird, wird Sie nicht zurückgesetzt. Diese Eigenschaft gibt nur zur Laufzeit gültige Informationen und nur dann zurück, wenn der *Player*. Die **URL** -Eigenschaft ist festgelegt.
+Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf 0 (null) festgelegt. Sie wird nicht zurückgesetzt, wenn die Wiedergabe angehalten und neu gestartet wird. Diese Eigenschaft gibt gültige Informationen nur zur Laufzeit zurück, und nur, wenn der *Player*. **Die URL-Eigenschaft** ist festgelegt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **lostpakete** zum Anzeigen der Gesamtanzahl der Pakete, die während der Wiedergabe verloren gehen, wenn der Benutzer auf eine Schaltfläche klickt. Die Informationen werden in einem HTML div-Format angezeigt, das mit ID = "LP" erstellt wurde. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **lostPackets,** um die Gesamtanzahl von Paketen anzuzeigen, die während der Wiedergabe verloren gegangen sind, wenn der Benutzer auf eine Schaltfläche klickt. Die Informationen werden in einem HTML-DIV angezeigt, der mit der ID = "LP" erstellt wurde. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -62,7 +62,7 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **lostpakete** zum Anzei
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -71,10 +71,10 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **lostpakete** zum Anzei
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Player. URL**](player-url.md)
+[**Player.URL**](player-url.md)
 </dt> </dl>
 
  

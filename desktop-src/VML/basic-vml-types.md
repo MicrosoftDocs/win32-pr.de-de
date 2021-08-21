@@ -3,7 +3,7 @@ title: Grundlegende VML-Typen
 description: In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Migrieren Sie Webseiten und Anwendungen, die auf VML basieren, zu SVG oder anderen weit verbreiteten Standards.
 ms.assetid: 07c17e7b-5ac4-4a8d-a468-559307408d5b
 keywords:
-- Vector Markup Language (VML), Basistypen
+- Vector Markup Language (VML), grundlegende Typen
 - VML (Vector Markup Language),Basistypen
 - Vektorgrafiken,einfache VML-Typen
 - Vector Markup Language (VML), Typen
@@ -68,7 +68,7 @@ Dieser Vorschlag verwendet eine kleine Anzahl grundlegender Typen, die in der fo
 
 
 
-| type                  | Element           | Grundlegende Darstellung | BESCHREIBUNG                                                                                          |
+| Typ                  | Element           | Grundlegende Darstellung | Beschreibung                                                                                          |
 |-----------------------|-------------------|----------------------------|------------------------------------------------------------------------------------------------------|
 | [boolean](#boolean)   |                   | 1 Bit                      | Ein boolescher Wert: true oder false.                                                                      |
 | [fraction](#fraction) |                   | Zahl 2 6                 | Ein numerischer Wert, der um 2 6 (65536) skaliert und als ganze Zahl mit Vorzeichen gespeichert wird.                               |
@@ -79,7 +79,7 @@ Dieser Vorschlag verwendet eine kleine Anzahl grundlegender Typen, die in der fo
 | [color](#color)       | [c](#color)       | complex                    | Ein Element, mit dem eine Farbe abgeleitet werden kann.                                                        |
 | [Schriftart](#font)         | [Schriftart](#font)     | complex                    | Eine Beschreibung einer Schriftart.                                                                             |
 | [Bitmap](#bitmap)     | [Bitmap](#bitmap) | href                       | Ein Verweis auf eine externe Bilddatei.                                                             |
-| [Vektor](#vector)     | [V](#vector)      | complex                    | Eine Beschreibung eines Vektorpfads                                                                       |
+| [Vektor](#vector)     | [v](#vector)      | complex                    | Eine Beschreibung eines Vektorpfads                                                                       |
 
 
 
@@ -120,7 +120,7 @@ Ein boolescher Wert wird als Schlüsselwort dargestellt, das den Zustand des Fla
 | Wert für "true" | Wert für false |
 |----------------|-----------------|
 | true           | false           |
-| ja            | nein              |
+| Ja            | Nein              |
 | on             | aus             |
 | t              | f               |
 | 1              | 0               |
@@ -197,9 +197,9 @@ Alle STANDARDMÄßIGEN CSS1-Einheitenqualifizierer sind für eine Länge zuläss
 
 
 
-| Anzahl der EMUs | Zahl pro Zoll | Zahl pro Millimeter | BESCHREIBUNG             |
+| Anzahl der EMUs | Zahl pro Zoll | Zahl pro Millimeter | Beschreibung             |
 |----------------|-----------------|-----------------------|-------------------------|
-| 360            |                 | 0,01                  | Win32 HIMETRIC          |
+| 360            |                 | 0.01                  | Win32 HIMETRIC          |
 | 12700          | 72              |                       | "Point"                 |
 | 635            | 1440            |                       | Win32 TWIP              |
 | 762            | 1200            |                       | Drucker mit hoher Auflösung |
@@ -264,11 +264,11 @@ angle
 
 
 
-Die grundlegende Darstellung eines Winkels ist eine Anzahl von Graden, die durch 2 6 (65536) multiplet und als ganze Zahl gespeichert werden. Da der Koordinatenraum invertiert ist (die positive y-Achse ist herunter), ist ein Winkel im Uhrzeigersinn positiv. Eine konforme Implementierung ist erforderlich, um die vollständige Genauigkeit eines solchen Werts zu erhalten.
+Die grundlegende Darstellung eines Winkels ist eine Anzahl von Graden, die durch 2 6 (65536) multiplet und als ganze Zahl gespeichert werden. Da der Koordinatenraum invertiert wird (die positive y-Achse ist nach unten), ist ein Winkel im Uhrzeigersinn positiv. Eine konforme Implementierung ist erforderlich, um die vollständige Genauigkeit eines solchen Werts beizubehalten.
 
-Eine Implementierung darf einen beliebigen Bereich für Winkel verwenden und darf einen Winkel normalisieren (z. B. bis -180 bis +180 oder 0 bis 360). Implementierungen müssen nicht konsistent sein. die integrale Darstellung eines Winkels darf jedoch den Bereich einer 32-Bit-Ganzzahl mit Vorzeichen nicht überschreiten.
+Eine Implementierung darf einen beliebigen Bereich für Winkel verwenden und darf einen Winkel normalisieren (z. B. bis -180 bis +180 oder 0 bis 360 ). Implementierungen müssen nicht konsistent sein. die ganzzahlige Darstellung eines Winkels darf jedoch den Bereich einer 32-Bit-Ganzzahl mit Vorzeichen nicht überschreiten.
 
-Das Suffix fd wird verwendet, um diese Darstellung eines Winkels (Bruchgrad) zu identifizieren. Beachten Sie, dass sich dies von dem f-Suffix für einen dimensionslosen Bruch unterscheidet, obwohl identische arithmetische Brüche zur Unterstützung verwendet werden können. Der Standardwert für einen Winkelwert ist einfacher Grad, d. h. ein nicht skaliertes Wert. Dies kann auch mit dem Suffix " " (dem Gradsymbol) signalisiert werden. Die Verwendung dieses Codierungstyps hängt jedoch davon ab, dass eine geeignete Dokumentcodierung verwendet wird. Folglich wird das Suffix deg auch als Mittelwerte definiert. Der vollständige Satz möglicher Ausreichender ist wie folgt.
+Das Suffix fd wird verwendet, um diese Darstellung eines Winkels (Bruchteil des Grads) zu identifizieren. Beachten Sie, dass dies vom f-Suffix für einen dimensionslosen Bruch unterschieden wird, obwohl eine identische Arithmetik zur Unterstützung verwendet werden kann. Der Standardwert für einen Winkelwert ist ein einfacher Grad, d. h. ein nicht skaliertes Wert. Dies kann auch mit dem Suffix " " (dem Gradsymbol) signalisiert werden. Die Verwendung dieser ist jedoch von einer geeigneten Dokumentcodierung abhängig. Folglich wird das Suffix deg auch als Mittelwert definiert. Der vollständige Satz der möglichen Ausreichenden ist wie folgt.
 
 
 
@@ -284,18 +284,18 @@ Das Suffix fd wird verwendet, um diese Darstellung eines Winkels (Bruchgrad) zu 
 
 ### <a name="alternative-representations"></a>Alternative Darstellungen
 
-Die Skalierungstransformation verfügt über Diskontinuitäten bei ungeraden Vielfachen von 45 . Daher ist es äußerst wichtig, dass die Konvertierung einer beliebigen unexact-Menge klar definiert ist. Aus diesem Grund wird die Arithmetik der Konvertierung so definiert, dass sie in Richtung Minus unendlich gerundet wird.
+Die Skalierungstransformation weist Diskontinuitäten bei ungeraden Vielfachen von 45 auf. Daher ist es äußerst wichtig, dass die Konvertierung einer ungenauen Menge klar definiert ist. Aus diesem Grund wird die Arithmetik der Konvertierung so definiert, dass sie auf minus unendlich gerundet wird.
 
-Da dies in einigen Implementierungen schwierig oder unmöglich garantiert werden kann, wird die Verwendung des folgenden Features als Level 3-Feature definiert:
+Da dies in einigen Implementierungen schwierig oder unmöglich zu garantieren ist, wird die Verwendung von Folgendem als Feature der Stufe 3 definiert:
 
-1.  Ein beliebiger Bruchgradwert.
+1.  Ein beliebiger Fractional Degree-Wert.
 2.  Beliebiger Radianwert
 
-Daher müssen werte qualifizierte fd- und nicht qualifizierte integrale Werte oder integrale Werte deg oder genau von einer konformen Implementierung der Ebene 0 behandelt werden. Andere Werte müssen dies nicht. Es wird dringend empfohlen, dass jede Implementierung die Konvertierung von einem Bruchgradwert in einen skalierten Gradwert (fd) genau verarbeitet. Dies kann ohne Gleitkommaunterstützung erfolgen.
+Daher müssen werte qualifizierte fd- und nicht qualifizierte integrale Werte oder integrale Werte qualifizierte deg oder genau von einer konformen Implementierung der Ebene 0 verarbeitet werden. andere Werte benötigen dies nicht. Es wird dringend empfohlen, dass jede Implementierung die Konvertierung von einem Bruchteil des Werts in einen skalierten (fd)-Gradwert genau verarbeiten soll. Dies kann ohne Gleitkommaunterstützung erfolgen.
 
 Die genaueren Anforderungen für die Konvertierung unterscheiden fd von f.
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="color"></a>color
 
@@ -307,12 +307,12 @@ c
 
 
 
-Farben sind ein wesentlicher Bestandteil moderner Computergrafiken. Der Vorschlag verwendet die festgelegten Methoden zum Angeben fester Farben. Farben in Diagrammen sind jedoch selten einfache statische Farben. sie werden häufig von anderen Elementen im Diagramm abgeleitet. Viele dieser Informationen sind sehr anwendungsspezifisch, daher bietet dieser Vorschlag zwei sehr grundlegende Mechanismen, um ein solches Verhalten anzugeben:
+Farben sind ein wesentlicher Bestandteil moderner Computergrafiken. Der Vorschlag verwendet die bewährten Methoden zum Angeben fester Farben. Farben in Diagrammen sind jedoch selten einfache statische Farben. sie werden häufig von anderen Elementen im Diagramm abgeleitet. Da ein Großteil dieser Informationen sehr anwendungsspezifisch ist, bietet dieser Vorschlag zwei grundlegende Mechanismen, um ein solches Verhalten anzugeben:
 
-1.  Eine Farbe kann von einer anderen Farbe in derselben Form abgeleitet werden.
+1.  Eine Farbe kann von einer anderen Farbe in der gleichen Form abgeleitet werden.
 2.  Eine kleine Anzahl arithmetischer Operationen wird zum Ableiten oder Ändern einer Farbe definiert.
 
-Der Prototyp-Formmechanismus ergänzt dies, indem Prototypen definiert werden können, von denen Farben geerbt werden können.
+Der Prototypformmechanismus ergänzt dies durch die Möglichkeit, Prototypen zu definieren, von denen Farben geerbt werden können.
 
 
 ```HTML
@@ -324,47 +324,47 @@ color
 
 Ein Farbwert ist eine Obermenge der [CSS1-Farbdefinition.](https://www.w3.org/pub/WWW/TR/REC-CSS1#color-units) Die Erweiterungen ermöglichen es, den RGB-Farbwert aus anderen Farben innerhalb der Form oder aus einem mit CSS1 definierten Gesamtfarbschema zu bestimmen.
 
-Wenn der Wert eines Elements als Farbe  definiert ist, definiert der Inhalt eines Elements den Farbwert mit einem einzelnen Farbtoken, das optional durch eine arithmetische Operation für die entsprechende RGB-Farbe geändert wird.
+Wenn der Wert eines Elements als Farbe definiert ist, definiert der *Inhalt* eines Elements den Farbwert mithilfe eines einzelnen Farbtokens, das optional durch eine arithmetische Operation für die entsprechende RGB-Farbe geändert wird.
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="color-units"></a>Farbeinheiten
 
-Der vollständige Satz von Farbtoken stammt aus einer Vielzahl von Quellen: HTML, CSS1 und dieser Vorschlag. Sie werden wie folgt mithilfe der Notation von [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1) oder der XPointer-Notation definiert, die für die XML-Verknüpfung definiert ist.
+Der vollständige Satz von Farbtoken stammt aus einer Vielzahl von Quellen: HTML, CSS1 und diesem Vorschlag. Sie werden wie folgt mithilfe der Notation aus [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1) oder der für die XML-Verknüpfung definierten XPointer-Notation definiert.
 
-In den XPointer-Definitionen ist die Speicherortquelle das Element, das den Farbwert enthält, und der Ausdruck bezieht sich auf den gesamten Elementsatz der Form, als ob alle Basisprototypelemente mit der Form zusammengeführt worden wäre. Wenn das entsprechende Element nicht vorhanden ist, wird der Standardwert für dieses Element an seiner Stelle verwendet.
+In den XPointer-Definitionen ist die Speicherortquelle das Element, das den Farbwert enthält, und der Ausdruck bezieht sich auf den gesamten Elementsatz der Form, als ob alle Basisprototypelemente mit der Form zusammengeführt worden wären. Wenn das entsprechende Element nicht vorhanden ist, wird der Standardwert für dieses Element an seiner Stelle verwendet.
 
 
 
-| Color            | Definition                                                                                                  | Ebene | BESCHREIBUNG                                                                                                                                                               |
+| Color            | Definition                                                                                                  | Ebene | Beschreibung                                                                                                                                                               |
 |------------------|-------------------------------------------------------------------------------------------------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name             | Siehe unten                                                                                                   | 0     | HTML-Farbname, wie in der folgenden Tabelle aufgeführt.                                                                                                                            |
-| \#rr'gg'bb'      | \#rr'gg'bb'                                                                                                 | 0     | Standardmäßige CSS1/sRGB-Farbdarstellung mit Werten im Bereich 0,255, dargestellt mit jeweils zwei Hexadezimalziffern.                                                     |
-| \#Rgb            | \#rrggbb                                                                                                    | 1     | Das CSS1-Formular wurde mit nur drei Hexadezimalziffern verkürzt.                                                                                                                   |
-| rgb(r,g,b)       | \#(r) (g) (b)                                                                                                 | 1     | CSS1 rgb form; Die Elemente des rgb-Werts werden wie in [CSS1 definiert konvertiert.](https://www.w3.org/pub/WWW/TR/REC-CSS1#color-units)                                      |
+| \#rr'gg'bb'      | \#rr'gg'bb'                                                                                                 | 0     | Standardmäßige CSS1/sRGB-Farbdarstellung mit Werten im Bereich 0,.255, dargestellt mit jeweils 2 Hexadezimalziffern.                                                     |
+| \#Rgb            | \#rrggbb                                                                                                    | 1     | Verkürztes CSS1-Formular mit nur drei Hexadezimalziffern.                                                                                                                   |
+| rgb(r,g,b)       | \#(r) (g) (b)                                                                                                 | 1     | CSS1 RGB-Formular; die Elemente des RGB-Werts werden wie in [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1#color-units) definiert konvertiert.                                      |
 | fill             | ancestor(1,shape)<br/> child(1, fill)<br/> child(1, color)<br/>                           | 1     | Die Vordergrundfüllfarbe der Form.                                                                                                                                   |
 | fillBack         | ancestor(1,shape)<br/> child(1, fill)<br/> child(1, back)<br/> child(1, color)<br/> | 1     | Die Hintergrundfarbe der Formfüllung.                                                                                                                                   |
 | line             | ancestor(1,shape)<br/> child(1, line)<br/> child(1, color)<br/>                           | 1     | Die Vordergrundlinienfarbe der Form.                                                                                                                                   |
 | lineBack         | ancestor(1,shape)<br/> child(1, line)<br/> child(1,back) <br/> child(1, color)<br/> | 1     | Die Hintergrundlinienfarbe der Form.                                                                                                                                   |
-| lineOrFill       | Zeile, Füllung                                                                                                  | 1     | Der Zeilenwert, wenn kein Standardwert festgelegt ist, andernfalls der Füllwert. Dadurch wird effektiv die Farbe zurückgegeben, die sich am Rand der Form befindet.                                           |
-| fillThenLine     | fill, line                                                                                                  | 1     | Der Füllwert, wenn kein Standardwert festgelegt ist, andernfalls der Zeilenwert. Dadurch wird effektiv die Hauptformfarbe zurückgegeben (wenn die Form nicht ausgefüllt ist, ist das Ergebnis die Linienfarbe).   |
+| lineOrFill       | line, fill                                                                                                  | 1     | Der Zeilenwert, wenn kein Standardwert verwendet wird, andernfalls der Füllwert. Dadurch wird effektiv die Farbe zurückgegeben, die sich am Rand der Form befindet.                                           |
+| fillThenLine     | fill, line                                                                                                  | 1     | Der Füllwert, wenn kein Standardwert verwendet wird, andernfalls der Zeilenwert. Dadurch wird effektiv die Hauptfarbe der Form zurückgegeben (wenn die Form nicht ausgefüllt ist, ist das Ergebnis die Linienfarbe).   |
 | shadow           | ancestor(1,shape)<br/> child(1, shadow)<br/> child(1, color)<br/>                         | 2     | Die Farbe des Schattens (dies ist ein Feature der Ebene 2).                                                                                                                      |
-| scheme           | Siehe unten                                                                                                   | 1     | Eine Schemafarbe aus dem für das Dokument definierten Schema; siehe unten.                                                                                                       |
-| scheme(*index*)  | Siehe unten                                                                                                   | 1     | *Schemafarbindex* ab 0; siehe unten.                                                                                                                         |
-| this             | Impliziert                                                                                                     | 2     | Der Vorgang (Auffüllen oder Zeichnen eines Pfads) wird auf andere Weise definiert (z. B. als Bitmap), und die Farbe gibt eine "Änderung" der so implizierten Farben an. |
-| palette(*index*) | Impliziert                                                                                                     | 3     | Verhält sich auf die gleiche Weise wie dies, mit der Ausnahme, dass genau ein Eintrag in einer Bitmapfarbtabelle identifiziert wird. Nur zulässig, wenn explizit angegeben.                             |
-| Keine             | \-                                                                                                          | 2     | Gibt das Fehlen einer Farbe an. kann verwendet werden, um einen Zeichnungsvorgang abzubricht, der die Farbe verwendet.                                                                          |
-| System           | Siehe unten                                                                                                   | 3     | Eine farbe, die von der Systemoberfläche definiert wird.                                                                                                                             |
+| scheme           | Siehe unten                                                                                                   | 1     | Eine Schemafarbe aus dem für das Dokument definierten Schema. siehe unten.                                                                                                       |
+| scheme(*index*)  | Siehe unten                                                                                                   | 1     | *Schemafarbindex,* beginnend mit 0; siehe unten.                                                                                                                         |
+| this             | Impliziert                                                                                                     | 2     | Der Vorgang (Ausfüllen eines Pfads oder Zeichnen) wird auf andere Weise definiert (z. B. als Bitmap), und die Farbe gibt eine "Änderung" an den Farben an, die so impliziert sind. |
+| palette(*index*) | Impliziert                                                                                                     | 3     | Verhält sich auf die gleiche Weise wie dies, mit dem Unterschied, dass genau ein Eintrag in einer Bitmapfarbtabelle identifiziert wird. Nur zulässig, wenn dies explizit angegeben ist.                             |
+| Keine             | \-                                                                                                          | 2     | Gibt das Fehlen einer Farbe an. kann verwendet werden, um einen Zeichnungsvorgang abzubrechen, der die Farbe verwendet.                                                                          |
+| System           | Siehe unten                                                                                                   | 3     | Eine von der Systembenutzerschnittstelle definierte Farbe.                                                                                                                             |
 
 
 
  
 
-Mit dieser Farbe kann ein Farbwert eine Änderung an einer Farbe angeben, die auf andere Weise abgeleitet wird. insbesondere kann ein einzelner Vorgang für alle Farben in einer Bitmap angegeben werden. Die *Palettenfarbe*( Index ) identifiziert einen bestimmten Eintrag in einer Bitmap, die einer Palette zugeordnet ist. Die Verwendung dieser Option ist nur für die Aufzeichnung eines Farbtabelleneintrags definiert, der in einer solchen Bitmap als transparent betrachtet werden sollte.
+Mit dieser Farbe kann ein Farbwert eine Änderung an einer Farbe angeben, die auf andere Weise abgeleitet wird. insbesondere kann ein einzelner Vorgang für alle Farben in einer Bitmap angegeben werden. Die *Palette(Index)-Farbe* identifiziert einen bestimmten Eintrag in einer palettenzuordnungsbasierten Bitmap. Die Verwendung dieser Option ist nur für die Aufzeichnung eines Farbtabelleneintrags definiert, der in einer solchen Bitmap als transparent betrachtet werden sollte.
 
 Die Definition eines Farbwerts darf weder direkt noch indirekt auf sich selbst verweisen. Wenn eine solche Definition gefunden wird, wird empfohlen, aber nicht erforderlich, dass die Implementierung den nicht definierten Wert als schwarz behandelt.
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="html-colors"></a>HTML-Farben
 
@@ -378,15 +378,15 @@ Farbnamen und sRGB-Werte
 
 Black = " \# 000000"
 
-![Beispiel für grüne Farbe.](images/green.gif)
+![Beispiel für eine grüne Farbe.](images/green.gif)
 
 Grün = " \# 008000"
 
-![Beispiel für die Farbe "Silber".](images/silver.gif)
+![Beispiel für silberfarbene Farbe.](images/silver.gif)
 
 Silver = " \# C0C0C0"
 
-![Beispiel für die Limonenfarbe.](images/lime.gif)
+![Beispiel für Limonenfarbe.](images/lime.gif)
 
 Lime = " \# 00FF00"
 
@@ -394,25 +394,25 @@ Lime = " \# 00FF00"
 
 Gray = " \# 808080"
 
-![Beispiel für die Farbe "Oliv".](images/olive.gif)
+![Beispiel für olivfarbene Farbe.](images/olive.gif)
 
-Oliv = " \# 808000"
+^ = " \# 808000"
 
-![Beispiel für eine weiße Farbe.](images/white.gif)
+![Beispiel für weißer Farbe.](images/white.gif)
 
 White = " \# FFFFFF"
 
 ![Beispiel für ywllow-Farbe.](images/yellow.gif)
 
-Yellow = " \# FFFF00"
+Gelb = " \# FFFF00"
 
-![Beispiel für die Farbe des Marons.](images/maroon.gif)
+![Beispiel für marunische Farbe.](images/maroon.gif)
 
 Maroon = " \# 800000"
 
-![Beispiel für die Farbe "Farbe".](images/navy.gif)
+![Beispiel für farbgebungsfarbenes Farbschema.](images/navy.gif)
 
-Sid = " \# 000080"
+Unicode = " \# 000080"
 
 ![Beispiel für eine rote Farbe.](images/red.gif)
 
@@ -430,11 +430,11 @@ Purple = " \# 800080"
 
 Teal = " \# 008080"
 
-![Beispiel für Diebenenfarbe.](images/fuchsia.gif)
+![Beispiel für farbgebungsfarbene Farben.](images/fuchsia.gif)
 
-Igenia = " \# FF00FF"
+Sollia = " \# FF00FF"
 
-![Beispiel für die Farbe "Aqua".](images/aqua.gif)
+![Beispiel für Aquafarbe.](images/aqua.gif)
 
 Aqua = " \# 00FFFF"
 
@@ -442,11 +442,11 @@ Aqua = " \# 00FFFF"
 
  
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="scheme-colors"></a>Schemafarben
 
-Die Schemafarben, auf die durch schema verwiesen wird, werden auf Dokumentebene definiert, indem das Metatag mit dem Namensattribut "Theme Color Scheme" verwendet wird.
+Die Schemafarben, auf die vom Schema verwiesen wird, werden auf Dokumentebene mithilfe des Metatags mit dem Namensattribut "Designfarbschema" definiert.
 
 
 ```HTML
@@ -456,7 +456,7 @@ Die Schemafarben, auf die durch schema verwiesen wird, werden auf Dokumentebene 
 
 
 
-Mit diesem Tag können bis zu acht Schemafarben definiert werden. Nicht definierte Farben sollten standardmäßig schwarz sein. Die Schemafarben ermöglichen das Ändern des Farbschemas, das für ein vollständiges Dokument verwendet wird, einfach durch Ändern des Inhalts des Designfarbschemas. Um sicherzustellen, dass aus verschiedenen Erstellungsanwendungen importierte Grafiken die Schemafarben konsistent verwenden, werden die folgenden Interpretationen definiert. Die "Nutzung" ist eine kurze Beschreibung des Zwecks, und die Spalte "beschreibung" enthält zusätzliche Details.
+Mit diesem Tag können bis zu acht Schemafarben definiert werden. Nicht definierte Farben sollten standardmäßig schwarz sein. Die Schemafarben ermöglichen das Ändern des Farbschemas, das für ein vollständiges Dokument verwendet wird, nur durch Ändern des Inhalts des Designfarbschemas. Um sicherzustellen, dass aus verschiedenen Erstellungsanwendungen importierte Grafiken die Schemafarben konsistent verwenden, werden die folgenden Interpretationen definiert. Die "Nutzung" ist eine kurze Beschreibung des Zwecks, und die Spalte "beschreibung" enthält zusätzliche Details.
 
 
 
@@ -658,27 +658,27 @@ Es ist zulässig, den href-URI und das Title-Attribut auf denselben (lexikalisch
 
 Anwendungen ignorieren den Hinweis möglicherweise, wenn er nicht in das tatsächliche Speichermodell der XML-Daten passt.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="picture-file-formats"></a>Bilddateiformate
 
-Im Kontext dieses Vorschlags sind externe Daten immer entweder eine Bitmap oder eine Datei, die zum Erstellen einer Bitmap verwendet wird. Auf Renderebene 0 muss kein externes Bitmapformat unterstützt werden. Pfade können nur mit Volltonfarben gefüllt werden. Zum Rendern des vollständigen Satzes von Füllungen auf Renderebene 1 müssen Bitmaps unterstützt werden. Renderebene 1 enthält (nur) die folgenden Formate:
+Im Rahmen dieses Vorschlags sind externe Daten aus jeder Zeit entweder eine Bitmap oder eine Datei, die zum Erzeugen einer Bitmap verwendet wird. Auf Renderebene 0 muss kein externes Bitmapformat unterstützt werden. Pfade können nur mit Vollfarben gefüllt werden. Zum Rendern des vollständigen Füllstands der Renderebene 1 müssen Bitmaps unterstützt werden. Renderebene 1 enthält (nur) die folgenden Formate:
 
-1.  JFIF, d.h. daten im ISO/IEC 10918-Format, die in eine Datei mit dem JFIF-Header eingebettet sind (die nach dem SOI-Maker als bestimmter APP0-Marker betrachtet werden können) und einschließlich (nur) des Bereichs der JPEG-Formate, die vom IJG v6-Code unterstützt werden.
+1.  JFIF, d. h. Iso/IEC 10918-Formatdaten, die in eine Datei mit dem JFIF-Header eingebettet sind (der nach dem SOI-Maker als bestimmter APP0-Marker angesehen werden kann) und (nur) den Bereich der JPEG-Formate enthalten, die vom IJG v6-Code unterstützt werden.
 2.  PNG, wie in der PNG-Version 1.0-Spezifikation definiert.
 
 Renderebene 2 bietet auch Unterstützung für Folgendes:
 
--   GIF, wie durch die GIF-Spezifikation definiert, die von CompuServ im Jahr 1987 veröffentlicht wurde (normalerweise als "GIF87a" bezeichnet). GIF89a muss auch auf dieser Ebene unterstützt werden. Dies unterliegt der Einschränkung, dass die Daten keine Erweiterungsblöcke enthalten dürfen, die interpretiert werden müssen, um die Bitmap anzuzeigen, außer Grafiksteuerelementerweiterungenmitouta-Anforderung für Benutzereingaben oder eine Verzögerungszeit. Dadurch können Kommentare eingeschlossen werden, aber nicht die Nur-Text-Erweiterung. Eine Anwendung kann Anwendungserweiterungen (0x21, 0xFF) einfügen, aber gemäß der Terminologie dieses Vorschlags dürfen diese nur Bearbeitungs- und nicht Renderingdaten enthalten.
+-   GIF, wie in der GIF-Spezifikation definiert, die 1987 von CompuServ veröffentlicht wurde (normalerweise als "GIF87a" bezeichnet). GIF89a muss auch auf dieser Ebene unterstützt werden, jedoch mit der Einschränkung, dass die Daten keine Erweiterungsblöcke enthalten dürfen, die interpretiert werden müssen, um die Bitmap als Grafiksteuersteuererweiterungen anzuzeigenmit einer Anforderung für Benutzereingaben oder einer Verzögerungszeit. Dadurch können Kommentare eingeschlossen werden, aber nicht die Nur-Text-Erweiterung. Eine Anwendung kann Anwendungserweiterungen (0x21, 0xFF) einfügen. Unter Verwendung der Terminologie dieses Vorschlags dürfen diese jedoch nur Bearbeitungs- und nicht Renderingdaten enthalten.
 
-Jedes andere datenformat, das in der Grafik verwendet wird, erzwingt, dass diese Grafik mindestens die Bearbeitungsebene 3 und möglicherweise die Ebene 3 rendert (wenn die Daten zum Rendern der Grafik erforderlich sind). Einer Anwendung wird empfohlen, die unterstützten Formate zu veröffentlichen. beispielsweise unterstützt Microsoft Office die folgenden zusätzlichen Formate nativ und kann daher Bearbeitungsdaten in dieser Form schreiben:
+Jedes andere datenformat, das in der Grafik verwendet wird, erzwingt, dass diese Grafik mindestens Bearbeitungsebene 3 und möglicherweise Renderingebene 3 ist (wenn die Daten zum Rendern der Grafik erforderlich sind). Einer Anwendung wird empfohlen, die unterstützten Formate zu veröffentlichen. Beispielsweise unterstützt Microsoft Office die folgenden zusätzlichen Formate nativ und schreibt daher möglicherweise Bearbeitungsdaten in diesem Format:
 
 1.  WMF – Windows Metadatei (Win 3.1-Format)
-2.  EMF – Windows "erweiterte" Metadatei (Win32-Format)
-3.  PICT – Mac OS QuickDraw PICT-Datei (alle Versionen, jedoch ohne QuickTime-Datensätze oder andere Erweiterungen)
-4.  BMP – Windows Bitmapdateiformat, "os/2" (BITMAPCORE), BITMAPINFO, BITMAPV4 und BITMAPV5
+2.  EMF : Windows "erweiterte" Metadatei (Win32-Format)
+3.  PICT : Mac OS QuickDraw PICT-Datei (alle Versionen, aber ohne QuickTime-Datensätze oder andere Erweiterungen)
+4.  BMP: Windows Bitmapdateiformat, "os/2" (BITMAPCORE), BITMAPINFO, BITMAPV4 und BITMAPV5
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="vector"></a>Vektor
 
@@ -690,9 +690,9 @@ v
 
 
 
-Ein Vektorgrafikpfad wird als pcdata codiert. Der Inhalt des v-Elements wird gemischt und enthält optional eine Vektorpfadbeschreibung, die mit p-Elementen parametrisiert wird.
+Ein Vektorgrafikpfad wird als pcdata codiert. Der Inhalt des v-Elements wird gemischt und enthält eine Vektorpfadbeschreibung, die optional mit p-Elementen parametrisiert wird.
 
-[Zurück zur VML-Übersicht](web-workshop---specs---standards----how-to-use-vml-on-web-pages.md)
+[Zurück zur Übersicht über VML](web-workshop---specs---standards----how-to-use-vml-on-web-pages.md)
 
  
 

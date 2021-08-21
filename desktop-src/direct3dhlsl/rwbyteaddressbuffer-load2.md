@@ -1,6 +1,6 @@
 ---
-title: 'Rwbyteaddressbuffer:: rwbyteaddressbuffer Load2-Methoden'
-description: Ruft zwei Werte aus einem rwbyteaddressbuffer ab.
+title: RWByteAddressBuffer::RWByteAddressBuffer Load2-Methoden
+description: Ruft zwei Werte aus einem RWByteAddressBuffer ab.
 ms.assetid: 0D397B74-282E-4492-9E07-31D3A44DF83A
 keywords:
 - Load2-Methoden HLSL
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 76084d818a68bcd80fe8c283f36f8ac2c338e523
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 2b2c159478422303cc0117eb08bf3eebc263b79294975d4e63b4ddbe35ede8b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104038229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791277"
 ---
-# <a name="rwbyteaddressbufferload2-methods"></a>Rwbyteaddressbuffer:: Load2-Methoden
+# <a name="rwbyteaddressbufferload2-methods"></a>RWByteAddressBuffer::Load2-Methoden
 
-Ruft zwei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuffer.md)ab.
+Ruft zwei Werte aus einem [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuffer.md)ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Ruft zwei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuff
 
 | Methode                                                            | BESCHREIBUNG                                                     |
 |:------------------------------------------------------------------|:----------------------------------------------------------------|
-| [**Load2 (uint)**](sm5-object-rwbyteaddressbuffer-load2.md)       | Ruft zwei Werte ab.<br/>                                     |
-| [**Load2 (uint, uint)**](rwbyteaddressbuffer-load2-float-uint-.md) | Ruft zwei Werte ab und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load2(uint)**](sm5-object-rwbyteaddressbuffer-load2.md)       | Ruft zwei Werte ab.<br/>                                     |
+| [**Load2(uint,uint)**](rwbyteaddressbuffer-load2-float-uint-.md) | Ruft zwei Werte ab und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -38,7 +38,7 @@ Ruft zwei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuff
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> </dl>
 
  

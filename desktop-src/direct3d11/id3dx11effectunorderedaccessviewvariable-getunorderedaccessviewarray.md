@@ -96,7 +96,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

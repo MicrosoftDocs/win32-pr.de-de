@@ -1,39 +1,39 @@
 ---
-title: Abhör Methode
-description: Abhör Methode
+title: Listen-Methode
+description: Listen-Methode
 ms.assetid: ceb3b62f-2a33-4a13-b608-4cfa800be38a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6813fb155074c4cc47a51ec7241eddd332edbcc3
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bc87a57d1ebdd3f36a2d56d85e0754f5005fd6c356fc9af98760bd0db90605f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118748660"
 ---
-# <a name="listen-method"></a>Abhör Methode
+# <a name="listen-method"></a>Listen-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Schaltet den Empfangsmodus (Spracherkennung) für einen zeitgesteuerten Zeitraum ein.
+Aktiviert den Überwachungsmodus (Spracherkennung) für einen bestimmten Zeitraum.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent. ***Zeichen * * * * ("*** Merkmal-ID * * *").* *  *Status* lauschen
+*agent.***Characters)*("**_CharacterID_*_"). Zustand "Lauschen"_ *  
 
 
 
 | Teil    | Beschreibung                                                                                                                                                                      |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Zustand* | Erforderlich. Ein boolescher Wert, der bestimmt, ob der Empfangsmodus aktiviert oder deaktiviert werden soll. **True** Schaltet den Modus für die Überwachung ein. <br/> **False** Schaltet den Lesemodus aus.<br/> |
+| *Zustand* | Erforderlich. Ein boolescher Wert, der bestimmt, ob der Überwachungsmodus aktiviert oder deaktiviert werden soll. **True** Aktiviert den Überwachungsmodus. <br/> **False** Deaktiviert den Überwachungsmodus.<br/> |
 
 
 
@@ -41,11 +41,11 @@ Schaltet den Empfangsmodus (Spracherkennung) für einen zeitgesteuerten Zeitraum
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode auf **true** festgelegt wird, wird der Empfangsmodus (aktiviert die Spracherkennung) für einen festgelegten Zeitraum (10 Sekunden) aktiviert. Obwohl Sie den Wert für das Timeout nicht festlegen können, können Sie den Empfangsmodus deaktivieren, bevor das Timeout abläuft. Wenn Sie (oder ein anderer Client) den Empfangsmodus für erfolgreich festgelegt haben und Sie versuchen, diese Eigenschaft vor Ablauf des Timeouts auf **true** festzulegen, wird die Methode erfolgreich ausgeführt, und das Timeout wird zurückgesetzt. Wenn der Überwachungsmodus jedoch auf ON eingestellt ist, da der Benutzer die Abhör Taste drückt, wird die Methode erfolgreich ausgeführt, aber das Timeout wird ignoriert, und der Empfangsmodus wird basierend auf der Interaktion des Benutzers mit dem lauschenden Schlüssel beendet.
+Wenn Sie diese Methode auf **TRUE** festlegen, wird der Überwachungsmodus (aktiviert die Spracherkennung) für einen festgelegten Zeitraum (10 Sekunden) aktiviert. Obwohl Sie den Wert des Time outs nicht festlegen können, können Sie den Überwachungsmodus deaktivieren, bevor das Time out abläuft. Wenn Sie (oder ein anderer Client) erfolgreich den Überwachungsmodus auf festgelegt haben und versuchen, diese Eigenschaft auf **True** festzulegen, bevor das Time out abläuft, ist die Methode erfolgreich und setzt das Time out zurück. Wenn der Überwachungsmodus jedoch aktiviert ist, weil der Benutzer die Taste Lauschen drückt, ist die Methode erfolgreich, aber das Time out wird ignoriert, und der Überwachungsmodus endet basierend auf der Interaktion des Benutzers mit der Überwachungsschlüssel.
 
-Diese Methode ist nur erfolgreich, wenn Sie vom Eingabe aktiven Client aufgerufen wird und die Sprachdienste gestartet wurden. Um sicherzustellen, dass Sprachdienste gestartet wurden, Fragen Sie die [**srmodeid**](srmodeid-property.md) ab, oder legen Sie Sie fest, oder legen Sie die [**sprach**](voice-property.md) Einstellung für einen [**Befehl**](/windows/desktop/lwef/the-command-object) fest, bevor Sie **lauschen** Um den Erfolg dieser Methode zu erkennen, nennen Sie Sie als Funktion, und Sie gibt einen booleschen Wert zurück, der angibt, ob die Methode erfolgreich ausgeführt wurde.
+Diese Methode ist nur erfolgreich, wenn sie vom eingabeaktiven Client aufgerufen wird und die Sprachdienste gestartet wurden. Um sicherzustellen, dass die Sprachdienste gestartet wurden, fragen Sie [**srmodeID**](srmodeid-property.md) ab, oder legen Sie sie fest, oder legen Sie die [**Spracheinstellung**](voice-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object) fest, bevor Sie **Lauschen** aufrufen. Andernfalls schlägt die Methode fehl. Um den Erfolg dieser Methode zu erkennen, rufen Sie sie als Funktion auf und geben einen booleschen Wert zurück, der angibt, ob die Methode erfolgreich war.
 
 
 ```
@@ -60,17 +60,17 @@ Diese Methode ist nur erfolgreich, wenn Sie vom Eingabe aktiven Client aufgerufe
 
 
 
-Die-Methode schlägt auch fehl, wenn der Benutzer die Abhör Taste drückt, und Sie versuchen, das **lauschen** auf **false** festzulegen. Wenn der Benutzer jedoch keinen Timeout für den abhörenden Schlüssel hat und kein Timeout aufgetreten ist, wird er erfolgreich ausgeführt.
+Die -Methode schlägt auch fehl, wenn der Benutzer die Abhörtaste drückt und Sie versuchen, **Lauschen** auf **False** festzulegen. Wenn der Benutzer jedoch die Überwachungsschlüssel losgelassen hat und kein Time out für den Überwachungsmodus aufgetreten ist, ist dies erfolgreich.
 
-**Lauschen** schlägt auch fehl, wenn keine kompatible Sprach-Engine verfügbar ist, die mit der [**LanguageID**](languageid-property.md) -Einstellung des Zeichens übereinstimmt, der Benutzer die Spracheingabe mithilfe der Eigenschaften Seite "Microsoft-Agent" deaktiviert hat oder das Audiogerät ausgelastet ist.
+**Lauschen** schlägt auch fehl, wenn keine kompatible Sprach-Engine verfügbar ist, die der [**LanguageID-Einstellung**](languageid-property.md) des Zeichens entspricht, der Benutzer die Spracheingabe mithilfe des Microsoft-Agent-Eigenschaftenblatts deaktiviert hat oder das Audiogerät ausgelastet ist.
 
-Wenn Sie diese Methode erfolgreich auf **true** festgelegt haben, löst der Server das [**ListenStart**](listenstart-event.md) -Ereignis aus. Der Server sendet [**listencomplete**](listencomplete-event.md) , wenn das Timeout für den Lesemodus abgeschlossen ist, oder wenn Sie **lauschen** auf **false** festlegen.
+Wenn Sie diese Methode erfolgreich auf **True** festlegen, löst der Server das [**ListenStart-Ereignis**](listenstart-event.md) aus. Der Server sendet [**ListenComplete,**](listencomplete-event.md) wenn das Time out im Überwachungsmodus abgeschlossen ist oder Wenn Sie **Lauschen** auf **False** festlegen.
 
-Diese Methode ruft nicht automatisch " [**Beenden**](stop-method.md) " auf und wiedergeben eine Animation zum lauschen des Zustands, wenn der Server beim Drücken der Abhör Taste gedrückt wird. Auf diese Weise können Sie bestimmen, ob die aktuelle Animation mithilfe der [**ListenStart**](listenstart-event.md) -Animation unterbrechen werden soll, indem Sie " **stoppen** " aufrufen und ihre eigene passende Animation wiedergeben Der Server ruft jedoch " **Beenden** " auf und spielt eine Animation für den hörzustand, wenn eine Benutzer Äußerung erkannt wird.
+Diese Methode ruft nicht automatisch [**Stop auf**](stop-method.md) und gibt eine Überwachung zustandsanimation wieder, wie dies der Server beim Drücken der Lauschen-Taste tut. Dadurch können Sie ermitteln, ob die aktuelle Animation mithilfe der [**ListenStart-Animation**](listenstart-event.md) unterbrochen werden soll, indem **Sie Stop** aufrufen und Ihre eigene entsprechende Animation wiedergeben. Der Server ruft jedoch **Stop auf** und gibt eine Animation des Hörzustands wieder, wenn eine Benutzeräuhmung erkannt wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**LanguageID-Eigenschaft**](languageid-property.md), [**listencomplete-Ereignis**](listencomplete-event.md), [**ListenStart-Ereignis**](listenstart-event.md)
+[**LanguageID-Eigenschaft,**](languageid-property.md) [**ListenComplete-Ereignis,**](listencomplete-event.md) [**ListenStart-Ereignis**](listenstart-event.md)
 
 
  

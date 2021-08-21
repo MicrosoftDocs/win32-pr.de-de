@@ -1,10 +1,10 @@
 ---
 title: IWMDRMEventGenerator-Schnittstelle
-description: Die IWMDRMEventGenerator-Schnittstelle ist eine Erweiterung der ASYNCHRONOUSMediaEventGenerator-Schnittstelle, die eine Methode zum Abbrechen asynchroner Vorgänge bietet.
+description: Die IWMDRMEventGenerator-Schnittstelle ist eine Erweiterung der INTERFACESMediaEventGenerator-Schnittstelle, die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
 ms.assetid: 38d8db83-b8f0-4cc2-b426-cb0e46bde51d
 keywords:
-- IWMDRMEventGenerator-Schnittstelle – Windows-Medienformat
-- IWMDRMEventGenerator interface windows Media Format , beschrieben
+- IWMDRMEventGenerator-Schnittstelle windows Media Format
+- IWMDRMEventGenerator-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118433679"
 ---
 # <a name="iwmdrmeventgenerator-interface"></a>IWMDRMEventGenerator-Schnittstelle
 
-Die **IWMDRMEventGenerator-Schnittstelle** ist eine Erweiterung der **ASYNCHRONOUSMediaEventGenerator-Schnittstelle,** die eine Methode zum Abbrechen asynchroner Vorgänge bietet.
+Die **IWMDRMEventGenerator-Schnittstelle** ist eine Erweiterung der **INTERFACESMediaEventGenerator-Schnittstelle,** die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
 
 ## <a name="members"></a>Member
 
@@ -37,7 +37,7 @@ Die **IWMDRMEventGenerator-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                    | BESCHREIBUNG                                   |
+| Methode                                                                    | Beschreibung                                   |
 |:--------------------------------------------------------------------------|:----------------------------------------------|
 | [**CancelAsyncOperation**](iwmdrmeventgenerator-cancelasyncoperation.md) | Bricht einen asynchronen Vorgang ab.<br/> |
 
@@ -45,11 +45,11 @@ Die **IWMDRMEventGenerator-Schnittstelle** verfügt über diese Methoden.
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**DRM-Individualisierungsbeispiel**](drm-individualization-example.md)
+[**Beispiel für die DRM-Individualisierung**](drm-individualization-example.md)
 </dt> <dt>
 
 [**Schnittstellen**](drm-interfaces.md)

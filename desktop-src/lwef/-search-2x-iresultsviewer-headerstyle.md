@@ -1,11 +1,11 @@
 ---
-title: Iresultsviewer HeaderStyle-Eigenschaft (wdsview. h)
-description: Der Header Stil, der in der Ansicht angezeigt wird.
+title: IResultsViewer HeaderStyle-Eigenschaft (WdsView.h)
+description: Der In der Ansicht angezeigte Headerstil.
 ms.assetid: 092a2ff2-eb88-4347-a81c-6a8005971ca9
 keywords:
-- HeaderStyle-Eigenschaft, ältere Windows-Umgebungs Features
-- HeaderStyle-Eigenschaft Legacy-Windows-Umgebungs Features, iresultviewer-Schnittstelle
-- Iresultviewer-Schnittstelle Legacy-Windows-Umgebungs Features, HeaderStyle (Eigenschaft)
+- HeaderStyle-Eigenschaft Legacy Windows Umgebungsfeatures
+- HeaderStyle-Eigenschaft Legacy Windows Umgebungsfeatures, IResultsViewer-Schnittstelle
+- IResultsViewer-Schnittstelle Legacy Windows Umgebungsfeatures, HeaderStyle-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,19 +18,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddc4d0ad56e1303914af712e2a9b6fa0fd416785
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c7c60687c3d306c3f9c3fcbb551f2d746723c7223b1964d42386464729b4069
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118753891"
 ---
-# <a name="iresultsviewerheaderstyle-property"></a>Iresultviewer:: HeaderStyle (Eigenschaft)
+# <a name="iresultsviewerheaderstyle-property"></a>IResultsViewer::HeaderStyle-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Der Header Stil, der in der Ansicht angezeigt wird.
+Der In der Ansicht angezeigte Headerstil.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,10 +59,10 @@ Legt den Stil des angezeigten Headers fest.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                        |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                        |
-| Header<br/>                   | <dl> <dt>Wdsview. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                        |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                        |
+| Header<br/>                   | <dl> <dt>WdsView.h</dt> </dl> |
 
 
 

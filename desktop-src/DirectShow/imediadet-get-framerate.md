@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Framerate-Methode ruft die Framerate des aktuellen Streams ab. Der Stream muss ein Videostream sein.
+description: Die get \_ FrameRate-Methode ruft die Framerate des aktuellen Streams ab. Der Stream muss ein Videostream sein.
 ms.assetid: f128d118-1147-4a0a-946e-bd1716606cef
-title: 'Imediadet:: get_FrameRate-Methode (qedit. h)'
+title: IMediaDet::get_FrameRate-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 9ffabd57d85437911c323ee458d3758ee725d45a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a22be2caf5a66447c9c772861918f1a5dcfe7bc2c81bfdba4f1fefb59f89565a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362060"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154426"
 ---
-# <a name="imediadetget_framerate-method"></a>Imediadet:: get \_ Framerate-Methode
+# <a name="imediadetget_framerate-method"></a>IMediaDet::get \_ FrameRate-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `get_FrameRate` Methode ruft die Framerate des aktuellen Streams ab. Der Stream muss ein Videostream sein.
+Die `get_FrameRate` -Methode ruft die Framerate des aktuellen Streams ab. Der Stream muss ein Videostream sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ HRESULT get_FrameRate(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt die Framerate in Frames pro Sekunde.
+Empfängt die Bildfrequenz in Frames pro Sekunde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                   |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>                 | Der Video Format Header gibt keine Frame Rate an.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                 | Der Videoformatheader gibt keine Bildfrequenz an.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                                           |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>            | Ungültiges Argument.<br/>                                  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>               | **Null** -Zeigerargument.<br/>                         |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl> | Ungültiger Medientyp.<br/>                                |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>            | Ungültiges Argument.<br/>                                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>               |  NULL-Zeigerargument.<br/>                         |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl> | Ungültiger Medientyp.<br/>                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann die Framerate nicht aus einer ASF-Datei abrufen.
+Diese Methode kann die Bildfrequenz nicht aus einer ASF-Datei abrufen.
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und stream fest, indem Sie [**IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream aufrufen.**](imediadet-put-currentstream.md)
 
-Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \_ invalidArg zurück. Weitere Informationen finden Sie unter [**imediadet:: enterbitmapgrabmode**](imediadet-enterbitmapgrabmode.md).
+Wenn sich die Medienerkennung im Bitmap-Greifmodus befindet, gibt diese Methode E \_ INVALIDARG zurück. Weitere Informationen finden Sie unter [**IMediaDet::EnterBitmapGrabMode**](imediadet-enterbitmapgrabmode.md).
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -94,8 +94,8 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -103,10 +103,10 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

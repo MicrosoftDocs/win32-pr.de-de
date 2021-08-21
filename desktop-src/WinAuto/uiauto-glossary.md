@@ -1,41 +1,41 @@
 ---
-title: Glossar (Windows-Barrierefreiheits Features)
+title: Glossar (Windows Barrierefreiheitsfeatures)
 description: Glossarseite
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: c45583f2-a6e8-4a01-9577-9b604b5bbc62
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16679c63f0716058e53c7c9d164a24593c481dff
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: ab29ee66c3aa943b4be8708cec237d9a22d0d60b4fdac21c2176206f241afc16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106337277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118827314"
 ---
-# <a name="glossary-windows-accessibility-features"></a>Glossar (Windows-Barrierefreiheits Features)
+# <a name="glossary-windows-accessibility-features"></a>Glossar (Windows Barrierefreiheitsfeatures)
 
-## <a name="a"></a>A
+## <a name="a"></a>Ein
 
 <dl> <dt>
 
-**Zugriffstaste**
+**Zugriffsschlüssel**
 </dt> <dd>
 
-Ein unterstrichenes Zeichen im Text der Bezeichnung eines Steuer Elements.
+Ein unterstrichenes Zeichen im Text der Bezeichnung eines Steuerelements.
 
 </dd> <dt>
 
-**Hilfe zur Barrierefreiheit**
+**Barrierefreiheitshilfe**
 </dt> <dd>
 
-Wird auch als Hilfstechnologie bezeichnet. spezialisierte Programme, die mit dem Betriebssystem eines Computers arbeiten, um bestimmte Beeinträchtigungen zu erfüllen, z. b. eine begrenzte Bandbreite an Bewegung oder Blindheit. Zu den Produkten zählen größere Tastaturen, Tastatur gesteuerte Tastatur, Spracheingabe-Hilfsprogramme, Bildschirm Tastaturen und Produkte, mit denen Text in Sprache oder in eine dynamische Braille-Anzeige konvertiert werden kann. Weitere Informationen finden Sie unter [Hilfstechnologieprodukte](https://www.microsoft.com/enable/at/default.aspx).
+Wird auch als Hilfstechnologie bezeichnet. spezialisierte Programme, die mit dem Betriebssystem eines Computers arbeiten, um bestimmte Beeinträchtigungen wie eine begrenzte Bewegung oder Blindheit zu unterstützen. Zu den Produkten gehören größere Tastaturen, Tastaturen mit Anvieren mit den Augen, Spracheingabe-Hilfsprogramme, Bildschirmtastaturen und Produkte, die Text in Sprache oder ein dynamisches Braille-Display konvertieren können. Weitere Informationen finden Sie unter [Hilfstechnologieprodukte](https://www.microsoft.com/enable/at/default.aspx).
 
 </dd> <dt>
 
 **Barrierefreies Objekt**
 </dt> <dd>
 
-Alle Benutzeroberflächen Elemente, die die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle implementieren und über Eigenschaften verfügen, die den Namen des Objekts, die Bildschirm Positionen und andere von hilfshilfen benötigte Informationen beschreiben. Weitere Informationen finden Sie unter [barrierefreie Objekte](accessible-objects.md).
+Jedes Benutzeroberflächenelement, das die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) implementiert und über Eigenschaften verfügt, die den Namen des Objekts, die Bildschirmpositionen und andere Informationen beschreiben, die von Barrierefreiheitshilfen benötigt werden. Weitere Informationen finden Sie unter [Barrierefreie Objekte.](accessible-objects.md)
 
 </dd> </dl>
 
@@ -53,49 +53,49 @@ Siehe [*einfaches Element*](uiauto-glossary.md).
 **client**
 </dt> <dd>
 
-Jedes Programm, das die Benutzeroberflächen Automatisierung oder Microsoft-Active Accessibility verwendet, um auf die Benutzeroberflächen Elemente einer Anwendung zuzugreifen, Sie zu identifizieren oder zu bearbeiten. zu den Clients gehören Barrierefreiheits Hilfen, automatisierte Testtools und einige computerbasierte Schulungs Anwendungen. Weitere Informationen finden Sie unter [Funktionsweise von Active Accessibility](how-active-accessibility-works.md).
+Alle Programme, die Benutzeroberflächenautomatisierung oder Microsoft Active Accessibility, um auf die Benutzeroberflächenelemente einer Anwendung zu zugreifen, sie zu identifizieren oder zu bearbeiten; -Clients umfassen Barrierefreiheitshilfen, automatisierte Testtools und einige computerbasierte Trainingsanwendungen. Weitere Informationen finden Sie unter [Funktionsweise Active Accessibility](how-active-accessibility-works.md).
 
 </dd> <dt>
 
-**Client seitiger Anbieter**
+**clientseitiger Anbieter**
 </dt> <dd>
 
-Eine von einem Benutzeroberflächenautomatisierungs-Client implementierte Softwarekomponente zum Abrufen von Informationen über die Benutzeroberfläche einer Anwendung, die die Benutzeroberflächen Automatisierung nicht unterstützt oder nicht vollständig unterstützt. In der Regel kommunizieren Client seitige Anbieter (Proxys) über die Prozess Grenze hinweg mit der Anwendung, indem Sie Windows-Nachrichten senden und empfangen.
+Eine Softwarekomponente, die von einem Benutzeroberflächenautomatisierung-Client implementiert wird, um Informationen über die Benutzeroberfläche einer Anwendung abzurufen, die keine oder keine vollständige Unterstützung für Benutzeroberflächenautomatisierung. In der Regel kommunizieren clientseitige Anbieter (Proxys) über die Prozessgrenze hinweg mit der Anwendung, indem sie nachrichtenbasierte Windows empfangen.
 
 </dd> <dt>
 
 **container**
 </dt> <dd>
 
-Wird auch als übergeordnetes Element bezeichnet. ein Barrierefreies Objekt, das einem oder mehreren einfachen Elementen entspricht. Beispielsweise ist ein [**ibarrierefreie**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Objekt für ein Listenfeld das übergeordnete Element der Listenelemente.
+Wird auch als übergeordnetes Element bezeichnet. ein barrierefreies Objekt, das einem oder mehrere einfache Elemente entspricht; Beispielsweise ist ein [**IAccessible-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) für ein Listenfeld das übergeordnete Element der Listenelemente.
 
 </dd> <dt>
 
-**Steuerelement Muster**
+**Steuerelementmuster**
 </dt> <dd>
 
-In der Benutzeroberflächen Automatisierung eine Entwurfs Implementierung, die eine diskrete Funktionalität für ein Steuerelement beschreibt. Diese Funktion kann die visuelle Darstellung eines Steuer Elements und die Aktionen enthalten, die es ausführen kann.
+In Benutzeroberflächenautomatisierung eine Entwurfsimplementierung, die eine diskrete Funktionalität für ein Steuerelement beschreibt. Diese Funktionalität kann die visuelle Darstellung eines Steuerelements und die Aktionen umfassen, die es ausführen kann.
 
 </dd> <dt>
 
-**Steuerelement Pattern-Objekt**
+**Steuerelementmusterobjekt**
 </dt> <dd>
 
-Eine Lauf Zeit Instanz eines COM-Objekts, das eine oder mehrere Steuerelement Muster-Schnittstellen verfügbar macht.
+Eine Laufzeitinstanz eines COM-Objekts, das eine oder mehrere Steuerelementmusterschnittstellen verfügbar macht.
 
 </dd> <dt>
 
-**Steuerelement Muster Anbieter**
+**Steuerelementmusteranbieter**
 </dt> <dd>
 
-Eine Softwarekomponente, die eine oder mehrere Steuerelement Muster-Schnittstellen implementiert.
+Eine Softwarekomponente, die eine oder mehrere Steuerelementmusterschnittstellen implementiert.
 
 </dd> <dt>
 
-**Custom-Steuerelement**
+**Benutzerdefiniertes Steuerelement**
 </dt> <dd>
 
-Ein Steuerelement, das von einem Benutzer oder einem Softwarehersteller von Drittanbietern erstellt wurde, oder ein System definiertes Steuerelement, das von einem Benutzer oder einem Softwarehersteller von Drittanbietern geändert wurde.
+Ein Steuerelement, das von einem Benutzer oder Drittanbieter oder einem systemdefinierten Steuerelement, das von einem Benutzer oder Drittanbieter geändert wurde, entwickelt wurde.
 
 </dd> </dl>
 
@@ -103,24 +103,24 @@ Ein Steuerelement, das von einem Benutzer oder einem Softwarehersteller von Drit
 
 <dl> <dt>
 
-**degenerierter Textbereich (leerer Bereich)**
+**Degenerierten Textbereich (leerer Bereich)**
 </dt> <dd>
 
-Ein-Objekt, das einen leeren (NULL Zeichen) Textabschnitt darstellt. Ein degenerierter Textbereich weist angrenzende Endpunkte auf und gibt einen Punkt zwischen zwei Zeichen an.
+Ein -Objekt, das eine leere Textspanne (null Zeichen) darstellt. Ein degenerierten Textbereich verfügt über angrenzende Endpunkte und gibt einen Punkt zwischen zwei Zeichen an.
 
 </dd> <dt>
 
-**nicht zusammenhängender Textbereich**
+**Disjoint text range**
 </dt> <dd>
 
-Ein-Objekt, das mehrere Textabschnitte darstellt, die sich nicht physisch nebeneinander nebeneinander befinden.
+Ein Objekt, das mehrere Textspanne darstellt, die nicht physisch nebeneinander liegen.
 
 </dd> <dt>
 
-**Docking Container**
+**Andockcontainer**
 </dt> <dd>
 
-Ein Steuerelement, das die Anordnung von untergeordneten Elementen (sowohl horizontal als auch vertikal) relativ zu den Begrenzungen des Docking Containers und anderen Elementen im Container ermöglicht.
+Ein Steuerelement, das die horizontale und vertikale Anordnung von untergeordneten Elementen relativ zu den Grenzen des Andockcontainers und anderer Elemente innerhalb des Containers ermöglicht.
 
 </dd> </dl>
 
@@ -131,14 +131,14 @@ Ein Steuerelement, das die Anordnung von untergeordneten Elementen (sowohl horiz
 **Ereignislistener**
 </dt> <dd>
 
-Eine Client Anwendung, die registriert ist, um Benachrichtigungen von der Benutzeroberflächen Automatisierung oder Active Accessibility Microsoft zu erhalten, wenn bestimmte Änderungen an der Benutzeroberfläche auftreten.
+Eine Clientanwendung, die sich für den Empfang von Benachrichtigungen von Benutzeroberflächenautomatisierung oder Microsoft Active Accessibility, wenn bestimmte Ui-Änderungen auftreten.
 
 </dd> <dt>
 
-**Ereignis Benachrichtigung**
+**Ereignisbenachrichtigung**
 </dt> <dd>
 
-Ein-Befehl von einem Benutzeroberflächenautomatisierungs-Anbieter an einen Client, bei dem der Anbieter den Client über ein Ereignis benachrichtigt, das sich auf den Zustand oder die Darstellung eines UI-Elements auswirken könnte.
+Ein Aufruf eines Benutzeroberflächenautomatisierung-Anbieters an einen Client, bei dem der Anbieter den Client über ein Ereignis benachrichtigt, das sich auf den Zustand oder die Darstellung eines Benutzeroberflächenelements auswirken kann.
 
 </dd> </dl>
 
@@ -146,17 +146,17 @@ Ein-Befehl von einem Benutzeroberflächenautomatisierungs-Anbieter an einen Clie
 
 <dl> <dt>
 
-**Filtern \[\]**
+**\[Filterung\]**
 </dt> <dd>
 
-Zum Definieren der Typen von Benutzeroberflächenautomatisierungs-Elementen, die in eine Ansicht der Benutzeroberflächenautomatisierungs-Struktur eingeschlossen werden sollen. Siehe auch: unformatierte Ansicht, Steuerelement Ansicht und Inhaltsansicht.
+Um die Typen der Benutzeroberflächenautomatisierung, die in eine Ansicht der Struktur der Benutzeroberflächenautomatisierung werden sollen. Siehe auch: Rohdatenansicht, Steuerelementansicht und Inhaltsansicht.
 
 </dd> <dt>
 
 **Fragmentstamm**
 </dt> <dd>
 
-Das Benutzeroberflächenautomatisierungs-Element am Stamm Knoten einer Teilstruktur der Benutzeroberflächenautomatisierungs-Struktur. Ein Fragmentstamm besitzt kein übergeordnetes Element, wird aber innerhalb eines anderen Frameworks gehostet, in der Regel ein Win32-Fenster Handle (**HWND**).
+Das Benutzeroberflächenautomatisierung element am Stammknoten einer Teilstruktur der Benutzeroberflächenautomatisierung Struktur. Ein Fragmentstamm verfügt nicht über ein übergeordnetes Element, wird aber in einem anderen Framework gehostet, in der Regel ein Win32-Fensterhand handle (**HWND**).
 
 </dd> </dl>
 
@@ -167,7 +167,7 @@ Das Benutzeroberflächenautomatisierungs-Element am Stamm Knoten einer Teilstruk
 **host**
 </dt> <dd>
 
-Ein Benutzeroberflächen Element, z. b. ein Fenster oder ein Steuerelement, das andere Elemente der Benutzeroberfläche enthält. Ein Host führt Benutzeroberflächenautomatisierungs-Dienste für die gehosteten-Elemente aus.
+Ein Benutzeroberflächenelement, z. B. ein Fenster oder Steuerelement, das andere Benutzeroberflächenelemente enthält. Ein Host führt Benutzeroberflächenautomatisierung Dienste im Namen der gehosteten Elemente aus.
 
 </dd> </dl>
 
@@ -175,17 +175,17 @@ Ein Benutzeroberflächen Element, z. b. ein Fenster oder ein Steuerelement, das 
 
 <dl> <dt>
 
-**IAccessible**
+**Iaccessible**
 </dt> <dd>
 
-Die COM-Schnittstelle, die alle Methoden und Eigenschaften für Microsoft Active Accessibility enthält.
+Die COM-Schnittstelle, die alle Methoden und Eigenschaften für Microsoft Active Accessibility.
 
 </dd> <dt>
 
-**Ibarrierefreie-Proxy**
+**IAccessible-Proxy**
 </dt> <dd>
 
-Ein Typ von [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Unterstützung, der standardmäßige Barrierefreiheits Informationen für Standardbenutzer Oberflächen Elemente bereitstellt: Benutzer Steuerelemente, Benutzermenüs und allgemeine Steuerelemente von COMCTL und Comctl32. Weitere Informationen finden Sie unter [IAccessible](iaccessible-proxies.md)-Proxys.
+Eine Art von [**IAccessible-Unterstützung,**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) die Standardmäßige Barrierefreiheitsinformationen für Standardelemente der Benutzeroberfläche bietet: USER-Steuerelemente, BENUTZERmenüs und allgemeine Steuerelemente aus COMCTL und COMCTL32. Weitere Informationen finden Sie unter [IAccessible Proxies](iaccessible-proxies.md).
 
 </dd> </dl>
 
@@ -193,10 +193,10 @@ Ein Typ von [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 <dl> <dt>
 
-**logische Navigation**
+**Logische Navigation**
 </dt> <dd>
 
-Einer von zwei [**zugänglichen**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Navigationsmodi, in denen ein Client die Microsoft Active Accessibility-Objekthierarchie untersucht (Next, Previous, Parent, First Child, Last Child).
+Einer von zwei IAccessible-Navigationsmodi, in denen ein Client die Microsoft Active Accessibility objekthierarchie (next, previous, parent, first child, last child) untersucht. [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 </dd> </dl>
 
@@ -207,7 +207,7 @@ Einer von zwei [**zugänglichen**](/windows/desktop/api/oleacc/nn-oleacc-iaccess
 **marshaling**
 </dt> <dd>
 
-Verpacken und Senden von Schnittstellenparametern über Prozess Grenzen hinweg.
+Packen und Senden von Schnittstellenparametern über Prozessgrenzen hinweg.
 
 </dd> </dl>
 
@@ -218,7 +218,7 @@ Verpacken und Senden von Schnittstellenparametern über Prozess Grenzen hinweg.
 **Native Implementierung**
 </dt> <dd>
 
-Der Typ der von Benutzeroberflächen Elementen bereitgestellten Unterstützung, die die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle implementieren.
+Der Typ der Unterstützung, die von Benutzeroberflächenelementen bereitgestellt wird, die die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) implementieren.
 
 </dd> </dl>
 
@@ -226,17 +226,17 @@ Der Typ der von Benutzeroberflächen Elementen bereitgestellten Unterstützung, 
 
 <dl> <dt>
 
-**Offscreen-Modell**
+**Off-Screen-Modell**
 </dt> <dd>
 
-Bei diesem Modell handelt es sich um eine Datenbank von Objekten auf dem Bildschirm, die ihre Eigenschaften und deren räumliche Beziehungen enthält.
+Dieses Modell ist eine Datenbank mit Objekten auf dem Bildschirm und enthält ihre Eigenschaften und ihre räumlichen Beziehungen.
 
 </dd> <dt>
 
-**Oleacc**
+**OLEACC**
 </dt> <dd>
 
-Die Dynamic Link Library, die die Microsoft Active Accessibility-Laufzeit bereitstellt und Anforderungen von Microsoft Active Accessibility Clients verwaltet.
+Die Dynamic Link-Bibliothek, die die Microsoft Active Accessibility zur Verfügung stellt und Anforderungen von Microsoft Active Accessibility verwaltet.
 
 </dd> </dl>
 
@@ -247,35 +247,35 @@ Die Dynamic Link Library, die die Microsoft Active Accessibility-Laufzeit bereit
 **parent**
 </dt> <dd>
 
-Wird auch als Container bezeichnet. ein Barrierefreies Objekt, das einem oder mehreren einfachen Elementen entspricht. Beispielsweise ist ein [**ibarrierefreie**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Objekt für ein Listenfeld das übergeordnete Element der Listenelemente.
+Wird auch als Container bezeichnet. ein barrierefreies Objekt, das einem oder mehrere einfache Elemente entspricht; Beispielsweise ist ein [**IAccessible-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) für ein Listenfeld das übergeordnete Element der Listenelemente.
 
 </dd> <dt>
 
-**Platzhalter-Automatisierungs Element**
+**Platzhalterautomatisierungselement**
 </dt> <dd>
 
-Ein Benutzeroberflächenautomatisierungs-Element, das ein virtualisiertes Element in der Benutzeroberflächenautomatisierungs-Struktur darstellt. In der Regel hat ein Platzhalter keine Daten für alle Benutzeroberflächenautomatisierungs-Eigenschaften geladen, und es ist erforderlich, nur das [VirtualizedItem](uiauto-implementingvirtualizeditem.md) -Steuerelement Muster zu implementieren.
+Ein Benutzeroberflächenautomatisierung, das ein virtualisiertes Element in der strukturierten Benutzeroberflächenautomatisierung darstellt. In der Regel hat ein Platzhalter keine Daten für alle eigenschaften Benutzeroberflächenautomatisierung geladen und muss nur das [VirtualizedItem-Steuerelementmuster](uiauto-implementingvirtualizeditem.md) implementieren.
 
 </dd> <dt>
 
-**Ereignis für geänderte Eigenschaft**
+**Eigenschaftsänderungsereignis**
 </dt> <dd>
 
-Ein Ereignis, das ausgelöst wird, wenn sich der Wert einer Eigenschaft geändert hat. Clients registrieren sich, um bestimmte von der Eigenschaft geänderte Ereignisse zu empfangen, und die Benutzeroberflächen Automatisierung benachrichtigt die registrierten Clients, wenn diese Ereignisse auftreten.
+Ein Ereignis, das ausgelöst wird, wenn sich der Wert einer Eigenschaft geändert hat. Clients registrieren sich, um bestimmte Durch Eigenschaften geänderte Ereignisse zu empfangen, und Benutzeroberflächenautomatisierung die registrierten Clients benachrichtigt, wenn diese Ereignisse auftreten.
 
 </dd> <dt>
 
-**Anbieter Schnittstelle**
+**Anbieterschnittstelle**
 </dt> <dd>
 
-Eine Auflistung von öffentlichen Methoden, die von einem Benutzeroberflächenautomatisierungs-Anbieter implementiert werden.
+Eine Auflistung von öffentlichen Methoden, die von einem Benutzeroberflächenautomatisierung implementiert werden.
 
 </dd> <dt>
 
 **Proxy**
 </dt> <dd>
 
-Siehe [*IAccessible-Proxy*](uiauto-glossary.md).
+Weitere Informationen finden [*Sie unter IAccessible proxy (IAccessible-Proxy).*](uiauto-glossary.md)
 
 </dd> </dl>
 
@@ -283,24 +283,24 @@ Siehe [*IAccessible-Proxy*](uiauto-glossary.md).
 
 <dl> <dt>
 
-**Rohdaten Ansicht**
+**Rohdatenansicht**
 </dt> <dd>
 
-Die vollständige Struktur von [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Objekten in der Benutzeroberflächenautomatisierungs-Struktur, für die der Desktop das Stammverzeichnis ist. Die Rohdaten Ansicht folgt genau der systemeigenen programmgesteuerten Struktur einer Anwendung und ist daher die präzisere Ansicht der UI-Struktur. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar.
+Die vollständige Struktur der [**IUIAutomationElement-Objekte**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) in Benutzeroberflächenautomatisierung Struktur, für die der Desktop der Stamm ist. Die Unformatierungsansicht folgt eng der nativen programmgesteuerten Struktur einer Anwendung und ist daher die genaueste Ansicht der Benutzeroberflächenstruktur. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar.
 
 </dd> <dt>
 
-**realisierte Elemente**
+**realisiertes Element**
 </dt> <dd>
 
-Ein Benutzeroberflächen Element, für das vollständige Informationen in den Arbeitsspeicher geladen wurden, sodass die Benutzeroberflächen Automatisierung ein Automation-Element für das Element erstellen kann.
+Ein Benutzeroberflächenelement, für das vollständige Informationen in den Arbeitsspeicher geladen wurden, sodass Benutzeroberflächenautomatisierung automatisierungselement für das Element erstellen können.
 
 </dd> <dt>
 
-**Lauf Zeit Bezeichner**
+**Laufzeitbezeichner**
 </dt> <dd>
 
-Ein Array von ganzen Zahlen, das die laufende Instanz eines Benutzeroberflächenautomatisierungs-Elements angibt. Der Bezeichner ist innerhalb der Benutzeroberfläche des Desktops eindeutig, auf dem er generiert wurde.
+Ein Array von ganzen Zahlen, das die ausgeführte Instanz eines Benutzeroberflächenautomatisierung identifiziert. Der Bezeichner ist innerhalb der Benutzeroberfläche des Desktops eindeutig, auf dem er generiert wurde.
 
 </dd> </dl>
 
@@ -308,14 +308,14 @@ Ein Array von ganzen Zahlen, das die laufende Instanz eines Benutzeroberflächen
 
 <dl> <dt>
 
-**sicheres Array**
+**Sicheres Array**
 </dt> <dd>
 
-Ein selbst beschreibender Datentyp zum Deklarieren von Arrays, die beim Erstellen von COM-Komponenten verwendet werden. Zusammen mit den Daten enthält ein sicheres Array Informationen über die Anzahl und die Begrenzungen seiner Dimensionen.
+Ein selbstbeschreibenden Datentyp zum Deklarieren von Arrays, die beim Erstellen von COM-Komponenten verwendet werden. Zusammen mit den Daten enthält ein sicheres Array Informationen über die Anzahl und die Grenzen seiner Dimensionen.
 
 </dd> <dt>
 
-**Bereichs**
+**Scoping**
 </dt> <dd>
 
 Definieren des Umfangs der Ansicht, beginnend mit einem Basiselement.
@@ -325,28 +325,28 @@ Definieren des Umfangs der Ansicht, beginnend mit einem Basiselement.
 **server**
 </dt> <dd>
 
-Alle Steuerelemente, Module oder Anwendungen, die Microsoft Active Accessibility verwenden, um Informationen über Ihre Benutzeroberfläche verfügbar zu machen
+Alle Steuerungs-, Modul- oder Anwendungen, die Microsoft Active Accessibility, um Informationen über die Benutzeroberfläche verfügbar zu machen
 
 </dd> <dt>
 
 **Serverseitiger Anbieter**
 </dt> <dd>
 
-Eine Softwarekomponente, die Informationen zu einem Benutzeroberflächen Element verfügbar macht, das auf einem Benutzeroberflächen-Framework basiert, das systemeigene Benutzeroberflächen Automatisierung nicht unterstützt. Server seitige Anbieter (Native Anbieter) kommunizieren über die Prozess Grenze hinweg mit Client Anwendungen, indem Sie dem Benutzeroberflächenautomatisierungs-Kernsystem com-Schnittstellen bereitstellen, das Anforderungen von Clients verarbeitet.
+Eine Softwarekomponente, die Informationen zu einem Benutzeroberflächenelement verfügbar macht, das auf einem Benutzeroberflächenframework basiert, das Benutzeroberflächenautomatisierung unterstützt. Serverseitige Anbieter (native Anbieter) kommunizieren über die Prozessgrenze hinweg mit Clientanwendungen, indem sie COM-Schnittstellen für das Benutzeroberflächenautomatisierung-Kernsystem verfügbar machen, das Anforderungen von Clients unterstützt.
 
 </dd> <dt>
 
-**einfaches Element**
+**simple-Element**
 </dt> <dd>
 
-Wird auch als untergeordnetes Element bezeichnet. ein beliebiges Benutzeroberflächen Element, das ein [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Objekt mit anderen Elementen gemeinsam nutzt und auf diesem **IAccessible** -Objekt basiert, um seine Eigenschaften verfügbar zu machen. Weitere Informationen finden Sie unter [einfache Elemente](simple-elements.md).
+Wird auch als untergeordnetes Element bekannt. jedes Benutzeroberflächenelement, das ein [**IAccessible-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) mit anderen Elementen teilt und dieses **IAccessible-Objekt** verwendet, um seine Eigenschaften verfügbar zu machen. Weitere Informationen finden Sie unter [Simple Elements](simple-elements.md).
 
 </dd> <dt>
 
-**räumliche Navigation**
+**Räumliche Navigation**
 </dt> <dd>
 
-Einer von zwei [**zugänglichen**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Navigationsmodi, in denen ein Client auf der Grundlage seiner Bildschirm Positionen von einem Benutzeroberflächen Element zu einem anderen wechselt (nach oben, unten, Links, rechts).
+Einer von zwei IAccessible-Navigationsmodi, in denen ein Client basierend auf seinen Bildschirmpositionen (nach oben, unten, links, rechts) von einem Benutzeroberflächenelement zu einem anderen wechselt. [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 </dd> </dl>
 
@@ -357,14 +357,14 @@ Einer von zwei [**zugänglichen**](/windows/desktop/api/oleacc/nn-oleacc-iaccess
 **Textdienstframework**
 </dt> <dd>
 
-Ein skalierbares System Framework, das Dienste für natürliche Sprache und erweiterte Texteingaben auf dem Desktop und in Anwendungen ermöglicht.
+Ein skalierbares Systemframework, das Dienste in natürlicher Sprache und erweiterte Texteingaben auf dem Desktop und in Anwendungen ermöglicht.
 
 </dd> <dt>
 
-**Text Einheit**
+**Texteinheit**
 </dt> <dd>
 
-Eine vordefinierte Text Einheit (Zeichen, Wort, Zeile oder Absatz), die zum Navigieren durch logische Segmente eines Text Bereichs verwendet wird.
+Eine vordefinierte Texteinheit (Zeichen, Wort, Zeile oder Absatz), die zum Navigieren durch logische Segmente eines Textbereichs verwendet wird.
 
 </dd> </dl>
 
@@ -372,59 +372,59 @@ Eine vordefinierte Text Einheit (Zeichen, Wort, Zeile oder Absatz), die zum Navi
 
 <dl> <dt>
 
-**UI-Automatisierungs Client**
+**Benutzeroberflächenautomatisierung Client**
 </dt> <dd>
 
-Eine hilfstechnologieanwendung, z. b. eine Bildschirm Sprachausgabe, die Benutzeroberflächen Automatisierung verwendet, um programmgesteuerten Zugriff auf die Benutzeroberflächen Elemente in einer Anwendungs Benutzeroberfläche zu erhalten. Der Client stellt Informationen über Benutzeroberflächen Elemente für den Endbenutzer dar. Automatisierte Test Skripts gelten auch als Benutzeroberflächenautomatisierungs-Clients.
+Eine Hilfstechnologieanwendung, z. B. eine Sprachausgabe, die Benutzeroberflächenautomatisierung, um programmgesteuerten Zugriff auf die Benutzeroberflächenelemente in einer Anwendungsbenutzeroberfläche zu erhalten. Der Client stellt dem Endbenutzer Informationen zu Benutzeroberflächenelementen zur Verfügung. Automatisierte Testskripts werden auch als Benutzeroberflächenautomatisierung betrachtet.
 
 </dd> <dt>
 
-**Benutzeroberflächen Automatisierung-Kern**
+**Benutzeroberflächenautomatisierung Core**
 </dt> <dd>
 
-Eine Laufzeitkomponente, die das Benutzeroberflächenautomatisierungs-Framework implementiert.
+Eine Laufzeitkomponente, die die -Benutzeroberflächenautomatisierungs-Framework.
 
 </dd> <dt>
 
-**UI-Automatisierungs Element**
+**Benutzeroberflächenautomatisierung-Element**
 </dt> <dd>
 
-Ein Benutzeroberflächen Element, das durch ein COM-Objekt dargestellt wird, das eine Benutzeroberflächenautomatisierungs-Anbieter Schnittstelle implementiert und die [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Schnittstelle für Benutzeroberflächenautomatisierungs-Clients verfügbar macht
+Ein Benutzeroberflächenelement, das durch ein COM-Objekt dargestellt wird, das eine Benutzeroberflächenautomatisierung-Anbieterschnittstelle implementiert und die [**IUIAutomationElement-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) für Benutzeroberflächenautomatisierung verfügbar macht.
 
 </dd> <dt>
 
-**Benutzeroberflächen-Automatisierungs Framework**
+**Benutzeroberflächenautomatisierungs-Framework**
 </dt> <dd>
 
-Eine integrale Windows-Komponente, die programmgesteuerten Zugriff auf die meisten Elemente der Benutzeroberfläche auf dem Desktop unterstützt Sie ermöglicht Hilfstechnologieprodukten wie z. b. Bildschirmlesern, Endbenutzern Informationen zur Benutzeroberfläche bereitzustellen und die Benutzeroberfläche auf andere Weise als Standard Eingaben zu bearbeiten. Die Benutzeroberflächen Automatisierung ermöglicht außerdem die Interaktion von automatisierten Test Skripts mit der Benutzeroberfläche.
+Eine integrale Windows, die den programmgesteuerten Zugriff auf die meisten Benutzeroberflächenelemente auf dem Desktop unterstützt. Es ermöglicht Hilfstechnologieprodukten wie Spracheingaben, Endbenutzern Informationen über die Benutzeroberfläche zur Verfügung zu stellen und die Benutzeroberfläche mit anderen Als-Standardeingaben zu bearbeiten. Benutzeroberflächenautomatisierung ermöglicht auch die Interaktion automatisierter Testskripts mit der Benutzeroberfläche.
 
 </dd> <dt>
 
-**UI-Automatisierungs Knoten**
+**Benutzeroberflächenautomatisierung Knoten**
 </dt> <dd>
 
-Veraltet. Siehe Benutzeroberflächenautomatisierungs-Element.
+Veraltet. Siehe Benutzeroberflächenautomatisierung-Element.
 
 </dd> <dt>
 
-**Benutzeroberflächen-Automatisierungsanbieter**
+**Benutzeroberflächenautomatisierung-Anbieter**
 </dt> <dd>
 
-Eine Implementierung von UI-Automatisierungs Schnittstellen, die programmgesteuerte Informationen über ein UI-Element verfügbar macht. Der Anbieter stellt diese Informationen dem Benutzeroberflächenautomatisierungs-Framework als Reaktion auf Benutzeroberflächenautomatisierungs-Client Anforderungen zur Verfügung.
+Eine Implementierung von Benutzeroberflächenautomatisierung Schnittstellen, die programmgesteuerte Informationen zu einem Benutzeroberflächenelement verfügbar machen. Der Anbieter stellt diese Informationen als Reaktion Benutzeroberflächenautomatisierungs-Framework Clientanforderungen an Benutzeroberflächenautomatisierung an den Server.
 
 </dd> <dt>
 
-**UI-Automatisierungs Struktur**
+**Benutzeroberflächenautomatisierung Struktur**
 </dt> <dd>
 
-Eine hierarchische Darstellung aller Benutzeroberflächenautomatisierungs-Elemente auf dem Windows-Desktop. Die Struktur besteht aus einem Stamm Element, das den aktuellen Desktop darstellt und dessen untergeordnete Elemente Anwendungsfenster darstellen. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Teile der Benutzeroberfläche darstellen, z. b. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können Elemente enthalten, wie z. b. Listenelemente.
+Eine hierarchische Darstellung aller Benutzeroberflächenautomatisierung auf dem Windows Desktop. Die -Struktur besteht aus einem Stammelement, das den aktuellen Desktop darstellt, und dessen untergeordnete Elemente die Windows. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Teile der Benutzeroberfläche darstellen, z. B. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können Elemente wie Listenelemente enthalten.
 
 </dd> <dt>
 
-**UI-Framework**
+**Benutzeroberflächenframework**
 </dt> <dd>
 
-Eine Komponente, die untergeordnete Steuerelemente, Treffer Tests und das Rendering in einem Bereich des Bildschirms verwaltet.
+Eine Komponente, die untergeordnete Steuerelemente, Treffertests und rendering in einem Bereich des Bildschirms verwaltet.
 
 </dd> </dl>
 
@@ -432,17 +432,17 @@ Eine Komponente, die untergeordnete Steuerelemente, Treffer Tests und das Render
 
 <dl> <dt>
 
-**Bezeichner anzeigen**
+**Ansichtsbezeichner**
 </dt> <dd>
 
-Ein Wert, der eine Ansicht angibt, die für ein Benutzeroberflächenautomatisierungs-Element verfügbar ist, das ein Steuerelement Muster implementiert. Dieser Elementtyp stellt und ist in der Lage, zwischen mehreren Darstellungen desselben Informations Satzes oder untergeordneter Steuerelemente zu wechseln.
+Ein -Wert, der eine Ansicht identifiziert, die für ein Benutzeroberflächenautomatisierung element verfügbar ist, das ein Steuerelementmuster implementiert. Dieser Elementtyp bietet und kann zwischen mehreren Darstellungen desselben Informations- oder untergeordneten Steuerelements wechseln.
 
 </dd> <dt>
 
-**virtualisiertes Element**
+**Virtualisiertes Element**
 </dt> <dd>
 
-Ein Benutzeroberflächen Element, das nur bei Bedarf in den Arbeitsspeicher geladen wird, in der Regel, wenn das Element auf dem Bildschirm sichtbar wird. Ein virtualisiertes Element wird durch ein Platzhalter-Automatisierungs Element in der Benutzeroberflächenautomatisierungs-Struktur dargestellt.
+Ein Benutzeroberflächenelement, das nur dann in den Arbeitsspeicher geladen wird, wenn es benötigt wird, in der Regel, wenn das Element auf dem Bildschirm sichtbar wird. Ein virtualisiertes Element wird durch ein Platzhalterautomatisierungselement in der Benutzeroberflächenautomatisierung dargestellt.
 
 </dd> </dl>
 
@@ -450,17 +450,17 @@ Ein Benutzeroberflächen Element, das nur bei Bedarf in den Arbeitsspeicher gela
 
 <dl> <dt>
 
-**Fenster Ereignisse (WinEvents)**
+**Fensterereignisse (WinEvents)**
 </dt> <dd>
 
-Der Ereignistyp, der verwendet wird, um Clients zu benachrichtigen, dass ein Barrierefreies Objekt in irgendeiner Weise geändert wurde.
+Der Ereignistyp, der verwendet wird, um Clients zu benachrichtigen, dass sich ein barrierefreies Objekt in irgendeiner Weise geändert hat.
 
 </dd> <dt>
 
-**Fenster basiertes Element**
+**fensterbasiertes Element**
 </dt> <dd>
 
-Ein Benutzeroberflächenautomatisierungs-Element, das ein Benutzeroberflächen Element mit einem eigenen Win32-Fenster Handle (**HWND**) darstellt.
+Ein Benutzeroberflächenautomatisierung-Element, das ein Benutzeroberflächenelement darstellt, das über ein eigenes Win32-Fensterhand handle **(HWND) verfügt.**
 
 </dd> </dl>
 

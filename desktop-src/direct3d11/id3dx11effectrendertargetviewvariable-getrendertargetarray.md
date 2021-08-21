@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectRenderTargetViewVariable GetRenderTargetArray-Methode (D3dx11effect.h)
-description: Abrufen eines Arrays von Renderzielen.
+description: Hier erhalten Sie ein Array von Renderzielen.
 ms.assetid: cc98a3b3-c2a2-48d0-86a8-77b914a199ec
 keywords:
 - GetRenderTargetArray-Methode Direct3D 11
-- GetRenderTargetArray-Methode Direct3D 11 , ID3DX11EffectRenderTargetViewVariable-Schnittstelle
+- GetRenderTargetArray-Methode Direct3D 11, ID3DX11EffectRenderTargetViewVariable-Schnittstelle
 - ID3DX11EffectRenderTargetViewVariable-Schnittstelle Direct3D 11 , GetRenderTargetArray-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118534156"
 ---
 # <a name="id3dx11effectrendertargetviewvariablegetrendertargetarray-method"></a>ID3DX11EffectRenderTargetViewVariable::GetRenderTargetArray-Methode
 
-Abrufen eines Arrays von Renderzielen.
+Hier erhalten Sie ein Array von Renderzielen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ HRESULT GetRenderTargetArray(
 
 Typ: **[ **ID3D11RenderTargetView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rendertargetview)\*\***
 
-Ein Zeiger auf ein Array von Schnittstellen für render-target-view. Siehe [**ID3D11RenderTargetView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rendertargetview).
+Ein Zeiger auf ein Array von Renderziel-Ansichtsschnittstellen. Siehe [**ID3D11RenderTargetView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11rendertargetview).
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Ein Zeiger auf ein Array von Schnittstellen für render-target-view. Siehe [**ID
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der nullbasierte Arrayindex zum Abrufen der ersten Schnittstelle.
+Der nullbasierte Arrayindex, um die erste Schnittstelle zu erhalten.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -92,11 +92,11 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,28 +1,28 @@
 ---
-description: Antialiasing ist eine Technik, die Sie verwenden können, um die Darstellung von Treppen Schritt Pixeln beim Zeichnen von Zeilen zu reduzieren, die nicht exakt horizontal oder vertikal sind.
+description: Antialiasing ist eine Technik, mit der Sie die Darstellung von Pixeln mit Strichschritten reduzieren können, wenn Sie eine Linie zeichnen, die nicht genau horizontal oder vertikal ist.
 ms.assetid: e5931c95-1de7-4b41-bc15-f07f8654df2d
 title: Antialiasing (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b27bece24ef5d058e26cbff5ce848150852c1323
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 29acf7bbd5aa769fda99d2665b696398f86cbd1865dbe7a16ab1b6b6adfd1085
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118806375"
 ---
 # <a name="antialiasing-direct3d-9"></a>Antialiasing (Direct3D 9)
 
-Antialiasing ist eine Technik, die Sie verwenden können, um die Darstellung von Treppen Schritt Pixeln beim Zeichnen von Zeilen zu reduzieren, die nicht exakt horizontal oder vertikal sind. In dreidimensionalen Szenen ist dieses Element am deutlichsten an den Grenzen zwischen Polygonen verschiedener Farben erkennbar. Durch Antialiasing werden die Pixel an diesen Grenzen effektiv kombiniert, um eine natürlichere Betrachtung der Szene zu schaffen.
+Antialiasing ist eine Technik, mit der Sie die Darstellung von Pixeln mit Strichschritten reduzieren können, wenn Sie eine Linie zeichnen, die nicht genau horizontal oder vertikal ist. In dreidimensionalen Szenen ist dieses Artefakt am deutlichsten an den Grenzen zwischen Polygonen unterschiedlicher Farben erkennbar. Antialiasing kombiniert die Pixel an diesen Grenzen effektiv, um ein natürlicheres Aussehen der Szene zu erzeugen.
 
--   [Vollbild-Antialiasing](full-scene-antialiasing.md)
+-   [Antialiasing für vollständige Szenen](full-scene-antialiasing.md)
 -   [Bewegungsunschärfe](motion-blur.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixel Pipeline](pixel-pipeline.md)
+[Pixelpipeline](pixel-pipeline.md)
 </dt> </dl>
 
  

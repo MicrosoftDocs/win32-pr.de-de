@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetsetcolumndefaultvalue-Methode.
-title: API. jetsetcolumndefaultvalue-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetSetColumnDefaultValue-Methode'
+title: Api.JetSetColumnDefaultValue-Methode
 TOCTitle: 'JetSetColumnDefaultValue method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetSetColumnDefaultValue(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String,System.String,System.Byte[],System.Int32,Microsoft.Isam.Esent.Interop.SetColumnDefaultValueGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetsetcolumndefaultvalue(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 24fdb3a885e7aa558e1b3db3c4014fc65a28fcde
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 643e056acc99aba255b1c94b2d72337ccaf9f7668caf9c937f08dce7f9214ead
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084949"
 ---
-# <a name="apijetsetcolumndefaultvalue-method"></a>API. jetsetcolumndefaultvalue-Methode
+# <a name="apijetsetcolumndefaultvalue-method"></a>Api.JetSetColumnDefaultValue-Methode
 
 Ändert den Standardwert einer vorhandenen Spalte.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,59 +77,59 @@ public static void JetSetColumnDefaultValue(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
     Die Datenbank, die die Spalte enthält.
 
 <!-- end list -->
 
   - tableName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Tabelle, die die Spalte enthält.
 
 <!-- end list -->
 
   - columnName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Spalte.
 
 <!-- end list -->
 
-  - Daten  
-    Sorte \[\]  
+  - data  
+    Typ: \[\]  
     
     Der neue Standardwert.
 
 <!-- end list -->
 
   - dataSize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Größe des neuen Standardwerts.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. setcolumndefaultvaluegrbit](./setcolumndefaultvaluegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.SetColumnDefaultValueGrbit](./setcolumndefaultvaluegrbit-enumeration.md)  
     
-    Optionen für Spalten Standardwert.
+    Spalten-Standardwertoptionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

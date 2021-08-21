@@ -1,25 +1,25 @@
 ---
-title: Beispiel Code zum Verschieben eines Objekts
-description: Dieses Thema enthält Codebeispiele, die zum Verschieben eines Objekts in der Domäne verwendet werden.
+title: Beispielcode zum Verschieben eines Objekts
+description: Dieses Thema enthält Codebeispiele, die zum Verschieben eines Objekts in die Domäne verwendet werden.
 ms.assetid: 6a54543b-c6e7-486f-afd1-5380e8a8b727
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code zum Verschieben eines Objekt-AD
-- Active Directory Beispiele Active Directory, Verschieben eines Objekts
+- Beispielcode zum Verschieben eines Objekt-AD
+- 'Active Directory-Beispiele: Active Directory, Verschieben eines Objekts'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 800147a4093712d71a56547ba1eabc592b715b1f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5f3c32f9bf00d96c42a6c7e019852b80b0e30654d7ff03af539b5196349c48ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693384"
 ---
-# <a name="example-code-for-moving-an-object"></a>Beispiel Code zum Verschieben eines Objekts
+# <a name="example-code-for-moving-an-object"></a>Beispielcode zum Verschieben eines Objekts
 
-Dieses Thema enthält Codebeispiele, die zum Verschieben eines Objekts in der Domäne verwendet werden.
+Dieses Thema enthält Codebeispiele, die zum Verschieben eines Objekts in die Domäne verwendet werden.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie ADSI zum Verschieben eines Objekts in der Domäne verwendet wird.
+Das folgende C++-Codebeispiel zeigt, wie Sie ADSI verwenden, um ein Objekt in die Domäne zu verschieben.
 
 
 ```C++
@@ -77,7 +77,7 @@ HRESULT MoveObject(IADs *padsToMove, IADs *padsDestination)
 
 
 
-Im folgenden Visual Basic Codebeispiel wird gezeigt, wie ADSI verwendet wird, um ein Objekt in der Domäne zu verschieben.
+Das folgende Visual Basic Codebeispiel zeigt, wie Sie ADSI verwenden, um ein Objekt in die Domäne zu verschieben.
 
 
 ```VB
@@ -107,9 +107,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

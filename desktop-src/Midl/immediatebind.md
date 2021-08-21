@@ -1,9 +1,9 @@
 ---
 title: immediatebind-Attribut
-description: Das Attribut \ unmittelatebind \ gibt an, dass die Datenbank sofort über alle Änderungen an einer Eigenschaft eines Daten gebundenen Objekts benachrichtigt wird.
+description: Das Attribut \immediatebind\ gibt an, dass die Datenbank sofort über alle Änderungen an einer Eigenschaft eines datengebundenen Objekts benachrichtigt wird.
 ms.assetid: 1c08ddca-e273-43b3-a8f6-ed7f552e4e0e
 keywords:
-- unmittel-BIND-Attribut (Mittel l)
+- immediatebind-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc8a797514c15f8d4c46bb6161946d5d0b6bd10b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 40396343177da07a2747c79473cdc52f2d665fea8411f4d6f117a5032d66707a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104208823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118642976"
 ---
 # <a name="immediatebind-attribute"></a>immediatebind-Attribut
 
-Das **\[ unmittelatebind \]** -Attribut gibt an, dass die Datenbank sofort über alle Änderungen an einer Eigenschaft eines Daten gebundenen Objekts benachrichtigt wird.
+Das **\[ immediatebind-Attribut \]** gibt an, dass die Datenbank sofort über alle Änderungen an einer Eigenschaft eines datengebundenen Objekts benachrichtigt wird.
 
 ``` syntax
 [
@@ -37,35 +37,35 @@ interface | dispinterface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste mit einem oder mehreren Attributen an, die auf die gesamte Schnittstelle angewendet werden.
+Gibt eine Liste mit einem oder mehr Attributen an, die für die Schnittstelle als Ganzes gelten.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
-Gibt den Namen der [**Schnittstelle**](interface.md) oder der " [**dispinterface**](dispinterface.md)" an.
+Gibt den Namen der Schnittstelle [**oder**](interface.md) [**dispinterface an.**](dispinterface.md)
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-NULL oder mehr Funktions Attribute.
+Null oder mehr Funktionsattribute.
 
 </dd> <dt>
 
-*ReturnType* 
+*returntype* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion in der IDL-Datei an.
@@ -75,19 +75,19 @@ Gibt den Namen der Funktion in der IDL-Datei an.
 *params* 
 </dt> <dd>
 
-NULL oder mehr Funktionsparameter.
+Null oder mehr Funktionsparameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ unmittelatebind \]** -Attribut ermöglicht es Steuerelementen, zwischen Eigenschaften zu unterscheiden, die die Datenbank über jede Änderung benachrichtigen müssen. So sollte beispielsweise jede Änderung an einem CheckBox-Steuerelement sofort an die zugrunde liegende Datenbank gesendet werden, auch wenn das Steuerelement den Fokus nicht verliert. Bei einem ListBox-Steuerelement tritt jedoch eine Änderung auf, wenn eine andere Auswahl hervorgehoben wird. Das Benachrichtigen der Datenbank über eine Änderung, bevor das Steuerelement den Fokus verliert, wäre ineffizient und unnötig. Mit dem Attribut " **\[ unmittelatebind \]** " können Sie angeben, indem Sie das unmittelatebind-Bit festlegen, einzelne Eigenschaften auf einem Formular, dessen Änderungen sofort gemeldet werden sollen.
+Mit **\[ dem \] Attribut immediatebind** können Steuerelemente zwischen Eigenschaften unterscheiden, die die Datenbank über jede Änderung benachrichtigen müssen, und eigenschaften, die dies nicht tun. Beispielsweise sollte jede Änderung eines Kontrollkästchen-Steuerelements sofort an die zugrunde liegende Datenbank gesendet werden, auch wenn das Steuerelement den Fokus nicht verloren hat. Bei einem Listbox-Steuerelement tritt jedoch eine Änderung auf, wenn eine andere Auswahl hervorgehoben wird. Eine Benachrichtigung der Datenbank über eine Änderung, bevor das Steuerelement den Fokus verliert, wäre ineffizient und unnötig. Mit **\[ dem \] Immediatebind-Attribut** können Sie durch Festlegen des ImmediateBind-Bits einzelne Eigenschaften für ein Formular angeben, dessen Änderungen sofort gemeldet werden sollen.
 
-Eigenschaften, die über das **\[ unmittelatebind \]** -Attribut verfügen, müssen auch über das **\[** [**bindbare**](bindable.md) **\]** Attribut verfügen.
+Eigenschaften, die über das **\[ immediatebind-Attribut \]** verfügen, müssen auch über das **\[** [**bindbare Attribut**](bindable.md) **\]** verfügen.
 
 ### <a name="flags"></a>Flags
 
-funkflag " \_ smediatebind", varflag " \_ fmmediatebind"
+FUNCFLAG \_ FIMMEDIATEBIND, VARFLAG \_ FIMMEDIATEBIND
 
 ## <a name="examples"></a>Beispiele
 
@@ -113,24 +113,24 @@ interface MyObject : IUnknown
 [**bindable**](bindable.md)
 </dt> <dt>
 
-[**FUNCFLAGS**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[**Typeflags**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

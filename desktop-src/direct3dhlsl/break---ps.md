@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b5df9f4edf7a4261e907bd715a5528b8036799b5
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: e0d39562a6bbbaef7913e5be6ad4a60087f86b3b75bd7258164d0d5d6b7701ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794588"
 ---
 # <a name="break---ps"></a>break – ps
 
-Unterbrechen Sie die aktuelle Schleife am nächsten [endloop - ps](endloop---ps.md) oder [endrep - ps](endrep---ps.md).
+Unterbrechen Sie die aktuelle Schleife am nächsten [endeloop - ps](endloop---ps.md) oder [endrep - ps](endrep---ps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ Unterbrechen Sie die aktuelle Schleife am nächsten [endloop - ps](endloop---ps.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Anweisung wird in den folgenden Versionen unterstützt.
 

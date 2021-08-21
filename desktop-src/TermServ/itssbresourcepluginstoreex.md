@@ -5,7 +5,7 @@ ms.assetid: 768a5a4e-8221-417a-ad65-9a213a176eca
 ms.tgt_platform: multiple
 keywords:
 - ITsSbResourcePluginStoreEx-Remotedesktopdienste
-- ITsSbResourcePluginStoreEx-Schnittstelle Remotedesktopdienste beschrieben
+- ITsSbResourcePluginStoreEx-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -40,7 +40,7 @@ Die **ITsSbResourcePluginStoreEx-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                            | BESCHREIBUNG                                                                                                     |
+| Methode                                                                                                            | Beschreibung                                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
 | [**AcquireTargetLock**](itssbresourcepluginstoreex-acquiretargetlock.md)                                         | Sperrt ein Ziel.<br/>                                                                                      |
 | [**AddEnvironmentToStore**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-addenvironmenttostore)                                   | Fügt dem Ressourcen-Plug-In-Speicher eine Umgebung hinzu.<br/>                                                   |
@@ -84,7 +84,7 @@ Die **ITsSbResourcePluginStoreEx-Schnittstelle** verfügt über diese Methoden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

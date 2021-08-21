@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectVariable GetAnnotationByIndex-Methode (D3dx11effect.h)
-description: Abrufen einer Anmerkung nach Index. | ID3DX11EffectVariable GetAnnotationByIndex-Methode (D3dx11effect.h)
+description: Sie erhalten eine Anmerkung nach Index. | ID3DX11EffectVariable GetAnnotationByIndex-Methode (D3dx11effect.h)
 ms.assetid: fc130098-0269-4c78-bc45-284aa0b77865
 keywords:
 - GetAnnotationByIndex-Methode Direct3D 11
-- GetAnnotationByIndex-Methode Direct3D 11 , ID3DX11EffectVariable-Schnittstelle
+- GetAnnotationByIndex-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
 - ID3DX11EffectVariable-Schnittstelle Direct3D 11 , GetAnnotationByIndex-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118531144"
 ---
 # <a name="id3dx11effectvariablegetannotationbyindex-method"></a>ID3DX11EffectVariable::GetAnnotationByIndex-Methode
 
-Abrufen einer Anmerkung nach Index.
+Sie erhalten eine Anmerkung nach Index.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ Ein Zeiger auf eine [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Ierungen können an eine Technik, einen Durchlauf oder eine globale Variable angefügt werden.
+Annonationen können an eine Technik, einen Pass oder eine globale Variable angefügt werden.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -74,11 +74,11 @@ Ierungen können an eine Technik, einen Durchlauf oder eine globale Variable ang
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

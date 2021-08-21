@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_Experience02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ Experience02-Klasse stellt die verfügbaren Erfahrungs Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ Experience02-Klasse stellt die verfügbaren Experience-Richtlinien dar.
 ms.assetid: 21052983-696c-4137-9c72-16ea3b4a1eb7
 keywords:
 - MDM_Policy_Config01_Experience02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38885dbc22c51bfa9e1653f81dba38255f6ba6a9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 70c4b06588ab6e9edd3a85b9ba51cef98088ca4a6c8ad83d73c366a3cf6ed985
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118165303"
 ---
-# <a name="mdm_policy_config01_experience02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ Experience02-Klasse
+# <a name="mdm_policy_config01_experience02-class"></a>MDM \_ Policy \_ Config01 \_ Experience02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Experience02** -Klasse stellt die verfügbaren Erfahrungs Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ Experience02-Klasse** stellt die verfügbaren Experience-Richtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -56,13 +56,13 @@ class MDM_Policy_Config01_Experience02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Experience02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ Experience02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Experience02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ Experience02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -77,7 +77,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowdevicediscovery](/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+[AllowDeviceDiscovery](/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowfindmydevice](/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
+[AllowFindMyDevice](/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -99,7 +99,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowmanualmdmuneinschreibung](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
+[AllowManualMDMUnenrollment](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsaveasofofficefiles](/windows/client-management/mdm/policy-csp-experience#experience-allowsaveasofofficefiles)
+[AllowSaveAsOfOfficeFiles](/windows/client-management/mdm/policy-csp-experience#experience-allowsaveasofofficefiles)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -121,7 +121,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Allowscreencapture
+AllowScreenCapture
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -132,7 +132,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsharingofofficefiles](/windows/client-management/mdm/policy-csp-experience#experience-allowsharingofofficefiles)
+[AllowSharingOfOfficeFiles](/windows/client-management/mdm/policy-csp-experience#experience-allowsharingofofficefiles)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -143,7 +143,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Allowsimerrordialogprompt-nosim
+AllowSIMErrorDialogPromptWhenNoSIM
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -165,7 +165,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwindowstips](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)
+[AllowWindowsTips](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -176,7 +176,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotshowfeedbackbenachrichtigungen](/windows/client-management/mdm/policy-csp-experience#experience-donotshowfeedbacknotifications)
+[DoNotShowFeedbackNotifications](/windows/client-management/mdm/policy-csp-experience#experience-donotshowfeedbacknotifications)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -190,32 +190,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "erleben".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Experience".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -225,10 +225,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -237,7 +237,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

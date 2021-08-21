@@ -1,6 +1,6 @@
 ---
 title: TaskSettings.Priority-Eigenschaft
-description: Für die Skripterstellung ruft die Prioritätsebene der Aufgabe ab oder legt diese fest.
+description: Ruft für die Skripterstellung die Prioritätsebene des Tasks ab oder legt sie fest.
 ms.assetid: 2548fcb6-c649-4822-a2ea-77546aac2ec5
 keywords:
 - Prioritätseigenschaft Taskplaner
@@ -25,7 +25,7 @@ ms.locfileid: "118354827"
 ---
 # <a name="tasksettingspriority-property"></a>TaskSettings.Priority-Eigenschaft
 
-Für die Skripterstellung ruft die Prioritätsebene der Aufgabe ab oder legt diese fest.
+Ruft für die Skripterstellung die Prioritätsebene des Tasks ab oder legt sie fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -44,31 +44,31 @@ Die Prioritätsebene (0-10) der Aufgabe. Der Standard ist 7.
 
 ## <a name="remarks"></a>Hinweise
 
-Prioritätsstufe 0 ist die höchste Priorität, prioritätsebene 10 die niedrigste Priorität. Der Standardwert ist 7. Die Prioritätsstufen 7 und 8 werden für Hintergrundaufgaben und die Prioritätsebenen 4, 5 und 6 für interaktive Aufgaben verwendet.
+Prioritätsstufe 0 ist die höchste Priorität, und Prioritätsstufe 10 ist die niedrigste Priorität. Der Standardwert ist 7. Die Prioritätsstufen 7 und 8 werden für Hintergrundaufgaben und die Prioritätsstufen 4, 5 und 6 für interaktive Aufgaben verwendet.
 
-Die Aktion der Aufgabe wird in einem Prozess mit einer Priorität gestartet, die auf einem Priority Class-Wert basiert. Ein Wert der Prioritätsebene (Threadpriorität) wird für COM-Handler-, Meldungsfeld- und E-Mail-Aufgabenaktionen verwendet. Weitere Informationen zu den Werten für Priority Class und Priority Level finden Sie unter [Scheduling Priorities](/windows/desktop/ProcThread/scheduling-priorities). In der folgenden Tabelle sind die möglichen Werte für den *Priority-Parameter* sowie die entsprechenden Werte für Priority Class und Priority Level aufgeführt.
+Die Aktion der Aufgabe wird in einem Prozess mit einer Priorität gestartet, die auf einem Priority Class-Wert basiert. Ein Wert auf Prioritätsebene (Threadpriorität) wird für COM-Handler, Meldungsfeld und E-Mail-Aufgabenaktionen verwendet. Weitere Informationen zu den Prioritätsklassen- und Prioritätsebenenwerten finden Sie unter [Zeitplanungsprioritäten.](/windows/desktop/ProcThread/scheduling-priorities) In der folgenden Tabelle sind die möglichen Werte für den *Priority-Parameter* und die entsprechenden Priority Class- und Priority Level-Werte aufgeführt.
 
 
 
-| *Aufgabenpriorität* | Priority-Klasse                 | Prioritätsebene                   |
+| *Aufgabenpriorität* | Priority-Klasse                 | Prioritätsstufe                   |
 |-----------------|--------------------------------|----------------------------------|
-| 0               | REALTIME \_ \_ PRIORITY-KLASSE      | \_ \_ THREADPRIORITÄTSZEIT \_ KRITISCH |
-| 1               | HIGH \_ \_ PRIORITY-KLASSE          | \_THREADPRIORITÄT \_ AM HÖCHSTEN        |
-| 2               | ÜBER \_ DER NORMAL \_ \_ PRIORITY-KLASSE | \_THREADPRIORITÄT \_ ÜBER \_ NORMAL  |
-| 3               | ÜBER \_ DER NORMAL \_ \_ PRIORITY-KLASSE | \_THREADPRIORITÄT \_ ÜBER \_ NORMAL  |
+| 0               | REALTIME \_ PRIORITY \_ CLASS      | \_ZEITKRITISCH FÜR THREADPRIORITÄT \_ \_ |
+| 1               | KLASSE MIT HOHER \_ PRIORITÄT \_          | \_HÖCHSTE \_ THREADPRIORITÄT        |
+| 2               | OBERHALB \_ DER NORMALEN \_ \_ PRIORITÄTSKLASSE | \_ \_ THREADPRIORITÄT ÜBER \_ NORMAL  |
+| 3               | OBERHALB \_ DER NORMALEN \_ \_ PRIORITÄTSKLASSE | \_ \_ THREADPRIORITÄT ÜBER \_ NORMAL  |
 | 4               | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
 | 5               | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
 | 6               | NORMAL \_ \_ PRIORITY-KLASSE        | \_THREADPRIORITÄT \_ NORMAL         |
-| 7               | UNTERHALB \_ DER \_ NORMAL \_ PRIORITY-KLASSE | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
-| 8               | UNTERHALB \_ DER \_ NORMAL \_ PRIORITY-KLASSE | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
-| 9               | IDLE \_ \_ PRIORITY-KLASSE          | \_THREADPRIORITÄT \_ NIEDRIGSTE         |
-| 10              | IDLE \_ \_ PRIORITY-KLASSE          | \_THREADPRIORITÄT IM \_ LEERLAUF           |
+| 7               | BELOW \_ NORMAL \_ PRIORITY \_ CLASS | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
+| 8               | BELOW \_ NORMAL \_ PRIORITY \_ CLASS | \_THREADPRIORITÄT \_ UNTER \_ NORMAL  |
+| 9               | IDLE \_ \_ PRIORITY-KLASSE          | \_ \_ THREADPRIORITÄT NIEDRIGSTE         |
+| 10              | IDLE \_ \_ PRIORITY-KLASSE          | \_ \_ THREADPRIORITÄT IM LEERLAUF           |
 
 
 
  
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**Priority (settingsType)-Element**](taskschedulerschema-priority-settingstype-element.md) des Taskplaner angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**Priority (settingsType)-Element**](taskschedulerschema-priority-settingstype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,14 +76,14 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

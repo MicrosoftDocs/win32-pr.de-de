@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_DeviceLock02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ DeviceLock02-Klasse stellt die verfügbaren Geräte Sperr Richtlinien dar.
+description: Die Mdm \_ Policy \_ Result01 \_ DeviceLock02-Klasse stellt die verfügbaren Gerätesperrrichtlinien dar.
 ms.assetid: 9aac25a8-8502-468f-9478-1ac4ccccaf0b
 keywords:
 - MDM_Policy_Result01_DeviceLock02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa93236b99add5cb49e0b54aa10eab9e959ab01a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8abd493eda688c8529c2ede6f05eae89545997c239d6d5b17eb59e45233cf204
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118164499"
 ---
-# <a name="mdm_policy_result01_devicelock02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ DeviceLock02-Klasse
+# <a name="mdm_policy_result01_devicelock02-class"></a>MDM \_ Policy \_ Result01 \_ DeviceLock02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ DeviceLock02** -Klasse stellt die verfügbaren Geräte Sperr Richtlinien dar.
+Die **Mdm \_ Policy \_ Result01 \_ DeviceLock02-Klasse** stellt die verfügbaren Gerätesperrrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -60,17 +60,17 @@ class MDM_Policy_Result01_DeviceLock02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ DeviceLock02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Policy \_ Result01 \_ DeviceLock02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ DeviceLock02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ DeviceLock02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Allowscreentimeoutwhilelockeduserconfig
+AllowScreenTimeoutWhileLockedUserConfig
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,7 +81,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsimpledebug Password](/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowsimpledevicepassword)
+[AllowSimpleDevicePassword](/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowsimpledevicepassword)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -92,7 +92,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Alpha anumericdebug-Element](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+[AlphanumericDevicePasswordRequired](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -103,7 +103,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Geräte abgeleitete](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+[DevicePasswordEnabled](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -136,10 +136,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enforcelockscreenandlogonimage](/windows/client-management/mdm/policy-csp-devicelock#devicelock-enforcelockscreenandlogonimage)
+[EnforceLockScreenAndLogonImage](/windows/client-management/mdm/policy-csp-devicelock#devicelock-enforcelockscreenandlogonimage)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -147,10 +147,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Enforcelockscreenprovider
+EnforceLockScreenProvider
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -161,7 +161,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -170,11 +170,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "DeviceLock".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "DeviceLock".
 
 </dd> <dt>
 
-[Maxde vicepasswordfailedattempts](/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts)
+[MaxDevicePasswordFailedAttempts](/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -229,10 +229,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -241,14 +241,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
-[Preventlockscreenslide Show](/windows/client-management/mdm/policy-csp-devicelock#devicelock-preventlockscreenslideshow)
+[PreventLockScreenSlideShow](/windows/client-management/mdm/policy-csp-devicelock#devicelock-preventlockscreenslideshow)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -256,7 +256,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Screentimeoutwhilelocked
+ScreenTimeoutWhileLocked
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -273,10 +273,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ Stamm-CIMv2-MDM-DMMap \\<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -285,7 +285,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,45 +1,45 @@
 ---
-title: Beispiel eines LOGON-Auslösers (C++)
-description: Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn sich ein Benutzer anmeldet.
+title: Logon Trigger Example (C++) (Beispiel für Logon-Trigger (C++))
+description: In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die Editor ausgeführt werden soll, wenn sich ein Benutzer anmeldet.
 ms.assetid: 15647234-8d1f-4d75-b215-92927b300c1f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 137155a28a84a981b6013b6651f327a8c6bb4474
-ms.sourcegitcommit: f19e3b30abea739d83178cdc8f2478eb4905f1d0
+ms.openlocfilehash: 44c253d1374df527839647ddc64ea86e7ad2d851e6ba624ac2817790280a5423
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2020
-ms.locfileid: "104316694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118859608"
 ---
-# <a name="logon-trigger-example-c"></a>Beispiel eines LOGON-Auslösers (C++)
+# <a name="logon-trigger-example-c"></a>Logon Trigger Example (C++) (Beispiel für Logon-Trigger (C++))
 
-Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn sich ein Benutzer anmeldet. Der Task enthält einen Logon-Auslösers, der eine Start Grenze für die zu startende Aufgabe und eine Benutzer-ID angibt, die den Benutzer angibt. Der Task wird mithilfe der Gruppe "Administratoren" als Sicherheitskontext zum Ausführen der Aufgabe registriert.
+In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die Editor ausgeführt werden soll, wenn sich ein Benutzer anmeldet. Die Aufgabe enthält einen Anmeldetrigger, der eine Startgrenze für den task-Start und einen Benutzerbezeichner angibt, der den Benutzer angibt. Der Task wird mithilfe der Gruppe Administratoren als Sicherheitskontext registriert, um den Task auszuführen.
 
-Im folgenden Verfahren wird beschrieben, wie ein Task zum Starten einer ausführbaren Datei geplant wird, wenn sich ein Benutzer anmeldet.
+Im folgenden Verfahren wird beschrieben, wie eine Aufgabe so geplant wird, dass eine ausführbare Datei gestartet wird, wenn sich ein Benutzer anmeldet.
 
-**So planen Sie den Start von Notepad, wenn sich ein Benutzer anmeldet**
+**So planen Sie Editor den Start, wenn sich ein Benutzer anmeldet**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie die allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
     Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
 
-3.  Rufen Sie einen Aufgaben Ordner ab, in dem eine Aufgabe erstellt werden soll.
+3.  Abrufen eines Aufgabenordners zum Erstellen einer Aufgabe.
 
-    Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten, und die [**ITaskService:: newtask**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) -Methode zum Erstellen des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts.
+    Verwenden Sie die [**ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner abzurufen, und die [**ITaskService::NewTask-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) um das [**ITaskDefinition-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) zu erstellen.
 
-4.  Definieren von Informationen über den Task mithilfe des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts, z. b. Registrierungsinformationen für den Task.
+4.  Definieren Sie Informationen zur Aufgabe mithilfe des [**ITaskDefinition-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) z. B. die Registrierungsinformationen für die Aufgabe.
 
-    Verwenden Sie die [**RegistrationInfo-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Schnittstelle, um die Aufgabeninformationen zu definieren.
+    Verwenden Sie die [**RegistrationInfo-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**ITaskDefinition-Schnittstelle,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) um die Taskinformationen zu definieren.
 
-5.  Erstellen Sie einen Logon-Trigger mithilfe der Triggers- [**Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) für den Zugriff auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) -Schnittstelle für den Task.
+5.  Erstellen Sie einen Anmeldetrigger mithilfe der [**Trigger-Eigenschaft von ITaskDefinition,**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) um auf die [**ITriggerCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen.
 
-    Verwenden Sie die [**ITriggerCollection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) -Methode, um anzugeben, dass Sie einen Logon-Trigger erstellen möchten. Sie können die Start Grenze und die [**UserID**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) -Eigenschaft für den-Befehl festlegen, sodass die Aktionen der Aufgabe für die Ausführung geplant werden, wenn sich der Benutzer nach der Start Grenze anmeldet.
+    Verwenden Sie die [**ITriggerCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) um anzugeben, dass Sie einen Anmeldetrigger erstellen möchten. Sie können die Startgrenze und die [**UserId-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) für den Trigger festlegen, sodass die Ausführung der Aktionen des Tasks geplant wird, wenn sich der Benutzer nach der Startgrenze anmeldet.
 
-6.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe mithilfe der [**Actions-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) , um auf die [**IAction Collection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Schnittstelle für den Task zuzugreifen. Verwenden Sie die [**IAction Collection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
-7.  Registrieren Sie die Aufgabe mit der [**ITaskFolder:: RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode.
+6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe, indem Sie die [**Actions-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) verwenden, um auf die [**IActionCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) für die Aufgabe zuzugreifen. Verwenden Sie die [**IActionCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausführt.
+7.  Registrieren Sie die Aufgabe mithilfe der [**ITaskFolder::RegisterTaskDefinition-Methode.**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition)
 
-Im folgenden Beispiel wird gezeigt, wie eine Aufgabe für die Ausführung von Notepad geplant wird, wenn sich ein Benutzer anmeldet.
+Das folgende C++-Beispiel zeigt, wie sie eine Aufgabe so planen, dass sie Editor ausgeführt wird, wenn sich ein Benutzer anmeldet.
 
 
 ```C++
@@ -365,12 +365,12 @@ int __cdecl wmain()
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,43 +1,43 @@
 ---
-description: Multimedia-streamingschnittstellen
+description: Multimediastreamingschnittstellen
 ms.assetid: 53d639e2-8717-4552-b0d3-b8c500bd38a8
-title: Multimedia-streamingschnittstellen
+title: Multimediastreamingschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d654bae73ee822f553a1494e3b374cf35b8ac4a1
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 6b38200d98b0f01b7260508cbf7bd19c6e65efdfb3af78f2efff77be38294e8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104530560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118152956"
 ---
-# <a name="multimedia-streaming-interfaces"></a>Multimedia-streamingschnittstellen
+# <a name="multimedia-streaming-interfaces"></a>Multimediastreamingschnittstellen
 
 > [!Note]  
-> Diese APIs sind veraltet. Anwendungen sollten den [**Beispiel-Grabber**](sample-grabber-filter.md) Filter verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filter Diagramm zu erhalten.
+> Diese APIs sind veraltet. Anwendungen sollten den [**Beispielgrabberfilter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm abzurufen.
 
  
 
-Dieser Abschnitt enthält Referenz Einträge für alle multimediastreamingschnittstellen und ihre Methoden, einschließlich derjenigen, die von Microsoft DirectShow unterstützt werden.
+Dieser Abschnitt enthält Referenzeinträge für alle Multimediastreamingschnittstellen und deren Methoden, einschließlich der von Microsoft DirectShow unterstützten Schnittstellen.
 
 
 
 | Schnittstelle                                                  | BESCHREIBUNG                                                                                                                                             |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iammediastream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediastream)                   | Behandelt die internen Verbindungen zwischen DirectShow-Filtern und Filter Diagrammen in Anwendungen, die Multimedia-Streaming verwenden.                            |
-| [**Iammediatypesample**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypesample)           | Enthält Methoden zum Bearbeiten von streambeispielen mit beliebigen Medientypen.                                                                            |
-| [**Iammediatypeer Stream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypestream)           | Enthält Methoden zum Erstellen von Multimedia-Streams mit beliebigen Medientypen.                                                                            |
-| [**Iammultimediastream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammultimediastream)         | Macht die DirectShow-Funktionalität für multimediastreamentwickler verfügbar.                                                                                       |
-| [**Iaudiodata**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiodata)                           | Stellt Methoden bereit, die es Anwendungen ermöglichen, die zugrunde liegenden Audiodaten, auf die Audiostreams verweisen, festzulegen und zu erhalten.                                   |
-| [**Iaudiomediastream**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiomediastream)             | Steuert audiomedienstreams durch Bereitstellen von Methoden, die das Format des Streams festlegen und erhalten.                                                                 |
-| [**Iaudiostreamsample**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiostreamsample)           | Ruft Informationen aus den zugrunde liegenden [**iaudiodata**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiodata) -Datenobjekten ab.                                                                |
-| [**Idirectdrawmediastream**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawmediastream)   | Steuert Mediendaten Ströme, die auf Microsoft® DirectDraw-® Oberflächen angezeigt werden.                                                                                  |
-| [**Idirectdrawstreamsample**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawstreamsample) | Stellt Methoden bereit, die Zeiger auf die dem aktuellen streambeispiel zugeordnete DirectDraw-Oberfläche festlegen und abrufen.                                    |
-| [**Imediastream**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imediastream)                       | Bietet Zugriff auf die Merkmale eines Mediendaten Stroms, z. b. den Medientyp und die Zweck-ID des Streams. Außerdem stehen Methoden zur Erstellung von Daten Beispielen zur Anwendung. |
-| [**Imediastreamfilter**](/previous-versions/windows/desktop/api/amstream/nn-amstream-imediastreamfilter)           | Wird vom Medienstrom Filter unterstützt, der intern vom multimediarestream-Objekt verwendet wird. .                                                       |
-| [**Imemorydata**](/previous-versions/windows/desktop/api/austream/nn-austream-imemorydata)                         | Enthält Methoden, die Arbeitsspeicher Daten für audiodatenobjekte festlegen und abrufen.                                                                               |
-| [**Imultimediastream**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imultimediastream)             | Stellt Methoden bereit, die einen Multimedia-Stream steuern und Zugriff auf die zugrunde liegenden Mediendaten Ströme ermöglichen.                                                   |
-| [**Istreamsample**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-istreamsample)                     | Bietet Kontrolle über das Verhalten von streambeispielen.                                                                                                   |
+| [**IAMMediaStream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediastream)                   | Verarbeitet die internen Verbindungen zwischen DirectShow-Filtern und Filterdiagrammen in Anwendungen, die Multimediastreaming verwenden.                            |
+| [**IAMMediaTypeSample**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypesample)           | Enthält Methoden zum Bearbeiten von Streambeispielen mit beliebigen Medientypen.                                                                            |
+| [**IAMMediaTypeStream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypestream)           | Enthält Methoden zum Erstellen von Multimediastreams mit beliebigen Medientypen.                                                                            |
+| [**IAMMultiMediaStream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammultimediastream)         | Macht DirectShow-Funktionen für Entwickler von Multimediastreams verfügbar.                                                                                       |
+| [**IAudioData**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiodata)                           | Stellt Methoden bereit, mit denen Anwendungen die zugrunde liegenden Audiodaten festlegen und abrufen können, auf die Audiostreams verweisen.                                   |
+| [**IAudioMediaStream**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiomediastream)             | Steuert Audiomedienstreams, indem Methoden zum Festlegen und Abrufen des Streamsformats zur Verfügung gestellt werden.                                                                 |
+| [**IAudioStreamSample**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiostreamsample)           | Ruft Informationen aus den zugrunde liegenden [**IAudioData-Datenobjekten**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiodata) ab.                                                                |
+| [**IDirectDrawMediaStream**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawmediastream)   | Steuert Medienstreams, die auf Microsoft® DirectDraw®-Oberflächen angezeigt werden.                                                                                  |
+| [**IDirectDrawStreamSample**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawstreamsample) | Stellt Methoden bereit, die Zeiger auf die DirectDraw-Oberfläche festlegen und abrufen, die dem aktuellen Streambeispiel zugeordnet ist.                                    |
+| [**IMediaStream**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imediastream)                       | Ermöglicht den Zugriff auf die Merkmale eines Medienstreams, z. B. den Medientyp und die Zweck-ID des Streams. Es verfügt auch über Methoden, die Datenbeispiele erstellen. |
+| [**IMediaStreamFilter**](/previous-versions/windows/desktop/api/amstream/nn-amstream-imediastreamfilter)           | Wird vom Media Stream-Filter unterstützt, der intern vom Multimediastreamobjekt verwendet wird. .                                                       |
+| [**IMemoryData**](/previous-versions/windows/desktop/api/austream/nn-austream-imemorydata)                         | Enthält Methoden, die Speicherdaten für Audiodatenobjekte festlegen und abrufen.                                                                               |
+| [**IMultiMediaStream**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imultimediastream)             | Stellt Methoden bereit, die einen Multimediastream steuern und Zugriff auf die zugrunde liegenden Medienstreams bereitstellen.                                                   |
+| [**IStreamSample**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-istreamsample)                     | Ermöglicht die Steuerung des Verhaltens von Streambeispielen.                                                                                                   |
 
 
 

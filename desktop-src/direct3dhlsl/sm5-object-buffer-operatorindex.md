@@ -1,9 +1,9 @@
 ---
-title: 'Buffer:: Operator-Funktion'
-description: 'Gibt eine schreibgeschützte Ressourcen Variable zurück. | Buffer:: Operator-Funktion'
+title: Buffer::Operator-Funktion
+description: Gibt eine schreibgeschützte Ressourcenvariable zurück. | Buffer::Operator-Funktion
 ms.assetid: 6a9e1176-439b-4565-9c7e-957d7c4045f0
 keywords:
-- Operator Funktion Direct Write
+- Operatorfunktion " Direct Write"
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0b811dd2409a00bb07f0b2441f6d57d4bd122f50
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6c2b89ec69fd81e4852be41521add3103b0b2e5472856cd6668f421ede46225a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104393906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790432"
 ---
-# <a name="bufferoperator--function"></a>Buffer:: Operator-Funktion
+# <a name="bufferoperator--function"></a>Buffer::Operator-Funktion
 
-Gibt eine schreibgeschützte Ressourcen Variable zurück.
+Gibt eine schreibgeschützte Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,15 +49,15 @@ Die Indexposition.
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Buffer](sm5-object-buffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

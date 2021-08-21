@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectShaderVariable GetPixelShader-Methode (D3dx11effect.h)
-description: Hier erhalten Sie einen Pixel-Shader.
+description: Abrufen eines Pixelshader.
 ms.assetid: 4ce4b248-23b9-4135-a2b4-262e63247688
 keywords:
 - GetPixelShader-Methode Direct3D 11
-- GetPixelShader-Methode Direct3D 11, ID3DX11EffectShaderVariable-Schnittstelle
+- GetPixelShader-Methode Direct3D 11 , ID3DX11EffectShaderVariable-Schnittstelle
 - ID3DX11EffectShaderVariable-Schnittstelle Direct3D 11 , GetPixelShader-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118533256"
 ---
 # <a name="id3dx11effectshadervariablegetpixelshader-method"></a>ID3DX11EffectShaderVariable::GetPixelShader-Methode
 
-Hier erhalten Sie einen Pixel-Shader.
+Abrufen eines Pixelshader.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -82,11 +82,11 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

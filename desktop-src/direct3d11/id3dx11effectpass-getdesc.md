@@ -78,7 +78,7 @@ Ein Durchlauf ist ein Codeblock, der Renderzustand und Shader festlegt (wodurch 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

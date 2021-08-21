@@ -1,10 +1,10 @@
 ---
-title: Iadsbacklink-Eigenschaften Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadsbacklink-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsBackLink-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsBackLink-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 0a66fa6d-1bf5-4ff0-8bbd-625a69cf9594
 ms.tgt_platform: multiple
 keywords:
-- Iadsbacklink-Eigenschaften Methoden ADSI
+- IADsBackLink-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c2220fff3a18b0822c0167b387ec10c324d95aa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d2834ac74faa78418abfe1d960e4355aa6fa0c14999783ad9dfa47389f38eb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691596"
 ---
-# <a name="iadsbacklink-property-methods"></a>Iadsbacklink-Eigenschaften Methoden
+# <a name="iadsbacklink-property-methods"></a>IADsBackLink-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**iadsbacklink**](/windows/desktop/api/Iads/nn-iads-iadsbacklink) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsBackLink-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsbacklink) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -39,14 +39,14 @@ Die-Eigenschaften Methode der [**iadsbacklink**](/windows/desktop/api/Iads/nn-ia
 **ObjectName**
 </dt> <dd> <dl>
 
-Der Name eines Objekts, an das das **Backlinkattribut** angefügt ist.
+Der Name eines Objekts, an das das **Back Link-Attribut** angefügt ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -67,14 +67,14 @@ HRESULT put_ObjectName(
 **RemoteID**
 </dt> <dd> <dl>
 
-Der Bezeichner des Remote Servers, der einen externen Verweis auf das durch **objectName** angegebene Objekt erfordert.
+Der Bezeichner des Remoteservers, der einen externen Verweis auf das durch **ObjectName** angegebene Objekt erfordert.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -102,20 +102,20 @@ HRESULT put_RemoteID(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsbacklink ist als FD1302BD-4080-11d1-A3AC-00C04FB950DC definiert.<br/>         |
+| IID<br/>                      | IID \_ IADsBackLink ist als FD1302BD-4080-11D1-A3AC-00C04FB950DC definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsBackLink**](/windows/desktop/api/Iads/nn-iads-iadsbacklink)
 </dt> <dt>
 
-[**anzeigen ( \_ Backlink)**](/windows/win32/api/iads/ns-iads-ads_backlink)
+[**ADS \_ BACKLINK**](/windows/win32/api/iads/ns-iads-ads_backlink)
 </dt> </dl>
 
  

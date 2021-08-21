@@ -1,31 +1,31 @@
 ---
-description: Die ExecuteAction-Aktion initiiert die Ausführungssequenz mithilfe der ExecuteAction-Eigenschaft, um zu bestimmen, welcher Installationstyp ausgeführt werden soll.
+description: Die ExecuteAction-Aktion initiiert die Ausführungssequenz mithilfe der EXECUTEACTION-Eigenschaft, um zu bestimmen, welcher Installationstyp ausgeführt werden soll.
 ms.assetid: 61878317-ac87-4f6e-9375-12a78969e29e
 title: ExecuteAction-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2970a0fb4e9297264071769ac7415cd2acf866b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20555af337f8774aec6c58769f2235da97ae763e044665e407a8dc29e75de750
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118636887"
 ---
 # <a name="executeaction-action"></a>ExecuteAction-Aktion
 
-Die ExecuteAction-Aktion initiiert die Ausführungssequenz mithilfe der [**ExecuteAction**](executeaction.md) -Eigenschaft, um zu bestimmen, welcher Installationstyp ausgeführt werden soll.
+Die ExecuteAction-Aktion initiiert die Ausführungssequenz mithilfe der [**EXECUTEACTION-Eigenschaft,**](executeaction.md) um zu bestimmen, welcher Installationstyp ausgeführt werden soll.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Diese Aktion sollte nacheinander ausgeführt werden, nachdem alle für den Beginn der Installation erforderlichen Informationen zum Sammeln von Informationen vollständig sind. Weitere Aktionen können nach der ExecuteAction-Aktion in der [Tabelle "InstallUISequence](installuisequence-table.md)" und der [Tabelle "AdminUISequence](adminuisequence-table.md)" sequenziert werden. Eine Sequenz beginnt in der Regel mit [*Kosten*](c-gly.md) Vorgängen, wie z. b. der [Aktion "costinitialize](costinitialize-action.md)", gefolgt von den Aktionen der Benutzeroberfläche und der ExecuteAction-Aktion.
+Diese Aktion sollte sequenziert werden, nachdem alle Informationen, die zum Starten der Installation erforderlich sind, abgeschlossen sind. Zusätzliche Aktionen können nach der ExecuteAction-Aktion in der [InstallUISequence-Tabelle](installuisequence-table.md)und der [AdminUISequence-Tabelle sequenziert werden.](adminuisequence-table.md) Eine Sequenz beginnt in [](c-gly.md) der Regel mit Kostenaktionen, z. B. der [CostInitialize-Aktion,](costinitialize-action.md)gefolgt von den Benutzeroberflächenaktionen und der ExecuteAction-Aktion.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die ExecuteAction-Aktion wird mit System Berechtigungen ausgeführt, wenn der Installer-Dienst aktiviert ist. Die Aktionen der obersten Ebene, z. b. [Installations Aktion](install-action.md), Ankündigungs [Aktion](advertise-action.md)und [Administrator Aktion](admin-action.md) , enthalten interne Logik, die bestimmt, ob das Aufrufen der ExecuteAction-Aktion erfordert, dass entweder die Ausführungssequenz oder die Benutzeroberflächen Sequenz ausgeführt wird.
+Die ExecuteAction-Aktion wird mit Systemberechtigungen ausgeführt, wenn der Installerdienst aktiviert ist. Die Aktionen der obersten Ebene, z. B. die [INSTALL-Aktion,](install-action.md)die [ADVERTISE-Aktion](advertise-action.md)und die [ADMIN-Aktion,](admin-action.md) enthalten interne Logik, die bestimmt, ob zum Aufrufen der ExecuteAction-Aktion die Ausführung der Ausführungssequenz oder der Benutzeroberflächensequenz erforderlich ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -37,7 +37,7 @@ Die ExecuteAction-Aktion wird mit System Berechtigungen ausgeführt, wenn der In
 [AdminUISequence-Tabelle](adminuisequence-table.md)
 </dt> <dt>
 
-[Costinitialize-Aktion](costinitialize-action.md)
+[CostInitialize-Aktion](costinitialize-action.md)
 </dt> </dl>
 
  

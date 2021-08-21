@@ -1,6 +1,6 @@
 ---
 title: bem - ps
-description: Wenden Sie eine Fake-Bump-Umgebungszuordnungstransformation an.
+description: Wenden Sie eine falsche Umgebungszuordnungstransformation an.
 ms.assetid: b41009d4-a2bb-4397-ad23-c95ef2620a66
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1adae07e3e2ebbca085981ca03a3b6449e2ffd9d
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: fdc28e6eaf71156504306b247a1a2a3797423f9a7e3bde6d4040ecb1297e09da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794821"
 ---
 # <a name="bem---ps"></a>bem - ps
 
-Wenden Sie eine Fake-Bump-Umgebungszuordnungstransformation an.
+Wenden Sie eine falsche Umgebungszuordnungstransformation an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ where
 -   src0 ist ein Quellregister.
 -   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

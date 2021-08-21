@@ -1,27 +1,27 @@
 ---
-description: Enthält Netzwerk Statistiken für die Netzwerkquelle.
+description: Enthält Netzwerkstatistiken für die Netzwerkquelle.
 ms.assetid: 1948481b-febd-434b-a5dc-faef592ea0ed
-title: MFNETSOURCE_STATISTICS-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_STATISTICS-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a09e6c0fe4697595ff3600135327ba093350e0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 822e9ae2e65170f3bf6e0f9ce065dd0ea5c62189a9a2b77fe2cd59beeb164248
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738567"
 ---
-# <a name="mfnetsource_statistics-property"></a>MF-Quell \_ Statistik (Eigenschaft)
+# <a name="mfnetsource_statistics-property"></a>MFNETSOURCE \_ STATISTICS-Eigenschaft
 
-Enthält Netzwerk Statistiken für die Netzwerkquelle.
+Enthält Netzwerkstatistiken für die Netzwerkquelle.
 
 ## <a name="data-type"></a>Datentyp
 
-Variiert siehe Hinweise.
+Variiert; siehe Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante mfnetsource- \_ Statistik definiert eine GUID, die in Verbindung mit der [**mfnetsource \_ Statistics \_ IDs**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_statistics_ids) -Enumeration verwendet wird, um einen Satz von Eigenschafts Schlüsseln zu definieren. Jeder Eigenschafts Schlüssel in der Menge hat **fmtid** gleich mfnetsource \_ Statistics und **PID** ist gleich einem Member der-Enumeration. Weitere Informationen finden Sie unter [**MF-Quell \_ Statistik- \_ IDs**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_statistics_ids).
+Die Konstante MFNETSOURCE STATISTICS definiert eine GUID, die in Verbindung mit der \_ [**MFNETSOURCE \_ STATISTICS \_ IDS-Enumeration**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_statistics_ids) verwendet wird, um einen Satz von Eigenschaftsschlüsseln zu definieren. Jeder Eigenschaftsschlüssel im Satz hat **fmtid** gleich MFNETSOURCE \_ STATISTICS und **pid** gleich einem Member der Enumeration. Weitere Informationen finden Sie unter [**MFNETSOURCE \_ STATISTICS \_ IDS**](/windows/desktop/api/mfidl/ne-mfidl-mfnetsource_statistics_ids).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,20 +29,20 @@ Die Konstante mfnetsource- \_ Statistik definiert eine GUID, die in Verbindung m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Protokollierung](client-logging.md)
+[Clientprotokollierung](client-logging.md)
 </dt> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

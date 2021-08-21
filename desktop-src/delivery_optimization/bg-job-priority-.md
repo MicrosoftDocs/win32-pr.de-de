@@ -1,6 +1,6 @@
 ---
-title: BG_JOB_PRIORITY-Enumeration (deliveryoptimization. h)
-description: Die BG_JOB_PRIORITY-Enumeration definiert die Konstanten Werte, die die Prioritätsstufe eines Auftrags angeben.
+title: BG_JOB_PRIORITY-Enumeration (Deliveryoptimization.h)
+description: Die BG_JOB_PRIORITY-Enumeration definiert die konstanten Werte, die die Prioritätsebene eines Auftrags angeben.
 ms.assetid: AF1F1F6D-473A-49E5-B24D-644A70DF304C
 keywords:
 - BG_JOB_PRIORITY-Enumeration
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 45b1f0f3029cc6157f2f100b3324165cfac1b03b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ddeb3ea128f173d53c71467d4098c1b777beea48f7b1304922f7468d55fc3b89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118810949"
 ---
 # <a name="bg_job_priority-enumeration"></a>BG_JOB_PRIORITY-Enumeration
 
-Die **BG_JOB_PRIORITY** -Enumeration definiert die Konstanten Werte, die die Prioritätsstufe eines Auftrags angeben.
+Die **BG_JOB_PRIORITY-Enumeration** definiert die konstanten Werte, die die Prioritätsebene eines Auftrags angeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,34 +48,34 @@ typedef enum  {
 <span id="BG_JOB_PRIORITY_FOREGROUND"></span><span id="bg_job_priority_foreground"></span>**BG_JOB_PRIORITY_FOREGROUND**
 </dt> <dd>
 
-Überträgt den Auftrag im Vordergrund. Vordergrund Übertragungen konkurrieren an der Netzwerkbandbreite mit anderen Anwendungen, die die Netzwerkleistung des Benutzers beeinträchtigen können. Dies ist die höchste Prioritätsstufe.
+Überträgt den Auftrag im Vordergrund. Vordergrundübertragungen konkurrieren um Netzwerkbandbreite mit anderen Anwendungen, was die Netzwerkerfahrung des Benutzers beeinträchtigen kann. Dies ist die höchste Prioritätsstufe.
 
 </dd> <dt>
 
 <span id="BG_JOB_PRIORITY_HIGH"></span><span id="bg_job_priority_high"></span>**BG_JOB_PRIORITY_HIGH**
 </dt> <dd>
 
-Überträgt den Auftrag im Hintergrund. Bei Hintergrund Übertragungen wird ein kleiner Prozentsatz der Netzwerkbandbreite verwendet.
+Überträgt den Auftrag im Hintergrund. Hintergrundübertragungen verwenden einen kleinen Prozentsatz der Netzwerkbandbreite.
 
 </dd> <dt>
 
 <span id="BG_JOB_PRIORITY_NORMAL"></span><span id="bg_job_priority_normal"></span>**BG_JOB_PRIORITY_NORMAL**
 </dt> <dd>
 
-Do-Verhalten ist für alle nicht-Vordergrund-Aufträge identisch. Ausführliche Informationen finden Sie in den Kommentaren in BG_JOB_PRIORITY_HIGH.
+Das DO-Verhalten ist für alle Nicht-Vordergrund-Aufgaben identisch. Weitere Informationen finden Sie in den Kommentaren in BG_JOB_PRIORITY_HIGH.
 
 </dd> <dt>
 
 <span id="BG_JOB_PRIORITY_LOW"></span><span id="bg_job_priority_low"></span>**BG_JOB_PRIORITY_LOW**
 </dt> <dd>
 
-Do-Verhalten ist für alle nicht-Vordergrund-Aufträge identisch. Ausführliche Informationen finden Sie in den Kommentaren in BG_JOB_PRIORITY_HIGH.
+Das DO-Verhalten ist für alle Nicht-Vordergrund-Aufgaben identisch. Weitere Informationen finden Sie in den Kommentaren in BG_JOB_PRIORITY_HIGH.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mehrere Vordergrund-und Hintergrund Übertragungen können gleichzeitig stattfinden.
+Mehrere Vordergrund- und Hintergrundübertragungen können gleichzeitig erfolgen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,20 +83,20 @@ Mehrere Vordergrund-und Hintergrund Übertragungen können gleichzeitig stattfin
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibackgroundcopyjob:: GetPriority**](ibackgroundcopyjob-getpriority.md)
+[**IBackgroundCopyJob::GetPriority**](ibackgroundcopyjob-getpriority.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: SetPriority**](ibackgroundcopyjob-setpriority.md)
+[**IBackgroundCopyJob::SetPriority**](ibackgroundcopyjob-setpriority.md)
 </dt> </dl>
 
  

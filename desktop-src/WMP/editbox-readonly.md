@@ -1,9 +1,9 @@
 ---
-title: EditBox. schreibgeschützt
-description: Mit dem Attribut "schreibgeschützt" wird ein Wert angegeben oder abgerufen, der angibt, ob der Text im Bearbeitungsfeld-Steuerelement schreibgeschützt ist oder bearbeitet werden kann.
+title: EDITBOX.readOnly
+description: Das readOnly-Attribut gibt einen Wert an, der angibt, ob Text im Bearbeitungsfeld-Steuerelement schreibgeschützt ist oder bearbeitet werden kann, oder ruft diesen ab.
 ms.assetid: ca0eb270-1903-4a6c-a0d4-2b416d02a9bd
 keywords:
-- EditBox. Schreib geschützter Windows-Media Player
+- EDITBOX.readOnly Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e374f795afcbd0fc4610b0a2a283ea4f310bcb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aae8da0acfaefd2be55b3730bcf74d0ee8ee004120b2701790b502ca13a8660f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118838764"
 ---
-# <a name="editboxreadonly"></a>EditBox. schreibgeschützt
+# <a name="editboxreadonly"></a>EDITBOX.readOnly
 
-Mit **dem Attribut** "schreibgeschützt" wird ein Wert angegeben oder abgerufen, der angibt, ob der Text im Bearbeitungsfeld-Steuerelement schreibgeschützt ist oder bearbeitet werden kann.
+Das **readOnly-Attribut** gibt einen Wert an, der angibt, ob Text im Bearbeitungsfeld-Steuerelement schreibgeschützt ist oder bearbeitet werden kann, oder ruft diesen ab.
 
 ``` syntax
         elementID.readOnly
@@ -29,7 +29,7 @@ Mit **dem Attribut** "schreibgeschützt" wird ein Wert angegeben oder abgerufen,
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff mit dem Standardwert false.
+Dieses Attribut ist ein boolescher Wert für **Lese-/Schreibzugriff** mit dem Standardwert false.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff mit dem Sta
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> </dl>
 
  

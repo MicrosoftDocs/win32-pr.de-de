@@ -37,7 +37,7 @@ Dieses Attribut sollte auf einen der Werte in der folgenden Tabelle festgelegt w
 
 
 
-| GUID der sekundären Klasse                   | BESCHREIBUNG                                                                                                                                                                             |
+| GUID der sekundären Klasse                   | Beschreibung                                                                                                                                                                             |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | "E0236BEB-C281-4EDE-A36D-7AF76A3D45B5" | Verwenden Sie für Audiobuchdateien.                                                                                                                                                               |
 | "3A172A13-2BD9-4831-835B-114F6A95943F" | Wird für Audiodateien verwendet, die gesprochenes Wort enthalten, aber keine Audiobücher sind. Beispiel: Stand-Up-Routinen.                                                                           |
@@ -60,7 +60,7 @@ Dieses Attribut sollte auf einen der Werte in der folgenden Tabelle festgelegt w
 
 Wenn Sie einen bezeichner der sekundären Klasse angeben, sollte die Datei auch ein Primäres Klassenbezeichnerattribut enthalten.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

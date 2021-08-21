@@ -1,9 +1,9 @@
 ---
-title: Slider. BackgroundImage
-description: Das BackgroundImage-Attribut gibt das Hintergrundbild des Schiebereglers an oder ruft es ab.
+title: SLIDER.backgroundImage
+description: Das backgroundImage-Attribut gibt das Hintergrundbild des Schiebereglers an oder ruft es ab.
 ms.assetid: 73757635-4d1c-4ed0-8721-0608cd85859c
 keywords:
-- Slider. BackgroundImage-Fenster Media Player
+- SLIDER.backgroundImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1188756c16b13bef69dfd0bcd9a5b66560856f99
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4b2c4f6d31e3f870541310b23544a15c7b9af0043014a9013310cea7dd4ee072
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118832997"
 ---
-# <a name="sliderbackgroundimage"></a>Slider. BackgroundImage
+# <a name="sliderbackgroundimage"></a>SLIDER.backgroundImage
 
-Das **BackgroundImage** -Attribut gibt das Hintergrundbild des Schiebereglers an oder ruft es ab.
+Das **backgroundImage-Attribut** gibt das Hintergrundbild des Schiebereglers an oder ruft es ab.
 
 ``` syntax
         elementID.backgroundImage
@@ -29,17 +29,17 @@ Das **BackgroundImage** -Attribut gibt das Hintergrundbild des Schiebereglers an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen einer Bilddatei enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die den Namen einer Bilddatei enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist optional. Wenn Sie Bilder zum Erstellen eines Schiebereglers verwenden, wird **BackgroundImage** für den hauptschiebe Regler verwendet. " **Thumbimage** " stellt den tatsächlichen Schieberegler dar und kann mit der Maus verschoben werden. Im Schieberegler " **thumbimage** " gibt es eine unsichtbare Zeile, in der das Hintergrundbild auf einer Seite der Zeile angezeigt wird, und das Vordergrundbild wird auf der anderen Seite angezeigt.
+Dieses Attribut ist optional. Wenn Bilder zum Erstellen eines Schiebereglers verwendet werden, wird **backgroundImage** für das Hauptbild des Schiebereglers verwendet. **ThumbImage** stellt den tatsächlichen Schieberegler dar und kann mit der Maus verschoben werden. Am **ThumbImage-Schieberegler** befindet sich eine unsichtbare Linie, in der das Hintergrundbild auf einer Seite der Zeile und das Vordergrundbild auf der anderen Seite angezeigt wird.
 
-Wenn der Schieberegler " **thumbimage** " mit der Maus bewegt wird und " **Folie** " auf "true" festgelegt ist, wird das Vordergrundbild so bewegt, als ob es vom Schieberegler abgerufen wird, um das Hintergrundbild abzudecken. Wenn **Folie** auf false festgelegt ist, wird das Vordergrundbild nicht verschoben, sondern direkt angezeigt, als ob der Schieberegler das Hintergrundbild aus dem Vordergrundbild verschiebt.
+Wenn  der ThumbImage-Schieberegler mit der Maus bewegt wird und **der Schieberegler** auf TRUE festgelegt ist, wird das Vordergrundbild so verschoben, als würde es vom Schieberegler zum Abdecken des Hintergrundbilds gezogen. Wenn **slide** auf FALSE festgelegt ist, wird das Vordergrundbild nicht verschoben, sondern an Ort und Stelle angezeigt, als würde der Schieberegler das Hintergrundbild vom Vordergrundbild verschieben.
 
-Wenn das **Kachel** Attribut auf "true" festgelegt ist und das Hintergrundbild kleiner als das Schieberegler-Steuerelement ist, wird das Bild abhängig vom **Direction** -Attribut entweder horizontal oder vertikal gekachelt. Wenn das **BorderSize** -Attribut auf einen Wert größer als 0 (null) festgelegt ist, ist die angegebene Zahl die Anzahl der Pixel von links nach rechts oder oben und unten im Bild (abhängig vom **Direction** -Attribut), die für die Rahmen des Schieberegler-Steuer Elements reserviert werden. In diesem Fall wird nur der zentrale Teil des Bilds zum Durchsuchen des restlichen Steuer Elements verwendet.
+Wenn das **gekachelte** Attribut auf TRUE festgelegt ist und das Hintergrundbild kleiner als das Schieberegler-Steuerelement ist, wird das Bild je nach **Richtungsattribut** entweder horizontal oder vertikal gekachelt. Wenn das **borderSize-Attribut** auf einen Wert größer als 0 (null) festgelegt ist, entspricht die angegebene Anzahl der Pixel links und rechts oder oben und unten im Bild (je nach Richtungsattribut), die für die Rahmen des Schieberegler-Steuerelements reserviert werden.  In diesem Fall wird nur der zentrale Teil des Bilds zum Kacheln des Rests des Steuerelements verwendet.
 
-Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
+Die unterstützten Formate sind BMP, JPG, PNG und GIF (ohne animierte GIFs).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -55,16 +55,16 @@ Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. foregroundimage**](slider-foregroundimage.md)
+[**SLIDER.foregroundImage**](slider-foregroundimage.md)
 </dt> <dt>
 
-[**Schieberegler. Folie**](slider-slide.md)
+[**SLIDER.slide**](slider-slide.md)
 </dt> <dt>
 
-[**Slider. thumbimage**](slider-thumbimage.md)
+[**SLIDER.thumbImage**](slider-thumbimage.md)
 </dt> </dl>
 
  

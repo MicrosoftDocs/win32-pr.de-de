@@ -1,7 +1,7 @@
 ---
-description: Die Modulefiles-Eigenschaft des GetFiles-Objekts gibt alle Primärschlüssel der Dateitabelle für das aktuell geöffnete Modul zurück.
+description: Die ModuleFiles-Eigenschaft des GetFiles-Objekts gibt alle Primärschlüssel der File-Tabelle für das derzeit geöffnete Modul zurück.
 ms.assetid: e1c8049c-b271-4def-abde-89ea99393574
-title: GetFiles. Modulefiles-Eigenschaft (Mergemod. h)
+title: GetFiles.ModuleFiles-Eigenschaft (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: d13d624f2cfb24bfa6946ca6c45fe799602f55b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b4b7d498979c94de048e72058df4c8bf87fb8607220efe808554d66deb5d89ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118635940"
 ---
-# <a name="getfilesmodulefiles-property"></a>GetFiles. Modulefiles (Eigenschaft)
+# <a name="getfilesmodulefiles-property"></a>GetFiles.ModuleFiles (Eigenschaft)
 
-Die **Modulefiles** -Eigenschaft des [**GetFiles**](getfiles-object.md) -Objekts gibt alle Primärschlüssel der [Dateitabelle](file-table.md) für das aktuell geöffnete Modul zurück. Die Primärschlüssel werden als eine Auflistung von Zeichen folgen zurückgegeben. Das Modul muss durch einen Aufruf der [**OpenModule**](merge-openmodule.md) -Methode des [Merge-Objekts](merge-object.md) geöffnet werden, bevor **Modulefiles** aufgerufen wird.
+**Die ModuleFiles-Eigenschaft** des [**GetFiles-Objekts**](getfiles-object.md) gibt alle Primärschlüssel der [File-Tabelle](file-table.md) für das derzeit geöffnete Modul zurück. Die Primärschlüssel werden als Auflistung von Zeichenfolgen zurückgegeben. Das Modul muss durch einen Aufruf der [**OpenModule-Methode**](merge-openmodule.md) des [Merge-Objekts geöffnet werden,](merge-object.md) bevor **ModuleFiles aufruft.**
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -38,15 +38,15 @@ propVal = GetFiles.ModuleFiles
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die Reihenfolge der in der Auflistung aufgelisteten Dateien möglicherweise nicht in derselben Reihenfolge wie in der Dateitabelle aufgeführt ist.
+Beachten Sie, dass die Reihenfolge der in der Auflistung aufgelisteten Dateien möglicherweise nicht in der gleichen Reihenfolge wie in der Tabelle Datei aufgeführt ist.
 
-Wenn das Modul keine Dateitabelle hat oder keine Dateien in der jeweiligen Sprache enthält, gibt Modulefiles eine leere Auflistung von Zeichen folgen zurück.
+Wenn das Modul keine Dateitabelle enthält oder keine Dateien in der jeweiligen Sprache enthält, gibt ModuleFiles eine leere Auflistung von Zeichenfolgen zurück.
 
 ### <a name="c"></a>C++
 
-Weitere Informationen finden [**Sie unter Get \_ Modulefiles**](/windows/win32/api/mergemod/nf-mergemod-imsmgetfiles-get_modulefiles) function.
+Siehe [**get \_ ModuleFiles-Funktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmgetfiles-get_modulefiles)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Weitere Informationen finden [**Sie unter Get \_ Modulefiles**](/windows/win32/a
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

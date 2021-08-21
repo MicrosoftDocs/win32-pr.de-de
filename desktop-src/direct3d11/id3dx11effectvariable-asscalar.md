@@ -69,7 +69,7 @@ Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem [**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

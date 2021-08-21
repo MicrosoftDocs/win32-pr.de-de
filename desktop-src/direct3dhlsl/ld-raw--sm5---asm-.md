@@ -1,23 +1,23 @@
 ---
-title: ld_raw (SM5-ASM)
-description: Zufälliger Zugriffs Lesevorgang von 1-4 32-Bit-Komponenten aus einem RAW-Puffer.
+title: ld_raw (sm5 - asm)
+description: Random-access read of 1-4 32bit components from a raw buffer (Zufälliger Zugriff von 1-4 32-Bit-Komponenten aus einem Rohdatenpuffer).
 ms.assetid: F7DBA80D-4DD5-4271-B571-24FB6188ABFE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd4a9480ef60098b394e0eff2b06043fd9a32e45
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 85fd8ec84b574d506a02812b20f4728e3f7a996ec76ad8569645d4c1643b0ec6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118511090"
 ---
-# <a name="ld_raw-sm5---asm"></a>LD \_ RAW (SM5-ASM)
+# <a name="ld_raw-sm5---asm"></a>ld \_ raw (sm5 - asm)
 
-Zufälliger Zugriffs Lesevorgang von 1-4 32-Bit-Komponenten aus einem RAW-Puffer.
+Random-access read of 1-4 32bit components from a raw buffer (Zufälliger Zugriff von 1-4 32-Bit-Komponenten aus einem Rohdatenpuffer).
 
 
 
-| LD \_ RAW dst0 \[ . mask \] , srcbyteoffset \[ . Select \_ Component \] , src0 \[ . Swizzle\] |
+| ld \_ raw dst0 \[ .mask , \] srcByteOffset \[ .select component , \_ \] src0 \[ .swizzle\] |
 |------------------------------------------------------------------------------|
 
 
@@ -26,27 +26,27 @@ Zufälliger Zugriffs Lesevorgang von 1-4 32-Bit-Komponenten aus einem RAW-Puffer
 
 
 
-| Element                                                                                                                       | BESCHREIBUNG                                                   |
+| Element                                                                                                                       | Beschreibung                                                   |
 |----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] der Adresse des Vorgangs Ergebnisses.<br/> |
-| <span id="srcByteOffset"></span><span id="srcbyteoffset"></span><span id="SRCBYTEOFFSET"></span>*srcbyteoffset*<br/> | \[in \] gibt den Offset an, aus dem gelesen werden soll.<br/>          |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | \[in \] der zu lesenden Komponente. <br/>                     |
+| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                            | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
+| <span id="srcByteOffset"></span><span id="srcbyteoffset"></span><span id="SRCBYTEOFFSET"></span>*srcByteOffset*<br/> | \[in \] Gibt den Offset an, aus dem gelesen werden soll.<br/>          |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                            | \[in \] Die zu lesende Komponente. <br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-*src0* muss Folgendes sein:
+*src0* muss:
 
--   Beliebige Shader-Stufe: SRV (t \# ) LD St
+-   Beliebige Shaderstufe: SRV (t \# )ld st
 -   Compute-Shader oder Pixel-Shader: UAV (u \# )
--   Compute-Shader: Thread Gruppe Shared Memory (g \# )
+-   Compute-Shader: freigegebener Threadgruppenspeicher (g \# )
 
-*srcbyteoffset* gibt den 32-Bit-Basis Wert im Arbeitsspeicher für ein Fenster von 4 sequenziellen 32-Bit-Werten an, in denen Daten möglicherweise gelesen werden, je nach dem flüchtigen und der Maske anderer Parameter.
+*srcByteOffset* gibt den 32-Bit-Basiswert im Arbeitsspeicher für ein Fenster mit 4 sequenziellen 32-Bit-Werten an, in dem Daten gelesen werden können, je nach Swizzle und Maske für andere Parameter.
 
-Die aus dem RAW-Puffer gelesenen Daten entsprechen dem folgenden Pseudo Code:, wobei der Offset, die Adresse, der Zeiger auf den Pufferinhalt, der Stride der Quelle und die Daten linear gespeichert werden.
+Die aus dem Rohdatenpuffer gelesenen Daten entsprechen dem folgenden Pseudocode: hier sind offset, address, zeiger auf den Pufferinhalt, stride der Quelle und die daten linear gespeichert.
 
 ``` syntax
                     BYTE *BufferContents;         // from src0
@@ -64,17 +64,17 @@ Die aus dem RAW-Puffer gelesenen Daten entsprechen dem folgenden Pseudo Code:, w
                     ApplyWriteMask(dstRegister, dstWriteMask, Temp);
 ```
 
-Die Out-of-Bounds-Adressierung für u \# /t \# einer bestimmten 32-Bit-Komponente gibt 0 für diese Komponente zurück.
+Die Adressierung von "out of bounds" für u /t einer bestimmten \# \# 32-Bit-Komponente gibt 0 für diese Komponente zurück.
 
-Die Adressierung auf g \# (die Begrenzungen dieses bestimmten g \# , im Gegensatz zum gesamten Shared Memory) für eine bestimmte 32-Bit-Komponente gibt ein nicht definiertes Ergebnis zurück.
+Die Adressierung für g (die Grenzen dieses bestimmten g im Gegensatz zum freigegebenen Speicher) für eine bestimmte \# 32-Bit-Komponente gibt ein nicht definiertes \# Ergebnis zurück.
 
-CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen diese Anweisung für UAV und SRV.
+cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützen diese Anweisung für UAV und SRV.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -82,11 +82,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für UAVs für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für UAVs für die Direct3D 11.1-Runtime, die ab Windows 8.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -94,26 +94,26 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
  
 
-CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen diese Anweisung für UAV und SRV.
+cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützen diese Anweisung für UAV und SRV.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

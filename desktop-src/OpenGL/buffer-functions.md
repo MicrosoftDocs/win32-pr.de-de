@@ -15,18 +15,18 @@ ms.locfileid: "118618595"
 ---
 # <a name="buffer-functions"></a>Pufferfunktionen
 
-Um den Inhalt eines Off-Screen-Puffers in einen Bildschirmpuffer zu kopieren, rufen [**Sie SwapBuffers auf.**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers) Die **SwapBuffers-Funktion** verwendet ein Handle für einen Gerätekontext. Das aktuelle Pixelformat für den angegebenen Gerätekontext muss einen Hintergrundpuffer enthalten. Standardmäßig ist der Hintergrundpuffer nicht auf dem Bildschirm und der Frontpuffer auf dem Bildschirm.
+Um den Inhalt eines Off-Screen-Puffers in einen Bildschirmpuffer zu kopieren, rufen Sie [**SwapBuffers auf.**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers) Die **SwapBuffers-Funktion** verwendet ein Handle für einen Gerätekontext. Das aktuelle Pixelformat für den angegebenen Gerätekontext muss einen Hintergrundpuffer enthalten. Standardmäßig befindet sich der Hintergrundpuffer außerhalb des Bildschirms und der Frontpuffer auf dem Bildschirm.
 
 > [!Note]  
-> Die **SwapBuffers-Funktion** tauscht nicht wirklich den Inhalt der beiden Puffer aus, sondern kopiert den Inhalt eines Puffers in einen anderen. Der Inhalt des Off-Screen-Puffers ist nach einem Aufruf von **SwapBuffers nicht definiert.** Daher ist das Ergebnis von zwei aufeinander folgenden Aufrufen von **SwapBuffers** nicht definiert.
+> Die **SwapBuffers-Funktion tauscht** den Inhalt der beiden Puffer nicht wirklich aus, sondern kopiert den Inhalt eines Puffers in einen anderen. Der Inhalt des Off-Screen-Puffers ist nach einem Aufruf von **SwapBuffers** nicht definiert. Daher ist das Ergebnis von zwei aufeinanderfolgenden Aufrufen von **SwapBuffers** nicht definiert.
 
  
 
-Die folgende Abbildung zeigt, wie der Inhalt der Puffer beim Aufrufen von **SwapBuffers kopiert wird.**
+Die folgende Abbildung zeigt, wie der Inhalt der Puffer beim Aufrufen von **SwapBuffers** kopiert wird.
 
-![Diagramm, das die nicht definierten Ergebnisse aufeinanderfolgender Aufrufe der SwapBuffers-Funktion zeigt.](images/opengl00.png)
+![Diagramm der nicht definierten Ergebnisse aufeinanderfolgender Aufrufe der SwapBuffers-Funktion.](images/opengl00.png)
 
-Mehrere OpenGL-Kernfunktionen verwalten auch Puffer. Die [**glDrawBuffer-Funktion**](gldrawbuffer.md) ist die funktion, die für die doppelte Pufferung am relevantesten ist. sie gibt den Framepuffer oder die Puffer an, in die OpenGL zeichnet.
+Mehrere OpenGL-Kernfunktionen verwalten auch Puffer. Die [**glDrawBuffer-Funktion**](gldrawbuffer.md) ist die funktion, die für die doppelte Pufferung am relevantesten ist. gibt den Framepuffer oder die Puffer an, in die OpenGL zeichnet.
 
 Die folgenden Funktionen wirken sich auch auf Puffer aus:
 

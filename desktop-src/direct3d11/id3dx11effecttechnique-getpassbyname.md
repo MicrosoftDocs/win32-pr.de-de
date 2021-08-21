@@ -1,10 +1,10 @@
 ---
 title: ID3DX11EffectTechnique GetPassByName-Methode (D3dx11effect.h)
-description: Erhalten Sie einen Pass nach Name.
+description: Abrufen eines Durchlaufs anhand des Namens.
 ms.assetid: 07c7502e-2af9-4898-8cd4-106d6814fb85
 keywords:
 - GetPassByName-Methode Direct3D 11
-- GetPassByName-Methode Direct3D 11, ID3DX11EffectTechnique-Schnittstelle
+- GetPassByName-Methode Direct3D 11 , ID3DX11EffectTechnique-Schnittstelle
 - ID3DX11EffectTechnique-Schnittstelle Direct3D 11 , GetPassByName-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118532362"
 ---
 # <a name="id3dx11effecttechniquegetpassbyname-method"></a>ID3DX11EffectTechnique::GetPassByName-Methode
 
-Erhalten Sie einen Pass nach Name.
+Abrufen eines Durchlaufs anhand des Namens.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ ID3DX11EffectPass* GetPassByName(
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Name des Durchgangs.
+Der Name des Durchlaufs.
 
 </dd> </dl>
 
@@ -56,14 +56,14 @@ Der Name des Durchgangs.
 
 Typ: **[ **ID3DX11EffectPass**](id3dx11effectpass.md)\***
 
-Ein Zeiger auf eine [**ID3DX11EffectPass.**](id3dx11effectpass.md)
+Ein Zeiger auf einen [**ID3DX11EffectPass.**](id3dx11effectpass.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Technik enthält einen oder mehrere Durchläufe. einen Pass mit einem Namen oder Index erhalten.
+Eine Technik enthält einen oder mehrere Durchläufe. Abrufen eines Durchlaufs mithilfe eines Namens oder Indexes.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -74,11 +74,11 @@ Eine Technik enthält einen oder mehrere Durchläufe. einen Pass mit einem Namen
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

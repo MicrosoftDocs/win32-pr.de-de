@@ -1,23 +1,23 @@
 ---
-description: Gibt die maximale Latenzzeit für den Decoder in Millisekunden an.
+description: Gibt die maximale Latenz für den Decoder in Millisekunden an.
 ms.assetid: c4452c29-2d06-4c71-b960-26c805c29227
-title: MFPKEY_MAXDECLATENCYMS-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_MAXDECLATENCYMS-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2330278788736e7ca71538b583346f11c817a85f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1b5aa867df416c91b7fe747a0177d92d278ab02e191a542b7ee21fdf814e103
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864151"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118737876"
 ---
-# <a name="mfpkey_maxdeclatencyms-property"></a>Mfpkey \_ maxdeclatencyms (Eigenschaft)
+# <a name="mfpkey_maxdeclatencyms-property"></a>MFPKEY \_ MAXDECLATENCYMS-Eigenschaft
 
-Gibt die maximale Latenzzeit für den Decoder in Millisekunden an.
+Gibt die maximale Latenz für den Decoder in Millisekunden an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,20 +29,20 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mfpkey- \_ einschränkeyclatency (Eigenschaft)**](mfpkey-constraindeclatencyproperty.md)
+[**MFPKEY \_ CONSTRAINDECLATENCY-Eigenschaft**](mfpkey-constraindeclatencyproperty.md)
 </dt> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

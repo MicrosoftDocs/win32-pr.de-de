@@ -1,6 +1,6 @@
 ---
 title: patchconstantfunc
-description: Definiert die Funktion zum Berechnen von Patch-konstantendaten.
+description: Definiert die Funktion zum Berechnen von Patchkonstantendaten.
 ms.assetid: aee99055-7258-458f-8677-bb79e305dd79
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 455a10e8af567cf7c1adbf569700b00f769ef512
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3d7c6b0e7820742356c00a47d928f5fe69a4b968b075f0f92c688216455532f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790661"
 ---
 # <a name="patchconstantfunc"></a>patchconstantfunc
 
-Definiert die Funktion zum Berechnen von Patch-konstantendaten.
+Definiert die Funktion zum Berechnen von Patchkonstantendaten.
 
 
 ```
@@ -27,35 +27,35 @@ patchconstantfunc("function_name")
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-der *Funktions \_ Name* ist der Name einer separaten Funktion, die die Patch-konstantendaten ausgibt.
+*\_ Funktionsname* ist der Name einer separaten Funktion, die die Patchkonstantendaten ausgibt.
 
-Dieses Attribut wird in den folgenden Typen von Shadern unterstützt:
+Dieses Attribut wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader Model 5-Attribute](d3d11-graphics-reference-sm5-attributes.md)
+[Shadermodell 5-Attribute](d3d11-graphics-reference-sm5-attributes.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

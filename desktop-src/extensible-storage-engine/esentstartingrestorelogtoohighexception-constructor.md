@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentstartingrestorelogdeohighexception-Konstruktor'
-title: Esentstartingrestorelogdeohighexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentStartingRestoreLogTooHighException-Konstruktor'
+title: EsentStartingRestoreLogTooHighException-Konstruktor
 TOCTitle: 'EsentStartingRestoreLogTooHighException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentStartingRestoreLogTooHighException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentstartingrestorelogtoohighexception.esentstartingrestorelogtoohighexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 29e49aa99d30d2bb1812fab244e25d78c1305441
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3cf57514a3f2bd9722cbf4bc7f594bb0ca1c5a4e33dc01446a30d9ad3ee7618d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118769816"
 ---
-# <a name="esentstartingrestorelogtoohighexception-constructor"></a>Esentstartingrestorelogdeohighexception-Konstruktor
+# <a name="esentstartingrestorelogtoohighexception-constructor"></a>EsentStartingRestoreLogTooHighException-Konstruktor
 
-Initialisiert eine neue Instanz der esentstartingrestorelogdeohighexception-Klasse.
+Initialisiert eine neue Instanz der EsentStartingRestoreLogTooHighException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentStartingRestoreLogTooHighException()
 public EsentStartingRestoreLogTooHighException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentstartingrestorelogdeohighexception-Klasse](./esentstartingrestorelogtoohighexception-class.md)
+[EsentStartingRestoreLogTooHighException-Klasse](./esentstartingrestorelogtoohighexception-class.md)
 
-[Esentstartingrestorelogesohighexception-Member](./esentstartingrestorelogtoohighexception-members.md)
+[EsentStartingRestoreLogTooHighException-Member](./esentstartingrestorelogtoohighexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

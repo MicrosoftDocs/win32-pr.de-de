@@ -1,25 +1,25 @@
 ---
-title: Beispiel für Schaltflächen Bereich
-description: Beispiel für Schaltflächen Bereich
+title: Abschnitt "Beispielschaltfläche"
+description: Abschnitt "Beispielschaltfläche"
 ms.assetid: 52358f83-8c74-4957-87c4-ca1ed7f667fc
 keywords:
-- Windows Media Player Mobile Skins, Schaltflächen Bereich
-- Skins, Schaltflächen Abschnitt
-- Verweis für Skins, Schaltflächen Abschnitt
-- Schaltflächen in Skins, Schaltflächen Abschnitt
-- Skin-Definitions Dateien, Schaltflächen Abschnitt
+- Windows Media Player Mobile Skins, Abschnitt "Schaltfläche"
+- Skins, Abschnitt "Schaltfläche"
+- Referenz für Skins, Abschnitt "Schaltfläche"
+- Schaltflächen in Skins, Abschnitt "Schaltfläche"
+- Skindefinitionsdateien, Abschnitt "Schaltfläche"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c35a4efd0e52dd7f5fd0cf87fc269eb4a9f4c27
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 20c69d57248664808062c2f6e0d3f9d331edd7cd0f07085ec76fc51a1960817d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118833384"
 ---
-# <a name="sample-button-section"></a>Beispiel für Schaltflächen Bereich
+# <a name="sample-button-section"></a>Abschnitt "Beispielschaltfläche"
 
-Die folgenden Zeilen zeigen einen typischen Schaltflächen Abschnitt einer Skin-Definitionsdatei:
+Die folgenden Zeilen zeigen einen typischen Schaltflächenabschnitt einer Skindefinitionsdatei:
 
 
 ```C++
@@ -40,18 +40,18 @@ Die folgenden Zeilen zeigen einen typischen Schaltflächen Abschnitt einer Skin-
 
 
 
-Dieser Code definiert acht Schaltflächen, die für die Bereitstellung aller der folgenden Funktionen in einem Skin verwendet werden:
+Dieser Code definiert acht Schaltflächen, die verwendet werden, um alle folgenden Funktionen in einer Skin zur Verfügung zu stellen:
 
--   Wiedergeben, anhalten und stoppen von Medien Elementen.
--   Ummischen, wiederholen und durchlaufen der Wiedergabeliste.
--   Das Volume wird stumm geschaltet.
+-   Wiedergabe, Pause und Beenden von Medienelementen.
+-   Shuffle, Repeat und Move Through der Wiedergabeliste.
+-   Stummschalten des Volumes.
 
-Alle Schaltflächen außer der Schaltfläche stumm Schaltung sind Regions Schaltflächen. Die Schaltfläche stumm Schaltung Ruft die per pushübertragung und deaktivierten Bilder aus dem Super Bitmap aus.
+Alle Schaltflächen außer der Stummschaltfläche sind Bereichschaltflächen. Die Stummschaltfläche ruft der Einfachheit halber die Bilder Pushed und Disabled aus der Super-Bitmap ab.
 
 > [!Note]  
-> Schaltflächen Typen sind in Skins für Windows Media Player 10 Mobile oder höher veraltet. Geben Sie anstelle eines in der Skin-Datei deklarierten Schaltflächen Typs für jeden Typ "na" ein.
+> Schaltflächentypen sind in Skins für Windows Media Player 10 Mobile oder höher veraltet. Geben Sie anstelle eines Schaltflächentyps, der in Ihrer Skindatei deklariert ist, "NA" für jeden Typ ein.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -60,9 +60,9 @@ Alle Schaltflächen außer der Schaltfläche stumm Schaltung sind Regions Schalt
 [**Schaltflächen**](buttons.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

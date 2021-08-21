@@ -22,10 +22,10 @@ ms.locfileid: "118744201"
 ---
 # <a name="span-idwwan_profile_v4schema_rootspanmobile-broadband-profile-schema-v4"></a><span id="WWAN_profile_v4.Schema_Root"></span>Mobiles Breitbandprofilschema v4
 
-Das Windows 10Mobiles Breitbandprofilschema v4 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v4` verfügbar.
+Das Windows 10Mobile Broadband Profile Schema v4 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v4` verfügbar.
 
--   [Schema v4-Elemente für mobile Breitbandprofile](root-elements.md)
--   [Einfache Typen des Schemas für mobile Breitbandprofile v4](simple-types.md)
+-   [Elemente des Mobilen Breitbandprofilschemas v4](root-elements.md)
+-   [Mobiles Breitbandprofilschema v4 – einfache Typen](simple-types.md)
 
 ``` syntax
 <xs:schema targetNamespace="https://www.microsoft.com/networking/WWAN/profile/v4"

@@ -1,23 +1,23 @@
 ---
-title: Laden einer vorhandenen Audiodatei
-description: Laden einer vorhandenen Audiodatei
+title: Laden einer vorhandenen Sounddatei
+description: Laden einer vorhandenen Sounddatei
 ms.assetid: f779ebb9-f03d-4082-927d-29dbdf1e0963
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e91cdc8fccd9cf464e02529371bd8c6a12eb3635
-ms.sourcegitcommit: bf526e267d3991892733bdd229c66d5365cf244a
+ms.openlocfilehash: 48b0e16fb218300aececcba86412d5c63971390664c17cffea8737568cbcf115
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "106349752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118748252"
 ---
-# <a name="loading-an-existing-sound-file"></a>Laden einer vorhandenen Audiodatei
+# <a name="loading-an-existing-sound-file"></a>Laden einer vorhandenen Sounddatei
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Sie können auch eine vorhandene Windows-Sounddatei (. wav) oder eine linguistisch erweiterte Audiodatei (. lwv) laden, indem Sie im Menü **Datei** oder in der Symbolleiste den Befehl **Öffnen** auswählen. Dadurch wird das Dialogfeld **Öffnen** angezeigt. Wählen Sie eine Datei aus, und klicken Sie auf **Öffnen** , um die Datei im Editor zu laden.
+Sie können auch eine vorhandene Windows-Sounddatei (WAV) oder linguistisch erweiterte Sounddatei (LWV)  laden, indem Sie im Menü Datei oder auf der Symbolleiste den Befehl **Öffnen** auswählen. Dadurch wird das **Dialogfeld Öffnen** angezeigt. Wählen Sie eine Datei aus, und klicken **Sie auf Öffnen,** um die Datei in den Editor zu laden.
 
-![Screenshot, der das Dialogfeld "Öffnen" anzeigt, wenn eine vorhandene Datei geladen wird.](images/f2listdial.gif)
+![Screenshot: Dialogfeld "Öffnen" beim Laden einer vorhandenen Datei](images/f2listdial.gif)
 
  
 
