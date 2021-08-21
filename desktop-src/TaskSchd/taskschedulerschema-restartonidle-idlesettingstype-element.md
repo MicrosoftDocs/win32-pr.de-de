@@ -1,9 +1,9 @@
 ---
-title: Restartondle (idlesettingstype)-Element
-description: Gibt an, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt.
+title: RestartOnIdle (idleSettingsType)-Element
+description: Gibt an, ob der Task neu gestartet wird, wenn der Computer mehr als einmal in eine Leerlaufbedingung eintritt.
 ms.assetid: 7a7a388c-8dc9-4106-82c1-3435d9f89866
 keywords:
-- Restartondle-Element Taskplaner
+- RestartOnIdle-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ec1d20798b7ceb6ad6ebe2c3a92896600e36eec1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 16a636ebc052bb04a150390659909f0b73cae78871acaacfb4ba529ea2d8e917
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575140"
 ---
-# <a name="restartonidle-idlesettingstype-element"></a>Restartondle (idlesettingstype)-Element
+# <a name="restartonidle-idlesettingstype-element"></a>RestartOnIdle (idleSettingsType)-Element
 
-Gibt an, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt.
+Gibt an, ob der Task neu gestartet wird, wenn der Computer mehr als einmal in eine Leerlaufbedingung eintritt.
 
 ``` syntax
 <xs:element name="RestartOnIdle"
@@ -32,29 +32,29 @@ Gibt an, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leer
  />
 ```
 
-Das **restartondle** -Element wird durch den komplexen [**idlesettingstype**](taskschedulerschema-idlesettingstype-complextype.md) -Typ definiert.
+Das **RestartOnIdle-Element** wird durch den komplexen Typ [**idleSettingsType**](taskschedulerschema-idlesettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                                                       |
+| Element                                                                       | Abgeleitet von                                                                 | Beschreibung                                                                                       |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**Idlesettings**](taskschedulerschema-idlesettings-settingstype-element.md) | [**idlesettingstype**](taskschedulerschema-idlesettingstype-complextype.md) | Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/> |
+| [**IdleSettings**](taskschedulerschema-idlesettings-settingstype-element.md) | [**idleSettingsType**](taskschedulerschema-idlesettingstype-complextype.md) | Gibt an, wie der Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element wird nur verwendet, wenn das [**terminateonidleend**](taskschedulerschema-terminateonidleend-idlesettingstype-element.md) -Element auf true festgelegt ist.
+Dieses Element wird nur verwendet, wenn das [**TerminateOnIdleEnd-Element**](taskschedulerschema-terminateonidleend-idlesettingstype-element.md) auf True festgelegt ist.
 
-Bei der Skript Entwicklung werden diese Aufgaben Einstellungen mithilfe der [**idlesettings. restartondle**](idlesettings-restartonidle.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung werden diese Taskeinstellungen mithilfe der [**IdleSettings.RestartOnIdle-Eigenschaft**](idlesettings-restartonidle.md) angegeben.
 
-Bei der C++-Entwicklung werden diese Aufgaben Einstellungen mithilfe der [**iidlesettings:: restartondle**](/windows/desktop/api/taskschd/nf-taskschd-iidlesettings-get_restartonidle) -Eigenschaft angegeben.
+Für die C++-Entwicklung werden diese Taskeinstellungen mithilfe der [**IIdleSettings::RestartOnIdle-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iidlesettings-get_restartonidle) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert eine Leerlauf Einstellung, die angibt, dass die Aufgabe nicht neu gestartet werden soll, wenn die Leerlauf Bedingung nicht erfüllt ist.
+Der folgende XML-Code definiert eine Leerlaufeinstellung, die angibt, dass der Task nicht neu gestartet werden soll, wenn die Leerlaufbedingung zyklen.
 
 
 ```XML
@@ -72,8 +72,8 @@ Der folgende XML-Code definiert eine Leerlauf Einstellung, die angibt, dass die 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -81,7 +81,7 @@ Der folgende XML-Code definiert eine Leerlauf Einstellung, die angibt, dass die 
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

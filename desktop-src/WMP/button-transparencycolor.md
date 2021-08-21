@@ -1,9 +1,9 @@
 ---
-title: Button. transparendcolor
-description: Das TransparencyColor-Attribut gibt die Farbe an, die in den Schaltflächen Bildern transparent sein wird, oder ruft Sie ab.
+title: BUTTON.transparencyColor
+description: Das transparencyColor-Attribut gibt die Farbe an oder ruft sie ab, die in den BUTTON-Bildern transparent ist.
 ms.assetid: c22f9965-3118-4c96-8ff5-7fbaa28cbb57
 keywords:
-- Button. transparendcycolor-Fenster Media Player
+- BUTTON.transparencyColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 771249ddb070c596dc126b9b0c8c7d04a4b4268f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d51e42b1636958edd772d27c4e5a29720fa0dd87a74784f28f3ffeb7891873c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118840463"
 ---
-# <a name="buttontransparencycolor"></a>Button. transparendcolor
+# <a name="buttontransparencycolor"></a>BUTTON.transparencyColor
 
-Das **TransparencyColor** -Attribut gibt die Farbe an, die in den **Schalt** Flächen Bildern transparent sein wird, oder ruft Sie ab.
+Das **transparencyColor-Attribut** gibt die Farbe an oder ruft sie ab, die in den **BUTTON-Bildern transparent** ist.
 
 ``` syntax
         elementID.transparencyColor
@@ -29,29 +29,29 @@ Das **TransparencyColor** -Attribut gibt die Farbe an, die in den **Schalt** Fl�
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne den Standardwert, der einen der folgenden Werte enthält.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff ohne Standardwert, die einen der folgenden Werte enthält.
 
 
 
-| Wert                                    | BESCHREIBUNG                                                                                               |
+| Wert                                    | Beschreibung                                                                                               |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Auto                                     | Die Farbe des Pixels an Position 0, 0 im Bild wird zur transparenten Farbe.                        |
-| Ein beliebiger Internet Explorer-Farb Format Wert | Ein Wert für den Internet Explorer-Farb Format wird zur transparenten Farbe (z. b. "Red" oder " \# FF0000"). |
+| Automatisch                                     | Die Farbe des Pixels an position 0,0 im Bild wird zur transparenten Farbe.                        |
+| Beliebiger Internet Explorer Farbformatwert | Ein Internet Explorer Farbformatwert wird zur transparenten Farbe (z. B. "red" oder " \# FF0000"). |
 | Keine                                     | Keine Transparenz.                                                                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine transparente Farbe in einem Bild ermöglicht das Anzeigen des Bilds, das über die transparenten Bereiche angezeigt werden soll. Die **Schaltfläche** erhält weiterhin Klicks auf den Bereich transparent.
+Eine transparente Farbe in einem Bild ermöglicht, dass alles, was sich hinter dem Bild befindet, durch die transparenten Bereiche angezeigt wird. Die **SCHALTFLÄCHE** erhält weiterhin Klicks auf den transparenten Bereich.
 
-Die transparente Farbe kann ein beliebiger Internet Explorer-Farbwert sein. Wenn der Wert des **TransparencyColor** -Attributs auf "Auto" festgelegt ist, wird die Farbe des Pixels an Position 0, 0 im Bild verwendet.
+Die transparente Farbe kann ein beliebiger Internet Explorer sein. Wenn der Wert des **transparencyColor-Attributs** auf "Auto" festgelegt ist, wird die Farbe des Pixels an position 0,0 im Bild verwendet.
 
-Wenn es sich bei der angegebenen Farbe nicht um eine der gültigen IE-Farben handelt, wird der vorherige Wert beibehalten.
+Wenn die angegebene Farbe keine der gültigen IE-Farben ist, wird der vorherige Wert beibehalten.
 
-Da es sich bei den JPGs um Verlust Verluste handelt und daher unerwartete Farbänderungen unterliegen, werden Sie nicht empfohlen, wenn **transparendcolor** verwendet wird.
+Da JPGs verlustbeendet sind und daher unerwarteten Farbwechseln unterliegen, werden sie nicht empfohlen, wenn **transparencyColor** verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Da es sich bei den JPGs um Verlust Verluste handelt und daher unerwartete Farbä
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -67,13 +67,13 @@ Da es sich bei den JPGs um Verlust Verluste handelt und daher unerwartete Farbä
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> <dt>
 
-[**Button. Bild**](button-image.md)
+[**BUTTON.image**](button-image.md)
 </dt> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> </dl>
 
  

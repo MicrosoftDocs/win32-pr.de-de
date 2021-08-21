@@ -17,7 +17,7 @@ Gibt die y-Koordinate der oberen linken Ecke des Schwenk-/Scanbereichs an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,7 +29,7 @@ VT \_ I4
 
 ## <a name="remarks"></a>Hinweise
 
-Der Wert ist eine reelle Festkommazahl mit festem Punkt. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes und der Bruchteil in den unteren 2 Bytes gespeichert.
+Der Wert ist eine Feste Punkt-Realzahl. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes gespeichert, und der Bruchteil wird in den unteren 2 Bytes gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,17 +37,17 @@ Der Wert ist eine reelle Festkommazahl mit festem Punkt. Der ganzzahlige Teil de
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Media Foundation-Eigenschaften](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

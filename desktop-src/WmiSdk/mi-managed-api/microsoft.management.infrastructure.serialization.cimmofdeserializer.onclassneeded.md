@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: cimmufdeserializer. onclasserforderliche Delegat (String, String, String)'
+description: 'Weitere Informationen finden Sie unter: CimMofDeserializer.OnClassNeeded-Delegat (String, String, String)'
 title: CimMofDeserializer.OnClassNeeded-Delegat (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.OnClassNeeded delegate (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: T:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.OnClassNeeded
@@ -27,19 +27,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: 50e107c09eccde03446278516a1f125f4ad86022
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd7dd361483b951783ccb47f7295589611bbb5cce98dab5b13e96613a479c054
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118818336"
 ---
-# <a name="cimmofdeserializeronclassneeded-delegate-string-string-string"></a>Cimmufdeserializer. onclassbenögendelegat (Zeichenfolge, Zeichenfolge, Zeichenfolge)
+# <a name="cimmofdeserializeronclassneeded-delegate-string-string-string"></a>CimMofDeserializer.OnClassNeeded-Delegat (String, String, String)
 
-Stellt einen Rückruf zum Abrufen einer CIM-Klasse für den angegebenen Server, Namespace und Klassennamen dar.
+Stellt einen Rückruf dar, um eine CIM-Klasse für den angegebenen Server, Namespace und Klassennamen abzurufen.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,30 +78,30 @@ Public Delegate Function OnClassNeeded (
 #### <a name="parameters"></a>Parameter
 
   - serverName  
-    Typ: [System. String](/dotnet/api/system.string?view=netframework-4.8)
+    Typ: [System.String](/dotnet/api/system.string?view=netframework-4.8)
     
     Der Name des Servers für die CIM-Klasse.
 
 <!-- end list -->
 
   - namespaceName  
-    Typ: [System. String](/dotnet/api/system.string?view=netframework-4.8)
+    Typ: [System.String](/dotnet/api/system.string?view=netframework-4.8)
     
     Der Name des Namespace für die CIM-Klasse.
 
 <!-- end list -->
 
   - className  
-    Typ: [System. String](/dotnet/api/system.string?view=netframework-4.8)
+    Typ: [System.String](/dotnet/api/system.string?view=netframework-4.8)
     
     Der Name der Klasse für die CIM-Klasse.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Type: [cimclass-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))
+Typ: [CimClass-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))
 
-Gibt die CIM-Klasse zurück, die den angegebenen Argumenten entspricht, oder **null** , wenn die Klasse nicht gefunden werden kann.
+Gibt die CIM-Klasse zurück, die den angegebenen Argumenten entspricht, oder **NULL,** wenn die Klasse nicht gefunden werden kann.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

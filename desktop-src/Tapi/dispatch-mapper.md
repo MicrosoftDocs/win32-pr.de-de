@@ -1,21 +1,21 @@
 ---
-description: Der dispatchmapper wird mit com cokreateinstance erstellt und macht eine Schnittstelle, itdispatchmapper, verfügbar.
+description: 'Der Dispatch-Mapper wird mit COM CoCreateInstance erstellt und macht eine Schnittstelle verfügbar: ITDispatchMapper.'
 ms.assetid: 435034e1-d90c-4bad-8758-8a627d88875f
-title: Dispatchzuordnung
+title: Dispatch-Mapper
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ed0a3a6cbc906861f5e95694bfd75aec6f5791f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e0880228ab608abe5f599d58bb47d211d1458dd49636a9bdc992f31dfa26c028
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118866684"
 ---
-# <a name="dispatch-mapper"></a>Dispatchzuordnung
+# <a name="dispatch-mapper"></a>Dispatch-Mapper
 
-Der dispatchmapper wird mit com **cokreateinstance** erstellt und macht eine Schnittstelle, [**itdispatchmapper**](/windows/desktop/api/tapi3if/nn-tapi3if-itdispatchmapper), verfügbar. Diese Schnittstelle ermöglicht es einer Anwendung, den Dispatch-Zeiger einer anderen Schnittstelle für ein Objekt abzurufen, wenn der Dispatch-Zeiger einer Schnittstelle und die GUID eines anderen Objekts ist. Diese Schnittstelle wird bereitgestellt, um Programmierer bei der Verwendung von Skript Anwendungen zu unterstützen, die keine Möglichkeit bieten, die Schnittstellen eines Objekts schnell abzufragen.
+Der Dispatch-Mapper wird mit COM **CoCreateInstance** erstellt und macht eine Schnittstelle verfügbar: [**ITDispatchMapper.**](/windows/desktop/api/tapi3if/nn-tapi3if-itdispatchmapper) Mit dieser Schnittstelle kann eine Anwendung den Dispatchzeiger einer anderen Schnittstelle für ein Objekt abrufen, wenn der Verteilungszeiger einer Schnittstelle und die GUID einer anderen Schnittstelle angegeben werden. Diese Schnittstelle wird bereitgestellt, um Programmierer bei der Verwendung von Skriptanwendungen zu unterstützen, die keine Möglichkeit bieten, die Schnittstellen für ein Objekt einfach abzufragen.
 
-Der dispatchmapper verwendet die **iobjecgs** -Schnittstelle eines Objekts, um sicherzustellen, dass das Objekt für die Skripterstellung auf der angeforderten Schnittstelle sicher ist. Wenn das Objekt **iobjeczafety** nicht implementiert, oder wenn das Objekt an dieser speziellen Schnittstelle nicht sicher ist, tritt ein Fehler auf.
+Der Dispatch-Mapper verwendet die **IObjectSafety-Schnittstelle** eines Objekts, um sicherzustellen, dass das Objekt für die Skripterstellung auf der angeforderten Schnittstelle sicher ist. Wenn das Objekt **IObjectSafety** nicht implementiert oder das Objekt für diese bestimmte Schnittstelle nicht sicher ist, schlägt der Aufruf fehl.
 
  
 

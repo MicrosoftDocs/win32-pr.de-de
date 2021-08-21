@@ -1,5 +1,5 @@
 ---
-title: TB_ISBUTTONHIDDEN-Nachricht (Commctrl.h)
+title: TB_ISBUTTONHIDDEN Nachricht (Commctrl.h)
 description: Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste ausgeblendet ist.
 ms.assetid: 3372a64f-8209-4e3f-a6a9-8fe2e7e87ff2
 keywords:

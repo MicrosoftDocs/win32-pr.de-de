@@ -1,7 +1,7 @@
 ---
-description: Legt einen neuen Antwort-APDU-Nachrichten Status Wort fest.
+description: Legt ein neues Antwort-APDU-Meldungsstatuswort fest.
 ms.assetid: 17b498eb-2268-451a-9f5c-c53cb7e42019
-title: Iscardcmd::p ut_ReplyStatus-Methode (scarddat. h)
+title: ISCardCmd::p ut_ReplyStatus-Methode (Mouseddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 55e6de81cd7e2c98b527d0852ea31a25f8256c68
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff4f7ffeddd94a3c4e68f7a343c9936d8e360594898f2811575e7a1067030161
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577310"
 ---
-# <a name="iscardcmdput_replystatus-method"></a>Iscardcmd::p UT \_ replystatus-Methode
+# <a name="iscardcmdput_replystatus-method"></a>ISCardCmd::p ut \_ ReplyStatus-Methode
 
-\[Die **Put \_ replystatus** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ put ReplyStatus-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Mit der **Put \_ replystatus** -Methode wird ein neues [*Antwort-APDU*](../secgloss/r-gly.md) -Nachrichten Status Wort festgelegt.
+Die **\_ put ReplyStatus-Methode** legt ein neues [*Antwort-APDU-Meldungsstatuswort*](../secgloss/r-gly.md) fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ HRESULT put_ReplyStatus(
 
 <dl> <dt>
 
-*wstatus* \[ in\]
+*wStatus* \[ In\]
 </dt> <dd>
 
-Word, das den Status hat.
+Wort, das den Status hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *wstatus* -Parameter ist ungültig.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *wStatus-Parameter* ist ungültig.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um das Nachrichten Status Wort von APDU zu erhalten, geben [**Sie get \_ replystatus**](iscardcmd-get-replystatus.md)an.
+Rufen Sie [**get \_ ReplyStatus**](iscardcmd-get-replystatus.md)auf, um das Nachrichtenstatuswort der Antwort-APDU abzurufen.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie ein neues [*APDU*](../secgloss/r-gly.md) -Nachrichten Status Wort festgelegt wird. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie Sie ein neues [*Antwort-APDU-Meldungsstatuswort*](../secgloss/r-gly.md) festlegen. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -98,14 +98,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
@@ -113,10 +113,10 @@ if (FAILED(hr))
 
 <dl> <dt>
 
-[**\_replystatus erhalten**](iscardcmd-get-replystatus.md)
+[**get \_ ReplyStatus**](iscardcmd-get-replystatus.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

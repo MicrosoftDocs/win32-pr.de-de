@@ -23,20 +23,20 @@ ms.locfileid: "118545571"
 
 Enthält eine Liste der Prozessserver, die beim System für 32-Bit-Komponenten auf 64-Bit-Computern registriert sind. Sie enthält ein -Objekt für jede Komponente.
 
-Diese Auflistung unterstützt die [**Remove-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts,**](comadmincatalogcollection.md) jedoch nicht die [**Add-Methode.**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) Verwenden Sie zum Installieren oder Importieren von Komponenten in eine Anwendung Methoden für das [**COMAdminCatalog-Objekt.**](comadmincatalog.md)
+Diese Sammlung unterstützt die [**Remove-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts,**](comadmincatalogcollection.md) aber nicht die [**Add-Methode.**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) Verwenden Sie Methoden für das [**COMAdminCatalog-Objekt,**](comadmincatalog.md) um Komponenten in eine Anwendung zu installieren oder zu importieren.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **WOWInprocServers-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
+Die **WOWInprocServers-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**Propertyinfo**](propertyinfo.md)
 -   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**wurzel**](root.md)
 
@@ -57,7 +57,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Eine GUID für die Komponente. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | ReadOnly                                                                                                                                                  |
 | type           | String                                                                                                                                                    |
-| Standard        | Nicht zutreffend                                                                                                                                                       |
+| Standard        | –                                                                                                                                                       |
 | Mindestsystem | Windows XP                                                                                                                                                |
 
 
@@ -73,7 +73,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Der Dateipfad für die Komponente. |
 | Zugriff         | ReadOnly                         |
 | type           | String                           |
-| Standard        | Nicht zutreffend                              |
+| Standard        | –                              |
 | Mindestsystem | Windows XP                       |
 
 
@@ -89,14 +89,14 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Ein Name, der die Komponente identifiziert. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) zurückgegeben, wenn die Name-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | ReadOnly                                                                                                                                                            |
 | type           | String                                                                                                                                                              |
-| Standard        | Nicht zutreffend                                                                                                                                                                 |
+| Standard        | –                                                                                                                                                                 |
 | Mindestsystem | Windows XP                                                                                                                                                          |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

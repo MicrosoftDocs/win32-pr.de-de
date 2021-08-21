@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_PTRType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Zeiger (PTR)-Datensatz darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Zeigerdatensatz (PTR) darstellt.
 ms.assetid: 2cb0f13b-e683-473b-9cdd-bc5d805b919d
 keywords:
-- DNS-MicrosoftDNS_PTRType Klasse
-- DNS-MicrosoftDNS_PTRType Klasse, beschrieben
+- dns der MicrosoftDNS_PTRType-Klasse
+- MicrosoftDNS_PTRType DNS-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65dc434eb751ed925ab9efcdaf29f04741b749ea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a5c78cf945ff58071930e5e65fec08f075ddb9337977e6cd5575853e9c437a73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076754"
 ---
-# <a name="microsoftdns_ptrtype-class"></a>MicrosoftDNS \_ ptrtype-Klasse
+# <a name="microsoftdns_ptrtype-class"></a>MicrosoftDNS \_ PTRType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Zeiger (PTR)-Datensatz darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Zeigerdatensatz (PTR) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ class MicrosoftDNS_PTRType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ ptrtype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ PTRType-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS \_ ptrtype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ PTRType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                           |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                           |
 |:-----------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen DNS-PTR-Ressourcen Eintrag auf der Grundlage der Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer Namen, der Klasse (Standard = in), dem Gültigkeitsdauer Wert und dem FQDN des PTR-Eintrags. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert den TTL-und den PTR-Domänen Namen auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>                 |
+| **CreateInstanceFromPropertyData** | Instanziiert einen DNS PTR-Ressourceneintrag basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername, Klasse (Standard = IN), Wert für die Lebenszeit und FQDN des PTR-Eintrags. Es gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert die TTL und den PTR-Domänennamen auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                 |
 
 
 
@@ -64,20 +64,20 @@ Die **MicrosoftDNS \_ ptrtype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ ptrtype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ PTRType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Ptrdomainname**
+**PTRDomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der voll qualifizierte Namen der PTR-Daten Satz Daten.
+FQDN der PTR-Datensatzdaten.
 
 </dd> </dl>
 
@@ -89,8 +89,8 @@ Der voll qualifizierte Namen der PTR-Daten Satz Daten.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Der voll qualifizierte Namen der PTR-Daten Satz Daten.
 
 <dl> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ ptrtype"**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ PTRType-Klasse**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ ptrtype-Klasse**](microsoftdns-ptrtype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ PTRType-Klasse**](microsoftdns-ptrtype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: OLE-Monikerimplementierungen
-description: OLE-Monikerimplementierungen
+title: OLE-Monikerimplementierung
+description: OLE-Monikerimplementierung
 ms.assetid: c4ddcbd2-0e5b-4311-908f-23ef6c50ded4
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119047908"
 ---
-# <a name="ole-moniker-implementations"></a>OLE-Monikerimplementierungen
+# <a name="ole-moniker-implementations"></a>OLE-Monikerimplementierung
 
-OLE stellt Implementierungen mehrerer Moniker für verschiedene Situationen bereit, wie in den folgenden Themen beschrieben:
+OLE bietet Implementierungen mehrerer Moniker für verschiedene Situationen, wie in den folgenden Themen beschrieben:
 
 -   [Dateimoniker](file-monikers.md)
 -   [Zusammengesetzte Moniker](composite-monikers.md)
@@ -24,7 +24,7 @@ OLE stellt Implementierungen mehrerer Moniker für verschiedene Situationen bere
 -   [Asynchrone Moniker](asynchronous-monikers.md)
 -   [URL-Moniker](url-monikers.md)
 
-Die Datei-, zusammengesetzten und Elementmoniker sind die am häufigsten verwendeten Moniker, da sie verwendet werden können, um nahezu jedes Objekt an einem beliebigen Ort zu erstellen. Antimoniker und Zeigermoniker werden in erster Linie in OLE verwendet, verfügen jedoch über eine Anwendung bei der Implementierung benutzerdefinierter Moniker.
+Die Moniker "file", "composite" und "item" sind die am häufigsten verwendeten Moniker, da sie verwendet werden können, um nahezu jedes Objekt an jedem Ort zu erstellen. Antimoniker und Zeigermoniker werden in erster Linie in OLE verwendet, verfügen jedoch über einige Anwendungen bei der Implementierung benutzerdefinierter Moniker.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

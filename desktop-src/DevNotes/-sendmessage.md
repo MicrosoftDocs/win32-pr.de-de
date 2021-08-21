@@ -1,5 +1,5 @@
 ---
-description: Sendet die angegebene Meldung an ein Fenster oder an ein Fenster.
+description: Sendet die angegebene Meldung an ein Fenster oder ein Fenster.
 ms.assetid: aed898b3-bb48-4da2-aee7-834ae65a2d51
 title: _SendMessage-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Sqlunirl.dll
-ms.openlocfilehash: 2b96544ee1c850886e5fa953eb902dc4a38f283d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bdd8a072970d8e6fb5e9af082f6f220531539a1c0061a7688d48be30dd659a7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119572570"
 ---
 # <a name="_sendmessage-function"></a>\_SendMessage-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **SendMessage** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SendMessage** direkt aufzurufen.\]
+\[Diese Funktion ist ein Wrapper für die **SendMessage-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SendMessage** direkt aufrufen.\]
 
-Sendet die angegebene Meldung an ein Fenster oder an ein Fenster. Siehe [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage).
+Sendet die angegebene Meldung an ein Fenster oder ein Fenster. Weitere Informationen finden Sie unter [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage).
 
 ## <a name="syntax"></a>Syntax
 

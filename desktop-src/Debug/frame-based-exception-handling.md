@@ -1,43 +1,43 @@
 ---
-description: Mit einem Frame basierten Ausnahmehandler können Sie die Möglichkeit behandeln, dass eine Ausnahme in einer bestimmten Code Sequenz auftritt. Ein Frame basierter Ausnahmehandler besteht aus den folgenden Elementen.
+description: Mit einem framebasierten Ausnahmehandler können Sie mit der Möglichkeit umgehen, dass eine Ausnahme in einer bestimmten Codesequenz auftreten kann. Ein framebasierter Ausnahmehandler besteht aus den folgenden Elementen.
 ms.assetid: 07aac772-f917-48b7-91a9-3b5d4cb43600
-title: Frame basierte Ausnahmebehandlung
+title: Framebasierte Ausnahmebehandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 12b268b5d02de83bca22a1d3311905b05be1f748
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2afb72118aca7653e9bc15e7f4ff4b75e46b1abad5bab7dee4a3397ae5f98e1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573120"
 ---
-# <a name="frame-based-exception-handling"></a>Frame basierte Ausnahmebehandlung
+# <a name="frame-based-exception-handling"></a>Framebasierte Ausnahmebehandlung
 
-Mit einem *Frame basierten Ausnahmehandler* können Sie die Möglichkeit behandeln, dass eine Ausnahme in einer bestimmten Code Sequenz auftritt. Ein Frame basierter Ausnahmehandler besteht aus den folgenden Elementen.
+Mit *einem framebasierten Ausnahmehandler* können Sie mit der Möglichkeit umgehen, dass eine Ausnahme in einer bestimmten Codesequenz auftreten kann. Ein framebasierter Ausnahmehandler besteht aus den folgenden Elementen.
 
--   Ein überwachter Codetext
--   Ein Filter Ausdruck
--   Ein Ausnahmehandlerblock.
+-   Ein beschützter Code
+-   Ein Filterausdruck
+-   Ein Ausnahmehandlerblock
 
-Frame basierte Ausnahmehandler werden in sprachspezifischer Syntax deklariert. Beispielsweise werden Sie im Microsoft C/C++-Optimierungs Compiler mithilfe von **\_ \_ try** und **\_ \_ außer** implementiert. Weitere Informationen finden Sie unter [HandlerSyntax](handler-syntax.md).
+Framebasierte Ausnahmehandler werden in sprachspezifischer Syntax deklariert. Beispielsweise werden sie im Microsoft C/C++-Optimierungscompiler mit **\_ \_ try** und außer **\_ \_ implementiert.** Weitere Informationen finden Sie unter [Handlersyntax](handler-syntax.md).
 
-Der *geschützte Code Körper* ist ein Satz von einer oder mehreren-Anweisungen, für die der Filter Ausdruck und der Ausnahmehandlerblock Ausnahme Behandlungs Schutz bereitstellen. Bei dem überwachten Text kann es sich um einen Codeblock, einen Satz von Blöcke oder eine gesamte Prozedur oder Funktion handeln. Mithilfe des Microsoft C/C++-Optimierungs Compilers wird ein geschützter Text durch geschweifte Klammern ( {} ) nach dem **\_ \_ try** -Schlüsselwort eingeschlossen.
+Der *beschützte Code* besteht aus einer oder mehrere -Anweisungen, für die der Filterausdruck und der Ausnahmehandlerblock Schutz zur Ausnahmebehandlung bieten. Der bewaiste Text kann ein Codeblock, ein Satz geschachtelter Blöcke oder eine gesamte Prozedur oder Funktion sein. Mithilfe des Microsoft C/C++-Optimierungscompilers wird ein beschützter Text in geschweifte Klammern ( ) eingeschlossen, die dem {} **\_ \_ try-Schlüsselwort** folgen.
 
-Der *Filter Ausdruck* eines Frame basierten Ausnahme Handlers ist ein Ausdruck, der vom System ausgewertet wird, wenn im überwachten Text eine Ausnahme auftritt. Diese Auswertung führt zu einer der folgenden Aktionen vom System.
+Der *Filterausdruck* eines framebasierten Ausnahmehandlers ist ein Ausdruck, der vom System ausgewertet wird, wenn eine Ausnahme innerhalb des wächter Textkörpers auftritt. Diese Auswertung führt zu einer der folgenden Aktionen des Systems.
 
--   Das System beendet die Suche nach einem Ausnahmehandler, stellt den Computer Zustand wieder her und setzt die Thread Ausführung an dem Punkt fort, an dem die Ausnahme aufgetreten ist.
+-   Das System beendet die Suche nach einem Ausnahmehandler, stellt den Computerzustand wieder auf und setzt die Threadausführung an dem Punkt fort, an dem die Ausnahme aufgetreten ist.
 -   Das System setzt die Suche nach einem Ausnahmehandler fort.
--   Das System überträgt die Steuerung an den Ausnahmehandler, und die Thread Ausführung wird sequenziell im Stapel Rahmen fortgesetzt, in dem der Ausnahmehandler gefunden wird. Wenn sich der Handler nicht im Stapel Rahmen befindet, in dem die Ausnahme aufgetreten ist, entlädt das System den Stapel und gibt den aktuellen Stapel Rahmen und alle anderen Stapel Rahmen zurück, bis er wieder dem Stapel Rahmen des Ausnahme Handlers entspricht. Vor der Ausführung eines Ausnahmehandler werden Beendigungs Handler für alle überwachten Code Körper ausgeführt, die als Ergebnis der Übertragung der Steuerung an den Ausnahmehandler beendet wurden. Weitere Informationen zu Beendigungs Handlern finden Sie unter [Abbruch Behandlung](termination-handling.md).
+-   Das System überträgt die Steuerung an den Ausnahmehandler, und die Threadausführung wird sequenziell in dem Stapelrahmen fortgesetzt, in dem sich der Ausnahmehandler befindet. Wenn sich der Handler nicht im Stapelrahmen befindet, in dem die Ausnahme aufgetreten ist, entlädt das System den Stapel und verlässt den aktuellen Stapelrahmen und alle anderen Stapelrahmen, bis er wieder zum Stapelrahmen des Ausnahmehandlers zurückliegt. Bevor ein Ausnahmehandler ausgeführt wird, werden Beendigungshandler für alle beschützten Codekörper ausgeführt, die als Ergebnis der Übertragung der Steuerung an den Ausnahmehandler beendet wurden. Weitere Informationen zu Beendigungshandlern finden Sie unter [Beendigungsbehandlung.](termination-handling.md)
 
-Der Filter Ausdruck kann ein einfacher Ausdruck sein oder eine *Filterfunktion* aufrufen, die versucht, die Ausnahme zu behandeln. Sie können die Funktionen [**GetExceptionCode**](getexceptioncode.md) und [**GetExceptionInformation**](getexceptioninformation.md) innerhalb eines Filter Ausdrucks aufrufen, um Informationen über die zu filternde Ausnahme abzurufen. **GetExceptionCode** gibt einen Code zurück, der den Typ der Ausnahme identifiziert, und **GetExceptionInformation** gibt einen Zeiger auf eine [**Ausnahme \_ Zeiger**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) Struktur zurück, die Zeiger auf [**Kontext**](/windows/desktop/api/WinNT/ns-winnt-arm64_nt_context) -und [**Ausnahme \_ Daten Satz**](/windows/desktop/api/WinNT/ns-winnt-exception_record) Strukturen enthält.
+Der Filterausdruck kann ein einfacher Ausdruck  sein oder eine Filterfunktion aufrufen, die versucht, die Ausnahme zu behandeln. Sie können die [**Funktionen GetExceptionCode**](getexceptioncode.md) und [**GetExceptionInformation**](getexceptioninformation.md) in einem Filterausdruck aufrufen, um Informationen über die zu filternde Ausnahme zu erhalten. **GetExceptionCode gibt** einen Code zurück, der den Typ der Ausnahme identifiziert, und **GetExceptionInformation** gibt einen Zeiger auf eine [**EXCEPTION \_ POINTERS-Struktur**](/windows/desktop/api/WinNT/ns-winnt-exception_pointers) zurück, die Zeiger auf [**CONTEXT-**](/windows/desktop/api/WinNT/ns-winnt-arm64_nt_context) und [**EXCEPTION \_ RECORD-Strukturen**](/windows/desktop/api/WinNT/ns-winnt-exception_record) enthält.
 
-Diese Funktionen können nicht innerhalb einer Filterfunktion aufgerufen werden, aber ihre Rückgabewerte können als Parameter an eine Filterfunktion übermittelt werden. [**GetExceptionCode**](getexceptioncode.md) kann im Ausnahmehandlerblock verwendet werden, aber [**GetExceptionInformation**](getexceptioninformation.md) kann nicht verwendet werden, da die Informationen, auf die Sie verweist, in der Regel auf dem Stapel abgelegt werden und zerstört werden, wenn die Steuerung an einen Ausnahmehandler übertragen wird. Eine Anwendung kann die Informationen jedoch in den sicheren Speicher kopieren, um Sie dem Ausnahmehandler zur Verfügung zu stellen.
+Diese Funktionen können nicht innerhalb einer Filterfunktion aufgerufen werden, aber ihre Rückgabewerte können als Parameter an eine Filterfunktion übergeben werden. [**GetExceptionCode**](getexceptioncode.md) kann innerhalb des Ausnahmehandlerblocks verwendet werden, [**aber GetExceptionInformation**](getexceptioninformation.md) kann nicht verwendet werden, da sich die Informationen, auf die es zeigt, in der Regel im Stapel befindet und zerstört werden, wenn die Steuerung an einen Ausnahmehandler übertragen wird. Eine Anwendung kann die Informationen jedoch in den sicheren Speicher kopieren, um sie dem Ausnahmehandler zur Verfügung zu stellen.
 
-Der Vorteil einer Filterfunktion besteht darin, dass Sie eine Ausnahme behandeln und einen Wert zurückgeben kann, der bewirkt, dass das System die Ausführung von dem Punkt aus fortsetzt, an dem die Ausnahme aufgetreten ist. Bei einem Ausnahmehandlerblock wird die Ausführung hingegen sequenziell vom Ausnahmehandler fortgesetzt und nicht vom Zeitpunkt der Ausnahme.
+Der Vorteil einer Filterfunktion ist, dass sie eine Ausnahme behandeln und einen Wert zurückgeben kann, der bewirkt, dass das System die Ausführung von dem Zeitpunkt an fortgesetzt, an dem die Ausnahme aufgetreten ist. Bei einem Ausnahmehandlerblock wird die Ausführung dagegen sequenziell über den Ausnahmehandler und nicht über den Punkt der Ausnahme fortgesetzt.
 
-Das Behandeln einer Ausnahme kann so einfach sein, dass ein Fehler festgestellt und ein Flag festgelegt wird, das später untersucht wird, eine Warnung oder eine Fehlermeldung gedruckt oder eine andere eingeschränkte Aktion durchführt. Wenn die Ausführung fortgesetzt werden kann, kann es auch erforderlich sein, den Computer Zustand zu ändern, indem Sie den Kontext Daten Satz ändern. Ein Beispiel für eine Filterfunktion, die eine Seiten Fehler Ausnahme behandelt, finden [Sie unter Verwenden der Funktionen für den virtuellen Arbeitsspeicher](../memory/using-the-memory-management-functions.md).
+Die Behandlung einer Ausnahme kann so einfach sein, wie das Notieren eines Fehlers und das Festlegen eines Flags, das später untersucht wird, das Drucken einer Warnung oder Fehlermeldung oder das Ergreifen einer anderen eingeschränkten Aktion. Wenn die Ausführung fortgesetzt werden kann, kann es auch erforderlich sein, den Computerstatus durch Ändern des Kontextdatensatz zu ändern. Ein Beispiel für eine Filterfunktion, die eine Seitenfehlerausnahme behandelt, finden Sie unter [Using the Virtual Memory Functions](../memory/using-the-memory-management-functions.md).
 
-Die [**unlenker dexceptionfilter**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-unhandledexceptionfilter) -Funktion kann als Filterfunktion in einem Filter Ausdruck verwendet werden. Es wird ein Ausnahme \_ Ausführungs Handler zurückgegeben \_ , es sei denn, der Prozess wird debuggt \_ \_
+Die [**UnhandledExceptionFilter-Funktion**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-unhandledexceptionfilter) kann als Filterfunktion in einem Filterausdruck verwendet werden. Sie gibt EXCEPTION EXECUTE HANDLER zurück, es sei denn, der Prozess wird debuggt. In diesem Fall wird \_ \_ EXCEPTION CONTINUE SEARCH \_ \_ zurückgegeben.
 
  
 

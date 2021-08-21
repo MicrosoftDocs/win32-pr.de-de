@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Klassen Lösch Ereignis dar, bei dem es sich um einen Typ eines systeminternen Ereignisses handelt, das beim Entfernen einer Klasse aus dem Namespace generiert wird.
+description: Stellt ein Klassenlöschereignis dar, das ein Typ von systeminternem Ereignis ist, das generiert wird, wenn eine Klasse aus dem Namespace entfernt wird.
 ms.assetid: dd44c03e-4d0d-4750-942d-495893d21650
 ms.tgt_platform: multiple
 title: __ClassDeletionEvent-Klasse
@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 29242335edeffbdc44deebb3acacd5631fcc7b68
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49058a74e8c1f451731ee74eda56ec540135482ac612631fc568da5ef18ccadc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119568880"
 ---
-# <a name="__classdeletionevent-class"></a>\_\_Classdeletionevent-Klasse
+# <a name="__classdeletionevent-class"></a>\_\_ClassDeletionEvent-Klasse
 
-Die **\_ \_ classdeletionevent** -System Klasse stellt ein Klassen Lösch Ereignis dar, bei dem es sich um einen Typ eines systeminternen [Ereignisses](determining-the-type-of-event-to-receive.md) handelt, das beim Entfernen einer Klasse aus dem Namespace generiert wird.
+Die **\_ \_ ClassDeletionEvent-Systemklasse** stellt ein Klassenlöschereignis dar, bei dem es sich um einen Typ von [systeminternem Ereignis](determining-the-type-of-event-to-receive.md) handelt, das generiert wird, wenn eine Klasse aus dem Namespace entfernt wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,60 +43,60 @@ class __ClassDeletionEvent : __ClassOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ classdeletionevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ ClassDeletionEvent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ classdeletionevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ ClassDeletionEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
-**Targetclass**
+**TargetClass**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der neu gelöschten Klasse, die vom Klassen Lösch Ereignis gemeldet wird. Diese Eigenschaft wird von [**\_ \_ classoperationevent**](--classoperationevent.md)geerbt.
+Kopie der neu gelöschten Klasse, die vom Klassenlöschereignis gemeldet wird. Diese Eigenschaft wird von [**\_ \_ ClassOperationEvent**](--classoperationevent.md)geerbt.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Coordinated Universal Times) vor. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ classdeletionevent** -Klasse wird von [**\_ \_ classoperationevent**](--classoperationevent.md)abgeleitet.
+Die **\_ \_ ClassDeletionEvent-Klasse** wird von [**\_ \_ ClassOperationEvent**](--classoperationevent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,10 +114,10 @@ Die **\_ \_ classdeletionevent** -Klasse wird von [**\_ \_ classoperationevent**
 
 <dl> <dt>
 
-[**\_\_Classoperationevent**](/windows/desktop/WmiSdk/--classoperationevent)
+[**\_\_ClassOperationEvent**](/windows/desktop/WmiSdk/--classoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

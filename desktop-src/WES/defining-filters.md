@@ -1,23 +1,23 @@
 ---
 title: Definieren von Filtern
-description: Ein Anbieter kann Filter definieren, die eine Sitzung verwendet, um Ereignisse auf der Grundlage von Ereignisdaten zu filtern.
+description: Ein Anbieter kann Filter definieren, die eine Sitzung verwendet, um Ereignisse basierend auf Ereignisdaten zu filtern.
 ms.assetid: b43912af-0e9c-414b-b3fa-03e7e35e493c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61dd2a21b9c4e01ebc4a32a160b24022c79197b0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 37d9d065fe3a46fc22114cfb4aed5b5b51d9a89eafa3280e2e258199e06aad3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056018"
 ---
 # <a name="defining-filters"></a>Definieren von Filtern
 
-Ein Anbieter kann Filter definieren, die eine Sitzung verwendet, um Ereignisse auf der Grundlage von Ereignisdaten zu filtern. Mit der Ebene und den Schlüsselwörtern bestimmt etw, ob das Ereignis in das Protokoll geschrieben wird. Allerdings verwendet der Anbieter mit Filtern die Filterdaten Kriterien, die die steuernde Sitzung an ihn übergibt (siehe die [*enablecallback*](/windows/desktop/api/evntprov/nc-evntprov-penablecallback) -Funktion), um zu bestimmen, ob das Ereignis in diese Sitzung geschrieben wird. Die Filter sind nur anwendbar, wenn der Anbieter durch eine ETW-Ablauf Verfolgungs Sitzung aktiviert wird.
+Ein Anbieter kann Filter definieren, die eine Sitzung verwendet, um Ereignisse basierend auf Ereignisdaten zu filtern. Mit level und keywords bestimmt ETW, ob das Ereignis in das Protokoll geschrieben wird. Bei Filtern verwendet der Anbieter jedoch die Filterdatenkriterien, die die steuernde Sitzung an sie übergibt (siehe [*EnableCallback-Funktion),*](/windows/desktop/api/evntprov/nc-evntprov-penablecallback) um zu bestimmen, ob das Ereignis in diese Sitzung schreibt. Die Filter sind nur anwendbar, wenn eine ETW-Ablaufverfolgungssitzung Ihren Anbieter aktiviert.
 
-In der Regel schreiben Anbieter nur Ereignisse, und die Sitzung identifiziert die Typen von Ereignissen, die Sie mit der Ebene und den Schlüsselwörtern verwenden möchten. Wenn der Anbieter einen Daten Filter für einen Ereignistyp definiert hat, kann er von der Sitzung verwendet werden, um Ereignisse für diesen Ereignistyp basierend auf den Ereignisdaten herauszufiltern (die Semantik des Filters wird vom Anbieter definiert). Wenn Ihr Anbieter z. b. Prozess Ereignisse generiert, können Sie einen Daten Filter definieren, der Prozess Ereignisse auf der Grundlage eines Prozess Bezeichners gefiltert hat. Die Sitzung kann dann eine Prozess-ID als Filterdaten an den Anbieter übergeben und nur Prozess Ereignisse für diese Prozess-ID empfangen.
+In der Regel schreiben Anbieter nur Ereignisse, und die Sitzung identifiziert die Ereignistypen, die mithilfe von Level und Schlüsselwörtern verwendet werden. Wenn der Anbieter einen Datenfilter für einen Ereignistyp definiert hat, kann die Sitzung damit Ereignisse für diesen Ereignistyp basierend auf den Ereignisdaten herausfiltern (die Semantik des Filters wird vom Anbieter definiert). Wenn Ihr Anbieter z. B. Prozessereignisse generiert, können Sie einen Datenfilter definieren, der Prozessereignisse basierend auf einem Prozessbezeichner gefiltert hat. Die Sitzung könnte dann einen Prozessbezeichner als Filterdaten an den Anbieter übergeben und nur Prozessereignisse für diesen Prozessbezeichner empfangen.
 
-Im folgenden Beispiel wird gezeigt, wie das **Filter** -Element verwendet wird, um einen Filter zu definieren. Sie müssen die Attribute **Name** und **value** des Filters angeben. die anderen Attribute sind optional. Das **TID** -Attribut ist erforderlich, wenn der Filter erfordert, dass die Sitzung Filterdaten übergibt.
+Das folgende Beispiel zeigt, wie sie das **Filterelement** verwenden, um einen Filter zu definieren. Sie müssen die Namens- und **Wertattribute** **des** Filters angeben. die anderen Attribute sind optional. Das **Tid-Attribut** ist erforderlich, wenn der Filter erfordert, dass die Sitzung Filterdaten übergehen muss.
 
 
 ```XML

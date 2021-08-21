@@ -25,7 +25,7 @@ Unabhängige Softwarehersteller (Independent Software Vendors, ISVs) von Produkt
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Diese Funktionalität wurde in Windows Vista eingeführt. Die Funktionalität der Jugendschutzfunktionen ist nur für ausgewählte Consumerbetriebssysteme verfügbar. sie ist nicht für die Verwendung mit Versionen von Windows Server konzipiert. Diese Funktionalität wird in Windows 10 nicht unterstützt.
+Diese Funktion wurde in Windows Vista eingeführt. Die Funktionalität der Jugendschutzfunktionen ist nur für ausgewählte Consumerbetriebssysteme verfügbar. sie ist nicht für die Verwendung mit Versionen von Windows Server konzipiert. Diese Funktionalität wird in Windows 10 nicht unterstützt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -34,7 +34,7 @@ Diese Funktionalität wurde in Windows Vista eingeführt. Die Funktionalität de
 -   [Informationen zu Jugendschutzfunktionen](about-parental-controls.md)
 -   [Verwenden von Jugendschutz](using-parental-controls-apis.md)
 -   [Referenz zu Jugendschutzfunktionen](parental-controls-reference.md)
--   [Beispiele für Jugendschutz](parental-controls-samples.md)
+-   [Beispiele für die Jugendschutzelemente](parental-controls-samples.md)
 -   [Glossar zur Jugendschutzsteuerung](parental-controls-glossary.md)
 
  

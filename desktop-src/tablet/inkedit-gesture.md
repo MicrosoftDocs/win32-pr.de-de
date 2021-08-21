@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn eine Anwendungs Geste erkannt wird.
+description: Tritt ein, wenn eine Anwendungsgeste erkannt wird.
 ms.assetid: 736715f4-c610-42cc-9fbb-c2b579da69e5
-title: InkEdit. Gesten-Ereignis (Inked. h)
+title: InkEdit.Gesture-Ereignis (Inked.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a61f4fce033672fde8cc4d74dced727fe60b7f97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a718106f4485682a1b6267f942ec3ef0f5a9fb670449e1f6023d86a5b03af56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032078"
 ---
-# <a name="inkeditgesture-event"></a>InkEdit. Gesten-Ereignis
+# <a name="inkeditgesture-event"></a>InkEdit.Gesture-Ereignis
 
-Tritt auf, wenn eine Anwendungs Geste erkannt wird.
+Tritt ein, wenn eine Anwendungsgeste erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,64 +33,64 @@ HRESULT Gesture(
 
 <dl> <dt>
 
-*Cursor* \[ in\]
+*Cursor* \[ In\]
 </dt> <dd>
 
-Das [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekt, das zum Erstellen dieser Geste verwendet wurde.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das zum Erstellen dieser Geste verwendet wurde.
 
 </dd> <dt>
 
-*Striche* \[ in\]
+*Striche* \[ In\]
 </dt> <dd>
 
-Die [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, die die [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte enthält, die diese Geste bilden.
+Die [InkStrokes-Sammlung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) die die [**IInkStrokeDisp-Objekte**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) enthält, aus denen diese Geste besteht.
 
 </dd> <dt>
 
-*Gesten* \[ in\]
+*Gesten* \[ In\]
 </dt> <dd>
 
-Ein Array von [**iinkgesten**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) -Objekten in der richtigen Reihenfolge.
+Ein Array von [**IInkGesture-Objekten**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) in der Reihenfolge der Konfidenz.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> <dt>
 
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-Gibt an, ob die [inkstroke](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, aus der diese Geste besteht, abgebrochen werden soll, um die frei Hand Eingabe zu löschen und das [**Stroke**](inkedit-stroke.md) -Ereignis auszulösen.
+Gibt an, ob die [InkStrokes-Sammlung,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) die diese Geste bildet, abgebrochen werden soll, damit die Ink-Sammlung nicht gelöscht und das [**Stroke-Ereignis**](inkedit-stroke.md) ausgelöst wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der **\_ iinkeditevents** -Schnittstelle definiert. Die **\_ iinkeditevents** -Schnittstelle implementiert die IDispatch-Schnittstelle mit dem Bezeichner DISPID \_ ieegesten.
+Diese Ereignismethode wird in der **\_ IInkEditEvents-Schnittstelle** definiert. Die **\_ IInkEditEvents-Schnittstelle** implementiert die IDispatch-Schnittstelle mit dem Bezeichner DISPID \_ IeeGesture.
 
-Ein **Gesten** Ereignis wird nur ausgelöst, wenn das [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt für das [**iinkgesten**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) -Objekt das erste **IInkStrokeDisp** -Objekt seit dem letzten aufzurufenden [**Rückruf der Erkennungsmethode oder**](/windows/desktop/api/inked/nf-inked-iinkedit-recognize) der letzten Auslösung des Erkennungs Timeouts ist.
+Ein **Gestenereignis** wird nur ausgelöst, wenn [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) für das [**IInkGesture-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkgesture) das erste **IInkStrokeDisp-Objekt** seit dem letzten Aufruf der [**Recognize-Methode**](/windows/desktop/api/inked/nf-inked-iinkedit-recognize) oder dem letzten Auslösen des Erkennungstimeouts ist.
 
-Wenn das **Gesten** Ereignis abgebrochen wird, wird das [**Stroke**](inkedit-stroke.md) -Ereignis für die [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung ausgelöst, die das **Gesten** Ereignis ausgelöst hat.
+Wenn das **Gesture-Ereignis** abgebrochen wird, wird das [**Stroke-Ereignis**](inkedit-stroke.md) für die [InkStrokes-Auflistung](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) ausgelöst, die das **Gesture-Ereignis** ausgelöst hat.
 
-Damit dieses Ereignis auftritt, muss das [InkEdit](inkedit-control-reference.md) -Steuerelement einen Satz von Anwendungs Gesten abonnieren. Um das Interesse des InkEdit-Steuer Elements in einem Satz von Gesten festzulegen, müssen Sie die [**SetGestureStatus**](/windows/desktop/api/inked/nf-inked-iinkedit-setgesturestatus) -Methode aufrufen.
+Damit dieses Ereignis eintritt, muss das [InkEdit-Steuerelement](inkedit-control-reference.md) eine Reihe von Anwendungsgesten abonnieren. Um das Interesse des InkEdit-Steuerelements an einer Reihe von Gesten festzulegen, rufen Sie die [**SetGestureStatus-Methode**](/windows/desktop/api/inked/nf-inked-iinkedit-setgesturestatus) auf.
 
-Eine Liste der Anwendungs Gesten finden Sie unter der [**inkapplicationgesten-Enumerationstyp**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture) .
+Eine Liste der Anwendungsgesten finden Sie unter [**InkApplicationGesture-Enumerationstyp.**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
 
-Das [InkEdit](inkedit-control-reference.md) -Steuerelement erkennt nicht mehrere Strich Gesten.
+Das [InkEdit-Steuerelement](inkedit-control-reference.md) erkennt nicht mehrere Strichgesten.
 
-Das [InkEdit](inkedit-control-reference.md) -Steuerelement abonniert die folgenden Gesten.
+Das [InkEdit-Steuerelement](inkedit-control-reference.md) abonniert die folgenden Gesten.
 
 
 
 | Geste                              | Aktion               |
 |--------------------------------------|----------------------|
-| Nach unten links, nach unten links<br/> | EINGABETASTE<br/>     |
-| Rechts<br/>                     | LeerZchn<br/>     |
-| Links<br/>                      | Rücktaste<br/> |
-| Rechts oben, rechts oben<br/>   | Registerkarte<br/>       |
+| Links unten, links unten– lang<br/> | EINGABETASTE<br/>     |
+| Right<br/>                     | LeerZchn<br/>     |
+| Links<br/>                      | Rückschritt<br/> |
+| Up-right, Up-right-long<br/>   | Registerkarte<br/>       |
 
 
 
@@ -98,9 +98,9 @@ Das [InkEdit](inkedit-control-reference.md) -Steuerelement abonniert die folgend
 
 So ändern Sie die Standardaktion für eine Geste:
 
-1.  Fügen Sie Ereignishandler für die **Gesten** -und [**hubereignisse**](inkedit-stroke.md) hinzu.
-2.  Brechen Sie im **Gesten** Ereignishandler das **Gesten** Ereignis für die Geste ab, und führen Sie die alternative Aktion für die Geste aus.
-3.  Brechen Sie im [**Stroke**](inkedit-stroke.md) -Ereignishandler das **Stroke** -Ereignis für das [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt ab, das das abgebrochene **Gesten** Ereignis ausgelöst hat.
+1.  Fügen Sie Ereignishandler für die **Gesten-** und [**Strichereignisse**](inkedit-stroke.md) hinzu.
+2.  Brechen Sie im **Gestenereignishandler** das **Gestenereignis** für die Geste ab, und führen Sie die alternative Aktion für die Geste aus.
+3.  Brechen [](inkedit-stroke.md) Sie im Stroke-Ereignishandler das **Stroke-Ereignis** für das [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) ab, das das abgebrochene **Gesture-Ereignis** ausgelöst hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,9 +108,9 @@ So ändern Sie die Standardaktion für eine Geste:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>In "-. h" (auch als "gezeichneten \_ i. c" erforderlich)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Inked.h (erfordert auch inked \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkEd.dll</dt> </dl>                          |
 
 
@@ -119,19 +119,19 @@ So ändern Sie die Standardaktion für eine Geste:
 
 <dl> <dt>
 
-[InkEdit](inkedit-control-reference.md)
+[Inkedit](inkedit-control-reference.md)
 </dt> <dt>
 
-[**Inkapplicationgesten-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
+[**InkApplicationGesture-Enumeration**](/windows/desktop/api/msinkaut/ne-msinkaut-inkapplicationgesture)
 </dt> <dt>
 
-[**SetGestureStatus-Methode, \[ InkEdit-Steuerelement\]**](/windows/desktop/api/inked/nf-inked-iinkedit-setgesturestatus)
+[**SetGestureStatus-Methode \[ inkEdit-Steuerelement\]**](/windows/desktop/api/inked/nf-inked-iinkedit-setgesturestatus)
 </dt> <dt>
 
-[**RecoTimeout (Eigenschaft)**](/windows/desktop/api/inked/nf-inked-iinkedit-get_recognitiontimeout)
+[**RecoTimeout-Eigenschaft**](/windows/desktop/api/inked/nf-inked-iinkedit-get_recognitiontimeout)
 </dt> <dt>
 
-[**InkEdit-Steuerelement für Stroke-Ereignis \[\]**](inkedit-stroke.md)
+[**Stroke Event \[ InkEdit-Steuerelement\]**](inkedit-stroke.md)
 </dt> <dt>
 
 [Verwenden von Gesten](using-gestures.md)

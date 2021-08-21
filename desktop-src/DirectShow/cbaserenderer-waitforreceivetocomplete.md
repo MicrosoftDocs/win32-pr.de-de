@@ -1,7 +1,7 @@
 ---
-description: 'Die waitforreceivetocomplete-Methode wartet auf den Abschluss der cbaserdenderer:: Receive-Methode.'
+description: Die WaitForReceiveToComplete-Methode wartet auf den Abschluss der CBaseRenderer::Receive-Methode.
 ms.assetid: 3c722680-e54b-4ba1-8e98-36647cd027bc
-title: Cbaserderderer. waitforreceivetocomplete-Methode (renbase. h)
+title: CBaseRenderer.WaitForReceiveToComplete-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9033474c71d23fed106205839071bad200df6a23
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1f63efa53cc8e8829aba825e831f95595b16faf97bdf29777918c599aadade1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016788"
 ---
-# <a name="cbaserendererwaitforreceivetocomplete-method"></a>Cbaserderderer. waitforreceivetocomplete-Methode
+# <a name="cbaserendererwaitforreceivetocomplete-method"></a>CBaseRenderer.WaitForReceiveToComplete-Methode
 
-Die- `WaitForReceiveToComplete` Methode wartet auf den Abschluss der [**cbaserdenderer:: Receive**](cbaserenderer-receive.md) -Methode.
+Die `WaitForReceiveToComplete` -Methode wartet auf den Abschluss der [**CBaseRenderer::Receive-Methode.**](cbaserenderer-receive.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit den [**cbaserenderer::**](cbaserenderer-stop.md) und [**cbaserenderer:: beginflush**](cbaserenderer-beginflush.md) -Methoden wird diese Methode aufgerufen, um die Zustandsänderung mit der **Receive** -Methode zu synchronisieren.
+Die [**Methoden CBaseRenderer::Stop**](cbaserenderer-stop.md) und [**CBaseRenderer::BeginFlush**](cbaserenderer-beginflush.md) rufen diese Methode auf, um die Zustandsänderung mit der **Receive-Methode** zu synchronisieren.
 
-Diese Methode sendet Nachrichten, während Sie darauf wartet, dass das [**cbaserdenderer:: m \_ binreceive**](cbaserenderer-m-binreceive.md) -Flag auf " **false**" wird. Das Flag wird in der [**cbaserererererererermethode**](cbaserenderer-preparereceive.md) " **true** "::P der Analysemethode "" und wechselt zurück zu " **false** ", nachdem die **Receive** -Methode die [**cbasererderderer**](cbaserenderer-preparerender.md) -Methode aufgerufen hat::P Die abgeleitete Klasse kann **preparerender** zum Festlegen der Palette verwenden. Durch das warten auf den Abschluss der **Vorbereitung** wird sichergestellt, dass palettenänderungs Meldungen vor der Zustandsänderung weitergeleitet werden. Dadurch wird ein potenzieller Deadlock vermieden.
+Insbesondere verteilt diese Methode Nachrichten, während sie darauf wartet, dass das [**Flag CBaseRenderer::m \_ bInReceive**](cbaserenderer-m-binreceive.md) zu **FALSE** wird. Das Flag wird in der [**CBaseRenderer::P repareReceive-Methode**](cbaserenderer-preparereceive.md) zu **TRUE** und wechselt zurück zu **FALSE,** nachdem die **Receive-Methode** die [**CBaseRenderer::P repareRender-Methode**](cbaserenderer-preparerender.md) aufruft. Die abgeleitete Klasse kann **PrepareRender** verwenden, um die Palette festzulegen. Wenn Sie auf den Abschluss von **PrepareRender** warten, wird sichergestellt, dass Palettenänderungsmeldungen gesendet werden, bevor die Zustandsänderung erfolgt. Dadurch wird ein potenzieller Deadlock vermieden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Diese Methode sendet Nachrichten, während Sie darauf wartet, dass das [**cbaser
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Diese Methode sendet Nachrichten, während Sie darauf wartet, dass das [**cbaser
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob der Gerätekontext (DC) abgerufen werden soll. TRUE gibt an, dass das-Objekt ein Handle für den DC des Fensters abruft und einen kompatiblen Arbeitsspeicher-DC erstellt.
+description: Flag, das angibt, ob der Gerätekontext (DC) abgerufen werden soll. True gibt an, dass das -Objekt ein Handle für den DC des Fensters abruft und einen kompatiblen Speicherdomänencontroller erstellt.
 ms.assetid: e8b8dcc9-0046-40f8-9009-e23d839ef1db
-title: 'Cbasewindow:: m_bDoGetDC Member (winutil. h)'
+title: CBaseWindow::m_bDoGetDC-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0d0b08951944c93b8873eddae26a825aacadf4be
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8efb4deef07cd6109fa6f4c9d4513d664cfde9370ff7d19a81208a81adef77b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016578"
 ---
-# <a name="cbasewindowm_bdogetdc-member"></a>Cbasewindow:: m \_ bdogetdc-Member
+# <a name="cbasewindowm_bdogetdc-member"></a>CBaseWindow::m \_ bDoGetDC-Mitglied
 
-Flag, das angibt, ob der Gerätekontext (DC) abgerufen werden soll. **True** gibt an, dass das-Objekt ein Handle für den DC des Fensters abruft und einen kompatiblen Arbeitsspeicher-DC erstellt.
+Flag, das angibt, ob der Gerätekontext (DC) abgerufen werden soll. True **gibt an,** dass das -Objekt ein Handle für den DC des Fensters abruft und einen kompatiblen Speicherdomänencontroller erstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bDoGetDC;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bDoGetDC;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_DEFAULT-Struktur (D3dx12. h)
-description: Übergibt D3D12 \_ default an einen Konstruktor für jede hilfsstruktur. Diese Struktur wird einfach als Mechanismus verwendet, um Standardparameter für die anderen Hilfsstrukturen festzulegen.
+title: CD3DX12_DEFAULT -Struktur (D3dx12.h)
+description: Übergibt D3D12 \_ DEFAULT an einen Konstruktor für jede Hilfsstruktur. Diese Struktur wird einfach als Mechanismus zum Festlegen von Standardparametern für die anderen Hilfsstrukturen verwendet.
 ms.assetid: AD41FD7B-9172-400E-9292-374FFAEDE145
 keywords:
-- CD3DX12_DEFAULT Struktur
+- CD3DX12_DEFAULT-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b010e8f0fdce67f16750d0f66d1cf272c8ddb849
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 876fbb5e666680e85854196fb9136bfd4d765d6eecf8f16bf6101bb321a7039a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118531287"
 ---
-# <a name="cd3dx12_default-structure"></a>CD3DX12- \_ Standardstruktur
+# <a name="cd3dx12_default-structure"></a>CD3DX12 \_ DEFAULT-Struktur
 
-Übergibt D3D12 \_ default an einen Konstruktor für jede hilfsstruktur. Diese Struktur wird einfach als Mechanismus verwendet, um Standardparameter für die anderen Hilfsstrukturen festzulegen.
+Übergibt D3D12 \_ DEFAULT an einen Konstruktor für jede Hilfsstruktur. Diese Struktur wird einfach als Mechanismus zum Festlegen von Standardparametern für die anderen Hilfsstrukturen verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Struktur wird wie folgt deklariert:
 
@@ -35,9 +35,9 @@ struct CD3DX12_DEFAULT {};
 extern const DECLSPEC_SELECTANY CD3DX12_DEFAULT D3D12_DEFAULT;
 ```
 
-Übergibt D3D12 \_ default an einen Konstruktor für jede hilfsstruktur. Der folgende Konstruktor wird z. b. in d3dx12. h deklariert:
+Übergibt D3D12 \_ DEFAULT an einen Konstruktor für jede Hilfsstruktur. Beispielsweise wird der folgende Konstruktor in d3dx12.h deklariert:
 
-CD3DX12- \_ CPU- \_ \_ Deskriptorhandle (CD3DX12 \_ Standard) {PTR = 0;}
+CD3DX12 \_ CPU \_ DESCRIPTOR \_ HANDLE(CD3DX12 \_ DEFAULT) { ptr = 0; }
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ CD3DX12- \_ CPU- \_ \_ Deskriptorhandle (CD3DX12 \_ Standard) {PTR = 0;}
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 

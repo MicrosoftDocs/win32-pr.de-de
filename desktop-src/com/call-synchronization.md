@@ -1,71 +1,71 @@
 ---
-title: Rückruf Synchronisierung
-description: Rückruf Synchronisierung
+title: Aufrufsynchronisierung
+description: Aufrufsynchronisierung
 ms.assetid: e74407ef-f500-4d13-aef4-ca6bb37d5858
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec9254aceaaa8a6fa26d56d4a86987cc955b90dc
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 9969c968294a3dfdbfbc4cb78d40e64ad65c17392bf3b9fd09fc7a5f99b9049b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048738"
 ---
-# <a name="call-synchronization"></a>Rückruf Synchronisierung
+# <a name="call-synchronization"></a>Aufrufsynchronisierung
 
-COM-Anwendungen müssen in der Lage sein, bei der Verarbeitung eines oder mehrerer Aufrufe von com oder des Betriebssystems ordnungsgemäß mit Benutzereingaben umzugehen. COM bietet nur eine Synchronisierung für Single Thread-Apartments. Multithreadwohnungen (die frei Thread-Threads enthalten) empfangen beim Aufrufen von aufrufen (im gleichen Thread) keine Aufrufe. Multithread-Apartments können keine Synchronisierungs Aufrufe durchführen. Asynchrone Aufrufe werden in Multithread-Apartments in synchrone Aufrufe konvertiert. Der Nachrichtenfilter wird nicht für einen Thread in einem Multithread-Apartment aufgerufen. Weitere Informationen zu Threading Problemen finden Sie unter [Prozesse, Threads und Apartments](processes--threads--and-apartments.md).
+COM-Anwendungen müssen in der Lage sein, benutzereingaben ordnungsgemäß zu verarbeiten, während mindestens ein Aufruf von COM oder dem Betriebssystem verarbeitet wird. COM ermöglicht die Aufrufsynchronisierung nur für Singlethread-Apartments. Multithread-Apartments (die Freethreadthreads enthalten) empfangen keine Aufrufe, während Sie Aufrufe (im gleichen Thread) durchführen. Multithread-Apartments können keine synchronisierten Eingabeaufrufe durchführen. Asynchrone Aufrufe werden in synchrone Aufrufe in Multithread-Apartments konvertiert. Der Nachrichtenfilter wird für keinen Thread in einem Multithread-Apartment aufgerufen. Weitere Informationen zu Threadingproblemen finden Sie unter [Prozesse, Threads und Apartment.](processes--threads--and-apartments.md)
 
-COM-Aufrufe zwischen Prozessen können wie folgt in drei Kategorien unterteilt werden:
+COM-Aufrufe zwischen Prozessen lassen sich wie folgt in drei Kategorien unterteilen:
 
 <dl> <dt>
 
 <span id="Synchronous_calls"></span><span id="synchronous_calls"></span><span id="SYNCHRONOUS_CALLS"></span>*Synchrone Aufrufe*
 </dt> <dd>
 
-Der größte Teil der Kommunikation, die innerhalb von com stattfindet, ist synchron. Beim Ausführen synchroner Aufrufe wartet der Aufrufer auf die Antwort, bevor er fortgesetzt wird, und kann eingehende Nachrichten empfangen. COM gibt eine modale Schleife für das warten auf die Antwort, das empfangen und weiterleiten anderer Nachrichten in einer kontrollierten Weise ein.
+Der Großteil der Kommunikation, die innerhalb von COM stattfindet, ist synchron. Wenn synchrone Aufrufe erfolgen, wartet der Aufrufer vor dem Fortfahren auf die Antwort und kann eingehende Nachrichten während des Wartens empfangen. COM wechselt in eine modale Schleife, um auf die Antwort zu warten und andere Nachrichten kontrolliert zu empfangen und zu senden.
 
 </dd> <dt>
 
 <span id="Asynchronous_notifications"></span><span id="asynchronous_notifications"></span><span id="ASYNCHRONOUS_NOTIFICATIONS"></span>*Asynchrone Benachrichtigungen*
 </dt> <dd>
 
-Beim Senden von asynchronen Benachrichtigungen wartet der Aufrufer nicht auf die Antwort. COM verwendet [**PostMessage**](/windows/win32/api/winuser/nf-winuser-postmessagea) oder Ereignisse auf hoher Ebene, um asynchrone Benachrichtigungen zu senden, abhängig von der Plattform. COM definiert fünf asynchrone Methoden von [**IAdviseSink**](/windows/desktop/api/ObjIdl/nn-objidl-iadvisesink):
+Beim Senden asynchroner Benachrichtigungen wartet der Aufrufer nicht auf die Antwort. COM verwendet Je nach Plattform [**PostMessage**](/windows/win32/api/winuser/nf-winuser-postmessagea) oder Ereignisse auf hoher Ebene, um asynchrone Benachrichtigungen zu senden. COM definiert fünf asynchrone Methoden von [**IAdviseSink:**](/windows/desktop/api/ObjIdl/nn-objidl-iadvisesink)
 
 -   [**OnDataChange**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-ondatachange)
 -   [**OnViewChange**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onviewchange)
--   [**Onrename**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onrename)
--   [**OnSave**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onsave)
+-   [**OnRename**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onrename)
+-   [**Onsave**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onsave)
 -   [**OnClose**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-onclose)
 
 > [!Note]  
-> Während com einen asynchronen Aufruf verarbeitet, können keine synchronen Aufrufe durchgeführt werden. Beispielsweise kann die Implementierung von [**OnDataChange**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-ondatachange) einer Containeranwendung keinen [**IPersistStorage:: Save**](/windows/desktop/api/ObjIdl/nf-objidl-ipersiststorage-save)-Rückruf enthalten. Diese Aufrufe sind die einzigen asynchronen Aufrufe, die von com unterstützt werden. Es gibt keine Möglichkeit, eine benutzerdefinierte Schnittstelle zu erstellen, die zu diesem Zeitpunkt asynchron ist.
+> Während COM einen asynchronen Aufruf verarbeitet, können keine synchronen Aufrufe erfolgen. Beispielsweise kann die Implementierung von [**OnDataChange**](/windows/desktop/api/ObjIdl/nf-objidl-iadvisesink-ondatachange) einer Containeranwendung keinen Aufruf von [**IPersistStorage::Save**](/windows/desktop/api/ObjIdl/nf-objidl-ipersiststorage-save)enthalten. Diese Aufrufe sind die einzigen asynchronen Aufrufe, die von COM unterstützt werden. Es gibt keine Möglichkeit, eine benutzerdefinierte Schnittstelle zu erstellen, die zu diesem Zeitpunkt asynchron ist.
 
- 
+ 
 
 </dd> <dt>
 
-<span id="Input-synchronized_calls"></span><span id="input-synchronized_calls"></span><span id="INPUT-SYNCHRONIZED_CALLS"></span>*Eingabe synchronisierte Aufrufe*
+<span id="Input-synchronized_calls"></span><span id="input-synchronized_calls"></span><span id="INPUT-SYNCHRONIZED_CALLS"></span>*Mit Eingabe synchronisierte Aufrufe*
 </dt> <dd>
 
-Beim Durchführen von Eingabe synchronisierten aufrufen muss das Objekt, das aufgerufen wird, den Aufruf vor der Rückgabe der Steuerung vervollständigen. Dadurch wird sichergestellt, dass die Fokus Verwaltung ordnungsgemäß funktioniert und dass die vom Benutzer eingegebenen Daten entsprechend verarbeitet werden. Diese Aufrufe werden von com über die [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage) -Funktion durchgeführt, ohne dass eine modale Schleife eingegeben wird. Beim Verarbeiten eines Eingabe synchronisierten Aufrufs darf das aufgerufene Objekt keine Funktion oder Methode (einschließlich synchroner Methoden) aufrufen, die möglicherweise die Kontrolle übertragen. Die folgenden Methoden sind für die Eingabe synchronisiert.
+Wenn Eingabesynchronisierungsaufrufe ausgeführt werden, muss das aufgerufene Objekt den Aufruf abschließen, bevor das Steuerelement ausgegeben wird. Dadurch wird sichergestellt, dass die Fokusverwaltung ordnungsgemäß funktioniert und dass die vom Benutzer eingegebenen Daten ordnungsgemäß verarbeitet werden. Diese Aufrufe werden von COM über die [**SendMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessage) ausgeführt, ohne eine modale Schleife zu durchlaufen. Bei der Verarbeitung eines eingabesynchronisierten Aufrufs darf das aufgerufene Objekt keine Funktion oder Methode (einschließlich synchroner Methoden) aufrufen, die möglicherweise die Kontrolle liefern. Die folgenden Methoden sind eingabesynchronisiert.
 
--   [**IOleWindow:: GetWindow**](/windows/desktop/api/OleIdl/nf-oleidl-iolewindow-getwindow)
--   [**IOleInPlaceActiveObject:: onframewindowaktivierungs**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)
--   [**IOleInPlaceActiveObject:: ondocwindowaktivierungs**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)
--   [**IOleInPlaceActiveObject:: resizeborder**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-resizeborder)
--   [**Ioleingeplaceuiwindow:: GetBorder**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-getborder)
--   [**Ioleingeplaceuiwindow:: RequestBorderSpace**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-requestborderspace)
--   [**Ioleingeplaceuiwindow:: SetBorderSpace**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-setborderspace)
--   [**IOleInPlaceFrame:: setMenu**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceframe-setmenu)
--   [**IOleInPlaceFrame:: SetStatusText**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceframe-setstatustext)
--   [**IOleInPlaceObject:: SetObjectRects**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceobject-setobjectrects)
+-   [**IOleWindow::GetWindow**](/windows/desktop/api/OleIdl/nf-oleidl-iolewindow-getwindow)
+-   [**IOleInPlaceActiveObject::OnFrameWindowActivate**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)
+-   [**IOleInPlaceActiveObject::OnDocWindowActivate**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)
+-   [**IOleInPlaceActiveObject::ResizeBorder**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceactiveobject-resizeborder)
+-   [**IOleInPlaceUIWindow::GetBorder**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-getborder)
+-   [**IOleInPlaceUIWindow::RequestBorderSpace**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-requestborderspace)
+-   [**IOleInPlaceUIWindow::SetBorderSpace**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceuiwindow-setborderspace)
+-   [**IOleInPlaceFrame::SetMenu**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceframe-setmenu)
+-   [**IOleInPlaceFrame::SetStatusText**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceframe-setstatustext)
+-   [**IOleInPlaceObject::SetObjectRects**](/windows/desktop/api/OleIdl/nf-oleidl-ioleinplaceobject-setobjectrects)
 
 </dd> </dl>
 
-Um Probleme zu minimieren, die bei der asynchronen Nachrichtenverarbeitung auftreten können, sind die meisten com-Methodenaufrufe synchron. Bei synchroner Kommunikation ist kein spezieller Code erforderlich, um eingehende Nachrichten zu verteilen und zu verarbeiten. Wenn eine Anwendung einen synchronen Methoden Aufrufvorgang durchführt, wechselt com in eine modale Warteschleife, die die erforderlichen Antworten verarbeitet und eingehende Nachrichten an Anwendungen sendet, die Sie verarbeiten können.
+Um Probleme zu minimieren, die bei der asynchronen Nachrichtenverarbeitung auftreten können, sind die meisten COM-Methodenaufrufe synchron. Bei der synchronen Kommunikation ist kein spezieller Code erforderlich, um eingehende Nachrichten zu senden und zu verarbeiten. Wenn eine Anwendung einen synchronen Methodenaufruf vornimmt, wechselt COM in eine modale Warteschleife, die die erforderlichen Antworten verarbeitet und eingehende Nachrichten an Anwendungen weiterleitet, die diese verarbeiten können.
 
-COM verwaltet Methodenaufrufe durch Zuweisen eines Bezeichners, der als *logische Thread-ID* bezeichnet wird. Ein neues wird zugewiesen, wenn ein Benutzer einen Menübefehl auswählt oder wenn die Anwendung einen neuen com-Vorgang initiiert. Nachfolgenden Aufrufen, die sich auf den anfänglichen com-Aufruf beziehen, wird dieselbe logische Thread-ID wie der erste Aufruf zugewiesen.
+COM verwaltet Methodenaufrufe, indem ein Bezeichner zugewiesen wird, der als *logische Thread-ID* bezeichnet wird. Ein neuer Befehl wird zugewiesen, wenn ein Benutzer einen Menübefehl auswählt oder wenn die Anwendung einen neuen COM-Vorgang initiiert. Nachfolgenden Aufrufen, die sich auf den ersten COM-Aufruf beziehen, wird die gleiche logische Thread-ID wie dem ersten Aufruf zugewiesen.
 
- 
+ 
 
- 
+ 

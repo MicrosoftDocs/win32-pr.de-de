@@ -1,12 +1,12 @@
 ---
-title: GetWinstationDriverNames-Methode der Win32_TerminalServiceSetting Klasse
+title: GetWinstationDriverNames-Methode der Win32_TerminalServiceSetting-Klasse
 description: Ruft eine Liste der Winstation-Treibernamen ab.
 ms.assetid: 578c2a07-17e7-4bd6-b520-942cd48ee40f
 ms.tgt_platform: multiple
 keywords:
-- GetWinstationDriverNames-Remotedesktopdienste
+- GetWinstationDriverNames-Methode Remotedesktopdienste
 - GetWinstationDriverNames-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting klasse Remotedesktopdienste , GetWinstationDriverNames-Methode
+- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste , GetWinstationDriverNames-Methode
 topic_type:
 - apiref
 api_name:
@@ -52,7 +52,7 @@ Die Liste der Winstation-Treibernamen.
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Verbindung mit dem \\ \\ CIMV2 TerminalServices-Stammnamespace herzustellen, muss \\ die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -63,7 +63,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,13 +73,13 @@ Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

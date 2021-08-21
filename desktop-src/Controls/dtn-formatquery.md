@@ -1,9 +1,9 @@
 ---
-title: DTN_FORMATQUERY Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem DTP-Steuerelement gesendet, um die maximal zulässige Größe der Zeichenfolge abzurufen, die in einem Rückruf Feld angezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: DTN_FORMATQUERY Benachrichtigungscode (Commctrl.h)
+description: Wird von einem DTP-Steuerelement (Date and Time Picker) gesendet, um die maximal zulässige Größe der Zeichenfolge abzurufen, die in einem Rückruffeld angezeigt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 0f00086a-0ab8-4f6f-9c3e-6e77008aa088
 keywords:
-- Windows-Steuerelemente für DTN_FORMATQUERY Benachrichtigungs
+- DTN_FORMATQUERY Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69e9653f369f13e0ef4a775265d763e854db4de7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 14bd1a9efe22251aba71f157dfb2a68e2b0a70385c30564bb7f08e420e0c0cb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019988"
 ---
-# <a name="dtn_formatquery-notification-code"></a>DTN \_ formatQuery-Benachrichtigungs Code
+# <a name="dtn_formatquery-notification-code"></a>DTN \_ FORMATQUERY-Benachrichtigungscode
 
-Wird von einem DTP-Steuerelement gesendet, um die maximal zulässige Größe der Zeichenfolge abzurufen, die in einem Rückruf Feld angezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem DTP-Steuerelement (Date and Time Picker) gesendet, um die maximal zulässige Größe der Zeichenfolge abzurufen, die in einem Rückruffeld angezeigt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,17 +43,17 @@ DTN_FORMATQUERY
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmdatetimeformatquery**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformatquerya) -Struktur, die Informationen über das Rückruf Feld enthält. Die-Struktur enthält eine Teil Zeichenfolge, die ein Rückruf Feld definiert und die maximal zulässige Größe der Zeichenfolge empfängt, die im Rückruf Feld angezeigt wird.
+Ein Zeiger auf eine [**NMDATETIMEFORMATQUERY-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformatquerya) die Informationen über das Rückruffeld enthält. Die -Struktur enthält eine Teilzeichenfolge, die ein Rückruffeld definiert und die maximal zulässige Größe der Zeichenfolge empfängt, die im Rückruffeld angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Besitzer des Steuer Elements muss die maximal mögliche Breite des Texts berechnen, der im Rückruf Feld angezeigt wird, den **szmax** -Member der [**nmdatetimeformatquery**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformatquerya) -Struktur festlegen und 0 (null) zurückgeben.
+Der Besitzer des Steuerelements muss die maximal mögliche Breite des Texts berechnen, der im Rückruffeld angezeigt wird, den **szMax-Member** der [**NMDATETIMEFORMATQUERY-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformatquerya) festlegen und 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Behandlung dieses Benachrichtigungs Codes wird das Steuerelement so vorbereitet, dass es die maximale Größe der Zeichenfolge anpasst, die in einem bestimmten Rückruf Feld angezeigt wird. Dies ermöglicht es dem Steuerelement, die Ausgabe jederzeit ordnungsgemäß anzuzeigen und das Flimmern innerhalb der Anzeige des Steuer Elements zu reduzieren. (Weitere Informationen zu Rückruf Feldern finden Sie unter [Rückruf Felder](date-and-time-picker-controls.md).)
+Durch die Behandlung dieses Benachrichtigungscodes wird das Steuerelement auf die maximale Größe der Zeichenfolge vorbereitet, die in einem bestimmten Rückruffeld angezeigt wird. Dadurch kann das Steuerelement die Ausgabe jederzeit ordnungsgemäß anzeigen, was das Flackern innerhalb der Anzeige des Steuerelements reduziert. (Weitere Informationen zu Rückruffeldern finden Sie unter [Rückruffelder.)](date-and-time-picker-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Durch die Behandlung dieses Benachrichtigungs Codes wird das Steuerelement so vo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dtn \_ Formatqueryw** (Unicode) und **Dtn \_ formatquerya** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **DTN \_ FORMATQUERYW** (Unicode) und **DTN \_ FORMATQUERYA** (ANSI)<br/>           |
 
 
 

@@ -13,11 +13,11 @@ ms.locfileid: "118975520"
 ---
 # <a name="the-speechinput-object"></a>Das SpeechInput-Objekt
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Das [**SpeechInput-Objekt**](https://www.bing.com/search?q=**SpeechInput**) bietet Zugriff auf die Spracheingabeeigenschaften, die vom Agent-Server verwaltet werden. Die Eigenschaften sind für Clientanwendungen schreibgeschützt, aber der Benutzer kann sie im Eigenschaftenblatt des Microsoft-Agents ändern. Der Server gibt nur Werte zurück, wenn eine kompatible Sprach-Engine installiert und aktiviert wurde.
+Das [**SpeechInput-Objekt**](https://www.bing.com/search?q=**SpeechInput**) ermöglicht den Zugriff auf die spracheingabeeigenschaften, die vom -Agent-Server verwaltet werden. Die Eigenschaften sind schreibgeschützt für Clientanwendungen, aber der Benutzer kann sie im Eigenschaftenblatt des Microsoft-Agents ändern. Der Server gibt Nur werte zurück, wenn eine kompatible Sprach-Engine installiert wurde und aktiviert ist.
 
-Die [**Eigenschaften Engine,**](https://www.bing.com/search?q=**Engine**) [**Installed**](https://www.bing.com/search?q=**Installed**)und [**Language**](https://www.bing.com/search?q=**Language**) werden nicht mehr unterstützt, geben jedoch (aus Gründen der Abwärtskompatibilität) NULL-Werte zurück, wenn sie abgefragt werden. Verwenden Sie zum Abfragen oder Festlegen des Spracherkennungsmodus die [**SRModeID-Eigenschaft.**](srmodeid-property.md)
+Die Eigenschaften [**Engine,**](https://www.bing.com/search?q=**Engine**) [**Installed**](https://www.bing.com/search?q=**Installed**)und [**Language**](https://www.bing.com/search?q=**Language**) werden nicht mehr unterstützt, geben jedoch (aus Gründen der Abwärtskompatibilität) NULL-Werte zurück, wenn sie abgefragt werden. Um den Modus einer Spracherkennung abzufragen oder festzulegen, verwenden Sie die [**SRModeID-Eigenschaft.**](srmodeid-property.md)
 
 -   [SpeechInput-Eigenschaften](speechinput-properties.md)
 

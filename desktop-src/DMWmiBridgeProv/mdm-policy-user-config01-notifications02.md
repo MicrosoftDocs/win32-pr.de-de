@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Notifications02-Klasse
-description: Die MDM \_ Policy \_ User \_ Config01 \_ Notifications02-Klasse stellt die verfügbaren Benachrichtigungsrichtlinien dar.
+description: Die Mdm \_ Policy \_ User \_ Config01 \_ Notifications02-Klasse stellt die verfügbaren Benachrichtigungsrichtlinien dar.
 ms.assetid: da70b3b4-e8ed-4784-ad6b-52e152a8b78f
 keywords:
 - MDM_Policy_User_Config01_Notifications02-Klasse
@@ -28,7 +28,7 @@ ms.locfileid: "119077064"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM Policy User \_ \_ \_ Config01 \_ Notifications02-Klasse** stellt die verfügbaren Benachrichtigungsrichtlinien dar.
+Die **Mdm Policy User \_ \_ \_ Config01 \_ Notifications02-Klasse** stellt die verfügbaren Benachrichtigungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,7 +46,7 @@ class MDM_Policy_User_Config01_Notifications02
 
 ## <a name="members"></a>Member
 
-Die **MDM Policy User \_ \_ \_ Config01 \_ Notifications02-Klasse** verfügt über die folgenden Membertypen:
+Die **Mdm Policy User \_ \_ \_ Config01 \_ Notifications02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -76,10 +76,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Notifications".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "Notifications".
 
 </dd> <dt>
 
@@ -92,10 +92,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./User/Vendor/MSFT/Policy/Config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./User/Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 

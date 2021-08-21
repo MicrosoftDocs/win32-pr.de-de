@@ -1,5 +1,5 @@
 ---
-description: Die TapI-Version 2.2 (Microsoft-Telefonieanwendungsprogrammierschnittstelle) ermöglicht die Implementierung von Kommunikationsanwendungen, die von der einfachen Modemsteuerung bis hin zu Callcentern mit mehreren Agents und Switches reichen.
+description: Die TapI-Version 2.2 (TAPI/C) von Microsoft Telefonieanwendungsschnittstelle ermöglicht die Implementierung von Kommunikationsanwendungen, die von der grundlegenden Modemsteuerung bis hin zu Callcentern mit mehreren Agents und Switches reichen.
 ms.assetid: 02bfe923-9915-439e-ac7c-a570416d054a
 title: Telefonieanwendungsprogrammierschnittstelle, Version 2.2
 ms.topic: article
@@ -15,19 +15,19 @@ ms.locfileid: "119060268"
 
 ## <a name="purpose"></a>Zweck
 
-Die TapI-Version 2.2 (Microsoft-Telefonieanwendungsprogrammierschnittstelle) ermöglicht die Implementierung von Kommunikationsanwendungen, die von der einfachen Modemsteuerung bis hin zu Callcentern mit mehreren Agents und Switches reichen.
+Die TapI-Version 2.2 (TAPI/C) von Microsoft Telefonieanwendungsschnittstelle ermöglicht die Implementierung von Kommunikationsanwendungen, die von der grundlegenden Modemsteuerung bis hin zu Callcentern mit mehreren Agents und Switches reichen.
 
 ## <a name="where-applicable"></a>Anwendungsbereich
 
 Mögliche TAPI 2.2-Anwendungen:
 
--   Grundlegende Sprachanrufe im öffentlichen Telefonnetz (PSTN)
+-   Einfache Sprachanrufe im öffentlichen Telefonnetz (PSTN)
 -   Callcenteranwendungen zum Nachverfolgen mehrerer Agents
--   Modemsteuerung
+-   Modemsteuerelement
 -   PBX-Steuerelement
--   IVR-Systeme (Interactive Voice Response)
+-   Interactive Voice Response-Systeme (IVR)
 -   Voicemail
--   Detaillierte Telefongerätesteuerung
+-   Detaillierte Steuerung des Telefongeräts
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
@@ -41,10 +41,10 @@ TAPI Version 2.2 ermöglicht die Entwicklung von Kommunikationsanwendungen für 
 
 
 
-| Thema                                          | BESCHREIBUNG                                                                                                       |
+| Thema                                          | Beschreibung                                                                                                       |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | [Übersicht](tapi-2-2-overview.md)<br/>   | Allgemeine Informationen zur TAPI-Architektur und -Komponenten.<br/>                                            |
-| [Referenz](tapi-2-2-reference.md)<br/> | Dokumentation von Funktionen, Strukturen, Nachrichten, Konstanten und Geräteklassen, die in TAPI 2.2 verfügbar sind.<br/> |
+| [Referenz](tapi-2-2-reference.md)<br/> | Dokumentation zu Funktionen, Strukturen, Nachrichten, Konstanten und Geräteklassen, die in TAPI 2.2 verfügbar sind.<br/> |
 
 
 

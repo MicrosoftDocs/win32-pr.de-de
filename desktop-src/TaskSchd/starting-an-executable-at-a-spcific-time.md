@@ -34,7 +34,7 @@ Die folgenden Beispiele beginnen Editor 30 Sekunden nach der Aktivierung der Auf
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: ColumnInfo-Klasse'
+description: Weitere Informationen finden Sie unter ColumnInfo-Klasse.
 title: ColumnInfo-Klasse
 TOCTitle: ColumnInfo class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.ColumnInfo
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 19e04584584bf3f6c0f19254df83025a47fc8eb9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6dcea5c501628d355067f124c4919118f5b7841a8f63b5af1c7d715a85405f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360102"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042418"
 ---
 # <a name="columninfo-class"></a>ColumnInfo-Klasse
 
-Informationen zu einer ESENT-Spalte. Dabei handelt es sich nicht um eine Interop-Klasse, sondern wird von den Metadaten der Meta-Data-Methode verwendet.
+Informationen zu einer Esent-Spalte. Dies ist keine Interop-Klasse, wird jedoch von den Metadaten-Hilfsmethoden verwendet.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. ColumnInfo  
+  Microsoft.Isam.Esent.Interop.ColumnInfo  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,8 +62,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[ColumnInfo-Member](./columninfo-members.md)
+[ColumnInfo-Elemente](./columninfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

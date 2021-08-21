@@ -1,6 +1,6 @@
 ---
 title: SampleGrad::SampleGrad(S,float,float,float,int,float)-Funktion für Texture2DArray
-description: Erfahren Sie, wie diese Funktion eine Textur abtast und dabei einen Farbverlauf verwendet, um die Berechnung des Stichprobenspeicherorts zu beeinflussen, wobei ein optionaler Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail) verwendet wird. Für Texture2DArray.
+description: Erfahren Sie, wie diese Funktion eine Textur mithilfe eines Farbverlaufs abtast, um die Berechnung des Stichprobenspeicherorts zu beeinflussen, mit einem optionalen Wert, an den Diebwerte der Detailebene (Level-of-Detail, LOD) der Stichprobe klammern. Für Texture2DArray.
 ms.assetid: CBC940D5-FC09-498D-9C7A-3CBAB2EC2D4D
 keywords:
 - SampleGrad-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "119043438"
 ---
 # <a name="samplegradsamplegradsfloatfloatfloatintfloat-function-for-texture2darray"></a>SampleGrad::SampleGrad(S,float,float,float,int,float)-Funktion für Texture2DArray
 
-Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail).
+Stichproben einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert, an den die Werte der Stichprobenebene (Level-of-Detail, LOD) geklammert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object-Typ                    | Parametertyp |
+| Texture-Object Typ                    | Parametertyp |
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
@@ -80,11 +80,11 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 Typ: **float**
 
-Die Änderungsrate der Oberflächengeometrie in x Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in x-Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object-Typ                      | Parametertyp |
+| Texture-Object Typ                      | Parametertyp |
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
@@ -106,7 +106,7 @@ Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist 
 
 
 
-| Texture-Object-Typ                      | Parametertyp |
+| Texture-Object Typ                      | Parametertyp |
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
@@ -124,11 +124,11 @@ Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist 
 
 Typ: **int**
 
-Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
+Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Verwenden Sie einen Offset nur bei einer ganzzahligen MIP-Ebene. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
 
 
 
-| Texture-Object-Typ           | Parametertyp |
+| Texture-Object Typ           | Parametertyp |
 |-------------------------------|----------------|
 | Texture1D, Texture1DArray     | INT            |
 | Texture2D, Texture2DArray     | int2           |
@@ -146,7 +146,7 @@ Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet
 
 Typ: **float**
 
-Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
+Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene unter 2,0f zuf zutritt.
 
 </dd> </dl>
 
@@ -154,9 +154,9 @@ Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise
 
 Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
+Das Texturformat, bei dem es sich um einen der typierten Werte handelt, die in [**DXGI \_ FORMAT aufgeführt sind.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

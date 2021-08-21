@@ -1,31 +1,31 @@
 ---
-description: Multimedia-streamingtypen
+description: Multimediastreamingtypen
 ms.assetid: 0b2866cc-ff07-4cd9-b7df-6a05436251d3
-title: Multimedia-streamingtypen
+title: Multimediastreamingtypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd5bc135df235642c88dab8d51e56b6437d18ede
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: e09d619325d85401cb158445e434bc93991cf8d4c243b47d3e8420d2bad54af1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106366560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952169"
 ---
-# <a name="multimedia-streaming-types"></a>Multimedia-streamingtypen
+# <a name="multimedia-streaming-types"></a>Multimediastreamingtypen
 
 > [!Note]  
-> Diese API ist veraltet. Diese sollten von neuen Anwendungen nicht verwendet werden.
+> Diese API ist veraltet. Neue Anwendungen sollten sie nicht verwenden.
 
  
 
-In diesem Abschnitt sind die für Microsoft DirectShow Multimedia definierten Enumerationstypen aufgeführt.
+In diesem Abschnitt werden die für Microsoft DirectShow Multimedia definierten Enumerationstypen aufgelistet.
 
 
 
 | Enumerationstyp                      | BESCHREIBUNG                                      |
 |---------------------------------------|--------------------------------------------------|
-| [**\_streamstatus**](/previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_state) | Beschreibt den Zustand eines Streams.                 |
-| [**\_Streamtyp**](/previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_type)   | Definiert die Richtung des Datenflusses für einen Stream. |
+| [**STREAM \_ STATE**](/previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_state) | Beschreibt den Zustand eines Streams.                 |
+| [**\_STREAMTYP**](/previous-versions/windows/desktop/api/mmstream/ne-mmstream-stream_type)   | Definiert die Richtung des Datenflusses für einen Stream. |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator überlädt den Zuweisungs Operator zum Kopieren eines Medientyps.
+description: Dieser Operator überlädt den Zuweisungsoperator, um einen Medientyp zu kopieren.
 ms.assetid: 5b94191d-b5e4-42b2-b0c5-8c2da2483c54
-title: 'Cmediatype. cmediatype:: Operator =-Methode (mtype. h)-mtype-Parameter'
+title: CMediaType.CMediaType::operator=-Methode (Mtype.h) – mtype-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dfa577c8c8cfcdbcb0b62287a80cd998ab8775c6
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: b5960ac5f9dc3e685aa0b8b281989185580fd5b683392aaf93a0891d0ebaa35d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016263"
 ---
-# <a name="cmediatypecmediatypeoperator-method-mtypeh"></a>Cmediatype. cmediatype:: Operator =-Methode (mtype. h)
+# <a name="cmediatypecmediatypeoperator-method-mtypeh"></a>CMediaType.CMediaType::operator=-Methode (Mtype.h)
 
-Dieser Operator überlädt den Zuweisungs Operator zum Kopieren eines Medientyps.
+Dieser Operator überlädt den Zuweisungsoperator, um einen Medientyp zu kopieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CMediaType& CMediaType::operator=(
 
 <dl> <dt>
 
-*mtype* \[ atur\]
+*mtype* \[ Ref\]
 </dt> <dd>
 
-Verweis auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur.
+Verweis auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Verweis auf das-Objekt zurück.
+Gibt einen Verweis auf das -Objekt zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen Verweis auf das-Objekt zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen Verweis auf das-Objekt zurück.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

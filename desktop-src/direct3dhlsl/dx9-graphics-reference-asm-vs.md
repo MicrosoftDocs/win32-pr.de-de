@@ -9,43 +9,43 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: aa36895afc34c2604cdeb60366b08aff6a1aafb6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c9fa88a3ca5b89f1fdb8a0694e4ae9cdcca54e9b400db75a5df9bfb057b3c43f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119534"
 ---
 # <a name="vertex-shaders"></a>Vertex-Shader
 
 -   [vs \_ 1 \_ 1](dx9-graphics-reference-asm-vs-1-1.md)
 -   [vs \_ 2 \_ 0](dx9-graphics-reference-asm-vs-2-0.md)
--   [vs \_ 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md)
+-   [Vs. \_ 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md)
 -   [vs \_ 3 \_ 0](dx9-graphics-reference-asm-vs-3-0.md)
 
 <!-- -->
 
--   [Vertexshader-Unterschiede](dx9-graphics-reference-asm-vs-differences.md)
+-   [Vertex-Shaderunterschiede](dx9-graphics-reference-asm-vs-differences.md)
 
 <!-- -->
 
--   [Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
--   [Vertex-Shader-Register](dx9-graphics-reference-asm-vs-registers.md)
+-   [Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+-   [Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)
 
-Die neuesten Features, die in Shader Model 3 eingeführt wurden, finden Sie unter:
+Die neuesten Features, die in Shadermodell 3 eingeführt wurden, finden Sie unter:
 
--   [Shader-Modell 3 (DirectX HLSL)](shader-model-3.md)
+-   [Shadermodell 3 (DirectX HLSL)](shader-model-3.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ASM-Shader-Referenz](dx9-graphics-reference-asm.md)
+[Asm-Shaderreferenz](dx9-graphics-reference-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

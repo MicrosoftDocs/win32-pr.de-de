@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVariable asrendertargetview-Methode (D3dx11effect. h)
-description: Eine "Rendering-Target-View"-Variable erhalten.
+title: ID3DX11EffectVariable AsRenderTargetView-Methode (D3dx11effect.h)
+description: Hier erhalten Sie eine Renderzielansichtsvariable.
 ms.assetid: 1eec342e-267a-4eab-886a-a309758065c7
 keywords:
-- Asrendertargetview-Methode Direct3D 11
-- Asrendertargetview-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
-- ID3DX11EffectVariable-Schnittstelle Direct3D 11, asrendertargetview-Methode
+- AsRenderTargetView-Methode Direct3D 11
+- AsRenderTargetView-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
+- ID3DX11EffectVariable-Schnittstelle Direct3D 11 , AsRenderTargetView-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ca6270503ff786b3f4a319e3f068ba76acada7d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9a8b44b3ed67b6293d4b4add329eef532fdc44cb12cea9e84b1ddf43fb72cc05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118531421"
 ---
-# <a name="id3dx11effectvariableasrendertargetview-method"></a>ID3DX11EffectVariable:: asrendertargetview-Methode
+# <a name="id3dx11effectvariableasrendertargetview-method"></a>ID3DX11EffectVariable::AsRenderTargetView-Methode
 
-Eine "Rendering-Target-View"-Variable erhalten.
+Hier erhalten Sie eine Renderzielansichtsvariable.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **ID3DX11EffectRenderTargetViewVariable**](id3dx11effectrendertargetviewvariable.md)\***
 
-Ein Zeiger auf eine Renderziel-View-Variable. Siehe [**ID3DX11EffectRenderTargetViewVariable**](id3dx11effectrendertargetviewvariable.md).
+Ein Zeiger auf eine Renderzielansichtsvariable. Siehe [**ID3DX11EffectRenderTargetViewVariable**](id3dx11effectrendertargetviewvariable.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt eine Version der Effekt Variablen zurück, die auf eine Renderziel-View-Variable spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effekt Variable keine Renderziel-View-Daten enthält.
+Diese Methode gibt eine Version der Effektvariablen zurück, die auf eine Renderzielansichtsvariable spezialisiert wurde. Ähnlich wie bei einer Cast gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effect-Variable keine Renderzielansichtsdaten enthält.
 
-Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem Sie [**IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
+Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem sie [**IsValid aufrufen.**](id3dx11effectvariable-isvalid.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

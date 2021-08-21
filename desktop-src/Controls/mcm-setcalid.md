@@ -1,9 +1,9 @@
 ---
-title: MCM_SETCALID Meldung (kommstrg. h)
-description: Legt die Kalender-ID für das angegebene Kalender Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des "monthcal \_ setcalid"-Makros senden.
+title: MCM_SETCALID (Commctrl.h)
+description: Legt die Kalender-ID für das gegebene Kalendersteuer steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ SetCALID-Makros senden.
 ms.assetid: 4b9d06f5-0784-4a17-b401-982206d4be67
 keywords:
-- Windows-Steuerelemente für MCM_SETCALID Meldung
+- MCM_SETCALID meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a661a685062fe737a1927c3a6ab455e8499c6ca9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b40e7f4577382aa0e003165e38e4557b8dc234592f747a579e5a071ce2440a37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575580"
 ---
-# <a name="mcm_setcalid-message"></a>MCM \_ -setcalid-Meldung
+# <a name="mcm_setcalid-message"></a>MCM \_ SETCALID-Nachricht
 
-Legt die Kalender-ID für das angegebene Kalender Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des " [**monthcal \_ setcalid"-**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalid) Makros senden.
+Legt die Kalender-ID für das gegebene Kalendersteuer steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ SetCALID-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalid) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die Kalender-ID für das angegebene Kalender Steuerelement fest. Sie könne
 *wParam* 
 </dt> <dd>
 
-Die Kalender-ID. Eine der-Konstanten des [Kalender Bezeichner](/windows/desktop/Intl/calendar-identifiers) .
+Die Kalender-ID. Eine der Calendar [Identifiers-Konstanten.](/windows/desktop/Intl/calendar-identifiers)
 
 </dd> <dt>
 
@@ -53,9 +53,9 @@ Nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

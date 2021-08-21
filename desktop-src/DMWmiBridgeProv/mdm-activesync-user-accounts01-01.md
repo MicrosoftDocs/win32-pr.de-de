@@ -1,6 +1,6 @@
 ---
 title: MDM_ActiveSync_User_Accounts01_01-Klasse
-description: Die MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01 definiert alle verfügbaren ActiveSync-Konten.
+description: Die \_ MDM \_ \_ ActiveSync-Benutzerkonten01 \_ 01-Klasse definiert alle verfügbaren ActiveSync-Konten.
 ms.assetid: bcd1fdcb-675a-4833-9d3c-0509e68f7b00
 keywords:
 - MDM_ActiveSync_User_Accounts01_01-Klasse
@@ -24,11 +24,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119077406"
 ---
-# <a name="mdm_activesync_user_accounts01_01-class"></a>MDM \_ \_ ActiveSync-Benutzerkonten01 \_ \_ 01-Klasse
+# <a name="mdm_activesync_user_accounts01_01-class"></a>MDM \_ ActiveSync \_ User \_ Accounts01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01** definiert alle verfügbaren ActiveSync-Konten.
+Die **MDM \_ \_ ActiveSync-Benutzerkonten01 \_ \_ 01-Klasse** definiert alle verfügbaren ActiveSync-Konten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,13 +53,13 @@ class MDM_ActiveSync_User_Accounts01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01** verfügt über die folgenden Membertypen:
+Die **MDM \_ ActiveSync User \_ \_ Accounts01 \_ 01-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ \_ ActiveSync-Benutzerkonten01 \_ \_ 01-Klasse** verfügt über diese Eigenschaften.
+Die **MDM \_ ActiveSync User \_ \_ Accounts01 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -127,7 +127,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Identifiziert den Namen des übergeordneten Knotens.
@@ -143,10 +143,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/ActiveSync/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/ActiveSync/".
 
 </dd> <dt>
 
@@ -197,7 +197,7 @@ Zugriffstyp: Lesen/Schreiben
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

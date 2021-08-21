@@ -1,7 +1,7 @@
 ---
-description: Die Connect-Methode schließt eine Verbindung mit der Ausgabepin ab.
+description: Die Verbinden-Methode schließt eine Verbindung mit dem Ausgabepin ab.
 ms.assetid: fb20ef5d-e00a-4154-a6da-25bef663c0e7
-title: Cpullpin. Connect-Methode (pullpin. h)
+title: CPullPin. Verbinden-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 97e3b0b676e02dee0e3ebd82de9def56edc2ea28
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37240be1b732410d1e91974922f8ed7dc464b57b2596faa381c646a7513daf26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073504"
 ---
-# <a name="cpullpinconnect-method"></a>Cpullpin. Connect-Methode
+# <a name="cpullpinconnect-method"></a>CPullPin. Verbinden-Methode
 
-Die- `Connect` Methode schließt eine Verbindung mit der Ausgabepin ab.
+Die `Connect` -Methode schließt eine Verbindung mit dem Ausgabepin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,50 +44,50 @@ HRESULT Connect(
 
 <dl> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Ein Zeiger auf die **IUnknown** -Schnittstelle der Ausgabe-PIN.
+Zeiger auf die **IUnknown-Schnittstelle** des Ausgabepins.
 
 </dd> <dt>
 
-*palloc* 
+*pAlloc* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle der bevorzugten Zuweisung der Eingabe-PIN oder **null**.
+Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der bevorzugten Zuweisung des Eingabepins oder **NULL.**
 
 </dd> <dt>
 
-*bsync* 
+*bSync* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob synchrone Lesevorgänge verwendet werden sollen. Wenn der Wert **true** ist, führt die PIN synchrone Lesevorgänge für die Ausgabe-PIN aus. **False** gibt an, dass die PIN asynchrone Lese Anforderungen ausführt.
+Boolescher Wert, der angibt, ob synchrone Lesefunktionen verwendet werden sollen. True gibt an, dass der Pin synchrone Lesevorgänge auf dem Ausgabepin ausführt. False gibt an, dass der Pin asynchrone Leseanforderungen stellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **HRESULT** zurück. Die folgenden Werte sind möglich.
+Gibt ein **HRESULT zurück.** Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                               | Beschreibung                                                                     |
 |-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                      | Erfolg.<br/>                                                             |
-| <dl> <dt>**VFW \_ E \_ bereits \_ verbunden**</dt> </dl> | Die eingabepin ist bereits verbunden.<br/>                                  |
-| <dl> <dt>**E \_ nointerface**</dt> </dl>             | Der Ausgabepin macht [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader)nicht verfügbar.<br/> |
+| <dl> <dt>**VFW \_ E \_ BEREITS \_ VERBUNDEN**</dt> </dl> | Der Eingabepin ist bereits verbunden.<br/>                                  |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>             | Der Ausgabepin macht [**IAsyncReader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader)nicht verfügbar.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode während des Verbindungs Vorgangs der Eingabe-PIN auf. Wenn die Methode fehlschlägt, sollte die PIN die Verbindung nicht herstellen.
+Rufen Sie diese Methode während des Verbindungsprozesses des Eingabepins auf. Wenn die Methode fehlschlägt, sollte die Verbindung mit dem Pin fehlschlagen.
 
-Diese Methode fragt die Ausgabe-PIN für die **iasynkreader** -Schnittstelle ab. Bei erfolgreicher Ausführung wird [**cpullpin::D-ecidezuordcator**](cpullpin-decideallocator.md) aufgerufen, um die Zuweisung für die Verbindung auszuhandeln. Wenn Ihre Eingabe-PIN über einen bevorzugten Zuweiser verfügt, geben Sie Sie im *palloc* -Parameter an. die **decidezuzuordcator** -Methode übergibt diesen Zeiger an die [**iasynkreader:: Request-**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-requestallocator) Methode der Ausgabe-PIN. Andernfalls legen Sie *palloc* auf **null** fest.
+Diese Methode fragt den Ausgabepin für die **IAsyncReader-Schnittstelle** ab. Bei Erfolg ruft sie [**CPullPin::D ecideAllocator**](cpullpin-decideallocator.md) auf, um die Zuweisung für die Verbindung auszuhandeln. Wenn Ihr Eingabepin über eine bevorzugte Zuweisung verfügt, geben Sie ihn im *pAlloc-Parameter* an. Die **DecideAllocator-Methode** übergibt diesen Zeiger an die [**IAsyncReader::RequestAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-requestallocator) des Ausgabepins. Legen Sie andernfalls *pAlloc* auf **NULL** fest.
 
-Wenn der Wert von *bsync* **true** ist, führt das **cpullpin** -Objekt synchrone Lese Anforderungen durch Aufrufen des [**iasyncreader:: syncreadausgerichteten**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncreadaligned)-Objekts der Ausgabe-PIN aus. Andernfalls wird die [**iasynkreader:: Request**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-request) -Methode aufgerufen, um überlappende Lese Anforderungen zu erstellen.
+Wenn der Wert von *bSync* **TRUE** ist, stellt das **CPullPin-Objekt** synchrone Leseanforderungen, indem das [**IAsyncReader::SyncReadAligned**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncreadaligned)des Ausgabepins aufgerufen wird. Andernfalls wird die [**IAsyncReader::Request-Methode**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-request) aufgerufen, um überlappende Leseanforderungen zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,8 +95,8 @@ Wenn der Wert von *bsync* **true** ist, führt das **cpullpin** -Objekt synchron
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -104,7 +104,7 @@ Wenn der Wert von *bsync* **true** ist, führt das **cpullpin** -Objekt synchron
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

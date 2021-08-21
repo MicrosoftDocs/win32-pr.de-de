@@ -1,19 +1,19 @@
 ---
-description: Enthält Informationen über das Layout von Linien, die in der Schreibweise für die Journalnotiz verwendet werden.
+description: Enthält Informationen zum Layout der Linien, die im Stationery für die Journalnotiz verwendet werden.
 ms.assetid: b78ed5a3-ce7a-44fc-bc46-ad0332f9767c
 title: LineLayout-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6de772a19f1021644c45632b35c70537fea14626
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: 3349f693b48cfeba7ecb06ca05260115789111a8b1d76d8e6e8275c64df7f6a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031848"
 ---
 # <a name="linelayout-element"></a>LineLayout-Element
 
-Enthält Informationen über das Layout von Linien, die in der Schreibweise für die Journalnotiz verwendet werden.
+Enthält Informationen zum Layout der Linien, die im Stationery für die Journalnotiz verwendet werden.
 
 ## <a name="definition"></a>Definition
 

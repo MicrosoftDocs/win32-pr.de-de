@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c63e448d0cf2d287a441a4983f6a2e06bd9b8151
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 37bcd7d8d69f18dce98339a34a4641ddd2502e946e29a0097fe6c381f4af5c2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017008"
 ---
 # <a name="cbaseinputpinnotifyallocator-method"></a>CBaseInputPin.NotifyAllocator-Methode
 
@@ -53,7 +53,7 @@ Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-
 *bReadOnly* 
 </dt> <dd>
 
-Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. True gibt an, dass Beispiele schreibgeschützt sind.
+Flag, das angibt, ob Stichproben aus dieser Zuweisung schreibgeschützt sind. True gibt an, dass Beispiele schreibgeschützt sind.
 
 </dd> </dl>
 
@@ -61,22 +61,22 @@ Flag, das angibt, ob Beispiele aus dieser Zuweisung schreibgeschützt sind. True
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während der Stecknadelverbindung wählt der Ausgabepin eine Zuweisung aus und ruft diese Methode auf, um den Eingabepin zu benachrichtigen. Der Ausgabepin kann die Zuweisung verwenden, die der Eingabepin in der [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) vorgeschlagen hat, oder er kann einen eigenen Allocator bereitstellen.
+Während der Pinverbindung wählt der Ausgabepin eine Zuweisung aus und ruft diese Methode auf, um den Eingabepin zu benachrichtigen. Der Ausgabepin kann die Zuweisung verwenden, die der Eingabepin in der [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) vorgeschlagen hat, oder er kann einen eigenen Allocator bereitstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

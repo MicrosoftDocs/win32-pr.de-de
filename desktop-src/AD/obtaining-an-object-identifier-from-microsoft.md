@@ -1,42 +1,42 @@
 ---
-title: Abrufen eines Objekt Bezeichners von Microsoft
-description: Um das Active Directory Schema erfolgreich zu erweitern, können Sie eine Stamm-OID von einem Skript abrufen.
+title: Abrufen eines Objektbezeichners von Microsoft
+description: Um das Active Directory-Schema erfolgreich zu erweitern, können Sie eine Stamm-OID aus einem Skript abrufen.
 ms.assetid: 9ed2dd0a-620d-4856-a8a1-2d2a4468fd4c
 ms.tgt_platform: multiple
 keywords:
-- Abrufen eines Objekt Bezeichners von Microsoft
+- Abrufen eines Objektbezeichners von Microsoft
 ms.topic: article
 ms.date: 02/19/2021
-ms.openlocfilehash: 3daa03798afe8e887e8a33a2fde6bd04ddb5b7cb
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 6eceb154d6f8a11b2322e4ad573b5db7d390db8d9d22cdcdedbe1b3423bb3cda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104530449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025548"
 ---
-# <a name="obtaining-an-object-identifier-from-microsoft"></a>Abrufen eines Objekt Bezeichners von Microsoft
+# <a name="obtaining-an-object-identifier-from-microsoft"></a>Abrufen eines Objektbezeichners von Microsoft
 
-Um das Active Directory Schema erfolgreich zu erweitern, können Sie eine Stamm-OID aus einem unten gezeigten Skript abrufen. Die vom Skript generierten OIDs sind eindeutig. Sie werden aus einer eindeutigen GUID zugeordnet. Lesen Sie die bewährten Methoden sorgfältig durch, da Sie durch schlecht behandelte OIDs zu Datenverlusten führen können.
+Um das Active Directory-Schema erfolgreich zu erweitern, können Sie eine Stamm-OID aus einem unten gezeigten Skript abrufen. Die vom Skript generierten OIDs sind eindeutig. sie werden aus einer eindeutigen GUID zugeordnet. Lesen Sie die bewährten Methoden sorgfältig durch, da schlecht behandelte OIDs zu Datenverlusten führen können.
 
 > [!Note]  
-> Anweisungen zum Abrufen einer Link-ID von Microsoft finden Sie im Thema [verknüpfte Attribute](linked-attributes.md) .
+> Anweisungen zum Abrufen einer Link-ID von Microsoft finden Sie im Thema [Verknüpfte](linked-attributes.md) Attribute.
 
  
 
-## <a name="after-you-have-obtained-a-base-oid"></a>Nachdem Sie eine Basis-OID abgerufen haben
+## <a name="after-you-have-obtained-a-base-oid"></a>Nachdem Sie eine Basis-OID erhalten haben
 
-Wenn Sie über eine Basis-OID verfügen, müssen Sie bei der Entscheidung, wie die OIDs in Kategorien aufgeteilt werden sollen, vorsichtig vorgehen, da diese OIDs in der Präfix Tabelle enthalten sind und Teil der Domänen Controller-Replikations Daten sind. Es wird empfohlen, dass nicht mehr als zwei OID-Kategorien erstellt werden.
+Sobald Sie über eine Basis-OID verfügen, sollten Sie vorsichtig sein, wenn Sie entscheiden, wie die OIDs in Kategorien unterteilt werden sollen, da diese OIDs in der Präfixtabelle enthalten sind und Teil der DC-Replikationsdaten sind. Es wird empfohlen, nicht mehr als zwei OID-Kategorien zu erstellen.
 
-Sie können nachfolgende OIDs für neue Schema Klassen und Attribute erstellen, indem Sie Ziffern an die OID in Form von OID anhängen. X, wobei x eine beliebige Zahl ist, die Sie auswählen. Eine allgemeine Schema Erweiterung verwendet in der Regel die folgende Struktur:
+Sie können nachfolgende OIDs für neue Schemaklassen und Attribute erstellen, indem Sie Ziffern in Form von OID an die OID anfügen. X, wobei X eine beliebige Zahl sein kann, die Sie auswählen. Eine allgemeine Schemaerweiterung verwendet im Allgemeinen die folgende Struktur:
 
-Wenn die zugewiesene Basis-OID 1.2.840.113556.1.8000.999999 war, könnten Sie Kategorien wie folgt erstellen.
+Wenn Ihre zugewiesene Basis-OID 1.2.840.113556.1.8000.999999 war, können Sie Kategorien wie folgt erstellen.
 
 
 
 | OID-Basiswert                            | BESCHREIBUNG                                                                                                                                                                                        |
 |-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.840.113556.1.8000.999999.1<br/> | Anwendungs Klassen<br/> Die erste Klasse hätte die OID 1.2.840.113556.1.8000.999999.1.1, die zweite Klasse hätte die OID 1.2.840.113556.1.8000.999999.1.2 usw.<br/>    |
-| 1.2.840.113556.1.8000.999999.2<br/> | Anwendungs Attribute<br/> Die OID des ersten Attributs wäre 1.2.840.113556.1.8000.999999.2.1, die OID des zweiten Attributs wäre 1.2.840.113556.1.8000.999999.2.2 usw.<br/> |
+| 1.2.840.113556.1.8000.999999.1<br/> | Anwendungsklassen<br/> Die erste Klasse hätte die OID 1.2.840.113556.1.8000.99999.1.1, die zweite Klasse die OID 1.2.840.113556.1.8000.999999.1.2 und so weiter.<br/>    |
+| 1.2.840.113556.1.8000.999999.2<br/> | Anwendungsattribute<br/> Die OID des ersten Attributs wäre 1.2.840.113556.1.8000.999999.2.1, die OID des zweiten Attributs 1.2.840.113556.1.8000.999999.2.2 und so weiter.<br/> |
 
 ## <a name="script"></a>Skript
 

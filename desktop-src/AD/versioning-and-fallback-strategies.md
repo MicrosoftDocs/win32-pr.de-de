@@ -1,28 +1,28 @@
 ---
-title: Versionierung und Fall Back Strategien
-description: Wenn eine Anwendung eine partielle Aktualisierung mithilfe eines der oben genannten Verfahren erkennt oder einen Satz von Objekten liest, deren Gültigkeitsdatum noch nicht erreicht wurde, muss die Anwendung die Situation ordnungsgemäß behandeln.
+title: Versions- und Fallbackstrategien
+description: Wenn eine Anwendung eine Teilaktualisierung mit einer der oben genannten Techniken erkennt oder einen Satz von Objekten liest, deren Gültigkeitsdatum noch nicht erreicht wurde, muss die Anwendung die Situation ordnungsgemäß behandeln.
 ms.assetid: 6a34a783-98fd-406e-a96d-8e2a09a51c2d
 ms.tgt_platform: multiple
 keywords:
-- Versionsverwaltung und Fall Back Strategien AD
+- Versions- und Fallbackstrategien AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45f6383ad06e73457e18dddfac53295a0c16389c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b55226efcd72cec4f6dbe65447a945733dac88a56b976661bcf24564c9b366ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024413"
 ---
-# <a name="versioning-and-fallback-strategies"></a>Versionierung und Fall Back Strategien
+# <a name="versioning-and-fallback-strategies"></a>Versions- und Fallbackstrategien
 
-Wenn eine Anwendung eine partielle Aktualisierung mithilfe eines der oben genannten Verfahren erkennt oder einen Satz von Objekten liest, deren Gültigkeitsdatum noch nicht erreicht wurde, muss die Anwendung die Situation ordnungsgemäß behandeln. Bei manchen Anwendungen ist die ordnungsgemäße Reaktion auf eine frühere Version der fraglichen Objekte. Active Directory Domain Services keine Funktionen zur Versionsverwaltung bereitstellen – Anwendungen, die diese Funktion verwenden möchten, müssen Sie selbst bereitstellen. Zu den Ansätzen bei der Versionsverwaltung gehört das lokale beibehalten der "zuletzt bekannten guten" Werte, die lokal zwischengespeichert sind, und das Speichern mehrerer Objekt Sätze im Verzeichnis, z. b. in "alten", "aktuellen" und "neuen" Containern. Viele andere Schemas sind möglich.
+Wenn eine Anwendung eine Teilaktualisierung mit einer der oben genannten Techniken erkennt oder einen Satz von Objekten liest, deren Gültigkeitsdatum noch nicht erreicht wurde, muss die Anwendung die Situation ordnungsgemäß behandeln. Bei einigen Anwendungen ist die ordnungsgemäß reagierende Antwort ein "Fallback" auf eine frühere Version der betreffenden Objekte. Active Directory Domain Services bieten keine Versionsfunktion– Anwendungen, die diese Funktion wünschen, müssen sie selbst bereitstellen. Zu den Ansätzen für die Versionsverwaltung gehören das lokale Zwischenspeichern der "letzten bekannten guten" Werte und das Speichern mehrerer Objektsätze im Verzeichnis, z. B. in "alten", "aktuellen" und "neuen" Containern. Viele andere Schemas sind möglich.
 
-Implementierungen müssen darauf achten, unbeabsichtigte Folgen zu vermeiden. Eine frühere Version von Objekten sollte nur verwendet werden, wenn ein Teil Update erkannt wird oder die neuen Objekte noch nicht "wirksam" sind. Ein Fallback, da etwas in der Anwendung nicht funktioniert, kann die Absicht eines Administrators umgehen. Beispielsweise kann es vorkommen, dass zwei Computer, die zuvor kommunizieren konnten, aufgrund einer Änderung der IPSec-Richtlinie (Internet Protocol Security, Internet Protokoll Sicherheit) dies möglicherweise nicht möglich war. Wenn dies auf dem Administrator Administrator beabsichtigt ist, sollten die betroffenen Systeme nicht auf die Richtlinie zurückgreifen, die Ihnen die Kommunikation gestattet, da dies eine Sicherheitsverletzung wäre.
+Implementierungen müssen darauf achten, unbeabsichtigte Folgen zu vermeiden. Eine frühere Version von -Objekten sollte nur verwendet werden, wenn ein Teilupdate erkannt wird oder die neuen Objekte noch nicht "effektiv" sind. Ein Fallback, da etwas in der Anwendung "nicht funktioniert", könnte die Absicht eines Administrators umgehen. Beispielsweise könnten zwei Computer, die früher kommunizieren konnten, aufgrund einer Änderung der IPsec-Richtlinie (Internet Protocol Security) dazu nicht in der Lage sein. Wenn dies vom Administrator beabsichtigt ist, sollten die betroffenen Systeme nicht auf die Richtlinie zurückgreifen, die die Kommunikation ermöglicht hat, da dies eine Sicherheitsverletzung wäre.
 
- 
+ 
 
- 
+ 
 
 
 

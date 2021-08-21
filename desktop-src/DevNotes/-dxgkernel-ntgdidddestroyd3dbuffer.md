@@ -1,5 +1,5 @@
 ---
-description: Zerstört ein zuvor zugeordnetes Microsoft DirectDraw-Oberflächenobjekt im Kernelmodus, das mit dem dwCaps-Member der DDSCAPS-Struktur erstellt wurde, die auf DDSCAPS \_ EXECUTEBUFFER festgelegt ist.
+description: Zerstört ein zuvor zugewiesenes Microsoft DirectDraw-Oberflächenobjekt im Kernelmodus, das mit dem dwCaps-Member der DDSCAPS-Struktur erstellt wurde, die auf DDSCAPS \_ EXECUTEBUFFER festgelegt ist.
 ms.assetid: c737b706-25be-49b8-8d8c-35f48aea2889
 title: NtGdiDdDestroyD3DBuffer-Funktion (Ntgdi.h)
 ms.topic: reference
@@ -25,9 +25,9 @@ ms.locfileid: "118956519"
 ---
 # <a name="ntgdidddestroyd3dbuffer-function"></a>NtGdiDdDestroyD3DBuffer-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Zerstört ein zuvor zugeordnetes Microsoft DirectDraw-Oberflächenobjekt im Kernelmodus, das mit dem **dwCaps-Member** der [**DDSCAPS-Struktur**](/previous-versions/windows/hardware/drivers/ff550286(v=vs.85)) erstellt wurde, die auf DDSCAPS \_ EXECUTEBUFFER festgelegt ist.
+Zerstört ein zuvor zugewiesenes Microsoft DirectDraw-Oberflächenobjekt im Kernelmodus, das mit dem **dwCaps-Member** der [**DDSCAPS-Struktur**](/previous-versions/windows/hardware/drivers/ff550286(v=vs.85)) erstellt wurde, die auf DDSCAPS \_ EXECUTEBUFFER festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,19 +47,19 @@ DWORD APIENTRY NtGdiDdDestroyD3DBuffer(
 *hSurface* \[ In\]
 </dt> <dd>
 
-Verarbeiten Sie eine [**DD \_ DESTROYSURFACEDATA-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_destroysurfacedata) die die Informationen enthält, die zum Zerstören eines Direct3D-Befehls oder Scheitelpunktpuffers erforderlich sind.
+Handle für eine [**DD \_ DESTROYSURFACEDATA-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_destroysurfacedata) die die Informationen enthält, die zum Zerstören eines Direct3D-Befehls oder Scheitelpunktpuffers erforderlich sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**NtGdiDdDestroyD3DBuffer** gibt einen der folgenden Rückrufcodes zurück.
+**NtGdiDdDestroyD3DBuffer gibt** einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ BEHANDELT**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
 | <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
@@ -78,11 +78,11 @@ Verarbeiten Sie eine [**DD \_ DESTROYSURFACEDATA-Struktur,**](/windows/win32/api
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

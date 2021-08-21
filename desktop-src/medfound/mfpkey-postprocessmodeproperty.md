@@ -31,18 +31,18 @@ Legen Sie diese Eigenschaft auf einen der folgenden Werte fest.
 
 | Wert | Bedeutung                                                                                |
 |-------|----------------------------------------------------------------------------------------|
-| -1    | Der Decoder legt den Nachbearbeitungsmodus basierend auf den verfügbaren CPU-Ressourcen adaptive fest. |
-| 0     | Der Decoder führt keine Nachverarbeitung aus.                                               |
+| -1    | Der Decoder legt den Nachverarbeitungsmodus basierend auf verfügbaren CPU-Ressourcen adaptive fest. |
+| 0     | Der Decoder führt keine Nachbearbeitung durch.                                               |
 | 1     | fDer Decoder führt eine schnelle Deblockierung durch.                                                 |
-| 2     | Der Decoder führt eine vollständige Blockierung durch.                                                  |
-| 3     | Der Decoder führt schnelles Deblockieren und Dering durch.                                    |
-| 4     | Der Decoder führt vollständige Deblockierung und Deblockierung durch.                                    |
+| 2     | Der Decoder führt die vollständige Deblockierung durch.                                                  |
+| 3     | Der Decoder führt eine schnelle Deblockierung und Deblockierung durch.                                    |
+| 4     | Der Decoder führt eine vollständige Deblockierung und Deblockierung durch.                                    |
 
 
 
  
 
-Wenn der Wert dieser Eigenschaft von 0 auf 4 steigt, steigt die Komplexität der Decodierung, die Nutzung von CPU-Ressourcen und die Qualität der Bilder.
+Wenn der Wert dieser Eigenschaft von 0 auf 4 steigt, steigen die Decodierungskomplexität, die Nutzung von CPU-Ressourcen und die Qualität der Bilder.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,11 +55,11 @@ Wenn der Wert dieser Eigenschaft von 0 auf 4 steigt, steigt die Komplexität der
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Media Foundation-Eigenschaften](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

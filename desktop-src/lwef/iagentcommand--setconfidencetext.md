@@ -13,7 +13,7 @@ ms.locfileid: "118976340"
 ---
 # <a name="iagentcommandsetconfidencetext"></a>IAgentCommand::SetConfidenceText
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetConfidenceText(
@@ -21,7 +21,7 @@ HRESULT SetConfidenceText(
 );
 ```
 
-Legt den Wert des Texts "Lauschende Trinkgeld" für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
+Legt den Wert des Texts Lauschende Trinkgeld für einen [**Befehl fest.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,11 +30,11 @@ Legt den Wert des Texts "Lauschende Trinkgeld" für einen [**Befehl**](/windows/
 <span id="bszTipText"></span><span id="bsztiptext"></span><span id="BSZTIPTEXT"></span>*bszTipText*
 </dt> <dd>
 
-Ein BSTR, der den Text für die [**ConfidenceText-Eigenschaft**](confidencetext-property.md) eines [**Befehls**](/windows/desktop/lwef/the-command-object)angibt.
+Ein BSTR, der den Text für die [**ConfidenceText-Eigenschaft**](confidencetext-property.md) eines Befehls [**angibt.**](/windows/desktop/lwef/the-command-object)
 
 </dd> </dl>
 
-Wenn der Konfidenzwert, der von der besten Übereinstimmung zurückgegeben wird, die im [**Command-Ereignis**](/windows/desktop/lwef/the-command-object) zurückgegeben wird, den für die [**ConfidenceThreshold-Eigenschaft**](/windows/desktop/lwef/confidence-property) festgelegten Wert nicht überschreitet, wird der in *bszTipText* angegebene Text im Lauschenden Tipp angezeigt.
+Wenn der von der besten Übereinstimmung zurückgegebene Konfidenzwert, der im [**Command-Ereignis**](/windows/desktop/lwef/the-command-object) zurückgegeben wird, den für die [**ConfidenceThreshold-Eigenschaft**](/windows/desktop/lwef/confidence-property) festgelegten Wert nicht überschreitet, wird der in *bszTipText* angegebene Text im Lauschenden Tipp angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 

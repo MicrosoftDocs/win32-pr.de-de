@@ -1,27 +1,27 @@
 ---
-description: Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+description: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 ms.assetid: BEA31D4A-524C-45A0-B7B1-1400346CE58F
-title: Feedbackhub
+title: FeedbackHub
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7e9d87d712f89337dc18419578d1166287f4b31
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0f615cc4171206a3e063e058f70054d696fbc11ab02665072f074550cf2a9f76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076154"
 ---
-# <a name="feedbackhub"></a>Feedbackhub
+# <a name="feedbackhub"></a>FeedbackHub
 
-Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                        | BESCHREIBUNG                                                                                                                                         |
+| Thema                                                        | Beschreibung                                                                                                                                         |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ifeedbackhubappinfo**](ifeebackhubappinfo.md)<br/> | Diese API ist nicht für alle apps verfügbar. Wenn Ihre APP nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl. <br/> |
+| [**IFeedbackHubAppInfo**](ifeebackhubappinfo.md)<br/> | Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden. <br/> |
 
 
 

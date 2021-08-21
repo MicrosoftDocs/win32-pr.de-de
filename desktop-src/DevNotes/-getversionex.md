@@ -23,9 +23,9 @@ ms.locfileid: "118956289"
 ---
 # <a name="_getversionex-function"></a>\_GetVersionEx-Funktion
 
-\[Diese Funktion ist ein Wrapper für die **GetVersionEx-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetVersionEx** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **GetVersionEx-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetVersionEx direkt** aufrufen.\]
 
-Ruft Informationen zur Betriebssystemversion ab. Siehe [**GetVersionEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa).
+Ruft Informationen zur Betriebssystemversion ab. Weitere Informationen [**finden Sie unter GetVersionEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa).
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ BOOL _GetVersionEx(
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

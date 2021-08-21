@@ -1,7 +1,7 @@
 ---
-description: Die onthreaddestroy-Methode wird aufgerufen, wenn der streamingthread gerade beendet wird.
+description: Die OnThreadDestroy-Methode wird aufgerufen, wenn der Streamingthread beendet wird.
 ms.assetid: a484b6d2-bce6-4a42-9176-2a6ce374e28b
-title: Csourcestream. onthreaddestroy-Methode (Quelle. h)
+title: CSourceStream.OnThreadDestroy-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3e7377ce11955d7121a33311d390464e042b98f5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b71bd7ff9da79ed42ad7d36ff176a60687ca5fd0edcd6003d77c20084adc1b84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953699"
 ---
-# <a name="csourcestreamonthreaddestroy-method"></a>Csourcestream. onthreaddestroy-Methode
+# <a name="csourcestreamonthreaddestroy-method"></a>CSourceStream.OnThreadDestroy-Methode
 
-Die- `OnThreadDestroy` Methode wird aufgerufen, wenn der streamingthread gerade beendet wird.
+Die `OnThreadDestroy` -Methode wird aufgerufen, wenn der Streamingthread beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md)ruft diese Methode auf, bevor Sie beendet wird. Die-Methode führt in der Basisklasse keine Aktion aus. Sie kann von der abgeleiteten Klasse außer Kraft gesetzt werden. Wenn die abgeleitete Klasse einen Fehlercode zurückgibt, wird der Thread mit einem Fehler beendet.
+Die Threadprozedur [**CSourceStream::ThreadProc**](csourcestream-threadproc.md)ruft diese Methode auf, bevor sie beendet wird. Die -Methode führt in der Basisklasse nichts aus. sie ist für die abgeleitete Klasse zum Überschreiben verfügbar. Wenn die abgeleitete Klasse einen Fehlercode zurückgibt, wird der Thread mit einem Fehler beendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  
