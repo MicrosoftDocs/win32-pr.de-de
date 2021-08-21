@@ -1,7 +1,7 @@
 ---
-description: Das Client Produkt der betreffenden Komponente.
+description: Das Clientprodukt der in Frage gestellten Komponente.
 ms.assetid: 14538e8b-3a7f-4d73-8c54-a0f83b013a42
-title: Client. ProductCode-Eigenschaft
+title: Client.ProductCode (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 6ae2edbe0a1cd9f61372539d492b42e830f19781
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 364d22ccbfe7d11fd56f4a93b9bc73737118de56d5d4545b78dc61ef32f6917f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119500750"
 ---
-# <a name="clientproductcode-property"></a>Client. ProductCode-Eigenschaft
+# <a name="clientproductcode-property"></a>Client.ProductCode (Eigenschaft)
 
-Das Client Produkt der betreffenden Komponente. Diese Eigenschaft ruft die [**msienenclientsex**](/windows/desktop/api/Msi/nf-msi-msienumclientsexa) -Funktion auf.
+Das Clientprodukt der in Frage gestellten Komponente. Diese Eigenschaft ruft die [**MsiEnumClientsEx-Funktion**](/windows/desktop/api/Msi/nf-msi-msienumclientsexa) auf.
 
-**[Windows Installer 4,5 oder früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt. Diese Eigenschaft ist ab Windows Installer 5,0 verfügbar.
+**[Windows Installer 4.5 oder früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt. Diese Eigenschaft ist ab Windows Installer 5.0 verfügbar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ Das Client Produkt der betreffenden Komponente. Diese Eigenschaft ruft die [**ms
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 oder höher.<br/>                                         |
+| Version<br/> | Windows Installer 5.0 oder höher.<br/>                                         |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl> |
-| IID<br/>     | IID \_ IClient ist definiert als 000c1098-0000-0000-C000-000000000046<br/>         |
+| IID<br/>     | IID IClient ist als \_ 000C1098-0000-0000-C000-00000000046 definiert.<br/>         |
 
 
 

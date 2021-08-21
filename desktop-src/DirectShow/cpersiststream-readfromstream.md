@@ -1,7 +1,7 @@
 ---
-description: Liest die Filterdaten aus dem angegebenen Stream.
+description: Liest die Daten des Filters aus dem angegebenen Stream.
 ms.assetid: 009f4812-8cc6-436a-9553-3a3161d5e992
-title: Cpersiststream. Read FromStream-Methode (pStream. h)
+title: CPersistStream.ReadFromStream-Methode (Pstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ce6c037fbce9fbaeabf7491b1b840000f67e25d2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 39f40871e12a069045197d0cc61970c7d7f88c784f6b0873c294727b75121ae6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073644"
 ---
-# <a name="cpersiststreamreadfromstream-method"></a>Cpersiststream. Read FromStream-Methode
+# <a name="cpersiststreamreadfromstream-method"></a>CPersistStream.ReadFromStream-Methode
 
-Liest die Filterdaten aus dem angegebenen Stream.
+Liest die Daten des Filters aus dem angegebenen Stream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ virtual HRESULT ReadFromStream(
 *pStream* 
 </dt> <dd>
 
-Zeiger auf eine **IStream** -Schnittstelle, aus der Daten gelesen werden sollen.
+Zeiger auf eine **IStream-Schnittstelle,** aus der Daten gelesen werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück. Die abgeleitete Klasse sollte einen gültigen **HRESULT** -Wert zurückgeben.
+Gibt S \_ OK zurück. Die abgeleitete Klasse sollte einen gültigen **HRESULT-Wert** zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standardversion liest nichts. Sie kann überschrieben werden, um Daten zu lesen, die für Ihre Klasse spezifisch sind.
+Die Standardversion liest nichts. kann überschrieben werden, um klassenspezifische Daten zu lesen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Die Standardversion liest nichts. Sie kann überschrieben werden, um Daten zu le
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>PStream. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pstream.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Die Standardversion liest nichts. Sie kann überschrieben werden, um Daten zu le
 
 <dl> <dt>
 
-[**Cpersiststream-Klasse**](cpersiststream.md)
+[**CPersistStream-Klasse**](cpersiststream.md)
 </dt> </dl>
 
  

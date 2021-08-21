@@ -1,9 +1,9 @@
 ---
-title: glugetnurbsproperty-Funktion (glu. h)
-description: Die Funktion "glugetnurbsproperty" Ruft eine nicht einheitliche Rational B-Spline (NURBS)-Eigenschaft ab.
+title: gluGetNurbsProperty-Funktion (Glu.h)
+description: Die gluGetNurbsProperty-Funktion ruft eine Non-Uniform Rational B-Spline (NURBS)-Eigenschaft ab.
 ms.assetid: 7dbc75a0-d04e-4794-b3dd-a602addf9dfa
 keywords:
-- glugetnurbsproperty-Funktion OpenGL
+- gluGetNurbsProperty-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 583da688e3495ebc2eb9d6f71972658c6426469c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a68e91fbdaafc2a1857a95e059125bf62347777edfbcc764868ceea0a8fce578
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519590"
 ---
-# <a name="glugetnurbsproperty-function"></a>glugetnurbsproperty-Funktion
+# <a name="glugetnurbsproperty-function"></a>gluGetNurbsProperty-Funktion
 
-Die Funktion " **glugetnurbsproperty** " Ruft eine nicht einheitliche Rational B-Spline ([NURBS](using-nurbs-curves-and-surfaces.md))-Eigenschaft ab.
+Die **gluGetNurbsProperty-Funktion** ruft eine non-Uniform Rational B-Spline [(NURBS)-Eigenschaft](using-nurbs-curves-and-surfaces.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI gluGetNurbsProperty(
 *nobj* 
 </dt> <dd>
 
-Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt).
+Das NURBS-Objekt (erstellt mit [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)).
 
 </dd> <dt>
 
 *property* 
 </dt> <dd>
 
-Die Eigenschaft, deren Wert abgerufen werden soll. Die folgenden Werte sind gültig: glu \_ - \_ samplingtoleranz, Glu- \_ Anzeige \_ Modus, Glu \_ -culult, Glu- \_ automatische \_ Lade \_ Matrix, Glu- \_ parametrimetrische \_ Toleranz, Glu- \_ Samplingmethode \_ , Glu \_ U \_ Step und glu \_ V \_ Step.
+Die Eigenschaft, deren Wert abgerufen werden soll. Die folgenden Werte sind gültig: GLU SAMPLING \_ \_ TOLERANCE, GLU \_ DISPLAY \_ MODE, \_ GLU CULLING, GLU \_ AUTO LOAD \_ \_ MATRIX, GLU \_ PARAMETRIC \_ TOLERANCE, GLU \_ SAMPLING METHOD, GLU U STEP und \_ \_ \_ GLU V \_ \_ STEP.
 
 </dd> <dt>
 
 *value* 
 </dt> <dd>
 
-Ein Zeiger auf den Speicherort, in den der Wert der benannten Eigenschaft geschrieben wird.
+Ein Zeiger auf die Position, an der der Wert der benannten Eigenschaft geschrieben wird.
 
 </dd> </dl>
 
@@ -67,9 +67,9 @@ Ein Zeiger auf den Speicherort, in den der Wert der benannten Eigenschaft geschr
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie " **glugetnurbsproperty** ", um in einem nurb-Objekt gespeicherte Eigenschaften abzurufen. Diese Eigenschaften wirken sich auf die Darstellung von nursb-Kurven und-Flächen aus. Informationen zu den Eigenschaften von nurb finden Sie unter [**glunurbsproperty**](glunurbsproperty.md).
+Verwenden **Sie gluGetNurbsProperty,** um Eigenschaften abzurufen, die in einem NURBS-Objekt gespeichert sind. Diese Eigenschaften beeinflussen die Art und Weise, wie NURBS-Kurven und -Oberflächen gerendert werden. Informationen zu NURBS-Eigenschaften finden Sie unter [**gluNurbsProperty**](glunurbsproperty.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Verwenden Sie " **glugetnurbsproperty** ", um in einem nurb-Objekt gespeicherte 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -89,10 +89,10 @@ Verwenden Sie " **glugetnurbsproperty** ", um in einem nurb-Objekt gespeicherte 
 
 <dl> <dt>
 
-[**glunewnurbsrenderer**](glunewnurbsrenderer.md)
+[**gluNewNurbsRenderer**](glunewnurbsrenderer.md)
 </dt> <dt>
 
-[**glunurbsproperty**](glunurbsproperty.md)
+[**gluNurbsProperty**](glunurbsproperty.md)
 </dt> </dl>
 
  

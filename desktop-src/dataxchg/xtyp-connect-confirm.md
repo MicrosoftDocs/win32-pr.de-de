@@ -1,9 +1,9 @@
 ---
-title: XTYP_CONNECT_CONFIRM Transaktion (Ddeml. h)
-description: Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion (DDE Callback) empfängt die xtipp \_ Connect \_ -Bestätigungs Transaktion, um zu bestätigen, dass eine Konversation mit einem Client hergestellt wurde, und um dem Server das Konversations handle bereitzustellen.
+title: XTYP_CONNECT_CONFIRM Transaktion (Ddeml.h)
+description: Eine dynamische Daten Exchange-Serverrückruffunktion (DDE), DdeCallback, empfängt die XTYP CONNECT CONFIRM-Transaktion, um zu bestätigen, dass eine Konversation mit einem Client hergestellt wurde, und um dem Server das Konversationshandge zur Verfügung zu \_ \_ stellen.
 ms.assetid: 4db67539-9322-44d7-bf2b-749bd6cfcbb4
 keywords:
-- XTYP_CONNECT_CONFIRM Transaktionsdaten Austausch
+- XTYP_CONNECT_CONFIRM von Transaktionsdaten Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e880dfffc7f7825c99ab9e4e3bf980baa978b786
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8a0259540801a49bc631dc60e33979a8730b46bdfc06ac81142098e851b8a51a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499080"
 ---
-# <a name="xtyp_connect_confirm-transaction"></a>Xtipp \_ Connect- \_ Transaktion bestätigen
+# <a name="xtyp_connect_confirm-transaction"></a>XTYP \_ CONNECT \_ CONFIRM-Transaktion
 
-Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion ( [*DDE Callback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt die **xtipp \_ Connect- \_ Bestätigungs** Transaktion, um zu bestätigen, dass eine Konversation mit einem Client hergestellt wurde, und um dem Server das Konversations handle bereitzustellen. Das System sendet diese Transaktion als Ergebnis einer vorherigen [**xtipp \_ Connect**](xtyp-connect.md) -oder [**XYP \_ wildconnect**](xtyp-wildconnect.md) -Transaktion.
+Die Rückruffunktion des dynamische Daten Exchange-Servers [*(DDE), DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt die **XTYP \_ CONNECT \_ CONFIRM-Transaktion,** um zu bestätigen, dass eine Konversation mit einem Client hergestellt wurde, und um dem Server das Konversationshandge zur Verfügung zu stellen. Das System sendet diese Transaktion als Ergebnis einer vorherigen [**XTYP \_ CONNECT-**](xtyp-connect.md) oder [**XTYP \_ WILDCONNECT-Transaktion.**](xtyp-wildconnect.md)
 
 
 ```C++
@@ -45,14 +45,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die neue Konversation.
@@ -62,7 +62,7 @@ Ein Handle für die neue Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen, für den die Konversation eingerichtet wurde.
+Ein Handle für den Themennamen, für den die Konversation eingerichtet wurde.
 
 </dd> <dt>
 
@@ -76,29 +76,29 @@ Ein Handle für den Dienstnamen, für den die Konversation eingerichtet wurde.
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Gibt an, ob es sich bei dem Client um dieselbe Anwendungs Instanz wie der Server handelt. Wenn der-Parameter 1 ist, ist der Client dieselbe Instanz. Wenn der-Parameter 0 ist, ist der Client eine andere-Instanz.
+Gibt an, ob der Client die gleiche Anwendungsinstanz wie der Server ist. Wenn der Parameter 1 ist, ist der Client dieselbe Instanz. Wenn der Parameter 0 ist, ist der Client eine andere Instanz.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag **CBF \_ Skip \_ Connect \_ bestätigt** in der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion angegeben wurde.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ SKIP CONNECT \_ \_ CONFIRMS-Flag** in der [**DdeInitialize-Funktion angegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) hat.
 
-Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des **CBR- \_ Blocks** wird ignoriert.
+Ein Server kann diesen Transaktionstyp nicht blockieren. Der **CBR \_ BLOCK-Rückgabecode** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,7 +108,7 @@ Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des *
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -116,22 +116,22 @@ Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des *
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE Connect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect)
+[**DdeConnect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect)
 </dt> <dt>
 
-[**DDE ConnectList**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnectlist)
+[**DdeConnectList**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnectlist)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange Management Library](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

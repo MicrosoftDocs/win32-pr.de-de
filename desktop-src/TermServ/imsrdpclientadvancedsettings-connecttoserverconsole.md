@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings connectdeserverconsole (Eigenschaft)
-description: Diese Eigenschaft wird nicht unterstützt. Aufrufe von connectdeserverconsole geben immer \_ false zurück.
+title: IMsRdpClientAdvancedSettings ConnectToServerConsole (Eigenschaft)
+description: Diese Eigenschaft wird nicht unterstützt. Aufrufe von ConnectToServerConsole geben immer S \_ FALSE zurück.
 ms.assetid: 58f79085-4364-408f-8bf1-97a82ad68f4b
 ms.tgt_platform: multiple
 keywords:
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, connectdeserverconsole-Eigenschaft
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
-- Connectdeserverconsole-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, connectdeserverconsole (Eigenschaft)
+- ConnectToServerConsole-Remotedesktopdienste
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
+- ConnectToServerConsole-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , ConnectToServerConsole-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,18 +54,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 18e3385b25a9dbe3e77085ae011b85e9be21b224
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83c6b935c34dda3f8a676d025bc1995a30e1bbb3f11dd4db3c055f6e28437ba3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515280"
 ---
-# <a name="imsrdpclientadvancedsettingsconnecttoserverconsole-property"></a>Imsrdpclientadvancedsettings:: connectdeserverconsole-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsconnecttoserverconsole-property"></a>IMsRdpClientAdvancedSettings::ConnectToServerConsole (Eigenschaft)
 
-Diese Eigenschaft wird nicht unterstützt. Aufrufe von **connectdeserverconsole** geben immer **\_ false** zurück.
+Diese Eigenschaft wird nicht unterstützt. Aufrufe **von ConnectToServerConsole geben** immer S FALSE **\_ zurück.**
 
-Verwenden Sie die Eigenschaft [**connectdeadministrasterserver**](imsrdpclientadvancedsettings6-connecttoadministerserver.md) , um eine Verbindung mit der Sitzung herzustellen, die zu Verwaltungszwecken verwendet wird.
+Verwenden Sie [**die ConnectToAd sessionServer-Eigenschaft,**](imsrdpclientadvancedsettings6-connecttoadministerserver.md) um eine Verbindung mit der Sitzung herzustellen, die für administrative Zwecke verwendet wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -86,15 +86,15 @@ HRESULT get_ConnectToServerConsole(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **Variant \_ false** fest. **Variant \_ TRUE** wird nicht unterstützt.
+Legen Sie diesen Parameter auf **VARIANT \_ FALSE fest.** **VARIANT \_ TRUE** wird nicht unterstützt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,7 +106,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

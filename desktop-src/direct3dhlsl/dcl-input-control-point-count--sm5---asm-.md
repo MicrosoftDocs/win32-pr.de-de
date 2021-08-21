@@ -1,23 +1,23 @@
 ---
-title: dcl_input_control_point_count (SM5-ASM)
-description: Deklarieren Sie die Eingabe Steuerungspunkt-Anzahl von Hull-Shader im Abschnitt "Hull Shader Declaration".
+title: dcl_input_control_point_count (sm5 - asm)
+description: Deklarieren Sie im Deklarationsabschnitt des Hüllen-Shaders die Anzahl der Eingabesteuerungspunkte für den Hüllen-Shader.
 ms.assetid: 2E524BF0-3DD0-446A-8437-0CF17B348D83
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f0a674a05bfd66b4c1d94da73958dc68f00fe21
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 68c5414d5c660cf0bbce2b6219769cd36d4da9bbf3e59d9d130bfce0e0dceea3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789880"
 ---
-# <a name="dcl_input_control_point_count-sm5---asm"></a>Anzahl der DCL \_ \_ -Eingabe Kontroll \_ Punkte \_ (SM5-ASM)
+# <a name="dcl_input_control_point_count-sm5---asm"></a>Anzahl der \_ \_ dcl-Eingabekontrollpunkt \_ \_ (sm5 - asm)
 
-Deklarieren Sie die Eingabe Steuerungspunkt-Anzahl von Hull-Shader im Abschnitt "Hull Shader Declaration".
+Deklarieren Sie im Deklarationsabschnitt des Hüllen-Shaders die Anzahl der Eingabesteuerungspunkte für den Hüllen-Shader.
 
 
 
-| DCL- \_ Eingabe \_ Steuerungspunkt- \_ \_ Anzahl {1.. 32} |
+| dcl \_ input control point count \_ \_ \_ {1..32} |
 |-------------------------------------------|
 
 
@@ -26,23 +26,23 @@ Deklarieren Sie die Eingabe Steuerungspunkt-Anzahl von Hull-Shader im Abschnitt 
 
 
 
-| Element                                                   | BESCHREIBUNG                                      |
+| Element                                                   | Beschreibung                                      |
 |--------------------------------------------------------|--------------------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/> | \[in \] der Eingabe Steuerungspunkt-Anzahl.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/> | \[in \] Die Anzahl der Eingabesteuerungspunkt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mindestens ein Eingabe Steuerungspunkt ist erforderlich. Sie kann leer sein, wenn Sie nicht benötigt wird.
+Mindestens ein Eingabesteuerungspunkt ist erforderlich. sie kann leer sein, wenn sie nicht benötigt wird.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | X    |        |          |       |         |
 
@@ -50,20 +50,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

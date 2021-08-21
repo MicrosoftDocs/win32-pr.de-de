@@ -1,7 +1,7 @@
 ---
-description: Lädt ein patchmesh aus einem ID3DXFileData-Objekt.
+description: Lädt ein Patchgittermodell aus einem ID3DXFileData-Objekt.
 ms.assetid: 8054e33e-6bf8-4a56-9f66-30600732c84f
-title: D3DXLoadPatchMeshFromXof-Funktion (D3DX9Mesh. h)
+title: D3DXLoadPatchMeshFromXof-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: aa2e75e34927d0bb3c68445b994ee0911adb08f7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8bfdf0faf0a9a8d8d32d38899cdd666d7c4a5d3910119ac36cbca2bf8bb33430
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119564830"
 ---
 # <a name="d3dxloadpatchmeshfromxof-function"></a>D3DXLoadPatchMeshFromXof-Funktion
 
-Lädt ein patchmesh aus einem [**ID3DXFileData**](id3dxfiledata.md) -Objekt.
+Lädt ein Patchgittermodell aus einem [**ID3DXFileData-Objekt.**](id3dxfiledata.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXLoadPatchMeshFromXof(
 
 <dl> <dt>
 
-*pxofmesh* \[ in\]
+*pxofMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFILEDATA**](id3dxfiledata.md)**
 
-Zeiger auf eine [**ID3DXFileData**](id3dxfiledata.md) -Schnittstelle, die das zu ladende Datei Datenobjekt darstellt.
+Zeiger auf eine [**ID3DXFileData-Schnittstelle,**](id3dxfiledata.md) die das zu ladende Dateidatenobjekt darstellt.
 
 </dd> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus einem oder mehreren [**D3DXMESH**](./d3dxmesh.md) -Flags, die Erstellungs Optionen für das Mesh angeben.
+Kombination aus einem oder mehreren [**D3DXMESH-Flags,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
 
 </dd> <dt>
 
-*pD3DDevice* \[ in\]
+*pD3DDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf das Gerät, aus dem das Mesh erstellt wird.
+Zeiger auf das Gerät, von dem aus das Gitternetz erstellt wird.
 
 </dd> <dt>
 
-*ppmaterials* \[ vorgenommen\]
+*ppMaterials* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Ein Array von Materialien, das im Mesh enthalten ist. Jedes Material wird von einer [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle indiziert.
+Array von Materialien, die im Gitternetz enthalten sind. Jedes Material wird durch eine [**ID3DXBuffer-Schnittstelle**](id3dxbuffer.md) indiziert.
 
 </dd> <dt>
 
-*ppeer-ectinhaltungen* \[ vorgenommen\]
+*ppEffectInstances* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Zeiger auf einen Puffer, der ein Array von Effekt Instanzen enthält, eine pro Attribut Gruppe im zurückgegebenen Mesh. Eine Effekt Instanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet werden. Siehe [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md). Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Zeiger auf einen Puffer, der ein Array von Effektinstanzen enthält, eine pro Attributgruppe im zurückgegebenen Gitternetz. Eine Effektinstanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet werden. Siehe [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md). Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
 
 </dd> <dt>
 
-*pnummaterials* \[ vorgenommen\]
+*pNumMaterials* \[ out\]
 </dt> <dd>
 
-Type: **PDWORD**
+Typ: **PDWORD**
 
-Ein Zeiger, der die Anzahl der Materialien im Mesh enthält.
+Zeiger, der die Anzahl der Materialien im Gitternetz enthält.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPATCHMESH**](id3dxpatchmesh.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXPatchMesh**](id3dxpatchmesh.md) -Schnittstelle, die das geladene Mesh darstellt.
+Adresse eines Zeigers auf eine [**ID3DXPatchMesh-Schnittstelle,**](id3dxpatchmesh.md) die das geladene Gitternetz darstellt.
 
 </dd> </dl>
 
@@ -113,13 +113,13 @@ Adresse eines Zeigers auf eine [**ID3DXPatchMesh**](id3dxpatchmesh.md) -Schnitts
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Mesh-Dateien, die keine Effekts-Instanzinformationen enthalten, werden Standardeffekt Instanzen aus den Material Informationen in der x-Datei generiert. Eine Instanz des Standard Effekts verfügt über Standardwerte, die den Membern der [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur entsprechen.
+Für Meshdateien, die keine Effektinstanzinformationen enthalten, werden Standardeffektinstanzen aus den Materialinformationen in der X-Datei generiert. Eine Default Effect-Instanz hat Standardwerte, die den Membern der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) entsprechen.
 
-Der Standard Textur Name wird ebenfalls ausgefüllt, wird jedoch unterschiedlich behandelt. Der Name ist. dies Texture0@Name entspricht einer Effekt Variablen mit dem Namen "Texture0" mit einer Anmerkung namens "Name". Diese enthält den Namen der Zeichen folgen Datei für die Textur.
+Der Standardtexturname ist ebenfalls ausgefüllt, wird jedoch anders behandelt. Der Name lautet Texture0@Name , was einer Effektvariablen mit dem Namen "Texture0" mit einer Anmerkung namens "Name" entspricht. Dieser enthält den Namen der Zeichenfolgendatei für die Textur.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,8 +127,8 @@ Der Standard Textur Name wird ebenfalls ausgefüllt, wird jedoch unterschiedlich
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -136,7 +136,7 @@ Der Standard Textur Name wird ebenfalls ausgefüllt, wird jedoch unterschiedlich
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXEFFECTDEFAULT**](d3dxeffectdefault.md)

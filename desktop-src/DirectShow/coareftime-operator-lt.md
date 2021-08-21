@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator testet, ob eine Verweis Zeit kleiner als eine andere ist.
+description: Dieser Operator testet, ob eine Verweiszeit kleiner als eine andere ist.
 ms.assetid: 709fb861-a836-4a20-8c93-c0e8ab79f377
-title: Coaref time. Operator<-Methode (ctlutil. h)
+title: COARefTime.operator<-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1c61403b959f8b5ee19e9ba0d9cd0ab4db54c124
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d98c80e33cebabb868785d1df4d78ca038963683af5d778386ba0d85432e0e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073834"
 ---
-# <a name="coareftimeoperator-method"></a>Coaref time. Operator<-Methode
+# <a name="coareftimeoperator-method"></a>COARefTime.operator<-Methode
 
-Dieser Operator testet, ob eine Verweis Zeit kleiner als eine andere ist.
+Dieser Operator testet, ob eine Verweiszeit kleiner als eine andere ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL operator<(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis auf das **coareftime** -Objekt, das verglichen werden soll.
+Verweis auf das zu vergleichende **COARefTime-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn dieses Objekt streng kleiner als *RT* ist. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn dieses Objekt streng kleiner als *rt* ist. Andernfalls gibt **FALSE** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt **true** zurück, wenn dieses Objekt streng kleiner als *RT* ist. Andernfal
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt **true** zurück, wenn dieses Objekt streng kleiner als *RT* ist. Andernfal
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

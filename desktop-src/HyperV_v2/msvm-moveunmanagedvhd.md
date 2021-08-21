@@ -1,5 +1,5 @@
 ---
-description: Verschiebt eine virtuelle Festplatte von der Quell-in den Zielpfad.
+description: Verschiebt eine virtuelle Festplatte von der Quelle in den Zielpfad.
 ms.assetid: f51f7bf3-585a-442d-b84d-51d633c38dea
 title: Msvm_MoveUnmanagedVhd-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e98139b747f4b32265e27bc84ca240f496dea715
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e631b95c9961262df288b76cf83f953589780c2feb294e940314d08975bcfd57
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521120"
 ---
-# <a name="msvm_moveunmanagedvhd-class"></a>MSVM- \_ Klasse "muveunmanagedvhd"
+# <a name="msvm_moveunmanagedvhd-class"></a>Msvm \_ MoveUnmanagedVhd-Klasse
 
-Verschiebt eine virtuelle Festplatte von der Quell-in den Zielpfad.
+Verschiebt eine virtuelle Festplatte von der Quelle in den Zielpfad.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -41,20 +41,20 @@ class Msvm_MoveUnmanagedVhd : CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ muveunmanagedvhd** " verfügt über diese Typen von Membern:
+Die **Msvm \_ MoveUnmanagedVhd-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ muveunmanagedvhd** " verfügt über diese Eigenschaften.
+Die **Msvm \_ MoveUnmanagedVhd-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vhddestinationpath**
+**VhdDestinationPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -64,16 +64,16 @@ Der Zielpfad.
 
 </dd> <dt>
 
-**Vhdsourcepath**
+**VhdSourcePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Quellpfad der zu verschiebenden virtuellen Festplatte.
+Der Quellpfad der virtuellen Festplatte, die verschoben werden soll.
 
 </dd> </dl>
 
@@ -83,10 +83,10 @@ Der Quellpfad der zu verschiebenden virtuellen Festplatte.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -95,7 +95,7 @@ Der Quellpfad der zu verschiebenden virtuellen Festplatte.
 
 <dl> <dt>
 
-[**CIM- \_ managedelta**](cim-managedelement.md)
+[**CIM \_ ManagedElement**](cim-managedelement.md)
 </dt> </dl>
 
  

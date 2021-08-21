@@ -1,29 +1,29 @@
 ---
-title: Requestreplytcpclientwithwindowstransportsecurityexample
-description: Dieses Beispiel zeigt einen TCP-Client, der Anforderungs-/Antwort-Nachrichten mit der von der Windows SSPI-Transportsicherheit bereitgestellten Sicherheit sendet. Außerdem wird erläutert, wie der Client mithilfe von sicherheitstokeneigenschaften die zulässige Identitätswechsel Ebene von der Standardeinstellung aus ändern kann.
+title: RequestReplyTcpClientWithWindowsTransportSecurityExample
+description: Dieses Beispiel zeigt einen TCP-Client, der Anforderungs-Antwort-Nachrichten sendet, und die Sicherheit wird Windows SSPI-Transportsicherheit bereitgestellt. Außerdem wird veranschaulicht, wie der Client Sicherheitstokeneigenschaften verwendet, um die zulässige Identitätswechselebene von der Standardeinstellung zu ändern.
 ms.assetid: 8419e861-dc7f-41ca-96a4-b7c6d380a210
 keywords:
-- Requestreplytcpclientwithwindowstransportsecurityexample Native Webdienste
-- Wwsapi
+- RequestReplyTcpClientWithWindowsTransportSecurityExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4216a05010c2e0fbca8ea0968314c2b61f4c3a2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1aa97da03ff62c704275d9f8094af40e34f49260fa5e13faf764559ebdf019ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083184"
 ---
-# <a name="requestreplytcpclientwithwindowstransportsecurityexample"></a>Requestreplytcpclientwithwindowstransportsecurityexample
+# <a name="requestreplytcpclientwithwindowstransportsecurityexample"></a>RequestReplyTcpClientWithWindowsTransportSecurityExample
 
-Dieses Beispiel zeigt einen TCP-Client, der Anforderungs-/Antwort-Nachrichten mit der von der Windows SSPI-Transportsicherheit bereitgestellten Sicherheit sendet. Außerdem wird erläutert, wie der Client mithilfe von sicherheitstokeneigenschaften die zulässige Identitätswechsel Ebene von der Standardeinstellung aus ändern kann.
+Dieses Beispiel zeigt einen TCP-Client, der Anforderungs-Antwort-Nachrichten sendet, und die Sicherheit wird Windows SSPI-Transportsicherheit bereitgestellt. Außerdem wird veranschaulicht, wie der Client Sicherheitstokeneigenschaften verwendet, um die zulässige Identitätswechselebene von der Standardeinstellung zu ändern.
 
--   [Requestreplytcpclientwithwindowstransportsecurity. cpp](#requestreplytcpclientwithwindowstransportsecuritycpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [RequestReplyTcpClientWithWindowsTransportSecurity.cpp](#requestreplytcpclientwithwindowstransportsecuritycpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="requestreplytcpclientwithwindowstransportsecuritycpp"></a>Requestreplytcpclientwithwindowstransportsecurity. cpp
+## <a name="requestreplytcpclientwithwindowstransportsecuritycpp"></a>RequestReplyTcpClientWithWindowsTransportSecurity.cpp
 
 
 ```C++
@@ -440,7 +440,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -584,9 +584,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

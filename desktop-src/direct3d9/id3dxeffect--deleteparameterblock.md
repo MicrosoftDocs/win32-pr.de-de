@@ -1,7 +1,7 @@
 ---
-description: Löschen Sie einen Parameter Block.
+description: Löscht einen Parameterblock.
 ms.assetid: 5502dabc-1703-481b-a69d-f6bd8fd01d20
-title: ID3DXEffect::D eleteparameterblock-Methode (D3DX9Effect. h)
+title: ID3DXEffect::D eleteParameterBlock-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 483b09ebf308b8cdfa14d714bc74786e5fcb1f83
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a53d97bc077f830bdf73f5a184e253a8537626cbba575b2a5b9e74247ea48702
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119494240"
 ---
-# <a name="id3dxeffectdeleteparameterblock-method"></a>ID3DXEffect::D eleteparameterblock-Methode
+# <a name="id3dxeffectdeleteparameterblock-method"></a>ID3DXEffect::D eleteParameterBlock-Methode
 
-Löschen Sie einen Parameter Block.
+Löscht einen Parameterblock.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT DeleteParameterBlock(
 
 <dl> <dt>
 
- *hparameterblock* \[ in\]
+ *hParameterBlock* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Ein Handle für den Parameter Block. Dies ist das Handle, das von [**ID3DXEffect:: endparameterblock**](id3dxeffect--endparameterblock.md)zurückgegeben wird.
+Ein Handle für den Parameterblock. Dies ist das handle, das von [**ID3DXEffect::EndParameterBlock**](id3dxeffect--endparameterblock.md)zurückgegeben wird.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Handle für den Parameter Block. Dies ist das Handle, das von [**ID3DXEffect
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Parameter Blöcke sind Blöcke von Effekt Zuständen. Verwenden Sie einen Parameter Block zum Aufzeichnen von Zustandsänderungen, sodass Sie später mit einem einzigen API-Befehl angewendet werden können. Löschen Sie den Parameter Block, wenn er nicht mehr benötigt wird, um die Speicherauslastung zu reduzieren.
+Parameterblöcke sind Blöcke mit Auswirkungszuständen. Verwenden Sie einen Parameterblock, um Zustandsänderungen aufzuzeichnen, damit sie später mit einem einzelnen API-Aufruf angewendet werden können. Wenn Sie den Parameterblock nicht mehr benötigen, löschen Sie den Parameterblock, um die Speicherauslastung zu reduzieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Parameter Blöcke sind Blöcke von Effekt Zuständen. Verwenden Sie einen Parame
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -77,10 +77,10 @@ Parameter Blöcke sind Blöcke von Effekt Zuständen. Verwenden Sie einen Parame
 [ID3DXEffect](id3dxeffect.md)
 </dt> <dt>
 
-[**ID3DXEffect:: beginparameterblock**](id3dxeffect--beginparameterblock.md)
+[**ID3DXEffect::BeginParameterBlock**](id3dxeffect--beginparameterblock.md)
 </dt> <dt>
 
-[**ID3DXEffect:: endparameterblock**](id3dxeffect--endparameterblock.md)
+[**ID3DXEffect::EndParameterBlock**](id3dxeffect--endparameterblock.md)
 </dt> </dl>
 
  

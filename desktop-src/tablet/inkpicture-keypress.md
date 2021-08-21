@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn eine Taste gedrückt wird, während das InkPicture-Steuerelement den Fokus besitzt.
+description: Tritt ein, wenn eine Taste gedrückt wird, während das InkPicture-Steuerelement den Fokus besitzt.
 ms.assetid: adb61eff-a92c-40b0-940c-02e14cd34e5f
-title: InkPicture. KeyPress-Ereignis (msink AUT. h)
+title: InkPicture.KeyPress-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35f9ef48a0e117d6a3d4c29a9ca69aba3bf6e054
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7545b0de722ec9b48c66aa5d2236bf81eb576d87916c15e618508e537981a2cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939010"
 ---
-# <a name="inkpicturekeypress-event"></a>InkPicture. KeyPress-Ereignis
+# <a name="inkpicturekeypress-event"></a>InkPicture.KeyPress-Ereignis
 
-Tritt auf, wenn eine Taste gedrückt wird, während das [InkPicture](inkpicture-control-reference.md) -Steuerelement den Fokus besitzt.
+Tritt ein, wenn eine Taste gedrückt wird, während das [InkPicture-Steuerelement](inkpicture-control-reference.md) den Fokus besitzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,7 +33,7 @@ void KeyPress(
 *KeyAscii* \[ in, out\]
 </dt> <dd>
 
-Der ASCII-Wert des Schlüssels, der gedrückt wird.
+Der ASCII-Wert der Taste, die gedrückt wird.
 
 </dd> </dl>
 
@@ -41,9 +41,9 @@ Der ASCII-Wert des Schlüssels, der gedrückt wird.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle definiert. Die **\_ iinkpictureevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner DISPID \_ iPeer KeyPress.
+Diese Ereignismethode wird in der **\_ IInkPictureEvents-Schnittstelle** definiert. Die **\_ IInkPictureEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IPEKeyPress.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -62,7 +62,7 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

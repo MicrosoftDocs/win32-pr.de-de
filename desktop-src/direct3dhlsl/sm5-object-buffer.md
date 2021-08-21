@@ -3,7 +3,7 @@ title: Buffer
 description: Buffer
 ms.assetid: 7f552b9b-c5fb-4bc2-a7ae-61983379db38
 keywords:
-- Puffer-HLSL
+- Puffern von HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,65 +13,65 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ce1754272fd90cedc5a806543dd83a99cdcd9455
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a65e4e662800e877d55838056ee5b3c086d2b881095cbab40ff57c2a45a0cce8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119486750"
 ---
 # <a name="buffer"></a>Buffer
 
-Der Puffertyp, wie er in Shader Model 4 und Ressourcenvariablen und Puffer Info vorhanden ist.
+Puffertyp, wie er in Shader Model 4 vorhanden ist, plus Ressourcenvariablen und Pufferinformationen.
 
 
 
-| Methode                                                   | BESCHREIBUNG                         |
+| Methode                                                   | Beschreibung                         |
 |----------------------------------------------------------|-------------------------------------|
-| [**GetDimensions**](sm5-object-buffer-getdimensions.md) | Ruft die Ressourcen Dimensionen ab.       |
-| [**Laden**](buffer-load.md)                              | Liest Puffer Daten.                  |
-| [**KOM\[\]**](sm5-object-buffer-operatorindex.md)  | Ruft eine schreibgeschützte Ressourcen Variable ab. |
+| [**GetDimensions**](sm5-object-buffer-getdimensions.md) | Ruft die Ressourcendimensionen ab.       |
+| [**Laden**](buffer-load.md)                              | Liest Pufferdaten.                  |
+| [**Operator\[\]**](sm5-object-buffer-operatorindex.md)  | Ruft eine schreibgeschützte Ressourcenvariable ab. |
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

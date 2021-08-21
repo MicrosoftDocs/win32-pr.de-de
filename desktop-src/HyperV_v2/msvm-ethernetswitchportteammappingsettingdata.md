@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungsdaten für die Port Team Zuordnung dar.
+description: Stellt die Einstellungsdaten der Portteamzuordnungsfunktion dar.
 ms.assetid: 7c9a392d-c95e-4b0d-8201-e50adabd21b2
 title: Msvm_EthernetSwitchPortTeamMappingSettingData-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3f0d7385499dcdf6e84c361de03950a4e78be0a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c65926c01c2ec4d2b333ba4800a355eeb42cf63d905c6c339a81b9b9ed97a891
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106371795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531340"
 ---
-# <a name="msvm_ethernetswitchportteammappingsettingdata-class"></a>MSVM \_ ethernetzwitchportteammappingsettingdata-Klasse
+# <a name="msvm_ethernetswitchportteammappingsettingdata-class"></a>Msvm \_ EthernetSwitchPortTeamMappingSettingData-Klasse
 
-Stellt die Einstellungsdaten für die Port Team Zuordnung dar.
+Stellt die Einstellungsdaten der Portteamzuordnungsfunktion dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,17 +41,17 @@ class Msvm_EthernetSwitchPortTeamMappingSettingData : Msvm_EthernetSwitchPortFea
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportteammappingsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortTeamMappingSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportteammappingsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortTeamMappingSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Netadapterde viceid**
+**NetAdapterDeviceId**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -60,14 +60,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Geräte-ID des bevorzugten zugeordneten physischen Adapters.
 
 </dd> <dt>
 
-**Netadaptername**
+**NetAdapterName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -76,10 +76,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Name des bevorzugten zugeordneten physischen Adapters.
+Name des bevorzugten zugeordneten physischen Adapters.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Der Name des bevorzugten zugeordneten physischen Adapters.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -101,7 +101,7 @@ Der Name des bevorzugten zugeordneten physischen Adapters.
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-SourceOrganization-Attribut
-description: Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
+title: ms-WMI-SourceOrganization-Attribut
+description: Die Unternehmensorganisation, die ursprünglich ein Richtlinienobjekt erstellt hat.
 ms.assetid: 11ac94d7-4f72-4627-81db-ae1bb23177d3
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-WMI-SourceOrganization-Attributs
-- AD-Schema des mswap-SourceOrganization-Attributs
+- MS-WMI-SourceOrganization-Attribut AD-Schema
+- MSWMI-SourceOrganization-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0606c0cff92a60bf0be165c7517590b295e8f8f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 29cf9324c7b8dc8c7189dd90ce47aa50d08e4904f014254100ac356869486c00
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119326400"
 ---
-# <a name="ms-wmi-sourceorganization-attribute"></a>MS-WMI-SourceOrganization-Attribut
+# <a name="ms-wmi-sourceorganization-attribute"></a>ms-WMI-SourceOrganization-Attribut
 
-Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
+Die Unternehmensorganisation, die ursprünglich ein Richtlinienobjekt erstellt hat.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-WMI-SourceOrganization                   |
-| LDAP-Display-Name | mswap-SourceOrganization                    |
+| CN                | ms-WMI-SourceOrganization                   |
+| Ldap-Anzeigename | msWMI-SourceOrganization                    |
 | Size              | Weniger als 50 Zeichen.                 |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator                  |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator                  |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1644                     |
-| System-ID-GUID    | 34F 7ed6c-615D-418d-AA00-549a7d7be03e        |
+| System-ID-GUID    | 34f7ed6c-615d-418d-aa00-549a7d7be03e        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
 | Link-ID                | \-                                                                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                                                                         |
 | System-Only            | False                                                                                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                                                                                       |
+| Ist einwertig       | True                                                                                                                                                                       |
 | Ist indiziert             | False                                                                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                                                 |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-policyType**](c-mswmi-policytype.md)<br/> [**MS-WMI-som**](c-mswmi-som.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-PolicyType**](c-mswmi-policytype.md)<br/> [**ms-WMI-Som**](c-mswmi-som.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
 | Link-ID                | \-                                                                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                                                                         |
 | System-Only            | False                                                                                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                                                                                       |
+| Ist einwertig       | True                                                                                                                                                                       |
 | Ist indiziert             | False                                                                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                                                 |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-policyType**](c-mswmi-policytype.md)<br/> [**MS-WMI-som**](c-mswmi-som.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-PolicyType**](c-mswmi-policytype.md)<br/> [**ms-WMI-Som**](c-mswmi-som.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
 | Link-ID                | \-                                                                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                                                                         |
 | System-Only            | False                                                                                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                                                                                       |
+| Ist einwertig       | True                                                                                                                                                                       |
 | Ist indiziert             | False                                                                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                                                 |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-policyType**](c-mswmi-policytype.md)<br/> [**MS-WMI-som**](c-mswmi-som.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-PolicyType**](c-mswmi-policytype.md)<br/> [**ms-WMI-Som**](c-mswmi-som.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
 | Link-ID                | \-                                                                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                                                                         |
 | System-Only            | False                                                                                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                                                                                       |
+| Is-Single-Valued       | True                                                                                                                                                                       |
 | Ist indiziert             | False                                                                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                                                 |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-policyType**](c-mswmi-policytype.md)<br/> [**MS-WMI-som**](c-mswmi-som.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-PolicyType**](c-mswmi-policytype.md)<br/> [**ms-WMI-Som**](c-mswmi-som.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Die Geschäftsorganisation, die anfänglich ein Richtlinien Objekt erstellt hat.
 | Link-ID                | \-                                                                                                                                                                         |
 | MAPI-Id                | \-                                                                                                                                                                         |
 | System-Only            | False                                                                                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                                                                                       |
+| Is-Single-Valued       | True                                                                                                                                                                       |
 | Ist indiziert             | False                                                                                                                                                                      |
 | Im globalen Katalog      | False                                                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                                                 |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-policyType**](c-mswmi-policytype.md)<br/> [**MS-WMI-som**](c-mswmi-som.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-PolicyType**](c-mswmi-policytype.md)<br/> [**ms-WMI-Som**](c-mswmi-som.md)<br/> |
 
 
 

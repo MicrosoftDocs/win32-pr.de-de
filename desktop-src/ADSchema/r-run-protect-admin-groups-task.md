@@ -1,10 +1,10 @@
 ---
-title: Run-Protect-admin-Groups-Task erweitert rechts
-description: Steuern Sie die Zugriffsrechte zum Autorisieren von RootDSE-Änderungs Vorgängen auf einem PDC-FSMO, um den AdminSDHolder-Schutz Vorgang auszulösen.
+title: Erweitertes Recht "Run-Protect-Admin-Groups-Task"
+description: Steuern Sie die Zugriffsrechte, die rootDSE-Änderungsvorgänge auf einem PDC FSMO autorisieren, um den AdminSDHolder-Schutzvorgang auszulösen.
 ms.assetid: d6395d65-881b-4c60-9622-90f23b3cd09f
 ms.tgt_platform: multiple
 keywords:
-- "\"Run-Protect-admin-Groups\"-Task \"Extended right AD Schema\""
+- Run-Protect-Admin-Groups-Task erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9835c0cf82699e5959a48199cf063bb73c6da537
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3a71970ea5ad88998f2243f06743e6fce50fdd35f3a678ab61c6f7fad0dce86a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531390"
 ---
-# <a name="run-protect-admin-groups-task-extended-right"></a>Run-Protect-admin-Groups-Task erweitert rechts
+# <a name="run-protect-admin-groups-task-extended-right"></a>Erweitertes Recht "Run-Protect-Admin-Groups-Task"
 
-Steuern Sie die Zugriffsrechte zum Autorisieren von RootDSE-Änderungs Vorgängen auf einem PDC-FSMO, um den AdminSDHolder-Schutz Vorgang auszulösen.
+Steuern Sie die Zugriffsrechte, die rootDSE-Änderungsvorgänge auf einem PDC FSMO autorisieren, um den AdminSDHolder-Schutzvorgang auszulösen.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | Ausführen-Protect-admin-Groups-Task        |
-| Anzeigename | Ausführen des Tasks zum Ausführen von Administrator Gruppen        |
+| CN           | Run-Protect-Admin-Groups-Task        |
+| Anzeigename | Ausführen des Task "Administratorgruppen schützen"        |
 | Rights-GUID  | 7726b9d5-a4b4-4288-a6b2-dce952e80a7f |
 
 
@@ -45,8 +45,8 @@ Steuern Sie die Zugriffsrechte zum Autorisieren von RootDSE-Änderungs Vorgänge
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 78                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 78                                           |
 
 
 
@@ -56,8 +56,8 @@ Steuern Sie die Zugriffsrechte zum Autorisieren von RootDSE-Änderungs Vorgänge
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 78                                           |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 78                                           |
 
 
 

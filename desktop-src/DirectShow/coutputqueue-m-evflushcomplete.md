@@ -1,7 +1,7 @@
 ---
-description: Das Ereignis, das signalisiert, wenn ein Löschvorgang abgeschlossen wurde.
+description: Das Ereignis, das signalisiert, wenn ein Leerungsvorgang abgeschlossen ist.
 ms.assetid: e2640fa1-03d1-4323-a9cb-698d130929f7
-title: 'Coutputqueue:: m_evFlushComplete-Member (outputq. h)'
+title: COutputQueue::m_evFlushComplete-Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 588572d1ddc39f17e48453acbdf021237d4439c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 35e6afca05732dc604ff66bbabeef94443af2dbfe947fb674f1361d04fc699e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073774"
 ---
-# <a name="coutputqueuem_evflushcomplete-member"></a>Coutputqueue:: m \_ evflushcomplete-Member
+# <a name="coutputqueuem_evflushcomplete-member"></a>COutputQueue::m \_ evFlushComplete-Member
 
-Das Ereignis, das signalisiert, wenn ein Löschvorgang abgeschlossen wurde.
+Das Ereignis, das signalisiert, wenn ein Leerungsvorgang abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CAMEvent m_evFlushComplete;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CAMEvent m_evFlushComplete;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

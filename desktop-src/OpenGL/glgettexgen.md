@@ -1,27 +1,27 @@
 ---
-title: glgettexgen-Funktionen
-description: Diese Funktionen geben Texturkoordinaten Generierungs Parameter zurück.
+title: glGetTexGen-Funktionen
+description: Diese Funktionen geben Parameter für die Texturkoordinatengenerierung zurück.
 ms.assetid: 92510f08-1a01-4883-9dd7-1c39f4cc9b6a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4be3ff4047afd814fa12e1d59ebafad6994f66dc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 548c270da0c683afa067dc31627266bbd4a08d3ceea8cfdc6de3e696984ae237
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493830"
 ---
-# <a name="glgettexgen-functions"></a>glgettexgen-Funktionen
+# <a name="glgettexgen-functions"></a>glGetTexGen-Funktionen
 
-Diese Funktionen geben Texturkoordinaten Generierungs Parameter zurück:
+Diese Funktionen geben Parameter für die Texturkoordinatengenerierung zurück:
 
--   [**glgettexgendv**](glgettexgendv.md)
--   [**glgettexgenfv**](glgettexgenfv.md)
--   [**glgettexgeniv**](glgettexgeniv.md)
+-   [**glGetTexGendv**](glgettexgendv.md)
+-   [**glGetTexGenfv**](glgettexgenfv.md)
+-   [**glGetTexGeniv**](glgettexgeniv.md)
 
- 
+ 
 
- 
+ 
 
 
 

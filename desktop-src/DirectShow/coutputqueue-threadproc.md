@@ -1,7 +1,7 @@
 ---
-description: Die ThreadProc-Methode ruft Beispiele aus der Warteschlange ab und übergibt sie an die eingabepin.
+description: Die ThreadProc-Methode ruft Stichproben aus der Warteschlange ab und übergibt sie an den Eingabepin.
 ms.assetid: e5da0a12-c722-4d08-bf84-5e3aa60b64a9
-title: Coutputqueue. ThreadProc-Methode (outputq. h)
+title: COutputQueue.ThreadProc-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 75e2e6bd7fa05480603f30e68eeaf0487918ae7f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d37158d71a74726e9bf27e76ffedb076f99b7380ffcca4edfa95928767eedbf4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073634"
 ---
-# <a name="coutputqueuethreadproc-method"></a>Coutputqueue. ThreadProc-Methode
+# <a name="coutputqueuethreadproc-method"></a>COutputQueue.ThreadProc-Methode
 
-Die `ThreadProc` -Methode ruft Beispiele aus der Warteschlange ab und übergibt sie an die eingabepin.
+Die `ThreadProc` -Methode ruft Stichproben aus der Warteschlange ab und übergibt sie an den Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,16 +44,16 @@ Diese Methode hat keine Parameter.
 
 Gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**coutputqueue:: initialthread proc**](coutputqueue-initialthreadproc.md) -Methode ruft diese Methode auf, die die Haupt Thread Schleife implementiert. Innerhalb der-Schleife führt die-Methode die folgenden Schritte aus:
+Die [**COutputQueue::InitialThreadProc-Methode**](coutputqueue-initialthreadproc.md) ruft diese Methode auf, die die Hauptthreadschleife implementiert. Innerhalb der -Schleife führt die -Methode die folgenden Schritte aus:
 
 1.  Ruft ein Beispiel für die Warteschlange ab.
-2.  Wenn das Beispiel eine Kontroll Meldung ist, führt der Thread die Steuerungs Aktion aus. Andernfalls wird das Beispiel im [**coutputqueue:: m \_ ppsamples**](coutputqueue-m-ppsamples.md) -Array platziert.
-3.  Wenn das Array voll ist (oder wenn [**coutputqueue:: m \_ bbatchexact**](coutputqueue-m-bbatchexact.md) den Wert **false** hat), ruft der Thread die [**IMemInputPin:: receivemultiple**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple) -Methode auf, um die Beispiele zu übermitteln.
-4.  Wenn keine Beispiele in die Warteschlange eingereiht werden, wartet der Thread auf [**coutputqueue:: m \_ hsem**](coutputqueue-m-hsem.md) Semaphore.
+2.  Wenn das Beispiel eine Steuermeldung ist, führt der Thread die Steuerelementaktion aus. Andernfalls wird das Beispiel in das [**Array COutputQueue::m \_ ppSamples**](coutputqueue-m-ppsamples.md) platziert.
+3.  Wenn das Array voll ist (oder [**COutputQueue::m \_ bBatchExact**](coutputqueue-m-bbatchexact.md) **FALSE** ist), ruft der Thread die [**IMemInputPin::ReceiveMultiple-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple) auf, um die Beispiele zu liefern.
+4.  Wenn keine Stichproben in die Warteschlange gestellt werden, wartet der Thread auf das [**COutputQueue::m \_ hSem-Semaphor.**](coutputqueue-m-hsem.md)
 
-Der Thread wird beendet, wenn die " [**coutputqueue \_ :: m**](coutputqueue-m-bterminate.md) "-Member-Variable " **true**" lautet.
+Der Thread wird beendet, wenn die [**COutputQueue::m \_ bTerminate-Membervariable**](coutputqueue-m-bterminate.md) TRUE **wird.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Der Thread wird beendet, wenn die " [**coutputqueue \_ :: m**](coutputqueue-m-bt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Der Thread wird beendet, wenn die " [**coutputqueue \_ :: m**](coutputqueue-m-bt
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

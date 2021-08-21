@@ -1,7 +1,7 @@
 ---
-description: Definiert die Scheitelpunkt Deklarations Methode, bei der es sich um einen vordefinierten Vorgang handelt, der vom Mosaik Prozess (oder einer beliebigen prozeduralen Geometrie Routine auf den Scheitelpunkt Daten während des Mosaik Vorgangs) ausgeführt wird.
+description: Definiert die Scheitelpunktdeklarationsmethode, bei der es sich um einen vordefinierten Vorgang handelt, der vom Mosaikator (oder einer beliebigen prozeduralen Geometrieroutine für die Scheitelpunktdaten während des Mosaiks) ausgeführt wird.
 ms.assetid: 030e04a6-4e2d-4756-80ef-e4a6a0103fd1
-title: D3DDECLMETHOD-Enumeration (D3D9Types. h)
+title: D3DDECLMETHOD-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 534fef5a4eaf9d22d502097124dcecdb91433f73
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f34700666ecb830470e58a3f3389cd6207be68403e612f50ddafc841dd839ed2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565060"
 ---
 # <a name="d3ddeclmethod-enumeration"></a>D3DDECLMETHOD-Enumeration
 
-Definiert die Scheitelpunkt Deklarations Methode, bei der es sich um einen vordefinierten Vorgang handelt, der vom Mosaik Prozess (oder einer beliebigen prozeduralen Geometrie Routine auf den Scheitelpunkt Daten während des Mosaik Vorgangs) ausgeführt wird.
+Definiert die Scheitelpunktdeklarationsmethode, bei der es sich um einen vordefinierten Vorgang handelt, der vom Mosaikator (oder einer beliebigen prozeduralen Geometrieroutine für die Scheitelpunktdaten während des Mosaiks) ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ typedef enum D3DDECLMETHOD {
 
 <dl> <dt>
 
-<span id="D3DDECLMETHOD_DEFAULT"></span><span id="d3ddeclmethod_default"></span>**D3DDECLMETHOD \_ Standard**
+<span id="D3DDECLMETHOD_DEFAULT"></span><span id="d3ddeclmethod_default"></span>**D3DDECLMETHOD \_ DEFAULT**
 </dt> <dd>
 
-Standardwert. Der Mosaik Dienst kopiert die Scheitelpunkt Daten (Spline-Daten für Patches) unverändert und ohne zusätzliche Berechnungen. Wenn der Mosaik Prozess verwendet wird, wird dieses Element interpoliert. Andernfalls werden Scheitelpunkt Daten in das Eingabe Register kopiert. Der Eingabe-und Ausgabetyp kann ein beliebiger Wert sein, aber immer derselbe Typ.
+Standardwert. Der Mosaikator kopiert die Scheitelpunktdaten (Splinedaten für Patches) ohne zusätzliche Berechnungen. Wenn der Mosaikator verwendet wird, wird dieses Element interpoliert. Andernfalls werden Scheitelpunktdaten in das Eingaberegister kopiert. Der Eingabe- und Ausgabetyp kann ein beliebiger Wert sein, ist aber immer derselbe Typ.
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_PARTIALU"></span><span id="d3ddeclmethod_partialu"></span>**D3DDECLMETHOD \_ partialu**
+<span id="D3DDECLMETHOD_PARTIALU"></span><span id="d3ddeclmethod_partialu"></span>**D3DDECLMETHOD \_ PARTIALU**
 </dt> <dd>
 
-Berechnet den Tangens an einem Punkt des Rechtecks oder Dreiecks Patches in der U-Richtung. Der Eingabetyp kann einer der folgenden sein:
+Berechnet den Tangens an einem Punkt auf dem Rechteck oder Dreieckspatch in U-Richtung. Der Eingabetyp kann einer der folgenden Sein:
 
 -   D3DDECLTYPE \_ D3DCOLOR
 -   D3DDECLTYPE \_ FLOAT3
--   D3DDECLTYPE \_ float4
+-   D3DDECLTYPE \_ FLOAT4
 -   D3DDECLTYPE \_ SHORT4
 -   D3DDECLTYPE \_ UBYTE4
 
@@ -67,14 +67,14 @@ Der Ausgabetyp ist immer D3DDECLTYPE \_ FLOAT3.
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_PARTIALV"></span><span id="d3ddeclmethod_partialv"></span>**D3DDECLMETHOD \_ partialv**
+<span id="D3DDECLMETHOD_PARTIALV"></span><span id="d3ddeclmethod_partialv"></span>**D3DDECLMETHOD \_ PARTIALV**
 </dt> <dd>
 
-Berechnet den Tangens an einem Punkt des Rechtecks oder Dreiecks Patches in der V-Richtung. Der Eingabetyp kann einer der folgenden sein:
+Berechnet den Tangens an einem Punkt auf dem Rechteck oder Dreieckspatch in V-Richtung. Der Eingabetyp kann einer der folgenden Sein:
 
 -   D3DDECLTYPE \_ D3DCOLOR
 -   D3DDECLTYPE \_ FLOAT3
--   D3DDECLTYPE \_ float4
+-   D3DDECLTYPE \_ FLOAT4
 -   D3DDECLTYPE \_ SHORT4
 -   D3DDECLTYPE \_ UBYTE4
 
@@ -82,14 +82,14 @@ Der Ausgabetyp ist immer D3DDECLTYPE \_ FLOAT3.
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_CROSSUV"></span><span id="d3ddeclmethod_crossuv"></span>**D3DDECLMETHOD \_ crossuv**
+<span id="D3DDECLMETHOD_CROSSUV"></span><span id="d3ddeclmethod_crossuv"></span>**D3DDECLMETHOD \_ CROSSUV**
 </dt> <dd>
 
-Berechnet den normalen an einem Punkt des Rechtecks oder Dreiecks Patches, indem das Kreuz Produkt von zwei Tangenten übernommen wird. Der Eingabetyp kann einer der folgenden sein:
+Berechnet die Normalität an einem Punkt auf dem Rechteck oder Dreieckspatch, indem das Kreuzprodukt aus zwei Tangenten verwendet wird. Der Eingabetyp kann einer der folgenden Sein:
 
 -   D3DDECLTYPE \_ D3DCOLOR
 -   D3DDECLTYPE \_ FLOAT3
--   D3DDECLTYPE \_ float4
+-   D3DDECLTYPE \_ FLOAT4
 -   D3DDECLTYPE \_ SHORT4
 -   D3DDECLTYPE \_ UBYTE4
 
@@ -97,40 +97,40 @@ Der Ausgabetyp ist immer D3DDECLTYPE \_ FLOAT3.
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_UV"></span><span id="d3ddeclmethod_uv"></span>**D3DDECLMETHOD \_ -UV**
+<span id="D3DDECLMETHOD_UV"></span><span id="d3ddeclmethod_uv"></span>**D3DDECLMETHOD \_ UV**
 </dt> <dd>
 
-Kopieren Sie die U-V-Werte an einem Punkt des Rechtecks oder Dreiecks Patches. Dies führt zu einem 2D-float-Wert. Der Eingabetyp muss auf D3DDECLTYPE nicht \_ verwendet werden. Der Ausgabedatentyp lautet immer D3DDECLTYPE \_ FLOAT2. Der Eingabestream und Offset werden ebenfalls nicht verwendet (muss jedoch auf 0 festgelegt werden).
+Kopieren Sie die U-, V-Werte an einem Punkt auf dem Rechteck oder Dreieckspatch. Dies führt zu einem 2D-Gleitkommawert. Der Eingabetyp muss auf D3DDECLTYPE \_ UNUSED festgelegt werden. Der Ausgabedatentyp ist immer D3DDECLTYPE \_ FLOAT2. Der Eingabestream und der Offset werden ebenfalls nicht verwendet (müssen jedoch auf 0 festgelegt werden).
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_LOOKUP"></span><span id="d3ddeclmethod_lookup"></span>**D3DDECLMETHOD- \_ Suche**
+<span id="D3DDECLMETHOD_LOOKUP"></span><span id="d3ddeclmethod_lookup"></span>**D3DDECLMETHOD \_ LOOKUP**
 </dt> <dd>
 
-Suchen Sie eine Verschiebungs Zuordnung. Der Eingabetyp kann einer der folgenden sein:
+Suchen Sie eine Verschiebungskarte. Der Eingabetyp kann einer der folgenden Sein:
 
 -   D3DDECLTYPE \_ FLOAT2
 -   D3DDECLTYPE \_ FLOAT3
--   D3DDECLTYPE \_ float4
+-   D3DDECLTYPE \_ FLOAT4
 
-Nur die x-und y-Komponenten werden für die Textur kartogramm-Suche verwendet. Der Ausgabetyp ist immer D3DDECLTYPE \_ FLOAT1. Das Gerät muss die Verschiebungs Zuordnung unterstützen. Weitere Informationen zur Verschiebungs Zuordnung finden Sie unter [Verschiebungs Zuordnung (Direct3D 9)](displacement-mapping.md). Diese Konstante wird nur von der programmierbaren Pipeline für n-Patchdaten unterstützt, wenn n-Patches aktiviert sind.
+Nur die X- und Y-Komponenten werden für die Texturzuordnungssuche verwendet. Der Ausgabetyp ist immer D3DDECLTYPE \_ FLOAT1. Das Gerät muss die Zuordnung von Verschiebungen unterstützen. Weitere Informationen zur Verschiebungszuordnung finden Sie unter [Verschiebungszuordnung (Direct3D 9).](displacement-mapping.md) Diese Konstante wird nur von der programmierbaren Pipeline für N-Patch-Daten unterstützt, wenn N-Patches aktiviert sind.
 
 </dd> <dt>
 
-<span id="D3DDECLMETHOD_LOOKUPPRESAMPLED"></span><span id="d3ddeclmethod_lookuppresampled"></span>**D3DDECLMETHOD \_ lookuppresampling**
+<span id="D3DDECLMETHOD_LOOKUPPRESAMPLED"></span><span id="d3ddeclmethod_lookuppresampled"></span>**D3DDECLMETHOD \_ LOOKUPPRESAMPLED**
 </dt> <dd>
 
-Suchen Sie eine Verschiebungs Zuordnung mit präsampling. Der Eingabetyp muss auf D3DDECLTYPE nicht \_ verwendet werden. der streamindex und der Streamoffset müssen auf 0 festgelegt werden. Der Ausgabetyp für diesen Vorgang lautet immer D3DDECLTYPE \_ FLOAT1. Das Gerät muss die Verschiebungs Zuordnung unterstützen. Weitere Informationen zur Verschiebungs Zuordnung finden Sie unter [Verschiebungs Zuordnung (Direct3D 9)](displacement-mapping.md). Diese Konstante wird nur von der programmierbaren Pipeline für n-Patchdaten unterstützt, wenn n-Patches aktiviert sind. Diese Methode kann nur mit D3DDECLUSAGE Sample verwendet werden \_ .
+Suchen Sie eine vorsampelte Verschiebungskarte. Der Eingabetyp muss auf D3DDECLTYPE \_ UNUSED festgelegt werden. Der Streamindex und der Streamoffset müssen auf 0 festgelegt werden. Der Ausgabetyp für diesen Vorgang ist immer D3DDECLTYPE \_ FLOAT1. Das Gerät muss die Zuordnung von Verschiebungen unterstützen. Weitere Informationen zur Verschiebungszuordnung finden Sie unter [Verschiebungszuordnung (Direct3D 9).](displacement-mapping.md) Diese Konstante wird nur von der programmierbaren Pipeline für N-Patch-Daten unterstützt, wenn N-Patches aktiviert sind. Diese Methode kann nur mit D3DDECLUSAGE SAMPLE verwendet \_ werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Mosaik Prozess untersucht die-Methode, um zu bestimmen, welche Daten während des Mosaik Prozesses aus den Scheitelpunkt Daten berechnet werden sollen. Für Mesh-Daten sollte der Standardwert verwendet werden. Patches können jeden der anderen implementierten Typen verwenden.
+Der Mosaikator untersucht die -Methode, um zu bestimmen, welche Daten während des Mosaiks aus den Scheitelpunktdaten berechnet werden sollen. Gitternetzdaten sollten den Standardwert verwenden. Patches können jeden der anderen implementierten Typen verwenden.
 
-Vertex-Daten werden mit einem Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Strukturen deklariert. Jedes Element im Array enthält eine Scheitelpunkt Deklarations Methode.
+Scheitelpunktdaten werden mit einem Array von [**D3DVERTEXELEMENT9-Strukturen**](d3dvertexelement9.md) deklariert. Jedes Element im Array enthält eine Vertexdeklarationsmethode.
 
-Neben der Verwendung von D3DDECLMETHOD \_ Default kann ein normales Mesh \_ die D3DDECLMETHOD Lookup-Methode und die D3DDECLMETHOD \_ lookuppresampling-Methode verwenden, wenn N-Patches aktiviert sind.
+Zusätzlich zur Verwendung von D3DDECLMETHOD \_ DEFAULT kann ein normales Gitternetz die Methoden D3DDECLMETHOD \_ LOOKUP und D3DDECLMETHOD \_ LOOKUPPRESAMPLED verwenden, wenn N-Patches aktiviert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,7 +138,7 @@ Neben der Verwendung von D3DDECLMETHOD \_ Default kann ein normales Mesh \_ die 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 

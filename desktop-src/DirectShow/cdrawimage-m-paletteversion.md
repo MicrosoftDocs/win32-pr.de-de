@@ -1,7 +1,7 @@
 ---
-description: Die \_ Member-Variable m paletteversion wird verwendet, um zu verfolgen, wann die Palette geändert wird.
+description: Die m \_ PaletteVersion-Membervariable wird verwendet, um nachverfolgungen, wenn sich die Palette ändert.
 ms.assetid: 45cb6e62-48b4-4480-a3fa-0f790f3c725d
-title: 'Cdrawimage:: m_PaletteVersion Member (winutil. h)'
+title: CDrawImage::m_PaletteVersion-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: beb4102606dce2fbc89fdd9ac251b007c875d6e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 76df4ea53eb7540fa8816b2dac9e9fe62e476a7db47bec979ee54d70624909a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074344"
 ---
-# <a name="cdrawimagem_paletteversion-member"></a>Cdrawimage:: m \_ paletteversion-Member
+# <a name="cdrawimagem_paletteversion-member"></a>CDrawImage::m \_ PaletteVersion-Member
 
-Die Element `m_PaletteVersion` Variable wird verwendet, um zu verfolgen, wann die Palette geändert wird.
+Mit `m_PaletteVersion` der Membervariablen wird nachverfolgt, wann sich die Palette ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ LONG m_PaletteVersion;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,10 +51,10 @@ LONG m_PaletteVersion;
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: getpaletteversion**](cdrawimage-getpaletteversion.md)
+[**CDrawImage::GetPaletteVersion**](cdrawimage-getpaletteversion.md)
 </dt> </dl>
 
  

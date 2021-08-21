@@ -1,10 +1,10 @@
 ---
-title: Iadsfileservice-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadsfileservice-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsFileService-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsFileService-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 1455df61-9218-450b-b956-1cf127364f24
 ms.tgt_platform: multiple
 keywords:
-- Iadsfileservice-Eigenschaften Methoden ADSI
+- IADsFileService-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1f3a46b37522bbdce6e99b969811e2909c8ecc9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cd12e1f9c52606f76cf6c0828767819e318874c323b22f5e1a91b70d71965465
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082444"
 ---
-# <a name="iadsfileservice-property-methods"></a>Iadsfileservice-Eigenschaften Methoden
+# <a name="iadsfileservice-property-methods"></a>IADsFileService-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**iadsfileservice**](/windows/desktop/api/Iads/nn-iads-iadsfileservice) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsFileService-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsfileservice) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -39,14 +39,14 @@ Mit den Eigenschafts Methoden der [**iadsfileservice**](/windows/desktop/api/Iad
 **Beschreibung**
 </dt> <dd> <dl>
 
-Die Beschreibung des Datei Dienstanbieter.
+Die Beschreibung des Dateidiensts.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -67,14 +67,14 @@ HRESULT put_Description(
 **MaxUserCount**
 </dt> <dd> <dl>
 
-Die maximal zulässige Anzahl von Benutzern, die für den Dienst zulässig sind.
+Die maximale Anzahl von Benutzern, die für den Dienst zu einem beliebigen Zeitpunkt zulässig sind.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -94,13 +94,13 @@ HRESULT put_MaxUserCount(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen den Datei Dienst durchlaufen, um auf Dateifreigaben, Sitzungen und Ressourcen auf einem Computer zuzugreifen.
+Sie müssen den Dateidienst durchgehen, um auf Dateifreigaben, Sitzungen und Ressourcen auf einem Computer zu zugreifen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird eine Beschreibung für geschrieben und das Benutzerlimit des Datei Dienstanbieter überprüft.
+Das folgende Codebeispiel schreibt eine Beschreibung für den Dateidienst und überprüft den Benutzergrenzwert.
 
 
 ```VB
@@ -127,7 +127,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird eine Beschreibung für geschrieben und das Benutzerlimit für ein Datei Dienst Objekt überprüft.
+Das folgende Codebeispiel schreibt eine Beschreibung für und überprüft das Benutzerlimit für ein Dateidienstobjekt.
 
 
 ```C++
@@ -173,9 +173,9 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsfileservice ist als A89D1900-31CA-11CF-A98A-00AA006BC149 definiert.<br/>      |
+| IID<br/>                      | IID \_ IADsFileService ist als A89D1900-31CA-11CF-A98A-00AA006BC149 definiert.<br/>      |
 
 
 
@@ -183,19 +183,19 @@ Cleanup:
 
 <dl> <dt>
 
-[**Iadsservice**](/windows/desktop/api/Iads/nn-iads-iadsservice)
+[**IADsService**](/windows/desktop/api/Iads/nn-iads-iadsservice)
 </dt> <dt>
 
-[**Iadsfileservice**](/windows/desktop/api/Iads/nn-iads-iadsfileservice)
+[**IADsFileService**](/windows/desktop/api/Iads/nn-iads-iadsfileservice)
 </dt> <dt>
 
-[**Iadsfileserviceoperations**](/windows/desktop/api/Iads/nn-iads-iadsfileserviceoperations)
+[**IADsFileServiceOperations**](/windows/desktop/api/Iads/nn-iads-iadsfileserviceoperations)
 </dt> <dt>
 
-[**Iadsserviceoperations**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations)
+[**IADsServiceOperations**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

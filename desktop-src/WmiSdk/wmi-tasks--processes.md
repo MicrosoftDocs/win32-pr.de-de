@@ -1,5 +1,5 @@
 ---
-description: WMI-Tasks für Prozesse erhalten Informationen, wie z. b. das Konto, unter dem ein Prozess ausgeführt wird. Sie können Aktionen wie das Erstellen von Prozessen ausführen. Weitere Beispiele finden Sie im technet scriptcenter unter https://www.microsoft.com/technet .
+description: WMI-Tasks für Prozesse rufen Informationen ab, z. B. das Konto, unter dem ein Prozess ausgeführt wird. Sie können Aktionen wie das Erstellen von Prozessen ausführen. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: 2ae7c302-ab8b-4150-8ece-ffb66374b3f7
 ms.tgt_platform: multiple
 title: 'WMI-Tasks: Prozesse '
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a720046d8f5cd25c55f2d5f367d2c23d5e4fc882
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 0847179cc67635ab872f71d79ed77c337ec6044291db13f5d1ca48101fc5dbad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104485934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049888"
 ---
 # <a name="wmi-tasks-processes"></a>WMI-Tasks: Prozesse 
 
-WMI-Tasks für Prozesse erhalten Informationen, wie z. b. das Konto, unter dem ein Prozess ausgeführt wird. Sie können Aktionen wie das Erstellen von Prozessen ausführen. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+WMI-Tasks für Prozesse rufen Informationen ab, z. B. das Konto, unter dem ein Prozess ausgeführt wird. Sie können Aktionen wie das Erstellen von Prozessen ausführen. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele rufen Daten nur vom lokalen Computer ab. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird beschrieben, wie Ein Skript ausgeführt wird.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass ihr Text-Editor der Datei keine .txt Erweiterung hinzufüg.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben Sie an der Eingabeaufforderung **cscript filename.vbs** ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen von Ausgaben erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben Sie **cscript filename.vbs > outfile.txt** an der Eingabeaufforderung ein, um die Ausgabe des *filename.vbs* Skripts anoutfile.txt *umzuleiten.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... Ausführen einer Anwendung in einem verborgenen Fenster</td>
-<td>Die Anwendung wird von einem Skript aufgerufen, das die Klassen <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> und <a href="/windows/desktop/CIMWin32Prov/win32-processstartup"><strong>Win32_ProcessStartup</strong></a> verwendet.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... Eine Anwendung in einem ausgeblendeten Fenster ausführen?</td>
+<td>Rufen Sie die Anwendung über ein Skript auf, das die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>klassen Win32_Process</strong></a> und <a href="/windows/desktop/CIMWin32Prov/win32-processstartup"><strong>Win32_ProcessStartup</strong></a> verwendet.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -100,8 +100,8 @@ $startup.Properties[&#39;ShowWindow&#39;].value=$False
 </td>
 </tr>
 <tr class="even">
-<td>... Legen Sie fest, welche Skripts auf dem lokalen Computer ausgeführt werden?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse, und geben Sie alle Prozesse mit dem Namen Cscript.exe oder Wscript.exe zurück. Um die einzelnen Skripts zu ermitteln, die in diesen Prozessen ausgeführt werden, überprüfen Sie den Wert der <strong>CommandLine</strong> -Eigenschaft.</p>
+<td>... ermitteln, welche Skripts auf dem lokalen Computer ausgeführt werden?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse, und geben Sie alle Prozesse mit dem Namen Cscript.exe oder Wscript.exe zurück. Um die einzelnen Skripts zu bestimmen, die in diesen Prozessen ausgeführt werden, überprüfen Sie den Wert der <strong>CommandLine-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -150,8 +150,8 @@ Get-WmiObject -Class &quot;Win32_Process&quot; -ComputerName &quot;.&quot; | `
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Ermitteln Sie den Kontonamen, unter dem ein Prozess ausgeführt wird?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/getowner-method-in-class-win32-process"><strong>GetOwner</strong></a> -Methode.</p>
+<td>... ermitteln Sie den Kontonamen, unter dem ein Prozess ausgeführt wird?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/getowner-method-in-class-win32-process"><strong>GetOwner-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -195,8 +195,8 @@ Next</code></pre></td>
 </div></td>
 </tr>
 <tr class="even">
-<td>... die Priorität eines laufenden Prozesses ändern?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/setpriority-method-in-class-win32-process"><strong>SetPriority</strong></a> -Methode.</p>
+<td>... ändern Sie die Priorität eines ausgeführten Prozesses?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/setpriority-method-in-class-win32-process"><strong>SetPriority-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -243,8 +243,8 @@ foreach ($objProcess in $colProcesses) { $objProcess.SetPriority($ABOVE_NORMAL) 
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Beenden eines Prozesses mithilfe eines Skripts</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse und die Beendigungs <a href="/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process"><strong>Methode.</strong></a></p>
+<td>... beenden Sie einen Prozess mithilfe eines Skripts?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/terminate-method-in-class-win32-process"><strong>Terminate-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -289,8 +289,8 @@ foreach ($objProcess in $colProcesses) { $objProcess.Terminate() }</code></pre><
 </div></td>
 </tr>
 <tr class="even">
-<td>... bestimmen Sie, wie viel Prozessorzeit und Arbeitsspeicher von den einzelnen Prozessen verwendet werden?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse und Eigenschaften wie z. <strong>b. kernelmodetime</strong>, <strong>workingsetsize</strong>, <strong>PageFileUsage</strong>und <strong>PageFaults</strong>.</p>
+<td>... ermitteln, wie viel Prozessorzeit und Arbeitsspeicher die einzelnen Prozesse verwenden?</td>
+<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> Klasse und Eigenschaften wie <strong>KernelModeTime,</strong> <strong>WorkingSetSize,</strong> <strong>PageFileUsage</strong>und <strong>PageFaults.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -341,8 +341,8 @@ Get-WmiObject -Class &quot;Win32s_Process&quot; -ComputerName $strComputer | `
 </div></td>
 </tr>
 <tr class="odd">
-<td>... wissen Sie, welche Anwendungen auf einem Remote Computer ausgeführt werden?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong>Win32_Process</strong></a> -Klasse.</p>
+<td>... erfahren Sie, welche Anwendungen auf einem Remotecomputer ausgeführt werden?</td>
+<td><p>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-process"><strong></strong></a> Sie die Win32_Process-Klasse.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -402,13 +402,13 @@ get-wmiObject -class Win32_Process -Namespace &quot;root\cimv2&quot; -ComputerNa
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[WMI C++-Anwendungsbeispiele](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 
  

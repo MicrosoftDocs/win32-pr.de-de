@@ -1,9 +1,9 @@
 ---
-title: TBM_SETTIC Meldung (kommstrg. h)
-description: Legt einen Teil Strich in einer TrackBar an der angegebenen logischen Position fest.
+title: TBM_SETTIC (Commctrl.h)
+description: Legt einen Teilstrich in einer Trackleiste an der angegebenen logischen Position fest.
 ms.assetid: 89b42cac-967e-40c7-9fab-2bd76f06f3f9
 keywords:
-- Windows-Steuerelemente für TBM_SETTIC Meldung
+- TBM_SETTIC meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a42839157125c8def28a19dd9c2ccce21d3b96c3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 74f286a2f03e318629a10651d066da5aa6cfe70aa293f242ad7508d0ef4739a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540020"
 ---
-# <a name="tbm_settic-message"></a>TBM- \_ SetTic-Nachricht
+# <a name="tbm_settic-message"></a>TBM \_ SETTIC-Meldung
 
-Legt einen Teil Strich in einer TrackBar an der angegebenen logischen Position fest.
+Legt einen Teilstrich in einer Trackleiste an der angegebenen logischen Position fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Legt einen Teil Strich in einer TrackBar an der angegebenen logischen Position f
 *lParam* 
 </dt> <dd>
 
-Position des Teil Strichs. Bei diesem Parameter kann es sich um einen beliebigen ganzzahligen Wert in der TrackBar-Bereich der minimalen bis maximalen Schieberegler-Positionen handeln.
+Position des Teilstrichs. Dieser Parameter kann ein beliebiger ganzzahliger Wert im Bereich von minimalen bis maximalen Schiebereglerpositionen der Trackleiste sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn der Teil Strich festgelegt ist, andernfalls **false** .
+Gibt **TRUE zurück,** wenn das Teilstrich festgelegt ist, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine TrackBar erstellt eigene erste und letzte Teil Striche. Verwenden Sie diese Meldung nicht, um den ersten und den letzten Teil Strich festzulegen.
+Eine Trackleiste erstellt eigene erste und letzte Teilstriche. Verwenden Sie diese Meldung nicht zum Festlegen der ersten und letzten Teilstriche.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Eine TrackBar erstellt eigene erste und letzte Teil Striche. Verwenden Sie diese
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Eine TrackBar erstellt eigene erste und letzte Teil Striche. Verwenden Sie diese
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM- \_ getptics**](tbm-getptics.md)
+[**TBM \_ GETPTICS**](tbm-getptics.md)
 </dt> <dt>
 
-[**TBM \_ GetTic**](tbm-gettic.md)
+[**TBM \_ GETTIC**](tbm-gettic.md)
 </dt> </dl>
 
  

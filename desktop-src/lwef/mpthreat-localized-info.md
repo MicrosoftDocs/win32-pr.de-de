@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_LOCALIZED_INFO Struktur (mpclient. h)
-description: Lokalisierte Informationen zu einer Bedrohung.
+title: MPTHREAT_LOCALIZED_INFO-Struktur (MpClient.h)
+description: Lokalisierte Informationen für eine Bedrohung.
 ms.assetid: 99DC9737-9A61-4407-B544-A7A979C5B556
 keywords:
-- MPTHREAT_LOCALIZED_INFO Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_LOCALIZED_INFO Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_LOCALIZED_INFO struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPTHREAT_LOCALIZED_INFO Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 87ea0bee7c8cae15389b40b64038aad92a56dd5f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ff28c77c60421fcaabe31580400ad87823ad3edf3536d96ba3ba5eec177ad94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555950"
 ---
-# <a name="mpthreat_localized_info-structure"></a>Lokalisierte mpthreat- \_ \_ Informationsstruktur
+# <a name="mpthreat_localized_info-structure"></a>MPTHREAT \_ LOCALIZED \_ INFO-Struktur
 
-Lokalisierte Informationen zu einer Bedrohung.
+Lokalisierte Informationen für eine Bedrohung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,65 +49,65 @@ typedef struct tagMPTHREAT_LOCALIZED_INFO {
 
 <dl> <dt>
 
-**Threatid**
+**ThreatID**
 </dt> <dd>
 
-Typ: **mpthreat- \_ ID**
+Typ: **\_ MPTHREAT-ID**
 
 </dd> <dd>
 
-Bedrohungs Bezeichner. Das obere Bit ist festgelegt, um antivirenbezogene Bedrohungen zu identifizieren.
+Bedrohungsbezeichner. Das obere Bit ist festgelegt, um Bedrohungen im Zusammenhang mit Antivirensoftware zu identifizieren.
 
 </dd> <dt>
 
-**CategoryName**
+**Categoryname**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Bedrohungs Klassifizierung, z. b. ein Trojaner oder eine Keylogger.
+Bedrohungsklassifizierung, z. B. ein Trojaner oder ein Keylogger.
 
 </dd> <dt>
 
-**Categorydescription**
+**CategoryDescription**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Beschreibung der Bedrohungs Kategorie.
+Beschreibung der Bedrohungskategorie.
 
 </dd> <dt>
 
-**Schweregrad Name**
+**SeverityName**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Bedrohungs Schweregrad, z. b. schwerwiegend oder Mittel.
+Schweregrad der Bedrohung, z. B. schwerwiegend oder mittel.
 
 </dd> <dt>
 
-**"Severitydescription"**
+**SeverityDescription**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Beschreibung des Bedrohungs schwere Grads.
+Beschreibung des Schweregrads der Bedrohung.
 
 </dd> <dt>
 
-**Kurzbeschreibung**
+**ShortDescription**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
@@ -115,32 +115,32 @@ Kurze Beschreibung der Bedrohung.
 
 </dd> <dt>
 
-**Defaultactionname;**
+**DefaultActionName;**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Der Name der Standardaktion, wie z. b. Remove oder Quarantäne, von der Engine vorgeschlagen.
+Name der Standardaktion, z. B. entfernen oder unter Quarantäne stellen, die von der Engine vorgeschlagen wird.
 
 </dd> <dt>
 
 **Advice**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Ratschläge für eine bestimmte Bedrohung.
+Hinweise zur jeweiligen Bedrohung.
 
 </dd> <dt>
 
-**"-URL"**
+**ThreatUrl**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
@@ -154,9 +154,9 @@ Eine URL zu einer Webseite, die Informationen über die Bedrohung enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -4,7 +4,7 @@ description: Entwickler können benutzerdefinierte Webdienste erstellen, die VDI
 ms.assetid: ae2dad51-be37-4311-a7c3-e99b2f41bed1
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, WSDL-Schnittstelle für benutzerdefinierte VDI
+- Remotedesktopdienste Remotedesktopdienste , WSDL-Schnittstelle für benutzerdefinierte VDI
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 52c51c3348f41f4cd3fad990a2cc7ef94a865173
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bc90f574edcf306b2141a54ccc3b34c79814e1dd5c705690af1b16103b1b8c05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513860"
 ---
 # <a name="wsdl-interface-for-custom-vdi-solutions"></a>WSDL-Schnittstelle für benutzerdefinierte VDI-Lösungen
 
 Entwickler können benutzerdefinierte Webdienste erstellen, die VDI-Lösungen (Virtual Desktop Infrastructure) verwalten.
 
-Ab Windows Server 2008 R2 können Client Computer mit Webdiensten kommunizieren, die die Verwaltung virtueller Maschinen mithilfe des VMMWebServerClient.dll Filter-Plug-ins durchführen. Sie können einen benutzerdefinierten Webdienst implementieren, der mit diesem Filter-Plug-in funktioniert. Um mit dem Filter-Plug-in zu kommunizieren, muss der Webdienst die in der folgenden WSDL-Datei (Web Services Definition Language) definierten Methoden implementieren.
+Ab Windows Server 2008 R2 können Clientcomputer mit Webdiensten kommunizieren, die die Verwaltung virtueller Computer mithilfe des VMMWebServerClient.dll-Filter-Plug-Ins durchführen. Sie können einen benutzerdefinierten Webdienst implementieren, der mit diesem Filter-Plug-In funktioniert. Um mit dem Filter-Plug-In zu kommunizieren, muss Ihr Webdienst die methoden implementieren, die in der folgenden WSDL-Datei (Web Services Definition Language) definiert sind.
 
 
 ```XML
@@ -292,17 +292,17 @@ Ab Windows Server 2008 R2 können Client Computer mit Webdiensten kommunizieren,
 
 Diese WSDL-Datei definiert die folgenden Methoden:
 
--   [Getvm](#getvm)
--   [Jobupveraltet](#jobupdated)
--   [Platzhalter](#placevm)
--   [SetLocale](#setlocale)
+-   [GetVM](#getvm)
+-   [JobUpdated](#jobupdated)
+-   [PlaceVM](#placevm)
+-   [Setlocale](#setlocale)
 -   [StartVM](#startvm)
 
-## <a name="getvm"></a>Getvm
+## <a name="getvm"></a>GetVM
 
-Das Filter-Plug-in ruft diese Methode auf, um Informationen zu einem angegebenen virtuellen Computer abzurufen. Er sollte den Status, den Hostnamen, den Hosttyp und die GUID des virtuellen Computers zurückgeben.
+Das Filter-Plug-In ruft diese Methode auf, um Informationen zu einem angegebenen virtuellen Computer abzurufen. Sie sollte den Status, den Hostnamen, den Hosttyp und die GUID des virtuellen Computers zurückgeben.
 
-Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
+Das Filter-Plug-In übergibt das folgende Element an die -Methode.
 
 
 ```XML
@@ -318,7 +318,7 @@ Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
 
 
 
-Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
+Der Webdienst muss das folgende Element an das Filter-Plug-In zurückgeben.
 
 
 ```XML
@@ -333,11 +333,11 @@ Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
 
 
 
-## <a name="jobupdated"></a>Jobupveraltet
+## <a name="jobupdated"></a>JobUpdated
 
-Der Webdienst ruft diese Methode auf, um das Filter-Plug-in zu benachrichtigen, dass Änderungen an einem vorhandenen Auftrag vorgenommen wurden. Wenn Sie diese Methode implementieren, wird **S \_ OK** zurückgegeben, wenn die Funktion erfolgreich ausgeführt wird. Wenn dies nicht möglich ist, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](/windows/desktop/SecCrypto/common-hresult-values) .
+Der Webdienst ruft diese Methode auf, um das Filter-Plug-In zu benachrichtigen, dass Änderungen an einem vorhandenen Auftrag vorgenommen wurden. Wenn Sie diese Methode implementieren, geben Sie **S \_ OK** zurück, wenn die Funktion erfolgreich ist. Wenn ein Fehler auftritt, geben Sie einen **HRESULT-Wert** zurück, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](/windows/desktop/SecCrypto/common-hresult-values)
 
-Der Webdienst übergibt das folgende-Element an das Filter-Plug-in.
+Der Webdienst übergibt das folgende Element an das Filter-Plug-In.
 
 
 ```XML
@@ -352,11 +352,11 @@ Der Webdienst übergibt das folgende-Element an das Filter-Plug-in.
 
 
 
-## <a name="placevm"></a>Platzhalter
+## <a name="placevm"></a>PlaceVM
 
-Das Filter-Plug-in ruft diese Methode auf, um eine virtuelle Maschine von einer Bibliothek zu einem Host Computer zu migrieren. Die Methode sollte einen Auftrag erzeugen und einen eindeutigen Auftrags Bezeichner für die Nachverfolgung an das Filter-Plug-in zurückgeben. Wenn die Verarbeitung fertiggestellt ist, sollte der Webdienst jobupveralteten aufzurufen.
+Das Filter-Plug-In ruft diese Methode auf, um einen virtuellen Computer von einer Bibliothek zu einem Hostcomputer zu migrieren. Die -Methode sollte einen Auftrag erstellen und zu Nachverfolgungszwecken einen eindeutigen Auftragsbezeichner an das Filter-Plug-In zurückgeben. Nach Abschluss der Verarbeitung sollte der Webdienst JobUpdated aufrufen.
 
-Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
+Das Filter-Plug-In übergibt das folgende Element an die -Methode.
 
 
 ```XML
@@ -372,7 +372,7 @@ Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
 
 
 
-Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
+Der Webdienst muss das folgende Element an das Filter-Plug-In zurückgeben.
 
 
 ```XML
@@ -389,9 +389,9 @@ Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
 
 ## <a name="setlocale"></a>SetLocale
 
-Das Filter-Plug-in ruft diese Methode auf, um das für Fehler Zeichenfolgen zu verwendende Gebiets Schema anzugeben.
+Das Filter-Plug-In ruft diese Methode auf, um das Gebietsschema anzugeben, das für Fehlerzeichenfolgen verwendet werden soll.
 
-Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
+Das Filter-Plug-In übergibt das folgende Element an die -Methode.
 
 
 ```XML
@@ -406,7 +406,7 @@ Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
 
 
 
-Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
+Der Webdienst muss das folgende Element an das Filter-Plug-In zurückgeben.
 
 
 ```XML
@@ -423,9 +423,9 @@ Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
 
 ## <a name="startvm"></a>StartVM
 
-Das Filter-Plug-in ruft diese Methode auf, um die virtuelle Maschine auf dem aktuellen Host Computer zu starten. Wenn die virtuelle Maschine auf dem aktuellen Host Computer nicht gestartet werden kann, sollte diese Methode die virtuelle Maschine zum bestmöglichen Host migrieren und dann starten. Die Methode sollte einen Auftrag erzeugen und einen eindeutigen Auftrags Bezeichner für die Nachverfolgung an das Filter-Plug-in zurückgeben. Wenn die Verarbeitung fertiggestellt ist, sollte der Webdienst jobupveralteten aufzurufen.
+Das Filter-Plug-In ruft diese Methode auf, um den virtuellen Computer auf dem aktuellen Hostcomputer zu starten. Wenn der virtuelle Computer nicht auf dem aktuellen Hostcomputer gestartet werden kann, sollte diese Methode den virtuellen Computer zum bestmöglichen Host migrieren und dann starten. Die -Methode sollte einen Auftrag erstellen und zu Nachverfolgungszwecken einen eindeutigen Auftragsbezeichner an das Filter-Plug-In zurückgeben. Nach Abschluss der Verarbeitung sollte der Webdienst JobUpdated aufrufen.
 
-Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
+Das Filter-Plug-In übergibt das folgende Element an die -Methode.
 
 
 ```XML
@@ -441,7 +441,7 @@ Das Filter-Plug-in übergibt das folgende-Element an die-Methode.
 
 
 
-Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
+Der Webdienst muss das folgende Element an das Filter-Plug-In zurückgeben.
 
 
 ```XML
@@ -456,6 +456,6 @@ Der Webdienst muss das folgende Element an das Filter-Plug-in zurückgeben.
 
 
 
- 
+ 
 
- 
+ 

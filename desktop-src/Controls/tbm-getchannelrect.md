@@ -1,9 +1,9 @@
 ---
-title: TBM_GETCHANNELRECT Meldung (kommstrg. h)
-description: Ruft die Größe und Position des umgebenden Rechtecks für den Kanal einer TrackBar ab.
+title: TBM_GETCHANNELRECT (Commctrl.h)
+description: Ruft die Größe und Position des umgebundenen Rechtecks für den Kanal einer Trackleiste ab.
 ms.assetid: 353edae3-1a26-4e85-8a32-ba8b5a976d24
 keywords:
-- Windows-Steuerelemente für TBM_GETCHANNELRECT Meldung
+- TBM_GETCHANNELRECT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02982e9ce417b9fcf3e16d0e14d061e3ffd97a8a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: af2c9932782a150635365c1cdcb74b624f6863b27180136bc9483e8d0de3ba1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078104"
 ---
-# <a name="tbm_getchannelrect-message"></a>TBM- \_ GetChannelRect-Nachricht
+# <a name="tbm_getchannelrect-message"></a>TBM \_ GETCHANNELRECT-Nachricht
 
-Ruft die Größe und Position des umgebenden Rechtecks für den Kanal einer TrackBar ab. (Der Kanal ist der Bereich, in dem der Schieberegler verschoben wird. Sie enthält die Hervorhebung, wenn ein Bereich ausgewählt ist.)
+Ruft die Größe und Position des umgebundenen Rechtecks für den Kanal einer Trackleiste ab. (Der Kanal ist der Bereich, über den sich der Schieberegler bewegt. Sie enthält die Hervorhebung, wenn ein Bereich ausgewählt wird.)
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Ruft die Größe und Position des umgebenden Rechtecks für den Kanal einer Trac
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Die Meldung füllt diese Struktur mit dem umgebenden Rechteck des Kanals in den Client Koordinaten des TrackBar-Fensters.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Die Nachricht füllt diese Struktur mit dem umgebundenen Rechteck des Kanals in Clientkoordinaten des Fensters der Trackleiste auf.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

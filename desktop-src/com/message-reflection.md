@@ -1,19 +1,19 @@
 ---
-title: Nachrichten Reflektion
-description: Nachrichten Reflektion
+title: Meldungslektion
+description: Meldungslektion
 ms.assetid: 26a124d7-6499-4e8f-9001-d2782c1cc290
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 96cb563597e5aa92440e1b1434420e983268d9b3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9191e0e189f8653518aaabb3c31785cde960538b0828d56669096ebf1d63f1e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048048"
 ---
-# <a name="message-reflection"></a>Nachrichten Reflektion
+# <a name="message-reflection"></a>Meldungslektion
 
-Es wird dringend empfohlen, dass ein ActiveX-Steuerelement Container Nachrichten Reflektion unterstützt. Dies führt zu einer effizienteren Operation für untergeordnete Steuerelemente. Wenn Nachrichten Reflektion unterstützt wird, muss die Ambient-Eigenschaft MessageReflect unterstützt werden und den Wert **true** aufweisen. Wenn ein Container keine Nachrichten Reflektion implementiert, erstellt das OLE CDK zwei Fenster für jedes untergeordnete Steuerelement, um Nachrichten Reflektion für den Steuerungs Container bereitzustellen.
+Es wird dringend empfohlen, dass ein ActiveX-Steuerelementcontainer die Nachrichtenlektion unterstützt. Dies führt zu einem effizienteren Vorgang für Steuerelemente mit Unterklassen. Wenn Die Meldungsreflektion unterstützt wird, muss die Ambient-Eigenschaft MessageReflect unterstützt werden und den Wert **TRUE haben.** Wenn ein Container keine Nachrichtenlektion implementiert, erstellt das OLE CDK zwei Fenster für jedes Steuerelement mit Unterklassen, um im Namen des Steuerelementcontainers Nachrichtenlektion zu ermöglichen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -22,9 +22,9 @@ Es wird dringend empfohlen, dass ein ActiveX-Steuerelement Container Nachrichten
 [Container](containers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

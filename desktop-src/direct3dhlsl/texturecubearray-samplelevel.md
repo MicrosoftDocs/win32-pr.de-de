@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray samplelevel-Methoden'
-description: 'Prüft eine Textur auf der angegebenen MipMap-Ebene. | Texturecubearray:: texturecubearray samplelevel-Methoden'
+title: TextureCubeArray::TextureCubeArray SampleLevel-Methoden
+description: Probieren Sie eine Textur auf der angegebenen Mipmapebene aus. | TextureCubeArray::TextureCubeArray SampleLevel-Methoden
 ms.assetid: FEE18D08-B05C-4F38-AFB1-CA8341759D01
 keywords:
-- Samplelevel-Methoden HLSL
+- SampleLevel-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,36 +12,36 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 3ff09dd2333d78b5258b56e43e6c279e44a23ec5
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 80a482592b254105eaf91b0c6acb07f6b724bded36803deb20ee5156875a077f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119484580"
 ---
-# <a name="texturecubearraysamplelevel-methods"></a>Texturecubearray:: samplelevel-Methoden
+# <a name="texturecubearraysamplelevel-methods"></a>TextureCubeArray::SampleLevel-Methoden
 
-Prüft eine Textur auf der angegebenen MipMap-Ebene.
+Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                | BESCHREIBUNG                                                                                        |
+| Methode                                                                                | Beschreibung                                                                                        |
 |:--------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Samplelevel (S, float, float)**](dx-graphics-hlsl-to-samplelevel.md)                 | Prüft eine Textur auf der angegebenen MipMap-Ebene.<br/>                                        |
-| [**Samplelevel (S, float, float, uint)**](tcubearray-samplelevel-s-float-float-uint-.md) | Führt eine Stichprobe für eine Textur auf der angegebenen MipMap-Ebene aus und gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleLevel(S, float, float)**](dx-graphics-hlsl-to-samplelevel.md)                 | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.<br/>                                        |
+| [**SampleLevel(S,float,float,uint)**](tcubearray-samplelevel-s-float-float-uint-.md) | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

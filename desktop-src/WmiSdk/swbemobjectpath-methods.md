@@ -1,24 +1,24 @@
 ---
-description: Das "errbemubjectpath"-Objekt stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemObjectPath-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: C787DCAD-4240-49B7-9C85-A9CF2E130311
 ms.tgt_platform: multiple
-title: "' Errbemubjectpath '-Methoden"
+title: SWbemObjectPath-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28b4da518ba0b94b52fb4bc75482ab2894b4a799
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4e880a58e5f53e89894d4bf9081eab5e84f4302da90592846cd02ec553118b80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503860"
 ---
-# <a name="swbemobjectpath-methods"></a>' Errbemubjectpath '-Methoden
+# <a name="swbemobjectpath-methods"></a>SWbemObjectPath-Methoden
 
-Das " [**errbemubjectpath**](swbemobjectpath.md) "-Objekt stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemObjectPath-Objekt**](swbemobjectpath.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Methode "* tassingleton"**](swbemobjectpath-setassingleton.md)
+-   [**SetAsSingleton-Methode**](swbemobjectpath-setassingleton.md)
 
  
 

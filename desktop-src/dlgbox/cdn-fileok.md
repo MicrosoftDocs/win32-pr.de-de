@@ -1,9 +1,9 @@
 ---
-title: CDN_FILEOK Benachrichtigungs Code (kommdlg. h)
-description: Wird von einem Explorer-Dialogfeld "Öffnen" oder "Speichern unter" gesendet, wenn der Benutzer einen Dateinamen angibt und auf die Schaltfläche "OK" klickt.
+title: CDN_FILEOK Benachrichtigungscode (Commdlg.h)
+description: Wird von einem Dialogfeld Im Explorer-Stil öffnen oder speichern unter gesendet, wenn der Benutzer einen Dateinamen angibt und auf die Schaltfläche OK klickt.
 ms.assetid: 7f3de96f-68d8-4f40-b74f-304835f9def2
 keywords:
-- Dialog Felder für CDN_FILEOK Benachrichtigungs Code
+- CDN_FILEOK Benachrichtigungscode (Dialogfelder)
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5aef63d531b603c94369936374bc10531639254
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e32e9b4abbae65c2c29020bdab191272921ee601eebff1e7b07e0c674c783dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787420"
 ---
-# <a name="cdn_fileok-notification-code"></a>CDN- \_ FileOk-Benachrichtigungs Code
+# <a name="cdn_fileok-notification-code"></a>\_CDN FILEOK-Benachrichtigungscode
 
-Wird von einem Explorer-Dialogfeld " **Öffnen** " oder " **Speichern** unter" gesendet, wenn der Benutzer einen Dateinamen angibt und auf die Schaltfläche " **OK** " klickt.
+Wird von einem  Dialogfeld Im Explorer-Stil öffnen oder speichern **unter** gesendet, wenn der Benutzer einen Dateinamen angibt und auf die **Schaltfläche OK** klickt.
 
-Die [*ofnhuokproc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) -Hook-Prozedur empfängt diese Nachricht in Form einer [**WM- \_ Benachrichtigungs**](../controls/wm-notify.md) Meldung.
+Ihre [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) empfängt diese Nachricht in Form einer [**WM \_ NOTIFY-Nachricht.**](../controls/wm-notify.md)
 
 
 ```C++
@@ -49,23 +49,23 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**ofnotify**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) -Struktur.
+Ein Zeiger auf eine [**OFNOTIFY-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya)
 
-Die [**ofnotify**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) -Struktur enthält eine [**NMHDR**](/windows/win32/api/richedit/ns-richedit-nmhdr) -Struktur, deren **Codemember** die **CDN \_ FileOk** -Benachrichtigungs Meldung angibt.
+Die [**OFNOTIFY-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) enthält eine [**NMHDR-Struktur,**](/windows/win32/api/richedit/ns-richedit-nmhdr) deren Code **member** die CDN **\_ FILEOK-Benachrichtigungsmeldung** angibt.
 
-Die [**ofnotify**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) -Struktur enthält auch einen Zeiger auf eine [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) -Struktur, deren **LpstrFile** -Member die Adresse des ausgewählten Datei namens angibt.
+Die [**OFNOTIFY-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) enthält auch einen Zeiger auf eine [**OPENFILENAME-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) deren **lpstrFile-Member** die Adresse des ausgewählten Dateinamens angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Hook-Prozedur NULL zurückgibt, akzeptiert das Dialogfeld den angegebenen Dateinamen und wird geschlossen.
+Wenn die Hookprozedur 0 (null) zurückgibt, akzeptiert das Dialogfeld den angegebenen Dateinamen und wird geschlossen.
 
-Wenn Sie den angegebenen Dateinamen ablehnen und erzwingen möchten, dass das Dialogfeld geöffnet bleibt, geben Sie einen Wert ungleich 0 (null) von der Hookprozedur zurück, und wenden Sie die [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion an, um einen **DWL- \_ msgresult** -Wert von
+Um den angegebenen Dateinamen abzulehnen und zu erzwingen, dass das Dialogfeld geöffnet bleibt, geben Sie einen Wert ungleich 0 (null) aus der Hookprozedur zurück, und rufen Sie die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) auf, um einen **\_ MSGRESULT-Wert** ungleich 0 (null) festzulegen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem Wert des **ofn- \_ Explorers** erstellt wurde.
+Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mithilfe des **\_ OFN-EXPLORER-Werts erstellt** wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,15 +75,15 @@ Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem Wert d
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetOpenFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea)
@@ -92,28 +92,28 @@ Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem Wert d
 [**GetSaveFileName**](/windows/desktop/api/Commdlg/nf-commdlg-getsavefilenamea)
 </dt> <dt>
 
-[*Ofnhuokproc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)
+[*OFNHookProc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc)
 </dt> <dt>
 
-[**Ofnotify**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya)
+[**OFNOTIFY**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
 [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Benachrichtigung**](../controls/wm-notify.md)
+[**WM \_ NOTIFY**](../controls/wm-notify.md)
 </dt> </dl>
 
  

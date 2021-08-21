@@ -1,11 +1,11 @@
 ---
-title: Geterkennbar shedname-Methode der MicrosoftDNS_RootHints-Klasse
-description: Die getdistinguished shedname-Methode ruft den Distinguished Name für die Zone ab. | Geterkennbar shedname-Methode der MicrosoftDNS_RootHints-Klasse
+title: GetDistinguishedName-Methode der MicrosoftDNS_RootHints-Klasse
+description: Die GetDistinguishedName-Methode ruft den Distinguished Name für die Zone ab. | GetDistinguishedName-Methode der MicrosoftDNS_RootHints-Klasse
 ms.assetid: 788e1646-54b5-4fb8-af6f-e31c4f3d8231
 keywords:
-- Getscheiden shedname-Methode (DNS)
-- Geterkennbar shedname-Methode, DNS, MicrosoftDNS_RootHints-Klasse
-- DNS-MicrosoftDNS_RootHints Klasse, getchilshedname-Methode
+- GetDistinguishedName-Methode DNS
+- GetDistinguishedName-Methode DNS , MicrosoftDNS_RootHints-Klasse
+- MicrosoftDNS_RootHints DNS-Klasse, GetDistinguishedName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0543bba7ac49201ca72c27da94971ff7a38d5db
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 635afd622e6266abb5cf37bca1f78adc2d11d3a04fd08939bf2fc8d4f8de62a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106373439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587580"
 ---
-# <a name="getdistinguishedname-method-of-the-microsoftdns_roothints-class"></a>Geterkennbar shedname-Methode der MicrosoftDNS- \_ Klasse "roothints"
+# <a name="getdistinguishedname-method-of-the-microsoftdns_roothints-class"></a>GetDistinguishedName-Methode der MicrosoftDNS \_ RootHints-Klasse
 
-Die **getdistinguished shedname** -Methode ruft den Distinguished Name für die Zone ab.
+Die **GetDistinguishedName-Methode** ruft den Distinguished Name für die Zone ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Gibt den Namen der Zone zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -61,10 +61,10 @@ Gibt den Namen der Zone zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ roothints**](microsoftdns-roothints.md)
+[**MicrosoftDNS \_ RootHints**](microsoftdns-roothints.md)
 </dt> <dt>
 
-[**"Write-backroothintdatafile"-Methode der MicrosoftDNS- \_ Klasse "roothints"**](microsoftdns-roothints-writebackroothintdatafile.md)
+[**WriteBackRootHintDatafile-Methode der MicrosoftDNS \_ RootHints-Klasse**](microsoftdns-roothints-writebackroothintdatafile.md)
 </dt> </dl>
 
  

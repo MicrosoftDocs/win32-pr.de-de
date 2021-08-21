@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents OnAutoReconnecting2-Methode
-description: Wird aufgerufen, wenn ein Client gerade eine Sitzung mit einem Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server automatisch erneut verbindet. | Imstscaxevents OnAutoReconnecting2-Methode
+title: IMsTscAxEvents OnAutoReconnecting2-Methode
+description: Wird aufgerufen, wenn ein Client gerade eine Sitzung automatisch mit einem Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) verbindet. | IMsTscAxEvents OnAutoReconnecting2-Methode
 ms.assetid: 20F69798-5397-440C-9D0D-45AE417623A7
 ms.tgt_platform: multiple
 keywords:
 - OnAutoReconnecting2-Methode Remotedesktopdienste
-- OnAutoReconnecting2-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, OnAutoReconnecting2-Methode
+- OnAutoReconnecting2-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnAutoReconnecting2-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 901bb196922d1772782ab7f1c911c96573c88b36
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 194c21fc8ddc6f93ac4816752956f8de5a1d5df71b3af98ddadf8aba48e421a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106353321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512490"
 ---
-# <a name="imstscaxeventsonautoreconnecting2-method"></a>Imstscaxevents:: OnAutoReconnecting2-Methode
+# <a name="imstscaxeventsonautoreconnecting2-method"></a>IMsTscAxEvents::OnAutoReconnecting2-Methode
 
-Wird aufgerufen, wenn ein Client gerade eine Sitzung mit einem Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server automatisch erneut verbindet. Dies ist eine erweiterte Version der [**onautoreconnecting**](-imstscaxevents--onautoreconnecting.md) -Methode.
+Wird aufgerufen, wenn ein Client gerade eine Sitzung automatisch mit einem Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) verbindet. Dies ist eine erweiterte Version der [**OnAutoReconnecting-Methode.**](-imstscaxevents--onautoreconnecting.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,31 +46,31 @@ void OnAutoReconnecting2(
 
 <dl> <dt>
 
-*disconnecverrat* \[ in\]
+*disconnectReason* \[ In\]
 </dt> <dd>
 
-Code, der den Grund für das letzte Trennen der Sitzung beschreibt.
+Code, der den Grund für die letzte Sitzungstrennung beschreibt.
 
 </dd> <dt>
 
-*NetworkAvailable* \[ in\]
+*networkAvailable* \[ In\]
 </dt> <dd>
 
 Gibt an, ob das Netzwerk verfügbar ist.
 
 </dd> <dt>
 
-*Anzahl* \[ der Versuche in\]
+*attemptCount* \[ In\]
 </dt> <dd>
 
-Anzahl der Versuche, die im aktuellen automatischen erneuten Verbindungsvorgang durchgeführt wurden. Diese Anzahl wird für jeden erfolgten Versuch um eins erhöht.
+Anzahl der Versuche, die im aktuellen prozess der automatischen Wiederherstellung der Verbindung unternommen wurden. Diese Anzahl erhöht sich für jeden unternommenen Versuch um eins.
 
 </dd> <dt>
 
-*maxder-Anzahl* \[ in\]
+*maxAttemptCount* \[ In\]
 </dt> <dd>
 
-Die maximale Anzahl der Versuche, die beim aktuellen automatischen erneuten Verbindungsvorgang durchgeführt werden.
+Die maximale Anzahl von Versuchen, die im aktuellen prozess der automatischen Wiederherstellung der Verbindung unternommen werden.
 
 </dd> </dl>
 
@@ -95,7 +95,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

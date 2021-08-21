@@ -1,9 +1,9 @@
 ---
-title: glupartialdisk-Funktion (glu. h)
-description: Die Funktion "glupartialdisk" zeichnet einen Bogen eines Datenträgers.
+title: gluPartialDisk-Funktion (Glu.h)
+description: Die gluPartialDisk-Funktion zeichnet einen Bogen eines Datenträgers.
 ms.assetid: 46809c15-88c3-40fa-965a-7aeeedc1c598
 keywords:
-- glupartialdisk-Funktion OpenGL
+- gluPartialDisk-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36e35a6ea905f20e1cb30eddc5b270786614403b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 687738cce6bb311d7e8223877b716abdaef180340ab570f430659ee2e98458ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519440"
 ---
-# <a name="glupartialdisk-function"></a>glupartialdisk-Funktion
+# <a name="glupartialdisk-function"></a>gluPartialDisk-Funktion
 
-Die Funktion " **glupartialdisk** " zeichnet einen Bogen eines Datenträgers.
+Die **gluPartialDisk-Funktion** zeichnet einen Bogen eines Datenträgers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,49 +49,49 @@ void WINAPI gluPartialDisk(
 *qobj* 
 </dt> <dd>
 
-Ein quadktobjekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Ein Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*innerradius* 
+*innerRadius* 
 </dt> <dd>
 
-Der innere Radius des partiellen Datenträgers (kann NULL sein).
+Der innere Radius des partiellen Datenträgers (kann 0 (null) sein).
 
 </dd> <dt>
 
-*outerradius* 
+*outerRadius* 
 </dt> <dd>
 
 Der äußere Radius des partiellen Datenträgers.
 
 </dd> <dt>
 
-*aufs* 
+*Scheiben* 
 </dt> <dd>
 
-Die Anzahl der Unterteilungen um die z-Achse.
+Die Anzahl der Unterteilungen um die Z-Achse.
 
 </dd> <dt>
 
-*Loops* 
+*Schleifen* 
 </dt> <dd>
 
-Die Anzahl der konzentrischen Ringe für den Ursprung, in den der Teil Datenträger unterteilt wird.
+Die Anzahl der konzentrierten Ringe um den Ursprung, in den der partielle Datenträger unterteilt ist.
 
 </dd> <dt>
 
-*Start Angle* 
+*Startangle* 
 </dt> <dd>
 
-Der Anfangs Winkel (in Grad) des Datenträger Teils.
+Der Anfangswinkel des Datenträgeranteils in Grad.
 
 </dd> <dt>
 
-*sweepAngle* 
+*Sweepangle* 
 </dt> <dd>
 
-Der Mittelpunktswinkel des Datenträger Teils in Grad.
+Der Sweepwinkel des Datenträgeranteils in Grad.
 
 </dd> </dl>
 
@@ -99,15 +99,15 @@ Der Mittelpunktswinkel des Datenträger Teils in Grad.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glupartialdisk** " rendert einen partiellen Datenträger auf der *z* = 0-Ebene. Ein Teil Datenträger ähnelt einem vollständigen Datenträger, mit dem Unterschied, dass nur die Teilmenge des Datenträgers von *startAngle* über *startAngle*  +  *sweepAngle* enthalten ist (wobei 0 Grad entlang der positiven y-Achse liegt, 90 Grad entlang der positiven x-Achse, 180 Grad entlang der negativen y-Achse und 270 Grad entlang der negativen x-Achse).
+Die **gluPartialDisk-Funktion** rendert einen Teildatenträger auf der *z* = 0-Ebene. Ein Teildatenträger ähnelt einem vollständigen Datenträger, mit der Ausnahme, dass nur die Teilmenge des Datenträgers von *startAngle* bis *startAngle* sweepAngle enthalten ist (wobei 0 Grad entlang der positiven y-Achse, 90 Grad entlang der positiven  +   X-Achse, 180 Grad entlang der negativen y-Achse und 270 Grad entlang der negativen X-Achse liegt).
 
-Der Teil Datenträger weist einen Radius von *outerradius* auf und enthält eine konzentrische zirkuläre Lücke mit einem Radius von *innerradius*. Wenn *innerradius* gleich 0 (null) ist, wird kein Loch generiert. Der Teil Datenträger wird um die z-Achse in Slices (z. b. Pizza Slices) und auch über die z-Achse in Ringe (wie von *Slices* bzw. *Schleifen* angegeben) unterteilt.
+Der partielle Datenträger hat einen Radius von *outerRadius* und enthält eine konzentrierte kreisförmige Lücke mit einem Radius *von innerRadius*. Wenn *innerRadius* 0 (null) ist, wird keine Lücke generiert. Der Teildatenträger wird um die Z-Achse in *Slices*(z. B. Pizzaslices) und auch über die Z-Achse in Ringe unterteilt (wie durch *Slices* bzw. Schleifen angegeben).
 
-Im Hinblick auf die Ausrichtung wird die positive z-Seite des partiellen Datenträgers als außerhalb betrachtet (siehe [**gluquadricorientation**](gluquadricorientation.md)). Dies bedeutet Folgendes: Wenn die Ausrichtung auf "glu extern" festgelegt ist \_ , werden alle normalisieren generiert, die auf die positive z-Achse zeigen.
+In Bezug auf die Ausrichtung wird die positive Z-Seite des partiellen Datenträgers als außerhalb des Datenträgers betrachtet (siehe [**gluQuadricOrientation**](gluquadricorientation.md)). Dies bedeutet, dass alle generierten Normals entlang der positiven Z-Achse zeigen, wenn die Ausrichtung auf GLU \_ OUTSIDE festgelegt ist.
 
-Wenn Sie die Texturierung (mit " [**gluquadrictexture**](gluquadrictexture.md)") aktiviert haben, generiert " **glupartialdisk** " die Texturkoordinaten linear, sodass *r*  =  *outerradius*, der Wert bei (*r*, 0, 0) ist (1, 0,5); bei (0, *r*, 0) ist es (0,5, 1); bei (*r*, 0, 0) ist es (0, 0,5); und bei (0, *r*, 0) ist es (0,5, 0).
+Wenn Sie die Texturierung (mit [**gluQuadricTexture)**](gluquadrictexture.md)aktiviert haben, generiert **gluPartialDisk** Texturkoordinaten linear so, dass bei *r*  =  *outerRadius* der Wert bei (*r*, 0, 0) ist (1, 0,5); bei (0, *r,* 0) ist es (0,5, 1), bei (*r*, 0, 0) ist es (0, 0,5) und bei (0, *r*, 0) ist es (0,5, 0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,8 +117,8 @@ Wenn Sie die Texturierung (mit " [**gluquadrictexture**](gluquadrictexture.md)")
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -127,22 +127,22 @@ Wenn Sie die Texturierung (mit " [**gluquadrictexture**](gluquadrictexture.md)")
 
 <dl> <dt>
 
-[**gluzylinder**](glucylinder.md)
+[**gluCylinder**](glucylinder.md)
 </dt> <dt>
 
-[**gludisk**](gludisk.md)
+[**gluDisk**](gludisk.md)
 </dt> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> <dt>
 
-[**glusphere**](glusphere.md)
+[**gluSphere**](glusphere.md)
 </dt> </dl>
 
  

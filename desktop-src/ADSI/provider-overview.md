@@ -1,29 +1,29 @@
 ---
-title: Anbieter Übersicht (ADSI)
+title: Anbieterübersicht (ADSI)
 description: Dieses Thema enthält Links zu Themen, in denen erläutert wird, wie ADSI-Anbieter hinzugefügt werden.
 ms.assetid: 6371080e-ca69-4ce7-8c41-fedc563a17b0
 ms.tgt_platform: multiple
 keywords:
-- Anbieter Übersicht ADSI
+- Anbieterübersicht ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33d865bc138a676975781f72da1afa5391e87f26
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: f2a2fae2017f56e0d2577185b08079121f3c2c8c9d61c0216947698d179d2ec2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106367245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082334"
 ---
-# <a name="provider-overview-for-adsi"></a>Anbieter Übersicht für ADSI
+# <a name="provider-overview-for-adsi"></a>Anbieterübersicht für ADSI
 
-Neben den [Mindestanforderungen](provider-minimum-requirements.md)für den Anbieter enthalten andere Verwendungs Informationen Folgendes:
+Neben den [Mindestanforderungen des Anbieters](provider-minimum-requirements.md)enthalten weitere Verwendungsinformationen Folgendes:
 
--   Die [ADSI-Komponenten Interaktion](adsi-component-interaction.md) beschreibt den Kontext, in dem die Anbieter Komponente ausgeführt wird.
--   [Schema Schnittstellen](schema-interfaces.md) erörtern die Schema Verwaltungs Schnittstellen aus der Sicht des Anbieters.
--   Beim [Aufzählen von Container Objekten](enumerating-container-objects.md) werden die Anforderungen für die Unterstützung von Enumerationen beschrieben.
--   [Anbieter Registrierungsinformationen](provider-registry-information.md) listet die Registrierungseinträge auf, die ein ADSI-Anbieter verwendet.
--   [Unterstützung für Abfragen](support-for-queries.md) beschreibt die Anforderungen für die Unterstützung der Suche nach dem Verzeichnis.
--   [Implementierungsprobleme für ADSI-Anbieter](implementation-issues-for-adsi-providers.md) enthalten Hinweise zu den Anbietern von verschiedenen Softwareproblemen.
+-   [ADSI Component Interaction](adsi-component-interaction.md) beschreibt den Kontext, in dem die Anbieterkomponente ausgeführt wird.
+-   [Schemaschnittstellen](schema-interfaces.md) erläutern die Schemaverwaltungsschnittstellen aus Sicht des Anbieters.
+-   [Enumerating Container Objects (Aufzählen von Containerobjekten)](enumerating-container-objects.md) beschreibt die Anforderungen zur Unterstützung von Enumerationen.
+-   [Anbieterregistrierungsinformationen](provider-registry-information.md) listet die Registrierungseinträge auf, die ein ADSI-Anbieter verwendet.
+-   [Unter Unterstützung für Abfragen werden](support-for-queries.md) die Anforderungen für die Unterstützung der Verzeichnissuche beschrieben.
+-   [Implementierungsprobleme für ADSI-Anbieter](implementation-issues-for-adsi-providers.md) enthalten Hinweise für Anbieter zu verschiedenen Softwareproblemen.
 
  
 

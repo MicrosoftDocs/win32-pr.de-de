@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectMatrixVariable getmatrixtransposearray-Methode (D3dx11effect. h)
-description: Austauschen und erhalten eines Arrays von Gleit Komma Matrizen.
+title: ID3DX11EffectMatrixVariable GetMatrixTransposeArray-Methode (D3dx11effect.h)
+description: Transponieren und abrufen eines Arrays von Gleitkommamatrizen.
 ms.assetid: cfcdbda0-b321-4e94-8d09-bb9d7ddfb4a5
 keywords:
-- Getmatrixtransposearray-Methode Direct3D 11
-- Getmatrixtransposearray-Methode Direct3D 11, ID3DX11EffectMatrixVariable-Schnittstelle
-- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11, getmatrixtransposearray-Methode
+- GetMatrixTransposeArray-Methode Direct3D 11
+- GetMatrixTransposeArray-Methode Direct3D 11 , ID3DX11EffectMatrixVariable-Schnittstelle
+- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11 , GetMatrixTransposeArray-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80d0a43e69ccf88c15d8296c024535dec42b3f31
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 07ba32807b4acdd4f244b7b4c3cc82b3941cb5a52d899f1e8361c841b58d53ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046168"
 ---
-# <a name="id3dx11effectmatrixvariablegetmatrixtransposearray-method"></a>ID3DX11EffectMatrixVariable:: getmatrixtransposearray-Methode
+# <a name="id3dx11effectmatrixvariablegetmatrixtransposearray-method"></a>ID3DX11EffectMatrixVariable::GetMatrixTransposeArray-Methode
 
-Austauschen und erhalten eines Arrays von Gleit Komma Matrizen.
+Transponieren und abrufen eines Arrays von Gleitkommamatrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT GetMatrixTransposeArray(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Ein Zeiger auf das erste Element eines Arrays von überstellten Matrizen.
+Ein Zeiger auf das erste Element eines Arrays von transponierten Matrizen.
 
 </dd> <dt>
 
 *Offset* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Offset (in Anzahl von Matrizen) zwischen dem Anfang des Arrays und der ersten Matrix, die abgeglichen werden soll.
+Der Offset (in Anzahl von Matrizen) zwischen dem Anfang des Arrays und der ersten abzurufenden Matrix.
 
 </dd> <dt>
 
 *Count* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der zu Get-Matrizen im Array.
+Die Anzahl der abzurufenden Matrizen im Array.
 
 </dd> </dl>
 
@@ -76,29 +76,29 @@ Die Anzahl der zu Get-Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Durchführen einer Matrix wird die Reihenfolge der Daten in der Reihenfolge der Zeilen Spalten in der Reihenfolge der Spalten Zeilen (oder umgekehrt) neu angeordnet.
+Durch das Transponieren einer Matrix wird die Datenreihenfolge von der Zeilenspaltenreihenfolge in die Spaltenreihenfolge (oder umgekehrt) neu angeordnet.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

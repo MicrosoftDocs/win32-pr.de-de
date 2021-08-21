@@ -1,9 +1,9 @@
 ---
-title: glgetpointerv-Funktion (GL. h)
-description: Die Funktion "glgetpointerv" gibt die Adresse eines Vertex-Daten Arrays zurück.
+title: glGetPointerv-Funktion (Gl.h)
+description: Die glGetPointerv-Funktion gibt die Adresse eines Scheitelpunktdatenarrays zurück.
 ms.assetid: 6f85c508-9335-4474-8cc5-e67c7421a8e4
 keywords:
-- glgetpointerv-Funktion OpenGL
+- glGetPointerv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 569861922514af88835fbb4e313dab3286b7c47d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fdbef5cc17a547e82dfa55876d927ef9fed87f106d9e5fa0d5d1c36a5ce269b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493920"
 ---
-# <a name="glgetpointerv-function"></a>glgetpointerv-Funktion
+# <a name="glgetpointerv-function"></a>glGetPointerv-Funktion
 
-Die Funktion " **glgetpointerv** " gibt die Adresse eines Vertex-Daten Arrays zurück.
+Die **glGetPointerv-Funktion** gibt die Adresse eines Scheitelpunktdatenarrays zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glGetPointerv(
 
 <dl> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der Typ des Array Zeigers, der von den folgenden symbolischen Konstanten zurückgegeben werden soll: GL- \_ Farb \_ array \_ Zeiger, GL- \_ \_ \_ \_ \_ \_ edgeflag-Array Zeiger, GL-Feedback \_ -Puffer Zeiger, GL \_ \_ -Index Array \_ Zeiger, GL- \_ normaler \_ array \_ Zeiger, GL \_ -Textur- \_ \_ array \_ Zeiger, GL \_ \_ -Auswahl Puffer \_ Zeiger und GL/ \_ tex- \_ array \_ Zeiger
+Der Typ des Arrayzeigers, der von den folgenden symbolischen Konstanten zurückgeben werden soll: GL \_ COLOR \_ ARRAY \_ POINTER, GL \_ EDGE FLAG ARRAY \_ \_ \_ POINTER, GL \_ FEEDBACK BUFFER \_ \_ POINTER, GL \_ INDEX ARRAY \_ \_ POINTER, GL \_ NORMAL ARRAY \_ \_ POINTER, GL \_ TEXTURE \_ COORD \_ ARRAY \_ POINTER, GL \_ SELECTION BUFFER \_ \_ POINTER und GL \_ VERTEX ARRAY \_ \_ POINTER.
 
 </dd> <dt>
 
 *params* 
 </dt> <dd>
 
-Gibt den Wert des durch " *PName*" angegebenen Array Zeigers zurück.
+Gibt den Wert des Arrayzeigers zurück, der durch *pname angegeben wird.*
 
 </dd> </dl>
 
@@ -61,19 +61,19 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                             | Bedeutung                                       |
 |--------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl> | *PName* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl> | *pname* war kein akzeptierter Wert.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgetpointerv** " gibt Array Zeiger Informationen zurück. Der *PName* -Parameter ist eine symbolische Konstante, die die Art des zurück zugebende Array Zeigers angibt, und *params* ist ein Zeiger auf einen Speicherort, um die zurückgegebenen Daten zu platzieren.
+Die **glGetPointerv-Funktion** gibt Arrayzeigerinformationen zurück. Der *pname-Parameter* ist eine symbolische Konstante, die die Art des zurücksenden Arrayzeigers angibt, und *params* ist ein Zeiger auf eine Position, an der die zurückgegebenen Daten gespeichert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Die Funktion " **glgetpointerv** " gibt Array Zeiger Informationen zurück. Der 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -93,31 +93,31 @@ Die Funktion " **glgetpointerv** " gibt Array Zeiger Informationen zurück. Der 
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

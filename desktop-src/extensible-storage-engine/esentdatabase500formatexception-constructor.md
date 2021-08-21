@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: EsentDatabase500FormatException-Konstruktor'
+description: 'Weitere Informationen zu: EsentDatabase500FormatException-Konstruktor'
 title: EsentDatabase500FormatException-Konstruktor
 TOCTitle: 'EsentDatabase500FormatException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabase500FormatException.#ctor
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0c893c511ec22409cd2af15de2d5f4693353354d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20245e9f7e4461e3c377a100f9898a76a1269f4ed2ea243785641a3a8ca628ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785350"
 ---
 # <a name="esentdatabase500formatexception-constructor"></a>EsentDatabase500FormatException-Konstruktor
 
 Initialisiert eine neue Instanz der EsentDatabase500FormatException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabase500FormatException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentDatabase500FormatException-Klasse](./esentdatabase500formatexception-class.md)
 
 [EsentDatabase500FormatException-Member](./esentdatabase500formatexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_RemoteShell02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ RemoteShell02-Klasse konfiguriert die remoteshellrichtlinien.
+description: Die MDM \_ Policy \_ Config01 \_ RemoteShell02-Klasse konfiguriert die Remoteshellrichtlinien.
 ms.assetid: 7026fadb-ec6a-4696-a24c-1b1e071b94b0
 keywords:
 - MDM_Policy_Config01_RemoteShell02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c318b0c6f23e92d90091495fdc25993d6958ca56
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 368218d1fba022a1a0611785fb5271d53564de48b843211d7be43bf9bc6cab40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077143"
 ---
-# <a name="mdm_policy_config01_remoteshell02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ RemoteShell02-Klasse
+# <a name="mdm_policy_config01_remoteshell02-class"></a>MDM \_ Policy \_ Config01 \_ RemoteShell02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ RemoteShell02-Klasse konfiguriert die remoteshellrichtlinien.
+Die MDM \_ Policy \_ Config01 \_ RemoteShell02-Klasse konfiguriert die Remoteshellrichtlinien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -52,13 +52,13 @@ class MDM_Policy_Config01_RemoteShell02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ RemoteShell02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ RemoteShell02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ RemoteShell02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ RemoteShell02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -98,7 +98,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -112,7 +112,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Specifyidletimeout](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifyidletimeout)
+[SpecifyIdleTimeout](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifyidletimeout)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -123,7 +123,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Specifymaxmemory](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxmemory)
+[SpecifyMaxMemory](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxmemory)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -134,7 +134,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Specifymaxprocesses](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxprocesses)
+[SpecifyMaxProcesses](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxprocesses)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -145,7 +145,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Specifymaxremoteshells](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxremoteshells)
+[SpecifyMaxRemoteShells](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifymaxremoteshells)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -156,7 +156,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Specifyshelltimeout](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifyshelltimeout)
+[SpecifyShellTimeout](/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifyshelltimeout)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -173,10 +173,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

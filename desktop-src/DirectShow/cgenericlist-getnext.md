@@ -1,7 +1,7 @@
 ---
-description: Die GetNext-Methode ruft das Element an der angegebenen Position ab und erhöht die Position.
+description: Die GetNext-Methode ruft das Element an der angegebenen Position ab und verfeinert die Position.
 ms.assetid: d24d3388-1af9-4a62-bdb6-d3d3f5b0b97a
-title: Cgenericlist. GetNext-Methode (wxlist. h)
+title: CGenericList.GetNext-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9491e58d817ce2c9dc4fb59fafa9bf96812a013a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f116dd1a965145e5bdf4808d25a7406b4709967c5cf971ad3529ae9d301ebc4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539740"
 ---
-# <a name="cgenericlistgetnext-method"></a>Cgenericlist. GetNext-Methode
+# <a name="cgenericlistgetnext-method"></a>CGenericList.GetNext-Methode
 
-Die `GetNext` -Methode ruft das Element an der angegebenen Position ab und erhöht die Position.
+Die `GetNext` -Methode ruft das Element an der angegebenen Position ab und verfeinert die Position.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ OBJECT* GetNext(
 
 <dl> <dt>
 
-*RP* \[ atur\]
+*rp* \[ Ref\]
 </dt> <dd>
 
-Verweis auf einen Positionswert.
+Verweis auf einen POSITION-Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein Objekt vom Typ " **Object** " (der Vorlagentyp) zurück.
+Gibt einen Zeiger auf ein Objekt vom Typ **OBJECT** (vorlagentyp) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode verschiebt den Positionsindikator auf die nächste Position. Wenn sich der Positionsindikator hinter das Ende der Liste bewegt, legt die-Methode ihn auf **null** fest.
+Diese Methode positioniert den Positionsindikator auf die nächste Position. Wenn sich der Positionsindikator über das Ende der Liste hinaus bewegt, legt die Methode ihn auf **NULL fest.**
 
-Wenn *RP* **null** ist, gibt die Methode **null** zurück.
+Wenn *rp* NULL **ist,** gibt die Methode **NULL zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Wenn *RP* **null** ist, gibt die Methode **null** zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Wenn *RP* **null** ist, gibt die Methode **null** zurück.
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

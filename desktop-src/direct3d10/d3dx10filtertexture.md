@@ -1,7 +1,7 @@
 ---
-description: Generiert eine MipMap-Kette mithilfe eines bestimmten Textur Filters.
+description: Generiert eine Mipmapkette mit einem bestimmten Texturfilter.
 ms.assetid: 19e651dd-dc34-405b-8769-00d91c097a1f
-title: D3DX10FilterTexture-Funktion (D3DX10Tex. h)
+title: D3DX10FilterTexture-Funktion (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Tex.h
-ms.openlocfilehash: e2f500bcd7f7465ca1c24f1adaab3a77dd5cb7b0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 225caf2c9b08a498e77723dbb7ab43c8fd4850262c1f58f5ae37a3157e953edd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497640"
 ---
 # <a name="d3dx10filtertexture-function"></a>D3DX10FilterTexture-Funktion
 
-Generiert eine MipMap-Kette mithilfe eines bestimmten Textur Filters.
+Generiert eine Mipmapkette mit einem bestimmten Texturfilter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT D3DX10FilterTexture(
 
 <dl> <dt>
 
-*ptexture* 
+*pTexture* 
 </dt> <dd>
 
 Typ: **[ **ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource)\***
 
-Das zu filternde Textur Objekt. Siehe [**ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource).
+Das zu filternde Texturobjekt. Siehe [**ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource).
 
 </dd> <dt>
 
-*Srclevel* 
+*SrcLevel* 
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die MipMap-Ebene, deren Daten verwendet werden, um den Rest der MipMap-Kette zu generieren.
+Die Mipmapebene, deren Daten verwendet werden, um den Rest der Mipmapkette zu generieren.
 
 </dd> <dt>
 
 *MipFilter* 
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Flags, die Steuern, wie die einzelnen miplevel-Werte gefiltert werden (oder d3dx10 \_ default for d3dx10 \_ Filter \_ Box). Siehe [**d3dx10 \_ Filter- \_ Flag**](d3dx10-filter-flag.md).
+Flags, die steuern, wie die einzelnen miplevel gefiltert werden (oder D3DX10 \_ DEFAULT für D3DX10 \_ FILTER \_ BOX). Weitere Informationen finden Sie unter [**D3DX10 \_ FILTER \_ FLAG**](d3dx10-filter-flag.md).
 
 </dd> </dl>
 
@@ -72,7 +72,7 @@ Flags, die Steuern, wie die einzelnen miplevel-Werte gefiltert werden (oder d3dx
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,15 +80,15 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Tex. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Tex.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
+[Texturfunktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
 </dt> </dl>
 
  

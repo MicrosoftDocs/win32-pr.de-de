@@ -1,34 +1,34 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie Sie CAB-Dateien in Installationen einschließen Weitere Informationen finden Sie unter Verwenden von Schränken und komprimierten Quellen.
+description: In diesem Abschnitt wird das Einschließen von Cab-Dateien in Installationen beschrieben. Weitere Informationen finden Sie unter Verwenden von Schränken und komprimierten Quellen.
 ms.assetid: 17ea7f76-90b2-48fb-8187-64dc6d294443
-title: Einschließen einer CAB-Datei in eine Installation
+title: Einschließen einer Cab-Datei in eine Installation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 098e660de3f7ec7097ab02613d75219ac0a0d624
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c0970d87b8b219e1558c6b3f1daf78a6a01100a7bc41f9ae1dad51a25048b46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787340"
 ---
-# <a name="including-a-cabinet-file-in-an-installation"></a>Einschließen einer CAB-Datei in eine Installation
+# <a name="including-a-cabinet-file-in-an-installation"></a>Einschließen einer Cab-Datei in eine Installation
 
-In diesem Abschnitt wird beschrieben, wie Sie CAB-Dateien in Installationen einschließen Weitere Informationen finden Sie unter [Verwenden von Schränken und komprimierten Quellen](using-cabinets-and-compressed-sources.md).
+In diesem Abschnitt wird das Einschließen von Cab-Dateien in Installationen beschrieben. Weitere Informationen finden Sie unter [Verwenden von Schränken und komprimierten Quellen.](using-cabinets-and-compressed-sources.md)
 
-**So schließen Sie eine CAB-Datei in ein Installationspaket ein**
+**So schließen Sie eine Cab-Datei in ein Installationspaket ein**
 
-1.  Verwenden Sie ein CAB-Erstellungs Tool, um die Quelldateien in eine CAB-Datei zu komprimieren. Siehe CAB- [Dateien](cabinet-files.md).
-2.  Die CAB-Datei muss sich entweder in einem Datenstream innerhalb der MSI-Datei oder in einer separaten CAB-Datei befinden, die sich im Stammverzeichnis der Quell Struktur befindet, die von der [Verzeichnis Tabelle](directory-table.md)angegeben wird.
-3.  Bestimmen Sie, ob die Quelle ein komprimierter Typ oder ein gemischter Typ sein soll, der sowohl nicht komprimierte als auch komprimierte Dateien aufweist. Siehe [komprimierte und nicht komprimierte Quellen](compressed-and-uncompressed-sources.md). Legen Sie abhängig vom Typ des Quell Bilds die komprimierten oder unkomprimierten Flag-Bits der " [**Wort count Summary**](word-count-summary.md) "-Eigenschaft fest.
-4.  Fügen Sie der [Dateitabelle](file-table.md) einen Datensatz für jede der Dateien in der CAB-Datei hinzu. Geben Sie einen Datei Schlüssel in die Datei Spalte ein, der exakt mit dem Datei Schlüssel der Datei in der CAB-Datei übereinstimmt. Bei den Datei Schlüsseln wird Groß-/Kleinschreibung beachtet. Die Datei Installations Sequenz in der Dateitabelle und der CAB-Datei müssen ebenfalls identisch sein. Die Datei Sequenz wird durch die Sequenznummer in der Sequence-Spalte angegeben. Gehen Sie folgendermaßen vor, um die Sequenznummer für die erste Datei in der CAB-Datei zu erreichen. Suchen Sie den vorhandenen Datensatz in der [Medien Tabelle](media-table.md) mit dem größten Wert in der DiskId-Spalte. Das LastSequence-Feld dieses Datensatzes gibt die letzte Datei Sequenznummer an, die auf dem Medium verwendet wird. Weisen Sie der Dateitabelle die erste Datei der neuen CAB-Datei eine Sequenznummer zu, die größer ist als die. Weisen Sie allen verbleibenden Dateien Sequenznummern in derselben Reihenfolge wie in der CAB-Datei zu. Eine Beschreibung der restlichen Daten Satz Felder finden Sie unter [File Table](file-table.md).
-5.  Fügen Sie der [Medien Tabelle](media-table.md) für den Schrank einen Datensatz hinzu. Geben Sie einen Wert im Feld DiskId dieses neuen Datensatzes an, der größer ist als der größte bereits in der Tabelle vorhandene DiskId-Wert. Fügen Sie den Namen der CAB-Ausgabe in das CAB-Feld ein. Dieser Name muss in [Form eines CAB-](cabinet.md) Datentyps vorliegen. Stellen Sie dem Namen das Nummern Zeichen "" als Präfix voran, \# Wenn die CAB-Datei ein in der MSI-Datei gespeichertes Datenstream ist. Beachten Sie, dass bei einem Datenstrom bei der CAB-Datei die Groß-/Kleinschreibung beachtet wird. Wenn die CAB-Datei eine separate Datei ist, wird bei dem Namen der Datei nicht zwischen Groß-und Kleinschreibung unterschieden.
-6.  Bestimmen Sie die größte Datei Sequenznummer in der neuen CAB-Datei, indem Sie die Sequence-Spalte der aktualisierten Dateitabelle überprüfen. Geben Sie einen Wert ein, der größer als der Wert für das LastSequence-Feld des neuen Datensatzes der Medien Tabelle ist. Eine Beschreibung der restlichen Daten Satz Felder finden Sie unter [Media Table](media-table.md).
-7.  Sie können die CAB-Datei im Installationspaket speichern, indem Sie entweder ein Tool wie Msidb.exe oder die [Datenbankfunktionen](database-functions.md)des Installers verwenden. In den folgenden vier Schritten wird erläutert, wie Sie die CAB-Dateien mithilfe der-Datenbankfunktionen aus einem Programm hinzufügen.
-8.  Um die CAB-Datei aus einem Programm zum Installationspaket hinzuzufügen, öffnen Sie mithilfe von [**msidatabaseopenview**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseopenviewa)eine Ansicht in der [ \_ Streams-Tabelle](-streams-table.md) der Datenbank.
-9.  Verwenden Sie [**msirecordsetstring**](/windows/desktop/api/Msiquery/nf-msiquery-msirecordsetstringa) , um die Name-Spalte der \_ Streams-Tabelle auf den Namen festzulegen, der in der CAB-Spalte der [Medien Tabelle](media-table.md)angezeigt wird. Lassen Sie das Nummern Zeichen aus: \# .
-10. Verwenden Sie [**msirecordsetstream**](/windows/desktop/api/Msiquery/nf-msiquery-msirecordsetstreama) , um die Datenspalte der \_ Streams-Tabelle auf die Daten der CAB-Datei festzulegen.
-11. Verwenden Sie [**msiviewmodify**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify) , um den Datensatz in der Streams-Tabelle zu aktualisieren \_ .
-12. Verwenden Sie die folgende Befehlszeile, um Msidb.exe zum Hinzufügen der CAB-Datei Mycab.cab zum Installationspaket mit dem Namen Mydatabase.msi zu verwenden: Msidb.exe-d mydatabase.msi-a mycab.cab. In diesem Fall sollte die CAB-Spalte der Medien Tabelle die Zeichenfolge: \#mycab.cab enthalten.
+1.  Verwenden Sie ein Tool zum Erstellen von Schränken, um die Quelldateien in eine Cab-Datei zu komprimieren. Weitere Informationen finden Sie unter [Cabinet Files](cabinet-files.md).
+2.  Die Cab-Datei muss sich entweder in einem Datenstrom innerhalb der .msi datei oder in einer separaten Cab-Datei befinden, die sich im Stammverzeichnis der Quellstruktur befindet, die von der [Verzeichnistabelle](directory-table.md)angegeben wird.
+3.  Bestimmen Sie, ob die Quelle ein komprimierter Typ oder ein gemischter Typ sein soll, der sowohl unkomprimierte als auch komprimierte Dateien enthält. Weitere Informationen finden Sie unter [Komprimierte und nicht komprimierte Quellen.](compressed-and-uncompressed-sources.md) Legen Sie je nach Typ des Quellimages die komprimierten oder nicht komprimierten Flagbits der [**Word Count Summary-Eigenschaft**](word-count-summary.md) fest.
+4.  Fügen Sie der [Dateitabelle](file-table.md) einen Datensatz für jede der Dateien im Schränk hinzu. Geben Sie in der Spalte Datei einen Dateischlüssel ein, der genau mit dem Dateischlüssel der Datei im Schränk übereinstimmt. Bei den Dateischlüsseln wird die Groß-/Kleinschreibung beachtet. Die Dateiinstallationssequenz in der Dateitabelle und im Schränk muss ebenfalls identisch sein. Die Dateisequenz wird durch die Sequenznummer in der Spalte Sequenz angegeben. Um die Sequenznummer für die erste Datei im Schränk zu erreichen, gehen Sie wie folgt vor. Suchen Sie den vorhandenen Datensatz in der [Media-Tabelle](media-table.md) mit dem größten Wert in der DiskID-Spalte. Das Feld LastSequence dieses Datensatzes gibt die letzte Dateisequenznummer an, die auf dem Medium verwendet wird. Weisen Sie der ersten Datei des neuen Schränks in der Tabelle Datei eine Sequenznummer zu, die größer als diese ist. Weisen Sie allen verbleibenden Dateien Sequenznummern in der gleichen Reihenfolge wie in der Cab-Datei zu. Eine Beschreibung der verbleibenden Datensatzfelder finden Sie unter [Dateitabelle](file-table.md).
+5.  Fügen Sie der [Medientabelle](media-table.md) einen Datensatz für den Schränk hinzu. Geben Sie im Feld DiskID dieses neuen Datensatzes einen Wert an, der größer als der größte bereits in der Tabelle vorhandene DiskID-Wert ist. Geben Sie den Namen des Schränks in das Feld "Cabinet" ein. Dieser Name muss in Form [](cabinet.md) eines Cabinet-Datentyps sein. Stellen Sie dem Namen das Nummernzeichen "" voran, wenn es sich bei dem Schränk um \# einen Datenstrom handelt, der in der datei .msi gespeichert ist. Beachten Sie Folgendes: Wenn es sich bei dem Gehäuse um einen Datenstrom handelt, wird beim Namen des Schränks die Groß-/Kleinschreibung beachtet. Wenn es sich bei dem Schränk um eine separate Datei handelt, wird beim Namen der Datei die Groß-/Kleinschreibung nicht beachtet.
+6.  Ermitteln Sie die größte Dateisequenznummer im neuen Schränk, indem Sie die Spalte Sequenz der aktualisierten Dateitabelle überprüfen. Geben Sie im Feld LastSequence des neuen Datensatzes der Tabelle Media einen Wert ein, der größer als dieser ist. Eine Beschreibung der verbleibenden Datensatzfelder finden Sie unter [Medientabelle](media-table.md).
+7.  Sie können die Cab-Datei entweder mit einem Tool wie Msidb.exe oder mithilfe der Datenbankfunktionen des Installationsprogramms im [Installationspaket](database-functions.md)speichern. In den folgenden vier Schritten wird erläutert, wie Sie den Schränk aus einem Programm mithilfe der Datenbankfunktionen hinzufügen.
+8.  Öffnen Sie mithilfe von [**MsiDatabaseOpenView**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseopenviewa)eine Ansicht in der [ \_ Streams Tabelle](-streams-table.md) der Datenbank, um dem Installationspaket aus einem Programm den Schränk hinzuzufügen.
+9.  Verwenden Sie [**MsiRecordSetString,**](/windows/desktop/api/Msiquery/nf-msiquery-msirecordsetstringa) um die Spalte Name der Streams Tabelle auf den Namen festzulegen, \_ der in der Spalte Cabinet der [Medientabelle](media-table.md)angezeigt wird. Das Nummernzeichen auslassen: \# .
+10. Verwenden Sie [**MsiRecordSetStream,**](/windows/desktop/api/Msiquery/nf-msiquery-msirecordsetstreama) um die Spalte Data der \_ Streams Tabelle auf die Daten des Cabs festzulegen.
+11. Verwenden Sie [**MsiViewModify,**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify) um den Datensatz in der Streams Tabelle zu \_ aktualisieren.
+12. Um Msidb.exe zum Hinzufügen der Mycab.cab-Cab-Datei zum Installationspaket mit dem Namen Mydatabase.msi zu verwenden, verwenden Sie die folgende Befehlszeile: Msidb.exe -d mydatabase.msi -a mycab.cab. In diesem Fall sollte die Spalte Cabinet der Tabelle Media die Zeichenfolge \# enthalten:mycab.cab.
 
  
 

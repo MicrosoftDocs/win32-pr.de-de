@@ -1,9 +1,9 @@
 ---
-title: TCM_DELETEITEM Meldung (kommstrg. h)
-description: Entfernt ein Element aus einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des tabstrg \_ DeleteItem-Makros senden.
+title: TCM_DELETEITEM Meldung (Commctrl.h)
+description: Entfernt ein Element aus einem Registerkartensteuerelement. Sie können diese Nachricht explizit oder mithilfe des TabCtrl \_ DeleteItem-Makros senden.
 ms.assetid: 54bfa446-580a-4ea7-b5e9-9429f4ee1c2b
 keywords:
-- Windows-Steuerelemente für TCM_DELETEITEM Meldung
+- TCM_DELETEITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ad4f57b63c154ee98fc48a59ac81bf4fd61ba5a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0cc9e90ab63e34545628019cd9dcde74c7b4e953fb6ee0b9eed138151129e7b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077874"
 ---
-# <a name="tcm_deleteitem-message"></a>TCM \_ DeleteItem-Meldung
+# <a name="tcm_deleteitem-message"></a>TCM \_ DELETEITEM-Nachricht
 
-Entfernt ein Element aus einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**tabstrg \_ DeleteItem**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_deleteitem) -Makros senden.
+Entfernt ein Element aus einem Registerkartensteuerelement. Sie können diese Nachricht explizit oder mithilfe des [**TabCtrl \_ DeleteItem-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_deleteitem) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Entfernt ein Element aus einem Registerkarten-Steuerelement. Sie können diese N
 *wParam* 
 </dt> <dd>
 
-Der Index des zu löschenden Elements.
+Index des zu löschende Elements.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der Index des zu löschenden Elements.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

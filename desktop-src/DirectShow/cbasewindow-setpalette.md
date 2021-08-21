@@ -1,7 +1,7 @@
 ---
 description: Die SetPalette-Methode installiert eine Palette für das Fenster.
 ms.assetid: 64fa0d3a-c2eb-4e58-8b8d-c8e5ec3bb479
-title: Cbasewindow. SetPalette-Methode (winutil. h)
+title: CBaseWindow.SetPalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f246fe8401e1f671f5935ff7d7454093ea1d3179
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0c04d4e24c621dd704b8aeba91646016e334a6f6bface4769578a710322a7cff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074554"
 ---
-# <a name="cbasewindowsetpalette-method-winutilh"></a>Cbasewindow. SetPalette-Methode (winutil. h)
+# <a name="cbasewindowsetpalette-method-winutilh"></a>CBaseWindow.SetPalette-Methode (Winutil.h)
 
-Mit der- `SetPalette` Methode wird eine Palette für das-Fenster installiert.
+Die `SetPalette` -Methode installiert eine Palette für das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ virtual HRESULT SetPalette(
 *hPalette* 
 </dt> <dd>
 
-Handle für die neue Palette. Darf nicht **null** sein.
+Handle für die neue Palette. Darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                    |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Ein interner-Befehl von " **gdiflush** " hat einen Fehler zurückgegeben.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Ein interner Aufruf von **GdiFlush** hat einen Fehler zurückgegeben.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert der [**cbasewindow:: m \_ bnorealize**](cbasewindow-m-bnorealize.md) -Element Variablen **false** (Standardeinstellung) ist, wählt diese Methode die Palette aus und erkennt Sie. Andernfalls wird die Palette ausgewählt, aber nicht erkannt. Das Objekt löscht keine zuvor verwendete Palette. Der Aufrufer ist für das Löschen von Paletten verantwortlich.
+Wenn der Wert der [**CBaseWindow::m \_ bNoRealize-Membervariable**](cbasewindow-m-bnorealize.md) **FALSE** ist (Standardeinstellung), wählt diese Methode die Palette aus und erkennt sie. Andernfalls wird die Palette ausgewählt, aber nicht erkannt. Das -Objekt löscht keine vorherige Palette, die es verwendet hat. Der Aufrufer ist für das Löschen von Paletten verantwortlich.
 
-Jeder Thread kann diese Methode sicher aufzurufen, nicht nur den Thread, der das Fenster besitzt. Das Fenster sendet eine private Nachricht an sich selbst, wodurch ein Aufrufvorgang der [**cbasewindow:: onpalettechange**](cbasewindow-onpalettechange.md) -Methode ausgelöst wird.
+Jeder Thread kann diese Methode sicher aufrufen, nicht nur den Thread, der das Fenster besitzt. Das Fenster sendet eine private Nachricht an sich selbst, wodurch ein Aufruf der [**CBaseWindow::OnPaletteChange-Methode**](cbasewindow-onpalettechange.md) ausgelöst wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Jeder Thread kann diese Methode sicher aufzurufen, nicht nur den Thread, der das
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Jeder Thread kann diese Methode sicher aufzurufen, nicht nur den Thread, der das
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  
