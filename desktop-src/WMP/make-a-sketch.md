@@ -1,43 +1,43 @@
 ---
-title: Erstellen einer Skizze
-description: Erstellen einer Skizze
+title: Erstellen eines Sketches
+description: Erstellen eines Sketches
 ms.assetid: 4030aae7-26e7-4acd-a988-6ac53ce43639
 keywords:
-- Windows Media Player Mobile Skins, Skizzen
-- Skins, Skizzen
-- Erstellen von Skins, Skizzen
-- Skizzen in Skins
+- Windows Media Player Mobile Skins,Sketches
+- Skins,Sketches
+- Erstellen von Skins, Sketches
+- Sketche in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aff7edba0eaa115f6cc88c2a62f0060b700ed21a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1e498850b723645f43cb2858cac9d40f7bf06822c49b70155ae5448c9d012910
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118837227"
 ---
-# <a name="make-a-sketch"></a>Erstellen einer Skizze
+# <a name="make-a-sketch"></a>Erstellen eines Sketches
 
-Dies ist nicht erforderlich, aber es kann sehr hilfreich sein, den Entwurf so zu gestalten, wie Sie es wünschen. Wenn Sie vorher planen, können Sie sich mit der Entwicklung von Grafiken in mehreren Bitmapdateien vertraut machen.
+Sie müssen dies nicht tun, aber es kann sehr hilfreich sein, Ihren Entwurf so zu gestalten, wie Sie es wünschen. Durch die Planung im Voraus können Sie sparen, dass Sie Die Grafik in mehreren Bitmapdateien verschieben müssen.
 
-Starten Sie Photoshop, und erstellen Sie ein neues Image der erforderlichen Größe. Erstellen Sie eine neue Ebene, die den groben Sketch enthalten soll. Wenn Sie einen Sketch und einen Scanner haben, können Sie Ihre Skizze in Photoshop scannen. Die folgende Abbildung zeigt ein Beispiel für eine grobe Skizze.
+Starten Sie Ups, und erstellen Sie ein neues Image der erforderlichen Größe. Erstellen Sie eine neue Ebene, um den groben Sketch zu halten. Wenn Sie über einen Sketch und einen Scanner verfügen, sollten Sie Ihren Sketch in Sketch scannen. Die folgende Abbildung zeigt ein Beispiel für einen groben Sketch.
 
-![grobe Skizze](images/ceswmskt.png)
+![Grobe Sketche](images/ceswmskt.png)
 
-Die Schaltfläche "PLAYPAUSE" befindet sich links oben, die Schaltflächen "anhalten", "weiter" und "Prev" befinden sich auf der linken Seite, die Lautstärke Leiste des Volumes und das Marquee zwischen der Schaltfläche "PLAYPAUSE" und der Lautstärke-Trackleiste.
+Die PlayPause-Schaltfläche befindet sich links oben, die Schaltflächen Stop, Next und Prev befinden sich links, die Trackbar Volume befindet sich unten, und die Marquee befindet sich zwischen der PlayPause-Schaltfläche und der Volume-Trackbar.
 
-Beim Erstellen eines Skin für Windows Media Player 10 Mobile oder höher sollte anstelle der Schaltfläche PLAYPAUSE eine playpauseanhalteschaltfläche verwendet werden. Eine zusätzliche Schaltfläche zum Beenden ist nicht erforderlich.
+Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, sollte anstelle einer PlayPause-Schaltfläche eine PlayPauseStop-Schaltfläche verwendet werden. Eine zusätzliche Schaltfläche "Beenden" ist nicht erforderlich.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen der Kunst**](creating-the-art.md)
+[**Erstellen der Art**](creating-the-art.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

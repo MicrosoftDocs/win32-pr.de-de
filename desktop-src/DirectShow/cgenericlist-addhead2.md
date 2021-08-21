@@ -1,7 +1,7 @@
 ---
-description: Mit der AddHead-Methode wird eine Liste am Anfang der Liste hinzugefügt.
+description: Die AddHead-Methode fügt am Ende der Liste eine Liste hinzu.
 ms.assetid: 9a344bed-d871-4082-9bbb-330f2ff42cca
-title: Cgenericlist. AddHead-Methode (wxlist. h)-plist-Parameter
+title: CGenericList.AddHead-Methode (Wxlist.h) – pList-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0039566f111033062bca080cb24924c7ea4324ac
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: c26667ce12af902f3d5cf355a6556dc95e5dd1f5e0cad77f944e663eeef8ce67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106367407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118656146"
 ---
-# <a name="cgenericlistaddhead-method-wxlisth---plist-parameter"></a>Cgenericlist. AddHead-Methode (wxlist. h)-plist-Parameter
+# <a name="cgenericlistaddhead-method-wxlisth---plist-parameter"></a>CGenericList.AddHead-Methode (Wxlist.h) – pList-Parameter
 
-Mit der- `AddHead` Methode wird eine Liste am Anfang der Liste hinzugefügt.
+Die `AddHead` -Methode fügt am Ende der Liste eine Liste hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ BOOL AddHead(
 
 <dl> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die Liste der hinzu zufügenden Elemente.
+Zeiger auf die Liste der hinzuzufügende Elemente.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
-| Header | Wxlist. h (Include Streams. h) |
-| Bibliothek| "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header | Wxlist.h (include Streams.h) |
+| Bibliothek| Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

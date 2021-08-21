@@ -1,12 +1,12 @@
 ---
-title: Setbrokerhamode-Methode der Win32_SessionBrokerServiceProperties-Klasse
-description: Migriert Daten aus einer lokalen wid-Datenbank in die neue SQL Server-basierte Datenbank. Außerdem wird der Broker Server für die Verwendung des zentralen SQL Server konfiguriert.
+title: SetBrokerHAMode-Methode der Win32_SessionBrokerServiceProperties-Klasse
+description: Migriert Daten aus einer lokalen WID-Datenbank zur neuen SQL serverbasierten Datenbank. Außerdem wird der Brokerserver für die Verwendung des zentralen SQL-Servers konfiguriert.
 ms.assetid: 8f14590d-3042-403c-a1cb-a3b257866284
 ms.tgt_platform: multiple
 keywords:
-- Setbrokerhamode-Methode Remotedesktopdienste
-- Setbrokerhamode-Methode Remotedesktopdienste, Win32_SessionBrokerServiceProperties-Klasse
-- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste, setbrokerhamode-Methode
+- SetBrokerHAMode-Methode Remotedesktopdienste
+- SetBrokerHAMode-Methode Remotedesktopdienste , Win32_SessionBrokerServiceProperties-Klasse
+- Win32_SessionBrokerServiceProperties Klasse Remotedesktopdienste , SetBrokerHAMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4526f8ded96086ccf223b3c8e5aad72d9e0262cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 17b72233b51686911e4b1d0a661f4e46fa9bcaa813bb6ccc973b2f8a5b12da24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118604549"
 ---
-# <a name="setbrokerhamode-method-of-the-win32_sessionbrokerserviceproperties-class"></a>Setbrokerhamode-Methode der Win32- \_ Klasse "sessionbrokerserviceproperties"
+# <a name="setbrokerhamode-method-of-the-win32_sessionbrokerserviceproperties-class"></a>SetBrokerHAMode-Methode der Win32 \_ SessionBrokerServiceProperties-Klasse
 
-Migriert Daten aus einer lokalen wid-Datenbank in die neue SQL Server-basierte Datenbank. Außerdem wird der Broker Server für die Verwendung des zentralen SQL Server konfiguriert.
+Migriert Daten aus einer lokalen WID-Datenbank zur neuen SQL serverbasierten Datenbank. Außerdem wird der Brokerserver für die Verwendung des zentralen SQL-Servers konfiguriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,33 +46,33 @@ uint32 SetBrokerHAMode(
 
 <dl> <dt>
 
-"Verbindungs Dienst" für " *recentraldbrdcms* \[ " in\]
+*connStringToCentralDBRdcms* \[ In\]
 </dt> <dd>
 
-Verbindungs Zeichenfolge zur zentralen Datenbank.
+Verbindungszeichenfolge zur zentralen Datenbank.
 
 </dd> <dt>
 
-*secondaryverbindungs-"stringrecentraldbrdcms* \[ " in\]
+*secondaryConnStringToCentralDBRdcms* \[ In\]
 </dt> <dd>
 
-Sekundäre Verbindungs Zeichenfolge zur zentralen Datenbank.
+Sekundäre Verbindungszeichenfolge zur zentralen Datenbank.
 
 **Windows Server 2012 R2 und Windows Server 2012:** Dieser Parameter ist vor Windows Server 2016 nicht verfügbar.
 
 </dd> <dt>
 
-*brokerdnsrrname* \[ in\]
+*brokerDnsRRName* \[ In\]
 </dt> <dd>
 
-DNS-Broker Name.
+Broker-DNS-Name.
 
 </dd> <dt>
 
-*activebrokername* \[ in\]
+*activeBrokerName* \[ In\]
 </dt> <dd>
 
-Name des aktiven Brokers.
+Aktiver Brokername.
 
 **Windows Server 2012 R2 und Windows Server 2012:** Dieser Parameter ist vor Windows Server 2016 nicht verfügbar.
 
@@ -87,16 +87,16 @@ Name des aktiven Brokers.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                         |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ sessionbrokerserviceproperties**](win32-sessionbrokerserviceproperties.md)
+[**Win32 \_ SessionBrokerServiceProperties**](win32-sessionbrokerserviceproperties.md)
 </dt> </dl>
 
  

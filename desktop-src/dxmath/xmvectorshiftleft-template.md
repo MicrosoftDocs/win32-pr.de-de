@@ -1,19 +1,19 @@
 ---
-description: Verschiebt einen Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links und füllt die freigegebenen Elemente mit Elementen aus einem zweiten Vektor.
+description: Verschiebt einen Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links, wobei die frei gewordenen Elemente mit Elementen aus einem zweiten Vektor gefüllt werden.
 ms.assetid: m:microsoft.directx_sdk.template.xmvectorshiftleft(xmvector,xmvector)
-title: Xmvector shiftleft-Vorlage (directxmath. h)
+title: XMVectorShiftLeft-Vorlage (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 115604871d9e8402157a82bf3c420e5762b3a424
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ab92e2fb64a101251a7531ca1d96b8b06f3e9af6e2b7dabe7958673a61bd8c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118499279"
 ---
-# <a name="xmvectorshiftleft-template"></a>Xmvector shiftleft-Vorlage
+# <a name="xmvectorshiftleft-template"></a>XMVectorShiftLeft-Vorlage
 
-Verschiebt einen Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links und füllt die freigegebenen Elemente mit Elementen aus einem zweiten Vektor.
+Verschiebt einen Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links, wobei die frei gewordenen Elemente mit Elementen aus einem zweiten Vektor gefüllt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,31 +31,31 @@ template<uint32_t Elements> XMVECTOR XMVectorShiftLeft(
 <span id="V1"></span><span id="v1"></span>*V1*
 </dt> <dd>
 
-\[im \] Vektor nach links verschieben.
+\[in \] Vektor, um nach links zu verschieben.
 
 </dd> <dt>
 
 <span id="V2"></span><span id="v2"></span>*V2*
 </dt> <dd>
 
-\[in \] Vector, das verwendet wird, um die frei gewordenen Komponenten von v1 auszufüllen, nachdem es nach links verschoben wurde.
+\[in \] Vector, der verwendet wird, um die frei gewordenen Komponenten von V1 auszufüllen, nachdem sie nach links verschoben wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den verschobenen und gefüllten [**xmvector**](xmvector-data-type.md)zurück.
+Gibt die verschobene zurück und wird in [**XMVECTOR**](xmvector-data-type.md)ausgefüllt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Funktion handelt es sich um eine Vorlagen Version von [**xmvectorshiftleft**](/windows/win32/api/directxmath/nf-directxmath-xmvectorshiftleft) , wobei das *Element* -Argument ein Vorlagen Wert ist.
+Diese Funktion ist eine Vorlagenversion von [**XMVectorShiftLeft,**](/windows/win32/api/directxmath/nf-directxmath-xmvectorshiftleft) wobei das *Elements-Argument* ein Vorlagenwert ist.
 
 > [!Note]  
-> Die `XMVectorShiftLeft` Vorlage ist neu für directxmath und für xnamath 2. x nicht verfügbar.
+> Die `XMVectorShiftLeft` Vorlage ist neu für DirectXMath und nicht für XNAMath 2.x verfügbar.
 
  
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** Verwenden von DirectX
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -67,7 +67,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
@@ -75,16 +75,16 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 <dl> <dt>
 
-[Directxmath-Bibliotheks Vorlagen Funktionen](ovw-xnamath-templates.md)
+[Vorlagenfunktionen der DirectXMath-Bibliothek](ovw-xnamath-templates.md)
 </dt> <dt>
 
-[**Xmvector perstumm Zeichen**](xmvectorpermute-template.md)
+[**XMVectorPermute**](xmvectorpermute-template.md)
 </dt> <dt>
 
-[**Xmvector rotateleft**](xmvectorrotateleft-template.md)
+[**XMVectorRotateLeft**](xmvectorrotateleft-template.md)
 </dt> <dt>
 
-[**Xmvector rotateright**](xmvectorrotateright-template.md)
+[**XMVectorRotateRight**](xmvectorrotateright-template.md)
 </dt> </dl>
 
  

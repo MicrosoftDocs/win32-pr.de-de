@@ -1,7 +1,7 @@
 ---
-description: Die prepareperformancedata-Methode legt die m \_ trlate-und m \_ trframe-Werte des aktuellen Frames fest.
+description: Die PreparePerformanceData-Methode legt die m \_ trLate- und m \_ trFrame-Werte des aktuellen Frames fest.
 ms.assetid: c4c5701b-eccd-4259-a1d1-7c5000f6b2df
-title: Cbasevideorenderer. prepareperformancedata-Methode (renbase. h)
+title: CBaseVideoRenderer.PreparePerformanceData-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 12dd61dee7416ce8ca7ac07cba62cbc769df5973
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e8cb276b37e64b6bb34751ed2d034666f7ceeddd90d8e52e47b2a1fca499ff9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118658334"
 ---
-# <a name="cbasevideorendererprepareperformancedata-method"></a>Cbasevideorenderer. prepareperformancedata-Methode
+# <a name="cbasevideorendererprepareperformancedata-method"></a>CBaseVideoRenderer.PreparePerformanceData-Methode
 
-Die `PreparePerformanceData` -Methode legt die **m \_ trlate** -und **m \_ trframe** -Werte des aktuellen Frames fest.
+Die `PreparePerformanceData` -Methode legt die **TrFrame-Werte m \_ trLate** und **\_ m** des aktuellen Frames fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void PreparePerformanceData(
 
 <dl> <dt>
 
-*trlate* 
+*trLate* 
 </dt> <dd>
 
-Der Wert, der angibt, wie spät das Beispiel in Bezugszeit Einheiten über die Fälligkeits Zeit hinausging.
+Wert, der angibt, wie spät die Stichprobe über die Fälligkeitszeit hinaus war (in Referenzzeiteinheiten).
 
 </dd> <dt>
 
-*trframe* 
+*trFrame* 
 </dt> <dd>
 
-Interframe-Zeit in Bezugszeit Einheiten.
+Interframe-Zeit in Referenzzeiteinheiten.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Interframe-Zeit in Bezugszeit Einheiten.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion **legt \_ m trlate** auf den Wert von *trlate* und **m \_ trframe** auf den Wert von *trframe* fest.
+Diese Memberfunktion legt **m \_ trLate auf** den Wert von *trLate und* m **\_ trFrame** auf den Wert *von trFrame fest.*
 
-Wenn die Member-Funktion [**cbasevideorenderer:: recordframellichkeit**](cbasevideorenderer-recordframelateness.md) von [**cbasevideorenderer:: onrenderstart**](cbasevideorenderer-onrenderstart.md) oder [**cbasevideorenderer:: ondirectrender**](cbasevideorenderer-ondirectrender.md)aufgerufen wird, werden die Werte von **m \_ trlate** und **m \_ trframe** übergeben, um die Statistiken zu aktualisieren. `PreparePerformanceData` wird von [**cbasevideorenderer:: onwaitend**](cbasevideorenderer-onwaitend.md) aufgerufen, um diese Datenmember-Werte festzulegen.
+Wenn die [**CBaseVideoRenderer::RecordFrameLateness-Memberfunktion**](cbasevideorenderer-recordframelateness.md) entweder von [**CBaseVideoRenderer::OnRenderStart**](cbasevideorenderer-onrenderstart.md) oder [**CBaseVideoRenderer::OnDirectRender**](cbasevideorenderer-ondirectrender.md)aufgerufen wird, übergibt sie die Werte **von m \_ trLate** und **m \_ trFrame,** damit die Statistik aktualisiert wird. `PreparePerformanceData` wird von [**CBaseVideoRenderer::OnWaitEnd aufgerufen,**](cbasevideorenderer-onwaitend.md) um diese Datenmitgliedswerte zu festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ Wenn die Member-Funktion [**cbasevideorenderer:: recordframellichkeit**](cbasevi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

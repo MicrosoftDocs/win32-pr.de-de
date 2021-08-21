@@ -1,20 +1,20 @@
 ---
-title: Imsrdpclientnonscriptable SendKeys-Methode
-description: Sendet eine Reihe von Tastatureingaben an das-Steuerelement. Die Tastatureingaben befinden sich in einem Scan-codeformular, bei dem es sich um die Tastatur Daten aus den eigentlichen physischen Schlüsseln handelt.
+title: IMsRdpClientNonScriptable-SendKeys-Methode
+description: Sendet eine Reihe von Tastatureingaben an das Steuerelement. Die Tastatureingaben sind in Scancodeform, d.&a0;b. den Tastaturdaten der tatsächlichen physischen Tasten.
 ms.assetid: 1f07a9cc-4795-43cb-ac99-4bb70b8b544a
 ms.tgt_platform: multiple
 keywords:
-- SendKeys-Methode Remotedesktopdienste
-- SendKeys-Methode Remotedesktopdienste, imsrdpclientnonscriptable-Schnittstelle
-- Imsrdpclientnonscriptable-Schnittstelle Remotedesktopdienste, SendKeys-Methode
-- SendKeys-Methode Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste, SendKeys-Methode
-- SendKeys-Methode Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste, SendKeys-Methode
-- SendKeys-Methode Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste, SendKeys-Methode
-- SendKeys-Methode Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste, SendKeys-Methode
+- SendKeys-Remotedesktopdienste
+- SendKeys-Remotedesktopdienste , IMsRdpClientNonScriptable-Schnittstelle
+- IMsRdpClientNonScriptable-Schnittstelle Remotedesktopdienste , SendKeys-Methode
+- SendKeys-Methode Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , SendKeys-Methode
+- SendKeys-Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , SendKeys-Methode
+- SendKeys-Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , SendKeys-Methode
+- SendKeys-Methode Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , SendKeys-Methode
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9effa3bbd40eb64df55914b9adbc07a03ea0c465
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 530f74bdab808ce6cad6f777d12da932db073ddec022e007eb73fabc538fab20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477766"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118855318"
 ---
-# <a name="imsrdpclientnonscriptablesendkeys-method"></a>Imsrdpclientnonscriptable:: SendKeys-Methode
+# <a name="imsrdpclientnonscriptablesendkeys-method"></a>IMsRdpClientNonScriptable::SendKeys-Methode
 
-Sendet eine Reihe von Tastatureingaben an das-Steuerelement. Die Tastatureingaben befinden sich in einem Scan-codeformular, bei dem es sich um die Tastatur Daten aus den eigentlichen physischen Schlüsseln handelt.
+Sendet eine Reihe von Tastatureingaben an das Steuerelement. Die Tastatureingaben sind in Scancodeform, d.&a0;b. den Tastaturdaten der tatsächlichen physischen Tasten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,38 +57,38 @@ HRESULT SendKeys(
 
 <dl> <dt>
 
-*numKeys* \[ in\]
+*numKeys* \[ In\]
 </dt> <dd>
 
-Die Anzahl der zu sendenden Tastatureingaben. Die maximale Anzahl von Schlüsseln, die in einem Vorgang gesendet werden können, beträgt 20. Die Methode gibt **E \_ invalidArg** zurück, wenn dieser Parameter größer als 20 ist. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Die Anzahl der zu sendenden Tastatureingaben. Die maximale Anzahl von Schlüsseln, die in einem Vorgang gesendet werden können, beträgt 20. Die -Methode gibt **E \_ INVALIDARG zurück,** wenn dieser Parameter größer als 20 ist. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
 
 </dd> <dt>
 
-*pbarraykeyup* \[ in\]
+*pbArrayKeyUp* \[ In\]
 </dt> <dd>
 
-Ein Array, dessen Größe gleich *numKeys* ist. Ein Element ist " **true** ", wenn der entsprechende Schlüssel auf dem neuesten Stand ist, und " **false** ", wenn der entsprechende Schlüssel nicht
+Ein Array, dessen Größe gleich *numKeys ist.* Ein Element ist **TRUE,** wenn der entsprechende Schlüssel UP und **FALSE ist,** wenn der entsprechende Schlüssel DOWN ist.
 
 </dd> <dt>
 
-*plkeydata* \[ in\]
+*plKeyData* \[ In\]
 </dt> <dd>
 
-Ein Array, dessen Größe gleich *numKeys* ist. Das Array enthält Tastatureingabe-Daten und entspricht dem Wert des *LPARAM* -Parameters der [WM- \_ KeyDown](../inputdev/wm-keydown.md) -Nachricht. Die Daten geben die Wiederholungs Anzahl, den Überprüfungs Code, das erweiterte schlüsselflag, den Kontext Code, das vorherige schlüsselstatusflag und das Flag für den Übergangszustand an. Eine Beschreibung der Bits in diesem Array finden [Sie unter WM- \_ KeyDown](../inputdev/wm-keydown.md).
+Ein Array, dessen Größe gleich *numKeys ist.* Das Array enthält Tastatureingabedaten und entspricht dem Wert des *lParam-Parameters* der [WM \_ KEYDOWN-Nachricht.](../inputdev/wm-keydown.md) Die Daten geben die Wiederholungsanzahl, den Scancode, das Flag für erweiterte Schlüssel, den Kontextcode, das vorherige Schlüsselzustandsflag und das Übergangszustandsflag an. Eine Beschreibung der Bits in diesem Array finden Sie unter [WM \_ KEYDOWN](../inputdev/wm-keydown.md).
 
-Das entsprechende Element in *pbarraykeyup* gibt an, ob der Schlüssel nach oben oder unten ist.
+Das entsprechende Element in *pbArrayKeyUp* gibt an, ob der Schlüssel UP oder DOWN ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **SendKeys** -Methode vermischt keine Tastatureingaben, die vom lokalen Benutzer mit Tastatureingaben durchgeführt werden, die von der Methode gesendet werden. Alle an die-Methode weiter gegebenen Tastatureingaben werden in einer einzelnen atomarischen Sequenz an die Remote Sitzung gesendet.
+Die **SendKeys-Methode** vermischen tastaturanschläge des lokalen Benutzers nicht mit Tastatureingaben, die von der Methode gesendet werden. Alle tastaturanschläge, die an die -Methode übergeben werden, werden in einer einzelnen atomaren Sequenz an die Remotesitzung gesendet.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                               |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>       |
-| IID<br/>                      | IID \_ imsrdpclientnonscriptable ist als 2f079c4c-87b2-4afd-97ab-20cdb43038ae definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientNonScriptable ist als 2f079c4c-87b2-4afd-97ab-20cdb43038ae definiert.<br/> |
 
 
 
@@ -120,10 +120,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dt>
 
-[WM- \_ KeyDown](../inputdev/wm-keydown.md)
+[WM \_ KEYDOWN](../inputdev/wm-keydown.md)
 </dt> </dl>
 
  

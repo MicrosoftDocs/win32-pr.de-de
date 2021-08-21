@@ -35,7 +35,7 @@ g \_ wszWMCopyrightURL
 
 Dieses Attribut gilt für die gesamte Datei.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

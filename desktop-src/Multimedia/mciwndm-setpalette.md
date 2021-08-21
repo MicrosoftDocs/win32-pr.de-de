@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_SETPALETTE Meldung (VFW. h)
-description: Die mciwndm- \_ SetPalette-Nachricht sendet ein Palettenhandle an das MCI-Gerät, das dem mciwnd-Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des mciwndsetpalette-Makros senden.
+title: MCIWNDM_SETPALETTE (Vfw.h)
+description: Die MCIWNDM SETPALETTE-Nachricht sendet ein Palettenhand handle an das \_ MCI-Gerät, das dem MCIWnd-Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des Makros MCIWndSetPalette senden.
 ms.assetid: d2399cb7-d83c-465c-b02f-e6a016c28ae3
 keywords:
-- MCIWNDM_SETPALETTE-Nachricht (Multimedia)
+- MCIWNDM_SETPALETTE von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba7e354082de4fc15f4179555a8b635b9426af90
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b4986224fd23898ef33f8fdda4c12d17880a8bc42441b29cd1865fb7fdfa687
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525230"
 ---
-# <a name="mciwndm_setpalette-message"></a>Mciwndm- \_ SetPalette-Nachricht
+# <a name="mciwndm_setpalette-message"></a>MCIWNDM \_ SETPALETTE-Meldung
 
-Die **mciwndm- \_ SetPalette** -Nachricht sendet ein Palettenhandle an das MCI-Gerät, das dem mciwnd-Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**mciwndsetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette) -Makros senden.
+Die **MCIWNDM \_ SETPALETTE-Nachricht** sendet ein Palettenhand handle an das MCI-Gerät, das dem MCIWnd-Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndSetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette) senden.
 
 
 ```C++
@@ -41,13 +41,13 @@ lParam = 0;
 <span id="hpal"></span><span id="HPAL"></span>*hpal*
 </dt> <dd>
 
-Palettenhandle.
+Palettenhand handle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 
 <dl> <dt>
 
-[**Mciwndsetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette)
+[**MCIWndSetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette)
 </dt> </dl>
 
  

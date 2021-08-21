@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn ein oder mehrere IInkStrokeDisp-Objekte zur inkstrokes-Auflistung hinzugefügt werden.
+description: Tritt auf, wenn der InkStrokes-Auflistung mindestens ein IInkStrokeDisp-Objekt hinzugefügt wird.
 ms.assetid: 577ad52b-ecd3-4a49-8997-481ebdb47203
-title: InkPicture. StrokesAdded-Ereignis (msink AUT. h)
+title: InkPicture.StrokesAdded-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e79d87a4315068cbb0cf9db25b6532bc4c09943
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b5f9418289ac996b2c2248c2cf1696e7d45b4548dbafa4dff9494e76cbedc30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118717403"
 ---
-# <a name="inkpicturestrokesadded-event"></a>InkPicture. StrokesAdded-Ereignis
+# <a name="inkpicturestrokesadded-event"></a>InkPicture.StrokesAdded-Ereignis
 
-Tritt auf, wenn ein oder mehrere [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte zur [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung hinzugefügt werden.
+Tritt auf, wenn der [InkStrokes-Auflistung mindestens ein IInkStrokeDisp-Objekt hinzugefügt](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wird. [](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp)
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,12 +30,12 @@ void StrokesAdded(
 
 <dl> <dt>
 
-*StrokeIds* \[ in\]
+*StrokeIds* \[ In\]
 </dt> <dd>
 
-Das ganzzahlige Array von bezeichgern für jedes [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt, das bei Auftreten dieses Ereignisses hinzugefügt wird.
+Das ganzzahlige Array von Bezeichnern für jedes [**IInkStrokeDisp-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) das hinzugefügt wird, wenn dieses Ereignis eintritt.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-B
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der **\_ iinkstrokesevents** -Schnittstelle definiert. Die **\_ iinkstrokesevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID" \_ .
+Diese Ereignismethode wird in der **\_ IInkStrokesEvents-Schnittstelle** definiert. Die **\_ IInkStrokesEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ SEStrokesAdded.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,18 +53,18 @@ Diese Ereignismethode wird in der **\_ iinkstrokesevents** -Schnittstelle defini
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

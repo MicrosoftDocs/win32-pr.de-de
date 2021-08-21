@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut mit Längenangabe
-description: VML-Attribut mit Längenangabe
+title: VML LengthSpecified-Attribut
+description: VML LengthSpecified-Attribut
 ms.assetid: bc8287a8-e14b-4829-a5c9-8aac37d7e058
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dc093855e5165215eaf6c332e4c06ec0f9d0de1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 57dc136be921c633e18eaebbd7ff4c0f41b829734c34e27ffdc07ff03c434c21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118599190"
 ---
-# <a name="vml-lengthspecified-attribute"></a>VML-Attribut mit Längenangabe
+# <a name="vml-lengthspecified-attribute"></a>VML LengthSpecified-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob das [length](msdn-online-vml-length-attribute.md) -Attribut für die Legende verwendet wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob das [Length-Attribut](msdn-online-vml-length-attribute.md) für die Ausrufezeichen verwendet wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Bestimmt, ob das [length](msdn-online-vml-length-attribute.md) -Attribut für di
 
 **Tagsyntax**
 
-<o: *Element* verlängert = " *Ausdruck* " >
+<o: *element* lengthspecified=" *expression* ">
 
 **Anmerkungen**
 
-Der Standardwert ist **False**. **True** gibt an, dass das **length** -Attribut verwendet wird. Wenn der Wert **false** ist, wird eine "beste Anpassung" versucht.
+Der Standardwert ist **False**. True gibt an, dass das **Length-Attribut** verwendet wird. False gibt an, dass eine "beste Anpassung" versucht wird.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

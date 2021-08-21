@@ -1,10 +1,10 @@
 ---
-title: Iadspostaladdress-Eigenschaften Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadspostaladdress-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsPostalAddress-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsPostalAddress-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: f7e61c69-f3a6-4ca6-a276-3cd859252571
 ms.tgt_platform: multiple
 keywords:
-- Iadspostaladdress-Eigenschaften Methoden ADSI
+- IADsPostalAddress-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9d8eeaac8fa258a2df1452b8aa261ee59b3cc85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bd01887751a4389984a4bc765d924d6c8a8e81dd9a65be3b7a868a3cbb845cf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691127"
 ---
-# <a name="iadspostaladdress-property-methods"></a>Iadspostaladdress-Eigenschaften Methoden
+# <a name="iadspostaladdress-property-methods"></a>IADsPostalAddress-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**iadspostaladdress**](/windows/desktop/api/Iads/nn-iads-iadspostaladdress) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsPostalAddress-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspostaladdress) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -36,14 +36,14 @@ Die-Eigenschaften Methode der [**iadspostaladdress**](/windows/desktop/api/Iads/
 **PostalAddress**
 </dt> <dd> <dl>
 
-Ein Array von sechs Zeichen folgen, das die Postadresse des Benutzers enthält.
+Ein Array von sechs Zeichenfolgen, die die Postadresse des Benutzers enthalten.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -71,20 +71,20 @@ HRESULT put_PostalAddress(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadspostaladdress ist als 7adecf 29-4680-11d1-a3b4-00c04b950 DC definiert.<br/>    |
+| IID<br/>                      | IID \_ IADsPostalAddress ist als 7ADECF29-4680-11D1-A3B4-00C04FB950DC definiert.<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsPostalAddress**](/windows/desktop/api/Iads/nn-iads-iadspostaladdress)
 </dt> <dt>
 
-[**Werbung \_ PostalAddress**](/windows/win32/api/iads/ns-iads-ads_postaladdress)
+[**ADS \_ POSTALADDRESS**](/windows/win32/api/iads/ns-iads-ads_postaladdress)
 </dt> </dl>
 
  

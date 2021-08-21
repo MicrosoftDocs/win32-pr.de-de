@@ -1,31 +1,31 @@
 ---
-title: Beispiel für Sami-Datei
-description: Beispiel für Sami-Datei
+title: Beispiel für eine SAMI-Datei
+description: Beispiel für eine SAMI-Datei
 ms.assetid: 52b566f1-0d87-4bf2-87b3-3821e69a5699
 keywords:
-- Windows Media Player, synchronisierter zugänglicher Medienaustausch (Sami)
-- Windows Media Player-Objektmodell, synchronisierter zugänglicher Medienaustausch (Sami)
-- Objektmodell, synchronisierter, zugänglicher Medienaustausch (Sami)
-- Windows Media Player Mobile, synchronisierter verfügbarer Medienaustausch (Sami)
-- Windows Media Player ActiveX-Steuerelement, synchronisierter barrierefreier Medienaustausch (Sami)
-- Windows Media Player Mobile ActiveX-Steuerelement, synchronisierter barrierefreier Medienaustausch (Sami)
-- ActiveX-Steuerelement, synchronisierter, zugänglicher Medienaustausch (Sami)
-- Synchronisierter, barrierefreier Medienaustausch (Sami), Dateien
-- Samisch (synchronisierter, zugänglicher Medienaustausch), Dateien
-- Synchronisierter, barrierefreier Medienaustausch (Sami), Beispielcode
-- Samisch (synchronisierter, zugänglicher Medienaustausch), Beispielcode
+- Windows Media Player,Synchronized Accessible Media Interchange (SAMI)
+- Windows Media Player Objektmodell, Synchronized Accessible Media Interchange (SAMI)
+- Objektmodell,Synchronisierter austauschbarer Medienaustausch (SAMI)
+- Windows Media Player Mobiler, synchronisierter austauschbarer Medienaustausch (SAMI)
+- Windows Media Player ActiveX,Synchronized Accessible Media Interchange (SAMI)
+- Windows Media Player Mobile ActiveX,Synchronized Accessible Media Interchange (SAMI)
+- ActiveX,Synchronized Accessible Media Interchange (SAMI)
+- Synchronized Accessible Media Interchange (SAMI),files
+- SAMI (Synchronized Accessible Media Interchange), Files
+- Synchronized Accessible Media Interchange (SAMI), Beispielcode
+- SAMI (Synchronized Accessible Media Interchange), Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9634de52f71b4ca1db151bdf9104c3891c8ce5d
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 4d4e2ab5189f99118afae3fb2dae7374323cc8c16605bb458a04bd31810ed91a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "103869387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569806"
 ---
-# <a name="sami-file-example"></a>Beispiel für Sami-Datei
+# <a name="sami-file-example"></a>Beispiel für eine SAMI-Datei
 
-Der folgende Beispielcode ist eine vollständige Sami-Datei mit einem Satz von Closed Caption Text und mehreren Klassen Deklarationen für Textformat und Beschriftung Language.
+Der folgende Beispielcode ist eine vollständige SAMI-Datei mit einem Satz von Untertiteltexten und mehreren Klassendeklarationen für Textformat und Beschriftungssprache.
 
 
 ```C++
@@ -61,11 +61,11 @@ Der folgende Beispielcode ist eine vollständige Sami-Datei mit einem Satz von C
 
 
 
-Stile, die in einer Sami-Datei definiert sind, entsprechen der Standard-CSS-Selektor-Syntax für Elemente, Klassen und IDs. Im Body-Element haben alle p-Elemente den Stil, der für die P-Elementauswahl im Style-Element definiert ist. Das Class-Attribut eines-Elements gibt die Sprache dieses Elements gemäß der Definition durch die Klassenselektoren im Style-Element an (die Selektoren, die mit Zeiträumen beginnen). Die von den Klassenselektoren angegebenen Sprachnamen können eine beliebige Zeichenfolge sein. Für Elemente mit dem angegebenen ID-Attribut wird eine zusätzliche Formatierung angewendet, wie von den ID-Selektoren im Style-Element angegeben (die Selektoren mit vorangestelltem \# Zeichen).
+In einer SAMI-Datei definierte Stile entsprechen der standardmäßigen CSS-Selektorsyntax für Elemente, Klassen und IDs. Im BODY-Element wird für alle P-Elemente der Stil definiert, der für die P-Elementauswahl im STYLE-Element definiert ist. Das Klassenattribut eines Elements gibt die Sprache dieses Elements an, wie von den Klassenauswahlen im STYLE-Element definiert (die Selektoren, die mit Zeiträumen beginnen). Die von den Klassenauswahlen angegebenen Sprachnamen können eine beliebige Zeichenfolge sein. Für Elemente mit dem angegebenen ID-Attribut werden zusätzliche Stile angewendet, wie durch die ID-Selektoren im STYLE-Element angegeben (die Selektoren mit Zeichen \# als Präfix).
 
-Bei Verwendung in Verbindung mit dem Windows Media Player-Objektmodell entsprechen die Klassenselektoren den *closedcaption*. **Samilang** -Eigenschaft, die zum Angeben der Sprache der Beschriftungen verwendet werden kann. Die ID-Selektoren entsprechen *closedcaption*. **Samistyle** -Eigenschaft, die verwendet werden kann, um den Stil anzugeben, in dem die Beschriftungen angezeigt werden.
+Bei Verwendung in Verbindung mit dem Windows Media Player-Objektmodell entsprechen die Klassenauswahlen *closedCaption*. **SAMILang-Eigenschaft,** die verwendet werden kann, um die Sprache der Untertitel anzugeben. Die ID-Selektoren entsprechen *closedCaption*. **SAMIStyle-Eigenschaft,** die verwendet werden kann, um den Stil anzugeben, in dem die Beschriftungen angezeigt werden.
 
-Weitere Informationen zum Erstellen von SAMI-Dateien finden Sie unter Understanding SAMI 1,0 auf der [Microsoft-Website](/documentation/).
+Weitere Informationen zum Erstellen von SAMI-Dateien finden Sie auf der [Microsoft-Website](/documentation/)unter Understanding SAMI 1.0 (Grundlegendes zu SAMI 1.0).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,10 +1,10 @@
 ---
-title: Iadsprintjoboperations-Eigenschaften Methoden (IADs. h)
-description: Die Eigenschaften Methoden der iadsprintjoboperations-Schnittstelle lesen und schreiben die in der folgenden Tabelle aufgeführten Eigenschaften. Weitere Informationen zu Eigenschafts Methoden finden Sie unter Interface Property Methods.
+title: IADsPrintJobOperations-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsPrintJobOperations-Schnittstelle lesen und schreiben die in der folgenden Tabelle aufgeführten Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: d1710bd4-e600-4d92-892a-16b4316851d4
 ms.tgt_platform: multiple
 keywords:
-- Iadsprintjoboperations-Eigenschaften Methoden ADSI
+- IADsPrintJobOperations-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2981fcdd8043c0eb0ee8b05cfd0331fe3abfabe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 70f337681cb7e75a478000bd06daaac1165edaaaf1cb4255b2890347fbcff7de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691069"
 ---
-# <a name="iadsprintjoboperations-property-methods"></a>Iadsprintjoboperations-Eigenschaften Methoden
+# <a name="iadsprintjoboperations-property-methods"></a>IADsPrintJobOperations-Eigenschaftsmethoden
 
-Die Eigenschaften Methoden der [**iadsprintjoboperations**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations) -Schnittstelle lesen und schreiben die in der folgenden Tabelle aufgeführten Eigenschaften. Weitere Informationen zu Eigenschafts Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsPrintJobOperations-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations) lesen und schreiben die in der folgenden Tabelle aufgeführten Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -49,7 +49,7 @@ Enthält die Anzahl der gedruckten Seiten.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -67,14 +67,14 @@ HRESULT get_PagesPrinted(
 **Position**
 </dt> <dd> <dl>
 
-Enthält die Position dieses Druckauftrags in der Druck Warteschlange.
+Enthält die Position dieses Druckauftrags in der Druckwarteschlange.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -95,14 +95,14 @@ HRESULT put_Position(
 **Status**
 </dt> <dd> <dl>
 
-Enthält den aktuellen Status des Druckauftrags, wie durch einen der [**ADSI Print Job-Status Konstanten**](adsi-print-job-status-constants.md) Werte angegeben.
+Enthält den aktuellen Status des Druckauftrags, wie durch einen der [**ADSI Print Job Status Constants-Werte**](adsi-print-job-status-constants.md) angegeben.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -117,17 +117,17 @@ HRESULT get_Status(
 
 </dt> </dl> </dd> <dt>
 
-**Verstrichene Zeit**
+**TimeElapsed**
 </dt> <dd> <dl>
 
-Enthält die Anzahl der Millisekunden, die seit dem Start des Druckauftrags verstrichen sind.
+Enthält die Anzahl von Millisekunden, die seit dem Start des Druckauftrags verstrichen sind.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -146,7 +146,7 @@ HRESULT get_TimeElapsed(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie die Eigenschaften für [**iadsprintjoboperations**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations) verwendet werden können.
+Das folgende Codebeispiel zeigt, wie die Eigenschaften für [**IADsPrintJobOperations**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations) verwendet werden können.
 
 
 ```VB
@@ -182,26 +182,26 @@ Cleanup:
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>         |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl>   |
-| IID<br/>                      | IID \_ iadsprintjoboperations ist als 32fb6780-1ed0-11CF-A988-00aa006bc149 definiert.<br/> |
+| IID<br/>                      | IID \_ IADsPrintJobOperations ist als 32FB6780-1ED0-11CF-A988-00AA006BC149 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsprintjob**](/windows/desktop/api/Iads/nn-iads-iadsprintjob)
+[**IADsPrintJob**](/windows/desktop/api/Iads/nn-iads-iadsprintjob)
 </dt> <dt>
 
-[**Iadsprintjoboperations**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations)
+[**IADsPrintJobOperations**](/windows/desktop/api/Iads/nn-iads-iadsprintjoboperations)
 </dt> <dt>
 
-[**Iadsprintqueue**](/windows/desktop/api/Iads/nn-iads-iadsprintqueue)
+[**IADsPrintQueue**](/windows/desktop/api/Iads/nn-iads-iadsprintqueue)
 </dt> <dt>
 
-[**Status Konstanten für den ADSI-Druckauftrag**](adsi-print-job-status-constants.md)
+[**ADSI Druckauftragsstatuskonstanten**](adsi-print-job-status-constants.md)
 </dt> </dl>
 
  

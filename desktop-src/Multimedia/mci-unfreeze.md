@@ -1,9 +1,9 @@
 ---
-title: MCI_UNFREEZE Befehl (MMSYSTEM. h)
-description: Der MCI-Befehl zum Aufheben der Fixierung \_ stellt die Bewegung in einem Bereich des Video Puffers wieder her, der mit dem Befehl MCI Freeze eingefroren ist \_ . Dieser Befehl wird von digitalen Video-, VCR-und Video Überlagerungs Geräten erkannt.
+title: MCI_UNFREEZE Befehl (Mmsystem.h)
+description: Der \_ MCI UNFREEZE-Befehl stellt die Bewegung in einem Bereich des Videopuffers wieder her, der mit dem MCI FREEZE-Befehl fixiert \_ wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: 79ff1be5-6e30-4ef4-ab81-fc5643e3a72d
 keywords:
-- MCI_UNFREEZE Befehl Windows-Multimedia
+- MCI_UNFREEZE Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8736e27998330f9337bb21569e145a4395e90020
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3011f3d2c05c304b37957c6f4cb78f2ada9389ab727a7af63a358fd4b5afdd3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525570"
 ---
-# <a name="mci_unfreeze-command"></a>MCI-Befehl zum Einfrieren der Fixierung \_
+# <a name="mci_unfreeze-command"></a>MCI \_ UNFREEZE-Befehl
 
-Der MCI-Befehl zum Aufheben der Fixierung \_ stellt die Bewegung in einem Bereich des Video Puffers wieder her, der mit dem Befehl [MCI \_ Freeze](mci-freeze.md) eingefroren ist. Dieser Befehl wird von digitalen Video-, VCR-und Video Überlagerungs Geräten erkannt.
+Der \_ MCI UNFREEZE-Befehl stellt die Bewegung in einem Bereich des Videopuffers wieder her, der mit dem [MCI \_ FREEZE-Befehl](mci-freeze.md) fixiert wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,71 +43,71 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI \_ -Benachrichtigung, MCI \_ -Wartezeit oder, für Digital Video-und VCR-Geräte, MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder, für Digital Video- und VCR-Geräte, MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpUnfreeze"></span><span id="lpunfreeze"></span><span id="LPUNFREEZE"></span>*lpunfreeze*
+<span id="lpUnfreeze"></span><span id="lpunfreeze"></span><span id="LPUNFREEZE"></span>*lpUnfreeze*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**GENERISCHE \_ MCI-PARMS-Struktur. \_**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende zusätzliche Flag wird mit dem **Digitalvideo** -Gerätetyp verwendet:
+Das folgende zusätzliche Flag wird mit dem **Gerätetyp digitalvideo** verwendet:
 
-MCI- \_ DGV- \_ Rect
+MCI \_ DGV \_ RECT
 
-Der **RC** -Member der durch *lpunfreeze* identifizierten Struktur enthält ein gültiges Anzeige Rechteck. Das Rechteck gibt einen Bereich innerhalb des Frame Puffers an, dessen Pixel das Sperr Masken Bit deaktiviert werden soll. Rechteckige Bereiche werden wie für den Befehl [MCI \_ Put](mci-put.md) beschrieben angegeben. Wenn der Wert ausgelassen wird, wird das Rechteck standardmäßig auf den gesamten Frame Puffer eingestellt. Mithilfe einer Sequenz von Freeze-und Fixierung aufheben-Befehlen mit unterschiedlichen Rechtecke können beliebige Muster von Sperr Masken Bits beschrieben werden.
+Der **rc-Member** der von *lpUnfreeze* identifizierten Struktur enthält ein gültiges Anzeigerechteck. Das Rechteck gibt einen Bereich innerhalb des Rahmenpuffers an, dessen Pixel das Sperrmaskenbit deaktivieren sollen. Rechteckige Bereiche werden wie für den [MCI \_ PUT-Befehl](mci-put.md) beschrieben angegeben. Wenn dies nicht angegeben wird, wird das Rechteck standardmäßig auf den gesamten Framepuffer verwendet. Mithilfe einer Sequenz von Befehlen zum Einfrieren und Aufheben der Fixierung mit unterschiedlichen Rechtecke können beliebige Muster von Sperrmaskenbits beschrieben werden.
 
-Für Digital Video-Geräte zeigt der *lpunfreeze* -Parameter auf eine **MCI \_ DGV \_ \_** -Struktur zum Aufheben der Fixierung von Parametern. Weitere Informationen finden Sie in den Kommentaren für die [**MCI-DGV-Struktur " \_ \_ Rect- \_ Parser**](/windows/win32/api/digitalv/ns-digitalv-mci_dgv_rect_parms) ".
+Bei Digitalvideogeräten verweist der *lpUnfreeze-Parameter* auf eine **MCI \_ DGV \_ UNFREEZE \_ PARMS-Struktur.** Weitere Informationen finden Sie in den Kommentaren zur [**MCI \_ DGV \_ RECT \_ PARMS-Struktur.**](/windows/win32/api/digitalv/ns-digitalv-mci_dgv_rect_parms)
 
-Die folgenden zusätzlichen Flags werden für den **VCR** -Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Vcr-Gerätetyp** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_VCR_UNFREEZE_INPUT"></span><span id="mci_vcr_unfreeze_input"></span>MCI \_ VCR- \_ einfrierende \_ Eingabe
+<span id="MCI_VCR_UNFREEZE_INPUT"></span><span id="mci_vcr_unfreeze_input"></span>MCI \_ VCR \_ UNFREEZE \_ INPUT
 </dt> <dd>
 
-Entsperrung der Eingabe.
+Entbinden Sie die Eingabe.
 
 </dd> <dt>
 
-<span id="MCI_VCR_UNFREEZE_OUTPUT"></span><span id="mci_vcr_unfreeze_output"></span>MCI \_ VCR- \_ Ausgabe wird eingefroren \_
+<span id="MCI_VCR_UNFREEZE_OUTPUT"></span><span id="mci_vcr_unfreeze_output"></span>MCI \_ VCR \_ UNFREEZE \_ OUTPUT
 </dt> <dd>
 
-Heben Sie die Fixierung der Ausgabe auf.
+Aufheben der Freigabe der Ausgabe.
 
 </dd> </dl>
 
-Das folgende zusätzliche Flag wird mit dem **Überlagerungs** Gerätetyp verwendet:
+Das folgende zusätzliche Flag wird mit dem **Überlagerungsgerätetyp** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_OVLY_RECT"></span><span id="mci_ovly_rect"></span>MCI \_ OVLY \_ Rect
+<span id="MCI_OVLY_RECT"></span><span id="mci_ovly_rect"></span>MCI \_ OVLY \_ RECT
 </dt> <dd>
 
-Der **RC** -Member der durch *lpunfreeze* identifizierten Struktur enthält ein gültiges Anzeige Rechteck. Dies ist ein erforderlicher Parameter.
+Der **rc-Member** der von *lpUnfreeze* identifizierten Struktur enthält ein gültiges Anzeigerechteck. Dies ist ein erforderlicher Parameter.
 
 </dd> </dl>
 
-Bei Video Überlagerungs Geräten zeigt der *lpunfreeze* -Parameter auf eine MCI-Struktur mit [**\_ OVLY \_ Rect- \_ para**](mci-ovly-rect-parms.md) Metern.
+Bei Videoüberlagerungsgeräten zeigt der *lpUnfreeze-Parameter* auf eine [**MCI \_ OVLY \_ RECT \_ PARMS-Struktur.**](mci-ovly-rect-parms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,15 +117,15 @@ Bei Video Überlagerungs Geräten zeigt der *lpunfreeze* -Parameter auf eine MCI
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

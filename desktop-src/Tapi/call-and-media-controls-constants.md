@@ -1,26 +1,26 @@
 ---
-description: TAPI-Funktionen,-Methoden und-Strukturen können die folgenden Konstanten verwenden.
+description: TAPI-Funktionen, -Methoden und -Strukturen können die folgenden Konstanten verwenden.
 ms.assetid: 8eebf02c-fa45-460f-a0ef-4b9c16a5da4b
-title: Aufrufe und mediensteuer Element Konstanten
+title: Aufruf- und Mediensteuerelemente-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 012543bf47b357061d9d31125f26009c650066d8
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 0936f445dc17de2090a5cc5f013a2b81612b3d1c62bc7ad1ad36c56007356bec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118871153"
 ---
-# <a name="call-and-media-controls-constants"></a>Aufrufe und mediensteuer Element Konstanten
+# <a name="call-and-media-controls-constants"></a>Aufruf- und Mediensteuerelemente-Konstanten
 
-TAPI-Funktionen,-Methoden und-Strukturen können die folgenden Konstanten verwenden:
+TAPI-Funktionen, -Methoden und -Strukturen können die folgenden Konstanten verwenden:
 
--   [**Lineadresssstype\_**](lineaddresstype--constants.md)
--   [**TAPI- \_ digitmode\_**](tapi-digitmode--constants.md)
+-   [**LINEADDRESSTYPE\_**](lineaddresstype--constants.md)
+-   [**TAPI \_ DIGITMODE\_**](tapi-digitmode--constants.md)
 -   [**TAPI \_ E\_**](tapi-e--constants.md)
--   [**Tapimediatype\_**](tapimediatype--constants.md)
--   [**Tapiprotocol\_**](tapiprotocol--constants.md)
--   [**Terminal Klasse**](terminal-class.md)
+-   [**TAPIMEDIATYPE\_**](tapimediatype--constants.md)
+-   [**TAPIPROTOCOL\_**](tapiprotocol--constants.md)
+-   [**Terminal-Klasse**](terminal-class.md)
 
  
 

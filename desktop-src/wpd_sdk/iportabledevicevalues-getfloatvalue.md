@@ -1,7 +1,7 @@
 ---
-description: Die getFloatValue-Methode ruft einen Gleit Komma Wert (Typ VT R4) ab, der \_ durch einen Schlüssel angegeben wird.
+description: Die GetFloatValue-Methode ruft einen FLOAT-Wert (Typ VT \_ R4) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: 8a134dfb-f671-4cde-ae35-c8a41be270cf
-title: 'Iportabledevicevalues:: getFloatValue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetFloatValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 0c99dcbb2d8436df7e3d593aa53efd086dc965ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 364b5de9bbf8b3c5bb307b7bbc0e11fc018393c301c0931e065331879ec096fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118430823"
 ---
-# <a name="iportabledevicevaluesgetfloatvalue-method"></a>Iportabledevicevalues:: getFloatValue-Methode
+# <a name="iportabledevicevaluesgetfloatvalue-method"></a>IPortableDeviceValues::GetFloatValue-Methode
 
-Die **getFloatValue** -Methode **Ruft einen Gleit** Komma Wert (Typ VT R4) ab, der \_ durch einen Schlüssel angegeben wird.
+Die **GetFloatValue-Methode** ruft einen **FLOAT-Wert** (Typ VT \_ R4) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetFloatValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **float** -Wert.
+Zeiger auf den abgerufenen **FLOAT-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                          |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Die Methode wurde erfolgreich ausgeführt.<br/>                                     |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>    | Die von *Key* angegebene Eigenschaft ist kein **float** -Typ.<br/>  |
-| <dl> <dt>**E- \_ Prop- \_ ID \_ nicht unterstützt**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/> |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>    | Die durch *key* angegebene Eigenschaft ist kein **FLOAT-Typ.**<br/>  |
+| <dl> <dt>**E \_ PROP \_ ID \_ UNSUPPORTED**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/> |
 
 
 
@@ -77,8 +77,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -86,10 +86,10 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug:: setfloatvalue**](iportabledevicevalues-setfloatvalue.md)
+[**IPortableDeviceValues::SetFloatValue**](iportabledevicevalues-setfloatvalue.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe count (Eigenschaft)
-description: Die Count-Eigenschaft ruft die Anzahl der Medienelemente in einer Wiedergabeliste ab.
+title: IWMPPlaylist count-Eigenschaft
+description: Die count-Eigenschaft ruft die Anzahl der Medienelemente in einer Wiedergabeliste ab.
 ms.assetid: dbff3c86-2d42-4d47-a5cb-b8199efac728
 keywords:
-- Anzahl der Eigenschaften Fenster Media Player
-- Count-Eigenschaft, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, Count-Eigenschaft
+- count-Windows Media Player
+- count-Eigenschaft Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56d988fefc436b65652d2b0765320ca289417c9c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aad690278b45563395c926adb4d0329bff8a01c7e8ace2f25ff3fefdb9c39cee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568695"
 ---
-# <a name="iwmpplaylistcount-property"></a>Iwmpwiedergabe:: count (Eigenschaft)
+# <a name="iwmpplaylistcount-property"></a>IWMPPlaylist::count-Eigenschaft
 
-Die **count** -Eigenschaft ruft die Anzahl der Medienelemente in einer Wiedergabeliste ab.
+Die **count-Eigenschaft** ruft die Anzahl der Medienelemente in einer Wiedergabeliste ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,13 +49,13 @@ Public ReadOnly Property count As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der Medienelemente in der Wiedergabeliste ist.
+Ein **System.Int32,** das die Anzahl der Medienelemente in der Wiedergabeliste ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [AttributeCount](wmplibiwmpplaylist-iwmpplaylist-attributecount--vb-and-c.md) -Eigenschaft.
+[Beispielcode, der diese](wmplibiwmpplaylist-iwmpplaylist-attributecount--vb-and-c.md) Eigenschaft verwendet, finden Sie in der attributeCount-Eigenschaft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [Attri
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,7 +73,7 @@ Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [Attri
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

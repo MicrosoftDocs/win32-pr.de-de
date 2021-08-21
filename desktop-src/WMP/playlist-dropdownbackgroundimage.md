@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. dropdownbackgroundimage
-description: Das dropdownbackgroundimage-Attribut gibt den Namen des Bilds an, das im Hintergrund der Dropdown Liste angezeigt wird, oder ruft ihn ab.
+title: PLAYLIST.dropDownBackgroundImage
+description: Das dropDownBackgroundImage-Attribut gibt den Namen des Bilds an, das im Hintergrund der Dropdownliste angezeigt wird, oder ruft diesen ab.
 ms.assetid: 40253d82-7178-4f6c-805b-7c1e92ea0636
 keywords:
-- Wiedergabeliste. dropdownbackgroundimage (Windows Media Player)
+- PLAYLIST.dropDownBackgroundImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23ac925d5c5b3985d04a9ad5afd622abae5042a3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a47f964e1aaa4b2d22a922d70ea41970b5c1ae667920dbebf49dd5e6cc1d4dff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571460"
 ---
-# <a name="playlistdropdownbackgroundimage"></a>Wiedergabeliste. dropdownbackgroundimage
+# <a name="playlistdropdownbackgroundimage"></a>PLAYLIST.dropDownBackgroundImage
 
-Das **dropdownbackgroundimage** -Attribut gibt den Namen des Bilds an, das im Hintergrund der Dropdown Liste angezeigt wird, oder ruft ihn ab.
+Das **dropDownBackgroundImage-Attribut** gibt den Namen des Bilds an, das im Hintergrund der Dropdownliste angezeigt wird, oder ruft diesen ab.
 
 ``` syntax
         elementID.dropDownBackgroundImage
@@ -29,11 +29,11 @@ Das **dropdownbackgroundimage** -Attribut gibt den Namen des Bilds an, das im Hi
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen einer Bilddatei enthält. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die den Namen einer Bilddatei enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut unterstützt PNG-, JPG-, BMP-und GIF-Dateien. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Dieses Attribut unterstützt PNG-, JPG-, BMP- und GIF-Dateien. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der Attribute **hueShift** und **saturation** dynamisch geändert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut unterstützt PNG-, JPG-, BMP-und GIF-Dateien. Wenn es sich bei d
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
@@ -49,16 +49,16 @@ Dieses Attribut unterstützt PNG-, JPG-, BMP-und GIF-Dateien. Wenn es sich bei d
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. dropdownimage**](playlist-dropdownimage.md)
+[**PLAYLIST.dropDownImage**](playlist-dropdownimage.md)
 </dt> <dt>
 
-[**Wiedergabeliste. hueshift**](playlist-hueshift.md)
+[**PLAYLIST.hueShift**](playlist-hueshift.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Sättigung**](playlist-saturation.md)
+[**PLAYLIST.saturation**](playlist-saturation.md)
 </dt> </dl>
 
  

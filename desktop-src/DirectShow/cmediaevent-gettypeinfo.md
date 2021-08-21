@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f93e3227051729f9d16e1f9ef8de464a14cca33b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3ef3f84cce1bad88b0f1103be3584ff350afac0fd7047b5a75a5fb473a4bedcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156988"
 ---
 # <a name="cmediaeventgettypeinfo-method"></a>CMediaEvent.GetTypeInfo-Methode
 
@@ -47,7 +47,7 @@ HRESULT GetTypeInfo(
 *itinfo* 
 </dt> <dd>
 
-Geben Sie die zurückzugebende Information ein. Übergeben Sie 0 (null), um Typinformationen für die **IDispatch-Implementierung** abzurufen.
+Geben Sie informationen ein, die zurückgegeben werden sollen. Übergeben Sie 0 (null), um Typinformationen für die **IDispatch-Implementierung** abzurufen.
 
 </dd> <dt>
 
@@ -73,14 +73,14 @@ Gibt einen E \_ POINTER zurück, wenn *pptinfo* ungültig ist. Gibt TYPE \_ E \_
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

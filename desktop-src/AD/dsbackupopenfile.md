@@ -1,10 +1,10 @@
 ---
-title: Dsbackupopenfile-Funktion (ntdsbcli. h)
-description: Öffnet die angegebene Datei und führt die Client-und Server Vorgänge aus, die erforderlich sind, um die Datei für die Sicherung vorzubereiten.
+title: DsBackupOpenFile-Funktion (Ntdsbcli.h)
+description: Öffnet die angegebene Datei und führt die Client- und Servervorgänge aus, die zum Vorbereiten der Datei für die Sicherung erforderlich sind.
 ms.assetid: 1ffb81ee-9e7e-4d88-91fc-f1857377d125
 ms.tgt_platform: multiple
 keywords:
-- Dsbackupopenfile-Funktion Active Directory
+- DsBackupOpenFile-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2f9c4eac9c9825f510848583d7f707a2c244c52
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b6331dc79a93e515d49c688bc8c5dd3b9e747cfbac91ace9c7685a219ae21e95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118430012"
 ---
-# <a name="dsbackupopenfile-function"></a>Dsbackupopenfile-Funktion
+# <a name="dsbackupopenfile-function"></a>DsBackupOpenFile-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dsbackupopenfile** -Funktion öffnet die angegebene Datei und führt die Client-und Server Vorgänge aus, die erforderlich sind, um die Datei für die Sicherung vorzubereiten.
+Die **DsBackupOpenFile-Funktion** öffnet die angegebene Datei und führt die Client- und Servervorgänge aus, die zum Vorbereiten der Datei für die Sicherung erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,51 +48,51 @@ HRESULT DsBackupOpenFile(
 
 <dl> <dt>
 
-*HBC* \[ in\]
+*hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Sicherungs Kontext Handle, das mit der [**dsbackupprepare**](dsbackupprepare.md) -Funktion abgerufen wurde.
+Enthält das Sicherungskontexthandle, das mit der [**DsBackupPrepare-Funktion**](dsbackupprepare.md) abgerufen wurde.
 
 </dd> <dt>
 
-*szattachmentname* \[ in\]
+*szAttachmentName* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen der Sicherungsdatei angibt, die geöffnet werden soll.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen der zu öffnenden Sicherungsdatei angibt.
 
 </dd> <dt>
 
-*cbreadhintsize* \[ in\]
+*cbReadHintSize* \[ In\]
 </dt> <dd>
 
-Enthält die mögliche Größe (in Bytes) des Puffers, der als *pvbuffer* -Argument in der [**dsbackupread**](dsbackupread.md) -Funktion übergeben wird. Die Sicherungsfunktionen verwenden diesen Wert als Hinweis, um den Netzwerk Datenverkehr zu optimieren. Dieser Wert muss ein Vielfaches von 8192 sein und muss größer oder gleich 24576 sein.
+Enthält die mögliche Größe des Puffers in Bytes, der als *pvBuffer-Argument* in der [**DsBackupRead-Funktion**](dsbackupread.md) übergeben wird. Die Sicherungsfunktionen verwenden diesen Wert als Hinweis, um den Netzwerkdatenverkehr zu optimieren. Dieser Wert muss ein Vielfaches von 8192 und größer oder gleich 24576 sein.
 
 </dd> <dt>
 
-*plifilesize* \[ vorgenommen\]
+*pliFileSize* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **großen \_ ganzzahligen** Wert, der die Größe der geöffneten Sicherungsdatei in Bytes empfängt.
+Zeiger auf einen **LARGE \_ INTEGER-Wert,** der die Größe der geöffneten Sicherungsdatei in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, andernfalls ein Win32-oder RPC-Fehlercode. In der folgenden Liste sind andere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist oder andernfalls ein Win32- oder RPC-Fehlercode vorliegt. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**Fehler \_ Zugriff \_ verweigert**
+**FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um diese Funktion aufzurufen. Die [**dssetauthidentity**](dssetauthidentity.md) -Funktion kann verwendet werden, um die Anmelde Informationen festzulegen, die für die Sicherungs-und Wiederherstellungs Funktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**Fehler bei \_ ungültigem \_ Parameter**
+**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-" *HBC*", " *szattachmentname*" oder " *plifilesize* " sind ungültig.
+*hbc,* *szAttachmentName* oder *pliFileSize* sind ungültig.
 
 </dd> </dl>
 
@@ -104,10 +104,10 @@ Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dsbackupopenfilew** (Unicode) und **dsbackupopenfilea** (ANSI)<br/>             |
+| Unicode- und ANSI-Name<br/>   | **DsBackupOpenFileW** (Unicode) und **DsBackupOpenFileA** (ANSI)<br/>             |
 
 
 
@@ -115,13 +115,13 @@ Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um 
 
 <dl> <dt>
 
-[**Dsbackupread**](dsbackupread.md)
+[**DsBackupRead**](dsbackupread.md)
 </dt> <dt>
 
-[Sichern eines Active Directory Servers](backing-up-an-active-directory-server.md)
+[Sichern eines Active Directory-Servers](backing-up-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  

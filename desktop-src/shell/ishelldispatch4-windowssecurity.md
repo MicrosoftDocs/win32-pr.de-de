@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch4.WindowsSecurity-Methode: Zeigt das Dialogfeld Windows-Sicherheit an.'
+description: 'IShellDispatch4.WindowsSecurity-Methode: Zeigt das Windows-Sicherheit an.'
 title: IShellDispatch4.WindowsSecurity-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 665c4644-7749-446e-8212-3ecc9901a035
-ms.openlocfilehash: 6eadb580c73e5e56592c94e997bdc22c2cf894b4
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 8142867d8d0423729794460a077a0f7f12d97f5d9744a119571d3ddd2b90a592
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720712"
 ---
 # <a name="ishelldispatch4windowssecurity-method"></a>IShellDispatch4.WindowsSecurity-Methode
 
-Zeigt das Dialogfeld **Windows-Sicherheit** an.
+Zeigt das **Windows-Sicherheit** Dialogfeld an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,10 +57,10 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt das Dialogfeld an, das angezeigt wird, nachdem Sie STRG+ALT+DELETE gedrückt oder die Sicherheitsoption im **Startmenü** verwendet haben.
+Diese Methode zeigt das Dialogfeld an, das nach dem Drücken von STRG+ALT+DELETE oder mithilfe der Sicherheitsoption im **Startmenü angezeigt** wird.
 
 > [!Note]  
-> Diese Methode kann nur verwendet werden, wenn sie von einer Terminalsitzung mit Microsoft Terminal Server verbunden ist.
+> Diese Methode kann nur verwendet werden, wenn eine Verbindung zwischen einer Terminalsitzung und Microsoft Terminal Server besteht.
 
  
 
@@ -68,7 +68,7 @@ Diese Methode zeigt das Dialogfeld an, das angezeigt wird, nachdem Sie STRG+ALT+
 
 Die folgenden Beispiele zeigen die Verwendung von **WindowsSecurity** für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -122,8 +122,8 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |

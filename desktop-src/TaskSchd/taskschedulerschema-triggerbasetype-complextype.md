@@ -1,9 +1,9 @@
 ---
-title: komplexer triggerbasetype-Typ
-description: Definiert das Attribut, die untergeordneten Basiselemente und die Sequenzierungs Informationen für alle komplexen Auslösertypen.
+title: 'TriggerBaseType : Komplexer Typ'
+description: Definiert das Attribut, untergeordnete Basiselemente und Sequenzierungsinformationen für alle komplexen Triggertypen.
 ms.assetid: 1a2d004a-6f52-42b7-b0d0-ace8d27e9166
 keywords:
-- komplexer triggerbasetype-Typ Taskplaner
+- komplexer triggerBaseType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 56602e4a7e6599b7b756ff6bc109376dddc63ac0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 21eed68ff260d199a46adabc0e560533658c6cc1398d00f9507b80b40fb69955
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118611011"
 ---
-# <a name="triggerbasetype-complex-type"></a>komplexer triggerbasetype-Typ
+# <a name="triggerbasetype-complex-type"></a>TriggerBaseType : Komplexer Typ
 
-Definiert das Attribut, die untergeordneten Basiselemente und die Sequenzierungs Informationen für alle komplexen Auslösertypen.
+Definiert das Attribut, untergeordnete Basiselemente und Sequenzierungsinformationen für alle komplexen Triggertypen.
 
 ``` syntax
 <xs:complexType name="triggerBaseType"
@@ -62,13 +62,13 @@ Definiert das Attribut, die untergeordneten Basiselemente und die Sequenzierungs
 
 
 
-| Element                                                                                      | type                                                                     | BESCHREIBUNG                                                                                                            |
+| Element                                                                                      | type                                                                     | Beschreibung                                                                                                            |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**Aktiviert**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der-Wert aktiviert ist.<br/>                                                                      |
-| [**Endgrenze**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Das Datum und die Uhrzeit der Deaktivierung des Auslösers.<br/>                                                          |
-| [**Executiontimelimit**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt das Intervall an, in dem der-Task den Task starten kann.<br/>                                                 |
-| [**Wiederholen**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Auslösen des Triggers wiederholt wird.<br/> |
-| [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Das Datum und die Uhrzeit der Aktivierung des Auslösers.<br/>                                                            |
+| [**Aktiviert**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der Trigger aktiviert ist.<br/>                                                                      |
+| [**EndBoundary**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Datum und Uhrzeit der Deaktivierung des Triggers.<br/>                                                          |
+| [**ExecutionTimeLimit**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt das Intervall an, in dem der Trigger die Aufgabe starten kann.<br/>                                                 |
+| [**Wiederholen**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, sobald der Trigger ausgelöst wird.<br/> |
+| [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Datum und Uhrzeit der Aktivierung des Triggers.<br/>                                                            |
 
 
 
@@ -78,21 +78,21 @@ Definiert das Attribut, die untergeordneten Basiselemente und die Sequenzierungs
 
 | Name | type | BESCHREIBUNG                           |
 |------|------|---------------------------------------|
-| id   | id   | Der Bezeichner des Auslösers.<br/> |
+| id   | ID   | Bezeichner des Triggers.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zu den komplexen Auslösertypen zählen die folgenden.
+Zu den komplexen Triggertypen gehören:
 
--   [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md)
--   [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md)
--   [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md)
--   [**idletriggertype**](taskschedulerschema-idletriggertype-complextype.md)
--   [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md)
--   [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md)
--   [**timetriggertype**](taskschedulerschema-timetriggertype-complextype.md)
+-   [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)
+-   [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)
+-   [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md)
+-   [**idleTriggerType**](taskschedulerschema-idletriggertype-complextype.md)
+-   [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md)
+-   [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md)
+-   [**timeTriggerType**](taskschedulerschema-timetriggertype-complextype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,16 +100,16 @@ Zu den komplexen Auslösertypen zählen die folgenden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Typen Taskplaner Schemas](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

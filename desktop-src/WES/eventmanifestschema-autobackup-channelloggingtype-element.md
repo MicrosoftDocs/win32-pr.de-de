@@ -1,9 +1,9 @@
 ---
-title: AutoBackup (channelloggingtype)-Element
-description: Bestimmt, ob eine neue Protokolldatei erstellt wird, wenn die aktuelle Protokolldatei die maximale Größe erreicht.
+title: autoBackup (ChannelLoggingType)-Element
+description: Bestimmt, ob eine neue Protokolldatei erstellt werden soll, wenn die aktuelle Protokolldatei ihre maximale Größe erreicht.
 ms.assetid: 708c5d44-d20b-437a-a01f-6182b244c736
 keywords:
-- AutoBackup-Element (EventLog)
+- autoBackup-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4d69c1a1c43be9d2376d94f39b3158e167f7bd13
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6190829ddfd0209db7dc023d353e8fad76e89b8c174b8aa91848260bfadbcc87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118842064"
 ---
-# <a name="autobackup-channelloggingtype-element"></a>AutoBackup (channelloggingtype)-Element
+# <a name="autobackup-channelloggingtype-element"></a>autoBackup (ChannelLoggingType)-Element
 
-Bestimmt, ob eine neue Protokolldatei erstellt wird, wenn die aktuelle Protokolldatei die maximale Größe erreicht.
+Bestimmt, ob eine neue Protokolldatei erstellt werden soll, wenn die aktuelle Protokolldatei ihre maximale Größe erreicht.
 
 ``` syntax
 <xs:element name="autoBackup"
@@ -30,7 +30,7 @@ Bestimmt, ob eine neue Protokolldatei erstellt wird, wenn die aktuelle Protokoll
  />
 ```
 
-Das **AutoBackup** -Element wird durch den komplexen Typ [**channelloggingtype**](eventmanifestschema-channelloggingtype-complextype.md) definiert.
+Das **autoBackup-Element** wird vom komplexen [**ChannelLoggingType-Typ**](eventmanifestschema-channelloggingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **AutoBackup** -Element wird durch den komplexen Typ [**channelloggingtype**
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **AutoBackup** -Element wird durch den komplexen Typ [**channelloggingtype**
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Protokollierung (channelType)**](eventmanifestschema-logging-channeltype-element.md)
+[**logging (ChannelType)**](eventmanifestschema-logging-channeltype-element.md)
 </dt> </dl>
 
  

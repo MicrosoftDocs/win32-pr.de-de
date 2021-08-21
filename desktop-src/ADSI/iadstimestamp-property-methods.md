@@ -1,10 +1,10 @@
 ---
-title: Iadstimestamp-Eigenschaften Methoden (IADs. h)
-description: Die Property-Methode der iadstimestamp-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsTimestamp-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsTimestamp-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 0f00d270-3c11-4c60-95b3-178130e31caa
 ms.tgt_platform: multiple
 keywords:
-- Iadstimestamp-Eigenschaften Methoden ADSI
+- IADsTimestamp-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a77db7a6a3b3814cd10beca5da5e3166ab1b61a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4a105a2ba246c38b7cf6c5bdd1c7420096397e294bb29d5bed446b31d3ca9763
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118427567"
 ---
-# <a name="iadstimestamp-property-methods"></a>Iadstimestamp-Eigenschaften Methoden
+# <a name="iadstimestamp-property-methods"></a>IADsTimestamp-Eigenschaftsmethoden
 
-Die Property-Methode der [**iadstimestamp**](/windows/desktop/api/Iads/nn-iads-iadstimestamp) -Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsTimestamp-Schnittstelle legt**](/windows/desktop/api/Iads/nn-iads-iadstimestamp) die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -46,7 +46,7 @@ Ein Ereignisbezeichner.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -64,17 +64,17 @@ HRESULT put_EventID(
 
 </dt> </dl> </dd> <dt>
 
-**Großhandels-econds**
+**WholeSeconds**
 </dt> <dd> <dl>
 
-Anzahl von Sekunden, wobei der Wert 0 (null) 12:00 Uhr, Januar 1970, UTC ist.
+Anzahl von Sekunden mit 0 (null) 12:00 Uhr, Januar 1970, UTC.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -102,9 +102,9 @@ HRESULT put_WholeSeconds(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadstimestamp ist als B2F5A901-4080-11d1-A3AC-00C04FB950DC definiert.<br/>        |
+| IID<br/>                      | IID \_ IADsTimestamp ist als B2F5A901-4080-11D1-A3AC-00C04FB950DC definiert.<br/>        |
 
 
 
@@ -115,7 +115,7 @@ HRESULT put_WholeSeconds(
 [**IADsTimestamp**](/windows/desktop/api/Iads/nn-iads-iadstimestamp)
 </dt> <dt>
 
-[**Werbe \_ Zeitstempel**](/windows/win32/api/iads/ns-iads-ads_timestamp)
+[**ADS \_ TIMESTAMP**](/windows/win32/api/iads/ns-iads-ads_timestamp)
 </dt> </dl>
 
  

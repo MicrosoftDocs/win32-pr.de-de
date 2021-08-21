@@ -1,25 +1,25 @@
 ---
-description: In den Tabellen der Gruppe Systemtabellen werden die Tabellen und Spalten der-Installations Datenbank nachverfolgt.
+description: Die Tabellen der Systemtabellengruppe verfolgen die Tabellen und Spalten der Installationsdatenbank nach.
 ms.assetid: d20be8b6-f456-4f90-aa9e-dc122c20d20c
-title: System Tabellen Gruppe
+title: Systemtabellengruppe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 482333ec3f6f483d431aced9a984c7db1ae5cef4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c05bfd06bcff049d2aea847a2bb8d0c4c3fc3d1443a615f75912ac7d4f86d73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118623919"
 ---
-# <a name="system-tables-group"></a>System Tabellen Gruppe
+# <a name="system-tables-group"></a>Systemtabellengruppe
 
-In den Tabellen der Gruppe Systemtabellen werden die Tabellen und Spalten der-Installations Datenbank nachverfolgt.
+Die Tabellen der Systemtabellengruppe verfolgen die Tabellen und Spalten der Installationsdatenbank nach.
 
--   In der [ \_ Tabelle](-tables-table.md) Tabellen werden alle Tabellen in der-Datenbank nachverfolgt. Dies schließt Tabellen ein, die Sie möglicherweise für Ihre eigenen benutzerdefinierten Aktionen erstellt haben. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
--   In der [ \_ Spalten Tabelle](-columns-table.md) werden die Spalten in der-Installations Datenbank nachverfolgt. Temporäre Spalten werden zurzeit von dieser Tabelle nicht nachverfolgt. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine bestimmte Spalte vorhanden ist.
--   In der [ \_ Tabelle Streams](-streams-table.md) werden eingebettete OLE-Datenströme aufgelistet.
--   In der [ \_ Tabelle Storages](-storages-table.md) werden eingebettete OLE-Datenspeicher aufgelistet.
--   Die [ \_ Validierungs Tabelle](-validation-table.md). \_In der Validierungs Tabelle werden die Typen und die zulässigen Bereiche aller Spalten in der Datenbank nachverfolgt. Die \_ Validierungs Tabelle wird während des Daten Bank Überprüfungsprozesses verwendet, um sicherzustellen, dass alle Spalten berücksichtigt werden und die richtigen Werte aufweisen. Diese Tabelle wird nicht mit der Installer-Datenbank ausgeliefert.
+-   Die [ \_ Tabelle Tables](-tables-table.md) verfolgt alle Tabellen in der Datenbank nach. Dies schließt Tabellen ein, die Sie möglicherweise für Ihre eigenen benutzerdefinierten Aktionen erstellt haben. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
+-   In [ \_ der Tabelle Spalten](-columns-table.md) werden Spalten in der Installationsdatenbank verfolgt. Temporäre Spalten werden derzeit von dieser Tabelle nicht nachverfolgt. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine bestimmte Spalte vorhanden ist.
+-   In [ \_ Streams Tabelle werden](-streams-table.md) eingebettete OLE-Datenströme aufgeführt.
+-   In [ \_ der Tabelle Speicher werden](-storages-table.md) eingebettete OLE-Datenspeicher aufgeführt.
+-   Die [ \_ Validierungstabelle](-validation-table.md). In \_ der Tabelle Überprüfung werden die Typen und zulässigen Bereiche jeder Spalte in der Datenbank verfolgt. Die Validierungstabelle wird während des Datenbankvalidierungsprozesses verwendet, um sicherzustellen, dass alle Spalten berücksichtigt werden und \_ die richtigen Werte haben. Diese Tabelle ist nicht im Lieferumfang der Installer-Datenbank enthalten.
 
  
 

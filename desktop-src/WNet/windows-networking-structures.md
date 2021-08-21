@@ -1,31 +1,31 @@
 ---
-title: Windows-Netzwerkstrukturen
-description: Die folgenden Strukturen werden in Windows-Netzwerken verwendet.
+title: Windows Netzwerkstrukturen
+description: Die folgenden Strukturen werden in Windows Netzwerk verwendet.
 ms.assetid: 7969ccbb-d1ae-4a1f-8b9c-862cc6ddef1a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4b3408eca004c9d18105afb5fcf4df78a54c3bc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bae680c162e318aa0a887e00fc2846e31948c772d15eb2e9fb02f8f58c78ab86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566451"
 ---
-# <a name="windows-networking-structures"></a>Windows-Netzwerkstrukturen
+# <a name="windows-networking-structures"></a>Windows Netzwerkstrukturen
 
-Die folgenden Strukturen werden in Windows-Netzwerken verwendet:
+Die folgenden Strukturen werden in Windows Netzwerk verwendet:
 
 <dl>
 
-[**Connectdlgstruct**](/windows/win32/api/winnetwk/ns-winnetwk-connectdlgstructa)  
-[**Discdlgstruct**](/windows/win32/api/winnetwk/ns-winnetwk-discdlgstructa)  
-[**Netconnectinfostruct**](/windows/desktop/api/Winnetwk/ns-winnetwk-netconnectinfostruct)  
-[**Netinfostruct**](/windows/win32/api/winnetwk/ns-winnetwk-netinfostruct)  
-[**"Nettresource"**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea)  
-[**Remote \_ Name \_ Info**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa)  
-[**Informationen zum universellen \_ Namen \_**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa)  
+[**CONNECTDLGSTRUCT**](/windows/win32/api/winnetwk/ns-winnetwk-connectdlgstructa)  
+[**DISCDLGSTRUCT**](/windows/win32/api/winnetwk/ns-winnetwk-discdlgstructa)  
+[**NETCONNECTINFOSTRUCT**](/windows/desktop/api/Winnetwk/ns-winnetwk-netconnectinfostruct)  
+[**NETINFOSTRUCT**](/windows/win32/api/winnetwk/ns-winnetwk-netinfostruct)  
+[**NETRESOURCE**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea)  
+[**\_ \_ REMOTENAME-INFORMATIONEN**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa)  
+[**UNIVERSELLE \_ \_ NAMENSINFORMATIONEN**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa)  
 </dl>
 
- 
+ 
 
- 
+ 

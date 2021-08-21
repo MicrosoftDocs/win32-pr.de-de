@@ -1,32 +1,32 @@
 ---
-title: Registrierungs Einstellungen für den Firewallport
-description: Registrierungs Einstellungen für den Firewallport
+title: firewall port registry Einstellungen
+description: firewall port registry Einstellungen
 ms.assetid: 86995f2c-8794-45da-9dca-9cdd388b2a21
 keywords:
-- Windows Media Player, Registrierungs Einstellungen für Firewallports
-- Windows Media Player, Port Registrierungs Einstellungen
-- Windows Media Player, Registrierung
-- Registrierung, firewallporteinstellungen
-- Registrierung, Port Einstellungen
-- Registrierung, Einstellungen für Windows-Media Player
-- Registrierungs Einstellungen für den Firewallport
-- Port Registrierungs Einstellungen
+- Windows Media Player,Firewallportregistrierungseinstellungen
+- Windows Media Player, Portregistrierungseinstellungen
+- Windows Media Player,Registrierung
+- Registrierung, Firewallporteinstellungen
+- Registrierung, Porteinstellungen
+- Registrierung, Einstellungen für Windows Media Player
+- Firewallportregistrierungseinstellungen
+- Portregistrierungseinstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e231732e8d62efce575ae3fdee5edc63975f23c9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 140f55a4008a03c2b3bc4184e2eca92129a5e30dc69f0871da856b4555daec73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118576767"
 ---
-# <a name="firewall-port-registry-settings"></a>Registrierungs Einstellungen für den Firewallport
+# <a name="firewall-port-registry-settings"></a>firewall port registry Einstellungen
 
-Windows Media Player fügt Einträge in die Registrierung ein, damit Firewalls feststellen können, ob die von der Medien Bibliotheks Freigabe verwendeten Ports geöffnet oder geschlossen werden.
+Windows Media Player platziert Einträge in der Registrierung, sodass Firewalls bestimmen können, ob die von der Medienbibliotheksfreigabe verwendeten Ports geöffnet oder geschlossen werden sollen.
 
-**Registrierungs Eintrag "akzeptede"**
+**AkzeptierterEULA-Registrierungseintrag**
 
-Windows Media Player verwendet den folgenden Registrierungs Eintrag, um anzugeben, ob der Benutzer den Endbenutzer-Lizenzvertrag (EULA) akzeptiert hat.
+Windows Media Player verwendet den folgenden Registrierungseintrag, um anzugeben, ob der Benutzer dem Endbenutzer-Lizenzvertrag (EULA) zugestimmt hat.
 
 
 ```C++
@@ -36,11 +36,11 @@ Windows Media Player verwendet den folgenden Registrierungs Eintrag, um anzugebe
 
 
 
-Der Wert 1 gibt an, dass der Benutzer den Lizenzvertrag akzeptiert hat. Der Wert 0 gibt an, dass der Benutzer den Lizenzvertrag nicht akzeptiert hat.
+Der Wert 1 gibt an, dass der Benutzer dem Lizenzvertrag zugestimmt hat. Der Wert 0 gibt an, dass der Benutzer dem Lizenzvertrag nicht zugestimmt hat.
 
-**Wmpnssfirewallportsopen-Registrierungs Eintrag**
+**WMPNSSFirewallPortsRegistrierungseintragöffnen**
 
-Windows Media Player verwendet den folgenden Registrierungs Eintrag, um anzugeben, ob der Benutzer seine Medienbibliothek auf anderen Computern in einem Heimnetzwerk freigeben möchte.
+Windows Media Player verwendet den folgenden Registrierungseintrag, um anzugeben, ob der Benutzer seine Medienbibliothek für andere Computer in einem Heimnetzwerk freigegeben hat.
 
 
 ```C++
@@ -50,69 +50,69 @@ Windows Media Player verwendet den folgenden Registrierungs Eintrag, um anzugebe
 
 
 
-Der Wert 1 gibt an, dass der Benutzer die Bibliothek freigegeben hat. Der Wert 0 gibt an, dass der Benutzer die Bibliothek nicht freigeben möchte.
+Der Wert 1 gibt an, dass der Benutzer die Freigabe der Bibliothek ausgewählt hat. Der Wert 0 gibt an, dass der Benutzer die Bibliothek nicht freigegeben hat.
 
-**Ports im Zusammenhang mit der Medien Bibliotheks Freigabe**
+**Ports im Zusammenhang mit der Medienbibliotheksfreigabe**
 
-Wenn unter Windows Vista der Registrierungs Eintrag **wmpnssfirewallportsopen** den Wert 1 aufweist, sollten die folgenden Ports geöffnet sein.
+Wenn der Registrierungseintrag **WMPNSSFirewallPortsOpen** auf Windows Vista den Wert 1 hat, sollten die folgenden Ports geöffnet sein.
 
 
 
-| Port          | Protocol                  | Prozess                         | Richtung            |
+| Port          | Protocol                  | Prozess                         | Direction            |
 |---------------|---------------------------|---------------------------------|----------------------|
-| 554           | TCP-RTSP                  | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 8554-8558   | TCP-RTSP                  | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 5004, 5005    | UDP RTCP/RTP              | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 50004-50013 | UDP RTCP/RTP              | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 1.900          | UDP-SSDP                  | SSDPSRV in svchost.exe          | eingehende und ausgehende Daten |
-| 2869          | TCP SSDP, UPnP            | SSDPSRV/UPnPHost in svchost.exe | stadteinwärts              |
-| 10280-10284 | UDP WMDRM-ND-Registrierung | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 10243         | TCP http                  | wmpnetwk.exe                    | stadteinwärts              |
-| 2177          | TCP-UDP-qWave             | svchost.exe                     | eingehende und ausgehende Daten |
+| 554           | TCP RTSP                  | wmpnetwk.exe                    | eingehend und ausgehend |
+| 8554 - 8558   | TCP RTSP                  | wmpnetwk.exe                    | eingehend und ausgehend |
+| 5004, 5005    | UDP RTCP/RTP              | wmpnetwk.exe                    | eingehend und ausgehend |
+| 50004 - 50013 | UDP RTCP/RTP              | wmpnetwk.exe                    | eingehend und ausgehend |
+| 1.900          | UDP SSDP                  | SSDPsrv in svchost.exe          | eingehend und ausgehend |
+| 2869          | TCP SSDP, UPnP            | SSDPsrv/UPnPHost in svchost.exe | stadteinwärts              |
+| 10280 - 10284 | UDP WMDRM-ND-Registrierung | wmpnetwk.exe                    | eingehend und ausgehend |
+| 10243         | TCP-HTTP                  | wmpnetwk.exe                    | stadteinwärts              |
+| 2177          | TCP UDP qWAVE             | svchost.exe                     | eingehend und ausgehend |
 
 
 
- 
+ 
 
-Wenn unter Windows Vista der Registrierungs Eintrag " **akzeptedeula** " den Wert 1 aufweist, sollten die folgenden Ports geöffnet sein.
+Wenn der **Registrierungseintrag AcceptedEULA** auf Windows Vista den Wert 1 hat, sollten die folgenden Ports geöffnet sein.
 
 
 
-| Port          | Protocol       | Prozess                         | Richtung            |
+| Port          | Protocol       | Prozess                         | Direction            |
 |---------------|----------------|---------------------------------|----------------------|
-| Alle UDP-Ports | UDP RTP, MSB   | wmplayer.exe, alle Subnetze        | stadteinwärts              |
-| 1.900          | UDP-SSDP       | SSDPSRV/UPnPHost in svchost.exe | eingehende und ausgehende Daten |
-| 2869          | TCP SSDP, UPnP | SSDPSRV, UPnPHost               | stadteinwärts              |
+| Alle UDP-Ports | UDP RTP, MSB   | wmplayer.exe, beliebiges Subnetz        | stadteinwärts              |
+| 1.900          | UDP SSDP       | SSDPsrv/UPnPHost in svchost.exe | eingehend und ausgehend |
+| 2869          | TCP SSDP, UPnP | SSDPsrv, UPnPHost               | stadteinwärts              |
 
 
 
- 
+ 
 
-Wenn unter Microsoft Windows XP der Registrierungs Eintrag **wmpnssfirewallportsopen** den Wert 1 aufweist, sollten die folgenden Ports geöffnet sein.
+Wenn der Registrierungseintrag **WMPNSSFirewallPortsOpen** in Microsoft Windows XP den Wert 1 hat, sollten die folgenden Ports geöffnet sein.
 
 
 
-| Port          | Protocol                  | Prozess                         | Richtung            |
+| Port          | Protocol                  | Prozess                         | Direction            |
 |---------------|---------------------------|---------------------------------|----------------------|
-| 1.900          | UDP-SSDP                  | SSDPSRV in svchost.exe          | eingehende und ausgehende Daten |
-| 2869          | TCP SSDP, UPnP            | SSDPSRV/UPnPHost in svchost.exe | stadteinwärts              |
-| 10280-10284 | UDP WMDRM-ND-Registrierung | wmpnetwk.exe                    | eingehende und ausgehende Daten |
-| 10243         | TCP http                  | wmpnetwk.exe                    | stadteinwärts              |
+| 1.900          | UDP SSDP                  | SSDPsrv in svchost.exe          | eingehend und ausgehend |
+| 2869          | TCP SSDP, UPnP            | SSDPsrv/UPnPHost in svchost.exe | stadteinwärts              |
+| 10280 - 10284 | UDP WMDRM-ND-Registrierung | wmpnetwk.exe                    | eingehend und ausgehend |
+| 10243         | TCP-HTTP                  | wmpnetwk.exe                    | stadteinwärts              |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Registrierungs Einstellungen**](registry-settings.md)
+[**Registrierungseinstellungen**](registry-settings.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

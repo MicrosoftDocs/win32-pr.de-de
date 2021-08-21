@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings baseurl (Eigenschaft)
-description: Die baseurl-Eigenschaft ruft die Basis-URL ab oder legt Sie fest, die für die relative Pfad Auflösung mit URL-Skript Befehlen verwendet wird, die in Inhalte digitaler Medien eingebettet sind
+title: IWMPSettings baseURL-Eigenschaft
+description: Die baseURL-Eigenschaft ruft die Basis-URL ab, die für die relative Pfadauflösung mit URL-Skriptbefehlen verwendet wird, die in digitale Medieninhalte eingebettet sind, oder legt diese fest.
 ms.assetid: e136303f-ba08-434f-ad7e-9fffa66785c4
 keywords:
-- baseurl-Eigenschaften Fenster Media Player
-- baseurl-Eigenschaft, Windows Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows Media Player, baseurl-Eigenschaft
+- baseURL-Windows Media Player
+- baseURL-Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , baseURL-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 393575a93bf904f6fe312b13647ad5a7557b15bc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3224a43a2689fd49dee2b2a66cc768250b1a829e61863d8cfbd029e3cdf783c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118568418"
 ---
-# <a name="iwmpsettingsbaseurl-property"></a>Iwmpsettings:: baseurl (Eigenschaft)
+# <a name="iwmpsettingsbaseurl-property"></a>IWMPSettings::baseURL-Eigenschaft
 
-Die **baseurl** -Eigenschaft ruft die Basis-URL ab oder legt Sie fest, die für die relative Pfad Auflösung mit URL-Skript Befehlen verwendet wird, die in Inhalte digitaler Medien eingebettet sind
+Die **baseURL-Eigenschaft** ruft die Basis-URL ab, die für die relative Pfadauflösung mit URL-Skriptbefehlen verwendet wird, die in digitale Medieninhalte eingebettet sind, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ Public Property baseURL As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. String** -Wert, der die Basis-URL ist.
+Eine **System.String,die** die Basis-URL ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt die Basis-http-URL an, die vom **AxWindowsMediaPlayer \_ wmpocxevents \_ scriptcommandevent** -Ereignis als Befehlsparameter übergeben wird. Die Basis-URL wird wie folgt mit der relative URL verkettet:
+Diese Eigenschaft gibt die HTTP-Basis-URL an, die vom **AxWindowsMediaPlayer \_ WMPOCXEvents \_ ScriptCommandEvent-Ereignis als Befehlsparameter übergeben** wird. Die Basis-URL wird wie folgt mit relative URL verkettet:
 
-1.  Dem Wert, der von der **baseurl** -Eigenschaft abgerufen wird, wird ein nach stehender Schrägstrich (/) hinzugefügt.
-2.  Ein führender Zeitraum, ein umgekehrter Schrägstrich oder ein Schrägstrich (., \\ , und/) wird aus der relative URL gelöscht.
-3.  Der relative URL wird am Ende der Basis-URL hinzugefügt.
-4.  Alle Schrägstriche in der resultierenden voll qualifizierten URL werden in der gleichen Richtung (konvertiert in vorwärts-oder rückwärts Schrägstriche) basierend auf der Richtung des ersten Schrägstrichs in der neuen URL gezeigt.
+1.  Dem wert, der von der **baseURL-Eigenschaft** abgerufen wird, wird ein nachgeschlagener Schrägstrich (/) hinzugefügt.
+2.  Ein führender Zeitraum, rückwärts gerichteter Schrägstrich oder Schrägstrich (., und /) wird aus der \\ relative URL.
+3.  Die relative URL wird am Ende der Basis-URL hinzugefügt.
+4.  Alle Schrägstriche in der resultierenden vollqualifizierten URL werden in derselben Richtung angezeigt (konvertiert in Schrägstriche oder rückwärts), basierend auf der Richtung des ersten Schrägstrichs in der neuen URL.
 
 **Hinweis**
 
-Das Windows Media Player-Steuerelement unterstützt nicht die Verwendung von zwei Punkten (..) in der relative URL, um das übergeordnete Element des aktuellen Speicher Orts anzugeben.
+Das Windows Media Player-Steuerelement unterstützt nicht die Verwendung von zwei Zeiträumen (..) in der relative URL, um das übergeordnete Element des aktuellen Speicherorts anzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,14 +73,14 @@ Das Windows Media Player-Steuerelement unterstützt nicht die Verwendung von zwe
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. ScriptCommand-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-scriptcommand.md)
+[**AxWindowsMediaPlayer.ScriptCommand-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-scriptcommand.md)
 </dt> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> </dl>
 
  

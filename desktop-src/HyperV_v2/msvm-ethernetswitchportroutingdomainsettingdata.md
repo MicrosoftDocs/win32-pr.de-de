@@ -1,5 +1,5 @@
 ---
-description: Stellt die Daten der Routing Domänen Einstellung dar.
+description: Stellt die Routingdomäneneinstellungsdaten dar.
 ms.assetid: 6216cc4e-b2aa-4344-b8fa-489b986c14be
 title: Msvm_EthernetSwitchPortRoutingDomainSettingData-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 40e16a3c952e63ab89c345201742dafe24cdde7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0bc01c7e771996d46c29b0f6341e3a535860c4c36996562e7e526ca5db59a2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119523840"
 ---
-# <a name="msvm_ethernetswitchportroutingdomainsettingdata-class"></a>MSVM \_ ethernetzwitchportroutingdomainsettingdata-Klasse
+# <a name="msvm_ethernetswitchportroutingdomainsettingdata-class"></a>Msvm \_ EthernetSwitchPortRoutingDomainSettingData-Klasse
 
-Stellt die Daten der Routing Domänen Einstellung dar.
+Stellt die Routingdomäneneinstellungsdaten dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -45,77 +45,77 @@ class Msvm_EthernetSwitchPortRoutingDomainSettingData : Msvm_EthernetSwitchPortF
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportroutingdomainsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortRoutingDomainSettingData-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportroutingdomainsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortRoutingDomainSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Isolationidlist**
+**IsolationIdList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32** Array
+Datentyp: **uint32-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (3), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Die virtualsubnettid-oder VLAN-IDs für die Routing Domänen.
+Die VirtualSubnetId- oder VLAN-IDs für die Routingdomänen.
 
 </dd> <dt>
 
-**Isolationidnamelist**
+**IsolationIdNameList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (4), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Das Array "virtualsubnettid" oder "VLAN-Anzeige Name".
+Das Anzeigenamenarray VirtualSubnetId oder VLAN.
 
 </dd> <dt>
 
-**Routingdomainguid**
+**RoutingDomainGuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (38), **wmidataid** (1), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (38), **WmiDataId** (1), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Die GUID der Routing Domäne.
+Die Routingdomänen-GUID.
 
 </dd> <dt>
 
-**Routingdomainname**
+**RoutingDomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **wmidataid** (2), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (127), **WmiDataId** (2), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Der Anzeige Name der Routing Domäne.
+Der Anzeigename der Routingdomäne.
 
 </dd> </dl>
 
@@ -127,8 +127,8 @@ Der Anzeige Name der Routing Domäne.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -137,7 +137,7 @@ Der Anzeige Name der Routing Domäne.
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)
 </dt> </dl>
 
  

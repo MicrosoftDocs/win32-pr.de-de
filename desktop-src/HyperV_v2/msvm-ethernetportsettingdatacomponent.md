@@ -1,5 +1,5 @@
 ---
-description: Eine Zuordnung, die verwendet wird, um &\# 0034; Teil&\# 0034; Beziehungen zwischen einer Instanz von MSVM \_ ethernetportzuordcationsettingdata und einer oder mehreren Instanzen von MSVM \_ ethernettionwitchfeaturesettingdata herzustellen.
+description: Eine Zuordnung, die verwendet wird, um &0034;Teil von&0034; Beziehungen zwischen einer Instanz von Msvm EthernetPortAllocationSettingData und mindestens einer Instanz von \# \# \_ Msvm \_ EthernetSwitchFeatureSettingData zu erstellen.
 ms.assetid: fab15342-a134-4d4a-9668-1272041614b9
 title: Msvm_EthernetPortSettingDataComponent-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1c00c056bd5095d945af12fde3556d92b9a2d7ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 989d734d4c59d710c737c218b22591517347a8f5e434ff99e195887cbb4b6774
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119524840"
 ---
-# <a name="msvm_ethernetportsettingdatacomponent-class"></a>MSVM \_ ethernetportsettingdatacomponent-Klasse
+# <a name="msvm_ethernetportsettingdatacomponent-class"></a>Msvm \_ EthernetPortSettingDataComponent-Klasse
 
-Eine Zuordnung, die verwendet wird, um Beziehungen zwischen einer Instanz eines [**MSVM- \_ ethernetportzuordnungsdateils**](msvm-ethernetportallocationsettingdata.md) und einer oder mehreren Instanzen eines [**MSVM- \_ ethernetzwitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md)herzustellen.
+Eine Zuordnung, die verwendet wird, um "Teil von"-Beziehungen zwischen einer Instanz von [**Msvm \_ EthernetPortAllocationSettingData**](msvm-ethernetportallocationsettingdata.md) und mindestens einer Instanz von [**Msvm \_ EthernetSwitchFeatureSettingData**](msvm-ethernetswitchfeaturesettingdata.md)zu erstellen.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_EthernetPortSettingDataComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ ethernetportsettingdatacomponent** " verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetPortSettingDataComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ ethernetportsettingdatacomponent** " verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetPortSettingDataComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ ethernetportzugecationsettingdata**](msvm-ethernetportallocationsettingdata.md)**
+Datentyp: **[ **Msvm \_ EthernetPortAllocationSettingData**](msvm-ethernetportallocationsettingdata.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse " \_ ethernetportzuweisung**](msvm-ethernetportallocationsettingdata.md) ", die den Ethernet-Port darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ EthernetPortAllocationSettingData-Klasse,**](msvm-ethernetportallocationsettingdata.md) die den Ethernetport darstellt.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)**
+Datentyp: **[ **Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse " \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md) ", die die auf den Port angewendeten Funktionseinstellungen darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ EthernetSwitchPortFeatureSettingData-Klasse,**](msvm-ethernetswitchportfeaturesettingdata.md) die die auf den Port angewendeten Featureeinstellungen darstellt.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein Verweis auf eine Instanz der [**MSVM-Klasse " \_ ethernetzwitchportfeaturese
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

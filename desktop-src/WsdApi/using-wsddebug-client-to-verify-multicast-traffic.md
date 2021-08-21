@@ -4,39 +4,39 @@ ms.assetid: 1b0943fb-076e-4feb-9a4f-36a06bdd19ae
 title: Verwenden des WSD-Debugclients zum Überprüfen des Multicastdatenverkehrs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a814ac97512ef4b0691c22d3238d151372023a7
-ms.sourcegitcommit: 59ec383331366f8a62c94bb88468ca03e95c43f8
+ms.openlocfilehash: 6831fa0583a4525c5df3a42d0ce4679d217f63e57e2c645ef429157fdf8cafbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107380664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118552327"
 ---
 # <a name="using-wsd-debug-client-to-verify-multicast-traffic"></a>Verwenden des WSD-Debugclients zum Überprüfen des Multicastdatenverkehrs
 
-Wenn sich der generische Host und der Client im Netzwerk sehen können, der tatsächliche Host und der Client jedoch nicht, liegt das Problem wahrscheinlich in den Nachrichten, die zwischen den Endpunkten über das Netzwerk gesendet werden. Weitere Informationen zum generischen Host und Client finden Sie unter [Verwenden eines generischen Hosts und Clients für die UDP-WS-Ermittlung.](using-a-generic-host-and-client-for-udp-ws-discovery.md) Da vollständige Netzwerkablaufverfolgungen schwierig zu erfassen, zu filtern und zu lesen sind, kann das WSD-Debugclienttool zum Drucken der Multicastseiten WS-Discovery Nachrichten verwendet werden.
+Wenn sich der generische Host und der Client im Netzwerk sehen können, der tatsächliche Host und der Client jedoch nicht, liegt das Problem wahrscheinlich in den Nachrichten, die zwischen den Endpunkten über das Netzwerk gesendet werden. Weitere Informationen zum generischen Host und Client finden Sie unter [Verwenden eines generischen Hosts und Clients für die UDP-WS-Ermittlung.](using-a-generic-host-and-client-for-udp-ws-discovery.md) Da vollständige Netzwerkablaufverfolgungen schwierig zu erfassen, zu filtern und zu lesen sein können, kann das WSD-Debugclienttool verwendet werden, um die Multicastseiten WS-Discovery Nachrichten zu drucken.
 
-Der WSD-Debugclient im Multicastmodus kann nur die Hälfte der Nachrichten überprüfen, da der Client keine Unicastnachrichten drucken kann. Wenn Unicastdatenverkehr von Interesse ist, fahren Sie direkt mit [Inspecting Network Traces for UDP WS-Discovery (Untersuchen von Netzwerkablaufverfolgungen für die UDP-WS-Ermittlung)](inspecting-network-traces-for-udp-ws-discovery.md)über.
+Der WSD-Debugclient im Multicastmodus kann nur die Hälfte der Nachrichten überprüfen, da der Client keine Unicastnachrichten drucken kann. Wenn Unicastdatenverkehr von Interesse ist, fahren Sie direkt mit [Inspecting Network Traces for UDP WS-Discovery (Überprüfen von Netzwerkablaufverfolgungen für die UDP-WS-Ermittlung)](inspecting-network-traces-for-udp-ws-discovery.md)über.
 
 Dieses Verfahren zeigt eine Methode, die den gesamten Multicastdatenverkehr im Netzwerk anzeigt. Informationen zum Anzeigen von Multicastdatenverkehr zum und vom Gerät finden Sie weiter unten im Abschnitt Filtern von [WSD-Debugclientergebnissen.](#filtering-wsd-debug-client-results)
 
 **So verwenden Sie den WSD-Debugclient zum Überprüfen des Multicastdatenverkehrs**
 
-1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.)
+1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.
 2.  Öffnen Sie eine Eingabeaufforderung, und führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode multicast**
 3.  Reproduzieren Sie den Fehler, indem Sie host und client starten oder F5 im Netzwerk-Explorer drücken.
 4.  Überprüfen Sie, ob Nachrichten multicastiert werden.
 
 Wenn die erforderlichen Nachrichten in der Ausgabe des WSD-Debugclients angezeigt werden, kann sich der Anwendungsfehler im Inhalt der Multicastnachricht oder im Vorhandensein oder Inhalt der entsprechenden Unicastantwortnachrichten befinden. Fahren Sie mit der Problembehandlung fort, indem Sie die Anweisungen unter [Überprüfen von Netzwerkablaufverfolgungen für die UDP-WS-Ermittlung](inspecting-network-traces-for-udp-ws-discovery.md)befolgen.
 
-Wenn die erforderlichen Meldungen in der Ausgabe des WSD-Debugclients angezeigt werden, ist es wahrscheinlich, dass die Quelle des Anwendungsproblems identifiziert wurde. Es ist wahrscheinlich, dass der Multicastdatenverkehr nicht im Netzwerk übertragen wird. Dieser Fehler kann passieren, wenn die Anwendung Multicastadapter nicht ordnungsgemäß aufzählt. Anwendungen müssen explizit Multicastdatenverkehr über alle Netzwerkschnittstellen senden. Andernfalls werden pakete möglicherweise nicht für die Loopbackschnittstelle oder für andere Schnittstellen generiert. Um sicherzustellen, dass die Pakete nicht im Netzwerk angezeigt werden, befolgen Sie die Anweisungen unter Überprüfen von Netzwerkverfolgungen für [die UDP-WS-Ermittlung,](inspecting-network-traces-for-udp-ws-discovery.md) und suchen Sie nach Beweisen für fehlende Multicastnachrichten.
+Wenn die erforderlichen Meldungen in der Ausgabe des WSD-Debugclients angezeigt werden, ist es wahrscheinlich, dass die Ursache des Anwendungsproblems identifiziert wurde. Es ist wahrscheinlich, dass der Multicastdatenverkehr nicht im Netzwerk übertragen wird. Dieser Fehler kann auftreten, wenn die Anwendung Multicastadapter nicht ordnungsgemäß aufzählt. Anwendungen müssen multicast-Datenverkehr explizit über alle Netzwerkschnittstellen senden. Andernfalls werden Pakete möglicherweise nicht für die Loopbackschnittstelle oder für andere Schnittstellen generiert. Um zu überprüfen, ob die Pakete nicht im Netzwerk angezeigt werden, befolgen Sie die Anweisungen unter [Überprüfen von Netzwerkablaufverfolgungen für die UDP-WS-Ermittlung,](inspecting-network-traces-for-udp-ws-discovery.md) und suchen Sie nach Hinweisen auf fehlende Multicastnachrichten.
 
-## <a name="verifying-that-messages-are-being-multicast"></a>Überprüfen, ob Nachrichten Multicast verwenden
+## <a name="verifying-that-messages-are-being-multicast"></a>Überprüfen, ob Nachrichten multicastiert werden
 
-Vergewissern Sie sich [immer, dass](probe-message.md) Testnachrichten multicastt werden. Überprüfen Sie optional, ob [Hello-](hello-message.md) und [Resolve-Nachrichten](resolve-message.md) multicast sind. Beachten Sie, dass nicht alle Anwendungen Nachrichten auflösen verwenden. Weitere Informationen zu Nachrichtenmustern, die von Clients und Hosts verwendet werden, finden Sie unter Discovery [and Metadata Exchange Message Patterns](discovery-and-metadata-exchange-message-patterns.md) and Erste Schritte with [WSDAPI Troubleshooting](getting-started-with-wsdapi-troubleshooting.md).
+Überprüfen Sie immer, ob [Testnachrichten](probe-message.md) multicasting werden. Stellen Sie optional sicher, dass Die Nachrichten [Hello](hello-message.md) und [Resolve](resolve-message.md) multicast werden. Beachten Sie, dass nicht alle Anwendungen Resolve messages verwenden. Weitere Informationen zu Nachrichtenmustern, die von Clients und Hosts verwendet werden, finden Sie unter [Ermittlung und Metadaten Exchange Nachrichtenmustern](discovery-and-metadata-exchange-message-patterns.md) und Erste Schritte mit [WSDAPI Troubleshooting](getting-started-with-wsdapi-troubleshooting.md).
 
-Nachrichten müssen ausgelöst werden, um wie in Schritt 3 oben beschrieben gesendet zu werden. Der WSD-Debugclient zeigt die unformatierte SOAP-Nachricht als Ausgabe an. Da alle vom WSD-Debugclient im Multicastmodus gedruckten Nachrichten über einen Multicastsocket empfangen werden, wird die Nachrichtenzieladresse nicht angezeigt.
+Nachrichten müssen ausgelöst werden, damit sie wie in Schritt 3 oben beschrieben gesendet werden. Der WSD-Debugclient zeigt die unformatierte SOAP-Nachricht als Ausgabe an. Da alle vom WSD-Debugclient im Multicastmodus ausgegebenen Nachrichten über einen Multicastsocket empfangen werden, wird die Zieladresse der Nachricht nicht angezeigt.
 
-Die folgende Beispielausgabe des WSD-Debugclients zeigt eine Testmeldung. Das \<wsa:Action> -Element identifiziert die Nachricht als Testnachricht. Überprüfen Sie das \<wsa:Action> Feld, um sicherzustellen, dass die empfangene Nachricht eine Testnachricht war.
+Die folgende Beispielausgabe des WSD-Debugclients zeigt eine Testmeldung. Das \<wsa:Action> -Element identifiziert die Nachricht als Probe-Nachricht. Überprüfen Sie das \<wsa:Action> Feld, um zu überprüfen, ob es sich bei der empfangenen Nachricht um eine Testnachricht handelt.
 
 ``` syntax
 UDP message at 05/08/07 10:06:55 from soap.udp://[127.0.0.1:49334]
@@ -71,13 +71,13 @@ adataVersion>1</wsd:MetadataVersion></wsd:Hello></soap:Body></soap:Envelope>
 
 ## <a name="filtering-wsd-debug-client-results"></a>Filtern von WSD-Debugclientergebnissen
 
-Durch Filtern der Ergebnisse des WSD-Debugclients können Incidentdatenverkehr im Zusammenhang mit dem Gerät identifiziert werden. Filterung ist nur in lauten Netzwerken erforderlich.
+Das Filtern der Ergebnisse des WSD-Debugclients kann dabei helfen, Incidentdatenverkehr im Zusammenhang mit dem Gerät zu identifizieren. Filterung ist nur in lauten Netzwerken erforderlich.
 
 Es gibt zwei Möglichkeiten, Ergebnisse zu filtern. Die zu filternden IP-Adressen können beim Starten des WSD-Debugclients explizit identifiziert werden. Alternativ können die IP-Adressen angegeben werden, nachdem der Client gestartet wurde. In diesem Abschnitt werden beide Methoden beschrieben.
 
 **So geben Sie ip-Adressen an, die beim Starten des WSD-Debugclients gefiltert werden sollen**
 
-1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.)
+1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.
 2.  Erfassen Sie die IP-Adressen des Geräts. Wenn das Gerät über mehrere Adressen verfügt (z. B. sowohl IPv4- als auch IPv6-Adressen), müssen alle Adressen gesammelt werden.
 3.  Öffnen Sie eine Eingabeaufforderung, und führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode multicast /ip add***<device IP>*
 
@@ -91,13 +91,13 @@ Der WSD-Debugclient löst automatisch hostnames auf, die an der Eingabeaufforder
 
 **So filtern Sie ergebnisse nach dem Starten des WSD-Debugclients**
 
-1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.)
+1.  Konfigurieren Sie den Host und den Client so, dass sie über das Netzwerk ausgeführt werden .(Stellen Sie also sicher, dass der Host und der Client auf verschiedenen Computern ausgeführt werden.
 2.  Erfassen Sie die IP-Adressen des Geräts. Wenn das Gerät über mehrere Adressen verfügt (z. B. sowohl IPv4- als auch IPv6-Adressen), müssen alle Adressen gesammelt werden.
 3.  Öffnen Sie eine Eingabeaufforderung, und führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode multicast**
 4.  Führen Sie an der Eingabeaufforderung des WSD-Debugclients den folgenden Befehl aus: **ip add***<device IP>*
-5.  Wiederholen Sie Schritt 4, bis alle IP-Adressen des Geräts hinzugefügt wurden.
+5.  Wiederholen Sie Schritt 4, bis alle Geräte-IP-Adressen hinzugefügt wurden.
 
-Beim folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestartet wurde und eine Filterung nach IP-Adresse erfolgt.
+Im folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestartet wurde und eine Filterung nach IP-Adresse erfolgt.
 
 **So überprüfen Sie, ob die richtigen IP-Adressen gefiltert werden**
 
@@ -105,13 +105,13 @@ Beim folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestar
 
     Die Liste der ip-Adressen, die gefiltert werden, wird angezeigt.
 
-Beim folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestartet wurde und eine Filterung nach IP-Adresse erfolgt.
+Im folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestartet wurde und eine Filterung nach IP-Adresse erfolgt.
 
 **So deaktivieren Sie die Filterung**
 
 -   Führen Sie an der Eingabeaufforderung des WSD-Debugclients den folgenden Befehl aus: **ip clear**
 
-    Der ganze Multicastdatenverkehr wird nun in der Debugausgabe angezeigt.
+    Der gesamte Multicastdatenverkehr wird jetzt in der Debugausgabe angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -120,7 +120,7 @@ Beim folgenden Verfahren wird davon ausgegangen, dass der WSD-Debugclient gestar
 [WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)
 </dt> <dt>
 
-[Erste Schritte mit WSDAPI – Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+[Erste Schritte mit WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
 </dt> </dl>
 
  

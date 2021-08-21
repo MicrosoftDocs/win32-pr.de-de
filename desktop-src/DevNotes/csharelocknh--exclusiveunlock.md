@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Sperre frei, die mithilfe von exclusivelock f체r den freigegebenen Modus abgerufen wurde.
+description: Gibt eine Sperre frei, die mit ExclusiveLock im freigegebenen Modus aktiviert wurde.
 ms.assetid: d38354f0-2eb3-4924-99b5-1331e587ce32
-title: 'Csharelocknh:: exclusiveunlock-Methode'
+title: CShareLockNH::ExclusiveUnlock-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: f5fae5d6131bfcb386d52880b530f3def9464442
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 20d614f733b1668e3dea7619629cf2833f1d6af40384e679aea79a7a48279724
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118667836"
 ---
-# <a name="csharelocknhexclusiveunlock-method"></a>Csharelocknh:: exclusiveunlock-Methode
+# <a name="csharelocknhexclusiveunlock-method"></a>CShareLockNH::ExclusiveUnlock-Methode
 
-Gibt eine Sperre frei, die mithilfe von [**exclusivelock**](csharelocknh--exclusivelock.md) f체r den freigegebenen Modus abgerufen wurde.
+Gibt eine Sperre frei, die mit [**ExclusiveLock**](csharelocknh--exclusivelock.md) im freigegebenen Modus aktiviert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zur체ck.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder R체ckruf von [**exclusivelock**](csharelocknh--exclusivelock.md) muss mit genau einem R체ckruf von **exclusiveunlock** gekoppelt werden, um das Risiko eines Deadlocks zu vermeiden.
+Jeder Aufruf von [**ExclusiveLock**](csharelocknh--exclusivelock.md) muss mit genau einem Aufruf von **ExclusiveUnlock** gekoppelt werden, um das Risiko eines Deadlocks zu vermeiden.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,11 +57,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Exclusivelock**](csharelocknh--exclusivelock.md)
+[**ExclusiveLock**](csharelocknh--exclusivelock.md)
 </dt> </dl>
 
  

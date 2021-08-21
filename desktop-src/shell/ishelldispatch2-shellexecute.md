@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5c058275948d5d96805ae24a76389321d7c69b8e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8e524ea4a4422e92068d432a91165dfeb97155cfba1d5e6bd9a06ed75b7550cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118721035"
 ---
 # <a name="ishelldispatch2shellexecute-method"></a>IShellDispatch2.ShellExecute-Methode
 
@@ -98,20 +98,20 @@ Der Vorgang, der ausgeführt werden soll. Dieser Wert wird auf eine der Verbzeic
 
 Typ: **Variant**
 
-Eine Empfehlung, wie das Anwendungsfenster anfänglich angezeigt werden soll. Die Anwendung kann diese Empfehlung ignorieren. Dieser Parameter kann einen der folgenden Werte annehmen. Wenn dieser Parameter nicht angegeben ist, verwendet die Anwendung ihren Standardwert.
+Eine Empfehlung, wie das Anwendungsfenster anfänglich angezeigt werden soll. Die Anwendung kann diese Empfehlung ignorieren. Dieser Parameter kann einen der folgenden Werte annehmen. Wenn dieser Parameter nicht angegeben wird, verwendet die Anwendung ihren Standardwert.
 
 
 
 | Wert                                                                                                                               | Bedeutung                                                                                                                                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt></dt><dt>0 (0)</dt> </dl>  | Öffnen Sie die Anwendung mit einem ausgeblendeten Fenster.<br/>                                                                                                    |
-| <dl> <dt></dt> <dt>1</dt> </dl>  | Öffnen Sie die Anwendung in einem normalen Fenster. Wenn das Fenster minimiert oder maximiert ist, stellt das System es auf seine ursprüngliche Größe und Position wieder her.<br/> |
+| <dl> <dt></dt><dt>0</dt> </dl>  | Öffnen Sie die Anwendung mit einem ausgeblendeten Fenster.<br/>                                                                                                    |
+| <dl> <dt></dt> <dt>1</dt> </dl>  | Öffnen Sie die Anwendung mit einem normalen Fenster. Wenn das Fenster minimiert oder maximiert ist, stellt das System es auf seine ursprüngliche Größe und Position wieder zurück.<br/> |
 | <dl> <dt></dt> <dt>2</dt> </dl>  | Öffnen Sie die Anwendung mit einem minimierten Fenster.<br/>                                                                                                 |
 | <dl> <dt></dt> <dt>3</dt> </dl>  | Öffnen Sie die Anwendung mit einem maximierten Fenster.<br/>                                                                                                 |
-| <dl> <dt></dt><dt>4</dt> </dl>  | Öffnen Sie die Anwendung mit ihrem Fenster mit der neuesten Größe und Position. Das aktive Fenster bleibt aktiv.<br/>                                  |
+| <dl> <dt></dt><dt>4</dt> </dl>  | Öffnen Sie die Anwendung mit ihrem Fenster in der letzten Größe und Position. Das aktive Fenster bleibt aktiv.<br/>                                  |
 | <dl> <dt></dt><dt>5</dt> </dl>  | Öffnen Sie die Anwendung mit ihrem Fenster in ihrer aktuellen Größe und Position.<br/>                                                                        |
 | <dl> <dt></dt><dt>7</dt> </dl>  | Öffnen Sie die Anwendung mit einem minimierten Fenster. Das aktive Fenster bleibt aktiv.<br/>                                                               |
-| <dl> <dt></dt><dt>10</dt> </dl> | Öffnen Sie die Anwendung mit ihrem Fenster in dem von der Anwendung angegebenen Standardzustand.<br/>                                                       |
+| <dl> <dt></dt><dt>10</dt> </dl> | Öffnen Sie die Anwendung mit ihrem Fenster im von der Anwendung angegebenen Standardzustand.<br/>                                                       |
 
 
 
@@ -119,19 +119,19 @@ Eine Empfehlung, wie das Anwendungsfenster anfänglich angezeigt werden soll. Di
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.ShellExecute-Methode**](./shell-shellexecute.md) aufgerufen.
 
-Diese Methode entspricht dem Starten eines der Befehle, die dem Kontextmenü einer Datei zugeordnet sind. Jeder Befehl wird durch eine Verbzeichenfolge dargestellt. Die Gruppe der unterstützten Verben variiert von Datei zu Datei. Das am häufigsten unterstützte Verb ist "open", was in der Regel auch das Standardverb ist. Andere Verben werden möglicherweise nur von bestimmten Dateitypen unterstützt. Weitere Informationen zu Shellverben finden Sie unter [Starten von Anwendungen](launch.md) oder Erweitern von [Kontextmenüs.](context.md)
+Diese Methode entspricht dem Starten eines der Befehle, die dem Kontextmenü einer Datei zugeordnet sind. Jeder Befehl wird durch eine Verbzeichenfolge dargestellt. Die Gruppe der unterstützten Verben variiert von Datei zu Datei. Das am häufigsten unterstützte Verb ist "open", was in der Regel auch das Standardverb ist. Andere Verben werden möglicherweise nur von bestimmten Dateitypen unterstützt. Weitere Informationen zu Shellverben finden Sie unter [Starten von Anwendungen](launch.md) oder Erweitern von [Kontextmenüs](context.md).
 
 Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **ShellExecute zum** Öffnen des Editors gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
+Die folgenden Beispiele zeigen die Verwendung von **ShellExecute** zum Öffnen Editor. Die Verwendung wird für JScript VBScript angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -170,10 +170,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

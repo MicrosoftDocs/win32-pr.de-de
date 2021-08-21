@@ -1,11 +1,11 @@
 ---
-title: msSFU-30-MAX-UID-Number-Attribut
+title: msSFU-30-Max-Uid-Number-Attribut
 description: Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert werden können.
 ms.assetid: 76dca1aa-2c1c-4ba0-a76b-12c678278f56
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-MAX-UID-Number-Attribut, AD-Schema
-- msSFU30MaxUidNumber-Attribut AD-Schema
+- msSFU-30-Max-Uid-Number-Attribut AD-Schema
+- MSSFU30MaxUidNumber-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38ba4e4d3a4b85d6faf83386078aae413447bfc4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8f55ee108bb58ef3c4121ee06631f39f9430feeeda9795c062cec5fd0b089c91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118682496"
 ---
-# <a name="mssfu-30-max-uid-number-attribute"></a>msSFU-30-MAX-UID-Number-Attribut
+# <a name="mssfu-30-max-uid-number-attribute"></a>msSFU-30-Max-Uid-Number-Attribut
 
 Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert werden können.
 
@@ -29,11 +29,11 @@ Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert we
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msSFU-30-MAX-UID-Nummer              |
-| LDAP-Display-Name | msSFU30MaxUidNumber                  |
+| CN                | msSFU-30-Max-Uid-Number              |
+| Ldap-Anzeigename | msSFU30MaxUidNumber                  |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.343          |
 | System-ID-GUID    | ec998437-d944-4a28-8500-217588adfc75 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -55,16 +55,16 @@ Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert we
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert we
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert we
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -118,16 +118,16 @@ Enthält die maximale Anzahl von Benutzern, die zu einer NIS-Domäne migriert we
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 

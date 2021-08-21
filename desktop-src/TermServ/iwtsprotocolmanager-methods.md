@@ -1,34 +1,34 @@
 ---
-title: Iwtsprodecolmanager-Methoden
-description: Die iwtsprodecolmanager-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IWTSProtocolManager-Methoden
+description: Die IWTSProtocolManager-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 70FD41D7-5C47-4D64-97B7-F85DC3FEC563
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de5065ba63e62fdbca7ef4a6ebbf0bcee8d77185
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5eff667f2213fa94f39fb4dc734b0bedfeb59f6281e7b32a768734be0701aeec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118605585"
 ---
-# <a name="iwtsprotocolmanager-methods"></a>Iwtsprodecolmanager-Methoden
+# <a name="iwtsprotocolmanager-methods"></a>IWTSProtocolManager-Methoden
 
-\[Iwtsprodecolmanager steht nicht mehr zur Verwendung ab Windows Server 2012 zur Verfügung.\]
+\[IWTSProtocolManager ist ab diesem Zeitraum nicht mehr Windows Server 2012.\]
 
-Die [**iwtsprodecolmanager**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocolmanager) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWTSProtocolManager-Schnittstelle**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocolmanager) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Up-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-createlistener)
--   [**Notifyservicestatechange-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifyservicestatechange)
--   [**Notifysessionofservicestart-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionofservicestart)
--   [**Notifysessionofservicestop-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionofservicestop)
--   [**Notifysessionstatechange-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionstatechange)
+-   [**CreateListener-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-createlistener)
+-   [**NotifyServiceStateChange-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifyservicestatechange)
+-   [**NotifySessionOfServiceStart-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionofservicestart)
+-   [**NotifySessionOfServiceStop-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionofservicestop)
+-   [**NotifySessionStateChange-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocolmanager-notifysessionstatechange)
 
- 
+ 
 
- 
+ 
 
 
 

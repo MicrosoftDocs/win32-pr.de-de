@@ -1,11 +1,11 @@
 ---
-title: Trigger.Executiontimelimit-Eigenschaft
-description: Ruft bei der Skripterstellung die maximale Zeitspanne ab, die der vom-Aufruf gestartete Task ausgeführt werden darf, oder legt diese fest.
+title: Trigger.ExecutionTimeLimit-Eigenschaft
+description: Für die Skripterstellung ruft die maximale Zeitdauer ab, für die die vom Trigger gestartete Aufgabe ausgeführt werden darf, oder legt diese fest.
 ms.assetid: 9993b362-f8f7-429b-a16a-1845d6f0f5e0
 keywords:
-- Executiontimelimit-Eigenschaft Taskplaner
-- Executiontimelimit-Eigenschaft Taskplaner, Auslöserobjekt
-- Auslöse Objekt Taskplaner, executiontimelimit-Eigenschaft
+- ExecutionTimeLimit-Taskplaner
+- ExecutionTimeLimit-Eigenschaft Taskplaner , Triggerobjekt
+- Triggerobjekt Taskplaner , ExecutionTimeLimit-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 974a9adebf8ca29fe8626c938c37580d0628771b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 724cc80a1d3bf35d00aff1eba220d657723ee8c5ed8ddb3c95474cf0534bff79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118857073"
 ---
-# <a name="triggerexecutiontimelimit-property"></a>Trigger.Executiontimelimit-Eigenschaft
+# <a name="triggerexecutiontimelimit-property"></a>Trigger.ExecutionTimeLimit-Eigenschaft
 
-Ruft bei der Skripterstellung die maximale Zeitspanne ab, die der vom-Aufruf gestartete Task ausgeführt werden darf, oder legt diese fest.
+Für die Skripterstellung ruft die maximale Zeitdauer ab, für die die vom Trigger gestartete Aufgabe ausgeführt werden darf, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ Trigger.ExecutionTimeLimit As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die maximale Zeitspanne, die der vom-Aufruf gestartete Task ausgeführt werden darf. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z
+Die maximale Zeitdauer, für die die vom Trigger gestartete Aufgabe ausgeführt werden darf. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl der Monate, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (pt5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird das Ausführungszeit Limit im [**executiontimelimit**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für einen Task wird das Ausführungszeitlimit im [**ExecutionTimeLimit-Element**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird das Ausführungszeit Li
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

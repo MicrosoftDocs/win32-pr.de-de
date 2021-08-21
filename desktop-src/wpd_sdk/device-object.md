@@ -1,54 +1,54 @@
 ---
-description: Geräte Objekt
+description: Geräteobjekt
 ms.assetid: 0d403a6e-c22e-4b77-9be4-b8d53092f279
-title: Geräte Objekt
+title: Geräteobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aef76dbe26b1fd2c8d2bfd6da708728c9eb2177b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf5279f63c7dabd8bd5b523d9234e33a60d9cf05608ac7b3f1b7601fd8c25024
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083614"
 ---
-# <a name="device-object"></a>Geräte Objekt
+# <a name="device-object"></a>Geräteobjekt
 
-Das Device-Objekt unterstützt die folgenden Eigenschaften. Eine Anwendung kann diese Eigenschaften anfordern, indem Sie das Stamm Objekt abfragt (wobei die definierte Objekt-ID für die **\_ Objekt- \_ \_ ID des WPD-Geräts** angegeben wird). Alle Werte des Geräte Objekts sind schreibgeschützt.
+Das Geräteobjekt unterstützt die folgenden Eigenschaften. Eine Anwendung kann diese Eigenschaften anfordern, indem sie das Stammobjekt abfragt (unter Angabe der definierten **WPD \_ DEVICE OBJECT \_ \_ ID** konstanten Objekt-ID). Alle Werte des Geräteobjekts sind schreibgeschützt.
 
-Wenn ein bestimmtes Gerät die Gerätekategorie der [WPD- \_ Funktions \_ Kategorie \_ ](wpd-functional-category-device.md) implementiert, muss es auch die Eigenschaften unterstützen, die dieser Kategorie zugeordnet sind.
+Wenn ein bestimmtes Gerät die [KATEGORIE WPD \_ FUNCTIONAL CATEGORY \_ \_ DEVICE](wpd-functional-category-device.md) implementiert, muss es auch die Eigenschaften unterstützen, die dieser Kategorie zugeordnet sind.
 
 
 
 | Eigenschaftsname                                                                                                         | Erforderlich oder optional                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](object-properties.md)                                                                | Erforderlich. Der Wert ist die **WPD- \_ Geräte \_ Objekt- \_ ID**.                                                         |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](object-properties.md)                                                 | Erforderlich. Der Wert ist eine leere Zeichenfolge.                                                                     |
-| [WPD- \_ Objekt \_ Name](object-properties.md)                                                            | Erforderlich, wenn das-Objekt eine Datei darstellt.                                                                   |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](object-properties.md)                          | Erforderlich.                                                                                                   |
-| [WPD- \_ Objekt \_ IsHidden](object-properties.md)                                                    | Erforderlich, wenn das Geräte Objekt dem Benutzer nicht angezeigt werden soll.                                              |
-| [Verweise auf WPD- \_ Objekte \_](object-properties.md)                                                | Erforderlich, wenn das Geräte Objekt Verweise auf andere Objekte hat.                                              |
-| [WPD- \_ Objekt \_ Schlüsselwörter](object-properties.md)                                                    | Dies ist optional.                                                                                                   |
-| [WPD- \_ Objekt \_ Synchronisierungs- \_ ID](object-properties.md)                                                     | Dies ist optional.                                                                                                   |
-| [WPD \_ - \_ Objekt \_ generieren \_ der Miniaturansicht aus der \_ Ressource](object-properties.md) | Dies ist optional.                                                                                                   |
-| [WPD- \_ Geräte \_ Synchronisierungs \_ Partner](device-properties.md)                                           | Dies ist optional.                                                                                                   |
-| [Version der WPD- \_ Geräte \_ Firmware \_](device-properties.md)                                   | Erforderlich.                                                                                                   |
-| [\_ \_ Energie \_ Pegel des WPD-Geräts](device-properties.md)                                             | Empfohlen, wenn das Gerät über einen Akku verfügt.                                                                    |
-| [WPD \_ - \_ Geräte \_ Stromquelle](device-properties.md)                                           | Empfohlen.                                                                                                |
-| [WPD- \_ Geräte \_ Protokoll](device-properties.md)                                                    | Empfohlen.                                                                                                |
-| [WPD- \_ Geräte \_ Hersteller](device-properties.md)                                            | Erforderlich.                                                                                                   |
-| [WPD- \_ Geräte \_ Modell](device-properties.md)                                                          | Erforderlich.                                                                                                   |
-| [\_ \_ Serien \_ Nummer des WPD-Geräts](device-properties.md)                                         | Erforderlich.                                                                                                   |
-| [WPD- \_ Gerät \_ unterstützt \_ nicht \_ verwendbar](device-properties.md)                    | Erforderlich, wenn das Gerät nicht verwendbare Objekte unterstützt. Das heißt, wenn Sie für die einfache Datenspeicherung verwendet werden kann. |
-| [DateTime für WPD- \_ Gerät \_](device-properties.md)                                                    | Dies ist optional.                                                                                                   |
-| [Anzeige Name des WPD- \_ Geräts \_ \_](device-properties.md)                                         | Empfohlen.                                                                                                |
-| [vom WPD- \_ Gerät \_ unterstütztes \_ DRM- \_ Schema](device-properties.md)                          | Empfohlen, wenn das Gerät Digital Rights Management (DRM) unterstützt.                                         |
-| [vom WPD- \_ Gerät \_ unterstützte \_ Formate \_ sind \_ geordnet](device-properties.md)       | Empfohlen, wenn das Gerät eine bevorzugte Format Anordnung unterstützt.                                               |
-| [WPD \_ - \_ Gerätetyp](device-properties.md)                                                            | Empfohlen.                                                                                                |
-| [eindeutige ID der WPD- \_ Geräte \_ Funktion \_ \_](device-properties.md)                          | Dies ist optional.                                                                                                   |
-| [eindeutige ID des WPD- \_ Geräte \_ Modells \_ \_](device-properties.md)                                    | Dies ist optional.                                                                                                   |
-| [WPD- \_ Geräte \_ Transport](device-properties.md)                                                  | Empfohlen.                                                                                                |
-| [WPD- \_ Gerät \_ verwendet \_ Geräte \_ Stufe](device-properties.md)                                  | Dies ist optional.                                                                                                   |
-| [WPD- \_ Funktions \_ Objekt \_ Kategorie](device-properties.md)                             | Erforderlich.                                                                                                   |
+| [\_WPD-OBJEKT-ID \_](object-properties.md)                                                                | Erforderlich. Der Wert ist **WPD \_ DEVICE OBJECT \_ \_ ID**.                                                         |
+| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](object-properties.md)                                                 | Erforderlich. Der Wert ist eine leere Zeichenfolge.                                                                     |
+| [\_WPD-OBJEKTNAME \_](object-properties.md)                                                            | Erforderlich, wenn das -Objekt eine Datei darstellt.                                                                   |
+| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md)                          | Erforderlich.                                                                                                   |
+| [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                    | Erforderlich, wenn das Geräteobjekt dem Benutzer nicht angezeigt werden soll.                                              |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das Geräteobjekt Verweise auf andere Objekte enthält.                                              |
+| [\_WPD-OBJEKTSCHLÜSSELWÖRTER \_](object-properties.md)                                                    | Optional.                                                                                                   |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Optional.                                                                                                   |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHT AUS \_ RESSOURCE](object-properties.md) | Optional.                                                                                                   |
+| [\_ \_ WPD-GERÄTESYNCHRONISIERUNGSPARTNER \_](device-properties.md)                                           | Optional.                                                                                                   |
+| [\_ \_ WPD-GERÄTEFIRMWAREVERSION \_](device-properties.md)                                   | Erforderlich.                                                                                                   |
+| [\_ \_ \_ WPD-GERÄTELEISTUNGSSTUFE](device-properties.md)                                             | Empfohlen, wenn das Gerät über einen Akku verfügt.                                                                    |
+| [\_ \_ WPD-GERÄTESTROMQUELLE \_](device-properties.md)                                           | Empfohlen.                                                                                                |
+| [\_WPD-GERÄTEPROTOKOLL \_](device-properties.md)                                                    | Empfohlen.                                                                                                |
+| [\_WPD-GERÄTEHERSTELLER \_](device-properties.md)                                            | Erforderlich.                                                                                                   |
+| [\_WPD-GERÄTEMODELL \_](device-properties.md)                                                          | Erforderlich.                                                                                                   |
+| [\_ \_ WPD-GERÄTESERIENNUMMER \_](device-properties.md)                                         | Erforderlich.                                                                                                   |
+| [\_WPD-GERÄT \_ UNTERSTÜTZT NICHT \_ VERWENDBARE \_ GERÄTE](device-properties.md)                    | Erforderlich, wenn das Gerät nicht gebrauchsbare Objekte unterstützt. Das heißt, wenn es für die einfache Datenspeicherung verwendet werden kann. |
+| [WPD \_ DEVICE \_ DATETIME](device-properties.md)                                                    | Optional.                                                                                                   |
+| [\_WPD-GERÄTE-FRIENDLY \_ \_ NAME](device-properties.md)                                         | Empfohlen.                                                                                                |
+| [VOM \_ WPD-GERÄT \_ \_ UNTERSTÜTZTES DRM-SCHEMA \_](device-properties.md)                          | Empfohlen, wenn das Gerät Digital Rights Management (DRM) unterstützt.                                         |
+| [VOM \_ \_ WPD-GERÄT \_ UNTERSTÜTZTE FORMATE \_ WERDEN \_ GEORDNET.](device-properties.md)       | Empfohlen, wenn das Gerät die bevorzugte Formatbestellung unterstützt.                                               |
+| [\_WPD-GERÄTETYP \_](device-properties.md)                                                            | Empfohlen.                                                                                                |
+| [WPD \_ DEVICE \_ FUNCTIONAL \_ UNIQUE \_ ID](device-properties.md)                          | Optional.                                                                                                   |
+| [EINDEUTIGE ID \_ DES WPD-GERÄTEMODELLS \_ \_ \_](device-properties.md)                                    | Optional.                                                                                                   |
+| [\_WPD-GERÄTETRANSPORT \_](device-properties.md)                                                  | Empfohlen.                                                                                                |
+| [WPD \_ DEVICE \_ USE \_ DEVICE \_ STAGE](device-properties.md)                                  | Optional.                                                                                                   |
+| [WPD \_ FUNCTIONAL \_ OBJECT \_ CATEGORY](device-properties.md)                             | Erforderlich.                                                                                                   |
 
 
 
@@ -56,22 +56,22 @@ Wenn ein bestimmtes Gerät die Gerätekategorie der [WPD- \_ Funktions \_ Katego
 
 ## <a name="typical-resources"></a>Typische Ressourcen
 
-Diese Objekte Hosten in der Regel keine Ressourcen.
+Diese Objekte hosten in der Regel keine Ressourcen.
 
 ## <a name="commands"></a>Befehle
 
-Zusätzlich zu den Eigenschaften sollten Geräte einen bestimmten Satz von Befehlen unterstützen, die von tragbaren Windows-Geräten definiert werden. Welche Befehle ein Objekt oder ein Gerät unterstützt, hängt vom Typ, der Funktionalität und den Funktionen ab.
+Zusätzlich zu den Eigenschaften sollten Geräte einen bestimmten Satz von Befehlen unterstützen, die von portierbaren Windows definiert werden. Welche Befehle ein Objekt oder Gerät unterstützt, hängt vom Typ, der Funktionalität und den Funktionen ab.
 
-In der folgenden Tabelle werden die Befehls Klassen beschrieben, die auf Geräte angewendet werden. In der Regel fällt ein Gerät unter mehrere Kategorien und sollte die Befehle für alle anwendbaren Kategorien unterstützen. Beispielsweise würde ein Mobiltelefon mit einer Kamera in drei Kategorien unterteilt: alle Geräte, SMS-Geräte und noch Abbild Erfassungsgeräte. Ein benutzerdefinierter Treiber und eine Client Anwendung können zusätzliche Befehle oder Eigenschaften unterstützen, die Sie definieren, aber die folgenden Befehle müssen unterstützt werden. Eine Beschreibung der spezifischen Befehle, die unter jede Befehls Kategorie fallen, finden Sie unter [Befehle](commands.md).
+In der folgenden Tabelle werden die Befehlsklassen beschrieben, die für Geräte nach Funktionalität gelten. In der Regel fällt ein Gerät in mehrere Kategorien und sollte die Befehle für alle anwendbaren Kategorien unterstützen. Beispielsweise würde ein Mobiltelefon mit einer Kamera in drei Kategorien fallen: alle Geräte, SMS-Geräte und Noch-Bilderfassungsgeräte. Ein benutzerdefinierter Treiber und eine Clientanwendung können zusätzliche Befehle oder Eigenschaften unterstützen, die Sie definieren, müssen jedoch die folgenden Befehle unterstützen. Eine Beschreibung der spezifischen Befehle, die unter die einzelnen Befehlskategorien fallen, finden Sie unter [Befehle](commands.md).
 
 
 
-| BESCHREIBUNG                                                                                                                                                                                                                      | Befehls Kategorien                                                                                                                                                                                                                                                                                                         |
+| Beschreibung                                                                                                                                                                                                                      | Befehlskategorien                                                                                                                                                                                                                                                                                                         |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Alle Geräte.                                                                                                                                                                                                                     | **Kategorie der Kategorie " \_ Kategorie \_ capabilitieswpd" \_ in WPD \_**<br/> **WPD \_ - \_ kategorieobjektenumeration \_**<br/> **WPD- \_ Kategorie \_ Objekt \_ Verwaltung**<br/> **\_ \_ Objekt \_ Eigenschaften der WPD-Kategorie**<br/> **WPD \_ - \_ kategorieobjekteigenschaften \_ \_ Bulk**<br/> **\_ \_ Objekt \_ Ressourcen für WPD-Kategorie**<br/> |
-| Geräte, auf denen weiterhin Images, z. b. digitale Kameras, erfasst werden können.                                                                                                                                                                  | **WPD- \_ Kategorie \_ trotzdem \_ Image \_ Erfassung**                                                                                                                                                                                                                                                                                   |
-| Geräte, die SMS (Short Message Service)-Nachrichten (z. b. Mobiltelefone) senden können. Das Senden von SMS-Nachrichten wird häufig als "Text Messaging" bezeichnet.                                                                                      | **WPD- \_ Kategorie \_ SMS**                                                                                                                                                                                                                                                                                                     |
-| Geräte, die als Speichergeräte fungieren. Dies schließt externe Laufwerke ein. Wenn ein Gerät die Möglichkeit unterstützt, einen Speicher zu formatieren oder Objekte von einem Speicherort auf einen anderen zu verschieben, sollte der Treiber diese Kategorie unterstützen.<br/> | **WPD \_ - \_ kategoriespeicher**                                                                                                                                                                                                                                                                                                 |
+| Alle Geräte.                                                                                                                                                                                                                     | **WPD \_ CATEGORY \_ CAPABILITIESWPD \_ CATEGORY \_ COMMON**<br/> **WPD \_ CATEGORY \_ OBJECT \_ ENUMERATION**<br/> **WPD \_ CATEGORY \_ OBJECT \_ MANAGEMENT**<br/> **WPD \_ CATEGORY \_ OBJECT \_ PROPERTIES**<br/> **WPD \_ CATEGORY \_ OBJECT \_ PROPERTIES \_ BULK**<br/> **WPD \_ CATEGORY \_ OBJECT \_ RESOURCES**<br/> |
+| Geräte, die Stillbilder erfassen können, z. B. Digitalkameras.                                                                                                                                                                  | **WPD \_ CATEGORY \_ STILL \_ IMAGE \_ CAPTURE**                                                                                                                                                                                                                                                                                   |
+| Geräte, die SMS-Nachrichten (Short Message Service) senden können, z. B. Mobiltelefone. Das Senden von SMS-Nachrichten wird häufig als "SMS" bezeichnet.                                                                                      | **WPD \_ CATEGORY \_ SMS**                                                                                                                                                                                                                                                                                                     |
+| Geräte, die als Speichergeräte funktionieren. Dazu gehören externe Laufwerke. Wenn ein Gerät die Möglichkeit unterstützt, einen Speicher zu formatieren oder Objekte von einem Standort an einen anderen zu verschieben, sollte Ihr Treiber diese Kategorie unterstützen.<br/> | **WPD \_ CATEGORY \_ STORAGE**                                                                                                                                                                                                                                                                                                 |
 
 
 

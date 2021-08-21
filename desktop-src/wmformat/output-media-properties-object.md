@@ -1,45 +1,45 @@
 ---
-title: Eigenschaften Objekt für Ausgabemedien
-description: Eigenschaften Objekt für Ausgabemedien
+title: Ausgabemedieneigenschaften-Objekt
+description: Ausgabemedieneigenschaften-Objekt
 ms.assetid: 96fa7c66-59a0-4eb3-ace4-a827b139f978
 keywords:
-- Windows Media-Format-SDK, Objekte für Ausgabemedien Eigenschaften
-- Advanced Systems Format (ASF), Ausgabemedien Eigenschaften Objekte
-- ASF (Advanced Systems Format), Ausgabemedien Eigenschaften Objekte
-- Objekte, Objekte für Ausgabemedien Eigenschaften
-- Objekte der Ausgabemedien Eigenschaften
+- Windows Medienformat-SDK, Ausgabemedieneigenschaftenobjekte
+- Advanced Systems Format (ASF), Ausgabemedieneigenschaftenobjekte
+- ASF (Advanced Systems Format), Ausgabemedieneigenschaftenobjekte
+- Objekte,Ausgabemedieneigenschaftenobjekte
+- Ausgabemedieneigenschaftenobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61490464381a0b4e58be7994dfaeb0dfec2baa76
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 6848270147a1a191faf93830f062cf7768a19ccd38a77598d15617197a1967a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104038686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084632"
 ---
-# <a name="output-media-properties-object"></a>Eigenschaften Objekt für Ausgabemedien
+# <a name="output-media-properties-object"></a>Ausgabemedieneigenschaften-Objekt
 
-Ein Ausgabemedien-Eigenschaften Objekt wird verwendet, um eine Ausgabe Eigenschaft abzurufen und festzulegen. Ausgabemedien Eigenschaften Objekte werden für unterstützte Ausgabeformate von Streams in einer Datei erstellt, die in ein Reader-Objekt geladen wird. Bei komprimierten Datenströmen werden die Ausgabe Eigenschaften durch die möglichen Ausgaben des Dekomprimierungs Codecs bestimmt.
+Ein Ausgabemedieneigenschaftenobjekt wird verwendet, um eine Ausgabeeigenschaft abzurufen und zu festlegen. Ausgabemedieneigenschaftenobjekte werden für unterstützte Ausgabeformate von Streams in einer Datei erstellt, die in ein Readerobjekt geladen wird. Bei komprimierten Streams werden die Ausgabeeigenschaften durch die möglichen Ausgaben des dekomprimierten Codecs bestimmt.
 
-Ein Ausgabemedien-Eigenschaften Objekt wird von [**iwmreader:: getOutputProperties**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-getoutputprops) erstellt. diese Methode erstellt ein Ausgabemedien-Eigenschaften Objekt, das die Eigenschaften des Standardausgabe Formats enthält. Andere Formate können für eine Ausgabe unterstützt werden. Zum Abrufen zusätzlicher Ausgabeformate können Sie [**iwmreader:: getoutputformatcount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmreader-getoutputformatcount) aufrufen, um die Anzahl der unterstützten Ausgabeformate abzurufen und Sie dann mithilfe von Aufrufen von [**iwmreader:: getoutputformat**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-getoutputformat)durchlaufen zu lassen. **Getoutputformat** erstellt ein Ausgabemedien Eigenschaften-Objekt, das mit den Daten für das ausgewählte Ausgabeformat aufgefüllt ist.
+Ein Ausgabemedieneigenschaftenobjekt wird von [**IWMReader::GetOutputProps**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-getoutputprops) erstellt. Diese Methode erstellt ein Ausgabemedieneigenschaftenobjekt, das die Eigenschaften des Standardausgabeformats enthält. Andere Formate können für eine Ausgabe unterstützt werden. Um zusätzliche Ausgabeformate zu erhalten, können Sie [**IWMReader::GetOutputFormatCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmreader-getoutputformatcount) aufrufen, um die Anzahl der unterstützten Ausgabeformate zu erhalten, und diese dann mithilfe von Aufrufen von [**IWMReader::GetOutputFormat**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-getoutputformat)durchschleifen. **GetOutputFormat erstellt** ein Ausgabemedieneigenschaftenobjekt, das mit den Daten für das ausgewählte Ausgabeformat aufgefüllt wird.
 
-Objekte der Ausgabemedien Eigenschaften können auch mit dem synchronen Reader erstellt werden. Alle Methodennamen sind identisch mit denen im Reader und werden alle von der [**iwmsynkreader**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader) -Schnittstelle verfügbar gemacht.
+Ausgabemedieneigenschaftenobjekte können auch mit dem synchronen Reader erstellt werden. Alle Methodennamen sind mit denen im Reader identisch und werden alle von der [**IWMSyncReader-Schnittstelle verfügbar**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader) gemacht.
 
-" **GetOutput-** Eigenschaften" und " **getoutputformat** " legen einen Zeiger auf eine [**iwmoutputmediarequicschnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmoutputmediaprops) fest. Die anderen Schnittstellen des Eigenschaften Objekts der Ausgabemedien können durch Aufrufen der **QueryInterface** -Methode abgerufen werden.
+**GetOutputProps und** **GetOutputFormat** legen einen Zeiger auf eine [**IWMOutputMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmoutputmediaprops) fest. Die anderen Schnittstellen des Ausgabemedieneigenschaftenobjekts können durch Aufrufen der **QueryInterface-Methode ermittelt** werden.
 
-Die folgenden Schnittstellen werden von allen Ausgabemedien-Eigenschaften Objekten unterstützt.
+Die folgenden Schnittstellen werden von jedem Ausgabemedieneigenschaftenobjekt unterstützt.
 
 
 
 | Schnittstelle                                          | BESCHREIBUNG                                                                                                |
 |----------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**Iwmmedia-Eigenschaften**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)             | Wird als Basisschnittstelle für die anderen Schnittstellen der Medien Eigenschaft verwendet (Eingabe, Ausgabe und Video).             |
-| [**Iwmoutputmedia-Eigenschaften**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmoutputmediaprops) | Ruft die Eigenschaften einer Ausgabe ab.                                                                     |
-| [**Iwmvideomedia-Eigenschaften**](/previous-versions/windows/desktop/api/Wmsdkidl/nn-wmsdkidl-iwmvideomediaprops)   | Verwaltet die Eigenschaften eines Videostreams. Dies ist eine optionale Schnittstelle, die nur für Videostreams verfügbar ist. |
+| [**IWMMediaProps**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)             | Wird als Basisschnittstelle für die anderen Medieneigenschaftsschnittstellen (Eingabe, Ausgabe und Video) verwendet.             |
+| [**IWMOutputMediaProps**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmoutputmediaprops) | Ruft die Eigenschaften einer Ausgabe ab.                                                                     |
+| [**IWMVideoMediaProps**](/previous-versions/windows/desktop/api/Wmsdkidl/nn-wmsdkidl-iwmvideomediaprops)   | Verwaltet die Eigenschaften eines Videostreams. Dies ist eine optionale Schnittstelle, die nur für Videostreams verfügbar ist. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -51,9 +51,9 @@ Die folgenden Schnittstellen werden von allen Ausgabemedien-Eigenschaften Objekt
 [**Reader-Objekt**](reader-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

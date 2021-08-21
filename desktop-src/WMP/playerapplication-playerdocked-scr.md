@@ -1,9 +1,9 @@
 ---
-title: Playerapplication. playerdocked-Attribut
-description: Mit dem Attribut "playerdocked" wird ein Wert abgerufen, der angibt, ob sich Windows Media Player in einem angedockten Zustand befindet.
+title: PLAYERAPPLICATION.playerDocked-Attribut
+description: Das attribut playerDocked ruft einen Wert ab, der angibt, ob sich Windows Media Player in einem andockten Zustand befindet.
 ms.assetid: 8b95da72-037b-4179-a564-fc9bc63368ac
 keywords:
-- Playerapplication. playerdocked Windows-Media Player
+- PLAYERAPPLICATION.playerDocked Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21abe3dd5cb14906db39e8eb50a1d18302a92ff6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8e05d186ab8123dcd4a03eff6c282cec4f7884225d8271540eebb8dc2e73eba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118571787"
 ---
-# <a name="playerapplicationplayerdocked"></a>Playerapplication. playerdocked
+# <a name="playerapplicationplayerdocked"></a>PLAYERAPPLICATION.playerDocked
 
-Mit dem Attribut " **playerdocked** " wird ein Wert abgerufen, der angibt, ob sich Windows Media Player in einem angedockten Zustand befindet.
+Das **playerDocked-Attribut** ruft einen Wert ab, der angibt, ob sich Windows Media Player in einem andockten Zustand befindet.
 
 ``` syntax
         elementID.playerDocked
@@ -29,22 +29,22 @@ Mit dem Attribut " **playerdocked** " wird ein Wert abgerufen, der angibt, ob si
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher** Wert.
 
 
 
 | Wert | BESCHREIBUNG                       |
 |-------|-----------------------------------|
 | True  | Windows Media Player ist angedockt.   |
-| False | Windows-Media Player ist nicht angedockt. |
+| Falsch | Windows Media Player ist abgedockt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird nur verwendet, wenn das Windows Media Player-Steuerelement Remoting ist.
+Dieses Attribut wird nur beim Remoting des Windows Media Player-Steuerelements verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieses Attribut wird nur verwendet, wenn das Windows Media Player-Steuerelement 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
 
 
 
@@ -60,7 +60,7 @@ Dieses Attribut wird nur verwendet, wenn das Windows Media Player-Steuerelement 
 
 <dl> <dt>
 
-[**Playerapplication-Element**](playerapplication-element.md)
+[**PLAYERAPPLICATION-Element**](playerapplication-element.md)
 </dt> <dt>
 
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)

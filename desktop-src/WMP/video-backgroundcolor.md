@@ -1,9 +1,9 @@
 ---
-title: Video. BackgroundColor
-description: Das BackgroundColor-Attribut gibt die Hintergrundfarbe des Video Steuer Elements an oder ruft diese ab.
+title: VIDEO.backgroundColor
+description: Das backgroundColor-Attribut gibt die Hintergrundfarbe des Video-Steuerelements an oder ruft sie ab.
 ms.assetid: 7acf7dc8-80c3-4620-ad89-4c8de20d17ee
 keywords:
-- Video. BackgroundColor-Fenster Media Player
+- VIDEO.backgroundColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 992ffd881498c3670eaaf5c075db9c6432cc1496
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 41b5e4f637aa4d15aa9496eb85ee0b60a103ed4db33185e8434b8409173da298
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118830259"
 ---
-# <a name="videobackgroundcolor"></a>Video. BackgroundColor
+# <a name="videobackgroundcolor"></a>VIDEO.backgroundColor
 
-Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe des Video Steuer Elements an oder ruft diese ab.
+Das **backgroundColor-Attribut** gibt die Hintergrundfarbe des Video-Steuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.backgroundColor
@@ -29,11 +29,11 @@ Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe des Video Steuer Ele
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen beliebigen Microsoft Internet Explorer-Farbwert oder den Wert "None" enthält. Der Standardwert ist "None", was bedeutet, dass, wenn dem Video Steuerelement kein Video zugeordnet ist, das Video Steuerelement transparent ist und der Hintergrund von angezeigt wird.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert oder den Wert "none" enthält. Er hat den Standardwert "none", d.h., wenn dem Videosteuerelement kein Video zugeordnet ist, ist das Video-Steuerelement transparent, und der Hintergrund wird angezeigt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Video kleiner als das Fenster ist und **stretchdefit** den Wert false hat, wird die Hintergrundfarbe um das Video angezeigt.
+Wenn das Video kleiner als das Fenster ist und **stretchToFit** false ist, wird die Hintergrundfarbe um das Video herum angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn das Video kleiner als das Fenster ist und **stretchdefit** den Wert false h
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,13 +49,13 @@ Wenn das Video kleiner als das Fenster ist und **stretchdefit** den Wert false h
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> <dt>
 
-[**Video. stretchdefit**](video-stretchtofit.md)
+[**VIDEO.stretchToFit**](video-stretchtofit.md)
 </dt> </dl>
 
  

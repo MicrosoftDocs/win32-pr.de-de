@@ -1,29 +1,29 @@
 ---
-description: ICE16 überprüft, ob der Wert der ProductName-Eigenschaft in der Eigenschaften Tabelle nicht mehr als 63 Zeichen lang ist. Es gibt keine Beschränkung für die Länge des Registrierungsschlüssels für Display Name.
+description: ICE16 überprüft, ob der Wert der ProductName-Eigenschaft in der Property-Tabelle nicht größer als 63 Zeichen ist. Es gibt keine Beschränkung für die Länge des Registrierungsschlüssels für DisplayName.
 ms.assetid: de1970f5-67f9-47ca-8bdb-c9abdc4798c5
 title: ICE16
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a61d4bb791122dd17c4fb2f13dca8863d772a3f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d83241ce1df541939a6dd8245d63f0d38c516ba1b0e9539273969719e68b77c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529250"
 ---
 # <a name="ice16"></a>ICE16
 
-ICE16 überprüft, ob der Wert der [**ProductName**](productname.md) -Eigenschaft in der [Eigenschaften Tabelle](property-table.md) nicht mehr als 63 Zeichen lang ist. Es gibt keine Beschränkung für die Länge des Registrierungsschlüssels für Display Name.
+ICE16 überprüft, ob der Wert der [**ProductName-Eigenschaft**](productname.md) in der [Property-Tabelle](property-table.md) nicht größer als 63 Zeichen ist. Es gibt keine Beschränkung für die Länge des Registrierungsschlüssels für DisplayName.
 
 ## <a name="result"></a>Ergebnis
 
-ICE16 gibt eine Fehlermeldung aus, wenn der in der Eigenschaften Tabelle festgelegte ProductName länger als 63 Zeichen ist.
+ICE16 gibt eine Fehlermeldung aus, wenn der in der Tabelle Property festgelegte ProductName länger als 63 Zeichen ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

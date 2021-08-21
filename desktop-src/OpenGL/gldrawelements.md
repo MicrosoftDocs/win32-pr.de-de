@@ -1,9 +1,9 @@
 ---
-title: gldrawelements-Funktion (GL. h)
-description: Die gldrawelements-Funktion rendert primitive aus Array Daten.
+title: glDrawElements-Funktion (Gl.h)
+description: Die glDrawElements-Funktion rendert Primitive aus Arraydaten.
 ms.assetid: fb433294-106e-48d5-ad49-4434934fe072
 keywords:
-- gldrawelements-Funktion OpenGL
+- glDrawElements-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 976e779235dc330467d610406156534b5e72841d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b260c1112f7ec588b4d83655e5d0aa465b63682164f2ca745b63d3f421e5794c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118616572"
 ---
-# <a name="gldrawelements-function"></a>gldrawelements-Funktion
+# <a name="gldrawelements-function"></a>glDrawElements-Funktion
 
-Die **gldrawelements** -Funktion rendert primitive aus Array Daten.
+Die **glDrawElements-Funktion** rendert Primitive aus Arraydaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ void WINAPI glDrawElements(
 *mode* 
 </dt> <dd>
 
-Die Art der zu Rendering enden primitiver. Es kann von einem der folgenden symbolischen Werte ausgegangen werden: GL- \_ Punkte, GL-Linien \_ \_ Streifen, GL \_ -Zeilen \_ Schleife, GL \_ -Linien, GL \_ \_ -Dreiecks Streifen, GL \_ \_ -Dreiecks Lüfter, GL \_ -Dreiecke, GL \_ Quad Strip, \_ GL \_ QUADS und GL- \_ Polygon.
+Die Art von primitiven Typen, die gerendert werden sollen. Es kann von einem der folgenden symbolischen Werte ausgegangen werden: GL \_ POINTS, GL \_ LINE \_ STRIP, GL \_ LINE \_ LOOP, GL \_ LINES, GL TRIANGLE \_ \_ STRIP, GL TRIANGLE \_ \_ FAN, GL \_ TRIANGLES, GL \_ QUAD \_ STRIP, GL \_ QUADS und GL \_ POLYGON.
 
 </dd> <dt>
 
 *count* 
 </dt> <dd>
 
-Die Anzahl der Elemente, die gerendert werden sollen.
+Die Anzahl der elemente, die gerendert werden sollen.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Typ der Werte in Indizes. Es muss sich um ein "GL \_ unsigned \_ Byte", "GL \_ unsigned \_ Short" oder "GL \_ unsigned \_ int" handeln.
+Der Typ der Werte in Indizes. Muss eins von GL \_ UNSIGNED \_ BYTE, GL \_ UNSIGNED \_ SHORT oder GL \_ UNSIGNED \_ INT sein.
 
 </dd> <dt>
 
-*Kei* 
+*Indizes* 
 </dt> <dd>
 
-Ein Zeiger auf den Speicherort, an dem die Indizes gespeichert werden.
+Ein Zeiger auf die Position, an der die Indizes gespeichert werden.
 
 </dd> </dl>
 
@@ -77,30 +77,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Modus* war kein akzeptierter Wert.<br/>                                                                                          |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *count* war ein negativer Wert.<br/>                                                                                              |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *mode* war kein akzeptierter Wert.<br/>                                                                                          |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *count* war ein negativer Wert.<br/>                                                                                              |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der **gldrawelements** -Funktion können Sie mehrere geometrische Primitive mit sehr wenigen Funktionsaufrufen angeben. Anstatt eine OpenGL-Funktion aufzurufen, um die einzelnen Scheitel Punkte, normal oder Farben zu übergeben, können Sie im Vorfeld separate Arrays von Scheitel Punkten, normalen und Farben angeben und diese zum Definieren einer Sequenz von primitiven (alle desselben Typs) mit einem einzigen Aufruf von **gldrawelements** verwenden.
+Mit der **glDrawElements-Funktion** können Sie mehrere geometrische Primitive mit sehr wenigen Funktionsaufrufen angeben. Anstatt eine OpenGL-Funktion aufzurufen, um jeden einzelnen Scheitelpunkt, jede Normale oder Farbe zu übergeben, können Sie im Voraus separate Arrays von Scheitelpunkten, Normalwerten und Farben angeben und diese verwenden, um eine Sequenz von Primitiven (alle vom gleichen Typ) mit einem einzigen Aufruf von **glDrawElements** zu definieren.
 
-Wenn Sie die **gldrawelements** -Funktion aufzurufen, *werden sequenzielle* Elemente aus *Indizes* verwendet, um eine Sequenz geometrischer primitiver Elemente zu erstellen. Der *Mode* -Parameter gibt an, welche Art von primitiver Typen erstellt werden und wie die Array Elemente verwendet werden, um diese primitiven zu konstruieren. Wenn das GL- \_ Scheitelpunkt \_ Array nicht aktiviert ist, werden keine geometrischen primitiven generiert.
+Wenn Sie die **glDrawElements-Funktion** aufrufen, verwendet sie count sequential elements from indices *(Sequenzielle* Elemente aus *Indizes* zählen), um eine Sequenz geometrischer Primitive zu erstellen. Der *mode-Parameter* gibt an, welche Art von Primitiven erstellt werden und wie die Arrayelemente zum Erstellen dieser Primitive verwendet werden. Wenn GL \_ VERTEX \_ ARRAY nicht aktiviert ist, werden keine geometrischen Primitive generiert.
 
-Vertex-Attribute, die von **gldrawelements** geändert werden, haben nach dem zurückkehren von **gldrawelements** einen nicht angegebenen Wert. Wenn z. b. \_ das GL- \_ Farbarray aktiviert ist, ist der Wert der aktuellen Farbe nach der Ausführung von **gldrawelements** nicht definiert. Attribute, die nicht geändert werden, bleiben unverändert.
+Vertexattribute, die von **glDrawElements** geändert werden, haben einen nicht angegebenen Wert, nachdem **glDrawElements** zurückgegeben wurde. Wenn z. B. GL \_ COLOR \_ ARRAY aktiviert ist, ist der Wert der aktuellen Farbe nicht definiert, nachdem **glDrawElements** ausgeführt wurde. Attribute, die nicht geändert werden, bleiben unverändert.
 
-Sie können die **gldrawelements** -Funktion in Anzeigelisten einschließen. Wenn **gldrawelements** in einer Anzeigeliste enthalten ist, werden die erforderlichen Array Daten (festgelegt durch die Array Zeiger und die Aktivierung) ebenfalls in die Anzeigeliste eingegeben. Da die Array Zeiger und-Aktivierung Client seitige Zustandsvariablen sind, beeinflussen Ihre Werte die Anzeigelisten, wenn die Listen erstellt werden, und nicht, wenn die Listen ausgeführt werden.
+Sie können die **glDrawElements-Funktion** in Anzeigelisten einschließen. Wenn **glDrawElements** in einer Anzeigeliste enthalten ist, werden die erforderlichen Arraydaten (durch die Arrayzeiger bestimmt und aktiviert) ebenfalls in die Anzeigeliste eingegeben. Da die Arrayzeiger und -aktivierten clientseitige Zustandsvariablen sind, wirken sich ihre Werte auf Anzeigelisten aus, wenn die Listen erstellt werden, nicht, wenn die Listen ausgeführt werden.
 
 > [!Note]  
-> Die **gldrawelements** -Funktion ist nur in OpenGL-Version 1,1 oder höher verfügbar.
+> Die **glDrawElements-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
@@ -112,47 +112,47 @@ Sie können die **gldrawelements** -Funktion in Anzeigelisten einschließen. Wen
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

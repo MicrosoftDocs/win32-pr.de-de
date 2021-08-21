@@ -1,7 +1,7 @@
 ---
-description: Speichert einen komprimierten PRT-Puffer (preberechneten Radiance Transfer) auf dem Datenträger.
+description: Speichert einen komprimierten PRT-Puffer (Precomputed Radiance Transfer) auf den Datenträger.
 ms.assetid: cc94a83e-f755-411d-a993-4529c5d53cd5
-title: D3DXSavePRTCompBufferToFile-Funktion (D3DX9Mesh. h)
+title: D3DXSavePRTCompBufferToFile-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d06629185637ce6fa0d7d33d5454282d2bbb8ec2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a62bd164ce8eb8175c62658b19dd5ce6282d6c75b081db45f8b0af4994322579
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524510"
 ---
 # <a name="d3dxsaveprtcompbuffertofile-function"></a>D3DXSavePRTCompBufferToFile-Funktion
 
-Speichert einen komprimierten PRT-Puffer (preberechneten Radiance Transfer) auf dem Datenträger.
+Speichert einen komprimierten PRT-Puffer (Precomputed Radiance Transfer) auf den Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,29 +36,29 @@ HRESULT D3DXSavePRTCompBufferToFile(
 
 ## <a name="parameters"></a>Parameter
 
-*pfilename* \[ in\]
+*pFileName* \[ In\]
 
 Typ: **[LPCSTR](../winprog/windows-data-types.md)**
 
-Der Name der Datei, in der der komprimierte Puffer gespeichert werden soll.
+Name der Datei, in der der komprimierte Puffer gespeichert werden soll.
 
-*pbuffer* \[ in\]
+*pBuffer* \[ In\]
 
 Typ: **[LPD3DXPRTCOMPBUFFER](id3dxprtcompbuffer.md)**
 
-Adresse eines Zeigers auf das Eingabe- [**ID3DXPRTCompBuffer**](id3dxprtcompbuffer.md) -Objekt.
+Adresse eines Zeigers auf das [**Eingabeobjekt ID3DXPRTCompBuffer.**](id3dxprtcompbuffer.md)
 
 ## <a name="return-value"></a>Rückgabewert
 
 Typ: **[HRESULT](../com/structure-of-com-error-codes.md)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert **D3D \_ OK**. Wenn die Methode fehlschlägt, kann der Rückgabewert " **D3DERR \_ invalidcall"** lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert **D3D \_ OK.** Wenn die Methode fehlschlägt, kann der Rückgabewert **D3DERR \_ INVALIDCALL sein.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufzurufen in [D3DXSavePRTCompBufferToFileW]()aufgelöst. Andernfalls wird der Funktions aufrufin **D3DXSavePRTCompBufferToFileA** aufgelöst.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in [D3DXSavePRTCompBufferToFileW auflösen.]() Andernfalls wird der Funktionsaufruf in **D3DXSavePRTCompBufferToFileA auflösen.**
 
-Beim PCA-Dateiformat handelt es sich um eine Binärdatei in Form eines Headers und dann um zwei oder drei Datenblöcke.
+Das PCA-Dateiformat ist eine Binärdatei in Form eines Headers und dann zwei oder drei Datenblöcke.
 
 ```cpp
 struct PRTCompressHeader
@@ -74,21 +74,21 @@ struct PRTCompressHeader
 };
 ```
 
-Wenn " *bistex* " ungleich 0 (null) ist, sollten die *NumSamples* gleich sein `TexWidth * TexHeight` .
+Wenn *bIsTex* nicht 0 (null) ist, sollte *NumSamples* gleich `TexWidth * TexHeight` sein.
 
-Der Basisdaten Block, der auf den Header folgt, ist `NumCoeffs * NumChannels * (NumPCA + 1) * NumClusters * sizeof(float)` Bytes.
+Der Basisdatenblock, der dem Header folgt, ist `NumCoeffs * NumChannels * (NumPCA + 1) * NumClusters * sizeof(float)` bytes.
 
-Dabei handelt es sich um den Datenblock für PCA-Gewichtungen, der `NumPCA * NumSamples * sizeof(float)` Bytes ist.
+Im Anschluss folgt der PCA-Gewichtungsdatenblock, der Bytes `NumPCA * NumSamples * sizeof(float)` ist.
 
-Wenn *numclusters* größer als 1 ist, endet die Datei mit dem Cluster-IDs-Datenblock von `NumSamples * sizeof(UINT)` Bytes.
+Wenn *NumClusters* größer als 1 ist, endet die Datei mit dem Cluster-IDs-Datenblock von `NumSamples * sizeof(UINT)` Bytes.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 ## <a name="see-also"></a>Siehe auch
 
-[Voraus berechnete Strahlungs Übertragungsfunktionen](dx9-graphics-reference-d3dx-functions-prt.md)
+[Vorausberechnungsfunktionen für die Übertragung von Radiance](dx9-graphics-reference-d3dx-functions-prt.md)

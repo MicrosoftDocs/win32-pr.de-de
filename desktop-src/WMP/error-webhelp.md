@@ -1,11 +1,11 @@
 ---
-title: Error. WebHelp-Methode
-description: Die WebHelp-Methode öffnet die Windows Media Player-Webhilfe Seite, um weitere Informationen zum ersten Fehler in der Fehler Warteschlange anzuzeigen (Index null). | Error. WebHelp-Methode
+title: Error.webHelp-Methode
+description: Die webHelp-Methode startet die Windows Media Player Webhilfeseite, um weitere Informationen zum ersten Fehler in der Fehlerwarteschlange (Index 0) anzuzeigen. | Error.webHelp-Methode
 ms.assetid: 79797b41-1d47-4347-aa47-c104f7f7fbaf
 keywords:
-- WebHelp-Methode (Windows Media Player)
-- WebHelp-Methode, Windows Media Player, Fehler Klasse
-- Error-Klasse, Windows Media Player, WebHelp-Methode
+- webHelp-Methode Windows Media Player
+- webHelp-Methode Windows Media Player , Error-Klasse
+- Error-Klasse Windows Media Player , webHelp-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 862376be956bc8b37a778f5c9d1d2238c876208d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2fee647d8f3ddca89ed36c224caab05543715864347700d35ae8e80ee45078cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577874"
 ---
-# <a name="errorwebhelp-method"></a>Error. WebHelp-Methode
+# <a name="errorwebhelp-method"></a>Error.webHelp-Methode
 
-Die **WebHelp** -Methode öffnet die Windows Media Player-Webhilfe Seite, um weitere Informationen zum ersten Fehler in der Fehler Warteschlange anzuzeigen (Index null).
+Die **webHelp-Methode** startet die Windows Media Player Webhilfeseite, um weitere Informationen zum ersten Fehler in der Fehlerwarteschlange (Index 0) anzuzeigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Web-Hilfeseiten enthalten stets die neuesten und detailliertesten Informationen zu Windows Media Player-Fehlern. Diese Methode überträgt automatisch die anderen Informationen, die von der Webhilfe benötigt werden, z. b. die verwendete Betriebssystemversion.
+Die Webhilfeseiten enthalten immer die neuesten und detailliertesten Informationen zu Windows Media Player Fehlern. Diese Methode überträgt automatisch die anderen informationen, die von der Webhilfe benötigt werden, z. B. die verwendete Betriebssystemversion.
 
-Wenn Sie direkt auf die Web-Hilfeseiten zugreifen möchten, verwenden Sie die folgenden Links zu Fehlercode und Support Center.
+Um direkt auf die Webhilfeseiten zuzugreifen, verwenden Sie den folgenden Fehlercode und Supportcenterlinks.
 
--   [Windows Media Player-Fehler Code Informationen](https://support.microsoft.com/kb/886273)
--   [Windows Media Player-Lösungs Center](https://support.microsoft.com/ph/7763#tab0)
+-   [Windows Media Player Fehlercodeinformationen](https://support.microsoft.com/kb/886273)
+-   [Windows Media Player Solution Center](https://support.microsoft.com/ph/7763#tab0)
 
-**Windows Media Player 10 Mobile:** Diese Methode ist immer erfolgreich, führt jedoch nicht den beabsichtigten Vorgang aus.
+**Windows Media Player 10 Mobile:** Diese Methode ist immer erfolgreich, führt aber nicht den beabsichtigten Vorgang aus.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das die Microsoft Windows Media Player-Webhilfe Seite aufruft. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das die Microsoft Windows Media Player-Webhilfeseite startet. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -79,7 +79,7 @@ OnClick = "Player.error.webHelp();
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

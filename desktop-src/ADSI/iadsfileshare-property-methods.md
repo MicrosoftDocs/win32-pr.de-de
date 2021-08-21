@@ -1,10 +1,10 @@
 ---
-title: Iadsfileshare-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadsfileshare-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsFileShare-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsFileshare-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: c5a81c42-507f-4a68-b6f4-83097bd0fa01
 ms.tgt_platform: multiple
 keywords:
-- Iadsfileshare-Eigenschaften Methoden ADSI
+- IADsFileShare-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -28,22 +28,22 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f38369a4054f1848d5e35ff8bdb2dda9e9423a87
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6daec9905990d0f5cc5826b82b5361e0fc0653fafb0c617633a34b87c7a0e995
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691418"
 ---
-# <a name="iadsfileshare-property-methods"></a>Iadsfileshare-Eigenschaften Methoden
+# <a name="iadsfileshare-property-methods"></a>IADsFileShare-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**iadsfileshare**](/windows/desktop/api/Iads/nn-iads-iadsfileshare) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsFileshare-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsfileshare) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Currentusercount**
+**CurrentUserCount**
 </dt> <dd> <dl>
 
 Die Anzahl der Benutzer, die mit der Freigabe verbunden sind.
@@ -53,7 +53,7 @@ Die Anzahl der Benutzer, die mit der Freigabe verbunden sind.
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -78,7 +78,7 @@ Die Beschreibung der Dateifreigabe.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -96,17 +96,17 @@ HRESULT put_Description(
 
 </dt> </dl> </dd> <dt>
 
-**Host Computer**
+**HostComputer**
 </dt> <dd> <dl>
 
-Ein ADsPath-Verweis auf den Host Computer.
+Ein ADsPath-Verweis auf den Hostcomputer.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -134,7 +134,7 @@ Die maximale Anzahl von Benutzern, die gleichzeitig auf die Freigabe zugreifen d
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -149,7 +149,7 @@ HRESULT get_MaxUserCount(
 
 </dt> </dl> </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl>
 
 Der Dateisystempfad zum freigegebenen Verzeichnis.
@@ -159,7 +159,7 @@ Der Dateisystempfad zum freigegebenen Verzeichnis.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -181,7 +181,7 @@ HRESULT put_Path(
 
 ## <a name="examples"></a>Beispiele
 
-Wenn Sie auf die Eigenschaften von Dateifreigaben auf einem Computer zugreifen möchten, müssen Sie zunächst eine Bindung an den "LanManServer" auf dem Computer herstellen. Im folgenden Codebeispiel wird gezeigt, wie Sie die Beschreibung und die maximale Anzahl zulässiger Benutzer für alle öffentlichen Dateifreigaben auf dem Computer (mit dem Namen "MyMachine") in der Standard Domäne einrichten.
+Um auf die Eigenschaften von Dateifreigaben auf einem Computer zuzugreifen, müssen Sie zunächst eine Bindung an den LanmanServer auf dem Computer erstellen. Das folgende Codebeispiel zeigt, wie Sie die Beschreibung und die maximale Anzahl zulässiger Benutzer für alle öffentlichen Dateifreigaben auf dem Computer mit dem Namen "myMachine" in der Standarddomäne einrichten.
 
 
 ```VB
@@ -208,7 +208,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie das vorhandene Verzeichnis "C: \\ MyFolder" als öffentliche Dateifreigabe erstellt wird.
+Das folgende Codebeispiel zeigt, wie Sie das vorhandene Verzeichnis C: \\ MyFolder zu einer öffentlichen Dateifreigabe machen.
 
 
 ```VB
@@ -270,23 +270,23 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsfileshare ist als EB6DCAF0-4B83-11CF-A995-00AA006BC149 definiert.<br/>        |
+| IID<br/>                      | IID \_ IADsFileShare ist als EB6DCAF0-4B83-11CF-A995-00AA006BC149 definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsservice**](/windows/desktop/api/Iads/nn-iads-iadsservice)
+[**IADsService**](/windows/desktop/api/Iads/nn-iads-iadsservice)
 </dt> <dt>
 
-[**Iadsfileshare**](/windows/desktop/api/Iads/nn-iads-iadsfileshare)
+[**IADsFileShare**](/windows/desktop/api/Iads/nn-iads-iadsfileshare)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

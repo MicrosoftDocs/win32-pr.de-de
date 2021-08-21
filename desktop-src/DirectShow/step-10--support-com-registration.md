@@ -1,19 +1,19 @@
 ---
 description: Schritt 10.
 ms.assetid: 2959f574-1a39-4db1-9e4a-a303d0c7f8f3
-title: Schritt 10. COM-Registrierung unterstützen
+title: Schritt 10. Unterstützung der COM-Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fead7e3448d8f02fd477141699e1107ca288afd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f68efdeda754d5f7b728138a26a6bc9f4b782918f8c4b5140fd2457bcee6012f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118652150"
 ---
-# <a name="step-10-support-com-registration"></a>Schritt 10. COM-Registrierung unterstützen
+# <a name="step-10-support-com-registration"></a>Schritt 10. Unterstützung der COM-Registrierung
 
-Die letzte verbleibende Aufgabe besteht in der Unterstützung der com-Registrierung, sodass der Eigenschaften Frame neue Instanzen der Eigenschaften Seite erstellen kann. Fügen Sie dem Global *g \_ Templates* -Array einen weiteren [**cfactor ytemplate**](cfactorytemplate.md) -Eintrag hinzu, der zum Registrieren aller COM-Objekte in der dll verwendet wird. Fügen Sie keine Filter Informationen für die Eigenschaften Seite ein.
+Die letzte verbleibende Aufgabe besteht darin, die COM-Registrierung zu unterstützen, damit der Eigenschaftenrahmen neue Instanzen Ihrer Eigenschaftenseite erstellen kann. Fügen Sie dem globalen *g \_ Templates-Array* einen weiteren [**CFactoryTemplate-Eintrag**](cfactorytemplate.md) hinzu, der zum Registrieren aller COM-Objekte in ihrer DLL verwendet wird. Fügen Sie keine Filtersatzinformationen für die Eigenschaftenseite ein.
 
 
 ```C++
@@ -44,7 +44,7 @@ CFactoryTemplate g_Templates[] =
 
 
 
-Wenn Sie *g \_ ctemplates* deklarieren, wie im folgenden Code gezeigt, verfügt er automatisch über den richtigen Wert, basierend auf der Array Größe:
+Wenn Sie *g \_ cTemplates* wie im folgenden Code gezeigt deklarieren, verfügt es automatisch über den richtigen Wert basierend auf der Arraygröße:
 
 
 ```C++
@@ -53,7 +53,7 @@ int g_cTemplates = sizeof(g_Templates)/sizeof(g_Templates[0]);
 
 
 
-Fügen Sie `CreateInstance` der Eigenschaften Seiten Klasse außerdem eine statische Methode hinzu. Sie können der Methode einen beliebigen Namen geben, aber die Signatur muss mit der Signatur identisch sein, die im folgenden Beispiel gezeigt wird:
+Fügen Sie außerdem der Eigenschaftenseitenklasse eine statische `CreateInstance` Methode hinzu. Sie können die Methode nach Belieben benennen, aber die Signatur muss mit der signatur übereinstimmen, die im folgenden Beispiel gezeigt wird:
 
 
 ```C++
@@ -70,16 +70,16 @@ static CUnknown * WINAPI CreateInstance(LPUNKNOWN pUnk, HRESULT *pHr)
 
 
 
-Um die Eigenschaften Seite zu testen, registrieren Sie die dll, und laden Sie dann den Filter in GraphEdit. Klicken Sie mit der rechten Maustaste auf den Filter, und wählen Sie **Filtereigenschaften**
+Registrieren Sie zum Testen der Eigenschaftenseite die DLL, und laden Sie dann den Filter in GraphEdit. Klicken Sie mit der rechten Maustaste auf den Filter, und wählen Sie **Filtereigenschaften** aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer Filter Eigenschaften Seite](creating-a-filter-property-page.md)
+[Erstellen einer Filtereigenschaftenseite](creating-a-filter-property-page.md)
 </dt> <dt>
 
-[Erstellen einer DirectShow-Filter-dll](how-to-create-a-dll.md)
+[Erstellen einer DirectShow-Filter-DLL](how-to-create-a-dll.md)
 </dt> </dl>
 
  

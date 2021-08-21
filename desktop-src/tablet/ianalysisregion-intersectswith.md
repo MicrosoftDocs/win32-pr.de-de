@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob sich der Bereich des ianalysisregion mit dem angegebenen Rechteck überschneidet.
+description: Bestimmt, ob sich der Bereich von IAnalysisRegion mit dem angegebenen Rechteck überschneidet.
 ms.assetid: 683c3ad8-0236-474e-a16d-6164c2244cfb
-title: 'Ianalysisregion:: interseczwith-Methode (iacom. h)'
+title: IAnalysisRegion::IntersectsWith-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 99ff1ce8d3039b04d83f9cdd5c1d6aebe00be407
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04613e061929bba04c14be37914b22a51de0377f125b21fa29db9c56fc8dfeff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720017"
 ---
-# <a name="ianalysisregionintersectswith-method"></a>Ianalysisregion:: interseczwith-Methode
+# <a name="ianalysisregionintersectswith-method"></a>IAnalysisRegion::IntersectsWith-Methode
 
-Bestimmt, ob sich der Bereich des [**ianalysisregion**](ianalysisregion.md) mit dem angegebenen Rechteck überschneidet.
+Bestimmt, ob sich der Bereich von [**IAnalysisRegion**](ianalysisregion.md) mit dem angegebenen Rechteck überschneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ HRESULT IntersectsWith(
 
 <dl> <dt>
 
-*prätangle* \[ in\]
+*pRectangle* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das Rechteck, mit dem in den Freihand Raumkoordinaten verglichen werden soll.
+Ein Zeiger auf das Rechteck, mit dem verglichen werden soll, in Freihandraumkoordinaten.
 
 </dd> <dt>
 
-*pfisintersecting* \[ vorgenommen\]
+*pfIsIntersecting* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn sich der Bereich von [**ianalysisregion**](ianalysisregion.md) mit dem angegebenen Rechteck überschneidet. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn sich der Bereich von [**IAnalysisRegion**](ianalysisregion.md) mit dem angegebenen Rechteck überschneidet; Andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Vergleich erfolgt in freistellungenkoordinaten.
+Der Vergleich erfolgt in Freihandraumkoordinaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,21 +68,21 @@ Der Vergleich erfolgt in freistellungenkoordinaten.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ianalysisregion**](ianalysisregion.md)
+[**IAnalysisRegion**](ianalysisregion.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
 title: Zeichnen von Text in einem Double-Buffered OpenGL-Fenster
-description: Sie zeichnen Text in einem doppelt gepufferten OpenGL-Fenster, indem Sie anzeigen Listen für ausgewählte Zeichen in einer Schriftart erstellen und dann die entsprechende Anzeigeliste für jedes Zeichen ausführen, das Sie zeichnen möchten.
+description: Sie zeichnen Text in einem doppelt gepufferten OpenGL-Fenster, indem Sie Anzeigelisten für ausgewählte Zeichen in einer Schriftart erstellen und dann die entsprechende Anzeigeliste für jedes Zeichen ausführen, das Sie zeichnen möchten.
 ms.assetid: 59ac0414-a845-4f40-be9c-9962fd1585f6
 keywords:
-- OpenGL unter Windows, Text
+- OpenGL on Windows,text
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b0bf4cc99a1806d734ccde5cfae98f4d367da13
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 84202f59ca1a232bae37603b2ff657cb5c61ae0a1d3961b960b624d061ab20cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118618545"
 ---
 # <a name="drawing-text-in-a-double-buffered-opengl-window"></a>Zeichnen von Text in einem Double-Buffered OpenGL-Fenster
 
-Sie zeichnen Text in einem doppelt gepufferten OpenGL-Fenster, indem Sie anzeigen Listen für ausgewählte Zeichen in einer Schriftart erstellen und dann die entsprechende Anzeigeliste für jedes Zeichen ausführen, das Sie zeichnen möchten. Im folgenden Codebeispiel wird ein renderingkontext erstellt, ein rotes Dreieck gezeichnet und dann mit Text beschriftet. Bei diesem Beispielcode wird davon ausgegangen, dass es einen Gerätekontext mit einem Schriftart-und Pixel Format gibt.
+Sie zeichnen Text in einem doppelt gepufferten OpenGL-Fenster, indem Sie Anzeigelisten für ausgewählte Zeichen in einer Schriftart erstellen und dann die entsprechende Anzeigeliste für jedes Zeichen ausführen, das Sie zeichnen möchten. Im folgenden Codebeispiel wird ein Renderingkontext erstellt, ein rotes Dreieck ge zeichnet und dann mit Text bezeichnet. Für diesen Beispielcode wird davon ausgegangen, dass es einen Gerätekontext mit einer Schriftart und einem Pixelformat gibt.
 
 
 ```C++
@@ -72,9 +72,9 @@ wglDeleteContext(hglrc);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

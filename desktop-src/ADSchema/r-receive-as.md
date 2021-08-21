@@ -1,10 +1,10 @@
 ---
-title: Erweiterte Rechte Receive-As
-description: Exchange right ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
+title: Receive-As erweitertes Recht
+description: Exchange Recht ermöglicht den Empfang von E-Mails als bestimmtes Postfach.
 ms.assetid: 3fa0cab3-5de4-4bd9-9e6c-95b0b6a4c0f8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für erweiterte Rechte Receive-As
+- Receive-As erweiterten rechten AD-Schemas
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca5a79de774579ac7c259d5a1c8ca9c590ac5cb2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1a1e2d8650e2db18b5b76447446aa1e7d510f869e15d6ee0a1eccf4aa1d8d569
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118680223"
 ---
-# <a name="receive-as-extended-right"></a>Erweiterte Rechte Receive-As
+# <a name="receive-as-extended-right"></a>Receive-As erweitertes Recht
 
-Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
+Exchange recht: Ermöglicht den Empfang von E-Mails als bestimmtes Postfach.
 
 
 
@@ -37,7 +37,7 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                           |
+| Lokalisierungsanzeige-ID | 5                                                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                                                                               |
+| Lokalisierungsanzeige-ID | 5                                                                                                                               |
 
 
 
@@ -72,7 +72,7 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                                                                               |
+| Lokalisierungsanzeige-ID | 5                                                                                                                               |
 
 
 
@@ -83,7 +83,7 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                                                                               |
+| Lokalisierungsanzeige-ID | 5                                                                                                                               |
 
 
 
@@ -93,8 +93,8 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                                                                                                                                                                |
+| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
+| Lokalisierungsanzeige-ID | 5                                                                                                                                                                                                                |
 
 
 
@@ -104,8 +104,8 @@ Exchange right: ermöglicht das Empfangen von e-Mails als bestimmtes Postfach.
 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 5                                                                                                                                                                                                                |
+| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
+| Lokalisierungsanzeige-ID | 5                                                                                                                                                                                                                |
 
 
 

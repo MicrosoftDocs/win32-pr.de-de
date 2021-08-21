@@ -1,36 +1,36 @@
 ---
-description: Die Shell-API stellt Funktionen bereit, die Sie zum Verwalten von Netzwerkdruckern verwenden können. Wenn einer Datei das Druck Verb zugeordnet ist, können Sie den Befehl ShellExecuteEx verwenden, um Sie zu drucken.
+description: Die Shell-API stellt Funktionen bereit, mit denen Sie Netzwerkdrucker verwalten können. Wenn einer Datei das Druckverb zugeordnet ist, können Sie sie mit dem Befehl ShellExecuteEx drucken.
 ms.assetid: b94fca60-237a-43b1-a75a-faccf9dc63fb
 title: Verwalten von Druckern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73e9625fbe17c0dd350a10c0c71dcd5332fb9154
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7086b360355d0ad85be440bc8bc9e330bfa6dd25793cc943d3aacdbaa0d4a8f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719598"
 ---
 # <a name="managing-printers"></a>Verwalten von Druckern
 
-Die Shell-API stellt Funktionen bereit, die Sie zum Verwalten von Netzwerkdruckern verwenden können. Wenn einer Datei das **Druck** Verb zugeordnet ist, können Sie den Befehl [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) verwenden, um Sie zu drucken.
+Die Shell-API stellt Funktionen bereit, mit denen Sie Netzwerkdrucker verwalten können. Wenn einer Datei das **Druckverb** zugeordnet ist, können Sie sie mit dem [**Befehl ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) drucken.
 
 -   [Druckerverwaltung](#printer-management)
 -   [Drucken von Dateien mit ShellExecuteEx](#printing-files-with-shellexecuteex)
 
 ## <a name="printer-management"></a>Druckerverwaltung
 
-Sie können Drucker auf einem System mit der [**shinvokeprintercommand**](/windows/desktop/api/Shellapi/nf-shellapi-shinvokeprintercommanda) -Funktion verwalten. Diese Funktion ermöglicht Ihnen Folgendes:
+Sie können Drucker auf einem System mit der [**SHInvokePrinterCommand-Funktion**](/windows/desktop/api/Shellapi/nf-shellapi-shinvokeprintercommanda) verwalten. Mit dieser Funktion können Sie:
 
 -   Installieren Sie Drucker.
 -   Öffnen Sie Drucker.
--   Druckereigenschaften erhalten.
--   Erstellen Sie Drucker Verknüpfungen.
+-   Hier erhalten Sie Druckereigenschaften.
+-   Erstellen sie Druckerlinks.
 -   Drucken Sie eine Testseite.
 
 ## <a name="printing-files-with-shellexecuteex"></a>Drucken von Dateien mit ShellExecuteEx
 
-Wenn einem Dateityp ein Druckbefehl zugeordnet ist, können Sie die Datei drucken, indem Sie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) mit dem Wert " **Print** " als Verb aufrufen. Dieser Befehl ist häufig identisch mit dem, der für das **geöffnete** Verb verwendet wurde, mit dem Hinzufügen eines Flags, um der Anwendung mitzuteilen, dass die Datei gedruckt werden soll. Beispielsweise können txt-Dateien von Microsoft WordPad gedruckt werden. Das **geöffnete** Verb für eine txt-Datei entspricht daher etwa dem folgenden Befehl:
+Wenn einem Dateityp ein Druckbefehl zugeordnet ist, können Sie die Datei drucken, indem Sie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) mit **print** als Verb aufrufen. Dieser Befehl ist häufig mit dem  für das geöffnete Verb identisch, mit dem Zusatz eines Flags, das die Anwendung anfing, die Datei zu drucken. Beispielsweise können .txt von Microsoft WordPad gedruckt werden. Das **offene** Verb für eine .txt würde daher etwa dem folgenden Befehl entsprechen:
 
 
 ```C++
@@ -39,7 +39,7 @@ Wenn einem Dateityp ein Druckbefehl zugeordnet ist, können Sie die Datei drucke
 
 
 
-Wenn Sie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) zum Drucken einer txt-Datei verwenden, wird die Datei von WordPad geöffnet, gedruckt und dann geschlossen, und die Steuerung wird an die Anwendung zurückgegeben. Die folgende Beispiel Funktion verwendet einen voll qualifizierten Pfad und verwendet **ShellExecuteEx** , um Sie zu drucken, wobei der der Dateinamenerweiterung zugeordnete Print-Befehl verwendet wird.
+Wenn Sie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) zum Drucken einer .txt-Datei verwenden, öffnet WordPad die Datei, druckt sie und schließt sie dann und gibt die Steuerung an die Anwendung zurück. Die folgende Beispielfunktion verwendet einen vollqualifizierten Pfad und verwendet **ShellExecuteEx,** um sie mithilfe des Druckbefehls zu drucken, der der Dateierweiterung zugeordnet ist.
 
 
 ```C++

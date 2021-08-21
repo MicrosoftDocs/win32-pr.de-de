@@ -1,9 +1,9 @@
 ---
-title: HKM_GETHOTKEY Meldung (kommstrg. h)
-description: Ruft den Code des virtuellen Schlüssels und die Modifiziererflags eines Abkürzungs Schlüssels von einem Steuerelement für den Hot Key ab.
+title: HKM_GETHOTKEY (Commctrl.h)
+description: Ruft den Virtuellen Schlüsselcode und die Modifiziererflags eines heißen Schlüssels aus einem Hot Key-Steuerelement ab.
 ms.assetid: 8b061411-604d-46ea-a082-3eca2d47d992
 keywords:
-- Windows-Steuerelemente für HKM_GETHOTKEY Meldung
+- HKM_GETHOTKEY meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16e23e02f32a4dd6f82f61fd735688353f48ec19
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 79bfbad1eb5e9a6679a1b3e419a0877e61cd90247ef0cf91b0a30c655f755a57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118672268"
 ---
-# <a name="hkm_gethotkey-message"></a>HKM- \_ GetHotKey-Nachricht
+# <a name="hkm_gethotkey-message"></a>HKM \_ GETHOTKEY-Nachricht
 
-Ruft den Code des virtuellen Schlüssels und die Modifiziererflags eines Abkürzungs Schlüssels von einem Steuerelement für den Hot Key ab.
+Ruft den Virtuellen Schlüsselcode und die Modifiziererflags eines heißen Schlüssels aus einem Hot Key-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,24 +37,24 @@ Ruft den Code des virtuellen Schlüssels und die Modifiziererflags eines Abkürz
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Code und die Modifiziererflags des virtuellen Schlüssels zurück. Das [**lobyzeichen**](/previous-versions/windows/desktop/legacy/ms632658(v=vs.85)) von [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist der virtuelle Schlüsselcode der "Hot"-Taste. Das [**Hibyte**](/previous-versions/windows/desktop/legacy/ms632656(v=vs.85)) des **loworts** ist der schlüsselmodifizierer, der die Schlüssel angibt, die eine Kombination aus der Tastenkombination definieren. Die Modifiziererflags können eine Kombination der folgenden Werte sein.
+Gibt den Virtuellen Schlüsselcode und modifiziererflags zurück. Der [**LOBYTE-Wert**](/previous-versions/windows/desktop/legacy/ms632658(v=vs.85)) von [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist der virtuelle Schlüsselcode des heißen Schlüssels. Der [**HIBYTE-Wert**](/previous-versions/windows/desktop/legacy/ms632656(v=vs.85)) von **LOWORD** ist der Schlüsselmodifizierer, der die Schlüssel angibt, die eine Hot Key-Kombination definieren. Die Modifiziererflags können eine Kombination der folgenden Werte sein.
 
 
 
 | Wert            | Bedeutung      |
 |------------------|--------------|
-| hotkeyf \_ alt     | ALT-TASTE      |
-| hotkeyf- \_ Steuerelement | Steuerelement Taste  |
-| hotkeyf \_ ext     | Erweiterter Schlüssel |
-| hotkeyf- \_ Verschiebung   | Umschalttaste    |
+| HOTKEYF \_ ALT     | ALT-TASTE      |
+| HOTKEYF-STEUERELEMENT \_ | STEUERTASTE  |
+| HOTKEYF \_ EXT     | Erweiterter Schlüssel |
+| HOTKEYF \_ SHIFT   | Umschalttaste    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der 16-Bit-Wert, der von dieser Nachricht zurückgegeben wird, kann als *wParam* -Parameter in der [**WM \_ -**](/windows/desktop/inputdev/wm-sethotkey) Nachricht "*" verwendet werden.
+Der von dieser Nachricht zurückgegebene 16-Bit-Wert kann als *wParam-Parameter* in der [**WM \_ SETHOTKEY-Nachricht verwendet**](/windows/desktop/inputdev/wm-sethotkey) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Der 16-Bit-Wert, der von dieser Nachricht zurückgegeben wird, kann als *wParam*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

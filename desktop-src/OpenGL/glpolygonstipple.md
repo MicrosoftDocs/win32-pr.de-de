@@ -1,9 +1,9 @@
 ---
-title: glpolygonstippel-Funktion (GL. h)
-description: Die glpolygonstippel-Funktion legt das Polygon-stippling-Muster fest.
+title: glPolygonStipple-Funktion (Gl.h)
+description: Die glPolygonStipple-Funktion legt das Polygonausschnittmuster fest.
 ms.assetid: e066f9cf-36da-4a3b-a34f-2f8a6f5a0ae6
 keywords:
-- glpolygonstippel-Funktion OpenGL
+- glPolygonStipple-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a2eb0b2e4319f7e3e37191fb197cd7ff86a2a97
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e1f9098ab91af5f258f97e0878ae8cbcb19863ec3bc82765c2664683830539fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118614906"
 ---
-# <a name="glpolygonstipple-function"></a>glpolygonstippel-Funktion
+# <a name="glpolygonstipple-function"></a>glPolygonStipple-Funktion
 
-Die **glpolygonstippel** -Funktion legt das Polygon-stippling-Muster fest.
+Die **funktion glPolygonStipple legt** das Polygonausschnittmuster fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glPolygonStipple(
 *mask* 
 </dt> <dd>
 
-Ein Zeiger auf ein 32x32-stippingmuster, das aus dem Arbeitsspeicher auf die gleiche Weise entpackt wird, wie " [**gldrawpixels**](gldrawpixels.md) " Pixel entpackt.
+Ein Zeiger auf ein 32x32-Ausschnittmuster, das auf die gleiche Weise aus dem Arbeitsspeicher entpackt wird, wie [**glDrawPixels**](gldrawpixels.md) Pixel entpackt.
 
 </dd> </dl>
 
@@ -53,29 +53,29 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glpolygonstippel** -Funktion legt das Polygon-stippling-Muster fest. Beim Polygon-stippling, wie z. b. Zeilen stippling (siehe [**glLineStipple**](gllinestipple.md)), werden bestimmte Fragmente maskiert, die von rasterization erzeugt werden, und ein Muster erstellt. Stippling ist unabhängig vom Polygon-Antialiasing.
+Die **funktion glPolygonStipple legt** das Polygonausschnittmuster fest. Polygonstipping, z. B. Zeilenausschnitt (siehe [**glLineStipple),**](gllinestipple.md)maskiert bestimmte Fragmente, die durch Rasterung erzeugt werden, und erstellt ein Muster. Das Ausschnitten ist unabhängig von Polygon-Antialiasing.
 
-Der *Mask* -Parameter ist ein Zeiger auf ein 32 x 32-stippingmuster, das im Arbeitsspeicher gespeichert ist, genau wie die Pixeldaten, die für **gldrawpixels** bereitgestellt werden, wobei *Höhe* und *Breite* gleich 32, ein Pixel *Format* des GL \_ \_ -Farb Indexes und der *Datentyp* von GL \_ Bitmap sind. Das Stippel Muster wird also als 32 x 32-Array von 1-Bit-Farbindizes dargestellt, die in nicht signierten Bytes verpackt sind. Die Parameter der [**glpixelstore**](glpixelstore-functions.md) -Funktion, wie z. b. gl \_ unpack \_ Swap \_ Bytes und GL \_ unpack \_ lsb \_ First, wirken sich auf die Zusammenstellung der Bits in ein Stippel Muster aus. Pixel Übertragungs Vorgänge (Shift, Offset und Pixel Map) werden jedoch nicht auf das Stippel Bild angewendet.
+Der *Mask-Parameter* ist ein Zeiger auf ein 32x32-Ausschnittmuster, das im Arbeitsspeicher gespeichert wird,  genau  wie die Pixeldaten, die  **glDrawPixels** mit einer Höhe und Breite von 32, einem Pixelformat von GL COLOR INDEX und dem Datentyp GL BITMAP bereitgestellt \_ \_  \_ werden. Das heißt, das Ausschnittmuster wird als 32x32-Array von 1-Bit-Farbindizes dargestellt, die in Bytes ohne Vorzeichen gepackt sind. Die [**glPixelStore-Funktionsparameter**](glpixelstore-functions.md) wie GL UNPACK SWAP BYTES und GL UNPACK LSB FIRST wirken sich auf die \_ \_ \_ \_ \_ Assempel der Bits in einem \_ Ausschnittmuster aus. Pixelübertragungsvorgänge (Umschalt-, Offset- und Pixelzuordnung) werden jedoch nicht auf das Ausschnittbild angewendet.
 
-Der Polygon-stippling ist mit " [**glEnable**](glenable.md) " und " **gldeaktivieren**" aktiviert und deaktiviert \_ \_ Wenn diese Option aktiviert ist, wird ein rasterisiertes Polygon Fragment mit den Fenster Koordinaten *x*<sub>w</sub> und *y*<sub>w</sub> nur dann an die nächste Stufe von OpenGL gesendet, wenn das (*x*<sub>w</sub> mod 32) Th-Bit in der (*y*<sub>w</sub> mod 32) Th-Zeile des stippingmusters 1 ist. Wenn das Polygon-stippling deaktiviert ist, ist es so, als ob es sich um ein stippingmuster handelt.
+Polygonausschnitte sind mit [**glEnable**](glenable.md) und **glDisable** aktiviert und deaktiviert, indem das Argument GL \_ POLYGON \_ STIPPLE verwendet wird. Wenn diese Option aktiviert ist, wird ein rasteriertes Polygonfragment mit den Fensterkoordinaten *x*<sub>w</sub> und *y*<sub>w</sub> nur dann an die nächste Phase von OpenGL gesendet, wenn das *(x*<sub>w</sub> mod 32)th-Bit in der (*y*<sub>w</sub> mod 32)-Zeile des Ausschnittmusters eins ist. Wenn Polygonausschnitte deaktiviert sind, ist dies so, als ob es sich bei dem Ausschnittmuster um alle handelte.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glpolygonstiple** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPolygonStipple ab:**
 
-[**glgetpolygonstippel**](glgetpolygonstipple.md)
+[**glGetPolygonStipple**](glgetpolygonstipple.md)
 
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Polygon \_ Stippel
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ POLYGON \_ STIPPLE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,32 +85,32 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glpolygonstip
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gllinestippel**](gllinestipple.md)
+[**glLineStipple**](gllinestipple.md)
 </dt> <dt>
 
-[**glpixelstore**](glpixelstore-functions.md)
+[**glPixelStore**](glpixelstore-functions.md)
 </dt> <dt>
 
-[**glpixeltransfer**](glpixeltransfer.md)
+[**glPixelTransfer**](glpixeltransfer.md)
 </dt> </dl>
 
  

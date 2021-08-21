@@ -1,23 +1,23 @@
 ---
 title: Weitere Informationen zu WIC
-description: Verwenden Sie diese zusätzlichen Ressourcen für die neuesten zusätzlichen Informationen zum Windows-Bilderstellungskomponente Framework.
+description: Verwenden Sie diese zusätzlichen Ressourcen, um die neuesten zusätzlichen Informationen zum framework für Windows Imaging Component zu finden.
 ms.assetid: 63f99cf6-809c-48b9-9b89-6154d026b262
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc94ee9ad0d3614398211e401c51164fc96f72e7
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 70671ccc3d6942e6b2b3fcd862d47192ba6d78cd8be9efba32ff72e91c0182b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118709740"
 ---
 # <a name="for-more-info-about-wic"></a>Weitere Informationen zu WIC
 
-Wenden Sie sich an , wenn Sie Informationen oder Fragen haben. wiccodec@microsoft.com
+Wenn Sie Informationen oder Fragen haben, wenden Sie sich an wiccodec@microsoft.com
 
-Weitere Informationen zum Schreiben eines Windows-Bilderstellungskomponente-Codecs (WIC) finden Sie unter Schreiben eines WIC-Enabled [Codecs.](-wic-howtowriteacodec.md)
+Weitere Informationen zum Schreiben eines WIC-enable-Codecs (Windows Imaging Component) finden Sie unter [Schreiben eines WIC-Enabled Codecs.](-wic-howtowriteacodec.md)
 
-Weitere Informationen zu WIC finden Sie unter Windows-Bilderstellungskomponente [Übersicht.](-wic-about-windows-imaging-codec.md)
+Weitere Informationen zu WIC finden Sie in der [Übersicht über Windows Imaging Component](-wic-about-windows-imaging-codec.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -26,7 +26,7 @@ Weitere Informationen zu WIC finden Sie unter Windows-Bilderstellungskomponente 
 **Konzeptionellen**
 </dt> <dt>
 
-[Windows-Bilderstellungskomponente Übersicht](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
 [WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
