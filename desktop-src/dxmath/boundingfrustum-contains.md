@@ -20,20 +20,20 @@ ms.locfileid: "119042878"
 ---
 # <a name="boundingfrustumcontains-methods"></a>BoundingFrustum.Contains-Methoden
 
-Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) ein angegebenes -Objekt enthält.
+Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) ein angegebenes -Objekt enthält.
 
 ### <a name="overload-list"></a>Überladeliste
 
-| Methode | BESCHREIBUNG |
+| Methode | Beschreibung |
 |-|-|
-| [**BoundingFrustum::Contains (const BoundingBox&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingbox_)) | Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) das angegebene [**BoundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)enthält. |
-| [**BoundingFrustum::Contains (const BoundingFrustum&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingfrustum_)) | Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) das angegebene **BoundingFrustum** enthält. |
-| [**BoundingFrustum::Contains (const BoundingOrientedBox&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingorientedbox_)) | Testet, ob [**boundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) das angegebene [**BoundingOrientedBox**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingorientedbox)enthält. |
-| [**BoundingFrustum::Contains (const BoundingSphere&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingsphere_)) | Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) die angegebene [**BoundingSphere**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingsphere)enthält. |
-| [**BoundingFrustum::Contains (FXMVECTOR)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains) | Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) den angegebenen Punkt enthält. |
-| [**BoundingFrustum::Contains (FXMVECTOR, FXMVECTOR, FXMVECTOR)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(fxmvector_fxmvector_fxmvector)) | Testet, ob das [**BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) das angegebene Dreieck enthält. |
+| [**BoundingFrustum::Contains (const BoundingBox&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingbox_)) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) die angegebene [**BoundingBox enthält.**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox) |
+| [**BoundingFrustum::Contains (const BoundingFrustum&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingfrustum_)) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) den angegebenen **BoundingFrustum enthält.** |
+| [**BoundingFrustum::Contains (const BoundingOrientedBox&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingorientedbox_)) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) die angegebene [**BoundingOrientedBox enthält.**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingorientedbox) |
+| [**BoundingFrustum::Contains (const BoundingSphere&)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(constboundingsphere_)) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) die angegebene [**BoundingSphere enthält.**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingsphere) |
+| [**BoundingFrustum::Contains (FXMVECTOR)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) den angegebenen Punkt enthält. |
+| [**BoundingFrustum::Contains (FXMVECTOR, FXMVECTOR, FXMVECTOR)**](/windows/desktop/api/directxcollision/nf-directxcollision-boundingfrustum-contains(fxmvector_fxmvector_fxmvector)) | Testet, ob [**das BoundingFrustum**](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum) das angegebene Dreieck enthält. |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [BoundingFrustum-Methoden](/windows/desktop/dxmath/boundingfrustum-methods)
 * [BoundingFrustum](/windows/desktop/api/directxcollision/ns-directxcollision-boundingfrustum)

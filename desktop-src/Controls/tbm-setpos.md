@@ -3,7 +3,7 @@ title: TBM_SETPOS Nachricht (Commctrl.h)
 description: 'TBM_SETPOS Meldung: Legt die aktuelle logische Position des Schiebereglers in einer Trackleiste fest.'
 ms.assetid: df6c4e5d-2847-419d-82b5-334d53bb6ba1
 keywords:
-- TBM_SETPOS Windows-Steuerelemente
+- TBM_SETPOS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:

@@ -68,7 +68,7 @@ Nachrichten, die an den Videorendererfilter gesendet werden, können in einem an
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

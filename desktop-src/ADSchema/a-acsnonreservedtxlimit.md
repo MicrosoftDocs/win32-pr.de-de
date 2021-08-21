@@ -1,11 +1,11 @@
 ---
-title: ACS-Non-reserved-TX-Limit-Attribut
-description: Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine Reservierung erfolgt.
+title: ATTRIBUT "ACS-Non-Reserved-Tx-Limit"
+description: Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine Reservierung eingerichtet wird.
 ms.assetid: 5ead8e5b-31e8-438e-8d1b-9aae8601dfc9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ACS-Non-reserved-TX-Limit
-- acsnonreservedtxlimit-Attribut, AD-Schema
+- AD-Schema für DAS ATTRIBUT "ACS-Non-Reserved-Tx-Limit"
+- aCSNonReservedTxLimit-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 999b1775640624b7825b38ae1632d70773bc75b3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 59c5cd3b46ca4f52bebe377132671ff71dc55e8cf2c3e43384debbcf6a518025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106339615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082044"
 ---
-# <a name="acs-non-reserved-tx-limit-attribute"></a>ACS-Non-reserved-TX-Limit-Attribut
+# <a name="acs-non-reserved-tx-limit-attribute"></a>ATTRIBUT "ACS-Non-Reserved-Tx-Limit"
 
-Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine Reservierung erfolgt.
+Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine Reservierung eingerichtet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-Non-reserved-TX-Limit            |
-| LDAP-Display-Name | acsnonreservedtxlimit                |
+| CN                | ACS-Non-Reserved-Tx-Limit            |
+| Ldap-Anzeigename | aCSNonReservedTxLimit                |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.780               |
-| System-ID-GUID    | 1cb355a2-56d0-11d1-a9c6-0000b80367c1 |
+| System-ID-GUID    | 1cb355a2-56d0-11d1-a9c6-0000f80367c1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -100,10 +100,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -121,10 +121,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -142,10 +142,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -163,10 +163,10 @@ Die maximale Bandbreite, die eine Benutzeranwendung übertragen kann, bevor eine
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

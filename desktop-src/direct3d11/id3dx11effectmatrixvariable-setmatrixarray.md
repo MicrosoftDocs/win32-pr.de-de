@@ -4,7 +4,7 @@ description: Legen Sie ein Array von Gleitkommamatrizen fest.
 ms.assetid: c90d621c-7500-49c3-ab40-2d0630fc4bec
 keywords:
 - SetMatrixArray-Methode Direct3D 11
-- SetMatrixArray-Methode Direct3D 11, ID3DX11EffectMatrixVariable-Schnittstelle
+- SetMatrixArray-Methode Direct3D 11 , ID3DX11EffectMatrixVariable-Schnittstelle
 - ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11 , SetMatrixArray-Methode
 topic_type:
 - apiref
@@ -59,7 +59,7 @@ Ein Zeiger auf die erste Matrix.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Matrixelemente, die vom Anfang des Arrays aus übersprungen werden.
+Die Anzahl der Matrixelemente, die ab dem Anfang des Arrays übersprungen werden sollen.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Die Anzahl der Matrixelemente, die vom Anfang des Arrays aus übersprungen werde
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der elemente, die festgelegt werden soll.
+Die Anzahl der festzulegende Elemente.
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -92,11 +92,11 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

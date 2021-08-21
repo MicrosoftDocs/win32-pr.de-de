@@ -19,14 +19,14 @@ In diesem Abschnitt werden die Funktionen beschrieben, die von der Microsoft Dir
 
 
 
-| Thema                                                                                       | BESCHREIBUNG                                                                                                                                          |
+| Thema                                                                                       | Beschreibung                                                                                                                                          |
 |---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DCompositionAttachMouseDragToHwnd**](/windows/desktop/api/dcomp/nf-dcomp-dcompositionattachmousedragtohwnd)<br/>   | Erstellt eine Interaction/InputSink-Datei, um die Maustaste nach unten und alle nachfolgenden Move- und Up-Ereignisse an den angegebenen HWND weiter zu routen.<br/>                      |
-| [**DCompositionAttachMouseWheelToHwnd**](/windows/desktop/api/dcomp/nf-dcomp-dcompositionattachmousewheeltohwnd)<br/> | Erstellt eine Interaction/InputSink-Datei, um Mausradmeldungen an den angegebenen HWND weiter zu routen. <br/>                                                        |
+| [**DCompositionAttachMouseDragToHwnd**](/windows/desktop/api/dcomp/nf-dcomp-dcompositionattachmousedragtohwnd)<br/>   | Erstellt einen Interaction/InputSink, um die Maustaste nach unten und alle nachfolgenden Verschiebungs- und Nach-oben-Ereignisse an den angegebenen HWND weiterzuleiten.<br/>                      |
+| [**DCompositionAttachMouseWheelToHwnd**](/windows/desktop/api/dcomp/nf-dcomp-dcompositionattachmousewheeltohwnd)<br/> | Erstellt einen Interaction/InputSink, um Mausradmeldungen an den angegebenen HWND weiterzuleiten. <br/>                                                        |
 | [**DCompositionCreateDevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice)<br/>                     | Erstellt ein neues Geräteobjekt, das zum Erstellen anderer DirectComposition-Objekte verwendet werden kann.<br/>                                                   |
 | [**DCompositionCreateDevice2**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice2)<br/>                   | Erstellt ein neues Geräteobjekt, das zum Erstellen anderer DirectComposition-Objekte verwendet werden kann.<br/>                                                   |
 | [**DCompositionCreateDevice3**](/windows/desktop/api/dcomp/nf-dcomp-dcompositioncreatedevice3)<br/>                   | Erstellt ein neues DirectComposition-Geräteobjekt, das zum Erstellen anderer DirectComposition-Objekte verwendet werden kann.<br/>                               |
-| [**DCompositionCreateSurfaceHandle**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatesurfacehandle)<br/>       | Erstellt ein neues Kompositionsoberflächenobjekt, das an eine Microsoft DirectX-Swapkette oder einen Swappuffer gebunden und einem Visual zugeordnet werden kann.<br/> |
+| [**DCompositionCreateSurfaceHandle**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatesurfacehandle)<br/>       | Erstellt ein neues Kompositionsoberflächenobjekt, das an eine Microsoft DirectX-Swapkette oder einen Austauschpuffer gebunden und einem Visual zugeordnet werden kann.<br/> |
 | [**DCompositionGetFrameStatistics**](/previous-versions/windows/desktop/legacy/mt589902(v=vs.85))<br/>         | Ruft Informationen zur Kompositionsstatistik ab.<br/>                                                                                             |
 
 

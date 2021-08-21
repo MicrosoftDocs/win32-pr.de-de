@@ -1,7 +1,7 @@
 - name: Domänennamenserver (DNS)
   href: dns-start-page.md
   items:
-    - name: Dokumente zu DNS-Standards
+    - name: DOKUMENTE ZU DNS-Standards
       href: dns-standards-documents.md
     - name: Informationen zu DNS
       href: about-dns.md
@@ -215,7 +215,7 @@
     - name: DNS-WMI-Anbieter
       href: dns-wmi-provider.md
       items:
-        - name: Suchen der benötigten Informationen im DNS-WMI-Anbieter
+        - name: Suchen der benötigten Daten im DNS-WMI-Anbieter
           href: finding-what-you-need-in-the-dns-wmi-provider.md
         - name: Ressourceninformationen für den DNS-WMI-Anbieter
           href: resource-information-for-the-dns-wmi-provider.md

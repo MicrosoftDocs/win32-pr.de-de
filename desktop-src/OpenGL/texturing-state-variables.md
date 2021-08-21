@@ -3,7 +3,7 @@ title: Statusvariablen für Texturen
 description: Statusvariablen für Texturen
 ms.assetid: 2d9d3d8b-ecaa-412c-8105-ae2ca801784e
 keywords:
-- Texturierungszustandsvariablen OpenGL
+- Texturieren von Zustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "119776580"
 
 | Eigenschaft | Wert |
 |------------------|-------------------------------------------------------|
-| Beschreibung:     | True, wenn *x* – D Texturierung aktiviert ist (*x* ist 1D oder 2D) |
+| Beschreibung:     | True, wenn *x* – D Texturing aktiviert ist (*x* ist 1-D oder 2D) |
 | Attributgruppe: | textur/enable                                        |
 | Anfangswert:   | GL \_ FALSE                                             |
 | Get-Befehl:     | [**glIsEnabled**](glisenabled.md)                    |
@@ -47,7 +47,7 @@ ms.locfileid: "119776580"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL \_ TEXTURE \_ WIDTH</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span>GL \_ \_ TEXTURBREITE</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
@@ -60,7 +60,7 @@ ms.locfileid: "119776580"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL \_ TEXTURE \_ HEIGHT</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL \_ \_ TEXTURHÖHE</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
@@ -77,7 +77,7 @@ ms.locfileid: "119776580"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
-| Beschreibung:     | *x* – D Texturbild *i* 's border                      |
+| Beschreibung:     | *x* – D Texturbild *i* es border                      |
 | Attributgruppe: |                                                          |
 | Anfangswert:   | 0                                                        |
 | Get-Befehl:     | [**glGetTexLevelParameter**](glgettexlevelparameter.md) |
@@ -86,7 +86,7 @@ ms.locfileid: "119776580"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>GL \_ TEXTURE \_ COMPONENTS</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>\_ \_ GL-TEXTURKOMPONENTEN</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
@@ -103,7 +103,7 @@ ms.locfileid: "119776580"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------------------|
-| Beschreibung:     | Texturrahmenfarbe                           |
+| Beschreibung:     | Textur-Rahmenfarbe                           |
 | Attributgruppe: | Struktur                                        |
 | Anfangswert:   | 0, 0, 0, 0                                     |
 | Get-Befehl:     | [**glGetTexParameter**](glgettexparameter.md) |
@@ -116,7 +116,7 @@ ms.locfileid: "119776580"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------------------|
-| Beschreibung:     | Texturverkleinerungsfunktion                  |
+| Beschreibung:     | Texturvergrößerungsfunktion                  |
 | Attributgruppe: | Struktur                                        |
 | Anfangswert:   | GL \_ NEAREST \_ MIPMAP \_ LINEAR                    |
 | Get-Befehl:     | [**glGetTexParameter**](glgettexparameter.md) |

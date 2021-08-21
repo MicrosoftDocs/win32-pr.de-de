@@ -1,5 +1,5 @@
 ---
-description: Die abstrakte Basisklasse für alle konkreten unformatierte Leistungsindikatorklassen.
+description: Die abstrakte Basisklasse für alle konkreten unformatierten Leistungsindikatorklassen.
 ms.assetid: 3c457996-54d9-4425-8a57-15176d027e3a
 ms.tgt_platform: multiple
 title: Win32_PerfRawData-Klasse
@@ -32,22 +32,22 @@ ms.locfileid: "119020128"
 ---
 # <a name="win32_perfrawdata-class"></a>Win32 \_ PerfRawData-Klasse
 
-Die abstrakte Basisklasse für alle konkreten unformatierte Leistungsindikatorklassen.
+Die abstrakte Basisklasse für alle konkreten unformatierten Leistungsindikatorklassen.
 
-Um im Systemmonitor angezeigt zu werden, müssen Dem Cimv2-Stammnamespace Leistungsindikatorklassen hinzugefügt und von \\ **Win32 \_ PerfRawData abgeleitet werden.** Daten in diesen Klassen werden vom Leistungsindikatoranbieter [für hohe Leistung bereitgestellt.](../wmisdk/performance-counter-provider.md)
+Um im Systemmonitor angezeigt zu werden, müssen Dem Stammnamespace cimv2 Leistungsindikatorklassen hinzugefügt \\ und von **Win32 \_ PerfRawData** abgeleitet werden. Daten in diesen Klassen werden vom [Leistungsindikatoranbieter](../wmisdk/performance-counter-provider.md)für hohe Leistung bereitgestellt.
 
-Die folgenden Eigenschaften werden geerbt, wenn eine Klasse von **Win32 \_ PerfRawData abgeleitet wird:**
+Die folgenden Eigenschaften werden geerbt, wenn eine Klasse von **Win32 \_ PerfRawData** abgeleitet wird:
 
 -   **Timestamp \_ PerfTime**
--   **\_Zeitstempel Sys100NS**
+-   **Zeitstempel \_ Sys100NS**
 -   **\_Timestamp-Objekt**
 -   **Frequency \_ PerfTime**
--   **Häufigkeit \_ Sys100NS**
+-   **Frequency \_ Sys100NS**
 -   **\_Frequency-Objekt**
 
-In jedem Fall müssen die Eigenschaften vom Anbieter ausgefüllt werden, oder die Klasse kann nicht im Systemmonitor angezeigt werden. Diese Eigenschaften werden verwendet, um Indikatortypformeln von Kunden von Leistungsdaten zu berechnen.
+In jedem Fall müssen die Eigenschaften vom Anbieter ausgefüllt werden, oder die Klasse kann nicht im Systemmonitor angezeigt werden. Diese Eigenschaften werden verwendet, um Indikatortypformeln von Consumern von Leistungsdaten zu berechnen.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht und zeigt alle geerbten Eigenschaften an.
+Die folgende Syntax wird aus MOF-Code vereinfacht und zeigt alle geerbten Eigenschaften an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,7 +69,7 @@ class Win32_PerfRawData : Win32_Perf
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ PerfRawData-Klasse** verfügt über die folgenden Membertypen:
+Die **Win32 \_ PerfRawData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -93,7 +93,7 @@ Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 
 Kurze Textbeschreibung für die Statistik oder Metrik.
 
-Diese Eigenschaft wird von [**CIM \_ StatisticalInformation geerbt.**](cim-statisticalinformation.md)
+Diese Eigenschaft wird von [**CIM \_ StatisticalInformation**](cim-statisticalinformation.md)geerbt.
 
 </dd> <dt>
 
@@ -108,7 +108,7 @@ Zugriffstyp: Schreibgeschützt
 
 Textbeschreibung der Statistik oder Metrik.
 
-Diese Eigenschaft wird von [**CIM \_ StatisticalInformation geerbt.**](cim-statisticalinformation.md)
+Diese Eigenschaft wird von [**CIM \_ StatisticalInformation**](cim-statisticalinformation.md)geerbt.
 
 </dd> <dt>
 
@@ -121,11 +121,11 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Häufigkeit in Ticks pro Sekunde der **Timestamp \_ Object-Eigenschaft.** Wenn der Anbieter unterklassig ist, definiert er diese Eigenschaft.
+Häufigkeit in Ticks pro Sekunde der **Timestamp \_ Object-Eigenschaft.** Wenn die Unterklasse festgelegt ist, definiert der Anbieter diese Eigenschaft.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> <dt>
 
@@ -138,15 +138,15 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Häufigkeit in Ticks pro Sekunde der **Frequency \_ PerfTime-Eigenschaft.** Sie können einen Wert erhalten, indem Sie die Windows [**QueryPerformanceCounter aufrufen.**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)
+Häufigkeit in Ticks pro Sekunde der **Frequency \_ PerfTime-Eigenschaft.** Ein Wert kann abgerufen werden, indem die Windows Funktion [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)aufgerufen wird.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> <dt>
 
-**Häufigkeit \_ Sys100NS**
+**Frequency \_ Sys100NS**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint64**
@@ -155,11 +155,11 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Häufigkeit in Ticks pro Sekunde der **\_ Timestamp Sys100NS-Eigenschaft** (10000000).
+Häufigkeit in Ticks pro Sekunde der **Timestamp \_ Sys100NS-Eigenschaft** (100000000).
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> <dt>
 
@@ -175,9 +175,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Bezeichnung, unter der die Statistik oder Metrik bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
+Bezeichnung, mit der die Statistik oder Metrik bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
-Diese Eigenschaft wird von [**CIM \_ StatisticalInformation geerbt.**](cim-statisticalinformation.md)
+Diese Eigenschaft wird von [**CIM \_ StatisticalInformation**](cim-statisticalinformation.md)geerbt.
 
 </dd> <dt>
 
@@ -190,11 +190,11 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Objektdefinierter Zeitstempel. Der Anbieter definiert seine Eigenschaft.
+Objektdefinierter Zeitstempel. Der Anbieter definiert seine -Eigenschaft.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> <dt>
 
@@ -207,15 +207,15 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeitstempel des Leistungsindikators. Sie können einen Wert erhalten, indem Sie die Windows [**QueryPerformanceCounter aufrufen.**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)
+Zeitstempel des Leistungsindikators. Ein Wert kann abgerufen werden, indem die Windows Funktion [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)aufgerufen wird.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> <dt>
 
-**\_Zeitstempel Sys100NS**
+**Zeitstempel \_ Sys100NS**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint64**
@@ -224,19 +224,19 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeitstempelwert in Einheiten von 100 Nanosekunden.
+Timestamp-Wert in Einheiten von 100 Nanosekunden.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
-Diese Eigenschaft wird von [**Win32 \_ Perf geerbt.**](win32-perf.md)
+Diese Eigenschaft wird von [**Win32 \_ Perf**](win32-perf.md)geerbt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ PerfRawData-Klasse** wird von [**Win32 \_ Perf**](win32-perf.md)abgeleitet, das von [**CIM \_ StatisticalInformation abgeleitet wird.**](cim-statisticalinformation.md)
+Die **Win32 \_ PerfRawData-Klasse** wird von [**Win32 \_ Perf**](win32-perf.md)abgeleitet, das von [**CIM \_ StatisticalInformation**](cim-statisticalinformation.md)abgeleitet wird.
 
-Alle von [**Win32 \_ Perf abgeleiteten**](win32-perf.md) Klassen sind für die Verwendung mit einem [*Aktualisierungsobjekt*](../wmisdk/gloss-r.md) konzipiert. Weitere Informationen zum Erstellen und Verwenden eines Aktualisierungsobjekts in der Programmiersprache C++ finden Sie unter Zugreifen auf [Leistungsdaten in C++.](../wmisdk/accessing-performance-data-in-c--.md) Weitere Informationen zum Erstellen und Verwenden eines Aktualisierungsobjekts in einer Skriptprogrammiersprache finden Sie unter Aktualisieren von [WMI-Daten in Skripts.](../wmisdk/refreshing-wmi-data-in-scripts.md)
+Alle von [**Win32 \_ Perf**](win32-perf.md) abgeleiteten Klassen sind für die Verwendung mit einem [*Aktualisierungsobjekt*](../wmisdk/gloss-r.md) konzipiert. Weitere Informationen zum Erstellen und Verwenden eines Aktualisierungsobjekts in der Programmiersprache C++ finden Sie unter [Zugreifen auf Leistungsdaten in C++.](../wmisdk/accessing-performance-data-in-c--.md) Weitere Informationen zum Erstellen und Verwenden eines Aktualisierungsobjekts in einer Skriptprogrammiersprache finden Sie unter [Aktualisieren von WMI-Daten in Skripts.](../wmisdk/refreshing-wmi-data-in-scripts.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -252,7 +252,7 @@ Alle von [**Win32 \_ Perf abgeleiteten**](win32-perf.md) Klassen sind für die V
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

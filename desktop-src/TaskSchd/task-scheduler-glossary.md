@@ -15,7 +15,7 @@ ms.locfileid: "119059838"
 ---
 # <a name="task-scheduler-glossary"></a>Taskplaner Glossar
 
-Dieser Abschnitt enthält ein Glossar mit technischen Begriffen, die in der Taskplaner-Dokumentation verwendet werden.
+Dieser Abschnitt enthält ein Glossar mit technischen Begriffen, die in der dokumentation Taskplaner werden.
 
 A B C D [E](e.md) F G H [I](i.md) J K L M N O [P](p.md) Q R [S](s.md) [T](t.md) U V [W](w.md) X Y Z
 

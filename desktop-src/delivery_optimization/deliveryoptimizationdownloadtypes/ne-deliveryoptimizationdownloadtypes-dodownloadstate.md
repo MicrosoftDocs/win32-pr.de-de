@@ -1,6 +1,6 @@
 ---
 title: DODownloadState-Enumeration
-description: Gibt die ID des aktuellen Downloadzustands an, der Teil der DO_DOWNLOAD_STATUS **ist.**
+description: Gibt die ID des aktuellen Downloadzustands an, der Teil der **DO_DOWNLOAD_STATUS** ist.
 keywords:
 - DODownloadState-Enumeration, DODownloadState
 topic_type:

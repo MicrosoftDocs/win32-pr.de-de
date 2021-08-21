@@ -1,6 +1,6 @@
 ---
 title: MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03-Klasse
-description: Mit der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 EXE03-Klasse können Sie angeben, welche \_ EXE-Anwendungen gestartet werden dürfen.
+description: Mit der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse können Sie angeben, welche EXE-Anwendungen gestartet werden dürfen.
 ms.assetid: 27f10b5c-bc3b-4344-afcf-5718ea13e909
 keywords:
 - MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03-Klasse
@@ -28,7 +28,7 @@ ms.locfileid: "119575322"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Mit **der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** können Sie angeben, welche EXE-Anwendungen gestartet werden dürfen.
+Mit der **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** können Sie angeben, welche EXE-Anwendungen gestartet werden dürfen.
 
 Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein.
 
@@ -48,7 +48,7 @@ class MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** verfügt über die folgenden Membertypen:
+Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -78,7 +78,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Definiert Einschränkungen für das Starten ausführbarer Anwendungen.
@@ -105,10 +105,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*"
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/Grouping".
 
 </dd> <dt>
 
@@ -131,13 +131,13 @@ Zugriffstyp: Lesen/Schreiben
 |-------------------------------------|------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
 | MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

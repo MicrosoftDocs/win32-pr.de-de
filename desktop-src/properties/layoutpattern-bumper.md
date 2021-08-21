@@ -17,7 +17,7 @@ ms.locfileid: "119033728"
 
 
 
-| Thema                                                                                                                      | BESCHREIBUNG                                                                                                                 |
+| Thema                                                                                                                      | Beschreibung                                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | [System.LayoutPattern.ContentViewModeForBrowse](./props-system-layoutpattern-contentviewmodeforbrowse.md)<br/> | Identifiziert das Layoutmuster, das der Inhaltsansichtsmodus für dieses Element im Kontext des Durchsuchens anwenden soll.<br/>  |
 | [System.LayoutPattern.ContentViewModeForSearch](./props-system-layoutpattern-contentviewmodeforsearch.md)<br/> | Identifiziert das Layoutmuster, das der Inhaltsansichtsmodus für dieses Element im Kontext der Suche anwenden soll.<br/> |

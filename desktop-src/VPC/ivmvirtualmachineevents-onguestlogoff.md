@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents onguestlogoff-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass sich ein Benutzer vom Gast Betriebssystem abgemeldet hat.
+title: IVMVirtualMachineEvents OnGuestLogoff-Methode (VPCCOMInterfaces.h)
+description: Empfängt eine Benachrichtigung, dass sich ein Benutzer vom Gastbetriebssystem abgemelgt hat.
 ms.assetid: 3771ba28-eea9-4c8b-9224-231b00d2f2f5
 keywords:
-- Onguestlogoff-Methode Virtual PC
-- Onguestlogoff-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, onguestlogoff-Methode
+- 'OnGuestLogoff-Methode : Virtueller PC'
+- OnGuestLogoff-Methode Virtual PC, IVMVirtualMachineEvents-Schnittstelle
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnGuestLogoff-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ce5100c3901b3de32a769b6bae0e16fcffe26a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d81bdad6ffc75c33a0fa93146bd03f26442a71294cfdfc18536fdfacb6522363
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056578"
 ---
-# <a name="ivmvirtualmachineeventsonguestlogoff-method"></a>Ivmvirtualmachineevents:: onguestlogoff-Methode
+# <a name="ivmvirtualmachineeventsonguestlogoff-method"></a>IVMVirtualMachineEvents::OnGuestLogoff-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass sich ein Benutzer vom Gast Betriebssystem abgemeldet hat.
+Empfängt eine Benachrichtigung, dass sich ein Benutzer vom Gastbetriebssystem abgemelgt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,16 +44,16 @@ HRESULT OnGuestLogoff(
 
 <dl> <dt>
 
-*logofftype* \[ in\]
+*logoffType* \[ In\]
 </dt> <dd>
 
-Der Wert aus der [**vmlogofftype**](vmlogofftype.md) -Enumeration, der den Typ der Abmeldung beschreibt.
+Der Wert der [**VMLogoffType-Enumeration,**](vmlogofftype.md) der den Typ der Abmeldeung beschreibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -74,10 +74,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> <dt>
 
-[**Vmlogofftype**](vmlogofftype.md)
+[**VMLogoffType**](vmlogofftype.md)
 </dt> </dl>
 
  

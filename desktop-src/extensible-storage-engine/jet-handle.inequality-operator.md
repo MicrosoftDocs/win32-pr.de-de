@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_HANDLE. Ungleichheits Operator'
-title: JET_HANDLE. Ungleichheits Operator
+description: 'Weitere Informationen finden Sie unter: JET_HANDLE. Ungleichheitsoperator'
+title: JET_HANDLE. Ungleichheitsoperator
 TOCTitle: 'Inequality operator '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_HANDLE.op_Inequality(Microsoft.Isam.Esent.Interop.JET_HANDLE,Microsoft.Isam.Esent.Interop.JET_HANDLE)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_handle.op_inequality(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5feee9739ad57103b71786ae7d1cdbf5f7e858ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c592845b40d6df7e160ff5907143fc652376a7fb47a20182acd782ff43cb101a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039248"
 ---
-# <a name="jet_handleinequality-operator"></a>JET_HANDLE. Ungleichheits Operator
+# <a name="jet_handleinequality-operator"></a>JET_HANDLE. Ungleichheitsoperator
 
-Bestimmt, ob zwei angegebene Instanzen von JET_HANDLE nicht gleich sind.
+Bestimmt, ob zwei angegebene Instanzen JET_HANDLE gleich sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static bool operator !=(
 
 #### <a name="parameters"></a>Parameter
 
-  - LHS  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_HANDLE](./jet-handle-structure.md)  
+  - Lhs  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_HANDLE](./jet-handle-structure.md)  
     
     Die erste zu vergleichende Instanz.
 
 <!-- end list -->
 
   - rhs  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_HANDLE](./jet-handle-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_HANDLE](./jet-handle-structure.md)  
     
     Die zweite zu vergleichende Instanz.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden-Instanzen nicht gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen nicht gleich sind.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_HANDLE Struktur](./jet-handle-structure.md)
+[JET_HANDLE-Struktur](./jet-handle-structure.md)
 
-[Mitglieder JET_HANDLE](./jet-handle-members.md)
+[JET_HANDLE Mitglieder](./jet-handle-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

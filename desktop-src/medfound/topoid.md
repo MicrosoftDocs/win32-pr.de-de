@@ -32,17 +32,17 @@ typedef unsigned __int64 TOPOID;
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Media Foundation Datentypen](media-foundation-datatypes.md)
+[Media Foundation-Datentypen](media-foundation-datatypes.md)
 </dt> <dt>
 
 [Topologien](topologies.md)
 </dt> <dt>
 
-[**TOPOLOGIE::GetTopologyID**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-gettopologyid)
+[**TOPTOPOLOGIE::GetTopologyID**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-gettopologyid)
 </dt> <dt>
 
 [**TOPOLOGYNode::GetTopoNodeID**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-gettoponodeid)

@@ -25,7 +25,7 @@ Gibt an, Windows Animation den geplanten Start eines Storyboards so lange wie n√
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                                  | BESCHREIBUNG                       |
+| Konstante/Wert                                                                                                                                                                                                                                                                  | Beschreibung                       |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|
 | <span id="UI_ANIMATION_SECONDS_EVENTUALLY"></span><span id="ui_animation_seconds_eventually"></span><dl> <dt>**Benutzeroberfl√§che \_ ANIMATION \_ SECONDS \_ EVENTUALLY**</dt> <dt>-1.0</dt> </dl> | \_BENUTZEROBERFL√ÑCHENANIMATION \_ IN SEKUNDEN<br/> |
 
@@ -44,7 +44,7 @@ Gibt an, Windows Animation den geplanten Start eines Storyboards so lange wie n√
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

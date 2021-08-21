@@ -1,9 +1,9 @@
 ---
-title: Balanceslider
-description: Dies ist ein vordefinierter Schieberegler mit den folgenden Standardwerten. | Balanceslider
+title: BALANCESLIDER
+description: Dies ist ein vordefinierter SLIDER mit den folgenden Standardwerten. | BALANCESLIDER
 ms.assetid: 89f027bf-1c31-4bd5-bb87-ebfd62b02def
 keywords:
-- Fenster Media Player von balanceslider
+- BALANCESLIDER Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0de083f0b34b32f9f837791719a6fedec3e4b2ec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5294a1139ffe3884c38b741faf84aae652e72146c4fb81ca79079494bfc4af71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573470"
 ---
-# <a name="balanceslider"></a>Balanceslider
+# <a name="balanceslider"></a>BALANCESLIDER
 
-Dies ist ein vordefinierter **Schieberegler** mit den folgenden Standardwerten.
+Dies ist ein **vordefinierter SLIDER** mit den folgenden Standardwerten.
 
 ``` syntax
 toolTip="Balance"
@@ -32,9 +32,9 @@ value="wmpprop:player.settings.balance"
 value_onchange="jscript:player.settings.balance=value;"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Schieberegler** -Steuerelement erstellt, das den audiosaldo festlegt. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieses **Schiebereglers** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein **SLIDER-Steuerelement** erstellt, das den Audioausgleich festlegt. Die QuickInfos werden lokalisiert. Alle Eigenschaften dieses **SLIDER** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,7 +42,7 @@ Dadurch wird ein **Schieberegler** -Steuerelement erstellt, das den audiosaldo f
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
@@ -50,7 +50,7 @@ Dadurch wird ein **Schieberegler** -Steuerelement erstellt, das den audiosaldo f
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

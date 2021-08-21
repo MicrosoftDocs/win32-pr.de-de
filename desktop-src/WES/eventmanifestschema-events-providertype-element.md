@@ -30,7 +30,7 @@ Enthält eine Liste der Ereignisse, die der Anbieter definiert.
  />
 ```
 
-Das **Ereigniselement** wird vom komplexen [**ProviderType-Typ**](eventmanifestschema-providertype-complextype.md) definiert.
+Das **events-Element** wird durch den komplexen [**ProviderType-Typ**](eventmanifestschema-providertype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,12 +38,12 @@ Das **Ereigniselement** wird vom komplexen [**ProviderType-Typ**](eventmanifests
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

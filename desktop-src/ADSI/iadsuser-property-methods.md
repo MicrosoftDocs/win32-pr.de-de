@@ -1,10 +1,10 @@
 ---
-title: IADsUser-Eigenschafts Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsUser-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsUser-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsUser-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 02d0e5f1-8bc9-4ef6-962d-432654ca8433
 ms.tgt_platform: multiple
 keywords:
-- IADsUser-Eigenschafts Methoden ADSI
+- IADsUser-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -150,32 +150,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6689776fe1ce9102ed4bb8ad97252be41901a0ac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4cd41380e2c8ca58f5ce530f4c3024eb43522b474f128c3a296aaf5b4d84937f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082374"
 ---
-# <a name="iadsuser-property-methods"></a>IADsUser-Eigenschaften Methoden
+# <a name="iadsuser-property-methods"></a>IADsUser-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsUser-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsuser) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Accountdeaktiviert**
+**AccountDisabled**
 </dt> <dd> <dl>
 
-Ein Flag, das angibt, ob das Konto deaktiviert oder deaktiviert werden soll.
+Ein Flag, das angibt, ob das Konto deaktiviert ist oder sein sollte.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **Boolescher Wert**
 </dt> <dt>
 
 
@@ -196,14 +196,14 @@ HRESULT put_AccountDisabled(
 **AccountExpirationDate**
 </dt> <dd> <dl>
 
-Das Datum und die Uhrzeit, nach der der Benutzer sich nicht anmelden kann.
+Das Datum und die Uhrzeit, nach der sich der Benutzer nicht anmelden kann.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -221,17 +221,17 @@ HRESULT put_AccountExpirationDate(
 
 </dt> </dl> </dd> <dt>
 
-**Badloginaddress**
+**BadLoginAddress**
 </dt> <dd> <dl>
 
-Der letzte Knoten, der als möglicher Eindringling angesehen wird; Diese ist verfügbar, wenn die Angriffs Erkennung aktiv ist.
+Der letzte Knoten, der als möglicher Eindringling betrachtet wird. dies ist verfügbar, wenn die Eindringlingerkennung aktiv ist.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -246,17 +246,17 @@ HRESULT get_BadLoginAddress(
 
 </dt> </dl> </dd> <dt>
 
-**Badlogincount**
+**BadLoginCount**
 </dt> <dd> <dl>
 
-Die Anzahl fehlerhafter Anmeldeversuche seit der letzten zurück Setzung.
+Die Anzahl fehlerhafter Anmeldeversuche seit dem letzten Zurücksetzen.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -274,14 +274,14 @@ HRESULT get_BadLoginCount(
 **Abteilung**
 </dt> <dd> <dl>
 
-Die Abteilung, eine Organisationseinheit (OU) innerhalb des Unternehmens, zu der der Benutzer gehört.
+Die Abteilung, eine Organisationseinheit innerhalb des Unternehmens, zu dem der Benutzer gehört.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -309,7 +309,7 @@ Die Textbeschreibung des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -330,14 +330,14 @@ HRESULT put_Description(
 **Division**
 </dt> <dd> <dl>
 
-Die Division innerhalb eines Unternehmens oder einer Organisation.
+Die Abteilung innerhalb eines Unternehmens oder einer Organisation.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -365,7 +365,7 @@ Die E-Mail-Adresse des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -386,14 +386,14 @@ HRESULT put_EmailAddress(
 **EmployeeID**
 </dt> <dd> <dl>
 
-Die Mitarbeiter-ID des Benutzers.
+Der Mitarbeiterbezeichner des Benutzers.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -411,17 +411,17 @@ HRESULT put_EmployeeID(
 
 </dt> </dl> </dd> <dt>
 
-**Faxnummer**
+**FaxNumber**
 </dt> <dd> <dl>
 
-Die Faxnummer (oder Ziffern) des Benutzers. In Active Directory ist diese Eigenschaft einwertig, und das **Variant** -Array weist ein Element auf.
+Die Faxnummer des Benutzers. In Active Directory ist diese Eigenschaft einwertig, und das **VARIANT-Array** verfügt über ein -Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -449,7 +449,7 @@ Der Vorname des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -477,7 +477,7 @@ Der vollständige Name des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -495,17 +495,17 @@ HRESULT put_FullName(
 
 </dt> </dl> </dd> <dt>
 
-**Graceloginsallowed**
+**GraceLoginsAllowed**
 </dt> <dd> <dl>
 
-Gibt an, wie oft der Benutzer sich anmelden kann, nachdem das Kennwort abgelaufen ist.
+Gibt an, wie oft sich der Benutzer anmelden kann, nachdem das Kennwort abgelaufen ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -523,17 +523,17 @@ HRESULT put_GraceLoginsAllowed(
 
 </dt> </dl> </dd> <dt>
 
-**Graceloginsrestdauer**
+**GraceLoginsRemaining**
 </dt> <dd> <dl>
 
-Die Anzahl der Anmeldungen, die zulässig sind, bevor das Konto gesperrt wird.
+Die Anzahl der zulässigen Anmeldungen, bevor das Konto gesperrt wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -554,14 +554,14 @@ HRESULT put_GraceLoginsRemaining(
 **HomeDirectory**
 </dt> <dd> <dl>
 
-Das Basisverzeichnis des Benutzers.
+Das Stammverzeichnis des Benutzers.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -579,7 +579,7 @@ HRESULT put_HomeDirectory(
 
 </dt> </dl> </dd> <dt>
 
-**Seite**
+**Homepage**
 </dt> <dd> <dl>
 
 Die URL für die Startseite des Benutzers.
@@ -589,7 +589,7 @@ Die URL für die Startseite des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -607,17 +607,17 @@ HRESULT put_HomePage(
 
 </dt> </dl> </dd> <dt>
 
-**Isaccountlocked**
+**IsAccountLocked**
 </dt> <dd> <dl>
 
-Ein Flag, das angibt, ob das Konto aufgrund der Angriffs Erkennung gesperrt ist. Diese Eigenschaft ist nur bei Verwendung mit dem LDAP ADSI-Anbieter eingeschränkt. Weitere Informationen zu diesen Einschränkungen finden Sie unter [Kontosperrung (LDAP-Anbieter)](ldap-account-lockout.md).
+Ein Flag, das angibt, ob das Konto aufgrund der Erkennung von Eindringlingen gesperrt ist. Diese Eigenschaft ist bei Verwendung mit dem LDAP-ADSI-Anbieter eingeschränkt. Weitere Informationen zu diesen Einschränkungen finden Sie unter [Kontosperrung (LDAP-Anbieter).](ldap-account-lockout.md)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **Boolescher Wert**
 </dt> <dt>
 
 
@@ -638,14 +638,14 @@ HRESULT put_IsAccountLocked(
 **Sprachen**
 </dt> <dd> <dl>
 
-Ein Array von **BSTR** -Sprachnamen für den Benutzer.
+Ein Array von **BSTR-Sprachnamen** für den Benutzer.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -663,17 +663,17 @@ HRESULT put_Languages(
 
 </dt> </dl> </dd> <dt>
 
-**Lastfailedlogin**
+**LastFailedLogin**
 </dt> <dd> <dl>
 
-Das Datum und die Uhrzeit der letzten fehlgeschlagenen Netzwerk Anmeldung.
+Das Datum und die Uhrzeit der letzten fehlgeschlagenen Netzwerkanmeldung.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -691,14 +691,14 @@ HRESULT get_LastFailedLogin(
 **LastLogin**
 </dt> <dd> <dl>
 
-Das Datum und die Uhrzeit des letzten Netzwerk Anmelde namens.
+Das Datum und die Uhrzeit der letzten Netzwerkanmeldung.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -713,17 +713,17 @@ HRESULT get_LastLogin(
 
 </dt> </dl> </dd> <dt>
 
-**Lastlogoff**
+**LastLogoff**
 </dt> <dd> <dl>
 
-Das Datum und die Uhrzeit der letzten Netzwerk Abmeldung.
+Das Datum und die Uhrzeit der letzten Netzwerkanmeldung.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -748,7 +748,7 @@ Der Nachname des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -766,17 +766,17 @@ HRESULT put_LastName(
 
 </dt> </dl> </dd> <dt>
 
-**Loginhours**
+**LoginHours**
 </dt> <dd> <dl>
 
-Zeiträume für jeden Wochentag, in dem Anmeldungen für den Benutzer zulässig sind. Wird als Tabelle von booleschen Werten für die Woche dargestellt, die jeweils angeben, ob dieser Zeit Slot eine gültige Anmeldezeit ist. Beachten Sie, dass die Darstellung Anbieter und Verzeichnis spezifisch ist.
+Zeiträume für jeden Wochentag, in dem Anmeldungen für den Benutzer zulässig sind. Wird als Tabelle mit booleschen Werten für die Woche dargestellt, die jeweils angeben, ob dieser Zeitslot eine gültige Anmeldezeit ist. Beachten Sie, dass die Darstellung anbieter- und verzeichnisspezifisch ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -794,17 +794,17 @@ HRESULT put_LoginHours(
 
 </dt> </dl> </dd> <dt>
 
-**Loginscript**
+**LoginScript**
 </dt> <dd> <dl>
 
-Der Pfad des Anmelde Skripts.
+Der Anmeldeskriptpfad.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -822,17 +822,17 @@ HRESULT put_LoginScript(
 
 </dt> </dl> </dd> <dt>
 
-**Loginworkstations**
+**LoginWorkstations**
 </dt> <dd> <dl>
 
-Adressen oder Namen von Arbeitsstationen des **BSTR** -Datentyps, von denen der Benutzer sich anmelden kann.
+Adressen oder Namen von Arbeitsstationen des **BSTR-Datentyps,** über die sich der Benutzer anmelden kann.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -853,14 +853,14 @@ HRESULT put_LoginWorkstations(
 **Manager**
 </dt> <dd> <dl>
 
-Der Manager des Benutzers.
+Der Vorgesetzte des Benutzers.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -878,17 +878,17 @@ HRESULT put_Manager(
 
 </dt> </dl> </dd> <dt>
 
-**Maxlogins**
+**MaxLogins**
 </dt> <dd> <dl>
 
-Die Anzahl der zulässigen gleichzeitigen Anmelde Sitzungen.
+Die Anzahl der zulässigen gleichzeitigen Anmeldesitzungen.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -906,17 +906,17 @@ HRESULT put_MaxLogins(
 
 </dt> </dl> </dd> <dt>
 
-**Maxstorage**
+**MaxStorage**
 </dt> <dd> <dl>
 
-Der maximale Speicherplatz in Kilobyte, der vom Benutzer verwendet werden kann.
+Die maximale Speicherplatzmenge in Kilobyte, die der Benutzer verwenden kann.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -934,17 +934,17 @@ HRESULT put_MaxStorage(
 
 </dt> </dl> </dd> <dt>
 
-**NamePrefix Name**
+**NamePrefix**
 </dt> <dd> <dl>
 
-Namens Präfix des Benutzers, z. b. "MS." oder "Hon."
+Namenspräfix des Benutzers, z.B. "Ms." oder "Hon".
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -962,17 +962,17 @@ HRESULT put_NamePrefix(
 
 </dt> </dl> </dd> <dt>
 
-**Wird**
+**NameSuffix**
 </dt> <dd> <dl>
 
-Name-Suffix des Benutzers, z. b. "Jr." oder "III".
+Namenssuffix des Benutzers, z.B. "Jr." oder "III".
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -990,17 +990,17 @@ HRESULT put_NameSuffix(
 
 </dt> </dl> </dd> <dt>
 
-**Officelocations**
+**OfficeLocations**
 </dt> <dd> <dl>
 
-Büro Speicherort als **BSTR** -Array für den Benutzer. Bei Active Directory ist diese Eigenschaft einwertig, und das Array verfügt über ein Element.
+Office speicherort als **BSTR-Array** für den Benutzer. Für Active Directory ist diese Eigenschaft einwertige Eigenschaft, und das Array verfügt über ein Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1021,14 +1021,14 @@ HRESULT put_OfficeLocations(
 **OtherName**
 </dt> <dd> <dl>
 
-Ein zusätzlicher Name, z. b. der zweite Name des Benutzers.
+Ein zusätzlicher Name, z. B. der mittlere Name, für den Benutzer.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -1046,17 +1046,17 @@ HRESULT put_OtherName(
 
 </dt> </dl> </dd> <dt>
 
-**Passwordexpirationdate**
+**PasswordExpirationDate**
 </dt> <dd> <dl>
 
-Das Datum und die Uhrzeit des Ablaufs des Kennworts.
+Das Datum und die Uhrzeit, zu der das Kennwort abläuft.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -1074,17 +1074,17 @@ HRESULT put_PasswordExpirationDate(
 
 </dt> </dl> </dd> <dt>
 
-**Passwordlastchanged**
+**PasswordLastChanged**
 </dt> <dd> <dl>
 
-Der letzte Zeitpunkt, zu dem das Kennwort geändert wurde.
+Der Zeitpunkt, zu dem das Kennwort zuletzt geändert wurde.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Datum**
+Skriptdatentyp: **DATE**
 </dt> <dt>
 
 
@@ -1099,7 +1099,7 @@ HRESULT get_PasswordLastChanged(
 
 </dt> </dl> </dd> <dt>
 
-**Passwordminimumlength**
+**PasswordMinimumLength**
 </dt> <dd> <dl>
 
 Die Mindestlänge des Kennworts.
@@ -1109,7 +1109,7 @@ Die Mindestlänge des Kennworts.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -1137,7 +1137,7 @@ Ein Flag, das angibt, ob das Kennwort erforderlich ist.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **Boolesch**
 </dt> <dt>
 
 
@@ -1155,17 +1155,17 @@ HRESULT put_PasswordRequired(
 
 </dt> </dl> </dd> <dt>
 
-**Picture**
+**Bild**
 </dt> <dd> <dl>
 
-Ein Zeichen folgen Array von Bytes, in dem ein Bild gespeichert wird.
+Ein OctetString-Array von Bytes, die ein Bild speichern.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1183,17 +1183,17 @@ HRESULT put_Picture(
 
 </dt> </dl> </dd> <dt>
 
-**Postaladressen**
+**PostalAddresses**
 </dt> <dd> <dl>
 
-Postal Address als **BSTR** -Array. Diese Eigenschaft ist mehr wertig, um mehr als Adressen des Benutzers zu speichern. Das interne Format von PostalAddress sollte mit "CCITT F. 401" übereinstimmen, wie in "X. 521-1993" erwähnt, das eine PostalAddress als sechs Elemente mit jeweils 30 Bytes definiert, wobei eine Straße (optional) nach Büro, Ort oder Ort, Bundesland oder Kanton, Postleitzahl und Land/Region angezeigt wird.
+Postadresse als **BSTR-Array.** Diese Eigenschaft ist mehrwertige Eigenschaft, die mehr als Adressen des Benutzers enthält. Das interne Format eines PostalAddress-Elements sollte CCITT F.401 entsprechen, wie in X.521-1993 verwiesen wird. Dabei wird ein PostalAddress-Element als sechs Elemente von jeweils 30 Byte definiert, die (optional) Post Office Box, Ort oder Ort, Bundesland oder Provinz, Postleitzahl und Land/Region enthalten.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1211,17 +1211,17 @@ HRESULT put_PostalAddresses(
 
 </dt> </dl> </dd> <dt>
 
-**Postalcodes**
+**PostalCodes**
 </dt> <dd> <dl>
 
-Postleitzahlen als **BSTR** -Array. Postleitzahlen sind mit dem **postaladressen** -Array positionell verknüpft. In Active Directory ist diese Eigenschaft jedoch einwertig, und das Array verfügt über ein einzelnes Element.
+Postleitzahlen als **BSTR-Array.** Postleitzahlen sind positionell mit dem **PostalAddresses-Array** verknüpft. In Active Directory ist diese Eigenschaft jedoch einwertige Eigenschaft, und das Array verfügt über ein einzelnes Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1249,7 +1249,7 @@ Der Pfad zum Benutzerprofil.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -1267,17 +1267,17 @@ HRESULT put_Profile(
 
 </dt> </dl> </dd> <dt>
 
-**Requirements-Wort**
+**RequireUniquePassword**
 </dt> <dd> <dl>
 
-Ein Flag, das angibt, ob sich ein neues Kennwort von den über einen Kenn Wort Verlauf bekannten Kenn Wörtern unterscheiden darf.
+Ein Flag, das angibt, ob ein neues Kennwort sich von dem unterscheiden soll, das über einen Kennwortverlauf bekannt ist.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **boolescher** Wert
+Skriptdatentyp: **Boolesch**
 </dt> <dt>
 
 
@@ -1298,14 +1298,14 @@ HRESULT put_RequireUniquePassword(
 **SeeAlso**
 </dt> <dd> <dl>
 
-Ein Array von-Objekten anderer-Objekte, die sich auf den Benutzer beziehen.
+Ein Array von ADsPaths anderer Objekte, die mit dem Benutzer verknüpft sind.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1323,17 +1323,17 @@ HRESULT put_SeeAlso(
 
 </dt> </dl> </dd> <dt>
 
-**Telefoniehome**
+**TelefonStart**
 </dt> <dd> <dl>
 
-Ein Array von Privat Telefonnummern des Benutzers. In Active Directory ist diese Eigenschaft einwertig, und das Array verfügt über ein Element.
+Ein Array von Heimtelefonnummern des Benutzers. In Active Directory ist diese Eigenschaft einwertige Eigenschaft, und das Array verfügt über ein Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1351,17 +1351,17 @@ HRESULT put_TelephoneHome(
 
 </dt> </dl> </dd> <dt>
 
-**Telefoniemobile**
+**TelephoneMobile**
 </dt> <dd> <dl>
 
-Ein Array von Mobiltelefonnummern des Benutzers. In Active Directory diese Eigenschaft einwertig und das Array nur ein Element.
+Ein Array von Mobiltelefonnummern des Benutzers. In Active Directory ist diese Eigenschaft einwertige Eigenschaft, und das Array verfügt nur über ein Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1382,14 +1382,14 @@ HRESULT put_TelephoneMobile(
 **TelephoneNumber**
 </dt> <dd> <dl>
 
-Ein Array von, in der Regel mit dem Benutzer verknüpften Telefonnummern. In Active Directory diese Eigenschaft einwertig, und das Array ist von einem einzelnen Element.
+Ein Array von Telefonnummern, die dem Benutzer zugeordnet sind, in der Regel arbeitsbezogen. In Active Directory ist diese Eigenschaft einwertige Eigenschaft, und das Array besteht aus einem einzelnen Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1407,17 +1407,17 @@ HRESULT put_TelephoneNumber(
 
 </dt> </dl> </dd> <dt>
 
-**Telefoniepager**
+**TelephonePager**
 </dt> <dd> <dl>
 
-Ein Array von Pager-Nummern des Benutzers. In Active Directory diese Eigenschaft einwertig, und das Array ist von einem einzelnen Element.
+Ein Array von Pagernummern des Benutzers. In Active Directory ist diese Eigenschaft einwertig, und das Array ist ein einzelnes Element.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -1445,7 +1445,7 @@ Der Titel des Benutzers.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -1465,15 +1465,15 @@ HRESULT put_Title(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der von Microsoft bereitgestellte WinNT-Anbieter unterstützt nicht alle [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser) -Eigenschaften Methoden, wie oben gezeigt. Der Anbieter unterstützt jedoch andere Eigenschaften, auf die mithilfe der [**IADs:: Get**](/windows/desktop/api/Iads/nf-iads-iads-get) -Methode oder der [**IADs::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) -Methode zugegriffen werden kann. Weitere Informationen und eine Liste der nicht unterstützten Eigenschaften und Codebeispiele finden Sie unter [Winnt-Benutzerobjekt](winnt-user-object.md) im [ADSI WinNT-Anbieter](adsi-winnt-provider.md).
+Der von Microsoft bereitgestellte WinNT-Anbieter unterstützt nicht alle [**IADsUser-Eigenschaftsmethoden,**](/windows/desktop/api/Iads/nn-iads-iadsuser) wie oben dargestellt. Der Anbieter unterstützt jedoch andere Eigenschaften, auf die mithilfe der [**IADs::Get-**](/windows/desktop/api/Iads/nf-iads-iads-get) oder [**IADs::P ut-Methode**](/windows/desktop/api/Iads/nf-iads-iads-put) zugegriffen werden kann. Weitere Informationen und eine Liste nicht unterstützter Eigenschaften und Codebeispiele finden Sie unter [WinNT-Benutzerobjekt](winnt-user-object.md) im [ADSI WinNT-Anbieter.](adsi-winnt-provider.md)
 
-Weitere Informationen zu den ADSI LDAP-anbieterspezifischen Features des Benutzer Klassen Objekts finden Sie unter [LDAP-Benutzerobjekt](ldap-user-object.md) im [ADSI LDAP-Anbieter](adsi-ldap-provider.md). Das Thema enthält [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser)sowie Codebeispiele zum Verwalten eines Benutzerkontos.
+Weitere Informationen zu den spezifischen Features des Benutzerklassenobjekts für den ADSI-LDAP-Anbieter finden Sie unter [LDAP-Benutzerobjekt](ldap-user-object.md) im [ADSI LDAP-Anbieter.](adsi-ldap-provider.md) Das Thema enthält [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser)sowie Codebeispiele für die Verwaltung eines Benutzerkontos.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie eine Bindung an ein Benutzerkonto Objekt und den vollständigen Namen des Benutzers herstellen.
+Das folgende Codebeispiel zeigt, wie Sie eine Bindung an ein Benutzerkontoobjekt erstellen und den vollständigen Namen des Benutzers abrufen.
 
 
 ```VB
@@ -1494,7 +1494,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie eine Bindung an ein Benutzerkonto Objekt und den vollständigen Namen des Benutzers herstellen.
+Das folgende Codebeispiel zeigt, wie Sie eine Bindung an ein Benutzerkontoobjekt erstellen und den vollständigen Namen des Benutzers abrufen.
 
 
 ```C++
@@ -1521,9 +1521,9 @@ IADsUser *GetUserObject(LPWSTR uPath)
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsUser ist als 3e37e320-17e2-11 CF-abc4-02608c9e7553 definiert.<br/>             |
+| IID<br/>                      | IID \_ IADsUser ist als 3E37E320-17E2-11CF-ABC4-02608C9E7553 definiert.<br/>             |
 
 
 
@@ -1534,13 +1534,13 @@ IADsUser *GetUserObject(LPWSTR uPath)
 [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> <dt>
 
-[**IADs:: Get**](/windows/desktop/api/Iads/nf-iads-iads-get)
+[**IADs::Get**](/windows/desktop/api/Iads/nf-iads-iads-get)
 </dt> <dt>
 
-[**IADs::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put)
+[**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put)
 </dt> <dt>
 
 [WinNT-Benutzerobjekt](winnt-user-object.md)
@@ -1552,7 +1552,7 @@ IADsUser *GetUserObject(LPWSTR uPath)
 [LDAP-Benutzerobjekt](ldap-user-object.md)
 </dt> <dt>
 
-[ADSI-LDAP-Anbieter](adsi-ldap-provider.md)
+[ADSI LDAP-Anbieter](adsi-ldap-provider.md)
 </dt> </dl>
 
  

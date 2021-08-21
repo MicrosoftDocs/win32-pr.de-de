@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_User_Result01_Education02-Klasse
-description: Die Mdm \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
+description: Die MDM \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
 ms.assetid: 34dcc478-5f39-4e1a-908b-46cbbf2ff4fd
 keywords:
 - MDM_Policy_User_Result01_Education02-Klasse
-- MDM_Policy_User_Result01_Education02-Klasse, beschrieben
+- MDM_Policy_User_Result01_Education02, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -28,7 +28,7 @@ ms.locfileid: "119077054"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Mdm \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
+Die MDM \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,7 +48,7 @@ class MDM_Policy_User_Result01_Education02
 
 ## <a name="members"></a>Member
 
-Die **MDM Policy User \_ \_ \_ Result01 \_ Education02-Klasse** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Result01 \_ Education02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -61,7 +61,7 @@ Die **MDM Policy User \_ \_ \_ Result01 \_ Education02-Klasse** verfügt über d
 [DefaultPrinterName](/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,13 +72,13 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -86,13 +86,13 @@ Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 **Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -111,7 +111,7 @@ Zugriffstyp: Lesen/Schreiben
 [PrinterNames](/windows/client-management/mdm/policy-csp-education#education-printernames)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben

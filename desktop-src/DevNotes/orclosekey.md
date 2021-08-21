@@ -1,7 +1,7 @@
 ---
-description: Schließt ein Handle für den angegebenen Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+description: Schließt ein Handle für den angegebenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 ms.assetid: 01bb21b1-217b-4716-ae1e-466cf8383155
-title: Orclosekey-Funktion (offreg. h)
+title: ORCloseKey-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: df6b8d9176efc1eb1e4ffb4e0453ec665ec19b6c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 28f93c2bb1de61da072d7fde6d811463106be0c56f049b3ebf7e74f79ef740fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119572110"
 ---
-# <a name="orclosekey-function"></a>Orclosekey-Funktion
+# <a name="orclosekey-function"></a>ORCloseKey-Funktion
 
-Schließt ein Handle für den angegebenen Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Schließt ein Handle für den angegebenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ DWORD ORCloseKey(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ FORMAT MESSAGE FROM \_ \_ SYSTEM-Flag verwenden, um eine generische Beschreibung des Fehlers abzurufen.
 
-Wenn der angegebene Schlüssel der Stamm Schlüssel der Registrierungs Struktur ist, schlägt die Funktion mit einem \_ ungültigen \_ Parameter fehl.
+Wenn der angegebene Schlüssel der Stammschlüssel der Registrierungsstruktur ist, schlägt die Funktion mit ERROR \_ INVALID \_ PARAMETER fehl.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Handle für einen angegebenen Schlüssel sollte nicht verwendet werden, nachdem es geschlossen wurde, da es nicht mehr gültig ist. Schlüssel Handles sollten nicht länger als erforderlich geöffnet bleiben.
+Das Handle für einen angegebenen Schlüssel sollte nach dem Schließen nicht mehr verwendet werden, da es nicht mehr gültig ist. Schlüsselhandles sollten nicht länger als nötig geöffnet bleiben.
 
-Verwenden Sie die [**orclosehive**](orclosehive.md) -Funktion, um eine Offline Registrierungs Struktur zu schließen.
+Verwenden Sie die [**ORCloseHive-Funktion,**](orclosehive.md) um eine Offlineregistrierungsstruktur zu schließen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Verwenden Sie die [**orclosehive**](orclosehive.md) -Funktion, um eine Offline R
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offline registry library version 1.0 or later (Offlineregistrierungsbibliothek, Version 1.0 oder höher)<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
@@ -76,16 +76,16 @@ Verwenden Sie die [**orclosehive**](orclosehive.md) -Funktion, um eine Offline R
 
 <dl> <dt>
 
-[**Orclosehive**](orclosehive.md)
+[**ORCloseHive**](orclosehive.md)
 </dt> <dt>
 
-[**Orkreatekey**](orcreatekey.md)
+[**ORCreateKey**](orcreatekey.md)
 </dt> <dt>
 
-[**Ordeletekey**](ordeletekey.md)
+[**ORDeleteKey**](ordeletekey.md)
 </dt> <dt>
 
-[**Oropenkey**](oropenkey.md)
+[**OROpenKey**](oropenkey.md)
 </dt> </dl>
 
  

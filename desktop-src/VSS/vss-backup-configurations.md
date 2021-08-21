@@ -1,25 +1,25 @@
 ---
-description: Es gibt eine Reihe von konventionell unterstützten Sicherungs Typen&\# 8212; inkrementell, differenziell und vollständig&\# 8212;, die VSS kennt, sowie eine für VSS besondere Sicherungs Konfiguration.
+description: Es gibt eine Reihe von konventionell unterstützten Sicherungstypen&\# 8212;inkrementelle, differenzielle und vollständige&\# 8212;, die VSS kennt, sowie eine Sicherungskonfiguration, die für VSS geeignet ist.
 ms.assetid: eddf29bc-221b-4b10-9842-a893b62fa846
-title: VSS-Sicherungs Konfigurationen
+title: VSS-Sicherungskonfigurationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4e4c4f383a208781722053b47ba9ae5bcbf1db7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8552bc379be4fc2bf7301043355a1a4417a59154ea15c36061b9cfd13c5d209f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056338"
 ---
-# <a name="vss-backup-configurations"></a>VSS-Sicherungs Konfigurationen
+# <a name="vss-backup-configurations"></a>VSS-Sicherungskonfigurationen
 
-Es gibt eine Reihe von konventionell unterstützten Sicherungs Typen – inkrementell, differenziell und voll –, die VSS kennt, sowie eine für VSS besondere Sicherungs Konfiguration.
+Es gibt eine Reihe von konventionell unterstützten Sicherungstypen – inkrementell, differenziell und vollständig –, die VSS kennt, sowie eine Sicherungskonfiguration, die für VSS geeignet ist.
 
-Beim Definieren einer Sicherungs Konfiguration geben eine Anforderer und die Writer auf einem System an, wie Daten auf ein Speichergerät geschrieben werden, wie der schattenkopiemechanismus bereitgestellt wird und welche Informationen gespeichert werden müssen. Die Interaktion zwischen Writern und Anforderern wird durch den Sicherungstyp bestimmt, der von einem Anforderer durchgeführt werden soll, und die Arten (oder Schemas), die jeder Writer unterstützen kann:
+Beim Definieren einer Sicherungskonfiguration geben ein Anforderer und die Writer auf einem System an, wie Daten auf ein Speichergerät geschrieben werden, wie der Schattenkopiemechanismus bereitgestellt wird und welche Informationen gespeichert werden müssen. Die Interaktion zwischen Writern und Anforderern richtet sich nach dem Sicherungstyp, den ein Anforderer ausführen möchte, und den Arten (oder Schemas), die jeder Writer unterstützen kann:
 
--   [VSS-Sicherungs Status](vss-backup-state.md)
--   [Unterstützung für Writer-Sicherungs Schema](writer-backup-schema-support.md)
--   [Schema Unterstützung auf Dateiebene](file-level-schema-support.md)
+-   [VSS-Sicherungsstatus](vss-backup-state.md)
+-   [Unterstützung von Writer-Sicherungsschemas](writer-backup-schema-support.md)
+-   [Schemaunterstützung auf Dateiebene](file-level-schema-support.md)
 
  
 

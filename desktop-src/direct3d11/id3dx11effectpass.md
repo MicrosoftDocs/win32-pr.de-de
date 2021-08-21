@@ -37,20 +37,20 @@ Die **ID3DX11EffectPass-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                   | BESCHREIBUNG                                                       |
+| Methode                                                                   | Beschreibung                                                       |
 |:-------------------------------------------------------------------------|:------------------------------------------------------------------|
-| [**Anwenden**](id3dx11effectpass-apply.md)                                 | Legen Sie den Zustand fest, der in einer Übergabe an das Gerät enthalten ist.<br/>       |
+| [**Anwenden**](id3dx11effectpass-apply.md)                                 | Legen Sie den Zustand fest, der in einem Pass an das Gerät enthalten ist.<br/>       |
 | [**ComputeStateBlockMask**](id3dx11effectpass-computestateblockmask.md) | Generieren Sie eine Maske zum Zulassen/Verhindern von Zustandsänderungen.<br/> |
-| [**GetAnnotationByIndex**](id3dx11effectpass-getannotationbyindex.md)   | Abrufen einer Anmerkung nach Index.<br/>                            |
-| [**GetAnnotationByName**](id3dx11effectpass-getannotationbyname.md)     | Abrufen einer Anmerkung anhand des Namens.<br/>                             |
-| [**GetComputeShaderDesc**](id3dx11effectpass-getcomputeshaderdesc.md)   | Abrufen einer Compute-Shaderbeschreibung.<br/>                      |
-| [**GetDesc**](id3dx11effectpass-getdesc.md)                             | Abrufen einer Passbeschreibung.<br/>                                |
-| [**GetDomainShaderDesc**](id3dx11effectpass-getdomainshaderdesc.md)     | Abrufen einer Beschreibung des Domänen-Shaders.<br/>                       |
-| [**GetGeometryShaderDesc**](id3dx11effectpass-getgeometryshaderdesc.md) | Abrufen einer Geometry-Shader-Beschreibung.<br/>                     |
-| [**GetHullShaderDesc**](id3dx11effectpass-gethullshaderdesc.md)         | Abrufen der Beschreibung des Hüllen-Shaders.<br/>                           |
-| [**GetPixelShaderDesc**](id3dx11effectpass-getpixelshaderdesc.md)       | Abrufen einer Beschreibung des Pixelshader.<br/>                        |
-| [**GetVertexShaderDesc**](id3dx11effectpass-getvertexshaderdesc.md)     | Abrufen einer Vertex-Shaderbeschreibung.<br/>                       |
-| [**IsValid**](id3dx11effectpass-isvalid.md)                             | Testen Sie einen Durchlauf, um festzustellen, ob er eine gültige Syntax enthält.<br/>        |
+| [**GetAnnotationByIndex**](id3dx11effectpass-getannotationbyindex.md)   | Sie erhalten eine Anmerkung nach Index.<br/>                            |
+| [**GetAnnotationByName**](id3dx11effectpass-getannotationbyname.md)     | Erhalten Sie eine Anmerkung nach Namen.<br/>                             |
+| [**GetComputeShaderDesc**](id3dx11effectpass-getcomputeshaderdesc.md)   | Hier finden Sie eine Beschreibung des Compute-Shaders.<br/>                      |
+| [**GetDesc**](id3dx11effectpass-getdesc.md)                             | Hier erhalten Sie eine Passbeschreibung.<br/>                                |
+| [**GetDomainShaderDesc**](id3dx11effectpass-getdomainshaderdesc.md)     | Hier erhalten Sie eine Domänen-Shader-Beschreibung.<br/>                       |
+| [**GetGeometryShaderDesc**](id3dx11effectpass-getgeometryshaderdesc.md) | Hier erhalten Sie eine Geometry-Shader-Beschreibung.<br/>                     |
+| [**GetHullShaderDesc**](id3dx11effectpass-gethullshaderdesc.md)         | Hier finden Sie eine Beschreibung für den Hüllen-Shader.<br/>                           |
+| [**GetPixelShaderDesc**](id3dx11effectpass-getpixelshaderdesc.md)       | Hier erhalten Sie eine Pixel-Shader-Beschreibung.<br/>                        |
+| [**GetVertexShaderDesc**](id3dx11effectpass-getvertexshaderdesc.md)     | Hier finden Sie eine Vertex-Shader-Beschreibung.<br/>                       |
+| [**IsValid**](id3dx11effectpass-isvalid.md)                             | Testen Sie einen Pass, um zu überprüfen, ob er eine gültige Syntax enthält.<br/>        |
 
 
 
@@ -58,12 +58,12 @@ Die **ID3DX11EffectPass-Schnittstelle** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Durchlauf ist ein Codeblock, der Renderzustandsobjekte und Shader festlegt. Ein Durchlauf wird innerhalb einer Technik deklariert.
+Ein Durchgang ist ein Codeblock, der Renderzustandsobjekte und Shader fest legt. Ein Durchgang wird innerhalb einer Technik deklariert.
 
-Um eine Effect-Pass-Schnittstelle abzurufen, rufen Sie eine Methode wie [**ID3DX11EffectTechnique::GetPassByName**](id3dx11effecttechnique-getpassbyname.md)auf.
+Um eine Effektpassschnittstelle zu erhalten, rufen Sie eine Methode wie [**ID3DX11EffectTechnique::GetPassByName auf.**](id3dx11effecttechnique-getpassbyname.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -74,11 +74,11 @@ Um eine Effect-Pass-Schnittstelle abzurufen, rufen Sie eine Methode wie [**ID3DX
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

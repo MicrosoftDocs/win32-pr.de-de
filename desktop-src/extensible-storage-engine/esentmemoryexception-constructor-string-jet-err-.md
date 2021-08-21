@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentMemoryException-Konstruktor (String, JET_err)'
+description: 'Weitere Informationen zu: EsentMemoryException-Konstruktor (String, JET_err)'
 title: EsentMemoryException-Konstruktor (String, JET_err)
 TOCTitle: EsentMemoryException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMemoryException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
@@ -71,7 +71,7 @@ protected EsentMemoryException(
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

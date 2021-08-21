@@ -1,7 +1,7 @@
 ---
-description: Leitet die Arbeit zum Auflösen von verzögert geladenen Importen aus der übergeordneten Binärdatei in eine Ziel Binärdatei weiter.
+description: Gibt die Arbeit zum Auflösen verzögert geladener Importe aus der übergeordneten Binärdatei an eine Zielbin binär weiter.
 ms.assetid: 65629d7b-36b0-426b-a20d-ec736b8461dc
-title: Resolvedelta-loadsfromdll-Funktion
+title: ResolveDelayLoadsFromDll-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_location:
 - kernelbase.dll
 - mincoredload.dll
 - minkernelbase.dll
-ms.openlocfilehash: a0fb517de7384a964c21c9e1a0a3e695a0d6e6cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 894360a20456b73d0cfad19cd125405caf0c3624821aca21e3e107699d1cc372
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571540"
 ---
-# <a name="resolvedelayloadsfromdll-function"></a>Resolvedelta-loadsfromdll-Funktion
+# <a name="resolvedelayloadsfromdll-function"></a>ResolveDelayLoadsFromDll-Funktion
 
-Leitet die Arbeit zum Auflösen von verzögert geladenen Importen aus der übergeordneten Binärdatei in eine Ziel Binärdatei weiter.
+Gibt die Arbeit zum Auflösen verzögert geladener Importe aus der übergeordneten Binärdatei an eine Zielbin binär weiter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ NTSTATUS WINAPI ResolveDelayLoadsFromDll(
 
 <dl> <dt>
 
-*Parametribase* \[ in\]
+*ParentBase* \[ In\]
 </dt> <dd>
 
-Die Basisadresse des Moduls, das verzögert eine andere Binärdatei lädt.
+Die Basisadresse des Moduls, das verzögert wird, lädt eine andere Binärdatei.
 
 </dd> <dt>
 
-*Targetdllname* \[ in\]
+*TargetDllName* \[ In\]
 </dt> <dd>
 
-Der Name der Ziel-dll.
+Der Name der Ziel-DLL.
 
 </dd> <dt>
 
 *Flags* 
 </dt> <dd>
 
-Bleiben muss 0 sein.
+Reserviert; muss 0 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Adresse des Deskriptors für verzögertes Laden, wenn Sie gefunden wird. andernfalls **null**.
+Die Adresse des Deskriptors für das verzögerte Laden, sofern gefunden; andernfalls **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Die Adresse des Deskriptors für verzögertes Laden, wenn Sie gefunden wird. and
 
 <dl> <dt>
 
-[Linker-Unterstützung für Delay-Loaded DLLs](https://msdn.microsoft.com/library/151kt790(v=VS.71).aspx)
+[Linkerunterstützung für Delay-Loaded DLLs](https://msdn.microsoft.com/library/151kt790(v=VS.71).aspx)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: IDCompositionTranslateTransform3D-Enumeratormethoden (Dcomp. h)
-description: Ändert oder animiert den Wert der OffsetZ-Eigenschaft eines Transformations Effekts der 3D-Übersetzung.
+title: IDCompositionTranslateTransform3D SetOffsetZ-Methoden (Dcomp.h)
+description: Ändert oder animiert den Wert der OffsetZ-Eigenschaft eines 3D-Übersetzungstransformationseffekts.
 ms.assetid: 1467F8A8-15CF-4B3E-8816-76F2F5BFB68B
 keywords:
-- "\"\" \"\" \"\" \"."
+- SetOffsetZ-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: fe138bf331eb2eb3b974e4172d0afb502ee2acee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 449081aaba0caa6ccc649768df3c99726e48fc29681100d8872a4733c7012607
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043068"
 ---
-# <a name="idcompositiontranslatetransform3dsetoffsetz-methods"></a>IDCompositionTranslateTransform3D::-Methode
+# <a name="idcompositiontranslatetransform3dsetoffsetz-methods"></a>IDCompositionTranslateTransform3D::SetOffsetZ-Methoden
 
-Ändert oder animiert den Wert der OffsetZ-Eigenschaft eines Transformations Effekts der 3D-Übersetzung. Die OffsetZ-Eigenschaft gibt die Übersetzung entlang der z-Achse an.
+Ändert oder animiert den Wert der OffsetZ-Eigenschaft eines 3D-Übersetzungstransformationseffekts. Die OffsetZ-Eigenschaft gibt die Übersetzung entlang der Z-Achse an.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                              | BESCHREIBUNG                                            |
+| Methode                                                                                                              | Beschreibung                                            |
 |:--------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [**"Sekunden" (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform3d-setoffsetz(float))                                     | Ändert den Wert der OffsetZ-Eigenschaft.<br/>  |
-| [**"T-ffsetz" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform3d-setoffsetz(idcompositionanimation)) | Animiert den Wert der OffsetZ-Eigenschaft.<br/> |
+| [**SetOffsetZ(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform3d-setoffsetz(float))                                     | Ändert den Wert der OffsetZ-Eigenschaft.<br/>  |
+| [**SetOffsetZ(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontranslatetransform3d-setoffsetz(idcompositionanimation)) | Animiert den Wert der OffsetZ-Eigenschaft.<br/> |
 
 
 
@@ -40,10 +40,10 @@ ms.locfileid: "104475432"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 

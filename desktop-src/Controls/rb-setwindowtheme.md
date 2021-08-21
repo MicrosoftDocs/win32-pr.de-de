@@ -1,9 +1,9 @@
 ---
-title: RB_SETWINDOWTHEME (Commctrl.h)
+title: RB_SETWINDOWTHEME Meldung (Commctrl.h)
 description: Legt den visuellen Stil eines Rebar-Steuerelements fest.
 ms.assetid: 5b32b354-3e25-4d02-9334-cc57acf41a73
 keywords:
-- RB_SETWINDOWTHEME meldungssteuerelemente Windows
+- RB_SETWINDOWTHEME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119078548"
 ---
-# <a name="rb_setwindowtheme-message"></a>RB \_ SETWINDOWTHEME-Nachricht
+# <a name="rb_setwindowtheme-message"></a>RB \_ SETWINDOWTHEME-Meldung
 
 Legt den visuellen Stil eines Rebar-Steuerelements fest.
 
@@ -35,7 +35,7 @@ Legt den visuellen Stil eines Rebar-Steuerelements fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine Unicode-Zeichenfolge, die den festgelegten visuellen Stil für die Leiste enthält.
+Zeiger auf eine Unicode-Zeichenfolge, die den festzulegende visuelle Stil der Neuleiste enthält.
 
 </dd> </dl>
 
@@ -46,7 +46,7 @@ Der Rückgabewert wird nicht verwendet.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,7 +56,7 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

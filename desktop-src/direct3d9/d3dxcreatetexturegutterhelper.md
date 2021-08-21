@@ -67,7 +67,7 @@ Höhe der Textur in Pixel.
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf ein [**EINGABE-ID3DXMesh-Gittermodellobjekt.**](id3dxmesh.md)
+Zeiger auf ein [**Eingabe-ID3DXMesh-Gittermodellobjekt.**](id3dxmesh.md)
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Zeiger auf ein [**EINGABE-ID3DXMesh-Gittermodellobjekt.**](id3dxmesh.md)
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Anzahl der Texel, nach denen die Textur übersampelt und der Bundstegbereich erstellt werden soll. Muss mindestens 1 sein.
+Anzahl der Texel, um die die Textur übergesticht und der Bundenbereich erstellt werden soll. Muss mindestens 1 sein.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Anzahl der Texel, nach denen die Textur übersampelt und der Bundstegbereich ers
 
 Typ: **[ **LPD3DXTEXTUREGUTTERHELPER**](id3dxtexturegutterhelper.md)\***
 
-Zeiger auf ein [**id3DXTextureGutterHelper-Objekt,**](id3dxtexturegutterhelper.md) das erstellt werden soll.
+Zeiger auf ein [**zu erstellende ID3DXTextureGutterHelper-Objekt.**](id3dxtexturegutterhelper.md)
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf ein [**id3DXTextureGutterHelper-Objekt,**](id3dxtexturegutterhelper.m
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**D3DXConcatenateMeshes,**](d3dxconcatenatemeshes.md) um eine Szene in neue Koordinaten zu transformieren.
+Verwenden [**Sie D3DXConcatenateMeshes,**](d3dxconcatenatemeshes.md) um eine Szene in neue Koordinaten zu transformieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,11 +110,11 @@ Verwenden Sie [**D3DXConcatenateMeshes,**](d3dxconcatenatemeshes.md) um eine Sze
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Vorausberechnen von Übertragungsfunktionen für Die Radiance](dx9-graphics-reference-d3dx-functions-prt.md)
+[Vorausberechnungsfunktionen für die Übertragung von Radiance](dx9-graphics-reference-d3dx-functions-prt.md)
 </dt> </dl>
 
  

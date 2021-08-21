@@ -1,21 +1,21 @@
 ---
-description: Nachdem das System Ihre openperformancedata-Funktion erfolgreich aufgerufen hat, ruft Sie Ihre collectperformancedata-Funktion auf, um die Leistungsdaten des Zählers zu erfassen.
+description: Nachdem das System Sie erfolgreich als OpenPerformanceData-Funktion aufruft, ruft es Ihre CollectPerformanceData-Funktion auf, um die Indikatordaten zu sammeln.
 ms.assetid: 73b022df-0148-4afc-8536-8b1c766b1ee6
-title: Implementieren von collectperformancedata
+title: Implementieren von CollectPerformanceData
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5d0d01dd11a13308bceecbc7f511355c3b3899a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efc77c071a0a3394012c29e76a6de3ecce8e4f028906d35f8a6b37b69819a7eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119775620"
 ---
-# <a name="implementing-collectperformancedata"></a>Implementieren von collectperformancedata
+# <a name="implementing-collectperformancedata"></a>Implementieren von CollectPerformanceData
 
-Nachdem das System Ihre [**openperformancedata**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) -Funktion erfolgreich aufgerufen hat, ruft Sie Ihre [**collectperformancedata**](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) -Funktion auf, um die Leistungsdaten des Zählers zu erfassen. Wenn der Anbieter die abgefragten Objekte unterstützt, kontaktiert er den Dienst, den Treiber oder die Anwendung, mit dem er verknüpft ist, und fragt ihn nach den Leistungsdaten.
+Nachdem das System Sie erfolgreich als [**OpenPerformanceData-Funktion**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) aufruft, ruft es Ihre [**CollectPerformanceData-Funktion**](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) auf, um die Indikatordaten zu sammeln. Wenn der Anbieter die abgefragten Objekte unterstützt, kontaktiert er den Dienst, Treiber oder die Anwendung, dem er zugeordnet ist, und fragt ihn nach den Indikatordaten.
 
-Das folgende Beispiel zeigt eine Implementierung der [*collectperformancedata*](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) -Funktion. Die Header Datei, die die Definition der in dieser Funktion verwendeten Indikatoren enthält, wird unter [Implementieren von openperformancedata](implementing-openperformancedata.md)angezeigt. Wenn Sie C++ verwenden, um diese Funktion zu implementieren, achten Sie darauf, dass Sie extern "C" verwenden, wenn Sie die Funktion deklarieren.
+Das folgende Beispiel zeigt eine Implementierung der [*CollectPerformanceData-Funktion.*](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) Die Headerdatei, die die Definition der in dieser Funktion verwendeten Leistungsindikatoren enthält, wird unter [Implementing OpenPerformanceData (Implementieren von OpenPerformanceData)](implementing-openperformancedata.md)angezeigt. Wenn Sie C++ verwenden, um diese Funktion zu implementieren, achten Sie darauf, extern "C" zu verwenden, wenn Sie Ihre Funktion deklarieren.
 
 
 ```C++

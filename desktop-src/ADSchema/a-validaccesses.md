@@ -1,11 +1,11 @@
 ---
 title: Valid-Accesses-Attribut
-description: Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
+description: Der Zugriffstyp, der mit einem erweiterten Recht zulässig ist.
 ms.assetid: afb944ec-3b8f-41dd-8987-ed6c71f937ac
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Valid-Accesses-Attribut
-- AD-Schema für validzugriffen
+- Valid-Accesses AD-Schema
+- ad-Schema des validAccesses-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c86ddf66affd4c6688ca331152a5d0c5af073a63
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 98dcf686bf3f15af8ba2129a0bd0cdbb9c01133b9fc6d4531155a065c07a44fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081294"
 ---
 # <a name="valid-accesses-attribute"></a>Valid-Accesses-Attribut
 
-Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
+Der Zugriffstyp, der mit einem erweiterten Recht zulässig ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Valid-Accesses                       |
-| LDAP-Display-Name | validzugriffe                        |
+| Ldap-Anzeigename | validAccesses                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Objekt Ersteller                       |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Objektersteller                       |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1356              |
-| System-ID-GUID    | 4d2fa380-7F 54-11d2-992A-0000f 87a57d4 |
+| System-Id-Guid    | 4d2fa380-7f54-11d2-992a-0000f87a57d4 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -71,7 +71,7 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -101,10 +101,10 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -121,11 +121,11 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -142,11 +142,11 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | True                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -163,11 +163,11 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | True                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -184,11 +184,11 @@ Der Typ des Zugriffs, der mit einem erweiterten Recht zulässig ist.
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Ist einwertig       | True                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |

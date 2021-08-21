@@ -45,7 +45,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents 
 
 
 
-| Eigenschaft   | BESCHREIBUNG                                                                                               |
+| Eigenschaft   | Beschreibung                                                                                               |
 |------------|-----------------------------------------------------------------------------------------------------------|
 | pC wies | WMPLib.IWMPC wie Die Schnittstelle, die den Vorgang darstellt, der den Fehler ausgelöst hat.<br/> |
 | wmpbs      | WMPLib.WMPMemberStateDer -Enumerationswert, der den neuen Zustand angibt.<br/>                         |
@@ -66,7 +66,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

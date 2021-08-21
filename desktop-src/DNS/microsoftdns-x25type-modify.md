@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_X25Type-Klasse
-description: Die Modify-Methode aktualisiert einen X. 25 (x25)-Ressourcen Daten Satz.
+title: Modify-Methode der MicrosoftDNS_X25Type Klasse
+description: Die Modify-Methode aktualisiert einen X.25(X25)-Ressourcendatensatz.
 ms.assetid: 2d82d67e-ae29-4ded-86fe-7db0ef5ed74f
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_X25Type-Klasse
-- DNS-MicrosoftDNS_X25Type Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_X25Type class
+- MicrosoftDNS_X25Type DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10db2fa770d3da8487a712e631c41fdd4256bf7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 94120c5ccf0f86cf2687941f3442b3e7f16db3c140af5c6234fe475445a3dd06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573610"
 ---
 # <a name="modify-method-of-the-microsoftdns_x25type-class"></a>Modify-Methode der MicrosoftDNS \_ X25Type-Klasse
 
-Die **Modify** -Methode aktualisiert einen X. 25 (x25)-Ressourcen Daten Satz.
+Die **Modify-Methode** aktualisiert einen X.25(X25)-Ressourcendatensatz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Psdnaddress* \[ in, optional\]
+*PSDNAddress* \[ in, optional\]
 </dt> <dd>
 
 PSDN-Adresse des Besitzers der RR.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -69,9 +69,9 @@ Verweis auf das neue-Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -93,10 +93,10 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 [**MicrosoftDNS \_ X25Type**](microsoftdns-x25type.md)
 </dt> <dt>
 
-[**Die Methode "kreateinzustancefrompropertydata" der X25Type-Klasse von MicrosoftDNS \_**](microsoftdns-x25type-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ X25Type-Klasse**](microsoftdns-x25type-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

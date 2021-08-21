@@ -1,5 +1,5 @@
 ---
-description: Ruft die FOURCC-&\# 160;DWORD aus dem FOURCCMap-Objekt ab.
+description: Ruft den FOURCC-&\# 160;DWORD aus dem FOURCCMap-Objekt ab.
 ms.assetid: bb382a57-8499-44c0-b287-2d31f5f5d1d0
 title: FOURCCMap::GetFOURCC-Methode (Fourcc.h)
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "119015718"
 ---
 # <a name="fourccmapgetfourcc-method"></a>FOURCCMap::GetFOURCC-Methode
 
-Ruft das **FOURCC** **DWORD aus** dem [**FOURCCMap-Objekt**](fourccmap.md) ab.
+Ruft das **FOURCC** **DWORD** aus dem [**FOURCCMap-Objekt**](fourccmap.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **FOURCC** **DWORD-Wert** zurück. Beachten Sie, dass der Rückgabewert im Wesentlichen zufällig ist, wenn Sie eine **GUID** erstellen, die ursprünglich nicht von **einer FOURCC** abgeleitet wurde.
+Gibt den **FOURCC** **DWORD-Wert** zurück. Beachten Sie Folgendes: Wenn Sie eine **GUID** erstellen, die ursprünglich nicht von **einer FOURCC** abgeleitet wurde, ist der Rückgabewert im Wesentlichen zufällig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,11 +51,11 @@ Gibt den **FOURCC** **DWORD-Wert** zurück. Beachten Sie, dass der Rückgabewert
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Fourcc.h (include Streams.h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

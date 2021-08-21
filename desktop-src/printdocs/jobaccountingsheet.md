@@ -27,7 +27,7 @@ Beschreibt das Buchhaltungsblatt, das für den Auftrag ausgegeben werden soll. D
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Komponente<br/> |
+| Elementtyp <br/>   | Feature<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 

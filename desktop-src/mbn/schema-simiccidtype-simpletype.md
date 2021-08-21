@@ -1,5 +1,5 @@
 ---
-description: Definiert einen Typ für das SimIccID-Element des Mobilen Breitbandprofils.
+description: Definiert einen Typ für das SimIccID-Element des Mobile Broadband-Profils.
 ms.assetid: ce77180e-71e2-4cef-84e0-32397216385f
 title: simIccIDType Simple Type
 ms.topic: reference
@@ -20,7 +20,7 @@ ms.locfileid: "119035758"
 ---
 # <a name="simiccidtype-simple-type"></a>simIccIDType Simple Type
 
-Der einfache **simIccIDType-Typ** definiert einen Typ für das [**SimIccID-Element**](schema-simiccid-mbnprofile-element.md) des Mobilen Breitbandprofils. Dieser Typ ist eine Auflistung von Ziffern und/oder Groß- und Kleinbuchstaben, mindestens ein Zeichen lang und höchstens 20 Zeichen lang.
+Der **einfache SimIccIDType-Typ** definiert einen Typ für das [**SimIccID-Element**](schema-simiccid-mbnprofile-element.md) des Mobilen Breitbandprofils. Dieser Typ ist eine Sammlung von Ziffern und/oder Groß- und Kleinbuchstaben, mindestens ein Zeichen lang und mindestens 20 Zeichen lang.
 
 ``` syntax
 <xs:simpleType name="simIccIDType">
@@ -36,7 +36,7 @@ Der einfache **simIccIDType-Typ** definiert einen Typ für das [**SimIccID-Eleme
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **simIccIDType-Typ** ist ein Token, das durch das folgende Muster eingeschränkt ist:
+Der **einfache SimIccIDType-Typ** ist ein Token, das durch das folgende Muster eingeschränkt wird:
 
 -   `[a-zA-Z\d]{1,20}`
 

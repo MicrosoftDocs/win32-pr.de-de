@@ -52,7 +52,7 @@ Dim instance As New EsentOneDatabasePerSessionException()
 public EsentOneDatabasePerSessionException()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

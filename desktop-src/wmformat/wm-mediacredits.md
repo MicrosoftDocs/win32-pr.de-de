@@ -1,9 +1,9 @@
 ---
 title: WM/MediaCredits
-description: Das WM/MediaCredits-Attribut enthält das Guthaben für Broadcastmedien.
+description: Das WM/MediaCredits-Attribut enthält die Gutschriften für Broadcastmedien.
 ms.assetid: 2ad91dc7-3ebc-403b-9096-ebb8087d7c8e
 keywords:
-- WM/MediaCredits-Windows-Medienformat
+- WM/MediaCredits windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "119083975"
 ---
 # <a name="wmmediacredits"></a>WM/MediaCredits
 
-Das **WM/MediaCredits-Attribut** enthält das Guthaben für Broadcastmedien.
+Das **WM/MediaCredits-Attribut** enthält die Gutschriften für Broadcastmedien.
 
 ## <a name="global-constant"></a>Globale Konstante
 
@@ -29,13 +29,13 @@ g \_ wszWMMediaCredits
 
 ## <a name="data-type"></a>Datentyp
 
-**\_WMT-TYPZEICHENFOLGE \_**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird für Fernsehsendungen oder Radiosendungen verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

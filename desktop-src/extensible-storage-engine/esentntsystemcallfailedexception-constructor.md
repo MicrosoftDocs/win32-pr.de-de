@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentNTSystemCallFailedException-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: EsentNTSystemCallFailedException-Konstruktor'
 title: EsentNTSystemCallFailedException-Konstruktor
 TOCTitle: 'EsentNTSystemCallFailedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNTSystemCallFailedException.#ctor
@@ -52,7 +52,7 @@ Dim instance As New EsentNTSystemCallFailedException()
 public EsentNTSystemCallFailedException()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

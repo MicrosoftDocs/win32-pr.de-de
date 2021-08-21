@@ -1,6 +1,6 @@
 ---
 title: XAudio2-Referenz
-description: Dieser Abschnitt enthält Referenzthemen für die Anwendungsprogrammierschnittstelle (Application Programming Interface, API) von Microsoft XAudio2.
+description: Dieser Abschnitt enthält Referenzthemen für die Microsoft XAudio2-Api (Application Programming Interface).
 ms.assetid: f2f7c54d-85eb-a3c6-7333-d5adf16d95d9
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,16 +13,16 @@ ms.locfileid: "119082908"
 ---
 # <a name="xaudio2-reference"></a>XAudio2-Referenz
 
-Dieser Abschnitt enthält Referenzthemen für die Anwendungsprogrammierschnittstelle (Application Programming Interface, API) von Microsoft XAudio2.
+Dieser Abschnitt enthält Referenzthemen für die Microsoft XAudio2-Api (Application Programming Interface).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                       | BESCHREIBUNG                                                                                            |
+| Thema                                       | Beschreibung                                                                                            |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [Klassen](classes.md)<br/>           | Dieser Abschnitt enthält Informationen zu Klassen, die von der Microsoft XAudio2-API bereitgestellt werden.<br/>      |
-| [Konstanten](constants.md)<br/>       | In diesem Abschnitt werden die Konstanten erläutert, die in der XAudio2-API verfügbar sind. <br/>                               |
+| [Konstanten](constants.md)<br/>       | In diesem Abschnitt werden die Konstanten beschrieben, die in der XAudio2-API verfügbar sind. <br/>                               |
 | [Enumerationen](enumerations.md)<br/> | Dieser Abschnitt enthält Informationen zu Enumerationen, die von der Microsoft XAudio2-API bereitgestellt werden.<br/> |
 | [Funktionen](functions.md)<br/>       | Dieser Abschnitt enthält Informationen zu Funktionen, die von der Microsoft XAudio2-API bereitgestellt werden.<br/>    |
 | [Schnittstellen](interfaces.md)<br/>     | Dieser Abschnitt enthält Informationen zu Schnittstellen, die von der Microsoft XAudio2-API bereitgestellt werden.<br/>   |

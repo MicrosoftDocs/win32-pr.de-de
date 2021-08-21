@@ -1,6 +1,6 @@
 ---
 title: MDM_Reboot_Schedule01-Klasse
-description: Der MDM- \_ Neustart \_ Schedule01class wird verwendet, um einen bestimmten Zeitpunkt für den Neustart eines Geräts zu konfigurieren.
+description: Die MDM \_ Reboot \_ Schedule01class wird verwendet, um einen bestimmten Zeitpunkt für den Neustart eines Geräts zu konfigurieren.
 ms.assetid: d865609a-9f17-4256-9c69-4fea75011c1f
 keywords:
 - MDM_Reboot_Schedule01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7229aca469ee83d9ac2e4b29f6d6b7c54875120
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7ebb5e3e0513aa5ca2232bc8352a3ba23653c63ff17f9290557d3b7b4db97cb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119574320"
 ---
-# <a name="mdm_reboot_schedule01-class"></a>MDM- \_ Neustart \_ Schedule01 Klasse
+# <a name="mdm_reboot_schedule01-class"></a>MDM \_ Reboot \_ Schedule01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM-Klasse " \_ Reboot \_ Schedule01**" wird verwendet, um einen bestimmten Zeitpunkt für den Neustart eines Geräts zu konfigurieren.
+Die **MDM \_ Reboot \_ Schedule01-Klasse** wird verwendet, um einen bestimmten Zeitpunkt für den Neustart eines Geräts zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,20 +47,20 @@ class MDM_Reboot_Schedule01
 
 ## <a name="members"></a>Member
 
-Die **MDM-Klasse " \_ Reboot \_ Schedule01** " verfügt über diese Typen von Membern:
+Die **MDM \_ Reboot \_ Schedule01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ Reboot \_ Schedule01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Reboot \_ Schedule01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Dailywiederkehr Ende](/windows/client-management/mdm/reboot-csp#schedule-dailyrecurrent)
+[DailyRecurrent](/windows/client-management/mdm/reboot-csp#schedule-dailyrecurrent)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -71,7 +71,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -80,14 +80,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Schedule".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Schedule".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -103,7 +103,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 [Single](/windows/client-management/mdm/reboot-csp#schedule-single)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -117,11 +117,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

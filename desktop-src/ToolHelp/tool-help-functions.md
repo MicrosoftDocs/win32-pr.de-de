@@ -17,7 +17,7 @@ Die folgenden Funktionen sind Teil der Toolhilfebibliothek.
 
 
 
-| Funktion                                                           | BESCHREIBUNG                                                                                                      |
+| Funktion                                                           | Beschreibung                                                                                                      |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | [**CreateToolhelp32Snapshot**](/windows/desktop/api/TlHelp32/nf-tlhelp32-createtoolhelp32snapshot)       | Erstellt eine Momentaufnahme der angegebenen Prozesse sowie der Heaps, Module und Threads, die von diesen Prozessen verwendet werden. |
 | [**Heap32First**](/windows/desktop/api/TlHelp32/nf-tlhelp32-heap32first)                                 | Ruft Informationen zum ersten Block eines Heaps ab, der von einem Prozess zugeordnet wurde.                      |

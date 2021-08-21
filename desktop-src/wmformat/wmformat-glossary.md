@@ -72,7 +72,7 @@ Audio, Video, Bilder, Text oder andere Informationen, die in einer digitalen Med
 <span id="wmformat.content_header"></span><span id="WMFORMAT.CONTENT_HEADER"></span>**Inhaltsheader**
 </dt> <dd>
 
-Teil der Dateistruktur einer Windows-Mediendatei, die Informationen enthält, die ein Clientcomputer zum Dekomprimieren und Rendern der Inhaltsdaten benötigt. In einer gepackten Datei ist ein zusätzlicher Inhaltsheader vorhanden, der die Schlüssel-ID, Inhalts-ID und Lizenzerwerbs-URL enthält. Dieser Inhaltsheader kann auch eine erforderliche Individualisierungsversionsnummer und Attribute enthalten, die vom Inhaltsanbieter definiert werden.
+Teil der Dateistruktur einer Windows Mediendatei, die Informationen enthält, die ein Clientcomputer zum Dekomprimieren und Rendern der Inhaltsdaten benötigt. In einer gepackten Datei ist ein zusätzlicher Inhaltsheader vorhanden, der die Schlüssel-ID, Inhalts-ID und Lizenzerwerbs-URL enthält. Dieser Inhaltsheader kann auch eine erforderliche Individualisierungsversionsnummer und Attribute enthalten, die vom Inhaltsanbieter definiert werden.
 
 </dd> <dt>
 
@@ -233,7 +233,7 @@ Ein Videoframe mit allen Daten, die zum Erstellen eines Bilds ohne Verweis auf v
 <span id="wmformat.key_id"></span><span id="WMFORMAT.KEY_ID"></span>**Schlüssel-ID**
 </dt> <dd>
 
-Ein -Wert, der den Schlüssel für eine geschützte Windows Identifiziert.
+Ein -Wert, der den Schlüssel für eine geschützte mediendatei Windows identifiziert.
 
 </dd> <dt>
 
@@ -296,7 +296,7 @@ Ein Computer, auf dem Windows Media License Service ausgeführt wird und Lizenze
 <span id="wmformat.marker"></span><span id="WMFORMAT.MARKER"></span>**Marker**
 </dt> <dd>
 
-Eine Textzeichenfolge, die einer bestimmten Zeit in Windows medienbasierten Inhalten zugeordnet ist. Marker bezeichnen häufig praktische Punkte, um mit der Wiedergabe zu beginnen, z. B. den Start einer neuen Szene.
+Eine Textzeichenfolge, die einer angegebenen Zeit in einem Windows medienbasierten Inhalt zugeordnet ist. Marker bezeichnen häufig praktische Punkte, um mit der Wiedergabe zu beginnen, z. B. den Beginn einer neuen Szene.
 
 </dd> <dt>
 
@@ -317,39 +317,39 @@ Siehe Definition für: [ *Multipurpose Internet Mail Extension (MIME)*](/windows
 <span id="wmformat.multiple_bit_rate__mbr_"></span><span id="WMFORMAT.MULTIPLE_BIT_RATE__MBR_"></span>**Multiple Bit Rate (MBR)**
 </dt> <dd>
 
-Ein Merkmal eines Datenstroms, in dem derselbe Inhalt mit mehreren unterschiedlichen Bitraten codiert wird, um die Inhaltsübermittlung zu optimieren.
+Ein Merkmal eines Datenstroms, bei dem derselbe Inhalt mit mehreren unterschiedlichen Bitraten codiert wird, um die Inhaltsbereitstellung zu optimieren.
 
 </dd> <dt>
 
-<span id="wmformat.multipurpose_internet_mail_extension__mime_"></span><span id="WMFORMAT.MULTIPURPOSE_INTERNET_MAIL_EXTENSION__MIME_"></span>**Multipurpose Internet Mail Extension (MIME)**
+<span id="wmformat.multipurpose_internet_mail_extension__mime_"></span><span id="WMFORMAT.MULTIPURPOSE_INTERNET_MAIL_EXTENSION__MIME_"></span>**Multipurpose Internet Mail Extension (MIME) (Mehrzweck-Internet-E-Mail-Erweiterung (MIME))**
 </dt> <dd>
 
-Ein Standard, der smtp (Simple Mail Transport Protocol) erweitert, um Nicht-ASCII-Datendateien wie Video-, Audio- und Binärdateien für die Anfügung an Internet-E-Mails zu codieren.
+Ein Standard, der smtp (Simple Mail Transport Protocol) erweitert, um Nicht-ASCII-Datendateien wie Video-, Sound- und Binärdateien für die Anlage an Internet-E-Mails zu codieren.
 
 </dd> <dt>
 
 <span id="wmformat.output_protection_level"></span><span id="WMFORMAT.OUTPUT_PROTECTION_LEVEL"></span>**Ausgabeschutzebene**
 </dt> <dd>
 
-Eine Einstellung in einer Lizenz, die angibt, welche Technologien zum Wiedergeben oder Kopieren geschützter digitaler Medieninhalte verwendet werden können.
+Eine Einstellung in einer Lizenz, die angibt, welche Technologien verwendet werden können, um geschützte digitale Medieninhalte wiedergibt oder zu kopieren.
 
 </dd> <dt>
 
-<span id="wmformat.packaged_windows_media_file"></span><span id="WMFORMAT.PACKAGED_WINDOWS_MEDIA_FILE"></span>**gepackte Windows Mediendatei**
+<span id="wmformat.packaged_windows_media_file"></span><span id="WMFORMAT.PACKAGED_WINDOWS_MEDIA_FILE"></span>**Gepackte Windows Mediendatei**
 </dt> <dd>
 
-Eine Windows Mediendatei, die mit einem Schlüssel verschlüsselt ist und von Consumern nur wiedergegeben werden kann, wenn sie über einen durch eine Lizenz bereitgestellten Schlüssel verfügen. Eine gepackte Windows Media-Datei wird von erstellt und durch die Implementierung der Verwaltung digitaler Rechte mithilfe des Windows Media Rights Manager Software Development Kit (SDK) oder eines Programms geschützt, das auf dem Microsoft Windows Media Format SDK basiert.
+Eine Windows Mediendatei, die mit einem Schlüssel verschlüsselt ist. Diese kann nur dann wieder verwendet werden, wenn sie über einen Schlüssel verfügen, der von einer Lizenz bereitgestellt wird. Eine gepackte Windows-Mediendatei wird durch die Implementierung von Digital Rights Management mithilfe des Windows Media Rights Manager Software Development Kit (SDK) oder eines Programms, das auf dem Microsoft Windows Media Format SDK basiert, erstellt und geschützt.
 
 </dd> <dt>
 
-<span id="wmformat.packaging"></span><span id="WMFORMAT.PACKAGING"></span>**Packen**
+<span id="wmformat.packaging"></span><span id="WMFORMAT.PACKAGING"></span>**Verpacken von Paketen**
 </dt> <dd>
 
-Der Prozess, der eine Windows Mediendatei schützt und signiert und eine gepackte Windows Mediendatei erzeugt. Der Paketerstellungsprozess umfasst das Generieren oder Angeben eines Schlüssels, das Generieren und Signieren des Inhaltsheaders und das anschließende Verschlüsseln der Windows Mediendatei mit diesen Informationen.
+Der Prozess, der eine Mediendatei schützt Windows signiert und eine gepackte Windows Mediendatei erzeugt. Der Paketvorgang umfasst das Generieren oder Angeben eines Schlüssels, das Generieren und Signieren des Inhaltsheaders und das anschließende Verschlüsseln der Windows Mediendatei mit diesen Informationen.
 
 </dd> <dt>
 
-<span id="wmformat.packet"></span><span id="WMFORMAT.PACKET"></span>**Paket**
+<span id="wmformat.packet"></span><span id="WMFORMAT.PACKET"></span>**packet**
 </dt> <dd>
 
 Eine Informationseinheit, die von einem Computer oder Gerät an einen anderen Computer bzw. ein anderes Gerät in einem Netzwerk gesendet wird.
@@ -359,35 +359,35 @@ Eine Informationseinheit, die von einem Computer oder Gerät an einen anderen Co
 <span id="wmformat.plug_in"></span><span id="WMFORMAT.PLUG_IN"></span>**Plug-In**
 </dt> <dd>
 
-Eine zusätzliche Softwarekomponente, die die Funktionen anderer Software erweitert oder erweitert.
+Eine zusätzliche Softwarekomponente, die die Features anderer Software erweitert oder erweitert.
 
 </dd> <dt>
 
 <span id="wmformat.profile"></span><span id="WMFORMAT.PROFILE"></span>**Profil**
 </dt> <dd>
 
-Eine Gruppe von Einstellungen, die mit Inhaltstyp und Bitrate mit entsprechenden Audio- und Videocodecs übereinstimmen.
+Eine Gruppe von Einstellungen, die dem Inhaltstyp und der Bitrate mit den entsprechenden Audio- und Videocodecs übereinstimmen.
 
 </dd> <dt>
 
 <span id="wmformat.registration"></span><span id="WMFORMAT.REGISTRATION"></span>**Registrierung**
 </dt> <dd>
 
-Der Prozess, bei dem ein Consumer Informationen eingibt, um eine Lizenz zu erwerben, z. B. eine E-Mail-Adresse.
+Der Prozess, bei dem ein Consumer Informationen ein gibt, um eine Lizenz zu erwerben, z. B. eine E-Mail-Adresse.
 
 </dd> <dt>
 
 <span id="wmformat.revocation_list"></span><span id="WMFORMAT.REVOCATION_LIST"></span>**Sperrliste**
 </dt> <dd>
 
-Eine Liste, die alle Anwendungszertifikate dieser Playeranwendungen enthält, die bekanntermaßen beschädigt oder beschädigt sind. Diese Liste ist in Lizenzen enthalten und wird dann von der DRM-Komponente (Digital Rights Management) der Playeranwendung auf den Computern von Consumern gespeichert.
+Eine Liste, die alle Anwendungszertifikate dieser Playeranwendungen enthält, von denen bekannt ist, dass sie beschädigt oder beschädigt sind. Diese Liste ist in Lizenzen enthalten und wird dann von der KOMPONENTE digital rights management (DRM) der Playeranwendung auf den Computern der Verbraucher gespeichert.
 
 </dd> <dt>
 
 <span id="wmformat.rgb"></span><span id="WMFORMAT.RGB"></span>**RGB**
 </dt> <dd>
 
-Ein Farbmodell, das Farbinformationen in Bezug auf die Intensitäten Rot (R), Grün (G) und Blau (B) beschreibt, aus denen die Farbe besteht.
+Ein Farbmodell, das Farbinformationen in Bezug auf die Intensität von Rot (R), Grün (G) und Blau (B) beschreibt, aus denen die Farbe wird.
 
 </dd> <dt>
 
@@ -401,21 +401,21 @@ Siehe Definition für: [ *Secure Digital Musik Initiative (SDMI)*](/windows)
 <span id="wmformat.secure_digital_music_initiative__sdmi_"></span><span id="WMFORMAT.SECURE_DIGITAL_MUSIC_INITIATIVE__SDMI_"></span>**Secure Digital Musik Initiative (SDMI)**
 </dt> <dd>
 
-Eine Organisation, die Standards für sichere digitale Musik festlegt. Eines der Hauptziele von SDMI ist die Erstellung eines Frameworks für die sichere Wiedergabe, Speicherung und Verteilung digitaler Musik.
+Eine Organisation, die Standards für sichere digitale Musik setzt. Eines der Hauptziele von SDMI ist die Erstellung eines Frameworks für die sichere Wiedergabe, Speicherung und Verteilung digitaler Musik.
 
 </dd> <dt>
 
 <span id="wmformat.security_upgrade"></span><span id="WMFORMAT.SECURITY_UPGRADE"></span>**Sicherheitsupgrade**
 </dt> <dd>
 
-Der Prozess, durch den die KOMPONENTE für die Verwaltung digitaler Rechte (DIGITAL Rights Management, DRM) im Player des Kunden eindeutig wird. Dieser Prozess erhöht die Sicherheit, da es schwierig ist, mehrere Spieler gleichzeitig zu beschädigen. Dieser Prozess wird auch als Individualisierung bezeichnet.
+Der Prozess, bei dem die KOMPONENTE für die verwaltung digitaler Rechte (Digital Rights Management, DRM) im Player des Kunden eindeutig ist. Dieser Prozess erhöht die Sicherheit, da es schwierig ist, mehrere Spieler gleichzeitig zu beschädigten. Dieser Prozess wird auch als Individualisierung bezeichnet.
 
 </dd> <dt>
 
 <span id="wmformat.streaming"></span><span id="WMFORMAT.STREAMING"></span>**Streaming**
 </dt> <dd>
 
-Eine Methode zum Bereitstellen digitaler Medien über ein Netzwerk in einem kontinuierlichen Fluss. Die digitalen Medien werden von Clientsoftware wiedergegeben, während sie empfangen werden. In der Regel ist es aufgrund des Streamings nicht erforderlich, dass Benutzer eine Datei herunterladen, bevor sie wiedergegeben wird.
+Eine Methode zur Bereitstellung digitaler Medien über ein Netzwerk in einem fortlaufenden Flow. Die digitalen Medien werden während des Empfangens von Clientsoftware abgespielt. In der Regel ist es beim Streaming nicht erforderlich, dass Benutzer eine Datei herunterladen, bevor sie wieder verwendet wird.
 
 </dd> <dt>
 
@@ -436,14 +436,14 @@ Keine Definition verfügbar.
 <span id="wmformat.target_bandwidth"></span><span id="WMFORMAT.TARGET_BANDWIDTH"></span>**Zielbandbreite**
 </dt> <dd>
 
-Die Anzahl der Bits, die basierend auf ihren Netzwerkverbindungsgeschwindigkeiten an Benutzer übertragen werden.
+Die Anzahl der Bits, die basierend auf ihrer Netzwerkverbindungsgeschwindigkeit an Benutzer übertragen werden.
 
 </dd> <dt>
 
-<span id="wmformat.telecine"></span><span id="WMFORMAT.TELECINE"></span>**Telekop**
+<span id="wmformat.telecine"></span><span id="WMFORMAT.TELECINE"></span>**telecine**
 </dt> <dd>
 
-Das Film-zu-Video-Konvertierungssystem, das Frames zu Videos hinzufügt, um die Unterschiede in den Bildraten zwischen Film und Video zu kompensieren.
+Das Bild-zu-Video-Konvertierungssystem, das Videoframes hinzufügt, um die Unterschiede bei den Bildraten zwischen Film und Video zu kompensieren.
 
 </dd> <dt>
 
@@ -464,7 +464,7 @@ Ein verbindungsloses Transportprotokoll im TCP/IP-Protokollstapel, das in Fälle
 <span id="wmformat.variable_bit_rate__vbr_"></span><span id="WMFORMAT.VARIABLE_BIT_RATE__VBR_"></span>**Variable Bitrate (VBR)**
 </dt> <dd>
 
-Ein Merkmal eines Datenstroms, in dem die Bitrate je nach Komplexität der Daten schwankt.
+Ein Merkmal eines Datenstroms, bei dem die Bitrate je nach Komplexität der Daten schwankt.
 
 </dd> <dt>
 
@@ -485,21 +485,21 @@ Eine Datei, die Audio-, Video- oder Skriptdaten enthält. Der Inhalt der Datei w
 <span id="wmformat.windows_media_format"></span><span id="WMFORMAT.WINDOWS_MEDIA_FORMAT"></span>**Windows Medienformat**
 </dt> <dd>
 
-Das Format einer digitalen Mediendatei oder eines Streams, die mit Windows Mediencodecs codiert wurde.
+Das Format einer digitalen Mediendatei oder eines digitalen Streams, die bzw. der mit Windows Mediencodecs codiert wurde.
 
 </dd> <dt>
 
 <span id="wmformat.windows_media_license_service"></span><span id="WMFORMAT.WINDOWS_MEDIA_LICENSE_SERVICE"></span>**Windows Media License Service**
 </dt> <dd>
 
-Eine Komponente des Windows Media Rights Manager SDK, die Lizenzerwerbsdienste bereitstellt.
+Eine Komponente des Windows Media Rights Manager SDK, das Lizenzerwerbsdienste bereitstellt.
 
 </dd> <dt>
 
 <span id="wmformat.yuv"></span><span id="WMFORMAT.YUV"></span>**YUV**
 </dt> <dd>
 
-Ein Farbmodell, das Farbinformationen in Bezug auf seine Helligkeit (Leuchtdichte oder Y) und Farbe (Chromeinance oder Sie und V) beschreibt.
+Ein Farbmodell, das Farbinformationen in Bezug auf seine Helligkeit (Leuchtdichte oder Y) und Farbe (Chrominance oder Sie und V) beschreibt.
 
 </dd> </dl>
 

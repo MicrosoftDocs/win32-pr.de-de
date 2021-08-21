@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_NSType-Klasse
-description: Die Modify-Methode aktualisiert einen Name Server (NS)-Ressourcen Daten Satz.
+title: Modify-Methode der MicrosoftDNS_NSType Klasse
+description: Die Modify-Methode aktualisiert einen NS-Ressourcendatensatz (Name Server).
 ms.assetid: da625231-cf4e-4526-b713-737e6b9f5831
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_NSType-Klasse
-- DNS-MicrosoftDNS_NSType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_NSType class
+- MicrosoftDNS_NSType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3dd26b7c0f1c31ef3ea742f20f70df8646a087b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a8adcebb06aa7d796b9d4c79282fe04ec9047d54a0be1c69a302fdcddf78ca34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119573780"
 ---
-# <a name="modify-method-of-the-microsoftdns_nstype-class"></a>Modify-Methode der MicrosoftDNS- \_ nstype-Klasse
+# <a name="modify-method-of-the-microsoftdns_nstype-class"></a>Modify-Methode der MicrosoftDNS \_ NSType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Name Server (NS)-Ressourcen Daten Satz.
+Die **Modify-Methode** aktualisiert einen NS-Ressourcendatensatz (Name Server).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
 *NSHost* \[ in, optional\]
 </dt> <dd>
 
-Autorisierender Host für die Domäne.
+Autoritativer Host für die Domäne.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -69,9 +69,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -90,13 +90,13 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ ptrtype**](microsoftdns-ptrtype.md)
+[**MicrosoftDNS \_ PTRType**](microsoftdns-ptrtype.md)
 </dt> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ ptrtype"**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ PTRType-Klasse**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

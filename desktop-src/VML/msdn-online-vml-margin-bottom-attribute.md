@@ -1,6 +1,6 @@
 ---
-title: VMLMargin-Bottom Attribut
-description: VMLMargin-Bottom Attribut
+title: VML-Margin-Bottom-Attribut
+description: VML-Margin-Bottom-Attribut
 ms.assetid: c1101430-f4fc-4fa5-8e02-7cee126c2c1c
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,46 +11,46 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119057818"
 ---
-# <a name="vml-margin-bottom-attribute"></a>VMLMargin-Bottom Attribut
+# <a name="vml-margin-bottom-attribute"></a>VML-Margin-Bottom-Attribut
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Gibt den unteren Rand des Rechtecks der Form an, das relativ zum Formanker enthält. Lese-/Schreibzugriff. **Zeichenfolge.**
+Gibt den unteren Rand des enthaltenden Rechtecks der Form relativ zum Formanker an. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Formen](shape-element--vml.md)
+[Form](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *element* margin-bottom="-Ausdruck "> 
+<v: *element* margin-bottom=" *ausdruck* ">
 
 **Skriptsyntax**
 
 *element* .marginbottom="*expression*"
 
-*expression* = *Element*.marginbottom
+*expression* = *.marginbottom-Element*
 
 **Anmerkungen**
 
-Das **Margin-Bottom-Attribut** ähnelt dem html-Standardattribut **Margin-Bottom,** das mit Stylesheets verwendet wird.
+Das **Margin-Bottom-Attribut** ähnelt dem standardmäßigen **HTML-Margin-Bottom-Attribut,** das mit Stylesheets verwendet wird.
 
-Beachten Sie, **dass marginbottom** anstelle von **margin-bottom für skriptbasierte** Skripts verwendet wird. Beachten Sie auch, dass **sich der Rand** nicht zu ändern scheint, wenn die Position **absolut** ist.
+Beachten Sie, dass **marginbottom** anstelle von **margin-bottom** für die Skripterstellung verwendet wird. Beachten Sie außerdem, dass sich der Rand nicht zu ändern scheint, wenn die **Position** **absolut** ist.
 
 Mögliche Werte:
 
 
 
-| Wert      | BESCHREIBUNG                                                                                                                                                                                       |
+| Wert      | Beschreibung                                                                                                                                                                                       |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Automatisch       | Standardposition eines Elements im Fluss der Seite.                                                                                                                                           |
-| units      | Standard. Eine Zahl mit einem absoluten Einheiten-Designator (cm, mm, in, pt, pc oder px) oder einem relativen Einheiten-Designator (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. Der Standardwert ist 0. |
-| Prozentwert | Wert, der als Prozentsatz der Höhe des übergeordneten Objekts ausgedrückt wird.                                                                                                                                    |
+| Automatisch       | Standardposition eines Elements im Seitenfluss.                                                                                                                                           |
+| units      | Standard. Eine Zahl mit einem absoluten Einheiten-Kennzeichner (cm, mm, in, pt, pc oder px) oder einem bezeichner für relative Einheiten (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. Der Standardwert ist 0. |
+| Prozentwert | Der Als Prozentsatz der Höhe des übergeordneten Objekts ausgedrückte Wert.                                                                                                                                    |
 
 
 
@@ -75,7 +75,7 @@ Der untere Rand ist auf 25 Pixel festgelegt.
 
 
 
-[Beispiel für das Margin-Bottom-Attribut.](/previous-versions/bb229675(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für ein Margin-Bottom-Attribut.](/previous-versions/bb229675(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
  
 

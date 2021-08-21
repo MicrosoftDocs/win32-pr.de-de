@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: InstanceParameters.MaxVerPages-Eigenschaft'
+description: 'Weitere Informationen zu: InstanceParameters.MaxVerPages-Eigenschaft'
 title: InstanceParameters.MaxVerPages-Eigenschaft
 TOCTitle: 'MaxVerPages property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.MaxVerPages
@@ -64,7 +64,7 @@ public int MaxVerPages { get; set; }
 
 Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 
