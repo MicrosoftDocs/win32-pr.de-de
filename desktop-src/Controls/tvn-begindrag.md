@@ -1,9 +1,9 @@
 ---
 title: TVN_BEGINDRAG Benachrichtigungscode (Commctrl.h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: e118354a-329e-424c-b137-78342cc00957
 keywords:
-- TVN_BEGINDRAG Benachrichtigungscode Windows Steuerelementen
+- TVN_BEGINDRAG Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118957919"
 ---
 # <a name="tvn_begindrag-notification-code"></a>TVN \_ BEGINDRAG-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ TVN_BEGINDRAG
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Das **itemNew-Element** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen über das Element enthält, das in die **Elemente hItem,** **state** und **lParam gezogen** wird. Das **ptDrag-Element** gibt die aktuellen Bildschirmkoordinaten der Maus an.
+Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Der **itemNew-Member** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen über das Element enthält, das in den **Membern hItem,** **state** und **lParam** gezogen wird. Das **ptDrag-Element** gibt die aktuellen Bildschirmkoordinaten der Maus an.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Der Rückgabewert wird ignoriert.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Strukturansicht-Steuerelement, das über den [**TVS \_ DISABLEDRAGDROP-Stil**](tree-view-control-window-styles.md) verfügt, sendet diesen Benachrichtigungscode nicht.
+Ein Strukturansichtssteuerelement mit dem [**TVS \_ DISABLEDRAGDROP-Stil**](tree-view-control-window-styles.md) sendet diesen Benachrichtigungscode nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Ein Strukturansicht-Steuerelement, das über den [**TVS \_ DISABLEDRAGDROP-Stil*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **TVN \_ BEGINDRAGW** (Unicode) und **TVN \_ BEGINDRAGA** (ANSI)<br/>               |

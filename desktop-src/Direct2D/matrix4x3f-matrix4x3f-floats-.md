@@ -1,11 +1,11 @@
 ---
-title: Matrix4x3F Matrix4x3F (float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-Konstruktor (D2d1 \_ Helper. h)
-description: Instanziiert eine neue Instanz einer Matrix4x3F-Klasse, die mit allen Gleit Komma-Matrix Werten initialisiert wird.
+title: Matrix4x3F Matrix4x3F(FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT) konstruktor (D2d1 \_ helper.h)
+description: Instanziiert eine neue Instanz einer Matrix4x3F-Klasse, die mit allen Gleitkommamatrixwerten initialisiert wird.
 ms.assetid: 1B4359BD-9B92-4C9F-9FED-49246D45F0E3
 keywords:
 - Matrix4x3F-Konstruktor Direct2D
 - Matrix4x3F-Konstruktor Direct2D, Matrix4x3F-Schnittstelle
-- Matrix4x3F Interface Direct2D, Matrix4x3F-Konstruktor
+- Matrix4x3F-Schnittstelle Direct2D, Matrix4x3F-Konstruktor
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7858a0d5a6204e3f966205c7cf6dab6e68180524
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a75cd618595ec6d993daaa0dd25bf50469c1a4c237f54016aa0157b0f5b47df5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955575"
 ---
-# <a name="matrix4x3fmatrix4x3ffloat-float-float-float-float-float-float-float-float-float-float-float-constructor"></a>Matrix4x3F:: Matrix4x3F (float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-, float-)
+# <a name="matrix4x3fmatrix4x3ffloat-float-float-float-float-float-float-float-float-float-float-float-constructor"></a>Matrix4x3F::Matrix4x3F(FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT, FLOAT) konstruktor
 
-Instanziiert eine neue Instanz einer [**Matrix4x3F**](matrix4x3f.md) -Klasse, die mit allen Gleit Komma-Matrix Werten initialisiert wird.
+Instanziiert eine neue Instanz einer [**Matrix4x3F-Klasse,**](matrix4x3f.md) die mit allen Gleitkommamatrixwerten initialisiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,28 +53,28 @@ inline Matrix4x3F(
 
 <dl> <dt>
 
-*quer* 
+*m11* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M12* 
+*m12* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und zweiten Spalte der Matrix.
 
 </dd> <dt>
 
-*M13* 
+*m13* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der ersten Zeile und dritten Spalte der Matrix.
 
@@ -83,34 +83,34 @@ Der Wert in der ersten Zeile und dritten Spalte der Matrix.
 *m21* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M22* 
+*m22* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und zweiten Spalte der Matrix.
 
 </dd> <dt>
 
-*M23* 
+*m23* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der zweiten Zeile und dritten Spalte der Matrix.
 
 </dd> <dt>
 
-*M31* 
+*m31* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und ersten Spalte der Matrix.
 
@@ -119,7 +119,7 @@ Der Wert in der dritten Zeile und ersten Spalte der Matrix.
 *m32* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und zweiten Spalte der Matrix.
 
@@ -128,25 +128,25 @@ Der Wert in der dritten Zeile und zweiten Spalte der Matrix.
 *m33* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der dritten Zeile und dritten Spalte der Matrix.
 
 </dd> <dt>
 
-*M41* 
+*m41* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und ersten Spalte der Matrix.
 
 </dd> <dt>
 
-*M42* 
+*m42* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und zweiten Spalte der Matrix.
 
@@ -155,7 +155,7 @@ Der Wert in der vierten Zeile und zweiten Spalte der Matrix.
 *m43* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Der Wert in der vierten Zeile und dritten Spalte der Matrix.
 
@@ -167,12 +167,12 @@ Der Wert in der vierten Zeile und dritten Spalte der Matrix.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate nur für Windows \[ Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate nur für Windows Server 2008-Desktop-Apps \[\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/>                                           |
 | Namespace<br/>                | D2D1<br/>                                                                                                                   |
-| Header<br/>                   | <dl> <dt>D2d1 \_ Helper. h</dt> </dl>                                         |
-| Bibliothek<br/>                  | <dl> <dt>D2d1. lib</dt> </dl>                                               |
+| Header<br/>                   | <dl> <dt>D2d1 \_ helper.h</dt> </dl>                                         |
+| Bibliothek<br/>                  | <dl> <dt>D2d1.lib</dt> </dl>                                               |
 | DLL<br/>                      | <dl> <dt>D2d1.dll</dt> </dl>                                               |
 
 

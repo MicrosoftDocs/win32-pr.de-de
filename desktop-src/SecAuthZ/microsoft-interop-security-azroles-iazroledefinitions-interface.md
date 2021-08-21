@@ -1,7 +1,7 @@
 ---
-description: Links zur Dokumentation für die iazroledefinitions-Wrapper Methoden und-Eigenschaften.
+description: Links zur Dokumentation für die IAzRoleDefinitions-Interoperabilitätswrappermethoden und -eigenschaften.
 ms.assetid: 3d33f884-d48b-4a73-a59f-5fd3c754d4b3
-title: Microsoft. Interop. Security. azrollen. iazroledefinitions-Schnittstelle
+title: Microsoft.Interop.Security.AzRoles.IAzRoleDefinitions-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,33 +23,33 @@ api_type:
 - COM
 api_location:
 - Microsoft.Interop.Security.Azroles.dll
-ms.openlocfilehash: 7bb0803dac80c0f27041f3fffe77e51d81fba0ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7973d8313258826a6629682fe588ec65ecdc5ed21c71c460c32eec154290707b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118912646"
 ---
-# <a name="microsoftinteropsecurityazrolesiazroledefinitions-interface"></a>Microsoft. Interop. Security. azrollen. iazroledefinitions-Schnittstelle
+# <a name="microsoftinteropsecurityazrolesiazroledefinitions-interface"></a>Microsoft.Interop.Security.AzRoles.IAzRoleDefinitions-Schnittstelle
 
-Die **Microsoft. Interop. Security. azrollen. iazroledefinitions** -Wrapper Methoden und-Eigenschaften sind unter der com-Version der-Methode oder der-Eigenschaft dokumentiert. Ein Link zur korrelierenden com-Dokumentation folgt den einzelnen Elementnamen.
+Die Interoperabilitätswrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzRoleDefinitions** sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Ein Link zur korrelierenden COM-Dokumentation folgt jedem Membernamen.
 
 ## <a name="members"></a>Member
 
-Die **Microsoft. Interop. Security. azrollen. iazroledefinitions** -Schnittstelle verfügt über diese Typen von Membern:
+Die **Microsoft.Interop.Security.AzRoles.IAzRoleDefinitions-Schnittstelle** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Microsoft. Interop. Security. azrollen. iazroledefinitions** -Schnittstelle verfügt über diese Methoden.
+Die **Microsoft.Interop.Security.AzRoles.IAzRoleDefinitions-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                                     |
+| Methode                                                                  | Beschreibung                                                                     |
 |:------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazroledefinitions. getenreerator** | [**Iazroledefinitions:: \_ netwenum**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get__newenum)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzRoleDefinitions.GetEnumerator** | [**IAzRoleDefinitions:: \_ NewEnum**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get__newenum)<br/> |
 
 
 
@@ -57,14 +57,14 @@ Die **Microsoft. Interop. Security. azrollen. iazroledefinitions** -Schnittstell
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Microsoft. Interop. Security. azrollen. iazroledefinitions** -Schnittstelle verfügt über diese Eigenschaften.
+Die **Microsoft.Interop.Security.AzRoles.IAzRoleDefinitions-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                   | Zugriffstyp          | BESCHREIBUNG                                                                         |
+| Eigenschaft                                                                   | Zugriffstyp          | Beschreibung                                                                         |
 |:---------------------------------------------------------------------------|:---------------------|:------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazroledefinitions. Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von iazroledefinitions**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get_count)<br/> |
-| **Microsoft. Interop. Security. azrollen. iazroledefinitions. Count**<br/> | Schreibgeschützt<br/> | [**Item-Eigenschaft von iazroledefinitions**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get_item)<br/>   |
+| **Microsoft.Interop.Security.Azroles.IAzRoleDefinitions.Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von IAzRoleDefinitions**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get_count)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzRoleDefinitions.Count**<br/> | Schreibgeschützt<br/> | [**Item-Eigenschaft von IAzRoleDefinitions**](/windows/desktop/api/Azroles/nf-azroles-iazroledefinitions-get_item)<br/>   |
 
 
 

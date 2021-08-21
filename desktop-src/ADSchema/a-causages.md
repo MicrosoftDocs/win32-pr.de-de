@@ -1,11 +1,11 @@
 ---
 title: CA-Usages-Attribut
-description: Liste der OID/CSP-namens Verkettungen.
+description: Liste der OID-/CSP-Namensverkettungen.
 ms.assetid: b68a868c-6627-4233-ba7e-2fd50b513298
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für CA-Usages-Attribut
-- Attributs-Attribut AD-Schema
+- CA-Usages AD-Attributschema
+- cAUsages-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 704d78ee9c085749fd61b65bdf3f21e3710321da
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9362d621a84b8f017d0e8a42201c54866217e535a9d29f41913aadad1b2bee3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022658"
 ---
 # <a name="ca-usages-attribute"></a>CA-Usages-Attribut
 
-Liste der OID/CSP-namens Verkettungen.
+Liste der OID-/CSP-Namensverkettungen.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | CA-Usages                                   |
-| LDAP-Display-Name | kauses                                    |
+| Ldap-Anzeigename | cAUsages                                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.690                      |
-| System-ID-GUID    | 963d2738-48be-11d1-a9c3-0000 C1        |
+| System-ID-GUID    | 963d2738-48be-11d1-a9c3-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Liste der OID/CSP-namens Verkettungen.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -70,7 +70,7 @@ Liste der OID/CSP-namens Verkettungen.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -99,11 +99,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -120,11 +120,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -141,11 +141,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -162,11 +162,11 @@ Liste der OID/CSP-namens Verkettungen.
 |------------------------|------------------------------------------------------------------------|
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
-| System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
-| Ist indiziert             | False                                                                  |
-| Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| System-Only            | Falsch                                                                  |
+| Ist einwertig       | Falsch                                                                  |
+| Ist indiziert             | Falsch                                                                  |
+| Im globalen Katalog      | Falsch                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |

@@ -1,222 +1,222 @@
 ---
-description: 'Weitere Informationen: Beispiele für den vshadow-Tool'
+description: Weitere Informationen finden Sie unter Beispiele für VShadow-Tools.
 ms.assetid: 6a69b75b-ee4a-4613-ba05-d2deb42759b7
-title: Beispiele für den vshadow-Tool
+title: Beispiele für das VShadow-Tool
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b65fd2bfa1c390b1bd5310cd80f02e029dbf935f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86ec0a753f2865be98cfed76cd192a73cfc785b3fcdc487f7685c9f4ae7d52e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056348"
 ---
-# <a name="vshadow-tool-examples"></a>Beispiele für den vshadow-Tool
+# <a name="vshadow-tool-examples"></a>Beispiele für das VShadow-Tool
 
-In den folgenden Beispielen wird veranschaulicht, wie das vshadow-Tool verwendet wird, um die gängigsten Aufgaben auszuführen:
+In den folgenden Beispielen wird gezeigt, wie Sie das VShadow-Tool verwenden, um die gängigsten Aufgaben auszuführen:
 
--   [Zugreifen auf schattenkopieeigenschaften aus einem cmd-Skript](#accessing-shadow-copy-properties-from-a-cmd-script)
--   [Zugreifen auf nicht persistente Schatten Kopien](#accessing-nonpersistent-shadow-copies)
--   [Kopieren einer Datei aus einer Schatten Kopie](#copying-a-file-from-a-shadow-copy)
--   [Auflisten aller Dateien auf einem schattenkopiespeichergerät](#enumerating-all-files-on-a-shadow-copy-device)
--   [Importieren einer transportable-Schatten Kopie](#importing-a-transportable-shadow-copy)
--   [Einschließen von Writern oder Komponenten](#including-writers-or-components)
+-   [Zugreifen auf Schattenkopieeigenschaften über ein CMD-Skript](#accessing-shadow-copy-properties-from-a-cmd-script)
+-   [Zugreifen auf nichtpersistente Schattenkopien](#accessing-nonpersistent-shadow-copies)
+-   [Kopieren einer Datei aus einer Schattenkopie](#copying-a-file-from-a-shadow-copy)
+-   [Aufzählen aller Dateien auf einem Schattenkopiegerät](#enumerating-all-files-on-a-shadow-copy-device)
+-   [Importieren einer transportierbaren Schattenkopie](#importing-a-transportable-shadow-copy)
+-   [Einschließlich Writer oder Komponenten](#including-writers-or-components)
 -   [Ausschließen von Writern oder Komponenten](#excluding-writers-or-components)
--   [Unterbrechen von schattenkopiesätzen mithilfe der breaksnapshotsetex-Methode](#breaking-shadow-copy-sets-using-the-breaksnapshotsetex-method)
+-   [Breaking Shadow Copy Sets Using the BreakSnapshotSetEx Method](#breaking-shadow-copy-sets-using-the-breaksnapshotsetex-method)
 
-Eine umfassende Liste der Befehlszeilenoptionen und deren Verwendung finden Sie unter [vshadow-Tool und-Beispiel](vshadow-tool-and-sample.md).
+Eine vollständige Liste der Befehlszeilenoptionen und deren Verwendung finden Sie unter [VShadow-Tool und Beispiel](vshadow-tool-and-sample.md).
 
-## <a name="accessing-shadow-copy-properties-from-a-cmd-script"></a>Zugreifen auf schattenkopieeigenschaften aus einem cmd-Skript
+## <a name="accessing-shadow-copy-properties-from-a-cmd-script"></a>Zugreifen auf Schattenkopieeigenschaften über ein CMD-Skript
 
-Wenn Sie das optionale Flag **-Script** verwenden, wenn Sie Schatten Kopien erstellen, erstellt vshadow eine cmd-Skriptdatei, die Umgebungsvariablen enthält, die sich auf die neu erstellten Schatten Kopien beziehen, wie z. b. die folgenden:
+Wenn Sie beim Erstellen von Schattenkopien das optionale Flag **-script** verwenden, erstellt VShadow eine CMD-Skriptdatei mit Umgebungsvariablen, die mit den neu erstellten Schattenkopien verknüpft sind, z. B.:
 
--   Die ID des schattenkopiesatzes, der in der% vshadow \_ Set \_ ID%-Umgebungsvariablen gespeichert ist.
--   Die schattenkopienids, die in Variablen der Form% vshadow \_ ID \_ *nnn*% gespeichert sind, wobei *nnn* den Index des Quell Volumens in der vshadow-Befehlszeile darstellt.
--   Die Namen der Schatten Kopie-Geräte, die in Variablen der Form% vshadow- \_ Gerät \_ *nnn*% gespeichert sind, wobei *nnn* der Index des Quell Volumens in der vshadow-Befehlszeile ist.
+-   Die ID des Schattenkopiesets, die in der Umgebungsvariablen %VSHADOW \_ SET \_ ID% gespeichert ist
+-   Die Schattenkopie-IDs, die in Variablen der Form %VSHADOW \_ ID \_ *NNN*% gespeichert werden, wobei *NNN* den Index des Quellvolumens in der VShadow-Befehlszeile darstellt
+-   Die Schattenkopiegerätenamen, die in Variablen der Form %VSHADOW \_ DEVICE \_ *NNN*% gespeichert werden, wobei *NNN* der Index des Quellvolumens in der VShadow-Befehlszeile ist
 
-Mit der generierten cmd-Datei können Sie eingeschränkte Verwaltungsvorgänge für die Schatten Kopien durchführen.
+Sie können die generierte CMD-Datei verwenden, um eingeschränkte Verwaltungsvorgänge für die Schattenkopien durchzuführen.
 
 > [!Note]  
-> Das [**BackupComplete**](/windows/win32/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) Writer-Ereignis wird gesendet, nachdem das **-exec-** Skript ausgeführt wurde. VSS ruft die **IVssBackupComponents:: BackupComplete** -Methode auf, um den Writern zu signalisieren, dass die Sicherung abgeschlossen ist, und die Writer können an diesem Punkt möglicherweise Protokolle abschneiden. Daher ist es wichtig, zu überprüfen, ob der Schatten/die Sicherung tatsächlich abgeschlossen wurde. Wenn bei der Sicherung ein Fehler aufgetreten ist, können Sie den Erstellungs Prozess Abbrechen, indem Sie einen Exitcode ungleich NULL im ausgeführten Skript/Befehl zurückgeben. (Weitere Informationen finden Sie in der Dokumentation für den Exit-Befehl in der [Windows-Befehlszeilen Referenz](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754340(v=ws.11)).) Wenn der benutzerdefinierte Befehl mit einem Exitcode ungleich 0 (null) zurückgegeben wird, wird die Erstellung der Schatten Kopie abgebrochen, und **IVssBackupComponents:: BackupComplete** wird nicht aufgerufen.
+> Das [**BackupComplete**](/windows/win32/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) Writer-Ereignis wird gesendet, nachdem **das Skript -exec** ausgeführt wurde. VSS ruft die **IVssBackupComponents::BackupComplete-Methode** auf, um den Writern zu signalisieren, dass die Sicherung abgeschlossen ist, und die Writer können protokolle zu diesem Zeitpunkt möglicherweise abschneiden. Daher ist es wichtig zu überprüfen, ob die Schatten-/Sicherungskopie tatsächlich abgeschlossen wurde. Wenn bei der Sicherung ein Fehler auft ist, können Sie den Erstellungsprozess abbrechen, indem Sie im ausgeführten Skript/Befehl einen Exitcode ungleich 0 (null) zurückgeben. (Weitere Informationen finden Sie in der Dokumentation zum Exitbefehl in Windows [Befehlszeilenreferenz.)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754340(v=ws.11)) Wenn der benutzerdefinierte Befehl mit einem Exitcode ungleich 0 (null) zurückgegeben wird, wird die Erstellung der Schattenkopie abgebrochen, und **IVssBackupComponents::BackupComplete** wird nicht aufgerufen.
 
  
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine persistente Schatten Kopie in der Befehlszeile erstellen und das cmd-Skript verwenden, um Sie verfügbar zu machen.
+Das folgende Beispiel zeigt, wie Sie eine persistente Schattenkopie über die Befehlszeile erstellen und das CMD-Skript verwenden, um sie verfügbar zu machen.
 
-1.  **vshadow-p-NW-Script = SETVAR1. cmd c:**
-2.  **SETVAR1. cmd aufzurufen**
-3.  **C: \\>vshadow-El =% vshadow- \_ ID \_ 1%, c: \\ directory1**
+1.  **vshadow -p -nw -script=SETVAR1.cmd c:**
+2.  **Aufrufen von SETVAR1.cmd**
+3.  **C: \\>vshadow -el=%VSHADOW \_ ID \_ 1%,c: \\ directory1**
 
-## <a name="accessing-nonpersistent-shadow-copies"></a>Zugreifen auf nicht persistente Schatten Kopien
+## <a name="accessing-nonpersistent-shadow-copies"></a>Zugreifen auf nichtpersistente Schattenkopien
 
-Nicht persistente Schatten Kopien werden automatisch gelöscht, wenn das Programm, das Sie erstellt, (in diesem Fall vshadow) beendet wird. Für den Zugriff auf den Inhalt dieser Schatten Kopien ermöglicht vshadow das Ausführen eines Skripts, nachdem die Schatten Kopien erstellt wurden, aber bevor das vshadow-Programm beendet wird.
+Nichtpersistente Schattenkopien werden automatisch gelöscht, wenn das Programm, das sie erstellt (in diesem Fall VShadow), beendet wird. Um auf den Inhalt dieser Schattenkopien zu zugreifen, können Sie mit VShadow ein Skript ausführen, nachdem die Schattenkopien erstellt wurden, aber bevor das VShadow-Programm beendet wird.
 
-Im folgenden Beispiel wird gezeigt, wie die Befehlszeilenoption-Exec zum Ausführen eines Skripts mit dem Namen "Enum. cmd" verwendet wird:
+Das folgende Beispiel zeigt, wie Sie die Befehlszeilenoption -exec verwenden, um ein Skript namens "enum.cmd" auszuführen:
 
-**vshadow-NW-Exec = Aufzählung. cmd c:**
+**vshadow -nw -exec=enum.cmd c:**
 
-Im ausgeführten Skript können Sie auch das generierte SETVAR-Skript in diesem benutzerdefinierten Befehl ausführen. Dadurch kann das Skript direkt auf den Inhalt der Schatten Kopien zugreifen. Beachten Sie, dass das Schatten Gerät von der \_ nnn-Umgebungsvariable des vshadow-Geräts abgerufen werden kann \_ .
+Im ausgeführten Skript können Sie auch das generierte SETVAR-Skript in diesem benutzerdefinierten Befehl ausführen. Dadurch kann das Skript direkt auf den Inhalt der Schattenkopien zugreifen. Denken Sie daran, dass das Schattengerät aus der Umgebungsvariablen VSHADOW \_ DEVICE \_ NNN abgerufen werden kann.
 
-Im folgenden finden Sie ein Beispielskript für "cmd":
+Hier sehen Sie ein Beispielskript für "enum.cmd":
 
 ``` syntax
 call SETVAR1.cmd
 for /R %VSHADOW_DEVICE_1%\ %%i in (*.*) do @echo %%i
 ```
 
-Hier ist die Befehlszeile zum Ausführen des Skripts "Enum. cmd":
+Dies ist die Befehlszeile zum Ausführen des Skripts "enum.cmd":
 
-**vshadow-NW-Exec = c: \\ Umum. CMD-Script = setvar1. cmd c:**
+**vshadow -nw -exec=c: \\ enum.cmd -script=setvar1.cmd c:**
 
-## <a name="copying-a-file-from-a-shadow-copy"></a>Kopieren einer Datei aus einer Schatten Kopie
+## <a name="copying-a-file-from-a-shadow-copy"></a>Kopieren einer Datei aus einer Schattenkopie
 
-Im folgenden Beispiel wird gezeigt, wie eine Datei aus einer Schatten Kopie kopiert wird.
-
-1.  **dir > c: \\somefile.txt**
-2.  **vshadow-p-NW-Script = SETVAR1. cmd c:**
-3.  **SETVAR1. cmd aufzurufen**
-4.  **Kopieren Sie% vshadow- \_ Gerät \_ 1% \\somefile.txt c: \\ somefile \_bak.txt**
-
-## <a name="enumerating-all-files-on-a-shadow-copy-device"></a>Auflisten aller Dateien auf einem schattenkopiespeichergerät
-
-Im folgenden Beispiel wird gezeigt, wie alle Dateien auf einem schattenkopiesgerät aus einer Batchdatei aufgelistet werden.
+Das folgende Beispiel zeigt, wie eine Datei aus einer Schattenkopie kopiert wird.
 
 1.  **dir > c: \\somefile.txt**
-2.  **vshadow-p-NW-Script = SETVAR1. cmd c:**
-3.  **SETVAR1. cmd aufzurufen**
-4.  **für/R% vshadow- \_ Gerät \_ 1% \\ %% i in ( \* ) führen Sie @echo %% i aus.**
+2.  **vshadow -p -nw -script=SETVAR1.cmd c:**
+3.  **Aufrufen von SETVAR1.cmd**
+4.  **copy %VSHADOW \_ DEVICE \_ 1% \\somefile.txt c: \\ somefile \_bak.txt**
 
-## <a name="importing-a-transportable-shadow-copy"></a>Importieren einer transportable-Schatten Kopie
+## <a name="enumerating-all-files-on-a-shadow-copy-device"></a>Aufzählen aller Dateien auf einem Schattenkopiegerät
 
-Um eine austauschen-Schatten Kopie auf einem Computer zu erstellen und auf einen anderen Computer zu importieren, müssen Sie über zwei Computer verfügen, die (über eine SAN-Konfiguration) mit einem Speicher Array verbunden sind, das VSS-Hardware Schatten Kopien unterstützt. Ein VSS-Hardware Anbieter muss auf jedem Computer installiert sein.
+Das folgende Beispiel zeigt, wie sie alle Dateien auf einem Schattenkopiegerät aus einer Batchdatei aufzählen.
 
-Im folgenden Beispiel wird gezeigt, wie die Schatten Kopie erstellt und importiert wird.
+1.  **dir > c: \\somefile.txt**
+2.  **vshadow -p -nw -script=SETVAR1.cmd c:**
+3.  **Aufrufen von SETVAR1.cmd**
+4.  **für /R %VSHADOW \_ DEVICE \_ 1% \\ %%i in ( \* ) do @echo %%i**
 
-1.  Erstellen Sie die auf Computer A (dem Produktionsserver) festgelegte Schatten Kopie, indem Sie den folgenden Befehl nach der Eingabeaufforderung eingeben:
+## <a name="importing-a-transportable-shadow-copy"></a>Importieren einer transportierbaren Schattenkopie
 
-    **vshadow-p-t =bc1.xml**
+Um eine transportierbare Schattenkopie auf einem Computer zu erstellen und auf einen anderen Computer zu importieren, müssen Sie über zwei Computer verfügen, die (über eine SAN-Konfiguration) mit einem Speicherarray verbunden sind, das VSS-Hardwareschattenkopien unterstützt. Auf jedem Computer muss ein VSS-Hardwareanbieter installiert sein.
 
-    Dadurch werden keine schattenkopiegeräte auf Computer A verfügbar gemacht.
+Das folgende Beispiel zeigt, wie die Schattenkopie erstellt und importiert wird.
 
-2.  Kopieren Sie das Dokument mit den Sicherungs Komponenten (bc1.xml) von Computer A auf Computer B.
-3.  Importieren Sie den Schatten Satz auf Computer B, indem Sie den folgenden Befehl eingeben:
+1.  Erstellen Sie den Schattenkopiesatz auf Computer A (dem Produktionsserver), indem Sie nach der Eingabeaufforderung den folgenden Befehl eingeben:
 
-    **vshadow-i =bc1.xml**
+    **vshadow -p -t=bc1.xml**
 
-Optional können Sie diese Schatten Kopien als Laufwerksbuchstaben oder eingebundene Ordner verfügbar machen. Außerdem könnten Sie den Schatten Satz möglicherweise unterbrechen, damit die neuen Schattenkopievolumes Lese-/Schreibzugriff erhalten.
+    Dadurch werden keine Schattenkopiegeräte auf Computer A verfügbar.
 
-Zum Automatisieren des Schattensatz-Verwaltungsprozesses können Sie die Befehlszeilenoption " **-Script** " verwenden, um das cmd-Skript zu generieren, das die schattenkopieids enthält. Anschließend können Sie das generierte Skript zusammen mit den Sicherungs Komponenten auf den anderen Computer kopieren.
+2.  Kopieren Sie das Sicherungskomponentendokument (bc1.xml) von Computer A auf Computer B.
+3.  Importieren Sie das Schattenset auf Computer B, indem Sie den folgenden Befehl eingeben:
 
-Im folgenden Beispiel wird gezeigt, wie Sie mithilfe von CMD-Skripts austauschen-Schatten Kopien erstellen, verfügbar machen und unterbrechen können.
+    **vshadow -i=bc1.xml**
 
-1.  Erstellen Sie die auf Computer A (dem Produktionsserver) festgelegte Schatten Kopie wie folgt über die Befehlszeile:
+Optional können Sie diese Schattenkopien als Laufwerkbuchstaben oder bereitgestellte Ordner verfügbar machen. Außerdem könnten Sie den Schattensatz möglicherweise durchbrechen, um die neuen Schattenkopievolumes mit Lese-/Schreibzugriff zu beschriften.
 
-    **vshadow-p-t =bc1.xml-Script = SC1. cmd**
+Um den Schattensetverwaltungsprozess zu automatisieren, können Sie die Befehlszeilenoption **-script** verwenden, um das CMD-Skript mit den Schattenkopie-IDs zu generieren. Anschließend können Sie das generierte Skript zusammen mit den Sicherungskomponenten auf den anderen Computer kopieren.
 
-    Geben Sie die Option **-Script** an, um das Skript zu generieren, das die entsprechenden Umgebungsvariablen Definitionen enthält. Beachten Sie, dass dadurch keine schattenkopiegeräte auf Computer A verfügbar gemacht werden.
+Das folgende Beispiel zeigt, wie transportable Schattenkopien mithilfe von CMD-Skripts erstellt, verfügbar und unterbricht werden.
 
-2.  Kopieren Sie das Dokument mit den Sicherungs Komponenten (bc1.xml) und das generierte Skript (SC1. cmd) von Computer A auf Computer B.
-3.  Importieren Sie den Schatten Satz auf Computer B, indem Sie den folgenden Befehl eingeben:
+1.  Erstellen Sie den Schattenkopiesatz auf Computer A (dem Produktionsserver) wie folgt über die Befehlszeile:
 
-    **vshadow-i =bc1.xml**
+    **vshadow -p -t=bc1.xml -script=sc1.cmd**
 
-    Hierdurch werden die erstellten Geräte auf Computer B angezeigt.
+    Geben Sie die **Option -script** an, um das Skript zu generieren, das die richtigen Umgebungsvariablendefinitionen enthält. Beachten Sie, dass dadurch keine Schattenkopiegeräte auf Computer A verfügbar sind.
 
-4.  Führen Sie das generierte Skript aus, um die Umgebungsvariablen für den Schattenkopiesatz festzulegen, indem Sie den Dateinamen an der Eingabeaufforderung eingeben, wie im folgenden Beispiel gezeigt:
+2.  Kopieren Sie das Sicherungskomponentendokument (bc1.xml) und das generierte Skript (sc1.cmd) von Computer A auf Computer B.
+3.  Importieren Sie das Schattenset auf Computer B, indem Sie den folgenden Befehl eingeben:
 
-    **SC1. cmd**
+    **vshadow -i=bc1.xml**
 
-    Dadurch werden die relevanten Umgebungsvariablen festgelegt, wie unter Zugreifen auf Schatten Kopier Eigenschaften aus einem cmd-Skript beschrieben.
+    Dadurch werden die erstellten Geräte auf Computer B verfügbar.
 
-5.  Machen Sie die Schatten Kopien auf Computer B verfügbar, indem Sie die folgenden Befehle eingeben:
-    1.  **rmdir/s c: \\ \_ Einfügepunkt**
-    2.  **mkdir c: \\ \_ Einfügepunkt**
-    3.  **vshadow – El =% vshadow- \_ ID \_ 1%, c: Einfügepunkt \\ \_**
+4.  Führen Sie das generierte Skript aus, um die Umgebungsvariablen für den Schattenkopiesatz zu legen, indem Sie den Dateinamen wie im folgenden Beispiel an der Eingabeaufforderung eingeben:
 
-    Hierdurch werden die erstellten schattenkopiegeräte auf Computer B angezeigt.
-6.  Unterbrechen Sie den Schattenkopiesatz, damit die Volumes beschreibbar sind, indem Sie den folgenden Befehl eingeben:**C: \\>vshadow – BW =% vshadow \_ Set \_ ID%**
+    **sc1.cmd**
 
-Beachten Sie, dass nicht persistente austauschen-Schatten Kopien ebenfalls importiert werden können, aber Sie werden automatisch gelöscht, wenn der **vshadow** **-i-** Prozess beendet wird. Wenn Sie die Schatten Kopien vor dem Löschen importieren möchten, müssen Sie die Befehlszeilenoption **-exec** verwenden, wie unter Zugriff auf nicht persistente Schatten Kopien beschrieben.
+    Dadurch werden die relevanten Umgebungsvariablen wie unter Access Shadow Copy Properties from a CMD Script (Zugriffsschattenkopieeigenschaften aus einem CMD-Skript) beschrieben festgelegt.
 
-## <a name="including-writers-or-components"></a>Einschließen von Writern oder Komponenten
+5.  Machen Sie die Schattenkopien auf Computer B verfügbar, indem Sie die folgenden Befehle eingeben:
+    1.  **rmdir /s c: \\ \_ Bereitstellungspunkt**
+    2.  **mkdir c: \\ \_ Bereitstellungspunkt**
+    3.  **vshadow –el=%VSHADOW \_ ID \_ 1%,c: \\ \_ Bereitstellungspunkt**
 
-Standardmäßig nehmen alle Writer an der Erstellung von Schatten Kopien Teil. Wenn Sie bestimmen möchten, welche Writer und Komponenten in einen Schattenkopiesatz eingeschlossen werden sollen, verwenden Sie die Befehlszeilenoption **-WM** oder **-wm2** , wie in [Auflisten von Writer-Status und-Metadaten](vshadow-tool-and-sample.md)beschrieben.
+    Dadurch werden die erstellten Schattenkopiegeräte auf Computer B verfügbar.
+6.  Brechen Sie den Schattenkopiesatz auf, um die Volumes schreibbar zu machen, indem Sie den folgenden Befehl eingeben:**C: \\>vshadow –bw=%VSHADOW \_ SET \_ ID%**
 
-Um sicherzustellen, dass alle Komponenten eines Writers enthalten sind, verwenden Sie das optionale **-Wi-** Flag in einem der folgenden Formate:
+Beachten Sie, dass nichtpersistente transportierbare Schattenkopien ebenfalls importiert, aber automatisch gelöscht werden, wenn der **vshadow** **-i-Prozess** beendet wird. Um die Schattenkopien zu importieren, bevor sie gelöscht werden, müssen Sie die Befehlszeilenoption **-exec** verwenden, wie unter Zugreifen auf nicht vorhandene Schattenkopien beschrieben.
 
--   **vshadow** **-Wi-** *beschreibname*
--   **vshadow** **-Wi** **"**_Writer-namens Zeichenfolge_*_"_*
--   **vshadow** **-Wi** **{**_beschreiterid_*_}_*
--   **vshadow** **-Wi** **{**_InstanceId_*_}_*
+## <a name="including-writers-or-components"></a>Einschließlich Writer oder Komponenten
 
-Verwenden Sie das optionale **-Wi-** Flag in einem der folgenden Formate, um zu überprüfen, ob bestimmte Komponenten eingeschlossen sind:
+Standardmäßig nehmen alle Writer an der Erstellung von Schattenkopien teil. Um zu bestimmen, welche Writer und Komponenten in einem Schattenkopiesatz enthalten sein werden, verwenden Sie die Befehlszeilenoption **-wm** oder **-wm2,** wie unter Listing Writer Status and Metadata (Auflisten des Writerstatus und der [Metadaten) beschrieben.](vshadow-tool-and-sample.md)
 
--   **vshadow** **-Wi-** *Schreib Name ***: \\**_LogicalPath_* _\\_ * _componentname_
--   **vshadow** **-Wi** **"**_Writer-namens Zeichenfolge_*_": \\_*_LogicalPath_ *_\\_* _componentname_
--   **vshadow** **-Wi** **{**_beschreiterid_*_}: \\_*_LogicalPath_ *_\\_* _componentname_
--   **vshadow** **-Wi** **{**_InstanceId_*_}: \\_*_LogicalPath_ *_\\_* _componentname_
+Um sicherzustellen, dass alle Komponenten eines Writers enthalten sind, verwenden Sie das optionale **Flag -wi** in einem der folgenden Formate:
 
-In den folgenden Beispielen wird gezeigt, wie das optionale **-Flag-Wi** verwendet wird.
+-   **vshadow** **-wi** *WriterName*
+-   **vshadow** **-wi** **"** Writer Name _String_*_"_*
+-   **vshadow** **-wi** **{**_WriterID_*_}_*
+-   **vshadow** **-wi** **{**_InstanceID_*_}_*
 
--   Angeben von " *Write Name*: \\ *LogicalPath* \\ *componentname*":
+Um zu überprüfen, ob bestimmte Komponenten enthalten sind, verwenden Sie das optionale **Flag -wi** in einem der folgenden Formate:
 
-    **vshadow-Wi = "registrierungswriter: \\ Registrierung"**
+-   **vshadow** **-wi** *WriterName***: \\**_LogicalPath_* _\\_ * _ComponentName_
+-   **vshadow** **-wi** **"** Writer Name _String_*_": \\_*_LogicalPath_ *_\\_* _ComponentName_
+-   **vshadow** **-wi** **{**_WriterID_*_}: \\_*_LogicalPath_ *_\\_* _ComponentName_
+-   **vshadow** **-wi** **{**_InstanceID_*_}: \\_*_LogicalPath_ *_\\_* _ComponentName_
 
--   Angeben von {*Write ID*}:
+In den folgenden Beispielen wird die Verwendung des optionalen **Flags -wi** gezeigt.
 
-    **vshadow-Wi = {BE000CBE-11FE-4426-9C58-531AA6355FC4}**
+-   Angeben von *WriterName:* \\ *LogicalPath* \\ *ComponentName:*
 
--   Angeben von mehr als einem Writer oder einer Komponente:
+    **vshadow -wi="Registry Writer: \\ Registry"**
 
-    **vshadow-Wi = "Registry Writer: \\ Registry"-Wi = "com+ RegDB Writer"**
+-   Angeben von {*WriterID*}:
+
+    **vshadow -wi={BE000CBE-11FE-4426-9C58-531AA6355FC4}**
+
+-   Angeben mehrerer Writer oder Komponenten:
+
+    **vshadow -wi="Registry Writer: \\ Registry" -wi="COM+ REGDB Writer"**
 
 ## <a name="excluding-writers-or-components"></a>Ausschließen von Writern oder Komponenten
 
-Um alle Writer auszuschließen, verwenden Sie das optionale Flag **-NW** , wenn Sie die Schatten Kopie erstellen.
+Um alle Writer auszuschließen, verwenden Sie das optionale Flag **-nw** beim Erstellen der Schattenkopie.
 
-Um alle Komponenten eines Writers auszuschließen, verwenden Sie das optionale **-WX-** Flag in einem der folgenden Formate:
+Um alle Komponenten eines Writers auszuschließen, verwenden Sie das optionale Flag **-wx** in einem der folgenden Formate:
 
--   **vshadow** **-WX-** *beschreitername*
--   **vshadow** **-WX** **"**_Writer-namens Zeichenfolge_*_"_*
--   **vshadow** **-WX** **{**_beschreiterid_*_}_*
--   **vshadow** **-WX** **{**_InstanceId_*_}_*
+-   **vshadow** **-wx** *WriterName*
+-   **vshadow** **-wx** **"** Writer Name _String_*_"_*
+-   **vshadow** **-wx** **{**_WriterID_*_}_*
+-   **vshadow** **-wx** **{**_InstanceID_*_}_*
 
-Um bestimmte Komponenten auszuschließen, verwenden Sie das optionale **-WX-** Flag in einem der folgenden Formate:
+Um bestimmte Komponenten auszuschließen, verwenden Sie das optionale Flag **-wx** in einem der folgenden Formate:
 
--   **vshadow** **-WX-** *Schreib Name ***: \\**_LogicalPath_* _\\_ * _componentname_
--   **vshadow** **-WX** **"**_Writer-namens Zeichenfolge_*_": \\_*_LogicalPath_ *_\\_* _componentname_
--   **vshadow** **-WX** **{**_beschreiterid_*_}: \\_*_LogicalPath_ *_\\_* _componentname_
--   **vshadow** **-WX** **{**_InstanceId_*_}: \\_*_LogicalPath_ *_\\_* _componentname_
+-   **vshadow** **-wx** *WriterName***: \\**_LogicalPath_* _\\_ * _ComponentName_
+-   **vshadow** **-wx** **"** Writer Name _String_*_": \\_*_LogicalPath_ *_\\_* _ComponentName_
+-   **vshadow** **-wx** **{**_WriterID_*_}: \\_*_LogicalPath_ *_\\_* _ComponentName_
+-   **vshadow** **-wx** **{**_InstanceID_*_}: \\_*_LogicalPath_ *_\\_* _ComponentName_
 
-In den folgenden Beispielen wird gezeigt, wie Sie das optionale Flag **-WX** verwenden.
+In den folgenden Beispielen wird die Verwendung des optionalen Flags **-wx** veranschaulicht.
 
--   Angeben von " *Write Name*: \\ *LogicalPath* \\ *componentname*":
+-   Angeben von *WriterName:* \\ *LogicalPath* \\ *ComponentName*:
 
-    **vshadow-WX = "registrierungswriter: \\ Registrierung"**
+    **vshadow -wx="Registry Writer: \\ Registry"**
 
--   Angeben von {*Write ID*}:
+-   Angeben von {*WriterID*}:
 
-    **vshadow-WX = {BE000CBE-11FE-4426-9C58-531AA6355FC4}**
+    **vshadow -wx={BE000CBE-11FE-4426-9C58-531AA6355FC4}**
 
--   Angeben von mehr als einem Writer oder einer Komponente:
+-   Angeben mehrerer Writer oder Komponenten:
 
-    **vshadow-WX = "Registry Writer: \\ Registry"-WX = "com+ RegDB Writer"**
+    **vshadow -wx="Registry Writer: \\ Registry" -wx="COM+ REGDB Writer"**
 
-## <a name="breaking-shadow-copy-sets-using-the-breaksnapshotsetex-method"></a>Unterbrechen von schattenkopiesätzen mithilfe der breaksnapshotsetex-Methode
+## <a name="breaking-shadow-copy-sets-using-the-breaksnapshotsetex-method"></a>Breaking Shadow Copy Sets mithilfe der BreakSnapshotSetEx-Methode
 
-In den folgenden Beispielen wird gezeigt, wie die Befehlszeilenoption **-BEx** verwendet wird.
+In den folgenden Beispielen wird die Verwendung der Befehlszeilenoption **-bex** veranschaulicht.
 
--   Angeben, dass die LUN der Schatten Kopie vom Host maskiert werden soll:
+-   Geben Sie an, dass die Schattenkopie-LUN vom Host maskiert wird:
 
-    **vshadow** **-BEx** **-Mask**
+    **vshadow** **-bex** **-mask**
 
--   Angeben, dass die LUN der Schatten Kopie als Lese-/schreibvolume für den Host verfügbar gemacht werden soll:
+-   Geben Sie an, dass die Schattenkopie-LUN für den Host als Lese-/Schreibvolume verfügbar gemacht wird:
 
-    **vshadow** **-BEx** **-RW**
+    **vshadow** **-bex** **-rw**
 
--   Angeben, dass die LUN der Schatten Kopie als Lese-/schreibvolume für den Host verfügbar gemacht wird, und dass keine der Datenträger Signaturen in den schattenkopieluns auf die der ursprünglichen LUNs zurückgesetzt werden:
+-   Geben Sie an, dass die Schattenkopie-LUN für den Host als Lese-/Schreibvolume verfügbar gemacht wird und dass keine der Datenträgersignaturen auf den Schattenkopie-LUNs auf die der ursprünglichen LUNs zurückgesetzt wird:
 
-    **vshadow** **-BEx** **-norevert**
+    **vshadow** **-bex** **-norevert**
 
  
 

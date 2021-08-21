@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents onheartbeatbeendete-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass der Takt einer virtuellen Maschine beendet wurde.
+title: IVMVirtualMachineEvents OnHeartbeatStopped-Methode (VPCCOMInterfaces.h)
+description: Empfängt die Benachrichtigung, dass der Heartbeat eines virtuellen Computers beendet wurde.
 ms.assetid: 58fc81a8-747c-47f9-98ec-38482694f533
 keywords:
-- Onheartbeatbeendete-Methode Virtual PC
-- Onheartbeatbeendete-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, onheartbeatbeendete-Methode
+- OnHeartbeatStopped-Methode Virtueller PC
+- OnHeartbeatStopped-Methode Virtual PC , IVMVirtualMachineEvents-Schnittstelle
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnHeartbeatStopped-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ade783d2d182439d5c500dcc114c74c8278ba6c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6ad4af982899f2f5f5dce6d78569323fbb6a85168c81b7c88c3ee0c62b3a39f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056588"
 ---
-# <a name="ivmvirtualmachineeventsonheartbeatstopped-method"></a>Ivmvirtualmachineevents:: onheartbeatbeendete-Methode
+# <a name="ivmvirtualmachineeventsonheartbeatstopped-method"></a>IVMVirtualMachineEvents::OnHeartbeatStopped-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass der Takt einer virtuellen Maschine beendet wurde.
+Empfängt die Benachrichtigung, dass der Heartbeat eines virtuellen Computers beendet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn das Gast Betriebssystem für diesen virtuellen Computer abrupt beendet wurde. Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das \_ vom [**ivmvirtualmachine**](ivmvirtualmachine.md)-Ereignis empfangene vmvirtualmachineevent heartbeatbeendeten-Ereignis zu erhalten.
+Diese Methode wird aufgerufen, wenn das Gastbetriebssystem für diesen virtuellen Computer plötzlich beendet wurde. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um eine Benachrichtigung über das Ereignis vmVirtualMachineEvent HeartbeatStopped zu erhalten, das \_ von [**IVMVirtualMachine**](ivmvirtualmachine.md)stammt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,12 +56,12 @@ Diese Methode wird aufgerufen, wenn das Gast Betriebssystem für diesen virtuell
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -69,7 +69,7 @@ Diese Methode wird aufgerufen, wenn das Gast Betriebssystem für diesen virtuell
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

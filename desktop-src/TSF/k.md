@@ -1,18 +1,18 @@
 ---
-title: K (Text Dienste-Framework)
+title: K (Textdienstframework)
 description: Glossarseite
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 3cd9dd9b-bfc8-4968-9243-16da4ed8938f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa540ae02d7bcc46128160be0958dcc488cc5d60
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6936d133430393f4cfc945fbafbfbed20c6ce8c80f902fe86b8805425c80266c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118876857"
 ---
-# <a name="k-text-services-framework"></a>K (Text Dienste-Framework)
+# <a name="k-text-services-framework"></a>K (Textdienstframework)
 
 <dl> <dt>
 

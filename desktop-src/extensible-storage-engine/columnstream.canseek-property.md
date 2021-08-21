@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. CanSeek-Eigenschaft.
-title: Columnstream. CanSeek (Eigenschaft)
+description: Weitere Informationen zur ColumnStream.CanSeek-Eigenschaft
+title: ColumnStream.CanSeek(Eigenschaft)
 TOCTitle: 'CanSeek property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.CanSeek
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.canseek(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 05b3e2112da46d9807a378525e16493ba4675dfb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f18581e79b3849a0d0753d4e1cad637adaede313218e1daa1cbf88adb3ed38cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042398"
 ---
-# <a name="columnstreamcanseek-property"></a>Columnstream. CanSeek (Eigenschaft)
+# <a name="columnstreamcanseek-property"></a>ColumnStream.CanSeek(Eigenschaft)
 
 Ruft einen Wert, der angibt, ob der Stream Suchvorgänge unterstützt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override bool CanSeek { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Member](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

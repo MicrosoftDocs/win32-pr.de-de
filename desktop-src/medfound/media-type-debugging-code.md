@@ -1,17 +1,17 @@
 ---
 description: Sie können den folgenden Code verwenden, um den Inhalt eines Medientyps während des Debuggens anzuzeigen.
 ms.assetid: 1132c936-c3a7-4d98-bc90-957c170d307a
-title: Medientyp-Debugcode
+title: Medientypdebuggen von Code
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 849c1e5f135d290df3aafa3b4aab43555d8e45fd
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 58818513c8cc6329802eedc235e37365579569251c3241f4c96141944c3925cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106370347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974189"
 ---
-# <a name="media-type-debugging-code"></a>Medientyp-Debugcode
+# <a name="media-type-debugging-code"></a>Medientypdebuggen von Code
 
 Sie können den folgenden Code verwenden, um den Inhalt eines Medientyps während des Debuggens anzuzeigen.
 
@@ -407,13 +407,13 @@ LPCWSTR GetGUIDNameConst(const GUID& guid)
 
 <dl> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
 [Medientypen](media-types.md)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> </dl>
 
  

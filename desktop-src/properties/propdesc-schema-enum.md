@@ -1,19 +1,19 @@
 ---
-description: Dient zum Zuweisen von Enumerationstext zu diskreten Werten.
+description: Wird verwendet, um aufzählten Text diskreten Werten zu zuweisen.
 ms.assetid: c8cc040e-fcce-43a0-98c1-db2b2c616ac3
 title: enum
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b615697e669f8d02e0530a1763309cfe74113467
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1336a690fe7ac1e19a8606912a4f7d538d3842ab6a490d17b89f90f64bbfbc13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118970979"
 ---
 # <a name="enum"></a>enum
 
-Dient zum Zuweisen von Enumerationstext zu diskreten Werten. Eine beliebige Anzahl dieser Elemente kann unter einer [enumeratedlist](./propdesc-schema-enumeratedlist.md)vorhanden sein. Diese werden Programm gesteuert als ipropertyenumtype-Objekte dargestellt, deren [**ipropertyenumtype:: getenumtype**](/windows/win32/api/propsys/nf-propsys-ipropertyenumtype-getenumtype) -Methode PET \_ diskretevalue zurückgibt.
+Wird verwendet, um aufzählten Text diskreten Werten zu zuweisen. Eine beliebige Anzahl dieser Elemente kann unter einem [enumeratedList-Element vorhanden sein.](./propdesc-schema-enumeratedlist.md) Programmgesteuert werden diese als IPropertyEnumType-Objekte dargestellt, deren [**IPropertyEnumType::GetEnumType-Methode**](/windows/win32/api/propsys/nf-propsys-ipropertyenumtype-getenumtype) PET \_ DISCRETEVALUE zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Dient zum Zuweisen von Enumerationstext zu diskreten Werten. Eine beliebige Anza
 
 | Übergeordnetes Element                                         | Untergeordnete Elemente |
 |--------------------------------------------------------|----------------|
-| [enumeratedlist](./propdesc-schema-enumeratedlist.md) | none           |
+| [enumeratedList](./propdesc-schema-enumeratedlist.md) | Keine           |
 
 
 
@@ -50,11 +50,11 @@ Dient zum Zuweisen von Enumerationstext zu diskreten Werten. Eine beliebige Anza
 
 
 
-| Attribut | BESCHREIBUNG                                                                                                                                                                                                          |
+| attribute | BESCHREIBUNG                                                                                                                                                                                                          |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| value     | Öffentlich. Erforderlich. Der diskrete Wert (Zeichenfolge oder Zahl), dem der Enumerationstext zugewiesen werden soll.                                                                                                                           |
-| text      | Öffentlich. Erforderlich. Der Text, der verwendet wird, um den Enumerationswert anzuzeigen. Die Syntax ermöglicht eine direkte Anzeige Zeichenfolge oder einen indirekten Verweis auf eine Anzeige Zeichenfolge. Verwenden Sie die indirekte Anzeige Zeichenfolge, damit Sie lokalisiert werden kann. |
-| Zugriffstasten | **Windows 7 und höher.** Öffentlich. Dies ist optional. Eine Liste von mnetmonischen Werten, die verwendet werden können, um auf die Eigenschaft in Such Abfragen zu verweisen. Die Liste wird durch das \| Zeichen "" getrennt.                                     |
+| value     | Öffentlich. Erforderlich. Der diskrete Wert (Zeichenfolge oder Zahl), dem enumerierter Text zugewiesen werden soll.                                                                                                                           |
+| text      | Öffentlich. Erforderlich. Der Text, der zum Anzeigen des aufzählten Werts verwendet wird. Die Syntax ermöglicht eine direkte Anzeigezeichenfolge oder einen indirekten Anzeigezeichenfolgenverweis. verwenden Sie die indirekte Anzeigezeichenfolge, damit sie lokalisiert werden kann. |
+| Zugriffstasten | **Windows 7 und höher.** Öffentlich. Optional. Eine Liste von mnemonischen Werten, die verwendet werden können, um in Suchabfragen auf die -Eigenschaft zu verweisen. Die Liste ist durch das Zeichen " \| " getrennt.                                     |
 
 
 

@@ -1,59 +1,59 @@
 ---
-title: Lesezeichen Ereignisse
-description: Ein Lesezeichen identifiziert ein Ereignis in einer Kanal-oder Protokolldatei.
+title: Lesezeichen für Ereignisse
+description: Ein Lesezeichen identifiziert ein Ereignis in einem Kanal oder einer Protokolldatei.
 ms.assetid: e7eeafc3-deb9-4cdc-9763-f784db7333be
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64d7fb4aef883a51084420c5a2d78e4f0ff25dac
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d4ebc6c8f48bff25989fedf056e87a7eabe4d420b2e923d056ef24116b24a33f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056138"
 ---
-# <a name="bookmarking-events"></a>Lesezeichen Ereignisse
+# <a name="bookmarking-events"></a>Lesezeichen für Ereignisse
 
-Ein Lesezeichen identifiziert ein Ereignis in einer Kanal-oder Protokolldatei. Wenn Sie Ereignisse Abfragen oder Ereignisse abonnieren, können Sie ein Lesezeichen verwenden, um mit dem Lesen von Ereignissen aus diesem Lese markierten Ereignis zu beginnen. Normalerweise erstellen Sie ein Lesezeichen für das letzte Ereignis im Resultset (vorausgesetzt, Sie haben alle Ereignisse im Resultset aufgezählt).
+Ein Lesezeichen identifiziert ein Ereignis in einem Kanal oder einer Protokolldatei. Sie können ein Lesezeichen verwenden, wenn Sie Ereignisse abfragen oder abonnieren, um mit dem Lesen von Ereignissen aus diesem mit Lesezeichen versehenen Ereignis zu beginnen. In der Regel erstellen Sie ein Lesezeichen des letzten Ereignisses im Ergebnisset (vorausgesetzt, Sie haben alle Ereignisse im Ergebnisset aufzählt).
 
-Im folgenden Verfahren wird beschrieben, wie Sie ein Lesezeichen aus einem Ereignis erstellen.
+Im folgenden Verfahren wird beschrieben, wie ein Lesezeichen aus einem Ereignis erstellt wird.
 
 **So erstellen Sie ein Lesezeichen aus einem Ereignis**
 
-1.  Rufen Sie die [**evtkreatebookmark**](/windows/desktop/api/WinEvt/nf-winevt-evtcreatebookmark) -Funktion auf, um ein Lesezeichen zu erstellen. Übergeben Sie **null** für das-Argument.
-2.  Rufen Sie die [**evtupdatebookmark**](/windows/desktop/api/WinEvt/nf-winevt-evtupdatebookmark) -Funktion auf, um das Lesezeichen mit dem Ereignis zu aktualisieren. Übergeben Sie das Handle als Argument an das-Ereignis.
-3.  Rufen Sie die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion auf, um eine XML-Zeichenfolge für das Lesezeichen zu erstellen. Übergeben Sie evtrenderbookmark als Rendering-Flag.
-4.  Speichern Sie die XML-Zeichenfolge für die spätere Verwendung (Sie können z. b. die XML-Zeichenfolge in einer Datei oder in der Registrierung beibehalten).
+1.  Rufen Sie die [**EvtCreateBookmark-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtcreatebookmark) auf, um ein Lesezeichen zu erstellen. Übergeben **Sie NULL** für das Argument.
+2.  Rufen Sie die [**EvtUpdateBookmark-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtupdatebookmark) auf, um das Lesezeichen mit dem Ereignis zu aktualisieren. Übergeben Sie das Handle als Argument an das -Ereignis.
+3.  Rufen Sie die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) auf, um eine XML-Zeichenfolge zu erstellen, die das Lesezeichen darstellt. Übergeben Sie EvtRenderBookmark als Renderingflag.
+4.  Speichern Sie die XML-Zeichenfolge zur späteren Verwendung (z. B. können Sie die XML-Zeichenfolge in einer Datei oder in der Registrierung beibehalten).
 
-Im folgenden Verfahren wird beschrieben, wie Sie ein Lesezeichen erstellen, indem Sie eine XML-Lesezeichen Folge verwenden, die in der vorherigen Prozedur beibehalten wurde
+Im folgenden Verfahren wird beschrieben, wie ein Lesezeichen mithilfe einer XML-Lesezeichenzeichenfolge erstellt wird, die in der vorherigen Prozedur beibehalten wurde.
 
-**So erstellen Sie ein Lesezeichen mithilfe einer XML-Zeichenfolge**
+**So erstellen Sie ein Lesezeichen mithilfe einer XML-Lesezeichenzeichenfolge**
 
-1.  Die XML-Zeichenfolge, die das zuvor beibehaltene Lesezeichen darstellt, wird aufgerufen.
-2.  Rufen Sie die [**evtkreatebookmark**](/windows/desktop/api/WinEvt/nf-winevt-evtcreatebookmark) -Funktion auf, um ein Lesezeichen zu erstellen. Übergeben Sie die XML-Zeichenfolge für das-Argument.
+1.  Get the XML string that represents the bookmark that you previously persisted. (Die XML-Zeichenfolge, die das Lesezeichen darstellt, das Sie zuvor beibehalten haben.)
+2.  Rufen Sie die [**EvtCreateBookmark-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtcreatebookmark) auf, um ein Lesezeichen zu erstellen. Übergeben Sie die XML-Zeichenfolge für das Argument.
 
-Im folgenden Verfahren wird beschrieben, wie Sie ein Lesezeichen in einer Abfrage verwenden.
+Im folgenden Verfahren wird beschrieben, wie ein Lesezeichen in einer Abfrage verwendet wird.
 
 **So verwenden Sie ein Lesezeichen in einer Abfrage**
 
-1.  Wenden Sie die [**evtquery**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) -Funktion an, um Ereignisse abzurufen, die Ihrer Abfrage entsprechen.
-2.  Wenden Sie die [**evtseek**](/windows/desktop/api/WinEvt/nf-winevt-evtseek) -Funktion an, um nach dem Lesezeichen-Ereignis zu suchen. Übergeben Sie das Handle an das Lesezeichen und das evtseekrelativetobookmark-Flag.
-3.  Nennen Sie die [**EvtNext**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) -Funktion in einer Schleife, um die Ereignisse aufzuzählen, die nach dem Ereignis mit Lesezeichen beginnen (abhängig vom Offset, den Sie in [**evtseek**](/windows/desktop/api/WinEvt/nf-winevt-evtseek)angegeben haben).
+1.  Rufen Sie die [**EvtQuery-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtquery) auf, um Ereignisse zu erhalten, die Ihrer Abfrage entsprechen.
+2.  Rufen Sie die [**EvtSeek-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtseek) auf, um nach dem mit Lesezeichen markierten Ereignis zu suchen. Übergeben Sie das Handle an das Lesezeichen und das Flag EvtSeekRelativeToBookmark.
+3.  Rufen Sie die [**EvtNext-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) in einer Schleife auf, um die Ereignisse zu aufzählen, die nach dem mit Lesezeichen markierten Ereignis beginnen (abhängig vom Offset, den Sie in [**EvtSeek angegeben haben).**](/windows/desktop/api/WinEvt/nf-winevt-evtseek)
 
-Ein Beispiel finden Sie unter [Verwenden eines Lesezeichens in einer Abfrage](#using-a-bookmark-in-a-query).
+Ein Beispiel finden Sie unter [Verwenden eines Lesezeichens in einer Abfrage.](#using-a-bookmark-in-a-query)
 
 Im folgenden Verfahren wird die Verwendung eines Lesezeichens in einem Abonnement beschrieben.
 
 **So verwenden Sie ein Lesezeichen in einem Abonnement**
 
-1.  Wenden Sie die [**evtsubscribe**](/windows/desktop/api/WinEvt/nf-winevt-evtsubscribe) -Funktion an, um Ereignisse zu abonnieren, die Ihrer Abfrage entsprechen. Übergeben Sie das Handle an das Lesezeichen und das evtabonbestartafterbookmark-Flag.
-2.  Wenn Sie die [**EVT- \_ Abonnement \_ Rückruf**](/windows/win32/api/winevt/nc-winevt-evt_subscribe_callback) Funktion implementiert haben, empfängt der Rückruf Ereignisse, die nach dem Ereignis mit Lesezeichen beginnen.
-3.  Wenn Sie den Rückruf nicht implementiert haben, rufen Sie die [**EvtNext**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) -Funktion in einer Schleife auf, um die Ereignisse aufzuzählen, die nach dem Ereignis mit Lesezeichen beginnen.
+1.  Rufen Sie die [**EvtSubscribe-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtsubscribe) auf, um Ereignisse zu abonnieren, die Ihrer Abfrage entsprechen. Übergeben Sie das Handle an das Lesezeichen und das Flag EvtSubscribeStartAfterBookmark.
+2.  Wenn Sie die [**EVT \_ SUBSCRIBE \_ CALLBACK-Funktion**](/windows/win32/api/winevt/nc-winevt-evt_subscribe_callback) implementiert haben, erhält Ihr Rückruf Ereignisse, die nach dem mit Lesezeichen markierten Ereignis beginnen.
+3.  Wenn Sie den Rückruf nicht implementiert haben, rufen Sie die [**EvtNext-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtnext) in einer Schleife auf, um die Ereignisse aufzählen, die nach dem mit Lesezeichen markierten Ereignis beginnen.
 
-Ein Beispiel finden Sie unter [Verwenden eines Lesezeichens in einem Abonnement](#using-a-bookmark-in-a-subscription).
+Ein Beispiel finden Sie unter [Verwenden eines Lesezeichens in einem Abonnement.](#using-a-bookmark-in-a-subscription)
 
 ## <a name="using-a-bookmark-in-a-query"></a>Verwenden eines Lesezeichens in einer Abfrage
 
-Im folgenden Beispiel wird gezeigt, wie Sie ein Lesezeichen in einer Abfrage verwenden. Im Beispiel wird das Beispiel für das [Abfragen von Ereignissen](querying-for-events.md)erweitert.
+Das folgende Beispiel zeigt, wie ein Lesezeichen in einer Abfrage verwendet wird. Im Beispiel wird das Beispiel unter [Querying for Events (Abfragen von Ereignissen) erweitert.](querying-for-events.md)
 
 
 ```C++
@@ -236,7 +236,7 @@ cleanup:
 
 ## <a name="using-a-bookmark-in-a-subscription"></a>Verwenden eines Lesezeichens in einem Abonnement
 
-Im folgenden Beispiel wird gezeigt, wie ein Lesezeichen in einem Pushabonnement verwendet wird.
+Im folgenden Beispiel wird die Verwendung eines Lesezeichens in einem Pushabonnement veranschaulicht.
 
 
 ```C++
@@ -461,6 +461,6 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 

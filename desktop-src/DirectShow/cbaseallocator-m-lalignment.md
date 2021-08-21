@@ -1,7 +1,7 @@
 ---
-description: 'Die Ausrichtung der einzelnen Puffer. Die Adresse jedes Puffers muss ein gleich Vielfaches dieses Werts sein. Das Präfix muss in die Ausrichtung berechnet werden. Weitere Informationen finden Sie unter cbasezucator:: m \_ lprefix.'
+description: Ausrichtung der einzelnen Puffer. Die Adresse jedes Puffers muss ein gleichmäßiges Vielfaches dieses Werts sein. Das Präfix muss in der Ausrichtung berechnet werden. siehe CBaseAllocator::m \_ lPrefix.
 ms.assetid: 2b71b60a-feeb-4f09-bd56-e126eac8e150
-title: 'Cbasezucator:: m_lAlignment Member (amfilter. h)'
+title: CBaseAllocator::m_lAlignment Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6bfdfe7a83a244d5c8cd40a0a4ec747f286c5099
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 441be92b79022327ed6a1140e5dae208718e4104c0600cb1c88bf5800783a01c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955369"
 ---
-# <a name="cbaseallocatorm_lalignment-member"></a>Cbasezucator:: m \_ lalignment-Member
+# <a name="cbaseallocatorm_lalignment-member"></a>CBaseAllocator::m \_ lAlignment-Member
 
-Die Ausrichtung der einzelnen Puffer. Die Adresse jedes Puffers muss ein gleich Vielfaches dieses Werts sein. Das Präfix muss in die Ausrichtung berechnet werden. Weitere Informationen finden Sie unter [**cbasezucator:: m \_ lprefix**](cbaseallocator-m-lprefix.md).
+Ausrichtung der einzelnen Puffer. Die Adresse jedes Puffers muss ein gleichmäßiges Vielfaches dieses Werts sein. Das Präfix muss in der Ausrichtung berechnet werden. siehe [**CBaseAllocator::m \_ lPrefix**](cbaseallocator-m-lprefix.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ long m_lAlignment;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ long m_lAlignment;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

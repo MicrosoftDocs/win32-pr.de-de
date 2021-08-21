@@ -1,33 +1,33 @@
 ---
-description: Ruft Statistiken aus der Datenträger-Senke der digitalen Lebens Netzwerk-Allianz (DLNA) ab.
+description: Ruft Statistiken aus der MEDIENSenke der Digital Living Network Alliance (DLNA) ab.
 ms.assetid: 1fa6ea9f-fd30-4fa2-a0e6-1647273bcc35
-title: MF_MP2DLNA_STATISTICS-Attribut (Mfmp2dlna. h)
+title: MF_MP2DLNA_STATISTICS -Attribut (Mfmp2dlna.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a51620c1ca093a422a5e4657edcfbfaa66ae6cd3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47a80bf0682cf6e46845a968122bf512a6e9cff15df8fb8e0312e1c63c8dab0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973619"
 ---
-# <a name="mf_mp2dlna_statistics-attribute"></a>MF \_ MP2DLNA \_ Statistics-Attribut
+# <a name="mf_mp2dlna_statistics-attribute"></a>MF \_ MP2DLNA \_ STATISTICS-Attribut
 
-Ruft Statistiken aus der Datenträger-Senke der digitalen Lebens Netzwerk-Allianz (DLNA) ab.
+Ruft Statistiken aus der MEDIENSenke der Digital Living Network Alliance (DLNA) ab.
 
 ## <a name="data-type"></a>Datentyp
 
-**[**MFMPEG2DLNASINKSTATS**](/windows/desktop/api/mfmp2dlna/ns-mfmp2dlna-mfmpeg2dlnasinkstats)** als **Byte \[ \]** gespeichert
+**[**MFMPEG2DLNASINKSTATS als**](/windows/desktop/api/mfmp2dlna/ns-mfmp2dlna-mfmpeg2dlnasinkstats)** **BYTE gespeichert \[ \]**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DEN ATTRIBUTEAttributes::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während des Streamings aktualisiert die DLNA-Medien Senke dieses Attribut mit Statistiken über die Codierung und das Multiplexing der MPEG-2-Streams. Die Anwendung kann dieses Attribut jederzeit Abfragen, um die aktuellen Werte zu erhalten.
+Während des Streamings aktualisiert die DLNA-Mediensenke dieses Attribut mit Statistiken zur Codierung und zum Multiplexing der MPEG-2-Streams. Die Anwendung kann dieses Attribut jederzeit abfragen, um die neuesten Werte zu erhalten.
 
-Das Festlegen dieses Attributs für die DLNA-Medien Senke hat keine Auswirkungen.
+Das Festlegen dieses Attributs auf die DLNA-Mediensenke hat keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Das Festlegen dieses Attributs für die DLNA-Medien Senke hat keine Auswirkungen
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mfmp2dlna. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmp2dlna.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Das Festlegen dieses Attributs für die DLNA-Medien Senke hat keine Auswirkungen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

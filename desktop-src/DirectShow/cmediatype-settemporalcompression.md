@@ -1,7 +1,7 @@
 ---
-description: Die settemporalcompression-Methode gibt an, ob Samples mithilfe der temporalen (Interframe-) Komprimierung komprimiert werden.
+description: Die SetTemporalCompression-Methode gibt an, ob Stichproben mithilfe der temporalen Komprimierung (Interframekomprimierung) komprimiert werden.
 ms.assetid: cdd181ee-d1e9-48b0-96f6-e76db9f3f933
-title: Cmediatype. settemporalcompression-Methode (mtype. h)
+title: CMediaType.SetTemporalCompression-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a0aba07375c5b5c760c432de704562efb2bea148
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d29efb0ec16f99c7354621bc49bd36c4e367375d5eb68a2d94a69c27bfdce2f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954399"
 ---
-# <a name="cmediatypesettemporalcompression-method"></a>Cmediatype. settemporalcompression-Methode
+# <a name="cmediatypesettemporalcompression-method"></a>CMediaType.SetTemporalCompression-Methode
 
-Die- `SetTemporalCompression` Methode gibt an, ob Samples mithilfe der temporalen (Interframe-) Komprimierung komprimiert werden.
+Die `SetTemporalCompression` -Methode gibt an, ob Stichproben mithilfe der temporalen Komprimierung (Interframekomprimierung) komprimiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetTemporalCompression(
 
 <dl> <dt>
 
-*bkomprimiert* 
+*bCompressed* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Stream Temporale Komprimierung verwendet. Wenn der Stream die Temporale Komprimierung verwendet, legen Sie den Wert auf **true** fest.
+Boolescher Wert, der angibt, ob der Stream temporale Komprimierung verwendet. Wenn der Stream die temporale Komprimierung verwendet, legen Sie den Wert auf **TRUE** fest.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob der Stream Temporale Komprimierung verwendet. We
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt den **btemporalcompression** -Member fest.
+Diese Methode legt den **bTemporalCompression-Member** fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode legt den **btemporalcompression** -Member fest.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode legt den **btemporalcompression** -Member fest.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

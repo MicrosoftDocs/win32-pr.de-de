@@ -1,11 +1,11 @@
 ---
-title: Tasknamedvaluecollection. Create-Methode
-description: Erstellt bei der Skripterstellung ein Name-Wert-Paar in der Auflistung.
+title: TaskNamedValueCollection.Create-Methode
+description: Für die Skripterstellung erstellt ein Name-Wert-Paar in der Auflistung.
 ms.assetid: f64e0548-fad3-4682-b50b-ff8ec685af36
 keywords:
-- Create-Methode Taskplaner
-- Create Method-Taskplaner, tasknamedvaluecollection-Objekt
-- Tasknamedvaluecollection-Objekt Taskplaner, Create-Methode
+- Erstellen einer Taskplaner
+- Create method Taskplaner , TaskNamedValueCollection object
+- TaskNamedValueCollection-Objekt Taskplaner , Create-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3926142b25cbb2d65efaa45d6b767ce2e56ba86
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d974eb7fb93d3bb617ce122426b4003a708cbe3ed753ba758fdd5f71ed8bc87a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118858063"
 ---
-# <a name="tasknamedvaluecollectioncreate-method"></a>Tasknamedvaluecollection. Create-Methode
+# <a name="tasknamedvaluecollectioncreate-method"></a>TaskNamedValueCollection.Create-Methode
 
-Erstellt bei der Skripterstellung ein Name-Wert-Paar in der Auflistung.
+Für die Skripterstellung erstellt ein Name-Wert-Paar in der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ TaskNamedValueCollection.Create( _
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-Der Name, der mit einem Wert in einem Name-Wert-Paar verknüpft ist.
+Der Name, der einem Wert in einem Name-Wert-Paar zugeordnet ist.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
 Der Wert, der einem Namen in einem Name-Wert-Paar zugeordnet ist.
 
 </dd> <dt>
 
-*paar* \[ vorgenommen\]
+*pair* \[ out\]
 </dt> <dd>
 
-Das Name-Wert-Paar, das in der-Auflistung erstellt wird.
+Das Name-Wert-Paar, das in der Auflistung erstellt wird.
 
 </dd> </dl>
 
@@ -75,9 +75,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

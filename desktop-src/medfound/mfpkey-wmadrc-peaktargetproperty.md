@@ -1,23 +1,23 @@
 ---
-description: Gibt die gewünschte maximale Volumeebene der Ausgabe Audioinhalte an.
+description: Gibt die gewünschte maximale Lautstärke des Ausgabeaudioinhalts an.
 ms.assetid: 231b7296-ca80-4918-bae6-674b976db24c
-title: MFPKEY_WMADRC_PEAKTARGET-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMADRC_PEAKTARGET-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c40fa68e2b580c5d3e8550d6e46c9f6b9fe4bfc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79f54d15978bb3f6a34c015886d2aeb2a8ec48a0069669e81ea40bbd79353902
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973229"
 ---
-# <a name="mfpkey_wmadrc_peaktarget-property"></a>Mfpkey \_ wmadrc- \_ Eigenschaft "Peer Ziel"
+# <a name="mfpkey_wmadrc_peaktarget-property"></a>MFPKEY \_ WMADRC \_ PEAKTARGET-Eigenschaft
 
-Gibt die gewünschte maximale Volumeebene der Ausgabe Audioinhalte an.
+Gibt die gewünschte maximale Lautstärke des Ausgabeaudioinhalts an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmadrcpeer Target
+g \_ wszWMADRCPeakTarget
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,15 +27,15 @@ VT \_ I4
 
 Siehe Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert für den Decoder für das dynamische Bereichs Steuerelement festlegen, aber er wirkt sich nur dann aus, wenn die Eigenschaft [mfpkey \_ wmadec \_ drcmode](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
+Sie können diesen Wert für den Decoder zum Zweck der dynamischen Bereichssteuerung festlegen. Er hat jedoch nur dann Auswirkungen, wenn die [ \_ MFPKEY WFPC \_ DRCMODE-Eigenschaft](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
 
-Wenn Sie das dynamische Bereichs Steuerelement vom Decoder anfordern, wenn diese Eigenschaft nicht festgelegt ist, berechnet der Codec einen Standardwert.
+Wenn Sie eine dynamische Bereichssteuerung vom Decoder anfordern, wenn diese Eigenschaft nicht festgelegt ist, berechnet der Codec einen Standardwert.
 
-Verwenden Sie die Eigenschaften [mfpkey \_ wmadrc \_ avgref](mfpkey-wmadrc-avgrefproperty.md) und [mfpkey \_ wmadrc \_ ](mfpkey-wmadrc-peakrefproperty.md) -Eigenschaft, um die entsprechenden Werte für diese Eigenschaft zu berechnen.
+Verwenden Sie [die Eigenschaften MFPKEY \_ WMADRC \_ AVGREF](mfpkey-wmadrc-avgrefproperty.md) und [MFPKEY \_ WMADRC \_ PEAKREF,](mfpkey-wmadrc-peakrefproperty.md) um die entsprechenden Werte für diese Eigenschaft zu berechnen.
 
-Weitere Informationen zur Steuerung des dynamischen Bereichs finden Sie im Webartikel [Windows Media Audio Professional-Codec-Features](/previous-versions/ms867218(v=msdn.10)).
+Weitere Informationen zur Dynamischen Bereichssteuerung finden Sie im Webartikel [Windows Media Audio Professional Codec Features](/previous-versions/ms867218(v=msdn.10)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Weitere Informationen zur Steuerung des dynamischen Bereichs finden Sie im Webar
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -53,7 +53,7 @@ Weitere Informationen zur Steuerung des dynamischen Bereichs finden Sie im Webar
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

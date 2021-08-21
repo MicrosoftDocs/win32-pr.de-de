@@ -1,6 +1,6 @@
 ---
-title: MOF-Zeichen folgen
-description: Eine Zeichenfolge ist ein Datentyp, der eine Zeichenfolge enthält, die in der Regel als lesbarer Text gedacht ist.
+title: MOF-Zeichenfolgen
+description: Eine Zeichenfolge ist ein Datentyp, der eine Zeichenfolge enthält, die normalerweise als für Menschen lesbarer Text vorgesehen ist.
 ms.assetid: 08a07184-6d23-4988-a3de-e5bfc3e177f8
 ms.tgt_platform: multiple
 ms.topic: article
@@ -10,22 +10,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a1427accbdb3a4dae0240563656785968d4bd075
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf1b79d6f9de8cca5589efca879c68bb3de68882c6cd6759d076421c5c543c2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992280"
 ---
-# <a name="mof-strings"></a>MOF-Zeichen folgen
+# <a name="mof-strings"></a>MOF-Zeichenfolgen
 
-Eine Zeichenfolge ist ein Datentyp, der eine Zeichenfolge enthält, die in der Regel als lesbarer Text gedacht ist. MOF beschreibt zwei Arten von Zeichen folgen, die verwenden, um einzelne oder mehrere Zeichen zu speichern. MOF verfügt auch über eine Reihe von Regeln, die die Verwendung von Anführungszeichen innerhalb einer Zeichenfolge beschreiben.
+Eine Zeichenfolge ist ein Datentyp, der eine Zeichenfolge enthält, die normalerweise als für Menschen lesbarer Text vorgesehen ist. MOF beschreibt zwei Typen von Zeichenfolgen, die verwenden, um einzelne oder mehrere Zeichen zu enthalten. MOF verfügt auch über eine Reihe von Regeln, die die Verwendung von Anführungszeichen innerhalb einer Zeichenfolge beschreiben.
 
-In der folgenden Tabelle sind die Zeichen folgen Datentypen für MOF aufgeführt.
+In der folgenden Tabelle sind die Zeichenfolgendatentypen für MOF aufgeführt.
 
 
 
-| Datentyp  | Automatisierungstyp | BESCHREIBUNG                                                                            |
+| Datentyp  | Automatisierungstyp | Beschreibung                                                                            |
 |------------|-----------------|----------------------------------------------------------------------------------------|
 | **char16** | **VT \_ I2**      | Einzelnes 16-Bit-Unicode-Zeichen im UCS-2-Format (Universal Character Set 2)<br/> |
 | **string** | **VT \_ BSTR**    | Unicode-Zeichenfolge<br/>                                                    |
@@ -34,11 +34,11 @@ In der folgenden Tabelle sind die Zeichen folgen Datentypen für MOF aufgeführt
 
  
 
-Beachten Sie beim Schreiben von Zeichen folgen für MOF die folgenden Richtlinien:
+Befolgen Sie beim Schreiben von Zeichenfolgen für MOF die folgenden Richtlinien:
 
--   Umschließen Sie Einzelzeichen Konstanten in einfache Anführungszeichen.
+-   Umschließt Einzelzeichenkonstanten mit einfachen Anführungszeichen.
 
-    Wenn Sie keine einfachen Anführungszeichen mit Einzelzeichen Konstanten verwenden, müssen Sie die ganzzahlige Darstellung des Unicode-Zeichen Werts verwenden. Optional können Sie das Zeichen mit der \\ x-Escapesequenz aus dem American National Standards Institute (ANSI) C-Standard angeben, wie hier gezeigt:
+    Wenn Sie keine einfachen Anführungszeichen mit Einzelzeichenkonstanten verwenden, müssen Sie die ganzzahlige Darstellung des Unicode-Zeichenwerts verwenden. Optional können Sie das Zeichen wie gezeigt mit der \\ x-Escapesequenz aus dem C-Standard American National Standards Institute (ANSI) angeben:
 
     ``` syntax
     char16  TestChar1 = '\x4133';
@@ -47,27 +47,27 @@ Beachten Sie beim Schreiben von Zeichen folgen für MOF die folgenden Richtlinie
 
     Da MOF auf Unicode basiert, können Sie auch 16-Bit-Werte angeben.
 
-    Beachten Sie, dass Einzelzeichen Konstanten im ANSI C-Format in doppelte Anführungszeichen eingeschlossen sind.
+    Beachten Sie, dass Einzelzeichenkonstanten im ANSI C-Format von doppelten Anführungszeichen umgeben sind.
 
--   Umschließen Sie Zeichen folgen in doppelte Anführungszeichen.
+-   Umschließt Zeichenfolgen mit doppelten Anführungszeichen.
 
     ``` syntax
     DTime    = "19940107140332.000000-300";
     ```
 
--   Verketten Sie nachfolgende Anführungszeichen folgen mit einem oder mehreren Leerzeichen.
+-   Verketten aufeinander folgender Anführungszeichenfolgen mit einem oder mehreren Leerzeichen.
 
     ``` syntax
     DString = "This" "becomes a long string";
     ```
 
--   Verwenden Sie eine Escapesequenz mit einem umgekehrten Schrägstrich, um Anführungszeichen in eine Zeichenfolge einzubetten.
+-   Verwenden Sie eine Escapesequenz, die mit einem umgekehrten Schrägstrich beginnt, um Anführungszeichen in eine Zeichenfolge einzubetten.
 
     ``` syntax
     DMyString = "This is an \"embedded quote\" example."
     ```
 
-Im folgenden Beispiel wird beschrieben, wie Zeichen folgen Eigenschaften und ein Zeichen folgen Parameter initialisiert werden:
+Im folgenden Beispiel wird beschrieben, wie Zeichenfolgeneigenschaften und ein Zeichenfolgenparameter initialisiert werden:
 
 ``` syntax
 class  StringDataClass

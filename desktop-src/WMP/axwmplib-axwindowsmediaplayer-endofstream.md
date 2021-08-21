@@ -1,9 +1,9 @@
 ---
-title: EndOf Stream-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das EndOf Stream-Ereignis ist für die zukünftige Verwendung reserviert.
+title: EndOfStream-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das EndOfStream-Ereignis ist für die zukünftige Verwendung reserviert.
 ms.assetid: 004172e0-abd4-451c-bd5c-6bf0a9277661
 keywords:
-- Endobstream-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- EndOfStream-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c74a64eea77af43cd3b33cc7edee2177aee7d15e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 889c30226e76fdd03da0093a7bb4e5f107569fcd1bba8753fb4f7aa4aa791a5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118841406"
 ---
-# <a name="endofstream-event-of-the-axwindowsmediaplayer-object"></a>EndOf Stream-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="endofstream-event-of-the-axwindowsmediaplayer-object"></a>EndOfStream-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das EndOf Stream-Ereignis ist für die zukünftige Verwendung reserviert.
+Das EndOfStream-Ereignis ist für die zukünftige Verwendung reserviert.
 
 ``` syntax
 [C#]
@@ -41,19 +41,19 @@ Private Sub player_EndOfStream(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ EndOf streameventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ endofstreamevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ EndOfStreamEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ EndOfStreamEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                           |
+| Eigenschaft | Beschreibung                           |
 |----------|---------------------------------------|
-| result   | System. Int32Not wird unterstützt.<br/> |
+| result   | System.Int32Nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
@@ -73,7 +73,7 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

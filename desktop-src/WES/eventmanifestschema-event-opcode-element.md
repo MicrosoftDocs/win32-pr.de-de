@@ -1,9 +1,9 @@
 ---
-title: Event (OpCode)-Element
+title: event (opcode)-Element
 description: Definiert ein Ereignis für einen aufgabenspezifischen Opcode.
 ms.assetid: 7ca8fff2-ef1a-45c4-b082-e4745330bf0b
 keywords:
-- Ereignisprotokoll für Ereignis Element
+- Event-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 25f7a7f3a92c07895529d6dad59df22a7389735d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 987bf0b8b84e574a83211e90dffcd1f636920b1ced0c34b9d1d239515d16cdd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055998"
 ---
-# <a name="event-opcode-element"></a>Event (OpCode)-Element
+# <a name="event-opcode-element"></a>event (opcode)-Element
 
-\[Beginnend mit dem Nachrichten Compiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, ist dieses Element nicht mehr verfügbar.\]
+\[Ab dem Nachrichtencompiler, der im Windows 7-Version des Windows SDK enthalten ist, ist dieses Element nicht mehr verfügbar.\]
 
 Definiert ein Ereignis für einen aufgabenspezifischen Opcode.
 
@@ -32,7 +32,7 @@ Definiert ein Ereignis für einen aufgabenspezifischen Opcode.
  />
 ```
 
-Das **Ereignis** Element wird durch das [**Opcode**](eventmanifestschema-opcode-taskeventdefinitiontype-element.md) -Element definiert.
+Das **Ereigniselement** wird durch das [**opcode-Element**](eventmanifestschema-opcode-taskeventdefinitiontype-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,8 +40,8 @@ Das **Ereignis** Element wird durch das [**Opcode**](eventmanifestschema-opcode-
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,7 +52,7 @@ Das **Ereignis** Element wird durch das [**Opcode**](eventmanifestschema-opcode-
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Opcode (TaskEventDefinitionType)**](eventmanifestschema-opcode-taskeventdefinitiontype-element.md)
+[**opcode (TaskEventDefinitionType)**](eventmanifestschema-opcode-taskeventdefinitiontype-element.md)
 </dt> </dl>
 
  

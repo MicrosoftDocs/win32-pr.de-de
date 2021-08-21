@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 519ce82a8d5a8c6adaf22b69047a8d365bd777ac
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ab9f3fdd53b1fbad4fa0b6a92c07589a8c0fab41c162dc49939f0e7254bf99c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991190"
 ---
 # <a name="d3dxplanefrompointnormal-function-d3dx10mathh"></a>D3DXPlaneFromPointNormal-Funktion (D3DX10Math.h)
 
-Erstellt eine Ebene aus einem Punkt und einem Normalwert.
+Erstellt eine Ebene aus einem Punkt und einer Normalen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Zeiger auf einen [**D3DXVECTOR3,**](d3d10-d3dxvector3.md)der den Punkt definiert
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine D3DXVECTOR3-Struktur, die den zum Erstellen der Ebene verwendeten Normalwert definiert.
+Zeiger auf eine D3DXVECTOR3-Struktur, die den normalen definiert, der zum Erstellen der Ebene verwendet wird.
 
 </dd> </dl>
 
@@ -73,9 +73,9 @@ Zeiger auf eine D3DXVECTOR3-Struktur, die den zum Erstellen der Ebene verwendete
 
 Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
-Zeiger auf die D3DXPLANE-Struktur, die aus dem Punkt und dem Normalwert erstellt wurde.
+Zeiger auf die D3DXPLANE-Struktur, die vom Punkt und der Normalität erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXPlaneFromPointNormal-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -83,7 +83,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

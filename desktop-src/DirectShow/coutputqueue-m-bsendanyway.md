@@ -1,7 +1,7 @@
 ---
-description: 'Flag zum Überschreiben der Batch Verarbeitung. Wenn dieses Flag auf true festgelegt ist, wird das coutputqueue:: m \_ bbatchexact-Flag überschrieben und alle ausstehenden Beispiele übermittelt.'
+description: Flag zum Überschreiben der Batchverarbeitung. Wenn Sie dieses Flag auf TRUE festlegen, wird das Flag COutputQueue::m bBatchExact überschrieben, und es werden \_ alle ausstehenden Beispiele zur Verfügung stehen.
 ms.assetid: 95ea6973-65c0-40c9-be22-c2a20a60b459
-title: 'Coutputqueue:: m_bSendAnyway-Member (outputq. h)'
+title: COutputQueue::m_bSendAnyway Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 57019ee8844f73fdb6cf6e7943e7e22f72d2c98b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c01ec87fb8e1d9b33fd88806b0d2798e2b13e76eea2ec47b4e1766a7e10201f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954149"
 ---
-# <a name="coutputqueuem_bsendanyway-member"></a>Coutputqueue:: m \_ bsendanyway-Member
+# <a name="coutputqueuem_bsendanyway-member"></a>COutputQueue::m \_ bSendAnyway-Member
 
-Flag zum Überschreiben der Batch Verarbeitung. Wenn dieses Flag auf **true** festgelegt ist, wird das [**coutputqueue:: m \_ bbatchexact**](coutputqueue-m-bbatchexact.md) -Flag überschrieben und alle ausstehenden Beispiele übermittelt.
+Flag zum Überschreiben der Batchverarbeitung. Wenn Sie dieses Flag auf **TRUE** festlegen, wird das [**Flag COutputQueue::m \_ bBatchExact**](coutputqueue-m-bbatchexact.md) überschrieben, und es werden alle ausstehenden Beispiele zur Verfügung stehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bSendAnyway;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bSendAnyway;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

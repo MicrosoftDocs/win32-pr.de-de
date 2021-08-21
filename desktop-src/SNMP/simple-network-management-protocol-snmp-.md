@@ -1,24 +1,24 @@
 ---
 title: Simple Network Management-Protokoll (SNMP)
-description: Das Simple Network Management-Protokoll (SNMP) ist das Internet Standardprotokoll für den Austausch von Verwaltungsinformationen zwischen Verwaltungs Konsolen Anwendungen wie HP OpenView, Novell NMS, IBM NetView oder Sun Net Manager und verwalteten Entitäten.
+description: Das Simple Network Management Protocol (SNMP) ist das Internetstandardprotokoll für den Austausch von Verwaltungsinformationen zwischen Verwaltungskonsolenanwendungen wie HP Openview, NmS, IBM NetView oder Sun Net Manager sowie verwalteten Entitäten.
 ms.assetid: 499e912b-0821-452e-81f6-8a8250875979
 keywords:
 - Simple Network Management-Protokoll (SNMP)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc48963e11e66e22258d9985320979b1c74b8b54
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5f71d4467f8e8b3a185f461e77efb18c6dd5969d782cbb1cf0674a942870f91d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009048"
 ---
 # <a name="simple-network-management-protocol-snmp"></a>Simple Network Management-Protokoll (SNMP)
 
-\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows-Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-man handelt.\]
+\[SNMP ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung,](/windows/desktop/WinRM/portal)bei der es sich um die Microsoft-Implementierung von WS-Man handelt.\]
 
-Das Simple Network Management-Protokoll (SNMP) ist das Internet Standardprotokoll für den Austausch von Verwaltungsinformationen zwischen Verwaltungs Konsolen Anwendungen wie HP OpenView, Novell NMS, IBM NetView oder Sun Net Manager und verwalteten Entitäten. Die verwalteten Entitäten können Hosts, Router, Bridges und Hubs enthalten.
+Das Simple Network Management Protocol (SNMP) ist das Internetstandardprotokoll für den Austausch von Verwaltungsinformationen zwischen Verwaltungskonsolenanwendungen wie HP Openview, NmS, IBM NetView oder Sun Net Manager sowie verwalteten Entitäten. Die verwalteten Entitäten können Hosts, Router, Brücken und Hubs umfassen.
 
- 
+ 
 
- 
+ 

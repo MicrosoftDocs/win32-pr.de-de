@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. alphablendto
-description: Die alphablendto-Methode passt die AlphaBlend-Eigenschaft über einen Zeitraum an.
+title: AmbientAttributes.alphaBlendTo
+description: Die alphaBlendTo-Methode passt die alphaBlend-Eigenschaft über einen bestimmten Zeitraum an.
 ms.assetid: 5cb259bd-3010-4086-be9d-65022be297b7
 keywords:
-- Ambientattribute. alphablendto Windows Media Player
+- AmbientAttributes.alphaBlendTo-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 16b21e78de3510e2e4a58c7214995f7888f778c1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8e0e29df897d070cd4d337e27a7f5f7f7e3a86c7f44a784afadb5bc203674ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055228"
 ---
-# <a name="ambientattributesalphablendto"></a>Ambientattribute. alphablendto
+# <a name="ambientattributesalphablendto"></a>AmbientAttributes.alphaBlendTo
 
-Die **alphablendto** -Methode passt die **AlphaBlend** -Eigenschaft über einen Zeitraum an.
+Die **alphaBlendTo-Methode** passt die **alphaBlend-Eigenschaft** über einen bestimmten Zeitraum an.
 
 ``` syntax
         elementID.alphaBlendTo(newVal, alphaTime)
@@ -32,17 +32,17 @@ Die **alphablendto** -Methode passt die **AlphaBlend** -Eigenschaft über einen 
 
 <dl> <dt>
 
-<span id="newVal"></span><span id="newval"></span><span id="NEWVAL"></span>*NewVal*
+<span id="newVal"></span><span id="newval"></span><span id="NEWVAL"></span>*newVal*
 </dt> <dd>
 
-**Number** (Long), der den neuen Deckkraft Wert angibt. Liegt zwischen 0 (keine Deckkraft) und 255 (vollständige Deckkraft).
+**Number** (long) gibt den neuen Deckkraftwert an. Liegt zwischen 0 (keine Deckkraft) und 255 (vollständige Deckkraft).
 
 </dd> <dt>
 
-<span id="alphaTime"></span><span id="alphatime"></span><span id="ALPHATIME"></span>*Alpha Ativ*
+<span id="alphaTime"></span><span id="alphatime"></span><span id="ALPHATIME"></span>*alphaTime*
 </dt> <dd>
 
-**Number** (**Long**), der die Zeit in Millisekunden angibt, die das-Element zum Ändern der Deckkraft benötigt.
+**Number** (**long**) gibt die Zeit in Millisekunden an, die das Element benötigt, um die Deckkraft zu ändern.
 
 </dd> </dl>
 
@@ -50,11 +50,11 @@ Die **alphablendto** -Methode passt die **AlphaBlend** -Eigenschaft über einen 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist nützlich, wenn Elemente allmählich angezeigt oder ausgeblendet werden.
+Diese Methode ist nützlich, um Elemente schrittweise erscheinen oder verschwinden zu lassen.
 
-Wenn Sie **alphablendto** mit einem **Text** Element verwenden, für das die **BackgroundColor** nicht angegeben ist, wird eine Hintergrundfarbe von Schwarz verwendet. , Wenn die Vordergrundfarbe ebenfalls schwarz ist (Dies ist der Standardwert für *Text*).**ForegroundColor**), wird der Text möglicherweise nicht lesbar. Um dies zu verhindern, geben Sie immer das **BackgroundColor** -Attribut an, oder legen Sie **ForegroundColor** auf eine andere Farbe als schwarz fest.
+Wenn Sie **alphaBlendTo mit** einem **TEXT-Element** verwenden, für das **nicht backgroundColor** angegeben ist, wird die Hintergrundfarbe Schwarz verwendet. Wenn die Vordergrundfarbe ebenfalls schwarz ist (dies ist der Standardwert für *TEXT*).**foregroundColor**): Der Text kann möglicherweise nicht mehr gelesen werden. Um dies zu verhindern, geben Sie immer das **backgroundColor-Attribut** an, oder legen Sie **foregroundColor** auf eine andere Farbe als Schwarz fest.
 
 > [!Note]  
 > Dieses Attribut wird in Windows 98 nicht unterstützt.
@@ -78,16 +78,16 @@ Wenn Sie **alphablendto** mit einem **Text** Element verwenden, für das die **B
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. AlphaBlend**](ambientattributes-alphablend.md)
+[**AmbientAttributes.alphaBlend**](ambientattributes-alphablend.md)
 </dt> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. BackgroundColor**](text-backgroundcolor.md)
+[**TEXT.backgroundColor**](text-backgroundcolor.md)
 </dt> <dt>
 
-[**Text. ForegroundColor**](text-foregroundcolor.md)
+[**TEXT.foregroundColor**](text-foregroundcolor.md)
 </dt> </dl>
 
  

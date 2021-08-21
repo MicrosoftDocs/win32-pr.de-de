@@ -37,7 +37,7 @@ Dieser Typ ist nur in C++ verfügbar. Die entsprechende .NET-Datei [ist System.N
 | `float3x2(float m11, float m12, float m21, float m22, float m31, float m32)` | Erstellt einen float3x2-Wert mit den angegebenen Werten. |
 | `float3x2(Microsoft::?Graphics::?Canvas::?Numerics::?Matrix3x2 const& value)` | Konvertiert eine **Microsoft.Graphics.Canvas.Numerics.Matrix3x2** in eine float3x2. |
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>Funktionen
 
 | Name | BESCHREIBUNG |
 |-|-|
@@ -100,6 +100,6 @@ Dieser Typ ist nur in C++ verfügbar. Die entsprechende .NET-Datei [ist System.N
 | Namespace | Windows::Foundation::Numerics |
 | Header | <dl> <dt>Windowsnumerics.h</dt> </dl> |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [windowsnumerics.h-APIs](windowsnumerics-h-apis-portal.md)

@@ -1,21 +1,21 @@
 ---
-title: Tfeditcookie (msctf. h)
-description: Der tfeditcookie-Datentyp identifiziert eine Bearbeitungs Sitzung, die über eine Sperre verfügt.
+title: TfEditCookie (Msctf.h)
+description: Der TfEditCookie-Datentyp identifiziert eine Bearbeitungssitzung mit einer Sperre.
 ms.assetid: 1de17286-5d56-4302-a144-5fe6ca7d5557
 keywords:
-- Tfeditcookie
+- TfEditCookie
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69281bc38b5df6c22dd5306877aecdb8025af84a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: caa397354ea7aa8addca4008d321162a99073345efc0761b65687f704a573ef3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040060"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118874078"
 ---
-# <a name="tfeditcookie"></a>Tfeditcookie
+# <a name="tfeditcookie"></a>TfEditCookie
 
-Der **tfeditcookie** -Datentyp identifiziert eine Bearbeitungs Sitzung, die über eine Sperre verfügt.
+Der **TfEditCookie-Datentyp** identifiziert eine Bearbeitungssitzung mit einer Sperre.
 
 
 ```C++
@@ -24,17 +24,17 @@ typedef DWORD TfEditCookie;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **tfeditcookie** -Datentyp wird vom TSF-Manager bereitgestellt und wird von einem Client (Anwendungs-oder Text Dienst) verwendet, um eine Bearbeitungs Sitzung mit einer Lese-oder Lese-/Schreibsperre in verschiedenen Methoden zu identifizieren.
+Der **TfEditCookie-Datentyp** wird vom TSF-Manager bereitgestellt und von einem Client (Anwendung oder Textdienst) verwendet, um eine Bearbeitungssitzung mit einer schreibgeschützten oder Lese-/Schreibsperre in verschiedenen Methoden zu identifizieren.
 
-Ein **tfeditcookie** -Wert wird auf eine der folgenden Arten abgerufen.
+Ein **TfEditCookie-Wert** wird auf eine der folgenden Arten erhalten.
 
--   Der Client ruft [ITF documentmgr:: featecontext](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-createcontext)auf.
--   Der TSF-Manager ruft die Client- [itfedizession::D oedizession](/windows/desktop/api/Msctf/nf-msctf-itfeditsession-doeditsession) -Methode auf.
--   Der TSF-Manager ruft die [ITF compositionsink:: oncompositionbeendete](/windows/desktop/api/Msctf/nf-msctf-itfcompositionsink-oncompositionterminated) -Methode des Clients auf.
--   Der TSF-Manager ruft die [ITF cleanupcontextsink:: oncleanupcontext](/windows/desktop/api/Msctf/nf-msctf-itfcleanupcontextsink-oncleanupcontext) -Methode des Clients auf.
--   Der TSF-Manager ruft die [itbtexteditsink:: onendedit](/windows/desktop/api/Msctf/nf-msctf-itftexteditsink-onendedit) -Client Methode auf.
+-   Der Client ruft [ITfDocumentMgr::CreateContext auf.](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-createcontext)
+-   Der TSF-Manager ruft die [ITfEditSession::D oEditSession-Methode des Clients](/windows/desktop/api/Msctf/nf-msctf-itfeditsession-doeditsession) auf.
+-   Der TSF-Manager ruft die [ITfCompositionSink::OnCompositionTerminated-Clientmethode](/windows/desktop/api/Msctf/nf-msctf-itfcompositionsink-oncompositionterminated) auf.
+-   Der TSF-Manager ruft die [ITfCleanupContextSink::OnCleanupContext-Clientmethode](/windows/desktop/api/Msctf/nf-msctf-itfcleanupcontextsink-oncleanupcontext) auf.
+-   Der TSF-Manager ruft die [ITfTextEditSink::OnEndEdit-Clientmethode](/windows/desktop/api/Msctf/nf-msctf-itftexteditsink-onendedit) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,11 +42,11 @@ Ein **tfeditcookie** -Wert wird auf eine der folgenden Arten abgerufen.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                          |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                      |
-| Header<br/>                   | <dl> <dt>Msctf. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msctf. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                          |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                      |
+| Header<br/>                   | <dl> <dt>Msctf.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msctf.idl</dt> </dl> |
 
 
 
@@ -54,19 +54,19 @@ Ein **tfeditcookie** -Wert wird auf eine der folgenden Arten abgerufen.
 
 <dl> <dt>
 
-[**ITF cleanupcontextsink:: oncleanupcontext**](/windows/desktop/api/Msctf/nf-msctf-itfcleanupcontextsink-oncleanupcontext)
+[**ITfCleanupContextSink::OnCleanupContext**](/windows/desktop/api/Msctf/nf-msctf-itfcleanupcontextsink-oncleanupcontext)
 </dt> <dt>
 
-[**ITF compositionsink:: oncompositionbeendete**](/windows/desktop/api/Msctf/nf-msctf-itfcompositionsink-oncompositionterminated)
+[**ITfCompositionSink::OnCompositionTerminated**](/windows/desktop/api/Msctf/nf-msctf-itfcompositionsink-oncompositionterminated)
 </dt> <dt>
 
-[**ITF documentmgr:: kreatecontext**](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-createcontext)
+[**ITfDocumentMgr::CreateContext**](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-createcontext)
 </dt> <dt>
 
-[**Itfedizession::D oedizession**](/windows/desktop/api/Msctf/nf-msctf-itfeditsession-doeditsession)
+[**ITfEditSession::D oEditSession**](/windows/desktop/api/Msctf/nf-msctf-itfeditsession-doeditsession)
 </dt> <dt>
 
-[**ITF texteditsink:: onendedit**](/windows/desktop/api/Msctf/nf-msctf-itftexteditsink-onendedit)
+[**ITfTextEditSink::OnEndEdit**](/windows/desktop/api/Msctf/nf-msctf-itftexteditsink-onendedit)
 </dt> </dl>
 
  

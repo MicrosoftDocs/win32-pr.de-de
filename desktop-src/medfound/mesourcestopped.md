@@ -1,29 +1,29 @@
 ---
-description: 'Wird von einer Medienquelle ausgelöst, wenn die imfmediasource:: beenden-Methode asynchron abgeschlossen wird.'
+description: Wird von einer Medienquelle ausgelöst, wenn die METHODE ASYNCHRONOUSMediaSource::Stop asynchron abgeschlossen wird.
 ms.assetid: 0eda9aa1-3aad-43ac-9d87-ab96e4ac319d
-title: Mesourcestjects-Ereignis (mfobjects. h)
+title: MESourceStopped-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d08909a95cf1c867c5d8392425f25565b5a2728d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92e2f5ca906c9c76fb53a980bcc40d0a9a8175a7d56c33d40c3d77f2fcbc5666
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974089"
 ---
-# <a name="mesourcestopped-event"></a>Mesourcestpt-Ereignis
+# <a name="mesourcestopped-event"></a>MESourceStopped-Ereignis
 
-Wird von einer Medienquelle ausgelöst, wenn die [**imfmediasource:: beenden**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-stop) -Methode asynchron abgeschlossen wird.
+Wird von einer Medienquelle ausgelöst, wenn die [**METHODE ASYNCHRONOUSMediaSource::Stop**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-stop) asynchron abgeschlossen wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,9 +33,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

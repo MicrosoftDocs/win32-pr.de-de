@@ -1,54 +1,54 @@
 ---
-title: "\"Peer-serveruseallpurposecert\""
-description: Der Registrierungsschlüssel "papserveruseallpurposecert" bestimmt, ob für die Peer-Authentifizierung alle Zweck Zertifikate verwendet werden.
+title: PeapServerUseAllPurposeCert
+description: Der Registrierungsschlüssel PeapServerUseAllPurposeCert bestimmt, ob alle Zweckzertifikate für die PEAP-Authentifizierung verwendet werden.
 ms.assetid: e239fb88-4bf3-49b6-a95c-67a8c060a50d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc90f083f9020ad02960d7620a2ab54706df203e
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 3a5086a0067bab70a0e222def34d1adf236b37127c0d1ff6c91ac83b8b28c73c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104313835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042818"
 ---
-# <a name="peapserveruseallpurposecert"></a>"Peer-serveruseallpurposecert"
+# <a name="peapserveruseallpurposecert"></a>PeapServerUseAllPurposeCert
 
-Der Registrierungsschlüssel "papserveruseallpurposecert" bestimmt, ob für die Peer-Authentifizierung alle Zweck Zertifikate verwendet werden.
+Der Registrierungsschlüssel PeapServerUseAllPurposeCert bestimmt, ob alle Zweckzertifikate für die PEAP-Authentifizierung verwendet werden.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Rasman\PPP\EAP\25
-   PeapServerUseAllPurposeCert = value
+   PeapServerUseAllPurposeCert = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ DWORD** -Wert.
+Dies ist ein **REG \_ DWORD-Wert.**
 
 
 
-| Wert        | BESCHREIBUNG                                                                                                      |
+| Wert        | Beschreibung                                                                                                      |
 |--------------|------------------------------------------------------------------------------------------------------------------|
-| 1            | Alle Zweck Zertifikate im Zertifikat Speicher des Clients oder Servers werden für die Peer-Authentifizierung ausgewählt.     |
-| Andere Werte | Alle Zweck Zertifikate im Zertifikat Speicher des Clients oder des Servers sind nicht für die Peer-Authentifizierung ausgewählt. |
+| 1            | Alle Zweckzertifikate im Zertifikatspeicher des Clients oder Servers werden für die PEAP-Authentifizierung ausgewählt.     |
+| Andere Werte | Allzweckzertifikate im Zertifikatspeicher des Clients oder Servers werden nicht für die PEAP-Authentifizierung ausgewählt. |
 
 
 
- 
+ 
 
-Wenn dieser Registrierungs Wert nicht vorhanden ist, werden alle Zertifikate im Zertifikat Speicher des Clients oder des Servers für die Peer-Authentifizierung ausgewählt.
+Wenn dieser Registrierungswert nicht vorhanden ist, werden alle Zweckzertifikate im Zertifikatspeicher des Clients oder Servers für die PEAP-Authentifizierung ausgewählt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost-Registrierungs Einstellungen](eaphost-registry-settings.md)
+[EAPHost Registry Einstellungen](eaphost-registry-settings.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

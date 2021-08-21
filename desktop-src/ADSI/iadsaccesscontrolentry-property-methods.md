@@ -1,10 +1,10 @@
 ---
-title: IADsAccessControlEntry-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsAccessControlEntry-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften ermittelt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsAccessControlEntry-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsAccessControlEntry-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: dce11723-0e30-4baa-8666-0a32f0968ebb
 ms.tgt_platform: multiple
 keywords:
-- IADsAccessControlEntry-Eigenschaften Methoden ADSI
+- IADsAccessControlEntry-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -36,36 +36,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b8539807f21944ab6f4b2c03f04b14a53dffdb4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fb14749af6dd3f1fd6cdd1db1fa64d73c8150f8a293261298bf479edbd8a2c15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023508"
 ---
-# <a name="iadsaccesscontrolentry-property-methods"></a>IADsAccessControlEntry-Eigenschaften Methoden
+# <a name="iadsaccesscontrolentry-property-methods"></a>IADsAccessControlEntry-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADsAccessControlEntry**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrolentry) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften ermittelt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsAccessControlEntry-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrolentry) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**AccessMask**
+**Accessmask**
 </dt> <dd> <dl>
 
-Enthält einen Satz von Flags, der Zugriffsberechtigungen für das-Objekt angibt. Gültige Werte für Active Directory-Objekte werden in der Enumeration der [**ADS- \_ Rechte \_**](/windows/win32/api/iads/ne-iads-ads_rights_enum) Enumeration definiert.
+Enthält einen Satz von Flags, der Zugriffsberechtigungen für das -Objekt angibt. Gültige Werte für Active Directory-Objekte werden in der [**ADS \_ RIGHTS \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_rights_enum) definiert.
 
-Weitere Informationen und eine Liste möglicher Werte für Datei-oder Dateifreigabe Objekte finden Sie unter [Datei Sicherheit und Zugriffsrechte](/windows/desktop/FileIO/file-security-and-access-rights).
+Weitere Informationen und eine Liste möglicher Werte für Datei- oder Dateifreigabeobjekte finden Sie unter [Dateisicherheit und Zugriffsrechte.](/windows/desktop/FileIO/file-security-and-access-rights)
 
-Weitere Informationen und eine Liste möglicher Werte für Registrierungs Objekte finden Sie unter [Sicherheit und Zugriffsrechte für den Registrierungsschlüssel](/windows/desktop/SysInfo/registry-key-security-and-access-rights).
+Weitere Informationen und eine Liste möglicher Werte für Registrierungsobjekte finden Sie unter [Sicherheit und Zugriffsrechte für Registrierungsschlüssel.](/windows/desktop/SysInfo/registry-key-security-and-access-rights)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -86,16 +86,16 @@ HRESULT put_AccessMask(
 **AceFlags**
 </dt> <dd> <dl>
 
-Enthält einen Satz von Flags, der angibt, ob andere Container oder Objekte den ACE erben können. Gültige Werte für Active Directory-Objekt werden in der Enumeration der [**ADS- \_ \_ aceflag**](/windows/win32/api/iads/ne-iads-ads_aceflag_enum) -Enumeration definiert.
+Enthält einen Satz von Flags, der angibt, ob andere Container oder Objekte den ACE erben können. Gültige Werte für das Active Directory-Objekt werden in der [**ADS \_ ACEFLAG \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_aceflag_enum) definiert.
 
-Weitere Informationen und mögliche Werte für Datei-, Dateifreigabe-und Registrierungs Objekte finden Sie unter dem **AceFlags** -Member der [**ACE- \_ Header**](/windows/desktop/api/winnt/ns-winnt-ace_header) Struktur.
+Weitere Informationen und mögliche Werte für Datei-, Dateifreigabe- und Registrierungsobjekte finden Sie unter **dem AceFlags-Member** der [**ACE \_ HEADER-Struktur.**](/windows/desktop/api/winnt/ns-winnt-ace_header)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -116,16 +116,16 @@ HRESULT put_AceFlags(
 **AceType**
 </dt> <dd> <dl>
 
-Enthält einen Wert, der den Typ des ACE angibt. Gültige Werte für Active Directory-Objekte werden in der [**ADS \_ \_**](/windows/win32/api/iads/ne-iads-ads_acetype_enum) -Enumeration des-Enumerationstyps definiert.
+Enthält einen Wert, der den Typ des ACE angibt. Gültige Werte für Active Directory-Objekte werden in der [**ADS \_ ACETYPE \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_acetype_enum) definiert.
 
-Weitere Informationen und mögliche Werte für Datei-, Dateifreigabe-und Registrierungs Objekte finden Sie unter dem Element " **AceType** " der [**ACE- \_ Header**](/windows/desktop/api/winnt/ns-winnt-ace_header) Struktur.
+Weitere Informationen und mögliche Werte für Datei-, Dateifreigabe- und Registrierungsobjekte finden Sie unter dem **AceType-Member** der [**ACE \_ HEADER-Struktur.**](/windows/desktop/api/winnt/ns-winnt-ace_header)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -146,14 +146,14 @@ HRESULT put_AceType(
 **Flags**
 </dt> <dd> <dl>
 
-Ein Flag, das angibt, ob der ACE einen Objekttyp oder vererbten Objekttyp aufweist. Gültige Flags werden in der AD-Flag- [**\_ \_ enumerationenumeration**](/windows/win32/api/iads/ne-iads-ads_flagtype_enum) definiert.
+Ein Flag, das angibt, ob der ACE über einen Objekttyp oder einen geerbten Objekttyp verfügt. Gültige Flags werden in der [**ADS \_ FLAGTYPE \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_flagtype_enum) definiert.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -171,17 +171,17 @@ HRESULT put_Flags(
 
 </dt> </dl> </dd> <dt>
 
-**Ereritedobjecttype**
+**Inheritedobjecttype**
 </dt> <dd> <dl>
 
-Ein Flag, das den Typ eines untergeordneten Objekts eines ADSI-Objekts angibt. Der Wert ist eine **GUID** für ein Objekt im Zeichen folgen Format. Wenn eine solche **GUID** festgelegt ist, gilt der ACE nur für das Objekt, auf das von der **GUID** verwiesen wird.
+Ein Flag, das den Typ eines untergeordneten Objekts eines ADSI-Objekts angibt. Der Wert ist eine **GUID für** ein Objekt im Zeichenfolgenformat. Wenn eine solche **GUID festgelegt ist,** gilt der ACE nur für das Objekt, auf das die **GUID verwiesen wird.**
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -202,14 +202,14 @@ HRESULT put_InheritedObjectType(
 **ObjectType**
 </dt> <dd> <dl>
 
-Ein Flag, das den ADSI-Objekttyp angibt. Der Wert ist eine **GUID** für eine Eigenschaft oder ein Objekt im Zeichen folgen Format. Die **GUID** bezieht sich auf eine Eigenschaft, wenn ADS mit der rechten DS- **\_ \_ \_ Lese \_** -und Werbe Zugriffs Maske für die **\_ Rechte \_ DS- \_ Schreib \_** Zugriff verwendet werden. Der **GUID** gibt ein Objekt an, wenn ADS, die von der **\_ rechten Seite \_ \_ \_** untergeordnet sind, untergeordnete und ADS rechts-untergeordneten Zugriffs Masken **\_ \_ \_ Löschen \_** verwenden
+Ein Flag, das den ADSI-Objekttyp angibt. Der Wert ist eine **GUID für** eine Eigenschaft oder ein Objekt im Zeichenfolgenformat. Die **GUID** bezieht sich auf eine Eigenschaft, wenn **ADS RIGHT \_ \_ DS READ \_ \_ PROP-** und **ADS RIGHT \_ \_ DS WRITE \_ PROP-Zugriffsmasken \_** verwendet werden. Die **GUID** gibt ein Objekt an, wenn **ADS RIGHT \_ \_ DS CREATE \_ \_ CHILD-** und **ADS RIGHT \_ \_ DS DELETE \_ CHILD-Zugriffsmasken \_** verwendet werden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -227,7 +227,7 @@ HRESULT put_ObjectType(
 
 </dt> </dl> </dd> <dt>
 
-**Stiftungs**
+**Treuhänder**
 </dt> <dd> <dl>
 
 Enthält den Namen des Kontos, für das der ACE gilt.
@@ -237,7 +237,7 @@ Enthält den Namen des Kontos, für das der ACE gilt.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -259,7 +259,7 @@ HRESULT put_Trustee(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird veranschaulicht, wie einer freigegebenen ACL mithilfe der [**IADsAccessControlEntry**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrolentry) -Eigenschaften Methoden Einträge hinzugefügt werden.
+Im folgenden Codebeispiel wird veranschaulicht, wie Einträge zu einer abhängige ACL mithilfe der [**IADsAccessControlEntry-Eigenschaftenmethoden**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrolentry) hinzugefügt werden.
 
 
 ```VB
@@ -319,7 +319,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel werden Zugriffs Steuerungs Einträge angezeigt.
+Im folgenden Codebeispiel werden Zugriffssteuerungseinträge angezeigt.
 
 
 ```C++
@@ -448,13 +448,13 @@ Cleanup:
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>         |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl>   |
 | IID<br/>                      | IID \_ IADsAccessControlEntry ist als B4F3A14C-9BDD-11D0-852C-00C04FD8D503 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

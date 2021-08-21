@@ -1,26 +1,26 @@
 ---
-description: Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein-Objekt erstellen, die dem-Befehl zugeordneten Streams ermitteln, entsprechende Terminals auswählen und erstellen, die Terminals auf den Streams auswählen und die Verbindung beenden.
+description: Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Aufrufobjekt erstellen, die dem Aufruf zugeordneten Streams entdecken, geeignete Terminals auswählen und erstellen, die Terminals in den Streams auswählen und die Verbindung abschließen.
 ms.assetid: 49815b18-a8ea-46e0-b2a4-3d7a82e727b0
-title: Ausführen eines Aufrufes
+title: Anruf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbc22ebde34e65c9acc8e6c7dd81944b06804935
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: afb83f42bb4219cd47d38ddf98331b7889efb89efeddd040d614b4f601325aa7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118863246"
 ---
-# <a name="make-a-call"></a>Ausführen eines Aufrufes
+# <a name="make-a-call"></a>Anruf
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein-Objekt erstellen, die dem-Befehl zugeordneten Streams ermitteln, entsprechende Terminals auswählen und erstellen, die Terminals auf den Streams auswählen und die Verbindung beenden.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Aufrufobjekt erstellen, die dem Aufruf zugeordneten Streams entdecken, geeignete Terminals auswählen und erstellen, die Terminals in den Streams auswählen und die Verbindung abschließen.
 
-Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge in [Initialize TAPI](initialize-tapi.md) ausführen und [eine Adresse auswählen](select-an-address.md).
+Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge in Initialisieren von [TAPI und](initialize-tapi.md) [Auswählen einer Adresse ausführen.](select-an-address.md)
 
-Außerdem müssen Sie die unter [Wählen Sie ein Terminal](select-a-terminal.md) dargestellten Vorgänge durchführen, indem Sie den Aufrufen von " [**itaddress:: anatecall**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall)" befolgen.
+Darüber hinaus müssen Sie die vorgänge ausführen, die unter Auswählen eines [Terminals](select-a-terminal.md) nach dem Aufruf von [**ITAddress::CreateCall dargestellt sind.**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall)
 
 > [!Note]  
-> Dieses Beispiel enthält nicht die Fehlerüberprüfung und die Releases, die für Produktionscode geeignet sind.
+> In diesem Beispiel sind die Fehlerüberprüfung und die für Produktionscode geeigneten Releases nicht enthalten.
 
  
 
@@ -56,13 +56,13 @@ pBasicCall->Connect( TRUE );
 
 <dl> <dt>
 
-[**Itaddress:: anatecall**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall)
+[**ITAddress::CreateCall**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall)
 </dt> <dt>
 
-[**Itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
+[**ITBasicCallControl**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
 </dt> <dt>
 
-[**Itbasiccallcontrol:: Connect**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-connect)
+[**ITBasicCallControl::Verbinden**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-connect)
 </dt> </dl>
 
  

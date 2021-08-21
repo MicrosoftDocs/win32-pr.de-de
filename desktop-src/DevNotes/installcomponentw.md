@@ -49,7 +49,7 @@ void InstallComponentW(
 *InfPath* \[ In\]
 </dt> <dd>
 
-Der Pfad zur ausnahme-INF, die verarbeitet werden soll.
+Der Pfad zur zu verarbeitenden Ausnahme-INF.
 
 </dd> <dt>
 
@@ -69,12 +69,12 @@ Die Flags, die zum Steuern des Installationsverhaltens verwendet werden. Dieser 
 
 | Wert                                                                                                                                                                                                                                                               | Bedeutung                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="COMP_FLAGS_FORCE"></span><span id="comp_flags_force"></span><dl> <dt>**COMP \_ FLAGS \_ FORCE**</dt> <dt>0x00000020</dt> </dl>                             | Überspringt die Versionsprüfung für Dateiersetzungen.<br/>                                                                                                    |
-| <span id="COMP_FLAGS_NEEDS_UNINSTALL"></span><span id="comp_flags_needs_uninstall"></span><dl> <dt>**COMP \_ FLAGS \_ MÜSSEN \_ DEINSTALLIERT WERDEN**</dt><dt></dt> </dl>        | Sichern Sie Dateien, die aktualisiert werden, damit sie von einer Deinstallation der Komponente verwendet werden.<br/>                                                                      |
-| <span id="COMP_FLAGS_NO_OVERWRITE"></span><span id="comp_flags_no_overwrite"></span><dl> <dt>**COMP \_ FLAGS \_ OHNE \_ ÜBERSCHREIBEN**</dt><dt></dt> </dl>                 | Überspringt das Sichern von Dateien, wenn die Version der Ausnahmekomponente mit der einer installierten Komponente identisch ist. Dieses Flag wird in einem Neuinstallationsszenario verwendet.<br/> |
-| <span id="COMP_FLAGS_NOUI"></span><span id="comp_flags_noui"></span><dl> <dt>**COMP \_ \_FLAGS NOUI**</dt> <dt>0x00000002</dt> </dl>                                | Unterdrückt die gesamte Benutzeroberfläche.<br/>                                                                                                                               |
+| <span id="COMP_FLAGS_FORCE"></span><span id="comp_flags_force"></span><dl> <dt>**COMP \_ FLAGS \_ FORCE**</dt> <dt>0x00000020</dt> </dl>                             | Überspringt die Versionsüberprüfung für Dateiersetzungen.<br/>                                                                                                    |
+| <span id="COMP_FLAGS_NEEDS_UNINSTALL"></span><span id="comp_flags_needs_uninstall"></span><dl> <dt>**COMP \_ FLAGS \_ MÜSSEN DEINSTALLIERT \_ WERDEN**</dt><dt></dt> </dl>        | Sichern Sie Dateien, die aktualisiert werden, damit sie von einer Deinstallation der Komponente verwendet werden.<br/>                                                                      |
+| <span id="COMP_FLAGS_NO_OVERWRITE"></span><span id="comp_flags_no_overwrite"></span><dl> <dt>**COMP \_ FLAGS \_ KEINE \_ ÜBERSCHREIBUNG**</dt><dt></dt> </dl>                 | Überspringt das Sichern von Dateien, wenn die Version der Ausnahmekomponente mit einer installierten Komponente identisch ist. Dieses Flag wird in einem Neuinstallationsszenario verwendet.<br/> |
+| <span id="COMP_FLAGS_NOUI"></span><span id="comp_flags_noui"></span><dl> <dt>**COMP \_ FLAGS \_ NOUI-0x00000002**</dt> <dt></dt> </dl>                                | Unterdrückt alle Benutzeroberflächen.<br/>                                                                                                                               |
 | <span id="COMP_FLAGS_UPDATE_DLLCACHE"></span><span id="comp_flags_update_dllcache"></span><dl> <dt>**COMP \_ FLAGS \_ UPDATE \_ DLLCACHE**</dt><dt></dt> </dl>        | Erzwingt, dass das DLLCACHE-Verzeichnis aktualisiert wird, wenn eine Systemdatei aktualisiert wird.<br/>                                                                       |
-| <span id="COMP_FLAGS_USE_SVCPACK_CACHE"></span><span id="comp_flags_use_svcpack_cache"></span><dl> <dt>**COMP \_ FLAGS \_ VERWENDEN \_ SVCPACK \_ CACHE**</dt><dt></dt> </dl> | Verwendet Dateien, die von einer Windows Service Pack-Installation zwischengespeichert werden, um gesicherte Dateien zu ersetzen.<br/>                                                                |
+| <span id="COMP_FLAGS_USE_SVCPACK_CACHE"></span><span id="comp_flags_use_svcpack_cache"></span><dl> <dt>**COMP \_ FLAGS \_ VERWENDEN \_ SVCPACK \_ CACHE**</dt><dt></dt> </dl> | Verwendet Dateien, die von einer Windows Service Pack-Installation zwischengespeichert werden, um die von ihnen gespeicherten Dateien zu verdringen.<br/>                                                                |
 
 
 
@@ -85,25 +85,25 @@ Die Flags, die zum Steuern des Installationsverhaltens verwendet werden. Dieser 
 *VerMajor* \[ in, optional\]
 </dt> <dd>
 
-Die Hauptversion der Exception-Komponente.
+Die Hauptversion der Ausnahmekomponente.
 
 </dd> <dt>
 
 *VerMinor* \[ in, optional\]
 </dt> <dd>
 
-Die Nebenversion der Ausnahmekomponente.
+Die Nebenversion der Exception-Komponente.
 
 </dd> <dt>
 
 *VerBuild* \[ in, optional\]
 </dt> <dd>
 
-Die Buildversion der Exception-Komponente.
+Die Buildversion der Ausnahmekomponente.
 
 </dd> <dt>
 
-*Ver SILKE* \[ in, optional\]
+*VerQFE* \[ in, optional\]
 </dt> <dd>
 
 Die Hotfixrevision der Ausnahmekomponente.
@@ -113,19 +113,19 @@ Die Hotfixrevision der Ausnahmekomponente.
 *Name* \[ in, optional\]
 </dt> <dd>
 
-Die beschreibende Zeichenfolge der Komponente, die im Dialogfeld Windows Dateischutz angezeigt wird, wenn das Betriebssystem erkennt, dass eine Windows Dateischutzdatei beschädigt, manipuliert oder beschädigt ist.
+Die beschreibende Zeichenfolge der Komponente, die im Dialogfeld Windows-Dateischutz angezeigt wird, wenn das Betriebssystem erkennt, dass eine Windows File Protection-Schutzdatei beschädigt, manipuliert oder beschädigt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt einen **HRESULT-Wert** (S \_ OK oder einen Fehlercode) zurück. Ein Fehlercode kann anhand des Werts 0x20000100 überprüft werden, um zu ermitteln, ob der Fehler darauf zurückzuführen ist, dass ein Neustart erforderlich ist.
+Diese Funktion gibt einen **HRESULT-Wert** zurück (S \_ OK oder ein Fehlercode). Ein Fehlercode kann mit dem Wert 0x20000100 überprüft werden, um zu bestimmen, ob der Fehler darauf zurück liegt, dass ein Neustart erforderlich ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Ausnahmepakete sind Windows Systemdateien, die außerhalb eines vollständigen Pakets Windows Release veröffentlicht werden und Betriebssystemdateien aktualisieren. Ausnahmepakete werden nur von Betriebssystemteams erstellt, denen die Autorisierung zum Aktualisieren Windows Systemdateien erteilt wurde.
+Ausnahmepakete sind Windows, die außerhalb eines vollständigen Pakets Windows veröffentlicht werden und Betriebssystemdateien aktualisieren. Ausnahmepakete werden nur von Betriebssystemteams verfasst, denen die Autorisierung zum Aktualisieren Windows systemdateien erteilt wurde.
 
-Verwenden Sie zum Installieren und Deinstallieren von Dateien, die nicht durch Windows Dateischutz geschützt sind, die in [Allgemeine Setupfunktionen dokumentierten](https://msdn.microsoft.com/library/ms794585.aspx)Funktionen. Zum Installieren von Gerätetreibern sollten Automaten Funktionen verwenden, die in [Geräteinstallationsfunktionen](https://msdn.microsoft.com/library/ms792954.aspx) und [PnP Konfigurations-Manager Functions](https://msdn.microsoft.com/library/ms790838.aspx)dokumentiert sind.
+Verwenden Sie zum Installieren und Deinstallieren von Dateien, die nicht durch Windows File Protection geschützt sind, die Unter [Allgemeine Setupfunktionen dokumentierten Funktionen.](https://msdn.microsoft.com/library/ms794585.aspx) Zum Installieren von Gerätetreibern sollten Verkaufser Funktionen verwenden, die unter [Geräteinstallationsfunktionen](https://msdn.microsoft.com/library/ms792954.aspx) und [PnP-Konfigurations-Manager Functions dokumentiert sind.](https://msdn.microsoft.com/library/ms790838.aspx)
 
 Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 

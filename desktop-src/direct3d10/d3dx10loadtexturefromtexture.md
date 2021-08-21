@@ -1,7 +1,7 @@
 ---
-description: Lädt eine Textur aus einer Textur.
+description: Laden sie eine Textur aus einer Textur.
 ms.assetid: 126e71e1-a3b2-418b-be35-434a2e9472ca
-title: D3DX10LoadTextureFromTexture-Funktion (D3DX10Tex. h)
+title: D3DX10LoadTextureFromTexture-Funktion (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Tex.h
-ms.openlocfilehash: e8dc65c9bff78484f09c355f8eb3d9626372b9b4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bfc36423154bfd56f0695a3a8178b89aefce6e4dfc5a67f3866fa13a99c5e6d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990500"
 ---
 # <a name="d3dx10loadtexturefromtexture-function"></a>D3DX10LoadTextureFromTexture-Funktion
 
-Lädt eine Textur aus einer Textur.
+Laden sie eine Textur aus einer Textur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT D3DX10LoadTextureFromTexture(
 
 <dl> <dt>
 
-*psrctexture* 
+*pSrcTexture* 
 </dt> <dd>
 
 Typ: **[ **ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource)\***
 
-Ein Zeiger auf die Quell Textur. Siehe [**ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource).
+Zeiger auf die Quelltextur. Weitere Informationen [**finden Sie unter ID3D10Resource.**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource)
 
 </dd> <dt>
 
-*ploadinfo* 
+*pLoadInfo* 
 </dt> <dd>
 
-Type: **[ **d3dx10 \_ Texture \_ Load \_ Info**](d3dx10-texture-load-info.md)\***
+Typ: **[ **D3DX10 \_ \_ \_ TEXTURLADEINFORMATIONEN**](d3dx10-texture-load-info.md)\***
 
-Zeiger auf Textur Lade Parameter. Weitere Informationen finden Sie unter [**d3dx10 \_ Texture \_ Load \_ Info**](d3dx10-texture-load-info.md).
+Zeiger auf Texturladeparameter. Weitere Informationen [**finden Sie unter D3DX10 \_ TEXTURE LOAD INFO (TEXTURLADEINFORMATIONEN \_ FÜR D3DX10). \_**](d3dx10-texture-load-info.md)
 
 </dd> <dt>
 
-*pdsttexture* 
+*pDstTexture* 
 </dt> <dd>
 
 Typ: **[ **ID3D10Resource**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource)\***
 
-Ein Zeiger auf die Ziel Textur. Siehe [**ID3D10Resource-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource).
+Zeiger auf die Zieltextur. Siehe [**ID3D10Resource-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10resource).
 
 </dd> </dl>
 
@@ -72,7 +72,7 @@ Ein Zeiger auf die Ziel Textur. Siehe [**ID3D10Resource-Schnittstelle**](/window
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Tex. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Tex.h</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
+[Texturfunktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
 </dt> </dl>
 
  

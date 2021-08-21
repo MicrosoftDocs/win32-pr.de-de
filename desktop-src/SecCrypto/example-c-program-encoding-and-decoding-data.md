@@ -1,29 +1,29 @@
 ---
-description: Codiert und decodiert einfache, allgemeine Daten und veranschaulicht die folgenden Aufgaben und kryptoapi-Funktionen.
+description: Codiert und decodiert einfache, allgemeine Daten und veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen.
 ms.assetid: 7634bd05-fca0-4538-94da-7af6e3d8e6b8
 title: 'Beispiel C-Programm: Codieren und Decodieren von Daten'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b694bcb9836dfa750940ef75d41ba703251ee190
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 45c5840711fbbf71badd6bc50dec7cc154a7c8bf9bf7caaacc4fa9b5d9b00f7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007698"
 ---
 # <a name="example-c-program-encoding-and-decoding-data"></a>Beispiel C-Programm: Codieren und Decodieren von Daten
 
-Im folgenden Beispiel werden einfache und allgemeine Daten codiert und decodiert, und die folgenden Aufgaben und kryptoapi-Funktionen werden veranschaulicht.
+Das folgende Beispiel codiert und decodiert einfache, allgemeine Daten und veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen.
 
--   Bestimmen der Länge, die der Puffer zum Speichern der codierten Daten mithilfe von [**cryptmsgcalculateencodlength**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength)benötigt.
--   Öffnen einer Nachricht für die Codierung mithilfe von [**cryptmsgopentoencode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode).
--   Hinzufügen von Inhalt zur codierten Nachricht mithilfe von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
--   Kopieren der codierten Nachricht in einen Puffer mithilfe von [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam).
--   Schließen der codierten Nachricht mithilfe von [**cryptmsgclose**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose).
--   Öffnen einer Meldung zum Decodieren mithilfe von [**cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
--   Verwenden von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate) und [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) , um die decodierten Daten zu erhalten.
+-   Bestimmen der Länge, die der Puffer benötigt, um die codierten Daten mithilfe von [**CryptMsgCalculateEncodedLength zu halten.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength)
+-   Öffnen einer Nachricht für die Codierung mit [**CryptMsgOpenToEncode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode).
+-   Hinzufügen von Inhalt zur codierten Nachricht [**mithilfe von CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
+-   Kopieren der codierten Nachricht in einen Puffer [**mithilfe von CryptMsgGetParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam).
+-   Schließen der codierten Nachricht [**mithilfe von CryptMsgSchließen Sie**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose).
+-   Öffnen einer Nachricht zum Decodieren mit [**CryptMsgOpenToDecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
+-   Verwenden [**von CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate) und [**CryptMsgGetParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) zum Erhalten der decodierten Daten.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

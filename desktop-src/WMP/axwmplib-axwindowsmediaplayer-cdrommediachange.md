@@ -1,9 +1,9 @@
 ---
-title: Cdrommediachange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das cdrommediachange-Ereignis tritt auf, wenn eine CD oder eine DVD in ein CD-oder DVD-Laufwerk eingefügt oder daraus entfernt wird. | Cdrommediachange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: CmediaMediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das C csvMediaChange-Ereignis tritt auf, wenn eine CD oder DVD in ein CD- oder DVD-Laufwerk eingefügt oder von einem CD- oder DVD-Laufwerk aus ihr eingefügt wird. | CmediaMediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 0a6378c1-59e4-4be3-8764-d5c4ab478b6c
 keywords:
-- Cdrommediachange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CorporaMediaChange-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35385541f6bc91b6935f148fd8ae28df6a415f3d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 55dac05b3ca8a8675bfae431d3f2e8ffbb38db8701a2501fa80d282cd3c976ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055003"
 ---
-# <a name="cdrommediachange-event-of-the-axwindowsmediaplayer-object"></a>Cdrommediachange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="cdrommediachange-event-of-the-axwindowsmediaplayer-object"></a>CmediaMediaChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das **cdrommediachange** -Ereignis tritt auf, wenn eine CD oder eine DVD in ein CD-oder DVD-Laufwerk eingefügt oder daraus entfernt wird.
+Das **C csvMediaChange-Ereignis** tritt auf, wenn eine CD oder DVD in ein CD- oder DVD-Laufwerk eingefügt oder von einem CD- oder DVD-Laufwerk aus ihr eingefügt wird.
 
 ``` syntax
 [C#]
@@ -41,21 +41,21 @@ Private Sub player_CdromMediaChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdrommediachangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdrommediachangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ C csvMediaChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ C csvMediaChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                        |
+| Eigenschaft | Beschreibung                                                        |
 |----------|--------------------------------------------------------------------|
-| Cdromnum | System. Int32Specifies der Index des CD-oder DVD-Laufwerks.<br/> |
+| CredoNum | System.Int32 Gibt den Index des CD- oder DVD-Laufwerks an.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Index des CD-Laufwerks entspricht dem Index einer iwmpcdrom-Schnittstelle, auf die über die iwmpcdromcollection-Schnittstelle zugegriffen werden kann.
+Der Index des CD-Laufwerks entspricht dem Index einer IWMPC interfaces-Schnittstelle, auf die über die IWMPCcollection-Schnittstelle zugegriffen werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Der Index des CD-Laufwerks entspricht dem Index einer iwmpcdrom-Schnittstelle, a
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,13 +73,13 @@ Der Index des CD-Laufwerks entspricht dem Index einer iwmpcdrom-Schnittstelle, a
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdrom-Schnittstelle (VB und c#)**](iwmpcdrom--vb-and-c.md)
+[**IWMPCorpora-Schnittstelle (VB und C#)**](iwmpcdrom--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle (VB und c#)**](iwmpcdromcollection--vb-and-c.md)
+[**IWMPCcollectionCollection-Schnittstelle (VB und C#)**](iwmpcdromcollection--vb-and-c.md)
 </dt> </dl>
 
  
