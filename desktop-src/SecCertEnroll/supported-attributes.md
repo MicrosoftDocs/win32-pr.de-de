@@ -1,5 +1,5 @@
 ---
-description: Die Zertifikatregistrierungs-API unterstützt die folgenden Attribute. Sie können ein einzelnes Attribut erstellen, indem Sie die entsprechende Schnittstelle verwenden, die in den folgenden Abschnitten identifiziert wird.
+description: Die Zertifikatregistrierungs-API unterstützt die folgenden Attribute. Sie können ein einzelnes Attribut erstellen, indem Sie die entsprechende Schnittstelle verwenden, die in den folgenden Abschnitten angegeben ist.
 ms.assetid: e14fd472-1974-4ad2-b35a-3ab58ba0d707
 title: Unterstützte Attribute
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117774413"
 ---
 # <a name="supported-attributes"></a>Unterstützte Attribute
 
-Die Zertifikatregistrierungs-API unterstützt die folgenden Attribute. Sie können ein einzelnes Attribut erstellen, indem Sie die entsprechende Schnittstelle verwenden, die in den folgenden Abschnitten identifiziert wird.
+Die Zertifikatregistrierungs-API unterstützt die folgenden Attribute. Sie können ein einzelnes Attribut erstellen, indem Sie die entsprechende Schnittstelle verwenden, die in den folgenden Abschnitten angegeben ist.
 
 ## <a name="clientid"></a>ClientId
 
@@ -21,11 +21,11 @@ Die [**IX509AttributeClientId-Schnittstelle**](/windows/desktop/api/CertEnroll/n
 
 **Gilt für:** PKCS \# 10- oder CMC-Anforderung.
 
-**OID:** XCN \_ OID \_ REQUEST CLIENT INFO \_ \_ (1.3.6.1.4.1.311.21.20)
+**OID:** CLIENTINFORMATIONEN ZUR \_ XCN-OID-ANFORDERUNG \_ \_ \_ (1.3.6.1.4.1.311.21.20)
 
 ## <a name="extensions"></a>Erweiterungen
 
-Die [**IX509AttributeExtensions-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) kann verwendet werden, um einen Satz von X.509 Version 3-Zertifikaterweiterungen zu definieren. Die folgenden Erweiterungen werden unterstützt. Weitere Informationen finden Sie im Thema Erweiterungsschnittstellen.
+Die [**IX509AttributeExtensions-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) kann verwendet werden, um einen Satz von X.509-Zertifikaterweiterungen der Version 3 zu definieren. Die folgenden Erweiterungen werden unterstützt. Weitere Informationen finden Sie im Thema Erweiterungsschnittstellen.
 
 
 
@@ -33,12 +33,12 @@ Die [**IX509AttributeExtensions-Schnittstelle**](/windows/desktop/api/CertEnroll
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AlternativeNames       | Enthält eine oder mehrere alternative Namensformen des Ausstellers, der dem Zertifikat zugeordnet ist.                                                                                                                                       |
 | AuthorityKeyIdentifier | Enthält einen eindeutigen Schlüsselbezeichner, um zwischen mehreren Zertifikatsignaturschlüsseln der [*Zertifizierungsstelle*](/windows/desktop/SecGloss/c-gly) zu unterscheiden. |
-| BasicConstraints       | Gibt an, ob der Antragsteller als Zertifizierungsstelle fungieren kann.                                                                                                                                                                                   |
+| BasicConstraints       | Gibt an, ob der Subjekt als Zertifizierungsstelle fungieren kann.                                                                                                                                                                                   |
 | CertificatePolicies    | Identifiziert die Richtlinien und optionalen Qualifiziererinformationen, die dem Zertifikat zugeordnet sind.                                                                                                                                      |
-| MSApplicationPolicies  | Identifiziert eine oder mehrere Verwendungen für das Zertifikat. Diese Erweiterung ähnelt der Erweiterung EnhancedKeyUsage, ist jedoch von Microsoft definiert.                                                                                           |
-| EnhancedKeyUsage       | Identifiziert eine oder mehrere Verwendungen des öffentlichen Schlüssels, der im Zertifikat enthalten ist. Die erweiterte Schlüsselverwendungserweiterung kann zusätzlich zu oder anstelle der Schlüsselverwendungserweiterung verwendet werden.                                                  |
-| KeyUsage               | Identifiziert Einschränkungen für die Vorgänge, die vom öffentlichen Schlüssel im Zertifikat ausgeführt werden können.                                                                                                                  |
-| SmimeCapabilities      | Meldet die Entschlüsselungsfunktionen eines E-Mail-Empfängers an den E-Mail-Absender, damit der Absender den sichersten symmetrischen Algorithmus auswählen kann, der von beiden Seiten unterstützt wird.                                                      |
+| MSApplicationPolicies  | Identifiziert eine oder mehrere Verwendungen für das Zertifikat. Diese Erweiterung ähnelt der EnhancedKeyUsage-Erweiterung, ist jedoch von Microsoft definiert.                                                                                           |
+| EnhancedKeyUsage       | Identifiziert eine oder mehrere Verwendungen des im Zertifikat enthaltenen öffentlichen Schlüssels. Die erweiterte Schlüsselverwendungserweiterung kann zusätzlich zur Schlüsselverwendungserweiterung oder statt dieser verwendet werden.                                                  |
+| KeyUsage               | Gibt Einschränkungen für die Vorgänge an, die mit dem im Zertifikat enthaltenen öffentlichen Schlüssel ausgeführt werden können.                                                                                                                  |
+| SmimeCapabilities      | Meldet die Entschlüsselungsfunktionen eines E-Mail-Empfängers an den E-Mail-Absender, damit der Absender den sichersten symmetrischen Algorithmus auswählen kann, der von beiden Parteien unterstützt wird.                                                      |
 | SubjectKeyIdentifier   | Enthält einen eindeutigen Schlüsselbezeichner, der verwendet werden kann, um zwischen mehreren Signaturschlüsseln zu unterscheiden, die dem Zertifikatbesitzer zugeordnet sind.                                                                                          |
 | Vorlage               | Identifiziert die Vorlage, die beim Ausstellen oder Erneuern eines Zertifikats verwendet werden soll. Die Erweiterung enthält den Objektbezeichner (OID) der Vorlage.                                                                                       |
 | TemplateName           | Identifiziert die Vorlage, die beim Ausstellen oder Erneuern eines Zertifikats verwendet werden soll. Die Erweiterung enthält den Namen der Vorlage.                                                                                                          |
@@ -57,11 +57,11 @@ Die [**IX509AttributeArchiveKey-Schnittstelle**](/windows/desktop/api/CertEnroll
 
 **Gilt für:** CMC-Anforderung.
 
-**OID:** XCN \_ OID \_ ARCHIVED \_ KEY \_ ATTR (1.3.6.1.4.1.311.21.13)
+**OID:** ARCHIVIERTER \_ \_ XCN-OID-SCHLÜSSEL \_ \_ ATTR (1.3.6.1.4.1.311.21.13)
 
 ## <a name="archivekeyhash"></a>ArchiveKeyHash
 
-Die [**IX509AttributeArchiveKeyHash-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributearchivekeyhash) kann verwendet werden, um einen Hash des privaten Schlüssels zu definieren, der im **ArchiveKey-Attribut** enthalten ist.
+Die [**IX509AttributeArchiveKeyHash-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributearchivekeyhash) kann verwendet werden, um einen Hash des privaten Schlüssels zu definieren, der im **ArchiveKey-Attribut enthalten** ist.
 
 **Gilt für:** CMC-Anforderung.
 
@@ -69,11 +69,11 @@ Die [**IX509AttributeArchiveKeyHash-Schnittstelle**](/windows/desktop/api/CertEn
 
 ## <a name="cspprovider"></a>CspProvider
 
-Die [**IX509AttributeCspProvider-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributecspprovider) kann verwendet werden, um ein Attribut zu definieren, das Informationen über den [*Kryptografiedienstanbieter (Cryptographic Service Provider,*](/windows/desktop/SecGloss/c-gly) CSP) enthält, der vom Anfordernden für kryptografische Vorgänge verwendet wird.
+Die [**IX509AttributeCspProvider-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributecspprovider) kann verwendet werden, um ein Attribut zu definieren, das Informationen über den Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](/windows/desktop/SecGloss/c-gly) CSP) enthält, der vom Anfordernden für kryptografische Vorgänge verwendet wird.
 
 **Gilt für:** PKCS \# 10-Anforderung. Dieses Attribut wird automatisch erstellt, wenn Sie ein [**IX509CertificateRequestPkcs10-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) erstellen.
 
-**OID:** XCN \_ OID \_ ENROLLMENT \_ CSP PROVIDER \_ (1.3.6.1.4.1.311.13.2.2)
+**OID:** CSP-ANBIETER für die \_ \_ \_ \_ XCN-OID-REGISTRIERUNG (1.3.6.1.4.1.311.13.2.2)
 
 ## <a name="osversion"></a>OSVersion
 
@@ -81,15 +81,15 @@ Die [**IX509AttributeOSVersion-Schnittstelle**](/windows/desktop/api/CertEnroll/
 
 **Gilt für:** PKCS \# 10- oder CMC-Anforderung.
 
-**OID:** XCN \_ OID \_ OS VERSION \_ (1.3.6.1.4.1.311.13.2.3)
+**OID:** \_XCN-OID-BETRIEBSSYSTEMVERSION \_ \_ (1.3.6.1.4.1.311.13.2.3)
 
 ## <a name="renewalcertificate"></a>RenewalCertificate
 
 Die [**IX509AttributeRenewalCertificate-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributerenewalcertificate) kann verwendet werden, um ein Attribut zu erstellen, das das zu erneuernde Zertifikat enthält.
 
-**Gilt für:** PKCS \# 10-Anforderung. Dieses Attribut wird automatisch erstellt, wenn Sie eine PKCS \# 10-Anforderung erstellen, indem Sie sie mit dem zu erneuernden Zertifikat initiieren.
+**Gilt für:** PKCS \# 10-Anforderung. Dieses Attribut wird automatisch erstellt, wenn Sie eine PKCS 10-Anforderung erstellen, indem Sie sie mit \# dem erneuerten Zertifikat initiieren.
 
-**OID:** XCN \_ OID \_ RENEWAL CERTIFICATE \_ (1.3.6.1.4.1.311.13.1)
+**OID:** \_XCN-OID-ERNEUERUNGSZERTIFIKAT \_ \_ (1.3.6.1.4.1.311.13.1)
 
  
 

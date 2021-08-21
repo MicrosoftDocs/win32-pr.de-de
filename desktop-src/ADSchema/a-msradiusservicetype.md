@@ -1,10 +1,10 @@
 ---
-title: msradiusservicetype-Attribut
-description: Das msradiusservicetype-Attribut wird intern verwendet.
+title: msRADIUSServiceType-Attribut
+description: Das attribut msRADIUSServiceType wird intern verwendet.
 ms.assetid: af7e6460-e875-4cef-a1ea-fe510a219252
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des msradiusservicetype-Attributs
+- MSRADIUSServiceType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b2930d31bfd461fcc1e96a316a9c8725797b7fb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4b0c281d8cdd7b61a866d958ec772bed0bffa7e18c8c1de62ac33159dac0961c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118013253"
 ---
-# <a name="msradiusservicetype-attribute"></a>msradiusservicetype-Attribut
+# <a name="msradiusservicetype-attribute"></a>msRADIUSServiceType-Attribut
 
-Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **attribut msRADIUSServiceType** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msradiusservicetype                  |
-| LDAP-Display-Name | msradiusservicetype                  |
+| CN                | msRADIUSServiceType                  |
+| Ldap-Anzeigename | msRADIUSServiceType                  |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1171              |
-| System-ID-GUID    | db0c90b6-c1f2-11d1-bbc5-0080c76670c0 |
+| System-ID-GUID    | db0c90b6-c1f2-11d1-muss5-0080c76670c0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -42,7 +42,7 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,11 +56,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,11 +77,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -98,11 +98,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -119,11 +119,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -140,11 +140,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -161,11 +161,11 @@ Das **msradiusservicetype** -Attribut wird intern verwendet. Ändern Sie diesen 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

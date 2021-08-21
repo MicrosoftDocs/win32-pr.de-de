@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. focalLength-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.FocalLength-Eigenschaft.
 ms.assetid: a282c31f-00dd-4df5-9b93-300bb9bc8f2d
-title: System. Photo. focalLength-Foto-metadatenrichtlinie
+title: System.Photo.FocalLength-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc7b36240713782c98d52e4fbf4dae5c0c06082
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bfbfb1c0a5a8d88993a42ecc1d29e70f3f3d5911d3c0451cbeeaf0ace040460d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117667367"
 ---
-# <a name="systemphotofocallength-photo-metadata-policy"></a>System. Photo. focalLength-Foto-metadatenrichtlinie
+# <a name="systemphotofocallength-photo-metadata-policy"></a>System.Photo.FocalLength-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. Photo. focalLength](../properties/props-system-photo-focallength.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.FocalLength-Eigenschaft.](../properties/props-system-photo-focallength.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ Photo \_ focalLength
+PKEY \_ Photo \_ FocalLength
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird von System. Photo. focallengthnumerator und System. Photo. focallengthnenner generiert. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird aus System.Photo.FocalLengthNumerator und System.Photo.FocalLengthDenominator generiert. Er kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37386} |             |
-| 2     | /XMP/EXIF: focalLength         |             |
+| 1     | /app1/ifd/exif/{ushort=37386} |             |
+| 2     | /xmp/exif:FocalLength         |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37386} |             |
-| 2     | /XMP/EXIF: focalLength         |             |
+| 1     | /app1/ifd/exif/{ushort=37386} |             |
+| 2     | /xmp/exif:FocalLength         |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37386} |
-| 2     | /XMP/EXIF: focalLength         |
+| 1     | /app1/ifd/exif/{ushort=37386} |
+| 2     | /xmp/exif:focallength         |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert wird von System. Photo. focallengthnumerator und System. Photo. foca
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37386}  |             |
-| 2     | /IFD/XMP/EXIF: focalLength |             |
+| 1     | /ifd/exif/{ushort=37386}  |             |
+| 2     | /ifd/xmp/exif:FocalLength |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37386}  |             |
-| 2     | /IFD/XMP/EXIF: focalLength |             |
+| 1     | /ifd/exif/{ushort=37386}  |             |
+| 2     | /ifd/xmp/exif:FocalLength |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/EXIF/{ushort = 37386}  |
-| 2     | /IFD/XMP/EXIF: focalLength |
+| 1     | /ifd/exif/{ushort=37386}  |
+| 2     | /ifd/xmp/exif:focallength |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. focalLength](../properties/props-system-photo-focallength.md)
+[System.Photo.FocalLength](../properties/props-system-photo-focallength.md)
 </dt> </dl>
 
  

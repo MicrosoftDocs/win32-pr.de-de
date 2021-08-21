@@ -1,22 +1,22 @@
 ---
-description: Ein-Objekt vom Typ"Swap-Methode. OutParameters" wird erstellt und von der ausgeführten Anbieter Methode mit Daten bereitgestellt.
+description: Ein SWbemMethod.OutParameters-Objekt wird von der ausgeführten Anbietermethode erstellt und mit Daten bereitgestellt.
 ms.assetid: fc06d6a1-770a-4f34-affd-f5035dad9360
 ms.tgt_platform: multiple
-title: Übernehmen von outparameter-Objekten
+title: Analysieren von OutParameters-Objekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5458ae3c5d57e9984fceef55de278ed92eba520
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e69c13e7d4d6b74f1c404c77e1ae0cc26d62ad698684ca1c864ebf31871dc62e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117923248"
 ---
-# <a name="parsing-outparameters-objects"></a>Übernehmen von outparameter-Objekten
+# <a name="parsing-outparameters-objects"></a>Analysieren von OutParameters-Objekten
 
-Ein-Objekt vom Typ" [**Swap-Methode. OutParameters**](swbemmethod-outparameters.md) " wird erstellt und von der ausgeführten Anbieter Methode mit Daten bereitgestellt. Eigenschaften des **OutParameters** -Objekts sind spezifisch für die Methode, die aufgerufen wird. Im folgenden Skript ist *SD* (in *outParam* enthalten) z. b. der Output-Parameter, der für die **\_ \_ System Security. getd-** Methode definiert ist. Die **ReturnValue** -Eigenschaft ist eine generische Eigenschaft, die für alle **OutParameters** -Objekte verfügbar ist, die das Ergebnis des Vorgangs enthalten.
+Ein [**SWbemMethod.OutParameters-Objekt**](swbemmethod-outparameters.md) wird von der ausgeführten Anbietermethode erstellt und mit Daten bereitgestellt. Eigenschaften des **OutParameters-Objekts** sind spezifisch für die aufgerufene Methode. Im folgenden Skript ist *SD* (in *outParam* enthalten) beispielsweise der Ausgabeparameter, der für die **\_ \_ SystemSecurity.GetSD-Methode** definiert ist. Die **ReturnValue-Eigenschaft** ist eine generische Eigenschaft, die für alle **OutParameters-Objekte** verfügbar ist, die das Ergebnis des Vorgangs enthalten.
 
-Das folgende Codebeispiel veranschaulicht das Abrufen von Ausgabeparametern aus der Ausführung der [**gezd-**](--systemsecurity-getsd.md) Methode in der Klasse [**\_ \_ SystemSecurity**](--systemsecurity.md) für das lokale System.
+Das folgende Codebeispiel veranschaulicht das Abrufen von Ausgabeparametern aus der Ausführung der [**GetSD-Methode**](--systemsecurity-getsd.md) in der [**\_ \_ SystemSecurity-Klasse**](--systemsecurity.md) für das lokale System.
 
 
 ```VB
@@ -35,7 +35,7 @@ set outParam = nothing
 
 
 
-Weitere Informationen finden Sie unter " [**Swap method. InParameters**](swbemmethod-inparameters.md)".
+Weitere Informationen finden Sie unter [**SWbemMethod.InParameters**](swbemmethod-inparameters.md).
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Verwendet einen vorinstallierten Schlüssel für die Netzwerkauthentifizierung. Dieses Beispielprofil verwendet Wi-Fi Geschützte Zugriffssicherheit, die im persönlichen Modus (WPA-Personal) ausgeführt wird.
+description: Verwendet einen vorinstallierten Schlüssel für die Netzwerkauthentifizierung. In diesem Beispielprofil wird Wi-Fi Geschützte Zugriffssicherheit verwendet, die im persönlichen Modus (WPA-Personal) ausgeführt wird.
 ms.assetid: f04de28b-a98d-40cd-91c8-e446cf669555
 title: Beispiel für WPA-Personal-Profil
 ms.topic: article
@@ -17,7 +17,7 @@ Dieses Beispielprofil verwendet einen vorinstallierten Schlüssel für die Netzw
 
 **Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst:** Änderungen werden auf Windows 7 und Windows Server 2008 R2 mit installiertem Wlan-Dienst implementiert, um die Leistung von Drahtlosnetzwerken zu optimieren. Die Standardeinstellung für [**autoSwitch,**](wlan-profileschema-autoswitch-wlanprofile-element.md) wenn dieses Element nicht in einem WLAN-Profil festgelegt ist, wurde geändert. Die Standardeinstellung wird auf Windows 7 und Windows Server 2008 R2 mit installiertem WLAN-Dienst in "false" geändert. Die Standardeinstellung war "true" auf Windows Server 2008 und Windows Vista. Weitere Informationen finden Sie in der [**AutoSwitch-Schemaelementbeschreibung.**](wlan-profileschema-autoswitch-wlanprofile-element.md)
 
-**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet.
+**Windows XP mit SP3 und Wlan-API für Windows XP mit SP2:** Der [**untergeordnete Name**](wlan-profileschema-name-wlanprofile-element.md) des [**WLANProfile-Elements**](wlan-profileschema-wlanprofile-element.md) wird ignoriert. Der Name des Profils, wie er im Profilspeicher gespeichert ist, wird vom [**untergeordneten Namen**](wlan-profileschema-name-ssid-element.md) des [**SSID-Elements**](wlan-profileschema-ssid-ssidconfig-element.md) abgeleitet.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>

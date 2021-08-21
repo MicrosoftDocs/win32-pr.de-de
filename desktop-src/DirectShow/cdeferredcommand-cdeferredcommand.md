@@ -57,7 +57,7 @@ CDeferredCommand(
 *Pq* 
 </dt> <dd>
 
-Zeiger auf ein Objekt, das die [**IQueueCommand-Schnittstelle verfügbar**](/windows/desktop/api/Control/nn-control-iqueuecommand) macht.
+Zeiger auf ein Objekt, das die [**IQueueCommand-Schnittstelle**](/windows/desktop/api/Control/nn-control-iqueuecommand) verfügbar macht.
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Zeiger auf einen zurückgegebenen **HRESULT-Wert.**
 *pUnkExecutor* 
 </dt> <dd>
 
-Zeiger auf das Objekt, das diesen Befehl ausführen wird.
+Zeiger auf das Objekt, das diesen Befehl ausführt.
 
 </dd> <dt>
 
@@ -99,7 +99,7 @@ Zeiger auf den global eindeutigen Bezeichner **(GUID)** der Schnittstelle, die d
 *dispidMethod* 
 </dt> <dd>
 
-Methode für die aufrufende Schnittstelle.
+Methode für die aufzurufende Schnittstelle.
 
 </dd> <dt>
 
@@ -127,7 +127,7 @@ Zeiger auf eine Liste von Argumentvariantentypen.
 *pvarResult* 
 </dt> <dd>
 
-Zeiger auf eine zurückgegebene Liste von Variantentypen, sofern diese enthalten ist.
+Zeiger auf eine zurückgegebene Variantentypliste, falls vorhanden.
 
 </dd> <dt>
 
@@ -141,7 +141,7 @@ Zeiger auf das letzte Argument in der *pDispParams-Parameterliste* mit einem Feh
 *bStream* 
 </dt> <dd>
 
-Wert, der angibt, ob die verzögerte Befehlszeit in der Streamzeit (**TRUE**) oder in der Präsentationszeit ( FALSE )**liegt.**
+Wert, der angibt, ob die verzögerte Befehlszeit in der Streamzeit (**TRUE**) oder der Präsentationszeit (**FALSE**) liegt.
 
 </dd> </dl>
 
@@ -152,11 +152,11 @@ Wert, der angibt, ob die verzögerte Befehlszeit in der Streamzeit (**TRUE**) od
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

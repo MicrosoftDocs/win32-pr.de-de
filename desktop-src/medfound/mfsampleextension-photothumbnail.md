@@ -1,33 +1,33 @@
 ---
-description: Enthält die Foto Miniaturansicht eines IMF Sample.
+description: Enthält die Fotominiaturansicht eines NSAMPSamples.
 ms.assetid: 510706A3-92FB-4188-97B9-6E8E0B4B175F
-title: MFSampleExtension_PhotoThumbnail-Attribut (mfapi. h)
+title: MFSampleExtension_PhotoThumbnail -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5cbdb6f79b1b1ee187677a7f1a7a7792acb10fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abb9fe5020428f1cb138b2d085a4715adb15bad3fa517fb4c3a605d60fa1ecc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117872430"
 ---
-# <a name="mfsampleextension_photothumbnail-attribute"></a>MF SampleExtension- \_ photominiatur-Attribut
+# <a name="mfsampleextension_photothumbnail-attribute"></a>MFSampleExtension-Attribut \_ "PhotoThumbnail"
 
-Enthält die Foto Miniaturansicht eines [**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample).
+Enthält die Miniaturansicht des Fotos einer [**NSAMPSample-Datei.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
 ## <a name="data-type"></a>Datentyp
 
-**IUnknown** als **imfmediabuffer** gespeichert
+**IUnknown als** **1.01.011111**
 
-Die Miniaturansicht wird mithilfe von " **ksproperty\tid \_ extendedcameracontrol**" konfiguriert.
+Die Miniaturansicht wird mithilfe von **KSPROPERTYSETID \_ ExtendedCameraControl konfiguriert.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für das [**imfsample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) festgelegt, das von MFT0 bereitgestellt wird, und ist die [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle des [**imfmediabuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer) , der der Foto Miniaturansicht zugeordnet ist.
+Dieses Attribut wird auf dem [**von**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) MFT0 bereitgestellten 10-00-MFTSample festgelegt und ist die [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) des DER Fotominiaturminiatur zugeordneten [**ABERMEDIABuffer-Puffers.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer)
 
-Das Format der Foto Miniaturansicht kann JPEG (Major Type Image), NV12 oder ARGB32 sein.
+Das Format der Fotominiaturansicht kann JPEG (Haupttypbild), NV12 oder ARGB32 sein.
 
-[Mfsampleextension \_ photothumbnailmediatype](mfsampleextension-photothumbnailmediatype.md) ist für Miniaturansichten erforderlich, um den Medientyp zu beschreiben.
+[MFSampleExtension \_ PhotoThumbnailMediaType](mfsampleextension-photothumbnailmediatype.md) ist erforderlich, damit Miniaturansichten den Medientyp beschreiben können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Das Format der Foto Miniaturansicht kann JPEG (Major Type Image), NV12 oder ARGB
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Desktop-Apps \| UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Das Format der Foto Miniaturansicht kann JPEG (Major Type Image), NV12 oder ARGB
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DURCHSCHN.Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 </dt> </dl>
 
  

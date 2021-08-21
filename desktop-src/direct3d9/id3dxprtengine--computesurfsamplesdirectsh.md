@@ -1,7 +1,7 @@
 ---
-description: Berechnet an einem beliebigen Punkt, der nicht in einem Mesh ist, einen Übertragungs Vektor, der Quell Strahlen (dargestellt durch eine Glanz Näherung (SH)) zum Beenden der Strahlung zuordnet.
+description: Berechnet einen Übertragungsvektor an einem beliebigen Punkt, der sich nicht in einem Gitternetz befandt, der die Quellausdrillanz (dargestellt durch eine pherische Schwingung (SH)-Näherung) zu einer Beendigungsausdance zu ordnet.
 ms.assetid: 44790465-440d-4426-b780-ed872fbf8efb
-title: 'ID3DXPRTEngine:: computesurf samplesdirectsh-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeSurfSamplesDirectSH-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 03adb1729a8a2e771ea681ccbdd180999d3adcbf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 310914d481aa477c11df0533a7cd448e5b760418aa19d4d0856a349e4a1d822a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729641"
 ---
-# <a name="id3dxprtenginecomputesurfsamplesdirectsh-method"></a>ID3DXPRTEngine:: computesurf samplesdirectsh-Methode
+# <a name="id3dxprtenginecomputesurfsamplesdirectsh-method"></a>ID3DXPRTEngine::ComputeSurfSamplesDirectSH-Methode
 
-Berechnet an einem beliebigen Punkt, der nicht in einem Mesh ist, einen Übertragungs Vektor, der Quell Strahlen (dargestellt durch eine Glanz Näherung (SH)) zum Beenden der Strahlung zuordnet.
+Berechnet einen Übertragungsvektor an einem beliebigen Punkt, der sich nicht in einem Gitternetz befandt, der die Quellausdrillanz (dargestellt durch eine pherische Schwingung (SH)-Näherung) zu einer Beendigungsausdance zu ordnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ComputeSurfSamplesDirectSH(
 
 <dl> <dt>
 
-*Shorder* \[ in\]
+*SHOrder* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der zu verwendenden SH-Näherung.
+Reihenfolge der zu verwendenden SH-Näherung.
 
 </dd> <dt>
 
-*NumSamples* \[ in\]
+*NumSamples* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Beispiel Speicherorte.
+Anzahl von Beispielstandorten.
 
 </dd> <dt>
 
-*psamplelocs* \[ in\]
+*pSampleLocs* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Die Position für jede Stichprobe.
+Position für jedes Beispiel.
 
 </dd> <dt>
 
-*psamplenorms* \[ in\]
+*pSampleNorms* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Normaler Vektor für jeden Beispiel Speicherort.
+Normaler Vektor für jede Stichprobenposition.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das den direkten Beleuchtungs Beitrag zu dem Punkt modelliert und dabei die sh-Näherung verwendet.
+Zeiger auf ein [**ID3DXPRTBuffer-Ausgabeobjekt,**](id3dxprtbuffer.md) das den direkten Beleuchtungsbeitrag zum Punkt mithilfe der SH-Näherung modelliert.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das den d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie beim Aufrufen dieser Methode keinen Textur Puffer.
+Verwenden Sie beim Aufrufen dieser Methode keinen Texturpuffer.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,22 +105,22 @@ Verwenden Sie beim Aufrufen dieser Methode keinen Textur Puffer.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computedirectlightingsh**](id3dxprtengine--computedirectlightingsh.md)
+[**ID3DXPRTEngine::ComputeDirectLightingSH**](id3dxprtengine--computedirectlightingsh.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computesurf samplesbounce**](id3dxprtengine--computesurfsamplesbounce.md)
+[**ID3DXPRTEngine::ComputeSurfSamplesBounce**](id3dxprtengine--computesurfsamplesbounce.md)
 </dt> </dl>
 
  

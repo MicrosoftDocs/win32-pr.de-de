@@ -1,7 +1,7 @@
 ---
-description: Enthält die Antwort auf eine D3DAUTHENTICATEDQUERY \_ unrestrictedprotectedsharedresourcecount-Abfrage.
+description: Enthält die Antwort auf eine D3DAUTHENTICATEDQUERY \_ UNRESTRICTEDPROTECTEDSHAREDRESOURCECOUNT-Abfrage.
 ms.assetid: c283833d-e98c-4f01-b623-21027a6b90e8
-title: D3DAUTHENTICATEDCHANNEL_QUERYUNRESTRICTEDPROTECTEDSHAREDRESOURCECOUNT_OUTPUT-Struktur (D3d9types. h)
+title: D3DAUTHENTICATEDCHANNEL_QUERYUNRESTRICTEDPROTECTEDSHAREDRESOURCECOUNT_OUTPUT -Struktur (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: b3fd30cff59d35f845903e7f4fdb08cdff61df3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af3bcdce8573939a9c638a73085cc5ebee82e73bde1a5169daed588cec111078
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117880114"
 ---
-# <a name="d3dauthenticatedchannel_queryunrestrictedprotectedsharedresourcecount_output-structure"></a>D3DAUTHENTICATEDCHANNEL \_ queryunrestrictedprotectedsharedresourcecount- \_ Ausgabestruktur
+# <a name="d3dauthenticatedchannel_queryunrestrictedprotectedsharedresourcecount_output-structure"></a>D3DAUTHENTICATEDCHANNEL \_ QUERYUNRESTRICTEDPROTECTEDSHAREDRESOURCECOUNT-AUSGABEstruktur \_
 
-Enthält die Antwort auf eine [**D3DAUTHENTICATEDQUERY \_ unrestrictedprotectedsharedresourcecount**](d3dauthenticatedquery-unrestrictedprotectedsharedresourcecount.md) -Abfrage.
+Enthält die Antwort auf eine [**D3DAUTHENTICATEDQUERY \_ UNRESTRICTEDPROTECTEDSHAREDRESOURCECOUNT-Abfrage.**](d3dauthenticatedquery-unrestrictedprotectedsharedresourcecount.md)
 
-Um diese Abfrage zu senden, nennen Sie [**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query).
+Rufen Sie zum Senden dieser Abfrage [**IDirect3DAuthenticatedChannel9::Query auf.**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ typedef struct _D3DAUTHENTICATEDCHANNEL_QUERYUNRESTRICTEDPROTECTEDSHAREDRESOURCE
 **Ausgabe**
 </dt> <dd>
 
-Eine [**D3DAUTHENTICATEDCHANNEL \_ Query- \_ Ausgabe**](d3dauthenticatedchannel-query-output.md) Struktur, die eine Nachrichtenauthentifizierungscode (Mac) und andere Daten enthält.
+Eine [**D3DAUTHENTICATEDCHANNEL-ABFRAGEAUSGABEstruktur, \_ \_**](d3dauthenticatedchannel-query-output.md) die einen Nachrichtenauthentifizierungscode (MAC) und andere Daten enthält.
 
 </dd> <dt>
 
-**Numunrestrictedprotectedsharedresources**
+**NumUnrestrictedProtectedSharedResources**
 </dt> <dd>
 
-Die Anzahl geschützter, gemeinsam genutzter Ressourcen, die von einem beliebigen Prozess ohne Einschränkungen geöffnet werden können.
+Die Anzahl der geschützten, freigegebenen Ressourcen, die von jedem Prozess ohne Einschränkungen geöffnet werden können.
 
 </dd> </dl>
 
@@ -62,9 +62,9 @@ Die Anzahl geschützter, gemeinsam genutzter Ressourcen, die von einem beliebige
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
@@ -72,10 +72,10 @@ Die Anzahl geschützter, gemeinsam genutzter Ressourcen, die von einem beliebige
 
 <dl> <dt>
 
-[Direct3D-Video Strukturen](direct3d-video-structures.md)
+[Direct3D-Videostrukturen](direct3d-video-structures.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
+[**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 </dt> </dl>
 
  

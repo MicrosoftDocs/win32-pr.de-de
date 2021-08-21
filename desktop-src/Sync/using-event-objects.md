@@ -13,11 +13,11 @@ ms.locfileid: "117765331"
 ---
 # <a name="using-event-objects-synchronization"></a>Verwenden von Ereignisobjekten (Synchronisierung)
 
-Anwendungen können [Ereignisobjekte](event-objects.md) in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen. Beispielsweise verwenden überlappende E/A-Vorgänge für Dateien, Named Pipes und Kommunikationsgeräte ein Ereignisobjekt, um ihren Abschluss zu signalisieren. Weitere Informationen zur Verwendung von Ereignisobjekten in überlappende E/A-Vorgänge finden Sie unter [Synchronization and Overlapped Input and Output](synchronization-and-overlapped-input-and-output.md).
+Anwendungen können [Ereignisobjekte](event-objects.md) in einer Reihe von Situationen verwenden, um einen wartenden Thread über das Auftreten eines Ereignisses zu benachrichtigen. Beispielsweise verwenden überlappende E/A-Vorgänge für Dateien, Named Pipes und Kommunikationsgeräte ein Ereignisobjekt, um deren Abschluss zu signalisieren. Weitere Informationen zur Verwendung von Ereignisobjekten in überlappenden E/A-Vorgängen finden Sie unter Synchronisierung und [überlappende Eingabe und Ausgabe.](synchronization-and-overlapped-input-and-output.md)
 
 Im folgenden Beispiel werden Ereignisobjekte verwendet, um zu verhindern, dass mehrere Threads aus einem Shared Memory-Puffer lesen, während ein Masterthread in diesen Puffer schreibt. Zunächst verwendet der Masterthread die [**CreateEvent-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createeventa) um ein Ereignisobjekt mit manueller Zurücksetzung zu erstellen, dessen Anfangszustand nicht signalisiert ist. Anschließend werden mehrere Readerthreads erstellt. Der Masterthread führt einen Schreibvorgang aus und legt dann das Ereignisobjekt auf den signalisierten Zustand fest, wenn das Schreiben abgeschlossen ist.
 
-Bevor ein Lesevorgang gestartet wird, verwendet jeder Readerthread [**WaitForSingleObject,**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) um zu warten, bis das Ereignisobjekt für manuelles Zurücksetzen signalisiert wird. Wenn **WaitForSingleObject** zurückgegeben wird, gibt dies an, dass der Hauptthread bereit ist, mit dem Lesevorgang zu beginnen.
+Vor dem Starten eines Lesevorgang verwendet jeder Readerthread [**WaitForSingleObject,**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) um zu warten, bis das Ereignisobjekt für die manuelle Zurücksetzung signalisiert wird. Wenn **WaitForSingleObject zurückgegeben** wird, gibt dies an, dass der Hauptthread bereit ist, den Lesevorgang zu starten.
 
 
 ```C++

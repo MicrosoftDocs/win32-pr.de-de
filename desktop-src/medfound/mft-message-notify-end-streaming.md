@@ -1,33 +1,33 @@
 ---
-description: Fordert eine Media Foundation Transformation (MFT) an, um das Streaming zu beenden.
+description: Fordert eine Media Foundation-Transformation (MFT) an, damit das Streaming beendet wird.
 ms.assetid: df313a66-e80f-499c-a9f2-a7cbaaf0a7d4
-title: MFT_MESSAGE_NOTIFY_END_STREAMING (MF Transform. h)
+title: MFT_MESSAGE_NOTIFY_END_STREAMING (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad2f13635b97db0c6d7751d9648f42b2b4ed8acc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae36412a35dd142efab89f17827b1c9cb6475494ff88f8af800bd8fee65d456f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117871964"
 ---
-# <a name="mft_message_notify_end_streaming"></a>MFT- \_ Nachrichten Nachrichten \_ Ende- \_ \_ Streaming
+# <a name="mft_message_notify_end_streaming"></a>MFT \_ MESSAGE \_ NOTIFY \_ END \_ STREAMING
 
-Fordert eine Media Foundation Transformation (MFT) an, um das Streaming zu beenden.
+Fordert eine Media Foundation-Transformation (MFT) an, damit das Streaming beendet wird.
 
 ## <a name="message-parameter"></a>Message-Parameter
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Nachricht zu senden, nennen Sie [**imftransform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage).
+Um diese Nachricht zu senden, rufen Sie [**ÜBERTRANSFORM::P rocessMessage auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage)
 
-Der Client ist nicht verpflichtet, diese Nachricht zu senden, auch wenn der Client die Meldung zum Starten des Nachrichten Nachrichten dienstanterings zuvor gesendet hat. **\_ \_ \_ \_**
+Der Client muss diese Nachricht nicht senden, auch wenn der Client zuvor die **MFT \_ MESSAGE NOTIFY \_ BEGIN \_ \_ STREAMING-Nachricht** gesendet hat.
 
 ### <a name="implementation"></a>Implementierung
 
-Die MFT kann auf diese Nachricht reagieren, indem Puffer und andere Ressourcen freigegeben werden. Die MFT leert keine Eingabedaten oder setzt die Medientypen als Reaktion auf diese Nachricht zurück. Ein MFT ist nicht erforderlich, um auf diese Nachricht zu reagieren.
+Der MFT kann auf diese Nachricht reagieren, indem Puffer und andere Ressourcen freigegeben werden. Der MFT leert keine Eingabedaten und setzt die Medientypen nicht als Reaktion auf diese Nachricht zurück. Ein MFT ist nicht erforderlich, um auf diese Nachricht zu reagieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Die MFT kann auf diese Nachricht reagieren, indem Puffer und andere Ressourcen f
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Die MFT kann auf diese Nachricht reagieren, indem Puffer und andere Ressourcen f
 
 <dl> <dt>
 
-[**MFT \_ - \_ Nachrichtentyp**](/windows/desktop/api/mftransform/ne-mftransform-mft_message_type)
+[**\_MFT-NACHRICHTENTYP \_**](/windows/desktop/api/mftransform/ne-mftransform-mft_message_type)
 </dt> </dl>
 
  

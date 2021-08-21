@@ -1,11 +1,11 @@
 ---
-title: IWMPClosedCaption2 getsamilangname-Methode
-description: Die getsamilangname-Methode gibt den Namen einer Sprache zurück, die von der aktuellen Sami-Datei unterstützt wird.
+title: IWMPClosedCaption2 getSAMILangName-Methode
+description: Die getSAMILangName-Methode gibt den Namen einer Sprache zurück, die von der aktuellen SAMI-Datei unterstützt wird.
 ms.assetid: 52aaf1cc-89ef-4c4c-af43-3f88dc4a9539
 keywords:
-- getsamilangname-Methode, Windows Media Player
-- getsamilangname-Methode, Windows Media Player, IWMPClosedCaption2-Schnittstelle
-- IWMPClosedCaption2 Interface Windows Media Player, getsamilangname-Methode
+- getSAMILangName-Windows Media Player
+- getSAMILangName-Methode Windows Media Player , IWMPClosedCaption2-Schnittstelle
+- IWMPClosedCaption2-Schnittstelle Windows Media Player , getSAMILangName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e50df643fdd6b665de1275873fb8de9d5d094a42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 99941c7c8c62480ea13572b22083a2d64bda9924cdf3d26200dbc9ac6ba9bdf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117930303"
 ---
-# <a name="iwmpclosedcaption2getsamilangname-method"></a>IWMPClosedCaption2:: getsamilangname-Methode
+# <a name="iwmpclosedcaption2getsamilangname-method"></a>IWMPClosedCaption2::getSAMILangName-Methode
 
-Die **getsamilangname** -Methode gibt den Namen einer Sprache zurück, die von der aktuellen Sami-Datei unterstützt wird.
+Die **getSAMILangName-Methode** gibt den Namen einer Sprache zurück, die von der aktuellen SAMI-Datei unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPClosedCaption2.getSAMILangName
 
 <dl> <dt>
 
-*nIndex* \[ in\]
+*nIndex* \[ In\]
 </dt> <dd>
 
-**Ein System. Int32** -Wert, der der null basierte Index des abzurufenden sprach namens ist.
+**Ein System.Int32,** das der nullbasierte Index des abzurufenden Sprachnamens ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **System. String** , bei der es sich um den Namen der Sprache handelt, wie in der Sami-Datei angegeben.
+Eine **System.String-Datei,** die der Name der Sprache ist, wie in der SAMI-Datei angegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sprachen in einer Sami-Datei werden in der in der Datei gezeigten Reihenfolge indiziert, beginnend mit 0 (null).
+Die Sprachen in einer SAMI-Datei werden in der Reihenfolge indiziert, die in der Datei angezeigt wird, beginnend mit 0 (null).
 
-Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück (""), es sei denn, eine digitale Mediendatei ist geöffnet (AxWindowsMediaPlayer. openstate ist gleich 13).
+Diese Methode gibt eine Zeichenfolge der Länge 0 ("") zurück, es sei denn, eine digitale Mediendatei ist geöffnet (AxWindowsMediaPlayer.openState ist gleich 13).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,20 +82,20 @@ Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück (""), es sei de
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption. samilang (VB und c#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-samilang--vb-and-c.md)
+[**IWMPClosedCaption.SAMILang (VB und C#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-samilang--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

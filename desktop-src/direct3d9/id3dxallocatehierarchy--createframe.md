@@ -1,7 +1,7 @@
 ---
-description: Fordert die Zuordnung eines Frame Objekts an.
+description: Fordert die Zuordnung eines Frameobjekts an.
 ms.assetid: 977e40d6-bf49-44b6-ac95-88e7f778ea50
-title: 'ID3DXAllocateHierarchy:: kreateframe-Methode (D3dx9anim. h)'
+title: ID3DXAllocateHierarchy::CreateFrame-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d6a3a13dd4d3b3dfaffb26632ff6ad5cc8666f86
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: eec258c7f1166532d6ad79671e55ddae76da58ec20a927c87743def8cb78f6b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118094636"
 ---
-# <a name="id3dxallocatehierarchycreateframe-method"></a>ID3DXAllocateHierarchy:: kreateframe-Methode
+# <a name="id3dxallocatehierarchycreateframe-method"></a>ID3DXAllocateHierarchy::CreateFrame-Methode
 
-Fordert die Zuordnung eines Frame Objekts an.
+Fordert die Zuordnung eines Frameobjekts an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT CreateFrame(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name des Frames, der erstellt werden soll.
+Name des zu erstellenden Frames.
 
 </dd> <dt>
 
-*ppnewframe* \[ Out, retval\]
+*ppNewFrame* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)\***
 
-Gibt das erstellte Frame Objekt zurück.
+Gibt das erstellte Frameobjekt zurück.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Gibt das erstellte Frame Objekt zurück.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die Methode, um eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückzugeben, da dies dazu führt, dass [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) ebenfalls fehlschlägt, und gibt den Fehler zurück.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückzugeben, da dies dazu führt, dass [**auch D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt, und den Fehler zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

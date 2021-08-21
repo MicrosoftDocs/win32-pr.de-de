@@ -1,5 +1,5 @@
 ---
-description: Dieses Thema zeigt Beispielcode, der den Windows Media Audio (WMA)-Encoder in einer C++-Klasse namens CWmaEncoder umschließt.
+description: In diesem Thema wird ein Beispielcode gezeigt, der den Windows Media Audio-Encoder (WMA) in einer C++-Klasse namens CWmaEncoder umschließt.
 ms.assetid: 59bd5b6a-86fe-4d39-ab7c-9563ac1a8e94
 title: Encoder-Beispielcode
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117879434"
 ---
 # <a name="encoder-example-code"></a>Encoder-Beispielcode
 
-In diesem Thema wird ein Beispielcode gezeigt, der den Windows Media Audio (WMA)-Encoder in einer C++-Klasse namens `CWmaEncoder` umschließt.
+In diesem Thema wird ein Beispielcode gezeigt, der den Windows Media Audio-Encoder (WMA) in einer C++-Klasse namens `CWmaEncoder` umschließt.
 
 -   [Klassendeklaration](#class-declaration)
 -   [Initialisieren](#initialize)
@@ -28,9 +28,9 @@ In diesem Thema wird ein Beispielcode gezeigt, der den Windows Media Audio (WMA)
 
 Auf diesen Code wird in mehreren Themen verwiesen:
 
--   [Tutorial: Schreiben einer WMA-Datei mit CBR-Codierung](tutorial--writing-a-wma-file-by-using-cbr-encoding.md)
+-   [Tutorial: Schreiben einer WMA-Datei mithilfe der CBR-Codierung](tutorial--writing-a-wma-file-by-using-cbr-encoding.md)
 
-In Media Foundation werden Encoder als Media Foundation [Transforms](media-foundation-transforms.md) (MFTs) implementiert und machen die [**DURCHSICHTTransform-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) verfügbar.
+In Media Foundation werden Encoder als [Media Foundation Transformationen](media-foundation-transforms.md) (MFTs) implementiert und machen die [**INTERFACESTransform-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) verfügbar.
 
 ## <a name="class-declaration"></a>Klassendeklaration
 
@@ -432,7 +432,7 @@ HRESULT CWmaEncoder::Drain()
 
 <dl> <dt>
 
-[Tutorial: Schreiben einer WMA-Datei mit CBR-Codierung](tutorial--writing-a-wma-file-by-using-cbr-encoding.md)
+[Tutorial: Schreiben einer WMA-Datei mithilfe der CBR-Codierung](tutorial--writing-a-wma-file-by-using-cbr-encoding.md)
 </dt> <dt>
 
 [Windows Media-Codecs](windows-media-codecs.md)

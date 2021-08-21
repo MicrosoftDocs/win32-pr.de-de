@@ -1,7 +1,7 @@
 ---
-description: Führt einen Shader vor, ohne eine Kompilierung auszuführen. Dadurch werden alle \# Definitionen und \# includes aufgelöst, und es wird ein eigenständiger Shader für die nachfolgende Kompilierung bereitgestellt.
+description: Verarbeitet einen Shader vor, ohne kompilieren zu müssen. Dies löst alle \# Definitionen und \# Includes auf und stellt einen eigenständigen Shader für die nachfolgende Kompilierung zur Verfügung.
 ms.assetid: d91258ed-6206-487a-aa81-e7c2bcea21ea
-title: D3DXPreprocessShader-Funktion (D3DX9Shader. h)
+title: D3DXPreprocessShader-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,19 +14,19 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 042cebe4e678ac1715a37ec3425ec0f21561797c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 20140b531990c9409ca02312d4dd338e3eff2ba87a699fd34fe5326c5603e3df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117910473"
 ---
 # <a name="d3dxpreprocessshader-function"></a>D3DXPreprocessShader-Funktion
 
-Führt einen Shader vor, ohne eine Kompilierung auszuführen. Dadurch werden alle \# Definitionen und \# includes aufgelöst, und es wird ein eigenständiger Shader für die nachfolgende Kompilierung bereitgestellt.
+Verarbeitet einen Shader vor, ohne kompilieren zu müssen. Dies löst alle \# Definitionen und \# Includes auf und stellt einen eigenständigen Shader für die nachfolgende Kompilierung zur Verfügung.
 
 > [!Note]  
-> Anstatt diese Legacy Funktion zu verwenden, empfiehlt es sich, die [**D3DPreprocess**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dpreprocess) -API zu verwenden.
+> Anstatt diese Legacyfunktion zu verwenden, wird empfohlen, die [**D3DPreprocess-API zu**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dpreprocess) verwenden.
 
  
 
@@ -50,7 +50,7 @@ HRESULT D3DXPreprocessShader(
 
 <dl> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
@@ -59,48 +59,48 @@ Zeiger auf eine Zeichenfolge, die den Shader enthält.
 
 </dd> <dt>
 
-*Srcdatasize* \[ in\]
+*SrcDataSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Länge der Daten in Bytes.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefdefine* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMACRO**](d3dxmacro.md) \***
+Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **null** terminiertes Array von [**D3DXMACRO**](d3dxmacro.md) -Strukturen. Dieser Wert kann **null** sein.
+Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum Verarbeiten von include-Direktiven verwendet werden soll \# . Wenn dieser Wert **null** ist, \# wird includes bei der Kompilierung aus einer Datei berücksichtigt, oder es wird ein Fehler ausgelöst, wenn eine Kompilierung aus einer Ressource oder einem Arbeitsspeicher erfolgt.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder beim Kompilieren aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
 
 </dd> <dt>
 
-*ppshadertext* \[ vorgenommen\]
+*ppShaderText* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer mit einer einzelnen großen Zeichenfolge zurück, die den resultierenden formatierten Tokenstream darstellt.
+Gibt einen Puffer zurück, der eine einzelne große Zeichenfolge enthält, die den resultierenden formatierten Tokenstream darstellt.
 
 </dd> <dt>
 
-*pperrormsgs* \[ vorgenommen\]
+*ppErrorMsgs* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung gefunden wurden. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **null** sein.
+Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann NULL **sein.**
 
 </dd> </dl>
 
@@ -108,7 +108,7 @@ Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthäl
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,12 +116,12 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: Hebt die Registrierung einer appbar auf, indem Sie aus der internen Liste des Systems entfernt wird. Das System sendet keine Benachrichtigungs Meldungen mehr an die appbar oder verhindert, dass andere Anwendungen den von der appbar verwendeten Bildschirmbereich verwenden.
-title: ABM_REMOVE Meldung (shellapi. h)
+description: Die Registrierung einer App-Leiste wird aufgehoben, indem sie aus der internen Liste des Systems entfernt wird. Das System sendet keine Benachrichtigungen mehr an die App-Leiste oder verhindert, dass andere Anwendungen den von der App-Leiste verwendeten Bildschirmbereich verwenden.
+title: ABM_REMOVE (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 3da73a52-3dbb-4133-a9bd-86540e1c4154
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 7f4530869b9f68772c28fefd6130ff8e4b6ffbec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c32fd2c7a12fc8146a01d3722b31b46bad01f61b526397806a5121b7381b069e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861707"
 ---
-# <a name="abm_remove-message"></a>ABM \_ Entfernungs Meldung
+# <a name="abm_remove-message"></a>ABM \_ REMOVE-Nachricht
 
-Hebt die Registrierung einer appbar auf, indem Sie aus der internen Liste des Systems entfernt wird. Das System sendet keine Benachrichtigungs Meldungen mehr an die appbar oder verhindert, dass andere Anwendungen den von der appbar verwendeten Bildschirmbereich verwenden.
+Die Registrierung einer App-Leiste wird aufgehoben, indem sie aus der internen Liste des Systems entfernt wird. Das System sendet keine Benachrichtigungen mehr an die App-Leiste oder verhindert, dass andere Anwendungen den von der App-Leiste verwendeten Bildschirmbereich verwenden.
 
 
 ```C++
@@ -39,27 +39,27 @@ Hebt die Registrierung einer appbar auf, indem Sie aus der internen Liste des Sy
 *pabd* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur, die das Handle für die APP-Leiste enthält, deren Registrierung aufgehoben werden soll. Beim Senden dieser Nachricht müssen Sie die **CBSIZE** -und **HWND** -Elemente angeben. alle anderen Member werden ignoriert.
+Ein Zeiger auf eine [**APPBARDATA-Struktur,**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) die das Handle für die App-Leiste enthält, deren Registrierung aufgehoben werden soll. Sie müssen beim Senden **dieser Nachricht die Member cbSize** und **hWnd** angeben. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **true** zurück.
+Gibt immer **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung bewirkt, dass das System die [**ABN \_**](abn-poschanged.md) -Benachrichtigungs Meldung an alle appbars sendet.
+Diese Meldung bewirkt, dass das System die [**ABN \_ POSCHANGED-Benachrichtigungsnachricht**](abn-poschanged.md) an alle App-Leisten sendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

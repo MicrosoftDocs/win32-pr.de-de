@@ -18,17 +18,17 @@ ms.locfileid: "117852027"
 **Clients –** Windows 8.1 (alle SKUs)  
 **Server –** Windows Server 2012 R2  
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Das NTFS-Team (NT File System) hat dem System ein neues Feature Windows. Das USN-Journal gibt einen USN-Datensatz (Update Sequence Number) aus, der geänderte Bereiche für eine Datei enthält, wenn er geschlossen wird. Der neue Datensatztyp USN RECORD V4 wurde eingeführt, um \_ \_ diese geänderten Bereiche einer Datei zu erfassen.
+Das NTFS-Team (NT File System) hat Windows ein neues Feature hinzugefügt. Das USN-Journal gibt beim Schließen einen DATENSATZ mit der Updatesequenznummer (USN) aus, der geänderte Bereiche für eine Datei enthält. Der neue Eintragstyp USN \_ RECORD \_ V4 wurde eingeführt, um diese geänderten Bereiche einer Datei aufzuzeichnen.
 
-Das Feature ist nicht standardmäßig aktiviert. Benutzer müssen einen FSCTL-Befehl (File System Control) aufrufen, um ihn zu aktivieren. Da jedoch andere Windows-Komponenten die Bereichsnachverfolgung aktivieren können, können Benutzer und Entwickler erkennen, dass das Feature immer aktiviert ist. Windows können Entwickler das USN-Journal abfragen, um herauszufinden, ob die Bereichsnachverfolgung aktiviert ist.
+Das Feature ist standardmäßig nicht aktiviert. Benutzer müssen einen FSCTL-Befehl (File System Control) aufrufen, um ihn zu aktivieren. Da jedoch andere Windows Komponenten die Bereichsnachverfolgung aktivieren können, werden Benutzer und Entwickler möglicherweise feststellen, dass das Feature immer aktiviert ist. Windows können Entwickler das USN-Journal abfragen, um herauszufinden, ob die Bereichsnachverfolgung aktiviert ist.
 
-Die MSDN-Dokumentation wird zu einem späteren Zeitpunkt bereitgestellt, um Entwickler anweisen zu lassen, wie sie auf USN \_ RECORD \_ V4-Datensätze zugreifen können.
+Die MSDN-Dokumentation wird zu einem späteren Zeitpunkt bereitgestellt, um Entwickler anzuweisen, auf USN \_ RECORD \_ V4-Datensätze zuzugreifen.
 
 ## <a name="manifestation"></a>Manifestation
 
-Alle vorhandenen Anwendungen, die USN Journal verwenden, funktionieren weiterhin ohne Kompatibilitätsprobleme.
+Alle vorhandenen Anwendungen, die das USN Journal verwenden, funktionieren weiterhin ohne Kompatibilitätsprobleme gut.
 
  
 

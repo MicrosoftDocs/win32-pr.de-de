@@ -1,9 +1,9 @@
 ---
-title: LDE XP (corecrt \_ Math. h)
-description: Gibt das Ergebnis der Multiplikation des angegebenen Werts mit zwei Werten zurück, die auf die Potenz des angegebenen Exponenten zurückzuführen sind.
+title: ldexp (Corecrt \_ math.h)
+description: Gibt das Ergebnis der Multiplikation des angegebenen Werts mit zwei zurück, das mit der Potenz des angegebenen Exponenten potenziert wird.
 ms.assetid: 6d6fee96-f952-4058-a1ac-3abb98dbd540
 keywords:
-- LDE XP HLSL
+- ldexp HLSL
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 731cb5cbf933ea3f8754a7d70b9ef0b7a54e783b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 72fd5514e7fd942527931050d7f3efda33158d08329972900f836fe41e6822b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726268"
 ---
 # <a name="ldexp"></a>ldexp
 
-Gibt das Ergebnis der Multiplikation des angegebenen Werts mit zwei Werten zurück, die auf die Potenz des angegebenen Exponenten zurückzuführen sind.
+Gibt das Ergebnis der Multiplikation des angegebenen Werts mit zwei zurück, das mit der Potenz des angegebenen Exponenten potenziert wird.
 
 
 
-| *ret* LDE XP (*x*, *Exp*) |
+| *ret* ldexp(*x*, *exp*) |
 |-------------------------|
 
 
 
  
 
-Diese Funktion verwendet die folgende Formel: *x* \* 2 <sup>Exp</sup>
+Diese Funktion verwendet die folgende Formel: *x* \* 2 <sup>exp</sup>
 
 ## <a name="parameters"></a>Parameter
 
 
 
-| Element                                                         | BESCHREIBUNG                               |
+| Element                                                         | Beschreibung                               |
 |--------------------------------------------------------------|-------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/>       | \[im \] angegebenen Wert.<br/>    |
-| <span id="exp"></span><span id="EXP"></span>*Exp*<br/> | \[im \] angegebenen Exponenten.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/>       | \[in \] Der angegebene Wert.<br/>    |
+| <span id="exp"></span><span id="EXP"></span>*Exp*<br/> | \[in \] Der angegebene Exponent.<br/> |
 
 
 
@@ -51,7 +51,7 @@ Diese Funktion verwendet die folgende Formel: *x* \* 2 <sup>Exp</sup>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis der Multiplikation des *x* -Parameters mit zwei Werten, die durch den *Exp* -Parameter ausgelöst werden.
+Das Ergebnis der Multiplikation des *x-Parameters* mit zwei, das mit der Leistung des *exp-Parameters ausgelöst* wird.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -59,36 +59,36 @@ Das Ergebnis der Multiplikation des *x* -Parameters mit zwei Werten, die durch d
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *exp* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *exp* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
@@ -96,7 +96,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

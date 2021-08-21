@@ -1,9 +1,9 @@
 ---
-title: EM_SETRECTNP (Winuser.h)
-description: 'EM_SETRECTNP Meldung: Legt das Formatierungsrechteck eines mehrzweckigen Bearbeitungssteuer steuerelements fest.'
+title: EM_SETRECTNP-Nachricht (Winuser.h)
+description: 'EM_SETRECTNP Meldung: Legt das Formatierungsrechteck eines mehrzeiligen Bearbeitungssteuerelements fest.'
 ms.assetid: 1ab497ca-023f-4c26-b92d-b441a0d7b90c
 keywords:
-- EM_SETRECTNP Meldung Windows-Steuerelemente
+- EM_SETRECTNP Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9a8c85d4f7abd58ed3adb33ede66254c190a7bb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 60341a41706f012064d3b7cbc79aa019f1492c3a8d535866fa51fc7ea8dfd437
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831131"
 ---
 # <a name="em_setrectnp-message"></a>EM \_ SETRECTNP-Nachricht
 
-Legt das [Formatierungsrechteck eines](about-edit-controls.md) mehrzweckigen Bearbeitungssteuer steuerelements fest. Die **EM \_ SETRECTNP-Nachricht** ist mit der [**EM \_ SETRECT-Nachricht**](em-setrect.md) identisch, außer dass **EM \_ SETRECTNP** das Bearbeitungssteuersteuerfenster nicht neu gezeichnet hat. 
+Legt das [Formatierungsrechteck](about-edit-controls.md) eines mehrzeiligen Bearbeitungssteuerelements fest. Die **EM \_ SETRECTNP-Nachricht** ist mit der [**EM \_ SETRECT-Nachricht**](em-setrect.md) identisch, mit der Ausnahme, dass **EM \_ SETRECTNP** das Bearbeitungssteuerelementfenster *nicht* neu zeichnet.
 
-Das Formatierungrechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das einschränkende Rechteck ist unabhängig von der Größe des Bearbeitungssteuerfensters.
+Das Formatierungsrechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das einschränkende Rechteck ist unabhängig von der Größe des Bearbeitungssteuerelementfensters.
 
-Diese Meldung wird nur von mehrline-Bearbeitungssteuerelementen verarbeitet. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
+Diese Meldung wird nur von mehrzeiligen Bearbeitungssteuerelementen verarbeitet. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -38,14 +38,14 @@ Diese Meldung wird nur von mehrline-Bearbeitungssteuerelementen verarbeitet. Sie
 
 **Rich Edit 3.0 und höher:** Gibt an, ob das neue Rechteck absolute oder relative Koordinaten enthält. Der Wert 0 (null) gibt absolute Koordinaten an. Der Wert 1 gibt Offsets relativ zum aktuellen Formatierungsrechteck an. (Die Offsets können positiv oder negativ sein.)
 
-**Steuerelemente bearbeiten:** Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
+**Bearbeiten von Steuerelementen:** Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die neuen Dimensionen des Rechtecks angibt. Wenn dieser Parameter **NULL ist,** wird das Formatierungsrechteck auf seine Standardwerte festgelegt.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die neuen Dimensionen des Rechtecks angibt. Wenn dieser Parameter **NULL** ist, wird das Formatierungsrechteck auf die Standardwerte festgelegt.
 
 </dd> </dl>
 
@@ -53,27 +53,27 @@ Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) 
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 3.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
+**Rich Edit:** Wird in Microsoft Rich Edit 3.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**EM \_ SETRECT**](em-setrect.md)

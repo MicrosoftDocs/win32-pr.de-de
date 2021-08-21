@@ -1,23 +1,23 @@
 ---
-description: Der folgende Code implementiert eine Producer/Consumer-Warteschlange.
+description: Der folgende Code implementiert eine Producer-/Consumerwarteschlange.
 ms.assetid: 0f79de15-6ce9-4d89-afb5-b4a2f0cf2fe3
-title: Verwenden von Bedingungs Variablen
+title: Verwenden von Bedingungsvariablen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70989ca0f62271aa5afabfd60deddaeca2187866
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c1b1bda85e0e5efecaf1572637601bc0031ac04cb91b6f7de735e1ca8590e31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765544"
 ---
-# <a name="using-condition-variables"></a>Verwenden von Bedingungs Variablen
+# <a name="using-condition-variables"></a>Verwenden von Bedingungsvariablen
 
-Der folgende Code implementiert eine Producer/Consumer-Warteschlange. Die Warteschlange wird als begrenzter Zirkel Puffer dargestellt und durch einen kritischen Abschnitt geschützt. Der Code verwendet zwei Bedingungs Variablen: einen von Producer ( `BufferNotFull` ) und einen, der von Consumern () verwendet wird `BufferNotEmpty` .
+Der folgende Code implementiert eine Producer-/Consumerwarteschlange. Die Warteschlange wird als begrenzter Kreispuffer dargestellt und durch einen kritischen Abschnitt geschützt. Der Code verwendet zwei Bedingungsvariablen: eine von Producern ( `BufferNotFull` ) und eine von Consumern ( `BufferNotEmpty` ).
 
-Der Code Ruft die [**InitializeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) -Funktion auf, um die Bedingungs Variablen zu erstellen. Die Consumerthreads aufrufen die Funktion " [**SleepConditionVariableCS**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablecs) ", um zu warten, bis Elemente der Warteschlange hinzugefügt werden, und die Funktion " [**WakeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable) ", um dem Producer zu signalisieren, dass Sie für weitere Elemente bereit ist. Die Producer-Threads aufrufen " **SleepConditionVariableCS** ", um zu warten, bis der Consumer Elemente aus der Warteschlange entfernt hat und " **WakeConditionVariable** ", um dem Consumer zu signalisieren, dass es mehr Elemente in der Warteschlange gibt
+Der Code ruft die [**InitializeConditionVariable-Funktion**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) auf, um die Bedingungsvariablen zu erstellen. Die Consumerthreads rufen die [**SleepConditionVariableCS-Funktion**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablecs) auf, um auf das Hinzufügen von Elementen zur Warteschlange zu warten, und die [**WakeConditionVariable-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable) um dem Producer zu signalisieren, dass er für weitere Elemente bereit ist. Die Producerthreads rufen **SleepConditionVariableCS** auf, um zu warten, bis der Consumer Elemente aus der Warteschlange entfernt, und **WakeConditionVariable,** um dem Consumer zu signalisieren, dass sich weitere Elemente in der Warteschlange befinden.
 
-**Windows Server 2003 und Windows XP:** Bedingungs Variablen werden nicht unterstützt.
+**Windows Server 2003 und Windows XP:** Bedingungsvariablen werden nicht unterstützt.
 
 
 ```C++
@@ -177,7 +177,7 @@ int main ( void )
 
 <dl> <dt>
 
-[Bedingungs Variablen](condition-variables.md)
+[Bedingungsvariablen](condition-variables.md)
 </dt> </dl>
 
  

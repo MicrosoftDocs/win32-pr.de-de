@@ -1,22 +1,22 @@
 ---
-description: Die bekannte \_ \_ bezeichnerklasse verweist auf eine Pseudo Eigenschaft auf jedem WMI-Objekt, das die Klasse des aktuellen-Objekts angibt.
+description: Der bekannte Bezeichner \_ \_ CLASS bezieht sich auf eine Pseudoeigenschaft für jedes WMI-Objekt, das die Klasse des aktuellen Objekts angibt.
 ms.assetid: a1d0e934-c5b5-4554-9d6e-3881064419ca
 ms.tgt_platform: multiple
-title: __CLASS Bezeichner
+title: __CLASS-Bezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0b4db6cacb6943619cf6468cf7f03d4a4c08278
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6aa2f40d95d0476bf139aebd3cc6eefe8a34782a48bec311f2a40e1f861ec27c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118110744"
 ---
-# <a name="__class-identifier"></a>\_\_Klassen Bezeichner
+# <a name="__class-identifier"></a>\_\_KLASSENbezeichner
 
-Die bekannte \_ \_ bezeichnerklasse verweist auf eine Pseudo Eigenschaft auf jedem WMI-Objekt, das die Klasse des aktuellen-Objekts angibt.
+Der bekannte Bezeichner \_ \_ CLASS bezieht sich auf eine Pseudoeigenschaft für jedes WMI-Objekt, das die Klasse des aktuellen Objekts angibt.
 
-Verwenden Sie \_ \_ die-Klasse in einer [Where](where-clause.md) -Klausel, um alle Objekte abgeleiteter Klassen aus dem Resultset herauszufiltern. Das Resultset der folgenden Abfrage enthält z. b. nicht nur Objekte, deren Klasse [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)ist, sondern auch Objekte, deren Klasse von **Win32 \_ LogicalDisk** abgeleitet ist.
+Verwenden Sie \_ \_ CLASS in einer [WHERE-Klausel,](where-clause.md) um objekte abgeleiteter Klassen aus dem Resultset herauszufiltern. Das Resultset der folgenden Abfrage enthält beispielsweise nicht nur Objekte, deren Klasse [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)ist, sondern auch Objekte, deren Klasse von **Win32 \_ LogicalDisk** abgeleitet ist.
 
 
 ```sql
@@ -25,7 +25,7 @@ SELECT * FROM Win32_LogicalDisk
 
 
 
-Im folgenden Beispiel filtert die Verwendung der- \_ \_ Klasse in der **Where** -Klausel alle Objekte von Klassen, die von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) abgeleitet werden, da Ihre Klasse nicht **Win32 \_ LogicalDisk** ist.
+Im folgenden Beispiel filtert die Verwendung von \_ \_ CLASS in der **WHERE-Klausel** alle Objekte von Klassen heraus, die von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) abgeleitet wurden, da ihre Klasse nicht **Win32 \_ LogicalDisk** ist.
 
 
 ```sql
@@ -34,7 +34,7 @@ SELECT * FROM Win32_LogicalDisk   WHERE __CLASS = "Win32_LogicalDisk"
 
 
 
-Verwenden \_ \_ Sie die-Klasse in Anbietern, die zur Bereitstellung von Instanzen einer bestimmten Klasse aufgefordert werden, unabhängig von den Unterklassen.
+Verwenden Sie \_ \_ CLASS in Anbietern, die aufgefordert werden, Instanzen einer bestimmten Klasse unabhängig von Unterklassen bereitzustellen.
 
  
 

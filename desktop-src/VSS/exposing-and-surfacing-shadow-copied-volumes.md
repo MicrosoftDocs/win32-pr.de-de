@@ -1,33 +1,33 @@
 ---
-description: Zusätzlich zu dem Zugriff über die IVssBackupComponents-Schnittstelle über das Geräte Objekt der Kopie kann ein Anforderer eine Schatten Kopie für andere Prozesse als ein bereitgestelltes Schreib geschütztes Gerät verfügbar machen.
+description: Zusätzlich zum Zugriff über die IVssBackupComponents-Schnittstelle über das Geräteobjekt seiner Kopie kann ein Anfordernder eine Schattenkopie anderen Prozessen als bereitgestelltes schreibgeschütztes Gerät zur Verfügung stellen.
 ms.assetid: 0898c2dc-992a-411b-81df-4f5e129f6a80
-title: Verfügbar machen und überwinden von schattenkopierten Volumes
+title: Verfügbar machen und Schattenkopien von Volumes verfügbar machen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d684aa9b696facaf1caa3aa3102c6b1d7fc37409
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 075d22757f5e3bf0bdb81578134d7f0a08ebfb2265edfc4ac8f3d94eecff1a28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117938255"
 ---
-# <a name="exposing-and-surfacing-shadow-copied-volumes"></a>Verfügbar machen und überwinden von schattenkopierten Volumes
+# <a name="exposing-and-surfacing-shadow-copied-volumes"></a>Verfügbar machen und Schattenkopien von Volumes verfügbar machen
 
-Zusätzlich zu dem Zugriff über die [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle über das [*Geräte Objekt*](vssgloss-d.md)der Kopie kann ein Anforderer eine Schatten Kopie für andere Prozesse als ein bereitgestelltes Schreib geschütztes Gerät verfügbar machen.
+Zusätzlich zum Zugriff über die [**IVssBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) über [](vssgloss-d.md)das Geräteobjekt seiner Kopie kann ein An anfordernder Benutzer eine Schattenkopie anderen Prozessen als bereitgestelltes schreibgeschütztes Gerät zur Verfügung stellen.
 
-Dieser Prozess wird als verfügbar machen [*einer Schatten Kopie*](vssgloss-e.md)bezeichnet und mithilfe der [**IVssBackupComponents:: exposesnapshot**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-exposesnapshot) -Methode ausgeführt.
+Dieser Prozess wird als [*Verfügbarstellen*](vssgloss-e.md)einer Schattenkopie bezeichnet und mithilfe der [**IVssBackupComponents::ExposeSnapshot-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-exposesnapshot) ausgeführt.
 
-Eine Schatten Kopie kann als lokales Volume verfügbar gemacht werden – ein Laufwerk Buchstabe zugewiesen oder einem bereitgestellten Ordner – oder als Dateifreigabe zugeordnet.
+Eine Schattenkopie kann als lokales Volume ( einem Laufwerkbuchstaben zugewiesen oder einem bereitgestellten Ordner zugeordnet) oder als Dateifreigabe verfügbar gemacht werden.
 
-Um dies zu veranschaulichen, betrachten Sie eine Schatten Kopie, die auf einem Volume auf dem in F: bereitgestellten System exposedsys enthalten ist \\ .
+Stellen Sie sich zur Veranschaulichung eine Schattenkopie eines Volumes auf dem System vor, die verfügbar gemacht wurdeSys, das in F: bereitgestellt wurde, in dessen Stamm sich die Verzeichnisse dirOne und dirTwo und die Datei \\ FileOne befinden.
 
-## <a name="exposing-a-shadow-copy-locally"></a>Lokales verfügbar machen einer Schatten Kopie
+## <a name="exposing-a-shadow-copy-locally"></a>Lokales Verfügbarstellen einer Schattenkopie
 
-Bei der Bereitstellung als lokales Volume wird der Stamm der Schatten Kopie immer am Einfügepunkt (Laufwerk Buchstabe oder eingebundenes Ordner) angezeigt, und alle Dateien mit Schatten Kopie sind sichtbar.
+Bei der Bereitstellung als lokales Volume ist der Stamm der Schattenkopie immer am Bereitstellungspunkt (Laufwerkbuchstaben oder bereitgestellter Ordner) sichtbar, und alle schattenkopierten Dateien sind sichtbar.
 
-Wenn die Schatten Kopie lokal über den bereitgestellten Ordner C: \\ shadowoff verfügbar gemacht wurde, finden Sie alle Dateien auf dem Datenträger, \\ die zum Zeitpunkt der Bereitstellung von "c: shadowoff" in F: bereitgestellt wurden \\ . Durch die Untersuchung von c: \\ shadowoff werden die beiden Verzeichnisse "dirone" und "dirtwo" und eine Datei ("") unter "c: \\ shadowoff" angezeigt.
+Wenn die Schattenkopie lokal über den bereitgestellten Ordner C: ShadowOfF verfügbar gemacht wird, finden Sie alle Dateien, die auf dem Datenträger vorhanden sind, bereitgestellt unter F: zum Zeitpunkt der Schattenkopie unter \\ \\ C: \\ ShadowOfF. Untersuchung von C: ShadowOfF würde zwei Verzeichnisse, dirOne und dirTwo, und eine \\ Datei, fileOne, unter C: \\ ShadowOfF.
 
-Ein lokaler Befehl zum verfügbar machen der Schatten Kopie könnte wie folgt lauten:
+Ein Aufruf zum lokalen Verfügbar machen der Schattenkopie kann wie die folgenden sein:
 
 ``` syntax
   IVssBackupComponents *pReq;
@@ -44,19 +44,19 @@ Ein lokaler Befehl zum verfügbar machen der Schatten Kopie könnte wie folgt la
        );
 ```
 
-Wenn die Schatten Kopie erfolgreich lokal verfügbar gemacht wurde, sollte *wszexposed* die breit Zeichen-Zeichenfolge "C: \\ shadowoff" enthalten.
+Wenn die Schattenkopie lokal erfolgreich verfügbar gemacht wurde, sollte *wszExposed* die Breitzeichenfolge "C: \\ ShadowOfF" enthalten.
 
-Die Schatten Kopie kann später durch Aufrufen von [**IVssBackupComponentsEx2:: unexposesnapshot**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponentsex2-unexposesnapshot)nicht verfügbar gemacht werden.
+Die Schattenkopie kann später durch Aufrufen von [**IVssBackupComponentsEx2::UnexposeSnapshot**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponentsex2-unexposesnapshot)nicht mehr verfügbar sein.
 
-Nur persistente Schatten Kopien – d. h. Schatten Kopien, die entweder mit einem VSS \_ ctx \_ NAS- \_ Rollback oder einem VSS \_ ctx- \_ App-Rollback erstellt wurden \_ – können lokal verfügbar gemacht werden.
+Nur persistente Schattenkopien , d.> Schattenkopien, die entweder mit VSS \_ CTX NAS ROLLBACK oder \_ \_ VSS CTX APP ROLLBACK erstellt wurden, können \_ lokal verfügbar gemacht \_ \_ werden.
 
-## <a name="exposing-a-shadow-copy-as-a-remote-share"></a>Verfügbar machen einer Schatten Kopie als Remote Freigabe
+## <a name="exposing-a-shadow-copy-as-a-remote-share"></a>Verfügbar machen einer Schattenkopie als Remotefreigabe
 
-Alternativ dazu können Sie auch festlegen, dass die Schatten Kopie des Datenträgers in F: \\ verfügbar als Remote Dateifreigabe eingebunden werden soll, und dass nur Daten unter dirtwo verfügbar gemacht werden, wenn die Dateifreigabe dirtwooff ist.
+Alternativ können Sie die Schattenkopie des Datenträgers, der in F: bereitgestellt wird, als Remotedateifreigabe verfügbar machen und nur Daten unter dirTwo als Dateifreigabe \\ dirTwoOfF verfügbar machen.
 
-In diesem Fall können Systeme auf die Schatten Kopie von Dateien unter F: \\ dirtwo zugreifen, indem Sie \\ \\ exposedsys \\ dirtwooff als Netzwerklaufwerk Mapping.
+In diesem Fall könnten Systeme auf die Schattenkopie von Dateien unter F: dirTwo zugreifen, indem \\ \\ \\ sie exposedSys \\ dirTwoOfF als Netzwerklaufwerk zuordnen.
 
-Ein Befehl zum Implementieren der Remote verfügbar machung der Schatten Kopie als Freigabe könnte wie folgt lauten:
+Ein Aufruf zum Implementieren der Remote-Offenlegung der Schattenkopie als Freigabe kann folgender sein:
 
 ``` syntax
   IVssBackupComponents *pReq;
@@ -73,19 +73,19 @@ Ein Befehl zum Implementieren der Remote verfügbar machung der Schatten Kopie a
        );
 ```
 
-Wenn die Schatten Kopie erfolgreich Remote verfügbar gemacht wurde, sollte *wszexposed* die Zeichenfolge "dirtwooff" der breit Zeichenfolge enthalten.
+Wenn die Schattenkopie erfolgreich remote verfügbar gemacht wurde, sollte *wszExposed* die Breitzeichenfolge "dirTwoOfF" enthalten.
 
-Jedes System, das zurzeit die Netzwerkfreigabe von dirtwooff zuordnet, kann die Verbindung mit dem System trennen, genauso wie es von einer normalen Freigabe getrennt werden kann.
+Alle Systeme, die derzeit die Netzwerkfreigabe von dirTwoOfF zuordnen, können die Verbindung mit ihr trennen, so wie es die Verbindung mit jeder normalen Freigabe trennen kann.
 
-## <a name="surfacing-a-shadow-copy"></a>Sehen Sie sich eine Schatten Kopie an
+## <a name="surfacing-a-shadow-copy"></a>Erstellen einer Schattenkopie
 
-Eine [*übereinstellungsschattenkopie*](vssgloss-s.md) ist eine, in der die Schatten Kopie dem Mount Manager-Namespace eines Systems bekannt ist.
+Eine [*surfaced shadow copy ist*](vssgloss-s.md) eine Schattenkopie, in der die Schattenkopie dem Mount Manager-Namespace eines Systems bekannt ist.
 
-Dies bedeutet, dass Sie diese Schatten Kopien wie jedes andere verfügbare, aber noch nicht bereitgestellte Volume suchen können – beispielsweise mithilfe von " **findfirstvolume** " und " **findnextvolume**".
+Dies bedeutet, dass Sie solche Schattenkopien genau wie alle anderen verfügbaren, aber noch nicht bereitgestellten Volumes finden können, z. B. mit **FindFirstVolume** und **FindNextVolume.**
 
-Offensichtlich werden auch Schatten Kopien mit dem verfügbar gemachten Schatten kopiert. Das Gegenteil ist jedoch nicht unbedingt der Fall.
+Offensichtlich handelt es sich bei verfügbar gemachten Schattenkopien also auch um auftdeckte Schattenkopien. Das Gegenteil ist jedoch nicht unbedingt wahr.
 
-Wenn die Bereitstellung einer lokal verfügbar gemachten Schatten Kopie aufgehoben wurde oder ein System die Verbindung mit einer Remote zugänglichen Schatten Kopie getrennt hat, wird diese Schatten Kopie nicht mehr verfügbar gemacht. Solange die Schatten Kopie persistent gespeichert wird, werden die Volumes jedoch angezeigt. Dies bedeutet, dass Sie wie jedes andere schreibgeschützte Volume bereitgestellt werden können.
+Wenn eine lokal verfügbar gemachte Schattenkopie nicht mehr bereitgestellt wird oder ein System eine remote verfügbar gemachte Schattenkopie trennt, wird diese Schattenkopie nicht mehr verfügbar gemacht. Solange die Schattenkopie beibehalten wird, werden die Volumes jedoch angezeigt. Dies bedeutet, dass sie wie jedes andere schreibgeschützte Volume bereitgestellt werden können.
 
  
 

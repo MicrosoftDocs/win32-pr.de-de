@@ -1,35 +1,35 @@
 ---
 title: Bereitstellen von Dateidaten
-description: Beschreibt, wie ein Anbieter Platzhalter Informationen und Datei Daten bereitstellt.
+description: Beschreibt, wie ein Anbieter Platzhalterinformationen und Dateidaten liefert.
 ms.assetid: <GUID-GOES-HERE>
 ms.date: 10/01/2018
 ms.topic: article
-ms.openlocfilehash: 341a0f1c477b605b2a437edf311c380910744ac0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4f0da65095e908ec3211bb23be654ee9e0e2853c093bb36e8a92701c24106ff4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117792394"
 ---
 # <a name="providing-file-data"></a>Bereitstellen von Dateidaten
 
-Wenn ein Anbieter erstmalig einen virtualisierungsstamm erstellt, ist er auf dem lokalen System leer. Das heißt, keines der Elemente im Sicherungsdaten Speicher wurde noch auf dem Datenträger zwischengespeichert. Wenn Elemente geöffnet werden, fordert projfs Informationen vom Anbieter an, damit Platzhalter für diese Elemente im lokalen Dateisystem erstellt werden können.  Beim Zugriff auf den Element Inhalt fordert projfs diese Inhalte vom Anbieter an.  Das Ergebnis ist, dass virtualisierte Dateien und Verzeichnisse aus Sicht des Benutzers ähnlich wie normale Dateien und Verzeichnisse angezeigt werden, die sich bereits im lokalen Dateisystem befinden.
+Wenn ein Anbieter zum ersten Mal einen Virtualisierungsstamm erstellt, ist er auf dem lokalen System leer. Das heißt, dass noch keins der Elemente im Hintergrunddatenspeicher auf dem Datenträger zwischengespeichert wurde. Wenn Elemente geöffnet werden, fordert ProjFS Informationen vom Anbieter an, damit Platzhalter für diese Elemente im lokalen Dateisystem erstellt werden können.  Wenn auf Elementinhalte zugegriffen wird, fordert ProjFS diese Inhalte vom Anbieter an.  Das Ergebnis ist, dass virtualisierte Dateien und Verzeichnisse aus Sicht des Benutzers den normalen Dateien und Verzeichnissen ähneln, die sich bereits im lokalen Dateisystem befinden.
 
-## <a name="placeholder-creation"></a>Platzhalter Erstellung
+## <a name="placeholder-creation"></a>Platzhaltererstellung
 
-Wenn eine Anwendung versucht, ein Handle für eine virtualisierte Datei zu öffnen, ruft projfs den **[PRJ_GET_PLACEHOLDER_INFO_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_placeholder_info_cb)** Rückruf für jedes Element des Pfads auf, der noch nicht auf dem Datenträger vorhanden ist.  Wenn z. b. versucht wird, eine Anwendung zu öffnen `C:\virtRoot\dir1\dir2\file.txt` , aber nur der Pfad auf dem Daten `C:\virtRoot\dir1` Träger vorhanden ist, empfängt der Anbieter einen Rückruf für `C:\virtRoot\dir1\dir2` und dann für `C:\virtRoot\dir1\dir2\file.txt` .
+Wenn eine Anwendung versucht, ein Handle für eine virtualisierte Datei zu öffnen, ruft ProjFS den **[PRJ_GET_PLACEHOLDER_INFO_CB-Rückruf](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_placeholder_info_cb)** für jedes Element des Pfads auf, das noch nicht auf dem Datenträger vorhanden ist.  Wenn eine Anwendung beispielsweise versucht, zu öffnen, aber nur der Pfad auf dem Datenträger vorhanden ist, erhält der Anbieter einen Rückruf für `C:\virtRoot\dir1\dir2\file.txt` `C:\virtRoot\dir1` , dann für `C:\virtRoot\dir1\dir2` `C:\virtRoot\dir1\dir2\file.txt` .
 
-Wenn projfs den **PRJ_GET_PLACEHOLDER_INFO_CB** Rückruf des Anbieters aufruft, führt der Anbieter die folgenden Aktionen aus:
+Wenn ProjFS den PRJ_GET_PLACEHOLDER_INFO_CB-Rückruf des Anbieters aufruft, führt der Anbieter die folgenden Aktionen aus: 
 
-1. Der Anbieter bestimmt, ob der angeforderte Name im Sicherungs Speicher vorhanden ist.  Der Anbieter sollte **[prjdatamecompare](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamecompare)** als Vergleichs Routine beim Durchsuchen des Sicherungs Speicher verwenden, um zu bestimmen, ob der angeforderte Name im Sicherungs Speicher vorhanden ist.  Wenn dies nicht der Fall ist, gibt der Anbieter HRESULT_FROM_WIN32 (ERROR_FILE_NOT_FOUND) aus dem Rückruf zurück.
+1. Der Anbieter bestimmt, ob der angeforderte Name in seinem Hintergrundspeicher vorhanden ist.  Der Anbieter sollte **[PrjFileNameCompare](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamecompare)** als Vergleichsroutine verwenden, um zu ermitteln, ob der angeforderte Name im Hintergrundspeicher vorhanden ist.  Wenn dies nicht der Wert ist, gibt der Anbieter HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) aus dem Rückruf zurück.
 
-1. Wenn der angeforderte Name im Sicherungs Speicher vorhanden ist, füllt der Anbieter eine [PRJ_PLACEHOLDER_INFO](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_placeholder_info) Struktur mit den Dateisystem Metadaten des Elements auf und ruft **[prjschreiteplaceholderinfo](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo)** auf, um die Daten an projfs zu senden.  Diese Informationen werden von projfs verwendet, um einen Platzhalter im lokalen Dateisystem für das Element zu erstellen.
+1. Wenn der angeforderte Name im Hintergrundspeicher vorhanden ist, füllt der Anbieter eine [PRJ_PLACEHOLDER_INFO-Struktur](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_placeholder_info) mit den Dateisystemmetadaten des Elements auf und ruft **[PrjWritePlaceholderInfo](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo)** auf, um die Daten an ProjFS zu senden.  ProjFS verwendet diese Informationen, um einen Platzhalter im lokalen Dateisystem für das Element zu erstellen.
 
-    > Projfs verwendet alle FILE_ATTRIBUTE Flags, die der Anbieter im **filebasicinfo. fileattributmember** von PRJ_PLACEHOLDER_INFO mit Ausnahme von FILE_ATTRIBUTE_DIRECTORY enthält. Er legt den korrekten Wert für FILE_ATTRIBUTE_DIRECTORY im **filebasicinfo. fileattributmember** gemäß dem angegebenen Wert des Elements **filebasicinfo. IsDirectory** fest.
+    > ProjFS verwendet alle FILE_ATTRIBUTE, die der Anbieter im **FileBasicInfo.FileAttributes-Member** von PRJ_PLACEHOLDER_INFO außer FILE_ATTRIBUTE_DIRECTORY; Sie wird den richtigen Wert für FILE_ATTRIBUTE_DIRECTORY im **FileBasicInfo.FileAttributes-Element** entsprechend dem angegebenen Wert des **FileBasicInfo.IsDirectory-Members** festlegen.
 
-    > Wenn der Sicherungs Speicher symbolische Verknüpfungen unterstützt, muss der Anbieter **[PrjWritePlaceholderInfo2](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo2)** verwenden, um die Platzhalter Daten an projfs zu senden.  **PrjWritePlaceholderInfo2** unterstützt eine zusätzliche Puffer Eingabe, die es dem Anbieter ermöglicht, anzugeben, dass der Platzhalter eine symbolische Verknüpfung und das Ziel ist.  Andernfalls verhält es sich wie oben beschrieben für **prjschreiteplaceholderinfo**.  Im folgenden Beispiel wird veranschaulicht, wie **PrjWritePlaceholderInfo2** verwendet wird, um symbolische Verknüpfungen zu unterstützen.
+    > Wenn der Unterstützungsspeicher symbolische Verknüpfungen unterstützt, muss der Anbieter **[PrjWritePlaceholderInfo2](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo2)** verwenden, um die Platzhalterdaten an ProjFS zu senden.  **PrjWritePlaceholderInfo2** unterstützt eine zusätzliche Puffereingabe, mit der der Anbieter angeben kann, dass der Platzhalter eine symbolische Verknüpfung ist und was sein Ziel ist.  Andernfalls verhält es sich wie oben für **PrjWritePlaceholderInfo beschrieben.**  Im folgenden Beispiel wird veranschaulicht, wie **PrjWritePlaceholderInfo2** verwendet wird, um Unterstützung für symbolische Verknüpfungen zu bieten.
     >
-    > Beachten Sie, dass **PrjWritePlaceholderInfo2** ab Windows 10, Version 2004, unterstützt wird.  Ein Anbieter sollte überprüfen, ob PrjWritePlaceholderInfo2 vorhanden ist, z. . mithilfe von **[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)**.
+    > Beachten **Sie, dass PrjWritePlaceholderInfo2** ab Windows 10 Version 2004 unterstützt wird.  Ein Anbieter sollte auf das Vorhandensein von **PrjWritePlaceholderInfo2** prüfen, z. B. mithilfe von **[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)**.
 
 ```C++
 HRESULT
@@ -115,28 +115,28 @@ MyGetPlaceholderInfoCallback(
 
 ## <a name="providing-file-contents"></a>Bereitstellen von Dateiinhalten
 
-Wenn projfs sicherstellen muss, dass eine virtualisierte Datei Daten enthält, z. b. Wenn eine Anwendung versucht, aus der Datei zu lesen, ruft projfs den **[PRJ_GET_FILE_DATA_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_file_data_cb)** Rückruf für dieses Element auf, um anzufordern, dass der Anbieter den Inhalt der Datei bereitstellt.  Der Anbieter Ruft die Daten der Datei aus dem Sicherungs Speicher ab und verwendet **[prjschreitefiledata](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwritefiledata)** , um die Daten an das lokale Dateisystem zu senden.
+Wenn ProjFS sicherstellen muss, dass eine virtualisierte Datei Daten enthält, z. B. wenn eine Anwendung versucht, aus der Datei zu lesen, ruft ProjFS den **[PRJ_GET_FILE_DATA_CB-Rückruf](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_file_data_cb)** für dieses Element auf, um an die Bereitstellung des Dateiinhalts durch den Anbieter zu fragen.  Der Anbieter ruft die Daten der Datei aus seinem Hintergrundspeicher ab und verwendet **[PrjWriteFileData,](/windows/win32/api/projectedfslib/nf-projectedfslib-prjwritefiledata)** um die Daten an das lokale Dateisystem zu senden.
 
-> Wenn dieser Rückruf von projfs aufgerufen wird, gibt das **FilePathName** -Element des _callBackData_ -Parameters den Namen an, den die Datei bei der Erstellung des Platzhalters enthielt.  Das heißt, wenn die Datei umbenannt wurde, seit der Platzhalter erstellt wurde, stellt der Rückruf den ursprünglichen Namen (vor dem Umbenennen) und nicht den aktuellen Namen (nach dem Umbenennen) bereit.  Bei Bedarf kann der Anbieter den **VERSIONINFO** -Member des _callBackData_ -Parameters verwenden, um zu bestimmen, welche Datei Daten angefordert werden.
+> Wenn ProjFS diesen Rückruf aufruft, gibt das **FilePathName-Element** des _callbackData-Parameters_ den Namen an, den die Datei beim Erstellen des Platzhalters hatte.  Das heißt, wenn die Datei seit dem Erstellen des Platzhalters umbenannt wurde, gibt der Rückruf den ursprünglichen Namen (vor dem Umbenennen) und nicht den aktuellen Namen (nach dem Umbenennen) an.  Bei Bedarf kann der Anbieter den **VersionInfo-Member** des _callbackData-Parameters_ verwenden, um zu bestimmen, welche Dateidaten angefordert werden.
 >
-> Weitere Informationen zur Verwendung des **VERSIONINFO** -Members von PRJ_CALLBACK_DATA finden Sie in der Dokumentation zu [PRJ_PLACEHOLDER_VERSION_INFO](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_placeholder_version_info) und im Thema [Bearbeiten von Änderungs Änderungen](handling-view-changes.md) .
+> Weitere Informationen dazu, wie das **VersionInfo-Element** von PRJ_CALLBACK_DATA verwendet [](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_placeholder_version_info) werden kann, finden Sie in der Dokumentation zu PRJ_PLACEHOLDER_VERSION_INFO und im Thema Behandeln von [Ansichtsänderungen.](handling-view-changes.md)
 
-Der Anbieter darf den Bereich der im **PRJ_GET_FILE_DATA_CB** Rückruf angeforderten Daten in mehrere Aufrufe von **prjschreitefiledata** aufteilen, die jeweils einen Teil des angeforderten Bereichs bereitstellen.  Der Anbieter muss jedoch den gesamten angeforderten Bereich angeben, bevor der Rückruf abgeschlossen wird.  Wenn der Rückruf z. b. 10 MB von _Byteoffset_ 0 für die _Länge_ 10.485.760 anfordert, kann der Anbieter die Daten in 10 Aufrufen an **prjschreitefiledata** bereitstellen, die jeweils 1 MB senden.
+Der Anbieter darf den im **PRJ_GET_FILE_DATA_CB-Rückruf** angeforderten Datenbereich in mehrere Aufrufe von **PrjWriteFileData** aufteilen, die jeweils einen Teil des angeforderten Bereichs angeben.  Der Anbieter muss jedoch den gesamten angeforderten Bereich vor abschluss des Rückrufs zur Verfügung stellen.  Wenn der Rückruf beispielsweise 10 MB Daten von _byteOffset_ 0 für die Länge  10.485.760 an fordert, kann der Anbieter die Daten in 10 Aufrufen von **PrjWriteFileData** angeben, die jeweils 1 MB senden.
 
-Der Anbieter kann auch mehr als den angeforderten Bereich angeben, bis zur Länge der Datei.  Der Bereich, den der Anbieter bereitstellt, muss den angeforderten Bereich abdecken.  Wenn der Rückruf z. b. 1 MB Daten von _Byteoffset_ 4096 für die _Länge_ 1.052.672 anfordert und die Datei eine Gesamtgröße von 10 MB hat, kann der Anbieter die Rückgabe von 2 MB Daten ab dem Offset 0 auswählen.
+Der Anbieter kann auch mehr als den angeforderten Bereich bis zur Länge der Datei zur Verfügung stellen.  Der Bereich, den der Anbieter zur Verfügung stellt, muss den angeforderten Bereich abdecken.  Wenn der Rückruf z. B. 1 MB daten von _byteOffset_ 4096 für die Länge  1.052.672 an fordert und die Datei eine Gesamtgröße von 10 MB hat, kann der Anbieter auswählen, dass ab Offset 0 2 MB Daten zurückgeben.
 
-### <a name="buffer-alignment-considerations"></a>Überlegungen zur Puffer Ausrichtung
+### <a name="buffer-alignment-considerations"></a>Überlegungen zur Pufferausrichtung
 
-Projfs verwendet die [FILE_OBJECT](/windows-hardware/drivers/ddi/content/wdm/ns-wdm-_file_object) des Aufrufers, der die Daten zum Schreiben der Daten in das lokale Dateisystem benötigt.  Projfs kann jedoch nicht steuern, ob diese FILE_OBJECT für gepufferte oder nicht gepufferte e/a-Vorgänge geöffnet wurde.  Wenn die FILE_OBJECT für nicht gepufferte e/a-Vorgänge geöffnet wurde, müssen Lese-und Schreibvorgänge in die Datei bestimmte Ausrichtungs Anforderungen einhalten.  Der Anbieter kann diese Ausrichtungs Anforderungen durch zwei Dinge erfüllen:
+ProjFS verwendet [die](/windows-hardware/drivers/ddi/content/wdm/ns-wdm-_file_object) FILE_OBJECT des Aufrufers, der die Daten zum Schreiben der Daten in das lokale Dateisystem benötigt.  ProjFS kann jedoch nicht steuern, ob FILE_OBJECT für gepufferte oder ungepufferte E/A geöffnet wurde.  Wenn der FILE_OBJECT für ungepufferte E/A geöffnet wurde, müssen Lese- und Schreibvorgänge in die Datei bestimmte Ausrichtungsanforderungen erfüllen.  Der Anbieter kann diese Ausrichtungsanforderungen durch zwei Dinge erfüllen:
 
-1. Verwenden Sie **[prjallocatealignedbuffer](/windows/win32/api/projectedfslib/nf-projectedfslib-prjallocatealignedbuffer)** , um den Puffer zuzuweisen, der in den _Puffer_ Parameter **prjschreitefiledata** übergeben werden soll.
-1. Stellen Sie sicher, dass die Parameter " _Byteoffset_ " und " _length_ " von " **prjschreitefiledata** " ein ganzzahliges Vielfache der Ausrichtungs Anforderung des Speichergeräts sind (Beachten Sie, dass der _length_ -Parameter diese Anforderung nicht erfüllen muss, wenn die _Byteoffset_-  +  _Länge_ gleich dem Dateiende ist).  Der Anbieter kann **[prjgetvirtualizationinstanceinfo](/windows/win32/api/projectedfslib/nf-projectedfslib-prjgetvirtualizationinstanceinfo)** verwenden, um die Ausrichtungs Anforderung des Speichergeräts abzurufen.
+1. Verwenden **[Sie PrjAllocateAlignedBuffer,](/windows/win32/api/projectedfslib/nf-projectedfslib-prjallocatealignedbuffer)** um den Puffer zu zuordnen, um den Pufferparameter von **PrjWriteFileData** _zu_ übergeben.
+1. Stellen Sie sicher, dass die Parameter _byteOffset_ und _length_ von **PrjWriteFileData** ganzzahlige Vielfache der Ausrichtungsanforderung des Speichergeräts sind (beachten Sie, dass der _length-Parameter_ diese Anforderung nicht erfüllen muss, wenn _byteOffset_ length gleich dem Ende der Datei  +   ist).  Der Anbieter kann **[prjGetVirtualizationInstanceInfo](/windows/win32/api/projectedfslib/nf-projectedfslib-prjgetvirtualizationinstanceinfo)** verwenden, um die Ausrichtungsanforderung des Speichergeräts abzurufen.
 
-Projfs verlässt den Anbieter, um die richtige Ausrichtung zu berechnen.  Dies liegt daran, dass bei der Verarbeitung eines **PRJ_GET_FILE_DATA_CB** Rückrufs der Anbieter die angeforderten Daten möglicherweise über mehrere **prjwrite tefiledata** -Aufrufe zurückgibt, die jeweils einen Teil der gesamten angeforderten Daten zurückgeben, bevor Sie den Rückruf abschließen.
+ProjFS überlässt es dem Anbieter, die richtige Ausrichtung zu berechnen.  Dies liegt daran, dass der Anbieter bei der Verarbeitung eines **PRJ_GET_FILE_DATA_CB-Rückrufs** die angeforderten Daten über mehrere **PrjWriteFileData-Aufrufe** hinweg zurückgeben kann, die jeweils einen Teil der insgesamt angeforderten Daten zurückgeben, bevor der Rückruf abgeschlossen wird.
 
-> Wenn der Anbieter einen einzelnen Befehl an **prjschreitefiledata** verwenden soll, um entweder die gesamte Datei zu schreiben, d. h. von _Byteoffset_ = 0 bis _length_ = Größe der Datei, oder wenn der genaue Bereich zurückgegeben werden soll, der im **PRJ_GET_FILE_DATA_CB** Rückruf angefordert wurde, muss der Anbieter keine Ausrichtungs Berechnungen durchführen.  Es muss jedoch weiterhin **prjzuzucatealignedbuffer** verwendet werden, um sicherzustellen, dass der _Puffer_ den Ausrichtungs Anforderungen des Speichergeräts entspricht.
+> Wenn der Anbieter einen einzelnen Aufruf von **PrjWriteFileData** verwendet, um entweder die gesamte Datei zu schreiben, d. h. von _byteOffset_ = 0 bis _length_ = Größe der Datei, oder um den genauen Bereich zurück zu geben, der im **PRJ_GET_FILE_DATA_CB-Rückruf** angefordert wird, muss der Anbieter keine Ausrichtungsberechnungen durchführen.  Es muss jedoch weiterhin **PrjAllocateAlignedBuffer**  verwenden, um sicherzustellen, dass der Puffer die Ausrichtungsanforderungen des Speichergeräts erfüllt.
 
-Weitere Informationen zu gepufferten und nicht gepufferten e/a-Vorgängen finden Sie im Thema [Datei Pufferung](/windows/desktop/FileIO/file-buffering) .
+Weitere Informationen zu [gepufferten](/windows/desktop/FileIO/file-buffering) und nicht gepufferten E/A-Daten finden Sie im Thema Dateipufferung.
 
 ```C++
 //  BlockAlignTruncate(): Aligns P on the previous V boundary (V must be != 0).

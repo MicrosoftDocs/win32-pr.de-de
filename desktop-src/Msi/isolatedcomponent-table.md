@@ -1,30 +1,30 @@
 ---
-description: Jeder Datensatz der isolatedcomponent-Tabelle ordnet die in der Spalte Komponenten Anwendung angegebene Komponente \_ (i. a. exe) der Komponente zu, die in der freigegebenen Spalte der Komponente angegeben ist \_ (häufig eine freigegebene DLL).
+description: Jeder Datensatz der IsolatedComponent-Tabelle ordnet die in der Spalte Komponentenanwendung angegebene Komponente (in der Regel eine .exe) der Komponente zu, die in der Spalte Freigegebene Komponenten (im Allgemeinen eine freigegebene DLL) angegeben \_ \_ ist.
 ms.assetid: dc30e4c7-a938-4060-be4f-744de9c20fd9
-title: Isolatedcomponent-Tabelle
+title: IsolatedComponent-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c3e6c5bdba6efc546a36e77fa793c0b397f6d5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9644f1e122464e1321d55c0b615892167e84a7e059472adc4f01ee6bac571720
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117805618"
 ---
-# <a name="isolatedcomponent-table"></a>Isolatedcomponent-Tabelle
+# <a name="isolatedcomponent-table"></a>IsolatedComponent-Tabelle
 
-Jeder Datensatz der isolatedcomponent-Tabelle ordnet die in der Spalte Komponenten Anwendung angegebene Komponente \_ (i. a. exe) der Komponente zu, die in der freigegebenen Spalte der Komponente angegeben ist \_ (häufig eine freigegebene DLL). Die [isolatecomponents-Aktion](isolatecomponents-action.md) installiert eine Kopie der freigegebenen Komponente an \_ einem privaten Speicherort, der von der Komponenten Anwendung verwendet werden soll \_ . Dadurch wird die Komponenten \_ Anwendung von anderen Kopien von freigegebenen Komponenten isoliert \_ , die an einem freigegebenen Speicherort auf dem Computer installiert werden können. Siehe [isolierte Komponenten](isolated-components.md).
+Jeder Datensatz der IsolatedComponent-Tabelle ordnet die in der Spalte Komponentenanwendung angegebene Komponente (in der Regel eine .exe) der Komponente zu, die in der Spalte Freigegebene Komponenten (im Allgemeinen eine freigegebene DLL) angegeben \_ \_ ist. Die [Aktion IsolateComponents](isolatecomponents-action.md) installiert eine Kopie der Komponente Freigegeben an einem privaten Speicherort \_ zur Verwendung durch die \_ Komponentenanwendung. Dadurch wird die Komponentenanwendung von anderen Kopien der Freigegebenen Komponente isoliert, die an einem freigegebenen Speicherort auf dem \_ \_ Computer installiert werden können. Weitere Informationen [finden Sie unter Isolierte Komponenten.](isolated-components.md)
 
-Um eine Komponente \_ zu verknüpfen, die mit mehreren Komponenten Anwendungen gemeinsam verwendet \_ wird, fügen Sie für jedes Paar in der isolatedcomponents-Tabelle einen separaten Datensatz ein. Das Installationsprogramm kopiert die Dateien der \_ gemeinsam genutzten Komponenten in das Verzeichnis der einzelnen \_ installierten Komponenten Anwendungen.
+Um eine freigegebene Komponente mit mehreren Komponentenanwendung zu verknüpfen, fügen Sie einen separaten Datensatz für jedes Paar in die \_ \_ Tabelle IsolatedComponents ein. Das Installationsprogramm kopiert die Dateien von Component \_ Shared in das Verzeichnis jeder installierten \_ Komponentenanwendung.
 
-Die isolatedcomponent-Tabelle weist die folgenden Spalten auf.
+Die Tabelle IsolatedComponent enthält die folgenden Spalten.
 
 
 
-| Spalte                 | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte                 | Typ                         | Key | Nullwerte zulässig |
 |------------------------|------------------------------|-----|----------|
-| Frei \_ gegebene Komponente      | [Bezeichner](identifier.md) | J   | N        |
-| Komponenten \_ Anwendung | [Bezeichner](identifier.md) | J   | N        |
+| Freigegebene \_ Komponente      | [Identifier](identifier.md) | J   | N        |
+| \_Komponentenanwendung | [Identifier](identifier.md) | J   | N        |
 
 
 
@@ -34,23 +34,23 @@ Die isolatedcomponent-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Component_Shared"></span><span id="component_shared"></span><span id="COMPONENT_SHARED"></span>Frei \_ gegebene Komponente
+<span id="Component_Shared"></span><span id="component_shared"></span><span id="COMPONENT_SHARED"></span>Freigegebene \_ Komponente
 </dt> <dd>
 
-Fremdschlüssel in der [Komponenten Tabelle](component-table.md). Die Komponente, die die freigegebene Datei enthält, normalerweise eine DLL. Die dll sollte die Schlüsseldatei für diese Komponente sein. Dabei muss es sich um eine andere Komponente handeln als in der \_ Spalte Komponenten Anwendung aufgeführt.
+Fremdschlüssel in der [Komponententabelle](component-table.md). Die Komponente, die die freigegebene Datei enthält, in der Regel eine DLL. Die DLL sollte die Schlüsseldatei für diese Komponente sein. Dies muss eine andere Komponente sein als in der Spalte \_ Komponentenanwendung aufgeführt.
 
-Die freigegebene Komponente steuert die Registrierung für alle isolierten Kopien der Komponente, und das Flag " **msidbcomponentattributesshareddllrefcount** " muss in der Spalte Attribute der Komponenten Tabelle festgelegt sein. Dadurch wird sichergestellt, dass das Installationsprogramm die Lebensdauer der freigegebenen Komponente verwalten kann.
+Die freigegebene Komponente steuert die Registrierung für alle isolierten Kopien der Komponente und muss das **Flag msidbComponentAttributesSharedDllRefCount** in der Spalte Attribute der Component-Tabelle festgelegt haben. Dadurch wird sichergestellt, dass das Installationsprogramm die Lebensdauer der freigegebenen Komponente verwalten kann.
 
 </dd> <dt>
 
-<span id="Component_Application"></span><span id="component_application"></span><span id="COMPONENT_APPLICATION"></span>Komponenten \_ Anwendung
+<span id="Component_Application"></span><span id="component_application"></span><span id="COMPONENT_APPLICATION"></span>\_Komponentenanwendung
 </dt> <dd>
 
-Fremdschlüssel in der [Komponenten Tabelle](component-table.md). Die Komponente mit der exe-Datei, die die freigegebene Datei lädt. Die exe-Datei sollte die Schlüsseldatei für diese Komponente sein. Dabei muss es sich um eine andere Komponente handeln als in der freigegebenen Spalte der Komponente aufgeführt \_ .
+Fremdschlüssel in der [Komponententabelle](component-table.md). Die Komponente, die die Datei enthält.exe die die freigegebene Datei lädt. Die .exe sollte die Schlüsseldatei für diese Komponente sein. Dies muss eine andere Komponente sein als in der Spalte Freigegebene \_ Komponente aufgeführt.
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

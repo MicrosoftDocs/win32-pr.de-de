@@ -1,49 +1,49 @@
 ---
-description: Der gesteuerte Ziel Mechanismus ermöglicht Writer das Neuzuordnen von Dateien zum Zeitpunkt der Wiederherstellung.
+description: Mit dem gerichteten Zielmechanismus können Writer Dateien zum Zeitpunkt der Wiederherstellung neu zuordnen.
 ms.assetid: c0b4ab26-2bb6-4b0f-b837-01057983b49b
 title: Arbeiten mit gerichteten Zielen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bd2e15ec873b87030a2d01be69d2c3e5f95a193
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e27c5fac6636e15498e79a5e51d6e921ac5465671b6e1a5c36ff9c2604d3fbcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117937391"
 ---
 # <a name="working-with-directed-targets"></a>Arbeiten mit gerichteten Zielen
 
-Der [*gesteuerte Ziel*](vssgloss-d.md) Mechanismus ermöglicht Writer das Neuzuordnen von Dateien zum Zeitpunkt der Wiederherstellung. Dadurch können Writer folgende Aktionen ausführen:
+Mit dem [*gerichteten Zielmechanismus*](vssgloss-d.md) können Writer Dateien zum Zeitpunkt der Wiederherstellung neu zuordnen. Dadurch können Writer folgende Schritte ausführen:
 
--   Geben Sie neue Zielspeicher Orte an (analog zu [**IVssBackupComponents:: addnewtarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)eines Anforderers).
--   Freigeben von Speicherplatz, indem nur benötigte Teile einer Datei auf dem Datenträger wieder hergestellt werden, insbesondere dann, wenn eine Datei mithilfe des [*partiellen Datei*](vssgloss-p.md) Mechanismus gesichert wurde.
--   Ändern Sie das Dateiformat, um die aktuellen Anforderungen zu erfüllen.
+-   Geben Sie neue Zielspeicherorte an (analog zu [**den IVssBackupComponents::AddNewTarget des**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)Anfordernden).
+-   Freigeben von Speicherplatz, indem nur benötigte Teile einer Datei auf dem Datenträger wiederhergestellt werden, insbesondere dann, wenn eine Datei mit dem [*Partiellen Dateimechanismus*](vssgloss-p.md) gesichert wurde.
+-   Ändern Sie das Dateiformat entsprechend den aktuellen Anforderungen.
 
-Für alle Dateien, die mit einem gerichteten Ziel Vorgang verwendet werden sollen, muss ein [*Wiederherstellungs Ziel*](vssgloss-r.md) von VSS \_ RT \_ angegeben werden.
+Jede Datei, die mit einem gerichteten Zielvorgang verwendet werden soll, muss über das [*Wiederherstellungsziel*](vssgloss-r.md) VSS \_ RT DIRECTED \_ verfügen.
 
-Nachdem festgestellt wurde, dass ein Anforderer einen gerichteten Ziel Vorgang unterstützen kann, ein Writer (bei der Verarbeitung des [**PreRestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) -Ereignisses) verwendet das [**IVssComponent:: adddirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget) -Element für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) , das der Komponente entspricht, die die Datei verwaltet (bzw. die Komponente, die den Komponenten Satz definiert, der die Datei enthält), um zu definieren, wie die Datei bei der Wiederherstellung neu zugeordnet werden soll.
+Nachdem festgestellt wurde, dass ein Anforderer einen gerichteten Zielvorgang unterstützen kann, verwendet ein Writer (während der Behandlung des [**PreRestore-Ereignisses)**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) die [**IVssComponent::AddDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget) für die Instanz von [**IVssComponent,**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) die der Komponente entspricht, die die Datei verwaltet (oder die Komponente, die den Komponentensatz definiert, der die Datei enthält), um zu definieren, wie die Datei bei der Wiederherstellung neu zugeordnet werden soll.
 
-Bei Verwendung von [**IVssComponent:: adddirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget)geben Writer den Dateinamen und den Pfad zum Sichern der Datei an, den Dateinamen und den Pfad des Wiederherstellungs Ziels (diese Werte können mit dem ursprünglichen Dateinamen und Pfad übereinstimmen) sowie Quell-und Ziel Datei Bereiche.
+Bei Der Verwendung von [**IVssComponent::AddDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget)geben Writer den Dateinamen und pfad an, der zum Sichern der Datei verwendet wird, den Dateinamen und den Pfad des Wiederherstellungsziels (diese Werte können mit dem ursprünglichen Dateinamen und Pfad übereinstimmen) sowie Quell- und Zieldateibereiche.
 
-Wie bei partiellen Datei Vorgängen sind Bereichs Listen Paare von Offsets in die zu sichernde Datei (in Bytes) und die Länge des wiederherzustellenden Abschnitts (in Byte), der Offset und die Länge, die durch einen Doppelpunkt getrennt werden, und jedes Paar durch ein Komma getrennt: *offset1 ***:**_Length1_*_,_* * Offset2 ***:**_Length2_. Jeder Wert ist eine 64-Bit-Ganzzahl im Hexadezimal-oder Dezimal Format.
+Wie bei partiellen Dateivorgängen sind Bereichslisten Paare von Offsets in die zu sichernde Datei (in Bytes) und die Länge des wiederherzustellenden Abschnitts (in Bytes), der Offset und die Länge, die durch einen Doppelpunkt getrennt werden, und jedes Paar durch ein Komma getrennt: *Offset1***:**_Length1_*_,_* *Offset2***:**_Length2_. Jeder Wert ist eine 64-Bit-Ganzzahl im Hexadezimal- oder Dezimalformat.
 
-Wenn ein Writer den gerichteten Ziel Mechanismus verwenden muss, damit der Anforderer eine Datei an einem neuen Speicherort wiederherstellen kann, hätte er [**IVssComponent:: adddirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget) mit dem ursprünglichen Dateinamen und Pfad sowie den neuen Dateinamen und Pfad und den Quell Zielbereich mit einem Offset von 0 (null) und einer Länge angeben, die der gesamten Dateigröße entspricht.
+Wenn ein Writer den gerichteten Zielmechanismus verwenden muss, damit der Anforderer eine Datei an einem neuen Speicherort wiederherstellen kann, hat er [**IVssComponent::AddDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget) mit dem ursprünglichen Dateinamen und Pfad sowie dem neuen Dateinamen und Pfad aufgerufen und Quellzielbereiche mit einem Nulloffset und einer Länge angegeben, die der gesamten Dateigröße entspricht.
 
-Wenn ein Writer beispielsweise über eine 200K-Datei verfügen muss, z. b \\ . "c: Write Data \\ Index. dat", die als "C: \\ Write Data \\ OldIndex. dat" wieder hergestellt wird, lautet die Zeichenfolge für Quell-und Zielbereich "**0:204880**."
+Wenn ein Writer beispielsweise über eine 200.000-Datei (C: \\ WriterData \\ Index.dat) verfügen muss, die als C: \\ WriterData \\ OldIndex.dat wiederhergestellt wird, würde die Quell- und Zielbereichszeichenfolge **"0:204880**" lauten.
 
-Zum erneuten Zuordnen einer großen, teilweise gesicherten Datei verwendet der Anforderer den Quellbereich, der zum Sichern der Datei verwendet wird, und einen Zielbereich, der die Dateigröße reduziert. Die Informationen zum Quellbereich können mithilfe von [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abgerufen werden. Dies entspricht der Komponente, die die Datei verwaltet (oder der Komponente, die den Komponenten Satz definiert, der die Datei enthält).
+Zum erneuten Zuordnen einer großen, teilweise gesicherten Datei verwendet der Anforderer den Quellbereich, der zum Sichern der Datei verwendet wird, und einen Zielbereich, der die Dateigröße reduziert. Die Quellbereichsinformationen können mithilfe von [**IVssComponent::GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abgerufen werden, die der Komponente entspricht, die die Datei verwaltet (oder die Komponente, die den Komponentensatz definiert, der die Datei enthält).
 
-Wenn die teilweise gesicherte Datei anfänglich eine große Datei war, deren Header Bytes 64-512, enthält eine Anzahl von Datensätzen und andere häufig aktualisierte Informationen, und die neuesten Daten befinden sich in den letzten 65536 Bytes der Datei – Bytes 0x1239e8577a bis 0x1239e7577a. ein Writer könnte eine Quell Bereichs Liste als Zeichenfolge "**64:448, 0x1239e8577a: 65536**" angeben.
+Wenn es sich bei der teilweise gesicherten Datei zunächst um eine große Datei handelt, deren Header (Bytes 64–512) eine Anzahl von Datensätzen und andere häufig aktualisierte Informationen enthält und deren aktuelle Daten in den letzten 65536 Bytes der Datei zu finden sind – Bytes 0x1239E8577A 0x1239E7577A, könnte ein Writer eine Quellbereichsliste als Zeichenfolge **"64:448,0x1239E8577A:65536"** angeben.
 
-Wenn der Writer die wiederhergestellte Datei neu zuordnen wollte, sodass Sie nur den Header und die neuesten Daten enthält, kann die Bereichs Liste die Zeichenfolge "**0:488488:65536**" lauten.
+Wenn der Writer die wiederhergestellte Datei neu zuordnen möchte, um nur den Header und die neuesten Daten zu enthalten, könnte die Bereichsliste die Zeichenfolge **"0:488,488:65536"** sein.
 
-Vor dem eigentlichen Ausführen eines Wiederherstellungs Vorgangs sollte ein Anforderer überprüfen, ob Dateien Unterstützung für unterstützte Ziele erfordern.
+Vor dem tatsächlichen Ausführen eines Wiederherstellungsvorgangs sollte ein Anforderer überprüfen, ob Dateien eine gezielte Zielunterstützung erfordern.
 
-Zu diesem Zweck durchläuft der Anforderer zuerst die Writer mit gespeicherten Komponenten in seinem Sicherungs Komponenten Dokument mithilfe von [**IVssBackupComponents:: getwritercomponentscount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) und [**IVssBackupComponents:: getwritercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents).
+Hierzu durchläuft der Anforderer zunächst die Writer mit gespeicherten Komponenten im Sicherungskomponentendokument mithilfe von [**IVssBackupComponents::GetWriterComponentsCount**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponentscount) und [**IVssBackupComponents::GetWriterComponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents).
 
-Die [**IVssBackupComponents:: getschreitercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) -Schnittstelle wird dann verwendet, um Instanzen der [**ivssschreitercomponentset**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) -Schnittstelle zurückzugeben, die die Methoden [**ivssschreitercomponentset XT:: getComponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) und [](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) [**ivssschreitercomponentset XT:: getcomponentcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount) bereitstellt
+Die [**IVssBackupComponents::GetWriterComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents) wird dann verwendet, um Instanzen der [**IVssWriterComponentsExt-Schnittstelle**](/windows/win32/api/vsbackup/nl-vsbackup-ivsswritercomponentsext) zurückzugeben, die [**IVssWriterComponentsExt::GetComponent-**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponent) und [**IVssWriterComponentsExt::GetComponentCount-Methoden**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswritercomponents-getcomponentcount) bereitstellt, mit denen der Anforderer [**IVssComponent-Instanzen**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abrufen kann.
 
-Dadurch kann ein Anforderer die gerichteten Ziel Kandidaten mithilfe von [**IVssComponent:: getdirectedtargetcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtargetcount) und [**IVssComponent:: getdirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtarget) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abrufen. Dies entspricht der Komponente, die die Datei verwaltet (oder der Komponente, die den Komponenten Satz definiert, der die Datei enthält).
+Dadurch kann ein Anforderer gerichtete Zielkandidaten mithilfe von [**IVssComponent::GetDirectedTargetCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtargetcount) und [**IVssComponent::GetDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtarget) für die Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) abrufen, die der Komponente entspricht, die die Datei verwaltet (oder die Komponente, die den Komponentensatz definiert, der die Datei enthält).
 
  
 

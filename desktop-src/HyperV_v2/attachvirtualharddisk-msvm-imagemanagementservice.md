@@ -1,7 +1,7 @@
 ---
-description: Fügt eine virtuelle Festplatten Datei im Loopback Modus an.
+description: Angefügt eine virtuelle Festplattendatei im Loopbackmodus.
 ms.assetid: 54bd8e67-e309-4bf3-94bd-e29bc3300a3d
-title: Attachvirtualharddisk-Methode der Msvm_ImageManagementService-Klasse
+title: AttachVirtualHardDisk-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0f8a22ac377eb96fdc01fa54877cdc6c12619c41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab8ec59dfb148a0ed72cf469e43befb7857caae5e7045553d9fda2c586fcd563
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813647"
 ---
-# <a name="attachvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>Attachvirtualharddisk-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="attachvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>AttachVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Fügt eine virtuelle Festplatten Datei im Loopback Modus an.
+Angefügt eine virtuelle Festplattendatei im Loopbackmodus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ uint32 AttachVirtualHardDisk(
 
 <dl> <dt>
 
-*Pfad* \[ in\]
+*Pfad* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort der anzufügenden virtuellen Festplatten Datei angibt.
+Ein vollqualifizierter Pfad, der den Speicherort der virtuellen Festplattendatei angibt, die angefügt werden soll.
 
 </dd> <dt>
 
-Zuder zuder *Zuordnung* \[ in\]
+*AssignDriveLetter* \[ In\]
 </dt> <dd>
 
-Gibt an, ob den Volumes des Datenträgers Laufwerk Buchstaben zugewiesen werden.
+Gibt an, ob den Datenträgervolumes Laufwerkbuchstaben zugewiesen sind.
 
 </dd> <dt>
 
-Schreibgeschützt  \[ in\]
+*ReadOnly* \[ In\]
 </dt> <dd>
 
 Gibt an, ob die angefügte Festplatte schreibgeschützt sein soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,42 +91,42 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie zum Trennen der virtuellen Festplatte die Methode [**MSVM \_ mountedstorageimage. detachvirtualharddisk**](detachvirtualharddisk-msvm-mountedstorageimage.md) .
+Verwenden Sie zum Trennen der virtuellen Festplatte die [**Msvm \_ MountedStorageImage.DetachVirtualHardDisk-Methode.**](detachvirtualharddisk-msvm-mountedstorageimage.md)
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird gezeigt, wie Sie eine virtuelle Festplatten Datei anfügen. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Das folgende C#-Beispiel zeigt, wie eine virtuelle Festplattendatei angefügt wird. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -166,10 +166,10 @@ public static void AttachVirtualHardDisk(string path)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -178,13 +178,13 @@ public static void AttachVirtualHardDisk(string path)
 
 <dl> <dt>
 
-[**MSVM \_ mountedstorageimage. detachvirtualharddisk**](detachvirtualharddisk-msvm-mountedstorageimage.md)
+[**Msvm \_ MountedStorageImage.DetachVirtualHardDisk**](detachvirtualharddisk-msvm-mountedstorageimage.md)
 </dt> <dt>
 
-[**Einbinden (v1)**](/previous-versions/windows/desktop/virtual/mount-msvm-imagemanagementservice)
+[**Bereitstellung (V1)**](/previous-versions/windows/desktop/virtual/mount-msvm-imagemanagementservice)
 </dt> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

@@ -40,7 +40,7 @@ Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementie
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: Username-Element (CHAP)
-description: Erfahren Sie mehr über das UserName-Element, das den Benutzer identifiziert, der authentifiziert wird. Weitere Informationen finden Sie in einem Syntax Beispiel.
+description: Erfahren Sie mehr über das Username-Element, das den Benutzer identifiziert, der authentifiziert wird. Sehen Sie sich ein Syntaxbeispiel an, und zeigen Sie zusätzliche verfügbare Ressourcen an.
 ms.assetid: 3dd12864-5e0a-492c-a2c3-28118d21a0f2
 keywords:
 - Username-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 29065a59e150d2a4295e91b41862250d58e017b5
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: d9ad861388ba8e15bb0df924610e6df1f833968794101cb1b04ccc47fb5ae541
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086154"
 ---
 # <a name="username-element-chap"></a>Username-Element (CHAP)
 
-Das **username** -Element identifiziert den Benutzer, der authentifiziert wird.
+Das **Username-Element** identifiziert den Benutzer, der authentifiziert wird.
 
 ``` syntax
 <xs:element name="Username"
@@ -31,18 +31,18 @@ Das **username** -Element identifiziert den Benutzer, der authentifiziert wird.
  />
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das **username** -Element nicht vorhanden ist, wird der Benutzername aus Winlogon abgerufen. Dieses Element ist optional.
+Wenn das **Username-Element** nicht vorhanden ist, wird der Benutzername aus winlogon ermittelt. Dieses Element ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Wenn das **username** -Element nicht vorhanden ist, wird der Benutzername aus Wi
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mschapv2userpropertiesv1-Schema](mschapv2userpropertiesv1schema-schema.md)

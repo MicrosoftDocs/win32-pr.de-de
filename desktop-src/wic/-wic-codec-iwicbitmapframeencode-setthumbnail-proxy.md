@@ -1,5 +1,5 @@
 ---
-description: 'IWICBitmapFrameEncode_SetThumbnail_Proxy-Funktion: Proxyfunktion für die SetThumbnail-Methode.'
+description: IWICBitmapFrameEncode_SetThumbnail_Proxy - Proxyfunktion für die SetThumbnail-Methode.
 ms.assetid: 3ad473ec-9218-4ed1-961d-a2aa0d542119
 title: IWICBitmapFrameEncode_SetThumbnail_Proxy-Funktion
 ms.topic: reference

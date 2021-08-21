@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GET_MCI_DEVICE (Vfw.h)
-description: Die WM CAP GET MCI DEVICE-Nachricht ruft den Namen eines MCI-Geräts ab, das zuvor mit der \_ \_ WM CAP SET \_ \_ \_ \_ \_ MCI \_ DEVICE-Nachricht festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des Makros capGetMCIDeviceName senden.
+title: WM_CAP_GET_MCI_DEVICE Meldung (Vfw.h)
+description: Die \_ WM CAP \_ GET \_ MCI \_ DEVICE-Nachricht ruft den Namen eines MCI-Geräts ab, das zuvor mit der WM \_ CAP SET \_ \_ MCI \_ DEVICE-Nachricht festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des Makros capGetMCIDeviceName senden.
 ms.assetid: c5d7d955-ab6a-4959-b79e-9ff35a282ba2
 keywords:
-- WM_CAP_GET_MCI_DEVICE-Nachricht Windows Multimedia
+- WM_CAP_GET_MCI_DEVICE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117800653"
 ---
-# <a name="wm_cap_get_mci_device-message"></a>WM CAP GET MCI DEVICE message (WM \_ CAP \_ GET \_ MCI \_ DEVICE-Nachricht)
+# <a name="wm_cap_get_mci_device-message"></a>WM \_ CAP \_ GET \_ MCI DEVICE \_ message
 
-Die **WM CAP GET \_ \_ \_ MCI \_ DEVICE-Nachricht** ruft den Namen eines MCI-Geräts ab, das zuvor mit der [**WM CAP SET \_ \_ \_ MCI \_ DEVICE-Nachricht festgelegt**](wm-cap-set-mci-device.md) wurde. Sie können diese Nachricht explizit oder mithilfe des [**Makros capGetMCIDeviceName**](/windows/desktop/api/Vfw/nf-vfw-capgetmcidevicename) senden.
+Die **WM CAP GET \_ \_ \_ MCI \_ DEVICE-Nachricht** ruft den Namen eines MCI-Geräts ab, das zuvor mit der [**WM CAP SET \_ \_ \_ MCI \_ DEVICE-Nachricht**](wm-cap-set-mci-device.md) festgelegt wurde. Sie können diese Nachricht explizit oder mithilfe des [**Makros capGetMCIDeviceName**](/windows/desktop/api/Vfw/nf-vfw-capgetmcidevicename) senden.
 
 
 ```C++
@@ -41,20 +41,20 @@ lParam = (LPARAM) (LPVOID) (LPSTR) (szName);
 <span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Länge des Puffers in Bytes, auf den **szName verweist.**
+Länge des Puffers in Bytes, auf den von **szName** verwiesen wird.
 
 </dd> <dt>
 
 <span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*Szname*
 </dt> <dd>
 
-Zeiger auf eine auf NULL beendete Zeichenfolge, die den MCI-Gerätenamen enthält.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den MCI-Gerätenamen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,14 +68,14 @@ Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Videoaufnahmenachrichten](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

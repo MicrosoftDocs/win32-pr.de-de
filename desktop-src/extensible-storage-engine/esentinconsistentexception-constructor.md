@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: EsentInconsistentException-Konstruktor'
+description: 'Weitere Informationen zu: EsentInconsistentException-Konstruktor'
 title: EsentInconsistentException-Konstruktor
 TOCTitle: 'EsentInconsistentException constructor '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.EsentInconsistentException.#ctor
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 6e1aef80b1ff29e788f23db20b05a01baecbcf51
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e44d8bed66053c036b8e72fdcdb3f1d8c86d0c1f8445ba5f738029f63877002
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104562491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118081223"
 ---
 # <a name="esentinconsistentexception-constructor"></a>EsentInconsistentException-Konstruktor
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,18 +33,18 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn274374(v=exchg.10).md">EsentInconsistentException (SerializationInfo, StreamingContext)</a></td>
+<td><a href="dn274374(v=exchg.10).md">EsentInconsistentException(SerializationInfo, StreamingContext)</a></td>
 <td>Initialisiert eine neue Instanz der EsentInconsistentException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn350429(v=exchg.10).md">EsentInconsistentException (Zeichenfolge, JET_err)</a></td>
+<td><a href="dn350429(v=exchg.10).md">EsentInconsistentException(String, JET_err)</a></td>
 <td>Initialisiert eine neue Instanz der EsentInconsistentException-Klasse.</td>
 </tr>
 </tbody>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentInconsistentException-Klasse](./esentinconsistentexception-class.md)
 
 [EsentInconsistentException-Member](./esentinconsistentexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

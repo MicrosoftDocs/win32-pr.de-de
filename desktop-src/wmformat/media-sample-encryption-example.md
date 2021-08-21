@@ -1,35 +1,35 @@
 ---
-title: Beispiel für eine Beispiel Verschlüsselung für Medien
-description: Beispiel für eine Beispiel Verschlüsselung für Medien
+title: Beispiel für die Medienverschlüsselung
+description: Beispiel für die Medienverschlüsselung
 ms.assetid: f57f9ffc-47fd-47fb-b553-07b9cd6abb70
 keywords:
-- Windows Media-Format-SDK, Medien Beispiel Verschlüsselung
-- Windows Media-Format-SDK, Beispielcode
-- Windows Media-Format-SDK, Codebeispiele
-- Digital Rights Management (DRM), Medien Beispiel Verschlüsselung
-- DRM (Digital Rights Management), Medien Beispiel Verschlüsselung
-- Digital Rights Management (DRM), Beispielcode
+- Windows Medienformat-SDK, Medienbeispielverschlüsselung
+- Windows Medienformat-SDK, Beispielcode
+- Windows Medienformat-SDK, Codebeispiele
+- Digital Rights Management (DRM), Medienbeispielverschlüsselung
+- DRM (Digital Rights Management), Medienbeispielverschlüsselung
+- Digital Rights Management (DRM),Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Erweiterte APIs für den DRM-Client, Medien Beispiel Verschlüsselung
-- Erweiterte Client-APIs, Medien Beispiel Verschlüsselung
-- Erweiterte APIs für den DRM-Client, Beispielcode
+- Erweiterte DRM-Client-APIs, Medienbeispielverschlüsselung
+- Erweiterte Client-APIs, Medienbeispielverschlüsselung
+- Erweiterte DRM-Client-APIs, Beispielcode
 - Erweiterte Client-APIs, Beispielcode
-- Erweiterte APIs für den DRM-Client, Codebeispiele
+- Erweiterte DRM-Client-APIs, Codebeispiele
 - Erweiterte Client-APIs, Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a669ab957aa7510cdd57daca798ec3e3ac3bf73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ccab97c5a27518d1a31c8c5cdcdbe0defe897bd2bdd47fee1c709a9192262bc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846567"
 ---
-# <a name="media-sample-encryption-example"></a>Beispiel für eine Beispiel Verschlüsselung für Medien
+# <a name="media-sample-encryption-example"></a>Beispiel für die Medienverschlüsselung
 
-Im folgenden unvollständigen Beispiel wird veranschaulicht, wie ein Medien Beispiel mithilfe der DRM-Verschlüsselung verschlüsselt wird. Der RC4-Verschlüsselungsalgorithmus wurde aufgrund von Speicherplatz Beschränkungen aus dem Beispiel ausgelassen.
+Im folgenden unvollständigen Beispiel wird veranschaulicht, wie ein Medienbeispiel mit drm-Verschlüsselung verschlüsselt wird. Der RC4-Verschlüsselungsalgorithmus wurde aufgrund von Speicherplatzeinschränkungen aus dem Beispiel weggelassen.
 
 
 ```C++
@@ -75,12 +75,12 @@ EXIT:
 
 <dl> <dt>
 
-[**DRM-Import Beispiele**](drm-import-examples.md)
+[**DRM-Importbeispiele**](drm-import-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

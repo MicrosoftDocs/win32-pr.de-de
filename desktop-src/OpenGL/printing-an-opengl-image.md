@@ -1,26 +1,26 @@
 ---
 title: Drucken eines OpenGL-Bilds
-description: Sie können die in erweiterten Metadateien gerenderten OpenGL-Bilder drucken.
+description: Sie können OpenGL-Bilder drucken, die in erweiterten Metadateien gerendert werden.
 ms.assetid: 6099cbe2-82f9-46ec-a3ca-74486c111639
 keywords:
-- OpenGL unter Windows, Drucken
+- OpenGL auf Windows,Drucken
 - Drucken von OpenGL-Bildern OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ca0c5260a084796915a7564f793f0e252b5228c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 00d5cb2e08a247ad8ebd5d333a8a680b57e38a3fc1a9c2281dfb2bd8671f4c92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117980704"
 ---
 # <a name="printing-an-opengl-image"></a>Drucken eines OpenGL-Bilds
 
-Sie können die in erweiterten Metadateien gerenderten OpenGL-Bilder drucken. Wenn Sie zu einem Druckergerät (HDC) gerenden werden, muss es von einem metadateispooler unterstützt werden. OpenGL verwendet Arbeitsspeicher für tiefe, Farbe und andere Puffer zum Speichern der Grafikausgabe an einen Drucker. Da bei der normalen Drucker Auflösung eine beträchtliche Menge an Arbeitsspeicher zum Speichern der Grafikausgabe erforderlich ist, ist für das Drucken eines OpenGL-Images möglicherweise mehr Arbeitsspeicher erforderlich, als im System verfügbar ist. Um diese Einschränkung zu umgehen, druckt die aktuelle Implementierung von OpenGL OpenGL-Grafiken in Bändern. Dies erhöht jedoch die Zeit, die zum Drucken von OpenGL-Bildern benötigt wird.
+Sie können OpenGL-Bilder drucken, die in erweiterten Metadateien gerendert werden. Wenn Sie auf einem Druckergerät (HDC) rendern, muss es durch einen Metafile-Spooler gesichert werden. OpenGL verwendet Arbeitsspeicher für Tiefe, Farbe und andere Puffer, um die Grafikausgabe auf einem Drucker zu speichern. Da die typische Druckerauflösung eine beträchtliche Menge an Arbeitsspeicher zum Speichern der Grafikausgabe erfordert, benötigt das Drucken eines OpenGL-Bilds möglicherweise mehr Arbeitsspeicher als im System verfügbar ist. Um diese Einschränkung zu umgehen, druckt die aktuelle Implementierung von OpenGL OpenGL-Grafiken in Bändern. Dies erhöht jedoch die Zeit, die zum Drucken von OpenGL-Bildern benötigt wird.
 
-Vor dem Drucken eines OpenGL-Bilds müssen Sie die [StartDoc](/windows/desktop/api/wingdi/nf-wingdi-startdoca) -Funktion aufrufen, um die Initialisierung eines Drucker Geräte Kontexts (DC) abzuschließen. Nachdem Sie **StartDoc** aufgerufen haben, können Sie renderingkontexte (hglrc) erstellen, die auf dem Druckergerät gerendert werden. Wenn Sie vor dem Aufrufen von **StartDoc** renderingkontexte erstellen, gibt es keine Möglichkeit, zu bestimmen, ob eine Metadatei gespoolte ist.
+Bevor Sie ein OpenGL-Image drucken, müssen Sie die [StartDoc-Funktion](/windows/desktop/api/wingdi/nf-wingdi-startdoca) aufrufen, um die Initialisierung eines Druckergerätekontexts (DC) abzuschließen. Nach dem Aufruf von **StartDoc** können Sie Renderingkontexte (HGLRC) zum Rendern auf dem Druckergerät erstellen. Wenn Sie Renderingkontexte vor dem Aufruf von **StartDoc** erstellen, gibt es keine Möglichkeit, zu bestimmen, ob eine Metadatei gespoolt wird.
 
-Im folgenden Codebeispiel wird gezeigt, wie ein OpenGL-Bild gedruckt wird:
+Das folgende Codebeispiel zeigt, wie Sie ein OpenGL-Bild drucken:
 
 ``` syntax
 HDC            hDC;
@@ -44,8 +44,8 @@ EndPage(hDC); // Finish writing to the page
 EndDoc(hDC); // End the print job
 ```
 
-Weitere Informationen zur Verwendung von Metadateien finden Sie unter [erweiterte Metafile-Vorgänge](/windows/desktop/gdi/enhanced-metafile-operations).
+Weitere Informationen zur Verwendung von Metadateien finden Sie unter [Erweiterte Metadateivorgänge.](/windows/desktop/gdi/enhanced-metafile-operations)
 
- 
+ 
 
- 
+ 

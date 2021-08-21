@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Rendering-Umgebungs Zuordnung.
+description: Erstellt eine Renderumgebungszuordnung.
 ms.assetid: 5ca10602-5ab1-4766-a350-706c46c55df2
-title: D3DXCreateRenderToEnvMap-Funktion (D3dx9core. h)
+title: D3DXCreateRenderToEnvMap-Funktion (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6829d53f53bd6a4783f5873eeed614e48bbe1088
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f248f70daf589d562091f2bcc235539726b53c8f301d2f10193b13e8604fe740
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117732274"
 ---
 # <a name="d3dxcreaterendertoenvmap-function"></a>D3DXCreateRenderToEnvMap-Funktion
 
-Erstellt eine Rendering-Umgebungs Zuordnung.
+Erstellt eine Renderumgebungszuordnung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCreateRenderToEnvMap(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät ist, das der Renderoberfläche zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät ist, das der Renderoberfläche zugeordnet werden soll.
 
 </dd> <dt>
 
-*Größe* \[ in\]
+*Größe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Größe der Renderoberfläche.
 
 </dd> <dt>
 
-*Miplevels* \[ in\]
+*MipLevels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl von MipMap-Ebenen.
+Die Anzahl der Mipmapebenen.
 
 </dd> <dt>
 
-*Format* \[ in\]
-</dt> <dd>
-
-Typ: **[D3DFORMAT](d3dformat.md)**
-
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Pixel Format der Umgebungs Zuordnung beschreibt.
-
-</dd> <dt>
-
-*Depthstencil* \[ in\]
-</dt> <dd>
-
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
-
-**True** gibt an, dass die Renderoberfläche eine tiefen Schablone unterstützt. Andernfalls ist dieser Member auf **false** festgelegt.
-
-</dd> <dt>
-
-*Depthstencilformat* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
-Wenn depthstencil auf **true** festgelegt ist, ist dieser Parameter ein Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das tiefen Schablone-Format der Umgebungs Zuordnung beschreibt.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Pixelformat der Umgebungszuordnung beschreibt.
 
 </dd> <dt>
 
-*pprenderumenvmap* \[ vorgenommen\]
+*Tiefenschablone* \[ In\]
+</dt> <dd>
+
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
+
+**True** gibt an, dass die Renderoberfläche eine Tiefenschablonenoberfläche unterstützt. Andernfalls wird dieser Member auf **FALSE** festgelegt.
+
+</dd> <dt>
+
+*DepthStencilFormat* \[ In\]
+</dt> <dd>
+
+Typ: **[D3DFORMAT](d3dformat.md)**
+
+Wenn DepthStencil auf **TRUE** festgelegt ist, ist dieser Parameter ein Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Tiefenschablonenformat der Umgebungszuordnung beschreibt.
+
+</dd> <dt>
+
+*ppRenderToEnvMap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXRENDERTOENVMAP**](id3dxrendertoenvmap.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXRenderToEnvMap**](id3dxrendertoenvmap.md) -Schnittstelle, die die erstellte Rendering-Umgebungs Zuordnung darstellt.
+Adresse eines Zeigers auf eine [**ID3DXRenderToEnvMap-Schnittstelle,**](id3dxrendertoenvmap.md) die die erstellte Renderumgebungszuordnung darstellt.
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Adresse eines Zeigers auf eine [**ID3DXRenderToEnvMap**](id3dxrendertoenvmap.md)
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,16 +121,16 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Universell Funktionen](dx9-graphics-reference-d3dx-functions-general-purpose.md)
+[Universell Functions](dx9-graphics-reference-d3dx-functions-general-purpose.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Slider. foregroundendcolor
-description: Das foregroundendcolor-Attribut gibt die Vordergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+title: SLIDER.foregroundEndColor
+description: Das foregroundEndColor-Attribut gibt die Vordergrundendefarbe des Schiebereglersteuerelements an oder ruft sie ab.
 ms.assetid: a13dbd62-dda3-40e9-9700-1e53c9fc26aa
 keywords:
-- Schieberegler. foregroundendcolor-Media Player
+- SLIDER.foregroundEndColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c2c12c786c1440652319c8527a51d0aecdcd2b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 68e3db4666c35e77e8d15a5fd9be045b097070a41832d6faa50658d7c4c99441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117933630"
 ---
-# <a name="sliderforegroundendcolor"></a>Slider. foregroundendcolor
+# <a name="sliderforegroundendcolor"></a>SLIDER.foregroundEndColor
 
-Das **foregroundendcolor** -Attribut gibt die Vordergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+Das **foregroundEndColor-Attribut** gibt die Vordergrundendefarbe des Schiebereglersteuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundEndColor
@@ -29,11 +29,11 @@ Das **foregroundendcolor** -Attribut gibt die Vordergrundfarbe des Schieberegler
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Foregroundendcolor** wird in Verbindung mit einem **ForegroundColor**-Wert verwendet. Der erstellte Effekt ist ein Farbverlaufs Effekt von der **Vordergrundfarbe** bis zur **foregroundendcolor**.
+**ForegroundEndColor** wird in Verbindung mit einer **foregroundColor** verwendet. Der erstellte Effekt ist eine Farbverlaufsblendung von **foregroundColor** zu **foregroundEndColor**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,13 +49,13 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. ForegroundColor**](slider-foregroundcolor.md)
+[**SLIDER.foregroundColor**](slider-foregroundcolor.md)
 </dt> </dl>
 
  

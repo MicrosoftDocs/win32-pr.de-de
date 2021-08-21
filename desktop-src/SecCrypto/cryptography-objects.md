@@ -65,7 +65,7 @@ Die folgenden Objekte werden exportiert, um Daten digital zu signieren und digit
 
  
 
-## <a name="enveloped-data-objects"></a>Umhumschlagte Datenobjekte
+## <a name="enveloped-data-objects"></a>Umschlagdatenobjekte
 
 Die folgenden Objekte werden exportiert, um umhumhierte Datennachrichten für den Datenschutz zu erstellen und Daten in umumschlagten Nachrichten zu entschlüsseln.
 
@@ -73,7 +73,7 @@ Die folgenden Objekte werden exportiert, um umhumhierte Datennachrichten für de
 
 | Object                                 | BESCHREIBUNG                                                                                                                                |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**EnvelopedData**](envelopeddata.md) | Objekte, die zum Erstellen, Senden und Empfangen von umhumhierten Daten verwendet werden. Umschlagdaten werden verschlüsselt, sodass sie nur von den vorgesehenen Empfängern entschlüsselt werden können. |
+| [**EnvelopedData**](envelopeddata.md) | Objekte, die zum Erstellen, Senden und Empfangen von umhumhierten Daten verwendet werden. Umhumschlagte Daten werden verschlüsselt, sodass sie nur von den vorgesehenen Empfängern entschlüsselt werden können. |
 | [**Empfänger**](recipients.md)       | Auflistung der [**Certificate-Objekte**](certificate.md) der vorgesehenen Empfänger einer umschlagenen Nachricht.                           |
 
 

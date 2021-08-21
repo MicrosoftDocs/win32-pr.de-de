@@ -1,7 +1,7 @@
 ---
 description: Die Anwendungs-GUID des Abonnenten.
 ms.assetid: 46c91cae-ca31-4eac-baa8-d36910917f0f
-title: IEventSubscription3::SubscriberApplicationID (Eigenschaft)
+title: IEventSubscription3::SubscriberApplicationID-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118306368"
 ---
-# <a name="ieventsubscription3subscriberapplicationid-property"></a>IEventSubscription3::SubscriberApplicationID (Eigenschaft)
+# <a name="ieventsubscription3subscriberapplicationid-property"></a>IEventSubscription3::SubscriberApplicationID-Eigenschaft
 
 Die Anwendungs-GUID des Abonnenten.
 
@@ -48,7 +48,7 @@ Eine Zeichenfolge, die die GUID der Abonnentenanwendung enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
+Diese Methode kann die Standardrückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 

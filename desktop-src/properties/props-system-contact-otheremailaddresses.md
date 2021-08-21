@@ -4,12 +4,12 @@ ms.assetid: a905a42a-7dd5-4292-bf69-e87eb40d8086
 title: System.Contact.OtherEmailAddresses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8421ce109899a23ca3bd5ea45c5ea305c8f5bb0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0b2ad3f443fbe1aa1c2f2281fd07d2b06de2d5bc1555e75197c3d6980f38a6bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108101308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117684461"
 ---
 # <a name="systemcontactotheremailaddresses"></a>System.Contact.OtherEmailAddresses
 
@@ -28,7 +28,7 @@ propertyDescription
       type = Multivalue String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

@@ -1,18 +1,18 @@
 ---
 title: WCS 1.0-Verfügbarkeit
-description: ICM1 ist für Microsoft \ 160 verfügbar. Windows \ 160;95. Es ist nicht für MS DOS, Windows 3.x oder Windows NT 4.0 oder früher verfügbar.
+description: ICM1 ist für Microsoft \ 160 verfügbar. Windows \ 160;95. Sie ist für MS DOS, Windows 3.x oder Windows NT 4.0 oder früher nicht verfügbar.
 ms.assetid: 0d09093f-e519-40e1-9e6c-0915896eb3e0
 keywords:
-- Windows Farbsystem (WCS), Windows Vista
-- WCS (Windows Color System), Windows Vista
-- Bildfarbverwaltung,Windows Vista
-- Farbverwaltung,Windows Vista
+- Windows Color System (WCS),Windows Vista
+- WCS (Windows Color System),Windows Vista
+- Bildfarbverwaltung, Windows Vista
+- Farbverwaltung, Windows Vista
 - Colors,Windows Vista
-- Windows Farbsystem (WCS), Betriebssysteme
+- Windows Color System (WCS), Betriebssysteme
 - WCS (Windows Color System), Betriebssysteme
-- Bildfarbverwaltung,Betriebssysteme
+- Bildfarbverwaltung, Betriebssysteme
 - Farbverwaltung,Betriebssysteme
-- Farben,Betriebssysteme
+- Farben, Betriebssysteme
 - Farbverwaltung (Image Color Management; ICM)
 - ICM (Bildfarbverwaltung)
 - Windows Vista-Farbverwaltung
@@ -28,11 +28,11 @@ ms.locfileid: "118209592"
 ---
 # <a name="wcs-10-availability"></a>WCS 1.0-Verfügbarkeit
 
-ICM1 ist für Microsoft Windows 95 verfügbar. Es ist nicht für MS DOS verfügbar, Windows 3. *x* oder Windows NT 4.0 oder früher.
+ICM1 ist für Microsoft Windows 95 verfügbar. Sie ist für MS DOS Windows 3 nicht verfügbar. *x* oder Windows NT 4.0 oder früher.
 
-ICM2 ist für Microsoft Windows 98, Windows Edition (Me), Windows 2000 und Windows XP verfügbar. Es ist nicht für MS DOS verfügbar, Windows 3. *x,* Windows 95 oder Windows NT 4.0 oder früher.
+ICM2 ist für Microsoft Windows 98, Windows Edition (Me), Windows 2000 und Windows XP verfügbar. Sie ist für MS DOS Windows 3 nicht verfügbar. *x*, Windows 95 oder Windows NT 4.0 oder früher.
 
-WCS 1.0 ist für Microsoft Windows Vista verfügbar. Es ist nicht für xp Windows oder früher verfügbar.
+WCS 1.0 ist für Microsoft Windows Vista verfügbar. Es ist nicht für Windows XP oder früher verfügbar.
 
  
 

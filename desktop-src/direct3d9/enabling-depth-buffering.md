@@ -1,22 +1,22 @@
 ---
-description: 'Nachdem Sie einen tiefen Puffer erstellt haben, wie unter Erstellen eines tiefen Puffers (Direct3D 9) beschrieben, aktivieren Sie die Tiefe Pufferung durch Aufrufen der Methode IDirect3DDevice9:: settrenderstate.'
+description: Nachdem Sie einen Tiefenpuffer erstellt haben, wie unter Erstellen eines Tiefenpuffers (Direct3D 9) beschrieben, aktivieren Sie die Tiefenpufferung, indem Sie die IDirect3DDevice9::SetRenderState-Methode aufrufen.
 ms.assetid: a3c972dd-3630-4d21-a22b-64a68e9acd19
-title: Aktivieren der tiefen Pufferung (Direct3D 9)
+title: Aktivieren der Tiefenpufferung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 935d4f2e1db164a3aac2a39627be88d71887cc14
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e495b06e6c7d10890393f563c67053294010515e32a2eeb984abb371b8158231
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118095095"
 ---
-# <a name="enabling-depth-buffering-direct3d-9"></a>Aktivieren der tiefen Pufferung (Direct3D 9)
+# <a name="enabling-depth-buffering-direct3d-9"></a>Aktivieren der Tiefenpufferung (Direct3D 9)
 
-Nachdem Sie einen tiefen Puffer erstellt haben, wie unter [Erstellen eines tiefen Puffers (Direct3D 9)](creating-a-depth-buffer.md)beschrieben, aktivieren Sie die Tiefe Pufferung durch Aufrufen der Methode [**IDirect3DDevice9:: settrenderstate**](/windows/desktop/api) . Legen Sie den D3DRS \_ zenable-renderzustand so fest, dass tiefe Pufferung aktiviert wird. Verwenden Sie den D3DZB \_ true-Member des [**D3DZBUFFERTYPE**](./d3dzbuffertype.md) -Enumerationstyps (oder **true**), um z-Pufferung zu aktivieren, D3DZB \_ usew, um w-buffereing zu aktivieren, oder D3DZB \_ false (oder **false**), um die tiefen Pufferung zu deaktivieren.
+Nachdem Sie einen Tiefenpuffer erstellt haben, wie unter Erstellen eines Tiefenpuffers [(Direct3D 9)](creating-a-depth-buffer.md)beschrieben, aktivieren Sie die Tiefenpufferung, indem Sie die [**IDirect3DDevice9::SetRenderState-Methode**](/windows/desktop/api) aufrufen. Legen Sie den D3DRS \_ ZENABLE-Renderzustand fest, um die Tiefenpufferung zu aktivieren. Verwenden Sie den D3D WIE TRUE-Member des \_ [**enumerierten D3DUFFERTYPE-Typs**](./d3dzbuffertype.md) (oder **TRUE),** um Z-Pufferung zu aktivieren, D3D WIE USEW zum Aktivieren der \_ W-Pufferung oder D3D WIE \_ FALSE (oder **FALSE),** um die Tiefenpufferung zu deaktivieren.
 
 > [!Note]  
-> Um w-buffereing zu verwenden, muss die Anwendung eine konforme Projektions Matrix festlegen, auch wenn Sie die Direct3D-Transformations Pipeline nicht verwendet. Weitere Informationen zum Bereitstellen einer geeigneten Projektions Matrix finden Sie in der [W-freundlichen Projektions Matrix](projection-transform.md) .
+> Um die W-Pufferung zu verwenden, muss Ihre Anwendung auch dann eine konforme Projektionsmatrix festlegen, wenn die Direct3D-Transformationspipeline nicht verwendet wird. Informationen zum Bereitstellen einer geeigneten Projektionsmatrix finden Sie unter [Eine W-freundliche Projektionsmatrix.](projection-transform.md)
 
  
 
@@ -24,7 +24,7 @@ Nachdem Sie einen tiefen Puffer erstellt haben, wie unter [Erstellen eines tiefe
 
 <dl> <dt>
 
-[Tiefen Puffer](depth-buffers.md)
+[Tiefenpuffer](depth-buffers.md)
 </dt> </dl>
 
  

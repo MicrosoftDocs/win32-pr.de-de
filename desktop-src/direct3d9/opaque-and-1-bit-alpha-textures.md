@@ -1,29 +1,29 @@
 ---
-description: Textur Format DXT1 ist für Texturen, die nicht transparent sind oder eine einzelne transparente Farbe aufweisen.
+description: Das Texturformat DXT1 ist für Texturen, die nicht transparent sind oder eine einzelne transparente Farbe aufweisen.
 ms.assetid: a890ed0a-1f68-45b8-93cb-b621d1908d9f
-title: Undurchsichtige und 1-Bit-Alpha Texturen (Direct3D 9)
+title: Nicht transparente und 1-Bit-Alphatextur (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f629eff594d28d9a807021c0b9df0bd05ea66c3
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: bda620810e48cba519322f3f2426555443fb696f524f4fbe7752a8c7aaedba73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104553148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117728188"
 ---
-# <a name="opaque-and-1-bit-alpha-textures-direct3d-9"></a>Undurchsichtige und 1-Bit-Alpha Texturen (Direct3D 9)
+# <a name="opaque-and-1-bit-alpha-textures-direct3d-9"></a>Nicht transparente und 1-Bit-Alphatextur (Direct3D 9)
 
-Textur Format DXT1 ist für Texturen, die nicht transparent sind oder eine einzelne transparente Farbe aufweisen.
+Das Texturformat DXT1 ist für Texturen, die nicht transparent sind oder eine einzelne transparente Farbe aufweisen.
 
-Für jeden opaken oder 1-Bit-Alpha Block werden 2 16-Bit-Werte (RGB 5:6:5-Format) und eine 4X4-Bitmap mit 2 Bits pro Pixel gespeichert. Dies ergibt 64 Bits für 16 texeln oder vier Bits pro textteln. In der Block Bitmap gibt es zwei Bits pro Texttypen, die zwischen den vier Farben ausgewählt werden sollen, von denen zwei in den codierten Daten gespeichert sind. Die anderen beiden Farben werden von diesen gespeicherten Farben durch lineare Interpolationen abgeleitet. Dieses Layout ist im folgenden Diagramm dargestellt.
+Für jeden nicht transparenten oder 1-Bit-Alphablock werden zwei 16-Bit-Werte (RGB-Format 5:6:5) und eine 4x4-Bitmap mit 2 Bits pro Pixel gespeichert. Dies beträgt 64 Bits für 16 Texel bzw. vier Bits pro Texel. In der Blockbitmap gibt es 2 Bits pro Texel, um zwischen den vier Farben auszuwählen, von denen zwei in den codierten Daten gespeichert sind. Die anderen beiden Farben werden von diesen gespeicherten Farben durch lineare Interpolation abgeleitet. Dieses Layout ist im folgenden Diagramm dargestellt.
 
-![Diagramm des Bitmap-Layouts](images/colors1.png)
+![Diagramm des Bitmaplayouts](images/colors1.png)
 
-Das 1-Bit-Alpha Format unterscheidet sich vom nicht transparenten Format durch Vergleichen der im-Block gespeicherten 2 16-Bit-Farbwerte. Sie werden als ganze Zahlen ohne Vorzeichen behandelt. Wenn die erste Farbe größer als die zweite ist, bedeutet dies, dass nur nicht transparente texeln definiert werden. Dies bedeutet, dass vier Farben zur Darstellung der Texels verwendet werden. Bei der vierfarbigen Codierung gibt es zwei abgeleitete Farben, und alle vier Farben sind gleichmäßig im RGB-Farbraum verteilt. Dieses Format entspricht dem RGB-5:6:5-Format. Andernfalls werden für eine 1-Bit-Alpha Transparenz drei Farben verwendet, und die vierte ist für die Darstellung transparenter texeln reserviert.
+Das 1-Bit-Alphaformat unterscheidet sich vom nicht transparenten Format, indem die beiden im -Block gespeicherten 16-Bit-Farbwerte verglichen werden. Sie werden als ganze Zahlen ohne Vorzeichen behandelt. Wenn die erste Farbe größer als die zweite ist, impliziert dies, dass nur nicht transparente Texel definiert sind. Dies bedeutet, dass vier Farben verwendet werden, um die Texel zu darstellen. Bei der Codierung mit vier Farben gibt es zwei abgeleitete Farben, und alle vier Farben werden gleichmäßig im RGB-Farbraum verteilt. Dieses Format entspricht dem RGB-Format 5:6:5. Andernfalls werden für die 1-Bit-Alphatransparenz drei Farben verwendet, und die vierte farbe ist für die Darstellung transparenter Texel reserviert.
 
-Bei der drei-Farben-Codierung gibt es eine abgeleitete Farbe, und der vierte 2-Bit-Code ist für die Angabe einer transparenten Texttyp (Alpha Information) reserviert. Dieses Format entspricht RGBA 5:5:5:1, wobei das abschließende Bit zum Codieren der Alpha Maske verwendet wird.
+Bei der Codierung mit drei Farben gibt es eine abgeleitete Farbe, und der vierte 2-Bit-Code ist reserviert, um ein transparentes Texel (Alphainformationen) anzugeben. Dieses Format entspricht RGBA 5:5:5:1, wobei das letzte Bit zum Codieren der Alphamaske verwendet wird.
 
-Das folgende Codebeispiel veranschaulicht den Algorithmus für die Entscheidung, ob drei-oder vierfarbige Codierungen ausgewählt sind:
+Das folgende Codebeispiel veranschaulicht den Algorithmus für die Entscheidung, ob die Codierung mit drei oder vier Farben ausgewählt ist:
 
 
 ```
@@ -51,11 +51,11 @@ else
 
 
 
-Es wird empfohlen, vor dem mischen die RGBA-Komponenten des Transparenz Pixels auf 0 (null) festzulegen.
+Es wird empfohlen, die RGBA-Komponenten des Transparenzpixels vor dem Mischen auf 0 (null) zu setzen.
 
-In den folgenden Tabellen wird das Speicher Layout für den 8-Byte-Block angezeigt. Es wird davon ausgegangen, dass der erste Index der y-Koordinate entspricht und der zweite der x-Koordinate entspricht. Beispielsweise verweist Texel \[ 1 \] \[ 2 \] auf das Textur Karten Pixel bei (x, y) = (2, 1).
+Die folgenden Tabellen zeigen das Speicherlayout für den 8-Byte-Block. Es wird davon ausgegangen, dass der erste Index der y-Koordinate und der zweite der x-Koordinate entspricht. Texel 1 2 bezieht sich beispielsweise auf das \[ \] \[ \] Texturzuordnungspixel bei (x,y) = (2,1).
 
-Diese Tabelle enthält das Speicher Layout für den 8-Byte-Block (64 Bit).
+Diese Tabelle enthält das Speicherlayout für den 8-Byte-Block (64-Bit).
 
 
 
@@ -63,30 +63,30 @@ Diese Tabelle enthält das Speicher Layout für den 8-Byte-Block (64 Bit).
 |--------------|----------------|
 | 0            | Farbe \_ 0       |
 | 1            | Farbe \_ 1       |
-| 2            | Bitmap Wort \_ 0 |
+| 2            | Bitmap Word \_ 0 |
 | 3            | Bitmap Word \_ 1 |
 
 
 
  
 
-Farbe \_ 0 und Farbe \_ 1, die Farben in den zwei extremen, werden wie folgt angeordnet:
+Farbe 0 und Farbe 1, die Farben an den \_ beiden Extremen, werden wie folgt \_ dargestellt:
 
 
 
 | Bits        | Color                 |
 |-------------|-----------------------|
-| 4:0 (LSB \* ) | Blaue Farbkomponente  |
-| 10:5        | Grüne Farbkomponente |
-| 15:11       | Rote Farbkomponente   |
+| 4:0 (LSB \* ) | Blaufarbenkomponente  |
+| 10:5        | Komponente "Grüne Farbe" |
+| 15:11       | Komponente "Rote Farbe"   |
 
 
 
  
 
-\*unbedeutsames Bit
+\*Bit mit der geringsten Bedeutung
 
-Das Bitmap-Wort \_ 0 wird wie folgt festgelegt:
+Bitmap Word \_ 0 ist wie folgt ausgelegt:
 
 
 
@@ -105,9 +105,9 @@ Das Bitmap-Wort \_ 0 wird wie folgt festgelegt:
 
  
 
-\*signifikantes Bit (MSB)
+\*wichtigstes Bit (MSB)
 
-Bitmap Word \_ 1 wird wie folgt angeordnet:
+Bitmap Word \_ 1 ist wie folgt ausgelegt:
 
 
 
@@ -126,9 +126,9 @@ Bitmap Word \_ 1 wird wie folgt angeordnet:
 
  
 
-## <a name="example-of-opaque-color-encoding"></a>Beispiel für nicht transparente Farbcodierung
+## <a name="example-of-opaque-color-encoding"></a>Beispiel für Opaque Color Encoding
 
-Nehmen Sie als Beispiel für die nicht transparente Codierung an, dass die Farben rot und schwarz die extreme sind. Rot ist Farbe \_ 0, schwarz ist Farbe \_ 1. Es gibt vier interpoliert Farben, die den gleichmäßig verteilten Farbverlauf zwischen Ihnen bilden. Zum Ermitteln der Werte für die 4X4-Bitmap werden die folgenden Berechnungen verwendet:
+Als Beispiel für die opake Codierung wird davon ausgegangen, dass die Farben Rot und Schwarz extrem sind. Rot ist Die \_ Farbe 0 und Schwarz die \_ Farbe 1. Es gibt vier interpolierte Farben, die den gleichmäßig verteilten Farbverlauf zwischen ihnen bilden. Um die Werte für die 4x4-Bitmap zu bestimmen, werden die folgenden Berechnungen verwendet:
 
 
 ```
@@ -142,28 +142,28 @@ Nehmen Sie als Beispiel für die nicht transparente Codierung an, dass die Farbe
 
 Die Bitmap sieht dann wie im folgenden Diagramm aus.
 
-![Diagramm, das das erweiterte bitmaplayout anzeigt.](images/colors2.png)
+![Diagramm, das das erweiterte Bitmaplayout zeigt.](images/colors2.png)
 
-Dies sieht wie die folgende veranschaulichte Reihe von Farben aus.
+Dies sieht wie die folgende dargestellte Reihe von Farben aus.
 
 > [!Note]  
-> In einem Bild wird Pixel (0,0) oben links angezeigt.
+> In einem Bild wird pixel (0,0) oben links angezeigt.
 
  
 
-![Abbildung eines opaken codierten Farbverlaufs](images/redsquares.png)
+![Abbildung eines nicht transparenten codierten Farbverlaufs](images/redsquares.png)
 
-## <a name="example-of-1-bit-alpha-encoding"></a>Beispiel für 1-Bit-Alpha Codierung
+## <a name="example-of-1-bit-alpha-encoding"></a>Beispiel für 1-Bit-Alphacodierung
 
-Dieses Format wird ausgewählt, wenn die 16-Bit-Ganzzahl ohne Vorzeichen (Farbe \_ 0) kleiner als die 16-Bit-Ganzzahl ohne Vorzeichen (Farbe 1) ist \_ . Ein Beispiel für die Verwendung dieses Formats ist die Blätter in einer Struktur, die für einen blauen Himmel angezeigt wird. Einige texeln können als transparent gekennzeichnet werden, während drei grüne Schattierungen weiterhin für die Blätter verfügbar sind. Zwei Farben korrigieren das Extreme, das dritte ist eine interinterpolierte Farbe.
+Dieses Format wird ausgewählt, wenn die 16-Bit-Ganzzahl ohne Vorzeichen , Farbe 0, kleiner als die \_ 16-Bit-Ganzzahl ohne Vorzeichen, Farbe \_ 1, ist. Ein Beispiel dafür, wo dieses Format verwendet werden kann, sind Blätter in einer Struktur, die an einem blauen Himmel dargestellt werden. Einige Texel können als transparent markiert werden, während drei Grünschattierungen für die Blätter weiterhin verfügbar sind. Zwei Farben beheben die Extreme, und die dritte ist eine interpolierte Farbe.
 
-In der folgenden Abbildung ist ein Beispiel für ein solches Bild dargestellt.
+Die folgende Abbildung ist ein Beispiel für ein solches Bild.
 
-![Abbildung der 1-Bit-Alpha Codierung](images/greenthing.png)
+![Abbildung der 1-Bit-Alphacodierung](images/greenthing.png)
 
-Beachten Sie, dass die textelist als transparent codiert werden, wenn das Bild als weiß angezeigt wird. Beachten Sie auch, dass die RGBA-Komponenten der transparenten texeln vor dem Mischen auf 0 (null) festgelegt werden sollen.
+Beachten Sie, dass das Texel als transparent codiert wird, wenn das Bild weiß angezeigt wird. Beachten Sie außerdem, dass die RGBA-Komponenten der transparenten Texel vor dem Mischen auf 0 (null) festgelegt werden sollten.
 
-Die Bitmap-Codierung für die Farben und Transparenz wird anhand der folgenden Berechnungen bestimmt.
+Die Bitmapcodierung für die Farben und die Transparenz wird mithilfe der folgenden Berechnungen bestimmt.
 
 
 ```
@@ -177,13 +177,13 @@ Die Bitmap-Codierung für die Farben und Transparenz wird anhand der folgenden B
 
 Die Bitmap sieht dann wie im folgenden Diagramm aus.
 
-![Diagramm des erweiterten bitmaplayouts](images/colors3.png)
+![Diagramm des erweiterten Bitmaplayouts](images/colors3.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Komprimierte Textur Ressourcen](compressed-texture-resources.md)
+[Komprimierte Texturressourcen](compressed-texture-resources.md)
 </dt> </dl>
 
  

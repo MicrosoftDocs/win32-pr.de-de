@@ -1,29 +1,29 @@
 ---
-description: Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächen-Frameworks verwendet, um zu ermitteln, wie das UI-Feedback verarbeitet wird, wenn eine der aufgelisteten Gesten erkannt wird.
+description: Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächenframeworks verwendet, um zu identifizieren, wie Benutzeroberflächenfeedback verarbeitet wird, wenn eine der aufgelisteten Gesten erkannt wird.
 ms.assetid: 76D3DFF4-7BB2-49A9-8251-0B5D9376B649
-title: Gesten Visualisierung (Winuser. h)
+title: Gestenvisualisierung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 551934380e1d5ec0902818466f5840e1dc6718e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f572addf2ad7a98dbe3afc63c69a305ea15546e9533918d952271372cf52b5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117849819"
 ---
-# <a name="gesture-visualization"></a>Gesten Visualisierung
+# <a name="gesture-visualization"></a>Gestenvisualisierung
 
-Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächen-Frameworks verwendet, um zu ermitteln, wie das UI-Feedback verarbeitet wird, wenn eine der aufgelisteten Gesten erkannt wird.
+Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächenframeworks verwendet, um zu identifizieren, wie Benutzeroberflächenfeedback verarbeitet wird, wenn eine der aufgelisteten Gesten erkannt wird.
 
-Diese Konstanten werden mit den **SPI \_ getgesturevisualisierungs** -und **SPI \_ setgesturevisualisierungs** -Parametern und der [**SystemParametersInfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) -Funktion verwendet.
+Diese Konstanten werden mit den Parametern **SPI \_ GETGESTUREVISUALIZATION** und **SPI \_ SETGESTUREVISUALIZATION** und der [**SystemParametersInfo-Funktion**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) verwendet.
 
 **Hinweis**  
 
-Zum Abrufen oder Festlegen von Pen-Visualisierungs Informationen wird empfohlen, dass Sie die **SPI \_ getpenvisualisierungs** -und **SPI \_ setpenvisualisierungs** Parameter und die in [**Pen-Visualisierung**](pen-visualization.md)aufgeführten Konstanten verwenden.
+Zum Abrufen oder Festlegen von Stiftvisualisierungsinformationen wird empfohlen, die Parameter **SPI \_ GETPENVISUALIZATION** und **SPI \_ SETPENVISUALIZATION** sowie die konstanten zu verwenden, die unter [**Stiftvisualisierung**](pen-visualization.md)aufgeführt sind.
 
 <dl> <dt>
 
-<span id="GESTUREVISUALIZATION_OFF"></span><span id="gesturevisualization_off"></span>**gesturevisualisierungen \_ aus**
+<span id="GESTUREVISUALIZATION_OFF"></span><span id="gesturevisualization_off"></span>**GESTUREVISUALIZATION \_ OFF**
 </dt> <dd> <dl> <dt>
 
 0x0000
@@ -31,12 +31,12 @@ Zum Abrufen oder Festlegen von Pen-Visualisierungs Informationen wird empfohlen,
 
 
 
-Gibt an, dass das UI-Feedback für alle Gesten deaktiviert ist.
+Gibt an, dass das Benutzeroberflächenfeedback für alle Gesten deaktiviert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_ON"></span><span id="gesturevisualization_on"></span>**gesturevisualisierung \_ in**
+<span id="GESTUREVISUALIZATION_ON"></span><span id="gesturevisualization_on"></span>**GESTUREVISUALIZATION \_ ON**
 </dt> <dd> <dl> <dt>
 
 0x001F
@@ -44,12 +44,12 @@ Gibt an, dass das UI-Feedback für alle Gesten deaktiviert ist.
 
 
 
-Gibt an, dass Benutzeroberflächen Feedback für alle Gesten auf ON festgelegt ist
+Gibt an, dass benutzeroberflächenfeedback für alle Gesten eingeschaltet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_TAP"></span><span id="gesturevisualization_tap"></span>**gesturevisualisierungs \_ tippen**
+<span id="GESTUREVISUALIZATION_TAP"></span><span id="gesturevisualization_tap"></span>**\_GESTENVISUALISIERUNGS-TAP**
 </dt> <dd> <dl> <dt>
 
 0x0001
@@ -57,12 +57,12 @@ Gibt an, dass Benutzeroberflächen Feedback für alle Gesten auf ON festgelegt i
 
 
 
-Gibt das UI-Feedback für eine Tap an.
+Gibt Benutzeroberflächenfeedback für einen Tippen an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_DOUBLETAP"></span><span id="gesturevisualization_doubletap"></span>**gesturevisualisierungs- \_ Double Tap**
+<span id="GESTUREVISUALIZATION_DOUBLETAP"></span><span id="gesturevisualization_doubletap"></span>**GESTUREVISUALIZATION \_ DOUBLETAP**
 </dt> <dd> <dl> <dt>
 
 0x0002
@@ -70,12 +70,12 @@ Gibt das UI-Feedback für eine Tap an.
 
 
 
-Gibt das UI-Feedback für eine doppelte Tap an.
+Gibt Benutzeroberflächenfeedback für einen doppelten Tippen an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_PRESSANDTAP"></span><span id="gesturevisualization_pressandtap"></span>**gesturevisualisierungs- \_ pressandtap**
+<span id="GESTUREVISUALIZATION_PRESSANDTAP"></span><span id="gesturevisualization_pressandtap"></span>**GESTUREVISUALIZATION \_ PRESSANDTAP**
 </dt> <dd> <dl> <dt>
 
 0x0004
@@ -83,12 +83,12 @@ Gibt das UI-Feedback für eine doppelte Tap an.
 
 
 
-Gibt das UI-Feedback für ein drücken und tippen an.
+Gibt Benutzeroberflächenfeedback für ein Drücken und Tippen an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_PRESSANDHOLD"></span><span id="gesturevisualization_pressandhold"></span>**gesturevisualisierungs- \_ pressandhold**
+<span id="GESTUREVISUALIZATION_PRESSANDHOLD"></span><span id="gesturevisualization_pressandhold"></span>**GESTUREVISUALIZATION \_ PRESSANDHOLD**
 </dt> <dd> <dl> <dt>
 
 0x0008
@@ -96,12 +96,12 @@ Gibt das UI-Feedback für ein drücken und tippen an.
 
 
 
-Gibt das Benutzeroberflächen Feedback für einen Press-und-Halt an.
+Gibt Benutzeroberflächenfeedback für ein Drücken und Halten an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GESTUREVISUALIZATION_RIGHTTAP"></span><span id="gesturevisualization_righttap"></span>**gesturevisualisierungs- \_ RightTap**
+<span id="GESTUREVISUALIZATION_RIGHTTAP"></span><span id="gesturevisualization_righttap"></span>**GESTUREVISUALIZATION \_ RIGHTTAP**
 </dt> <dd> <dl> <dt>
 
 0x0010
@@ -109,7 +109,7 @@ Gibt das Benutzeroberflächen Feedback für einen Press-und-Halt an.
 
 
 
-Gibt das UI-Feedback für einen richtigen Tap an.
+Gibt Benutzeroberflächenfeedback für einen Tippen mit der rechten Seite an.
 
 
 </dt> </dl> </dd> </dl>
@@ -120,9 +120,9 @@ Gibt das UI-Feedback für einen richtigen Tap an.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
@@ -130,16 +130,16 @@ Gibt das UI-Feedback für einen richtigen Tap an.
 
 <dl> <dt>
 
-[Konfigurations Konstanten](configuration-constants.md)
+[Konfigurationskonstanten](configuration-constants.md)
 </dt> <dt>
 
-[**Kontakt Visualisierung**](contact-visualization.md)
+[**Kontaktvisualisierung**](contact-visualization.md)
 </dt> <dt>
 
-[**SystemParametersInfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
+[**Systemparametersinfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
 </dt> <dt>
 
-[Eingabe-Feedback-Konfiguration](/previous-versions/windows/desktop/input_feedback/input-feedback-configuration-portal)
+[Konfiguration des Eingabefeedbacks](/previous-versions/windows/desktop/input_feedback/input-feedback-configuration-portal)
 </dt> </dl>
 
  

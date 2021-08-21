@@ -1,5 +1,5 @@
 ---
-description: Bei Windows 2000 ist es üblich, dass ein Installationshilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um festzustellen, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die hinzugefügt werden.
+description: Ab Windows 2000 ist es üblich, dass ein Installations-Hilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um zu ermitteln, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die es hinzufügen wird.
 ms.assetid: 87e7b9de-d571-41e4-817e-29023546e9bd
 title: Bestimmen der Registrierungsgröße
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "117764502"
 ---
 # <a name="determining-the-registry-size"></a>Bestimmen der Registrierungsgröße
 
-Bei Windows 2000 ist es üblich, dass ein Installationshilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um festzustellen, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die hinzugefügt werden. In diesem Beispiel wird veranschaulicht, wie dies programmgesteuert mithilfe des Leistungsindikators "% Registry Quota In Use" im System-Objekt durchgeführt wird.
+Ab Windows 2000 ist es üblich, dass ein Installations-Hilfsprogramm die aktuelle und maximale Größe der Registrierung überprüft, um zu ermitteln, ob genügend Speicherplatz für die neuen Daten verfügbar ist, die es hinzufügen wird. In diesem Beispiel wird veranschaulicht, wie dies programmgesteuert mithilfe des Leistungsindikators "% Registry Quota In Use" innerhalb des Systemobjekts funktioniert.
 
-Im folgenden Beispiel wird das Leistungsdatenhilfs-Hilfsmuster (PDH) verwendet, um den Indikatorwert abzurufen. Sie muss mit Pdh.lib verknüpft sein. PDH ist ein hoher Satz von APIs, die zum Abrufen von Leistungsdaten verwendet werden.
+Im folgenden Beispiel wird mithilfe des Leistungsdaten-Hilfsers (PDH) der Zählerwert erhalten. sie muss mit Pdh.lib verknüpft werden. PDH ist ein hoher Satz von APIs, die zum Abrufen von Leistungsdaten verwendet werden.
 
 > [!Note]  
 > Es ist nicht erforderlich, diese Überprüfung der Registrierungsgröße auf Windows Server 2003 oder Windows XP zu implementieren, da sie keine Registrierungskontingentgrenze haben.

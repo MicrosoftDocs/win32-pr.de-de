@@ -1,9 +1,9 @@
 ---
-title: Video Codierungs Eigenschaften (camerauicontrol. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Video Codierungs Eigenschaften (camerauicontrol. h)
+title: Videocodierungseigenschaften (Camerauicontrol.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Videocodierungseigenschaften (Camerauicontrol.h)
 ms.assetid: 1b1b2a12-b3a0-48f5-83be-35b1cea61c81
 keywords:
-- Video Codierungs Eigenschaften Windows Media-Format
+- Videocodierungseigenschaften – Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a269409e02237ce2be1037fbc2053b7c067dd3b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bc76c9b43dadf992762599eab5c6ffec64191669dbd158675714fee432e7dbb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117653413"
 ---
-# <a name="video-encoding-properties"></a>Video Codierungs Eigenschaften
+# <a name="video-encoding-properties"></a>Videocodierungseigenschaften
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Camerauicontrol. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Camerauicontrol.h</dt> </dl> |
 
 
 

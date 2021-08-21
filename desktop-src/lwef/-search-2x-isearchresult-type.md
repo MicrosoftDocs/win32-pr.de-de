@@ -1,11 +1,11 @@
 ---
-title: Isearchresult-Typmethode
-description: Reserviert. | Isearchresult-Typmethode
+title: ISearchResult Type-Methode
+description: Reserviert. | ISearchResult Type-Methode
 ms.assetid: 9c4e5a30-7e0e-4e8d-a31e-5160afb3749c
 keywords:
-- Typmethode ältere Windows-Umgebungs Features
-- Type-Methode Legacy-Windows-Umgebungs Features, isearchresult-Schnittstelle
-- Isearchresult Interface Legacy Windows-Umgebungs Features, Type-Methode
+- Typmethode Legacy Windows Umgebungsfeatures
+- Typmethode Legacy Windows Umgebungsfeatures, ISearchResult-Schnittstelle
+- ISearchResult interface Legacy Windows Environment Features , Type method
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5eb2c88b9333b2bdb176495ae74bcf69d4a9b6a6
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b2166a3950ed9406b899b38d28f206ff607757d2e1b2dab5c9aefb08ceb2971e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117694468"
 ---
-# <a name="isearchresulttype-method"></a>Isearchresult:: Type-Methode
+# <a name="isearchresulttype-method"></a>ISearchResult::Type-Methode
 
 Diese Methode ist nicht implementiert.
 

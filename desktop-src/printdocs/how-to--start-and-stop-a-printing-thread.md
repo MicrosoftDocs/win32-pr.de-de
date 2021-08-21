@@ -1,39 +1,39 @@
 ---
-description: In diesem Thema wird beschrieben, wie der Druckauftrags Verarbeitungs Thread gestartet und beendet wird.
+description: In diesem Thema wird beschrieben, wie der Druckauftragsverarbeitungsthread gestartet und beendet wird.
 ms.assetid: CA3A81D6-332F-4867-881F-AC6859A076CF
-title: 'Vorgehensweise: starten und Abbrechen eines Druck Threads'
+title: 'Vorgehensweise: Starten und Beenden eines Druckthreads'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d9a47f81e384a135bb70e6deabefe15a3408a04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 393f1f95efbb52c7cdd81316db000de22d45ca9e5dda0eadebb82ebaa3942350
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117686712"
 ---
-# <a name="how-to-start-and-stop-a-printing-thread"></a>Vorgehensweise: starten und Abbrechen eines Druck Threads
+# <a name="how-to-start-and-stop-a-printing-thread"></a>Vorgehensweise: Starten und Beenden eines Druckthreads
 
-In diesem Thema wird beschrieben, wie der Druckauftrags Verarbeitungs Thread gestartet und beendet wird.
+In diesem Thema wird beschrieben, wie der Druckauftragsverarbeitungsthread gestartet und beendet wird.
 
 ## <a name="overview"></a>Übersicht
 
-Um zu verhindern, dass Druckaktivitäten die Benutzeroberflächen Antwort blockieren, erstellen Sie einen separaten Thread, um den Druckauftrag zu verarbeiten. Der Thread, der gestartet wird, wenn das Programm gestartet wird, ist der Thread, der die Fenster Meldungen behandelt, die sich aus der Benutzerinteraktion ergeben, und ist daher der UI-Thread. Das Programm muss diese Nachrichten ohne Verzögerung verarbeiten, damit die Benutzeroberfläche rechtzeitig auf die Maus-und Tastatureingaben des Benutzers antwortet. Damit das Programm in der Lage ist, schnell auf diese Meldungen zu reagieren, ist die Verarbeitungs Menge, die bei einer beliebigen Nachricht durchgeführt werden kann, begrenzt. Wenn eine Benutzer Anforderung eine umfangreiche Verarbeitung erfordert, muss ein anderer Thread diese Verarbeitung durchführen, damit die nachfolgende Benutzerinteraktion vom Programm verarbeitet werden kann.
+Um zu verhindern, dass Druckaktivitäten die Antwort auf die Benutzeroberfläche blockieren, erstellen Sie einen separaten Thread zum Verarbeiten des Druckauftrags. Der Thread, der beim Starten des Programms gestartet wird, ist der Thread, der die Fenstermeldungen verarbeitet, die sich aus der Benutzerinteraktion ergeben, und ist daher der UI-Thread. Das Programm muss diese Nachrichten ohne Verzögerung verarbeiten, damit die Benutzeroberfläche rechtzeitig auf die Maus- und Tastatureingabe des Benutzers reagiert. Damit das Programm schnell auf diese Nachrichten reagieren kann, ist die Verarbeitungsmenge, die während einer Nachricht ausgeführt werden kann, begrenzt. Wenn eine Benutzeranforderung eine umfangreiche Verarbeitung erfordert, muss diese Verarbeitung von einem anderen Thread ausgeführt werden, damit nachfolgende Benutzerinteraktionen vom Programm verarbeitet werden können.
 
-Zum Verarbeiten von Daten in einem separaten Thread muss das Programm den Vorgang des Benutzeroberflächen Threads und des Verarbeitungs Threads koordinieren. Wenn z. b. der Verarbeitungs Thread die Daten verarbeitet, darf der Haupt Thread diese Daten nicht ändern. Eine Möglichkeit, dies zu verwalten, ist durch Thread sichere Synchronisierungs Objekte wie Semaphore, Ereignisse und Mutexen.
+Das Verarbeiten von Daten in einem separaten Thread erfordert, dass das Programm den Betrieb des Benutzeroberflächenthreads und des Verarbeitungsthreads koordiniert. Während der Verarbeitungsthread beispielsweise die Daten verarbeitet, darf der Hauptthread diese Daten nicht ändern. Eine Möglichkeit, dies zu verwalten, sind threadsichere Synchronisierungsobjekte wie Semaphore, Ereignisse und Mutexe.
 
-Gleichzeitig müssen einige Benutzerinteraktionen verhindert werden, während der Verarbeitungs Thread ausgeführt wird. Im Beispielprogramm werden die Anwendungsdaten geschützt und die Benutzerinteraktion beschränkt, indem die Verarbeitung des Druckauftrags durch das Dialogfeld modales Fortschreiten verwaltet wird. In einem modalen Dialogfeld wird verhindert, dass der Benutzer mit dem Hauptfenster des Programms interagiert, wodurch verhindert wird, dass der Benutzer die Anwendungsprogramm Daten ändert, während die Daten gedruckt werden.
+Gleichzeitig muss eine Benutzerinteraktion verhindert werden, während der Verarbeitungsthread ausgeführt wird. Im Beispielprogramm werden die Anwendungsdaten geschützt, und die Benutzerinteraktion wird eingeschränkt, indem die Druckauftragsverarbeitung über das Modale Statusdialogfeld verwaltet wird. Ein modales Dialogfeld verhindert, dass der Benutzer mit dem Hauptfenster des Programms interagiert, wodurch verhindert wird, dass der Benutzer die Anwendungsprogrammdaten ändert, während die Daten gedruckt werden.
 
-Die einzige Aktion, die der Benutzer ausführen kann, während ein Druckauftrag verarbeitet wird, besteht darin, den Druckauftrag abzubrechen. Diese Einschränkung wird dem Benutzer durch die Form "Cursor" signalisiert. Wenn sich der Cursor über der Schaltfläche **Abbrechen** befindet, wird ein Pfeilcursor angezeigt, der anzeigt, dass der Benutzer auf diese Schaltfläche klicken kann. Wenn sich der Cursor über einem anderen Teil des Fenster Bereichs des Programms befindet, wird ein warte Cursor angezeigt, der anzeigt, dass das Programm ausgelastet ist und nicht auf Benutzereingaben reagieren kann.
+Die einzige Aktion, die der Benutzer ausführen kann, während ein Druckauftrag verarbeitet wird, besteht darin, den Druckauftrag abzubrechen. Diese Einschränkung wird dem Benutzer durch die Cursorform signalisiert. Wenn sich der Cursor über der Schaltfläche **Abbrechen** befindet, wird ein Pfeilcursor angezeigt, der angibt, dass der Benutzer auf diese Schaltfläche klicken kann. Wenn sich der Cursor über einem anderen Teil des Fensterbereichs des Programms befindet, wird ein Wartecursor angezeigt, der angibt, dass das Programm ausgelastet ist und nicht auf Benutzereingaben reagieren kann.
 
-## <a name="creating-the-printing-thread-procedure"></a>Erstellen der Druck Thread Prozedur
+## <a name="creating-the-printing-thread-procedure"></a>Erstellen der Druckthreadprozedur
 
-Es wird empfohlen, diese Features während der Druck Verarbeitung einzubeziehen.
+Es wird empfohlen, diese Features während der Druckverarbeitung zu nutzen.
 
--   **Die Druck Verarbeitung ist in Schritte unterteilt.**
+-   **Die Druckverarbeitung ist in Schritte unterteilt.**
 
-    Sie können die Druck Verarbeitung in diskrete Verarbeitungsschritte aufteilen, die Sie unterbrechen können, wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt. Dies ist hilfreich, da die Druck Verarbeitung prozessorintensive Vorgänge beinhalten kann. Das Abbrechen dieser Verarbeitung in Schritte kann verhindern, dass die Druck Verarbeitung andere Threads oder Prozesse blockiert oder verzögert. Wenn Sie die Verarbeitung in logische Schritte unterteilen, ist es auch möglich, die Druck Verarbeitung zu einem beliebigen Zeitpunkt ordnungsgemäß zu beenden, sodass das Beenden eines Druckauftrags vor dem Abschluss keine verwaisten Ressourcen verlässt.
+    Sie können die Druckverarbeitung in diskrete Verarbeitungsschritte unterteilen, die Sie unterbrechen können, wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt. Dies ist nützlich, da die Druckverarbeitung prozessorintensive Vorgänge umfassen kann. Das Aufbrechen dieser Verarbeitung in Schritte kann verhindern, dass die Druckverarbeitung andere Threads oder Prozesse blockiert oder verzögert. Wenn die Verarbeitung in logische Schritte unterteilt wird, ist es auch möglich, die Druckverarbeitung zu einem beliebigen Zeitpunkt sauber zu beenden, sodass das Beenden eines Druckauftrags, bevor er abgeschlossen wurde, keine verwaisten Ressourcen verlässt.
 
-    Dies ist eine Beispielliste von Druck Schritten.
+    Dies ist eine Beispielliste der Druckschritte.
 
     ```C++
     HRESULT PrintStep_1_StartJob (PPRINTTHREADINFO threadInfo);
@@ -46,11 +46,11 @@ Es wird empfohlen, diese Features während der Druck Verarbeitung einzubeziehen.
 
     
 
--   **Nach einem Abbruch Ereignis zwischen den Schritten suchen**
+-   **Überprüfen auf ein Abbruchereignis zwischen den Schritten**
 
-    Wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt, signalisiert der Benutzeroberflächen Thread das Ereignis abbrechen. Der Verarbeitungs Thread muss das Ereignis abbrechen regelmäßig überprüfen, um zu wissen, wann ein Benutzer auf die Schaltfläche **Abbrechen** geklickt hat. Die [**WaitForSingleObject**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) -Anweisungen führen diese Überprüfung aus und geben anderen Programmen die Möglichkeit zur Ausführung, damit die Verarbeitung von Druckaufträgen andere Threads oder Prozesse nicht blockiert oder verzögert.
+    Wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt, signalisiert der Benutzeroberflächenthread das Abbruchereignis. Der Verarbeitungsthread muss das Abbruchereignis regelmäßig überprüfen, um zu wissen, wann ein Benutzer auf die Schaltfläche **Abbrechen** geklickt hat. Die [**WaitForSingleObject-Anweisungen**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) führen diese Überprüfung durch und ermöglichen auch anderen Programmen die Ausführung, sodass die Druckauftragsverarbeitung andere Threads oder Prozesse nicht blockiert oder verzögert.
 
-    Das folgende Codebeispiel veranschaulicht einen der Tests, um festzustellen, ob das Cancel-Ereignis aufgetreten ist.
+    Im folgenden Codebeispiel wird einer der Tests veranschaulicht, um festzustellen, ob das Abbruchereignis aufgetreten ist.
 
     ```C++
     waitStatus = WaitForSingleObject (
@@ -64,11 +64,11 @@ Es wird empfohlen, diese Features während der Druck Verarbeitung einzubeziehen.
 
     
 
--   **Statusaktualisierungen an Benutzeroberflächen Thread senden**
+-   **Senden von Statusupdates an den Benutzeroberflächenthread**
 
-    Bei jedem Schritt der Druck Verarbeitung sendet der Druck Verarbeitungs Thread Aktualisierungs Meldungen an das Dialogfeld "Druck Status", sodass die Statusanzeige aktualisiert werden kann. Beachten Sie, dass das Dialogfeld Druck Status im UI-Thread ausgeführt wird.
+    Bei jedem Druckverarbeitungsschritt sendet der Druckverarbeitungsthread Aktualisierungsmeldungen an das Dialogfeld "Druckfortschritt", damit die Statusanzeige aktualisiert werden kann. Beachten Sie, dass das Dialogfeld "Druckfortschritt" im UI-Thread ausgeführt wird.
 
-    Im folgenden Codebeispiel wird einer der Update-Nachrichten Aufrufe veranschaulicht.
+    Das folgende Codebeispiel veranschaulicht einen der Updatemeldungsaufrufe.
 
     ```C++
     // Update print status
@@ -81,15 +81,15 @@ Es wird empfohlen, diese Features während der Druck Verarbeitung einzubeziehen.
 
     
 
-## <a name="starting-the-printing-thread"></a>Der Druck Thread wird gestartet.
+## <a name="starting-the-printing-thread"></a>Starten des Druckthreads
 
-Der Druck Verarbeitungs Thread wird ausgeführt, bis die printthreadproc-Funktion zurückgibt. Mit den folgenden Schritten wird der Druck Thread gestartet.
+Der Druckverarbeitungsthread wird ausgeführt, bis die PrintThreadProc-Funktion zurückgegeben wird. Mit den folgenden Schritten wird der Druckthread gestartet.
 
-1.  **Bereiten Sie die Daten und die Benutzeroberflächen Elemente für das Drucken vor.**
+1.  **Bereiten Sie die Daten- und Benutzeroberflächenelemente für das Drucken vor.**
 
-    Bevor Sie den druckverarbeitungs Thread starten, müssen Sie die Datenelemente initialisieren, die den Druckauftrag und die Benutzeroberflächen Elemente beschreiben. Diese Elemente enthalten den Cursor Zustand, sodass der Warte Cursor entsprechend angezeigt wird. Außerdem müssen Sie die Statusanzeige so konfigurieren, dass Sie die Größe des Druckauftrags widerspiegelt. Diese Vorbereitungsschritte werden im Abschnitt Gewusst [wie: Sammeln von Druckauftrags Informationen des Benutzers](preparing-to-print.md)ausführlich beschrieben.
+    Bevor Sie den Druckverarbeitungsthread starten, müssen Sie die Datenelemente initialisieren, die den Druckauftrag und die Benutzeroberflächenelemente beschreiben. Diese Elemente enthalten den Cursorzustand, sodass der Wartecursor entsprechend angezeigt wird. Sie müssen auch die Statusanzeige konfigurieren, um die Größe des Druckauftrags widerzuspiegeln. Diese Vorbereitungsschritte werden unter [Vorgehensweise: Sammeln von Druckauftragsinformationen vom Benutzer](preparing-to-print.md)ausführlich beschrieben.
 
-    Im folgenden Codebeispiel wird gezeigt, wie Sie die Statusanzeige so konfigurieren, dass Sie die Größe des vom Benutzer angeforderten Druckauftrags widerspiegelt.
+    Das folgende Codebeispiel zeigt, wie Sie die Statusanzeige so konfigurieren, dass sie die Größe des druckauftrags widerspiegelt, den der Benutzer angefordert hat.
 
     ```C++
     // Compute the number of steps in this job.
@@ -113,11 +113,11 @@ Der Druck Verarbeitungs Thread wird ausgeführt, bis die printthreadproc-Funktio
 
     
 
-2.  **Starten Sie den druckverarbeitungs Thread.**
+2.  **Starten Sie den Druckverarbeitungsthread.**
 
-    Aufrufen von " [**kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) ", um den Verarbeitungs Thread zu starten.
+    Rufen [**Sie CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) auf, um den Verarbeitungsthread zu starten.
 
-    Im folgenden Codebeispiel wird der Verarbeitungs Thread gestartet.
+    Im folgenden Codebeispiel wird der Verarbeitungsthread gestartet.
 
     ```C++
     // Start the printing thread
@@ -132,9 +132,9 @@ Der Druck Verarbeitungs Thread wird ausgeführt, bis die printthreadproc-Funktio
 
     
 
-3.  **Überprüfen Sie, ob bei der Druck Verarbeitung beim Start Fehler**
+3.  **Überprüfen Sie, ob beim Starten der Druckverarbeitung ein Fehler aufgetreten ist.**
 
-    " [**Kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " gibt ein Handle für den erstellten Thread zurück, wenn der Thread erfolgreich erstellt wurde. Die printthreadproc-Funktion, die im neuen Thread gestartet wurde, prüft einige Bedingungen, bevor die tatsächliche Druckauftrags Verarbeitung gestartet wird. Wenn Fehler in diesen Überprüfungen erkannt werden, könnte printthreadproc zurückgeben, ohne Druckauftrags Daten verarbeiten zu müssen. Der UI-Thread kann überprüfen, ob der Verarbeitungs Thread erfolgreich gestartet wurde, indem er auf das Thread Handle für einen Zeitraum wartet, der länger ist als für die Durchführung der anfänglichen Tests, jedoch nicht länger als erforderlich. Wenn der Thread beendet wird, wird das Handle für den Thread signalisiert. Der Code überprüft den Zustand des Threads für eine kurze Zeitspanne, nachdem der Verarbeitungs Thread gestartet wurde. Die [**WaitForSingleObject**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) -Funktion gibt zurück, wenn entweder das Timeout auftritt oder das Thread Handle signalisiert wird. Wenn die Funktion " **WaitForSingleObject** " den Status " **Wait \_ Object \_ 0** " zurückgibt, wurde der Thread frühzeitig beendet. Daher sollten Sie das Dialogfeld "Druckfortschritt" schließen, wie im folgenden Codebeispiel gezeigt.
+    [**CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) gibt ein Handle an den erstellten Thread zurück, wenn der Thread erfolgreich erstellt wurde. Die PrintThreadProc-Funktion, die im neuen Thread gestartet wurde, überprüft einige Bedingungen, bevor die eigentliche Druckauftragsverarbeitung gestartet wird. Wenn bei diesen Überprüfungen Fehler erkannt werden, kann PrintThreadProc zurückgeben, ohne Druckauftragsdaten zu verarbeiten. Der UI-Thread kann überprüfen, ob der Verarbeitungsthread erfolgreich gestartet wurde, indem er für einen längeren Zeitraum auf das Threadhandle wartet, als zum Ausführen der ersten Tests erforderlich ist. Wenn der Thread beendet wird, wird das Handle für den Thread signalisiert. Der Code überprüft den Zustand des Threads für einen kurzen Zeitraum, nachdem er den Verarbeitungsthread gestartet hat. Die [**WaitForSingleObject-Funktion**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) gibt zurück, wenn entweder das Timeout auftritt oder das Threadhandle signalisiert wird. Wenn die **WaitForSingleObject-Funktion** den Status **WAIT OBJECT \_ \_ 0** zurückgibt, wurde der Thread früh beendet. Daher sollten Sie das Dialogfeld "Druckstatus" schließen, wie im folgenden Codebeispiel gezeigt.
 
     ```C++
     // Make sure the printing thread started OK
@@ -158,11 +158,11 @@ Der Druck Verarbeitungs Thread wird ausgeführt, bis die printthreadproc-Funktio
 
     
 
-## <a name="stopping-the-printing-thread"></a>Der Druck Thread wird angehalten.
+## <a name="stopping-the-printing-thread"></a>Beenden des Druckthreads
 
-Wenn der Benutzer im Dialogfeld Druck Status auf die Schaltfläche **Abbrechen** klickt, wird der Druck Thread benachrichtigt, sodass er die Verarbeitung des Druckauftrags ordnungsgemäß beenden kann. Während die Schaltfläche **Abbrechen** und das Ereignis **quitevent** wichtige Aspekte dieser Verarbeitung sind, müssen Sie die gesamte Verarbeitungssequenz so entwerfen, dass Sie erfolgreich unterbrochen wird. Dies bedeutet, dass die Schritte in der Sequenz keine zugeordneten Ressourcen belassen dürfen, die nicht freigegeben werden, wenn ein Benutzer die Sequenz abbricht, bevor er abgeschlossen wurde.
+Wenn der Benutzer im Dialogfeld "Druckfortschritt" auf die Schaltfläche **Abbrechen** klickt, wird der Druckthread benachrichtigt, damit er die Verarbeitung des Druckauftrags in der richtigen Reihenfolge beenden kann. Während die Schaltfläche **Abbrechen** und das **Ereignis quitEvent** wichtige Aspekte dieser Verarbeitung sind, müssen Sie die gesamte Verarbeitungssequenz so entwerfen, dass sie erfolgreich unterbrochen wird. Dies bedeutet, dass die Schritte in der Sequenz keine zugeordneten Ressourcen belassen dürfen, die nicht freigegeben werden, wenn ein Benutzer die Sequenz abbricht, bevor sie abgeschlossen wurde.
 
-Im folgenden Codebeispiel wird gezeigt, wie das Beispielprogramm das " **quitevent** " überprüft, bevor es die einzelnen Seiten im gedruckten Dokument verarbeitet. Wenn das " **quitevent** " signalisiert wird oder ein Fehler erkannt wurde, wird die Druck Verarbeitung angehalten.
+Das folgende Codebeispiel zeigt, wie das Beispielprogramm das **quitEvent** überprüft, bevor es jede Seite im gedruckten Dokument verarbeitet. Wenn das **quitEvent** signalisiert oder ein Fehler erkannt wurde, wird die Druckverarbeitung beendet.
 
 
 ```C++

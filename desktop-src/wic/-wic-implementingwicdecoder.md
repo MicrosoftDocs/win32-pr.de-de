@@ -1,7 +1,7 @@
 ---
 description: Weitere Informationen finden Sie unter Implementieren eines WIC-Enabled-Decoders.
 ms.assetid: a26a592d-42ef-4690-95b4-48a5324be75a
-title: Implementieren eines WIC-Enabled-Decoders
+title: Implementieren eines WIC-Enabled Decoders
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: e0aa2211c0b21e8f6fc921986406f7079b13c216f0bd7ada684e7748effb6c7f
@@ -11,10 +11,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118205705"
 ---
-# <a name="implementing-a-wic-enabled-decoder"></a>Implementieren eines WIC-Enabled-Decoders
+# <a name="implementing-a-wic-enabled-decoder"></a>Implementieren eines WIC-Enabled Decoders
 
 
-Zum Implementieren eines WIC-Decoders (Windows Imaging Component) müssen zwei Klassen geschrieben werden. Die Schnittstellen für diese Klassen entsprechen direkt den Zuständigkeiten des Decoders, die im Abschnitt [Decoding](-wic-howwicworks.md) von [How The Windows Imaging Component Works (Funktionsweise](-wic-howwicworks.md)der Windows Imaging Component) beschrieben sind.
+Zum Implementieren eines WIC-Decoders (Windows Imaging Component) müssen zwei Klassen geschrieben werden. Die Schnittstellen für diese Klassen entsprechen direkt den Zuständigkeiten des Decoders, die im Abschnitt [Decoding](-wic-howwicworks.md) von How The Windows Imaging Component Works (Funktionsweise der [Windows Imaging-Komponente)](-wic-howwicworks.md)beschrieben sind.
 
 Eine der -Klassen stellt Dienste auf Containerebene bereit und implementiert die [IWICBitmapDecoder-Schnittstelle.](-wic-imp-iwicbitmapdecoder.md) Wenn Ihr Imageformat Metadaten auf Containerebene unterstützt, müssen Sie auch die [IWICMetadataBlockReader-Schnittstelle](-wic-imp-iwicmetadatablockreader.md) für diese Klasse implementieren. Es wird empfohlen, die [IWICBitmapCodecProgressNotification-Schnittstelle](-wic-imp-iwicbitmapcodecprogressnotification-decoder.md) sowohl im Decoder als auch im Encoder zu unterstützen, um eine bessere Benutzererfahrung zu ermöglichen.
 

@@ -19,7 +19,7 @@ In diesem Abschnitt werden die Enumerationen beschrieben, die mit dem mathematis
 
 
 
-| Name                                           | BESCHREIBUNG                                                               |
+| Name                                           | Beschreibung                                                               |
 |------------------------------------------------|---------------------------------------------------------------------------|
 | [**MICUIELEMENT**](/windows/win32/api/micaut/ne-micaut-micuielement)           | Gibt die Benutzeroberflächenelemente eines math input-Steuerelements (MIC) an. |
 | [**MICUIELEMENTSTATE**](/windows/win32/api/micaut/ne-micaut-micuielementstate) | Gibt die Schaltflächenzustände eines math input-Steuerelements (MIC) an.                |
