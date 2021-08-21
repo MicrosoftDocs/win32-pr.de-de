@@ -1,7 +1,7 @@
 ---
-description: Medientyp für die aktuelle PIN-Verbindung.
+description: Medientyp für die aktuelle Pinverbindung.
 ms.assetid: ab5d9d3a-a9f6-4c14-b872-7e1d03c86fb0
-title: 'Cbasepin:: m_mt Member (amfilter. h)'
+title: CBasePin::m_mt-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5ff990c9473a5ff65a2a4e0818d1f77c7fb414b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f48fb7a80bad7d868281b0797ef3f18c7f31644b7479caa4565c1fe45fc353e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158189"
 ---
-# <a name="cbasepinm_mt-member"></a>Cbasepin:: m \_ MT-Element
+# <a name="cbasepinm_mt-member"></a>CBasePin::m \_ mt-Member
 
-Medientyp für die aktuelle PIN-Verbindung.
+Medientyp für die aktuelle Pinverbindung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CMediaType m_mt;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CMediaType m_mt;
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

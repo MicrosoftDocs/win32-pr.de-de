@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_V0_Video-Klasse: Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.'
+description: 'SystemConfig_V0_Video Klasse: Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.'
 ms.assetid: 06aab3a3-a55e-4eb8-897a-2ad8349e5900
 title: SystemConfig_V0_Video-Klasse
 ms.topic: reference
@@ -23,18 +23,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 94fb9e50344cfbdde4be67815b80e4074ab1a878
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7121d56d2acf0890a75bccdaf397f184c8780f1f1d3152d3ce2ea4db7781ecaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151369"
 ---
 # <a name="systemconfig_v0_video-class"></a>SystemConfig \_ V0 \_ Video-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Videokonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ class SystemConfig_V0_Video : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ V0 \_ Video-Klasse** verfügt über folgende Typen von Membern:
+Die **SystemConfig \_ V0 \_ Video-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -160,7 +160,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (10), **Max** (256)
 </dt> </dl>
 
-Adresse oder andere identifizierende Informationen zum eindeutigen Benennen des logischen Geräts.
+Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen.
 
 </dd> <dt>
 
@@ -199,10 +199,10 @@ Gerätestatusflags. Dies kann eine beliebige kombination der folgenden Punkte se
 | Wert                                                                                                                                                                                                                                                                                        | Bedeutung                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="DISPLAY_DEVICE_ATTACHED_TO_DESKTOP"></span><span id="display_device_attached_to_desktop"></span><dl> <dt>**DISPLAY \_ AN DESKTOP 1 \_ \_ \_ ANGESCHLOSSENES GERÄT**</dt> <dt>(0X1)</dt> </dl> | Das Gerät ist Teil des Desktops.<br/>                                                                                                                                                                                |
-| <span id="DISPLAY_DEVICE_MIRRORING_DRIVER"></span><span id="display_device_mirroring_driver"></span><dl> <dt>**DISPLAY \_ \_GERÄTESPIEGELUNGSTREIBER \_**</dt> <dt>8 (0x8)</dt> </dl>           | Stellt ein Pseudogerät dar, das zum Spiegeln von Anwendungszeichnungen zum Herstellen einer Verbindung mit einem Remotecomputer oder anderen Zwecken verwendet wird. Diesem Gerät ist ein unsichtbarer Pseudomonitor zugeordnet. NetMeeting verwendet sie beispielsweise.<br/> |
+| <span id="DISPLAY_DEVICE_MIRRORING_DRIVER"></span><span id="display_device_mirroring_driver"></span><dl> <dt>**DISPLAY \_ \_ \_ GERÄTESPIEGELUNGSTREIBER**</dt> <dt>8 (0x8)</dt> </dl>           | Stellt ein Pseudogerät dar, das zum Spiegeln der Anwendungszeichnung zum Herstellen einer Verbindung mit einem Remotecomputer oder anderen Zwecken verwendet wird. Diesem Gerät ist ein unsichtbarer Pseudomonitor zugeordnet. NetMeeting verwendet es beispielsweise.<br/> |
 | <span id="DISPLAY_DEVICE_MODESPRUNED"></span><span id="display_device_modespruned"></span><dl> <dt>**DISPLAY \_ \_GERÄTEMODUSSPRUNED**</dt> <dt>134217728 (0x8000000)</dt> </dl>             | Das Gerät verfügt über mehr Anzeigemodi als die Ausgabegeräte unterstützen.<br/>                                                                                                                                                |
-| <span id="DISPLAY_DEVICE_PRIMARY_DEVICE"></span><span id="display_device_primary_device"></span><dl> <dt>**DISPLAY \_ \_PRIMÄRES \_ GERÄT**</dt> <dt>4 (0x4)</dt> </dl>                 | Der primäre Desktop befindet sich auf dem Gerät. Für ein System mit einer einzelnen Anzeigekarte ist dies immer festgelegt. Für ein System mit mehreren Grafikkarten kann diese Einstellung nur auf einem Gerät festgelegt werden.<br/>                                   |
-| <span id="DISPLAY_DEVICE_REMOVABLE"></span><span id="display_device_removable"></span><dl> <dt>**DISPLAY \_ DEVICE \_ REMOVABLE**</dt> <dt>32 (0x20)</dt> </dl>                               | Das Gerät ist wechselbar. es kann nicht die primäre Anzeige sein.<br/>                                                                                                                                                        |
+| <span id="DISPLAY_DEVICE_PRIMARY_DEVICE"></span><span id="display_device_primary_device"></span><dl> <dt>**DISPLAY \_ PRIMÄRES \_ \_ GERÄT DES GERÄTS**</dt> <dt>4 (0x4)</dt> </dl>                 | Der primäre Desktop befindet sich auf dem Gerät. Für ein System mit einer einzelnen Anzeigekarte wird dies immer festgelegt. Für ein System mit mehreren Anzeigekarten kann diese Gruppe nur auf einem Gerät festgelegt werden.<br/>                                   |
+| <span id="DISPLAY_DEVICE_REMOVABLE"></span><span id="display_device_removable"></span><dl> <dt>**DISPLAY \_ \_WECHSELMEDIUM**</dt> <dt>32 (0x20)</dt> </dl>                               | Das Gerät ist wechselbar. es kann nicht die primäre Anzeige sein.<br/>                                                                                                                                                        |
 | <span id="DISPLAY_DEVICE_VGA_COMPATIBLE"></span><span id="display_device_vga_compatible"></span><dl> <dt>**DISPLAY \_ \_ \_ GERÄTE-VGA-KOMPATIBEL**</dt> <dt>16 (0x10)</dt> </dl>               | Das Gerät ist VGA-kompatibel.<br/>                                                                                                                                                                                     |
 
 
@@ -263,14 +263,14 @@ Aktuelle Anzahl vertikaler Pixel.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

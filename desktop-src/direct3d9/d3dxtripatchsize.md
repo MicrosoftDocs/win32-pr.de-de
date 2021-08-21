@@ -1,7 +1,7 @@
 ---
-description: Ruft die Größe des Dreiecks Patches ab.
+description: Ruft die Größe des Dreieckspatches ab.
 ms.assetid: 3bfbed4c-59af-43eb-a462-478e89cfe9ae
-title: D3DXTriPatchSize-Funktion (D3DX9Mesh. h)
+title: D3DXTriPatchSize-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5ee254b12485153f4d5c5ba0843189399d1aed0f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 54eba8131d59b9d1e68526cd26bb74b497bcec21fcbffdb4229678f166646806
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118298242"
 ---
 # <a name="d3dxtripatchsize-function"></a>D3DXTriPatchSize-Funktion
 
-Ruft die Größe des Dreiecks Patches ab.
+Ruft die Größe des Dreieckspatches ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT D3DXTriPatchSize(
 
 <dl> <dt>
 
-*pfnumungsgs* \[ in\]
+*pfNumSegs* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Anzahl der Segmente pro Rand bis Mosaik.
+Anzahl der Segmente pro Edge, die mosaikt werden.
 
 </dd> <dt>
 
-*pdwdreiecke* \[ vorgenommen\]
+*pdwTriangles* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
@@ -60,12 +60,12 @@ Zeiger auf ein DWORD, das die Anzahl der Dreiecke im Patch enthält.
 
 </dd> <dt>
 
-*pdwvertices* \[ vorgenommen\]
+*pdwVertices* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Zeiger auf ein DWORD, das die Anzahl der Scheitel Punkte im Dreiecks Patch enthält.
+Zeiger auf ein DWORD, das die Anzahl der Scheitelzeichen im Dreieckspatch enthält.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf ein DWORD, das die Anzahl der Scheitel Punkte im Dreiecks Patch enth�
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

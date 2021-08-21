@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentexistinglogflehasbadsignatureexception-Konstruktor'
-title: Esentexistinglogflehasbadsignatureexception-Konstruktor
+description: 'Weitere Informationen zu: EsentExistingLogFileHasBadSignatureException-Konstruktor'
+title: EsentExistingLogFileHasBadSignatureException-Konstruktor
 TOCTitle: 'EsentExistingLogFileHasBadSignatureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentExistingLogFileHasBadSignatureException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentexistinglogfilehasbadsignatureexception.esentexistinglogfilehasbadsignatureexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a09ae63bfdba6ae86c4aeb406a1aed915eda171b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41245a26e922a77e34a5dbb9738b68c273652a2af4ce6138cf538a7afb71e943
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118496772"
 ---
-# <a name="esentexistinglogfilehasbadsignatureexception-constructor"></a>Esentexistinglogflehasbadsignatureexception-Konstruktor
+# <a name="esentexistinglogfilehasbadsignatureexception-constructor"></a>EsentExistingLogFileHasBadSignatureException-Konstruktor
 
-Initialisiert eine neue Instanz der esentexistinglogflehasbadsignatureexception-Klasse.
+Initialisiert eine neue Instanz der EsentExistingLogFileHasBadSignatureException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentExistingLogFileHasBadSignatureException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentexistinglogflehasbadsignatureexception-Klasse](./esentexistinglogfilehasbadsignatureexception-class.md)
+[EsentExistingLogFileHasBadSignatureException-Klasse](./esentexistinglogfilehasbadsignatureexception-class.md)
 
-[Esentexistinglogflehasbadsignatureexception-Member](./esentexistinglogfilehasbadsignatureexception-members.md)
+[EsentExistingLogFileHasBadSignatureException-Member](./esentexistinglogfilehasbadsignatureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

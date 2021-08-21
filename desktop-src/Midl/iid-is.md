@@ -1,6 +1,6 @@
 ---
 title: iid_is-Attribut
-description: Das Zeigerattribut \iid is\ gibt die IID der COM-Schnittstelle an, auf \_ die ein Schnittstellenzeiger zeigt.
+description: Das Zeigerattribut \iid is\ gibt die IID der COM-Schnittstelle an, auf die ein \_ Schnittstellenzeiger zeigt.
 ms.assetid: 7fb5eb87-15d8-4717-b79a-e8a81f2f7293
 keywords:
 - iid_is MIDL-Attribut

@@ -126,7 +126,7 @@ Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode ni
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

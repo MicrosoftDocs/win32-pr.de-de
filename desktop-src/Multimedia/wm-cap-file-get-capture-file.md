@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_FILE_GET_CAPTURE_FILE Meldung (VFW. h)
-description: Die Meldung "WM- \_ Cap- \_ Datei \_ get \_ Capture \_ file" gibt den Namen der aktuellen Erfassungs Datei zurück. Sie können diese Nachricht explizit oder mithilfe des capfilegetcapturefile-Makros senden.
+title: WM_CAP_FILE_GET_CAPTURE_FILE-Nachricht (Vfw.h)
+description: Die MELDUNG WM \_ CAP FILE GET CAPTURE FILE gibt den Namen der \_ \_ \_ \_ aktuellen Erfassungsdatei zurück. Sie können diese Nachricht explizit oder mithilfe des CapFileGetCaptureFile-Makros senden.
 ms.assetid: 86ce2904-834d-449f-9ef8-5a158c55bbaa
 keywords:
-- WM_CAP_FILE_GET_CAPTURE_FILE-Nachricht (Multimedia)
+- WM_CAP_FILE_GET_CAPTURE_FILE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7008e0b217f29ad9602afbdc41cc97f9cb7ecaa3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 462f919458078129f6756782c2fde5322b3cd814c3108cb0ba8ee24e2f54c022
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135318"
 ---
-# <a name="wm_cap_file_get_capture_file-message"></a>WM- \_ Cap- \_ Datei Nachricht zum Erfassen der \_ \_ Erfassungs \_ Datei
+# <a name="wm_cap_file_get_capture_file-message"></a>WM \_ CAP FILE GET CAPTURE \_ \_ \_ \_ FILE-Meldung
 
-Die Meldung " **WM- \_ Cap- \_ Datei \_ get \_ Capture \_ File** " gibt den Namen der aktuellen Erfassungs Datei zurück. Sie können diese Nachricht explizit oder mithilfe des [**capfilegetcapturefile**](/windows/desktop/api/Vfw/nf-vfw-capfilegetcapturefile) -Makros senden.
+Die **MELDUNG WM CAP FILE GET CAPTURE \_ \_ \_ \_ \_ FILE** gibt den Namen der aktuellen Erfassungsdatei zurück. Sie können diese Nachricht explizit oder mithilfe des [**CapFileGetCaptureFile-Makros**](/windows/desktop/api/Vfw/nf-vfw-capfilegetcapturefile) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (LPSTR) (szName);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) des Anwendungs definierten Puffers, auf den von **szName** verwiesen wird.
+Größe des anwendungsdefinierten Puffers in Bytes, auf den **szName** verweist.
 
 </dd> <dt>
 
-<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*szName*
+<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*Szname*
 </dt> <dd>
 
-Ein Zeiger auf einen Anwendungs definierten Puffer, der verwendet wird, um den Namen der Erfassungs Datei als NULL-terminierte Zeichenfolge zurückzugeben.
+Zeiger auf einen von der Anwendung definierten Puffer, der verwendet wird, um den Namen der Erfassungsdatei als auf NULL endende Zeichenfolge zurückzugeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Standard Dateiname für die Aufzeichnung ist C: \\CAPTURE.AVI.
+Der Standardname der Erfassungsdatei ist C: \\CAPTURE.AVI.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Der Standard Dateiname für die Aufzeichnung ist C: \\CAPTURE.AVI.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ Der Standard Dateiname für die Aufzeichnung ist C: \\CAPTURE.AVI.
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

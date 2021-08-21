@@ -1,7 +1,7 @@
 ---
-description: Die Methode "kreateinstance" erstellt eine neue Instanz der cmemzuordcator-Klasse.
+description: Die CreateInstance-Methode erstellt eine neue Instanz der CMemAllocator-Klasse.
 ms.assetid: 87a831a4-2414-4240-8448-c5d90f130470
-title: Cmemzuzucator. kreatzustance-Methode (amfilter. h)
+title: CMemAllocator.CreateInstance-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7ef85de95db74e8a9d7aa6a7b1ba977620a29826
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8682a667685f38cd7a73e091067a86f528f64e1ec110c473f50000c18ba4d87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156019"
 ---
-# <a name="cmemallocatorcreateinstance-method"></a>Cmemzuzucator. kreatzustance-Methode
+# <a name="cmemallocatorcreateinstance-method"></a>CMemAllocator.CreateInstance-Methode
 
-Die- `CreateInstance` Methode erstellt eine neue Instanz der **cmemzuordcator** -Klasse.
+Die `CreateInstance` -Methode erstellt eine neue Instanz der **CMemAllocator-Klasse.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ static CUnknown* CreateInstance(
 
 <dl> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen **HRESULT** -Wert empfängt, der angibt, ob die Methode erfolgreich war oder fehlgeschlagen ist.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein neues **cmemzuordcator** -Objekt zurück, das als **cunknown** -Objekt typisiert ist.
+Gibt einen Zeiger auf ein neues **CMemAllocator-Objekt** zurück, das als **CUnknown-Objekt** typisiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Gibt einen Zeiger auf ein neues **cmemzuordcator** -Objekt zurück, das als **cu
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Gibt einen Zeiger auf ein neues **cmemzuordcator** -Objekt zurück, das als **cu
 
 <dl> <dt>
 
-[**Cmemzuordcator-Klasse**](cmemallocator.md)
+[**CMemAllocator-Klasse**](cmemallocator.md)
 </dt> </dl>
 
  

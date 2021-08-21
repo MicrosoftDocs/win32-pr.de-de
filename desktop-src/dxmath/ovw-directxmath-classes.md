@@ -1,30 +1,30 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den von directxmath bereitgestellten Klassen.
+description: Dieser Abschnitt enthält Informationen zu klassen, die von DirectXMath bereitgestellt werden.
 ms.assetid: e50e24ab-24f2-d59e-22a4-aaf7015d0255
-title: Directxmath-Bibliotheks Klassen
+title: DirectXMath-Bibliotheksklassen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1154b95b60ce5e5f368ce6c6549419b3d764c266
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7351ad70f07bb8fb37d4b581a546a8e774114d800a0f789eca61b73d69f76b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118501683"
 ---
-# <a name="directxmath-library-classes"></a>Directxmath-Bibliotheks Klassen
+# <a name="directxmath-library-classes"></a>DirectXMath-Bibliotheksklassen
 
-Dieser Abschnitt enthält Informationen zu den von directxmath bereitgestellten Klassen.
+Dieser Abschnitt enthält Informationen zu klassen, die von DirectXMath bereitgestellt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                         | BESCHREIBUNG                                 |
+| Thema                                                         | Beschreibung                                 |
 |---------------------------------------------------------------|---------------------------------------------|
-| [**BoundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)<br/>                 | Ein Begrenzungs Achsen Objekt.<br/>  |
-| [**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)<br/>         | Ein Begrenzungs Frustum-Objekt.<br/>       |
-| [**Boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)<br/> | Ein orientiertes Begrenzungsfeld Objekt.<br/> |
-| [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)<br/>           | Ein Begrenzungs kugelobjekt.<br/>        |
+| [**Boundingbox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)<br/>                 | Ein an der Begrenzungsachse ausgerichtetes Objekt.<br/>  |
+| [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)<br/>         | Ein umgebundenes Frustumobjekt.<br/>       |
+| [**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)<br/> | Ein ausgerichtetes Begrenzungsfeldobjekt.<br/> |
+| [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)<br/>           | Ein begrenzungsgebundenes Kugelobjekt.<br/>        |
 
 
 
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält Informationen zu den von directxmath bereitgestellten 
 
 <dl> <dt>
 
-[Directxmath-Programmier Referenz](ovw-xnamath-reference.md)
+[DirectXMath-Programmierreferenz](ovw-xnamath-reference.md)
 </dt> </dl>
 
  

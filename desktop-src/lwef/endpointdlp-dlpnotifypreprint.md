@@ -12,12 +12,12 @@ api_type:
 - DllExport
 api_location:
 - EndpointDlp.dll
-ms.openlocfilehash: eef5e3a19a6b93a49ba8b600be77385a99d3153a
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: 1cf0ef44031677495d9b9bedf990877ee931cae245b217faa4225b334df1b3b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118479441"
 ---
 # <a name="dlpnotifypreprint-function"></a>DlpNotifyPrePrint-Funktion
 
@@ -39,7 +39,7 @@ void WINAPI DlpNotifyPrePrint(_In_ const PDLP_DOCUMENT_INFO DocumentInfo, _In_ c
 *DocumentInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf [](endpointdlp-dlp_document_info.md) eine PDLP_DOCUMENT_INFO-Struktur, die Informationen zum zu druckenden Dokument enthält.
+Ein Zeiger auf eine [PDLP_DOCUMENT_INFO](endpointdlp-dlp_document_info.md) Struktur, die Informationen über das zu druckende Dokument enthält.
 
 </dd> </dl>
 

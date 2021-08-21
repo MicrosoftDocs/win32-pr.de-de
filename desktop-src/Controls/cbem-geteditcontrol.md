@@ -1,9 +1,9 @@
 ---
-title: CBEM_GETEDITCONTROL Meldung (kommstrg. h)
-description: Ruft das Handle für den Bearbeitungs Steuerelement Teil eines ComboBoxEx-Steuer Elements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den CBS- \_ Dropdown Stil festgelegt ist.
+title: CBEM_GETEDITCONTROL Nachricht (Commctrl.h)
+description: Ruft das Handle für den Bearbeitungssteuerelementteil eines ComboBoxEx-Steuerelements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den \_ CBS-DROPDOWN-Stil festgelegt ist.
 ms.assetid: def91949-cadc-4297-a504-0680d7d9b815
 keywords:
-- Windows-Steuerelemente für CBEM_GETEDITCONTROL Meldung
+- CBEM_GETEDITCONTROL Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 412d1183b29c8c89b5977d5f7f2a1b962d54dc01
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 885a90a1b37fab7cd8e4a492bd00ad349f96202e13ee25a404f7f4aa41f623e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118414070"
 ---
-# <a name="cbem_geteditcontrol-message"></a>CBEM \_ geteditcontrol-Meldung
+# <a name="cbem_geteditcontrol-message"></a>CBEM \_ GETEDITCONTROL-Nachricht
 
-Ruft das Handle für den Bearbeitungs Steuerelement Teil eines ComboBoxEx-Steuer Elements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den [**CBS- \_ Dropdown**](combo-box-styles.md) Stil festgelegt ist.
+Ruft das Handle für den Bearbeitungssteuerelementteil eines ComboBoxEx-Steuerelements ab. Ein ComboBoxEx-Steuerelement verwendet ein Bearbeitungsfeld, wenn es auf den [**\_ CBS-DROPDOWN-Stil**](combo-box-styles.md) festgelegt ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Handle für den Bearbeitungs Steuerelement Teil eines ComboBoxEx-Steuer
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das Bearbeitungs Steuerelement im ComboBoxEx-Steuerelement zurück, wenn es die [**CBS- \_ Dropdown**](combo-box-styles.md) -Formatvorlage verwendet. Andernfalls gibt die Meldung **null** zurück.
+Gibt das Handle für das Bearbeitungssteuerelement im ComboBoxEx-Steuerelement zurück, wenn es den [**\_ CBS-DROPDOWN-Stil**](combo-box-styles.md) verwendet. Andernfalls gibt die Nachricht **NULL** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt das Handle für das Bearbeitungs Steuerelement im ComboBoxEx-Steuerelement 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

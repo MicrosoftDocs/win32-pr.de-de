@@ -1,35 +1,35 @@
 ---
 title: Ansichten
-description: Referenz Dokumentation für das Anzeigen von Markup Elementen im Windows-Menü Band Framework.
+description: Referenzdokumentation zum Anzeigen von Markupelementen im Windows Menübandframework.
 ms.assetid: 53672895-fb8e-4e3f-ad9a-472c5d660cac
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d066a7665a0336fa8ce619d189db0ea7d45e29f6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5ee8af34934a25efb3fdc7b1f1f3bfc280d5b5914b128bc416c5f584f1fd31f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118438956"
 ---
 # <a name="views"></a>Sichten
 
-Referenz Dokumentation für das Anzeigen von Markup Elementen im Windows-Menü Band Framework.
+Referenzdokumentation zum Anzeigen von Markupelementen im Windows Menübandframework.
 
 
 
 | Thema                                                                                | Inhalte                                                                                                             |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**Contextpopup**](windowsribbon-element-contextpopup.md)                           | Stellt das [Kontext-Popup](windowsribbon-controls-contextpopup.md) Steuerelement in der contextpopup-Ansicht dar.<br/> |
-| [**Contextpopup. contextmaps**](windowsribbon-element-contextpopup-contextmaps.md)   | Stellt einen Container für [**contextmap**](windowsribbon-element-contextmap.md) -Elemente dar.<br/>               |
-| [**Contextpopup. ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md) | Stellt einen Container für [**ContextMenu**](windowsribbon-element-contextmenu.md) -Elemente dar.<br/>             |
-| [**Contextpopup. minitoolbars**](windowsribbon-element-contextpopup-minitoolbars.md) | Stellt einen Container für [**MiniToolbar**](windowsribbon-element-minitoolbar.md) -Elemente dar.<br/>             |
-| [**Menüband**](windowsribbon-element-ribbon.md)                                       | Stellt das Menüband-Steuerelement in der Menü Band Ansicht dar.<br/>                                                         |
-| [**Menü Band. applicationmenu**](windowsribbon-element-ribbon-applicationmenu.md)       | Stellt das Anwendungsmenü dar.<br/>                                                                          |
-| [**Menüband. contextualtabs**](windowsribbon-element-ribbon-contextualtabs.md)         | Stellt einen Container für kontextabhängige Registerkarten dar.<br/>                                                               |
-| [**Menüband. HelpButton**](windowsribbon-element-ribbon-helpbutton.md)                 | Stellt einen Container für die [Hilfe Schaltfläche](windowsribbon-controls-helpbutton.md)dar.<br/>                      |
-| [**Menüband. quickaccesstoolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md) | Stellt einen Container für die Symbolleiste für den schnell Zugriff (QAT) dar.<br/>                                                |
-| [**Ribbon. sizedefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)       | Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menü Band Steuerelementen dar.<br/>                                    |
-| [**Menüband. Registerkarten**](windowsribbon-element-ribbon-tabs.md)                             | Stellt einen Container für alle Kern Registerkarten in einem Menüband dar.<br/>                                                     |
+| [**ContextPopup**](windowsribbon-element-contextpopup.md)                           | Stellt das [Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md) in der ContextPopup-Ansicht dar.<br/> |
+| [**ContextPopup.ContextMaps**](windowsribbon-element-contextpopup-contextmaps.md)   | Stellt einen Container für [**ContextMap-Elemente**](windowsribbon-element-contextmap.md) dar.<br/>               |
+| [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md) | Stellt einen Container für [**ContextMenu-Elemente**](windowsribbon-element-contextmenu.md) dar.<br/>             |
+| [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md) | Stellt einen Container für [**MiniToolbar-Elemente**](windowsribbon-element-minitoolbar.md) dar.<br/>             |
+| [**Menüband**](windowsribbon-element-ribbon.md)                                       | Stellt das Menüband-Steuerelement in der Menübandansicht dar.<br/>                                                         |
+| [**Ribbon.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)       | Stellt das Anwendungsmenü dar.<br/>                                                                          |
+| [**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)         | Stellt einen Container für kontextbezogene Registerkarten dar.<br/>                                                               |
+| [**Ribbon.HelpButton**](windowsribbon-element-ribbon-helpbutton.md)                 | Stellt einen Container für die [Hilfeschaltfläche dar.](windowsribbon-controls-helpbutton.md)<br/>                      |
+| [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md) | Stellt einen Container für die Symbolleiste für den Schnellzugriff (QAT) dar.<br/>                                                |
+| [**Ribbon.SizeDefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)       | Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menüband-Steuerelementen dar.<br/>                                    |
+| [**Ribbon.Tabs**](windowsribbon-element-ribbon-tabs.md)                             | Stellt einen Container für alle Kernregisterkarte in einem Menüband dar.<br/>                                                     |
 
 
 

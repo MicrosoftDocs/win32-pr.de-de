@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclientshell isremoteprogramclientinstallierte (Eigenschaft)
-description: Ruft ab, ob der Remotedesktopverbindung-Client (RDC) Windows Server 2008 R2 RemoteApp-Funktionalit채t unterst체tzt.
+title: IMsRdpClientShell IsRemoteProgramClientInstalled (Eigenschaft)
+description: Ruft ab, ob der Remotedesktopverbindung -Client (RDC) Windows Server 2008 R2 RemoteApp-Funktionalit채t unterst체tzt.
 ms.assetid: ce2fec74-c567-48e1-91d6-655c539d1fb9
 ms.tgt_platform: multiple
 keywords:
-- Isremoteprogramclientinstallierte-Eigenschaft Remotedesktopdienste
-- Isremoteprogramclientinstallierte-Eigenschaft Remotedesktopdienste, imsrdpclientshell-Schnittstelle
-- Imsrdpclientshell-Schnittstelle Remotedesktopdienste, isremoteprogramclientinstallierte-Eigenschaft
+- IsRemoteProgramClientInstalled-Remotedesktopdienste
+- IsRemoteProgramClientInstalled-Eigenschaft Remotedesktopdienste , IMsRdpClientShell-Schnittstelle
+- IMsRdpClientShell-Schnittstelle Remotedesktopdienste , IsRemoteProgramClientInstalled (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 787d45f10e109a89429be5032fda245aa3609567
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3073bb9a9e5890ff7a6a46bb9ea0c03964bf54f1c91550dbb2746385a11fa809
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129763"
 ---
-# <a name="imsrdpclientshellisremoteprogramclientinstalled-property"></a>Imsrdpclientshell:: isremoteprogramclientinstallierte-Eigenschaft
+# <a name="imsrdpclientshellisremoteprogramclientinstalled-property"></a>IMsRdpClientShell::IsRemoteProgramClientInstalled (Eigenschaft)
 
-Ruft ab, ob der Remotedesktopverbindung-Client (RDC) Windows Server 2008 R2 RemoteApp-Funktionalit채t unterst체tzt.
+Ruft ab, ob der Remotedesktopverbindung -Client (RDC) Windows Server 2008 R2 RemoteApp-Funktionalit채t unterst체tzt.
 
 Diese Eigenschaft ist schreibgesch체tzt.
 
@@ -44,7 +44,7 @@ HRESULT get_IsRemoteProgramClientInstalled(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ruft ab, ob der Remotedesktopverbindung-Client (RDC) die RemoteApp-Funktionalit채t unterst체tzt.
+Ruft ab, ob der Remotedesktopverbindung -Client (RDC) remoteApp-Funktionen unterst체tzt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Ruft ab, ob der Remotedesktopverbindung-Client (RDC) die RemoteApp-Funktionalit�
 | Unterst체tzte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclientshell ist als d012ae6d-C19A-4bfe-b367-201f8911f134 definiert.<br/>   |
+| IID<br/>                      | IID \_ IMsRdpClientShell ist als d012ae6d-c19a-4bfe-b367-201f8911f134 definiert.<br/>   |
 
 
 
@@ -64,7 +64,7 @@ Ruft ab, ob der Remotedesktopverbindung-Client (RDC) die RemoteApp-Funktionalit�
 
 <dl> <dt>
 
-[**Imsrdpclientshell**](imsrdpclientshell.md)
+[**IMsRdpClientShell**](imsrdpclientshell.md)
 </dt> </dl>
 
  

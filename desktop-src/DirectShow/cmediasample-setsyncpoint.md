@@ -1,7 +1,7 @@
 ---
-description: 'Die setsyncpoint-Methode gibt an, ob der Anfang dieses Beispiels ein Synchronisierungs Punkt ist. Diese Methode implementiert die imediasample:: setsyncpoint-Methode.'
+description: Die SetSyncPoint-Methode gibt an, ob der Anfang dieses Beispiels ein Synchronisierungspunkt ist. Diese Methode implementiert die IMediaSample::SetSyncPoint-Methode.
 ms.assetid: 48fc5145-7cce-4e76-860d-45a0d5b43b67
-title: Cmediasample. setsyncpoint-Methode (amfilter. h)
+title: CMediaSample.SetSyncPoint-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 679be6a313329a15c83bee4473e5a944aa3532b9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0be51ed18e25bcbd12e33f9167493d73f0c140480f4ec0042fb0c43928720d3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156522"
 ---
-# <a name="cmediasamplesetsyncpoint-method"></a>Cmediasample. setsyncpoint-Methode
+# <a name="cmediasamplesetsyncpoint-method"></a>CMediaSample.SetSyncPoint-Methode
 
-Die- `SetSyncPoint` Methode gibt an, ob der Anfang dieses Beispiels ein Synchronisierungs Punkt ist. Diese Methode implementiert die [**imediasample:: setsyncpoint**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setsyncpoint) -Methode.
+Die `SetSyncPoint` -Methode gibt an, ob der Anfang dieses Beispiels ein Synchronisierungspunkt ist. Diese Methode implementiert die [**IMediaSample::SetSyncPoint-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setsyncpoint)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT SetSyncPoint(
 
 <dl> <dt>
 
-*bissyncpoint* 
+*bIsSyncPoint* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob es sich um einen Synchronisierungs Punkt handelt. **True** gibt an, dass dies ein Synchronisierungs Punkt ist.
+Boolescher Wert, der angibt, ob dies ein Synchronisierungspunkt ist. True gibt an, dass dies ein Synchronisierungspunkt ist.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob es sich um einen Synchronisierungs Punkt handelt
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) , die die Synchronisierungs Punkt Eigenschaft angibt.
+Diese Methode aktualisiert die [**Membervariable CMediaSample::m \_ dwFlags,**](cmediasample-m-dwflags.md) die die Synchronisierungspunkteigenschaft angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

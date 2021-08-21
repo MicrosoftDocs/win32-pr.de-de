@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlscallbacknotspecifiedexception-Konstruktor'
-title: Esentlscallbacknotspecifiedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentLSCallbackNotSpecifiedException-Konstruktor'
+title: EsentLSCallbackNotSpecifiedException-Konstruktor
 TOCTitle: 'EsentLSCallbackNotSpecifiedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLSCallbackNotSpecifiedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlscallbacknotspecifiedexception.esentlscallbacknotspecifiedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cdac8bb3af7a914f824de2165a7a332f450c1026
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61039608878e1dc41b226cea74dd85cfd963f0815698aac2da16de66643f799c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118080109"
 ---
-# <a name="esentlscallbacknotspecifiedexception-constructor"></a>Esentlscallbacknotspecifiedexception-Konstruktor
+# <a name="esentlscallbacknotspecifiedexception-constructor"></a>EsentLSCallbackNotSpecifiedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlscallbacknotspecifiedexception-Klasse.
+Initialisiert eine neue Instanz der EsentLSCallbackNotSpecifiedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentLSCallbackNotSpecifiedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlscallbacknotspecifiedexception-Klasse](./esentlscallbacknotspecifiedexception-class.md)
+[EsentLSCallbackNotSpecifiedException-Klasse](./esentlscallbacknotspecifiedexception-class.md)
 
-[Esentlscallbacknotspecifiedexception-Elemente](./esentlscallbacknotspecifiedexception-members.md)
+[EsentLSCallbackNotSpecifiedException-Member](./esentlscallbacknotspecifiedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

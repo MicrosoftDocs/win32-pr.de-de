@@ -1,7 +1,7 @@
 ---
 UID: ''
-title: Journalrecordproc-Rückruffunktion
-description: Die Funktion zeichnet Meldungen auf, die das System aus der System Meldungs Warteschlange entfernt.
+title: JournalRecordProc-Rückruffunktion
+description: Die Funktion zeichnet Meldungen auf, die das System aus der Systemnachrichtenwarteschlange entfernt.
 old-location: ''
 ms.assetid: na
 ms.date: 04/05/2019
@@ -32,23 +32,23 @@ api_name: ''
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: bc255441ca82c86542dd8dd4729564122df6c719
-ms.sourcegitcommit: 61bde60d4c3bc09defc3dcdb64c0ddadf52b214e
+ms.openlocfilehash: cc5e1bdbd99b234b347d0b9c10caa7125aead9b68138472e125c8e2a11180609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "103948535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118437117"
 ---
-# <a name="journalrecordproc-function"></a>Journalrecordproc-Funktion
+# <a name="journalrecordproc-function"></a>JournalRecordProc-Funktion
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Eine von der Anwendung definierte oder Bibliotheks definierte Rückruffunktion, die mit der [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) -Funktion verwendet wird.
-Die Funktion zeichnet Meldungen auf, die das System aus der System Meldungs Warteschlange entfernt.
-Später kann eine Anwendung eine [journalplaybackproc](journalplaybackproc.md) -Hook-Prozedur verwenden, um die Nachrichten wiederzugeben.
+Eine anwendungs- oder bibliotheksdefinierte Rückruffunktion, die mit der [SetWindowsHookEx-Funktion verwendet](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) wird.
+Die Funktion zeichnet Meldungen auf, die das System aus der Systemnachrichtenwarteschlange entfernt.
+Später kann eine Anwendung eine [JournalPlaybackProc-Hookprozedur](journalplaybackproc.md) verwenden, um die Nachrichten wiederzuverspielen.
 
-Der **HookProc** -Typ definiert einen Zeiger auf diese Rückruffunktion.
-**Journalrecordproc** ist ein Platzhalter für den Anwendungs definierten oder Bibliotheks definierten Funktionsnamen.
+Der **HOOKPROC-Typ** definiert einen Zeiger auf diese Rückruffunktion.
+**JournalRecordProc ist** ein Platzhalter für den anwendungs- oder bibliotheksdefinierten Funktionsnamen.
 
 ```cpp
 LRESULT CALLBACK JournalRecordProc(
@@ -64,27 +64,27 @@ LRESULT CALLBACK JournalRecordProc(
 
 Typ: **int**
 
-Gibt an, wie die Nachricht verarbeitet werden soll.
-Wenn *Code* kleiner als 0 (null) ist, muss die Hook-Prozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex) -Funktion übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
+Gibt an, wie die Nachricht zu verarbeiten ist.
+Wenn *der* Code kleiner als 0 (null) ist, muss die Hookprozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx-Funktion](/windows/desktop/api/winuser/nf-winuser-callnexthookex) übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert | Bedeutung |
 |-------|---------|
-| **HC_ACTION** 0 | Der *LPARAM* -Parameter ist ein Zeiger auf eine [eventmsg](/windows/desktop/api/winuser/ns-winuser-eventmsg) -Struktur, die Informationen zu einer Nachricht enthält, die aus der System Warteschlange entfernt wurde. Die Hook-Prozedur muss den Inhalt der Struktur aufzeichnen, indem Sie Sie in einen Puffer oder eine Datei kopieren. |
-| **HC_SYSMODALOFF** 5 | Ein System modales Dialogfeld wurde zerstört. Die Hook-Prozedur muss die Aufzeichnung fortsetzen. |
-| **HC_SYSMODALON** 4 | Ein System modales Dialogfeld wird angezeigt. Die Hook-Prozedur muss die Aufzeichnung anhalten, bis das Dialogfeld zerstört ist. |
+| **HC_ACTION** 0 | Der *lParam-Parameter* ist ein Zeiger auf eine [EVENTMSG-Struktur,](/windows/desktop/api/winuser/ns-winuser-eventmsg) die Informationen zu einer Nachricht enthält, die aus der Systemwarteschlange entfernt wurde. Die Hookprozedur muss den Inhalt der -Struktur aufzeichnen, indem sie sie in einen Puffer oder eine Datei kopiert. |
+| **HC_SYSMODALOFF** 5 | Ein system modales Dialogfeld wurde zerstört. Die Hookprozedur muss die Aufzeichnung fortsetzen. |
+| **HC_SYSMODALON** 4 | Ein system modales Dialogfeld wird angezeigt. Bis das Dialogfeld zerstört wird, muss die Hookprozedur die Aufzeichnung beenden. |
 
 ### <a name="wparam"></a>wParam
 
-Typ: **wParam**
+Typ: **WPARAM**
 
 Dieser Parameter wird nicht verwendet.
 
-### <a name="lparam-in"></a>LParam [in]
+### <a name="lparam-in"></a>lParam [in]
 
 Typ: **LPARAM**
 
-Ein Zeiger auf eine **eventmsg** -Struktur, die die zu zeichnenden Meldung enthält.
+Ein Zeiger auf eine **EVENTMSG-Struktur,** die die zu notierende Nachricht enthält.
 
 ## <a name="returns"></a>Gibt zurück
 
@@ -92,36 +92,36 @@ Typ: **LRESULT**
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine **journalrecordproc** -Hook-Prozedur muss die Nachrichten kopieren, aber nicht ändern.
-Nachdem die Hook-Prozedur die Steuerung an das System zurückgegeben hat, wird die Nachricht weiterhin verarbeitet.
+Eine **JournalRecordProc-Hookprozedur** muss die Nachrichten kopieren, aber nicht ändern.
+Nachdem die Hookprozedur die Steuerung an das System zurückgegeben hat, wird die Nachricht weiterhin verarbeitet.
 
-Installieren Sie die **journalrecordproc** -Hook-Prozedur, indem Sie den [WH_JOURNALRECORD](about-hooks.md) -Typ und einen Zeiger auf die Hook-Prozedur in einem Aufrufen der **SetWindowsHookEx** -Funktion angeben.
+Installieren Sie die Hookprozedur **JournalRecordProc,** indem Sie den WH_JOURNALRECORD-Typ und einen Zeiger auf die Hookprozedur in einem Aufruf der **SetWindowsHookEx-Funktion** angeben. [](about-hooks.md)
 
-Eine **journalrecordproc** -Hook-Prozedur muss nicht in einer Dynamic Link Library Leben.
-Eine **journalrecordproc** -Hook-Prozedur kann in der Anwendung selbst leben.
+Eine **JournalRecordProc-Hookprozedur** muss nicht in einer Dynamic Link Library gespeichert werden.
+Eine **JournalRecordProc-Hookprozedur** kann in der Anwendung selbst verwendet werden.
 
-Im Gegensatz zu den meisten anderen globalen Hook-Prozeduren werden die Hook-Prozeduren **journalrecordproc** und [journalplaybackproc](journalplaybackproc.md) immer im Kontext des Threads aufgerufen, der den Hook festgelegt hat.
+Im Gegensatz zu den meisten anderen globalen Hookprozeduren werden die Hookprozeduren **JournalRecordProc** und [JournalPlaybackProc](journalplaybackproc.md) immer im Kontext des Threads aufgerufen, der den Hook festlegen.
 
-Eine Anwendung, die eine **journalrecordproc** -Hook-Prozedur installiert hat, sollte den [VK_CANCEL](/windows/desktop/inputdev/virtual-key-codes) Code des virtuellen Schlüssels überwachen (der in den meisten Tastaturen als STRG + unt-Schlüsselkombination implementiert ist).
-Dieser virtuelle Schlüsselcode sollte von der Anwendung als Signal interpretiert werden, dass der Benutzer die Journal Aufzeichnung anhalten möchte.
-Die Anwendung sollte Antworten, indem Sie die Aufzeichnungs Sequenz beendet und die **journalrecordproc** -Hook-Prozedur entfernt.
+Eine Anwendung, die eine **JournalRecordProc-Hookprozedur** installiert hat, sollte auf den virtuellen [VK_CANCEL-Schlüsselcode](/windows/desktop/inputdev/virtual-key-codes) achten (der auf den meisten Tastaturen als TASTENKOMBINATION STRG+BREAK implementiert ist).
+Dieser Virtuelle Schlüsselcode sollte von der Anwendung als Signal interpretiert werden, dass der Benutzer die Journalaufzeichnung beenden möchte.
+Die Anwendung sollte reagieren, indem sie die Aufzeichnungssequenz beendet und die **Hookprozedur JournalRecordProc** entfernt.
 Das Entfernen ist wichtig.
-Dadurch wird verhindert, dass eine Journal Anwendung das System sperrt, indem es in einer Hook-Prozedur hängt.
+Sie verhindert, dass eine Journalanwendung das System sperrt, indem sie in einer Hookprozedur hängt.
 
-Diese Rolle als Signal zum Anhalten der Journl-Aufzeichnung bedeutet, dass die Tastenkombination STRG + UNTBR nicht selbst aufgezeichnet werden kann.
-Da die Tastenkombination STRG + C keine Rolle spielt, kann Sie aufgezeichnet werden.
-Es gibt zwei weitere Tastenkombinationen, die nicht aufgezeichnet werden können: STRG + ESC und STRG + ALT + ENTF.
-Diese beiden Tastenkombinationen bewirken, dass das System alle journalingaktivitäten beendet (aufzeichnen oder Wiedergabe), alle journalhooks entfernt und eine [WM_CANCELJOURNAL](wm-canceljournal.md) Nachricht in der Journal Anwendung sendet.
+Diese Rolle als Signal zum Beenden der Journl-Aufzeichnung bedeutet, dass eine TASTENKOMBINATION STRG+BREAK nicht selbst aufgezeichnet werden kann.
+Da die Tastenkombination STRG+C keine rolle wie ein Journalsignal hat, kann sie aufgezeichnet werden.
+Es gibt zwei weitere Tastenkombinationen, die nicht aufgezeichnet werden können: STRG+ESC und STRG+ALT+ENTF.
+Diese beiden Tastenkombinationen bewirken, dass das System alle Journalingaktivitäten (Aufzeichnung oder Wiedergabe) stoppt, alle [Journalinghooks](wm-canceljournal.md) entfernt und eine WM_CANCELJOURNAL an die Journalanwendung übermittelt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex)
 
-[Eventmsg](/windows/desktop/api/winuser/ns-winuser-eventmsg)
+[EVENTMSG](/windows/desktop/api/winuser/ns-winuser-eventmsg)
 
-[Journalplaybackproc](journalplaybackproc.md)
+[JournalPlaybackProc](journalplaybackproc.md)
 
 [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw)
 

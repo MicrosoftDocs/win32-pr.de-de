@@ -1,7 +1,7 @@
 ---
-description: Die getnextvtrack-Methode ruft den nächsten virtuellen Titel nach einer angegebenen virtuellen Spur ab.
+description: Die GetNextVTrack-Methode ruft die nächste virtuelle Spur nach einer angegebenen virtuellen Spur ab.
 ms.assetid: c43e6b16-a3e4-4407-b48d-b04c4bb66688
-title: 'Iamtimelinecomp:: getnextvtrack-Methode (qedit. h)'
+title: IAMTimelineComp::GetNextVTrack-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 0e5a4500c2b53703a13b509f112453e65c954f96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dbeaf5d7987f1baf2b3df9804c4abd3049c38042a29f4177f83abec6855140a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401051"
 ---
-# <a name="iamtimelinecompgetnextvtrack-method"></a>Iamtimelinecomp:: getnextvtrack-Methode
+# <a name="iamtimelinecompgetnextvtrack-method"></a>IAMTimelineComp::GetNextVTrack-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetNextVTrack` Methode ruft den nächsten virtuellen Titel nach einer angegebenen virtuellen Spur ab.
+Die `GetNextVTrack` -Methode ruft die nächste virtuelle Spur nach einer angegebenen virtuellen Spur ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ HRESULT GetNextVTrack(
 
 <dl> <dt>
 
-*pvirtualtrack* 
+*pVirtualTrack* 
 </dt> <dd>
 
-Zeiger auf den vorherigen virtuellen Titel oder **null** , um den ersten virtuellen Titel in der Komposition abzurufen.
+Zeiger auf die vorherige virtuelle Spur oder **NULL,** um die erste virtuelle Spur in der Komposition abzurufen.
 
 </dd> <dt>
 
-*ppnextvirtualtrack* \[ vorgenommen\]
+*ppNextVirtualTrack* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle der nächsten virtuellen Spur in der Reihenfolge ihrer Priorität.
+Empfängt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) der nächsten virtuellen Spur in der Reihenfolge der Priorität.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt s \_ OK zurück, wenn die Methode einen virtuellen Track abruft, \_ andernfalls false.
+Gibt S \_ OK zurück, wenn die Methode eine virtuelle Spur abruft, \_ andernfalls S FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamtimelineobj** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode erfolgreich ist, verfügt die **zurückgegebene IAMTimelineObj-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie die Schnittstelle freigeben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -84,8 +84,8 @@ Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamti
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -93,10 +93,10 @@ Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamti
 
 <dl> <dt>
 
-[**Iamtimelinecomp-Schnittstelle**](iamtimelinecomp.md)
+[**IAMTimelineComp-Schnittstelle**](iamtimelinecomp.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

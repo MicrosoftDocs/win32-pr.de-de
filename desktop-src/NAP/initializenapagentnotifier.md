@@ -1,9 +1,9 @@
 ---
-title: Initializenapagentnotifier-Funktion (naputil. h)
-description: Abonniert den aufrufenden Prozess zum Anzeigen von NAPAgent-Status Änderungs Benachrichtigungen und zum Quarantäne Status Änderungs Benachrichtigungen.
+title: InitializeNapAgentNotifier-Funktion (NapUtil.h)
+description: Abonniert den aufrufenden Prozess für NapAgent-Zustandsänderungsbenachrichtigungen und Quarantänezustandsänderungsbenachrichtigungen.
 ms.assetid: 24180194-50d7-4f54-845d-25402af9cf9a
 keywords:
-- Initializenapagentnotifier-Funktion NAP
+- InitializeNapAgentNotifier-Funktion NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f59c4c342f693038040f374bbdbcdb8ab226f74d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ac2d874f6138bcc1fbc97952d4464e56e05b0a497c7b0ff98e9c05e8c8434e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118133455"
 ---
-# <a name="initializenapagentnotifier-function"></a>Initializenapagentnotifier-Funktion
+# <a name="initializenapagentnotifier-function"></a>InitializeNapAgentNotifier-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **initializenapagentnotifier** -Funktion abonniert den aufrufenden Prozess zum Anzeigen von NAPAgent-Status Änderungs Benachrichtigungen und zum Quarantäne Status Änderungs Benachrichtigungen. Diese Benachrichtigungen werden vom NAPAgent-Dienst bereitgestellt.
+Die **InitializeNapAgentNotifier-Funktion** abonniert den aufrufenden Prozess für NapAgent-Zustandsänderungsbenachrichtigungen und Quarantänestatusänderungsbenachrichtigungen. Diese Benachrichtigungen werden vom NapAgent-Dienst bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ NAPAPI HRESULT WINAPI InitializeNapAgentNotifier(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*type* \[ In\]
 </dt> <dd>
 
-Ein [**napnotifytype**](/windows/win32/api/naptypes/ne-naptypes-napnotifytype) -Wert, der den Typ der zu empfangenden Dienst Benachrichtigungen angibt.
+Ein [**NapNotifyType-Wert,**](/windows/win32/api/naptypes/ne-naptypes-napnotifytype) der den Typ der zu empfangenden Dienstbenachrichtigungen angibt.
 
 </dd> <dt>
 
-*hnotischyevent* \[ in\]
+*hNotifyEvent* \[ In\]
 </dt> <dd>
 
-Ein Ereignis handle, das für die Benachrichtigung verwendet wird. Der Aufrufer muss ein geöffnetes Handle an den *hnotifyevent* -Parameter übergeben. Der Aufrufer muss auch das Ereignis handle schließen, wenn es nicht mehr benötigt wird.
+Ein Ereignishand handle, das für die Benachrichtigung verwendet wird. Der Aufrufer muss ein offenes Handle an den *hNotifyEvent-Parameter* übergeben. Der Aufrufer muss auch das Ereignishand handle schließen, wenn es nicht mehr benötigt wird.
 
 </dd> </dl>
 
@@ -67,21 +67,21 @@ Ein Ereignis handle, das für die Benachrichtigung verwendet wird. Der Aufrufer 
 | Rückgabecode                                                                                                | Beschreibung                                                                                               |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Initialisierung wurde erfolgreich abgeschlossen.<br/>                                                         |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                     | Fehler bei der Initialisierung.<br/>                                                                         |
-| <dl> <dt>**Fehler \_ bereits \_ Initialisiert**</dt> </dl> | Der Prozess hat die NAPAgent-Dienst Benachrichtigungen vom angegebenen *Typ* bereits abonniert. <br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>               | Ein ungültiges Argument wurde übergeben. <br/>                                                               |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                     | Fehler bei der Initialisierung.<br/>                                                                         |
+| <dl> <dt>**FEHLER \_ BEREITS \_ INITIALISIERT**</dt> </dl> | Der Prozess hat bereits NapAgent-Dienstbenachrichtigungen des angegebenen *Typs abonniert.* <br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>               | Ein ungültiges Argument wurde übergeben. <br/>                                                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion ist nicht threadsicher.
 
-Bei jedem Prozess, bei dem ein Abonnement für die NAPAgent-Dienst Benachrichtigungen vom angegebenen *Typ* erforderlich ist, muss **initializenapagentnotifier** aufgerufen werden, um Benachrichtigungen zu abonnieren. Wenn ein Prozess mehr als einen Benachrichtigungstyp abonnieren muss, muss er für jeden Benachrichtigungstyp einmal **initializenapagentnotifier** aufruft.
+Jeder Prozess, der ein Abonnement für NapAgent-Dienstbenachrichtigungen des angegebenen Typs erfordert, muss **InitializeNapAgentNotifier** aufrufen, um Benachrichtigungen zu abonnieren.  Wenn ein Prozess mehrere Benachrichtigungstypen abonnieren muss, muss er **InitializeNapAgentNotifier** einmal für jeden Benachrichtigungstyp aufrufen.
 
-Wenn ein Prozess keine weiteren Benachrichtigungen erfordert, muss der Prozess [**uninitializenapagentnotifier**](uninitializenapagentnotifier.md) für den angegebenen *Typ* aufzurufen.
+Sobald ein Prozess keine weiteren Benachrichtigungen erfordert, muss der Prozess [**UninitializeNapAgentNotifier**](uninitializenapagentnotifier.md) für den angegebenen Typ *aufrufen.*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,9 +89,9 @@ Wenn ein Prozess keine weiteren Benachrichtigungen erfordert, muss der Prozess [
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 
@@ -100,7 +100,7 @@ Wenn ein Prozess keine weiteren Benachrichtigungen erfordert, muss der Prozess [
 
 <dl> <dt>
 
-[**Uninitializenapagentnotifier**](uninitializenapagentnotifier.md)
+[**UninitializeNapAgentNotifier**](uninitializenapagentnotifier.md)
 </dt> </dl>
 
  

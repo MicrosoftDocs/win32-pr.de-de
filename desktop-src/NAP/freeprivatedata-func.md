@@ -1,9 +1,9 @@
 ---
-title: Freprivatedata-Funktion (naputil. h)
-description: Gibt eine PRIVATEDATA-Datenstruktur frei.
+title: FreePrivateData-Funktion (NapUtil.h)
+description: Gibt eine PrivateData-Datenstruktur frei.
 ms.assetid: 94b3618e-224f-4801-94f3-2faa1a298ec0
 keywords:
-- Freprivatedata-Funktion NAP
+- NAP-Funktion "FreePrivateData"
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4629c264c91a4e0c6e18443cf27a9fd9d182164
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c760a22ef377bd8d198ea3b913c6062e90338218a187cb9dec3af457a8a02493
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134616"
 ---
-# <a name="freeprivatedata-function"></a>Freprivatedata-Funktion
+# <a name="freeprivatedata-function"></a>FreePrivateData-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die Funktion " **freprivatedata** " gibt eine [**PRIVATEDATA**](/windows/win32/api/naptypes/ns-naptypes-privatedata) -Datenstruktur frei.
+Die **FreePrivateData-Funktion** gibt eine [**PrivateData-Datenstruktur**](/windows/win32/api/naptypes/ns-naptypes-privatedata) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ NAPAPI VOID WINAPI FreePrivateData(
 
 <dl> <dt>
 
-*PRIVATEDATA* \[ in\]
+*privateData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die frei verfügbare [**PRIVATEDATA**](/windows/win32/api/naptypes/ns-naptypes-privatedata) -Datenstruktur.
+Ein Zeiger [](/windows/win32/api/naptypes/ns-naptypes-privatedata) auf die privateData-Datenstruktur, die freigegeben werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle com-Schnittstellen, die vom NAP-System unterstützt werden, verwenden COM-Standardspeicherverwaltungsregeln und die COM-Speicherbezuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und freigegeben.
+-   **Out-Parameter** werden vom Aufgerufenen zugeordnet und vom Aufrufer mit **coTaskMem** freigegeben.
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufgerufenen freigegeben und neu zugeordnet und schließlich vom Aufrufer freigegeben, indem **CoTaskMem** verwendet wird.
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freigeben von Arbeitsspeicher gibt auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 

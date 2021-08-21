@@ -1,66 +1,66 @@
 ---
-title: SynchronizedInput-Steuerelement Muster
-description: Beschreibt Richtlinien und Konventionen für das Implementieren von isynchronizedinputprovider, einschließlich Informationen zu Eigenschaften und Methoden.
+title: SynchronizedInput-Steuerelementmuster
+description: Beschreibt Richtlinien und Konventionen für die Implementierung von ISynchronizedInputProvider, einschließlich Informationen zu Eigenschaften und Methoden.
 ms.assetid: 3e2d65ea-8093-4e65-b43e-28478ec74607
 keywords:
-- UI-Automatisierung, Implementieren des SynchronizedInput-Steuerelement Musters
-- Benutzeroberflächenautomatisierungs-, SynchronizedInput-Steuerelement Muster
-- UI-Automatisierung, isynchronizedinputprovider
+- Benutzeroberflächenautomatisierung,Implementieren des SynchronizedInput-Steuerelementmusters
+- Benutzeroberflächenautomatisierung,SynchronizedInput-Steuerelementmuster
+- Benutzeroberflächenautomatisierung,ISynchronizedInputProvider
 - ISynchronizedInputProvider
-- Implementieren von SynchronizedInput-Steuerelement Mustern für Benutzeroberflächen Automatisierung
-- SynchronizedInput-Steuerelement Muster
-- Steuerelement Muster, isynchronizedinputprovider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-SynchronizedInput
-- Steuerelement Muster, SynchronizedInput
-- Schnittstellen, isynchronizedinputprovider
+- Implementieren Benutzeroberflächenautomatisierung SynchronizedInput-Steuerelementmuster
+- SynchronizedInput-Steuerelementmuster
+- Steuerelementmuster,ISynchronizedInputProvider
+- Steuerelementmuster,Implementieren Benutzeroberflächenautomatisierung SynchronizedInput
+- Steuerelementmuster,SynchronizedInput
+- interfaces,ISynchronizedInputProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 105e75163fdac742adaad6b778c251b4b7b8ae70
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 91aa4ad93a30be26ebcbc463ade3a27d896d61727508965a86d1ed229b7d79be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118114851"
 ---
-# <a name="synchronizedinput-control-pattern"></a>SynchronizedInput-Steuerelement Muster
+# <a name="synchronizedinput-control-pattern"></a>SynchronizedInput-Steuerelementmuster
 
-Beschreibt Richtlinien und Konventionen für das Implementieren von [**isynchronizedinputprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-isynchronizedinputprovider), einschließlich Informationen zu Eigenschaften und Methoden. Mit dem **SynchronizedInput** -Steuerelement Muster können Microsoft UI Automation-Client Anwendungen die Maus-oder Tastatureingaben an ein bestimmtes UI-Element weiterleiten.
+Beschreibt Richtlinien und Konventionen für die Implementierung von [**ISynchronizedInputProvider,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-isynchronizedinputprovider)einschließlich Informationen zu Eigenschaften und Methoden. Das **SynchronizedInput-Steuerelementmuster** ermöglicht Es Microsoft Benutzeroberflächenautomatisierung Clientanwendungen, die Maus- oder Tastatureingabe an ein bestimmtes Benutzeroberflächenelement weiterzuleiten.
 
-Dieses Steuerelement Muster wird in der Regel in automatisierten Test Skripts verwendet, um Maus-oder Tastatureingaben an ein bestimmtes Benutzeroberflächen Element zu senden und dann zu überprüfen, ob das Element die Eingabe empfangen hat.
+Dieses Steuerelementmuster wird in der Regel in automatisierten Testskripts verwendet, um Maus- oder Tastatureingaben an ein bestimmtes Benutzeroberflächenelement zu senden und dann zu überprüfen, ob das Element die Eingabe empfangen hat.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Implementierungsrichtlinien und -konventionen](#implementation-guidelines-and-conventions)
--   [Erforderliche Member für **isynchronizedinputprovider**](#required-members-for-isynchronizedinputprovider)
+-   [Erforderliche Member für **ISynchronizedInputProvider**](#required-members-for-isynchronizedinputprovider)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Beachten Sie beim Implementieren des **SynchronizedInput** -Steuerelement Musters die folgenden Richtlinien und Konventionen:
+Beachten Sie beim Implementieren des **SynchronizedInput-Steuerelementmusters** die folgenden Richtlinien und Konventionen:
 
--   Wenn die [**isynchronizedinputprovider:: StartListening**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening) -Methode aufgerufen wird, sollte der Benutzeroberflächenautomatisierungs-Anbieter mit der Überprüfung der Eingabe des angegebenen Typs beginnen und dann eine der folgenden Aktionen ausführen:
-    -   Wenn übereinstimmende Eingaben für das Element gefunden werden, sollte der Anbieter das [**UIA-Ereignis " \_ inputreachedtargeteventid**](uiauto-event-ids.md) " erhöhen.
-    -   Wenn übereinstimmende Eingaben gefunden werden, aber ein anderes Element erreicht wurden, sollte der Anbieter das UIA-Ereignis " [**\_ inputreachedotherelementeventid**](uiauto-event-ids.md) " erhöhen.
-    -   Wenn nicht übereinstimmende Eingaben gefunden werden, sollte der Anbieter die Eingabe verwerfen und das UIA-Ereignis " [**\_ inputverwerdebug-**](uiauto-event-ids.md) ID" erhöhen.
--   Der Benutzeroberflächenautomatisierungs-Anbieter muss die Eingabe verwerfen, wenn Sie für ein anderes Element als das aktuelle Element gilt.
--   Wenn das Element die Eingabe empfängt oder wenn die [**isynchronizedinputprovider:: Cancel**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-cancel) -Methode aufgerufen wird, beendet der Anbieter die Überprüfung der Eingabe und fährt wie gewohnt fort.
--   Wenn [**isynchronizedinputprovider:: StartListening**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening) aufgerufen wird, wenn der Anbieter bereits Eingaben abhört, sollte der Anbieter [**UIA \_ E \_ InvalidOperation**](uiauto-error-codes.md)zurückgeben.
+-   Wenn die [**ISynchronizedInputProvider::StartListening-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening) aufgerufen wird, sollte der Benutzeroberflächenautomatisierung Anbieter mit der Überprüfung auf Eingaben des angegebenen Typs beginnen und dann eine der folgenden Aktionen ausführen:
+    -   Wenn eine übereinstimmende Eingabe für das Element gefunden wird, sollte der Anbieter das [**UIA \_ InputReachedTargetEventId-Ereignis**](uiauto-event-ids.md) auslösen.
+    -   Wenn eine übereinstimmende Eingabe gefunden wird, aber ein anderes Element erreicht wurde, sollte der Anbieter das [**UIA \_ InputReachedOtherElementEventId-Ereignis**](uiauto-event-ids.md) auslösen.
+    -   Wenn eine nicht übereinstimmende Eingabe gefunden wird, sollte der Anbieter die Eingabe verwerfen und das [**UIA \_ InputDiscardedEventId-Ereignis**](uiauto-event-ids.md) auslösen.
+-   Der Benutzeroberflächenautomatisierung-Anbieter muss die Eingabe verwerfen, wenn es sich um ein anderes Element als das aktuelle Element handelt.
+-   Wenn das Element die Eingabe empfängt oder die [**ISynchronizedInputProvider::Cancel-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-cancel) aufgerufen wird, beendet der Anbieter die Überprüfung der Eingabe und fährt wie gewohnt fort.
+-   Wenn [**ISynchronizedInputProvider::StartListening**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening) aufgerufen wird, wenn der Anbieter bereits auf Eingaben lauscht, sollte der Anbieter [**UIA \_ E \_ INVALIDOPERATION**](uiauto-error-codes.md)zurückgeben.
 
-## <a name="required-members-for-isynchronizedinputprovider"></a>Erforderliche Member für **isynchronizedinputprovider**
+## <a name="required-members-for-isynchronizedinputprovider"></a>Erforderliche Member für **ISynchronizedInputProvider**
 
-Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementierung der [**isynchronizedinputprovider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-isynchronizedinputprovider) -Schnittstelle erforderlich.
+Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementierung der [**ISynchronizedInputProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-isynchronizedinputprovider) erforderlich.
 
 
 
 | Erforderliche Member                                                                         | Memberart | Hinweise |
 |------------------------------------------------------------------------------------------|-------------|-------|
-| [**Startüberwachung**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening)               | Methode      | Keine  |
+| [**StartListening**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-startlistening)               | Methode      | Keine  |
 | [**Abbrechen**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-isynchronizedinputprovider-cancel)                               | Methode      | Keine  |
-| [**UIA \_ inputreachedtargeteventid**](uiauto-event-ids.md) | Ereignis       | Keine  |
+| [**UIA \_ InputReachedTargetEventId**](uiauto-event-ids.md) | Ereignis       | Keine  |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -69,9 +69,9 @@ Die folgenden Eigenschaften, Methoden und Ereignisse sind für die Implementieru
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

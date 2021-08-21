@@ -1,60 +1,60 @@
 ---
-title: ObjectModel-Steuerelement Muster
-description: Beschreibt Richtlinien und Konventionen für das Implementieren von iobjectmodelprovider, einschließlich Informationen zu-Methoden. Das ObjectModel-Steuerelement Muster wird verwendet, um einen Zeiger auf das zugrunde liegende Objektmodell eines Dokuments verfügbar zu machen.
+title: ObjectModel-Steuerelementmuster
+description: Beschreibt Richtlinien und Konventionen für die Implementierung von IObjectModelProvider, einschließlich Informationen zu Methoden. Das ObjectModel-Steuerelementmuster wird verwendet, um einen Zeiger auf das zugrunde liegende Objektmodell eines Dokuments verfügbar zu machen.
 ms.assetid: 90A6937E-0E98-41EF-8EEB-E23CB71510E4
 keywords:
-- Benutzeroberflächen Automatisierung, Implementieren des ObjectModel-Steuerelement Musters
-- UI-Automatisierung, ObjectModel-Steuerelement Muster
-- UI-Automatisierung, iobjectmodelprovider
+- Benutzeroberflächenautomatisierung,Implementieren des ObjectModel-Steuerelementmusters
+- Benutzeroberflächenautomatisierung,ObjectModel-Steuerelementmuster
+- Benutzeroberflächenautomatisierung,IObjectModelProvider
 - IObjectModelProvider
-- Implementieren eines ObjectModel-Steuerelement Musters
-- ObjectModel-Steuerelement Muster
-- Steuerelement Muster, iobjectmodelprovider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-ObjectModel
-- Steuerelement Muster, ObjectModel
-- Schnittstellen, iobjectmodelprovider
+- Implementieren Benutzeroberflächenautomatisierung ObjectModel-Steuerelementmusters
+- ObjectModel-Steuerelementmuster
+- Steuerelementmuster,IObjectModelProvider
+- Steuerelementmuster,Implementieren Benutzeroberflächenautomatisierung ObjectModel
+- Steuerelementmuster,ObjectModel
+- interfaces,IObjectModelProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54ff115233faf19f93963153a0b2a0a1ff52c3f8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 62081f8fb841e7827f589fd2441c7b6411810f9a71c1c1962a0dfcf8b0e37180
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118114993"
 ---
-# <a name="objectmodel-control-pattern"></a>ObjectModel-Steuerelement Muster
+# <a name="objectmodel-control-pattern"></a>ObjectModel-Steuerelementmuster
 
-Beschreibt Richtlinien und Konventionen für das Implementieren von [**iobjectmodelprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-iobjectmodelprovider), einschließlich Informationen zu-Methoden. Das **ObjectModel** -Steuerelement Muster wird verwendet, um einen Zeiger auf das zugrunde liegende Objektmodell eines Dokuments verfügbar zu machen.
+Beschreibt Richtlinien und Konventionen für die Implementierung von [**IObjectModelProvider,**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-iobjectmodelprovider)einschließlich Informationen zu Methoden. Das **ObjectModel-Steuerelementmuster** wird verwendet, um einen Zeiger auf das zugrunde liegende Objektmodell eines Dokuments verfügbar zu machen.
 
-Viele Anwendungen implementieren umfassende Objekt Modelle, die über die von der Microsoft-Benutzeroberflächen Automatisierung bereitgestellte Werte hinaus erhöhen. Dieses Steuerelement Muster ermöglicht einem Client, von einem Benutzeroberflächenautomatisierungs-Element in das zugrunde liegende-Objektmodell zu navigieren.
+Viele Anwendungen implementieren Rich-Object-Modelle, die einen Mehrwert über das hinaus bieten, was Microsoft Benutzeroberflächenautomatisierung bietet. Mit diesem Steuerelementmuster kann ein Client von einem Benutzeroberflächenautomatisierung Element in das zugrunde liegende Objektmodell navigieren.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Implementierungsrichtlinien und -konventionen](#implementation-guidelines-and-conventions)
--   [Erforderliche Member für **iobjectmodelprovider**](#required-members-for-iobjectmodelprovider)
+-   [Erforderliche Member für **IObjectModelProvider**](#required-members-for-iobjectmodelprovider)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Beachten Sie beim Implementieren des **ObjectModel** -Steuerelement Musters die folgenden Richtlinien und Konventionen:
+Beachten Sie beim Implementieren des **ObjectModel-Steuerelementmusters** die folgenden Richtlinien und Konventionen:
 
--   Die [**iobjectmodelprovider:: getunderlyingobjectmodel**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-iobjectmodelprovider-getunderlyingobjectmodel) -Methode sollte einen Zeiger auf das Objekt zurückgeben, das so nah wie möglich an das Quell-UI-Element ist. Beispielsweise sollte ein Benutzeroberflächenautomatisierungs-Anbieter für ein einzelnes Element in einem Webbrowser einen Objektmodell Zeiger für das Element zurückgeben. Das Zurückgeben eines Objektmodell Zeigers für den Dokument Stamm wäre weitaus weniger nützlich.
--   Es wird erwartet, dass der Client des **ObjectModel** -Steuerelement Musters über die IID für die Schnittstelle verfügt, die Sie suchen. aus diesem Grund genügt es, einen einfachen [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Zeiger zurückzugeben.
--   Da die Benutzeroberflächen Automatisierung den Zeiger auf den Client Prozess Marshalls, sollte der Anbieter den Zugriff auf das Objektmodell unter Verwendung von Standard-Component Object Model-Methoden (com) erwarten.
+-   Die [**IObjectModelProvider::GetUnderlyingObjectModel-Methode**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-iobjectmodelprovider-getunderlyingobjectmodel) sollte einen Zeiger auf das Objekt zurückgeben, das dem Element der Quellbenutzeroberfläche so nahe wie möglich ist. In einem Webbrowser sollte beispielsweise ein Benutzeroberflächenautomatisierung Anbieter für ein einzelnes Element einen Objektmodellzeiger für das Element zurückgeben. Das Zurückgeben eines Objektmodellzeigers für das Dokumentstammverzeichnis wäre weitaus weniger nützlich.
+-   Es wird  erwartet, dass der Client des ObjectModel-Steuerelementmusters über die IID für die gesuchte Schnittstelle verfügt. Daher reicht es aus, einen einfachen [**IUnknown-Zeiger**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) zurückzugeben.
+-   Da Benutzeroberflächenautomatisierung den Zeiger auf den Clientprozess marshallt, sollte der Anbieter erwarten, dass der Client mithilfe von COM-Methoden (Standard Component Object Model) auf das Objektmodell zugreift.
 
-## <a name="required-members-for-iobjectmodelprovider"></a>Erforderliche Member für **iobjectmodelprovider**
+## <a name="required-members-for-iobjectmodelprovider"></a>Erforderliche Member für **IObjectModelProvider**
 
-Zum Implementieren der [**iobjectmodelprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-iobjectmodelprovider) -Schnittstelle ist die folgende Methode erforderlich.
+Die folgende Methode ist für die Implementierung der [**IObjectModelProvider-Schnittstelle**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-iobjectmodelprovider) erforderlich.
 
 
 
 | Erforderliche Member                                                                             | Memberart | Hinweise                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getunderlyingobjectmodel**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-iobjectmodelprovider-getunderlyingobjectmodel) | Methode      | Gibt einen com-Zeiger auf das zugrunde liegende Objektmodell zurück. Der Client wird erwartet, dass die [**IUnknown:: QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode aufgerufen wird, um bestimmte Objektmodell Zeiger abzurufen. |
+| [**GetUnderlyingObjectModel**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-iobjectmodelprovider-getunderlyingobjectmodel) | Methode      | Gibt einen COM-Zeiger auf das zugrunde liegende Objektmodell zurück. Es wird erwartet, dass der Client die [**IUnknown::QueryInterface-Methode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aufruft, um bestimmte Objektmodellzeiger abzurufen. |
 
 
 
- 
+ 
 
 Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
@@ -62,7 +62,7 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
 <dl> <dt>
 
-[Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md)
+[Steuerelementtypen und deren unterstützte Steuerelementmuster](uiauto-controlpatternmapping.md)
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
@@ -71,6 +71,6 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -24,7 +24,7 @@ ms.locfileid: "118399177"
 # <a name="iamtimelinetrackinsertspace-method"></a>IAMTimelineTrack::InsertSpace-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -49,14 +49,14 @@ HRESULT InsertSpace(
 *rtStart* 
 </dt> <dd>
 
-Die Zeit, zu der die Aufteilung erstellt werden soll, und der Anfangspunkt des eingefügten Leerzeichens in Einheiten von 100 Nanosekunden.
+Zeit, zu der die Aufteilung und der Startpunkt des eingefügten Leerzeichens in Einheiten von 100 Nanosekunden erstellt werden sollen.
 
 </dd> <dt>
 
 *rtEnd* 
 </dt> <dd>
 
-Der Endpunkt des eingefügten Leerzeichens in Einheiten von 100 Nanosekunden.
+Endpunkt des eingefügten Leerzeichens in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Rückgabewerte sind:
 
 | Rückgabecode                                                                                   | Beschreibung                                            |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <dl> <dt>**S \_ FALSE**</dt> </dl>       | Zum angegebenen Zeitpunkt sind keine Objekte enthalten.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>       | Zum angegebenen Zeitpunkt sind keine Objekte vorhanden.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                    |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiges Argument.<br/>                           |
 | <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
@@ -80,12 +80,12 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Rückgabewerte sind:
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

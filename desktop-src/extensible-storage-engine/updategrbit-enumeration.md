@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: updategrbit-Enumeration'
-title: Updategrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Server2003)
+description: Weitere Informationen finden Sie unter UpdateGrbit-Enumeration.
+title: UpdateGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Server2003)
 TOCTitle: UpdateGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Server2003.UpdateGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.server2003.updategrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e27809ef16fb00fd538e4c37826d10fefa3b396c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d78d4d4321831d682f9e3da11ab694e7ac1cc5dab05050e86e59e0765099e97e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118070477"
 ---
-# <a name="updategrbit-enumeration"></a>Updategrbit-Enumeration
+# <a name="updategrbit-enumeration"></a>UpdateGrbit-Enumeration
 
-Optionen für [JetUpdate2 (JET_SESID, JET_TABLEID, \[ \] , Int32, Int32, updategrbit)](./server2003api.jetupdate2-method.md).
+Optionen für [JetUpdate2(JET_SESID, JET_TABLEID, , \[ \] Int32, Int32, UpdateGrbit)](./server2003api.jetupdate2-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,8 +77,8 @@ public enum UpdateGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>CheckESE97Compatibility</td>
-<td><strong>Veraltet.</strong> Dieses Flag bewirkt, dass das Update einen Fehler zurückgibt, wenn das Update in der Windows 2000-Version von ESE nicht möglich wäre, was eine geringere maximale Anzahl von mehrwertigen Spalten Instanzen in jedem Datensatz erzwungen hat als spätere Versionen von ESE. Dies ist nur für Anwendungen wichtig, die Daten zwischen Anwendungen replizieren möchten, die unter Windows 2000 gehostet werden, und Anwendungen, die unter Windows 2003 oder höheren Versionen von ESE gehostet werden. Dies sollte für die meisten Anwendungen nicht erforderlich sein.</td>
+<td>CheckESE97Kompatibilität</td>
+<td><strong>Veraltet.</strong> Dieses Flag bewirkt, dass das Update einen Fehler zurück gibt, wenn das Update in der Windows 2000-Version von ESE nicht möglich gewesen wäre, die eine geringere maximale Anzahl von mehrwertigen Spalteninstanzen in jedem Datensatz erzwungen hat als spätere Versionen von ESE. Dies ist nur für Anwendungen wichtig, die Daten zwischen anwendungen replizieren möchten, die auf Windows 2000 gehostet werden, und Anwendungen, die unter Windows 2003 oder höher von ESE gehostet werden. Dies sollte für die meisten Anwendungen nicht erforderlich sein.</td>
 </tr>
 </tbody>
 </table>
@@ -86,6 +86,6 @@ public enum UpdateGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)
+[Microsoft.Isam.Esent.Interop.Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)

@@ -1,9 +1,9 @@
 ---
 title: pragma-Attribut
-description: Die Anweisung \ Pragma Mittel l \_ Echo weist die angegebene Zeichenfolge ohne Anführungszeichen in der generierten Header Datei an.
+description: Die \pragma midl echo-Direktive weist MIDL an, die angegebene Zeichenfolge ohne anführungszeichen in die \_ generierte Headerdatei ausgibt.
 ms.assetid: b8a175d2-ea07-4103-ab45-0de7e477d27a
 keywords:
-- pragma-Attribut-Mittel l
+- pragma attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72f5e1c00c089bc8915adc2d9f3363305c677a96
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0ca869acddf4b0a0a098707833e889efcfccc267a3abf1949921c550cf66c773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118383498"
 ---
 # <a name="pragma-attribute"></a>pragma-Attribut
 
-Mit der Pragma-Anweisung "-Echo" wird die \# angegebene Zeichenfolge (ohne Anführungszeichen) in der generierten Header Datei durch die-Anweisung des- **pragma \_** -Attributs ausgegeben.
+Die \# **pragma midl \_ echo-Direktive** weist MIDL an, die angegebene Zeichenfolge ohne anführungszeichen in die generierte Headerdatei ausgibt.
 
 ``` syntax
 #pragma midl_echo("string")
@@ -38,14 +38,14 @@ Mit der Pragma-Anweisung "-Echo" wird die \# angegebene Zeichenfolge (ohne Anfü
 *string* 
 </dt> <dd>
 
-Gibt eine Zeichenfolge an, die in die generierte Header Datei eingefügt wird. Die Anführungszeichen werden während des Einfügevorgangs entfernt.
+Gibt eine Zeichenfolge an, die in die generierte Headerdatei eingefügt wird. Die Anführungszeichen werden während des Einfügevorgangs entfernt.
 
 </dd> <dt>
 
-*tokensequenz* 
+*Tokensequenz* 
 </dt> <dd>
 
-Gibt eine Sequenz von Token an, die in die generierte Header Datei als Teil einer **\# pragma** -Direktive eingefügt werden, ohne dass vom Mittelwert Compiler verarbeitet wird.
+Gibt eine Sequenz von Token an, die als Teil einer **\# Pragma-Direktive** ohne Verarbeitung durch den MIDL-Compiler in die generierte Headerdatei eingefügt werden.
 
 </dd> <dt>
 
@@ -63,27 +63,27 @@ Gibt die Benutzer-ID an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der IDL-Datei angezeigte Vorverarbeitung-Direktiven der c-Sprache werden vom Präprozessor des C-Compilers verarbeitet. Die **\# define** -Direktiven in der IDL-Datei sind während der Kompilierungs Kompilierung verfügbar, aber nicht für den C-Compiler.
+C-Sprachvorverarbeitungsdirektiven, die in der IDL-Datei angezeigt werden, werden vom Präprozessor des C-Compilers verarbeitet. Die **\# define-Direktiven** in der IDL-Datei sind während der MIDL-Kompilierung verfügbar, jedoch nicht für den C-Compiler.
 
-Wenn der Präprozessor z. b. auf die Direktive " \# Windows 4 definieren" stößt, ersetzt der Präprozessor alle Vorkommen von "Windows" in der IDL-Datei durch "4". Das Symbol "Windows" ist zum Zeitpunkt der C-Kompilierung nicht verfügbar.
+Wenn der Präprozessor beispielsweise auf die Direktive "WINDOWS 4 definieren" trifft, ersetzt der Präprozessor alle Vorkommen von "WINDOWS" in der IDL-Datei durch \# "4". Das Symbol "WINDOWS" ist zur C-Kompilierungszeit nicht verfügbar.
 
-Um zuzulassen, dass die c-präprozessormakrodefinitionen den Mittel l-Compiler an den c-Compiler übergeben, verwenden Sie die- **\# pragma \_** -Anweisung "-Echo" oder " [**cpp- \_ Anführungs**](cpp-quote.md) Zeichen". Diese Direktiven weisen den Mittelwert Compiler an, eine Header Datei zu generieren, die die Parameter Zeichenfolge enthält, wobei die Anführungszeichen entfernt werden. Die Anweisungs-und **cpp- \_** Anweisungs Direktiven von **\# pragma \_** sind gleichwertig.
+Damit die C-Präprozessormakrodefinitionen den MIDL-Compiler an den C-Compiler übergeben können, verwenden Sie die **\# pragma midl \_ echo-** oder [**cpp \_ quote-Direktive.**](cpp-quote.md) Diese Anweisungen weisen den MIDL-Compiler an, eine Headerdatei zu generieren, die die Parameterzeichenfolge mit den entfernten Anführungszeichen enthält. Die **\# pragma midl \_ echo- und** **cpp \_ quote-Direktiven** sind gleichwertig.
 
-Die **\# pragma pack** -Direktive wird vom Mittelwert Compiler zum Steuern der Verpackung von Strukturen verwendet. Er überschreibt den [**/ZP**](-zp.md) -Befehls Zeilenschalter. Die Option Pack (*n*) legt die aktuelle Paketgröße auf einen bestimmten Wert fest: 1, 2, 4, 8 oder 16. Die Optionen Pack (Push) und Pack (Pop) weisen die folgenden Eigenschaften auf:
+Die **\# pragma pack-Direktive** wird vom MIDL-Compiler verwendet, um das Packen von Strukturen zu steuern. Er überschreibt den [**Befehlszeilenschalter /Zp.**](-zp.md) Die Paketoption (*n*) legt die aktuelle Paketgröße auf einen bestimmten Wert fest: 1, 2, 4, 8 oder 16. Die Optionen pack (push) und pack (pop) haben die folgenden Merkmale:
 
--   Der Compiler behält einen Verpackungs Stapel bei. Die Elemente des Verpackungs Stapels enthalten eine Paketgröße und eine optionale *ID*. Der Stapel wird nur durch den verfügbaren Arbeitsspeicher mit der aktuellen Paketgröße am oberen Rand des Stapels beschränkt.
--   Pack (Push) führt dazu, dass die aktuelle Paketgröße auf den Verpackungs Stapel verschoben wird. Der Stapel ist durch den verfügbaren Arbeitsspeicher begrenzt.
--   Pack (Push,*n*) ist das gleiche wie Pack (Push), gefolgt von Pack (*n*).
--   Pack (Push, *ID*) überträgt ebenfalls die *ID* zusammen mit der Paketgröße auf den Verpackungs Stapel.
--   Pack (Push, *ID*, *n*) ist das gleiche wie Pack (Push, *ID*), gefolgt von Paket (*n*).
--   Pack (Pop) führt zu einem Pop in den Verpackungs Stapel. Unausgeglichene POPs verursachen Warnungen und legen die aktuelle Paketgröße auf den Befehlszeilen Wert fest.
--   Wenn Pack (Pop, *ID*, *n*) angegeben wird, wird *n* ignoriert.
+-   Der Compiler verwaltet einen Packstapel. Die Elemente des Paketstapels enthalten eine Paketgröße und eine optionale *ID.* Der Stapel ist nur durch den verfügbaren Arbeitsspeicher mit der aktuellen Paketgröße am anfang des Stapels beschränkt.
+-   Das Packen (Pushen) führt zu der aktuellen Paketgröße, die auf den Paketstapel pusht. Der Stapel ist durch den verfügbaren Arbeitsspeicher beschränkt.
+-   Pack (push,*n*) ist identisch mit pack (push) gefolgt von pack (*n*).
+-   Pack (push, *id*) *pusht* id zusammen mit der Paketgröße ebenfalls auf den Paketstapel.
+-   Pack (push, *id*, *n*) ist identisch mit pack (push, *id*) gefolgt von pack (*n*).
+-   Packen (Pop) führt zum Popen des Paketstapels. Unausgeglichene Pops verursachen Warnungen und legen die aktuelle Paketgröße auf den Befehlszeilenwert fest.
+-   Wenn pack (pop, *id,* *n*) angegeben wird, wird *n* ignoriert.
 
-Der-compilercompiler fügt die in den [**\\ cpp- \_ Anführungs**](cpp-quote.md) Zeichen und- **pragma** -Direktiven angegebenen Zeichen folgen in der-Header Datei in der Reihenfolge ein, in der Sie in der IDL-Datei und relativ zu anderen Schnittstellen Komponenten in der IDL-Datei angegeben sind. Die Zeichen folgen sollten in der Regel im Schnittstellen Textabschnitt der IDL-Datei nach allen [**Import**](import.md) Vorgängen angezeigt werden.
+Der MIDL-Compiler platziert die in den [**\\ Anweisungen cpp \_ quote**](cpp-quote.md) und **pragma** angegebenen Zeichenfolgen in der Headerdatei in der Sequenz, in der sie in der IDL-Datei angegeben sind, und relativ zu anderen Schnittstellenkomponenten in der IDL-Datei. Die Zeichenfolgen sollten in der Regel nach allen Importvorgängen im Abschnitt interface-body der IDL-Datei [**angezeigt**](import.md) werden.
 
-Der mittlerer l-Compiler versucht nicht, **\# pragma** -Direktiven zu verarbeiten, die nicht mit dem Präfix "Mittel l \_ " beginnen. Andere **\# pragma** -Direktiven in der IDL-Datei werden ohne Änderungen an die generierte Header Datei übermittelt.
+Der MIDL-Compiler versucht nicht, **\# Pragma-Direktiven** zu verarbeiten, die nicht mit dem Präfix "midl" \_ beginnen. Andere **\# Pragma-Direktiven** in der IDL-Datei werden ohne Änderungen an die generierte Headerdatei übergeben.
 
 ## <a name="examples"></a>Beispiele
 
@@ -105,21 +105,21 @@ cpp_quote("#define __DELAYED_PREPROCESSING__ 1")
 
 <dl> <dt>
 
-[**cpp- \_ Angebot**](cpp-quote.md)
+[**\_CPP-Anführungszeichen**](cpp-quote.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**Importieren**](import.md)
+[**import**](import.md)
 </dt> <dt>
 
-[**/ZP**](-zp.md)
+[**/Zp**](-zp.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

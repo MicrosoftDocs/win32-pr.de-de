@@ -1,20 +1,20 @@
 ---
-title: Itssbtaskinfo-Eigenschaften
-description: Die itssbtaskinfo-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: ITsSbTaskInfo-Eigenschaften
+description: Die ITsSbTaskInfo-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 402B8502-DE17-440B-867D-45922582C30E
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c0e4c8fefc2e443778b2ce177e61a314a3e0ef9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: d91b24b95b6b19cb439350c0c6823306c66a8fab5fe47f0f9e9fb739df64e3cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118128068"
 ---
-# <a name="itssbtaskinfo-properties"></a>Itssbtaskinfo-Eigenschaften
+# <a name="itssbtaskinfo-properties"></a>ITsSbTaskInfo-Eigenschaften
 
-Die [**itssbtaskinfo**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskinfo) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**ITsSbTaskInfo-Schnittstelle**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskinfo) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,21 +23,21 @@ Die [**itssbtaskinfo**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskinfo) -Schn
 [**Context-Eigenschaft**](itssbtaskinfo-context.md)
 </dt> <dd>
 
-Ruft die dem Task zugeordneten Kontext Bytes ab.
+Ruft die kontextbedingten Bytes ab, die der Aufgabe zugeordnet sind.
 
 </dd> <dt>
 
-[**Stichtag (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_deadline)
+[**Deadline-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_deadline)
 </dt> <dd>
 
-Ruft den Zeitpunkt ab, zu dem die Aufgabe initiiert werden muss. Hiermit werden Patches priorisiert. Der Patch mit dem frühesten Stichtag wird zuerst initiiert.
+Ruft die Zeit ab, zu der die Aufgabe initiiert werden muss. Dies wird verwendet, um Patches zu priorisieren. Der Patch mit dem frühesten Stichtag wird zuerst initiiert.
 
 </dd> <dt>
 
-[**EndTime (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_endtime)
+[**EndTime-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_endtime)
 </dt> <dd>
 
-Ruft den letzten Zeitpunkt ab, zu dem der Task-Agent den Task starten kann.
+Ruft die letzte Zeit ab, zu der der Task-Agent den Task starten kann.
 
 </dd> <dt>
 
@@ -55,37 +55,37 @@ Ruft die Bezeichnung ab, die den Zweck der Aufgabe beschreibt.
 
 </dd> <dt>
 
-[**Plugin-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_plugin)
+[**Plug-In-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_plugin)
 </dt> <dd>
 
-Ruft den anzeigen amen des Task-Agents ab.
+Ruft den Anzeigenamen des Task-Agents ab.
 
 </dd> <dt>
 
-[**StartTime (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_starttime)
+[**StartTime-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_starttime)
 </dt> <dd>
 
-Ruft den frühesten Zeitpunkt ab, zu dem der Task-Agent den Task starten kann.
+Ruft die früheste Zeit ab, zu der der Task-Agent den Task starten kann.
 
 </dd> <dt>
 
-[**Status (Eigenschaft)**](itssbtaskinfo-status.md)
+[**Status-Eigenschaft**](itssbtaskinfo-status.md)
 </dt> <dd>
 
-Ruft einen RDV-aufgabenstatusenumerationswert ab, der den Zustand der Aufgabe darstellt. [**\_ \_**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status)
+Ruft einen [**RDV \_ TASK \_ STATUS-Enumerationswert**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status) ab, der den Zustand der Aufgabe darstellt.
 
 </dd> <dt>
 
-[**TargetID-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_targetid)
+[**TargetId-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskinfo-get_targetid)
 </dt> <dd>
 
-Ruft den Ziel Bezeichner ab.
+Ruft den Zielbezeichner ab.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Übersicht über das QuickInfo-Steuerelement
-description: Übersicht über das QuickInfo-Steuerelement
+title: Übersicht über quickinfo-Steuerelement
+description: Übersicht über quickinfo-Steuerelement
 ms.assetid: 686455f6-9c72-433e-a1ee-60a83c49ee6e
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118414972"
 ---
-# <a name="tooltip-control-overview"></a>Übersicht über das QuickInfo-Steuerelement
+# <a name="tooltip-control-overview"></a>Übersicht über quickinfo-Steuerelement
 
 -   [Informationen zu QuickInfo-Steuerelementen](tooltip-controls.md)
 -   [Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)

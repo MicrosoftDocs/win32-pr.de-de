@@ -1,26 +1,26 @@
 ---
-title: VML-alignshape-Attribut
-description: VML-alignshape-Attribut
+title: VML AlignShape-Attribut
+description: VML AlignShape-Attribut
 ms.assetid: 427e5969-4545-47b2-80f8-0e8783c52d65
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c32a4baba060dff4a7a45ccf5a374acf33620a4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e00e1fe8d07fb04c198ced2e2eb50d6ef0e6c020984d2d8cf12a3ca37cf09d79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125313"
 ---
-# <a name="vml-alignshape-attribute"></a>VML-alignshape-Attribut
+# <a name="vml-alignshape-attribute"></a>VML AlignShape-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Bild an einer Form ausgerichtet wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Bild an einer Form ausgerichtet wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Bestimmt, ob ein Bild an einer Form ausgerichtet wird. Lese-/Schreibzugriff. **V
 
 **Tagsyntax**
 
-<v: *Element* alignshape = " *Expression* " >
+<v: *element* alignshape=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . alignshape = "*Ausdruck*"
+*element* .alignshape="*expression*"
 
-*Ausdruck* = *Element*. alignshape
+*expression* = *Element*.alignshape
 
 **Anmerkungen**
 
-**True** gibt an, dass das zum Erstellen der Füllung verwendete Bild an der Form ausgerichtet wird. Wenn der Wert **false** ist, wird das Bild, das zum Erstellen der Füllung verwendet wird, an dem Fenster ausgerichtet. Der Standardwert ist **true**.
+**True** gibt an, dass das zum Erstellen der Füllung verwendete Bild an der Form ausgerichtet ist. **False** gibt an, dass das zum Erstellen der Füllung verwendete Bild am Fenster ausgerichtet ist. Der Standardwert ist **true**.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Das aus myimage.gif erstellte Kachel Füll Bild wird am Fenster ausgerichtet, nicht an der Form. Obwohl die Form gedreht wird, ist das Bild nicht.
+Das aus myimage.gif erstellte kachelte Füllbild ist am Fenster ausgerichtet, nicht an der Form. obwohl die Form gedreht wird, ist das Bild nicht.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Das aus myimage.gif erstellte Kachel Füll Bild wird am Fenster ausgerichtet, ni
 
 
 
- 
+ 
 
- 
+ 

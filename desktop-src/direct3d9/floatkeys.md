@@ -1,19 +1,19 @@
 ---
-description: Definiert ein Array von Gleit Komma Zahlen (Gleit Komma Zahlen) und die Anzahl von Gleit Komma Zahlen in diesem Array. Diese wird zum Definieren von Gruppen von Animations Schlüsseln verwendet.
+description: Definiert ein Array von Gleitkommazahlen (gleitkommazahlen) und die Anzahl der Gleitkommazahlen in diesem Array. Dies wird zum Definieren von Sätzen von Animationsschlüsseln verwendet.
 ms.assetid: a506cca6-0b10-4373-a7e1-f6aa0989e675
-title: Floatkeys
+title: FloatKeys
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 984aea1c70e169c7c27ccbcd50009531524f4187
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 387b546b08d21ca5a3de3934e161212429161fa0343d04a871f1cbd0a4049560
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342946"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118297594"
 ---
-# <a name="floatkeys"></a>Floatkeys
+# <a name="floatkeys"></a>FloatKeys
 
-Definiert ein Array von Gleit Komma Zahlen (Gleit Komma Zahlen) und die Anzahl von Gleit Komma Zahlen in diesem Array. Diese wird zum Definieren von Gruppen von Animations Schlüsseln verwendet.
+Definiert ein Array von Gleitkommazahlen (gleitkommazahlen) und die Anzahl der Gleitkommazahlen in diesem Array. Dies wird zum Definieren von Sätzen von Animationsschlüsseln verwendet.
 
 ``` syntax
 template FloatKeys
@@ -24,8 +24,8 @@ template FloatKeys
 } 
 ```
 
--   nvalues-Anzahl von Gleit Komma Werten.
--   Werte \[ nvalues \] -Array von float-Werten.
+-   nValues: Anzahl von Gleitkommawerten.
+-   values \[ nValues: \] Array von float-Werten.
 
 ## <a name="see-also"></a>Siehe auch
 

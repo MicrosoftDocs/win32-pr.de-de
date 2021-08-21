@@ -1,9 +1,9 @@
 ---
-title: TB_LOADIMAGES Meldung (kommstrg. h)
-description: Lädt System definierte Schaltflächen Bilder in die Bildliste eines Symbolleisten-Steuer Elements.
+title: TB_LOADIMAGES-Nachricht (Commctrl.h)
+description: Lädt systemdefinierte Schaltflächenbilder in die Bildliste eines Symbolleistensteuerelements.
 ms.assetid: 61146f43-9fd9-4fe3-b85c-cf465f2de769
 keywords:
-- Windows-Steuerelemente für TB_LOADIMAGES Meldung
+- TB_LOADIMAGES Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0b0ba6bf75855a0b81ac56438489d7eced3d589
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df2cfae5e1658dec2652eb68cae4283dd0df697ad055434f1290cc0da7c2b485
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168196"
 ---
-# <a name="tb_loadimages-message"></a>TB- \_ loadimages-Nachricht
+# <a name="tb_loadimages-message"></a>TB \_ LOADIMAGES-Nachricht
 
-Lädt System definierte Schaltflächen Bilder in die Bildliste eines Symbolleisten-Steuer Elements.
+Lädt systemdefinierte Schaltflächenbilder in die Bildliste eines Symbolleistensteuerelements.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,22 +32,22 @@ Lädt System definierte Schaltflächen Bilder in die Bildliste eines Symbolleist
 *wParam* 
 </dt> <dd>
 
-Der Bezeichner einer System definierten Schaltflächen Bildliste. Dieser Parameter kann auf einen der folgenden Werte festgelegt werden.
+Bezeichner einer systemdefiniert Schaltflächenbildliste. Dieser Parameter kann auf einen der folgenden Werte festgelegt werden.
 
 
 
 | Wert                                                                                                                                                                                | Bedeutung                                                                             |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| <span id="IDB_HIST_LARGE_COLOR"></span><span id="idb_hist_large_color"></span><dl> <dt>**hohe IDB- \_ \_ \_ Farbe**</dt> </dl> | Windows Explorer-Bitmaps in großem Umfang.<br/>                                  |
-| <span id="IDB_HIST_SMALL_COLOR"></span><span id="idb_hist_small_color"></span><dl> <dt>**IDB \_ Hist \_ Small \_ Color**</dt> </dl> | Windows Explorer-Bitmaps in kleiner Größe.<br/>                                  |
-| <span id="IDB_STD_LARGE_COLOR"></span><span id="idb_std_large_color"></span><dl> <dt>**\_ \_ hohe Farbe für IDB Std \_**</dt> </dl>    | Standard Bitmaps in großem Umfang.<br/>                                          |
-| <span id="IDB_STD_SMALL_COLOR"></span><span id="idb_std_small_color"></span><dl> <dt>**IDB \_ Std \_ Small- \_ Farbe**</dt> </dl>    | Standard Bitmaps in kleiner Größe.<br/>                                          |
-| <span id="IDB_VIEW_LARGE_COLOR"></span><span id="idb_view_large_color"></span><dl> <dt>**IDB- \_ Sicht \_ große \_ Farbe**</dt> </dl> | Anzeigen von Bitmaps in großem Umfang.<br/>                                              |
-| <span id="IDB_VIEW_SMALL_COLOR"></span><span id="idb_view_small_color"></span><dl> <dt>**IDB- \_ Sicht \_ kleine \_ Farbe**</dt> </dl> | Bitmaps in kleiner Größe anzeigen.<br/>                                              |
-| <span id="IDB_HIST_NORMAL"></span><span id="idb_hist_normal"></span><dl> <dt>**IDB- \_ Hist \_ Normal**</dt> </dl>                 | Windows-Explorer-Fahrten Schaltflächen und Favoriten Bitmaps im normalen Zustand.<br/>   |
-| <span id="IDB_HIST_HOT"></span><span id="idb_hist_hot"></span><dl> <dt>**IDB- \_ Hist- \_ Hot**</dt> </dl>                          | Windows-Explorer-Reise Schaltflächen und Favoriten Bitmaps im aktiven Zustand.<br/>      |
-| <span id="IDB_HIST_DISABLED"></span><span id="idb_hist_disabled"></span><dl> <dt>**IDB- \_ Hist \_ deaktiviert**</dt> </dl>           | Windows-Explorer-Reise Schaltflächen und Favoriten Bitmaps in deaktiviertem Zustand.<br/> |
-| <span id="IDB_HIST_PRESSED"></span><span id="idb_hist_pressed"></span><dl> <dt>**IDB \_ Hist \_ gedrückt**</dt> </dl>              | Windows-Explorer-Fahrten Schaltflächen und Favoriten Bitmaps im gedrückten Zustand.<br/>  |
+| <span id="IDB_HIST_LARGE_COLOR"></span><span id="idb_hist_large_color"></span><dl> <dt>**IDB \_ HIST \_ LARGE \_ COLOR**</dt> </dl> | Windows Explorerbitmaps in großer Größe.<br/>                                  |
+| <span id="IDB_HIST_SMALL_COLOR"></span><span id="idb_hist_small_color"></span><dl> <dt>**KLEINE \_ \_ \_ IDB HIST-FARBE**</dt> </dl> | Windows Explorerbitmaps in kleiner Größe.<br/>                                  |
+| <span id="IDB_STD_LARGE_COLOR"></span><span id="idb_std_large_color"></span><dl> <dt>**GROßE \_ \_ \_ IDB STD-FARBE**</dt> </dl>    | Standardbitmaps in großer Größe.<br/>                                          |
+| <span id="IDB_STD_SMALL_COLOR"></span><span id="idb_std_small_color"></span><dl> <dt>**KLEINE \_ \_ \_ IDB STD-FARBE**</dt> </dl>    | Standardbitmaps in kleiner Größe.<br/>                                          |
+| <span id="IDB_VIEW_LARGE_COLOR"></span><span id="idb_view_large_color"></span><dl> <dt>**IDB \_ VIEW \_ LARGE \_ COLOR**</dt> </dl> | Zeigen Sie Bitmaps in großer Größe an.<br/>                                              |
+| <span id="IDB_VIEW_SMALL_COLOR"></span><span id="idb_view_small_color"></span><dl> <dt>**IDB \_ VIEW SMALL COLOR \_ (IDB-ANSICHT, KLEINE \_ FARBE)**</dt> </dl> | Zeigen Sie Bitmaps in kleiner Größe an.<br/>                                              |
+| <span id="IDB_HIST_NORMAL"></span><span id="idb_hist_normal"></span><dl> <dt>**IDB \_ HIST \_ NORMAL**</dt> </dl>                 | Windows Explorer-Reiseschaltflächen und Favoritenbitmaps im normalen Zustand.<br/>   |
+| <span id="IDB_HIST_HOT"></span><span id="idb_hist_hot"></span><dl> <dt>**IDB \_ HIST \_ HOT**</dt> </dl>                          | Windows Explorer-Reiseschaltflächen und Favoritenbitmaps im heißen Zustand.<br/>      |
+| <span id="IDB_HIST_DISABLED"></span><span id="idb_hist_disabled"></span><dl> <dt>**IDB \_ HIST \_ DISABLED**</dt> </dl>           | Windows Explorer-Reiseschaltflächen und Favoritenbitmaps im deaktivierten Zustand.<br/> |
+| <span id="IDB_HIST_PRESSED"></span><span id="idb_hist_pressed"></span><dl> <dt>**IDB \_ HIST \_ GEDRÜCKT**</dt> </dl>              | Windows Explorer-Reiseschaltflächen und Favoritenbitmaps im gedrückten Zustand.<br/>  |
 
 
 
@@ -58,21 +58,21 @@ Der Bezeichner einer System definierten Schaltflächen Bildliste. Dieser Paramet
 *lParam* 
 </dt> <dd>
 
-Instanzhandle. Dieser Parameter muss auf hInst kommctrl festgelegt werden \_ .
+Instanzhandle. Dieser Parameter muss auf HINST \_ COMMCTRL festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Bilder in der Bildliste. Gibt 0 (null) zurück, wenn die Symbolleiste keine Bildliste aufweist oder wenn die vorhandene Bildliste leer ist.
+Die Anzahl der Bilder in der Bildliste. Gibt 0 (null) zurück, wenn die Symbolleiste keine Bildliste enthält oder die vorhandene Bildliste leer ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen die richtigen Bild Indexwerte verwenden, wenn Sie die [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Strukturen vor dem Senden der [**TB- \_ AddButtons**](tb-addbuttons.md) -Nachricht vorbereiten. Eine Liste der Bild Indexwerte für diese vordefinierten Bitmaps finden Sie unter [Indexwerte der Symbolleisten-Standard Schaltfläche](toolbar-standard-button-image-index-values.md).
+Sie müssen die richtigen Imageindexwerte verwenden, wenn Sie [**TBBUTTON-Strukturen**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) vorbereiten, bevor Sie die [**\_ TB-ADDBUTTONS-Nachricht**](tb-addbuttons.md) senden. Eine Liste der Bildindexwerte für diese voreingestellten Bitmaps finden Sie unter [Symbolleiste Standardschaltfläche Bildindexwerte](toolbar-standard-button-image-index-values.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispielcode werden die System Standard-Small Color-Bilder geladen.
+Der folgende Beispielcode lädt die standardmäßigen kleinen Farbbilder des Systems.
 
 
 ```C++
@@ -88,9 +88,9 @@ SendMessage(hWndToolbar, TB_LOADIMAGES, (WPARAM)IDB_STD_SMALL_COLOR, (LPARAM)HIN
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ SendMessage(hWndToolbar, TB_LOADIMAGES, (WPARAM)IDB_STD_SMALL_COLOR, (LPARAM)HIN
 
 <dl> <dt>
 
-[**TB \_ AddBitmap**](tb-addbitmap.md)
+[**TB \_ ADDBITMAP**](tb-addbitmap.md)
 </dt> </dl>
 
  

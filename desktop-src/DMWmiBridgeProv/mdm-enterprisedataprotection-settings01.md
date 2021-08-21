@@ -1,10 +1,10 @@
 ---
 title: MDM_EnterpriseDataProtection_Settings01-Klasse
-description: Die MDM \_ EnterpriseDataProtection \_ Settings01-Klasse wird verwendet, um spezifische Einstellungen für Windows Information Protection (WIP) (früher als Enterprise Data Protection bezeichnet) zu konfigurieren.
+description: Die MDM EnterpriseDataProtection Settings01-Klasse wird verwendet, um Windows Information Protection \_ \_ (WIP) (ehemals Enterprise Data Protection) spezifische Einstellungen zu konfigurieren.
 ms.assetid: 7537f548-85fb-46b4-ab94-c9dcf2bf1447
 keywords:
 - MDM_EnterpriseDataProtection_Settings01-Klasse
-- MDM_EnterpriseDataProtection_Settings01-Klasse beschrieben
+- MDM_EnterpriseDataProtection_Settings01-Klasse, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -28,7 +28,7 @@ ms.locfileid: "118165833"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ EnterpriseDataProtection \_ Settings01-Klasse** wird verwendet, um Windows Information Protection (WIP) (früher als Enterprise Data Protection bezeichnet) bestimmte Einstellungen zu konfigurieren. Weitere Informationen zu WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mit enterprise data protection (EDP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Die **MDM \_ EnterpriseDataProtection \_ Settings01-Klasse** wird verwendet, um Windows Information Protection (WIP) (früher als Enterprise Data Protection bezeichnet) spezifische Einstellungen zu konfigurieren. Weitere Informationen zu WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mithilfe des Unternehmensdatenschutzes (Enterprise Data Protection, EDP).](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -54,7 +54,7 @@ class MDM_EnterpriseDataProtection_Settings01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ EnterpriseDataProtection \_ Settings01-Klasse** verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseDataProtection \_ Settings01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -89,13 +89,13 @@ Zugriffstyp: Lesen/Schreiben
 [DataRecoveryCertificate](/windows/client-management/mdm/enterprisedataprotection-csp#settings-datarecoverycertificate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **Octetstring**
+Qualifizierer: **Oktettzeichenfolge**
 </dt> </dl>
 
 </dd> <dt>
@@ -125,7 +125,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseProtectedDomainNames](/windows/client-management/mdm/enterprisedataprotection-csp#settings-enterpriseprotecteddomainnames)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -136,13 +136,13 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Einstellungen".
@@ -152,16 +152,16 @@ Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Z
 **Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/EnterpriseDataProtection".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/EnterpriseDataProtection".
 
 </dd> <dt>
 
@@ -179,7 +179,7 @@ Zugriffstyp: Lesen/Schreiben
 [RMSTemplateIDForEDP](/windows/client-management/mdm/enterprisedataprotection-csp#settings-rmstemplateidforedp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -190,7 +190,7 @@ Zugriffstyp: Lesen/Schreiben
 [SMBAutoEncryptedFileExtensions](/windows/client-management/mdm/enterprisedataprotection-csp#settings-smbautoencryptedfileextensions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben

@@ -1,9 +1,9 @@
 ---
-title: TB_PRESSBUTTON Meldung (kommstrg. h)
-description: Drückt die angegebene Schaltfläche in einer Symbolleiste oder gibt diese frei.
+title: TB_PRESSBUTTON (Commctrl.h)
+description: Drückt oder gibt die angegebene Schaltfläche in einer Symbolleiste frei.
 ms.assetid: 03f6c3c2-d679-4e3a-a07b-c7e46c97972a
 keywords:
-- Windows-Steuerelemente für TB_PRESSBUTTON Meldung
+- TB_PRESSBUTTON meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b0e86092951b242cee7388fc0d5d1bbdbca835e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8c72bd3e58b06510463fcfb872060d7fcbb529ce3e5a96376ae8cb25e142d9e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168010"
 ---
-# <a name="tb_pressbutton-message"></a>TB- \_ pressbutton-Meldung
+# <a name="tb_pressbutton-message"></a>TB \_ PRESSBUTTON-Meldung
 
-Drückt die angegebene Schaltfläche in einer Symbolleiste oder gibt diese frei.
+Drückt oder gibt die angegebene Schaltfläche in einer Symbolleiste frei.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,22 +32,22 @@ Drückt die angegebene Schaltfläche in einer Symbolleiste oder gibt diese frei.
 *wParam* 
 </dt> <dd>
 
-Befehls Bezeichner der Schaltfläche, die gedrückt oder freigegeben werden soll.
+Befehlsbezeichner der Schaltfläche, die gedrückt oder loslasst werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **boolescher** Wert, der angibt, ob die angegebene Schaltfläche gedrückt oder freigegeben wird. **True** gibt an, dass die Schaltfläche gedrückt wird. Wenn der Wert **false** ist, wird die Schaltfläche losgelassen.
+LoWORD [**ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine **BOOL,** die angibt, ob die angegebene Schaltfläche gedrückt oder losgelassen werden soll. True **gibt an,** dass die Schaltfläche gedrückt wird. False **gibt an,** dass die Schaltfläche freigegeben wird.
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) muss NULL sein.
+Das [**HIWORD muss**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,12 +1,12 @@
 ---
-title: "\"Undvtaskplugin PluginName\"-Eigenschaft (tspubplugincom. h)"
-description: Enthält den anzeigen amen des Task-Agents.
+title: IRDVTaskPlugin-Plug-InName-Eigenschaft (Tspubplugincom.h)
+description: Enthält den Anzeigenamen des Task-Agents.
 ms.assetid: 6f414270-e90b-4075-80fe-f918acbdd205
 ms.tgt_platform: multiple
 keywords:
 - PluginName-Eigenschaft Remotedesktopdienste
-- PluginName-Eigenschaft Remotedesktopdienste, undvtaskplugin-Schnittstelle
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste, PluginName-Eigenschaft
+- PluginName-Eigenschaft Remotedesktopdienste , IRDVTaskPlugin-Schnittstelle
+- IRDVTaskPlugin-Schnittstelle Remotedesktopdienste , PluginName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0262472e37a8ff3e5b9bb153d2e94f4e52029b14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 078934c8f19085bf233df78501798a8416ceadf7ba6a0b663cb14b8a8c46b223
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129331"
 ---
-# <a name="irdvtaskpluginpluginname-property"></a>Undvtaskplugin::P luginname-Eigenschaft
+# <a name="irdvtaskpluginpluginname-property"></a>IRDVTaskPlugin::P luginName-Eigenschaft
 
-Enthält den anzeigen amen des Task-Agents. Dieser Name wird nur zu Protokollierungs Zwecken verwendet.
+Enthält den Anzeigenamen des Task-Agents. Dieser Name wird nur zu Protokollierungszwecken verwendet.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_PluginName(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Anzeige Name des Task-Agents.
+Der Anzeigename des Task-Agents.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Der Anzeige Name des Task-Agents.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Tspubplugincom. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Tspubplugincom.h</dt> </dl> |
 
 
 
@@ -62,7 +62,7 @@ Der Anzeige Name des Task-Agents.
 
 <dl> <dt>
 
-[**"Undvtaskplugin"**](irdvtaskplugin.md)
+[**IRDVTaskPlugin**](irdvtaskplugin.md)
 </dt> </dl>
 
  

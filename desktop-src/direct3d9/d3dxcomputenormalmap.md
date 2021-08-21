@@ -1,5 +1,5 @@
 ---
-description: 'D3DXComputeNormalMap-Funktion: Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jedes Normals werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.'
+description: 'D3DXComputeNormalMap-Funktion: Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jeder Normalen werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.'
 ms.assetid: ed9053c0-b1df-4f74-bdee-627c0f60d942
 title: D3DXComputeNormalMap-Funktion (D3dx9tex.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 920ad763f478a2e6bcb9fbe98cc7e2a677ebe783
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b561189c0aaafa42cc877246bb5a666ac26853133c227aa6c7a4f8beb1f23a28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118299364"
 ---
 # <a name="d3dxcomputenormalmap-function"></a>D3DXComputeNormalMap-Funktion
 
-Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jedes Normals werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.
+Konvertiert eine Höhenkarte in eine normale Karte. Die (x,y,z)-Komponenten jeder Normalen werden den (r,g,b)-Kanälen der Ausgabetextur zugeordnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9he
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die Textur der Quellhöhenzuordnung darstellt.
+Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die Quelltextur der Höhenkarte darstellt.
 
 </dd> <dt>
 
@@ -68,16 +68,16 @@ Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9he
 
 Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf einen [**PALETTEENTRY-Typ,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) der die Quellpalette mit 256 Farben oder **NULL enthält.**
+Zeiger auf einen [**PALETTEENTRY-Typ,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) der die Quellpalette von 256 Farben oder **NULL** enthält.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Mindestens ein [D3DX \_ NORMALMAP-Flag,](d3dx-normalmap.md) das die Generierung normaler Karten kontrolliert.
+Mindestens ein [D3DX \_ NORMALMAP-Flag,](d3dx-normalmap.md) das die Generierung normaler Zuordnungen steuert.
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Mindestens ein [D3DX \_ NORMALMAP-Flag,](d3dx-normalmap.md) das die Generierung 
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Ein [D3DX \_ CHANNEL-Flag,](d3dx-channel.md) das die Quelle der Höheninformationen an gibt.
+Ein [D3DX \_ CHANNEL-Flag,](d3dx-channel.md) das die Quelle der Höheninformationen angibt.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Wert sein: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode berechnet die Normalität mithilfe des zentralen Unterschieds mit einer Kernelgröße von 3x3. Der zentrale differenzierende Nenner ist 2.0. RGB-Kanäle im Ziel enthalten voreingenommene (x,y,z)-Komponenten der Normalen.
 
@@ -113,14 +113,14 @@ Diese Methode berechnet die Normalität mithilfe des zentralen Unterschieds mit 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

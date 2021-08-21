@@ -1,12 +1,12 @@
 ---
-title: Itspubplugin-PluginName-Eigenschaft
-description: Ruft den Namen des Plug-ins ab.
+title: ItsPubPlugin pluginName-Eigenschaft
+description: Ruft den Namen des Plug-Ins ab.
 ms.assetid: c1ea46b6-fac6-4140-a278-cb04ee9af739
 ms.tgt_platform: multiple
 keywords:
-- PluginName-Eigenschaft Remotedesktopdienste
-- PluginName-Eigenschaft Remotedesktopdienste, itspubplugin-Schnittstelle
-- Itspubplugin-Schnittstelle Remotedesktopdienste, PluginName-Eigenschaft
+- pluginName-Eigenschaft Remotedesktopdienste
+- pluginName-Eigenschaft Remotedesktopdienste , ItsPubPlugin-Schnittstelle
+- ItsPubPlugin-Schnittstelle Remotedesktopdienste , pluginName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f5aa6ff6659047e9be48fd7b7a41f652c5cfd9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5aa1cd3103e901255a6226db3e128e81bb17c02e6b586a48ca434ed44932861c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118128639"
 ---
-# <a name="itspubpluginpluginname-property"></a>Itspubplugin::p luginname-Eigenschaft
+# <a name="itspubpluginpluginname-property"></a>ItsPubPlugin::p luginName-Eigenschaft
 
-Ruft den Namen des Plug-ins ab.
+Ruft den Namen des Plug-Ins ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_pluginName(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf eine **BSTR** -Variable, die den Namen des Plug-ins erhält.
+Ein Zeiger auf eine **BSTR-Variable,** um den Namen des Plug-Ins zu empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Ein Zeiger auf eine **BSTR** -Variable, die den Namen des Plug-ins erhält.
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                         |
-| IDL<br/>                      | <dl> <dt>Cpubplugin. idl</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Cpubplugin.idl</dt> </dl> |
 
 
 
@@ -62,7 +62,7 @@ Ein Zeiger auf eine **BSTR** -Variable, die den Namen des Plug-ins erhält.
 
 <dl> <dt>
 
-[**Itspubplugin**](/windows/desktop/api/tspubplugincom/nn-tspubplugincom-itspubplugin)
+[**ItsPubPlugin**](/windows/desktop/api/tspubplugincom/nn-tspubplugincom-itspubplugin)
 </dt> </dl>
 
  

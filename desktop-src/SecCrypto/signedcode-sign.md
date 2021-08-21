@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine digitale Authenticode-Signatur und signiert die ausführbare Datei, die in der signedcode. FileName-Eigenschaft angegeben ist.
+description: Erstellt eine digitale Authenticode-Signatur und signiert die ausführbare Datei, die in der SignedCode.FileName-Eigenschaft angegeben ist.
 ms.assetid: db17be29-35ec-4468-b5cc-5ba64c4cf3fb
-title: Signedcode. Sign-Methode
+title: SignedCode.Sign-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 36e5c813b997ae452d44764ed88f51b273c75528
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3baf2b324177cf7a05c660d23d9e94cf19e044d47c5d02138047b51a96c3f272
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117974177"
 ---
-# <a name="signedcodesign-method"></a>Signedcode. Sign-Methode
+# <a name="signedcodesign-method"></a>SignedCode.Sign-Methode
 
-\[Die **Sign** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen den Platform invoations Dienst (PInvoke) zum Aufrufen der Win32-API [**signersignetx**](signersignex.md)-, [**signertimestampex**](signertimestampex.md)-und [**WinVerifyTrust**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) -Funktionen, um Inhalte mit einer digitalen Authenticode-Signatur zu signieren. Weitere Informationen zu PInvoke finden Sie unter [Tutorial zum Platt Form Aufruf](https://msdn.microsoft.com/library/aa288468.aspx). Die [.net-und CryptoAPI über p/aufrufen: Teil 1](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic5) und [.net und CryptoAPI über p/aufrufen: Teil 2](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic6) Unterabschnitte der [Erweiterung von .net-Kryptografie mit CAPICOM und p/aufrufen](/previous-versions/ms867087(v=msdn.10)) können ebenfalls hilfreich sein.\]
+\[Die **Sign-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen Platform Invocation Services (PInvoke), um die Win32-API-Funktionen [**SignerSignEx,**](signersignex.md) [**SignerTimeStampEx**](signertimestampex.md)und [**WinVerifyTrust**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) aufzurufen, um Inhalte mit einer digitalen Authenticode-Signatur zu signieren. Informationen zu PInvoke finden Sie unter [Tutorial zu Plattformaufrufen.](https://msdn.microsoft.com/library/aa288468.aspx) Die [Unterabschnitte .NET und CryptoAPI über P/Invoke: Teil 1](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic5) und [.NET und CryptoAPI über P/Invoke: Teil 2](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic6) der Erweiterung der [.NET-Kryptografie mit CAPICOM und P/Invoke](/previous-versions/ms867087(v=msdn.10)) können ebenfalls hilfreich sein.\]
 
-Die **Sign** -Methode erstellt eine digitale Authenticode-Signatur und signiert die ausführbare Datei, die in der [**signedcode. filename**](signedcode-filename.md) -Eigenschaft angegeben ist.
+Die **Sign-Methode** erstellt eine digitale Authenticode-Signatur und signiert die ausführbare Datei, die in der [**SignedCode.FileName-Eigenschaft**](signedcode-filename.md) angegeben ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ SignedCode.Sign( _
 
 <dl> <dt>
 
-*Signatur Geber* \[ in, optional\]
+*Signierer* \[ in, optional\]
 </dt> <dd>
 
-Ein [**Signatur**](signer.md) Geber Objekt, das Zugriff auf den privaten Schlüssel des Zertifikats hat, das zum Signieren des Codes verwendet wird. Der Standardwert ist **null**.
+Ein [**Signer-Objekt,**](signer.md) das Zugriff auf den privaten Schlüssel des Zertifikats hat, das zum Signieren des Codes verwendet wird. Der Standardwert ist **NULL.**
 
 </dd> </dl>
 
@@ -52,21 +52,21 @@ Ein [**Signatur**](signer.md) Geber Objekt, das Zugriff auf den privaten Schlüs
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor die **Sign** -Methode aufgerufen wird, muss die Datei, die den Code enthält, in der [**filename**](signedcode-filename.md) -Eigenschaft angegeben werden.
+Bevor die **Sign-Methode** aufgerufen wird, muss die Datei, die den Code enthält, in der [**FileName-Eigenschaft**](signedcode-filename.md) angegeben werden.
 
 Wenn die ausführbare Datei bereits signiert ist, überschreibt diese Methode die vorhandene Signatur.
 
-Die folgenden Ergebnisse gelten für den Parameterwert des *Signatur* Gebers:
+Die folgenden Ergebnisse gelten für den *Signer-Parameterwert:*
 
--   Wenn der *Signatur* Geber Parameter nicht **null** ist, verwendet diese Methode den privaten Schlüssel, auf den das zugehörige Zertifikat zeigt, um die Signatur zu verschlüsseln. Wenn der private Schlüssel, auf den vom Zertifikat verwiesen wird, nicht verfügbar ist, schlägt die Methode fehl.
--   Wenn der *Signatur* Geber Parameter **null** ist und im aktuellen \_ Benutzer mein Speicher, der Zugriff auf einen privaten Schlüssel mit Code Signatur Funktion hat, genau ein Zertifikat vorhanden ist, wird dieses Zertifikat zum Erstellen der Signatur verwendet.
--   Wenn der *Signatur* Geber Parameter den Wert **null** hat, ist der Wert [**Settings. enablepromptforcertifigateeui**](settings-enablepromptforcertificateui.md) Property true, und es gibt mehrere Zertifikate im aktuellen \_ Benutzer My Store mit einem verfügbaren privaten Schlüssel mit Code Signatur Funktion. Daraufhin wird ein Dialogfeld angezeigt, in dem der Benutzer auswählen kann, welches Zertifikat verwendet wird.
--   Wenn der *Signatur* Geber Parameter den Wert **null** hat und die Eigenschaft [**Settings. enablepromptforcertifigateeui**](settings-enablepromptforcertificateui.md) den Wert false hat, schlägt die Methode fehl.
--   Wenn der *Signatur* Geber Parameter **null** ist und im aktuellen \_ Benutzer mein Speicher mit einem verfügbaren privaten Schlüssel mit Code Signatur Funktion keine Zertifikate vorhanden sind, schlägt die Methode fehl.
+-   Wenn der *Signer-Parameter* nicht **NULL** ist, verwendet diese Methode den privaten Schlüssel, auf den das zugeordnete Zertifikat zeigt, um die Signatur zu verschlüsseln. Wenn der private Schlüssel, auf den das Zertifikat verweist, nicht verfügbar ist, schlägt die -Methode fehl.
+-   Wenn der *Signer-Parameter* **NULL** ist und genau ein Zertifikat im SPEICHER CURRENT USER MY vorhanden \_ ist, das Zugriff auf einen privaten Schlüssel mit Codesignaturfunktion hat, wird dieses Zertifikat zum Erstellen der Signatur verwendet.
+-   Wenn der *Signer-Parameter* **NULL** ist, [**Einstellungen. Der EnablePromptForCertificateUI-Eigenschaftswert**](settings-enablepromptforcertificateui.md) ist true, und es gibt mehrere Zertifikate im Speicher CURRENT \_ USER MY mit einem verfügbaren privaten Schlüssel mit Codesignaturfunktion. Es wird ein Dialogfeld angezeigt, in dem der Benutzer auswählen kann, welches Zertifikat verwendet wird.
+-   Wenn der *Signer-Parameter* **NULL** ist und der [**Einstellungen. Die EnablePromptForCertificateUI-Eigenschaft**](settings-enablepromptforcertificateui.md) ist false, die Methode schlägt fehl.
+-   Wenn der *Signer-Parameter* **NULL** ist und im CURRENT USER MY-Speicher keine Zertifikate \_ mit einem verfügbaren privaten Schlüssel mit Codesignaturfunktion vorhanden sind, schlägt die -Methode fehl.
 
-Diese Methode verwendet den SHA-1-Hash Algorithmus.
+Diese Methode verwendet den SHA-1-Hashalgorithmus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Diese Methode verwendet den SHA-1-Hash Algorithmus.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

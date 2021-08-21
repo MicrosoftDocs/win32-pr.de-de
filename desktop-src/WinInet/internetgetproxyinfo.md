@@ -1,9 +1,9 @@
 ---
 title: InternetGetProxyInfo-Funktion
-description: Ruft Proxy Daten für den Zugriff auf angegebene Ressourcen ab.
+description: Ruft Proxydaten für den Zugriff auf angegebene Ressourcen ab.
 ms.assetid: 5fc0f471-420c-4125-8323-cb1e1e72e43f
 keywords:
-- Internetgetproxyinfo-Funktion WinInet
+- InternetGetProxyInfo-Funktion WinINet
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef441754fd5de09e3792d9269f05d96ecc08aa23
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 76965f63afb751e810daa6feffe76774f03daaaf7278996b4c6800f0efa42dfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118113684"
 ---
 # <a name="internetgetproxyinfo-function"></a>InternetGetProxyInfo-Funktion
 
 > [!NOTE]
-> Diese Funktion ist als veraltet markiert. Verwenden Sie für die aktivierter automatischer Proxy-Unterstützung stattdessen HTTP-Dienste (WinHTTP), Version 5,1. Weitere Informationen finden Sie [unter WinHTTP AutoProxy-Unterstützung](../winhttp/winhttp-autoproxy-support.md).
+> Diese Funktion ist als veraltet markiert. Verwenden Sie für die Unterstützung des automatischen Proxys stattdessen DIE VERSION 5.1 der HTTP-Dienste (WinHTTP). Weitere Informationen finden Sie unter [WinHTTP AutoProxy Support](../winhttp/winhttp-autoproxy-support.md).
 
-Ruft Proxy Daten für den Zugriff auf angegebene Ressourcen ab. Diese Funktion kann nur durch dynamisches Verknüpfen mit "JSProxy.dll" aufgerufen werden.
+Ruft Proxydaten für den Zugriff auf angegebene Ressourcen ab. Diese Funktion kann nur durch dynamisches Verknüpfen mit "JSProxy.dll" aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,55 +45,55 @@ BOOL InternetGetProxyInfo(
 
 <dl> <dt>
 
-*lpszurl* \[ in\]
+*lpszUrl* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die die URL der http-Ziel Ressource angibt.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die die URL der HTTP-Zielressource angibt.
 
 </dd> <dt>
 
-*dwurllength* \[ in\]
+*dwUrlLength* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) der URL, auf die *lpszurl* zeigt.
+Die Größe der URL in Bytes, auf die *lpszUrl zeigt.*
 
 </dd> <dt>
 
-*lpszurlhostname* \[ in\]
+*lpszUrlHostName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Hostnamen der Ziel-URL angibt.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Hostnamen der Ziel-URL angibt.
 
 </dd> <dt>
 
-*dwurlhostnamelength* \[ in\]
+*dwUrlHostNameLength* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Host namens, auf den von *lpszurlhostname* verwiesen wird.
+Die Größe des Hostnamens in Bytes, auf den *lpszUrlHostName zeigt.*
 
 </dd> <dt>
 
-*lplpszproxyhostname* \[ vorgenommen\]
+*lplpszProxyHostName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Adresse eines Puffers, der die URL des Proxys empfängt, der in einer HTTP-Anforderung für die angegebene Ressource verwendet werden soll. Die Anwendung ist dafür verantwortlich, diese Zeichenfolge freizugeben.
+Ein Zeiger auf die Adresse eines Puffers, der die URL des Proxys empfängt, der in einer HTTP-Anforderung für die angegebene Ressource verwendet werden soll. Die Anwendung ist für das Freigibt dieser Zeichenfolge verantwortlich.
 
 </dd> <dt>
 
-*lpdwproxyhostnamelength* \[ vorgenommen\]
+*lpdwProxyHostNameLength* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Größe der Zeichenfolge in Bytes empfängt, die im *lplpszproxyhostname* -Puffer zurückgegeben wurde.
+Ein Zeiger auf eine Variable, die die Größe der im *Puffer lplpszProxyHostName* zurückgegebenen Zeichenfolge in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** . Um erweiterte Fehler Daten abzurufen, nennen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.** Rufen Sie GetLastError auf, um erweiterte [**Fehlerdaten zu erhalten.**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um **internetgetproxyinfo** aufzurufen, müssen Sie dynamisch mit dem definierten Funktions Zeigertyp **pfninternetgetproxyinfo** mit ihm verknüpfen. Der folgende Code Ausschnitt zeigt, wie Sie eine Instanz dieses Funktionszeiger Typs deklarieren und anschließend initialisieren und aufzurufen.
+Zum Aufrufen **von InternetGetProxyInfo** müssen Sie mithilfe des definierten Funktionszeigertyps **pfnInternetGetProxyInfo** dynamisch eine Verknüpfung damit herstellen. Der folgende Codeausschnitt zeigt, wie Sie eine Instanz dieses Funktionszeigertyps deklarieren und anschließend initialisieren und aufrufen.
 
 ```cpp
   HMODULE hModJS;                               // Handle for loading the DLL
@@ -119,10 +119,10 @@ Um **internetgetproxyinfo** aufzurufen, müssen Sie dynamisch mit dem definierte
   // The pIGPI function pointer can now be used to call InternetGetProxyInfo.
 ```
 
-Wie alle anderen Aspekte der WinInet-API kann diese Funktion nicht sicher innerhalb von DllMain oder den Konstruktoren und Dekonstruktoren von globalen Objekten aufgerufen werden.
+Wie alle anderen Aspekte der WinINet-API kann diese Funktion nicht sicher aus DllMain oder den Konstruktoren und Destruktoren globaler Objekte aufgerufen werden.
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierung. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -134,8 +134,8 @@ Wie alle anderen Aspekte der WinInet-API kann diese Funktion nicht sicher innerh
 
 ## <a name="see-also"></a>Siehe auch
 
-[**Internetinitializeautoproxydll**](/windows/win32/api/winineti/nf-winineti-internetinitializeautoproxydll)
+[**InternetInitializeAutoProxyDll**](/windows/win32/api/winineti/nf-winineti-internetinitializeautoproxydll)
 
-[**Internetdeinitializeautoproxydll**](/previous-versions/windows/desktop/legacy/aa384580(v=vs.85))
+[**InternetDeInitializeAutoProxyDll**](/previous-versions/windows/desktop/legacy/aa384580(v=vs.85))
 
-[**Detectautoproxyurl**](/windows/win32/api/winineti/nf-winineti-detectautoproxyurl)
+[**DetectAutoProxyUrl**](/windows/win32/api/winineti/nf-winineti-detectautoproxyurl)

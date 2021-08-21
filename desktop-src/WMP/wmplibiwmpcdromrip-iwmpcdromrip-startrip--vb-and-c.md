@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromrip-startrip-Methode
-description: Die startrip-Methode rippt die CD.
+title: IWMPCiererRip startRip-Methode
+description: Die startRip-Methode reißt die CD.
 ms.assetid: 3569e29c-e593-4bdd-8afb-74e39721cf80
 keywords:
-- startrip-Methoden Fenster Media Player
-- startrip-Methode, Windows Media Player, iwmpcdromrip-Schnittstelle
-- Iwmpcdromrip-Schnittstelle, Windows Media Player, startrip-Methode
+- startRip-Windows Media Player
+- startRip-Methode Windows Media Player , IWMPCiererRip-Schnittstelle
+- IWMPCiererRip-Schnittstelle Windows Media Player , startRip-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 327ac9009cf1b8fb9ccfbcc460cde78ef40b3802
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a6686d3911123eee91dabec1f8750be7f80a6d8dc9c434d893560278ad291ded
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116208"
 ---
-# <a name="iwmpcdromripstartrip-method"></a>Iwmpcdromrip:: startrip-Methode
+# <a name="iwmpcdromripstartrip-method"></a>IWMPCiererRip::startRip-Methode
 
-Die **startrip** -Methode rippt die CD.
+Die **startRip-Methode** reißt die CD.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,9 +53,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das einreißen einer CD mithilfe der **iwmpcdromrip** -Schnittstelle hat die gleiche Wirkung wie das einreißen von Musik mithilfe der Windows Media Player-Benutzeroberfläche. Ausgerigter Inhalt wird der Bibliothek automatisch entsprechend den Einstellungen des Benutzers hinzugefügt. Weitere Informationen zu den Benutzereinstellungen für das CD-Ripping finden Sie unter "Ripping Music from CDs" in der Windows Media Player-Hilfe.
+Das Ansischen einer CD mithilfe der **IWMPCiererRip-Schnittstelle** hat den gleichen Effekt wie das Anzippen von Musik mithilfe Windows Media Player Benutzeroberfläche. Geerbte Inhalte werden der Bibliothek gemäß den Einstellungen des Benutzers automatisch hinzugefügt. Weitere Informationen zu Benutzereinstellungen für CD-Inging finden Sie unter "Besendung von Musik von CDs" in Windows Media Player Hilfe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,13 +73,13 @@ Das einreißen einer CD mithilfe der **iwmpcdromrip** -Schnittstelle hat die gle
 
 <dl> <dt>
 
-[**Iwmpcdromrip-Schnittstelle (VB und c#)**](iwmpcdromrip--vb-and-c.md)
+[**IWMPCiererRip-Schnittstelle (VB und C#)**](iwmpcdromrip--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromrip. stoprip**](wmplibiwmpcdromrip-iwmpcdromrip-stoprip--vb-and-c.md)
+[**IWMPCiererRip.stopRip**](wmplibiwmpcdromrip-iwmpcdromrip-stoprip--vb-and-c.md)
 </dt> <dt>
 
-[**Ripping einer CD**](ripping-a-cd.md)
+[**Erstellen einer CD**](ripping-a-cd.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: TDM_UPDATE_ELEMENT_TEXT (Commctrl.h)
 description: 'TDM_UPDATE_ELEMENT_TEXT Meldung: Aktualisiert ein Textelement in einem Aufgabendialogfeld.'
 ms.assetid: 2df446c8-db87-42b5-b5bd-40fadbf9d45b
 keywords:
-- TDM_UPDATE_ELEMENT_TEXT Meldung Windows-Steuerelemente
+- TDM_UPDATE_ELEMENT_TEXT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c155b426b92645c0b9cdbabe00c44ffa722b89f3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5abf6eb91b3eadfea71d0c9a4b5386e44db100c3a548998d5113636ff7f8cc29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118166913"
 ---
 # <a name="tdm_update_element_text-message"></a>TDM \_ UPDATE ELEMENT TEXT \_ \_ message
 
@@ -60,31 +60,31 @@ Zeiger auf eine Unicode-Zeichenfolge, die den neuen Text enthält.
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Um Clipping zu vermeiden, darf der neue Text nicht mehr als der vorhandene Text sein. Das Festlegen des Texts auf eine kürzere Zeichenfolge führt nicht dazu, dass die Größe des Dialogfelds geändert wird.
 
-Wenn der **pszExpandedInformation-Member** der [**TASKDIALOGCONFIG-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig) der zum Erstellen des Aufgabendialogfelds verwendet wurde, **NULL** war und Sie eine **TDM \_ UPDATE ELEMENT \_ \_ TEXT-Nachricht** mit TDE \_ EXPANDED INFORMATION \_ senden, geschieht nichts.
+Wenn das **pszExpandedInformation-Element** der [**TASKDIALOGCONFIG-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig) das zum Erstellen des Aufgabendialogfelds verwendet wurde, **NULL** war und Sie eine **TDM \_ UPDATE ELEMENT \_ \_ TEXT-Nachricht** mit TDE EXPANDED INFORMATION senden, geschieht \_ \_ nichts.
 
-Das obige Gilt gilt auch für die Fußzeile und die \_ TDE-FUßZEILE.
+Die obigen Angaben gelten auch für die Fußzeile und die \_ TDE-FUßZEILE.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**TDM \_ \_ SET-ELEMENTTEXT \_**](tdm-set-element-text.md)
+[**TDM \_ SET \_ ELEMENT \_ TEXT**](tdm-set-element-text.md)
 </dt> </dl>
 
  

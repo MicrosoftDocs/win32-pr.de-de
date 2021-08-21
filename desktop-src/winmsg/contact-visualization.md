@@ -1,25 +1,25 @@
 ---
-description: Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächen-Frameworks verwendet, um zu ermitteln, wie das UI-Feedback verarbeitet wird, wenn ein Eingabe Kontakt erkannt wird.
+description: Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächenframeworks verwendet, um zu identifizieren, wie Feedback zur Benutzeroberfläche verarbeitet wird, wenn ein Eingabekontakt erkannt wird.
 ms.assetid: 6FE8444C-A575-4E89-86D1-1873206688F5
-title: Kontakt Visualisierung (Winuser. h)
+title: Kontaktvisualisierung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 100892624f3e656e33ddf798c5795eeab6b11a17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea196017b1731bb176cd21a7dc02aaa360f4fe70503bd204b9c488d38eff99ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118437253"
 ---
-# <a name="contact-visualization"></a>Kontakt Visualisierung
+# <a name="contact-visualization"></a>Kontaktvisualisierung
 
-Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächen-Frameworks verwendet, um zu ermitteln, wie das UI-Feedback verarbeitet wird, wenn ein Eingabe Kontakt erkannt wird.
+Die folgenden Konstanten werden von Anwendungen oder Benutzeroberflächenframeworks verwendet, um zu identifizieren, wie Feedback zur Benutzeroberfläche verarbeitet wird, wenn ein Eingabekontakt erkannt wird.
 
-Diese Konstanten werden mit den Parametern **SPI \_ getcontactvisuand** **SPI \_ setcontactvisuund** der Funktion [**SystemParametersInfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) verwendet.
+Diese Konstanten werden mit den **Parametern \_ SPI GETCONTACTVISUALIZATION** und **SPI \_ SETCONTACTVISUALIZATION** und der [**SystemParametersInfo-Funktion**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) verwendet.
 
 <dl> <dt>
 
-<span id="CONTACTVISUALIZATION_OFF"></span><span id="contactvisualization_off"></span>**contactvisualisierung \_ aus**
+<span id="CONTACTVISUALIZATION_OFF"></span><span id="contactvisualization_off"></span>**CONTACTVISUALIZATION \_ OFF**
 </dt> <dd> <dl> <dt>
 
 0x0000
@@ -27,12 +27,12 @@ Diese Konstanten werden mit den Parametern **SPI \_ getcontactvisuand** **SPI \_
 
 
 
-Gibt an, dass das UI-Feedback für alle Kontakte deaktiviert ist.
+Gibt an, dass das Feedback zur Benutzeroberfläche für alle Kontakte deaktiviert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="CONTACTVISUALIZATION_ON"></span><span id="contactvisualization_on"></span>**contactvisualisierung \_ in**
+<span id="CONTACTVISUALIZATION_ON"></span><span id="contactvisualization_on"></span>**CONTACTVISUALIZATION \_ ON**
 </dt> <dd> <dl> <dt>
 
 0x0001
@@ -40,12 +40,12 @@ Gibt an, dass das UI-Feedback für alle Kontakte deaktiviert ist.
 
 
 
-Gibt an, dass das UI-Feedback für alle Kontakte on ist.
+Gibt Feedback zur Benutzeroberfläche für alle Kontakte an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="CONTACTVISUALIZATION_PRESENTATIONMODE"></span><span id="contactvisualization_presentationmode"></span>**"contactvisualisierung" ( \_ presentationmode)**
+<span id="CONTACTVISUALIZATION_PRESENTATIONMODE"></span><span id="contactvisualization_presentationmode"></span>**CONTACTVISUALIZATION \_ PRESENTATIONMODE**
 </dt> <dd> <dl> <dt>
 
 0x0002
@@ -53,7 +53,7 @@ Gibt an, dass das UI-Feedback für alle Kontakte on ist.
 
 
 
-Gibt an, dass Benutzeroberflächen Feedback für alle Kontakte mit visuellen Darstellung im Präsentationsmodus angezeigt wird.
+Gibt Benutzeroberflächenfeedback für alle Kontakte an, die mit visuellen Elementen im Präsentationsmodus aktiviert sind.
 
 
 </dt> </dl> </dd> </dl>
@@ -64,26 +64,26 @@ Gibt an, dass Benutzeroberflächen Feedback für alle Kontakte mit visuellen Dar
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Konfigurations Konstanten](configuration-constants.md)
+[Konfigurationskonst constants (Konfigurationskonst constants](configuration-constants.md)
 </dt> <dt>
 
-[**Gesten Visualisierung**](gesture-visualization.md)
+[**Gestenvisualisierung**](gesture-visualization.md)
 </dt> <dt>
 
-[**SystemParametersInfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
+[**Systemparametersinfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
 </dt> <dt>
 
-[Eingabe-Feedback-Konfiguration](/previous-versions/windows/desktop/input_feedback/input-feedback-configuration-portal)
+[Konfiguration des Eingabefeedbacks](/previous-versions/windows/desktop/input_feedback/input-feedback-configuration-portal)
 </dt> </dl>
 
  

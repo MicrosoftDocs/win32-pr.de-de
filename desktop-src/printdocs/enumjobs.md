@@ -1,7 +1,7 @@
 ---
-description: Die EnumJobs-Funktion Ruft Informationen zu einem angegebenen Satz von Druckaufträgen für einen angegebenen Drucker ab.
+description: Die EnumJobs-Funktion ruft Informationen zu einem angegebenen Satz von Druckaufträgen für einen angegebenen Drucker ab.
 ms.assetid: 1cf429ea-b40e-4063-b6de-c43b7b87f3d3
-title: EnumJobs-Funktion (winspool. h)
+title: EnumJobs-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: 174f58ba3fb1012e6ff46612fe312579969e6945
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57c8416b1c1f5820f632271b0ef0973c76a14be9ef08f24b217ebee441fb29d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118056510"
 ---
 # <a name="enumjobs-function"></a>EnumJobs-Funktion
 
-Die **EnumJobs** -Funktion Ruft Informationen zu einem angegebenen Satz von Druckaufträgen für einen angegebenen Drucker ab.
+Die **EnumJobs-Funktion** ruft Informationen zu einem angegebenen Satz von Druckaufträgen für einen angegebenen Drucker ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,39 +48,39 @@ BOOL EnumJobs(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Drucker Objekt, dessen Druckaufträge die Funktion auflistet. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für das Druckerobjekt, dessen Druckaufträge die Funktion aufzählt. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> <dt>
 
-*Firstjob* \[ in\]
+*FirstJob* \[ In\]
 </dt> <dd>
 
-Die null basierte Position innerhalb der Druck Warteschlange des ersten aufzuzählenden Druckauftrags. Der Wert 0 gibt beispielsweise an, dass die Enumeration beim ersten Druckauftrag in der Druck Warteschlange beginnen soll. der Wert 9 gibt an, dass die Enumeration mit dem zehnten Druckauftrag in der Druck Warteschlange beginnen soll.
+Die nullbasierte Position innerhalb der Druckwarteschlange des ersten aufzählten Druckauftrags. Beispielsweise gibt der Wert 0 an, dass die Enumeration beim ersten Druckauftrag in der Druckwarteschlange beginnen soll. Der Wert 9 gibt an, dass die Enumeration beim zehnten Druckauftrag in der Druckwarteschlange beginnen soll.
 
 </dd> <dt>
 
-*Nojobs* \[ in\]
+*NoJobs* \[ In\]
 </dt> <dd>
 
-Die Gesamtanzahl der aufzuzählenden Druckaufträge.
+Die Gesamtanzahl der aufzählten Druckaufträge.
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*Ebene* \[ In\]
 </dt> <dd>
 
-Der Typ der Informationen, die im *pjob* -Puffer zurückgegeben werden.
+Der Typ der im *pJob-Puffer zurückgegebenen* Informationen.
 
 
 
 | Wert                                                                                                | Bedeutung                                                                              |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | *pjob* empfängt ein Array von [**Auftrags \_ Informationen \_ 1**](job-info-1.md) -Strukturen<br/> |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | *pjob* empfängt ein Array von [**Auftrags \_ Informationen \_ 2**](job-info-2.md) -Strukturen.<br/> |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | *pjob* empfängt ein Array von [**Auftrags \_ Informationen \_ 3**](job-info-3.md) -Strukturen.<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | *pJob* empfängt ein Array von [**JOB \_ INFO \_ 1-Strukturen**](job-info-1.md)<br/> |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | *pJob* empfängt ein Array von [**JOB \_ INFO \_ 2-Strukturen**](job-info-2.md)<br/> |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | *pJob* empfängt ein Array von [**JOB \_ INFO \_ 3-Strukturen**](job-info-3.md)<br/> |
 
 
 
@@ -88,52 +88,52 @@ Der Typ der Informationen, die im *pjob* -Puffer zurückgegeben werden.
 
 </dd> <dt>
 
-*pjob* \[ vorgenommen\]
+*pJob* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der ein Array mit den Strukturen Job [**\_ Info \_ 1**](job-info-1.md), [**Job \_ Info \_ 2**](job-info-2.md)oder [**Job \_ Info \_ 3**](job-info-3.md) empfängt. Der Puffer muss groß genug sein, um das Array von Strukturen und Zeichen folgen oder andere Daten zu erhalten, auf die die Strukturmember zeigen.
+Ein Zeiger auf einen Puffer, der ein Array von [**JOB \_ INFO \_ 1-,**](job-info-1.md) [**JOB INFO \_ \_ 2-**](job-info-2.md)oder [**JOB INFO \_ \_ 3-Strukturen empfängt.**](job-info-3.md) Der Puffer muss groß genug sein, um das Array von Strukturen und alle Zeichenfolgen oder andere Daten zu empfangen, auf die die Strukturmitglieder zeigen.
 
-Um die erforderliche Puffergröße zu ermitteln, muss **EnumJobs** aufgerufen werden, wobei *cbbuf* auf NULL festgelegt ist. **EnumJobs** schlägt fehl, [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt fehlerhaften \_ Puffer zurück \_ , und der *pcbrequired* -Parameter gibt die Größe (in Bytes) des Puffers zurück, der für das Array von Strukturen und deren Daten erforderlich ist.
+Um die erforderliche Puffergröße zu bestimmen, rufen Sie **EnumJobs** mit *cbBuf* auf 0 (null) auf. **Bei EnumJobs** tritt ein Fehler auf, [**getLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt ERROR INSUFFICIENT BUFFER zurück, und der \_ Parameter \_ *"enumJobs"* gibt die Größe des Puffers in Bytes zurück, der zum Speichern des Arrays von Strukturen und deren Daten erforderlich ist.
 
 </dd> <dt>
 
-*cbbuf* \[ in\]
+*cbBuf* \[ In\]
 </dt> <dd>
 
-Die Größe des *pjob* -Puffers in Bytes.
+Die Größe des *pJob-Puffers* in Bytes.
 
 </dd> <dt>
 
-*pcbbenötigte* \[ vorgenommen\]
+*-Needed* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der kopierten Bytes empfängt, wenn die Funktion erfolgreich ausgeführt wird. Wenn die Funktion fehlschlägt, erhält die Variable die erforderliche Anzahl von Bytes.
+Ein Zeiger auf eine Variable, die die Anzahl der kopierten Bytes empfängt, wenn die Funktion erfolgreich ist. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Anzahl von Bytes.
 
 </dd> <dt>
 
-*pkreturned* \[ vorgenommen\]
+*pcReturned* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der im *pjob* -Puffer zurückgegebenen Struktur von [**Auftrags \_ Informationen \_ 1**](job-info-1.md), [**Auftrags \_ Informationen \_ 2**](job-info-2.md)oder [**Auftrags \_ Informationen \_ 3**](job-info-3.md) empfängt.
+Ein Zeiger auf eine Variable, die die Anzahl der im pJob-Puffer zurückgegebenen [**JOB INFO \_ \_ 1-,**](job-info-1.md) [**JOB INFO \_ \_ 2-**](job-info-2.md)oder [**JOB INFO \_ \_ 3-Strukturen**](job-info-3.md) empfängt. 
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Die Struktur der [**Auftrags \_ Informationen \_ 1**](job-info-1.md) enthält allgemeine Druckauftrags Informationen. die Struktur der [**Auftrags \_ Informationen \_ 2**](job-info-2.md) enthält wesentlich ausführlichere Informationen. Die [**Auftrags \_ Info \_ 3**](job-info-3.md) -Struktur enthält Informationen darüber, wie Aufträge verknüpft werden.
+Die [**JOB \_ INFO \_ 1-Struktur**](job-info-1.md) enthält allgemeine Druckauftragsinformationen. Die [**STRUKTUR JOB INFO \_ \_ 2**](job-info-2.md) enthält viel ausführlichere Informationen. Die [**JOB \_ INFO \_ 3-Struktur**](job-info-3.md) enthält Informationen dazu, wie Aufträge verknüpft werden.
 
-Um die Anzahl der Druckaufträge in der Drucker Warteschlange zu ermitteln, müssen Sie die [**GetPrinter**](getprinter.md) -Funktion mit dem auf 2 festgelegten *Level* -Parameter aufrufen.
+Um die Anzahl der Druckaufträge in der Druckerwarteschlange zu bestimmen, rufen Sie die [**GetPrinter-Funktion**](getprinter.md) auf, und legen Sie dabei *den Level-Parameter* auf 2 fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,10 +143,10 @@ Um die Anzahl der Druckaufträge in der Drucker Warteschlange zu ermitteln, müs
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Enumjobsw** (Unicode) und **enumjobsa** (ANSI)<br/>                                               |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **EnumJobsW** (Unicode) und **EnumJobsA** (ANSI)<br/>                                               |
 
 
 
@@ -166,19 +166,19 @@ Um die Anzahl der Druckaufträge in der Drucker Warteschlange zu ermitteln, müs
 [**GetPrinter**](getprinter.md)
 </dt> <dt>
 
-[**Auftrags \_ Informationen \_ 1**](job-info-1.md)
+[**AUFTRAGSINFORMATIONEN \_ \_ 1**](job-info-1.md)
 </dt> <dt>
 
-[**Auftrags \_ Informationen \_ 2**](job-info-2.md)
+[**AUFTRAGSINFORMATIONEN \_ \_ 2**](job-info-2.md)
 </dt> <dt>
 
-[**Auftrags \_ Informationen \_ 3**](job-info-3.md)
+[**AUFTRAGSINFORMATIONEN \_ \_ 3**](job-info-3.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
 </dt> <dt>
 
-[**Setjob**](setjob.md)
+[**SetJob**](setjob.md)
 </dt> </dl>
 
  

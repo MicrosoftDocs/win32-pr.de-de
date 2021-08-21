@@ -4,16 +4,16 @@ description: IAgentCharacterEx GetAnimationNames
 ms.assetid: d565b258-dc12-422b-a13d-aeec56057f64
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e31dcb7ea34a9f0d833f8c1665a092fe4f3a30e7
-ms.sourcegitcommit: baa7cd1709e48672f5f07ff83a9c9d5699c0efcd
+ms.openlocfilehash: 58c9cb1bc1b51b0bead2f071e0cd8561ef055ef6b7eb7986b3be969208452331
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "106355485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118478027"
 ---
-# <a name="iagentcharacterexgetanimationnames"></a>Iagentcharakteriex:: getanimationnames
+# <a name="iagentcharacterexgetanimationnames"></a>IAgentCharacterEx::GetAnimationNames
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetAnimationNames(
@@ -21,20 +21,20 @@ HRESULT GetAnimationNames(
 );
 ```
 
-Ruft die Animations Namen für ein Zeichen ab.
+Ruft die Animationsnamen für ein Zeichen ab.
 
--   Gibt **S \_ OK** zurück, um anzugeben, dass der Vorgang erfolgreich war.
+-   Gibt **S \_ OK zurück,** um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="IUnknown"></span><span id="iunknown"></span><span id="IUNKNOWN"></span>*IUnknown*
+<span id="IUnknown"></span><span id="iunknown"></span><span id="IUNKNOWN"></span>*Iunknown*
 </dt> <dd>
 
-Die Adresse der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle für die Animations Auflistung des Zeichens.
+Die Adresse der [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) für die Animationssammlung des Zeichens.
 
 </dd> </dl>
 
-Mit dieser Funktion können Sie die Namen der Animationen für ein Zeichen auflisten. Elemente in der Auflistung haben keine Eigenschaften, sodass auf einzelne Elemente nicht direkt zugegriffen werden kann. Um auf die Auflistung zuzugreifen, Fragen Sie punkenum für die IEnumVARIANT-Schnittstelle ab:
+Mit dieser Funktion können Sie die Namen der Animationen für ein Zeichen aufzählen. Elemente in der Auflistung haben keine Eigenschaften, sodass nicht direkt auf einzelne Elemente zugegriffen werden kann. Fragen Sie für den Zugriff auf die Auflistung die Abfrage von "queryenEnum" für die IEnumVARIANT-Schnittstelle ab:
 
 
 ```c++
@@ -67,4 +67,4 @@ punkEnum->Release();
 
 
 > [!Note]  
-> Bei ACF-Zeichen gibt die Auflistung alle Animationen zurück, die für das Zeichen definiert wurden, und fügt diese hinzu, die mit der [**Get**](https://www.bing.com/search?q=**Get**) -Methode abgerufen wurden.
+> Bei ACF-Zeichen gibt die Auflistung alle Animationen zurück, die für das Zeichen definiert wurden, und fügt den Animationen hinzu, die mit der [**Get-Methode abgerufen**](https://www.bing.com/search?q=**Get**) wurden.

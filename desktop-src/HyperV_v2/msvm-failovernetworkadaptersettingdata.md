@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für einen Netzwerkadapter innerhalb des Gast Betriebssystems dar, der zum Zeitpunkt eines Failovers angewendet wird.
+description: Stellt die Einstellungen für einen Netzwerkadapter im Gastbetriebssystem dar, die zum Zeitpunkt eines Failovers angewendet werden.
 ms.assetid: d7f2d471-7328-4181-b94e-b9127814706e
 title: Msvm_FailoverNetworkAdapterSettingData-Klasse
 ms.topic: reference
@@ -23,16 +23,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d4989c43dda823be13d604e3ac9b575b62f2f9da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 432a72384d7187499ba0e1b33a24a02dead8b1d6ebd8cde09a1bf1cfc8abdc1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118148086"
 ---
-# <a name="msvm_failovernetworkadaptersettingdata-class"></a>MSVM \_ failovernetworkadaptersettingdata-Klasse
+# <a name="msvm_failovernetworkadaptersettingdata-class"></a>\_Msvm-FailoverNetworkAdapterSettingData-Klasse
 
-Stellt die Einstellungen für einen Netzwerkadapter innerhalb des Gast Betriebssystems dar, der zum Zeitpunkt eines Failovers angewendet wird.
+Stellt die Einstellungen für einen Netzwerkadapter im Gastbetriebssystem dar, die zum Zeitpunkt eines Failovers angewendet werden.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -57,13 +57,13 @@ class Msvm_FailoverNetworkAdapterSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ failovernetworkadaptersettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **\_ Msvm-Klasse FailoverNetworkAdapterSettingData** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ failovernetworkadaptersettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **\_ Msvm-FailoverNetworkAdapterSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -76,23 +76,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf **null** festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Defaultgateways**
+**DefaultGateways**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array von Zeichen folgen, das die Standard-IP-Gateways angibt, die auf dem Netzwerkadapter innerhalb des Gast Betriebssystems konfiguriert sind. Die maximale Anzahl von Standard-IP-Gateways, die auf einem einzelnen Netzwerkadapter konfiguriert werden können, ist 5.
+Ein Array von Zeichenfolgen, die die ip-Standardgateways angeben, die auf dem Netzwerkadapter im Gastbetriebssystem konfiguriert sind. Die maximale Anzahl von Standard-IP-Gateways, die auf einem einzelnen Netzwerkadapter konfiguriert werden können, beträgt fünf.
 
 </dd> <dt>
 
@@ -105,36 +105,36 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf **null** festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
 **DHCPEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob DHCP auf der IPv4-Schnittstelle des Netzwerkadapters innerhalb des Gast Betriebssystems aktiviert ist.
+Gibt an, ob DHCP auf der IPv4-Schnittstelle des Netzwerkadapters im Gastbetriebssystem aktiviert ist.
 
 </dd> <dt>
 
-**DnsServers**
+**DNSServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array von Zeichen folgen, die die DNS-Server angeben, die auf dem Netzwerkadapter innerhalb des Gast Betriebssystems konfiguriert sind.
+Ein Array von Zeichenfolgen, die die DNS-Server angeben, die auf dem Netzwerkadapter im Gastbetriebssystem konfiguriert sind.
 
 </dd> <dt>
 
@@ -147,7 +147,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf **null** festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
@@ -163,36 +163,36 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85))und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
 **IPAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array von Zeichen folgen, die die IP-Adressen angeben, die auf dem Netzwerkadapter innerhalb des Gast Betriebssystems konfiguriert sind.
+Ein Array von Zeichenfolgen, die die IP-Adressen angeben, die auf dem Netzwerkadapter im Gastbetriebssystem konfiguriert sind.
 
 </dd> <dt>
 
-**Protocoliftype**
+**ProtocolIFType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert die Internet Protokolle, auf die die von dieser Instanz angegebenen Einstellungen angewendet werden. Dabei muss es sich um einen der folgenden Werte handeln:
+Identifiziert die Internetprotokolle, für die die von dieser Instanz angegebenen Einstellungen gelten. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -226,7 +226,7 @@ Identifiziert die Internet Protokolle, auf die die von dieser Instanz angegebene
 
 <span id="IPv4_v6"></span><span id="ipv4_v6"></span><span id="IPV4_V6"></span>
 
-<span id="IPv4_v6"></span><span id="ipv4_v6"></span><span id="IPV4_V6"></span>**IPv4/V6** (4098)
+<span id="IPv4_v6"></span><span id="ipv4_v6"></span><span id="IPV4_V6"></span>**IPv4/v6** (4098)
 
 
 </dt> <dd>
@@ -240,16 +240,16 @@ IPv4/IPv6
 **Subnetze**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array von Zeichen folgen, die die Subnetze angeben, die auf dem Netzwerkadapter innerhalb des Gast Betriebssystems konfiguriert sind. Jedes Element in diesem Array gilt für das entsprechende Element im **IPADRESSEN** -Array.
+Ein Array von Zeichenfolgen, die die auf dem Netzwerkadapter im Gastbetriebssystem konfigurierten Subnetze angeben. Jedes Element in diesem Array gilt für das entsprechende Element im **IPAddresses-Array.**
 
 </dd> </dl>
 
@@ -259,10 +259,10 @@ Ein Array von Zeichen folgen, die die Subnetze angeben, die auf dem Netzwerkadap
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

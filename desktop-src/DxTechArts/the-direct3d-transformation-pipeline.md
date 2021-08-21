@@ -31,7 +31,7 @@ Die Projektionstransformation ändert die Geometrie aus dem Kameraraum in "Clip 
 
 Schließlich wird die Geometrie im Clipspace in Pixelkoordinaten (Bildschirmraum) transformiert. Diese Transformation wird durch die Viewporteinstellungen gesteuert.
 
-Das Ausschneiden und Transformieren von Scheitelpunkten muss im homogenen Raum erfolgen (einfach ausgedrückt: Im Raum, in dem das Koordinatensystem ein viertes Element enthält), aber das Endergebnis für die meisten Anwendungen müssen nicht homogene dreidimensionale Koordinaten (3D) sein, die im Bildschirmbereich definiert sind. Dies bedeutet, dass sowohl die Eingabevertices als auch das Clippingvolume in einen homogenen Raum übersetzt werden müssen, um den Clipping auszuführen, und dann wieder in einen nicht homogenen Raum übersetzt werden müssen, um angezeigt zu werden.
+Das Ausschneiden und Transformieren von Scheitelpunkten muss im homogenen Raum erfolgen (einfach ausgedrückt, im Raum, in dem das Koordinatensystem ein viertes Element enthält), aber das Endergebnis für die meisten Anwendungen muss nicht homogene dreidimensionale Koordinaten (3D) sein, die in "Bildschirmraum" definiert sind. Dies bedeutet, dass sowohl die Eingabevertices als auch das Clippingvolume in einen homogenen Raum übersetzt werden müssen, um den Clipping auszuführen, und dann wieder in einen nicht homogenen Raum übersetzt werden müssen, um angezeigt zu werden.
 
 Die drei Direct3D-Transformationen –Welt-, Ansichts- und Projektionstransformationen – werden durch Direct3D-Matrizen definiert. Eine Direct3D-Matrix ist eine homogene 4x4-Matrix, die durch eine [**D3DMATRIX-Struktur**](/windows/desktop/direct3d9/d3dmatrix) definiert wird. Obwohl Direct3D-Matrizen keine Standardobjekte sind, die nicht durch eine COM-Schnittstelle dargestellt werden, können Sie sie wie jedes andere Direct3D-Objekt erstellen und festlegen. Weitere Informationen zu Direct3D-Matrizen finden Sie unter [Transformationen.](/windows/desktop/direct3d9/transforms)
 
@@ -65,7 +65,7 @@ Hier finden Sie Beschreibungen der Phasen, die in der vorherigen Abbildung darge
         d3dDevice->SetTransform (D3DTRANSFORMSTATE_PROJECTION, matrix address) 
     ```
 
-    Die letzte Spalte der Projektionsmatrix sollte (0, 0, 1, 0) oder (0, 0, a, 0) sein, um korrekte Licht- und Lichteffekte zu erzielen. (0, 0, 1, 0) Form wird bevorzugt.
+    Die letzte Spalte der Projektionsmatrix sollte (0, 0, 1, 0) oder (0, 0, a, 0) sein, um korrekte Licht- und Lichteffekte zu erzielen. (0, 0, 1, 0) wird bevorzugt.
 
     Clipping volume for all points Xp = (Xp, Yp, Zp, Wp) in the projection space is defined as:
 
@@ -81,7 +81,7 @@ Hier finden Sie Beschreibungen der Phasen, die in der vorherigen Abbildung darge
 
     -   Breite des Sw-Bildschirmfensters im Kameraraum in der Nähe der Clippingebene
     -   Sh-Screen-Fensterhöhe im Kameraraum in der Nähe der Clippingebene
-    -   Zn-Entfernung zur mittleren Clippingebene entlang der Z-Achsen im Kameraraum
+    -   Zn-Abstand zur mittleren Clippingebene entlang der Z-Achsen im Kameraraum
     -   Abstand zur weit entfernten Clippingebene entlang der Z-Achsen im Kameraraum
 
     dann könnte eine perspektivische Projektionsmatrix wie folgt geschrieben werden:

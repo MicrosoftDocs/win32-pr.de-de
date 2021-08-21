@@ -18,7 +18,7 @@ ms.locfileid: "118050521"
 ---
 # <a name="common-explorer-concepts"></a>Allgemeine Explorer-Konzepte
 
-Der *Shellnamespace* organisiert das Dateisystem und andere von der Shell verwaltete Objekte in einer einzigen strukturstrukturierten Hierarchie. Konzeptionell handelt es sich um eine größere und inklusive version des Dateisystems.
+Der *Shellnamespace* organisiert das Dateisystem und andere objekte, die von der Shell verwaltet werden, in einer einzigen strukturstrukturierten Hierarchie. Konzeptionell handelt es sich um eine größere und inklusive version des Dateisystems.
 
 -   [Introduction (Einführung)](#introduction)
 -   [Identifizieren von Namespaceobjekten](#identifying-namespace-objects)
@@ -42,9 +42,9 @@ Virtuelle Objekte können sich sogar auf Remotecomputern befinden. Um beispielsw
 
 Wie das Dateisystem enthält der Namespace zwei grundlegende Objekttypen: Ordner und Dateien. Ordnerobjekte sind die *Knoten* der Struktur. sie sind Container für Dateiobjekte und andere Ordner. Dateiobjekte sind die *Blätter* der Struktur. Dabei handelt es sich entweder um normale Datenträgerdateien oder virtuelle Objekte, z. B. Druckerlinks. Ordner, die nicht Teil des Dateisystems sind, werden manchmal als *virtuelle Ordner* bezeichnet.
 
-Wie Dateisystemordner variiert die Sammlung virtueller Ordner in der Regel von System zu System. Es gibt drei Klassen von virtuellen Ordnern:
+Wie Dateisystemordner variiert die Sammlung virtueller Ordner im Allgemeinen von System zu System. Es gibt drei Klassen von virtuellen Ordnern:
 
--   Virtuelle Standardordner, z. B. die Papierkorb, die auf allen Systemen gefunden werden.
+-   Virtuelle Standardordner, z. B. die Papierkorb, die sich auf allen Systemen befinden.
 -   Optionale virtuelle Ordner, die Standardnamen und -funktionen aufweisen, aber möglicherweise nicht auf allen Systemen vorhanden sind.
 -   Nicht standardmäßige Ordner, die vom Benutzer installiert werden.
 
@@ -56,7 +56,7 @@ Sie können eine visuelle Darstellung der Struktur des Namespace in der Explorer
 
 Der endgültige Stamm der Namespacehierarchie ist der Desktop. Direkt unterhalb des Stammverzeichnisses befinden sich mehrere virtuelle Ordner wie Arbeitsplatz und die Papierkorb.
 
-Die Dateisysteme der verschiedenen Datenträgerlaufwerke können als Teilmengen der größeren Namespacehierarchie betrachtet werden. Die Stammordner dieser Dateisysteme sind Unterordner des Ordners Arbeitsplatz. Arbeitsplatz enthält auch die Stammdateien aller zugeordneten Netzwerklaufwerke. Andere Knoten in der Struktur, z. B. Eigene Dokumente, sind virtuelle Ordner.
+Die Dateisysteme der verschiedenen Datenträgerlaufwerke können als Teilmengen der größeren Namespacehierarchie betrachtet werden. Die Stammordner dieser Dateisysteme sind Unterordner des Ordners Arbeitsplatz. Arbeitsplatz enthält auch die Stammdateien aller zugeordneten Netzlaufwerke. Andere Knoten in der Struktur, z. B. Eigene Dokumente, sind virtuelle Ordner.
 
 ## <a name="identifying-namespace-objects"></a>Identifizieren von Namespaceobjekten
 
@@ -100,15 +100,15 @@ Vollständige PIDLs werden selten verwendet. Viele Funktionen und Methoden erwar
 
 Die am häufigsten verwendeten relativen PIDLs, *PIDLs auf einer Ebene,* sind relativ zum übergeordneten Ordner des Objekts. Sie enthalten nur die Element-ID des Objekts und einen abschließenden **NULL-Wert.** PiDLs mit mehreren Ebenen werden auch für viele Zwecke verwendet. Sie enthalten mindestens zwei Element-IDs und definieren in der Regel über eine Reihe von Unterordnern einen Pfad von einem übergeordneten Ordner zu einem Objekt. Beachten Sie, dass eine PIDL auf einer einzelnen Ebene weiterhin eine vollqualifizierte PIDL sein kann. Desktopobjekte sind insbesondere untergeordnete Elemente des Desktops, sodass ihre vollqualifizierten PIDLs nur eine Element-ID enthalten.
 
-Wie unter [Abrufen der ORDNER-ID](folder-id.md)erläutert, bietet die Shell-API eine Reihe von Möglichkeiten zum Abrufen der PIDL eines Objekts. Sobald Sie es haben, verwenden Sie es in der Regel nur, um das Objekt zu identifizieren, wenn Sie andere Shell-API-Funktionen und -Methoden aufrufen. In diesem Kontext sind die internen Inhalte einer PIDL nicht transparent und irrelevant. Stellen Sie sich für diese Diskussion PIDLs als Token vor, die bestimmte Namespaceobjekte darstellen, und konzentrieren Sie sich darauf, wie sie für allgemeine Aufgaben verwendet werden.
+Wie unter [Abrufen der ORDNER-ID](folder-id.md)erläutert, bietet die Shell-API eine Reihe von Möglichkeiten zum Abrufen der PIDL eines Objekts. Sobald sie verfügbar ist, verwenden Sie es in der Regel einfach, um das Objekt zu identifizieren, wenn Sie andere Shell-API-Funktionen und -Methoden aufrufen. In diesem Kontext sind die internen Inhalte einer PIDL nicht transparent und irrelevant. Stellen Sie sich für diese Diskussion PIDLs als Token vor, die bestimmte Namespaceobjekte darstellen, und konzentrieren Sie sich darauf, wie sie für allgemeine Aufgaben verwendet werden können.
 
 ### <a name="allocating-pidls"></a>Zuordnen von PIDLs
 
-Obwohl PIDLs mit Pfaden vergleichbar sind, erfordert deren Verwendung einen etwas anderen Ansatz. Der Hauptunterschied besteht darin, wie Speicher zugeordnet und freigegeben wird.
+Obwohl PIDLs eine gewisse Ähnlichkeit mit Pfaden haben, erfordert deren Verwendung einen etwas anderen Ansatz. Der Hauptunterschied besteht in der Zuordnung und Zuordnung von Arbeitsspeicher für sie.
 
-Wie die zeichenfolge, die für einen Pfad verwendet wird, muss Arbeitsspeicher für eine PIDL zugeordnet werden. Wenn eine Anwendung eine PIDL erstellt, muss sie ausreichend Arbeitsspeicher für die [**ITEMIDLIST-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) zuordnen. In den meisten der hier beschriebenen Fälle erstellt die Shell die PIDL und verarbeitet die Speicherbelegung. Unabhängig davon, was der PIDL zugeordnet ist, ist die Anwendung in der Regel für die Zuordnung der PIDL verantwortlich, wenn sie nicht mehr benötigt wird.
+Wie bei der Zeichenfolge, die für einen Pfad verwendet wird, muss Speicher für eine PIDL zugeordnet werden. Wenn eine Anwendung eine PIDL erstellt, muss sie genügend Arbeitsspeicher für die [**ITEMIDLIST-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-itemidlist) zuordnen. In den meisten der hier erläuterten Fälle erstellt die Shell die PIDL und verarbeitet die Speicherbelegung. Unabhängig davon, was die PIDL zugeordnet hat, ist die Anwendung in der Regel für die Verlagerung der PIDL verantwortlich, wenn sie nicht mehr benötigt wird.
 
-Verwenden Sie die [**CoTaskMemAlloc-Funktion,**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) um die PIDL zuzuordnen, und die [**CoTaskMemFree-Funktion,**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) um die Zuordnung freizugeben.
+Verwenden Sie [**die CoTaskMemAlloc-Funktion,**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) um die PIDL zu ordnen, und die [**CoTaskMemFree-Funktion,**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) um die Zuordnung frei zu machen.
 
  
 

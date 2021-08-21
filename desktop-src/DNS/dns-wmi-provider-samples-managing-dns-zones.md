@@ -1,32 +1,32 @@
 ---
-title: DNS-WMI-Anbieter Beispiele – Verwalten von DNS-Zonen
-description: DNS-WMI-Anbieter Beispiele – Verwalten von DNS-Zonen
+title: BEISPIELE FÜR DNS-WMI-Anbieter – Verwalten von DNS-Zonen
+description: BEISPIELE FÜR DNS-WMI-Anbieter – Verwalten von DNS-Zonen
 ms.assetid: 12958b71-b47d-4dd7-bd08-409ecd369e4f
 keywords:
-- DNS-WMI-Anbieter Beispiele 8212; Verwalten von DNS-Zonen
+- DNS WMI Provider Samples 8212; Verwalten von DNS-Zonen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb7f0468cd4550dc3c7c3ed0b2a7a585a3b17488
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 452c6ef3e9e072ffba6b1bf9ab58e9e15e15405b7bca418dc7619441ae43e125
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163849"
 ---
-# <a name="dns-wmi-provider-samplesmanaging-dns-zones"></a>DNS-WMI-Anbieter Beispiele – Verwalten von DNS-Zonen
+# <a name="dns-wmi-provider-samplesmanaging-dns-zones"></a>BEISPIELE FÜR DNS-WMI-Anbieter – Verwalten von DNS-Zonen
 
-In diesem Abschnitt werden Skript Tasks für die Verwaltung von DNS-Zonen veranschaulicht. Die folgenden Links verknüpfen mit Unterroutinen in der Skriptdatei.
+In diesem Abschnitt werden Skripttasks für die Verwaltung von DNS-Zonen veranschaulicht. Die folgenden Links sind mit Unterroutinen in der Skriptdatei verknüpft.
 
 -   [Erstellen einer DNS-Zone](#create-a-dns-zone)
 -   [Ändern einer DNS-Zone](#modify-a-dns-zone)
 -   [Löschen einer DNS-Zone](#delete-a-dns-zone)
--   [IP-Adresse für Zone hinzufügen](#add-a-zone-ip-address)
+-   [Hinzufügen einer Zonen-IP-Adresse](#add-a-zone-ip-address)
 -   [Löschen einer Zonen-IP-Adresse](#delete-a-zone-ip-address)
 -   [Anhalten einer Zone](#pause-a-zone)
 -   [Fortsetzen einer Zone](#resume-a-zone)
 -   [Aktualisieren einer Zone](#update-a-zone)
 -   [Erneutes Laden einer Zone](#reload-a-zone)
--   [Zone aktualisieren](#refresh-a-zone)
+-   [Aktualisieren einer Zone](#refresh-a-zone)
 
 
 ```VB
@@ -839,7 +839,7 @@ End Sub
 
 
 
-## <a name="add-a-zone-ip-address"></a>IP-Adresse für Zone hinzufügen
+## <a name="add-a-zone-ip-address"></a>Hinzufügen einer Zonen-IP-Adresse
 
 
 ```VB
@@ -2907,9 +2907,9 @@ End Function
 
 
 
- 
+ 
 
- 
+ 
 
 
 

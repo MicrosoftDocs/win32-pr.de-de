@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentspavailextcacheouesf memoryexception-Klasse'
-title: Esentspavailextcacheoudef memoryexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentSPAvailExtCacheOutOfMemoryException-Klasse'
+title: EsentSPAvailExtCacheOutOfMemoryException-Klasse
 TOCTitle: EsentSPAvailExtCacheOutOfMemoryException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSPAvailExtCacheOutOfMemoryException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentspavailextcacheoutofmemoryexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e32168db9530bbef45add078260004b51cb1c98e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4c234c0e8fdf60706696c40d2e95a3c00bcf2b9d55f57e06396bd691f07b34b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118078641"
 ---
-# <a name="esentspavailextcacheoutofmemoryexception-class"></a>Esentspavailextcacheoudef memoryexception-Klasse
+# <a name="esentspavailextcacheoutofmemoryexception-class"></a>EsentSPAvailExtCacheOutOfMemoryException-Klasse
 
-Basisklasse für JET_err. Spavailextcacheouto f Memory-Ausnahmen.
+Basisklasse für JET_err. SPAvailExtCacheOutOfMemory-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentspavailextcacheouesschmemoryexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSPAvailExtCacheOutOfMemoryException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentspavailextcacheouesfmemoryexception-Member](./esentspavailextcacheoutofmemoryexception-members.md)
+[EsentSPAvailExtCacheOutOfMemoryException-Member](./esentspavailextcacheoutofmemoryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

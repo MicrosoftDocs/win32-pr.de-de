@@ -1,12 +1,12 @@
 ---
-title: Getactivationstatus-Methode der Win32_TSLicenseServer-Klasse
-description: Ruft den aktuellen Aktivierungs Status des Remotedesktop Lizenzservers ab.
+title: GetActivationStatus-Methode der Win32_TSLicenseServer Klasse
+description: Ruft den aktuellen Aktivierungsstatus des Remotedesktop ab.
 ms.assetid: 1148ffc5-33c1-41f1-b477-78a5293333d1
 ms.tgt_platform: multiple
 keywords:
-- Getactivationstatus-Methode Remotedesktopdienste
-- Getactivationstatus-Methode Remotedesktopdienste, Win32_TSLicenseServer-Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, getactivationstatus-Methode
+- GetActivationStatus-Remotedesktopdienste
+- GetActivationStatus-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer klasse Remotedesktopdienste , GetActivationStatus-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 882f6209cd13c2372316e6a9606a3bc4fcd60fdc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d79daa4c73e95eded95f3c7760eef43f0a01683059cc4974506e7b50f291ca1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130769"
 ---
-# <a name="getactivationstatus-method-of-the-win32_tslicenseserver-class"></a>Getactivationstatus-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="getactivationstatus-method-of-the-win32_tslicenseserver-class"></a>GetActivationStatus-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Ruft den aktuellen Aktivierungs Status des Remotedesktop Lizenzservers ab.
+Ruft den aktuellen Aktivierungsstatus des Remotedesktop ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ uint32 GetActivationStatus(
 
 <dl> <dt>
 
-*Activationstatus* \[ vorgenommen\]
+*ActivationStatus* \[ out\]
 </dt> <dd>
 
-Der zurückgegebene Aktivierungs Status kann einer der folgenden sein.
+Der zurückgegebene Aktivierungsstatus kann einer der folgenden sein.
 
 <dt>
 
 0
 </dt> <dd>
 
-Der Remotedesktop Lizenzserver wird aktiviert.
+Der Remotedesktop Lizenzserver ist aktiviert.
 
 </dd> <dt>
 
@@ -67,19 +67,19 @@ Der Remotedesktop Lizenzserver ist nicht aktiviert.
 2
 </dt> <dd>
 
-Es ist ein unbekannter Fehler aufgetreten. Es ist nicht bekannt, ob der Remotedesktop Lizenzserver aktiviert ist.
+Unbekannter Fehler aufgetreten. Es ist nicht bekannt, ob Remotedesktop Lizenzserver aktiviert ist.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,7 +90,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -99,7 +99,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

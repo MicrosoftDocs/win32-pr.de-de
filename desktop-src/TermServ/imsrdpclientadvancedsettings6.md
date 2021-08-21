@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientAdvancedSettings6-Schnittstelle
-description: Macht Eigenschaften verfügbar, die erweiterte ActiveX Steuerelementeinstellungen verwalten.
+description: Macht Eigenschaften verfügbar, die erweiterte ActiveX-Steuerelementeinstellungen verwalten.
 ms.assetid: 45b48cdf-3860-4359-99b2-8d2598146d1d
 ms.tgt_platform: multiple
 keywords:
-- IMsRdpClientAdvancedSettings6-Remotedesktopdienste
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , beschrieben
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -25,13 +25,13 @@ ms.locfileid: "118352127"
 ---
 # <a name="imsrdpclientadvancedsettings6-interface"></a>IMsRdpClientAdvancedSettings6-Schnittstelle
 
-Macht Eigenschaften verfügbar, die erweiterte ActiveX Steuerelementeinstellungen verwalten. Die **IMsRdpClientAdvancedSettings6-Schnittstelle** wird von der [**IMsRdpClientAdvancedSettings5-Schnittstelle**](imsrdpclientadvancedsettings5.md) abgeleitet.
+Macht Eigenschaften verfügbar, die erweiterte ActiveX-Steuerelementeinstellungen verwalten. Die **IMsRdpClientAdvancedSettings6-Schnittstelle** wird von der [**IMsRdpClientAdvancedSettings5-Schnittstelle**](imsrdpclientadvancedsettings5.md) abgeleitet.
 
-Um eine Instanz dieser Schnittstelle zu erhalten, verwenden Sie die [**IMsTscAx::AdvancedSettings-Eigenschaft,**](imstscax-advancedsettings.md) um einen [**IMsTscAdvancedSettings-Schnittstellenzeiger**](imstscadvancedsettings-interface.md) zu erhalten. Rufen Sie [**anschließend QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **IMsTscAdvancedSettings-Zeiger** auf, und übergeben Sie **\_ IID-IMsRdpClientAdvancedSettings6** an **QueryInterface.**
+Um eine Instanz dieser Schnittstelle abzurufen, verwenden Sie die [**IMsTscAx::AdvancedSettings-Eigenschaft,**](imstscax-advancedsettings.md) um einen [**IMsTscAdvancedSettings-Schnittstellenzeiger**](imstscadvancedsettings-interface.md) abzurufen. Rufen Sie dann [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **IMsTscAdvancedSettings-Zeiger** auf, und übergeben Sie **IID \_ IMsRdpClientAdvancedSettings6** an **QueryInterface**.
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClientAdvancedSettings6-Schnittstelle** erbt von [**IMsRdpClientAdvancedSettings5**](imsrdpclientadvancedsettings5.md). **IMsRdpClientAdvancedSettings6** verfügt auch über diese Membertypen:
+Die **IMsRdpClientAdvancedSettings6-Schnittstelle** erbt von [**IMsRdpClientAdvancedSettings5.**](imsrdpclientadvancedsettings5.md) **IMsRdpClientAdvancedSettings6** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -41,15 +41,15 @@ Die **IMsRdpClientAdvancedSettings6-Schnittstelle** verfügt über diese Eigensc
 
 
 
-| Eigenschaft                                                                                                  | Zugriffstyp           | BESCHREIBUNG                                                                                                                        |
+| Eigenschaft                                                                                                  | Zugriffstyp           | Beschreibung                                                                                                                        |
 |:----------------------------------------------------------------------------------------------------------|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| [**AuthenticationServiceClass**](imsrdpclientadvancedsettings6-authenticationserviceclass.md)<br/> | Lesen/Schreiben<br/> | Gibt den Dienstprinzipalnamen (SERVICE Principal Name, SPN) an, der für die Authentifizierung beim Server verwendet werden soll.<br/>                                     |
+| [**AuthenticationServiceClass**](imsrdpclientadvancedsettings6-authenticationserviceclass.md)<br/> | Lesen/Schreiben<br/> | Gibt den Dienstprinzipalnamen (Service Principal Name, SPN) an, der für die Authentifizierung beim Server verwendet werden soll.<br/>                                     |
 | [**AuthenticationType**](imsrdpclientadvancedsettings6-authenticationtype.md)<br/>                 | Schreibgeschützt<br/>  | Gibt den Authentifizierungstyp an, der für diese Verbindung verwendet wird.<br/>                                                          |
-| [**ConnectToAdchefServer**](imsrdpclientadvancedsettings6-connecttoadministerserver.md)<br/>   | Lesen/Schreiben<br/> | Ruft ab oder gibt an, ob das ActiveX-Steuerelement zu administrativen Zwecken versuchen soll, eine Verbindung mit dem Server herzustellen.<br/> |
+| [**ConnectToAdogrammServer**](imsrdpclientadvancedsettings6-connecttoadministerserver.md)<br/>   | Lesen/Schreiben<br/> | Ruft ab oder gibt an, ob das ActiveX-Steuerelement zu Administrativen Zwecken versuchen soll, eine Verbindung mit dem Server herzustellen.<br/> |
 | [**EnableCredSspSupport**](imsrdpclientadvancedsettings6-enablecredsspsupport.md)<br/>             | Lesen/Schreiben<br/> | Gibt an, ob der Credential Security Service Provider (CredSSP) für diese Verbindung aktiviert ist.<br/>                    |
-| [**HotKeyFocusReleaseLeft**](imsrdpclientadvancedsettings6-hotkeyfocusreleaseleft.md)<br/>         | Lesen/Schreiben<br/> | Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-LINKS-TASTE zu bestimmen.<br/>          |
-| [**HotKeyFocusReleaseRight**](imsrdpclientadvancedsettings6-hotkeyfocusreleaseright.md)<br/>       | Lesen/Schreiben<br/> | Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.<br/>         |
-| [**Pcb**](imsrdpclientadvancedsettings6-pcb.md)<br/>                                               | Lesen/Schreiben<br/> | Gibt die Einstellung preconnection BLOB (BOARD) an, die vor dem Herstellen einer Verbindung für die Übertragung an den Server verwendet werden soll.<br/>               |
+| [**HotKeyFocusReleaseLeft**](imsrdpclientadvancedsettings6-hotkeyfocusreleaseleft.md)<br/>         | Lesen/Schreiben<br/> | Gibt den virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-LINKS-TASTE zu bestimmen.<br/>          |
+| [**HotKeyFocusReleaseRight**](imsrdpclientadvancedsettings6-hotkeyfocusreleaseright.md)<br/>       | Lesen/Schreiben<br/> | Gibt den Virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.<br/>         |
+| [**Pcb**](imsrdpclientadvancedsettings6-pcb.md)<br/>                                               | Lesen/Schreiben<br/> | Gibt die EINSTELLUNG FÜR DIE VORABVERBINDUNG (PREconnection BLOB) an, die vor dem Herstellen einer Verbindung für die Übertragung an den Server verwendet werden soll.<br/>               |
 | [**RelativeMouseMode**](imsrdpclientadvancedsettings6-relativemousemode.md)<br/>                   | Lesen/Schreiben<br/> | Gibt an, ob die Maus den relativen Modus verwenden soll.<br/>                                                                   |
 
 
@@ -58,7 +58,7 @@ Die **IMsRdpClientAdvancedSettings6-Schnittstelle** verfügt über diese Eigensc
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle wurde von der [**IMsRdpClientAdvancedSettings7-Schnittstelle**](imsrdpclientadvancedsettings7.md) erweitert und erbt alle Methoden und Eigenschaften der vorherigen Schnittstellen.
+Diese Schnittstelle wurde durch die [**IMsRdpClientAdvancedSettings7-Schnittstelle**](imsrdpclientadvancedsettings7.md) erweitert und erbt alle Methoden und Eigenschaften der vorherigen Schnittstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Diese Schnittstelle wurde von der [**IMsRdpClientAdvancedSettings7-Schnittstelle
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
