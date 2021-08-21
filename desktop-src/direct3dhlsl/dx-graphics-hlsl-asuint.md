@@ -37,7 +37,7 @@ Interpretiert das Bitmuster von *x* als ganze Zahl ohne Vorzeichen.
 
 
 
-| Element                                                   | BESCHREIBUNG                        |
+| Element                                                   | Beschreibung                        |
 |--------------------------------------------------------|------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der Eingabewert.<br/> |
 
@@ -47,7 +47,7 @@ Interpretiert das Bitmuster von *x* als ganze Zahl ohne Vorzeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Eingabe, die als ganze Zahl ohne Vorzeichen interpretiert wird.
+Die Als ganze Zahl ohne Vorzeichen interpretierte Eingabe.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -55,14 +55,14 @@ Die Eingabe, die als ganze Zahl ohne Vorzeichen interpretiert wird.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md)                 | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**float,**](/windows/desktop/WinProg/windows-data-types) [ **int**](/windows/desktop/WinProg/windows-data-types) | any                            |
-| *Ret* | identisch mit Eingabe *x*                                                                                              | [**uint**](/windows/desktop/WinProg/windows-data-types)                                         | Gleiche Dimension(n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**float**](/windows/desktop/WinProg/windows-data-types), [ **int**](/windows/desktop/WinProg/windows-data-types) | any                            |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**Uint**](/windows/desktop/WinProg/windows-data-types)                                         | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -70,9 +70,9 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | Nein        |
 | [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
 
 

@@ -25,14 +25,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 25ae81e4f00e87e41170ac5713ced0d9b523c844
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27f94de089df73c246de887268d34c187bef2507391ceeb33dd7c8cc8068bc43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118148319"
 ---
-# <a name="msvm_ethernetswitchportextendedaclsettingdata-class"></a>MSVM \_ ethernetzwitchportextendedaclsettingdata-Klasse
+# <a name="msvm_ethernetswitchportextendedaclsettingdata-class"></a>Msvm \_ EthernetSwitchPortExtendedAclSettingData-Klasse
 
 Stellt die erweiterten Port-ACL-Einstellungen dar.
 
@@ -61,26 +61,26 @@ class Msvm_EthernetSwitchPortExtendedAclSettingData : Msvm_EthernetSwitchPortFea
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportextendedaclsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortExtendedAclSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportextendedaclsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortExtendedAclSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Die Aktion der erweiterten ACL.
@@ -103,7 +103,7 @@ Die Aktion der erweiterten ACL.
 
 <span id="Deny"></span><span id="deny"></span><span id="DENY"></span>
 
-**Verweigern** (2)
+**Deny** (2)
 
 
 </dt> <dd></dd> </dl>
@@ -113,16 +113,16 @@ Die Aktion der erweiterten ACL.
 **Richtung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die erweiterte ACL für die eingehende oder ausgehende Richtung gilt.
+Gibt an, ob die erweiterte ACL für eingehende oder ausgehende Richtung gilt.
 
 <dt>
 
@@ -135,7 +135,7 @@ Gibt an, ob die erweiterte ACL für die eingehende oder ausgehende Richtung gilt
 
 <span id="Incoming"></span><span id="incoming"></span><span id="INCOMING"></span>
 
-**Eingehende** (1)
+**Eingehend** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -149,48 +149,48 @@ Gibt an, ob die erweiterte ACL für die eingehende oder ausgehende Richtung gilt
 
 </dd> <dt>
 
-**Idlesessiontimeout**
+**IdleSessionTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **Uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (11), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Timeout Wert für Leerlauf Sitzung (in Sekunden) für Zustands behaftete ACL.
+Leerlaufsitzungs-Timeoutwert (in Sekunden) für zustandshafte ACL.
 
 </dd> <dt>
 
-**Isolationid**
+**IsolationID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **Uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-**Qualifizierer: interfacetten** (1), **interfacetten-Vision** (0), **wmidataid** (12)
+Qualifizierer: **InterfaceVersion** (1), **InterfaceRevision** (0), **WmiDataId** (12)
 </dt> </dl>
 
-Die Isolations-ID, für die die erweiterte ACL angewendet werden soll.
+Isolations-ID, für die die erweiterte ACL angewendet werden soll.
 
 </dd> <dt>
 
 **LocalIPAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (40), **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (40), **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Die lokale IP-Adresse.
@@ -200,109 +200,109 @@ Die lokale IP-Adresse.
 **LocalPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (21), **wmidataid** (6), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (21), **WmiDataId** (6), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der lokale Port Bereich.
+Der lokale Portbereich.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Anzeige Name der erweiterten ACL.
+Der Benutzername der erweiterten ACL.
 
 </dd> <dt>
 
 **Protokoll**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (15), **wmidataid** (8), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (15), **WmiDataId** (8), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Protokoll Zeichenfolge.
+Die Protokollzeichenfolge.
 
 </dd> <dt>
 
 **RemoteIPAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (40), **wmidataid** (5), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (40), **WmiDataId** (5), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Die Remote-IP-Adresse.
 
 </dd> <dt>
 
-**Remoteport**
+**RemotePort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (21), **wmidataid** (7), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (21), **WmiDataId** (7), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Remote Port Bereich.
+Der Remoteportbereich.
 
 </dd> <dt>
 
 **Zustandsbehaftet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **Boolesch**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (10), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die erweiterte ACL Zustands behaftet oder zustandslos ist.
+Gibt an, ob die erweiterte ACL zustandsvoll oder zustandslos ist.
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **Uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Die Gewichtung, die auf die erweiterte ACL angewendet wird.
@@ -318,7 +318,7 @@ Die Gewichtung, die auf die erweiterte ACL angewendet wird.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -327,7 +327,7 @@ Die Gewichtung, die auf die erweiterte ACL angewendet wird.
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)
 </dt> </dl>
 
  

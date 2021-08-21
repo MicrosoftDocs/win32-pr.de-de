@@ -1,6 +1,6 @@
 ---
-title: MCI_STATUS_PARMS-Struktur (mciapi. h)
-description: Die Struktur des MCI- \_ Status \_ Parametern enthält Informationen zum MCI- \_ Status Befehl.
+title: MCI_STATUS_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ STATUS \_ PARMS-Struktur enthält Informationen für den MCI \_ STATUS-Befehl.
 ms.assetid: c4897b34-4184-46aa-af17-2127edfbf82d
 keywords:
 - MCI_STATUS_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8295f2e747752889c10083c6bb794ba2df7ac273
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2685ec70f10dc8dcecb0149f3bcf1af6c9814dd360e8f7e185d31710c24d5527
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138096"
 ---
-# <a name="mci_status_parms-structure"></a>Struktur von MCI- \_ Status- \_ Parametern
+# <a name="mci_status_parms-structure"></a>MCI \_ STATUS \_ PARMS-Struktur
 
-Die Struktur des **MCI- \_ Status \_ Parametern** enthält Informationen zum [**MCI- \_ Status**](mci-status.md) Befehl.
+Die **MCI \_ STATUS \_ PARMS-Struktur** enthält Informationen für den [**MCI \_ STATUS-Befehl.**](mci-status.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwreturn**
+**dwReturn**
 </dt> <dd>
 
 Enthält Informationen zur Rückgabe.
 
 </dd> <dt>
 
-**dwitem**
+**dwItem**
 </dt> <dd>
 
-Die Funktion, die abgefragt wird.
+Funktion, die abgefragt wird.
 
 </dd> <dt>
 
-**dwtrack**
+**dwTrack**
 </dt> <dd>
 
-Länge oder Anzahl der Spuren.
+Länge oder Anzahl von Spuren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das MCI \_ - \_ statuselementflag muss im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion festgelegt werden, um das **dwitem** -Element zu validieren, das eine der Konstanten enthalten muss, die angeben, welche Status Informationen angefordert werden.
+Das MCI \_ STATUS \_ ITEM-Flag muss im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) festgelegt werden, um den **dwItem-Member** zu überprüfen, der eine der Konstanten enthalten sollte, die angeben, welche Statusinformationen angefordert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Das MCI \_ - \_ statuselementflag muss im *fdwcommand* -Parameter der [**mciSend
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -91,13 +91,13 @@ Das MCI \_ - \_ statuselementflag muss im *fdwcommand* -Parameter der [**mciSend
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Status**](mci-status.md)
+[**\_MCI-STATUS**](mci-status.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

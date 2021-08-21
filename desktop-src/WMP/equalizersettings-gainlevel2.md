@@ -1,6 +1,6 @@
 ---
 title: EQUALIZERSETTINGS.gainLevel2
-description: Das gainLevel2-Attribut gibt die Verstärkungsstufe von Band 2 an oder ruft sie ab.
+description: Das gainLevel2-Attribut gibt die Gain-Ebene von Band 2 an oder ruft sie ab.
 ms.assetid: e602d9cc-42b3-402e-9df5-8b970d878904
 keywords:
 - EQUALIZERSETTINGS.gainLevel2 Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118339830"
 ---
 # <a name="equalizersettingsgainlevel2"></a>EQUALIZERSETTINGS.gainLevel2
 
-Das **gainLevel2-Attribut** gibt die Verstärkungsstufe von Band 2 an oder ruft sie ab.
+Das **gainLevel2-Attribut** gibt die Gain-Ebene von Band 2 an oder ruft sie ab.
 
 ``` syntax
         elementID.gainLevel2
@@ -29,13 +29,13 @@ Das **gainLevel2-Attribut** gibt die Verstärkungsstufe von Band 2 an oder ruft 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/Schreibnummer (**float**), deren Wert normalerweise zwischen 20 und +20 liegt.  Der Standardwert ist 0 (null).
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit einem Wert, der normalerweise zwischen 20 und +20 liegt. Der Standardwert ist 0 (null).
 
 ## <a name="remarks"></a>Hinweise
 
 Dieses Attribut passt den Teil des Audiofrequenzspektrums an, der auf 62Hz zentriert ist.
 
-Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
+Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

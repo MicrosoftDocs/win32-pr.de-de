@@ -1,23 +1,23 @@
 ---
-description: Aufzeichnen eines Bilds aus einer weiterhin Abbild-PIN
+description: Erfassen eines Bilds von einem Anheften eines Stillbilds
 ms.assetid: cbcb4d6d-dc85-4ae2-b0a8-110f15092733
-title: Aufzeichnen eines Bilds aus einer weiterhin Abbild-PIN
+title: Erfassen eines Bilds von einem Anheften eines Stillbilds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3510f318f3107dd698dc753704d6c09d70ddd308
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cab750fb6b847bc39d28c8906df8dcb982278f7a4447bfc3d79631ee58eb574e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158662"
 ---
-# <a name="capturing-an-image-from-a-still-image-pin"></a>Aufzeichnen eines Bilds aus einer weiterhin Abbild-PIN
+# <a name="capturing-an-image-from-a-still-image-pin"></a>Erfassen eines Bilds von einem Anheften eines Stillbilds
 
-Einige Kameras können ein anderes Image als den Erfassungsdaten Strom erzeugen, und häufig ist das Image von höherer Qualität als die vom Erfassungsdaten Strom erzeugten Bilder. Die Kamera verfügt möglicherweise über eine Schaltfläche, die als Hardware Trigger fungiert oder das Auslösen von Software unterstützt. Eine Kamera, die weiterhin Bilder unterstützt, macht eine Bild-Pin verfügbar, die die PIN-Kategorie der PIN-Kategorie \_ \_ weiterhin enthält.
+Einige Kameras können ein Stillbild unabhängig vom Erfassungsstream erzeugen, und häufig hat das Stillbild eine höhere Qualität als die vom Erfassungsstream erzeugten Bilder. Die Kamera kann über eine Taste verfügen, die als Hardwaretrigger fungiert, oder sie unterstützt möglicherweise Softwaretrigger. Eine Kamera, die Noch-Bilder unterstützt, macht einen Noch-Bild-Pin verfügbar, bei dem es sich um die Pinkategorie PIN \_ CATEGORY \_ STILL handelt.
 
-Die empfohlene Vorgehensweise zum Abrufen von Images vom Gerät ist die Verwendung der Windows-Abbild Erfassungs-APIs (WIA). Weitere Informationen finden Sie unter "Windows-Abbild Beschaffung" in der Platform SDK-Dokumentation. Sie können jedoch auch DirectShow verwenden, um ein Image zu erfassen.
+Die empfohlene Methode zum Erhalten von Stillimages vom Gerät ist die Verwendung Windows WIA-APIs (Image Acquisition). Weitere Informationen finden Sie unter "Windows Image Acquisition" in der Platform SDK-Dokumentation. Sie können jedoch auch DirectShow verwenden, um ein Bild zu erfassen.
 
-Verwenden Sie die [**IAMVideoControl:: setmode**](/windows/desktop/api/Strmif/nf-strmif-iamvideocontrol-setmode) -Methode, wenn das Diagramm ausgeführt wird, um die immer noch anzuheften, wie folgt:
+Verwenden Sie die [**IAMVideoControl::SetMode-Methode,**](/windows/desktop/api/Strmif/nf-strmif-iamvideocontrol-setmode) wenn das Diagramm ausgeführt wird, um den Noch-Pin auszulösen:
 
 
 ```C++
@@ -59,18 +59,18 @@ if (SUCCEEDED(hr))
 
 
 
-Fragen Sie den Erfassungs Filter für [**IAMVideoControl**](/windows/desktop/api/Strmif/nn-strmif-iamvideocontrol)ab. Wenn die Schnittstelle unterstützt wird, erhalten Sie einen Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN, indem Sie die [**ICaptureGraphBuilder2:: findpin**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin) -Methode aufrufen, wie im vorherigen Beispiel gezeigt. Dann wenden Sie [**IAMVideoControl:: setmode**](/windows/desktop/api/Strmif/nf-strmif-iamvideocontrol-setmode) mit dem **IPin** -Zeiger und dem "videocontrolflag"- \_ auslöserflag an.
+Fragen Sie den Erfassungsfilter für [**IAMVideoControl ab.**](/windows/desktop/api/Strmif/nn-strmif-iamvideocontrol) Wenn die Schnittstelle unterstützt wird, rufen Sie einen Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Noch-Pins ab, indem Sie die [**ICaptureGraphBuilder2::FindPin-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin) aufrufen, wie im vorherigen Beispiel gezeigt. Rufen Sie [**dann IAMVideoControl::SetMode**](/windows/desktop/api/Strmif/nf-strmif-iamvideocontrol-setmode) mit dem **IPin-Zeiger** und dem VideoControlFlag-Triggerflag \_ auf.
 
 > [!Note]  
-> Abhängig von der Kamera müssen Sie möglicherweise die Erfassungs-PIN (PIN \_ - \_ kategorieerfassung) wiederherstellen, bevor die PIN eine Verbindung herstellt.
+> Abhängig von der Kamera müssen Sie möglicherweise den Aufnahmepin (PIN CATEGORY CAPTURE) rendern, bevor die Verbindung mit dem \_ \_ Noch-Pin hergestellt wird.
 
  
 
-### <a name="example-using-the-sample-grabber-filter"></a>Beispiel: Verwenden des Sample-Grabber Filters
+### <a name="example-using-the-sample-grabber-filter"></a>Beispiel: Verwenden des Beispielgrabfilters
 
-Eine Möglichkeit, das Image aufzuzeichnen, ist der [**Beispiel**](sample-grabber-filter.md) Filter für die Erfassung. Der Beispiel Grabber verwendet eine Anwendungs definierte Rückruffunktion, um das Bild zu verarbeiten. Weitere Informationen zum Sample-Grabber Filter finden Sie unter [Verwenden der Beispiel-Grabber](using-the-sample-grabber.md).
+Eine Möglichkeit zum Erfassen des Bilds ist der [**Filter Sample Grabber.**](sample-grabber-filter.md) Der Beispielgrabvorgang verwendet eine anwendungsdefinierte Rückruffunktion, um das Bild zu verarbeiten. Weitere Informationen zum Beispielgrabfilter finden Sie unter [Using the Sample Grabber](using-the-sample-grabber.md).
 
-Im folgenden Beispiel wird davon ausgegangen, dass die immer noch PIN ein unkomprimiertes RGB-Bild bereitstellt. Definieren Sie zuerst eine Klasse, die die Rückruf Schnittstelle des beispielgrabers implementiert, [**isamplegrabbercb**](isamplegrabbercb.md):
+Im folgenden Beispiel wird davon ausgegangen, dass der Noch-Pin ein unkomprimiertes RGB-Bild liefert. Definieren Sie zunächst eine Klasse, die die Rückrufschnittstelle von Sample Grabber, [**ISampleGrabberCB, implementiert:**](isamplegrabbercb.md)
 
 
 ```C++
@@ -86,9 +86,9 @@ SampleGrabberCallback g_StillCapCB;
 
 
 
-Die Implementierung der-Klasse wird in Kürze beschrieben.
+Die Implementierung der -Klasse wird in Kürze beschrieben.
 
-Verbinden Sie als nächstes den immer noch mit dem beispielgrabpunkt, und verbinden Sie den Beispiel-Grabber mit dem Filter [**null-Renderer**](null-renderer-filter.md) . Der NULL-Renderer verwirft einfach empfangene Medien Beispiele. die tatsächliche Arbeit erfolgt innerhalb des Rückrufs. (Der einzige Grund für den NULL-Renderer besteht darin, die Ausgabe-PIN der Stichprobenentnahme mit etwas zu verbinden.) Rufen Sie [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um die Beispiel Filter für das Grabber und NULL-Renderer zu erstellen, und rufen Sie [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) auf, um dem Diagramm beide Filter hinzuzufügen:
+Verbinden Sie als Nächstes den Noch-Pin mit dem Sample Grabber, und verbinden Sie den Sample Grabber mit dem [**Filter NULL Renderer.**](null-renderer-filter.md) Der NULL-Renderer verwirft einfach die empfangenen Medienbeispiele. die eigentliche Arbeit erfolgt innerhalb des Rückrufs. (Der einzige Grund für den NULL-Renderer ist, den Ausgabepin des Beispielgrabbers mit etwas zu verbinden.) Rufen [**Sie CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um die Filter Sample Grabber und NULL Renderer zu erstellen, und rufen Sie [**IFilterGraph::AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) auf, um dem Diagramm beide Filter hinzuzufügen:
 
 
 ```C++
@@ -120,7 +120,7 @@ hr = pGraph->AddFilter(pNull, L"NullRender");
 
 
 
-Sie können die [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) -Methode verwenden, um alle drei Filter in einem Methoden aufzurufenden zu verbinden, von der noch an die Stichprobenentnahme angeheftet und von der Stichprobenentnahme zum NULL-Renderer zu gelangen:
+Sie können die [**ICaptureGraphBuilder2::RenderStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) verwenden, um alle drei Filter in einem Methodenaufruf zu verbinden, von der noch angeheften zum Beispielgrabber und vom Sample Grabber zum NULL-Renderer:
 
 
 ```C++
@@ -134,7 +134,7 @@ hr = pBuild->RenderStream(
 
 
 
-Verwenden Sie nun die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle, um den beispielgrabber so zu konfigurieren, dass er Beispiele puffert:
+Verwenden Sie nun die [**ISampleGrabber-Schnittstelle,**](isamplegrabber.md) um den Beispielgrabber so zu konfigurieren, dass er Beispiele puffert:
 
 
 ```C++
@@ -152,7 +152,7 @@ if (SUCCEEDED(hr))
 
 
 
-Legen Sie die Rückruf Schnittstelle mit einem Zeiger auf das Rückruf Objekt fest:
+Legen Sie die Rückrufschnittstelle mit einem Zeiger auf Ihr Rückrufobjekt fest:
 
 
 ```C++
@@ -161,7 +161,7 @@ hr = pSG->SetCallback(&g_StillCapCB, 0); // 0 = Use the SampleCB callback method
 
 
 
-Dient zum erhalten des Medientyps, den die PIN zum Herstellen einer Verbindung mit dem beispielgrabgeber verwendet hat:
+Dient zum Erhalten des Medientyps, mit dem die Verbindung mit dem Beispielgramber hergestellt wird:
 
 
 ```C++
@@ -174,7 +174,7 @@ pSG->Release();
 
 
 
-Dieser Medientyp enthält die [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur, die das Format des weiterhin Bilds definiert. Geben Sie den Medientyp frei, bevor die Anwendung beendet wird:
+Dieser Medientyp enthält die [**BITMAPINFOHEADER-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) die das Format des Stillbilds definiert. Geben Sie den Medientyp frei, bevor die Anwendung beendet wird:
 
 
 ```C++
@@ -184,9 +184,9 @@ FreeMediaType(g_StillMediaType);
 
 
 
-Im folgenden finden Sie ein Beispiel für die Rückruf Klasse. Beachten Sie, dass die-Klasse **IUnknown** implementiert, das Sie über die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle erbt, aber keinen Verweis Zähler beibehält. Dies ist sicher, da die Anwendung das-Objekt auf dem Stapel erstellt und das-Objekt während der gesamten Lebensdauer des Filter Diagramms im Gültigkeitsbereich bleibt.
+Im Folgenden sehen Sie ein Beispiel für die Rückrufklasse. Beachten Sie, dass die -Klasse **IUnknown** implementiert, das sie über die [**ISampleGrabber-Schnittstelle**](isamplegrabber.md) erbt, aber keine Verweisanzahl beibehalten. Dies ist sicher, da die Anwendung das Objekt auf dem Stapel erstellt und das Objekt während der gesamten Lebensdauer des Filterdiagramms im Gültigkeitsbereich verbleibt.
 
-Die gesamte Arbeit erfolgt in der [**buffercb**](isamplegrabbercb-buffercb.md) -Methode, die von der Sample Grabber aufgerufen wird, wenn Sie ein neues Beispiel erhält. Im folgenden Beispiel schreibt die-Methode die Bitmap in eine Datei:
+Die ganze Arbeit erfolgt in der [**BufferCB-Methode,**](isamplegrabbercb-buffercb.md) die vom Sample Grabber aufgerufen wird, wenn sie ein neues Beispiel erhält. Im folgenden Beispiel schreibt die -Methode die Bitmap in eine Datei:
 
 
 ```C++
@@ -261,7 +261,7 @@ public:
 
 <dl> <dt>
 
-[Video Erfassungs Aufgaben](video-capture-tasks.md)
+[Aufgaben der Videoaufzeichnung](video-capture-tasks.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXFloat16To32Array-Funktion (D3dx9math.h): Konvertiert ein Array von 16-Bit-Gleitkommadaten in 32-Bit-Gleitkomma.'
+description: 'D3DXFloat16To32Array-Funktion (D3dx9math.h): Konvertiert ein Array von 16-Bit-Gleitkommaen in 32-Bit-Gleitkommakomma.'
 ms.assetid: cabb2888-76e4-403b-99ab-f7d62478bf43
 title: D3DXFloat16To32Array-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118526037"
 ---
 # <a name="d3dxfloat16to32array-function-d3dx9mathh"></a>D3DXFloat16To32Array-Funktion (D3dx9math.h)
 
-Konvertiert ein Array von 16-Bit-Gleitkommadaten in 32-Bit-Gleitkomma.
+Konvertiert ein Array von 16-Bit-Gleitkommaen in 32-Bit-Gleitkommakomma.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ FLOAT* D3DXFloat16To32Array(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf das Array von 32-Bit-Gleitkommadaten.
+Zeiger auf das Array von 32-Bit-Gleitkommaen.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Zeiger auf das Array von 32-Bit-Gleitkommadaten.
 
 Typ: **const [**D3DXFLOAT16**](d3dxfloat16.md) \***
 
-Zeiger auf ein Array von 16-Bit-Gleitkommadaten.
+Zeiger auf ein Array von 16-Bit-Gleitkommaen.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Anzahl der Elemente im Array.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf ein Array von 32-Bit-Gleitkommadaten.
+Zeiger auf ein Array von 32-Bit-Gleitkommaen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,7 +86,7 @@ Zeiger auf ein Array von 32-Bit-Gleitkommadaten.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

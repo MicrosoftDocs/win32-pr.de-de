@@ -28,12 +28,12 @@ template VertexElement
 
 Hierbei gilt:
 
--   Typ: Vertexdatentyp. Siehe [**D3DDECLTYPE**](./d3ddecltype.md).
+-   Typ: Scheitelpunktdatentyp. Siehe [**D3DDECLTYPE**](./d3ddecltype.md).
 -   Methode: Tessellator-Verarbeitungsmethode. Siehe [**D3DDECLMETHOD**](./d3ddeclmethod.md).
 -   Verwendung: Beabsichtigte Verwendung der Scheitelpunktdaten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 -   UsageIndex: Ändert die Nutzungsdaten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -4,8 +4,8 @@ description: Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die
 ms.assetid: 6ae57661-e384-493b-82a9-c002eab277a1
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Quota-Amount-Attributs
-- AD-Schema des msDS-QuotaAmount-Attributs
+- MS-DS-Quota-Amount-Attribut AD-Schema
+- MSDS-QuotaAmount-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1845              |
-| System-Id-Guid    | fbb9a00d-3a8c-4233-9cf9-7189264903a1 |
+| System-ID-GUID    | fbb9a00d-3a8c-4233-9cf9-7189264903a1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -58,7 +58,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Is-Single-Valued       | True                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
@@ -79,7 +79,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Is-Single-Valued       | True                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
@@ -100,7 +100,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Is-Single-Valued       | True                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
@@ -121,7 +121,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist einwertig       | True                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
@@ -142,7 +142,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist einwertig       | True                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
@@ -163,7 +163,7 @@ Das zugewiesene Kontingent in Bezug auf die Anzahl der Objekte, die sich im Besi
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist einwertig       | True                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                  |

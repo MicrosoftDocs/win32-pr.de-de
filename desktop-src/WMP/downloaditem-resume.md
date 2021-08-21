@@ -1,9 +1,9 @@
 ---
 title: DownloadItem.resume-Methode
-description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Resume-Methode setzt den Download wieder auf.
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Resume-Methode setzt den Download fort.
 ms.assetid: f58e4838-7b00-4485-90c6-ba5960a17699
 keywords:
-- resume-Windows Media Player
+- resume-Methode Windows Media Player
 - resume-Methode Windows Media Player , DownloadItem-Klasse
 - DownloadItem-Klasse Windows Media Player , resume-Methode
 topic_type:
@@ -26,11 +26,11 @@ ms.locfileid: "118340685"
 # <a name="downloaditemresume-method"></a>DownloadItem.resume-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **Resume-Methode** setzt den Download wieder auf.
+Die **Resume-Methode** setzt den Download fort.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,12 +59,12 @@ Die **Resume-Methode** hat keine Auswirkungen auf Echtzeitdownloads.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

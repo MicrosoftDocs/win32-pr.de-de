@@ -1,23 +1,23 @@
 ---
-title: Ereignis Verwaltung
-description: Ereignis Verwaltung
+title: Ereignisverwaltung
+description: Ereignisverwaltung
 ms.assetid: DA6B76B8-E436-44D0-890D-12EE17960EBB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8469be4ad7914517b132fbdbafd91ea97f3be482
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e56674e2490148743155e4c44951e97922e07f336d0a1f4b4a91048646373cd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151173"
 ---
-# <a name="event-management"></a>Ereignis Verwaltung
+# <a name="event-management"></a>Ereignisverwaltung
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**F- \_ net- \_ Ereignis \_ CALLBACK0**](/windows/win32/api/fwpmu/nc-fwpmu-fwpm_net_event_callback0)
--   [*F- \_ net- \_ Ereignis \_ CALLBACK1*](/windows/desktop/api/fwpmu/nc-fwpmu-fwpm_net_event_callback1)
--   [*F- \_ net- \_ Ereignis \_ CALLBACK2*](/windows/desktop/api/fwpmu/nc-fwpmu-fwpm_net_event_callback2)
+-   [**FWPM \_ \_ NET-EREIGNISRÜCKRUF0 \_**](/windows/win32/api/fwpmu/nc-fwpmu-fwpm_net_event_callback0)
+-   [*FWPM \_ \_ NET-EREIGNISRÜCKRUF1 \_*](/windows/desktop/api/fwpmu/nc-fwpmu-fwpm_net_event_callback1)
+-   [*FWPM \_ \_ NET-EREIGNISRÜCKRUF2 \_*](/windows/desktop/api/fwpmu/nc-fwpmu-fwpm_net_event_callback2)
 -   [**FwpmNetEventCreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventcreateenumhandle0)
 -   [**FwpmNetEventDestroyEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventdestroyenumhandle0)
 -   [**FwpmNetEventEnum0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum0)
@@ -32,6 +32,6 @@ ms.locfileid: "104314720"
 -   [**FwpmNetEventSubscriptionsGet0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventsubscriptionsget0)
 -   [**FwpmNetEventUnsubscribe0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventunsubscribe0)
 
- 
+ 
 
- 
+ 

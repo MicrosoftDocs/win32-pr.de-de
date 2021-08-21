@@ -1,23 +1,23 @@
 ---
-title: Überwachen des Fortschritts von Kompressor und Dekompressor
-description: Überwachen des Fortschritts von Kompressor und Dekompressor
+title: Überwachen des Fortschritts von Überwachungs- und Dekomprimierungsfortschritten
+description: Überwachen des Fortschritts von Überwachungs- und Dekomprimierungsfortschritten
 ms.assetid: 7c87c688-75b6-4d3e-9dd5-5f509ff2e473
 keywords:
 - Videokomprimierungs-Manager (VCM), Überwachung
 - VCM (Videokomprimierungs-Manager), Überwachung
-- Icsetstatusproc-Funktion
+- ICSetStatusProc-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: beb86a40bb653380dc93e758ada1b2eef6ec9ca7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 724d3e6a8bee645717ef624eddd1276d3e55e856f1aab3c6edc5f9585b3f5feb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137181"
 ---
-# <a name="monitoring-compressor-and-decompressor-progress"></a>Überwachen des Fortschritts von Kompressor und Dekompressor
+# <a name="monitoring-compressor-and-decompressor-progress"></a>Überwachen des Fortschritts von Überwachungs- und Dekomprimierungsfortschritten
 
-Im folgenden Beispiel wird gezeigt, wie die [**icsetstatusproc**](/windows/desktop/api/Vfw/nf-vfw-icsetstatusproc) -Funktion verwendet wird, um den Kompressor oder den Debug der Rückruf Funktions Adresse zu informieren:
+Das folgende Beispiel zeigt, wie die [**ICSetStatusProc-Funktion**](/windows/desktop/api/Vfw/nf-vfw-icsetstatusproc) verwendet wird, um den Bzw. den Dekomprimierer über die Adresse der Rückruffunktion zu informieren:
 
 
 ```C++
@@ -78,9 +78,9 @@ LONG CALLBACK export PreviewStatusProc(LPARAM lParam,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,23 +1,23 @@
 ---
-description: Die folgende Beispiel Nachrichtendatei zeigt, wie Sie eine Nachrichten Textdatei erstellen und verwenden, die Nachrichten in mehreren Sprachen definiert.
+description: Die folgende Beispielmeldungsdatei zeigt, wie Sie eine Meldungstextdatei erstellen und verwenden, die Nachrichten in mehreren Sprachen definiert.
 ms.assetid: 403eaccc-07a3-4368-a39a-18c706c65537
-title: Textdatei der Beispiel Nachricht
+title: Beispielnachrichtentextdatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2e4247b1e39ef94c006262f282d8d830af11851
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e60f59e6d20f53560da6f1230886fe6c8cbb54b9052b97c2293d0f49720743ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151486"
 ---
-# <a name="sample-message-text-file"></a>Textdatei der Beispiel Nachricht
+# <a name="sample-message-text-file"></a>Beispielnachrichtentextdatei
 
-Die folgende Beispiel Nachrichtendatei zeigt, wie Sie eine Nachrichten Textdatei erstellen und verwenden, die Nachrichten in mehreren Sprachen definiert.
+Die folgende Beispielmeldungsdatei zeigt, wie Sie eine Meldungstextdatei erstellen und verwenden, die Nachrichten in mehreren Sprachen definiert.
 
-## <a name="sample-message-file"></a>Beispiel Nachrichtendatei
+## <a name="sample-message-file"></a>Beispielnachrichtendatei
 
-Diese Beispiel Nachrichtendatei, Sample.MC, enthält einen Kommentar Block, gefolgt von einem Header Abschnitt, gefolgt von Nachrichten in zwei Sprachen. Sie müssen einen Unicode-kompatiblen Editor verwenden, um die Zeichen, die in verschiedenen geschriebenen Sprachen verwendet werden, gleichzeitig zu unterstützen. Weitere Informationen und eine ausführliche Beschreibung der Syntax von MC-Dateien finden Sie unter [Nachrichten Text Dateien](message-text-files.md).
+Diese Beispielmeldungsdatei, Sample.mc, enthält einen Kommentarblock, gefolgt von einem Headerabschnitt, gefolgt von Nachrichten in zwei Sprachen. Sie müssen einen Unicode-kompatiblen Editor verwenden, um gleichzeitig die Zeichen zu unterstützen, die in verschiedenen geschriebenen Sprachen verwendet werden. Weitere Informationen und eine ausführliche Beschreibung der Syntax von MC-Dateien finden Sie unter [Nachrichtentextdateien](message-text-files.md).
 
 ``` syntax
 ; // ***** Sample.mc *****

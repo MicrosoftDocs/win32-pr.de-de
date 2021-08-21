@@ -1,6 +1,6 @@
 ---
-title: PeapExtensionsV2 (Peer-extensionstype)-Element (v1)
-description: Erfahren Sie mehr über das PeapExtensionsV2 ("Peer-extensionstype")-Element. Dieses Element ermöglicht zukünftige Erweiterungen des Schemas. | PeapExtensionsV2 (Peer-extensionstype)-Element (v1)
+title: PeapExtensionsV2-Element (PeapExtensionsType) (V1)
+description: Erfahren Sie mehr über das PeapExtensionsV2-Element (PeapExtensionsType). Dieses Element ermöglicht zukünftige Verbesserungen am Schema. | PeapExtensionsV2-Element (PeapExtensionsType) (V1)
 ms.assetid: afac3a39-9cdc-42de-8f9e-c37405ec662a
 keywords:
 - PeapExtensionsV2-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a3cc78337fe3feb899dee47abe45904d26f863ae
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 094778bde778bf6d8252473b75583760507ff448c945939152e3e1501228ae72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086016"
 ---
-# <a name="peapextensionsv2-peapextensionstype-element-connection-properties-v1"></a>PeapExtensionsV2 (papextensionstype)-Element (Verbindungs Eigenschaften v1)
+# <a name="peapextensionsv2-peapextensionstype-element-connection-properties-v1"></a>PeapExtensionsV2-Element (PeapExtensionsType) (Verbindungseigenschaften v1)
 
-Das **PeapExtensionsV2 (etapextensionstype)** -Element ermöglicht zukünftige Erweiterungen des Schemas.
+Das **PeapExtensionsV2 -Element (PeapExtensionsType)** ermöglicht zukünftige Verbesserungen am Schema.
 
 ``` syntax
 <xs:element name="PeapExtensionsV2"
@@ -31,20 +31,20 @@ Das **PeapExtensionsV2 (etapextensionstype)** -Element ermöglicht zukünftige E
  />
 ```
 
-Das **PeapExtensionsV2** -Element wird durch das " [**Peer-extensionstype**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md) "-Element definiert.
+Das **PeapExtensionsV2-Element** wird durch das [**PeapExtensionsType-Element**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **PeapExtensionsV2** -Element ist optional.
+Das **PeapExtensionsV2-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -52,28 +52,28 @@ Das **PeapExtensionsV2** -Element ist optional.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Peer-extensionstype**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
+[**PeapExtensionsType**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**"Peer Erweiterungen"**](mspeapconnectionpropertiesv1schema-peapextensions-eaptype-element.md)
+[**PeapExtensions**](mspeapconnectionpropertiesv1schema-peapextensions-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv2-Schema](mspeapconnectionpropertiesv2schema-schema.md)
 </dt> <dt>
 
-[mspeapconnectionpropertiesv2-Schema Elemente](mspeapconnectionpropertiesv2schema-elements.md)
+[mspeapconnectionpropertiesv2-Schemaelemente](mspeapconnectionpropertiesv2schema-elements.md)
 </dt> <dt>
 
 [**Komplexer PeapExtensionsTypeV2-Typ**](mspeapconnectionpropertiesv2-peapextensionstypev2-complextype.md)

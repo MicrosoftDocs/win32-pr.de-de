@@ -29,7 +29,7 @@ Um Komponenten in einer Anwendung zu installieren, verwenden Sie Methoden für d
 
 Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **Applications-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
@@ -113,7 +113,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob die Anwendung 3 GB Arbeitsspeicher in ihrem Prozess verwenden kann. Wenn dies nicht aktiviert ist, kann die Anwendung nur 2 GB Arbeitsspeicher verwenden. |
 | Zugriff         | ReadWrite                                                                                                                                     |
-| Typ           | Bool                                                                                                                                          |
+| type           | Bool                                                                                                                                          |
 | Standard        | Falsch                                                                                                                                         |
 | Mindestsystem | Windows 2000                                                                                                                                  |
 
@@ -129,7 +129,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob Zugriffsüberprüfungen nur auf Prozessebene oder sowohl auf Prozess- als auch auf Komponentenebene ausgeführt werden. Es wird empfohlen, die Konstanten in der Enumeration und nicht die numerischen Werte zu verwenden. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                       |
-| Typ           | Lange mögliche Werte: COMAdminAccessChecksApplicationLevel (0) COMAdminAccessChecksApplicationComponentLevel (1)                                                                                                |
+| type           | Long Possible values: COMAdminAccessChecksApplicationLevel (0) COMAdminAccessChecksApplicationComponentLevel (1)                                                                                                |
 | Standard        | COMAdminAccessChecksApplicationComponentLevel (1)                                                                                                                                                               |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                    |
 
@@ -143,9 +143,9 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Die lokale Aktivierung gibt an, dass Objekte innerhalb der Anwendung innerhalb eines dedizierten lokalen Serverprozesses (Serveranwendung) ausgeführt werden. Die In-Process-Aktivierung gibt an, dass Objekte im Prozess ihres Erstellers (Bibliotheksanwendung) ausgeführt werden. |
+| Beschreibung    | Die lokale Aktivierung gibt an, dass Objekte innerhalb der Anwendung innerhalb eines dedizierten lokalen Serverprozesses (Serveranwendung) ausgeführt werden. Die In-Process-Aktivierung gibt an, dass Objekte im Prozess des Erstellers (Bibliotheksanwendung) ausgeführt werden. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                           |
-| Typ           | Long Possible values:COMAdminActivationInproc (0)COMAdminActivationLocal (1)                                                                                                                                                        |
+| type           | Long Possible values:COMAdminActivationInproc (0)COMAdminActivationLocal (1)                                                                                                                                                        |
 | Standard        | COMAdminActivationLocal (1)                                                                                                                                                                                                         |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                                        |
 
@@ -161,8 +161,8 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|----------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob Zugriffsüberprüfungen für die Anwendung ausgeführt werden, wenn Clients aufruft. |
 | Zugriff         | ReadWrite                                                                                          |
-| Typ           | Bool                                                                                               |
-| Standard        | Richtig                                                                                               |
+| type           | Bool                                                                                               |
+| Standard        | True                                                                                               |
 | Mindestsystem | Windows 2000                                                                                       |
 
 
@@ -175,7 +175,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Der vollständige Pfad zur Anwendung. Diese Informationen werden benötigt, wenn Sie SxS-Assemblys (Side-by-Side) konfigurieren. Mit SxS-Assemblys (Side-by-Side) können ASP-Anwendungen angeben, welche Version einer von SxS unterstützten System-DLL verwendet werden soll, z. B. MSVCRT, MSXML, COMCTL, GDIPLUS usw. Wenn Ihre ASP-Anwendung beispielsweise MSVCRT Version 2.0 verwendet, können Sie sicherstellen, dass Ihre Anwendung weiterhin MSVCRT Version 2.0 verwendet, auch nachdem Service Packs auf den Server angewendet wurden. Jede neue Version von MSVCRT wird weiterhin auf dem Computer installiert, version 2.0 bleibt jedoch bestehen und wird von Ihrer Anwendung verwendet. Von SxS unterstützte DLLs werden in %WINDIR% \\ WinSxS gespeichert. |
+| Beschreibung    | Der vollständige Pfad zur Anwendung. Diese Informationen sind erforderlich, wenn Sie SxS-Assemblys (Side-by-Side) konfigurieren. Mithilfe von SxS-Assemblys (Side-by-Side) können ASP-Anwendungen angeben, welche Version einer von SxS unterstützten System-DLL verwendet werden soll, z. B. MSVCRT, MSXML, COMCTL, GDIPLUS usw. Wenn Ihre ASP-Anwendung beispielsweise auf MSVCRT Version 2.0 basiert, können Sie sicherstellen, dass ihre Anwendung weiterhin MSVCRT Version 2.0 verwendet, auch nachdem Service Packs auf den Server angewendet wurden. Jede neue Version von MSVCRT ist weiterhin auf dem Computer installiert, version 2.0 bleibt jedoch erhalten und wird von Ihrer Anwendung verwendet. SxS-unterstützte DLLs werden in %WINDIR% \\ WinSxS gespeichert. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | type           | String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Standard        | ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -186,11 +186,11 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
  
 
 > [!Note]  
-> In jedem Anwendungspool kann nur eine Version einer System-DLL verwendet werden, obwohl dieses Feature auf Anwendungsebene konfiguriert werden kann. Wenn die Anwendung App1 beispielsweise MSVCRT, Version 2.5 und die Anwendung App2 MSVCRT, Version 2.4, verwendet, sollten sich App1 und App2 nicht im selben Anwendungspool befinden. Wenn dies der Lage ist, wird die Version von MSVCRT für die zuerst geladene Anwendung geladen, und die andere Anwendung wird gezwungen, sie zu verwenden, bis die Anwendungen entladen werden.
+> In jedem Anwendungspool kann nur eine Version einer System-DLL verwendet werden, obwohl dieses Feature auf Anwendungsebene konfigurierbar ist. Wenn die Anwendung App1 beispielsweise MSVCRT, Version 2.5 und App2 MSVCRT, Version 2.4 verwendet, sollten sich App1 und App2 nicht im gleichen Anwendungspool befindet. Wenn dies der Dera ist, wird die Version von MSVCRT für die zuerst geladene Anwendung geladen, und die andere Anwendung wird gezwungen, sie zu verwenden, bis die Anwendungen entladen werden.
 
  
 
-Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen in COM+-Diensten in IIS 6.0.](/previous-versions/iis/6.0-sdk/ms526018(v=vs.90))
+Weitere Informationen finden Sie unter "Side-by-Side Assemblies" in [Changes in COM+ Services in IIS 6.0](/previous-versions/iis/6.0-sdk/ms526018(v=vs.90)).
 
 ### <a name="applicationproxy"></a>ApplicationProxy
 
@@ -200,7 +200,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob die Anwendung ein Anwendungsproxy ist. |
 | Zugriff         | ReadOnly                                                   |
-| Typ           | Bool                                                       |
+| type           | Bool                                                       |
 | Standard        | Falsch                                                      |
 | Mindestsystem | Windows 2000                                               |
 
@@ -214,7 +214,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Ein Remoteservername, der beim Exportieren des Anwendungsproxys verwendet wird. Auf diesen Servernamen verweist der Anwendungsproxy, wenn er auf einem Clientcomputer installiert ist. |
+| Beschreibung    | Ein Remoteservername, der beim Exportieren des Anwendungsproxys verwendet wird. Auf diesen Servernamen verweist der Anwendungsproxy, wenn er auf einem Clientcomputer installiert wird. |
 | Zugriff         | ReadWrite                                                                                                                                                              |
 | type           | String                                                                                                                                                                 |
 | Standard        | ""                                                                                                                                                                     |
@@ -246,9 +246,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Legt die Authentifizierungsebene für Aufrufe mit Werten fest, die den RPC-Authentifizierungseinstellungen (Remote Procedure Call) entsprechen. Wenn COMAdminAuthenticationDefault ausgewählt wird, wird die Einstellung in der DefaultAuthenticationLevel-Eigenschaft in der [**LocalComputer-Auflistung**](localcomputer.md) verwendet. |
+| Beschreibung    | Legt die Authentifizierungsebene für Aufrufe mit Werten fest, die den RPC-Authentifizierungseinstellungen (Remote Procedure Call) entspricht. Wenn COMAdminAuthenticationDefault ausgewählt wird, wird die Einstellung in der DefaultAuthenticationLevel-Eigenschaft in der [**LocalComputer-Sammlung**](localcomputer.md) verwendet. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                             |
-| Typ           | Long Possible values:COMAdminAuthenticationDefault (0)COMAdminAuthenticationNone (1) COMAdminAuthenticationConnect (2)COMAdminAuthenticationCall (3)COMAdminAuthenticationPacket (4)COMAdminAuthenticationIntegrity (5)COMAdminAuthenticationPrivacy (6)                                              |
+| type           | Lange mögliche Werte:COMAdminAuthenticationDefault (0)COMAdminAuthenticationNone (1) COMAdminAuthenticationConnect (2)COMAdminAuthenticationCall (3)COMAdminAuthenticationPacket (4)COMAdminAuthenticationIntegrity (5)COMAdminAuthenticationPrivacy (6)                                              |
 | Standard        | COMAdminAuthenticationPacket (4)                                                                                                                                                                                                                                                                      |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                          |
 
@@ -257,7 +257,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
  
 
 > [!Note]  
-> Für Bibliotheksanwendungen (in Bearbeitung) sind comAdminAuthenticationDefault und COMAdminAuthenticationNone die einzigen gültigen Einstellungen. Es wird empfohlen, die Konstanten in der Enumeration und nicht die numerischen Werte zu verwenden.
+> Für Bibliotheksanwendungen (in-process) sind die einzigen gültigen Einstellungen hier COMAdminAuthenticationDefault und COMAdminAuthenticationNone. Es wird empfohlen, die Konstanten in der Enumeration und nicht die numerischen Werte zu verwenden.
 
  
 
@@ -267,9 +267,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Bestimmt, welche Identität beim Identitätswechsel von Aufrufen dargestellt wird.                                                                                                                                                                      |
+| Beschreibung    | Bestimmt, welche Identität angezeigt wird, wenn Die Identität von Aufrufen angenommen wird.                                                                                                                                                                      |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                               |
-| Typ           | Long Possible values:COMAdminAuthenticationCapabilitiesNone (0x0)COMAdminAuthenticationCapabilitiesSecureReference (0x2)COMAdminAuthenticationCapabilitiesStaticCloaking (0x20)COMAdminAuthenticationCapabilitiesDynamicCloaking (0x40) |
+| type           | Lange mögliche Werte:COMAdminAuthenticationCapabilitiesNone (0x0)COMAdminAuthenticationCapabilitiesSecureReference (0x2)COMAdminAuthenticationCapabilitiesStaticCloaking (0x20)COMAdminAuthenticationCapabilitiesDynamicCloaking (0x40) |
 | Standard        | COMAdminAuthenticationCapabilitiesDynamicCloaking (0x40)                                                                                                                                                                                |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                                            |
 
@@ -283,9 +283,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Bestimmt, ob Änderungen an den Anwendungseinstellungen oder deren Komponenten entweder programmgesteuert oder über das Verwaltungstool komponentendienste zulässig sind. |
+| Beschreibung    | Bestimmt, ob Änderungen an den Anwendungseinstellungen oder an den Änderungen der Komponenten zulässig sind, entweder programmgesteuert oder über das Verwaltungstool Komponentendienste. |
 | Zugriff         | ReadWrite                                                                                                                                                                     |
-| Typ           | Bool                                                                                                                                                                          |
+| type           | Bool                                                                                                                                                                          |
 | Standard        | Richtig                                                                                                                                                                          |
 | Mindestsystem | Windows 2000                                                                                                                                                                  |
 
@@ -315,9 +315,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|----------------------------------------------------------------------------------|
-| Beschreibung    | Gibt die maximale Anzahl von Poolanwendungen an, die gleichzeitig ausgeführt werden können. |
+| Beschreibung    | Gibt die maximale Anzahl von poolfähigen Anwendungen an, die gleichzeitig ausgeführt werden können. |
 | Zugriff         | ReadWrite                                                                        |
-| Typ           | Long (1-1048576)                                                                 |
+| type           | Long (1-1048576)                                                                 |
 | Standard        | 1                                                                                |
 | Mindestsystem | Windows XP                                                                       |
 
@@ -347,9 +347,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------|
-| Beschreibung    | Bestimmt, ob die ausgleichende Resource Manager aktiviert ist. |
+| Beschreibung    | Bestimmt, ob die kompensierende Resource Manager aktiviert ist. |
 | Zugriff         | ReadWrite                                                        |
-| Typ           | Bool                                                             |
+| type           | Bool                                                             |
 | Standard        | Falsch                                                            |
 | Mindestsystem | Windows 2000                                                     |
 
@@ -373,7 +373,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
  
 
-### <a name="deleteable"></a>Deleteable
+### <a name="deleteable"></a>Löschbar
 
 
 
@@ -381,8 +381,8 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|-----------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Legt fest, ob die Anwendung entweder programmgesteuert oder über das Verwaltungstool komponentendienste gelöscht werden kann. |
 | Zugriff         | ReadWrite                                                                                                                   |
-| Typ           | Bool                                                                                                                        |
-| Standard        | Richtig                                                                                                                        |
+| type           | Bool                                                                                                                        |
+| Standard        | True                                                                                                                        |
 | Mindestsystem | Windows 2000                                                                                                                |
 
 
@@ -413,7 +413,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|-------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Aktiviert das Speicherabbild des Zustands einer COM+-Anwendung zum Zeitpunkt des Fehlers in einem bestimmten Verzeichnis. |
 | Zugriff         | ReadWrite                                                                                             |
-| Typ           | Bool                                                                                                  |
+| type           | Bool                                                                                                  |
 | Standard        | Falsch                                                                                                 |
 | Mindestsystem | Windows XP                                                                                            |
 
@@ -434,7 +434,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Aktiviert das Speicherabbild des Zustands einer COM+-Anwendung, wenn die Anwendung eine nicht behandelte Ausnahme verursacht und von der COM+-Runtime beendet wird. |
 | Zugriff         | ReadWrite                                                                                                                                     |
-| Typ           | Bool                                                                                                                                          |
+| type           | Bool                                                                                                                                          |
 | Standard        | Falsch                                                                                                                                         |
 | Mindestsystem | Windows XP                                                                                                                                    |
 
@@ -450,7 +450,7 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|---------------------------------------------------------------------------------|
 | Beschreibung    | Aktiviert das Speicherabbild des Zustands einer COM+-Anwendung, wenn die Anwendung fehlschlägt. |
 | Zugriff         | ReadWrite                                                                       |
-| Typ           | Bool                                                                            |
+| type           | Bool                                                                            |
 | Standard        | Falsch                                                                           |
 | Mindestsystem | Windows XP                                                                      |
 
@@ -487,15 +487,15 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 |----------------|-----------------------------------------------------------|
 | Beschreibung    | Gibt an, ob Ereignisse für die Anwendung aktiviert sind. |
 | Zugriff         | ReadWrite                                                 |
-| Typ           | Bool                                                      |
-| Standard        | Richtig                                                      |
+| type           | Bool                                                      |
+| Standard        | True                                                      |
 | Mindestsystem | Windows 2000                                              |
 
 
 
  
 
-### <a name="id"></a>ID
+### <a name="id"></a>id
 
 
 
@@ -511,13 +511,13 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
  
 
-### <a name="identity"></a>Identity
+### <a name="identity"></a>Identität
 
 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Legt die Serverprozessidentität für die Anwendung fest. Geben Sie ein gültiges Benutzerkonto oder einen "interaktiven Benutzer" an, damit die Anwendung die Identität des aktuellen angemeldeten Benutzers an nimmt. Sie können auch die Zeichenfolgen "nt authority \\ localservice", "nt authority \\ networkservice" und "nt authority \\ system" angeben. Das Standardkennwort für diese drei Konten ist "" (leere Zeichenfolge). |
+| Beschreibung    | Legt die Serverprozessidentität für die Anwendung fest. Geben Sie ein gültiges Benutzerkonto oder "Interaktiver Benutzer" an, damit die Anwendung die Identität des aktuell angemeldeten Benutzers annimmt. Sie können auch die Zeichenfolgen "nt authority \\ localservice", "nt authority \\ networkservice" und "nt authority \\ system" angeben. Das Standardkennwort für diese drei Konten ist "" (leere Zeichenfolge). |
 | Zugriff         |                                                                                                                                                                                                                                                                                                                                                                                    |
 | type           |                                                                                                                                                                                                                                                                                                                                                                                    |
 | Standard        |                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -527,9 +527,9 @@ Weitere Informationen finden Sie unter "Parallele Assemblys" unter [Änderungen 
 
  
 
-Die Identity-Eigenschaft ist für Bibliotheksanwendungen, die im Clientprozess ausgeführt werden, nicht aktiviert.
+Die Identity-Eigenschaft ist nicht für Bibliotheksanwendungen aktiviert, die im Clientprozess ausgeführt werden.
 
-Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)zur gleichen Zeit wie Identity festgelegt werden, da das Kennwort und die Identität vor dem Speichern überprüft werden. Wenn das Kennwort und die Identität nicht mehr synchron sind, kann die Anwendung erst gestartet werden, wenn sie von einem Administrator zurückgesetzt werden.
+Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)zur gleichen Zeit wie Identity festgelegt werden, da das Kennwort und die Identität vor dem Speichern überprüft werden. Wenn das Kennwort und die Identität nicht mehr synchron sind, kann die Anwendung erst gestartet werden, wenn sie von einem Administrator zurückgesetzt wurden.
 
 ### <a name="impersonationlevel"></a>ImpersonationLevel
 
@@ -539,8 +539,8 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Legt die Identitätswechselebene fest, die für Aufrufe an andere Anwendungen verwendet wird.                                                                                           |
 | Zugriff         | ReadWrite                                                                                                                                                     |
-| Typ           | Long Possible values:COMAdminImpersonationAnonymous (1)COMAdminImpersonationIdentify (2)COMAdminImpersonationImpersonate (3)COMAdminImpersonationDelegate (4) |
-| Standard        | COMAdminImpersonationImpersonate (3)                                                                                                                          |
+| type           | Lange mögliche Werte:COMAdminImpersonationAnonymous (1)COMAdminImpersonationIdentify (2)COMAdminImpersonationImpersonate (3)COMAdminImpersonationDelegate (4) |
+| Standard        | COMAdminImpersonationPersonate (3)                                                                                                                          |
 | Mindestsystem | Windows 2000                                                                                                                                                  |
 
 
@@ -555,8 +555,8 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Wenn die COM+-Anwendung oder -Komponente deaktiviert ist, ist IsEnabled false. Wenn die COM+-Anwendung oder -Komponente aktiviert ist, ist IsEnabled true. |
 | Zugriff         | ReadWrite                                                                                                                                 |
-| Typ           | Bool                                                                                                                                      |
-| Standard        | Richtig                                                                                                                                      |
+| type           | Bool                                                                                                                                      |
+| Standard        | True                                                                                                                                      |
 | Mindestsystem | Windows XP                                                                                                                                |
 
 
@@ -571,7 +571,7 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
 |----------------|--------------------------------------|
 | Beschreibung    | Identifiziert COM+-Systemanwendungen. |
 | Zugriff         | ReadOnly                             |
-| Typ           | Bool                                 |
+| type           | Bool                                 |
 | Standard        | Falsch                                |
 | Mindestsystem | Windows 2000                         |
 
@@ -587,7 +587,7 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
 |----------------|----------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Anzahl von Dateien an, die vor dem Überschreiben generiert werden sollen. |
 | Zugriff         | ReadWrite                                                                        |
-| Typ           | Long (1-200)                                                                     |
+| type           | Long (1-200)                                                                     |
 | Standard        | 5                                                                                |
 | Mindestsystem | Windows XP                                                                       |
 
@@ -612,7 +612,7 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
  
 
 > [!Note]  
-> Für Anwendungen sollten eindeutige Namen ausgewählt werden. Wenn mehrere Anwendungen mit demselben Namen erstellt werden, kann dies den Verweise auf die Anwendungen nach Namen beeinträchtigen, was zu unvorhersehbarem Verhalten führt.
+> Eindeutige Namen sollten für Anwendungen ausgewählt werden. Wenn mehrere Anwendungen mit dem gleichen Namen erstellt werden, kann es zu Konflikten beim Verweisen auf die Anwendungen anhand des Namens kommen, was zu unvorhersehbaren Verhaltensweisen führen kann.
 
  
 
@@ -632,7 +632,7 @@ Die Password-Eigenschaft sollte vor der Verwendung von [**SaveChanges**](/window
 
  
 
-Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)zur gleichen Zeit wie identity festgelegt werden, da das Kennwort und die Identität vor dem Speichern überprüft werden. Wenn das Kennwort und die Identität nicht mehr synchron sind, kann die Anwendung erst gestartet werden, wenn sie von einem Administrator zurückgesetzt werden.
+Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)zur gleichen Zeit wie Identity festgelegt werden, da das Kennwort und die Identität vor dem Speichern überprüft werden. Wenn das Kennwort und die Identität nicht mehr synchron sind, kann die Anwendung erst gestartet werden, wenn sie von einem Administrator zurückgesetzt werden.
 
 ### <a name="qcauthenticatemsgs"></a>QCAuthenticateMsgs
 
@@ -642,7 +642,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, unter welchen Umständen Anforderungen in der Warteschlange an eine Anwendung authentifiziert werden.                                                 |
 | Zugriff         | ReadWrite                                                                                                                               |
-| Typ           | Long Possible values:COMAdminQCMessageAuthenticateSecureApps (0)COMAdminQCMessageAuthenticateOff (1)COMAdminQCMessageAuthenticateOn (2) |
+| type           | Long Possible values:COMAdminQCMessageAuthenticateSecureApps (0)COMAdminQCMessageAuthenticateOff (1)COMAdminQCMessageAuthenticateOn (2) |
 | Standard        | COMAdminQCMessageAuthenticateSecureApps (0)                                                                                             |
 | Mindestsystem | Windows XP                                                                                                                              |
 
@@ -658,7 +658,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Anzahl gleichzeitiger Listenerthreads an. Der gültige Bereich für diese Eigenschaft ist 0 bis 1000. Bei einer neu erstellten Anwendung wird die Einstellung von dem Algorithmus abgeleitet, der derzeit zum Bestimmen der Standardanzahl von Listenerthreads verwendet wird: das 16-fache der Anzahl von CPUs auf dem Server. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                 |
-| Typ           | Long (0-1000)                                                                                                                                                                                                                                                                                             |
+| type           | Long (0-1000)                                                                                                                                                                                                                                                                                             |
 | Standard        | 0                                                                                                                                                                                                                                                                                                         |
 | Mindestsystem | Windows XP                                                                                                                                                                                                                                                                                                |
 
@@ -677,9 +677,9 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 
 | Eingabe | Wert |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Gibt an, ob der Listener für komponenten in der Warteschlange für die Anwendung aktiviert ist. Wenn diese Option aktiviert ist, wird der Listener gestartet, wenn die Anwendung gestartet wird. Diese Eigenschaft wird nur wirksam, wenn QueuingEnabled auf True festgelegt ist. |
+| Beschreibung    | Gibt an, ob der Listener für komponenten in der Warteschlange für die Anwendung aktiviert ist. Wenn diese Option aktiviert ist, wird der Listener beim Starten der Anwendung gestartet. Diese Eigenschaft wird nur wirksam, wenn QueuingEnabled auf True festgelegt ist. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                            |
-| Typ           | Bool                                                                                                                                                                                                                 |
+| type           | Bool                                                                                                                                                                                                                 |
 | Standard        | Falsch                                                                                                                                                                                                                |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                         |
 
@@ -695,7 +695,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|--------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob der COM+ Queued Components-Dienst für die Anwendung aktiviert ist. |
 | Zugriff         | ReadWrite                                                                            |
-| Typ           | Bool                                                                                 |
+| type           | Bool                                                                                 |
 | Standard        | Falsch                                                                                |
 | Mindestsystem | Windows 2000                                                                         |
 
@@ -711,7 +711,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Anzahl von Aktivierungen konfigurierter Objekte in der Anwendung an, die vor dem Wiederverwerten des Prozesses akzeptiert werden. Die Standardanzahl der Aktivierungen ist 0. |
 | Zugriff         | ReadWrite                                                                                                                                                            |
-| Typ           | Long (0-1048576)                                                                                                                                                     |
+| type           | Long (0-1048576)                                                                                                                                                     |
 | Standard        | 0                                                                                                                                                                    |
 | Mindestsystem | Windows XP                                                                                                                                                           |
 
@@ -727,7 +727,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Anzahl von Aufrufen an, mit denen konfigurierte Objekte in der Anwendung akzeptiert werden können, bevor der Prozess wiederverwertet wird. Die Standardanzahl der Aufrufe ist 0. |
 | Zugriff         | ReadWrite                                                                                                                                                      |
-| Typ           | Long (0-1048576)                                                                                                                                               |
+| type           | Long (0-1048576)                                                                                                                                               |
 | Standard        | 0                                                                                                                                                              |
 | Mindestsystem | Windows XP                                                                                                                                                     |
 
@@ -741,9 +741,9 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Gibt an, wie lange (in Minuten) ein wiederverwendeter Prozess ausgeführt werden kann, bevor er heruntergefahren wird. Der Countdown beginnt unmittelbar nach dem Recyceln des Prozesses. Das maximale Ablaufdatum beträgt 1.440 Minuten (24 Stunden), und der Standardwert beträgt 15 Minuten. |
+| Beschreibung    | Gibt die Zeit (in Minuten) an, nach der ein wiederverwendeter Prozess ausgeführt werden kann, bevor er heruntergefahren wird. Der Countdown beginnt unmittelbar nach dem Recyceln des Prozesses. Das maximale Ablaufdatum beträgt 1.440 Minuten (24 Stunden), und der Standardwert beträgt 15 Minuten. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                        |
-| Typ           | Long (1-1440)                                                                                                                                                                                                                                                    |
+| type           | Long (1-1440)                                                                                                                                                                                                                                                    |
 | Standard        | 15                                                                                                                                                                                                                                                               |
 | Mindestsystem | Windows XP                                                                                                                                                                                                                                                       |
 
@@ -759,7 +759,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Anzahl von Minuten an, die ein Prozess ausgeführt werden kann, bevor er wiederverwendet wird. Die maximale Lebensdauer beträgt 3.0240 Minuten (21 Tage), und der Standardwert ist 0 Minuten. |
 | Zugriff         | ReadWrite                                                                                                                                                                   |
-| Typ           | Long (0-30240)                                                                                                                                                              |
+| type           | Long (0-30240)                                                                                                                                                              |
 | Standard        | 0                                                                                                                                                                           |
 | Mindestsystem | Windows XP                                                                                                                                                                  |
 
@@ -775,7 +775,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die maximale Speicherauslastung (in Kilobyte) an, die ein Prozess vor der Wiederverwendung zulässig ist. Wenn die Arbeitsspeicherauslastung des Prozesses die angegebene Anzahl für einen längeren Zeitraum als eine Minute überschreitet, wird der Prozess wiederverwendet. Die Standardspeicherauslastung beträgt 0 KB. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                              |
-| Typ           | Long (0-1048576)                                                                                                                                                                                                                                                       |
+| type           | Long (0-1048576)                                                                                                                                                                                                                                                       |
 | Standard        | 0                                                                                                                                                                                                                                                                      |
 | Mindestsystem | Windows XP                                                                                                                                                                                                                                                             |
 
@@ -791,8 +791,8 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|------------------------------------------------------|
 | Beschreibung    | Gibt an, ob die Anwendung repliziert werden kann. |
 | Zugriff         | ReadWrite                                            |
-| Typ           | Bool                                                 |
-| Standard        | Richtig                                                 |
+| type           | Bool                                                 |
+| Standard        | True                                                 |
 | Mindestsystem | Windows XP                                           |
 
 
@@ -807,7 +807,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Aktiviert, dass ein Serverprozess fortgesetzt wird, wenn sich eine Anwendung im Leerlauf befindet. Wenn true festgelegt ist, wird der Serverprozess nicht heruntergefahren, wenn er im Leerlauf bleibt. Wenn false festgelegt ist, wird der Prozess entsprechend dem Wert heruntergefahren, der von der ShutdownAfter-Eigenschaft festgelegt wird. RunForever ist nicht für Bibliotheksanwendungen (in-process) aktiviert. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                |
-| Typ           | Bool                                                                                                                                                                                                                                                                                                     |
+| type           | Bool                                                                                                                                                                                                                                                                                                     |
 | Standard        | Falsch                                                                                                                                                                                                                                                                                                    |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                                                                                                             |
 
@@ -839,7 +839,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Legt die Verzögerung fest, bevor ein Serverprozess heruntergefahren wird, nachdem er sich im Leerlauf befindet. Die Wartezeit beim Herunterfahren liegt zwischen 0 und 1440 Minuten (24 Stunden). Wenn RunForever auf True festgelegt ist, wird diese Eigenschaft ignoriert. ShutdownAfter ist für Bibliotheksanwendungen (in Bearbeitung) nicht aktiviert. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                          |
-| Typ           | Long (0-1440)                                                                                                                                                                                                                                                      |
+| type           | Long (0-1440)                                                                                                                                                                                                                                                      |
 | Standard        | 3                                                                                                                                                                                                                                                                  |
 | Mindestsystem | Windows 2000                                                                                                                                                                                                                                                       |
 
@@ -855,7 +855,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|--------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob diese Anwendung für die Verwendung über das SOAP-Protokoll verfügbar gemacht wird. |
 | Zugriff         | ReadWrite                                                                            |
-| Typ           | Bool                                                                                 |
+| type           | Bool                                                                                 |
 | Standard        | Falsch                                                                                |
 | Mindestsystem | Windows Server 2003                                                                  |
 
@@ -919,7 +919,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Bestimmt die Softwareeinschränkungsrichtlinie (Software Restriction Policy, SRP) für die Anwendung. Wenn true festgelegt ist, wird die SRPTrustLevel-Eigenschaft für die Anwendung verwendet. Wenn diese Einstellung auf FALSE festgelegt ist, werden die Richtlinien für Softwareeinschränkungen aus den lokalen Sicherheitseinstellungen verwendet. Die lokalen Sicherheitseinstellungen werden über das Snap-In Lokale Sicherheitsrichtlinie des Microsoft Management Console gesteuert. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                             |
-| Typ           | Bool                                                                                                                                                                                                                                                                                                                                                                  |
+| type           | Bool                                                                                                                                                                                                                                                                                                                                                                  |
 | Standard        | Falsch                                                                                                                                                                                                                                                                                                                                                                 |
 | Mindestsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                            |
 
@@ -935,7 +935,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Beschreibung    | Gibt die Vertrauensebene der Softwareeinschränkungsrichtlinie (Software Restriction Policy, SRP) der Anwendung an. Diese Eigenschaft wird nur verwendet, wenn die SRPEnabled-Eigenschaft auf True festgelegt ist. Die SRP-Vertrauensebene bezieht sich auf die Vertrauensebene, die Sie einer Anwendung erteilen möchten. Eine uneingeschränkte SRP-Vertrauensebene entspricht dem SAFER \_ LEVELID \_ FULLYTRUSTED-Enumerationswert, während eine Nicht zugelassene SRP-Vertrauensebene dem SAFER \_ LEVELID \_ DISALLOWED-Enumerationswert entspricht. Die Enumeration für die Vertrauensebenen wird in Winsafer.h definiert. |
 | Zugriff         | ReadWrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Typ           | Lange mögliche Werte:SAFER \_ LEVELID \_ DISALLOWED (0x0)SAFER \_ LEVELID \_ FULLYTRUSTED (0x40000)                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| type           | Lange mögliche Werte:SAFER \_ LEVELID \_ DISALLOWED (0x0)SAFER \_ LEVELID \_ FULLYTRUSTED (0x40000)                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Standard        | SAFER \_ LEVELID \_ FULLYTRUSTED (0x40000)                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Mindestsystem | Windows XP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
@@ -945,7 +945,7 @@ Das Kennwort sollte vor der Verwendung von [**SaveChanges**](/windows/desktop/ap
 
 An eine Anwendung, der Sie mit uneingeschränktem Zugriff vertrauen möchten, sollte die strengste Sicherheit angefügt sein. Anwendungen, die unrestricted sind, können nur uneingeschränkte Komponenten laden, während Unzulässige Anwendungen nicht ausgeführt werden dürfen und daher keine Komponenten laden können.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

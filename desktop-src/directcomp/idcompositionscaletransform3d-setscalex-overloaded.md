@@ -27,7 +27,7 @@ ms.locfileid: "118505520"
 
 
 
-| Methode                                                                                                        | BESCHREIBUNG                                           |
+| Methode                                                                                                        | Beschreibung                                           |
 |:--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------|
 | [**SetScaleX(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(float))                                     | Ändert den Wert der ScaleX-Eigenschaft.<br/>  |
 | [**SetScaleX(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(idcompositionanimation)) | Animiert den Wert der ScaleX-Eigenschaft.<br/> |
@@ -48,7 +48,7 @@ ms.locfileid: "118505520"
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

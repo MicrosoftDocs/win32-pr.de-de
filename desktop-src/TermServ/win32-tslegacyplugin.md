@@ -4,7 +4,7 @@ description: Stellt einen Remotedesktop Server dar, den die integrierten RemoteA
 ms.assetid: 99bec477-ae9d-4bc9-bf9d-11a4e439306b
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSLegacyPlugin-Klasse Remotedesktopdienste
+- Win32_TSLegacyPlugin-Klassen-Remotedesktopdienste
 - Win32_TSLegacyPlugin-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
@@ -215,7 +215,7 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Typ des Remotedesktopdienste Servers.
+Der Typ des Remotedesktopdienste-Servers.
 
 <dt>
 

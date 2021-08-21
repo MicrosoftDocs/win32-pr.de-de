@@ -24,7 +24,7 @@ ms.locfileid: "118501518"
 
 
 
-| Thema                                                       | BESCHREIBUNG                                    |
+| Thema                                                       | Beschreibung                                    |
 |-------------------------------------------------------------|------------------------------------------------|
 | [**XMBYTEN2-Konstruktoren**](xmbyten2-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMBYTEN2` werden.<br/> |
 | [XMBYTEN2-Operatoren](ovw-xmbyten2-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMBYTEN2` werden.<br/>    |

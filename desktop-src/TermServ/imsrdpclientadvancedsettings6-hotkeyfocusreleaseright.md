@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 HotKeyFocusReleaseRight-Eigenschaft
-description: Gibt den Virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.
+title: IMsRdpClientAdvancedSettings6 HotKeyFocusReleaseRight (Eigenschaft)
+description: Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.
 ms.assetid: 9AEEB712-E4C4-435E-A847-40C2B3A41C15
 ms.tgt_platform: multiple
 keywords:
-- HotKeyFocusReleaseRight-Eigenschaft Remotedesktopdienste
+- HotKeyFocusReleaseRight-Remotedesktopdienste
 - HotKeyFocusReleaseRight-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight-Eigenschaft
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight (Eigenschaft)
 - HotKeyFocusReleaseRight-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight-Eigenschaft
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight(Eigenschaft)
 - HotKeyFocusReleaseRight-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight-Eigenschaft
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyFocusReleaseRight(Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -36,9 +36,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352274"
 ---
-# <a name="imsrdpclientadvancedsettings6hotkeyfocusreleaseright-property"></a>IMsRdpClientAdvancedSettings6::HotKeyFocusReleaseRight-Eigenschaft
+# <a name="imsrdpclientadvancedsettings6hotkeyfocusreleaseright-property"></a>IMsRdpClientAdvancedSettings6::HotKeyFocusReleaseRight (Eigenschaft)
 
-Gibt den Virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.
+Gibt den virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+NACH-RECHTS-TASTE zu bestimmen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,7 +59,7 @@ HRESULT get_HotKeyFocusReleaseRight(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code für virtuelle Schlüssel.
+Der neue Virtuelle Schlüsselcode.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -79,7 +79,7 @@ Diese Eigenschaft wird nur von Remotedesktopverbindung 6.1- und 7.0-Clients unte
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -4,8 +4,8 @@ description: Rückwärtszeiger auf Fremdobjekte.
 ms.assetid: 99d6d80f-b11a-48f2-93c9-866a99105488
 ms.tgt_platform: multiple
 keywords:
-- Remote-Source AD-Schema
-- remoteSource-Attribut AD-Schema
+- Remote-Source AD-Attributschema
+- REMOTESOURCE-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.107                      |
-| System-Id-Guid    | bf967a14-0de6-11d0-a285-00aa003049e2        |
+| System-ID-GUID    | bf967a14-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Is-Single-Valued       | True                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
@@ -66,7 +66,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-E-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Is-Single-Valued       | True                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
@@ -87,7 +87,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-E-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Rückwärtszeiger auf Fremdobjekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Is-Single-Valued       | True                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |

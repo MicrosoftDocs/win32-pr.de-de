@@ -1,7 +1,7 @@
 ---
-description: Die Aufruf Methode ermöglicht den Zugriff auf Eigenschaften und Methoden, die vom-Objekt verfügbar gemacht werden.
+description: Die Invoke-Methode ermöglicht den Zugriff auf Eigenschaften und Methoden, die vom -Objekt verfügbar gemacht werden.
 ms.assetid: 3c03751d-239b-4cc5-bfab-8d1aed1074b8
-title: Cmediaposition. aufrufen-Methode (ctlutil. h)
+title: CMediaPosition.Invoke-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3955848bf2a87e0983ddd7dc3bef48f157ae6648
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6dac439b94a62e9dbd11ca9e12ab80023071fc00cf22abcf6b9b4b93b07c356c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156856"
 ---
-# <a name="cmediapositioninvoke-method"></a>Cmediaposition. aufrufen-Methode
+# <a name="cmediapositioninvoke-method"></a>CMediaPosition.Invoke-Methode
 
-Die- `Invoke` Methode ermöglicht den Zugriff auf Eigenschaften und Methoden, die vom-Objekt verfügbar gemacht werden.
+Die `Invoke` -Methode ermöglicht den Zugriff auf Eigenschaften und Methoden, die vom -Objekt verfügbar gemacht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,24 +49,24 @@ HRESULT Invoke(
 
 <dl> <dt>
 
-*dispidmember* 
+*dispidMember* 
 </dt> <dd>
 
-Der Bezeichner des Members. Verwenden Sie [**cmediaposition:: GetIDsOfNames**](cmediaposition-getidsofnames.md) , um den Dispatchbezeichner abzurufen.
+Bezeichner des Mitglieds. Verwenden [**Sie CMediaPosition::GetIDsOfNames,**](cmediaposition-getidsofnames.md) um den Dispatchbezeichner zu erhalten.
 
 </dd> <dt>
 
 *riid* 
 </dt> <dd>
 
-Für die zukünftige Verwendung reserviert. Muss IID \_ NULL sein.
+Für die zukünftige Verwendung reserviert. Muss IID NULL \_ sein.
 
 </dd> <dt>
 
 *lcid* 
 </dt> <dd>
 
-Der Gebiets Schema Kontext, in dem Argumente interpretiert werden sollen.
+Der Locale-Kontext, in dem Argumente interpretiert werden.
 
 </dd> <dt>
 
@@ -77,44 +77,44 @@ Flags, die den Kontext des Aufrufs beschreiben.
 
 </dd> <dt>
 
-*pdispparameams* 
+*pdispparams* 
 </dt> <dd>
 
-Zeiger auf eine **dipparams** -Struktur, die die Argumente enthält.
+Zeiger auf eine **DIPPARAMS-Struktur,** die die Argumente enthält.
 
 </dd> <dt>
 
-*pVarResult* 
+*pvarResult* 
 </dt> <dd>
 
-Zeiger auf eine **Variante** , die das Ergebnis empfängt, oder **null** , wenn der Aufrufer kein Ergebnis erwartet.
+Zeiger auf  einen VARIANT-Wert, der das Ergebnis empfängt, oder **NULL,** wenn der Aufrufer kein Ergebnis erwartet.
 
 </dd> <dt>
 
 *pexcepinfo* 
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die Ausnahme Informationen empfängt.
+Zeiger auf eine -Struktur, die Ausnahmeinformationen empfängt.
 
 </dd> <dt>
 
-*gibt puArgErr* 
+*puArgErr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den Index des ersten Arguments empfängt, das einen Fehler verursacht.
+Zeiger auf eine Variable, die den Index des ersten Arguments empfängt, das einen Fehler verursacht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                     | Erfolg.<br/>                              |
-| <dl> <dt>**DISP \_ E \_ unknowninterface**</dt> </dl> | Der *riid* -Parameter ist nicht IID \_ NULL.<br/> |
+| <dl> <dt>**DISP \_ E \_ UNKNOWNINTERFACE**</dt> </dl> | Der *riid-Parameter* ist nicht IID \_ NULL.<br/> |
 
 
 
@@ -126,8 +126,8 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -135,7 +135,7 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 <dl> <dt>
 
-[**Cmediaposition-Klasse**](cmediaposition.md)
+[**CMediaPosition-Klasse**](cmediaposition.md)
 </dt> </dl>
 
  

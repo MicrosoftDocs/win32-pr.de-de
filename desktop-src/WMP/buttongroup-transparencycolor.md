@@ -3,7 +3,7 @@ title: BUTTONGROUP.transparencyColor
 description: Das transparencyColor-Attribut gibt die transparente Farbe der BUTTONGROUP-Bilder an oder ruft sie ab.
 ms.assetid: 604c5b29-50b9-4df6-9e48-488bf4fb7227
 keywords:
-- BUTTONGROUP.transparencyColor-Windows Media Player
+- BUTTONGROUP.transparencyColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -29,14 +29,14 @@ Das **transparencyColor-Attribut** gibt die transparente Farbe der **BUTTONGROUP
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff ohne Standardwert, die einen der folgenden Werte enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff ohne Standardwert, die einen der folgenden Werte enthält.
 
 
 
-| Wert                                       | BESCHREIBUNG                                                                                        |
+| Wert                                       | Beschreibung                                                                                        |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Automatisch                                        | Das Pixel an position 0,0 im Bild wird zur transparenten Farbe.                              |
-| einen beliebigen Microsoft Internet Explorer-Farbwert | Ein Internet Explorer-Farbwert wird zur transparenten Farbe (z. B. "red" oder " \# FF0000"). |
+| Automatisch                                        | Das Pixel an Position 0,0 im Bild wird zur transparenten Farbe.                              |
+| beliebiger Microsoft Internet Explorer-Farbwert | Ein Internet Explorer Farbwert wird zur transparenten Farbe (z. B. "rot" oder \# "FF0000"). |
 | Keine                                        | Standard. Keine Transparenz.                                                                          |
 
 
@@ -45,13 +45,13 @@ Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff ohne Standardwer
 
 ## <a name="remarks"></a>Hinweise
 
-Eine transparente Farbe in einem Bild ermöglicht, dass alles, was sich hinter dem Bild befindet, durch die Bereiche der Transparenz angezeigt wird. Der transparente Bereich kann angeklickt werden, es sei denn, er wird vom **ClippingImage-Tag** abgeschnitten.
+Eine transparente Farbe in einem Bild ermöglicht es, alles, was sich hinter dem Bild befindet, in den Bereichen der Transparenz anzuzeigen. Der transparente Bereich ist klickbar, es sei denn, er wird vom **clippingImage-Tag** abgeschnitten.
 
-Die Farbe kann ein beliebiger Microsoft Internet Explorer-Farbwert sein. Wenn der Wert Auto ist, wird die Farbe des Pixels an position 0,0 im Bild verwendet.
+Die Farbe kann ein beliebiger Microsoft Internet Explorer Farbwert sein. Wenn der Wert Auto ist, wird die Farbe des Pixels an Position 0,0 im Bild verwendet.
 
-Wenn die angegebene Farbe keine der gültigen Farben Internet Explorer ist, wird eine Warnung zurückgegeben, und der vorherige Wert wird beibehalten.
+Wenn die angegebene Farbe nicht zu den gültigen Internet Explorer Farben gehört, wird eine Warnung zurückgegeben, und der vorherige Wert wird beibehalten.
 
-Da JPGs verlustbeendet sind und daher unerwarteten Farbwechseln unterliegen, werden sie nicht empfohlen, wenn **transparencyColor** verwendet wird.
+Da JPGs verlustig sind und daher unerwarteten Farbänderungen unterliegen, werden sie nicht empfohlen, wenn **transparencyColor** verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Da JPGs verlustbeendet sind und daher unerwarteten Farbwechseln unterliegen, wer
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

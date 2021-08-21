@@ -26,8 +26,8 @@ Die Control-Tabelle enthält die folgenden Spalten.
 | Typ          | [Identifier](identifier.md)       | N   | N        |
 | X             | [Integer](integer.md)             | N   | N        |
 | J             | [Integer](integer.md)             | N   | N        |
-| Breite         | [Integer](integer.md)             | N   | N        |
-| Höhe        | [Integer](integer.md)             | N   | N        |
+| Width         | [Integer](integer.md)             | N   | N        |
+| Height        | [Integer](integer.md)             | N   | N        |
 | Attribute    | [DoubleInteger](doubleinteger.md) | N   | J        |
 | Eigenschaft      | [Identifier](identifier.md)       | N   | J        |
 | Text          | [Formatiert](formatted.md)         | N   | J        |
@@ -66,28 +66,28 @@ Der Typ des Steuerelements. Eine Liste der Steuerelementtypen finden Sie unter [
 <span id="X"></span><span id="x"></span>X
 </dt> <dd>
 
-Horizontale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen [finden Sie unter Position Control Attribute](position-control-attribute.md).
+Horizontale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen finden [Sie unter Position Control Attribute](position-control-attribute.md).
 
 </dd> <dt>
 
 <span id="Y"></span><span id="y"></span>Y
 </dt> <dd>
 
-Vertikale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen [finden Sie unter Position Control Attribute](position-control-attribute.md).
+Vertikale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen finden [Sie unter Position Control Attribute](position-control-attribute.md).
 
 </dd> <dt>
 
 <span id="Width"></span><span id="width"></span><span id="WIDTH"></span>Breite
 </dt> <dd>
 
-Breite der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen [finden Sie unter Position Control Attribute](position-control-attribute.md).
+Breite der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen finden [Sie unter Position Control Attribute](position-control-attribute.md).
 
 </dd> <dt>
 
 <span id="Height"></span><span id="height"></span><span id="HEIGHT"></span>Höhe
 </dt> <dd>
 
-Höhe der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen [finden Sie unter Position Control Attribute](position-control-attribute.md).
+Höhe der rechteckigen Begrenzung des Steuerelements. Dies muss eine nicht negative Zahl sein. Weitere Informationen finden [Sie unter Position Control Attribute](position-control-attribute.md).
 
 </dd> <dt>
 
@@ -108,9 +108,9 @@ Der Name einer definierten Eigenschaft, die mit diesem Steuerelement verknüpft 
 <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 </dt> <dd>
 
-Eine lokalisierbare Zeichenfolge, die zum Festlegen des ursprünglichen Texts in einem -Steuerelement verwendet wird. Die Zeichenfolge kann auch eingebettete Eigenschaften enthalten. Die Syntax einer formatierten Zeichenfolge, die Eigenschaften enthält, finden Sie in der [**MsiFormatRecord-Funktion.**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) Geben Sie die Größe, Schriftart und Farbe des Texts an, indem Sie der Textzeichenfolge {style} vorangestellt werden, wobei style ein Textformat ist, das in der TextStyle -Spalte der TextStyle-Tabelle erstellt \\ [wurde.](textstyle-table.md) Die Textzeichenfolge wird abgeschnitten, wenn sie zu lang ist, um auf das Steuerelement zu passen. Die Textzeichenfolge ist möglicherweise leer.
+Eine lokalisierbare Zeichenfolge, die verwendet wird, um den ursprünglichen Text in einem -Steuerelement zu setzen. Die Zeichenfolge kann auch eingebettete Eigenschaften enthalten. Die Syntax einer formatierten Zeichenfolge, die Eigenschaften enthält, finden Sie in der [**MsiFormatRecord-Funktion.**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) Geben Sie die Größe, Schriftart und Farbe des Texts an, indem Sie der Textzeichenfolge {style} vorangestellt werden, wobei style ein Textformat ist, das in der TextStyle -Spalte der TextStyle-Tabelle erstellt \\ [wurde.](textstyle-table.md) Die Textzeichenfolge wird abgeschnitten, wenn sie zu lang ist, um auf das Steuerelement zu passen. Die Textzeichenfolge ist möglicherweise leer.
 
-Eine spezielle Erstellung der [formatierten](formatted.md) Textzeichenfolge in diesem Feld ist erforderlich, wenn der Text von einem [Text-Steuerelement](text-control.md) angezeigt werden soll, das sich in einem Dialogfeld mit dem TrackDiskpace-Attribut befindet. Dies ist der Fall, der durch [das TrackDiskSpace Dialog Style Bit](trackdiskspace-dialog-style-bit.md) angegeben wird, das in den Attributen der [Dialogtabelle angezeigt wird.](dialog-table.md) Wenn in diesem Fall die formatierte Zeichenfolge in der Text -Spalte der Control-Tabelle mit " " beginnt und mit " " endet, müssen Sie am Ende der Zeichenfolge ein Leerzeichen \[ \] hinzufügen. Wenn dlgTextFont beispielsweise eine Eigenschaft ist, die auf "{ DlgFontBold}" festgelegt wird, benötigt die formatierte Zeichenfolge \\ \[ DlgTextFont \] MyText ProductName das Leerzeichen am Ende nach der schließenden \[ \] Klammer. Dieser zusätzliche Speicherplatz wird vom Installationsprogramm benötigt, um den Text im Text-Steuerelement ordnungsgemäß anzuzeigen.
+Eine spezielle Erstellung der [formatierten](formatted.md) Textzeichenfolge in diesem Feld ist erforderlich, wenn der Text von einem [Text-Steuerelement](text-control.md) angezeigt werden soll, das sich in einem Dialogfeld mit dem TrackDiskpace-Attribut befindet. Dies ist der Fall, der durch [das TrackDiskSpace Dialog Style Bit](trackdiskspace-dialog-style-bit.md) angegeben wird, das in den Attributen der [Dialogtabelle angezeigt wird.](dialog-table.md) Wenn in diesem Fall die formatierte Zeichenfolge in der Text -Spalte der Control-Tabelle mit " " beginnt und mit " " endet, müssen Sie am Ende der Zeichenfolge ein Leerzeichen \[ \] hinzufügen. Wenn dlgTextFont beispielsweise eine Eigenschaft ist, die auf "{ DlgFontBold}" festgelegt wird, erfordert die formatierte Zeichenfolge \\ \[ DlgTextFont \] MyText ProductName das Leerzeichen am Ende nach der schließenden \[ \] Klammer. Dieser zusätzliche Speicherplatz wird vom Installationsprogramm benötigt, um den Text im Text-Steuerelement ordnungsgemäß anzuzeigen.
 
 Sie können eine kurze beschreibende Textzeichenfolge für [die Steuerelemente VolumeCostList,](volumecostlist-control.md) [ListView,](listview-control.md) [DirectoryList](directorylist-control.md)und [SelectionTree eingeben.](selectiontree-control.md) Dieser Text wird dem Benutzer nicht angezeigt, kann aber von Sprachlesern als Beschreibung des Steuerelements gelesen werden.
 
@@ -136,9 +136,9 @@ Optionale, lokalisierbare Textzeichenfolgen, die mit der Schaltfläche Hilfe ver
 
 ## <a name="remarks"></a>Hinweise
 
-Die ganzzahligen Werte für x, y, width und height befinden sich in den [Installationseinheiten,](installer-units.md)nicht in Dialogeinheiten. Eine Installationseinheit entspricht einem Zwölftel der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads. Koordinaten für die Steuerelemente sind relativ zum Schild.
+Die ganzzahligen Werte für x, y, width und height befinden sich in den [Installationseinheiten,](installer-units.md)nicht in Dialogeinheiten. Eine Installationseinheit entspricht der Zwölftelhöhe des 10-Punkt-MS Sans Serif-Schriftgrads. Koordinaten für die Steuerelemente sind relativ zum Schild.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

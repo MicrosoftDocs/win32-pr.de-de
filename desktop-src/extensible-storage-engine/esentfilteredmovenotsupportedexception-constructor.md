@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfilteredmuvenotsupportedexception-Konstruktor'
-title: Esentfilteredfivenotsupportedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentFilteredMoveNotSupportedException-Konstruktor'
+title: EsentFilteredMoveNotSupportedException-Konstruktor
 TOCTitle: 'EsentFilteredMoveNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFilteredMoveNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfilteredmovenotsupportedexception.esentfilteredmovenotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7067d2a7bc331f58eeba599fc536b62178e1ec53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd271a5bb9e4ceba01f2a0d60f5cf4f17f1c78f69a4c2fdfc98be097e776f913
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118496062"
 ---
-# <a name="esentfilteredmovenotsupportedexception-constructor"></a>Esentfilteredfivenotsupportedexception-Konstruktor
+# <a name="esentfilteredmovenotsupportedexception-constructor"></a>EsentFilteredMoveNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfilteredarvenotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentFilteredMoveNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentFilteredMoveNotSupportedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfilteredfivenotsupportedexception-Klasse](./esentfilteredmovenotsupportedexception-class.md)
+[EsentFilteredMoveNotSupportedException-Klasse](./esentfilteredmovenotsupportedexception-class.md)
 
-[Esentfilteredfivenotsupportedexception-Member](./esentfilteredmovenotsupportedexception-members.md)
+[EsentFilteredMoveNotSupportedException-Member](./esentfilteredmovenotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

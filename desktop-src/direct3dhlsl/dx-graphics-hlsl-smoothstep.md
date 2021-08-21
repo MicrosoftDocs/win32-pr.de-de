@@ -37,7 +37,7 @@ Gibt eine nahtlose Eremite-Interpolation zwischen 0 und 1 zurück, wenn *x* im B
 
 
 
-| Element                                                         | BESCHREIBUNG                                               |
+| Element                                                         | Beschreibung                                               |
 |--------------------------------------------------------------|-----------------------------------------------------------|
 | <span id="min"></span><span id="MIN"></span>*Min*<br/> | \[in \] Der mindeste Bereich des *x-Parameters.*<br/> |
 | <span id="max"></span><span id="MAX"></span>*Max*<br/> | \[in \] Der maximale Bereich des *x-Parameters.*<br/> |
@@ -78,14 +78,14 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                 |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
 | [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

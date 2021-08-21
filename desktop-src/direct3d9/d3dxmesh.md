@@ -60,7 +60,7 @@ typedef enum D3DXMESH {
 
 <dl> <dt>
 
-<span id="D3DXMESH_32BIT"></span><span id="d3dxmesh_32bit"></span>**D3DXMESH \_ 32 BIT**
+<span id="D3DXMESH_32BIT"></span><span id="d3dxmesh_32bit"></span>**D3DXMESH \_ 32BIT**
 </dt> <dd>
 
 Das Gitternetz verfügt über 32-Bit-Indizes anstelle von 16-Bit-Indizes. Siehe Hinweise.
@@ -70,112 +70,112 @@ Das Gitternetz verfügt über 32-Bit-Indizes anstelle von 16-Bit-Indizes. Siehe 
 <span id="D3DXMESH_DONOTCLIP"></span><span id="d3dxmesh_donotclip"></span>**D3DXMESH \_ DONOTCLIP**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ DONOTCLIP-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ DONOTCLIP-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_POINTS"></span><span id="d3dxmesh_points"></span>**D3DXMESH-PUNKTE \_**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ POINTS-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ POINTS-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_RTPATCHES"></span><span id="d3dxmesh_rtpatches"></span>**D3DXMESH \_ RTPATCHES**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ RTPATCHES-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ RTPATCHES-Verwendungsflag**](d3dusage.md) für Scheitelpunkt- und Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_NPATCHES"></span><span id="d3dxmesh_npatches"></span>**D3DXMESH \_ NPATCHES**
 </dt> <dd>
 
-Wenn Sie dieses Flag angeben, werden der Scheitelpunkt und der Indexpuffer des Gitternetzes mit dem [**\_ NPATCHES-Flag D3DUSAGE**](d3dusage.md) erstellt. Dies ist erforderlich, wenn das Meshobjekt mithilfe der N-Patch-Erweiterung mit Direct3D gerendert werden soll.
+Wenn Sie dieses Flag angeben, werden der Scheitelpunkt und der Indexpuffer des Gitters mit dem [**D3DUSAGE \_ NPATCHES-Flag**](d3dusage.md) erstellt. Dies ist erforderlich, wenn das Gittermodellobjekt mithilfe der N-Patch-Erweiterung mit Direct3D gerendert werden soll.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_SYSTEMMEM"></span><span id="d3dxmesh_vb_systemmem"></span>**D3DXMESH \_ VB \_ SYSTEMMEM**
 </dt> <dd>
 
-Verwenden Sie das [**D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Scheitelpunktpuffer.
+Verwenden Sie [**das D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_MANAGED"></span><span id="d3dxmesh_vb_managed"></span>**D3DXMESH \_ VB \_ VERWALTET**
 </dt> <dd>
 
-Verwenden Sie das [**D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Scheitelpunktpuffer.
+Verwenden Sie [**das D3DPOOL MANAGED-Verwendungsflag \_**](./d3dpool.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_WRITEONLY"></span><span id="d3dxmesh_vb_writeonly"></span>**D3DXMESH \_ VB \_ WRITEONLY**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie [**das D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_DYNAMIC"></span><span id="d3dxmesh_vb_dynamic"></span>**D3DXMESH \_ VB \_ DYNAMIC**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie [**das D3DUSAGE DYNAMIC-Verwendungsflag \_**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_SOFTWAREPROCESSING"></span><span id="d3dxmesh_vb_softwareprocessing"></span>**D3DXMESH \_ VB \_ SOFTWAREPROCESSING**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie [**das D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_SYSTEMMEM"></span><span id="d3dxmesh_ib_systemmem"></span>**D3DXMESH \_ IB \_ SYSTEMMEM**
 </dt> <dd>
 
-Verwenden Sie das [**D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
+Verwenden Sie [**das D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
 
 </dd> <dt>
 
-<span id="D3DXMESH_IB_MANAGED"></span><span id="d3dxmesh_ib_managed"></span>**D3DXMESH \_ IB \_ VERWALTET**
+<span id="D3DXMESH_IB_MANAGED"></span><span id="d3dxmesh_ib_managed"></span>**D3DXMESH \_ IB \_ MANAGED**
 </dt> <dd>
 
-Verwenden Sie das [**D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
+Verwenden Sie [**das D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_WRITEONLY"></span><span id="d3dxmesh_ib_writeonly"></span>**D3DXMESH \_ IB \_ WRITEONLY**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_DYNAMIC"></span><span id="d3dxmesh_ib_dynamic"></span>**D3DXMESH \_ IB \_ DYNAMIC**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_SOFTWAREPROCESSING"></span><span id="d3dxmesh_ib_softwareprocessing"></span>**D3DXMESH \_ IB \_ SOFTWAREPROCESSING**
 </dt> <dd>
 
-Verwenden Sie das [**D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie [**das D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_SHARE"></span><span id="d3dxmesh_vb_share"></span>**D3DXMESH \_ VB \_ SHARE**
 </dt> <dd>
 
-Erzwingt, dass die geklonten Gitternetze Scheitelpunktpuffer gemeinsam nutzen.
+Erzwingt, dass die geklonten Gitternetze Scheitelpunktpuffer freigeben.
 
 </dd> <dt>
 
 <span id="D3DXMESH_USEHWONLY"></span><span id="d3dxmesh_usehwonly"></span>**D3DXMESH \_ USEHWONLY**
 </dt> <dd>
 
-Verwenden Sie nur die Hardwareverarbeitung. Bei Geräten im gemischten Modus bewirkt dieses Flag, dass das System Hardware verwendet (sofern in der Hardware unterstützt) oder die Softwareverarbeitung standardmäßig verwendet.
+Verwenden Sie nur die Hardwareverarbeitung. Bei Geräten im gemischten Modus wird dieses Flag dazu führen, dass das System Hardware verwendet (sofern dies in der Hardware unterstützt wird) oder standardmäßig die Softwareverarbeitung verwendet.
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Entspricht der Angabe von D3DXMESH \_ VB \_ SYSTEMMEM und D3DXMESH \_ IB \_ SYST
 
 </dd> <dt>
 
-<span id="D3DXMESH_MANAGED"></span><span id="d3dxmesh_managed"></span>**D3DXMESH \_ VERWALTET**
+<span id="D3DXMESH_MANAGED"></span><span id="d3dxmesh_managed"></span>**D3DXMESH \_ MANAGED**
 </dt> <dd>
 
 Entspricht der Angabe von D3DXMESH \_ VB \_ MANAGED und D3DXMESH \_ IB \_ MANAGED.
@@ -216,7 +216,7 @@ Entspricht der Angabe von D3DXMESH \_ VB \_ SOFTWAREPROCESSING und D3DXMESH \_ I
 
 ## <a name="remarks"></a>Hinweise
 
-Ein 32-Bit-Gitternetz (D3DXMESH \_ 32BIT) kann theoretisch (2^32)-1 Gesichter und Scheitelpunkte unterstützen. Die Zuweisung von Arbeitsspeicher für ein Gitternetz, das unter einem 32-Bit-Betriebssystem groß ist, ist jedoch nicht praktikabel.
+Ein 32-Bit-Gitternetz (D3DXMESH \_ 32BIT) kann theoretisch (2^32)-1 Gesichter und Scheitelungen unterstützen. Das Zuordnen von Arbeitsspeicher für ein Gitternetz, das auf einem 32-Bit-Betriebssystem groß ist, ist jedoch nicht praktikabel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -228,7 +228,7 @@ Ein 32-Bit-Gitternetz (D3DXMESH \_ 32BIT) kann theoretisch (2^32)-1 Gesichter un
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

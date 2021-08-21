@@ -1,7 +1,7 @@
 ---
-description: Die Validierungstabelle ist eine Systemtabelle, die die Spaltennamen und Spaltenwerte für alle Tabellen \_ in der Datenbank enthält.
+description: Die \_ Validierungstabelle ist eine Systemtabelle, die die Spaltennamen und Spaltenwerte für alle Tabellen in der Datenbank enthält.
 ms.assetid: 52b1c537-efb6-4bb8-9e7f-b4848be52a71
-title: _Validation Tabelle
+title: _Validation-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 81a42fbe2a2f8da4abceb04912eee2a12edd708ff88d979fbf45f7de8051dc80
@@ -13,7 +13,7 @@ ms.locfileid: "118640445"
 ---
 # <a name="_validation-table"></a>\_Validierungstabelle
 
-Die Validierungstabelle ist eine Systemtabelle, die die Spaltennamen und Spaltenwerte für alle Tabellen \_ in der Datenbank enthält. Sie wird während der Datenbanküberprüfung verwendet, um sicherzustellen, dass alle Spalten berücksichtigt werden und die richtigen Werte haben. Diese Tabelle ist nicht im Lieferumfang der Installer-Datenbank enthalten.
+Die \_ Validierungstabelle ist eine Systemtabelle, die die Spaltennamen und Spaltenwerte für alle Tabellen in der Datenbank enthält. Sie wird während des Datenbankvalidierungsprozesses verwendet, um sicherzustellen, dass alle Spalten berücksichtigt werden und die richtigen Werte aufweisen. Diese Tabelle ist nicht im Lieferumfang der Installer-Datenbank enthalten.
 
 Die \_ Tabelle Validation enthält die folgenden Spalten.
 
@@ -22,13 +22,13 @@ Die \_ Tabelle Validation enthält die folgenden Spalten.
 | Spalte      | Typ                               | Key | Nullwerte zulässig |
 |-------------|------------------------------------|-----|----------|
 | Tabelle       | [Identifier](identifier.md)       | J   | N        |
-| Column      | [Identifier](identifier.md)       | J   | N        |
+| Spalte      | [Identifier](identifier.md)       | J   | N        |
 | Nullwerte zulässig    | [Text](text.md)                   | N   | N        |
 | Minvalue    | [DoubleInteger](doubleinteger.md) | N   | J        |
 | MaxValue    | [DoubleInteger](doubleinteger.md) | N   | J        |
 | KeyTable    | [Identifier](identifier.md)       | N   | J        |
 | KeyColumn   | [Integer](integer.md)             | N   | J        |
-| Kategorie    | [Text](text.md)                   | N   | J        |
+| Category    | [Text](text.md)                   | N   | J        |
 | Set         | [Text](text.md)                   | N   | J        |
 | BESCHREIBUNG | [Text](text.md)                   | N   | J        |
 
@@ -59,13 +59,13 @@ Wird verwendet, um eine bestimmte Spalte der Tabelle zu identifizieren. Dieser S
 
 Gibt an, ob die Spalte einen NULL-Wert enthalten kann.
 
-Diese Spalte kann einen der folgenden Werte haben.
+Diese Spalte kann einen der folgenden Werte aufweisen.
 
 
 
 | String | Bedeutung                                   |
 |--------|-------------------------------------------|
-| J      | Ja, die Spalte kann einen NULL-Wert haben.    |
+| J      | Ja, die Spalte kann einen NULL-Wert aufweisen.    |
 | N      | Nein, die Spalte hat möglicherweise keinen NULL-Wert. |
 
 
@@ -77,35 +77,35 @@ Diese Spalte kann einen der folgenden Werte haben.
 <span id="MinValue"></span><span id="minvalue"></span><span id="MINVALUE"></span>Minvalue
 </dt> <dd>
 
-Dieses Feld gilt für Spalten mit numerischem Wert. Das Feld enthält den minimal zulässigen Wert. Dies kann der Mindestwert für eine ganze Zahl oder der Mindestwert für eine Datums- oder Versionszeichenfolge sein.
+Dieses Feld gilt für Spalten mit einem numerischen Wert. Das Feld enthält den minimal zulässigen Wert. Dies kann der Mindestwert für eine ganze Zahl oder der Mindestwert für eine Datums- oder Versionszeichenfolge sein.
 
 </dd> <dt>
 
 <span id="MaxValue"></span><span id="maxvalue"></span><span id="MAXVALUE"></span>Maxvalue
 </dt> <dd>
 
-Dieses Feld gilt für Spalten mit numerischem Wert. Das Feld ist der maximal zulässige Wert. Dies kann der Höchstwert für eine ganze Zahl oder der Höchstwert für eine Datums- oder Versionszeichenfolge sein.
+Dieses Feld gilt für Spalten mit einem numerischen Wert. Das Feld ist der maximal zulässige Wert. Dies kann der Höchstwert für eine ganze Zahl oder der Höchstwert für eine Datums- oder Versionszeichenfolge sein.
 
 </dd> <dt>
 
 <span id="KeyTable"></span><span id="keytable"></span><span id="KEYTABLE"></span>KeyTable
 </dt> <dd>
 
-Dieses Feld gilt für Spalten, die externe Schlüssel sind. Das in Spalte angegebene Feld muss mit der Spaltennummer verknüpfen, die von KeyColumn in der Tabelle mit dem Namen in KeyTable angegeben wird. Dies kann eine Liste von Tabellen sein, die durch Semikolons getrennt sind.
+Dieses Feld gilt für Spalten, die externe Schlüssel sind. Das in Spalte identifizierte Feld muss mit der Spaltennummer verknüpft werden, die von KeyColumn in der In KeyTable benannten Tabelle angegeben wird. Dies kann eine Durch Semikolon getrennte Liste von Tabellen sein.
 
 </dd> <dt>
 
 <span id="KeyColumn"></span><span id="keycolumn"></span><span id="KEYCOLUMN"></span>Keycolumn
 </dt> <dd>
 
-Dieses Feld gilt für Tabellenspalten, bei denen es sich um externe Schlüssel handelt. Das in Spalte angegebene Feld muss mit der Spaltennummer verknüpfen, die von KeyColumn in der Tabelle mit dem Namen in KeyTable angegeben wird. Der zulässige Bereich des KeyColumn-Felds ist 1-32.
+Dieses Feld gilt für Tabellenspalten, die externe Schlüssel sind. Das in Spalte identifizierte Feld muss mit der Spaltennummer verknüpft werden, die von KeyColumn in der In KeyTable benannten Tabelle angegeben wird. Der zulässige Bereich des KeyColumn-Felds ist 1-32.
 
 </dd> <dt>
 
 <span id="Category"></span><span id="category"></span><span id="CATEGORY"></span>Kategorie
 </dt> <dd>
 
-Dies ist der Typ der Daten, die in dem Datenbankfeld enthalten sind, das durch die Tabellen- und Spaltenspalten der \_ Validation-Tabelle angegeben wird. Wenn dies ein Typ mit einem numerischen Wert ist, z. B. [Integer,](integer.md) [DoubleInteger](doubleinteger.md) oder [Time/Date,](time-date.md)geben Sie NULL in dieses Feld ein, und geben Sie den Bereich des Werts mithilfe der Spalten MinValue und MaxValue an. Verwenden Sie die Spalte Category , um die nicht numerischen Datentypen anzugeben, die unter [Spaltendatentypen beschrieben werden.](column-data-types.md)
+Dies ist der Datentyp, der in dem Datenbankfeld enthalten ist, das von den Spalten Tabelle und Spalte der Tabelle Validation angegeben \_ wird. Wenn es sich um einen Typ mit einem numerischen Wert handelt, z. B. [Integer,](integer.md) [DoubleInteger](doubleinteger.md) oder [Time/Date,](time-date.md)geben Sie NULL in dieses Feld ein, und geben Sie den Bereich des Werts mithilfe der Spalten MinValue und MaxValue an. Verwenden Sie die Spalte Kategorie, um die unter [Spaltendatentypen](column-data-types.md)beschriebenen nicht numerischen Datentypen anzugeben.
 
 </dd> <dt>
 
@@ -119,11 +119,11 @@ Dies ist eine Liste zulässiger Werte für dieses Feld, die durch Semikolons get
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>Beschreibung
 </dt> <dd>
 
-Eine Beschreibung der In der Spalte gespeicherten Daten.
+Eine Beschreibung der Daten, die in der Spalte gespeichert sind.
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 
@@ -134,7 +134,7 @@ Eine Beschreibung der In der Spalte gespeicherten Daten.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Feld Category dieser Tabelle gilt nur für Zeichenfolgendaten. Wenn das Feld Spalte auf eine Spalte mit Binärdaten verweist, muss der binäre Datentyp im Feld Kategorie angegeben werden. Ganzzahlige Daten Spaltentypen ignorieren das Feld Kategorie während der Validierung.
+Das Feld Kategorie dieser Tabelle gilt nur für Zeichenfolgendaten. Wenn das Feld Spalte auf eine Spalte mit Binärdaten verweist, muss der binäre Datentyp im Feld Category angegeben werden. Integerdaten Spaltentypen ignorieren das Feld Category während der Überprüfung.
 
  
 

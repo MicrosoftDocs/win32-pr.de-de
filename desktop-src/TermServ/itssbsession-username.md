@@ -1,11 +1,11 @@
 ---
-title: ITsSbSession Username-Eigenschaft
+title: ITsSbSession Username (Eigenschaft)
 description: Ruft den Benutzernamen für diese Sitzung ab.
 ms.assetid: 0034e8cc-b67b-4e30-a059-47a269bab0fd
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Username-Eigenschaft
-- Username-Eigenschaft Remotedesktopdienste , ITsSbSession-Schnittstelle
+- Username-Remotedesktopdienste
+- Username-Remotedesktopdienste , ITsSbSession-Schnittstelle
 - ITsSbSession-Schnittstelle Remotedesktopdienste , Username-Eigenschaft
 topic_type:
 - apiref
@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118351200"
 ---
-# <a name="itssbsessionusername-property"></a>ITsSbSession::Username-Eigenschaft
+# <a name="itssbsessionusername-property"></a>ITsSbSession::Username (Eigenschaft)
 
 Ruft den Benutzernamen für diese Sitzung ab.
 
@@ -58,7 +58,7 @@ Ein Zeiger auf eine **BSTR-Variable,** die den Benutzernamen für diese Sitzung 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentseparatedlongvalueexception-Konstruktor'
-title: Esentseparatedlongvalueexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSeparatedLongValueException-Konstruktor'
+title: EsentSeparatedLongValueException-Konstruktor
 TOCTitle: 'EsentSeparatedLongValueException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSeparatedLongValueException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentseparatedlongvalueexception.esentseparatedlongvalueexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: eb02f42686fa886083ff62e049541cf894fa7ac3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f516aeec1169179fb2b41cccc9b704a4e5474809e3e8d069dfe5142a611f73bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118079154"
 ---
-# <a name="esentseparatedlongvalueexception-constructor"></a>Esentseparatedlongvalueexception-Konstruktor
+# <a name="esentseparatedlongvalueexception-constructor"></a>EsentSeparatedLongValueException-Konstruktor
 
-Initialisiert eine neue Instanz der esentseparatedlongvalueexception-Klasse.
+Initialisiert eine neue Instanz der EsentSeparatedLongValueException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentSeparatedLongValueException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentseparatedlongvalueexception-Klasse](./esentseparatedlongvalueexception-class.md)
+[EsentSeparatedLongValueException-Klasse](./esentseparatedlongvalueexception-class.md)
 
-[Esentseparatedlongvalueexception-Member](./esentseparatedlongvalueexception-members.md)
+[EsentSeparatedLongValueException-Member](./esentseparatedlongvalueexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

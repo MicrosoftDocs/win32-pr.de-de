@@ -1,7 +1,7 @@
 ---
 description: Handle für den Thread.
 ms.assetid: 93d1182a-58f0-4570-8568-fe0fded762cb
-title: 'Camthread:: m_hThread Member (wxutil. h)'
+title: CABThread::m_hThread-Member (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e83dd225da0c3673f9c7f423e0bf56da7431b097
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f7293a97373a53d102887e5958c4296aff3dcfe3d392c80492ed773af62a8f11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158911"
 ---
-# <a name="camthreadm_hthread-member"></a>Camthread:: m- \_ hThread-Member
+# <a name="camthreadm_hthread-member"></a>ELEMENTSThread::m \_ hThread-Member
 
 Handle für den Thread.
 
@@ -36,9 +36,9 @@ HANDLE m_hThread;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Variable wird als **null** initialisiert. Die Methode " [**camthread:: Create**](camthread-create.md) " legt diese Variable auf das Thread Handle fest. Um zu ermitteln, ob der Thread vorhanden ist, müssen Sie die Methode " [**camthread:: threadexists**](camthread-threadexists.md) " aufzurufen.
+Diese Variable wird als **NULL** initialisiert. Die [**METHODE VONTHREAD::Create**](camthread-create.md) legt diese Variable auf das Threadhandle fest. Um zu bestimmen, ob der Thread vorhanden ist, rufen Sie die [**METHODE BEDThread::ThreadExists auf.**](camthread-threadexists.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Diese Variable wird als **null** initialisiert. Die Methode " [**camthread:: Cre
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Diese Variable wird als **null** initialisiert. Die Methode " [**camthread:: Cre
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**WEBCAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

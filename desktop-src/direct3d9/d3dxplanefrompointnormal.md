@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e34765d150932d6a7b3b0293e603237ffb2b45ad
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0acf7dd26a2eb261830dbdf1f0e1fff185184a645e469fbe02a5b0032c141e1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524917"
 ---
 # <a name="d3dxplanefrompointnormal-function-d3dx9mathh"></a>D3DXPlaneFromPointNormal-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Punkt defini
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zum Erstellen der Ebene verwendete Normalstruktur definiert.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den normalen definiert, der zum Erstellen der Ebene verwendet wird.
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
 Zeiger auf die [**D3DXPLANE-Struktur,**](d3dxplane.md) die vom Punkt und der Normalität erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXPlaneFromPointNormal-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -83,14 +83,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

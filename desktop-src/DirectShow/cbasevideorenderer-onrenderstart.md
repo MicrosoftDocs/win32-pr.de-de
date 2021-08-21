@@ -1,7 +1,7 @@
 ---
-description: Die onrenderstart-Methode legt Informationen für das Rendering fest.
+description: Die OnRenderStart-Methode legt Informationen für das Rendering fest.
 ms.assetid: 698fe778-e2cb-4b87-a668-084b6c12c71f
-title: Cbasevideorenderer. onrenderstart-Methode (renbase. h)
+title: CBaseVideoRenderer.OnRenderStart-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7327d25aafa6f6673b7ed70b658f675a9dab8f4d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 78c82b00b8b719b03d096ac0f83e43c8471ea98d56eab7bf67d28b0adae852f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157035"
 ---
-# <a name="cbasevideorendereronrenderstart-method"></a>Cbasevideorenderer. onrenderstart-Methode
+# <a name="cbasevideorendereronrenderstart-method"></a>CBaseVideoRenderer.OnRenderStart-Methode
 
-Die- `OnRenderStart` Methode legt Informationen für das Rendering fest.
+Die `OnRenderStart` -Methode legt Informationen für das Rendering fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void OnRenderStart(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf das Medien Beispiel.
+Zeiger auf das Medienbeispiel.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Zeiger auf das Medien Beispiel.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion Ruft die aktuelle Uhrzeit aus dem System ab und speichert Sie in einer Element Variablen, die verwendet werden soll, wenn die Zeichnung beendet ist. Die Funktion führt auch die Leistungs Protokollierung aus. Diese Member-Funktion sollte direkt vor dem Zeichnen aufgerufen werden.
+Diese Memberfunktion ruft die aktuelle Uhrzeit aus dem System ab und speichert sie in einer Membervariablen, die verwendet werden soll, wenn die Zeichnung abgeschlossen ist. Die Funktion führt auch die Leistungsprotokollierung durch. Diese Memberfunktion sollte direkt vor dem Zeichnen aufgerufen werden.
 
-Diese Member-Funktion überschreibt [**cbaserenderer:: onrenderstart**](cbaserenderer-onrenderstart.md).
+Diese Memberfunktion überschreibt [**CBaseRenderer::OnRenderStart**](cbaserenderer-onrenderstart.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: onrenderstart**](cbaseren
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: onrenderstart**](cbaseren
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

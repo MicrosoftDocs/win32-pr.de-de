@@ -1,6 +1,6 @@
 ---
 title: MS-DS-Per-User-Trust-Quota-Attribut
-description: Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted-Domain zu erzwingen, die durch das neue Steuerelementzugriffsrecht Create-Inbound-Forest-Trust autorisiert sind.
+description: Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted-Domain-Objekten zu erzwingen, die durch das neue Steuerelementzugriffsrecht Create-Inbound-Forest-Trust autorisiert sind.
 ms.assetid: 3b198b24-5282-4d13-8d35-88f34c11ce94
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118425826"
 ---
 # <a name="ms-ds-per-user-trust-quota-attribute"></a>MS-DS-Per-User-Trust-Quota-Attribut
 
-Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted-Domain zu erzwingen, die durch das neue Steuerelementzugriffsrecht Create-Inbound-Forest-Trust autorisiert sind. Dieses Attribut schränkt die Anzahl Trusted-Domain-Objekten ein, die von einem einzelnen Benutzer ohne Administratorrechte erstellt werden können.
+Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted-Domain-Objekten zu erzwingen, die durch das neue Steuerelementzugriffsrecht Create-Inbound-Forest-Trust autorisiert sind. Dieses Attribut schränkt die Anzahl der Trusted-Domain ein, die von einem einzelnen Benutzer ohne Administratorrechte erstellt werden können.
 
 
 
@@ -120,7 +120,7 @@ Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
@@ -141,7 +141,7 @@ Wird verwendet, um ein benutzerspezifisches Kontingent zum Erstellen von Trusted
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |

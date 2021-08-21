@@ -25,7 +25,7 @@ Enthält ein -Objekt für jede Herausgebereigenschaft für die übergeordnete [*
 
 Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **PublisherProperties-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
@@ -72,15 +72,15 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|---------------------------|
 | Beschreibung    | Ein -Wert für die -Eigenschaft. |
 | Zugriff         | ReadWrite                 |
-| Typ           | Variant                   |
-| Standard        | Nicht zutreffend                       |
+| type           | Variant                   |
+| Standard        | –                       |
 | Mindestsystem | Windows 2000              |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

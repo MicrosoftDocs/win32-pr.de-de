@@ -1,7 +1,7 @@
 ---
-description: 'Die GetInfo-Methode ruft Informationen über die aktuellen streamsteuerungseinstellungen ab, einschließlich der Start-und Endzeiten. Diese Methode implementiert die iamstreamcontrol:: GetInfo-Methode.'
+description: Die GetInfo-Methode ruft Informationen zu den aktuellen Streamsteuerelementeinstellungen ab, einschließlich der Start- und Beendigungszeiten. Diese Methode implementiert die IAMStreamControl::GetInfo-Methode.
 ms.assetid: 3bc9bb32-eb33-4752-b22c-9033c28b41f7
-title: Cbasestreamcontrol. GetInfo-Methode ("strinmctl. h")
+title: CBaseStreamControl.GetInfo-Methode (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ab0ba31fa5692a6bc92372860ec1a28ab776206f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 96bc59b6dc55d73aa16b08f53f831428ae2d2fb7b181d3bb255b61a323b236a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157217"
 ---
-# <a name="cbasestreamcontrolgetinfo-method"></a>Cbasestreamcontrol. GetInfo-Methode
+# <a name="cbasestreamcontrolgetinfo-method"></a>CBaseStreamControl.GetInfo-Methode
 
-Die- `GetInfo` Methode ruft Informationen zu den aktuellen streamsteuerungseinstellungen ab, einschließlich der Start-und Endzeiten. Diese Methode implementiert die [**iamstreamcontrol:: GetInfo**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-getinfo) -Methode.
+Die `GetInfo` -Methode ruft Informationen zu den aktuellen Streamsteuerelementeinstellungen ab, einschließlich der Start- und Beendigungszeiten. Diese Methode implementiert die [**IAMStreamControl::GetInfo-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-getinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetInfo(
 
 <dl> <dt>
 
-*pinfo* 
+*Pinfo* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**am- \_ Stream- \_ Informations**](/windows/desktop/api/strmif/ns-strmif-am_stream_info) Struktur, die vom Aufrufer zugeordnet wird und die die aktuellen streamsteuerungseinstellungen empfängt.
+Zeiger auf eine VOM Aufrufer zugeordnete [**AM \_ STREAM \_ INFO-Struktur,**](/windows/desktop/api/strmif/ns-strmif-am_stream_info) die die aktuellen Streamsteuerelementeinstellungen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den S \_ OK-oder E- \_ Zeiger zurück.
+Gibt S \_ OK oder E POINTER \_ zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den S \_ OK-oder E- \_ Zeiger zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den S \_ OK-oder E- \_ Zeiger zurück.
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

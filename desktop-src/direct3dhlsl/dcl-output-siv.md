@@ -1,6 +1,6 @@
 ---
-title: dcl_output_siv (SM4-ASM)
-description: DCL \_ \_ -Ausgabe (SM4-ASM)
+title: dcl_output_siv (sm4 - asm)
+description: dcl \_ output \_ siv (sm4 - asm)
 ms.assetid: 5a87a113-7413-48ef-9a6a-13eb185650be
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: df57ea991b9177dc081443301e426560834df894
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: 3035724a76aff71c2ba2b7500874365ea284f55b0bf16389b3d83c99205e606b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118515677"
 ---
-# <a name="dcl_output_siv-sm4---asm"></a>DCL \_ \_ -Ausgabe (SM4-ASM)
+# <a name="dcl_output_siv-sm4---asm"></a>dcl \_ output \_ siv (sm4 - asm)
 
-Deklariert ein Ausgabe Register, das einen [System Wert](dx-graphics-hlsl-semantics.md) Parameter enthält.
+Deklariert ein Ausgaberegister, das einen [Systemwertparameter](dx-graphics-hlsl-semantics.md) enthält.
 
 
 
-| DCL- \_ Ausgabe \_ SIV on \[ *. Masken* \] , *Systemwert* |
+| dcl \_ output \_ siv oN \[ *.masks* \] , *systemValue* |
 |------------------------------------------------|
 
 
@@ -31,17 +31,17 @@ Deklariert ein Ausgabe Register, das einen [System Wert](dx-graphics-hlsl-semant
 
 
 
-| Element                                                                                                                               | BESCHREIBUNG                                                                                                                                         |
+| Element                                                                                                                               | Beschreibung                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="oN"></span><span id="on"></span><span id="ON"></span>o *N*<br/>                                                     | \[in \] einem Ausgabedaten Register; *N* ist eine ganze Zahl, die die Registernummer bezeichnet.<br/>                                                      |
-| <span id="_.mask_"></span><span id="_.MASK_"></span>*\[. Mask\]*<br/>                                                         | \[in \] optional. Eine Komponenten Maske (. xyzw), die angibt, welche der zu verwendenden Registrierungs Komponenten verwendet werden sollen.<br/>                                        |
-| <span id="systemValueName"></span><span id="systemvaluename"></span><span id="SYSTEMVALUENAME"></span>*systemvaluename*<br/> | \[\]der Name des System Werts, bei dem es sich um eine Zeichenfolge handelt (siehe [System-Wert-Semantik](dx-graphics-hlsl-semantics.md)), ohne das Präfix "SV" \_ .<br/> |
+| <span id="oN"></span><span id="on"></span><span id="ON"></span>o *N*<br/>                                                     | \[in \] Ein Ausgabedatenregister; *N* ist eine ganze Zahl, die die Registernummer angibt.<br/>                                                      |
+| <span id="_.mask_"></span><span id="_.MASK_"></span>*\[.mask\]*<br/>                                                         | \[in \] Optional. Eine Komponentenmaske (.xyzw), die angibt, welche der Registerkomponenten verwendet werden soll.<br/>                                        |
+| <span id="systemValueName"></span><span id="systemvaluename"></span><span id="SYSTEMVALUENAME"></span>*systemValueName*<br/> | \[in \] Der Systemwertname, der eine Zeichenfolge ist (siehe [Systemwertsemantik](dx-graphics-hlsl-semantics.md)) ohne das Präfix "SV". \_<br/> |
 
 
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -53,11 +53,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
-Hier einige Beispiele.
+Die folgende Auflistung enthält einige Beispiele:
 
 
 ```
@@ -68,20 +68,20 @@ dcl_output_siv o[0].z, cullDistance
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

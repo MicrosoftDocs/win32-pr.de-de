@@ -1,15 +1,15 @@
 ---
-title: IMsRdpClientAdvancedSettings5 RedirectClipboard-Eigenschaft
-description: Legt die Konfiguration für die Umleitung in der Zwischenablage fest oder ruft sie ab.
+title: IMsRdpClientAdvancedSettings5 RedirectClipboard (Eigenschaft)
+description: Legt die Konfiguration für die Umleitung der Zwischenablage fest oder ruft sie ab.
 ms.assetid: c653f593-9912-4ade-a0a3-70d9afac2ab1
 ms.tgt_platform: multiple
 keywords:
-- RedirectClipboard-Eigenschaft Remotedesktopdienste
+- RedirectClipboard-Remotedesktopdienste
 - RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
 - RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
-- RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- RedirectClipboard-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
 - RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
 - IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
@@ -41,9 +41,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352284"
 ---
-# <a name="imsrdpclientadvancedsettings5redirectclipboard-property"></a>IMsRdpClientAdvancedSettings5::RedirectClipboard-Eigenschaft
+# <a name="imsrdpclientadvancedsettings5redirectclipboard-property"></a>IMsRdpClientAdvancedSettings5::RedirectClipboard (Eigenschaft)
 
-Legt die Konfiguration für die Umleitung in der Zwischenablage fest oder ruft sie ab.
+Legt die Konfiguration für die Umleitung der Zwischenablage fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_RedirectClipboard(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Zwischenablageumleitungsmodus auf **TRUE** oder **FALSE** fest. Wenn **true** festgelegt ist, ist der Zwischenablageumleitungsmodus aktiviert.
+Legt den Umleitungsmodus der Zwischenablage auf **TRUE** oder **FALSE fest.** Wenn true festgelegt **ist,** ist der Umleitungsmodus für die Zwischenablage aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Legt den Zwischenablageumleitungsmodus auf **TRUE** oder **FALSE** fest. Wenn **
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

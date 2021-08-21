@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentSLVHeaderCorruptedException-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: EsentSLVHeaderCorruptedException-Konstruktor'
 title: EsentSLVHeaderCorruptedException-Konstruktor
 TOCTitle: 'EsentSLVHeaderCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVHeaderCorruptedException.#ctor
@@ -50,7 +50,7 @@ Dim instance As New EsentSLVHeaderCorruptedException()
 public EsentSLVHeaderCorruptedException()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

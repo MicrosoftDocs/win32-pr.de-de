@@ -1,7 +1,7 @@
 ---
-description: Konvertiert eine vorhandene Auflistungs Momentaufnahme in eine Verweis Punkt Auflistung. Die Momentaufnahme Auflistung wird als Nebeneffekt gelöscht. Nur Wiederherstellungs Momentaufnahmen können in Verweis Punkte konvertiert werden.
+description: Konvertiert eine vorhandene Sammlungsmomentaufnahme in eine Verweispunktsammlung. Die Momentaufnahmesammlung wird als Nebeneffekt gelöscht. Nur Wiederherstellungsmomentaufnahmen können in Verweispunkte konvertiert werden.
 ms.assetid: 6b304782-9e5e-43b1-af7d-08617d65850c
-title: Converttoreferencepoint-Methode der Msvm_CollectionSnapshotService-Klasse
+title: ConvertToReferencePoint-Methode der Msvm_CollectionSnapshotService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 810761b67303ad33ced6fdaef857c96f65365091
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97faedea1cdb852e26f6b94211586e5539075c0a225bf98f1a10cf45305d7296
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118148866"
 ---
-# <a name="converttoreferencepoint-method-of-the-msvm_collectionsnapshotservice-class"></a>Converttoreferencepoint-Methode der MSVM \_ collectionsnapshotservice-Klasse
+# <a name="converttoreferencepoint-method-of-the-msvm_collectionsnapshotservice-class"></a>ConvertToReferencePoint-Methode der Msvm \_ CollectionSnapshotService-Klasse
 
-Konvertiert eine vorhandene Auflistungs Momentaufnahme in eine Verweis Punkt Auflistung. Die Momentaufnahme Auflistung wird als Nebeneffekt gelöscht. Nur Wiederherstellungs Momentaufnahmen können in Verweis Punkte konvertiert werden.
+Konvertiert eine vorhandene Sammlungsmomentaufnahme in eine Verweispunktsammlung. Die Momentaufnahmesammlung wird als Nebeneffekt gelöscht. Nur Wiederherstellungsmomentaufnahmen können in Verweispunkte konvertiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ uint32 ConvertToReferencePoint(
 
 <dl> <dt>
 
-*Affectedsnapshotcollection* \[ in\]
+*AffectedSnapshotCollection* \[ In\]
 </dt> <dd>
 
-Verweis auf eine [**MSVM- \_ snapshotcollection**](msvm-snapshotcollection.md) , die die betroffene Sammlung virtueller System Momentaufnahmen enthält.
+Verweis auf eine [**Msvm \_ SnapshotCollection,**](msvm-snapshotcollection.md) die die betroffene Momentaufnahmesammlung des virtuellen Systems enthält.
 
 </dd> <dt>
 
-*Resultingreferencepointcollection* \[ in, out\]
+*ResultingReferencePointCollection* \[ in, out\]
 </dt> <dd>
 
-Verweis auf eine [**MSVM \_ referencepointcollection**](msvm-referencepointcollection.md) , die die resultierende Verweis Punkt Auflistung des virtuellen Systems enthält
+Verweis auf eine [**Msvm \_ ReferencePointCollection, die**](msvm-referencepointcollection.md) die resultierende Auflistung des Referenzpunkts des virtuellen Systems enthält
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden.
@@ -64,7 +64,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegebe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird entweder 0 (abgeschlossen) oder 4096 (Auftrag gestartet) zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird entweder 0 (Abgeschlossen) oder 4096 (Auftrag gestartet) zurückgegeben. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -74,7 +74,7 @@ Bei Erfolg wird entweder 0 (abgeschlossen) oder 4096 (Auftrag gestartet) zurück
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,22 +83,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,10 +107,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -119,7 +119,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ collectionsnapshotservice**](msvm-collectionsnapshotservice.md)
+[**Msvm \_ CollectionSnapshotService**](msvm-collectionsnapshotservice.md)
 </dt> </dl>
 
  

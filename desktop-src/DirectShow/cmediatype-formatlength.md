@@ -1,7 +1,7 @@
 ---
-description: Die formatlength-Methode ruft die Länge des Format Blocks ab.
+description: Die FormatLength-Methode ruft die Länge des Formatblocks ab.
 ms.assetid: f990bba9-2227-4746-a9e4-598aeba8b0b7
-title: Cmediatype. formatlength-Methode (mtype. h)
+title: CMediaType.FormatLength-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d9da7e84e695952b4c936c9f97270decfd4d9f94
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 39593b1dbbabf0a21e764a94e9d6862192273b8813f816651c338e3cbff9c5ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156414"
 ---
-# <a name="cmediatypeformatlength-method"></a>Cmediatype. formatlength-Methode
+# <a name="cmediatypeformatlength-method"></a>CMediaType.FormatLength-Methode
 
-Die- `FormatLength` Methode ruft die Länge des Format Blocks ab.
+Die `FormatLength` -Methode ruft die Länge des Formatblocks ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das **cbformat** -Element zurück.
+Gibt den **cbFormat-Member** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt das **cbformat** -Element zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt das **cbformat** -Element zurück.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

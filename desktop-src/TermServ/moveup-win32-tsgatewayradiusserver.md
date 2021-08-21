@@ -5,7 +5,7 @@ ms.assetid: 060bb90d-72c0-4364-a44f-c6368434b174
 ms.tgt_platform: multiple
 keywords:
 - MoveUp-Remotedesktopdienste
-- MoveUp-Methode Remotedesktopdienste , Win32_TSGatewayRADIUSServer-Klasse
+- MoveUp-Methode Remotedesktopdienste , Win32_TSGatewayRADIUSServer Klasse
 - Win32_TSGatewayRADIUSServer klasse Remotedesktopdienste , MoveUp-Methode
 topic_type:
 - apiref
@@ -65,7 +65,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

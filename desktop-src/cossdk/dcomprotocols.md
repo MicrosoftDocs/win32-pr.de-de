@@ -23,13 +23,13 @@ ms.locfileid: "118548019"
 
 Enthält eine Liste der Protokolle, die von DCOM verwendet werden sollen. Sie enthält ein -Objekt für jedes Protokoll.
 
-Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
+Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **DCOMProtocols-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
+Die **DCOMProtocols-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Sammlungen
+## <a name="related-collections"></a>Verwandte Auflistungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
@@ -37,7 +37,7 @@ Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 -   [**Propertyinfo**](propertyinfo.md)
 -   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
+Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**wurzel**](root.md)
 
@@ -71,7 +71,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------|
-| Beschreibung    | Die Reihenfolge, in der das Protokoll versucht werden soll. |
+| Beschreibung    | Die Reihenfolge, in der das Protokoll ausprobiert werden soll. |
 | Zugriff         | ReadWrite                               |
 | Typ           | Long (0-65000)                          |
 | Standard        | 0                                       |
@@ -87,7 +87,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Der Code, der die RPC-Protokollsequenz an gibt. Folgende Protokollcodes werden unterstützt: ncacn \_ ip \_ tcp, ncacn \_ http, ncacn \_ spx. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
+| Beschreibung    | Der Code, der die RPC-Protokollsequenz angibt. Die unterstützten Protokollcodes umfassen Folgendes: ncacn \_ ip \_ tcp, ncacn \_ http, ncacn \_ spx. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | WriteOnce                                                                                                                                                                                                                                                                   |
 | type           | String                                                                                                                                                                                                                                                                      |
 | Standard        | ""                                                                                                                                                                                                                                                                          |
@@ -97,7 +97,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

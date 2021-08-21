@@ -1,19 +1,19 @@
 ---
-description: Zusätzlich zu allen zuvor beschriebenen Informations Elementen, die beim Aufrufen von wsaconnetct in der ATM-spezifischen QoS-Struktur angegeben werden können, gibt es eine Ursache für die IE, die nur während der Aufruf Freigabe verwendet werden kann.
+description: Zusätzlich zu allen zuvor beschriebenen Informationselementen, die beim Aufrufen von WSAConnect in der ATM-spezifischen QoS-Struktur angegeben werden können, gibt es eine Ursache-IE, die nur während der Aufruffreigabe verwendet werden kann.
 ms.assetid: 258b22d7-b58a-499a-be00-de548578db83
 title: Ursache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f93d2a2864db347183ca42f5458681e4de3ecc6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d0539918e745c9b158a5a56923c45f37f87d5069ce63ef74083d7270204c5a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118322381"
 ---
 # <a name="cause"></a>Ursache
 
-Zusätzlich zu allen zuvor beschriebenen Informations Elementen, die beim Aufrufen von [**wsaconnetct**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnect)in der ATM-spezifischen [**QoS**](/windows/win32/api/winsock2/ns-winsock2-qos) -Struktur angegeben werden können, gibt es eine Ursache für die IE, die nur während der Aufruf Freigabe verwendet werden kann. Beim Trennen der Verbindung können Windows Sockets 2-Anwendungen diese IE optional als Trenn Daten in [**wsasenddisconnect**](/windows/desktop/api/Winsock2/nf-winsock2-wsasenddisconnect)angeben. Der Remote Anbieter kann diesen Internet Explorer über [**wsarecvdisconnect**](/windows/desktop/api/Winsock2/nf-winsock2-wsarecvdisconnect) abrufen, nachdem er die Bestätigung zum Schließen von FD erhalten hat \_ .
+Zusätzlich zu allen zuvor beschriebenen Informationselementen, die beim Aufrufen von [**WSAConnect**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnect)in der ATM-spezifischen [**QoS-Struktur**](/windows/win32/api/winsock2/ns-winsock2-qos) angegeben werden können, gibt es eine Ursachen-IE, die nur während der Aufruffreigabe verwendet werden kann. Nach dem Trennen Windows Sockets 2-Anwendungen diesen IE optional als Datentrennung in [**WSASendDisconnect angeben.**](/windows/desktop/api/Winsock2/nf-winsock2-wsasenddisconnect) Die Remote-Partei kann diese IE über [**WSARecvDisconnect abrufen,**](/windows/desktop/api/Winsock2/nf-winsock2-wsarecvdisconnect) nachdem die FD CLOSE-Benachrichtigung \_ empfangen wurde.
 
 ``` syntax
 #include <windows.h>
