@@ -1,11 +1,11 @@
 ---
-title: Ivmtaskcollection-Element Eigenschaft (vpccominterfaces. h)
-description: Ruft das Task-Objekt ab, das dem angegebenen Index entspricht.
+title: IVMTaskCollection Item-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft das Taskobjekt ab, das dem angegebenen Index entspricht.
 ms.assetid: e4738b7a-12d6-4aed-992d-2f70c5cdd4d0
 keywords:
-- Element Eigenschaft virtueller PC
-- Item-Eigenschaft Virtual PC, ivmtaskcollection-Schnittstelle
-- Ivmtaskcollection-Schnittstelle Virtual PC, Item-Eigenschaft
+- Item-Eigenschaft Virtueller PC
+- Item-Eigenschaft Virtual PC, IVMTaskCollection-Schnittstelle
+- IVMTaskCollection-Schnittstelle Virtueller PC, Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f445280834383ee594fbb53a3390c91b1928f4ad
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d721bcd990ab84e763003f3fff457fec41ec9dd3764797c373e2d094fa288526
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958830"
 ---
-# <a name="ivmtaskcollectionitem-property"></a>Ivmtaskcollection:: Item (Eigenschaft)
+# <a name="ivmtaskcollectionitem-property"></a>IVMTaskCollection::Item-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft das Task-Objekt ab, das dem angegebenen Index entspricht.
+Ruft das Taskobjekt ab, das dem angegebenen Index entspricht.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_Item(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**ivmtask**](ivmtask.md) -Objekt.
+Das [**IVMTask-Objekt.**](ivmtask.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -55,9 +55,9 @@ Das [**ivmtask**](ivmtask.md) -Objekt.
 | Name/Wert                                                                                                                                                    | Bedeutung                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt. <br/>                                                      |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der *Aufgaben* Parameter ist **null**. <br/>                                                  |
-| <dl> <dt>DISP \_ E \_ badindex</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der *Taskparameter* ist **NULL.** <br/>                                                  |
+| <dl> <dt>DISP \_ E \_ BADINDEX-0x8002000B</dt> <dt></dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
 
 
 
@@ -67,12 +67,12 @@ Das [**ivmtask**](ivmtask.md) -Objekt.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmtaskcollection ist definiert als 5c4387c8-0e8b-4b97-8058-84679adf 4c40<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMTaskCollection ist als 5c4387c8-0e8b-4b97-8058-84679adf4c40 definiert.<br/>          |
 
 
 
@@ -80,10 +80,10 @@ Das [**ivmtask**](ivmtask.md) -Objekt.
 
 <dl> <dt>
 
-[**Ivmtask**](ivmtask.md)
+[**IVMTask**](ivmtask.md)
 </dt> <dt>
 
-[**Ivmtaskcollection**](ivmtaskcollection.md)
+[**IVMTaskCollection**](ivmtaskcollection.md)
 </dt> </dl>
 
  

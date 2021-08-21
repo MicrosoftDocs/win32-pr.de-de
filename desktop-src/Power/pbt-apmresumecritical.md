@@ -1,23 +1,23 @@
 ---
-description: Benachrichtigt Anwendungen, dass das System den Vorgang fortgesetzt hat.
+description: Benachrichtigt Anwendungen, dass der Vorgang vom System fortgesetzt wurde.
 ms.assetid: f2997905-26c9-4884-ae79-64df5ce6bc55
-title: PBT_APMRESUMECRITICAL-Ereignis (Winuser. h)
+title: PBT_APMRESUMECRITICAL-Ereignis (WinUser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ef4a76e163f2e61e723f4df6572254e8ef89b40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f13214a97e99954d0649df0647bdf6ee3823b91926c0f2f2dc1212fa780a7b6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961707"
 ---
-# <a name="pbt_apmresumecritical-event"></a>PBT \_ apmresumecritical-Ereignis
+# <a name="pbt_apmresumecritical-event"></a>\_PBT-APMRESUMECRITICAL-Ereignis
 
-\[PBT \_ apmresumecritical ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Die Unterstützung für dieses Ereignis wurde in Windows Vista entfernt. Verwenden Sie stattdessen [PBT \_ apmresumeautomatic](pbt-apmresumeautomatic.md) .\]
+\[PBT \_ APMRESUMECRITICAL ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Die Unterstützung für dieses Ereignis wurde in Windows Vista entfernt. Verwenden Sie stattdessen [PBT \_ APMRESUMEAUTOMATIC.](pbt-apmresumeautomatic.md)\]
 
-Benachrichtigt Anwendungen, dass das System den Vorgang fortgesetzt hat. Dieses Ereignis kann darauf hinweisen, dass einige oder alle Anwendungen kein [PBT \_ apmsuspend](pbt-apmsuspend.md) -Ereignis empfangen haben. Beispielsweise kann dieses Ereignis nach einer kritischen Unterbrechung gesendet werden, die durch einen fehlerhaften Akku verursacht wird.
+Benachrichtigt Anwendungen, dass der Vorgang vom System fortgesetzt wurde. Dieses Ereignis kann angeben, dass einige oder alle Anwendungen kein [ \_ PBT-APMSUSPEND-Ereignis](pbt-apmsuspend.md) empfangen haben. Dieses Ereignis kann z. B. nach einer kritischen Unterbrechung übertragen werden, die durch einen ausfallbedingten Akku verursacht wird.
 
-Ein Fenster empfängt dieses Ereignis über die [**WM- \_ powerbroadcast**](wm-powerbroadcast.md) -Nachricht. Die *wParam* -Parameter und die *LPARAM* -Parameter werden wie folgt festgelegt.
+Ein Fenster empfängt dieses Ereignis über die [**WM \_ POWERBROADCAST-Nachricht.**](wm-powerbroadcast.md) Die *Parameter wParam* und *lParam* werden wie folgt festgelegt.
 
 
 ```C++
@@ -35,16 +35,16 @@ WindowProc( HWND   hwnd,    // handle to window
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für fenster.
 
-</dd> <dt>*Umschlag*</dt> <dd> 
+</dd> <dt>*uMsg*</dt> <dd> 
 
 | Wert                                                                                                                                                                                                                                                                   | Bedeutung                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| <span id="WM_POWERBROADCAST"></span><span id="wm_powerbroadcast"></span><dl> <dt>**[**WM \_ Powerbroadcast**](wm-powerbroadcast.md)**</dt> <dt>536 (0x218)</dt> </dl> | Nachrichten-ID.<br/> |
+| <span id="WM_POWERBROADCAST"></span><span id="wm_powerbroadcast"></span><dl> <dt>**[**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)**</dt> <dt>536 (0x218)</dt> </dl> | Nachrichtenbezeichner.<br/> |
 
 
 
@@ -54,7 +54,7 @@ Ein Handle für Fenster.
 
 | Wert                                                                                                                                                                                                                                              | Bedeutung                      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
-| <span id="PBT_APMRESUMECRITICAL"></span><span id="pbt_apmresumecritical"></span><dl> <dt>**PBT \_ Apmresumecritical**</dt> <dt>6 (0x6)</dt> </dl> | Ereignis Bezeichner.<br/> |
+| <span id="PBT_APMRESUMECRITICAL"></span><span id="pbt_apmresumecritical"></span><dl> <dt>**PBT \_ APMRESUMECRITICAL**</dt> <dt>6 (0x6)</dt> </dl> | Ereignisbezeichner.<br/> |
 
 
 
@@ -65,7 +65,7 @@ Ein Handle für Fenster.
 *lParam* 
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -73,9 +73,9 @@ Bleiben muss 0 (null) sein.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da eine Notabschaltung ohne vorherige Benachrichtigung aufgetreten ist, sind zuvor verfügbare Ressourcen und Daten möglicherweise nicht vorhanden, wenn die Anwendung dieses Ereignis empfängt. Die Anwendung sollte versuchen, ihren Status im Rahmen ihrer Möglichkeiten optimal wiederherzustellen. Während einer kritischen Unterbrechung behält das System den Status des DRAM und der lokalen Festplatten bei, behält aber möglicherweise keine Netzwerkverbindungen bei. Eine Anwendung muss möglicherweise in Bezug auf Dateien, die im Netzwerk geöffnet waren, vor kritischer Unterbrechung Maßnahmen ergreifen.
+Da eine Notabschaltung ohne vorherige Benachrichtigung aufgetreten ist, sind zuvor verfügbare Ressourcen und Daten möglicherweise nicht vorhanden, wenn die Anwendung dieses Ereignis empfängt. Die Anwendung sollte versuchen, ihren Status im Rahmen ihrer Möglichkeiten optimal wiederherzustellen. Während einer kritischen Unterbrechung behält das System den Zustand des DRAM und der lokalen Festplatten bei, behält jedoch möglicherweise keine Nettoverbindungen bei. Eine Anwendung muss möglicherweise Maßnahmen in Bezug auf Dateien ergreifen, die vor dem kritischen Stopp im Netzwerk geöffnet waren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,11 +83,11 @@ Da eine Notabschaltung ohne vorherige Benachrichtigung aufgetreten ist, sind zuv
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                                    |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                                           |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                                           |
+| Header<br/>                   | <dl> <dt>WinUser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -95,13 +95,13 @@ Da eine Notabschaltung ohne vorherige Benachrichtigung aufgetreten ist, sind zuv
 
 <dl> <dt>
 
-[System Aktivierungs Ereignisse](system-wake-up-events.md)
+[Systemreaktivierungsereignisse](system-wake-up-events.md)
 </dt> <dt>
 
-[Energie Verwaltungs Ereignisse](power-management-events.md)
+[Energieverwaltungsereignisse](power-management-events.md)
 </dt> <dt>
 
-[**WM- \_ powerbroadcast**](wm-powerbroadcast.md)
+[**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)
 </dt> </dl>
 
  

@@ -1,36 +1,36 @@
 ---
-description: Anzeigen von World Standard-Teletext
+description: Viewing World Standard Teletext
 ms.assetid: 99b3395b-8775-4fe8-b173-187fa359978f
-title: Anzeigen von World Standard-Teletext
+title: Viewing World Standard Teletext
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f9b0885c08403de9578a8dee1eca6e000408ee5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2129538d91a7ac48fea26fd5f1987473896760c164fb3e2b1d4a2b1d142a1f04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078545"
 ---
-# <a name="viewing-world-standard-teletext"></a>Anzeigen von World Standard-Teletext
+# <a name="viewing-world-standard-teletext"></a>Viewing World Standard Teletext
 
 > [!Note]  
-> Diese Funktion wurde aus Windows Vista und höheren Betriebssystemen entfernt. Es ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar.
+> Diese Funktionalität wurde aus den Betriebssystemen Windows Vista und höher entfernt. Es ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar.
 
  
 
-Der Standard-Teletext (WST) ist im vertikalen Auslassungs Intervall (VBI) des analogen Fernsehsignals codiert. Das Filter Diagramm für die Vorschau von Teletext ähnelt dem Diagramm, das zum Anzeigen von Untertiteln verwendet wird. Dieses Diagramm wird im folgenden Diagramm veranschaulicht.
+World Standard Teletext (WST) wird im vertikalen Leerungsintervall (Vertical Blanking Interval, VBI) des analogen Fernsehsignals codiert. Das Filterdiagramm für die Vorschau von Teletext ähnelt dem Diagramm, das zum Anzeigen von Untertiteln verwendet wird. Das folgende Diagramm veranschaulicht dieses Diagramm.
 
-![WST-Vorschau Diagramm](images/vidcap10.png)
+![wst preview graph](images/vidcap10.png)
 
 In diesem Diagramm werden die folgenden Filter für die WST-Anzeige verwendet:
 
--   [Tee/Sink-zu-Sink-Konverter](tee-sink-to-sink-converter.md). Akzeptiert die VBI-Informationen aus dem Erfassungs Filter und teilt Sie für jeden der Datendienste, die im Signal vorhanden sind, in separate Streams auf.
--   [WST-Codec](wst-codec-filter.md). Decodiert die Teletextdaten aus den VBI-Beispielen.
--   [WST-Decoder](wst-decoder-filter.md). Übersetzt Teletextdaten und zeichnet den Text auf Bitmaps. Der Downstream-Filter (in diesem Fall der Überlagerungs-Mixer) überlagert die Bitmaps auf dem Video.
+-   [Tee/Sink-to-Sink Converter](tee-sink-to-sink-converter.md). Akzeptiert die VBI-Informationen aus dem Erfassungsfilter und teilt sie für jeden datendienst, der im Signal vorhanden ist, in separate Datenströme auf.
+-   [WST-Codec](wst-codec-filter.md). Decodiert die Teletext-Daten aus den VBI-Beispielen.
+-   [WST-Decoder](wst-decoder-filter.md). Übersetzt Teletextdaten und zeichnet den Text auf Bitmaps. Der Downstreamfilter (in diesem Fall der Overlay-Mixer) überlagert die Bitmaps auf dem Video.
 
-Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-Filter nicht direkt, sodass Ihre Anwendung einige zusätzliche Aufgaben ausführen muss.
+Die RenderStream Graph Methode von **Capture** Graph Builder unterstützt die WST-Filter nicht direkt, sodass Ihre Anwendung zusätzliche Arbeit leistet.
 
-1.  Fügen Sie den Filter für den Overlay-Mixer dem Filter Diagramm hinzu. Der folgende Code verwendet die addfilterbyclsid-Funktion, die unter [Hinzufügen eines Filters nach CLSID beschrieben wird](add-a-filter-by-clsid.md). (Addfilterbyclsid ist keine DirectShow-API.)
+1.  Fügen Sie dem Filterdiagramm Mixer Overlay-Filter hinzu. Im folgenden Code wird die AddFilterByCLSID-Funktion verwendet, die unter [Hinzufügen eines Filters nach CLSID beschrieben wird.](add-a-filter-by-clsid.md) (AddFilterByCLSID ist keine DirectShow-API.)
     ```C++
     IBaseFilter *pOvMix = NULL;  // Pointer to the Overlay Mixer filter.
     hr = AddFilterByCLSID(pGraph, CLSID_OverlayMixer, L"OVMix", &pOvMix);
@@ -42,7 +42,7 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
 
     
 
-2.  Verbinden Sie die Vorschau-PIN mit dem Videorendererfilter über den Überlagerungs-Mixer. Sie können die **RenderStream** -Methode wie folgt verwenden:
+2.  Verbinden sie den Vorschaupin an den Videorendererfilter über das Overlay-Mixer. Sie können die **RenderStream-Methode** wie folgt verwenden:
     ```C++
     hr = pBuild->RenderStream(&PIN_CATEGORY_PREVIEW, &MEDIATYPE_Video, 
         pCap, pOvMix, 0);
@@ -50,7 +50,7 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
 
     
 
-3.  Fügen Sie dem Filter Diagramm den Filter Tee/Sink-to-Sink Converter hinzu. Der folgende Code verwendet die Funktion "-Funktion", die unter [Erstellen von Kernel-Mode filtern](creating-kernel-mode-filters.md)beschrieben wird. (Bei "kreatekernelfilter" handelt es sich nicht um eine DirectShow-API.)
+3.  Fügen Sie dem Filterdiagramm den Filter Tee/Sink-to-Sink Converter hinzu. Im folgenden Code wird die CreateKernelFilter-Funktion verwendet, die unter Creating Kernel-Mode Filters (Erstellen Kernel-Mode [Filter) beschrieben wird.](creating-kernel-mode-filters.md) (CreateKernelFilter ist keine DirectShow-API.)
     ```C++
     IBaseFilter* pKernelTee = NULL;
     hr = CreateKernelFilter(AM_KSCATEGORY_SPLITTER, 
@@ -63,7 +63,7 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
 
     
 
-4.  Fügen Sie den WST-Codec-Filter dem Filter Diagramm hinzu:
+4.  Fügen Sie dem Filterdiagramm den WST-Codec-Filter hinzu:
     ```C++
     IBaseFilter* pWstCodec = NULL;
     hr = CreateKernelFilter(AM_KSCATEGORY_VBICODEC, 
@@ -76,7 +76,7 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
 
     
 
-5.  Nennen Sie **RenderStream** , um die VBI-PIN des Erfassungs Filters mit dem "Tee/Sink-to-Sink Converter" und dem "Tee/Sink-to-Sink Converter" an den WST-Codec-Filter zu verbinden:
+5.  Rufen **Sie RenderStream** auf, um den VBI-Pin des Erfassungsfilters mit dem Tee-/Sink-zu-Sink-Konverter und den Tee/Sink-to-Sink-Konverter mit dem WST-Codec-Filter zu verbinden:
     ```C++
     hr = pBuild->RenderStream(&PIN_CATEGORY_VBI, 0, pCap, 
         pKernelTee, pWstCodec);
@@ -84,14 +84,14 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
 
     
 
-6.  **RenderStream** erneut aufgerufen, um den WST-Codec-Filter mit dem Überlagerungs-Mixer zu verbinden. Der WST-Decoderfilter wird automatisch in das Diagramm eingefügt.
+6.  Rufen **Sie RenderStream erneut** auf, um den WST-Codec-Filter mit dem Overlay-Mixer. Der WST-Decoderfilter wird automatisch in das Diagramm ein gebracht.
     ```C++
     hr = pBuild->RenderStream(0, 0, pWstCodec, 0, pOvMix);
     ```
 
     
 
-7.  Denken Sie daran, alle Filter Schnittstellen freizugeben.
+7.  Denken Sie daran, alle Filterschnittstellen frei zu lassen.
     ```C++
     pOvMix->Release();
     pKernelTee->Release();
@@ -101,11 +101,11 @@ Die **RenderStream** -Methode des Capture Graph-Generators unterstützt die WST-
     
 
 > [!Note]  
-> Der WST-Decoderfilter unterstützt derzeit keine Verbindungen mit dem Filter für den Video Mischungs-Renderer (VMR). Daher müssen Sie den Legacy-Videorenderer-Filter verwenden, um Teletext anzuzeigen.
+> Derzeit unterstützt der WST-Decoderfilter keine Verbindungen mit dem VmR-Filter (Video Mixing Renderer). Daher müssen Sie den älteren Videorendererfilter verwenden, um Teletext anzeigen zu können.
 
  
 
-Wenn der Erfassungs Filter eine Video Port-VBI-PIN (PIN \_ CATEGPORY \_ Videoport \_ VBI) aufweist, verbinden Sie ihn mit dem [VBI-Oberflächen zuordnerfilter](vbi-surface-allocator.md) . Andernfalls wird das Diagramm nicht ordnungsgemäß ausgeführt. Im folgenden Codebeispiel wird die addfilterbyclsid-Funktion verwendet, die unter " [Hinzufügen eines Filters nach CLSID](add-a-filter-by-clsid.md)" und die Funktion "findpinbycategory" beschrieben wird. diese Funktion wird in verwenden [von PIN-Kategorien](working-with-pin-categories.md)beschrieben. (Keine der Funktionen ist eine DirectShow-API.)
+Wenn der Erfassungsfilter über einen Videoport-VBI-Pin (PIN CATEGPORY VIDEOPORT VBI) verfügt, verbinden Sie ihn mit dem \_ \_ \_ [VBI Surface Allocator-Filter.](vbi-surface-allocator.md) Andernfalls wird das Diagramm nicht ordnungsgemäß ausgeführt. Im folgenden Codebeispiel werden die AddFilterByCLSID-Funktion, die unter Hinzufügen eines Filters [nach CLSID](add-a-filter-by-clsid.md)beschrieben wird, und die FindPinByCategory-Funktion verwendet, die unter Arbeiten mit Pinkategorien [beschrieben wird.](working-with-pin-categories.md) (Keine der Funktionen ist eine DirectShow-API.)
 
 
 ```C++

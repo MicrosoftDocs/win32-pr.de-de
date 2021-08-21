@@ -1,11 +1,11 @@
 ---
 title: IWMDRMNetReceiver ProcessLicenseResponse-Methode (Wmdrmsdk.h)
-description: Die ProcessLicenseResponse-Methode verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzaufforderung gesendet wird.
+description: Die ProcessLicenseResponse-Methode verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzforderung gesendet wird.
 ms.assetid: b6d04651-746b-474e-8a02-6b7cbee9db46
 keywords:
-- ProcessLicenseResponse-Methode windows Media Format
-- ProcessLicenseResponse-Methode windows Media Format , IWMDRMNetReceiver-Schnittstelle
-- IWMDRMNetReceiver-Schnittstelle windows Media Format , ProcessLicenseResponse-Methode
+- 'ProcessLicenseResponse-Methode : Windows Media Format'
+- ProcessLicenseResponse-Methode windows Media Format, IWMDRMNetReceiver-Schnittstelle
+- IWMDRMNetReceiver-Schnittstelle Windows Media Format , ProcessLicenseResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118700824"
 ---
 # <a name="iwmdrmnetreceiverprocesslicenseresponse-method"></a>IWMDRMNetReceiver::P rocessLicenseResponse-Methode
 
-Die **ProcessLicenseResponse-Methode** verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzaufforderung gesendet wird.
+Die **ProcessLicenseResponse-Methode** verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzforderung gesendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT ProcessLicenseResponse(
 *pbLicenseResponse* \[ In\]
 </dt> <dd>
 
-Lizenzantwort, die vom Sender empfangen wurde.
+Vom Sender empfangene Lizenzantwort.
 
 </dd> <dt>
 
@@ -62,14 +62,14 @@ Größe der Antwort in Bytes.
 *ppbWMDRMNetLicenseRepresentation* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Adresse der internen Lizenzdarstellung für die Lizenz empfängt, die in der Lizenzantwortnachricht enthalten ist. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie **CoTaskMemFree** aufrufen. Dieser Parameter kann auf **NULL** festgelegt werden, wenn die Lizenzdarstellung nicht benötigt wird.
+Adresse einer Variablen, die die Adresse der internen Lizenzdarstellung für die Lizenz empfängt, die in der Lizenzantwortnachricht enthalten ist. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher durch Aufrufen von **CoTaskMemFree frei geben.** Dieser Parameter kann auf NULL festgelegt **werden,** wenn die Lizenzdarstellung nicht erforderlich ist.
 
 </dd> <dt>
 
-*pwWMDRMNetLicenseRepresentation* \[ out\]
+*–WMDRMNetLicenseRepresentation* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Größe der Lizenzdarstellung empfängt. Muss auf **NULL** festgelegt werden, wenn *ppbWMDRMNetLicenseRepresentation* **NULL** ist.
+Adresse einer Variablen, die die Größe der Lizenzdarstellung empfängt. Muss auf NULL festgelegt **werden,** *wenn ppbWMDRMNetLicenseRepresentation* **NULL ist.**
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ \_ DRM- WIES ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
+| <dl> <dt>**NS \_ E \_ \_ DRM:NS: ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
@@ -90,9 +90,9 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Die lizenzantwort, die mit dieser Methode verarbeitet wird, muss der letzten Lizenzaufforderung entsprechen, die auf dem Clientcomputer generiert wurde.
+Die mit dieser Methode verarbeitete Lizenzantwort muss der letzten Lizenzausforderung entsprechen, die auf dem Clientcomputer generiert wurde.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -102,14 +102,14 @@ Die lizenzantwort, die mit dieser Methode verarbeitet wird, muss der letzten Liz
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**IWMDRMNetReceiver-Schnittstelle**](iwmdrmnetreceiver.md)
 </dt> <dt>
 
-[**IWMDRMNetReceiver::GetLicenseChallenge**](iwmdrmnetreceiver-getlicensechallenge.md)
+[**IWMDRMNetReceiver::GetLicenseC wiege**](iwmdrmnetreceiver-getlicensechallenge.md)
 </dt> </dl>
 
  

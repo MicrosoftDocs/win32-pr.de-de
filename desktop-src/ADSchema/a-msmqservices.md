@@ -1,11 +1,11 @@
 ---
 title: MSMQ-Services-Attribut
-description: Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
+description: Der Von MSMQ bereitgestellte Diensttyp, der auf diesem Server installiert ist.
 ms.assetid: a4deb3de-e77c-4788-8719-c9573ddb8b91
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-Services-Attribut
-- AD-Schema des MsmqServices-Attributs
+- MSMQ-Services AD-Schema
+- AD-Schema des mSMQServices-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48b40de9d10fe563ea5514cd1c773dbdfcb5f691
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e444fc2a9d27b4157218d3e51948d62eda13bb4649c4be3fc6e49c7d8ea6f350
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081754"
 ---
 # <a name="msmq-services-attribute"></a>MSMQ-Services-Attribut
 
-Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
+Der Von MSMQ bereitgestellte Diensttyp, der auf diesem Server installiert ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | MSMQ-Services                        |
-| LDAP-Display-Name | "MsmqServices"                         |
+| Ldap-Anzeigename | Msmqservices                         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.950               |
-| System-ID-GUID    | 9a0dc33d-C100-11d1-bbc5-0080c76670c0 |
+| System-Id-Guid    | 9a0dc33d-c100-11d1-bb5-0080c76670c0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
@@ -70,7 +70,7 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
@@ -100,10 +100,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
@@ -121,10 +121,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
@@ -142,10 +142,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
@@ -163,10 +163,10 @@ Der Diensttyp, der von MSMQ auf diesem Server installiert wird.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |

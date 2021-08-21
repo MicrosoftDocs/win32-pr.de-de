@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Lesen von Attributen
-description: Im folgenden Codebeispiel werden die Eigenschaften des angegebenen Benutzers in der aktuellen Domäne aufgelistet, indem nach dem Benutzer gesucht und dann IADsPropertyList verwendet wird, um seine Eigenschaften aufzuzählen.
+title: Beispielcode zum Lesen von Attributen
+description: Im folgenden Codebeispiel werden die Eigenschaften des angegebenen Benutzers in der aktuellen Domäne aufzählt, indem nach dem Benutzer gesucht und dann IADsPropertyList verwendet wird, um seine Eigenschaften aufzulisten.
 ms.assetid: f5541e9b-e149-4d22-9ff6-a32bd8239f57
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code zum Lesen von Attributen ADSI
+- Beispielcode zum Lesen von Attributen ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2417a30ba4f4b6bf1247ec05bcfb03380f2203f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ae9ef6abf864d77571383b3834a88c6a8936132b9fdcc2e01ea84603f0aab95f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082604"
 ---
-# <a name="example-code-for-reading-attributes"></a>Beispiel Code zum Lesen von Attributen
+# <a name="example-code-for-reading-attributes"></a>Beispielcode zum Lesen von Attributen
 
-Im folgenden Codebeispiel werden die Eigenschaften des angegebenen Benutzers in der aktuellen Domäne aufgelistet, indem nach dem Benutzer gesucht und dann [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) verwendet wird, um seine Eigenschaften aufzuzählen. Beachten Sie, dass die Zeit-und Datumswerte als große ganze Zahlen verarbeitet werden und wie Oktett-Zeichen folgen für **objectSID** und **objectGUID** behandelt werden.
+Im folgenden Codebeispiel werden die Eigenschaften des angegebenen Benutzers in der aktuellen Domäne aufzählt, indem nach dem Benutzer gesucht und dann [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) verwendet wird, um seine Eigenschaften aufzulisten. Beachten Sie, dass Zeit- und Datumswerte als große ganze Zahlen behandelt werden und wie Oktettzeichenfolgen für **objectSID** und **objectGUID** behandelt werden.
 
 
 ```C++
@@ -642,7 +642,7 @@ void wmain(int argc, wchar_t *argv[])
 
 
 
-Im folgenden Visual Basic Codebeispiel wird veranschaulicht, wie die Eigenschaften eines Benutzer Objekts angezeigt werden. Um dieses Codebeispiel zu verwenden, erstellen Sie einen Verweis auf die Active DS-Typbibliothek und die Microsoft ActiveX Data Objects-Bibliothek in Ihrem Visual Basic-Projekt.
+Das folgende Visual Basic Codebeispiel zeigt, wie die Eigenschaften eines Benutzerobjekts abzurufen sind. Um dieses Codebeispiel zu verwenden, erstellen Sie einen Verweis auf die Active DS Type Library und die Microsoft ActiveX Data Objects Library in Ihrem Visual Basic-Projekt.
 
 
 ```VB
@@ -800,9 +800,9 @@ Set propVal = Nothing
 
 
 
- 
+ 
 
- 
+ 
 
 
 

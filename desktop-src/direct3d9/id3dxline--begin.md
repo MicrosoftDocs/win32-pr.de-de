@@ -1,7 +1,7 @@
 ---
-description: Bereitet ein Gerät für Zeichnungs Zeilen vor.
+description: Bereitet ein Gerät für das Zeichnen von Linien vor.
 ms.assetid: c597703d-6466-4b55-b1a6-a4e7c667e50c
-title: 'ID3DXLine:: Begin-Methode (D3dx9core. h)'
+title: ID3DXLine::Begin-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ee241b39f2d0c1939cf2cb0cc09e079abd3430a3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9daa65558c58849d406056ce3358c26fdf2ce1c604342f993babe6af553d130f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119629650"
 ---
-# <a name="id3dxlinebegin-method"></a>ID3DXLine:: Begin-Methode
+# <a name="id3dxlinebegin-method"></a>ID3DXLine::Begin-Methode
 
-Bereitet ein Gerät für Zeichnungs Zeilen vor.
+Bereitet ein Gerät für das Zeichnen von Linien vor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,15 +42,15 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Aufrufen von **ID3DXLine:: begin** ist optional. Wenn Sie außerhalb einer ID3DXLine:: begin/ID3DXLine:: End-Sequenz aufgerufen wird, werden die Draw-Funktionen intern ID3DXLine:: BEGIN und ID3DXLine:: End aufrufen. Um zusätzlichen Aufwand zu vermeiden, sollte diese Methode verwendet werden, wenn mehr als eine Draw-Funktion nacheinander aufgerufen wird.
+Der Aufruf von **ID3DXLine::Begin** ist optional. Wenn sie außerhalb einer ID3DXLine::Begin/ID3DXLine::End-Sequenz aufgerufen wird, rufen die Draw-Funktionen intern ID3DXLine::Begin und ID3DXLine::End auf. Um zusätzlichen Mehraufwand zu vermeiden, sollte diese Methode verwendet werden, wenn mehrere Draw-Funktionen nacheinander aufgerufen werden.
 
-Diese Methode muss innerhalb einer [**IDirect3DDevice9:: BeginScene**](/windows/desktop/api) -und [**IDirect3DDevice9:: EndScene**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-endscene) -Sequenz aufgerufen werden.
+Diese Methode muss innerhalb einer [**IDirect3DDevice9::BeginScene-**](/windows/desktop/api) und [**IDirect3DDevice9::EndScene-Sequenz**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-endscene) aufgerufen werden.
 
-ID3DXLine:: begin kann nicht als Ersatz für [**IDirect3DDevice9:: BeginScene**](/windows/desktop/api) oder [**ID3DXRenderToSurface:: BeginScene**](id3dxrendertosurface--beginscene.md)verwendet werden.
+ID3DXLine::Begin kann nicht als Ersatz für [**IDirect3DDevice9::BeginScene**](/windows/desktop/api) oder [**ID3DXRenderToSurface::BeginScene**](id3dxrendertosurface--beginscene.md)verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,8 +58,8 @@ ID3DXLine:: begin kann nicht als Ersatz für [**IDirect3DDevice9:: BeginScene**]
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

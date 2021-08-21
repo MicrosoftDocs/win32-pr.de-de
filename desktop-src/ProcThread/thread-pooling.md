@@ -1,48 +1,48 @@
 ---
-description: Es gibt viele Anwendungen, mit denen Threads erstellt werden, die sehr viel Zeit für den Ruhezustand aufwenden, der auf das Eintreten eines Ereignisses wartet.
+description: Es gibt viele Anwendungen, die Threads erstellen, die viel Zeit im In-/Aus-Zustand auf ein Ereignis warten.
 ms.assetid: a5e52080-35d4-47f5-9050-90889e3bf2f8
 title: Pooling von Threads
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bcf3565401dc57b077e333043861d42b683e810c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c581e416952e6bac14dbf12a8f87202925a5254879b7e220c7cb2d780699f9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081280"
 ---
 # <a name="thread-pooling"></a>Pooling von Threads
 
-Es gibt viele Anwendungen, mit denen Threads erstellt werden, die sehr viel Zeit für den Ruhezustand aufwenden, der auf das Eintreten eines Ereignisses wartet. Andere Threads können nur dann in den Ruhezustand versetzt werden, dass Sie regelmäßig zum Abrufen von Änderungs-oder Update Statusinformationen aktiviert werden. *Thread Pooling* ermöglicht es Ihnen, Threads effizienter zu verwenden, indem Sie der Anwendung einen Pool von Arbeitsthreads bereitstellen, die vom System verwaltet werden. Mindestens ein Thread überwacht den Status aller warte Vorgänge, die in die Warteschlange des Thread Pools eingereiht wurden. Wenn ein warte Vorgang abgeschlossen ist, führt ein Arbeits Thread aus dem Thread Pool die entsprechende Rückruffunktion aus.
+Es gibt viele Anwendungen, die Threads erstellen, die viel Zeit im In-/Aus-Zustand auf ein Ereignis warten. Andere Threads können in den Zustand "In den Zustand "In den Zustand" wechseln, um in regelmäßigen Abständen nach Einer Änderungs- oder Aktualisierungsstatusinformationen zu fragen. *Mithilfe von Threadpooling* können Sie Threads effizienter verwenden, indem Sie ihrer Anwendung einen Pool von Arbeitsthreads bereitstellen, die vom System verwaltet werden. Mindestens ein Thread überwacht den Status aller Wartevorgänge, die sich in der Warteschlange des Threadpools befinden. Wenn ein Wartevorgang abgeschlossen ist, führt ein Arbeitsthread aus dem Threadpool die entsprechende Rückruffunktion aus.
 
-In diesem Thema wird die ursprüngliche Thread Pool-API beschrieben. Die in Windows Vista eingeführte Thread Pool-API ist einfacher und zuverlässiger, bietet eine bessere Leistung und bietet Entwicklern mehr Flexibilität. Informationen zur aktuellen Thread Pool-API finden Sie unter [Thread Pools](thread-pools.md).
+In diesem Thema wird die ursprüngliche Threadpool-API beschrieben. Die in Windows Vista eingeführte Threadpool-API ist einfacher, zuverlässiger, bietet eine bessere Leistung und bietet Entwicklern mehr Flexibilität. Informationen zur aktuellen Threadpool-API finden Sie unter [Threadpools](thread-pools.md).
 
-Sie können auch Arbeitselemente in die Warteschlange stellen, die nicht mit einem warte Vorgang im Thread Pool verknüpft sind. Um anzufordern, dass ein Arbeits Element von einem Thread im Thread Pool behandelt werden soll, müssen Sie die [**QueueUserWorkItem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) -Funktion aufzurufen. Diese Funktion nimmt einen Parameter für die Funktion an, die von dem aus dem Thread Pool ausgewählten Thread aufgerufen wird. Es gibt keine Möglichkeit, ein Arbeits Element abzubrechen, nachdem es in die Warteschlange eingereiht wurde.
+Sie können auch Arbeitselemente in die Warteschlange stellen, die nicht mit einem Wartevorgang im Threadpool verknüpft sind. Rufen Sie die [**QueueUserWorkItem-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) auf, um an fordern, dass ein Arbeitselement von einem Thread im Threadpool behandelt wird. Diese Funktion akzeptiert einen Parameter für die Funktion, die von dem aus dem Threadpool ausgewählten Thread aufgerufen wird. Es gibt keine Möglichkeit, ein Arbeitselement abzubricht, nachdem es in die Warteschlange gestellt wurde.
 
-[Timer-Queue-Timer](../sync/timer-queues.md) und [registrierte warte Vorgänge](../sync/wait-functions.md) verwenden ebenfalls den Thread Pool. Die Rückruf Funktionen werden in die Warteschlange des Thread Pools eingereiht. Sie können auch die [**bindiocompletioncallback**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback) -Funktion verwenden, um asynchrone e/a-Vorgänge zu veröffentlichen. Nach Abschluss des e/a-Vorgängen wird der Rückruf von einem Thread Pool Thread ausgeführt.
+[Timerwarteschlangen-Timer und](../sync/timer-queues.md) [registrierte Wartevorgänge](../sync/wait-functions.md) verwenden ebenfalls den Threadpool. Ihre Rückruffunktionen werden in die Warteschlange des Threadpools gestellt. Sie können auch die [**BindIoCompletionCallback-Funktion**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback) verwenden, um asynchrone E/A-Vorgänge zu veröffentlichen. Nach Abschluss der E/A wird der Rückruf von einem Threadpoolthread ausgeführt.
 
-Der Thread Pool wird beim ersten Aufruf von [**QueueUserWorkItem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) oder [**bindiocompletioncallback**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback)erstellt, oder wenn eine Rückruffunktion von einem Timer oder einem registrierten Warteschlangen-Timer in eine Warteschlange eingereiht wird. Standardmäßig beträgt die Anzahl der Threads, die im Thread Pool erstellt werden können, ungefähr 500. Jeder Thread verwendet die Standard Stapelgröße und wird mit der Standardpriorität ausgeführt.
+Der Threadpool wird erstellt, wenn [**Sie QueueUserWorkItem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) oder [**BindIoCompletionCallback**](/windows/desktop/api/WinBase/nf-winbase-bindiocompletioncallback)zum ersten Mal aufrufen oder wenn ein Timerwarteschlangen-Timer oder registrierter Wartevorgang eine Rückruffunktion in die Warteschlange einreiht. Standardmäßig beträgt die Anzahl der Threads, die im Threadpool erstellt werden können, etwa 500. Jeder Thread verwendet die Standardstapelgröße und wird mit der Standardpriorität ausgeführt.
 
-Der Thread Pool enthält zwei Arten von Arbeitsthreads: e/a-Vorgänge und nicht-e/a-Vorgänge. Ein e */a-Arbeits Thread* ist ein Thread, der in einem wartewarnbaren Wartestatus wartet. Arbeitselemente werden in e/a-Arbeitsthreads als asynchrone Prozedur Aufrufe (APC) in die Warteschlange eingereiht. Sie sollten eine Arbeitsaufgabe in die Warteschlange eines e/a-Arbeits Thread einreihen, wenn Sie in einem Thread ausgeführt werden soll, der auf einen Warn baren Zustand wartet.
+Es gibt zwei Arten von Arbeitsthreads im Threadpool: E/A und Nicht-E/A. Ein *E/A-Arbeitsthread* ist ein Thread, der in einem wartbaren Wartezustand wartet. Arbeitselemente werden als asynchrone Prozeduraufrufe (APC) in E/A-Arbeitsthreads in die Warteschlange gestellt. Sie sollten ein Arbeitselement in die Warteschlange eines E/A-Arbeitsthreads stellen, wenn es in einem Thread ausgeführt werden soll, der in einem wartbaren Zustand wartet.
 
-Ein *nicht-e/a-Arbeits Thread* wartet auf e/a-Abschlussports. Die Verwendung von nicht-e/a-Arbeitsthreads ist effizienter als die Verwendung von e/a-Arbeitsthreads. Daher sollten Sie, wenn möglich, nicht-e/a-Arbeitsthreads verwenden. Sowohl e/a-als auch nicht-e/a-Arbeitsthreads werden nicht beendet, wenn ausstehende asynchrone e/a-Anforderungen vorliegen. Beide Arten von Threads können von Arbeits Elementen verwendet werden, die asynchrone e/a-Abschluss Anforderungen initiieren. Vermeiden Sie jedoch das Veröffentlichen von asynchronen e/a-Abschluss Anforderungen in nicht-e/a-Arbeitsthreads, wenn die Ausführung lange dauern könnte.
+Ein *Nicht-E/A-Arbeitsthread* wartet auf E/A-Abschlussports. Die Verwendung von Nicht-E/A-Arbeitsthreads ist effizienter als die Verwendung von E/A-Arbeitsthreads. Daher sollten Sie nach Möglichkeit Nicht-E/A-Arbeitsthreads verwenden. E/A- und Nicht-E/A-Arbeitsthreads werden nicht beendet, wenn asynchrone E/A-Anforderungen ausstehen. Beide Threadtypen können von Arbeitselementen verwendet werden, die asynchrone E/A-Abschlussanforderungen initiieren. Vermeiden Sie es jedoch, asynchrone E/A-Abschlussanforderungen in Nicht-E/A-Arbeitsthreads zu veröffentlichen, wenn dies lange dauern kann.
 
-Um das Thread Pooling verwenden zu können, müssen die Arbeitselemente und alle Funktionen, die Sie aufzurufen, Thread Pool sicher sein. Eine sichere Funktion geht davon aus, dass es sich bei dem ausgeführten Thread um einen dedizierten oder persistenten Thread handelt. Im Allgemeinen sollten Sie die Verwendung von [Thread lokalem Speicher](thread-local-storage.md) oder das Ausführen eines asynchronen Aufrufes vermeiden, der einen persistenten Thread benötigt, z. b. die [**RegNotifyChangeKeyValue**](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue) -Funktion. Diese Funktionen können jedoch in einem dedizierten (von der Anwendung erstellten) Thread oder in eine Warteschlange für einen persistenten Arbeits Thread (mithilfe von [**QueueUserWorkItem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) mit der WT \_ executeinpersistentthread-Option) aufgerufen werden.
+Um Threadpooling zu verwenden, müssen die Arbeitselemente und alle funktionen, die sie aufrufen, threadpoolsicher sein. Eine sichere Funktion geht nicht davon aus, dass es sich bei dem Thread, der sie ausgeführt, um einen dedizierten oder persistenten Thread handelt. Im Allgemeinen sollten Sie die Verwendung des lokalen [Threadspeichers](thread-local-storage.md) oder einen asynchronen Aufruf vermeiden, der einen persistenten Thread erfordert, z. B. die [**RegNotifyChangeKeyValue-Funktion.**](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue) Solche Funktionen können jedoch für einen dedizierten Thread aufgerufen (von der Anwendung erstellt) oder in eine Warteschlange eines permanenten Arbeitsthreads gestellt werden (mit [**queueUserWorkItem**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-queueuserworkitem) mit der WT \_ EXECUTEINPERSISTENTTHREAD-Option).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Warn Bare e/a](../fileio/alertable-i-o.md)
+[Warnungsfähige E/A](../fileio/alertable-i-o.md)
 </dt> <dt>
 
-[Asynchrone Prozedur Aufrufe](../sync/asynchronous-procedure-calls.md)
+[Asynchrone Prozeduraufrufe](../sync/asynchronous-procedure-calls.md)
 </dt> <dt>
 
-[E/a-Abschlussports](../fileio/i-o-completion-ports.md)
+[E/A-Abschlussports](../fileio/i-o-completion-ports.md)
 </dt> <dt>
 
-[Thread Pools](thread-pools.md)
+[Threadpools](thread-pools.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SETCOLUMN Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_SETCOLUMN Struktur'
 title: JET_SETCOLUMN Struktur
 TOCTitle: JET_SETCOLUMN Structure
 ms:assetid: 3fdb8ec0-3c40-44f3-9859-72e22a504b90
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a170132fd4d832133e0f0bcad4a3499fa743db38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffdcd2ea11fad6c9ec2baae1a37bdd1965acb852
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750520"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466367"
 ---
 # <a name="jet_setcolumn-structure"></a>JET_SETCOLUMN Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_setcolumn-structure"></a>JET_SETCOLUMN Struktur
 
-Die **JET_SETCOLUMN** -Struktur enthält Eingabe-und Ausgabeparameter für [jetsetcolumns](./jetsetcolumns-function.md). Felder in der Struktur beschreiben, welcher Spaltenwert festgelegt werden soll, wie er festgelegt wird und wo die Spalten Satz Daten zu finden sind.
+Die **JET_SETCOLUMN-Struktur** enthält Eingabe- und Ausgabeparameter für [JetSetColumns.](./jetsetcolumns-function.md) Felder in der Struktur beschreiben, welcher Spaltenwert festgelegt werden soll, wie er festgelegt wird und wo die Spaltensatzdaten erhalten werden.
 
 ```cpp
     typedef struct {
@@ -45,108 +45,54 @@ Die **JET_SETCOLUMN** -Struktur enthält Eingabe-und Ausgabeparameter für [jets
 
 ### <a name="members"></a>Member
 
-**ColumnID**
+**Columnid**
 
-Der Spalten Bezeichner für eine Spalte, die festgelegt werden soll.
+Der Spaltenbezeichner für eine spalte, die festgelegt werden soll.
 
 **pvData**
 
-Ein Zeiger auf Daten, die in eine Spalte festgelegt werden sollen.
+Ein Zeiger auf Daten, die in einer Spalte festgelegt werden.
 
 **cbData**
 
-Die Größe der Zuordnung in Bytes, beginnend bei **pvData** (in Bytes).
+Die Größe der Zuordnung in Bytes, beginnend bei **pvData** in Bytes.
 
 **grbit**
 
-Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthalten, die NULL oder mehr der folgenden Elemente enthalten.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitSetAppendLV</p></td>
-<td><p>Fügt Daten an eine Spalte vom Typ <a href="gg269213(v=exchg.10).md">JET_coltypLongText</a> oder <a href="gg269213(v=exchg.10).md">JET_coltypLongBinary</a>an. Das gleiche Verhalten können Sie erreichen, indem Sie die Größe des vorhandenen Long-Werts ermitteln und <strong>iblongvalue</strong> in <strong>psetup</strong>angeben. Es ist jedoch einfacher, dieses <em>grbit</em>zu verwenden, da das Wissen der Größe des vorhandenen Spaltenwerts nicht erforderlich ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitSetOverwriteLV</p></td>
-<td><p>Ersetzt den vorhandenen Long-Wert durch die neuen Daten. Wenn diese Option verwendet wird, ist es so, als ob der vorhandene Long-Wert auf 0 (null) festgelegt wurde, bevor die neuen Daten festgelegt werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitSetSizeLV</p></td>
-<td><p>Interpretiert den Eingabepuffer als ganzzahlige Anzahl von Bytes, die als Länge des Long-Werts festgelegt werden soll, der durch das angegebene ColumnID und ggf. die Sequenznummer in psetinfo- &gt; itagsequence beschrieben wird. Wenn die angegebene Größe größer ist als der vorhandene Spaltenwert, wird die Spalte um 0s erweitert. Wenn die Größe kleiner als der vorhandene Spaltenwert ist, wird der Wert abgeschnitten.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitSetZeroLength</p></td>
-<td><p>Legt einen Wert auf die Länge 0 (null) fest. Normalerweise wird ein Spaltenwert auf NULL festgelegt, indem ein cbmax von 0 übergeben wird. Bei manchen Typen, wie z. b. <a href="gg269213(v=exchg.10).md">JET_coltypText</a>, kann ein Spaltenwert jedoch eine Länge von 0 (null) und nicht NULL sein, und diese Option wird verwendet, um zwischen null und 0 zu unterscheiden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitSetSeparateLV</p></td>
-<td><p>Erzwingt, dass ein langer Wert, Spalten vom Typ <a href="gg269213(v=exchg.10).md">JET_coltypLongText</a> oder <a href="gg269213(v=exchg.10).md">JET_coltypLongBinary</a>getrennt vom Rest der Daten Satz Daten gespeichert werden. Dies tritt normalerweise auf, wenn die Größe des Long-Werts verhindert, dass Sie mit den verbleibenden Daten Satz Daten gespeichert wird. Diese Option kann jedoch verwendet werden, um zu erzwingen, dass der lange Wert separat gespeichert wird. Beachten Sie, dass lange Werte, die vier Bytes groß oder kleiner sind, nicht getrennt werden können. In solchen Fällen wird die Option ignoriert.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitSetUniqueMultiValues</p></td>
-<td><p>Erzwingt unterschiedliche Werte in einer mehrwertigen Spalte. Mit dieser Option werden die Quell Spaltendaten ohne Transformationen mit anderen vorhandenen Spaltenwerten verglichen, und es wird ein Fehler zurückgegeben, wenn ein Duplikat gefunden wird. Wenn diese Option angegeben wird, können JET_bitSetAppendLv, JET_bitSetOverwriteLV und JET_bitSetSizeLV nicht ebenfalls angegeben werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitSetUniqueNormalizedMultiValues</p></td>
-<td><p>Erzwingt unterschiedliche Werte in einer mehrwertigen Spalte. Mit dieser Option wird die normalisierte Transformation von Spaltendaten mit anderen ähnlich transformierten vorhandenen Spaltenwerten verglichen, und es wird ein Fehler zurückgegeben, wenn ein Duplikat gefunden wird. Wenn diese Option angegeben wird, können JET_bitSetAppendLv, JET_bitSetOverwriteLV und JET_bitSetSizeLV nicht ebenfalls angegeben werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitSetRevertToDefaultValue</p></td>
-<td><p>Bewirkt, dass die Spalte für nachfolgende Vorgänge zum Abrufen von Spalten den Standard Spaltenwert zurückgibt. Alle vorhandenen Spaltenwerte werden entfernt. Diese Option gilt nur für gekennzeichnete, sparsespalten oder mehrwertige Spalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitSetIntrinsicLV</p></td>
-<td><p>Behält den langen Wert, Spalten vom Typ <a href="gg269213(v=exchg.10).md">JET_coltypLongText</a> oder JET_coltypeLongBinary bei Bedarf mit den verbleibenden Daten Satz Daten. Normalerweise werden lange Spalten separat gespeichert, wenn Ihre Länge 1024 Bytes überschreitet oder andernfalls die Daten Satz Länge die Größe der Größenbeschränkung auf Seitengröße überschreiten würde. Wenn diese Option festgelegt ist, schlägt der Vorgang zum Festlegen von Spalten jedoch mit einem Fehler JET_errColumnTooBig fehl, anstatt diesen Spaltenwert getrennt von den verbleibenden Daten Satz Daten zu speichern.</p></td>
-</tr>
-</tbody>
-</table>
+Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthalten, die null oder mehr der folgenden Elemente enthalten.
 
 
-**iblongvalue**
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitSetAppendLV</p> | <p>Fügt Daten an eine Spalte vom Typ <a href="gg269213(v=exchg.10).md">JET_coltypLongText</a> <a href="gg269213(v=exchg.10).md">oder</a>JET_coltypLongBinary. Das gleiche Verhalten kann erreicht werden, indem die Größe des vorhandenen long-Werts bestimmt und <strong>ibLongValue</strong> in <strong>psetinfo angegeben wird.</strong> Es ist jedoch einfacher, dieses <em>Grbit</em>zu verwenden, da es nicht erforderlich ist, die Größe des vorhandenen Spaltenwerts zu kennen.</p> | 
+| <p>JET_bitSetOverwriteLV</p> | <p>Ersetzt den vorhandenen Long-Wert durch die neuen Daten. Wenn diese Option verwendet wird, ist dies so, als ob der vorhandene Long-Wert vor dem Festlegen der neuen Daten auf 0 (null) länge festgelegt wurde.</p> | 
+| <p>JET_bitSetSizeLV</p> | <p>Interpretiert den Eingabepuffer als eine ganzzahlige Anzahl von Bytes, die als Länge des long-Werts festgelegt werden soll, der von der angegebenen columnid beschrieben wird, und, sofern angegeben, als Sequenznummer in psetinfo- &gt; itagSequence. Wenn die größe größer als der vorhandene Spaltenwert ist, wird die Spalte um 0 s erweitert. Wenn die Größe kleiner als der vorhandene Spaltenwert ist, wird der Wert abgeschnitten.</p> | 
+| <p>JET_bitSetZeroLength</p> | <p>Legt einen Wert auf die Länge 0 (null) fest. Normalerweise wird ein Spaltenwert auf NULL festgelegt, indem ein cbMax-Wert von 0 übergeben wird. Für einige Typen, z. B. <a href="gg269213(v=exchg.10).md">JET_coltypText</a>, kann ein Spaltenwert jedoch eine Länge von 0 anstelle von NULL haben, und diese Option wird verwendet, um zwischen NULL und 0 Länge zu unterscheiden.</p> | 
+| <p>JET_bitSetSeparateLV</p> | <p>Erzwingt, dass ein long-Wert, Spalten vom Typ <a href="gg269213(v=exchg.10).md">JET_coltypLongText</a> oder <a href="gg269213(v=exchg.10).md">JET_coltypLongBinary,</a>getrennt vom Rest der Datensatzdaten gespeichert wird. Dies tritt normalerweise auf, wenn die Größe des long-Werts verhindert, dass er mit den verbleibenden Datensatzdaten gespeichert wird. Diese Option kann jedoch verwendet werden, um zu erzwingen, dass der Long-Wert separat gespeichert wird. Beachten Sie, dass lange Werte mit einer Größe von vier Byte oder kleiner nicht erzwungen werden können, getrennt zu sein. In solchen Fällen wird die Option ignoriert.</p> | 
+| <p>JET_bitSetUniqueMultiValues</p> | <p>Erzwingt unterschiedliche Werte in einer mehrwertigen Spalte. Diese Option vergleicht die Quellspaltendaten ohne Transformationen mit anderen vorhandenen Spaltenwerten, und es wird ein Fehler zurückgegeben, wenn ein Duplikat gefunden wird. Wenn diese Option angegeben ist, können JET_bitSetAppendLv, JET_bitSetOverwriteLV und JET_bitSetSizeLV nicht ebenfalls angegeben werden.</p> | 
+| <p>JET_bitSetUniqueNormalizedMultiValues</p> | <p>Erzwingt unterschiedliche Werte in einer mehrwertigen Spalte. Diese Option vergleicht die schlüsselnormierte Transformation von Spaltendaten mit anderen ähnlich transformierten vorhandenen Spaltenwerten, und es wird ein Fehler zurückgegeben, wenn ein Duplikat gefunden wird. Wenn diese Option angegeben ist, können JET_bitSetAppendLv, JET_bitSetOverwriteLV und JET_bitSetSizeLV nicht ebenfalls angegeben werden.</p> | 
+| <p>JET_bitSetRevertToDefaultValue</p> | <p>Bewirkt, dass die Spalte bei nachfolgenden Abrufspaltenvorgängen den Standardspaltenwert zurück gibt. Alle vorhandenen Spaltenwerte werden entfernt. Diese Option gilt nur für markierte Spalten, Sparsespalten oder mehrwertige Spalten.</p> | 
+| <p>JET_bitSetIntrinsicLV</p> | <p>Speichert den long-Wert, Spalten vom <a href="gg269213(v=exchg.10).md">Typ JET_coltypLongText</a> oder JET_coltypeLongBinary, die nach Möglichkeit mit den verbleibenden Datensatzdaten gespeichert werden. Normalerweise werden lange Spalten separat gespeichert, wenn ihre Länge 1.024 Byte überschreitet oder andernfalls dazu führen würde, dass die Datensatzlänge die größenbezogene Größenbeschränkung der Seite überschreitet. Wenn diese Option jedoch festgelegt ist, tritt beim Vorgang zum Festlegen der Spalte ein Fehler auf JET_errColumnTooBig anstatt diesen Spaltenwert getrennt von den verbleibenden Datensatzdaten zu speichern.</p> | 
 
-Der Offset zum ersten Byte, der aus einer Spalte vom Typ [JET_coltypLongBinary](./jet-coltyp.md)abgerufen werden soll, oder [JET_coltypLongText](./jet-coltyp.md).
 
-**itagsequence**
 
-Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte. Eine **itagsequence** von 0 gibt an, dass der festgelegte Spaltenwert als neue Instanz einer mehrwertigen Spalte hinzugefügt werden soll.
+**ibLongValue**
 
-**irre**
+Der Offset zum ersten Byte, das aus einer Spalte vom Typ abgerufen werden soll, JET_coltypLongBinary [oder](./jet-coltyp.md) [JET_coltypLongText.](./jet-coltyp.md)
 
-Fehlercodes und Warnungen, die vom Vorgang zum Festlegen der Spalte zurückgegeben werden.
+**itagSequence**
+
+Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte. Eine **itagSequence** von 0 gibt an, dass der Spaltenwertsatz als neue Instanz einer mehrwertigen Spalte hinzugefügt werden soll.
+
+**Err**
+
+Fehlercodes und Warnungen, die vom Vorgang zum Festlegen der Spalte zurückgegeben wurden.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
@@ -155,4 +101,4 @@ Fehlercodes und Warnungen, die vom Vorgang zum Festlegen der Spalte zurückgegeb
 [JET_COLUMNID](./jet-columnid.md)  
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
-[Jetsetcolumns](./jetsetcolumns-function.md)
+[JetSetColumns](./jetsetcolumns-function.md)

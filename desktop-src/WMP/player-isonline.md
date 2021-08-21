@@ -1,9 +1,9 @@
 ---
-title: Player. IsOnline
-description: Die IsOnline-Eigenschaft ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.
+title: Player.isOnline
+description: Die isOnline-Eigenschaft ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.
 ms.assetid: ca74155b-fd11-4990-8a6b-49f9b68992c0
 keywords:
-- Player. IsOnline-Windows-Media Player
+- Player.isOnline-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,24 +14,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8979c180b1c8d8848d869342fb92876ff4828df1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf3f1a6b78a8a712e1fac3fe3223f292a56d8b0020dadc787f419de540d12ef4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054368"
 ---
-# <a name="playerisonline"></a>Player. IsOnline
+# <a name="playerisonline"></a>Player.isOnline
 
-Die **IsOnline-** Eigenschaft ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.
+Die **isOnline-Eigenschaft** ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **IsOnline**
+*Player* . **isOnline**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert.
+Diese Eigenschaft ist ein schreibgeschützter **boolescher Wert.**
 
 
 
@@ -44,7 +44,7 @@ Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft gibt immer true zurück.
 
@@ -54,7 +54,7 @@ Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

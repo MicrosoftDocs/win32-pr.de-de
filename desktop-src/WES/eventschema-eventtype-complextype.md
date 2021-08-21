@@ -1,9 +1,9 @@
 ---
 title: Komplexer EventType-Typ
-description: Definiert den Stamm Knoten des Ereignis Schemas.
+description: Definiert den Stammknoten des Ereignisschemas.
 ms.assetid: 1ff9299b-71ee-4bb3-8a9a-fb9880dbf577
 keywords:
-- EventType-Ereignisprotokoll (komplexer Typ)
+- 'EventType: komplexer EventLog-Typ'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1103570b6c1d9f51a8cbe8fe5628460690fb32cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: da5948021c4a2db50776544c38adfa4ddc6e8ce5bcc1285c879ef528dec759e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957900"
 ---
 # <a name="eventtype-complex-type"></a>Komplexer EventType-Typ
 
-Definiert den Stamm Knoten des Ereignis Schemas.
+Definiert den Stammknoten des Ereignisschemas.
 
 ``` syntax
 <xs:complexType name="EventType">
@@ -76,19 +76,19 @@ Definiert den Stamm Knoten des Ereignis Schemas.
 
 | Element                                                                          | type                                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                              |
 |----------------------------------------------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Binaryeventdata**](eventschema-binaryeventdata-eventtype-element.md)         | hexBinary                                                                          | Enthält die Ereignisdaten als binäres Blob. Die Ereignisdaten werden als binäres Blob gerendert, wenn die Renderingfunktion die zum Decodieren des Ereignisses verwendeten Metadaten nicht finden kann.<br/>                                                                                                                                                            |
-| [**Debug-Daten**](eventschema-debugdata-eventtype-element.md)                     | [**Debug DataType**](eventschema-debugdatatype-complextype.md)                     | Enthält die Daten, die für Windows-Software-Ablaufverfolgungs-präprozessorereignisse (WPP) protokolliert werden können.<br/>                                                                                                                                                                                                                                    |
-| [**EVENTDATA**](eventschema-eventdata-eventtype-element.md)                     | [**Eventdatatype**](eventschema-eventdatatype-complextype.md)                     | Enthält die Ereignisdaten. Die Reihenfolge der Datenelemente in der Vorlage bestimmt das Layout der Ereignisdaten.<br/>                                                                                                                                                                                                                 |
-| [**Processingerrordata**](eventschema-processingerrordata-eventtype-element.md) | [**Processingerrordatatype**](eventschema-processingerrordatatype-complextype.md) | Enthält Details zu dem Fehler, der beim Versuch aufgetreten ist, das Ereignis zu erzeugen. Dies kann vorkommen, wenn die Ereignisdaten nicht mit der Ereignisdaten Definition im Manifest identisch sind. Die Ereignisdaten sind als binäres Blob enthalten.<br/>                                                                                                         |
-| [**Renderinginfo**](eventschema-renderinginfo-eventtype-element.md)             | [**Renderinginfotype**](eventschema-renderingtype-complextype.md)                 | Enthält die gerenderten Meldungs Zeichenfolgen für das Ereignis (einschließlich der Meldungs Zeichenfolge des Ereignisses und der Meldungs Zeichenfolgen für alle Eigenschaften des Ereignisses, z. b. Ebene, Aufgabe und OpCode). Dieser Abschnitt enthält nur Ereignisse, die mit dem [Windows-Ereignis](/windows/desktop/WEC/windows-event-collector) Sammlungs Dienst erfasst wurden.<br/> |
-| [**System**](eventschema-system-eventtype-element.md)                           | [**Systempropertiestype**](eventschema-systempropertiestype-complextype.md)       | Enthält Informationen, die den Anbieter und die Art der Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen, wie z. b. den Prozess und die Thread-IDs, identifiziert.<br/>                                                                                                                                   |
-| [**UserData**](eventschema-userdata-eventtype-element.md)                       | [**Userdatatype**](eventschema-userdatatype-complextype.md)                       | Enthält die Ereignisdaten. Der Abschnitt "Benutzerdaten" der Vorlage bestimmt das Layout der Ereignisdaten.<br/>                                                                                                                                                                                                                       |
+| [**BinaryEventData**](eventschema-binaryeventdata-eventtype-element.md)         | hexBinary                                                                          | Enthält die Ereignisdaten als binäres Blob. Die Ereignisdaten werden als binäres Blob gerendert, wenn die Renderingfunktion die Zum Decodieren des Ereignisses verwendeten Metadaten nicht finden kann.<br/>                                                                                                                                                            |
+| [**DebugData**](eventschema-debugdata-eventtype-element.md)                     | [**DebugDataType**](eventschema-debugdatatype-complextype.md)                     | Enthält die Daten, die für Windows WPP-Ereignisse (Software Trace Preprocessor) protokolliert werden können.<br/>                                                                                                                                                                                                                                    |
+| [**Eventdata**](eventschema-eventdata-eventtype-element.md)                     | [**EventDataType**](eventschema-eventdatatype-complextype.md)                     | Enthält die Ereignisdaten. Die Reihenfolge der Datenelemente in der Vorlage bestimmt das Layout der Ereignisdaten.<br/>                                                                                                                                                                                                                 |
+| [**ProcessingErrorData**](eventschema-processingerrordata-eventtype-element.md) | [**ProcessingErrorDataType**](eventschema-processingerrordatatype-complextype.md) | Enthält Details zu dem Fehler, der beim Rendern des Ereignisses aufgetreten ist. Dies kann auftreten, wenn die Ereignisdaten nicht mit der Ereignisdatendefinition im Manifest übereinstimmen. Die Ereignisdaten sind als binäres Blob enthalten.<br/>                                                                                                         |
+| [**RenderingInfo**](eventschema-renderinginfo-eventtype-element.md)             | [**RenderingInfoType**](eventschema-renderingtype-complextype.md)                 | Enthält die gerenderten Meldungszeichenfolgen für das Ereignis (enthält die Meldungszeichenfolge des Ereignisses und die Meldungszeichenfolgen für alle Ereigniseigenschaften wie Ebene, Aufgabe und Opcode). Nur Ereignisse, die mithilfe des [Ereignissammlerdiensts](/windows/desktop/WEC/windows-event-collector) Windows wurden, enthalten diesen Abschnitt.<br/> |
+| [**System**](eventschema-system-eventtype-element.md)                           | [**SystemPropertiesType**](eventschema-systempropertiestype-complextype.md)       | Enthält Informationen, die den Anbieter und dessen Aktivierung, das Ereignis, den Kanal, in den das Ereignis geschrieben wurde, und Systeminformationen wie prozess- und thread-IDs identifizieren.<br/>                                                                                                                                   |
+| [**UserData**](eventschema-userdata-eventtype-element.md)                       | [**UserDataType**](eventschema-userdatatype-complextype.md)                       | Enthält die Ereignisdaten. Der Benutzerdatenabschnitt der Vorlage bestimmt das Layout der Ereignisdaten.<br/>                                                                                                                                                                                                                       |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel enthält dieser Abschnitt den Abschnitt " **EventData** " oder " **UserData** ". Der **EventData** -Abschnitt wird verwendet, wenn die Vorlage keinen **UserData** -Abschnitt enthält.
+In der Regel enthält dieser Abschnitt den **Abschnitt EventData** oder **UserData.** Der **Abschnitt EventData** wird verwendet, wenn die Vorlage keinen **UserData-Abschnitt** enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ In der Regel enthält dieser Abschnitt den Abschnitt " **EventData** " oder " **
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

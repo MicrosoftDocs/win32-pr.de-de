@@ -1,28 +1,28 @@
 ---
-description: Eine Funktion ist ein Teil der gesamten Funktionalität der Anwendung, die ein Benutzer erkennt und sich für eine unabhängige Installation entscheiden kann.
+description: Ein Feature ist ein Teil der gesamten Funktionalität der Anwendung, die ein Benutzer erkennt und sich entscheiden kann, unabhängig zu installieren.
 ms.assetid: e8f449bd-e670-4344-a6fa-ee1d5f34f21b
-title: Windows Installer Features
+title: Windows Installerfeatures
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 210953b4b54fd44def56cbb2a3f85d4bf820b9b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 964be4aa5501411780341ade5b488987afd4dac574d60eca5c33163d5ef33e98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808770"
 ---
-# <a name="windows-installer-features"></a>Windows Installer Features
+# <a name="windows-installer-features"></a>Windows Installerfeatures
 
-Eine Funktion ist ein Teil der gesamten Funktionalität der Anwendung, die ein Benutzer erkennt und sich für eine unabhängige Installation entscheiden kann. Eine Funktion kann z. b. eine Rechtschreibprüfung, ein Thesaurus oder ein Satz von Clip-Art sein. Hierarchische Beziehungen zwischen übergeordneten und untergeordneten Funktionen sind häufig vorhanden, sodass die übergeordnete Funktion bei der Installation einer untergeordneten Funktion ebenfalls automatisch installiert wird.
+Ein Feature ist ein Teil der gesamten Funktionalität der Anwendung, die ein Benutzer erkennt und sich entscheiden kann, unabhängig zu installieren. Ein Feature kann z. B. eine Rechtschreibprüfung, ein Thesaurus oder eine Reihe von Cliparts sein. Hierarchische Beziehungen von übergeordneten und untergeordneten Features sind häufig so vorhanden, dass bei der Installation eines untergeordneten Features auch das übergeordnete Feature automatisch installiert wird.
 
-Weitere Informationen zur Verwendung von Features finden Sie hier:
+Informationen zur Verwendung von Features finden Sie in den folgenden Themen:
 
--   [Anfordern einer Funktion](requesting-a-feature.md)
--   [Neuinstallieren eines Features oder einer Anwendung](reinstalling-a-feature-or-application.md)
--   [Verweisen auf Features in Mergemodulen](referencing-features-in-merge-modules.md)
+-   [Anfordern eines Features](requesting-a-feature.md)
+-   [Erneutes Installieren eines Features oder einer Anwendung](reinstalling-a-feature-or-application.md)
+-   [Verweisen auf Funktionen in Mergemodulen](referencing-features-in-merge-modules.md)
 -   [Arbeiten mit Features und Komponenten](working-with-features-and-components.md)
 -   [Überprüfen der Installation von Features, Komponenten, Dateien](checking-the-installation-of-features-components-files.md)
--   [Suchen nach einer unterbrochenen Funktion oder Komponente](searching-for-a-broken-feature-or-component.md)
+-   [Suchen nach einem fehlerhaften Feature oder einer fehlerhaften Komponente](searching-for-a-broken-feature-or-component.md)
 -   [Veröffentlichen von Produkten, Features und Komponenten](publishing-products-features-and-components.md)
 
  

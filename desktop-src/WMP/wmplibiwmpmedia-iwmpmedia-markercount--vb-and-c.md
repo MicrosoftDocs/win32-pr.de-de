@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia markercount (Eigenschaft)
-description: Die markercount-Eigenschaft ruft die Anzahl der Marker im Medien Element ab.
+title: IWMPMedia markerCount-Eigenschaft
+description: Die markerCount-Eigenschaft ruft die Anzahl der Marker im Medienelement ab.
 ms.assetid: d1ccaa9b-98fb-4c53-8064-ee4bf718d18a
 keywords:
-- markercount-Eigenschaften Fenster Media Player
-- markercount-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, markercount (Eigenschaft)
+- markerCount-Windows Media Player
+- markerCount-Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , markerCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bdad591d8be66dcd20bc5e59d206a637d9b1181f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8afbc402858452c987bb6f2dcce0e1ad0428b8c67b81d2369de2a8cdbc6a7dd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053628"
 ---
-# <a name="iwmpmediamarkercount-property"></a>Iwmpmedia:: markercount (Eigenschaft)
+# <a name="iwmpmediamarkercount-property"></a>IWMPMedia::markerCount-Eigenschaft
 
-Die **markercount** -Eigenschaft ruft die Anzahl der Marker im Medien Element ab.
+Die **markerCount-Eigenschaft** ruft die Anzahl der Marker im Medienelement ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,19 +49,19 @@ Public ReadOnly Property markerCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die markeranzahl ist.
+Ein **System.Int32,** das die Markeranzahl ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt 0 (null) zurück, wenn eine Datei keine Marker enthält, oder wenn das Medien Element nicht mit dem in AxWindowsMediaPlayer. currentMedia angegebenen Zeichen identisch ist.
+Diese Eigenschaft gibt 0 (null) zurück, wenn eine Datei über keine Marker verfügt oder wenn das Medienelement nicht mit dem in AxWindowsMediaPlayer.currentMedia angegebenen Element identisch ist.
 
 Markernummern beginnen bei 1.
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **markercount** verwendet, um die Anzahl der Marker im aktuellen Medien Element abzurufen. Dieser Wert wird dann als obere Grenze für eine Schleifen Struktur verwendet, die die markerliste durchläuft, um die einzelnen Markernamen abzurufen und in einem mehrzeiligen Textfeld anzuzeigen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **markerCount verwendet,** um die Anzahl der Marker im aktuellen Medienelement abzurufen. Dieser Wert wird dann als obere Grenze für eine Schleifenstruktur verwendet, die die Markerliste durchläuft, um jeden Markernamen abzurufen und in einem mehrzeilenigen Textfeld anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -132,10 +132,10 @@ End If
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. currentMedia (VB und c#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentMedia (VB und C#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

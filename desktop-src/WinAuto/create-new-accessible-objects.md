@@ -1,23 +1,23 @@
 ---
-title: Neue barrierefreie Objekte erstellen
-description: Neue barrierefreie Objekte erstellen
+title: Erstellen neuer barrierefreier Objekte
+description: Erstellen neuer barrierefreier Objekte
 ms.assetid: d34a52d1-1eb2-4bb4-989c-a1ca4b5d815f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5efa85e44d6d51105e6363d276ecb7e5f33d8378
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eaaa9ee8669199a9f4de938b4e1cb9e6dd24336bd86527a2cc528709e303543e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052818"
 ---
-# <a name="create-new-accessible-objects"></a>Neue barrierefreie Objekte erstellen
+# <a name="create-new-accessible-objects"></a>Erstellen neuer barrierefreier Objekte
 
-In diesem Szenario erstellt der Server ein neues Barrierefreies Objekt als Reaktion auf jede [**objID- \_ Client**](object-identifiers.md) Anforderung.
+In diesem Szenario erstellt der Server als Antwort auf jede OBJID CLIENT-Anforderung ein neues [**\_ barrierefreies**](object-identifiers.md) Objekt.
 
-Im folgenden Beispielcode wird ein Zeiger auf das-Steuerelement aus den zusätzlichen Fenster Daten abgerufen. Diese und das Fenster Handle werden an den Konstruktor des benutzerdefinierten Barrierefreiheits Server-Objekts (accserver) übergeben. Dieses Objekt wird immer dann erstellt, wenn der [**objID- \_ Client**](object-identifiers.md) empfangen wird.
+Im folgenden Beispielcode wird ein Zeiger auf das -Steuerelement aus den zusätzlichen Fensterdaten abgerufen. Dieses und das Fensterhand handle werden an den Konstruktor des Benutzerzugriffsserverobjekts (AccServer) übergeben. Dieses Objekt wird immer dann erstellt, [**wenn OBJID \_ CLIENT**](object-identifiers.md) empfangen wird.
 
-Wenn das-Objekt erstellt wird, ruft der Server einen Verweis ab, der nach dem Aufrufen von [**lresultfroscject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject)freigegeben werden muss, damit das Objekt zerstört wird, sobald der Client damit fertig ist. Beachten Sie, dass **lresultfrovibject** den Verweis Zähler mehrmals inkremenkt, aber es liegt in der Verantwortung der Client Anwendungen und der Microsoft Active Accessibility-Laufzeit, diese Verweise freizugeben.
+Wenn das Objekt erstellt wird, erhält der Server einen Verweis, der nach dem Aufruf von [**LresultFromObject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject)freigegeben werden muss, damit das Objekt zerstört wird, sobald der Client damit fertig ist. Beachten Sie, **dass LresultFromObject** die Verweisanzahl mehrmals erhöht, aber es liegt in der Verantwortung der Clientanwendungen und der Microsoft Active Accessibility Runtime, diese Verweise frei zu geben.
 
 
 ```C++
@@ -43,9 +43,9 @@ case WM_GETOBJECT:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

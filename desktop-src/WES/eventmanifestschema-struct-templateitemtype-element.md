@@ -1,6 +1,6 @@
 ---
-title: struct-Element (templateitemtype)
-description: Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mit dem-Ereignis einschließen möchten. | struct-Element (templateitemtype)
+title: struct-Element (TemplateItemType)
+description: Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält, die In das Ereignis eingeschlossen werden soll. | struct-Element (TemplateItemType)
 ms.assetid: 3da56e9b-70da-4b58-9261-76f24a6f3377
 keywords:
 - Strukturelement EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a0cdb4682751ee236a8660a4cbc64e32290997d1
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 343b815657c13b0bdf0fdc01d3a8a9149d84e55daf79f8777db03c2e0524c586
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106370384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958230"
 ---
-# <a name="struct-templateitemtype-element"></a>struct-Element (templateitemtype)
+# <a name="struct-templateitemtype-element"></a>struct-Element (TemplateItemType)
 
-Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mit dem-Ereignis einschließen möchten.
+Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält, die In das Ereignis eingeschlossen werden soll.
 
 ``` syntax
 <xs:element name="struct"
@@ -30,7 +30,7 @@ Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mi
  />
 ```
 
-Das **struct** -Element wird durch den komplexen [**templateitemtype**](eventmanifestschema-templateitemtype-complextype.md) -Typ definiert.
+Das **Strukturelement wird** durch den komplexen [**TemplateItemType-Typ**](eventmanifestschema-templateitemtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **struct** -Element wird durch den komplexen [**templateitemtype**](eventman
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **struct** -Element wird durch den komplexen [**templateitemtype**](eventman
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Vorlage (templatelisttype)**](eventmanifestschema-template-templatelisttype-element.md)
+[**template (TemplateListType)**](eventmanifestschema-template-templatelisttype-element.md)
 </dt> </dl>
 
  

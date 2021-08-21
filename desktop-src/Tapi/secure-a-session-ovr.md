@@ -1,27 +1,27 @@
 ---
-description: Wenn eine Anwendung keine Störungen durch externe Ereignisse für eine Sitzung von TAPI oder dem Dienstanbieter wünscht, sollte Sie den-Befehl sichern.
+description: Wenn eine Anwendung keine Störungen durch externe Ereignisse für eine Sitzung von TAPI oder dem Dienstanbieter möchte, sollte sie den Aufruf sichern.
 ms.assetid: 0a3be209-e3ff-4177-abb2-ad0facbdf569
 title: Sichern einer Sitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00b1567303efb61f28f9c6b3e92c24287d23d4af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64ee16dc0854c6502f1347a3aa676e709920555ad91a02190db001bd80b34824
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080460"
 ---
 # <a name="secure-a-session"></a>Sichern einer Sitzung
 
-Wenn eine Anwendung keine Störungen durch externe Ereignisse für eine Sitzung von TAPI oder dem Dienstanbieter wünscht, sollte Sie den-Befehl sichern. Beispielsweise können in einer analogen Umgebung aufrufende Töne eine Fax-oder Modem Sitzung für den ursprünglichen-Befehl zerstören.
+Wenn eine Anwendung keine Störungen durch externe Ereignisse für eine Sitzung von TAPI oder dem Dienstanbieter möchte, sollte sie den Aufruf sichern. In einer analogen Umgebung können Anrufwartetons beispielsweise ein Fax oder eine Modemsitzung beim ursprünglichen Anruf zerstören.
 
-Eine Anwendung kann einen Aufruf zu dem Zeitpunkt sichern, an dem der Aufruf erfolgt ist, oder nachdem der Aufruf bereits vorhanden ist.
+Eine Anwendung kann einen Aufruf sichern, wenn der Aufruf erfolgt oder der Aufruf bereits vorhanden ist.
 
 Nicht alle Dienstanbieter unterstützen die Verwendung dieses Vorgangs.
 
-**TAPI 2. x:** Weitere Informationen finden Sie unter [**linesecurecall**](/windows/win32/api/tapi/nf-tapi-linesecurecall).
+**TAPI 2.x:** Siehe [**lineSecureCall**](/windows/win32/api/tapi/nf-tapi-linesecurecall).
 
-**TAPI 3. x:** Siehe [**itaddress:: Forward**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-forward).
+**TAPI 3.x:** Weitere Informationen [**finden Sie unter ITAddress::Forward**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-forward).
 
  
 

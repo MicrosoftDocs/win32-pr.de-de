@@ -1,19 +1,19 @@
 ---
-description: Das Diagramm öffnet eine Datei, oder das Öffnen einer Datei ist abgeschlossen.
+description: Das Diagramm öffnet eine Datei oder hat das Öffnen einer Datei beendet.
 ms.assetid: 352867e1-025f-4adb-be32-f7941c0ec8cf
-title: EC_OPENING_FILE (DShow. h)
+title: EC_OPENING_FILE (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf275a2f9b64f9a30c8049b5207622270edc5098
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 436a48a90640577504871dfe835d6c81c398680ae070065189cb4031493e7fc3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079120"
 ---
-# <a name="ec_opening_file"></a>EC- \_ öffnende \_ Datei
+# <a name="ec_opening_file"></a>EC \_ OPENING \_ FILE
 
-Das Diagramm öffnet eine Datei, oder das Öffnen einer Datei ist abgeschlossen.
+Das Diagramm öffnet eine Datei oder hat das Öffnen einer Datei beendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,7 +22,7 @@ Das Diagramm öffnet eine Datei, oder das Öffnen einer Datei ist abgeschlossen.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**True** , wenn das Diagramm beginnt, eine Datei zu öffnen, oder **false** , wenn das Diagramm die Datei nicht mehr öffnet.
+**TRUE,** wenn das Diagramm beginnt, eine Datei zu öffnen, oder **FALSE,** wenn das Diagramm die Datei nicht mehr öffnet.
 
 </dd> <dt>
 
@@ -37,17 +37,17 @@ Keinen.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Filter kann dieses Ereignis senden, wenn es eine beträchtliche Zeit zum Öffnen einer Datei verbringt. (Die Datei befindet sich z. b. möglicherweise in einem Netzwerk.) Die Anwendung kann dieses Ereignis verwenden, um die Benutzeroberfläche anzupassen.
+Ein Filter kann dieses Ereignis senden, wenn er viel Zeit mit dem Öffnen einer Datei verbringt. (Die Datei kann sich beispielsweise in einem Netzwerk befinden.) Die Anwendung kann dieses Ereignis verwenden, um die Benutzeroberfläche anzupassen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -55,10 +55,10 @@ Ein Filter kann dieses Ereignis senden, wenn es eine beträchtliche Zeit zum Öf
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

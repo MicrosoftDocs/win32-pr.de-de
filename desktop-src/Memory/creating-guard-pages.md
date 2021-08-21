@@ -1,27 +1,27 @@
 ---
-description: Eine Wächter Seite bietet einen One-Shot-Alarm für den Zugriff auf die Speicherseite.
+description: Eine Schutzseite bietet einen einmaligen Alarm für den Zugriff auf die Speicherseite.
 ms.assetid: 763bc763-e178-481e-a81a-c15715e56901
-title: Erstellen von Wächter Seiten
+title: Erstellen von Guard Pages
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10768da75090a28ffecd5302d88dbc142ae9c147
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0fee4d4a44a6e64d6af81e4b847347f357c3590edbd7e6b806e8f32653e1f869
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963290"
 ---
-# <a name="creating-guard-pages"></a>Erstellen von Wächter Seiten
+# <a name="creating-guard-pages"></a>Erstellen von Guard Pages
 
-Eine Wächter Seite bietet einen One-Shot-Alarm für den Zugriff auf die Speicherseite. Dies kann für Anwendungen nützlich sein, die das Wachstum großer dynamischer Datenstrukturen überwachen müssen. Beispielsweise gibt es Betriebssysteme, die Guard-Seiten zum Implementieren der automatischen Stapel Überprüfung verwenden.
+Eine Schutzseite bietet einen einmaligen Alarm für den Zugriff auf die Speicherseite. Dies kann für eine Anwendung nützlich sein, die das Wachstum großer dynamischer Datenstrukturen überwachen muss. Es gibt beispielsweise Betriebssysteme, die Schutzseiten verwenden, um die automatische Stapelüberprüfung zu implementieren.
 
-Zum Erstellen einer Wächter Seite legen Sie den **Page \_ Guard** -Seiten schutzmodifizierer für die Seite fest. Dieser Wert kann zusammen mit anderen Modifizierers für den Seitenschutz in den Funktionen [**virtualzuordc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [**virtualindecex**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex), [**VirtualProtect**](/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)und [**virtualprotectex**](/windows/win32/api/memoryapi/nf-memoryapi-virtualprotectex) angegeben werden. Der **Page \_ Guard** -Modifizierer kann mit allen anderen Modifizierern für den Seitenschutz verwendet werden, mit Ausnahme von **Page \_ NoAccess**.
+Um eine Schutzseite zu erstellen, legen Sie den Seitenschutzmodifizierer **PAGE \_ GUARD** für die Seite fest. Dieser Wert kann zusammen mit anderen Seitenschutzmodifizierern in den Funktionen [**VirtualAlloc,**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) [**VirtualAllocEx,**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex) [**VirtualProtect**](/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)und [**VirtualProtectEx**](/windows/win32/api/memoryapi/nf-memoryapi-virtualprotectex) angegeben werden. Der **PAGE GUARD-Modifizierer \_** kann mit allen anderen Seitenschutzmodifizierern außer **PAGE \_ NOACCESS** verwendet werden.
 
-Wenn ein Programm versucht, auf eine Adresse innerhalb einer Wächter Seite zuzugreifen, löst das System eine **Status \_ Wächter- \_ Seiten \_ Verletzung** (0x80000001) aus. Das System löscht auch den **Page \_ Guard** -Modifizierer, sodass der Status der Schutz Seite der Arbeitsspeicher Seite entfernt wird. Das System hält den nächsten Versuch, auf die Arbeitsspeicher Seite zuzugreifen, nicht an, mit einer Ausnahme der **\_ statuswächter- \_ Seiten \_ Verletzung** .
+Wenn ein Programm versucht, auf eine Adresse innerhalb einer Schutzseite zuzugreifen, löst das System eine **STATUS \_ GUARD PAGE \_ VIOLATION(0x80000001)-Ausnahme \_** aus. Das System löscht auch den **PAGE GUARD-Modifizierer, \_** wodurch der Status der Schutzseite der Speicherseite entfernt wird. Das System beendet nicht den nächsten Versuch, mit einer **STATUS \_ GUARD PAGE \_ \_ VIOLATION-Ausnahme** auf die Speicherseite zuzugreifen.
 
-Wenn bei einem Systemdienst eine Schutz Seiten Ausnahme auftritt, schlägt der Dienst fehl und gibt in der Regel einen Fehlerstatus Indikator zurück. Da das System auch den Status der Guard-Seite der relevanten Arbeitsspeicher Seite entfernt, schlägt der nächste Aufruf desselben System dienstanders aufgrund einer Ausnahme der **statusschutzseitenverletzung \_ \_ \_** nicht fehl (es sei denn, natürlich wird die Schutz Seite wieder hergestellt).
+Wenn während eines Systemdiensts eine Schutzseitenausnahme auftritt, schlägt der Dienst fehl und gibt in der Regel einen Fehlerstatusindikator zurück. Da das System auch den Schutzseitenstatus der relevanten Speicherseite entfernt, schlägt der nächste Aufruf desselben Systemdiensts aufgrund einer **STATUS \_ GUARD PAGE \_ \_ VIOLATION-Ausnahme** nicht fehl (es sei denn, die Schutzseite wird wieder hergestellt).
 
-Das folgende kurze Programm veranschaulicht das Verhalten des Schutzes von Schutz Seiten.
+Das folgende kurze Programm veranschaulicht das Verhalten des Wächterseitenschutzes.
 
 
 ```C++
@@ -104,7 +104,7 @@ int main()
 
 
 
-Beim ersten Versuch, den Speicherblock zu sperren, tritt ein Fehler auf, und es wird eine Ausnahme der **\_ statusschutzseite \_ \_** Der zweite Versuch ist erfolgreich, da der Schutz der Schutz Seite des Speicherblocks beim ersten Versuch deaktiviert wurde.
+Der erste Versuch, den Speicherblock zu sperren, schlägt fehl und löst eine **STATUS \_ GUARD PAGE \_ \_ VIOLATION-Ausnahme** aus. Der zweite Versuch ist erfolgreich, da der Schutz der Schutzseite des Speicherblocks beim ersten Versuch deaktiviert wurde.
 
  
 

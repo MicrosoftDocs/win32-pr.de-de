@@ -1,29 +1,29 @@
 ---
-description: IP-Hilfsprogramm bietet Funktionen zum Verwalten von Netzwerkadaptern. Zwischen den Schnittstellen und Adaptern eines bestimmten Computers besteht eine eins-zu-eins-Entsprechung. Eine Schnittstelle ist eine Abstraktion auf IP-Ebene, während ein Adapter eine Abstraktion auf DataLink-Ebene ist.
+description: Das IP-Hilfsfunktionen bietet Funktionen zum Verwalten von Netzwerkadaptern. Es gibt eine 1:1-Entsprechung zwischen den Schnittstellen und Adaptern auf einem bestimmten Computer. Eine Schnittstelle ist eine Abstraktion auf IP-Ebene, während ein Adapter eine Abstraktion auf Datenlinkebene ist.
 ms.assetid: fbb32941-2add-4f74-90c4-1dc1bfebd64c
 title: Verwalten von Netzwerkadaptern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eaa8f42cf1499ee7873d13334d0edbc9f954794f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1e1fd02426b27e3c07d4634edbe0215efa1c5c25c7a9c3abde32e991f766daf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078260"
 ---
 # <a name="managing-network-adapters"></a>Verwalten von Netzwerkadaptern
 
-IP-Hilfsprogramm bietet Funktionen zum Verwalten von Netzwerkadaptern. Zwischen den Schnittstellen und Adaptern eines bestimmten Computers besteht eine eins-zu-eins-Entsprechung. Eine Schnittstelle ist eine Abstraktion auf IP-Ebene, während ein Adapter eine Abstraktion auf DataLink-Ebene ist.
+Das IP-Hilfsfunktionen bietet Funktionen zum Verwalten von Netzwerkadaptern. Es gibt eine 1:1-Entsprechung zwischen den Schnittstellen und Adaptern auf einem bestimmten Computer. Eine Schnittstelle ist eine Abstraktion auf IP-Ebene, während ein Adapter eine Abstraktion auf Datenlinkebene ist.
 
-Verwenden Sie die Funktionen, die in den folgenden Abschnitten beschrieben werden, um Informationen zu den Netzwerkadaptern auf dem lokalen Computer abzurufen.
+Verwenden Sie die in den folgenden Absätzen beschriebenen Funktionen, um Informationen zu den Netzwerkadaptern auf dem lokalen Computer abzurufen.
 
-Die [**getadaptersinfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) -Funktion gibt ein Array von [**IP- \_ Adapter \_ Informations**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) Strukturen zurück, eines für jeden Adapter auf dem lokalen Computer. Die [**getperadapterinfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getperadapterinfo) -Funktion gibt zusätzliche Informationen zu einem bestimmten Adapter zurück. Die **getperadapterinfo** -Funktion erfordert, dass der Aufrufer den Index des Adapters angibt. Verwenden Sie die [**GetAdapterIndex**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadapterindex) -Funktion, um den Adapter Index aus dem Adapter Namen abzurufen.
+Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) gibt ein Array von [**IP ADAPTER \_ \_ INFO-Strukturen**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) zurück, eine für jeden Adapter auf dem lokalen Computer. Die [**GetPerAdapterInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getperadapterinfo) gibt zusätzliche Informationen zu einem bestimmten Adapter zurück. Die **GetPerAdapterInfo-Funktion** erfordert, dass der Aufrufer den Index des Adapters angibt. Um den Adapterindex aus dem Adapternamen abzurufen, verwenden Sie die [**GetAdapterIndex-Funktion.**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadapterindex)
 
-Einige Anwendungen verwenden Adapter, die Datagramme empfangen, jedoch nicht übertragen können. Zum Abrufen von Informationen zu diesen Adaptern verwenden Sie die [**getunidirectionaladapterinfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getunidirectionaladapterinfo) -Funktion.
+Einige Anwendungen verwenden Adapter, die Datagramme empfangen, aber nicht übertragen können. Verwenden Sie die [**GetUniDirectionalAdapterInfo-Funktion,**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getunidirectionaladapterinfo) um Informationen zu diesen Adaptern abzurufen.
 
-Mit der Funktion " [**getadaptersadressen**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersaddresses) " können Sie die einem bestimmten Adapter zugeordneten IP-Adressen abrufen. Diese Funktion unterstützt sowohl IPv4-als auch IPv6-Adressierung.
+Mit [**der GetAdaptersAddresses-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersaddresses) können Sie die IP-Adressen abrufen, die einem bestimmten Adapter zugeordnet sind. Diese Funktion unterstützt sowohl IPv4- als auch IPv6-Adressierung.
 
--   Codebeispiele, die [**getadaptersinfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) betreffen, finden [Sie unter Verwalten von Netzwerkadaptern mithilfe von getadaptersinfo](managing-network-adapters-using-getadaptersinfo.md).
+-   Codebeispiele für [**GetAdaptersInfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) finden Sie unter [Managing Network Adapters Using GetAdaptersInfo ( Verwalten von Netzwerkadaptern mit GetAdaptersInfo).](managing-network-adapters-using-getadaptersinfo.md)
 
  
 

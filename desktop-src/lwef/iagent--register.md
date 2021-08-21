@@ -1,19 +1,19 @@
 ---
-title: Iagent-Register
-description: Iagent-Register
+title: IAgent-Register
+description: IAgent-Register
 ms.assetid: 3592e8ba-979e-4914-8197-17e645806f97
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9dd611219fa994f4fe61f7f3e08facf02c9fb73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 00f3400e6f29e62b3d8c194186f52591a0f7bb039a858c3d450e8e8332df4313
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962670"
 ---
-# <a name="iagentregister"></a>Iagent:: Register
+# <a name="iagentregister"></a>IAgent::Register
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Register(
@@ -22,36 +22,36 @@ HRESULT Register(
 );
 ```
 
-Registriert eine Benachrichtigungs Senke für die Client Anwendung.
+Registriert eine Benachrichtigungssenke für die Clientanwendung.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="IUnknown"></span><span id="iunknown"></span><span id="IUNKNOWN"></span>*IUnknown*
+<span id="IUnknown"></span><span id="iunknown"></span><span id="IUNKNOWN"></span>*Iunknown*
 </dt> <dd>
 
-Adresse von [**IUnknown**](https://www.bing.com/search?q=**IUnknown**) für Ihre Notification Sink-Schnittstelle.
+Adresse von [**IUnknown**](https://www.bing.com/search?q=**IUnknown**) für Ihre Benachrichtigungssenkenschnittstelle.
 
 </dd> <dt>
 
-<span id="pdwSinkID"></span><span id="pdwsinkid"></span><span id="PDWSINKID"></span>*pdwsink ID*
+<span id="pdwSinkID"></span><span id="pdwsinkid"></span><span id="PDWSINKID"></span>*pdwSinkID*
 </dt> <dd>
 
-Adresse der Benachrichtigungs-Senke-ID (zur Aufhebung der Registrierung der Benachrichtigungs Senke).
+Adresse der Benachrichtigungssenke-ID (wird zum Aufheben der Registrierung der Benachrichtigungssenke verwendet).
 
 </dd> </dl>
 
-Sie müssen ihre Benachrichtigungs Senke (auch als Benachrichtigungs Senke oder Ereignis Senke bezeichnet) registrieren, um Ereignisse vom Microsoft-Agent-Server zu empfangen.
+Sie müssen Ihre Benachrichtigungssenke (auch als Benachrichtigungssenke oder Ereignissenke bezeichnet) registrieren, um Ereignisse vom Microsoft-Agent-Server zu empfangen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagent:: Unregister**](iagent--unregister.md)
+[**IAgent::Unregister**](iagent--unregister.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

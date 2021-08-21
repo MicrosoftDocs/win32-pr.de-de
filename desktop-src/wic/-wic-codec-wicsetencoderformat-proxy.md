@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für das Aushandeln des Pixel Formats und der Palette für den Encoder.
+description: Proxyfunktion zum Aushandeln des Pixelformats und der Palette für den Encoder.
 ms.assetid: 01179598-ba40-4aed-a7c4-888cb4e851f4
 title: WICSetEncoderFormat_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 7ea0988d29d1d9ed04668dfbe8ce86b97af6534a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3343e6f80193a4cb37dba98ffa3320bd8d56ee8bb9f14159adbf2474c767ed03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812060"
 ---
-# <a name="wicsetencoderformat_proxy-function"></a>Wicsetencoderformat- \_ Proxy Funktion
+# <a name="wicsetencoderformat_proxy-function"></a>WICSetEncoderFormat-Proxyfunktion \_
 
-Proxy Funktion für das Aushandeln des Pixel Formats und der Palette für den Encoder.
+Proxyfunktion zum Aushandeln des Pixelformats und der Palette für den Encoder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT WICSetEncoderFormat_Proxy(
 
 <dl> <dt>
 
-*psourcein* \[ in\]
+*pSourceIn* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Ein Zeiger auf die Quell Bitmap.
+Zeiger auf die Quellbitmap.
 
 </dd> <dt>
 
-_pIPalette * \[ in\]
+*pIPalette* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) \** _
+Typ: **[ **IWICPalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\***
 
 Zeiger auf die Palette, die für die Codierung verwendet werden soll.
 
 </dd> <dt>
 
-_pIFrameEncode * \[ in\]
+*pIFrameEncode* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapframecocode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) \** _
+Typ: **[ **IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)\***
 
-Zeiger auf das Frame-codierobjekt.
+Zeiger auf das Framecodierungsobjekt.
 
 </dd> <dt>
 
-_ppSourceOut * \[ out\]
+*ppSourceOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\*\***
 
-Ein Zeiger, der einen Zeiger auf die Ausgabe Quelle empfängt.
+Zeiger, der einen Zeiger auf die Ausgabequelle empfängt.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Ein Zeiger, der einen Zeiger auf die Ausgabe Quelle empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf das nächste Beispiel in der Liste der-Beispiele des Zuordners.
+description: Zeiger auf das nächste Beispiel in der Liste der Beispiele der Zuweisung.
 ms.assetid: a3a6c812-fc9d-4856-b33c-f60453f98909
-title: 'Cmediasample:: m_pNext Member (amfilter. h)'
+title: CMediaSample::m_pNext -Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 41192cef75beca6fa80619dcafb7e176615500ba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1e2282d5c2181a8e3d700d76c00f05376cdce62b953e5973775a9f07230698b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634360"
 ---
-# <a name="cmediasamplem_pnext-member"></a>Cmediasample:: m \_ pNext-Member
+# <a name="cmediasamplem_pnext-member"></a>CMediaSample::m \_ pNext-Member
 
-Zeiger auf das nächste Beispiel in der Liste der-Beispiele des Zuordners.
+Zeiger auf das nächste Beispiel in der Liste der Beispiele der Zuweisung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CMediaSample *m_pNext;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CMediaSample *m_pNext;
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  
