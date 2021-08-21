@@ -25,7 +25,7 @@ ms.locfileid: "119384550"
 ---
 # <a name="cbasepinnewsegment-method"></a>CBasePin.NewSegment-Methode
 
-Die -Methode benachrichtigt den Pin, dass medienbeispiele, die nach diesem Aufruf empfangen `NewSegment` wurden, als Segment gruppiert werden. Implementiert die [**IPin::NewSegment-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment)
+Die -Methode benachrichtigt den Pin, dass Medienbeispiele, die nach diesem Aufruf empfangen `NewSegment` wurden, als Segment gruppiert werden. Implementiert die [**IPin::NewSegment-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment)
 
 ## <a name="syntax"></a>Syntax
 
@@ -84,7 +84,7 @@ Diese Methode legt die [**Membervariablen CBasePin::m \_ tStart,**](cbasepin-m-t
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

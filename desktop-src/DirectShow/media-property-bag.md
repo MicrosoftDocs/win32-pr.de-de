@@ -1,19 +1,19 @@
 ---
-description: Medieneigenschafts-Bag
+description: Medieneigenschaftenbehälter
 ms.assetid: 06678d57-c00b-4575-84e7-3d09f65f19ba
-title: Medieneigenschafts-Bag
+title: Medieneigenschaftenbehälter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1812d7237fdd58869befec8494b82e34df56b937
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: cd6a36bb666b1562538fffc4f09321ffa95ceea329ddd8d6c7206cc0daefbff5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791440"
 ---
-# <a name="media-property-bag"></a>Medieneigenschafts-Bag
+# <a name="media-property-bag"></a>Medieneigenschaftenbehälter
 
-Das Medieneigenschafts-Bag-Objekt legt INFO- und DISP-Block in AVI-Dateien fest oder ruft sie ab. Erstellen Sie dieses Objekt, indem Sie **CoCreateInstance aufrufen.**
+Das Media Property Bag-Objekt legt INFO- und DISP-Blöcke in AVI-Dateien fest oder ruft sie ab. Erstellen Sie dieses Objekt, indem **Sie CoCreateInstance** aufrufen.
 
 
 

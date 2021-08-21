@@ -1,9 +1,9 @@
 ---
-title: Freehelperattributfunktion (ndattributils. h)
-description: Hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einem Array von \_ hilfsattribut Strukturen auf.
+title: FreeHelperAttributes-Funktion (Ndattributils.h)
+description: Gibt den intern zugeordneten Arbeitsspeicher einem Array von HELPER \_ ATTRIBUTE-Strukturen zu.
 ms.assetid: d973bdb9-c1d1-4cea-bcc6-98671349413f
 keywords:
-- Freehelperattributs-Funktion NDF
+- FreeHelperAttributes-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 400addd7d32914cb4e849e4e0bfae76ccc3ddf22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb16ad2d7f505a90d806e3f6a155f2c20affce2c71267316c2278e2320c371b7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802430"
 ---
-# <a name="freehelperattributes-function"></a>Freehelperattributs-Funktion
+# <a name="freehelperattributes-function"></a>FreeHelperAttributes-Funktion
 
-Die **freehelperattributfunktion** hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einem Array von [**\_ hilfsattribut**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute) Strukturen auf. Diese Funktion ruft [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um den Speicherplatz freizugeben.
+Die **FreeHelperAttributes-Funktion** gibt den intern zugeordneten Arbeitsspeicher einem Array von [**HELPER \_ ATTRIBUTE-Strukturen**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute) frei. Diese Funktion ruft [**CoTaskMemFree auf,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um die Speicherverteilung frei zu machen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ VOID FreeHelperAttributes(
 
 <dl> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Type: **[**helper- \_ Attribut**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute) \** _
+Typ: **[ **HILFSATTRIBUT \_**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute)\***
 
-Das Array von-Strukturen. Der zugewiesene Speicher, auf den diese Strukturen zeigen, wird freigegeben.
+Das Array von -Strukturen. Der zugeordnete Arbeitsspeicher, auf den diese Strukturen zeigt, wird frei.
 
 </dd> <dt>
 
-_HelperAttributeCount * 
+*HelperAttributeCount* 
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Anzahl der Strukturen im Array, auf die von *pinfo* verwiesen wird.
+Die Anzahl der Strukturen im Array, auf die *pInfo zeigt.*
 
 </dd> <dt>
 
-*bfrepointer* 
+*bFreePointer* 
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-True, wenn das Array von-Strukturen ebenfalls gelöscht werden soll. andernfalls false.
+TRUE, wenn das Array von Strukturen ebenfalls gelöscht werden soll; andernfalls FALSE.
 
 </dd> </dl>
 
@@ -79,9 +79,9 @@ Diese Funktion gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
@@ -89,7 +89,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**HELPER- \_ Attribut**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute)
+[**\_HILFSATTRIBUT**](/windows/win32/api/ndattrib/ns-ndattrib-helper_attribute)
 </dt> <dt>
 
 [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)

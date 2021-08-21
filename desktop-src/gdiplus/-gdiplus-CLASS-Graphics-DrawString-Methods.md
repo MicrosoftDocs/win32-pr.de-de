@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die DrawString-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawString-Methoden der Graphics-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: b3568ed9-e359-4916-a83d-7553c021d197
-title: Graphics. DrawString-Methoden (gdiplegraphics. h)
+title: Graphics.DrawString-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 275c256ec2c7284401d37794bccf368538cbdd80
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
-ms.translationtype: HT
+ms.openlocfilehash: 11075500bc378a4c8a5b5a7d21fdab982a8a60bb597cecc4bba14825d25f2a53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104982996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964775"
 ---
-# <a name="graphicsdrawstring-methods"></a>Graphics. DrawString-Methoden
+# <a name="graphicsdrawstring-methods"></a>Graphics.DrawString-Methoden
 
-In diesem Thema werden die DrawString-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawString-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgelistet. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,19 +21,19 @@ In diesem Thema werden die DrawString-Methoden der [**Grafik**](/windows/win32/a
 
 | Methode                                                                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                   |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DrawString (WChar \* , int, Font \* , PointF&, Brush \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush))                                | Die [**Grafik::D rawstring**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush)) -Methode zeichnet eine Zeichenfolge basierend auf einer Schriftart und einem Ursprung für die Zeichenfolge.<br/>                        |
-| [**DrawString (WChar \* , int, Font \* , RectF&, StringFormat \* , Brush \* )**](/previous-versions//ms535991(v=vs.85)) | Die [**Grafik::D rawstring**](/previous-versions//ms535991(v=vs.85)) -Methode zeichnet eine Zeichenfolge auf Grundlage einer Schriftart, eines layoutrerechtecks und eines Formats. <br/> |
-| [**DrawString (WChar \* , int, Font \* , PointF&, StringFormat \* , Brush \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__conststringformat_constbrush))    | Die [**Grafik::D rawstring**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__conststringformat_constbrush)) -Methode zeichnet eine Zeichenfolge auf Grundlage einer Schriftart, eines Zeichen folgen Ursprungs und eines Formats.<br/>         |
+| [**DrawString(WCHAR \* , INT, Font \* , PointF&, Brush \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush))                                | Die [**Graphics::D rawString-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__constbrush)) zeichnet eine Zeichenfolge basierend auf einer Schriftart und einem Ursprung für die Zeichenfolge.<br/>                        |
+| [**DrawString(WCHAR \* , INT, Font \* , RectF&, StringFormat \* , Brush \* )**](/previous-versions//ms535991(v=vs.85)) | Die [**Graphics::D rawString-Methode**](/previous-versions//ms535991(v=vs.85)) zeichnet eine Zeichenfolge basierend auf einer Schriftart, einem Layoutrechteck und einem Format. <br/> |
+| [**DrawString(WCHAR \* , INT, Font \* , PointF&, StringFormat \* , Brush \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__conststringformat_constbrush))    | Die [**Graphics::D rawString-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawstring(constwchar_int_constfont_constpointf__conststringformat_constbrush)) zeichnet eine Zeichenfolge basierend auf einer Schriftart, einem Zeichenfolgenursprung und einem Format.<br/>         |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

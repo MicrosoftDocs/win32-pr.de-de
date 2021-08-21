@@ -1,9 +1,9 @@
 ---
-title: Befehl rückgängig
-description: Der Befehl rückgängig kehrt die Aktion um, die durch den letzten erfolgreichen Kopier-, Ausschneide-, Lösch-, rückgängig-oder Einfügebefehl ausgeführt wird Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: Befehl "rückgängig"
+description: Mit dem Befehl "Rückgängig" wird die Aktion rückgängig gemacht, die mit dem letzten erfolgreichen Befehl zum Kopieren, Ausschneiden, Löschen, Rückgängigmachen oder Einfügen ausgeführt wurde. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: 81d696a9-5288-4efd-bc76-8416dd63e694
 keywords:
-- Befehl "Rückgängig" Windows Multimedia
+- Rückgängig-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc0814dff2c684095299b6820b8dc9a2464aa26
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec088f893b221a80cb3fe84c191a52874a8c29f5163ad3bcdaa8e68a9a4d4d2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804730"
 ---
-# <a name="undo-command"></a>Befehl rückgängig
+# <a name="undo-command"></a>Befehl "rückgängig"
 
-Der Befehl rückgängig kehrt die Aktion um, die durch den letzten erfolgreichen [Kopier](copy.md)-, Ausschneide-, [Lösch](delete.md)-, rückgängig [-oder](paste.md) [Einfügebefehl](cut.md)ausgeführt wird Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Der Befehl "rückgängig" kehrt die Aktion des letzten erfolgreichen [Kopier-,](copy.md) [Ausschneide-,](cut.md) [Lösch-,](delete.md)Rückgängig- oder [Einfügebefehls](paste.md) um. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -38,23 +38,23 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify", "Test" oder eine Kombination daraus sein. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify", "test" oder eine Kombination dieser sein. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,22 +71,22 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [copy](copy.md)
 </dt> <dt>
 
-[Schnitts](cut.md)
+[Schneiden](cut.md)
 </dt> <dt>
 
 [delete](delete.md)
 </dt> <dt>
 
-[kle](paste.md)
+[Einfügen](paste.md)
 </dt> </dl>
 
  

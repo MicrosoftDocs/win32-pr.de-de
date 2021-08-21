@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 384d4a7ed5e1b769218b9290ed6cc0f7f060bd66
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d516d9fc5a92ff3661caaf5fbca17372804ea2805688542a0283736cf55f4959
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790670"
 ---
 # <a name="id3dxbaseeffectsetmatrixtranspose-method"></a>ID3DXBaseEffect::SetMatrixTranspose-Methode
 
@@ -46,7 +46,7 @@ HRESULT SetMatrixTranspose(
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
@@ -63,11 +63,11 @@ Zeiger auf eine transponierte Matrix. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine transponierte Matrix enthält Spaltenhauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
+Eine transponierte Matrix enthält Spalten-Hauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
 
 Wenn die Zielmatrix kleiner als die Quellmatrix ist, werden die zusätzlichen Komponenten der Quellmatrix ignoriert.
 
@@ -75,14 +75,14 @@ Wenn die Zielmatrix kleiner als die Quellmatrix ist, werden die zusätzlichen Ko
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

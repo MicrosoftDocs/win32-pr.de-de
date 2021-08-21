@@ -1,7 +1,7 @@
 ---
-description: Eigenschaften des neuesten Beispiels.
+description: Eigenschaften des letzten Beispiels.
 ms.assetid: bd83790c-72b2-4ed3-9f83-ce4f08d40833
-title: 'Cbaseingeputpin:: m_SampleProps Member (amfilter. h)'
+title: CBaseInputPin::m_SampleProps Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 871f2d159c9b0e284de5d716206fc5d79bb3e15a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 099a7c40dcdf96b938c99724c7fab28c80768fd24224c65db04074f60b210899
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076610"
 ---
-# <a name="cbaseinputpinm_sampleprops-member"></a>Cbaseingeputpin:: m \_ samplerequismember
+# <a name="cbaseinputpinm_sampleprops-member"></a>CBaseInputPin::m \_ SampleProps-Member
 
-Eigenschaften des neuesten Beispiels.
+Eigenschaften des letzten Beispiels.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ AM_SAMPLE2_PROPERTIES m_SampleProps;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ AM_SAMPLE2_PROPERTIES m_SampleProps;
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

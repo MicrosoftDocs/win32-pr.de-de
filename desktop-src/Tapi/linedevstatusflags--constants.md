@@ -1,67 +1,67 @@
 ---
-description: Die \_ Bit-Flag-Konstanten von linedevstatusflags beschreiben eine Auflistung boolescher Zeilen-Gerätestatus Elemente.
+description: Die \_ LINEDEVSTATUSFLAGS-Bitflagkonstanten beschreiben eine Auflistung von Gerätestatuselementen für boolesche Zeilen.
 ms.assetid: 5fa754d3-07b2-4b75-91ef-1bf961d9fef4
-title: LINEDEVSTATUSFLAGS_ Konstanten (TAPI. h)
+title: LINEDEVSTATUSFLAGS_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 70745b1a84119af2305cadabd0a39ab5954e5b7c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6649dc39c787be7c0b7f027637f12ff7f5d028add09b9f7d568149c6e9f76c97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682008"
 ---
-# <a name="linedevstatusflags_-constants"></a>Linedevstatus Flags- \_ Konstanten
+# <a name="linedevstatusflags_-constants"></a>LINEDEVSTATUSFLAGS-Konstanten \_
 
-Die Bit-Flag-Konstanten von **linedevstatusflags \_** beschreiben eine Auflistung boolescher Zeilen-Gerätestatus Elemente.
+Die **\_ LINEDEVSTATUSFLAGS-Bitflagkonstanten** beschreiben eine Auflistung von Gerätestatuselementen für boolesche Zeilen.
 
 <dl> <dt>
 
-<span id="LINEDEVSTATUSFLAGS_CONNECTED"></span><span id="linedevstatusflags_connected"></span>**verknüpfte linedevstatus \_ -Flags**
+<span id="LINEDEVSTATUSFLAGS_CONNECTED"></span><span id="linedevstatusflags_connected"></span>**LINEDEVSTATUSFLAGS \_ VERBUNDEN**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob die Linie mit TAPI verbunden ist. **True** gibt an, dass die Linie verbunden ist und TAPI auf dem liniengerät betrieben werden kann. Wenn der Wert **false** ist, wird die Zeile getrennt, und die Anwendung kann das liniengerät nicht über TAPI steuern.
+Gibt an, ob die Zeile mit TAPI verbunden ist. True gibt an, dass die Linie verbunden ist und TAPI auf dem Liniengerät betrieben werden kann. **False** gibt an, dass die Verbindung getrennt wird und die Anwendung das Zeilengerät nicht über TAPI steuern kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVSTATUSFLAGS_INSERVICE"></span><span id="linedevstatusflags_inservice"></span>**linedevstatus Flags- \_ INService**
+<span id="LINEDEVSTATUSFLAGS_INSERVICE"></span><span id="linedevstatusflags_inservice"></span>**LINEDEVSTATUSFLAGS \_ INSERVICE**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob die Zeile im Dienst ist. **True** gibt an, dass sich die Zeile im Dienst befindet. Wenn der Wert **false** ist, ist die Zeile nicht mehr Dienst.
+Gibt an, ob sich die Zeile im Dienst befindet. True gibt an, dass sich die Zeile im Dienst befindet. **false** gibt an, dass die Zeile nicht mehr in Betrieb ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVSTATUSFLAGS_LOCKED"></span><span id="linedevstatusflags_locked"></span>**linedevstatus-Flags \_ gesperrt**
+<span id="LINEDEVSTATUSFLAGS_LOCKED"></span><span id="linedevstatusflags_locked"></span>**LINEDEVSTATUSFLAGS \_ GESPERRT**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob die Zeile gesperrt oder entsperrt ist. Dieses Bit wird am häufigsten bei Linien Geräten verwendet, die Mobiltelefonen zugeordnet sind. Viele Mobiltelefone verfügen über einen Sicherheitsmechanismus, der die Eingabe eines Kennworts erfordert, damit das Telefonanrufe platzieren kann. Dieses Bit kann verwendet werden, um Anwendungen mitzuteilen, dass das Telefon gesperrt ist, und kann keine Anrufe platzieren, bis das Kennwort auf der Benutzeroberfläche des Telefons eingegeben wird, damit die Anwendung dem Benutzer eine entsprechende Warnung präsentieren kann.
+Gibt an, ob die Zeile gesperrt oder entsperrt ist. Dieses Bit wird am häufigsten mit Zeilengeräten verwendet, die Mobiltelefonen zugeordnet sind. Viele Mobiltelefone verfügen über einen Sicherheitsmechanismus, der die Eingabe eines Kennworts erfordert, damit das Telefon Anrufe tätigen kann. Dieses Bit kann verwendet werden, um Anwendungen anzugeben, dass das Telefon gesperrt ist und keine Anrufe tätigen kann, bis das Kennwort auf der Benutzeroberfläche des Telefons eingegeben wurde, sodass die Anwendung dem Benutzer eine entsprechende Warnung anzeigen kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVSTATUSFLAGS_MSGWAIT"></span><span id="linedevstatusflags_msgwait"></span>**linedevstatus Flags \_ msgwait**
+<span id="LINEDEVSTATUSFLAGS_MSGWAIT"></span><span id="linedevstatusflags_msgwait"></span>**LINEDEVSTATUSFLAGS \_ MSGWAIT**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob die Zeile eine Nachricht wartet. **True** gibt an, dass eine Nachricht wartet. **false** gibt an, dass keine Nachricht wartet.
+Gibt an, ob in der Zeile eine Nachricht wartet. True gibt an, dass eine Nachricht wartet. **false** gibt an, dass keine Nachricht wartet.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
-Linedevstatusflags- \_ Konstanten werden innerhalb des **dwdevstatusflags** -Members der [**linedevstatus**](/windows/desktop/api/Tapi/ns-tapi-linedevstatus) -Datenstruktur verwendet.
+LINEDEVSTATUSFLAGS-Konstanten \_ werden innerhalb des **dwDevStatusFlags-Elements** der [**LINEDEVSTATUS-Datenstruktur**](/windows/desktop/api/Tapi/ns-tapi-linedevstatus) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,8 +69,8 @@ Linedevstatusflags- \_ Konstanten werden innerhalb des **dwdevstatusflags** -Mem
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

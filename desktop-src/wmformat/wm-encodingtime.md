@@ -3,7 +3,7 @@ title: WM/EncodingTime
 description: Das WM/EncodingTime-Attribut enthält einen Zeitstempel der Zeit, zu der der Inhalt codiert wurde.
 ms.assetid: 63da9392-264d-40bb-99fd-56db93801941
 keywords:
-- WM/EncodingTime windows Media Format
+- WM/EncodingTime-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -29,15 +29,15 @@ g \_ wszWMEncodingTime
 
 ## <a name="data-type"></a>Datentyp
 
-**FILETIME** (**\_ WMT-TYP \_ QWORD**)
+**FILETIME** (**WMT \_ TYPE \_ QWORD**)
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Attribut verwendet einen FILETIME-Wert, bei dem es sich um einen 64-Bit-Wert handelt, der die Anzahl der seit dem 1. Januar 1601 verstrichenen Zeiteinheiten von 100 Nanosekunden darstellt. Weitere Informationen zu FILETIME finden Sie im Abschnitt Windows Systeminformationen des Plattform-SDK.
+Dieses Attribut verwendet einen FILETIME-Wert, bei dem es sich um einen 64-Bit-Wert handelt, der die Anzahl der 100-Nanosekunden-Zeiteinheiten darstellt, die seit dem 1. Januar 1601 verstrichen sind. Weitere Informationen zu FILETIME finden Sie im abschnitt Windows Systeminformationen des Platform SDK.
 
-Dies ist kein codiertes Attribut. Sie müssen sie manuell festlegen, wenn Sie sie in Ihre Dateien einschließen möchten.
+Dies ist kein codiertes Attribut. Sie müssen sie manuell festlegen, wenn Sie sie in Ihre Dateien ein-/ausdingen möchten.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

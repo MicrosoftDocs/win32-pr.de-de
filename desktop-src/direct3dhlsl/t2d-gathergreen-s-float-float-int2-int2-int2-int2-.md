@@ -1,6 +1,6 @@
 ---
 title: Texture2D::GatherGreen(S,float,int2,int2,int2,int2)-Funktion
-description: Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden. | Texture2D::GatherGreen(S,float,int2,int2,int2,int2)-Funktion
+description: Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden. | Texture2D::GatherGreen(S,float,int2,int2,int2,int2)-Funktion
 ms.assetid: 043434C0-BB12-4A08-A3E5-34C9738DEBDB
 keywords:
 - GatherGreen-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "119043588"
 ---
 # <a name="texture2dgathergreensfloatint2int2int2int2-function"></a>Texture2D::GatherGreen(S,float,int2,int2,int2,int2)-Funktion
 
-Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.
+Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -112,7 +112,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -120,7 +120,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

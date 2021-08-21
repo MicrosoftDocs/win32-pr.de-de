@@ -1,23 +1,23 @@
 ---
-title: dcl_input vjoininstanceid (SM5-ASM)
-description: Deklarieren Sie die Instanz-ID in einer Hull-Shader-joinphase.
+title: dcl_input vJoinInstanceID (sm5 – asm)
+description: Deklarieren Sie die Instanz-ID in einer Hüllen-Shader-Joinphase.
 ms.assetid: 2EABB24A-7ED7-460D-A2AD-D2C40DCCB2DC
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bae9351fc7183aa37cd660c265aab803f4661e9
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 499da42f6f0b63c6a5315a16cf0d4f1615fdbd9dc99f224c374189c6f73d185e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103948332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789870"
 ---
-# <a name="dcl_input-vjoininstanceid-sm5---asm"></a>DCL \_ -Eingabe vjoininstanceid (SM5-ASM)
+# <a name="dcl_input-vjoininstanceid-sm5---asm"></a>dcl \_ input vJoinInstanceID (sm5 - asm)
 
-Deklarieren Sie die Instanz-ID in einer Hull-Shader-joinphase.
+Deklarieren Sie die Instanz-ID in einer Hüllen-Shader-Joinphase.
 
 
 
-| DCL \_ -Eingabe vjoininstanceid |
+| dcl \_ input vJoinInstanceID |
 |----------------------------|
 
 
@@ -26,21 +26,21 @@ Deklarieren Sie die Instanz-ID in einer Hull-Shader-joinphase.
 
 
 
-| Element                                                                                                                               | BESCHREIBUNG                        |
+| Element                                                                                                                               | Beschreibung                        |
 |------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| <span id="vJoinInstanceID"></span><span id="vjoininstanceid"></span><span id="VJOININSTANCEID"></span>*vjoininstanceid*<br/> | \[in \] der Instanz-ID.<br/> |
+| <span id="vJoinInstanceID"></span><span id="vjoininstanceid"></span><span id="VJOININSTANCEID"></span>*vJoinInstanceID*<br/> | \[in \] Die Instanz-ID.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | X    |        |          |       |         |
 
@@ -48,20 +48,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -71,7 +71,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: gluendcurve-Funktion (glu. h)
-description: Die Funktionen "glubegincurve" und "gluendcurve" begrenzen eine nicht einheitliche (NURBS) Kurven Definition von Rational B. | gluendcurve-Funktion (glu. h)
+title: gluEndCurve-Funktion (Glu.h)
+description: Die Funktionen gluBeginCurve und gluEndCurve begrenzen eine NURBS-Kurvendefinition (Non-Uniform Rational B-Spline). | gluEndCurve-Funktion (Glu.h)
 ms.assetid: b00ec687-6127-4585-b7b7-06e8dca78cfc
 keywords:
-- gluendcurve-Funktion OpenGL
+- gluEndCurve-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49f6c0c08bf31135ca82e87d2093ef3b57197955
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 20b6d8e9871b03286eebc285d2c3ad8834c8c354b196213c985626fc80cd02fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119489520"
 ---
-# <a name="gluendcurve-function"></a>gluendcurve-Funktion
+# <a name="gluendcurve-function"></a>gluEndCurve-Funktion
 
-Die Funktionen " [**glubegincurve**](glubegincurve.md) " und " **gluendcurve** " begrenzen eine nicht einheitliche ([NURBS](using-nurbs-curves-and-surfaces.md)) Kurven Definition von Rational B.
+Die Funktionen [**gluBeginCurve**](glubegincurve.md) und **gluEndCurve** grenzen eine nicht einheitliche rationale B-Spline -Kurvendefinition [(NURBS)](using-nurbs-curves-and-surfaces.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI gluEndCurve(
 *nobj* 
 </dt> <dd>
 
-Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt).
+Das NURBS-Objekt (erstellt mit [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)).
 
 </dd> </dl>
 
@@ -51,15 +51,15 @@ Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt)
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie " [**glubegincurve**](glubegincurve.md) ", um den Anfang einer nursb-Kurven Definition zu markieren. Nachdem Sie " **glubegincurve**" aufgerufen haben, erstellen Sie einen oder mehrere Aufrufe von " [**glunurbscurve**](glunurbscurve.md) ", um die Attribute der Kurve zu definieren. Genau einer der Aufrufe von **glunurbscurve** muss den Kurven-Typ GL \_ zuordnung1 \_ Vertex \_ 3 oder GL \_ zuordnung1 \_ Scheitelpunkt \_ 4 aufweisen. Um das Ende der nursb-Kurven Definition zu markieren, nennen Sie " **gluendcurve**".
+Verwenden Sie [**gluBeginCurve,**](glubegincurve.md) um den Anfang einer NURBS-Kurvendefinition zu markieren. Nachdem **Sie gluBeginCurve** aufgerufen haben, rufen [**Sie gluNurbsCurve**](glunurbscurve.md) auf, um die Attribute der Kurve zu definieren. Genau einer der Aufrufe von **gluNurbsCurve** muss den Kurventyp GL \_ MAP1 \_ VERTEX \_ 3 oder GL \_ MAP1 \_ VERTEX \_ 4 aufweisen. Rufen Sie **gluEndCurve** auf, um das Ende der NURBS-Kurvendefinition zu markieren.
 
-OpenGL-Evaluatoren werden verwendet, um die nursb-Kurve als Reihe von Liniensegmenten zu Rendering. Der auswersichtsstatus wird während des Renderings mit [**glpushatpub**](glpushattrib.md) (GL \_ eval \_ Bit) und [**glpopatpub**](glpopattrib.md)beibehalten. Informationen dazu, in welchem Zustand diese Aufrufe beibehalten werden, finden Sie unter **glpushatpub**.
+OpenGL-Auswertungen werden verwendet, um die NURBS-Kurve als eine Reihe von Liniensegmenten zu rendern. Der Auswertungszustand wird beim Rendern mit [**glPushAttrib**](glpushattrib.md) (GL \_ EVAL \_ BIT ) und [**glPopAttrib**](glpopattrib.md)beibehalten. Informationen dazu, in welchem Zustand diese Aufrufe beibehalten werden, finden Sie unter **glPushAttrib.**
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Funktionen erzeugen eine strukturierte nursb-Kurve mit Normals. Texturkoordinaten und normale werden auch als nursb-Kurven angegeben:
+Die folgenden Funktionen rendern eine texturierte NURBS-Kurve mit Normalitäten. Texturkoordinaten und Normalitäten werden auch als NURBS-Kurven angegeben:
 
 ``` syntax
 gluBeginCurve(nobj); 
@@ -77,8 +77,8 @@ gluEndCurve(nobj);
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -87,19 +87,19 @@ gluEndCurve(nobj);
 
 <dl> <dt>
 
-[**glpushatpub**](glpushattrib.md)
+[**glPushAttrib**](glpushattrib.md)
 </dt> <dt>
 
-[**glubeginsurface**](glubeginsurface.md)
+[**gluBeginSurface**](glubeginsurface.md)
 </dt> <dt>
 
-[**glubegintrim**](glubegintrim.md)
+[**gluBeginTrim**](glubegintrim.md)
 </dt> <dt>
 
-[**glunewnurbsrenderer**](glunewnurbsrenderer.md)
+[**gluNewNurbsRenderer**](glunewnurbsrenderer.md)
 </dt> <dt>
 
-[**glunurbscurve**](glunurbscurve.md)
+[**gluNurbsCurve**](glunurbscurve.md)
 </dt> </dl>
 
  

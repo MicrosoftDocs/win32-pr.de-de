@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_RTType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Route-through-Datensatz (RT) darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen RT-Eintrag (Route Through) darstellt.
 ms.assetid: 986e2bbf-4f45-4611-906e-66079fda7f4c
 keywords:
-- DNS-MicrosoftDNS_RTType Klasse
-- DNS-MicrosoftDNS_RTType Klasse, beschrieben
+- MicrosoftDNS_RTType DNS-Klasse
+- MicrosoftDNS_RTType DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,18 +19,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d867185d8ce07a54a47eb5ea7591ec8d68a11059
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 287dc3d80370f812b6ee721b9556f906df289c67a17048aa326efc3b80de5954
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077060"
 ---
-# <a name="microsoftdns_rttype-class"></a>MicrosoftDNS \_ rttype-Klasse
+# <a name="microsoftdns_rttype-class"></a>MicrosoftDNS \_ RTType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Route-through-Datensatz (RT) darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen RT-Eintrag (Route Through) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ class MicrosoftDNS_RTType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ rttype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ RTType-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS \_ rttype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ RTType-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                      |
 |:-----------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen RT-Typ von RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer/Hostnamen, der Klasse (Standard = in), dem Wert für die Gültigkeitsdauer, der Daten Satz Voreinstellung und dem zwischenhostnamen. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer, die Präferenz und den zwischen Host auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>        |
+| **CreateInstanceFromPropertyData** | Instanziiert einen RT-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Datensatzes, Containername, Besitzer-/Hostname, Klasse (Standard = IN), Lebzeitwert, Datensatzpräferenz und Zwischenhostname. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert TTL, Preference und Intermediate Host auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>        |
 
 
 
@@ -66,37 +66,37 @@ Die **MicrosoftDNS \_ rttype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ rttype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ RTType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Intermediatehost**
+**IntermediateHost**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-FQDN, der einen Host angibt, der als zwischengeschalteter Host zum Erreichen des vom Besitzer angegebenen Hosts dienen soll.
+FQDN, der einen Host an, der als Zwischenziel beim Erreichen des vom Besitzer angegebenen Hosts dienen soll.
 
 </dd> <dt>
 
-**Bevorzu**
+**Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen wird. Niedrigere Werte werden bevorzugt.
+Diese RR wird unter anderem beim gleichen Besitzer bevorzugt. Niedrigere Werte werden bevorzugt.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -105,7 +105,7 @@ Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen w
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -113,13 +113,13 @@ Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen w
 
 <dl> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ rttype"**](microsoftdns-rttype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RTType-Klasse**](microsoftdns-rttype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ rttype-Klasse**](microsoftdns-rttype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ RTType-Klasse**](microsoftdns-rttype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

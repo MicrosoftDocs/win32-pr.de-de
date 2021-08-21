@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-Registrierungsflag-Attribut
-description: Enthält die Registrierungs bezogenen Flags.
+title: ms-PKI-Enrollment-Flag-Attribut
+description: Enthält die registrierungsbezogenen Flags.
 ms.assetid: e854acb1-75f4-4379-b404-8fa096419ee6
 ms.tgt_platform: multiple
 keywords:
-- 'MS-PKI-Registrierungsflag: AD-Schema'
-- 'mspki-Registrierungsflag: AD-Schema für Attribut'
+- ms-PKI-Enrollment-Flag-Attribut AD-Schema
+- AD-Schema des msPKI-Enrollment-Flag-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2df092e28633bd5825c422e306bf7a65982b32a8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f13f25d3c9e2d34979715f0b225ca399b1cf11193a2dc9107b9370b2ea44b5d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803120"
 ---
-# <a name="ms-pki-enrollment-flag-attribute"></a>MS-PKI-Registrierungsflag-Attribut
+# <a name="ms-pki-enrollment-flag-attribute"></a>ms-PKI-Enrollment-Flag-Attribut
 
-Enthält die Registrierungs bezogenen Flags.
+Enthält die registrierungsbezogenen Flags.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------------------------|
-| CN                | MS-PKI-Registrierungsflag                                                                            |
-| LDAP-Display-Name | mspki-Registrierungsflag                                                                             |
+| CN                | ms-PKI-Enrollment-Flag                                                                            |
+| Ldap-Anzeigename | msPKI-Enrollment-Flag                                                                             |
 | Size              | 4 Bytes                                                                                           |
-| Berechtigung aktualisieren  | Domänen Administrator                                                                              |
-| Aktualisierungshäufigkeit  | Wenn das Objekt Vorlage (MS-PKI-Certificate-template) bearbeitet, erstellt oder geklont wird. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                                              |
+| Updatehäufigkeit  | Wenn das Zertifikatvorlagenobjekt (ms-PKI-Certificate-Template) bearbeitet, erstellt oder geklont wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.1430                                                                           |
-| System-ID-GUID    | d15ef7d8-f226-46db-ae79-b34e560bd12c                                                              |
+| System-Id-Guid    | d15ef7d8-f226-46db-ae79-b34e560bd12c                                                              |
 | Syntax            | [**Enumeration**](s-enumeration.md)                                                              |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Enthält die Registrierungs bezogenen Flags.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Enthält die Registrierungs bezogenen Flags.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Enthält die Registrierungs bezogenen Flags.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Enthält die Registrierungs bezogenen Flags.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Enthält die Registrierungs bezogenen Flags.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

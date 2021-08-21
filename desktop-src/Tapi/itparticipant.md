@@ -1,44 +1,44 @@
 ---
-description: Die itteilnehmer-Schnittstelle wird von ipconf MSP implementiert. Sie ermöglicht einer Anwendung das Abrufen von Informationen zu Konferenzteilnehmern und das Abrufen von Zeigern auf die Streams, die diesen Teilnehmern zugeordnet sind.
+description: Die ITParticipant-Schnittstelle wird vom IPConf-MSP implementiert. Es ermöglicht einer Anwendung, Informationen zu Konferenzteilnehmern abzurufen und Zeiger auf die Streams abzurufen, die diesen Teilnehmern zugeordnet sind.
 ms.assetid: 8c3edfc1-3165-48b7-9d83-8892c192498b
-title: Itteilnehmer-Schnittstelle (ipmsp. h)
+title: ITParticipant-Schnittstelle (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8b7aa9d845d8d2489be0850bcc3fcf3f93ccdac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fab4ff4c496616804efc1a65a728bbb658fba5bb1278939bdfb2185705684c64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682650"
 ---
-# <a name="itparticipant-interface"></a>Itteilnehmer-Schnittstelle
+# <a name="itparticipant-interface"></a>ITParticipant-Schnittstelle
 
-\[Der **itteilnehmer** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**ITParticipant** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **itteilnehmer** -Schnittstelle wird von [ipconf MSP](ipconf-msp.md)implementiert. Sie ermöglicht einer Anwendung das Abrufen von Informationen zu Konferenzteilnehmern und das Abrufen von Zeigern auf die Streams, die diesen Teilnehmern zugeordnet sind.
+Die **ITParticipant-Schnittstelle** wird vom [IPConf-MSP](ipconf-msp.md)implementiert. Es ermöglicht einer Anwendung, Informationen zu Konferenzteilnehmern abzurufen und Zeiger auf die Streams abzurufen, die diesen Teilnehmern zugeordnet sind.
 
-Diese Schnittstelle wird für das-Objekt aufgerufen, wenn ein-Rückruf die IP-Konferenzen verwendet. Ein Zeiger kann durch Aufrufen von **QueryInterface** mithilfe eines [**itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) -Zeigers abgerufen werden.
+Diese Schnittstelle wird für das Aufrufobjekt verfügbar gemacht, wenn ein Aufruf die IP-Konferenz verwendet. Ein Zeiger kann abgerufen werden, indem **QueryInterface** mithilfe eines [**ITCallInfo-Zeigers**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) aufgerufen wird.
 
 ## <a name="members"></a>Member
 
-Die **itteilnehmer** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. Der **itparticipants** verfügt auch über die folgenden Typen von Membern:
+Die **ITParticipant-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITParticipant** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itparticipants** -Schnittstelle verfügt über diese Methoden.
+Die **ITParticipant-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                                                                                                                                                             |
+| Methode                                                                      | Beschreibung                                                                                                                                                             |
 |:----------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Enumeratestreams**](itparticipant-enumeratestreams.md)                  | Listet Streams auf, die dem aktuellen Teilnehmer zugeordnet sind.<br/>                                                                                                  |
-| [**\_mediatypes erhalten**](itparticipant-get-mediatypes.md)                     | Ruft die einem Teilnehmer zugeordneten [**Medientypen**](tapimediatype--constants.md) ab.<br/>                                                                      |
-| [**Informationen zu " \_ participanttypeer" erhalten**](itparticipant-get-participanttypedinfo.md) | Ruft eine BSTR-Darstellung des benötigten Informations Typs, z. b. PTI \_ EmailAddress, ab.<br/>                                                                     |
-| [**\_Status erhalten**](itparticipant-get-status.md)                             | Ruft den Status des Teilnehmers ab.<br/>                                                                                                                          |
-| [**Daten \_ Ströme erhalten**](itparticipant-get-streams.md)                           | Erstellt eine Auflistung von Streams, die dem aktuellen Teilnehmer zugeordnet sind. Wird für Automatisierungs Client Anwendungen bereitgestellt, wie z. b. die in Visual Basic geschriebenen.<br/> |
-| [**Put- \_ Status**](itparticipant-put-status.md)                             | Legt fest, ob ein dem Teilnehmer zugeordneter Stream aktiviert ist.<br/>                                                                                            |
+| [**EnumerateStreams**](itparticipant-enumeratestreams.md)                  | Listet Streams auf, die dem aktuellen Teilnehmer zugeordnet sind.<br/>                                                                                                  |
+| [**Get \_ MediaTypes**](itparticipant-get-mediatypes.md)                     | Ruft die einem Teilnehmer zugeordneten [**Medientypen**](tapimediatype--constants.md) ab.<br/>                                                                      |
+| [**get \_ ParticipantTypedInfo**](itparticipant-get-participanttypedinfo.md) | Ruft eine BSTR-Darstellung des erforderlichen Informationstyps ab, z. B. PTI \_ EMAILADDRESS.<br/>                                                                     |
+| [**\_Get Status**](itparticipant-get-status.md)                             | Ruft den Status des Teilnehmers ab.<br/>                                                                                                                          |
+| [**get \_ Streams**](itparticipant-get-streams.md)                           | Erstellt eine Auflistung von Streams, die dem aktuellen Teilnehmer zugeordnet sind. Wird für Automation-Clientanwendungen bereitgestellt, z. B. in Visual Basic geschriebene Anwendungen.<br/> |
+| [**put \_ Status**](itparticipant-put-status.md)                             | Legt fest, ob ein dem Teilnehmer zugeordneter Stream aktiviert ist.<br/>                                                                                            |
 
 
 
@@ -50,9 +50,9 @@ Die **itparticipants** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
@@ -61,13 +61,13 @@ Die **itparticipants** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[Ipconf-msp](ipconf-msp.md)
+[IPConf MSP](ipconf-msp.md)
 </dt> <dt>
 
-[Ipconf-MSP-Schnittstellen](ipconf-msp-interfaces.md)
+[IPConf-MSP-Schnittstellen](ipconf-msp-interfaces.md)
 </dt> <dt>
 
-[**Itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
+[**ITCallInfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
 </dt> </dl>
 
  

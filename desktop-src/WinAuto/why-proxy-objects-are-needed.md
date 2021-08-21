@@ -1,23 +1,23 @@
 ---
-title: Warum Proxy Objekte erforderlich sind
-description: Bei zugänglichen Objekten wird die dll, in der die Hook-Funktion des Clients implementiert ist, in den Adressbereich des Servers geladen, wenn ein Client eine kontextbasierte Hook-Funktion festlegt.
+title: Gründe für die Verwendung von Proxyobjekten
+description: Bei barrierefreien Objekten wird die DLL, in der die Hookfunktion des Clients implementiert ist, in den Adressraum des Servers geladen, wenn ein Client eine Kontexthookfunktion legt.
 ms.assetid: e8e93271-1da6-42cd-9200-23a3e08b490b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28d672f48e9c41f23599a8a64585062a126dafb8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7038a43bf238d9baebee81e13cd82d904dc1b8a4c9ed7fb0c1576f42cbdfdfb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860990"
 ---
-# <a name="why-proxy-objects-are-needed"></a>Warum Proxy Objekte erforderlich sind
+# <a name="why-proxy-objects-are-needed"></a>Gründe für die Verwendung von Proxyobjekten
 
-Bei zugänglichen Objekten wird die dll, in der die Hook-Funktion des Clients implementiert ist, in den Adressbereich des Servers geladen, wenn ein Client eine [kontextbasierte Hook-Funktion](in-context-and-out-of-context-hook-functions.md)festlegt. Wenn der Client in diesem Fall [**accessibleobjectfromevent**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromevent) von der Hook-Funktion aus aufruft, zeigt der Schnittstellen Zeiger, der zurückgegeben wird, direkt auf den Code im Adressbereich des Servers. Wenn der Client eine Schnittstellen Eigenschaft mithilfe dieses Zeigers aufruft, ist die Component Object Model (com)-Bibliothek nicht an Marshalling oder Unmarshalling beteiligt und kann nicht erkennen, ob ein Objekt zerstört wird. Daher muss der Server diese Situation erkennen und einen Fehlercode an den Client zurückgeben.
+Bei barrierefreien Objekten wird [](in-context-and-out-of-context-hook-functions.md)die DLL, in der die Hookfunktion des Clients implementiert ist, in den Adressraum des Servers geladen, wenn ein Client eine Kontexthookfunktion fest legt. In diesem Fall zeigt der zurückgegebene Schnittstellenzeiger direkt auf Code im Adressraum des Servers, wenn der Client [**AccessibleObjectFromEvent**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfromevent) aus der Hookfunktion aufruft. Wenn der Client eine Schnittstelleneigenschaft mit diesem Zeiger aufruft, ist die Component Object Model-Bibliothek (COM) nicht am Marshalling oder Unmarshaling beteiligt und kann nicht erkennen, ob ein Objekt zerstört wird. Daher muss der Server diese Situation erkennen und einen Fehlercode an den Client zurückgeben.
 
- 
+ 
 
- 
+ 
 
 
 

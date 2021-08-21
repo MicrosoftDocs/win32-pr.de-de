@@ -1,9 +1,9 @@
 ---
-title: TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE Meldung (kommstrg. h)
-description: Gibt an, ob eine angegebene Aufgaben Dialogfeld-oder Befehls Verknüpfung über ein Schild Symbol der Benutzerkontensteuerung (UAC) verfügen soll. Das heißt, ob für die von der Schaltfläche aufgerufene Aktion eine Erhöhung erforderlich ist.
+title: TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE (Commctrl.h)
+description: Gibt an, ob ein bestimmtes Aufgabendialogfeld oder ein Befehlslink ein Schildsymbol für die Benutzerkontensteuerung (User Account Control, UAC) haben soll. Das heißt, ob für die von der Schaltfläche aufgerufene Aktion eine Erhöhung erforderlich ist.
 ms.assetid: c4321fdb-3ea9-49bf-b53d-eb73d5b11084
 keywords:
-- Windows-Steuerelemente für TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE Meldung
+- TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ef5f8479e88a3b63cbd5fab6a5686913864fd9c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2c69998da085a74b144179a0a4244c787cd3a871d63eca1e5df9c4e555b1a7e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104620"
 ---
-# <a name="tdm_set_button_elevation_required_state-message"></a>TDM \_ - \_ Schaltflächen Erweiterung \_ \_ erforderliche \_ Zustands Meldung
+# <a name="tdm_set_button_elevation_required_state-message"></a>TDM \_ SET BUTTON ELEVATION REQUIRED STATE \_ \_ \_ \_ message
 
-Gibt an, ob eine angegebene Aufgaben Dialogfeld-oder Befehls Verknüpfung über ein Schild Symbol der Benutzerkontensteuerung (UAC) verfügen soll. Das heißt, ob für die von der Schaltfläche aufgerufene Aktion eine Erhöhung erforderlich ist.
+Gibt an, ob ein bestimmtes Aufgabendialogfeld oder ein Befehlslink ein Schildsymbol für die Benutzerkontensteuerung (User Account Control, UAC) haben soll. Das heißt, ob für die von der Schaltfläche aufgerufene Aktion eine Erhöhung erforderlich ist.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Die ID der zu aktualisierenden pushschaltfläche oder des Befehls Links.
+Die ID der zu aktualisierenden Pushschaltfläche oder des Befehlslinks.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Legen Sie den Wert auf 0 fest, um anzugeben, dass die von der Schaltfläche aufgerufene Aktion keine Erhöhung erfordert. Legen Sie auf ungleich NULL fest, um anzugeben, dass die Aktion eine Erhöhung erfordert.
+Legen Sie auf 0 fest, um zu bestimmen, dass für die von der Schaltfläche aufgerufene Aktion keine Erhöhung erforderlich ist. Legen Sie auf ungleich 0 fest, um zu bestimmen, dass für die Aktion eine Erhöhung erforderlich ist.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

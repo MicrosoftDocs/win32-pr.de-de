@@ -3,30 +3,30 @@ title: Erkennen des Players
 description: Erkennen des Players
 ms.assetid: dc034226-578a-45de-9463-e1798fef874e
 keywords:
-- Windows Media Player Online Stores, erkennen von Playern
-- Online Stores, erkennen von Playern
-- Typ 1 Online Stores, erkennen von Playern
-- Typ 2 Online Stores, erkennen von Playern
-- Windows Media Player Online Stores, Player Erkennung
-- Online Stores, Player Erkennung
-- Typ 1 Online Stores, Player Erkennung
-- Typ 2 Online Stores, Player Erkennung
-- Spieler Erkennung
+- Windows Media Player Onlineshops,Erkennen von Playern
+- Onlineshops,Erkennen von Playern
+- Geben Sie 1 Onlineshops ein, und erkennen Sie Player.
+- Geben Sie 2 Onlineshops ein, und erkennen Sie Player.
+- Windows Media Player Onlineshops, Playererkennung
+- Onlineshops, Playererkennung
+- Typ 1 Onlineshops, Playererkennung
+- Typ 2 Onlineshops, Playererkennung
+- Playererkennung
 - Erkennen von Playern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb919e790b07ccf5d8df587abd63d2344534b16b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d511fc8c14a901c6823715293c5eb621b45762cd5e9fae78d8c4df503a03bf38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863510"
 ---
 # <a name="detecting-the-player"></a>Erkennen des Players
 
-Wenn Sie eine Webseite für den Online Shop erstellen, können Sie festlegen, dass Benutzer in der Lage sein sollen, die Seite in einem Webbrowser oder in Windows Media Player anzuzeigen. Sie können ein ASP-Skript verwenden, um zu bestimmen, ob Ihre Webseite im Player gehostet wird.
+Wenn Sie eine Webseite für Ihren Onlineshop erstellen, können Sie festlegen, dass Benutzer die Seite in einem Webbrowser oder in Windows Media Player anzeigen können sollen. Sie können ein ASP-Skript verwenden, um zu bestimmen, ob Ihre Webseite im Player gehostet wird.
 
-Der folgende Beispielcode ruft den Versions Parameter aus der URL-Abfrage Zeichenfolge ab, um zu bestimmen, ob die Seite in Windows-Media Player gehostet wird:
+Der folgende Beispielcode ruft den Versionsparameter aus der URL-Abfragezeichenfolge ab, um zu bestimmen, ob die Seite in Windows Media Player gehostet wird:
 
 
 ```C++
@@ -46,24 +46,24 @@ Der folgende Beispielcode ruft den Versions Parameter aus der URL-Abfrage Zeiche
 
 
 
-Beachten Sie, dass der vorangehende Code davon ausgeht, dass der Versions Parameter in der Abfrage Zeichenfolge vorhanden ist, wenn er in Windows Media Player Dies gilt für Seiten, die vom Benutzer geöffnet werden, aber möglicherweise nicht für Seiten, die mithilfe von " **extern. navigatetaskpaneurl**" geöffnet wurden. Damit die Versions Abfrage Zeichenfolge bei Programm gesteuerter Navigation vorhanden ist, müssen Sie den Versions Parameter dem Methodenaufrufe hinzufügen oder die Version dynamisch an die Basis-URL des **Navigate** -Elements des serviceInfo-Dokuments anhängen.
+Beachten Sie, dass im vorherigen Code davon ausgegangen wird, dass der Versionsparameter in der Abfragezeichenfolge vorhanden ist, wenn er in Windows Media Player gehostet wird. Dies gilt für Seiten, die vom Benutzer geöffnet werden, aber möglicherweise nicht für Seiten, die mit **External.NavigateTaskPaneURL** geöffnet wurden. Damit die Versionsabfragezeichenfolge beim programmgesteuerten Navigieren vorhanden ist, müssen Sie dem Methodenaufruf den Versionsparameter hinzufügen oder die Version dynamisch an die Basis-URL des **Navigate-Elements** Ihres ServiceInfo-Dokuments anfügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Dynamisches Erstellen des serviceingefo-Dokuments**](creating-the-serviceinfo-document-dynamically.md)
+[**Dynamisches Erstellen des ServiceInfo-Dokuments**](creating-the-serviceinfo-document-dynamically.md)
 </dt> <dt>
 
-[**Extern. navigatetaskpaneurl**](external-navigatetaskpaneurl.md)
+[**External.NavigateTaskPaneURL**](external-navigatetaskpaneurl.md)
 </dt> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und Typ 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

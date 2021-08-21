@@ -1,106 +1,106 @@
 ---
-title: Remotedesktopprotokoll Anbieter Schnittstellen
-description: Schnittstellen, die von der Remotedesktopprotokoll Anbieter-API unterstützt werden.
+title: Remotedesktopprotokoll-Anbieterschnittstellen
+description: Schnittstellen, die von der Remotedesktopprotokoll-Anbieter-API unterstützt werden.
 ms.assetid: 180c29d4-a305-45ac-8989-6226dccb75d5
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85494e26c391095fbf97e8e408ee6b6181756c03
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5bde36cb70f937559dce20a73a485ec109a2cf6c6ae6c687655963c70e6ce22b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681230"
 ---
-# <a name="remote-desktop-protocol-provider-interfaces"></a>Remotedesktopprotokoll Anbieter Schnittstellen
+# <a name="remote-desktop-protocol-provider-interfaces"></a>Remotedesktopprotokoll-Anbieterschnittstellen
 
-Die folgenden Schnittstellen werden von der Remotedesktopprotokoll Anbieter-API unterstützt.
+Die folgenden Schnittstellen werden von der Remotedesktopprotokoll Provider-API unterstützt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Iwrdsprodecolconnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolconnection)
+[**IWRdsProtocolConnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolconnection)
 </dt> <dd>
 
-Macht Methoden verfügbar, die vom Remotedesktopdienste-Dienst aufgerufen werden, um eine Client Verbindung zu konfigurieren.
+Macht Methoden verfügbar, die vom Remotedesktopdienste aufgerufen werden, um eine Clientverbindung zu konfigurieren.
 
 </dd> <dt>
 
-[**Iwrdsproprocolconnectioncallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolconnectioncallback)
+[**IWRdsProtocolConnectionCallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolconnectioncallback)
 </dt> <dd>
 
-Macht Methoden verfügbar, die Informationen über den Status einer Client Verbindung bereitstellen und Aktionen für den Client ausführen. Diese Schnittstelle wird vom Remotedesktopdienste-Dienst implementiert und durch das-Protokoll aufgerufen.
+Macht Methoden verfügbar, die Informationen zum Status einer Clientverbindung bereitstellen und Aktionen für den Client ausführen. Diese Schnittstelle wird vom Remotedesktopdienste implementiert und vom Protokoll aufgerufen.
 
 </dd> <dt>
 
-[**Iwrdspro| collicenseconnetction**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollicenseconnection)
+[**IWRdsProtocolLicenseConnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollicenseconnection)
 </dt> <dd>
 
-Macht Methoden verfügbar, die vom Remotedesktopdienste-Dienst verwendet werden, um während einer Verbindungs Sequenz den Lizenzierungs Hand Shake auszuführen.
+Macht Methoden verfügbar, die vom Remotedesktopdienste, um den Lizenzierungshandshake während einer Verbindungssequenz durchzuführen.
 
 </dd> <dt>
 
-[**Iwrdsprotekollistener**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollistener)
+[**IWRdsProtocolListener**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollistener)
 </dt> <dd>
 
-Macht Methoden verfügbar, die anfordern, dass das Protokoll auf Client Verbindungsanforderungen lauscht und die Überwachung beendet.
+Macht Methoden verfügbar, die anfordern, dass das Protokoll auf Clientverbindungsanforderungen startet und abhört.
 
 </dd> <dt>
 
-[**Iwrdspro| collistenercallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollistenercallback)
+[**IWRdsProtocolListenerCallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollistenercallback)
 </dt> <dd>
 
-Macht Methoden verfügbar, die den Remotedesktopdienste Dienst Benachrichtigen, dass ein Client eine Verbindung hergestellt hat.
+Macht Methoden verfügbar, die den Remotedesktopdienste, dass ein Client verbunden ist.
 
 </dd> <dt>
 
-[**Iwrdsproweredirector**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollogonerrorredirector)
+[**IWRdsProtocolLogonErrorRedirector**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocollogonerrorredirector)
 </dt> <dd>
 
-Macht Methoden verfügbar, die vom Remotedesktopdienste Dienst aufgerufen werden, um den Anmeldestatus zu aktualisieren und zu bestimmen, wie Anmelde Fehlermeldungen umgeleitet werden.
+Macht methoden verfügbar, die vom Remotedesktopdienste aufgerufen werden, um den Anmeldestatus zu aktualisieren und zu bestimmen, wie Anmeldefehlermeldungen direkt angezeigt werden.
 
 </dd> <dt>
 
-[**Iwrdsproum colmanager**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolmanager)
+[**IWRdsProtocolManager**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolmanager)
 </dt> <dd>
 
-Macht Methoden verfügbar, die der Remotedesktopdienste-Dienst für die Kommunikation mit dem Protokoll Anbieter verwendet.
+Macht Methoden verfügbar, die Remotedesktopdienste dienst verwendet, um mit dem Protokollanbieter zu kommunizieren.
 
 </dd> <dt>
 
-[**Iwrdsprodecolsettings**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolsettings)
+[**IWRdsProtocolSettings**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolsettings)
 </dt> <dd>
 
-Macht Methoden zum Abrufen und Hinzufügen von Richtlinien bezogenen Einstellungen verfügbar.
+Macht Methoden zum Abrufen und Hinzufügen richtlinienbezogener Einstellungen verfügbar.
 
 </dd> <dt>
 
-[**Iwrdsprotrocolshadowcallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolshadowcallback)
+[**IWRdsProtocolShadowCallback**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolshadowcallback)
 </dt> <dd>
 
-Macht Methoden verfügbar, die vom Protokoll aufgerufen werden, um den Remotedesktopdienste Dienst zu benachrichtigen, dass die Zielseite eines Schattens gestartet oder beendet wird.
+Macht methoden verfügbar, die vom Protokoll aufgerufen werden, um den Remotedesktopdienste zu benachrichtigen, die Zielseite eines Schattens zu starten oder zu beenden.
 
 </dd> <dt>
 
-[**Iwrdsprodecolshadowconnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolshadowconnection)
+[**IWRdsProtocolShadowConnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsprotocolshadowconnection)
 </dt> <dd>
 
-Macht Methoden verfügbar, die den Protokoll Anbieter über den Status des Sitzungs shadoings benachrichtigen.
+Macht Methoden verfügbar, die den Protokollanbieter über den Status des Sitzungsschattens benachrichtigen.
 
 </dd> <dt>
 
-[**Iwrdsremotefxgraphicsconnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsremotefxgraphicsconnection)
+[**IWRdsRemoteFXGraphicsConnection**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwrdsremotefxgraphicsconnection)
 </dt> <dd>
 
-Macht Methoden verfügbar, die sich auf die Bearbeitung und das Verständnis von Grafiken in der Client Verbindung beziehen.
+Macht Methoden verfügbar, die im Zusammenhang mit der Bearbeitung und dem Verständnis von Grafiken auf der Clientverbindung stehen.
 
 </dd> <dt>
 
-[Veraltete Desktop Protokoll-Anbieter Schnittstellen](deprecated-desktop-protocol-provider-interfaces.md)
+[Veraltete Schnittstellen des Desktopprotokollanbieters](deprecated-desktop-protocol-provider-interfaces.md)
 </dt> <dd>
 
-Die folgenden Schnittstellen sind veraltet und sollten nicht mehr verwendet werden. Verwenden Sie für neue Projekte stattdessen die Schnittstellen der Schnittstellen für Remotedesktopprotokoll-Anbieter.
+Die folgenden Schnittstellen sind veraltet und sollten nicht mehr verwendet werden. Verwenden Sie für neue Projekte stattdessen die schnittstellen Remotedesktopprotokoll Anbieterschnittstellen.
 
 </dd> </dl>
 
@@ -108,21 +108,21 @@ Die folgenden Schnittstellen sind veraltet und sollten nicht mehr verwendet werd
 
 <dl> <dt>
 
-[Remotedesktopprotokoll Anbieter Referenz](custom-remote-protocol-reference.md)
+[Remotedesktopprotokoll Anbieterreferenz](custom-remote-protocol-reference.md)
 </dt> <dt>
 
-[Remotedesktopprotokoll Anbieter Enumerationen](custom-remote-protocol-enumerations.md)
+[Remotedesktopprotokoll Anbieterenumeration](custom-remote-protocol-enumerations.md)
 </dt> <dt>
 
-[Remotedesktopprotokoll Anbieter Strukturen](custom-remote-protocol-structures.md)
+[Remotedesktopprotokoll Anbieterstrukturen](custom-remote-protocol-structures.md)
 </dt> <dt>
 
 [Remotedesktopprotokoll Anbieter-Unions](custom-remote-protocol-unions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

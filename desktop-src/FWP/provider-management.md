@@ -1,21 +1,21 @@
 ---
-title: Anbieter Verwaltung
-description: Anbieter Verwaltung
+title: Anbieterverwaltung
+description: Anbieterverwaltung
 ms.assetid: C628647C-FDFD-4E6D-9F2F-EF64AC4CFD80
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2616e4fc78ed08f172cc1ac0077157cd1d6d8283
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7ac18275f19ac0a8a72a89f623f462b27a77691bbf9c10dda7bb0fca2cb23878
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900760"
 ---
-# <a name="provider-management"></a>Anbieter Verwaltung
+# <a name="provider-management"></a>Anbieterverwaltung
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Änderung des swpm- \_ Anbieters \_ \_ CALLBACK0**](/windows/win32/api/fwpmu/nc-fwpmu-fwpm_provider_change_callback0)
+-   [**FWPM \_ PROVIDER \_ CHANGE \_ CALLBACK0**](/windows/win32/api/fwpmu/nc-fwpmu-fwpm_provider_change_callback0)
 -   [**FwpmProviderAdd0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovideradd0)
 -   [**FwpmProviderCreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidercreateenumhandle0)
 -   [**FwpmProviderDeleteByKey0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmproviderdeletebykey0)
@@ -28,6 +28,6 @@ ms.locfileid: "104390230"
 -   [**FwpmProviderSubscriptionsGet0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidersubscriptionsget0)
 -   [**FwpmProviderUnsubscribeChanges0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmproviderunsubscribechanges0)
 
- 
+ 
 
- 
+ 

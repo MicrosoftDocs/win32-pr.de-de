@@ -1,25 +1,25 @@
 ---
 title: Implementieren von Teredo
 ms.assetid: f32e908e-a96d-48a2-8b79-e2e53c64cb68
-description: 'Weitere Informationen: Implementieren von Teredo'
+description: Weitere Informationen finden Sie unter Implementieren von Teredo.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ffdf2859d3742bea02e240c6a26bd0e4ade85ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e5b24f4524d6c513dc0a5cd11e7f6420eb7e546fa3bce75c830759fc38faaef9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681650"
 ---
 # <a name="implementing-teredo"></a>Implementieren von Teredo
 
-Es ist zwar nicht erforderlich, Programmier Änderungen für [Teredo](about-teredo.md)vorzunehmen, aber es wird empfohlen, dass Entwickler kleinere Änderungen vornehmen, die zur effizientesten Verwendung der Teredo-Schnittstelle führen:
+Es ist zwar nicht erforderlich, Programmieränderungen für [Teredo](about-teredo.md)vorzunehmen, es wird jedoch empfohlen, dass Entwickler kleinere Änderungen vornehmen, die zur effizientesten Verwendung der Teredo-Schnittstelle führen:
 
--   Anwendungen, die nur den IPv6-Datenverkehr für die Verwendung von Teredo verwenden können, sind möglich. Bei der Entwicklung des Anwendungs Protokolls sollte jedoch die Verarbeitung von IPv4-und IPv6-Datenverkehr berücksichtigt werden. Die Anwendung muss \_ in Socketoptionen an AF inet6 oder AF \_ unspec gebunden werden.
--   Anwendungen, die den nicht angeforderten Datenverkehr aus dem Internet überwachen können, sind erforderlich, um die NAT-Durchlauf Option (Network Address Translation) in der Windows-Firewall zu aktivieren. Dies wird erreicht, indem die [**INetFwPolicy2**](/previous-versions/windows/desktop/api/netfw/nn-netfw-inetfwpolicy2) -API aufgerufen wird, wobei die Option "Edge-Traversal" auf Variant true festgelegt ist \_ . Windows Vista stellt sicher, dass die Teredo-Adresse zur Verwendung verfügbar ist, wenn Sie von einer Anwendung benötigt wird. Folglich wird die Teredo-Adresse automatisch stabilisiert, wenn die Teredo-Schnittstelle verwendet wird. Wenn eine Anwendung sicherstellen möchte, dass die Teredo-Adresse stabil ist, löst der Aufruf der [**notifystableunicastipadresssstable**](/windows/desktop/api/netioapi/nf-netioapi-notifystableunicastipaddresstable) -API Teredo aus, um in einen stabilen Zustand zu wechseln.
--   Anwendungen können auch die Option "Winsock-Socket" der [IPv6- \_ Schutz \_ Ebene](/windows/desktop/WinSock/ipv6-protection-level) verwenden, um die Schutz Ebene festzulegen, die den nicht angeforderten eingehenden Datenverkehr durch die Firewall ermöglicht. Weitere Informationen finden Sie unter [empfangen von angefordertem Datenverkehr über Teredo](receiving-unsolicited-traffic-over-teredo.md) .
+-   Anwendungen, die nur IPv6-Datenverkehr nutzen können, können Teredo nutzen. Bei der Entwicklung des Anwendungsprotokolls sollte jedoch die Verarbeitung von IPv4- und IPv6-Datenverkehr berücksichtigt werden. Die Anwendung muss in Socketoptionen an AF \_ INET6 oder AF \_ UNSPEC gebunden werden.
+-   Anwendungen, die auf nicht angeforderten Datenverkehr aus dem Internet lauschen können, sind erforderlich, um die Nat-Traversaloption (Network Address Translation, Netzwerkadressenübersetzung) innerhalb Windows Firewall zu aktivieren. Dies erfolgt durch Aufrufen der [**INetFwPolicy2-API,**](/previous-versions/windows/desktop/api/netfw/nn-netfw-inetfwpolicy2) bei der die Option "Edge Traversal" auf VARIANT TRUE festgelegt \_ ist. Windows Vista stellt sicher, dass die Teredo-Adresse zur Verwendung verfügbar ist, wenn eine Anwendung dies erfordert. Daher wird die Teredo-Adresse automatisch stabilisiert, wenn die Teredo-Schnittstelle verwendet wird. Wenn eine Anwendung sicherstellen möchte, dass die Teredo-Adresse stabil ist, löst der Aufruf der [**NotifyStableUnicastIpAddressTable-API**](/windows/desktop/api/netioapi/nf-netioapi-notifystableunicastipaddresstable) Teredo aus, um in einen stabilen Zustand zu überwechseln.
+-   Anwendungen können auch die [IPV6 \_ PROTECTION \_ LEVEL](/windows/desktop/WinSock/ipv6-protection-level) Winsock-Socketoption verwenden, um die Schutzebene fest zu legen, die unerwünschten eingehenden Datenverkehr durch die Firewall zulässt. Weitere Informationen finden Sie unter Empfangen von nicht angeforderten Datenverkehr über [Teredo.](receiving-unsolicited-traffic-over-teredo.md)
 
-Die IP-Hilfsanwendung (Internet Protocol Helper, IP-Hilfsobjekt) spezifischer Teredo-Funktionen dient als Beispiel dafür, wie die Teredo-Adresse überprüft und einer Anwendung zur Verfügung gestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Teredo mit IP-](using-teredo-with-ip-helper.md)Hilfsprogramm.
+Die Implementierung des INTERNET PROTOCOL Helper (IP Helper) bestimmter Teredo-Funktionen dient als Beispiel dafür, wie die Teredo-Adresse überprüft und einer Anwendung zur Verfügung gestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Teredo mit dem IP-Hilfser](using-teredo-with-ip-helper.md).
 
  
 

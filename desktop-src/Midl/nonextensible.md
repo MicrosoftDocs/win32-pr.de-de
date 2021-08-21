@@ -1,9 +1,9 @@
 ---
 title: nonextensible-Attribut
-description: Das \ nonextensible \-Attribut gibt an, dass die IDispatch-Implementierung nur die Eigenschaften und Methoden enthält, die in der Schnittstellen Beschreibung aufgeführt sind, und kann zur Laufzeit nicht mit zusätzlichen Elementen erweitert werden.
+description: Das \nonextensible\-Attribut gibt an, dass die IDispatch-Implementierung nur die In der Schnittstellenbeschreibung aufgeführten Eigenschaften und Methoden enthält und zur Laufzeit nicht mit zusätzlichen Membern erweitert werden kann.
 ms.assetid: 5fcffa65-4f0c-4180-a6c2-f68d63ff99ae
 keywords:
-- nicht erweiterbares Attribut, Mittel l
+- Nicht überdehnbares Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e591ea4ab0647449ca9296b3b14a4aab9fff6991
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 96c4e55cf5cf2c05ff9c3619b19e7a9b0582f3cf64bc0f9a711fb1af274bfb9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066879"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible-Attribut
 
-Das **\[ nonextensible \]** -Attribut gibt an, dass die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Implementierung nur die Eigenschaften und Methoden enthält, die in der Schnittstellen Beschreibung aufgeführt sind, und kann zur Laufzeit nicht mit zusätzlichen Elementen erweitert werden. (In der Standardeinstellung geht es bei der Automatisierung davon aus, dass Schnittstellen Elemente zur Laufzeit hinzufügen können, d. h., Sie sind erweiterbar.)
+Das **\[ nicht erweiterbare \]** Attribut gibt an, dass die [**IDispatch-Implementierung**](/windows/win32/api/oaidl/nn-oaidl-idispatch) nur die In der Schnittstellenbeschreibung aufgeführten Eigenschaften und Methoden enthält und zur Laufzeit nicht mit zusätzlichen Membern erweitert werden kann. (Standardmäßig geht Automation davon aus, dass Schnittstellen zur Laufzeit Member hinzufügen können, d. h., sie sind erweiterbar.)
 
 ``` syntax
 [
@@ -39,41 +39,41 @@ interface | dispinterface interface-name
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige Identifikationsnummer für die [**Schnittstelle**](interface.md)an.
+Gibt eine universell eindeutige ID für die [**Schnittstelle an.**](interface.md)
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr Attributen der Mittelwert Schnittstelle an.
+Gibt eine Liste von null oder mehr MIDL-Schnittstellenattributen an.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
-Gibt den Namen der [**Schnittstelle**](interface.md) oder der " [**dispinterface**](dispinterface.md)" an.
+Gibt den Namen der [**Schnittstelle**](interface.md) oder [**Disp-Schnittstelle**](dispinterface.md)an.
 
 </dd> <dt>
 
-*Schnittstellen Definition* 
+*Schnittstellendefinition* 
 </dt> <dd>
 
-Gibt IDL-Anweisungen an, die die Definition der- [**Schnittstelle**](interface.md) oder der [**dispinterface**](dispinterface.md)bilden.
+Gibt IDL-Anweisungen an, die die Definition der [**Schnittstelle**](interface.md) oder [**Dispinterface**](dispinterface.md)bilden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können das **\[ nonextensible \]** -Attribut entweder auf eine Schnittstelle oder eine dispinterface anwenden. Eine Schnittstelle muss jedoch auch über die **\[** [**Dual**](dual.md) **\]** -und **\[** [**oleautomation**](oleautomation.md) - **\]** Attribute verfügen.
+Sie können das **\[ nicht erweiterbare \]** Attribut entweder auf eine Schnittstelle oder eine Disp-Schnittstelle anwenden. Eine Schnittstelle muss jedoch auch über die Attribute **\[** [**dual**](dual.md) **\]** und **\[** [**oleautomation**](oleautomation.md) **\]** verfügen.
 
 ### <a name="flags"></a>Flags
 
-TYPEFLAG- \_ nicht erweiterbar
+TYPEFLAG \_ FNONEXTENSIBLE
 
 ## <a name="examples"></a>Beispiele
 
@@ -101,27 +101,27 @@ library Hello
 [Inhalt einer Typbibliothek](/previous-versions/windows/desktop/automat/contents-of-a-type-library)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[**Ales**](dual.md)
+[**Dual**](dual.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
 [**oleautomation**](oleautomation.md)
 </dt> <dt>
 
-[**FUNCFLAGS**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[**Typeflags**](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

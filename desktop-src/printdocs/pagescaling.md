@@ -4,12 +4,12 @@ ms.assetid: cf35bb37-bf67-4e86-bfef-9838606982a5
 title: Pagescaling
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 795332f38da331a9f16b614154bf0a9270e613de
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: c4cf1a122f71148570cf69fc17455c8ca5c917ee4f441d1bc16be1922705eb81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948130"
 ---
 # <a name="pagescaling"></a>Pagescaling
 
@@ -19,11 +19,11 @@ Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Featur
 
 
 
-| Skalierungsmerkmal                         | Beschreibung                                                                                                                                                                                                                                                      |
+| Skalierungsmerkmal                         | BESCHREIBUNG                                                                                                                                                                                                                                                      |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Größe der Anwendungsmedien   | Die Dimensionen der mediendefiniert durch das Anwendungslayout. Die Größe der Anwendungsmedien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize-Größe.<br/>                                                                          |
 | Größe des Anwendungsinhalts | Die Dimensionen der mediendefiniert durch das Anwendungslayout. Die Größe der Anwendungsmedien entspricht möglicherweise einer vom Consumer unterstützten PageMediaSize-Größe.<br/>                                                                          |
-| Bleed Size der Anwendung   | Der Offset und der Umfang des Bereichs für die Anwendungsblessure, ein Überlauffeld, das von der Anwendung für die Registrierung und das Layout in Bezug auf die Größe der Anwendungsmedien verwendet wird. Der bereichlose Bereich ist größer oder gleich der Größe des Anwendungsmediums.<br/> |
+| Größe der Anwendungsblessure   | Der Offset und der Umfang des Bereichs für die Anwendungsblessure, ein Überlauffeld, das von der Anwendung für die Registrierung und das Layout in Bezug auf die Größe der Anwendungsmedien verwendet wird. Der bereichlose Bereich ist größer oder gleich der Größe des Anwendungsmediums.<br/> |
 
 
 
@@ -31,7 +31,7 @@ Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Featur
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -39,7 +39,7 @@ Beschreibt die Skalierungsmerkmale der Ausgabe. Bestimmte Optionen dieses Featur
 
 | Name | Wert |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                                                                                                                                                    |
+| Elementtyp <br/>   | Komponente<br/>                                                                                                                                                                                    |
 | Bereichspräfix <br/> | Seite<br/>                                                                                                                                                                                       |
 | Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize. Koordinaten sind relativ zu PageImageableSize, wobei der Ursprung von relativ zum Ursprung von PageImageableSize ist.<br/> |
 
@@ -115,14 +115,14 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
 | \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

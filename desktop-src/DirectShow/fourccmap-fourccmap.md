@@ -1,5 +1,5 @@
 ---
-description: Eine Konstruktormethode, die die Zuordnung zwischen alten Multimediaformat-DWORD-Typen und GUID-Untertypen ermöglicht. Diese Methode verwendet keine Parameter.
+description: Eine Konstruktormethode, die die Zuordnung zwischen DWORD-Typen im alten Multimediaformat und GUID-Untertypen bereitstellt. Diese Methode verwendet keine Parameter.
 ms.assetid: 2152803c-f45f-43b0-9207-4eaeddf5eeb6
 title: FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – Keine Parameter
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "119015728"
 ---
 # <a name="fourccmapfourccmap-constructor-fourcch---no-parameters"></a>FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – Keine Parameter
 
-Konstruktormethode. Der Constuctor stellt die Zuordnung zwischen alten **Multimediaformat-DWORD-Typen** und **GUID-Untertypen** zur Verfügung.
+Konstruktormethode. Der Constuctor stellt die Zuordnung zwischen **DWORD-Typen** im alten Multimediaformat und **GUID-Untertypen** bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Dieser Konstruktor verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Objekt mit dem **FOURCC-Code erstellt** wird, wird eine **GUID** erstellt, um ihn zu finden. Wenn dieses Objekt mit einer vorhandenen **GUID** erstellt wird, wird der **FOURCC-Wert** des -Objekts auf 0 (null) festgelegt. Danach kann der **FOURCC-Wert** mithilfe der [**Memberfunktionen SetFOURCC**](fourccmap-setfourcc.md) bzw. [**GetFOURCC**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
+Wenn dieses Objekt mit dem **FOURCC-Code** erstellt wird, wird eine **GUID** für den Abgleich erstellt. Wenn dieses Objekt mit einer vorhandenen **GUID** erstellt wird, wird der **FOURCC-Wert** des Objekts auf 0 (null) festgelegt. Danach kann der **FOURCC-Wert** mithilfe der [**Memberfunktionen SetFOURCC**](fourccmap-setfourcc.md) bzw. [**GetFOURCC**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,11 +50,11 @@ Wenn dieses Objekt mit dem **FOURCC-Code erstellt** wird, wird eine **GUID** ers
 | Anforderung | Wert |
 |-|-|
 | Header  | Fourcc.h (include Streams.h) |
-| Bibliothek | Strmbase.lib (Einzelhandels-Builds); Strmbasd.lib (Debugbuilds) |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

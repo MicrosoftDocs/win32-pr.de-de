@@ -1,7 +1,7 @@
 ---
-description: Diagnostizieren der Netzwerk Konnektivität eines virtuellen Computers in einer Windows-netzwerkvirtualisierungsumgebung.
+description: Diagnostizieren der Netzwerkkonnektivität eines virtuellen Computers in Windows Netzwerkvirtualisierungsumgebung
 ms.assetid: c18f48bf-1f57-4a23-a495-462afad42750
-title: Diagnosenetworkconnection-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: DiagnoseNetworkConnection-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 70760f771e3908265a4ac70ebc1cbdf957d652c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c82f72a9c2a2b16ad991940fcb378c41e75fdf31e9e6f8b74f23f9d115cab93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681129"
 ---
-# <a name="diagnosenetworkconnection-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Diagnosenetworkconnection-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="diagnosenetworkconnection-method-of-the-msvm_virtualsystemmanagementservice-class"></a>DiagnoseNetworkConnection-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Diagnostizieren der Netzwerk Konnektivität eines virtuellen Computers in einer Windows-netzwerkvirtualisierungsumgebung.
+Diagnostizieren der Netzwerkkonnektivität eines virtuellen Computers in Windows Netzwerkvirtualisierungsumgebung
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ uint32 DiagnoseNetworkConnection(
 
 <dl> <dt>
 
-*Targetnetworkadapter* \[ in\]
+*TargetNetworkAdapter* \[ In\]
 </dt> <dd>
 
-Verweis auf eine [**MSVM- \_ ethernetportbereitungssettingdata**](msvm-ethernetportallocationsettingdata.md) , die den Zielnetzwerk Adapter beschreibt.
+Verweis auf ein [**Msvm \_ EthernetPortAllocationSettingData-Objekt,**](msvm-ethernetportallocationsettingdata.md) das den Zielnetzwerkadapter beschreibt.
 
 </dd> <dt>
 
-*Diagnosticsettings* \[ in\]
+*DiagnosticSettings* \[ In\]
 </dt> <dd>
 
-Die zu verwendenden Diagnose Einstellungen.
+Die zu verwendenden Diagnoseeinstellungen.
 
 </dd> <dt>
 
-*DiagnosticInformation* \[ vorgenommen\]
+*DiagnosticInformation* \[ out\]
 </dt> <dd>
 
-Bei Erfolg werden die Diagnoseinformationen zurückgegeben.
+Bei Erfolg gibt die Diagnoseinformationen zurück.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 oder 4096 zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg einen Wert von 0 oder 4096 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -82,7 +82,7 @@ Gibt bei Erfolg 0 oder 4096 zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -91,16 +91,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -109,10 +109,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -121,7 +121,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

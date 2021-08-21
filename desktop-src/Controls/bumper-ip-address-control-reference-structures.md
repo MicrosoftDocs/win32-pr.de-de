@@ -1,21 +1,21 @@
 ---
-title: IP-Adress Strukturen
-description: IP-Adress Strukturen
+title: IP-Adressstrukturen
+description: IP-Adressstrukturen
 ms.assetid: 15b9b351-58fc-4e1f-a520-80d1a29ce43a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 268401aed97a563221618e42f1ff003fb0d492c2
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a5fc107c4c122d848e7f1968fae482d2ccbd6a691f064ffefa9abae46f6c73ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826790"
 ---
-# <a name="ip-address-structures"></a>IP-Adress Strukturen
+# <a name="ip-address-structures"></a>IP-Adressstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Nmipaddress**](/windows/win32/api/commctrl/ns-commctrl-nmipaddress)
+-   [**NMIPADDRESS**](/windows/win32/api/commctrl/ns-commctrl-nmipaddress)
 
  
 

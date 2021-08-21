@@ -27,14 +27,14 @@ Legt die Schärfe des Effekts fest.
 
 
 
-| Methode                                                                                                  | BESCHREIBUNG                                  |
+| Methode                                                                                                  | Beschreibung                                  |
 |:--------------------------------------------------------------------------------------------------------|:---------------------------------------------|
 | [**SetSharpness**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(float))                               | Legt die Schärfe des Effekts fest.<br/> |
 | [**SetSharpness (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(idcompositionanimation)) | Legt die Schärfe des Effekts fest.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

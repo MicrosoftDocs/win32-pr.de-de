@@ -1,6 +1,6 @@
 ---
-title: Bezeichner der Überschriftenebene (UIAutomationClient. h)
-description: Gibt die Überschrift Ebene eines Microsoft-Benutzeroberflächenautomatisierungs-Elements an.
+title: Bezeichner auf Überschriftsebene (UIAutomationClient.h)
+description: Gibt die Überschriftsebene eines Microsoft Benutzeroberflächenautomatisierung-Elements an.
 ms.assetid: D77D70DA-0EEE-438F-B467-159E0A8BF2B3
 topic_type:
 - apiref
@@ -21,22 +21,22 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b24c214e66e26bf957f8c0a8012246f86499d6f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6af1b4bd4d6e22e37303b7bb3eaa6e7d65b27598f25ae96b0977be9d7ee8227a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861260"
 ---
-# <a name="heading-level-identifiers"></a>Bezeichner der Überschriftenebene
+# <a name="heading-level-identifiers"></a>Bezeichner auf Überschriftsebene
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Gibt die Überschrift Ebene eines Microsoft-Benutzeroberflächenautomatisierungs-Elements an.
+Gibt die Überschriftsebene eines Microsoft Benutzeroberflächenautomatisierung-Elements an.
 
 <dl> <dt>
 
-<span id="HeadingLevel_None"></span><span id="headinglevel_none"></span><span id="HEADINGLEVEL_NONE"></span>**Headinglevel \_ None**
+<span id="HeadingLevel_None"></span><span id="headinglevel_none"></span><span id="HEADINGLEVEL_NONE"></span>**HeadingLevel \_ None**
 </dt> <dd> <dl> <dt>
 
 80050
@@ -57,7 +57,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 1.
+Überschriftenebene 1.
 
 
 </dt> </dl> </dd> <dt>
@@ -70,7 +70,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 2.
+Überschriftenebene 2.
 
 
 </dt> </dl> </dd> <dt>
@@ -83,7 +83,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 3.
+Überschriftenebene 3.
 
 
 </dt> </dl> </dd> <dt>
@@ -96,7 +96,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 4.
+Überschriftenebene 4.
 
 
 </dt> </dl> </dd> <dt>
@@ -109,7 +109,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 5.
+Überschriftenebene 5.
 
 
 </dt> </dl> </dd> <dt>
@@ -122,7 +122,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 6.
+Überschriftenebene 6.
 
 
 </dt> </dl> </dd> <dt>
@@ -135,7 +135,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 7.
+Überschriftenebene 7.
 
 
 </dt> </dl> </dd> <dt>
@@ -148,7 +148,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 8.
+Überschriftenebene 8.
 
 
 </dt> </dl> </dd> <dt>
@@ -161,7 +161,7 @@ Es wurde keine Überschriftenebene angegeben.
 
 
 
-Überschrift Ebene 9.
+Überschriftenebene 9.
 
 
 </dt> </dl> </dd> </dl>
@@ -172,9 +172,9 @@ Es wurde keine Überschriftenebene angegeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>UIAutomationClient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1803 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows \[Nur Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>UIAutomationClient.h</dt> </dl> |
 
 
 

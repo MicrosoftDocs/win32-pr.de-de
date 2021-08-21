@@ -1,7 +1,7 @@
 ---
-description: Die EOS-Methode übermittelt einen streamingdatenstrom für den eingabepin.
+description: Die EOS-Methode übergibt einen End-of-Stream-Aufruf an den Eingabepin.
 ms.assetid: 65e8db14-6ca8-4c4f-8bd8-2442f743499e
-title: Coutputqueue. EOS-Methode (outputq. h)
+title: COutputQueue.EOS-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ab05d4ab3f2620c11bd62d566be851e16b28cecd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3effb06498ae65cad8eefd9a3144cab140926006cd38acee45c553c4295b0a58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537140"
 ---
-# <a name="coutputqueueeos-method"></a>Coutputqueue. EOS-Methode
+# <a name="coutputqueueeos-method"></a>COutputQueue.EOS-Methode
 
-Die- `EOS` Methode stellt einen End-of-Stream-Rückruf für die Eingabe-PIN bereit.
+Die `EOS` -Methode übergibt einen End-of-Stream-Aufruf an den Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Objekt einen Thread verwendet, wird eine EOS-Paket Steuerungs Meldung in die Warteschlange eingereiht \_ . Der Thread liefert alle ausstehenden Beispiele und ruft die [**IPin:: EndOfStream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) -Methode für die Eingabe-PIN auf.
+Wenn das Objekt einen Thread verwendet, wird eine MESSAGE-Steuerungsmeldung des Paketpakets \_ in die Warteschlange gestellt. Der Thread stellt alle ausstehenden Beispiele zur Verfügung und ruft die [**IPin::EndOfStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) auf dem Eingabepin auf.
 
-Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanyway**](coutputqueue-sendanyway.md) -Methode auf, um alle ausstehenden Beispiele bereitzustellen. Anschließend wird **IPin:: EndOf Stream** für die Eingabe-PIN aufgerufen.
+Wenn das Objekt keinen Thread verwendet, ruft es die [**COutputQueue::SendAnyway-Methode**](coutputqueue-sendanyway.md) auf, um ausstehende Stichproben zu übermitteln. Anschließend ruft sie **IPin::EndOfStream auf** dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanywa
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanywa
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

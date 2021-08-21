@@ -1,9 +1,9 @@
 ---
-title: idcompositionlineartransfereffect-Methode für "-tredslope" (Dcomp. h)
+title: idcompositionlineartransfereffect setredsglobal-Methoden (Dcomp.h)
 description: Legt die Steigung der linearen Funktion für den roten Kanal fest.
 ms.assetid: 486dad35-e9f2-cc7e-1c20-0e69ce1d22bb
 keywords:
-- "\"ttredslope\"-Methoden directcomposition"
+- setredsprimieren Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 44e54d2c71b8d51bc4164c0fa00c303696bb5735
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d508b1ab59c833b230201a1764d1a7bd90f4cf9c68cf44cd7c753d8d39be683
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371477"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787740"
 ---
-# <a name="idcompositionlineartransfereffectsetredslope-methods"></a>idcompositionlineartransfereffect::-Methode
+# <a name="idcompositionlineartransfereffectsetredslope-methods"></a>idcompositionlineartransfereffect::setredsglobal-Methoden
 
 Legt die Steigung der linearen Funktion für den roten Kanal fest.
 
@@ -27,10 +27,10 @@ Legt die Steigung der linearen Funktion für den roten Kanal fest.
 
 
 
-| Methode                                                                                             | BESCHREIBUNG                                                           |
+| Methode                                                                                             | Beschreibung                                                           |
 |:---------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**"Abhandgrenze"**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setredslope(float))                               | Legt die Steigung der linearen Funktion für den roten Kanal fest.<br/> |
-| [**"" In "" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setredslope(idcompositionanimation)) | Legt die Steigung der linearen Funktion für den roten Kanal fest.<br/> |
+| [**SetRedSlop**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setredslope(float))                               | Legt die Steigung der linearen Funktion für den roten Kanal fest.<br/> |
+| [**SetRedSwilling (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setredslope(idcompositionanimation)) | Legt die Steigung der linearen Funktion für den roten Kanal fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt die Steigung der linearen Funktion für den roten Kanal fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d34a8379851d80ae8734c7f32cc0dc5977af2088
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 060a195dfee7457f671177a756e67d1c3953a16aa7d59394f96eb05e43cfc93c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044848"
 ---
 # <a name="d3dxmatrixorthorh-function-d3dx9mathh"></a>D3DXMatrixOrthoRH-Funktion (D3dx9math.h)
 
@@ -80,7 +80,7 @@ Minimaler Z-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -95,7 +95,7 @@ Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
 Zeiger auf die resultierende [**D3DXMATRIX.**](../direct3d10/d3d10-d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Alle Parameter der **D3DXMatrixOrthoRH-Funktion** sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
@@ -117,7 +117,7 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

@@ -1,23 +1,23 @@
 ---
-description: Wenn das sichtbare Steuerelement Bit festgelegt ist, wird das Steuerelement im Dialogfeld angezeigt. Wenn dieses Bit nicht festgelegt ist, wird das-Steuerelement im Dialogfeld ausgeblendet. Der sichtbare oder verborgene Zustand des sichtbaren Steuerelement Attributs kann später durch ein Steuerelement Ereignis geändert werden.
+description: Wenn das Bit Visible Control festgelegt ist, wird das Steuerelement im Dialogfeld angezeigt. Wenn dieses Bit nicht festgelegt ist, wird das Steuerelement im Dialogfeld ausgeblendet. Der sichtbare oder ausgeblendete Zustand des Visible-Steuerelementattributs kann später durch ein Steuerelementereignis geändert werden.
 ms.assetid: 77d3164c-ea8a-4dcf-afd5-02bb2c2568c6
-title: Visible-Steuerelement Attribut
+title: Sichtbares Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 550513f6bd0e40e58694c2c15a9986b5b02f289c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78abdecdc46f179b7639a6ecaa627d92b643ed781ade242a152262d38c46f7eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498800"
 ---
-# <a name="visible-control-attribute"></a>Visible-Steuerelement Attribut
+# <a name="visible-control-attribute"></a>Sichtbares Steuerelementattribut
 
-Wenn das sichtbare Steuerelement Bit festgelegt ist, wird das Steuerelement im Dialogfeld angezeigt. Wenn dieses Bit nicht festgelegt ist, wird das-Steuerelement im Dialogfeld ausgeblendet. Der sichtbare oder verborgene Zustand des sichtbaren Steuerelement Attributs kann später durch ein [Steuerelement Ereignis](control-events.md)geändert werden.
+Wenn das Bit Visible Control festgelegt ist, wird das Steuerelement im Dialogfeld angezeigt. Wenn dieses Bit nicht festgelegt ist, wird das Steuerelement im Dialogfeld ausgeblendet. Der sichtbare oder ausgeblendete Zustand des Visible-Steuerelementattributs kann später durch ein [Steuerelementereignis](control-events.md)geändert werden.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
-Alle-Steuerelemente.
+Alle Steuerelemente.
 
 ## <a name="value"></a>Wert
 
@@ -25,17 +25,17 @@ Alle-Steuerelemente.
 
 | Decimal | Hexadezimal | Konstante                          |
 |---------|-------------|-----------------------------------|
-| 1       | 0x00000001  | **msidbcontrolattributesvisible** |
+| 1       | 0x00000001  | **msidbControlAttributesVisible** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die [Tabelle "ControlCondition](controlcondition-table.md) " verwenden, um ein Steuerelement entsprechend dem Wert einer Eigenschaft oder Bedingungs Anweisung anzuzeigen oder auszublenden. Sie können ein Steuerelement auch ein-oder ausblenden, indem Sie das Steuerelement einem [ControlEvent](control-events.md)abonnieren. Geben Sie den Bezeichner des Attributs in der Spalte Attribut und den Bezeichner des Ereignisses in der Spalte Ereignis der [Tabelle EventMapping](eventmapping-table.md)ein.
+Sie können die [Tabelle ControlCondition](controlcondition-table.md) verwenden, um ein Steuerelement entsprechend dem Wert einer Eigenschaft oder bedingten Anweisung anzuzeigen oder auszublenden. Sie können ein Steuerelement auch ein- oder ausblenden, indem Sie das Steuerelement einem [ControlEvent](control-events.md)abonnieren. Geben Sie den Bezeichner des Attributs in der Spalte Attribute und den Bezeichner des Ereignisses in der Spalte Ereignis der [EventMapping-Tabelle](eventmapping-table.md)ein.
 
-Siehe [Steuerelement Attribute](control-attributes.md) und-Steuer [Elemente](controls.md).
+Weitere Informationen finden Sie unter [Steuerelementattribute](control-attributes.md) und [Steuerelemente.](controls.md)
 
  
 

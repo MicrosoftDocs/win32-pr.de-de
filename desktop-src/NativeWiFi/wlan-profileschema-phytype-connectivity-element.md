@@ -1,7 +1,7 @@
 ---
-description: Gibt den 802,11 Wireless LAN-Standard an, der in einem Drahtlos Netzwerk verwendet wird.
+description: Gibt den Wlan-Standard 802.11 an, der in einem WLAN verwendet wird.
 ms.assetid: 19582ff0-59bd-4c93-8c92-0135e6e025d2
-title: phytype (Connectivity)-Element
+title: phyType-Element (Konnektivität)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 71a58e464528136244cec745aed2e59c6fea737d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7f9af94923f9160d18a9787b61036d5cf4104aede6488e2219b18a84325da46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684020"
 ---
-# <a name="phytype-connectivity-element"></a>phytype (Connectivity)-Element
+# <a name="phytype-connectivity-element"></a>phyType-Element (Konnektivität)
 
-Das Element "phytype (Connectivity)" gibt den 802,11 Wireless LAN-Standard an, der in einem Drahtlos Netzwerk verwendet wird.
+Das phyType-Element (Konnektivität) gibt den Funk-LAN-Standard 802.11 an, der in einem WLAN verwendet wird.
 
-Sie können mehrere **phytype** s angeben. Wenn kein " **phytype** " angegeben ist, kann das Profil verwendet werden, um eine Verbindung mit einem beliebigen " **phytype**" herzustellen. Der Wert "n" wird nur unter Windows Vista mit Service Pack 1 (SP1) und höheren Versionen des Betriebssystems unterstützt.
+Sie können mehrere **phyType-s** angeben. Wenn kein **phyType** angegeben wird, kann das Profil verwendet werden, um eine Verbindung mit einem beliebigen **phyType herzustellen.** Der Wert "n" wird nur auf Windows Vista mit Service Pack 1 (SP1) und neueren Versionen des Betriebssystems unterstützt.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="phyType"
@@ -53,7 +53,7 @@ Sie können mehrere **phytype** s angeben. Wenn kein " **phytype** " angegeben i
 </xs:element>
 ```
 
-Das-Element wird durch das [**konnektivitätselement**](wlan-profileschema-connectivity-msm-element.md) definiert.
+Das -Element wird durch das [**Konnektivitätselement**](wlan-profileschema-connectivity-msm-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Das-Element wird durch das [**konnektivitätselement**](wlan-profileschema-conne
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -70,13 +70,13 @@ Das-Element wird durch das [**konnektivitätselement**](wlan-profileschema-conne
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Stech**](wlan-profileschema-connectivity-msm-element.md)
+[**Verbindung**](wlan-profileschema-connectivity-msm-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Konnektivität (MSM)**](wlan-profileschema-connectivity-msm-element.md)

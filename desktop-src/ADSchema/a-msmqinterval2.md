@@ -1,11 +1,11 @@
 ---
 title: MSMQ-Interval2-Attribut
-description: Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
+description: Im gemischten MSMQ-Modus die Standardreplikationszeit zwischen Standorten.
 ms.assetid: 6b04fbb2-bab2-45f1-81ce-3dcd85de9b8a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-Interval2-Attribut
-- mSMQInterval2-Attribut AD-Schema
+- MSMQ-Interval2 AD-Schema
+- AD-Schema des mSMQInterval2-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 531753a15d9d1f4a3155e087b7a10a12551ba42d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 85f3368e604992afa2727539660370c890e375a4e128118850a9f94a4bea5b7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803299"
 ---
 # <a name="msmq-interval2-attribute"></a>MSMQ-Interval2-Attribut
 
-Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
+Im gemischten MSMQ-Modus die Standardreplikationszeit zwischen Standorten.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | MSMQ-Interval2                       |
-| LDAP-Display-Name | mSMQInterval2                        |
+| Ldap-Anzeigename | mSMQInterval2                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1309              |
-| System-ID-GUID    | 99 b88f 52-3b7b-11d2-90cc-00c04f d91ab1 |
+| System-Id-Guid    | 99b88f52-3b7b-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Is-Single-Valued       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Standardmäßige Replikations Zeit Zwischenstand Orten im gemischten MSMQ-Modus.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
+| Ist einwertig       | True                                                                                                      |
 | Ist indiziert             | False                                                                                                     |
 | Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | \-                                                                                                        |
 | Range-Upper            | \-                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**MSMQ-Enterprise-Settings**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Enterprise-Einstellungen**](c-msmqenterprisesettings.md)<br/> [**Website**](c-site.md)<br/> |
 
 
 
