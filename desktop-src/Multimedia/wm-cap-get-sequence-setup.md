@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GET_SEQUENCE_SETUP Meldung (VFW. h)
-description: Die "WM \_ Cap \_ Get Sequence"- \_ \_ Setup Nachricht Ruft die aktuellen Einstellungen der streamingerfassungs Parameter ab. Sie können diese Nachricht explizit oder mithilfe des capcapturegetsetup-Makros senden.
+title: WM_CAP_GET_SEQUENCE_SETUP (Vfw.h)
+description: Die MELDUNG WM \_ CAP GET SEQUENCE SETUP ruft die aktuellen Einstellungen der \_ \_ \_ Streamingerfassungsparameter ab. Sie können diese Nachricht explizit oder mithilfe des Makros capCaptureGetSetup senden.
 ms.assetid: 2220c92a-1994-4f15-9730-1cf01972dda6
 keywords:
-- WM_CAP_GET_SEQUENCE_SETUP-Nachricht (Multimedia)
+- WM_CAP_GET_SEQUENCE_SETUP von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5cd1585b165581f9c9646741b92c5dc841472ae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 55122a98846f23c609eb371ab5698198729c39e967d7953295850b61764459af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118369538"
 ---
-# <a name="wm_cap_get_sequence_setup-message"></a>Meldung zum Einrichten der WM- \_ Cap- \_ \_ Sequenz \_
+# <a name="wm_cap_get_sequence_setup-message"></a>WM \_ CAP GET SEQUENCE \_ \_ \_ SETUP-Meldung
 
-Die " **WM \_ Cap \_ get \_ Sequence \_** "-Setup Nachricht Ruft die aktuellen Einstellungen der streamingerfassungs Parameter ab. Sie können diese Nachricht explizit oder mithilfe des [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) -Makros senden.
+Die **MELDUNG WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP** ruft die aktuellen Einstellungen der Streamingerfassungsparameter ab. Sie können diese Nachricht explizit oder mithilfe des [**Makros capCaptureGetSetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (LPCAPTUREPARMS) (s);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) der Struktur, auf die von **s** verwiesen wird.
+Größe der Struktur in Bytes, auf die von **s verwiesen wird.**
 
 </dd> <dt>
 
-<span id="s"></span><span id="S"></span>*Hymnen*
+<span id="s"></span><span id="S"></span>*s*
 </dt> <dd>
 
-Zeiger auf eine [**captureparms**](/windows/win32/api/vfw/ns-vfw-captureparms) -Struktur.
+Zeiger auf eine [**CAPTUREPARMS-Struktur.**](/windows/win32/api/vfw/ns-vfw-captureparms)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zu den Parametern, die zum Steuern der streamingerfassung verwendet werden, finden Sie in der Struktur von [**captuprojektms**](/windows/win32/api/vfw/ns-vfw-captureparms) .
+Informationen zu den Parametern, die zum Steuern der Streamingerfassung verwendet werden, finden Sie in der [**CAPTUREPARMS-Struktur.**](/windows/win32/api/vfw/ns-vfw-captureparms)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Informationen zu den Parametern, die zum Steuern der streamingerfassung verwende
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

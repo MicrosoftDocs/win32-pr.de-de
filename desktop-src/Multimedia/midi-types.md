@@ -1,30 +1,30 @@
 ---
-title: MIDI-Typen
-description: MIDI-Typen
+title: DATEITYP-Typen
+description: DATEITYP-Typen
 ms.assetid: 2453ce4b-c4c9-47e1-a5f5-f0aaf28dbb39
 keywords:
-- Multimedia-Audiodaten, MIDI-Typen
-- Audiodaten, MIDI-Typen
-- Digital Instrumentation Digital Interface (MIDI), Typen
-- MIDI (Digital Instrumentation Digital Interface), Typen
-- Verweis für "MIDI", Typen
-- MIDI-Referenz, Typen
-- MIDI-Typen
+- Multimediaaudio, DATEITYP-Typen
+- Audio, DATEITYP-Typen
+- Instrument Digital Interface (KEYBOARD), Typen
+- SIGNATURE (Instrument Digital Interface), Typen
+- Referenz für DATEITYP,types
+- VERWEISEN-Referenz,Typen
+- DATEITYP-Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 723804b2673e489cd49788fba21434989acaea5a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5a06f035af217e04f89ac69be95e4665904fdce729dd8d412f59f6c633102bee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137299"
 ---
-# <a name="midi-types"></a>MIDI-Typen
+# <a name="midi-types"></a>DATEITYP-Typen
 
-Die folgenden Typen werden mit dem Typ "MIDI" verwendet.
+Die folgenden Typen werden mit DABEI verwendet.
 
--   [Keyarray](keyarray.md)
--   [Patcharray](patcharray.md)
+-   [KEYARRAY](keyarray.md)
+-   [PATCHARRAY](patcharray.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,9 +33,9 @@ Die folgenden Typen werden mit dem Typ "MIDI" verwendet.
 [MIDI-Referenz](midi-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

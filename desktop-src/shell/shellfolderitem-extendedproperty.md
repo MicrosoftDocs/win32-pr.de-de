@@ -1,5 +1,5 @@
 ---
-description: Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder durch den Namen oder durch den Formatbezeichner (FMTID) und den Eigenschaftenbezeichner (PID) des Eigenschaftensets angegeben werden.
+description: Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder anhand des Namens oder des Formatbezeichners (FMTID) und des Eigenschaftenbezeichners (PID) des Eigenschaftensatzes angegeben werden.
 ms.assetid: ca787d7b-d95a-45b9-9627-fd505f99f868
 title: ShellFolderItem.ExtendedProperty-Methode (Shldisp.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118452816"
 ---
 # <a name="shellfolderitemextendedproperty-method"></a>ShellFolderItem.ExtendedProperty-Methode
 
-Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder durch den Namen oder durch den Formatbezeichner (FMTID) und den Eigenschaftenbezeichner (PID) des Eigenschaftensets angegeben werden.
+Ruft den Wert einer Eigenschaft aus dem Eigenschaftensatz eines Elements ab. Die Eigenschaft kann entweder anhand des Namens oder des Formatbezeichners (FMTID) und des Eigenschaftenbezeichners (PID) des Eigenschaftensatzes angegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ retVal = ShellFolderItem.ExtendedProperty(
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichenfolgenwert,** der die -Eigenschaft angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.
+Ein **String-Wert,** der die -Eigenschaft angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 </dd> </dl>
 
@@ -52,21 +52,21 @@ Ein **Zeichenfolgenwert,** der die -Eigenschaft angibt. Weitere Informationen fi
 
 Typ: **\* Variant**
 
-Enthält nach der Rückgabe dieser Methode den Wert der -Eigenschaft, sofern er für das angegebene Element vorhanden ist. Der Wert enthält eine vollständige Eingabe, z. B. werden Datumsangaben als Datumsangaben und nicht als Zeichenfolgen zurückgegeben.
+Diese Methode gibt den Wert der -Eigenschaft zurück, sofern sie für das angegebene Element vorhanden ist. Der Wert wird vollständig eingeben, z. B. werden Datumsangaben als Datumsangaben und nicht als Zeichenfolgen zurückgegeben.
 
-Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück, wenn die Eigenschaft gültig ist, aber für das angegebene Element nicht vorhanden ist, oder andernfalls einen Fehlercode.
+Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück, wenn die Eigenschaft gültig ist, aber für das angegebene Element nicht vorhanden ist, oder andernfalls ein Fehlercode.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt zwei Möglichkeiten, eine Eigenschaft anzugeben. Die erste besteht im Zuweisen des bekannten Namens der Eigenschaft, z. B. "Author" oder "Date", *zu sPropName.* Jede Eigenschaft ist jedoch ein Member eines Component Object Model-Eigenschaftensatzes (COM) und kann auch durch Angabe ihrer Format-ID (FMTID) und Eigenschaften-ID (PID) identifiziert werden. Ein [**FMTID**](../stg/structured-storage-serialized-property-set-format.md) ist eine GUID, die den Eigenschaftensatz identifiziert, und eine [**PID**](../stg/structured-storage-serialized-property-set-format.md) ist eine ganze Zahl, die eine bestimmte Eigenschaft innerhalb des Eigenschaftensets identifiziert.
+Es gibt zwei Möglichkeiten, eine Eigenschaft anzugeben. Die erste besteht darin, den bekannten Namen der Eigenschaft, z. B. "Author" oder "Date", *sPropName* zuzuweisen. Jede Eigenschaft ist jedoch ein Member eines COM-Eigenschaftensatzes (Component Object Model) und kann auch durch Angabe der Format-ID (FMTID) und der Eigenschaften-ID (PID) identifiziert werden. Eine [**FMTID**](../stg/structured-storage-serialized-property-set-format.md) ist eine GUID, die den Eigenschaftensatz identifiziert, und eine [**PID**](../stg/structured-storage-serialized-property-set-format.md) ist eine ganze Zahl, die eine bestimmte Eigenschaft innerhalb des Eigenschaftensatzes identifiziert.
 
-Die Angabe einer Eigenschaft anhand ihrer FMTID-/PID-Werte ist in der Regel effizienter als die Verwendung ihres Namens. Um die FMTID-/PID-Werte einer Eigenschaft mit **ExtendedProperty** zu verwenden, müssen sie in einer SCID kombiniert werden. Eine SCID ist eine Zeichenfolge, die die FMTID/PID-Werte im Formular *"FMTID**PID"* enthält, wobei FMTID die Zeichenfolgenform der GUID des Eigenschaftensets ist. Beispielsweise ist der SCID der author-Eigenschaft des Eigenschaftssets für Zusammenfassungsinformationen "{F29F85E0-4FF9-1068-AB91-08002B27B3D9} 4".
+Die Angabe einer Eigenschaft anhand ihrer FMTID-/PID-Werte ist in der Regel effizienter als die Verwendung ihres Namens. Um die FMTID-/PID-Werte einer Eigenschaft mit **ExtendedProperty** zu verwenden, müssen sie in einem SCID kombiniert werden. Ein SCID ist eine Zeichenfolge, die die FMTID-/PID-Werte im Format *"FMTID**PID"* enthält, wobei FMTID die Zeichenfolgenform der GUID des Eigenschaftensatzes ist. Die SCID der Author-Eigenschaft des Zusammenfassungsinformationssatzes lautet beispielsweise "{F29F85E0-4FF9-1068-AB91-08002B27B3D9} 4".
 
-Eine Liste der FMTIDs und PIDs, die derzeit von der Shell unterstützt werden, finden Sie unter [**SHCOLUMNID**](./objects.md).
+Eine Liste der FMTIDs und PIDs, die derzeit von der Shell unterstützt werden, finden Sie unter [**SHCOLUMNID.**](./objects.md)
 
 ## <a name="examples"></a>Beispiele
 
-Dieser Beispielcode veranschaulicht die Verwendung von **ExtendedProperty** zum Abrufen der Eigenschaften "Title" und "Author" aus einem Word-Dokument. Sobald das [**ShellFolderItem-Objekt**](shellfolderitem-object.md) der Datei (in diesem Beispiel *fiWordDoc)* zugeordnet ist, rufen Sie den Wert der Eigenschaft ab, indem Sie ihren Namen **an ExtendedProperty übergeben.**
+In diesem Beispielcode wird veranschaulicht, wie **ExtendedProperty** verwendet wird, um die Eigenschaften "Title" und "Author" aus einem Word-Dokument abzurufen. Nachdem Sie das [**ShellFolderItem-Objekt**](shellfolderitem-object.md) der Datei zugeordnet haben( *fiWordDoc* in diesem Beispiel), rufen Sie den Wert der Eigenschaft ab, indem Sie ihren Namen an **ExtendedProperty** übergeben.
 
 
 ```none
@@ -78,7 +78,7 @@ Doc_Author=fiWordDoc.ExtendedProperty("Author")
 
 
 
-Ein schnellerer und effizienterer Ansatz besteht in der Übergeben einer SCID an **ExtendedProperty.**
+Ein schnellerer und effizienterer Ansatz besteht darin, eine SCID an **ExtendedProperty** zu übergeben.
 
 
 ```none

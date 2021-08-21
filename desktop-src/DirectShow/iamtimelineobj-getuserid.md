@@ -1,7 +1,7 @@
 ---
-description: Die GetUserID-Methode ruft den von der Anwendung definierten Bezeichner des Objekts ab.
+description: Die GetUserID-Methode ruft den anwendungsdefinierte Bezeichner des Objekts ab.
 ms.assetid: 68a20dfa-990e-47de-ae02-1d3182b7f13f
-title: 'Iamtimelineobj:: GetUserID-Methode (qedit. h)'
+title: IAMTimelineObj::GetUserID-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 8f5d6c07fd826f2045ddc9f54445bc96feb5a7c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d76cb0c7d59fbdbea039fe518127e26b45b98a4d9ea53342ee35df1c201e7fee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155324"
 ---
-# <a name="iamtimelineobjgetuserid-method"></a>Iamtimelineobj:: GetUserID-Methode
+# <a name="iamtimelineobjgetuserid-method"></a>IAMTimelineObj::GetUserID-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `GetUserID` -Methode ruft den von der Anwendung definierten Bezeichner des Objekts ab.
+Die `GetUserID` -Methode ruft den anwendungsdefinierte Bezeichner des Objekts ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT GetUserID(
 *pVal* 
 </dt> <dd>
 
-Empfängt den von der Anwendung definierten Bezeichner.
+Empfängt den anwendungsdefinierte Bezeichner.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,10 +83,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die Zeilen eines Kombinationsfelds werden nicht als einzelne Steuerelemente behandelt. sie sind Teil eines einzelnen Kombinationsfelds, das als Steuerelement fungiert. In dieser Tabelle werden die Werte für jedes Kombinationsfeld aufgeführt.
+description: Die Linien eines Kombinationsfelds werden nicht als einzelne Steuerelemente behandelt. sie sind Teil eines einzelnen Kombinationsfelds, das als Steuerelement fungiert. In dieser Tabelle werden die Werte für jedes Kombinationsfeld aufgeführt.
 ms.assetid: 1d3566ac-e95d-48ed-bce4-fb4604d5f762
 title: ComboBox-Tabelle
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118380295"
 ---
 # <a name="combobox-table"></a>ComboBox-Tabelle
 
-Die Zeilen eines Kombinationsfelds werden nicht als einzelne Steuerelemente behandelt. sie sind Teil eines einzelnen Kombinationsfelds, das als Steuerelement fungiert. In dieser Tabelle werden die Werte für jedes Kombinationsfeld aufgeführt.
+Die Linien eines Kombinationsfelds werden nicht als einzelne Steuerelemente behandelt. sie sind Teil eines einzelnen Kombinationsfelds, das als Steuerelement fungiert. In dieser Tabelle werden die Werte für jedes Kombinationsfeld aufgeführt.
 
 Die ComboBox-Tabelle enthält die folgenden Spalten.
 
@@ -44,7 +44,7 @@ Eine benannte Eigenschaft, die an dieses Element gebunden werden soll. Alle Elem
 <span id="Order"></span><span id="order"></span><span id="ORDER"></span>Bestellung
 </dt> <dd>
 
-Eine positive ganze Zahl, die verwendet wird, um die Reihenfolge der Elemente zu bestimmen, die in einer einzelnen Kombinationsfeldliste angezeigt werden. Die ganzen Zahlen müssen nicht aufeinanderfolgende sein. Wenn ein Kombinationsfeld als geordnet definiert ist, sollten alle Elemente einen Order-Wert haben. Wenn das Kombinationsfeld als ungeordnet definiert ist, wird diese Spalte ignoriert.
+Eine positive ganze Zahl, die verwendet wird, um die Reihenfolge der Elemente zu bestimmen, die in einer einzelnen Kombinationsfeldliste angezeigt werden. Die ganzen Zahlen müssen nicht aufeinander folgenden sein. Wenn ein Kombinationsfeld als geordnet definiert ist, sollten alle Elemente einen Order-Wert haben. Wenn das Kombinationsfeld als ungeordnet definiert ist, wird diese Spalte ignoriert.
 
 Nur positive Zahlen.
 
@@ -60,15 +60,15 @@ Die diesem Element zugeordnete Wertzeichenfolge. Wenn Sie diese Zeile des Kombin
 <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 </dt> <dd>
 
-Der sichtbare, lokalisierbare Text, der dem Element zugewiesen werden soll. Wenn dieser Eintrag oder die gesamte Spalte fehlt, wird der Text standardmäßig auf den Eintrag in Wert festgelegt.
+Der sichtbare, lokalisierbare Text, der dem Element zugewiesen werden soll. Wenn dieser Eintrag oder die gesamte Spalte fehlt, wird der Text standardmäßig auf den Eintrag in Value festgelegt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Der Inhalt der Felder Wert und Text wird beim Erstellen des Steuerelements von der [**MsiFormatRecord-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) formatiert. Daher können sie jeden Ausdruck enthalten, den die **MsiFormatRecord-Funktion** interpretieren kann. Die Formatierung tritt nur auf, wenn das Steuerelement erstellt wird, und es wird nicht aktualisiert, wenn eine am Ausdruck beteiligte Eigenschaft während der Lebensdauer des Steuerelements geändert wird.
+Der Inhalt der Felder Value und Text wird beim Erstellen des Steuerelements von der [**MsiFormatRecord-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) formatiert. Daher können sie jeden Ausdruck enthalten, den die **MsiFormatRecord-Funktion** interpretieren kann. Die Formatierung erfolgt nur, wenn das Steuerelement erstellt wird, und es wird nicht aktualisiert, wenn eine eigenschaft, die am Ausdruck beteiligt ist, während der Lebensdauer des Steuerelements geändert wird.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

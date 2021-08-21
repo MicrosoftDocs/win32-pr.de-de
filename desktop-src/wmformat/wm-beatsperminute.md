@@ -29,7 +29,7 @@ g \_ wszWMBeatsPerMinute
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -47,7 +47,7 @@ Der Wert eines **BeatsPerMinute-Attributs** ist eine ganze Zahl, die als Zeichen
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

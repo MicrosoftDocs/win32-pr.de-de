@@ -3,25 +3,25 @@ title: Lesen aus einer Datei
 description: Lesen aus einer Datei
 ms.assetid: 7c728304-7d05-4e28-a9bd-83b5b1af39be
 keywords:
-- Avifileingefo-Funktion
+- AVIFileInfo-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba1ffe866e454a898c5c3b91c7721c24f6a861ed
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ab95186b1ec8913623b0ab02e0d2bc5556302d4dcd03f7737ac12c5872b9f2fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118371686"
 ---
 # <a name="reading-from-a-file"></a>Lesen aus einer Datei
 
-Mithilfe der [**avifileinfo**](/windows/desktop/api/Vfw/nf-vfw-avifileinfo) -Funktion können Sie Informationen zu einer geöffneten Datei abrufen. Diese Funktion füllt die [**avifileinfo**](/windows/desktop/api/Vfw/ns-vfw-avifileinfoa) -Struktur mit den folgenden Informationen aus: die maximale Datenrate, die Anzahl der Streams in der Datei, ob die Datei einen Index verwendet und ob die Datei urheberrechtlich geschützt ist.
+Sie können Informationen zu einer geöffneten Datei mithilfe der [**FUNKTION AVIFileInfo**](/windows/desktop/api/Vfw/nf-vfw-avifileinfo) abrufen. Diese Funktion füllt die [**AVIFILEINFO-Struktur**](/windows/desktop/api/Vfw/ns-vfw-avifileinfoa) mit Informationen wie der maximalen Datenrate, der Anzahl der Datenströme in der Datei, der Verwendung eines Index in der Datei und der Frage, ob die Datei urheberrechtlich geschützt ist.
 
-Um ergänzende Informationen in einer AVI-Datei abzurufen, verwenden Sie die [**avifilereaddata**](/windows/desktop/api/Vfw/nf-vfw-avifilereaddata) -Funktion. Ergänzende Informationen gelten für die gesamte Datei und sind nicht in den normalen Datei Headern enthalten. Beispielsweise kann der Name des Unternehmens oder der Person, der die Urheberrechte einer Datei besitzt, zusätzliche Informationen sein. Ergänzende Informationen entsprechen nicht einem bestimmten Format. Sie kann Datei spezifisch sein. **Avifilereaddata** gibt die ergänzenden Informationen in einem von der Anwendung bereitgestellten Puffer zurück.
+Verwenden Sie die [**FUNKTION AVIFileReadData,**](/windows/desktop/api/Vfw/nf-vfw-avifilereaddata) um ergänzende Informationen in einer AVI-Datei abzurufen. Ergänzende Informationen gelten für die gesamte Datei und sind nicht in den normalen Dateiheadern enthalten. Beispielsweise kann der Name des Unternehmens oder der Person, die die Copyrights einer Datei besitzt, ergänzende Informationen sein. Ergänzende Informationen haben kein bestimmtes Format. kann dateispezifisch sein. **AVIFileReadData gibt** die ergänzenden Informationen in einem von der Anwendung bereitgestellten Puffer zurück.
 
- 
+ 
 
- 
+ 
 
 
 

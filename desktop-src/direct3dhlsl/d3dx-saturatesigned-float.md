@@ -1,9 +1,9 @@
 ---
 title: D3DX_SaturateSigned_FLOAT-Funktion
-description: Ruft einen mit Vorzeichen signierten Wert aus dem angegebenen float ab.
+description: Ruft einen wert mit Vorsignatur aus dem angegebenen FLOAT-Wert ab.
 ms.assetid: 2737ea61-5dbf-4451-bb4f-436e6ea95db6
 keywords:
-- D3DX_SaturateSigned_FLOAT-Funktion HLSL
+- D3DX_SaturateSigned_FLOAT HLSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64e6ccf5cf941b1abd3577efa5899b8d827e24e7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b94941dab692db1007c1c88b87377f9bed6ad248760e7f01c58005c93bcdb2e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118515701"
 ---
-# <a name="d3dx_saturatesigned_float-function"></a>D3DX- \_ Funktion (sätatesigned) \_
+# <a name="d3dx_saturatesigned_float-function"></a>D3DX \_ SaturateSigned \_ FLOAT-Funktion
 
-Ruft einen mit Vorzeichen signierten Wert aus dem angegebenen float ab.
+Ruft einen wert mit Vorsignatur aus dem angegebenen FLOAT-Wert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ Ruft einen mit Vorzeichen signierten Wert aus dem angegebenen float ab.
 
 <dl> <dt>
 
-*\_Ramelow* 
+*\_V* 
 </dt> <dd>
 
-Der zu sätgende Wert.
+Der zu sättigende Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der satte Wert mit Vorzeichen.
+Der wert mit Vorsignatur.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Der satte Wert mit Vorzeichen.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

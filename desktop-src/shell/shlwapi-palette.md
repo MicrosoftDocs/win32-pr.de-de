@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt werden die Verarbeitungsfunktionen Windows Shell-Farbpalette beschrieben. Die in dieser Dokumentation erläuterten Programmierelemente werden von Shlwapi.dll exportiert und in Shlwapi.h und Shlwapi.lib definiert.
+description: In diesem Abschnitt werden die Windows Shell-Farbpalettenbehandlungsfunktionen beschrieben. Die in dieser Dokumentation erläuterten Programmierelemente werden von Shlwapi.dll exportiert und in Shlwapi.h und Shlwapi.lib definiert.
 title: Shell-Farbpalettenbehandlungsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,13 +18,13 @@ ms.locfileid: "118452117"
 ---
 # <a name="shell-color-palette-handling-functions"></a>Shell-Farbpalettenbehandlungsfunktionen
 
-In diesem Abschnitt werden die Verarbeitungsfunktionen Windows Shell-Farbpalette beschrieben. Die in dieser Dokumentation erläuterten Programmierelemente werden von Shlwapi.dll exportiert und in Shlwapi.h und Shlwapi.lib definiert.
+In diesem Abschnitt werden die Windows Shell-Farbpalettenbehandlungsfunktionen beschrieben. Die in dieser Dokumentation erläuterten Programmierelemente werden von Shlwapi.dll exportiert und in Shlwapi.h und Shlwapi.lib definiert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                           | Beschreibung                                                                           |
+| Thema                                                           | BESCHREIBUNG                                                                           |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [**ColorAdjustLuma**](/windows/desktop/api/Shlwapi/nf-shlwapi-coloradjustluma)<br/>           | Ändert die Leuchtdichte eines RGB-Werts. Farbton und Sättigung sind nicht betroffen.<br/> |
 | [**ColorHLSToRGB**](/windows/desktop/api/Shlwapi/nf-shlwapi-colorhlstorgb)<br/>               | Konvertiert Farben von Farbton-Leuchtdichte-Sättigung (HLS) in RGB-Format.<br/>         |

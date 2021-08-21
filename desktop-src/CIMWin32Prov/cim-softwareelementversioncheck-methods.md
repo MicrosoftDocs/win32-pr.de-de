@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118421281"
 ---
-# <a name="cim_softwareelementversioncheck-methods"></a>CIM \_ SoftwareElementVersionCheck-Methoden
+# <a name="cim_softwareelementversioncheck-methods"></a>\_CIM-SoftwareElementVersionCheck-Methoden
 
 Die [**CIM \_ SoftwareElementVersionCheck-Klasse**](cim-softwareelementversioncheck.md) macht die folgenden Methoden verfügbar.
 

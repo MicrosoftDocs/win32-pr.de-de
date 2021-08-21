@@ -3,7 +3,7 @@ title: PSN_QUERYINITIALFOCUS Benachrichtigungscode (Prsht.h)
 description: Wird von einem Eigenschaftenblatt gesendet, um einer Eigenschaftenblattseite die Möglichkeit bereitzustellen, anzugeben, welches Dialogfeld-Steuerelement den anfänglichen Fokus erhalten soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 29b5e598-75b2-4b6f-acdb-171b1f7a1850
 keywords:
-- PSN_QUERYINITIALFOCUS Benachrichtigungscode Windows Controls
+- PSN_QUERYINITIALFOCUS Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:

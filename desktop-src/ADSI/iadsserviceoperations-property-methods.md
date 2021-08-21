@@ -1,6 +1,6 @@
 ---
 title: IADsServiceOperations-Eigenschaftsmethoden (Iads.h)
-description: Die Eigenschaftenmethoden der IADsServiceOperations-Schnittstelle lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
+description: Die Eigenschaftenmethoden der IADsServiceOperations-Schnittstelle lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: ebddfc42-1d2f-495b-b57c-f57419b54ff8
 ms.tgt_platform: multiple
 keywords:
@@ -24,9 +24,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118427606"
 ---
-# <a name="iadsserviceoperations-property-methods"></a>IADsServiceOperations-Eigenschaftsmethoden
+# <a name="iadsserviceoperations-property-methods"></a>IADsServiceOperations-Eigenschaftenmethoden
 
-Die Eigenschaftenmethoden der [**IADsServiceOperations-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations) lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
+Die Eigenschaftenmethoden der [**IADsServiceOperations-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsserviceoperations) lesen und schreiben die in der folgenden Liste beschriebenen Eigenschaften. Weitere Informationen zu Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -37,7 +37,7 @@ Die Eigenschaftenmethoden der [**IADsServiceOperations-Schnittstelle**](/windows
 
 Status des Diensts.
 
-Im Folgenden sind mögliche Werte angegeben.
+Im Folgenden finden Sie mögliche Werte.
 
 <dt>
 
@@ -50,42 +50,42 @@ Im Folgenden sind mögliche Werte angegeben.
 
 <span id="ADS_SERVICE_START_PENDING"></span><span id="ads_service_start_pending"></span>
 
-**ADS \_ SERVICE \_ START \_ PENDING** (0x00000002)
+**ADS \_ DIENSTSTART \_ \_ AUSSTEHEND** (0x00000002)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_STOP_PENDING"></span><span id="ads_service_stop_pending"></span>
 
-**ADS \_ SERVICE \_ STOP \_ PENDING** (0x00000003)
+**ADS \_ SERVICE \_ STOP \_ PENDING** (0X00000003)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_RUNNING"></span><span id="ads_service_running"></span>
 
-**ADS \_ DIENST \_ WIRD AUSGEFÜHRT** (0x00000004)
+**ADS \_ AUSGEFÜHRTER \_ DIENST** (0x00000004)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_CONTINUE_PENDING"></span><span id="ads_service_continue_pending"></span>
 
-**ADS \_ SERVICE \_ CONTINUE \_ PENDING** (0x00000005)
+**ADS \_ SERVICE \_ CONTINUE \_ PENDING** (0X00000005)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_PAUSE_PENDING"></span><span id="ads_service_pause_pending"></span>
 
-**ADS \_ SERVICE \_ PAUSE \_ PENDING** (0x00000006)
+**ADS \_ DIENST \_ ANHALTEN \_ AUSSTEHEND** (0x00000006)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_PAUSED"></span><span id="ads_service_paused"></span>
 
-**ADS \_ SERVICE \_ PAUSED** (0x00000007)
+**ADS \_ DIENST \_ ANGEHALTEN** (0x00000007)
 
 
 </dt> <dd></dd> <dt>
@@ -120,14 +120,14 @@ Im Folgenden sind mögliche Werte angegeben.
 
 <span id="ADS_SERVICE_FILE_SYSTEM_DRIVER"></span><span id="ads_service_file_system_driver"></span>
 
-**ADS \_ \_ \_ \_ DIENSTDATEISYSTEMTREIBER** (0x00000002)
+**ADS \_ \_ \_ \_ DIENSTDATEISYSTEMTREIBER** (0X00000002)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_BOOT_START"></span><span id="ads_service_boot_start"></span>
 
-**ADS \_ START \_ \_ DES DIENSTS** (STARTSTART \_ DES \_ DIENSTS)
+**ADS \_ START \_ DES \_ DIENSTS** (START \_ DES \_ DIENSTS)
 
 
 </dt> <dd></dd> <dt>
@@ -141,7 +141,7 @@ Im Folgenden sind mögliche Werte angegeben.
 
 <span id="ADS_SERVICE_AUTO_START"></span><span id="ads_service_auto_start"></span>
 
-**ADS \_ SERVICE \_ AUTO \_ START** (SERVICE \_ AUTO \_ START)
+**ADS \_ AUTOMATISCHER \_ \_ START DES DIENSTS** (AUTOMATISCHER \_ \_ DIENSTSTART)
 
 
 </dt> <dd></dd> <dt>
@@ -155,14 +155,14 @@ Im Folgenden sind mögliche Werte angegeben.
 
 <span id="ADS_SERVICE_DISABLED"></span><span id="ads_service_disabled"></span>
 
-**ADS \_ SERVICE \_ DISABLED** (SERVICE \_ DISABLED)
+**ADS \_ DIENST \_ DEAKTIVIERT** (DIENST \_ DEAKTIVIERT)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_IGNORE"></span><span id="ads_service_error_ignore"></span>
 
-**ADS \_ DIENSTFEHLER \_ \_ IGNORE** (0)
+**ADS \_ DIENSTFEHLER \_ \_ IGNORIEREN** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -210,7 +210,7 @@ HRESULT get_Status(
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt, wie Sie den Status eines Microsoft Fax Service überprüfen, der am Windows 2000 ausgeführt wird.
+Das folgende Codebeispiel zeigt, wie Sie den Status eines Microsoft Fax-Diensts überprüfen, der Windows 2000 ausgeführt wird.
 
 
 ```VB
@@ -245,7 +245,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird der Status eines Microsoft-Faxdiensts überprüft, der am Windows 2000 ausgeführt wird.
+Im folgenden Codebeispiel wird der Status eines Microsoft-Faxdiensts überprüft, der Windows 2000 ausgeführt wird.
 
 
 ```C++
@@ -305,7 +305,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,72 +1,72 @@
 ---
-description: Temporäre und permanente Consumer verfügen über verschiedene Methoden zum Sichern der Ereignis Übermittlung.
+description: Temporäre und permanente Consumers verfügen über unterschiedliche Methoden zum Sichern der Ereignisbereitstellung.
 ms.assetid: cd02e5db-f9e2-438b-9632-0a1387a6d4e3
 ms.tgt_platform: multiple
-title: Sicheres empfangen von Ereignissen
+title: Sicheres Empfangen von Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f27d156213553ee17a346d780cbea0ff82beca83
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d64db5b0289abd9a43caee6ddb3b68da94a9560b0ea8f591d95ee472cf900b4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118316527"
 ---
-# <a name="receiving-events-securely"></a>Sicheres empfangen von Ereignissen
+# <a name="receiving-events-securely"></a>Sicheres Empfangen von Ereignissen
 
-Temporäre und permanente Consumer verfügen über verschiedene Methoden zum Sichern der Ereignis Übermittlung.
+Temporäre und permanente Consumers verfügen über unterschiedliche Methoden zum Sichern der Ereignisbereitstellung.
 
 In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Sichern von temporären Consumern](#securing-temporary-consumers)
--   [Sichern dauerhafter Consumer](#securing-permanent-consumers)
+-   [Sichern temporärer Verbraucher](#securing-temporary-consumers)
+-   [Sichern permanenter Verbraucher](#securing-permanent-consumers)
 -   [Sichern des permanenten Abonnements](#securing-the-permanent-subscription)
 -   [Festlegen einer Administrator-Only SD](#setting-an-administrator-only-sd)
--   [Identität der Identität des Ereignis Anbieters annehmen](#impersonating-the-event-provider-identity)
+-   [Identitätswechsel der Ereignisanbieteridentität](#impersonating-the-event-provider-identity)
 -   [SIDs und permanente Abonnements](#sids-and-permanent-subscriptions)
--   [Erstellen dauerhafter Abonnements mithilfe von Domänen Konten](#creating-permanent-subscriptions-using-domain-accounts)
+-   [Erstellen von permanenten Abonnements mit Domänenkonten](#creating-permanent-subscriptions-using-domain-accounts)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="securing-temporary-consumers"></a>Sichern von temporären Consumern
+## <a name="securing-temporary-consumers"></a>Sichern temporärer Verbraucher
 
-[*Temporäre*](gloss-t.md) Consumer werden so lange ausgeführt, bis das System neu gestartet oder WMI beendet wird, aber nicht gestartet werden kann, wenn ein bestimmtes Ereignis ausgelöst wird. Beispielsweise erstellt ein Aufruf von [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md) einen temporären Consumer.
+Ein [*temporärer Consumers*](gloss-t.md) wird ausgeführt, bis das System neu gestartet oder WMI beendet, aber nicht gestartet werden kann, wenn ein bestimmtes Ereignis ausgelöst wird. Beispielsweise wird durch einen Aufruf von [**SWbemServices.ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md) ein temporärer Consumer erstellt.
 
-Mit den Aufrufen [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md) oder [**IWbemServices:: ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) werden temporäre Ereignisconsumer erstellt. Temporäre Consumer können nicht steuern, wer Ereignisse für die von Ihnen erstellte Ereignis [*Senke*](gloss-s.md) bereitstellt.
+Die [**AufrufeSWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) oder [**IWbemServices::ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) erstellen temporäre Ereignisverbraucher. Temporäre Benutzer können nicht steuern, wer Ereignisse für die von ihnen [*erstellten*](gloss-s.md) Ereignissenke zur Verfügung stellt.
 
-Aufrufe der [**ExecNotificationQuery**](swbemservices-execnotificationquery.md) -Methoden können synchron, [*halb synchron*](gloss-s.md)oder asynchron erfolgen. Beispielsweise ist [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md) eine synchrone Methode, die in Abhängigkeit davon, wie der *IFlags* -Parameter festgelegt ist, SemiSynchron aufgerufen werden kann. [**SWbemServices.Execnotificationqueryasync**](swbemservices-execnotificationqueryasync.md) ist ein asynchroner Aufruf.
+Aufrufe [**von ExecNotificationQuery-Methoden**](swbemservices-execnotificationquery.md) können synchron, [*halbsynchron oder*](gloss-s.md)asynchron erfolgen. Beispielsweise ist [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) eine synchrone Methode, die halbsynchron aufgerufen werden kann, je nachdem, wie der *iflags-Parameter* festgelegt ist. [**SWbemServices.ExecNotificationQueryAsync**](swbemservices-execnotificationqueryasync.md) ist ein asynchroner Aufruf.
 
-Beachten Sie, dass der Rückruf der Senke für die asynchronen Versionen dieser Aufrufe möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Aufruf des Skripts zurückgegeben wird. Daher wird empfohlen, semisynchrone anstelle von asynchronen Aufrufen zu verwenden. Wenn Sie asynchrone Kommunikation benötigen, finden Sie weitere Informationen unter [Aufrufen einer Methode](calling-a-method.md) und [Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md).
+Beachten Sie, dass der Rückruf an die Senke für die asynchronen Versionen dieser Aufrufe möglicherweise nicht auf der gleichen Authentifizierungsebene wie der Aufruf des Skripts zurückgegeben wird. Daher wird empfohlen, anstelle von asynchronen Aufrufen semisynchrone Aufrufe zu verwenden. Wenn Sie asynchrone Kommunikation benötigen, finden Sie weitere Informationen unter [Aufrufen einer Methode](calling-a-method.md) und Festlegen der Sicherheit für einen [asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-Skript Abonnenten können die Zugriffsrechte eines Ereignis Anbieters nicht überprüfen, um Ereignisse für die Senke bereitzustellen, die vom Skript erstellt wurde. Daher wird empfohlen, dass Aufrufe von [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md) die semisynchrone Form des Aufrufs verwenden und bestimmte Sicherheitseinstellungen verwenden. Weitere Informationen finden Sie unter [Erstellen eines semisynchronen Aufrufes mit VBScript](making-a-semisynchronous-call-with-vbscript.md).
+Skriptabonnenten können die Zugriffsrechte eines Ereignisanbieters nicht überprüfen, um Ereignisse für die vom Skript erstellte Senke zur Verfügung zu stellen. Daher wird empfohlen, dass Aufrufe von [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) die semisynchrone Form des Aufrufs verwenden und bestimmte Sicherheitseinstellungen verwenden. Weitere Informationen finden Sie unter [Erstellen eines semisynchronen Aufrufs mit VBScript.](making-a-semisynchronous-call-with-vbscript.md)
 
-## <a name="securing-permanent-consumers"></a>Sichern dauerhafter Consumer
+## <a name="securing-permanent-consumers"></a>Sichern permanenter Verbraucher
 
-Ein [*dauerhafter*](gloss-p.md) Consumer verfügt über ein dauerhaftes Abonnement für Ereignisse eines Ereignis Anbieters, die nach dem Neustart des Betriebssystems persistent gespeichert werden. Ein Ereignis Anbieter, der permanente Consumer unterstützt, ist ein [*Ereignisconsumeranbieter*](gloss-e.md). Wenn der Ereignis Anbieter nicht ausgeführt wird, wenn ein Ereignis auftritt, startet WMI den Anbieter, wenn er Ereignisse übermitteln muss. WMI identifiziert den Consumeranbieter, an den die Ereignisse übermittelt werden sollen, basierend auf der [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) -Instanz, die die [**\_ \_ Win32Provider**](--win32provider.md) -Instanz des consumeranbieters einer vom Consumeranbieter definierten [*logischen Consumerklasse*](gloss-l.md) zuordnet. Weitere Informationen zur Rolle von consumeranbietern finden Sie unter [Schreiben eines Ereignisconsumeranbieters](writing-an-event-consumer-provider.md).
+Ein [*permanenter Consumers*](gloss-p.md) verfügt über ein dauerhaftes Abonnement für Ereignisse eines Ereignisanbieters, die nach dem Neustart des Betriebssystems beibehalten werden. Ein Ereignisanbieter, der permanente Consumer unterstützt, ist ein [*Ereignisverbraucheranbieter.*](gloss-e.md) Wenn der Ereignisanbieter nicht ausgeführt wird, wenn ein Ereignis auftritt, startet WMI den Anbieter, wenn Ereignisse übermittelt werden müssen. WMI identifiziert basierend auf der [**\_ \_ EventConsumerProviderRegistration-Instanz,**](--eventconsumerproviderregistration.md) die die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) des Consumeranbieters [](gloss-l.md) einer vom Consumeranbieter definierten logischen Consumerklasse zuleiten soll, an welchen Consumeranbieter die Ereignisse übermittelt werden sollen. Weitere Informationen zur Rolle von Consumeranbietern finden Sie unter [Schreiben eines Ereignisverbraucheranbieters.](writing-an-event-consumer-provider.md)
 
-Permanente Consumer können steuern, wer Sie an Ereignisse sendet, und Ereignis Anbieter können steuern, wer auf Ihre Ereignisse zugreift.
+Permanente Benutzer können steuern, wer ihnen Ereignisse sendet, und Ereignisanbieter können steuern, wer auf ihre Ereignisse zutritt.
 
-Client Skripts und Anwendungen erstellen Instanzen der logischen Consumerklasse als Teil eines Abonnements. Die Klasse logischer Consumer definiert, welche Informationen das Ereignis enthält, wie der Client mit dem Ereignis Vorgehen kann und wie das Ereignis übermittelt wird.
+Clientskripts und Anwendungen erstellen Instanzen der logischen Consumerklasse als Teil eines Abonnements. Die logische Consumerklasse definiert, welche Informationen das Ereignis enthält, was der Client mit dem Ereignis tun kann und wie das Ereignis übermittelt wird.
 
-Die WMI- [standardconsumerklassen](standard-consumer-classes.md) stellen Beispiele für die Rolle logischer Consumerklassen bereit. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Die [WMI-Standardverbraucherklassen](standard-consumer-classes.md) enthalten Beispiele für die Rolle logischer Consumerklassen. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 ## <a name="securing-the-permanent-subscription"></a>Sichern des permanenten Abonnements
 
-Permanente Abonnements haben größere Möglichkeiten, Sicherheitsprobleme in WMI zu verursachen und müssen daher die folgenden Sicherheitsanforderungen erfüllen:
+Dauerhafte Abonnements haben ein größeres Potenzial, Sicherheitsprobleme in WMI zu verursachen, und es gelten daher die folgenden Sicherheitsanforderungen:
 
--   Die logische consumerinstanz, die [**\_ \_ EventFilter**](--eventfilter.md)-Instanz und die [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) -Instanz müssen in der Eigenschaft " **kreatorsid** " dieselbe individuelle Sicherheits-ID (SID) aufweisen. Weitere Informationen finden Sie unter [beibehalten der gleichen SID in allen Instanzen eines permanenten Abonnements](#sids-and-permanent-subscriptions).
--   Das Konto, mit dem das Abonnement erstellt wird, muss entweder ein Domänen Konto mit lokalen Administratorrechten oder das Konto der lokalen Administratoren Gruppe sein. Die Verwendung der Administratoren Gruppen-SID ermöglicht, dass das Abonnement weiterhin auf dem lokalen Computer funktioniert, auch wenn es vom Netzwerk getrennt ist. Die Verwendung eines Domänen Kontos ermöglicht die genaue Identifizierung des Benutzers.
+-   Die logische Consumerinstanz, [**\_ \_ EventFilter**](--eventfilter.md)und [**\_ \_ die FilterToConsumerBinding-Instanzen**](--filtertoconsumerbinding.md) müssen dieselbe individuelle Sicherheits-ID (SID) in der **CreatorSID-Eigenschaft** aufweisen. Weitere Informationen finden Sie unter [Behalten der gleichen SID in allen Instanzen eines permanenten Abonnements.](#sids-and-permanent-subscriptions)
+-   Das Konto, mit dem das Abonnement erstellt wird, muss entweder ein Domänenkonto mit lokalen Administratorrechten oder das lokale Administratorgruppenkonto sein. Mithilfe der Gruppen-SID "Administratoren" kann das Abonnement auch dann weiterhin auf dem lokalen Computer funktionieren, wenn es vom Netzwerk getrennt ist. Die Verwendung eines Domänenkontos ermöglicht die genaue Identifizierung des Benutzers.
 
-    Wenn der Computer jedoch nicht verbunden ist und das erstellende Konto ein Domänen Konto ist, schlägt der Consumer fehl, da die Identität des Kontos von WMI nicht überprüft werden kann. Verwenden Sie zum Vermeiden eines Abonnement Fehlers, wenn der Computer nicht mit dem Netzwerk getrennt ist, die SID der Administratoren Gruppe für ein Abonnement. In diesem Fall sollten Sie sicherstellen, dass das LocalSystem-Konto auf Gruppen Mitgliedschafts Daten in der Domäne zugreifen kann. Einige Ereignisconsumeranbieter haben besonders hohe Sicherheitsanforderungen, da ein nicht autorisiertes Abonnement große Schäden verursachen kann. Beispiele hierfür sind die [**Standardconsumer activescripteventconsumer**](activescripteventconsumer.md) und [**commandlineeventconsumer**](commandlineeventconsumer.md).
+    Wenn der Computer jedoch nicht verbunden ist und das erstellende Konto ein Domänenkonto ist, schlägt der Consumer fehl, da WMI die Identität des Kontos nicht überprüfen kann. Um Abonnementfehler zu vermeiden, wenn der Computer vom Netzwerk getrennt ist, verwenden Sie die Gruppen-SID "Administratoren" für ein Abonnement. In diesem Fall sollten Sie sicherstellen, dass das LocalSystem-Konto auf Gruppenmitgliedschaftsdaten in der Domäne zugreifen kann. Einige Ereignisverbraucheranbieter haben besonders hohe Sicherheitsanforderungen, da ein nicht autorisiertes Abonnement großen Schaden an verursachen kann. Beispiele hierfür sind die Standardconsumer [**ActiveScriptEventConsumer**](activescripteventconsumer.md) und [**CommandLineEventConsumer.**](commandlineeventconsumer.md)
 
--   Sie können das permanente Abonnement so konfigurieren, dass nur Ereignisse von bestimmten Ereignis Anbieter Identitäten akzeptiert werden. Legen Sie die Sicherheits Beschreibung in der **eventaccess** -Eigenschaft der [**\_ \_ EventFilter**](--eventfilter.md) -Instanz auf die Ereignis Anbieter Identitäten fest. WMI vergleicht die Identität des Ereignis Anbieters mit der Sicherheits Beschreibung, um zu bestimmen, ob der Anbieter über **WBEM \_ rechten \_ Veröffentlichungs** Zugriff verfügt. Weitere Informationen finden Sie unter [WMI-Sicherheits Konstanten](wmi-security-constants.md).
+-   Sie können das permanente Abonnement so konfigurieren, dass nur Ereignisse von bestimmten Ereignisanbieteridentitäten akzeptiert werden. Legen Sie den Sicherheitsdeskriptor in der **EventAccess-Eigenschaft** der [**\_ \_ EventFilter-Instanz**](--eventfilter.md) auf die Ereignisanbieteridentitäten fest. WMI vergleicht die Identität des Ereignisanbieters mit dem Sicherheitsdeskriptor, um zu ermitteln, ob der Anbieter **über WBEM \_ RIGHT \_ PUBLISH-Zugriff** verfügt. Weitere Informationen finden Sie unter [WMI-Sicherheitskonst konstanten](wmi-security-constants.md).
 
-    Wenn der Filter den Zugriff auf die Identität des Ereignis Anbieters zulässt, vertraut Sie auch dem-Ereignis. Dadurch kann der Consumer, der das Ereignis empfangen hat, ein delegiertes Ereignis aufwecken.
+    Wenn der Filter den Zugriff auf die Ereignisanbieteridentität zulässt, vertraut er auch dem Ereignis. Dadurch kann der Consumer, der das Ereignis empfangen hat, ein delegiertes Ereignis aus.
 
-    **Hinweis**  Der Standardwert für die Sicherheits Beschreibung in **eventaccess** ist **null**, was den Zugriff auf alle ermöglicht. Es wird empfohlen, den Zugriff auf die Abonnement Instanz von [**\_ \_ EventFilter**](--eventfilter.md) einzuschränken, um die Sicherheit zu verbessern.
+    **Hinweis:**  Die Standardeinstellung für den Sicherheitsdeskriptor in **EventAccess** ist **NULL,** wodurch der Zugriff für alle Benutzer möglich ist. Es wird empfohlen, den Zugriff in der [**\_ \_ Abonnementinstanz von EventFilter zu**](--eventfilter.md) beschränken, um die Ereignissicherheit zu verbessern.
 
 ## <a name="setting-an-administrator-only-sd"></a>Festlegen einer Administrator-Only SD
 
-Im folgenden C++-Codebeispiel wird eine Sicherheits Beschreibung für den Administrator auf der [**\_ \_ EventFilter**](--eventfilter.md) -Instanz erstellt. In diesem Beispiel wird die Sicherheits Beschreibung mithilfe von SDDL ( [Security Deskriptor Definition Language](/windows/desktop/SecAuthZ/security-descriptor-definition-language) ) erstellt. Weitere Informationen zum **\_ richtigen \_ Abonnieren von WBEM** finden Sie unter [WMI-Sicherheits Konstanten](wmi-security-constants.md).
+Im folgenden C++-Codebeispiel wird ein Nur-Administrator-Sicherheitsdeskriptor für die [**\_ \_ EventFilter-Instanz**](--eventfilter.md) erstellt. In diesem Beispiel wird der Sicherheitsdeskriptor [mithilfe der Sicherheitsbeschreibungsdefinitionssprache (Security Descriptor Definition Language,](/windows/desktop/SecAuthZ/security-descriptor-definition-language) SDDL) erstellt. Weitere Informationen zu **WBEM \_ RIGHT SUBSCRIBE \_ finden** Sie unter [WMI-Sicherheitskonst constants](wmi-security-constants.md).
 
 
 ```C++
@@ -85,7 +85,7 @@ HRESULT hRes = pEventFilterInstance->Put( L"EventAccess", 0,
 
 
 
-Für das vorherige Codebeispiel sind die folgenden Reference-und \# include-Anweisungen erforderlich.
+Das vorherige Codebeispiel erfordert den folgenden Verweis und \# include-Anweisungen.
 
 
 ```C++
@@ -98,27 +98,27 @@ Für das vorherige Codebeispiel sind die folgenden Reference-und \# include-Anwe
 
 
 
-## <a name="impersonating-the-event-provider-identity"></a>Identität der Identität des Ereignis Anbieters annehmen
+## <a name="impersonating-the-event-provider-identity"></a>Identitätswechsel der Ereignisanbieteridentität
 
-Ein dauerhafter Consumer muss möglicherweise die Identität des Ereignis Anbieters annehmen, um das Ereignis zu verarbeiten. Permanente Consumer können nur dann die Identität des Ereignis Anbieters annehmen, wenn die folgenden Bedingungen erfüllt sind:
+Ein permanenter Consumer muss möglicherweise die Identität des Ereignisanbieters für die Verarbeitung des Ereignisses imitieren. Permanente Benutzer können die Identität des Ereignisanbieters nur dann imitieren, wenn die folgenden Bedingungen erfüllt sind:
 
--   Für die Instanz von [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) ist die **wart SecurityContext** -Eigenschaft auf **true** festgelegt.
--   Ein Ereignis wird im gleichen Sicherheitskontext bereitgestellt, in dem sich der Anbieter beim Generieren des Ereignisses befand. Nur ein Consumer, der als DLL, ein Prozess interner Consumer, implementiert ist, kann Ereignisse im Sicherheitskontext des Anbieters empfangen. Weitere Informationen zur Sicherheit von in-Process-Anbietern und-Consumern finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md).
--   Der Ereignis Anbieter wird in einem Prozess ausgeführt, der Identitätswechsel zulässt.
+-   Für die Instanz von [**\_ \_ FilterToConsumerBinding**](--filtertoconsumerbinding.md) ist die **MaintainSecurityContext-Eigenschaft** auf **True festgelegt.**
+-   Ein Ereignis wird in demselben Sicherheitskontext übermittelt, in dem sich der Anbieter beim Generierten des Ereignisses befindet. Nur ein als DLL implementierter Consumer, ein In-Process-Consumer, kann Ereignisse im Sicherheitskontext des Anbieters empfangen. Weitere Informationen zur Sicherheit von In-Process-Anbietern und -Consumers finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md)
+-   Der Ereignisanbieter wird in einem Prozess ausgeführt, der Identitätswechsel zulässt.
 
-Das Konto, unter dem der consumerprozess ausgeführt wird, muss über **vollen \_ Schreib** Zugriff auf das WMI-Repository (auch als CIM-Repository bezeichnet) verfügen. Im Abonnement müssen die Instanzen [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md), [**\_ \_ eventconsumer**](--eventconsumer.md)und [**\_ \_ EventFilter**](--eventfilter.md) in der Eigenschaft " **kreatorsid** " denselben Wert für die individuelle Sicherheits-ID (SID) aufweisen. WMI speichert die sid für jede Instanz in der " **kreatorsid** ".
+Das Konto, unter dem der Consumerprozess ausgeführt wird, muss **über \_ VOLLSTÄNDIGEN SCHREIBzugriff** auf das WMI-Repository (auch als CIM-Repository bekannt) verfügen. Im Abonnement müssen die [**\_ \_ Instanzen FilterToConsumerBinding,**](--filtertoconsumerbinding.md) [**\_ \_ EventConsumer**](--eventconsumer.md)und [**\_ \_ EventFilter**](--eventfilter.md) in der **CreatorSID-Eigenschaft** denselben wert für die einzelne Sicherheits-ID (SID) aufweisen. WMI speichert die SID in der **CreatorSID** für jede Instanz.
 
 ## <a name="sids-and-permanent-subscriptions"></a>SIDs und permanente Abonnements
 
-Ein dauerhaftes Abonnement funktioniert nicht, wenn die Bindung, der Consumer und der Filter nicht durch denselben Benutzer erstellt werden, was bedeutet, dass [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md), [**\_ \_ eventconsumer**](--eventconsumer.md)und [**\_ \_ EventFilter**](--eventfilter.md) denselben Wert für die individuelle Sicherheits-ID (SID) in der Eigenschaft " **kreatorsid** " aufweisen müssen. Windows-Verwaltungsinstrumentation (WMI) speichert diesen Wert.
+Ein dauerhaftes Abonnement funktioniert nicht, wenn die Bindung, der Consumer und der Filter nicht vom gleichen Benutzer erstellt werden. Dies bedeutet, dass [**\_ \_ FilterToConsumerBinding,**](--filtertoconsumerbinding.md) [**\_ \_ EventConsumer**](--eventconsumer.md)und [**\_ \_ EventFilter**](--eventfilter.md) den gleichen wert für die einzelne Sicherheits-ID (SID) in der **CreatorSID-Eigenschaft** aufweisen müssen. Windows Dieser Wert wird von der Verwaltungsinstrumentation (Management Instrumentation, WMI) gespeichert.
 
-## <a name="creating-permanent-subscriptions-using-domain-accounts"></a>Erstellen dauerhafter Abonnements mithilfe von Domänen Konten
+## <a name="creating-permanent-subscriptions-using-domain-accounts"></a>Erstellen von permanenten Abonnements mit Domänenkonten
 
-Bei der Verwendung von Domänen Konten zum Erstellen dauerhafter Abonnements müssen mehrere Probleme berücksichtigt werden. Alle permanenten Abonnements sollten immer noch funktionieren, wenn kein Benutzer angemeldet ist. Dies bedeutet, dass Sie unter dem integrierten LocalSystem-Konto funktionieren.
+Bei der Verwendung von Domänenkonten zum Erstellen dauerhafter Abonnements müssen mehrere Probleme berücksichtigt werden. Jedes permanente Abonnement sollte weiterhin funktionieren, wenn kein Benutzer angemeldet ist, was bedeutet, dass er unter dem integrierten LocalSystem-Konto funktioniert.
 
-Wenn ein Domänen Benutzer der Ersteller eines permanenten Abonnements für sicherheitssensible Consumer ist ([**activescripteventconsumer**](activescripteventconsumer.md), [**commandlineeventconsumer**](commandlineeventconsumer.md)), überprüft WMI, ob die Eigenschaft " **kreatorsid** " der [**\_ \_ EventFilter**](--eventfilter.md) -Klasse, die [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) -Klasse und die consumerinstanzen zu einem Benutzer gehören, der Mitglied der lokalen Administrator Gruppe ist.
+Wenn ein Domänenbenutzer der Ersteller eines permanenten Abonnements für sicherheitssensible Consumer ist ([**ActiveScriptEventConsumer**](activescripteventconsumer.md), [**CommandLineEventConsumer**](commandlineeventconsumer.md)), überprüft WMI, ob die **CreatorSID-Eigenschaft** der [**\_ \_ EventFilter-Klasse,**](--eventfilter.md) [**\_ \_ FilterToConsumerBinding-Klasse**](--filtertoconsumerbinding.md) und die Consumerinstanzen zu einem Benutzer gehören, der Mitglied der lokalen Administratorgruppe ist.
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die Eigenschaft " **kreatorsid** " angeben können.
+Das folgende Codebeispiel zeigt, wie Sie die **CreatorSID-Eigenschaft angeben** können.
 
 ``` syntax
  instance of __EventFilter as $FILTER
@@ -143,7 +143,7 @@ Im folgenden Codebeispiel wird gezeigt, wie Sie die Eigenschaft " **kreatorsid**
     }
 ```
 
-Fügen Sie für Domänen übergreifende Situationen der "Windows-Autorisierungs Zugriffs Gruppe" authentifizierte Benutzer hinzu.
+Fügen Sie authentifizierte Benutzer in domänenübergreifenden Situationen der "Windows Authorization Access Group" hinzu.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

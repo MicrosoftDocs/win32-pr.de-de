@@ -3,8 +3,8 @@ title: Disable-Methode der SystemRestore-Klasse
 description: Deaktiviert die Überwachung auf einem bestimmten Laufwerk.
 ms.assetid: 2ad37dd4-7d80-4697-9dbb-abb329a34ff7
 keywords:
-- Deaktivieren der Systemwiederherstellungsmethode
-- Disable-Methode Systemwiederherstellung , SystemRestore-Klasse
+- Deaktivieren der Methode "Systemwiederherstellung"
+- Disable method System Restore , SystemRestore class
 - SystemRestore-Klasse Systemwiederherstellung , Disable-Methode
 topic_type:
 - apiref
@@ -45,13 +45,13 @@ uint32 Disable(
 *Laufwerk* \[ In\]
 </dt> <dd>
 
-Das zu deaktivierende Laufwerk. Die Laufwerkzeichenfolge sollte das Formular "C: \\ " haben. Wenn dieser Parameter das Systemlaufwerk oder eine leere Zeichenfolge ("") ist, werden keine Laufwerke überwacht.
+Das zu deaktivierende Laufwerk. Die Laufwerkszeichenfolge sollte das Format "C: \\ " haben. Wenn dieser Parameter das Systemlaufwerk oder eine leere Zeichenfolge ("") ist, werden keine Laufwerke überwacht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Andernfalls gibt die -Methode einen der in WinError.h definierten COM-Fehlercodes zurück.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Andernfalls gibt die -Methode einen der in WinError.h definierten COM-Fehlercodes zurück.
 
 ## <a name="examples"></a>Beispiele
 
@@ -83,9 +83,9 @@ End If
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                         |
-| Namespace<br/>                | \\Stamm-Standard<br/>                                                          |
+| Namespace<br/>                | \\Stammstandard<br/>                                                          |
 | MOF<br/>                      | <dl> <dt>Sr.mof</dt> </dl> |
 
 

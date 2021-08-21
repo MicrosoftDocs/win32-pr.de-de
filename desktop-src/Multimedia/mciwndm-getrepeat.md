@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETREPEAT Meldung (VFW. h)
-description: Die mciwndm \_ getretorf-Nachricht bestimmt, ob die fortlaufende Wiedergabe aktiviert wurde. Sie können diese Nachricht explizit oder mithilfe des mciwndgetrepeat-Makros senden.
+title: MCIWNDM_GETREPEAT (Vfw.h)
+description: Die MCIWNDM \_ GETREPEAT-Nachricht bestimmt, ob die fortlaufende Wiedergabe aktiviert wurde. Sie können diese Nachricht explizit oder mithilfe des Makros MCIWndGetRepeat senden.
 ms.assetid: 6d644117-e705-421f-b45f-9f0e833e6bc8
 keywords:
-- MCIWNDM_GETREPEAT-Nachricht (Multimedia)
+- MCIWNDM_GETREPEAT-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef47dc4f639c7aa34f7a00341e6ad2e19be909d1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5045f56f2d189884e6d2dee978ec8800fa9c24c3ff01fc3fe93680b4ae7f53af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374197"
 ---
-# <a name="mciwndm_getrepeat-message"></a>Mciwndm \_ getretorf-Nachricht
+# <a name="mciwndm_getrepeat-message"></a>MCIWNDM \_ GETREPEAT-Nachricht
 
-Die **mciwndm \_ getretorf** -Nachricht bestimmt, ob die fortlaufende Wiedergabe aktiviert wurde. Sie können diese Nachricht explizit oder mithilfe des [**mciwndgetrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat) -Makros senden.
+Die **MCIWNDM \_ GETREPEAT-Nachricht** bestimmt, ob die fortlaufende Wiedergabe aktiviert wurde. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndGetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die fortlaufende Wiedergabe aktiviert ist, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die fortlaufende Wiedergabe aktiviert ist, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,15 +46,15 @@ Gibt **true** zurück, wenn die fortlaufende Wiedergabe aktiviert ist, andernfal
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndgetrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
+[**MCIWndGetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
 </dt> </dl>
 
  

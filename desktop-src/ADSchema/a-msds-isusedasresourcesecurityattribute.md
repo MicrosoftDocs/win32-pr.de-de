@@ -4,8 +4,8 @@ description: Bei einer Ressourceneigenschaft gibt dieses Attribut an, ob es als 
 ms.assetid: d020515f-5225-4576-bcc8-86cef84556ac
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Is-Used-As-Resource-Security-Attribute-AD-Schema
-- AD-Schema des msDS-IsUsedAsResourceSecurityAttribute-Attributs
+- ms-DS-Is-Used-As-Resource-Security-Attribute attribute AD Schema
+- msDS-IsUsedAsResourceSecurityAttribute-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -29,14 +29,14 @@ Bei einer Ressourceneigenschaft gibt dieses Attribut an, ob es als sicheres Attr
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------|
-| CN                | ms-DS-Is-Used-as-Resource-Security-Attribute |
+| CN                | ms-DS-Is-Used-As-Resource-Security-Attribute |
 | Ldap-Anzeigename | msDS-IsUsedAsResourceSecurityAttribute       |
 | Size              | \-                                           |
 | Aktualisieren von Berechtigungen  | \-                                           |
 | Updatehäufigkeit  | \-                                           |
 | Attribute-Id      | 1.2.840.113556.1.4.2095                      |
-| System-Id-Guid    | 51c9f89d-4730-468d-a2b5-1d493212d17e         |
-| Syntax            | [**Boolean**](s-boolean.md)                 |
+| System-ID-GUID    | 51c9f89d-4730-468d-a2b5-1d493212d17e         |
+| Syntax            | [**Boolesch**](s-boolean.md)                 |
 
 
 
@@ -53,7 +53,7 @@ Bei einer Ressourceneigenschaft gibt dieses Attribut an, ob es als sicheres Attr
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Is-Single-Valued       | True                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                          |

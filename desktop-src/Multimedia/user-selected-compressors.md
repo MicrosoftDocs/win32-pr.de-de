@@ -1,31 +1,31 @@
 ---
-title: User-Selected-Kompressoren
-description: User-Selected-Kompressoren
+title: User-SelectedUser-Selected
+description: User-SelectedUser-Selected
 ms.assetid: 38569f9c-2df3-4959-990b-5c33203ff916
 keywords:
-- Videokomprimierungs-Manager (VCM), vom Benutzer ausgewählte Kompressoren
-- VCM (Videokomprimierungs-Manager), vom Benutzer ausgewählte Kompressoren
-- Iccompressorchoose-Funktion
+- Videokomprimierungs-Manager (VCM), vom Benutzer ausgewählte Komprimierungs-Manager
+- VCM (Videokomprimierungs-Manager), vom Benutzer ausgewählte Komprimierungen
+- ICCompressorChoose-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bbbba48b919265ea6e0bab2c3d891f628c4e660a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c855acb1ecd69876009d0cc3eb6a3b3f4129cc252183e40c5b2d00289be82842
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118370800"
 ---
-# <a name="user-selected-compressors"></a>User-Selected-Kompressoren
+# <a name="user-selected-compressors"></a>User-SelectedUser-Selected
 
-Wenn Sie Daten komprimieren, kann die Anwendung die [**iccompressorchoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose) -Funktion verwenden, um ein Dialogfeld zu erstellen, in dem der Benutzer den Kompressor auswählen kann. Sie können Flags für diese Funktion angeben, um dem Benutzer die Angabe der Keyframe-Frequenz und der Movie-Data-Rate oder das Anzeigen eines Vorschau Fensters zu ermöglichen.
+Beim Komprimieren von Daten kann Ihre Anwendung die [**ICCompressorChoose-Funktion**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose) verwenden, um ein Dialogfeld zu erstellen, in dem der Benutzer den Eintrag auswählen kann. Sie können Flags für diese Funktion angeben, damit der Benutzer die Keyframehäufigkeit und die Filmdatenrate angeben oder ein Vorschaufenster anzeigen kann.
 
-Der vom Benutzer ausgewählte Kompressor wird automatisch geöffnet, und das zugehörige Handle wird im hussiemember der in **iccompressorchoose** angegebenen [**compvars**](/windows/desktop/api/Vfw/ns-vfw-compvars) -Struktur zurückgegeben.
+Das vom Benutzer ausgewählte Element wird automatisch geöffnet, und sein Handle wird im hic-Member der [**COMPVARS-Struktur zurückgegeben,**](/windows/desktop/api/Vfw/ns-vfw-compvars) die in **ICCompressorChoose** angegeben ist.
 
-Wenn Sie **iccompressorchoose** verwenden, verwenden Sie die [**iccompressorfree**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree) -Funktion, um den-Kompressor zu schließen und alle Ressourcen freizugeben, die der **compvars** -Struktur zugeordnet sind.
+Wenn Sie **ICCompressorChoose** verwenden, verwenden Sie die [**ICCompressorFree-Funktion,**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree) um die Schäden zu schließen und alle Ressourcen frei zu machen, die der **COMPVARS-Struktur** zugeordnet sind.
 
- 
+ 
 
- 
+ 
 
 
 

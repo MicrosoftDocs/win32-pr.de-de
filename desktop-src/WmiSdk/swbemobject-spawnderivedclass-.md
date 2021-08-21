@@ -1,8 +1,8 @@
 ---
-description: Verwenden Sie die spawnderivedclass- \_ Methode des errbemubject-Objekts, um ein abgeleitetes Klassenobjekt aus dem aktuellen-Objekt zu erstellen. Das-Objekt muss eine Klassendefinition sein, die zur übergeordneten Klasse des erzeugten Objekts wird.
+description: Verwenden Sie die SpawnDerivedClass-Methode des SWbemObject-Objekts, um ein abgeleitetes Klassenobjekt aus \_ dem aktuellen -Objekt zu erstellen. Das -Objekt muss eine Klassendefinition sein, die zur übergeordneten Klasse des erstellten Objekts wird.
 ms.assetid: 1b5aaea7-50f4-40bd-ab2a-f4ff55cc22fc
 ms.tgt_platform: multiple
-title: SWbemObject.SpawnDerivedClass_-Methode (wbemdisp. h)
+title: SWbemObject.SpawnDerivedClass_ -Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 2b26e1d894e5ccc0d0fcec9d7ac9ad0101d18c7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ed0a01926c76ecfc4d393a4de8225d7d0c98a9904f113aed18cd1cb5f8ccabb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313794"
 ---
-# <a name="swbemobjectspawnderivedclass_-method"></a>Errbemubject. spawnderivedclass- \_ Methode
+# <a name="swbemobjectspawnderivedclass_-method"></a>SWbemObject.SpawnDerivedClass-Methode \_
 
-Verwenden Sie die **spawnderivedclass \_** -Methode des [**errbemubject**](swbemobject.md) -Objekts, um ein abgeleitetes Klassenobjekt aus dem aktuellen-Objekt zu erstellen. Das-Objekt muss eine Klassendefinition sein, die zur übergeordneten Klasse des erzeugten Objekts wird.
+Verwenden Sie **die SpawnDerivedClass-Methode \_** des [**SWbemObject-Objekts,**](swbemobject.md) um ein abgeleitetes Klassenobjekt aus dem aktuellen -Objekt zu erstellen. Das -Objekt muss eine Klassendefinition sein, die zur übergeordneten Klasse des erstellten Objekts wird.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ objNewClass = .SpawnDerivedClass_( _
 
 <dl> <dt>
 
-*IFlags* \[ optionale\]
+*iFlags* \[ Optional\]
 </dt> <dd>
 
 Reserviert und muss 0 (null) sein, wenn angegeben.
@@ -53,47 +53,47 @@ Reserviert und muss 0 (null) sein, wenn angegeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der-Befehl erfolgreich ausgeführt wurde, enthält das " [**errbemubject**](swbemobject.md) "-Objekt das neue Klassen Definitions Objekt. Wenn ein Fehler auftritt, wird kein Objekt zurückgegeben.
+Wenn der Aufruf erfolgreich ist, enthält das [**SWbemObject-Objekt**](swbemobject.md) das neue Klassendefinitionsobjekt. Bei einem Fehler wird kein Objekt zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **spawnderivedclass \_** -Methode kann das **Err** -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **\_ SpawnDerivedClass-Methode** kann das **Err-Objekt** einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrIllegalOperation** -2147749918 (0x8004101e)
+**wbemErrIllegalOperation** – 2147749918 (0x8004101E)
 </dt> <dd>
 
-Der Benutzer hat einen ungültigen Vorgang angefordert, z. b. das Abrufen einer Klasse aus einer Instanz.
+Der Benutzer hat einen unzulässigen Vorgang angefordert, z. B. das Erstellen einer Klasse aus einer -Instanz.
 
 </dd> <dt>
 
-**wbemErrIncompleteClass** -2147749920 (0x80041020)
+**wbemErrIncompleteClass** – 2147749920 (0x80041020)
 </dt> <dd>
 
-Die Quell Klasse wurde nicht vollständig definiert oder bei WMI registriert, sodass eine neue abgeleitete Klasse nicht zulässig ist.
+Die Quellklasse wurde nicht vollständig definiert oder bei WMI registriert, sodass eine neue abgeleitete Klasse nicht zulässig ist.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das zurückgegebene Objekt wird automatisch zu einer Unterklasse des aktuellen-Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der abgeleitete Klassen erstellt werden können.
+Das zurückgegebene -Objekt wird automatisch zu einer Unterklasse des aktuellen -Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der Sie abgeleitete Klassen erstellen können.
 
-Eine abgeleitete Klasse kann nicht von einer Klasse erstellt werden, die für Ihren eigenen Client Prozess lokal ist. Bevor Sie diese Methode zum Erstellen einer abgeleiteten Klasse verwenden, müssen Sie die Basisklasse erstellen. Rufen Sie zum Erstellen der Basisklasse die Datei " [**errbemubject. Put \_**](swbemobject-put-.md)" auf, und rufen Sie die Basisklasse mithilfe von " [**Swap Services. Get**](swbemservices-get.md)" ab.
+Sie können keine abgeleitete Klasse aus einer Klasse erstellen, die lokal für Ihren eigenen Clientprozess ist. Bevor Sie diese Methode verwenden, um eine abgeleitete Klasse zu erstellen, müssen Sie die Basisklasse erstellen. Rufen Sie zum Erstellen der Basisklasse [**\_ SWbemObject.Put**](swbemobject-put-.md)auf, und rufen Sie die Basisklasse mithilfe von [**SWbemServices.Get ab.**](swbemservices-get.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,11 +103,11 @@ Eine abgeleitete Klasse kann nicht von einer Klasse erstellt werden, die für Ih
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 

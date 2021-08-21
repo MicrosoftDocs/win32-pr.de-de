@@ -1,10 +1,10 @@
 ---
 title: Prozessstatus-API
-description: Abrufen von Informationen zu Prozessen, Modulen (ausführbare Dateien oder DLLs) und Gerätetreibern. Sammeln von Speicherauslastungsdaten. Erstellen Sie Momentaufnahmen der Speichermenge, die dem Prozesskontext physisch zugeordnet ist.
+description: Rufen Sie Informationen zu Prozessen, Modulen (ausführbare Dateien oder DLLs) und Gerätetreibern ab. Sammeln von Speicherauslastungsdaten. Erstellen Sie Momentaufnahmen der Arbeitsspeichermenge, die dem Prozesskontext physisch zugeordnet ist.
 ms.assetid: 512c3f0f-b1b5-43a0-9460-eb668315d6f4
 keywords:
 - Prozessstatus-API
-- Prozessstatushilfe
+- Hilf hilft beim Prozessstatus
 - PSAPI
 ms.topic: article
 ms.date: 05/31/2018
@@ -17,13 +17,13 @@ ms.locfileid: "118462924"
 ---
 # <a name="process-status-api"></a>Prozessstatus-API
 
-Die Prozessstatus-Anwendungsprogrammierschnittstelle (PROCESS Status Application Programming Interface, PSAPI) ist eine Hilfsbibliothek, die ihnen das Abrufen von Informationen zu Prozessen und Gerätetreibern erleichtert. Weitere Informationen finden Sie in den folgenden Themen:
+Die Anwendungsprogrammierschnittstelle für den Prozessstatus (Process Status Application Programming Interface, PSAPI) ist eine Hilfsbibliothek, die es Ihnen erleichtert, Informationen zu Prozessen und Gerätetreibern abzurufen. Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Informationen zu PSAPI](about-psapi.md)
 -   [Verwenden von PSAPI](using-psapi.md)
 -   [PSAPI-Referenz](psapi-reference.md)
 
-Diese Funktionen sind in der Psapi.dll.
+Diese Funktionen sind in Psapi.dll verfügbar.
 
 Die gleichen Informationen sind allgemein über die Leistungsdaten in der Registrierung verfügbar. Weitere Informationen finden Sie unter [Performance Counters](/windows/desktop/PerfCtrs/performance-counters-portal).
 

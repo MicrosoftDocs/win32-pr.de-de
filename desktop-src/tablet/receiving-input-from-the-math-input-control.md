@@ -24,7 +24,7 @@ Um die erkannte mathematische Gleichung aus dem mathematischen Eingabesteuerfeld
 
 ## <a name="create-a-template-class-that-contains-event-sinks"></a>Erstellen einer Vorlagenklasse, die Ereignissenken enthält
 
-Wenn Sie eine Ereignissenke implementieren, die das mathematische Eingabesteuerfeld verwendet, müssen Sie zunächst eine Senken-ID angeben. Anschließend müssen Sie eine Vorlagenklasse erstellen, die von den Ereignisschnittstellen ereignis, ereignissteuerhandler und math input control erbt. Der folgende Code zeigt, wie Sie eine Senken-ID festlegen und eine solche Vorlagenklasse( CMathInputControlEventHandler) erstellen, die von den erforderlichen Schnittstellen erbt. Diese Vorlagenklasse ist auch so eingerichtet, dass sie einen privaten unbekannten Schnittstellenzeiger hat, der verwendet wird, um das mathematische Eingabesteuerfeld bei der Initialisierung an sie zu übergeben, und das m ulAdviseCount-Member, um die Anzahl der Aufrufe zu zählen, die \_ "advise/unadvise" sind.
+Wenn Sie eine Ereignissenke implementieren, die das mathematische Eingabesteuerfeld verwendet, müssen Sie zunächst eine Senken-ID angeben. Anschließend müssen Sie eine Vorlagenklasse erstellen, die von den Ereignisschnittstellen ereignis, ereignissteuerhandler und math input control erbt. Der folgende Code zeigt, wie Sie eine Senken-ID festlegen und eine solche Vorlagenklasse( CMathInputControlEventHandler) erstellen, die von den erforderlichen Schnittstellen erbt. Diese Vorlagenklasse ist auch so eingerichtet, dass sie über einen privaten unbekannten Schnittstellenzeiger verfügen, der verwendet wird, um das mathematische Eingabesteuerfeld bei der Initialisierung an sie zu übergeben, und den Member m ulAdviseCount, um die Anzahl der Aufrufe zu zählen, die \_ "advise/unadvise" sind.
 
 
 ```
@@ -50,7 +50,7 @@ private:
 
  
 
-Da Sie nun über die grundlegende Vorlagenklasse verfügen, müssen Sie eine Vorwärtsdeklaration für die Ereignishandler geben, die Sie überschreiben werden, und dann eine Senkenzuordnung für die Ereignisse einrichten, die Sie behandeln. Der folgende Code zeigt, wie Ereignishandler für die [**Insert-Methode**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) eingerichtet werden, die aufgerufen wird, wenn ein Benutzer auf die Einfügeschaltfläche des mathematischen Eingabesteuerfelds klickt, und die [**Close-Methode,**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) die aufgerufen wird, wenn ein Benutzer auf die Schaltfläche "Abbrechen" im mathematischen Eingabesteuerfeld klickt.
+Nachdem Sie nun über die grundlegende Vorlagenklasse verfügen, müssen Sie eine Vorwärtsdeklaration für die Ereignishandler geben, die Sie überschreiben werden, und dann eine Senkenzuordnung für die Ereignisse einrichten, die Sie behandeln werden. Der folgende Code zeigt, wie Ereignishandler für die [**Insert-Methode**](/previous-versions/windows/desktop/legacy/dd317352(v=vs.85)) eingerichtet werden, die aufgerufen wird, wenn ein Benutzer auf die Einfügeschaltfläche des mathematischen Eingabesteuerfelds klickt, und die [**Close-Methode,**](/previous-versions/windows/desktop/legacy/dd317351(v=vs.85)) die aufgerufen wird, wenn ein Benutzer auf die Schaltfläche "Abbrechen" im mathematischen Eingabesteuerfeld klickt.
 
 
 ```
@@ -123,7 +123,7 @@ Nachdem Sie die Ereignissenken eingerichtet haben, müssen Sie Ihre Implementier
 
 ## <a name="inherit-the-event-handler-class-in-your-main-class"></a>Erben der Ereignishandlerklasse in der Hauptklasse
 
-Nachdem Sie Ihre Vorlagenklasse implementiert haben, müssen Sie sie in die Klasse erben, in der Sie Ihr mathematisches Eingabesteuerfeld einrichten. Im Rahmen dieses Leitfadens ist diese Klasse ein Dialog, CMIC \_ TEST \_ EVENTSDlg. Im Dialogheader müssen die erforderlichen Header enthalten sein, und die von Ihnen erstellte Vorlagenklasse muss geerbt werden. Die Klasse, in der Sie erben, und die Ereignishandler müssen Vorwärtsdeklarationen haben, damit die Vorlage implementiert werden kann. Das folgende Codebeispiel zeigt, wie dies erfolgt.
+Nachdem Sie Ihre Vorlagenklasse implementiert haben, müssen Sie sie in die Klasse erben, in der Sie Ihr mathematisches Eingabesteuerfeld einrichten. Im Rahmen dieses Leitfadens ist diese Klasse ein Dialog, CMIC \_ TEST \_ EVENTSDlg. Im Dialogheader müssen die erforderlichen Header enthalten sein, und die erstellte Vorlagenklasse muss geerbt werden. Die Klasse, in der Sie erben, und die Ereignishandler müssen Vorwärtsdeklarationen haben, damit die Vorlage implementiert werden kann. Das folgende Codebeispiel zeigt, wie dies erfolgt.
 
 
 ```
