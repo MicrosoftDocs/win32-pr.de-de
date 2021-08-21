@@ -1,9 +1,9 @@
 ---
-title: Title-Element (Metadatei)
-description: Das Title-Element definiert eine Text Zeichenfolge, die den Titel für ein ASX-oder Entry-Element angibt.
+title: TITLE-Element (Metadatei)
+description: Das TITLE-Element definiert eine Textzeichenfolge, die den Titel für ein ASX- oder ENTRY-Element angibt.
 ms.assetid: d7ad7f00-fcf2-456d-a106-98bf0a258b81
 keywords:
-- Title-Element (Metafile) Windows Media Player
+- TITLE-Element (Metadatei) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bdb58edbb3ffd99e8be557fdb05a7e51298fda14
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 085bec9a9937c8dbd02fad6df785f4bce7afea90a74117e745f09cb5135633d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118117720"
 ---
-# <a name="title-element-metafile"></a>Title-Element (Metadatei)
+# <a name="title-element-metafile"></a>TITLE-Element (Metadatei)
 
-Das **Title** -Element definiert eine Text Zeichenfolge, die den Titel für ein **ASX** -oder **Entry** -Element angibt.
+Das **TITLE-Element** definiert eine Textzeichenfolge, die den Titel für ein **ASX-** oder **ENTRY-Element** angibt.
 
 ``` syntax
 <TITLE>
@@ -34,13 +34,13 @@ Das **Title** -Element definiert eine Text Zeichenfolge, die den Titel für ein 
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente           |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag** |
+| Übergeordnete Elemente | **ASX**, **ENTRY** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -49,13 +49,13 @@ Dieses Element weist keine Attribute auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element definiert eine Text Zeichenfolge, die den Titel eines **ASX** -oder **Entry** -Elements angibt. Der Titel wird im Anzeigebereich und im **Eigenschaften** Dialogfeld angezeigt.
+Dieses Element definiert eine Textzeichenfolge, die den Titel eines **ASX-** oder **ENTRY-Elements** angibt. Der Titel wird im Anzeigebereich und im Dialogfeld **Eigenschaften** angezeigt.
 
-Wenn dieses Element in einem **ASX** -Element angezeigt wird, wird der Text als **Anzeige** Informationen angezeigt. Wenn dieses Element in einem **Entry** -Element angezeigt wird, wird der Text als **Clip** Informationen angezeigt.
+Wenn dieses Element in einem **ASX-Element** angezeigt wird, wird der Text als Show information (Informationen **anzeigen)** angezeigt. Wenn dieses Element in einem **ENTRY-Element** angezeigt wird, wird der Text als **Clip-Informationen** angezeigt.
 
-Wenn ein **morumfo** -Element auch mit dem zugeordneten (übergeordneten) Element verwendet wird, ist dies der Titeltext, auf den der Benutzer klickt, um auf die im **Moran FO** -Element definierte URL zuzugreifen.
+Wenn ein **MOREINFO-Element** auch mit dem zugeordneten (übergeordneten) Element verwendet wird, ist dies der Titeltext, auf den der Benutzer klickt, um auf die im **MOREINFO-Element** definierte URL zuzugreifen.
 
-Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeordnetes **Title** -Element enthalten. Mehrere **Titel** Elemente nach dem ersten werden ignoriert und werden nicht angezeigt.
+Jedes übergeordnete **ASX-** und **ENTRY-Element** sollte höchstens ein untergeordnetes **TITLE-Element** enthalten. Mehrere **TITLE-Elemente** nach dem ersten werden ignoriert und nicht angezeigt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -78,7 +78,7 @@ Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeor
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -86,10 +86,10 @@ Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeor
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

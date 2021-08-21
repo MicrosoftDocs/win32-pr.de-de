@@ -1,28 +1,28 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den directxmath-Enumerationen.
+description: Dieser Abschnitt enthält Informationen zu den DirectXMath-Enumerationen.
 ms.assetid: 6e05b011-8bf6-3f91-aa4c-6655906b6b8a
-title: Directxmath-Enumerationen
+title: DirectXMath-Enumerationen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e0d15e04cfa017a859b784867f2ed7b1d34530d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ea471702c4abeda3f5a8310ee13e30a68110583ad3d65756ee3b52b12b8f29b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118087855"
 ---
-# <a name="directxmath-enumerations"></a>Directxmath-Enumerationen
+# <a name="directxmath-enumerations"></a>DirectXMath-Enumerationen
 
-Dieser Abschnitt enthält Informationen zu den directxmath-Enumerationen.
+Dieser Abschnitt enthält Informationen zu den DirectXMath-Enumerationen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                             | BESCHREIBUNG                                                     |
+| Thema                                                             | Beschreibung                                                     |
 |-------------------------------------------------------------------|-----------------------------------------------------------------|
-| [**Containmenttype**](/windows/desktop/api/DirectXCollision/ne-directxcollision-containmenttype)<br/>             | Gibt an, ob ein Objekt ein anderes Objekt enthält.<br/> |
-| [**Planeintersectiontype**](/windows/desktop/api/DirectXCollision/ne-directxcollision-planeintersectiontype)<br/> | Gibt an, ob ein Objekt eine Ebene schneidet.<br/>      |
+| [**ContainmentType**](/windows/desktop/api/DirectXCollision/ne-directxcollision-containmenttype)<br/>             | Gibt an, ob ein -Objekt ein anderes -Objekt enthält.<br/> |
+| [**PlaneIntersectionType**](/windows/desktop/api/DirectXCollision/ne-directxcollision-planeintersectiontype)<br/> | Gibt an, ob ein Objekt eine Ebene schneidet.<br/>      |
 
 
 
@@ -32,7 +32,7 @@ Dieser Abschnitt enthält Informationen zu den directxmath-Enumerationen.
 
 <dl> <dt>
 
-[Directxmath-Programmier Referenz](ovw-xnamath-reference.md)
+[DirectXMath-Programmierreferenz](ovw-xnamath-reference.md)
 </dt> </dl>
 
  

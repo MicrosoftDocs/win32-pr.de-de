@@ -23,7 +23,7 @@ Logon-Trigger werden durch ihre Startgrenze aktiviert, starten die ausführbare 
 
 ## <a name="logontrigger-examples"></a>LogonTrigger-Beispiele
 
-Die folgenden Beispiele beginnen Editor, nachdem sich ein Benutzer anmeldet.
+In den folgenden Beispielen wird Editor gestartet, nachdem sich ein Benutzer anmeldet.
 
 -   [Logon Trigger Example (Scripting) (Beispiel für Logon-Trigger (Skripterstellung))](logon-trigger-example--scripting-.md)
 -   [Logon Trigger Example (C++) (Beispiel für Logon-Trigger (C++))](logon-trigger-example--c---.md)

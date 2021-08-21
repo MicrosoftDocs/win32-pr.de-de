@@ -1,18 +1,18 @@
 ---
-title: DIE MAPPER-Architektur
-description: DIE MAPPER-Architektur
+title: Die MAPPer-Architektur von MAPPER
+description: Die MAPPer-Architektur von MAPPER
 ms.assetid: d08d1442-bf9f-46bb-bd44-f512ff4b6bd5
 keywords:
-- Instruments Instrument Digital Interface (INSTRUMENTS), MAPPer
-- INSTRUMENTS (Digitale Schnittstelle des Instrumentierers), MAPPER
+- Instrument Digital Interface (MAPPer)
+- KEYBOARD (Instrument Digital Interface), MAPPER
 - MAPPer, Architektur
-- MAPPer, Setupzuordnung
-- SETUP MAP (SETUP-Zuordnung)
-- MAPPer, Kanalzuordnung
-- MAPPer, Patch maps
+- MAPPer,Zuordnung einrichten
+- PLAN-Setupübersicht
+- MAPPer,Channel Map
+- MAPPer, Patchzuordnungen
 - MAPPer, Schlüsselzuordnungen
 - Kanalzuordnung
-- Patch maps (Patchzuordnungen)
+- Patchzuordnungen
 - Schlüsselzuordnungen
 ms.topic: article
 ms.date: 05/31/2018
@@ -23,17 +23,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118136402"
 ---
-# <a name="the-midi-mapper-architecture"></a>DIE MAPPER-Architektur
+# <a name="the-midi-mapper-architecture"></a>Die MAPPer-Architektur von MAPPER
 
-Der ORDNER-Mapper ermittelt mithilfe einer SETUP-Zuordnung von MAPS, wie die empfangenen Nachrichten übersetzt und umgeleitet werden. Eine SETUP MAP besteht aus den folgenden Kartentypen.
+Der MAPPer verwendet eine PLAN-Setupzuordnung, um zu bestimmen, wie die empfangenen Nachrichten übersetzt und umgeleitet werden. Eine ZUORDNEN-Setupzuordnung besteht aus den folgenden Kartentypen.
 
 -   [Die Kanalzuordnung](the-channel-map.md)
 -   [Patch Karten](patch-maps.md)
--   [Key Karten](key-maps.md)
+-   [Schlüssel Karten](key-maps.md)
 
-In der folgenden Abbildung sind die Rollen von Kanal-, Patch- und Schlüsselzuordnungen in einer SETUP-Zuordnung dargestellt.
+Die folgende Abbildung zeigt die Rollen von Kanal-, Patch- und Schlüsselzuordnungen in einer SETUP-Zuordnung.
 
-![Die Rollen von Kanal-, Patch- und Schlüsselzuordnungen in einem Kartenbild für das Setup von Setup](images/mmap-a02.gif)
+![Die Rollen von Kanal-, Patch- und Schlüsselzuordnungen in einem Kartenbild für das Setup](images/mmap-a02.gif)
 
  
 

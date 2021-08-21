@@ -1,9 +1,9 @@
 ---
-title: TB_GETTOOLTIPS Meldung (kommstrg. h)
-description: Ruft das Handle für das QuickInfo-Steuerelement ab, das der Symbolleiste zugeordnet ist.
+title: TB_GETTOOLTIPS-Nachricht (Commctrl.h)
+description: Ruft das Handle für das QuickInfo-Steuerelement ab, sofern vorhanden, das der Symbolleiste zugeordnet ist.
 ms.assetid: 1e0edfdc-d0cb-41f3-9178-1239d81d3034
 keywords:
-- Windows-Steuerelemente für TB_GETTOOLTIPS Meldung
+- TB_GETTOOLTIPS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 488212b34f9f1816797f097a5a1f42d2ea4f68c0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41f326ffcc12e9fcf115b6f010e9fc8f7e327ce6381ce9a2fb3d397d8e322f92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168226"
 ---
-# <a name="tb_gettooltips-message"></a>TB \_ gettooltips-Meldung
+# <a name="tb_gettooltips-message"></a>TB \_ GETTOOLTIPS-Nachricht
 
-Ruft das Handle für das QuickInfo-Steuerelement ab, das der Symbolleiste zugeordnet ist.
+Ruft das Handle für das QuickInfo-Steuerelement ab, sofern vorhanden, das der Symbolleiste zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Handle für das QuickInfo-Steuerelement ab, das der Symbolleiste zugeor
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das QuickInfo-Steuerelement oder **null** zurück, wenn die Symbolleiste keine zugeordnete QuickInfo aufweist.
+Gibt das Handle für das QuickInfo-Steuerelement zurück, oder **NULL,** wenn der Symbolleiste keine QuickInfo zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt das Handle für das QuickInfo-Steuerelement oder **null** zurück, wenn die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

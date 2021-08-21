@@ -1,6 +1,6 @@
 ---
 title: Beispielcode für die Verwendung einer VLV-Suche
-description: Dieses Thema enthält C++-Codebeispiele zum Ausführen einer VLV-Suche.
+description: Dieses Thema enthält C++-Codebeispiele, die zum Ausführen einer VLV-Suche verwendet werden können.
 ms.assetid: 9bad8f71-80e3-446f-9be3-c00defbe1ea5
 ms.tgt_platform: multiple
 keywords:
@@ -114,7 +114,7 @@ int WideCharToLocal(LPTSTR pLocal, LPCWSTR pWide, DWORD dwChars)
 
 ## <a name="getvlvitemcount-example-function"></a>GetVLVItemCount-Beispielfunktion
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie mithilfe einer VLV-Suche eine Schätzung der Anzahl der Elemente erhalten, die sich aus der Suche ergeben würden.
+Das folgende Codebeispiel zeigt, wie Sie eine VLV-Suche verwenden, um eine Schätzung der Anzahl von Elementen zu erhalten, die sich aus der Suche ergeben würden.
 
 
 ```C++
@@ -227,7 +227,7 @@ HRESULT GetVLVItemCount(IDirectorySearch *pSearch,
 
 ## <a name="getvlvitemtext-example-function"></a>GetVLVItemText-Beispielfunktion
 
-Im folgenden Codebeispiel wird veranschaulicht, wie sie mithilfe einer VLV-Suche den Text für ein einzelnes Element basierend auf einem Index abrufen.
+Das folgende Codebeispiel zeigt, wie Sie mithilfe einer VLV-Suche den Text für ein einzelnes Element basierend auf einem Index abrufen.
 
 
 ```C++
@@ -350,7 +350,7 @@ HRESULT GetVLVItemText(IDirectorySearch *pSearch,
 
 ## <a name="getvlvitemsbystring-example-function"></a>GetVLVItemsByString-Beispielfunktion
 
-Das folgende Codebeispiel zeigt, wie sie mithilfe einer VLV-Suche den Text für eine angegebene Anzahl von Elementen basierend auf einer Zeichenfolge abrufen. In diesem Beispiel werden die abgerufenen Sortierungen einem Listenfeld hinzugefügt.
+Das folgende Codebeispiel zeigt, wie Sie mithilfe einer VLV-Suche den Text für eine angegebene Anzahl von Elementen basierend auf einer Zeichenfolge abrufen. In diesem Beispiel werden die abgerufenen Sortierungen einem Listenfeld hinzugefügt.
 
 
 ```C++

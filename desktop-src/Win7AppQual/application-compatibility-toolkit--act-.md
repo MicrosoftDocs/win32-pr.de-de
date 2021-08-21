@@ -24,9 +24,9 @@ ms.locfileid: "118330093"
 **Server:** Windows Server 2003 \| Windows Server 2008 \| Windows Server 2008 R2  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Das Microsoft Application Compatibility Toolkit (ACT) ist ein Tool für die Lebenszyklusverwaltung, das Sie bei der Identifizierung und Verwaltung Ihres gesamten Anwendungsportfolios unterstützt, die Kosten und den Zeitaufwand für die Behebung von Anwendungskompatibilitätsproblemen reduziert und Sie dabei unterstützt, Windows und Windows Updates schnell bereitzustellen.
+Das Microsoft Application Compatibility Toolkit (ACT) ist ein Tool für die Lebenszyklusverwaltung, das Sie bei der Identifizierung und Verwaltung Ihres gesamten Anwendungsportfolios unterstützt, wodurch die Kosten und der Zeitaufwand für die Behebung von Anwendungskompatibilitätsproblemen reduziert werden und Sie Windows und Windows Updates schnell bereitstellen können.
 
 **Verwendung**
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentbadrestoretargetinstanceexception-Konstruktor'
-title: Esentbadrestoretargetinstanceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBadRestoreTargetInstanceException-Konstruktor'
+title: EsentBadRestoreTargetInstanceException-Konstruktor
 TOCTitle: 'EsentBadRestoreTargetInstanceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadRestoreTargetInstanceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadrestoretargetinstanceexception.esentbadrestoretargetinstanceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b6ea47d1b537eb10b6fced97388eb85fb30f7adb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c9594e3277d7a272ff945ed367e6a6dced1e1e2aa7e066c1593643315f6ebdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118082637"
 ---
-# <a name="esentbadrestoretargetinstanceexception-constructor"></a>Esentbadrestoretargetinstanceexception-Konstruktor
+# <a name="esentbadrestoretargetinstanceexception-constructor"></a>EsentBadRestoreTargetInstanceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbadrestoretargetinstanceexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadRestoreTargetInstanceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBadRestoreTargetInstanceException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadrestoretargetinstanceexception-Klasse](./esentbadrestoretargetinstanceexception-class.md)
+[EsentBadRestoreTargetInstanceException-Klasse](./esentbadrestoretargetinstanceexception-class.md)
 
-[Esentbadrestoretargetinstanceexception-Member](./esentbadrestoretargetinstanceexception-members.md)
+[EsentBadRestoreTargetInstanceException-Member](./esentbadrestoretargetinstanceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

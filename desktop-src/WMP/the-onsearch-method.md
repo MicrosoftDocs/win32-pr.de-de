@@ -1,25 +1,25 @@
 ---
-title: Die onSearch-Methode
-description: Die onSearch-Methode
+title: Die OnSearch-Methode
+description: Die OnSearch-Methode
 ms.assetid: 709bb428-1a5e-4b8d-8622-5fcc816f0a1a
 keywords:
-- Windows Media Player-Plug-ins, onSearch-Methode
-- Plug-ins, onSearch-Methode
-- Benutzeroberflächen-Plug-ins, onSearch-Methode
-- UI-Plug-ins, onSearch-Methode
+- Windows Media Player-Plug-Ins, OnSearch-Methode
+- Plug-Ins, OnSearch-Methode
+- Benutzeroberflächen-Plug-Ins, OnSearch-Methode
+- Benutzeroberflächen-Plug-Ins, OnSearch-Methode
 - OnSearch-Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de5c33af434028e6ee72c757c8d71def0d4109fd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 49ab5cb4b26d291a940ed329e2422240e6fc36e5ba980431af169d58f1398fdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118000"
 ---
-# <a name="the-onsearch-method"></a>Die onSearch-Methode
+# <a name="the-onsearch-method"></a>Die OnSearch-Methode
 
-Die onSearch-Methode wird von Windows Media Player aufgerufen, wenn auf die **Such** Schaltfläche geklickt wird. Diese Methode ruft das aktuelle **Medien** Objekt ab und übergibt es an die LaunchPage-Methode.
+Die OnSearch-Methode wird von Windows Media Player, wenn auf die **Schaltfläche** Suchen geklickt wird. Diese Methode ruft das aktuelle **Media-Objekt** ab und übergibt es an die LaunchPage-Methode.
 
 Der folgende Code wird verwendet, um diese Methode zu implementieren:
 
@@ -54,12 +54,12 @@ LRESULT OnSearch(WORD wNotifyCode, WORD wID, HWND hwndCtl, BOOL& fHandled)
 
 <dl> <dt>
 
-[**Implementieren von cpluginwindow**](implementing-cpluginwindow.md)
+[**Implementieren von CPluginWindow**](implementing-cpluginwindow.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

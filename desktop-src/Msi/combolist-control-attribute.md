@@ -1,21 +1,21 @@
 ---
-description: Wenn das combolist-Steuerelement Bit in einem Kombinations Feld festgelegt ist, wird das Bearbeitungsfeld durch ein statisches Textfeld ersetzt. Dadurch wird verhindert, dass ein Benutzer einen neuen Wert eingibt, und der Benutzer muss nur einen der vordefinierten Werte auswählen.
+description: Wenn das ComboList-Steuerelementbit für ein Kombinationsfeld festgelegt ist, wird das Bearbeitungsfeld durch ein statisches Textfeld ersetzt. Dadurch wird verhindert, dass ein Benutzer einen neuen Wert eingibt, und der Benutzer muss nur einen der vordefinierten Werte auswählen.
 ms.assetid: 79af4bb0-1e0f-4df3-ae25-d2798842adb6
-title: Combolist-Steuerelement Attribut
+title: ComboList-Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2dcb1c51e8eccaba03c3b4d905b0501e8a3f97a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71e0a53357d91c5c5a016f65e8e1e0fb341b15cae1ea2c6cf480e536fa109067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118145379"
 ---
-# <a name="combolist-control-attribute"></a>Combolist-Steuerelement Attribut
+# <a name="combolist-control-attribute"></a>ComboList-Steuerelementattribut
 
-Wenn das combolist-Steuerelement Bit in einem Kombinations Feld festgelegt ist, wird das Bearbeitungsfeld durch ein statisches Textfeld ersetzt. Dadurch wird verhindert, dass ein Benutzer einen neuen Wert eingibt, und der Benutzer muss nur einen der vordefinierten Werte auswählen.
+Wenn das ComboList-Steuerelementbit für ein Kombinationsfeld festgelegt ist, wird das Bearbeitungsfeld durch ein statisches Textfeld ersetzt. Dadurch wird verhindert, dass ein Benutzer einen neuen Wert eingibt, und der Benutzer muss nur einen der vordefinierten Werte auswählen.
 
-Wenn dieses Bit nicht festgelegt ist, weist das Kombinations Feld ein Bearbeitungsfeld auf.
+Wenn dieses Bit nicht festgelegt ist, verfügt das Kombinationsfeld über ein Bearbeitungsfeld.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -25,19 +25,19 @@ Wenn dieses Bit nicht festgelegt ist, weist das Kombinations Feld ein Bearbeitun
 
 
 
-| Decimal | Hexadezimal | BESCHREIBUNG                     |
+| Decimal | Hexadezimal | Beschreibung                     |
 |---------|-------------|---------------------------------|
-| 131072  | 0x00020000  | msidbcontrolattributescombolist |
+| 131072  | 0x00020000  | msidbControlAttributesComboList |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie das combolist-Bit in die Spalte Attribute des Datensatzes des Steuer Elements in der [Steuerelement Tabelle](control-table.md)ein.
+Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie das ComboList-Bit in die Attributes -Spalte des Datensatzes des Steuerelements in die [Control-Tabelle ein.](control-table.md)
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere Informationen finden Sie unter [Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter [Steuerelemente](controls.md)erstellen müssen.
 
  
 

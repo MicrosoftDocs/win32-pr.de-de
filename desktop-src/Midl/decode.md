@@ -99,7 +99,7 @@ Verwenden Sie die **\[** [**Codierungs-**](encode.md) **\]** und **\[ \] Decodie
 
 Weitere Informationen zur Verwendung dieser Serialisierungsunterstützung finden Sie unter [Serialisierungsdienste](/windows/desktop/Rpc/serialization-services) und **\[** [**Codieren**](encode.md) **\]** von .
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

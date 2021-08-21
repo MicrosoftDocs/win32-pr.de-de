@@ -1,5 +1,5 @@
 ---
-description: Stellt den Instanzwert einer Metrik dar, die durch eine Instanz der MSVM \_ aggregationmetricdefinition-Klasse definiert wird.
+description: Stellt den Instanzwert einer Metrik dar, die von einer Instanz der Msvm \_ AggregationMetricDefinition-Klasse definiert wird.
 ms.assetid: 6dfcb711-6137-492a-aff4-82facbd11949
 title: Msvm_AggregationMetricValue-Klasse
 ms.topic: reference
@@ -27,18 +27,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f6842e5a23fbbf7cf1d639862cf5b9737bc1ff96
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 512ed39ea86bad6c1cb89bdf6ace7d528a6605b378a8c026b889be655f5c0a70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118149310"
 ---
-# <a name="msvm_aggregationmetricvalue-class"></a>MSVM \_ aggregationmetricvalue-Klasse
+# <a name="msvm_aggregationmetricvalue-class"></a>Msvm \_ AggregationMetricValue-Klasse
 
-Stellt den Instanzwert einer Metrik dar, die durch eine Instanz der [**MSVM \_ aggregationmetricdefinition**](msvm-aggregationmetricdefinition.md) -Klasse definiert wird. Die von [**MSVM \_ basemetricvalue**](msvm-basemetricvalue.md) geerbten Eigenschaften stellen den tatsächlichen Metrikwert bereit. Die Eigenschaften, die von dieser Klasse definiert werden, enthalten Informationen über das Intervall, für das die Aggregations Funktion angewendet wurde.
+Stellt den Instanzwert einer Metrik dar, die von einer Instanz der [**Msvm \_ AggregationMetricDefinition-Klasse**](msvm-aggregationmetricdefinition.md) definiert wird. Die von [**Msvm \_ BaseMetricValue**](msvm-basemetricvalue.md) geerbten Eigenschaften stellen den tatsächlichen Metrikwert bereit. Die von dieser Klasse definierten Eigenschaften stellen Informationen zum Intervall bereit, in dem die Aggregationsfunktion angewendet wurde.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,124 +65,124 @@ class Msvm_AggregationMetricValue : CIM_AggregationMetricValue
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ aggregationmetricvalue** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ AggregationMetricValue-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ aggregationmetricvalue** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ AggregationMetricValue-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Aggregationduration**
+**AggregationDuration**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt die Zeitspanne dar, in der die Aggregation berechnet wurde. Der Start eines Überwachungs Intervalls, für das die Aggregations Funktion angewendet wird, wird durch Subtrahieren der **aggregationduration** vom **aggregationtimestamp** bestimmt. Diese Eigenschaft wird von **CIM \_ aggregationmetricvalue** geerbt.
+Stellt die Zeitdauer dar, über die die Aggregation berechnet wurde. Der Beginn eines Überwachungsintervalls, über das die Aggregationsfunktion angewendet wird, wird bestimmt, indem **AggregationDuration** von **AggregationTimeStamp** subtrahiert wird. Diese Eigenschaft wird von **CIM \_ AggregationMetricValue** geerbt.
 
 </dd> <dt>
 
-**Aggregationtimestamp**
+**AggregationTimeStamp**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zeit an, zu der die Aggregations Funktion angewendet wurde, um den Wert der metrikinstanz zu bestimmen. Dies entspricht nicht der Uhrzeit, zu der die Instanz erstellt wurde. Für eine bestimmte **CIM \_ aggregationmetricvalue** -Instanz ändert sich der **aggregationtimestamp** , wenn die Aggregations Funktion angewendet wird, um den Wert zu berechnen. Diese Eigenschaft wird von **CIM \_ aggregationmetricvalue** geerbt.
+Gibt den Zeitpunkt an, zu dem die Aggregationsfunktion angewendet wurde, um den Wert der Metrikinstanz zu bestimmen. Dies entspricht nicht dem Zeitpunkt, zu dem die Instanz erstellt wurde. Für eine bestimmte **CIM \_ AggregationMetricValue-Instanz** ändert sich **aggregationTimeStamp** immer dann, wenn die Aggregationsfunktion angewendet wird, um den Wert zu berechnen. Diese Eigenschaft wird von **CIM \_ AggregationMetricValue** geerbt.
 
 </dd> <dt>
 
-**Breakdowndimension**
+**BreakdownDimension**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt eine zusammenteilungs Dimension aus dem **breakdowndimensions** -Array an, das in der zugeordneten [**MSVM \_ basemetricdefinition**](msvm-basemetricdefinition.md)definiert ist. Dies ist die Dimension, in der dieser Satz von Metrikwerten untergliedert ist. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Gibt eine Aufschlüsselungsdimension aus dem **BreakdownDimensions-Array** an, das in der zugeordneten [**Msvm \_ BaseMetricDefinition**](msvm-basemetricdefinition.md)definiert ist. Dies ist die Dimension, in der dieser Satz von Metrikwerten unterteilt wird. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Breakdownwert**
+**BreakdownValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Definiert einen Wert der **breakdowndimension** -Eigenschaft, die für diese metrikwertinstanz definiert ist. Wenn die **breakdowndimension** z. b. "transaktionname" lautet, könnte diese Eigenschaft die tatsächliche Transaktion benennen, für die dieser bestimmte Metrikwert gilt. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Definiert einen Wert der **BreakdownDimension-Eigenschaft,** die für diese Metrikwertinstanz definiert ist. Wenn **breakdownDimension** z. B. "TransactionName" ist, kann diese Eigenschaft die tatsächliche Transaktion benennen, für die dieser bestimmte Metrikwert gilt. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Dauer**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zeitspanne an, für die dieser Metrikwert gültig ist. Diese Eigenschaft darf nicht für Zeitstempel vorhanden sein, die nur auf einen bestimmten Zeitpunkt zutreffen, sondern sollte für Werte angegeben werden, die für einen bestimmten Zeitraum gültig sind (z. b. Stichproben). Wenn die **Duration** -Eigenschaft vorhanden ist und nicht **null** ist, gibt die **timestamp** -Eigenschaft das Ende des Intervalls an. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Gibt die Zeitdauer an, für die dieser Metrikwert gültig ist. Diese Eigenschaft sollte nicht für Zeitstempel vorhanden sein, die nur für einen bestimmten Zeitpunkt gelten. Sie sollte jedoch für Werte angegeben werden, die für einen bestimmten Zeitraum (z. B. Stichprobenentnahme) gültig sind. Wenn die **Duration-Eigenschaft** vorhanden ist und nicht **NULL** ist, gibt die **TimeStamp-Eigenschaft** das Ende des Intervalls an. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -191,72 +191,72 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Eine Zeichenfolge, die eine Instanz dieser Klasse eindeutig identifiziert. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Zeichenfolge, die eine Instanz dieser Klasse eindeutig identifiziert. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**"Messredelta Name"**
+**MeasuredElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein beschreibender Name für das Element, zu dem der Metrikwert gehört (das gemessene Element). Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein beschreibender Name für das Element, zu dem der Metrikwert gehört (das gemessene Element). Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **MetricDefinitionId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Schlüssel der [**MSVM \_ basemetricdefinition**](msvm-basemetricdefinition.md) -Instanz für diesen Wert. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Der Schlüssel der [**Msvm \_ BaseMetricDefinition-Instanz**](msvm-basemetricdefinition.md) für diesen Wert. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Metricvalue**
+**MetricValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Wert der Metrik, die als Zeichenfolge dargestellt wird. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Der Wert der Metrik, die als Zeichenfolge dargestellt wird. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Uhrzeit an, zu der der Metrikwert aufgezeichnet oder berechnet wurde. Beachten Sie, dass sich dies von dem Zeitpunkt der Erstellung der Instanz unterscheidet. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Gibt den Zeitpunkt an, zu dem der Metrikwert erfasst oder berechnet wurde. Beachten Sie, dass sich dies von dem Zeitpunkt unterscheidet, zu dem die Instanz erstellt wurde. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Ständigem**
+**Volatil**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn der Wert für den nächsten Zeitpunkt die gleiche Klasseninstanz verwendet und nur die Eigenschaftswerte (z. b. der **Wert** oder der **Zeitstempel**) geändert werden. **True** gibt an, dass die-Instanz wieder verwendet wird. Wenn der Wert **false** ist, bleiben die vorhandenen Instanzen unverändert, und für den neuen Zeitpunkt wird eine neue Instanz erstellt. Diese Eigenschaft wird von [**CIM \_ basemetricdefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+**TRUE,** wenn der Wert für den nächsten Zeitpunkt dieselbe Klasseninstanz verwendet und nur die Eigenschaftswerte ändert (z. B. **Value** oder **TimeStamp).** **True** gibt an, dass die Instanz wiederverwendet wird. **False** gibt an, dass die vorhandenen Instanzen unverändert bleiben und für den neuen Zeitpunkt eine neue Instanz erstellt wird. Diese Eigenschaft wird von [**CIM \_ BaseMetricDefinition**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> </dl>
 
@@ -266,10 +266,10 @@ Zugriffstyp: Schreibgeschützt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

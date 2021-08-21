@@ -5,7 +5,7 @@ ms.assetid: 2405be98-b4c2-4b4e-bea6-0c48a3e26f18
 keywords:
 - PlaylistCollectionPlaylistRemoved-Ereignis Windows Media Player
 - PlaylistCollectionPlaylistRemoved-Ereignis Windows Media Player , Player-Klasse
-- Playerklasse Windows Media Player , PlaylistCollectionPlaylistRemoved-Ereignis
+- Player-Klasse Windows Media Player , PlaylistCollectionPlaylistRemoved-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -55,7 +55,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript-Datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß- und Groß-/Schreibanforderungen.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß- und Groß-/Schreibanforderungen.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -70,7 +70,7 @@ Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

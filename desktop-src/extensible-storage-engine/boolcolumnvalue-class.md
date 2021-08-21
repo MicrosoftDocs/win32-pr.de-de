@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: boolcolumnvalue-Klasse'
-title: Boolcolumnvalue-Klasse
+description: 'Weitere Informationen zu: BoolColumnValue-Klasse'
+title: BoolColumnValue-Klasse
 TOCTitle: BoolColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.BoolColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.boolcolumnvalue(v=EXCHG.10)
@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 628ace76e9558774130cc14e4e1a7d380be66fc8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28f360745c09adb913ae7c62babbc417ac0ec5297441a1d3368e101bfd90d9a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084225"
 ---
-# <a name="boolcolumnvalue-class"></a>Boolcolumnvalue-Klasse
+# <a name="boolcolumnvalue-class"></a>BoolColumnValue-Klasse
 
 Ein [boolescher](/dotnet/api/system.boolean) Spaltenwert.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[Boolean](/dotnet/api/system.boolean)\>  
-      Microsoft. ISAM. ESENT. Interop. boolcolumnvalue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[Boolean](/dotnet/api/system.boolean)\>  
+      Microsoft.Isam.Esent.Interop.BoolColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,8 +65,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Boolcolumnvalue-Member](./boolcolumnvalue-members.md)
+[BoolColumnValue-Member](./boolcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

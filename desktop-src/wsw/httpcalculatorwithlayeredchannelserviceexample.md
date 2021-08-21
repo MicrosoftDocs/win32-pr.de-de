@@ -1,6 +1,6 @@
 ---
 title: HttpCalculatorWithLayeredChannelServiceExample
-description: Sehen Sie sich ein C++-Beispiel für eine Windows-Webdienst-API (WWSAPI) eines HTTP-Rechners mit mehrschichtigem Kanaldienst an.
+description: Sehen Sie sich Windows C++-Beispiel für eine Web Services-API (WWSAPI) eines HTTP-Rechners mit mehrschichtigem Kanaldienst an.
 ms.assetid: c5bc37bc-f242-4eda-abc4-510793d301d8
 keywords:
 - HttpCalculatorWithLayeredChannelServiceExample Native-Web-Services
@@ -8,16 +8,16 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 277703f703051bfff77efbc01b14d25bd427a1f5
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 9d03d1899d59a799c7c561b0edbeed0470f6c0df2c0c6bf41e2f2d273595ff1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118025905"
 ---
 # <a name="httpcalculatorwithlayeredchannelserviceexample"></a>HttpCalculatorWithLayeredChannelServiceExample
 
-In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts mit einem benutzerdefinierten Kanal und einer Listenerimplementierung verwenden, die auf HTTP-Ebene sind.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts mit einem benutzerdefinierten Kanal und einer Listenerimplementierung verwenden, die auf HTTP-Ebene auftrichtern.
 
 -   [HttpCalculatorWithLayeredChannelService.cpp](#httpcalculatorwithlayeredchannelservicecpp)
 -   [LayeredChannel.h](#layeredchannelh)

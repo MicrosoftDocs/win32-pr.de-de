@@ -1,25 +1,25 @@
 ---
-description: Com+-Anwendungs Wiederverwendungs Tasks
+description: COM+-Aufgaben zur Anwendungswiederverwendung
 ms.assetid: 4af5470d-6ce2-469f-aa29-55f805527cc5
-title: Com+-Anwendungs Wiederverwendungs Tasks
+title: COM+-Aufgaben zur Anwendungswiederverwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e725fbd635cfff237166f648d72587141929ff0b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f4fd80a928abf166a60928e445beea531429556f6ffd84c42ead797b0a714788
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118103245"
 ---
-# <a name="com-application-recycling-tasks"></a>Com+-Anwendungs Wiederverwendungs Tasks
+# <a name="com-application-recycling-tasks"></a>COM+-Aufgaben zur Anwendungswiederverwendung
 
-Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwendung der com+-Anwendungs Wiederverwendung.
+Die folgenden Themen enthalten schrittweise Anweisungen für die Verwendung der COM+-Anwendungswiederverwendung.
 
 
 
-| Thema                                                                                              | BESCHREIBUNG                                                             |
+| Thema                                                                                              | Beschreibung                                                             |
 |----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [Konfigurieren von com+-Anwendungs Wiederverwendungs Werten](configuring-com--application-recycling-values.md) | Hier wird beschrieben, wie Anwendungs Wiederverwendungs Werte für Ihre Anwendung festgelegt werden. |
+| [Konfigurieren von COM+-Anwendungswiederverwendungswerten](configuring-com--application-recycling-values.md) | Beschreibt, wie Anwendungswiederverwendungswerte für Ihre Anwendung festgelegt werden. |
 
 
 
@@ -29,7 +29,7 @@ Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwend
 
 <dl> <dt>
 
-[Konzepte der com+-Anwendungs Wiederverwendung](com--application-recycling-concepts.md)
+[KONZEPTE DER COM+-Anwendungswiederverwendung](com--application-recycling-concepts.md)
 </dt> </dl>
 
  

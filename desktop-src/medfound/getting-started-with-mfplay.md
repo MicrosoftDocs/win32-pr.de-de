@@ -13,7 +13,7 @@ ms.locfileid: "118063493"
 ---
 # <a name="getting-started-with-mfplay"></a>Erste Schritte mit MFPlay
 
-\[MFPlay ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
+\[MFPlay steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
 
 MFPlay ist eine API zum Erstellen von Medienwiedergabeanwendungen in C++.
 
@@ -21,7 +21,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 -   [Requirements](#requirements)
 -   [Informationen zu MFPlay](#about-mfplay)
--   [Wiedergeben einer Mediendatei](#playing-a-media-file)
+-   [Wiederspielen einer Mediendatei](#playing-a-media-file)
 -   [Steuern der Wiedergabe](#controlling-playback)
 -   [Empfangen von Ereignissen vom Player](#receiving-events-from-the-player)
 -   [Abrufen von Informationen zu einer Mediendatei](#getting-information-about-a-media-file)
@@ -35,13 +35,13 @@ MFPlay erfordert Windows 7.
 
 ## <a name="about-mfplay"></a>Informationen zu MFPlay
 
-MFPlay verfügt über ein einfaches Programmiermodell und stellt gleichzeitig den Kernsatz von Features bereit, die die meisten Wiedergabeanwendungen benötigen. Eine Anwendung erstellt ein *Playerobjekt,* das die Wiedergabe steuert. Zum Wiedergeben einer Mediendatei erstellt das Playerobjekt ein *Medienelement,* das zum Abrufen von Informationen über den Inhalt der Mediendatei verwendet werden kann. Die Anwendung steuert die Wiedergabe über Methoden auf der [**IMFPMediaPlayer-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) des Playerobjekts. Optional kann die Anwendung Ereignisbenachrichtigungen über eine Rückrufschnittstelle abrufen. Das folgende Diagramm veranschaulicht diesen Prozess.
+MFPlay verfügt über ein einfaches Programmiermodell und stellt gleichzeitig die Kernfunktionen zur Verfügung, die die meisten Wiedergabeanwendungen benötigen. Eine Anwendung erstellt ein *Playerobjekt,* das die Wiedergabe steuert. Zum Wiedereinspielen einer Mediendatei erstellt das Player-Objekt ein Medienelement, mit dem Informationen zum Inhalt der Mediendatei erhalten werden können. Die Anwendung steuert die Wiedergabe über Methoden auf der [**IMFPMediaPlayer-Schnittstelle des Playerobjekts.**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) Optional kann die Anwendung Ereignisbenachrichtigungen über eine Rückrufschnittstelle erhalten. Dieses Verfahren wird im folgenden Diagramm veranschaulicht.
 
-![Konzeptionelles Diagramm: Anwendung und Player zeigen aufeinander, beide zeigen auf Medienelement, das auf Mediendatei verweist](images/mfplay.png)
+![Konzeptionelles Diagramm: Anwendung und Player zeigen aufeinander, beide zeigen auf medienelement, das auf die Mediendatei zeigt](images/mfplay.png)
 
-## <a name="playing-a-media-file"></a>Wiedergeben einer Mediendatei
+## <a name="playing-a-media-file"></a>Wiederspielen einer Mediendatei
 
-Um eine Mediendatei wiederzugeben, rufen Sie die [**MFPCreateMediaPlayer-Funktion**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) auf.
+Um eine Mediendatei wiederzuspielen, rufen Sie die [**MFPCreateMediaPlayer-Funktion**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) auf.
 
 
 ```C++
@@ -69,15 +69,15 @@ HRESULT PlayVideo(HWND hwnd, const WCHAR* sURL)
 
 Die [**MFPCreateMediaPlayer-Funktion**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) erstellt eine neue Instanz des MFPlay-Playerobjekts. Die Funktion verwendet die folgenden Parameter:
 
--   Der erste Parameter ist die URL der datei, die geöffnet werden soll. Dies kann eine lokale Datei oder eine Datei auf einem Medienserver sein.
--   Der zweite Parameter gibt an, ob die Wiedergabe automatisch gestartet wird. Durch Festlegen dieses Paremeters auf **TRUE** wird die Datei wiedergegeben, sobald MFPlay sie lädt.
--   Der dritte Parameter legt verschiedene Optionen fest. Übergeben Sie für die Standardoptionen 0 (null).
--   Der vierte Parameter ist ein Zeiger auf eine optionale Rückrufschnittstelle. Dieser Parameter kann **NULL** sein, wie gezeigt. Der Rückruf wird im Abschnitt [Empfangen von Ereignissen vom Player](#receiving-events-from-the-player)beschrieben.
--   Der fünfte Parameter ist ein Handle für das Anwendungsfenster. Wenn die Mediendatei einen Videostream enthält, wird das Video im Clientbereich dieses Fensters angezeigt. Für die ausschließliche Audiowiedergabe kann dieser Parameter **NULL** sein.
+-   Der erste Parameter ist die URL der zu öffnenden Datei. Dies kann eine lokale Datei oder eine Datei auf einem Medienserver sein.
+-   Der zweite Parameter gibt an, ob die Wiedergabe automatisch gestartet wird. Durch Festlegen dieses Paremeters **auf TRUE** wird die Datei wiedergegeben, sobald sie von MFPlay geladen wird.
+-   Der dritte Parameter legt verschiedene Optionen fest. Übergeben Sie für die Standardoptionen null (0).
+-   Der vierte Parameter ist ein Zeiger auf eine optionale Rückrufschnittstelle. Dieser Parameter kann NULL **sein,** wie gezeigt. Der Rückruf wird im Abschnitt Empfangen von [Ereignissen vom Player beschrieben.](#receiving-events-from-the-player)
+-   Der fünfte Parameter ist ein Handle für das Anwendungsfenster. Wenn die Mediendatei einen Videostream enthält, wird das Video im Clientbereich dieses Fensters angezeigt. Für die ausschließliche Audiowiedergabe kann dieser Parameter **NULL sein.**
 
 Der letzte Parameter empfängt einen Zeiger auf die [**IMFPMediaPlayer-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) des Playerobjekts.
 
-Bevor die Anwendung heruntergefahren wird, stellen Sie sicher, dass Sie den [**IMFPMediaPlayer-Zeiger**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) freigeben. Sie können dies in Ihrem **WM CLOSE-Meldungshandler \_** tun.
+Bevor die Anwendung heruntergefahren wird, stellen Sie sicher, dass Sie den [**IMFPMediaPlayer-Zeiger**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) veröffentlichen. Sie können dies in Ihrem **WM \_ CLOSE-Meldungshandler** tun.
 
 
 ```C++
@@ -92,21 +92,21 @@ void OnClose(HWND /*hwnd*/)
 
 
 > [!Note]  
-> In diesem Beispiel wird die [SafeRelease-Funktion](saferelease.md) verwendet, um Schnittstellenzeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion verwendet,](saferelease.md) um Schnittstellenzeigener frei zu geben.
 
  
 
-Für die einfache Videowiedergabe ist dies der gesamte Code, den Sie benötigen. Im weiteren Verlauf dieses Tutorials erfahren Sie, wie Sie weitere Features hinzufügen, beginnend mit der Steuerung der Wiedergabe.
+Für die einfache Videowiedergabe ist dies der code, den Sie benötigen. Im restlichen Teil dieses Tutorials erfahren Sie, wie Sie weitere Features hinzufügen, beginnend mit dem Steuern der Wiedergabe.
 
 ## <a name="controlling-playback"></a>Steuern der Wiedergabe
 
 Der im vorherigen Abschnitt gezeigte Code gibt die Mediendatei wieder, bis sie das Ende der Datei erreicht. Sie können die Wiedergabe beenden und starten, indem Sie die folgenden Methoden auf der [**IMFPMediaPlayer-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) aufrufen:
 
--   [**IMFPMediaPlayer::P ause**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-pause) hält die Wiedergabe an. Während die Wiedergabe angehalten wird, wird der neueste Videoframe angezeigt, und die Audiodaten sind im Hintergrund.
--   [**IMFPMediaPlayer::Stop**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-stop) beendet die Wiedergabe. Es wird kein Video angezeigt, und die Wiedergabeposition wird auf den Anfang der Datei zurückgesetzt.
--   [**IMFPMediaPlayer::P lay**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) setzt die Wiedergabe nach dem Beenden oder Anhalten fort.
+-   [**IMFPMediaPlayer::P ause hält**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-pause) die Wiedergabe an. Während die Wiedergabe angehalten ist, wird der neueste Videoframe angezeigt, und die Audiowiedergabe ist im Hintergrund.
+-   [**IMFPMediaPlayer::Stop beendet**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-stop) die Wiedergabe. Es wird kein Video angezeigt, und die Wiedergabeposition wird auf den Anfang der Datei zurückgesetzt.
+-   [**IMFPMediaPlayer::P lay setzt**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) die Wiedergabe nach dem Beenden oder Anhalten fort.
 
-Der folgende Code hält die Wiedergabe an oder setzt die Wiedergabe fort, wenn Sie die **LEERTASTE** drücken.
+Der folgende Code hält die Wiedergabe an oder setzt sie wieder auf, wenn Sie die **SPACEBAR drücken.**
 
 
 ```C++
@@ -148,18 +148,18 @@ void OnKeyDown(HWND hwnd, UINT vk, BOOL fDown, int cRepeat, UINT flags)
 
 
 
-In diesem Beispiel wird die [**IMFPMediaPlayer::GetState-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getstate) zum Abrufen des aktuellen Wiedergabezustands (angehalten, angehalten oder wiedergegeben) und entsprechend angehalten oder fortgesetzt.
+In diesem Beispiel wird die [**IMFPMediaPlayer::GetState-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getstate) zum Erhalten des aktuellen Wiedergabezustands (angehalten, beendet oder wiedergeben) und entsprechend angehalten oder fortgesetzt.
 
 ## <a name="receiving-events-from-the-player"></a>Empfangen von Ereignissen vom Player
 
-MFPlay verwendet eine Rückrufschnittstelle, um Ereignisse an Ihre Anwendung zu senden. Es gibt zwei Gründe für diesen Rückruf:
+MFPlay verwendet eine Rückrufschnittstelle, um Ereignisse an Ihre Anwendung zu senden. Für diesen Rückruf gibt es zwei Gründe:
 
--   Die Wiedergabe erfolgt in einem separaten Thread. Während der Wiedergabe können bestimmte Ereignisse auftreten, z. B. das Erreichen des Endes der Datei. MFPlay verwendet den Rückruf, um Ihre Anwendung über das Ereignis zu benachrichtigen.
--   Viele der [**IMFPMediaPlayer-Methoden**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) sind asynchron, d. h., sie geben zurück, bevor der Vorgang abgeschlossen ist. Mit asynchronen Methoden können Sie einen Vorgang über Ihren UI-Thread starten, der lange dauern kann, ohne dass dies zu einer Blockierung der Benutzeroberfläche führt. Nach Abschluss des Vorgangs signalisiert MFPlay den Rückruf.
+-   Die Wiedergabe erfolgt in einem separaten Thread. Während der Wiedergabe können bestimmte Ereignisse auftreten, z. B. das Erreichen des Dateiende. MFPlay verwendet den Rückruf, um Ihre Anwendung über das Ereignis zu benachrichtigen.
+-   Viele der [**IMFPMediaPlayer-Methoden**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayer) sind asynchron, d. h., sie geben zurück, bevor der Vorgang abgeschlossen wird. Mit asynchronen Methoden können Sie einen Vorgang über Ihren UI-Thread starten, der möglicherweise sehr lange dauern kann, ohne dass die Benutzeroberfläche blockiert wird. Nach Abschluss des Vorgangs signalisiert MFPlay den Rückruf.
 
-Implementieren Sie zum Empfangen von Rückrufbenachrichtigungen die [**IMFPMediaPlayerCallback-Schnittstelle.**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) Diese Schnittstelle erbt **IUnknown** und definiert eine einzelne Methode, [**OnMediaPlayerEvent.**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) Um den Rückruf einzurichten, übergeben Sie einen Zeiger auf Ihre **IMFPMediaPlayerCallback-Implementierung** im *pCallback-Parameter* der [**MFPCreateMediaPlayer-Funktion.**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer)
+Implementieren Sie zum Empfangen von Rückrufbenachrichtigungen die [**IMFPMediaPlayerCallback-Schnittstelle.**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaplayercallback) Diese Schnittstelle erbt **IUnknown** und definiert eine einzelne Methode, [**OnMediaPlayerEvent.**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) Übergeben Sie zum Einrichten des Rückrufs einen Zeiger auf Ihre **IMFPMediaPlayerCallback-Implementierung** im *pCallback-Parameter* der [**MFPCreateMediaPlayer-Funktion.**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer)
 
-Hier ist das erste Beispiel aus diesem Tutorial, das geändert wurde, um den Rückruf einzuschließt.
+Hier ist das erste Beispiel aus diesem Tutorial, das so geändert wurde, dass der Rückruf enthalten ist.
 
 
 ```
@@ -189,9 +189,9 @@ if (SUCCEEDED(hr))
 
 
 
-Die [**OnMediaPlayerEvent-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) verfügt über einen einzelnen Parameter, der ein Zeiger auf die [**MFP \_ EVENT \_ HEADER-Struktur**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) ist. Der **eEventType-Member** dieser Struktur informiert Sie darüber, welches Ereignis aufgetreten ist. Wenn beispielsweise die Wiedergabe gestartet wird, sendet MFPlay das **MFP \_ EVENT TYPE \_ \_ PLAY-Ereignis.**
+Die [**OnMediaPlayerEvent-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayercallback-onmediaplayerevent) verfügt über einen einzelnen Parameter, der ein Zeiger auf die [**MFP \_ EVENT \_ HEADER-Struktur**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) ist. Der **eEventType-Member** dieser Struktur teilt Ihnen mit, welches Ereignis aufgetreten ist. Wenn beispielsweise die Wiedergabe gestartet wird, sendet MFPlay das **MFP \_ EVENT TYPE \_ \_ PLAY-Ereignis.**
 
-Jeder Ereignistyp verfügt über eine entsprechende Datenstruktur, die Informationen für dieses Ereignis enthält. Jede dieser Strukturen beginnt mit einer [**MFP \_ EVENT \_ HEADER-Struktur.**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Stellen Sie in Ihrem Rückruf den **MFP \_ EVENT \_ HEADER-Zeiger** in die ereignisspezifische Datenstruktur um. Wenn der Ereignistyp beispielsweise **MFP \_ PLAY \_ EVENT** ist, ist die Datenstruktur [**MFP PLAY \_ \_ EVENT.**](/windows/desktop/api/mfplay/ns-mfplay-mfp_play_event) Der folgende Code zeigt, wie dieses Ereignis im Rückruf behandelt wird.
+Jeder Ereignistyp verfügt über eine entsprechende Datenstruktur, die Informationen für dieses Ereignis enthält. Jede dieser Strukturen beginnt mit einer [**MFP \_ EVENT \_ HEADER-Struktur.**](/windows/desktop/api/mfplay/ns-mfplay-mfp_event_header) Geben Sie in Ihrem Rückruf den **MFP \_ EVENT \_ HEADER-Zeiger** in die ereignisspezifische Datenstruktur um. Wenn der Ereignistyp beispielsweise **MFP \_ PLAY \_ EVENT** ist, ist die Datenstruktur [**MFP PLAY \_ \_ EVENT**](/windows/desktop/api/mfplay/ns-mfplay-mfp_play_event). Der folgende Code zeigt, wie dieses Ereignis im Rückruf behandelt wird.
 
 
 ```
@@ -222,17 +222,17 @@ void OnPlay(MFP_PLAY_EVENT *pEvent)
 
 
 
-In diesem Beispiel wird das [**MFP \_ GET PLAY \_ \_ EVENT-Ereignis**](/windows/desktop/api/mfplay/nf-mfplay-mfp_get_play_event) verwendet, um den *pEventHeader-Zeiger* in eine [**MFP PLAY \_ \_ EVENT-Struktur**](/windows/desktop/api/mfplay/ns-mfplay-mfp_play_event) zu casten. Das **HRESULT** aus dem Vorgang, der das Ereignis ausgelöst hat, wird im **Feld hrEvent** der Struktur gespeichert.
+In diesem Beispiel wird das [**MFP \_ GET PLAY \_ \_ EVENT-Ereignis**](/windows/desktop/api/mfplay/nf-mfplay-mfp_get_play_event) verwendet, um den *pEventHeader-Zeiger* in eine [**MFP PLAY \_ \_ EVENT-Struktur zu**](/windows/desktop/api/mfplay/ns-mfplay-mfp_play_event) castieren. Das **HRESULT aus** dem Vorgang, der das Ereignis ausgelöst hat, wird im **hrEvent-Feld** der -Struktur gespeichert.
 
 Eine Liste aller Ereignistypen und der entsprechenden Datenstrukturen finden Sie unter [**MFP \_ EVENT \_ TYPE**](/windows/desktop/api/mfplay/ne-mfplay-mfp_event_type).
 
-Hinweis zum Threading: Standardmäßig ruft MFPlay den Rückruf aus demselben Thread auf, der [**MFPCreateMediaPlayer**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer)aufgerufen hat. Dieser Thread muss über eine Meldungsschleife verfügen. Alternativ können Sie das **MFP \_ OPTION FREE \_ \_ THREADED \_ CALLBACK-Flag** im *parameter creationOptions* von **MFPCreateMediaPlayer** übergeben. Dieses Flag bewirkt, dass MFPlay Rückrufe aus einem separaten Thread aufruft. Beide Optionen haben Auswirkungen auf Ihre Anwendung. Die Standardoption bedeutet, dass Ihr Rückruf keine Aktionen ausführen kann, die auf ihre Nachrichtenschleife warten, z. B. das Warten auf eine UI-Aktion, da dadurch die Fensterprozedur blockiert wird. Die Freethreadoption bedeutet, dass Sie wichtige Abschnitte verwenden müssen, um alle Daten zu schützen, auf die Sie in Ihrem Rückruf zugreifen. In den meisten Fällen ist die Standardoption am einfachsten.
+Hinweis zum Threading: Standardmäßig ruft MFPlay den Rückruf aus demselben Thread auf, der [**MFPCreateMediaPlayer aufgerufen hat.**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) Dieser Thread muss über eine Meldungsschleife verfügen. Alternativ können Sie das **MFP \_ OPTION FREE \_ \_ THREADED \_ CALLBACK-Flag** im *creationOptions-Parameter* von **MFPCreateMediaPlayer übergeben.** Dieses Flag bewirkt, dass MFPlay Rückrufe aus einem separaten Thread aufruft. Beide Optionen haben Auswirkungen auf Ihre Anwendung. Die Standardoption bedeutet, dass ihr Rückruf nichts tun kann, das auf Ihre Nachrichtenschleife wartet, z. B. das Warten auf eine Benutzeroberflächenaktion, da dadurch die Fensterprozedur blockiert wird. Die Option "Freethreading" bedeutet, dass Sie kritische Abschnitte verwenden müssen, um alle Daten zu schützen, auf die Sie in Ihrem Rückruf zugreifen. In den meisten Fällen ist die Standardoption am einfachsten.
 
 ## <a name="getting-information-about-a-media-file"></a>Abrufen von Informationen zu einer Mediendatei
 
-Wenn Sie eine Mediendatei in MFPlay öffnen, erstellt der Player ein Objekt namens *Medienelement,* das die Mediendatei darstellt. Dieses Objekt macht die [**IMFPMediaItem-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) verfügbar, mit der Sie Informationen zur Mediendatei abrufen können. Viele der MFPlay-Ereignisstrukturen enthalten einen Zeiger auf das aktuelle Medienelement. Sie können das aktuelle Medienelement auch abrufen, indem Sie [**IMFPMediaPlayer::GetMediaItem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getmediaitem) auf dem Player aufrufen.
+Wenn Sie eine Mediendatei in MFPlay öffnen, erstellt der Player ein Objekt, das als Medienelement bezeichnet *wird,* das die Mediendatei darstellt. Dieses Objekt macht die [**IMFPMediaItem-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) verfügbar, mit der Sie Informationen zur Mediendatei erhalten können. Viele der MFPlay-Ereignisstrukturen enthalten einen Zeiger auf das aktuelle Medienelement. Sie können das aktuelle Medienelement auch durch Aufrufen von [**IMFPMediaPlayer::GetMediaItem auf dem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getmediaitem) Player erhalten.
 
-Zwei besonders nützliche Methoden sind [**IMFPMediaItem::HasVideo**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-hasvideo) und [**IMFPMediaItem::HasAudio**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-hasaudio). Diese Methoden fragen ab, ob die Medienquelle Video oder Audio enthält.
+Zwei besonders nützliche Methoden sind [**IMFPMediaItem::HasVideo**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-hasvideo) und [**IMFPMediaItem::HasAudio**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-hasaudio). Diese Methoden fragen ab, ob die Medienquelle Video- oder Audiodaten enthält.
 
 Der folgende Code testet beispielsweise, ob die aktuelle Mediendatei einen Videostream enthält.
 
@@ -252,11 +252,11 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn die Quelldatei einen Videostream enthält, der für die Wiedergabe ausgewählt ist, werden *bHasVideo* und *bIsSelected* auf **TRUE** festgelegt.
+Wenn die Quelldatei einen Videostream enthält, der für die Wiedergabe ausgewählt ist, werden *sowohl bHasVideo* als auch *bIsSelected* auf **TRUE festgelegt.**
 
 ## <a name="managing-video-playback"></a>Verwalten der Videowiedergabe
 
-Wenn MFPlay eine Videodatei wiedergibt, wird das Video in dem Fenster geschaltet, das Sie in der [**MFPCreateMediaPlayer-Funktion**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) angegeben haben. Dies geschieht in einem separaten Thread, der sich im Besitz der Microsoft Media Foundation Wiedergabepipeline befindet. In den meisten Teilen muss Ihre Anwendung diesen Prozess nicht verwalten. Es gibt jedoch zwei Situationen, in denen die Anwendung MFPlay benachrichtigen muss, um das Video zu aktualisieren.
+Wenn MFPlay eine Videodatei abspielt, wird das Video in dem Fenster ge zeichnet, das Sie in der [**MFPCreateMediaPlayer-Funktion angegeben**](/windows/desktop/api/mfplay/nf-mfplay-mfpcreatemediaplayer) haben. Dies geschieht in einem separaten Thread, der sich im Besitz der Microsoft Media Foundation Wiedergabepipeline befindet. In den meisten Teilen muss Ihre Anwendung diesen Prozess nicht verwalten. Es gibt jedoch zwei Situationen, in denen die Anwendung MFPlay benachrichtigen muss, um das Video zu aktualisieren.
 
 -   Wenn die Wiedergabe angehalten oder beendet wird, muss MFPlay benachrichtigt werden, sobald das Videofenster der Anwendung eine WM \_ PAINT-Nachricht empfängt. Dies ermöglicht MFPlay das erneute Anstrichen des Fensters.
 -   Wenn die Größe des Fensters geändert wird, muss MFPlay benachrichtigt werden, damit das Video entsprechend der neuen Fenstergröße skaliert werden kann.
@@ -301,7 +301,7 @@ void OnPaint(HWND hwnd)
 
 
 
-Sofern nicht anders angegeben, zeigt MFPlay das Video bei Bedarf mithilfe von Letterboxing im richtigen Seitenverhältnis an. Wenn Sie das Seitenverhältnis nicht beibehalten möchten, rufen Sie [**IMFPMediaPlayer::SetAspectRatioMode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setaspectratiomode) mit dem **MfVideoARMode \_ None-Flag** auf. Dies führt dazu, dass MFPlay das Video gestreckt, um das gesamte Rechteck ohne Letterboxing auszufüllen. In der Regel sollten Sie die Standardeinstellung verwenden und MFPlay in das Video schreiben lassen. Die Standardmäßige Letterboxfarbe ist schwarz, aber Sie können dies ändern, indem Sie [**IMFPMediaPlayer::SetBorderColor**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setbordercolor)aufrufen.
+Sofern nicht anders angegeben, zeigt MFPlay das Video bei Bedarf mithilfe von Letterboxing im richtigen Seitenverhältnis an. Wenn Sie das Seitenverhältnis nicht beibehalten möchten, rufen Sie [**IMFPMediaPlayer::SetAspectRatioMode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setaspectratiomode) mit dem **Flag MFVideoARMode \_ None** auf. Dies führt dazu, dass MFPlay das Video gestreckt, um das gesamte Rechteck ohne Letterboxing auszufüllen. In der Regel sollten Sie die Standardeinstellung verwenden und MFPlay in das Video schreiben lassen. Die Standardmäßige Letterboxfarbe ist schwarz, aber Sie können dies ändern, indem Sie [**IMFPMediaPlayer::SetBorderColor**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setbordercolor)aufrufen.
 
 ## <a name="limitations-of-mfplay"></a>Einschränkungen von MFPlay
 

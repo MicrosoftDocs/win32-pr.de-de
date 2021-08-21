@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der crashdumpgrbit-Enumeration.
-title: Crashdumpgrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: 'Weitere Informationen zu: CrashDumpGrbit-Enumeration'
+title: CrashDumpGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: CrashDumpGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows7.CrashDumpGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.crashdumpgrbit(v=EXCHG.10)
@@ -40,21 +40,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3108190143115b1e6be5b7e0981d49c4bd9d4afa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6cad58cac50d42b7abaadb179b4068bda2534383113b48430c79d874357c030c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083484"
 ---
-# <a name="crashdumpgrbit-enumeration"></a>Crashdumpgrbit-Enumeration
+# <a name="crashdumpgrbit-enumeration"></a>CrashDumpGrbit-Enumeration
 
-Optionen für jetkonfigurations reprocessforcrashdump.
+Optionen für JetConfigureProcessForCrashDump.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,37 +90,37 @@ public enum CrashDumpGrbit
 <tr class="even">
 <td></td>
 <td>Minimum</td>
-<td>Das minimal Abbild umfasst cacheminimum.</td>
+<td>Das Mindestabbild enthält CacheMinimum.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Maximum</td>
-<td>Das Maximum für das dumpmaximum umfasst cachemaximum.</td>
+<td>Der maximale Speicherabbildwert schließt CacheMaximum ein.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cacheminimum</td>
-<td>Cacheminimum schließt Seiten ein, die in einem latchmodus vorliegen. Cacheminimum schließt Seiten ein, die für den Arbeitsspeicher verwendet werden. Cacheminimum schließt Seiten ein, die mit Fehlern gekennzeichnet sind.</td>
+<td>CacheMinimum</td>
+<td>CacheMinimum enthält Seiten, die latched sind. CacheMinimum enthält Seiten, die für den Arbeitsspeicher verwendet werden. CacheMinimum enthält Seiten, die mit Fehlern gekennzeichnet sind.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cachemaximum</td>
-<td>Cache Maximum umfasst Cache-Minimalwert. Cache Maximum umfasst das gesamte Cache Image.</td>
+<td>CacheMaximum</td>
+<td>Cache maximum includes cache minimum.. (Cachemaximum schließt den Cachemindestwert ein. Das Cachemaximum schließt das gesamte Cacheimage ein.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cacheingecludedirtypages</td>
-<td>Dump schließt geänderte Seiten ein.</td>
+<td>CacheIncludeDirtyPages</td>
+<td>Dump enthält Seiten, die geändert werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cacheingecludecachedpages</td>
-<td>Dump schließt Seiten ein, die gültige Daten enthalten.</td>
+<td>CacheIncludeCachedPages</td>
+<td>Dump enthält Seiten, die gültige Daten enthalten.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cacheingecludecorruptedpages</td>
-<td>Dump enthält beschädigte Seiten (teuer zu berechnen).</td>
+<td>CacheIncludeCorruptedPages</td>
+<td>Dump enthält Seiten, die beschädigt sind (teuer zu berechnen).</td>
 </tr>
 </tbody>
 </table>
@@ -128,6 +128,6 @@ public enum CrashDumpGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

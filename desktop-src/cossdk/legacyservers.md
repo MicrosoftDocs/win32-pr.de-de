@@ -25,7 +25,7 @@ Identisch mit der [**InprocServers-Sammlung,**](inprocservers.md) mit der Ausnah
 
 Diese Auflistung unterstützt nicht die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **LegacyServers-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
@@ -57,10 +57,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------|
-| BESCHREIBUNG    | Der Name der Klasse. |
+| Beschreibung    | Der Name der Klasse. |
 | Zugriff         | ReadOnly               |
 | type           | String                 |
-| Standard        | Nicht zutreffend                    |
+| Standard        | –                    |
 | Mindestsystem | Windows XP             |
 
 
@@ -73,10 +73,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Eine GUID für die Komponente. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
+| Beschreibung    | Eine GUID für die Komponente. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | ReadOnly                                                                                                                                                  |
 | type           | String                                                                                                                                                    |
-| Standard        | Nicht zutreffend                                                                                                                                                       |
+| Standard        | –                                                                                                                                                       |
 | Mindestsystem | Windows XP                                                                                                                                                |
 
 
@@ -89,10 +89,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|----------------------------------|
-| BESCHREIBUNG    | Der Dateipfad für die Komponente. |
+| Beschreibung    | Der Dateipfad für die Komponente. |
 | Zugriff         | ReadOnly                         |
 | type           | String                           |
-| Standard        | Nicht zutreffend                              |
+| Standard        | –                              |
 | Mindestsystem | Windows XP                       |
 
 
@@ -105,10 +105,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt den vollständigen Pfad zu einer lokalen 32-Bit-Serveranwendung an. |
+| Beschreibung    | Gibt den vollständigen Pfad zu einer lokalen 32-Bit-Serveranwendung an. |
 | Zugriff         | ReadOnly                                                      |
 | type           | String                                                        |
-| Standard        | Nicht zutreffend                                                           |
+| Standard        | –                                                           |
 | Mindestsystem | Windows XP                                                    |
 
 
@@ -121,10 +121,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Ein Name, der die Komponente identifiziert. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) zurückgegeben, wenn die Name-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
+| Beschreibung    | Ein Name, der die Komponente identifiziert. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) zurückgegeben, wenn die Name-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | ReadOnly                                                                                                                                                            |
 | type           | String                                                                                                                                                              |
-| Standard        | Nicht zutreffend                                                                                                                                                                 |
+| Standard        | –                                                                                                                                                                 |
 | Mindestsystem | Windows XP                                                                                                                                                          |
 
 

@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 91674f0dd12e8e84337b2c5557b9ff1ffa83a991
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e94154698b59572addc3ee44d7df417cec87db849f52eefab78b42eb13d8e0c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118148157"
 ---
 # <a name="reset-method-of-the-msvm_externalfcport-class"></a>Reset-Methode der Msvm \_ ExternalFcPort-Klasse
 
@@ -53,7 +53,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -25,7 +25,7 @@ Das **PLAYLIST-Element** unterstützt die folgenden Attribute.
 
 
 
-| attribute                                                                                 | BESCHREIBUNG                                                                                                                                |
+| attribute                                                                                 | Beschreibung                                                                                                                                |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | [allowColumnSorting](playlist-allowcolumnsorting.md)                                     | Gibt einen Wert an, der angibt, ob das Sortieren nach Spaltenüberschriften zulässig ist, oder ruft einen Wert ab.                                                    |
 | [allowItemEditing](playlist-allowitemediting.md)                                         | Gibt einen Wert an, der angibt, ob Elemente in einer Wiedergabeliste die direkte Bearbeitung unterstützen, oder ruft einen Wert ab.                                            |
@@ -73,7 +73,7 @@ Das **PLAYLIST-Element** unterstützt die folgenden Methoden.
 
 
 
-| Methode                                                              | BESCHREIBUNG                                                                                                               |
+| Methode                                                              | Beschreibung                                                                                                               |
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | [abortCopy](playlist-abortcopy.md)                                 | Bricht einen Kopiervorgang ab.                                                                                                 |
 | [addSelectedToPlaylist](playlist-addselectedtoplaylist.md)         | Fügt der Wiedergabeliste das ausgewählte Element hinzu.                                                                                   |
@@ -104,7 +104,7 @@ Vordefinierte Wiedergabelisten sind normale **PLAYLIST-Elemente** mit verschiede
 
 
 
-| Vordefinierte WIEDERGABELISTE                      | BESCHREIBUNG                                                       |
+| Vordefinierte WIEDERGABELISTE                      | Beschreibung                                                       |
 |------------------------------------------|-------------------------------------------------------------------|
 | [DROPDOWNPLAYLIST](dropdownplaylist.md) | Eine Dropdownliste, **in** der keine Elemente sichtbar sind.                   |
 | [ITEMSPLAYLIST](itemsplaylist.md)       | Eine Dropdownliste, **in** der keine Elemente oder Spaltenüberschriften sichtbar sind. |

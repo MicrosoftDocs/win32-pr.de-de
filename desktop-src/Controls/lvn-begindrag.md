@@ -1,9 +1,9 @@
 ---
-title: LVN_BEGINDRAG Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: LVN_BEGINDRAG Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 2b9bbff8-f5f7-47ac-b662-a327ff49caf7
 keywords:
-- Windows-Steuerelemente für LVN_BEGINDRAG Benachrichtigungs
+- LVN_BEGINDRAG Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69166cd38242db915f70772b5dfbd3bab6ba56df
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 33c86730f624e74420ccf8e9c3b47035ce075ac20448d9bedb99784ec1ca1c5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118170356"
 ---
-# <a name="lvn_begindrag-notification-code"></a>LVN \_ BeginDrag-Benachrichtigungs Code
+# <a name="lvn_begindrag-notification-code"></a>LVN \_ BEGINDRAG-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuerelements, dass ein Drag & Drop-Vorgang mit der linken Maustaste initiiert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ LVN_BEGINDRAG
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMLISTVIEW**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) -Struktur. Der **iItem** -Member identifiziert das Element, das gezogen wird, und die anderen Elemente sind 0 (null).
+Zeiger auf eine [**NMLISTVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) Das **iItem-Element** identifiziert das element, das gezogen wird, und die anderen Elemente sind 0 (null).
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

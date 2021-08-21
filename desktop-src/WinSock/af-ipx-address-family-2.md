@@ -1,26 +1,26 @@
 ---
-description: Die IPX-Adressfamilie definiert die Adressierungs Struktur für Protokolle, die die IPX-Standard socketadressierung verwenden. Für diese Transporte besteht eine Endpunkt Adresse aus einer Netzwerk Nummer, einer Knotenadresse und einer Socketnummer.
+description: Die IPX-Adressfamilie definiert die Adressierungsstruktur für Protokolle, die IPX-Standardsocket-Adressierung verwenden. Für diese Transporte besteht eine Endpunktadresse aus einer Netzwerknummer, einer Knotenadresse und einer Socketnummer.
 ms.assetid: cf749ae7-ab17-4c60-b00c-b34e092c6431
 title: AF_IPX-Adressfamilie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21508b23541b489c11fbdc38a2ff8dcf4ad53e48
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3915eefab8e6fc6c18cf4e2b81835b8c6821d0cdd65f5683f509504d4d2c24bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118112803"
 ---
-# <a name="af_ipx-address-family"></a>AF- \_ IPX-Adressfamilie
+# <a name="af_ipx-address-family"></a>\_AF-IPX-Adressfamilie
 
-Die IPX-Adressfamilie definiert die Adressierungs Struktur für Protokolle, die die IPX-Standard socketadressierung verwenden. Für diese Transporte besteht eine Endpunkt Adresse aus einer Netzwerk Nummer, einer Knotenadresse und einer Socketnummer.
+Die IPX-Adressfamilie definiert die Adressierungsstruktur für Protokolle, die IPX-Standardsocket-Adressierung verwenden. Für diese Transporte besteht eine Endpunktadresse aus einer Netzwerknummer, einer Knotenadresse und einer Socketnummer.
 
-Die Netzwerk Nummer ist eine administrative Domäne und benennt in der Regel ein einzelnes Ethernet-oder tokenringsegment. Die Knotennummer ist die physische Adresse einer Station. Die Kombination aus Netz und Knoten bildet eine eindeutige Stationsadresse, die in der Welt als eindeutig angesehen wird. NET-und Knoten Nummern werden in ASCII-Text entweder in Block-oder gestrichelte Notation wie folgt dargestellt: "0101a040, 00001b498765" oder "01-01-a0-40, 00-00-1B-49-87-65". Führende Nullen müssen nicht vorhanden sein.
+Die Netzwerknummer ist eine Verwaltungsdomäne und benennt in der Regel ein einzelnes Ethernet- oder Tokenringsegment. Die Knotennummer ist die physische Adresse einer Station. Die Kombination aus "net" und "node" bildet eine eindeutige Stationsadresse, von der angenommen wird, dass sie weltweit eindeutig ist. Netz- und Knotennummern werden in ASCII-Text entweder in Block- oder Gestrichelter Notation dargestellt als: "0101a040,00001b498765" oder "01-01-a0-40,00-00-1b-49-87-65". Führende Nullen müssen nicht vorhanden sein.
 
-Die IPX-Socketnummer ist eine Netzwerk-/transportdienstnummer ähnlich einer TCP-Portnummer und sollte nicht mit dem Winsock-socketdeskriptor verwechselt werden. IPX-Socketnummern sind global für die Endstation und können nicht an bestimmte Netzwerk-/Knoten-Adressen gebunden werden. Wenn die Endstation beispielsweise über zwei Netzwerkschnittstellenkarten verfügt, kann ein gebundener Socket beide Karten senden und empfangen. Insbesondere Datagramm-Sockets würden Broadcast Datagramme auf beiden Karten empfangen.
+Die IPX-Socketnummer ist eine Netzwerk-/Transportdienstnummer ähnlich wie eine TCP-Portnummer und darf nicht mit dem Winsock-Socketdeskriptor verwechselt werden. IPX-Socketnummern sind global für die Endstation und können nicht an bestimmte Netzwerk-/Knotenadressen gebunden werden. Wenn die Endstation beispielsweise über zwei Netzwerkschnittstellenkarten verfügt, kann ein gebundener Socket auf beiden Karten senden und empfangen. Datagrammsockets würden insbesondere Broadcast-Datagramme auf beiden Karten empfangen.
 
 > [!Caution]  
-> SOCKADDR \_ IPX beträgt 14 Bytes und ist kürzer als die 16-Byte- [**sockaddr**](sockaddr-2.md) -Referenzstruktur. IPX/SPX-Implementierungen akzeptieren möglicherweise die Länge von 16 Byte und die tatsächliche Länge. Wenn Sie sockaddr \_ IPX und eine hart codierte Länge von 16 Bytes verwenden, kann die Implementierung davon ausgehen, dass Sie Zugriff auf die 2 Bytes nach ihrer Struktur hat.
+> SOCKADDR IPX ist 14 Byte lang und kürzer als die \_ 16-Byte-Sockaddr-Referenzstruktur. [](sockaddr-2.md) IPX/SPX-Implementierungen akzeptieren möglicherweise die Länge von 16 Byte sowie die echte Länge. Wenn Sie SOCKADDR IPX und eine hart codierte Länge von 16 Bytes verwenden, kann die Implementierung davon ausgehen, dass sie Zugriff auf die 2 Bytes hat, die Ihrer Struktur \_ folgen.
 
  
 
@@ -28,10 +28,10 @@ Die IPX-Socketnummer ist eine Netzwerk-/transportdienstnummer ähnlich einer TCP
 
 | Feld           | Wert                                    |
 |-----------------|------------------------------------------|
-| **Sa- \_ Familie**  | Adressfamilie AF \_ IPX in der Host Reihenfolge.    |
-| **Sa \_ netnum**  | IPX-Netzwerk Bezeichner in der Netzwerk Reihenfolge |
-| **Sa- \_ nodenum** | Station-Knotenadresse, rechts geleert.     |
-| **Sa- \_ Socket**  | IPX-Socketnummer in der Netzwerk Reihenfolge      |
+| **sa \_ family**  | Adressfamilie AF \_ IPX in Host reihenfolge.    |
+| **Sa \_ netnum**  | IPX-Netzwerkbezeichner in Netzwerk reihenfolge. |
+| **\_Sa-Nodenum** | Adresse des Stationsknotens, rechts geleert.     |
+| **\_Sa-Socket**  | IPX-Socketnummer in Netzwerk reihenfolge.      |
 
 
 

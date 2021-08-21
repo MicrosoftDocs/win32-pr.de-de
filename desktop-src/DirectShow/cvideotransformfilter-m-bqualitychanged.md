@@ -1,7 +1,7 @@
 ---
-description: Boolescher Wert, der angibt, ob der Filter Frames gelöscht hat. Diese Member-Variable steuert, wann der Filter EC- \_ Qualitäts \_ Änderungs Ereignisse sendet.
+description: Boolescher Wert, der angibt, ob der Filter Frames gelöscht hat. Diese Membervariable steuert, wann der Filter EC \_ QUALITY \_ CHANGE-Ereignisse sendet.
 ms.assetid: fc85c6a8-b849-4acd-bcd7-49274c8ceb58
-title: 'Cvideotransformfilter:: m_bQualityChanged Member (vtrans. h)'
+title: CVideoTransformFilter::m_bQualityChanged-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6a40906a04a385d58e06a505195e9d61f07b349b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 60cf48188a4de7fe244bff2d008b3a27bd5824870aff52ee0647fbe2ad55c2d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155864"
 ---
-# <a name="cvideotransformfilterm_bqualitychanged-member"></a>Cvideotransformfilter:: m \_ bqualitychanged-Member
+# <a name="cvideotransformfilterm_bqualitychanged-member"></a>CVideoTransformFilter::m \_ bQualityChanged-Member
 
-Boolescher Wert, der angibt, ob der Filter Frames gelöscht hat. Diese Member-Variable steuert, wann der Filter [**EC- \_ Qualitäts \_ Änderungs**](ec-quality-change.md) Ereignisse sendet.
+Boolescher Wert, der angibt, ob der Filter Frames gelöscht hat. Diese Membervariable steuert, wann der Filter [**EC \_ QUALITY \_ CHANGE-Ereignisse**](ec-quality-change.md) sendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bQualityChanged;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bQualityChanged;
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

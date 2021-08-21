@@ -122,7 +122,7 @@ Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | True                            |
-| Is-Single-Valued       | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -143,7 +143,7 @@ Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | True                            |
-| Is-Single-Valued       | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -164,7 +164,7 @@ Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | True                            |
-| Is-Single-Valued       | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -185,7 +185,7 @@ Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | True                            |
-| Is-Single-Valued       | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

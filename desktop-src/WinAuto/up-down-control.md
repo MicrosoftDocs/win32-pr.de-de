@@ -1,30 +1,30 @@
 ---
-title: Up-Down-Steuer Element (MSAA-Benutzeroberflächen Element-Referenz)
-description: Ein auf-ab-Steuerelement, das auch als Dreh Steuerelement bezeichnet wird, kombiniert ein paar von Schaltflächen, die als Pfeile mit einem Buddy-Bearbeitungs Steuerelement angezeigt werden Durch Klicken auf die Pfeile wird der Wert im Bearbeitungs Steuerelement erhöht oder verringert.
+title: Up-Down-Steuerelement (MSAA UI-Elementreferenz)
+description: Ein Auf-Ab-Steuerelement, auch als Drehsteuerelement bezeichnet, kombiniert ein Als Pfeile angezeigtes Schaltflächenpaar mit einem Bearbeitungssteuerelement. Durch Klicken auf die Pfeile wird der Wert im Bearbeitungssteuerelement erhöht oder dekrementiert.
 ms.assetid: 45e56c0f-4ac6-4731-b9a6-be4613bf40ae
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fd2d28acc4c14a89ec73f5994ed0af47202145a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 52b9475d8bbca24d2bf536a4eb9a9decf078297e788a37aa4d8560029a67e50e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118114625"
 ---
-# <a name="up-down-control-msaa-ui-element-reference"></a>Up-Down-Steuer Element (MSAA-Benutzeroberflächen Element-Referenz)
+# <a name="up-down-control-msaa-ui-element-reference"></a>Up-Down-Steuerelement (MSAA UI-Elementreferenz)
 
 > [!Note]  
-> In diesem Thema **werden auf-ab-Steuer** Element Objekten für den MSAA-Benutzeroberflächen-Element Verweis beschrieben. Informationen zum Erstellen von **auf-ab-Steuer** Element Objekten in verschiedenen Benutzeroberflächen-Frameworks werden hier nicht beschrieben. Weitere Informationen finden Sie in der API-Referenz Dokumentation für das von Ihnen verwendete UI-Framework.
+> In diesem Thema werden **Up-Down Control-Objekte** für die MSAA UI-Elementreferenz beschrieben. Das Erstellen von **Up-Down-Steuerelementobjekten** in verschiedenen Benutzeroberflächenframeworks wird hier nicht beschrieben. Informationen zum verwendeten BENUTZERoberflächenframework finden Sie in der API-Referenzdokumentation.
 
  
 
-Ein auf-ab-Steuerelement, das auch als Dreh Steuerelement bezeichnet wird, kombiniert ein paar von Schaltflächen, die als Pfeile mit einem Buddy-Bearbeitungs Steuerelement angezeigt werden Durch Klicken auf die Pfeile wird der Wert im Bearbeitungs Steuerelement erhöht oder verringert.
+Ein Auf-Ab-Steuerelement, auch als Drehsteuerelement bezeichnet, kombiniert ein Als Pfeile angezeigtes Schaltflächenpaar mit einem Bearbeitungssteuerelement. Durch Klicken auf die Pfeile wird der Wert im Bearbeitungssteuerelement erhöht oder dekrementiert.
 
-Der Fenster Klassenname für ein auf-ab-Steuerelement ist eine UpDown- \_ Klasse, die in "commctrl. h" als "msctls \_ updown32" definiert ist.
+Der Fensterklassenname für ein Auf-Ab-Steuerelement ist UPDOWN \_ CLASS, die in Commctrl.h als "msctls \_ updown32" definiert ist.
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Ein auf-ab-Steuerelement unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Ein Auf-Ab-Steuerelement unterstützt die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 -   [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 -   [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
@@ -33,30 +33,30 @@ Ein auf-ab-Steuerelement unterstützt die folgenden [**IAccessible**](/windows/d
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Ein auf-ab-Steuerelement unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften:
+Ein Auf-Ab-Steuerelement unterstützt die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
 | Eigenschaft                                                                 | Kommentare                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_accChild erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **childCount** -Eigenschaft ist "2" (die Pfeil Schaltflächen nach oben und nach unten).                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [**\_accHelp erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [**\_accHelpTopic erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name** -Eigenschaft für das auf-ab-Steuerelement wird aus dem Fenster Text (oder der Beschriftung) des Steuer Elements abgerufen. Dieser Text wird nicht mit dem auf-ab-Steuerelement angezeigt, sodass Server Entwickler sinnvollen Text in der Ressourcen Definitions Anweisung des Steuer Elements angeben müssen, damit Benutzer von Client Dienstprogrammen das Steuerelement identifizieren können. Die **Name** -Eigenschaft für die Schaltfläche mit dem Pfeil nach oben im auf-ab-Steuerelement ist "More", und die **Name** -Eigenschaft für die untere Pfeil Schaltfläche ist "less". |
-| [**\_accParent erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die **Parent** -Eigenschaft des auf-ab-Steuer Elements ist ein Fenster ( [**Rollen \_ System \_ Fenster**](object-roles.md) ), das das Steuerelement umgibt und die gleiche **Name** -Eigenschaft und den Fenster Klassennamen wie das Steuerelement aufweist. Die über **geordnete** Eigenschaft der Pfeil Schaltflächen nach oben und nach unten ist das auf-ab-Steuerelement Objekt.                                                                                                                                                    |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role** -Eigenschaft für das auf-ab-Steuerelement Objekt ist [**Rollen \_ System- \_ SpinButton**](object-roles.md). Die **Role** -Eigenschaft für die Pfeil Schaltflächen ist [**Rollen \_ System- \_ PUSHBUTTON**](object-roles.md).                                                                                                                                                                                                                          |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die State-Eigenschaft für das auf-ab-Steuerelement Objekt hat einen der folgenden [Werte](object-state-constants.md): Zustands System mit [**Fokus, \_ \_ Fokus**](object-state-constants.md) \| [**\_ \_ verwendbar**](object-state-constants.md)<br/>                                                                                                                                                                                      |
-| [**\_accValue erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accChild**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **ChildCount-Eigenschaft** ist "2" (die Pfeilschaltflächen nach oben und unten).                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accHelp**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accHelpTopic**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name-Eigenschaft** für das Up-Down-Steuerelementobjekt wird aus dem Fenstertext (oder der Beschriftung) des Steuerelements abgerufen. Dieser Text wird nicht mit dem Up-Down-Steuerelement angezeigt, sodass Serverentwickler in der Ressourcendefinitions-Anweisung des Steuerelements aussagekräftigen Text bereitstellen müssen, damit Benutzer von Clienthilfsprogrammen das Steuerelement identifizieren können. Die **Name-Eigenschaft** für die Schaltfläche mit dem oberen Pfeil im Steuerelement nach oben ist "More", und die **Name-Eigenschaft** für die Schaltfläche mit dem unteren Pfeil ist "Less". |
+| [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die **Parent-Eigenschaft** des Auf-Ab-Steuerelements ist ein Fenster ( [**ROLE SYSTEM \_ \_ WINDOW**](object-roles.md) ), das das Steuerelement umschließt und über die gleiche **Name-Eigenschaft** und den gleichen Fensterklassennamen wie das Steuerelement verfügt. Die **Parent-Eigenschaft** der Nach-oben- und Nach-unten-Pfeilschaltflächen ist das Up-Down-Steuerelementobjekt.                                                                                                                                                    |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role-Eigenschaft** für das Up-Down-Steuerelementobjekt ist [**ROLE SYSTEM \_ \_ SPINBUTTON.**](object-roles.md) Die **Role-Eigenschaft** für die Pfeilschaltflächen ist [**ROLE SYSTEM \_ \_ PUSHBUTTON.**](object-roles.md)                                                                                                                                                                                                                          |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die State-Eigenschaft für das Up-Down-Steuerelementobjekt ist einer der folgenden [Werte:](object-state-constants.md)[**STATE SYSTEM \_ \_ FOCUSED**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSABLE**](object-state-constants.md)<br/>                                                                                                                                                                                      |
+| [**get \_ accValue**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
 
  
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
-Microsoft Active Accessibility macht das Steuerelement "Buddy Edit" als separates Objekt verfügbar.
+Microsoft Active Accessibility macht das Bearbeitungssteuerelement als separates Objekt verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

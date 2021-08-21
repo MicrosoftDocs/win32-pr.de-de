@@ -377,7 +377,7 @@ HRESULT put_SecurityDescriptor(
 **UTCTime**
 </dt> <dd> <dl>
 
-Ein Datum des **VT \_ DATE-Typs,** ausgedrückt im koordinierte Weltzeit (UTC).
+Ein Datum des **VT \_ DATE-Typs,** ausgedrückt koordinierte Weltzeit UTC-Format.
 
 <dt>
 
@@ -422,7 +422,7 @@ Die [**IADsPropertyValue-Eigenschaften**](/windows/desktop/api/Iads/nn-iads-iads
 | **ADSTYPE \_ OCTET \_ STRING**               | **OctetString**                                         |
 | **ADSTYPE \_ UTC \_ TIME**                   | **UTCTime**                                             |
 | **ADSTYPE \_ LARGE \_ INTEGER**              | **LargeInteger**                                        |
-| **ADSTYPE \_ \_ NT-SICHERHEITSDESKRIPTOR \_**    | **SecurityDescriptor**                                  |
+| **ADSTYPE \_ NT \_ SECURITY \_ DESCRIPTOR**    | **SecurityDescriptor**                                  |
 
 
 
@@ -599,7 +599,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

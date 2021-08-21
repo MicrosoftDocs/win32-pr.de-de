@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut "mso-Wrap-Distance-right"
-description: VML-Attribut "mso-Wrap-Distance-right"
+title: VML-MSO-Wrap-Distance-Right-Attribut
+description: VML-MSO-Wrap-Distance-Right-Attribut
 ms.assetid: 2f0ec7a3-036e-4f45-a330-f8ddccb75791
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf38fc62812b0ce300e4d18067a0f2497233f2e7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3e7984c44325e62f3192725a52f2730b3ebcfc1daa78524855f8416fb840472d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118124320"
 ---
-# <a name="vml-mso-wrap-distance-right-attribute"></a>VML-Attribut "mso-Wrap-Distance-right"
+# <a name="vml-mso-wrap-distance-right-attribute"></a>VML-MSO-Wrap-Distance-Right-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Abstand zwischen dem rechten Rand der Form und dem Text, der diese umschließt. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Abstand von der rechten Seite der Form zu dem Text, der ihn umschließt. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,17 +28,17 @@ Definiert den Abstand zwischen dem rechten Rand der Form und dem Text, der diese
 
 **Tagsyntax**
 
-<v: *Element* Style = "mso-Wrap-Distance-right: *Expression* " >
+<v: *element* style="mso-wrap-distance-right: *expression* ">
 
 **Anmerkungen**
 
-Beachten Sie, dass sich dieses Attribut vom CSS **Margin** -Attribut unterscheidet. Der **Rand** ändert den Ursprung der Form, sodass er die Randbereiche einschließt, aber der Umbruch Abstand in Microsoft Office ändert nicht den Ursprung der Form.
+Beachten Sie, dass sich dieses Attribut vom CSS **Margin-Attribut** unterscheidet. **Der Rand** ändert den Ursprung der Form, um die Randbereiche einzuschließen, aber der Umbruchabstand in Microsoft Office ändert nicht den Ursprung der Form.
 
 *Microsoft Office Extensions-Attribut*
 
 **Beispiel**
 
-Die Form hat einen rechten Umbruch Abstand von 10 Punkten.
+Die Form weist einen rechten Umbruchabstand von 10 Punkten auf.
 
 
 ```HTML
@@ -52,6 +52,6 @@ Die Form hat einen rechten Umbruch Abstand von 10 Punkten.
 
 
 
- 
+ 
 
- 
+ 

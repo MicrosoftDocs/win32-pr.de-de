@@ -4,7 +4,7 @@ description: Gibt an, welcher Port vom Verzeichnisdienst zum Lauschen auf LDAP-A
 ms.assetid: bed80aeb-3fc2-4065-92df-1f387982848e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Port-LDAP-Attributs
+- MS-DS-Port-LDAP-Attribut AD-Schema
 - AD-Schema des msDS-PortLDAP-Attributs
 topic_type:
 - apiref
@@ -35,7 +35,7 @@ Gibt an, welcher Port vom Verzeichnisdienst zum Lauschen auf LDAP-Anforderungen 
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1859              |
-| System-Id-Guid    | 977225c1-5bdf-42b7-b6db-c3af077f558f |
+| System-ID-GUID    | 977225c1-5bdf-42b7-b6db-c3af077f558f |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -53,7 +53,7 @@ Gibt an, welcher Port vom Verzeichnisdienst zum Lauschen auf LDAP-Anforderungen 
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Is-Single-Valued       | True                                     |
+| Ist einwertig       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |

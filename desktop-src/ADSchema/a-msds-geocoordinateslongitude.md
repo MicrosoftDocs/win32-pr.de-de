@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Geokoordinaten-Längengrad Attribut
-description: Geokoordinaten für Standortdienste, insbesondere den Längengrad (in mikrogrades) des Office-oder Konferenzraums.
+title: ms-DS-GeoCoordinates-Longitude-Attribut
+description: Geokoordinaten für Standortdienste, insbesondere Längengrad (in Mikrodegrees) des Büro- oder Konferenzraums.
 ms.assetid: e2ac1833-9a5f-42fb-b338-e26937419f69
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Geokoordinaten-Längengrad Attribut AD-Schema
-- AD-Schema des msDS-geocoordinateslongitude-Attributs
+- MS-DS-GeoCoordinates-Longitude-Attribut AD-Schema
+- MSDS-GeoCoordinatesLongitude-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 036ff3b4088413f8641028c9c76e708a9a47c2ea
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 455b03e0f9122ab49353f5fff3dcd5e91cb70c4191ca11c83534456b8bd79891
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118426708"
 ---
-# <a name="ms-ds-geocoordinates-longitude-attribute"></a>ms-DS-Geokoordinaten-Längengrad Attribut
+# <a name="ms-ds-geocoordinates-longitude-attribute"></a>ms-DS-GeoCoordinates-Longitude-Attribut
 
-Geokoordinaten für Standortdienste, insbesondere den Längengrad (in mikrogrades) des Office-oder Konferenzraums.
+Geokoordinaten für Standortdienste, insbesondere Längengrad (in Mikrodegrees) des Büro- oder Konferenzraums.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Geokoordinaten-Längengrad       |
-| LDAP-Display-Name | MSDS-geocoordinateslängen Grad         |
+| CN                | ms-DS-GeoCoordinates-Longitude       |
+| Ldap-Anzeigename | msDS-GeoCoordinatesLongitude         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2185              |
-| System-ID-GUID    | 94c42110-bae4-4cea-8577-af813af5da25 |
+| System-Id-Guid    | 94c42110-bae4-4cea-8577-af813af5da25 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -53,10 +53,10 @@ Geokoordinaten für Standortdienste, insbesondere den Längengrad (in mikrograde
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | Richtig                                                 |
+| Is-Single-Valued       | True                                                 |
+| Ist indiziert             | True                                                 |
 | Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000001                                           |

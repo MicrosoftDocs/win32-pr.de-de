@@ -1,6 +1,6 @@
 ---
-title: CFSTR_DSPROPERTYPAGEINFO (DSClient. h)
-description: Das cfstr \_ dspropertypageinfo-Zwischenablage Format bietet einen HGLOBAL-Wert, der eine dspropertypageinfo-Struktur enthält.
+title: CFSTR_DSPROPERTYPAGEINFO (DSClient.h)
+description: Das CFSTR \_ DSPROPERTYPAGEINFO-Zwischenablageformat stellt ein HGLOBAL bereit, das eine DSPROPERTYPAGEINFO-Struktur enthält.
 ms.assetid: 84ed1322-fee3-44ee-873e-57586261ff62
 ms.tgt_platform: multiple
 topic_type:
@@ -13,26 +13,26 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 259c9addbb3ee41c7b12cd7ea77eb8393b69daaf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 32bf887c7f37c7eadc50cd0a0d49a00c887e6f8adf4c0f3cca81bb748ec63b31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118023327"
 ---
-# <a name="cfstr_dspropertypageinfo"></a>cfstr \_ dspropertypageinfo
+# <a name="cfstr_dspropertypageinfo"></a>CFSTR \_ DSPROPERTYPAGEINFO
 
 <dl> <dt>
 
-<span id="CFSTR_DSPROPERTYPAGEINFO"></span><span id="cfstr_dspropertypageinfo"></span>**cfstr \_ dspropertypageinfo**
+<span id="CFSTR_DSPROPERTYPAGEINFO"></span><span id="cfstr_dspropertypageinfo"></span>**CFSTR \_ DSPROPERTYPAGEINFO**
 </dt> <dd> <dl> <dt>
 
-"Dsproppageinfo"
+"DsPropPageInfo"
 </dt> <dt>
 
 
 
-Das **cfstr \_ dspropertypageinfo** -Zwischenablage Format bietet einen **HGLOBAL** -Wert, der eine [**dspropertypageinfo**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo) -Struktur enthält. Die **dspropertypageinfo** -Struktur enthält die optionale Zeichenfolge, die die Erweiterung den **adminpropertysheet** -und/oder **shellpropertysheet** -Parameterwerten hinzugefügt hat, als die Erweiterung registriert wurde. Weitere Informationen zur Festlegung dieser Zeichenfolge finden Sie unter [Registrieren des COM-Objekts der Eigenschaften Seite in einem Anzeigespezifizierer](registering-the-property-page-com-object-in-a-display-specifier.md).
+Das **CFSTR \_ DSPROPERTYPAGEINFO-Zwischenablageformat** stellt ein **HGLOBAL** bereit, das eine [**DSPROPERTYPAGEINFO-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo) enthält. Die **DSPROPERTYPAGEINFO-Struktur** enthält die optionale Zeichenfolge, die die Erweiterung den **Parameterwerten adminPropertySheet** und/oder **shellPropertySheet** hinzugefügt hat, als die Erweiterung registriert wurde. Weitere Informationen zum Festlegen dieser Zeichenfolge finden Sie unter [Registrieren des COM-Objekts der Eigenschaftenseite in einem Anzeigespezifizierer.](registering-the-property-page-com-object-in-a-display-specifier.md)
 
 
 </dt> </dl> </dd> </dl>
@@ -45,7 +45,7 @@ Das **cfstr \_ dspropertypageinfo** -Zwischenablage Format bietet einen **HGLOBA
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                        |
-| Header<br/>                   | <dl> <dt>DSClient. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>DSClient.h</dt> </dl> |
 
 
 
@@ -53,10 +53,10 @@ Das **cfstr \_ dspropertypageinfo** -Zwischenablage Format bietet einen **HGLOBA
 
 <dl> <dt>
 
-[**Dspropertypageinfo**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo)
+[**DSPROPERTYPAGEINFO**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo)
 </dt> <dt>
 
-[Registrieren des COM-Objekts der Eigenschaften Seite in einem Anzeigespezifizierer](registering-the-property-page-com-object-in-a-display-specifier.md)
+[Registrieren des COM-Objekts der Eigenschaftenseite in einem Anzeigespezifizierer](registering-the-property-page-com-object-in-a-display-specifier.md)
 </dt> </dl>
 
  

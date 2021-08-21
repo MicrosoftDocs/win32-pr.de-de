@@ -1,9 +1,9 @@
 ---
-title: TB_SAVERESTORE Meldung (kommstrg. h)
-description: Senden Sie diese Nachricht, um das Speichern oder Wiederherstellen eines Symbolleisten Zustands zu initiieren.
+title: TB_SAVERESTORE Meldung (Commctrl.h)
+description: Senden Sie diese Meldung, um das Speichern oder Wiederherstellen eines Symbolleistenzustands zu initiieren.
 ms.assetid: 59f51d07-cd08-4d6f-9d19-614064ba6f20
 keywords:
-- Windows-Steuerelemente für TB_SAVERESTORE Meldung
+- TB_SAVERESTORE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e87e4ddbed87e81a88c8711c9931dcf95cf9e59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 94d04c16fda40bf66736431a684398eddf313529c669cc6db9ec49fbaad4f6f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168023"
 ---
-# <a name="tb_saverestore-message"></a>TB \_ saverestore-Nachricht
+# <a name="tb_saverestore-message"></a>\_TB SAVERESTORE-Nachricht
 
-Senden Sie diese Nachricht, um das Speichern oder Wiederherstellen eines Symbolleisten Zustands zu initiieren.
+Senden Sie diese Meldung, um das Speichern oder Wiederherstellen eines Symbolleistenzustands zu initiieren.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Senden Sie diese Nachricht, um das Speichern oder Wiederherstellen eines Symboll
 *wParam* 
 </dt> <dd>
 
-Flag zum Speichern oder wiederherstellen. Wenn dieser Parameter **true** ist, werden die Informationen gespeichert. Wenn der Wert **false** ist, werden die Informationen wieder hergestellt.
+Speicher- oder Wiederherstellungsflag. Wenn dieser Parameter **TRUE** ist, werden die Informationen gespeichert. Wenn false **ist,** werden die Informationen wiederhergestellt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**tbsaveparameams**](/windows/win32/api/commctrl/ns-commctrl-tbsaveparamsa) -Struktur, die den Registrierungsschlüssel, den Unterschlüssel und den Wert Namen für die Statusinformationen der Symbolleiste angibt.
+Zeiger auf eine [**TBSAVEPARAMS-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tbsaveparamsa) die den Registrierungsschlüssel, den Unterschlüssel und den Wertnamen für die Symbolleistenzustandsinformationen angibt.
 
 </dd> </dl>
 
@@ -49,11 +49,11 @@ Ein Zeiger auf eine [**tbsaveparameams**](/windows/win32/api/commctrl/ns-commctr
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Damit diese Meldung in Version 4,72 und früher zum Speichern oder Wiederherstellen einer Symbolleiste verwendet werden kann, muss das übergeordnete Fenster des Toolbar-Steuer Elements einen Handler für den [TBN \_ getbuttoninfo](tbn-getbuttoninfo.md) -Benachrichtigungs Code implementieren. Diese Benachrichtigung wird von der Symbolleiste ausgegeben, um Informationen zu jeder Schaltfläche abzurufen, während Sie wieder hergestellt wird.
+Für Version 4.72 und früher muss das übergeordnete Fenster des Symbolleistensteuerelements einen Handler für den [TBN \_ GETBUTTONINFO-Benachrichtigungscode](tbn-getbuttoninfo.md) implementieren, um diese Meldung zum Speichern oder Wiederherstellen einer Symbolleiste zu verwenden. Die Symbolleiste gibt diese Benachrichtigung aus, um Informationen zu jeder Schaltfläche abzurufen, während sie wiederhergestellt wird.
 
-Version 5,80 enthält eine neue Option zum Speichern/Wiederherstellen. Zu Beginn des Vorgangs wird für die Anwendung eine TBN-oder [TBN- \_ Wiederherstellungs](tbn-restore.md) Benachrichtigung angezeigt, sobald die Schaltfläche gespeichert oder wieder hergestellt wird. [ \_ ](tbn-save.md) Um diese Option verwenden zu können, müssen Sie Benachrichtigungs Handler implementieren, um der Shell die Bitmap-und Zustandsinformationen zur Verfügung zu stellen, die Sie zum erfolgreichen speichern oder Wiederherstellen des Toolbar-Zustands benötigen.
+Version 5.80 enthält eine neue Speicher-/Wiederherstellungsoption. Zu Beginn des Prozesses und wenn jede Schaltfläche gespeichert oder wiederhergestellt wird, erhält Ihre Anwendung eine [TBN \_ SAVE-](tbn-save.md) oder [TBN \_ RESTORE-Benachrichtigung.](tbn-restore.md) Um diese Option verwenden zu können, müssen Sie Benachrichtigungshandler implementieren, um der Shell die Bitmap- und Zustandsinformationen bereitzustellen, die sie zum erfolgreichen Speichern oder Wiederherstellen des Symbolleistenzustands benötigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Version 5,80 enthält eine neue Option zum Speichern/Wiederherstellen. Zu Beginn
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Saverestorew** (Unicode) und **TB \_ saverestorea** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ SAVERESTOREW** (Unicode) und **TB \_ SAVERESTOREA** (ANSI)<br/>             |
 
 
 

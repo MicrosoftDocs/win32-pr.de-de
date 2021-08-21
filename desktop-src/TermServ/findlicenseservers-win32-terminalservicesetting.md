@@ -1,12 +1,12 @@
 ---
-title: Findlicenseservers-Methode der Win32_TerminalServiceSetting-Klasse
-description: Listet alle Remotedesktop-Lizenzserver und die Ermittlungsmethode auf.
+title: FindLicenseServers-Methode der Win32_TerminalServiceSetting Klasse
+description: Enumeriert alle Remotedesktop Lizenzserver und die Ermittlungsmethode.
 ms.assetid: 0de2ee6f-6c56-4293-84da-131b433c6a9d
 ms.tgt_platform: multiple
 keywords:
-- Findlicenseservers-Methode Remotedesktopdienste
-- Findlicenseservers-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, findlicenseservers-Methode
+- FindLicenseServers-Remotedesktopdienste
+- FindLicenseServers-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting klasse Remotedesktopdienste , FindLicenseServers-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b83376876009a691fed233cf723f04dcc3bc3c8e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 98af0d63c736e5bc82dd13d2abc94786634d7b92ba2c9a4628ae8ffd32a18b16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118130789"
 ---
-# <a name="findlicenseservers-method-of-the-win32_terminalservicesetting-class"></a>Findlicenseservers-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="findlicenseservers-method-of-the-win32_terminalservicesetting-class"></a>FindLicenseServers-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Listet alle Remotedesktop-Lizenzserver und die Ermittlungsmethode auf.
+Enumeriert alle Remotedesktop Lizenzserver und die Ermittlungsmethode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ uint32 FindLicenseServers(
 
 <dl> <dt>
 
-*Licenseserverslist* \[ vorgenommen\]
+*LicenseServersList* \[ out\]
 </dt> <dd>
 
-Die Liste der Win32-Objekte von " [**\_ zdiscoveredlicenseserver**](win32-tsdiscoveredlicenseserver.md) ". Jedes Objekt in der Ausgabeliste enthält den Namen des Remotedesktop Lizenzservers und die Ermittlungsmethode.
+Die Liste der [**Win32 \_ TSDiscoveredLicenseServer-Objekte.**](win32-tsdiscoveredlicenseserver.md) Jedes Objekt in der Ausgabeliste verfügt über den Namen des Remotedesktop Lizenzservers und die Ermittlungsmethode.
 
 </dd> <dt>
 
-*Anzahl* \[ vorgenommen\]
+*Anzahl* \[ out\]
 </dt> <dd>
 
-Die Gesamtanzahl der ermittelten Remotedesktop Lizenzserver in der Ausgabeliste.
+Die Gesamtanzahl der Remotedesktop lizenzservern in der Ausgabeliste.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 TerminalServices-Stammnamespace herzustellen, muss \\ die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -71,7 +71,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -91,7 +91,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

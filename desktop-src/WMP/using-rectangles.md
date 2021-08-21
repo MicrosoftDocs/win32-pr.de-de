@@ -4,26 +4,26 @@ description: Verwenden von Rechtecke
 ms.assetid: b3fc16b4-dc93-43c0-a97d-5234e36437c8
 keywords:
 - Visualisierungen, Rechtecke
-- benutzerdefinierte Visualisierungen, Rechtecke
-- Visualisierungen, Rendering-Funktion
-- benutzerdefinierte Visualisierungen, Rendering-Funktion
-- Rendering-Funktion, Rechtecke
+- Benutzerdefinierte Visualisierungen, Rechtecke
+- Visualisierungen, Renderfunktion
+- Benutzerdefinierte Visualisierungen, Renderfunktion
+- Renderfunktion, Rechtecke
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b48f16888d8e71c052d216a838683f2b7127e75
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 79dd46928ccf8f8a0a465fa71fbb6b1bc1b4f48cbdb5c37b4b93ffd21c78c6b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106338705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118117295"
 ---
 # <a name="using-rectangles-windows-media-player-sdk"></a>Verwenden von Rechtecke (Windows Media Player SDK)
 
-Rechtecke werden verwendet, um rechteckige Bereiche in Microsoft Windows anzugeben. Sie können in Ihrem Fenster viele Rechtecke erstellen, aber Windows Media Player die Werte eines Rechtecks über die [iwmpeffects:: Rendering](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects-render) -Funktion bereitstellt. Wenn das Plug-in mithilfe eines Fensters gerendert wird, ist das Rechteck der Client Bereich des Fensters. Dies wird als PRC-Rechteck bezeichnet und definiert das Rechteck, mit dem die Visualisierung in Windows Media Player angezeigt wird. Verwenden Sie dies häufig, um sicherzustellen, dass Sie nicht über die Blöcke der von Windows Media Player bereitgestellten Rechteck hinaus zeichnen.
+Rechtecke werden verwendet, um rechteckige Bereiche in Microsoft Windows anzugeben. Sie können viele Rechtecke in Ihrem Fenster erstellen, aber Windows Media Player stellt die Werte eines Rechtecks über die [IWMPEffects::Render-Funktion](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects-render) zur Verfügung. Wenn das Plug-In mithilfe eines Fensters gerendert wird, ist das Rechteck der Clientbereich des Fensters. Dies wird als prc-Rechteck bezeichnet und definiert das Rechteck, durch das Windows Media Player Ihre Visualisierung anzeigt. Verwenden Sie dies häufig, um sicherzustellen, dass Sie nicht über die Von Windows Media Player bereitgestellten Umfang des Rechtecks hinaus zeichnen.
 
-Ein Rechteck hat vier Werte, die es definieren. Sie sind Links, oben, rechts und unten. Die obere linke Ecke des Rechtecks wird von Links und oben definiert, und die untere rechte Ecke des Rechtecks wird von unten und rechts definiert.
+Ein Rechteck verfügt über vier Werte, die es definieren. Sie sind links, oben, rechts und unten. Die obere, linke Ecke des Rechtecks wird durch links und oben definiert, und die untere rechte Ecke des Rechtecks wird von unten und rechts definiert.
 
-Verwenden Sie den folgenden Code, um die Blöcke des Zeichnungs Rechtecks zu erhalten. Dies ist erforderlich, da der Benutzer die Größe des Fensters ändern kann, und Sie möchten sicher sein, dass Sie immer in einem Bereich zeichnen, den der Benutzer sehen kann.
+Verwenden Sie den folgenden Code, um die Umfang Ihres Zeichnungsrechtecks abzurufen. Dies ist erforderlich, da der Benutzer die Größe des Fensters ändern kann und Sie sicherstellen möchten, dass Sie immer in einem Bereich zeichnen, der dem Benutzer angezeigt wird.
 
 
 ```C++
@@ -36,7 +36,7 @@ int bottomside = prc->bottom;
 
 
 
-Wenn Sie z. b. von links nach rechts am oberen Rand des Fensters zeichnen möchten, verwenden Sie Code wie den folgenden:
+Verwenden Sie beispielsweise Code wie den folgenden, um von links nach rechts oben im Fenster zu zeichnen:
 
 
 ```C++
@@ -51,7 +51,7 @@ Wenn Sie z. b. von links nach rechts am oberen Rand des Fensters zeichnen möcht
 
 <dl> <dt>
 
-[**Implementieren von Rendering**](implementing-render.md)
+[**Implementieren von Rendern**](implementing-render.md)
 </dt> </dl>
 
  

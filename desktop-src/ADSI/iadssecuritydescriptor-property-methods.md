@@ -1,10 +1,10 @@
 ---
 title: IADsSecurityDescriptor-Eigenschaftsmethoden (Iads.h)
-description: Die Eigenschaftenmethoden der IADsSecurityDescriptor-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
+description: Die Eigenschaftenmethoden der IADsSecurityDescriptor-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: e0c50740-de98-4913-b3df-6fd53263bcc8
 ms.tgt_platform: multiple
 keywords:
-- IADsSecurityDescriptor-Eigenschaftsmethoden ADSI
+- IADsSecurityDescriptor-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -52,7 +52,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118427626"
 ---
-# <a name="iadssecuritydescriptor-property-methods"></a>IADsSecurityDescriptor-Eigenschaftsmethoden
+# <a name="iadssecuritydescriptor-property-methods"></a>IADsSecurityDescriptor-Eigenschaftenmethoden
 
 Die Eigenschaftenmethoden der [**IADsSecurityDescriptor-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssecuritydescriptor) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
@@ -91,7 +91,7 @@ HRESULT put_Control(
 **DaclDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des BOOL-Typs, das angibt, ob die DACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden. Wenn der Ersteller eines Objekts beispielsweise keine DACL angibt, empfängt das Objekt die Standard-DACL vom Zugriffstoken des Erstellers. Dieses Flag kann sich darauf auswirken, wie das System die DACL in Bezug auf die ACE-Vererbung behandelt. Das System ignoriert dieses Flag, wenn das \_ SE DACL \_ PRESENT-Flag nicht festgelegt ist.
+Ein Flag des BOOL-Typs, das angibt, ob die DACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter der Sicherheitsbeschreibung bereitgestellt zu werden. Wenn der Ersteller eines Objekts beispielsweise keine DACL an gibt, empfängt das Objekt die Standard-DACL aus dem Zugriffstoken des Erstellers. Dieses Flag kann sich darauf auswirken, wie das System die DACL in Bezug auf die ACE-Vererbung behandelt. Das System ignoriert dieses Flag, wenn SE \_ DACL \_ PRESENT-Flag nicht festgelegt ist.
 
 <dt>
 
@@ -119,7 +119,7 @@ HRESULT put_DaclDefaulted(
 **Discretionaryacl**
 </dt> <dd> <dl>
 
-Dacl (Discretionary Access Control List), die die Zugriffstypen angibt, die dem Objekt für angegebene Benutzer und Gruppen gewährt werden. Weitere Informationen zu DACLs finden Sie unter [NULL-DACLs und Leere DACLs.](/windows/desktop/AD/null-dacls-and-empty-dacls)
+DACL (Discretionary Access Control List), die die Zugriffstypen angibt, die dem Objekt für angegebene Benutzer und Gruppen gewährt werden. Weitere Informationen zu DACLs finden Sie unter [NULL-DACLs und Leere DACLs.](/windows/desktop/AD/null-dacls-and-empty-dacls)
 
 <dt>
 
@@ -175,7 +175,7 @@ HRESULT put_Group(
 **GroupDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des BOOL-Typs, das angibt, ob die Gruppendaten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden.
+Ein Flag des BOOL-Typs, das angibt, ob die Gruppendaten von einem Standardmechanismus abgeleitet sind, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden.
 
 <dt>
 
@@ -231,7 +231,7 @@ HRESULT put_Owner(
 **OwnerDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des BOOL-Typs, das angibt, dass die Besitzerdaten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden.
+Ein Flag des BOOL-Typs, das angibt, dass die Besitzerdaten von einem Standardmechanismus abgeleitet werden, anstatt explizit vom ursprünglichen Anbieter der Sicherheitsbeschreibung bereitgestellt zu werden.
 
 <dt>
 
@@ -259,7 +259,7 @@ HRESULT put_OwnerDefaulted(
 **Revision**
 </dt> <dd> <dl>
 
-Revisionsebene des Sicherheitsdeskriptors. Dieser Wert stammt aus der [**Win32-ACL \_ REVISION \_ INFORMATION-Struktur.**](/windows/desktop/api/winnt/ns-winnt-acl_revision_information) Alle ACEs in einer ACL müssen auf der gleichen Revisionsebene sein.
+Revisionsebene der Sicherheitsbeschreibung. Dieser Wert wird aus der [**Win32-Struktur ACL \_ REVISION \_ INFORMATION**](/windows/desktop/api/winnt/ns-winnt-acl_revision_information) übernommen. Alle ACEs in einer ACL müssen auf der gleichen Revisionsebene sein.
 
 <dt>
 
@@ -287,7 +287,7 @@ HRESULT put_Revision(
 **SaclDefaulted**
 </dt> <dd> <dl>
 
-Ein Flag des BOOL-Typs, das angibt, dass die SACL von einem Standardmechanismus abgeleitet wird, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden. Dieses Flag kann sich auf die Verarbeitung der SACL durch das System in Bezug auf die ACE-Vererbung auswirken. Das System ignoriert dieses Flag, wenn das SE \_ SACL \_ PRESENT-Flag nicht festgelegt ist.
+Ein Flag des BOOL-Typs, das angibt, dass die SACL von einem Standardmechanismus abgeleitet ist, anstatt explizit vom ursprünglichen Anbieter des Sicherheitsdeskriptors bereitgestellt zu werden. Dieses Flag kann sich darauf auswirken, wie das System die SACL in Bezug auf die ACE-Vererbung behandelt. Das System ignoriert dieses Flag, wenn SE \_ SACL \_ PRESENT-Flag nicht festgelegt ist.
 
 <dt>
 
@@ -344,7 +344,7 @@ HRESULT put_SystemAcl(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird veranschaulicht, wie sie einen vorhandenen Sicherheitsdeskriptor aufzählen.
+Das folgende Codebeispiel zeigt, wie sie einen vorhandenen Sicherheitsdeskriptor aufzählen.
 
 
 ```VB
@@ -391,7 +391,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

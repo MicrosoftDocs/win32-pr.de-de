@@ -93,11 +93,11 @@ Gibt die lokale IPv4-Adresse für das Präfix 6to4 an.
 In diesem Beispiel ist die Adresse des 6to4-Gateways 172.31.42.239. Sie benötigen Ihre eigene global routingfähige IPv4-Adresse, um 6to4 verwenden zu können.
 
 > [!Note]  
-> Die IP-Adresse 172.31.42.239 dient nur zu Beispielzwecken. Dies ist eine private Adresse und im Internet nicht global routingfähig.
+> Die IP-Adresse 172.31.42.239 wird nur zu Beispielzwecken verwendet. Dies ist eine private Adresse und im Internet nicht global routingfähig.
 
  
 
-Die global routingfähige 32-Bit-IPv4-Adresse wird mit dem 16-Bit-Präfix 2002::/16 kombiniert, um ein 48-Bit-IPv6-Adresspräfix für Ihren Standort zu bilden. In diesem Beispiel ist das 6to4-Standortpräfix 2002:ac1f:2aef::/48. Beachten Sie, dass ac1f:2aef die hexadezimale Codierung von 172.31.42.239 ist (natürlich verwenden Sie ein anderes Präfix basierend auf Ihrer eigenen global routingbaren IPv4-Adresse). Mit dem 6to4-Standortpräfix können Sie Adressen und Subnetzpräfixe innerhalb Ihres Standorts zuweisen.
+Die global routingfähige 32-Bit-IPv4-Adresse wird mit dem 16-Bit-Präfix 2002::/16 kombiniert, um ein 48-Bit-IPv6-Adresspräfix für Ihren Standort zu bilden. In diesem Beispiel ist das 6to4-Standortpräfix 2002:ac1f:2aef::/48. Beachten Sie, dass ac1f:2aef die hexadezimale Codierung von 172.31.42.239 ist (natürlich verwenden Sie ein anderes Präfix basierend auf Ihrer eigenen global routingbaren IPv4-Adresse). Mithilfe des 6to4-Standortpräfixes können Sie Adressen und Subnetzpräfixe innerhalb Ihres Standorts zuweisen.
 
 In diesem Beispiel wird davon ausgegangen, dass Sie das Subnetz 0 zum manuellen Konfigurieren einer 6to4-Adresse auf Ihrem 6to4-Gatewaycomputer verwenden und dass Sie Subnetz 1 zum automatischen Konfigurieren von Adressen in Ihrem Ethernet-Netzwerksegment verwenden. Es sind jedoch andere Optionen möglich.
 
@@ -117,7 +117,7 @@ In diesem Beispiel wird davon ausgegangen, dass Sie das Subnetz 0 zum manuellen 
 
     Der **Befehl ipv6 adu** führt eine Adressaktualisierung durch. Sie kann verwendet werden, um eine Adresse auf einer Schnittstelle hinzuzufügen, zu entfernen oder zu aktualisieren. In diesem Fall wird die 6to4-Adresse des Computers konfiguriert.
 
-    Das Argument 2/2002:ac1f:2aef::ac1f:2aef gibt sowohl die Schnittstelle als auch die Adresse an. Sie erfordert die Konfiguration der Adresse 2002:ac1f:2aef::ac1f:2aef auf Schnittstelle \# 2. Die Adresse wird mit dem Standortpräfix 2002:ac1f:2aef::/48, dem Subnetz 0 erstellt, um das Subnetzpräfix 2002:ac1f:2aef::/64 und einen 64-Bit-Schnittstellenbezeichner zu geben. Die gezeigte Konvention verwendet die IPv4-Adresse des Computers für den Schnittstellenbezeichner für Adressen, die Schnittstelle \# 2 zugewiesen sind. Für Ihre Verwendung sollte ac1f:2aef durch die hexadezimale Codierung Ihrer eigenen global routingbaren IPv4-Adresse ersetzt werden.
+    Das Argument 2/2002:ac1f:2aef::ac1f:2aef gibt sowohl die Schnittstelle als auch die Adresse an. Es muss die Adresse 2002:ac1f:2aef::ac1f:2aef auf Schnittstelle \# 2 konfiguriert werden. Die Adresse wird mit dem Standortpräfix 2002:ac1f:2aef::/48, Subnetz 0 erstellt, um das Subnetzpräfix 2002:ac1f:2aef::/64 und einen 64-Bit-Schnittstellenbezeichner zu geben. Die gezeigte Konvention verwendet die IPv4-Adresse des Computers für den Schnittstellenbezeichner für Adressen, die Schnittstelle \# 2 zugewiesen sind. Für Ihre Verwendung sollte ac1f:2aef durch die hexadezimale Codierung Ihrer eigenen global routingbaren IPv4-Adresse ersetzt werden.
 
 Die beiden vorangehenden Befehle sind ausreichend, um die Kommunikation mit anderen 6to4-Standorten zu ermöglichen. Sie können beispielsweise versuchen, die Microsoft 6to4-Website zu pingen:
 
@@ -127,13 +127,13 @@ Um die Kommunikation mit 6bone zu ermöglichen, müssen Sie einen standardmäßi
 
 **ipv6 rtu ::/0 2/::131.107.152.32 pub life 1800**
 
-Der **Befehl ipv6 rtu führt** eine Routingtabellenaktualisierung durch und erstellt in diesem Fall eine Standardroute zum 6to4-Relay.
+Der **Befehl ipv6 rtu** führt eine Routingtabellenaktualisierung durch und erstellt in diesem Fall eine Standardroute zum 6to4-Relay.
 
 Das Argument ::/0 ist das Routenpräfix. Das Präfix der Länge 0 (null) gibt an, dass es sich um eine Standardroute handelt.
 
-Das Argument 2/::131.107.152.32 gibt den Nächsten-Hop-Nachbarn für dieses Präfix an. Es ist erforderlich, dass Pakete, die mit dem Präfix übereinstimmen, mithilfe von Schnittstelle 2 an die Adresse ::131.107.152.32 weitergeleitet \# werden. Die Weiterleitung eines Pakets an ::131.107.152.32 an Schnittstelle 2 bewirkt, dass es mit einem v4-Header gekapselt und an \# 131.107.152.32 gesendet wird.
+Das Argument 2/::131.107.152.32 gibt den Nächsten-Hop-Nachbarn für dieses Präfix an. Es erfordert, dass Pakete, die mit dem Präfix übereinstimmen, mithilfe von Schnittstelle 2 an die Adresse ::131.107.152.32 weitergeleitet \# werden. Die Weiterleitung eines Pakets an ::131.107.152.32 an Schnittstelle 2 bewirkt, dass es mit einem v4-Header gekapselt und an \# 131.107.152.32 gesendet wird.
 
-Das Pub-Argument macht dies zu einer veröffentlichten Route. Da dies nur für Router relevant ist, hat dies keine Auswirkungen, bis das Routing aktiviert ist. Ebenso gilt die Gültigkeitsdauer von 30 Minuten nur, wenn das Routing aktiviert ist.
+Das pub-Argument macht dies zu einer veröffentlichten Route. Da dies nur für Router relevant ist, hat dies keine Auswirkungen, bis das Routing aktiviert ist. Ebenso gilt die Gültigkeitsdauer von 30 Minuten nur, wenn das Routing aktiviert ist.
 
 Sie sollten auf 6bone-Websites sowie auf 6to4-Websites zugreifen können. Sie können den folgenden Befehl verwenden, um dies zu testen:
 
@@ -157,7 +157,7 @@ Mit den nächsten drei Befehlen kann der 6to4-Gatewaycomputer als Router fungier
 
 **ipv6 ifc 4 forw adv**
 
-Der **ifc-Befehl ipv6** steuert Attribute einer Schnittstelle. Ein Router leitet Pakete weiter und sendet Routerankündigungen. In der Microsoft IPv6-Implementierung werden diese Schnittstellenattribute separat gesteuert.
+Der **befehl ipv6 ifc** steuert Attribute einer Schnittstelle. Ein Router leitet Pakete weiter und sendet Routerankündigungen. In der Microsoft IPv6-Implementierung werden diese Schnittstellenattribute separat gesteuert.
 
 Schnittstelle \# 2 ist für die Ankündigung nicht erforderlich, da es sich um eine Pseudoschnittstelle handelt.
 

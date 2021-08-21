@@ -116,7 +116,7 @@ Die **CIM \_ PowerSupply-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                 | BESCHREIBUNG                                                                                                                              |
+| Methode                                                                 | Beschreibung                                                                                                                              |
 |:-----------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
 | [**Zurücksetzen**](reset-method-in-class-cim-powersupply.md)                 | Fordert eine Zurücksetzung des logischen Geräts an. Nicht von WMI implementiert.<br/>                                                               |
 | [**SetPowerState**](setpowerstate-method-in-class-cim-powersupply.md) | Definiert den gewünschten Energiezustand für ein logisches Gerät und wann ein Gerät in diesen Zustand versetzt werden soll. Nicht von WMI implementiert.<br/> |
@@ -483,23 +483,23 @@ Das Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder die Regist
 
 <span id="The_driver_for_this_device_needs_a_resource_that_Windows_cannot_manage."></span><span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>
 
-<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die Windows verwaltet werden kann.** (5)
+<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die Windows nicht verwalten können.** (5)
 
 
 </dt> <dd>
 
-Der Treiber für das Gerät erfordert eine Ressource, die Windows verwaltet werden kann.
+Der Treiber für das Gerät erfordert eine Ressource, die Windows nicht verwalten können.
 
 </dd> <dt>
 
 <span id="The_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>
 
-<span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>**Die Startkonfiguration für dieses Gerät steht in Konflikt mit anderen Geräten.**  (6)
+<span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>**Die Startkonfiguration für dieses Gerät ist mit anderen Geräten in Konflikt.**  (6)
 
 
 </dt> <dd>
 
-Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
+Bei der Startkonfiguration für das Gerät tritt ein Konflikt mit anderen Geräten auf.
 
 </dd> <dt>
 
@@ -512,23 +512,23 @@ Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
 
 <span id="The_driver_loader_for_the_device_is_missing."></span><span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>
 
-<span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>**Das Treiberlader für das Gerät fehlt.** (8)
+<span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>**Das Treiberladeprogramm für das Gerät fehlt.** (8)
 
 
 </dt> <dd>
 
-Das Treiberladegerät für das Gerät fehlt.
+Das Treiberladeprogramm für das Gerät fehlt.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>
 
-<span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da die steuernde Firmware die Ressourcen für das Gerät falsch berichtet.** (9)
+<span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da die steuernde Firmware die Ressourcen für das Gerät falsch meldet.** (9)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht ordnungsgemäß. Die steuernde Firmware berichtet falsch über die Ressourcen für das Gerät.
+Das Gerät funktioniert nicht ordnungsgemäß. Die steuernde Firmware meldet fälschlicherweise die Ressourcen für das Gerät.
 
 </dd> <dt>
 
@@ -545,7 +545,7 @@ Das Gerät kann nicht gestartet werden.
 
 <span id="This_device_failed."></span><span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>
 
-<span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>**Fehler bei diesem Gerät.** (11)
+<span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>**Auf diesem Gerät ist ein Fehler aufgetreten.** (11)
 
 
 </dt> <dd>
@@ -578,18 +578,18 @@ Windows können die Ressourcen des Geräts nicht überprüfen.
 
 <span id="This_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>
 
-<span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>**Dieses Gerät funktioniert erst dann ordnungsgemäß, wenn Sie Ihren Computer neu starten.** (14)
+<span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>**Dieses Gerät kann erst ordnungsgemäß funktionieren, wenn Sie den Computer neu starten.** (14)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert erst dann ordnungsgemäß, wenn der Computer neu gestartet wird.
+Das Gerät kann erst ordnungsgemäß funktionieren, wenn der Computer neu gestartet wurde.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>
 
-<span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da wahrscheinlich ein Problem mit der erneuten Enumeration vor liegt.** (15)
+<span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da es wahrscheinlich ein Problem mit der erneuten Enumeration gibt.** (15)
 
 
 </dt> <dd>
@@ -611,7 +611,7 @@ Windows können nicht alle Ressourcen identifizieren, die das Gerät verwendet.
 
 <span id="This_device_is_asking_for_an_unknown_resource_type."></span><span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>
 
-<span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>**Dieses Gerät fragt nach einem unbekannten Ressourcentyp.** (17)
+<span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>**Dieses Gerät fordert einen unbekannten Ressourcentyp an.** (17)
 
 
 </dt> <dd>
@@ -633,7 +633,7 @@ Gerätetreiber müssen neu installiert werden.
 
 <span id="Failure_using_the_VxD_loader."></span><span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>
 
-<span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>**Fehler beim Verwenden des VxD-Ladeers.** (19)
+<span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>**Fehler beim Verwenden des VxD-Ladeprogramm.** (19)
 
 
 </dt> <dd></dd> <dt>
@@ -651,7 +651,7 @@ Die Registrierung ist möglicherweise beschädigt.
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>
 
-<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie ihre Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
+<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
 
 
 </dt> <dd>
@@ -673,7 +673,7 @@ Das Gerät ist deaktiviert.
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>
 
-<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie Ihre Hardwaredokumentation.** (23)
+<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardwaredokumentation.** (23)
 
 
 </dt> <dd>
@@ -695,23 +695,23 @@ Das Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß oder verfügt
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows wird dieses Gerät weiterhin eingerichtet.** (25)
+<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows richtet dieses Gerät noch ein.** (25)
 
 
 </dt> <dd>
 
-Windows wird das Gerät weiterhin eingerichtet.
+Windows richtet das Gerät noch ein.
 
 </dd> <dt>
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows wird dieses Gerät weiterhin eingerichtet.** (26)
+<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows richtet dieses Gerät noch ein.** (26)
 
 
 </dt> <dd>
 
-Windows wird das Gerät weiterhin eingerichtet.
+Windows richtet das Gerät noch ein.
 
 </dd> <dt>
 
@@ -739,23 +739,23 @@ Gerätetreiber sind nicht installiert.
 
 <span id="This_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>
 
-<span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen zur Verfügung hat.** (29)
+<span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen bereitgestellt hat.** (29)
 
 
 </dt> <dd>
 
-Das Gerät ist deaktiviert. Die Gerätefirmware hat nicht die erforderlichen Ressourcen zur Verfügung stellt.
+Das Gerät ist deaktiviert. Die Gerätefirmware hat nicht die erforderlichen Ressourcen bereitgestellt.
 
 </dd> <dt>
 
 <span id="This_device_is_using_an_Interrupt_Request__IRQ__resource_that_another_device_is_using."></span><span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>
 
-<span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>**Dieses Gerät verwendet eine IrQ-Ressource (Interrupt Request), die von einem anderen Gerät verwendet wird.** (30)
+<span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>**Dieses Gerät verwendet eine IRQ-Ressource (Interrupt Request), die von einem anderen Gerät verwendet wird.** (30)
 
 
 </dt> <dd>
 
-Das Gerät verwendet eine IRQ-Ressource, die ein anderes Gerät verwendet.
+Das Gerät verwendet eine IRQ-Ressource, die von einem anderen Gerät verwendet wird.
 
 </dd> <dt>
 
@@ -766,7 +766,7 @@ Das Gerät verwendet eine IRQ-Ressource, die ein anderes Gerät verwendet.
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht ordnungsgemäß. Windows die erforderlichen Gerätetreiber können nicht geladen werden.
+Das Gerät funktioniert nicht ordnungsgemäß. Windows können die erforderlichen Gerätetreiber nicht laden.
 
 </dd> </dl>
 
@@ -784,9 +784,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-True **gibt an,** dass das Gerät eine benutzerdefinierte Konfiguration verwendet.
+**True** gibt an, dass das Gerät eine benutzerdefinierte Konfiguration verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
@@ -799,12 +799,12 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft, dass alle Instanzen der Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
@@ -817,30 +817,30 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
 Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
 **Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen.
+Adresse oder andere identifizierende Informationen, um dem logischen Gerät einen eindeutigen Namen zu geben.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
@@ -853,24 +853,24 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt entfernt wird.
+True gibt an, dass der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt gelöscht wird.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Freiformzeichenfolge, die Informationen zum In der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und durchzuführende Korrekturmaßnahmen enthält.
+Eine Freiformzeichenfolge, die Informationen über den in der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und die auszuführenden Korrekturmaßnahmen enthält.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
@@ -883,16 +883,16 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
 Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**IsSw zeitsupply**
+**IsSw ppmSupply**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **boolescher Wert**
@@ -901,7 +901,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass es sich bei der Stromversorgung um eine Schalt- bzw. lineare Stromversorgung handelt.
+True gibt an, dass es sich bei der Stromversorgung um eine Schalt- oder lineare Stromversorgung handelt.
 
 </dd> <dt>
 
@@ -914,16 +914,16 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Letzter vom logischen Gerät gemeldeter Fehlercode.
+Der letzte vom logischen Gerät gemeldete Fehlercode.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -932,16 +932,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
+Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
 **PNPDeviceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -950,7 +950,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-Win32 Plug & Play Gerätebezeichner des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Win32 Plug & Play Gerätebezeichner des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 Beispiel: \* "PNP030b"
 
@@ -959,7 +959,7 @@ Beispiel: \* "PNP030b"
 **PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16 array**
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -967,7 +967,7 @@ Zugriffstyp: Schreibgeschützt
 
 Array der spezifischen energiebezogenen Funktionen eines logischen Geräts.
 
-Diese Eigenschaft wird von **CIM \_ LogicalDevice geerbt.**
+Diese Eigenschaft wird von **CIM \_ LogicalDevice** geerbt.
 
 <dt>
 
@@ -999,7 +999,7 @@ Diese Eigenschaft wird von **CIM \_ LogicalDevice geerbt.**
 
 </dt> <dd>
 
-Die Energieverwaltungsfeatures sind derzeit aktiviert, aber der genaue Funktionssatz ist unbekannt, oder die Informationen sind nicht verfügbar.
+Die Energieverwaltungsfunktionen sind derzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
 
 </dd> <dt>
 
@@ -1021,29 +1021,29 @@ Das Gerät kann seinen Energiezustand basierend auf der Nutzung oder anderen Kri
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten **CIM \_ LogicalDevice-Klasse** und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten **CIM \_ LogicalDevice-Klasse** und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von MOF-Klassen (Managed Object Format).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
 
 </dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Power-Bike unterstützt** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**PowerCycling unterstützt** (6)
 
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann mit dem *PowerState-Parameter* aufgerufen werden, der auf 5 (Power Cycle) festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wobei der *PowerState-Parameter* auf 5 (Power Cycle) festgelegt ist.
 
 </dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Timed Power On Supported** (7)
+<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>Timed Power On Supported (7) **(Zeitiertes Einschalten unterstützt** (7)
 
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wenn der *PowerState-Parameter* auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall für das Ein-/Aus-Setzen festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wobei der *PowerState-Parameter* für das Einschalten auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall festgelegt ist.
 
 </dd> </dl>
 
@@ -1058,9 +1058,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-If **TRUE**, the device can be power managed, that is, put into a power-save state. False **gibt** an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array sein** sollte.
+True gibt an, dass das Gerät mit Strom verwaltet werden kann, d.h. in einen Energiesparzustand versetzt werden kann. **False** gibt an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array** sein sollte.
 
-Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden, sofern aktiviert. Weitere Informationen finden Sie unter **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden. Weitere Informationen finden Sie im **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 </dd> <dt>
 
@@ -1076,7 +1076,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Häufigkeit (in Hertz) am hohen Ende des Eingangsfrequenzbereichs der Stromversorgung 1. Der Wert 0 impliziert DC.
+Frequenz (in Hertz) am hohen Ende des Eingabefrequenzbereichs der Stromversorgung 1. Der Wert 0 impliziert DC.
 
 </dd> <dt>
 
@@ -1092,7 +1092,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.17"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Häufigkeit (in Hertz) am unteren Ende des Eingangsfrequenzbereichs der Stromversorgung 1. Der Wert 0 impliziert DC.
+Frequenz (in Hertz) am unteren Ende des Eingabefrequenzbereichs der Stromversorgung 1. Der Wert 0 impliziert DC.
 
 </dd> <dt>
 
@@ -1105,10 +1105,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.8"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Milli milli")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.8"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millivolts")
 </dt> </dl>
 
-Hochspannung des Eingangsspannungsbereichs 1 für die Stromversorgung in Millisekunden. Der Wert 0 gibt "Unknown" an.
+Hochspannung des Eingangsspannungsbereichs 1 für die Stromversorgung in Millivolt. Der Wert 0 steht für "Unknown".
 
 </dd> <dt>
 
@@ -1121,10 +1121,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.7"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Milli milli")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.7"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millivolts")
 </dt> </dl>
 
-Niedrige Potenz des Eingangsspannungsbereichs 1 für die Stromversorgung in Millivolt. Der Wert 0 steht für "Unknown".
+Niedrige Spannung des Eingangsspannungsbereichs 1 für die Stromversorgung in Millisekunden. Der Wert 0 gibt "Unknown" an.
 
 </dd> <dt>
 
@@ -1140,7 +1140,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.20"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Frequenz (in Hertz) am hohen Ende des Eingabefrequenzbereichs der Stromversorgung 2. Der Wert 0 impliziert DC.
+Häufigkeit (in Hertz) am hohen Ende des Eingangsfrequenzbereichs der Stromversorgung 2. Der Wert 0 impliziert DC.
 
 </dd> <dt>
 
@@ -1156,7 +1156,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.19"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Frequenz (in Hertz) am unteren Ende des Eingabefrequenzbereichs der Stromversorgung 2. Der Wert 0 impliziert DC.
+Häufigkeit (in Hertz) am unteren Ende des Eingangsfrequenzbereichs der Stromversorgung 2. Der Wert 0 impliziert DC.
 
 </dd> <dt>
 
@@ -1169,10 +1169,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.12"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millivolts")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.12"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Milligramme")
 </dt> </dl>
 
-Hochspannung des Eingangsspannungsbereichs 2 für die Stromversorgung in Millivolt. Der Wert 0 steht für "Unknown".
+Hochspannung des Eingangsspannungsbereichs 2 für die Stromversorgung in Millisekunden. Der Wert 0 gibt "Unknown" an.
 
 </dd> <dt>
 
@@ -1185,10 +1185,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.11"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millivolts")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.11"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Milligramme")
 </dt> </dl>
 
-Niedrige Potenz des Eingangsspannungsbereichs 2 für diese Stromversorgung in Millivolts. Der Wert 0 steht für "Unknown".
+Niedrige Spannung des Eingangsspannungsbereichs 2 für diese Stromversorgung in Milligramm. Der Wert 0 gibt "Unknown" an.
 
 </dd> <dt>
 
@@ -1206,7 +1206,7 @@ Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [
 
 Aktueller Status des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -1249,14 +1249,14 @@ Folgende Werte sind gültig:
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-**Wird gestartet** ("Wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-**Beenden** ("Wird beendet")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1270,7 +1270,7 @@ Folgende Werte sind gültig:
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Mannslast** ("1000")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
@@ -1291,7 +1291,7 @@ Folgende Werte sind gültig:
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorenes Komma** ("Verlorenes Komma")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -1312,13 +1312,13 @@ Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers)
 
 Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 (Nicht zutreffend) verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Andere** (1)
+**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1362,12 +1362,12 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Der Name der Erstellungsklasse des Bereichssystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -1380,12 +1380,12 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**Name**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**Name**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Bereichsname des Systems.
+Der Name des Bereichssystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -1401,11 +1401,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.21"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Milliwatts")
 </dt> </dl>
 
-Gesamtausgabeleistung der Stromversorgung in Milliwatt. Der Wert 0 steht für "Unknown".
+Gesamtausgabeleistung der Stromversorgung in Milliwatt. Der Wert 0 gibt "Unknown" an.
 
 </dd> <dt>
 
-**TypeOfRangeSwählen**
+**TypeOfRangeSw arten**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint16**
@@ -1417,13 +1417,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Stromversorgung \| 002.16")
 </dt> </dl>
 
-Typ des in der Stromversorgung implementierten Eingangsspannungsbereichswechsels.
+Typ des Eingangsspannungsbereichswechsels, der in der Stromversorgung implementiert ist.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Andere** (1)
+**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1467,11 +1467,11 @@ Typ des in der Stromversorgung implementierten Eingangsspannungsbereichswechsels
 
 ## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ PowerSupply-Klasse** wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)abgeleitet.
+Die **CIM \_ PowerSupply-Klasse** wird von [**CIM \_ LogicalDevice abgeleitet.**](cim-logicaldevice.md)
 
-WMI implementiert diese Klasse nicht. Informationen zu WMI, die von **CIM \_ PowerSupply** abgeleitet wurden, finden Sie unter [Win32-Klassen.](win32-provider.md)
+WMI implementiert diese Klasse nicht. Informationen zu von **CIM \_ PowerSupply** abgeleiteten WMI-Klassen finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1487,7 +1487,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
