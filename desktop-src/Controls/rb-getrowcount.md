@@ -1,9 +1,9 @@
 ---
-title: RB_GETROWCOUNT Meldung (kommstrg. h)
-description: Ruft die Anzahl der Zeilen der Bänder in einem Grund leisten-Steuerelement ab.
+title: RB_GETROWCOUNT (Commctrl.h)
+description: Ruft die Anzahl der Zeilen von Bändern in einem Rebar-Steuerelement ab.
 ms.assetid: 80f9614e-672d-4c2a-bb2a-382597193796
 keywords:
-- Windows-Steuerelemente für RB_GETROWCOUNT Meldung
+- RB_GETROWCOUNT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33fca81552a41e2cc99c4c2c214b7f8743335619
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d78c90ab6228e55116e2b56fbea479b449fb3de311d68d37b2221c53e9109c18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078684"
 ---
-# <a name="rb_getrowcount-message"></a>RB \_ GetRowCount-Meldung
+# <a name="rb_getrowcount-message"></a>RB \_ GETROWCOUNT-Nachricht
 
-Ruft die Anzahl der Zeilen der Bänder in einem Grund leisten-Steuerelement ab.
+Ruft die Anzahl der Zeilen von Bändern in einem Rebar-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Anzahl der Zeilen der Bänder in einem Grund leisten-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **uint** -Wert zurück, der die Anzahl der Band Zeilen im-Steuerelement darstellt.
+Gibt einen **UINT-Wert** zurück, der die Anzahl der Bandzeilen im -Steuerelement darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen **uint** -Wert zurück, der die Anzahl der Band Zeilen im-Steuereleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

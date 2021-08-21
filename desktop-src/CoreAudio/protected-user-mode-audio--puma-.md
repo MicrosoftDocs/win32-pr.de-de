@@ -13,11 +13,11 @@ ms.locfileid: "119077454"
 ---
 # <a name="protected-user-mode-audio-puma"></a>Audio im geschützten Benutzermodus (PROTECTED)
 
-Windows Vista hat Protected User Mode Audio (CSV) eingeführt, die Audio-Engine im Benutzermodus in der geschützten Umgebung (PROTECTED Environment, PE), die eine sicherere Umgebung für die Audioverarbeitung und das Rendering bietet. Dadurch können nur die zulässigen Audioausgaben aktiviert werden, und es wird sichergestellt, dass die Ausgaben zuverlässig deaktiviert werden. Weitere Informationen zuWERT finden Sie unter [Ausgabe Content Protection und Windows Vista](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/output_protect.doc).
+Windows Vista hat Protected User Mode Audio (CSV) eingeführt, die Audio-Engine im Benutzermodus in der geschützten Umgebung (PROTECTED Environment, PE), die eine sicherere Umgebung für die Audioverarbeitung und das Rendering bietet. Dadurch können nur die zulässigen Audioausgaben aktiviert werden, und es wird sichergestellt, dass die Ausgaben zuverlässig deaktiviert werden. Weitere Informationen zu CSV finden Sie unter [Ausgabe Content Protection und Windows Vista](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/output_protect.doc).
 
-DIE AKTUALISIERTE Version wurde für Windows 7 aktualisiert, um die folgenden Features bereitzustellen:
+FÜR Windows 7 wurde DAS UPDATE aktualisiert, um die folgenden Features bereitzustellen:
 
--   Festlegen von SCMS-Bits (Serial Copying Management System) für S/PDIF-Endpunkte und HDCP-Bits (High-bandwidth Digital Content Protection) auf High-Definition MULTIMEDIA Interface-Endpunkten (MULTIMEDIA Interface, MULTIMEDIA-Schnittstelle).
+-   Festlegen von SCMS-Bits (Serial Copying Management System) auf S/PDIF-Endpunkten und High-bandwidth Digital Content Protection -Bits (HDCP) auf High-Definition MULTIMEDIA Interface-Endpunkten (CSV).
 -   Aktivieren von SCMS- und PROTECTION Protection-Steuerelementen außerhalb einer geschützten Umgebung (PE).
 
 ## <a name="drm-protection-in-audio-drivers"></a>DRM-Schutz in Audiotreibern

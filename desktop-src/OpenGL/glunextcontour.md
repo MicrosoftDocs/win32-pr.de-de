@@ -1,9 +1,9 @@
 ---
-title: glunextcontour-Funktion (glu. h)
-description: Die Funktion "glunextcontour" markiert den Anfang einer anderen Kontur.
+title: gluNextContour-Funktion (Glu.h)
+description: Die funktion gluNextContour markiert den Anfang einer anderen Kontur.
 ms.assetid: 622cd631-3426-4206-9e23-af2a74343da5
 keywords:
-- glunextcontour-Funktion OpenGL
+- gluNextContour-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c7b798eba50205053c019e3e8d1708c9ed834e7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4607fbeea8e8aa46b365204bf1853c392c1a38f5ded594d840c6e9eea063da2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061598"
 ---
-# <a name="glunextcontour-function"></a>glunextcontour-Funktion
+# <a name="glunextcontour-function"></a>gluNextContour-Funktion
 
-\[Die Funktion " **glunextcontour** " ist veraltet und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Die **glunextcontour** -Funktion wird " [**gluTessEndContour**](glutessendcontour.md) " gefolgt von " [**glutess begincontour**](glutessbegincontour.md)" zugeordnet.\]
+\[Die **funktion gluNextContour** ist veraltet und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Die **funktion gluNextContour** wird [**gluTessEndContour**](glutessendcontour.md) gefolgt von [**gluTessBeginContour**](glutessbegincontour.md)zugeordnet.\]
 
-Die Funktion " **glunextcontour** " markiert den Anfang einer anderen Kontur.
+Die **funktion gluNextContour** markiert den Anfang einer anderen Kontur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ void WINAPI gluNextContour(
 
 <dl> <dt>
 
-*ATI* 
+*Tess* 
 </dt> <dd>
 
-Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
+Das Mosaikobjekt (erstellt mit [**gluNewTess**](glunewtess.md)).
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Typ der zu definierenden Kontur. Die folgenden Werte sind gültig.
+Der Typ der Kontur, die definiert wird. Die folgenden Werte sind gültig.
 
 
 
 | Wert                                                                                                                                                                | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GLU_EXTERIOR"></span><span id="glu_exterior"></span><dl> <dt>**Glu, \_ außen**</dt> </dl>           | Eine äußere Kontur definiert eine äußere Grenze des Polygons.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| <span id="GLU_INTERIOR"></span><span id="glu_interior"></span><dl> <dt>**Glu- \_ innen**</dt> </dl>           | Eine innere Kontur definiert eine innere Grenze des Polygons (z. b. eine Lücke).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="GLU_UNKNOWN"></span><span id="glu_unknown"></span><dl> <dt>**Glu \_ unbekannt**</dt> </dl>              | Eine unbekannte Kontur wird von der Bibliothek analysiert, um zu bestimmen, ob Sie innen oder außen ist.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| <span id="GLU_CCW__GLU_CW"></span><span id="glu_ccw__glu_cw"></span><dl> <dt>**Glu \_ CCW, Glu \_ CW**</dt> </dl> | Der erste \_ definierte glu CCW-oder glu \_ CW-Contour wird als extern betrachtet. Alle anderen Konturen werden als außen betrachtet, wenn Sie in der gleichen Richtung (im Uhrzeigersinn oder gegen den Uhrzeigersinn) als erste Kontur ausgerichtet sind, und inneren, wenn dies nicht der Fall ist.<br/> Wenn eine Kontur vom Typ "glu \_ CCW" oder "glu CW" ist \_ , müssen alle Konturen denselben Typ aufweisen (wenn Sie nicht sind, werden alle \_ die Kontur CCW-und glu CW-Kontur \_ in "glu unknown" geändert \_ ). Beachten Sie, dass es keinen wirklichen Unterschied zwischen den \_ Kontur Typen glu CCW und glu \_ CW gibt.<br/> |
+| <span id="GLU_EXTERIOR"></span><span id="glu_exterior"></span><dl> <dt>**GLU \_ EXTERIOR**</dt> </dl>           | Eine äußere Kontur definiert eine äußere Grenze des Polygons.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| <span id="GLU_INTERIOR"></span><span id="glu_interior"></span><dl> <dt>**GLU \_ INTERIOR**</dt> </dl>           | Eine innere Kontur definiert eine innere Grenze des Polygons (z. B. eine Lücke).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="GLU_UNKNOWN"></span><span id="glu_unknown"></span><dl> <dt>**GLU \_ UNKNOWN**</dt> </dl>              | Eine unbekannte Kontur wird von der Bibliothek analysiert, um zu bestimmen, ob es sich um ein inneres oder äußeres Erscheinungsbild handelt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| <span id="GLU_CCW__GLU_CW"></span><span id="glu_ccw__glu_cw"></span><dl> <dt>**GLU \_ CCW, GLU \_ CW**</dt> </dl> | Die erste definierte GLU \_ CCW- oder GLU \_ CW-Kontur gilt als außen. Alle anderen Konturen werden als außen betrachtet, wenn sie in der gleichen Richtung (im Uhrzeigersinn oder gegen den Uhrzeigersinn) wie die erste Kontur ausgerichtet sind, und inner, wenn sie dies nicht sind.<br/> Wenn eine Kontur vom Typ GLU \_ CCW oder GLU \_ CW ist, müssen alle Konturen vom gleichen Typ sein (wenn dies nicht dere ist, werden alle GLU \_ CCW- und GLU \_ CW-Konturen in GLU \_ UNKNOWN geändert). Beachten Sie, dass es keinen echten Unterschied zwischen den GLU \_ CCW- und GLU \_ CW-Konturtypen gibt.<br/> |
 
 
 
@@ -74,17 +74,17 @@ Der Typ der zu definierenden Kontur. Die folgenden Werte sind gültig.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Funktion " **glunextcontour** ", um Polygone mit mehreren Kontur zu beschreiben. Nachdem Sie die erste Kontur durch eine Reihe von " [**glutess Vertex**](glutessvertex.md) "-aufrufen beschrieben haben, gibt ein **glunextcontour** -Aufruf an, dass die vorherige Kontur fertig ist und dass die nächste Kontur im Begriff ist, zu beginnen. Führen Sie eine weitere Reihe von **glutess Vertex** -aufrufen aus, um die neue Kontur zu beschreiben. Wiederholen Sie diesen Vorgang, bis alle Konturen beschrieben wurden.
+Verwenden Sie die **funktion gluNextContour,** um Polygone mit mehreren Konturen zu beschreiben. Nachdem Sie die erste Kontur durch eine Reihe von [**gluTessVertex-Aufrufen**](glutessvertex.md) beschrieben haben, gibt ein **gluNextContour-Aufruf** an, dass die vorherige Kontur abgeschlossen ist und dass die nächste Kontur gerade beginnt. Führen Sie eine weitere Reihe von **gluTessVertex-Aufrufen** aus, um die neue Kontur zu beschreiben. Wiederholen Sie diesen Vorgang, bis alle Konturen beschrieben wurden.
 
 Der *Typparameter* definiert, welcher Typ von Kontur folgt.
 
-Um den Typ der ersten Kontur zu definieren, können Sie " **glunextcontour** " vor der Beschreibung der ersten Kontur abrufen. Wenn Sie " **glunextcontour** " nicht vor der ersten Kontur aufzurufen, wird die erste Kontur als "glu outside" gekennzeichnet \_ .
+Um den Typ der ersten Kontur zu definieren, können Sie **gluNextContour** aufrufen, bevor Sie die erste Kontur beschreiben. Wenn Sie **gluNextContour** nicht vor der ersten Kontur aufrufen, wird die erste Kontur mit GLU \_ EXTERIOR gekennzeichnet.
 
 ## <a name="examples"></a>Beispiele
 
-Sie können ein Viereck mit einer dreieckigen Lücke wie folgt beschreiben:
+Sie können ein Quadernatral mit einem dreieckigen Löcher darin wie folgt beschreiben:
 
 ``` syntax
 gluBeginPolygon(tess); 
@@ -107,32 +107,32 @@ gluEndPolygon(tess);
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glunewtess**](glunewtess.md)
+[**gluNewTess**](glunewtess.md)
 </dt> <dt>
 
-[**glutess begincontour**](glutessbegincontour.md)
+[**gluTessBeginContour**](glutessbegincontour.md)
 </dt> <dt>
 
-[**glutess beginpolygon**](glubeginpolygon.md)
+[**gluTessBeginPolygon**](glubeginpolygon.md)
 </dt> <dt>
 
-[*glutesscallback*](glutess.md)
+[*gluTessCallback*](glutess.md)
 </dt> <dt>
 
 [**gluTessEndContour**](glutessendcontour.md)
 </dt> <dt>
 
-[**glutess Vertex**](glutessvertex.md)
+[**gluTessVertex**](glutessvertex.md)
 </dt> </dl>
 
  

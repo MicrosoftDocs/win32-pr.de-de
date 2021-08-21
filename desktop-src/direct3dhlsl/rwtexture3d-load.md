@@ -3,7 +3,7 @@ title: RWTexture3D::RWTexture3D Load-Methoden
 description: Liest Texturdaten aus einem RWTexture3D.
 ms.assetid: 850A2F93-96C1-4B6F-AFEF-D245791611B4
 keywords:
-- Lademethoden HLSL
+- HlSL-Lademethoden
 topic_type:
 - apiref
 api_type:
@@ -21,7 +21,7 @@ ms.locfileid: "118986240"
 ---
 # <a name="rwtexture3dload-methods"></a>RWTexture3D::Load-Methoden
 
-Liest Texturdaten aus einem [**RWTexture3D.**](sm5-object-rwtexture3d.md)
+Liest Texturdaten aus einem [**RWTexture3D**](sm5-object-rwtexture3d.md).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -34,7 +34,7 @@ Liest Texturdaten aus einem [**RWTexture3D.**](sm5-object-rwtexture3d.md)
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

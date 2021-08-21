@@ -1,41 +1,41 @@
 ---
-description: Geräte Rollen
+description: Geräterollen
 ms.assetid: aa787004-0d3e-448b-80dd-92055f841aee
-title: Geräte Rollen
+title: Geräterollen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b7182e3af6bf76af500588546a1b7c0db9eea97
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 386a3ba163a9a82d01aa7916139edaa01e531160f5245c6e751fb7169702de5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018433"
 ---
-# <a name="device-roles"></a>Geräte Rollen
+# <a name="device-roles"></a>Geräterollen
 
-Wenn ein System mindestens zwei audiorendering-Endpunkt Geräte enthält, kann ein Gerät am besten für die Wiedergabe eines audioinhaltstyp geeignet sein, und ein anderes Gerät eignet sich möglicherweise am besten für die Wiedergabe eines anderen Inhaltstyps. Wenn ein System z. b. über zwei renderinggeräte verfügt, kann der Benutzer auf einem Gerät Musik abspielen und System Benachrichtigungs Sounds auf dem anderen Gerät abspielen.
+Wenn ein System zwei oder mehr Audiorendering-Endpunktgeräte enthält, ist ein Gerät möglicherweise am besten für die Wiedergabe eines Audioinhaltstyps und ein anderes Gerät am besten für die Wiedergabe anderer Inhaltstypen. Wenn ein System z. B. über zwei Renderinggeräte verfügt, kann der Benutzer auswählen, ob er Musik auf einem Gerät und Systembenachrichtigungs-Sounds auf dem anderen wiedersingen soll.
 
-Wenn ein System mindestens zwei audioerfassungs-Endpunkt Geräte enthält, kann ein Gerät am besten zum Erfassen eines Audioinhalts Typs geeignet sein, und ein anderes Gerät eignet sich möglicherweise am besten zum Erfassen eines anderen Inhaltstyps. Wenn ein System beispielsweise über zwei Erfassungsgeräte verfügt, kann der Benutzer Live Musik auf einem Gerät aufzeichnen und das andere Gerät für Sprachbefehle verwenden.
+Wenn ein System zwei oder mehr Audioaufnahmeendpunktgeräte enthält, ist ein Gerät möglicherweise am besten für die Erfassung eines Audioinhaltstyps, und ein anderes Gerät ist möglicherweise am besten für die Erfassung anderer Inhaltstypen. Wenn ein System beispielsweise über zwei Aufzeichnungsgeräte verfügt, kann der Benutzer live Musik auf einem Gerät aufzeichnen und das andere Gerät für Sprachbefehle verwenden.
 
-Geräte können über drei Rollen verfügen: Console, Communications und Multimedia. in der folgenden Tabelle werden die Geräte Rollen beschrieben, die von den drei Konstanten – econsole, eCommunications und emultimedia – in der [**erole**](/windows/win32/api/mmdeviceapi/ne-mmdeviceapi-erole) -Enumeration identifiziert werden.
+Geräte können drei Rollen haben: Konsole, Kommunikation und Multimedia. In der folgenden Tabelle werden die Geräterollen beschrieben, die durch die drei Konstanten (eConsole, eCommunications und eMultimedia) in der [**ERole-Enumeration**](/windows/win32/api/mmdeviceapi/ne-mmdeviceapi-erole) identifiziert werden.
 
 
 
-| Erole-Konstante  | Geräte Rolle                              | Renderingbeispiele             | Beispiele für die Erfassung                   |
+| ERole-Konstante  | Geräterolle                              | Renderingbeispiele             | Erfassungsbeispiele                   |
 |-----------------|------------------------------------------|--------------------------------|------------------------------------|
-| econsole        | Interaktion mit dem Computer            | Spiele und System Benachrichtigungen | Sprachbefehle                     |
+| eConsole        | Interaktion mit dem Computer            | Spiele und Systembenachrichtigungen | Sprachbefehle                     |
 | eCommunications | Sprachkommunikation mit einer anderen Person | Chat und VoIP                  | Chat und VoIP                      |
-| emultimedia     | Abspielen oder Aufzeichnen von Audioinhalten       | Musik und Filme               | Erzählung und Live Musik Aufzeichnung |
+| eMultimedia     | Wieder abspielen oder Aufzeichnen von Audioinhalten       | Musik und Filme               | Sprachausgabe und Live-Musikaufzeichnung |
 
 
 
  
 
-Einem bestimmten Rendering-oder Aufzeichnungsgerät können keine, eine, einige oder alle Rollen in der vorangehenden Tabelle zugewiesen werden. Jede Rolle in der Tabelle wird immer einem (und nur einem) renderinggerät und einem (und nur einem) Erfassungsgerät zugewiesen. Das heißt, die Zuweisung von Rollen zum Rendern von Geräten ist unabhängig von der Zuweisung von Rollen zum Erfassen von Geräten.
+Einem bestimmten Rendering- oder Erfassungsgerät können keine, eine, einige oder alle Rollen in der obigen Tabelle zugewiesen werden. Jede Rolle in der Tabelle wird jederzeit einem (und nur einem) Renderinggerät und einem (und nur einem) Erfassungsgerät zugewiesen. Das heißt, die Zuweisung von Rollen zu Renderinggeräten ist unabhängig von der Zuweisung von Rollen zum Erfassen von Geräten.
 
-Eine Anwendung kann Ihre gesamten Ausgabedaten Ströme über ein einzelnes renderingendpunkt-Gerät wiedergeben und alle Eingabedaten Ströme von einem einzelnen Erfassungs Endpunkt-Gerät aufzeichnen. Alternativ kann eine Anwendung ihre Ausgabedaten Ströme über ein renderinggerät wiedergeben und andere Ausgabedaten Ströme über ein anderes renderinggerät wiedergeben. Entsprechend kann es auch sein, dass einige der Eingabedaten Ströme über ein Erfassungsgerät aufgezeichnet werden und andere Eingabedaten Ströme über ein anderes Erfassungsgerät aufgezeichnet werden. In allen Fällen kann die Anwendung jeden Stream dem Gerät zuweisen, dessen Rolle für diesen Stream am besten geeignet ist.
+Eine Anwendung kann alle Ausgabestreams über ein einzelnes Renderingendpunktgerät wieder geben und alle Eingabestreams von einem einzigen Aufzeichnungsendpunktgerät aufzeichnen. Alternativ kann eine Anwendung auswählen, dass einige ihrer Ausgabestreams über ein Renderinggerät und andere Ausgabestreams über ein anderes Renderinggerät wieder verwendet werden. Auf ähnliche Weise kann es einige seiner Eingabestreams über ein Erfassungsgerät aufzeichnen und andere Eingabestreams über ein anderes Erfassungsgerät aufzeichnen. In allen Fällen kann die Anwendung jeden Stream dem Gerät zuweisen, dessen Rolle für diesen Stream am besten geeignet ist.
 
-Beispielsweise kann eine VoIP-Anwendung den Ausgabestream, der die Benachrichtigung über den Ring enthält, dem renderingendpunktgerät mit der econsole-Rolle zuweisen.
+Beispielsweise kann eine VoIP-Anwendung dem Renderingendpunktgerät mit der eConsole-Rolle den Ausgabestream zuweisen, der die Ringbenachrichtigung enthält.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,10 +44,10 @@ Beispielsweise kann eine VoIP-Anwendung den Ausgabestream, der die Benachrichtig
 [Audioendpunktgeräte](audio-endpoint-devices.md)
 </dt> <dt>
 
-[Arbeiten mit Geräte Rollen](device-roles-in-windows-vista.md)
+[Arbeiten mit Geräterollen](device-roles-in-windows-vista.md)
 </dt> <dt>
 
-[Interoperabilität mit Legacy-audioapis](interoperability-with-legacy-audio-apis.md)
+[Interoperabilität mit Legacyaudio-APIs](interoperability-with-legacy-audio-apis.md)
 </dt> </dl>
 
  

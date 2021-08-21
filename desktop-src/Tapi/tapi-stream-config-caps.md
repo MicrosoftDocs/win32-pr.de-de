@@ -1,21 +1,21 @@
 ---
-description: Die Struktur der TAPI \_ -Stream-Konfigurations Ober \_ \_ Grenzen enthält entweder Video-oder audiodatenstream-Konfigurationsinformationen.
+description: Die TAPI \_ STREAM \_ CONFIG \_ CAPS-Struktur enthält Konfigurationsinformationen zum Video- oder Audiostream.
 ms.assetid: 83b39751-b00f-4762-830b-13cafbcb1cfd
-title: TAPI_STREAM_CONFIG_CAPS Struktur (ipmsp. h)
+title: TAPI_STREAM_CONFIG_CAPS-Struktur (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 379ca481d3bebaf8ceb11bfc2dbdab6642ca20b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6cbbb3b3ec72cc99810311cc510e36c2adc8242e2b3d98b321fd8bc8c6a9ab4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002648"
 ---
-# <a name="tapi_stream_config_caps-structure"></a>Struktur der TAPI- \_ \_ streamkonfigurationscaps \_
+# <a name="tapi_stream_config_caps-structure"></a>TAPI \_ STREAM \_ CONFIG \_ CAPS-Struktur
 
-\[ Diese Struktur ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Struktur ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Struktur der TAPI-Stream-Konfigurations Ober **\_ \_ \_ Grenzen** enthält entweder Video-oder audiodatenstream-Konfigurationsinformationen.
+Die **TAPI \_ STREAM \_ CONFIG \_ CAPS-Struktur** enthält Konfigurationsinformationen zum Video- oder Audiostream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,24 +30,24 @@ Die Struktur der TAPI-Stream-Konfigurations Ober **\_ \_ \_ Grenzen** enthält e
 
 <dl> <dt>
 
-**Capstype**
+**CapsType**
 </dt> <dd>
 
-Definiert, ob das Unionmember Video-oder Audioinformationen enthält.
+Definiert, ob das Union-Element Video- oder Audioinformationen enthält.
 
 </dd> <dt>
 
 **VideoCap**
 </dt> <dd>
 
-Eine [**TAPI \_ - \_ Dateistream- \_ config \_**](tapi-video-stream-config-caps.md) -Struktur, die die videostreamfunktionen enthält.
+Eine [**TAPI \_ VIDEO \_ \_ \_ STREAM-KONFIGURATIONS-CAPS-Struktur,**](tapi-video-stream-config-caps.md) die die Videostreamfunktionen enthält.
 
 </dd> <dt>
 
-**Audiocap**
+**AudioCap**
 </dt> <dd>
 
-Eine [**TAPI \_ -Daten \_ Strom- \_ config \_ -**](tapi-audio-stream-config-caps.md) Struktur, die die audiostreamfunktionen enthält.
+Eine [**\_ TAPI-AUDIOSTREAM-KONFIGURATIONS-CAPS-Struktur, \_ \_ \_**](tapi-audio-stream-config-caps.md) die die Audiostreamfunktionen enthält.
 
 </dd> </dl>
 
@@ -57,25 +57,25 @@ Eine [**TAPI \_ -Daten \_ Strom- \_ config \_ -**](tapi-audio-stream-config-caps
 
 | Anforderung | Wert |
 |-------------------------|------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                       |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                       |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itformatcontrol:: getstreamcaps**](itformatcontrol-getstreamcaps.md)
+[**ITFormatControl::GetStreamCaps**](itformatcontrol-getstreamcaps.md)
 </dt> <dt>
 
-[**Streamconfigcapstype**](streamconfigcapstype.md)
+[**StreamConfigCapsType**](streamconfigcapstype.md)
 </dt> <dt>
 
-[**TAPI- \_ Video Daten \_ Strom- \_ Konfigurations \_ Caps**](tapi-video-stream-config-caps.md)
+[**TAPI \_ VIDEO \_ STREAM \_ CONFIG \_ CAPS**](tapi-video-stream-config-caps.md)
 </dt> <dt>
 
-[**TAPI \_ - \_ Audiodatenstrom- \_ Konfigurations \_ Caps**](tapi-audio-stream-config-caps.md)
+[**TAPI \_ AUDIO \_ STREAM \_ CONFIG \_ CAPS**](tapi-audio-stream-config-caps.md)
 </dt> </dl>
 
  

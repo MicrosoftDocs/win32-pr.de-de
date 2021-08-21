@@ -1,5 +1,5 @@
 ---
-description: Führt die angegebene Systemsteuerung aus.
+description: Führt die angegebene Systemsteuerung Anwendung aus.
 title: IShellDispatch.ControlPanelItem-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,19 +13,19 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9A9B6B3F-FBBC-4e76-8018-8858B6392276
-ms.openlocfilehash: 1a1c024b316472be00f119485326b704a4fe8dd0
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 89ea8431df7e8cac09a041bd9a16c805633cd3ec82a2cc506cb30fcf0f0cd39b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032258"
 ---
 # <a name="ishelldispatchcontrolpanelitem-method"></a>IShellDispatch.ControlPanelItem-Methode
 
-Führt die angegebene Systemsteuerung aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
+Führt die angegebene Systemsteuerung Anwendung aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
 
 > [!Note]  
-> Ab Windows Vista sind die meisten Systemsteuerung Shell-Elemente und können mit dieser Funktion nicht geöffnet werden. Um diese anwendungen Systemsteuerung öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
+> Ab Windows Vista sind die meisten Systemsteuerung Anwendungen Shellelemente und können nicht mit dieser Funktion geöffnet werden. Um diese Systemsteuerung Anwendungen zu öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
 >
 > ``` syntax
 > control.exe /name Microsoft.Personalization
@@ -63,7 +63,7 @@ IShellDispatch.ControlPanelItem( _
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Der Systemsteuerung dateiname der Anwendung.
+Der Dateiname der Systemsteuerung Anwendung.
 
 </dd> </dl>
 
@@ -79,13 +79,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.ControlPanelItem-Methode aufgerufen.**](shell-controlpanelitem.md)
+Diese Methode wird implementiert und über die [**Shell.ControlPanelItem-Methode**](shell-controlpanelitem.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen [**wird ControlPanelItem**](shell-controlpanelitem.md) verwendet, um das Systemsteuerung **des** Anzeigeeigenschaften ausführen. Die Verwendung wird für JScript, VBScript und Visual Basic.
+In den folgenden Beispielen wird [**ControlPanelItem**](shell-controlpanelitem.md) verwendet, um das **Anzeigeeigenschaften-Element** der Systemsteuerung auszuführen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -141,7 +141,7 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

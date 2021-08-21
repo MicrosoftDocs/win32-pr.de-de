@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Zeichen Folgentyp für Service Set Identifier (SSIDs).
+description: Definiert einen Zeichenfolgentyp für Dienstsatzbezeichner (Service Set Identifiers, SSIDs).
 ms.assetid: c9e79a3d-7d5c-4320-ade2-40124de00920
-title: einfacher networknametype-Typ
+title: networkNameType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 6b6463644e1bd174be256d51b34ae2ae4ad9ce07
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f653c84f36730ed9f6f078b3713dde414fbf63469bd4ea43f632842d33d7e14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064750"
 ---
-# <a name="networknametype-simple-type"></a>einfacher networknametype-Typ
+# <a name="networknametype-simple-type"></a>networkNameType Simple Type
 
-Der einfache Typ networknametype definiert einen Zeichen Folgentyp für Service Set Identifier (SSIDs). Eine SSID ist eine Zeichenfolge, die mindestens ein Zeichen lang und höchstens 32 Zeichen lang ist.
+Der einfache networkNameType-Typ definiert einen Zeichenfolgentyp für Dienstsatzbezeichner (Service Set Identifiers, SSIDs). Eine SSID ist eine Zeichenfolge, die mindestens ein Zeichen und höchstens 32 Zeichen lang ist.
 
 ``` syntax
 <xs:simpleType name="networkNameType">
@@ -44,8 +44,8 @@ Der einfache Typ networknametype definiert einen Zeichen Folgentyp für Service 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -3,7 +3,7 @@ title: message pragma-Direktive
 description: Pragma-Direktive, die Compilerzeitmeldungen erzeugt.
 ms.assetid: dc3ece10-9730-4ab1-acc8-f95abc92de7d
 keywords:
-- message pragma Directive HLSL
+- message pragma directive HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 813483efb161a06db5ef7e40da99c391f53565bc
-ms.sourcegitcommit: 88049609e29f91a42442235885abf56f598b06b3
+ms.openlocfilehash: fce4b8f2fec887397794914604a0755049615699af77c5572536b5758bda2d88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110153483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986360"
 ---
 # <a name="message-pragma-directive"></a>message pragma-Direktive
 
@@ -39,7 +39,7 @@ Pragma-Direktive, die Compilerzeitmeldungen erzeugt.
 
 | Element                                                                                    | Beschreibung                  |
 |-----------------------------------------------------------------------------------------|------------------------------|
-| <span id="token-string"></span><span id="TOKEN-STRING"></span>*token-string*<br/> | Compilermeldung.<br/> |
+| <span id="token-string"></span><span id="TOKEN-STRING"></span>*Tokenzeichenfolge*<br/> | Compilermeldung.<br/> |
 
 
 

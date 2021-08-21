@@ -1,19 +1,19 @@
 ---
-description: Ein Wertebereich ist für zukünftige Erweiterungen des Basis-und ergänzenden TAPI-Funktions Satzes reserviert.
+description: Ein Wertebereich ist für zukünftige Erweiterungen des Basic- und Supplementary TAPI-Funktionssets reserviert.
 ms.assetid: fef4620d-fc97-4567-97b0-142e144bc180
-title: Erweitern von Datenstrukturen und-Typen
+title: Erweitern von Datenstrukturen und -typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21388cf852872676972b8132ac4981319bb69c97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e365d5eead22cdaf7431fe23b276f705d2d0aef8309a541a2480568c01260186
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003648"
 ---
-# <a name="extending-data-structures-and-types"></a>Erweitern von Datenstrukturen und-Typen
+# <a name="extending-data-structures-and-types"></a>Erweitern von Datenstrukturen und -typen
 
-Ein Wertebereich ist für zukünftige Erweiterungen des Basis-und ergänzenden TAPI-Funktions Satzes reserviert. Informationen zu dem Betrag, um den eine Datenstruktur erweitert werden kann, finden Sie unter [Erweiterbarkeit](extensibility.md). Eine Liste der Funktionen, die für die Erweiterungs Telefoniefunktion verwendet werden, finden Sie unter [TAPI-schnell Funktionsreferenz](./tapi-quick-function-reference.md).
+Ein Wertebereich ist für zukünftige Erweiterungen des Basic- und Supplementary TAPI-Funktionssets reserviert. Informationen zur Menge, um die eine Datenstruktur erweitert werden kann, finden Sie unter [Erweiterbarkeit](extensibility.md). Eine Liste der Funktionen, die zum Erweitern der Telefonie verwendet werden, finden Sie in der [TAPI-Kurzfunktionsreferenz.](./tapi-quick-function-reference.md)
 
  
 

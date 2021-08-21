@@ -1,11 +1,11 @@
 ---
-title: ID3DX11Effect getdevice-Methode (D3dx11effect. h)
-description: Holen Sie sich das Gerät, das den Effekt erzeugt hat.
+title: ID3DX11Effect GetDevice-Methode (D3dx11effect.h)
+description: Sie erhalten das Gerät, das den Effekt erstellt hat.
 ms.assetid: efcc0358-9842-46eb-a521-ea220ec18735
 keywords:
-- Getdevice-Methode Direct3D 11
-- Getdevice-Methode Direct3D 11, ID3DX11Effect-Schnittstelle
-- ID3DX11Effect-Schnittstelle Direct3D 11, getdevice-Methode
+- GetDevice-Methode Direct3D 11
+- GetDevice-Methode Direct3D 11, ID3DX11Effect-Schnittstelle
+- ID3DX11Effect-Schnittstelle Direct3D 11 , GetDevice-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25317740cade8a937aeeeac29f5a608bb4a43931
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
-ms.translationtype: HT
+ms.openlocfilehash: 54a27dece1915373699d130f8a537a22045f7e86f246402d85bbb400ceb1d8cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124515"
 ---
-# <a name="id3dx11effectgetdevice-method"></a>ID3DX11Effect:: getdevice-Methode
+# <a name="id3dx11effectgetdevice-method"></a>ID3DX11Effect::GetDevice-Methode
 
-Holen Sie sich das Gerät, das den Effekt erzeugt hat.
+Sie erhalten das Gerät, das den Effekt erstellt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetDevice(
 
 <dl> <dt>
 
-*ppdevice* 
+*ppDevice* 
 </dt> <dd>
 
 Typ: **[ **ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device)\*\***
 
-Ein Zeiger auf eine [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device).
+Ein Zeiger auf eine [**ID3D11Device.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device)
 
 </dd> </dl>
 
@@ -56,25 +56,25 @@ Ein Zeiger auf eine [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d1
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für ein bestimmtes Gerät wird ein Effekt erstellt, indem eine Funktion wie [**D3DX11CreateEffectFromMemory**](d3dx11createeffectfrommemory.md)aufgerufen wird.
+Ein Effekt wird für ein bestimmtes Gerät durch Aufrufen einer Funktion wie [**D3DX11CreateEffectFromMemory erstellt.**](d3dx11createeffectfrommemory.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

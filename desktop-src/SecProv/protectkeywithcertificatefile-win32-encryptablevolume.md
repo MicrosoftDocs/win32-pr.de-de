@@ -1,7 +1,7 @@
 ---
-description: 'ProtectKeyWithCertificateFile-Methode der Win32_EncryptableVolume-Klasse: Überprüft den OID (Enhanced Key Usage)-Objektbezeichner (Enhanced Key Usage, erweiterte Schlüsselverwendung) des bereitgestellten Zertifikats.'
+description: 'ProtectKeyWithCertificateFile-Methode der Win32_EncryptableVolume-Klasse: Überprüft den Objektbezeichner der erweiterten Schlüsselverwendung (Enhanced Key Usage, EKU) des bereitgestellten Zertifikats.'
 ms.assetid: cc716524-f976-4d75-84f3-693e277030e6
-title: ProtectKeyWithCertificateFile-Methode der Win32_EncryptableVolume Klasse
+title: ProtectKeyWithCertificateFile-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: d61a0bd0d31c14f13edd9ef610e8f6d3ed20f037
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e96667af5e9c16097e951f3162082a6fb06b13d0504da3e8582b9f1b7ebfd4cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004458"
 ---
 # <a name="protectkeywithcertificatefile-method-of-the-win32_encryptablevolume-class"></a>ProtectKeyWithCertificateFile-Methode der Win32 \_ EncryptableVolume-Klasse
 
@@ -66,7 +66,7 @@ Typ: **Zeichenfolge**
 
 Eine Zeichenfolge, die die erstellte Schlüsselschutzvorrichtung eindeutig identifiziert, die zum Verwalten dieser Schlüsselschutzvorrichtung verwendet werden kann.
 
-Wenn das Laufwerk hardwareverschlüsselung unterstützt und BitLocker keinen Bandbesitz übernommen hat, wird die ID-Zeichenfolge auf "BitLocker" festgelegt, und die Schlüsselschutzvorrichtung wird in die Metadaten pro Band geschrieben.
+Wenn das Laufwerk Hardwareverschlüsselung unterstützt und BitLocker keinen Bandbesitz übernommen hat, wird die ID-Zeichenfolge auf "BitLocker" festgelegt, und die Schlüsselschutzvorrichtung wird in die Metadaten pro Band geschrieben.
 
 </dd> </dl>
 
@@ -81,34 +81,34 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 | Rückgabecode/-wert                                                                                                                                                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                                           | Die Methode war erfolgreich.<br/>                                                                                                                                                                                                                                                          |
-| <dl> <dt>**FVE \_ E \_ NON \_ BITLOCKER \_ OID**</dt> <dt>2150695022 (0x8031006E)</dt> </dl>                     | Das EKU-Attribut des angegebenen Zertifikats lässt nicht zu, dass es für BitLocker-Laufwerkverschlüsselung verwendet wird. BitLocker erfordert nicht, dass ein Zertifikat über ein EKU-Attribut verfügt, aber wenn eines konfiguriert ist, muss es auf eine OID festgelegt werden, die der für BitLocker konfigurierten OID entspricht.<br/> |
-| <dl> <dt>**FVE \_ E \_ POLICY USER CERTIFICATE NOT ALLOWED \_ \_ \_ \_**</dt> <dt>2150695026 (E POLICY USER CERTIFICATE NOT ALLOWED 2150695026 (E POLICY USER CERTIFICATE NOT ALLOWED 2150695026 (0X80310072))</dt> </dl> | Gruppenrichtlinie lässt nicht zu, dass Benutzerzertifikate wie Smartcards mit BitLocker verwendet werden.<br/>                                                                                                                                                                                     |
-| <dl> <dt>**FVE \_ E \_ POLICY \_ USER \_ CERT MUST BE \_ \_ \_ HW**</dt> <dt>2150695028 (0x80310074)</dt> </dl>        | Gruppenrichtlinie erfordert, dass Sie eine Smartcard für die Verwendung von BitLocker bereitstellen.<br/>                                                                                                                                                                                                                |
-| <dl> <dt>**FVE \_ E \_ POLICY \_ PROHIBITS \_ SELFSIGNED**</dt> <dt>2150695046 (0x80310086)</dt> </dl>           | Gruppenrichtlinie lässt die Verwendung von selbstsignieren Zertifikaten nicht zu.<br/>                                                                                                                                                                                                                   |
-| <dl> <dt>**FEHLER \_ DATEI \_ NICHT \_ GEFUNDEN**</dt> <dt>00000000002 (0x2)</dt> </dl>                                | Das System kann die angegebene Datei nicht finden.<br/>                                                                                                                                                                                                                                          |
+| <dl> <dt>**FVE \_ E \_ NON \_ BITLOCKER \_ OID**</dt> <dt>2150695022 (0x8031006E)</dt> </dl>                     | Das EKU-Attribut des angegebenen Zertifikats lässt nicht zu, dass es für die BitLocker-Laufwerkverschlüsselung. BitLocker erfordert nicht, dass ein Zertifikat über ein EKU-Attribut verfügt. Wenn eines konfiguriert ist, muss es jedoch auf eine OID festgelegt werden, die der für BitLocker konfigurierten OID entspricht.<br/> |
+| <dl> <dt>**FVE \_ E \_ POLICY USER CERTIFICATE NOT ALLOWED \_ \_ \_ \_ 2150695026**</dt> <dt>(0x80310072)</dt> </dl> | Gruppenrichtlinie lässt nicht zu, dass Benutzerzertifikate, z. B. Smartcards, mit BitLocker verwendet werden können.<br/>                                                                                                                                                                                     |
+| <dl> <dt>**FVE \_ E \_ POLICY \_ USER \_ CERT MUST BE \_ \_ \_ HW**</dt> <dt>2150695028 (0x80310074)</dt> </dl>        | Gruppenrichtlinie müssen Sie eine Smartcard für die Verwendung von BitLocker verwenden.<br/>                                                                                                                                                                                                                |
+| <dl> <dt>**FVE \_ E \_ POLICY \_ PROHIBITS \_ SELFSIGNED**</dt> <dt>2150695046 (0x80310086)</dt> </dl>           | Gruppenrichtlinie nicht die Verwendung selbstsignierter Zertifikate.<br/>                                                                                                                                                                                                                   |
+| <dl> <dt>**FEHLER \_ FILE \_ NOT \_ FOUND**</dt> <dt>0000000002 (0x2)</dt> </dl>                                | Das System kann die angegebene Datei nicht finden.<br/>                                                                                                                                                                                                                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die OID nicht mit der OID übereinstimmt, die dem Dienstcontroller in der Registrierung zugeordnet ist, schlägt diese Methode fehl. Dadurch wird verhindert, dass der Benutzer Schutzvorrichtungen für den Datenwiederherstellungs-Agent (Data Recovery Agent, DRA) manuell auf dem Volume festlegt. DRAs müssen nur vom Dienst festgelegt werden.
+Wenn die OID nicht mit der OID übereinstimmen, die dem Dienstcontroller in der Registrierung zugeordnet ist, schlägt diese Methode fehl. Dadurch wird verhindert, dass der Benutzer Schutzvorrichtungen des Datenwiederherstellungs-Agents (DRA) manuell auf dem Volume festlegen kann. DRAs müssen nur vom Dienst festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 Enterprise- und Windows 7 \[ Ultimate-Desktop-Apps\]<br/>                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftVolumeEncryption<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise, Windows 7 \[ Ultimate-Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
 | MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

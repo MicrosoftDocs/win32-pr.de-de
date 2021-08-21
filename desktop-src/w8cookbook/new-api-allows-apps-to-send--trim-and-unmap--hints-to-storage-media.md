@@ -1,17 +1,17 @@
 ---
-title: Mit der neuen API können Apps "Trim-und unmap"-Hinweise an Speichermedien senden.
-description: Neue API ermöglicht apps das Senden von \ 0034; Trim und unmap \ 0034; Hinweise zu Speichermedien
+title: Mit der neuen API können Apps TRIM- und Unmap-Hinweise an Speichermedien senden.
+description: Mit der neuen API können Apps \0034 senden. TRIM und Unmap \ 0034; Hinweise zu Speichermedien
 ms.assetid: DDBC3592-BD4D-4826-83FE-387564DA07E8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e043c1188bda790b4ed151e8a79e1f7b4c6f0f9
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 78d79d47dceb5c8bf2e7575836c9a40ddf0347b7e5c616ab4b7196b547742c97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "106340537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028828"
 ---
-# <a name="new-api-allows-apps-to-send-trim-and-unmap-hints-to-storage-media"></a>Mit der neuen API können Apps "Trim-und unmap"-Hinweise an Speichermedien senden.
+# <a name="new-api-allows-apps-to-send-trim-and-unmap-hints-to-storage-media"></a>Mit der neuen API können Apps TRIM- und Unmap-Hinweise an Speichermedien senden.
 
 ## <a name="platforms"></a>Plattformen
 
@@ -19,19 +19,19 @@ ms.locfileid: "106340537"
 **Server** – Windows Server 2012  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Mithilfe von Trim-hinweisen wird das Laufwerk benachrichtigt, dass bestimmte zuvor zugewiesene Sektoren von der APP nicht mehr benötigt werden und gelöscht werden können. Dies wird in der Regel verwendet, wenn eine APP große Speicher Belegungen über eine Datei zuweist und die Zuordnungen für die Datei dann selbst verwaltet (z. b. virtuelle Festplatten Dateien).
+TRIM-Hinweise benachrichtigen das Laufwerk, dass bestimmte Zuvor zugeordnete Sektoren von der App nicht mehr benötigt werden und gelöscht werden können. Dies wird in der Regel verwendet, wenn eine App große Speicherplatzzuweisungen über eine Datei vorzieht und dann die Zuordnungen zur Datei selbst verwaltet (z. B. Virtuelle Festplattendateien).
 
-**Was ist Trim?**
+**Was ist TRIM?**
 
-Solid-State-Laufwerke (SSDs) sind in der Regel Flash speicherbasierte Geräte mit Block Löschung. Dies bedeutet, dass beim Schreiben von Daten in den SSD-Daten nicht an Ort und Stelle geschrieben werden dürfen und an einem anderen Ort geschrieben werden müssen, bis der Block in die Garbage Collection aufgenommen werden kann. Da das SSD über keinen internen Mechanismus verfügt, um zu bestimmen, ob bestimmte Blöcke entfernt werden und andere benötigt werden. Der SSD kann die einzige Zeit markieren, die der Bereich "Dirty" ist, wenn er überschrieben wird. In anderen Fällen, z. b. Wenn eine Datei gelöscht wird, behält der SSD diese Sektoren bei, da der Löschvorgang nur als MFT-Änderung (Master File Table) ausgeführt wird und nicht als Vorgang für alle Bereiche der Datei. In Windows 7 haben wir eine Standardmethode für die Kommunikation mit SSDs zu Sektoren eingeführt, die nicht mehr benötigt werden. Dieser Befehl ist in der [T13-Spezifikation](https://www.t13.org/Standards/Default.aspx?DocumentType=3) als Befehl zum kürzen definiert. NTFS sendet den Befehl Trim für einige normale Inline Vorgänge, z. b. "DeleteFile".
+Solid State Drives (SSDs) sind in der Regel Flashspeicher-basierte Blocklöschgeräte. Dies bedeutet, dass daten, wenn sie auf die SSD geschrieben werden, nicht übergeschrieben werden können und an einen anderen Ort geschrieben werden müssen, bis die Garbage Collection des Blocks möglich ist. Da die SSD über keinen internen Mechanismus verfügt, um zu bestimmen, ob bestimmte Blöcke entfernt werden und andere benötigt werden. Die SSD kann einen Sektor nur dann als "dirty" markieren, wenn er übergeschrieben ist. In anderen Fällen, z. B. beim Löschen einer Datei, behält die SSD diese Sektoren bei, da der Löschvorgang nur als Änderung der Masterdateitabelle (Master File Table, MFT) und nicht als Vorgang für alle Bereiche der Datei erfolgt. In Windows 7 haben wir eine Standard-Methode für die Kommunikation mit SSDs über Sektoren eingeführt, die nicht mehr benötigt werden. Dieser Befehl wird in der [T13-Spezifikation als](https://www.t13.org/Standards/Default.aspx?DocumentType=3) TRIM-Befehl definiert. NTFS sendet den TRIM-Befehl für einige normale Inlinevorgänge wie "deletefile".
 
-**Andere Verwendungsmöglichkeiten von Trim in der Speicher Welt**
+**Andere Verwendungsmöglichkeiten von TRIM in der Speicherwelt**
 
-Wie SSDs, Storage Area Networks (SANs) und die neuen Implementierungen von Software Spaces für Windows 8-Features verwenden Trim-Befehls Hinweise zum Verwalten Ihrer Leerzeichen in schlank bereitgestellten Umgebungen. Sans und Software Plätze weisen Speicherbereiche zu, die größer sind als Sektoren oder Cluster (von 1 MB bis 1 GB). Wenn Sie für Ihre Zuordnungs Größe (oder höher als die Zuordnungs Größe) Trim-Hinweise erhalten, kann das San/SSD einen Bereich aufheben, um den Speicherplatz für andere Dateien freizugeben. Sie durchlaufen in der Regel alle Trim-Hinweise an das zugrunde liegende Medium (SSD oder HDD), damit Sie den freigegebenen Speicherplatz entsprechend verbrauchen können. In der Regel verschieben Sie Daten nicht, um die Zuordnung von Regionen aufzuheben, und Sie verfolgen auch keine Trim-Bereiche nach den zugewiesenen Regionen (wenn die Region leer ist).
+Wie SSDs nutzen Auch Storage Area Networks (SANs) und das neue Windows 8-Feature Software Spaces-Implementierungen TRIM-Befehlshinweise, um ihre Speicherplätze in umgebungen mit schlanker Bereitstellung zu verwalten. SANs und Software Spaces ordnen Speicherbereiche in Größen zu, die größer sind als Sektoren oder Cluster (von 1 MB bis 1 GB). Wenn sie TRIM-Hinweise für die Zuordnungsgröße (oder größer als die Zuordnungsgröße) erhalten, kann das SAN/SSD die Zuordnung einer Region entfernen, um speicherplatz für andere Dateien frei zu machen. Sie übergeben in der Regel alle TRIM-Hinweise an die zugrunde liegenden Medien (SSD oder HDD), damit sie den frei werdenden Speicherplatz nach Belang nutzen können. Sie verschieben Daten in der Regel nicht in Regionen, in denen die Zuordnung wieder aufbewegt wird, und sie verfolgen auch keine TRIM-Bereiche in regionen, deren Zuordnung wieder frei ist (wenn die Region leer ist).
 
-Schlank zugewiesene Sans verwenden die an Sie weiter gegebenen Trim-Hinweise, um den gesamten physischen Speicherbedarf zu verringern und so die Kosten zu senken. Die [T10-SCSI-Spezifikation](https://www.t10.org) definiert den Befehl "unmap" (ähnlich wie der Trim-Befehl). Hier gilt der Befehl für alle Arten von Speicher, einschließlich HDDs, SSDs und anderen. Der unmap-Befehl hilft beim Entfernen physischer Blöcke aus der San-Zuordnung.
+SaNs mit schlanker Speicherbewahrung verwenden die trim-Hinweise, die an sie übergeben werden, um den gesamten physischen Speicherbedarf zu reduzieren und somit die Kosten zu senken. Die [T10-SCSI-Spezifikation](https://www.t10.org) definiert den Befehl "Unmap" (ähnlich wie beim TRIM-Befehl). Hier gilt der Befehl für alle Arten von Speicher, einschließlich HDDs, SSDs und anderen. Der Befehl UnMap hilft, physische Blöcke aus der San-Zuordnung zu entfernen.
 
 ## <a name="how-to-use-the-new-api"></a>Verwenden der neuen API
 
@@ -59,46 +59,46 @@ typedef struct _FILE_LEVEL_TRIM {
 
 
 
-Die Datei Trim wird über den Puffer, wenn möglich, oder asynchron (nicht gepuffert) an das Gerät ioctl DSM Command Trim übermittelt. Dies wird dem Befehl Trim für ATA-Geräte zugeordnet und der Befehl zum Aufheben der Zuordnung für SCSI-Geräte. Der Code zum Kürzen von Dateien sendet die Regionen nacheinander, wie in den oben aufgeführten Blöcken angegeben.
+Datei-TRIM wird nach Möglichkeit über den Puffer oder asynchron (nicht gepuffert) an den Device IOCTL DSM-Befehl TRIM übergeben. Dies wird dem TRIM-Befehl für ATA-Geräte und dem UnMap-Befehl für SCSI-Geräte zugeordnet. Der TRIM-Code der Datei sendet die Regionen 1:1, wie in den obigen Extents angegeben.
 
-File Trim wartet nicht auf Rückgabe vom Gerät, da die Befehle Trim und unmap als Hinweise zu den zugrunde liegenden Speichermedien definiert sind und Rückgabecodes nicht erwartet werden.
+Datei-TRIM wartet nicht auf Rückgaben vom Gerät, da die Befehle TRIM und Unmap als Hinweise zu den zugrunde liegenden Speichermedien definiert sind und Rückgabecodes nicht erwartet werden.
 
 **End-to-End-Workflow:**
 
-1.  Datei Trim abrufen
-    1.  Datei Trim untersucht Eingaben für Fehler
-    2.  Durch Datei Trim werden die Blöcke in LCN-Regionen aufgeteilt.
-    3.  Die Datei Trim wird für falsch ausgerichtete Bereiche, die an Trim übermittelt werden, auf-und heruntergefahren.
-    4.  Durch Datei Trim werden Einträge im Cache gelöscht, die sich auf die Trim-Bereiche beziehen.
-    5.  Die Datei Trim übergibt IOCTL \_ DSM (Trim) pro Region.
-2.  Datei-Trim-Rückgabe oder-Fehler
-    1.  Die Fehlerüberprüfung erfolgt bei der Eingabe Gültigkeit.
-    2.  Wenn nur einige der Blöcke gültig sind, wird ein Fehler für den gesamten API-Befehl zurückgegeben.
+1.  Datei kürzen aufrufen
+    1.  Datei-TRIM überprüft Eingaben auf Fehler
+    2.  Datei-TRIM unterbricht die Extent in LCN-Regionen
+    3.  Datei-TRIM rundet für falsch ausgerichtete Regionen, die an TRIM übergeben werden, auf und ab.
+    4.  Datei-TRIM reiht Einträge im Cache, die sich auf die TRIM-Bereiche beziehen.
+    5.  Datei-TRIM übergibt \_ IOCTL-DSM (Trim) pro Region
+2.  Trim-Rückgaben oder -Fehler der Datei
+    1.  Die Fehlerüberprüfung wird bei der Gültigkeit der Eingabe durchgeführt.
+    2.  Wenn nur einige der Extents gültig sind, wird ein Fehler für den vollständigen API-Aufruf zurückgegeben.
 
 **Anwendungsfälle**
 
-**Virtuelle Festplatte (Virtual Hard Disk, VHD) auf einem SSD-Laufwerk:**
+**Virtuelle Consumerfestplatte (VHD), die auf einer SSD bereitgestellt ist:**
 
-Die virtuelle Festplatte wird anfänglich auf "sauberen", nicht verwendeten Medien bereitgestellt. Bei Verwendung der VHD verwendet die VHD Teile der Speichermedien für Dateien usw. Wenn Dateien auf dem Speichermedium gelöscht werden, werden diese Dateien nicht aus der SSD entfernt, da die komplette VHD als eine Datei auf dem SSD gespeichert wird. In der Hyper-V-Umgebung wird die Datei Kürzung für alle Regionen aufgerufen, die gelöscht werden, wenn "Delete-File" in der VHD-Umgebung auftritt. Die Datei-Metriken \_ werden in den SSD übersetzt, damit die SSD-Leistung optimiert werden kann.
+Die VHD wird zunächst auf "sauberen" nicht verwendeten Medien bereitgestellt. Während die VHD verwendet wird, nutzt die VHD Teile des Speichermediums für Dateien usw. Wenn Dateien auf dem Speichermedium gelöscht werden, werden diese Dateien nicht aus der SSD entfernt, da die vollständige VHD als eine Datei auf der SSD gespeichert wird. Die Hyper-V-Umgebung ruft File TRIM für alle Regionen auf, die gelöscht werden, wenn die Datei in der VHD-Umgebung gelöscht wird. Die \_ Datei-TRIMs werden in die SSD übersetzt, damit die SSD-Leistung optimiert werden kann.
 
-**In einem dünn bereitgestellten San eingebundene consumervhd:**
+**Consumer-VHD in einem san mit schlanker Bereitstellung bereitgestellt:**
 
-Die virtuelle Festplatte wird anfänglich auf einer minimalen Festplatte einer dünn bereitgestellten Umgebung bereitgestellt. Wenn Dateien auf der virtuellen Festplatte gespeichert werden, wächst der Speicherbedarf der virtuellen Festplatte in Vielfachen von Platten. Wenn Dateien in der virtuellen Festplatte entfernt werden, ruft die Hyper-V-Datei in \_ das zugrunde liegende, schlank bereitgestellte San auf. Wenn die Festplatten größer sind als die Granularität der Platte, kann das San nun eine Platte entfernen und somit den Speicherbedarf der VHD auf diesem San verringern.
+Die VHD wird anfänglich auf einer Mindestgröße einer schlanken bereitgestellten Umgebung bereitgestellt. Wenn Dateien in der VHD gespeichert werden, wächst der Speicherbedarf der VHD in Vielfachen von Slabs. Wenn Dateien in der VHD entfernt werden, ruft Hyper-V File TRIM an das zugrunde liegende, schlanke \_ bereitgestellte SAN auf. Wenn die TRIMs größer als die SLAB-Granularität sind, kann das SAN jetzt eine SLAB entfernen und so den Speicherbedarf der VHD auf diesem SAN verringern.
 
-Wenn sich die virtuelle Festplatte auf einem Windows 8-basierten Server befindet, sendet der Speicher Optimierer auch die drei-MS-Werte, um den Festplatten Speicherplatz der virtuellen Festplatte innerhalb der bereitgestellten VHD zu verringern.
+Wenn sich die VHD auf einem Windows 8-basierten Server befindet, sendet der Storage Optimizer auch TRIMs, um den Speicherbedarf der VHD innerhalb der bereitgestellten VHD zu reduzieren.
 
 ## <a name="tests"></a>Tests
 
-In früheren Betriebssystemversionen gibt es keine vergleichbaren APIs. Die tatsächliche API selbst sollte keine Auswirkung auf die Leistung haben, obwohl das Speichermedium (wenn es korrekt implementiert ist) eine bessere Schreibleistung darstellen kann. Die API sollte sehr sorgfältig verwendet werden. nur Blöcke, die nicht mehr benötigt werden, sollten nach unten weitergegeben werden, da diese Blöcke permanent aus den Speichermedien entfernt werden.
+In früheren Betriebssystemversionen gibt es keine vergleichbaren APIs. Die tatsächliche API selbst sollte keine Auswirkungen auf die Leistung haben, obwohl die Speichermedien (wenn sie ordnungsgemäß implementiert sind) eine bessere Schreibleistung zeigen können. Die API sollte sehr sorgfältig verwendet werden. es sollten nur Noch-Speicherungen übergeben werden, die nicht mehr benötigt werden, da diese Speicherungen dauerhaft aus den Speichermedien entfernt werden.
 
 ## <a name="resources"></a>Ressourcen
 
 -   [T13-Spezifikation](http://www.t13.org/Standards/Default.aspx?DocumentType=3)
--   [T10-SCSI-Spezifikation](https://www.t10.org/)
+-   [T10 SCSI-Spezifikation](https://www.t10.org/)
 
- 
+ 
 
- 
+ 
 
 
 

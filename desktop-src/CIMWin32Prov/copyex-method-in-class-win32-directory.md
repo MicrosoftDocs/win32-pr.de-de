@@ -1,5 +1,5 @@
 ---
-description: Kopiert die im Objekt Pfad angegebene Datei bzw. das Verzeichnis für den logischen Verzeichniseintrag an den Speicherort, der durch den filename-Parameter angegeben wird. Diese Methode ist eine erweiterte Version der Copy-Methode.
+description: Kopiert die im Objektpfad angegebene Logische Verzeichniseintragsdatei oder das verzeichnis an den Speicherort, der durch den FileName-Parameter angegeben wird. Diese Methode ist eine erweiterte Version der Copy-Methode.
 ms.assetid: c15bd1ae-a60d-4875-a76e-99486820c42c
 ms.tgt_platform: multiple
 title: CopyEx-Methode der Win32_Directory-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 55f2fdb0aa4e8306e8ec0aa4f5f265c0a8ee6689
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: eed0d496d4b2d16e76eeb262bf2d521d627889e7dd0dfc353a2e02dbd03a881d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080164"
 ---
-# <a name="copyex-method-of-the-win32_directory-class"></a>CopyEx-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="copyex-method-of-the-win32_directory-class"></a>CopyEx-Methode der Win32 \_ Directory-Klasse
 
-Die **CopyEx** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode kopiert die im Objekt Pfad angegebene Datei bzw. das Verzeichnis für den logischen Verzeichniseintrag an den Speicherort, der durch den *filename* -Parameter angegeben wird. Diese Methode ist eine erweiterte Version der [**Copy**](copy-method-in-class-win32-directory.md) -Methode. Eine Kopie wird nicht unterstützt, wenn eine vorhandene logische Datei überschrieben werden muss.
+Die  [CopyEx-WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) kopiert die im Objektpfad angegebene Logische Verzeichniseintragsdatei oder das Verzeichnis an den Speicherort, der durch den *FileName-Parameter* angegeben wird. Diese Methode ist eine erweiterte Version der [**Copy-Methode.**](copy-method-in-class-win32-directory.md) Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,36 +45,36 @@ uint32 CopyEx(
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name der Kopie der Datei (oder des Verzeichnisses). Beispiel: c: \\ Temp \\ NewDirectory.
+Vollqualifizierte Name der Kopie der Datei (oder des Verzeichnisses). Beispiel: c: \\ temp \\ newdirectory.
 
 </dd> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Der Name der Datei oder des Verzeichnisses, in der die **CopyEx** -Methode fehlgeschlagen ist. Dieser Parameter ist **null** , wenn die Methode erfolgreich ausgeführt wird.
+Name der Datei oder des Verzeichnisses, in der die **CopyEx-Methode** fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in, optional\]
+*StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Benennt die untergeordnete Datei oder das Verzeichnis, die als Ausgangspunkt für **CopyEx** verwendet werden soll. Der Parameter " *StartFileName* " ist in der Regel der " *Stop filename* "-Parameter, der die Datei oder das Verzeichnis angibt, in dem ein Fehler beim vorherigen Methoden aufzurufen Wenn dieser Parameter **null** ist, wird der Vorgang für die im **ExecMethod** -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Benennt die untergeordnete Datei oder das Verzeichnis, die bzw. das als Ausgangspunkt für **CopyEx** verwendet werden soll. Der *StartFileName-Parameter* ist in der Regel der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, bei der beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter **NULL** ist, wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das im **ExecMethod-Aufruf** angegeben ist.
 
-Wenn *StartFileName* verwendet wird, muss *rekursive* auch auf true festgelegt werden.
+Wenn *StartFileName* verwendet wird, muss *Recursive* auch auf TRUE festgelegt werden.
 
 </dd> <dt>
 
 *Rekursiv* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass Dateien und Verzeichnisse rekursiv innerhalb des Verzeichnisses kopiert werden, das von der [**CIM \_ LogicalFile**](cim-logicalfile.md) -Instanz angegeben wird.
+True gibt an, dass Dateien und Verzeichnisse rekursiv in das von der [**CIM \_ LogicalFile-Instanz**](cim-logicalfile.md) angegebene Verzeichnis kopiert werden.
 
 > [!Note]  
-> Bei Datei Instanzen wird der *rekursive* Eingabeparameter ignoriert.
+> Bei Dateiinstanzen wird der *Rekursive* Eingabeparameter ignoriert.
 
  
 
@@ -82,7 +82,7 @@ Wenn *StartFileName* verwendet wird, muss *rekursive* auch auf true festgelegt w
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich kopiert wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich kopiert wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -103,7 +103,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -152,7 +152,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -166,7 +166,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -185,8 +185,8 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -198,7 +198,7 @@ Ein angegebener Parameter ist ungültig.
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**\_Win32-Verzeichnis**](win32-directory.md)
 </dt> </dl>
 
  

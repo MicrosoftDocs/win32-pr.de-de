@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der esentresource. verwerfen-Methode.
-title: Esentresource. verwerfen-Methode
+description: 'Weitere Informationen zu: EsentResource.Dispose-Methode'
+title: EsentResource.Dispose-Methode
 TOCTitle: 'Dispose method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentResource.Dispose
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource.dispose(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d301b3b1f43d57631091003bf77d06d749bd98ae
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 454e1de49c74e33da796fc6c1dec9559223834eb3e92437a0b671814847e5190
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119115190"
 ---
-# <a name="esentresourcedispose-method"></a>Esentresource. verwerfen-Methode
+# <a name="esentresourcedispose-method"></a>EsentResource.Dispose-Methode
 
-Löschen Sie dieses Objekt, und veröffentlichen Sie die zugrunde liegende ESENT-Ressource.
+Verwerfen Sie dieses Objekt, und geben Sie die zugrunde liegende Esent-Ressource frei.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,16 +51,16 @@ public void Dispose()
 
 #### <a name="implements"></a>Implementiert
 
-[Iverwerf. verwerfen ()](/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose)  
+[IDisposable.Dispose()](/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentresource-Klasse](./esentresource-class.md)
+[EsentResource-Klasse](./esentresource-class.md)
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Elemente](./esentresource-members.md)
 
-[Überladung verwerfen](./esentresource.dispose-method.md)
+[Dispose-Überladung](./esentresource.dispose-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

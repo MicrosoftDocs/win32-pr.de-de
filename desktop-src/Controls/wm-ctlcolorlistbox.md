@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORLISTBOX Meldung (Winuser.h)
-description: Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das System das Listenfeld zeichnet. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandle festlegen.
+title: WM_CTLCOLORLISTBOX (Winuser.h)
+description: Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das Listenfeld vom System ge zeichnet wird. Wenn auf diese Meldung reagiert wird, kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandpunkts festlegen.
 ms.assetid: e128e77f-e966-44c4-9f0e-efcf421b6c82
 keywords:
-- WM_CTLCOLORLISTBOX Windows-Steuerelemente für Nachrichten
+- WM_CTLCOLORLISTBOX von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119077664"
 ---
-# <a name="wm_ctlcolorlistbox-message"></a>WM \_ CTLCOLORLISTBOX-Meldung
+# <a name="wm_ctlcolorlistbox-message"></a>\_WM-CTLCOLORLISTBOX-Nachricht
 
-Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das System das Listenfeld zeichnet. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandle festlegen.
+Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das Listenfeld vom System ge zeichnet wird. Wenn auf diese Meldung reagiert wird, kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandpunkts festlegen.
 
 
 ```C++
@@ -42,7 +42,7 @@ WM_CTLCOLORLISTBOX
 *wParam* 
 </dt> <dd>
 
-Behandeln Sie den Gerätekontext für das Listenfeld.
+Handle für den Gerätekontext für das Listenfeld.
 
 </dd> <dt>
 
@@ -61,9 +61,9 @@ Wenn eine Anwendung diese Nachricht verarbeitet, muss sie ein Handle an einen Pi
 
 Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das Listenfeld aus.
 
-Die **WM \_ CTLCOLORLISTBOX-Nachricht** wird nie zwischen Threads gesendet. Er wird nur innerhalb eines Threads gesendet.
+Die **WM \_ CTLCOLORLISTBOX-Nachricht** wird nie zwischen Threads gesendet. Es wird nur innerhalb eines Threads gesendet.
 
-Wenn eine Dialogfeldprozedur diese Nachricht verarbeitet, sollte sie den gewünschten Rückgabewert in einen **INT \_ PTR-Wert** konvertieren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE** zurückgibt, wird die Standardmäßige Nachrichtenverarbeitung ausgeführt. Der von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte **\_ DWL-MSGRESULT-Wert** wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert **in eine INT \_ PTR-Datei** casten und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE zurückgibt,** wird die Standardnachrichtenbehandlung ausgeführt. Der von der [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) **\_ MSGRESULT-DWL-Wert** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,13 +71,13 @@ Wenn eine Dialogfeldprozedur diese Nachricht verarbeitet, sollte sie den gewüns
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
 | Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

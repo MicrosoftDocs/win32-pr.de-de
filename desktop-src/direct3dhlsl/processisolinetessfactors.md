@@ -1,9 +1,9 @@
 ---
-title: Processisolinetess Factors-Funktion
-description: Generiert die gerundeten Mosaik Faktoren für eine Isolationsstufe.
+title: ProcessIsolineTessFactors-Funktion
+description: Generiert die gerundeten Mosaikfaktoren für eine Isolinie.
 ms.assetid: 0816b3e0-cb03-4a7a-9732-e84c637b3d48
 keywords:
-- Processisolinetess Factors-Funktion HLSL
+- ProcessIsolineTessFactors-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,25 +13,25 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 10da0e5bf0f2138c57da3fcfe962bc6a88800068
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 34c6f4d579ee7fbaee9416d7a607e3856a7793021cca7149723d3d6e5a2b4a49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986290"
 ---
-# <a name="processisolinetessfactors-function"></a>Processisolinetess Factors-Funktion
+# <a name="processisolinetessfactors-function"></a>ProcessIsolineTessFactors-Funktion
 
-Generiert die gerundeten Mosaik Faktoren für eine Isolationsstufe.
+Generiert die gerundeten Mosaikfaktoren für eine Isolinie.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void ProcessIsolineTessFactors(
-  in  float RawDetailFactor,
-  in  float RawDensityFactor,
-  out float RoundedDetailFactor,
-  out float RoundedDensityFactor
+  in  float RawDetailFactor,
+  in  float RawDensityFactor,
+  out float RoundedDetailFactor,
+  out float RoundedDensityFactor
 );
 ```
 
@@ -39,39 +39,39 @@ void ProcessIsolineTessFactors(
 
 <dl> <dt>
 
-*Rawdetailfactor* \[ in\]
+*RawDetailFactor* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Der gewünschte Detail Faktor.
+Der gewünschte Detailfaktor.
 
 </dd> <dt>
 
-*Rawdensityfactor* \[ in\]
+*RawDensityFactor* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Der gewünschte Dichte Faktor.
+Der gewünschte Dichtefaktor.
 
 </dd> <dt>
 
-*Rounabddetailfactor* \[ vorgenommen\]
+*RoundedDetailFactor* \[ out\]
 </dt> <dd>
 
 Typ: **float**
 
-Der abgerundete Detail Faktor wurde an einen Bereich geklemmt, der vom Mosaik verwendet werden kann.
+Der gerundete Detailfaktor, der an einen Bereich gebunden ist, der vom Mosaikator verwendet werden kann.
 
 </dd> <dt>
 
-*Rounzerddensityfactor* \[ vorgenommen\]
+*RoundedDensityFactor* \[ out\]
 </dt> <dd>
 
 Typ: **float**
 
-Der Faktor für die abgerundete Dichte wurde an eine rangegeklammert, die vom Mosaik Prozess verwendet werden kann.
+Der gerundete Dichtefaktor, der an einen Bereich gebunden ist, kann vom Mosaikator verwendet werden.
 
 </dd> </dl>
 
@@ -79,47 +79,47 @@ Der Faktor für die abgerundete Dichte wurde an eine rangegeklammert, die vom Mo
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        |          |       |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

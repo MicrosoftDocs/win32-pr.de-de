@@ -1,9 +1,9 @@
 ---
-title: RB_HITTEST Meldung (kommstrg. h)
-description: Bestimmt, welcher Teil eines Grund leisten Bands an einem bestimmten Punkt auf dem Bildschirm angezeigt wird, wenn ein Info leisten-Band an diesem Punkt vorhanden ist.
+title: RB_HITTEST (Commctrl.h)
+description: Bestimmt, welcher Teil eines Leistenbands sich an einem bestimmten Punkt auf dem Bildschirm befindet, wenn an diesem Punkt ein Rebarband vorhanden ist.
 ms.assetid: 8f27db21-50d8-438f-a44c-2e65dd93fa2a
 keywords:
-- Windows-Steuerelemente für RB_HITTEST Meldung
+- RB_HITTEST von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e17283bfce255672391ba9d8b6acd60fe41045b7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d45f2ca2c5c6cf8de61c14404ac3bb541a8c61741896cf1b2803db29332d75e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078673"
 ---
-# <a name="rb_hittest-message"></a>RB \_ HitTest-Meldung
+# <a name="rb_hittest-message"></a>RB \_ HITTEST-Nachricht
 
-Bestimmt, welcher Teil eines Grund leisten Bands an einem bestimmten Punkt auf dem Bildschirm angezeigt wird, wenn ein Info leisten-Band an diesem Punkt vorhanden ist.
+Bestimmt, welcher Teil eines Leistenbands sich an einem bestimmten Punkt auf dem Bildschirm befindet, wenn an diesem Punkt ein Rebarband vorhanden ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Bestimmt, welcher Teil eines Grund leisten Bands an einem bestimmten Punkt auf d
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**rbhittestinfo**](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) -Struktur. Bevor die Nachricht gesendet wird, muss der **PT** -Member dieser Struktur in Client Koordinaten mit dem Punkt initialisiert werden, der als Treffer getestet wird.
+Zeiger auf eine [**RBHITTESTINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) Vor dem Senden der Nachricht muss **der pt-Member** dieser -Struktur auf den Punkt initialisiert werden, der in Clientkoordinaten getestet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den NULL basierten Index des Bands am angegebenen Punkt zurück, oder-1, wenn sich kein Grund leisten Band am Punkt befand.
+Gibt den nullbasierten Index des Bandes am angegebenen Punkt zurück, oder -1, wenn sich an dem Punkt kein Rebarband auft hatte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt den NULL basierten Index des Bands am angegebenen Punkt zurück, oder-1, we
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,53 +1,53 @@
 ---
 title: UI_PKEY_Keytip
-description: Bezeichnet die Benutzeroberflächen- \_ pkey- \_ KeyTip-Eigenschaft.
+description: Identifiziert die \_ PKEY \_ Keytip-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 7af4abcb-abb0-466a-bc58-274fa18b79af
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 550bfac9b341d14b495c73e4426e8143d91d8e19
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 940a855561dfd30dfbf063323f4b86b03561163c4fbf34f9db08be4eb3e1ece3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028608"
 ---
-# <a name="ui_pkey_keytip"></a>UI- \_ pkey- \_ KeyTip
+# <a name="ui_pkey_keytip"></a>\_PKEY-Keytip der Benutzeroberfläche \_
 
-Bezeichnet die Benutzeroberflächen- \_ pkey- \_ KeyTip-Eigenschaft.
+Identifiziert die \_ PKEY \_ Keytip-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_Keytip
-   shellPKey = UI_PKEY_Keytip
-   formatID = 00000003-7363-696e-8441798acf5aebb7
-   propID = 3
-   typeInfo
-      type = VT_LPWSTR
+   name = UI_PKEY_Keytip
+   shellPKey = UI_PKEY_Keytip
+   formatID = 00000003-7363-696e-8441798acf5aebb7
+   propID = 3
+   typeInfo
+      type = VT_LPWSTR
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Benutzeroberflächen- \_ pkey- \_ KeyTip wird von einer Anwendung verwendet, um den Tastaturbeschleuniger eines Menüband-Steuer Elements abzufragen.
+Die PKEY-Keytip der Benutzeroberfläche \_ wird von einer Anwendung \_ verwendet, um die Tastaturbeschleunigung eines Menübandsteuerelements abzufragen.
 
-Dieser Eigenschafts Wert ist eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen einschließlich Leerzeichen besteht.
+Dieser Eigenschaftswert ist eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen einschließlich Leerzeichen besteht.
 
-Der Wert von UI \_ pkey \_ KeyTip fungiert als Tastaturbeschleuniger für einen Befehl, es sei denn, dieser Befehl wird über ein Menü Element verfügbar gemacht. In diesem Fall ignoriert das Framework den Benutzeroberflächen- \_ pkey \_ -KeyTip-Wert und verwendet stattdessen ein Zeichen, dem ein kaufmännisches und-Zeichen vorangestellt ist, wie durch [**Command. labeltitle**](windowsribbon-element-command-labeltitle.md) oder [UI \_ pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md)angegeben. Wenn kein kaufmännisches und von der Bezeichnung " **Command. labeltitle** " oder "UI pkey" angegeben wird \_ \_ , wird kein KeyTip oder keine Tastatur Beschleunigung bereitgestellt.
+Der Wert von \_ UI PKEY \_ Keytip fungiert als Tastaturbeschleunigung für einen Befehl, es sei denn, dieser Befehl wird über ein Menüelement verfügbar gemacht. In diesem Fall ignoriert das Framework den PKEY Keytip-Wert der Benutzeroberfläche \_ \_ und verwendet stattdessen ein Zeichen, dem ein ampersand vorangestellt ist, wie von [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) oder [UI \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md)angegeben. Wenn kein ampersand durch **Command.LabelTitle** oder UI PKEY Label angegeben \_ \_ wird, wird keine Keytip oder Tastaturtaste verfügbar gemacht.
 
-Die maximale Länge des UI- \_ pkey- \_ KeyTip ist unbegrenzt.
+Die maximale Länge von PKEY Keytip der Benutzeroberfläche \_ \_ ist nicht gebunden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ressourcen Eigenschaften](windowsribbon-reference-properties-resource.md)
+[Ressourceneigenschaften](windowsribbon-reference-properties-resource.md)
 </dt> <dt>
 
-[**Command. KeyTip**](windowsribbon-element-command-keytip.md)
+[**Command.Keytip**](windowsribbon-element-command-keytip.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

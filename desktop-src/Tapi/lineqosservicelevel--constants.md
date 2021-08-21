@@ -1,23 +1,23 @@
 ---
 description: Diese Konstanten werden von einem TSP verwendet, um den Typ einer erforderlichen QoS-Ebene (Quality of Service) zu identifizieren.
 ms.assetid: 9fc3f6eb-7103-43c5-84f8-3842757e5be7
-title: LINEQOSSERVICELEVEL_ Konstanten (TSPI. h)
+title: LINEQOSSERVICELEVEL_ Konstanten (Tspi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c0629715e461a15e21e1730f86edb61d83d60db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a74a4508b54a8b56e8e9cb359f966122c5c009f0e5ede0f1b8544cd1e46330c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003008"
 ---
-# <a name="lineqosservicelevel_-constants"></a>Lineqosservicelevel- \_ Konstanten
+# <a name="lineqosservicelevel_-constants"></a>LINEQOSSERVICELEVEL-Konstanten \_
 
 Diese Konstanten werden von einem TSP verwendet, um den Typ einer erforderlichen QoS-Ebene (Quality of Service) zu identifizieren.
 
 <dl> <dt>
 
-<span id="LINEQOSSERVICELEVEL_NEEDED"></span><span id="lineqosservicelevel_needed"></span>**lineqosservicelevel \_ erforderlich**
+<span id="LINEQOSSERVICELEVEL_NEEDED"></span><span id="lineqosservicelevel_needed"></span>**LINEQOSSERVICELEVEL \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
  0x00000001
@@ -25,12 +25,12 @@ Diese Konstanten werden von einem TSP verwendet, um den Typ einer erforderlichen
 
 
 
-Die geforderte Quality of Service Level ist eine Voraussetzung.
+Die qualität des angeforderten Servicelevels ist eine Anforderung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEQOSSERVICELEVEL_IFAVAILABLE"></span><span id="lineqosservicelevel_ifavailable"></span>**lineqosservicelevel \_ ifavailable**
+<span id="LINEQOSSERVICELEVEL_IFAVAILABLE"></span><span id="lineqosservicelevel_ifavailable"></span>**LINEQOSSERVICELEVEL, \_ FALLS VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
  0x00000002
@@ -38,12 +38,12 @@ Die geforderte Quality of Service Level ist eine Voraussetzung.
 
 
 
-Die erforderliche Quality of Service Level, falls verfügbar.
+Die erforderliche Servicelevelqualität( falls verfügbar).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEQOSSERVICELEVEL_BESTEFFORT"></span><span id="lineqosservicelevel_besteffort"></span>**lineqosservicelevel \_ BestEffort**
+<span id="LINEQOSSERVICELEVEL_BESTEFFORT"></span><span id="lineqosservicelevel_besteffort"></span>**LINEQOSSERVICELEVEL \_ BESTEFFORT**
 </dt> <dd> <dl> <dt>
 
  0x00000003
@@ -51,7 +51,7 @@ Die erforderliche Quality of Service Level, falls verfügbar.
 
 
 
-Die Qualität der Service Level ist erforderlich.
+Die erforderliche Servicelevelqualität ist "beste Leistung".
 
 
 </dt> </dl> </dd> </dl>
@@ -62,8 +62,8 @@ Die Qualität der Service Level ist erforderlich.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TSPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tspi.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die angegebene Farbe eine besondere Textfarbe ist.
+description: Gibt an, ob die angegebene Farbe eine spezielle Textfarbe ist.
 ms.assetid: 527806f5-5046-48b0-a8db-86a5b8c0db08
-title: Fspecialtextimecolorstyle-Funktion
+title: FSpecialTextIMEColorStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: cfaf83aeb2fcb03ab61c1280ec821174117026fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6fa964ba5d1020a5d9ba35b7359d81d965778b8a1e1f546a0a6cac19d2611ebd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017728"
 ---
-# <a name="fspecialtextimecolorstyle-function"></a>Fspecialtextimecolorstyle-Funktion
+# <a name="fspecialtextimecolorstyle-function"></a>FSpecialTextIMEColorStyle-Funktion
 
-Gibt an, ob die angegebene Farbe eine besondere Textfarbe ist.
+Gibt an, ob die angegebene Farbe eine spezielle Textfarbe ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ BOOL __cdecl FSpecialTextIMEColorStyle(
 
 <dl> <dt>
 
-*pcolorstyle* \[ in\]
+*pcolorstyle* \[ In\]
 </dt> <dd>
 
-Eine **imecolorsty** -Struktur, die von einer [**pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md) -oder [**pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md) -Funktion zur체ckgegeben wird.
+Eine **IMECOLORSTY-Struktur,** die von einer [**PColorStyleBackFromIMEStyle-**](pcolorstylebackfromimestyle.md) oder [**PColorStyleTextFromIMEStyle-Funktion zur체ckgegeben**](pcolorstyletextfromimestyle.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>R체ckgabewert
 
-Gibt **true** zur체ck, wenn die Farbe eine besondere Textfarbe ist.
+Gibt **TRUE zur체ck,** wenn die Farbe eine spezielle Textfarbe ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,14 +64,14 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md)
+[**PColorStyleBackFromIMEStyle**](pcolorstylebackfromimestyle.md)
 </dt> <dt>
 
-[**Pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md)
+[**PColorStyleTextFromIMEStyle**](pcolorstyletextfromimestyle.md)
 </dt> </dl>
 
  

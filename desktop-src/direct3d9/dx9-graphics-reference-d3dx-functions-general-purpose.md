@@ -1,19 +1,19 @@
 ---
-description: 'D3DX bietet die folgenden allgemeinen Funktionen:'
+description: 'D3DX stellt die folgenden allgemeinen Funktionen zur Verfügung:'
 ms.assetid: cb2c6b6d-6ac5-47e2-96c2-4a68e86af00f
-title: Universell Funktionen (Direct3D 9-Grafiken)
+title: Universell Functions (Direct3D 9 Graphics)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 228af2d89a0c26d8aacfb0127b7e7fe299d12965
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4fbd3acbb3248708efb2d9aff4e2baf198f73d5426b186b5531b3d23907e3b33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122497"
 ---
-# <a name="general-purpose-functions-direct3d-9-graphics"></a>Universell Funktionen (Direct3D 9-Grafiken)
+# <a name="general-purpose-functions-direct3d-9-graphics"></a>Universell Functions (Direct3D 9 Graphics)
 
-D3DX bietet die folgenden allgemeinen Funktionen:
+D3DX stellt die folgenden allgemeinen Funktionen zur Verfügung:
 
 -   [**D3DXCheckVersion**](d3dxcheckversion.md)
 -   [**D3DXCreateBuffer**](d3dxcreatebuffer.md)

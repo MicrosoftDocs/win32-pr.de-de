@@ -1,7 +1,7 @@
 ---
-description: Extrahiert Koeffizienten-Daten aus einem Puffer mit einem einzelnen Kanal und fügt die Daten einem ID3DXMesh-Objekt hinzu.
+description: Extrahiert Koeffizientsdaten aus einem Einkanalpuffer und fügt die Daten einem ID3DXMesh-Objekt hinzu.
 ms.assetid: 4fada987-ddd7-4c02-a177-dd81f3790588
-title: 'ID3DXPRTBuffer:: extracttomesh-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::ExtractToMesh-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e6dfe545a934f541938d6030cdc3814f451d93c8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c838a146a390aa72ac24781ca6f136b028ad41a6ee94fb4210ec4bd3f557acdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120614"
 ---
-# <a name="id3dxprtbufferextracttomesh-method"></a>ID3DXPRTBuffer:: extracttomesh-Methode
+# <a name="id3dxprtbufferextracttomesh-method"></a>ID3DXPRTBuffer::ExtractToMesh-Methode
 
-Extrahiert Koeffizienten-Daten aus einem Puffer mit einem einzelnen Kanal und fügt die Daten einem [**ID3DXMesh**](id3dxmesh.md) -Objekt hinzu.
+Extrahiert Koeffizientsdaten aus einem Einkanalpuffer und fügt die Daten einem [**ID3DXMesh-Objekt**](id3dxmesh.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT ExtractToMesh(
 
 <dl> <dt>
 
-*Numkoefficients* \[ in\]
+*NumCoefficients* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Koeffizienten, die aus dem Puffer extrahiert werden sollen. Bei Verwendung von "sphärischen harmonisch (SH) preberechneten Radiance Transfer (PRT)" sollte die Anzahl der Koeffizienten "Order ²" lauten. Die Reihenfolge muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen.
+Anzahl der aus dem Puffer zu extrahierenden Koeffizienten. Bei Verwendung der vorberechnten Bogenmaßübertragung (PRT) der spherischen Durchlässigkeit sollte die Anzahl der Koeffizienten "Order bli" sein. Die Reihenfolge muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Nutzung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DDECLUSAGE**](./d3ddeclusage.md)**
 
-Vertex-Verwendungs Beschreibungen des Netzes. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
+Vertexverwendungsbeschreibungen des Gitternetzes. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 
 </dd> <dt>
 
-" *Startwert* \[ " in\]
+*UsageIndexStart* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Start Index für Koeffizienten, die im Mesh gespeichert werden sollen.
+Startindex für Koeffizienten, die im Netz gespeichert werden sollen.
 
 </dd> <dt>
 
-*pscene* \[ in\]
+*pScene* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf ein [**ID3DXMesh**](id3dxmesh.md) Mesh-Objekt, in dem Koeffizienten gespeichert werden.
+Zeiger auf ein [**ID3DXMesh-Meshobjekt,**](id3dxmesh.md) das Koeffizienten speichert.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Zeiger auf ein [**ID3DXMesh**](id3dxmesh.md) Mesh-Objekt, in dem Koeffizienten g
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,12 +91,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

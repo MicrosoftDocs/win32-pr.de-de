@@ -1,6 +1,6 @@
 ---
-title: Framebuffer-Steuerelementzustandsvariablen
-description: Framebuffer-Steuerelementzustandsvariablen
+title: Statusvariablen für Framebuffer-Steuerelemente
+description: Statusvariablen für Framebuffer-Steuerelemente
 ms.assetid: ab57e07d-a694-45e7-a3b3-2e856111b87d
 keywords:
 - Framebuffer-Steuerelementzustandsvariablen OpenGL
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 998414271956de44710e9ef456722d7499adb862
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 276019f790e5f4750e446cf4ae2d035e0178d0e79130100a5a5e1954cbdcb73a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107910078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061912"
 ---
-# <a name="framebuffer-control-state-variables"></a>Framebuffer-Steuerelementzustandsvariablen
+# <a name="framebuffer-control-state-variables"></a>Statusvariablen für Framebuffer-Steuerelemente
 
 <dl> <dt><span id="GL_DRAW_BUFFER"></span><span id="gl_draw_buffer"></span>GL \_ DRAW \_ BUFFER</dt> <dd> 
 
@@ -38,9 +38,9 @@ ms.locfileid: "107910078"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Farbindex-Schreibmaske                                                            |
+| Beschreibung:     | Farbindexschreibmaske                                                            |
 | Attributgruppe: | Farbpuffer                                                                     |
-| Anfangswert:   | 1 s                                                                              |
+| Anfangswert:   | 1                                                                              |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -79,7 +79,7 @@ ms.locfileid: "107910078"
 |------------------|----------------------------------------------------------------------------------|
 | Beschreibung:     | Schablonenpuffer-Schreibmaske                                                         |
 | Attributgruppe: | Schablonenpuffer                                                                   |
-| Anfangswert:   | 1 s                                                                              |
+| Anfangswert:   | 1                                                                              |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -90,7 +90,7 @@ ms.locfileid: "107910078"
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Farbpuffer-Klarwert (RGBA-Modus)                                           |
+| Beschreibung:     | Farbpuffer-Clear-Wert (RGBA-Modus)                                           |
 | Attributgruppe: | Farbpuffer                                                                   |
 | Anfangswert:   | 0, 0, 0, 0                                                                     |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -103,7 +103,7 @@ ms.locfileid: "107910078"
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Farbpuffer-Klarwert (Farbindexmodus)                                    |
+| Beschreibung:     | Farbpuffer-Clear-Wert (Farbindexmodus)                                    |
 | Attributgruppe: | Farbpuffer                                                                   |
 | Anfangswert:   | 0                                                                              |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -116,7 +116,7 @@ ms.locfileid: "107910078"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Wert für tiefenpufferbasiertes Löschen                                                         |
+| Beschreibung:     | Tiefenpuffer-Clear-Wert                                                         |
 | Attributgruppe: | Tiefenpuffer                                                                     |
 | Anfangswert:   | 1                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -138,12 +138,12 @@ ms.locfileid: "107910078"
 
  
 
-</dd> <dt><span id="GL_ACCUM_CLEAR_VALUE"></span><span id="gl_accum_clear_value"></span>GL \_ ACCUM \_ CLEAR \_ VALUE</dt> <dd> 
+</dd> <dt><span id="GL_ACCUM_CLEAR_VALUE"></span><span id="gl_accum_clear_value"></span>GL- \_ UND \_ GL-WERT LÖSCHEN \_</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Akkumulationspuffer–Clear-Wert                                                |
-| Attributgruppe: | accum-buffer                                                                   |
+| Beschreibung:     | Klarwert des Akkumulationspuffers                                                |
+| Attributgruppe: | bufferm-buffer                                                                   |
 | Anfangswert:   | 0                                                                              |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 

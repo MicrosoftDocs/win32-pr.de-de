@@ -1,6 +1,6 @@
 ---
 title: msad4
-description: Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe absoluter Unterschiede einer anderen Byte Ausrichtung zwischen dem Verweis Wert und dem Quellwert.
+description: Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe der absoluten Unterschiede einer anderen Byteausrichtung zwischen dem Verweiswert und dem Quellwert.
 ms.assetid: 6497F9AE-4524-44C2-A1C6-2A4ACB30FA9C
 keywords:
 - msad4 HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 552db3afd07677777b47e939d659c0f6e333e496
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be09292cad1181c9bac84a4ecb5346b01b0a58c73e2e545d7386658ac54a1f11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104976968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120114"
 ---
 # <a name="msad4"></a>msad4
 
-Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe absoluter Unterschiede einer anderen Byte Ausrichtung zwischen dem Verweis Wert und dem Quellwert.
+Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe der absoluten Unterschiede einer anderen Byteausrichtung zwischen dem Verweiswert und dem Quellwert.
 
 
 
-| uint4 result = msad4 (uint-Referenz, uint2 Source, uint4 Accum); |
+| uint4 result = msad4(uint reference, uint2 source, uint4 accum); |
 |------------------------------------------------------------------|
 
 
@@ -37,46 +37,46 @@ Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen
 
 <dl> <dt>
 
-<span id="reference"></span><span id="REFERENCE"></span>*Angabe*
+<span id="reference"></span><span id="REFERENCE"></span>*Verweis*
 </dt> <dd>
 
-\[im \] Verweis Array von 4 Bytes in einem **uint** -Wert.
+\[in \] Das Verweisarray von 4 Bytes in einem **uint-Wert.**
 
 </dd> <dt>
 
-<span id="source"></span><span id="SOURCE"></span>*Ausgangs*
+<span id="source"></span><span id="SOURCE"></span>*Quelle*
 </dt> <dd>
 
-\[im \] Quell Array von 8 Bytes in zwei **uint2** -Werten.
+\[in \] Das Quellarray von 8 Bytes in zwei **uint2-Werten.**
 
 </dd> <dt>
 
 <span id="accum"></span><span id="ACCUM"></span>*Accum*
 </dt> <dd>
 
-\[in \] einem Vektor von 4 Werten. **msad4** fügt diesen Vektor der maskierten Summe absoluter Unterschiede der verschiedenen Byte Ausrichtungen zwischen dem Verweis Wert und dem Quellwert hinzu.
+\[in \] Ein Vektor von 4 Werten. **msad4** fügt diesen Vektor der maskierten Summe der absoluten Unterschiede der verschiedenen Byteausrichtungen zwischen dem Verweiswert und dem Quellwert hinzu.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert. **msad4** enthält keinen Unterschied in der Summe, wenn dieser Unterschied maskiert ist (d. h., das Verweis Byte ist 0).
+Ein Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert. **msad4** enthält keinen Unterschied in der Summe, wenn diese Differenz maskiert ist (d. b. das Verweis-Byte ist 0).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die intrinsische **msad4** -Funktion im Shader-Code zu verwenden, müssen Sie die [**ID3D11Device:: checkfeaturesupport**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) -Methode mit [**D3D11 \_ Feature \_ D3D11- \_ Optionen**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature) aufrufen, um zu überprüfen, ob das Direct3D-Gerät die Funktion [**SAD4ShaderInstructions**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options) unterstützt Die systeminterne **msad4** -Funktion erfordert einen WDDM 1,2-Anzeigetreiber, und alle WDDM 1,2-Anzeigetreiber müssen **msad4** unterstützen. Wenn Ihre APP ein renderinggerät mit [Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 11,0 oder 11,1 erstellt und das Kompilierungs Ziel Shader-Modell 5 oder höher ist, kann der HLSL-Quellcode die systeminterne Funktion **msad4** verwenden.
+Um die systeminterne **msad4-Funktion** in Ihrem Shadercode zu verwenden, rufen Sie die [**ID3D11Device::CheckFeatureSupport-Methode**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) mit [**D3D11 \_ FEATURE \_ D3D11 \_ OPTIONS**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature) auf, um zu überprüfen, ob das Direct3D-Gerät die Featureoption [**SAD4ShaderInstructions**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options) unterstützt. Die **systeminterne msad4-Datei** erfordert einen WDDM 1.2-Anzeigetreiber, und alle WDDM 1.2-Anzeigetreiber müssen **msad4** unterstützen. Wenn Ihre App ein Renderinggerät mit [der Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 11.0 oder 11.1 erstellt und das Kompilierungsziel das Shadermodell 5 oder höher ist, kann der HLSL-Quellcode die systeminterne **Msad4-Funktion** verwenden.
 
-Rückgabewerte sind nur bis zu 65535-Werte genau. Wenn Sie die systeminterne Funktion **msad4** mit Eingaben aufzurufen, die zu Rückgabe Werten größer als 65535 führen können, erzeugt **msad4** nicht definierte Ergebnisse.
+Rückgabewerte sind nur bis zu 65535 genau. Wenn Sie die systeminterne **msad4-Datei** mit Eingaben aufrufen, die zu Rückgabewerten größer als 65535 führen können, erzeugt **msad4** nicht definierte Ergebnisse.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                | Unterstützt |
 |-------------------------------------------------------------|-----------|
-| [Shadermodell 5 oder höher](d3d11-graphics-reference-sm5.md) | ja       |
+| [Shadermodell 5 oder höher](d3d11-graphics-reference-sm5.md) | Ja       |
 
 
 
@@ -84,7 +84,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie eine Beispiel Ergebnisberechnung für **msad4**:
+Hier sehen Sie eine Beispielergebnisberechnung für **msad4:**
 
 
 ```
@@ -105,7 +105,7 @@ result = {153,6,92,113}
 
 
 
-Im folgenden finden Sie ein Beispiel dafür, wie Sie **msad4** verwenden können, um in einem Puffer nach einem Verweis Muster zu suchen:
+Im Folgenden finden Sie ein Beispiel dafür, wie Sie **msad4** verwenden können, um nach einem Verweismuster innerhalb eines Puffers zu suchen:
 
 
 ```
@@ -120,14 +120,14 @@ buf_accum[DTid.x] = accum;
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/> |
 
 
 
@@ -135,7 +135,7 @@ buf_accum[DTid.x] = accum;
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

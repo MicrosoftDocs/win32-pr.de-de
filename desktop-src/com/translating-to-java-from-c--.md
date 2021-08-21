@@ -1,31 +1,31 @@
 ---
 title: Übersetzen in Java aus C++
-description: Mithilfe der Programmiersprache C++ können Entwickler direkt auf den Speicher zugreifen, in dem eine bestimmte Variable gespeichert wird. Speicher Zeiger bieten diesen direkten Zugriff. In Java werden Zeiger für Sie behandelt.
+description: Mithilfe der Programmiersprache C++ können Entwickler direkt auf den Arbeitsspeicher zugreifen, der eine bestimmte Variable speichert. Arbeitsspeicherzeker bieten diesen direkten Zugriff. In Java werden Zeiger für Sie verarbeitet.
 ms.assetid: 2c8de3d9-3410-4153-b612-4afab8a69a18
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf63754782cba82819479a7e26535b518835580b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 73efe022fa09ce13a2d5e4e04978033fc3ab8f33abb6afb3b5abf493dab12178
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047748"
 ---
 # <a name="translating-to-java-from-c"></a>Übersetzen in Java aus C++
 
-Mithilfe der Programmiersprache C++ können Entwickler direkt auf den Speicher zugreifen, in dem eine bestimmte Variable gespeichert wird. Speicher Zeiger bieten diesen direkten Zugriff. In Java werden Zeiger für Sie behandelt.
+Mithilfe der Programmiersprache C++ können Entwickler direkt auf den Arbeitsspeicher zugreifen, der eine bestimmte Variable speichert. Arbeitsspeicherzeker bieten diesen direkten Zugriff. In Java werden Zeiger für Sie verarbeitet.
 
-In Java werden zusammengesetzte Datentypen " **struct**", " **Union**" und " **typedef** " ausschließlich durch die Verwendung von Klassen behandelt. Der Datentyp C++ **Variant** ist beispielsweise com. **ms. com. Variant** in Java zugeordnet.
+In Java werden zusammengesetzte **Datentypen** **struct,** union und **typedef** ausschließlich mithilfe von Klassen behandelt. Der C++-Datentyp **VARIANT** wird z. B. **com.ms.com.Variant** in Java angezeigt.
 
-In C++ sind Zeichen folgen ein Zeichen Array. In Java sind Zeichen folgen Objekte. Methoden, die auf Zeichen folgen reagieren, behandeln die Zeichenfolge als ein ganzes Objekt.
+In C++ sind Zeichenfolgen ein Array von Zeichen. In Java sind Zeichenfolgen Objekte. Methoden, die auf Zeichenfolgen wirken, behandeln die Zeichenfolge als vollständiges -Objekt.
 
-COM-Methoden geben einen als **HRESULT** bezeichneten Wert zurück, bei dem es sich um einen 32-Bit-Fehlercode handelt. Die Java-Unterstützung für Microsoft Internet Explorer definiert die Klasse **com. ms. com. COMException**, die den **HRESULT** -Fehlercode umschließt.
+COM-Methoden geben einen Wert zurück, der als **HRESULT** bezeichnet wird. Dabei handelt es sich um einen 32-Bit-Fehlercode. Die Java-Unterstützung für Microsoft Internet Explorer definiert die Klasse **com.ms.com.ComException,** die den **HRESULT-Fehlercode** umgibt.
 
-Java unterstützt keine unsignierten Datentypen mit Ausnahme von **char**, eine 16-Bit-Ganzzahl ohne Vorzeichen. Methoden, die andere nicht signierte Datentypen akzeptieren oder zurückgeben, können nicht in Java verwendet werden.
+Java unterstützt keine Datentypen ohne Vorzeichen, mit Ausnahme **von char**, bei dem es sich um eine 16-Bit-Ganzzahl ohne Vorzeichen handelt. Methoden, die andere Datentypen ohne Vorzeichen akzeptieren oder zurückgeben, können nicht von Java verwendet werden.
 
-Java unterstützt keine mehrdimensionalen Arrays. Methoden, die mehrdimensionale Arrays akzeptieren oder zurückgeben, sind von Java aus nicht verfügbar.
+Java unterstützt keine mehrdimensionalen Arrays. Methoden, die mehrdimensionale Arrays akzeptieren oder zurückgeben, sind in Java nicht verfügbar.
 
-Boolesche Werte in Java können nicht in 0 und 1 umgewandelt werden.
+Boolesche Werte in Java können nicht in 0 und 1 castt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,9 +34,9 @@ Boolesche Werte in Java können nicht in 0 und 1 umgewandelt werden.
 [Übersetzen in Java](translating-to-java.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

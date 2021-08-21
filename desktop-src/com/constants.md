@@ -16,11 +16,11 @@ ms.locfileid: "119048468"
 Die folgenden Konstanten werden von COM bereitgestellt:
 
 -   [Zugriffsflags](com-access-flags.md)
--   [Konstanten auf Authentifizierungsebene](com-authentication-level-constants.md)
--   [Authentifizierungsdienstkonstanten](com-authentication-service-constants.md)
--   [Autorisierungskonstanten](com-authorization-constants.md)
+-   [Konstanten der Authentifizierungsebene](com-authentication-level-constants.md)
+-   [Authentifizierungsdienstkonst constants](com-authentication-service-constants.md)
+-   [Autorisierungskonst constants](com-authorization-constants.md)
 -   [COM-Fehlercodes](com-error-codes.md)
--   [Konstanten auf Identitätswechselebene](com-impersonation-level-constants.md)
+-   [Identitätswechselebenenkonstationen](com-impersonation-level-constants.md)
 
  
 

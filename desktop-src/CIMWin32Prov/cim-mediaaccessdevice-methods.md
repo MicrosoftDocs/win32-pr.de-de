@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ mediaaccessdevice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ MediaAccessDevice-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 3035A975-4DED-4EDA-AEAD-9111C5C3301E
 ms.tgt_platform: multiple
-title: CIM_MediaAccessDevice Methoden
+title: CIM_MediaAccessDevice-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7aa2a0c86089d9ee81b083f2db75c3f395b11f28
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 38cf395dbec144cd0e60920a3ce58801bbafb225c7b6a462e3dbe4c346be9085
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106373424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080524"
 ---
-# <a name="cim_mediaaccessdevice-methods"></a>CIM \_ mediaaccessdevice-Methoden
+# <a name="cim_mediaaccessdevice-methods"></a>CIM \_ MediaAccessDevice-Methoden
 
-Die [**CIM \_ mediaaccessdevice**](cim-mediaaccessdevice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ MediaAccessDevice-Klasse**](cim-mediaaccessdevice.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

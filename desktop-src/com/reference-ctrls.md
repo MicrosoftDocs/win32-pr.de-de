@@ -1,5 +1,5 @@
 ---
-title: Verweis (Steuerelemente und Eigenschaftenseiten)
+title: Referenz (Steuerelemente und Eigenschaftenseiten)
 description: Die folgenden Programmierelemente werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 ms.assetid: 1fe85dca-1963-455a-bc21-3690e276ac82
 ms.topic: article
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119047878"
 ---
-# <a name="reference-controls-and-property-pages"></a>Verweis (Steuerelemente und Eigenschaftenseiten)
+# <a name="reference-controls-and-property-pages"></a>Referenz (Steuerelemente und Eigenschaftenseiten)
 
 Die folgenden Programmierelemente werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 

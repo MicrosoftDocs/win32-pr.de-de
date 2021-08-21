@@ -1,9 +1,9 @@
 ---
-title: DTN_WMKEYDOWN Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) gesendet, wenn der Benutzer ein Rückruf Feld eingibt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: DTN_WMKEYDOWN Benachrichtigungscode (Commctrl.h)
+description: Wird von einem DTP-Steuerelement (Date and Time Picker) gesendet, wenn der Benutzer ein Rückruffeld einwählt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: e67e222d-28a1-4d30-ae64-8ec9a62fa321
 keywords:
-- Windows-Steuerelemente für DTN_WMKEYDOWN Benachrichtigungs
+- DTN_WMKEYDOWN Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce2e7d0761308805746278d2f542f5e9458b56d5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0eaf822cc5eb8d1d8bdeca6b0853766774105af07cda77f55743d60d0fb12cdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019978"
 ---
-# <a name="dtn_wmkeydown-notification-code"></a>DTN \_ wmKeyDown-Benachrichtigungs Code
+# <a name="dtn_wmkeydown-notification-code"></a>DTN \_ WMKEYDOWN-Benachrichtigungscode
 
-Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) gesendet, wenn der Benutzer ein Rückruf Feld eingibt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem DTP-Steuerelement (Date and Time Picker) gesendet, wenn der Benutzer ein Rückruffeld einwählt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,17 +43,17 @@ DTN_WMKEYDOWN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmdatetimewmkeydown**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimewmkeydowna) -Struktur, die Informationen zu dieser Instanz des Benachrichtigungs Codes enthält. Die Struktur enthält Informationen über den Schlüssel, den der Benutzer eingegeben hat, die Teil Zeichenfolge, die das Rückruf Feld definiert, und das aktuelle Systemdatum und die aktuelle Systemzeit.
+Ein Zeiger auf eine [**NMDATETIMEWMKEYDOWN-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimewmkeydowna) die Informationen zu dieser Instanz des Benachrichtigungscodes enthält. Die -Struktur enthält Informationen über den Schlüssel, den der Benutzer typiert hat, die Teilzeichenfolge, die das Rückruffeld definiert, sowie das aktuelle Systemdatum und die aktuelle Systemzeit.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Besitzer des Steuer Elements muss 0 (null) zurückgeben.
+Der Besitzer des Steuerelements muss 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer Elements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruf Felder des Steuer Elements bereitstellen.
+Durch die Behandlung dieses Benachrichtigungscodes kann der Besitzer des Steuerelements bestimmte Antworten auf Tastatureingaben innerhalb der Rückruffelder des Steuerelements bereitstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dtn \_ Wmkeydownw** (Unicode) und **Dtn \_ wmkeydowna** (ANSI)<br/>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **DTN \_ WMKEYDOWNW** (Unicode) und **DTN \_ WMKEYDOWNA** (ANSI)<br/>               |
 
 
 

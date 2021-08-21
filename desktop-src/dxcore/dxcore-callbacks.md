@@ -1,25 +1,25 @@
 ---
 title: DXCore-Rückrufe
-description: Die folgenden Rückrufe werden in dxcore_interface. h deklariert.
+description: Die folgenden Rückrufe werden in dxcore_interface.h deklariert.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 36d829a7803ab08485524b6a791ca3ae7f8071f6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1e1b2e9ef5527b0abbbde29057bc62e5b5df31aab467fc011d1f77e6c15ffc0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985230"
 ---
 # <a name="dxcore-callbacks"></a>DXCore-Rückrufe
 
-Die folgenden Rückrufe werden in dxcore_interface. h deklariert.
+Die folgenden Rückrufe werden in dxcore_interface.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**PFN_DXCORE_NOTIFICATION_CALLBACK**](./dxcore_interface/nc-dxcore_interface-pfn_dxcore_notification_callback.md) | Eine Rückruffunktion (implementiert von Ihrer Anwendung), die von einem DXCore-Objekt für Benachrichtigungs Ereignisse aufgerufen wird. |
+| [**PFN_DXCORE_NOTIFICATION_CALLBACK**](./dxcore_interface/nc-dxcore_interface-pfn_dxcore_notification_callback.md) | Eine Rückruffunktion (von Ihrer Anwendung implementiert), die von einem DXCore-Objekt für Benachrichtigungsereignisse aufgerufen wird. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,40 +1,40 @@
 ---
-description: Verwenden Sie die Merge Module-Registrierungs Tabellen gemäß dem Typ der Registrierungsinformationen.
+description: Verwenden Sie Mergemodulregistrierungstabellen entsprechend dem Typ der Registrierungsinformationen.
 ms.assetid: 091429ff-a8f4-4e1b-929f-1559cd173c3d
-title: Erstellen von Mergemodul-Registrierungs Tabellen
+title: Erstellen von Registrierungstabellen für Mergemodule
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d10e31ac82d190c87019da5bc77408b58122a523
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03726481905d4efee2405d0b383f53833d840090fea74e2d41fc6ae67a8e5bd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066150"
 ---
-# <a name="authoring-merge-module-registry-tables"></a>Erstellen von Mergemodul-Registrierungs Tabellen
+# <a name="authoring-merge-module-registry-tables"></a>Erstellen von Registrierungstabellen für Mergemodule
 
-Verwenden Sie die Merge Module-Registrierungs Tabellen gemäß dem Typ der Registrierungsinformationen.
+Verwenden Sie Mergemodulregistrierungstabellen entsprechend dem Typ der Registrierungsinformationen.
 
-## <a name="typelib-class-appid-progid-extension-verb-or-mime-tables"></a>TypeLib, Class, AppID, ProgID, Extension, Verb oder MIME-Tabellen
+## <a name="typelib-class-appid-progid-extension-verb-or-mime-tables"></a>TypeLib-, Klassen-, AppId-, ProgId-, Erweiterungs-, Verb- oder MIME-Tabellen
 
-Für Typbibliotheken, Klassen, Erweiterungen und Verben erstellen Sie Registrierungsinformationen in den Tabellen [typelib](typelib-table.md), [Klasse](class-table.md), [AppID](appid-table.md), [ProgID](progid-table.md), [Extension](extension-table.md), [Verb](verb-table.md)oder [MIME](mime-table.md) des Mergemoduls. Wenn Sie die [Registrierungs Tabelle](registry-table.md) zum Hinzufügen dieser Informationen verwenden, kann Windows 2000 keine systemweiten Ankündigungen für diese Komponenten bereitstellen.
+Erstellen Sie für Typbibliotheken, Klassen, Erweiterungen und Verben Registrierungsinformationen in den [TypeLib-,](typelib-table.md) [](extension-table.md) [Klassen-,](class-table.md) [AppId-,](appid-table.md) [ProgId-,](progid-table.md)Erweiterungs-, [Verb-](verb-table.md)oder MIME-Tabellen des [Mergemoduls.](mime-table.md) Wenn Sie diese Informationen [mithilfe](registry-table.md) der Tabelle Registrierung hinzufügen, kann Windows 2000 keine systemweite Ankündigung für diese Komponenten bereitstellen.
 
-Autoren von Mergemodulen können sich aus den folgenden Gründen entscheiden, sich nicht mithilfe der Klassen Tabelle zu registrieren:
+Mergemodulautoren können sich aus den folgenden Gründen gegen die Registrierung mithilfe der Tabelle Class entscheiden:
 
--   Um von der Klassen Tabelle registriert zu werden, muss es sich bei der Datei um den KEYPATH der zugehörigen Komponente handeln. Dies erfordert möglicherweise eine akzeptable Änderung in der Organisation der Komponenten.
--   Ein com-Befehl löst möglicherweise einen Installationsversuch aus, eine angekündigte Klasse erneut zu installieren. Autoren können sich entscheiden, eine Klasse nicht mithilfe der Klassen Tabelle zu registrieren, um zu vermeiden, dass eine Neuinstallation ausgelöst wird, wenn der Client Computer eine Benutzeroberfläche nicht unterstützt.
+-   Um von der Class-Tabelle registriert zu werden, muss die Datei der KeyPath der Komponente sein. Dies kann eine inakzeptable Änderung der Organisation von Komponenten erfordern.
+-   Ein COM-Aufruf kann einen Installationsversuch auslösen, um eine angekündigte Klasse neu zu installieren. Autoren können entscheiden, eine Klasse nicht mithilfe der Tabelle Class zu registrieren, um zu vermeiden, dass eine Neuinstallation ausgelöst wird, wenn der Clientcomputer keine Benutzeroberfläche unterstützt.
 
-## <a name="registry-table"></a>Registrierungs Tabelle
+## <a name="registry-table"></a>Registrierungstabelle
 
-Verwenden Sie die Registrierungs Tabelle, um Registrierungsinformationen hinzuzufügen, die nicht in den Tabellen TypeLib, Klasse, AppID, ProgID, Extension, Verb oder MIME erstellt werden können. Windows 2000 kann keine systemweite Ankündigung für Komponenten bereitstellen, die die Registrierungs Tabelle verwenden.
+Verwenden Sie die Tabelle Registrierung, um Registrierungsinformationen hinzuzufügen, die nicht in die Tabellen TypeLib, Class, AppId, ProgId, Extension, Verb oder MIME erstellt werden können. Windows 2000 kann keine systemweite Ankündigung für Komponenten bereitstellen, die die Registry-Tabelle verwenden.
 
-Wenn Sie die Registrierungs Tabelle erstellen, finden Sie weitere Informationen unter Dateipfade mithilfe der \[ \# Datei \] \[ . Datei \] Format anstelle von \[ Verzeichnis \] Dateiname. Das letztere Format unterstützt keine Installation von "Run-From-Source". Im ersten Format werden fehlende Dateien und fehlerhafte Komponenten leichter erkannt.
+Wenn Sie die Registrierungstabelle erstellen, verweisen Sie auf Dateipfade mithilfe der \[ \# Datei oder \] \[ ! Dateiformat \] und nicht als \[ \] Verzeichnisdateiname. Das zweite Format unterstützt keine Installation vom Quellcode aus. Das frühere Format erleichtert auch die Erkennung fehlender Dateien und fehlerhafter Komponenten.
 
-Bei der Verwendung von formatiertem Text in der Schlüssel Spalte der Registrierungs Tabelle ist Vorsicht geboten. Da Windows Installer keine Komponenten neu installiert, die bereits installiert sind, kann die Verwendung von formatiertem Text in diesem Feld dazu führen, dass Registrierungsschlüssel beim Entfernen der Anwendung zurückgelassen werden.
+Bei der Verwendung von formatiertem Text in der Spalte Schlüssel der Tabelle Registrierung ist Vorsicht erforderlich. Da Windows Installer bereits installierte Komponenten nicht neu installiert, kann die Verwendung von formatiertem Text in diesem Feld dazu führen, dass Registrierungsschlüssel beim Entfernen der Anwendung zurückgelassen werden.
 
-## <a name="selfreg-table"></a>Selfreg-Tabelle
+## <a name="selfreg-table"></a>SelfReg-Tabelle
 
-Die Verwendung der Tabelle "selfreg" wird nicht empfohlen. Eine Liste der Gründe für die Verwendung der Selbstregistrierung finden Sie unter [selfreg Table](selfreg-table.md). Sie sollten stattdessen die Tabellen TypeLib, Klasse, AppID, ProgID, Extension, Verb und MIME verwenden, sofern möglich, und die Registrierungs Tabelle in allen anderen Fällen.
+Die Verwendung der SelfReg-Tabelle wird nicht empfohlen. Eine Liste der Gründe, warum die Selbstregistrierung nicht verwendet wird, finden Sie in der [SelfReg-Tabelle](selfreg-table.md). Sie sollten nach Möglichkeit die Tabellen TypeLib, Class, AppId, ProgId, Extension, Verb und MIME sowie in allen anderen Fällen die Registry-Tabelle verwenden.
 
  
 

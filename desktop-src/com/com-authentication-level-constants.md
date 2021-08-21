@@ -1,6 +1,6 @@
 ---
-title: Konstanten auf Authentifizierungs Ebene (rpcdce. h)
-description: Diese Werte geben eine Authentifizierungs Ebene an, die angibt, welche Menge an Authentifizierung zur Verfügung steht, um die Integrität der Daten zu schützen. Jede Ebene enthält den Schutz, der von den vorherigen Ebenen bereitgestellt wird.
+title: Konstanten der Authentifizierungsebene (Rpcdce.h)
+description: Diese Werte geben eine Authentifizierungsebene an, die den Umfang der bereitgestellten Authentifizierung angibt, um die Integrität der Daten zu schützen. Jede Ebene enthält den Von den vorherigen Ebenen bereitgestellten Schutz.
 ms.assetid: 06c409e4-3772-45cf-8c31-c64f99aca244
 topic_type:
 - apiref
@@ -18,28 +18,28 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fdf922118a1b332bfe1fe8e744114a6d1d6bf4cd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bcdcdf2ec566bafc962114d691c1962533b843d4c9299d01107eaaf132ea3050
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119048678"
 ---
-# <a name="authentication-level-constants"></a>Konstanten auf Authentifizierungs Ebene
+# <a name="authentication-level-constants"></a>Konstanten der Authentifizierungsebene
 
-Diese Werte geben eine Authentifizierungs Ebene an, die angibt, welche Menge an Authentifizierung zur Verfügung steht, um die Integrität der Daten zu schützen. Jede Ebene enthält den Schutz, der von den vorherigen Ebenen bereitgestellt wird.
+Diese Werte geben eine Authentifizierungsebene an, die den Umfang der bereitgestellten Authentifizierung angibt, um die Integrität der Daten zu schützen. Jede Ebene enthält den Von den vorherigen Ebenen bereitgestellten Schutz.
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                    |
+| Konstante/Wert                                                                                                                                                                                                                                                                 | Beschreibung                                                                                                                                                                                                    |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RPC_C_AUTHN_LEVEL_DEFAULT"></span><span id="rpc_c_authn_level_default"></span><dl> <dt>**RPC \_ \_ \_ \_ Standardwert für C-authn-Ebene**</dt> <dt>0</dt> </dl>                    | Weist DCOM an, die Authentifizierungs Ebene mithilfe des normalen sicherheitspausierungsalgorithmus auszuwählen. Weitere Informationen finden Sie unter [sicherheitspauschere Aushandlung](security-blanket-negotiation.md). <br/> |
-| <span id="RPC_C_AUTHN_LEVEL_NONE"></span><span id="rpc_c_authn_level_none"></span><dl> <dt>**RPC \_ C \_ authn \_ Level \_ None**</dt> <dt>1</dt> </dl>                             | Führt keine Authentifizierung durch.<br/>                                                                                                                                                                         |
-| <span id="RPC_C_AUTHN_LEVEL_CONNECT"></span><span id="rpc_c_authn_level_connect"></span><dl> <dt>**RPC \_ C \_ authn \_ Level \_ Connect**</dt> <dt>2</dt> </dl>                    | Authentifiziert die Anmelde Informationen des Clients nur, wenn der Client eine Beziehung mit dem Server herstellt. Datagramm-Transporte verwenden \_ stattdessen immer RPC authn \_ Level \_ Pkt. <br/>                        |
-| <span id="RPC_C_AUTHN_LEVEL_CALL"></span><span id="rpc_c_authn_level_call"></span><dl> <dt>**RPC \_ C \_ authn \_ Level \_**</dt> -Befehl <dt>3</dt> </dl>                             | Authentifiziert sich nur zu Beginn jedes Remote Prozedur Aufrufes, wenn der Server die Anforderung empfängt. Datagramm-Transporte \_ verwenden \_ stattdessen RPC C authn \_ Level \_ Pkt.<br/>                                  |
-| <span id="RPC_C_AUTHN_LEVEL_PKT"></span><span id="rpc_c_authn_level_pkt"></span><dl> <dt>**RPC \_ C \_ authn \_ Level \_ Pkt**</dt> <dt>4</dt> </dl>                                | Authentifiziert, dass alle empfangenen Daten vom erwarteten Client stammen.<br/>                                                                                                                                   |
-| <span id="RPC_C_AUTHN_LEVEL_PKT_INTEGRITY"></span><span id="rpc_c_authn_level_pkt_integrity"></span><dl> <dt>**RPC \_ \_ \_ \_ Pkt- \_ Integrität der C-authn-Ebene**</dt> <dt>5</dt> </dl> | Authentifiziert und überprüft, ob keine der zwischen Client und Server übertragenen Daten geändert wurde.<br/>                                                                                           |
-| <span id="RPC_C_AUTHN_LEVEL_PKT_PRIVACY"></span><span id="rpc_c_authn_level_pkt_privacy"></span><dl> <dt>**RPC \_ C \_ authn \_ Level \_ Pkt \_ Privacy**</dt> <dt>6</dt> </dl>       | Authentifiziert alle vorherigen Ebenen und verschlüsselt den Argument Wert jedes Remote Prozedur Aufrufes.<br/>                                                                                                    |
+| <span id="RPC_C_AUTHN_LEVEL_DEFAULT"></span><span id="rpc_c_authn_level_default"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ DEFAULT**</dt> <dt>0</dt> </dl>                    | Weist DCOM an, die Authentifizierungsebene mithilfe des normalen Algorithmus für die Aushandlung der Sicherheitsaushandlung zu wählen. Weitere Informationen finden Sie unter [Security Negotiation .](security-blanket-negotiation.md) <br/> |
+| <span id="RPC_C_AUTHN_LEVEL_NONE"></span><span id="rpc_c_authn_level_none"></span><dl> <dt>**RPC \_ \_C-AUTHENTIFIZIERUNGSEBENE \_ \_ NONE**</dt> <dt>1</dt> </dl>                             | Führt keine Authentifizierung aus.<br/>                                                                                                                                                                         |
+| <span id="RPC_C_AUTHN_LEVEL_CONNECT"></span><span id="rpc_c_authn_level_connect"></span><dl> <dt>**RPC \_ \_C-AUTHENTIFIZIERUNGSEBENE \_ \_ CONNECT**</dt> <dt>2</dt> </dl>                    | Authentifiziert die Anmeldeinformationen des Clients nur, wenn der Client eine Beziehung mit dem Server einigt. Datagrammtransporte verwenden stattdessen immer RPC \_ AUTHN \_ LEVEL \_ PKT. <br/>                        |
+| <span id="RPC_C_AUTHN_LEVEL_CALL"></span><span id="rpc_c_authn_level_call"></span><dl> <dt>**RPC \_ \_ \_ C-AUTHENTIFIZIERUNGSEBENENAUFRUF \_**</dt> <dt>3</dt> </dl>                             | Authentifiziert sich nur am Anfang jedes Remoteprozeduraufrufs, wenn der Server die Anforderung empfängt. Datagrammtransporte verwenden stattdessen RPC \_ C \_ AUTHN \_ LEVEL \_ PKT.<br/>                                  |
+| <span id="RPC_C_AUTHN_LEVEL_PKT"></span><span id="rpc_c_authn_level_pkt"></span><dl> <dt>**RPC \_ \_ \_ C-AUTHENTIFIZIERUNGSEBENE \_ PKT**</dt> <dt>4</dt> </dl>                                | Authentifiziert, dass alle empfangenen Daten vom erwarteten Client empfangen werden.<br/>                                                                                                                                   |
+| <span id="RPC_C_AUTHN_LEVEL_PKT_INTEGRITY"></span><span id="rpc_c_authn_level_pkt_integrity"></span><dl> <dt>**RPC \_ \_C-AUTHENTIFIZIERUNGSEBENE \_ \_ \_ PKT-INTEGRITÄT**</dt> <dt>5</dt> </dl> | Authentifiziert und überprüft, ob keine der zwischen Client und Server übertragenen Daten geändert wurde.<br/>                                                                                           |
+| <span id="RPC_C_AUTHN_LEVEL_PKT_PRIVACY"></span><span id="rpc_c_authn_level_pkt_privacy"></span><dl> <dt>**RPC \_ DATENSCHUTZ AUF \_ \_ C-AUTHENTIFIZIERUNGSEBENE \_ PKT \_**</dt> <dt>6</dt> </dl>       | Authentifiziert alle vorherigen Ebenen und verschlüsselt den Argumentwert jedes Remoteprozeduraufrufs.<br/>                                                                                                    |
 
 
 
@@ -51,7 +51,7 @@ Diese Werte geben eine Authentifizierungs Ebene an, die angibt, welche Menge an 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Rpcdce. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Rpcdce.h</dt> </dl> |
 
 
 

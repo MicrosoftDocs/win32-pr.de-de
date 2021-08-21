@@ -1,31 +1,31 @@
 ---
-description: Direct3D ermöglicht es einer Anwendung, die Umsetzung ihrer Szenen zu steigern, indem segmentierte polygonale Objekte gerendert werden, insbesondere Zeichen, die über reibungslos gemischte Gelenke verfügen.
+description: Direct3D ermöglicht es einer Anwendung, die Realität ihrer Szenen zu erhöhen, indem segmentierte polygonale Objekte , insbesondere Zeichen, gerendert werden, die über nahtlos verblendete Fugen verfügen.
 ms.assetid: 190d5865-c45b-42ea-8a16-10a4f0bda743
-title: Geometrie Mischung (Direct3D 9)
+title: Geometriemischung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a19daa40f7d7d8193ae486640bc613dd7a666ec7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c71bb449b592c69ae2cf41487aef229718149eb4c1465d90f8b358d30458b69c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122176"
 ---
-# <a name="geometry-blending-direct3d-9"></a>Geometrie Mischung (Direct3D 9)
+# <a name="geometry-blending-direct3d-9"></a>Geometriemischung (Direct3D 9)
 
-Direct3D ermöglicht es einer Anwendung, die Umsetzung ihrer Szenen zu steigern, indem segmentierte polygonale Objekte gerendert werden, insbesondere Zeichen, die über reibungslos gemischte Gelenke verfügen. Diese Effekte werden häufig als "Skinning" bezeichnet. Das System erreicht diesen Effekt, indem er zusätzliche Transformations Matrizen für die Welt auf einen einzelnen Satz von Vertices anwendet, um mehrere Ergebnisse zu erstellen, und dann eine lineare Mischung zwischen den resultierenden Scheitel Punkten durchführen, um einen einzelnen Satz von Geometrie für das Rendering zu erstellen. Die folgende Abbildung einer Banane zeigt diesen Prozess.
+Direct3D ermöglicht es einer Anwendung, die Realität ihrer Szenen zu erhöhen, indem segmentierte polygonale Objekte , insbesondere Zeichen, gerendert werden, die über nahtlos verblendete Fugen verfügen. Diese Effekte werden häufig als Skinning bezeichnet. Das System erreicht diesen Effekt, indem es zusätzliche Welttransformationsmatrizen auf einen einzelnen Satz von Scheitelpunkten anwendet, um mehrere Ergebnisse zu erstellen, und dann eine lineare Mischung zwischen den resultierenden Scheitelpunkten durchführt, um einen einzelnen Satz von Geometrien für das Rendering zu erstellen. Die folgende Abbildung einer Banane zeigt diesen Prozess.
 
-![Abbildung des Prozesses zum Mischen von zwei Objekten mit der Bananen Textur](images/geometry-blend.png)
+![Abbildung des Prozesses zum Mischen von zwei Objekten mit der Textur der Textur "Banane"](images/geometry-blend.png)
 
-Die obige Abbildung zeigt, wie Sie sich den Geometry-Mischungs Prozess vorstellen können. Bei einem einzelnen Renderingbefehl übernimmt das System die Scheitel Punkte für die Banane, transformiert Sie zweimal, und zwar ohne Änderung und einmal mit einer einfachen Drehung, und kombiniert die Ergebnisse, um eine gekrümmten Banane zu erstellen. Das System mischt die Scheitelpunkt Position sowie den Scheitelpunkt normal, wenn Beleuchtung aktiviert ist. Anwendungen sind nicht auf zwei Mischungs Pfade beschränkt. Direct3D kann Geometrie zwischen bis zu vier Welt Matrizen, einschließlich der Standard-World Matrix, [**D3DTS \_ World**](d3dts-world.md), mischen.
+Die obige Abbildung zeigt, wie Sie sich den Geometry-Blending-Prozess vorstellen können. In einem einzigen Renderingaufruf nimmt das System die Scheitelpunkte für die Banane entgegen, transformiert sie zweimal – einmal ohne Änderung und einmal mit einer einfachen Drehung – und kombiniert die Ergebnisse, um eine Leichterte zu erzeugen. Das System kombiniert die Scheitelpunktposition sowie die Scheitelpunktnorm normal, wenn die Beleuchtung aktiviert ist. Anwendungen sind nicht auf zwei Mischungspfade beschränkt: Direct3D kann Geometrie zwischen bis zu vier Weltmatrizen kombinieren, einschließlich der Standard-Weltmatrix [**D3DTS \_ WORLD**](d3dts-world.md).
 
 > [!Note]
 >
-> Wenn Beleuchtung aktiviert ist, werden Vertex-Normale durch eine entsprechende inverse World-View-Matrix transformiert, die auf die gleiche Weise gewichtet wird wie die Berechnungen der Scheitelpunkt Position. Das System normalisiert den resultierenden normalen Vektor, wenn der D3DRS \_ normalizenormals-Rendering-Zustand auf **true** festgelegt ist.
+> Wenn die Beleuchtung aktiviert ist, werden Scheitelpunktnormalen durch eine entsprechende umgekehrte Weltansichtsmatrix transformiert, die auf die gleiche Weise gewichtet wird wie die Scheitelpunktpositionsberechnungen. Das System normalisiert den resultierenden Normalvektor, wenn der D3DRS \_ NORMALIZENORMALS-Renderzustand auf **TRUE** festgelegt ist.
 
  
 
-Ohne Geometrie Mischung werden dynamische artikulierte Modelle häufig in Segmenten gerendert. Stellen Sie sich beispielsweise ein 3D-Modell der menschlichen Arm vor. In der einfachsten Ansicht besteht ein Arm aus zwei Teilen: dem oberen Arm, der mit dem Text verbunden ist, und dem unteren Arm, der eine Verbindung mit der Hand herstellt. Beide sind am-Bogen angeschlossen, und der untere Arm dreht sich an diesem Punkt. Eine Anwendung, die einen Arm rendert, behält möglicherweise Scheitelpunkt Daten für den oberen und unteren Arm bei, jeweils mit einer separaten Welt Transformationsmatrix. Dies wird im folgenden Codebeispiel veranschaulicht.
+Ohne Geometriemischung werden dynamische artikulierte Modelle häufig in Segmenten gerendert. Betrachten Sie beispielsweise ein 3D-Modell des menschlichen Armes. In der einfachsten Ansicht hat ein Arm zwei Teile: den oberen Arm, der mit dem Körper verbunden ist, und den unteren Arm, der mit der Hand verbunden ist. Die beiden sind am Ellenbogen verbunden, und der untere Arm dreht sich an diesem Punkt. Eine Anwendung, die einen Arm rendert, behält möglicherweise Scheitelpunktdaten für den oberen und unteren Arm bei, die jeweils eine separate Welttransformationsmatrix aufweisen. Dies wird im folgenden Codebeispiel veranschaulicht.
 
 
 ```
@@ -43,7 +43,7 @@ ARM MyArm; // This needs to be initialized.
 
 
 
-Um den Arm zu rendern, werden zwei renderingaufrufe durchgeführt, wie im folgenden Code dargestellt.
+Um den Arm zu rendern, werden zwei Renderingaufrufe durchgeführt, wie im folgenden Code gezeigt.
 
 
 ```
@@ -60,52 +60,52 @@ d3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, numFaces );
 
 
 
-Die folgende Abbildung stellt eine Banane dar, die zur Verwendung dieser Technik geändert wird.
+Die folgende Abbildung ist eine Banane, die für die Verwendung dieser Technik geändert wurde.
 
-![Abbildung einer gemischten Banane ohne Geometrie Mischung](images/noblend.png)
+![Abbildung einer gemischten Banane ohne Geometrieblending](images/noblend.png)
 
-Die Unterschiede zwischen der gemischten Geometrie und der nicht gemischten Geometrie sind offensichtlich. Dieses Beispiel ist ziemlich extrem. In einer realen Anwendung werden die Gelenke segmentierter Modelle so entworfen, dass die Nähte nicht so offensichtlich sind. Allerdings sind die Nähte manchmal sichtbar, was eine Konstante Herausforderung für Modell Designer darstellt.
+Die Unterschiede zwischen der gemischten Geometrie und der Nichtblendgeometrie sind offensichtlich. Dieses Beispiel ist etwas extrem. In einer realen Anwendung sind die Fugen von segmentierten Modellen so konzipiert, dass Nahten nicht so offensichtlich sind. Allerdings sind Nahten manchmal sichtbar, was für Modelldesigner immer wieder herausforderungend ist.
 
-Geometrie Mischung in Direct3D stellt eine Alternative zum klassischen segmentierten Modellierungs Szenario dar. Die verbesserte visuelle Qualität segmentierter Objekte ergibt sich jedoch aus den Kosten der Mischungs Berechnungen während des Renderings. Um die Auswirkungen dieser zusätzlichen Vorgänge zu minimieren, wird die Direct3D Geometry-Pipeline optimiert, um Geometrie mit dem geringstmöglichen Verwaltungsaufwand zu kombinieren. Anwendungen, die die von Direct3D angebotenen Geometrie-Mischungs Dienste Intelligent verwenden, können den Realismus ihrer Zeichen verbessern und gleichzeitig ernsthafte Auswirkungen auf die Leistung vermeiden.
+Die Geometriemischung in Direct3D stellt eine Alternative zum klassischen Segmentmodellierungsszenario dar. Die verbesserte visuelle Qualität von segmentierten Objekten geht jedoch auf Kosten der Mischungsberechnungen während des Renderings. Um die Auswirkungen dieser zusätzlichen Vorgänge zu minimieren, ist die Direct3D-Geometriepipeline so optimiert, dass geometrie mit möglichst wenig Aufwand kombiniert wird. Anwendungen, die die von Direct3D angebotenen Geometriemischungsdienste intelligent verwenden, können die Realität ihrer Zeichen verbessern und gleichzeitig schwerwiegende Leistungssteigerungen vermeiden.
 
-## <a name="blending-transform-and-render-states"></a>Mischen von Transformations-und renderzuständen
+## <a name="blending-transform-and-render-states"></a>Überblenden von Transformations- und Renderzuständen
 
-Die [**IDirect3DDevice9:: setTransform**](/windows/desktop/api) -Methode erkennt die Makros [**D3DTS \_ World**](d3dts-world.md) und [**D3DTS \_ worldn**](d3dts-worldn.md) , die den Werten entsprechen, die vom [**D3DTS \_ worldmatrix**](d3dts-worldmatrix.md) -Makro definiert werden können. Diese Makros werden verwendet, um die Matrizen zu identifizieren, zwischen denen die Geometrie gemischt wird.
+Die [**IDirect3DDevice9::SetTransform-Methode**](/windows/desktop/api) erkennt die [**D3DTS \_ WORLD-**](d3dts-world.md) und [**D3DTS \_ WORLDn-Makros,**](d3dts-worldn.md) die Werten entsprechen, die durch das [**D3DTS \_ WORLDMATRIX-Makro**](d3dts-worldmatrix.md) definiert werden können. Diese Makros werden verwendet, um die Matrizen zu identifizieren, zwischen denen die Geometrie gemischt wird.
 
-Der [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md) -Enumerationstyp enthält den D3DRS \_ vertexblend-Rendering-Zustand zum Aktivieren und Steuern der Geometrie Mischung. Gültige Werte für diesen Rendering-Zustand werden durch den [**D3DVERTEXBLENDFLAGS**](./d3dvertexblendflags.md) -enumerierten Typ definiert. Wenn Geometrie Mischung aktiviert ist, muss das Scheitelpunkt Format die entsprechende Anzahl von Mischungs Gewichtungen enthalten.
+Der [**D3DRENDERSTATETYPE-Enumerationstyp**](./d3drenderstatetype.md) enthält den D3DRS \_ VERTEXBLEND-Renderzustand zum Aktivieren und Steuern der Geometriemischung. Gültige Werte für diesen Renderzustand werden vom [**D3DVERTEXBLENDFLAGS-Enumerationstyp**](./d3dvertexblendflags.md) definiert. Wenn geometry blending aktiviert ist, muss das Scheitelpunktformat die entsprechende Anzahl von Mischungsgewichtungen enthalten.
 
-## <a name="blending-weights"></a>Mischen von Gewichtungen
+## <a name="blending-weights"></a>Mischungsgewichtungen
 
-Ein Mischungs Gewicht, manchmal auch als Beta-Gewichtung bezeichnet, steuert, in welchem Ausmaß eine bestimmte Weltmatrix auf einen Scheitelpunkt wirkt. Beim Mischen von Gewichtungen handelt es sich um Gleit Komma Werte zwischen 0,0 und 1,0, die im Vertex-Format codiert sind. der Wert 0,0 bedeutet, dass der Scheitelpunkt nicht mit dieser Matrix gemischt ist, und 1,0 bedeutet, dass der Scheitelpunkt vollständig von der Matrix betroffen ist.
+Eine Mischungsgewichtung, manchmal als Betagewichtung bezeichnet, steuert das Ausmaß, in dem sich eine bestimmte Weltmatrix auf einen Scheitelpunkt auswirkt. Blendinggewichtungen sind Gleitkommawerte im Bereich von 0,0 bis 1,0, codiert im Scheitelpunktformat, wobei ein Wert von 0,0 bedeutet, dass der Scheitelpunkt nicht mit dieser Matrix kombiniert wird, und 1,0 bedeutet, dass der Scheitelpunkt vollständig von der Matrix betroffen ist.
 
-Geometrie-Mischungs Gewichtungen werden im Vertex-Format codiert und unmittelbar nach der Position der einzelnen Scheitel Punkte angezeigt, wie in [Fixed Function f VF Codes (Direct3D 9)](fixed-function-fvf-codes.md)beschrieben. Sie geben die Anzahl der Mischungs Gewichtungen im Vertex-Format an, indem Sie eine der [FVF-Konstanten](d3dfvf.md) in die vertexbeschreibung einschließen, die Sie den Renderingmethoden bereitstellen.
+Geometriemischungsgewichtungen werden im Scheitelpunktformat codiert und werden unmittelbar nach der Position für jeden Scheitelpunkt angezeigt, wie unter [FVF-Codes für feste Funktionen (Direct3D 9)](fixed-function-fvf-codes.md)beschrieben. Sie kommunizieren die Anzahl der Mischungsgewichtungen im Scheitelpunktformat, indem Sie eine der [FVF-Konstanten](d3dfvf.md) in die Vertexbeschreibung einschließen, die Sie den Renderingmethoden bereitstellen.
 
-Das System führt eine lineare Mischung zwischen den gewichteten Ergebnissen der Blend-Matrizen aus. Die folgende Gleichung ist die komplette Mischungs Formel.
+Das System führt eine lineare Mischung zwischen den gewichteten Ergebnissen der Mischungsmatrizen aus. Die folgende Gleichung ist die vollständige Mischungsformel.
 
-![Gleichung linearer Mischungs-, using World Transformation Matrizen](images/vert-blend-formula.png)
+![Gleichung der linearen Überblendung unter Verwendung von Welttransformationsmatrizen](images/vert-blend-formula.png)
 
-In der vorangehenden Gleichung ist vblend der Ausgabe Scheitelpunkt. die v-Elemente sind die Scheitel Punkte, die von der angewendeten Weltmatrix ([**D3DTS \_ worldn**](d3dts-worldn.md)) erstellt werden. Die W-Elemente sind die entsprechenden Gewichtungswerte im Scheitelpunkt Format. Ein Scheitelpunkt zwischen n Matrizen kann-1 enthalten, der Gewichtungswerte für jede Mischungs Matrix (mit Ausnahme des letzten) kombiniert. Das System generiert automatisch die Gewichtung für die letzte Weltmatrix, sodass die Summe aller Gewichtungen 1,0 ist, ausgedrückt in Sigma-Notation. Diese Formel kann für jeden der von Direct3D unterstützten Fällen vereinfacht werden, was in den folgenden Gleichungen gezeigt wird.
+In der obigen Gleichung ist vBlend der Ausgabevertex, die v-Elemente sind die Scheitelpunkte, die von der angewendeten Weltmatrix erzeugt werden ([**D3DTS \_ WORLDn**](d3dts-worldn.md)). Die W-Elemente sind die entsprechenden Gewichtungswerte innerhalb des Scheitelpunktformats. Ein Scheitelpunkt, der zwischen n Matrizen gemischt wird, kann einen Gewichtungswert für die Mischung aufweisen, einen für jede Mischungsmatrix, mit Ausnahme des letzten. Das System generiert automatisch die Gewichtung für die letzte Weltmatrix, sodass die Summe aller Gewichtungen 1,0 beträgt, die hier in Sigma-Notation ausgedrückt wird. Diese Formel kann für jeden der von Direct3D unterstützten Fälle vereinfacht werden. Dies ist in den folgenden Gleichungen dargestellt.
 
-![Gleichungen linearer Blending für drei Mischungs Fälle](images/vert-blend-formulas-simple.png)
+![Gleichungen der linearen Überblendung für drei Überblendungsfälle](images/vert-blend-formulas-simple.png)
 
-Dies sind die vereinfachten Formen der kompletten Mischungs Formel für die zwei, drei und vier Blend Matrix Fälle.
+Dies sind die vereinfachten Formen der vollständigen Mischungsformel für die beiden, drei und vier Blendmatrixfälle.
 
 > [!Note]  
-> Obwohl Direct3D FVF-Deskriptoren enthält, um Vertices zu definieren, die bis zu fünf Mischungs Gewichtungen enthalten, können in dieser Version von DirectX nur drei verwendet werden.
+> Obwohl Direct3D FVF-Deskriptoren zum Definieren von Scheitelpunkten enthält, die bis zu fünf Mischungsgewichtungen enthalten, können in dieser DirectX-Version nur drei verwendet werden.
 
  
 
 Weitere Informationen finden Sie in den folgenden Themen.
 
--   [Verwenden von Geometrie Mischung (Direct3D 9)](using-geometry-blending.md)
--   [Indiziertes Vertex-Blending (Direct3D 9)](indexed-vertex-blending.md)
+-   [Verwenden von Geometry Blending (Direct3D 9)](using-geometry-blending.md)
+-   [Indexed Vertex Blending (Direct3D 9) (Indizierte Vertexmischung (Direct3D 9))](indexed-vertex-blending.md)
 -   [Vertex-Tweening (Direct3D 9)](vertex-tweening.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

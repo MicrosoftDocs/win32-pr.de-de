@@ -1,5 +1,5 @@
 ---
-description: 'ObjectToWorld3x4: Eine Matrix zum Transformieren vom Objektbereich in den Weltraum.'
+description: 'ObjectToWorld3x4: Eine Matrix für die Transformation vom Objektraum in den Weltraum.'
 ms.assetid: ''
 title: ObjectToWorld3x4
 ms.localizationpriority: low
@@ -12,16 +12,16 @@ api_name:
 - ObjectToWorld3x4
 api_type:
 - NA
-ms.openlocfilehash: 947676c25bd5cac50749c737afd7e4ff75426c0a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d58737e50fb7d173c84c4b38f6b91b9b6bfbc9d3b5a88c498344dadd5e94e73a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123749"
 ---
 # <a name="objecttoworld3x4"></a>ObjectToWorld3x4
 
-Eine Matrix zum Transformieren vom Objektraum in den Weltraum. Objektbereich bezieht sich auf den Raum der aktuellen Beschleunigungsstruktur der unteren Ebene.
+Eine Matrix für die Transformation von Objektraum in Raum. Objektraum bezieht sich auf den Raum der aktuellen Beschleunigungsstruktur auf unterer Ebene.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,9 +33,9 @@ void ObjectToWorld3x4();
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Matrix ist eine Verwechsung der **ObjectToWorld4x3-Matrix.**
+Die Matrix ist ein Teil der **ObjectToWorld4x3-Matrix.**
 
 Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 

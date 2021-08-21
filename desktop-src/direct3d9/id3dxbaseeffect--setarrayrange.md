@@ -1,7 +1,7 @@
 ---
-description: Legen Sie den Bereich eines Arrays fest, der an das Gerät übergeben werden soll.
+description: Legen Sie den Bereich eines Arrays fest, das an das Gerät übergeben werden soll.
 ms.assetid: 43f1c258-770c-4756-9033-e5667b379fe6
-title: 'ID3DXBaseEffect:: abtarrayrange-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::SetArrayRange-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 59b981c1f2aff18d4bdb57f5726136945203f5fe
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1cf4f51bfca29f1aa46238197818bb10bc4d0fe811218e5cedc59c24deb2446f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987630"
 ---
-# <a name="id3dxbaseeffectsetarrayrange-method"></a>ID3DXBaseEffect:: abtarrayrange-Methode
+# <a name="id3dxbaseeffectsetarrayrange-method"></a>ID3DXBaseEffect::SetArrayRange-Methode
 
-Legen Sie den Bereich eines Arrays fest, der an das Gerät übergeben werden soll.
+Legen Sie den Bereich eines Arrays fest, das an das Gerät übergeben werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetArrayRange(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*Starten* \[ Sie in\]
+*Starten* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Start Index.
+Starten sie den Index.
 
 </dd> <dt>
 
-Wird *beendet* \[ in\]
+*Beenden* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stoppt den Index.
+Index beenden.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Stoppt den Index.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

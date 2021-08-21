@@ -1,6 +1,6 @@
 ---
-title: Shader Model 5-Anweisungs modifiziererer
-description: Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor Sie in das Register geschrieben wird. Shader Model 5 unterstützt die folgenden Anweisungs modifiziererer.
+title: Shadermodell 5-Anweisungsmodifizierer
+description: Anweisungsmodifizierer beeinflussen das Ergebnis der Anweisung, bevor sie in das Register geschrieben wird. Shadermodell 5 unterstützt die folgenden Anweisungsmodifizierer.
 ms.assetid: 92FFD93E-73E6-4156-B4EF-A543348B2429
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,23 +9,23 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 99f9e411b7d8b85ce4be8109bd823895675ec236
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 23a6fbf3cb16d57e9da832cb6a0a35666cd3e02f49ac306de3aa11ac44f612c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986180"
 ---
-# <a name="shader-model-5-instruction-modifiers"></a>Shader Model 5-Anweisungs modifiziererer
+# <a name="shader-model-5-instruction-modifiers"></a>Shadermodell 5-Anweisungsmodifizierer
 
-Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor Sie in das Register geschrieben wird. Shader Model 5 unterstützt die folgenden Anweisungs modifiziererer.
+Anweisungsmodifizierer beeinflussen das Ergebnis der Anweisung, bevor sie in das Register geschrieben wird. Shadermodell 5 unterstützt die folgenden Anweisungsmodifizierer.
 
-## <a name="source-operand-modifiers"></a>Quell Operanden-modifiziererer
+## <a name="source-operand-modifiers"></a>Quelloperndenmodifizierer
 
 -   [Absoluter Wert](absolute-value.md)
--   [Negation](negate.md)
+-   [Negate](negate.md)
 
-## <a name="instruction-result-modifiers"></a>Anweisungs ergebnismodifiziererer
+## <a name="instruction-result-modifiers"></a>Anweisungsergebnismodifizierer
 
 -   [Precise](precise.md)
 -   [Sättigen](saturate.md)
@@ -34,12 +34,12 @@ Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor S
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

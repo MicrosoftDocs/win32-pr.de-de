@@ -1,5 +1,5 @@
 ---
-description: Die Win32ShutdownTracker-Methode bietet die gleichen Optionen für das Herunterfahren, die von der Win32Shutdown-Methode im Win32- \_ OperatingSystem unterstützt werden, Sie ermöglicht Ihnen aber auch das Angeben von Kommentaren, den Grund für das Herunterfahren oder ein Timeout.
+description: Die Win32ShutdownTracker-Methode bietet den gleichen Satz von Herunterfahroptionen, die von der Win32Shutdown-Methode in Win32 OperatingSystem unterstützt \_ werden. Sie können aber auch Kommentare, einen Grund für das Herunterfahren oder ein Timeout angeben.
 ms.assetid: 2c5502c9-9ec0-4f9e-b661-1f8015556008
 ms.tgt_platform: multiple
 title: Win32ShutdownTracker-Methode der Win32_OperatingSystem-Klasse
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 44c86972d014da906b98ad8d3bd8e98d01f1cfcb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 58c83e90f5256b2b2abb681048678b7c3bb4df3e9c4f4cdade16cb9ea00c4e48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079524"
 ---
 # <a name="win32shutdowntracker-method-of-the-win32_operatingsystem-class"></a>Win32ShutdownTracker-Methode der Win32 \_ OperatingSystem-Klasse
 
-Die **Win32ShutdownTracker** -Methode bietet die gleichen Optionen für das Herunterfahren, die von der [**Win32Shutdown**](win32shutdown-method-in-class-win32-operatingsystem.md) -Methode im [**Win32- \_ OperatingSystem**](win32-operatingsystem.md)unterstützt werden, Sie ermöglicht Ihnen aber auch das Angeben von Kommentaren, den Grund für das Herunterfahren oder ein Timeout.
+Die **Win32ShutdownTracker-Methode** stellt den gleichen Satz von Herunterfahroptionen bereit, die von der [**Win32Shutdown-Methode**](win32shutdown-method-in-class-win32-operatingsystem.md) im [**Win32-Betriebssystem \_**](win32-operatingsystem.md)unterstützt werden. Sie können aber auch Kommentare, einen Grund für das Herunterfahren oder ein Timeout angeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ uint32 Win32ShutdownTracker(
 
 <dl> <dt>
 
-*Timeout* \[ in\]
+*Timeout* \[ In\]
 </dt> <dd>
 
-Zeit in Sekunden, bevor das Herunterfahren stattfindet. Der Standardwert ist 0 (null).
+Zeit in Sekunden, bevor das Herunterfahren erfolgt. Der Standardwert ist 0 (null).
 
 </dd> <dt>
 
-*Kommentar* \[ in\]
+*Kommentar* \[ In\]
 </dt> <dd>
 
-Die Meldung, die im Dialogfeld zum Herunterfahren angezeigt wird, das auch als Kommentar im Ereignisprotokoll Eintrag gespeichert wird.
+Meldung, die im Dialogfeld zum Herunterfahren angezeigt wird, das auch als Kommentar im Ereignisprotokolleintrag gespeichert wird.
 
 </dd> <dt>
 
-*Reasoncode* \[ in\]
+*ReasonCode* \[ In\]
 </dt> <dd>
 
-Grund für das Initiieren des herunter Fahrens.
+Grund für das Initiieren des Herunterfahrens.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Bitzugeordneter Satz von Flags, um den Computer herunterzufahren. Fügen Sie dem Befehls Wert das Force-Flag (4) hinzu, um einen Befehl zu erzwingen. Durch die Verwendung von Force in Verbindung mit dem Herunterfahren oder Neustart auf einem Remote Computer wird sofort alles heruntergefahren (einschließlich WMI, com usw.) oder der Remote Computer neu gestartet. Dies führt zu einem unbestimmten Rückgabewert.
+Ein Bitmapsatz von Flags zum Herunterfahren des Computers. Um einen Befehl zu erzwingen, fügen Sie dem Befehlswert das Flag Force (4) hinzu. Wenn Sie Force in Verbindung mit Herunterfahren oder Neustart auf einem Remotecomputer verwenden, wird sofort alles heruntergefahren (einschließlich WMI, COM usw.), oder der Remotecomputer wird neu gestartet. Dies führt zu einem unbestimmten Rückgabewert.
 
 <dt>
 
@@ -81,14 +81,14 @@ Abmelden
 4 (0x4)
 </dt> <dd>
 
-Erzwungene Protokollierung (0 + 4)
+Erzwungene Abmeldung (0 + 4)
 
 </dd> <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Shutdown
+Herunterfahren
 
 </dd> <dt>
 
@@ -102,7 +102,7 @@ Erzwungenes Herunterfahren (1 + 4)
 2 (0x2)
 </dt> <dd>
 
-Reboot
+Neustart
 
 </dd> <dt>
 
@@ -120,28 +120,28 @@ Ausschalten
 
 </dd> <dt>
 
-12 (0xc)
+12 (0xC)
 </dt> <dd>
 
-Erzwungene Stromversorgung (8 + 4)
+Erzwungenes Ausschalten (8 + 4)
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](../wmisdk/wmi-error-constants.md) oder [**WbemErrorEnum**](/windows/win32/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](../debug/system-error-codes.md).
+Gibt 0 (null) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](../wmisdk/wmi-error-constants.md) oder [**WbemErrorEnum.**](/windows/win32/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](../debug/system-error-codes.md)
 
 <dl> <dt>
 
 **Erfolg** (0)
 </dt> <dt>
 
-**Sonstige** (1 – 4294967295)
+**Sonstiges** (1–4294967295)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Aufrufprozess muss über die Berechtigung für das Herunterfahren des **\_ \_ namens** verfügen.
+Der aufrufende Prozess muss über die **berechtigung SE \_ SHUTDOWN \_ NAME** verfügen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -177,8 +177,8 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -190,7 +190,7 @@ Next
 [Betriebssystemklassen](./operating-system-classes.md)
 </dt> <dt>
 
-[**Win32- \_ OperatingSystem**](win32-operatingsystem.md)
+[**Win32 \_ OperatingSystem**](win32-operatingsystem.md)
 </dt> <dt>
 
 [**Win32Shutdown**](win32shutdown-method-in-class-win32-operatingsystem.md)

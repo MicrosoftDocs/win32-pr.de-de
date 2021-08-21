@@ -1,5 +1,5 @@
 ---
-title: CB_SELECTSTRING-Nachricht (Winuser.h)
+title: CB_SELECTSTRING Meldung (Winuser.h)
 description: Durchsucht die Liste eines Kombinationsfelds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt. Wenn ein übereinstimmendes Element gefunden wird, wird es ausgewählt und in das Bearbeitungssteuerelement kopiert.
 ms.assetid: c08dff72-7e44-40ed-8b64-513359292829
 keywords:
@@ -32,7 +32,7 @@ Durchsucht die Liste eines Kombinationsfelds nach einem Element, das mit den Zei
 *wParam* 
 </dt> <dd>
 
-Der nullbasierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche den unteren Rand der Liste erreicht, wird sie vom Anfang der Liste zurück zu dem element fortgesetzt, das durch den *wParam-Parameter* angegeben wird. Wenn *wParam* -1 ist, wird die gesamte Liste von Anfang an durchsucht.
+Der nullbasierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche am unteren Rand der Liste eingeht, wird sie vom Anfang der Liste zurück zu dem element fortgesetzt, das durch den *wParam-Parameter* angegeben wird. Wenn *wParam* -1 ist, wird die gesamte Liste von Anfang an durchsucht.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Wenn Sie das Kombinationsfeld mit einem vom Besitzer gezeichneten Stil, aber ohn
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

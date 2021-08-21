@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: ba4ace13-7096-4f05-bcb0-ab37f1632406
-ms.openlocfilehash: be773ee68c214f6a2fab8da89f1f48b867e71239
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: c79a2ec497e8eaaafead20e6fa01e10844f9c4786a158f869fe16e4eee19e7c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032398"
 ---
 # <a name="imultimonitordockingsitesetmonitor-method"></a>IMultiMonitorDockingSite::SetMonitor-Methode
 
@@ -80,7 +80,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                   |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MM_MOM_OPEN Meldung (MMSYSTEM. h)
-description: Die \_ Meldung zum \_ Öffnen von mm MOM wird an ein Fenster gesendet, wenn ein MIDI-Ausgabegerät geöffnet wird.
+title: MM_MOM_OPEN Meldung (Mmsystem.h)
+description: Die MM \_ MOM \_ OPEN-Nachricht wird an ein Fenster gesendet, wenn ein AUSGABEgerät geöffnet wird.
 ms.assetid: 1374a07c-02fa-4b43-82df-cbd96302aec5
 keywords:
-- MM_MOM_OPEN-Nachricht (Multimedia)
+- MM_MOM_OPEN Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2f676dccf532290ab2153b888c20fad7b19d98d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 842eaeeb6e18e6623f8c88d8f5c65527db36ee8370c48a4cb26edca55f6d5f5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065490"
 ---
-# <a name="mm_mom_open-message"></a>Meldung zum Öffnen von mm \_ MOM \_
+# <a name="mm_mom_open-message"></a>MM \_ MOM \_ OPEN-Nachricht
 
-Die Meldung zum **\_ \_ Öffnen von mm MOM** wird an ein Fenster gesendet, wenn ein MIDI-Ausgabegerät geöffnet wird.
+Die **MM \_ MOM \_ OPEN-Nachricht** wird an ein Fenster gesendet, wenn ein AUSGABEgerät geöffnet wird.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = reserved
 
 <dl> <dt>
 
-<span id="hOutput"></span><span id="houtput"></span><span id="HOUTPUT"></span>*houtput*
+<span id="hOutput"></span><span id="houtput"></span><span id="HOUTPUT"></span>*hOutput*
 </dt> <dd>
 
-Handle für das MIDI-Ausgabegerät.
+Handle für das OUTPUT-Ausgabegerät.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Bleiben Verwenden Sie nicht.
+Reserviert; nicht verwenden.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Meldung gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MELDUNGSMELDUNGEN](midi-messages.md)
 </dt> </dl>
 
  

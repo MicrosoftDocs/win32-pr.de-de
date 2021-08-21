@@ -1,5 +1,5 @@
 ---
-description: Die CIM AssociatedSupplyCurrentSensor-Klasse ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der \_ die Eingangsfrequenz überwacht.
+description: Die CIM \_ AssociatedSupplyCurrentSensor-Klasse ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der die Eingabehäufigkeit überwacht.
 ms.assetid: bed4714f-ecf4-4c53-b231-c8fac673371f
 ms.tgt_platform: multiple
 title: CIM_AssociatedSupplyCurrentSensor-Klasse
@@ -26,10 +26,10 @@ ms.locfileid: "119080934"
 ---
 # <a name="cim_associatedsupplycurrentsensor-class"></a>CIM \_ AssociatedSupplyCurrentSensor-Klasse
 
-Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der die Eingangsfrequenz überwacht.
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der die Eingabehäufigkeit überwacht.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -49,7 +49,7 @@ class CIM_AssociatedSupplyCurrentSensor : CIM_AssociatedSensor
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -68,7 +68,7 @@ Datentyp: **CIM \_ CurrentSensor**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Ein [**CIM \_ CurrentSensor,**](cim-currentsensor.md) der den aktuellen Sensor beschreibt.
@@ -87,7 +87,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**\_ CIM-PowerSupply-Wert,**](cim-powersupply.md) der die dem aktuellen Sensor zugeordnete Stromversorgung beschreibt.
+Cim [**\_ PowerSupply,**](cim-powersupply.md) das die dem aktuellen Sensor zugeordnete Stromversorgung beschreibt.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Vom zugeordneten Sensor gemessenen Eingangsfrequenzbereich der Stromversorgung an.
+Gibt den Eingabefrequenzbereich der Stromversorgung an, der vom zugeordneten Sensor gemessen wird.
 
 <dt>
 
@@ -113,7 +113,7 @@ Gibt den Vom zugeordneten Sensor gemessenen Eingangsfrequenzbereich der Stromver
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -147,11 +147,11 @@ Bereich 1 und 2
 
 ## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** wird von [**CIM \_ AssociatedSensor abgeleitet.**](cim-associatedsensor.md)
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** wird von [**CIM \_ AssociatedSensor**](cim-associatedsensor.md)abgeleitet.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -167,7 +167,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

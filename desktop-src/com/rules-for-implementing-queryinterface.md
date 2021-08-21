@@ -4,32 +4,32 @@ description: Regeln für die Implementierung von QueryInterface
 ms.assetid: 6db17ed8-06e4-4bae-bc26-113176cc7e0e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0e40c743d5306e7dae79bd55ec2c43c01afe742
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 9c0d0df2d0382c670ed6f4a323f55dcdd1b187430282abe6699da186e574e390
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047868"
 ---
 # <a name="rules-for-implementing-queryinterface"></a>Regeln für die Implementierung von QueryInterface
 
-Es gibt drei Hauptregeln, die die Implementierung der [**IUnknown:: QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode für ein COM-Objekt Steuern:
+Es gibt drei Hauptregeln, die die Implementierung der [**IUnknown::QueryInterface-Methode**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für ein COM-Objekt steuern:
 
--   Objekte müssen über eine Identität verfügen.
+-   Objekte müssen eine Identität haben.
 -   Der Satz von Schnittstellen für eine Objektinstanz muss statisch sein.
--   Es muss möglich sein, für jede beliebige Schnittstelle eines Objekts von einer beliebigen anderen Schnittstelle aus erfolgreich eine Abfrage durchzusetzen.
+-   Es muss möglich sein, eine beliebige Schnittstelle für ein Objekt von einer anderen Schnittstelle aus erfolgreich abfragen zu können.
 
-## <a name="objects-must-have-identity"></a>Objekte müssen über eine Identität verfügen.
+## <a name="objects-must-have-identity"></a>Objekte müssen eine Identität haben
 
-Für eine beliebige Objektinstanz muss ein [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) -Aufrufe mit IID \_ IUnknown immer denselben physischen Zeiger Wert zurückgeben. Dies ermöglicht es Ihnen, **QueryInterface** für zwei beliebige Schnittstellen aufzurufen und die Ergebnisse zu vergleichen, um zu bestimmen, ob Sie auf dieselbe Instanz eines Objekts zeigen.
+Für jede objektinstanz muss ein Aufruf von [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) mit IID IUnknown immer den gleichen physischen \_ Zeigerwert zurückgeben. Auf diese Weise können Sie **QueryInterface** für zwei schnittstellen aufrufen und die Ergebnisse vergleichen, um zu bestimmen, ob sie auf die gleiche Instanz eines Objekts zeigen.
 
 ## <a name="the-set-of-interfaces-on-an-object-instance-must-be-static"></a>Der Satz von Schnittstellen für eine Objektinstanz muss statisch sein.
 
-Der Satz von Schnittstellen, der über [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für ein Objekt zugänglich ist, muss statisch und nicht dynamisch sein. Wenn **QueryInterface** \_ z. b. für eine bestimmte IID einmal OK zurückgibt, darf es niemals E \_ nointerface für nachfolgende Aufrufe desselben Objekts zurückgeben. Wenn **QueryInterface** \_ für eine bestimmte IID e nointerface zurückgibt, dürfen nachfolgende Aufrufe für dieselbe IID für das gleiche Objekt niemals S OK zurückgeben \_ .
+Der Satz von Schnittstellen, auf die über [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) auf ein Objekt zugegriffen werden kann, muss statisch und nicht dynamisch sein. Wenn **QueryInterface** einmal S OK für eine bestimmte IID zurückgibt, darf sie bei nachfolgenden Aufrufen desselben Objekts nie \_ E \_ NOINTERFACE zurückgeben. Wenn **QueryInterface** E NOINTERFACE für eine bestimmte IID zurückgibt, dürfen nachfolgende Aufrufe für dieselbe IID für dasselbe Objekt niemals \_ S \_ OK zurückgeben.
 
-## <a name="it-must-be-possible-to-query-successfully-for-any-interface-on-an-object-from-any-other-interface"></a>Es muss möglich sein, für jede Schnittstelle eines Objekts von einer beliebigen anderen Schnittstelle aus erfolgreich eine Abfrage durchzusetzen.
+## <a name="it-must-be-possible-to-query-successfully-for-any-interface-on-an-object-from-any-other-interface"></a>Eine erfolgreiche Abfrage für eine beliebige Schnittstelle für ein Objekt muss über eine beliebige andere Schnittstelle möglich sein.
 
-Das heißt, wenn der folgende Code angezeigt wird:
+Das heißt, wenn der folgende Code verwendet wird:
 
 ``` syntax
 IA * pA = (some function returning an IA *); 
@@ -39,23 +39,23 @@ hr = pA->QueryInterface(IID_IB, &pB);
  
 ```
 
-die folgenden Regeln gelten:
+Es gelten die folgenden Regeln:
 
--   Wenn Sie über einen Zeiger auf eine Schnittstelle für ein Objekt verfügen, muss ein-Befehl wie der folgende für [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für die gleiche Schnittstelle erfolgreich ausgeführt werden:
+-   Wenn Sie über einen Zeiger auf eine Schnittstelle für ein Objekt verfügen, muss ein Aufruf wie der folgende [**an QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für dieselbe Schnittstelle erfolgreich sein:
 
     ``` syntax
     pA->QueryInterface(IID_IA, ...) 
      
     ```
 
--   Wenn ein Abruf von [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für einen zweiten Schnittstellen Zeiger erfolgreich ist, muss auch der **QueryInterface** -Rückruf von diesem Zeiger für die erste Schnittstelle erfolgreich ausgeführt werden. Wenn PB erfolgreich abgerufen wurde, muss Folgendes ebenfalls erfolgreich sein:
+-   Wenn ein Aufruf von [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für einen zweiten Schnittstellenzeiger erfolgreich ist, muss auch ein Aufruf von **QueryInterface** von diesem Zeiger für die erste Schnittstelle erfolgreich sein. Wenn pB erfolgreich erhalten wurde, muss auch Folgendes erfolgreich sein:
 
     ``` syntax
     pB->QueryInterface(IID_IA, ...) 
      
     ```
 
--   Jede Schnittstelle muss in der Lage sein, beliebige andere Schnittstellen in einem Objekt abzufragen. Wenn PB erfolgreich abgerufen wurde und Sie erfolgreich eine dritte Schnittstelle (IC) mithilfe dieses Zeigers abgefragt haben, müssen Sie auch in der Lage sein, mithilfe des ersten Zeigers (PA) erfolgreich eine Abfrage für den IC durchgeführt werden. In diesem Fall muss die folgende Sequenz erfolgreich ausgeführt werden:
+-   Jede Schnittstelle muss in der Lage sein, abfragen zu können, ob eine andere Schnittstelle für ein Objekt verwendet wird. Wenn pB erfolgreich erhalten wurde und Sie erfolgreich eine dritte Schnittstelle (IC) mit diesem Zeiger abfragen, müssen Sie auch in der Lage sein, ic mit dem ersten Zeiger, pA, erfolgreich abfragen zu können. In diesem Fall muss die folgende Sequenz erfolgreich sein:
 
     ``` syntax
     IC * pC = NULL; 
@@ -64,9 +64,9 @@ die folgenden Regeln gelten:
      
     ```
 
-Schnittstellen Implementierungen müssen einen Gegenstand von ausstehenden Zeiger verweisen auf alle Schnittstellen eines bestimmten Objekts beibehalten. Sie sollten eine **Ganzzahl ohne** Vorzeichen für den-Wert verwenden.
+Schnittstellenimplementierungen müssen einen Indikator ausstehender Zeigerverweise auf alle Schnittstellen eines bestimmten Objekts verwalten. Sie sollten eine ganze **Zahl ohne Vorzeichen für** den Zähler verwenden.
 
-Wenn ein Client wissen muss, dass Ressourcen freigegeben wurden, muss er eine Methode in einer Schnittstelle für das Objekt mit einer Semantik auf höherer Ebene verwenden, bevor [**IUnknown:: Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)aufgerufen wird.
+Wenn ein Client wissen muss, dass Ressourcen frei wurden, muss er vor dem Aufruf von [**IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)eine Methode in einer Schnittstelle des Objekts mit semantischer Semantik auf höherer Ebene verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -75,6 +75,6 @@ Wenn ein Client wissen muss, dass Ressourcen freigegeben wurden, muss er eine Me
 [Verwenden und Implementieren von IUnknown](using-and-implementing-iunknown.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
