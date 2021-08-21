@@ -1,61 +1,61 @@
 ---
-title: Portieren von nursb-Oberflächen
-description: In der folgenden Tabelle sind die Iris GL-Funktionen zum Zeichnen von nursb-Oberflächen und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+title: Portieren von NURBS-Oberflächen
+description: In der folgenden Tabelle sind die IRIS GL-Funktionen zum Zeichnen von NURBS-Oberflächen und die entsprechenden OpenGL-Funktionen aufgeführt.
 ms.assetid: d34ac6af-55d7-4128-bcd9-3c910607895f
 keywords:
-- IRIS GL Porting, nursb-Oberflächen
-- Portieren von IRIS GL, nursb-Oberflächen
-- Portieren auf OpenGL von IRIS GL, nursb-Oberflächen
-- OpenGL-Portierung von IRIS GL, nursb-Oberflächen
-- Nursb-Oberflächen
+- IRIS GL-Portierung, NURBS-Oberflächen
+- Portieren von IRIS GL,NURBS-Oberflächen
+- Portieren von IRIS GL-, NURBS-Oberflächen zu OpenGL
+- OpenGL-Portierung von IRIS GL,NURBS-Oberflächen
+- NURBS-Oberflächen
 - NURBS (Non-Uniform Rational B-Spline)
-- Nicht einheitlicher rationaler B-Spline (NURBS)
+- Non-Uniform Rational B-Spline (NURBS)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7260750db4d221743d3e764d6dd30e2de499383
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0a57de3a3b413d909ed034e9d355f4099c196a89b1e7ed93a69fe99ea72fca54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132349"
 ---
-# <a name="porting-nurbs-surfaces"></a>Portieren von nursb-Oberflächen
+# <a name="porting-nurbs-surfaces"></a>Portieren von NURBS-Oberflächen
 
-In der folgenden Tabelle sind die Iris GL-Funktionen zum Zeichnen von nursb-Oberflächen und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die IRIS GL-Funktionen zum Zeichnen von NURBS-Oberflächen und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion | OpenGL-Funktion                            | Bedeutung                       |
 |------------------|--------------------------------------------|-------------------------------|
-| **bgnsurface**   | [**glubeginsurface**](glubeginsurface.md) | Beginnt eine Oberflächen Definition.  |
-| **nurbssurface** | [**glunurbssurface**](glunurbssurface.md) | Gibt Oberflächen Attribute an. |
-| **endsurface**   | [**gluendsurface**](gluendsurface.md)     | Beendet eine Oberflächen Definition.    |
+| **bgnsurface**   | [**gluBeginSurface**](glubeginsurface.md) | Beginnt eine Oberflächendefinition.  |
+| **nurbssurface** | [**gluNurbsSurface**](glunurbssurface.md) | Gibt Oberflächenattribute an. |
+| **endsurface**   | [**gluEndSurface**](gluendsurface.md)     | Beendet eine Oberflächendefinition.    |
 
 
 
- 
+ 
 
-In der folgenden Tabelle sind die Iris GL-Parameter für Surface-Typen und die entsprechenden OpenGL-Parameter aufgelistet.
+In der folgenden Tabelle sind IRIS GL-Parameter für Oberflächentypen und die entsprechenden OpenGL-Parameter aufgeführt.
 
 
 
 | IRIS GL-Typ | OpenGL-Typ                 | Bedeutung                                                |
 |--------------|-----------------------------|--------------------------------------------------------|
-| N \_ v3d       | GL \_ map2 \_ Scheitelpunkt \_ 3         | Polynomial-Kurve.                                      |
-| N \_ V3DR      | GL \_ map2 \_ Scheitelpunkt \_ 4         | Rationelle Kurve.                                        |
-| N \_ c4d       | GL \_ map2 \_ Farbe \_ 4          | Steuerpunkte definieren die Farb Oberfläche in (R, G, B, a). |
+| N \_ V3D       | GL \_ MAP2 \_ VERTEX \_ 3         | Polynomiale Kurve.                                      |
+| N \_ V3DR      | GL \_ MAP2 \_ VERTEX \_ 4         | Rationale Kurve.                                        |
+| N \_ C4D       | GL \_ MAP2 \_ COLOR \_ 4          | Kontrollpunkte definieren die Farboberfläche im Formular (R, G, B, A). |
 | N \_ C4DR      |                             |                                                        |
-| N \_ T2D       | GL \_ map2 \_ Textur- \_ Koord \_ 2 | Kontrollpunkte sind Texturkoordinaten.                |
-| N \_ T2DR      | GL \_ map2 \_ Textur \_ Koord \_ 3 | Kontrollpunkte sind Texturkoordinaten.                |
-|              | GL \_ map2 \_ Normal            | Kontrollpunkte sind normale.                            |
+| N \_ T2D       | GL \_ MAP2 \_ TEXTURE \_ COORD \_ 2 | Kontrollpunkte sind Texturkoordinaten.                |
+| N \_ T2DR      | GL \_ MAP2 \_ TEXTURE \_ COORD \_ 3 | Kontrollpunkte sind Texturkoordinaten.                |
+|              | GL \_ MAP2 \_ NORMAL            | Kontrollpunkte sind Normals.                            |
 
 
 
- 
+ 
 
-Weitere Informationen zu verfügbaren evaluatortypen finden Sie unter [**glMap2**](glmap2.md).
+Weitere Informationen zu verfügbaren Auswertungstypen finden Sie unter [**glMap2**](glmap2.md).
 
-Im folgenden Codebeispiel wird eine gekürzte nursb-Oberfläche gezeichnet:
+Im folgenden Codebeispiel wird eine gekürzte NURBS-Oberfläche ge zeichnet:
 
 
 ```C++
@@ -191,9 +191,9 @@ int main(int argc, char** argv)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

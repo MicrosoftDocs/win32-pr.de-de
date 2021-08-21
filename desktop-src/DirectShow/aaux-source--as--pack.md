@@ -1,33 +1,33 @@
 ---
-description: Aaux-Quelle (as)-Paket
+description: AAUX-Quellpaket (AS)
 ms.assetid: 0e173fe5-0b9d-48e8-bcbd-403614d51558
-title: Aaux-Quelle (as)-Paket
+title: AAUX-Quellpaket (AS)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe479a0740da08f42ca5d80e1f0b6f5174f6917b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 89a2d8aa11c9560b2aa59165afd9bdaae775be7755a7a7d2a5e87a80df412d1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118160261"
 ---
-# <a name="aaux-source-as-pack"></a>Aaux-Quelle (as)-Paket
+# <a name="aaux-source-as-pack"></a>AAUX-Quellpaket (AS)
 
-In den folgenden Tabellen sind die Werte aufgeführt, die vom msdv-Treiber zum Ausfüllen der **dwdvaauxsrc** -und **dwDVAAuxSrc1** -Member der [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -Struktur verwendet werden. Weitere Informationen finden Sie unter [dvinfo Field Settings in the msdv Driver](dvinfo-field-settings-in-the-msdv-driver.md).
+In den folgenden Tabellen sind die Werte aufgeführt, die vom MSDV-Treiber verwendet werden, um die Member **dwDVAAuxSrc** und **dwDVAAuxSrc1** der [**DVINFO-Struktur**](/windows/desktop/api/strmif/ns-strmif-dvinfo) auszufüllen. Weitere Informationen finden Sie unter [DVINFO-Feld Einstellungen im MSDV-Treiber.](dvinfo-field-settings-in-the-msdv-driver.md)
 
-Dvcr-Einstellungen
+DVCR Einstellungen
 
 
 
-DV-Standard
+DV Standard
 
-Dvcr (IEC 61834)
+DVCR (IEC 61834)
 
 FOURCC
 
 dvsl
 
-DVSD
+dvsd
 
 System
 
@@ -59,7 +59,7 @@ Reserviert (1)
 
 1
 
-AF-Größe (6)
+AF SIZE (6)
 
 00:1111
 
@@ -99,7 +99,7 @@ PA (1)
 
 1
 
-Audiomodus (4)
+AUDIOMODUS (4)
 
     Audio Block 1\*
 
@@ -191,7 +191,7 @@ SMP (3)
 
 010
 
-Qu (3)
+QU (3)
 
 001
 
@@ -201,17 +201,17 @@ Qu (3)
 
 001
 
-Als Paket
+AS Pack
 
     Audio Block 1\*
 
-0xD1 c130cf
+0xD1C130CF
 
-0xd1e130d0
+0xD1E130D0
 
-0xd1c030cf
+0xD1C030CF
 
-0xd1e030d0
+0xD1E030D0
 
     Audio Block 2\*
 
@@ -219,21 +219,21 @@ Als Paket
 
 0x00000000
 
-0xD1 c03f
+0xD1C03FCF
 
-0xd1e03\d0
+0xD1E03FD0
 
 
 
  
 
-Dvcr 25-und DVCPRO 50-Einstellungen (geplant)
+DVCR 25 und DVCPRO 50 Einstellungen (geplant)
 
 
 
-DV-Standard
+DV Standard
 
-DVCPRO (SMPTE 314m) – geplant
+DVCPRO (SMPTE 314M) – Geplant
 
 FOURCC
 
@@ -271,7 +271,7 @@ Reserviert (1)
 
 1
 
-AF-Größe (6)
+AF-GRÖßE (6)
 
 01:0110
 
@@ -311,7 +311,7 @@ Reserviert (1)
 
 1
 
-Audiomodus (4)
+AUDIOMODUS (4)
 
     Audio Block 1\*
 
@@ -383,7 +383,7 @@ SMP (3)
 
 000
 
-Qu (3)
+QU (3)
 
 000
 
@@ -393,44 +393,44 @@ Qu (3)
 
 000
 
-Als Paket
+AS Pack
 
     Audio Block 1\*
 
-0xc0c01056
+0xC0C01056
 
-0xc0e01058
+0xC0E01058
 
-0xc0c21056
+0xC0C21056
 
-0xc0e21058
+0xC0E21058
 
     Audio Block 2\*
 
-0xc0c01156
+0xC0C01156
 
-0xc0e01158
+0xC0E01158
 
-0xc0c21156
+0xC0C21156
 
-0xc0e21158
+0xC0E21158
 
 
 
  
 
 > [!Note]  
-> \* Die [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -Struktur enthält zwei Aaux als Pakete für audioblöcke 1 und 2. DV50 hat vier audioblöcke. die Blöcke 3 und 4 werden nicht in der **dvinfo** -Struktur dargestellt.
+> \* Die [**DVINFO-Struktur**](/windows/desktop/api/strmif/ns-strmif-dvinfo) enthält zwei AAUX AS-Pakete für die Audioblöcke 1 und 2. DV50 verfügt über vier Audioblöcke. Die Blöcke 3 und 4 werden in der **DVINFO-Struktur nicht** dargestellt.
 
  
 
-Dvcr 100-Einstellungen (geplant)
+DVCR 100 Einstellungen (geplant)
 
 
 
-DV-Standard
+DV Standard
 
-DVCPRO 100 – geplant
+DVCPRO 100 – Geplant
 
 FOURCC
 
@@ -440,7 +440,7 @@ System
 
 1080-60i
 
-720-60uhr
+720-60p
 
 1080-50i
 
@@ -460,7 +460,7 @@ Reserviert (1)
 
 1
 
-AF-Größe (6)
+AF SIZE (6)
 
 01:0110
 
@@ -492,7 +492,7 @@ Reserviert (1)
 
 1
 
-Audiomodus (4)
+AUDIOMODUS (4)
 
     Audio Block 1\*
 
@@ -550,7 +550,7 @@ SMP (3)
 
 000
 
-Qu (3)
+QU (3)
 
 000
 
@@ -558,70 +558,70 @@ Qu (3)
 
 000
 
-Als Paket
+AS Pack
 
     Audio Block 1\*
 
-0xc0c31056
+0xC0C31056
 
-0xc0c31056
+0xC0C31056
 
-0xc0d31058
+0xC0D31058
 
     Audio Block 2\*
 
-0xc0c31156
+0xC0C31156
 
-0xc0c31156
+0xC0C31156
 
-0xc0d31158
+0xC0D31158
 
 
 
  
 
 > [!Note]  
-> \* DVCPRO 100 weist 8 audioblöcke auf. die Blöcke 3 bis 8 werden nicht in der [dvinfo](dvinfo-field-settings-in-the-msdv-driver.md) -Struktur dargestellt.
+> \* DVCPRO 100 verfügt über 8 Audioblöcke. Die Blöcke 3 bis 8 werden in der [DVINFO-Struktur](dvinfo-field-settings-in-the-msdv-driver.md) nicht dargestellt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden Feldcodes sind von Interesse:
 
--   LF: Flag für gesperrten Modus. Gibt an, ob das Audiogerät gesperrt ist.
-    -   0 = gesperrt
-    -   1 = entsperrt
--   AF size: die Größe des Audioframes. Gibt die Anzahl von Audiobeispielen pro Frame an.
+-   LF: Flag für den gesperrten Modus. Gibt an, ob die Audiodatei gesperrt ist.
+    -   0 = Gesperrt
+    -   1 = Entsperrt
+-   AF-GRÖßE: Audioframegröße. Gibt die Anzahl der Audiobeispiele pro Frame an.
 
     IEC 61834-Definition:
 
     -   00:1111 = 1068 Stichproben pro Frame
     -   01:0000 = 1280 Stichproben pro Frame
 
-    Definition von SMPTE 314m:
+    SMPTE 314M-Definition:
 
     -   01:0110 = 1602 Stichproben pro Frame
     -   01:1000 = 1920 Stichproben pro Frame
 
-    Abhängig von der Framerate kann die genaue Anzahl von Stichproben in einem Frame variieren. Beispielsweise ist NTSC 30000/1001 Frames pro Sekunde (29,97 fps). Mit 32-kHz-Audiodaten sind ungefähr 1067,73 Audiobeispiele pro Frame vorhanden. Folglich ist der Nominalkurs 1068, die tatsächliche Zahl variiert jedoch je nach Frame. Außerdem kann die Anzahl von Audiobeispielen pro Frame mit entsperrtem Audiowert innerhalb eines bestimmten Zeitraums innerhalb eines bestimmten Zeitraums variieren.
+    Abhängig von der Bildfrequenz kann die genaue Anzahl von Stichproben in einem Frame variieren. Ntsc beträgt beispielsweise 30000/1001 Frames pro Sekunde (29,97 fps). Bei Audio mit 32 kHz gibt es etwa 1067,73 Audiobeispiele pro Frame. Daher beträgt die nominale Rate 1068, aber die tatsächliche Zahl variiert je nach Frame. Bei entsperrten Audiodaten kann die Anzahl der Audiobeispiele pro Frame im Laufe der Zeit innerhalb eines bestimmten Bereichs variieren.
 
 <!-- -->
 
--   SM: Stereo Modus.
+-   SM: Stereomodus.
     -   0 = Stereo
     -   1 = Mono
 -   CHN: Anzahl der Audiokanäle pro Audioblock.
-    -   0 = ein Kanal pro Audioblock
-    -   1 = zwei Kanäle pro Audioblock
--   Audiomodus: gibt den Inhalt des Audiosignals in jedem Kanal an. Die Interpretation dieses Felds hängt davon ab, welche Werte in den SM-und CHN-Feldern abgelegt werden. Die unten angegebenen Definitionen gelten für die Werte, die von msdv verwendet werden. Weitere Informationen finden Sie unter Spezifikationen.
+    -   0 = Ein Kanal pro Audioblock
+    -   1 = Zwei Kanäle pro Audioblock
+-   AUDIOMODUS: Gibt den Inhalt des Audiosignals auf jedem Kanal an. Die Interpretation dieses Felds hängt davon ab, welche Werte in den Feldern SM und CHN platziert werden. Die unten angegebenen Definitionen gelten für die von MSDV verwendeten Werte. Weitere Informationen finden Sie in den Spezifikationen.
 
     IEC 61834-Definition:
 
-    -   0000 = ch a/c/e/g ist Linker Channel, ch b/d/f/h ist rechter Kanal
+    -   0000 = Ch a/c/e/g ist linker Kanal, Ch b/d/f/h ist der rechte Kanal
     -   1111 = keine Audiodaten
 
-    Definition von SMPTE 314m:
+    SMPTE 314M-Definition:
 
     -   0000 = CH1 (CH3)
     -   0001 = CH2 (CH4)
@@ -629,24 +629,24 @@ Die folgenden Feldcodes sind von Interesse:
 -   50/60: Anzahl der Felder.
     -   0 = 60 Felder
     -   1 = 50 Felder
--   SType: Systemtyp.
+-   STYPE: Systemtyp.
 
     IEC 61834-Definition:
 
-    -   00000 = 525-60 oder 625-50, DVSD
+    -   00000 = 525-60 oder 625-50, dvsd
     -   00001 = 525-60 oder 625-50, dvsl (siehe IEC 61883-5)
 
-    Definition von SMPTE 314m/SPMTE 370:
+    SMPTE 314M/SPMTE 370-Definition:
 
-    -   00000 = 2 audioblöcke pro Videorahmen
-    -   00010 = 4 audioblöcke pro Videorahmen
-    -   00011 = 8 audioblöcke pro Videorahmen
+    -   00000 = 2 Audioblöcke pro Videoframe
+    -   00010 = 4 Audioblöcke pro Videoframe
+    -   00011 = 8 Audioblöcke pro Videoframe
 
--   SMP: Stichproben Häufigkeit.
+-   SMP: Samplinghäufigkeit.
     -   000 = 48 kHz
     -   010 = 32 kHz
--   Qu: Quantisierung.
-    -   0 = 16 Bits linear
+-   QU: Quantisierung.
+    -   0 = 16 Bit linear
     -   1 = 12 Bits nicht linear
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -656,7 +656,7 @@ Die folgenden Feldcodes sind von Interesse:
 [Digitales Video in DirectShow](digital-video-in-directshow.md)
 </dt> <dt>
 
-[Dvinfo-Feld Einstellungen im msdv-Treiber](dvinfo-field-settings-in-the-msdv-driver.md)
+[DVINFO-Einstellungen im MSDV-Treiber](dvinfo-field-settings-in-the-msdv-driver.md)
 </dt> </dl>
 
  

@@ -1,46 +1,46 @@
 ---
-title: Einschränkungen bei der Schema Erweiterung
-description: Um die Wahrscheinlichkeit von Schema Änderungen durch eine Anwendung zu verringern, die andere Anwendungen unterbricht, und die Schema Konsistenz aufrechtzuerhalten, Active Directory Domain Services Einschränkungen für den Typ von Schema Änderungen erzwingen, die eine Anwendung oder ein Benutzer ausführen darf.
+title: Einschränkungen der Schemaerweiterung
+description: Um die Wahrscheinlichkeit von Schemaänderungen durch eine Anwendung zu reduzieren, die andere Anwendungen unterbricht, und um die Schemakonsistenz zu gewährleisten, erzwingen Active Directory Domain Services Einschränkungen für den Typ der Schemaänderungen, die eine Anwendung oder ein Benutzer vornehmen darf.
 ms.assetid: 26254eb9-5dd9-414b-a398-be2a7f3b0279
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c97ab3d9f6406a89b24c772e7df8254095f1286
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 94db3c3c96f5c9b4e96cff923e70501a8977669defbc03b95fd2df019886a138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118184303"
 ---
-# <a name="restrictions-on-schema-extension"></a>Einschränkungen bei der Schema Erweiterung
+# <a name="restrictions-on-schema-extension"></a>Einschränkungen der Schemaerweiterung
 
-Um die Wahrscheinlichkeit von Schema Änderungen durch eine Anwendung zu verringern, die andere Anwendungen unterbricht, und die Schema Konsistenz aufrechtzuerhalten, Active Directory Domain Services Einschränkungen für den Typ von Schema Änderungen erzwingen, die eine Anwendung oder ein Benutzer ausführen darf.
+Um die Wahrscheinlichkeit von Schemaänderungen durch eine Anwendung zu reduzieren, die andere Anwendungen unterbricht, und um die Schemakonsistenz zu gewährleisten, erzwingen Active Directory Domain Services Einschränkungen für den Typ der Schemaänderungen, die eine Anwendung oder ein Benutzer vornehmen darf.
 
-Die Einschränkungen werden nur beim Ändern vorhandener Schema Objekte auferlegt. Das Schema wird in zwei Kategorien eingeteilt. Die Schema Objekte, die im Basis Schema mit Windows 2000 ausgeliefert werden, gehören zu Kategorie 1. Alle Schema Objekte, die später von anderen Anwendungen oder Benutzern durch dynamische Schema Erweiterungen hinzugefügt werden, gehören zu Kategorie 2. Die Kategorie eines Schema Objekts kann durch das 0x10-Bit bestimmt werden, das im **systemFlags** -Attribut für das **classSchema** -Objekt festgelegt ist. Dieses Bit wird nur für Objekte der Kategorie 1 festgelegt und kann nicht geändert werden. es kann auch nicht für ein beliebiges Objekt der Kategorie 2 festgelegt werden.
+Die Einschränkungen gelten nur für die Änderung vorhandener Schemaobjekte. Das Schema ist in zwei Kategorien unterteilt. Die Schemaobjekte, die mit Windows 2000 im Basisschema enthalten sind, gehören zu Kategorie 1. Alle Schemaobjekte, die später von anderen Anwendungen oder Benutzern über die dynamische Schemaerweiterung hinzugefügt werden, gehören zu Kategorie 2. Die Kategorie eines Schemaobjekts kann durch die 0x10 festgelegten Bit im **systemFlags-Attribut** des **classSchema-Objekts bestimmt** werden. Dieses Bit wird nur für Objekte der Kategorie 1 festgelegt und kann weder geändert noch für ein Objekt der Kategorie 2 festgelegt werden.
 
-Das **systemFlags** -Attribut wird intern von Active Directory Domain Services verwendet, um besondere Merkmale von "Infrastruktur"-Objekten im Basis Schema zu identifizieren. Zusätzlich zur Identifizierung von Objekten der Kategorie 1 steuert **systemFlags** , ob ein Objekt verschoben, gelöscht oder umbenannt werden kann. Diese Vorgänge werden für Objekte verhindert, von denen Windows 2000 abhängig ist, um ausgeführt zu werden.
+Das **systemFlags-Attribut** wird intern von Active Directory Domain Services verwendet, um besondere Merkmale von Infrastrukturobjekten im Basisschema zu identifizieren. Zusätzlich zum Identifizieren von Objekten der Kategorie 1 steuert **systemFlags,** ob ein Objekt verschoben, gelöscht oder umbenannt werden kann. Diese Vorgänge werden für Objekte verhindert, von denen Windows 2000 abhängig ist.
 
-Bei allen Schema Objekten, Kategorie 1 oder 2, müssen Active Directory Domain Services die folgenden Einschränkungen erzwingen:
+Für alle Schemaobjekte, Kategorie 1 oder 2, Active Directory Domain Services die folgenden Einschränkungen vor:
 
--   Sie können eine neue **must-** Klasse nicht zu einer Klasse hinzufügen (direkt oder durch Vererbung durch Hinzufügen einer zusätzlichen Klasse).
--   Sie können keine **mustare** der Klasse löschen (direkt oder durch Vererbung).
+-   Sie können einer Klasse kein **neues mustContain** hinzufügen (direkt oder durch Vererbung durch Hinzufügen einer Hilfsklasse).
+-   MustContain der **Klasse kann nicht gelöscht** werden (direkt oder durch Vererbung).
 
-Außerdem werden die folgenden zusätzlichen Einschränkungen für Schema Objekte der Kategorie 1 auferlegt:
+Darüber hinaus gelten für Schemaobjekte der Kategorie 1 die folgenden zusätzlichen Einschränkungen:
 
--   Sie können die folgenden Attribute eines Attributs der Kategorie 1 nicht ändern:
+-   Sie können die folgenden Attribute eines Category 1-Attributs nicht ändern:
 
-    -   **rangeLower** und **rangeUpper** (Wertebereich).
-    -   **attributeSecurityGuid** (bestimmt, in welchem Eigenschafts Satz das Attribut ggf. zu gehört).
+    -   **rangeLower** und **rangeUpper** (Wertbereich).
+    -   **attributeSecurityGuid** (bestimmt, zu welchem Eigenschaftensatz das Attribut gehört, falls dies der Fall ist).
 
--   Die **defaultobjectcategory** einer Klasse der Kategorie 1 kann nicht geändert werden.
--   Sie können die **objectCategory** einer beliebigen Instanz einer Klasse der Kategorie 1 nicht ändern.
--   Es ist nicht möglich, eine Klasse oder ein Attribut der Kategorie 1 zu überschreiben.
--   Es ist nicht möglich, den **ldapDisplayName** einer Klasse oder eines Attributs der Kategorie 1 zu ändern.
+-   Sie können die **defaultObjectCategory** einer Category 1-Klasse nicht ändern.
+-   Sie können die **objectCategory einer** Instanz einer Category 1-Klasse nicht ändern.
+-   Sie können nicht festlegen, dass eine Klasse oder ein Attribut der Kategorie 1 nicht mehr verwendet werden kann.
+-   Sie können den **lDAPDisplayName einer** Klasse oder eines Attributs der Kategorie 1 nicht ändern.
 -   Sie können eine Klasse oder ein Attribut der Kategorie 1 nicht umbenennen.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnvalueof-Struktur <T> . Value-Eigenschaft
-title: Columnvalueobstruct (T). Value-Eigenschaft
+description: Weitere Informationen finden Sie unter ColumnValueOfStruct. <T> Value-Eigenschaft
+title: ColumnValueOfStruct(T). Value-Eigenschaft
 TOCTitle: 'Value property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnValueOfStruct`1.Value
 ms:mtpsurl: https://msdn.microsoft.com/library/Dn334180(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ef726e8926cd1887b79e4504adbccffcff1bed63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 998bc48a0f82695fc8d6e156a92ee8d5cc77666b36ad55a93a12d76cf260c439
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083565"
 ---
-# <a name="columnvalueofstructtvalue-property"></a>Columnvalueof-Struktur \<T\> . Value-Eigenschaft
+# <a name="columnvalueofstructtvalue-property"></a>ColumnValueOfStruct \<T\> . Value-Eigenschaft
 
-Ruft den Wert in der-Struktur ab oder legt ihn fest.
+Ruft den Wert in der Struktur ab oder legt den Wert fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public Nullable<T> Value { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Nullable](/dotnet/api/system.nullable-1)\<[T](./columnvalueofstruct-t-class.md)\>  
+Typ: [System.Nullable](/dotnet/api/system.nullable-1)\<[T](./columnvalueofstruct-t-class.md)\>  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnvalueosstruct- \<T\> Klasse](./columnvalueofstruct-t-class.md)
+[ColumnValueOfStruct-Klasse \<T\>](./columnvalueofstruct-t-class.md)
 
-[Columnvalueofstruct \<T\> -Member](./columnvalueofstruct-t-members.md)
+[ColumnValueOfStruct-Elemente \<T\>](./columnvalueofstruct-t-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

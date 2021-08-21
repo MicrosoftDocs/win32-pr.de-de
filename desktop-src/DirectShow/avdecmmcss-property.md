@@ -1,19 +1,19 @@
 ---
-description: Gibt die MMCSS-Klasse (Multimedia Class Scheduler Service) für den Decodierungs Thread an.
+description: Gibt die MMCSS-Klasse (Multimedia Class Scheduler Service) für den Decodierungsthread an.
 ms.assetid: 77724879-62e4-439e-9dd0-3642cd7f75ca
-title: Avdecmmcss-Eigenschaft (UUIDs. h)
+title: AVDecMmcss-Eigenschaft (Uuids.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e0092ac516f9600929a9772d044f51e7e375548d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b9084db3cce8d555afa44097271a6b08f58cfea2f2edcb7acb5845730afc86b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118159944"
 ---
-# <a name="avdecmmcss-property"></a>Avdecmmcss (Eigenschaft)
+# <a name="avdecmmcss-property"></a>AVDecMmcss-Eigenschaft
 
-Gibt die MMCSS-Klasse (Multimedia Class Scheduler Service) für den Decodierungs Thread an.
+Gibt die MMCSS-Klasse (Multimedia Class Scheduler Service) für den Decodierungsthread an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -23,19 +23,19 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdecmmcssclass**
+**CODECAPI \_ AVDecMmcssClass**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
 Der Wert dieser Eigenschaft ist der Name der MMCSS-Klasse.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit MMCSS können Anwendungen sicherstellen, dass die Zeit empfindliche Verarbeitung einen priorisierten Zugriff auf CPU-Ressourcen hat. Dies funktioniert, indem registrierte Threads auf höhere Thread Prioritäten erhöht werden, während ihre Prioritäten in regelmäßigen Abständen gesenkt werden, um Zeit für andere Prozesse zu erzielen.
+MIT MMCSS können Anwendungen sicherstellen, dass bei der zeitkritischen Verarbeitung prioritätsbasierter Zugriff auf CPU-Ressourcen vorliegt. Dies funktioniert, indem registrierte Threads zu höheren Threadprioritäten erhöht werden, während ihre Prioritäten in regelmäßigen Abständen verringert werden, um zeitaufwendige Zeit für andere Prozesse zu schaffen.
 
-Der empfohlene Wert für Audiodecoder lautet "Audiodatei", und der empfohlene Wert für Video-Decoder ist "Wiedergabe".
+Der empfohlene Wert für Audiodecoder ist "Audio", und der empfohlene Wert für Videodecoder ist "Playback".
 
-Wenn der MMCSS-Dienst nicht verfügbar ist oder die angegebene MMCSS-Klasse nicht vorhanden ist, hat das Festlegen der-Eigenschaft keine Auswirkung.
+Wenn der MMCSS-Dienst nicht verfügbar ist oder die angegebene MMCSS-Klasse nicht vorhanden ist, hat das Festlegen der -Eigenschaft keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Wenn der MMCSS-Dienst nicht verfügbar ist oder die angegebene MMCSS-Klasse nich
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>UUIDs. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Uuids.h</dt> </dl> |
 
 
 
@@ -51,10 +51,10 @@ Wenn der MMCSS-Dienst nicht verfügbar ist oder die angegebene MMCSS-Klasse nich
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

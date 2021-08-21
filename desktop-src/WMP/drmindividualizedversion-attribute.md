@@ -1,6 +1,6 @@
 ---
 title: DRMIndividualizedVersion-Attribut
-description: DrmIndividualizedVersion gibt die DRM-Version (Digital Rights Management) an, die für die digitale Mediendatei erforderlich ist.
+description: Die DRMIndividualizedVersion gibt die Version von Digital Rights Management (DRM) an, die für die digitale Mediendatei erforderlich ist.
 ms.assetid: eb31122e-9be8-4ebe-91a8-d9d4288dc772
 keywords:
 - DRMIndividualizedVersion-Attribut Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118340207"
 ---
 # <a name="drmindividualizedversion-attribute"></a>DRMIndividualizedVersion-Attribut
 
-**DrmIndividualizedVersion** gibt die DRM-Version (Digital Rights Management) an, die für die digitale Mediendatei erforderlich ist.
+Die **DRMIndividualizedVersion** gibt die Version von Digital Rights Management (DRM) an, die für die digitale Mediendatei erforderlich ist.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -30,7 +30,7 @@ ms.locfileid: "118340207"
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,11 +42,11 @@ Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Attributverweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

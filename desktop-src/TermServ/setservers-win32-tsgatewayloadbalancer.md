@@ -76,7 +76,7 @@ Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

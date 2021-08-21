@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: bytecolumnvalue. Size-Eigenschaft'
-title: Bytecolumnvalue. Size-Eigenschaft
+description: 'Weitere Informationen zu: ByteColumnValue.Size-Eigenschaft'
+title: ByteColumnValue.Size-Eigenschaft
 TOCTitle: 'Size property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ByteColumnValue.Size
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.bytecolumnvalue.size(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 94679812f0bdebd043bda3596fceffad6eb2fd65
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5280fa23774adfae6c3d01690935d7a9236154640911ccc74a9fb570b5b29dd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084095"
 ---
-# <a name="bytecolumnvaluesize-property"></a>Bytecolumnvalue. Size-Eigenschaft
+# <a name="bytecolumnvaluesize-property"></a>ByteColumnValue.Size-Eigenschaft
 
-Ruft die Größe des Werts in der Spalte ab. Dadurch wird 0 für Spalten variabler Größen (z. b. Binär und Zeichenfolge) zurückgegeben.
+Ruft die Größe des Werts in der Spalte ab. Dies gibt 0 für Spalten variabler Größe (d. h. binär und Zeichenfolge) zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ protected override int Size { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Bytecolumnvalue-Klasse](./bytecolumnvalue-class.md)
+[ByteColumnValue-Klasse](./bytecolumnvalue-class.md)
 
-[Bytecolumnvalue-Member](./bytecolumnvalue-members.md)
+[ByteColumnValue-Member](./bytecolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

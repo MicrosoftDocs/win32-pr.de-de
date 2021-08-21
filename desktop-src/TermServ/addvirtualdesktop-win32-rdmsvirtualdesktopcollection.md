@@ -1,12 +1,12 @@
 ---
-title: Addvirtualdesktop-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+title: AddVirtualDesktop-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
 description: Fügt der Sammlung virtueller Desktops einen virtuellen Desktop hinzu.
 ms.assetid: 31a3aa28-6e5d-4f8a-81ff-ab011f568b6a
 ms.tgt_platform: multiple
 keywords:
-- Addvirtualdesktop-Methode Remotedesktopdienste
-- Addvirtualdesktop-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, addvirtualdesktop-Methode
+- AddVirtualDesktop-Remotedesktopdienste
+- AddVirtualDesktop-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , AddVirtualDesktop-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4858f99f2ea4793fe0d83d06a0aaa429b7aa8f71
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6fd677c475fd64e8b847540a312568e551b3c7c3f1ad1887082637b29c025abe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131309"
 ---
-# <a name="addvirtualdesktop-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Addvirtualdesktop-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="addvirtualdesktop-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>AddVirtualDesktop-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
 Fügt der Sammlung virtueller Desktops einen virtuellen Desktop hinzu.
 
@@ -43,7 +43,7 @@ uint32 AddVirtualDesktop(
 
 <dl> <dt>
 
-*VMName* \[ in\]
+*VMName* \[ In\]
 </dt> <dd>
 
 Der Name des virtuellen Computers, der den virtuellen Desktop hostet.
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

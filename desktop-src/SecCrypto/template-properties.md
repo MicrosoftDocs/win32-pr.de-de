@@ -1,28 +1,28 @@
 ---
-description: Das Vorlagen Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das Template-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 96E9BBF9-2447-45CE-89A8-1A2B3FBD3FAE
-title: Vorlagen Eigenschaften
+title: Vorlageneigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 896c2efdb79b1268a8d218929343e909aacc1645
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d26d1c3cde0a28e2bb3261d938bef877e1105d5275759990b98053be2b952ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117972075"
 ---
-# <a name="template-properties"></a>Vorlagen Eigenschaften
+# <a name="template-properties"></a>Vorlageneigenschaften
 
-Das [**Vorlagen**](template.md) Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**Template-Objekt**](template.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**IsCritical (Eigenschaft)**](template-iscritical.md)
--   [**Ispree sent (Eigenschaft)**](template-ispresent.md)
+-   [**IsCritical-Eigenschaft**](template-iscritical.md)
+-   [**IsPresent-Eigenschaft**](template-ispresent.md)
 -   [**MajorVersion-Eigenschaft**](template-majorversion.md)
 -   [**MinorVersion-Eigenschaft**](template-minorversion.md)
 -   [**Name-Eigenschaft**](template-name.md)
--   [**Oid-Eigenschaft**](template-oid.md)
+-   [**OID-Eigenschaft**](template-oid.md)
 
  
 

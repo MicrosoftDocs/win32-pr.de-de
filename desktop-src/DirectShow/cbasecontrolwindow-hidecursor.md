@@ -1,7 +1,7 @@
 ---
-description: Die hidecursor-Methode blendet den Cursor aus oder zeigt ihn an.
+description: Die HideCursor-Methode blendet den Cursor aus oder zeigt den Cursor an.
 ms.assetid: 80175d1b-9874-4295-9ebc-b0d78961a263
-title: Cbasecontrolwindow. hidecursor-Methode (ctlutil. h)
+title: CBaseControlWindow.HideCursor-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d0f379c719052de77b54dba47f83b34ae235415f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6421a650471d0954031433db3814e8453cbc82586c7f37608ae947e7301c6969
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158381"
 ---
-# <a name="cbasecontrolwindowhidecursor-method"></a>Cbasecontrolwindow. hidecursor-Methode
+# <a name="cbasecontrolwindowhidecursor-method"></a>CBaseControlWindow.HideCursor-Methode
 
-Mit der- `HideCursor` Methode wird der Cursor ausgeblendet oder angezeigt.
+Die `HideCursor` -Methode blendet den Cursor aus oder zeigt den Cursor an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT HideCursor(
 
 <dl> <dt>
 
-*Hidecursor* 
+*HideCursor* 
 </dt> <dd>
 
-Wert, der angibt, ob der Cursor angezeigt werden soll. Legen Sie fest, um den Cursor auszublenden, oder oafalse, um den Cursor anzuzeigen.
+Wert, der an gibt, ob der Cursor angezeigt werden soll. Legen Sie auf OATRUE fest, um den Cursor auszublenden, oder OAFALSE, um den Cursor anzuzeigen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

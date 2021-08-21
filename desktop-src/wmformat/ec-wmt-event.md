@@ -1,10 +1,10 @@
 ---
-title: EC_WMT_EVENT (Windows Media-Format 11 SDK)
-description: '\_WMT- \_ Ereignis für EC'
+title: EC_WMT_EVENT (Windows Media Format 11 SDK)
+description: EC \_ WMT \_ EVENT
 ms.assetid: 51d51659-8e7d-49b7-83f2-a80e99d39d78
 keywords:
-- SDK für Windows Media-Format, EC_WMT_EVENT
-- DirectShow, EC_WMT_EVENT
+- Windows Medienformat-SDK, EC_WMT_EVENT
+- DirectShow,EC_WMT_EVENT
 - EC_WMT_EVENT
 - Digital Rights Management (DRM), EC_WMT_EVENT
 - DRM (Digital Rights Management), EC_WMT_EVENT
@@ -12,32 +12,32 @@ keywords:
 - ASF (Advanced Systems Format), EC_WMT_EVENT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebe74baaba676a97e609b4c03cd4db9010bd8f6a
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: dbe0e53a759515914a352707550e281aca3aebe096f168352c36c1ff4200b2ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118029219"
 ---
-# <a name="ec_wmt_event-windows-media-format-11-sdk"></a>EC_WMT_EVENT (Windows Media-Format 11 SDK)
+# <a name="ec_wmt_event-windows-media-format-11-sdk"></a>EC_WMT_EVENT (Windows Media Format 11 SDK)
 
-Wird vom SDK für den Windows Media-Format gesendet, wenn eine Anwendung den ASF-Reader-Filter verwendet, um von Digital Rights Management (DRM) geschützte ASF-Dateien wiederzugeben.
+Wird vom Windows Media Format SDK gesendet, wenn eine Anwendung den ASF-Readerfilter verwendet, um ASF-Dateien wieder zu spielen, die durch Digital Rights Management (DRM) geschützt sind.
 
 Parameter
 
 *lParam1*
 
-Kann einen der folgenden WMT- \_ Status Werte aufweisen.
+Kann einer der folgenden WMT \_ STATUS-Werte sein.
 
 
 
-| WMT- \_ Status Meldung           | BESCHREIBUNG                                                                                                                    |
+| WMT \_ STATUS-Meldung           | Beschreibung                                                                                                                    |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| WMT \_ keine \_ Rechte               | Die Datei ist mit der DRM-Version 1 geschützt, und die Anwendung verfügt nicht über die Berechtigung, die angeforderte Aktion auszuführen.                    |
-| WMT-Abruf \_ \_ Lizenz         | Der Lizenz Erwerbs Vorgang wurde abgeschlossen. (Dies bedeutet nicht unbedingt, dass eine Lizenz erfolgreich erworben wurde.) |
-| WMT \_ keine \_ Rechte \_ Ex           | Die Datei ist mit der DRM-Version 7 geschützt, und die Anwendung verfügt nicht über die Berechtigung, die angeforderte Aktion auszuführen.                    |
-| WMT \_ erfordert \_ Individualisierung | Mit der Lizenz können nur Individual Anwendungen die angeforderte Aktion ausführen.                                           |
-| WMT \_ Individual            | Der Individualisierungsprozess wird jetzt ausgeführt oder wurde abgeschlossen.                                                    |
+| WMT \_ – \_ KEINE RECHTE               | Die Datei ist mit DRM Version 1 geschützt, und die Anwendung hat keine Rechte zum Ausführen der angeforderten Aktion.                    |
+| WMT \_ ACQUIRE \_ LICENSE         | Der Lizenzerwerbsprozess wurde abgeschlossen. (Dies bedeutet nicht unbedingt, dass eine Lizenz erfolgreich erworben wurde.) |
+| WMT \_ NO \_ RIGHTS \_ EX           | Die Datei ist mit DRM Version 7 geschützt, und die Anwendung hat keine Rechte zum Ausführen der angeforderten Aktion.                    |
+| WMT \_ BENÖTIGT \_ INDIVIDUALISIERUNG | Die Lizenz erlaubt nur individualisierten Anwendungen, die angeforderte Aktion durchzuführen.                                           |
+| WMT \_ INDIVIDUALIZE            | Der Individualisierungsprozess wird jetzt ausgeführt oder wurde abgeschlossen.                                                    |
 
 
 
@@ -45,17 +45,17 @@ Kann einen der folgenden WMT- \_ Status Werte aufweisen.
 
 *lParam2*
 
-Ein Zeiger auf eine **am \_ WMT- \_ Ereignis \_ Daten** Struktur, die Informationen über das Ereignis im **pData** -Member-Zeiger enthält, sowie einen **HRESULT** -Statuscode, der vom SDK für den Windows Media-Format gesendet wird. Der Wert von *lParam2* ist abhängig vom Wert von *lParam1*, wie in der folgenden Tabelle beschrieben. (Die "WM \_ "-Strukturen werden im Windows Media-Format-SDK definiert.)
+Zeiger auf eine **AM \_ WMT \_ EVENT \_ DATA-Struktur,** die Informationen über das Ereignis im **pData-Memberzeiger** sowie einen **HRESULT-Statuscode** enthält, der vom Windows Media Format SDK gesendet wird. Der Wert von *lParam2* hängt vom Wert von *lParam1 ab,* wie in der folgenden Tabelle beschrieben. (Die \_ WM-Strukturen werden im Windows Media Format SDK definiert.)
 
 
 
-| Wenn lParam1...              | \_WMT- \_ Ereignis \_ Daten. pdata ist...                            |
+| Wenn lParam1 ist...              | AM \_ WMT \_ EVENT \_ DATA.pData is...                            |
 |-------------------------------|-------------------------------------------------------------|
-| WMT \_ keine \_ Rechte               | Ein Zeiger auf eine **WCHAR** -Zeichenfolge, die eine Challenge-URL enthält. |
-| WMT-Abruf \_ \_ Lizenz         | Ein Zeiger auf eine **WM- \_ get- \_ Lizenz \_ Daten** Struktur.        |
-| WMT \_ keine \_ Rechte \_ Ex           | Ein Zeiger auf eine **WM- \_ get- \_ Lizenz \_ Daten** Struktur.        |
-| WMT \_ erfordert \_ Individualisierung | NULL.                                                       |
-| WMT \_ Individual            | Ein Zeiger auf eine **WM- \_ Individualisierungs \_ Status** -Struktur.     |
+| WMT \_ – \_ KEINE RECHTE               | Ein Zeiger auf eine **WCHAR-Zeichenfolge,** die eine Abfrage-URL enthält. |
+| WMT \_ ACQUIRE \_ LICENSE         | Ein Zeiger auf eine **WM \_ GET LICENSE \_ \_ DATA-Struktur.**        |
+| WMT \_ NO \_ RIGHTS \_ EX           | Ein Zeiger auf eine **WM \_ GET LICENSE \_ \_ DATA-Struktur.**        |
+| WMT \_ BENÖTIGT \_ INDIVIDUALISIERUNG | NULL.                                                       |
+| WMT \_ INDIVIDUALIZE            | Ein Zeiger auf eine **WM \_ INDIVIDUALIZE \_ STATUS-Struktur.**     |
 
 
 
@@ -65,13 +65,13 @@ Ein Zeiger auf eine **am \_ WMT- \_ Ereignis \_ Daten** Struktur, die Informatio
 
 <dl> <dt>
 
-[**Features digitaler Rights Management**](digital-rights-management-features.md)
+[**Digital Rights Management Features**](digital-rights-management-features.md)
 </dt> <dt>
 
-[**DirectShow-qasf-Referenz**](directshow-qasf-reference.md)
+[**DirectShow QASF-Referenz**](directshow-qasf-reference.md)
 </dt> <dt>
 
-[**Aktivieren DRM-Unterstützung**](enabling-drm-support.md)
+[**Aktivieren der DRM-Unterstützung**](enabling-drm-support.md)
 </dt> </dl>
 
  

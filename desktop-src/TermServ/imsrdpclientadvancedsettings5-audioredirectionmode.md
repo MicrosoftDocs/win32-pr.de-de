@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 AudioRedirectionMode (Eigenschaft)
+title: IMsRdpClientAdvancedSettings5 AudioRedirectionMode-Eigenschaft
 description: Legt den Audioumleitungsmodus und verschiedene Audioumleitungsoptionen fest und ruft sie ab.
 ms.assetid: c0f5762b-00fd-40bb-ac97-3351b999f38d
 ms.tgt_platform: multiple
 keywords:
-- AudioRedirectionMode-Remotedesktopdienste
+- AudioRedirectionMode-Eigenschaft Remotedesktopdienste
 - AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , AudioRedirectionMode-Eigenschaft
 - AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AudioRedirectionMode-Eigenschaft
 - AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AudioRedirectionMode (Eigenschaft)
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AudioRedirectionMode-Eigenschaft
 - AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AudioRedirectionMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -41,7 +41,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352512"
 ---
-# <a name="imsrdpclientadvancedsettings5audioredirectionmode-property"></a>IMsRdpClientAdvancedSettings5::AudioRedirectionMode (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings5audioredirectionmode-property"></a>IMsRdpClientAdvancedSettings5::AudioRedirectionMode-Eigenschaft
 
 Legt den Audioumleitungsmodus und verschiedene Audioumleitungsoptionen fest und ruft sie ab.
 
@@ -64,7 +64,7 @@ HRESULT get_AudioRedirectionMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt unterschiedliche Werte für den Audioumleitungsmodus fest. Dieser Parameter verfügt über die folgenden möglichen Werte.
+Legt unterschiedliche Werte für den Audioumleitungsmodus fest. Dieser Parameter weist die folgenden möglichen Werte auf.
 
 <dt>
 
@@ -77,14 +77,14 @@ Legt unterschiedliche Werte für den Audioumleitungsmodus fest. Dieser Parameter
 
 <span id="AUDIO_MODE_PLAY_ON_SERVER_1"></span><span id="audio_mode_play_on_server_1"></span>
 
-**AUDIO \_ MODE \_ PLAY ON SERVER \_ \_ 1** (Audioumleitung ist aktiviert, und die Option "Auf Remotecomputer verlassen" ist aktiviert. Die Option "Auf Remotecomputer verlassen" wird nur unterstützt, wenn eine Remoteverbindung mit einem Hostcomputer mit Windows Vista besteht. Wenn die Verbindung mit einem Hostcomputer hergestellt wird, auf dem Windows Server 2008 ausgeführt wird, wird die Option "Auf Remotecomputer verlassen" in "Do not play" geändert.)
+**AUDIO \_ MODE \_ PLAY ON SERVER \_ \_ 1** (Audioumleitung ist aktiviert, und die Option ist "Auf Remotecomputer verlassen". Die Option "Auf Remotecomputer verlassen" wird nur unterstützt, wenn eine Remoteverbindung mit einem Hostcomputer hergestellt wird, auf dem Windows Vista ausgeführt wird. Wenn die Verbindung mit einem Hostcomputer besteht, auf dem Windows Server 2008 ausgeführt wird, wird die Option "Auf Remotecomputer verlassen" in "Nicht wiedergeben" geändert.)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AUDIO_MODE_NONE_2"></span><span id="audio_mode_none_2"></span>
 
-**AUDIO \_ MODE \_ NONE 2** (Audioumleitung ist aktiviert, und der Modus ist "Do not play".)
+**AUDIO \_ MODE \_ NONE 2** (Die Audioumleitung ist aktiviert, und der Modus lautet "Do not play".)
 
 
 </dt> <dd></dd> </dl>
@@ -103,7 +103,7 @@ Legt unterschiedliche Werte für den Audioumleitungsmodus fest. Dieser Parameter
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

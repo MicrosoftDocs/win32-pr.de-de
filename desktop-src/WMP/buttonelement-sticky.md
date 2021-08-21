@@ -1,9 +1,9 @@
 ---
-title: ButtonElement. Kurznotiz
-description: Das Attribut "Kurznotiz" gibt einen Wert an oder Ruft einen Wert ab, der angibt, ob das Button Element eine UMSCHALT Fläche ist, d. h. ob es sich um eine Schaltfläche mit zwei Zuständen oder einem einzelnen Zustand handelt
+title: BUTTONELEMENT.sticky
+description: Das sticky-Attribut gibt einen Wert an oder ruft einen Wert ab, der angibt, ob buttonelement ein Umschalter ist, d.&a; ob es sich um eine Schaltfläche mit zwei oder einem Zustand handelt.
 ms.assetid: a7e74f70-9fa6-45a1-ab65-2db107e13551
 keywords:
-- ButtonElement. Sticky-Fenster Media Player
+- BUTTONELEMENT.sticky Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 713b26fdee3062fbe803d05e034bc9896cdd5563
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cc8a709fc28f0d1529c58725db5856931195a66cc370559dd9d14af61e869db6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120036"
 ---
-# <a name="buttonelementsticky"></a>ButtonElement. Kurznotiz
+# <a name="buttonelementsticky"></a>BUTTONELEMENT.sticky
 
-Das **Attribut "** Kurznotiz" gibt einen Wert an oder Ruft einen Wert ab, der angibt, ob das Button **Element** eine UMSCHALT Fläche ist, d. h. ob es sich um eine Schaltfläche mit zwei Zuständen oder einem einzelnen Zustand handelt
+The **sticky** attribute specifies or retrieves a value indicating whether the **BUTTONELEMENT** is a toggle, that is, whether it is a two-state or single-state button.
 
 ``` syntax
         elementID.sticky
@@ -29,22 +29,22 @@ Das **Attribut "** Kurznotiz" gibt einen Wert an oder Ruft einen Wert ab, der an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                               |
 |-------|-------------------------------------------|
-| true  | **ButtonElement** ist eine Kurznotiz.              |
-| false | Standard. **ButtonElement** ist nicht Kurznotiz. |
+| true  | **BUTTONELEMENT** ist sticky.              |
+| false | Standard. **BUTTONELEMENT** ist nicht sticky. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das **Attribut "** Kurznotiz" auf "true" festgelegt ist, wechselt das Schaltflächen Element in den Zustand "nach unten" und verbleibt in diesem Zustand, bis er erneut geklickt wird. Wenn sich das Button-Element im Zustand "nach unten" befindet, ist das Attribut " **nach unten** " auf "true" festgelegt, und der entsprechende Teil der Schaltflächen Gruppe " **downImage** "
+Wenn das **sticky-Attribut** auf TRUE festgelegt ist, ändert sich das Schaltflächenelement in den Zustand "Down", wenn darauf geklickt wird, und verbleibt in diesem Zustand, bis es erneut angeklickt wird. Wenn sich das Schaltflächenelement im Down-Zustand befindet, ist das **down-Attribut** true, und der entsprechende Teil der Schaltflächengruppe **downImage** wird angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Wenn das **Attribut "** Kurznotiz" auf "true" festgelegt ist, wechselt das Schal
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> <dt>
 
-[**ButtonElement. Down**](buttonelement-down.md)
+[**BUTTONELEMENT.down**](buttonelement-down.md)
 </dt> <dt>
 
-[**ButtonGroup. downImage**](buttongroup-downimage.md)
+[**BUTTONGROUP.downImage**](buttongroup-downimage.md)
 </dt> </dl>
 
  

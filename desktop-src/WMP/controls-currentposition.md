@@ -1,9 +1,9 @@
 ---
-title: Controls. CurrentPosition
-description: Die CurrentPosition-Eigenschaft gibt die aktuelle Position im Medien Element in Sekunden vom Anfang an oder ruft Sie ab.
+title: Controls.currentPosition
+description: Die currentPosition-Eigenschaft gibt die aktuelle Position im Medienelement in Sekunden ab dem Anfang an oder ruft sie ab.
 ms.assetid: 374ad144-3f74-4d1b-bec5-1cd0f03777b7
 keywords:
-- Controls. CurrentPosition-Fenster Media Player
+- Controls.currentPosition Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12c690c102bb95c1a58785f18d727ffdae2a82c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: be64d23b65a396cfb15e9f7b19b4571bdb26cbb7f308241e9a381375b9d26a40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118341877"
 ---
-# <a name="controlscurrentposition"></a>Controls. CurrentPosition
+# <a name="controlscurrentposition"></a>Controls.currentPosition
 
-Die **CurrentPosition** -Eigenschaft gibt die aktuelle Position im Medien Element in Sekunden vom Anfang an oder ruft Sie ab.
+Die **currentPosition-Eigenschaft** gibt die aktuelle Position im Medienelement in Sekunden ab dem Anfang an oder ruft sie ab.
 
 ``` syntax
 player.controls.currentPosition
@@ -32,11 +32,11 @@ player.controls.currentPosition
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese-/schreibnummer (**Double**). 
+Diese Eigenschaft ist eine Lese-/Schreibnummer (**double**). 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **CurrentPosition** verwendet, um eine vom Benutzer bereitgestellte Position zu suchen. Ein HTML-Schaltflächen Element wird erstellt, um den JScript-Code auszuführen. Ein HTML-Text Eingabe Element namens SetPosition wurde erstellt, um dem Benutzer einen Wert in Sekunden zu akzeptieren. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird **currentPosition verwendet,** um eine vom Benutzer bereitgestellte Position zu suchen. Es wird ein HTML BUTTON-Element erstellt, um den JScript auszuführen. Ein HTML TEXT-Eingabeelement namens setPosition wurde erstellt, um einen Wert in Sekunden vom Benutzer zu akzeptieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -58,12 +58,12 @@ Im folgenden Beispiel wird **CurrentPosition** verwendet, um eine vom Benutzer b
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

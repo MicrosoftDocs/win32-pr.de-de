@@ -1,9 +1,9 @@
 ---
-title: keywords (ChannelPublishingType) -Element
+title: keywords (ChannelPublishingType)-Element
 description: Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal geschrieben werden.
 ms.assetid: 5157e63f-3e46-4248-b0ca-116a5d5ada2c
 keywords:
-- keywords-Element EventLog
+- Keywords-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118343593"
 ---
-# <a name="keywords-channelpublishingtype-element"></a>keywords (ChannelPublishingType) -Element
+# <a name="keywords-channelpublishingtype-element"></a>keywords (ChannelPublishingType)-Element
 
 Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal geschrieben werden.
 
@@ -30,7 +30,7 @@ Eine Bitmaske, die die Kategorie der Ereignisse bestimmt, die in den Kanal gesch
  />
 ```
 
-Das **keywords-Element** wird durch den komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
+Das **Keywords-Element** wird vom komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,12 +38,12 @@ Das **keywords-Element** wird durch den komplexen [**ChannelPublishingType-Typ**
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

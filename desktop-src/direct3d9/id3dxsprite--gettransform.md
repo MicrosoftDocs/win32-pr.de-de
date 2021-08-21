@@ -1,7 +1,7 @@
 ---
-description: Ruft die Sprite-Transformation ab.
+description: Ruft die Spritetransformation ab.
 ms.assetid: d91f2776-ee87-42b3-998b-fccea178cee2
-title: 'ID3DXSprite:: GetTransform-Methode (D3dx9core. h)'
+title: ID3DXSprite::GetTransform-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 646fa3574c3b9be788ad32ef402a7ca2051d04de
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5bed9e7ae8cccca03654113ed48245b11124e1b6fd001a11074933ea4e34738a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118094052"
 ---
-# <a name="id3dxspritegettransform-method"></a>ID3DXSprite:: GetTransform-Methode
+# <a name="id3dxspritegettransform-method"></a>ID3DXSprite::GetTransform-Methode
 
-Ruft die Sprite-Transformation ab.
+Ruft die Spritetransformation ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetTransform(
 
 <dl> <dt>
 
-*ptransform* \[ in\]
+*pTransform* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) , die eine Transformation des Sprite aus dem ursprünglichen Raum enthält.
+Zeiger auf ein [**D3DXMATRIX,das**](d3dxmatrix.md) eine Transformation des Sprite aus dem ursprünglichen Weltraum enthält.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**D3DXMATRIX**](d3dxmatrix.md) , die eine Transformation des Sp
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

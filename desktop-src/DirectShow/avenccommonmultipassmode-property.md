@@ -1,39 +1,39 @@
 ---
-description: Gibt die Anzahl von Codierungs Durchläufen an, die der Encoder unterstützt.
+description: Gibt die Anzahl der vom Encoder unterstützten Codierungsüberläufe an.
 ms.assetid: 8b476164-fd44-4277-89bd-ba9929bf93a2
-title: Avenccommonmultipassmode-Eigenschaft (codecapi. h)
+title: AVEncCommonMultipassMode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4302cf0a9524f16dee8e7b84060065a4c750e4e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e6fb909e58dbdfd5d1431d0101365db78efa83fd68e9299b8578f19770787fb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118159808"
 ---
-# <a name="avenccommonmultipassmode-property"></a>Avenccommonmultipassmode (Eigenschaft)
+# <a name="avenccommonmultipassmode-property"></a>AVEncCommonMultipassMode (Eigenschaft)
 
-Gibt die Anzahl von Codierungs Durchläufen an, die der Encoder unterstützt.
+Gibt die Anzahl der vom Encoder unterstützten Codierungsüberläufe an.
 
 Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avenccommonmultipassmode**
+**CODECAPI \_ AVEncCommonMultipassMode**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft wird als Wertebereich zurückgegeben. Um den unterstützten Bereich abzurufen, nennen Sie [**icodecapi:: getparameterrange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange).
+Diese Eigenschaft wird als Wertebereich zurückgegeben. Um den unterstützten Bereich zu erhalten, rufen [**Sie ICodecAPI::GetParameterRange auf.**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Decodierungs Latenz ist definiert als die Menge der Daten, die der Decoder Puffern muss. Wenn Sie diese Eigenschaft beispielsweise auf **Variant \_ true** für einen MPEG-Video Encoder festlegen, werden die Typen von GOP-Strukturen, die der Encoder verwenden kann, eingeschränkt.
+Die Decodierungslatenz wird als die Datenmenge definiert, die der Decoder puffern muss. Wenn Sie diese Eigenschaft beispielsweise auf **VARIANT \_ TRUE für** einen MPEG-Videoencoder festlegen, werden die Typen von GOP-Strukturen, die der Encoder verwenden kann, beschränkt.
 
-Um den aktuellen Codierungs Durchlauf festzulegen, legen Sie die Eigenschaft " [**avenccommonpassstart**](avenccommonpassstart-property.md) " fest.
+Legen Sie zum Festlegen des aktuellen Codierungspasses die [**EIGENSCHAFT AVEncCommonPassStart**](avenccommonpassstart-property.md) fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Um den aktuellen Codierungs Durchlauf festzulegen, legen Sie die Eigenschaft " [
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -51,10 +51,10 @@ Um den aktuellen Codierungs Durchlauf festzulegen, legen Sie die Eigenschaft " [
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

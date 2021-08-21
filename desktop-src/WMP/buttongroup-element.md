@@ -1,75 +1,75 @@
 ---
-title: ButtonGroup-Element
-description: ButtonGroup-Element
+title: BUTTONGROUP-Element
+description: BUTTONGROUP-Element
 ms.assetid: 4756c016-3347-4129-be5e-e822270a24de
 keywords:
-- Windows Media Player Skins, ButtonGroup-Element
-- Skins, ButtonGroup-Element
-- ButtonGroup-Element
-- Verweis für Skins, ButtonGroup-Element
-- Elemente, ButtonGroup
+- Windows Media Player Skins, BUTTONGROUP-Element
+- skins,BUTTONGROUP-Element
+- BUTTONGROUP-Element
+- Referenz für Skins, BUTTONGROUP-Element
+- elements,BUTTONGROUP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4de489e779b5e20214778b56fd8d19c7627e444
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6021d29322b98fe4cea96a67998aaf82fbd11e1abe397578a9b0f8999179ee1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120040"
 ---
-# <a name="buttongroup-element"></a>ButtonGroup-Element
+# <a name="buttongroup-element"></a>BUTTONGROUP-Element
 
-Das **ButtonGroup** -Element bietet eine Möglichkeit, mehrere Schaltflächen innerhalb eines Skin zu gruppieren. Diese Schaltflächen können mithilfe der **ButtonElement** -Elemente als untergeordnete Elemente des **ButtonGroup** -Elements angegeben werden.
+Das **BUTTONGROUP-Element** bietet eine Möglichkeit, mehrere Schaltflächen innerhalb einer Skin zu gruppieren. Diese Schaltflächen können mit **buttonelement-Elementen** als untergeordnete Elemente des **BUTTONGROUP-Elements** angegeben werden.
 
-Das **ButtonGroup** -Element unterstützt die folgenden Attribute.
+Das **BUTTONGROUP-Element** unterstützt die folgenden Attribute.
 
 
 
-| Attribut                                              | BESCHREIBUNG                                                                                                                                                                                                                     |
+| attribute                                              | Beschreibung                                                                                                                                                                                                                     |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [ButtonCount](buttongroup-buttoncount.md)             | Ruft die Anzahl der Schaltflächen in der **ButtonGroup** ab.                                                                                                                                                                         |
-| [Cursor](buttongroup-cursor.md)                       | Gibt den Typ des Cursors an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über einer Schaltfläche in der **ButtonGroup** befindet.                                                                                                                  |
-| [disabledImage](buttongroup-disabledimage.md)         | Gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in der **ButtonGroup** darstellt, oder ruft ihn ab.                                                                                                             |
-| [Windows Mage](buttongroup-downimage.md)                 | Gibt den Namen des Bilds an, das den Down-Zustand der **ButtonGroup** darstellt, oder ruft ihn ab.                                                                                                                                |
-| [hoverdownimage](buttongroup-hoverdownimage.md)       | Gibt den Namen des Bilds an oder Ruft den Namen des Bilds ab, das den Hover-Down-Zustand einer Schaltfläche in der **ButtonGroup** darstellt. Der Hover-Down-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "gedrückt" befindet und der Benutzer mit der Maus darauf zeigt. |
-| [hoverimage](buttongroup-hoverimage.md)               | Gibt den Namen des Bilds an, das den Hover-Zustand einer Schaltfläche in der **ButtonGroup** darstellt, oder ruft ihn ab. Der Hover-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "up" befindet und der Benutzer mit der Maus darauf zeigt.             |
-| [hueshift](buttongroup-hueshift.md)                   | Gibt den Betrag an, um den der Farbton der **ButtonGroup** -Bilder verschoben wird, oder ruft diesen ab.                                                                                                                                    |
-| [image](buttongroup-image.md)                         | Gibt den Namen des Bilds an, das die Schaltflächen einer **ButtonGroup** darstellt, oder ruft ihn ab.                                                                                                                                     |
-| [mappingImage](buttongroup-mappingimage.md)           | Gibt den Namen des Bilds an, das die Schaltflächen Zuordnung der **ButtonGroup** darstellt, oder ruft ihn ab.                                                                                                                                |
-| [radio](buttongroup-radio.md)                         | Gibt einen Wert an, der angibt, ob die Schaltflächen **Gruppe** aus Options Feldern besteht, oder ruft diesen Wert ab.                                                                                                                             |
-| [Sattel](buttongroup-saturation.md)               | Gibt den Sättigungswert der **ButtonGroup** -Bilder an oder ruft ihn ab.                                                                                                                                                      |
-| [showbackground](buttongroup-showbackground.md)       | Gibt einen Wert an, der angibt, ob die **ButtonGroup** nur die Schaltflächen anzeigt oder die im **Image** -Attribut angegebene vollständige Bitmap anzeigt, oder ruft diesen Wert ab.                                                              |
-| [transparendcolor](buttongroup-transparencycolor.md) | Gibt die transparente Farbe der **ButtonGroup** -Bilder an oder ruft diese ab.                                                                                                                                                     |
+| [buttonCount](buttongroup-buttoncount.md)             | Ruft die Anzahl der Schaltflächen in **buttongroup** ab.                                                                                                                                                                         |
+| [Cursor](buttongroup-cursor.md)                       | Gibt den Cursortyp an, der angezeigt wird, wenn sich der Mauszeiger über einer Schaltfläche im **BUTTONGROUP befindet,** oder ruft diesen ab.                                                                                                                  |
+| [disabledImage](buttongroup-disabledimage.md)         | Gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in **BUTTONGROUP** darstellt, oder ruft den Namen ab.                                                                                                             |
+| [downImage](buttongroup-downimage.md)                 | Gibt den Namen des Bilds an, das den Abwärtszustand der **BUTTONGROUP** darstellt, oder ruft den Namen ab.                                                                                                                                |
+| [hoverDownImage](buttongroup-hoverdownimage.md)       | Gibt den Namen des Bilds an, das den Aufzeigerzustand einer Schaltfläche in **buttongroup** darstellt, oder ruft den Namen ab. Der Zustand des Mauszeigers tritt auf, wenn sich die Schaltfläche im Zustand "Unten" befindet und der Benutzer mit der Maus darauf zeigen soll. |
+| [hoverImage](buttongroup-hoverimage.md)               | Gibt den Namen des Bilds an, das den Hoverzustand einer Schaltfläche in **buttongroup** darstellt, oder ruft den Namen ab. Der Hoverzustand tritt auf, wenn sich die Schaltfläche im Zustand "Up" befindet und der Benutzer mit der Maus darauf zeigen soll.             |
+| [hueShift](buttongroup-hueshift.md)                   | Gibt die Menge an, um die der Farbton der **BUTTONGROUP-Bilder** verschoben wird, oder ruft sie ab.                                                                                                                                    |
+| [image](buttongroup-image.md)                         | Gibt den Namen des Bilds an, das die Schaltflächen einer **BUTTONGROUP** darstellt, oder ruft den Namen ab.                                                                                                                                     |
+| [mappingImage](buttongroup-mappingimage.md)           | Gibt den Namen des Bilds an, das die Schaltflächenzuordnung der **BUTTONGROUP darstellt,** oder ruft den Namen ab.                                                                                                                                |
+| [radio](buttongroup-radio.md)                         | Gibt einen Wert an, der angibt, ob **buttongroup** aus Optionsfeldern besteht, oder ruft einen Wert ab.                                                                                                                             |
+| [Sättigung](buttongroup-saturation.md)               | Gibt den Sättigungswert der **BUTTONGROUP-Bilder** an oder ruft sie ab.                                                                                                                                                      |
+| [showBackground](buttongroup-showbackground.md)       | Gibt einen Wert an, der angibt, ob **buttongroup** nur die Schaltflächen oder die vollständige Bitmap anzeigt, die im **Bildattribut** angegeben ist, oder ruft einen Wert ab.                                                              |
+| [transparencyColor](buttongroup-transparencycolor.md) | Gibt die transparente Farbe der **BUTTONGROUP-Bilder** an oder ruft sie ab.                                                                                                                                                     |
 
 
 
- 
+ 
 
-Das **ButtonGroup** -Element unterstützt die folgenden Methoden.
+Das **BUTTONGROUP-Element** unterstützt die folgenden Methoden.
 
 
 
-| Methode                                 | BESCHREIBUNG                                                                                     |
+| Methode                                 | Beschreibung                                                                                     |
 |----------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Sie](buttongroup-click.md)         | Ruft den **OnClick** -Ereignishandler auf, der für das **ButtonElement** mit dem angegebenen Index definiert ist. |
-| [getbutton](buttongroup-getbutton.md) | Ruft das **ButtonElement** mit dem angegebenen Index ab.                                       |
+| [klicken](buttongroup-click.md)         | Ruft den **onclick-Ereignishandler auf,** der für **BUTTONELEMENT** mit dem angegebenen Index definiert ist. |
+| [getButton](buttongroup-getbutton.md) | Ruft **buttonelement** mit dem angegebenen Index ab.                                       |
 
 
 
- 
+ 
 
-Das **ButtonGroup** -Element unterstützt die Ambient-Attribute und kann die Umgebungs Ereignishandler implementieren. Weitere Informationen finden Sie unter [Ambient-Attribute](ambient-attributes.md) und [Ambient-Ereignishandler](ambient-event-handlers.md).
+Das **BUTTONGROUP-Element** unterstützt die Ambient-Attribute und kann die Ambient-Ereignishandler implementieren. Weitere Informationen finden Sie unter [Ambient Attributes](ambient-attributes.md) und Ambient [Event Handlers](ambient-event-handlers.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

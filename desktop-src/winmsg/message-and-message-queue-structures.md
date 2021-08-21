@@ -4,12 +4,12 @@ ms.assetid: f6f9add5-d3b2-477d-a6cb-f54b01e905f3
 title: Nachrichtenstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44ff3a666b60ab9c63c45bb96b8b5e8e2b2c2ac4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 546a6efe40bb0aed5a93d43cf2829971c7df863e40d04df6ec8a4cacbe59152d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108100368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118031440"
 ---
 # <a name="message-structures"></a>Nachrichtenstrukturen
 

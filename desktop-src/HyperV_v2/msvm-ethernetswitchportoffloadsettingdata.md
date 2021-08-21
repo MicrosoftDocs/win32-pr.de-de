@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungsdaten für die Port Auslagerung dar.
+description: Stellt die Einstellungsdaten der Portabladungsfunktion dar.
 ms.assetid: 7b8d8bee-86f3-4c55-bb32-987bf840d995
 title: Msvm_EthernetSwitchPortOffloadSettingData-Klasse
 ms.topic: reference
@@ -33,18 +33,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 150a7b5e54e371c11741dd7c763b0ae145354b09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ddf58a10e85003a00e0d757f29db55a49f98f0ba22e8c3124b83a593f2a3908f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118148299"
 ---
-# <a name="msvm_ethernetswitchportoffloadsettingdata-class"></a>MSVM \_ ethernezwitchportoffloadsettingdata-Klasse
+# <a name="msvm_ethernetswitchportoffloadsettingdata-class"></a>Msvm \_ EthernetSwitchPortOffloadSettingData-Klasse
 
-Stellt die Einstellungsdaten für die Port Auslagerung dar.
+Stellt die Einstellungsdaten der Portabladungsfunktion dar.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,59 +77,59 @@ class Msvm_EthernetSwitchPortOffloadSettingData : Msvm_EthernetSwitchPortFeature
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernezwitchportoffloadsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortOffloadSettingData-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernezwitchportoffloadsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortOffloadSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Offload Settings" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Ethernet Switch Port Offload Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "stellt die Einstellung für die Funktion der Port Abladung" dar.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Stellt die Daten der Portabladungsfunktionseinstellung dar" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Offload Settings" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Ethernet Switch Port Offload Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -138,23 +138,23 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Iovinterruptmode**
+**IOVInterruptModeration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (5), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert für die Unterbrechungs Moderation für die e/a-Virtualisierung (IOV). Die Standardeinstellung ist 0.
+Der Interruptmoderationswert für die E/A-Virtualisierungsabladung (IOV). Die Standardeinstellung ist 0.
 
 <dt>
 
@@ -202,296 +202,296 @@ Der Wert für die Unterbrechungs Moderation für die e/a-Virtualisierung (IOV). 
 
 </dd> <dt>
 
-**Iovoffloadweight**
+**IOVOffloadWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Gewichtung, die diesem Port für die e/a-Virtualisierung (IOV) zugewiesen wird. Die Gewichtung ist die relative Wichtigkeit beim Zuweisen von IOV-Ressourcen. Wenn Sie die **iovoffloadweight** -Eigenschaft auf 0 festlegen, wird die IOV-Auslagerung auf dem Port deaktiviert. Die Standardeinstellung ist 0.
+Die Gewichtung, die diesem Port für die IOV-Auslagerung (E/A-Virtualisierung) zugewiesen ist. Die Gewichtung ist die relative Wichtigkeit beim Zuweisen von IOV-Ressourcen. Wenn Sie die **IOVOffloadWeight-Eigenschaft** auf 0 festlegen, wird die IOV-Auslagerung am Port deaktiviert. Die Standardeinstellung ist 0.
 
 </dd> <dt>
 
-**Iovqueuepairrsangefordert**
+**IOVQueuePairsRequested**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Anzahl der für diesen Port angeforderten Warteschlangen Paare für die e/a-Virtualisierung (IOV). Der Standardwert ist 1.
+Die Anzahl der Warteschlangenpaare, die für diesen Port für die IOV-Auslagerung (E/A-Virtualisierung) angefordert werden. Der Standardwert ist 1.
 
 </dd> <dt>
 
-**Ipmencoffloadlimit**
+**IPSecOffloadLimit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die maximale Anzahl von Auslagerungs Slots (Security Association, SA), die vom Port zugelassen werden.
+Die maximale Anzahl von Sicherheitszuordnungsslots(SA), die vom Port zugelassen werden.
 
 </dd> <dt>
 
-**Packetdirectmoderationcount**
+**PacketDirectModerationCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert der Unterbrechungs Moderations Moderation für "Packet Direct" (PD). Der Standardwert ist 0.
+Der Wert der Interruptmoderationsanzahl für Packet Direct (PD). Der Standardwert ist 0.
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10 hinzugefügt.
+> In Windows 10 hinzugefügte Eigenschaft.
 
  
 
 </dd> <dt>
 
-**Packetdirectmoderationinterval**
+**PacketDirectModerationInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (8), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert für das interruptermoderationsintervall für "Packet Direct" (PD). Der Standardwert ist 0.
+Der Wert des Interruptmoderationsintervalls für Packet Direct (PD). Der Standardwert ist 0.
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10 hinzugefügt.
+> In Windows 10 hinzugefügte Eigenschaft.
 
  
 
 </dd> <dt>
 
-**Packetdirectnumprocs**
+**PacketDirectNumProcs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (6), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Anzahl der Prozessoren, die vom Host für die Verarbeitung von Paketen verwendet werden, die von diesem Port im Paket direkt Modus gesendet werden. Der Standardwert ist 1.
+Die Anzahl der Prozessoren, die vom Host für die Verarbeitung von Paketen verwendet werden, die von diesem Port im Modus "Paket direkt" gesendet werden. Der Standardwert ist 1.
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10 hinzugefügt.
+> In Windows 10 hinzugefügte Eigenschaft.
 
  
 
 </dd> <dt>
 
-**Vmmqaktivierte**
+**VmmqEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (10), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Aktivieren Sie vmmq-Auslagerung, wenn dies von Hardware unterstützt wird. Der Standardwert ist false.
+Aktivieren Sie die VMMQ-Auslagerung, sofern dies von der Hardware unterstützt wird. Der Standardwert ist False.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vmmqqueuepairs**
+**VmmqQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (11), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Anzahl der Warteschlangen, die bei Aktivierung von vrss zuzuordnen sind. Der Standardwert ist 16.
+Die Anzahl der Warteschlangen, die zugeordnet werden sollen, wenn VRSS aktiviert ist. Der Standardwert ist 16.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vmqoffloadweight**
+**VMQOffloadWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Gewichtung, die diesem Port für die VM-Offloads (Virtual Machine Queue, VMQ) zugewiesen ist. Die Gewichtung ist die relative Wichtigkeit beim Zuweisen von VMQ-Ressourcen. Wenn Sie die **vmqoffloadweight** -Eigenschaft auf 0 festlegen, wird VMQ auf dem Port deaktiviert. Der Standard ist 100.
+Die Gewichtung, die diesem Port für die VMQ-Auslagerung (Virtual Machine Queue) zugewiesen ist. Die Gewichtung ist die relative Wichtigkeit beim Zuweisen von VMQ-Ressourcen. Wenn Sie die **VMQOffloadWeight-Eigenschaft** auf 0 festlegen, wird VMQ am Port deaktiviert. Der Standardwert ist 100.
 
 </dd> <dt>
 
-**Vrssaktivierte**
+**VrssEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Aktivieren Sie vrss. Der Standardwert ist "True".
+Aktivieren Sie VRSS. Der Standardwert ist "True".
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vrssexcludeprimaryprocessor**
+**VrssExcludePrimaryProcessor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (14), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Ob primärer VMQ-Prozessor aus der vrss-dereferenzierungstabelle ausgeschlossen werden soll, wenn vrss aktiviert ist. Der Standardwert ist false.
+Gibt an, ob der primäre VMQ-Prozessor aus der VRSS-Dekonstruktionstabelle ausgeschlossen werden soll, wenn VRSS aktiviert ist. Der Standardwert ist FALSE.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssindependenthostverteilung**
+**VrssIndependentHostSpreading**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (15), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob bei aktiviertem vrss immer Host seitiger vrss durchzuführen ist, unabhängig von der RSS-Einstellung der virtuellen NIC. Der Standardwert ist false.
+Gibt an, ob bei aktiviertem VRSS immer eine hostseitige VRSS-Funktion erfolgt, unabhängig von der RSS-Einstellung der virtuellen NIC. Der Standardwert ist FALSE.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssminqueuepairs**
+**VrssMinQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (12), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die Mindestanzahl von Warteschlangen, die bei Aktivierung von vrss zuzuordnen sind. Der Standardwert ist 1.
+Die Mindestanzahl von Warteschlangen, die zugeordnet werden sollen, wenn VRSS aktiviert ist. Der Standardwert ist 1.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssqueueschedulingmode**
+**VrssQueueSchedulingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (13), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der zu verwendende Warteschlangen Planungsmodus, wenn vrss aktiviert ist. Der Standardwert ist die statische Zeitplanung.
+Der Warteschlangenplanungsmodus, der verwendet werden soll, wenn VRSS aktiviert ist. Der Standardwert ist die statische Zeitplanung.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssvmbuschannelaffinitypolicy**
+**VrssVmbusChannelAffinityPolicy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (16), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (16), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die zu verwendende VMBus-channelaffinitäts Richtlinie, wenn vrss aktiviert ist. Der Standardwert ist "Strong".
+Die vmbus-Kanalaffinitätsrichtlinie, die verwendet werden soll, wenn VRSS aktiviert ist. Der Standardwert ist stark.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -503,10 +503,10 @@ Die zu verwendende VMBus-channelaffinitäts Richtlinie, wenn vrss aktiviert ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

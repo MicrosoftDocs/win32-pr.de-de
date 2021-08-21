@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetgetcolumninfo-Methode (JET_SESID, JET_DBID, Zeichenfolge, Zeichenfolge, JET_COLUMNLIST)'
-title: API. jetgetcolumninfo-Methode (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)
+description: 'Weitere Informationen finden Sie unter: Api.JetGetColumnInfo-Methode (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)'
+title: Api.JetGetColumnInfo-Methode (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)
 TOCTitle: JetGetColumnInfo method (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetColumnInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String,System.String,Microsoft.Isam.Esent.Interop.JET_COLUMNLIST@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetcolumninfo(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6f3f0ea95e82217f0d9b44e6a00558d3530a7616
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a2f872c3ff5e0a865fb135426251955936bff0a9423a40e428cbb75d622d15b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118085358"
 ---
-# <a name="apijetgetcolumninfo-method-jet_sesid-jet_dbid-string-string-jet_columnlist"></a>API. jetgetcolumninfo-Methode (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)
+# <a name="apijetgetcolumninfo-method-jet_sesid-jet_dbid-string-string-jet_columnlist"></a>Api.JetGetColumnInfo-Methode (JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)
 
 Ruft Informationen zu allen Spalten in einer Tabelle ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,47 +66,47 @@ public static void JetGetColumnInfo(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
     Die Datenbank, die die Tabelle enthält.
 
 <!-- end list -->
 
   - Tabellenname  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Tabelle, die die Spalte enthält.
 
 <!-- end list -->
 
   - columnName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.
 
 <!-- end list -->
 
-  - ColumnList  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNLIST](./jet-columnlist-class.md)  
+  - columnlist  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNLIST](./jet-columnlist-class.md)  
     
-    Wird mit Informationen über die Spalten in der Tabelle ausgefüllt.
+    Mit Informationen zu den Spalten in der Tabelle ausgefüllt.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetgetcolumninfo-Überladung](./api.jetgetcolumninfo-method.md)
+[JetGetColumnInfo-Überladung](./api.jetgetcolumninfo-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
 description: Zeigt Metriken nach Klasse an.
 ms.assetid: a08c0749-b60b-4b8a-996f-b3bbaf1fb2d3
-title: Showmetricsbyclass-Methode der Msvm_MetricService-Klasse
+title: ShowMetricsByClass-Methode der Msvm_MetricService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 93f132b24c6c20826b1551e979c128b1aa38c8d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40865847b1deef877c70c1c99349c12915a464b394a38b5b804ea9139d5d0cf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118147509"
 ---
-# <a name="showmetricsbyclass-method-of-the-msvm_metricservice-class"></a>Showmetricsbyclass-Methode der MSVM \_ metricservice-Klasse
+# <a name="showmetricsbyclass-method-of-the-msvm_metricservice-class"></a>ShowMetricsByClass-Methode der Msvm \_ MetricService-Klasse
 
 Zeigt Metriken nach Klasse an.
 
@@ -43,35 +43,35 @@ uint32 ShowMetricsByClass(
 
 <dl> <dt>
 
-*Betreff* \[ in\]
+*Betreff* \[ In\]
 </dt> <dd>
 
-Identifiziert eine CIM-Klasse, für die die-Methode Verweise auf Instanzen von [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) zurückgibt, die Metriken definieren, die für alle Instanzen der Klasse aufgezeichnet werden können.
+Identifiziert eine CIM-Klasse, für die die Methode Verweise auf Instanzen von [**CIM \_ BaseMetricDefinition**](cim-basemetricdefinition.md) zurückgibt, die Metriken definieren, die für alle Instanzen der Klasse erfasst werden können.
 
 </dd> <dt>
 
-*Definition* \[ in\]
+*Definition* \[ In\]
 </dt> <dd>
 
-Identifiziert eine Instanz von [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md). Die-Methode gibt Verweise auf Instanzen von [**CIM \_ managedelta**](cim-managedelement.md) aus, für die von der Instanz von **CIM \_ basemetricdefinition** definierte Metriken zur Erfassung verfügbar sind.
+Identifiziert eine Instanz von [**CIM \_ BaseMetricDefinition**](cim-basemetricdefinition.md). Die -Methode gibt Verweise auf Instanzen von [**CIM \_ ManagedElement**](cim-managedelement.md) zurück, für die von der Instanz von **CIM \_ BaseMetricDefinition** definierte Metriken gesammelt werden können.
 
 </dd> <dt>
 
-*DefinitionList* \[ vorgenommen\]
+*DefinitionList* \[ out\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss der-Methode enthält möglicherweise Verweise auf Instanzen von [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) , die Metriken definieren, die für die Sammlung für das [**CIM- \_ managedelta**](cim-managedelement.md) verfügbar sind, das durch den *Subject* -Parameter identifiziert wird.
+Nach erfolgreichem Abschluss der -Methode kann Verweise auf Instanzen von [**CIM \_ BaseMetricDefinition**](cim-basemetricdefinition.md) enthalten, die Metriken definieren, die für die Sammlung für [**das cim \_ ManagedElement**](cim-managedelement.md) verfügbar sind, das durch den *Subject-Parameter identifiziert* wird.
 
 </dd> <dt>
 
-*Metricnames* \[ vorgenommen\]
+*MetricNames* \[ out\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss der-Methode enthält jeder Array Index den Wert der **Name** -Eigenschaft für die Instanz von [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) , auf die durch den entsprechenden Array Index des *DefinitionList* -Parameters verwiesen wird.
+Nach erfolgreichem Abschluss der -Methode enthält jeder Arrayindex den Wert der **Name-Eigenschaft** für die Instanz von [**CIM \_ BaseMetricDefinition,**](cim-basemetricdefinition.md) auf die vom entsprechenden Arrayindex des *DefinitionList-Parameters verwiesen* wird.
 
 </dd> <dt>
 
-*Metriccollectionaktivierte* \[ vorgenommen\]
+*MetricCollectionEnabled* \[ out\]
 </dt> <dd>
 
 Gibt an, ob eine Metrik für alle Instanzen einer Klasse verwalteter Elemente erfasst wird.
@@ -101,14 +101,14 @@ Gibt an, ob eine Metrik für alle Instanzen einer Klasse verwalteter Elemente er
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> </dl>
@@ -125,13 +125,13 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** ()
 </dt> <dt>
 
-Fehler **()**
+**Fehler** ()
 </dt> <dt>
 
 **Reservierte Methode** ()
 </dt> <dt>
 
-**Hersteller spezifisch** ()
+**Herstellerspezifisch** ()
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -143,7 +143,7 @@ Fehler **()**
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -152,7 +152,7 @@ Fehler **()**
 
 <dl> <dt>
 
-[**MSVM \_ metricservice**](msvm-metricservice.md)
+[**Msvm \_ MetricService**](msvm-metricservice.md)
 </dt> </dl>
 
  

@@ -13,7 +13,7 @@ ms.locfileid: "118344297"
 ---
 # <a name="ivmvirtualpc-methods"></a>IVMVirtualPC-Methoden
 
-\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Die [**IVMVirtualPC-Schnittstelle**](ivmvirtualpc.md) macht die folgenden Methoden verfügbar.
 

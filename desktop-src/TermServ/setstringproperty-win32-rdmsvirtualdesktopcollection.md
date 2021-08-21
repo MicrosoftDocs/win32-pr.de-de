@@ -1,12 +1,12 @@
 ---
-title: SetStringProperty-Methode der Win32_RDMSVirtualDesktopCollection-Klasse (Certenroll.h)
+title: SetStringProperty-Methode der Win32_RDMSVirtualDesktopCollection -Klasse (Certenroll.h)
 description: Aktualisiert eine Zeichenfolgeneigenschaft einer Sammlung virtueller Desktops.
 ms.assetid: d76d5f77-3b51-41b9-8ec5-a737ddc0a9d3
 ms.tgt_platform: multiple
 keywords:
-- SetStringProperty-Methode Remotedesktopdienste
+- SetStringProperty-Remotedesktopdienste
 - SetStringProperty-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste , SetStringProperty-Methode
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , SetStringProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -60,7 +60,7 @@ Der neue Eigenschaftswert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,14 +70,14 @@ Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
 | Header<br/>                   | <dl> <dt>Certenroll.h</dt> </dl>     |
 | MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

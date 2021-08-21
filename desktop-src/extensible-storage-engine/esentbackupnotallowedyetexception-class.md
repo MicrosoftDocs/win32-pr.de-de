@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentbackupnotallowedyetexception-Klasse'
-title: Esentbackupnotallowedyetexception-Klasse
+description: 'Weitere Informationen zu: EsentBackupNotAllowedYetException-Klasse'
+title: EsentBackupNotAllowedYetException-Klasse
 TOCTitle: EsentBackupNotAllowedYetException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentBackupNotAllowedYetException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbackupnotallowedyetexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d5481c51c4a0b78ea1b66b950ac53d2a04c28595
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1c6876c0b5b793f2dd0a3c8a19ddf4f8e4b4cf447a1323a49f0e0a5cbd8f15d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083201"
 ---
-# <a name="esentbackupnotallowedyetexception-class"></a>Esentbackupnotallowedyetexception-Klasse
+# <a name="esentbackupnotallowedyetexception-class"></a>EsentBackupNotAllowedYetException-Klasse
 
-Basisklasse für JET_err. Backupnotallowedyet-Ausnahmen.
+Basisklasse für JET_err. BackupNotAllowedYet-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentbackupnotallowedyetexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentBackupNotAllowedYetException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbackupnotallowedyetexception-Elemente](./esentbackupnotallowedyetexception-members.md)
+[EsentBackupNotAllowedYetException-Member](./esentbackupnotallowedyetexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

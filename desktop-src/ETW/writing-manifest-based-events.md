@@ -1,33 +1,33 @@
 ---
-description: Erfahren Sie mehr über das Schreiben manifestbasierter Ereignisse in eine Ablaufverfolgungssitzung. Beginnen Sie mit der Registrierung Ihres Anbieters, damit er bereit ist, Ereignisse in eine Ablaufverfolgungssitzung zu schreiben.
+description: Erfahren Sie mehr über das Schreiben manifestbasierter Ereignisse in eine Ablaufverfolgungssitzung. Beginnen Sie mit der Registrierung Ihres Anbieters, damit er ereignisse in eine Ablaufverfolgungssitzung schreiben kann.
 ms.assetid: 76e7202e-74ce-40a3-a04b-9af5117fe20e
 title: Schreiben manifestbasierter Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc2887194d731ca93379b07c9929de239cef3cdb
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: 6963051f65beb652eda04e3d0be6db99925e4eed81032c5687850915a0f1c173
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112261962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151079"
 ---
 # <a name="writing-manifest-based-events"></a>Schreiben manifestbasierter Ereignisse
 
-Bevor Sie Ereignisse in eine Ablaufverfolgungssitzung schreiben können, müssen Sie Ihren Anbieter registrieren. Durch die Registrierung eines Anbieters wird ETW mitgeteilt, dass Ihr Anbieter bereit ist, Ereignisse in eine Ablaufverfolgungssitzung zu schreiben. Ein Prozess kann bis zu 1.024 Anbieter-GUIDs registrieren. Sie sollten jedoch die Anzahl der Anbieter, die ihr Prozess registriert, auf ein oder zwei beschränken.
+Bevor Sie Ereignisse in eine Ablaufverfolgungssitzung schreiben können, müssen Sie Ihren Anbieter registrieren. Das Registrieren eines Anbieters teilt ETW mit, dass Ihr Anbieter bereit ist, Ereignisse in eine Ablaufverfolgungssitzung zu schreiben. Ein Prozess kann bis zu 1.024 Anbieter-GUIDs registrieren. Sie sollten jedoch die Anzahl der Anbieter, die Ihr Prozess registriert, auf ein oder zwei beschränken.
 
-**Vor Windows Vista:** Es gibt keine Beschränkung für die Anzahl der Anbieter, die ein Prozess registrieren kann.
+**Vor der Windows Vista:** Es gibt keine Beschränkung für die Anzahl der Anbieter, die ein Prozess registrieren kann.
 
-Um einen manifestbasierten Anbieter zu registrieren, rufen Sie die [**EventRegister-Funktion auf.**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister) Die Funktion registriert die GUID des Anbieters und identifiziert einen optionalen Rückruf, den ETW aufruft, wenn ein Controller den Anbieter aktiviert oder deaktiviert.
+Um einen manifestbasierten Anbieter zu registrieren, rufen Sie die [**EventRegister-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister) auf. Die Funktion registriert die GUID des Anbieters und identifiziert einen optionalen Rückruf, den ETW aufruft, wenn ein Controller den Anbieter aktiviert oder deaktiviert.
 
-Rufen Sie vor dem Beenden des Anbieters die [**EventUnregister-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventunregister) auf, um die Registrierung des Anbieters aus ETW zu entfernen. Die [**EventRegister-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister) gibt das Registrierungshandle zurück, das Sie an die **EventUnregister-Funktion** übergeben.
+Rufen Sie vor dem Beenden des Anbieters die [**EventUnregister-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventunregister) auf, um die Registrierung des Anbieters aus ETW zu entfernen. Die [**EventRegister-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister) gibt das Registrierungshand handle zurück, das Sie an die **EventUnregister-Funktion** übergeben.
 
-[Manifestbasierte](about-event-tracing.md) Anbieter müssen keine [**EnableCallback-Funktion**](/windows/desktop/api/Evntprov/nc-evntprov-penablecallback) implementieren, um Benachrichtigungen zu empfangen, wenn eine Sitzung den Anbieter aktiviert oder deaktiviert. Der Rückruf ist optional und wird zu Informationszwecken verwendet. Sie müssen den Rückruf nicht angeben oder implementieren, wenn Sie den Anbieter registrieren. Ein manifestbasierter Anbieter kann einfach Ereignisse schreiben, und ETW entscheidet, ob das Ereignis in einer Ablaufverfolgungssitzung protokolliert wird. Wenn für ein Ereignis umfangreiche Aufgaben zum Generieren der Ereignisdaten erforderlich sind, sollten Sie zuerst die [**Funktion EventEnabled**](/windows/desktop/api/Evntprov/nf-evntprov-eventenabled) oder [**EventProviderEnabled**](/windows/desktop/api/Evntprov/nf-evntprov-eventproviderenabled) aufrufen, um zu überprüfen, ob das Ereignis vor dem Ausführen der Arbeit in eine Sitzung geschrieben wird.
+[Manifestbasierte Anbieter](about-event-tracing.md) müssen keine [**EnableCallback-Funktion**](/windows/desktop/api/Evntprov/nc-evntprov-penablecallback) implementieren, um Benachrichtigungen zu empfangen, wenn eine Sitzung den Anbieter aktiviert oder deaktiviert. Der Rückruf ist optional und wird zu Informationszwecken verwendet. Sie müssen den Rückruf nicht angeben oder implementieren, wenn Sie den Anbieter registrieren. Ein manifestbasierter Anbieter kann einfach Ereignisse schreiben, und ETW entscheidet, ob das Ereignis in einer Ablaufverfolgungssitzung protokolliert wird. Wenn für ein Ereignis umfangreiche Aufgaben zum Generieren der Ereignisdaten erforderlich sind, sollten Sie zuerst die [**Funktion EventEnabled**](/windows/desktop/api/Evntprov/nf-evntprov-eventenabled) oder [**EventProviderEnabled**](/windows/desktop/api/Evntprov/nf-evntprov-eventproviderenabled) aufrufen, um zu überprüfen, ob das Ereignis in eine Sitzung geschrieben wird, bevor Sie die Arbeit ausführen.
 
-In der Regel implementieren Sie den Rückruf, wenn ihr Anbieter erfordert, dass der Controller anbieterdefinierte Filterdaten (siehe *FilterData-Parameter* von [**EnableCallback**](/windows/desktop/api/Evntprov/nc-evntprov-penablecallback)) an den Anbieter übergibt, oder der Anbieter die Kontextinformationen verwendet, die er beim Registrieren selbst angegeben hat (siehe *CallbackContext-Parameter* von [**EventRegister**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister)).
+In der Regel implementieren Sie den Rückruf, wenn Ihr Anbieter erfordert, dass der Controller anbieterdefinierte Filterdaten (siehe *FilterData-Parameter* von [**EnableCallback**](/windows/desktop/api/Evntprov/nc-evntprov-penablecallback)) an den Anbieter übergibt, oder der Anbieter die Kontextinformationen verwendet, die er bei der Registrierung selbst angegeben hat (siehe *Den CallbackContext-Parameter* von [**EventRegister**](/windows/desktop/api/Evntprov/nf-evntprov-eventregister)).
 
-[Manifestbasierte](about-event-tracing.md) Anbieter rufen die [**EventWrite-**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) oder [**EventWriteString-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritestring) auf, um Ereignisse in eine Sitzung zu schreiben. Wenn ihre Ereignisdaten eine Zeichenfolge sind oder wenn Sie kein Manifest für Ihren Anbieter definieren und die Ereignisdaten eine einzelne Zeichenfolge sind, rufen Sie die [**EventWriteString-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritestring) auf, um das Ereignis zu schreiben. Rufen Sie für Ereignisdaten, die numerische oder komplexe Datentypen enthalten, die [**EventWrite-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) auf, um das Ereignis zu protokollieren.
+[Manifestbasierte Anbieter rufen](about-event-tracing.md) die [**Funktion EventWrite**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) oder [**EventWriteString**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritestring) auf, um Ereignisse in eine Sitzung zu schreiben. Wenn ihre Ereignisdaten eine Zeichenfolge sind oder Wenn Sie kein Manifest für Ihren Anbieter definieren und ihre Ereignisdaten eine einzelne Zeichenfolge sind, rufen Sie die [**EventWriteString-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritestring) auf, um das Ereignis zu schreiben. Rufen Sie für Ereignisdaten, die numerische oder komplexe Datentypen enthalten, die [**EventWrite-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) auf, um das Ereignis zu protokollieren.
 
-Das folgende Beispiel zeigt, wie Sie die Ereignisdaten vorbereiten, die mit der [**EventWrite-Funktion**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) geschrieben werden sollen. Das Beispiel verweist auf die Ereignisse, die unter [Veröffentlichen des Ereignisschemas für einen manifestbasierten Anbieter](publishing-your-event-schema-for-a-manifest-base-provider.md)definiert sind.
+Das folgende Beispiel zeigt, wie sie die Ereignisdaten vorbereiten, die mit der [**EventWrite-Funktion geschrieben werden**](/windows/desktop/api/Evntprov/nf-evntprov-eventwrite) sollen. Im Beispiel wird auf die Ereignisse verwiesen, die unter [Veröffentlichen des Ereignisschemas für einen manifestbasierten Anbieter definiert sind.](publishing-your-event-schema-for-a-manifest-base-provider.md)
 
 
 ```C++
@@ -158,7 +158,7 @@ cleanup:
 
 
 
-Wenn Sie das manifest kompilieren (siehe [Kompilieren eines Instrumentierungsmanifests),](../wes/compiling-an-instrumentation-manifest.md)das im obigen Beispiel verwendet wird, wird die folgende Headerdatei erstellt (auf die im obigen Beispiel verwiesen wird).
+Wenn Sie das Manifest kompilieren (siehe [Kompilieren](../wes/compiling-an-instrumentation-manifest.md)eines Instrumentierungsmanifests), das im obigen Beispiel verwendet wird, wird die folgende Headerdatei erstellt (auf die im obigen Beispiel verwiesen wird).
 
 
 ```C++

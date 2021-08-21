@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetdetachdatabase-Methode.
-title: API. jetdetachdatabase-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetDetachDatabase-Methode'
+title: Api.JetDetachDatabase-Methode
 TOCTitle: 'JetDetachDatabase method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetDetachDatabase(Microsoft.Isam.Esent.Interop.JET_SESID,System.String)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetdetachdatabase(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8881021d619bac1dae83a4a001e6b88e94e57256
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 533c99c385f2e41825c312cf69e4205b7ab843c08b71b0618b21361b7b31ef50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118085499"
 ---
-# <a name="apijetdetachdatabase-method"></a>API. jetdetachdatabase-Methode
+# <a name="apijetdetachdatabase-method"></a>Api.JetDetachDatabase-Methode
 
-Gibt eine Datenbankdatei frei, die zuvor an eine Daten banksitzung angefügt wurde.
+Gibt eine Datenbankdatei frei, die zuvor an eine Datenbanksitzung angefügt wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,24 +60,24 @@ public static void JetDetachDatabase(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die zu verwendende Daten banksitzung.
+    Die zu verwendende Datenbanksitzung.
 
 <!-- end list -->
 
   - database  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Die Datenbank, die getrennt werden soll.
+    Die zu trennende Datenbank.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

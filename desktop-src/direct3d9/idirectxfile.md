@@ -1,7 +1,7 @@
 ---
-description: Anwendungen verwenden die Methoden der idirectxfile-Schnittstelle zum Erstellen von Instanzen der Schnittstellen idirectxfileenumubject und idirectxfilesaveobject und zum Registrieren von Vorlagen. Veraltet.
+description: Anwendungen verwenden die Methoden der IDirectXFile-Schnittstelle, um Instanzen der Schnittstellen IDirectXFileEnumObject und IDirectXFileSaveObject zu erstellen und Vorlagen zu registrieren. Veraltet.
 ms.assetid: c4e800dc-72a9-4b91-9c89-ee76764b1bb9
-title: Idirectxfile-Schnittstelle (dxfile. h)
+title: IDirectXFile-Schnittstelle (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,46 +14,46 @@ api_type:
 api_location:
 - d3dxof.lib
 - d3dxof.dll
-ms.openlocfilehash: 0a1e084108580277432aaeb61086b43a97dbd9f7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7b2a6094b1c07a29ef354c37fe0bc8537b001dc97db95f75f3b492e2e33f2bd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118093502"
 ---
-# <a name="idirectxfile-interface"></a>Idirectxfile-Schnittstelle
+# <a name="idirectxfile-interface"></a>IDirectXFile-Schnittstelle
 
-Anwendungen verwenden die Methoden der idirectxfile-Schnittstelle zum Erstellen von Instanzen der Schnittstellen [**idirectxfileenumubject**](idirectxfileenumobject.md) und [**idirectxfilesaveobject**](idirectxfilesaveobject.md) und zum Registrieren von Vorlagen. Veraltet.
+Anwendungen verwenden die Methoden der IDirectXFile-Schnittstelle, um Instanzen der Schnittstellen [**IDirectXFileEnumObject**](idirectxfileenumobject.md) und [**IDirectXFileSaveObject**](idirectxfilesaveobject.md) zu erstellen und Vorlagen zu registrieren. Veraltet.
 
 ## <a name="members"></a>Member
 
-Die **idirectxfile** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Idirectxfile** verfügt auch über die folgenden Typen von Membern:
+Die **IDirectXFile-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IDirectXFile** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idirectxfile** -Schnittstelle verfügt über diese Methoden.
+Die **IDirectXFile-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                       | BESCHREIBUNG                                          |
+| Methode                                                       | Beschreibung                                          |
 |:-------------------------------------------------------------|:-----------------------------------------------------|
-| [**"Kreateendumuject"**](idirectxfile--createenumobject.md)   | Erstellt ein Enumeratorobjekt. Veraltet.<br/> |
-| [**"Kreatesaveobject"**](idirectxfile--createsaveobject.md)   | Erstellt ein Save-Objekt. Veraltet.<br/>        |
-| [**Register Templates**](idirectxfile--registertemplates.md) | Registriert benutzerdefinierte Vorlagen. Veraltet.<br/>   |
+| [**CreateEnumObject**](idirectxfile--createenumobject.md)   | Erstellt ein Enumeratorobjekt. Veraltet.<br/> |
+| [**CreateSaveObject**](idirectxfile--createsaveobject.md)   | Erstellt ein Speicherobjekt. Veraltet.<br/>        |
+| [**RegisterTemplates**](idirectxfile--registertemplates.md) | Registriert benutzerdefinierte Vorlagen. Veraltet.<br/>   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Globally Unique Identifier (GUID) für die idirectxfile-Schnittstelle ist IID \_ idirectxfile.
+Die GUID (Globally Unique Identifier) für die IDirectXFile-Schnittstelle ist IID \_ IDirectXFile.
 
-Die idirectxfile-Schnittstelle wird durch Aufrufen der [**directxfilecreate**](directxfilecreate.md) -Funktion abgerufen.
+Die IDirectXFile-Schnittstelle wird durch Aufrufen der [**DirectXFileCreate-Funktion**](directxfilecreate.md) abgerufen.
 
-Der lpdirectxfile-Typ wird als Zeiger auf diese Schnittstelle definiert.
+Der LPDIRECTXFILE-Typ wird als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -68,8 +68,8 @@ typedef interface IDirectXFile *LPDIRECTXFILE;
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -77,7 +77,7 @@ typedef interface IDirectXFile *LPDIRECTXFILE;
 
 <dl> <dt>
 
-[X-Datei Schnittstellen](dx9-graphics-reference-x-file-interfaces.md)
+[X-Dateischnittstellen](dx9-graphics-reference-x-file-interfaces.md)
 </dt> </dl>
 
  

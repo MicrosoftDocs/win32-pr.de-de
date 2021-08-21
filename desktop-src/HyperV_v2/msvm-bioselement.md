@@ -53,18 +53,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d8d36ea50791bf6f1413815583fe1168f564d50d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8433c8fda6d438e4f77fb763be42467aab05ab976927f018e895a30d5f9c6226
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118149300"
 ---
-# <a name="msvm_bioselement-class"></a>MSVM- \_ bioselements-Klasse
+# <a name="msvm_bioselement-class"></a>Msvm \_ BIOSElement-Klasse
 
-Stellt die Software auf niedriger Ebene dar, die in den RAM geladen wird, um das System zu konfigurieren und zu starten. Das BIOS ist kein logisches Gerät, daher sollte das virtuelle BIOS nicht als Gerät eines virtuellen Computers betrachtet werden. Da es sich nicht um ein Gerät handelt, verfügt es nicht über einen entsprechenden Ressourcenpool. Das BIOS-Objekt wird der virtuellen Maschine über die [**MSVM- \_ Systembios**](msvm-systembios.md) -Zuordnung zugeordnet.
+Stellt die Software auf niedriger Ebene dar, die in den RAM geladen wird, um das System zu konfigurieren und zu starten. Das BIOS ist kein logisches Gerät, daher sollte das virtuelle BIOS nicht als virtuelles Computergerät bezeichnet werden. Da es sich nicht um ein Gerät handelt, verfügt es nicht über einen entsprechenden Ressourcenpool. Das BIOS-Objekt wird dem virtuellen Computer über die [**\_ Msvm-SystemBIOS-Zuordnung**](msvm-systembios.md) zugeordnet.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -117,20 +117,20 @@ class Msvm_BIOSElement : CIM_BIOSElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ bioselements** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ BIOSElement-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ bioselements** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ BIOSElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Baseboardserialnumber**
+**BaseBoardSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -140,10 +140,10 @@ Die Seriennummer für das Basisboard auf dem virtuellen Computer.
 
 </dd> <dt>
 
-**Biosguid**
+**BIOSGUID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -153,23 +153,23 @@ Der eindeutige Bezeichner für das BIOS.
 
 </dd> <dt>
 
-**Biosnumlock**
+**BIOSNumLock**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte Status der NUM-Sperre im BIOS.
+Der aktivierte Zustand der Num-Sperre im BIOS.
 
 </dd> <dt>
 
 **BIOSSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -179,16 +179,16 @@ Die Seriennummer für das BIOS.
 
 </dd> <dt>
 
-**"Bootorder"**
+**BootOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (4)
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert"), [**MAX**](/windows/desktop/WmiSdk/standard-qualifiers) (4)
 </dt> </dl>
 
 Die Reihenfolge, in der Geräte beim Start nach einem Startsektor durchsucht werden.
@@ -198,154 +198,154 @@ Die Reihenfolge, in der Geräte beim Start nach einem Startsektor durchsucht wer
 **BuildNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Der interne Bezeichner für diese Kompilierung des Software Elements. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf 14 festgelegt.
+Der interne Bezeichner für diese Kompilierung des Softwareelements. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf 14 festgelegt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Chassisassettag**
+**ChassisAssetTag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wird automatisch durch das BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird.
+Wird automatisch vom BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird.
 
 </dd> <dt>
 
-**Chassisserialnumber**
+**ChassisSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wird automatisch durch das BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird.
+Wird automatisch vom BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird.
 
 </dd> <dt>
 
-**Codesatz**
+**CodeSet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Der vom Softwareelement verwendete Codesatz. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf **null** festgelegt.
+Der vom Softwareelement verwendete Codesatz. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **CurrentLanguage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuell für das BIOS ausgewählte Sprache. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf "en \| US \| ISO8859-1" festgelegt.
+Die derzeit ausgewählte Sprache für das BIOS. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf "en \| US \| iso8859-1" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das Element. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Element. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den aktuellen Zustand des Elements an. Dieses Attribut drückt den Zustand dieses Elements aus, aber nicht notwendigerweise dessen unter Komponenten.
+Gibt die aktuelle Integrität des Elements an. Dieses Attribut drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten.
 
-Wenn ein kritischer Fehler auftritt, finden Sie im Ereignisprotokoll weitere Informationen. Die **enabledstate** -Eigenschaft kann auch weitere Informationen enthalten. Wenn z. b. der Speicherplatz kritisch ist, ist **healthstate** auf 25 festgelegt, der virtuelle Computer wird angehalten, und **enabledstate** wird auf 32768 (angehalten) festgelegt.
+Wenn ein kritischer Fehler auftritt, überprüfen Sie das Ereignisprotokoll auf Details. Die **EnabledState-Eigenschaft** kann auch weitere Informationen enthalten. Wenn der Speicherplatz auf dem Datenträger beispielsweise sehr gering ist, **healthState** auf 25 festgelegt ist, der virtuelle Computer angehalten wird und **EnabledState** auf 32768 (Angehalten) festgelegt ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
@@ -353,9 +353,9 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CI
 
 | Wert                                                                                                                                                                                                                                                            | Bedeutung                                                                                                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>5</dt> </dl>                                                                               | Der virtuelle Computer ist voll funktionsfähig und wird in normalen Betriebsparametern und ohne Fehler ausgeführt.<br/>                                                                                                                                                                                    |
-| <span id="Major_Failure"></span><span id="major_failure"></span><span id="MAJOR_FAILURE"></span><dl> <dt>**Hauptfehler**</dt> <dt>20</dt> </dl>             | Der virtuelle Computer hat einen schwerwiegenden Fehler verursacht. Dieser Wert wird verwendet, wenn auf einem oder mehreren Datenträgern, die die virtuellen Festplatten des virtuellen Computers enthalten, wenig Speicherplatz auf dem Datenträger und die virtuelle Maschine angehalten wurde.<br/>                                                                                                   |
-| <span id="Critical_failure"></span><span id="critical_failure"></span><span id="CRITICAL_FAILURE"></span><dl> <dt>**Kritischer Fehler**</dt> <dt>25</dt> </dl> | Das Element ist nicht funktionsfähig, und die Wiederherstellung ist möglicherweise nicht möglich. Dies kann darauf hinweisen, dass der Arbeitsprozess für den virtuellen Computer (Vmwp.exe) nicht auf Steuerungs-oder Informationsanforderungen antwortet oder dass auf einem oder mehreren Datenträgern, die die virtuellen Festplatten für die virtuelle Maschine enthalten, wenig Speicherplatz zur Neige ist.<br/> |
+| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>5</dt> </dl>                                                                               | Der virtuelle Computer ist voll funktionsfähig und funktioniert innerhalb normaler Betriebsparameter und ohne Fehler.<br/>                                                                                                                                                                                    |
+| <span id="Major_Failure"></span><span id="major_failure"></span><span id="MAJOR_FAILURE"></span><dl> <dt>**Hauptfehler**</dt> <dt>20</dt> </dl>             | Auf dem virtuellen Computer ist ein schwerwiegender Fehler aufgetreten. Dieser Wert wird verwendet, wenn mindestens ein Datenträger, der die VHDs des virtuellen Computers enthält, wenig Speicherplatz auf dem Datenträger hat und der virtuelle Computer angehalten wurde.<br/>                                                                                                   |
+| <span id="Critical_failure"></span><span id="critical_failure"></span><span id="CRITICAL_FAILURE"></span><dl> <dt>**Kritischer Fehler**</dt> <dt>25</dt> </dl> | Das Element ist nicht funktional, und die Wiederherstellung ist möglicherweise nicht möglich. Dies kann darauf hinweisen, dass der Arbeitsprozess für den virtuellen Computer (Vmwp.exe) nicht auf Steuerungs- oder Informationsanforderungen reagiert oder dass mindestens ein Datenträger, der die VHDs für den virtuellen Computer enthält, nicht über wenig Speicherplatz verfügt.<br/> |
 
 
 
@@ -363,39 +363,39 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CI
 
 </dd> <dt>
 
-**Identificationcode**
+**IdentificationCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Der Bezeichner des Herstellers für dieses Softwareelement. Häufig handelt es sich hierbei um eine Stock Keeping Unit (SKU) oder eine Teilenummer. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf **null** festgelegt.
+Der Bezeichner des Herstellers für dieses Softwareelement. Häufig handelt es sich dabei um eine Lagerhaltungseinheit (Stock Keeping Unit, SKU) oder eine Teilenummer. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wird automatisch durch das BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Wird automatisch vom BIOS aufgefüllt, wenn der virtuelle Computer erstellt wird. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -404,53 +404,40 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Languageedition**
+**LanguageEdition**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (32)
+Qualifizierer: **MaxLen** (32)
 </dt> </dl>
 
-Die Language Edition dieses Software Elements. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf **null** festgelegt.
+Die Sprachversion dieses Softwareelements. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**ListOf-Sprachen**
+**ListOfLanguages**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste installier barer Sprachen für das BIOS. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf "en \| US \| ISO8859-1" festgelegt.
+Eine Liste der installierbaren Sprachen für das BIOS. DIESE Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf "en \| US \| iso8859-1" festgelegt.
 
 </dd> <dt>
 
-**Loadedendingaddress**
-</dt> <dd> <dl> <dt>
-
-Datentyp: **unit64**
-</dt> <dt>
-
-Zugriffstyp: Schreibgeschützt
-</dt> </dl>
-
-Die Endadresse des Speichers, der von diesem BIOS belegt wird. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf 0xFFFFF festgelegt.
-
-</dd> <dt>
-
-**Loadedstartingaddress**
+**LoadedEndingAddress**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **unit64**
@@ -459,109 +446,122 @@ Datentyp: **unit64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Startadresse des Speichers, der von diesem BIOS belegt wird. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf 0xe0000 festgelegt.
+Die Endadresse des Arbeitsspeichers, der von diesem BIOS belegt wird. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf 0xFFFFF festgelegt.
 
 </dd> <dt>
 
-**Loadutilityinformation**
+**LoadedStartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **unit64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die das zum Aktualisieren des BIOS-Elements erforderliche BIOS-Flash-/Auslastungs-Hilfsprogramm beschreibt. Die Version und andere Informationen können in dieser Eigenschaft angegeben werden. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf **null** festgelegt.
+Die Startadresse des Arbeitsspeichers, der von diesem BIOS belegt wird. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf 0xE0000 festgelegt.
+
+</dd> <dt>
+
+**LoadUtilityInformation**
+</dt> <dd> <dl> <dt>
+
+Datentyp: **string**
+</dt> <dt>
+
+Zugriffstyp: Schreibgeschützt
+</dt> </dl>
+
+Eine Zeichenfolge, die das BIOS-Flash-/Ladehilfsprogramm beschreibt, das zum Aktualisieren des BIOS-Elements erforderlich ist. Version und andere Informationen können in dieser Eigenschaft angegeben werden. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (256)
+Qualifizierer: **MaxLen** (256)
 </dt> </dl>
 
-Der Hersteller dieses BIOS. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf "Microsoft Corporation" festgelegt.
+Der Hersteller dieses BIOS. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf "Microsoft Corporation" festgelegt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (1024)
+Qualifizierer: **MaxLen** (1024)
 </dt> </dl>
 
-Der Name, der zum Identifizieren dieses Software Elements verwendet wird. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf "BIOS" festgelegt.
+Der Name, der zum Identifizieren dieses Softwareelements verwendet wird. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf "BIOS" festgelegt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die aktuellen Status des-Objekts enthält. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt. Der Wert bei Index NULL (0) ist einer der folgenden Werte.
+Ein Array, das die aktuellen Status des -Objekts enthält. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt. Der Wert bei Index null (0) ist einer der folgenden Werte.
 
 
 
 | Wert                                                                                                                                                                                                                                                                   | Bedeutung                                                                                                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>2</dt> </dl>                                                                                      | Der virtuelle Computer ist funktionsfähig und funktioniert ordnungsgemäß.<br/>                                                                                                                                                                                              |
-| <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span><dl> <dt></dt> Heruntergestuft <dt>3</dt> </dl>                                         | Der virtuelle Computer ist nur teilweise funktionsfähig. Dies gibt an, dass auf den Speicher, der die Konfiguration enthält, nicht zugegriffen werden kann. Ein virtueller Computer in diesem Zustand kann nur ausgeschaltet oder gelöscht werden. <br/>                                               |
-| <span id="Predictive_Failure"></span><span id="predictive_failure"></span><span id="PREDICTIVE_FAILURE"></span><dl> <dt>**Vorhersagefehler**</dt> <dt>5</dt> </dl> | Der virtuelle Computer ist funktionsfähig, kann aber in Zukunft fehlschlagen. Dies deutet darauf hin, dass der Speicherplatz im Speicher, der die virtuelle Festplatte des virtuellen Computers enthält, nicht mehr verfügbar ist. Der virtuelle Computer wird angehalten, wenn kein Speicherplatz mehr verfügbar ist.<br/> |
-| <span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span><dl> <dt></dt> <dt>10</dt> beendet </dl>                                            | Dieser Wert wird nicht unterstützt. Wenn der virtuelle Computer beendet wird, hat die **enabledstate** -Eigenschaft den Wert 3 (deaktiviert).<br/>                                                                                                                       |
-| <span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span><dl> <dt>**In Dienst**</dt> <dt>11</dt> </dl>                                | Die virtuelle Maschine verarbeitet eine Anforderung.<br/>                                                                                                                                                                                                           |
-| <span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span><dl> <dt>**Ruhender**</dt> <dt>15</dt> </dl>                                            | Dieser Wert wird nicht unterstützt. Wenn die virtuelle Maschine angehalten oder angehalten wird, hat die **enabledstate** -Eigenschaft den Wert 32769 (angehalten) oder 32768 (angehalten).<br/>                                                                                    |
+| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>2</dt> </dl>                                                                                      | Der virtuelle Computer ist funktionsfähig und funktioniert normal.<br/>                                                                                                                                                                                              |
+| <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span><dl> <dt>**Heruntergestuft**</dt> <dt>3</dt> </dl>                                         | Der virtuelle Computer ist nur teilweise funktionsfähig. Dies gibt an, dass auf den Speicher, der die Konfiguration enthält, nicht zugegriffen werden kann. Ein virtueller Computer in diesem Zustand kann nur deaktiviert oder gelöscht werden. <br/>                                               |
+| <span id="Predictive_Failure"></span><span id="predictive_failure"></span><span id="PREDICTIVE_FAILURE"></span><dl> <dt>**Vorhersagefehler**</dt> <dt>5</dt> </dl> | Der virtuelle Computer ist funktionsfähig, kann aber in Zukunft fehlschlagen. Dies gibt an, dass für den Speicher, der die virtuelle Festplatte des virtuellen Computers enthält, wenig freier Speicherplatz verfügbar ist. Der virtuelle Computer wird angehalten, wenn nicht mehr Speicherplatz verfügbar gemacht wird.<br/> |
+| <span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span><dl> <dt>**Beendet**</dt> <dt>10</dt> </dl>                                            | Dieser Wert wird nicht unterstützt. Wenn der virtuelle Computer beendet wird, hat die **EnabledState-Eigenschaft** den Wert 3 (Deaktiviert).<br/>                                                                                                                       |
+| <span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span><dl> <dt>**In Dienst**</dt> <dt>11</dt> </dl>                                | Der virtuelle Computer verarbeitet eine Anforderung.<br/>                                                                                                                                                                                                           |
+| <span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span><dl> <dt>**Ruhende**</dt> <dt>15</dt> </dl>                                            | Dieser Wert wird nicht unterstützt. Wenn der virtuelle Computer angehalten oder angehalten wird, hat die **EnabledState-Eigenschaft** den Wert 32769 (Angehalten) oder 32768 (Angehalten).<br/>                                                                                    |
 
 
 
  
 
-Der Wert bei Index eins (1) ist optional und enthält sekundäre Statusinformationen. Ein Client sollte den primären Status von Index 0 (null) verwenden, um zu bestimmen, ob eine neue Anforderung an den virtuellen Computer ausgegeben werden kann. Wenn **OperationalStatus** \[ 0 \] den Wert 2 (OK) hat, kann der von **OperationalStatus** 1 festgestellte Vorgang \[ \] unterbrochen werden.
+Der Wert am Index 1 ist optional und enthält sekundäre Statusinformationen. Ein Client sollte den primären Status von Index null (0) verwenden, um zu bestimmen, ob eine neue Anforderung an den virtuellen Computer ausgegeben werden kann. Wenn **OperationalStatus** \[ 0 \] 2 (OK) ist, kann der durch **OperationalStatus** 1 angegebene Vorgang unterbrochen \[ \] werden.
 
-Der Wert für **OperationalStatus** \[ 1 \] ist einer der folgenden Werte.
+Der Wert bei **OperationalStatus** \[ 1 \] ist einer der folgenden Werte.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                                   | Bedeutung                                                                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <span id="Creating_Snapshot"></span><span id="creating_snapshot"></span><span id="CREATING_SNAPSHOT"></span><dl> <dt>**Erstellen der Momentaufnahme**</dt> <dt>32768</dt> </dl>                                 | Für den virtuellen Computer wird gerade eine Momentaufnahme erstellt.<br/>             |
+| <span id="Creating_Snapshot"></span><span id="creating_snapshot"></span><span id="CREATING_SNAPSHOT"></span><dl> <dt>**Erstellen der Momentaufnahme**</dt> <dt>32768</dt> </dl>                                 | Eine Momentaufnahme wird gerade für den virtuellen Computer erstellt.<br/>             |
 | <span id="Applying_Snapshot"></span><span id="applying_snapshot"></span><span id="APPLYING_SNAPSHOT"></span><dl> <dt>**Anwenden der Momentaufnahme**</dt> <dt>32769</dt> </dl>                                 | Eine Momentaufnahme wird gerade auf den virtuellen Computer angewendet.<br/>              |
-| <span id="Deleting_Snapshot"></span><span id="deleting_snapshot"></span><span id="DELETING_SNAPSHOT"></span><dl> <dt>**Momentaufnahme**</dt> <dt>32770</dt> wird gelöscht </dl>                                 | Eine Momentaufnahme wird gerade vom virtuellen Computer gelöscht.<br/>            |
-| <span id="Waiting_to_Start"></span><span id="waiting_to_start"></span><span id="WAITING_TO_START"></span><dl> <dt>**Warten auf Start**</dt> <dt>32771</dt> </dl>                                     | Der virtuelle Computer wird gestartet, nachdem die automatische Startverzögerung abgelaufen ist.<br/> |
-| <span id="Merging_Disks"></span><span id="merging_disks"></span><span id="MERGING_DISKS"></span><dl> <dt></dt> Zusammenführen von Datenträgern <dt>32772</dt> </dl>                                                 | Virtuelle Festplatten aus zuvor gelöschten Momentaufnahmen werden zusammengeführt.<br/>             |
-| <span id="Exporting_Virtual_Machine"></span><span id="exporting_virtual_machine"></span><span id="EXPORTING_VIRTUAL_MACHINE"></span><dl> <dt>**Virtueller Computer wird exportiert**</dt> <dt>32773</dt> </dl> | Der virtuelle Computer wird exportiert.<br/>                                             |
-| <span id="Migrating_Virtual_Machine"></span><span id="migrating_virtual_machine"></span><span id="MIGRATING_VIRTUAL_MACHINE"></span><dl> <dt>**Virtuelle Maschine**</dt> <dt>32774</dt> wird migriert. </dl> | Der virtuelle Computer wird Live von einem physischen Computer zu einem anderen migriert.<br/>  |
+| <span id="Deleting_Snapshot"></span><span id="deleting_snapshot"></span><span id="DELETING_SNAPSHOT"></span><dl> <dt>**Löschen der Momentaufnahme**</dt> <dt>32770</dt> </dl>                                 | Eine Momentaufnahme wird gerade vom virtuellen Computer gelöscht.<br/>            |
+| <span id="Waiting_to_Start"></span><span id="waiting_to_start"></span><span id="WAITING_TO_START"></span><dl> <dt>**Warten auf Start**</dt> <dt>32771</dt> </dl>                                     | Der virtuelle Computer wird gestartet, nachdem die automatische Startverzögerung verstrichen ist.<br/> |
+| <span id="Merging_Disks"></span><span id="merging_disks"></span><span id="MERGING_DISKS"></span><dl> <dt>**Zusammenführen von Datenträgern**</dt> <dt>32772</dt> </dl>                                                 | Virtuelle Festplatten aus zuvor gelöschten Momentaufnahmen werden zusammengeführt.<br/>             |
+| <span id="Exporting_Virtual_Machine"></span><span id="exporting_virtual_machine"></span><span id="EXPORTING_VIRTUAL_MACHINE"></span><dl> <dt>**Exportieren eines virtuellen Computers**</dt> <dt>32773</dt> </dl> | Der virtuelle Computer wird exportiert.<br/>                                             |
+| <span id="Migrating_Virtual_Machine"></span><span id="migrating_virtual_machine"></span><span id="MIGRATING_VIRTUAL_MACHINE"></span><dl> <dt>**Migrieren eines virtuellen Computers**</dt> <dt>32774</dt> </dl> | Der virtuelle Computer wird live von einem physischen Computer zu einem anderen migriert.<br/>  |
 
 
 
@@ -572,120 +572,120 @@ Der Wert für **OperationalStatus** \[ 1 \] ist einer der folgenden Werte.
 **OtherTargetOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Der Hersteller und das Betriebssystem für ein Softwareelement, wenn die **TargetOperatingSystem** -Eigenschaft den Wert 1 (Sonstiges) aufweist, was erfordert, dass die **OtherTargetOS** -Eigenschaft einen nicht-**null** -Wert aufweist. Für alle anderen Werte von **TargetOperatingSystem** muss die **OtherTargetOS** -Eigenschaft **null** sein. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf **null** festgelegt.
+Der Hersteller und das Betriebssystem für ein Softwareelement, wenn die **TargetOperatingSystem-Eigenschaft** den Wert 1 (Other) hat, was erfordert, dass die **OtherTargetOS-Eigenschaft** über einen Wert ungleich **NULL** verfügt. Für alle anderen Werte von **TargetOperatingSystem** muss die **OtherTargetOS-Eigenschaft** **NULL** sein. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Primarybios**
+**PrimaryBIOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True gibt an, dass dies das primäre BIOS des Computer Systems ist. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf **true** festgelegt.
+True gibt an, dass dies das primäre BIOS des Computersystems ist. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf **True** festgelegt.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **detailedstatus** -Eigenschaft verwendet werden, um allgemeine und ausführliche Integritäts Statusinformationen für das-Element und seine unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte und detaillierte Integritätsstatusinformationen für das Element und seine Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Registryuris**
+**RegistryURIs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Zeichen folgen, das den Veröffentlichungs Speicherort der BIOS-Attribut Registrierung oder Registrierungen darstellt, denen die Implementierung entspricht. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt.
+Ein Array von Zeichenfolgen, das den Veröffentlichungsspeicherort der BIOS-Attributregistrierung oder der Registrierungen darstellt, denen die Implementierung entspricht. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt.
 
 </dd> <dt>
 
-**ReleaseDate**
+**Released**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum, an dem das BIOS freigegeben wurde. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt.
+Das Datum, an dem das BIOS veröffentlicht wurde. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt.
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Die zugewiesene Seriennummer des BIOS. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt.
+Die zugewiesene Seriennummer des BIOS. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt.
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (256)
+Qualifizierer: **MaxLen** (256)
 </dt> </dl>
 
-Ein Bezeichner für das Softwareelement. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf "Microsoft:*GUID* \\ *gerätespezifische Daten*" festgelegt.
+Ein Bezeichner für das Softwareelement. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf "Microsoft:*GUID-gerätespezifische* \\ *Daten"* festgelegt.
 
 </dd> <dt>
 
 **SoftwareElementState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Status des Lebenszyklus eines Software Elements. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf 2 (ausführbare Datei) festgelegt.
+Der Zustand des Lebenszyklus eines Softwareelements. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf 2 (Ausführbare Datei) festgelegt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -695,54 +695,54 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CI
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **arrayType** ("indiziert")
+Qualifizierer: **ArrayType** ("Indexed")
 </dt> </dl>
 
-Ein Array, das Zeichen folgen enthält, die die entsprechenden **OperationalStatus** -Array Werte beschreiben. Wenn z. b. 11 (in Service) der Wert ist, der **OperationalStatus** \[ 0 zugewiesen ist \] , enthält **Statusbeschreibungen** \[ 0 \] möglicherweise eine Erläuterung, warum der virtuelle Computer eine Anforderung verarbeitet. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ein Array, das Zeichenfolgen enthält, die die entsprechenden **OperationalStatus-Arraywerte** beschreiben. Wenn beispielsweise 11 (In Service) der Wert ist, der **OperationalStatus** 0 zugewiesen \[ \] ist, enthält **StatusDescriptions** \[ 0 \] möglicherweise eine Erklärung dazu, warum der virtuelle Computer eine Anforderung verarbeitet. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **TargetOperatingSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Betriebssystemumgebung des-Elements. Diese Eigenschaft wird von [**CIM \_ Softwareelement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und ist immer auf 0 (unbekannt) festgelegt.
+Die Betriebssystemumgebung des Elements. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](/windows/desktop/CIMWin32Prov/cim-softwareelement)geerbt und immer auf 0 (Unbekannt) festgelegt.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Die BIOS-Version. Diese Eigenschaft wird von [**CIM \_ bioselements**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und ist immer auf "8.02.00" festgelegt.
+Die Version des BIOS. Diese Eigenschaft wird von [**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)geerbt und immer auf "8.02.00" festgelegt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM-Klasse " \_ bioselements** " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ BIOSElement-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -750,10 +750,10 @@ Der Zugriff auf die **MSVM-Klasse " \_ bioselements** " kann durch die UAC-Filte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -762,13 +762,13 @@ Der Zugriff auf die **MSVM-Klasse " \_ bioselements** " kann durch die UAC-Filte
 
 <dl> <dt>
 
-[**CIM- \_ bioselare**](cim-bioselement.md)
+[**CIM \_ BIOSElement**](cim-bioselement.md)
 </dt> <dt>
 
 [BIOS-Klassen](bios-classes.md)
 </dt> <dt>
 
-[**CIM- \_ bioselare**](/windows/desktop/CIMWin32Prov/cim-bioselement)
+[**CIM \_ BIOSElement**](/windows/desktop/CIMWin32Prov/cim-bioselement)
 </dt> </dl>
 
  

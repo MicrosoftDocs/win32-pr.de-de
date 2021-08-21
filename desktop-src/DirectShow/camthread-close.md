@@ -1,7 +1,7 @@
 ---
 description: Die Close-Methode wartet darauf, dass der Thread beendet wird, und gibt dann seine Ressourcen frei.
 ms.assetid: 57e27ff7-3665-416e-8a6e-660483c5aed2
-title: Camthread. Close-Methode (wxutil. h)
+title: CAMThread.Close-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9cac5ee4a1e1a9cc3fecc8d09096d031e9fc9a63
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf12a80cd967832755f476db0e8810867326e84598ddce835e1da10dc6943419
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158931"
 ---
-# <a name="camthreadclose-method"></a>Camthread. Close-Methode
+# <a name="camthreadclose-method"></a>CAMThread.Close-Methode
 
-Die- `Close` Methode wartet, bis der Thread beendet wird, und gibt dann die zugehörigen Ressourcen frei.
+Die `Close` -Methode wartet darauf, dass der Thread beendet wird, und gibt dann seine Ressourcen frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie eine Möglichkeit zum Beenden des Threads bereitstellen. Definieren Sie beispielsweise in der Methode " [**camthread:: ThreadProc**](camthread-threadproc.md) " eine Anforderung, mit der der Thread beendet wird. Rufen Sie dann die Methode " [**camthread:: callworker**](camthread-callworker.md) " mit diesem Wert auf.
+Bevor Sie diese Methode aufrufen, müssen Sie eine Möglichkeit zum Beenden des Threads bereitstellen. Definieren Sie z. B. in Ihrer [**METHODE "CAMThread::ThreadProc"**](camthread-threadproc.md) eine Anforderung, die das Beenden des Threads signalisiert. Rufen Sie dann die [**METHODECAMThread::CallWorker mit**](camthread-callworker.md) diesem Wert auf.
 
-Die [**~ camthread**](camthread--camthread.md) -deeinigermethode ruft diese Methode auf.
+Die [**~CAMThread-Destruktormethode**](camthread--camthread.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Die [**~ camthread**](camthread--camthread.md) -deeinigermethode ruft diese Meth
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die [**~ camthread**](camthread--camthread.md) -deeinigermethode ruft diese Meth
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**CAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

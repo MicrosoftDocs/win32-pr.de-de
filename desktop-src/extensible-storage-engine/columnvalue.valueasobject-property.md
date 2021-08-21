@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der ColumnValue. valueasobject-Eigenschaft.
-title: ColumnValue. valueasobject (Eigenschaft)
+description: Weitere Informationen finden Sie unter ColumnValue.ValueAsObject-Eigenschaft.
+title: ColumnValue.ValueAsObject-Eigenschaft
 TOCTitle: 'ValueAsObject property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnValue.ValueAsObject
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnvalue.valueasobject(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1cc7d96f9b8584e81da5cfa66073b19989b0a476
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c7b5117f75fb195fe065493d942cee6c244f56eed1fe6170bdd53fd243143d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083653"
 ---
-# <a name="columnvaluevalueasobject-property"></a>ColumnValue. valueasobject (Eigenschaft)
+# <a name="columnvaluevalueasobject-property"></a>ColumnValue.ValueAsObject-Eigenschaft
 
-Ruft den letzten Satz oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches-Objekt zurückgegeben.
+Ruft den letzten festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches Objekt zurückgegeben.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public abstract Object ValueAsObject { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Type: [System. Object](/dotnet/api/system.object)  
+Typ: [System.Object](/dotnet/api/system.object)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnValue-Klasse](./columnvalue-class.md)
 
-[ColumnValue-Member](./columnvalue-members.md)
+[ColumnValue-Elemente](./columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

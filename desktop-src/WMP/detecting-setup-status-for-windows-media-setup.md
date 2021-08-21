@@ -1,44 +1,44 @@
 ---
-title: Ermitteln des Setup Status für die Windows Media-Installation
-description: Ermitteln des Setup Status für die Windows Media-Installation
+title: Erkennen des Setupstatus für Windows Medieneinrichtung
+description: Erkennen des Setupstatus für Windows Medieneinrichtung
 ms.assetid: c3acc268-934b-4a10-aab5-4b1764cb4c87
 keywords:
-- Windows Media Player, Ermitteln des Setup Status
-- Windows Media Player, Setup Status
-- Windows Media Player, Neuverteilen von Software
-- Windows Media Player, Software Verteilung
-- Ermitteln des Setup Status
-- Setup Status
-- Neuverteilen von Software
-- Software Verteilung
+- Windows Media Player,Erkennen des Setupstatus
+- Windows Media Player,Setupstatus
+- Windows Media Player,Verteilen von Software
+- Windows Media Player,Softwareverteilung
+- Erkennen des Setupstatus
+- Setupstatus
+- Verteilen von Software
+- Softwareverteilung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e28a4df9b842a1b6491a0ec98ca0a3182630c389
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 797c7cb5fe4d34895109777c4da7e15489a0d32acd9cf42660b3346521f6f059
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340899"
 ---
-# <a name="detecting-setup-status-for-windows-media-setup"></a>Ermitteln des Setup Status für die Windows Media-Installation
+# <a name="detecting-setup-status-for-windows-media-setup"></a>Erkennen des Setupstatus für Windows Medieneinrichtung
 
-Der folgende Code kann mit den Windows-Media Player-weitergabepaketen verwendet werden. Der Installationsstatus wird im Registrierungs Eintrag **installresult** unter dem folgenden Unterschlüssel gespeichert:
+Der folgende Code kann mit der -Windows Media Player-Paketen verwendet werden. Der Installationsstatus wird im Registrierungseintrag **InstallResult** unter dem folgenden Unterschlüssel gespeichert:
 
-**HKEY \_ Current \_ User \\ Software \\ Microsoft \\ Media Player- \\ Setup**
+**HKEY \_ CURRENT \_ USER \\ Software \\ Microsoft \\ MediaPlayer \\ Setup**
 
-Der Registrierungs Eintrag **installresult** weist das folgende Format auf:
+Der **Registrierungseintrag InstallResult** hat das folgende Formular.
 
 
 
-| Name              | type           | Wert                                                                                                                   |
+| Name              | Typ           | Wert                                                                                                                   |
 |-------------------|----------------|-------------------------------------------------------------------------------------------------------------------------|
-| **Installresult** | **REG \_ DWORD** | Ein **HRESULT** , das angibt, ob die Windows Media Player-Installation erfolgreich war und ob ein Neustart erforderlich ist. |
+| **InstallResult** | **REG \_ DWORD** | Ein **HRESULT,** das angibt, Windows Media Player erfolgreich installiert wurde und ob ein Neustart erforderlich ist. |
 
 
 
- 
+ 
 
-Im folgenden finden Sie ein Beispiel für C++-Code, der in eine aufrufende Setup Anwendung integriert werden kann. Mit diesem Code werden die `fSuccess` `fRebootNeeded` Variablen und entsprechend dem **HRESULT** -Wert, der von der Windows Media Player-Einrichtung im Komponenten Weitergabepaket geschrieben wurde, auf **true** oder **false** festgelegt.
+Hier ist ein C++-Beispielcode, der in eine aufrufende Setupanwendung integriert werden kann. Dieser Code setzt die Variablen und je nach Fall auf true oder false, basierend auf dem `fSuccess` `fRebootNeeded`   **HRESULT-Wert,** der von Windows Media Player Setup im Komponentenverteilungspaket geschrieben wurde.
 
 
 ```C++
@@ -103,12 +103,12 @@ if( ERROR_SUCCESS == RegQueryValueExA(
 
 <dl> <dt>
 
-[**Neuverteilen von Windows Media Player-Software**](redistributing-windows-media-player-software.md)
+[**Verteilen Windows Media Player Software**](redistributing-windows-media-player-software.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

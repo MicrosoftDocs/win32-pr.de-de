@@ -1,9 +1,9 @@
 ---
-title: Playlist. SortColumn
-description: Die SortColumn-Methode sortiert die Daten in der angegebenen Spalte.
+title: PLAYLIST.sortColumn
+description: Die sortColumn-Methode sortiert die Daten in der angegebenen Spalte.
 ms.assetid: 1563fee8-044a-4cb4-a9c2-11d4533536da
 keywords:
-- Wiedergabeliste. SortColumn-Fenster Media Player
+- PLAYLIST.sortColumn Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f21f0032ee4db4c7af46b5dda814bb11db551330
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 34dfce7306ceb39d64665538a21dbaef965ea799141a2756c2fea5bbe23ea9cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118335657"
 ---
-# <a name="playlistsortcolumn"></a>Playlist. SortColumn
+# <a name="playlistsortcolumn"></a>PLAYLIST.sortColumn
 
-Die **SortColumn** -Methode sortiert die Daten in der angegebenen Spalte.
+Die **sortColumn-Methode** sortiert die Daten in der angegebenen Spalte.
 
 ``` syntax
         elementID.sortColumn(column)
@@ -32,10 +32,10 @@ Die **SortColumn** -Methode sortiert die Daten in der angegebenen Spalte.
 
 <dl> <dt>
 
-<span id="column"></span><span id="COLUMN"></span>*Kolumne*
+<span id="column"></span><span id="COLUMN"></span>*Spalte*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der zu sortierenden Spalte angibt.
+**Number** (**long**) gibt den Index der zu sortierende Spalte an.
 
 </dd> </dl>
 
@@ -43,11 +43,11 @@ Die **SortColumn** -Methode sortiert die Daten in der angegebenen Spalte.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode sortiert die angegebene Spalte auf die gleiche Weise wie die Spaltenheader Schaltflächen im **Wiedergabe** Listenelement. Wenn die Spalte noch nicht sortiert wurde, wird Sie in alphanumerischer Reihenfolge sortiert. Wenn Sie sortiert wurde, wird die Reihenfolge umgekehrt.
+Diese Methode sortiert die angegebene Spalte auf die gleiche Weise wie die Spaltenheaderschaltflächen im **PLAYLIST-Element.** Wenn die Spalte noch nicht sortiert wurde, wird sie in alphanumerischer Reihenfolge sortiert. Wenn sie sortiert wurde, wird ihre Reihenfolge umgekehrt.
 
-Damit diese Methode funktioniert, muss das **allowcolumnsortierung** -Attribut auf "true" festgelegt werden.
+Damit diese Methode funktioniert, muss das **allowColumnSorting-Attribut** auf TRUE festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Damit diese Methode funktioniert, muss das **allowcolumnsortierung** -Attribut a
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -63,10 +63,10 @@ Damit diese Methode funktioniert, muss das **allowcolumnsortierung** -Attribut a
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. allowcolumnsortierung**](playlist-allowcolumnsorting.md)
+[**PLAYLIST.allowColumnSorting**](playlist-allowcolumnsorting.md)
 </dt> </dl>
 
  

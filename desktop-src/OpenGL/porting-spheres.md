@@ -1,53 +1,53 @@
 ---
-title: Portieren von Bereichen
-description: 'Beachten Sie bei der Portierung von Bereichen zu OpenGL die folgenden Punkte:'
+title: Portieren von Kugeln
+description: 'Beachten Sie beim Portieren von Kugeln zu OpenGL die folgenden Punkte:'
 ms.assetid: ca6bb515-076d-45fc-bcdd-3d71877560fb
 keywords:
-- IRIS GL portieren, Bereiche
-- Portieren von IRIS GL, Sphären
-- Portieren auf OpenGL von IRIS GL, Sphären
-- OpenGL-Portierung von IRIS GL, Sphären
-- Zeichnungsfunktionen, Bereiche
-- Mikro
+- IRIS GL-Portierung, Kugeln
+- Portieren von IRIS GL,Spheres
+- Portieren von IRIS GL,Spheres zu OpenGL
+- OpenGL-Portierung von IRIS GL,Spheres
+- Zeichnungsfunktionen,Kugeln
+- Bereichen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f48ac31c0204111173d9eb2d31a3119873ef45b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: af1e0666393e923767d342d215622e0ed58bfa7b1b620e045a0054b31918a7a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118358309"
 ---
-# <a name="porting-spheres"></a>Portieren von Bereichen
+# <a name="porting-spheres"></a>Portieren von Kugeln
 
-Beachten Sie beim Portieren von Bereichen zu OpenGL die folgenden Punkte:
+Beachten Sie beim Portieren von Kugeln zu OpenGL die folgenden Punkte:
 
--   Der Typ der zum Zeichnen der Kugel verwendeten primitiven kann nicht gesteuert werden. Sie können die zeichengenauigkeit auf eine andere Weise steuern: Verwenden Sie die Slices und Stapel Parameter. Slices sind länglicher. Stapel sind "latitudini".
--   Bereiche werden am Ursprung zentriert gezeichnet. Anstatt den Speicherort anzugeben, führen Sie wie bei der Iris GL **sphdraw** -Funktion einen aufzurufenden Befehl an die Funktion "glu [**glusphere**](glusphere.md) " mit einer Übersetzung aus.
+-   Sie können nicht den Typ der Primitive steuern, die zum Zeichnen der Kugel verwendet werden. Sie können die Zeichnungsgenauigkeit auf andere Weise steuern: Verwenden Sie die Parameter slices und stacks. Slices sind Ungen; -Stapel sind latitudinal.
+-   Kugeln werden am Ursprung zentriert gezeichnet. Anstatt den Speicherort wie bei der IRIS **GL-Sphdraw-Funktion** anzugeben, gehen Sie einem Aufruf der [**GLU-gluSphere-Funktion**](glusphere.md) mit einer Übersetzung voraus.
 -   Die Sphere-Bibliothek ist für OpenGL noch nicht verfügbar.
 
-In der folgenden Tabelle sind die Iris GL-Funktionen für Zeichnungs Sphären und ihre entsprechenden glu-Funktionen aufgeführt, sofern verfügbar.
+In der folgenden Tabelle sind die IRIS GL-Funktionen zum Zeichnen von Kugeln und die entsprechenden GLU-Funktionen aufgeführt, sofern verfügbar.
 
 
 
-| IRIS GL-Funktion | Glu-Funktion                                 | Bedeutung                                       |
+| IRIS GL-Funktion | GLU-Funktion                                 | Bedeutung                                       |
 |------------------|----------------------------------------------|-----------------------------------------------|
-| **sphobj**       | [**glunewquadric**](glunewquadric.md)       | Erstellt ein neues Sphere-Objekt.                  |
-| **sphfree**      | [**gludeletequadric**](gludeletequadric.md) | Löscht das kugelobjekt und den verwendeten freien Arbeitsspeicher.   |
-| **sphdraw**      | [**glusphere**](glusphere.md)               | Zeichnet eine Kugel.                               |
-| **sphmode**      |                                              | Legt Sphere-Attribute fest.                       |
-| **sphrotmatrix** |                                              | Steuert die Kugel Ausrichtung.                  |
-| **sphgnpolys**   |                                              | Gibt die Anzahl von Polygonen in der aktuellen Kugel zurück. |
+| **sphobj**       | [**gluNewQuadric**](glunewquadric.md)       | Erstellt ein neues Kugelobjekt.                  |
+| **sphfree**      | [**gluDeleteQuadric**](gludeletequadric.md) | Löscht das Sphere-Objekt und den verwendeten freien Arbeitsspeicher.   |
+| **sphdraw**      | [**gluSphere**](glusphere.md)               | Zeichnet eine Kugel.                               |
+| **sphmode**      |                                              | Legt Kugelattribute fest.                       |
+| **sphrotmatrix** |                                              | Steuert die Ausrichtung der Kugel.                  |
+| **splknpolys**   |                                              | Gibt die Anzahl von Polygonen in der aktuellen Kugel zurück. |
 
 
 
- 
+ 
 
 ??
 
- 
+ 
 
- 
+ 
 
 
 

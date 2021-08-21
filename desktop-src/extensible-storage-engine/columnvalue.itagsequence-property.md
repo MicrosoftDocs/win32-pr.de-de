@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der ColumnValue. itagsequence-Eigenschaft.
-title: ColumnValue. itagsequence (Eigenschaft)
+description: Weitere Informationen zur ColumnValue.ItagSequence-Eigenschaft
+title: ColumnValue.ItagSequence-Eigenschaft
 TOCTitle: 'ItagSequence property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnValue.ItagSequence
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnvalue.itagsequence(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9bc861b22a4cab48bef5ebb4673fb57b04971fad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44f8c97a9056dc082e8e6bb507256700eedb4c0d708128d9e7a2a019efc96df9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083754"
 ---
-# <a name="columnvalueitagsequence-property"></a>ColumnValue. itagsequence (Eigenschaft)
+# <a name="columnvalueitagsequence-property"></a>ColumnValue.ItagSequence-Eigenschaft
 
-Ruft die ITAG-Spalte der Spalte ab oder legt Sie fest.
+Ruft die Spalten itag-Sequenz ab oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int ItagSequence { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnValue-Klasse](./columnvalue-class.md)
 
-[ColumnValue-Member](./columnvalue-members.md)
+[ColumnValue-Elemente](./columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

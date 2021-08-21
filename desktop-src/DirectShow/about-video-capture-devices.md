@@ -1,29 +1,29 @@
 ---
-description: Informationen zu Video Erfassungs Geräten
+description: Informationen zu Videoaufnahmegeräten
 ms.assetid: 1bf6e64f-c3cf-45a4-9f87-1b8cf503d98b
-title: Informationen zu Video Erfassungs Geräten
+title: Informationen zu Videoaufnahmegeräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98ab9797c11b5c22f6196a5b4e781e50ce34edec
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4ff3fff9f3d009006e300afdbe9986bfdc8d0a32ea618fdd2748efe0bd650b5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118160183"
 ---
-# <a name="about-video-capture-devices"></a>Informationen zu Video Erfassungs Geräten
+# <a name="about-video-capture-devices"></a>Informationen zu Videoaufnahmegeräten
 
-Die meisten neuen Video Erfassungsgeräte verwenden Windows-Treibermodell-Treiber (WDM). In der WDM-Architektur stellt Microsoft eine Reihe von hardwareunabhängigen Treibern bereit, die als Klassen Treiber bezeichnet werden, und der Hardwarehersteller stellt Hardware spezifische Mini Treiber bereit. Ein Mini Treiber implementiert alle Funktionen, die für das Gerät spezifisch sind. für die meisten Funktionen ruft der Mini Treiber den Microsoft-Klassen Treiber auf.
+Die meisten neuen Videoaufzeichnungsgeräte verwenden Windows Treibermodelltreiber (WDM). In der WDM-Architektur stellt Microsoft eine Reihe hardwareunabhängiger Treiber bereit, die als Klassentreiber bezeichnet werden, und der Hardwarehersteller stellt hardwarespezifische Minitreiber bereit. Ein Minitreiber implementiert alle Funktionen, die für das Gerät spezifisch sind. Für die meisten Funktionen ruft der Minitreiber den Microsoft-Klassentreiber auf.
 
-In einem DirectShow-Filter Diagramm wird jedes WDM-Erfassungsgerät als [WDM-Video Erfassungs](wdm-video-capture-filter.md) Filter angezeigt. Der WDM-Video Erfassungs Filter konfiguriert sich selbst basierend auf den Merkmalen des Treibers. Sie wird unter einem vom Treiber bereitgestellten Namen angezeigt – Sie sehen keinen Filter mit dem Namen "WDM-Video Erfassungs Filter" an einer beliebigen Stelle im Diagramm.
+In einem DirectShow-Filterdiagramm wird jedes WDM-Erfassungsgerät als [WDM-Videoerfassungsfilter](wdm-video-capture-filter.md) angezeigt. Der WDM Video Capture-Filter konfiguriert sich selbst basierend auf den Merkmalen des Treibers. Er wird unter einem namen angezeigt, der vom Treiber bereitgestellt wird. Ein Filter namens "WDM Video Capture Filter" wird an keiner Stelle im Diagramm angezeigt.
 
-Einige ältere Erfassungsgeräte verwenden weiterhin Video für Windows-Treiber (Vfw). Obwohl diese Treiber mittlerweile veraltet sind, werden Sie in DirectShow über den [VFW-Erfassungs](vfw-capture-filter.md) Filter unterstützt.
+Einige ältere Erfassungsgeräte verwenden Video weiterhin für VFW-Treiber (Windows). Obwohl diese Treiber jetzt veraltet sind, werden sie in DirectShow über den [VFW Capture-Filter](vfw-capture-filter.md) unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Video Erfassung in DirectShow](about-video-capture-in-directshow.md)
+[Informationen zur Videoerfassung in DirectShow](about-video-capture-in-directshow.md)
 </dt> </dl>
 
  

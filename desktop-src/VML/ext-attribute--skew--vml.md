@@ -1,26 +1,26 @@
 ---
-title: Ext-Attribut (schiefe) (VML)
-description: Ext-Attribut (schiefe) (VML)
+title: Ext-Attribut (Schiefe)(VML)
+description: Ext-Attribut (Schiefe)(VML)
 ms.assetid: ff1dfb2f-9098-4418-a2f7-c7159328bd09
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 153273f613d188ae9e6fe733b2d0337c5010295d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1b0a001812a5504940509fac82333b2ca637ae76a913218f44cd3a06b4c18bfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125360"
 ---
-# <a name="ext-attribute-skewvml"></a>Ext-Attribut (schiefe) (VML)
+# <a name="ext-attribute-skewvml"></a>Ext-Attribut (Schiefe)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Art und Weise, wie eine schiefe angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert, wie eine Schiefe angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
@@ -28,26 +28,26 @@ Definiert die Art und Weise, wie eine schiefe angezeigt wird. Lese-/Schreibzugri
 
 **Tagsyntax**
 
-<o: *Element* v:ext = " *Ausdruck* " >
+<o: *element* v:ext="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . ext = "*Ausdruck*"
+*element* .ext="*expression*"
 
-*Ausdruck* = *Element*. ext
+*expression* = *Element*.ext
 
 **Anmerkungen**
 
-Dieses Attribut wird verwendet, um grafischen Editoren mitzuteilen, wie das **schiefe** -Element verarbeitet werden soll. Mögliche Werte:
+Dieses Attribut wird verwendet, um grafischen Editoren zu zeigen, wie das **Skew-Element zu verarbeiten** ist. Mögliche Werte:
 
 -   **edit**
--   **anzeigen** (Standard)
--   **backwardkompatibel**
+-   **view** (Standard)
+-   **backwardCompatible**
 
-Wenn eine Erweiterung auf **Bearbeiten** festgelegt ist, kann Sie von einem Software Viewer ignoriert werden. Wenn Sie auf **View** festgelegt ist, muss der Viewer stattdessen die Bitmap-Darstellung Rendering.
+Wenn eine Erweiterung zum Bearbeiten von **festgelegt ist,** kann sie von einem Software-Viewer ignoriert werden. Wenn diese Option auf **view festgelegt** ist, muss der Viewer stattdessen die Bitmapdarstellung rendern.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

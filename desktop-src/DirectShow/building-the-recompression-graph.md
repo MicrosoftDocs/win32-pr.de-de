@@ -1,29 +1,29 @@
 ---
-description: Das neukomprimierungs Diagramm wird erstellt.
+description: Erstellen der Neukomprimierungs Graph
 ms.assetid: 8f25c60e-30be-4cc4-b924-b8d6654604d3
-title: Das neukomprimierungs Diagramm wird erstellt.
+title: Erstellen der Neukomprimierungs Graph
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b8ea604bead34c22c123bbabe5d88e985006a9e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0432f51e5309a308b32535993fef04da1762d45f179e1ab3a6826d4c5432b02b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118159119"
 ---
-# <a name="building-the-recompression-graph"></a>Das neukomprimierungs Diagramm wird erstellt.
+# <a name="building-the-recompression-graph"></a>Erstellen der Neukomprimierungs Graph
 
-Ein typisches Filter Diagramm für die Neukomprimierung von AVI-Dateien sieht wie folgt aus:
+Ein typisches Filterdiagramm für die ERNEUTE Komprimierung von AVI-Dateien sieht wie folgt aus:
 
-![Diagramm der AVI-Neukomprimierung](images/avi2avi4.png)
+![Avi-Rekomprimierungsdiagramm](images/avi2avi4.png)
 
-Der [avi-Splitter Filter](avi-splitter-filter.md) Ruft Daten aus dem [Datei Quell Filter (Async)](file-source--async--filter.md) ab und analysiert sie in Video-und Audiostreams. Das Video Debug decodiert das komprimierte Video, bei dem es durch den Video-Kompressor erneut komprimiert wird. Die Auswahl der Dekompressoren hängt von der Quelldatei ab. Sie wird automatisch von [Intelligent Connect](intelligent-connect.md)verarbeitet. Die Anwendung muss den-Kompressor auswählen, in der Regel durch das präsentieren einer Liste für den Benutzer. (Siehe [Auswählen eines Komprimierungs Filters](choosing-a-compression-filter.md).)
+Der [AVI-Splitterfilter](avi-splitter-filter.md) pullt Daten aus dem Filter ["File Source (Async)"](file-source--async--filter.md) und analysiert sie in Video- und Audiostreams. Der Videodekomprimierungs-Dekomprimierer decodiert das komprimierte Video, wo es von der Videobeodruckung erneut komprimiert wird. Die Auswahl der Dekomprimatoren hängt von der Quelldatei ab. wird automatisch von Intelligent [Verbinden.](intelligent-connect.md) Die Anwendung muss den Zettel auswählen, in der Regel indem dem Benutzer eine Liste angezeigt wird. (Siehe [Auswählen eines Komprimierungsfilters.)](choosing-a-compression-filter.md)
 
-Das komprimierte Video wechselt dann zum [AVI MUX-Filter](avi-mux-filter.md). Der Audiodatenstrom in diesem Beispiel ist nicht komprimiert und wird daher direkt vom avi-Splitter zum AVI MUX geleitet. Der AVI MUX lässt die beiden Streams ein, und der [dateiwriter-Filter](file-writer-filter.md) schreibt die Ausgabe auf den Datenträger. Beachten Sie, dass AVI MUX erforderlich ist, auch wenn die ursprüngliche Datei über keinen Audiodatenstrom verfügt.
+Das komprimierte Video geht dann zum [AVI Mux Filter](avi-mux-filter.md). Der Audiostream in diesem Beispiel ist nicht komprimiert und wird daher direkt vom AVI-Splitter an den AVI Mux übertragen. Der AVI Mux verkettet die beiden Datenströme, und der [File Writer-Filter](file-writer-filter.md) schreibt die Ausgabe auf den Datenträger. Beachten Sie, dass die AVI Mux-Datei auch dann erforderlich ist, wenn die ursprüngliche Datei keinen Audiostream enthält.
 
-Die einfachste Möglichkeit zum Erstellen dieses Filter Diagramms ist die Verwendung des [Erfassungs Diagramm](capture-graph-builder.md)-Generators, bei dem es sich um eine DirectShow-Komponente zum Erstellen von Erfassungs Diagrammen und anderen benutzerdefinierten Filter Diagrammen handelt.
+Die einfachste Möglichkeit zum Erstellen dieses Filterdiagramms ist die Verwendung des [Capture Graph Builder,](capture-graph-builder.md)einer DirectShow-Komponente zum Erstellen von Erfassungsdiagrammen und anderen benutzerdefinierten Filterdiagrammen.
 
-Starten Sie, indem Sie CoCreateInstance aufrufen, um den Erfassungs Diagramm-Generator zu erstellen:
+Rufen Sie zunächst CoCreateInstance auf, um den Capture Graph Builder zu erstellen:
 
 
 ```C++
@@ -35,17 +35,17 @@ hr = CoCreateInstance(CLSID_CaptureGraphBuilder2,
 
 
 
-Verwenden Sie dann den Erfassungs Diagramm-Generator, um das Filter Diagramm zu erstellen:
+Verwenden Sie dann den Capture Graph Builder, um das Filterdiagramm zu erstellen:
 
-1.  Erstellen Sie den Renderingabschnitt des Diagramms, der den AVI MUX-Filter und den [dateiwriter](file-writer-filter.md)enthält.
-2.  Fügen Sie dem Diagramm den Quell Filter und den Komprimierungs Filter hinzu.
-3.  Verbinden Sie den Quell Filter mit dem MUX-Filter. Der Erfassungs Diagramm-Generator fügt alle Splitter Filter ein, die zum Analysieren der Quelldatei erforderlich sind. Sie kann auch die Video-und Audiostreams durch Komprimierungs Filter weiterleiten.
+1.  Erstellen Sie den Renderingabschnitt des Diagramms, der den AVI Mux-Filter und den [File Writer enthält.](file-writer-filter.md)
+2.  Fügen Sie dem Diagramm den Quellfilter und den Komprimierungsfilter hinzu.
+3.  Verbinden quellfilter an den MUX-Filter. Der Generator für Erfassungsdiagramme fügt alle Splitter- und Decoderfilter ein, die zum Analysieren der Quelldatei erforderlich sind. Sie kann die Video- und Audiodatenströme auch über Komprimierungsfilter routen.
 
 In den folgenden Abschnitten werden die einzelnen Schritte erläutert.
 
-Erstellen des renderingabschnitts
+Erstellen des Renderingabschnitts
 
-Um den Renderingabschnitt des Diagramms zu erstellen, müssen Sie die [**ICaptureGraphBuilder2:: setoutputfilename**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) -Methode aufrufen. Diese Methode nimmt Eingabeparameter an, die den Medien Untertyp für die Ausgabe und den Namen der Ausgabedatei angeben. Sie gibt Zeiger auf den MUX-Filter und den dateiwriter zurück. Der Mux-Filter ist für die nächste Phase der Diagramm Bildung erforderlich. Der Zeiger auf den dateiwriter ist für dieses Beispiel nicht erforderlich, sodass der Parameter **null** sein kann:
+Um den Renderingabschnitt des Diagramms zu erstellen, rufen Sie die [**ICaptureGraphBuilder2::SetOutputFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) auf. Diese Methode verwendet Eingabeparameter, die den Medienuntertyp für die Ausgabe und den Namen der Ausgabedatei angeben. Sie gibt Zeiger auf den MUX-Filter und den Dateiwriter zurück. Der MUX-Filter wird für die nächste Phase der Graphen-Entwicklung benötigt. Der Zeiger auf den Dateiwriter ist für dieses Beispiel nicht erforderlich, sodass der Parameter NULL sein **kann:**
 
 
 ```C++
@@ -59,20 +59,20 @@ hr = pBuild->SetOutputFileName(
 
 
 
-Wenn die Methode zurückgegeben wird, hat der Mux-Filter einen ausstehenden Verweis Zähler. Achten Sie daher darauf, dass Sie den Zeiger später freigeben.
+Wenn die Methode zurückgegeben wird, verfügt der MUX-Filter über einen ausstehenden Verweiszähler. Stellen Sie daher sicher, dass Sie den Zeiger später wieder frei geben.
 
-Das folgende Diagramm zeigt das Filter Diagramm an dieser Stelle.
+Das folgende Diagramm zeigt das Filterdiagramm an diesem Punkt.
 
-![Renderingabschnitt des Filter Diagramms](images/avi2avi1.png)
+![Renderingabschnitt des Filterdiagramms](images/avi2avi1.png)
 
-Der Mux-Filter macht zwei Schnittstellen zum Steuern des AVI-Formats verfügbar:
+Der MUX-Filter macht zwei Schnittstellen zum Steuern des AVI-Formats verfügbar:
 
--   [**Iconfiginterleaving Interface**](/windows/desktop/api/Strmif/nn-strmif-iconfiginterleaving): legt den Überlappung-Modus fest.
--   [**Iconfigavimux-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iconfigavimux): legt den masterb Stream und den AVI-Kompatibilitäts Index fest.
+-   [**IConfigInterleaving-Schnittstelle:**](/windows/desktop/api/Strmif/nn-strmif-iconfiginterleaving)Legt den Überlappungsmodus fest.
+-   [**IConfigAviMux-Schnittstelle:**](/windows/desktop/api/Strmif/nn-strmif-iconfigavimux)Legt den Masterdatenstrom und den AVI-Kompatibilitätsindex fest.
 
-Hinzufügen der Quell-und Komprimierungs Filter
+Hinzufügen der Quell- und Komprimierungsfilter
 
-Der nächste Schritt besteht darin, die Quell-und Komprimierungs Filter dem Filter Diagramm hinzuzufügen. Der Erfassungs Diagramm-Generator erstellt automatisch eine Instanz des Filter Graph-Managers, wenn Sie setoutputfilename aufrufen. Rufen Sie einen Zeiger darauf ab, indem Sie die [**ICaptureGraphBuilder2:: getfiltergraph**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-getfiltergraph) -Methode aufrufen:
+Im nächsten Schritt fügen Sie dem Filterdiagramm die Quell- und Komprimierungsfilter hinzu. Der Capture Graph Builder erstellt automatisch eine Instanz des Filter-Graph-Managers, wenn Sie SetOutputFileName aufrufen. Rufen Sie einen Zeiger darauf ab, indem Sie die [**ICaptureGraphBuilder2::GetFiltergraph-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-getfiltergraph) aufrufen:
 
 
 ```C++
@@ -82,7 +82,7 @@ hr = pBuild->GetFiltergraph(&pGraph);
 
 
 
-Aufrufen Sie nun die [**igraphbuilder:: addsourcefilter**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-addsourcefilter) -Methode, um den asynchronen Datei Quell Filter hinzuzufügen, und die [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) -Methode, um den Video-Kompressor hinzuzufügen:
+Rufen Sie nun die [**IGraphBuilder::AddSourceFilter-Methode**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-addsourcefilter) auf, um den Filter Async File Source hinzuzufügen, und die [**IFilterGraph::AddFilter-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) um das Video zu hinzufügen:
 
 
 ```C++
@@ -93,17 +93,17 @@ hr = pGraph->AddFilter(pVComp, L"Compressor");
 
 
 
-An diesem Punkt sind der Quell Filter und der Komprimierungs Filter nicht mit anderen im Diagramm verbunden, wie in der folgenden Abbildung dargestellt:
+An diesem Punkt sind der Quellfilter und der Komprimierungsfilter mit nichts anderem im Diagramm verbunden, wie in der folgenden Abbildung dargestellt:
 
-![Diagramm mit Quell-und Komprimierungs Filtern Filtern](images/avi2avi2.png)
+![Filterdiagramm mit Quell- und Komprimierungsfiltern](images/avi2avi2.png)
 
-Verbinden Sie die Quelle mit dem MUX
+Verbinden der Quelle an den Mux
 
-Der letzte Schritt besteht darin, den Quell Filter über den Video-Kompressor mit dem AVI MUX-Filter zu verbinden. Verwenden Sie die [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) -Methode, die eine Ausgabe-PIN im Quell Filter mit einem angegebenen Senderfilter verbindet, optional über einen Komprimierungs Filter.
+Der letzte Schritt besteht im Verbinden des Quellfilters mit dem AVI Mux-Filter über den Videobeweis. Verwenden Sie [**die ICaptureGraphBuilder2::RenderStream-Methode,**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) mit der ein Ausgabepin auf dem Quellfilter mit einem angegebenen Senkenfilter (optional über einen Komprimierungsfilter) verknüpft wird.
 
-Die ersten beiden Parameter geben an, welche der Pins des Quell Filters eine Verbindung herstellen soll, indem Sie eine PIN-Kategorie und einen Medientyp festlegen. Der asynchrone Datei Quell Filter hat nur eine Ausgabe-PIN, daher sollten diese Parameter **null** sein. Mit den nächsten drei Parametern werden der Quell Filter, der Komprimierungs Filter (falls vorhanden) und der Mux-Filter angegeben.
+Die ersten beiden Parameter geben an, welche der Pins des Quellfilters eine Verbindung herstellen soll, indem eine Stecknadelkategorie und ein Medientyp festgelegt werden. Der Filter Async File Source verfügt nur über einen Ausgabepin, daher sollten diese Parameter **NULL sein.** Die nächsten drei Parameter geben den Quellfilter, den Komprimierungsfilter (falls noch) und den Mux-Filter an.
 
-Im folgenden Codebeispiel wird der Videostream über den Video-Kompressor gerendert:
+Im folgenden Codebeispiel wird der Videostream über den Videostream gerendert:
 
 
 ```C++
@@ -117,11 +117,11 @@ hr = pBuild->RenderStream(
 
 
 
-Im folgenden Diagramm wird das Filter Diagramm bisher gezeigt.
+Das folgende Diagramm zeigt das filter-Diagramm, das bisher erstellt wurde.
 
-![gerenderter Videostream](images/avi2avi3.png)
+![Gerenderter Videostream](images/avi2avi3.png)
 
-Angenommen, die Quelldatei enthält einen Audiodatenstrom. der [avi-Splitter](avi-splitter-filter.md) Filter hat eine Ausgabe-PIN für das Audioformat erstellt. Um diese PIN zu verbinden, nennen Sie RenderStream erneut:
+Unter der Annahme, dass die Quelldatei über einen Audiostream verfügt, hat der [AVI-Splitterfilter](avi-splitter-filter.md) einen Ausgabepin für die Audiodatei erstellt. Um diese Stecknadel zu verbinden, rufen Sie RenderStream erneut auf:
 
 
 ```C++
@@ -130,17 +130,17 @@ hr = pBuild->RenderStream(NULL, NULL, pSrc, NULL, pMux);
 
 
 
-Hier ist kein Komprimierungs Filter angegeben. Die Ausgabe-PIN des Quell Filters ist bereits verbunden, sodass die RenderStream-Methode im Splitter Filter eine nicht verbundene Ausgabe-PIN durchsucht. Er findet die audiopin und verbindet Sie direkt mit dem MUX-Filter. Wenn die Quelldatei nicht über einen Audiodatenstrom verfügt, tritt beim zweiten RenderStream-RenderStream ein Fehler auf. Dieses Verhalten ist normal. Das Diagramm ist nach dem ersten Aufruf von RenderStream fertiggestellt, sodass der Fehler im zweiten Aufruf harmlos ist.
+Hier wird kein Komprimierungsfilter angegeben. Der Ausgabepin des Quellfilters ist bereits verbunden, sodass die RenderStream-Methode nach einem nicht verbundenen Ausgabepin für den Splitterfilter sucht. Er findet den Audiopin und verbindet ihn direkt mit dem MUX-Filter. Wenn die Quelldatei über keinen Audiostream verfügt, ist beim zweiten Aufruf von RenderStream ein Fehler zu sehen. Dieses Verhalten ist normal. Das Diagramm ist nach dem ersten Aufruf von RenderStream abgeschlossen, sodass der Fehler im zweiten Aufruf unbedenklich ist.
 
-In diesem Beispiel ist die Reihenfolge der beiden RenderStream-Aufrufe wichtig. Da der zweite-Befehl keinen-Kompressor angibt, verbindet er jede nicht verbundene PIN vom avi-Splitter. Wenn Sie diesen Vorgang vor dem anderen durchführen, wird der Videostream möglicherweise ohne den Video-Kompressor mit dem AVI-MUX verbunden. Daher muss der spezifischere-Befehl (mit dem Komprimierungs Filter) zuerst erfolgen.
+In diesem Beispiel ist die Reihenfolge der beiden RenderStream-Aufrufe wichtig. Da im zweiten Aufruf kein Heft angegeben wird, werden alle nicht verbundenen Stecknadeln aus dem AVI-Splitter verbunden. Wenn Sie diesen Aufruf vor dem anderen aufrufen, wird der Videostream möglicherweise ohne Ihre Videobeendung mit der AVI Mux-Datei verbinden. Daher muss der spezifischere Aufruf (mit dem Komprimierungsfilter) zuerst geschehen.
 
-Bei der vorherigen Erörterung wurde angenommen, dass die Quelldatei eine AVI-Datei ist. Diese Technik funktioniert jedoch auch mit anderen Dateitypen, z. b. MPEG-Dateien. Das resultierende Filter Diagramm unterscheidet sich etwas.
+In der vorherigen Diskussion wurde davon ausgegangen, dass es sich bei der Quelldatei um eine AVI-Datei handelt. Dieses Verfahren funktioniert jedoch auch mit anderen Dateitypen, z. B. MPEG-Dateien. Das resultierende Filterdiagramm ist etwas anders.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Neukomprimieren einer AVI-Datei](recompressing-an-avi-file.md)
+[Erneutes Dekomprimieren einer AVI-Datei](recompressing-an-avi-file.md)
 </dt> </dl>
 
  

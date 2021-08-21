@@ -1,7 +1,7 @@
 ---
 description: Ruft das Gerät ab, das dem Sprite-Objekt zugeordnet ist.
 ms.assetid: 9ce18623-893e-4395-bdf7-8d16a641a557
-title: 'ID3DXSprite:: getdevice-Methode (D3dx9core. h)'
+title: ID3DXSprite::GetDevice-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: cf98eb932971a22232a5dbc8f0d5449f8639db97
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 396558e2a3dc6c267ae4da6fe10a257d93e758cca5aa5d80bd1f40c01ce5ee25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118094042"
 ---
-# <a name="id3dxspritegetdevice-method"></a>ID3DXSprite:: getdevice-Methode
+# <a name="id3dxspritegetdevice-method"></a>ID3DXSprite::GetDevice-Methode
 
 Ruft das Gerät ab, das dem Sprite-Objekt zugeordnet ist.
 
@@ -40,12 +40,12 @@ HRESULT GetDevice(
 
 <dl> <dt>
 
-*ppdevice* \[ Out, retval\]
+*ppDevice* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)\***
 
-Adresse eines Zeigers auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Direct3D-Geräte Objekt darstellt, das dem Sprite-Objekt zugeordnet ist.
+Adresse eines Zeigers auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Direct3D-Geräteobjekt darstellt, das dem Sprite-Objekt zugeordnet ist.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Adresse eines Zeigers auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9hel
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch Aufrufen dieser Methode wird der interne Verweis Zähler in der [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle vergrößert.
+Durch aufrufen dieser Methode wird die interne Verweisanzahl für die [**IDirect3DDevice9-Schnittstelle**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) erhöht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Durch Aufrufen dieser Methode wird der interne Verweis Zähler in der [**IDirect
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

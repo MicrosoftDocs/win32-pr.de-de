@@ -24,15 +24,15 @@ ms.locfileid: "118338641"
 ---
 # <a name="implementing-an-audio-dsp-plug-in"></a>Implementieren eines Audio-DSP-Plug-Ins
 
-Um ein Windows Media Player DSP-Plug-In zu erstellen, das Audiodaten verarbeitet, müssen Sie den Beispielcode in der Funktion **doProcessOutput** ändern. **DoProcessOutput** wird jedes Mal aufgerufen, wenn Windows Media Player **IMediaObject::P rocessOutput erfolgreich aufruft.** Es ist die Funktion, die die Aufgaben zur Verarbeitung digitaler Signale ausführt, die das akustische Ergebnis erzeugen, das das DSP-Plug-In erzeugen soll.
+Um ein Windows Media Player DSP-Plug-In zu erstellen, das Audio verarbeitet, müssen Sie den Beispielcode in der Funktion namens **DoProcessOutput** ändern. **DoProcessOutput** wird jedes Mal aufgerufen, wenn Windows Media Player **IMediaObject::P rocessOutput erfolgreich aufruft.** Es ist die Funktion, die die Aufgaben zur Verarbeitung digitaler Signale ausführt, die das akustische Ergebnis erzeugen, das das DSP-Plug-In erzeugen soll.
 
 Die Verarbeitung eines Audiodatenstroms entspricht der Behandlung eines Zeitereignisses. **DoProcessOutput** wird wiederholt und in bestimmten Intervallen aufgerufen. Bei jeder Ausführung des Codes muss eine bestimmte Anzahl von Datenbytes verarbeitet werden. **DoProcessOutput** enthält die folgenden Parameter:
 
 
 
-| Parameter          | BESCHREIBUNG                                                                                                             |
+| Parameter          | Beschreibung                                                                                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| *pbOutputData*     | Dies ist ein **BYTE-Zeiger** auf den Puffer, in den ihre Implementierung von **DoProcessOutput** die verarbeiteten Daten kopieren muss. |
+| *pbOutputData*     | Dies ist ein **BYTE-Zeiger** auf den Puffer, in den Die Implementierung von **DoProcessOutput** die verarbeiteten Daten kopieren muss. |
 | *pbInputData*      | Dies ist ein konstanter **BYTE-Zeiger** auf den Puffer, der die zu verarbeitenden Daten enthält.                               |
 | *cbBytesToProcess* | Dies ist ein **DWORD-Wert,** der die Anzahl der Bytes im zu verarbeitenden Eingabepuffer enthält.             |
 
@@ -40,7 +40,7 @@ Die Verarbeitung eines Audiodatenstroms entspricht der Behandlung eines Zeiterei
 
  
 
-In den folgenden Abschnitten erfahren Sie, wie Sie den vom Assistenten für Windows Media Player Plug-In generierten Code ändern, um Ihr eigenes Audio-DSP-Plug-In zu erstellen:
+In den folgenden Abschnitten erfahren Sie, wie Sie den vom Assistenten für Windows Media Player-Plug-In generierten Code ändern, um Ihr eigenes Audio-DSP-Plug-In zu erstellen:
 
 -   [Implementieren von DoProcessOutput](implementing-doprocessoutput.md)
 -   [Hinzufügen von Eigenschaften zum Beispiel-Audio-DSP-Plug-In](adding-properties-to-the-sample-audio-dsp-plug-in.md)
