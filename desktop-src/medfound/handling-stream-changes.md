@@ -1,122 +1,122 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Media Foundation Transformation (MFT) Formatänderungen beim Streaming behandeln soll.
+description: In diesem Thema wird beschrieben, wie eine Media Foundation Transform (MFT) Formatänderungen während des Streamings verarbeiten soll.
 ms.assetid: b0a94760-b4dd-4e50-a5ce-a1f674dde156
-title: Verarbeiten von streamänderungen
+title: Behandeln von Streamänderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2adf3cbc0504a37fe611b77047c73f85b9d1e742
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e238073bf518bc875b7b2d536c758eab48c8502278aae6780999c7616430337e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974429"
 ---
-# <a name="handling-stream-changes"></a>Verarbeiten von streamänderungen
+# <a name="handling-stream-changes"></a>Behandeln von Streamänderungen
 
-In diesem Thema wird beschrieben, wie eine Media Foundation Transformation (MFT) Formatänderungen beim Streaming behandeln soll.
+In diesem Thema wird beschrieben, wie eine Media Foundation Transform (MFT) Formatänderungen während des Streamings verarbeiten soll.
 
 > [!IMPORTANT]
 >
-> Dieses Thema gilt nicht für Encoder. Encoder sollten keine Formatänderungen weitergeben, wie in diesem Thema beschrieben. Encoder sollten nur einen Eingabetyp akzeptieren, der mit dem aktuell konfigurierten Ausgabetyp übereinstimmt.
+> Dieses Thema gilt nicht für Encoder. Encoder sollten formatierte Änderungen nicht wie in diesem Thema beschrieben weiter geben. Encoder sollten nur einen Eingabetyp akzeptieren, der dem aktuell konfigurierten Ausgabetyp entspricht.
 
  
 
-## <a name="overview-of-format-changes"></a>Übersicht über Format Änderungen
+## <a name="overview-of-format-changes"></a>Übersicht über Formatänderungen
 
-Im Allgemeinen gibt es zwei Gründe dafür, dass ein Format während des Streamings geändert werden kann.
+Im Allgemeinen gibt es zwei Gründe, warum sich ein Format während des Streamings ändern kann.
 
--   Der Client kann zu einem Stream mit einem neuen Format wechseln. Beispielsweise kann dies im digitalen Fernsehen aufgrund einer Kanal Änderung auftreten.
--   In einigen Videoformaten, z. b. H. 264, kann der Bitstrom eine Formatänderung signalisieren. Diese Änderungen können Änderungen an der Feld Dominanz, der Videoauflösung oder dem Pixel Seitenverhältnis einschließen.
+-   Der Client kann zu einem Stream mit einem neuen Format wechseln. Im digitalen Fernsehgerät kann dies beispielsweise aufgrund einer Kanaländerung auftreten.
+-   In einigen Videoformaten, z. B. H.264, kann der Bitstream eine Formatänderung signalisieren. Solche Änderungen können Änderungen der Felddominanz, videoauflösung oder des Pixel-Seitenverhältnisses umfassen.
 
-Wenn sich der Codierungstyp ändert, muss der Client möglicherweise die MFT aus der Pipeline entfernen und durch eine andere MFT ersetzen. (Beispielsweise muss der Client möglicherweise einen neuen Decoder austauschen.) Diese Situation wird in diesem Thema nicht behandelt. In diesem Thema wird nur die Groß-/Kleinschreibung behandelt, in der das aktuelle MFT das neue Format verarbeiten kann
+Wenn sich der Codierungstyp ändert, muss der Client möglicherweise den MFT aus der Pipeline entfernen und durch einen anderen MFT ersetzen. (Beispielsweise muss der Client möglicherweise in einem neuen Decoder austauschen.) In diesem Thema wird diese Situation nicht beschrieben. In diesem Thema wird nur der Fall behandelt, in dem der aktuelle MFT das neue Format verarbeiten kann.
 
-Wenn sich das Format ändert, erfordert die MFT möglicherweise einen neuen Eingabetyp, einen neuen Ausgabetyp oder beides.
+Wenn sich das Format ändert, erfordert MFT möglicherweise einen neuen Eingabetyp, einen neuen Ausgabetyp oder beides.
 
--   Änderungen am Eingabetyp werden vom Client initiiert. Ein MFT ändert seinen eigenen Eingabetyp nie.
--   Änderungen am Ausgabetyp werden vom MFT initiiert. Der MFT signalisiert, dass ein neuer Ausgabetyp erforderlich ist, und der Client aushandiert den neuen Ausgabetyp mit dem MFT.
+-   Änderungen am Eingabetyp werden vom Client initiiert. Ein MFT ändert nie seinen eigenen Eingabetyp.
+-   Änderungen am Ausgabetyp werden vom MFT initiiert. Der MFT signalisiert, dass ein neuer Ausgabetyp erforderlich ist, und der Client handelt den neuen Ausgabetyp mit dem MFT aus.
 
-Daher sind drei verschiedene Fälle möglich:
+Daher sind drei unterschiedliche Fälle möglich:
 
--   Der Client legt einen neuen Eingabetyp fest. Der MFT nutzt das neue Format ohne Änderung des Ausgabe Typs.
--   Der Client legt einen neuen Eingabetyp fest, und dies löst eine Änderung im Ausgabetyp aus.
--   Der Eingabetyp ändert sich nicht, aber der MFT erkennt eine Formatänderung im Bitstream, die einen neuen Ausgabetyp erfordert.
+-   Der Client legt einen neuen Eingabetyp fest. MFT verwendet das neue Format ohne Änderung des Ausgabetyps.
+-   Der Client legt einen neuen Eingabetyp fest, und dies löst eine Änderung des Ausgabetyps aus.
+-   Der Eingabetyp ändert sich nicht, aber MFT erkennt eine Formatänderung im Bitstream, die einen neuen Ausgabetyp erfordert.
 
-## <a name="implementing-format-changes"></a>Implementieren von Format Änderungen
+## <a name="implementing-format-changes"></a>Implementieren von Formatänderungen
 
-Im restlichen Teil dieses Themas wird beschrieben, wie der Client eine Formatänderung verarbeiten und Formatänderungen in einer MFT implementieren kann.
+Im weiteren Verlauf dieses Themas wird beschrieben, wie der Client eine Formatänderung verarbeiten und Formatänderungen in einem MFT implementieren soll.
 
 ### <a name="output-type"></a>Ausgabetyp
 
-Jede MFT kann wie folgt eine Änderung des Ausgabe Typs initiieren:
+Jeder MFT kann wie folgt eine Änderung des Ausgabetyps initiieren:
 
-1.  Vom Client wird " [**IMF Transform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)" aufgerufen. Die MFT antwortet wie folgt:
-    1.  Der MFT erzeugt kein Ausgabe Beispiel in " [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)".
-    2.  Der MFT legt das Flag für die **Änderung des MFT- \_ Ausgabe \_ Daten \_ Puffer \_ \_ Formats** im **dwStatus** -Member der [**MFT- \_ Ausgabe \_ Daten \_ Puffer**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_data_buffer) Struktur fest.
-    3.  Die [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) -Methode gibt den Fehlercode MF-E-Transform-Daten **\_ \_ \_ Strom \_ Änderung** zurück.
-2.  Der Client ruft [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype)auf. Diese Methode gibt einen aktualisierten Satz von Ausgabetypen zurück.
-3.  Der Client ruft [**setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) auf, um einen neuen Ausgabetyp festzulegen.
-4.  Der Client setzt das Aufrufen von [**ProcessInput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessinput) / [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)fort.
+1.  Der Client ruft [**DIETTRANSFORM::P rocessOutput auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) MFT antwortet wie folgt:
+    1.  MFT erzeugt kein Ausgabebeispiel in [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput).
+    2.  MFT legt das **MFT \_ OUTPUT DATA BUFFER FORMAT \_ \_ \_ \_ CHANGE-Flag** im **dwStatus-Member** der [**MFT OUTPUT DATA \_ \_ \_ BUFFER-Struktur**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_data_buffer) fest.
+    3.  Die [**ProcessOutput-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) gibt den Fehlercode **MF \_ E TRANSFORM STREAM CHANGE \_ \_ \_ zurück.**
+2.  Der Client ruft [**DIETTRANSFORM::GetOutputAvailableType auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) Diese Methode gibt einen aktualisierten Satz von Ausgabetypen zurück.
+3.  Der Client ruft [**SetOutputType auf,**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) um einen neuen Ausgabetyp zu festlegen.
+4.  Der Client setzt den Aufruf von [**ProcessInput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessinput) / [**ProcessOutput wieder ein.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)
 
 ### <a name="input-type"></a>Eingabetyp
 
-Änderungen am Eingabetyp werden vom Client initiiert, nie vom MFT. Wenn sich der Eingabetyp ändert, kann dies eine Änderung am Ausgabetyp auslöst.
+Änderungen am Eingabetyp werden vom Client initiiert, nie vom MFT. Wenn sich der Eingabetyp ändert, wird möglicherweise eine Änderung des Ausgabetyps ausgelöst.
 
-Die genaue Reihenfolge der Ereignisse hängt vom Wert des MFT-Unterstützungs Attributs für das [**\_ \_ dynamische \_ Format \_**](mft-support-dynamic-format-change-attribute.md) ab.
+Die genaue Abfolge der Ereignisse hängt vom Wert des [**MFT \_ SUPPORT DYNAMIC FORMAT \_ \_ \_ CHANGE-Attributs**](mft-support-dynamic-format-change-attribute.md) ab.
 
 
 
 | Wert     | BESCHREIBUNG                                                     |
 |-----------|-----------------------------------------------------------------|
-| **FALSE** | Bevor der Client einen neuen Eingabetyp festlegt, muss er die MFT entladen. |
-| **TRUE**  | Der Client kann einen neuen Eingabetyp festlegen, ohne die MFT zu entleeren.   |
+| **FALSE** | Bevor der Client einen neuen Eingabetyp fest legt, muss er den MFT leeren. |
+| **TRUE**  | Der Client kann einen neuen Eingabetyp festlegen, ohne den MFT zu leeren.   |
 
 
 
  
 
-Ein MFT macht dieses Attribut über seine [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) -Methode verfügbar. Der Standardwert dieses Attributs ist **false**. Wenn das Attribut vom MFT nicht festgelegt wird, behandeln Sie den Wert als **false**.
+Ein MFT macht dieses Attribut über seine [**METHODE ZUM ÜBERTRAGEN::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) verfügbar. Der Standardwert dieses Attributs ist **FALSE.** Wenn MFT das Attribut nicht festgelegt, behandeln Sie den Wert als **FALSE.**
 
-**MFT- \_ Unterstützung der \_ dynamischen \_ Format \_ Änderung ist falsch**
+**MFT SUPPORT DYNAMIC FORMAT CHANGE is FALSE (MFT-UNTERSTÜTZUNG \_ \_ FÜR DYNAMISCHE \_ \_ FORMATÄNDERUNG IST FALSE)**
 
-1.  Der Client sendet die [**MFT \_ - \_ Nachrichten \_ Befehls**](mft-message-command-drain.md) Ausgleichs Nachricht.
-2.  Der Client zieht die MFT durch Aufrufen von [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) , bis **ProcessOutput** zurückgibt, **\_ dass MF E \_ Transform \_ \_ mehr \_ Eingaben benötigt**.
-3.  Der Client ruft [**imftransform:: setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf, um den neuen Eingabetyp festzulegen.
-4.  Der MFT überprüft den Eingabetyp. Wenn der Typ ungültig ist, gibt [**setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) **MF \_ E \_ invalidmediatype** oder einen anderen Fehlercode zurück. Andernfalls gibt "* **tinputtype** " "S OK" zurück \_ .
-5.  Wenn der Eingabetyp gültig ist, wertet der MFT aus, ob der Ausgabetyp ebenfalls geändert wird. Andernfalls wird das Streaming fortgesetzt, und es ist keine weitere Aktion erforderlich.
+1.  Der Client sendet die [**MFT \_ MESSAGE COMMAND \_ \_ DRAIN-Nachricht.**](mft-message-command-drain.md)
+2.  Der Client entleert den MFT durch Aufrufen [**vonGEFTransform::P rocessOutput,**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) bis **ProcessOutput** **MF \_ E TRANSFORM NEED MORE INPUT \_ \_ \_ \_ zurückgibt.**
+3.  Der Client ruft [**DEN TYP DERTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf, um den neuen Eingabetyp zu festlegen.
+4.  Der MFT überprüft den Eingabetyp. Wenn der Typ ungültig ist, gibt [**SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) **MF \_ E \_ INVALIDMEDIATYPE** oder einen anderen Fehlercode zurück. Andernfalls **gibt SetInputType** S \_ OK zurück.
+5.  Wenn der Eingabetyp gültig ist, wertet MFT aus, ob sich auch der Ausgabetyp ändert. Ander denn, das Streaming wird fortgesetzt, und es ist keine weitere Aktion erforderlich.
 6.  Wenn sich der Ausgabetyp ändert:
-    1.  Der MFT macht seinen aktuellen Ausgabe Medientyp ungültig und aktualisiert die Liste der verfügbaren Ausgabemedien Typen.
-    2.  Der nächste Rückruf von [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) gibt **die \_ \_ Änderungs Daten \_ Strom \_ Änderung von MF E** zurück, wie im vorherigen Abschnitt beschrieben.
-    3.  Der Client ruft [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) auf, um die aktualisierte Liste der Ausgabetypen zu erhalten.
-    4.  Der Client ruft [**setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype)auf.
+    1.  Der MFT macht seinen aktuellen Ausgabemedientyp ungültig und aktualisiert die Liste der verfügbaren Ausgabemedientypen.
+    2.  Der nächste Aufruf von [**ProcessOutput gibt**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) **MF \_ E TRANSFORM \_ STREAM \_ \_ CHANGE** zurück, wie im vorherigen Abschnitt beschrieben.
+    3.  Der Client ruft [**DIETTRANSFORM::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) auf, um die aktualisierte Liste der Ausgabetypen zu erhalten.
+    4.  Der Client ruft [**SetOutputType auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype)
 
-**MFT- \_ Unterstützung \_ \_ für dynamische Format \_ Änderung ist true**
+**MFT \_ SUPPORT \_ DYNAMIC \_ FORMAT \_ CHANGE is TRUE**
 
-1.  Der Client ruft [**imftransform:: setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf, um den neuen Eingabetyp festzulegen.
-2.  Der MFT überprüft den Eingabetyp. Wenn der Typ ungültig ist, gibt [**setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) **MF \_ E \_ invalidmediatype** oder einen anderen Fehlercode zurück. Andernfalls gibt "* **tinputtype** " "S OK" zurück \_ .
-3.  Wenn der Eingabetyp gültig ist, wertet der MFT aus, ob der Ausgabetyp ebenfalls geändert wird. Andernfalls wird das Streaming fortgesetzt, und es ist keine weitere Aktion erforderlich.
-4.  Bevor der Ausgabetyp geändert wird, muss der MFT alle zwischengespeicherten Eingabe Beispiele wie folgt verarbeiten:
-    1.  Der aktuelle Ausgabetyp wird vom MFT nicht für ungültig erklärt.
-    2.  Der MFT erzeugt so viele Ausgaben wie aus den zwischengespeicherten Eingabe Beispielen.
-    3.  Es ist optional, ob der MFT bei der Verarbeitung der zwischengespeicherten Beispiele neue Eingabe Beispiele akzeptiert. Wenn dies der Fall ist, wird in den neuen Eingabe Beispielen das neue Eingabeformat verwendet, sodass die MFT den Punkt nachverfolgen muss, an dem sich das Format geändert hat.
-5.  Nachdem die MFT alle Abtastungen verarbeitet hat, die vor dem Eingabetyp empfangen wurden, gibt [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) die **Änderung von MF \_ E \_ Transform \_ Stream \_** zurück.
-6.  Der MFT macht seinen aktuellen Ausgabetyp ungültig und aktualisiert die Liste der verfügbaren Ausgabemedien Typen.
-7.  Der Client aushandiert den neuen Ausgabetyp, wie zuvor beschrieben.
+1.  Der Client ruft [**DEN TYP DERTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf, um den neuen Eingabetyp zu festlegen.
+2.  Der MFT überprüft den Eingabetyp. Wenn der Typ ungültig ist, gibt [**SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) **MF \_ E \_ INVALIDMEDIATYPE** oder einen anderen Fehlercode zurück. Andernfalls **gibt SetInputType** S \_ OK zurück.
+3.  Wenn der Eingabetyp gültig ist, wertet MFT aus, ob sich auch der Ausgabetyp ändert. Ander denn, das Streaming wird fortgesetzt, und es ist keine weitere Aktion erforderlich.
+4.  Bevor sich der Ausgabetyp ändert, muss MFT alle zwischengespeicherten Eingabebeispiele wie folgt verarbeiten:
+    1.  Der aktuelle Ausgabetyp des MFT wird nicht ungültig.
+    2.  MFT erzeugt so viel Ausgabe wie möglich aus den zwischengespeicherten Eingabebeispielen.
+    3.  Es ist optional, ob MFT neue Eingabebeispiele akzeptiert, während die zwischengespeicherten Stichproben verarbeitet werden. Wenn ja, verwenden die neuen Eingabebeispiele das neue Eingabeformat, sodass der MFT den Zeitpunkt nachverfolgen muss, an dem sich das Format geändert hat.
+5.  Nachdem der MFT alle Stichproben verarbeitet hat, die er vor der Änderung des Eingabetyps erhalten hat, gibt [**DER EINGABETRANSFORM::P rocessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) **MF \_ E TRANSFORM STREAM \_ CHANGE \_ \_ zurück.**
+6.  Der MFT macht seinen aktuellen Ausgabetyp ungültig und aktualisiert die Liste der verfügbaren Ausgabemedientypen.
+7.  Der Client handelt den neuen Ausgabetyp aus, wie zuvor beschrieben.
 
-[Asynchrone MFTs](asynchronous-mfts.md) müssen den Wert **true** für das [**MFT-Unterstützungs Attribut für \_ \_ dynamische \_ Format \_ Änderungen**](mft-support-dynamic-format-change-attribute.md) zurückgeben. Wenn ein asynchroner MFT verwendet wird, kann der Client davon ausgehen, dass die **MFT- \_ Unterstützung des \_ dynamischen \_ Format \_ Änderungs** Attributs auf **true** festgelegt ist.
+[Asynchrone MFTs](asynchronous-mfts.md) müssen den Wert **TRUE für** das [**MFT SUPPORT DYNAMIC FORMAT \_ \_ \_ \_ CHANGE-Attribut**](mft-support-dynamic-format-change-attribute.md) zurückgeben. Bei Verwendung eines asynchronen MFT kann der Client davon ausgehen, dass das **MFT \_ SUPPORT DYNAMIC \_ FORMAT \_ \_ CHANGE-Attribut** auf TRUE festgelegt **ist.**
 
-Wenn die [**MFT- \_ Unterstützung für die \_ dynamische \_ Format \_ Änderung**](mft-support-dynamic-format-change-attribute.md) **zutrifft**, besteht der Hauptunterschied darin, dass der Client die MFT nicht vor dem Festlegen eines neuen Eingabetyps entladen muss. Folglich ändert sich der Eingabetyp möglicherweise, während der MFT Eingabe Beispiele hält. Es ist wichtig, dass die MFT diese Beispiele nicht einfach löscht. Außerdem kann der Ausgabetyp erst geändert werden, wenn der MFT alle zwischengespeicherten Daten verarbeitet.
+Wenn [**MFT \_ SUPPORT DYNAMIC \_ FORMAT \_ \_ CHANGE**](mft-support-dynamic-format-change-attribute.md) **true** ist, besteht der Hauptunterschied in dem, dass der Client den MFT vor dem Festlegen eines neuen Eingabetyps nicht leeren muss. Daher kann sich der Eingabetyp ändern, während MFT Eingabebeispiele bei sich hält. Es ist wichtig, dass MFT diese Beispiele nicht einfach ausmustert. Außerdem kann sich der Ausgabetyp erst ändern, wenn der MFT alle zwischengespeicherten Daten verarbeitet.
 
-Der vorherige Absatz gilt besonders für Video-Decoders, die intercodierte Frames aus Temporaler Reihenfolge empfangen können und daher zwischengespeichert werden müssen. Wenn eine MFT keine Eingabe Beispiele zwischenspeichert, ist die Ableitung im Grunde kein op. In diesem Fall kann die MFT die [**MFT- \_ Unterstützung für das \_ dynamische \_ Format \_ ändern**](mft-support-dynamic-format-change-attribute.md) auf **false** festlegen (oder das Attribut nicht festlegen).
+Der vorherige Absatz gilt insbesondere für Videodecoder, die intercodierte Frames in temporaler Reihenfolge empfangen und daher zwischenspeichern müssen. Wenn ein MFT keine Eingabebeispiele zwischenspeichert, ist das Leeren im Wesentlichen kein Op. In diesem Fall kann MFT SUPPORT [**\_ DYNAMIC FORMAT \_ \_ \_ CHANGE**](mft-support-dynamic-format-change-attribute.md) auf **FALSE** festlegen (oder das Attribut nicht festlegen).
 
-Beachten Sie außerdem, dass jedes MFT erwartet, dass Formatänderungen ordnungsgemäß verarbeitet werden, nachdem es entladen wurde. Das Change-Attribut für die [**MFT- \_ Unterstützung für das \_ dynamische \_ Format \_**](mft-support-dynamic-format-change-attribute.md) gibt an, ob die MFT Format Änderungen ohne Abbild
+Beachten Sie außerdem, dass von jedem MFT erwartet wird, dass Formatänderungen nach dem Leeren ordnungsgemäß verarbeitet werden. Das [**MFT \_ SUPPORT DYNAMIC \_ FORMAT \_ \_ CHANGE-Attribut**](mft-support-dynamic-format-change-attribute.md) gibt an, ob MFT Formatänderungen ohne Leerung unterstützt.
 
 ## <a name="change-in-interlace-mode"></a>Änderung im Interlace-Modus
 
-Änderungen im Video-interschnür Modus sind ein Sonderfall, da Sie den aktuellen Medientyp nicht für ungültig erklären. Stattdessen wird der damit-Modus für jeden Video Frame durch Festlegen von Attributen für das Medien Beispiel angegeben. Ein Video-MFT sollte jedes Eingabe Beispiel auf das vorhanden sein dieser Flags überprüfen.
+Änderungen im Video interlacing-Modus sind ein Sonderfall, da sie den aktuellen Medientyp nicht ungültig machen. Stattdessen wird der Interlace-Modus für jeden Videoframe angegeben, indem Attribute für das Medienbeispiel festgelegt werden. Ein Video-MFT sollte jedes Eingabebeispiel auf das Vorhandensein dieser Flags überprüfen.
 
-Der damit-Modus kann sich ändern, wenn die Feld Dominanz von oben nach unten Feld wechselt oder wenn das Video zwischen progressiven und Zeilen Sprung Bildern wechselt.
+Der Interlace-Modus kann sich ändern, wenn die Felddominanz vom oberen feld zum unteren Feld wechselt oder wenn das Video zwischen progressiven und interlaced-Bildern wechselt.
 
-Weitere Informationen finden Sie unter [Interlace Flags on Samples](video-interlacing.md).
+Weitere Informationen finden Sie unter [Interlace-Flags unter Beispiele.](video-interlacing.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,7 +1,7 @@
 ---
-description: Handle f체r die Modul Instanz.
+description: Handle f체r die Modulinstanz.
 ms.assetid: ad889ebe-2bd8-4456-9517-9e2909697a02
-title: 'Cbasewindow:: m_hInstance Member (winutil. h)'
+title: CBaseWindow::m_hInstance-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6482aac80c1298ea403019f43ddc4effdc30b00a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ddf1da2d7f947bbaed9972a40a20497a81f84ebda68dba31cd5518b64f6e8434
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016528"
 ---
-# <a name="cbasewindowm_hinstance-member"></a>Cbasewindow:: m \_ HINSTANCE-Member
+# <a name="cbasewindowm_hinstance-member"></a>CBaseWindow::m \_ hInstance-Member
 
-Handle f체r die Modul Instanz.
+Handle f체r die Modulinstanz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ HINSTANCE m_hInstance;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion "DLL-Einstiegspunkt" legt eine globale Variable mit einem Handle f체r die Modul Instanz fest. Die **cbasewindow** -Klasse speichert dieses Handle in seiner Konstruktormethode.
+Die DLL-Einstiegspunktfunktion legt eine globale Variable mit einem Handle f체r die Modulinstanz fest. Die **CBaseWindow-Klasse** speichert dieses Handle in ihrer Konstruktormethode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Die Funktion "DLL-Einstiegspunkt" legt eine globale Variable mit einem Handle f�
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

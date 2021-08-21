@@ -1,49 +1,49 @@
 ---
-title: Remotedesktopdienste audioendpoint-API-Referenz
-description: Unterstützt Schnittstellen für die audioendpunkt Registrierung und den Datentransport.
+title: Remotedesktopdienste AudioEndpoint-API-Referenz
+description: Unterstützt Schnittstellen für die Registrierung von Audioendpunkten und den Datentransport.
 ms.assetid: 0e3ea0e7-8c61-400e-b8ef-8a0403aedafa
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, audioendpoint-API-Referenz
+- Remotedesktopdienste Remotedesktopdienste , AudioEndpoint-API-Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1958b21643083a14110ddad77f68024cc464dd36
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ae9a7aa83b519ca10128f9bea3b945492f387c0498c81f8b2959cb9830b91dbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000090"
 ---
-# <a name="remote-desktop-services-audioendpoint-api-reference"></a>Remotedesktopdienste audioendpoint-API-Referenz
+# <a name="remote-desktop-services-audioendpoint-api-reference"></a>Remotedesktopdienste AudioEndpoint-API-Referenz
 
-Ein *audioendpunkt* stellt ein Audiogerät, eine audioapi oder eine beliebige andere Audioquelle oder-Senke dar und wird verwendet, um Daten an die Audioengine zu senden oder Sie zu nutzen. Ein audioendpunkt muss über eine *Verbindung* mit dem Audiomodul verbunden sein, und jede Verbindung kann nur einen Endpunkt haben. Nachdem ein Endpunkt registriert wurde, fügt die Audioengine den Endpunkt an die Verbindung an.
+Ein *Audioendpunkt* stellt ein Audiogerät, eine Audio-API oder eine beliebige andere Audioquelle oder -senke dar und wird verwendet, um Daten an die Audio-Engine zu senden oder diese zu nutzen. Ein Audioendpunkt muss über eine *Verbindung* mit der Audio-Engine verbunden sein, und mit jeder Verbindung kann nur ein Endpunkt verbunden sein. Nachdem ein Endpunkt registriert wurde, fügt die Audio-Engine den Endpunkt an die Verbindung an.
 
-Jedes Endpunkt Objekt muss die folgenden Schnittstellen implementieren:
+Jedes Endpunktobjekt muss die folgenden Schnittstellen implementieren:
 
--   [**Iaudioendpoint**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpoint) , um dem Audiomodul zu ermöglichen, Informationen zum Endpunkt zu erhalten.
--   [**Iaudioendpointrt**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpointrt) , um Informationen über den Datenpuffer zu erhalten, bevor ein Verarbeitungs Durchlauf durchgeführt und der Endpunkt benachrichtigt wird, wenn der Durchlauf abgeschlossen ist.
--   Entweder die [**iaudioinputendpointrt**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioinputendpointrt) -oder die [**iaudiooutputendpointrt**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudiooutputendpointrt) -Schnittstelle, abhängig davon, ob das Endpunkt Objekt Audiodaten erfasst oder rendert.
--   [**Iaudiodeviceendpoint**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudiodeviceendpoint)
--   [**Iaudioendpointcontrol**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpointcontrol)
+-   [**IAudioEndpoint,**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpoint) um der Audio-Engine das Abrufen von Informationen zum Endpunkt zu ermöglichen.
+-   [**IAudioEndpointRT,**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpointrt) um Informationen zum Datenpuffer abzurufen, bevor ein Verarbeitungsdurchlauf ausgeführt und der Endpunkt benachrichtigt wird, wenn der Durchlauf abgeschlossen ist.
+-   Entweder die [**IAudioInputEndpointRT-**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioinputendpointrt) oder [**IAudioOutputEndpointRT-Schnittstelle,**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudiooutputendpointrt) je nachdem, ob das Endpunktobjekt Audiodaten erfasst oder rendert.
+-   [**IAudioDeviceEndpoint**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudiodeviceendpoint)
+-   [**IAudioEndpointControl**](/windows/desktop/api/Audioengineendpoint/nn-audioengineendpoint-iaudioendpointcontrol)
 
-Die Audioengine verwendet diese Schnittstellen, um Informationen zu den Endpunkten zu erhalten, die an die Engine angefügt sind. Die Endpunkt Implementierung muss den Mechanismus bereitstellen, mit dem Daten an die Engine übertragen werden können, wie von diesen Schnittstellen angegeben.
+Die Audio-Engine verwendet diese Schnittstellen, um Informationen zu den Endpunkten abzurufen, die an die Engine angefügt sind. Die Endpunktimplementierung muss den Mechanismus zum Übermitteln oder Nutzen von Daten aus der Engine bereitstellen, wie von diesen Schnittstellen angegeben.
 
-Die Remotedesktopdienste audioendpoint-API unterstützt Enumerationstypen, Schnittstellen und Strukturen.
+Die Remotedesktopdienste AudioEndpoint-API unterstützt Enumerationstypen, Schnittstellen und Strukturen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Remotedesktopdienste audioendpoint-Enumerationstypen](terminal-services-audioendpoint-enumeration-types.md)
--   [Remotedesktopdienste audioendpoint-Funktionen](remote-desktop-services-audioendpoint-functions.md)
--   [Remotedesktopdienste audioendpoint-Schnittstellen](terminal-services-audioendpoint-interfaces.md)
--   [Remotedesktopdienste audioendpoint-Strukturen](terminal-services-audioendpoint-structures.md)
+-   [Remotedesktopdienste AudioEndpoint-Enumerationstypen](terminal-services-audioendpoint-enumeration-types.md)
+-   [Remotedesktopdienste AudioEndpoint-Funktionen](remote-desktop-services-audioendpoint-functions.md)
+-   [Remotedesktopdienste AudioEndpoint-Schnittstellen](terminal-services-audioendpoint-interfaces.md)
+-   [Remotedesktopdienste AudioEndpoint-Strukturen](terminal-services-audioendpoint-structures.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Remotedesktopdienste audioendpoint-API ist für die Verwendung in Remotedesktop Szenarien vorgesehen. Es handelt sich nicht um Client Anwendungen.
+Die Remotedesktopdienste AudioEndpoint-API ist für die Verwendung in Remotedesktop Szenarien vorgesehen. sie ist nicht für Clientanwendungen vorgesehen.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -3,46 +3,46 @@ title: Verwenden des Handles-Elements
 description: Verwenden des Handles-Elements
 ms.assetid: d748f74c-40e5-499a-bb61-94862eb3811c
 keywords:
-- Webworkshop, Handles-Element
-- Entwerfen von Webseiten, Handles-Element
-- Vector Markup Language (VML), Handles-Element
-- VML (Vector Markup Language), Handles-Element
-- Vektorgrafiken, Handles-Element
-- Handles-Element
-- VML-Elemente, Handles
-- VML-Formen, Handles-Element
+- Web-Workshop,Handles-Element
+- Entwerfen von Webseiten,Handles-Element
+- Vector Markup Language (VML),handles-Element
+- VML (Vector Markup Language),handles-Element
+- Vektorgrafik,Handles-Element
+- handles-Element
+- VML-Elemente,Handles
+- VML-Formen,Handles-Element
 - Vector Markup Language (VML), Anfügen von Text an Formen
-- VML (Vector Markup Language), Anfügen von Text an Formen
-- Vektorgrafiken, Anfügen von Text an Formen
-- VML-Formen, Anfügen von Text
+- VML (Vector Markup Language),Anfügen von Text an Formen
+- Vektorgrafiken,Anfügen von Text an Formen
+- VML-Formen,Anfügen von Text
 - Anfügen von Text an Formen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d54c721d50f51c46cd4bf08393e85ad83307fc1d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 94d504024a3d5c42caf8af116a08e5bd8787905991f14c4181fe3a75b10f4814
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057207"
 ---
 # <a name="using-the-handles-element"></a>Verwenden des Handles-Elements
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-In diesem Thema wird veranschaulicht, wie das-Element verwendet wird, `<handles>` um Text an eine Form anzufügen.
+In diesem Thema wird veranschaulicht, wie Das -Element verwendet wird, `<handles>` um Text an eine Form anfügen.
 
-Sie können das `<handles>` untergeordnete Element innerhalb `<shape>` von oder platzieren `<shapetype>` , um Benutzeroberflächen Elemente zu definieren, die die **ADJ** -Werte in der Form variieren können.
+Sie können das Unterelement in oder platzieren, um Benutzeroberflächenelemente zu definieren, die die `<handles>` `<shape>` `<shapetype>` **AdJ-Werte** in der Form variieren können.
 
-Wie die folgende VML-Darstellung zeigt, können Sie z. b. ein Anpassungs handle (gelbes Feld) bereitstellen, das Benutzer einfach ziehen können, um die Form anzupassen.
+Beispielsweise können Sie, wie in der folgenden VML-Darstellung gezeigt, ein Anpassungshandl (gelbes Feld) bereitstellen, das Benutzer einfach ziehen können, um die Form anzupassen.
 
-Hinweis: die Handles sind verfügbar, wenn diese VML-Form in Microsoft Office Anwendungen angezeigt wird, in denen die Form manipuliert werden soll.
+Hinweis: Die Handles sind verfügbar, wenn diese VML-Form in Microsoft Office-Anwendungen angezeigt wird, in denen die Form manipulierbar sein soll.
 
-![shape1.gif (564 bytes)](images/shape1h.gif)
+![shape1.gif (564 Bytes)](images/shape1h.gif)
 
 
 ```HTML
@@ -68,7 +68,7 @@ path="m@0,0l@0@1,0@1,0@2@0@2@0,21600,21600,10800xe">
 
 
 
-Beachten Sie, dass der einzige Unterschied zwischen der vorangehenden VML-Darstellung und der folgenden der **ADJ** -Wert ist.
+Beachten Sie, dass der einzige Unterschied zwischen der vorherigen VML-Darstellung und der folgenden der **adj-Wert** ist.
 
 ![shape2.gif (1361 Bytes)](images/shape2h.gif)
 
@@ -96,8 +96,8 @@ path="m@0,0l@0@1,0@1,0@2@0@2@0,21600,21600,10800xe">
 
 
 
-Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858393) .
+Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation.](https://www.w3.org/TR/NOTE-VML#-toc416858393)
 
- 
+ 
 
- 
+ 

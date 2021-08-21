@@ -1,7 +1,7 @@
 ---
-description: Die unsetpalette-Methode löscht die aktuelle Palette des Fensters und stellt die Standardsystem Palette wieder her.
+description: Mit der UnsetPalette-Methode wird die aktuelle Palette des Fensters gelöscht und die Standardsystempalette wiederhergestellt.
 ms.assetid: 9518aaa5-3c1b-409b-bb27-a698c47c4a24
-title: Cbasewindow. unsetpalette-Methode (winutil. h)
+title: CBaseWindow.UnsetPalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c0ff691d8c8f9f95f88f319bf966e6f33c8985d1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ca03eb679eb4a7a849977b6cff0a6ca15e7ed0bcfad23345a7a7a2c56263be9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074494"
 ---
-# <a name="cbasewindowunsetpalette-method"></a>Cbasewindow. unsetpalette-Methode
+# <a name="cbasewindowunsetpalette-method"></a>CBaseWindow.UnsetPalette-Methode
 
-Die `UnsetPalette` -Methode löscht die aktuelle Palette des Fensters und stellt die Standardsystem Palette wieder her.
+Die `UnsetPalette` -Methode löscht die aktuelle Palette des Fensters und stellt die Standardsystempalette wieder auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

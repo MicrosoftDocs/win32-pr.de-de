@@ -1,50 +1,50 @@
 ---
-title: VML-Attribut "V-Text-Spacing"
-description: VML-Attribut "V-Text-Spacing"
+title: VML-V-Textabstandsattribut
+description: VML-V-Textabstandsattribut
 ms.assetid: c0d83854-4009-4d1d-aa8a-37f660dd0ef7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab31d1f0b0b1d41b7e99451c422028fe54498483
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bc0b699e70cd235bf7d0f7530f75a8fc5eaef52974180cc8d36a10a69c9197f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057678"
 ---
-# <a name="vml-v-text-spacing-attribute"></a>VML-Attribut "V-Text-Spacing"
+# <a name="vml-v-text-spacing-attribute"></a>VML-V-Textabstandsattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Größe des Abstands für Text. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert den Abstand für Text. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "v-Text-Spacing: *Expression* " >
+<v: *element* style="v-text-spacing: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. v-Text-Spacing = "*Ausdruck*"
+*element* .style.v-text-spacing="*expression*"
 
-*Ausdruck* = *Element*. Style. v-Text-Abstand
+*expression* = *Element*.style.v-text-spacing
 
 **Anmerkungen**
 
-Der Standardwert ist 100. Weitere Informationen zum Text Abstand finden Sie im [V-Text-Spacing-Mode-](msdn-online-vml-v-text-spacing-mode-attribute.md) Attribut.
+Der Standardwert ist 100. Weitere Informationen zum Textabstand finden Sie unter [V-Text-Spacing-Mode-Attribut.](msdn-online-vml-v-text-spacing-mode-attribute.md)
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Brief Abstand zwischen den einzelnen Buchstaben wird um 200 Einheiten gestrafft.
+Die Buchstabenpashierung zwischen den einzelnen Buchstaben wird um 200 Einheiten verstärkt.
 
 
 ```HTML
@@ -58,6 +58,6 @@ Der Brief Abstand zwischen den einzelnen Buchstaben wird um 200 Einheiten gestra
 
 
 
- 
+ 
 
- 
+ 

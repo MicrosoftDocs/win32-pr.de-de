@@ -1,5 +1,5 @@
 ---
-description: Die StopStreaming-Methode hält das Streaming an, wenn der Filter aus dem Ausführungszustand wechselt.
+description: Die StopStreaming-Methode hält das Streaming an, wenn der Filter den Ausführungsstatus ausschaltet.
 ms.assetid: 465dde15-adec-46da-b8c8-56743e0cbd29
 title: CBaseRenderer.StopStreaming-Methode (Renbase.h)
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "119016798"
 ---
 # <a name="cbaserendererstopstreaming-method"></a>CBaseRenderer.StopStreaming-Methode
 
-Die `StopStreaming` -Methode hält das Streaming an, wenn der Filter aus dem Ausführungszustand wechselt.
+Die `StopStreaming` -Methode hält das Streaming an, wenn der Filter den Ausführungsstatus ausschaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**CBaseRenderer::OnStopStreaming-Methode**](cbaserenderer-onstopstreaming.md) auf. Diese Methode führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
+Diese Methode ruft die [**CBaseRenderer::OnStopStreaming-Methode auf.**](cbaserenderer-onstopstreaming.md) Diese Methode führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,11 +55,11 @@ Diese Methode ruft die [**CBaseRenderer::OnStopStreaming-Methode**](cbaserendere
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

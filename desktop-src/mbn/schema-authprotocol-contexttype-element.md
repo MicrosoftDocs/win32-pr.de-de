@@ -1,7 +1,7 @@
 ---
 description: Gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
 ms.assetid: cd3c28d9-8663-4672-94ba-0a53861086cb
-title: Authprotocol-Element (ContextType)
+title: AuthProtocol -Element (contextType)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,31 +11,31 @@ api_name:
 - AuthProtocol
 api_type:
 - Schema
-ms.openlocfilehash: 8626d17a234784491c5f186f800943a6ab208bf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65b944b2966c9b5cac307f6f8efe6af2f42a1ffa5b4f2f400074caa0efe9f84e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975259"
 ---
-# <a name="authprotocol-contexttype-element"></a>Authprotocol-Element (ContextType)
+# <a name="authprotocol-contexttype-element"></a>AuthProtocol -Element (contextType)
 
-Das **authprotocol (ContextType)** -Element gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
+Das **Element AuthProtocol (contextType)** gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
 
-Das-Element kann einen der folgenden Werte aufweisen.
+Das -Element kann einen der folgenden Werte aufweisen.
 
 | Wert      | Bedeutung                                                                 |
 |------------|-------------------------------------------------------------------------|
-| Gar     | Kein Authentifizierungsprotokoll.                                             |
-| PAP      | Unverschlüsselte Kenn Wort Authentifizierung.                                    |
-| CHAP     | Challenge Handshake Authentication-Protokoll (CHAP).                      |
-|  MsCHAPV2 | Verwenden Sie das Microsoft s Challenge Handshake Authentication-Protokoll (CHAP) v 2.0. |
+| "NONE"     | Kein Authentifizierungsprotokoll.                                             |
+| "PAP"      | Unverschlüsselte Kennwortauthentifizierung.                                    |
+| "CHAP"     | Challenge Handshake Authentication Protocol (CHAP).                      |
+|  MsCHAPV2" | Verwenden Sie Microsoft s Challenge Handshake Authentication Protocol (CHAP) v2.0. |
 
 
 
  
 
-Dieses Element ist optional und wird nur für GSM-Profile verwendet. Wenn das Element nicht angegeben und das Profil für ein GSM-Gerät verwendet wird, verwendet der Mobile Breitbanddienst den Wert **"None"**.
+Dieses Element ist optional und wird nur für GSM-Profile verwendet. Wenn das Element nicht angegeben ist und das Profil für ein GSM-Gerät bestimmt ist, verwendet der Mobile Breitbanddienst **"NONE".**
 
 ``` syntax
 <xs:element name="AuthProtocol">
@@ -60,7 +60,7 @@ Dieses Element ist optional und wird nur für GSM-Profile verwendet. Wenn das El
 </xs:element>
 ```
 
-Das **authprotocol** -Element wird durch den komplexen [**ContextType**](schema-contexttype-complextype.md) -Typ definiert.
+Das **AuthProtocol-Element** wird durch den komplexen [**contextType-Typ**](schema-contexttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Das **authprotocol** -Element wird durch den komplexen [**ContextType**](schema-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
@@ -77,16 +77,16 @@ Das **authprotocol** -Element wird durch den komplexen [**ContextType**](schema-
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**contextType**](schema-contexttype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Kontext (mbnprofile)**](schema-context-mbnprofile-element.md)
+[**Kontext (MBNProfile)**](schema-context-mbnprofile-element.md)
 </dt> </dl>
 
  

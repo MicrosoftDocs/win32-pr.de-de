@@ -1,11 +1,11 @@
 ---
-title: Weeklyauslöst. DaysOfWeek (Eigenschaft)
-description: Ruft bei der Skripterstellung die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
+title: WeeklyTrigger.DaysOfWeek (Eigenschaft)
+description: Für Die Skripterstellung ruft die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
 ms.assetid: 79f279d4-d6d2-428b-bbed-226e4eaaefb6
 keywords:
-- DaysOfWeek-Eigenschaft Taskplaner
-- DaysOfWeek-Eigenschaft Taskplaner, weeklyauslöserobjekt
-- Weeklyauslöserobjekt Taskplaner, DaysOfWeek (Eigenschaft)
+- DaysOfWeek-Taskplaner
+- DaysOfWeek-Eigenschaft Taskplaner , WeeklyTrigger-Objekt
+- WeeklyTrigger-Objekt Taskplaner , DaysOfWeek-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7f0a27ef031e7baf46d2d3c0e33c23fb505c7ee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7298982dcd10078d9e8460459d38cfa77140d15607341460f0e0edec998306f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001793"
 ---
-# <a name="weeklytriggerdaysofweek-property"></a>Weeklyauslöst. DaysOfWeek (Eigenschaft)
+# <a name="weeklytriggerdaysofweek-property"></a>WeeklyTrigger.DaysOfWeek (Eigenschaft)
 
-Ruft bei der Skripterstellung die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
+Für Die Skripterstellung ruft die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +38,15 @@ WeeklyTrigger.DaysOfWeek As short
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine bitweise Maske, die die Wochentage angibt, an denen die Aufgabe ausgeführt wird.
+Eine bitweise Maske, die die Wochentage angibt, an denen der Task ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eigenschaft verwendet wird.
+Die folgende Tabelle zeigt die Zuordnung der bitweise Maske, die von dieser Eigenschaft verwendet wird.
 
 
 
-| Monat     | Farbtonwert | Dezimalzahl |
+| Month (Monat)     | Farbtonwert | Dezimalzahl |
 |-----------|-----------|---------------|
 | Sonntag    | 0X01      | 1             |
 | Montag    | 0x02      | 2             |
@@ -60,7 +60,7 @@ Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eig
 
  
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden die Wochentage mit dem [**DaysOfWeek**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben eigener XML-Daten für eine Aufgabe werden die Wochentage mithilfe des [**DaysOfWeek-Elements**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,14 +68,14 @@ Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden die W
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

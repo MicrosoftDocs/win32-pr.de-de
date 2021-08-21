@@ -23,7 +23,7 @@ ms.locfileid: "118984060"
 ---
 # <a name="eaptype-element-mschapv2connectionpropertiesv1schema"></a>EapType-Element (mschapv2connectionpropertiesv1schema)
 
-Das **EapType-Element** ist ein abgeleiteter Typ des [EapType-Elements](baseeapconnectionpropertiesv1schema-eaptype-element.md) aus dem [baseeapconnectionpropertiesv1-Schema.](baseeapconnectionpropertiesv1schema-schema.md) Dies ist das oberste Element, das im Config-Element des [EapHostConfig-Schemas](eaphostconfigschema-elements.md) angezeigt wird.
+Das **EapType-Element** ist ein abgeleiteter Typ des [EapType-Elements](baseeapconnectionpropertiesv1schema-eaptype-element.md) aus dem [baseeapconnectionpropertiesv1-Schema.](baseeapconnectionpropertiesv1schema-schema.md) Dies ist das oberste Element, das im Config-Element des [EapHostConfig-Schemas angezeigt](eaphostconfigschema-elements.md) wird.
 
 ``` syntax
 <xs:element name="EapType"
@@ -59,7 +59,7 @@ Das **EapType-Element** ist ein abgeleiteter Typ des [EapType-Elements](baseeapc
 
 | Element                                                                                                       | type    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UseWinLogonCredentials**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) | boolean | Steuert die Verwendung der Winlogin-Anmeldeinformationen. True gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen von winlogon erhält. False gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen vom Benutzer erhält. <br/> Das [**UseWinLogonCredentials -Element (EapType)**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) ist optional.<br/> |
+| [**UseWinLogonCredentials**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) | boolean | Steuert die Verwendung der winlogin-Anmeldeinformationen. True gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen von winlogon erhält. False gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen vom Benutzer erhält. <br/> Das [**UseWinLogonCredentials-Element (EapType)**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) ist optional.<br/> |
 
 
 
@@ -73,12 +73,12 @@ Das **processContents-Element** ermöglicht zukünftige Erweiterungen des Schema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

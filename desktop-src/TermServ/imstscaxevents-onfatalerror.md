@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onfatalerror-Methode
-description: Wird aufgerufen, wenn das Client Steuerelement einen schwerwiegenden Fehler feststellt.
+title: IMsTscAxEvents OnFatalError-Methode
+description: Wird aufgerufen, wenn beim Clientsteuerelement ein schwerwiegender Fehler auftritt.
 ms.assetid: 13a5eb2e-d847-4561-b30b-3f23a0579b4d
 ms.tgt_platform: multiple
 keywords:
-- Onfatalerror-Methode Remotedesktopdienste
-- Onfatalerror-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onfatalerror-Methode
+- OnFatalError-Methode Remotedesktopdienste
+- OnFatalError-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnFatalError-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73402ac178bcb2ac3dc03c0adda092d3b49f6ba3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 47a10315eca4fcbf96edf123699614d29a2c0b8974f563c52148b5de75310fc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000680"
 ---
-# <a name="imstscaxeventsonfatalerror-method"></a>Imstscaxevents:: onfatalerror-Methode
+# <a name="imstscaxeventsonfatalerror-method"></a>IMsTscAxEvents::OnFatalError-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement einen schwerwiegenden Fehler feststellt.
+Wird aufgerufen, wenn beim Clientsteuerelement ein schwerwiegender Fehler auftritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void OnFatalError(
 
 <dl> <dt>
 
-*errorCode* \[ in\]
+*errorCode* \[ In\]
 </dt> <dd>
 
 Gibt den Fehlercode an.
@@ -52,12 +52,12 @@ Gibt den Fehlercode an.
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Ein unbekannter Fehler ist aufgetreten.
+Es ist ein unbekannter Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -79,18 +79,18 @@ Interner Fehlercode 1.
 
 </dt> <dd>
 
-Fehler aufgrund von nicht genügend Arbeitsspeicher.
+Es ist ein Fehler mit nicht genügend Arbeitsspeicher aufgetreten.
 
 </dd> <dt>
 
 <span id="3"></span>
 
-<span id="3"></span>**€**
+<span id="3"></span>**3**
 
 
 </dt> <dd>
 
-Ein Fenster Erstellungs Fehler ist aufgetreten.
+Es ist ein Fehler bei der Fenstererstellung aufgetreten.
 
 </dd> <dt>
 
@@ -107,12 +107,12 @@ Interner Fehlercode 2.
 
 <span id="5"></span>
 
-<span id="5"></span>**5@@**
+<span id="5"></span>**5**
 
 
 </dt> <dd>
 
-Interner Fehlercode 3. Dies ist kein gültiger Status.
+Interner Fehlercode 3. Dies ist kein gültiger Zustand.
 
 </dd> <dt>
 
@@ -129,12 +129,12 @@ Interner Fehlercode 4.
 
 <span id="7"></span>
 
-<span id="7"></span>**19.00**
+<span id="7"></span>**7**
 
 
 </dt> <dd>
 
-Nicht BEHEB barer Fehler während der Client Verbindung.
+Während der Clientverbindung ist ein nicht behebbarer Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Winsock-Initialisierungsfehler.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Als Reaktion auf dieses Ereignis zeigt der Container eine Fehlermeldung an und wird heruntergefahren.
 
@@ -169,7 +169,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -177,7 +177,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

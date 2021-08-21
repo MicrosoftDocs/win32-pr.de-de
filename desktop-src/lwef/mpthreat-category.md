@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_CATEGORY-Enumeration (mpclient. h)
-description: Mögliche Bedrohungs Kategorien.
+title: MPTHREAT_CATEGORY-Enumeration (MpClient.h)
+description: Mögliche Bedrohungskategorien.
 ms.assetid: 478ED59E-5D3C-43B3-A89D-44A649EDD086
 keywords:
-- MPTHREAT_CATEGORY-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_CATEGORY enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_CATEGORY enumeration Legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPTHREAT_CATEGORY-Enumerationszeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a149ef6ce6ebadacbac6f0dd35247d793ca7000
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 70cfd95de751d51be3ab4b61bc361687738422a6d31c234576e812efcd57bd4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975970"
 ---
-# <a name="mpthreat_category-enumeration"></a>Mpthreat- \_ kategorieenumeration
+# <a name="mpthreat_category-enumeration"></a>MPTHREAT \_ CATEGORY-Enumeration
 
-Mögliche Bedrohungs Kategorien.
+Mögliche Bedrohungskategorien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -82,55 +82,55 @@ typedef enum tagMPTHREAT_CATEGORY {
 
 ## <a name="constants"></a>Konstanten
 
-Bedrohungs Kategorie | BESCHREIBUNG
+Bedrohungskategorie | BESCHREIBUNG
 -|-
-<span id="MP_THREAT_CATEGORY_INVALID"></span><span id="mp_threat_category_invalid"></span>**MP \_ \_ \_ ungültige Bedrohungs Kategorie** | Die Bedrohungs Kategorie ist nicht vorhanden oder wurde falsch geschrieben.
-<span id="MP_THREAT_CATEGORY_ADWARE"></span><span id="mp_threat_category_adware"></span>**MP \_ Bedrohungs \_ Kategorie \_ Adware** | Eine potenziell unerwünschte Anwendung, in der Ankündigungen angezeigt werden.
-<span id="MP_THREAT_CATEGORY_SPYWARE"></span><span id="mp_threat_category_spyware"></span>**MP \_ \_ \_ Spyware der Bedrohungs Kategorie** | Malware, die Informationen über das Gerät oder den Benutzer ohne Zustimmung oder Wissen des Benutzers überträgt.
-<span id="MP_THREAT_CATEGORY_PASSWORDSTEALER"></span><span id="mp_threat_category_passwordstealer"></span>**MP \_ Bedrohungs \_ Kategorie \_ passwordstealer** | Eine Anwendung, die ein Kennwort sammelt und/oder an einen Angreifer überträgt.
-<span id="MP_THREAT_CATEGORY_TROJANDOWNLOADER"></span><span id="mp_threat_category_trojandownloader"></span>**MP- \_ Bedrohungs \_ Kategorie \_ TrojanDownloader** | Ein Trojaner, der Schadsoftware oder potenziell unerwünschte Anwendungen auf ein infiziertes Gerät herunterlädt.
-<span id="MP_THREAT_CATEGORY_WORM"></span><span id="mp_threat_category_worm"></span>**MP \_ \_ \_ Wurm der Bedrohungs Kategorie** | Selbst Propagierung von Schadsoftware, die automatisch über Netzwerkverbindungen verteilt werden kann.
-<span id="MP_THREAT_CATEGORY_BACKDOOR"></span><span id="mp_threat_category_backdoor"></span>**MP- \_ Bedrohungs \_ Kategorie \_ Backdoor** | Schadsoftware, mit der normale Sicherheits-und Authentifizierungsprotokolle auf einem Gerät umgangen werden.
-<span id="MP_THREAT_CATEGORY_REMOTEACCESSTROJAN"></span><span id="mp_threat_category_remoteaccesstrojan"></span>**MP \_ Bedrohungs \_ Kategorie \_ remoteaccesstrojan** | Ein Trojaner, der Remote Zugriff auf einen Computer bereitstellt.
-<span id="MP_THREAT_CATEGORY_TROJAN"></span><span id="mp_threat_category_trojan"></span>**MP- \_ Bedrohungs \_ Kategorie \_ Trojaner** | Schadsoftware, die sich selbst als legitime Software abfasst.
-<span id="MP_THREAT_CATEGORY_EMAILFLOODER"></span><span id="mp_threat_category_emailflooder"></span>**MP \_ Bedrohungs \_ Kategorie \_ emailflooder** | Malware sendet eine große Menge an e-Mail an ein Ziel.
-<span id="MP_THREAT_CATEGORY_KEYLOGGER"></span><span id="mp_threat_category_keylogger"></span>**MP \_ \_ \_ Schlüssel Protokollierung der Bedrohungs Kategorie** | Schadsoftware, die die Tastatureingaben des Benutzers aufzeichnet und möglicherweise Kenn Wörter und andere sensible Daten stehlen.
-<span id="MP_THREAT_CATEGORY_DIALER"></span><span id="mp_threat_category_dialer"></span>**MP \_ Bedrohungs \_ Kategorie \_ Dialer** | Schadsoftware, die nicht autorisierte Telefonanrufe durchführt, häufig bei Premium-Tarifen.
-<span id="MP_THREAT_CATEGORY_MONITORINGSOFTWARE"></span><span id="mp_threat_category_monitoringsoftware"></span>**MP \_ Bedrohungs \_ Kategorie " \_ Monitoringsoftware** " | Eine potenziell unerwünschte Anwendung, die die Benutzeraktivität überwacht, z. b. das, was der Benutzer auf der Tastatur oder den Ansichten auf dem Bildschirm eingibt.
-<span id="MP_THREAT_CATEGORY_BROWSERMODIFIER"></span><span id="mp_threat_category_browsermodifier"></span>**MP \_ Bedrohungs \_ Kategorie \_ browsermodifier** | Eine potenziell unerwünschte Anwendung, mit der die Webbrowser Einstellungen ohne Zustimmung des Benutzers geändert werden.
-<span id="MP_THREAT_CATEGORY_COOKIE"></span><span id="mp_threat_category_cookie"></span>**MP \_ \_ \_ Cookie der Bedrohungs Kategorie** | Daten, die von einem Webserver an einen Browser gesendet werden, sodass Informationen zum Benutzer, z. b. Webanwendungs Einstellungen, bei wiederholten Besuchen gespeichert werden.
-<span id="MP_THREAT_CATEGORY_BROWSERPLUGIN"></span><span id="mp_threat_category_browserplugin"></span>**MP \_ Bedrohungs \_ Kategorie \_ Browserplugin** | Software, mit der ein Standard Webbrowser bestimmte Inhaltstypen, z. b. Mediendateien, animierte Bilder und interaktive Formulare, anzeigen und ausführen kann.
-<span id="MP_THREAT_CATEGORY_AOLEXPLOIT"></span><span id="mp_threat_category_aolexploit"></span>**MP \_ Bedrohungs \_ Kategorie \_ aolexploit** | Malware, die Benutzer des AOL-Internet Diensts angreift, häufig durch Abrufen von Kenn Wörtern oder Ändern von Einstellungen.
-<span id="MP_THREAT_CATEGORY_NUKER"></span><span id="mp_threat_category_nuker"></span>**MP \_ Bedrohungs \_ Kategorie \_ Nuker** | Schadsoftware, die auf ein Gerät stürzt oder weniger stabil ist.
-<span id="MP_THREAT_CATEGORY_SECURITYDISABLER"></span><span id="mp_threat_category_securitydisabler"></span>**MP \_ Bedrohungs \_ Kategorie \_ securitydisabler** | Malware, die Sicherheitseinstellungen oder Produkte deaktiviert.
-<span id="MP_THREAT_CATEGORY_JOKEPROGRAM"></span><span id="mp_threat_category_jokeprogram"></span>**MP \_ Bedrohungs \_ Kategorie \_ jokeprogram** | Eine Anwendung, die für einen Benutzer vorgesehen ist, ohne dass das Gerät tatsächlich beschädigt wird.
-<span id="MP_THREAT_CATEGORY_HOSTILEACTIVEXCONTROL"></span><span id="mp_threat_category_hostileactivexcontrol"></span>**MP \_ Bedrohungs \_ Kategorie \_ hostileactivexcontrol** | Ein ActiveX-Steuerelement, das von einem Angreifer zum Schaden eines Geräts entworfen wurde. Ein ActiveX-Steuerelement ist eine Art von Browser-Add-on, das für Internet Explorer spezifisch ist.
-<span id="MP_THREAT_CATEGORY_SOFTWAREBUNDLER"></span><span id="mp_threat_category_softwarebundler"></span>**MP \_ Bedrohungs \_ Kategorie \_ softwarebundler** | Software, mit der andere potenziell unerwünschte Anwendungen installiert werden, z. b. Adware oder Spyware. Der Lizenzvertrag der bündeln Software erfordert möglicherweise diese anderen Komponenten, damit Sie funktionieren.
-<span id="MP_THREAT_CATEGORY_STEALTHNOTIFIER"></span><span id="mp_threat_category_stealthnotifier"></span>**MP \_ Bedrohungs \_ Kategorie \_ stealthnotifier** | Schadsoftware, die über eine Geheimnis Verbindung eine Verbindung mit einem Remote Server herstellt, um einen Angreifer darüber zu benachrichtigen, dass die Schadsoftware installiert wurde.
-<span id="MP_THREAT_CATEGORY_SETTINGSMODIFIER"></span><span id="mp_threat_category_settingsmodifier"></span>**MP \_ Bedrohungs \_ Kategorie \_ settingsmodifier** | Eine potenziell unerwünschte Anwendung, die die Einstellungen eines Benutzers ohne das wissen oder die Zustimmung des Benutzers ändert.
-<span id="MP_THREAT_CATEGORY_TOOLBAR"></span><span id="mp_threat_category_toolbar"></span>**MP \_ \_ \_ Symbolleiste** für Gefahren Kategorie | Eine potenziell unerwünschte Anwendung (Pua), mit der eine Symbolleiste im Webbrowser des Benutzers installiert wird. häufig mit zusätzlichem Pua, z. b. Adware, gebündelt.
-<span id="MP_THREAT_CATEGORY_REMOTECONTROLSOFTWARE"></span><span id="mp_threat_category_remotecontrolsoftware"></span>**MP \_ Bedrohungs \_ Kategorie \_ remotecontrolsoftware** | Eine potenziell unerwünschte Anwendung, die Remote Zugriff auf ein Gerät ermöglicht.
-<span id="MP_THREAT_CATEGORY_TROJANFTP"></span><span id="mp_threat_category_trojanftp"></span>**MP \_ Bedrohungs \_ Kategorie \_ trojanftp** | Ein Trojaner, der einen FTP-Server verwendet, um einem Angreifer das Hochladen oder Herunterladen von Dateien von einem Gerät zu ermöglichen.
-<span id="MP_THREAT_CATEGORY_POTENTIALUNWANTEDSOFTWARE"></span><span id="mp_threat_category_potentialunwantedsoftware"></span>**MP \_ Bedrohungs \_ Kategorie " \_ potenzialunwantedsoftware** " | Wird auch als *potenziell unerwünschte Anwendung* oder *Pua* bezeichnet. Software, die sich auf eine übermäßig eindringliche Weise verhält, bei der der Benutzer möglicherweise nicht erwartet oder vollständig zugestimmt hat.
-<span id="MP_THREAT_CATEGORY_ICQEXPLOIT"></span><span id="mp_threat_category_icqexploit"></span>**MP \_ Bedrohungs \_ Kategorie \_ icqexploit** | Ein Trojaner, der den Dienst für den ICQ-Messaging angreift, häufig durch Abrufen von Kenn Wörtern oder manipulieren von Einstellungen.
-<span id="MP_THREAT_CATEGORY_TROJANTELNET"></span><span id="mp_threat_category_trojantelnet"></span>**MP \_ Bedrohungs \_ Kategorie \_ trojantelnet** | Ein Trojaner, der einen Telnet-Server auf dem Computer eines Benutzers ohne das wissen oder die Zustimmung des Benutzers installiert.
-<span id="MP_THREAT_CATEGORY_EXPLOIT"></span><span id="mp_threat_category_exploit"></span>**MP \_ \_ \_ ausnutzen der Bedrohungs Kategorie** | Bösartiger Code, der ein Sicherheitsrisiko auf einem Gerät oder System nutzt.
-<span id="MP_THREAT_CATEGORY_FILESHARINGPROGRAM"></span><span id="mp_threat_category_filesharingprogram"></span>**MP \_ Bedrohungs \_ Kategorie \_ filesharingprogram** | Eine potenziell unerwünschte Anwendung, die ein Gerät für die Peer-to-Peer-Freigabe der Gerätedateien öffnet.
-<span id="MP_THREAT_CATEGORY_MALWARE_CREATION_TOOL"></span><span id="mp_threat_category_malware_creation_tool"></span>**MP \_ Bedrohungs \_ Kategorie \_ Malware \_ Erstellungs \_ Tool** | Eine Anwendung, die automatisch schädliche Dateien generieren kann.
-<span id="MP_THREAT_CATEGORY_REMOTE_CONTROL_SOFTWARE"></span><span id="mp_threat_category_remote_control_software"></span>**MP \_ Bedrohungs \_ Kategorie \_ Remote \_ Steuerungs \_ Software** | Eine potenziell unerwünschte Anwendung, die den Remote Zugriff auf ein Gerät ermöglicht.
-<span id="MP_THREAT_CATEGORY_TOOL"></span><span id="mp_threat_category_tool"></span>**MP \_ \_ \_ Tool zur Bedrohungs Kategorie** | Ein Hilfsprogramm, das einem Angreifer hilft, böswillige Aktionen auf einem Gerät auszuführen.
-<span id="MP_THREAT_CATEGORY_TROJAN_DENIALOFSERVICE"></span><span id="mp_threat_category_trojan_denialofservice"></span>**MP \_ Bedrohungs \_ Kategorie \_ Trojaner- \_ verweialog-Dienst** | Ein Trojaner, der so konzipiert ist, dass er eine große Menge an Netzwerk Anforderungen als Teil eines Denial-of-Service-Angriffs (DOS) an ein Ziel sendet.
-<span id="MP_THREAT_CATEGORY_TROJAN_DROPPER"></span><span id="mp_threat_category_trojan_dropper"></span>**MP \_ Bedrohungs \_ Kategorie \_ Trojaner- \_ dropperungs** | Ein Trojaner, der Schadsoftware oder potenziell unerwünschte Anwendungen auf einem Ziel herunterlädt und installiert.
-<span id="MP_THREAT_CATEGORY_TROJAN_MASSMAILER"></span><span id="mp_threat_category_trojan_massmailer"></span>**MP \_ Bedrohungs \_ Kategorie \_ Trojaner- \_ toolmailer** | Ein Trojaner, der eine große Anzahl von e-Mails an ein Ziel sendet, um den Eingang des Ziels zu überlasten.
-<span id="MP_THREAT_CATEGORY_TROJAN_MONITORINGSOFTWARE"></span><span id="mp_threat_category_trojan_monitoringsoftware"></span>**MP \_ Bedrohungs \_ Kategorie \_ Trojaner \_ Monitoringsoftware** | Ein Trojaner, der die Benutzeraktivität überwacht, z. b. das, was der Benutzer auf der Tastatur oder Ansichten auf dem Bildschirm eingibt.
-<span id="MP_THREAT_CATEGORY_TROJAN_PROXYSERVER"></span><span id="mp_threat_category_trojan_proxyserver"></span>**MP \_ Bedrohungs \_ Kategorie \_ Trojaner \_ Proxyserver** | Ein von einem Trojaner installierter Proxy Server, der eine unterbrechungsfreie Internet Verbindung bereitstellt und gleichzeitig nicht autorisierten Zugriff auf das infizierte Gerät ermöglicht.
-<span id="MP_THREAT_CATEGORY_VIRUS"></span><span id="mp_threat_category_virus"></span>**MP \_ Bedrohungs \_ Kategorie \_ Virus** | Schadsoftware, die in der Regel durch das infizieren anderer Dateien im System repliziert wird. Dadurch wird die Ausführung des schadsoftwarecodes und dessen Weitergabe ermöglicht, wenn diese Dateien aktiviert werden.
-<span id="MP_THREAT_CATEGORY_KNOWN"></span><span id="mp_threat_category_known"></span>**MP \_ \_ \_ bekannte Bedrohungs Kategorie** | Eine nicht angegebene Malware Bedrohung.
-<span id="MP_THREAT_CATEGORY_UNKNOWN"></span><span id="mp_threat_category_unknown"></span>**MP \_ Bedrohungs \_ Kategorie \_ unbekannt** | Eine nicht angegebene Malware Bedrohung, die noch nicht definiert wurde.
-<span id="MP_THREAT_CATEGORY_SPP"></span><span id="mp_threat_category_spp"></span>**MP \_ \_ \_ spp der Bedrohungs Kategorie** | Antipiraterie-Technologie, die die Installation eines Windows-Produkts erfordert, muss mit Microsoft aktiviert werden.
-<span id="MP_THREAT_CATEGORY_BEHAVIOR"></span><span id="mp_threat_category_behavior"></span>**MP \_ \_ \_ Verhalten der Bedrohungs Kategorie** | Ein Erkennungs Typ, der auf Dateiaktionen basiert, die häufig mit böswilligen Aktivitäten verknüpft sind.
-<span id="MP_THREAT_CATEGORY_VULNERABILTIY"></span><span id="mp_threat_category_vulnerabiltiy"></span>**MP \_ Bedrohungs \_ Kategorie " \_ Vulnerability abiltiy** " | Jegliche Schwachstellen, administrative Prozesse oder Aktivitäten, durch die ein Gerät anfällig für das ausnutzen durch eine Bedrohung wird.
-<span id="MP_THREAT_CATEGORY_POLICY"></span><span id="mp_threat_category_policy"></span>**MP \_ \_ \_ Richtlinien Richtlinie** | Eine Reihe von Regeln, die von einem Administrator definiert werden und die Features auf Desktop Computern und mobilen Geräten wie Software Updates steuern.
+<span id="MP_THREAT_CATEGORY_INVALID"></span><span id="mp_threat_category_invalid"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ UNGÜLTIG** | Die Bedrohungskategorie ist nicht vorhanden oder wurde falsch geschrieben.
+<span id="MP_THREAT_CATEGORY_ADWARE"></span><span id="mp_threat_category_adware"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE(EN)** | Eine potenziell unerwünschte Anwendung, die Ankündigungen anzeigt.
+<span id="MP_THREAT_CATEGORY_SPYWARE"></span><span id="mp_threat_category_spyware"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ SPYWARE** | Schadsoftware, die Informationen über das Gerät oder den Benutzer ohne Zustimmung oder Kenntnis des Benutzers überträgt.
+<span id="MP_THREAT_CATEGORY_PASSWORDSTEALER"></span><span id="mp_threat_category_passwordstealer"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ PASSWORDSTEALER** | Eine Anwendung, die ein Kennwort sammelt und/oder an einen Angreifer überträgt.
+<span id="MP_THREAT_CATEGORY_TROJANDOWNLOADER"></span><span id="mp_threat_category_trojandownloader"></span>**MP \_ THREAT \_ CATEGORY \_ TROJANDOWNLOADER** | Ein Trojaner, der Schadsoftware oder potenziell unerwünschte Anwendungen auf ein infiziertes Gerät herunterlädt.
+<span id="MP_THREAT_CATEGORY_WORM"></span><span id="mp_threat_category_worm"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ WORM** | Selbstverbreitende Schadsoftware, die sich automatisch über Netzwerkverbindungen verteilen kann.
+<span id="MP_THREAT_CATEGORY_BACKDOOR"></span><span id="mp_threat_category_backdoor"></span>**MP \_ THREAT \_ CATEGORY \_ BACKDOOR** | Schadsoftware, mit der normale Sicherheits- und Authentifizierungsprotokolle auf einem Gerät umgangen werden können.
+<span id="MP_THREAT_CATEGORY_REMOTEACCESSTROJAN"></span><span id="mp_threat_category_remoteaccesstrojan"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ REMOTEACCESSTROJAN** | Ein Trojaner, der Remotezugriff auf einen Computer ermöglicht.
+<span id="MP_THREAT_CATEGORY_TROJAN"></span><span id="mp_threat_category_trojan"></span>**MP \_ THREAT \_ CATEGORY \_ TROJAN** | Schadsoftware, die sich selbst als legitime Software ausdrungen hat.
+<span id="MP_THREAT_CATEGORY_EMAILFLOODER"></span><span id="mp_threat_category_emailflooder"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ EMAILFLOODER** | Schadsoftware sendet eine große Menge von E-Mails an ein Ziel.
+<span id="MP_THREAT_CATEGORY_KEYLOGGER"></span><span id="mp_threat_category_keylogger"></span>**MP \_ \_THREAT CATEGORY \_ KEYLOGGER** | Schadsoftware, die Tastatureingaben des Benutzers aufzeichnet und möglicherweise Kennwörter und andere sensible Daten stiehlt.
+<span id="MP_THREAT_CATEGORY_DIALER"></span><span id="mp_threat_category_dialer"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE DIALER** | Schadsoftware, die nicht autorisierte Telefonanrufe tätigen kann, häufig zu Premium-Tarifen.
+<span id="MP_THREAT_CATEGORY_MONITORINGSOFTWARE"></span><span id="mp_threat_category_monitoringsoftware"></span>**MP \_ \_ÜBERWACHUNG DER BEDROHUNGSKATEGORIESOFTWARE \_** | Eine potenziell unerwünschte Anwendung, die Benutzeraktivitäten überwacht, z. B. die Eingaben des Benutzers auf der Tastatur oder ansichten auf dem Bildschirm.
+<span id="MP_THREAT_CATEGORY_BROWSERMODIFIER"></span><span id="mp_threat_category_browsermodifier"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ BROWSERMODIFIER** | Eine potenziell unerwünschte Anwendung, die Webbrowsereinstellungen ohne Zustimmung des Benutzers ändert.
+<span id="MP_THREAT_CATEGORY_COOKIE"></span><span id="mp_threat_category_cookie"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIECOOKIE** | Daten, die ein Webserver an einen Browser sendet, sodass bei wiederholten Besuchen Informationen zum Benutzer gespeichert werden können, z. B. Webanwendungseinstellungen.
+<span id="MP_THREAT_CATEGORY_BROWSERPLUGIN"></span><span id="mp_threat_category_browserplugin"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ BROWSERPLUGIN** | Software, mit der ein Standardwebbrowser bestimmte Inhaltstypen wie Mediendateien, animierte Bilder und interaktive Formulare anzeigen und ausführen kann.
+<span id="MP_THREAT_CATEGORY_AOLEXPLOIT"></span><span id="mp_threat_category_aolexploit"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ AOLEXPLOIT** | Schadsoftware, die Benutzer des AOL-Internetdiensts angreift, häufig durch Abrufen von Kennwörtern oder Ändern von Einstellungen.
+<span id="MP_THREAT_CATEGORY_NUKER"></span><span id="mp_threat_category_nuker"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ NUKER** | Schadsoftware, die entwickelt wurde, um ein Gerät abzustürzen oder es weniger stabil zu machen.
+<span id="MP_THREAT_CATEGORY_SECURITYDISABLER"></span><span id="mp_threat_category_securitydisabler"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE SICHERHEITDISABLER** | Schadsoftware, die Sicherheitseinstellungen oder Produkte deaktiviert.
+<span id="MP_THREAT_CATEGORY_JOKEPROGRAM"></span><span id="mp_threat_category_jokeprogram"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ :WIESPROGRAM AUS** | Eine Anwendung, die entwickelt wurde, um einen Benutzer zu belauschen oder zu veralten, ohne das Gerät tatsächlich zu beeinträchtigen.
+<span id="MP_THREAT_CATEGORY_HOSTILEACTIVEXCONTROL"></span><span id="mp_threat_category_hostileactivexcontrol"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ " VERFEINERLICHACTIVEXCONTROL"** | Ein ActiveX Steuerelement, das von einem Angreifer entwickelt wurde, um ein Gerät zu beschädigen. Ein ActiveX Steuerelement ist eine Art browserspezifisches Add-On für Internet Explorer.
+<span id="MP_THREAT_CATEGORY_SOFTWAREBUNDLER"></span><span id="mp_threat_category_softwarebundler"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ SOFTWAREBUNDLER** | Software, die andere potenziell unerwünschte Anwendungen installiert, z. B. Spyware oder Spyware. Der Lizenzvertrag der Bündelungssoftware kann diese anderen Komponenten erfordern, damit sie funktionieren.
+<span id="MP_THREAT_CATEGORY_STEALTHNOTIFIER"></span><span id="mp_threat_category_stealthnotifier"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ "BEDROHUNGSBESCHRIFTUNG"** | Schadsoftware, die über eine verdeckte Verbindung eine Verbindung mit einem Remoteserver herstellt, um einen Angreifer darüber zu informieren, dass die Schadsoftware installiert wurde.
+<span id="MP_THREAT_CATEGORY_SETTINGSMODIFIER"></span><span id="mp_threat_category_settingsmodifier"></span>**MP \_ \_EINSTELLUNGEN FÜR BEDROHUNGSKATEGORIENMODIFIER \_** | Eine potenziell unerwünschte Anwendung, die die Einstellungen eines Benutzers ohne das Wissen oder die Zustimmung des Benutzers ändert.
+<span id="MP_THREAT_CATEGORY_TOOLBAR"></span><span id="mp_threat_category_toolbar"></span>**MP \_ \_ \_ SYMBOLLEISTE "BEDROHUNGSKATEGORIE"** | Eine potenziell unerwünschte Anwendung (PUA), die eine Symbolleiste im Webbrowser des Benutzers installiert; werden häufig mit zusätzlichem PUA gebündelt, z. B. mit Einem Paket.
+<span id="MP_THREAT_CATEGORY_REMOTECONTROLSOFTWARE"></span><span id="mp_threat_category_remotecontrolsoftware"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ REMOTECONTROLSOFTWARE** | Eine potenziell unerwünschte Anwendung, die Remotezugriff auf ein Gerät bereitstellt.
+<span id="MP_THREAT_CATEGORY_TROJANFTP"></span><span id="mp_threat_category_trojanftp"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ "TROJANFTP"** | Ein Trojaner, der einen FTP-Server verwendet, um einem Angreifer das Hochladen oder Herunterladen von Dateien von einem Gerät zu ermöglichen.
+<span id="MP_THREAT_CATEGORY_POTENTIALUNWANTEDSOFTWARE"></span><span id="mp_threat_category_potentialunwantedsoftware"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ POTENTIALUNWANTEDSOFTWARE** | Wird auch als *potenziell unerwünschte Anwendung* oder *PUA* bezeichnet. Software, die sich möglicherweise übermäßig aufdringlich verhält, was der Benutzer möglicherweise nicht erwartet oder vollständig zugestimmt hat.
+<span id="MP_THREAT_CATEGORY_ICQEXPLOIT"></span><span id="mp_threat_category_icqexploit"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ ICQEXPLOIT** | Ein Trojaner, der den ICQ-Messagingdienst angreift, häufig durch Abrufen von Kennwörtern oder Manipulieren von Einstellungen.
+<span id="MP_THREAT_CATEGORY_TROJANTELNET"></span><span id="mp_threat_category_trojantelnet"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ "TROJANTELNET"** | Ein Trojaner, der einen Telnet-Server ohne Wissen oder Zustimmung des Benutzers auf dem Computer eines Benutzers installiert.
+<span id="MP_THREAT_CATEGORY_EXPLOIT"></span><span id="mp_threat_category_exploit"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE EXPLOIT** | Bösartiger Code, der ein Sicherheitsrisiko auf einem Gerät oder System nutzt.
+<span id="MP_THREAT_CATEGORY_FILESHARINGPROGRAM"></span><span id="mp_threat_category_filesharingprogram"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ FILESHARINGPROGRAM** | Eine potenziell unerwünschte Anwendung, die ein Gerät für die Peer-zu-Peer-Freigabe der Gerätedateien öffnet.
+<span id="MP_THREAT_CATEGORY_MALWARE_CREATION_TOOL"></span><span id="mp_threat_category_malware_creation_tool"></span>**MP \_ \_TOOL \_ ZUM ERSTELLEN VON \_ SCHADSOFTWARE \_ DER BEDROHUNGSKATEGORIE** | Eine Anwendung, die automatisch schädliche Dateien generieren kann.
+<span id="MP_THREAT_CATEGORY_REMOTE_CONTROL_SOFTWARE"></span><span id="mp_threat_category_remote_control_software"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ \_ \_ REMOTESTEUERUNGSSOFTWARE** | Eine potenziell unerwünschte Anwendung, die den Remotezugriff auf ein Gerät ermöglicht.
+<span id="MP_THREAT_CATEGORY_TOOL"></span><span id="mp_threat_category_tool"></span>**MP \_ \_ \_ TOOL "BEDROHUNGSKATEGORIE"** | Ein Hilfsprogramm, das einem Angreifer hilft, böswillige Aktionen auf einem Gerät auszuführen.
+<span id="MP_THREAT_CATEGORY_TROJAN_DENIALOFSERVICE"></span><span id="mp_threat_category_trojan_denialofservice"></span>**MP \_ \_BEDROHUNGSKATEGORIE: \_ TROJAN \_ DENIALOFSERVICE** | Ein Trojaner, der im Rahmen eines Denial-of-Service-Angriffs (DoS) eine große Menge von Netzwerkanforderungen an ein Ziel senden soll.
+<span id="MP_THREAT_CATEGORY_TROJAN_DROPPER"></span><span id="mp_threat_category_trojan_dropper"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ " TROJAN \_ DROPPER"** | Ein Trojaner, der Schadsoftware oder potenziell unerwünschte Anwendungen auf einem Ziel herunterlädt und installiert.
+<span id="MP_THREAT_CATEGORY_TROJAN_MASSMAILER"></span><span id="mp_threat_category_trojan_massmailer"></span>**MP \_ \_BEDROHUNGSKATEGORIE: \_ TROJAN \_ MASSMAILER** | Ein Trojaner, der ein großes Volumen von E-Mails an ein Ziel sendet, das dazu dient, den Posteingang des Ziels zu überlasten.
+<span id="MP_THREAT_CATEGORY_TROJAN_MONITORINGSOFTWARE"></span><span id="mp_threat_category_trojan_monitoringsoftware"></span>**MP \_ \_BEDROHUNGSKATEGORIE: \_ ÜBERWACHUNG VON \_ ÜBERWACHUNGSSOFTWARE FÜR BEDROHUNGEN** | Ein Trojaner, der Benutzeraktivitäten überwacht, z. B. die Eingaben des Benutzers auf der Tastatur oder ansichten auf dem Bildschirm.
+<span id="MP_THREAT_CATEGORY_TROJAN_PROXYSERVER"></span><span id="mp_threat_category_trojan_proxyserver"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ "TROJAN \_ PROXYSERVER"** | Ein Proxyserver, der von einem Trojaner installiert wurde, der eine scheinbar unterbrechungsfreie Internetverbindung bereitstellt und gleichzeitig nicht autorisierten Zugriff auf das infizierte Gerät zulässt.
+<span id="MP_THREAT_CATEGORY_VIRUS"></span><span id="mp_threat_category_virus"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ VIRUS** | Schadsoftware, die repliziert wird, häufig durch Fecting anderer Dateien im System, wodurch die Ausführung des Schadsoftwarecodes und dessen Weitergabe ermöglicht wird, wenn diese Dateien aktiviert werden.
+<span id="MP_THREAT_CATEGORY_KNOWN"></span><span id="mp_threat_category_known"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ BEKANNT** | Eine nicht angegebene Bedrohung durch Schadsoftware.
+<span id="MP_THREAT_CATEGORY_UNKNOWN"></span><span id="mp_threat_category_unknown"></span>**MP \_ \_BEDROHUNGSKATEGORIE \_ UNBEKANNT** | Eine nicht angegebene Bedrohung durch Schadsoftware, die noch nicht definiert wurde.
+<span id="MP_THREAT_CATEGORY_SPP"></span><span id="mp_threat_category_spp"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE-SPP** | Antikonforme Technologie, die jede Installation eines Windows Produkts erfordert, muss mit Microsoft aktiviert werden.
+<span id="MP_THREAT_CATEGORY_BEHAVIOR"></span><span id="mp_threat_category_behavior"></span>**MP \_ VERHALTEN \_ DER \_ BEDROHUNGSKATEGORIE** | Ein Erkennungstyp, der auf Dateiaktionen basiert, die häufig schädlichen Aktivitäten zugeordnet sind.
+<span id="MP_THREAT_CATEGORY_VULNERABILTIY"></span><span id="mp_threat_category_vulnerabiltiy"></span>**MP \_ \_ \_ BEDROHUNGSKATEGORIE NERABILTIY** | Jede Schwachstelle, jeder Verwaltungsprozess oder jede Aktivität, die ein Gerät anfällig macht, von einer Bedrohung ausgenutzt zu werden.
+<span id="MP_THREAT_CATEGORY_POLICY"></span><span id="mp_threat_category_policy"></span>**MP \_ RICHTLINIE \_ FÜR \_ BEDROHUNGSKATEGORIEN** | Eine Gruppe von Regeln, die von einem Administrator definiert werden, die Features auf Desktop- und mobilen Geräten steuern, z. B. Softwareupdates.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,4 +138,4 @@ Bedrohungs Kategorie | BESCHREIBUNG
 |-|-|
 | Unterstützte Mindestversion (Client) | Windows 8 (nur Desktop-Apps) |
 | Unterstützte Mindestversion (Server) | Windows Server 2012 (nur Desktop-Apps) |
-| Header | Mpclient. h |
+| Header | MpClient.h |

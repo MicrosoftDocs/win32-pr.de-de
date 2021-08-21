@@ -1,7 +1,7 @@
 ---
 description: Boolescher Wert, der angibt, ob diese Sperre verfolgt werden soll.
 ms.assetid: 23417410-cfdc-426e-a662-7d6580b43a28
-title: 'Ccritsec:: m_fTrace Member (wxutil. h)'
+title: CCritSec::m_fTrace-Member (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 691e078bb3b502704aed585ba020d49b2bd99af1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5a47437e4f9ab475b64979ec970604ac7a621d2ab53ea7a3c87742fa81a8aab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074394"
 ---
-# <a name="ccritsecm_ftrace-member"></a>Ccritsec:: m \_ ftrace-Member
+# <a name="ccritsecm_ftrace-member"></a>CCritSec::m \_ fTrace-Member
 
 Boolescher Wert, der angibt, ob diese Sperre verfolgt werden soll.
 
@@ -36,9 +36,9 @@ BOOL m_fTrace;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Variable wird nur in der Debugversion der Basisklasse definiert. Wenn der Wert **true** ist, wird eine Ablauf Verfolgung des Sperr Zustands in das Debugprotokoll geschrieben. (Die Debugprotokollierung für kritische Abschnitte muss aktiv sein.) Weitere Informationen finden Sie unter [**dbglocktrace**](dbglocktrace.md).
+Diese Membervariable wird nur in der Debugversion der Basisklasse definiert. Wenn der Wert **TRUE ist,** wird eine Ablaufverfolgung des Sperrzustands in das Debugprotokoll geschrieben. (Debugprotokollierung für kritische Abschnitte muss aktiv sein.) Weitere Informationen finden Sie unter [**DbgLockTrace**](dbglocktrace.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Diese Member-Variable wird nur in der Debugversion der Basisklasse definiert. We
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Diese Member-Variable wird nur in der Debugversion der Basisklasse definiert. We
 
 <dl> <dt>
 
-[**Ccritsec-Klasse**](ccritsec.md)
+[**CCritSec-Klasse**](ccritsec.md)
 </dt> </dl>
 
  

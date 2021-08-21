@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine leere cubetextur und passt die aufrufenden Parameter nach Bedarf an.
+description: Erstellt eine leere Cubetextur und passt die aufrufenden Parameter nach Bedarf an.
 ms.assetid: 96cf3fc1-9efc-4b97-a082-2956386145c7
-title: D3DXCreateCubeTexture-Funktion (D3dx9tex. h)
+title: D3DXCreateCubeTexture-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8fa31945cea5e65cdf00eae512059308090bcbab
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 86518a98f9ac78c4c6410d6ff5aa76640dbd04c0d5e50158e4432b7fa5ab79ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045198"
 ---
 # <a name="d3dxcreatecubetexture-function"></a>D3DXCreateCubeTexture-Funktion
 
-Erstellt eine leere cubetextur und passt die aufrufenden Parameter nach Bedarf an.
+Erstellt eine leere Cubetextur und passt die aufrufenden Parameter nach Bedarf an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCreateCubeTexture(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Textur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Textur zugeordnet werden soll.
 
 </dd> <dt>
 
-*Größe* \[ in\]
+*Größe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Breite und Höhe der cubetextur in Pixel. Wenn es sich bei der cubetextur z. b. um einen 8-Pixel-Cube mit 8 Pixel handelt, sollte der Wert für diesen Parameter 8 lauten.
+Breite und Höhe der Cubetextur in Pixel. Wenn es sich bei der Cubetextur beispielsweise um einen Cube mit 8 x 8 Pixeln handelt, sollte der Wert für diesen Parameter 8 sein.
 
 </dd> <dt>
 
-*Miplevels* \[ in\]
+*MipLevels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der angeforderten Mip-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ Default ist, wird eine komplette MipMap-Kette erstellt.
+Anzahl der angeforderten MIP-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, wird eine vollständige Mipmapkette erstellt.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Nutzung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-0, D3DUSAGE \_ renderTarget oder D3DUSAGE \_ Dynamic. Wenn dieses Flag auf D3DUSAGE \_ renderTarget festgelegt wird, wird angegeben, dass die Oberfläche als Renderziel verwendet werden soll. Die Ressource kann dann an den *pnewrendertarget* -Parameter der Methode "Setup [**target**](/windows/desktop/api) " übergeben werden. Wenn D3DUSAGE \_ renderTarget angegeben ist, muss die Anwendung überprüfen, ob das Gerät diesen Vorgang durch Aufrufen von [**CheckDeviceFormat**](/windows/desktop/api)unterstützt. Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden dynamischer Texturen](performance-optimizations.md).
+0, D3DUSAGE \_ RENDERTARGET oder D3DUSAGE \_ DYNAMIC. Durch Festlegen dieses Flags auf D3DUSAGE \_ RENDERTARGET wird angegeben, dass die Oberfläche als Renderziel verwendet werden soll. Die Ressource kann dann an den *pNewRenderTarget-Parameter* der [**SetRenderTarget-Methode**](/windows/desktop/api) übergeben werden. Wenn D3DUSAGE \_ RENDERTARGET angegeben ist, sollte die Anwendung überprüfen, ob das Gerät diesen Vorgang unterstützt, indem [**sie CheckDeviceFormat aufruft.**](/windows/desktop/api) Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden dynamischer Texturen.](performance-optimizations.md)
 
 </dd> <dt>
 
-*Format* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das angeforderte Pixel Format für die cubetextur beschreibt. Die zurückgegebene cubetextur kann ein anderes Format aufweisen als das, das durch das *Format* angegeben wird. Anwendungen sollten das Format der zurückgegebenen cubetextur überprüfen.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das angeforderte Pixelformat für die Cubetextur beschreibt. Die zurückgegebene Cubetextur hat möglicherweise ein anderes Format als das von *Format* angegebene Format. Anwendungen sollten das Format der zurückgegebenen Cubetextur überprüfen.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klasse beschreibt, in der die Cubestruktur platziert werden soll.
+Member des [**D3DPOOL-Enumerationstyps,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Cubetextur platziert werden soll.
 
 </dd> <dt>
 
-*ppcubetexture* \[ vorgenommen\]
+*ppCubeTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DCUBETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9)\***
 
-Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) -Schnittstelle, die das erstellte Cube-Textur Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) die das erstellte Cubetexturobjekt darstellt.
 
 </dd> </dl>
 
@@ -113,13 +113,13 @@ Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcallable, D3DERR \_ NotAvailable, D3DERR \_ oudefvideomemory, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Cube-Texturen unterscheiden sich von anderen Oberflächen darin, dass es sich um Auflistungen von
+Cubetexturen unterscheiden sich von anderen Oberflächen darin, dass sie Auflistungen von Oberflächen sind.
 
-Intern verwendet D3DXCreateCubeTexture [**D3DXCheckCubeTextureRequirements**](d3dxcheckcubetexturerequirements.md) , um die aufrufenden Parameter anzupassen. Daher sind Aufrufe von D3DXCreateCubeTexture oft erfolgreich, wenn Aufrufe von " [**anatecubetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) " fehlschlagen.
+Intern verwendet D3DXCreateCubeTexture [**D3DXCheckCubeTextureRequirements,**](d3dxcheckcubetexturerequirements.md) um die aufrufenden Parameter anzupassen. Daher sind Aufrufe von D3DXCreateCubeTexture häufig erfolgreich, wenn Aufrufe von [**CreateCubeTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) fehlschlagen würden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,8 +127,8 @@ Intern verwendet D3DXCreateCubeTexture [**D3DXCheckCubeTextureRequirements**](d3
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -136,7 +136,7 @@ Intern verwendet D3DXCreateCubeTexture [**D3DXCheckCubeTextureRequirements**](d3
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

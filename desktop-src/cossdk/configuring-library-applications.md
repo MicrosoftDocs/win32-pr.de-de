@@ -19,7 +19,7 @@ Auf Anwendungsebene sind mehrere Einstellungen für Bibliotheksanwendungen entwe
 
 
 
-| attribute                                       | BESCHREIBUNG                                                                                                                                                                                                                                   |
+| attribute                                       | Beschreibung                                                                                                                                                                                                                                   |
 |-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Sicherheitsstufe<br/>                       | Sie müssen Zugriffsüberprüfungen auf Komponentenebene auswählen. Die Bibliotheksanwendung kann keine Zugriffsüberprüfungen auf Prozessebene beeinflussen. Weitere Informationen finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffsüberprüfungen.](setting-a-security-level-for-access-checks.md)<br/>             |
 | Aktivieren oder Deaktivieren der Authentifizierung<br/> | Sie können angeben, ob die Bibliotheksanwendung an der vom Hostprozess durchgeführten Authentifizierung teilnimmt. Weitere Informationen finden Sie unter [Aktivieren der Authentifizierung für eine Bibliotheksanwendung.](enabling-authentication-for-a-library-application.md)<br/> |

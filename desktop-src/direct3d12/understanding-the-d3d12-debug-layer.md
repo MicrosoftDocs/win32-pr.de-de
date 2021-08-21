@@ -1,17 +1,17 @@
 ---
-title: Grundlegendes zur D3D12 Debug-Ebene
-description: Beschreibt, wie die D3D12-debugschicht optimal verwendet werden kann.
+title: Grundlegendes zur D3D12-Debugebene
+description: Beschreibt, wie die D3D12-Debugebene optimal genutzt wird.
 ms.assetid: C95FABCB-BBB6-48B1-8D13-25A49A1A0C73
 ms.custom: 19H1
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 04/19/2019
-ms.openlocfilehash: 8ee5ff8ad63fc4d050d01d4d2193a7bd8dbec6ac
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13ab83ea7ba5ac66e7234966dc957581c3811378fc01016ea5375ebf044760d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74104826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045358"
 ---
 # <a name="debugging-and-diagnostics-with-direct3d-12"></a>Debuggen und Diagnose mit Direct3D 12
 
@@ -19,10 +19,10 @@ ms.locfileid: "74104826"
 
 | Thema | Beschreibung |
 |-|-|
-| [Verwenden der GPU-basierten Validierung mit der Direct3D 12-Debugebene](using-d3d12-debug-layer-gpu-based-validation.md) | In diesem Thema wird beschrieben, wie die Direct3D 12-Debugebene optimal genutzt wird. Die GPU-basierte Validierung (GBV) ermöglicht Validierungs Szenarien auf der GPU-Zeitachse, die bei API-aufrufen auf der CPU nicht möglich sind. |
-| [Verwenden von Dred zum Diagnostizieren von GPU-Fehlern](use-dred.md) | Vom Gerät entfernte erweiterte Daten (Dred) ist ein weiterentwickelnder Satz von Diagnose Features, die Ihnen helfen, die Ursache unerwarteter Fehler beim Entfernen von Geräten zu ermitteln. |
+| [Verwenden der GPU-basierten Überprüfung mit der Direct3D 12-Debugebene](using-d3d12-debug-layer-gpu-based-validation.md) | In diesem Thema wird beschrieben, wie Sie die Direct3D 12-Debugebene optimal nutzen. GPU-basierte Validierung (GBV) ermöglicht Validierungsszenarien auf der GPU-Zeitachse, die während API-Aufrufen auf der CPU nicht möglich sind. |
+| [Verwenden von DRED zum Diagnostizieren von GPU-Fehlern](use-dred.md) | Device Removed Extended Data (DRED) ist ein sich weiterentwickelnder Satz von Diagnosefunktionen, mit denen Sie die Ursache unerwarteter Geräteentfernungsfehler ermitteln können. |
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-* [Debug-Ebenenverweis](direct3d-12-sdklayers-reference.md)
-* [Direct3D 12-Programmier Handbuch](directx-12-programming-guide.md)
+* [Referenz der Debugschicht](direct3d-12-sdklayers-reference.md)
+* [Direct3D 12-Programmieranleitung](directx-12-programming-guide.md)

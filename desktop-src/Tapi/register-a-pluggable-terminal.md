@@ -1,19 +1,19 @@
 ---
-description: Die Registrierung eines austauschbaren Terminals kann in der DllRegisterServer-Funktion der Komponente aufgerufen werden, die das Terminal implementiert. Das folgende Codebeispiel kann in den Code für DllRegisterServer eingefügt werden.
+description: Die Registrierung eines austauschbaren Terminals kann in der DllRegisterServer-Funktion der Komponente aufgerufen werden, die das Terminal implementiert. Das folgende Codebeispiel kann in den Code für DllRegisterServer aufgenommen werden.
 ms.assetid: d88a8d2c-4b05-4c31-928f-0baf1dbc218c
-title: Ein austauschbares Terminal registrieren
+title: Registrieren eines austauschbaren Terminals
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7be84d9e2063c28a320c49d5249ea6434094b9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca70081c5ffbee5d038488a245c528992015ed8679c35263666f456479e249dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060428"
 ---
-# <a name="register-a-pluggable-terminal"></a>Ein austauschbares Terminal registrieren
+# <a name="register-a-pluggable-terminal"></a>Registrieren eines austauschbaren Terminals
 
-Die Registrierung eines austauschbaren Terminals kann in der **DllRegisterServer** -Funktion der Komponente aufgerufen werden, die das Terminal implementiert. Das folgende Codebeispiel kann in den Code für **DllRegisterServer** eingefügt werden.
+Die Registrierung eines austauschbaren Terminals kann in der **DllRegisterServer-Funktion** der Komponente aufgerufen werden, die das Terminal implementiert. Das folgende Codebeispiel kann im Code für **DllRegisterServer** abgelegt werden.
 
 ``` syntax
 ITPluggableTerminalClassRegistration* pTerminal;

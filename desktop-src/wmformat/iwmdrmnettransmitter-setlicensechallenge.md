@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmnettransmitter setlicensechallenge-Methode (wmdrmsdk. h)
-description: Die setlicensechallenge-Methode verarbeitet eine Lizenz Herausforderung, die von einem Windows Media DRM für den Empfänger von Netzwerkgeräten gesendet wird.
+title: IWMDRMNetTransmitter SetLicenseChallenge-Methode (Wmdrmsdk.h)
+description: Die SetLicenseChallenge-Methode verarbeitet eine Lizenzaufforderung, die von einem Windows Medien-DRM für den Empfänger von Netzwerkgeräten gesendet wird.
 ms.assetid: 3d4cd029-a8f5-49fc-ba8c-d8615ff94366
 keywords:
-- Setlicensechallenge-Methode, Windows Media-Format
-- Setlicensechallenge-Methode Windows Media-Format, iwmdrmnettransmitter-Schnittstelle
-- Iwmdrmnettransmitter-Schnittstelle Windows Media-Format, setlicensechallenge-Methode
+- SetLicenseChallenge-Methode windows Media Format
+- SetLicenseChallenge-Methode windows Media Format , IWMDRMNetTransmitter-Schnittstelle
+- IWMDRMNetTransmitter-Schnittstelle windows Media Format , SetLicenseChallenge-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94b83ca615896039a592d147fe8c14d15493cec0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 211f8de60cddb153e157af64ee300a4bbaf327d70a1564fbd9e622008c055cb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027568"
 ---
-# <a name="iwmdrmnettransmittersetlicensechallenge-method"></a>Iwmdrmnettransmitter:: setlicensechallenge-Methode
+# <a name="iwmdrmnettransmittersetlicensechallenge-method"></a>IWMDRMNetTransmitter::SetLicenseChallenge-Methode
 
-Die **setlicensechallenge** -Methode verarbeitet eine Lizenz Herausforderung, die von einem Windows Media DRM für den Empfänger von Netzwerkgeräten gesendet wird.
+Die **SetLicenseChallenge-Methode** verarbeitet eine Lizenzaufforderung, die von einem Windows Medien-DRM für den Empfänger von Netzwerkgeräten gesendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ HRESULT SetLicenseChallenge(
 
 <dl> <dt>
 
-*pblicenabchallenge* \[ in\]
+*pbLicenseChallenge* \[ In\]
 </dt> <dd>
 
-Zeiger auf die Lizenz Aufforderungs Daten, die von einem Empfänger gesendet wurden.
+Zeiger auf die Lizenzaufforderungsdaten, die von einem Empfänger gesendet wurden.
 
 </dd> <dt>
 
-*cblicenanchallenge* \[ in\]
+*cbLicenseChallenge* \[ In\]
 </dt> <dd>
 
-Die Größe der Lizenz Herausforderung in Bytes.
+Größe der Lizenzaufforderung in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -71,9 +71,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode erfolgreich ausgeführt wird, werden bei nachfolgenden Aufrufen der anderen Methoden von **iwmdrmnettransmitter** die Informationen in der verarbeiteten Abfrage verwendet.
+Wenn diese Methode erfolgreich ist, verwenden nachfolgende Aufrufe der anderen Methoden von **IWMDRMNetTransmitter** die Informationen in der verarbeiteten Abfrage.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,15 +81,15 @@ Wenn diese Methode erfolgreich ausgeführt wird, werden bei nachfolgenden Aufruf
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmnettransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
+[**IWMDRMNetTransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
 </dt> </dl>
 
  

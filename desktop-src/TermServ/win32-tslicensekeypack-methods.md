@@ -1,43 +1,43 @@
 ---
-title: Win32_TSLicenseKeyPack Methoden
-description: Die Win32- \_ Klasse "zlicentarkeypack" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSLicenseKeyPack-Methoden
+description: Die Win32 \_ TSLicenseKeyPack-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 0E0D4B49-F90C-411B-86D5-8C92EF9C7CF0
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1655afd2fae64aefcfde1fe1e5285feede183c1a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b434fdc0b3c6720066d5e2d5ce0ec7155beb27145390a74914fcd03233c1adbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058348"
 ---
-# <a name="win32_tslicensekeypack-methods"></a>Win32- \_ Methoden vom typlicenskeypack
+# <a name="win32_tslicensekeypack-methods"></a>Win32 \_ TSLicenseKeyPack-Methoden
 
-Die Win32-Klasse " [**\_ zlicentarkeypack**](win32-tslicensekeypack.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSLicenseKeyPack-Klasse**](win32-tslicensekeypack.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Convertlicenses-Methode**](convertlicenses-win32-tslicensekeypack.md)
--   [**Importagreementlicenskeypack-Methode**](win32-tslicensekeypack-importagreementlicensekeypack.md)
--   [**Importlicenabkeypackoffline-Methode**](win32-tslicensekeypack-importlicensekeypackoffline.md)
--   [**Importopenpurchaselicenskeypack-Methode**](win32-tslicensekeypack-importopenpurchaselicensekeypack.md)
--   [**Importretailpurchaselicenskeypack-Methode**](win32-tslicensekeypack-importretailpurchaselicensekeypack.md)
--   [**Installagreementlicenskeypack-Methode**](installagreementlicensekeypack-win32-tslicensekeypack.md)
--   [**Installlicenskeypack-Methode**](installlicensekeypack-win32-tslicensekeypack.md)
--   [**Installopenlicenskeypack-Methode**](installopenlicensekeypack-win32-tslicensekeypack.md)
--   [**Installretailpurchaselicenabkeypack-Methode**](installretailpurchaselicensekeypack-win32-tslicensekeypack.md)
--   [**Reinstallagreementlicenskeypack-Methode**](win32-tslicensekeypack-reinstallagreementlicensekeypack.md)
--   [**Reinstalllicenabkeypackoffline-Methode**](win32-tslicensekeypack-reinstalllicensekeypackoffline.md)
--   [**Reinstallopenpurchaselicenskeypack-Methode**](win32-tslicensekeypack-reinstallopenpurchaselicensekeypack.md)
--   [**Reinstallretailpurchaselicenabkeypack-Methode**](win32-tslicensekeypack-reinstallretailpurchaselicensekeypack.md)
--   [**Removelicenseswithidcount-Methode**](win32-tslicensekeypack-removelicenseswithidcount.md)
--   [**Uninstalllicenskeypack-Methode**](win32-tslicensekeypack-uninstalllicensekeypack.md)
--   [**Uninstalllicenabkeypackwithid-Methode**](win32-tslicensekeypack-uninstalllicensekeypackwithid.md)
+-   [**ConvertLicenses-Methode**](convertlicenses-win32-tslicensekeypack.md)
+-   [**ImportAgreementLicenseKeyPack-Methode**](win32-tslicensekeypack-importagreementlicensekeypack.md)
+-   [**ImportLicenseKeyPackOffline-Methode**](win32-tslicensekeypack-importlicensekeypackoffline.md)
+-   [**ImportOpenPurchaseLicenseKeyPack-Methode**](win32-tslicensekeypack-importopenpurchaselicensekeypack.md)
+-   [**ImportRetailPurchaseLicenseKeyPack-Methode**](win32-tslicensekeypack-importretailpurchaselicensekeypack.md)
+-   [**InstallAgreementLicenseKeyPack-Methode**](installagreementlicensekeypack-win32-tslicensekeypack.md)
+-   [**InstallLicenseKeyPack-Methode**](installlicensekeypack-win32-tslicensekeypack.md)
+-   [**InstallOpenLicenseKeyPack-Methode**](installopenlicensekeypack-win32-tslicensekeypack.md)
+-   [**InstallRetailPurchaseLicenseKeyPack-Methode**](installretailpurchaselicensekeypack-win32-tslicensekeypack.md)
+-   [**ReinstallAgreementLicenseKeyPack-Methode**](win32-tslicensekeypack-reinstallagreementlicensekeypack.md)
+-   [**ReinstallLicenseKeyPackOffline-Methode**](win32-tslicensekeypack-reinstalllicensekeypackoffline.md)
+-   [**ReinstallOpenPurchaseLicenseKeyPack-Methode**](win32-tslicensekeypack-reinstallopenpurchaselicensekeypack.md)
+-   [**ReinstallRetailPurchaseLicenseKeyPack-Methode**](win32-tslicensekeypack-reinstallretailpurchaselicensekeypack.md)
+-   [**RemoveLicensesWithIdCount-Methode**](win32-tslicensekeypack-removelicenseswithidcount.md)
+-   [**UninstallLicenseKeyPack-Methode**](win32-tslicensekeypack-uninstalllicensekeypack.md)
+-   [**UninstallLicenseKeyPackWithId-Methode**](win32-tslicensekeypack-uninstalllicensekeypackwithid.md)
 
- 
+ 
 
- 
+ 
 
 
 

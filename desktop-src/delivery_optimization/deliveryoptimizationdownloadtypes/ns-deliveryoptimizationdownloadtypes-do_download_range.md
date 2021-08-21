@@ -23,7 +23,7 @@ ms.locfileid: "119047118"
 ---
 # <a name="do_download_range-structure"></a>DO_DOWNLOAD_RANGE-Struktur
 
-Die **DO_DOWNLOAD_RANGE-Struktur** identifiziert einen einzelnen Bytebereich, der aus einer Datei heruntergeladen werden soll. Die **DO_DOWNLOAD_RANGE-Struktur** ist in **DO_DOWNLOAD_RANGES_INFO** -Struktur enthalten, um ein Array von Bereichen zum Herunterladen bereitzustellen.
+Die **DO_DOWNLOAD_RANGE** identifiziert einen einzelnen Bytebereich, der aus einer Datei heruntergeladen werden soll. Die **DO_DOWNLOAD_RANGE-Struktur** ist **in** DO_DOWNLOAD_RANGES_INFO-Struktur enthalten, um ein Array von Bereichen zum Herunterladen zur Verfügung zu stellen.
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -42,12 +42,12 @@ Nullbasierter Offset bis zum Anfang des Bytebereichs, der aus einer Datei herunt
 
 `Length`
 
-Die Länge des Bereichs in Bytes. Geben Sie keine Länge von 0 Byte an. Um anzugeben, dass sich der Bereich bis zum Ende der Datei erstreckt, geben Sie **DO_LENGTH_TO_EOF** an.
+Die Länge des Bereichs in Bytes. Geben Sie keine Länge von 0 Byte an. Um anzugeben, dass sich der Bereich bis zum Ende der Datei erstreckt, geben Sie **DO_LENGTH_TO_EOF.**
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
 | **Header** | DeliveryOptimizationDownloadTypes.h |

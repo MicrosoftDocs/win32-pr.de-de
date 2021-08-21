@@ -1,7 +1,7 @@
 ---
-description: Klassen Stile für das Fenster.
+description: Klassenstile für das Fenster.
 ms.assetid: 2bf70b7e-c585-4511-aed5-e6d1b087dd74
-title: 'Cbasewindow:: m_ClassStyles Member (winutil. h)'
+title: CBaseWindow::m_ClassStyles-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 10afaf647862010fc8317c70fd5322b2b616e95d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5cbe78847c99c82f72777731c5f2d5b673ba339e5c883bfafe623a0699a8bce2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016558"
 ---
-# <a name="cbasewindowm_classstyles-member"></a>Cbasewindow:: m \_ classstyles-Member
+# <a name="cbasewindowm_classstyles-member"></a>CBaseWindow::m \_ ClassStyles-Member
 
-Klassen Stile für das Fenster.
+Klassenstile für das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ DWORD m_ClassStyles;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: dc3b6502a8015564207f208166cec15227d3b18a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 59656e1716dcf3fbc7844c8369de032f5e6e69776e5b89452a35d71512aea87c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044808"
 ---
 # <a name="d3dxmatrixtransformation-function-d3dx9mathh"></a>D3DXMatrixTransformation-Funktion (D3dx9math.h)
 
@@ -60,7 +60,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vo
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Skalierungsmittelpunkt identifiziert. Wenn dieses Argument **NULL ist,** wird eine M <sub>sc-Matrix</sub> der Identität auf die Formel in "Hinweise" angewendet.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Mittelpunkt der Skalierung identifiziert. Wenn dieses Argument **NULL** ist, wird eine M <sub>sc-Identitätsmatrix</sub> auf die Formel in "Hinweise" angewendet.
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Skalierungsm
 
 Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die die Skalierungsrotation angibt. Wenn dieses Argument **NULL ist,** wird eine M <sub>sr-Matrix der</sub> Identität auf die Formel in "Hinweise" angewendet.
+Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die die Skalierungsrotation angibt. Wenn dieses Argument **NULL** ist, wird eine M <sub>SR-Identitätsmatrix</sub> auf die Formel in "Hinweise" angewendet.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) den Skalierungsvekto
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) ein Punkt, der den Mittelpunkt der Drehung identifiziert. Wenn dieses Argument **NULL** ist, wird eine M <sub>RC-Matrix</sub> der Identität auf die Formel in "Hinweise" angewendet.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) ein Punkt, der den Mittelpunkt der Drehung identifiziert. Wenn dieses Argument **NULL** ist, wird eine Identity M <sub>rc-Matrix</sub> auf die Formel in "Remarks" angewendet.
 
 </dd> <dt>
 
@@ -115,11 +115,11 @@ Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
 Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die die Transformationsmatrix ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion berechnet die Transformationsmatrix mit der folgenden Formel, wobei die Matrixverkettung in der Reihenfolge von links nach rechts ausgewertet wird:
 
-M<sub>out</sub> = (M<sub>sc</sub>)⁻¹ \* (M<sub>sr</sub>)⁻¹ \* Ms \* M<sub>sr</sub> \* M<sub>sc</sub> \* (M<sub>rc</sub>)⁻¹ \* M<sub>r</sub> \* M<sub>rc</sub> \* Mt
+M<sub>out</sub> = (M<sub>sc</sub>)⁻¹ \* (M<sub>sr</sub>)⁻¹ \* Mₛ \* M<sub>sr</sub> \* M<sub>sc</sub> \* (M<sub>rc</sub>)⁻¹ \* M<sub>r</sub> \* M<sub>rc</sub> \* Mt
 
 Dabei gilt:
 
@@ -145,14 +145,14 @@ Verwenden Sie für 2D-Transformationen [**D3DXMatrixTransformation2D.**](d3dxmat
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

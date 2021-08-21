@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ messagedrain-Methode legt das Fenster fest, um Fenster Meldungen zu empfangen, die an den Videorenderer gesendet werden.
+description: Die \_ put MessageDrain-Methode legt das Fenster fest, um Fenstermeldungen zu empfangen, die an den Videorenderer gesendet werden.
 ms.assetid: b2d2d489-a66f-474a-b8bf-b019179f6f69
-title: CBaseControlWindow.put_MessageDrain-Methode (ctlutil. h)
+title: CBaseControlWindow.put_MessageDrain-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f03f944a6af6ac99de6000a2507178eea510c06a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b58ac59d83023530ca6da51efc2f84ba42c4bef9ac0d3f25ad9a234a320291f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017258"
 ---
-# <a name="cbasecontrolwindowput_messagedrain-method"></a>Cbasecontrolwindow. Put \_ messagedrain-Methode
+# <a name="cbasecontrolwindowput_messagedrain-method"></a>CBaseControlWindow.put \_ MessageDrain-Methode
 
-Die- `put_MessageDrain` Methode legt das Fenster fest, um Fenster Meldungen zu empfangen, die an den Videorenderer gesendet werden.
+Die `put_MessageDrain` -Methode legt das Fenster fest, um Fenstermeldungen zu empfangen, die an den Videorenderer gesendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ HRESULT put_MessageDrain(
 *Entladen* 
 </dt> <dd>
 
-Fenster, an das Nachrichten gesendet werden sollen.
+Fenster zum Posten von Nachrichten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachrichten, die an den Videorenderer-Filter gesendet werden, können in einem anderen Fenster gepostet werden. Diese Member-Funktion registriert das Fenster, um diese Nachrichten zu empfangen. Anders als bei der [**cbasecontrolwindow::p UT- \_ Besitzer**](cbasecontrolwindow-put-owner.md) Element Funktion macht diese Member-Funktion das Videofenster nicht als untergeordnetes Element eines anderen Fensters. Er ist besonders nützlich für Vollbild-Videorenderer, die keine untergeordneten Fenster sein können.
+Nachrichten, die an den Filter des Videorenderers gesendet werden, können an ein anderes Fenster gesendet werden. Diese Memberfunktion registriert das Fenster, um diese Nachrichten zu empfangen. Im Gegensatz zur [**Memberfunktion CBaseControlWindow::p ut \_ Owner**](cbasecontrolwindow-put-owner.md) macht diese Memberfunktion das Videofenster nicht zu einem untergeordneten Element eines anderen Fensters. Dies ist besonders nützlich für Vollbildvideorenderer, bei denen es sich nicht um untergeordnete Fenster handelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Nachrichten, die an den Videorenderer-Filter gesendet werden, können in einem a
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Nachrichten, die an den Videorenderer-Filter gesendet werden, können in einem a
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Imsrdpdrive-Schnittstelle
-description: Enthält Informationen zu einem Laufwerks Objekt.
+title: IMsRdpDrive-Schnittstelle
+description: Enthält Informationen zu einem Laufwerkobjekt.
 ms.assetid: 25e76657-a898-4581-a866-d66008540f50
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpdrive-Schnittstelle Remotedesktopdienste
-- Imsrdpdrive-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpDrive-Remotedesktopdienste
+- IMsRdpDrive-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,33 +16,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 032e62ca54d6adccce9b27c8f7e95160c800759b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3efccf0459375e23375b3ac40067bcbd3965ed7f6c0b51ddb60f6362fb419688
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000730"
 ---
-# <a name="imsrdpdrive-interface"></a>Imsrdpdrive-Schnittstelle
+# <a name="imsrdpdrive-interface"></a>IMsRdpDrive-Schnittstelle
 
-Enthält Informationen zu einem Laufwerks Objekt.
+Enthält Informationen zu einem Laufwerkobjekt.
 
 ## <a name="members"></a>Member
 
-Die **imsrdpdrive** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imsrdpdrive** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpDrive-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpDrive** verfügt auch über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **imsrdpdrive** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpDrive-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                            | Zugriffstyp           | BESCHREIBUNG                                              |
+| Eigenschaft                                                            | Zugriffstyp           | Beschreibung                                              |
 |:--------------------------------------------------------------------|:----------------------|:---------------------------------------------------------|
 | [**Name**](imsrdpdrive-name.md)<br/>                         | Schreibgeschützt<br/>  | Ruft den Namen des Laufwerks ab.<br/>              |
-| [**Redirectionstate**](imsrdpdrive-redirectionstate.md)<br/> | Lesen/Schreiben<br/> | Gibt den Umleitungs Status des Laufwerks an.<br/> |
+| [**RedirectionState**](imsrdpdrive-redirectionstate.md)<br/> | Lesen/Schreiben<br/> | Gibt den Umleitungsstatus des Laufwerks an.<br/> |
 
 
 
@@ -58,18 +58,18 @@ Die **imsrdpdrive** -Schnittstelle verfügt über diese Eigenschaften.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpdrive ist als d28b5458-f694-47a8-8e61-40356a767e46 definiert.<br/>         |
+| IID<br/>                      | IID \_ IMsRdpDrive ist als d28b5458-f694-47a8-8e61-40356a767e46 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
 </dt> <dt>
 
-[**Imsrdpdrivecollection**](imsrdpdrivecollection.md)
+[**IMsRdpDriveCollection**](imsrdpdrivecollection.md)
 </dt> </dl>
 
  

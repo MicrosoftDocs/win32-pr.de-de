@@ -1,7 +1,7 @@
 ---
-description: Die checkbitfields-Methode überprüft die Farb Masken in einer videoinfo-Struktur.
+description: Die CheckBitFields-Methode überprüft die Farbmasken in einer VIDEOINFO-Struktur.
 ms.assetid: b03455aa-8d90-4fab-999d-7408d8417021
-title: Cimagedisplay. checkbitfields-Methode (winutil. h)
+title: CImageDisplay.CheckBitFields-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ade581dad5e53c2454df52e387653e44d6d4ad2f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 44e60b6693dde202cd458cd09495dce9e4bea52ed96a468a8d3dcb6b2370eac4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074174"
 ---
-# <a name="cimagedisplaycheckbitfields-method"></a>Cimagedisplay. checkbitfields-Methode
+# <a name="cimagedisplaycheckbitfields-method"></a>CImageDisplay.CheckBitFields-Methode
 
-Die- `CheckBitFields` Methode überprüft die Farb Masken in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur.
+Die `CheckBitFields` -Methode überprüft die Farbmasken in einer [**VIDEOINFO-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL CheckBitFields(
 
 <dl> <dt>
 
-*pinput* 
+*pInput* 
 </dt> <dd>
 
-Zeiger auf eine **videoinfo** -Struktur.
+Zeiger auf eine **VIDEOINFO-Struktur.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Farb Masken gültig sind, andernfalls **false** .
+Gibt **TRUE** zurück, wenn die Farbmasken gültig sind, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überprüft, ob die Farb Maske für jede Farbkomponente zwischen 1 und 8 Bits lang ist, und dass jede Farb Maske eine zusammenhängende Sequenz von Bits ist. Diese Methode wird nur aufgerufen, wenn der **bicompression** -Member auf BI Bitfields festgelegt ist \_ .
+Diese Methode überprüft, ob die Farbmaske für jede Farbkomponente zwischen einem und acht Bits lang ist und dass jede Farbmaske eine zusammenhängende Sequenz von Bits ist. Rufen Sie diese Methode nur auf, wenn der **biCompression-Member** auf BI \_ BITFIELDS festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode überprüft, ob die Farb Maske für jede Farbkomponente zwischen 1
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode überprüft, ob die Farb Maske für jede Farbkomponente zwischen 1
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

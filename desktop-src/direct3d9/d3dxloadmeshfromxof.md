@@ -61,7 +61,7 @@ Zeiger auf eine [**ID3DXFileData-Schnittstelle,**](id3dxfiledata.md) die das zu 
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus einem oder mehreren Flags aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
+Kombination eines oder mehrerer Flags aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
 
 </dd> <dt>
 
@@ -74,12 +74,12 @@ Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9hel
 
 </dd> <dt>
 
-*ppAdencyency* \[ out\]
+*ppAdjacency* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Zeiger auf einen Puffer, der Adjazenzdaten enthält. Die Adjazenzdaten enthalten ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Netz angeben. Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
+Zeiger auf einen Puffer, der Adjacency-Daten enthält. Die Adjacency-Daten enthalten ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Gitternetz angeben. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
 
 </dd> <dt>
 
@@ -97,7 +97,7 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) 
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Zeiger auf einen Puffer, der ein Array von Effektinstanzen enthält, eine pro Attributgruppe im zurückgegebenen Gitternetz. Eine Effektinstanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet werden. Siehe [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md). Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
+Zeiger auf einen Puffer, der ein Array von Effektinstanzen enthält, eine pro Attributgruppe im zurückgegebenen Netz. Eine Effect-Instanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet wird. Siehe [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md). Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
 
 </dd> <dt>
 
@@ -123,13 +123,13 @@ Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Für Meshdateien, die keine Effektinstanzinformationen enthalten, werden Standardeffektinstanzen aus den Materialinformationen in der X-Datei generiert. Eine Default Effect-Instanz hat Standardwerte, die den Membern der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) entsprechen.
+Für Meshdateien, die keine Effektinstanzinformationen enthalten, werden Standardeffektinstanzen aus den Materialinformationen in der X-Datei generiert. Eine Standardeffektinstanz hat Standardwerte, die den Membern der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) entsprechen.
 
-Der Standardtexturname ist ebenfalls ausgefüllt, wird jedoch anders behandelt. Der Name lautet Texture0@Name , was einer Effektvariablen mit dem Namen "Texture0" mit einer Anmerkung namens "Name" entspricht. Dieser enthält den Namen der Zeichenfolgendatei für die Textur.
+Der Standardtexturname ist ebenfalls ausgefüllt, wird jedoch anders behandelt. Der Name ist , was einer Effektvariablen mit dem Namen "Texture0" mit einer Anmerkung Texture0@Name namens "Name" entspricht. Dieser enthält den Namen der Zeichenfolgendatei für die Textur.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -142,11 +142,11 @@ Der Standardtexturname ist ebenfalls ausgefüllt, wird jedoch anders behandelt. 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXEFFECTDEFAULT**](d3dxeffectdefault.md)

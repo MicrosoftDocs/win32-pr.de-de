@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclienttransportsettings (gatewayusagemethod-Eigenschaft)
-description: Gibt an, wann ein Remotedesktop Gateway-Server (RD-Gateway) verwendet werden soll.
+title: IMsRdpClientTransportSettings GatewayUsageMethod (Eigenschaft)
+description: Gibt an, wann ein Remotedesktop Gatewayserver (RD-Gateway) verwendet werden soll.
 ms.assetid: 0644c413-9ff7-42c1-a38e-e1ce546972ff
 ms.tgt_platform: multiple
 keywords:
-- Gatewayusagemethod-Eigenschaft Remotedesktopdienste
-- Gatewayusagemethod-Eigenschaft Remotedesktopdienste, imsrdpclienttransportsettings-Schnittstelle
-- Imsrdpclienttransportsettings-Schnittstelle Remotedesktopdienste, gatewayusagemethod-Eigenschaft
+- GatewayUsageMethod-Remotedesktopdienste
+- GatewayUsageMethod-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings-Schnittstelle
+- IMsRdpClientTransportSettings-Schnittstelle Remotedesktopdienste , GatewayUsageMethod -Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f07bc10c67d01f957e588d1b50085e57b0fa10b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 14a177d191d3303cf44778713ebdef88db955d28ede58691bda1e9ad05aa51a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001040"
 ---
-# <a name="imsrdpclienttransportsettingsgatewayusagemethod-property"></a>Imsrdpclienttransportsettings:: gatewayusagemethod-Eigenschaft
+# <a name="imsrdpclienttransportsettingsgatewayusagemethod-property"></a>IMsRdpClientTransportSettings::GatewayUsageMethod (Eigenschaft)
 
-Gibt an, wann ein Remotedesktop Gateway-Server (RD-Gateway) verwendet werden soll.
+Gibt an, wann ein Remotedesktop Gatewayserver (RD-Gateway) verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,68 +49,68 @@ HRESULT get_GatewayUsageMethod(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ulong** -Variable, die die RD-Gateway Server-Verwendungs Methode angibt. Dieser Parameter kann einen der folgenden Werte annehmen.
+Eine **ULONG-Variable,** die die Verwendungsmethode des RD-Gatewayservers angibt. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 <dt>
 
 <span id="TSC_PROXY_MODE_NONE_DIRECT"></span><span id="tsc_proxy_mode_none_direct"></span>
 
-<span id="TSC_PROXY_MODE_NONE_DIRECT"></span><span id="tsc_proxy_mode_none_direct"></span>**TSC \_ Proxy \_ Modus " \_ keine \_ direkt** " (0 (0x0))
+<span id="TSC_PROXY_MODE_NONE_DIRECT"></span><span id="tsc_proxy_mode_none_direct"></span>**TSC \_ PROXYMODUS \_ \_ NONE \_ DIRECT** (0 (0x0))
 
 
 </dt> <dd>
 
-Verwenden Sie keinen RD-Gateway Server. In der Client Benutzeroberfläche des Remotedesktopverbindung (RDC) ist das Kontrollkästchen **RD-Gateway Server für lokale Adressen umgehen** deaktiviert.
+Verwenden Sie keinen RD-Gatewayserver. Auf der Remotedesktopverbindung -Clientbenutzeroberfläche (RDC) ist das Kontrollkästchen **RD-Gatewayserver** für lokale Adressen umgehen nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_MODE_DIRECT"></span><span id="tsc_proxy_mode_direct"></span>
 
-<span id="TSC_PROXY_MODE_DIRECT"></span><span id="tsc_proxy_mode_direct"></span>**TSC \_ Proxy \_ Modus \_ Direct** (1 (0x1))
+<span id="TSC_PROXY_MODE_DIRECT"></span><span id="tsc_proxy_mode_direct"></span>**TSC \_ PROXY \_ MODE \_ DIRECT** (1 (0x1))
 
 
 </dt> <dd>
 
-Verwenden Sie immer einen RD-Gateway Server. In der RDC-Client-Benutzeroberfläche ist das Kontrollkästchen **RD-Gateway Server für lokale Adressen umgehen** deaktiviert.
+Verwenden Sie immer einen RD-Gatewayserver. Auf der Benutzeroberfläche des RDC-Clients ist das **Kontrollkästchen RD-Gatewayserver** für lokale Adressen umgehen nicht mehr verfügbar.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_MODE_DETECT"></span><span id="tsc_proxy_mode_detect"></span>
 
-<span id="TSC_PROXY_MODE_DETECT"></span><span id="tsc_proxy_mode_detect"></span>**TSC \_ Proxy \_ Modus- \_ Erkennung** (2 (0x2))
+<span id="TSC_PROXY_MODE_DETECT"></span><span id="tsc_proxy_mode_detect"></span>**TSC \_ PROXY \_ MODE \_ DETECT** (2 (0x2))
 
 
 </dt> <dd>
 
-Verwenden Sie einen RD-Gateway Server, wenn keine direkte Verbindung mit dem RD-Sitzungshost Server hergestellt werden kann. Auf der RDC-Client Benutzeroberfläche ist das Kontrollkästchen **RD-Gateway Server für lokale Adressen umgehen** aktiviert.
+Verwenden Sie einen RD-Gatewayserver, wenn keine direkte Verbindung mit dem RD-Sitzungshost hergestellt werden kann. Auf der Benutzeroberfläche des RDC-Clients ist das **Kontrollkästchen RD-Gatewayserver** für lokale Adressen umgehen aktiviert.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_MODE_DEFAULT"></span><span id="tsc_proxy_mode_default"></span>
 
-<span id="TSC_PROXY_MODE_DEFAULT"></span><span id="tsc_proxy_mode_default"></span>**TSC \_ Proxy \_ Modus \_ Standard** (3 (0x3))
+<span id="TSC_PROXY_MODE_DEFAULT"></span><span id="tsc_proxy_mode_default"></span>**TSC \_ PROXYMODUS \_ \_ STANDARD** (3 (0x3))
 
 
 </dt> <dd>
 
-Standard RD-Gateway Servereinstellungen verwenden.
+Verwenden Sie die Standardeinstellungen des RD-Gatewayservers.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_MODE_NONE_DETECT"></span><span id="tsc_proxy_mode_none_detect"></span>
 
-<span id="TSC_PROXY_MODE_NONE_DETECT"></span><span id="tsc_proxy_mode_none_detect"></span>**TSC \_ Proxy \_ Modus \_ keine \_ Erkennung** (4 (0x4))
+<span id="TSC_PROXY_MODE_NONE_DETECT"></span><span id="tsc_proxy_mode_none_detect"></span>**TSC \_ PROXY \_ MODE \_ NONE \_ DETECT** (4 (0x4))
 
 
 </dt> <dd>
 
-Verwenden Sie keinen RD-Gateway Server. Auf der RDC-Client Benutzeroberfläche ist das Kontrollkästchen **RD-Gateway Server für lokale Adressen umgehen** aktiviert.
+Verwenden Sie keinen RD-Gatewayserver. Auf der Benutzeroberfläche des RDC-Clients ist das **Kontrollkästchen RD-Gatewayserver** für lokale Adressen umgehen aktiviert.
 
 </dd> </dl>
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,15 +122,15 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ imsrdpclienttransportsettings ist definiert als 720298c0-A099-46f 5-9F 82-96921bae4701<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings ist als 720298C0-A099-46f5-9F82-96921BAE4701 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> </dl>
 
  

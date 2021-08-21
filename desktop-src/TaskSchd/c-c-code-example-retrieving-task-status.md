@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen des Task Status
-description: In diesem Beispiel wird der aktuelle Status der Aufgabe abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen des Taskstatus
+description: In diesem Beispiel wird der aktuelle Status der Aufgabe abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 7ad40ac7-2363-481a-87fa-18dcf2d749b3
 keywords:
-- Abrufen von Task Status Taskplaner
-- Abrufen von Arbeits Element Eigenschaften Taskplaner, Task Status
+- Abrufen des Taskstatus Taskplaner
+- Abrufen von Arbeitselementeigenschaften Taskplaner , Aufgabenstatus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 068e2be84750ac8fead97eac146400139dee85fe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 626b3e169e51deca34b8a8e4795671998e482a2640d2f222e2b734f69c5d2eb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060248"
 ---
-# <a name="cc-code-example-retrieving-task-status"></a>C/C++-Code Beispiel: Abrufen des Task Status
+# <a name="cc-code-example-retrieving-task-status"></a>C/C++-Codebeispiel: Abrufen des Aufgabenstatus
 
-In diesem Beispiel wird der aktuelle Status der Aufgabe abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird der aktuelle Status der Aufgabe abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -140,12 +140,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

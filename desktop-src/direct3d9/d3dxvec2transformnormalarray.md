@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec2TransformNormalArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, 0, 0) durch eine bestimmte Matrix.'
+description: 'D3DXVec2TransformNormalArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, 0, 0) durch eine angegebene Matrix.'
 ms.assetid: 9f5d8fdc-f3e1-41dc-be4e-9ffc6be1947f
 title: D3DXVec2TransformNormalArray-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 71706551e73ed9bd52b41aae127625cd09b6d7f8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f6f64b705ac76c1b4922938d4d08a8bb8f2dd4f75d2433d2bbd8317db67e798c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044613"
 ---
 # <a name="d3dxvec2transformnormalarray-function-d3dx9mathh"></a>D3DXVec2TransformNormalArray-Funktion (D3dx9math.h)
 
-Transformiert ein Array (x, y, 0, 0) durch eine bestimmte Matrix.
+Transformiert ein Array (x, y, 0, 0) durch eine angegebene Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Zeiger auf die [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis des 
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Ausgabedatenstrom.
+Schreitet zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Zeiger auf das [**D3DXVECTOR2-Quellarray.**](d3dxvector2.md)
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Eingabedatenstrom.
+Schreitet zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
 Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das transformierte Array ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion transformiert den Vektor (*pV-*>x, *pV-*>y, 0, 0) durch die Matrix, auf die *pM zeigt.*
 
@@ -117,7 +117,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

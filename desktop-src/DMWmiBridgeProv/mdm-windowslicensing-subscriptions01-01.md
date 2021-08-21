@@ -1,6 +1,6 @@
 ---
 title: MDM_WindowsLicensing_Subscriptions01_01-Klasse
-description: Die MDM \_ windowslicensing \_ Subscriptions01 \_ 01-Klasse wurde für Abonnement bezogene Szenarien für die Lizenzierungs Verwaltung entwickelt.
+description: Die MDM \_ WindowsLicensing \_ Subscriptions01 \_ 01-Klasse ist für abonnementbezogene Lizenzierungsverwaltungsszenarien konzipiert.
 ms.assetid: dc3b7eae-89d3-4e66-a65f-f100e23ea9fd
 keywords:
 - MDM_WindowsLicensing_Subscriptions01_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 911c578bd0e3cbc56c61f2cf85438660e8f437b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b2771b82525ad5fb7bebd42a63b7ad199d53acc2aadf9c3a086544deae38a1ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076904"
 ---
-# <a name="mdm_windowslicensing_subscriptions01_01-class"></a>MDM \_ windowslicensing \_ Subscriptions01 \_ 01-Klasse
+# <a name="mdm_windowslicensing_subscriptions01_01-class"></a>\_MDM-Klasse "WindowsLicensing \_ Subscriptions01 \_ 01"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ windowslicensing \_ Subscriptions01 \_ 01** -Klasse wurde für Abonnement bezogene Szenarien für die Lizenzierungs Verwaltung entwickelt.
+Die **MDM \_ WindowsLicensing \_ Subscriptions01 \_ 01-Klasse** ist für abonnementbezogene Lizenzierungsverwaltungsszenarien konzipiert.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,36 +47,36 @@ class MDM_WindowsLicensing_Subscriptions01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ windowslicensing \_ Subscriptions01 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ WindowsLicensing \_ Subscriptions01 \_ 01-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ windowslicensing \_ Subscriptions01 \_ 01** -Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-Klasse WindowsLicensing \_ Subscriptions01 \_ 01** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
 [Name](/windows/client-management/mdm/windowslicensing-csp#subscriptions-subscriptionid-name)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -84,19 +84,19 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/WindowsLicensing".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/WindowsLicensing".
 
 </dd> <dt>
 
@@ -117,10 +117,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

@@ -80,7 +80,7 @@ Eine konstante Tabelle wird von [**D3DXCompileShader**](d3dxcompileshader.md) ge
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

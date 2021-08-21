@@ -1,11 +1,11 @@
 ---
-title: Dailyauslöserobjekt
-description: Skript Objekt, das einen-Auslösers darstellt, der eine Aufgabe auf Grundlage eines täglichen Zeitplans startet.
+title: DailyTrigger-Objekt
+description: Skriptobjekt, das einen Trigger darstellt, der eine Aufgabe basierend auf einem täglichen Zeitplan startet.
 ms.assetid: f03f53a0-0060-4793-96c1-b47a96852579
 keywords:
-- täglicher Taskplaner des Auslösers, Objekt
-- Dailyauslöserobjekt Taskplaner
-- Dailyauslöserobjekt Taskplaner, beschrieben
+- täglicher Trigger Taskplaner , Objekt
+- DailyTrigger-Objekt Taskplaner
+- DailyTrigger-Objekt Taskplaner beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,56 +16,56 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22203ecf7a421f07ccb823745e6619e05f84f550
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a7b330906b309bbd672fcb9c333bc254fb02ee668549764d7dc1375f6ac405a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060178"
 ---
-# <a name="dailytrigger-object"></a>Dailyauslöserobjekt
+# <a name="dailytrigger-object"></a>DailyTrigger-Objekt
 
-Skript Objekt, das einen-Auslösers darstellt, der eine Aufgabe auf Grundlage eines täglichen Zeitplans startet.
+Skriptobjekt, das einen Trigger darstellt, der eine Aufgabe basierend auf einem täglichen Zeitplan startet.
 
 ## <a name="members"></a>Member
 
-Das **Daily-Auslöserobjekt** verfügt über diese Typen von Membern:
+Das **DailyTrigger-Objekt** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Daily-Auslöserobjekt** verfügt über diese Eigenschaften.
+Das **DailyTrigger-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                            | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                 |
+| Eigenschaft                                                            | Zugriffstyp           | Beschreibung                                                                                                                                                                                 |
 |:--------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Daysinterval**](dailytrigger-daysinterval.md)<br/>        | Lesen/Schreiben<br/> | Ruft das Intervall zwischen den Tagen im Zeitplan ab oder legt es fest.<br/>                                                                                                                      |
-| [**Aktiviert**](trigger-enabled.md)<br/>                       | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft einen booleschen Wert ab, der angibt, ob der-Wert aktiviert ist, oder legt ihn fest.<br/>                                                |
-| [**Endgrenze**](trigger-endboundary.md)<br/>               | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft das Datum und die Uhrzeit der Deaktivierung des Auslösers ab oder legt diese fest. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Executiontimelimit**](trigger-executiontimelimit.md)<br/> | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft die maximale Zeitspanne ab, die der vom-Aufruf gestartete Task ausgeführt werden darf, oder legt diese fest.<br/>                           |
-| [**Name**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_id)<br/>                                | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft den Bezeichner für den-Typ ab oder legt ihn fest.<br/>                                                                               |
-| [**Randomdelay**](dailytrigger-randomdelay.md)<br/>          | Lesen/Schreiben<br/> | Ruft eine Verzögerungszeit ab, die der Startzeit des Auslösers zufällig hinzugefügt wird, oder legt diese fest.<br/>                                                                                               |
-| [**Wiederholen**](trigger-repetition.md)<br/>                 | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft ab oder legt fest, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem die Aufgabe gestartet wurde.<br/>          |
-| [**StartBoundary**](trigger-startboundary.md)<br/>           | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft das Datum und die Uhrzeit der Aktivierung des Auslösers ab oder legt diese fest.<br/>                                                              |
-| [**type**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_type)<br/>                            | Schreibgeschützt<br/>  | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft den Typ des Auslösers ab.<br/>                                                                                              |
+| [**DaysInterval**](dailytrigger-daysinterval.md)<br/>        | Lesen/Schreiben<br/> | Ruft das Intervall zwischen den Tagen im Zeitplan ab oder legt dieses fest.<br/>                                                                                                                      |
+| [**Aktiviert**](trigger-enabled.md)<br/>                       | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft einen booleschen Wert ab, der angibt, ob der Trigger aktiviert ist, oder legt diesen fest.<br/>                                                |
+| [**EndBoundary**](trigger-endboundary.md)<br/>               | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft das Datum und die Uhrzeit der Deaktivierung des Triggers ab oder legt diese fest. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**ExecutionTimeLimit**](trigger-executiontimelimit.md)<br/> | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft die maximale Zeit ab, die der vom Trigger gestartete Task ausführen darf, oder legt diese fest.<br/>                           |
+| [**Id**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_id)<br/>                                | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft den Bezeichner für den Trigger ab oder legt den Bezeichner fest.<br/>                                                                               |
+| [**RandomDelay**](dailytrigger-randomdelay.md)<br/>          | Lesen/Schreiben<br/> | Ruft eine Verzögerungszeit ab, die der Startzeit des Triggers zufällig hinzugefügt wird, oder legt diese fest.<br/>                                                                                               |
+| [**Wiederholen**](trigger-repetition.md)<br/>                 | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft ab oder legt fest, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**StartBoundary**](trigger-startboundary.md)<br/>           | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft das Datum und die Uhrzeit der Aktivierung des Triggers ab oder legt diese fest.<br/>                                                              |
+| [**Typ**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_type)<br/>                            | Schreibgeschützt<br/>  | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft den Typ des Triggers ab.<br/>                                                                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Uhrzeit, zu der die Aufgabe gestartet wird, wird von der [**StartBoundary**](trigger-startboundary.md) -Eigenschaft festgelegt.
+Die Tageszeit, zu der der Task gestartet wird, wird durch die [**StartBoundary-Eigenschaft**](trigger-startboundary.md) festgelegt.
 
-Ein Intervall von 1 erzeugt einen täglichen Zeitplan. Ein Intervall von 2 erzeugt einen Zeitplan für jeden anderen Tag usw.
+Ein Intervall von 1 erzeugt einen täglichen Zeitplan. Ein Intervall von 2 erzeugt einen Zeitplan für jeden zweiten Tag usw.
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe wird ein täglicher-Vorgang mit dem [**schedulebyday**](taskschedulerschema-schedulebyday-calendartriggertype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben eigener XML-Daten für eine Aufgabe wird ein täglicher Trigger mithilfe des [**ScheduleByDay-Elements**](taskschedulerschema-schedulebyday-calendartriggertype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen und ein Codebeispiel für dieses Skript Objekt finden Sie unter [Beispiel für das tägliche Beispiel (Skripterstellung)](daily-trigger-example--scripting-.md).
+Weitere Informationen und ein Codebeispiel für dieses Skriptobjekt finden Sie unter [Daily Trigger Example (Scripting) (Tägliches Triggerbeispiel (Skripterstellung)).](daily-trigger-example--scripting-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,9 +73,9 @@ Weitere Informationen und ein Codebeispiel für dieses Skript Objekt finden Sie 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -87,10 +87,10 @@ Weitere Informationen und ein Codebeispiel für dieses Skript Objekt finden Sie 
 [**Trigger**](trigger.md)
 </dt> <dt>
 
-[**TriggerCollection**](triggercollection.md)
+[**Triggercollection**](triggercollection.md)
 </dt> <dt>
 
-[**TriggerCollection. Create**](triggercollection-create.md)
+[**TriggerCollection.Create**](triggercollection-create.md)
 </dt> </dl>
 
  

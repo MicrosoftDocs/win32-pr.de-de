@@ -1,35 +1,35 @@
 ---
-description: Diese Beispielanwendung verwendet die kernweb-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu Rendering. In diesem Beispiel wird die Zeit Geber gesteuerte Pufferung für einen renderingclient im exklusiven Modus veranschaulicht.
+description: Diese Beispielanwendung verwendet die Core Audio-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu rendern. In diesem Beispiel wird die zeitgesteuerte Pufferung für einen Renderingclient im exklusiven Modus veranschaulicht.
 ms.assetid: 9dcfccd2-a709-4b4e-bbb3-4c68a15cce03
-title: Renderexclusivetimer-gesteuert
+title: RenderExclusiveTimerDriven
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb6145f65de3de9425f7ba2f023a669ec0b57a3c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6876c448aa7737683aff4e495416020af7def54cb01109c3d6ad2d1c26d20780
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077444"
 ---
-# <a name="renderexclusivetimerdriven"></a>Renderexclusivetimer-gesteuert
+# <a name="renderexclusivetimerdriven"></a>RenderExclusiveTimerDriven
 
-Diese Beispielanwendung verwendet die kernweb-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu Rendering. In diesem Beispiel wird die Zeit Geber gesteuerte Pufferung für einen renderingclient im exklusiven Modus veranschaulicht. Für einen Stream im exklusiven Modus gibt der Client den Endpunkt Puffer mit dem Audiogerät frei.
+Diese Beispielanwendung verwendet die Core Audio-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu rendern. In diesem Beispiel wird die zeitgesteuerte Pufferung für einen Renderingclient im exklusiven Modus veranschaulicht. Bei einem Stream im exklusiven Modus teilt der Client den Endpunktpuffer mit dem Audiogerät.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Beschreibung](#description)
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Anzeigen der Beispieldateien](#view-the-sample-files)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-In diesem Beispiel werden die folgenden Funktionen veranschaulicht.
+In diesem Beispiel werden die folgenden Features veranschaulicht.
 
--   [Mmdevice-API](mmdevice-api.md) für die Enumeration und Auswahl von Multimedia-Geräten.
--   WASAPI für Stream-Verwaltungsvorgänge.
+-   [MMDevice-API](mmdevice-api.md) für die Enumeration und Auswahl von Multimedia-Geräten.
+-   WASAPI für Datenstromverwaltungsvorgänge.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,13 +46,13 @@ In diesem Beispiel werden die folgenden Funktionen veranschaulicht.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
+Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 
 
 | Standort    | Pfad/URL                                                                                                    |
 |-------------|-------------------------------------------------------------------------------------------------------------|
-| Windows SDK | \\Programmdateien \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ \\ multimedioneaudiodatei \\ renderexclusivetimer-gesteuert \\ ... |
+| Windows SDK | \\Programme \\ Microsoft SDKs \\ Windows \\ v7.0 \\ Samples Multimedia Audio \\ \\ \\ RenderExclusiveTimerDriven \\ ... |
 
 
 
@@ -60,50 +60,50 @@ Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Führen Sie die folgenden Schritte aus, um das renderexclusivetimergesteuert-Beispiel zu erstellen:
+Führen Sie zum Erstellen des RenderExclusiveTimerDriven-Beispiels die folgenden Schritte aus:
 
-1.  Öffnen Sie die CMD-Shell für die Windows SDK, und wechseln Sie zum Verzeichnis "renderexclusivetimergesteudirectory".
-2.  Führen Sie den Befehl `start WASAPIRenderExclusiveTimerDriven.sln` im Verzeichnis "renderexclusivetimercommand" aus, um das Projekt "wasapirienderexclusivetimer-gesteuert" im Visual Studio-Fenster zu öffnen.
-3.  Wählen Sie im Fenster die **Debug** -oder **releaseprojektmappenkonfiguration** aus, wählen Sie das Menü **Erstellen** in der Menüleiste aus, und wählen Sie die Option **Erstellen** aus. Wenn Sie Visual Studio nicht über die CMD-Shell für das SDK öffnen, hat Visual Studio keinen Zugriff auf die SDK-Buildumgebung. In diesem Fall wird das Beispiel nicht erstellt, es sei denn, Sie legen die Umgebungsvariable "Mssdk", die in der Projektdatei verwendet wird, "wasapirienderexclusivetimercontroller. vcproj" explizit fest.
+1.  Öffnen Sie die CMD-Shell für das Windows SDK, und wechseln Sie zum Beispielverzeichnis RenderExclusiveTimerDriven.
+2.  Führen Sie den Befehl `start WASAPIRenderExclusiveTimerDriven.sln` im Verzeichnis RenderExclusiveTimerDriven aus, um das Projekt WASAPIRenderExclusiveTimerDriven im fenster Visual Studio öffnen.
+3.  Wählen Sie im Fenster die  Projektmappenkonfiguration **Debuggen** oder Release aus, wählen Sie in der Menüleiste das Menü **Erstellen** und dann die **Option Erstellen** aus. Wenn Sie die Visual Studio cmd-Shell für das SDK nicht öffnen, hat Visual Studio keinen Zugriff auf die SDK-Buildumgebung. In diesem Fall wird das Beispiel nur erstellt, wenn Sie explizit die Umgebungsvariable MSSdk festlegen, die in der Projektdatei WASAPIRenderExclusiveTimerDriven.vcproj verwendet wird.
 
 ## <a name="view-the-sample-files"></a>Anzeigen der Beispieldateien
 
-Wenn Sie die Demoanwendung erfolgreich erstellen, wird eine ausführbare Datei (WASAPIRenderExclusiveTimerDriven.exe) generiert. Um es auszuführen, geben Sie `WASAPIRenderExclusiveTimerDriven` ein Befehlsfenster ein, gefolgt von den erforderlichen oder optionalen Argumenten. Im folgenden Beispiel wird gezeigt, wie das Beispiel mit einem angegeben wird, indem die Wiedergabedauer auf dem Standard Konsolen Gerät angegeben wird.
+Wenn Sie die Demoanwendung erfolgreich erstellen, wird eine ausführbare Datei WASAPIRenderExclusiveTimerDriven.exe generiert. Geben Sie zum Ausführen ein `WASAPIRenderExclusiveTimerDriven` Befehlsfenster gefolgt von erforderlichen oder optionalen Argumenten ein. Im folgenden Beispiel wird gezeigt, wie das Beispiel mit einer angegebenen Wiedergabedauer auf dem Standardkonsolengerät ausgeführt wird.
 
 `WASAPIRenderExclusiveTimerDriven.exe -d 20 -console`
 
-In der folgenden Tabelle werden die Argumente angezeigt.
+In der folgenden Tabelle sind die Argumente aufgeführt.
 
-| Argument        | BESCHREIBUNG                                                |
+| Argument        | Beschreibung                                                |
 |-----------------|------------------------------------------------------------|
-| -?              | Zeigt die Hilfe an.                                                |
-| -h              | Zeigt die Hilfe an.                                                |
-| -f              | Sinuswellen Frequenz in Hz.                                 |
-| -l              | Wartezeit für audiorendering in Millisekunden.                      |
-| -d              | Sinuswellen Dauer in Sekunden.                             |
+| -?              | Zeigt Hilfe an.                                                |
+| -H              | Zeigt Hilfe an.                                                |
+| -f              | Sinus-Wellenfrequenz in Hz.                                 |
+| -l              | Audiorenderinglatenz in Millisekunden.                      |
+| -d              | Dauer der Sinus-Welle in Sekunden.                             |
 | -M              | Deaktiviert die Verwendung von MMCSS.                                 |
-| -Konsole        | Verwenden Sie das Standard Konsolen Gerät.                            |
-| -Kommunikation | Verwenden Sie das Standard Kommunikationsgerät.                      |
-| -Multimedia     | Verwenden Sie das standardmäßige Multimedia-Gerät.                         |
-| -Endpunkt       | Verwenden Sie den Endpunkt Bezeichner, der im Switch-Wert angegeben ist. |
+| -console        | Verwenden Sie das Standardkonsolengerät.                            |
+| -communications | Verwenden Sie das Standardkommunikationsgerät.                      |
+| -multimedia     | Verwenden Sie das Multimedia-Standardgerät.                         |
+| -endpoint       | Verwenden Sie den Endpunktbezeichner, der im Switchwert angegeben ist. |
 
 
 
  
 
-Wenn die Anwendung ohne Argumente ausgeführt wird, listet Sie die verfügbaren Geräte auf und fordert den Benutzer auf, ein Gerät für die renderingsitzung auszuwählen. Nachdem der Benutzer ein Gerät angegeben hat, rendert die Anwendung eine Sinuswelle bei 440 Hz für 10 Sekunden. Diese Werte können durch Angabe von "-f" und "-d"-Schalter Werte geändert werden.
+Wenn die Anwendung ohne Argumente ausgeführt wird, werden die verfügbaren Geräte aufzählt und der Benutzer aufgefordert, ein Gerät für die Renderingsitzung auszuwählen. Nachdem der Benutzer ein Gerät angegeben hat, rendert die Anwendung 10 Sekunden lang eine Sinus-Welle mit 440 Hz. Diese Werte können durch Angabe der Schalterwerte -f und -d geändert werden.
 
-Renderexclusivetimer-gesteuert zeigt eine Zeit Geber gesteuerte Pufferung. In diesem Modus muss der Client einen bestimmten Zeitraum (die Hälfte der Latenzzeit, die durch den Schalter-d angegeben wird, in Millisekunden) warten. Wenn der Client im Laufe der Zeit auf die gleiche Weise reaktiviert wird, ruft er den nächsten Satz von Beispielen aus der Engine ab. Vor jeder Verarbeitung in der Puffer Schleife muss der Client die Menge der zu rendernden Daten ermitteln, damit die Daten den Puffer nicht überschreiten.
+RenderExclusiveTimerDriven veranschaulicht die zeitgesteuerte Pufferung. In diesem Modus muss der Client für einen bestimmten Zeitraum warten (die Hälfte der Latenz, angegeben durch den Schalterwert -d in Millisekunden). Wenn der Client während des Verarbeitungszeitraums reaktiviert wird, werden die nächsten Stichproben aus der Engine gezogen. Bevor jede Verarbeitung in der Pufferschleife verläuft, muss der Client die Menge der zu renderenden Daten herausfinden, damit die Daten den Puffer nicht überlaufen.
 
-Audiodaten, die auf dem angegebenen Gerät abgespielt werden sollen, können durch Aktivieren der ereignisgesteuerten Pufferung verarbeitet werden. Dieser Modus wird im renderexclusivetimergesteuert-Beispiel veranschaulicht.
+Audiodaten, die auf dem angegebenen Gerät abgespielt werden sollen, können durch Aktivieren der ereignisgesteuerten Pufferung verarbeitet werden. Dieser Modus wird im RenderExclusiveTimerDriven-Beispiel demonstriert.
 
-Weitere Informationen zum Rendern eines Streams finden Sie unter [Rendern eines Streams](rendering-a-stream.md).
+Weitere Informationen zum Rendern eines Streams finden Sie unter [Rendern eines Streams.](rendering-a-stream.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[SDK-Beispiele für die Verwendung der kernaudioapis](sdk-samples-that-use-the-core-audio-apis.md)
+[SDK-Beispiele, die die Kernaudio-APIs verwenden](sdk-samples-that-use-the-core-audio-apis.md)
 </dt> </dl>
 
  

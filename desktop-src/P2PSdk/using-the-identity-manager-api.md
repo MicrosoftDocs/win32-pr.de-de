@@ -1,25 +1,25 @@
 ---
-description: In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit der Identity Manager-API auftreten.
+description: In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mithilfe der Identity Manager-API auftreten.
 ms.assetid: 7ae3010b-d884-450d-9d15-dad4e414f70a
 title: Verwenden von Identity Manager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bac702ca7c669ad825ce1b3f7d85be0f84332c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 31d607a6ff87cee43bc8caf454ccfebce6c5d4adacd5a16b79f84f5a0d0dd09a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061258"
 ---
 # <a name="using-identity-manager"></a>Verwenden von Identity Manager
 
-In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mit der Identity Manager-API auftreten.
+In den folgenden Themen werden Lösungen für häufige Aufgaben beschrieben, die beim Entwickeln von Anwendungen mithilfe der Identity Manager-API auftreten.
 
 
 
-| Thema                                                    | BESCHREIBUNG                                                        |
+| Thema                                                    | Beschreibung                                                        |
 |----------------------------------------------------------|--------------------------------------------------------------------|
-| [Erstellen einer Peer Identität](creating-a-peer-identity.md) | Erstellen einer Peer Identität für die Verwendung mit der Peer Infrastruktur |
+| [Erstellen einer Peeridentität](creating-a-peer-identity.md) | Erstellen einer Peeridentität für die Verwendung mit der Peerinfrastruktur |
 
 
 

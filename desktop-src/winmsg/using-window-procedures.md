@@ -1,27 +1,27 @@
 ---
-description: In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben für Fenster Prozeduren ausgeführt werden.
+description: In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben im Zusammenhang mit Fensterverfahren durchgeführt werden.
 ms.assetid: acc68991-4689-44dc-8547-a7b6153b0f62
-title: Verwenden von Window
+title: Verwenden von Fenster-Prozeduren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79e0508119a2ba62c813c32e8fd0c00bd3dd1e85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f05e5999b216ad8c51be4de6fdec80b5f58ff94956f8c1129d74c3f7075a90eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028298"
 ---
-# <a name="using-window-procedures"></a>Verwenden von Window
+# <a name="using-window-procedures"></a>Verwenden von Fenster-Prozeduren
 
-In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben für Fenster Prozeduren ausgeführt werden.
+In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben im Zusammenhang mit Fensterverfahren durchgeführt werden.
 
--   [Entwerfen einer Fenster Prozedur](#designing-a-window-procedure)
--   [Zuordnen einer Fenster Prozedur zu einer Fenster Klasse](#associating-a-window-procedure-with-a-window-class)
+-   [Entwerfen einer Fensterprozedur](#designing-a-window-procedure)
+-   [Zuordnen einer Fensterprozedur zu einer Window-Klasse](#associating-a-window-procedure-with-a-window-class)
 -   [Unterklassen eines Fensters](#subclassing-a-window)
 
-## <a name="designing-a-window-procedure"></a>Entwerfen einer Fenster Prozedur
+## <a name="designing-a-window-procedure"></a>Entwerfen einer Fensterprozedur
 
-Das folgende Beispiel zeigt die Struktur einer typischen Fenster Prozedur. Die Fenster Prozedur verwendet das Message-Argument in einer **Switch** -Anweisung mit einzelnen Nachrichten, die von separaten **Case** -Anweisungen verarbeitet werden. Beachten Sie, dass jeder Fall einen bestimmten Wert für jede Nachricht zurückgibt. Bei Nachrichten, die nicht verarbeitet werden, ruft die Fenster Prozedur die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion auf.
+Das folgende Beispiel zeigt die Struktur einer typischen Fensterprozedur. Die Fensterprozedur verwendet das Meldungsargument in einer **switch-Anweisung** mit einzelnen Meldungen, die von separaten **Case-Anweisungen verarbeitet** werden. Beachten Sie, dass jeder Fall einen bestimmten Wert für jede Nachricht zurückgibt. Bei Nachrichten, die nicht von der Fensterprozedur verarbeiten werden, ruft die Fensterprozedur [**die DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) auf.
 
 
 ```
@@ -63,21 +63,21 @@ LRESULT CALLBACK MainWndProc(
 
 
 
-Die [**WM- \_ nccreate**](wm-nccreate.md) -Nachricht wird gesendet, nachdem das Fenster erstellt wurde. Wenn jedoch eine Anwendung auf diese Meldung antwortet, indem Sie **false** zurückgibt, schlägt die Funktion " [**deatewindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " fehl. Die [**WM \_ Create**](wm-create.md) -Nachricht wird gesendet, nachdem das Fenster bereits erstellt wurde.
+Die [**WM \_ NCCREATE-Nachricht**](wm-nccreate.md) wird direkt nach dem Erstellen des Fensters gesendet. Wenn eine Anwendung jedoch auf diese Nachricht antwortet, indem **false** zurückgegeben wird, schlägt die [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) fehl. Die [**WM \_ CREATE-Nachricht**](wm-create.md) wird gesendet, nachdem Ihr Fenster bereits erstellt wurde.
 
-Die [**WM- \_ zerstörungsmeldung**](wm-destroy.md) wird gesendet, wenn das Fenster zerstört wird. Mit der [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) -Funktion werden alle untergeordneten Fenster des Fensters zerstört, das zerstört wird. Die [**WM \_ ncdestroy**](wm-ncdestroy.md) -Nachricht wird gesendet, kurz bevor ein Fenster zerstört wird.
+Die [**WM \_ DESTROY-Nachricht**](wm-destroy.md) wird gesendet, wenn Ihr Fenster zerstört werden soll. Die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) kümmert sich darum, alle untergeordneten Fenster des zu zerstörenden Fensters zu zerstören. Die [**WM \_ NCDESTROY-Nachricht**](wm-ncdestroy.md) wird gesendet, kurz bevor ein Fenster zerstört wird.
 
-Eine Fenster Prozedur sollte mindestens die WM-Zeichnungs Nachricht verarbeiten [**, \_**](../gdi/wm-paint.md) um sich selbst zu zeichnen. In der Regel sollten auch Maus-und Tastatur Meldungen behandelt werden. Überprüfen Sie die Beschreibungen einzelner Nachrichten, um zu bestimmen, ob Sie von ihrer Fenster Prozedur behandelt werden sollen.
+Zumindest sollte eine Fensterprozedur die [**WM \_ PAINT-Nachricht**](../gdi/wm-paint.md) verarbeiten, um sich selbst zu zeichnen. In der Regel sollten auch Maus- und Tastaturmeldungen verarbeitet werden. Sehen Sie sich die Beschreibungen einzelner Meldungen an, um zu bestimmen, ob sie von der Fensterprozedur verarbeitet werden sollen.
 
-Die Anwendung kann die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion als Teil der Verarbeitung einer Nachricht aufzurufen. In einem solchen Fall kann die Anwendung die Nachrichten Parameter ändern, bevor Sie die Nachricht an **defwindowproc** übergibt, oder Sie kann mit der Standard Verarbeitung fortfahren, nachdem Sie Ihre eigenen Vorgänge ausgeführt hat.
+Ihre Anwendung kann die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) im Rahmen der Verarbeitung einer Nachricht aufrufen. In einem solchen Fall kann die Anwendung die Nachrichtenparameter ändern, bevor die Nachricht an **DefWindowProc** übergeben wird, oder sie kann die Standardverarbeitung fortsetzen, nachdem sie eigene Vorgänge ausführen.
 
-Eine Dialogfeld Prozedur empfängt eine [**WM- \_ InitDialog**](../dlgbox/wm-initdialog.md) -Nachricht anstelle einer [**WM \_ Create**](wm-create.md) -Meldung und übergibt keine nicht verarbeiteten Nachrichten an die [**defdlgproc**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) -Funktion. Andernfalls ist eine Dialogfeld Prozedur genauso wie eine Fenster Prozedur.
+Eine Dialogfeldprozedur empfängt eine [**WM \_ INITDIALOG-Nachricht**](../dlgbox/wm-initdialog.md) anstelle einer [**WM \_ CREATE-Nachricht**](wm-create.md) und über gibt keine nicht verarbeiteten Nachrichten an die [**DefDlgProc-Funktion**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) weiter. Andernfalls ist eine Dialogfeldprozedur identisch mit einer Fensterprozedur.
 
-## <a name="associating-a-window-procedure-with-a-window-class"></a>Zuordnen einer Fenster Prozedur zu einer Fenster Klasse
+## <a name="associating-a-window-procedure-with-a-window-class"></a>Zuordnen einer Fensterprozedur zu einer Fensterklasse
 
-Beim Registrieren der Klasse wird eine Fenster Prozedur mit einer Fenster Klasse verknüpft. Sie müssen eine [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -Struktur mit Informationen über die-Klasse ausfüllen, und das **lpfnwndproc** -Element muss die Adresse der Fenster Prozedur angeben. Übergeben Sie die Adresse der **WNDCLASS** -Struktur an die [**registerClass**](/windows/win32/api/winuser/nf-winuser-registerclassa) -Funktion, um die Klasse zu registrieren. Nachdem die Fenster Klasse registriert wurde, wird die Fenster Prozedur automatisch jedem neuen Fenster zugeordnet, das mit dieser Klasse erstellt wird.
+Sie ordnen eine Fensterprozedur einer Fensterklasse zu, wenn Sie die Klasse registrieren. Sie müssen eine [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) mit Informationen zur -Klasse füllen, und der **lpfnWndProc-Member** muss die Adresse der Fensterprozedur angeben. Um die Klasse zu registrieren, übergeben Sie die Adresse der **WNDCLASS-Struktur** an die [**RegisterClass-Funktion.**](/windows/win32/api/winuser/nf-winuser-registerclassa) Nachdem die Fensterklasse registriert wurde, wird die Fensterprozedur automatisch jedem neuen Fenster zugeordnet, das mit dieser Klasse erstellt wurde.
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Fenster Prozedur im vorherigen Beispiel einer Fenster Klasse zuordnen.
+Das folgende Beispiel zeigt, wie die Fensterprozedur im vorherigen Beispiel einer Fensterklasse zugeordnet wird.
 
 
 ```
@@ -115,14 +115,14 @@ int APIENTRY WinMain(
 
 ## <a name="subclassing-a-window"></a>Unterklassen eines Fensters
 
-Um eine Unterklasse einer Instanz eines Fensters zu unterteilen, müssen Sie die Funktion [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) aufrufen und das Handle für das Fenster angeben, um das GWL \_ -WndProc-Flag zu unterteilen, und einen Zeiger auf die Unterklassen Prozedur. **SetWindowLong** gibt einen Zeiger auf die ursprüngliche Fenster Prozedur zurück. Verwenden Sie diesen Zeiger, um Meldungen an die ursprüngliche Prozedur zu übergeben. Die Unterklassen Fenster-Prozedur muss die [**callwindowproc**](/windows/win32/api/winuser/nf-winuser-callwindowproca) -Funktion verwenden, um die ursprüngliche Fenster Prozedur aufzurufen.
+Um eine Instanz eines Fensters als Unterklasse zu verwenden, rufen Sie die [**SetWindowLong-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) auf, und geben Sie das Handle für das Fenster an, um das GWL WNDPROC-Flag und einen Zeiger auf die Unterklassenprozedur zu \_ untergliedern. **SetWindowLong gibt** einen Zeiger auf die ursprüngliche Fensterprozedur zurück. Verwenden Sie diesen Zeiger, um Nachrichten an die ursprüngliche Prozedur zu übergeben. Die Unterklassenfensterprozedur muss die [**CallWindowProc-Funktion**](/windows/win32/api/winuser/nf-winuser-callwindowproca) verwenden, um die ursprüngliche Fensterprozedur auf aufruft.
 
 > [!Note]  
-> Verwenden Sie die [**setwindowlongptr**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra) -Funktion, um Code zu schreiben, der sowohl mit der 32-Bit-als auch mit der 64-Bit-Version von Windows kompatibel ist.
+> Um Code zu schreiben, der sowohl mit 32-Bit- als auch mit 64-Bit-Versionen von Windows kompatibel ist, verwenden Sie die [**SetWindowLongPtr-Funktion.**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra)
 
  
 
-Im folgenden Beispiel wird gezeigt, wie eine Instanz eines Bearbeitungs Steuer Elements in einem Dialogfeld unterteilt wird. Mithilfe der Prozedur des untergeordneten Klassen Fensters kann das Bearbeitungs Steuerelement alle Tastatureingaben einschließlich der Eingabe-und Tab-Taste empfangen, wenn das Steuerelement den Eingabefokus besitzt.
+Im folgenden Beispiel wird gezeigt, wie eine Instanz eines Bearbeitungssteuerfelds in einem Dialogfeld untergliedert wird. Mit der Unterklassenfensterprozedur kann das Bearbeitungssteuerfeld alle Tastatureingaben empfangen, einschließlich der EINGABETASTE und DER TAB-TASTE, wenn das Steuerelement den Eingabefokus besitzt.
 
 
 ```

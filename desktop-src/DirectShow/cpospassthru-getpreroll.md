@@ -1,7 +1,7 @@
 ---
-description: 'Die getpreroll-Methode ruft die Menge der Daten ab, die vor der Startposition in die Warteschlange eingereiht werden. Diese Methode implementiert die imediaseeking:: getpreroll-Methode.'
+description: Die GetPreroll-Methode ruft die Datenmenge ab, die vor der Startposition in die Warteschlange gestellt wird. Diese Methode implementiert die IMediaSeeking::GetPreroll-Methode.
 ms.assetid: b00de2fa-ba3c-4a16-ad67-adf3df52ef9a
-title: Cpospassthru. getpreroll-Methode (ctlutil. h)
+title: CPosPassThru.GetPreroll-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e72d7c83c8cdb0fa08a4b395fd65c80edbe3fb05
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b34cd565d246f4401061834b21c005306633e72a6f24cc8367a222b5f3736c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954039"
 ---
-# <a name="cpospassthrugetpreroll-method"></a>Cpospassthru. getpreroll-Methode
+# <a name="cpospassthrugetpreroll-method"></a>CPosPassThru.GetPreroll-Methode
 
-Die- `GetPreroll` Methode ruft die Menge der Daten ab, die vor der Startposition in die Warteschlange eingereiht werden. Diese Methode implementiert die [**imediaseeking:: getpreroll**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpreroll) -Methode.
+Die `GetPreroll` -Methode ruft die Datenmenge ab, die vor der Startposition in die Warteschlange gestellt wird. Diese Methode implementiert die [**IMediaSeeking::GetPreroll-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpreroll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetPreroll(
 
 <dl> <dt>
 
-*pllpreroll* 
+*pllPreroll* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die vorab Zeit in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Vorabrollzeit in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

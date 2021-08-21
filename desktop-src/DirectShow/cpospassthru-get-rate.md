@@ -1,7 +1,7 @@
 ---
-description: 'Die get- \_ Raten Methode ruft die Wiedergabe Rate ab. Diese Methode implementiert die imediaposition:: get- \_ Raten Methode.'
+description: Die Get \_ Rate-Methode ruft die Wiedergaberate ab. Diese Methode implementiert die IMediaPosition::get \_ Rate-Methode.
 ms.assetid: 216cbcef-4874-4565-abb0-8c8bf67fe23c
-title: CPosPassThru.get_Rate-Methode (ctlutil. h)
+title: CPosPassThru.get_Rate-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 46e565f51d7c549f524f9e478b2a8326daf690a6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fa8014d23bc488b4f0b8b0cc9b872dfdf4a56cced396cc22eefab5912df1706
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073535"
 ---
-# <a name="cpospassthruget_rate-method"></a>Cpospassthru. get- \_ Raten Methode
+# <a name="cpospassthruget_rate-method"></a>CPosPassThru.get \_ Rate-Methode
 
-Die- `get_Rate` Methode ruft die Wiedergabe Rate ab. Diese Methode implementiert die [**imediaposition:: get- \_ Raten**](/windows/desktop/api/Control/nf-control-imediaposition-get_rate) Methode.
+Die `get_Rate` -Methode ruft die Wiedergaberate ab. Diese Methode implementiert die [**IMediaPosition::get \_ Rate-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-get_rate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT get_Rate(
 
 <dl> <dt>
 
-*pdrate* 
+*pdRate* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Wiedergabe Rate empfängt.
+Zeiger auf eine Variable, die die Wiedergaberate empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

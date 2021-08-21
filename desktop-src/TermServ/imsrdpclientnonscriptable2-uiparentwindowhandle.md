@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientNonScriptable2 uianentwindowhandle-Eigenschaft
-description: Legt das Fenster Handle fest, das das übergeordnete Fenster für alle Dialogfelder ist, die vom Steuerelement angezeigt werden, oder ruft es ab. Dadurch können alle Fenster, die vom Steuerelement angezeigt werden, in Bezug auf alle Fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.
+title: IMsRdpClientNonScriptable2 UIParentWindowHandle (Eigenschaft)
+description: Legt das Fensterhandel als übergeordnetes Fenster für alle Dialogfelder fest, die vom -Steuerelement angezeigt werden, oder ruft es ab. Dadurch können alle fenster, die vom -Steuerelement angezeigt werden, in Bezug auf alle fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.
 ms.assetid: 5ecf1fc3-492e-4faf-89c5-7f7abb3778a0
 ms.tgt_platform: multiple
 keywords:
-- Uiparamegenwindowhandle-Eigenschaft Remotedesktopdienste
-- Uiparamegenwindowhandle-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2 Interface Remotedesktopdienste, uiparameentwindowhandle-Eigenschaft
-- Uiparamegenwindowhandle-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, uiparameentwindowhandle-Eigenschaft
-- Uiparamegenwindowhandle-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, uiparameentwindowhandle-Eigenschaft
-- Uiparamegenwindowhandle-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, uiparameentwindowhandle-Eigenschaft
+- UIParentWindowHandle-Remotedesktopdienste
+- UIParentWindowHandle-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , UIParentWindowHandle-Eigenschaft
+- UIParentWindowHandle-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , UIParentWindowHandle-Eigenschaft
+- UIParentWindowHandle-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , UIParentWindowHandle-Eigenschaft
+- UIParentWindowHandle-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , UIParentWindowHandle-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5526fd1a699c87e32c6acadd238c2144d00a10be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a2fb93fb7e68f7fe3755e3595d43129c5bf7ca4fa2a767a2b6a1786a803209f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001106"
 ---
-# <a name="imsrdpclientnonscriptable2uiparentwindowhandle-property"></a>IMsRdpClientNonScriptable2:: uianentwindowhandle-Eigenschaft
+# <a name="imsrdpclientnonscriptable2uiparentwindowhandle-property"></a>IMsRdpClientNonScriptable2::UIParentWindowHandle (Eigenschaft)
 
-Legt das Fenster Handle fest, das das übergeordnete Fenster für alle Dialogfelder ist, die vom Steuerelement angezeigt werden, oder ruft es ab. Dadurch können alle Fenster, die vom Steuerelement angezeigt werden, in Bezug auf alle Fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.
+Legt das Fensterhandel als übergeordnetes Fenster für alle Dialogfelder fest, die vom -Steuerelement angezeigt werden, oder ruft es ab. Dadurch können alle fenster, die vom -Steuerelement angezeigt werden, in Bezug auf alle fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,13 +64,13 @@ HRESULT get_UIParentWindowHandle(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das neue Fenster handle.
+Das neue Fensterhand handle.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -88,7 +88,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -101,10 +101,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Onauthenticationwarningangezeigte**](imstscaxevents-onauthenticationwarningdisplayed.md)
+[**OnAuthenticationWarningDisplayed**](imstscaxevents-onauthenticationwarningdisplayed.md)
 </dt> <dt>
 
-[**Onauthenticationwarningverworfen**](imstscaxevents-onauthenticationwarningdismissed.md)
+[**OnAuthenticationWarningDismissed**](imstscaxevents-onauthenticationwarningdismissed.md)
 </dt> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)

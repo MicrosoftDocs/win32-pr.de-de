@@ -1,29 +1,29 @@
 ---
-title: Com+-Dienste werden veröffentlicht.
-description: COM-basierte Dienste stellen einen Anwendungs Proxy in Form eines Windows Installer (MSI)-Pakets bereit.
+title: Veröffentlichen von COM+-Diensten
+description: COM-basierte Dienste stellen einen Anwendungsproxy in Form eines MSI-Pakets (Windows Installer) zur Verfügung.
 ms.assetid: 38200a22-bea5-4967-a51a-e777b34f299d
 ms.tgt_platform: multiple
 keywords:
-- Com+-Dienste werden veröffentlicht.
-- Active Directory, verwenden, Veröffentlichen eines Diensts, com+-Dienste
+- Veröffentlichen von COM+-Diensten
+- Active Directory, Verwenden, Veröffentlichen eines Diensts, COM+-Dienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9044b72b4a604a4d863315963cd097be67f6afce
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 91801bbfcbf8efa34ac0b79477dd9d859fc2ed34a8d40bcf0bd829f82cfd571a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025428"
 ---
-# <a name="publishing-com-services"></a>Com+-Dienste werden veröffentlicht.
+# <a name="publishing-com-services"></a>Veröffentlichen von COM+-Diensten
 
-COM-basierte Dienste stellen einen Anwendungs Proxy in Form eines Windows Installer (MSI)-Pakets bereit. Diese MSI-Datei enthält den zu verwendenden Servernamen und andere erforderliche Elemente, wie z. b. Proxy/Stub und Typbibliotheken, die für das Marshalling erforderlich sind. Das Snap-in "Komponenten Dienste" generiert automatisch diese Anwendungs Proxys für com+-Server Anwendungen.
+COM-basierte Dienste stellen einen Anwendungsproxy in Form eines MSI-Pakets (Windows Installer) zur Verfügung. Diese .msi datei enthält den zu verwendenden Servernamen und andere erforderliche Elemente, z. B. Proxy/Stubs und Typbibliotheken, die für das Marshalling erforderlich sind. Das Komponentendienste-Snap-In generiert diese Anwendungsproxies automatisch für COM+-Serveranwendungen.
 
-Die Anwendungs Proxys werden in Active Directory mithilfe des Gruppenrichtlinie-Editors in-Richtlinien Objekten veröffentlicht. In der Client Anwendung ist kein spezieller Eingriff erforderlich. Das Computer-/Benutzerkonto auf dem Client Computer muss sich in einer OE befinden, die für die Verwendung des Richtlinien Objekts konfiguriert ist, in dem die Anwendungs Proxys veröffentlicht werden. Der com-Binder verwendet den Server automatisch mithilfe des Verzeichnisses, wenn der Client eine Instanz der betroffenen Objekte festlegt.
+Die Anwendungsproxies werden in Richtlinienobjekten in Active Directory mithilfe des Gruppenrichtlinie veröffentlicht. In der Clientanwendung ist kein spezieller Eingriff erforderlich. Der Computer/das Benutzerkonto auf dem Clientcomputer muss sich in einer Organisationseinheit befinden, die für die Verwendung des Richtlinienobjekts konfiguriert ist, in dem die Anwendungsproxies veröffentlicht werden. Der COM-Binder sucht den Server automatisch über das Verzeichnis, wenn der Client eine Instanz der betreffenden Objekte ein richtet.
 
- 
+ 
 
- 
+ 
 
 
 

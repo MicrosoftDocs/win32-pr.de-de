@@ -1,7 +1,7 @@
 ---
-description: 'Die issyncpoint-Methode bestimmt, ob der Anfang des Beispiels ein Synchronisierungs Punkt ist. Diese Methode implementiert die imediasample:: issyncpoint-Methode.'
+description: Die IsSyncPoint-Methode bestimmt, ob der Anfang des Beispiels ein Synchronisierungspunkt ist. Diese Methode implementiert die IMediaSample::IsSyncPoint-Methode.
 ms.assetid: e57f78f4-7bb9-4e23-bcb4-55ad7ab5482c
-title: Cmediasample. issyncpoint-Methode (amfilter. h)
+title: CMediaSample.IsSyncPoint-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b8cc93c03ce3b864e1c1b0a5794d711b1b0c3d68
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 00d238bb9289ba71237bfdf8e72acde384430f72470f16211093cb2ece8d68f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074004"
 ---
-# <a name="cmediasampleissyncpoint-method"></a>Cmediasample. issyncpoint-Methode
+# <a name="cmediasampleissyncpoint-method"></a>CMediaSample.IsSyncPoint-Methode
 
-Die- `IsSyncPoint` Methode bestimmt, ob der Anfang des Beispiels ein Synchronisierungs Punkt ist. Diese Methode implementiert die [**imediasample:: issyncpoint**](/windows/desktop/api/Strmif/nf-strmif-imediasample-issyncpoint) -Methode.
+Die `IsSyncPoint` -Methode bestimmt, ob der Anfang des Beispiels ein Synchronisierungspunkt ist. Diese Methode implementiert die [**IMediaSample::IsSyncPoint-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-issyncpoint)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" zurück, wenn das Beispiel ein Synchronisierungs Punkt ist, \_ andernfalls "false".
+Gibt S \_ OK zurück, wenn das Beispiel ein Synchronisierungspunkt ist, \_ andernfalls S FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) gibt diese Eigenschaft an.
+Die [**Membervariable cMediaSample::m \_ dwFlags**](cmediasample-m-dwflags.md) gibt diese Eigenschaft an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md)
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

@@ -1,67 +1,67 @@
 ---
-title: Gegenseitige Authentifizierung in einem Windows Sockets-Dienst mit SCP
-description: Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen, wie die gegenseitige Authentifizierung bei einem Dienst durchgeführt wird, der sich mit einem Dienst Verbindungspunkt (Service Connection Point, SCP) veröffentlicht.
+title: Gegenseitige Authentifizierung in einem Windows Sockets Service mit SCP
+description: Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen, wie die gegenseitige Authentifizierung mit einem Dienst durchgeführt wird, der sich selbst mithilfe eines Dienstverbindungspunkts (Service Connection Point, SCP) veröffentlicht.
 ms.assetid: f730464c-95ac-4285-960c-18862f6f7852
 ms.tgt_platform: multiple
 keywords:
-- Gegenseitige Authentifizierung in einem Windows Sockets-Dienst mit einem SCP-AD
-- Active Directory, verwenden der gegenseitigen Authentifizierung, Windows Sockets Service mit einem SCP
+- Gegenseitige Authentifizierung in einem Windows Sockets-Dienst mit einem SCP AD
+- Active Directory, verwenden, gegenseitige Authentifizierung, Windows Sockets-Dienst mit einem SCP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 527715c4a35dc15cd67f5820e6fa891b56452399
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: be8f3e65b044198c5ebf703b1c62ac03eb07a4d57b6bc5dcf7c5463247815f1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103858138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025768"
 ---
-# <a name="mutual-authentication-in-a-windows-sockets-service-with-scp"></a>Gegenseitige Authentifizierung in einem Windows Sockets-Dienst mit SCP
+# <a name="mutual-authentication-in-a-windows-sockets-service-with-scp"></a>Gegenseitige Authentifizierung in einem Windows Sockets Service mit SCP
 
-Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen, wie die gegenseitige Authentifizierung bei einem Dienst durchgeführt wird, der sich mit einem Dienst Verbindungspunkt (Service Connection Point, SCP) veröffentlicht. Die Beispiele basieren auf einem Microsoft Windows Sockets-Dienst, der ein SSPI-Paket zum Verarbeiten der Aushandlung der gegenseitigen Authentifizierung zwischen einem Client und dem Dienst verwendet. Verwenden Sie die folgenden Verfahren, um die gegenseitige Authentifizierung innerhalb dieses Szenarios zu implementieren.
+Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen, wie die gegenseitige Authentifizierung mit einem Dienst durchgeführt wird, der sich selbst mithilfe eines Dienstverbindungspunkts (Service Connection Point, SCP) veröffentlicht. Die Beispiele basieren auf einem Microsoft Windows Sockets-Dienst, der ein SSPI-Paket verwendet, um die gegenseitige Authentifizierungsaushandlung zwischen einem Client und dem Dienst zu verarbeiten. Verwenden Sie die folgenden Verfahren, um die gegenseitige Authentifizierung innerhalb dieses Szenarios zu implementieren.
 
-**So registrieren Sie SPNs in einem Verzeichnis, wenn ein Dienst installiert ist**
+**So registrieren Sie SPNs in einem Verzeichnis, wenn ein Dienst installiert wird**
 
-1.  Wenden Sie die [**dsgetspn**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsgetspna) -Funktion an, um Dienst Prinzipal Namen (SPNs) für den Dienst zu verfassen.
-2.  Wenden Sie die [**dswrite-accountspn**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) -Funktion an, um die SPNs für das Dienst Konto oder das Computer Konto in zu registrieren, in dessen Kontext der Dienst ausgeführt wird. Dieser Schritt muss von einem Domänen Administrator ausgeführt werden. eine Ausnahme besteht darin, dass ein Dienst, der unter dem Konto "LocalSystem" ausgeführt wird, den SPN im Format " <service class> / <host> " für das Computer Konto des Dienst Hosts registrieren kann.
+1.  Rufen Sie die [**DsGetSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsgetspna) auf, um Dienstprinzipalnamen (SPNs) für den Dienst zu erstellen.
+2.  Rufen Sie die [**DsWriteAccountSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) auf, um die SPNs für das Dienstkonto oder Computerkonto zu registrieren, in dessen Kontext der Dienst ausgeführt wird. Dieser Schritt muss von einem Domänenadministrator ausgeführt werden. Eine Ausnahme besteht darin, dass ein Dienst, der unter dem LocalSystem-Konto ausgeführt wird, seinen SPN im Format <service class> / <host> " " auf dem Computerkonto des Diensthosts registrieren kann.
 
-**So überprüfen Sie die Konfiguration beim Dienst Start**
+**So überprüfen Sie die Konfiguration beim Dienststart**
 
--   Vergewissern Sie sich, dass die entsprechenden SPNs für das Konto, unter dem der Dienst ausgeführt wird, registriert sind. Weitere Informationen finden Sie unter [Anmelde Konto-Wartungs Tasks](logon-account-maintenance-tasks.md).
+-   Überprüfen Sie, ob die entsprechenden SPNs für das Konto registriert sind, unter dem der Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Wartungstasks für Anmeldekonten.](logon-account-maintenance-tasks.md)
 
-**So authentifizieren Sie den Dienst beim Client Start**
+**So authentifizieren Sie den Dienst beim Clientstart**
 
-1.  Rufen Sie die Verbindungsdaten vom Dienst Verbindungspunkt des dienstanders ab.
+1.  Rufen Sie Verbindungsdaten vom Dienstverbindungspunkt des Diensts ab.
 2.  Stellen Sie eine Verbindung mit dem Dienst her.
-3.  Wenden Sie die [**dsmakespn**](/windows/desktop/api/Dsparse/nf-dsparse-dsmakespna) -Funktion an, um einen SPN für den Dienst zu erstellen. Erstellen Sie den SPN aus der Zeichenfolge der bekannten Dienstklasse und die Daten, die vom Dienst Verbindungspunkt abgerufen werden. Diese Daten enthalten den Hostnamen des Servers, auf dem der-Dienst ausgeführt wird. Beachten Sie, dass es sich bei dem Hostnamen um einen DNS-Namen handeln muss.
+3.  Rufen Sie die [**DsMakeSpn-Funktion**](/windows/desktop/api/Dsparse/nf-dsparse-dsmakespna) auf, um einen SPN für den Dienst zu erstellen. Erstellen Sie den SPN aus der bekannten Dienstklassenzeichenfolge und die vom Dienstverbindungspunkt abgerufenen Daten. Diese Daten enthalten den Hostnamen des Servers, auf dem der Dienst ausgeführt wird. Beachten Sie, dass der Hostname ein DNS-Name sein muss.
 4.  Verwenden Sie ein SSPI-Sicherheitspaket, um die Authentifizierung durchzuführen:
-    1.  Rufen Sie die [**AcquireCredentialsHandle**](../SecAuthN/acquirecredentialshandle--general.md) -Funktion auf, um die Anmelde Informationen des Clients abzurufen.
-    2.  Übergeben Sie die Client Anmelde Informationen und den SPN an die [**InitializeSecurityContext**](../SecAuthN/initializesecuritycontext--general.md) -Funktion, um ein sicherheitsblob zu generieren, das für die Authentifizierung an den Dienst gesendet werden soll. Legen Sie das Flag für die gegenseitige Authentifizierung von **ISC \_ req \_ \_** zum Anfordern der gegenseitigen Authentifizierung fest
-    3.  Exchange-blobdienste bis zum Abschluss der Authentifizierung mit dem Dienst.
-5.  Überprüfen Sie die zurückgegebene Funktions Maske für das ISC req-Flag für die **\_ \_ gegenseitige \_** Authentifizierung.
-6.  Wenn die Authentifizierung erfolgreich war, tauschen Sie den Datenverkehr mit dem authentifizierten Dienst aus. Verwenden Sie digitales Signieren, um sicherzustellen, dass Nachrichten zwischen Client und Dienst nicht manipuliert wurden. Wenn die Leistungsanforderungen nicht schwerwiegend sind, verwenden Sie die Verschlüsselung. Weitere Informationen und ein Codebeispiel, das zeigt, wie die Funktionen [**makesignature**](/windows/desktop/api/sspi/nf-sspi-makesignature), [**VerifySignature**](/windows/desktop/api/sspi/nf-sspi-verifysignature), [**verschlüsseltmessage**](../SecAuthN/encryptmessage--general.md)und [**DecryptMessage**](../SecAuthN/decryptmessage--general.md) in einem SSPI-Paket verwendet werden, finden Sie unter [sicherstellen der Kommunikations Integrität während des Nachrichten Austauschs](/windows/desktop/SecAuthN/ensuring-communication-integrity-during-message-exchange).
+    1.  Rufen Sie die [**AcquireCredentialsHandle-Funktion**](../SecAuthN/acquirecredentialshandle--general.md) auf, um die Anmeldeinformationen des Clients zu erhalten.
+    2.  Übergeben Sie die Clientanmeldeinformationen und den SPN an die [**InitializeSecurityContext-Funktion,**](../SecAuthN/initializesecuritycontext--general.md) um ein Sicherheitsblob zu generieren, das zur Authentifizierung an den Dienst gesendet werden soll. Legen Sie das **ISC \_ REQ \_ MUTUAL \_ AUTH-Flag** fest, um gegenseitige Authentifizierung anzufordern.
+    3.  Exchange Blobs mit dem Dienst, bis die Authentifizierung abgeschlossen ist.
+5.  Überprüfen Sie die zurückgegebene Funktionenmaske für das **ISC \_ REQ \_ MUTUAL \_ AUTH-Flag,** um zu überprüfen, ob die gegenseitige Authentifizierung durchgeführt wurde.
+6.  Wenn die Authentifizierung erfolgreich war, tauschen Sie Datenverkehr mit dem authentifizierten Dienst aus. Verwenden Sie digitale Signatur, um sicherzustellen, dass Nachrichten zwischen Client und Dienst nicht manipuliert wurden. Verwenden Sie die Verschlüsselung, sofern die Leistungsanforderungen nicht schwerwiegend sind. Weitere Informationen und ein Codebeispiel, das zeigt, wie die Funktionen [**MakeSignature,**](/windows/desktop/api/sspi/nf-sspi-makesignature) [**VerifySignature,**](/windows/desktop/api/sspi/nf-sspi-verifysignature) [**EncryptMessage**](../SecAuthN/encryptmessage--general.md)und [**DecryptMessage**](../SecAuthN/decryptmessage--general.md) in einem SSPI-Paket verwendet werden, finden Sie unter Sicherstellen der [Kommunikationsintegrität während Exchange](/windows/desktop/SecAuthN/ensuring-communication-integrity-during-message-exchange).
 
-**So authentifizieren Sie den Client durch den Dienst, wenn ein Client eine Verbindung herstellt**
+**So authentifizieren Sie den Client vom Dienst, wenn ein Client eine Verbindung herstellt**
 
-1.  Laden eines SSPI-Sicherheitspakets, das die gegenseitige Authentifizierung unterstützt.
+1.  Laden Sie ein SSPI-Sicherheitspaket, das die gegenseitige Authentifizierung unterstützt.
 2.  Wenn ein Client eine Verbindung herstellt, verwenden Sie das Sicherheitspaket, um die Authentifizierung durchzuführen:
-    1.  Rufen Sie die [**AcquireCredentialsHandle**](../SecAuthN/acquirecredentialshandle--general.md) -Funktion auf, um die Dienst Anmelde Informationen abzurufen.
-    2.  Übergeben Sie die Dienst Anmelde Informationen und das vom Client empfangene sicherheitsblob an die [**Accept-SecurityContext**](../SecAuthN/acceptsecuritycontext--general.md) -Funktion, um ein sicherheitsblob zu generieren, das an den Client zurückgesendet werden soll.
-    3.  Exchange-blobschauf dem Client, bis die Authentifizierung beendet ist.
-3.  Überprüfen Sie die zurückgegebene Funktions Maske für das ASC ret-Flag für die **\_ \_ gegenseitige \_** Authentifizierung, um sicherzustellen, dass die gegenseitige Authentifizierung
-4.  Wenn die Authentifizierung erfolgreich war, tauschen Sie den Datenverkehr mit dem authentifizierten Client aus. Verwenden Sie digitale Signaturen und Verschlüsselung, es sei denn, die Leistung ist ein Problem
+    1.  Rufen Sie die [**AcquireCredentialsHandle-Funktion**](../SecAuthN/acquirecredentialshandle--general.md) auf, um die Dienstanmeldeinformationen zu erhalten.
+    2.  Übergeben Sie die Dienstanmeldeinformationen und das vom Client empfangene Sicherheitsblob an die [**AcceptSecurityContext-Funktion,**](../SecAuthN/acceptsecuritycontext--general.md) um ein Sicherheitsblob zu generieren, das an den Client zurücksenden soll.
+    3.  Exchange Blobs mit dem Client, bis die Authentifizierung abgeschlossen ist.
+3.  Überprüfen Sie die zurückgegebene Funktionenmaske für das **ASC \_ RET \_ MUTUAL \_ AUTH-Flag,** um zu überprüfen, ob die gegenseitige Authentifizierung durchgeführt wurde.
+4.  Wenn die Authentifizierung erfolgreich war, tauschen Sie Datenverkehr mit dem authentifizierten Client aus. Verwenden Sie digitale Signatur und Verschlüsselung, es sei denn, die Leistung ist ein Problem.
 
-Weitere Informationen und ein Codebeispiel für dieses Szenario für die gegenseitige Authentifizierung finden Sie unter:
+Weitere Informationen und ein Codebeispiel für dieses Szenario mit gegenseitiger Authentifizierung finden Sie unter:
 
--   [Authentifizieren eines SCP-basierten Windows Sockets-Dienstanbieter durch einen Client](how-a-client-authenticates-an-scp-based-windows-sockets-service.md)
--   [Erstellen und Registrieren von SPNs für einen SCP-basierten Windows Sockets-Dienst](composing-and-registering-spns-for-an-scp-based-windows-sockets-service.md)
--   [Authentifizieren eines Clients durch einen Windows-Sockets-Dienst](how-a-windows-sockets-service-authenticates-a-client.md)
+-   [Authentifizieren eines SCP-basierten Windows Sockets-Diensts durch einen Client](how-a-client-authenticates-an-scp-based-windows-sockets-service.md)
+-   [Verfassen und Registrieren von SPNs für einen SCP-basierten Windows Sockets Service](composing-and-registering-spns-for-an-scp-based-windows-sockets-service.md)
+-   [Authentifizieren eines Clients durch einen Windows Sockets-Dienst](how-a-windows-sockets-service-authenticates-a-client.md)
 
 Weitere Informationen finden Sie unter
 
--   [Veröffentlichen mit Dienst Verbindungs Punkten](publishing-with-service-connection-points.md)
+-   [Veröffentlichen mit Dienstverbindungspunkten](publishing-with-service-connection-points.md)
 -   [SSPI-Dokumentation](/windows/desktop/SecAuthN/sspi)
--   [Dokumentation zu Windows Sockets](/windows/desktop/WinSock/windows-sockets-start-page-2)
+-   [Windows Sockets-Dokumentation](/windows/desktop/WinSock/windows-sockets-start-page-2)
 
- 
+ 
 
- 
+ 
