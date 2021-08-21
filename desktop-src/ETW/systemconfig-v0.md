@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_V0-Klasse: Diese Klasse ist die übergeordnete Klasse für Hardwarekonfigurationsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'SystemConfig_V0 Klasse: Diese Klasse ist die übergeordnete Klasse für Hardwarekonfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 9da1a7ec-89b5-462b-a336-544e4b7adf96
 title: SystemConfig_V0-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 24f0c579f4fb9c947ea02ff677cd433da3103cfc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6986e5ac907784a19c14fb8dc6b9c086031863f322c3c35a58edcf3fd4089ea8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151220"
 ---
 # <a name="systemconfig_v0-class"></a>SystemConfig \_ V0-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Hardwarekonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,22 +38,22 @@ class SystemConfig_V0 : MSNT_SystemTrace
 
 Die **SystemConfig \_ V0-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zu Hardwarekonfigurationsereignissen unter Windows XP finden Sie in der [**HWConfig-Klasse.**](hwconfig.md)
+Informationen zu Hardwarekonfigurationsereignissen Windows XP finden Sie in der [**HWConfig-Klasse.**](hwconfig.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -81,7 +81,7 @@ Informationen zu Hardwarekonfigurationsereignissen unter Windows XP finden Sie i
 [**SystemConfig \_ \_ V0-Dienste**](systemconfig-v0-services.md)
 </dt> <dt>
 
-[**\_ \_ SystemConfig V0-Video**](systemconfig-v0-video.md)
+[**Video zu SystemConfig \_ V0 \_**](systemconfig-v0-video.md)
 </dt> </dl>
 
  

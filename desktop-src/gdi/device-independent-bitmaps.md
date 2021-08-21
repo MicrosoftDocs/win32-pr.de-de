@@ -1,56 +1,56 @@
 ---
 description: Eine geräteunabhängige Bitmap (DIB) enthält eine Farbtabelle.
 ms.assetid: 56b39a3d-48a4-4620-9652-ec41ea4d6423
-title: Bitmaps Device-Independent
+title: Device-Independent Bitmaps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1aa35201a9a27c2d16a5a18b0125d25a3938890c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a6672857aadda714e7016616ca78654d7da102b48c1229c5b322953fc716f5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118761389"
 ---
-# <a name="device-independent-bitmaps"></a>Bitmaps Device-Independent
+# <a name="device-independent-bitmaps"></a>Device-Independent Bitmaps
 
-Eine geräteunabhängige Bitmap (DIB) enthält eine *Farbtabelle*. In einer Farbtabelle wird beschrieben, wie Pixelwerte *RGB* -Farbwerten entsprechen, die Farben beschreiben, die durch Ausgeben von Licht erzeugt werden. Daher kann ein DIB das richtige Farbschema auf jedem Gerät erreichen. Ein DIB enthält die folgenden Farb-und Dimensions Informationen:
+Eine geräteunabhängige Bitmap (DEVICE-Independent Bitmap, DIB) enthält eine *Farbtabelle.* In einer Farbtabelle wird beschrieben, wie Pixelwerte *RGB-Farbwerten* entsprechen, die Farben beschreiben, die durch das Austonen von Licht erzeugt werden. Daher kann ein DIB auf jedem Gerät das richtige Farbschema erzielen. Ein DIB enthält die folgenden Farb- und Dimensionsinformationen:
 
--   Das Farb Format des Geräts, auf dem das rechteckige Bild erstellt wurde.
--   Die Auflösung des Geräts, auf dem das rechteckige Image erstellt wurde.
--   Die Palette für das Gerät, auf dem das Image erstellt wurde.
--   Ein Array von Bits, das rote, grüne, blaue ( [**RGB**](/windows/desktop/api/Wingdi/nf-wingdi-rgb) )-drei-und Pixel im rechteckigen Bild zuordnet.
--   Ein Bezeichner für die Datenkomprimierung, der das Daten Komprimierungs Schema (sofern vorhanden) angibt, mit dem die Größe des Bits-Arrays reduziert wird.
+-   Das Farbformat des Geräts, auf dem das rechteckige Bild erstellt wurde.
+-   Die Auflösung des Geräts, auf dem das rechteckige Bild erstellt wurde.
+-   Die Palette für das Gerät, auf dem das Bild erstellt wurde.
+-   Ein Array von Bits, das rot, grün, blau ( [**RGB**](/windows/desktop/api/Wingdi/nf-wingdi-rgb) ) Triplets zu Pixeln im rechteckigen Bild zu ordnet.
+-   Ein Datenkomprimierungsbezeichner, der das Datenkomprimierungsschema angibt (falls möglich), das verwendet wird, um die Größe des Bitsarrays zu reduzieren.
 
-Die Farb-und Dimensions Informationen werden in einer [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur gespeichert, die aus einer [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85)) -Struktur gefolgt von zwei oder mehr [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Strukturen besteht. Die **BITMAPINFOHEADER** -Struktur gibt die Abmessungen des Pixel Rechtecks an, beschreibt die Farb Technologie des Geräts und identifiziert die Komprimierungs Schemas, die verwendet werden, um die Größe der Bitmap zu verringern. Die **rgbquad** -Strukturen identifizieren die Farben, die im Pixel Rechteck angezeigt werden.
+Die Farb- und Dimensionsinformationen werden in einer [**BITMAPINFO-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) gespeichert, die aus einer [**BITMAPINFOHEADER-Struktur**](/previous-versions//dd183376(v=vs.85)) gefolgt von zwei oder mehr [**RGBQUAD-Strukturen**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) besteht. Die **BITMAPINFOHEADER-Struktur** gibt die Abmessungen des Pixelrechtecks an, beschreibt die Farbtechnologie des Geräts und identifiziert die Komprimierungsschemas, mit deren Hilfe die Größe der Bitmap reduziert wird. Die **RGBQUAD-Strukturen** identifizieren die Farben, die im Pixelrechteck angezeigt werden.
 
-Es gibt zwei Arten von Disb:
+Es gibt zwei Varianten von DIBs:
 
--   Ein Bottom-up-DIB, bei dem der Ursprung in der unteren linken Ecke liegt.
--   Eine Top-Down-DIB, bei der sich der Ursprung in der linken oberen Ecke befindet.
+-   Ein DIB von unten nach oben, in dem sich der Ursprung in der unteren linken Ecke befindet.
+-   Ein DIB von oben nach unten, in dem sich der Ursprung in der oberen linken Ecke befindet.
 
-Wenn die Höhe eines DIB, wie durch das **height** -Element der Bitmap-Informations Header Struktur angegeben, ein positiver Wert ist, ist es ein unterer DIB. Wenn die Höhe ein negativer Wert ist, ist Sie eine Top-Down-DIB. Top-Down-Disb können nicht komprimiert werden.
+Wenn die Höhe eines DIB, wie durch den **Height-Member** der Bitmapinformationsheaderstruktur angegeben, ein positiver Wert ist, handelt es sich um einen DIB von unten nach oben. Wenn die Höhe ein negativer Wert ist, handelt es sich um einen DIB von oben nach unten. DiBs von oben nach unten können nicht komprimiert werden.
 
-Das Farb Format wird in Bezug auf die Anzahl von Farbebenen und Farbbits angegeben. Die Anzahl von Farbebenen ist immer 1. die Anzahl der Farbbits ist 1 für monochrome Bitmaps, 4 für VGA-Bitmaps und 8, 16, 24 oder 32 für Bitmaps auf anderen Farb Geräten. Eine Anwendung ruft die Anzahl der Farbbits ab, die eine bestimmte Anzeige (oder ein Drucker) verwendet, indem Sie die [**GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) -Funktion aufrufen und bitspixel als zweites Argument angibt.
+Das Farbformat wird als Anzahl von Farbebenen und Farbbits angegeben. Die Anzahl der Farbebenen ist immer 1. Die Anzahl der Farbbits beträgt 1 für monofarbige Bitmaps, 4 für VGA-Bitmaps und 8, 16, 24 oder 32 für Bitmaps auf anderen Farbgeräten. Eine Anwendung ruft die Anzahl der Farbbits ab, die von einer bestimmten Anzeige (oder einem Drucker) verwendet werden, indem die [**GetDeviceCaps-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) aufgerufen und BITSPIXEL als zweites Argument angegeben wird.
 
-Die Auflösung eines Anzeige Geräts wird in Pixel pro Meter angegeben. Eine Anwendung kann die horizontale Auflösung für eine Videoanzeige oder einen Drucker abrufen, indem Sie diesen dreistufigen Prozess folgt.
+Die Auflösung eines Anzeigegeräts wird in Pixel pro Meter angegeben. Eine Anwendung kann die horizontale Auflösung für eine Videoanzeige oder einen Drucker mit diesem dreistufigen Prozess abrufen.
 
-1.  Aufrufen der [**getde vicecaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) -Funktion, wobei horzres als zweites Argument angegeben werden.
-2.  Ruft [**getde vicecaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) ein zweites Mal auf, wobei horzsize als zweites Argument angegeben wird.
-3.  Dividiert den ersten Rückgabewert durch den zweiten Rückgabewert.
+1.  Rufen Sie [**die GetDeviceCaps-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) auf, und geben Sie HORZRES als zweites Argument an.
+2.  Rufen [**Sie GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) ein zweites Mal auf, und geben Sie HORZSIZE als zweites Argument an.
+3.  Dividieren Sie den ersten Rückgabewert durch den zweiten Rückgabewert.
 
-Die Anwendung kann die vertikale Auflösung abrufen, indem Sie den gleichen dreistufigen Prozess mit unterschiedlichen Parametern verwendet: "vertres" anstelle von "horzres" und "vertsize" anstelle von "horzsize".
+Die Anwendung kann die vertikale Auflösung abrufen, indem sie den gleichen dreistufigen Prozess mit verschiedenen Parametern verwendet: VERTRES statt HORZRES und VERTSIZE statt HORZSIZE.
 
-Die Palette wird durch ein Array von [**rgbquad**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) -Strukturen dargestellt, die die roten, grünen und blauen Intensität-Komponenten für die einzelnen Farben in der Farbpalette eines Anzeige Geräts angeben. Jeder Farbindex im Palette-Array ist einem bestimmten Pixel im rechteckigen Bereich zugeordnet, der der Bitmap zugeordnet ist. Die Größe dieses Arrays in Bits entspricht der Breite des Rechtecks in Pixel, multipliziert mit der Höhe des Rechtecks in Pixel, multipliziert mit der Anzahl der Farbbits für das Gerät. Eine Anwendung kann die Größe der Gerätepalette abrufen, indem Sie die [**GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) -Funktion aufrufen und dabei numcolors als zweites Argument angibt.
+Die Palette wird durch ein Array von [**RGBQUAD-Strukturen**](/windows/win32/api/wingdi/ns-wingdi-rgbquad) dargestellt, die die Komponenten mit roter, grüner und blauer Intensität für jede Farbe in der Farbpalette eines Anzeigegeräts angeben. Jeder Farbindex im Palettenarray wird einem bestimmten Pixel im rechteckigen Bereich zugeordnet, der der Bitmap zugeordnet ist. Die Größe dieses Arrays in Bits entspricht der Breite des Rechtecks in Pixel, multipliziert mit der Höhe des Rechtecks in Pixel, multipliziert mit der Anzahl der Farbbits für das Gerät. Eine Anwendung kann die Größe der Gerätepalette abrufen, indem sie die [**GetDeviceCaps-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) aufruft, und NUMCOLORS als zweites Argument angeben.
 
-Windows unterstützt die Komprimierung des Palette-Arrays für 8-bpp-und 4-bpp-nach-oben-DIB. Diese Arrays können mithilfe des RLE-Schemas (Run-Length Encoding) komprimiert werden. Das RLE-Schema verwendet 2-Byte-Werte, das erste Byte, das die Anzahl der aufeinander folgenden Pixel angibt, die einen Farbindex verwenden, und das zweite Byte, das den Index angibt. Weitere Informationen zur Bitmapkomprimierung finden Sie in der Beschreibung der Strukturen [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85)), [**BITMAPFILEHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader), [**BITMAPV4HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)und [**BITMAPV5HEADER**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header) .
+Windows unterstützt die Komprimierung des Palettenarrays für 8-bpp- und 4-bpp-DIBs von unten nach oben. Diese Arrays können mithilfe des RLE-Schemas (Run-Length Encoding) komprimiert werden. Das RLE-Schema verwendet 2-Byte-Werte, das erste Byte, das die Anzahl der aufeinander folgenden Pixel an gibt, die einen Farbindex verwenden, und das zweite Byte, das den Index an gibt. Weitere Informationen zur Bitmapkomprimierung finden Sie in der Beschreibung der [**BitmapINFOHEADER-,**](/previous-versions//dd183376(v=vs.85)) [**BITMAPFILEHEADER-,**](/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader) [**BITMAPV4HEADER-**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv4header)und [**BITMAPV5HEADER-Strukturen.**](/windows/desktop/api/Wingdi/ns-wingdi-bitmapv5header)
 
-Eine Anwendung kann ein DIB aus einer DDB erstellen, indem Sie die erforderlichen Strukturen initialisiert und die [**GetDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-getdibits) -Funktion aufruft. Um zu ermitteln, ob ein Gerät diese Funktion unterstützt, können Sie die [**getdebug**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) -Funktion aufrufen und die RC \_ di- \_ Bitmap als RasterCaps-Flag angeben.
+Eine Anwendung kann einen DIB aus einer DDB erstellen, indem sie die erforderlichen Strukturen initialisiert und die [**GetDIBits-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdibits) aufruft. Um zu bestimmen, ob ein Gerät diese Funktion unterstützt, rufen Sie die [**GetDeviceCaps-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) auf, und geben Sie RC \_ DI BITMAP als \_ RASTERCAPS-Flag an.
 
-Eine Anwendung, die eine Bitmap kopieren muss, kann mithilfe von [**TransparentBlt**](/windows/desktop/api/WinGdi/nf-wingdi-transparentblt) alle Pixel in einer Quell Bitmap in eine Ziel Bitmap kopieren, ausgenommen die Pixel, die der transparenten Farbe entsprechen.
+Eine Anwendung, die eine Bitmap kopieren muss, kann [**TransparentBlt**](/windows/desktop/api/WinGdi/nf-wingdi-transparentblt) verwenden, um alle Pixel in einer Quellbitmap in eine Zielbitmap mit Ausnahme der Pixel zu kopieren, die der transparenten Farbe entsprechen.
 
-Eine Anwendung kann einen DIB verwenden, um Pixel auf dem Anzeigegerät durch Aufrufen der [**SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) -oder der [**StretchDIBits**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) -Funktion festzulegen. Um zu ermitteln, ob ein Gerät die **SetDIBitsToDevice** -Funktion unterstützt, können Sie die [**gettovicecaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) -Funktion aufrufen und RC \_ dibtodev als RasterCaps-Flag angeben. Geben \_ Sie RC stretchdib als RasterCaps-Flag an, um zu bestimmen, ob das Gerät **StretchDIBits** unterstützt.
+Eine Anwendung kann mithilfe eines DIB Pixel auf dem Anzeigegerät festlegen, indem sie [**setDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) oder [**die StretchDIBits-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-stretchdibits) aufruft. Um zu bestimmen, ob ein Gerät die **SetDIBitsToDevice-Funktion** unterstützt, rufen Sie die [**GetDeviceCaps-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) auf, und geben Sie RC \_ DIBTODEV als RASTERCAPS-Flag an. Geben Sie RC STRETCHDIB als RASTERCAPS-Flag an, um zu bestimmen, ob das Gerät \_ **StretchDIBits unterstützt.**
 
-Eine Anwendung, die lediglich ein bereits vorhandenes DIB anzeigen muss, kann die [**SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) -Funktion verwenden. Beispielsweise kann eine Tabellenkalkulationsanwendung vorhandene Diagramme öffnen und mithilfe der **SetDIBitsToDevice** -Funktion in einem Fenster anzeigen. Zum wiederholten Neuzeichnen einer Bitmap in einem Fenster sollte die Anwendung jedoch die [**BitBLT**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) -Funktion verwenden. Beispielsweise könnte eine Multimedia-Anwendung, die animierte Grafiken mit Sound kombiniert, von dem Aufruf der **BitBLT** -Funktion profitieren, da Sie schneller als **SetDIBitsToDevice** ausgeführt wird.
+Eine Anwendung, die lediglich ein bereits vorhandenes DIB anzeigen muss, kann die [**Funktion SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) verwenden. Beispielsweise kann eine Tabellenkalkulationsanwendung vorhandene Diagramme öffnen und mithilfe der **Funktion SetDIBitsToDevice** in einem Fenster anzeigen. Um eine Bitmap in einem Fenster wiederholt neu zu erstellen, sollte die Anwendung jedoch die [**BitBlt-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) verwenden. Beispielsweise würde eine Multimediaanwendung, die animierte Grafiken mit Sound kombiniert, vom Aufrufen der **BitBlt-Funktion** profitieren, da sie schneller als **SetDIBitsToDevice ausgeführt wird.**
 
  
 

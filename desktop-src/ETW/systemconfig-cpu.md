@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_CPU-Klasse: Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.'
+description: 'SystemConfig_CPU Klasse: Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.'
 ms.assetid: 5a24be04-9e5e-4ba9-baaf-b58b79ad947b
 title: SystemConfig_CPU-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 07efa01bf58aeadfdfe12cd5db4d010a7f6dbca0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 88503ee53714ea68bb95aca5077aefebd178aa58a7c10167e92358656f5051fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151416"
 ---
-# <a name="systemconfig_cpu-class"></a>\_SystemConfig-CPU-Klasse
+# <a name="systemconfig_cpu-class"></a>SystemConfig \_ CPU-Klasse
 
 Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ class SystemConfig_CPU : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **\_ SystemConfig-CPU-Klasse** verfügt über diese Typen von Membern:
+Die **\_ SystemConfig-CPU-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -78,7 +78,7 @@ Granularität, mit der virtueller Arbeitsspeicher zugeordnet wird.
 
 </dd> <dt>
 
-**Computername**
+**ComputerName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **char16-Array**
@@ -87,7 +87,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (6), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (6), **Max** (256), **Format("s")**
 </dt> </dl>
 
 Name des Computers
@@ -103,7 +103,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (7), **Max** (132), **Format(s)**
+Qualifizierer: **WmiDataId** (7), **Max** (132), **Format("s")**
 </dt> </dl>
 
 Name der Domäne, in der der Computer Mitglied ist.
@@ -194,14 +194,14 @@ Größe einer Auslagerungsseite in Bytes.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

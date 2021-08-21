@@ -1,11 +1,11 @@
 ---
-title: Actions (TaskType)-Element
-description: Enthält die Aktionen, die vom Task ausgeführt werden.
+title: Actions(taskType)-Element
+description: Enthält die aktionen, die von der Aufgabe ausgeführt werden.
 ms.assetid: 0a48fbd6-8a6f-4bad-9b28-0631dce15748
 keywords:
-- Aktionen (TaskType)-Element Taskplaner
-- Aktionen Taskplaner, XML
-- Actions-Element Taskplaner
+- Actions-Element (taskType) Taskplaner
+- Aktionen Taskplaner , XML
+- Actions-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 21af0f8a06faa9cdc61917dcb3b3b0672c47e0e7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 79fb5fe36b6fcff3622e0d12f0571e7f06c5f00d1ae930abc2bca805315f7dd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357098"
 ---
-# <a name="actions-tasktype-element"></a>Actions (TaskType)-Element
+# <a name="actions-tasktype-element"></a>Actions(taskType)-Element
 
-Enthält die Aktionen, die vom Task ausgeführt werden.
+Enthält die aktionen, die von der Aufgabe ausgeführt werden.
 
 ``` syntax
 <xs:element name="Actions"
@@ -32,15 +32,15 @@ Enthält die Aktionen, die vom Task ausgeführt werden.
  />
 ```
 
-Das **Actions** -Element wird durch den komplexen [**TaskType**](taskschedulerschema-tasktype-complextype.md) -Typ definiert.
+Das **Actions-Element** wird durch den [**komplexen taskType-Typ**](taskschedulerschema-tasktype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                          | Abgeleitet von                                                 | BESCHREIBUNG                                                                    |
+| Element                                          | Abgeleitet von                                                 | Beschreibung                                                                    |
 |--------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [**Aufgabe**](taskschedulerschema-task-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Beschreibt den Task, der vom Taskplaner-Dienst ausgeführt wird.<br/> |
+| [**Aufgabe**](taskschedulerschema-task-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Beschreibt die Aufgabe, die vom Dienst Taskplaner wird.<br/> |
 
 
 
@@ -48,12 +48,12 @@ Das **Actions** -Element wird durch den komplexen [**TaskType**](taskschedulersc
 
 
 
-| Element                                                                    | type                                                                       | BESCHREIBUNG                                                            |
+| Element                                                                    | Typ                                                                       | Beschreibung                                                            |
 |----------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Comhandler**](taskschedulerschema-comhandler-actiongroup-element.md)   | [**comhandlertype**](taskschedulerschema-comhandlertype-complextype.md)   | Gibt eine Aktion an, die einen Handler auslöst.<br/>                   |
-| [**Exec**](taskschedulerschema-exec-actiongroup-element.md)               | [**exectype**](taskschedulerschema-exectype-complextype.md)               | Gibt eine Aktion an, die einen Befehlszeilen Vorgang ausführt.<br/> |
-| [**SendEmail**](taskschedulerschema-sendemail-actiongroup-element.md)     | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md)     | Gibt eine Aktion an, die eine e-Mail-Nachricht sendet.<br/>            |
-| [**ShowMessage**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showmessagetype**](taskschedulerschema-showmessagetype-complextype.md) | Gibt eine Aktion an, die ein Meldungs Feld anzeigt.<br/>               |
+| [**ComHandler**](taskschedulerschema-comhandler-actiongroup-element.md)   | [**comHandlerType**](taskschedulerschema-comhandlertype-complextype.md)   | Gibt eine Aktion an, die einen Handler ausgibt.<br/>                   |
+| [**Exec**](taskschedulerschema-exec-actiongroup-element.md)               | [**execType**](taskschedulerschema-exectype-complextype.md)               | Gibt eine Aktion an, die einen Befehlszeilenvorgang ausgibt.<br/> |
+| [**Sendemail**](taskschedulerschema-sendemail-actiongroup-element.md)     | [**sendEmailType**](taskschedulerschema-sendemailtype-complextype.md)     | Gibt eine Aktion an, die eine E-Mail sendet.<br/>            |
+| [**Showmessage**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showMessageType**](taskschedulerschema-showmessagetype-complextype.md) | Gibt eine Aktion an, die ein Meldungsfeld zeigt.<br/>               |
 
 
 
@@ -61,23 +61,23 @@ Das **Actions** -Element wird durch den komplexen [**TaskType**](taskschedulersc
 
 
 
-| Name    | type | BESCHREIBUNG                                                                                          |
+| Name    | Typ | BESCHREIBUNG                                                                                          |
 |---------|------|------------------------------------------------------------------------------------------------------|
-| Kontext |      | Prinzipal Bezeichner des Benutzers, der der Sicherheitskontext für die Aktionen der Aufgabe ist.<br/> |
+| Kontext |      | Prinzipalbezeichner des Benutzers, der der Sicherheitskontext für die Aktionen der Aufgabe ist.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die zuvor aufgelisteten untergeordneten Elemente (Maximum 32) werden von der Gruppe " [**Aktionsgruppe**](taskschedulerschema-actiongroup-group.md) " definiert. Diese Elemente können in beliebiger Reihenfolge hinzugefügt werden.
+Die zuvor aufgeführten untergeordneten Elemente (maximal 32) werden von der [**ActionGroup-Gruppe**](taskschedulerschema-actiongroup-group.md) definiert. Diese Elemente können in beliebiger Reihenfolge hinzugefügt werden.
 
-Bei der C++-Entwicklung werden die Aktionen einer Aufgabe in der [**iaktioncollection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Schnittstelle definiert.
+Für die C++-Entwicklung werden die Aktionen einer Aufgabe in der [**IActionCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) definiert.
 
-Bei der Skript Entwicklung werden die Aktionen einer Aufgabe im [**Aktions Sammlungs**](actioncollection.md) Objekt definiert.
+Für die Skriptentwicklung werden die Aktionen einer Aufgabe im [**ActionCollection-Objekt**](actioncollection.md) definiert.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen und ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die eine einzelne Ausführungs Aktion enthält, finden Sie unter [time-triggerbeispiel (XML)](time-trigger-example--xml-.md).
+Weitere Informationen und ein vollständiges Beispiel des XML-Codes für eine Aufgabe, die eine einzelne Ausführungsaktion enthält, finden Sie unter [Time Trigger Example (XML) .](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Weitere Informationen und ein vollständiges Beispiel für den XML-Code für ein
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -97,10 +97,10 @@ Weitere Informationen und ein vollständiges Beispiel für den XML-Code für ein
 [**taskType**](taskschedulerschema-tasktype-complextype.md)
 </dt> <dt>
 
-[**Action Group**](taskschedulerschema-actiongroup-group.md)
+[**Actiongroup**](taskschedulerschema-actiongroup-group.md)
 </dt> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

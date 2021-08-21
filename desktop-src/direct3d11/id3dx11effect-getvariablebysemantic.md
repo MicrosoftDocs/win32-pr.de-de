@@ -1,11 +1,11 @@
 ---
-title: ID3DX11Effect getvariablebysemantic-Methode (D3dx11effect. h)
-description: Eine Variable nach Semantik erhalten.
+title: ID3DX11Effect GetVariableBySemantic-Methode (D3dx11effect.h)
+description: Eine Variable wird semantisch erhalten.
 ms.assetid: fe731af6-3e9b-4f3e-9761-121796ac8c48
 keywords:
-- Getvariablebysemantic-Methode Direct3D 11
-- Getvariablebysemantic-Methode Direct3D 11, ID3DX11Effect-Schnittstelle
-- ID3DX11Effect-Schnittstelle Direct3D 11, getvariablebysemantic-Methode
+- GetVariableBySemantic-Methode Direct3D 11
+- GetVariableBySemantic-Methode Direct3D 11, ID3DX11Effect-Schnittstelle
+- ID3DX11Effect-Schnittstelle Direct3D 11, GetVariableBySemantic-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8276b1850242bd83639883bf75fc927d8484765
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8e1a636b4a5d9ca4094167e81a74d316e2b57f14e5dacd5926897f8190d50405
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118808092"
 ---
-# <a name="id3dx11effectgetvariablebysemantic-method"></a>ID3DX11Effect:: getvariablebysemantic-Methode
+# <a name="id3dx11effectgetvariablebysemantic-method"></a>ID3DX11Effect::GetVariableBySemantic-Methode
 
-Eine Variable nach Semantik erhalten.
+Eine Variable wird semantisch erhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ ID3DX11EffectVariable* GetVariableBySemantic(
 
 <dl> <dt>
 
-*Tischer* 
+*Semantische* 
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
@@ -56,31 +56,31 @@ Der semantische Name.
 
 Typ: **[ **ID3DX11EffectVariable**](id3dx11effectvariable.md)\***
 
-Ein Zeiger auf die von der Semantik angegeben Effekt Variable. Siehe [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
+Ein Zeiger auf die durch die Semantik angegebene Effektvariable. Siehe [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Effekt Variablen kann eine Semantik angefügt werden, die eine benutzerdefinierte Metadatenzeichenfolge ist. Einige [System-Wert-Semantik](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) sind reservierte Wörter, die integrierte Funktionen nach Pipeline Stufen auslöst.
+An jede Effektvariable kann eine semantische Variable angefügt werden, bei der es sich um eine benutzerdefinierte Metadatenzeichenfolge handelt. Einige [Systemwertsemantiken sind](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) reservierte Wörter, die integrierte Funktionen nach Pipelinestufen auslösen.
 
-Die-Methode gibt einen Zeiger auf eine [**Effekt Variable-Schnittstelle**](id3dx11effectvariable.md) zurück, wenn eine Variable nicht gefunden wird. Sie können [**ID3DX11Effect:: IsValid**](id3dx11effect-isvalid.md) aufgerufen, um zu überprüfen, ob die Semantik vorhanden ist.
+Die -Methode gibt einen Zeiger auf eine [**Effect-Variable-Schnittstelle zurück,**](id3dx11effectvariable.md) wenn keine Variable gefunden wird. Sie können [**ID3DX11Effect::IsValid**](id3dx11effect-isvalid.md) aufrufen, um zu überprüfen, ob die Semantik vorhanden ist.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

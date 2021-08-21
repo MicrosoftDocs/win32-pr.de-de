@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectPass getgeometryshaderdesc-Methode (D3dx11effect. h)
-description: Eine Geometry-shaderbeschreibung erhalten.
+title: ID3DX11EffectPass GetGeometryShaderDesc-Methode (D3dx11effect.h)
+description: Abrufen einer Geometry-Shader-Beschreibung.
 ms.assetid: 03298ec3-6b85-40bf-8920-a82c7606d326
 keywords:
-- Getgeometryshaderdesc-Methode Direct3D 11
-- Getgeometryshaderdesc-Methode Direct3D 11, ID3DX11EffectPass-Schnittstelle
-- ID3DX11EffectPass-Schnittstelle Direct3D 11, getgeometryshaderdesc-Methode
+- GetGeometryShaderDesc-Methode Direct3D 11
+- GetGeometryShaderDesc-Methode Direct3D 11 , ID3DX11EffectPass-Schnittstelle
+- ID3DX11EffectPass-Schnittstelle Direct3D 11 , GetGeometryShaderDesc-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94c3b84ed9e8c245611c1442987b68a94e7b10ad
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7e93c9dfdc2525f2b730f88a9ffaeb5c68d4c9d8304410ddcf891f063cf20729
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118535036"
 ---
-# <a name="id3dx11effectpassgetgeometryshaderdesc-method"></a>ID3DX11EffectPass:: getgeometryshaderdesc-Methode
+# <a name="id3dx11effectpassgetgeometryshaderdesc-method"></a>ID3DX11EffectPass::GetGeometryShaderDesc-Methode
 
-Eine Geometry-shaderbeschreibung erhalten.
+Abrufen einer Geometry-Shader-Beschreibung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetGeometryShaderDesc(
 
 <dl> <dt>
 
-*PDE SC* 
+*pDesc* 
 </dt> <dd>
 
-Typ: **[ **Bibliothek d3dx11 \_ Pass- \_ Shader \_ DESC**](d3dx11-pass-shader-desc.md)\***
+Typ: **[ **D3DX11 \_ PASS \_ SHADER \_ DESC**](d3dx11-pass-shader-desc.md)\***
 
-Ein Zeiger auf eine Geometry-shaderbeschreibung (siehe [**Bibliothek d3dx11 \_ Pass \_ Shader \_**](d3dx11-pass-shader-desc.md)Debug).
+Ein Zeiger auf eine geometry-shader-Beschreibung (siehe [**D3DX11 \_ PASS \_ SHADER \_ DESC**](d3dx11-pass-shader-desc.md)).
 
 </dd> </dl>
 
@@ -56,29 +56,29 @@ Ein Zeiger auf eine Geometry-shaderbeschreibung (siehe [**Bibliothek d3dx11 \_ P
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Effekt Durchlauf kann renderzustandszuweisungen und shaderobjektzuweisungen enthalten.
+Ein Effektdurchlauf kann Renderzustandszuweisungen und Shaderobjektzuweisungen enthalten.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

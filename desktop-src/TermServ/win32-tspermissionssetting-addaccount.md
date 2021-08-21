@@ -1,12 +1,12 @@
 ---
-title: Addaccount-Methode der Win32_TSPermissionsSetting-Klasse (faxcomex. h)
-description: Die addaccount-Methode bereitet das Hinzufügen eines Kontos zum Terminal mit dem angegebenen Berechtigungs Satz vor. Sie können Benutzer, Gruppen oder Computer hinzufügen.
+title: AddAccount-Methode der Win32_TSPermissionsSetting -Klasse (Faxcomex.h)
+description: Die AddAccount-Methode bereitet das Hinzufügen eines Kontos zum Terminal mit dem angegebenen Berechtigungssatz vor. Sie können Benutzer, Gruppen oder Computer hinzufügen.
 ms.assetid: da4d8f5b-7aa2-4b55-bf0f-b3e98b70a06b
 ms.tgt_platform: multiple
 keywords:
-- Addaccount-Methode Remotedesktopdienste
-- Addaccount-Methode Remotedesktopdienste, Win32_TSPermissionsSetting-Klasse
-- Win32_TSPermissionsSetting-Klasse Remotedesktopdienste, addaccount-Methode
+- AddAccount-Remotedesktopdienste
+- AddAccount-Methode Remotedesktopdienste , Win32_TSPermissionsSetting-Klasse
+- Win32_TSPermissionsSetting klasse Remotedesktopdienste , AddAccount-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de89c34bd7aab20fbfbcbdedfd9d2f91bba866bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c3bd1862dfde955d782527ca60fc0fb43ca31431ccb307574e875fe84a640655
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118348555"
 ---
-# <a name="addaccount-method-of-the-win32_tspermissionssetting-class"></a>Addaccount-Methode der Win32 \_ tspermissionssetting-Klasse
+# <a name="addaccount-method-of-the-win32_tspermissionssetting-class"></a>AddAccount-Methode der Win32 \_ TSPermissionsSetting-Klasse
 
-Die **addaccount** -Methode bereitet das Hinzufügen eines Kontos zum Terminal mit dem angegebenen Berechtigungs Satz vor. Sie können Benutzer, Gruppen oder Computer hinzufügen.
+Die **AddAccount-Methode** bereitet das Hinzufügen eines Kontos zum Terminal mit dem angegebenen Berechtigungssatz vor. Sie können Benutzer, Gruppen oder Computer hinzufügen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,45 +44,45 @@ uint32 AddAccount(
 
 <dl> <dt>
 
-*Accountname* \[ in\]
+*AccountName* \[ In\]
 </dt> <dd>
 
 Der Name des Kontos, das dem Terminal hinzugefügt werden soll.
 
 </dd> <dt>
 
-*Permissionvoreinstellung* \[ in\]
+*PermissionPreSet* \[ In\]
 </dt> <dd>
 
-Der Satz von Berechtigungen, die dem angegebenen Konto zugeordnet werden sollen. Dieser Parameter kann einen oder alle der folgenden Werte aufweisen. Weitere Informationen finden Sie unter [Remotedesktopdienste Berechtigungen](terminal-services-permissions.md).
+Der Berechtigungssatz, der dem angegebenen Konto zugeordnet werden soll. Dieser Parameter kann einen oder alle der folgenden Werte sein. Weitere Informationen finden Sie unter [Remotedesktopdienste Berechtigungen.](terminal-services-permissions.md)
 
 <dt>
 
 <span id="WINSTATION_GUEST_ACCESS"></span><span id="winstation_guest_access"></span>
 
-<span id="WINSTATION_GUEST_ACCESS"></span><span id="winstation_guest_access"></span>**WinStation \_ Gast \_ Zugriff** (0)
+<span id="WINSTATION_GUEST_ACCESS"></span><span id="winstation_guest_access"></span>**WINSTATION \_ \_GASTZUGRIFF** (0)
 
 
 </dt> <dd>
 
-Das Konto verfügt über die Berechtigung "Anmelden".
+Das Konto verfügt über die Anmeldeberechtigung.
 
 </dd> <dt>
 
 <span id="WINSTATION_USER_ACCESS"></span><span id="winstation_user_access"></span>
 
-<span id="WINSTATION_USER_ACCESS"></span><span id="winstation_user_access"></span>**WinStation \_ Benutzer \_ Zugriff** (1)
+<span id="WINSTATION_USER_ACCESS"></span><span id="winstation_user_access"></span>**WINSTATION \_ \_BENUTZERZUGRIFF** (1)
 
 
 </dt> <dd>
 
-Das Konto verfügt über die folgenden Berechtigungen: Anmeldung, Abfrage Informationen, Nachricht senden und verbinden.
+Das Konto verfügt über die folgenden Berechtigungen: Anmeldung, Abfrageinformationen, Nachricht senden und Verbinden.
 
 </dd> <dt>
 
 <span id="WINSTATION_ALL_ACCESS"></span><span id="winstation_all_access"></span>
 
-<span id="WINSTATION_ALL_ACCESS"></span><span id="winstation_all_access"></span>**WinStation \_ Alle \_ Zugriffs** Rechte (2)
+<span id="WINSTATION_ALL_ACCESS"></span><span id="winstation_all_access"></span>**WINSTATION \_ ALLE \_ ZUGRIFFE** (2)
 
 
 </dt> <dd>
@@ -93,11 +93,11 @@ Das Konto verfügt über alle Remotedesktopdienste Berechtigungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,9 +107,9 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| Header<br/>                   | <dl> <dt>Faxcomex. h</dt> </dl>   |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| Header<br/>                   | <dl> <dt>Faxcomex.h</dt> </dl>   |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -118,7 +118,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ tspermissionssetting**](win32-tspermissionssetting.md)
+[**Win32 \_ TSPermissionsSetting**](win32-tspermissionssetting.md)
 </dt> </dl>
 
  

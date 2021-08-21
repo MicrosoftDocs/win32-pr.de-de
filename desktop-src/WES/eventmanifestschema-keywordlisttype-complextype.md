@@ -3,7 +3,7 @@ title: Komplexer KeywordListType-Typ
 description: Definiert eine Liste von Schlüsselwörtern, die Ereignisse kategorisieren. | Komplexer KeywordListType-Typ
 ms.assetid: 7aeb5ca1-b23f-40f5-a77b-894deaf9c6bb
 keywords:
-- Komplexer KeywordListType-Typ EventLog
+- EventLog des komplexen Typs KeywordListType
 topic_type:
 - apiref
 api_name:
@@ -40,7 +40,7 @@ Definiert eine Liste von Schlüsselwörtern, die Ereignisse kategorisieren.
 
 
 
-| Element                                                                | type                                                               | BESCHREIBUNG                                                                                                  |
+| Element                                                                | Typ                                                               | Beschreibung                                                                                                  |
 |------------------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | [**Schlüsselwort**](eventmanifestschema-keyword-keywordlisttype-element.md) | [**KeywordType**](eventmanifestschema-keywordtype-complextype.md) | Definiert ein Schlüsselwort, das eine Kategorie von Ereignissen identifiziert. Sie können maximal 48 Schlüsselwörter angeben.<br/> |
 
@@ -52,7 +52,7 @@ Definiert eine Liste von Schlüsselwörtern, die Ereignisse kategorisieren.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

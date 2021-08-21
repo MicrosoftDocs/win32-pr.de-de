@@ -1,6 +1,6 @@
 ---
 title: netboot-Limit-Clients-Attribut
-description: Das netboot-Limit-Clients-Attribut ist für die interne Verwendung reserviert.
+description: Das Attribut netboot-Limit-Clients ist für die interne Verwendung reserviert.
 ms.assetid: e39bed0f-44ff-47f3-a350-cc006c65881b
 ms.tgt_platform: multiple
 keywords:
@@ -23,20 +23,20 @@ ms.locfileid: "118682421"
 ---
 # <a name="netboot-limit-clients-attribute"></a>netboot-Limit-Clients-Attribut
 
-Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reserviert.
+Das **Attribut netboot-Limit-Clients** ist für die interne Verwendung reserviert.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | netboot-Limit-Clients                |
+| CN                | netboot-limit-clients                |
 | Ldap-Anzeigename | netbootLimitClients                  |
 | Size              | \-                                   |
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.850               |
-| System-Id-Guid    | 07383077-91df-11d1-aebc-0000f80367c1 |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| System-ID-GUID    | 07383077-91df-11d1-aebc-0000f80367c1 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -58,7 +58,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Is-Single-Valued       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -79,7 +79,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Is-Single-Valued       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -100,7 +100,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Is-Single-Valued       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -121,7 +121,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Ist einwertig       | Richtig                                                       |
+| Is-Single-Valued       | Richtig                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -142,7 +142,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Ist einwertig       | Richtig                                                       |
+| Is-Single-Valued       | True                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -163,7 +163,7 @@ Das **netboot-Limit-Clients-Attribut** ist für die interne Verwendung reservier
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Ist einwertig       | Richtig                                                       |
+| Is-Single-Valued       | True                                                       |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |

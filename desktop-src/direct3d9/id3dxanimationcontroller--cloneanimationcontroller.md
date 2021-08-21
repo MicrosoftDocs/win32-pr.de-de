@@ -1,7 +1,7 @@
 ---
-description: Klone oder kopiert einen Animations Controller.
+description: Klont oder kopiert einen Animationscontroller.
 ms.assetid: 9836653c-9ea5-4fbc-89ac-0b46054a12d7
-title: 'ID3DXAnimationController:: cloneanimationcontroller-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::CloneAnimationController-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 49c4a1c000df469c72a5e5538237e7110ded126f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5afb99126967163318c82bac6b8cac655fec65e8a28e4cdb349c7f2b1c679435
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118522781"
 ---
-# <a name="id3dxanimationcontrollercloneanimationcontroller-method"></a>ID3DXAnimationController:: cloneanimationcontroller-Methode
+# <a name="id3dxanimationcontrollercloneanimationcontroller-method"></a>ID3DXAnimationController::CloneAnimationController-Methode
 
-Klone oder kopiert einen Animations Controller.
+Klont oder kopiert einen Animationscontroller.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT CloneAnimationController(
 
 <dl> <dt>
 
-*Maxnumanimationoutputs* \[ in\]
+*MaxNumAnimationOutputs* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von Animations Ausgaben, die der Controller unterstützen kann.
+Maximale Anzahl von Animationsausgabe, die der Controller unterstützen kann.
 
 </dd> <dt>
 
-*Maxnumanimationsets* \[ in\]
+*MaxNumAnimationSets* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von Animations Sätzen, die der Controller unterstützen kann.
+Maximale Anzahl von Animationssätzen, die der Controller unterstützen kann.
 
 </dd> <dt>
 
-*Maxnumtracks* \[ in\]
+*MaxNumTracks* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von nach Titeln, die der Controller unterstützen kann.
+Maximale Anzahl von Spuren, die der Controller unterstützen kann.
 
 </dd> <dt>
 
-*Maxnumevents* \[ in\]
+*MaxNumEvents* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Maximale Anzahl von Ereignissen, die der Controller unterstützen kann.
 
 </dd> <dt>
 
-*ppanimcontroller* \[ in\]
+*ppAnimController* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)\***
 
-Adresse eines Zeigers auf den geklonten [**ID3DXAnimationController**](id3dxanimationcontroller.md) -Animations Controller.
+Adresse eines Zeigers auf den geklonten [**ID3DXAnimationController-Animationscontroller.**](id3dxanimationcontroller.md)
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Adresse eines Zeigers auf den geklonten [**ID3DXAnimationController**](id3dxanim
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

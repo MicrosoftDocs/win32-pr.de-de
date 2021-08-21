@@ -1,22 +1,22 @@
 ---
-description: In diesem Thema werden die Methoden der brightnesscontrast-Klasse aufgelistet. Eine vollständige Klassen Auflistung finden Sie unter brightnesscontrast.
+description: In diesem Thema werden die Methoden der BrightnessContrast-Klasse aufgeführt. Eine vollständige Klassenauflistung finden Sie unter BrightnessContrast.
 ms.assetid: 33d42f8e-25ff-40a5-9157-40a3423e3e4e
-title: Brightnesscontrast-Methoden
+title: BrightnessContrast-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9987c673a6a32e001c0a366c874d59c2a8a4b0d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c4790ec852739c75f1d3bd8d3cddb13b81b5f06d0b5d257bbd63610f11e06e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118759136"
 ---
-# <a name="brightnesscontrast-methods"></a>Brightnesscontrast-Methoden
+# <a name="brightnesscontrast-methods"></a>BrightnessContrast-Methoden
 
-In diesem Thema werden die Methoden der [**brightnesscontrast**](/windows/desktop/api/gdipluseffects/nl-gdipluseffects-brightnesscontrast) -Klasse aufgelistet. Eine vollständige Klassen Auflistung finden Sie unter **brightnesscontrast**.
+In diesem Thema werden die Methoden der [**BrightnessContrast-Klasse**](/windows/desktop/api/gdipluseffects/nl-gdipluseffects-brightnesscontrast) aufgeführt. Eine vollständige Klassenauflistung finden Sie unter **BrightnessContrast**.
 
--   [**GetParameters**](/windows/desktop/api/Gdipluseffects/nf-gdipluseffects-brightnesscontrast-getparameters)
--   [**SetParameters**](/windows/desktop/api/Gdipluseffects/nf-gdipluseffects-brightnesscontrast-setparameters)
+-   [**Getparameters**](/windows/desktop/api/Gdipluseffects/nf-gdipluseffects-brightnesscontrast-getparameters)
+-   [**Setparameters**](/windows/desktop/api/Gdipluseffects/nf-gdipluseffects-brightnesscontrast-setparameters)
 
  
 

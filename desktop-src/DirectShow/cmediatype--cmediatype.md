@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6c7a00d4a91f4fe871565b25f165e81df0f533ac
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0b5930d1579c07cb80127e96392c67c417ce832dd90423916d3780bbc37ece3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156485"
 ---
 # <a name="cmediatypecmediatype-destructor"></a>CMediaType.~CMediaType-Destruktor
 
@@ -36,7 +36,7 @@ Destruktormethode.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Destruktor ruft die [**FreeMediaType-Funktion**](freemediatype.md) für sich selbst auf.
 
@@ -44,14 +44,14 @@ Der Destruktor ruft die [**FreeMediaType-Funktion**](freemediatype.md) für sich
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

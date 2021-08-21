@@ -1,6 +1,6 @@
 ---
-title: Type (eapmethodtype)-Element
-description: Erfahren Sie mehr über das Type (eapmethodtype)-Element, das auf den EAP-Methodentyp verweist. Informationen finden Sie unter Anforderungen und Anzeigen zusätzlicher verfügbarer Ressourcen.
+title: Type (EapMethodType)-Element
+description: Erfahren Sie mehr über das Type -Element (EapMethodType), das auf den EAP-Methodentyp verweist. Sehen Sie sich die Anforderungen an, und zeigen Sie zusätzliche verfügbare Ressourcen an.
 ms.assetid: 7911e97c-9436-4d60-8497-bee45cdb8db4
 keywords:
 - Type-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6d45defd098f560d4deb8698e0fd569492668e0b
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 471cb15afc00593d90bec2c0525d8e7aeddc79db13779b7b93ce99d23ccab020
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118498414"
 ---
-# <a name="type-eapmethodtype-element"></a>Type (eapmethodtype)-Element
+# <a name="type-eapmethodtype-element"></a>Type (EapMethodType)-Element
 
-Das **Type (eapmethodtype)** -Element verweist auf den EAP-Methodentyp.
+Das **Type -Element (EapMethodType)** verweist auf den EAP-Methodentyp.
 
 Der Typ ist eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
 
@@ -33,16 +33,16 @@ Der Typ ist eine eindeutige Zahl, die von der Internet Assigned Numbers Authorit
  />
 ```
 
-Das **Type** -Element wird durch den komplexen [**eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md) -Typ definiert.
+Das **Type-Element** wird vom komplexen [**EapMethodType-Typ**](eapcommonschema-eapmethodtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,13 +50,13 @@ Das **Type** -Element wird durch den komplexen [**eapmethodtype**](eapcommonsche
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)
+[**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapcommon-Schema](eapcommonschema-schema.md)

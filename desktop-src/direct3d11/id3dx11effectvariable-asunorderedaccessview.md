@@ -65,7 +65,7 @@ Ein Zeiger auf eine Variable mit ungeordneten Zugriffsansichten. Siehe [**ID3DX1
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

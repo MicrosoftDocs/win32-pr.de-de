@@ -120,7 +120,7 @@ Eine Versionsnummer, die angibt, dass AzApplication aktualisiert wird.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist einwertig       | True                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
@@ -141,7 +141,7 @@ Eine Versionsnummer, die angibt, dass AzApplication aktualisiert wird.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist einwertig       | True                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                    |

@@ -1,70 +1,70 @@
 ---
-title: Brennen eines Festplatten Bilds
-description: 'Das Mastering (Brennen eines Datenträgers) mithilfe von IMAPI besteht aus den folgenden Schritten: Erstellen eines Dateisystem Images, das die Verzeichnisse und Dateien zum Schreiben von Datenträgern enthält. Richten Sie einen Disc Recorder ein, um mit dem optischen Gerät zu kommunizieren. Erstellen Sie einen Datenschreiber, und brennen Sie das Abbild auf die Festplatte'
+title: Verwerfen eines Datenträgerbilds
+description: Das Mastering (Verwerfen eines Datenträgers) mithilfe der IMAPI besteht aus den folgenden Schritten Erstellen eines Dateisystemimages, das die Verzeichnisse und Dateien zum Schreiben von Datenträgern enthält. Richten Sie einen Datenträgerrecorder für die Kommunikation mit dem optischen Gerät ein. Erstellen Sie einen Datenwriter, und verwerten Sie das Image auf einen Datenträger.
 ms.assetid: f2eee14e-695d-4678-b3c1-b521ab4d4a7e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6e3086f728ca0b0826a001d26841edcfe07c6a1
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 237a4aa73b6820b75b4a9a1ed03baeeb87ac093bfc549cb9cc0ed947077515dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118758910"
 ---
-# <a name="burning-a-disc-image"></a>Brennen eines Festplatten Bilds
+# <a name="burning-a-disc-image"></a>Verwerfen eines Datenträgerbilds
 
-Das Mastering (Brennen eines Datenträgers) mithilfe von IMAPI besteht aus den folgenden Schritten:
+Das Mastering (Bearbeiten eines Datenträgers) mithilfe von IMAPI besteht aus den folgenden Schritten:
 
-1.  Erstellen Sie ein Dateisystem Image, das die Verzeichnisse und Dateien zum Schreiben der Festplatte enthält.
-2.  [Richten Sie einen Disc Recorder ein](#set-up-a-disc-recorder) , um mit dem optischen Gerät zu kommunizieren.
-3.  [Erstellen Sie einen Datenschreiber](#create-a-data-writer-and-write-the-burn-image) , und brennen Sie das Abbild auf die Festplatte
+1.  Erstellen Sie ein Dateisystemimage, das die Verzeichnisse und Dateien zum Schreiben von Datenträgern enthält.
+2.  [Richten Sie einen Datenträgerrecorder](#set-up-a-disc-recorder) für die Kommunikation mit dem optischen Gerät ein.
+3.  [Erstellen Sie einen Datenwriter,](#create-a-data-writer-and-write-the-burn-image) und verwerten Sie das Image auf einen Datenträger.
 
-Ein Beispiel für das Brennen eines Festplatten Abbilds finden Sie unter [VBScript-Beispiel](#vbscript-example).
+Ein Beispiel, in dem ein Datenträgerbild verätzt wird, finden Sie unter [VBScript-Beispiel.](#vbscript-example)
 
-## <a name="construct-a-burn-image"></a>Erstellen eines Verbrauchs Abbilds
+## <a name="construct-a-burn-image"></a>Erstellen eines Burn-Images
 
-Ein Burn-Image ist ein Datenstrom, der auf optische Medien geschrieben werden kann. Das Burn-Image für die Formate "ISO9660", "Joliet" und "UDF" besteht aus einem Dateisystem einzelner Dateien und Verzeichnisse. Das **cfilesystemmage** -Objekt ist das Dateisystem Objekt, das die Dateien und Verzeichnisse enthält, die auf dem optischen Medium platziert werden sollen. Die [**ifilesystemmage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage) -Schnittstelle ermöglicht den Zugriff auf das Dateisystem Objekt und die Einstellungen.
+Ein Burn-Image ist ein Datenstrom, der bereit ist, auf optische Medien geschrieben zu werden. Das Burn-Image für die Formate ISO9660, Joliet und UDF besteht aus einem Dateisystem einzelner Dateien und Verzeichnisse. Das **CFileSystemImage-Objekt** ist das Dateisystemobjekt, das die Dateien und Verzeichnisse enthält, die auf den optischen Medien gespeichert werden sollen. Die [**IFileSystemImage-Schnittstelle**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage) ermöglicht den Zugriff auf das Dateisystemobjekt und die Einstellungen.
 
-Nachdem Sie das Dateisystem Objekt erstellt haben, rufen Sie die [**ifilesystemmage:: featefileitem**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createfileitem) -Methode und die [**ifilesystemmage:: | atedirectoryitem**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createdirectoryitem) -Methode auf, um die Datei-bzw. Verzeichnisobjekte zu erstellen. Die Datei-und Verzeichnisobjekte können verwendet werden, um bestimmte Details zur Datei und zum Verzeichnis bereitzustellen. Mit den Ereignishandlermethoden, die für [**ifilesystemmage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage) verfügbar sind, kann die aktuelle Datei identifiziert werden, die dem Dateisystem Abbild hinzugefügt wird, die Anzahl der bereits kopierten Sektoren und die Gesamtzahl der zu kopierenden Sektoren.
+Rufen Sie nach dem Erstellen des Dateisystemobjekts die Methoden [**IFileSystemImage::CreateFileItem**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createfileitem) und [**IFileSystemImage::CreateDirectoryItem**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createdirectoryitem) auf, um die Datei- bzw. Verzeichnisobjekte zu erstellen. Die Datei- und Verzeichnisobjekte können verwendet werden, um spezifische Details zur Datei und zum Verzeichnis bereitzustellen. Die für [**IFileSystemImage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage) verfügbaren Ereignishandlermethoden können die aktuelle Datei, die dem Dateisystemimage hinzugefügt wird, die Anzahl der bereits kopierten Sektoren und die Gesamtzahl der zu kopierenden Sektoren identifizieren.
 
-Optional kann ein Start Abbild mit der [**ifilesystemmage::p UT \_ bootimageoptions**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-put_bootimageoptions) -Eigenschaft an das Dateisystem angefügt werden. Ein Beispiel finden Sie unter [Hinzufügen eines Start Abbilds](adding-a-boot-image.md).
+Optional kann ein Startimage mithilfe der Eigenschaft [**IFileSystemImage::p ut \_ BootImageOptions**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-put_bootimageoptions) an das Dateisystem angefügt werden. Ein Beispiel finden Sie unter [Hinzufügen eines Startabbilds.](adding-a-boot-image.md)
 
-Rufen Sie zum Schluss [**ifilesystemimage:: errateresultimage**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createresultimage) auf, um einen Datenstrom zu erstellen, und bieten Sie Zugriff über [**ifilesystemimageresult**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimageresult). Der neue Datenstrom kann dann direkt der [**IDiscFormat2Data:: Write**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-write) -Methode bereitgestellt oder zur späteren Verwendung in einer Datei gespeichert werden.
+Rufen Sie abschließend [**IFileSystemImage::CreateResultImage**](/windows/desktop/api/imapi2fs/nf-imapi2fs-ifilesystemimage-createresultimage) auf, um einen Datenstrom zu erstellen, und ermöglicht den Zugriff über [**IFileSystemImageResult.**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimageresult) Der neue Datenstrom kann dann direkt für die [**IDiscFormat2Data::Write-Methode**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-write) bereitgestellt oder zur späteren Verwendung in einer Datei gespeichert werden.
 
-## <a name="set-up-a-disc-recorder"></a>Einrichten eines Disk Recorder
+## <a name="set-up-a-disc-recorder"></a>Einrichten eines Datenträgeraufzeichnungsgeräts
 
-Das **MsftDiscMaster2** -Objekt stellt eine Enumeration der optischen Geräte auf dem System bereit. Die [**IDiscMaster2**](/windows/desktop/api/imapi2/nn-imapi2-idiscmaster2) -Schnittstelle ermöglicht den Zugriff auf die resultierende Geräteenumeration. Durchlaufen Sie die Enumerationen, um nach einem entsprechenden Aufzeichnungsgerät zu suchen. Das **MsftDiscMaster2** -Objekt bietet auch Ereignis Benachrichtigungen, wenn optische Geräte einem Computer hinzugefügt oder daraus gelöscht werden.
+Das **MsftDiscMaster2-Objekt** stellt eine Enumeration der optischen Geräte auf dem System bereit. Die [**IDiscMaster2-Schnittstelle**](/windows/desktop/api/imapi2/nn-imapi2-idiscmaster2) bietet Zugriff auf die resultierende Geräteenumeration. Durchlaufen Sie die Enumerationen, um ein geeignetes Aufzeichnungsgerät zu finden. Das **MsftDiscMaster2-Objekt** stellt auch Ereignisbenachrichtigungen bereit, wenn einem Computer optische Geräte hinzugefügt oder daraus gelöscht werden.
 
-Nachdem Sie einen optischen Recorder gefunden und seine ID abgerufen haben, erstellen Sie ein **MsftDiscRecorder2** -Objekt, und initialisieren Sie den Recorder mithilfe der Geräte-ID. Die [**IDiscRecorder2**](/windows/desktop/api/imapi2/nn-imapi2-idiscrecorder2) -Schnittstelle bietet Zugriff auf das Recorder-Objekt sowie einige grundlegende Geräteinformationen wie Hersteller-ID, Produkt-ID, Produkt Revision und Methoden, um die Medien zu auswerfen und die Leiste zu schließen.
+Nachdem Sie einen optischen Aufzeichnungsgerät gefunden und seine ID abgerufen haben, erstellen Sie ein **MsftDiscRecorder2-Objekt,** und initialisieren Sie den Aufzeichnungsdatenträger mithilfe der Geräte-ID. Die [**IDiscRecorder2-Schnittstelle**](/windows/desktop/api/imapi2/nn-imapi2-idiscrecorder2) bietet Zugriff auf das Aufzeichnungsobjekt sowie einige grundlegende Geräteinformationen wie Anbieter-ID, Produkt-ID, Produktrevision und Methoden zum Auswerfen der Medien und Schließen der Taskleiste.
 
-## <a name="create-a-data-writer-and-write-the-burn-image"></a>Erstellen eines Daten Writers und Schreiben des Verbrauchs Abbilds
+## <a name="create-a-data-writer-and-write-the-burn-image"></a>Erstellen eines Datenwriters und Schreiben des Burn-Images
 
-Das **MsftDiscFormat2Data** -Objekt stellt die Schreibmethode, die Eigenschaften über die Schreibfunktion und die medienspezifischen Eigenschaften bereit. Die [**IDiscFormat2Data**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2data) -Schnittstelle bietet Zugriff auf das **MsftDiscFormat2Data** -Objekt.
+Das **MsftDiscFormat2Data-Objekt** stellt die Schreibmethode, die Eigenschaften der Schreibfunktion und medienspezifische Eigenschaften bereit. Die [**IDiscFormat2Data-Schnittstelle**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2data) bietet Zugriff auf das **MsftDiscFormat2Data-Objekt.**
 
-Der Disk Recorder verknüpft mithilfe der [**IDiscFormat2Data::p UT \_ Recorder**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-put_recorder) -Eigenschaft mit dem Format Schreiber. Nachdem der Recorder an das Format-Writer gebunden wurde, können Sie Abfragen bezüglich der Medien ausführen und Schreib spezifische Eigenschaften aktualisieren, bevor Sie das Ergebnisbild mithilfe der [**IDiscFormat2Data:: Write**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-write) -Methode auf die Festplatte schreiben.
+Die Datenträgeraufzeichnung ist mithilfe der [**IDiscFormat2Data::p ut \_ Recorder-Eigenschaft**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-put_recorder) mit dem Formatwriter verknüpft. Nachdem die Aufzeichnung an den Formatwriter gebunden wurde, können Sie Abfragen zu den Medien ausführen und schreibspezifische Eigenschaften aktualisieren, bevor Sie das Ergebnisbild mit der [**IDiscFormat2Data::Write-Methode**](/windows/desktop/api/imapi2/nf-imapi2-idiscformat2data-write) auf einen Datenträger schreiben.
 
-Andere von IMAPI bereitgestellte Schnittstellen zum Schreiben von Formaten funktionieren ähnlich. zusätzliche Schnittstellen zum Schreiben von Formaten umfassen Folgendes:
+Andere Formatschreibschnittstellen, die von DER IMAPI bereitgestellt werden, funktionieren ähnlich. Zusätzliche Schnittstellen zum Schreiben von Formaten:
 
--   [**IDiscFormat2Erase**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2erase) löscht erneut beschreibbare optische Medien.
--   [**IDiscFormat2RawCD**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2rawcd) schreibt ein RAW-Image in optische Medien.
+-   [**IDiscFormat2Erase**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2erase) löscht umschreibbare optische Medien.
+-   [**IDiscFormat2RawCD**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2rawcd) schreibt ein Rohbild in optische Medien.
 -   [**IDiscFormat2TrackAtOnce**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2trackatonce) schreibt Audiospuren in optische Medien.
 
 > [!Note]  
-> Es ist möglich, dass bei einem Verbrennungsvorgang (d. h. beim Abmelden des Benutzers oder beim Aussetzen des Systems) ein Strom Status Übergang stattfindet. Dies führt zu einer Unterbrechung des Verbrauchs und möglichen Datenverlusten. Informationen zur Programmierung finden Sie unter verhindern der Abmeldung [oder aussetzen während eines Burn](preventing-logoff-or-suspend-during-a-burn.md)-Vorgangs.
+> Es ist möglich, dass ein Energiezustandsübergang während eines Burn-Vorgangs (d. h. Abmeldung des Benutzers oder Systemunterbrechung) stattfindet, was zu einer Unterbrechung des Verbrandungsprozesses und einem möglichen Datenverlust führt. Überlegungen zur Programmierung finden Sie unter [Verhindern von Abmeldung oder Anhalten während eines Brandes.](preventing-logoff-or-suspend-during-a-burn.md)
 
- 
+ 
 
 ## <a name="vbscript-example"></a>VBScript-Beispiel
 
-In diesem Skript Beispiel wird gezeigt, wie die IMAPI-Objekte zum Brennen von optischen Medien verwendet werden. genauer gesagt, schreiben Sie ein Verzeichnis auf eine leere CD. Der Code enthält keine Fehlerüberprüfung, und es wird Folgendes vorausgesetzt:
+Dieses Skriptbeispiel zeigt, wie Sie die IMAPI-Objekte verwenden, um optische Medien zu verdrehen. Schreiben Sie genauer gesagt ein Verzeichnis auf einen leeren Datenträger. Der Code enthält keine Fehlerüberprüfung und geht von Folgendem aus:
 
--   Auf dem System ist ein kompatibles CD-Gerät installiert.
--   Das Geräte Datenträger ist das zweite Laufwerk des Systems.
--   Ein kompatibles Laufwerk wird auf dem Festplattengerät eingefügt.
--   Die Festplatte ist leer.
+-   Auf dem System ist ein kompatibles Datenträgergerät installiert.
+-   Das Datenträgergerät ist das zweite Laufwerk im System.
+-   Ein kompatibler Datenträger wird in das Datenträgergerät eingefügt.
+-   Der Datenträger ist leer.
 -   Dateien, die auf den Datenträger geschrieben werden sollen, befinden sich in "g: \\ burndir".
 
-Diesem Skript können zusätzliche Funktionen hinzugefügt werden, wie z. b. Fehlerüberprüfung, Geräte-und Medienkompatibilität, Ereignis Benachrichtigung und die Berechnung des freien Speicherplatzes auf der Festplatte.
+Diesem Skript können zusätzliche Funktionen wie Fehlerüberprüfung, Geräte- und Medienkompatibilität, Ereignisbenachrichtigung und Berechnung des freien Speicherplatzes auf dem Datenträger hinzugefügt werden.
 
 
 ```VB
@@ -162,12 +162,12 @@ End Function
 [**IDiscRecorder2**](/windows/desktop/api/imapi2/nn-imapi2-idiscrecorder2)
 </dt> <dt>
 
-[**Ifilesystemimage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
+[**IFileSystemImage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
 </dt> <dt>
 
-[**IStream**](/windows/desktop/api/objidl/nn-objidl-istream)
+[**Istream**](/windows/desktop/api/objidl/nn-objidl-istream)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

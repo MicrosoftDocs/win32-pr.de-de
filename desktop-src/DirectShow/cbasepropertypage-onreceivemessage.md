@@ -1,7 +1,7 @@
 ---
-description: Die onreceivemess-Methode wird aufgerufen, wenn das Dialogfeld eine Meldung empfängt.
+description: Die OnReceiveMessage-Methode wird aufgerufen, wenn das Dialogfeld eine Nachricht empfängt.
 ms.assetid: ea93500d-fd0f-4820-a54a-a186c40899ad
-title: Cbasepropertypage. onreceivemess Age-Methode (cprop. h)
+title: CBasePropertyPage.OnReceiveMessage-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 69d9da708d45524d15f735273d47f242104ee22f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 833f0f7ab9192d88440afff75a36fee744ac2fe053c6fe99d1940686c452799a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158132"
 ---
-# <a name="cbasepropertypageonreceivemessage-method"></a>Cbasepropertypage. onreceivemess Age-Methode
+# <a name="cbasepropertypageonreceivemessage-method"></a>CBasePropertyPage.OnReceiveMessage-Methode
 
-Die- `OnReceiveMessage` Methode wird aufgerufen, wenn das Dialogfeld eine Meldung empfängt.
+Die `OnReceiveMessage` -Methode wird aufgerufen, wenn das Dialogfeld eine Nachricht empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ virtual INT_PTR OnReceiveMessage(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Handle für das Fenster.
+Handle zum Fenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
 Message (Nachricht):
@@ -62,30 +62,30 @@ Message (Nachricht):
 *wParam* 
 </dt> <dd>
 
-Der erste Message-Parameter.
+Erster Meldungsparameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Meldungs Parameter.
+Zweiter Meldungsparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen booleschen Wert zurück. Die Dialogfeld Prozedur gibt diesen Wert zurück. Weitere Informationen finden Sie in der Platform SDK-Dokumentation.
+Gibt einen booleschen Wert zurück. Die Dialogprozedur gibt diesen Wert zurück. Weitere Informationen finden Sie in der Dokumentation zum Platform SDK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Basisklassen Implementierung ruft **defwindowproc** auf. Überschreiben Sie diese Methode, um Meldungen zu verarbeiten, die sich auf die Dialogfeld Steuerelemente Wenn die über schreibende Methode eine bestimmte Nachricht nicht verarbeitet, sollte Sie die Basisklassen Methode aufruft.
+Die Basisklassenimplementierung ruft **DefWindowProc auf.** Überschreiben Sie diese Methode, um Meldungen zu behandeln, die sich auf die Dialogsteuerelemente beziehen. Wenn die überschreibende Methode eine bestimmte Nachricht nicht behandelt, sollte sie die Basisklassenmethode aufrufen.
 
-Wenn der Benutzereigenschaften über die Dialogfeld Steuerelemente ändert, legen Sie das [**\_ bdirty-Flag "cbasepropertypage:: m**](cbasepropertypage-m-bdirty.md) " auf " **true**" fest. Anschließend können Sie die **ipropertypagesite:: OnStatusChange** -Methode auf dem [**cbasepropertypage:: m \_ ppagesite**](cbasepropertypage-m-ppagesite.md) -Zeiger aufrufen, um den Frame zu informieren.
+Wenn der Benutzer Eigenschaften über die Dialogsteuerelemente ändert, legen Sie das [**Flag CBasePropertyPage::m \_ bDirty**](cbasepropertypage-m-bdirty.md) auf **TRUE fest.** Rufen Sie dann die **IPropertyPageSite::OnStatusChange-Methode** für den [**CBasePropertyPage::m \_ pPageSite-Zeiger**](cbasepropertypage-m-ppagesite.md) auf, um den Frame zu informieren.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird auf einen Klick auf eine Schaltfläche reagiert, indem eine Element Variable aktualisiert wird, die in der abgeleiteten Klasse definiert wird. Dieses Beispiel zeigt auch eine Hilfsfunktion zum Festlegen des Status "Dirty" der Eigenschaften Seite.
+Im folgenden Beispiel wird auf einen Schaltflächenklick reagiert, indem eine Membervariable aktualisiert wird, von der angenommen wird, dass sie in der abgeleiteten Klasse definiert ist. Dieses Beispiel zeigt auch eine Hilfsfunktion zum Festlegen des geänderten Status der Eigenschaftenseite.
 
 
 ```C++
@@ -127,8 +127,8 @@ void CMyProp::SetDirty()
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -136,7 +136,7 @@ void CMyProp::SetDirty()
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

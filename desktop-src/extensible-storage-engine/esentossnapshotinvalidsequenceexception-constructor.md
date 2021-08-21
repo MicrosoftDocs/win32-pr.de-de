@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentossnapshotinvalidsequenceexception-Konstruktor'
-title: Esentossnapshotinvalidsequenceexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOSSnapshotInvalidSequenceException-Konstruktor'
+title: EsentOSSnapshotInvalidSequenceException-Konstruktor
 TOCTitle: 'EsentOSSnapshotInvalidSequenceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOSSnapshotInvalidSequenceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentossnapshotinvalidsequenceexception.esentossnapshotinvalidsequenceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1832264fb239b6006414fa376e66866fb889a281
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cee55564520a2f1dbb1ab34b1926060e802af2d2de6a91fa8e779bbe46dd117
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118493446"
 ---
-# <a name="esentossnapshotinvalidsequenceexception-constructor"></a>Esentossnapshotinvalidsequenceexception-Konstruktor
+# <a name="esentossnapshotinvalidsequenceexception-constructor"></a>EsentOSSnapshotInvalidSequenceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentossnapshotinvalidsequenceexception-Klasse.
+Initialisiert eine neue Instanz der EsentOSSnapshotInvalidSequenceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentOSSnapshotInvalidSequenceException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentossnapshotinvalidsequenceexception-Klasse](./esentossnapshotinvalidsequenceexception-class.md)
+[EsentOSSnapshotInvalidSequenceException-Klasse](./esentossnapshotinvalidsequenceexception-class.md)
 
-[Esentossnapshotinvalidsequenceexception-Member](./esentossnapshotinvalidsequenceexception-members.md)
+[EsentOSSnapshotInvalidSequenceException-Member](./esentossnapshotinvalidsequenceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

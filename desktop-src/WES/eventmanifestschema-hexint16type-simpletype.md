@@ -3,7 +3,7 @@ title: Einfacher UInt16Type-Typ
 description: Definiert einen short-Typ ohne Vorzeichen.
 ms.assetid: 2200bb14-8f38-43fd-aed3-2a6b3ac33ed5
 keywords:
-- Einfacher UInt16Type-Typ EventLog
+- UInt16Type simple type EventLog
 topic_type:
 - apiref
 api_name:

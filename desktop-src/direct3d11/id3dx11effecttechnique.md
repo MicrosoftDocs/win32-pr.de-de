@@ -1,6 +1,6 @@
 ---
 title: ID3DX11EffectTechnique-Schnittstelle (D3dx11effect.h)
-description: Eine ID3DX11EffectTechnique-Schnittstelle ist eine Auflistung von Durchläufen. Die Lebensdauer eines ID3DX11EffectTechnique-Objekts entspricht der Lebensdauer des übergeordneten ID3DX11Effect-Objekts.
+description: Eine ID3DX11EffectTechnique-Schnittstelle ist eine Sammlung von Durchläufen. Die Lebensdauer eines ID3DX11EffectTechnique-Objekts entspricht der Lebensdauer des übergeordneten ID3DX11Effect-Objekts.
 ms.assetid: 63d52cac-287d-4432-bf2b-7b4e67e525e6
 keywords:
 - ID3DX11EffectTechnique-Schnittstelle Direct3D 11
@@ -25,7 +25,7 @@ ms.locfileid: "118532352"
 ---
 # <a name="id3dx11effecttechnique-interface"></a>ID3DX11EffectTechnique-Schnittstelle
 
-Eine **ID3DX11EffectTechnique-Schnittstelle** ist eine Auflistung von Durchläufen.
+Eine **ID3DX11EffectTechnique-Schnittstelle** ist eine Sammlung von Durchläufen.
 
 Die Lebensdauer eines **ID3DX11EffectTechnique-Objekts** entspricht der Lebensdauer des übergeordneten [**ID3DX11Effect-Objekts.**](id3dx11effect.md)
 
@@ -37,15 +37,15 @@ Die **ID3DX11EffectTechnique-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                        | BESCHREIBUNG                                                           |
+| Methode                                                                        | Beschreibung                                                           |
 |:------------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**ComputeStateBlockMask**](id3dx11effecttechnique-computestateblockmask.md) | Berechnen Sie eine Zustandsblockmaske, um Zustandsänderungen zu ermöglichen bzw. zu verhindern.<br/> |
-| [**GetAnnotationByIndex**](id3dx11effecttechnique-getannotationbyindex.md)   | Sie erhalten eine Anmerkung nach Index.<br/>                                |
-| [**GetAnnotationByName**](id3dx11effecttechnique-getannotationbyname.md)     | Erhalten Sie eine Anmerkung nach Namen.<br/>                                 |
-| [**GetDesc**](id3dx11effecttechnique-getdesc.md)                             | Erhalten Sie eine Technikbeschreibung.<br/>                               |
-| [**GetPassByIndex**](id3dx11effecttechnique-getpassbyindex.md)               | Get a pass by index (Index für Pass-by-Index).<br/>                                       |
-| [**GetPassByName**](id3dx11effecttechnique-getpassbyname.md)                 | Erhalten Sie einen Pass nach Name.<br/>                                        |
-| [**IsValid**](id3dx11effecttechnique-isvalid.md)                             | Testen Sie eine Technik, um zu überprüfen, ob sie eine gültige Syntax enthält.<br/>       |
+| [**ComputeStateBlockMask**](id3dx11effecttechnique-computestateblockmask.md) | Berechnen Sie eine Zustandsblockmaske, um Zustandsänderungen zuzulassen/zu verhindern.<br/> |
+| [**GetAnnotationByIndex**](id3dx11effecttechnique-getannotationbyindex.md)   | Abrufen einer Anmerkung nach Index.<br/>                                |
+| [**GetAnnotationByName**](id3dx11effecttechnique-getannotationbyname.md)     | Abrufen einer Anmerkung anhand des Namens.<br/>                                 |
+| [**GetDesc**](id3dx11effecttechnique-getdesc.md)                             | Abrufen einer Technikbeschreibung.<br/>                               |
+| [**GetPassByIndex**](id3dx11effecttechnique-getpassbyindex.md)               | Abrufen eines Durchlaufs nach Index.<br/>                                       |
+| [**GetPassByName**](id3dx11effecttechnique-getpassbyname.md)                 | Abrufen eines Durchlaufs anhand des Namens.<br/>                                        |
+| [**IsValid**](id3dx11effecttechnique-isvalid.md)                             | Testen Sie eine Technik, um festzustellen, ob sie eine gültige Syntax enthält.<br/>       |
 
 
 
@@ -53,12 +53,12 @@ Die **ID3DX11EffectTechnique-Schnittstelle** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Effekt enthält eine oder mehrere Techniken. jede Technik enthält einen oder mehrere Durchläufe. Jeder Durchgang enthält Zustandszuweisungen.
+Ein Effekt enthält eine oder mehrere Techniken. jede Technik enthält einen oder mehrere Durchläufe. jeder Durchlauf enthält Zustandszuweisungen.
 
-Um eine Effekttechnikschnittstelle zu erhalten, rufen Sie eine Methode wie [**ID3DX11Effect::GetTechniqueByName auf.**](id3dx11effect-gettechniquebyname.md)
+Um eine Effekttechnikschnittstelle abzurufen, rufen Sie eine Methode wie [**ID3DX11Effect::GetTechniqueByName**](id3dx11effect-gettechniquebyname.md)auf.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -69,11 +69,11 @@ Um eine Effekttechnikschnittstelle zu erhalten, rufen Sie eine Methode wie [**ID
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

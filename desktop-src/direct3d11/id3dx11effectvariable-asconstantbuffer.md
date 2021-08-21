@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVariable asconstantbuffer-Methode (D3dx11effect. h)
-description: Einen konstanten Puffer erhalten. | ID3DX11EffectVariable asconstantbuffer-Methode (D3dx11effect. h)
+title: ID3DX11EffectVariable AsConstantBuffer-Methode (D3dx11effect.h)
+description: Abrufen eines konstanten Puffers. | ID3DX11EffectVariable AsConstantBuffer-Methode (D3dx11effect.h)
 ms.assetid: b8d8b43c-4626-43b6-8a49-8ffa7cb48427
 keywords:
-- Asconstantbuffer-Methode Direct3D 11
-- Asconstantbuffer-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
-- ID3DX11EffectVariable-Schnittstelle Direct3D 11, asconstantbuffer-Methode
+- AsConstantBuffer-Methode Direct3D 11
+- AsConstantBuffer-Methode Direct3D 11 , ID3DX11EffectVariable-Schnittstelle
+- ID3DX11EffectVariable-Schnittstelle Direct3D 11 , AsConstantBuffer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee4caca60216df0c04a773da22150dbc6f7be717
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b232a9eb98b4cb5bdd4137661198abb9b853faa126579bd86c69e8dce375a6f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118531574"
 ---
-# <a name="id3dx11effectvariableasconstantbuffer-method"></a>ID3DX11EffectVariable:: asconstantbuffer-Methode
+# <a name="id3dx11effectvariableasconstantbuffer-method"></a>ID3DX11EffectVariable::AsConstantBuffer-Methode
 
-Einen konstanten Puffer erhalten.
+Abrufen eines konstanten Puffers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,29 +47,29 @@ Typ: **[ **ID3DX11EffectConstantBuffer**](id3dx11effectconstantbuffer.md)\***
 
 Ein Zeiger auf einen konstanten Puffer. Siehe [**ID3DX11EffectConstantBuffer**](id3dx11effectconstantbuffer.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asconstantbuffer gibt eine Version der Effekt Variablen zurück, die auf einen konstanten Puffer spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effekt Variable keine Konstanten Puffer Daten enthält.
+AsConstantBuffer gibt eine Version der Effect-Variablen zurück, die auf einen konstanten Puffer spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effect-Variable keine konstanten Pufferdaten enthält.
 
-Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem Sie [**IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
+Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem [**sie IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

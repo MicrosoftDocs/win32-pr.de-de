@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectType getmembership Name-Methode (D3dx11effect. h)
-description: Den Namen eines Members zu erhalten.
+title: ID3DX11EffectType GetMemberName-Methode (D3dx11effect.h)
+description: Abrufen des Namens eines Members.
 ms.assetid: cd231741-09e1-4e69-9384-5cdfbf83fc8b
 keywords:
-- Getmembership Name-Methode Direct3D 11
-- Getmembership Name-Methode Direct3D 11, ID3DX11EffectType-Schnittstelle
-- ID3DX11EffectType Interface Direct3D 11, getmembership Name-Methode
+- GetMemberName-Methode Direct3D 11
+- GetMemberName-Methode Direct3D 11 , ID3DX11EffectType-Schnittstelle
+- ID3DX11EffectType-Schnittstelle Direct3D 11 , GetMemberName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4aa9a24067d8ef19680ca58e41659da850659b2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: db740b11e8da886d1c2b3339b1cdf64fa941dcb4947e9f399be8b49b2747bbe5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118532342"
 ---
-# <a name="id3dx11effecttypegetmembername-method"></a>ID3DX11EffectType:: getmembership Name-Methode
+# <a name="id3dx11effecttypegetmembername-method"></a>ID3DX11EffectType::GetMemberName-Methode
 
-Den Namen eines Members zu erhalten.
+Abrufen des Namens eines Members.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ LPCSTR GetMemberName(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein NULL basierter Index.
+Ein nullbasierter Index.
 
 </dd> </dl>
 
@@ -58,25 +58,25 @@ Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Name des Members.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

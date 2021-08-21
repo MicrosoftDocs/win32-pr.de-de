@@ -1,21 +1,21 @@
 ---
-description: Sie können festlegen, dass Ihre Anwendung den gesamten Inhalt des Client Bereichs neu zeichnet, wenn die Größe des Fensters geändert wird, indem Sie die \_ Stile CS hredraw und CS \_ vredraw für die Fenster Klasse festlegen.
+description: Sie können ihre Anwendung den gesamten Inhalt des Clientbereichs neu zeichnen lassen, wenn sich die Größe des Fensters ändert, indem Sie die CS \_ HREDRAW- und CS \_ VREDRAW-Stile für die Fensterklasse festlegen.
 ms.assetid: ed68b85e-8382-4450-b07d-0422b44dc2e3
-title: Neuzeichnen des gesamten Client Bereichs
+title: Neuzeichnen des gesamten Clientbereichs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d67640d1b464173755029bef1d0feb91f215cda6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e3c438fe36160f27b1015daf7874e237035f927825199b93b3a508668f40bd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118759146"
 ---
-# <a name="redrawing-the-entire-client-area"></a>Neuzeichnen des gesamten Client Bereichs
+# <a name="redrawing-the-entire-client-area"></a>Neuzeichnen des gesamten Clientbereichs
 
-Sie können festlegen, dass Ihre Anwendung den gesamten Inhalt des Client Bereichs neu zeichnet, wenn die Größe des Fensters geändert wird, indem Sie die \_ Stile CS hredraw und CS \_ vredraw für die Fenster Klasse festlegen. Anwendungen, die die Größe der Zeichnung basierend auf der Größe des Fensters anpassen, verwenden diese Stile, um sicherzustellen, dass Sie beim Zeichnen mit einem vollständig leeren Client Bereich beginnen.
+Sie können ihre Anwendung den gesamten Inhalt des Clientbereichs neu zeichnen lassen, wenn sich die Größe des Fensters ändert, indem Sie die CS \_ HREDRAW- und CS \_ VREDRAW-Stile für die Fensterklasse festlegen. Anwendungen, die die Größe der Zeichnung basierend auf der Größe des Fensters anpassen, verwenden diese Stile, um sicherzustellen, dass sie beim Zeichnen mit einem vollständig leeren Clientbereich beginnen.
 
-Im folgenden Beispiel zeichnet die Fenster Prozedur einen fünf-Sterne-Stern, der sauber in den Client Bereich passt. Es verwendet einen gemeinsamen Gerätekontext und muss den Zuordnungs Modus und die Blöcke "Fenster" und "Viewport" jedes Mal festlegen, wenn die WM-Zeichnungs Nachricht verarbeitet wird. [**\_**](wm-paint.md)
+Im folgenden Beispiel zeichnet die Fensterprozedur einen fünfzackigen Stern, der gut in den Clientbereich passt. Er verwendet einen allgemeinen Gerätekontext und muss bei jeder Verarbeitung der [**WM \_ PAINT-Nachricht**](wm-paint.md) den Zuordnungsmodus sowie Fenster- und Viewport-Erweiterungen festlegen.
 
 
 ```C++

@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings BitmapVirtualCache24BppSize (Eigenschaft)
-description: Gibt die Größe der persistenten Bitmap-Cachedatei in Megabyte an, die für die 24-Bit-pro-Pixel-High-Color-Einstellung verwendet werden soll.
+title: IMsRdpClientAdvancedSettings BitmapVirtualCache24BppSize (Eigenschaft)
+description: Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für die Einstellung mit hoher Farbe von 24 Bit pro Pixel verwendet werden soll.
 ms.assetid: 5891c90d-f463-4f27-b212-351ebf21ae00
 ms.tgt_platform: multiple
 keywords:
-- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste
-- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
-- BitmapVirtualCache24BppSize-Eigenschaften Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, BitmapVirtualCache24BppSize-Eigenschaft
+- BitmapVirtualCache24BppSize-Remotedesktopdienste
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
+- BitmapVirtualCache24BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapVirtualCache24BppSize (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0fc31954ff191f795146e3894b0394b29484fb1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e984eef21fa74aa3f3134f19c1d6e7503a24ec9fb67e0ef3bfb0daa6330cfcd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118353271"
 ---
-# <a name="imsrdpclientadvancedsettingsbitmapvirtualcache24bppsize-property"></a>Imsrdpclientadvancedsettings:: BitmapVirtualCache24BppSize-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsbitmapvirtualcache24bppsize-property"></a>IMsRdpClientAdvancedSettings::BitmapVirtualCache24BppSize (Eigenschaft)
 
-Gibt die Größe der persistenten Bitmap-Cachedatei in Megabyte an, die für die 24-Bit-pro-Pixel-High-Color-Einstellung verwendet werden soll.
+Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für die Einstellung mit hoher Farbe von 24 Bit pro Pixel verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,15 +84,15 @@ HRESULT get_BitmapVirtualCache24BppSize(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Cache Größe. Gültige Werte sind 1 bis 32 einschließlich, der Standardwert ist 30. Beachten Sie, dass die maximale Größe für alle virtuellen Cache Dateien 128 MB beträgt.
+Die neue Cachegröße. Die gültigen Werte sind 1 bis einschließlich 32, und der Standardwert ist 30. Beachten Sie, dass die maximale Größe für alle virtuellen Cachedateien 128 MB beträgt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zu den zugehörigen Eigenschaften gehören die **bitmapvirtualcachesize** -Eigenschaft und die **BitmapVirtualCache16BppSize** -Eigenschaft.
+Verwandte Eigenschaften sind die **Eigenschaften BitmapVirtualCacheSize** und **BitmapVirtualCache16BppSize.**
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,7 +106,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

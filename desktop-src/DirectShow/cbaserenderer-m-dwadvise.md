@@ -1,7 +1,7 @@
 ---
-description: Der Bezeichner des Zeit Geber Ereignisses, das das Rendering plant.
+description: Bezeichner des Timer-Ereignisses, das das Rendering geplant.
 ms.assetid: 7b9e5ac8-417d-4d9c-a3ce-80d8286a50d4
-title: 'Cbaserenderer:: m_dwAdvise Member (renbase. h)'
+title: CBaseRenderer::m_dwAdvise-Mitglied (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0cc8195d0c67307fdcea5f0e591831f387d8332e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fe728b8e88dabada460907c58a6e31501633378745f71212c6b08e421ca1e487
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157814"
 ---
-# <a name="cbaserendererm_dwadvise-member"></a>Cbaserenderer:: m \_ dwberatmember
+# <a name="cbaserendererm_dwadvise-member"></a>CBaseRenderer::m \_ dwAdvise-Member
 
-Der Bezeichner des Zeit Geber Ereignisses, das das Rendering plant.
+Bezeichner des Timer-Ereignisses, das das Rendering geplant.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ DWORD_PTR m_dwAdvise;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ DWORD_PTR m_dwAdvise;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

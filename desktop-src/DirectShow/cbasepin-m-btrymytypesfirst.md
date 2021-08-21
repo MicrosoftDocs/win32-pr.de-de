@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob die PIN vor denen der empfangenden Pin ihre eigenen bevorzugten Medientypen ausprobiert.
+description: Flag, das angibt, ob der Pin seine eigenen bevorzugten Medientypen vor denen des empfangenden Pins versucht.
 ms.assetid: 50462ee4-4a61-472f-9a7e-9cdb39be4dea
-title: 'Cbasepin:: m_bTryMyTypesFirst Member (amfilter. h)'
+title: CBasePin::m_bTryMyTypesFirst-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 72f98021b6ba97d32974f26ac4e76ca31fa54e5c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df94a95783d15c09fd53bd8659db71f2ce0b1aefe5d855fef5f5a03e71445493
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158371"
 ---
-# <a name="cbasepinm_btrymytypesfirst-member"></a>Cbasepin:: m \_ btrymytypesfirst-Member
+# <a name="cbasepinm_btrymytypesfirst-member"></a>CBasePin::m \_ bTryMyTypesFirst-Member
 
-Flag, das angibt, ob die PIN vor denen der empfangenden Pin ihre eigenen bevorzugten Medientypen ausprobiert.
+Flag, das angibt, ob der Pin seine eigenen bevorzugten Medientypen vor denen des empfangenden Pins versucht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ bool m_bTryMyTypesFirst;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Flag ist standardmäßig auf **false** eingestellt. Wenn das Flag " **true**" ist, kehrt die [**cbasepin:: agreemediatype**](cbasepin-agreemediatype.md) -Methode die Reihenfolge um, in der die Medientypen ausprobiert werden.
+Dieses Flag ist standardmäßig auf **FALSE festgelegt.** Wenn das Flag **TRUE** ist, kehrt die [**CBasePin::AgreeMediaType-Methode**](cbasepin-agreemediatype.md) die Reihenfolge um, in der Medientypen versucht werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Dieses Flag ist standardmäßig auf **false** eingestellt. Wenn das Flag " **tru
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Dieses Flag ist standardmäßig auf **false** eingestellt. Wenn das Flag " **tru
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  
