@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Heatpipe-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ HeatPipe-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: D3A3677D-C037-41E6-AE1F-457D5C645B42
 ms.tgt_platform: multiple
-title: CIM_HeatPipe Methoden
+title: CIM_HeatPipe-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc5d53e233cfb1b04e0e6c09e3d9fc36b0991ca8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7c0e5fe2513a4c2c11abe4bedeafa16bec183a4a30ea254d0fb261df7ef0a5b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119700420"
 ---
-# <a name="cim_heatpipe-methods"></a>CIM- \_ Heatpipe-Methoden
+# <a name="cim_heatpipe-methods"></a>\_CIM-HeatPipe-Methoden
 
-Die [**CIM- \_ Heatpipe**](cim-heatpipe.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ HeatPipe-Klasse**](cim-heatpipe.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

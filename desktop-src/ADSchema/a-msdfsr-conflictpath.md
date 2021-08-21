@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-conflictpath-Attribut
-description: Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
+title: ms-DFSR-ConflictPath-Attribut
+description: Enthält den vollständigen Pfad des Konfliktverzeichnisses.
 ms.assetid: 5480103a-04f3-4cfb-87f2-b9de03011f53
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-conflictpath-Attribut AD-Schema
-- "\"msdfsr-conflictpath\"-Attribut, AD-Schema"
+- MS-DFSR-ConflictPath-Attribut-AD-Schema
+- MSDFSR-ConflictPath-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d98bbb9c8a116945b8511d655b506596ad18ade
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: caf9fbf5012d6a4a503e3e9fc4afc01a05796db3f788b379606aaa486ccd393a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119299020"
 ---
-# <a name="ms-dfsr-conflictpath-attribute"></a>MS-DFSR-conflictpath-Attribut
+# <a name="ms-dfsr-conflictpath-attribute"></a>ms-DFSR-ConflictPath-Attribut
 
-Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
+Enthält den vollständigen Pfad des Konfliktverzeichnisses.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-conflictpath                        |
-| LDAP-Display-Name | msdfsr-conflictpath                         |
+| CN                | ms-DFSR-ConflictPath                        |
+| Ldap-Anzeigename | msDFSR-ConflictPath                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.7                   |
-| System-ID-GUID    | 5cf0bcc8-60F7-4bFF-bda6-aea0344eb151        |
+| System-ID-GUID    | 5cf0bcc8-60f7-4bff-bda6-aea0344eb151        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,16 +55,16 @@ Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält den vollständigen Pfad des Konflikt Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-conflictpath-** Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-ConflictPath-Attribut** ist Teil der Unterstützung des verteiltes Dateisystem Replikationsdiensts (DFS).
 
  
 

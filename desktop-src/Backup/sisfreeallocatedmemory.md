@@ -1,9 +1,9 @@
 ---
-title: Sisfrezupedmemory-Funktion (Sisbkup. h)
-description: Gibt durch SIS-API-Funktionen zugeordnete Speicher frei.
+title: SisFreeAllocatedMemory-Funktion (Sisbkup.h)
+description: Gibt von SIS-API-Funktionen zugeordneten Arbeitsspeicher frei.
 ms.assetid: 8fab79c8-593c-46df-a885-09a59620a977
 keywords:
-- Sisfrezugeredmemory-Funktions Sicherung
+- SisFreeAllocatedMemory-Funktionssicherung
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 724970817b89f6a9f2490b0776775f6a3a4e69ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a4510e464c2201952823d144721614caa7b5f1397c68f4f129dac73a4015b86a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702180"
 ---
-# <a name="sisfreeallocatedmemory-function"></a>Sisfrezugeredmemory-Funktion
+# <a name="sisfreeallocatedmemory-function"></a>SisFreeAllocatedMemory-Funktion
 
-Die Funktion " **sisfrezugenspeicher** " gibt durch SIS-API-Funktionen zugewiesene Arbeitsspeicher frei.
+Die **SisFreeAllocatedMemory-Funktion gibt** von SIS-API-Funktionen zugeordneten Arbeitsspeicher frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ void SisFreeAllocatedMemory(
 
 <dl> <dt>
 
-*zustellspeicherplatz* \[ in\]
+*allocatedSpace* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Arbeitsspeicher, der von der SIS-API zugeordnet wird.
+Zeiger auf den von der SIS-API zugeordneten Arbeitsspeicher.
 
 </dd> </dl>
 
@@ -51,11 +51,11 @@ Zeiger auf den Arbeitsspeicher, der von der SIS-API zugeordnet wird.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem der Aufruf dieser Funktion abgeschlossen ist, kann der Aufrufer nicht mehr auf den freigegebenen Speicher zugreifen.
+Nach Abschluss des Aufrufs dieser Funktion kann der Aufrufer möglicherweise nicht mehr auf den freien Arbeitsspeicher zugreifen.
 
-Dieser Befehl sollte verwendet werden, um den zugeordneten Arbeitsspeicher für die Parameter Zeichenfolgen von *commonstorerootpathname* , die von " [**siscreatebackupstructure**](siscreatebackupstructure.md) " und " [**siscreaterestorestruktur**](siscreaterestorestructure.md)" zurückgegeben werden, und das Array von Zeichen folgen, das die Namen der allgemeinen Speicherdateien enthält, die von **siscreatebackupstructure**, [**siscsfilestobackupforlink**](siscsfilestobackupforlink.md), **siscreaterestorestruktur** und [**sisrestoredlink**](sisrestoredlink.md)zurückgegeben werden. Im letzteren Fall muss das Array selbst freigegeben werden, indem **sisfrezugedmemory** aufgerufen wird.
+Dieser Aufruf sollte verwendet werden, um die Speicherbelegung für die *commonStoreRootPathname-Parameterzeichenfolgen,* die von [**SisCreateBackupStructure**](siscreatebackupstructure.md) und [**SisCreateRestoreStructure**](siscreaterestorestructure.md)zurückgegeben werden, und das Array von Zeichenfolgen mit allgemeinen Speicherdateinamen, die von **SisCreateBackupStructure,** [**SisCSFilesToBackupForLink,**](siscsfilestobackupforlink.md) **SisCreateRestoreStructure** und [**SisRestoredLink**](sisrestoredlink.md)zurückgegeben werden, aufzuberäumen. Im letzteren Fall muss auch das Array selbst durch Aufrufen von **SisFreeAllocatedMemory frei werden.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,10 +63,10 @@ Dieser Befehl sollte verwendet werden, um den zugeordneten Arbeitsspeicher für 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Sisbkup. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Sisbkup. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Sisbkup.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Sisbkup.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Sisbkup.dll</dt> </dl> |
 
 
@@ -75,16 +75,16 @@ Dieser Befehl sollte verwendet werden, um den zugeordneten Arbeitsspeicher für 
 
 <dl> <dt>
 
-[**Siscreatebackupstructure**](siscreatebackupstructure.md)
+[**SisCreateBackupStructure**](siscreatebackupstructure.md)
 </dt> <dt>
 
-[**Siscreaterestorestruktur**](siscreaterestorestructure.md)
+[**SisCreateRestoreStructure**](siscreaterestorestructure.md)
 </dt> <dt>
 
-[**Siscsfilestobackupforlink**](siscsfilestobackupforlink.md)
+[**SisCSFilesToBackupForLink**](siscsfilestobackupforlink.md)
 </dt> <dt>
 
-[**Sisrestoredlink**](sisrestoredlink.md)
+[**SisRestoredLink**](sisrestoredlink.md)
 </dt> </dl>
 
  

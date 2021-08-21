@@ -1,39 +1,39 @@
 ---
-title: Verarbeiten der DTN_FORMATQUERY Benachrichtigung
-description: In diesem Thema wird veranschaulicht, wie eine Formatierungs Abfrage Benachrichtigung verarbeitet wird, die vom Steuerelement für die Datums-und Uhrzeit Auswahl (DTP) gesendet wird.
+title: Verarbeiten der DTN_FORMATQUERY benachrichtigung
+description: In diesem Thema wird veranschaulicht, wie eine Formatabfragebenachrichtigung verarbeitet wird, die vom DTP-Steuerelement (Date and Time Picker) gesendet wird.
 ms.assetid: 74E29438-2F50-4ADD-B0C4-DB3450BF08D7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e8de1e1a80d04f9a7f9e9d0cfcda198118e67c2
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 941c148332c36711e68b7c3b773fdb47acef202c5fd2a67f5620319f06c7fbc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119696940"
 ---
-# <a name="how-to-process-the-dtn_formatquery-notification"></a>Verarbeiten der Dtn \_ formatQuery-Benachrichtigung
+# <a name="how-to-process-the-dtn_formatquery-notification"></a>Verarbeiten der \_ DTN-FORMATQUERY-Benachrichtigung
 
-In diesem Thema wird veranschaulicht, wie eine Formatierungs Abfrage Benachrichtigung verarbeitet wird, die vom Steuerelement für die Datums-und Uhrzeit Auswahl (DTP) gesendet wird.
+In diesem Thema wird veranschaulicht, wie eine Formatabfragebenachrichtigung verarbeitet wird, die vom DTP-Steuerelement (Date and Time Picker) gesendet wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Ein DTP-Steuerelement sendet einen [Dtn \_ formatQuery](dtn-formatquery.md) -Benachrichtigungs Code, um Informationen über die maximal mögliche Größe eines Rückruf Felds im Steuerelement anzufordern. Diese Nachricht muss von Ihrer Anwendung verarbeitet werden, um sicherzustellen, dass alle Felder ordnungsgemäß angezeigt werden.
+Ein DTP-Steuerelement sendet einen [DTN \_ FORMATQUERY-Benachrichtigungscode,](dtn-formatquery.md) um Informationen zur maximal möglichen Größe eines Rückruffelds innerhalb des Steuerelements anzufordern. Ihre Anwendung muss diese Meldung verarbeiten, um sicherzustellen, dass alle Felder ordnungsgemäß angezeigt werden.
 
-Das folgende C++-Codebeispiel ist eine Anwendungs definierte Funktion, die den [Dtn \_ formatQuery](dtn-formatquery.md) -Benachrichtigungs Code verarbeitet, indem die Breite der größtmöglichen Zeichenfolge für ein bestimmtes Rückruf Feld berechnet wird.
+Das folgende C++-Codebeispiel ist eine anwendungsdefinierte Funktion, die den [DTN FORMATQUERY-Benachrichtigungscode \_ ](dtn-formatquery.md) verarbeitet, indem die Breite der größtmöglichen Zeichenfolge für ein bestimmtes Rückruffeld berechnet wird.
 
-**Sicherheitswarnung:** Die falsche Verwendung von **lstrincmp** kann die Sicherheit Ihrer Anwendung beeinträchtigen. Bevor Sie z. b. **lstrcmp** im folgenden Codebeispiel aufrufen, sollten Sie sicherstellen, dass die beiden Zeichen folgen mit Null enden. Überprüfen Sie die [Sicherheitsaspekte: Microsoft Windows](sec-comctls.md) -Steuerelemente, bevor Sie fortfahren.
+**Sicherheitswarnung:** Die falsche Verwendung von **lstrcmp** kann die Sicherheit Ihrer Anwendung gefährden. Bevor Sie beispielsweise **lstrcmp** im folgenden Codebeispiel aufrufen, sollten Sie sicherstellen, dass die beiden Zeichenfolgen NULL-terminiert sind. Lesen Sie [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
 
 
@@ -81,13 +81,13 @@ void WINAPI DoFormatQuery(
 
 <dl> <dt>
 
-[Verwenden von Steuerelementen für Datums-und Zeitauswahl](using-date-and-time-picker.md)
+[Verwenden von Steuerelementen für die Datums- und Uhrzeitauswahl](using-date-and-time-picker.md)
 </dt> <dt>
 
-[Steuerelement Verweis für Datums-und Zeitauswahl](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl-Steuerelementreferenz](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
 </dt> <dt>
 
-[Datums-und Zeitauswahl](date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl](date-and-time-picker-control-reference.md)
 </dt> </dl>
 
  

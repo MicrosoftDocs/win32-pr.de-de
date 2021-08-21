@@ -79,16 +79,16 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5e5282c854bfdb1ce4b80f61a202ebecac990576
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6c6a2d965a764be8925fda55958302d815b62ad6180ce4d3abb48d399fc2e817
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119700000"
 ---
-# <a name="win32_computersystem-class"></a>Win32 \_ Computersystem-Klasse
+# <a name="win32_computersystem-class"></a>Win32 \_ ComputerSystem-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ Computersystem** stellt ein Computersystem dar, auf dem Windows ausgeführt wird.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ ComputerSystem** stellt ein Computersystem dar, auf dem Windows ausgeführt wird.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -167,22 +167,22 @@ class Win32_ComputerSystem : CIM_UnitaryComputerSystem
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ Computersystem** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ComputerSystem-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32- \_ Computersystem** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ ComputerSystem-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                   |
+| Methode                                                                                          | Beschreibung                                                                                                                                                                                                                                   |
 |:------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**JoinDomainOrWorkgroup**](joindomainorworkgroup-method-in-class-win32-computersystem.md)     | Fügt einer Domäne oder Arbeitsgruppe ein Computersystem hinzu.<br/>                                                                                                                                                                                   |
-| [**Benen**](rename-method-in-class-win32-computersystem.md)                                   | Benennt einen lokalen Computer um.<br/>                                                                                                                                                                                                          |
-| **SetPowerState**                                                                               | Nicht implementiert. Weitere Informationen zur Implementierung dieser Methode finden Sie unter der [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode in [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md).<br/> |
+| [**Umbenennen**](rename-method-in-class-win32-computersystem.md)                                   | Benennt einen lokalen Computer um.<br/>                                                                                                                                                                                                          |
+| **SetPowerState**                                                                               | Nicht implementiert. Weitere Informationen zum Implementieren dieser Methode finden Sie unter der [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) in [**CIM \_ UnitaryComputerSystem**](cim-unitarycomputersystem.md).<br/> |
 | [**UnjoinDomainOrWorkgroup**](unjoindomainorworkgroup-method-in-class-win32-computersystem.md) | Entfernt ein Computersystem aus einer Domäne oder Arbeitsgruppe.<br/>                                                                                                                                                                              |
 
 
@@ -191,23 +191,23 @@ Die **Win32- \_ Computersystem** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ Computersystem** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ComputerSystem-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Adminpasswordstatus**
+**AdminPasswordStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 24 \| Hardware Sicherheitseinstellungen \| adminpasswordstatus")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 24 \| Hardware Security Einstellungen \| AdminPasswordStatus")
 </dt> </dl>
 
-System Hardware-Sicherheitseinstellungen für den Status des Administrator Kennworts.
+Systemhardware-Sicherheitseinstellungen für den Administratorkennwortstatus.
 
 <dt>
 
@@ -244,64 +244,64 @@ System Hardware-Sicherheitseinstellungen für den Status des Administrator Kennw
 **AutomaticManagedPagefile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**True** gibt an, dass das System die Auslagerungs Datei verwaltet.
+**True** gibt an, dass das System die Seitendatei verwaltet.
 
 </dd> <dt>
 
-**Automatikresetbootoption**
+**AutomaticResetBootOption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| AutoReboot")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE \_ SYSTEM \\ \\ \\ \\ CurrentControlSet Control \\ \\ \\ \\ CrashControl \| AutoReboot")
 </dt> </dl>
 
 **True** gibt an, dass die Startoption für automatisches Zurücksetzen aktiviert ist.
 
 </dd> <dt>
 
-**Automatikresetcapability**
+**AutomaticResetCapability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**True** gibt an, dass die automatische zurück Setzung aktiviert ist.
+**True** gibt an, dass die automatische Zurücksetzung aktiviert ist.
 
 </dd> <dt>
 
-**Bootoptiononlimit**
+**BootOptionOnLimit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 23 \| Capabilites \| Boot Option on Limit")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) \| ("SMBIOS Type 23 \| Capabilites \| Boot Option on Limit")
 </dt> </dl>
 
-Das Limit für die Startoption ist on. Identifiziert die System Aktion, wenn der **resetLimit** -Wert erreicht wird.
+Startoptionslimit ist ON. Identifiziert die Systemaktion, wenn der **ResetLimit-Wert** erreicht wird.
 
 <dt>
 
@@ -321,7 +321,7 @@ Das Limit für die Startoption ist on. Identifiziert die System Aktion, wenn der
 
 <span id="System_utilities"></span><span id="system_utilities"></span><span id="SYSTEM_UTILITIES"></span>
 
-**System Dienstprogramme** (2)
+**Systemprogramme** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -335,19 +335,19 @@ Das Limit für die Startoption ist on. Identifiziert die System Aktion, wenn der
 
 </dd> <dt>
 
-**Bootoptiononwatchdog**
+**BootOptionOnWatchDog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 23- \| Funktionen- \| Start Option")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) \| ("SMBIOS Type 23 \| Capabilities \| Boot Option")
 </dt> </dl>
 
-Der Typ der Neustart Aktion nach dem Zeitpunkt, an dem der Watchdog-Timer abgelaufen ist.
+Typ der Neustartaktion, nachdem die Zeit auf dem Watchdog-Timer verstrichen ist.
 
 <dt>
 
@@ -367,7 +367,7 @@ Der Typ der Neustart Aktion nach dem Zeitpunkt, an dem der Watchdog-Timer abgela
 
 <span id="System_utilities"></span><span id="system_utilities"></span><span id="SYSTEM_UTILITIES"></span>
 
-**System Dienstprogramme** (2)
+**Systemprogramme** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -381,37 +381,37 @@ Der Typ der Neustart Aktion nach dem Zeitpunkt, an dem der Watchdog-Timer abgela
 
 </dd> <dt>
 
-**Bootrompeten unterstützt**
+**BootROMSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**True** gibt an, ob eine Start-ROM unterstützt wird.
+**True** gibt an, ob ein Start-ROM unterstützt wird.
 
 </dd> <dt>
 
-**Bootstatus**
+**BootStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 32 \| System Startinformationen \| Start Status")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) \| ("SMBIOS Type 32 \| System Boot Information Boot \| Status")
 </dt> </dl>
 
-Status und zusätzliche Datenfelder, die den Startstatus identifizieren.
+Die Felder Status und Zusätzliche Daten, die den Startstatus identifizieren.
 
-Dieser Wert stammt vom **Start Status** Mitglied der **System Start Informations** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Boot Status-Member** der **System Boot Information-Struktur** in den SMBIOS-Informationen.
 
 **Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 10 und Windows Server 2016 nicht unterstützt.
 
@@ -420,16 +420,16 @@ Dieser Wert stammt vom **Start Status** Mitglied der **System Start Informations
 **BootupState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) \| SM \_ CleanBoot")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) \| SM \_ CLEANBOOT")
 </dt> </dl>
 
-Das System wurde gestartet. Der ausfallsichere Start umgeht die Benutzer Startdateien, die auch "SafeBoot" genannt werden.
+Das System wird gestartet. Bei einem ausfallsicheren Start werden die Benutzerstartdateien umgangen, die auch als SafeBoot bezeichnet werden.
 
 Die folgende Liste enthält die erforderlichen Werte:
 
@@ -439,21 +439,21 @@ Die folgende Liste enthält die erforderlichen Werte:
 
 <span id="Normal_boot"></span><span id="normal_boot"></span><span id="NORMAL_BOOT"></span>
 
-**Normaler Start** (normaler Start)
+**Normaler Start** ("Normaler Start")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Fail-safe_boot"></span><span id="fail-safe_boot"></span><span id="FAIL-SAFE_BOOT"></span>
 
-**Ausfallsicherer Start** ("ausfallsicherer Start")
+**Ausfallsicherer Start** ("Ausfallsicherer Start")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Fail-safe_with_network_boot"></span><span id="fail-safe_with_network_boot"></span><span id="FAIL-SAFE_WITH_NETWORK_BOOT"></span>
 
-**Ausfallsicherheit mit dem Netzwerkstart** ("Ausfallsicherheit beim Netzwerkstart")
+**Ausfallsicherheit beim Netzwerkstart** ("Ausfallsicher beim Netzwerkstart")
 
 
 </dt> <dd></dd> </dl>
@@ -463,16 +463,16 @@ Die folgende Liste enthält die erforderlichen Werte:
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts eine einzeilige Zeichenfolge.
+Kurze Beschreibung des Objekts, eine einzeilige Zeichenfolge.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -481,18 +481,18 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **ChassisBootupState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 3 \| bootup State")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 3 \| Bootup State")
 </dt> </dl>
 
-Startstatus des Chassis.
+Startzustand des Gehäuses.
 
-Dieser Wert stammt aus dem **Status des Start Zustands** des **System Gehäuses oder der Gehäuse** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Startstatus-Member** der **Systemgehäuse-** oder Gehäusestruktur in den SMBIOS-Informationen.
 
 <dt>
 
@@ -512,7 +512,7 @@ Dieser Wert stammt aus dem **Status des Start Zustands** des **System Gehäuses 
 
 <span id="Safe"></span><span id="safe"></span><span id="SAFE"></span>
 
-**Safe** (3)
+**Tresor** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -540,7 +540,7 @@ Dieser Wert stammt aus dem **Status des Start Zustands** des **System Gehäuses 
 
 </dd> <dt>
 
-**Chassisskunverber**
+**ChassisSKUNumber**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -549,18 +549,18 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 3 \| Chassis- \| SKU-Nummer")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 3 \| Chassis \| SKU Number")
 </dt> </dl>
 
-Die SKU-Nummer des Chassis oder Gehäuses als Zeichenfolge.
+Die Gehäuse- oder Gehäuse-SKU-Nummer als Zeichenfolge.
 
-Dieser Wert stammt aus dem **SKU-Nummer** -Member des **System Gehäuses oder der Gehäuse** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **SKU-Nummer-Member** der **Systemgehäuse-** oder Gehäusestruktur in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 10 und Windows Server 2016 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird nicht unterstützt, bevor Windows 10 und Windows Server 2016.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -569,12 +569,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse in der Vererbungs Kette einer Instanz. Sie können diese Eigenschaft mit anderen Eigenschaften der-Klasse verwenden, um alle Instanzen der-Klasse und ihrer Unterklassen zu identifizieren.
+Name der ersten konkreten Klasse in der Vererbungskette einer Instanz. Sie können diese Eigenschaft mit anderen Eigenschaften der -Klasse verwenden, um alle Instanzen der -Klasse und deren Unterklassen zu identifizieren.
 
-Diese Eigenschaft wird vom [**CIM- \_ System**](cim-system.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-System geerbt.**](cim-system.md)
 
 </dd> <dt>
 
@@ -587,26 +587,26 @@ Datentyp: **sint16**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Zeitstrukturen \| [**Zeit \_ Zonen \_ Informationen**](/windows/desktop/api/timezoneapi/ns-timezoneapi-time_zone_information) \| Bias"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Time Structures TIME ZONE \| [**\_ \_ INFORMATION**](/windows/desktop/api/timezoneapi/ns-timezoneapi-time_zone_information) \| Bias"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("minutes")
 </dt> </dl>
 
-Die Zeitspanne, für die das einheitliche Computersystem von der koordinierten Weltzeit (UTC) versetzt wird.
+Die Zeit, für die das unitäre Computersystem von koordinierte Weltzeit (UTC) versetzt wird.
 
 </dd> <dt>
 
 **DaylightInEffect**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Time Functions \| [**GetTimeZoneInformation**](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Time Functions \| [**GetTimeZoneInformation**](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)")
 </dt> </dl>
 
-Wenn der Wert **true** ist, ist der sommermodus auf on.
+True **gibt an,** dass der Sommerzeitmodus aktiviert ist.
 
 </dd> <dt>
 
@@ -619,16 +619,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**DNSHostName**
+**Dnshostname**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -637,14 +637,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| GetComputerNameEx \| ComputerNameDnsHostname")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| GetComputerNameEx \| ComputerNameDnsHostname")
 </dt> </dl>
 
-Der Name des lokalen Computers gemäß dem DNS (Domain Nameserver).
+Name des lokalen Computers gemäß dem Domänennamenserver (DNS).
 
 </dd> <dt>
 
-**Domäne**
+**Domain**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -653,10 +653,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures \| [**wksta \_ Info \_ 100**](/windows/desktop/api/lmwksta/ns-lmwksta-wksta_info_100) \| wki100 \_ LANGroup")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Netzwerkverwaltungsstrukturen \| \| [**WKSTA \_ INFO \_ 100**](/windows/desktop/api/lmwksta/ns-lmwksta-wksta_info_100) \| wki100 \_ langroup")
 </dt> </dl>
 
-Der Name der Domäne, zu der ein Computer gehört.
+Name der Domäne, zu der ein Computer gehört.
 
 > [!Note]  
 > Wenn der Computer nicht Teil einer Domäne ist, wird der Name der Arbeitsgruppe zurückgegeben.
@@ -668,31 +668,31 @@ Der Name der Domäne, zu der ein Computer gehört.
 **DomainRole**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Directory Service (DS) Structures \| [**DsRole \_ Primary \_ Domain \_ Info \_ Basic**](/windows/desktop/api/dsrole/ns-dsrole-dsrole_primary_domain_info_basic) \| [**DsRole \_ Machine \_ Role**](/windows/desktop/api/dsrole/ne-dsrole-dsrole_machine_role) \| machinerole")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Directory Service (Ds) Structures \| [**DSROLE \_ PRIMARY DOMAIN INFO \_ \_ \_ BASIC**](/windows/desktop/api/dsrole/ns-dsrole-dsrole_primary_domain_info_basic) \| [**DSROLE \_ MACHINE \_ ROLE**](/windows/desktop/api/dsrole/ne-dsrole-dsrole_machine_role) \| MachineRole")
 </dt> </dl>
 
-Rolle eines Computers in einer zugewiesenen Domänen Arbeitsgruppe. Eine Domänen Arbeitsgruppe ist eine Sammlung von Computern im gleichen Netzwerk. Beispielsweise kann eine **DomainRole** -Eigenschaft anzeigen, dass ein Computer Mitglied einer Arbeitsstation ist.
+Rolle eines Computers in einer zugewiesenen Domänenarbeitsgruppe. Eine Domänenarbeitsgruppe ist eine Sammlung von Computern im gleichen Netzwerk. Beispielsweise kann eine **DomainRole-Eigenschaft** anzeigen, dass ein Computer eine Mitgliedsarbeitsstation ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 <dt>
 
 <span id="Standalone_Workstation"></span><span id="standalone_workstation"></span><span id="STANDALONE_WORKSTATION"></span>
 
-**Eigenständige Arbeits** Station (0)
+**Eigenständige Arbeitsstation** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Member_Workstation"></span><span id="member_workstation"></span><span id="MEMBER_WORKSTATION"></span>
 
-**Mitglieds** Arbeitsstation (1)
+**Mitgliedsarbeitsstation** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -706,53 +706,53 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 <span id="Member_Server"></span><span id="member_server"></span><span id="MEMBER_SERVER"></span>
 
-**Mitglieds Server** (3)
+**Mitgliedsserver** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Backup_Domain_Controller"></span><span id="backup_domain_controller"></span><span id="BACKUP_DOMAIN_CONTROLLER"></span>
 
-**Domänen Controller sichern** (4)
+**Sicherungsdomänencontroller** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Primary_Domain_Controller"></span><span id="primary_domain_controller"></span><span id="PRIMARY_DOMAIN_CONTROLLER"></span>
 
-**Primärer Domänen Controller** (5)
+**Primärer Domänencontroller** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Enabledaylightsavingstime**
+**EnableDaylightSavingsTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Aktiviert die Sommerzeit (DST) auf einem Computer. Der Wert **true** gibt an, dass sich die Systemzeit vor oder nach dem Start oder Ende des DST auf eine Stunde vor oder nach dem Ende ändert. Der Wert **false** gibt an, dass die Systemzeit nicht in eine Stunde vor oder hinter dem DST beginnt oder endet. Der Wert **null** gibt an, dass der DST-Status in einem System unbekannt ist.
+Aktiviert die Sommerzeit (DST) auf einem Computer. Der Wert **True gibt an,** dass sich die Systemzeit in eine Stunde vor oder hinter dem Start oder Ende des DST ändert. Der Wert **False gibt an,** dass sich die Systemzeit nicht in eine Stunde vor oder hinter ändert, wenn DST beginnt oder endet. Der Wert **NULL gibt an,** dass der DST-Status auf einem System unbekannt ist.
 
 </dd> <dt>
 
 **FrontPanelResetStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 24 \| Hardware Sicherheitseinstellungen \| FrontPanelResetStatus")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 24 \| Hardware Security Einstellungen \| FrontPanelResetStatus")
 </dt> </dl>
 
-In der folgenden Tabelle sind die Hardware Sicherheitseinstellungen für die Schaltfläche Zurücksetzen auf einem Computer aufgeführt.
+In der folgenden Tabelle sind die Hardwaresicherheitseinstellungen für die Zurücksetzungsschaltfläche auf einem Computer aufgeführt.
 
 <dt>
 
@@ -786,52 +786,52 @@ In der folgenden Tabelle sind die Hardware Sicherheitseinstellungen für die Sch
 
 </dd> <dt>
 
-**Hypervisorpresent**
+**HypervisorPresent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**True** gibt an, dass ein Hypervisor vorhanden ist.
+True **gibt an,** dass ein Hypervisor vorhanden ist.
 
-**Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 8 und Windows Server 2012 nicht unterstützt.
+**Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird nicht unterstützt, bevor Windows 8 und Windows Server 2012.
 
 </dd> <dt>
 
-**Nicht unterstützt**
+**Supported (2017)**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**True** gibt an, dass ein Infrarot-Port (IR) auf einem Computersystem vorhanden ist.
+True **gibt an,** dass auf einem Computersystem ein Ir-Port vorhanden ist.
 
 </dd> <dt>
 
-**Initizuadinfo**
+**InitialLoadInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Daten, die für die Suche nach dem anfänglichen Lade Gerät oder Start Dienst erforderlich sind, um den Start des Betriebssystems anzufordern.
+Daten, die zum Suchen des anfänglichen Ladegeräts oder Startdiensts erforderlich sind, um die Betriebssystemstartanforderung zu erhalten.
 
-Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ UnitaryComputerSystem geerbt.**](cim-unitarycomputersystem.md)
 
 **Windows Server 2008 R2:** Diese Eigenschaft ist verfügbar, aber leer.
 
@@ -840,34 +840,34 @@ Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycompute
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
 Das Objekt ist installiert. Ein Objekt benötigt keinen Wert, um anzugeben, dass es installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **KeyboardPasswordStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 24 \| Hardware Sicherheitseinstellungen \| KeyboardPasswordStatus")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 24 \| Hardware Security Einstellungen \| KeyboardPasswordStatus")
 </dt> </dl>
 
-System Hardware-Sicherheitseinstellungen für den Status des Tastatur Kennworts.
+Systemhardwaresicherheitseinstellungen für Tastaturkennwortstatus.
 
 <dt>
 
@@ -901,7 +901,7 @@ System Hardware-Sicherheitseinstellungen für den Status des Tastatur Kennworts.
 
 </dd> <dt>
 
-**Lastloadinfo**
+**LastLoadInfo**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -910,9 +910,9 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array Eintrag der **initizuadinfo** -Eigenschaft, die die Daten zum Starten des geladenen Betriebssystems enthält.
+Arrayeintrag der **InitialLoadInfo-Eigenschaft,** die die Daten zum Starten des geladenen Betriebssystems enthält.
 
-Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ UnitaryComputerSystem geerbt.**](cim-unitarycomputersystem.md)
 
 </dd> <dt>
 
@@ -925,7 +925,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| System Information \| Manufacturer")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| Systeminformationen \| Manufacturer")
 </dt> </dl>
 
 Name eines Computerherstellers.
@@ -943,10 +943,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| System Information \| Product Name")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| Systeminformationen Product \| Name")
 </dt> </dl>
 
-Produktname, den ein Hersteller an einen Computer übergibt. Diese Eigenschaft muss über einen Wert verfügen.
+Der Produktname, den ein Hersteller einem Computer gibt. Diese Eigenschaft muss einen -Wert haben.
 
 </dd> <dt>
 
@@ -962,9 +962,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Schlüssel einer [**CIM- \_ System**](cim-system.md) Instanz in einer Unternehmensumgebung.
+Schlüssel einer [**\_ CIM-Systeminstanz**](cim-system.md) in einer Unternehmensumgebung.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -977,13 +977,13 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computer System **namens** , der automatisch generiert wird. Das [**CIM \_ Computersystem**](cim-computersystem.md) -Objekt und seine Ableitungen sind Objekte der obersten Ebene des Common Information Model (CIM). Sie stellen den Bereich für verschiedene Komponenten bereit. Es sind eindeutige [**CIM- \_ System**](cim-system.md) Schlüssel erforderlich, Sie können jedoch eine Heuristik definieren, um den Namen des **CIM- \_ Computer Systems** zu erstellen, der denselben Namen generiert, und unabhängig vom Discovery-Protokoll. Dies verhindert Inventur-und Verwaltungsprobleme, wenn das gleiche Asset oder die gleiche Entität mehrmals erkannt wird, aber nicht in ein Objekt aufgelöst werden kann. Die Verwendung einer heuristischen Empfehlung wird empfohlen, ist jedoch nicht erforderlich.
+Name des **Computersystems,** der automatisch generiert wird. Das [**\_ CIM-ComputerSystem-Objekt**](cim-computersystem.md) und seine Ableitungen sind Objekte der obersten Ebene des Common Information Model (CIM). Sie stellen den Bereich für mehrere Komponenten zur Verfügung. Eindeutige [**\_ CIM-Systemschlüssel**](cim-system.md) sind erforderlich, aber Sie können eine Heuristik definieren, um den **\_ CIM-ComputerSystemnamen** zu erstellen, der den gleichen Namen generiert und unabhängig vom Ermittlungsprotokoll ist. Dies verhindert Inventur- und Verwaltungsprobleme, wenn dieselbe Ressource oder Entität mehrmals gefunden wird, aber nicht in ein Objekt aufgelöst werden kann. Die Verwendung einer Heuristik wird empfohlen, ist aber nicht erforderlich.
 
-Die Heuristik wird in der Common Model-Spezifikation von CIM V2 beschrieben und geht davon aus, dass die dokumentierten Regeln zum bestimmen und Zuweisen eines Namens verwendet werden. Die Liste **NameFormat** -Werte definiert die Reihenfolge, in der ein Computersystem Name zugewiesen werden soll. Mehrere Regeln werden demselben Wert zugeordnet.
+Die Heuristik wird in der CIM V2 Common Model-Spezifikation beschrieben und setzt voraus, dass die dokumentierten Regeln zum Bestimmen und Zuweisen eines Namens verwendet werden. Die **NameFormat-Werteliste** definiert die Reihenfolge, in der ein Computersystemname zugewiesen werden soll. Mehrere Regeln sind demselben Wert zuordnen.
 
-Der Wert des [**CIM \_ Computersystem-namens**](cim-computersystem.md) , der mithilfe der Heuristik berechnet wird, ist der Schlüsselwert des Systems. Verwenden Sie jedoch Aliase, um einen anderen Namen für **CIM \_ Computersystem** zuzuweisen, der für Ihr Unternehmen eindeutiger ist.
+Der [**\_ Cim-ComputerSystemname,**](cim-computersystem.md) der mithilfe der Heuristik berechnet wird, ist der Schlüsselwert des Systems. Verwenden Sie jedoch Aliase, um **CIM \_ ComputerSystem** einen anderen Namen zu geben, der für Ihr Unternehmen eindeutiger sein kann.
 
-Diese Eigenschaft wird vom [**CIM- \_ System**](cim-system.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-System geerbt.**](cim-system.md)
 
 Folgende Werte sind gültig:
 
@@ -1019,14 +1019,14 @@ Folgende Werte sind gültig:
 
 <span id="HWA"></span><span id="hwa"></span>
 
-**Hwa** ("Hwa")
+**HWA** ("HWA")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="X25"></span><span id="x25"></span>
 
-**X25** ("x25")
+**X25** ("X25")
 
 
 </dt> <dd></dd> <dt>
@@ -1061,7 +1061,7 @@ Folgende Werte sind gültig:
 
 <span id="E.164"></span><span id="e.164"></span>
 
-**E. 164** ("e. 164")
+**E.164** ("E.164")
 
 
 </dt> <dd></dd> <dt>
@@ -1082,112 +1082,112 @@ Folgende Werte sind gültig:
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** ("Sonstige")
+**Sonstiges** ("Sonstige")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Network Server modefähig**
+**NetworkServerModeEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures \| [**Server \_ Info \_ 101**](/windows/desktop/api/lmserver/ns-lmserver-server_info_101) \| sv101 \_ Type \| SV \_ Type \_ Server")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures SERVER INFO \| [**\_ \_ 101**](/windows/desktop/api/lmserver/ns-lmserver-server_info_101) \| sv101 \_ type SV TYPE \| \_ \_ SERVER")
 </dt> </dl>
 
-**True** gibt an, dass der Netzwerk Server Modus aktiviert ist.
+True **gibt an,** dass der Netzwerkservermodus aktiviert ist.
 
 </dd> <dt>
 
-**"Numoflogicalprocessor"**
+**NumberOfLogicalProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
 Anzahl der auf dem Computer verfügbaren logischen Prozessoren.
 
-Mithilfe von " **numoflogicalprocessor** " und " **numofprocessor** " können Sie ermitteln, ob der Computer Hyperthreading ist. Weitere Informationen finden Sie in den Hinweisen.
+Sie können **NumberOfLogicalProcessors** und **NumberOfProcessors** verwenden, um zu ermitteln, ob der Computer Hyperthreading verwendet. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Information Structures \| [**System \_ Info**](/windows/desktop/api/sysinfoapi/ns-sysinfoapi-system_info) \| dwnumofprocessor")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Systeminformationen Structures SYSTEM \| [**\_ INFO**](/windows/desktop/api/sysinfoapi/ns-sysinfoapi-system_info) \| dwNumberOfProcessors")
 </dt> </dl>
 
-Anzahl der physischen Prozessoren, die zurzeit auf einem System verfügbar sind. Dies ist die Anzahl der aktivierten Prozessoren für ein System, das die deaktivierten Prozessoren nicht einschließt. Wenn ein Computersystem über zwei physische Prozessoren verfügt, die jeweils zwei logische Prozessoren enthalten, ist der Wert von " **numofprocessor** " 2, und " **numoflogicalprocessor** " ist 4. Dabei kann es sich um mehr Kern Prozessoren oder um Hyperthreading-Prozessoren handeln. Weitere Informationen finden Sie in den Hinweisen.
+Anzahl der derzeit auf einem System verfügbaren physischen Prozessoren. Dies ist die Anzahl der aktivierten Prozessoren für ein System, die die deaktivierten Prozessoren nicht enthält. Wenn ein Computersystem über zwei physische Prozessoren verfügt, die jeweils zwei logische Prozessoren enthalten, ist der Wert von **NumberOfProcessors** 2 und **NumberOfLogicalProcessors** gleich 4. Die Prozessoren können mehrere Kerne oder Hyperthreadingprozessoren sein. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
-**Oemlogobitmap**
+**OEMLogoBitmap**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-Liste der Daten für eine Bitmap, die der Originalgerätehersteller (OEM) erstellt.
+Liste der Daten für eine Bitmap, die der Originalgerätehersteller (Original Equipment Manufacturer, OEM) erstellt.
 
 </dd> <dt>
 
-**Oemstringarray**
+**OEMStringArray**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 11 \| OEM Strings")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 11 \| OEM Strings")
 </dt> </dl>
 
-Liste der frei Form Zeichenfolgen, die von einem OEM definiert werden. Ein OEM definiert z. b. die Teilenummern für System Verweis Dokumente, Hersteller Kontaktinformationen usw.
+Liste der freiformbasierten Zeichenfolgen, die ein OEM definiert. Beispielsweise definiert ein OEM die Teilenummern für Systemverweisdokumente, Kontaktinformationen des Herstellers und so weiter.
 
 </dd> <dt>
 
-**"Element Domäne"**
+**PartOfDomain**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
 </dt> </dl>
 
-**True** gibt an, dass der Computer Teil einer Domäne ist. Wenn der Wert **null** ist, befindet sich der Computer nicht in einer Domäne, oder der Status ist unbekannt. Wenn Sie den Computer aus einer Domäne entfernen, wird der Wert **false**.
+True **gibt an,** dass der Computer Teil einer Domäne ist. Wenn der Wert **NULL ist,** befindet sich der Computer nicht in einer Domäne, oder der Status ist unbekannt. Wenn Sie den Computer aus einer Domäne entfernen, wird der Wert **false.**
 
 </dd> <dt>
 
-**Pausegafterreset**
+**PauseAfterReset**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -1196,28 +1196,28 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 23 \| Timeout"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millisekunden")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 23 \| Timeout"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("milliseconds")
 </dt> </dl>
 
-Zeitverzögerung vor dem Initiieren eines Neustarts in Millisekunden. Es wird nach einem System Energie-, System-oder Remote System-Reset und automatischer System Zurücksetzung verwendet. Der Wert 1 (minus 1) gibt an, dass der Pausen Wert unbekannt ist.
+Zeitverzögerung vor dem Starten eines Neustarts in Millisekunden. Sie wird nach einem Systemleistungszyklus, der lokalen oder Remotesystemzurücksetzung und der automatischen Systemzurücksetzung verwendet. Der Wert 1 (minus 1) gibt an, dass der Pausenwert unbekannt ist.
 
 **Windows Vista:** Diese Eigenschaft gibt möglicherweise eine unbekannte Zahl zurück.
 
 </dd> <dt>
 
-**Pcsystemtype**
+**PCSystemType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
 </dt> </dl>
 
-Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
+Typ des computers, der verwendet wird, z. B. Laptop, Desktop oder Tablet.
 
 <dt>
 
@@ -1244,7 +1244,7 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 <span id="Workstation"></span><span id="workstation"></span><span id="WORKSTATION"></span>
 
-<span id="Workstation"></span><span id="workstation"></span><span id="WORKSTATION"></span>**Arbeits** Station (3)
+<span id="Workstation"></span><span id="workstation"></span><span id="WORKSTATION"></span>**Arbeitsstation** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -1258,12 +1258,12 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 <span id="SOHO_Server"></span><span id="soho_server"></span><span id="SOHO_SERVER"></span>
 
-<span id="SOHO_Server"></span><span id="soho_server"></span><span id="SOHO_SERVER"></span>**Soho-Server** (5)
+<span id="SOHO_Server"></span><span id="soho_server"></span><span id="SOHO_SERVER"></span>**SOHO-Server** (5)
 
 
 </dt> <dd>
 
-Small Office-und Home Office-Server (Soho)
+Small Office and Home Office (SOHO) Server
 
 </dd> <dt>
 
@@ -1276,7 +1276,7 @@ Small Office-und Home Office-Server (Soho)
 
 <span id="Performance_Server"></span><span id="performance_server"></span><span id="PERFORMANCE_SERVER"></span>
 
-<span id="Performance_Server"></span><span id="performance_server"></span><span id="PERFORMANCE_SERVER"></span>**Leistungs Server** (7)
+<span id="Performance_Server"></span><span id="performance_server"></span><span id="PERFORMANCE_SERVER"></span>**Leistungsserver** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -1290,21 +1290,21 @@ Small Office-und Home Office-Server (Soho)
 
 </dd> <dt>
 
-**Pcsystemtypeex**
+**PCSystemTypeEx**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
 </dt> </dl>
 
-Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
+Typ des computers, der verwendet wird, z. B. Laptop, Desktop oder Tablet.
 
-**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor dem Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
 
 <dt>
 
@@ -1331,7 +1331,7 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 <span id="Workstation"></span><span id="workstation"></span><span id="WORKSTATION"></span>
 
-**Arbeits** Station (3)
+**Arbeitsstation** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -1345,7 +1345,7 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 <span id="SOHO_Server"></span><span id="soho_server"></span><span id="SOHO_SERVER"></span>
 
-**Soho-Server** (5)
+**SOHO-Server** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -1359,7 +1359,7 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 <span id="Performance_Server"></span><span id="performance_server"></span><span id="PERFORMANCE_SERVER"></span>
 
-**Leistungs Server** (7)
+**Leistungsserver** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -1380,21 +1380,21 @@ Typ des verwendeten Computers, z. b. Laptop, Desktop oder Tablet.
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| System Energiesteuerung \| 001,2 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| System Power Controls \| 001.2")
 </dt> </dl>
 
 Array der spezifischen energiebezogenen Funktionen eines logischen Geräts.
 
-Diese Eigenschaft wird von **CIM \_ LogicalDevice** geerbt.
+Diese Eigenschaft wird von **CIM \_ LogicalDevice geerbt.**
 
 <dt>
 
@@ -1426,86 +1426,86 @@ Diese Eigenschaft wird von **CIM \_ LogicalDevice** geerbt.
 
 </dt> <dd>
 
-Die Energie Verwaltungsfunktionen sind zurzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
+Die Energieverwaltungsfeatures sind derzeit aktiviert, aber der genaue Funktionssatz ist unbekannt, oder die Informationen sind nicht verfügbar.
 
 </dd> <dt>
 
 <span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>
 
-<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiespar Modi** (4)
+<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiesparmodi** (4)
 
 
 </dt> <dd>
 
-Das Gerät kann seinen Energiezustand basierend auf der Verwendung oder anderen Kriterien ändern.
+Das Gerät kann seinen Energiezustand basierend auf der Nutzung oder anderen Kriterien ändern.
 
 </dd> <dt>
 
 <span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>
 
-<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Einsetzbaren Energiezustand** (5)
+<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Power State Settable** (5)
 
 
 </dt> <dd>
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode wird unterstützt. Diese Methode wird in der übergeordneten **CIM \_ LogicalDevice** -Klasse gefunden und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes).
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten **CIM \_ LogicalDevice-Klasse** und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
 
 </dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Unterstützung für Power Cycling** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Power-Bike unterstützt** (6)
 
 
 </dt> <dd>
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 (Power Cycle) festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann mit dem *PowerState-Parameter* aufgerufen werden, der auf 5 (Power Cycle) festgelegt ist.
 
 </dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Unterstützte Unterstützung** (7)
+<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Timed Power On Supported** (7)
 
 
 </dt> <dd>
 
-Zeitgesteuerte Power-On unterstützt
+Timed Power-On Supported
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 (Power Cycle) und die *Uhrzeit* auf ein bestimmtes Datum und eine bestimmte Uhrzeit bzw. ein bestimmtes Intervall festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wenn der *PowerState-Parameter* auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall für das Ein-/Aus-Setzen festgelegt ist.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Powermanagementsupported**
+**PowerManagementSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Gerät Energie gesteuert werden kann, z. b. Wenn ein Gerät in den Unterbrechungs Modus versetzt werden kann usw. Diese Eigenschaft gibt nicht an, dass die Energie Verwaltungsfunktionen derzeit aktiviert sind, gibt jedoch an, dass das logische Gerät für die Energie Verwaltung geeignet ist.
+True **gibt an,** dass das Gerät mit Strom verwaltet werden kann, z. B. ein Gerät in den Modus "Aussetzen" wechseln kann und so weiter. Diese Eigenschaft gibt nicht an, dass energieverwaltungsfeatures derzeit aktiviert sind, aber sie gibt an, dass das logische Gerät energieverwaltungsfähig ist.
 
-Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ UnitaryComputerSystem geerbt.**](cim-unitarycomputersystem.md)
 
 </dd> <dt>
 
 **PowerOnPasswordStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 24 \| Hardware Sicherheitseinstellungen \| PowerOnPasswordStatus")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 24 \| Hardware Security Einstellungen \| PowerOnPasswordStatus")
 </dt> </dl>
 
-System Hardware-Sicherheitseinstellungen für Power-On Kenn Wort Status
+Systemhardwaresicherheitseinstellungen für Power-On Kennwortstatus.
 
 <dt>
 
@@ -1542,15 +1542,15 @@ System Hardware-Sicherheitseinstellungen für Power-On Kenn Wort Status
 **PowerState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktueller Energiezustand eines Computers und des zugehörigen Betriebssystems. Die Energiespar Zustände weisen die folgenden Werte auf: Wert 4 (unbekannt) gibt an, dass sich das System bekanntermaßen in einem Energiesparmodus befindet, aber der genaue Status in diesem Modus ist unbekannt. 2 (niedriger Energie Modus) zeigt an, dass sich das System in einem Energiespar Zustand befindet, aber noch funktionsfähig ist und eine Beeinträchtigung der Leistung aufweisen kann. 3 (Standby) gibt an, dass das System nicht funktioniert, aber schnell in den vollständigen Energiesparmodus versetzt werden kann. und 7 (Warnung) gibt an, dass sich das Computersystem in einem Warnungs Status und in einem Energiesparmodus befindet.
+Aktueller Energiezustand eines Computers und des zugehörigen Betriebssystems. Die Energiesparzustände weisen die folgenden Werte auf: Wert 4 (Unbekannt) gibt an, dass das System bekannterweise im Energiesparmodus ist, aber sein genauer Status in diesem Modus unbekannt ist. 2 (Niedriger Energiemodus) gibt an, dass sich das System in einem Energiesparzustand befindet, aber weiterhin funktioniert und eine beeinträchtigte Leistung zeigen kann. 3 (Standby) gibt an, dass das System nicht funktioniert, aber schnell voll funktionsfähig sein könnte. und 7 (Warnung) geben an, dass sich das Computersystem in einem Warnzustand und im Energiesparmodus befindet.
 
-Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ UnitaryComputerSystem geerbt.**](cim-unitarycomputersystem.md)
 
 <dt>
 
@@ -1563,35 +1563,35 @@ Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycompute
 
 <span id="Full_Power"></span><span id="full_power"></span><span id="FULL_POWER"></span>
 
-<span id="Full_Power"></span><span id="full_power"></span><span id="FULL_POWER"></span>**Vollstrom** (1)
+<span id="Full_Power"></span><span id="full_power"></span><span id="FULL_POWER"></span>**Vollleistung** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>
 
-<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Energiesparmodus-niedriger Energie Modus** (2)
+<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Stromsparen – Niedriger Energiemodus** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>
 
-<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparmodus-Standby** (3)
+<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparen – Standby** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>
 
-<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiespeicher-unbekannt** (4)
+<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiesparen – Unbekannt** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>
 
-<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Energie Zyklen** (5)
+<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Energiezyklus** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -1605,30 +1605,30 @@ Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycompute
 
 <span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>
 
-<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiespar Speicher-Warnung** (7)
+<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiesparen – Warnung** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Hibernate"></span><span id="power_save_-_hibernate"></span><span id="POWER_SAVE_-_HIBERNATE"></span>
 
-<span id="Power_Save_-_Hibernate"></span><span id="power_save_-_hibernate"></span><span id="POWER_SAVE_-_HIBERNATE"></span>**Energiespar Speicher-** Ruhezustand (8)
+<span id="Power_Save_-_Hibernate"></span><span id="power_save_-_hibernate"></span><span id="POWER_SAVE_-_HIBERNATE"></span>**Energiesparen – Ruhezustand** (8)
 
 
 </dt> <dd>
 
-Energie sparen Sie den Ruhezustand.
+Energiesparen des Ruhezustands.
 
 </dd> <dt>
 
 <span id="Power_Save_-_Soft_Off"></span><span id="power_save_-_soft_off"></span><span id="POWER_SAVE_-_SOFT_OFF"></span>
 
-<span id="Power_Save_-_Soft_Off"></span><span id="power_save_-_soft_off"></span><span id="POWER_SAVE_-_SOFT_OFF"></span>**Power Save-Soft Off** (9)
+<span id="Power_Save_-_Soft_Off"></span><span id="power_save_-_soft_off"></span><span id="POWER_SAVE_-_SOFT_OFF"></span>**Stromsparen – Soft Off** (9)
 
 
 </dt> <dd>
 
-Power Save Soft aus.
+Stromsparen – Soft-Off.
 
 </dd> </dl>
 
@@ -1637,26 +1637,26 @@ Power Save Soft aus.
 **PowerSupplyState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 3- \| System Gehäuse oder Gehäuse \| Stromversorgung-Status")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 3 \| System Enclosure or Chassis Power Supply \| State")
 </dt> </dl>
 
-Der Status der Stromversorgung oder der Bereitstellung beim letzten starten.
+Zustand der Stromversorgung oder der Stromversorgung beim letzten Start.
 
-Dieser Wert stammt **aus dem** statusstatusmember des **System Gehäuses oder der Gehäuse** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Stromversorgungszustandsmember** der **Systemgehäuse- oder Gehäusestruktur** in den SMBIOS-Informationen.
 
-In der folgenden Liste sind die Werte für diese Eigenschaft aufgeführt.
+Die folgende Liste identifiziert die Werte für diese Eigenschaft.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1670,7 +1670,7 @@ In der folgenden Liste sind die Werte für diese Eigenschaft aufgeführt.
 
 <span id="Safe"></span><span id="safe"></span><span id="SAFE"></span>
 
-<span id="Safe"></span><span id="safe"></span><span id="SAFE"></span>**Safe** (3)
+<span id="Safe"></span><span id="safe"></span><span id="SAFE"></span>**Tresor** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -1696,7 +1696,7 @@ In der folgenden Liste sind die Werte für diese Eigenschaft aufgeführt.
 
 </dt> <dd>
 
-Nicht BEHEB barer
+Nicht behebbar
 
 </dd> </dl>
 
@@ -1705,57 +1705,57 @@ Nicht BEHEB barer
 **PrimaryOwnerContact**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kontaktinformationen für den primären Systembesitzer, z. b. Telefonnummer, e-Mail-Adresse usw.
+Kontaktinformationen für den primären Systembesitzer, z. B. Telefonnummer, E-Mail-Adresse usw.
 
-Diese Eigenschaft wird vom [**CIM- \_ System**](cim-system.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-System**](cim-system.md)geerbt.
 
 </dd> <dt>
 
-**Primaryownername**
+**PrimaryOwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Der Name des primären System Besitzers.
+Name des primären Systembesitzers.
 
-Diese Eigenschaft wird vom [**CIM- \_ System**](cim-system.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-System**](cim-system.md)geerbt.
 
 </dd> <dt>
 
-**Resetcapability**
+**ResetCapability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| System Hardware Security \| 001,4 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| System Hardware Security \| 001.4")
 </dt> </dl>
 
-Wenn diese Option aktiviert ist, ist der Wert 4, und das einheitliche Computersystem kann mithilfe der Schaltflächen Strom und Zurücksetzen zurückgesetzt werden. Wenn diese Option deaktiviert ist, ist der Wert 3, und eine zurück Setzung ist nicht zulässig.
+Wenn diese Option aktiviert ist, ist der Wert 4, und das unitäre Computersystem kann mithilfe der Ein- und Zurücksetzungsschaltflächen zurückgesetzt werden. Wenn diese Option deaktiviert ist, ist der Wert 3, und eine Zurücksetzung ist nicht zulässig.
 
-Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ UnitaryComputerSystem**](cim-unitarycomputersystem.md)geerbt.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1788,7 +1788,7 @@ Diese Eigenschaft wird von [**CIM \_ unitarycomputersystem**](cim-unitarycompute
 
 </dt> <dd>
 
-Nicht BEHEB barer
+Nicht behebbar
 
 </dd> </dl>
 
@@ -1803,10 +1803,10 @@ Datentyp: **sint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 23 \| Systemreset \| Reset count")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 23 \| System Reset Reset \| Count")
 </dt> </dl>
 
-Anzahl der automatischen zurück setzungen seit dem letzten Zurücksetzen. Der Wert 1 (minus 1) gibt an, dass die Anzahl unbekannt ist.
+Anzahl der automatischen Zurücksetzungen seit der letzten Zurücksetzung. Der Wert 1 (minus eins) gibt an, dass die Anzahl unbekannt ist.
 
 </dd> <dt>
 
@@ -1819,38 +1819,38 @@ Datentyp: **sint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 23 \| System Reset \| Reset Limit")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) \| ("SMBIOS Type 23 \| System Reset \| Reset Limit")
 </dt> </dl>
 
-Anzahl der aufeinander folgenden Versuche beim Zurücksetzen des Systems. Der Wert 1 (minus 1) gibt an, dass der Grenzwert unbekannt ist.
+Anzahl aufeinanderfolgender Versuche, ein System zurückzusetzen. Der Wert 1 (minus 1) gibt an, dass der Grenzwert unbekannt ist.
 
 </dd> <dt>
 
 **Rollen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Liste, in der die Rollen eines Systems in der Informationstechnologie Umgebung angegeben werden.
+Liste, die die Rollen eines Systems in der IT-Umgebung angibt.
 
-Diese Eigenschaft wird vom [**CIM- \_ System**](cim-system.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-System**](cim-system.md)geerbt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
 Aktueller Status eines Objekts.
@@ -1863,37 +1863,37 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Supportcontactdescription**
+**SupportContactDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetPrivateProfileString**](/windows/desktop/api/winbase/nf-winbase-getprivateprofilestring) \| Support Information")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetPrivateProfileString-Unterstützungsinformationen")**](/windows/desktop/api/winbase/nf-winbase-getprivateprofilestring) \|
 </dt> </dl>
 
-Liste der Kontaktinformationen des Supports für das Windows-Betriebssystem.
+Liste der Supportkontaktinformationen für das Windows Betriebssystem.
 
 </dd> <dt>
 
-**Systemfamilie**
+**SystemFamily**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| System Information \| Family")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| Systeminformationen \| Family")
 </dt> </dl>
 
-Die Familie, zu der ein bestimmter Computer gehört. Eine Familie bezieht sich auf eine Gruppe von Computern, die einer Hardware-oder Software Sicht ähnlich, aber nicht identisch sind.
+Die Familie, zu der ein bestimmter Computer gehört. Eine Familie bezieht sich auf eine Gruppe von Computern, die aus Hardware- oder Softwaresicht ähnlich, aber nicht identisch sind.
 
-Dieser Wert stammt aus dem **Familien** Mitglied der **System Informations** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Family-Element** der **Systeminformationen-Struktur** in den SMBIOS-Informationen.
 
 **Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 10 und Windows Server 2016 nicht unterstützt.
 
@@ -1902,18 +1902,18 @@ Dieser Wert stammt aus dem **Familien** Mitglied der **System Informations** Str
 **SystemSKUNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| System Information \| SKU Number")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS-Typ \| 1 \| Systeminformationen \| SKU-Nummer")
 </dt> </dl>
 
-Identifiziert eine bestimmte Computerkonfiguration für den Verkauf. Manchmal auch als Produkt-ID oder Bestellnummer bezeichnet.
+Identifiziert eine bestimmte Computerkonfiguration für den Verkauf. Dies wird manchmal auch als Produkt-ID oder Bestellnummer bezeichnet.
 
-Dieser Wert stammt aus dem **SKU-Nummern** Element der **System Informations** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **SKU-Nummer-Member** der **Systeminformationen-Struktur** in den SMBIOS-Informationen.
 
 **Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows 10 und Windows Server 2016 nicht unterstützt.
 
@@ -1922,74 +1922,74 @@ Dieser Wert stammt aus dem **SKU-Nummern** Element der **System Informations** S
 **SystemStartupDelay**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("sesystemumgebungsprivileg"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**getprivateprofileint**](/windows/desktop/api/winbase/nf-winbase-getprivateprofileint) \| Boot Loader \| Timeout"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sekunden")
+Qualifizierer: [**VERALTET,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("SeSystemEnvironmentPrivilege"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetPrivateProfileInt**](/windows/desktop/api/winbase/nf-winbase-getprivateprofileint) \| Boot \| Loader-Timeout"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sekunden")
 </dt> </dl>
 
-**SystemStartupDelay** ist nicht mehr zur Verwendung verfügbar, da Boot.ini nicht zum Konfigurieren des Systemstarts verwendet wird. Verwenden Sie stattdessen die vom WMI-Anbieter für Startkonfigurationsdaten (BCD) oder den Befehl **Bcdedit** bereitgestellten [BCD-Klassen](/previous-versions/windows/desktop/bcd/bcd-classes) .
+**SystemStartupDelay** ist nicht mehr für die Verwendung verfügbar, da Boot.ini nicht zum Konfigurieren des Systemstarts verwendet wird. Verwenden Sie stattdessen die [BCD-Klassen,](/previous-versions/windows/desktop/bcd/bcd-classes) die vom WMI-Anbieter Startkonfigurationsdaten (BCD) oder vom **Bcdedit-Befehl** bereitgestellt werden.
 
 </dd> <dt>
 
 **SystemStartupOptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("sesystemumgebungprivileg"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetPrivateProfileSection**](/windows/desktop/api/winbase/nf-winbase-getprivateprofilesection) \| Operating Systems")
+Qualifizierer: [**VERALTET,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("SeSystemEnvironmentPrivilege"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| [**GetPrivateProfileSection-Betriebssysteme")**](/windows/desktop/api/winbase/nf-winbase-getprivateprofilesection) \|
 </dt> </dl>
 
-**SystemStartupOptions** ist nicht mehr zur Verwendung verfügbar, da Boot.ini nicht zum Konfigurieren des Systemstarts verwendet wird. Verwenden Sie stattdessen die vom WMI-Anbieter für Startkonfigurationsdaten (BCD) oder den Befehl **Bcdedit** bereitgestellten [BCD-Klassen](/previous-versions/windows/desktop/bcd/bcd-classes) .
+**SystemStartupOptions** ist nicht mehr für die Verwendung verfügbar, da Boot.ini nicht zum Konfigurieren des Systemstarts verwendet wird. Verwenden Sie stattdessen die [BCD-Klassen,](/previous-versions/windows/desktop/bcd/bcd-classes) die vom WMI-Anbieter Startkonfigurationsdaten (BCD) oder vom **Bcdedit-Befehl** bereitgestellt werden.
 
 </dd> <dt>
 
-**Systemstartupsetting**
+**SystemStartupSetting**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("sesystemumgebtungprivilege"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**VERALTET,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Berechtigungen**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("SeSystemEnvironmentPrivilege"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-**Systemstartupsetting** ist nicht mehr zur Verwendung verfügbar, da Boot.ini nicht zum Konfigurieren des Systemstarts verwendet wird. Verwenden Sie stattdessen die vom WMI-Anbieter für Startkonfigurationsdaten (BCD) oder den Befehl **Bcdedit** bereitgestellten [BCD-Klassen](/previous-versions/windows/desktop/bcd/bcd-classes) .
+**SystemStartupSetting** kann nicht mehr verwendet werden, da Boot.ini systemstart nicht konfiguriert wird. Verwenden Sie stattdessen die [BCD-Klassen,](/previous-versions/windows/desktop/bcd/bcd-classes) die vom Startkonfigurationsdaten WMI-Anbieter (BCD) oder dem **Bcdedit-Befehl bereitgestellt** werden.
 
 </dd> <dt>
 
-**System Type**
+**SystemType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Information Structures \| [**System \_ Info**](/windows/desktop/api/sysinfoapi/ns-sysinfoapi-system_info) \| wprocessorarchitecture")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Systeminformationen Structures SYSTEM \| [**\_ INFO**](/windows/desktop/api/sysinfoapi/ns-sysinfoapi-system_info) \| wProcessorArchitecture")
 </dt> </dl>
 
-System, das auf dem Windows-basierten Computer ausgeführt wird. Diese Eigenschaft muss über einen Wert verfügen.
+System, das auf dem Windows-basierten Computer ausgeführt wird. Diese Eigenschaft muss einen -Wert haben.
 
 In der folgenden Liste sind einige der möglichen Werte für diese Eigenschaft aufgeführt.
 
-<dl> <dd>"x64-basierter PC"</dd> <dd>"X86-basierter PC"</dd> <dd>"MIPS-basierter PC"</dd> <dd>"Alpha basierter PC"</dd> <dd>"Power PC"</dd> <dd>"Sh-x PC"</dd> <dd>"StrongARM-PC"</dd> <dd>"64-Bit-Intel-PC"</dd> <dd>"64-Bit-Alpha-PC"</dd> <dd>Unbekannter</dd> <dd>"X86-Nec98 PC"</dd> </dl>
+<dl> <dd>"x64-basierter PC"</dd> <dd>"X86-basierter PC"</dd> <dd>"MIPS-basierter PC"</dd> <dd>"Alphabasierter PC"</dd> <dd>"Power PC"</dd> <dd>"SH-x PC"</dd> <dd>"StrongARM PC"</dd> <dd>"64-Bit Intel PC"</dd> <dd>"64-Bit-Alpha-PC"</dd> <dd>"Unbekannt"</dd> <dd>"X86-Nec98 PC"</dd> </dl>
 
 <dt>
 
 <span id="X86-based_PC"></span><span id="x86-based_pc"></span><span id="X86-BASED_PC"></span>
 
-**X86-basierter PC** (x86-basierter PC)
+**X86-basierter PC** ("X86-basierter PC")
 
 
 </dt> <dd></dd> <dt>
@@ -2003,7 +2003,7 @@ In der folgenden Liste sind einige der möglichen Werte für diese Eigenschaft a
 
 <span id="Alpha-based_PC"></span><span id="alpha-based_pc"></span><span id="ALPHA-BASED_PC"></span>
 
-**Alpha basierter PC** ("Alpha basierter PC")
+**Alphabasierter PC** ("Alphabasierter PC")
 
 
 </dt> <dd></dd> <dt>
@@ -2017,14 +2017,14 @@ In der folgenden Liste sind einige der möglichen Werte für diese Eigenschaft a
 
 <span id="SH-x_PC"></span><span id="sh-x_pc"></span><span id="SH-X_PC"></span>
 
-**SH-x PC** ("sh-x PC")
+**SH-x PC** ("SH-x PC")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StrongARM_PC"></span><span id="strongarm_pc"></span><span id="STRONGARM_PC"></span>
 
-**StrongARM-PC** ("StrongARM-PC")
+**StrongARM PC** ("StrongARM PC")
 
 
 </dt> <dd></dd> <dt>
@@ -2045,35 +2045,35 @@ In der folgenden Liste sind einige der möglichen Werte für diese Eigenschaft a
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="X86-Nec98_PC"></span><span id="x86-nec98_pc"></span><span id="X86-NEC98_PC"></span>
 
-**X86-Nec98 PC** ("x86-Nec98 PC")
+**X86-Nec98 PC** ("X86-Nec98 PC")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Thermalzustand**
+**ThermoState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS- \| Typ 3- \| System Gehäuse oder Gehäuse- \| wärmezustand")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 3 \| System Enclosure or Chassis Thermo \| State")
 </dt> </dl>
 
-Der thermische Zustand des Systems beim letzten starten.
+Wärmezustand des Systems beim letzten Start.
 
-Dieser Wert stammt aus dem **wärmestatusmember** des **System Gehäuses oder der Gehäuse** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Wärmezustands-Member** der **Systemgehäuse-** oder Gehäusestruktur in den SMBIOS-Informationen.
 
 <dt>
 
@@ -2093,7 +2093,7 @@ Dieser Wert stammt aus dem **wärmestatusmember** des **System Gehäuses oder de
 
 <span id="Safe"></span><span id="safe"></span><span id="SAFE"></span>
 
-**Safe** (3)
+**Tresor** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -2124,56 +2124,56 @@ Dieser Wert stammt aus dem **wärmestatusmember** des **System Gehäuses oder de
 **TotalPhysicalMemory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Memory Management Structures \| [**MEMORYSTATUS**](/windows/desktop/api/winbase/ns-winbase-memorystatus) \| dwTotalPhys"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Memory Management Structures \| [**MEMORYSTATUS**](/windows/desktop/api/winbase/ns-winbase-memorystatus) \| dwTotalPhys"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("bytes")
 </dt> </dl>
 
-Gesamtgröße des physischen Speichers. Beachten Sie, dass diese Eigenschaft unter bestimmten Umständen keinen exakten Wert für den physischen Arbeitsspeicher zurückgibt. Beispielsweise ist es nicht korrekt, wenn das BIOS einen Teil des physischen Speichers verwendet. Verwenden Sie für einen exakten Wert stattdessen die **Capacity** -Eigenschaft im [**Win32- \_ PhysicalMemory**](win32-physicalmemory.md) .
+Gesamtgröße des physischen Speichers. Beachten Sie, dass diese Eigenschaft unter bestimmten Umständen möglicherweise keinen genauen Wert für den physischen Speicher zurück gibt. Beispielsweise ist es nicht genau, wenn das BIOS einen Teil des physischen Speichers verwendet. Um einen genauen Wert zu erhalten, verwenden Sie stattdessen **die Capacity-Eigenschaft** in [**Win32 \_ PhysicalMemory.**](win32-physicalmemory.md)
 
 Beispiel: 67108864
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **UserName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Information Functions \| [**GetUsername**](/windows/desktop/api/winbase/nf-winbase-getusernamea)")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Systeminformationen Functions \| [**GetUserName**](/windows/desktop/api/winbase/nf-winbase-getusernamea)")
 </dt> </dl>
 
-Der Name eines Benutzers, der zurzeit angemeldet ist. Diese Eigenschaft muss über einen Wert verfügen. In einer Terminaldienste-Sitzung gibt **username** den Namen des Benutzers zurück, der bei der Konsole nicht angemeldet ist, nicht den Benutzer, der während der Terminaldienst Sitzung angemeldet ist.
+Der Name eines Benutzers, der derzeit angemeldet ist. Diese Eigenschaft muss einen -Wert haben. In einer Terminaldienstsitzung gibt **UserName** den Namen des Benutzers zurück, der bei der Konsole angemeldet ist, nicht den Benutzer, der während der Terminaldienstsitzung angemeldet wurde.
 
-Beispiel: JeffSmith
+Beispiel: jeffsmith
 
 </dd> <dt>
 
-**Wakeuptype**
+**WakeUpType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS \| Type 1 \| System Information Reaktivierungs \| Type")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("SMBIOS-Typ \| 1 \| Systeminformationen \| Aktivierungstyp")
 </dt> </dl>
 
-Das Ereignis bewirkt, dass das System aufschlägt.
+Das Ereignis, das dazu führt, dass das System aus- und hochs netzt.
 
-Dieser Wert stammt aus dem Reaktivierungs **-Typmember** der **System Informations** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Member Aktivierungstyp** der Systeminformationen **struktur** in den SMBIOS-Informationen.
 
 <dt>
 
@@ -2207,14 +2207,14 @@ Dieser Wert stammt aus dem Reaktivierungs **-Typmember** der **System Informatio
 
 <span id="Modem_Ring"></span><span id="modem_ring"></span><span id="MODEM_RING"></span>
 
-**Modem Ring** (4)
+**Modemring** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="LAN_Remote"></span><span id="lan_remote"></span><span id="LAN_REMOTE"></span>
 
-**LAN-Remote** (5)
+**LAN Remote** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -2228,14 +2228,14 @@ Dieser Wert stammt aus dem Reaktivierungs **-Typmember** der **System Informatio
 
 <span id="PCI_PME_"></span><span id="pci_pme_"></span>
 
-**PCI-PME \#** 19.00
+**PCI-PME \#** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AC_Power_Restored"></span><span id="ac_power_restored"></span><span id="AC_POWER_RESTORED"></span>
 
-**Stromversorgung wieder hergestellt** (8)
+**Ac Power Restored** (8)
 
 
 </dt> <dd></dd> </dl>
@@ -2245,34 +2245,34 @@ Dieser Wert stammt aus dem Reaktivierungs **-Typmember** der **System Informatio
 **Arbeitsgruppe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("")
 </dt> </dl>
 
-Der Name der Arbeitsgruppe für diesen Computer. Wenn der Wert der Eigenschaft " **Parser** " auf " **false**" festgelegt ist, wird der Name der Arbeitsgruppe zurückgegeben.
+Name der Arbeitsgruppe für diesen Computer. Wenn der Wert der **PartOfDomain-Eigenschaft** **False ist,** wird der Name der Arbeitsgruppe zurückgegeben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [**Win32 \_ computersystemprocessor**](win32-computersystemprocessor.md) Association-Klasse, um die Gesamtanzahl der Prozessor Instanzen zu ermitteln, die einem Computersystem Objekt zugeordnet sind.
+Verwenden Sie die [**Win32 \_ ComputerSystemProcessor-Zuordnungsklasse,**](win32-computersystemprocessor.md) um die Gesamtzahl der Prozessorinstanzen zu bestimmen, die einem Computersystemobjekt zugeordnet sind.
 
-Eine **Win32- \_ Computersystem** Instanz, der mehrere physische Prozessoren zugeordnet sind, sind mehrere [**Win32- \_ Prozessor**](win32-processor.md) Instanzen zugeordnet. Wenn der Wert von " **numoflogicalprocessor** " größer als der Wert von " **numofprocessor** " ist, handelt es sich bei dem Computersystem entweder um ein Multikernsystem oder um einen oder mehrere Prozessoren, die für Hyperthreading aktiviert sind. Weitere Informationen finden Sie im Abschnitt **zu den Eigenschaften** und Hinweisen im Abschnitt **"Eigenschaften und** Hinweise" im Win32- **\_ Prozessor**.
+Einer **Win32 \_ ComputerSystem-Instanz,** die über mehrere physische Prozessoren verfügt, sind mehrere [**Win32-Prozessorinstanzen \_**](win32-processor.md) zugeordnet. Wenn der Wert von **NumberOfLogicalProcessors** größer als der Wert von **NumberOfProcessors** ist, ist das Computersystem entweder ein System mit mehreren Kernen oder verfügt über einen oder mehrere Prozessoren, die für Hyperthreading aktiviert sind. Weitere Informationen finden Sie im Abschnitt **NumberOfLogicalProcessors** and NumberOfCores properties and Remarks (Eigenschaften und Hinweise zu NumberOfLogicalProcessors und **NumberOfCores)** unter **Win32-Prozessor. \_**
 
-Die **Win32- \_ Computersystem** -Klasse wird von [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)abgeleitet.
+Die **Win32 \_ ComputerSystem-Klasse** wird von [**CIM \_ UnitaryComputerSystem abgeleitet.**](cim-unitarycomputersystem.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Skript Center- [Codebeispiel](https://Gallery.TechNet.Microsoft.Com/scriptcenter/Display-computers-status-c8ff289d) wird das **Win32- \_ Computersystem** verwendet, um Informationen aus einer Reihe von Computersystemen abzurufen und in einer GUI anzuzeigen.
+Im folgenden [Skriptcenter-Codebeispiel](https://Gallery.TechNet.Microsoft.Com/scriptcenter/Display-computers-status-c8ff289d) wird **das Win32-Computersystem \_** verwendet, um Informationen aus einer Reihe von Computersystemen abzurufen und auf einer grafischen Benutzeroberfläche anzuzeigen.
 
-Ein Beispielskript, das Betriebssystem-und Prozessor Daten von **Win32 \_ Computersystem**, [**Win32 \_ Processor**](win32-processor.md)und [**Win32 \_ OperatingSystem**](win32-operatingsystem.md) abruft, finden Sie in den Beispielen zu [**Win32- \_ Prozessor**](win32-processor.md) Themen.
+Ein Beispielskript, das Betriebssystem- und Prozessordaten von **Win32 \_ ComputerSystem,** [**Win32 \_ Processor**](win32-processor.md)und [**Win32 \_ OperatingSystem**](win32-operatingsystem.md) erhält, finden Sie in den Beispielen des [**Themas Win32-Prozessor. \_**](win32-processor.md)
 
-Im folgenden VBScript-Beispiel wird beschrieben, wie der Domänen Name des lokalen Computers aus Instanzen von **Win32 \_ Computersystem** abgerufen wird.
+Im folgenden VBScript-Beispiel wird beschrieben, wie der Domänenname des lokalen Computers aus Instanzen von **Win32 \_ ComputerSystem abgerufen wird.**
 
 
 ```VB
@@ -2285,7 +2285,7 @@ next
 
 
 
-Im folgenden Perl-Beispiel wird beschrieben, wie der lokale Computername aus den Instanzen von **Win32 \_ Computersystem** abgerufen wird.
+Im folgenden Perl-Beispiel wird beschrieben, wie der Name des lokalen Computers aus Instanzen von **Win32 \_ ComputerSystem abgerufen wird.**
 
 
 ```
@@ -2311,7 +2311,7 @@ else
 
 
 
-Im folgenden Perl-Beispiel wird beschrieben, wie der DNS-Domänen Name des lokalen Computers aus Instanzen von **Win32 \_ Computersystem** abgerufen wird.
+Im folgenden Perl-Beispiel wird beschrieben, wie der DNS-Domänenname des lokalen Computers aus Instanzen von **Win32 \_ ComputerSystem abgerufen wird.**
 
 
 ```
@@ -2349,8 +2349,8 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -2359,19 +2359,19 @@ else
 
 <dl> <dt>
 
-[**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)
+[**CIM \_ UnitaryComputerSystem**](cim-unitarycomputersystem.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[WMI-Tasks: Computer Hardware](/windows/desktop/WmiSdk/wmi-tasks--computer-hardware)
+[WMI-Aufgaben: Computerhardware](/windows/desktop/WmiSdk/wmi-tasks--computer-hardware)
 </dt> <dt>
 
-[WMI-Tasks: Desktop Verwaltung](/windows/desktop/WmiSdk/wmi-tasks--desktop-management)
+[WMI-Aufgaben: Desktopverwaltung](/windows/desktop/WmiSdk/wmi-tasks--desktop-management)
 </dt> </dl>
 
  

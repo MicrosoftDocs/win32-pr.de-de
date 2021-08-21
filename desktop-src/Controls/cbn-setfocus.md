@@ -1,9 +1,9 @@
 ---
-title: CBN_SETFOCUS Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn ein Kombinations Feld den Tastaturfokus erhält. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: CBN_SETFOCUS Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn ein Kombinationsfeld den Tastaturfokus erhält. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: 8072edc6-aedc-4daf-80df-d3acd82fcffa
 keywords:
-- Windows-Steuerelemente für CBN_SETFOCUS Benachrichtigungs
+- CBN_SETFOCUS Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 885bbaebac0a79fc600cbcc2b7864cbdfd19ea93
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0c70edb99a18cc7f1e2f1051670bbc9d9596c3630f2dfc01e14aa8b68fd61ca3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699050"
 ---
-# <a name="cbn_setfocus-notification-code"></a>CBN- \_ SetFocus-Benachrichtigungs Code
+# <a name="cbn_setfocus-notification-code"></a>CBN \_ SETFOCUS-Benachrichtigungscode
 
-Wird gesendet, wenn ein Kombinations Feld den Tastaturfokus erhält. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn ein Kombinationsfeld den Tastaturfokus erhält. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,14 +42,14 @@ CBN_SETFOCUS
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner des Kombinationsfelds. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Handle für das Kombinations Feld.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,10 +69,10 @@ Handle für das Kombinations Feld.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[CBN- \_ killfokus](cbn-killfocus.md)
+[CBN \_ KILLFOCUS](cbn-killfocus.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -84,7 +84,7 @@ Handle für das Kombinations Feld.
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

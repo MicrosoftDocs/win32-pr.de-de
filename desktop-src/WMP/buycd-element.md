@@ -22,11 +22,11 @@ ms.locfileid: "119135843"
 # <a name="buycd-element"></a>BuyCD-Element
 
 > [!Note]  
-> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **BuyCD-Element** gibt die URLs für Webseiten an, die angezeigt Windows Media Player, wenn der Benutzer einen Kauf tätigen möchte.
+Das **BuyCD-Element** gibt die URLs für Webseiten an, Windows Media Player angezeigt werden, wenn sich der Benutzer für einen Kauf entscheidet.
 
 ``` syntax
 <BuyCD
@@ -43,21 +43,21 @@ Das **BuyCD-Element** gibt die URLs für Webseiten an, die angezeigt Windows Med
 <span id="MediaPlayerURL__required_"></span><span id="mediaplayerurl__required_"></span><span id="MEDIAPLAYERURL__REQUIRED_"></span>**MediaPlayerURL** (erforderlich)
 </dt> <dd>
 
-URL für die Webseite, die im Onlineshop angezeigt wird, um eine CD oder DVD zum Kauf in Windows Media Player anzubieten.
+URL für die Webseite, die der Onlineshop anzeigt, um eine CD oder DVD für den Kauf in Windows Media Player.
 
 </dd> <dt>
 
 <span id="MediaCenterURL"></span><span id="mediacenterurl"></span><span id="MEDIACENTERURL"></span>**MediaCenterURL**
 </dt> <dd>
 
-URL für die Webseite, die im Onlineshop angezeigt wird, um eine CD oder DVD zum Kauf in Windows XP Media Center Edition 2004 Update anzubieten.
+URL für die Webseite, die der Onlineshop anzeigt, um eine CD oder DVD zum Kauf in Windows XP Media Center Edition 2004 Update anbieten.
 
 </dd> <dt>
 
 <span id="BrowserURL"></span><span id="browserurl"></span><span id="BROWSERURL"></span>**BrowserURL**
 </dt> <dd>
 
-URL für die Webseite, die im Onlineshop angezeigt wird, um eine CD oder DVD zum Kauf in einem separaten Browserfenster anzubieten. Diese URL wird auch von Windows XP Service Pack 2 oder höher für das **Onlinefeature Shop for music** verwendet.
+URL für die Webseite, die der Onlineshop anzeigt, um eine CD oder DVD für den Kauf in einem separaten Browserfenster anbieten zu können. Diese URL wird auch von Windows XP Service Pack 2 oder höher für das **Onlinefeature Shop for music** verwendet.
 
 </dd> </dl>
 
@@ -76,26 +76,26 @@ URL für die Webseite, die im Onlineshop angezeigt wird, um eine CD oder DVD zum
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn der Benutzer auf eine Schaltfläche oder einen Link in Windows Media Player klickt, um eine CD oder DVD zu erwerben, sendet der Player die URL-Anforderung an ServiceTask1 mit Parametern, die mithilfe eines Fragezeichens (?) als Trennzeichen für die Abfragezeichenfolge angefügt sind. In der folgenden Tabelle sind die Parameter aufgeführt, die mit der URL-Anforderung gesendet werden. Andere sind möglicherweise aus Gründen der Legacykompatibilität vorhanden.
+Wenn der Benutzer in Windows Media Player auf eine Schaltfläche oder einen Link klickt, um eine CD oder DVD zu erwerben, sendet der Player die URL-Anforderung an ServiceTask1 mit Parametern, die mithilfe eines Fragezeichens (?) als Trennzeichen für Abfragezeichenfolgen angefügt werden. In der folgenden Tabelle sind die mit der URL-Anforderung gesendeten Parameter aufgeführt. Andere sind möglicherweise aus Gründen der Legacykompatibilität vorhanden.
 
 
 
 | Name         | Wert                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Album*      | Wert des **WM/AlbumTitle-Attributs** für das Medienelement.                                                                                                        |
-| *Künstler*     | Wert des **WM/AlbumArtist-Attributs,** sofern vorhanden, oder andernfalls der Wert des **Author-Attributs** für das Medienelement.                                         |
-| *Geoid*      | Windows ID des geografischen Standorts. Die Standort-ID wird vom Benutzer im Bereich **Standort** der Einstellungen Regional und Sprachoptionen in Systemsteuerung angegeben. |
-| *locale*     | Windows Media Player Gebietsschema-ID.                                                                                                                                     |
-| *Titel*      | Wert des **Title-Attributs** für das Medienelement.                                                                                                                |
-| *UFID*       | Wert des **WM/UniqueFileIdentifier-Attributs** für das Medienelement.                                                                                              |
-| *userlocale* | Windows Gebietsschema-ID. Das Gebietsschema wird vom Benutzer im Bereich **Standards und Formate** der Einstellungen regional und Sprachoptionen in Systemsteuerung angegeben.        |
+| *Album*      | Der Wert des **WM/AlbumTitle-Attributs** für das Medienelement.                                                                                                        |
+| *Künstler*     | Der Wert des **WM/AlbumArtist-Attributs,** sofern vorhanden, oder der Wert des **Author-Attributs** für das Medienelement.                                         |
+| *Geoid*      | Windows geografische Standort-ID. Die Standort-ID wird vom Benutzer im Bereich **Standort** der Einstellungen für regionale Optionen und Sprachoptionen in Systemsteuerung. |
+| *locale*     | Windows Media Player-ID.                                                                                                                                     |
+| *Titel*      | Der Wert des **Title-Attributs** für das Medienelement.                                                                                                                |
+| *UFID*       | Der Wert des **WM/UniqueFileIdentifier-Attributs** für das Medienelement.                                                                                              |
+| *userlocale* | Windows-ID. Das Gebiets anders wird vom Benutzer im Bereich **Standards und Formate** der Einstellungen für Regional- und Sprachoptionen in Systemsteuerung.        |
 | *version*    | Windows Media Player Versionsnummer im folgenden Format: 10.0.x.xxxx oder 11.0.x.xxxx.                                                                         |
 
 
 
  
 
-Windows XP Media Center Edition 2004 bietet Benutzern eine Benutzeroberfläche, die so konzipiert ist, dass sie im Abstand angezeigt wird. Sie sollten Webseiten für den *MediaCenterURL-Parameter* erstellen, die auf großen Bildschirmen angezeigt werden.
+Windows XP Media Center Edition 2004 bietet Benutzern eine Benutzeroberfläche, die so konzipiert ist, dass sie aus der Entfernung angezeigt werden kann. Sie sollten Webseiten für den *MediaCenterURL-Parameter* erstellen, um auf großen Displays angezeigt zu werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,14 +107,14 @@ Windows XP Media Center Edition 2004 bietet Benutzern eine Benutzeroberfläche, 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**ServiceInfo-Beispieldokument für ein Online-Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für einen Typ 1 online Store**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**ServiceInfo-Beispieldokument für ein Online-Store vom Typ 2**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
 [**ServiceInfo-Dokument**](serviceinfo-document.md)

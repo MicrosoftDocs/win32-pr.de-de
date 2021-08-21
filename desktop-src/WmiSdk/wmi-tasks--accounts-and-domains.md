@@ -1,8 +1,8 @@
 ---
-description: Konto-und Domänen Verwaltungsaufgaben erhalten Informationen wie z. b. die Computer Domäne oder den aktuell angemeldeten Benutzer.
+description: Konto- und Domänenverwaltungsaufgaben erhalten Informationen wie die Computerdomäne oder den derzeit angemeldeten Benutzer.
 ms.assetid: 1a9cc44b-c366-465d-a0d0-536d5dc818b5
 ms.tgt_platform: multiple
-title: 'WMI-Tasks: Konten und Domänen'
+title: 'WMI-Aufgaben: Konten und Domänen'
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3bcda33677ada6c4a08e2d9bdc1676c9662a5cd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53f5e83ffe52c617ddc7766b3cda1340a14551f88a0c250639ae3e1a068cd125
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502710"
 ---
-# <a name="wmi-tasks-accounts-and-domains"></a>WMI-Tasks: Konten und Domänen
+# <a name="wmi-tasks-accounts-and-domains"></a>WMI-Aufgaben: Konten und Domänen
 
-Konto-und Domänen Verwaltungsaufgaben erhalten Informationen wie z. b. die Computer Domäne oder den aktuell angemeldeten Benutzer. Viele dieser Aufgaben werden am besten mit [ADSI](/windows/desktop/ADSI/active-directory-service-interfaces-adsi) -Skripts ausgeführt. Weitere Informationen und weitere Beispiele finden Sie im TechNet [scriptcenter](https://www.microsoft.com/technet/scriptcenter) Script-Repository.
+Konto- und Domänenverwaltungsaufgaben erhalten Informationen wie die Computerdomäne oder den derzeit angemeldeten Benutzer. Viele dieser Aufgaben werden am besten mit [ADSI-Skripts](/windows/desktop/ADSI/active-directory-service-interfaces-adsi) ausgeführt. Weitere Informationen und andere Beispiele finden Sie im TechNet [ScriptCenter](https://www.microsoft.com/technet/scriptcenter) Script Repository.
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt datei keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... bestimmen Sie die Domäne, zu der ein Computer gehört?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>Domain</strong> -Eigenschaft. Sie können auch die Eigenschaft <strong>DNSDomain</strong> in <a href="/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration"><strong>Win32_NetworkAdapterConfiguration</strong></a>verwenden.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... die Domäne bestimmen, zu der ein Computer gehört?</td>
+<td>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong></strong></a> Sie die Win32_ComputerSystem-Klasse, und überprüfen Sie den Wert der <strong>Domain-Eigenschaft.</strong> Sie können auch die <strong>DNSDomain-Eigenschaft</strong> <a href="/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration"><strong>in</strong></a>Win32_NetworkAdapterConfiguration.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -126,7 +126,7 @@ foreach (CimInstance cimObj in queryInstance)
 </tr>
 <tr class="even">
 <td>... bestimmen, ob ein Computer ein Server oder eine Arbeitsstation ist?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>DomainRole</strong> -Eigenschaft.</p>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>DomainRole-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -194,8 +194,8 @@ switch  ($computer.DomainRole) {
 </div></td>
 </tr>
 <tr class="odd">
-<td>... bestimmen Sie den Computernamen?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>Name</strong> -Eigenschaft. Sie können auch die Eigenschaft <strong>dNSHostName</strong> in <a href="/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration"><strong>Win32_NetworkAdapterConfiguration</strong></a>verwenden.</p>
+<td>... ermitteln Sie den Computernamen?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>Name-Eigenschaft.</strong> Sie können auch die <strong>DNSHostName-Eigenschaft</strong> <a href="/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration"><strong>in</strong></a>Win32_NetworkAdapterConfiguration.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -263,8 +263,8 @@ foreach (CimInstance cimObj in queryInstance)
 </div></td>
 </tr>
 <tr class="even">
-<td>... Suchen Sie den Namen der Person, die zurzeit auf einem Computer angemeldet ist?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>username</strong> -Eigenschaft.</p>
+<td>... Suchen Sie den Namen der Person, die derzeit an einem Computer angemeldet ist?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>UserName-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -337,8 +337,8 @@ foreach (CimInstance cimObj in queryInstance)
 </div></td>
 </tr>
 <tr class="odd">
-<td>... einen Computer umbenennen?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>Rename</strong> -Methode.</p>
+<td>... Einen Computer umbenennen?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse und die <strong>Rename-Methode.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -398,8 +398,8 @@ if ($return.ReturnValue -eq 0) {
 </div></td>
 </tr>
 <tr class="even">
-<td>... Rufen Sie nur lokale Gruppen mithilfe von WMI ab?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-group"><strong>Win32_Group</strong></a> -Klasse, und fügen Sie die folgende <strong>Where</strong> -Klausel in Ihre <a href="querying-with-wql.md">WQL</a> -Abfrage ein.</p>
+<td>... nur lokale Gruppen mit WMI abrufen?</td>
+<td><p>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-group"><strong></strong></a> Sie die Win32_Group-Klasse, und schließen Sie die folgende <strong>WHERE-Klausel</strong> in Ihre <a href="querying-with-wql.md">WQL-Abfrage</a> ein.</p>
 <p><code>Where LocalAccount = True</code></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
@@ -460,11 +460,11 @@ $accts |ftName, Sid, SidType, Status-autosize</code></pre></td>
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>

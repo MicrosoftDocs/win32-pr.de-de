@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvstreamingfilealleseryexistsexception-Konstruktor'
-title: Esentslvstreamingfilealleseryexistsexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVStreamingFileAlreadyExistsException-Konstruktor'
+title: EsentSLVStreamingFileAlreadyExistsException-Konstruktor
 TOCTitle: 'EsentSLVStreamingFileAlreadyExistsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVStreamingFileAlreadyExistsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvstreamingfilealreadyexistsexception.esentslvstreamingfilealreadyexistsexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0ead0f4c85337e1c13fe291eb69327353c9ced0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 368970181238fbb6f4a95f34789ed0c39a23efa54cc1dea45ac5718a98c789ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039768"
 ---
-# <a name="esentslvstreamingfilealreadyexistsexception-constructor"></a>Esentslvstreamingfilealleseryexistsexception-Konstruktor
+# <a name="esentslvstreamingfilealreadyexistsexception-constructor"></a>EsentSLVStreamingFileAlreadyExistsException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public EsentSLVStreamingFileAlreadyExistsException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvstreamingfilealleseryexistsexception-Klasse](./esentslvstreamingfilealreadyexistsexception-class.md)
+[EsentSLVStreamingFileAlreadyExistsException-Klasse](./esentslvstreamingfilealreadyexistsexception-class.md)
 
-[Esentslvstreamingfilealleseryexistsexception-Elemente](./esentslvstreamingfilealreadyexistsexception-members.md)
+[EsentSLVStreamingFileAlreadyExistsException-Member](./esentslvstreamingfilealreadyexistsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

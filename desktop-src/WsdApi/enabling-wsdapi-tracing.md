@@ -1,25 +1,25 @@
 ---
-description: WSDAPI-Protokolle enthalten Debuginformationen, die verwendet werden können, um die Grundursache von WSDAPI-Anwendungsfehlern zu finden.
+description: WSDAPI-Protokolle enthalten Debuginformationen, die verwendet werden können, um die Grundursache von WSDAPI-Anwendungsfehlern zu ermitteln.
 ms.assetid: 28b4c032-1c9a-4b3a-9a6a-2948456572b2
-title: Aktivieren der WSDAPI-Ablauf Verfolgung
+title: Aktivieren der WSDAPI-Ablaufverfolgung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 951f8ddfee6043cc662a456c70960e78ed1a3625
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd8f765249f4888a1dcfd2c6a44a81d3e2652a75bb983e85a881093d3c266b5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049698"
 ---
-# <a name="enabling-wsdapi-tracing"></a>Aktivieren der WSDAPI-Ablauf Verfolgung
+# <a name="enabling-wsdapi-tracing"></a>Aktivieren der WSDAPI-Ablaufverfolgung
 
-WSDAPI-Protokolle enthalten Debuginformationen, die verwendet werden können, um die Grundursache von WSDAPI-Anwendungsfehlern zu finden. Wenn die Ablauf Verfolgung aktiviert ist, werden die Protokollierungs Informationen in einer ETL-Datei an einem vom Benutzer angegebenen Speicherort gespeichert. Diese ETL-Datei kann zur Fehlerursachen Analyse an den Microsoft-Entwickler Support gesendet werden. Weitere Informationen zum Kontaktieren des Supports finden Sie unter [https://support.microsoft.com](https://support.microsoft.com) .
+WSDAPI-Protokolle enthalten Debuginformationen, die verwendet werden können, um die Grundursache von WSDAPI-Anwendungsfehlern zu ermitteln. Wenn die Ablaufverfolgung aktiviert ist, werden Protokollierungsinformationen in einer ETL-Datei an einem benutzerdefinierten Speicherort gespeichert. Diese ETL-Datei kann zur Ursachenanalyse an den Microsoft-Entwicklersupport gesendet werden. Informationen zum Kontaktieren des Supports können Sie unter [https://support.microsoft.com](https://support.microsoft.com) anzeigen.
 
-Diese Prozedur muss zweimal ausgeführt werden: einmal auf dem Client und einmal auf dem Host.
+Dieses Verfahren muss zweimal ausgeführt werden: einmal auf dem Client und einmal auf dem Host.
 
-**So aktivieren Sie die WSDAPI-Ablauf Verfolgung**
+**So aktivieren Sie die WSDAPI-Ablaufverfolgung**
 
-1.  Erstellen Sie mit Notepad oder einem anderen Text-Editor eine Textdatei mit folgendem Text:
+1.  Erstellen Sie mit Editor oder einem anderen Text-Editor eine Textdatei mit folgendem Text:
 
     ``` syntax
     "{480217a9-f824-4bd4-bbe8-f371caaf9a0d}" 0xFF 0xFF
@@ -35,28 +35,28 @@ Diese Prozedur muss zweimal ausgeführt werden: einmal auf dem Client und einmal
     "{836767a6-af31-4938-b4c0-ef86749a9aef}" 0xFF 0xFF
     ```
 
-2.  Speichern Sie die Textdatei unter, `C:\temp\traceguids.txt` und schließen Sie dann die Datei.
+2.  Speichern Sie die Textdatei unter , `C:\temp\traceguids.txt` und schließen Sie die Datei.
 3.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-4.  Führen Sie den folgenden Befehl aus: **logman.exe Create Trace wsdlog-o c: \\ Temp \\ WSD**
-5.  Führen Sie den folgenden Befehl aus: **logman.exe Update wsdlog-PF c: \\ Temp \\traceguids.txt**
-6.  Führen Sie den folgenden Befehl aus: **logman.exe wsdlog starten** .
-7.  Reproduzieren Sie den Fehler Durchstarten des Hosts und Clients oder durch Drücken von F5 im Netzwerk-Explorer.
+4.  Führen Sie den folgenden Befehl **aus:logman.exe trace wsdlog -o c: \\ temp \\ wsd**
+5.  Führen Sie den folgenden Befehl **aus:logman.exe update wsdlog -pf c: \\ temp \\traceguids.txt**
+6.  Führen Sie den folgenden Befehl **aus:logman.exe starten Sie wsdlog.**
+7.  Reproduzieren Sie den Fehler, indem Sie host und client starten oder F5 im Netzwerk-Explorer drücken.
 
-**So deaktivieren Sie die WSDAPI-Ablauf Verfolgung**
+**So deaktivieren Sie die WSDAPI-Ablaufverfolgung**
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-2.  Führen Sie den folgenden Befehl aus: **logman.exe "wsdlog Abbrechen** ".
+2.  Führen Sie den folgenden Befehl **aus:logman.exe beenden Sie wsdlog.**
 
-Nachdem der Anwendungsfehler aufgezeichnet wurde, können die \* ETL-Dateien an den Microsoft-Support gesendet werden. Diese Dateien befinden sich in `C:\temp\wsd_*.etl` .
+Sobald der Anwendungsfehler erfasst wurde, können die \* ETL-Dateien an den Microsoft-Support gesendet werden. Diese Dateien befinden sich in `C:\temp\wsd_*.etl` .
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WSDAPI-Diagnose Prozeduren](wsdapi-diagnostic-procedures.md)
+[WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)
 </dt> <dt>
 
-[Ersten Schritte mit der WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+[Erste Schritte mit WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
 </dt> <dt>
 
 [https://support.microsoft.com](https://support.microsoft.com)

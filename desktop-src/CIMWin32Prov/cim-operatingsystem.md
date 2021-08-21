@@ -182,7 +182,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Geben Sie den Namen des Computersystems ein.
@@ -263,7 +263,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Systemspeicher Einstellungen \| 001.4"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Systemspeicher Einstellungen \| 001.4"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
 </dt> </dl>
 
 Anzahl der Kilobytes, die den Auslagerungsdateien des Betriebssystems zugeordnet werden können, ohne dass andere Seiten ausgetauscht werden. Der Wert 0 gibt an, dass keine Auslagerungsdateien vorhanden sind.
@@ -349,7 +349,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrSystemMaxProcesses")
 </dt> </dl>
 
-Maximale Anzahl von Prozesskontexten, die das Betriebssystem unterstützen kann. Wenn kein fester Maximalwert vorhanden ist, sollte der Wert 0 (null) sein. Auf Systemen mit einem festen Höchstwert kann dieses Objekt helfen, Fehler zu diagnostizieren, die auftreten, wenn der Höchstwert erreicht wird. Falls unbekannt, geben Sie -1 ein.
+Maximale Anzahl von Prozesskontexten, die das Betriebssystem unterstützen kann. Wenn es kein festes Maximum gibt, sollte der Wert 0 (null) sein. Auf Systemen mit einem festen Maximum kann dieses Objekt bei der Diagnose von Fehlern helfen, die auftreten, wenn das Maximum erreicht wird. Wenn unbekannt, geben Sie -1 ein.
 
 </dd> <dt>
 
@@ -365,7 +365,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Maximale Anzahl von Kilobyte Arbeitsspeicher, die einem Prozess zugeordnet werden können. Bei Betriebssystemen ohne virtuellen Arbeitsspeicher entspricht dieser Wert in der Regel der Gesamtmenge des physischen Arbeitsspeichers abzüglich des vom BIOS und dem Betriebssystem verwendeten Arbeitsspeichers. Bei einigen Betriebssystemen kann dieser Wert unendlich sein. In diesem Fall sollte 0 eingegeben werden. In anderen Fällen kann dieser Wert eine Konstante sein, z. B. 2 GB oder 4 GB.
+Maximale Anzahl von Kilobyte Arbeitsspeicher, die einem Prozess zugeordnet werden können. Bei Betriebssystemen ohne virtuellen Arbeitsspeicher entspricht dieser Wert in der Regel der Gesamtmenge des physischen Arbeitsspeichers abzüglich des vom BIOS und Betriebssystem verwendeten Arbeitsspeichers. Bei einigen Betriebssystemen kann dieser Wert unendlich sein. In diesem Fall sollte 0 eingegeben werden. In anderen Fällen kann dieser Wert eine Konstante sein, z. B. 2 GB oder 4 GB.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
@@ -385,7 +385,7 @@ Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifi
 
 Schlüssel einer Betriebssysteminstanz innerhalb eines Computersystems.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -398,7 +398,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Benutzerlizenzen für das Betriebssystem. Wenn unbegrenzt, geben Sie 0 ein, falls unbekannt, geben Sie -1 ein.
+Anzahl der Benutzerlizenzen für das Betriebssystem. Geben Sie bei unbegrenzter Anzahl 0 ein, wenn unbekannt, geben Sie -1 ein.
 
 </dd> <dt>
 
@@ -459,7 +459,7 @@ Typ des Betriebssystems.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -482,7 +482,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT UNIX
+ATT-UNIX
 
 </dd> <dt>
 
@@ -502,7 +502,7 @@ ATT UNIX
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital Unix** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digitales Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -514,7 +514,7 @@ ATT UNIX
 
 </dt> <dd>
 
-Öffnen von VMs
+Öffnen von VMS
 
 </dd> <dt>
 
@@ -736,7 +736,7 @@ A-Serie
 
 </dt> <dd>
 
-Verbund-NSK
+Tandem NSK
 
 </dd> <dt>
 
@@ -747,7 +747,7 @@ Verbund-NSK
 
 </dt> <dd>
 
-Nt-Verbund
+Tandem NT
 
 </dd> <dt>
 
@@ -785,7 +785,7 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
 
 
 </dt> <dd></dd> <dt>
@@ -804,7 +804,7 @@ BS2000/OSD
 
 </dt> <dd>
 
-BSD UNIX
+BSD-UNIX
 
 </dd> <dt>
 
@@ -1202,7 +1202,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

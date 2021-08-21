@@ -4,7 +4,7 @@ description: Ruft den Statustext für den angegebenen Statuscode ab.
 ms.assetid: 1da2280a-c26d-4caa-b227-c289055f3aa9
 ms.tgt_platform: multiple
 keywords:
-- GetStatusText-Methode Remotedesktopdienste
+- GetStatusText-Remotedesktopdienste
 - GetStatusText-Methode Remotedesktopdienste , IMsRdpClient7-Schnittstelle
 - IMsRdpClient7-Schnittstelle Remotedesktopdienste , GetStatusText-Methode
 - GetStatusText-Methode Remotedesktopdienste , IMsRdpClient8-Schnittstelle
@@ -69,7 +69,7 @@ Die Adresse eines **BSTR,** der den Statustext empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,7 +86,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

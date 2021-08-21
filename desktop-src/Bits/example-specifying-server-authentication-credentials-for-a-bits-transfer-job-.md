@@ -1,27 +1,27 @@
 ---
-title: Angeben von Anmelde Informationen für die Server Authentifizierung für einen Bits-Übertragungs Auftrag
-description: Sie können unterschiedliche Authentifizierungs Schemas für einen Background Intelligent Transfer Service Übertragungs Auftrag (Bits) angeben.
+title: Angeben von Anmeldeinformationen für die Serverauthentifizierung für einen BITS-Übertragungsauftrag
+description: Sie können verschiedene Authentifizierungsschemas für einen BITS-Übertragungsauftrag (Background Intelligent Transfer Service) angeben.
 ms.assetid: 31db38f6-3639-4042-97f2-4f9d78942e15
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c4373cdf0c8b4c8afe7dff367fda9387eec0b54
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 844be330a34eaa5cfbe154fb3e22ec4a62aa807a355f54318fec207959baf5bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119701820"
 ---
-# <a name="specify-server-authentication-credentials-for-a-bits-transfer-job"></a>Angeben von Anmelde Informationen für die Server Authentifizierung für einen Bits-Übertragungs Auftrag
+# <a name="specify-server-authentication-credentials-for-a-bits-transfer-job"></a>Angeben von Anmeldeinformationen für die Serverauthentifizierung für einen BITS-Übertragungsauftrag
 
-Sie können unterschiedliche Authentifizierungs Schemas für einen Background Intelligent Transfer Service Übertragungs Auftrag (Bits) angeben.
+Sie können verschiedene Authentifizierungsschemas für einen BITS-Übertragungsauftrag (Background Intelligent Transfer Service) angeben.
 
-Mit dem folgenden Verfahren wird ein Authentifizierungsschema abgerufen und eine Authentifizierungs Identitäts Struktur erstellt. Dann erstellt die Anwendung einen Bits-Download Auftrag und legt die Anmelde Informationen für den Auftrag fest. Nachdem der Auftrag erstellt wurde, erhält die Anwendung einen Zeiger auf eine Rückruf Schnittstelle und fragt den Status des Bits-Übertragungs Auftrags ab. Nachdem der Auftrag fertiggestellt wurde, wird er aus der Warteschlange entfernt.
+Das folgende Verfahren ruft ein Authentifizierungsschema ab und erstellt eine Authentifizierungsidentitätsstruktur. Anschließend erstellt die Anwendung einen BITS-Downloadauftrag und legt die Anmeldeinformationen für den Auftrag fest. Nachdem der Auftrag erstellt wurde, ruft die Anwendung einen Zeiger auf eine Rückrufschnittstelle ab und fragt den Status des BITS-Übertragungsauftrags ab. Nach Abschluss des Auftrags wird er aus der Warteschlange entfernt.
 
-In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: allgemeine Klassen](common-classes.md)definiert sind.
+In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: Allgemeine Klassen](common-classes.md)definiert sind.
 
-**So geben Sie Anmelde Informationen für die Server Authentifizierung eines Bits-Übertragungs Auftrags an**
+**So geben Sie Anmeldeinformationen für die Serverauthentifizierung für einen BITS-Übertragungsauftrag an**
 
-1.  Erstellen Sie eine Containerstruktur, die die Werte des [**BG \_ auth- \_ Schemas**](/windows/desktop/api/Bits1_5/ne-bits1_5-bg_auth_scheme) Schema Namen zuordnet.
+1.  Erstellen Sie eine Containerstruktur, die [**BG \_ AUTH \_ SCHEME-Werte**](/windows/desktop/api/Bits1_5/ne-bits1_5-bg_auth_scheme) Schemanamen zuweist.
 
     ```C++
     struct
@@ -43,9 +43,9 @@ In diesem Beispiel werden der Header und die Implementierung verwendet, die in [
 
     
 
-2.  Initialisieren Sie com-Parameter, indem Sie die ccoinitializer-Funktion aufrufen. Weitere Informationen zur ccoinitializer-Funktion finden Sie unter [Beispiel: allgemeine Klassen](common-classes.md).
-3.  Bereiten Sie eine [**BG \_ auth- \_ Anmelde**](/windows/desktop/api/Bits1_5/ns-bits1_5-bg_auth_credentials) Informationsstruktur vor. Im Beispiel wird die [securezeromemory]( /previous-versions/windows/desktop/legacy/aa366877(v=vs.85)) -Funktion verwendet, um die Speicherorte zu löschen, die den vertraulichen Informationen zugeordnet sind. Die [securezeromemory]( /previous-versions/windows/desktop/legacy/aa366877(v=vs.85)) -Funktion ist in Winbase. h definiert.
-4.  Verwenden Sie die getscheme-Funktion, um das Authentifizierungsschema für die Verbindung mit dem Server zu erhalten.
+2.  Initialisieren Sie COM-Parameter, indem Sie die CCoInitializer-Funktion aufrufen. Weitere Informationen zur CCoInitializer-Funktion finden Sie unter [Beispiel: Allgemeine Klassen.](common-classes.md)
+3.  Bereiten Sie eine [**BG \_ AUTH \_ CREDENTIALS-Struktur vor.**](/windows/desktop/api/Bits1_5/ns-bits1_5-bg_auth_credentials) Im Beispiel wird die [SecureZeroMemory-Funktion]( /previous-versions/windows/desktop/legacy/aa366877(v=vs.85)) verwendet, um die Speicherplätze zu löschen, die den vertraulichen Informationen zugeordnet sind. Die [SecureZeroMemory-Funktion]( /previous-versions/windows/desktop/legacy/aa366877(v=vs.85)) ist in WinBase.h definiert.
+4.  Verwenden Sie die GetScheme-Funktion, um das Authentifizierungsschema abzurufen, das zum Herstellen einer Verbindung mit dem Server verwendet werden soll.
 
     ```C++
     bool GetScheme( LPCWSTR s, BG_AUTH_SCHEME *scheme )
@@ -71,22 +71,22 @@ In diesem Beispiel werden der Header und die Implementierung verwendet, die in [
 
     
 
-5.  Füllen Sie die [**BG \_ auth- \_ Anmelde**](/windows/desktop/api/Bits1_5/ns-bits1_5-bg_auth_credentials) Informationsstruktur mit dem Authentifizierungsschema, das von der getscheme-Funktion zurückgegeben wird, und dem Benutzernamen und dem Kennwort, die an die Funktion ServerAuthentication übermittelt wurden
-6.  Einen Zeiger auf die [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstelle (pjob) erhalten.
-7.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity). Bits erfordert mindestens die Identitätswechsel Ebene des Identitäts Wechsels. Bits schlägt mit E \_ AccessDenied fehl, wenn die korrekte Identitätswechsel Ebene nicht festgelegt ist.
-8.  Rufen Sie einen Zeiger auf die [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle ab, und rufen Sie den anfänglichen Serverlocatorpunkt in Bits ab, indem Sie die [CoCreateInstance]( /windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufrufen.
-9.  Erstellen Sie einen Bits-Übertragungs Auftrag, indem Sie die [**ibackgroundcopymanager:: createjob**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) -Methode aufrufen.
-10. Rufen Sie einen Zeiger auf die cnotifyinterface-Rückruf Schnittstelle ab, und rufen Sie die [**ibackgroundcopyjob:: setnotifyinterface**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface) -Methode auf, um Benachrichtigungen über auftragsbezogene Ereignisse zu empfangen. Weitere Informationen zu cnotifyinterface finden Sie unter [Beispiel: allgemeine Klassen](common-classes.md).
-11. Aufrufen der [**ibackgroundcopyjob:: setnotifyflags**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) -Methode, um die Benachrichtigungs Typen festzulegen, die empfangen werden sollen. In diesem Beispiel werden die **\_ \_ \_ Fehlerflags** **BG \_ Notify \_ Job \_ übertragen** und BG notify Job festgelegt.
-12. Einen Zeiger auf die [**IBackgroundCopyJob2**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2) -Schnittstelle erhalten. Verwenden Sie den **IBackgroundCopyJob2** -Zeiger, um zusätzliche Eigenschaften für den Auftrag festzulegen. Dieses Programm verwendet die [**IBackgroundCopyJob2:: setanmelde**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setcredentials) -Methode, um die Anmelde Informationen für den Bits-Übertragungs Auftrag festzulegen.
-13. Fügen Sie dem Bits-Übertragungs Auftrag Dateien hinzu, indem Sie [**ibackgroundcopyjob:: AddFile**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-addfile)aufrufen. In diesem Beispiel verwendet die **ibackgroundcopyjob:: AddFile** -Methode die remotefile-und LocalFile-Variablen, die an die Funktion ServerAuthentication übermittelt wurden.
-14. Nachdem die Datei hinzugefügt wurde, wenden Sie [**ibackgroundcopyjob:: Resume**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) an, um den Auftrag fortzusetzen.
-15. Richten Sie eine while-Schleife ein, um auf die beendenmeldung von der Rückruf Schnittstelle zu warten, während der Auftrag übertragen wird.
+5.  Füllen Sie die [**BG \_ AUTH \_ CREDENTIALS-Struktur**](/windows/desktop/api/Bits1_5/ns-bits1_5-bg_auth_credentials) mit dem von der GetScheme-Funktion zurückgegebenen Authentifizierungsschema und dem Benutzernamen und Kennwort auf, die an die ServerAuthentication-Funktion übergeben wurden.
+6.  Abrufen eines Zeigers auf die [**IBackgroundCopyJob-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) (pJob).
+7.  Initialisieren Sie die COM-Prozesssicherheit, indem [Sie CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)aufrufen. BITS erfordert mindestens die IMPERSONATE-Ebene des Identitätswechsels. BITS schlägt mit E \_ ACCESSDENIED fehl, wenn die richtige Identitätswechselebene nicht festgelegt ist.
+8.  Rufen Sie einen Zeiger auf die [**IBackgroundCopyManager-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) ab, und rufen Sie den ersten Locator zu BITS ab, indem Sie die [CoCreateInstance-Funktion]( /windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) aufrufen.
+9.  Erstellen Sie einen BITS-Übertragungsauftrag, indem Sie die [**IBackgroundCopyManager::CreateJob-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) aufrufen.
+10. Rufen Sie einen Zeiger auf die CNotifyInterface-Rückrufschnittstelle ab, und rufen Sie die [**IBackgroundCopyJob::SetNotifyInterface-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface) auf, um Benachrichtigungen über auftragsbezogene Ereignisse zu empfangen. Weitere Informationen zu CNotifyInterface finden Sie unter [Beispiel: Allgemeine Klassen.](common-classes.md)
+11. Rufen Sie die [**IBackgroundCopyJob::SetNotifyFlags-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) auf, um die zu empfangende Benachrichtigungstypen festzulegen. In diesem Beispiel werden die Flags **BG \_ NOTIFY JOB \_ \_ TRANSFERD** und **BG NOTIFY JOB \_ \_ \_ ERROR** festgelegt.
+12. Abrufen eines Zeigers auf die [**IBackgroundCopyJob2-Schnittstelle.**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2) Verwenden Sie den **IBackgroundCopyJob2-Zeiger,** um zusätzliche Eigenschaften für den Auftrag festzulegen. Dieses Programm verwendet die [**IBackgroundCopyJob2::SetCredentials-Methode,**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setcredentials) um die Anmeldeinformationen für den BITS-Übertragungsauftrag festzulegen.
+13. Fügen Sie dateien zum BITS-Übertragungsauftrag hinzu, indem [**Sie IBackgroundCopyJob::AddFile**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-addfile)aufrufen. In diesem Beispiel verwendet die **IBackgroundCopyJob::AddFile-Methode** die Variablen remoteFile und localFile, die an die ServerAuthentication-Funktion übergeben wurden.
+14. Nachdem die Datei hinzugefügt wurde, rufen [**Sie IBackgroundCopyJob::Resume**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) auf, um den Auftrag fortzusetzen.
+15. Richten Sie eine while-Schleife ein, um während der Auftragsübertragung von der Rückrufschnittstelle auf Die Nachricht beenden zu warten.
 
     > [!Note]  
-    > Dieser Schritt ist nur erforderlich, wenn es sich bei dem com-Apartment um ein Single Thread-Apartment handelt. Weitere Informationen finden Sie unter [Single Thread Apartments](../com/single-threaded-apartments.md).
+    > Dieser Schritt ist nur erforderlich, wenn das COM-Apartment ein Singlethread-Apartment ist. Weitere Informationen finden Sie unter [Singlethread-Apartment.](../com/single-threaded-apartments.md)
 
-     
+     
 
     ```C++
     // Wait for QuitMessage from CallBack
@@ -111,11 +111,11 @@ In diesem Beispiel werden der Header und die Implementierung verwendet, die in [
 
     
 
-    Die vorhergehende Schleife verwendet die [GetTickCount](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) -Funktion, um die Anzahl der Millisekunden abzurufen, die seit Beginn der Übertragung des Auftrags verstrichen sind.
+    Die vorangehende Schleife verwendet die [GetTickCount-Funktion,](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) um die Anzahl der Millisekunden abzurufen, die seit der Übertragung des Auftrags verstrichen sind.
 
-16. Nachdem der Bits-Übertragungs Auftrag fertiggestellt wurde, entfernen Sie den Auftrag aus der Warteschlange, indem Sie [**ibackgroundcopyjob:: Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)aufrufen.
+16. Nachdem der BITS-Übertragungsauftrag abgeschlossen ist, entfernen Sie den Auftrag aus der Warteschlange, indem [**Sie IBackgroundCopyJob::Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)aufrufen.
 
-Im folgenden Codebeispiel werden Anmelde Informationen für die Server Authentifizierung für einen Bits-Übertragungs Auftrag angegeben.
+Im folgenden Codebeispiel werden Anmeldeinformationen für die Serverauthentifizierung für einen BITS-Übertragungsauftrag angegeben.
 
 
 ```C++
@@ -365,7 +365,7 @@ void _cdecl _tmain(int argc, LPWSTR* argv)
 
 <dl> <dt>
 
-[**Ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager)
+[**IBackgroundCopyManager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager)
 </dt> <dt>
 
 [**IBackgroundCopyJob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob)
@@ -374,9 +374,9 @@ void _cdecl _tmain(int argc, LPWSTR* argv)
 [**IBackgroundCopyJob2**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2)
 </dt> <dt>
 
-[Beispiel: allgemeine Klassen](common-classes.md)
+[Beispiel: Allgemeine Klassen](common-classes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

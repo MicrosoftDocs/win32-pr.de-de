@@ -6,85 +6,85 @@
       items:
         - name: Ereignistypen
           href: event-types.md
-        - name: Protokollierungs Richtlinien
+        - name: Protokollierungsrichtlinien
           href: logging-guidelines.md
-        - name: Ereignis Protokollierungs Elemente
+        - name: Ereignisprotokollierungselemente
           href: event-logging-elements.md
           items:
-            - name: EventLog-Schlüssel
+            - name: Eventlog-Schlüssel
               href: eventlog-key.md
             - name: Ereignisquellen
               href: event-sources.md
             - name: Ereigniskategorien
               href: event-categories.md
-            - name: Ereignis Bezeichner
+            - name: Ereignisbezeichner
               href: event-identifiers.md
-            - name: Nachrichten Dateien
+            - name: Nachrichtendateien
               href: message-files.md
               items:
-                - name: Meldungs Text Dateien
+                - name: Meldungstextdateien
                   href: message-text-files.md
-                - name: Textdatei der Beispiel Nachricht
+                - name: Beispiel für eine Meldungstextdatei
                   href: sample-message-text-file.md
-            - name: Ereignisprotokoll Datensätze
+            - name: Ereignisprotokolldatensätze
               href: event-log-records.md
             - name: Ereignisdaten
               href: event-data.md
-        - name: Ereignis Protokollierungs Vorgänge
+        - name: Ereignisprotokollierungsvorgänge
           href: event-logging-operations.md
-        - name: Ereignis Protokollierungs Modell
+        - name: Ereignisprotokollierungsmodell
           href: event-logging-model.md
           items:
-            - name: Format der Ereignisprotokoll Datei
+            - name: Ereignisprotokolldateiformat
               href: event-log-file-format.md
             - name: Lesen aus dem Ereignisprotokoll
               href: reading-from-the-event-log.md
-            - name: Anzeigen des Ereignis Protokolls
+            - name: Anzeigen des Ereignisprotokolls
               href: viewing-the-event-log.md
-        - name: Sicherheit der Ereignisprotokollierung
+        - name: Ereignisprotokollierungssicherheit
           href: event-logging-security.md
     - name: Verwenden der Ereignisprotokollierung
       href: using-event-logging.md
       items:
-        - name: Abfragen von Ereignis Informationen
+        - name: Abfragen von Ereignisinformationen
           href: querying-for-event-source-messages.md
         - name: Berichterstellung für Ereignisse
           href: reporting-an-event.md
-        - name: Empfangen der Ereignis Benachrichtigung
+        - name: Empfangen von Ereignisbenachrichtigungen
           href: receiving-event-notification.md
-    - name: Referenz zur Ereignisprotokollierung
+    - name: Ereignisprotokollierungsreferenz
       href: event-logging-reference.md
       items:
-        - name: Funktionen zur Ereignisprotokollierung
+        - name: Ereignisprotokollierungsfunktionen
           href: event-logging-functions.md
           items:
-            - name: Backupeer-Protokoll
+            - name: BackupEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-backupeventloga
-            - name: Cleareventlog
+            - name: ClearEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-cleareventloga
-            - name: Closeeventlog
+            - name: CloseEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-closeeventlog
-            - name: Deregistereventsource
+            - name: DeregisterEventSource
               href: /windows/desktop/api/Winbase/nf-winbase-deregistereventsource
-            - name: Geteventloginformation
+            - name: GetEventLogInformation
               href: /windows/desktop/api/Winbase/nf-winbase-geteventloginformation
-            - name: Getnumofeventlogrecords
+            - name: GetNumberOfEventLogRecords
               href: /windows/desktop/api/Winbase/nf-winbase-getnumberofeventlogrecords
-            - name: Getoldesteventlogrecord
+            - name: GetOldestEventLogRecord
               href: /windows/desktop/api/Winbase/nf-winbase-getoldesteventlogrecord
-            - name: Notifychangeeventlog
+            - name: NotifyChangeEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-notifychangeeventlog
-            - name: Openbackupeer ventlog
+            - name: OpenBackupEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-openbackupeventloga
             - name: OpenEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-openeventloga
             - name: ReadEventLog
               href: /windows/desktop/api/Winbase/nf-winbase-readeventloga
-            - name: Registereventsource
+            - name: RegisterEventSource
               href: /windows/desktop/api/Winbase/nf-winbase-registereventsourcea
             - name: ReportEvent
               href: /windows/desktop/api/Winbase/nf-winbase-reporteventa
-        - name: Ereignis Protokollierungs Strukturen
+        - name: Ereignisprotokollierungsstrukturen
           href: event-logging-structures.md
           items:
             - name: ELF_EOF_RECORD

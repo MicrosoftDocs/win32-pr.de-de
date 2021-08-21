@@ -1,37 +1,38 @@
 ---
-description: Dieser Artikel enthält einen Index der Dokumentation zu den verfügbaren Win32-APIs für Windows-Features und-Technologien.
+description: Dieser Artikel enthält einen Index der Dokumentation zu den verfügbaren Win32-APIs für Windows Features und Technologien.
 ms.assetid: FF115416-220F-4FCD-8690-F9C0890CD6CC
 title: Desktop-App-Technologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b5b6e077c5f8fde2e723fbf9a971cbe09b8d008
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: fd764c23b38e7239cea1d4d26d018ecbf9711b22
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106373552"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812218"
 ---
 # <a name="desktop-app-technologies"></a>Desktop-App-Technologien
 
-Dieser Abschnitt enthält ausführliche Anleitungen und Codebeispiele zu Windows-Features, die für Desktop Anwendungen mithilfe der Win32-API verfügbar sind.
+Dieser Abschnitt enthält ausführliche Anleitungen und Codebeispiele zu Windows Features, die desktopanwendungen mithilfe der Win32-API zur Verfügung stehen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG  |  
+| Thema | Beschreibung  |  
 |----------------------------------|---|
-| [Bedienungshilfen](accessibility/accessibility.md) | Bietet Anleitungen für Windows-Entwickler, die barrierefreie Anwendungen entwerfen, hilfstechnologieentwickler, die Tools wie Sprachausgabe und Bildschirmlupe erstellen, und Softwaretest Techniker, die automatisierte Skripts zum Testen von Windows-Anwendungen erstellen. |
-| [Desktop-Benutzeroberfläche](windows-application-ui-development.md) | Bietet Informationen, die es Ihnen ermöglichen, grafische Benutzeroberflächen für Ihre apps zu entwickeln, einschließlich Funktionen wie Windows und Nachrichten, Ressourcen und Steuerelemente. |
-| [Desktop Umgebung](user-interface.md) | Enthält Anleitungen zum integrieren und Erweitern der Desktop-Benutzer seitigen Features von Windows, einschließlich der Taskleiste, des Desktops und des Datei-Explorers. |
-| [Anwendungsinstallation und -wartung](application-installing-and-servicing.md) | Bietet Informationen zur Verwendung von APIs und Diensten, die von Windows zur Installation, Verwaltung und Wartung Ihrer Desktop-Apps bereitgestellt werden. |
-| [Audio und Video](audio-and-video.md) | Enthält Anleitungen zur Verwendung von von Windows bereitgestellten Audiofunktionen und Videofunktionen. |
-| [Datenzugriff und -speicherung](data-access-and-storage.md) | Bietet Informationen zu Datenzugriffs-und Speicher Features, die Sie in Ihren Desktop Anwendungen verwenden können, einschließlich Dateisystem Verwaltung und Cloud Sync Engines.  |
+| [Bedienungshilfen](accessibility/accessibility.md) | Bietet Anleitungen für Entwickler Windows die barrierefreie Anwendungen entwerfen, Hilfstechnologieentwickler, die Tools wie Sprach- und Bildschirmlupe erstellen, und Softwaretesttechniker, die automatisierte Skripts zum Testen Windows erstellen. |
+| [Desktop-Benutzeroberfläche](windows-application-ui-development.md) | Stellt Informationen bereit, mit denen Sie grafische Benutzeroberflächen für Ihre Apps entwickeln können, einschließlich Features wie Fenster und Nachrichten, Ressourcen und Steuerelemente. |
+| [Desktopumgebung](user-interface.md) | Enthält Anleitungen zum Integrieren und Erweitern der desktopbenutzerorientierten Features von Windows, einschließlich Taskleiste, Desktop und Datei-Explorer. |
+| [Anwendungsinstallation und -wartung](application-installing-and-servicing.md) | Enthält Informationen zur Verwendung von APIs und Diensten, die von Windows zum Installieren, Verwalten und Verwalten Ihrer Desktop-Apps bereitgestellt werden. |
+| [Audio und Video](audio-and-video.md) | Enthält Anleitungen zur Verwendung von Audio- und Videofeatures, die von Windows. |
+| [Datenzugriff und -speicherung](data-access-and-storage.md) | Enthält Informationen zu Datenzugriffs- und Speicherfeatures, die Sie in Ihren Desktopanwendungen verwenden können, einschließlich Dateisystemverwaltung und Cloudsynchronisierungs-Engines.  |
 | [Geräte](devices.md) | Beschreibt APIs für die Interaktion mit Geräten und Sensoren. |
-| [Diagnose](diagnostics.md) | Enthält Anleitungen zum Debuggen und zur Fehlerbehandlung, zur Leistungsprofil Erstellung, zur Netzwerküberwachung und anderen Diagnose Features. |
-| [Dokumente und Drucken](printdocs/documents-and-printing.md) | Beschreibt die Dokumente und Druck Features von Windows, die es Anwendungen ermöglichen, zu speichern, anzuzeigen und zu drucken.  |
-| [Grafik und Spiele](graphics-and-multimedia.md) | Bietet Informationen zu Grafik-und Spiel Features von Windows, einschließlich DirectX und digitaler Abbild Erstellung.  |
-| [Netzwerke und Internet](networking.md) | Bietet Anleitungen zu den Netzwerk-und Internet bezogenen Features von Windows, einschließlich Netzwerkverwaltung, http-APIs und Remote Prozedur Aufruf (RPC). |
-| [Sicherheit und Identität](security.md) | Bietet Informationen zur Authentifizierung, Autorisierung, Kryptografie und anderen Sicherheitsfeatures von Windows. |
-| [Systemdienste](system-services.md) | Bietet Anleitungen zu grundlegenden Betriebssystemfunktionen wie Prozess und Threads, Dienste, Dynamic Link Libraries, com, der Registrierung und mehr. |
+| [Diagnose](diagnostics.md) | Enthält Anleitungen zum Debuggen und zur Fehlerbehandlung, Leistungsprofilerstellung, Netzwerküberwachung und anderen Diagnosefunktionen. |
+| [Dokumente und Drucken](printdocs/documents-and-printing.md) | Beschreibt die Dokumente und Druckfeatures von Windows, mit denen Anwendungen speichern, anzeigen und drucken können.  |
+| [Grafik und Spiele](graphics-and-multimedia.md) | Enthält Informationen zu Grafik- und Gamingfunktionen von Windows, einschließlich DirectX und digitaler Bildverarbeitung.  |
+| [Netzwerke und Internet](networking.md) | Enthält Anleitungen zu netzwerk- und internetbezogenen Features von Windows, einschließlich Netzwerkverwaltung, HTTP-APIs und Remoteprozeduraufruf (RPC). |
+| [Sicherheit und Identität](security.md) | Enthält Informationen zur Authentifizierung, Autorisierung, Kryptografie und anderen Sicherheitsfeatures Windows. |
+| [Systemdienste](system-services.md) | Enthält Anleitungen zu grundlegenden Betriebssystemfeatures wie Prozess und Threads, Diensten, Dynamic Link Libraries, COM, der Registrierung und mehr. |
+| [KI und Machine Learning](/windows/ai/) | Nutzen Sie die Leistungsfähigkeit der Künstlichen Intelligenz, um Ihre Windows-Anwendung zu transformieren. Mit Windows KI können Sie und Ihr Unternehmen mehr erreichen, indem Sie für komplexe Probleme intelligente Lösungen bereitstellen. |
 
 <!--
 <br/>

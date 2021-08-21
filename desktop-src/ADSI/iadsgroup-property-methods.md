@@ -67,11 +67,11 @@ HRESULT put_Description(
 
 ### <a name="using-iadsgroup-to-retrieve-descriptions-of-built-in-groups"></a>Verwenden von IADsGroup zum Abrufen von Beschreibungen integrierter Gruppen
 
-In den folgenden Beispielen wird gezeigt, wie Sie Informationen zu Windows Nach Namen gruppieren. In einer mehrsprachigen Umgebung sind integrierte Gruppen manchmal durch verschiedene lokalisierte Namen bekannt, was bedeutet, dass sie nicht direkt mithilfe von Zeichenfolgenbezeichnern wie "WinNT://Microsoft/Administrators" abgerufen werden können. In diesem Fall kann der Benutzer eine Bindung an das bekannte SID-Objekt für die Gruppe erstellen, den lokalisierten Gruppennamen abrufen und an die GetObject-Methode angeben. Weitere Informationen finden Sie unter [Bekannte SIDs.](/windows/desktop/SecAuthZ/well-known-sids)
+In den folgenden Beispielen wird gezeigt, wie Sie Informationen zu Windows nach Namen gruppieren. In einer mehrsprachigen Umgebung sind integrierte Gruppen manchmal durch verschiedene lokalisierte Namen bekannt, was bedeutet, dass sie nicht direkt mithilfe von Zeichenfolgenbezeichnern wie "WinNT://Microsoft/Administrators" abgerufen werden können. In diesem Fall kann der Benutzer eine Bindung an das bekannte SID-Objekt für die Gruppe erstellen, den lokalisierten Gruppennamen abrufen und an die GetObject-Methode angeben. Weitere Informationen finden Sie unter [Bekannte SIDs.](/windows/desktop/SecAuthZ/well-known-sids)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Visual Basic wird veranschaulicht, wie eine Bindung an ein Gruppenobjekt erstellt und die Beschreibung der Gruppe angezeigt wird.
+Das folgende Visual Basic zeigt, wie eine Bindung an ein Gruppenobjekt erstellt und die Beschreibung der Gruppe angezeigt wird.
 
 
 ```VB
@@ -132,7 +132,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

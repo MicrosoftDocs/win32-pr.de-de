@@ -1,38 +1,38 @@
 ---
-description: Typen von com+-Anwendungen
+description: Typen von COM+-Anwendungen
 ms.assetid: 4b731f22-6837-4c03-9c8c-a76451369cf1
-title: Typen von com+-Anwendungen
+title: Typen von COM+-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fb365863ee2b2fbe41997facdf21d84866af1f6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 13bf55f7c2f25c490f0806a7924d32c6cbf981e79b8461ba12fc0f95964691c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499670"
 ---
-# <a name="types-of-com-applications"></a>Typen von com+-Anwendungen
+# <a name="types-of-com-applications"></a>Typen von COM+-Anwendungen
 
-Im folgenden sind die vier grundlegenden Typen von com+-Anwendungen aufgeführt:
+Es folgen die vier grundlegenden Typen von COM+-Anwendungen:
 
--   **Server Anwendungen.** Eine com+- *Serveranwendung* wird in einem eigenen Prozess ausgeführt. Server Anwendungen können alle com+-Dienste unterstützen.
--   **Bibliotheksanwendungen.** Eine com+- *Bibliotheks Anwendung* wird im Prozess des Clients ausgeführt, von dem Sie erstellt wird. Genauer gesagt werden die Komponenten in einer Bibliotheks Anwendung immer in den Prozess des Erstellers geladen. Bibliotheksanwendungen sind nicht explizit einem Server Prozess zugeordnet. Sie können rollenbasierte Sicherheit verwenden, aber keinen Remote Zugriff oder in die Warteschlange eingereihten Komponenten unterstützen.
--   **Anwendungs Proxys.** Bei einem *Anwendungs Proxy* handelt es sich um einen Satz von Dateien mit Registrierungsinformationen, die einem Client den Remote Zugriff auf eine Serveranwendung ermöglichen. Wenn die Anwendung auf einem Client Computer ausgeführt wird, werden Informationen über die COM+-Serveranwendung, einschließlich CLSIDs, ProgIDs, Remoteservername und Marshallinginformationen, auf den Client Computer geschrieben. Auf die Serveranwendung kann dann vom Client Computer aus Remote zugegriffen werden.
--   **Vorinstallierte com+-Anwendungen**. Com+ umfasst eine Reihe von vorinstallierten Anwendungen, die interne Funktionen verarbeiten. Die vorinstallierten Anwendungen sind im Ordner "com+-Anwendungen" im Verwaltungs Programm "Komponenten Dienste" aufgeführt, können jedoch nicht geändert oder gelöscht werden. Zu diesen Anwendungen zählen die folgenden:
-    -   .Net-Hilfsprogramme
-    -   Analysesteuerelement-Verleger Anwendung
-    -   Com+-Explorer
-    -   Anqueue-Listener für com+-QC
-    -   Com+-Hilfsprogramme
-    -   IIS-In-Process Anwendungen
-    -   In einem Pool zusammengefasste IIS-Anwendungen
-    -   System Anwendung
+-   **Serveranwendungen.** Eine *COM+-Serveranwendung* wird in einem eigenen Prozess ausgeführt. Serveranwendungen können alle COM+-Dienste unterstützen.
+-   **Bibliotheksanwendungen.** Eine *COM+-Bibliotheksanwendung* wird im Prozess des Clients ausgeführt, der sie erstellt. Genauer gesagt werden die Komponenten in einer Bibliotheksanwendung immer in den Prozess des Erstellers geladen. Bibliotheksanwendungen sind nicht explizit einem Serverprozess zugeordnet. Sie können rollenbasierte Sicherheit verwenden, unterstützen jedoch keinen Remotezugriff oder Komponenten in der Warteschlange.
+-   **Anwendungsproxys.** Ein *Anwendungsproxy* ist ein Satz von Dateien, die Registrierungsinformationen enthalten, mit denen ein Client remote auf eine Serveranwendung zugreifen kann. Wenn sie auf einem Clientcomputer ausgeführt wird, schreibt eine Anwendungsproxydatei Informationen zur COM+-Serveranwendung, einschließlich CLSIDs, ProgIDs, RemoteServerName und Marshallinginformationen, auf den Clientcomputer. Der Remotezugriff auf die Serveranwendung ist dann über den Clientcomputer möglich.
+-   **VORinstallierte COM+-Anwendungen**. COM+ enthält eine Reihe von vorinstallierten Anwendungen, die interne Funktionen verarbeiten. Die vorinstallierten Anwendungen werden im Ordner COM+-Anwendungen im Verwaltungstool Komponentendienste aufgeführt, können jedoch nicht geändert oder gelöscht werden. Diese Anwendungen umfassen Folgendes:
+    -   .NET-Hilfsprogramme
+    -   Analyzer-Steuerelement Publisher Anwendung
+    -   COM+-Explorer
+    -   COM+ QC Dead Letter Queue Listener
+    -   COM+-Hilfsprogramme
+    -   IIS In-Process-Anwendungen
+    -   Out-of-Process-Poolanwendungen für IIS
+    -   Systemanwendung
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
-Ab Windows Server 2003 ist es möglich, com+-Anwendungen auszuführen, auch wenn die System Anwendung deaktiviert ist. Die com+-Anwendungen werden jedoch ohne die Dienste, die normalerweise von der System Anwendung bereitgestellt werden, ausgeführt. Diese Dienste umfassen die Verwendung des Verwaltungs Programms Komponenten Dienste und der System Ereignis Verfolgung.
+Ab Windows Server 2003 ist es möglich, COM+-Anwendungen auszuführen, auch wenn die Systemanwendung deaktiviert ist. Die COM+-Anwendungen werden ausgeführt, jedoch ohne die Dienste, die normalerweise von der Systemanwendung bereitgestellt werden. Zu diesen Diensten gehören die Verwendung des Verwaltungstools "Komponentendienste" und die Nachverfolgung von Systemereignissen.
 
-Ebenso wie Windows Server 2003 enthält die Authentifizierungsfunktion für die com+-System Anwendung den Wert eoac- \_ deaktivierte \_ AAA. Dieser Wert, der Aktivierungen von Aktivierungen durch aktivierte Aktivierungen deaktiviert, wird zusammen mit der [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) -Funktion verwendet, wenn die System Anwendung gestartet wird. Wenn Sie die Authentifizierungsfunktion auf eoac \_ deaktivieren, \_ kann eine Anwendung, die unter einem privilegierten Konto (z. b. LocalSystem) ausgeführt wird, verhindern, dass Ihre Identität verwendet wird, um nicht vertrauenswürdige Komponenten zu starten.
+Ab Windows Server 2003 enthält die Authentifizierungsfunktion für die COM+-Systemanwendung auch den Wert EOAC \_ DISABLE \_ AAA. Dieser Wert, der AKTIVIERUNGSAKTIVATOR-Aktivierungen (AAA) deaktiviert, wird beim Starten der Systemanwendung mit der [**CoInitializeSecurity-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) verwendet. Wenn Sie die Authentifizierungsfunktion auf EOAC \_ DISABLE \_ AAA festlegen, kann eine Anwendung, die unter einem privilegierten Konto (z. B. LocalSystem) ausgeführt wird, verhindern, dass ihre Identität zum Starten nicht vertrauenswürdiger Komponenten verwendet wird.
 
  
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_INDEX_COLUMN. ColumnID-Eigenschaft.
-title: JET_INDEX_COLUMN. ColumnID-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: JET_INDEX_COLUMN.columnid-Eigenschaft'
+title: JET_INDEX_COLUMN.columnid-Eigenschaft (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'columnid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Windows8.JET_INDEX_COLUMN.columnid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_index_column.columnid(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 45955c1255f8b46a6fd7dd729398a479146ea6ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fbb5cce3ccaa809ab56e5538fd2875c4b1d471639245e71a3c1b84159d4fbd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039128"
 ---
-# <a name="jet_index_columncolumnid-property"></a>JET_INDEX_COLUMN. ColumnID-Eigenschaft
+# <a name="jet_index_columncolumnid-property"></a>JET_INDEX_COLUMN.columnid-Eigenschaft
 
-Ruft den Spalten Bezeichner für die abzurufende Spalte ab oder legt ihn fest.
+Ruft den Spaltenbezeichner für die abzurufende Spalte ab oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_COLUMNID columnid { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEX_COLUMN-Klasse](./jet-index-column-class.md)
 
-[Mitglieder JET_INDEX_COLUMN](./jet-index-column-members.md)
+[JET_INDEX_COLUMN-Member](./jet-index-column-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

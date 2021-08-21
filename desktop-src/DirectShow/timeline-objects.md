@@ -1,43 +1,43 @@
 ---
-description: Timeline-Objekte
+description: Zeitachsenobjekte
 ms.assetid: da426964-d5bd-45ca-a914-c19062f3564b
-title: Timeline-Objekte
+title: Zeitachsenobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 580286b31afd77f064411dd29d60a62b80bfb51a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbcf3496770dee7664e08ffabe6537356c7b37ad13abee1dce149698748745e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072304"
 ---
-# <a name="timeline-objects"></a>Timeline-Objekte
+# <a name="timeline-objects"></a>Zeitachsenobjekte
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Jeder Objekttyp in der Zeitachse – Quelle, Track, Effect usw. – ist ein eindeutiges com-Objekt. Eine Anwendung erstellt Sie jedoch nicht mithilfe der **cokreatanstance** -Funktion. Stattdessen wird die [**iamtimeline:: erkreateemptynode**](iamtimeline-createemptynode.md) -Methode aufgerufen. Diese Methode erstellt ein Objekt des angeforderten Typs, initialisiert es und gibt einen Zeiger auf das-Objekt zurück. Weitere Informationen finden Sie unter [Erstellen einer Zeitachse](constructing-a-timeline.md).
+Jeder Objekttyp in der Zeitachse ( Quelle, Nachverfolgung, Effekt usw.) ist ein eindeutiges COM-Objekt. Eine Anwendung erstellt sie jedoch nicht mithilfe der **CoCreateInstance-Funktion.** Stattdessen wird die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) aufruft. Diese Methode erstellt ein Objekt des angeforderten Typs, initialisiert es und gibt einen Zeiger auf das -Objekt zurück. Weitere Informationen finden Sie unter [Erstellen einer Zeitachse.](constructing-a-timeline.md)
 
-Jedes Zeitachsen Objekt macht die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle verfügbar. Außerdem unterstützen die verschiedenen Objekttypen ihre eigenen spezialisierten Schnittstellen:
+Jedes Zeitachsenobjekt macht die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) verfügbar. Darüber hinaus unterstützen die verschiedenen Objekttypen ihre eigenen spezialisierten Schnittstellen:
 
--   Quelle: [ **iamtimelinesrc**](iamtimelinesrc.md)
--   Nachverfolgung: [ **iamtimelinetrack**](iamtimelinetrack.md)
--   Komposition: [ **iamtimelinecomp**](iamtimelinecomp.md)
--   Gruppe: [**iamtimelinecomp**](iamtimelinecomp.md), [**iamtimelinegroup**](iamtimelinegroup.md)
--   Auswirkung: [ **iamtimelineeffect**](iamtimelineeffect.md)
--   Übergang: [ **iamtimelinetrans**](iamtimelinetrans.md)
+-   Quelle: [ **IAMTimelineSrc**](iamtimelinesrc.md)
+-   Track: [ **IAMTimelineTrack**](iamtimelinetrack.md)
+-   Komposition: [ **IAMTimelineComp**](iamtimelinecomp.md)
+-   Gruppe: [**IAMTimelineComp,**](iamtimelinecomp.md) [**IAMTimelineGroup**](iamtimelinegroup.md)
+-   Auswirkung: [ **IAMTimelineEffect**](iamtimelineeffect.md)
+-   Übergang: [ **IAMTimelineTrans**](iamtimelinetrans.md)
 
-Beachten Sie, dass Gruppen eine Art der Komposition sind, sodass Sie [**iamtimelinecomp**](iamtimelinecomp.md)und ihre eigene [**iamtimelinegroup**](iamtimelinegroup.md) -Schnittstelle unterstützen.
+Beachten Sie, dass Gruppen eine Art von Komposition sind, sodass sie [**IAMTimelineComp**](iamtimelinecomp.md)sowie ihre eigene [**IAMTimelineGroup-Schnittstelle**](iamtimelinegroup.md) unterstützen.
 
-Zusätzlich zu den zuvor aufgelisteten Schnittstellen stellen Zeitachsen Objekte andere sekundäre Schnittstellen zur Verfügung. Diese Schnittstellen bestimmen die Beziehungen zwischen den Objekttypen.
+Zusätzlich zu den zuvor aufgeführten Schnittstellen machen Zeitachsenobjekte andere sekundäre Schnittstellen verfügbar. Diese Schnittstellen bestimmen die Beziehungen zwischen den Objekttypen.
 
 
 
-| Schnittstelle                                                  | Bedeutung                                                                                                       | Verfügbar von                        |
+| Schnittstelle                                                  | Bedeutung                                                                                                       | Verfügbar gemacht von                        |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| [**Iamtimelinevirtualtrack**](iamtimelinevirtualtrack.md) | Das-Objekt ist ein virtueller Titel. Virtuelle Spuren können sich innerhalb von Kompositionen befinden und andere Zeitachsen Objekte enthalten. | Komposition, Nachverfolgung                |
-| [**Iamtimelineeffectable**](iamtimelineeffectable.md)     | Das-Objekt kann Auswirkungen haben.                                                                                  | Komposition, Nachverfolgung, Quelle        |
-| [**Iamtimelinetransable**](iamtimelinetransable.md)       | Das-Objekt kann über Übergänge verfügen.                                                                              | Komposition, Nachverfolgung                |
-| [**Iamtimelinesplicustom**](iamtimelinesplittable.md)     | Das-Objekt kann in zwei-Objekte aufgeteilt werden.                                                                     | Track, Source, Effect, Transition |
+| [**IAMTimelineVirtualTrack**](iamtimelinevirtualtrack.md) | Das -Objekt ist eine virtuelle Spur. Virtuelle Spuren können sich in Kompositionen befinden und andere Zeitachsenobjekte enthalten. | Komposition, Nachverfolgung                |
+| [**IAMTimelineEffectable**](iamtimelineeffectable.md)     | Das -Objekt kann Auswirkungen haben.                                                                                  | Composition, Track, Source        |
+| [**IAMTimelineTransable**](iamtimelinetransable.md)       | Das -Objekt kann Übergänge haben.                                                                              | Komposition, Nachverfolgung                |
+| [**IAMTimelineSplittable**](iamtimelinesplittable.md)     | Das -Objekt kann in zwei -Objekte aufgeteilt werden.                                                                     | Track, Source, Effect, Transition |
 
 
 
@@ -47,7 +47,7 @@ Zusätzlich zu den zuvor aufgelisteten Schnittstellen stellen Zeitachsen Objekte
 
 <dl> <dt>
 
-[Übersicht über die Zeitachsen Komponenten](overview-of-the-timeline-components.md)
+[Übersicht über die Zeitachsenkomponenten](overview-of-the-timeline-components.md)
 </dt> </dl>
 
  

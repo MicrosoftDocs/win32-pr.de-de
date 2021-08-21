@@ -1,11 +1,11 @@
 ---
-title: Policy-Replication-Flags-Attribut
+title: Attribut "Policy-Replication-Flags"
 description: Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 ms.assetid: 2dadd659-c834-4105-ab3e-8ce0b8811212
 ms.tgt_platform: multiple
 keywords:
-- Richtlinien Replikations-Flags-Attribut AD-Schema
-- policyreplicationflags-Attribut, AD-Schema
+- AD-Schema des Attributs "Policy-Replication-Flags"
+- POLICYReplicationFlags-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42da6509662d11c4a069ba58dff5f648e7ab2261
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ad117106c5a3223641a15d0f996409499fc36475d51e317a0aa2e20357e0e148
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704380"
 ---
-# <a name="policy-replication-flags-attribute"></a>Policy-Replication-Flags-Attribut
+# <a name="policy-replication-flags-attribute"></a>Attribut "Policy-Replication-Flags"
 
 Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 
@@ -29,13 +29,13 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Richtlinienreplizierung: Flags             |
-| LDAP-Display-Name | policyreplicationflags               |
+| CN                | Richtlinienreplikationsflags             |
+| Ldap-Anzeigename | policyReplicationFlags               |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.633               |
-| System-ID-GUID    | 19405b96-3cfa-11d1-a9c0-0000f 80367c1 |
+| System-ID-GUID    | 19405b96-3cfa-11d1-a9c0-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -70,7 +70,7 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -99,11 +99,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -120,11 +120,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -141,11 +141,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -162,11 +162,11 @@ Bestimmt, welche LSA-Eigenschaften auf Clients repliziert werden.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

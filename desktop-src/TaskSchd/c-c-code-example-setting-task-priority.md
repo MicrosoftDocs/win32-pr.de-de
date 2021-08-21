@@ -1,21 +1,21 @@
 ---
-title: C/C++-Code Beispiel festlegen der Aufgaben Priorität
-description: In diesem Beispiel wird die Priorität einer Testaufgabe festgelegt, und anschließend wird die Aufgabe gespeichert. In diesem Beispiel wird davon ausgegangen, dass die Testaufgabe bereits auf dem lokalen Computer vorhanden ist.
+title: C/C++-Codebeispiel zum Festlegen der Aufgabenpriorität
+description: In diesem Beispiel wird die Priorität einer Testaufgabe bestimmt und anschließend der Task speichert. In diesem Beispiel wird davon ausgegangen, dass die Testaufgabe bereits auf dem lokalen Computer vorhanden ist.
 ms.assetid: 498dc438-3703-4d5c-a8b1-609d5776942d
 keywords:
-- Festlegen von Task Eigenschaften Taskplaner, Priorität
+- Festlegen von Aufgabeneigenschaften Taskplaner , Priorität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 540405ebe3544d6fad9418533957ddcda8a567c0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 574d88a10bda5d9de93dde3607618aa3827ee89aa02588e0c1253f7fccdeca12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011640"
 ---
-# <a name="cc-code-example-setting-task-priority"></a>C/C++-Code Beispiel: Festlegen der Aufgaben Priorität
+# <a name="cc-code-example-setting-task-priority"></a>C/C++-Codebeispiel: Festlegen der Taskpriorität
 
-In diesem Beispiel wird die Priorität einer Testaufgabe festgelegt, und anschließend wird die Aufgabe gespeichert. In diesem Beispiel wird davon ausgegangen, dass die Testaufgabe bereits auf dem lokalen Computer vorhanden ist.
+In diesem Beispiel wird die Priorität einer Testaufgabe bestimmt und anschließend der Task speichert. In diesem Beispiel wird davon ausgegangen, dass die Testaufgabe bereits auf dem lokalen Computer vorhanden ist.
 
 
 ```C++
@@ -136,12 +136,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

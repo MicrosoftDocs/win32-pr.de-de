@@ -1,7 +1,7 @@
 ---
-description: Ändert den TPM-Besitzer Autorisierungs Wert.
+description: Ändert den Wert der TPM-Besitzerautorisierung.
 ms.assetid: ed280037-2360-4889-baba-cfa9e4fd473e
-title: Changebesitzauth-Methode der Win32_Tpm-Klasse
+title: ChangeOwnerAuth-Methode der Win32_Tpm-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: fc4b044d58dcaca5364f0ba669b09030cf3b34dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02ca13049df20c57eeb5cc594bde1b247df0eb3829c757b64b8bd31f87e3796b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004678"
 ---
-# <a name="changeownerauth-method-of-the-win32_tpm-class"></a>Changebesitzauth-Methode der Win32- \_ TPM-Klasse
+# <a name="changeownerauth-method-of-the-win32_tpm-class"></a>ChangeOwnerAuth-Methode der Win32 \_ Tpm-Klasse
 
-Mit der **changebesitzauth** -Methode der [**Win32- \_ TPM**](win32-tpm.md) -Klasse wird der TPM-Besitzer Autorisierungs Wert geändert.
+Die **ChangeOwnerAuth-Methode** der [**Win32 \_ Tpm-Klasse**](win32-tpm.md) ändert den Tpm-Besitzerautorisierungswert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,51 +40,51 @@ uint32 ChangeOwnerAuth(
 
 <dl> <dt>
 
-*Oldownerauth* \[ in, optional\]
+*OldOwnerAuth* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die den aktuellen TPM-Besitzer Autorisierungs Wert des Geräts benennt. Verwenden Sie die [**convertdebesitzauth**](converttoownerauth-win32-tpm.md) -Methode, um ein Kennwort in diesen Autorisierungs Wert zu übersetzen. Der *oldownerauth* -Parameter wurde nicht angegeben, oder es wird eine leere Zeichenfolge bereitgestellt. diese Methode ruft den Wert aus der Registrierung ab, falls vorhanden.
+Eine Zeichenfolge, die den aktuellen TPM-Besitzerautorisierungswert des Geräts benennt. Verwenden Sie die [**ConvertToOwnerAuth-Methode,**](converttoownerauth-win32-tpm.md) um ein Kennwort in diesen Autorisierungswert zu übersetzen. Der *OldOwnerAuth-Parameter* wird nicht angegeben, oder es wird eine leere Zeichenfolge angegeben. Diese Methode ruft den Wert aus der Registrierung ab, sofern vorhanden.
 
 </dd> <dt>
 
-" *Netwownerauth* \[ " in, optional\]
+*NewOwnerAuth* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die den neuen TPM-Besitzer Autorisierungs Wert benennt. Verwenden Sie die [**convertdebesitzauth**](converttoownerauth-win32-tpm.md) -Methode, um ein Kennwort in diesen Autorisierungs Wert zu übersetzen. Der Parameter " *netwownerauth* " darf nicht leer oder **NULL sein.**
+Eine Zeichenfolge, die den neuen Wert für die TPM-Besitzerautorisierung benennt. Verwenden Sie die [**ConvertToOwnerAuth-Methode,**](converttoownerauth-win32-tpm.md) um ein Kennwort in diesen Autorisierungswert zu übersetzen. Der *NewOwnerAuth-Parameter* darf nicht leer oder **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Alle TPM-Fehler sowie Fehler, die für die TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für TPM-Basisdienste sind, können zurückgegeben werden.
 
 In der folgenden Tabelle sind einige der allgemeinen Rückgabecodes aufgeführt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                      |
+| Rückgabecode/-wert                                                                                                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                              | Die Methode war erfolgreich.<br/>                                                                                                                                                                                                                                                                                                                                                            |
-| <dl> <dt>**TPM \_ E \_ authfail**</dt> <dt>2150105089 (0x80280001)</dt> </dl>                   | Der aktuelle TPM-Besitzer Autorisierungs Wert ist falsch.<br/>                                                                                                                                                                                                                                                                                                                               |
-| <dl> <dt>**TPM \_ E \_ Verteidigung \_ der \_ Sperre**</dt> mit <dt>2150107139 (0x80280803)</dt> </dl>      | Das TPM steht für Wörterbuchangriffe und befindet sich in einem Timeout Zeitraum. Weitere Informationen finden Sie unter der [**resetauthlockout**](resetauthlockout-win32-tpm.md) -Methode.<br/>                                                                                                                                                                                                             |
-| <dl> <dt>**F \_ E \_ AD- \_ Schema \_ nicht \_ installiert**</dt> <dt>2150694922 (0x8031000a)</dt> </dl> | Wiederherstellungs Informationen können nicht im Netzwerk gespeichert werden. Der Computer wurde so konfiguriert, dass Wiederherstellungs Informationen in Active Directory Domain Services gespeichert werden. Anweisungen zum Einrichten von Active Directory finden Sie [unter BitLocker-Laufwerkverschlüsselung Configuration Guide: Sichern von BitLocker-und TPM-Wiederherstellungs Informationen in Active Directory](/previous-versions/windows/it-pro/windows-vista/cc766015(v=ws.10)).<br/> |
-| <dl> <dt>**Verbindungs**</dt> Fehler <dt>2147943755 (0x8007054b)</dt> </dl>                  | Wiederherstellungs Informationen können nicht im Netzwerk gespeichert werden. Der Computer wurde so konfiguriert, dass Wiederherstellungs Informationen in Active Directory Domain Services gespeichert werden. Eine Netzwerkverbindung ist erforderlich, um den Vorgang fortzusetzen.<br/>                                                                                                                                                                                    |
+| <dl> <dt>**TPM \_ E \_ AUTHFAIL**</dt> <dt>2150105089 (0x80280001)</dt> </dl>                   | Der aktuelle Wert für die TPM-Besitzerautorisierung ist falsch.<br/>                                                                                                                                                                                                                                                                                                                               |
+| <dl> <dt>**TPM \_ E: \_ \_ SPERRE \_ WIRD AUSGEFÜHRT 2150107139**</dt> <dt>(0x80280803)</dt> </dl>      | Das TPM schützt vor Wörterbuchangriffen und befindet sich in einem Time out-Zeitraum. Weitere Informationen finden Sie in der [**ResetAuthLockOut-Methode.**](resetauthlockout-win32-tpm.md)<br/>                                                                                                                                                                                                             |
+| <dl> <dt>**FVE \_ E \_ AD SCHEMA NICHT INSTALLIERT \_ \_ \_ 2150694922**</dt> <dt>(0x8031000A)</dt> </dl> | Wiederherstellungsinformationen können nicht im Netzwerk gespeichert werden. Der Computer wurde so konfiguriert, dass Wiederherstellungsinformationen in Active Directory Domain Services gespeichert werden. Anweisungen zum Einrichten von Active Directory finden Sie unter [BitLocker-Laufwerkverschlüsselung-Konfigurationshandbuch: Sichern von BitLocker- und TPM-Wiederherstellungsinformationen in Active Directory.](/previous-versions/windows/it-pro/windows-vista/cc766015(v=ws.10))<br/> |
+| <dl> <dt>**Verbindungsfehler**</dt> <dt>2147943755 (0x8007054B)</dt> </dl>                  | Wiederherstellungsinformationen können nicht im Netzwerk gespeichert werden. Der Computer wurde so konfiguriert, dass Wiederherstellungsinformationen in Active Directory Domain Services gespeichert werden. Eine Netzwerkverbindung ist erforderlich, um fortzufahren.<br/>                                                                                                                                                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **changebesitzauth** -Methode sichert die neue TPM-Besitzer Autorisierung, um Active Directory Domain Services, wenn die entsprechenden Gruppenrichtlinie Einstellungen konfiguriert wurden.
+Mit der **ChangeOwnerAuth-Methode** wird die neue TPM-Besitzerautorisierung auf Active Directory Domain Services gesichert, wenn die entsprechenden Gruppenrichtlinie Einstellungen konfiguriert wurden.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,19 +92,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

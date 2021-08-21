@@ -1,9 +1,9 @@
 ---
-title: SBM_GETSCROLLBARINFO Meldung (Winuser. h)
+title: SBM_GETSCROLLBARINFO-Nachricht (Winuser.h)
 description: Wird von einer Anwendung gesendet, um Informationen über die angegebene Scrollleiste abzurufen.
 ms.assetid: db6f704f-99ee-448c-ae7a-dd5a23399fb6
 keywords:
-- Windows-Steuerelemente für SBM_GETSCROLLBARINFO Meldung
+- SBM_GETSCROLLBARINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8bdd78eb665bd069d854538bb2bdfae1a946765
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 11f779f237d0ad04fe3e3d8f3348c51c195470280c9b0c20d12c1e245d04a089
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503980"
 ---
-# <a name="sbm_getscrollbarinfo-message"></a>SBM \_ getscrollbarinfo-Meldung
+# <a name="sbm_getscrollbarinfo-message"></a>SBM \_ GETSCROLLBARINFO-Nachricht
 
 Wird von einer Anwendung gesendet, um Informationen über die angegebene Scrollleiste abzurufen.
 
@@ -39,13 +39,13 @@ Nicht verwendet; muss 0 (null) sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**scrollbarinfo**](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) -Struktur, die die Informationen empfängt.
+Zeiger auf eine [**SCROLLBARINFO-Struktur,**](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) die die Informationen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich, andernfalls
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück.
 
 Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
@@ -55,9 +55,9 @@ Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/win
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -65,13 +65,13 @@ Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/win
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetScrollBarInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollbarinfo)
 </dt> <dt>
 
-[**Scrollbarinfo**](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)
+[**SCROLLBARINFO**](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)
 </dt> </dl>
 
  

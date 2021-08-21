@@ -1,9 +1,9 @@
 ---
-title: ICM_GETQUALITY Meldung (VFW. h)
-description: Die ICM \_ getquality-Nachricht fragt einen Video Komprimierungs Treiber ab, um die aktuelle Qualitätseinstellung zurückzugeben.
+title: ICM_GETQUALITY (Vfw.h)
+description: Die ICM \_ GETQUALITY-Nachricht fragt einen Videokomprimierungstreiber ab, um die aktuelle Qualitätseinstellung zurück zu geben.
 ms.assetid: 8da99a26-7b2a-4118-89e1-7485915cbdc9
 keywords:
-- ICM_GETQUALITY-Nachricht (Multimedia)
+- ICM_GETQUALITY-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c4fa2a26e1fe5fa111585ce0a59422a2fe9b072
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cef214fe36c713e63659fcbd4dde2021c8d410b36ea9f5525ed54c76c5c4b6a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119495860"
 ---
-# <a name="icm_getquality-message"></a>ICM \_ getquality-Meldung
+# <a name="icm_getquality-message"></a>\_ICM GETQUALITY-Nachricht
 
-Die **ICM \_ getquality** -Nachricht fragt einen Video Komprimierungs Treiber ab, um die aktuelle Qualitätseinstellung zurückzugeben.
+Die **ICM \_ GETQUALITY-Nachricht** fragt einen Videokomprimierungstreiber ab, um die aktuelle Qualitätseinstellung zurück zu geben.
 
 
 ```C++
@@ -38,16 +38,16 @@ lParam = 0;
 
 <dl> <dt>
 
-<span id="dwICValue"></span><span id="dwicvalue"></span><span id="DWICVALUE"></span>*dwicvalue*
+<span id="dwICValue"></span><span id="dwicvalue"></span><span id="DWICVALUE"></span>*dwICValue*
 </dt> <dd>
 
-Adresse, die den aktuellen Qualitäts Wert enthalten soll. Qualitätswerte liegen im Bereich von 0 bis 10.000.
+Adresse, die den aktuellen Qualitätswert enthalten soll. Die Qualitätswerte liegen zwischen 0 und 10.000.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ICERR \_ OK zurück, wenn der Treiber diese Nachricht unterstützt oder wenn ICERR \_ andernfalls nicht unterstützt wird.
+Gibt ICERR \_ OK zurück, wenn der Treiber diese Meldung unterstützt, andernfalls ICERR \_ UNSUPPORTED.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Gibt ICERR \_ OK zurück, wenn der Treiber diese Nachricht unterstützt oder wen
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt ICERR \_ OK zurück, wenn der Treiber diese Nachricht unterstützt oder wen
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

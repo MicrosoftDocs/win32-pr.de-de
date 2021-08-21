@@ -1,7 +1,7 @@
 ---
-description: Übersetzt eine vom Benutzer bereitgestellte Passphrase-Eingabe in eine 20-Byte-Besitzer Autorisierung, die für die Interaktion mit dem TPM verwendet werden kann. Methoden wie TakeOwnership und resetauthlockout erfordern den resultierenden Besitzer Autorisierungs Wert.
+description: Übersetzt eine vom Benutzer bereitgestellte Passphraseeingabe in eine 20-Byte-Besitzerautorisierung, die für die Interaktion mit dem TPM verwendet werden kann. Methoden wie TakeOwnership und ResetAuthLockOut erfordern den resultierenden Besitzerautorisierungswert.
 ms.assetid: 69eed934-1668-495a-b5b7-cd4a87df1ab3
-title: Converttbesitzauth-Methode der Win32_Tpm-Klasse
+title: ConvertToOwnerAuth-Methode der Win32_Tpm-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: f3de5803d10458156fb453e964d782f7c9760333
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88d1b0f2056d6a10ac623421a7fe261acb832657d08c030ab3247f0acf1a0629
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004648"
 ---
-# <a name="converttoownerauth-method-of-the-win32_tpm-class"></a>Converttbesitzauth-Methode der Win32- \_ TPM-Klasse
+# <a name="converttoownerauth-method-of-the-win32_tpm-class"></a>ConvertToOwnerAuth-Methode der Win32 \_ Tpm-Klasse
 
-Die **converttobesitzauth** -Methode der [**Win32- \_ TPM**](win32-tpm.md) -Klasse übersetzt eine vom Benutzer bereitgestellte Passphrase-Eingabe in eine 20-Byte-Besitzer Autorisierung, die für die Interaktion mit dem TPM verwendet werden kann. Methoden wie [**TakeOwnership**](takeownership-win32-tpm.md) und [**resetauthlockout**](resetauthlockout-win32-tpm.md) erfordern den resultierenden Besitzer Autorisierungs Wert.
+Die **ConvertToOwnerAuth-Methode** der [**Win32 \_ Tpm-Klasse**](win32-tpm.md) übersetzt eine vom Benutzer bereitgestellte Passphraseeingabe in eine 20-Byte-Besitzerautorisierung, die für die Interaktion mit dem TPM verwendet werden kann. Methoden wie [**TakeOwnership**](takeownership-win32-tpm.md) und [**ResetAuthLockOut**](resetauthlockout-win32-tpm.md) erfordern den resultierenden Besitzerautorisierungswert.
 
 Der Konvertierungsprozess folgt den Spezifikationen aus der [Trusted Computing Group](https://www.trustedcomputinggroup.org/).
 
@@ -42,31 +42,31 @@ uint32 ConvertToOwnerAuth(
 
 <dl> <dt>
 
-Besitzer *Passphrase* \[ in\]
+*OwnerPassPhrase* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die in einen Besitzer Autorisierungs Wert konvertiert werden soll. Die Zeichenfolge kann eine beliebige Anzahl von alphanumerischen Zeichen enthalten.
+Eine Zeichenfolge, die in einen Besitzerautorisierungswert konvertiert werden soll. Die Zeichenfolge kann eine beliebige Anzahl alphanumerischer Zeichen enthalten.
 
 </dd> <dt>
 
-Besitzer *des Besitzers* \[ vorgenommen\]
+*OwnerAuth* \[ out\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die vom Besitzer *Passphrase* -Parameter abgeleitet ist. Dieser Wert ist ein 20-Byte-Binärwert, der in eine mit **null** endender Base64-NULL endenden Zeichenfolge codiert ist
+Eine vom *OwnerPassPhrase-Parameter abgeleitete* Zeichenfolge. Dieser Wert ist ein binärer 20-Byte-Wert, der in eine 28-Byte-Base64-Null-terminierte Zeichenfolge codiert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Alle TPM-Fehler sowie Fehler, die für die TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für TPM-Basisdienste sind, können zurückgegeben werden.
 
-In der folgenden Tabelle sind einige der allgemeinen Rückgabecodes aufgeführt.
+In den folgenden Tabellen sind einige der allgemeinen Rückgabecodes aufgeführt.
 
 
 
@@ -78,17 +78,17 @@ In der folgenden Tabelle sind einige der allgemeinen Rückgabecodes aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Unicode-UTF-16LE-codierte Zeichenfolge wird in den 20-Byte-TPM-Besitzer Autorisierungs Wert konvertiert, indem der SHA-1-Hash der binären Darstellung der Zeichenfolge verwendet wird. Der **null** -Abbruch der Unicode-Zeichenfolge ist nicht im Hash enthalten. Im SHA-1-Hash wird kein Salt verwendet.
+Eine UTF-16LE-codierte Unicode-Zeichenfolge wird in den 20-Byte-TPM-Besitzerautorisierungswert konvertiert, indem der SHA-1-Hash der binären Darstellung der Zeichenfolge verwendet wird. Die **NULL-Terminierung** der Unicode-Zeichenfolge ist nicht im Hash enthalten. Im SHA-1-Hash wird kein Salt verwendet.
 
-Wenn Sie z. b. die TPM-Besitzer Passphrase "1sample" in einen TPM-Besitzer Autorisierungs Wert konvertieren möchten, wird der SHA-1-Hash aus dem folgenden Bytestream entnommen:
+Um beispielsweise die TPM-Besitzerpassphrase "1Sample" in einen TPM-Besitzerautorisierungswert zu konvertieren, wird der SHA-1-Hash aus dem folgenden Bytestream entnommen:
 
 `0x31 0x00 0x53 0x00 0x61 0x00 0x6D 0x00 0x70 0x00 0x6C 0x00 0x65 0x00`
 
-Um eine Passphrase der Länge 0 (null) in einen Besitzer Autorisierungs Wert zu konvertieren, wird der SHA-1-Hash aus dem **null** -Bytestream entnommen.
+Um eine Passphrase der Länge 0 (null) in einen Besitzerautorisierungswert zu konvertieren, wird der SHA-1-Hash aus dem NULL-Bytestream übernommen. 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,11 +96,11 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> <dt>
 
 [**TakeOwnership**](takeownership-win32-tpm.md)

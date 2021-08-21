@@ -4,7 +4,7 @@ description: Fügt der Auflistung eine CounterItem-Instanz hinzu.
 ms.assetid: 9daecfe6-c2a9-48af-8b59-4f81f0325535
 keywords:
 - Hinzufügen der SysMon-Methode
-- Hinzufügen der SysMon-Methode, Counters-Klasse
+- Hinzufügen der SysMon-Methode , Counters-Klasse
 - Counters-Klasse SysMon , Add-Methode
 topic_type:
 - apiref
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a36d2b9bdc2edc9565b1eac5ebae335e5fbad80752f572c48c0f1b05c9668de1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: a8d8169980de00338c7fdd0b804013f986a5a7ca
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118883398"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466007"
 ---
 # <a name="countersadd-method"></a>Counters.Add-Methode
 
-Fügt der [**Auflistung eine CounterItem-Instanz**](counteritem.md) hinzu.
+Fügt der Auflistung eine [**CounterItem-Instanz**](counteritem.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +45,9 @@ Counters.Add( _
 *pathname* \[ In\]
 </dt> <dd>
 
-Pfad zum Zähler. Der Pfad kann einen Computernamen enthalten und muss einen Leistungsobjektnamen, einen Objektinstanznamen, wenn das angegebene Leistungsobjekt mehrere Instanzen unterstützt, und einen Indikatornamen enthalten. Bei dieser Pfadspezifikation wird die Kleinschreibung nicht beachtet.
+Pfad zum Leistungsindikator. Der Pfad kann einen Computernamen und einen Leistungsobjektnamen, einen Objektinstanznamen, wenn das angegebene Leistungsobjekt mehrere Instanzen unterstützt, und einen Indikatornamen enthalten. Bei dieser Pfadspezifikation wird die Groß-/Kleinschreibung nicht beachtet.
 
-Weitere Informationen zum Angeben eines Indikatorpfads finden Sie unter [Angeben eines Indikatorpfads.](/windows/desktop/PerfCtrs/specifying-a-counter-path)
+Ausführliche Informationen zum Angeben eines Indikatorpfads finden Sie unter [Angeben eines Indikatorpfads.](/windows/desktop/PerfCtrs/specifying-a-counter-path)
 
 </dd> </dl>
 
@@ -55,28 +55,11 @@ Weitere Informationen zum Angeben eines Indikatorpfads finden Sie unter [Angeben
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Ausnahmetyp</th>
-<th>Bedingung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>System.Runtime.InteropServices.COMException</strong></td>
-<td>Sie können diese Ausnahme aus einem der folgenden Gründe erhalten:
-<ul>
-<li>Das angegebene Leistungsobjekt wurde auf dem Computer nicht gefunden. Der Err.Number-Wert ist 0xC0000BB8.</li>
-<li>Der angegebene Zähler wurde nicht gefunden. Der Err.Number-Wert ist 0xC0000BB9.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Ausnahmetyp | Bedingung | 
+|----------------|-----------|
+| <strong>System.Runtime.InteropServices.COMException</strong> | Sie können diese Ausnahme aus einem der folgenden Gründe erhalten:<ul><li>Das angegebene Leistungsobjekt wurde auf dem Computer nicht gefunden. Der Err.Number-Wert ist 0xC0000BB8.</li><li>Der angegebene Indikator konnte nicht gefunden werden. Der Err.Number-Wert ist 0xC0000BB9.</li></ul> | 
+
 
 
 
@@ -84,11 +67,11 @@ Weitere Informationen zum Angeben eines Indikatorpfads finden Sie unter [Angeben
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen Platzhalterzähler im *Pathname-Parameter* angeben, erstellt die **Add-Methode** ein [**CounterItem-Objekt**](counteritem.md) für jeden erweiterten Pfad. Die **Add-Methode** gibt dann einen Zeiger auf das erste hinzugefügte **CounterItem zurück.**
+Wenn Sie im *Pathname-Parameter* einen Platzhalterzähler angeben, erstellt die **Add-Methode** ein [**CounterItem-Objekt**](counteritem.md) für jeden erweiterten Pfad. Die **Add-Methode** gibt dann einen Zeiger auf das erste **hinzugefügte CounterItem** zurück.
 
-Wenn der Platzhalter zu einem doppelten Leistungsindikator führen würde, wird der Fehler nicht gemeldet, und es wird kein Duplikat erstellt. Wenn eine Fehlerbedingung auftritt, bevor alle Leistungsindikatoren erstellt werden, wird der Fehler gemeldet, und die verbleibenden Leistungsindikatoren werden nicht erstellt.
+Wenn der Platzhalter zu einem doppelten Indikator führen würde, wird der Fehler nicht gemeldet, und es wird kein Duplikat erstellt. Wenn eine Fehlerbedingung auftritt, bevor alle Leistungsindikatoren erstellt werden, wird der Fehler gemeldet, und die verbleibenden Leistungsindikatoren werden nicht erstellt.
 
-Es gibt keine Beschränkung für die Anzahl von Leistungsindikatoren, die Sie hinzufügen können. SYSMON zeigt jedoch nur die ersten 1.024 Leistungsindikatoren in der Auflistung an. Es gibt keine Beschränkung für die Anzahl der Leistungsindikatoren, die SYSMON in einem Bericht anzeigen wird.
+Es gibt keine Beschränkung für die Anzahl von Indikatoren, die Sie hinzufügen können. SYSMON graphiert jedoch nur die ersten 1.024 Leistungsindikatoren in der Sammlung. Es gibt keine Beschränkung für die Anzahl der Leistungsindikatoren, die SYSMON in einem Bericht anzeigt.
 
 Implementieren Sie das [OnCounterAdded-Ereignis,](systemmonitor-oncounteradded.md) um Benachrichtigungen zu erhalten, wenn ein Zähler hinzugefügt wird.
 

@@ -1,5 +1,5 @@
 ---
-description: Gibt eine anwendungsdefinierte Rückruffunktion an, die vom Datei-Manager für die Kommunikation mit einer Datei-Manager-Erweiterung aufgerufen wird.
+description: Gibt eine anwendungsdefinierte Rückruffunktion an, die vom Datei-Manager aufgerufen wird, um mit einer Datei-Manager-Erweiterung zu kommunizieren.
 title: FMExtensionProc-Rückruffunktion (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 6e02d655-f7d8-460a-97d2-5b369493e941
-ms.openlocfilehash: 5e7b1f0142ea77967af15087131d3036aaec505e
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 7cd13fe534f3bb121a4056f67ceff47ddfa71fa5506c2020a243ab340768ce35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032658"
 ---
-# <a name="fmextensionproc-callback-function"></a>RÜCKRUFFUNKTION "FMExtensionProc"
+# <a name="fmextensionproc-callback-function"></a>FMExtensionProc-Rückruffunktion
 
 Gibt eine anwendungsdefinierte Rückruffunktion an, die vom Datei-Manager aufgerufen wird, um mit einer Datei-Manager-Erweiterung zu kommunizieren.
 
@@ -78,7 +78,7 @@ Der Benutzer hat im durch die Erweiterung bereitgestellten Menü ein Element aus
 
 </dt> <dd>
 
-Der Benutzer hat F1 gedrückt, während er ein Erweiterungsmenü oder ein Symbolleistenbefehlselement auswählte. Gibt an, dass die Erweiterung **WinHelp** entsprechend für das Befehlselement aufrufen soll.
+Der Benutzer hat F1 gedrückt, während er ein Erweiterungsmenü oder ein Symbolleistenbefehlselement ausgewählt hat. Gibt an, dass die Erweiterung **WinHelp** entsprechend für das Befehlselement aufrufen soll.
 
 </dd> <dt>
 
@@ -111,7 +111,7 @@ Der Benutzer hat das Menü der Erweiterung ausgewählt. Die Erweiterung sollte E
 
 </dt> <dd>
 
-Der Datei-Manager lädt die Erweiterungs-DLL und fordert die DLL auf, Informationen über das von der DLL zur Verfügung zu stellende Menü zu erhalten.
+Der Datei-Manager lädt die Erweiterungs-DLL und fordert die DLL zur Eingabe von Informationen über das von der DLL bereitgestellte Menü auf.
 
 </dd> <dt>
 
@@ -122,7 +122,7 @@ Der Datei-Manager lädt die Erweiterungs-DLL und fordert die DLL auf, Informatio
 
 </dt> <dd>
 
-Die Auswahl im **Datei-Manager-Verzeichnisfenster** oder **im Fenster Suchergebnisse** wurde geändert.
+Die Auswahl im **Datei-Manager-Verzeichnisfenster** oder im Fenster **Suchergebnisse** wurde geändert.
 
 </dd> <dt>
 
@@ -133,7 +133,7 @@ Die Auswahl im **Datei-Manager-Verzeichnisfenster** oder **im Fenster Suchergebn
 
 </dt> <dd>
 
-Der Datei-Manager erstellt die Symbolleiste und fordert die Erweiterungs-DLL auf, Informationen zu schaltflächen zu erhalten, die die DLL der Symbolleiste hinzufügt.
+Der Datei-Manager erstellt die Symbolleiste und fordert die Erweiterungs-DLL zur Eingabe von Informationen zu allen Schaltflächen auf, die die DLL der Symbolleiste hinzufügt.
 
 </dd> <dt>
 
@@ -155,7 +155,7 @@ Der Datei-Manager entlädt die Erweiterungs-DLL.
 
 </dt> <dd>
 
-Der Benutzer hat im **Menü** Fenster den Befehl **Aktualisieren** ausgewählt. Die Erweiterung sollte bei Bedarf Elemente im Menü aktualisieren.
+Der Benutzer hat im Menü **Fenster** den Befehl **Aktualisieren** ausgewählt. Die Erweiterung sollte bei Bedarf Elemente im Menü aktualisieren.
 
 </dd> </dl> </dd> <dt>
 
@@ -172,7 +172,7 @@ Nachrichtenspezifischer Wert.
 
 Typ: **LONG**
 
-Gibt einen Wert zurück, der von der *wMsg-Parametermeldung* abhängig ist.
+Gibt einen Wert *zurück,* der von der wMsg-Parametermeldung abhängig ist.
 
 ## <a name="requirements"></a>Anforderungen
 

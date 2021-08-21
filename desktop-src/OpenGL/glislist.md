@@ -1,9 +1,9 @@
 ---
-title: glislist-Funktion (GL. h)
-description: Die gllslist-Funktion testet, ob die Anzeigeliste vorhanden ist.
+title: glIsList-Funktion (Gl.h)
+description: Die funktion gllsList testet das Vorhandensein der Anzeigeliste.
 ms.assetid: 86ef3684-8047-4ee4-befd-ec26bcd036c3
 keywords:
-- glislist-Funktion OpenGL
+- glIsList-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fdc67d0a7dad18f8850c283f0d5eb224ff9ebbd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 562eb4040323452379659a068dbc4844a2e84c51009cb0ac843b2e5aa1b641a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493370"
 ---
-# <a name="glislist-function"></a>glislist-Funktion
+# <a name="glislist-function"></a>glIsList-Funktion
 
-Die **gllslist** -Funktion testet, ob die Anzeigeliste vorhanden ist.
+Die **gllsList-Funktion** testet das Vorhandensein der Anzeigeliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,25 +43,25 @@ GLboolean WINAPI glIsList(
 *list* 
 </dt> <dd>
 
-Ein potenzieller Anzeigelisten Name.
+Ein potenzieller Anzeigelistenname.
 
 </dd> </dl>
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gllslist** -Funktion gibt "GL true" zurück, \_ Wenn " *List* " der Name einer Anzeigeliste ist und andernfalls "GL false" zurückgibt \_ .
+Die **gllsList-Funktion** gibt GL TRUE zurück, wenn list der Name einer Anzeigeliste ist, und gibt \_ andernfalls GL FALSE  \_ zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Die **gllslist** -Funktion gibt "GL true" zurück, \_ Wenn " *List* " der Name e
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -87,19 +87,19 @@ Die **gllslist** -Funktion gibt "GL true" zurück, \_ Wenn " *List* " der Name e
 [**glCallList**](glcalllist.md)
 </dt> <dt>
 
-[**glcalllists**](glcalllists.md)
+[**glCallLists**](glcalllists.md)
 </dt> <dt>
 
-[**gldelta etelists**](gldeletelists.md)
+[**glDeleteLists**](gldeletelists.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgenlists**](glgenlists.md)
+[**glGenLists**](glgenlists.md)
 </dt> <dt>
 
-[**glnewlist**](glnewlist.md)
+[**glNewList**](glnewlist.md)
 </dt> </dl>
 
  

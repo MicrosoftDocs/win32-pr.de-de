@@ -1,11 +1,11 @@
 ---
 title: Time-Vol-Change-Attribut
-description: Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolumen zuletzt geändert wurde.
+description: Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei auf dem Remotespeichervolume zuletzt geändert wurde.
 ms.assetid: e0a985fb-1b50-457e-80db-e71ab5570c51
 ms.tgt_platform: multiple
 keywords:
-- Ad-Schema des Time-Vol-Change-Attributs
-- ad-Schema des timeVolChange-Attributs
+- AD-Schema für Time-Vol-Change-Attribut
+- timeVolChange-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119081344"
 ---
 # <a name="time-vol-change-attribute"></a>Time-Vol-Change-Attribut
 
-Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolumen zuletzt geändert wurde.
+Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei auf dem Remotespeichervolume zuletzt geändert wurde.
 
 
 
@@ -35,7 +35,7 @@ Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolume
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.502               |
-| System-Id-Guid    | ddac0cf0-af8f-11d0-afeb-00c04fd930c9 |
+| System-ID-GUID    | ddac0cf0-af8f-11d0-afeb-00c04fd930c9 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -58,7 +58,7 @@ Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolume
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Is-Single-Valued       | True                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
@@ -79,7 +79,7 @@ Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolume
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Is-Single-Valued       | True                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
@@ -100,7 +100,7 @@ Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolume
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Is-Single-Valued       | True                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |

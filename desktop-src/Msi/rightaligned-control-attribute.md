@@ -1,19 +1,19 @@
 ---
-description: Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig ausgerichtet.
+description: Wenn dieses Stilbit festgelegt ist, wird Text im -Steuerelement rechtsbündig ausgerichtet.
 ms.assetid: 444fb9ac-8626-4079-80be-6c210a69d984
-title: Rightausgerichtete-Steuerelement Attribut
+title: RightAligned-Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea94807801845ee18458f6c3105c6e1e5fc3834c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc8a2df776adb167dd82575a8a926e814ecede47e1e7cc07e49c759ea3b046ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868890"
 ---
-# <a name="rightaligned-control-attribute"></a>Rightausgerichtete-Steuerelement Attribut
+# <a name="rightaligned-control-attribute"></a>RightAligned-Steuerelementattribut
 
-Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig ausgerichtet.
+Wenn dieses Stilbit festgelegt ist, wird Text im -Steuerelement rechtsbündig ausgerichtet.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -21,7 +21,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig
 
  
 
-[Scrollabletext](scrollabletext-control.md)
+[ScrollableText](scrollabletext-control.md)
 
  
 
@@ -29,7 +29,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig
 
  
 
-[Volumecostlist](volumecostlist-control.md)
+[VolumeCostList](volumecostlist-control.md)
 
  
 
@@ -41,11 +41,11 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig
 
  
 
-[Directoren auflisten](directorylist-control.md)
+[DirectoryList](directorylist-control.md)
 
  
 
-[Directoriycombo](directorycombo-control.md)
+[DirectoryCombo](directorycombo-control.md)
 
  
 
@@ -53,7 +53,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig
 
  
 
-[Pathetin](pathedit-control.md)
+[PathEdit](pathedit-control.md)
 
  
 
@@ -73,23 +73,23 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement rechtsbündig
 
  
 
-[Volumeselectcombo](volumeselectcombo-control.md)
+[VolumeSelectCombo](volumeselectcombo-control.md)
 
 
 
 | Decimal | Hexadezimal | BESCHREIBUNG                        |
 |---------|-------------|------------------------------------|
-| 64      | 0x00000040  | msidbcontrolattributesrightausgerichteten |
+| 64      | 0x00000040  | msidbControlAttributesRightAligned |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie das rightausgerichtete Bit in die Spalte Attribute des Datensatzes des Steuer Elements in der [Steuerelement Tabelle](control-table.md)ein.
+Wenn Sie dieses Attribut für ein Steuerelement festlegen möchten, schließen Sie das RightAligned-Bit in die Spalte Attribute des Datensatzes des Steuerelements in die [Control-Tabelle ein.](control-table.md)
 
-Siehe [Steuerelement Attribute](control-attributes.md) und-Steuer [Elemente](controls.md).
+Weitere Informationen [finden Sie unter Steuerelementattribute](control-attributes.md) und [Steuerelemente.](controls.md)
 
  
 

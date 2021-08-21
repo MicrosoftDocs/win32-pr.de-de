@@ -1,29 +1,29 @@
 ---
-description: Dieses Thema enthält Beispielcode für die Verwendung der Sequencer-Quelle in Microsoft Media Foundation.
+description: Dieses Thema zeigt Beispielcode für die Verwendung der Sequencer-Quelle in Microsoft Media Foundation.
 ms.assetid: 6f39a297-33a9-414a-9d41-47aec54eaa6b
-title: Beispiel Code für die Sequencer-Quelle
+title: Sequencer-Quellcodebeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a587a9b77413ad22ac49111489cf3e1b89cadf8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3098faa0b979d6ad3baa96256c0ffac1eb14f482df5caff966ebc1cda3957f50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012356"
 ---
-# <a name="sequencer-source-example-code"></a>Beispiel Code für die Sequencer-Quelle
+# <a name="sequencer-source-example-code"></a>Sequencer-Quellcodebeispiel
 
-Dieses Thema enthält Beispielcode für die Verwendung der [Sequencer-Quelle](sequencer-source.md) in Microsoft Media Foundation. Der Abschnitt ist wie folgt gegliedert.
+In diesem Thema wird Beispielcode für die Verwendung der [Sequencer-Quelle](sequencer-source.md) in Microsoft Media Foundation gezeigt. Der Abschnitt ist wie folgt gegliedert.
 
--   [Cwiedergabe-Klasse](#cplaylist-class)
--   [Erstellen einer Instanz von cwiedergabe](#creating-an-instance-of-cplaylist)
--   [Hinzufügen und Entfernen von Wiedergabelisten Segmenten](#adding-and-removing-playlist-segments)
--   [Behandeln von Sitzungs Ereignissen](#handling-session-events)
+-   [CPlaylist-Klasse](#cplaylist-class)
+-   [Erstellen einer Instanz von CPlaylist](#creating-an-instance-of-cplaylist)
+-   [Hinzufügen und Entfernen von Wiedergabelistensegmenten](#adding-and-removing-playlist-segments)
+-   [Behandeln von Sitzungsereignissen](#handling-session-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="cplaylist-class"></a>Cwiedergabe-Klasse
+## <a name="cplaylist-class"></a>CPlaylist-Klasse
 
-Die- `CPlaylist` Klasse wird von der- `CPlayer` Klasse abgeleitet, die im Tutorial Gewusst wie: Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)gezeigt wird.
+Die `CPlaylist` -Klasse wird von der `CPlayer` -Klasse abgeleitet, die im Tutorial Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)gezeigt wird.
 
 
 ```C++
@@ -89,9 +89,9 @@ public:
 
 
 
-## <a name="creating-an-instance-of-cplaylist"></a>Erstellen einer Instanz von cwiedergabe
+## <a name="creating-an-instance-of-cplaylist"></a>Erstellen einer Instanz von CPlaylist
 
-Die- `CPlaylist::CreateInstance` Methode erstellt ein neues- `CPlaylist` Objekt. Intern ruft diese Methode `CPlaylist::Initialize` auf, um das Objekt zu initialisieren. Die- `Initialize` Methode ruft [**mfkreatesequencersource**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) auf, um die Sequenz Quelle zu erstellen. Außerdem wird [**imfmediasession:: getclock**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getclock) aufgerufen, um einen Zeiger auf die Präsentations Uhr zu erhalten.
+Die `CPlaylist::CreateInstance` -Methode erstellt ein neues `CPlaylist` -Objekt. Intern ruft diese Methode `CPlaylist::Initialize` auf, um das Objekt zu initialisieren. Die `Initialize` -Methode ruft [**MFCreateSequencerSource**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) auf, um die Sequenzquelle zu erstellen. Außerdem ruft sie [**DIE DATEI "POINTERMediaSession::GetClock"**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getclock) auf, um einen Zeiger auf die Präsentationsuhr abzurufen.
 
 
 ```C++
@@ -180,16 +180,16 @@ CPlaylist::~CPlaylist()
 
 
 
-## <a name="adding-and-removing-playlist-segments"></a>Hinzufügen und Entfernen von Wiedergabelisten Segmenten
+## <a name="adding-and-removing-playlist-segments"></a>Hinzufügen und Entfernen von Wiedergabelistensegmenten
 
-Die- `AddSegment` Methode fügt ein neues Wiedergabelisten Segment hinzu.
+Die `AddSegment` -Methode fügt ein neues Wiedergabelistensegment hinzu.
 
 Diese Methode führt die folgenden Schritte aus:
 
-1.  Erstellt eine Wiedergabe Topologie. Der Code für diesen Schritt wird im Thema Erstellen von [Wiedergabe Topologien](creating-playback-topologies.md)gezeigt.
-2.  Ruft [**imfsequencersource:: appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) auf, um der Wiedergabeliste die Topologie hinzuzufügen.
-3.  Ruft im ersten Segment den Wert des [**MF- \_ \_ laufzeitduration**](mf-pd-duration-attribute.md) -Attributs ab, das die Wiedergabedauer enthält.
-4.  Speichert die Segment-ID und die topologiekennung in einer Nachschlage Tabelle.
+1.  Erstellt eine Wiedergabetopologie. Der Code für diesen Schritt wird im Thema [Erstellen von Wiedergabetopologien](creating-playback-topologies.md)gezeigt.
+2.  Ruft [**DIE APPENDSequencerSource::AppendTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) auf, um die Topologie der Wiedergabeliste hinzuzufügen.
+3.  Ruft im ersten Segment den Wert des [**MF \_ PD \_ DURATION-Attributs**](mf-pd-duration-attribute.md) ab, das die Wiedergabedauer enthält.
+4.  Speichert die Segment-ID und die Topologie-ID in einer Nachschlagetabelle.
 
 
 ```C++
@@ -326,13 +326,13 @@ done:
 
 
 
-Wenn Sie das erste Wiedergabelisten Segment erstellen, müssen Sie die Segment Topologie in der Medien Sitzung wie folgt in die Warteschlange stellen:
+Wenn Sie das erste Wiedergabelistensegment erstellen, müssen Sie die Segmenttopologie wie folgt in der Mediensitzung in die Warteschlange stellen:
 
-1.  Fragen Sie die Sequencer-Quelle für die [**imfmediasourcetopologyprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) -Schnittstelle ab.
-2.  Übergeben Sie den Präsentations Deskriptor an die [**imfmediasourcetopologyprovider:: getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) -Methode. Diese Methode erhält einen Zeiger auf die Segment Topologie. Beachten Sie, dass diese Topologie nicht exakt mit der Wiedergabe Topologie identisch ist, die Sie als earliers erstellt haben. Stattdessen handelt es sich um eine geänderte Version dieser Topologie. Weitere Informationen finden Sie unter Informationen zur [Sequencer-Quelle](about-the-sequencer-source.md).
-3.  Stellen Sie die Topologie in der Medien Sitzung durch Aufrufen von [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)in die Warteschlange.
+1.  Fragen Sie die Sequencerquelle nach der [**SCHNITTSTELLE VONMEDIASourceTopologyProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) ab.
+2.  Übergeben Sie den Präsentationsdeskriptor an die [**METHODE VONMEDIASOURCETopologyProvider::GetMediaSourceTopology.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) Diese Methode ruft einen Zeiger auf die Segmenttopologie ab. Beachten Sie, dass diese Topologie nicht genau mit der Wiedergabetopologie identisch ist, die Sie zuvor erstellt haben. Stattdessen handelt es sich um eine geänderte Version dieser Topologie. Weitere Informationen finden Sie unter [Informationen zur Sequencerquelle.](about-the-sequencer-source.md)
+3.  Stellen Sie die Topologie in der Mediensitzung in die Warteschlange, indem Sie [**DEN AUFRUF VONMEDIASESSION::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufrufen.
 
-Der folgende Code zeigt diese Schritte. Derselbe Code wird auch verwendet, wenn die Wiedergabeliste das nächste Segment vorab verwendet.
+Der folgende Code zeigt diese Schritte. Der gleiche Code wird auch verwendet, wenn die Wiedergabeliste das nächste Segment vorabrollt.
 
 
 ```C++
@@ -368,7 +368,7 @@ done:
 
 
 
-Um ein Wiedergabelisten Segment zu löschen, nennen Sie [**imfsequencersource::D eletetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology). Das Segment wird durch die Segment-ID angegeben. (Aus diesem Grund sollte die Anwendung die Liste der Segment-IDs Zwischenspeichern.)
+Um ein Wiedergabelistensegment zu löschen, rufen Sie [**DANNSEQUENcerSource::D eleteTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-deletetopology)auf. Das Segment wird durch die Segment-ID angegeben. (Aus diesem Grund sollte die Anwendung die Liste der Segment-IDs zwischenspeichern.)
 
 
 ```C++
@@ -422,7 +422,7 @@ done:
 
 
 
-## <a name="handling-session-events"></a>Behandeln von Sitzungs Ereignissen
+## <a name="handling-session-events"></a>Behandeln von Sitzungsereignissen
 
 
 ```C++

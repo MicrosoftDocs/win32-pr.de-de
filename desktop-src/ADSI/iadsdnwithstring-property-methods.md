@@ -1,10 +1,10 @@
 ---
-title: IADsDNWithString-Eigenschafts Methoden (IADs. h)
-description: Die-Eigenschaften Methode der IADsDNWithString-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsDNWithString-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsDNWithString-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: d3fb67b6-9f7d-4de5-bf01-f9c5b9e4f086
 ms.tgt_platform: multiple
 keywords:
-- IADsDNWithString-Eigenschafts Methoden ADSI
+- IADsDNWithString-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,32 +21,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fa63a933a6a41eec9e6e55906a940cee650c87b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 51082f31aa9e456ded5498a4711d3ddcfe3c03241235aa14c39920071b110e35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082504"
 ---
-# <a name="iadsdnwithstring-property-methods"></a>IADsDNWithString-Eigenschaften Methoden
+# <a name="iadsdnwithstring-property-methods"></a>IADsDNWithString-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**IADsDNWithString**](/windows/desktop/api/Iads/nn-iads-iadsdnwithstring) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsDNWithString-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsdnwithstring) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Dnstring**
+**DNString**
 </dt> <dd> <dl>
 
-Die DN-Zeichenfolge, die einem Zeichen folgen Wert zugeordnet ist.
+Die einem Zeichenfolgenwert zugeordnete DN-Zeichenfolge.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -64,17 +64,17 @@ HRESULT put_DNString(
 
 </dt> </dl> </dd> <dt>
 
-**StringValue**
+**Stringvalue**
 </dt> <dd> <dl>
 
-Der Zeichen folgen Wert, der einem DN eines Objekts zugeordnet ist.
+Der einem DN eines Objekts zugeordnete Zeichenfolgenwert.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -102,9 +102,9 @@ HRESULT put_StringValue(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsDNWithString ist als 370df02e-f 934-11d2-ba96-00c04sb6d0d1 definiert.<br/>     |
+| IID<br/>                      | IID \_ IADsDNWithString ist als 370DF02E-F934-11D2-BA96-00C04FB6D0D1 definiert.<br/>     |
 
 
 
@@ -115,7 +115,7 @@ HRESULT put_StringValue(
 [**IADsDNWithString**](/windows/desktop/api/Iads/nn-iads-iadsdnwithstring)
 </dt> <dt>
 
-[**ADS \_ DN \_ mit \_ Zeichenfolge**](/windows/win32/api/iads/ns-iads-ads_dn_with_string)
+[**ADS \_ DN \_ MIT \_ ZEICHENFOLGE**](/windows/win32/api/iads/ns-iads-ads_dn_with_string)
 </dt> </dl>
 
  

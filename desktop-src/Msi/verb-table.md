@@ -1,31 +1,31 @@
 ---
-description: Die Verb Tabelle enthält Befehls Verb Informationen, die Dateinamen Erweiterungen zugeordnet sind und als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungs Schlüsseln und-Werten.
+description: Die Tabelle Verb enthält Befehlsverbinformationen, die Dateinamenerweiterungen zugeordnet sind, die als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungsschlüsseln und -werten.
 ms.assetid: 3749095c-f0c0-498c-969f-a6c445cfdd62
-title: Verb Tabelle
+title: Verbtabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7182c425e2613aa463f94bca0e6a1e62c1504c8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9fc546cd3db5fecb3861120fa15b1ffa3f21327b889599b77a1b067193c886c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499110"
 ---
-# <a name="verb-table"></a>Verb Tabelle
+# <a name="verb-table"></a>Verbtabelle
 
-Die Verb Tabelle enthält Befehls Verb Informationen, die Dateinamen Erweiterungen zugeordnet sind und als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungs Schlüsseln und-Werten.
+Die Tabelle Verb enthält Befehlsverbinformationen, die Dateinamenerweiterungen zugeordnet sind, die als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungsschlüsseln und -werten.
 
-Die Verb Tabelle enthält die folgenden Spalten.
+Die Verb-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                       | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                       | Key | Nullwerte zulässig |
 |-------------|----------------------------|-----|----------|
-| Durchwahl\_ | [Text](text.md)           | J   | N        |
+| Erweiterung\_ | [Text](text.md)           | J   | N        |
 | Verb        | [Text](text.md)           | J   | N        |
 | Sequenz    | [Integer](integer.md)     | N   | J        |
-| Get-Help     | [Großformatige](formatted.md) | N   | J        |
-| Argument    | [Großformatige](formatted.md) | N   | J        |
+| Get-Help     | [Formatiert](formatted.md) | N   | J        |
+| Argument    | [Formatiert](formatted.md) | N   | J        |
 
 
 
@@ -35,14 +35,14 @@ Die Verb Tabelle enthält die folgenden Spalten.
 
 <dl> <dt>
 
-<span id="Extension_"></span><span id="extension_"></span><span id="EXTENSION_"></span>Weiterung\_
+<span id="Extension_"></span><span id="extension_"></span><span id="EXTENSION_"></span>Erweiterung\_
 </dt> <dd>
 
-Die der Tabellenzeile zugeordnete Erweiterung. Diese Spalte ist ein externer Schlüssel für die erste Spalte der [Erweiterungs Tabelle](extension-table.md).
+Die der Tabellenzeile zugeordnete Erweiterung. Diese Spalte ist ein externer Schlüssel für die erste Spalte der [Erweiterungstabelle](extension-table.md).
 
 </dd> <dt>
 
-<span id="Verb"></span><span id="verb"></span><span id="VERB"></span>Ben
+<span id="Verb"></span><span id="verb"></span><span id="VERB"></span>Verb
 </dt> <dd>
 
 Das Verb für den Befehl.
@@ -52,31 +52,31 @@ Das Verb für den Befehl.
 <span id="Sequence"></span><span id="sequence"></span><span id="SEQUENCE"></span>Sequenz
 </dt> <dd>
 
-Die Sequenz der Befehle. Nur Verben, für die die Sequenz Spalte ungleich NULL ist, werden verwendet, um eine geordnete Liste für den Standardwert des shellschlüssels vorzubereiten. Das Verb mit dem niedrigsten Wert in dieser Spalte wird zum Standardverb.
+Die Sequenz der Befehle. Nur Verben, für die die Sequenzspalte ungleich NULL ist, werden verwendet, um eine sortierte Liste für den Standardwert des Shellschlüssels vorzubereiten. Das Verb mit dem niedrigsten Wert in dieser Spalte wird zum Standardverb.
 
 </dd> <dt>
 
-<span id="Command"></span><span id="command"></span><span id="COMMAND"></span>S
+<span id="Command"></span><span id="command"></span><span id="COMMAND"></span>Befehl
 </dt> <dd>
 
 Der lokalisierbare Text, der im Kontextmenü angezeigt wird.
 
 </dd> <dt>
 
-<span id="Argument"></span><span id="argument"></span><span id="ARGUMENT"></span>Gestritten
+<span id="Argument"></span><span id="argument"></span><span id="ARGUMENT"></span>Argument
 </dt> <dd>
 
-Der Wert für die Befehlsargumente.
+Wert für die Befehlsargumente.
 
-Beachten Sie, dass die Auflösung von Eigenschaften im Feld Argument eingeschränkt ist. Eine Eigenschaft, die als \[ *Eigenschaft* \] in diesem Feld formatiert ist, kann nur aufgelöst werden, wenn die Eigenschaft bereits den vorgesehenen Wert aufweist, wenn die Komponente, die das Verb besitzt, installiert ist. Damit das Argument "MyDoc.doc" z. b. \[ \# \] in den richtigen Wert aufgelöst wird, muss der gleiche Prozess die Datei MyDoc.doc und die Komponente, die das Verb besitzt, installieren.
+Beachten Sie, dass die Auflösung von Eigenschaften im Feld Argument eingeschränkt ist. Eine Eigenschaft, die in diesem Feld als Eigenschaft formatiert \[  \] ist, kann nur aufgelöst werden, wenn die Eigenschaft bereits über den beabsichtigten Wert verfügt, wenn die Komponente installiert wird, die das Verb besitzt. Für das Argument "MyDoc.doc" muss beispielsweise \[ \# der gleiche Prozess die Datei MyDoc.doc und \] die Komponente installieren, die das Verb besitzt, um den richtigen Wert aufzulösen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Tabelle wird beim Ausführen der [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) oder der [unregisterextensioninfo-Aktion](unregisterextensioninfo-action.md) bezeichnet.
+Auf diese Tabelle wird verwiesen, wenn die [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) oder die [UnregisterExtensionInfo-Aktion](unregisterextensioninfo-action.md) ausgeführt wird.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

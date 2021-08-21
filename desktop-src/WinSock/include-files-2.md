@@ -1,27 +1,27 @@
 ---
-description: Die ursprüngliche Includedatei für die Verwendung mit Windows Sockets 1,1 war die Header Datei "Winsock. h".
+description: Die ursprüngliche Includedatei für die Verwendung mit Windows Sockets 1.1 war die Winsock.h-Headerdatei.
 ms.assetid: 0536abcc-4277-4bd8-927c-3bf429bc65bb
 title: Includedateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adf7a4edcd70e6a6280b26f7b6ab9f0f1dab674e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 740bde9fae96aa3088a4317c66479bcc75176ee3b9ca9f5e390365c5ef481109
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051528"
 ---
 # <a name="include-files"></a>Includedateien
 
-Die ursprüngliche Includedatei für die Verwendung mit Windows Sockets 1,1 war die Header Datei " *Winsock. h* ". Zum Vereinfachen der Portierung von vorhandenem Quellcode auf der Grundlage von Berkeley-socketsockets auf Windows Sockets wurde empfohlen, dass Windows Sockets Development Kits für Winsock 1,1 mit mehreren Includedateien mit denselben Namen wie standardmäßige UNIX-Includedateien (z. b. *sys/Socket. h* -und ARPA/inet. h-Header Dateien) bereitgestellt werden. Diese Winsock-Header Dateien mit ähnlichen Namen enthielten jedoch lediglich eine-Direktive, um die Header Datei " *Winsock2. h* " einzuschließen.
+Die ursprüngliche Includedatei für die Verwendung mit Windows Sockets 1.1 war die *Winsock.h-Headerdatei.* Um das Portieren von vorhandenem Quellcode basierend auf Sockets von UNIX in Windows Sockets zu vereinfachen, wurde Windows Sockets Development Kits für Winsock 1.1 empfohlen, mehrere Includedateien mit den gleichen Namen wie Standard-UNIX Includedateien (z. B. *sys/socket.h* und arpa/inet.h) zu erhalten. Diese Winsock-Headerdateien mit ähnlichem Namen enthielten jedoch lediglich eine -Anweisung, um die *Winsock2.h-Headerdatei* einzuschließen.
 
-Wenn Windows Sockets 2 freigegeben wurde, wurde die primäre Includedatei für die Verwendung mit Windows Sockets in *Winsock2. h* umbenannt. Die ältere Original- *Winsock. h* -Header Datei für Winsock 1,1 wurde ebenfalls für die Kompatibilität mit älteren Anwendungen beibehalten. Die Entwicklung von mit Winsock 1,1 kompatiblen Anwendungen wurde seit der Veröffentlichung von Windows 2000 als veraltet markiert. Alle Anwendungen sollten jetzt die include *Winsock2. h* -Direktive in Winsock-Anwendungs Quelldateien verwenden.
+Als Windows Sockets 2 freigegeben wurde, wurde die primäre Includedatei für die Verwendung mit Windows Sockets in *Winsock2.h* umbenannt. Die ältere ursprüngliche *Winsock.h-Headerdatei* für Winsock 1.1 wurde aus Gründen der Kompatibilität mit älteren Anwendungen ebenfalls beibehalten. Die Entwicklung von Winsock 1.1-kompatiblen Anwendungen ist seit der Veröffentlichung von Windows 2000 veraltet. Alle Anwendungen sollten jetzt die Include *Winsock2.h-Direktive* in Winsock-Anwendungsquelldateien verwenden.
 
-Die Header Datei " *Winsock2. h* " enthält die meisten WinSock-Funktionen,-Strukturen und-Definitionen. Die Header Datei " *Ws2tcpip. h* " enthält Definitionen, die im Winsock 2-Protocol-Specific Anhang-Dokument für TCP/IP eingeführt wurden und neuere Funktionen und Strukturen enthalten, die zum Abrufen von IP-Adressen verwendet werden. Hierzu gehören die [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -und die [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) -Familie von Funktionen, die die Namensauflösung für IPv4-oder IPv6-Adressen bereitstellen. Die Header Datei " *Ws2tcpip. h* " ist nur erforderlich, wenn diese IP-agnostischen Benennungs Funktionen von der Anwendung benötigt werden.
+Die *Headerdatei Winsock2.h* enthält die meisten Winsock-Funktionen, -Strukturen und -Definitionen. Die *Headerdatei Ws2tcpip.h* enthält Definitionen, die im Dokument WinSock 2 Protocol-Specific Anhang für TCP/IP eingeführt wurden und neuere Funktionen und Strukturen zum Abrufen von IP-Adressen enthalten. Dazu gehören die Funktionen [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) und [**getnameinfo,**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) die eine Namensauflösung für IPv4- oder IPv6-Adressen bereitstellen. Die Headerdatei *Ws2tcpip.h* ist nur erforderlich, wenn diese IP-agnostischen Benennungsfunktionen von der Anwendung benötigt werden.
 
-Die Header Datei " *mtausock. h* " enthält Definitionen für Microsoft-spezifische Erweiterungen für Windows Sockets 2 (z. b.[**TransmitFile**](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [**Accept tex**](/windows/win32/api/mswsock/nf-mswsock-acceptex)und [**connectex**](/windows/desktop/api/Mswsock/nc-mswsock-lpfn_connectex)). Die Header Datei " *mswap. h* " ist normalerweise nicht erforderlich, es sei denn, diese Microsoft-spezifischen Erweiterungen werden von der Anwendung verwendet.
+Die *Headerdatei Mswsock.h* enthält Definitionen für Microsoft-spezifische Erweiterungen für die Windows Sockets 2 (z.B.[**TransmitFile,**](/windows/win32/api/mswsock/nf-mswsock-transmitfile) [**AcceptEx**](/windows/win32/api/mswsock/nf-mswsock-acceptex)und [**ConnectEx).**](/windows/desktop/api/Mswsock/nc-mswsock-lpfn_connectex) Die *Headerdatei Mswsock.h* wird normalerweise nur benötigt, wenn diese Microsoft-spezifischen Erweiterungen von der Anwendung verwendet werden.
 
-Die Header Datei " *Winsock2. h* " enthält intern Kernelemente aus der Header Datei " *Windows. h* ", sodass \# in Winsock-Anwendungen normalerweise keine Include-Zeile für die Header Datei " *Windows. h* " vorhanden ist. Wenn eine \# Include-Zeile für die Header Datei " *Windows. h* " erforderlich ist, sollte diesem das \# Win32 \_ \_ -und Mean-Makro definiert werden \_ . Aus historischen Gründen hat der *Windows. h* -Header standardmäßig die *Winsock. h* -Header Datei für Windows Sockets 1,1. Die Deklarationen in der Header Datei " *Winsock. h* " verursachen einen Konflikt mit den Deklarationen in der *Winsock2. h* -Header Datei, die von Windows Sockets 2 benötigt wird. Das Win32 \_ \_ -und \_ Mean-Makro verhindert, dass die *Winsock. h* -Datei vom *Windows. h* -Header eingeschlossen wird. Im folgenden wird ein Beispiel gezeigt, das dies veranschaulicht.
+Die *Winsock2.h-Headerdatei* enthält intern Kernelemente aus der *Headerdatei Windows.h,* sodass in Winsock-Anwendungen normalerweise keine \# Includezeile für die *Headerdatei Windows.h* vorhanden ist. Wenn \# für die *Headerdatei Windows.h* eine Includezeile erforderlich ist, sollte diesem das \# \_ Win32 LEAN AND \_ MEAN-Makro vorangestellt \_ werden. Aus historischen Gründen schließt der *Windows.h-Header* standardmäßig die *Winsock.h-Headerdatei* für Windows Sockets 1.1 ein. Die Deklarationen in der *Headerdatei "Winsock.h"* stehen in Konflikt mit den Deklarationen in der *Winsock2.h-Headerdatei,* die für Windows Sockets 2 erforderlich sind. Das WIN32 \_ LEAN \_ AND \_ MEAN-Makro verhindert, dass *winsock.h* in den *header Windows.h* eingeschlossen wird. Ein Beispiel, das dies veranschaulicht, ist unten dargestellt.
 
 
 ```C++
@@ -43,13 +43,13 @@ int main() {
 
 <dl> <dt>
 
-[Erstellen einer grundlegenden Winsock-Anwendung](creating-a-basic-winsock-application.md)
+[Erstellen einer einfachen Winsock-Anwendung](creating-a-basic-winsock-application.md)
 </dt> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[Portieren von Socketanwendungen auf Winsock](porting-socket-applications-to-winsock.md)
+[Portieren von Socketanwendungen in Winsock](porting-socket-applications-to-winsock.md)
 </dt> <dt>
 
 [Überlegungen zur Winsock-Programmierung](winsock-programming-considerations.md)

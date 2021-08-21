@@ -1,7 +1,7 @@
 ---
-description: Von der sfcgetfiles-Funktion verwendete Struktur.
+description: Die von der SfcGetFiles-Funktion verwendete Struktur.
 ms.assetid: 958167e3-3eb3-406a-85bf-ffe2851a95a1
-title: PPROTECT_FILE_ENTRY Struktur (sfcfiles. h)
+title: PPROTECT_FILE_ENTRY -Struktur (Sfcfiles.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Sfcfiles.h
-ms.openlocfilehash: 98cda570a3677560d51800d58822d93a942847c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9070290170febf08e532b071812600fb0ef8755302a4bd1603858659196d0c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053198"
 ---
-# <a name="pprotect_file_entry-structure"></a>Pprotect- \_ Datei \_ Eintrags Struktur
+# <a name="pprotect_file_entry-structure"></a>PPROTECT \_ FILE \_ ENTRY-Struktur
 
-\[Diese Struktur steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt "Anforderungen" angegeben sind. Die Unterstützung für diese Struktur wurde in Windows Vista und Windows Server 2008 entfernt. Verwenden Sie stattdessen die in [WRP-Funktionen](wfp-functions.md) aufgeführten unterstützten Funktionen.\]
+\[Diese Struktur ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Die Unterstützung für diese Struktur wurde in Windows Vista und Windows Server 2008 entfernt. Verwenden Sie stattdessen die unterstützten Funktionen, die in [WRP-Funktionen](wfp-functions.md) aufgeführt sind.\]
 
-Von der [**sfcgetfiles**](sfcgetfiles.md) -Funktion verwendete Struktur.
+Die von der [**SfcGetFiles-Funktion verwendete**](sfcgetfiles.md) Struktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ typedef struct _PPROTECT_FILE_ENTRY {
 **SourceFileName**
 </dt> <dd>
 
-Ein Zeiger auf einen Zeichen folgen Wert, der den Dateinamen der Quelldatei enthält. Dieser Wert ist **null** , wenn die Datei bei der Installation nicht umbenannt wird.
+Zeiger auf einen Zeichenfolgenwert, der den Dateinamen der Quelldatei enthält. Dieser Wert ist **NULL,** wenn die Datei bei der Installation nicht umbenannt wird.
 
 </dd> <dt>
 
 **FileName**
 </dt> <dd>
 
-Ein Zeiger auf einen Zeichen folgen Wert, der den Ziel Dateinamen sowie den vollständigen Pfad zur Datei enthält.
+Zeiger auf den Zeichenfolgenwert, der den Zieldateinamen plus den vollständigen Pfad zur Datei enthält.
 
 </dd> <dt>
 
 **InfName**
 </dt> <dd>
 
-Ein Zeiger auf einen Zeichen folgen Wert, der den Dateinamen der INF-Datei mit Layoutinformationen enthält. Dieser Parameter kann **null** sein, wenn das Standardlayout verwendet wird.
+Zeiger auf den Zeichenfolgenwert, der den Dateinamen der INF-Datei enthält, die Layoutinformationen enthält. Dieser Parameter kann NULL **sein,** wenn das Standardlayout verwendet wird.
 
 </dd> </dl>
 
@@ -70,11 +70,11 @@ Ein Zeiger auf einen Zeichen folgen Wert, der den Dateinamen der INF-Datei mit L
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                 |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Sfcfiles. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Sfcfiles.h</dt> </dl> |
 
 
 
@@ -82,7 +82,7 @@ Ein Zeiger auf einen Zeichen folgen Wert, der den Dateinamen der INF-Datei mit L
 
 <dl> <dt>
 
-[**Sfcgetfiles**](sfcgetfiles.md)
+[**SfcGetFiles**](sfcgetfiles.md)
 </dt> </dl>
 
  

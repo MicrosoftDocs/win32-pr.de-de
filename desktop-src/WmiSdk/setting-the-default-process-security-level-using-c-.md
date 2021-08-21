@@ -1,27 +1,27 @@
 ---
-description: Wenn sich eine Client Anwendung zum ersten Mal bei Windows-Verwaltungsinstrumentation (WMI) anmeldet, muss Sie die Standardprozess-Sicherheitsstufe mit einem Aufruf von CoInitializeSecurity festlegen.
+description: Wenn sich eine Clientanwendung zum ersten Mal bei Windows Management Instrumentation (WMI) anmeldet, muss sie die Standardprozesssicherheitsstufe mit einem Aufruf von CoInitializeSecurity festlegen.
 ms.assetid: 4248fd1b-0867-40d8-8c9c-541156212df8
 ms.tgt_platform: multiple
-title: Festlegen der Standardprozess-Sicherheitsstufe mithilfe von C++
+title: Festlegen der Standardprozesssicherheitsstufe mit C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33bb51deb2c228f0958209c774e7526b4eeed958
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9fcaec4ebbcd39c8cee9ee8aae002621a4a5a1853d1e4cfd4282194115c15ce3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050288"
 ---
-# <a name="setting-the-default-process-security-level-using-c"></a>Festlegen der Standardprozess-Sicherheitsstufe mithilfe von C++
+# <a name="setting-the-default-process-security-level-using-c"></a>Festlegen der Standardprozesssicherheitsstufe mit C++
 
-Wenn sich eine Client Anwendung zum ersten Mal bei Windows-Verwaltungsinstrumentation (WMI) anmeldet, muss Sie die Standardprozess-Sicherheitsstufe mit einem Aufruf von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)festlegen. COM verwendet die Informationen im-Befehl, um zu bestimmen, wie viel Sicherheit ein anderer Prozess benötigt, um auf den Client Anwendungsprozess zuzugreifen.
+Wenn sich eine Clientanwendung zum ersten Mal bei Windows Management Instrumentation (WMI) anmeldet, muss sie die Standardprozesssicherheitsstufe mit einem Aufruf von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)festlegen. COM verwendet die Informationen im Aufruf, um zu bestimmen, wie viel Sicherheit ein anderer Prozess für den Zugriff auf den Clientanwendungsprozess haben muss.
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
--   [Ändern der Standard Anmelde Informationen für die Authentifizierung mithilfe von C++](#changing-the-default-authentication-credentials-using-c)
--   [Ändern der standardmäßigen Identitätswechsel Ebenen mithilfe von C++](#changing-the-default-impersonation-levels-using-c)
+-   [Ändern der Standardanmeldeinformationen für die Authentifizierung mit C++](#changing-the-default-authentication-credentials-using-c)
+-   [Ändern der Standardidentitätswechselebenen mit C++](#changing-the-default-impersonation-levels-using-c)
 
-Bei den meisten Client Anwendungen legen die im folgenden Beispiel gezeigten Argumente die Standard Sicherheit für WMI fest.
+Für die meisten Clientanwendungen legen die im folgenden Beispiel gezeigten Argumente die Standardsicherheit für WMI fest.
 
 
 ```C++
@@ -48,7 +48,7 @@ if (FAILED(hr))
 
 
 
-Der Code erfordert, dass die folgenden Verweise und \# include-Anweisungen ordnungsgemäß kompiliert werden.
+Der Code erfordert die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -62,33 +62,33 @@ using namespace std;
 
 
 
-Wenn die Authentifizierungs Ebene auf die **RPC- \_ C- \_ authn- \_ Ebene \_** festgelegt wird, kann DCOM die Authentifizierungs Ebene so aushandeln, dass Sie den Sicherheitsanforderungen des Ziel Computers entspricht. Weitere Informationen finden Sie unter [Ändern der standardmäßigen Anmelde Informationen für die Authentifizierung mit C++](#changing-the-default-authentication-credentials-using-c) und [Ändern der Standardeinstellungen für Identitätswechsel mithilfe von C++](#changing-the-default-impersonation-levels-using-c).
+Wenn Sie die Authentifizierungsebene auf **RPC \_ C \_ AUTHN \_ LEVEL \_ DEFAULT** festlegen, kann DCOM die Authentifizierungsebene entsprechend den Sicherheitsanforderungen des Zielcomputers aushandeln. Weitere Informationen finden Sie unter [Ändern der Standardauthentifizierungsanmeldeinformationen mit C++](#changing-the-default-authentication-credentials-using-c) und [Ändern des Standardidentitätswechsels Einstellungen Verwenden von C++.](#changing-the-default-impersonation-levels-using-c)
 
-## <a name="changing-the-default-authentication-credentials-using-c"></a>Ändern der Standard Anmelde Informationen für die Authentifizierung mithilfe von C++
+## <a name="changing-the-default-authentication-credentials-using-c"></a>Ändern der Standardanmeldeinformationen für die Authentifizierung mit C++
 
-Die Standard Anmelde Informationen für die Authentifizierung funktionieren in den meisten Situationen, aber Sie müssen möglicherweise unterschiedliche Anmelde Informationen für die Authentifizierung verwenden. Beispielsweise können Sie die Verschlüsselung den Authentifizierungs Prozeduren hinzufügen.
+Die Standardanmeldeinformationen für die Authentifizierung funktionieren in den meisten Situationen, aber Sie müssen möglicherweise in unterschiedlichen Situationen unterschiedliche Authentifizierungsanmeldeinformationen verwenden. Beispielsweise können Sie den Authentifizierungsverfahren Verschlüsselung hinzufügen.
 
-In der folgenden Tabelle sind die verschiedenen Authentifizierungs Ebenen aufgeführt und beschrieben.
+In der folgenden Tabelle werden die verschiedenen Authentifizierungsebenen aufgelistet und beschrieben.
 
 
 
-| Authentifizierungs Ebene                 | BESCHREIBUNG                                                                           |
+| Authentifizierungsebene                 | Beschreibung                                                                           |
 |--------------------------------------|---------------------------------------------------------------------------------------|
-| Standardwert für RPC- \_ C- \_ authn \_ \_        | Standard-Sicherheits Authentifizierung.                                                      |
-| RPC- \_ C- \_ authn- \_ Ebene \_ None           | Keine Authentifizierung                                                                    |
-| RPC- \_ C \_ authn \_ Level \_ Connect        | Authentifizierung nur, wenn der Client eine Beziehung mit dem Server erstellt.           |
-| RPC- \_ C \_ authn-Ebene- \_ \_ Aufruf           | Authentifizierung immer dann, wenn der Server einen RPC empfängt.                                  |
-| Pkt der RPC- \_ C- \_ authn- \_ Ebene \_            | Authentifizierung jedes Mal, wenn der Serverdaten von einem Client empfängt.                      |
-| \_Pkt-Integrität der RPC C- \_ authn- \_ Ebene \_ \_ | Authentifizierung, bei der keine Daten aus dem Paket geändert wurden.                        |
-| \_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene   | Schließt alle vorherigen Authentifizierungs Ebenen ein und verschlüsselt den Wert jedes RPC-Aufrufs. |
+| RPC \_ C \_ AUTHN \_ LEVEL \_ DEFAULT        | Standardsicherheitsauthentifizierung.                                                      |
+| RPC \_ C \_ AUTHN \_ LEVEL \_ NONE           | Keine Authentifizierung                                                                    |
+| RPC \_ C \_ AUTHN \_ LEVEL \_ CONNECT        | Authentifizierung nur, wenn der Client eine Beziehung mit dem Server erstellt.           |
+| RPC \_ \_ \_ C-AUFRUF AUF AUTHENTIFIZIERUNGSEBENE \_           | Authentifizierung jedes Mal, wenn der Server einen RPC empfängt.                                  |
+| RPC \_ C \_ AUTHN \_ LEVEL \_ PKT            | Authentifizierung jedes Mal, wenn der Server Daten von einem Client empfängt.                      |
+| \_ \_ \_ \_ PKT-INTEGRITÄT AUF RPC-C-AUTHENTIFIZIERUNGSEBENE \_ | Authentifizierung, dass keine Daten aus dem Paket geändert wurden.                        |
+| RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY   | Schließt alle vorherigen Authentifizierungsebenen ein und verschlüsselt den Wert jedes RPC-Aufrufs. |
 
 
 
  
 
-Sie können die Standard Anmelde Informationen für die Authentifizierung für mehrere Benutzer angeben, indem Sie eine **einzige \_ Authentifizierungs \_ Listen** Struktur im *pauthlist* -Parameter von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)verwenden.
+Sie können die Standardauthentifizierungsanmeldeinformationen für mehrere Benutzer angeben, indem Sie im *pAuthList-Parameter* von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)eine **SOLE AUTHENTICATION \_ \_ LIST-Struktur** verwenden.
 
-Im folgenden Codebeispiel wird gezeigt, wie die Anmelde Informationen für die Authentifizierung geändert werden.
+Das folgende Codebeispiel zeigt, wie die Anmeldeinformationen für die Authentifizierung geändert werden.
 
 
 ```C++
@@ -135,19 +135,19 @@ CoInitializeSecurity(
 
 
 
-## <a name="changing-the-default-impersonation-levels-using-c"></a>Ändern der standardmäßigen Identitätswechsel Ebenen mithilfe von C++
+## <a name="changing-the-default-impersonation-levels-using-c"></a>Ändern der Standardidentitätswechselebenen mit C++
 
-COM stellt Standard Sicherheitsstufen bereit, die aus der Systemregistrierung gelesen werden. Wenn jedoch nicht ausdrücklich geändert, legen die Registrierungs Einstellungen die Identitätswechsel Ebene zu niedrig fest, damit WMI funktioniert. In der Regel handelt es sich bei der standardmäßigen Identitätswechsel Ebene um **RPC- \_ c- \_ IMP \_ \_**-Ebene, aber WMI benötigt mindestens eine IP- **Ebene der RPC-c- \_ \_ \_ Ebene \_** , damit Sie mit den meisten Anbietern funktioniert, und es kann eine Situation auftreten, in der Sie eine höhere Identitätswechsel Ebene festlegen müssen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md). In der folgenden Tabelle sind die unterschiedlichen Ebenen des Identitäts Wechsels aufgeführt.
+COM stellt Standardsicherheitsstufen bereit, die aus der Systemregistrierung gelesen werden. Sofern nicht ausdrücklich geändert, legen die Registrierungseinstellungen die Identitätswechselebene jedoch zu niedrig fest, damit WMI funktioniert. In der Regel ist die Standardidentitätswechselebene **RPC \_ C \_ IMP LEVEL \_ \_ IDENTIFY**. WMI benötigt jedoch mindestens **RPC C \_ \_ IMP LEVEL \_ \_ IMPERSONATE,** um mit den meisten Anbietern zu funktionieren, und es kann vorkommen, dass Sie eine höhere Ebene des Identitätswechsels festlegen müssen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md) In der folgenden Tabelle sind die verschiedenen Identitätswechselebenen aufgeführt.
 
 
 
-| Ebene                           | BESCHREIBUNG                                                                                                   |
+| Ebene                           | Beschreibung                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Standardwert für RPC- \_ C- \_ \_ Ebene \_     | Das Betriebssystem wählt die Ebene des Identitäts Wechsels aus.                                                      |
-| RPC- \_ C- \_ IMP- \_ Ebene \_ Anonym   | Der Server kann die Identität des Clients annehmen, aber das Identitätswechsel Token kann für nichts verwendet werden.               |
-| RPC- \_ C- \_ IMP- \_ Stufe \_ identifizieren    | Der Server kann die Identität des Clients abrufen und die Identität des Clients für die ACL-Überprüfung annehmen.                 |
-| Identitätswechsel auf RPC- \_ C- \_ \_ Ebene \_ | Der Server kann die Identität des Clients über eine Computer Grenze hinweg annehmen.                                           |
-| RPC- \_ C- \_ IMP- \_ Stufen \_ Delegat    | Der Server kann die Identität des Clients über mehrere Grenzen hinweg annehmen und im Auftrag des Clients Anrufe tätigen. |
+| RPC \_ C \_ IMP \_ LEVEL \_ DEFAULT     | Das Betriebssystem wählt die Ebene des Identitätswechsels aus.                                                      |
+| RPC \_ C \_ IMP \_ LEVEL \_ ANONYMOUS   | Der Server kann die Identität des Clients annehmen, aber das Identitätswechseltoken kann für nichts verwendet werden.               |
+| RPC \_ C \_ IMP \_ LEVEL \_ IDENTIFY    | Der Server kann die Identität des Clients abrufen und die Identität des Clients für die ACL-Überprüfung annehmen.                 |
+| RPC \_ C \_ IMP \_ LEVEL \_ IMPERSONATE | Der Server kann die Identität des Clients über eine Computergrenze hinweg annehmen.                                           |
+| RPC \_ C \_ IMP \_ LEVEL \_ DELEGATE    | Der Server kann die Identität des Clients über mehrere Grenzen hinweg annehmen und Aufrufe im Namen des Clients durchführen. |
 
 
 

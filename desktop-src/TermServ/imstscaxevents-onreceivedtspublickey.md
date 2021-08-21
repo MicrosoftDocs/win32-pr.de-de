@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onreceivedtspublickey-Methode
-description: Wird während der Verbindungs Sequenz aufgerufen, wenn der Client den öffentlichen Schlüssel vom Server abruft. Dieses Ereignis wird nur aufgerufen, wenn die notifytspublickey-Eigenschaft Variant \_ true ist.
+title: IMsTscAxEvents OnReceivedTSPublicKey-Methode
+description: Wird während der Verbindungssequenz aufgerufen, wenn der Client den öffentlichen Schlüssel vom Server abruft. Dieses Ereignis wird nur aufgerufen, wenn die NotifyTSPublicKey-Eigenschaft VARIANT \_ TRUE ist.
 ms.assetid: 1db98b8b-2f08-4252-ad8b-6764fa25b300
 ms.tgt_platform: multiple
 keywords:
-- Onreceivedtspublickey-Methode Remotedesktopdienste
-- Onreceivedtspublickey-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onreceivedtspublickey-Methode
+- OnReceivedTSPublicKey-Remotedesktopdienste
+- OnReceivedTSPublicKey-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnReceivedTSPublicKey-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 337a9efabe48dee7a5a4194c3b796b95f35a0592
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73f2b12b59cbe8e6b7c5f8e614e2aed047d4f467117fa211839521fedc7f333b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009480"
 ---
-# <a name="imstscaxeventsonreceivedtspublickey-method"></a>Imstscaxevents:: onreceivedtspublickey-Methode
+# <a name="imstscaxeventsonreceivedtspublickey-method"></a>IMsTscAxEvents::OnReceivedTSPublicKey-Methode
 
-Wird während der Verbindungs Sequenz aufgerufen, wenn der Client den öffentlichen Schlüssel vom Server abruft. Dieses Ereignis wird nur aufgerufen, wenn die **notifytspublickey** -Eigenschaft **Variant \_ true** ist. Dies erfolgt nach dem [**onconnecting**](imstscaxevents-onconnecting.md)-Prozess, aber vor [**onauthenticationwarninganzeige**](imstscaxevents-onauthenticationwarningdisplayed.md) und [**onconnected**](imstscaxevents-onconnected.md).
+Wird während der Verbindungssequenz aufgerufen, wenn der Client den öffentlichen Schlüssel vom Server abruft. Dieses Ereignis wird nur aufgerufen, wenn **die NotifyTSPublicKey-Eigenschaft** **VARIANT TRUE \_ ist.** Dies liegt nach [**OnConnecting**](imstscaxevents-onconnecting.md), aber vor [**OnAuthenticationWarningDisplayed**](imstscaxevents-onauthenticationwarningdisplayed.md) und [**OnConnected.**](imstscaxevents-onconnected.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ void OnReceivedTSPublicKey(
 
 <dl> <dt>
 
-*PublicKey* \[ in\]
+*publicKey* \[ In\]
 </dt> <dd>
 
-Enthält den öffentlichen Schlüssel des Remote Computers.
+Enthält den öffentlichen Schlüssel des Remotecomputers.
 
 </dd> <dt>
 
-*pfcontinuelogon* \[ vorgenommen\]
+*pfContinueLogon* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **Variant- \_ boolesche** Variable, die empfängt, ob der Anmeldevorgang fortgesetzt werden soll.
+Ein Zeiger auf eine **\_ VARIANT-BOOL-Variable,** die empfängt, ob der Anmeldevorgang fortgesetzt werden soll.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Ein Zeiger auf eine **Variant- \_ boolesche** Variable, die empfängt, ob der An
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -76,7 +76,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008, Windows Server 2008 mit SP1<br/>                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -84,7 +84,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

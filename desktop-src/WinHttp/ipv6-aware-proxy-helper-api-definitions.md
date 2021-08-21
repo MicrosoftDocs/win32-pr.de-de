@@ -1,52 +1,52 @@
 ---
-description: Um die von IPv6 aktivierten Funktionen nutzen zu können, müssen IT-Administratoren innerhalb Ihres WPAD-Skripts definieren, eine Funktion mit dem Namen "findproxyforurlex (URL, Host)", die die Legacy Funktion "FindProxyForURL (URL, Host)" ersetzt.
+description: Um die IPv6-fähigen Funktionen nutzen zu können, müssen IT-Administratoren in ihrem WPAD-Skript eine Funktion namens FindProxyForURLEx (url, host) definieren, die die ältere FindProxyForUrl-Funktion (url, host) ersetzt.
 ms.assetid: e531a66d-5c50-4065-a12a-783fd4d1d310
-title: API-Definitionen für IPv6-Aware Proxy-Hilfsprogramme
+title: IPv6-Aware proxy helper API Definitions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79b1ff5a0c287327593e65e29a0b03cfb59269f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2bdf7c36b0f0d29f84a0dfc0eb7c21cb577ef1b9ef75cb69cec34a7f7858e7a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052078"
 ---
-# <a name="ipv6-aware-proxy-helper-api-definitions"></a>API-Definitionen für IPv6-Aware Proxy-Hilfsprogramme
+# <a name="ipv6-aware-proxy-helper-api-definitions"></a>IPv6-Aware proxy helper API Definitions
 
-Um die von IPv6 aktivierten Funktionen nutzen zu können, müssen IT-Administratoren innerhalb Ihres WPAD-Skripts definieren, eine Funktion mit dem Namen "findproxyforurlex (URL, Host)", die die Legacy Funktion "FindProxyForURL (URL, Host)" ersetzt. Nur aus der neuen findproxyforurlex-Funktion können Administratoren die neuen Funktionen ausführen.
+Um die IPv6-fähigen Funktionen nutzen zu können, müssen IT-Administratoren in ihrem WPAD-Skript eine Funktion namens FindProxyForURLEx (url, host) definieren, die die ältere FindProxyForUrl-Funktion (url, host) ersetzt. Nur über die neue FindProxyForURLEx-Funktion können Administratoren die neuen Funktionen ausführen.
 
-Wir haben auch versucht, die Arbeit für Entwickler zu vereinfachen, indem wir unsere Funktionen so ausrichten, dass verschiedene Typen von IP-Adressen in derselben Reihenfolge wie andere Netzwerkkomponenten zurückgegeben werden, insbesondere IPv6-Adressen, gefolgt von IPv4-Adressen (d.h. Aktuelles Verhalten für die getaddrinfo (..)-Funktion von Winsock).
+Wir haben auch versucht, die Arbeit für Entwickler zu vereinfachen, indem wir unsere Funktionen so ausrichten, dass verschiedene Arten von IP-Adressen in der gleichen Reihenfolge wie andere Netzwerkkomponenten zurückgeben, insbesondere IPv6-Adressen gefolgt von IPv4-Adressen (d. h. aktuelles Verhalten für die getaddrinfo(..)-Funktion von Winsock).
 
-Die folgenden Funktionen sind Erweiterungen der [PAC-Datei Format Spezifikation (Navigator Proxy Auto-config)](https://web.archive.org/web/20060424005037/wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html) , um WPAD-Skripts das Verarbeiten von IPv6-fähigen Netzwerken zu ermöglichen.
+Die folgenden Funktionen sind Erweiterungen der [Pac-Dateiformatspezifikation (Navigator Proxy Auto-Config),](https://web.archive.org/web/20060424005037/wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html) um WPAD-Skripts für die Handhabung von IPv6-fähigen Netzwerken zu ermöglichen.
 
-## <a name="predefined-functions-and-environment-for-the-javascript-function-findproxyforurlex"></a>Vordefinierte Funktionen und Umgebung für die JavaScript-Funktion findproxyforurlex
+## <a name="predefined-functions-and-environment-for-the-javascript-function-findproxyforurlex"></a>Vordefinierte Funktionen und Umgebung für die JavaScript-Funktion FindProxyforURLEx
 
-Hostname-basierte Bedingungen
+Hostnamebasierte Bedingungen
 
 <dl> <dt>
 
-[**isresolvableex**](isresolvableex.md)
+[**isResolvableEx**](isresolvableex.md)
 </dt> <dd>
 
-Bestimmt, ob eine angegebene Host Zeichenfolge in eine IP-Adresse aufgelöst werden kann.
+Bestimmt, ob eine bestimmte Hostzeichenfolge in eine IP-Adresse auflösen kann.
 
 </dd> <dt>
 
-[**isinnettex**](isinnetex.md)
+[**isInNetEx**](isinnetex.md)
 </dt> <dd>
 
 Bestimmt, ob sich eine IP-Adresse in einem bestimmten Subnetz befindet.
 
 </dd> </dl>
 
-Zugehörige Utility-Funktionen
+Verwandte Hilfsfunktionen
 
 <dl> <dt>
 
-[**dnsresolveex**](dnsresolveex.md)
+[**dnsResolveEx**](dnsresolveex.md)
 </dt> <dd>
 
-Auflösen einer Host Zeichenfolge in die zugehörige IP-Adresse.
+Lösen Sie eine Hostzeichenfolge in ihre IP-Adresse auf.
 
 </dd> <dt>
 
@@ -57,14 +57,14 @@ Sucht alle IP-Adressen für localhost.
 
 </dd> <dt>
 
-[**"menpaddresslist"**](sortipaddresslist.md)
+[**sortIpAddressList**](sortipaddresslist.md)
 </dt> <dd>
 
 Sortiert eine Liste von IP-Adressen.
 
 </dd> <dt>
 
-[**GetClientVersion**](getclientversion.md)
+[**getClientVersion**](getclientversion.md)
 </dt> <dd>
 
 Ruft die Version der WPAD-Verarbeitungs-Engine ab.

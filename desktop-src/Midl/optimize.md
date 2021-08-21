@@ -1,9 +1,9 @@
 ---
-title: Attribut optimieren
-description: Das Attribut "\ optimieren \ ACF" wird verwendet, um den Grad der Verlauf für das Marshalling von Daten zu optimieren.
+title: optimize-Attribut
+description: Das Attribut \optimize\ ACF wird verwendet, um den Grad der Gradierung für das Marshalling von Daten zu optimieren.
 ms.assetid: d636d940-0550-417f-a21a-065bdeaeb5d9
 keywords:
-- Attribut-Mittel l optimieren
+- OPTIMIZE-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6025c40465ecf2e8fe7a33dcda50ece07d34b9d
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a7703a3539ff16c7f2dc78d51c62cfe05612dcb6e935bb5c5701f9a7b59a9f1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869570"
 ---
-# <a name="optimize-attribute"></a>Attribut optimieren
+# <a name="optimize-attribute"></a>optimize-Attribut
 
-Das ACF-Attribut "optimieren" wird verwendet, um den Grad der Verlauf für das Marshalling von Daten zu **\[ optimieren \]** .
+Das **\[ Optimize \]** ACF-Attribut wird verwendet, um den Grad der Gradierung für das Marshallen von Daten zu optimieren.
 
 > [!Note]  
-> Dieses Schlüsselwort ist nicht mehr verwendende und sollte nicht verwendet werden. Die aktuellen Mittell-Kompilierungen sollten stattdessen [**/Oicf**](-oi.md)[**/robust**](-robust.md) verwenden.
+> Dieses Schlüsselwort wird ersetzt und sollte nicht verwendet werden. Aktuelle MIDL-Kompilierungen sollten [**stattdessen /Oicf**](-oi.md)[**/robust**](-robust.md) verwenden.
 
- 
+ 
 
 ``` syntax
 optimize ("optimization-options")
@@ -36,20 +36,20 @@ optimize ("optimization-options")
 
 <dl> <dt>
 
-*Optimierung: Optionen* 
+*Optimierungsoptionen* 
 </dt> <dd>
 
-Gibt die Methode für das Mars Hallen von Daten an. Verwenden Sie entweder "s" für das Marshalling in gemischtem Modus oder "i" für interpretiertes Marshalling.
+Gibt die Methode zum Marshallen von Daten an. Verwenden Sie entweder "s" für Marshalling im gemischten Modus oder "i" für interpretiertes Marshalling.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese RPC-Version bietet zwei Methoden zum Marshalling von Daten: gemischter Modus ("s") und interpretiertes ("i"). Diese Methoden entsprechen den Befehls zeilenschaltern [**/OS**](-os.md) und [**/Oi**](-oi.md) . Die interpretierte-Methode Marshalls Daten vollständig offline. Obwohl dies die Größe des Stubs erheblich verringern kann, kann die Leistung beeinträchtigt werden.
+Diese Version von RPC bietet zwei Methoden zum Marshallen von Daten: gemischter Modus ("s") und interpretierter ("i"). Diese Methoden entsprechen den [**Befehlszeilenschaltern /Os**](-os.md) und [**/Oi.**](-oi.md) Die interpretierte Methode marshallt Daten vollständig offline. Dies kann zwar die Größe des Stubs erheblich reduzieren, aber die Leistung kann beeinträchtigt werden.
 
-Wenn die Leistung von Bedeutung ist, kann die Methode mit gemischtem Modus die beste Vorgehensweise sein. Der gemischte Modus ermöglicht es dem Mittelwert Compiler, die Bestimmung zwischen den Daten, die Inline gemarshallt werden, und die durch einen Rückruf einer Offline-Dynamic Link Library gemarshallt werden. Wenn viele Prozeduren dieselben Datentypen verwenden, kann eine einzelne Prozedur wiederholt aufgerufen werden, um die Daten zu Mars Hallen. Auf diese Weise werden Daten, die am besten für das Inline Marshalling geeignet sind, Inline verarbeitet, während andere Daten effizienter im Offline Modus gemarshallt werden können.
+Wenn die Leistung ein Problem ist, kann die Methode im gemischten Modus der beste Ansatz sein. Im gemischten Modus kann der MIDL-Compiler bestimmen, zwischen welchen Daten inline gemarshallt und welche durch einen Aufruf einer Offlinebibliothek für dynamische Links gemarshallt werden. Wenn viele Prozeduren dieselben Datentypen verwenden, kann eine einzelne Prozedur wiederholt aufgerufen werden, um die Daten zu marshallen. Auf diese Weise werden Daten, die am besten für das Inline-Marshalling geeignet sind, inline verarbeitet, während andere Daten effizienter offline gemarshallt werden können.
 
-Beachten Sie, dass das Attribut " **\[ optimieren \]** " als Schnittstellen Attribut oder als Vorgangs Attribut verwendet werden kann. Wenn Sie als Schnittstellen Attribut verwendet wird, wird der Standardwert für die gesamte Schnittstelle festgelegt und Befehls Zeilenschalter überschrieben. Wenn Sie jedoch als Vorgangs Attribut verwendet wird, wirkt sich dies nur auf diesen Vorgang aus, wobei Befehls Zeilenschalter und der Standard der-Schnittstelle überschrieben werden.
+Beachten Sie, **\[ dass das \] Optimize-Attribut** als Schnittstellenattribut oder als Vorgangsattribut verwendet werden kann. Wenn es als Schnittstellenattribut verwendet wird, wird der Standardwert für die gesamte Schnittstelle festgelegt, und Befehlszeilenschalter werden überschrieben. Wenn es jedoch als Vorgangsattribut verwendet wird, wirkt sich dies nur auf diesen Vorgang aus, das Überschreiben von Befehlszeilenschaltern und die Standardeinstellung der Schnittstelle.
 
 ## <a name="examples"></a>Beispiele
 
@@ -62,21 +62,21 @@ optimize ("i") HRESULT SmallerProcedure(...);
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
 [**/Oi**](-oi.md)
 </dt> <dt>
 
-[**/OS**](-os.md)
+[**/Os**](-os.md)
 </dt> <dt>
 
 [**/robust**](-robust.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

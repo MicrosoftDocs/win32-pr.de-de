@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows8Api. jetsetcurrsorfilter-Methode'
-title: Windows8Api. jetsetcurrsorfilter-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: Windows8Api.JetSetCursorFilter-Methode'
+title: Windows8Api.JetSetCursorFilter-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'JetSetCursorFilter method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.JetSetCursorFilter(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.Windows8.JET_INDEX_COLUMN[],Microsoft.Isam.Esent.Interop.Windows8.CursorFilterGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.jetsetcursorfilter(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0137c25ee6ab548537d797af0a00a7ffcd1f6d5f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aedf0a5a37edf43c2c41935167be8be767a0ed597cf77c9845d0bb6ebca89bf3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038498"
 ---
-# <a name="windows8apijetsetcursorfilter-method"></a>Windows8Api. jetsetcurrsorfilter-Methode
+# <a name="windows8apijetsetcursorfilter-method"></a>Windows8Api.JetSetCursorFilter-Methode
 
-Legen Sie ein Array einfacher Filter für [jetmove (JET_SESID, JET_TABLEID, Int32, movegrbit)](./api.jetmove-method-jet-sesid-jet-tableid-int32-movegrbit-.md)fest.
+Legen Sie ein Array einfacher Filter für [JetMove(JET_SESID, JET_TABLEID, Int32, MoveGrbit) fest.](./api.jetmove-method-jet-sesid-jet-tableid-int32-movegrbit-.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetSetCursorFilter(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die für den-Befehl zu verwendende Sitzung.
+    Die Sitzung, die für den Aufruf verwendet werden soll.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der Cursor, der positioniert werden soll.
 
 <!-- end list -->
 
   - Filter  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Einfache Daten Satz Filter.
+    Einfache Datensatzfilter.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Windows8. currsorfiltergrbit](./cursorfiltergrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.CursorFilterGrbit](./cursorfiltergrbit-enumeration.md)  
     
-    Verschieben von Optionen.
+    Optionen zum Verschieben.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

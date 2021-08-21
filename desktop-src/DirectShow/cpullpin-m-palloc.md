@@ -1,7 +1,7 @@
 ---
-description: Die \_ Member-Variable m palloc ist ein Zeiger auf die imemzuordcator-Schnittstelle der Speicherzuweisung.
+description: Die \_ m pAlloc-Membervariable ist ein Zeiger auf die IMemAllocator-Schnittstelle der Speicherzuweisung.
 ms.assetid: a3be5982-83f0-4552-9bcd-85da4a4918ff
-title: 'Cpullpin:: m_pAlloc Member (pullpin. h)'
+title: CPullPin::m_pAlloc-Member (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e9945bd7b5f3c5b54f0ef578c2b012d0e56935d2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 76abcdadf24006d545a8e8cf51205a99656a634094487104b9bad5d9b553c33c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073454"
 ---
-# <a name="cpullpinm_palloc-member"></a>Cpullpin:: m \_ palloc-Member
+# <a name="cpullpinm_palloc-member"></a>CPullPin::m \_ pAlloc-Member
 
-Die `m_pAlloc` Member-Variable ist ein Zeiger auf die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle der Speicherzuweisung.
+Die `m_pAlloc` Membervariable ist ein Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Speicherzuweisung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ IMemAllocator *m_pAlloc;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cpullpin::D ecidezuordcator**](cpullpin-decideallocator.md) -Methode legt diese Element Variable fest.
+Die [**CPullPin::D ecideAllocator-Methode**](cpullpin-decideallocator.md) legt diese Membervariable fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Die [**cpullpin::D ecidezuordcator**](cpullpin-decideallocator.md) -Methode legt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Die [**cpullpin::D ecidezuordcator**](cpullpin-decideallocator.md) -Methode legt
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

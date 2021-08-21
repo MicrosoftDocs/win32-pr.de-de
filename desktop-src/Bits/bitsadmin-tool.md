@@ -1,25 +1,25 @@
 ---
-title: Bitadmin-Tool
-description: Bitadmin ist ein Befehlszeilen Tool, das Sie zum Erstellen von Aufträgen zum Herunterladen oder hochladen und zum Überwachen des Fortschritts verwenden können.
+title: BITSAdmin-Tool
+description: BITSAdmin ist ein Befehlszeilentool, mit dem Sie Download- oder Uploadaufträge erstellen und deren Fortschritt überwachen können.
 ms.assetid: 686d2201-c142-4e1c-a2b1-347d9334caa8
 ms.topic: article
 ms.date: 03/05/2019
-ms.openlocfilehash: 6d2bf864c0efcbaed5409ed0aaeeaf5786d85e36
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 644e11bedfd66ef765fe1c453eaad77956dfc779b8873a4b5268a46270224c3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104564043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119701904"
 ---
-# <a name="bitsadmin-tool"></a>Bitadmin-Tool
+# <a name="bitsadmin-tool"></a>BITSAdmin-Tool
 
-Bitadmin ist ein Befehlszeilen Tool, das Sie zum Erstellen von Aufträgen zum Herunterladen oder hochladen und zum Überwachen des Fortschritts verwenden können. Eine vollständige, umfassende Dokumentation für das Tool und alle zugehörigen Befehle finden Sie in den Beispielen für [bitadmin](/windows-server/administration/windows-commands/bitsadmin) und [bitadmin](/windows-server/administration/windows-commands/bitsadmin-examples) im Windows-IT-Experten.
+BITSAdmin ist ein Befehlszeilentool, mit dem Sie Download- oder Uploadaufträge erstellen und deren Fortschritt überwachen können. Eine vollständige, umfassende Dokumentation des Tools und aller zugehörigen Befehle finden Sie in den [Beispielen bitsadmin](/windows-server/administration/windows-commands/bitsadmin) und [bitsadmin](/windows-server/administration/windows-commands/bitsadmin-examples) im Windows IT Pro Center.
 
-Wenn Sie z. b. alle Bits-Aufträge auflisten möchten, können Sie den-Befehl ausgeben `bitsadmin /list /verbose` . Hier sehen Sie einen Screenshot der Beispielausgabe für diesen Befehl.
+Um beispielsweise alle BITS-Aufträge aufzulisten, können Sie den Befehl `bitsadmin /list /verbose` ausstellen. Hier sehen Sie einen Screenshot der Beispielausgabe für diesen Befehl.
 
-![Beispielausgabe für den Befehl bizadmin/List/Verbose](images/bitsadmin.png)
+![Beispielausgabe für den Befehl bitsadmin /list /verbose](images/bitsadmin.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [BI-admin](/windows-server/administration/windows-commands/bitsadmin)  im Windows-IT-Experten
-* [bischen admin-Beispiele](/windows-server/administration/windows-commands/bitsadmin-examples) im Windows-IT-Experten
+* [bitsadmin](/windows-server/administration/windows-commands/bitsadmin) im Windows IT Pro Center
+* [bitsadmin-Beispiele](/windows-server/administration/windows-commands/bitsadmin-examples) im Windows IT Pro Center

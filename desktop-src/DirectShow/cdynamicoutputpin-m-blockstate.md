@@ -1,7 +1,7 @@
 ---
-description: Blockierender Zustand.
+description: Blockierungsstatus.
 ms.assetid: 55afd314-efd3-47bf-80e3-e17c1332a4cf
-title: 'Cdynamicoutputpin:: m_BlockState Member (amfilter. h)'
+title: CDynamicOutputPin::m_BlockState-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f02a59854b381db5e7b13a85ccca0754cc38f51d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9f539f200e6424aeccf4e507c25f5debbcc295cfdd9469e05dd1c9db71d6d121
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119292180"
 ---
-# <a name="cdynamicoutputpinm_blockstate-member"></a>Cdynamicoutputpin:: m \_ blockstate-Member
+# <a name="cdynamicoutputpinm_blockstate-member"></a>CDynamicOutputPin::m \_ BlockState-Member
 
-Blockierender Zustand.
+Blockierungsstatus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,15 +36,15 @@ BLOCK_STATE m_BlockState;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden Zustände sind definiert:
 
--   nicht \_ blockiert
+-   NICHT \_ BLOCKIERT
 -   PENDING (AUSSTEHEND)
--   Ge
+-   Blockiert
 
-Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**cdynamicoutputpin:: m \_ blockstatus eLOCK**](cdynamicoutputpin-m-blockstatelock.md) .
+Halten Sie vor dem Zugriff auf diese Variable den kritischen [**Abschnitt CDynamicOutputPin::m \_ BlockStateLock**](cdynamicoutputpin-m-blockstatelock.md) bei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,8 +52,8 @@ Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**c
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -61,7 +61,7 @@ Bevor Sie auf diese Variable zugreifen, halten Sie den kritischen Abschnitt [**c
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  
