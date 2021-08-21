@@ -1,218 +1,218 @@
 ---
-title: Remotedesktopprotokoll Anbieter Strukturen
-description: Die benutzerdefinierte Remote Protokoll-API unterstützt die folgenden Strukturen.
+title: Remotedesktopprotokoll Anbieterstrukturen
+description: Die benutzerdefinierte Remoteprotokoll-API unterstützt die folgenden Strukturen.
 ms.assetid: 45d17758-4554-42aa-aeb9-c8d4e7fc6bb7
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a626db328ede3bac9422a9a47ebe55f05953a22d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d5f7d1b7b3ea968925cdcace605ed6c136054b023cc12482475196696bdbcc02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118856236"
 ---
-# <a name="remote-desktop-protocol-provider-structures"></a>Remotedesktopprotokoll Anbieter Strukturen
+# <a name="remote-desktop-protocol-provider-structures"></a>Remotedesktopprotokoll Anbieterstrukturen
 
-Die benutzerdefinierte Remote Protokoll-API unterstützt die folgenden Strukturen.
+Die benutzerdefinierte Remoteprotokoll-API unterstützt die folgenden Strukturen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**tsmf- \_ Unterstützungs \_ Daten \_ in**](tsmf-support-data-in.md)
+[**\_TSMF-SUPPORTDATEN \_ \_ IN**](tsmf-support-data-in.md)
 </dt> <dd>
 
 Enthält Informationen zu Medienformaten.
 
 </dd> <dt>
 
-[**tsmf- \_ Unterstützung \_ \_ von Daten**](tsmf-support-data-out.md)
+[**TSMF \_ SUPPORT \_ DATA \_ OUT**](tsmf-support-data-out.md)
 </dt> <dd>
 
 Enthält Informationen zu Medienformaten.
 
 </dd> <dt>
 
-[**tsmf \_ unterstützt \_ nodedata \_ in**](tsmf-support-nodedata-in.md)
+[**\_TSMF-UNTERSTÜTZUNG \_ FÜR NODEDATA \_ IN**](tsmf-support-nodedata-in.md)
 </dt> <dd>
 
-Wird innerhalb der [**tsmf- \_ Unterstützungs \_ Daten \_ in**](tsmf-support-data-in.md) der Struktur verwendet, um Informationen zu den unterstützten Medienformaten zu enthalten.
+Wird in der [**TSMF \_ SUPPORT \_ DATA \_ IN-Struktur**](tsmf-support-data-in.md) verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
 
 </dd> <dt>
 
-[**tsmf \_ unterstützt \_ nodedata \_**](tsmf-support-nodedata-out.md)
+[**TSMF \_ SUPPORT \_ NODEDATA \_ OUT**](tsmf-support-nodedata-out.md)
 </dt> <dd>
 
-Wird innerhalb der [**tsmf- \_ Unterstützung der \_ Daten \_**](tsmf-support-data-out.md) Ausgabestruktur verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
+Wird in der [**TSMF \_ SUPPORT \_ DATA \_ OUT-Struktur**](tsmf-support-data-out.md) verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
 
 </dd> <dt>
 
-[**wrds- \_ Verbindungs \_ Einstellungen**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_connection_settings)
+[**\_WRDS-VERBINDUNGSEINSTELLUNGEN \_**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_connection_settings)
 </dt> <dd>
 
-Enthält Informationen zu Verbindungseinstellungen für eine Remote Sitzung.
+Enthält Verbindungseinstellungsinformationen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**Wrds- \_ Verbindungs \_ Einstellungen \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_connection_settings_1)
+[**\_WRDS-VERBINDUNGSEINSTELLUNGEN \_ \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_connection_settings_1)
 </dt> <dd>
 
-Enthält Informationen zu Verbindungseinstellungen für eine Remote Sitzung.
+Enthält Verbindungseinstellungsinformationen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**dynamische wrds- \_ \_ Zeit \_ Zonen \_ Informationen**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_dynamic_time_zone_information)
+[**WRDS \_ – DYNAMISCHE \_ \_ \_ ZEITZONENINFORMATIONEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_dynamic_time_zone_information)
 </dt> <dd>
 
 Enthält dynamische Zeitzoneninformationen.
 
 </dd> <dt>
 
-[**wrds \_ - \_ Listenereinstellungen**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_listener_settings)
+[**\_WRDS-LISTENEREINSTELLUNGEN \_**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_listener_settings)
 </dt> <dd>
 
-Enthält Informationen über Listenereinstellungen für eine Remote Sitzung.
+Enthält Listenereinstellungsinformationen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**Wrds \_ - \_ Listenereinstellungen \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_listener_settings_1)
+[**WRDS \_ LISTENER \_ SETTINGS \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_listener_settings_1)
 </dt> <dd>
 
-Enthält Listenereinstellungen für eine Remote Sitzung.
+Enthält Listenereinstellungen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**wrds- \_ Einstellungen**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_settings)
+[**\_WRDS-EINSTELLUNGEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_settings)
 </dt> <dd>
 
-Enthält Richtlinien bezogene Einstellungs Informationen für eine Remote Sitzung.
+Enthält richtlinienbezogene Einstellungsinformationen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**Wrds- \_ Einstellungen \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_settings_1)
+[**\_WRDS-EINSTELLUNGEN \_ 1**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wrds_settings_1)
 </dt> <dd>
 
-Enthält Richtlinien bezogene Einstellungen für eine Remote Sitzung.
+Enthält richtlinienbezogene Einstellungen für eine Remotesitzung.
 
 </dd> <dt>
 
-[**WTS- \_ Cache \_ Statistik**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_cache_stats)
+[**\_WTS CACHE \_ STATS**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_cache_stats)
 </dt> <dd>
 
-Enthält Protokoll Cache Statistiken.
+Enthält Protokollcachestatistiken.
 
 </dd> <dt>
 
-[**WTS \_ zeigt \_ IOCTL an**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_display_ioctl)
+[**\_WTS ANZEIGEN \_ VON IOCTL**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_display_ioctl)
 </dt> <dd>
 
-Enthält Informationen zur Client Anzeige.
+Enthält Informationen zur Clientanzeige.
 
 </dd> <dt>
 
-[**WTS- \_ Client \_ Daten**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_client_data)
+[**\_WTS \_CLIENTDATEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_client_data)
 </dt> <dd>
 
-Enthält Informationen über die Client Verbindung.
+Enthält Informationen zur Clientverbindung.
 
 </dd> <dt>
 
-[**\_Lizenz \_ Funktionen von WTS**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_license_capabilities)
+[**\_WTS \_LIZENZFUNKTIONEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_license_capabilities)
 </dt> <dd>
 
-Enthält Informationen zu den Lizenzierungs Funktionen des Clients.
+Enthält Informationen zu den Lizenzierungsfunktionen des Clients.
 
 </dd> <dt>
 
-[**WTS- \_ Richtlinien \_ Daten**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_policy_data)
+[**\_WTS \_RICHTLINIENDATEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_policy_data)
 </dt> <dd>
 
-Enthält Richtlinien Informationen, die vom Remotedesktopdienste-Dienst an das Protokoll übermittelt werden.
+Enthält Richtlinieninformationen, die vom Remotedesktopdienste-Dienst an das Protokoll übergeben werden.
 
 </dd> <dt>
 
-[**WTS- \_ Eigenschafts \_ Wert**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_property_value)
+[**\_WTS PROPERTY \_ VALUE**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_property_value)
 </dt> <dd>
 
-Enthält Informationen zu einem Eigenschafts Wert, der aus dem Protokoll abgerufen werden soll.
+Enthält Informationen zu einem Eigenschaftswert, der aus dem Protokoll abgerufen werden soll.
 
 </dd> <dt>
 
-[**WTS- \_ Protokoll \_ Cache**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_cache)
+[**\_WTS \_PROTOKOLLCACHE**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_cache)
 </dt> <dd>
 
-Enthält die Anzahl der Cache Lese-und Cache Treffer.
+Enthält die Anzahl der Cachelese- und Cachetreffer.
 
 </dd> <dt>
 
-[**WTS- \_ Protokoll \_ Zähler**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_counters)
+[**\_WTS \_PROTOKOLLZÄHLER**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_counters)
 </dt> <dd>
 
-Enthält Protokoll Leistungsindikatoren.
+Enthält Protokollleistungsindikatoren.
 
 </dd> <dt>
 
-[**Status des WTS- \_ Protokolls \_**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_status)
+[**\_WTS \_PROTOKOLLSTATUS**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_protocol_status)
 </dt> <dd>
 
 Enthält Informationen zum Status des Protokolls.
 
 </dd> <dt>
 
-[**Status der WTS- \_ Dienste \_**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_service_state)
+[**\_WTS \_DIENSTSTATUS**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_service_state)
 </dt> <dd>
 
-Enthält Informationen zu Änderungen im Status des Remotedesktopdienste Dienstanbieter.
+Enthält Informationen zu Änderungen im Status des Remotedesktopdienste-Diensts.
 
 </dd> <dt>
 
-[**WTS- \_ Sitzungs- \_ ID**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_session_id)
+[**\_WTS \_SITZUNGS-ID**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_session_id)
 </dt> <dd>
 
-Enthält eine **GUID** , die eine Sitzung eindeutig identifiziert.
+Enthält eine **GUID,** die eine Sitzung eindeutig identifiziert.
 
 </dd> <dt>
 
-[**WTS \_ Small \_ Rect**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_small_rect)
+[**\_WTS SMALL \_ RECT**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_small_rect)
 </dt> <dd>
 
-Enthält Client Fenster Koordinaten.
+Enthält Clientfensterkoordinaten.
 
 </dd> <dt>
 
-[**WTS \_ sockaddr**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_sockaddr)
+[**\_WTS SOCKADDR**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_sockaddr)
 </dt> <dd>
 
 Enthält eine Socketadresse.
 
 </dd> <dt>
 
-[**WTS \_ SYSTEMTIME**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_systemtime)
+[**\_WTS Systemtime**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_systemtime)
 </dt> <dd>
 
-Gibt Datums-und Uhrzeit Informationen für Übergänge zwischen der Standardzeit und der Sommerzeit an.
+Gibt Datums- und Uhrzeitinformationen für Übergänge zwischen Normalzeit und Sommerzeit an.
 
 </dd> <dt>
 
-[**WTS- \_ Zeit \_ Zonen \_ Informationen**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_time_zone_information)
+[**\_WTS \_ \_ ZEITZONENINFORMATIONEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_time_zone_information)
 </dt> <dd>
 
-Enthält Informationen zu Client Zeit Zonen.
+Enthält Clientzeitzoneninformationen.
 
 </dd> <dt>
 
-[**Benutzer Anmelde Informationen für WTS \_ \_**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_user_credential)
+[**\_WTS \_BENUTZERANMELDEINFORMATIONEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_user_credential)
 </dt> <dd>
 
-Enthält Anmelde Informationen für einen Benutzer.
+Enthält Anmeldeinformationen für einen Benutzer.
 
 </dd> <dt>
 
-[**WTS- \_ Benutzer \_ Daten**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_user_data)
+[**\_WTS \_BENUTZERDATEN**](/windows/desktop/api/Wtsdefs/ns-wtsdefs-wts_user_data)
 </dt> <dd>
 
-Enthält SELECT-Client Eigenschaftswerte.
+Enthält ausgewählte Clienteigenschaftswerte.
 
 </dd> </dl>
 
@@ -220,21 +220,21 @@ Enthält SELECT-Client Eigenschaftswerte.
 
 <dl> <dt>
 
-[Remotedesktopprotokoll Anbieter Referenz](custom-remote-protocol-reference.md)
+[Remotedesktopprotokoll Anbieterreferenz](custom-remote-protocol-reference.md)
 </dt> <dt>
 
-[Remotedesktopprotokoll Anbieter Enumerationen](custom-remote-protocol-enumerations.md)
+[Remotedesktopprotokoll-Anbieterenumerationen](custom-remote-protocol-enumerations.md)
 </dt> <dt>
 
-[Remotedesktopprotokoll Anbieter Schnittstellen](custom-remote-protocol-interfaces.md)
+[Remotedesktopprotokoll-Anbieterschnittstellen](custom-remote-protocol-interfaces.md)
 </dt> <dt>
 
-[Remotedesktopprotokoll Anbieter-Unions](custom-remote-protocol-unions.md)
+[Remotedesktopprotokoll Provider Unions](custom-remote-protocol-unions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

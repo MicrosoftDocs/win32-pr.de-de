@@ -1,19 +1,19 @@
 ---
-description: Gibt an, dass Schutz deaktiviert ist.
+description: Gibt an, dass der Schutz deaktiviert ist.
 ms.assetid: 1ED6587A-8880-4DC7-90DA-D6AC9EDFEEB5
-title: MFPROTECTION_DISABLE-Attribut (mspdl. h)
+title: MFPROTECTION_DISABLE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f1b2c8b5fa90218ef58300ccfdcd77f465f0685d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 698bf0da67b825d3a6eaf319ac0a6bb4d6d5eaa0413d53861c7f847a6922abdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973199"
 ---
-# <a name="mfprotection_disable-attribute"></a>MF Protection- \_ Attribut deaktivieren
+# <a name="mfprotection_disable-attribute"></a>MFPROTECTION \_ DISABLE-Attribut
 
-Gibt an, dass Schutz deaktiviert ist.
+Gibt an, dass der Schutz deaktiviert ist.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Gibt an, dass Schutz deaktiviert ist.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -35,7 +35,7 @@ Gibt an, dass Schutz deaktiviert ist.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

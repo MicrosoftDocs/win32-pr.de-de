@@ -1,6 +1,6 @@
 ---
-title: 'IDeliveryOptimizationJob2:: GetProperty-Methode'
-description: Gibt eine einzelne Eigenschaft des Do-Auftrags zurück.
+title: IDeliveryOptimizationJob2::GetProperty-Methode
+description: Gibt eine einzelne Eigenschaft des DO-Auftrags zurück.
 keywords:
 - GetProperty-Methode
 - GetProperty-Methode, IDeliveryOptimizationJob2-Schnittstelle
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 01/18/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 52e405685534c0dbae7c8c205dc5e114a3dbe68b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cdca86cb374eded0eabcc1d623d2218a6dc1f4cd5613a18e16b4ec9ab93156b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118811251"
 ---
-# <a name="ideliveryoptimizationjob2getproperty-method"></a>IDeliveryOptimizationJob2:: GetProperty-Methode
+# <a name="ideliveryoptimizationjob2getproperty-method"></a>IDeliveryOptimizationJob2::GetProperty-Methode
 
-Diese Methode gibt eine einzelne Eigenschaft des Do-Auftrags zurück.
+Diese Methode gibt eine einzelne Eigenschaft des DO-Auftrags zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT GetProperty(
 
 <dl> <dt>
 
-*PROPID* \[ in\]
+*propId* \[ In\]
 </dt> <dd>
 
-Die erforderliche Eigenschafts-ID, die erhalten werden soll. Nur **DOJobPropertyId_ExtendedErrorInfo** vom Typ VT_BSTR wird unterstützt.
+Die erforderliche Eigenschaften-ID, die sie erhalten soll. Nur **DOJobPropertyId_ExtendedErrorInfo** vom Typ VT_BSTR werden unterstützt.
 
 </dd> <dt>
 
-*propvalue* \[ vorgenommen\]
+*propValue* \[ out\]
 </dt> <dd>
 
-Der resultierende Eigenschafts Wert, der in einem Variant-Typ gespeichert wird.
+Der resultierende Eigenschaftswert, der in einem VARIANT-Typ gespeichert ist.
 
 </dd> </dl>
 
@@ -61,19 +61,19 @@ Diese Methode gibt die folgenden HRESULT-Werte zurück.
 | Rückgabecode                  | Beschreibung          |
 |------------------------------|----------------------|
 | **S_OK**                     | Erfolg              |
-| **DO_E_UNKNOWN_PROPERTY_ID** | Unbekannte eigen schafts-ID. |
+| **DO_E_UNKNOWN_PROPERTY_ID** | Unbekannte Eigenschaften-ID. |
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |---------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)  | Windows 10, Version 1803, \[ nur Desktop-Apps\]                                   |
-| Unterstützte Mindestversion (Server)  | Windows Server, Version 1709, \[ nur Desktop-Apps\]                               |
-| Header                    | Deliveryoptimization. h                                                           |
-| IDL                       | Deliveryoptimization. idl                                                         |
-| Bibliothek                   | Dosvc. lib                                                                        |
+| Unterstützte Mindestversion (Client)  | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]                                   |
+| Unterstützte Mindestversion (Server)  | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]                               |
+| Header                    | Deliveryoptimization.h                                                           |
+| Idl                       | DeliveryOptimization.idl                                                         |
+| Bibliothek                   | Dosvc.lib                                                                        |
 | DLL                       | Dosvc.dll                                                                        |
-| IID                       | IID_IDeliveryOptimizationJob2 ist als 18995a26-BF 59-4abe-9B-d5092d5a2405 definiert. |
+| IID                       | IID_IDeliveryOptimizationJob2 ist als 18995A26-BF59-4ABE-9F8B-D5092D5A2405 definiert. |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,7 +1,7 @@
 ---
-description: Die Port \_ Info \_ 3-Struktur gibt den Statuswert eines Drucker Anschlusses an.
+description: Die PORT \_ INFO \_ 3-Struktur gibt den Statuswert eines Druckerports an.
 ms.assetid: 0939353f-284b-4dbb-89a2-04918c934430
-title: PORT_INFO_3 Struktur (winspool. h)
+title: PORT_INFO_3 -Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 49888ee6410f39745b848bbbf7fd95fa329c6f48
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cdd7f2fd931c7f503d566cdfc4ab38c5f595b51cea23d0cdf2fb326811cf7748
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106363456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033968"
 ---
-# <a name="port_info_3-structure"></a>Port \_ Info \_ 3-Struktur
+# <a name="port_info_3-structure"></a>PORT \_ INFO \_ 3-Struktur
 
-Die **Port \_ Info \_ 3** -Struktur gibt den Statuswert eines Drucker Anschlusses an.
+Die **PORT \_ INFO \_ 3-Struktur** gibt den Statuswert eines Druckerports an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,27 +46,27 @@ typedef struct _PORT_INFO_3 {
 **dwStatus**
 </dt> <dd>
 
-Der neue Port Statuswert. Dieser Wert wird nur verwendet, wenn der **pszstatus** -Member **null** ist.
+Der neue Portstatuswert. Dieser Wert wird nur verwendet, wenn **der pszStatus-Member** **NULL ist.**
 
-Dieser Member kann einen der folgenden Werte aufweisen.
+Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                            | Bedeutung                                             |
 |----------------------------------|-----------------------------------------------------|
-| 0                                | Löscht den Status des Drucker Anschlusses.                     |
-| Port \_ Status \_ Offline            | Der Drucker des Ports ist offline.                      |
-| Port \_ Status \_ Papier \_ Marmelade         | Der Drucker des Ports hat eine Papier Marmelade.                 |
-| Port \_ Status \_ Papier \_ out         | Der Drucker des Ports ist nicht mehr im Papier.                 |
-| Port \_ Status- \_ Ausgabe \_ bin \_ voll  | Der Ausgabe Korb des Ports ist voll.            |
-| Problem mit dem Port \_ Status \_ Papier \_     | Der Drucker des Ports hat ein Papier Problem.             |
-| Port \_ Status \_ kein \_ Toner          | Der Drucker des Ports ist nicht mehr Toner.                 |
-| Port \_ Status- \_ Tür \_ geöffnet         | Die Tür des Drucker des Ports ist offen.             |
-| Port \_ Status \_ Benutzer \_ Eingriff | Der Drucker des Ports erfordert einen Benutzereingriff.      |
-| Port \_ Status \_ nicht genügend Arbeits \_ \_ Speicher    | Der Drucker des Ports weist nicht genügend Arbeitsspeicher auf.                |
-| Port \_ Status- \_ Toner \_ niedrig         | Der Drucker des Ports ist auf dem Toner niedrig.                 |
-| \_ \_ Anwärm Status des Ports \_        | Der Drucker des Ports wird erwärmt.                   |
-| \_ \_ Energiespar Status des Port Status \_        | Der Drucker des Ports befindet sich in einem Energiesparmodus. |
+| 0                                | Entfernt den Druckerportstatus.                     |
+| PORTSTATUS \_ \_ OFFLINE            | Der Drucker des Anschlusses ist offline.                      |
+| \_ \_ PAPIERSTAU FÜR \_ PORTSTATUS         | Der Drucker des Anschlusses verfügt über einen Papierstau.                 |
+| PAPIER \_ ZUM \_ \_ PORTSTATUS         | Der Drucker des Anschlusses ist ohne Papier.                 |
+| PORT \_ STATUS \_ OUTPUT \_ BIN \_ FULL  | Der Ausgabebehälter des Druckers des Anschlusses ist voll.            |
+| PROBLEM MIT \_ DEM \_ \_ PORTSTATUSDOKUMENT     | Der Drucker des Anschlusses hat ein Papierproblem.             |
+| PORTSTATUS \_ \_ KEIN \_ TONER          | Der Drucker des Anschlusses ist nicht mehr toner.                 |
+| PORT \_ STATUS \_ DOOR \_ OPEN         | Die Tür des Druckers des Anschlusses ist geöffnet.             |
+| \_PORTSTATUS \_ \_ BENUTZEREINGRIFF | Der Drucker des Anschlusses erfordert einen Benutzereingriff.      |
+| PORTSTATUS \_ \_ NICHT GENÜGEND \_ \_ ARBEITSSPEICHER    | Der Drucker des Anschlusses verfügt nicht über genügend Arbeitsspeicher.                |
+| PORTSTATUS \_ \_ TONER \_ LOW         | Der Drucker des Anschlusses verfügt über wenig Toner.                 |
+| PORTSTATUS \_ \_ NACH \_ OBEN        | Der Drucker des Anschlusses wird aufwärmt.                   |
+| PORTSTATUS \_ \_ – \_ STROMSPAREN        | Der Drucker des Anschlusses befindet sich im Energiemodus. |
 
 
 
@@ -74,27 +74,27 @@ Dieser Member kann einen der folgenden Werte aufweisen.
 
 </dd> <dt>
 
-**pszstatus**
+**pszStatus**
 </dt> <dd>
 
-Zeiger auf eine neue festzulegende Wert Zeichenfolge für den Drucker Anschluss. Verwenden Sie dieses Mitglied, wenn es keinen geeigneten Statuswert für den **dwStatus**-Wert gibt.
+Zeiger auf eine neue Zeichenfolge für den Druckerportstatus, die festgelegt werden soll. Verwenden Sie diesen Member, wenn unter den für dwStatus aufgeführten kein geeigneter **Statuswert enthalten ist.**
 
 </dd> <dt>
 
-**dwschwere Grad**
+**dwSeverity**
 </dt> <dd>
 
-Der Schweregrad des Port Status Werts.
+Der Schweregrad des Portstatuswerts.
 
-Dieser Member kann einen der folgenden Werte aufweisen.
+Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                       | Bedeutung                                   |
 |-----------------------------|-------------------------------------------|
-| \_Fehler beim \_ Porttyp. \_   | Der Wert für den Port Status weist auf einen Fehler hin. |
-| Port \_ Status \_ \_ Warnung | Der Wert für den Port Status ist eine Warnung.       |
-| Informationen zum Port \_ Status- \_ Typ \_    | Der Port Statuswert ist "Information".   |
+| \_ \_ \_ PORTSTATUSTYPFEHLER   | Der Portstatuswert gibt einen Fehler an. |
+| \_ \_ \_ PORTSTATUSTYPWARNUNG | Der Portstatuswert ist eine Warnung.       |
+| INFORMATIONEN ZUM \_ \_ \_ PORTSTATUSTYP    | Der Portstatuswert ist informationell.   |
 
 
 
@@ -102,9 +102,9 @@ Dieser Member kann einen der folgenden Werte aufweisen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" festlegen \_ , beendet der Druck Spooler das Senden von Aufträgen an den Port. Der Druck Spooler setzt das Senden von Aufträgen an den Port erst fort, wenn ein anderer [**setPort**](setport.md) -Rückruf zum Löschen des Status erfolgt ist.
+Wenn Sie einen Druckerportstatuswert mit dem Schweregrad PORT STATUS TYPE ERROR festlegen, beendet der Druckspooler das Senden von Aufträgen \_ \_ an den \_ Port. Der Druckspooler setzt das Senden von Aufträgen an den Port erst dann wieder auf, wenn ein weiterer [**SetPort-Aufruf**](setport.md) erfolgt, um den Status zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,8 +114,8 @@ Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" f
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Port \_ Info \_ 3W** (Unicode) und **\_ Port \_ Info \_ 3a** (ANSI)<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PORT \_ INFO \_ 3W** (Unicode) und **\_ PORT INFO \_ \_ 3A** (ANSI)<br/>                                 |
 
 
 
@@ -126,7 +126,7 @@ Wenn Sie einen druckerportstatuswert mit dem Wert " \_ \_ Fehler beim Porttyp" f
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**SetPort**](setport.md)

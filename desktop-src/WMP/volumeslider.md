@@ -1,9 +1,9 @@
 ---
-title: VolumeSlider
-description: Dies ist ein vordefinierter Schieberegler mit den folgenden Standardwerten. | VolumeSlider
+title: VOLUMESLIDER
+description: Dies ist ein vordefinierter SLIDER mit den folgenden Standardwerten. | VOLUMESLIDER
 ms.assetid: 7533863b-49de-4c1b-8750-fd333c573a17
 keywords:
-- VolumeSlider-Windows-Media Player
+- VOLUMESLIDER-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ea872b55f6657d9cf1c9f67230cb3debd955fb4e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ebc2e6ec82327be9cb423d05661a5a38bbcc445450fc6d4f56ceaf7caa8b270d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054008"
 ---
-# <a name="volumeslider"></a>VolumeSlider
+# <a name="volumeslider"></a>VOLUMESLIDER
 
-Dies ist ein vordefinierter Schieberegler mit den folgenden Standardwerten.
+Dies ist ein vordefinierter SLIDER mit den folgenden Standardwerten.
 
 ``` syntax
 toolTip="Volume"
@@ -33,9 +33,9 @@ value_onchange="jscript:player.settings.volume=value;
 player.settings.mute=false;"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein Schieberegler-Steuerelement erstellt, das das audiovolume festlegt. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieses Schiebereglers können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein SLIDER-Steuerelement erstellt, das das Audiovolumen fest legt. Die QuickInfos sind lokalisiert. Alle Eigenschaften dieses SLIDER können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Dadurch wird ein Schieberegler-Steuerelement erstellt, das das audiovolume festl
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
@@ -51,7 +51,7 @@ Dadurch wird ein Schieberegler-Steuerelement erstellt, das das audiovolume festl
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

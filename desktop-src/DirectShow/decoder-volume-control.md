@@ -1,19 +1,19 @@
 ---
-description: Decodersteuerelement
+description: Decoder-Volumesteuerung
 ms.assetid: 94d68722-a0c2-47a7-a0a0-ae315f8f31ed
-title: Decodersteuerelement
+title: Decoder-Volumesteuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4ce525f8b39e873d2c0002ac283014a9bcbe87c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 93e96ed9efb17a4fb32c41d8b10313edbe015c202b7f7d1f4287e1af20cca559
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953149"
 ---
-# <a name="decoder-volume-control"></a>Decodersteuerelement
+# <a name="decoder-volume-control"></a>Decoder-Volumesteuerung
 
-Anwendungen steuern das audiovolume über die [**ibasicaudioschnittstelle**](/windows/desktop/api/Control/nn-control-ibasicaudio) . Ein **ibasicaudioschnittstellen** Handler wird für ksproxy bereitgestellt. Damit ein Decoder die volumebefehle aus ksproxy verarbeiten kann, muss er mehrere Registrierungsschlüssel in seinem Setup Skript hinzufügen und den Eigenschaften Satz " **kspropsetid \_ Wave** " unterstützen.
+Anwendungen steuern das Audiovolumen über die [**IBasicAudio-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ibasicaudio) Für KSProxy wird **ein IBasicAudio-Schnittstellenhandler** bereitgestellt. Damit ein Decoder die Volumebefehle von KSProxy verarbeiten kann, muss er im Setupskript mehrere Registrierungsschlüssel hinzufügen und den **KSPROPSETID \_ Wave-Eigenschaftensatz** unterstützen.
 
 Erstellen Sie einige neue Registrierungsschlüssel für den Treiber:
 
@@ -39,13 +39,13 @@ HKLM\SYSTEM\
 
 
 
-Um die volumesteuerung zu implementieren, muss der Treiber zusätzlich zum KsProperty.ID = ksproperty Wave Volume auch die **kspropantid- \_ Wave** unterstützen \_ \_ . Diese Eigenschaft wird über die Methoden " [**ikspropertyset:: Get**](ikspropertyset-get.md) " und " [**ikspropertyset:: set**](ikspropertyset-set.md) " an den Treiber übergeben. In den Feldern "leftdämpfung" und "rightattentuations" werden die linken/rechten Lautsprecher Volumes als lineare Werte von 0x0000 bis 0xFFFF angegeben.
+Um die Volumesteuerung zu implementieren, muss der Treiber auch **KSPROPSETID \_ Wave** zusammen mit KsProperty.Id = KSPROPERTY \_ WAVE VOLUME \_ unterstützen. Diese Eigenschaft wird über die [**Methoden IKsPropertySet::Get**](ikspropertyset-get.md) und [**IKsPropertySet::Set**](ikspropertyset-set.md) an den Treiber übergeben. Die Felder LeftAttenuation und RightAttentuation geben die lautstärken links/rechten Lautsprecher als lineare Werte von 0x0000 bis 0xffff.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Decoder-Schnittstellen und Spezifikationen](decoder-interfaces-and-specifications.md)
+[Decoderschnittstellen und Spezifikationen](decoder-interfaces-and-specifications.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Win32_RDFileAssociation-Klasse
-description: Stellt eine Dateityp Zuordnung für eine RemoteApp dar.
+description: Stellt eine Dateityp-Zuordnung für eine RemoteApp dar.
 ms.assetid: 9ecf6fa5-36f0-4b37-9d59-781b41c1d90c
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDFileAssociation-Klasse Remotedesktopdienste
-- Win32_RDFileAssociation Klasse Remotedesktopdienste, beschrieben
+- Win32_RDFileAssociation-Remotedesktopdienste
+- Win32_RDFileAssociation klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac64cd38bdad748c64fe6f52cb7a6da8d8220cba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8327997449527cfb9d2e66429809f14320ac7fe23c5dac455e04883547eabc4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118849975"
 ---
-# <a name="win32_rdfileassociation-class"></a>Win32 \_ rdfileassociation-Klasse
+# <a name="win32_rdfileassociation-class"></a>Win32 \_ RDFileAssociation-Klasse
 
-Stellt eine Dateityp Zuordnung für eine RemoteApp dar.
+Stellt eine Dateityp-Zuordnung für eine RemoteApp dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,17 +51,17 @@ class Win32_RDFileAssociation
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdfileassociation** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDFileAssociation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdfileassociation** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDFileAssociation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Extname**
+**ExtName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -73,20 +73,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der Dateinamenerweiterung, z. b. txt.
+Der Name der Dateinamenerweiterung, z. B. .txt.
 
 </dd> <dt>
 
-**Iconcontent**
+**IconContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Inhalt des Symbols für diese Datei Zuordnung.
+Der Inhalt des Symbols für diese Dateiassoz.
 
 </dd> <dt>
 
@@ -112,14 +112,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Dateipfad zum Symbol für diese Datei Zuordnung.
+Der Dateipfad zum Symbol für diese Dateiassoz.
 
 </dd> <dt>
 
-**Primaryhandler**
+**PrimaryHandler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -129,7 +129,7 @@ Gibt an, ob diese Zuordnung für einen primären Handler gilt.
 
 </dd> <dt>
 
-**Progidhint**
+**ProgIdHint**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -138,7 +138,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Hinweis, dass Dokumente mit dieser Datei Zuordnung geöffnet werden.
+Der Hinweis zum Öffnen von Dokumenten mit dieser Dateiassoz.
 
 </dd> </dl>
 
@@ -150,8 +150,8 @@ Der Hinweis, dass Dokumente mit dieser Datei Zuordnung geöffnet werden.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tsallow. MOF</dt> </dl>  |
+| Namespace<br/>                | Root \\ cimv2 \\ TerminalServices<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TsAllow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 
 

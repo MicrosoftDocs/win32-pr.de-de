@@ -1,7 +1,7 @@
 ---
-description: 'ControlMetrics-Methode der CIM_MetricService Klasse: Aktiviert und deaktiviert die Sammlung von Metriken.'
+description: 'ControlMetrics-Methode der CIM_MetricService-Klasse: Aktiviert und deaktiviert die Sammlung von Metriken.'
 ms.assetid: afb90863-e70a-46e5-b1b7-d959dcacc306
-title: ControlMetrics-Methode der CIM_MetricService Klasse
+title: ControlMetrics-Methode der CIM_MetricService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 19e732e50f8c367463e7f528a520a736117999b6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c78f575bb68673c364fe627766b3709944c2a062e0407f927262ff019764b7d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068650"
 ---
 # <a name="controlmetrics-method-of-the-cim_metricservice-class"></a>ControlMetrics-Methode der CIM \_ MetricService-Klasse
 
-Aktiviert und deaktiviert die Sammlung von Metriken. **ControlMetrics** wird verwendet, um die Sammlung der einzelnen Typen von Metriken für ein [**CIM \_ ManagedElement,**](cim-managedelement.md)die Auflistung eines bestimmten Metriktyps für alle verwalteten Elemente oder die Auflistung einer bestimmten Metrik für ein bestimmtes verwaltetes Element zu steuern.
+Aktiviert und deaktiviert die Erfassung von Metriken. **ControlMetrics** wird verwendet, um die Sammlung der einzelnen Metriktypen für ein [**CIM \_ ManagedElement,**](cim-managedelement.md)die Sammlung eines bestimmten Metriktyps für alle verwalteten Elemente oder die Sammlung einer bestimmten Metrik für ein bestimmtes verwaltetes Element zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Identifiziert eine [**CIM \_ BaseMetricDefinition,**](cim-basemetricdefinition.m
 *MetricCollectionEnabled* \[ In\]
 </dt> <dd>
 
-Gibt den gewünschten Vorgang an, der für die Metriken durchgeführt werden soll.
+Gibt den gewünschten Vorgang an, der für die Metriken ausgeführt werden soll.
 
 <dt>
 
@@ -99,7 +99,7 @@ Gibt den gewünschten Vorgang an, der für die Metriken durchgeführt werden sol
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -122,7 +122,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -132,7 +132,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Die aktive Methode wird aufgerufen, wenn der Zustand zum Anhalten oder ausführen gewechselt wird.
+description: Die Active-Methode wird aufgerufen, wenn der Zustand in "Angehalten" oder "Wird ausgeführt" umgeschaltet wird.
 ms.assetid: 2913bc81-572d-4ee1-a1b6-9e1638e04c9d
-title: Cbaserderderer. Active-Methode (renbase. h)
+title: CBaseRenderer.Active-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 11593ffb25a953f4269d84ee2b9c9d884a23e5fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df5ec659b5e76940ebf279e3feb8995d34380db0543d9eebcf42c1f3bff8c0e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954969"
 ---
-# <a name="cbaserendereractive-method"></a>Cbaserderderer. Active-Methode
+# <a name="cbaserendereractive-method"></a>CBaseRenderer.Active-Methode
 
-Die- `Active` Methode wird aufgerufen, wenn der Zustand zum Anhalten oder ausführen gewechselt wird.
+Die `Active` -Methode wird aufgerufen, wenn der Zustand in "Angehalten" oder "Wird ausgeführt" umgeschaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: Active**](crendererinputpin-active.md) -Methode auf. Diese Methode führt in der Basisklasse keine Aktion aus.
+Der Eingabepin ruft diese Methode aus seiner eigenen [**CRendererInputPin::Active-Methode**](crendererinputpin-active.md) auf. Diese Methode führt in der Basisklasse nichts aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: Acti
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: Acti
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

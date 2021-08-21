@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. NextRunTime (Eigenschaft)
-description: Ruft bei der Skripterstellung die Uhrzeit ab, zu der der registrierte Task die nächste geplante Ausführung ist.
+title: RegisteredTask.NextRunTime (Eigenschaft)
+description: Für die Skripterstellung wird der Zeitpunkt der nächsten geplanten Ausführung des registrierten Tasks ab.
 ms.assetid: f63298a8-c9fa-4fea-ad0b-2c8739aced19
 keywords:
-- NextRunTime-Eigenschaft Taskplaner
-- NextRunTime-Eigenschaft Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, NextRunTime-Eigenschaft
+- NextRunTime-Taskplaner
+- NextRunTime-Eigenschaft Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , NextRunTime-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94db26c023ddd2c146586fbc433548517a84f234
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 850c0215555fd24b729b1d71acaff9fa7083c0f53289f28e4228b8e57ff40e52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060048"
 ---
-# <a name="registeredtasknextruntime-property"></a>Registeredtask. NextRunTime (Eigenschaft)
+# <a name="registeredtasknextruntime-property"></a>RegisteredTask.NextRunTime (Eigenschaft)
 
-Ruft bei der Skripterstellung die Uhrzeit ab, zu der der registrierte Task die nächste geplante Ausführung ist.
+Für die Skripterstellung wird der Zeitpunkt der nächsten geplanten Ausführung des registrierten Tasks ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ RegisteredTask.NextRunTime As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Zeitpunkt der nächsten geplanten Ausführung der registrierten Aufgabe.
+Die Zeit, zu der die nächste Ausführung des registrierten Task geplant ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die registrierte Aufgabe einzeln deaktivierte Trigger enthält, wirken sich diese Trigger weiterhin auf die nächste geplante Laufzeit aus, die zurückgegeben wird, auch wenn Sie deaktiviert sind.
+Wenn der registrierte Task Trigger enthält, die einzeln deaktiviert sind, wirken sich diese Trigger weiterhin auf die nächste geplante Laufzeit aus, die zurückgegeben wird, obwohl sie deaktiviert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Wenn die registrierte Aufgabe einzeln deaktivierte Trigger enthält, wirken sich
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -64,7 +64,7 @@ Wenn die registrierte Aufgabe einzeln deaktivierte Trigger enthält, wirken sich
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

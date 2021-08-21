@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OPENTEMPORARYTABLE. TableID-Eigenschaft'
-title: JET_OPENTEMPORARYTABLE. TableID-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: JET_OPENTEMPORARYTABLE.tableid-Eigenschaft'
+title: JET_OPENTEMPORARYTABLE.tableid-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'tableid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_OPENTEMPORARYTABLE.tableid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_opentemporarytable.tableid(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c4ea8f029265ff6725febe7817d6b8cc61807640
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee5ccac1c53cac63936531ac791a30edac6f86b7fd658121869d5e358fe23e20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765044"
 ---
-# <a name="jet_opentemporarytabletableid-property"></a>JET_OPENTEMPORARYTABLE. TableID-Eigenschaft
+# <a name="jet_opentemporarytabletableid-property"></a>JET_OPENTEMPORARYTABLE.tableid-Eigenschaft
 
-Ruft das Tabellen Handle für die temporäre Tabelle ab, die als Ergebnis eines erfolgreichen jetopumtemporarytable-Aufrufes erstellt wurde.
+Ruft das Tabellenhand handle für die temporäre Tabelle ab, die als Ergebnis eines erfolgreichen Aufrufs von JetOpenTemporaryTable erstellt wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_TABLEID tableid { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_OPENTEMPORARYTABLE-Klasse](./jet-opentemporarytable-class.md)
 
-[Mitglieder JET_OPENTEMPORARYTABLE](./jet-opentemporarytable-members.md)
+[JET_OPENTEMPORARYTABLE Member](./jet-opentemporarytable-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents ondiskouesfspace-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass der freie Speicherplatz auf einem für einen virtuellen Computer erforderlichen Datenträger gering ist.
+title: IVMVirtualMachineEvents OnDiskOutOfSpace-Methode (VPCCOMInterfaces.h)
+description: Empfängt die Benachrichtigung, dass für einen für einen virtuellen Computer erforderlichen Datenträger wenig freier Speicherplatz verfügbar ist.
 ms.assetid: 1c431904-fffd-4513-8670-b9723f53edf1
 keywords:
-- Ondiskoudef Space-Methode virtueller PC
-- Ondiskoudef Space-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, ondiskouesf Space-Methode
+- OnDiskOutOfSpace-Methode Virtueller PC
+- OnDiskOutOfSpace-Methode Virtual PC , IVMVirtualMachineEvents-Schnittstelle
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC , OnDiskOutOfSpace-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ac2d5f45068dc8cd7341d0a599b2da4e5c7655a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c482f0a713fda7e13436dc28d295469237273a7c607e522ce457ec908f210223
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056628"
 ---
-# <a name="ivmvirtualmachineeventsondiskoutofspace-method"></a>Ivmvirtualmachineevents:: ondiskoudef Space-Methode
+# <a name="ivmvirtualmachineeventsondiskoutofspace-method"></a>IVMVirtualMachineEvents::OnDiskOutOfSpace-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass der freie Speicherplatz für einen virtuellen Computer (VM) nicht ausreichend ist. Fällt der freie Speicherplatz unter 100 MB, wird dieses Ereignis als Warnung empfangen, und wenn der freie Speicherplatz unter 20 MB sinkt, wird dieses Ereignis erneut als Fehler empfangen, und der virtuelle Computer wird angehalten.
+Empfängt die Benachrichtigung, dass für einen für einen virtuellen Computer (VM) erforderlichen Datenträger wenig freier Speicherplatz verfügbar ist. Wenn der freie Speicherplatz unter 100 MB fällt, wird dieses Ereignis als Warnung empfangen, und wenn der freie Speicherplatz unter 20 MB fällt, wird dieses Ereignis erneut als Fehler empfangen, und die VM wird angehalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,16 +44,16 @@ HRESULT OnDiskOutOfSpace(
 
 <dl> <dt>
 
-*criticallylow* \[ in\]
+*criticallyLow* \[ In\]
 </dt> <dd>
 
-Legen Sie diese Einstellung auf **Variant \_ true** fest, wenn der Datenträger weniger als 20 MB frei ist, und auf **\_ false** , wenn der freie Speicherplatz größer als 20 MB, aber kleiner als 100 MB ist.
+Legen Sie auf **VARIANT \_ TRUE** fest, wenn der Datenträger weniger als 20 MB frei hat, und auf **VARIANT \_ FALSE,** wenn der freie Speicherplatz mehr als 20 MB, aber weniger als 100 MB beträgt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -74,7 +74,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

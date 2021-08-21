@@ -1,9 +1,9 @@
 ---
-title: 'Samplegrad:: samplegrad (S, float, float, float, float, uint)-Funktion für texturecube'
-description: Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden. Für texturecube.
+title: SampleGrad::SampleGrad(S,float,float,float,float,uint)-Funktion für TextureCube
+description: Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Für TextureCube.
 ms.assetid: 36DF7846-416A-4F2F-A7F8-44EE768CDEE1
 keywords:
-- Samplegrad-Funktion HLSL
+- SampleGrad-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3e75bccaeac28aefc50620a5dea31fa62b880332
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 8f261340d64d53f8b2c56881d22f462ea636e38013d98d1b81112aee7907053c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104531094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043278"
 ---
-# <a name="samplegradsamplegradsfloatfloatfloatfloatuint-function-for-texturecube"></a>Samplegrad:: samplegrad (S, float, float, float, float, uint)-Funktion für texturecube
+# <a name="samplegradsamplegradsfloatfloatfloatfloatuint-function-for-texturecube"></a>SampleGrad::SampleGrad(S,float,float,float,float,uint)-Funktion für TextureCube
 
-Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden. Gibt den Status des Vorgangs zurück.
+Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ DXGI_FORMAT SampleGrad(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+Ein [Samplerzustand.](dx-graphics-hlsl-sampler.md) Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -66,8 +66,8 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
-| Texture2DArray, Texture3D, texturecube | float3         |
-| Texturecubearray                       | float4         |
+| Texture2DArray, Texture3D, TextureCube | float3         |
+| TextureCubeArray                       | float4         |
 
 
 
@@ -80,7 +80,7 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 
 Typ: **float**
 
-Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in x Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -88,7 +88,7 @@ Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
-| Texture3D, texturecube, texturecubearray | float3         |
+| Texture3D, TextureCube, TextureCubeArray | float3         |
 | Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
 
 
@@ -97,12 +97,12 @@ Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp
 
 </dd> <dt>
 
-Nicht mehr  \[ in\]
+*DDY* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -110,7 +110,7 @@ Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
-| Texture3D, texturecube, texturecubearray | float3         |
+| Texture3D, TextureCube, TextureCubeArray | float3         |
 | Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
 
 
@@ -119,35 +119,35 @@ Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp
 
 </dd> <dt>
 
-*Klammer* \[ in\]
+*Klammer* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein optionaler Wert zum Einspannen von Sample-Lod-Werten. Wenn Sie beispielsweise 2.0 f als Klammer Wert übergeben, stellen Sie sicher, dass kein einzelnes Beispiel auf eine MIP-Ebene kleiner als 2.0 f zugreift.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Samplegrad-Methoden](texturecube-samplegrad.md)
+[SampleGrad-Methoden](texturecube-samplegrad.md)
 </dt> <dt>
 
 [**TextureCube**](texturecube.md)

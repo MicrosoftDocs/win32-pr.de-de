@@ -1,9 +1,9 @@
 ---
-title: WM_DRAWITEM Meldung (Winuser. h)
-description: Wird an das übergeordnete Fenster einer vom Besitzer gezeichneten Schaltfläche, einem Kombinations Feld, einem Listenfeld oder einem Menü gesendet, wenn sich ein visueller Aspekt der Schaltfläche, des Kombinations Felds, des Listen Felds oder des Menüs geändert hat.
+title: WM_DRAWITEM (Winuser.h)
+description: Wird an das übergeordnete Fenster einer vom Besitzer gezeichneten Schaltfläche, eines Kombinationsfelds, eines Listenfelds oder eines Menüs gesendet, wenn sich ein visueller Aspekt der Schaltfläche, des Kombinationsfelds, des Listenfelds oder des Menüs geändert hat.
 ms.assetid: e54bae5e-10d6-43b0-a766-1b270c8873a9
 keywords:
-- Windows-Steuerelemente für WM_DRAWITEM Meldung
+- WM_DRAWITEM meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5bd6465a560a0590ed9f5b483afae4c0d72d637
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f5d4b2addfa2de5f8c76ded636ca29a96fb3af7e0ab4157d25ac26a78c462c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957519"
 ---
-# <a name="wm_drawitem-message"></a>WM- \_ DrawItem-Nachricht
+# <a name="wm_drawitem-message"></a>WM \_ DRAWITEM-Nachricht
 
-Wird an das übergeordnete Fenster einer vom Besitzer gezeichneten Schaltfläche, einem Kombinations Feld, einem Listenfeld oder einem Menü gesendet, wenn sich ein visueller Aspekt der Schaltfläche, des Kombinations Felds, des Listen Felds oder des Menüs geändert hat.
+Wird an das übergeordnete Fenster einer vom Besitzer gezeichneten Schaltfläche, eines Kombinationsfelds, eines Listenfelds oder eines Menüs gesendet, wenn sich ein visueller Aspekt der Schaltfläche, des Kombinationsfelds, des Listenfelds oder des Menüs geändert hat.
 
-Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -44,28 +44,28 @@ WM_DRAWITEM
 *wParam* 
 </dt> <dd>
 
-Gibt den Bezeichner des Steuer Elements an, das die **WM- \_ DrawItem** -Nachricht gesendet hat. Wenn die Nachricht von einem Menü gesendet wurde, ist dieser Parameter gleich 0 (null).
+Gibt den Bezeichner des Steuerelements an, das die **WM \_ DRAWITEM-Nachricht gesendet** hat. Wenn die Nachricht von einem Menü gesendet wurde, ist dieser Parameter 0 (null).
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur, die Informationen über das zu zeichende Element und den Typ der erforderlichen Zeichnung enthält.
+Zeiger auf eine [**DRAWITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) die Informationen über das zu zeichnende Element und den erforderlichen Zeichnungstyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie " **true**" zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie **TRUE zurückgeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig zeichnet die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion das Fokus Rechteck für ein vom Besitzer gezeichnetes Listenfeld Element.
+Standardmäßig zeichnet die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) das Fokusrechteck für ein vom Besitzer gezeichnetes Listenfeldelement.
 
-Der *itemaction* -Member der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur gibt den Zeichnungs Vorgang an, den eine Anwendung ausführen soll.
+Der *itemAction-Member* der [**DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) gibt den Zeichnungsvorgang an, den eine Anwendung ausführen soll.
 
-Vor der Rückgabe aus der Verarbeitung dieser Nachricht muss eine Anwendung sicherstellen, dass der vom *hdc* -Member der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur identifizierte Gerätekontext den Standardstatus aufweist.
+Bevor eine Anwendung von der Verarbeitung dieser Nachricht zurückkehrt, sollte sie sicherstellen, dass sich der vom *hDC-Member* der [**DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) identifizierte Gerätekontext im Standardzustand befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,9 +73,9 @@ Vor der Rückgabe aus der Verarbeitung dieser Nachricht muss eine Anwendung sich
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Vor der Rückgabe aus der Verarbeitung dieser Nachricht muss eine Anwendung sich
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DRAWITEMSTRUCT**](/windows/win32/api/winuser/ns-winuser-drawitemstruct)

@@ -1,6 +1,6 @@
 ---
 title: WIA-Schnittstellen
-description: Dieser Abschnitt enthält Referenzinformationen zu den Schnittstellen, die mit der WIA-API (Windows Image Acquisition) verwendet werden.
+description: Dieser Abschnitt enthält Referenzinformationen zu den Schnittstellen, die mit der Windows Image Acquisition(WIA)-API verwendet werden.
 ms.assetid: 0b496d6b-486a-42d3-a0e5-8e9e52e27608
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118965798"
 ---
 # <a name="wia-interfaces"></a>WIA-Schnittstellen
 
-Dieser Abschnitt enthält Referenzinformationen zu den Schnittstellen, die mit der WIA-API (Windows Image Acquisition) verwendet werden. Die folgenden Schnittstellen werden dargestellt:
+Dieser Abschnitt enthält Referenzinformationen zu den Schnittstellen, die mit der Windows Image Acquisition(WIA)-API verwendet werden. Die folgenden Schnittstellen werden dargestellt:
 
 ## <a name="interfaces"></a>Schnittstellen
 

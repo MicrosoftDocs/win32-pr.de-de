@@ -1,11 +1,11 @@
 ---
-title: Player. audiolanguagechange-Ereignis
-description: Das audiolanguagechange-Ereignis tritt auf, wenn sich die aktuelle Audiosprache ändert. | Player. audiolanguagechange-Ereignis
+title: Player.AudioLanguageChange-Ereignis
+description: Das AudioLanguageChange-Ereignis tritt auf, wenn sich die aktuelle Audiosprache ändert. | Player.AudioLanguageChange-Ereignis
 ms.assetid: 29006a51-1b72-4fab-9906-8a0af3d92560
 keywords:
-- Media Player für audiolanguagechange-Ereignisfenster
-- Audiolanguagechange-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, audiolanguagechange-Ereignis
+- AudioLanguageChange-Ereignis Windows Media Player
+- AudioLanguageChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , AudioLanguageChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e84809a966280c379f7051e500b4e385d640f890
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9642f7831fda827b5e64ccff4f4b5d94ea3ef921c50108ad24f38e3c8ec5310a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118835858"
 ---
-# <a name="playeraudiolanguagechange-event"></a>Player. audiolanguagechange-Ereignis
+# <a name="playeraudiolanguagechange-event"></a>Player.AudioLanguageChange-Ereignis
 
-Das **audiolanguagechange** -Ereignis tritt auf, wenn sich die aktuelle Audiosprache ändert.
+Das **AudioLanguageChange-Ereignis** tritt auf, wenn sich die aktuelle Audiosprache ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.AudioLanguageChange(
 
 <dl> <dt>
 
-*LangID* 
+*Langid* 
 </dt> <dd>
 
-**Number** (**Long**), der den neuen Gebiets Schema Bezeichner (LCID) angibt.
+**Number** (**long**), die den neuen Gebietsschemabezeichner (LCID) angibt.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Player.AudioLanguageChange(
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine LCID identifiziert eindeutig einen bestimmten Sprach Dialekt, der als Gebiets Schema bezeichnet wird.
+Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als Gebietsschema bezeichnet wird.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten Microsoft JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten Microsoft JScript-Datei aufgerufen oder an eine Methode übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -67,7 +67,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -76,7 +76,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 <dl> <dt>
 
-[**Controls. currentaudiolanguage**](controls-currentaudiolanguage.md)
+[**Controls.currentAudioLanguage**](controls-currentaudiolanguage.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

@@ -1,30 +1,30 @@
 ---
-title: Imstscax desktopwidth (Eigenschaft)
-description: Gibt die Breite des aktuellen Steuer Elements auf dem ersten Remote Desktop in Pixel an.
+title: IMsTscAx DesktopWidth (Eigenschaft)
+description: Gibt die Breite des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel an.
 ms.assetid: 3b349f6c-d068-4047-b8b5-29d022894729
 ms.tgt_platform: multiple
 keywords:
-- Desktopwidth-Eigenschaft Remotedesktopdienste
-- Desktopwidth-Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
-- Desktopwidth-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, desktopwidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste
+- DesktopWidth-Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste, DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste, DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste, DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste, DesktopWidth-Eigenschaft
+- DesktopWidth-Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste, DesktopWidth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16cd1391c6aeb27d9ec0f87317b06e9084337fbb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ca982303208bb2badecf210c9590f627a7b3b57c5acd9ecd7f8fee0bbb70ec93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058843"
 ---
-# <a name="imstscaxdesktopwidth-property"></a>Imstscax::D esktopwidth-Eigenschaft
+# <a name="imstscaxdesktopwidth-property"></a>IMsTscAx::D esktopWidth-Eigenschaft
 
-Gibt die Breite des aktuellen Steuer Elements auf dem ersten Remote Desktop in Pixel an.
+Gibt die Breite des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -98,36 +98,36 @@ Die neue Breite in Pixel.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Festlegen der **desktopwidth** -Eigenschaft ist optional, muss jedoch vor dem Aufrufen der [**Connect**](imstscax-connect.md) -Methode festgelegt werden. Wenn keine Desktop Breite angegeben wird oder auf 0 (null) festgelegt ist, wird die Breite des Desktops auf die Breite des Steuer Elements festgelegt. Die Mindest-und Höchstwerte sind abhängig von der Betriebssystemversion des Remotedesktop Clients.
+Das Festlegen **der DesktopWidth-Eigenschaft** ist optional, muss jedoch festgelegt werden, bevor die Verbinden [**wird.**](imstscax-connect.md) Wenn keine Desktopbreite angegeben oder auf 0 (null) festgelegt ist, wird die Desktopbreite auf die Breite des Steuerelements festgelegt. Die Mindest- und Höchstwerte hängen von der Betriebssystemversion des Remotedesktop ab.
 
 <dl> <dt>
 
 <span id="_"></span>Windows 8/Windows Server 2012
 </dt> <dd>
 
-200 minimal, 8192 maximal
+Mindestens 200, maximal 8192
 
 </dd> <dt>
 
 <span id="_"></span>Windows 7/Windows Server 2008
 </dt> <dd>
 
-200 minimal, 2048 maximal
+Mindestens 200, maximal 2048
 
 </dd> <dt>
 
 Windows Vista
 </dt> <dd>
 
-200 minimal, 1200 maximal
+Mindestens 200, maximal 1200
 
 </dd> </dl>
 
-Nachdem eine Verbindung hergestellt wurde, ändern alle Änderungen an der Breite des Steuer Elements nicht die Breite des Remote Desktops. Stattdessen ruft das Steuerelement nach Bedarf Bild Lauf leisten auf oder zentriert den Remote Desktop. Verwenden Sie die [**IMsRdpClient8:: Reconnect**](imsrdpclient8-reconnect.md) -Methode, um die Desktop Größe einer aktiven Verbindung zu ändern.
+Nachdem eine Verbindung hergestellt wurde, ändern änderungen an der Breite des Steuerelements nicht die Breite des Remotedesktops. Stattdessen werden vom Steuerelement bildlaufleisten angezeigt oder der Remotedesktop entsprechend centert. Verwenden Sie die [**IMsRdpClient8::Reconnect-Methode,**](imsrdpclient8-reconnect.md) um die Desktopgröße einer aktiven Verbindung zu ändern.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -141,7 +141,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -149,7 +149,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -176,7 +176,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

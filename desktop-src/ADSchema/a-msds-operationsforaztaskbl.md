@@ -65,7 +65,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**Nach oben**](c-top.md)<br/> |
+| In verwendete Klassen        | [**Oben**](c-top.md)<br/> |
 
 
 
@@ -86,7 +86,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**Nach oben**](c-top.md)<br/> |
+| In verwendete Klassen        | [**Oben**](c-top.md)<br/> |
 
 
 
@@ -107,7 +107,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**Nach oben**](c-top.md)<br/> |
+| In verwendete Klassen        | [**Oben**](c-top.md)<br/> |
 
 
 
@@ -120,7 +120,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Link-ID                | 2019                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -128,7 +128,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**Nach oben**](c-top.md)<br/> |
+| In verwendete Klassen        | [**Oben**](c-top.md)<br/> |
 
 
 
@@ -141,7 +141,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Link-ID                | 2019                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -149,7 +149,7 @@ Abwärtslink von Az-Operation zu Az-Task, die mit ihr verknüpfen.
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**Nach oben**](c-top.md)<br/> |
+| In verwendete Klassen        | [**Oben**](c-top.md)<br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Definiert die unterstützten culck-Modi.
+description: Definiert die unterstützten Cullingmodi.
 ms.assetid: b669307c-0d40-4ecb-8a2e-8bd1d9c65647
-title: D3DCULL-Enumeration (D3D9Types. h)
+title: D3DCULL-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: e88aa1baf86b2b03177cc686bf83299311065283
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 062135f1eff43bd568f1b08674985b4744e0835ebf3fa9e78c2756a798f85ccb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989060"
 ---
 # <a name="d3dcull-enumeration"></a>D3DCULL-Enumeration
 
-Definiert die unterstützten culck-Modi.
+Definiert die unterstützten Cullingmodi.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ typedef enum D3DCULL {
 
 <dl> <dt>
 
-<span id="D3DCULL_NONE"></span><span id="d3dcull_none"></span>**D3DCULL \_ None**
+<span id="D3DCULL_NONE"></span><span id="d3dcull_none"></span>**D3DCULL \_ NONE**
 </dt> <dd>
 
-Keine Gesichter zurück.
+Ziehe keine Zurück-Gesichter um.
 
 </dd> <dt>
 
 <span id="D3DCULL_CW"></span><span id="d3dcull_cw"></span>**D3DCULL \_ CW**
 </dt> <dd>
 
-Die Flächen werden mit den Scheitel Punkten im Uhrzeigersinn zurückgeleitet.
+Zurückkullen von Gesichtern mit Scheitelpunkten im Uhrzeigersinn.
 
 </dd> <dt>
 
 <span id="D3DCULL_CCW"></span><span id="d3dcull_ccw"></span>**D3DCULL \_ CCW**
 </dt> <dd>
 
-Kell-Gesichter mit gegen Uhrzeigersinn.
+Zurückkullen von Gesichtern mit gegen den Uhrzeigersinn.
 
 </dd> <dt>
 
-<span id="D3DCULL_FORCE_DWORD"></span><span id="d3dcull_force_dword"></span>**D3DCULL \_ Erzwingen von \_ DWORD**
+<span id="D3DCULL_FORCE_DWORD"></span><span id="d3dcull_force_dword"></span>**D3DCULL \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Werte in diesem enumerierten Typ werden vom D3DRS \_ CullMode-renderzustand verwendet. Die culk-Modi legen fest, wie die Gesichter beim Rendern einer Geometrie gekullt werden.
+Die Werte in diesem Enumerationstyp werden vom D3DRS \_ CULLMODE-Renderzustand verwendet. Die Culling-Modi definieren, wie Hintergesichter beim Rendern einer Geometrie gerendert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Die Werte in diesem enumerierten Typ werden vom D3DRS \_ CullMode-renderzustand 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: WM_PSD_MARGINRECT Meldung (kommdlg. h)
-description: Benachrichtigt die Hook-Prozedur über das Dialogfeld "Seite einrichten" (pagepainthook), dass das Dialogfeld im Begriff ist, das Rand Rechteck der Beispielseite zu zeichnen.
+title: WM_PSD_MARGINRECT Meldung (Commdlg.h)
+description: Benachrichtigt die Hookprozedur eines Page Setup-Dialogfelds PagePaintHook, dass das Dialogfeld das Randrechteck der Beispielseite zeichnen soll.
 ms.assetid: 81c057ab-6faf-4dd8-8b0c-34a2753e572c
 keywords:
-- Dialog Felder WM_PSD_MARGINRECT Meldung
+- Dialogfelder für WM_PSD_MARGINRECT Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4718cfbe16db53378544d9fca0ab44ade23ffb3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 09523258d1f67cfc4f35433a43a6b5a17db0be9dedaea87511c0c6d1327f82cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985260"
 ---
-# <a name="wm_psd_marginrect-message"></a>WM \_ PSD \_ marginrect-Nachricht
+# <a name="wm_psd_marginrect-message"></a>WM \_ PSD \_ MARGINRECT-Nachricht
 
-Benachrichtigt die Hook-Prozedur über das Dialogfeld " **Seite einrichten** " ( [**pagepainthook**](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook)), dass das Dialogfeld im Begriff ist, das Rand Rechteck der Beispielseite zu zeichnen.
+Benachrichtigt die Hookprozedur  eines Page Setup-Dialogfelds [**(PagePaintHook),**](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook)dass das Dialogfeld das Randrechteck der Beispielseite zeichnen soll.
 
 
 ```C++
@@ -40,26 +40,26 @@ Benachrichtigt die Hook-Prozedur über das Dialogfeld " **Seite einrichten** " (
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Gerätekontext der Beispielseite.
+Ein Handle für den Gerätekontext für die Beispielseite.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Koordinaten des Rand Rechtecks in Pixel enthält.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Koordinaten des Randrechtecks in Pixel enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Hook-Prozedur **true** zurückgibt, wird das Rand Rechteck in der Beispielseite nicht im Dialogfeld gezeichnet.
+Wenn die Hookprozedur **TRUE** zurückgibt, zeichnet das Dialogfeld das Randrechteck auf der Beispielseite nicht.
 
-Wenn die Hook-Prozedur **false** zurückgibt, zeichnet das Dialogfeld das Rand Rechteck auf der Beispielseite.
+Wenn die Hookprozedur **FALSE** zurückgibt, zeichnet das Dialogfeld das Randrechteck auf der Beispielseite.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Dialogfeld **Seite einrichten** enthält ein Bild einer Beispielseite, das zeigt, wie sich die Auswahl des Benutzers auf die Darstellung der gedruckten Ausgabe auswirkt. Wenn Sie die [**pagesetupdlg**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85)) -Funktion aufrufen, können Sie eine [*pagepainthook*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) -Hook-Prozedur bereitstellen, um die Darstellung der Beispielseite anzupassen. Wenn im Dialogfeld der Inhalt der Beispielseite gezeichnet wird, sendet das Dialogfeld eine Sequenz von Meldungen an die Hook-Prozedur.
+Das Dialogfeld **Seiteneinrichtung** enthält ein Bild einer Beispielseite, die zeigt, wie sich die Auswahl des Benutzers auf die Darstellung der gedruckten Ausgabe auswirkt. Wenn Sie die [**PageSetupDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85)) aufrufen, können Sie eine [*PagePaintHook-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) bereitstellen, um die Darstellung der Beispielseite anzupassen. Wenn das Dialogfeld den Inhalt der Beispielseite zeichnen soll, sendet das Dialogfeld eine Sequenz von Nachrichten an die Hookprozedur.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Das Dialogfeld **Seite einrichten** enthält ein Bild einer Beispielseite, das z
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -77,22 +77,22 @@ Das Dialogfeld **Seite einrichten** enthält ein Bild einer Beispielseite, das z
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[*Pagepainthook*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook)
+[*PagePaintHook*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook)
 </dt> <dt>
 
-[**Pagesetupdlg**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85))
+[**PageSetupDlg**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ PSD \_ pagesetupdlg**](wm-psd-pagesetupdlg.md)
+[**WM \_ PSD \_ PAGESETUPDLG**](wm-psd-pagesetupdlg.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  

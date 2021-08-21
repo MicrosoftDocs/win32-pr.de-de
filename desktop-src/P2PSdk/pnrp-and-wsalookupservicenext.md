@@ -1,238 +1,238 @@
 ---
-description: PNRP verwendet die WSALookupServiceNext-Funktion, um Abfragen abzugleichen, die in einem vorherigen wsalookupservicebegin-Befehl angegeben wurden.
+description: PNRP verwendet die WSALookupServiceNext-Funktion, um Abfragen zu erfüllen, die in einem vorherigen Aufruf von WSALookupServiceBegin angegeben wurden.
 ms.assetid: b3e1abf4-ff59-481d-b96e-f8916a47cd52
 title: PNRP und WSALookupServiceNext
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 398beca2f16e4920ab7fbe43bb648cbc22d9f336
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ec10c8021a2f13be1a1ffe228ca73a07c8af10dfc8714bef14f0bddeb0952aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553320"
 ---
 # <a name="pnrp-and-wsalookupservicenext"></a>PNRP und WSALookupServiceNext
 
-PNRP verwendet die [**WSALookupServiceNext**](winsock-nsp-reference-links.md) -Funktion, um Abfragen abzugleichen, die in einem vorherigen **wsalookupservicebegin**-Befehl angegeben wurden. Die Ergebnisse der **WSALookupServiceNext** -Funktion werden durch Einstellungen in der **wsaqueryset** -Struktur festgelegt, die im anfänglichen **wsalookupservicebegin** -Funktions aufruft übergeben werden. Diese Funktion wird verwendet, um die folgenden zwei Funktionen auszuführen:
+PNRP verwendet die [**WSALookupServiceNext-Funktion,**](winsock-nsp-reference-links.md) um Abfragen zu erfüllen, die in einem vorherigen Aufruf von **WSALookupServiceBegin angegeben wurden.** Die Ergebnisse der **WSALookupServiceNext-Funktion** werden durch Einstellungen in der **WSAQUERYSET-Struktur** bestimmt, die im ersten **WSALookupServiceBegin-Funktionsaufruf** übergeben werden. Diese Funktion wird verwendet, um die folgenden beiden Funktionen auszuführen:
 
--   Auflösen eines Peer namens in eine Liste von Adressen
--   Auflisten von Netzwerk Clouds
+-   Auflösen eines Peernamens in eine Liste von Adressen
+-   Aufzählen von Netzwerk clouds
 
-Mithilfe von [**wsanspioctl**](winsock-nsp-reference-links.md)kann der Suchdienst asynchron verwendet werden. Weitere Informationen zur asynchronen Verwendung der Suche-Dienstfunktionen finden Sie unter [PNRP und wsanspioctl](pnrp-and-wsanspioctl.md).
+Mit [**WSANSPIoctl kann**](winsock-nsp-reference-links.md)der Suchdienst asynchron verwendet werden. Informationen zur asynchronen Verwendung der Suchdienstfunktionen finden Sie unter [PNRP und WSANSPIoctl](pnrp-and-wsanspioctl.md).
 
-Die [**WSALookupServiceNext**](winsock-nsp-reference-links.md) -Funktion wird blockiert, auch wenn **wsanspioctl** aufgerufen wird. Vor dem Aufrufen von **WSALookupServiceNext** muss eine Anwendung warten, bis Sie eine Benachrichtigung erhält – Wenn die Blockierung ein Problem ist.
+Die [**WSALookupServiceNext-Funktion**](winsock-nsp-reference-links.md) blockiert auch dann, wenn **WSANSPIoctl** aufgerufen wird. Vor dem **Aufruf von WSALookupServiceNext** muss eine Anwendung warten, bis sie eine Benachrichtigung empfängt– wenn die Blockierung ein Problem ist.
 
-## <a name="resolving-a-peer-name-to-a-list-of-addresses"></a>Auflösen eines Peer namens in eine Liste von Adressen
+## <a name="resolving-a-peer-name-to-a-list-of-addresses"></a>Auflösen eines Peernamens in eine Liste von Adressen
 
-Beim Auflösen eines Peer namens in eine Liste von Adressen enthält die im *lpqsresults* -Parameter zurückgegebene [**lpwsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur die folgenden Werte:
-
-<dl> <dt>
-
-<span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
-</dt> <dd>
-
-Gibt die Größe der-Struktur zurück.
-
-</dd> <dt>
-
-<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszserviceingestancename**
-</dt> <dd>
-
-Gibt einen Peernamen zurück – wenn ein **luprückgabetame \_ \_**, eine **Lup \_ Return \_ all** oder **null** angegeben ist.
-
-</dd> <dt>
-
-<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpserviceclassid**
-</dt> <dd>
-
-Gibt **svcid \_ pnrpname** zurück.
-
-</dd> <dt>
-
-<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpversion**
-</dt> <dd>
-
-Gibt **null** zurück.
-
-</dd> <dt>
-
-<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszcomment**
-</dt> <dd>
-
-Gibt einen Kommentar zurück – wenn ein **luprückgabetcomment \_ \_**, eine **Lup \_ Return \_ all** oder **null** angegeben wird.
-
-</dd> <dt>
-
-<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwnamespace**
-</dt> <dd>
-
-Gibt **NS \_ pnrpname** zurück.
-
-</dd> <dt>
-
-<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpnsproviderid**
-</dt> <dd>
-
-Gibt den **NS- \_ Anbieter \_ pnrpname** zurück.
-
-</dd> <dt>
-
-<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszcontext**
-</dt> <dd>
-
-Gibt den cloudnamen zurück, wenn der **\_ Rückgabe \_ Name** des PPS, die **Lup- \_ Rückgabe \_ all** oder **null** angegeben ist.
-
-</dd> <dt>
-
-<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwnumofprotokolle**
-</dt> <dd>
-
-Gibt 0 (null) zurück.
-
-</dd> <dt>
-
-<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszquerystring**
-</dt> <dd>
-
-Gibt **null** zurück.
-
-</dd> <dt>
-
-<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwnumofcsaddrs**
-</dt> <dd>
-
-Gibt die Anzahl der Einträge im csaddr- \_ Informations Array zurück, wenn " **Lup \_ Return \_ addr**", " **Lup \_ Return \_ all**" oder " **null** " angegeben wird. Dieser Wert und die Informationen in **lpcsabuffer** sind die Schlüssel Bits der Informationen, die in dieser Struktur zurückgegeben werden.
-
-</dd> <dt>
-
-<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsabuffer**
-</dt> <dd>
-
-Gibt einen Zeiger auf ein Array von csaddr- \_ Informationsstrukturen zurück, wenn " **Lup \_ Return \_ addr**", " **Lup \_ Return \_ all**" oder " **null** " angegeben wird. Dieser Puffer und der Wert in **dwnumofcsaddrs** sind die wichtigsten Informations Bits, die in dieser Struktur zurückgegeben werden.
-
-</dd> <dt>
-
-<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwoutputflags**
-</dt> <dd>
-
-Gibt 0 (null) zurück.
-
-</dd> <dt>
-
-<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpblob**
-</dt> <dd>
-
-Gibt **null** zurück.
-
-</dd> </dl>
-
-## <a name="enumerating-network-clouds"></a>Auflisten von Netzwerk Clouds
-
-Beim Auflisten von Clouds enthält die im *lpqsresults* -Parameter zurückgegebene [**lpwsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur die folgenden Werte:
+Beim Auflösen eines Peernamens in eine Liste von Adressen enthält die im *lpqsResults-Parameter* zurückgegebene [**LPWSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) die folgenden Werte:
 
 <dl> <dt>
 
 <span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
 </dt> <dd>
 
-Gibt die Größe der-Struktur zurück.
+Gibt die Größe der -Struktur zurück.
 
 </dd> <dt>
 
-<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszserviceingestancename**
+<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszServiceInstanceName**
 </dt> <dd>
 
-Gibt einen cloudnamen zurück – wenn der **\_ Rückgabe \_ Name** des PPS, die **Lup- \_ Rückgabe \_ all** oder **null** angegeben ist.
+Gibt einen Peernamen zurück, wenn **LUP \_ RETURN \_ NAME,** **LUP \_ RETURN \_ ALL** oder **NULL** angegeben sind.
 
 </dd> <dt>
 
-<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpserviceclassid**
+<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpServiceClassID**
 </dt> <dd>
 
-Gibt **svcid \_ pnrpcloud** zurück.
+Gibt **SVCID \_ PNRPNAME zurück.**
 
 </dd> <dt>
 
-<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpversion**
+<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpVersion**
 </dt> <dd>
 
-Gibt **null** zurück.
+Gibt **NULL zurück.**
 
 </dd> <dt>
 
-<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszcomment**
+<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszComment**
 </dt> <dd>
 
-Gibt **null** zurück.
+Gibt einen Kommentar zurück– wenn **LUP \_ RETURN \_ COMMENT,** **LUP \_ RETURN \_ ALL** oder **NULL** angegeben sind.
 
 </dd> <dt>
 
-<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwnamespace**
+<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwNameSpace**
 </dt> <dd>
 
-Gibt **NS \_ pnrpcloud** zurück.
+Gibt **NS \_ PNRPNAME zurück.**
 
 </dd> <dt>
 
-<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpnsproviderid**
+<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpNSProviderID**
 </dt> <dd>
 
-Gibt den **NS- \_ Anbieter \_ pnrpcloud** zurück.
+Gibt **NS \_ PROVIDER \_ PNRPNAME zurück.**
 
 </dd> <dt>
 
-<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszcontext**
+<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszContext**
 </dt> <dd>
 
-Gibt **null** zurück.
+Gibt den Cloudnamen zurück, **wenn LUP \_ RETURN \_ NAME,** **LUP RETURN \_ \_ ALL** oder **NULL** angegeben sind.
 
 </dd> <dt>
 
-<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwnumofprotokolle**
+<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwNumberOfProtocols**
 </dt> <dd>
 
-Gibt 0 (null) zurück.
+Gibt null (0) zurück.
 
 </dd> <dt>
 
-<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszquerystring**
+<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszQueryString**
 </dt> <dd>
 
-Gibt **null** zurück.
+Gibt **NULL zurück.**
 
 </dd> <dt>
 
-<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwnumofcsaddrs**
+<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwNumberOfCsAddrs**
 </dt> <dd>
 
-Gibt 0 (null) zurück.
+Gibt die Anzahl der Einträge im ARRAY CSADDR INFO zurück, wenn \_ **LUP \_ RETURN \_ ADDR,** **LUP \_ RETURN \_ ALL** oder **NULL** angegeben sind. Dieser Wert und die Informationen in **lpcsaBuffer** sind die wichtigsten Informationen, die in dieser Struktur zurückgegeben werden.
 
 </dd> <dt>
 
-<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsabuffer**
+<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsaBuffer**
 </dt> <dd>
 
-Gibt **null** zurück.
+Gibt einen Zeiger auf ein Array von CSADDR INFO-Strukturen zurück, wenn \_ **LUP \_ RETURN \_ ADDR,** **LUP RETURN \_ \_ ALL** oder **NULL** angegeben sind. Dieser Puffer und der Wert in **dwNumberOfCsAddrs** sind die Schlüsselinformationsbits, die in dieser Struktur zurückgegeben werden.
 
 </dd> <dt>
 
-<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwoutputflags**
+<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwOutputFlags**
 </dt> <dd>
 
-Gibt 0 (null) zurück.
+Gibt null (0) zurück.
 
 </dd> <dt>
 
-<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpblob**
+<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpBlob**
 </dt> <dd>
 
-Gibt einen Zeiger auf eine [**BLOB**](winsock-nsp-reference-links.md) -Struktur zurück, die auf eine [**pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) -Struktur zeigt – Wenn ein **luprückgabeblob \_ \_**, eine **Lup \_ Return \_ all** oder **null** angegeben wird.
+Gibt **NULL zurück.**
 
 </dd> </dl>
 
-## <a name="pnrpcloudinfo-structure"></a>Pnrpcloudinfo-Struktur
+## <a name="enumerating-network-clouds"></a>Aufzählen von Netzwerk clouds
 
-Beim Auflisten von cloudnamen werden die folgenden Werte in der [**pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) -Struktur zurückgegeben:
+Beim Aufzählen von Clouds enthält die im *lpqsResults-Parameter* zurückgegebene [**LPWSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) die folgenden Werte:
+
+<dl> <dt>
+
+<span id="dwSize"></span><span id="dwsize"></span><span id="DWSIZE"></span>**dwSize**
+</dt> <dd>
+
+Gibt die Größe der -Struktur zurück.
+
+</dd> <dt>
+
+<span id="lpszServiceInstanceName"></span><span id="lpszserviceinstancename"></span><span id="LPSZSERVICEINSTANCENAME"></span>**lpszServiceInstanceName**
+</dt> <dd>
+
+Gibt einen Cloudnamen zurück– wenn **LUP \_ RETURN \_ NAME,** **LUP \_ RETURN \_ ALL** oder **NULL** angegeben sind.
+
+</dd> <dt>
+
+<span id="lpServiceClassID"></span><span id="lpserviceclassid"></span><span id="LPSERVICECLASSID"></span>**lpServiceClassID**
+</dt> <dd>
+
+Gibt **SVCID \_ PNRPCLOUD zurück.**
+
+</dd> <dt>
+
+<span id="lpVersion"></span><span id="lpversion"></span><span id="LPVERSION"></span>**lpVersion**
+</dt> <dd>
+
+Gibt **NULL zurück.**
+
+</dd> <dt>
+
+<span id="lpszComment"></span><span id="lpszcomment"></span><span id="LPSZCOMMENT"></span>**lpszComment**
+</dt> <dd>
+
+Gibt **NULL zurück.**
+
+</dd> <dt>
+
+<span id="dwNameSpace"></span><span id="dwnamespace"></span><span id="DWNAMESPACE"></span>**dwNameSpace**
+</dt> <dd>
+
+Gibt **NS \_ PNRPCLOUD zurück.**
+
+</dd> <dt>
+
+<span id="lpNSProviderID"></span><span id="lpnsproviderid"></span><span id="LPNSPROVIDERID"></span>**lpNSProviderID**
+</dt> <dd>
+
+Gibt **NS \_ PROVIDER \_ PNRPCLOUD zurück.**
+
+</dd> <dt>
+
+<span id="lpszContext"></span><span id="lpszcontext"></span><span id="LPSZCONTEXT"></span>**lpszContext**
+</dt> <dd>
+
+Gibt **NULL zurück.**
+
+</dd> <dt>
+
+<span id="dwNumberOfProtocols"></span><span id="dwnumberofprotocols"></span><span id="DWNUMBEROFPROTOCOLS"></span>**dwNumberOfProtocols**
+</dt> <dd>
+
+Gibt null (0) zurück.
+
+</dd> <dt>
+
+<span id="lpszQueryString"></span><span id="lpszquerystring"></span><span id="LPSZQUERYSTRING"></span>**lpszQueryString**
+</dt> <dd>
+
+Gibt **NULL zurück.**
+
+</dd> <dt>
+
+<span id="dwNumberOfCsAddrs"></span><span id="dwnumberofcsaddrs"></span><span id="DWNUMBEROFCSADDRS"></span>**dwNumberOfCsAddrs**
+</dt> <dd>
+
+Gibt null (0) zurück.
+
+</dd> <dt>
+
+<span id="lpcsaBuffer"></span><span id="lpcsabuffer"></span><span id="LPCSABUFFER"></span>**lpcsaBuffer**
+</dt> <dd>
+
+Gibt **NULL zurück.**
+
+</dd> <dt>
+
+<span id="dwOutputFlags"></span><span id="dwoutputflags"></span><span id="DWOUTPUTFLAGS"></span>**dwOutputFlags**
+</dt> <dd>
+
+Gibt null (0) zurück.
+
+</dd> <dt>
+
+<span id="lpBlob"></span><span id="lpblob"></span><span id="LPBLOB"></span>**lpBlob**
+</dt> <dd>
+
+Gibt einen Zeiger auf eine [**BLOB-Struktur**](winsock-nsp-reference-links.md) zurück, die auf eine [**PNRPCLOUDINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) verweist– wenn **LUP \_ RETURN \_ BLOB,** **LUP \_ RETURN \_ ALL** oder **NULL** angegeben sind.
+
+</dd> </dl>
+
+## <a name="pnrpcloudinfo-structure"></a>PNRPCLOUDINFO-Struktur
+
+Beim Aufzählen von Cloudnamen werden die folgenden Werte in der [**PNRPCLOUDINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) zurückgegeben:
 
 <dl> <dt>
 
@@ -246,24 +246,24 @@ Die Größe dieser Struktur.
 <span id="Cloud"></span><span id="cloud"></span><span id="CLOUD"></span>**Cloud**
 </dt> <dd>
 
-Der tatsächliche cloudwert.
+Der tatsächliche Cloudwert.
 
 </dd> <dt>
 
-<span id="enCloudState"></span><span id="encloudstate"></span><span id="ENCLOUDSTATE"></span>**umcloudstate**
+<span id="enCloudState"></span><span id="encloudstate"></span><span id="ENCLOUDSTATE"></span>**enCloudState**
 </dt> <dd>
 
-Der aktuelle Zustand einer Cloud. [**PNRP \_ Der \_ cloudstatus**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_cloud_state) gibt die gültigen Werte an.
+Der aktuelle Zustand einer Cloud. [**PNRP \_ CLOUD \_ STATE**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_cloud_state) gibt die gültigen Werte an.
 
 </dd> <dt>
 
-<span id="enCloudFlags"></span><span id="encloudflags"></span><span id="ENCLOUDFLAGS"></span>**encloudflags**
+<span id="enCloudFlags"></span><span id="encloudflags"></span><span id="ENCLOUDFLAGS"></span>**enCloudFlags**
 </dt> <dd>
 
-Gibt an, dass ein cloudName in einem Netzwerk oder nur auf einem aktuellen Computer gültig ist. [**PNRP \_ Cloud- \_ Flags**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_cloud_flags) gibt die gültigen Werte an. Einige cloudnamen sind auf einem beliebigen Computer im selben Netzwerk gültig. Andere cloudnamen gelten nur auf einem aktuellen Computer und sind möglicherweise nur für einen bestimmten Zeitraum gültig.
+Gibt an, dass ein Cloudname in einem Netzwerk oder nur auf einem aktuellen Computer gültig ist. [**PNRP \_ CLOUD \_ FLAGS**](/windows/desktop/api/Pnrpdef/ne-pnrpdef-pnrp_cloud_flags) gibt die gültigen Werte an. Einige Cloudnamen sind auf jedem Computer im gleichen Netzwerk gültig. Andere Cloudnamen sind nur auf einem aktuellen Computer gültig und können nur für einen bestimmten Zeitraum gültig sein.
 
--   Wenn " **encloudflags** " auf " **PNRP \_ Cloud \_ Name \_ local** " festgelegt ist, ist der Name nur lokal gültig.
--   Wenn **encloudflags** nicht festgelegt ist, kann der cloudName an andere Computer übertragen werden.
+-   Wenn **enCloudFlags** auf PNRP CLOUD NAME LOCAL festgelegt **\_ \_ \_ ist,** ist der Name nur lokal gültig.
+-   Wenn **enCloudFlags** nicht festgelegt ist, kann der Cloudname auf andere Computer übertragen werden.
 
 </dd> </dl>
 
@@ -277,22 +277,22 @@ Gibt an, dass ein cloudName in einem Netzwerk oder nur auf einem aktuellen Compu
 [PNRP und WSALookupServiceEnd](pnrp-and-wsalookupserviceend.md)
 </dt> <dt>
 
-[PNRP und wsanspioctl](pnrp-and-wsanspioctl.md)
+[PNRP und WSANSPIoctl](pnrp-and-wsanspioctl.md)
 </dt> <dt>
 
-[PNRP und wsaqueryset](pnrp-and-wsaqueryset.md)
+[PNRP und WSAQUERYSET](pnrp-and-wsaqueryset.md)
 </dt> <dt>
 
-[**Pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
+[**PNRPCLOUDINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
 </dt> <dt>
 
-[**Pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
+[**PNRPINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
 </dt> <dt>
 
-[PNRP-NSP-Fehler Codes](pnrp-nsp-error-codes.md)
+[PNRP-NSP-Fehlercodes](pnrp-nsp-error-codes.md)
 </dt> <dt>
 
-[**Wsalookupservicebegin**](winsock-nsp-reference-links.md)
+[**WSALookupServiceBegin**](winsock-nsp-reference-links.md)
 </dt> </dl>
 
  

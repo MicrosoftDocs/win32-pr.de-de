@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für IPv6-TCP/IP-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für IPv6-TCP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: d24e667e-ec7f-492a-989e-a02ff4c8ac10
 title: TcpIp_TypeGroup3-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 82aa119c0d770a26060b1e8d6ab74433146bb3c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c817b45f896a25199b9eb38c3776181634104174e695ed399577b3052b687fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069610"
 ---
-# <a name="tcpip_typegroup3-class"></a>Tcpip \_ TypeGroup3-Klasse
+# <a name="tcpip_typegroup3-class"></a>TcpIp \_ TypeGroup3-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für IPv6-TCP/IP-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für IPv6-TCP/IP-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,42 +52,42 @@ class TcpIp_TypeGroup3 : TcpIp
 
 ## <a name="members"></a>Member
 
-Die **tcpip- \_ TypeGroup3** -Klasse verfügt über diese Typen von Membern:
+Die **TcpIp \_ TypeGroup3-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **tcpip- \_ TypeGroup3** -Klasse verfügt über diese Eigenschaften.
+Die **TcpIp \_ TypeGroup3-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-nicht konform
+connid
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Zeiger
+Qualifizierer: WmiDataId(6), Zeiger
 </dt> </dl>
 
-Ein eindeutiger Verbindungs Bezeichner zum Korrelieren von Ereignissen, die zur gleichen Verbindung gehören.
+Ein eindeutiger Verbindungsbezeichner zum Korrelieren von Ereignissen, die zur gleichen Verbindung gehören.
 
 </dd> <dt>
 
 daddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Extension ("IPAddrV6")
+Qualifizierer: WmiDataId(3), Extension("IPAddrV6")
 </dt> </dl>
 
 Ziel-IP-Adresse.
@@ -97,115 +97,115 @@ Ziel-IP-Adresse.
 dport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Erweiterung ("Port")
+Qualifizierer: WmiDataId(5), Extension("Port")
 </dt> </dl>
 
-Die Ziel Portnummer.
+Zielportnummer.
 
 </dd> <dt>
 
 PID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Der Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
+Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
 
 </dd> <dt>
 
 saddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Extension ("IPAddrV6")
+Qualifizierer: WmiDataId(4), Extension("IPAddrV6")
 </dt> </dl>
 
 Quell-IP-Adresse.
 
 </dd> <dt>
 
-SEQNUM
+seqnum
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7)
+Qualifizierer: WmiDataId(7)
 </dt> </dl>
 
 Sequenznummer.
 
 </dd> <dt>
 
-size
+Größe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
 Größe des Pakets.
 
 </dd> <dt>
 
-Reit
+Sport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Erweiterung ("Port")
+Qualifizierer: WmiDataId(6), Extension("Port")
 </dt> </dl>
 
-Quell Portnummer.
+Quellportnummer.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**TcpIp**](tcpip.md)
+[**Tcpip**](tcpip.md)
 </dt> </dl>
 
  

@@ -1,43 +1,43 @@
 ---
-description: Wird von einer Medienquelle ausgelöst, wenn Sie neu gestartet wird oder einen Datenstrom sucht, der bereits aktiv ist.
+description: Wird von einer Medienquelle ausgelöst, wenn sie einen stream neu startet oder sucht, der bereits aktiv ist.
 ms.assetid: 2d91a267-e109-45f5-886b-11b883cc5509
-title: Meupdatedstream-Ereignis (mfobjects. h)
+title: MEUpdatedStream-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e3b2e6fdc5928a08306b344c02b5eaafc37e957
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5746b619f885ab7648110cbe58b66b7897c839031202d811becd33e1c84991a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974019"
 ---
-# <a name="meupdatedstream-event"></a>Meupdatedstream-Ereignis
+# <a name="meupdatedstream-event"></a>MEUpdatedStream-Ereignis
 
-Wird von einer Medienquelle ausgelöst, wenn Sie neu gestartet wird oder einen Datenstrom sucht, der bereits aktiv ist.
+Wird von einer Medienquelle ausgelöst, wenn sie einen stream neu startet oder sucht, der bereits aktiv ist.
 
-Wenn die [**imfmediasource:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start) -Methode für eine Medienquelle aufgerufen wird, sendet die Medienquelle ein Ereignis für jeden ausgewählten Stream:
+Wenn die [**METHODE VERMEDIENMediaSource::Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start) für eine Medienquelle aufgerufen wird, sendet die Medienquelle ein Ereignis für jeden ausgewählten Stream:
 
--   Die Quelle sendet das Ereignis [menewstream](menewstream.md) , wenn der Datenstrom nicht im vorherigen [**Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start)aufgerufen wurde, oder dies ist der erste **Start Start** für diese Medienquelle.
+-   Die Quelle sendet das [MENewStream-Ereignis,](menewstream.md) wenn der Stream im vorherigen Aufruf von [**Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start)nicht ausgewählt wurde, oder dies ist der erste Aufruf von **Start** für diese Medienquelle.
 
--   Die Quelle sendet das meupdatedstream-Ereignis, wenn der Stream bereits im vorherigen Aufrufen von " [**Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start)" ausgewählt wurde.
+-   Die Quelle sendet das MEUpdatedStream-Ereignis, wenn der Stream bereits im vorherigen Aufruf von [**Start ausgewählt wurde.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start)
 
 Für nicht ausgewählte Streams werden keine Ereignisse gesendet.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE                | BESCHREIBUNG                                                                                        |
 |------------------------|----------------------------------------------------------------------------------------------------|
-| VT \_ unbekannt<br/> | Ein Zeiger auf die [**imfmediastream**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream) -Schnittstelle des Streams.<br/> <br/> |
+| VT \_ UNKNOWN<br/> | Zeiger auf die [**NSDRMediaStream-Schnittstelle des**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream) Streams.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim ersten [**Start Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start) , bei dem ein Stream aktiv wird, sendet die Medienquelle ein [menewstream](menewstream.md) -Ereignis für den Datenstrom. Bei nachfolgenden Aufrufen des **Starts** sendet die Medienquelle ein meupdatedstream-Ereignis, bis der Stream deaktiviert wird.
+Beim ersten Aufruf von [**Start,**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-start) bei dem ein Stream aktiv wird, sendet die Medienquelle ein [MENewStream-Ereignis](menewstream.md) für den Stream. Bei nachfolgenden **Aufrufen von Start** sendet die Medienquelle ein MEUpdatedStream-Ereignis, bis die Auswahl des Streams aufgehoben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Beim ersten [**Start Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Beim ersten [**Start Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

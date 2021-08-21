@@ -1,56 +1,56 @@
 ---
-description: Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten SemiSynchron abruft und dann bereinigt.
+description: Sie können die Prozeduren und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die eine COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten halbsynchron abruft und dann bereinigt.
 ms.assetid: 35dc97aa-dcef-48c1-af8b-ce43e3cf1d3e
 ms.tgt_platform: multiple
-title: 'Beispiel: erhalten von WMI-Daten vom lokalen Computer'
+title: 'Beispiel: Abrufen von WMI-Daten vom lokalen Computer'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 840cd4ada941bdfd8ba7fca9b8ca9393c0b5eb55
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71036d95996926ce9e5a0200587a15abb8dc992c82999aa65c54be50d0e1691b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050908"
 ---
-# <a name="example-getting-wmi-data-from-the-local-computer"></a>Beispiel: erhalten von WMI-Daten vom lokalen Computer
+# <a name="example-getting-wmi-data-from-the-local-computer"></a>Beispiel: Abrufen von WMI-Daten vom lokalen Computer
 
-Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten SemiSynchron abruft und dann bereinigt. In diesem Beispiel wird der Name des Betriebssystems auf dem lokalen Computer abgerufen und angezeigt. Informationen zum Abrufen von Daten von einem Remote Computer finden Sie unter [Beispiel: Abrufen von WMI-Daten von einem Remote Computer](example--getting-wmi-data-from-a-remote-computer.md). Informationen zum asynchronen ermitteln der Daten finden Sie unter [Beispiel: Asynchrones erhalten von WMI-Daten vom lokalen Computer](example--getting-wmi-data-from-the-local-computer-asynchronously.md).
+Sie können die Prozeduren und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die eine COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten halbsynchron abruft und dann bereinigt. Dieses Beispiel ruft den Namen des Betriebssystems auf dem lokalen Computer ab und zeigt ihn an. Informationen zum Abrufen von Daten von einem Remotecomputer finden Sie unter [Beispiel: Abrufen von WMI-Daten von einem Remotecomputer.](example--getting-wmi-data-from-a-remote-computer.md) Informationen zum asynchronen Abrufen der Daten finden Sie unter Beispiel: Asynchrones Abrufen [von WMI-Daten vom lokalen Computer.](example--getting-wmi-data-from-the-local-computer-asynchronously.md)
 
-Das folgende Verfahren wird verwendet, um die WMI-Anwendung auszuführen. Die Schritte 1 bis 5 enthalten alle erforderlichen Schritte zum Einrichten und Herstellen der Verbindung mit WMI. in den Schritten 6 und 7 werden die Daten abgefragt und empfangen.
+Mit dem folgenden Verfahren wird die WMI-Anwendung ausgeführt. Die Schritte 1 bis 5 enthalten alle schritte, die zum Einrichten und Herstellen einer Verbindung mit WMI erforderlich sind, und die Schritte 6 und 7 enthalten die Daten, die abgefragt und empfangen werden.
 
-1.  Initialisieren von com-Parametern mit einem [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)-Rückruf.
+1.  Initialisieren Sie COM-Parameter mit einem Aufruf von [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex).
 
-    Weitere Informationen finden Sie unter [Initialisieren von com für eine WMI-Anwendung](initializing-com-for-a-wmi-application.md).
+    Weitere Informationen finden Sie unter [Initialisieren von COM für eine WMI-Anwendung.](initializing-com-for-a-wmi-application.md)
 
-2.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity).
+2.  Initialisieren Sie die COM-Prozesssicherheit, indem [**Sie CoInitializeSecurity aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)
 
-    Weitere Informationen finden Sie unter [Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von C++](setting-the-default-process-security-level-using-c-.md).
+    Weitere Informationen finden Sie unter [Festlegen der Standardprozesssicherheitsebene mithilfe von C++.](setting-the-default-process-security-level-using-c-.md)
 
-3.  Rufen Sie den anfänglichen Serverlocatorpunkt in WMI durch Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)ab.
+3.  Rufen Sie den ersten Locator für WMI ab, indem Sie [**CoCreateInstance aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-4.  Rufen Sie mithilfe [](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) \\ von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)einen Zeiger auf IWbemServices für den Stamm-CIMV2-Namespace auf dem lokalen Computer ab. Informationen zum Herstellen einer Verbindung mit einem Remote Computer finden Sie unter [Beispiel: erhalten von WMI-Daten von einem Remote Computer aus](example--getting-wmi-data-from-a-remote-computer.md).
+4.  Rufen Sie einen Zeiger auf [**IWbemServices für**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) den cimv2-Stammnamespace auf dem lokalen Computer ab, indem Sie \\ [**IWbemLocator::ConnectServer aufrufen.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) Informationen zum Herstellen einer Verbindung mit einem Remotecomputer finden Sie unter [Beispiel: Abrufen von WMI-Daten von einem Remotecomputer.](example--getting-wmi-data-from-a-remote-computer.md)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-5.  Legen Sie die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy Sicherheit fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)annehmen kann.
+5.  Legen [**Sie die IWbemServices-Proxysicherheit**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket angenommen werden kann.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
-    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung](setting-the-security-levels-on-a-wmi-connection.md).
+    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsebenen für eine WMI-Verbindung.](setting-the-security-levels-on-a-wmi-connection.md)
 
-6.  Verwenden Sie den [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger, um WMI-Anforderungen zu stellen. In diesem Beispiel wird eine Abfrage für den Namen des Betriebssystems durch Aufrufen von [**IWbemServices:: ExecQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery)ausgeführt.
+6.  Verwenden Sie [**den IWbemServices-Zeiger,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) um Anforderungen an WMI zu senden. In diesem Beispiel wird eine Abfrage für den Namen des Betriebssystems durch Aufrufen von [**IWbemServices::ExecQuery ausgeführt.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery)
 
     Die folgende WQL-Abfrage ist eines der Methodenargumente.
 
     `SELECT * FROM Win32_OperatingSystem`
 
-    Das Ergebnis dieser Abfrage wird in einem [**ienumwbemclassobject**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) -Zeiger gespeichert. Auf diese Weise können die Datenobjekte aus der Abfrage SemiSynchron mit der **ienumwbemclassobject** -Schnittstelle abgerufen werden. Weitere Informationen finden Sie unter Auflisten von [WMI](enumerating-wmi.md). Informationen zum asynchronen ermitteln der Daten finden Sie unter [Beispiel: Asynchrones erhalten von WMI-Daten vom lokalen Computer](example--getting-wmi-data-from-the-local-computer-asynchronously.md).
+    Das Ergebnis dieser Abfrage wird in einem [**IEnumWbemClassObject-Zeiger**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) gespeichert. Dadurch können die Datenobjekte aus der Abfrage halbsynchron mit der **IEnumWbemClassObject-Schnittstelle abgerufen** werden. Weitere Informationen finden Sie unter [Aufzählen von WMI.](enumerating-wmi.md) Informationen zum asynchronen Abrufen der Daten finden Sie unter Beispiel: Asynchrones Abrufen [von WMI-Daten vom lokalen Computer.](example--getting-wmi-data-from-the-local-computer-asynchronously.md)
 
-    Weitere Informationen zum Erstellen von WMI-Anforderungen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md), [Abfragen von WMI](querying-wmi.md)und [Aufrufen einer Methode](calling-a-method.md).
+    Weitere Informationen zum Senden von Anforderungen an WMI finden Sie unter [Bearbeiten](manipulating-class-and-instance-information.md)von Klassen- und Instanzinformationen, [Abfragen von WMI](querying-wmi.md)und Aufrufen einer [Methode.](calling-a-method.md)
 
-7.  Hiermit werden die Daten aus der WQL-Abfrage angezeigt und angezeigt. Der [**ienumwbemclassobject**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) -Zeiger ist mit den Datenobjekten verknüpft, die von der Abfrage zurückgegeben wurden, und die Datenobjekte können mit der [**ienumwbemclassobject:: Next**](/windows/desktop/api/Wbemcli/nf-wbemcli-ienumwbemclassobject-next) -Methode abgerufen werden. Diese Methode verknüpft die Datenobjekte mit einem [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) -Zeiger, der an die-Methode übermittelt wird. Verwenden Sie die [**IWbemClassObject:: Get**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get) -Methode, um die gewünschten Informationen aus den Datenobjekten zu erhalten.
+7.  Hier können Sie die Daten aus der WQL-Abfrage erhalten und anzeigen. Der [**IEnumWbemClassObject-Zeiger**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) ist mit den Von der Abfrage zurückgegebenen Datenobjekten verknüpft, und die Datenobjekte können mit der [**IEnumWbemClassObject::Next-Methode abgerufen**](/windows/desktop/api/Wbemcli/nf-wbemcli-ienumwbemclassobject-next) werden. Diese Methode verknüpft die Datenobjekte mit einem [**IWbemClassObject-Zeiger,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) der an die -Methode übergeben wird. Verwenden Sie [**die IWbemClassObject::Get-Methode,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get) um die gewünschten Informationen aus den Datenobjekten zu erhalten.
 
-    Das folgende Codebeispiel wird verwendet, um die Name-Eigenschaft aus dem Datenobjekt zu erhalten, das den Namen des Betriebssystems bereitstellt.
+    Das folgende Codebeispiel wird verwendet, um die Name-Eigenschaft aus dem -Datenobjekt zu erhalten, das den Namen des Betriebssystems enthält.
 
     ```C++
     VARIANT vtProp;
@@ -61,11 +61,11 @@ Das folgende Verfahren wird verwendet, um die WMI-Anwendung auszuführen. Die Sc
 
     
 
-    Nachdem der Wert der Name-Eigenschaft in der [**Variant**](/windows/win32/api/oaidl/ns-oaidl-variant) -Variablen vtprop gespeichert wurde, kann er dem Benutzer angezeigt werden.
+    Nachdem der Wert der Name-Eigenschaft in der [**VARIANT-Variablen**](/windows/win32/api/oaidl/ns-oaidl-variant) vtProp gespeichert wurde, kann er dem Benutzer angezeigt werden.
 
-    Weitere Informationen finden Sie unter Auflisten von [WMI](enumerating-wmi.md).
+    Weitere Informationen finden Sie unter [Aufzählen von WMI.](enumerating-wmi.md)
 
-Im folgenden Codebeispiel werden WMI-Daten von einem lokalen Computer aus SemiSynchron abgerufen.
+Im folgenden Codebeispiel werden WMI-Daten halbsynchron von einem lokalen Computer abgerufen.
 
 
 ```C++

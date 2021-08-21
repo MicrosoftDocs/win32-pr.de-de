@@ -1,45 +1,45 @@
 ---
-title: Abfrage Bereich
-description: Der Gültigkeitsbereich einer Abfrage wird durch das Objekt bestimmt, an das die Bindung erfolgen soll.
+title: Abfragebereich
+description: Der Bereich einer Abfrage wird durch das Objekt bestimmt, an das Sie binden.
 ms.assetid: 7ece8599-8a4b-45a1-95f4-a4180052f245
 ms.tgt_platform: multiple
 keywords:
-- Bereich der Abfrage-ADSI
-- Abfragen von ADSI, Bereich
+- Bereich der Abfrage ADSI
+- abfragen ADSI , Bereich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dac51fc261cb418db0018acd996c248766896a25
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 45a31ebe378502dd9b4ddda6dce83e3547dab580360a8d1ec07516d1e3347cf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023252"
 ---
-# <a name="scope-of-query"></a>Abfrage Bereich
+# <a name="scope-of-query"></a>Abfragebereich
 
-Der Gültigkeitsbereich einer Abfrage wird durch das Objekt bestimmt, an das die Bindung erfolgen soll. Wenn Sie nicht sicher sind, wo sich das Objekt im Unternehmen befindet, müssen Sie so weit wie möglich eine Suche durchführen. Wenn Sie jedoch wissen, dass das Objekt in einer bestimmten Domäne enthalten ist, z. b. in der Domäne, mit der der Benutzer verbunden ist, oder in einer bestimmten Gruppe (z. b. in der Gruppe "Manager"), sollten Sie den Suchbereich so festlegen, dass er die Umstände widerspiegelt. Um die optimale Leistung zu erzielen, sollten Sie versuchen, den Bereich als Ziel für die kleinste Anzahl möglicher Objekte zu suchen.
+Der Bereich einer Abfrage wird durch das Objekt bestimmt, an das Sie binden. Wenn Sie sich nicht sicher sind, wo sich das Objekt innerhalb des Unternehmens befindet, müssen Sie so weit wie möglich eine Suche unternehmen. Wenn Sie jedoch wissen, dass das Objekt in einer bestimmten Domäne enthalten ist, z. B. in der Domäne, mit der der Benutzer verbunden ist, oder in einer bestimmten Gruppe, z. B. in der Gruppe Manager, sollten Sie den Bereich der Suche entsprechend den Umständen festlegen. Um die beste Leistung zu erzielen, sollten Sie versuchen, den Bereich als Ziel zu verwenden, um die geringst mögliche Anzahl von Objekten zu durchsuchen.
 
-Wenn Sie nicht sicher sind, wo sich ein Objekt im Unternehmen befinden wird, können Sie eine Bindung an den globalen Katalog Dienst herstellen. Der globale Katalog Dienst enthält eine Liste aller Objekte im Verzeichnis und eine kleine Teilmenge der Attribute jedes Objekts. Nachdem Sie das Objekt im globalen Katalog gefunden haben, können Sie seinen Distinguished Name aus dem globalen Katalog abrufen und zum Binden an das-Objekt verwenden, um andere Vorgänge auszuführen.
+Wenn Sie nicht sicher sind, wo sich ein Objekt im Unternehmen befindet, können Sie eine Bindung an den globalen Katalogdienst erstellen. Der globale Katalogdienst enthält eine Liste aller Objekte im Verzeichnis und eine kleine Teilmenge der Attribute jedes Objekts. Nachdem Sie das Objekt im globalen Katalog finden, können Sie seinen Distinguished Name aus dem globalen Katalog abrufen und zum Binden an das Objekt verwenden, um andere Vorgänge durchzuführen.
 
-Nachdem Sie entschieden haben, an welches Objekt die Bindung erfolgen soll, können Sie die Abfrage auf einen der folgenden Bereiche beschränken: eine Basis Abfrage, eine Abfrage auf einer einzelnen Ebene oder eine Unterstruktur Suche, wie in der folgenden Abbildung dargestellt.
+Nachdem Sie entschieden haben, an welches Objekt sie gebunden werden soll, können Sie die Abfrage weiter auf einen der folgenden Bereiche beschränken: eine Basisabfrage, eine Abfrage auf einer Ebene oder eine Teilstruktursuche, wie in der folgenden Abbildung dargestellt.
 
-![Objekte im Stammverzeichnis einer Suche nach einer Basis-, einer-oder Unterstruktur Suche](images/netds6.png)
+![-Objekte im Stamm einer Suche nach einer Basis-, Einer-Ebene- oder Unterstruktursuche](images/netds6.png)
 
 ## <a name="base"></a>Basis
 
-Eine Basis Abfrage beschränkt die Suche auf das Basisobjekt. Die maximale Anzahl von zurückgegebenen Objekten ist immer 1. Diese Suche kann verwendet werden, um zu überprüfen, ob ein Objekt vorhanden ist. Wenn Sie z. b. über den Distinguished Name eines Objekts verfügen und das vorhanden sein des Objekts basierend auf dem Pfad überprüfen müssen, können Sie eine Suche auf einer einzelnen Ebene verwenden. Wenn die Suche fehlschlägt, können Sie davon ausgehen, dass das Objekt möglicherweise umbenannt oder an einen anderen Speicherort verschoben wurde oder dass ihnen falsche Daten über das Objekt übergeben wurden. Beachten Sie, dass Sie die GUID anstelle des Distinguished Name speichern sollten, wenn Sie ein Objekt überprüfen möchten. Dadurch kann das Objekt in der Verzeichnishierarchie umbenannt oder verschoben werden, ohne den beibehaltenen Link zu unterbrechen.
+Eine Basisabfrage beschränkt die Suche auf das Basisobjekt. Die maximale Anzahl der zurückgegebenen Objekte ist immer 1. Diese Suche kann verwendet werden, um das Vorhandensein eines Objekts zu überprüfen. Wenn Sie beispielsweise über den Distinguished Name eines Objekts verfügen und das Vorhandensein des Objekts anhand des Pfads überprüfen müssen, können Sie eine Suche auf einer Ebene verwenden. Wenn bei der Suche ein Fehler auftritt, können Sie davon ausgehen, dass das Objekt umbenannt oder an einen anderen Speicherort verschoben wurde oder dass Falsche Daten zum Objekt angegeben wurden. Beachten Sie, dass Sie die GUID anstelle des Distinguished Name speichern sollten, wenn Sie ein Objekt erneut besuchen möchten. Dadurch kann das Objekt umbenannt oder in der Verzeichnishierarchie verschoben werden, ohne die persistente Verknüpfung zu unterbricht.
 
 ## <a name="one-level"></a>Eine Ebene
 
-Eine einstufige Suche ist auf die unmittelbaren untergeordneten Elemente eines Basis Objekts beschränkt, schließt jedoch das Basisobjekt selbst aus. Mit dieser Einstellung kann eine gezielte Suche nach unmittelbar untergeordneten Objekten eines übergeordneten Objekts durchgeführt werden. Wenn Sie z. b. über ein übergeordnetes Objekt mit dem Namen P1 verfügen und seine unmittelbaren untergeordneten Elemente: C1, C2, C3 sind, sollten Sie bei der Auswertung der Kriterien in einer einstufigen Suche, C1, C2 und C3 enthalten sein, aber P1 wäre nicht Teil der Suche. Eine einstufige Suche kann verwendet werden, um alle untergeordneten Elemente eines Objekts aufzulisten. Tatsächlich übersetzt die [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) -Enumeration bei manchen ADSI-Anbietern in eine Suche auf einer Ebene.
+Eine Suche auf einer Ebene ist auf die unmittelbaren unteren Objekte eines Basisobjekts beschränkt, schließt jedoch das Basisobjekt selbst aus. Diese Einstellung kann eine gezielte Suche nach unmittelbar untergeordneten Objekten eines übergeordneten Objekts ausführen. Wenn Sie beispielsweise über ein übergeordnetes Objekt mit dem Namen P1 verfügen und dessen unmittelbar übergeordnete Objekte C1, C2, C3 sind, sollten C1, C2 und C3 bei der Auswertung der Kriterien in eine Ein-Ebene-Suche eingeschlossen werden, P1 wäre jedoch nicht Teil der Suche. Eine Suche auf einer Ebene kann verwendet werden, um alle unteren Objekte eines Objekts aufzählen. In einigen ADSI-Anbietern wird die [**IADsContainer-Enumeration**](/windows/desktop/api/Iads/nn-iads-iadscontainer) in eine Suche auf einer Ebene übersetzt.
 
 ## <a name="subtree"></a>Unterstruktur
 
-Eine Unterstruktur Suche, auch als Deep Search bezeichnet, umfasst alle Objekte unterhalb des Basis Objekts, ausgenommen das Basisobjekt selbst. Diese Suche kann Verweise auf andere Server generieren. Diese Suche hat den größten Bereich und gibt möglicherweise ein großes Resultset zurück. Suchen Sie nach Möglichkeit nach mindestens einem indizierten Attribut, und legen Sie die Einstellungen für den Verweis fest (Weitere Informationen finden Sie unter [Leistung und Verarbeitung großer Resultsets](performance-and-handling-large-result-sets.md)), um die Suchanforderungen zu erfüllen. Außerdem wird empfohlen, dass die Ergebnisse einer Unterstruktur Suche asynchron und per Pager ausgeführt werden, um den Server Mehraufwand und die Effektivität des Netzwerks zu verringern. Eine Unterstruktur Suche wird normalerweise verwendet, um Objekte für einen bestimmten Bereich zu durchsuchen. Suchen Sie beispielsweise nach allen Benutzern mit Konten, die innerhalb von 30 Tagen oder weniger abläuft.
+Eine Unterstruktursuche, die auch als tiefe Suche bezeichnet wird, umfasst alle Objekte unter dem Basisobjekt, mit Ausnahme des Basisobjekts selbst. Diese Suche kann Verweise auf andere Server generieren. Diese Suche hat den größten Umfang und kann ein großes Resultset zurückgeben. Suchen Sie nach Möglichkeit nach mindestens einem indizierten Attribut, und legen Sie die Empfehlungseinstellungen fest (weitere Informationen finden Sie unter Leistung und Behandlung großer [Result Sets),](performance-and-handling-large-result-sets.md)um Ihre Suchanforderungen zu erfüllen. Es wird auch empfohlen, die Ergebnisse einer Teilstruktursuche asynchron durchzuführen und auspagen, um den Serveraufwand und die Netzwerkeffizienz zu reduzieren. Eine Unterstruktursuche wird normalerweise verwendet, um Objekte für einen bestimmten Bereich zu durchsuchen. Suchen Sie beispielsweise nach allen Benutzern mit Konten, die in 30 Tagen oder weniger ablaufen.
 
- 
+ 
 
- 
+ 
 
 
 

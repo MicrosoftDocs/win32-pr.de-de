@@ -1,43 +1,43 @@
 ---
-title: Appbar-Steuerelement Typen
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den appbar-Steuerelement-Typ.
+title: AppBar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den AppBar-Steuerelementtyp.
 ms.assetid: B56F4E7A-934F-8516-9B1B-B23B80D54273
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für appbar-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, appbar-Steuerelement
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für den appbar-Steuerelement
-- Steuerelement Muster, appbar-Steuerelement Typen
-- Unterstützung für appbar-Steuerelement Typen
-- Appbar-Steuerelement Typen
-- Steuerelement Typen, appbar
+- Benutzeroberflächenautomatisierung,Unterstützung für den AppBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,AppBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den AppBar-Steuerelementtyp
+- Steuerelementmuster, AppBar-Steuerelementtyp
+- Unterstützung für den AppBar-Steuerelementtyp
+- AppBar-Steuerelementtyp
+- Steuerelementtypen, AppBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 151aecc0f5f97878e10b59b091c4c59ec98cb26d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7067e73d9f38ba62893d6ba2746f8f84c846daf1a90f63b6e72bd09337f47a1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118826445"
 ---
-# <a name="appbar-control-type"></a>Appbar-Steuerelement Typen
+# <a name="appbar-control-type"></a>AppBar-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **appbar** -Steuerelement-Typ.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **AppBar-Steuerelementtyp.**
 
-Eine APP-Leiste ist ein Benutzeroberflächen Element, das dem Benutzernavigation, Befehle und Tools präsentiert. Für Windows Store-Apps können APP-leisten für Apps durch Drücken von Windows-Taste + Z angezeigt werden.
+Eine App-Leiste ist ein Benutzeroberflächenelement, das dem Benutzer Navigation, Befehle und Tools präsentiert. Für Windows Store Apps können App-Balken für Apps angezeigt werden, indem Sie Windows+Z drücken.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **appbar** -Steuerelement-Typ definiert.
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **AppBar-Steuerelementtyp** definiert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Relevante Ereignisse](#relevant-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für **appbar** -Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. **Schaltfläche** ist das gängigste Element innerhalb einer **appbar** , aber andere Steuerelemente, die Aktionen für eine APP aufrufen, sind ebenfalls möglich. Eine **appbar** kann auch 0 oder mehr Trennzeichen (**Trenn** Zeichentyp) enthalten, die in der Steuerelement Ansicht als zwischen den anderen Steuerelementen platziert werden. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf **AppBar-Steuerelemente** bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. **Die** Schaltfläche ist das gängigste Element in **einer AppBar,** aber auch andere Steuerelemente, die Aktionen für eine App aufrufen, sind möglich. Eine **AppBar kann** auch 0 oder mehr Trennzeichen (Trennzeichen-Steuerelementtyp) enthalten, die in der Steuerelementansicht als zwischen den anderen Steuerelementen platziert angezeigt werden. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
@@ -62,7 +62,7 @@ In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der 
 </ul></li>
 </ul></td>
 <td><ul>
-<li>Nicht verfügbar
+<li>Nicht zutreffend
 <ul>
 <li>Schaltfläche (0 oder viele)</li>
 <li>Andere Steuerelemente (0 oder viele)</li>
@@ -74,70 +74,70 @@ In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der 
 
 
 
- 
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für die Steuerelemente besonders relevant ist, die den **appbar** -Steuerelement Typen implementieren Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für die Steuerelemente, die den **AppBar-Steuerelementtyp** implementieren, besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Notizen                                                                                                                                                                                                                       |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Hinweise                                                                                                                                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                                                |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Der von dieser Eigenschaft verfügbar gemachte Wert muss sämtliche darin enthaltenen Steuerelemente umfassen.                                                                                                                                    |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **AppBar** |                                                                                                                                                                                                                             |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | false      | Ein App-leisten-Steuerelement ist in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur nicht enthalten.                                                                                                                                           |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Ein App-leisten-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                                        |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Steuerelemente in der APP-Leiste können in der Regel den Tastaturfokus haben.                                                                                    |
-| [**UIA \_ isoffscreenpropertyid**](uiauto-automation-element-propids.md)                   | Siehe Hinweise. | Der Wert dieser Eigenschaft ist hängt davon ab, ob das Steuerelement auf dem Bildschirm angezeigt werden kann.                                                                                                                                        |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Null       | Die Steuerelemente der APP-Leiste haben in der Regel keine Bezeichnung.                                                                                                                                                                               |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **appbar** -Steuerelement entspricht. Der Standardwert ist "App-Leiste" für en-US oder Englisch (USA).                                                                                         |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Das Steuerelement der APP-Leiste benötigt keinen Namen, es sei denn, eine Anwendung verfügt über mehr als eine APP-Leiste. Wenn in einer Anwendung mehr als eine APP-Leiste vorhanden ist, verwenden Sie diese Eigenschaft, um Unterscheidungs Namen verfügbar zu machen, z. b. "Top" oder "Bottom". |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                                                |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Der von dieser Eigenschaft verfügbar gemachte Wert muss sämtliche darin enthaltenen Steuerelemente umfassen.                                                                                                                                    |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **AppBar** |                                                                                                                                                                                                                             |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | FALSE      | Ein App-Leisten-Steuerelement ist nicht in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                           |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Ein App-Leisten-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                        |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Steuerelemente in der App-Leiste können in der Regel den Tastaturfokus haben.                                                                                    |
+| [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Siehe Hinweise. | Der Wert dieser Eigenschaft ist hängt davon ab, ob das Steuerelement auf dem Bildschirm angezeigt werden kann.                                                                                                                                        |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Null       | App-Leistensteuerelemente verfügen in der Regel nicht über eine Bezeichnung.                                                                                                                                                                               |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **AppBar-Steuerelementtyp** entspricht. Der Standardwert ist "app bar" für en-US oder English (USA).                                                                                         |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Das App-Leisten-Steuerelement benötigt keinen Namen, es sei denn, eine Anwendung verfügt über mehr als eine App-Leiste. Wenn eine Anwendung mehrere App-Leisten auflistet, verwenden Sie diese Eigenschaft, um verschiedene Namen verfügbar zu machen, z. B. "Top" oder "Bottom". |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von App-Bar- Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die App-Balkensteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
 
 
 
- 
+ 
 
 ## <a name="relevant-events"></a>Relevante Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Steuerelemente, die den **appbar** -Steuerelement Typen implementieren, jedoch nicht unbedingt erforderlich sind
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die besonders für die Steuerelemente relevant sind, die den **AppBar-Steuerelementtyp** implementieren, aber nicht unbedingt erforderlich sind.
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                 | Notizen                                                                              |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                 | Hinweise                                                                              |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**UIA \_ menuclosedebug**](uiauto-event-ids.md)                            | Platt Form Implementierungen können dieses Ereignis auslösen, wenn das Steuerelement der APP-Leiste geschlossen wird. |
-| [**UIA \_ menuopenedeventid**](uiauto-event-ids.md)                            | Platt Form Implementierungen können dieses Ereignis auslösen, wenn das Steuerelement der APP-Leiste geöffnet wird. |
-| [**Iuiautomationpropertychangeabventhandler**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationpropertychangedeventhandler) | Ereignishandler für geänderte Eigenschaften.                                                    |
+| [**\_UIA-MenüClosedEventId**](uiauto-event-ids.md)                            | Plattformimplementierungen können dieses Ereignis beim Schließen des App-Leisten-Steuerelements ausleiten. |
+| [**\_UIA-MenüOpenedEventId**](uiauto-event-ids.md)                            | Plattformimplementierungen können dieses Ereignis beim Öffnen des App-Leisten-Steuerelements ausleiten. |
+| [**IUIAutomationPropertyChangedEventHandler**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationpropertychangedeventhandler) | Ereignishandler mit Geänderter Eigenschaft.                                                    |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -146,15 +146,15 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Appbar-XAML-Steuerelement**](/uwp/api/Windows.UI.Xaml.Controls.AppBar)
+[**AppBar-XAML-Steuerelement**](/uwp/api/Windows.UI.Xaml.Controls.AppBar)
 </dt> <dt>
 
-[**Winjs. UI. appbar-Objekt**](/previous-versions/windows/apps/br229670(v=win.10))
+[**WinJS.UI.AppBar-Objekt**](/previous-versions/windows/apps/br229670(v=win.10))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

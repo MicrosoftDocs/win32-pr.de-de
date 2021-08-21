@@ -1,7 +1,7 @@
 ---
-description: Die duplicateblob-Funktion kopiert ein bestimmtes Blob.
+description: Die DuplicateBlob-Funktion kopiert ein bestimmtes BLOB.
 ms.assetid: d2478f53-328c-4799-890c-7849ce1f22e9
-title: Duplicateblob-Funktion (Netmon. h)
+title: DuplicateBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: df0fc00f0bd51e89da432e6f3b0143ce6092cedb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8fd41bff4700915c43ab709efa0033905cc5895c81839d399f81fc7bc4317e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064100"
 ---
-# <a name="duplicateblob-function"></a>Duplicateblob-Funktion
+# <a name="duplicateblob-function"></a>DuplicateBlob-Funktion
 
-Die **duplicateblob** -Funktion kopiert ein bestimmtes Blob.
+Die **DuplicateBlob-Funktion** kopiert ein bestimmtes BLOB.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ DWORD DuplicateBlob(
 
 <dl> <dt>
 
-*hsrcblob* \[ in\]
+*hSrcBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das kopiert wird.
+Handle für das kopierte BLOB.
 
 </dd> <dt>
 
-*hblobthatwillbecreated* \[ vorgenommen\]
+*hBlobThatWillBeCreated* \[ out\]
 </dt> <dd>
 
 Handle für das doppelte BLOB.
@@ -56,9 +56,9 @@ Handle für das doppelte BLOB.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler beschreibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler beschreibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
@@ -81,7 +81,7 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 [CreateBlob](createblob.md)
 </dt> <dt>
 
-[Destroyblob](destroyblob.md)
+[DestroyBlob](destroyblob.md)
 </dt> </dl>
 
  

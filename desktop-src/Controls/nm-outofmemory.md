@@ -1,9 +1,9 @@
 ---
-title: NM_OUTOFMEMORY Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Steuer Elements, dass das Steuerelement einen Vorgang nicht beenden konnte, weil nicht genügend Arbeitsspeicher verfügbar war. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_OUTOFMEMORY Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement einen Vorgang nicht abschließen konnte, da nicht genügend Arbeitsspeicher verfügbar war. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: d7d80515-ae6c-4817-a698-d486a9d86c4a
 keywords:
-- Windows-Steuerelemente für NM_OUTOFMEMORY Benachrichtigungs
+- NM_OUTOFMEMORY Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f1321f88360d168b13d16b36f984d9b797dc094
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c8a2efdd0048006b86d97964dc953d2dbd7c4ecb2687b3c0fb67a5effc63fea0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958109"
 ---
-# <a name="nm_outofmemory-notification-code"></a>NM- \_ oudefmemory-Benachrichtigungs Code
+# <a name="nm_outofmemory-notification-code"></a>NM \_ OUTOFMEMORY-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Steuer Elements, dass das Steuerelement einen Vorgang nicht beenden konnte, weil nicht genügend Arbeitsspeicher verfügbar war. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement einen Vorgang nicht abschließen konnte, da nicht genügend Arbeitsspeicher verfügbar war. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_OUTOFMEMORY
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Ein Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert wird vom-Steuerelement ignoriert.
+Der Rückgabewert wird vom -Steuerelement ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Der Rückgabewert wird vom-Steuerelement ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

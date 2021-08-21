@@ -1,7 +1,7 @@
 ---
-description: Die Init-Methode initialisiert das-Objekt.
+description: Die Init-Methode initialisiert das -Objekt.
 ms.assetid: a919adfa-0ffb-4241-b709-ad0e8d55476a
-title: CSeekingPassThru.Init-Methode (seekpt. h)
+title: CSeekingPassThru.Init-Methode (Seekpt.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 78176a6966f379240b5b7edd1ef5b73d7fa75b3f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 91d20477f83ec79c6ae6095e81810c98454f9c26521eda995c919867b3e3ac12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953814"
 ---
 # <a name="cseekingpassthruinit-method"></a>CSeekingPassThru.Init-Methode
 
-Die- `Init` Methode initialisiert das-Objekt.
+Die `Init` -Methode initialisiert das -Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT Init(
 
 <dl> <dt>
 
-*bsupportrendering* \[ in\]
+*bSupportRendering* \[ In\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Filter ein Renderer ist. Verwenden Sie den Wert **true** , wenn der Filter ein Renderer ist, und andernfalls **false** .
+Boolescher Wert, der angibt, ob der Filter ein Renderer ist. Verwenden Sie den Wert **TRUE,** wenn der Filter ein Renderer ist, andernfalls **FALSE.**
 
 </dd> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle für die Eingabe-PIN des Filters.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) auf dem Eingabepin des Filters.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Das Objekt wurde bereits initialisiert.<br/>         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher zum Erstellen des Objekts.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Das Objekt wurde bereits initialisiert.<br/>         |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher zum Erstellen des Objekts.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert von *bsupportrendering* **true** ist, erstellt diese Methode eine Instanz der [**crendererpospassthru**](crendererpospassthru.md) -Klasse. Andernfalls wird eine Instanz der [**cpospassthru**](cpospassthru.md) -Klasse erstellt.
+Wenn der Wert von *bSupportRendering* **TRUE** ist, erstellt diese Methode eine Instanz der [**CRendererPosPassThru-Klasse.**](crendererpospassthru.md) Andernfalls wird eine Instanz der [**CPosPassThru-Klasse**](cpospassthru.md) erstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Wenn der Wert von *bsupportrendering* **true** ist, erstellt diese Methode eine 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Seekpt. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Seekpt.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -92,7 +92,7 @@ Wenn der Wert von *bsupportrendering* **true** ist, erstellt diese Methode eine 
 
 <dl> <dt>
 
-[**Cseekingpassthru-Klasse**](cseekingpassthru.md)
+[**CSeekingPassThru-Klasse**](cseekingpassthru.md)
 </dt> </dl>
 
  

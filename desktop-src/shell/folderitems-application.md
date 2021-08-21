@@ -1,7 +1,7 @@
 ---
-description: Enthält das Anwendungs Objekt der Auflistung der Ordner Elemente.
+description: Enthält das Application-Objekt der Ordnerelementesammlung.
 ms.assetid: 2cd4243e-a5a6-4de4-b310-f74558ac0fbe
-title: Folderitems. Application-Eigenschaft (Shldisp. h)
+title: FolderItems.Application-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 7f073b81106923f889ca5209c0aa492f4c4bbd60
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3809d76576b69c53f6fc5f8a11ab954242e3a89c9a369ada2f4fa47c460f523f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032608"
 ---
-# <a name="folderitemsapplication-property"></a>Folderitems. Application (Eigenschaft)
+# <a name="folderitemsapplication-property"></a>FolderItems.Application (Eigenschaft)
 
-Enthält das **Anwendungs** Objekt der Auflistung der Ordner Elemente.
+Enthält das **Application-Objekt** der Ordnerelementesammlung.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,25 +37,25 @@ objApplication = FolderItems.Application
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Objekt Verweis auf das Anwendungs Objekt.
+Ein Objektverweis auf das Anwendungsobjekt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Application** -Eigenschaft gibt das Automatisierungs Objekt zurück, das von der Anwendung unterstützt wird, die das WebBrowser-Steuerelement enthält. Andernfalls gibt diese Eigenschaft das Automatisierungs Objekt des Webbrowser-Steuer Elements zurück.
+Die **Application-Eigenschaft** gibt das Automatisierungsobjekt zurück, das von der Anwendung unterstützt wird, die das WebBrowser-Steuerelement enthält, wenn auf dieses Objekt zugegriffen werden kann. Andernfalls gibt diese Eigenschaft das Automatisierungsobjekt des WebBrowser-Steuerelements zurück.
 
-Verwenden Sie diese Eigenschaft mit den Befehlen SET **und "** **Set** " oder mit dem Befehl " **GetObject** ", um eine Instanz der Windows Internet Explorer-Anwendung zu erstellen und zu bearbeiten.
+Verwenden Sie diese Eigenschaft mit den **Befehlen Set** und **CreateObject** oder mit dem **GetObject-Befehl,** um eine Instanz der Windows Internet Explorer zu erstellen und zu bearbeiten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,40 +1,40 @@
 ---
-title: Programm gesteuertes Aufrufen von WDS
-description: Die Microsoft Windows-Desktop Suche (WDS) 2. x kann Programm gesteuert mithilfe der executeQuery-Methode und der ExecuteSQLQuery-Methode in der ISearchDesktop-Schnittstelle abgefragt werden.
+title: Programmgesteuertes Aufrufen von WDS
+description: Microsoft Windows Desktop Search (WDS) 2.x kann programmgesteuert mithilfe der ExecuteQuery- und ExecuteSQLQuery-Methoden in der ISearchDesktop-Schnittstelle abgefragt werden.
 ms.assetid: 38426f63-2039-410e-8c70-ebd9fc269d74
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0dc76264b7939311273fbda334292dfb255cde8f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b8879001bcf284affd03ff472ac9327445b799acd44465b5bae9a8cb2d819b7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103727049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976900"
 ---
-# <a name="calling-wds-programmatically"></a>Programm gesteuertes Aufrufen von WDS
+# <a name="calling-wds-programmatically"></a>Programmgesteuertes Aufrufen von WDS
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
-Die Microsoft Windows-Desktop Suche (WDS) 2. x kann Programm gesteuert mithilfe der **ExecuteQuery** -Methode und der **ExecuteSQLQuery** -Methode in der [**ISearchDesktop-**](/previous-versions//aa965729(v=vs.85)) Schnittstelle abgefragt werden. Die **ExecuteQuery** -Methode gibt basierend auf dem Abfragetext, den Spalten und den Einschränkungen, die als Parameter übergeben werden, einen Daten Satz Satz aus dem Index zurück. Die **ExecuteSQLQuery** -Methode gibt auch einen Datensatz-Satz von Ergebnissen zurück, erfordert jedoch den genauen Structured Query Language (SQL)-Befehl, der übermittelt werden soll. **ExecuteQuery** sollte in den meisten Szenarien verwendet werden.
+Microsoft Windows Desktop Search (WDS) 2.x kann programmgesteuert mithilfe der **Methoden ExecuteQuery** und **ExecuteSQLQuery** in der [**ISearchDesktop-Schnittstelle abgefragt**](/previous-versions//aa965729(v=vs.85)) werden. Die **ExecuteQuery-Methode** gibt basierend auf dem Abfragetext, den Spalten und den Einschränkungen, die als Parameter übergeben werden, einen Datensatzsatz aus dem Index zurück. Die **ExecuteSQLQuery-Methode** gibt auch einen Datensatzsatz von Ergebnissen zurück, erfordert jedoch, dass der exakte strukturierte Abfragesprache (SQL)-Befehl übergeben wird. **ExecuteQuery** sollte in den meisten Szenarien verwendet werden.
 
 ## <a name="regular-queries"></a>Reguläre Abfragen
 
-Reguläre Abfragen sind solche, die vom Benutzer in das WDS-Eingabefeld eingegeben werden, einschließlich der [erweiterten Abfrage Syntax](-search-2x-wds-aqsreference.md). Die Abfrage wird zusammen mit den zurück zugebende WDS 2. x- [Schema](-search-2x-wds-schematable.md) Spalten, der Spalte und der Reihenfolge zum Sortieren von Ergebnissen an **ExecuteQuery** und in allen Klauseln zur Einschränkung der Ergebnisse von übergeben.
+Reguläre Abfragen sind abfragen, die vom Benutzer in das WDS-Eingabefeld eingegeben werden, einschließlich der [erweiterten Abfragesyntax](-search-2x-wds-aqsreference.md). Die Abfrage wird zusammen mit den zurück zu [](-search-2x-wds-schematable.md) gebenden WDS 2.x-Schemaspalten, der Spalte und der Reihenfolge zum Sortieren der Ergebnisse sowie allen Klauseln zum Einschränken der Ergebnisse an **ExecuteQuery** übergeben.
 
-Die-Methode weist das folgende Format auf:
+Die -Methode hat die Form:
 
 `HRESULT ExecuteQuery(LPCWSTR lpcwstrQuery, LPCWSTR lpcwstrColumn, LPCWSTR lpcwstrSort, LPCWSTR lpcwstrRestriction, Recordset **ppiRs);`
 
 
 
-| Richtung | Variable           | BESCHREIBUNG                                                                                                                                                                                   |
+| Direction | Variable           | BESCHREIBUNG                                                                                                                                                                                   |
 |-----------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| In        | lpcwstrinquery       | Der Abfragetext. Diese Abfrage ist identisch mit einer Abfrage, die in das Such Textfeld in der Benutzeroberfläche der Windows-Desktop Suche eingegeben wurde. <br/> Beispiel: `"from:Zara dinner plans"`<br/> |
-| In        | lpcwstrincolumn      | Die einzuschließenden Spalten, getrennt durch Kommas. <br/> Beispiel: `"DocTitle, Url"`<br/>                                                                                            |
-| In        | lpcwstrausort        | Die zu sortierende Überschreibungs Spalte, gefolgt von ASC für aufsteigend oder absteigend für absteigend. <br/> Beispiel: `"LastAuthor DESC"`<br/>                                                  |
-| In        | lpcwstraueinschränkung | Einschränkungen zum Anfügen von WHERE-Klauseln in der Windows-Desktop Suche wählen Sie aus. <br/> Beispiel: `"Contains(LastAuthor, 'Bill')"`<br/>                                       |
-| aus       | ppirs              | Der resultierende Daten Satz Satz<br/>                                                                                                                                                           |
+| In        | lpcwstrQuery       | Der Abfragetext. Diese Abfrage ist identisch mit einer Abfrage, die in das Suchtextfeld auf der Benutzeroberfläche der Windows Desktopsuche eingefügt wurde. <br/> Beispiel: `"from:Zara dinner plans"`<br/> |
+| In        | lpcwstrColumn      | Die ein- und durch Kommas getrennten Spalten. <br/> Beispiel: `"DocTitle, Url"`<br/>                                                                                            |
+| In        | lpcwstrSort        | Die zu sortierende Überschreibungsspalte, gefolgt von ASC für aufsteigend oder DESC für absteigend. <br/> Beispiel: `"LastAuthor DESC"`<br/>                                                  |
+| In        | lpcwstrRestriction | Einschränkungen zum Anfügen über WHERE-Klauseln in Windows Desktopsuche auswählen. <br/> Beispiel: `"Contains(LastAuthor, 'Bill')"`<br/>                                       |
+| aus       | ?n-n-n              | Der resultierende Datensatzsatz<br/>                                                                                                                                                           |
 
 
 
@@ -42,20 +42,20 @@ Die-Methode weist das folgende Format auf:
 
 ## <a name="sql-queries"></a>SQL-Abfragen
 
-Die **ISearchDesktop.Executesqlquery** -Methode wird verwendet, um direkte WDS-Datenbankabfragen zu senden. Die Syntax für die Abfragen ähnelt der für SharePoint Server verwendeten, zusammen mit der Möglichkeit, SQL GROUP BY-Klauseln im Monarch-Stil zu verwenden. Die Abfrage wird für den Index genau so ausgeführt, wie Sie übergeben wird, ohne dass eine zusätzliche Verarbeitung der erweiterten Abfrage Syntax erfolgt, wie die ExecuteQuery-API dies tut.
+Die **ISearchDesktop.ExecuteSQLQuery-Methode** wird verwendet, um direkte WDS-Datenbankabfragen zu senden. Die Syntax für die Abfragen ähnelt der syntax für SharePoint Server, zusammen mit der Möglichkeit zur Verwendung von GROUP BY-Klauseln SQL Stil. Die Abfrage wird für den Index genau so ausgeführt, wie sie übergeben wird, ohne dass die erweiterte Abfragesyntax wie bei der ExecuteQuery-API verarbeitet wird.
 
 https://msdn.microsoft.com/library/default.asp?url=/library/spssdk/html/\_tahoe\_search\_sql\_syntax.asp
 
-Die-Methode weist das folgende Format auf:
+Die -Methode hat die Form:
 
 `HRESULT ExecuteSQLQuery(LPCWSTR lpcwstrSQL, Recordset **ppiRs);`
 
 
 
-| Richtung | Variable   | BESCHREIBUNG                                    |
+| Direction | Variable   | BESCHREIBUNG                                    |
 |-----------|------------|------------------------------------------------|
-| In        | lpcwstrausql | Die SQL-Abfrage, die für den WDS-Index ausgeführt wird. |
-| aus       | ppirs      | Der resultierende Daten Satz Satz                       |
+| In        | lpcwstrSQL | Die SQL Abfrage, die für den WDS-Index ausgeführt werden soll. |
+| aus       | ?n-n-n      | Der resultierende Datensatzsatz                       |
 
 
 
@@ -63,16 +63,16 @@ Die-Methode weist das folgende Format auf:
 
 Ressourcen:
 
--   Unterstützungs Dateien für die ISearchDesktop-Schnittstelle: https://addins.msn.com/support/WDSSDK.zip
--   ISearchDesktop c#-Beispiel: https://addins.msn.com/support/WDSSample.zip
+-   Unterstützungsdateien für die ISearchDesktop-Schnittstelle: https://addins.msn.com/support/WDSSDK.zip
+-   ISearchDesktop-C#-Beispiel: https://addins.msn.com/support/WDSSample.zip
 
-## <a name="sample-c-code"></a>Beispiel C++ Code
+## <a name="sample-c-code"></a>C++-Beispielcode
 
 > [!Note]
 >
-> Dieser Code und diese Informationen werden "wie immer" bereitgestellt, ohne jegliche Gewährleistungen jeglicher Art, entweder ausgedrückt oder impliziert, einschließlich, aber nicht beschränkt auf die impliziten Gewährleistungen der Handels Üblichkeit und/oder Eignung für einen bestimmten Zweck.
+> DIESER CODE UND DIE INFORMATIONEN WERDEN "WIE BEFÄHRT" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, ENTWEDER AUSGEDRÜCKT ODER KONKLUDENT, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE KONKLUDENTEN GEWÄHRLEISTUNGEN DER HANDELSIERBARKEIT UND/ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
 >
-> Copyright (C) Microsoft. Alle Rechte vorbehalten.
+> Copyright (C) Microsoft. All rights reserved.
 
  
 
@@ -145,7 +145,7 @@ extern "C" int __cdecl wmain( int argc, WCHAR * argv[] )
 [Wahrgenommene Typen](-search-2x-wds-perceivedtype.md)
 </dt> <dt>
 
-[Aufrufen von WDS von Webseiten](-search-2x-wds-browserhelpobject.md)
+[Aufrufen von WDS über Webseiten](-search-2x-wds-browserhelpobject.md)
 </dt> </dl>
 
  

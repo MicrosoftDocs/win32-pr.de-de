@@ -6,7 +6,7 @@
       items:
         - name: Verlauf der Tablet PC-Plattform
           href: tablet-pc-platform-history.md
-        - name: Neuerungen bei der Entwicklung von Tablet-PCs
+        - name: Neues bei der Entwicklung von Tablet-PCs
           href: what-s-new-in-tablet-pc-development.md
         - name: Die Entwicklungsumgebung
           href: the-development-environment.md
@@ -15,27 +15,27 @@
           items:
             - name: Auf welche Bibliotheksversion verwiesen werden soll
               href: which-library-version-to-reference.md
-            - name: Verwaltete Bibliothek und Steuerelemente (Tablet-PC)
+            - name: Verwaltete Bibliothek und Steuerelemente (Tablet PC)
               href: managed-library-and-controls--tablet-pc.md
             - name: Windows Presentation Foundation (Tablet PC)
               href: windows-presentation-foundation--tablet-pc.md
-            - name: COM-Bibliothek und ActiveX-Steuerelemente (Tablet PC)
+            - name: COM-Bibliothek und ActiveX Steuerelemente (Tablet PC)
               href: com-library-and-activex-controls--tablet-pc.md
         - name: Häufig gestellte Fragen
           href: frequently-asked-questions.yml
-    - name: Programmieren von Tablet-PCs
+    - name: Programmieren eines Tablet-PCs
       href: programming-the-tablet-pc.md
       items:
         - name: Informationen zur Handschrifterkennung
           href: about-handwriting-recognition.md
           items:
-            - name: Texterkennungen
+            - name: Text-Recognizers
               href: text-recognizers.md
-            - name: Objekterkennungen
+            - name: Objekt-Recognizers
               href: object-recognizers.md
-            - name: Verwenden der Erkennungssammlung
+            - name: Verwenden der Recognizers-Auflistung
               href: using-the-recognizers-collection.md
-            - name: Erkennungskontext
+            - name: Kontext der Wiedererkennung
               href: recognizer-context.md
             - name: Verwenden von Kontext zur Verbesserung der Genauigkeit
               href: using-context-to-improve-accuracy.md
@@ -45,9 +45,9 @@
                   items:
                     - name: Informationen zu Sprachmodellen
                       href: about-language-models.md
-                    - name: Eingabebereiche und Factoids
+                    - name: Eingabebereich und Factoids
                       href: input-scopes-and-factoids.md
-                    - name: Wörterbücher und Ausdruckslisten
+                    - name: Wörterbücher und Begriffslisten
                       href: dictionaries-and-phrase-lists.md
                 - name: Festlegen des Kontexts mit den SetInputScope-APIs
                   href: setting-context-with-the-setinputscope-apis.md
@@ -55,81 +55,81 @@
                   href: setting-context-for-ink-enabled-controls.md
                 - name: Festlegen des Kontexts für fensterlose Steuerelemente
                   href: setting-context-for-windowless-controls.md
-                - name: Benutzerdefinierte Eingabebereiche mit regulären Ausdrücken
+                - name: Benutzerdefinierte Eingabebereich mit regulären Ausdrücken
                   href: custom-input-scopes-with-regular-expressions.md
                   items:
-                    - name: Syntaxreferenz für reguläre Ausdrücke
+                    - name: Referenz zur Syntax regulärer Ausdrücke
                       href: regular-expression-syntax-reference.md
                     - name: Beispiele für reguläre Ausdrücke
                       href: regular-expression-examples.md
-                - name: Unterstützte Factoids von Version 1
+                - name: Unterstützte Factoids ab Version 1
                   href: supported-factoids-from-version-1.md
                   items:
-                    - name: Häufig in verschiedenen Sprachen vorkommende Factoids
+                    - name: Sprachenübergreifende Factoids
                       href: factoids-common-across-languages.md
-                    - name: Factoids für Westsprachen
+                    - name: Factoids für westestische Sprachen
                       href: factoids-for-western-languages.md
                       items:
                         - name: Englische (USA) Factoids
                           href: english--united-states--factoids.md
-                        - name: English (Worldwide) Factoids
+                        - name: Faktenoide für Englisch (weltweit)
                           href: english--worldwide--factoids.md
                         - name: Französische Factoids
                           href: french-factoids.md
-                        - name: Deutsche Factoids
+                        - name: German Factoids
                           href: german-factoids.md
-                        - name: Spanisch factoids
+                        - name: Spanisch (Factoids)
                           href: spanish-factoids.md
                     - name: Factoids für ostasiatische Sprachen
                       href: factoids-for-east-asian-languages.md
                       items:
                         - name: Japanische Factoids
                           href: japanese-factoids.md
-                        - name: Chinesische (vereinfachte) Fakten
+                        - name: Chinesisch (vereinfacht) Factoids
                           href: chinese--simplified--factoids.md
                         - name: Chinesische (traditionelle) Factoids
                           href: chinese--traditional--factoids.md
                         - name: Koreanische Factoids
                           href: korean-factoids.md
-            - name: Wörterbücher und Factoids
+            - name: Wörterbücher und Factoide
               href: dictionaries-and-factoids.md
             - name: Erkennungssegmente
               href: recognition-segments.md
-            - name: Erkennung von abgewinkelten Texten
+            - name: Erkennung von winkeliertem Text
               href: recognition-of-angled-text.md
-            - name: Unterstützung für die Neuanordnung von Erkennungsstrichen
+            - name: Unterstützung für die Neuanordnung von Strichen in der Wiedererkennung
               href: recognizer-stroke-reordering-support.md
             - name: Verwenden von Anwendungswörterbüchern
               href: using-application-dictionaries.md
               items:
-                - name: 'Grundlegendes zu Wortlisten, Erkennungskontext und Factoids'
+                - name: 'Grundlegendes zu Wortlisten, Kontext der Wiedererkennung und Factoids'
                   href: understanding-wordlists--the-recognizercontext--and-factoids.md
-                - name: Verwenden von Anwendungswörterbüchern mit den Tablet PC-Plattform-APIs
+                - name: Verwenden von Anwendungswörterbüchern mit den Plattform-APIs für Tablet-PCs
                   href: using-application-dictionaries-with-the-tablet-pc-platform-apis.md
-                - name: Erstellen von benutzerdefinierten Wörterbüchern für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
+                - name: Erstellen benutzerdefinierter Wörterbücher für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
                   href: creating-custom-dictionaries-for-handwriting-recognition-in-windows-7-and-windows-server-2008-r2.md
             - name: 'Confidence-Eigenschaft [Informationen zur Erkennung'
               href: confidence-property--about-recognition.md
             - name: Alternative Stile
               href: alternates.md
-            - name: Ink-Segmente und Alternative
+            - name: Ink Segments and Alternates
               href: ink-segments-and-alternates.md
-            - name: Erstellen einer Erkennung
+            - name: Erstellen einer Recognizer-Endung
               href: creating-a-recognizer.md
               items:
                 - name: Architektur der Erkennungs-API
                   href: recognition-api-architecture.md
                 - name: HRECOGNIZER und HRECOCONTEXT
                   href: hrecognizer-and-hrecocontext.md
-                - name: Recognizer Lattice-Struktur
+                - name: Lattice-Struktur der Recognizer-Struktur
                   href: recognizer-lattice-structure.md
-                - name: Registrieren der Erkennungs-DLL
+                - name: Registrieren der Recognizer-DLL
                   href: registering-your-recognizer-dll.md
-                - name: Überlegungen zur Erkennungsthreading
+                - name: Überlegungen zum Erkennen von Threading
                   href: recognizer-threading-considerations.md
                 - name: Typische Aufrufsequenz
                   href: typical-calling-sequence.md
-                - name: Erkennungs-DLL-Beispielvorlage
+                - name: Beispielvorlage für die Dll-Recognizer-Datei
                   href: recognizer-dll-sample-template.md
                 - name: Unicode-Bereichswerte von Gesten
                   href: unicode-range-values-of-gestures.md
@@ -149,18 +149,18 @@
                   href: plug-in-data-and-the-realtimestylus-class.md
                 - name: Implementierungshinweise für die StylusInput-APIs
                   href: implementation-notes-for-the-stylusinput-apis.md
-                - name: Ink-Collection Plug-Ins
+                - name: Ink-Collection-Plug-Ins
                   href: ink-collection-plug-ins.md
-                - name: Dynamic-Renderer Plug-Ins
+                - name: Dynamic-Renderer-Plug-Ins
                   href: dynamic-renderer-plug-ins.md
-                - name: Erkennungs-Plug-Ins
+                - name: Erkennen von Plug-Ins
                   href: recognizer-plug-ins.md
-            - name: Überlegungen zur Verwendung der StylusInput-API
+            - name: Überlegungen bei der Verwendung der StylusInput-API
               href: considerations-when-using-the-stylusinput-apis.md
               items:
                 - name: Entwurfsüberlegungen für die StylusInput-API
                   href: design-considerations-for-the-stylusinput-apis.md
-                - name: Threadingüberlegungen für die StylusInput-API
+                - name: Überlegungen zum Threading für die StylusInput-API
                   href: threading-considerations-for-the-stylusinput-apis.md
                 - name: Das kaskadierte RealTimeStylus-Modell
                   href: the-cascaded-realtimestylus-model.md
@@ -170,7 +170,7 @@
                   href: performance-considerations-for-the-stylusinput-apis.md
                 - name: Überlegungen zur teilweisen Vertrauenswürdigkeit für die StylusInput-API
                   href: partial-trust-considerations-for-the-stylusinput-apis.md
-        - name: Erstellen eines verteilbaren Setups
+        - name: Erstellen eines redistributable-Setups
           href: creating-a-redistributable-setup.md
         - name: 'Bestimmen, ob ein PC ein Tablet-PC ist'
           href: determining-whether-a-pc-is-a-tablet-pc.md
@@ -184,18 +184,18 @@
         - name: Freihandeingabenanalyse
           href: ink-analysis-overview.md
           items:
-            - name: Nutzung der Ink-Analyse-API
+            - name: Verwendung der Ink Analysis-API
               href: ink-analysis-api-usage.md
-            - name: Grundlegende Erkennung und Ink-Analyse
+            - name: Grundlegende Erkennungs- und Ink-Analyse
               href: basic-recognition-and-ink-analysis.md
             - name: Datenproxy mit Ink-Analyse
               href: data-proxy-with-ink-analysis.md
-            - name: Datenproxyereignisfluss
+            - name: Datenproxyereignis Flow
               href: data-proxy-event-flow.md
             - name: Das Divider-Objekt
               href: the-divider-object.md
               items:
-                - name: Ink Analyis mit dem Divider-Objekt
+                - name: Ink Analyis with the Divider Object
                   href: ink-analyis-with-the-divider-object.md
                 - name: Layoutanalyse
                   href: layout-analysis.md
@@ -205,27 +205,27 @@
                   href: working-with-the-divisionresult-object.md
                 - name: Arbeiten mit dem DivisionUnit-Objekt
                   href: working-with-the-divisionunit-object.md
-                - name: Arbeiten mit einer Strokes-Auflistung
+                - name: Arbeiten mit einer Strichsammlung
                   href: working-with-a-strokes-collection.md
-                - name: Arbeiten mit einem Erkennungskontext
+                - name: Arbeiten mit einem Recognizer-Kontext
                   href: working-with-a-recognizer-context.md
-                - name: Überlegungen zu anderen Divisionen
+                - name: Weitere Überlegungen zu Trennern
                   href: other-divider-considerations.md
         - name: Ink-Steuerelemente
           href: ink-controls.md
           items:
-            - name: Hinzufügen von Ink-Steuerelementen zu einem Projekt
+            - name: Hinzufügen von Ink-Steuerelementen zu Project
               href: adding-ink-controls-to-a-project.md
             - name: InkEdit-Steuerelement
               href: inkedit-control.md
               items:
                 - name: Instanziieren von InkEdit
                   href: instantiating-inkedit.md
-                - name: Wort- und Zeichenerkennung im Vergleich
+                - name: Wort- und Zeichenerkennung
                   href: word-vs--character-recognition.md
-                - name: Anzeigen von Ink als Ink
+                - name: Anzeigen von "Ink" als "Ink"
                   href: displaying-ink-as-ink.md
-                - name: Verwenden von InkEdit unter früheren Versionen von Windows
+                - name: Verwenden von InkEdit in früheren Versionen von Windows
                   href: using-inkedit-on-earlier-versions-of-windows.md
                 - name: Verwenden eines Anwendungswörterbuchs mit InkEdit
                   href: using-an-application-dictionary-with-inkedit.md
@@ -234,9 +234,9 @@
               items:
                 - name: Arbeiten mit Bildern
                   href: working-with-pictures.md
-                - name: Verwenden von InkPicture unter früheren Versionen von Windows
+                - name: Verwenden von InkPicture in früheren Versionen von Windows
                   href: using-inkpicture-on-earlier-versions-of-windows.md
-        - name: Interoperabilität von Ink
+        - name: Interoperabilität von Ink-Interoperabilität
           href: ink-interoperability.md
           items:
             - name: Ink-Datenformate
@@ -263,7 +263,7 @@
               href: web-controls.md
             - name: Ink-Enabled Webanwendungen
               href: ink-enabled-web-applications.md
-            - name: Sicherheit und Vertrauen
+            - name: Sicherheit und Vertrauensstellung
               href: security-and-trust.md
         - name: 'Stifteingabe, Ink und Erkennung'
           href: pen-input--ink--and-recognition.md
@@ -278,7 +278,7 @@
               href: ink-analysis.md
             - name: Handschrifterkennung in Windows Server 2008 R2
               href: handwriting-recognition-in-windows-server-2008-r2.md
-        - name: Programmieren der Steuerung für mathematische Eingaben
+        - name: Programmieren des Steuerung für mathematische Eingaben
           href: programming-the-math-input-control.md
           items:
             - name: Erstellen eines Steuerung für mathematische Eingaben
@@ -292,7 +292,7 @@
           items:
             - name: TextInputPanel für Benutzer von PenInputPanel
               href: textinputpanel-for-users-of-peninputpanel.md
-            - name: Verwenden der AutoVervollständigen-Funktion des Eingabebereichs
+            - name: Verwenden von AutoVervollständigen im Eingabebereich
               href: using-input-panel-autocomplete.md
             - name: Aktivieren der Textkorrektur für benutzerdefinierte Ink Collectors
               href: enabling-text-correction-for-custom-ink-collectors.md
@@ -316,16 +316,16 @@
                   href: text-services-framework.md
                 - name: Empfehlungen
                   href: best-practices.md
-        - name: Überlegungen zum Tablet PC-Threading
+        - name: Überlegungen zum Threading von Tablet-PCs
           href: tablet-pc-threading-considerations.md
           items:
             - name: Allgemeine Überlegungen zum Threading
               href: general-threading-considerations.md
             - name: Überlegungen zum Threading verwalteter Bibliotheken
               href: managed-library-threading-considerations.md
-            - name: Überlegungen zum COM- und Automation-Threading
+            - name: Überlegungen zum COM- und Automatisierungsthreading
               href: com-and-automation-threading-considerations.md
-            - name: 'Threads, für die ein Ereignis ausgeführt werden kann'
+            - name: 'Threads, für die ein Ereignis ausgelöst werden kann'
               href: threads-on-which-an-event-can-fire.md
               items:
                 - name: Ink-Objektereignisse
@@ -342,46 +342,46 @@
                   href: peninputpanel-object-events.md
                 - name: RecognizerContext-Objektereignisse
                   href: recognizercontext-object-events.md
-                - name: Strichsammlungsereignisse
+                - name: Strokes-Auflistungsereignisse
                   href: strokes-collection-events.md
         - name: Snipping Tool-Unterstützung in Windows Vista
           href: snipping-tool-support-in-windows-vista.md
-        - name: Spracherkennung und Barrierefreiheit
+        - name: Sprache und Barrierefreiheit
           href: speech-and-accessibility.md
           items:
-            - name: Verwenden Microsoft Active Accessibility
+            - name: Verwenden von Microsoft Active Accessibility
               href: using-microsoft-active-accessibility.md
-            - name: Verfügbar machen von Steuerelementen und Menüs
+            - name: Verfügbarmachen von Steuerelementen und Menüs
               href: exposing-controls-and-menus.md
               items:
-                - name: Verwenden von Windows-Standardsteuerelementen
+                - name: Verwenden von Standard-Windows-Steuerelementen
                   href: using-standard-windows-controls.md
-                - name: Verwenden benutzerdefinierter Steuerelemente
+                - name: Verwenden von benutzerdefinierten Steuerelementen
                   href: using-custom-controls.md
-                - name: Verwenden Active Accessibility zum Verfügbar machen von benutzerdefinierten Steuerelementen
+                - name: Verwenden von Active Accessibility zum Verfügbar machen von benutzerdefinierten Steuerelementen
                   href: using-active-accessibility-to-expose-custom-controls.md
-                - name: Unterstandardverfahren zum Verfügbar machen von benutzerdefinierten Steuerelementen
+                - name: Nicht standardmäßige Techniken zum Verfügbarmachen von benutzerdefinierten Steuerelementen
                   href: substandard-techniques-for-exposing-custom-controls.md
-                - name: Verwenden Owner-Drawn Menüs
+                - name: Verwenden von Owner-Drawn Menüs
                   href: using-owner-drawn-menus.md
                 - name: Benennen von Steuerelementen in Dialogfeldern
                   href: naming-controls-in-dialog-boxes.md
                   items:
                     - name: Steuerelemente ohne Beschriftungseigenschaften
                       href: controls-without-caption-properties.md
-            - name: Verfügbar machen eines Fensters
+            - name: Verfügbarmachen eines Fensters
               href: exposing-a-window.md
               items:
                 - name: Benennen eines Fensters entsprechend
                   href: naming-a-window-appropriately.md
-                - name: Identifizieren eines Fensters durch seine Funktion
+                - name: Identifizieren eines Fensters anhand seiner Funktion
                   href: identifying-a-window-by-its-function.md
-                - name: Verfügbar machen des Inhalts eines Fensters
+                - name: Verfügbarmachen des Inhalts eines Fensters
                   href: exposing-the-contents-of-a-window.md
-            - name: Programmgesteuertes Verfügbarstellen von Text
+            - name: Programmgesteuertes Verfügbarmachen von Text
               href: exposing-text-programmatically.md
               items:
-                - name: Verwenden Active Accessibility zum Verfügbar machen von Text
+                - name: Verwenden von Active Accessibility zum Verfügbar machen von Text
                   href: using-active-accessibility-to-expose-text.md
             - name: Referenzen
               href: references.md
@@ -390,51 +390,51 @@
           items:
             - name: Beispiel für erweiterte Erkennung
               href: advanced-recognition-sample.md
-            - name: Beispiel für ein Formular für automatische Ansprüche
+            - name: Beispiel für das Formular für automatische Ansprüche
               href: auto-claims-form-sample.md
-            - name: Einfaches Beispiel für die Ink-Analyse
+            - name: Grundlegendes Beispiel für die Ink-Analyse
               href: basic-ink-analysis-sample.md
-            - name: Einfaches Erkennungsbeispiel
+            - name: Grundlegendes Erkennungsbeispiel
               href: basic-recognition-sample.md
             - name: Beispiel für C++-Ereignissenken
               href: c---event-sinks-sample.md
             - name: Beispiel für automatische Vervollständigung von Zeichen
               href: character-autocomplete-sample.md
-            - name: Ink Analysis Scanned Paper Form
+            - name: Gescanntes Papierformular für die Ink-Analyse
               href: ink-analysis-scanned-paper-form.md
-            - name: Ink Blog Web Sample
+            - name: Ink-Blog-Webbeispiel
               href: ink-blog-web-sample.md
-            - name: Beispiel für die Ink-Zwischenablage
+            - name: Beispiel für Ink-Zwischenablage
               href: ink-clipboard-sample.md
             - name: Beispiel für die Ink-Sammlung
               href: ink-collection-sample.md
-            - name: Ink Divider Sample
+            - name: Beispiel für Ink Divider
               href: ink-divider-sample.md
-            - name: Beispiel für das Löschen von Ink-Daten
+            - name: Beispiel zum Löschen von Ink-Löschungen
               href: ink-erasing-sample.md
-            - name: Beispiel für einen Ink-Treffertest
+            - name: Beispiel für Ink-Treffertest
               href: ink-hit-test-sample.md
-            - name: Beispiel für die Ink-Erkennung
+            - name: Beispiel für die Inkerkennung
               href: ink-recognition-sample.md
             - name: Beispiel für die Ink-Serialisierung
               href: ink-serialization-sample.md
-            - name: Beispiel für ein Ink-Websteuer steuerelement
+            - name: Beispiel für Ink-Websteuerelement
               href: ink-web-control-sample.md
             - name: Zoombeispiel für Ink
               href: ink-zoom-sample.md
-            - name: Beispiel für mehrere Recognizer
+            - name: Beispiel für mehrere Erkennungen
               href: multiple-recognizers-sample.md
-            - name: No-Touch Deployment Web Sample
+            - name: Webbeispiel für No-Touch-Bereitstellung
               href: no-touch-deployment-web-sample.md
             - name: PenInputPanel-Beispiel
               href: peninputpanel-sample.md
-            - name: RealTimeStylus-Plug-In-Beispiel
+            - name: Beispiel für ein RealTimeStylus-Plug-In
               href: realtimestylus-plug-in-sample.md
-            - name: RealTimeStylus Ink Collection Sample
+            - name: Beispiel für die RealTimeStylus-Ink-Sammlung
               href: realtimestylus-ink-collection-sample.md
             - name: Beispiel für gescanntes Papierformular
               href: scanned-paper-form-sample.md
-            - name: Beispiel für Informationen zur Tablet PC-Plattform
+            - name: Tablet PC Platform Info Sample
               href: tablet-pc-platform-info-sample.md
         - name: Toucheingabeunterstützung in Windows Vista
           href: touch-input-support-in-windows-vista.md
@@ -999,7 +999,7 @@
                       href: inkcollector-newinairpackets.md
                     - name: NewPackets-Ereignis
                       href: inkcollector-newpackets.md
-                    - name: Renderer-Eigenschaft
+                    - name: Renderereigenschaft
                       href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_renderer
                     - name: SetAllTabletsMode-Methode
                       href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-setalltabletsmode
@@ -1493,16 +1493,16 @@
                       href: peninputpanel-visiblechanged.md
                     - name: Width-Eigenschaft
                       href: /windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_width
-            - name: Core Tablet PC Constants
+            - name: Pc-Kernkonstanten
               href: constants---tablet-pc-com-library.md
               items:
-                - name: Factoid-Konstanten
+                - name: Factoidkonstanten
                   href: factoid-constants.md
                 - name: PacketPropertyGuids-Konstanten
                   href: packetpropertyguids-constants.md
                 - name: RecognitionProperty-Konstanten
                   href: recognitionproperty-constants.md
-            - name: Core Tablet PC-Enumerationen
+            - name: Core Tablet PC Enumerations
               href: enumerations--tablet-pc-com-library.md
               items:
                 - name: InkApplicationGesture-Enumeration
@@ -1569,7 +1569,7 @@
                   href: /windows/desktop/api/msinkaut/ne-msinkaut-tablethardwarecapabilities
                 - name: TabletPropertyMetricUnit-Enumeration
                   href: /windows/desktop/api/msinkaut/ne-msinkaut-tabletpropertymetricunit
-            - name: Kernfunktionen für Tablet-PCs
+            - name: Pc-Kernfunktionen für Tablets
               href: functions.md
               items:
                 - name: AddOneStroke-Funktion
@@ -1594,10 +1594,10 @@
                   href: setlineheight.md
                 - name: SetLineRecoCallback-Funktion
                   href: setlinerecocallback.md
-        - name: Flicks-Referenz
+        - name: Referenz zu Flicks
           href: flicks-api-reference.md
           items:
-            - name: Blättern von Nachrichten
+            - name: Flattern von Nachrichten
               href: flicks-messages.md
               items:
                 - name: WM_TABLET_FLICK
@@ -1611,20 +1611,20 @@
                   href: /windows/desktop/api/tabflicks/ne-tabflicks-flickdirection
                 - name: FLICKMODE-Enumeration
                   href: /windows/desktop/api/tabflicks/ne-tabflicks-flickmode
-                - name: FLICKACTION_COMMANDMODE Enumeration
+                - name: FLICKACTION_COMMANDMODE-Enumeration
                   href: /windows/desktop/api/tabflicks/ne-tabflicks-flickaction_commandcode
                 - name: SCROLLDIRECTION-Enumeration
                   href: /windows/desktop/api/tabflicks/ne-tabflicks-scrolldirection
                 - name: KEYMODIFIER-Enumeration
                   href: /windows/desktop/api/tabflicks/ne-tabflicks-keymodifier
-            - name: Flicks-Strukturen
+            - name: Flimmerstrukturen
               href: flicks-structures.md
               items:
-                - name: FLICK_POINT Struktur
+                - name: FLICK_POINT-Struktur
                   href: /windows/desktop/api/tabflicks/ns-tabflicks-flick_point
-                - name: FLICK_DATA Struktur
+                - name: FLICK_DATA-Struktur
                   href: /windows/desktop/api/tabflicks/ns-tabflicks-flick_data
-            - name: Flicks-Konstanten
+            - name: Flackerkonstanten
               href: flicks-constants.md
         - name: Referenz zur Ink-Analyse
           href: ink-analysis-reference.md
@@ -2181,11 +2181,11 @@
               items:
                 - name: IEC_GESTUREINFO-Struktur (nur Win32)
                   href: /windows/desktop/api/inked/ns-inked-iec_gestureinfo
-                - name: IEC_RECOGNITIONRESULTINFO Struktur (nur Win32)
+                - name: IEC_RECOGNITIONRESULTINFO-Struktur (nur Win32)
                   href: /windows/desktop/api/inked/ns-inked-iec_recognitionresultinfo
                 - name: IEC_STROKEINFO-Struktur (nur Win32)
                   href: /windows/desktop/api/inked/ns-inked-iec_strokeinfo
-        - name: InkPicture-Steuerelementreferenz
+        - name: Referenz zum InkPicture-Steuerelement
           href: inkpicture-control-reference.md
           items:
             - name: InkPicture-Enumerationen
@@ -2236,15 +2236,15 @@
                   href: inkpicture-newinairpackets.md
                 - name: NewPackets-Ereignis
                   href: inkpicture-newpackets.md
-                - name: Ge zeichnetes Ereignis
+                - name: Gezeichnetes Ereignis
                   href: inkpicture-painted.md
                 - name: Painting-Ereignis
                   href: inkpicture-painting.md
-                - name: Größenvergrößerungsereignis
+                - name: Größenänderungsereignis
                   href: inkpicture-resize.md
                 - name: SelectionChanged-Ereignis
                   href: inkpicture-selectionchanged.md
-                - name: SelectionChangeing-Ereignis
+                - name: SelectionChanging-Ereignis
                   href: inkpicture-selectionchanging.md
                 - name: SelectionMoved-Ereignis
                   href: inkpicture-selectionmoved.md
@@ -2338,9 +2338,9 @@
                   href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_mouseicon
                 - name: MousePointer-Eigenschaft
                   href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_mousepointer
-                - name: Picture-Eigenschaft
+                - name: Bildeigenschaft
                   href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_picture
-                - name: Renderereigenschaft
+                - name: Renderer-Eigenschaft
                   href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_renderer
                 - name: 'Selection-Eigenschaft [InkPicture-Steuerelement'
                   href: /windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection
@@ -2355,7 +2355,7 @@
         - name: Referenz zur Journalreaderkomponente
           href: journal-reader-component-reference.md
           items:
-            - name: Klassen und Schnittstellen der Journalreaderkomponente
+            - name: Komponentenklassen und Schnittstellen des Journallesers
               href: journal-reader-component-classes-and-interfaces.md
               items:
                 - name: IJournalReader-Schnittstelle
@@ -2368,7 +2368,7 @@
               items:
                 - name: Benutzerdefinierte Eigenschaften-GUIDs
                   href: custom-property-guids.md
-        - name: Steuerung für mathematische Eingaben-Referenz
+        - name: Steuerung für mathematische Eingaben Referenz
           href: math-input-control-reference.md
           items:
             - name: Mathematische Eingabeklassen und Schnittstellen
@@ -2383,7 +2383,7 @@
                       href: /previous-versions/windows/desktop/legacy/dd317351(v=vs.85)
                     - name: Insert-Methode
                       href: /previous-versions/windows/desktop/legacy/dd317352(v=vs.85)
-                    - name: Paint-Methode
+                    - name: Paint Methode
                       href: /previous-versions/windows/desktop/legacy/dd317353(v=vs.85)
                 - name: IMathInputControl
                   href: /windows/desktop/api/micaut/nn-micaut-imathinputcontrol
@@ -2422,7 +2422,7 @@
                       href: /windows/desktop/api/micaut/nf-micaut-imathinputcontrol-setpreviewheight
                     - name: Show-Methode
                       href: /windows/desktop/api/micaut/nf-micaut-imathinputcontrol-show
-            - name: Mathematische Eingabeenumerationen
+            - name: Mathematische Eingabeenumeration
               href: mip-enumerations.md
               items:
                 - name: MICUIELEMENT-Enumeration
@@ -2448,7 +2448,7 @@
                       href: /windows/desktop/api/RTSCom/nf-rtscom-idynamicrenderer-get_clipregion
                     - name: DataCacheEnabled
                       href: /windows/desktop/api/RTSCom/nf-rtscom-idynamicrenderer-get_datacacheenabled
-                    - name: Draw-Methodeneigenschaft
+                    - name: Draw-Methode (Eigenschaft)
                       href: /windows/desktop/api/RTSCom/nf-rtscom-idynamicrenderer-draw
                     - name: DrawingAttributes-Eigenschaft
                       href: /windows/desktop/api/RTSCom/nf-rtscom-idynamicrenderer-get_drawingattributes
@@ -2494,7 +2494,7 @@
                       href: /windows/desktop/api/RTSCom/nf-rtscom-irealtimestylus-getpacketdescriptiondata
                     - name: GetStylusAsyncPlugin-Methode
                       href: /windows/desktop/api/RTSCom/nf-rtscom-irealtimestylus-getstylusasyncplugin
-                    - name: GetStylusAsyncPlugin Cogn-Methodet
+                    - name: GetStylusAsyncPluginAsyncn-Methode
                       href: /windows/desktop/api/RTSCom/nf-rtscom-irealtimestylus-getstylusasyncplugincount
                     - name: GetStyluses-Methode
                       href: /windows/desktop/api/RTSCom/nf-rtscom-irealtimestylus-getstyluses
@@ -2619,9 +2619,9 @@
               items:
                 - name: StylusInfo-Struktur
                   href: /windows/desktop/api/RTSCom/ns-rtscom-stylusinfo
-                - name: SYSTEM_EVENT_DATA-Struktur
+                - name: SYSTEM_EVENT_DATA Struktur
                   href: /windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data
-        - name: Erkennungsreferenz
+        - name: Referenz zur Wiedererkennung
           href: recognizer-apis.md
           items:
             - name: HRECOALT-Handle
@@ -2733,48 +2733,48 @@
             - name: Erkennungsenumerationen
               href: recognizer-api-enumerations.md
               items:
-                - name: ALT_BREAKS-Enumeration
+                - name: ALT_BREAKS Enumeration
                   href: /windows/win32/api/rectypes/ne-rectypes-alt_breaks
-                - name: CONFIDENCE_LEVEL-Enumeration
+                - name: CONFIDENCE_LEVEL Enumeration
                   href: /windows/win32/api/rectypes/ne-rectypes-confidence_level
-                - name: LINE_METRICS-Enumeration
+                - name: LINE_METRICS Enumeration
                   href: /windows/win32/api/rectypes/ne-rectypes-line_metrics
-                - name: PROPERTY_UNITS-Enumeration
+                - name: PROPERTY_UNITS Enumeration
                   href: /windows/win32/api/tpcshrd/ne-tpcshrd-property_units
-            - name: Erkennungsstrukturen
+            - name: Erkennen von Strukturen
               href: recognizer-api-structures.md
               items:
-                - name: CHARACTER_RANGE-Struktur
+                - name: CHARACTER_RANGE Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-character_range
-                - name: LATTICE_METRICS-Struktur
+                - name: LATTICE_METRICS Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-lattice_metrics
-                - name: LINE_SEGMENT-Struktur
+                - name: LINE_SEGMENT Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-line_segment
-                - name: PACKET_DESCRIPTION-Struktur
+                - name: PACKET_DESCRIPTION Struktur
                   href: /windows/win32/api/tpcshrd/ns-tpcshrd-packet_description
-                - name: PACKET_PROPERTY-Struktur
+                - name: PACKET_PROPERTY Struktur
                   href: /windows/win32/api/tpcshrd/ns-tpcshrd-packet_property
-                - name: PROPERTY_METRICS-Struktur
+                - name: PROPERTY_METRICS Struktur
                   href: /windows/win32/api/tpcshrd/ns-tpcshrd-property_metrics
-                - name: RECO_ATTRS-Struktur
+                - name: RECO_ATTRS Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_attrs
-                - name: RECO_GUIDE-Struktur
+                - name: RECO_GUIDE Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_guide
-                - name: RECO_LATTICE-Struktur
+                - name: RECO_LATTICE Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_lattice
-                - name: RECO_LATTICE_COLUMN-Struktur
+                - name: RECO_LATTICE_COLUMN Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_lattice_column
-                - name: RECO_LATTICE_ELEMENT-Struktur
+                - name: RECO_LATTICE_ELEMENT Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_lattice_element
-                - name: RECO_LATTICE_PROPERTIES-Struktur
+                - name: RECO_LATTICE_PROPERTIES Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_lattice_properties
-                - name: RECO_LATTICE_PROPERTY-Struktur
+                - name: RECO_LATTICE_PROPERTY Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_lattice_property
-                - name: RECO_RANGE-Struktur
+                - name: RECO_RANGE Struktur
                   href: /windows/win32/api/rectypes/ns-rectypes-reco_range
-                - name: STROKE_RANGE-Struktur
+                - name: STROKE_RANGE Struktur
                   href: /windows/win32/api/tpcshrd/ns-tpcshrd-stroke_range
-            - name: Erkennungs-GUIDs
+            - name: Erkennen von GUIDs
               href: recognizer-guids.md
               items:
                 - name: PacketProperty-GUIDs
@@ -2784,12 +2784,12 @@
         - name: Referenz zum Texteingabebereich
           href: text-input-panel-reference.md
           items:
-            - name: Texteingabebereichsmeldungen
+            - name: Texteingabebereich– Meldungen
               href: tip-messages.md
               items:
-                - name: MICROSOFT_TIP_OPENING_MSG Nachricht
+                - name: MICROSOFT_TIP_OPENING_MSG Meldung
                   href: microsoft-tip-opening-msg.md
-            - name: Enumerationen des Texteingabebereichs
+            - name: Texteingabebereichsenumerungen
               href: text-input-panel-enumerations.md
               items:
                 - name: CorrectionMode-Enumeration
@@ -2874,7 +2874,7 @@
                       href: /windows/desktop/api/peninputpanel/nf-peninputpanel-itextinputpaneleventsink-inplacestatechanging
                     - name: InPlaceVisibilityChanged-Methode
                       href: /windows/desktop/api/peninputpanel/nf-peninputpanel-itextinputpaneleventsink-inplacevisibilitychanged
-                    - name: InPlaceVisibilityChanging-Methode
+                    - name: InPlaceVisibilityChangeing-Methode
                       href: /windows/desktop/api/peninputpanel/nf-peninputpanel-itextinputpaneleventsink-inplacevisibilitychanging
                     - name: InputAreaChanged-Methode
                       href: /windows/desktop/api/peninputpanel/nf-peninputpanel-itextinputpaneleventsink-inputareachanged
@@ -2912,7 +2912,7 @@
     - name: Tablet PC Appendices
       href: appendices.md
       items:
-        - name: Von Windows Presentation Foundation verwendete COM-API
+        - name: 'Com-API, die von Windows Presentation Foundation'
           href: com-apis-used-by-windows-presentation-foundation.md
           items:
             - name: Von WPF verwendete Nachrichten
@@ -2965,7 +2965,7 @@
                   items:
                     - name: IsTopMostHook-Methode
                       href: itabletcontextp-istopmosthook.md
-                    - name: Überlappungsmethode
+                    - name: Overlap-Methode
                       href: itabletcontextp-overlap.md
                     - name: TrackInputRect-Methode
                       href: itabletcontextp-trackinputrect.md
@@ -3042,7 +3042,7 @@
         - name: Arbeiten mit dem Text-Ink-Objekt
           href: working-with-the-text-ink-object.md
           items:
-            - name: Konvertieren eines Text-Ink-Objekts in "Ink"
+            - name: Konvertieren eines Text-Ink-Objekts in eine Ink-Datei
               href: converting-a-text-ink-object-to-ink.md
             - name: Referenz zu Text ink
               href: text-ink-apis.md

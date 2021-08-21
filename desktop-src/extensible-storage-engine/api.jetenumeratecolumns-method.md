@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetenreeratecolumschlag-Methode.
-title: API. jetenreeratecolumschlag-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetEnumerateColumns-Methode'
+title: Api.JetEnumerateColumns-Methode
 TOCTitle: 'JetEnumerateColumns method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetEnumerateColumns(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.Int32,Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMNID[],System.Int32@,Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMN[]@,Microsoft.Isam.Esent.Interop.JET_PFNREALLOC,System.IntPtr,System.Int32,Microsoft.Isam.Esent.Interop.EnumerateColumnsGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetenumeratecolumns(v=EXCHG.10)
@@ -24,21 +24,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c9a9848d4470d54cc2a146098343b664c9bd3419
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 713b02835aa063e888a2385df9bd8abdff9af1300a2e9885c06e995f2b814bbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042708"
 ---
-# <a name="apijetenumeratecolumns-method"></a>API. jetenreeratecolumschlag-Methode
+# <a name="apijetenumeratecolumns-method"></a>Api.JetEnumerateColumns-Methode
 
-Ruft effizient eine Gruppe von Spalten und deren Werten aus dem aktuellen Datensatz eines Cursors oder dem Kopier Puffer dieses Cursors ab. Die abgerufenen Spalten und Werte können durch eine Liste von Spalten-IDs, itagsequence-Nummern und anderen Merkmalen eingeschränkt werden. Diese Spalten Abruf-API ist eindeutig, da Sie Informationen in dynamisch zugewiesener Speicher zurückgibt, die mit einem vom Benutzer bereitgestellten rezuordnungskompatiblen Rückruf abgerufen werden. Diese neue Flexibilität ermöglicht das effiziente Abrufen von Spaltendaten mit bestimmten Merkmalen (z. b. Größe und Multiplizität), die dem Aufrufer unbekannt sind. Dadurch ist es nicht mehr erforderlich, die Ermittlungs Modi jetretrievecolumgen zu verwenden, um die Eigenschaften zu bestimmen, um einen letzten Rückruf für jetretrievecolumschlag einzurichten, mit dem die gewünschten Daten erfolgreich abgerufen werden.
+Ruft effizient einen Satz von Spalten und deren Werte aus dem aktuellen Datensatz eines Cursors oder dem Kopierpuffer dieses Cursors ab. Die abgerufenen Spalten und Werte können durch eine Liste von Spalten-IDs, ItagSequence-Zahlen und anderen Merkmalen eingeschränkt werden. Diese Spaltenabruf-API ist insofern eindeutig, als sie Informationen im dynamisch zugeordneten Speicher zurückgibt, die mithilfe eines vom Benutzer bereitgestellten reloc-kompatiblen Rückrufs abgerufen werden. Diese neue Flexibilität ermöglicht das effiziente Abrufen von Spaltendaten mit bestimmten Merkmalen (z. B. Größe und Multiplizität), die dem Aufrufer unbekannt sind. Dadurch entfällt die Notwendigkeit, die Ermittlungsmodi von JetRetrieveColumn zu verwenden, um diese Merkmale zu bestimmen, um einen endgültigen Aufruf von JetRetrieveColumn einzurichten, der die gewünschten Daten erfolgreich abruft.
 
 Diese API ist nicht CLS-kompatibel. 
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -94,85 +94,85 @@ public static JET_wrn JetEnumerateColumns(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem Daten abgerufen werden sollen.
+    Der Cursor, aus dem Daten abgerufen werden sollen.
 
 <!-- end list -->
 
-  - numcolumnids  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numColumnids  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anzahl der JET_ENUMCOLUMNIDS.
 
 <!-- end list -->
 
-  - columnIds  
-    Sorte \[\]  
+  - columnids  
+    Typ: \[\]  
     
-    Ein optionales Array von Spalten-IDs, von denen jedes ein optionales Array von itagsequence-Zahlen auflistet.
+    Ein optionales Array von Spalten-IDs, jedes mit einem optionalen Array von itagSequence-Zahlen, die aufzählen sollen.
 
 <!-- end list -->
 
-  - numcolumnvalues  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numColumnValues  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Gibt die Anzahl der abgerufenen Spaltenwerte zurück.
 
 <!-- end list -->
 
-  - columnvalues  
-    Sorte \[\]  
+  - columnValues  
+    Typ: \[\]  
     
-    Gibt die aufgelisteten Spaltenwerte zurück.
+    Gibt die Aufzählungsspaltenwerte zurück.
 
 <!-- end list -->
 
   - allocator  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_PFNREALLOC](./jet-pfnrealloc-delegate.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_PFNREALLOC](./jet-pfnrealloc-delegate.md)  
     
-    Rückruf, der zum Zuordnen von Speicher verwendet wird.
+    Rückruf, der zum Zuordnen von Arbeitsspeicher verwendet wird.
 
 <!-- end list -->
 
-  - ' Zuweisung '  
-    Typ: [System. IntPtr](/dotnet/api/system.intptr)  
+  - allocatorContext  
+    Typ: [System.IntPtr](/dotnet/api/system.intptr)  
     
-    Der Kontext für den Zuordnungs Rückruf.
+    Kontext für den Zuordnungsrückruf.
 
 <!-- end list -->
 
-  - maxdatasize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - maxDataSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Legt eine Obergrenze für die Menge der Daten fest, die von einer Long-Text-oder Long Binary-Spalte zurückgegeben wird. Dieser Parameter kann verwendet werden, um die Enumeration eines extrem großen Spaltenwerts zu verhindern.
+    Legt eine Obergrenze für die Datenmenge fest, die aus einer langen Textspalte oder langen binären Spalte zurückgegeben werden soll. Dieser Parameter kann verwendet werden, um die Enumeration eines extrem großen Spaltenwerts zu verhindern.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. enumeratecolumnsgrbit](./enumeratecolumnsgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.EnumerateColumnsGrbit](./enumeratecolumnsgrbit-enumeration.md)  
     
     Abrufen von Optionen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_wrn](./jet-wrn-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
 Eine Warnung oder ein Erfolg.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

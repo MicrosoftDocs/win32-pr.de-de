@@ -1,27 +1,27 @@
 ---
-description: Die Informationen zum ASF-Header werden in den ASF-Header Objekten einer Mediendatei gespeichert.
+description: ASF-Headerinformationen werden in den ASF-Headerobjekten einer Mediendatei gespeichert.
 ms.assetid: 1654af97-f4fe-427f-b562-3b109e921719
-title: Informationen aus den ASF-Header Objekten werden erhalten.
+title: Abrufen von Informationen aus ASF-Headerobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f25155929c9e3ba7e59ee1b5f46ea7c5930c3e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 346e57721137fd6064e4d6b9fd21080d96c10e740bb7f7ed45bf3fef4cc92722
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974439"
 ---
-# <a name="getting-information-from-asf-header-objects"></a>Informationen aus den ASF-Header Objekten werden erhalten.
+# <a name="getting-information-from-asf-header-objects"></a>Abrufen von Informationen aus ASF-Headerobjekten
 
-Die Informationen zum ASF-Header werden in den ASF-Header Objekten einer Mediendatei gespeichert. Media Foundation stellt das [Objekt "ASF ContentInfo](asf-contentinfo-object.md) " bereit, um mit dem Header Objekt zu arbeiten. Ein aufgefülltes ContentInfo-Objekt ist erforderlich, damit die Anwendung Header Informationen einer vorhandenen Datei lesen kann. Dies wird erreicht, indem [**imfasfcontentinfo::P arsetheader**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader)aufgerufen wird. Wenn die Verarbeitung erfolgreich abgeschlossen wird, wird die ASF-Bibliothek für die Datei, die intern von Media Foundation verwaltet wird, mit Header Informationen aus verschiedenen Header Objekten aufgefüllt. Einige dieser Eigenschaften werden für die Anwendung verfügbar gemacht, die Sie über Attribute auf den Präsentations Deskriptoren, den Datenstrom Deskriptor, das Profil und die Metadateneigenschaften abrufen kann.
+ASF-Headerinformationen werden in den ASF-Headerobjekten einer Mediendatei gespeichert. Media Foundation stellt das [ASF ContentInfo-Objekt](asf-contentinfo-object.md) für die Arbeit mit dem Headerobjekt bereit. Ein aufgefülltes ContentInfo-Objekt ist erforderlich, damit die Anwendung Headerinformationen einer vorhandenen Datei lesen kann. Dies wird erreicht, indem [**IMFASFContentInfo::P arseHeader**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader)aufgerufen wird. Wenn die Analyse erfolgreich abgeschlossen wird, wird die ASF-Bibliothek für die Datei, die intern von Media Foundation verwaltet wird, mit Headerinformationen aus verschiedenen Headerobjekten aufgefüllt. Einige dieser Eigenschaften werden für die Anwendung verfügbar gemacht, die sie über Attribute der Präsentationsbeschreibung, des Streamdeskriptors, des Profils und der Metadateneigenschaften abrufen kann.
 
-Eine umfassende Liste der Attribute finden Sie unter [Media Foundation Attribute für ASF-Header Objekte](media-foundation-attributes-for-asf-header-objects.md).
+Die vollständige Liste der Attribute finden Sie unter [Media Foundation Attribute für ASF-Headerobjekte.](media-foundation-attributes-for-asf-header-objects.md)
 
-## <a name="retrieving-header-information-from-a-presentation-descriptor"></a>Abrufen von Header Informationen von einem Präsentations Deskriptor
+## <a name="retrieving-header-information-from-a-presentation-descriptor"></a>Abrufen von Headerinformationen aus einem Präsentationsdeskriptor
 
-Ein Präsentations deskriptorobjekt enthält die Beschreibung einer bestimmten Medienquelle, in diesem Fall die ASF-Medienquelle. Wenn der " **Parser Header** "-Rückruf erfolgreich abgeschlossen wird, werden Informationen auf Dateiebene aus dem Header Objekt als Attribute im Präsentations Deskriptor gespeichert. Um den Präsentations Deskriptor zu erstellen, rufen Sie [**imfasfcontentinfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor)auf. Diese Methode gibt einen Zeiger auf ein aufgefülltes Präsentations deskriptorobjekt zurück, das diese Attribute für die dem ContentInfo-Objekt zugeordnete ASF-Datei enthält. Um Werte für bestimmte Attribute abzurufen, nennen Sie **imfattributes:: GetXXX** -Methoden für den Präsentations Deskriptor, und geben Sie das MF PD-Attribut "- **\_ \_ ASF \_ xxx** " an.
+Ein Präsentationsdeskriptorobjekt enthält die Beschreibung einer bestimmten Medienquelle, in diesem Fall die ASF-Medienquelle. Wenn der **ParseHeader-Aufruf** erfolgreich abgeschlossen wurde, werden Informationen auf Dateiebene aus dem Headerobjekt als Attribute im Präsentationsdeskriptor gespeichert. Um den Präsentationsdeskriptor zu erstellen, rufen Sie [**IMFASFContentInfo::GeneratePresentationDescriptor auf.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) Diese Methode gibt einen Zeiger auf ein aufgefülltes Präsentationsdeskriptorobjekt zurück, das diese Attribute für die ASF-Datei enthält, die dem ContentInfo-Objekt zugeordnet ist. Um Werte für bestimmte Attribute abzurufen, rufen **Sie DIE METHODEN VONATTRIBUTES::Getxxx** für den Präsentationsdeskriptor auf, und geben Sie das **MF PD \_ \_ ASF \_ xxx-Attribut** an.
 
-Der folgende Beispielcode ruft die Wiedergabedauer einer ASF-Datei ab, die durch ein ContentInfo-Objekt angegeben wird.
+Der folgende Beispielcode ruft die Wiedergabedauer einer ASF-Datei ab, die von einem ContentInfo-Objekt angegeben wird.
 
 
 ```C++
@@ -45,33 +45,33 @@ HRESULT GetPlayDuration(
 
 
 
-Weitere Informationen zu Präsentations Deskriptoren im Allgemeinen finden Sie unter [Präsentations Deskriptoren](presentation-descriptors.md).
+Weitere Informationen zu Präsentationsdeskriptoren im Allgemeinen finden Sie unter [Präsentationsdeskriptoren.](presentation-descriptors.md)
 
-Den gesamten Satz von Präsentations deskriptorattributen finden Sie unter [Präsentations deskriptorattribute](presentation-descriptor-attributes.md).
+Den vollständigen Satz von Präsentationsdeskriptorattributen finden Sie unter [Presentation Descriptor Attributes](presentation-descriptor-attributes.md).
 
-## <a name="retrieving-header-information-from-a-stream-descriptor"></a>Abrufen von Header Informationen aus einem Datenstrom Deskriptor
+## <a name="retrieving-header-information-from-a-stream-descriptor"></a>Abrufen von Headerinformationen aus einem Streamdeskriptor
 
-Ein Datenstrom Deskriptor-Objekt macht die [**IMF streamdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor) -Schnittstelle verfügbar und beschreibt die Merkmale der Datenströme in der Datei. Der Präsentations Deskriptor für den ASF-Inhalt enthält einen oder mehrere streamdeskriptoren, die die im Header Objekt aufgelisteten Streams darstellen. Nachdem der Aufruf von [**imfasfcontentinfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) erfolgreich abgeschlossen wurde, werden die zugrunde liegenden streamdeskriptoren mit Informationen auf Streamebene aus den verschiedenen Header Objekten aufgefüllt. Um einen Datenstrom Deskriptor für einen ASF-Stream abzurufen, nennen Sie [**imfpresentationdescriptor:: getstreamdescriptorbyindex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) für den Präsentations Deskriptor, der aus dem ContentInfo-Objekt generiert wird.
+Ein Streamdeskriptorobjekt macht die [**SCHNITTSTELLE "STREAMSStreamDescriptor"**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor) verfügbar und beschreibt die Merkmale der Datenströme in der Datei. Der Präsentationsdeskriptor für den ASF-Inhalt enthält mindestens einen Streamdeskriptor, der die im Headerobjekt aufgeführten Streams darstellt. Nachdem der Aufruf von [**IMFASFContentInfo::GeneratePresentationDescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) erfolgreich abgeschlossen wurde, werden die zugrunde liegenden Streamdeskriptoren mit Datenstromebeneninformationen aus den verschiedenen Headerobjekten aufgefüllt. Um einen Streamdeskriptor für einen ASF-Stream abzurufen, rufen [**Sie DIE Generierung VON 2017 auf: "PresentationDescriptor::GetStreamDescriptorByIndex"**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) für den Präsentationsdeskriptor, der aus dem ContentInfo-Objekt generiert wird.
 
-Einige der streameigenschaften werden als Attribute für streamdeskriptoren festgelegt. Aufrufen von **imfattributes:: GetXXX** -Methoden für einen Datenstrom Deskriptor und angeben des **MF SD-Attribut \_ \_ \_ xxx** .
+Einige der Streameigenschaften werden als Attribute für Streamdeskriptoren festgelegt. Rufen Sie **DIE ATTRIBUTEAttributes::Getxxx-Methoden** für einen Streamdeskriptor auf, und geben Sie das **MF SD \_ \_ ASF \_ xxx-Attribut** an.
 
-Die gesamten Datenstrom deskriptorattribute finden Sie unter den in den [streamdeskriptorattributen](stream-descriptor-attributes.md)aufgeführten Attributen für den ASF-spezifischen streamdeskriptor.
+Den vollständigen Satz von Streamdeskriptorattributen finden Sie unter "ASF-Specific Stream Descriptor"-Attribute, die unter [Stream-Deskriptorattribute](stream-descriptor-attributes.md)aufgeführt sind.
 
-## <a name="retrieving-header-information-from-the-profile-object"></a>Abrufen von Header Informationen aus dem Profil Objekt
+## <a name="retrieving-header-information-from-the-profile-object"></a>Abrufen von Headerinformationen aus dem Profilobjekt
 
-Zusätzlich zu den streamdeskriptoren beschreibt das ASF-Profil Objekt auch die streameigenschaften. Um das Profil einer vorhandenen ASF-Datei abzurufen, nennen Sie [**imfasfcontentinfo:: GetProfile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getprofile). Das von dieser Methode zurückgegebene ASF-Profil Objekt enthält keines der **MF \_ PD- \_ ASF \_ xxx** -Attribute. Diese Attribute sind nur für die Anwendung verfügbar, nachdem Sie [**mfkreateasfprofilefrompresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor) aufgerufen hat, um das Profil Objekt aus einem Präsentations Deskriptor zu generieren. Sie können das Profil verwenden, um Zeiger auf den gegenseitigen Ausschluss und streampriorisierungsobjekte zu erhalten.
+Zusätzlich zu Streamdeskriptoren beschreibt das ASF-Profilobjekt auch die Streameigenschaften. Um das Profil einer vorhandenen ASF-Datei abzurufen, rufen [**Sie IMFASFContentInfo::GetProfile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getprofile)auf. Das von dieser Methode zurückgegebene ASF-Profilobjekt enthält keines der **MF \_ PD \_ ASF \_ xxx-Attribute.** Diese Attribute sind für die Anwendung erst verfügbar, nachdem [**MFCreateASFProfileFromPresentationDescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor) zum Generieren des Profilobjekts aus einem Präsentationsdeskriptor aufruft. Sie können das Profil verwenden, um Zeiger auf die Objekte für gegenseitigen Ausschluss und Streampriorisierung abzurufen.
 
-Weitere Informationen zum Profil Objekt finden Sie unter [ASF-Profil](asf-profile.md) .
+Informationen zum Profilobjekt finden Sie unter [ASF-Profil.](asf-profile.md)
 
-## <a name="retrieving-metadata-from-header-objects"></a>Abrufen von Metadaten aus Header Objekten
+## <a name="retrieving-metadata-from-header-objects"></a>Abrufen von Metadaten aus Headerobjekten
 
-Eine ASF-Datei kann mehrere Metadateneigenschaften enthalten, die während der Datei Codierung festgelegt werden. Eine Anwendung kann diese Eigenschaften mit dem ContentInfo-Objekt auflisten. Einige dieser Eigenschaften, z. b. Informationen zu Variablen Bitraten (VBR), sind für die Anwendung über Attribute auf dem Präsentations Deskriptor, streamdeskriptoren und Medientypen für die Mediendatei verfügbar. Diese Attribute werden für das ContentInfo-Objekt während der Initialisierung durch den Parameter " [**parameseheader**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader) " festgelegt.
+Eine ASF-Datei kann mehrere Metadateneigenschaften enthalten, die während der Dateicodierung festgelegt werden. Eine Anwendung kann diese Eigenschaften mit dem ContentInfo-Objekt aufzählen. Einige dieser Eigenschaften, z. B. Informationen zur variablen Bitrate (Variable Bit Rate, VBR), stehen der Anwendung über Attribute für präsentationsdeskriptor, Streamdeskriptoren und Medientypen für die Mediendatei zur Verfügung. Diese Attribute werden während der Initialisierung über den [**ParseHeader-Aufruf**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader) für das ContentInfo-Objekt festgelegt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ASF-ContentInfo-Objekt](asf-contentinfo-object.md)
+[ASF ContentInfo-Objekt](asf-contentinfo-object.md)
 </dt> </dl>
 
  

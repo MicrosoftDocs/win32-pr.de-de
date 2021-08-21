@@ -1,11 +1,11 @@
 ---
-title: IWMDRMDevice2 getlicenerstate-Methode
-description: Die getlicencstate-Methode ruft den Lizenzstatus ab.
+title: IWMDRMDevice2 GetLicenseState-Methode
+description: Die GetLicenseState-Methode ruft den Lizenzzustand ab.
 ms.assetid: a98847f6-00ec-4211-9716-79714d7ba169
 keywords:
-- Getlicencstate-Methode, Windows Media Device Manager
-- Getlicencstate-Methode, Windows Media Device Manager, IWMDRMDevice2-Schnittstelle
-- IWMDRMDevice2-Schnittstelle Windows Media Device Manager, getlicenanstate-Methode
+- GetLicenseState-Methode windows Media Geräte-Manager
+- GetLicenseState-Methode windows Media Geräte-Manager , IWMDRMDevice2-Schnittstelle
+- IWMDRMDevice2-Schnittstelle windows Media Geräte-Manager , GetLicenseState-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d075d123ae99b26767621fb1a958cd172bc9e42c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e068d537f460053800b0d52d667ba39b0577d717b08f83794a73b2bf8c854aeb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055698"
 ---
-# <a name="iwmdrmdevice2getlicensestate-method"></a>IWMDRMDevice2:: getlicenerstate-Methode
+# <a name="iwmdrmdevice2getlicensestate-method"></a>IWMDRMDevice2::GetLicenseState-Methode
 
-Die **getlicencstate** -Methode ruft den Lizenzstatus ab.
+Die **GetLicenseState-Methode** ruft den Lizenzzustand ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ HRESULT GetLicenseState(
 
 <dl> <dt>
 
-*pbstatus-erydata* \[ in\]
+*pbStateQueryData* \[ In\]
 </dt> <dd>
 
-Zeiger auf die abgefragten Daten des Lizenz Zustands.
+Zeiger auf die abgefragten Daten des Lizenzstatus.
 
 </dd> <dt>
 
-*cbstatuequerydata* \[ in\]
+*cbStateQueryData* \[ In\]
 </dt> <dd>
 
 Anzahl der abgefragten Daten.
 
 </dd> <dt>
 
-*pdwcategory* \[ vorgenommen\]
+*pdwCategory* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Kategorie.
+Zeiger auf die Kategorie.
 
 </dd> <dt>
 
-*pkremainingcounts* \[ vorgenommen\]
+*pcRemainingCounts* \[ out\]
 </dt> <dd>
 
-Zeiger auf die verbleibenden Zähler.
+Zeiger auf die verbleibenden Anzahlen.
 
 </dd> <dt>
 
-*pkremaininghours* \[ vorgenommen\]
+*pcRemainingHours* \[ out\]
 </dt> <dd>
 
 Zeiger auf die verbleibenden Stunden.
 
 </dd> <dt>
 
-*pdwreserved* \[ vorgenommen\]
+*pdwReserved* \[ out\]
 </dt> <dd>
 
 Für die zukünftige Verwendung reserviert.
@@ -92,7 +92,7 @@ Für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -110,8 +110,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 

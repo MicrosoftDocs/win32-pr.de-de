@@ -1,10 +1,10 @@
 ---
-title: MSMQ-Empfangs Journal erweitert rechts
-description: Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
+title: erweitertes Recht "msmq-Receive-journal"
+description: Ermöglicht das Empfangen von Nachrichten aus dem Journal der Warteschlange.
 ms.assetid: 7617c569-15ad-473d-a8ac-3819de24e354
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für erweiterte Rechte von MSMQ-Receive-Journal
+- erweitertes rechtes AD-Schema für msmq-Receive-journal
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3747c4a1cfb939e6f56f71f49b170b5f48012b0
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f8e2b186f1197a0762521505877e7d5fbadc84b86a8ec158816857a062fa51d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021668"
 ---
-# <a name="msmq-receive-journal-extended-right"></a>MSMQ-Empfangs Journal erweitert rechts
+# <a name="msmq-receive-journal-extended-right"></a>erweitertes Recht "msmq-Receive-journal"
 
-Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
+Ermöglicht das Empfangen von Nachrichten aus dem Journal der Warteschlange.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MSMQ-Empfangs Journal                 |
-| Anzeigename | Empfangs Journal                      |
+| CN           | msmq-Receive-journal                 |
+| Anzeigename | Receive Journal                      |
 | Rights-GUID  | 06bd3203-df3e-11d1-9c86-006008764d0e |
 
 
@@ -37,7 +37,7 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 
@@ -71,8 +71,8 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 
@@ -82,8 +82,8 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 
@@ -93,8 +93,8 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 
@@ -104,8 +104,8 @@ Ermöglicht das Empfangen von Nachrichten aus dem Warteschlangen Journal.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 45                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 45                                           |
 
 
 

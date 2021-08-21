@@ -55,7 +55,7 @@ Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt.
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

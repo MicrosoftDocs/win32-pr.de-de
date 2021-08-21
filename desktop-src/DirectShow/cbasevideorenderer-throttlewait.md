@@ -1,7 +1,7 @@
 ---
-description: Die throttlewait-Methode fügt eine Wartezeit nach jedem Frame ein.
+description: Die ThrottleWait-Methode fügt nach jedem Frame eine Wartezeit ein.
 ms.assetid: 69306093-f5db-4170-b30f-e33cfa448e9f
-title: Cbasevideorenderer. throttlewait-Methode (renbase. h)
+title: CBaseVideoRenderer.ThrottleWait-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7408cfb011fa0fbbb223b6757ddb10ff9cbd357b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d61c0e934208ad72e678595ce668c6c7ff72eda3371c792b294df9f2d5915612
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954749"
 ---
-# <a name="cbasevideorendererthrottlewait-method"></a>Cbasevideorenderer. throttlewait-Methode
+# <a name="cbasevideorendererthrottlewait-method"></a>CBaseVideoRenderer.ThrottleWait-Methode
 
-Die- `ThrottleWait` Methode fügt eine Wartezeit nach jedem Frame ein.
+Die `ThrottleWait` -Methode fügt nach jedem Frame eine Wartezeit ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion wartet auf einen Zeitraum, der vom **m \_ trthrottle** -Datenmember abgerufen wird.
+Diese Memberfunktion wartet für einen Zeitraum, der vom **m \_ trThrottle-Datenmember** abgerufen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Member-Funktion wartet auf einen Zeitraum, der vom **m \_ trthrottle** -Da
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Member-Funktion wartet auf einen Zeitraum, der vom **m \_ trthrottle** -Da
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

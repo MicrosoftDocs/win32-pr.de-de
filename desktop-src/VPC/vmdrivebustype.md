@@ -1,9 +1,9 @@
 ---
-title: Vmdrivebustype-Enumeration (vpccominterfaces. h)
-description: Gibt den Bustyp an.
+title: VMDriveBusType-Enumeration (VPCCOMInterfaces.h)
+description: Gibt den Typ des Bus an.
 ms.assetid: 7e0926f3-8218-49c9-8d3a-27214c111a77
 keywords:
-- Vmdrivebustype-Enumeration virtueller PC
+- VMDriveBusType-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c53b8da4b9c7a6943f083eec62a144dcfb5bd68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ee106c42267397f8dae66b1ed431b5d6fa3c1047b7ace6fd9a44bd81960be2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056418"
 ---
-# <a name="vmdrivebustype-enumeration"></a>Vmdrivebustype-Enumeration
+# <a name="vmdrivebustype-enumeration"></a>VMDriveBusType-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt den Bustyp an.
+Gibt den Typ des Bus an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmDriveBusType_Invalid"></span><span id="vmdrivebustype_invalid"></span><span id="VMDRIVEBUSTYPE_INVALID"></span>**vmdrivebustype \_ ungültig**
+<span id="vmDriveBusType_Invalid"></span><span id="vmdrivebustype_invalid"></span><span id="VMDRIVEBUSTYPE_INVALID"></span>**vmDriveBusType \_ ungültig**
 </dt> <dd>
 
 Kein Bustyp.
 
 </dd> <dt>
 
-<span id="vmDriveBusType_IDE"></span><span id="vmdrivebustype_ide"></span><span id="VMDRIVEBUSTYPE_IDE"></span>**vmdrivebustype- \_ IDE**
+<span id="vmDriveBusType_IDE"></span><span id="vmdrivebustype_ide"></span><span id="VMDRIVEBUSTYPE_IDE"></span>**\_vmDriveBusType-IDE**
 </dt> <dd>
 
 IDE-Bustyp.
 
 </dd> <dt>
 
-<span id="vmDriveBusType_SCSI"></span><span id="vmdrivebustype_scsi"></span><span id="VMDRIVEBUSTYPE_SCSI"></span>**vmdrivebustype \_ SCSI**
+<span id="vmDriveBusType_SCSI"></span><span id="vmdrivebustype_scsi"></span><span id="VMDRIVEBUSTYPE_SCSI"></span>**vmDriveBusType \_ SCSI**
 </dt> <dd>
 
-Der SCSI-Bustyp.
+SCSI-Bustyp.
 
 </dd> </dl>
 
@@ -71,11 +71,11 @@ Der SCSI-Bustyp.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 

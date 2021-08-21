@@ -1,62 +1,62 @@
 ---
-title: Grundlegendes zum Text Objektmodell für die Benutzeroberflächen Automatisierung
-description: In diesem Thema wird beschrieben, wie Microsoft UI Automation-Client Anwendungen auf den Text Inhalt eines textbasierten Steuer Elements zugreifen.
+title: Grundlegendes zum Benutzeroberflächenautomatisierung Textobjektmodell
+description: In diesem Thema wird beschrieben, Benutzeroberflächenautomatisierung Microsoft-Clientanwendungen auf den Textinhalt eines textbasierten Steuerelements zugreifen.
 ms.assetid: 8545EBA3-6995-4336-A197-27CE3A3339EE
 keywords:
-- Clients, Grundlegendes zum Textobjekt Modell der Benutzeroberflächen Automatisierung
-- Clients, textbasierte Steuerelemente
-- Clients, Textbereiche
-- Clients, Text-Steuerelement Muster
-- Clients, TextRange-Steuerelement Muster
+- Clients,Grundlegendes Benutzeroberflächenautomatisierung Textobjektmodells
+- Clients,textbasierte Steuerelemente
+- Clients,Textbereiche
+- Clients,Textsteuermuster
+- clients,TextRange-Steuerelementmuster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f6dae1fc5ca02af69ab3d5386461e6bd7a864d4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 655f291e9cc11d925f947617fe31be96ebd81a2dbff73506a0e474dcde9e4446
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118823892"
 ---
-# <a name="understanding-the-ui-automation-text-object-model"></a>Grundlegendes zum Text Objektmodell für die Benutzeroberflächen Automatisierung
+# <a name="understanding-the-ui-automation-text-object-model"></a>Grundlegendes zum Benutzeroberflächenautomatisierung Textobjektmodell
 
-In diesem Thema wird beschrieben, wie Microsoft UI Automation-Client Anwendungen auf den Text Inhalt eines textbasierten Steuer Elements zugreifen.
+In diesem Thema wird beschrieben, Benutzeroberflächenautomatisierung Microsoft-Clientanwendungen auf den Textinhalt eines textbasierten Steuerelements zugreifen.
 
--   [Steuerelement spezifisches Objektmodell](#control-specific-object-model)
+-   [Steuerelementspezifisches Objektmodell](#control-specific-object-model)
 -   [Zugehörige Themen](#related-topics)
 
-Text basierte Steuerelemente machen Textinhalte für Benutzeroberflächenautomatisierungs-Client Anwendungen über ein einfaches Textobjekt Modell verfügbar. Client Anwendungen können über die [Text-und TextRange](uiauto-about-text-and-textrange-patterns.md) -Steuerelement Muster-Schnittstellen auf das Textobjekt Modell zugreifen, einschließlich [**iuiautomationtextpattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextpattern) und [**iuiautomationtextrange**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextrange). Client Anwendungen können diese Schnittstellen verwenden, um Textinhalte, Text Attribute und eingebettete Objekte wie Tabellen und Hyperlinks aus textbasierten Steuerelementen abzurufen.
+Textbasierte Steuerelemente machen Textinhalte für Benutzeroberflächenautomatisierung Clientanwendungen über ein einfaches Textobjektmodell verfügbar. Clientanwendungen haben Zugriff auf das Textobjektmodell über die [Text-](uiauto-about-text-and-textrange-patterns.md) und TextRange-Steuerelementmusterschnittstellen, einschließlich [**IUIAutomationTextPattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextpattern) und [**IUIAutomationTextRange.**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtextrange) Clientanwendungen können diese Schnittstellen verwenden, um Textinhalte, Textattribute und eingebettete Objekte wie Tabellen und Links aus textbasierten Steuerelementen abzurufen.
 
-Steuerelement Typen, die das Objektmodell für die Benutzeroberflächen Automatisierung unterstützen, enthalten die Steuerelement Typen [Bearbeiten](uiauto-supporteditcontroltype.md) und [Dokument](uiauto-supportdocumentcontroltype.md) . Andere Steuerelement Typen, [](uiauto-supporttooltipcontroltype.md) z. b. QuickInfo und [Text](uiauto-supporttextcontroltype.md) , unterstützen möglicherweise auch das Text Objektmodell, sind jedoch nicht erforderlich.
+Steuerelementtypen, die das Benutzeroberflächenautomatisierung Textobjektmodell unterstützen, umfassen die [Steuerelementtypen Bearbeiten](uiauto-supporteditcontroltype.md) [und](uiauto-supportdocumentcontroltype.md) Dokument. Andere Steuerelementtypen wie [QuickInfo und](uiauto-supporttooltipcontroltype.md) [Text](uiauto-supporttextcontroltype.md) unterstützen möglicherweise auch das Textobjektmodell, dies ist jedoch nicht erforderlich.
 
 > [!Note]  
-> Das Benutzeroberflächen Automatisierungs-Textobjekt Modell bietet keine Möglichkeit, Text einzufügen oder zu ändern. Einige Steuerelemente ermöglichen es jedoch, Text entweder über die [**iuiautomationvaluepattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationvaluepattern) -Schnittstelle oder durch direkte Tastatureingaben einzufügen oder zu ändern.
+> Das Benutzeroberflächenautomatisierung Textobjektmodell bietet keine Möglichkeit zum Einfügen oder Ändern von Text. Einige Steuerelemente ermöglichen jedoch das Einfügen oder Ändern von Text entweder über die [**IUIAutomationValuePattern-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationvaluepattern) oder über direkte Tastatureingaben.
 
- 
+ 
 
-## <a name="control-specific-object-model"></a>Steuerelement spezifisches Objektmodell
+## <a name="control-specific-object-model"></a>Steuerelementspezifisches Objektmodell
 
-Ein textbasiertes Steuerelement, das seinen eigenen Dokumentobjektmodell (DOM) implementiert, kann das DOM durch Implementieren des [ObjectModel](uiauto-implementingobjectmodel.md) -Steuerelement Musters verfügbar machen. Wenn Sie das DOM verfügbar machen, können Client Anwendungen den Inhalt eines textbasierten Steuer Elements besser aufrufen und steuern.
+Ein textbasiertes Steuerelement, das ein eigenes Dokumentobjektmodell (DOM) implementiert, kann das DOM verfügbar machen, indem es das [ObjectModel-Steuerelementmuster](uiauto-implementingobjectmodel.md) implementiert. Durch das Verfügbar machen des DOM können Clientanwendungen besseren Zugriff auf den Inhalt eines textbasierten Steuerelements erhalten und diesen steuern.
 
-Eine Client Anwendung kann ermitteln, ob ein bestimmtes textbasiertes Steuerelement ein DOM durch Abrufen der [**iuiautomationelement**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) -Schnittstelle des Steuer Elements implementiert. Anschließend können Sie die [**iuiautomationelement:: GetCurrentPropertyValue**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue) -Methode aufrufen und dabei den [**UIA- \_ isobjectmodelpatternavailablepropertyid**](uiauto-control-pattern-availability-propids.md) -Eigenschafts Bezeichner angeben und einen Variant-Wert, der true erhält, wenn das Steuerelement ein DOM implementiert.
+Eine Clientanwendung kann ermitteln, ob ein bestimmtes textbasiertes Steuerelement ein DOM implementiert, indem die [**IUIAutomationElement-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) des Steuerelements abgerufen wird. Rufen Sie dann die [**IUIAutomationElement::GetCurrentPropertyValue-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue) auf, und geben Sie dabei den [**\_ UIA-Eigenschaftenbezeichner IsObjectModelPatternAvailablePropertyId**](uiauto-control-pattern-availability-propids.md) und eine Variante an, die TRUE empfängt, wenn das Steuerelement ein DOM implementiert.
 
-Um auf das DOM zuzugreifen, müssen Sie die [**iuiautomationelement:: GetCurrentPattern**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpattern) -Methode aufrufen und dabei den [**UIA \_ objectmodelpatternid**](uiauto-controlpattern-ids.md) -Steuerelement Muster Bezeichner und eine Variable, die die [**iuiautomationobjectmodelpattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationobjectmodelpattern) -Schnittstelle empfängt, angeben. Rufen Sie die [**iuiautomationobjectmodelpattern:: getunderlyingobjectmodel**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationobjectmodelpattern-getunderlyingobjectmodel) -Methode auf, um die DOM-Schnittstelle abzurufen.
+Rufen Sie für den Zugriff auf das DOM die [**IUIAutomationElement::GetCurrentPattern-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpattern) auf, und geben Sie dabei den [**UIA \_ ObjectModelPatternId-Steuerelementmusterbezeichner**](uiauto-controlpattern-ids.md) und eine Variable an, die die [**IUIAutomationObjectModelPattern-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationobjectmodelpattern) empfängt. Rufen Sie [**die IUIAutomationObjectModelPattern::GetUnderlyingObjectModel-Methode**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationobjectmodelpattern-getunderlyingobjectmodel) auf, um die DOM-Schnittstelle abzurufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Text-und TextRange-Steuerelement Muster](uiauto-implementingtextandtextrange.md)
+[Text- und TextRange-Steuerelementmuster](uiauto-implementingtextandtextrange.md)
 </dt> <dt>
 
-[Benutzeroberflächenautomatisierungs-Unterstützung für Textinhalte](uiauto-ui-automation-textpattern-overview.md)
+[Benutzeroberflächenautomatisierung Unterstützung für Textinhalte](uiauto-ui-automation-textpattern-overview.md)
 </dt> <dt>
 
-[Arbeiten mit Text basierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
+[Arbeiten mit textbasierten Steuerelementen](uiauto-workingwithtextbasedcontrols.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

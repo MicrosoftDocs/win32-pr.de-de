@@ -1,19 +1,19 @@
 ---
-description: Um Ereignisse zu melden, müssen Sie zunächst die Ereignisse in einer Meldungs Textdatei definieren. Ausführliche Informationen zum Schreiben einer Meldungs Textdatei finden Sie unter Message Text Files. Im folgenden wird die in diesem Beispiel verwendete Nachrichten Textdatei veranschaulicht.
+description: Um Ereignisse zu melden, müssen Sie zuerst die Ereignisse in einer Meldungstextdatei definieren. Ausführliche Informationen zum Schreiben einer Nachrichtentextdatei finden Sie unter Nachrichtentextdateien. Im Folgenden wird die in diesem Beispiel verwendete Meldungstextdatei angezeigt.
 ms.assetid: ace31e17-a638-414f-8518-9b944118047b
 title: Berichterstellung für Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 644163c5838b703d28db628c643c5cd12c73c22e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a52c5fe2abba47adb3b1b7bdf7d5562da8e57eb26aa21fe8448871c940cf2c34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015428"
 ---
 # <a name="reporting-events"></a>Berichterstellung für Ereignisse
 
-Um Ereignisse zu melden, müssen Sie zunächst die Ereignisse in einer Meldungs Textdatei definieren. Ausführliche Informationen zum Schreiben einer Meldungs Textdatei finden Sie unter [Message Text Files](message-text-files.md). Im folgenden wird die in diesem Beispiel verwendete Nachrichten Textdatei veranschaulicht.
+Um Ereignisse zu melden, müssen Sie zuerst die Ereignisse in einer Meldungstextdatei definieren. Ausführliche Informationen zum Schreiben einer Nachrichtentextdatei finden Sie unter [Message Text Files](message-text-files.md). Im Folgenden wird die in diesem Beispiel verwendete Meldungstextdatei angezeigt.
 
 
 ```C++
@@ -122,19 +122,19 @@ gallons%0
 
 
 
-Verwenden Sie zum Kompilieren der Meldungs Textdatei den folgenden Befehl:
+Verwenden Sie den folgenden Befehl, um die Meldungstextdatei zu kompilieren:
 
-**MC-U Provider.MC**
+**mc -U provider.mc**
 
-Verwenden Sie den folgenden Befehl, um die vom Nachrichten Compiler generierten Ressourcen zu kompilieren:
+Verwenden Sie den folgenden Befehl, um die vom Nachrichtencompiler generierten Ressourcen zu kompilieren:
 
-**RC-Anbieter. RC**
+**rc provider.rc**
 
-Um die reine Ressourcen-DLL zu erstellen, die die Zeichen folgen Ressourcen der Nachrichten Tabelle enthält, verwenden Sie den folgenden Befehl (Sie können den Befehl an einer Visual Studio-Eingabeaufforderung ausführen):
+Verwenden Sie zum Erstellen der reinen Ressourcen-DLL, die die Nachrichtentabellen-Zeichenfolgenressourcen enthält, den folgenden Befehl (Sie können den Befehl über eine Visual Studio Eingabeaufforderung ausführen):
 
-**Link-dll-NOENTRY-Anbieter. res**
+**link -dll -noentry provider.res**
 
-Das folgende Beispiel zeigt die Header Datei, die der Compiler für die obige Meldungs Textdatei generiert hat. Fügen Sie die Header Datei in Ihr Projekt ein.
+Das folgende Beispiel zeigt die Headerdatei, die der Compiler für die obige Meldungstextdatei generiert hat. Schließen Sie die Headerdatei in Ihr Projekt ein.
 
 
 ```C++
@@ -273,7 +273,7 @@ Das folgende Beispiel zeigt die Header Datei, die der Compiler für die obige Me
 
 
 
-Im folgenden Beispiel wird gezeigt, wie die Report [**Event**](/windows/desktop/api/Winbase/nf-winbase-reporteventa) -Funktion verwendet wird, um die in der obigen Meldungs Textdatei definierten Ereignisse zu schreiben.
+Im folgenden Beispiel wird gezeigt, wie die [**ReportEvent-Funktion**](/windows/desktop/api/Winbase/nf-winbase-reporteventa) verwendet wird, um die in der obigen Meldungstextdatei definierten Ereignisse zu schreiben.
 
 
 ```C++
@@ -356,19 +356,19 @@ cleanup:
 
 
 
-Bevor Sie dieses Beispiel ausführen, registrieren Sie den Anbieter in der Registrierung. Ausführliche Informationen zu den Registrierungs Einstellungen finden Sie unter [Ereignis Quellen](event-sources.md). Fügen Sie "myeventprovider" als Registrierungsschlüssel unter folgendem Schlüssel hinzu:
+Registrieren Sie vor dem Ausführen dieses Beispiels den Anbieter in der Registrierung. Ausführliche Informationen zu den Registrierungseinstellungen finden Sie unter [Ereignisquellen.](event-sources.md) Fügen Sie "MyEventProvider" als Registrierungsschlüssel unter dem folgenden Schlüssel hinzu:
 
-**HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Services \\ EventLog- \\ Anwendung**
+**HKEY \_ LOCAL \_ MACHINE \\ SYSTEM \\ CurrentControlSet \\ services \\ eventlog \\ Application**
 
-Im folgenden sind die Registrierungs Werte aufgeführt, die für den Registrierungsschlüssel "myeventprovider" festgelegt werden sollen.
+Im Folgenden werden die Registrierungswerte angezeigt, die für den Registrierungsschlüssel "MyEventProvider" festgelegt werden sollen.
 
 | Wertname           | type       | Wertdaten           |
 |----------------------|------------|----------------------|
 | CategoryCount        | REG \_ DWORD | 0x00000003           |
-| Categorymessagefile  | REG- \_ SZ    | *Pfad* \\provider.dll |
-| EventMessageFile     | REG- \_ SZ    | *Pfad* \\provider.dll |
-| ParameterMessageFile | REG- \_ SZ    | *Pfad* \\provider.dll |
-| Typessupported       | REG \_ DWORD | 0x00000007           |
+| CategoryMessageFile  | REG \_ SZ    | *Path (Pfad)* \\provider.dll |
+| EventMessageFile     | REG \_ SZ    | *Path (Pfad)* \\provider.dll |
+| ParameterMessageFile | REG \_ SZ    | *Path (Pfad)* \\provider.dll |
+| TypesSupported       | REG \_ DWORD | 0x00000007           |
 
 
 

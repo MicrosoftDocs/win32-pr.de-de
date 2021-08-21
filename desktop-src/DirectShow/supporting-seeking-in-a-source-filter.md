@@ -1,50 +1,50 @@
 ---
-description: In diesem Thema wird beschrieben, wie Suchvorgänge in einem Microsoft DirectShow-Quell Filter implementiert werden. Es verwendet das Kugel Filter Beispiel als Ausgangspunkt und beschreibt den zusätzlichen Code, der erforderlich ist, um die Suche in diesem Filter zu unterstützen.
+description: In diesem Thema wird beschrieben, wie Suchabfragen in einem Microsoft DirectShow-Quellfilter implementiert werden. Es verwendet das Beispiel "Ballfilter" als Ausgangspunkt und beschreibt den zusätzlichen Code, der zur Unterstützung der Suche in diesem Filter erforderlich ist.
 ms.assetid: a2b4be09-2fd6-4aac-8ad6-c3d62377c1f2
-title: Unterstützen der Suche in einem Quell Filter
+title: Unterstützen von Suchabfragen in einem Quellfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42ac4bbb63410adf9cb4e8d69064679143b84d67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d92c52ff4bde3ea75b156e5521af9825b0902df38f0d0c6bc23cc7be99c37a55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072354"
 ---
-# <a name="supporting-seeking-in-a-source-filter"></a>Unterstützen der Suche in einem Quell Filter
+# <a name="supporting-seeking-in-a-source-filter"></a>Unterstützen von Suchabfragen in einem Quellfilter
 
-In diesem Thema wird beschrieben, wie Suchvorgänge in einem Microsoft DirectShow-Quell Filter implementiert werden. Es verwendet das [Kugel Filter](ball-filter-sample.md) Beispiel als Ausgangspunkt und beschreibt den zusätzlichen Code, der erforderlich ist, um die Suche in diesem Filter zu unterstützen.
+In diesem Thema wird beschrieben, wie Suchabfragen in einem Microsoft DirectShow-Quellfilter implementiert werden. Es verwendet das [Beispiel "Ballfilter"](ball-filter-sample.md) als Ausgangspunkt und beschreibt den zusätzlichen Code, der zur Unterstützung der Suche in diesem Filter erforderlich ist.
 
-Das [Kugel Filter](ball-filter-sample.md) Beispiel ist ein Quell Filter, der einen animierten Sprung-Ball erstellt. In diesem Artikel wird beschrieben, wie Sie diesem Filter Suchfunktionen hinzufügen. Nachdem Sie diese Funktionalität hinzugefügt haben, können Sie den Filter in GraphEdit Rendering und die Kugel steuern, indem Sie den Schieberegler GraphEdit ziehen.
+Das [Beispiel "Ballfilter"](ball-filter-sample.md) ist ein Quellfilter, der eine animierte Hüpfkugel erstellt. In diesem Artikel wird beschrieben, wie Sie diesem Filter Suchfunktionen hinzufügen. Nachdem Sie diese Funktion hinzugefügt haben, können Sie den Filter in GraphEdit rendern und die Kugel steuern, indem Sie den GraphEdit-Schieberegler ziehen.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Übersicht über das Suchen in DirectShow](#overview-of-seeking-in-directshow)
--   [Kurze Übersicht über den Kugel Filter](#quick-overview-of-the-ball-filter)
--   [Ändern des Kugel Filters für Suchvorgänge](#modifying-the-ball-filter-for-seeking)
--   [Einschränkungen der csourceseeking-Klasse](#limitations-of-the-csourceseeking-class)
+-   [Übersicht über Sucher in DirectShow](#overview-of-seeking-in-directshow)
+-   [Kurze Übersicht über den Kugelfilter](#quick-overview-of-the-ball-filter)
+-   [Ändern des Ballfilters für Die Suche](#modifying-the-ball-filter-for-seeking)
+-   [Einschränkungen der CSourceSeeking-Klasse](#limitations-of-the-csourceseeking-class)
 
-## <a name="overview-of-seeking-in-directshow"></a>Übersicht über das Suchen in DirectShow
+## <a name="overview-of-seeking-in-directshow"></a>Übersicht über Sucher in DirectShow
 
-Eine Anwendung sucht das Filter Diagramm, indem eine [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Methode für den Filter Graph-Manager aufgerufen wird. Der Filter Graph-Manager verteilt dann den Aufruf an jeden Renderer im Diagramm. Jeder Renderer sendet den upstreambefehl über die Ausgabe-PIN des nächsten upstreamfilters. Der-Befehl durchläuft den Upstream, bis er einen Filter erreicht, der den Seek-Befehl ausführen kann, in der Regel einen Quell Filter oder einen Parserfilter. Im allgemeinen verarbeitet der Filter, der die Zeitstempel durchführt, auch das suchen.
+Eine Anwendung sucht den Filtergraphen, indem sie eine [**IMediaSeeking-Methode**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) im Filter Graph Manager aufruft. Der Filter Graph Manager verteilt dann den Aufruf an jeden Renderer im Diagramm. Jeder Renderer sendet den Aufruf upstream über den Ausgabepin des nächsten Upstreamfilters. Der Aufruf wird vorgeschaltet, bis er einen Filter erreicht, der den Suchbefehl ausführen kann, in der Regel ein Quellfilter oder ein Parserfilter. Im Allgemeinen verarbeitet der Filter, der aus den Zeitstempeln stammt, auch Suchabfragen.
 
 Ein Filter antwortet wie folgt auf einen Suchbefehl:
 
-1.  Der Filter leert das Diagramm. Dadurch werden alle veralteten Daten aus dem Diagramm gelöscht, was die Reaktionsfähigkeit verbessert. Andernfalls werden Stichproben, die vor dem Seek-Befehl gepuffert wurden, möglicherweise zugestellt.
-2.  Mit dem Filter wird [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) aufgerufen, um Downstream-Filter über die neue Endzeit, die Startzeit und die Wiedergabe Rate zu informieren.
-3.  Der Filter legt dann das Diskontinuität-Flag für das erste Beispiel nach dem Seek-Befehl fest.
+1.  Der Filter leert das Diagramm. Dadurch werden veraltete Daten aus dem Diagramm gelöscht, wodurch die Reaktionsfähigkeit verbessert wird. Andernfalls können Beispiele, die vor dem Suchbefehl gepuffert wurden, übermittelt werden.
+2.  Der Filter ruft [**IPin::NewSegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) auf, um Downstreamfilter über die neue Beendigungszeit, Startzeit und Wiedergaberate zu informieren.
+3.  Der Filter legt dann das Diskontinuitätsflag für das erste Beispiel nach dem Seek-Befehl fest.
 
-Zeitstempel beginnen mit 0 (null) nach jedem Seek-Befehl (einschließlich Raten Änderungen).
+Zeitstempel beginnen nach jedem Suchbefehl (einschließlich Ratenänderungen) bei 0 (null).
 
-## <a name="quick-overview-of-the-ball-filter"></a>Kurze Übersicht über den Kugel Filter
+## <a name="quick-overview-of-the-ball-filter"></a>Kurze Übersicht über den Kugelfilter
 
-Der Kugel Filter ist eine Push-Quelle. Dies bedeutet, dass ein Arbeits Thread verwendet wird, um Abtastungen im Gegensatz zu einer pullquelle bereitzustellen, die passiv darauf wartet, dass ein downstreamfilter Beispiele anfordert. Der Kugel Filter wird aus der [**CSource**](csource.md) -Klasse erstellt, und die Ausgabe-PIN wird aus der [**csourcestream**](csourcestream.md) -Klasse erstellt. Die **csourcestream** -Klasse erstellt den Arbeits Thread, der den Datenfluss steuert. Dieser Thread tritt in eine Schleife ein, die Beispiele aus der Zuweisung abruft, Sie mit Daten füllt und diese nach unten übermittelt.
+Der Ball-Filter ist eine Pushquelle, d. h., er verwendet einen Arbeitsthread, um Stichproben nachgeschaltet zu übermitteln, im Gegensatz zu einer Pullquelle, die passiv auf einen Downstreamfilter wartet, um Stichproben anzufordern. Der Ball-Filter wird aus der [**CSource-Klasse**](csource.md) erstellt, und sein Ausgabepin wird aus der [**CSourceStream-Klasse**](csourcestream.md) erstellt. Die **CSourceStream-Klasse** erstellt den Arbeitsthread, der den Datenfluss steuert. Dieser Thread wechselt in eine Schleife, die Stichproben aus der Zuweisung erhält, sie mit Daten auffüllt und sie nachgeschaltet übermittelt.
 
-Der größte Teil der Aktion in [**csourcestream**](csourcestream.md) erfolgt in der [**csourcestream:: FillBuffer**](csourcestream-fillbuffer.md) -Methode, die von der abgeleiteten Klasse implementiert wird. Das Argument für diese Methode ist ein Zeiger auf das Beispiel, das übermittelt werden soll. Die-Implementierung von **FillBuffer** des Kugel Filters Ruft die Adresse des Beispiel Puffers ab und zeichnet durch Festlegen einzelner Pixelwerte direkt in den Puffer. (Das Zeichnen erfolgt durch eine Hilfsklasse, cball, sodass Sie die Details zu Bittiefen, Paletten usw. ignorieren können.)
+Der Großteil der Aktion in [**CSourceStream**](csourcestream.md) erfolgt in der [**CSourceStream::FillBuffer-Methode,**](csourcestream-fillbuffer.md) die von der abgeleiteten Klasse implementiert wird. Das Argument für diese Methode ist ein Zeiger auf das zu liefernde Beispiel. Die Implementierung von **FillBuffer** durch den Ball-Filter ruft die Adresse des Beispielpuffers ab und zeichnet direkt in den Puffer, indem einzelne Pixelwerte festgelegt werden. (Die Zeichnung wird von der Hilfsklasse CBall durchgeführt, sodass Sie die Details zu Bittiefe, Paletten usw. ignorieren können.)
 
-## <a name="modifying-the-ball-filter-for-seeking"></a>Ändern des Kugel Filters für Suchvorgänge
+## <a name="modifying-the-ball-filter-for-seeking"></a>Ändern des Ballfilters für Die Suche
 
-Um den Kugel Filter suchbar zu machen, verwenden Sie die [**csourceseeking**](csourceseeking.md) -Klasse, die für die Implementierung von suchen in Filtern mit einem Ausgabepin konzipiert ist. Fügen Sie die **csourceseeking** -Klasse der Vererbungs Liste für die cballstream-Klasse hinzu:
+Um den Ball-Filter suchbar zu machen, verwenden Sie die [**CSourceSeeking-Klasse,**](csourceseeking.md) die für die Implementierung von Suchabfragen in Filtern mit einem Ausgabepin konzipiert ist. Fügen Sie die **CSourceSeeking-Klasse** der Vererbungsliste für die CBallStream-Klasse hinzu:
 
 
 ```C++
@@ -54,7 +54,7 @@ class CBallStream :  // Defines the output pin.
 
 
 
-Außerdem müssen Sie einen Initialisierer für [**csourceseeking**](csourceseeking.md) zum cballstream-Konstruktor hinzufügen:
+Außerdem müssen Sie dem CBallStream-Konstruktor einen Initialisierer für [**CSourceSeeking**](csourceseeking.md) hinzufügen:
 
 
 ```C++
@@ -63,9 +63,9 @@ Außerdem müssen Sie einen Initialisierer für [**csourceseeking**](csourceseek
 
 
 
-Diese Anweisung ruft den Basiskonstruktor für [**csourceseeking**](csourceseeking.md)auf. Bei den Parametern handelt es sich um einen Namen, einen Zeiger auf den besitzenden PIN, einen **HRESULT** -Wert und die Adresse eines kritischen Abschnitts Objekts. Der Name wird nur zum Debuggen verwendet, und das [**Name**](name.md) -Makro wird in Einzelhandels Builds in eine leere Zeichenfolge kompiliert. Die PIN erbt direkt **csourceseeking**, sodass der zweite Parameter ein Zeiger auf sich selbst ist, der in einen [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Zeiger umgewandelt wird. Der **HRESULT** -Wert wird in der aktuellen Version der Basisklassen ignoriert. die Kompatibilität mit früheren Versionen bleibt bestehen. Der kritische Abschnitt schützt freigegebene Daten, z. b. die aktuelle Startzeit, Endzeit und Wiedergabe Rate.
+Diese Anweisung ruft den Basiskonstruktor für [**CSourceSeeking**](csourceseeking.md)auf. Die Parameter sind ein Name, ein Zeiger auf den besitzenden Pin, ein **HRESULT-Wert** und die Adresse eines kritischen Abschnittsobjekts. Der Name wird nur zum Debuggen verwendet, und das [**NAME-Makro**](name.md) wird in Verkaufsbuilds in eine leere Zeichenfolge kompiliert. Der Pin erbt **direkt CSourceSeeking,** sodass der zweite Parameter ein Zeiger auf sich selbst ist und in einen [**IPin-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-ipin) umgestellt wird. Der **HRESULT-Wert** wird in der aktuellen Version der Basisklassen ignoriert. sie bleibt aus Kompatibilitätsgründen mit früheren Versionen bestehen. Der kritische Abschnitt schützt freigegebene Daten, z. B. die aktuelle Startzeit, Beendigungszeit und Wiedergaberate.
 
-Fügen Sie die folgende Anweisung im [**csourceseeking**](csourceseeking.md) -Konstruktor hinzu:
+Fügen Sie im [**CSourceSeeking-Konstruktor**](csourceseeking.md) die folgende Anweisung hinzu:
 
 
 ```C++
@@ -74,9 +74,9 @@ m_rtStop = 60 * UNITS;
 
 
 
-Die *m \_ rtstoppt* -Variable gibt die Endzeit an. Standardmäßig ist der Wert \_ I64 \_ Max/2, der ungefähr 14.600 Jahre beträgt. Die vorherige Anweisung legt den Wert auf einen konservativeren Wert von 60 Sekunden fest.
+Die *Variable m \_ rtStop* gibt die Beendigungszeit an. Standardmäßig ist der Wert \_ I64 \_ MAX/2, also ungefähr 14.600 Jahre. Die vorherige Anweisung legt sie auf einen konservativeren Wert von 60 Sekunden fest.
 
-Zwei zusätzliche Element Variablen müssen cballstream hinzugefügt werden:
+CBallStream müssen zwei zusätzliche Membervariablen hinzugefügt werden:
 
 
 ```C++
@@ -86,11 +86,11 @@ REFERENCE_TIME  m_rtBallPosition; // Position of the ball.
 
 
 
-Nach jedem Seek-Befehl muss der Filter das Diskontinuität-Flag für das nächste Beispiel durch Aufrufen von [**imediasample:: setdiscontinuity**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setdiscontinuity)festlegen. Diese wird von der *m \_ bdiscontinuity* -Variablen nachverfolgt. Die *m \_ rtballposition* -Variable gibt die Position der Kugel innerhalb des Video Rahmens an. Der ursprüngliche Ball Filter berechnet die Position von der streamzeit, aber die streamzeit wird nach jedem Seek-Befehl auf Null zurückgesetzt. In einem durchsuchbaren Datenstrom ist die absolute Position unabhängig von der streamzeit.
+Nach jedem Suchbefehl muss der Filter das Diskontinuitätsflag im nächsten Beispiel festlegen, indem [**IMediaSample::SetDiscontinuity**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setdiscontinuity)aufgerufen wird. Die *m \_ bDiscontinuity-Variable* verfolgt dies nach. Die Variable *m \_ rtBallPosition* gibt die Position der Kugel innerhalb des Videoframes an. Der ursprüngliche Ball-Filter berechnet die Position aus der Streamzeit, aber die Streamzeit wird nach jedem Suchbefehl auf 0 (null) zurückgesetzt. In einem suchbaren Stream ist die absolute Position unabhängig von der Streamzeit.
 
 ### <a name="queryinterface"></a>QueryInterface
 
-Die [**csourceseeking**](csourceseeking.md) -Klasse implementiert die [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Schnittstelle. Überschreiben Sie die [**nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) -Methode, um diese Schnittstelle für Clients verfügbar zu machen:
+Die [**CSourceSeeking-Klasse**](csourceseeking.md) implementiert die [**IMediaSeeking-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) Um diese Schnittstelle für Clients verfügbar zu machen, überschreiben Sie die [**NonDelegatingQueryInterface-Methode:**](cunknown-nondelegatingqueryinterface.md)
 
 
 ```C++
@@ -107,34 +107,34 @@ STDMETHODIMP CBallStream::NonDelegatingQueryInterface
 
 
 
-Die Methode wird aufgrund der Art und Weise, wie die DirectShow-Basisklassen Component Object Model (com)-Aggregation unterstützen, als "nondelegating" bezeichnet. Weitere Informationen finden Sie im Thema "Gewusst wie: Implementieren von IUnknown" im DirectShow SDK.
+Die -Methode wird als "NonDelegating" bezeichnet, da die DirectShow-Basisklassen Component Object Model (COM)-Aggregation unterstützen. Weitere Informationen finden Sie im DirectShow SDK im Thema "Implementieren von IUnknown".
 
-### <a name="seeking-methods"></a>Suchmethoden
+### <a name="seeking-methods"></a>Suchen nach Methoden
 
-Die [**csourceseeking**](csourceseeking.md) -Klasse verwaltet mehrere Element Variablen im Zusammenhang mit der Suche.
+Die [**CSourceSeeking-Klasse**](csourceseeking.md) verwaltet mehrere Membervariablen im Zusammenhang mit der Suche.
 
 
 
 | Variable          | BESCHREIBUNG   | Standardwert  |
 |-------------------|---------------|----------------|
-| *m \_ rtstart*      | Startzeit    | Zero           |
-| *m \_ rtstopps*       | Endzeit     | \_I64 \_ Max/2 |
-| *m \_ drateseeking* | Wiedergabe Rate | 1.0            |
+| *m \_ rtStart*      | Startzeit    | Null           |
+| *m \_ rtStop*       | Endzeit     | \_I64 \_ MAX/2 |
+| *m \_ dRateSeeking* | Wiedergaberate | 1.0            |
 
 
 
  
 
-Die [**csourceseeking**](csourceseeking.md) -Implementierung von [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) aktualisiert die Start-und Endzeiten und ruft dann zwei rein virtuelle Methoden für die abgeleitete Klasse [**csourceseeking:: changestart**](csourceseeking-changestart.md) und [**csourceseeking:: changestoppt**](csourceseeking-changestop.md)auf. Die Implementierung von [**imediaseeking:: ctrate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate) ist ähnlich: die Wiedergabe Rate wird aktualisiert, und anschließend wird die reine virtuelle Methode [**csourceseeking:: changerate**](csourceseeking-changerate.md)aufgerufen. In jeder dieser virtuellen Methoden muss die PIN folgende Aktionen ausführen:
+Die [**CSourceSeeking-Implementierung**](csourceseeking.md) von [**IMediaSeeking::SetPositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) aktualisiert die Start- und Beendigungszeiten und ruft dann zwei rein virtuelle Methoden für die abgeleitete Klasse auf: [**CSourceSeeking::ChangeStart**](csourceseeking-changestart.md) und [**CSourceSeeking::ChangeStop.**](csourceseeking-changestop.md) Die Implementierung von [**IMediaSeeking::SetRate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate) ist ähnlich: Sie aktualisiert die Wiedergaberate und ruft dann die reine virtuelle Methode [**CSourceSeeking::ChangeRate**](csourceseeking-changerate.md)auf. In jeder dieser virtuellen Methoden muss der Pin folgende Schritte ausführen:
 
-1.  Aufrufen von [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) , um mit dem leeren von Daten zu beginnen.
-2.  Stoppt den streamingthread.
-3.  Nennen Sie [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush).
-4.  Starten Sie den streamingthread neu.
-5.  Nennen Sie [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment).
-6.  Legen Sie das Diskontinuität-Flag für das nächste Beispiel fest.
+1.  Rufen Sie [**IPin::BeginFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) auf, um mit dem Leeren von Daten zu beginnen.
+2.  Halten Sie den Streamingthread an.
+3.  Rufen Sie [**IPin::EndFlush auf.**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush)
+4.  Starten Sie den Streamingthread neu.
+5.  Rufen Sie [**IPin::NewSegment auf.**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment)
+6.  Legen Sie das Diskontinuitätsflag für das nächste Beispiel fest.
 
-Die Reihenfolge dieser Schritte ist entscheidend, da der streamingthread blockiert werden kann, während er darauf wartet, ein Beispiel bereitzustellen oder ein neues Beispiel zu erhalten. Die [**beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -Methode stellt sicher, dass der Streaminginhalt nicht blockiert wird und daher in Schritt 2 keinen Deadlock findet. Der [**endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) -Befehl informiert die downstreamfilter, dass neue Beispiele erwartet werden, sodass Sie nicht abgelehnt werden, wenn der Thread in Schritt 4 erneut gestartet wird.
+Die Reihenfolge dieser Schritte ist entscheidend, da der Streamingthread blockieren kann, während er auf die Bereitstellung eines Beispiels oder das Abrufen eines neuen Beispiels wartet. Mit der [**BeginFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) wird sichergestellt, dass der Streamingthread nicht blockiert wird und daher in Schritt 2 kein Deadlock entsteht. Der [**EndFlush-Aufruf**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) informiert die Downstreamfilter, dass sie neue Stichproben erwarten, sodass sie sie nicht ablehnen, wenn der Thread in Schritt 4 erneut gestartet wird.
 
 Die folgende private Methode führt die Schritte 1 bis 4 aus:
 
@@ -156,7 +156,7 @@ void CBallStream::UpdateFromSeek()
 
 
 
-Wenn der streamingthread erneut gestartet wird, ruft er die [**csourcestream:: onthreadstartplay**](csourcestream-onthreadstartplay.md) -Methode auf. Überschreiben Sie diese Methode, um die Schritte 5 und 6 auszuführen:
+Wenn der Streamingthread erneut gestartet wird, ruft er die [**CSourceStream::OnThreadStartPlay-Methode auf.**](csourcestream-onthreadstartplay.md) Überschreiben Sie diese Methode, um die Schritte 5 und 6 auszuführen:
 
 
 ```C++
@@ -169,7 +169,7 @@ HRESULT CBallStream::OnThreadStartPlay()
 
 
 
-Legen Sie in der [**changestart**](csourceseeking-changestart.md) -Methode die streamzeit auf 0 (null) und die Position der Kugel auf die neue Startzeit fest. Dann cballstream:: updatefromseek aufrufen:
+Legen Sie in der [**ChangeStart-Methode**](csourceseeking-changestart.md) die Streamzeit auf 0 (null) und die Position der Kugel auf die neue Startzeit fest. Rufen Sie dann CBallStream::UpdateFromSeek auf:
 
 
 ```C++
@@ -187,7 +187,7 @@ HRESULT CBallStream::ChangeStart( )
 
 
 
-In der [**changeend**](csourceseeking-changestop.md) -Methode wird cballstream:: updatefromseek aufgerufen, wenn die neue Endzeit kleiner als die aktuelle Position ist. Andernfalls ist die Endzeit noch in der Zukunft, sodass es nicht erforderlich ist, das Diagramm zu leeren.
+Rufen Sie in der [**ChangeStop-Methode**](csourceseeking-changestop.md) CBallStream::UpdateFromSeek auf, wenn die neue Beendigungszeit kleiner als die aktuelle Position ist. Andernfalls liegt die Beendigungszeit noch in der Zukunft, sodass das Diagramm nicht geleert werden muss.
 
 
 ```C++
@@ -209,7 +209,7 @@ HRESULT CBallStream::ChangeStop( )
 
 
 
-Bei Raten Änderungen legt die [**csourceseeking:: setRate**](csourceseeking-setrate.md) -Methode *m \_ drateseeking* auf den neuen Satz fest (verwerfen des alten Werts), bevor [**changerate**](csourceseeking-changerate.md)aufgerufen wird. Wenn der Aufrufer eine ungültige Rate gab – z. b. kleiner als 0 (null) – ist es zu spät, wenn der **changerate** aufgerufen wird. Eine Lösung besteht darin, **die-Aktivität** zu überschreiben und auf gültige Raten zu prüfen:
+Bei Ratenänderungen legt die [**CSourceSeeking::SetRate-Methode**](csourceseeking-setrate.md) *m \_ dRateSeeking* auf die neue Rate fest (verwirft den alten Wert), bevor [**ChangeRate aufruft.**](csourceseeking-changerate.md) Wenn der Aufrufer leider eine ungültige Rate (z. B. kleiner als 0 ) gegeben hat, ist dies zu spät, wenn **ChangeRate** aufgerufen wird. Eine Lösung besteht darin, **SetRate** außer Kraft zu setzen und auf gültige Raten zu prüfen:
 
 
 ```C++
@@ -235,7 +235,7 @@ HRESULT CBallStream::ChangeRate() { return S_OK; }
 
 ### <a name="drawing-in-the-buffer"></a>Zeichnen im Puffer
 
-Dies ist die geänderte Version von [**csourcestream:: FillBuffer**](csourcestream-fillbuffer.md), der Routine, die die Kugel in jedem Frame zeichnet:
+Hier ist die geänderte Version von [**CSourceStream::FillBuffer**](csourcestream-fillbuffer.md), der Routine, die die Kugel auf jedem Frame zeichnet:
 
 
 ```C++
@@ -281,18 +281,18 @@ HRESULT CBallStream::FillBuffer(IMediaSample *pMediaSample)
 
 
 
-Die wichtigsten Unterschiede zwischen dieser Version und der ursprünglichen Version sind die folgenden:
+Die hauptunterschiede zwischen dieser Version und dem Original sind die folgenden:
 
--   Wie bereits erwähnt, wird die *m \_ rtballposition* -Variable verwendet, um die Position der Kugel anstelle der streamzeit festzulegen.
--   Nach dem halten des kritischen Abschnitts prüft die Methode, ob die aktuelle Position die Endzeit überschreitet. Wenn dies der Fall ist, wird **S \_ false** zurückgegeben. Dadurch wird der Basisklasse signalisiert, das Senden von Daten zu beenden und eine Streamende Benachrichtigung bereitzustellen.
+-   Wie bereits erwähnt, wird die *m \_ rtBallPosition-Variable* verwendet, um die Position der Kugel und nicht die Streamzeit zu festlegen.
+-   Nach dem Halten des kritischen Abschnitts überprüft die Methode, ob die aktuelle Position die Stoppzeit überschreitet. Wenn dies der Wert ist, wird **S \_ FALSE** zurückgegeben. Dies signalisiert der Basisklasse, das Senden von Daten zu beenden und eine Benachrichtigung zum Streamende zu senden.
 -   Die Zeitstempel werden durch die aktuelle Rate dividiert.
--   Wenn *m \_ bdiscontinuity* auf **true** festgelegt ist, legt die-Methode das Diskontinuität-Flag für das Beispiel fest.
+-   Wenn *m \_ bDiscontinuity* **true ist,** legt die Methode das Diskontinuitätsflag für das Beispiel fest.
 
-Es gibt noch einen weiteren kleinen Unterschied. Da die ursprüngliche Version darauf basiert, dass genau ein Puffer vorhanden ist, füllt Sie den gesamten Puffer einmal mit Nullen auf, sobald das Streaming beginnt. Danach wird der Ball nur noch von seiner vorherigen Position gelöscht. Diese Optimierung zeigt jedoch einen geringfügigen Fehler im Ball Filter. Wenn die [**cbaseoutputpin::D ecidezuordcator**](cbaseoutputpin-decideallocator.md) -Methode [**IMemInputPin:: notifyzuweisung**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator)aufruft, wird das schreibgeschützte Flag auf **false** festgelegt. Folglich kann der Downstream-Filter in den Puffer schreiben. Eine Lösung besteht darin, **dezidezuordcator** zu überschreiben, sodass das Flag für schreibgeschützten Zugriff auf **true** festgelegt wird. Der Einfachheit halber entfernt die neue Version die Optimierung einfach ganz. Stattdessen füllt diese Version den Puffer jedes Mal mit Nullen auf.
+Es gibt einen weiteren geringfügigen Unterschied. Da die ursprüngliche Version genau einen Puffer verwendet, füllt sie den gesamten Puffer einmal mit Nullen, wenn das Streaming beginnt. Danach löscht er einfach die Kugel aus ihrer vorherigen Position. Diese Optimierung zeigt jedoch einen geringfügigen Fehler im Filter "Ball" an. Wenn die [**CBaseOutputPin::D ecideAllocator-Methode**](cbaseoutputpin-decideallocator.md) [**IMemInputPin::NotifyAllocator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator)aufruft, wird das schreibgeschützte Flag auf **FALSE festgelegt.** Daher kann der Downstreamfilter in den Puffer schreiben. Eine Lösung besteht in der Außerkraftsetzung **von DecideAllocator,** sodass das schreibgeschützte Flag auf **TRUE legt.** Der Einfachheit halber entfernt die neue Version die Optimierung jedoch ganz. Stattdessen füllt diese Version den Puffer jedes Mal mit Nullen auf.
 
 ### <a name="miscellaneous-changes"></a>Sonstige Änderungen
 
-In der neuen Version werden diese beiden Zeilen aus dem cball-Konstruktor entfernt:
+In der neuen Version werden diese beiden Zeilen aus dem CBall-Konstruktor entfernt:
 
 
 ```C++
@@ -302,19 +302,19 @@ In der neuen Version werden diese beiden Zeilen aus dem cball-Konstruktor entfer
 
 
 
-Der ursprüngliche Kugel Filter verwendet diese Werte, um der Anfangs Ball Position etwas Zufälligkeit hinzuzufügen. Für unsere Zwecke soll die Kugel deterministisch sein. Außerdem wurden einige [**Variablen von den**](creftime.md) Objekten in [**Verweis \_ Zeit**](reference-time.md) Variablen geändert. (Die Klasse "- **Zeit** " ist ein schlanker Wrapper für einen **Verweis \_ Zeitwert** .) Schließlich wurde die Implementierung von [**iqualitycontrol:: notify**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify) leicht geändert. Weitere Informationen finden Sie im Quellcode.
+Der ursprüngliche Ball-Filter verwendet diese Werte, um der Ursprünglichen Ballposition eine gewisse Zufälligkeit hinzuzufügen. Für unsere Zwecke möchten wir, dass die Kugel deterministisch ist. Außerdem wurden einige Variablen von [**CRefTime-Objekten**](creftime.md) in [**REFERENCE \_ TIME-Variablen**](reference-time.md) geändert. (Die **CRefTime-Klasse** ist ein schlanker Wrapper für einen **REFERENCE \_ TIME-Wert.)** Schließlich wurde die Implementierung von [**IQualityControl::Notify**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-notify) geringfügig geändert. Weitere Informationen finden Sie im Quellcode.
 
-## <a name="limitations-of-the-csourceseeking-class"></a>Einschränkungen der csourceseeking-Klasse
+## <a name="limitations-of-the-csourceseeking-class"></a>Einschränkungen der CSourceSeeking-Klasse
 
-Die [**csourceseeking**](csourceseeking.md) -Klasse ist aufgrund von Problemen mit der Kreuz-Pin-Kommunikation nicht für Filter mit mehreren Ausgabe Pins gedacht. Stellen Sie sich z. b. einen Parserfilter vor, der einen überlappenden audiovideostream empfängt, den Stream in seine Audio-und Videokomponenten unterteilt und Video aus einer Ausgabe-PIN und aus einer anderen Audiodatei übermittelt. Beide Ausgabe Pins empfangen jeden Seek-Befehl, aber der Filter sollte nur einmal pro Seek-Befehl suchen. Die Lösung besteht darin, einen der Pins zum Steuern der Suche und zum Ignorieren von Seek-Befehlen festzulegen, die von der anderen Pin empfangen werden.
+Die [**CSourceSeeking-Klasse**](csourceseeking.md) ist aufgrund von Problemen mit der übergreifenden Kommunikation nicht für Filter mit mehreren Ausgabepins gedacht. Stellen Sie sich beispielsweise einen Parserfilter vor, der einen überlappten Audio-Videostream empfängt, den Stream in seine Audio- und Videokomponenten aufteilt und Videos von einem Ausgabepin und Audiodaten von einem anderen liefert. Beide Ausgabepins empfangen jeden Suchbefehl, der Filter sollte jedoch nur einmal pro Suchbefehl suchen. Die Lösung besteht im Festlegen eines der Pins zum Steuern der Such- und Ignorieren von Suchbefehlen, die vom anderen Pin empfangen werden.
 
-Nach dem Seek-Befehl sollten jedoch beide Pins Daten leeren. Um das Problem weiter zu erschweren, geschieht der Seek-Befehl im Anwendungs Thread, nicht im streamingthread. Daher müssen Sie sicherstellen, dass keine PIN blockiert ist und darauf wartet, dass ein [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -Befehl zurückgegeben wird, oder es kann zu einem Deadlock führen. Weitere Informationen zur Thread sicheren Leerung in Pins finden Sie unter [Threads und kritische Abschnitte](threads-and-critical-sections.md).
+Nach dem Suchbefehl sollten jedoch beide Pins Daten leeren. Um dies noch komplizierter zu machen, erfolgt der Suchbefehl im Anwendungsthread, nicht im Streamingthread. Daher müssen Sie sicherstellen, dass keines der Pins blockiert ist und darauf warten, dass ein [**IMemInputPin::Receive-Aufruf**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) zurückerwartet wird, oder dass dies zu einem Deadlock führen kann. Weitere Informationen zum threadsicheren Leeren in Stecknadeln finden Sie unter [Threads und kritische Abschnitte](threads-and-critical-sections.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schreiben von Quell Filtern](writing-source-filters.md)
+[Schreiben von Quellfiltern](writing-source-filters.md)
 </dt> </dl>
 
  

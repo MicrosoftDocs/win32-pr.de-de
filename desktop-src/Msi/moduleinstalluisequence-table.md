@@ -1,30 +1,30 @@
 ---
-description: Ein Mergetool wertet die moduleinstalluisequence-Tabelle aus und fügt dann die berechneten Aktionen in die Tabelle InstallUISequence mit einer korrekten Sequenznummer ein.
+description: Ein Mergetool wertet die Tabelle ModuleInstallUISequence aus und fügt dann die berechneten Aktionen mit einer richtigen Sequenznummer in die Tabelle InstallUISequence ein.
 ms.assetid: a125aecc-57d9-4c8e-873e-d5315eaafa56
-title: Moduleinstalluisequence-Tabelle
+title: ModuleInstallUISequence-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ca6771daa0b95acbc23e2d60eddda5420e417db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8bb8f2868fbad03439758cd45a79a71febb5e2a9b0b863c2ee9ea0597f5b112f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118945365"
 ---
-# <a name="moduleinstalluisequence-table"></a>Moduleinstalluisequence-Tabelle
+# <a name="moduleinstalluisequence-table"></a>ModuleInstallUISequence-Tabelle
 
-Ein Mergetool wertet die moduleinstalluisequence-Tabelle aus und fügt dann die berechneten Aktionen in die [Tabelle InstallUISequence](installuisequence-table.md) mit einer korrekten Sequenznummer ein.
+Ein Mergetool wertet die Tabelle ModuleInstallUISequence aus und fügt dann die berechneten Aktionen mit einer richtigen Sequenznummer in die [Tabelle InstallUISequence](installuisequence-table.md) ein.
 
-Die moduleinstalluisequence-Tabelle weist die folgenden Spalten auf.
+Die Tabelle ModuleInstallUISequence enthält die folgenden Spalten.
 
 
 
-| Spalte     | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte     | Typ                         | Key | Nullwerte zulässig |
 |------------|------------------------------|-----|----------|
-| Aktion     | [Bezeichner](identifier.md) | J   | N        |
+| Aktion     | [Identifier](identifier.md) | J   | N        |
 | Sequenz   | [Integer](integer.md)       |     | J        |
-| Baseaction | [Bezeichner](identifier.md) |     | J        |
-| Nach      | [Integer](integer.md)       |     | J        |
+| BaseAction | [Identifier](identifier.md) |     | J        |
+| Danach      | [Integer](integer.md)       |     | J        |
 | Bedingung  | [Condition](condition.md)   |     | J        |
 
 
@@ -35,42 +35,42 @@ Die moduleinstalluisequence-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Hinspiel
+<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Aktion
 </dt> <dd>
 
-Aktion, die in die Sequenz eingefügt werden soll. Bezieht sich auf eine der [Standard Aktionen](standard-actions.md)des-Installers oder einen Eintrag in der [CustomAction-Tabelle](customaction-table.md) oder- [Dialog Tabelle](dialog-table.md)des Merge-Moduls.
+Aktion, die in sequenziert eingefügt werden soll. Bezieht sich auf eine der Standardaktionen [des Installationsprogramms](standard-actions.md)oder auf einen Eintrag in der [CustomAction-Tabelle](customaction-table.md) oder Dialogtabelle des [Mergemoduls.](dialog-table.md)
 
-Wenn eine [Standardaktion](standard-actions.md) in der Aktionsspalte einer mergemodulsequenz-Tabelle verwendet wird, müssen die baseaction-und After-Spalten dieses Datensatzes Null sein.
+Wenn eine [Standardaktion](standard-actions.md) in der Action -Spalte einer Mergemodulsequenztabelle verwendet wird, müssen die BaseAction- und After-Spalten dieses Datensatzes NULL sein.
 
 </dd> <dt>
 
 <span id="Sequence"></span><span id="sequence"></span><span id="SEQUENCE"></span>Sequenz
 </dt> <dd>
 
-Die Sequenznummer einer Standardaktion. Wenn eine benutzerdefinierte Aktion oder ein benutzerdefiniertes Dialogfeld in die Aktionsspalte dieser Zeile eingegeben wird, muss dieses Feld auf NULL festgelegt werden.
+Die Sequenznummer einer Standardaktion. Wenn eine benutzerdefinierte Aktion oder ein benutzerdefiniertes Dialogfeld in die Spalte Aktion dieser Zeile eingegeben wird, muss dieses Feld auf NULL festgelegt werden.
 
-Bei Verwendung von [Standard Aktionen](standard-actions.md) in Mergemodul-Sequenz Tabellen sollte der Wert in der Sequence-Spalte die empfohlene Aktions Sequenznummer sein. Wenn sich die Sequenznummer im Mergemodul von der Sequenznummer für die gleiche Aktion in der MSI-Datei Sequenz Tabelle unterscheidet, verwendet das Mergetool die Sequenznummer aus der MSI-Datei. Informationen zu den empfohlenen Sequenznummern von Standard Aktionen finden [Sie unter Verwenden einer Sequenz Tabelle](using-a-sequence-table.md) für vorgeschlagene Sequenzen.
-
-</dd> <dt>
-
-<span id="BaseAction"></span><span id="baseaction"></span><span id="BASEACTION"></span>Baseaction
-</dt> <dd>
-
-Die baseaction-Spalte kann eine Standardaktion, eine benutzerdefinierte Aktion, die in der benutzerdefinierten Aktionstabelle des Merge-Moduls angegeben ist, oder ein Dialogfeld enthalten, das in der Dialog Tabelle des Moduls angegeben ist. Die baseaction-Spalte ist ein Schlüssel in der Aktionsspalte dieser Tabelle. Dabei kann es sich nicht um einen Fremdschlüssel in einer anderen MERGE-Tabelle oder-Tabelle in der MSI-Datei handeln. Dies bedeutet, dass jede Standardaktion, benutzerdefinierte Aktion oder ein Dialogfeld, das in der Spalte baseaction aufgeführt ist, auch in der Aktionsspalte eines anderen Datensatzes in dieser Tabelle aufgeführt werden muss.
+Wenn Sie [Standardaktionen](standard-actions.md) in Mergemodulsequenztabellen verwenden, sollte der Wert in der Spalte Sequenz die empfohlene Aktionssequenznummer sein. Wenn sich die Sequenznummer im Mergemodul von der Sequenznummer für dieselbe Aktion in der .msi-Dateisequenztabelle unterscheidet, verwendet das Mergetool die Sequenznummer aus der .msi Datei. Die empfohlenen Sequenznummern von Standardaktionen finden Sie [in](using-a-sequence-table.md) den vorgeschlagenen Sequenzen unter Verwenden einer Sequenztabelle.
 
 </dd> <dt>
 
-<span id="After"></span><span id="after"></span><span id="AFTER"></span>Nachdem
+<span id="BaseAction"></span><span id="baseaction"></span><span id="BASEACTION"></span>BaseAction
 </dt> <dd>
 
-Boolescher Wert, der ist, ob Action vor oder nach baseaction steht.
+Die BaseAction-Spalte kann eine Standardaktion, eine benutzerdefinierte Aktion, die in der benutzerdefinierten Aktionstabelle des Mergemoduls angegeben ist, oder einen Dialog enthalten, der in der Dialogtabelle des Moduls angegeben ist. Die BaseAction-Spalte ist ein Schlüssel in der Spalte Aktion dieser Tabelle. Es darf sich nicht um einen Fremdschlüssel in einer anderen Mergetabelle oder Tabelle in der .msi datei. Dies bedeutet, dass jede Standardaktion, benutzerdefinierte Aktion oder jeder Dialog, der in der Spalte BaseAction aufgeführt ist, auch in der Spalte Aktion eines anderen Datensatzes in dieser Tabelle aufgeführt werden muss.
+
+</dd> <dt>
+
+<span id="After"></span><span id="after"></span><span id="AFTER"></span>Nach
+</dt> <dd>
+
+Boolescher Wert für die Frage, ob Action vor oder nach BaseAction steht.
 
 
 
 | Wert | Bedeutung                          |
 |-------|----------------------------------|
-| 0     | Aktion, die vor baseaction erfolgen soll |
-| 1     | Aktion, die nach baseaction erfolgen soll  |
+| 0     | Aktion, die vor BaseAction kommen soll |
+| 1     | Nach BaseAction zu ergreifende Aktion  |
 
 
 
@@ -78,16 +78,16 @@ Boolescher Wert, der ist, ob Action vor oder nach baseaction steht.
 
 </dd> <dt>
 
-<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Anlage
+<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Zustand
 </dt> <dd>
 
-Eine Bedingungs Anweisung, die angibt, ob die Aktion ausgeführt wird. NULL wird als true ausgewertet.
+Eine bedingte Anweisung, die angibt, ob die Aktion ausgeführt wird. NULL wird als TRUE ausgewertet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Tabelle vorhanden ist, muss auch die [Tabelle "InstallUISequence](installuisequence-table.md) " im Mergemodul vorhanden sein.
+Wenn diese Tabelle vorhanden ist, muss [die InstallUISequence-Tabelle](installuisequence-table.md) auch im Mergemodul vorhanden sein.
 
  
 

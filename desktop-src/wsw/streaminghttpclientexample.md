@@ -1,29 +1,29 @@
 ---
-title: Streaminghttpcliumtexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der die Anforderung/Antwort mithilfe der Streaming-APIs durchführt.
+title: StreamingHttpClientExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der anforderungsbasierte Antworten mithilfe der Streaming-APIs abfragt.
 ms.assetid: dd391506-6f14-4d3a-bd65-96a338b3f7cd
 keywords:
-- Systemeigene streaminghttpclintexample-Webdienste
-- Wwsapi
+- StreamingHttpClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d1a6f487a9315ca603fa91b318405db53379d51
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d749a5d3e2669f6ca6d8c5a59878a1b4ad4d620ae96d9195d8428aee0ae3a8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026148"
 ---
-# <a name="streaminghttpclientexample"></a>Streaminghttpcliumtexample
+# <a name="streaminghttpclientexample"></a>StreamingHttpClientExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der die Anforderung/Antwort mithilfe der Streaming-APIs durchführt.
+Dieses Beispiel zeigt einen HTTP-Client, der anforderungsbasierte Antworten mithilfe der Streaming-APIs abfragt.
 
--   [Streaminghttpclient. cpp](#streaminghttpclientcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [StreamingHttpClient.cpp](#streaminghttpclientcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="streaminghttpclientcpp"></a>Streaminghttpclient. cpp
+## <a name="streaminghttpclientcpp"></a>StreamingHttpClient.cpp
 
 
 ```C++
@@ -459,7 +459,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -603,9 +603,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

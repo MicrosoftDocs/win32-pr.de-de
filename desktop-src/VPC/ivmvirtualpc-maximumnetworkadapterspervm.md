@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc maximumnetworkadapterspervm-Eigenschaft (vpccominterfaces. h)
+title: IVMVirtualPC MaximumNetworkAdaptersPerVM-Eigenschaft (VPCCOMInterfaces.h)
 description: Maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer.
 ms.assetid: 92da4958-5a67-422e-a6bd-68cabf1835ab
 keywords:
-- Maximumnetworkadapterspervm-Eigenschaft virtueller PC
-- Maximumnetworkadapterspervm-Eigenschaft Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, maximumnetworkadapterspervm (Eigenschaft)
+- MaximumNetworkAdaptersPerVM-Eigenschaft Virtueller PC
+- MaximumNetworkAdaptersPerVM-Eigenschaft Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC, MaximumNetworkAdaptersPerVM-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0797775038440c566fa7a3397b05632af839a341
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4d71098da6f5f25013d4a5312c37a990d5c77da5a0bfdedd8f3888ae4b752acd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118842776"
 ---
-# <a name="ivmvirtualpcmaximumnetworkadapterspervm-property"></a>Ivmvirtualpc:: maximumnetworkadapterspervm (Eigenschaft)
+# <a name="ivmvirtualpcmaximumnetworkadapterspervm-property"></a>IVMVirtualPC::MaximumNetworkAdaptersPerVM-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Hiermit wird die maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer abgerufen.
+Ruft die maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -54,8 +54,8 @@ Die maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer.
 | Name/Wert                                                                                                                                                                           | Bedeutung                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                                | Der-Parameter ist **null**.<br/>                                                           |
-| <dl> <dt>VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
+| <dl> <dt>VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -65,12 +65,12 @@ Die maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -78,7 +78,7 @@ Die maximale Anzahl von Netzwerkschnittstellen pro virtuellem Computer.
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

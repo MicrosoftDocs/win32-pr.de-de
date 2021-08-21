@@ -3,39 +3,39 @@ title: Verwenden des Download-Managers
 description: Verwenden des Download-Managers
 ms.assetid: f332a981-727f-4abc-a84e-76ab3e72b7f2
 keywords:
-- Windows Media Player Online Stores, Download-Manager
-- Online Stores, Download-Manager
-- Typ 2 Online Stores, Download-Manager
-- Windows Media Player, Download-Manager
+- Windows Media Player Onlineshops, Download-Manager
+- Onlineshops, Download-Manager
+- Geben Sie 2 Onlineshops ein,Download-Manager
+- Windows Media Player,Download-Manager
 - Windows Media Player Download-Manager
 - Download-Manager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cecb7b99ae36d3881fdf80eaad7d851205b9b2e7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a271849e22d17ec406cea24aa0afb92631bf533b39ea2beb45d5cc74b635d0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118830708"
 ---
 # <a name="using-the-download-manager"></a>Verwenden des Download-Managers
 
-Das Windows Media Player SDK enthält eine Beispiel Webseite, die die Verwendung des Download-Managers zum Herunterladen von Dateien auf den Computer des Benutzers veranschaulicht. Sie finden das Beispiel im Ordner mit dem Namen "Webseite", in dem Sie das SDK installiert haben. Der Name der Datei lautet Sample. ASP. Das Beispiel bietet die folgenden Funktionen:
+Das Windows Media Player SDK enthält eine Beispielwebseite, die die Verwendung des Download-Managers zum Herunterladen von Dateien auf den Computer des Benutzers veranschaulicht. Sie finden das Beispiel im Ordner WebPage, in dem Sie das SDK installiert haben. Der Name der Datei lautet sample.asp. Das Beispiel bietet die folgenden Funktionen:
 
--   Erstellt das **Download Manager** -Objekt.
--   Erstellt ein **downloadcollection** -Objekt.
--   Startet fünf Dateien herunter, wenn der Benutzer auf **herunterladen** klickt. Im Beispiel werden Standarddatei Pfade bereitgestellt. Sie sollten diese Standard Pfade durch die Speicherorte von Dateien auf dem eigenen Server ersetzen. Sie können die Pfade ändern, indem Sie die Werte ändern, die dem globalen Array mit dem Namen g \_ sfiles zugewiesen sind.
--   Zeigt Statusinformationen für einen Download an, wenn der Benutzer Sie auswählt.
--   Stellt Steuerelemente zum Anhalten, fortsetzen, Abbrechen und Entfernen eines Download Elements bereit.
--   Verwaltet Informationen zum Herunterladen von Sammlungen zwischen Sitzungen mithilfe von Cookies. Dies ist wichtig, da der Benutzer den Player jederzeit schließen kann. Außerdem wird die Online Store-Sitzung beendet, wenn der Benutzer Aufgabenbereiche im Player wechselt.
--   Verwendet standardmäßig das Herunterladen in Echtzeit. Sie können das Verhalten in das Herunterladen im Hintergrund ändern, indem Sie den Wert der Variablen mit dem Namen g \_ SdlType ändern. Das Herunterladen im Hintergrund ist für die Verwendung mit dem Betriebssystem Microsoft Windows XP verfügbar.
--   Synchronisiert die Hintergrundfarbe mit der Farbe des Players. Sie können diese Funktion verwenden, um die Darstellung des Online Stores zu ändern, wenn sich der Benutzer entscheidet, die Farbe des Players zu ändern.
+-   Erstellt das **DownloadManager-Objekt.**
+-   Erstellt ein **DownloadCollection-Objekt.**
+-   Beginnt mit dem Herunterladen von fünf Dateien, wenn der Benutzer auf **Herunterladen** klickt. Standarddateipfade werden im Beispiel bereitgestellt. Ersetzen Sie diese Standardpfade durch die Speicherorte von Dateien auf Ihrem eigenen Server. Sie können die Pfade ändern, indem Sie die Werte ändern, die dem globalen Array g \_ sFiles zugewiesen sind.
+-   Zeigt Statusinformationen für einen Download an, wenn der Benutzer ihn auswählt.
+-   Stellt Steuerelemente zum Anhalten, Fortsetzen, Abbrechen und Entfernen eines Downloadelements bereit.
+-   Verwaltet Informationen zum Herunterladen von Sammlungen zwischen Sitzungen mithilfe von Cookies. Dies ist wichtig, da der Benutzer den Player jederzeit schließen kann. Wenn der Benutzer die Aufgabenbereiche im Player wechselt, wird die Sitzung des Onlineshops beendet.
+-   Verwendet standardmäßig Das Herunterladen in Echtzeit. Sie können das Verhalten beim Herunterladen im Hintergrund ändern, indem Sie den Wert der Variablen g \_ sDLType ändern. Hintergrunddownloads sind für die Verwendung mit dem Betriebssystem Microsoft Windows XP verfügbar.
+-   Synchronisiert die Hintergrundfarbe mit der Player-Farbe. Sie können dieses Feature verwenden, um die Darstellung Ihres Onlineshops zu ändern, wenn der Benutzer die Farbe des Players ändert.
 
-In den folgenden Abschnitten finden Sie weitere Informationen:
+Die folgenden Abschnitte enthalten weitere Informationen:
 
--   [Die Seite wird initialisiert.](initializing-the-page.md)
+-   [Initialisieren der Seite](initializing-the-page.md)
 -   [Starten der Downloads](starting-the-downloads.md)
--   [Abrufen von Status Informationen](retrieving-status-information.md)
+-   [Abrufen von Statusinformationen](retrieving-status-information.md)
 -   [Verwalten von Sitzungsinformationen](maintaining-session-information.md)
 -   [Debuggen der Seite](debugging-the-page.md)
 
@@ -43,12 +43,12 @@ In den folgenden Abschnitten finden Sie weitere Informationen:
 
 <dl> <dt>
 
-[**Programmier Handbuch für den Typ 2-Online Speicher**](programming-guide-for-type-2-online-stores.md)
+[**Programmierhandbuch für Onlineshops vom Typ 2**](programming-guide-for-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,58 +1,58 @@
 ---
-description: 'Es gibt drei Arten von XAudio2 Voice-Objekten: Quelle, teilmischung und Mastering Stimmen.'
+description: 'Es gibt drei Arten von XAudio2-Stimmobjekten: Quell-, Submix- und Masteringstimmen.'
 ms.assetid: 3a4acc03-e47a-ff33-dee8-a374051f85f6
 title: XAudio2-Stimmen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b11300cea770f59485e8a78b0d30110b5469befe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b756033be5b64dbf03e3b3756902014774a53c9aebc8f41a1df1f982685cca16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025938"
 ---
 # <a name="xaudio2-voices"></a>XAudio2-Stimmen
 
-Es gibt drei Arten von XAudio2 Voice-Objekten: *Quelle*, *teilmischung* und *Mastering* Stimmen. Quellstimmen verarbeiten die vom Client bereitgestellten Audiodaten. Quell- und Submixstimmen senden ihre Ausgabe an mindestens eine Submix- oder Masterstimme. Submix- und Masterstimmen mischen die Audiodaten aller Stimmen, von denen sie Daten erhalten, und verarbeiten das Ergebnis. Masterstimmen schreiben Audiodaten auf ein Audiogerät.
+Es gibt drei Arten von XAudio2-Stimmobjekten: *Quell-,* *Submix-* und *Masteringstimmen.* Quellstimmen verarbeiten die vom Client bereitgestellten Audiodaten. Quell- und Submixstimmen senden ihre Ausgabe an mindestens eine Submix- oder Masterstimme. Submix- und Masterstimmen mischen die Audiodaten aller Stimmen, von denen sie Daten erhalten, und verarbeiten das Ergebnis. Masterstimmen schreiben Audiodaten auf ein Audiogerät.
 
 ## <a name="actions-performed-by-all-voices"></a>Von allen Stimmen ausgeführte Aktionen
 
-Alle Stimmen führen die folgenden Aktionen für die Audiodatei aus, die Sie übertragen.
+Alle Stimmen führen die folgenden Aktionen in der Reihenfolge der Audiodaten aus, die sie durchziehen.
 
-1.  Gesamte volumeanpassung, die sich auf alle Audiokanäle auswirkt. Weitere Informationen finden Sie unter [**IXAudio2Voice:: SetVolume**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setvolume).
-2.  Eine optionale, vom Client angegebene Kette von einem oder mehreren DSP-Effekten, z. b. der integrierte oder der von der [**ixapo**](/windows/desktop/api/XAPO/nn-xapo-ixapo) -Schnittstelle definierte Benutzer Effekt. Siehe [XAudio2-Audioeffekte](xaudio2-audio-effects.md).
-3.  Anpassung des pro-Kanal-Ausgabe Volumens. Weitere Informationen finden Sie unter [**IXAudio2Voice:: setchannelvolumes**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setchannelvolumes).
-4.  Trennen Sie die Matrix Mischung mit den einzelnen Ziel Stimmen oder dem Audioausgabegerät für das beherrschen von Stimmen. Diese Mischung ändert die Anzahl der Kanäle im Audioformat, falls erforderlich.
+1.  Allgemeine Volumeanpassung, die sich auf alle Audiokanäle auswirkt. Siehe [**IXAudio2Voice::SetVolume**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setvolume).
+2.  Eine optionale vom Client angegebene Kette von einem oder mehreren DSP-Effekten, z. B. dem integrierten Hall oder einem benutzerdefinierten Effekt, der von der [**IXAPO-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapo) definiert wird. Weitere Informationen finden Sie unter [XAudio2-Audioeffekte.](xaudio2-audio-effects.md)
+3.  Anpassung des Ausgabevolumes pro Kanal. Siehe [**IXAudio2Voice::SetChannelVolumes**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setchannelvolumes).
+4.  Trennen Sie die Matrixmischung mit jeder der Zielstimmen oder mit dem Audioausgabegerät, um Stimmen zu mastern. Diese Mischung ändert bei Bedarf die Anzahl der Kanäle in der Audiodatei.
 
-## <a name="source-voices"></a>Quellen Stimmen
+## <a name="source-voices"></a>Quellstimmen
 
-Verwenden Sie Quell Stimmen, um Audiodaten an die XAudio2-Verarbeitungs Pipeline zu senden. Sie sind die Einstiegspunkte in das [XAudio2-audiodiagramm](xaudio2-audio-graph.md). Sie müssen Sprach Daten an eine Mastering-Stimme senden, damit Sie entweder direkt oder über zwischenteilmix-Stimmen gehört.
+Verwenden Sie Quellstimmen, um Audiodaten an die XAudio2-Verarbeitungspipeline zu übermitteln. Sie sind die Einstiegspunkte in [XAudio2 Audio Graph](xaudio2-audio-graph.md). Sie müssen Sprachdaten an eine Masterstimme senden, um gehört zu werden, entweder direkt oder über zwischengeschaltete Submixstimmen.
 
-Zusätzlich zu den Aktionen, die von allen Stimmen durchgeführt werden, führen Quell Stimmen die folgenden Aktionen aus.
+Zusätzlich zu den Aktionen, die von allen Stimmen ausgeführt werden, führen Quellstimmen die folgenden Aktionen aus.
 
--   Bei Bedarf wird ein Decoder zuerst ausgeführt, um codierte Quelldaten in Pulse Code Modulation (PCM) zu konvertieren.
--   Eine Stichprobenrate Konvertierung (src) für Variablen Raten konvertiert die Quell Audiodaten der Stimme in die von den Ziel Stimmen erwartete Samplingrate, falls erforderlich, und unterstützt auch dynamische Änderungen.
--   Ein optionaler Zustandsvariablen Filter kann verwendet werden, um den Sound auf verschiedene Weise zu färben. Weitere Informationen finden Sie unter [**IXAudio2Voice:: setfilterparameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters).
--   Ein optionaler Filter kann auf die Ausgaben der Stimme angewendet werden. Weitere Informationen finden Sie unter [**IXAudio2Voice:: setoutputfilterparameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputfilterparameters).
+-   Bei Bedarf wird zuerst ein Decoder ausgeführt, um codierte Quelldaten in Pulse Code Pulse (PCM) zu konvertieren.
+-   Eine Konvertierung der Abtastrate mit variabler Rate (Variable Rate Sample Rate Conversion, SRC) konvertiert die Quellaudiodaten der Stimme ggf. in die von den Zielstimmen erwartete Abtastrate und unterstützt auch dynamische Tonhöhenänderungen.
+-   Ein optionaler Zustandsvariablenfilter kann verwendet werden, um den Sound auf verschiedene Weise zu farblich zu gestalten. Siehe [**IXAudio2Voice::SetFilterParameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters).
+-   Ein optionaler Filter kann auf die Ausgaben der Stimme angewendet werden. Siehe [**IXAudio2Voice::SetOutputFilterParameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputfilterparameters).
 
-## <a name="submix-voices"></a>Teilmengen von Stimmen
+## <a name="submix-voices"></a>Submix-Stimmen
 
-Eine teilmix-Stimme wird hauptsächlich für Leistungsverbesserungen und Auswirkungen der Verarbeitung verwendet. Sie können keine Datenpuffer direkt an submischungs Stimmen senden. Es ist nicht hörbar, es sei denn, Sie senden es an eine Mastering Voice. Sie können eine unter Mischungs Stimme verwenden, um sicherzustellen, dass ein bestimmter Satz von Sprach Daten in das gleiche Format konvertiert wird und eine bestimmte Wirkungskette für das Ergebnis des gemeinsamen Ergebnisses verarbeitet wird.
+Eine Submixstimme wird hauptsächlich für Leistungsverbesserungen und Effekte verwendet. Datenpuffer können nicht direkt an Submix-Stimmen übermittelt werden. Sie ist nur hörbar, wenn Sie sie an eine Masteringstimme übermitteln. Sie können eine Submix-Stimme verwenden, um sicherzustellen, dass ein bestimmter Satz von Stimmendaten in das gleiche Format konvertiert wird und eine bestimmte Effektkette für das gesamte Ergebnis verarbeitet wird.
 
-Zusätzlich zu den Aktionen, die von allen Stimmen ausgeführt werden, führen teilmischungs Stimmen die folgenden Aktionen aus.
+Zusätzlich zu den Aktionen, die von allen Stimmen ausgeführt werden, führen Submix-Stimmen die folgenden Aktionen aus.
 
--   Ein src mit fester Rate wird bei Bedarf in der Ausgabe der Stimme ausgeführt, um die Audiodaten in die von den Ziel Stimmen erwartete Stichprobenrate zu konvertieren.
--   Ein optionaler Zustandsvariablen Filter kann verwendet werden, um den Sound auf verschiedene Weise zu färben. Weitere Informationen finden Sie unter [**IXAudio2Voice:: setfilterparameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters).
--   Ein optionaler Filter kann auf die Ausgaben der Stimme angewendet werden. Weitere Informationen finden Sie unter [**IXAudio2Voice:: setoutputfilterparameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputfilterparameters).
+-   Ein SRC mit festem Prozentsatz wird bei Bedarf für die Ausgabe der Stimme ausgeführt, um die Audiodaten in die von den Zielstimmen erwartete Abtastrate zu konvertieren.
+-   Ein optionaler Zustandsvariablenfilter kann verwendet werden, um den Sound auf verschiedene Weise zu farblich zu gestalten. Siehe [**IXAudio2Voice::SetFilterParameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setfilterparameters).
+-   Ein optionaler Filter kann auf die Ausgaben der Stimme angewendet werden. Siehe [**IXAudio2Voice::SetOutputFilterParameters**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputfilterparameters).
 
-## <a name="mastering-voices"></a>Meistern von Stimmen
+## <a name="mastering-voices"></a>Mastering Voices
 
-Verwenden Sie eine Mastering Voice, um das Audioausgabegerät darzustellen. Datenpuffer können nicht direkt an die Mastering-Stimmen übermittelt werden, aber Daten, die an andere Arten von Stimmen übermittelt werden, müssen zu einer zu hörenden Stimme gelangen.
+Verwenden Sie eine Masteringstimme, um das Audioausgabegerät darzustellen. Sie können Datenpuffer nicht direkt an mastering-Stimmen übermitteln, aber Daten, die an andere Arten von Stimmen übermittelt werden, müssen an eine Masterstimme gesendet werden, um gehört zu werden.
 
-Zusätzlich zu den Aktionen, die von allen Stimmen ausgeführt werden, führen Mastering-Stimmen die folgenden Aktionen aus.
+Zusätzlich zu den Aktionen, die von allen Stimmen ausgeführt werden, führen mastering-Stimmen die folgenden Aktionen aus.
 
--   Wenn Sie die Mastering Voice mit einem expliziten *inputsamplerate* -Wert erstellen, der vom Audiogerät nicht unterstützt wird, wird ein src mit fester Rate verwendet, um die nächstgelegene, vom Gerät unterstützte Stichprobenrate zu konvertieren.
--   Schneiden Sie die endgültige Ausgabe Audiodatei ab, wenn Sie vom Ausgabegerät benötigt wird.
+-   Wenn Sie die Masteringstimme mit einem expliziten *InputSampleRate-Wert* erstellen, der vom Audiogerät nicht unterstützt wird, wird ein SRC mit festem Prozentsatz verwendet, um in die nächste abtastrate zu konvertieren, die vom Gerät unterstützt wird.
+-   Beschneiden Sie die endgültige Ausgabeaudiodatei, wenn sie vom Ausgabegerät benötigt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
